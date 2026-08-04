@@ -1,7 +1,7 @@
 ---
 title: "Tebis CAM Collision Check, 5-Axis Avoidance Milling, CAD Import CATIA 3DXML, NC Job Recalculation Control, and Sister Tool Automatic Change: CNC Simulator Digital Twin Setup, Machine Head Collision Prevention, Postprocessor Synchronization, and Tool Life Management"
 excerpt: "Tebis CAM fails for 5 distinct reasons: collision check errors from incomplete digital twin libraries requiring machine/tool/clamping setup, 5-axis avoidance milling collision from machine head geometry requiring automatic area reduction, CATIA 3DXML import errors from database-driven platform requiring 3DXML file workflow, NC job recalculation from CAD model changes requiring user-controlled update, and sister tool automatic change from tool wear limits requiring predefined twin configuration. We cover each with fixes from Tebis documentation."
-category: "collision-check-and-cam-errors"
+category: "troubleshooting"
 softwareSlug: "tebis"
 keyword: "Tebis CAM collision check CNC simulator digital twin machine head collision 5-axis avoidance milling automatic area reduction CATIA 3DXML import database-driven platform NC job recalculation CAD model changes user-controlled update sister tool automatic change tool wear limits predefined twin configuration postprocessor synchronization"
 slug: "tebis-cam-collision-check-5-axis-avoidance-milling-cad-import-catia-3dxml-nc-job-recalculation-sister-tool-automatic-change-cnc-simulator-digital-twin-machine-head-collision"

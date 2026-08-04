@@ -1,7 +1,7 @@
 ---
 title: "ARES Commander Crash on Launch from OpenGL Graphics Driver, LISP DCL load_dialog Failure, DWG Background Image Crash on Open, TTR TTT Circle Creation Unsupported via Script, and LISP Korean Language Parameter Processing Failure: OpenGL Profile Switch, FLISP Editor, Empty Row Fix, and Language Workarounds"
 excerpt: "ARES Commander fails for 5 distinct reasons: crash on launch from outdated OpenGL graphics drivers requiring OPENGLPROFILE command or /glprofile angle switch, LISP DCL files not loading with load_dialog function requiring 2024 update fix, DWG crash from missing background image requiring image path verification, TTR TTT circle creation unsupported via Script or LISP requiring manual creation, and LISP command parameter processing failure in Korean language requiring 2025 update fix. We cover each with fixes from Graebert Help Center."
-category: "graphics-and-lisp-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "ares-commander"
 keyword: "ARES Commander crash launch OpenGL graphics driver OPENGLPROFILE glprofile angle LISP DCL load_dialog DWG background image crash TTR TTT circle script LISP Korean language parameter processing FLISP editor"
 slug: "ares-commander-crash-launch-opengl-graphics-driver-lisp-dcl-load-dialog-dwg-background-image-crash-ttr-ttt-circle-script-korean-language-parameter-flisp-editor"

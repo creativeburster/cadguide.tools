@@ -1,7 +1,7 @@
 ---
 title: "Lectra Modaris 2026.1 DXF AAMA Layer Convention Import Issues from Incorrect Layer Numbering, Illustrator 2022+ DXF Import Exploded Entities from Disabled Grouping Feature, DXF R10 AAMA as Only Reliable Import Format for VStitcher and CLO3D, Pattern Converter Web Application for Gerber AccuMark and DXF AAMA ASTM to MDL V8, and Modaris 3D Fit 2D 3D Sync Pattern Adjustment Workflow: Layer Number Verification, Block Creation, R10 AAMA Export, Pattern Converter, and 3D Sync"
 excerpt: "Lectra Modaris fails for 5 distinct reasons: DXF AAMA layer convention import issues from incorrect layer numbering requiring layer verification, Illustrator 2022+ DXF import exploded entities from disabled grouping requiring block creation, DXF R10 AAMA as only reliable import format for VStitcher and CLO3D requiring R10 export, Pattern Converter web application for Gerber AccuMark and DXF to MDL V8 requiring web conversion, and Modaris 3D Fit 2D 3D sync pattern adjustment requiring 3D sync workflow. We cover each with fixes from Lectra and community forums."
-category: "dxf-import-and-pattern-conversion-errors"
+category: "troubleshooting"
 softwareSlug: "lectra-modaris"
 keyword: "Lectra Modaris 2026.1 DXF AAMA layer convention import Illustrator 2022 exploded entities R10 AAMA VStitcher CLO3D Pattern Converter Gerber AccuMark MDL V8 Modaris 3D Fit 2D 3D sync pattern adjustment"
 slug: "lectra-modaris-2026-1-dxf-aama-layer-convention-illustrator-exploded-entities-r10-aama-vstitcher-clo3d-pattern-converter-gerber-accumark-mdl-v8-modaris-3d-fit-2d-3d-sync"

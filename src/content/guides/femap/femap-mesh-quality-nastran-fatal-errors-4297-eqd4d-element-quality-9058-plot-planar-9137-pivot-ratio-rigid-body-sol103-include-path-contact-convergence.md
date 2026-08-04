@@ -1,7 +1,7 @@
 ---
 title: "Siemens Femap Mesh Quality and Nastran Fatal Errors: 4297 EQD4D Mesh Distortion from Failed Quad Elements Found via Element Quality Check, Fatal 9058 from Plot Planar 2D Triangular Elements Not Exported to Nastran, Fatal 9137 Plate Bonding and Pivot Ratio from Rigid Body Motion and Unconstrained Parts, Crash on Analyze from Nested INCLUDE File Path Errors, and Contact Non-Convergence from Curved Surfaces Requiring Increased Iterations"
 excerpt: "Femap fails for 5 distinct reasons: 4297 EQD4D errors from distorted quad elements found via Tools > Check > Element Quality with Nastran tab, fatal 9058 from plot planar elements not exported to solver requiring 3D solid mesh, fatal 9137 and pivot ratio from rigid body motion requiring SOL 103 normal modes analysis to identify mechanisms, crash on analyze from incorrect nested INCLUDE file paths producing empty .DAT, and contact non-convergence from curved surfaces requiring iteration increase from 20 to 45. We cover each with fixes from Siemens Community forums."
-category: "mesh-quality-and-nastran-fatal-errors"
+category: "troubleshooting"
 softwareSlug: "femap"
 keyword: "Femap 4297 EQD4D distorted quad element quality check Nastran fatal 9058 plot planar 2D triangular elements 3D solid mesh fatal 9137 pivot ratio rigid body motion SOL 103 INCLUDE file path contact convergence curved surfaces iterations"
 slug: "femap-mesh-quality-nastran-fatal-errors-4297-eqd4d-element-quality-9058-plot-planar-9137-pivot-ratio-rigid-body-sol103-include-path-contact-convergence"

@@ -1,7 +1,7 @@
 ---
 title: "D5 Render 3.0 Black Screen After Update from Launcher Subprocess, Livesync Black Background with Neon Flickering Artifacts from Vectorworks 2026, RTX 4050 Laptop Viewport Black with Contrasted Themes, RTX 3060 Monitor Signal Loss on Launch from GPU Power Instability, and Pro User Crashing Every 5 Minutes with Live Sync Abort from CPU GPU Overclocking: D5_render.exe Direct Launch, Model Detail Reduction, Contrasted Themes Disable, TDR Configuration and PSU Verification, and BIOS Overclock Disable"
 excerpt: "D5 Render fails for 5 distinct reasons: 3.0 black screen after update from launcher subprocess requiring direct D5_render.exe launch, Livesync black background with neon flickering from Vectorworks 2026 requiring model detail reduction, RTX 4050 laptop viewport black from Contrasted Themes requiring disable, RTX 3060 monitor signal loss on launch from GPU power instability requiring TDR config and PSU verification, and Pro user crashing every 5 minutes with Live Sync abort from CPU GPU overclocking requiring BIOS overclock disable. We cover each with fixes from D5 Render Forum."
-category: "black-screen-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "d5-render"
 keyword: "D5 Render 3.0 black screen launcher subprocess Livesync black background neon flickering Vectorworks 2026 RTX 4050 laptop viewport black Contrasted Themes RTX 3060 monitor signal loss GPU power TDR configuration crashing every 5 minutes Live Sync abort CPU GPU overclocking BIOS disable"
 slug: "d5-render-3-0-black-screen-launcher-subprocess-livesync-neon-flickering-vectorworks-2026-rtx-4050-viewport-black-contrasted-themes-rtx-3060-monitor-signal-loss-gpu-power-tdr"

@@ -1,7 +1,7 @@
 ---
 title: "MoI3D STL Export and Boolean Operation Errors: Open Edges from Stray Fillet Surfaces, False Faces from Non-Planar Union, BSOD Crash on Export from Intel Graphics Driver, Mesh Export Artifacts from Fillet Gaps Requiring CentroidTriangulation, and Non-Manifold Edges from Barely Grazing Cylinders"
 excerpt: "MoI3D fails for 5 distinct reasons: STL export has open edges from stray fillet surfaces that failed to attach, false faces inside solid from non-planar union with tiny misalignment, BSOD crash on export from buggy Intel graphics driver, mesh export artifacts from fillet surface gaps requiring CentroidTriangulation=y in moi.ini, and non-manifold edges from cylinders barely grazing each other breaking boolean operations. We cover each with fixes from MoI3D forums."
-category: "stl-export-and-boolean-errors"
+category: "printing"
 softwareSlug: "moi3d"
 keyword: "MoI3D STL export open edges stray fillet surfaces false faces non-planar union BSOD crash Intel graphics driver mesh artifacts CentroidTriangulation moi.ini non-manifold edges grazing cylinders boolean"
 slug: "moi3d-stl-export-boolean-errors-open-edges-stray-fillets-false-faces-non-planar-union-bsod-intel-driver-centroid-triangulation-non-manifold"

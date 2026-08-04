@@ -1,7 +1,7 @@
 ---
 title: "SketchUp 2026 Crash on Startup from Lumion Plugin Loading, DX12 New Graphics Engine Crash on Dual GPU AMD+NVIDIA Laptops, Advanced Camera Tools and Curic Extension Crash During Initialization, Scan Essentials Crash on Startup with Point Cloud Projects, and 2026.1.256 Qt6Core.dll Instant Crash on New Graphics Engine: Lumion Plugin Removal, UseNewRenderer False, Extension Migrator Bypass, Scan Essentials Uninstall, and Classic Graphics Engine"
 excerpt: "SketchUp fails for 5 distinct reasons: crash on startup from Lumion plugin loading requiring Lumion plugin removal, DX12 new graphics engine crash on dual GPU AMD+NVIDIA laptops requiring UseNewRenderer false, Advanced Camera Tools and Curic extension crash during initialization requiring extension migrator bypass, Scan Essentials crash on startup with point cloud projects requiring Scan Essentials uninstall, and 2026.1.256 Qt6Core.dll instant crash on new graphics engine requiring classic graphics engine. We cover each with fixes from SketchUp community."
-category: "startup-and-graphics-errors"
+category: "troubleshooting"
 softwareSlug: "sketchup"
 keyword: "SketchUp 2026 crash startup Lumion plugin loading DX12 new graphics engine dual GPU AMD NVIDIA laptop UseNewRenderer false Advanced Camera Tools Curic extension crash initialization Scan Essentials crash point cloud Qt6Core.dll instant crash classic graphics engine"
 slug: "sketchup-2026-lumion-crash-dx12-dual-gpu-advanced-camera-curic-scan-essentials-qt6core-classic-engine"

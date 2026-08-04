@@ -1,7 +1,7 @@
 ---
 title: "CYPECAD 2026.a Shear Wall Reinforcement Non-Compliant Nodes and Compliance Factor, Seismic Modal Spectral Analysis CQC Combination Stress Check, Non-Structural Element Interaction Open Floor Force Amplification, StruBIM Shear Wall Export for Reinforcement Design, and CYPE 3D Nonlinear Analysis with Spectral Modal Seismic Action: Compliance Factor Adjustment, CQC Stress Verification, Amplification Factor Application, BIMserver.center Export, and 2026.a Nonlinear Seismic"
 excerpt: "CYPECAD fails for 5 distinct reasons: shear wall reinforcement non-compliant nodes requiring compliance factor adjustment, seismic modal spectral analysis CQC combination stress check requiring 2026.a update, non-structural element interaction open floor force amplification requiring amplification factor application, StruBIM shear wall export for reinforcement design requiring BIMserver.center workflow, and CYPE 3D nonlinear analysis with spectral modal seismic action requiring 2026.a version. We cover each with fixes from CYPE documentation."
-category: "seismic-and-shear-wall-design-errors"
+category: "troubleshooting"
 softwareSlug: "cypecad"
 keyword: "CYPECAD 2026.a shear wall reinforcement non-compliant nodes compliance factor seismic modal spectral analysis CQC combination stress check non-structural element interaction open floor force amplification StruBIM shear wall export BIMserver.center CYPE 3D nonlinear analysis spectral modal seismic"
 slug: "cypecad-2026-a-shear-wall-reinforcement-non-compliant-nodes-compliance-factor-seismic-cqc-stress-check-non-structural-element-open-floor-amplification-strubim-export-bimserver-cype"

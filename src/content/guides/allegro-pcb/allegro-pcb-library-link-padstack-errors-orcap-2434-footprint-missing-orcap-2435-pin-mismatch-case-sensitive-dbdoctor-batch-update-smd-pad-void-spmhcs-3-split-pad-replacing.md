@@ -1,7 +1,7 @@
 ---
 title: "Cadence Allegro PCB Library Link and Padstack Errors: ORCAP-2434 Footprint Missing from Library Path Requiring Path Configuration and Footprint Reassociation, ORCAP-2435 Pin Count Mismatch from Case-Sensitive Alphanumeric Pin Numbers Requiring Casing Verification, DB Doctor Required When Loading 16.5 Footprints in 23.1 Requiring Batch dbdoctor_ui.exe Update, SMD Pad with Void Error SPMHCS-3 Shape Symbol Cannot Have Void Requiring Split Pad or Shape Body Workaround, and Replacing Padstacks Forces Batch DRC Requiring Acceptance of Mandatory DRC Check"
 excerpt: "Cadence Allegro fails for 5 distinct reasons: ORCAP-2434 footprint missing from library path requiring path configuration and footprint reassociation, ORCAP-2435 pin count mismatch from case-sensitive alphanumeric pin numbers requiring casing verification, DB Doctor required when loading 16.5 footprints in 23.1 requiring batch dbdoctor_ui.exe update, SMD pad with void error SPMHCS-3 shape symbol cannot have void requiring split pad or shape body workaround, and replacing padstacks forces batch DRC requiring acceptance of mandatory DRC check. We cover each with fixes from Cadence Community."
-category: "library-link-and-padstack-errors"
+category: "troubleshooting"
 softwareSlug: "allegro-pcb"
 keyword: "Cadence Allegro ORCAP-2434 footprint missing library path ORCAP-2435 pin count mismatch case-sensitive alphanumeric pin numbers DB Doctor 16.5 footprints 23.1 dbdoctor_ui.exe batch update SMD pad void SPMHCS-3 shape symbol cannot have void split pad shape body replacing padstacks batch DRC mandatory"
 slug: "allegro-pcb-library-link-padstack-errors-orcap-2434-footprint-missing-orcap-2435-pin-mismatch-case-sensitive-dbdoctor-batch-update-smd-pad-void-spmhcs-3-split-pad-replacing"

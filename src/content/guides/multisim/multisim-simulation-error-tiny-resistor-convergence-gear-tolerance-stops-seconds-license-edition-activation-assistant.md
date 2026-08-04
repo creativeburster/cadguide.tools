@@ -1,7 +1,7 @@
 ---
 title: "NI Multisim Simulation Error from Tiny Resistor Values in SPICE Matrix, Convergence Failure Requiring Gear Integration Method, Simulation Stops After Few Seconds from Transient Convergence, License Activation Error from Wrong Edition Installer, and Convergence Assistant Unable to Fix Circuit: Resistance Increase, Tolerance Adjustment, Gear Method, Edition Match, and Manual Circuit Debug"
 excerpt: "NI Multisim fails for 5 distinct reasons: simulation error from tiny resistor values in SPICE matrix requiring resistance increase, convergence failure requiring Gear integration method and tolerance adjustment, simulation stops after few seconds from transient convergence requiring Gear method, license activation error from wrong edition installer requiring edition match, and Convergence Assistant unable to fix circuit requiring manual debug. We cover each with fixes from NI knowledge base."
-category: "simulation-and-license-errors"
+category: "deployment"
 softwareSlug: "multisim"
 keyword: "NI Multisim simulation error tiny resistor values SPICE matrix convergence failure Gear integration method tolerance adjustment simulation stops few seconds transient convergence license activation error wrong edition installer Convergence Assistant"
 slug: "multisim-simulation-error-tiny-resistor-convergence-gear-tolerance-stops-seconds-license-edition-activation-assistant"

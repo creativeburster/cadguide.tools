@@ -1,7 +1,7 @@
 ---
 title: "CADWorx Pipe Support Modeler Missing Library and Category, Short Description Blank Causing P3D Crash on Pipe Routing, Content Folder Network Path and VPN Copy Breaking Spec Components, FACING Custom Data Missing for Flanged and Grooved Connections, and Multiple Content Folder Switching Creating Hidden Path Dependencies: PipeSupport Category, Short Description Population, Local Content Folder, FACING Custom Data, and Single Master Content Folder"
 excerpt: "CADWorx fails for 5 distinct reasons: pipe support modeler missing Pipe Support Library and PipeSupport category requiring both to be configured, Short Description blank causing P3D crash on pipe routing requiring mandatory population, Content folder network path and VPN copy breaking spec components requiring local drive placement, FACING custom data missing for flanged and grooved connections requiring manual addition, and multiple Content folder switching creating hidden path dependencies requiring single master consolidation. We cover each with fixes from Hexagon documentation and ECE support."
-category: "spec-and-content-path-errors"
+category: "troubleshooting"
 softwareSlug: "cadworx"
 keyword: "CADWorx pipe support modeler missing library PipeSupport category Short Description blank P3D crash pipe routing Content folder network path VPN copy FACING custom data flanged grooved multiple Content folder switching hidden path dependencies single master"
 slug: "cadworx-pipe-support-modeler-missing-library-pipesupport-category-short-description-blank-p3d-crash-content-folder-network-vpn-facing-custom-data-multiple-content-folder-switching"

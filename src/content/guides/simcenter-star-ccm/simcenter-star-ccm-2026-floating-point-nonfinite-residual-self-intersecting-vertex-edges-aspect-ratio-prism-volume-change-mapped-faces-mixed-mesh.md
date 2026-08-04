@@ -1,7 +1,7 @@
 ---
 title: "Simcenter STAR-CCM+ 2026 Floating Point Error Non-Finite Residual in Continuity from Segregated Flow Solver, Self-Intersecting Surface Mesh Error from Vertex with Too Many Edges, High Aspect Ratio Cells from Prism Layer Causing Coupled Solver Divergence, Volume Change Less Than 10e-2 at Prism-to-Core Transition, and Mapped Faces Mesh Generation Failed from Mixed Mesh: Field Function Denominator Check, Vertex Split, Prism Layer Parameter Adjustment, Surface Growth Rate Reduction, and Interface Density Increase"
 excerpt: "Simcenter STAR-CCM+ fails for 5 distinct reasons: floating point error non-finite residual in continuity from segregated flow solver requiring field function denominator check, self-intersecting surface mesh error from vertex with too many edges requiring vertex split, high aspect ratio cells from prism layer causing coupled solver divergence requiring prism layer parameter adjustment, volume change less than 10e-2 at prism-to-core transition requiring surface growth rate reduction, and mapped faces mesh generation failed from mixed mesh requiring interface density increase. We cover each with fixes from Siemens community."
-category: "mesh-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "simcenter-star-ccm"
 keyword: "Simcenter STAR-CCM+ 2026 floating point error non-finite residual continuity segregated flow solver self-intersecting surface mesh vertex too many edges high aspect ratio cells prism layer coupled solver divergence volume change 10e-2 prism core transition mapped faces mesh generation failed mixed mesh"
 slug: "simcenter-star-ccm-2026-floating-point-nonfinite-residual-self-intersecting-vertex-edges-aspect-ratio-prism-volume-change-mapped-faces-mixed-mesh"

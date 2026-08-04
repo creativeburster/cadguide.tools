@@ -1,7 +1,7 @@
 ---
 title: "KeyCreator Modeling and Display Errors: Models Going Into Wireframe from Body Corruption Requiring Clean Body or STEP Reimport, Solids Appear Semitransparent from Material Override Requiring Layer Toggle or Unset Material, PRT to CKD Conversion Problems from CADKEY Legacy Format Requiring Manual Fix, Import Gap Errors from Precision Mismatch Requiring Repair Problem Entities Option, and PDF Export Missing Model and Layout Pages Requiring SP1 Update"
 excerpt: "KeyCreator fails for 5 distinct reasons: models going into wireframe from body corruption requiring Clean Body or STEP reimport, solids appear semitransparent from material override requiring layer toggle or Unset Material, PRT to CKD conversion problems from CADKEY legacy format requiring manual fix, import gap errors from precision mismatch requiring Repair Problem Entities option, and PDF export missing model and layout pages requiring SP1 update. We cover each with fixes from Kubotek Kosmos Help and KeyCreator Forum."
-category: "modeling-and-display-errors"
+category: "troubleshooting"
 softwareSlug: "keycreator"
 keyword: "KeyCreator models wireframe body corruption Clean Body STEP reimport solids semitransparent material override layer toggle Unset Material PRT CKD conversion CADKEY legacy format import gap errors precision mismatch Repair Problem Entities PDF export model layout pages SP1 update"
 slug: "keycreator-modeling-display-errors-models-wireframe-body-corruption-clean-body-step-reimport-solids-semitransparent-material-prt-ckd-conversion-cadkey-import-gap-precision-mismatch"

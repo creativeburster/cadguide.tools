@@ -1,7 +1,7 @@
 ---
 title: "Moment of Inspiration v5 Fillet Mesh Export Gaps and Thin Triangle Artifacts from CentroidTriangulation, OBJ Export Cracks from Unjoined Separate Surfaces, Large Scale Model Joining Failure from 0.005 Tolerance, FBX Vertex Normal Loss from DCC Import Settings, and N-Gon Output Misunderstanding with Triangles from Trimming Boundaries: CentroidTriangulation Fix, Join Before Export, Scale Down, Normal Settings, and N-Gon Explanation"
 excerpt: "Moment of Inspiration fails for 5 distinct reasons: v5 fillet mesh export gaps and thin triangle artifacts from CentroidTriangulation requiring ini edit, OBJ export cracks from unjoined separate surfaces requiring Join command, large scale model joining failure from 0.005 tolerance requiring scale down, FBX vertex normal loss from DCC import settings requiring normal preservation, and N-Gon output misunderstanding with triangles from trimming boundaries requiring N-Gon mode. We cover each with fixes from MoI forum."
-category: "mesh-export-and-nurbs-errors"
+category: "troubleshooting"
 softwareSlug: "moi3d"
 keyword: "Moment of Inspiration MoI v5 fillet mesh export gaps thin triangle CentroidTriangulation OBJ export cracks unjoined surfaces 0.005 tolerance large scale FBX vertex normal DCC import N-Gon output triangles trimming boundaries"
 slug: "moment-of-inspiration-v5-fillet-mesh-export-centroid-triangulation-obj-cracks-unjoined-surfaces-large-scale-joining-fbx-vertex-normal-ngon-output-trimming"

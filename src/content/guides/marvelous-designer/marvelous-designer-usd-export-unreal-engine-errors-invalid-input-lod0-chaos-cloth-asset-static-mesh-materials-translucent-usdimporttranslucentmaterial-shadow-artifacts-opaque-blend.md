@@ -1,7 +1,7 @@
 ---
 title: "Marvelous Designer USD Export and Unreal Engine Errors: Invalid Input LOD 0 from USD Import to Chaos Cloth Asset Requiring Static Mesh Workflow, Materials Appear Translucent from USDImportTranslucentMaterial Requiring Material Parent Change, Strange Shadow Artifacts on Chaos Cloth from Normal or Material Issues Requiring Opaque Blend Mode, Cloth Falls Down from Missing Physics Asset Setup Requiring Physics Asset Configuration, and Export Splits Everything Up Requiring Mesh Merge Before Import"
 excerpt: "Marvelous Designer fails for 5 distinct reasons: Invalid Input LOD 0 from USD import to Chaos Cloth Asset requiring Static Mesh workflow, materials appear translucent from USDImportTranslucentMaterial requiring material parent change, strange shadow artifacts on Chaos Cloth from normal or material issues requiring Opaque blend mode, cloth falls down from missing physics asset setup requiring physics asset configuration, and export splits everything up requiring mesh merge before import. We cover each with fixes from Epic Developer Community Forums and CLO-SET Community."
-category: "usd-export-and-unreal-engine-errors"
+category: "troubleshooting"
 softwareSlug: "marvelous-designer"
 keyword: "Marvelous Designer USD export Unreal Engine Invalid Input LOD 0 Chaos Cloth Asset Static Mesh workflow materials translucent USDImportTranslucentMaterial material parent change shadow artifacts Chaos Cloth Opaque blend mode cloth falls down physics asset export splits mesh merge import"
 slug: "marvelous-designer-usd-export-unreal-engine-errors-invalid-input-lod0-chaos-cloth-asset-static-mesh-materials-translucent-usdimporttranslucentmaterial-shadow-artifacts-opaque-blend"

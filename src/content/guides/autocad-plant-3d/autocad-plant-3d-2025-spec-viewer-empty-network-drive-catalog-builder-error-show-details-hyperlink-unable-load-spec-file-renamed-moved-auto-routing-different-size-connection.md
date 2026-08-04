@@ -1,7 +1,7 @@
 ---
 title: "AutoCAD Plant 3D 2025 Spec Viewer Empty from Network Drive Pathing, Catalog Builder Error from Show Details Hyperlink in Empty Row, Unable to Load Spec File from Renamed or Moved .pspc/.pspx, Auto Routing Error Connecting Different Size Components, and No Connection Defined for End Types GRV and FL: 2025.0.1 Patch, Empty Row Deletion, Spec File Path Verification, Connection Manager Settings, and Clamp Class Configuration"
 excerpt: "AutoCAD Plant 3D fails for 5 distinct reasons: 2025 Spec Viewer shows empty from network drive pathing issue requiring 2025.0.1 patch or local drive copy, Catalog Builder error from Show Details hyperlink in row after last data requiring empty row deletion, Unable to load spec file from renamed or moved .pspc/.pspx files requiring path verification, auto routing error connecting different size components from connection manager or snap settings requiring alignment verification, and No connection defined for end types GRV and FL from clamp class configuration requiring spec and end type verification. We cover each with fixes from Autodesk Community."
-category: "spec-catalog-and-routing-errors"
+category: "troubleshooting"
 softwareSlug: "autocad-plant-3d"
 keyword: "AutoCAD Plant 3D 2025 Spec Viewer empty network drive Catalog Builder error Show Details hyperlink empty row Unable to load spec file renamed moved pspc pspx auto routing error different size connection manager No connection defined end types GRV FL clamp class"
 slug: "autocad-plant-3d-2025-spec-viewer-empty-network-drive-catalog-builder-error-show-details-hyperlink-unable-load-spec-file-renamed-moved-auto-routing-different-size-connection"

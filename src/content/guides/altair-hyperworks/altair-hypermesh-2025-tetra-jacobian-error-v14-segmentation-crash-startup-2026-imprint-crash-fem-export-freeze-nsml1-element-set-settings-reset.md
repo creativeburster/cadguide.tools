@@ -1,7 +1,7 @@
 ---
 title: "Altair HyperMesh 2025 Tetra Mesh Jacobian Error vs V14.0, Segmentation Error Crash on Startup, 2026 Imprint Crash, .fem Export Freeze on NSML1 Assignment, and Settings File Corruption: Tetra Algorithm Change, Settings Reset, Element Set Workaround, and Version-Specific Fixes"
 excerpt: "Altair HyperMesh fails for 5 distinct reasons: V2025 tetra mesh generates Jacobian errors that V14.0 didn't produce from tetra algorithm changes requiring parameter adjustment, segmentation error crash on startup from corrupted settings files requiring settings reset, 2026 imprint operation crash from instability requiring support ticket, .fem export freeze when elements directly assigned to NSML1 requiring element set workaround, and settings file corruption from temporary file conflicts requiring cleanup. We cover each with fixes from Altair Community."
-category: "mesh-error-and-crash-issues"
+category: "troubleshooting"
 softwareSlug: "altair-hyperworks"
 keyword: "Altair HyperMesh 2025 tetra mesh Jacobian error V14.0 segmentation error crash startup 2026 imprint crash fem export freeze NSML1 element set settings file corruption reset"
 slug: "altair-hypermesh-2025-tetra-jacobian-error-v14-segmentation-crash-startup-2026-imprint-crash-fem-export-freeze-nsml1-element-set-settings-reset"

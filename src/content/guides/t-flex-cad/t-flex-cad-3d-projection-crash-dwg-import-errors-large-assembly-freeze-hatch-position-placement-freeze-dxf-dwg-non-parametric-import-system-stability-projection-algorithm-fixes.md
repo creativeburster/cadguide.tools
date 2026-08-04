@@ -1,7 +1,7 @@
 ---
 title: "T-FLEX CAD 3D Projection Crash, DWG Import Errors, Large Assembly Freeze, Hatch and Position Placement Freeze, and DXF DWG Non-Parametric Import: System Stability Updates, Projection Algorithm Fixes, Assembly Loading Optimization, and Import Parameter Configuration"
 excerpt: "T-FLEX CAD fails for 5 distinct reasons: 3D projection crash from system fall in projections requiring update to 17.1.33.0+, DWG import errors from format incompatibility requiring import parameter configuration, large assembly freeze from full geometry loading requiring assembly loading settings, hatch and position placement freeze on large assemblies requiring 17.1.36.0+ update, and DXF DWG non-parametric import requiring manual parametrization. We cover each with fixes from Top Systems release notes and T-FLEX documentation."
-category: "projection-crash-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "t-flex-cad"
 keyword: "T-FLEX CAD 3D projection crash system fall DWG import errors format incompatibility large assembly freeze full geometry loading assembly loading settings hatch position placement freeze DXF DWG non-parametric import manual parametrization Top Systems release notes 17.1.33.0 17.1.36.0"
 slug: "t-flex-cad-3d-projection-crash-dwg-import-errors-large-assembly-freeze-hatch-position-placement-freeze-dxf-dwg-non-parametric-import-system-stability-projection-algorithm-fixes"

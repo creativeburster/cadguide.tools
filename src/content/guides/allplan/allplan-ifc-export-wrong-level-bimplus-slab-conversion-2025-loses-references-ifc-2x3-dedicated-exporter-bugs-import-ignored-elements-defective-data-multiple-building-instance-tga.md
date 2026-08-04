@@ -1,7 +1,7 @@
 ---
 title: "Allplan IFC Export Wrong Level Mapping via bimplus, Slab Conversion Loses Associated References in 2025, IFC 2x3 Dedicated Exporter Bugs, IFC Import Ignored Elements from Defective Data, and Multiple Building Instance Error: 2025-0-3 Hotfix, Data Healer, and Standard IFC Export"
 excerpt: "Allplan fails for 5 distinct reasons: IFC export via bimplus produces wrong level mapping requiring direct Allplan export, slab conversion to 2025 loses associated references requiring 2025-0-3 hotfix or 2025-0-4 data healer, IFC 2x3 dedicated exporter has known bugs requiring standard IFC export, IFC import ignores elements from defective data requiring data validation, and IFC 2x3 export with multiple building instances causes import errors in TGA software requiring single building export. We cover each with fixes from Allplan forums."
-category: "ifc-export-and-conversion-errors"
+category: "troubleshooting"
 softwareSlug: "allplan"
 keyword: "Allplan IFC export wrong level mapping bimplus slab conversion 2025 loses references IFC 2x3 dedicated exporter bugs import ignored elements defective data multiple building instance TGA software 2025-0-3 hotfix data healer standard IFC export"
 slug: "allplan-ifc-export-wrong-level-bimplus-slab-conversion-2025-loses-references-ifc-2x3-dedicated-exporter-bugs-import-ignored-elements-defective-data-multiple-building-instance-tga"

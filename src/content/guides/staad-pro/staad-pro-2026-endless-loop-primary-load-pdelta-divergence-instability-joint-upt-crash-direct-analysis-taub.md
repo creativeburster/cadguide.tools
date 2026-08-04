@@ -1,7 +1,7 @@
 ---
 title: "STAAD Pro 2026 Analysis Stuck in Endless Loop from Primary Load Cases in Job Setup, P-Delta Iteration Divergence from Displacement Not Converging, Instability at Joint from Disjointed Structure and Duplicate Joints, Crash from External UPT Files with Multiple Profile Points, and Direct Analysis Convergence Failure from Tau-b Tolerance and Iteration Limits: Primary Load Case Removal, P-Delta Divergence Detection, Joint Connectivity Check, UPT File Update, and Direct Analysis Parameter Tuning"
 excerpt: "STAAD Pro fails for 5 distinct reasons: analysis stuck in endless loop from primary load cases in job setup requiring primary load case removal, P-Delta iteration divergence from displacement not converging requiring P-Delta divergence detection, instability at joint from disjointed structure and duplicate joints requiring joint connectivity check, crash from external UPT files with multiple profile points requiring UPT file update, and Direct Analysis convergence failure from Tau-b tolerance and iteration limits requiring Direct Analysis parameter tuning. We cover each with fixes from Bentley community."
-category: "analysis-and-instability-errors"
+category: "troubleshooting"
 softwareSlug: "staad-pro"
 keyword: "STAAD Pro 2026 analysis stuck endless loop primary load cases job setup P-Delta iteration divergence displacement not converging instability joint disjointed structure duplicate joints crash external UPT files multiple profile points Direct Analysis convergence Tau-b tolerance iteration limits"
 slug: "staad-pro-2026-endless-loop-primary-load-pdelta-divergence-instability-joint-upt-crash-direct-analysis-taub"

@@ -1,7 +1,7 @@
 ---
 title: "SmartPlant 3D 2026 Error Reading Property Mapping File for Reference 3D Model Data, Schema Component Message Helper Not Installed, Export File Already Exists Read Only, Failed to Unpack Reference 3D Model Data Files Being Used by Another Process, and PDS Design File Limit 26.8 Kilometers from Global Origin: Mapping File Path Check, Schema Component Install, Read Only Attribute Removal, Process Lock Resolution, and Coordinate System Verification"
 excerpt: "SmartPlant 3D fails for 5 distinct reasons: error reading property mapping file for Reference 3D Model data requiring mapping file path check, Schema Component Message Helper not installed requiring schema component install, export file already exists read only requiring read only attribute removal, failed to unpack Reference 3D Model data files being used by another process requiring process lock resolution, and PDS design file limit 26.8 kilometers from global origin requiring coordinate system verification. We cover each with fixes from Hexagon troubleshooting."
-category: "import-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "smartplant-3d"
 keyword: "SmartPlant 3D 2026 error reading property mapping file Reference 3D Model data Schema Component Message Helper not installed export file already exists read only failed unpack Reference 3D Model data files another process PDS design file limit 26.8 kilometers global origin"
 slug: "smartplant-3d-2026-mapping-file-schema-component-export-read-only-unpack-process-pds-limit-origin"

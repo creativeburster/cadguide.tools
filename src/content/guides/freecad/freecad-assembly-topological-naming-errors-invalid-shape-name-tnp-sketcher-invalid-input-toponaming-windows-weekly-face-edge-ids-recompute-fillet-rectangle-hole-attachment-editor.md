@@ -1,7 +1,7 @@
 ---
 title: "FreeCAD Assembly and Topological Naming Errors: Invalid Shape Name from Topological Naming Problem Requiring Reference Reassignment, Sketcher Invalid Input from Toponaming Bug on Windows Weekly Build Requiring Stable Bundle, Face Edge IDs Change After Recompute from Fillet on Rectangle with Hole Requiring Attachment Editor Fix, Assembly Joints Break After Part Modification Requiring Joint Recreation, and Crash on Selecting Sketch from Invalid Shape Name Edge Requiring Update"
 excerpt: "FreeCAD fails for 5 distinct reasons: invalid shape name from topological naming problem requiring reference reassignment, sketcher invalid input from toponaming bug on Windows weekly build requiring stable bundle, face edge IDs change after recompute from fillet on rectangle with hole requiring attachment editor fix, assembly joints break after part modification requiring joint recreation, and crash on selecting sketch from invalid shape name edge requiring update. We cover each with fixes from FreeCAD Forum and GitHub Issues."
-category: "assembly-and-topological-naming-errors"
+category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD invalid shape name topological naming problem TNP reference reassignment sketcher invalid input toponaming bug Windows weekly build stable bundle face edge IDs change after recompute fillet rectangle hole attachment editor assembly joints break part modification joint recreation crash selecting sketch update"
 slug: "freecad-assembly-topological-naming-errors-invalid-shape-name-tnp-sketcher-invalid-input-toponaming-windows-weekly-face-edge-ids-recompute-fillet-rectangle-hole-attachment-editor"

@@ -1,7 +1,7 @@
 ---
 title: "RISA-3D 2026 Crash on Envelope Only Solution from Solver Bug, P-Delta Divergence Error from Node and Load Combination Misidentification, Instability from Member End Releases at Boundary Conditions, Tension-Only Members Causing Instability from Stiffness Matrix Removal, and Model File Corruption from Custom Shapes: Envelope Solution Update, P-Delta Error Fix, End Release Adjustment, Tension-Only Bracing Review, and Custom Shape Validation"
 excerpt: "RISA-3D fails for 5 distinct reasons: crash on Envelope Only solution from solver bug requiring envelope solution update, P-Delta divergence error from node and load combination misidentification requiring P-Delta error fix, instability from member end releases at boundary conditions requiring end release adjustment, tension-only members causing instability from stiffness matrix removal requiring tension-only bracing review, and model file corruption from custom shapes requiring custom shape validation. We cover each with fixes from RISA support."
-category: "analysis-and-instability-errors"
+category: "troubleshooting"
 softwareSlug: "risa-3d"
 keyword: "RISA-3D 2026 crash Envelope Only solution P-Delta divergence error node load combination instability member end releases boundary conditions tension-only members stiffness matrix model file corruption custom shapes"
 slug: "risa-3d-2026-envelope-crash-pdelta-divergence-end-release-tension-only-custom-shape-corruption"

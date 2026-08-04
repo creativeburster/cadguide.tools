@@ -1,7 +1,7 @@
 ---
 title: "Tekla Structures 2026 APPCRASH ntdll.dll from Other Software Hooking, Slow Drawing Inspection from Section View Associativity Dialog, Crash on Close from Keyboard Shortcuts, Select Component Dialog Crash on Close, and System.DllNotFoundException from Missing Redistributable Packages: Software Hooking Check, SP3.1 Update, Keyboard Shortcut Disable, Dialog Closure, and Redistributable Installation"
 excerpt: "Tekla Structures fails for 5 distinct reasons: APPCRASH ntdll.dll from other software hooking requiring software hooking check, slow drawing inspection from section view associativity dialog requiring SP3.1 update, crash on close from keyboard shortcuts requiring keyboard shortcut disable, Select Component dialog crash on close requiring dialog closure, and System.DllNotFoundException from missing redistributable packages requiring redistributable installation. We cover each with fixes from Trimble support."
-category: "crash-and-performance-errors"
+category: "troubleshooting"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures 2026 APPCRASH ntdll.dll other software hooking slow drawing inspection section view associativity dialog crash close keyboard shortcuts Select Component dialog crash System.DllNotFoundException missing redistributable packages SP3.1 update"
 slug: "tekla-structures-2026-appcrash-ntdll-hooking-slow-drawing-section-view-keyboard-shortcut-select-component-dllnotfound-redistributable"

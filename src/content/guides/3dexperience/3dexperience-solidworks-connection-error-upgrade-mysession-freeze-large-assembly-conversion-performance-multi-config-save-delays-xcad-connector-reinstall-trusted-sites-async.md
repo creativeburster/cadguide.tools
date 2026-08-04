@@ -1,7 +1,7 @@
 ---
 title: "3DEXPERIENCE SOLIDWORKS Connection Error After Platform Upgrade, MySession Refresh Freeze on Large Assemblies, On-the-Fly Conversion Performance Degradation, Multi-Configuration Save Delays, and xCAD Connector Reinstall: Trusted Sites, Asynchronous Refresh, Dynamic Tree Expansion, and Clean Reinstall"
 excerpt: "3DEXPERIENCE integration with SOLIDWORKS fails for 5 distinct reasons: unable to connect after platform upgrade from security settings blocking *.3ds.com requiring trusted sites configuration, MySession refresh freeze on large assemblies from synchronous data retrieval requiring asynchronous refresh, on-the-fly conversion performance degradation from platform-native Physical Products requiring local file caching, multi-configuration save delays from mapped attributes requiring attribute optimization, and xCAD Connector corruption requiring clean reinstall. We cover each with fixes from Dassault and Hawk Ridge Systems."
-category: "platform-integration-and-connection-errors"
+category: "troubleshooting"
 softwareSlug: "3dexperience"
 keyword: "3DEXPERIENCE SOLIDWORKS unable to connect platform upgrade trusted sites MySession refresh freeze large assembly asynchronous retrieval on-the-fly conversion Physical Products multi-configuration save delays xCAD Connector clean reinstall"
 slug: "3dexperience-solidworks-connection-error-upgrade-mysession-freeze-large-assembly-conversion-performance-multi-config-save-delays-xcad-connector-reinstall-trusted-sites-async"

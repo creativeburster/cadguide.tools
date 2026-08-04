@@ -1,7 +1,7 @@
 ---
 title: "DesignSpark Mechanical STL Export and Crash Errors: STL Export Not Available in Free Tier Requiring Upgrade, Cylinder Hole Not Going Through Due to Boolean Failure, Blank Posting Window from Corrupted User Config Requiring AppData Cleanup, FIPS Mode Crash from Network Adapter Encryption Setting, and Graphics Card Renderer Crash Requiring Driver Update"
 excerpt: "DesignSpark Mechanical fails for 5 distinct reasons: STL export is not available in the free tier requiring upgrade to Creator or Engineer plan, cylinder hole boolean cut doesn't go through leaving a face at one end, crash on launch from corrupted SpaceClaim config files in AppData requiring deletion, blank login window and crash from FIPS-compliant encryption mode requiring disable, and graphics workspace crash from outdated GPU driver requiring update. We cover each with fixes from RS DesignSpark support and community."
-category: "stl-export-and-crash-errors"
+category: "printing"
 softwareSlug: "designspark-mechanical"
 keyword: "DesignSpark Mechanical STL export free tier upgrade cylinder hole boolean face crash corrupted config AppData SpaceClaim FIPS encryption blank login graphics renderer GPU driver"
 slug: "designspark-mechanical-stl-export-crash-errors-free-tier-upgrade-cylinder-boolean-face-corrupted-config-appdata-fips-graphics-driver"

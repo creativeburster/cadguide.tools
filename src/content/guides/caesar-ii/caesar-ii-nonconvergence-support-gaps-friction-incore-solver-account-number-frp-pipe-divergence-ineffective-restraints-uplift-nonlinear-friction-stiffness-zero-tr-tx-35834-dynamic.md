@@ -1,7 +1,7 @@
 ---
 title: "CAESAR II Nonconvergence from Support Gaps and Friction, Incore Solver Error from Account Number Lock, FRP Pipe Divergence from Ineffective Restraints and Uplift, Nonlinear Friction Stiffness Zero No Convergence, and Dynamic Analysis Equation Errors: Gap Reduction, Hexagon Support Ticket, Friction Coefficient Removal, TR-TX-35834 Fix, and Version 12 Update"
 excerpt: "CAESAR II fails for 5 distinct reasons: nonconvergence from support gaps and friction requiring gap reduction and friction coefficient removal, incore solver error from account number lock requiring Hexagon support ticket, FRP pipe divergence from ineffective restraints and uplift requiring support configuration review, nonconvergence from friction with zero stiffness requiring TR-TX-35834 fix in Version 12, and dynamic analysis equation errors requiring Version 12 update. We cover each with fixes from Eng-Tips and Hexagon documentation."
-category: "convergence-and-solver-errors"
+category: "troubleshooting"
 softwareSlug: "caesar-ii"
 keyword: "CAESAR II nonconvergence support gaps friction incore solver error account number FRP pipe divergence ineffective restraints uplift nonlinear friction stiffness zero TR-TX-35834 dynamic analysis equation errors Version 12 Hexagon support"
 slug: "caesar-ii-nonconvergence-support-gaps-friction-incore-solver-account-number-frp-pipe-divergence-ineffective-restraints-uplift-nonlinear-friction-stiffness-zero-tr-tx-35834-dynamic"

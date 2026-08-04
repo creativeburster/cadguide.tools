@@ -1,7 +1,7 @@
 ---
 title: "FORAN Shipbuilding CAD Errors: Non-Windows Interface and Steep Learning Curve from Unix Heritage Requiring Formal Training, Poor 3D Model Import Export from Weak Geometry Kernel Requiring STEP or Parasolid Conversion, Heavy System Resource Requirements from Oracle Database Dependency Requiring Infrastructure Investment, Poor Documentation Making Self-Learning Impossible Requiring Vendor Training, and Comparison with ShipConstructor and CADMATIC for Feature Set and Usability"
 excerpt: "FORAN fails for 5 distinct reasons: non-Windows interface and steep learning curve from Unix heritage requiring formal training, poor 3D model import export from weak geometry kernel requiring STEP or Parasolid conversion, heavy system resource requirements from Oracle database dependency requiring infrastructure investment, poor documentation making self-learning impossible requiring vendor training, and comparison with ShipConstructor and CADMATIC for feature set and usability. We cover each with fixes from Boat Design Net and industry reviews."
-category: "shipbuilding-cad-errors"
+category: "troubleshooting"
 softwareSlug: "foran"
 keyword: "FORAN shipbuilding CAD non-Windows interface steep learning curve Unix heritage formal training poor 3D model import export weak geometry kernel STEP Parasolid conversion heavy system resource Oracle database dependency infrastructure poor documentation self-learning vendor training ShipConstructor CADMATIC comparison feature set usability"
 slug: "foran-shipbuilding-cad-errors-non-windows-interface-steep-learning-curve-unix-heritage-poor-3d-model-import-export-weak-geometry-kernel-heavy-system-resource-oracle-database-poor"

@@ -1,7 +1,7 @@
 ---
 title: "Chief Architect Performance and Roof Generation: Network Drive File Corruption and Slowness, Multi-Monitor 3D Camera Redraw Overhead, Auto Roof Return Errant Plane Generation, Library Material Selection Crash in X14, and Automatic Truss Overlap Causing Elevation Slowness"
 excerpt: "Chief Architect fails for 5 distinct reasons: working over network drives causes slowness and file corruption, multiple monitors tax the GPU causing 3D camera view delays, Auto Roof Returns generate errant roof planes, selecting Material from Library crashes X14, and automatic trusses overlapping roof planes with retained framing cause severe elevation generation slowness. We cover each with fixes from Chief Architect support and ChiefTalk forums."
-category: "performance-and-roof-generation"
+category: "performance"
 softwareSlug: "chief-architect"
 keyword: "Chief Architect network drive slowness corruption multi-monitor 3D camera redraw Auto Roof Return errant plane Library Material crash X14 automatic truss overlap elevation slowness"
 slug: "chief-architect-performance-roof-generation-network-drive-multi-monitor-auto-roof-return-library-crash-truss-overlap"

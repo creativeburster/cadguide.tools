@@ -1,7 +1,7 @@
 ---
 title: "EasyEDA BOM and Pick Place CSV Double Quote Header Breaking JLCPCB SMT Assembly Upload, Unicode Text Tab Delimited BOM with CSV Extension Not Recognized by JLCPCB, Component Rotation Mismatch Between EasyEDA and JLCPCB Placement Preview, Missing LCSC Part Numbers Causing Part Not Matched Warnings, and Gerber Drill Coordinate Format Precision Offset in CAM350: CSV Save As Excel, Header Quote Removal, LCSC Part Number Assignment, Rotation Verification, and Drill Format 3:3 mm"
 excerpt: "EasyEDA fails for 5 distinct reasons: BOM and Pick Place CSV double quote header breaking JLCPCB SMT upload requiring Excel Save As CSV, Unicode Text tab delimited BOM with CSV extension not recognized by JLCPCB requiring CSV comma delimited save, component rotation mismatch between EasyEDA and JLCPCB requiring placement preview verification, missing LCSC part numbers causing Part Not Matched warnings requiring LCSC assignment, and Gerber drill coordinate format precision offset in CAM350 requiring 3:3 mm format. We cover each with fixes from EasyEDA Forum and Schemalyzer."
-category: "bom-and-gerber-export-errors"
+category: "troubleshooting"
 softwareSlug: "easyeda"
 keyword: "EasyEDA BOM Pick Place CSV double quote header JLCPCB SMT assembly upload Unicode Text tab delimited CSV extension component rotation mismatch LCSC part numbers Part Not Matched Gerber drill coordinate format precision CAM350 offset"
 slug: "easyeda-bom-pick-place-csv-double-quote-header-jlcpcb-smt-upload-unicode-text-tab-delimited-component-rotation-mismatch-lcsc-part-numbers-not-matched-gerber-drill-coordinate"

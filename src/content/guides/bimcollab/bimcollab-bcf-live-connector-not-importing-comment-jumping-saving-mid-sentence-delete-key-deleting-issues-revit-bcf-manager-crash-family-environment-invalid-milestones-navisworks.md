@@ -1,7 +1,7 @@
 ---
 title: "BIMcollab BCF Live Connector Not Importing Issues, Comment Jumping and Saving Mid-Sentence on Synchronized Issues, Delete Key Accidentally Deleting Issues, Revit BCF Manager Crash in Family Environment and on Invalid Milestones, and Navisworks Bulk Import Issues Not Auto-Syncing: Performance Fix 23.5.1, June 2025 Beta, Auto-Sync Configuration, and Revit Bundle Update"
 excerpt: "BIMcollab fails for 5 distinct reasons: BCF Live Connector not importing issues from performance bottleneck requiring 23.5.1 update, comment jumping and saving mid-sentence on synchronized issues from auto-sync interference requiring June 2025 beta fix, Delete key accidentally deleting issues from list focus conflict requiring careful focus management, Revit BCF Manager crash in family environment and on invalid milestones requiring Revit bundle update, and Navisworks bulk import issues not auto-syncing by design requiring manual synchronization. We cover each with fixes from Solibri Society and BIMcollab Help Center."
-category: "sync-and-connector-errors"
+category: "troubleshooting"
 softwareSlug: "bimcollab"
 keyword: "BIMcollab BCF Live Connector not importing issues comment jumping saving mid-sentence synchronized Delete key deleting issues Revit BCF Manager crash family environment invalid milestones Navisworks bulk import auto-sync 23.5.1 June 2025 beta"
 slug: "bimcollab-bcf-live-connector-not-importing-comment-jumping-saving-mid-sentence-delete-key-deleting-issues-revit-bcf-manager-crash-family-environment-invalid-milestones-navisworks"

@@ -1,7 +1,7 @@
 ---
 title: "FeatureCAM Stock Model Import and DMK Toolpath Errors: 5-Axis Simulation Workpiece Repositioned Causing Cutter Through Part from Add-In Toolpath Feature, Round Stock Import Gives Offset Oversized OD Never Asking for Sizing from STEP Export Orientation, DMK Toolpath Error TPDMK01 from Feature Depth Overridden Past Stock Solid Limits, Casting as Stock Requires Multibody Solid or Separate Import with Alignment, and UCCNC Post Processor Not Available Requiring Fanuc Base Customization in xBuild"
 excerpt: "FeatureCAM fails for 5 distinct reasons: 5-axis simulation repositions workpiece causing cutter through part from add-in toolpath feature, round stock import gives offset oversized OD never asking for sizing from STEP export orientation, DMK toolpath error TPDMK01 from feature depth overridden past stock solid limits, casting as stock requires multibody solid or separate import with alignment, and UCCNC post processor not available requiring Fanuc base customization in xBuild. We cover each with fixes from Autodesk Community and Practical Machinist."
-category: "stock-model-and-toolpath-errors"
+category: "manufacturing"
 softwareSlug: "featurecam"
 keyword: "FeatureCAM 5-axis simulation workpiece repositioned cutter through part add-in toolpath round stock import offset oversized OD STEP orientation DMK toolpath error TPDMK01 feature depth overridden stock solid limits casting stock multibody solid UCCNC post processor Fanuc xBuild"
 slug: "featurecam-stock-model-dmk-toolpath-errors-5axis-simulation-workpiece-repositioned-round-stock-offset-oversized-dmk-tpdmk01-depth-overridden-casting-multibody-solid-uccnc-post"

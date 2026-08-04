@@ -1,7 +1,7 @@
 ---
 title: "OptiSystem 23 Simulation Stuck and Closes at Power Combiner from FBG OTDR Sensor Model, Calculation Did Not Converge from BER Test Set Multiple Parameter Sweep, SPM TDF Crash from OptiSystem Version 20 Bug, Report Page Crash from Deleted Component Data Reference, and Directly Detected Eye Analyzer Buffer Emptying Error: Power Combiner Simplification, Single Parameter Sweep, SPM Update, Report Page Cleanup, and Analyzer Buffer Fix"
 excerpt: "OptiSystem fails for 5 distinct reasons: simulation stuck and closes at power combiner from FBG OTDR sensor model requiring simplification, calculation did not converge from BER Test Set multiple parameter sweep requiring single parameter, SPM TDF crash from OptiSystem 20 bug requiring update, report page crash from deleted component data reference requiring cleanup, and Directly Detected Eye Analyzer buffer emptying requiring analyzer fix. We cover each with fixes from Optiwave forum and release notes."
-category: "simulation-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "optisystem"
 keyword: "OptiSystem 23 simulation stuck closes power combiner FBG OTDR sensor calculation did not converge BER Test Set multiple parameter sweep SPM TDF crash report page crash deleted component Directly Detected Eye Analyzer buffer emptying"
 slug: "optisystem-23-simulation-stuck-power-combiner-fbg-otdr-converge-ber-test-spm-tdf-crash-report-page-deleted-component-eye-analyzer-buffer"

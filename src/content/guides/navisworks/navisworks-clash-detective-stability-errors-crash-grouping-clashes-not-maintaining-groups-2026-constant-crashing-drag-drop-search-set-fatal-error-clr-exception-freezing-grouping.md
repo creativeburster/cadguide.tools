@@ -1,7 +1,7 @@
 ---
 title: "Navisworks Clash Detective and Stability Errors: Crash When Grouping Clashes After Not Maintaining Groups Requiring Select Screen Workaround or Update 2, 2026 Constant Crashing from Clash Manager Drag-Drop Bug Requiring Update 2, Search Set Creation Fatal Error from CLR Exception Requiring File Repair, Freezing When Grouping All Tests from Name Preview Generation Requiring Simplified Grouping, and Viewpoint Disappearing and Crash from Folder Drag-Drop Requiring Sort Workaround"
 excerpt: "Navisworks fails for 5 distinct reasons: crash when grouping clashes after not maintaining groups requiring select screen workaround or Update 2, 2026 constant crashing from clash manager drag-drop bug requiring Update 2, search set creation fatal error from CLR exception requiring file repair, freezing when grouping all tests from name preview generation requiring simplified grouping, and viewpoint disappearing and crash from folder drag-drop requiring sort workaround. We cover each with fixes from Autodesk Community Forums."
-category: "clash-detective-and-stability-errors"
+category: "troubleshooting"
 softwareSlug: "navisworks"
 keyword: "Navisworks crash grouping clashes not maintaining groups select screen workaround Update 2 2026 constant crashing clash manager drag-drop bug search set creation fatal error CLR exception file repair freezing grouping all tests name preview generation simplified grouping viewpoint disappearing crash folder drag-drop sort workaround"
 slug: "navisworks-clash-detective-stability-errors-crash-grouping-clashes-not-maintaining-groups-2026-constant-crashing-drag-drop-search-set-fatal-error-clr-exception-freezing-grouping"

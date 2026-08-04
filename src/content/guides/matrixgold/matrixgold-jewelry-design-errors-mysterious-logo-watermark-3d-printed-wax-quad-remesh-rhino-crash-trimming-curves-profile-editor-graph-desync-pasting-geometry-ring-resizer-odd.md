@@ -1,7 +1,7 @@
 ---
 title: "MatrixGold Jewelry Design Errors: Mysterious Logo Watermark in 3D Printed Wax from MatrixGold Processing Requiring Quad Remesh to Remove, Rhino Crash from Trimming Curves in Profile Editor Requiring 3.9 Update, Graph Desync from Pasting Geometry and Missing Original Objects Requiring 3.9 Fix, Ring Resizer Odd Shapes from Default Tolerance Requiring Lowered Tolerance and Geometry Validation, and Slow Recalculation from Complex Multi-Operation Designs Requiring Dynamic Power Toggle"
 excerpt: "MatrixGold fails for 5 distinct reasons: mysterious logo watermark in 3D printed wax from MatrixGold processing requiring quad remesh to remove, Rhino crash from trimming curves in Profile Editor requiring 3.9 update, graph desync from pasting geometry and missing original objects requiring 3.9 fix, Ring Resizer odd shapes from default tolerance requiring lowered tolerance and geometry validation, and slow recalculation from complex multi-operation designs requiring Dynamic Power Toggle. We cover each with fixes from McNeel Forum and Stuller Blog."
-category: "jewelry-design-and-stability-errors"
+category: "troubleshooting"
 softwareSlug: "matrixgold"
 keyword: "MatrixGold mysterious logo watermark 3D printed wax quad remesh Rhino crash trimming curves Profile Editor 3.9 update graph desync pasting geometry missing original objects Ring Resizer odd shapes default tolerance lowered tolerance geometry validation slow recalculation complex multi-operation Dynamic Power Toggle"
 slug: "matrixgold-jewelry-design-errors-mysterious-logo-watermark-3d-printed-wax-quad-remesh-rhino-crash-trimming-curves-profile-editor-graph-desync-pasting-geometry-ring-resizer-odd"

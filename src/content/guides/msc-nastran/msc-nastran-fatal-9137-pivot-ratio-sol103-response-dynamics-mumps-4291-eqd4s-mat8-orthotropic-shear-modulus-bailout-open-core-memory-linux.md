@@ -1,7 +1,7 @@
 ---
 title: "MSC Nastran Fatal 9137 Pivot Ratio and Solver Errors: Excessive Pivot Ratios in Matrix KLL from Rigid Body Motion Requiring SOL 103 Diagnosis, SOL 103 Response Dynamics Stuck at Frequency from Disk Space and MUMPS Solver, Fatal 4291 EQD4S Singular J-Matrix from Orthotropic Material Missing Shear Moduli, No Results Found in SOL 101 from BAILOUT and AUTOMPC Misuse, and Unable to Allocate Open Core from Memory Configuration on Linux"
 excerpt: "MSC Nastran fails for 5 distinct reasons: fatal 9137 excessive pivot ratios from rigid body motion requiring SOL 103 normal modes to identify 0 Hz mechanisms, SOL 103 Response Dynamics stuck at certain frequency from insufficient disk space and MUMPS solver issues, fatal 4291 singular J-matrix from orthotropic MAT8 material with missing shear moduli G12 G1Z G2Z, no results in SOL 101 from using BAILOUT=-1 as a crutch instead of fixing constraints, and unable to allocate Open Core from memory configuration on Linux with 1.5TB RAM. We cover each with fixes from Siemens Community and Eng-Tips forums."
-category: "fatal-error-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "msc-nastran"
 keyword: "MSC Nastran fatal 9137 excessive pivot ratio matrix KLL rigid body motion SOL 103 normal modes 0 Hz mechanism Response Dynamics stuck frequency disk space MUMPS solver fatal 4291 EQD4S singular J-matrix MAT8 orthotropic shear modulus G12 G1Z G2Z BAILOUT AUTOMPC open core memory Linux"
 slug: "msc-nastran-fatal-9137-pivot-ratio-sol103-response-dynamics-mumps-4291-eqd4s-mat8-orthotropic-shear-modulus-bailout-open-core-memory-linux"

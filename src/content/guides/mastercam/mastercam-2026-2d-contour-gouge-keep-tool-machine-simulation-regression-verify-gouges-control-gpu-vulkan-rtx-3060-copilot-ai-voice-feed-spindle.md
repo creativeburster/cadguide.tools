@@ -1,7 +1,7 @@
 ---
 title: "Mastercam 2026 2D Contour Gouge Down with Keep Tool Compensation Control, Machine Simulation Regression from Refactored Code Causing Gouging, Verify Gouges When Compensation Set to Control, GPU Simulation 10x Faster with Vulkan 1.3 and RTX 3060, and Mastercam Copilot AI Voice-Controlled Feed Rate and Spindle Speed Adjustment: R-40092 Fix, R-40335 Regression Fix, R-39611 Compensation Fix, GPU Setup, and Copilot Workflow"
 excerpt: "Mastercam fails for 5 distinct reasons: 2D contour gouge down with Keep Tool compensation requiring R-40092 fix, Machine Simulation regression from refactored code causing gouging requiring R-40335 fix, Verify gouges when compensation set to Control requiring R-39611 fix, GPU simulation requiring Vulkan 1.3 and RTX 3060 setup, and Mastercam Copilot AI voice-controlled feed rate and spindle speed adjustment requiring Copilot workflow. We cover each with fixes from Mastercam 2026 release notes."
-category: "toolpath-and-simulation-errors"
+category: "manufacturing"
 softwareSlug: "mastercam"
 keyword: "Mastercam 2026 2D contour gouge Keep Tool compensation Machine Simulation regression refactored code Verify gouges Control GPU simulation Vulkan 1.3 RTX 3060 10x faster Copilot AI voice-controlled feed rate spindle speed"
 slug: "mastercam-2026-2d-contour-gouge-keep-tool-machine-simulation-regression-verify-gouges-control-gpu-vulkan-rtx-3060-copilot-ai-voice-feed-spindle"

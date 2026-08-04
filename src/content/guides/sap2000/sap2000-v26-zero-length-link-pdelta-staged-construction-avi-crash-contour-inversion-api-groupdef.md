@@ -1,7 +1,7 @@
 ---
 title: "SAP2000 v26 Zero-Length Link Nonlinear Convergence Failure from Large Displacements P-Delta, Staged Construction Incorrect Base Reactions from Time Dependent Items, AVI Movie Creation Crash from Compression, Contour Display Soil Pressure Max Min Inversion in Enveloping Load Cases, and API GroupDef.Delete Allowing Reserved ALL Group Deletion: Zero-Length Link Update, Staged Construction Fix, AVI Format Change, Contour Display Fix, and API Patch"
 excerpt: "SAP2000 fails for 5 distinct reasons: zero-length link nonlinear convergence failure from Large Displacements P-Delta requiring zero-length link update, Staged Construction incorrect base reactions from Time Dependent Items requiring staged construction fix, AVI movie creation crash from compression requiring AVI format change, contour display soil pressure max min inversion in enveloping load cases requiring contour display fix, and API GroupDef.Delete allowing reserved ALL group deletion requiring API patch. We cover each with fixes from CSI release notes."
-category: "analysis-and-api-errors"
+category: "troubleshooting"
 softwareSlug: "sap2000"
 keyword: "SAP2000 v26 zero-length link nonlinear convergence failure Large Displacements P-Delta Staged Construction incorrect base reactions Time Dependent Items AVI movie creation crash compression contour display soil pressure max min inversion enveloping load cases API GroupDef.Delete reserved ALL group deletion"
 slug: "sap2000-v26-zero-length-link-pdelta-staged-construction-avi-crash-contour-inversion-api-groupdef"

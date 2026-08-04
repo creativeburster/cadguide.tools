@@ -1,7 +1,7 @@
 ---
 title: "Altium 365 CoDesigner ECAD-MCAD SolidWorks Sync Errors: SpeedPak Configuration Deletes CoDesigner Link Properties Causing No Document Opened, Internal ID Does Not Match from Multiple Boards Without Common Component Folder, AddALU_items Failed from Insufficient Workspace Permissions, Components Shifted from Negative Coordinates in SolidWorks, and SOLIDWORKS Decal Rendering Issues from Graphics Card Compatibility and Enhanced Graphics Performance"
 excerpt: "Altium 365 CoDesigner fails for 5 distinct reasons: SpeedPak configuration deletes CoDesigner link properties in PCB assembly causing 'no document opened' error, Internal ID Does Not Match from multiple boards with same components without Common Comp Folder, AddALU_items Failed error from insufficient workspace permissions, components shifted or positioned incorrectly from negative coordinates in SolidWorks, and SOLIDWORKS decal rendering issues from graphics card incompatibility and Enhanced Graphics Performance setting. We cover each with fixes from Altium Knowledge Base and EEVblog forums."
-category: "codesigner-ecad-mcad-sync-errors"
+category: "troubleshooting"
 softwareSlug: "altium-365"
 keyword: "Altium 365 CoDesigner SpeedPak no document opened Internal ID does not match Common Comp Folder AddALU_items failed workspace permissions components shifted negative coordinates SolidWorks decal rendering graphics card Enhanced Graphics Performance"
 slug: "altium-365-codesigner-ecad-mcad-sync-errors-speedpak-no-document-internal-id-mismatch-common-comp-folder-addalu-items-permissions-negative-coordinates-decal-graphics"

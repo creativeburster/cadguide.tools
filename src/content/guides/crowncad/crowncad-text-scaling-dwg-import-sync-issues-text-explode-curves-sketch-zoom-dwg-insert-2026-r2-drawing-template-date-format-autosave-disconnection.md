@@ -1,7 +1,7 @@
 ---
 title: "CrownCAD Cloud CAD Text Scaling, DWG Import, and Sync Issues: Text Cannot Scale or Stretch Without Exploding to Curves, Sketch Zoom Limitation Prevents Text Enlargement, DWG Insert into Sketch from 2026 R2, Engineering Drawing Template Date Format Errors, and Internet Disconnection Auto-Save Recovery"
 excerpt: "CrownCAD fails for 5 distinct reasons: text cannot be scaled or stretched without exploding to curves unlike SolidWorks, sketch zoom doesn't allow text enlargement, DWG files can now be inserted directly into sketches from 2026 R2, engineering drawing templates have incorrect date format with missing or extra spaces, and internet disconnection auto-save preserves session state for sync on reconnection. We cover each with fixes from CrownCAD community and documentation."
-category: "text-scaling-and-dwg-import-issues"
+category: "troubleshooting"
 softwareSlug: "crowncad"
 keyword: "CrownCAD text scaling stretch explode curves sketch zoom DWG insert sketch 2026 R2 engineering drawing template date format internet disconnection auto-save sync"
 slug: "crowncad-text-scaling-dwg-import-sync-issues-text-explode-curves-sketch-zoom-dwg-insert-2026-r2-drawing-template-date-format-autosave-disconnection"

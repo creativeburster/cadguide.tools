@@ -1,7 +1,7 @@
 ---
 title: "Onshape WebGL Context Loss from GPU Running Out of VRAM, Part Studio Intermittent Slowdown from Heavy Derived Features and Browser Cache, Assembly Mate Solve Time High from Complex Part Workspaces, Performance Degradation from Excessive Tab Count Over 100, and Chrome VRAM Throttling for Large Models Requiring Firefox Switch: VRAM Upgrade, Cache Clear, Version References, Tab Reduction, and Browser Switch"
 excerpt: "Onshape fails for 5 distinct reasons: WebGL context loss from GPU running out of VRAM requiring VRAM upgrade or tessellation reduction, Part Studio intermittent slowdown from heavy derived features and browser cache requiring cache clear, Assembly mate solve time high from complex part workspaces requiring version references, performance degradation from excessive tab count over 100 requiring tab reduction, and Chrome VRAM throttling for large models requiring Firefox switch. We cover each with fixes from Onshape help and forum."
-category: "performance-and-webgl-errors"
+category: "performance"
 softwareSlug: "onshape"
 keyword: "Onshape WebGL context loss GPU VRAM Part Studio intermittent slowdown heavy derived features browser cache Assembly mate solve time complex part workspaces performance degradation excessive tab count Chrome VRAM throttling large models Firefox"
 slug: "onshape-webgl-context-loss-vram-part-studio-slowdown-derived-cache-assembly-mate-solve-tab-count-chrome-vram-firefox"

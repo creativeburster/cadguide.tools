@@ -1,7 +1,7 @@
 ---
 title: "CLO 3D Avatar Dressing Fabric Simulation and Export Errors: Low-Poly Retopology from CLO to Blender Loses Details from Triangle Topology, Fabric Simulation Buckling Stretching from Default Low Stiffness and Triangular Mesh, USD Export Workflow for Garment Simulation Data and Avatar Animation Cache, File Corruption from Insufficient Disk Space and Multiple CLO Instances, and OBJ Export Missing Fabric Textures from CLO No Longer Supporting JPEG Fabric Files"
 excerpt: "CLO 3D fails for 5 distinct reasons: low-poly retopology from CLO to Blender loses details from triangular topology requiring manual retopo, fabric simulation buckling and stretching from default low stiffness and triangular mesh topology, USD export workflow requires correct garment simulation data and avatar animation cache settings, file corruption from insufficient disk space and running multiple CLO instances simultaneously, and OBJ export missing fabric textures from CLO no longer supporting JPEG fabric files. We cover each with fixes from CLO Support, Blender Artists, and Virt-A-Mate Hub."
-category: "fabric-simulation-and-export-workflow-errors"
+category: "workflow"
 softwareSlug: "clo-3d"
 keyword: "CLO 3D low-poly retopology Blender triangular topology fabric simulation buckling stretching default stiffness triangular mesh USD export garment simulation data avatar animation cache file corruption disk space multiple instances OBJ export missing fabric textures JPEG fabric files"
 slug: "clo-3d-avatar-dressing-fabric-simulation-export-errors-low-poly-retopology-blender-triangular-topology-buckling-stiffness-usd-export-garment-simulation-cache-file-corruption-disk"

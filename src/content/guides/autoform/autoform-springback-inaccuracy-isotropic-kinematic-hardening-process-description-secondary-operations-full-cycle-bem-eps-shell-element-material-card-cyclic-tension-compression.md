@@ -1,7 +1,7 @@
 ---
 title: "AutoForm Springback Inaccuracy from Isotropic Hardening Model, Process Description Influencing Springback from Missing Secondary Operations, Element Type Selection BEM vs EPS for Springback Accuracy, Material Card Default vs Experimentally Calibrated Parameters, and Backdraft from Geometric Springback Compensation: Kinematic Hardening, Full Cycle Simulation, EPS-11 Shell Element, Cyclic Tension-Compression Test, and Coining with TS-11 Thick Shell"
 excerpt: "AutoForm fails for 5 distinct reasons: springback inaccuracy from isotropic hardening model requiring kinematic hardening with calibrated parameters, process description influencing springback from missing secondary operation tool closure requiring full cycle simulation, element type BEM vs EPS selection affecting springback accuracy requiring EPS-11 shell elements, material card default parameters underestimating springback requiring cyclic tension-compression test calibration, and backdraft from geometric springback compensation requiring coining with TS-11 thick shell element. We cover each with fixes from AutoForm documentation and research."
-category: "springback-and-simulation-accuracy-errors"
+category: "troubleshooting"
 softwareSlug: "autoform"
 keyword: "AutoForm springback inaccuracy isotropic hardening kinematic hardening process description secondary operations full cycle simulation BEM EPS shell element material card default parameters cyclic tension-compression test backdraft geometric compensation coining TS-11 thick shell"
 slug: "autoform-springback-inaccuracy-isotropic-kinematic-hardening-process-description-secondary-operations-full-cycle-bem-eps-shell-element-material-card-cyclic-tension-compression"

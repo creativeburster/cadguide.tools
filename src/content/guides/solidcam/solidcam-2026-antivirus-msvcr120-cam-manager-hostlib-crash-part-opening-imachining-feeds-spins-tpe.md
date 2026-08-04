@@ -1,7 +1,7 @@
 ---
 title: "SolidCAM 2026 SolidCAM.exe Deleted by Anti-Virus from Quarantine, MSVCR120.dll Missing from Missing Visual C++ Redistributable, SolidCAM Add-In Cam Manager Initialization Failure from Registration Issue, SolidWorks and SolidCAM Crash Without Error Reports on Part Opening, and iMachining 3D Incorrect Feeds and Spins for Floor Machining from TPE Bug: Anti-Virus Exclusion, VC++ Redistributable Install, HostLib.dll Registration, Clean Install, and TPE Update"
 excerpt: "SolidCAM fails for 5 distinct reasons: SolidCAM.exe deleted by anti-virus from quarantine requiring anti-virus exclusion, MSVCR120.dll missing from missing Visual C++ Redistributable requiring VC++ redistributable install, SolidCAM Add-In Cam Manager initialization failure from registration issue requiring HostLib.dll registration, SolidWorks and SolidCAM crash without error reports on part opening requiring clean install, and iMachining 3D incorrect feeds and spins for floor machining from TPE bug requiring TPE update. We cover each with fixes from SolidCAM forum."
-category: "installation-and-machining-errors"
+category: "manufacturing"
 softwareSlug: "solidcam"
 keyword: "SolidCAM 2026 SolidCAM.exe deleted anti-virus quarantine MSVCR120.dll missing Visual C++ Redistributable Add-In Cam Manager initialization failure registration HostLib.dll SolidWorks SolidCAM crash without error reports part opening iMachining 3D incorrect feeds spins floor machining TPE bug"
 slug: "solidcam-2026-antivirus-msvcr120-cam-manager-hostlib-crash-part-opening-imachining-feeds-spins-tpe"

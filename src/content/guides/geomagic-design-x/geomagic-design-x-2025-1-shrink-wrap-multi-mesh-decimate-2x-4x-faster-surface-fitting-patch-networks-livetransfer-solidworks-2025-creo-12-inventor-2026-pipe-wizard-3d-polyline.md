@@ -1,7 +1,7 @@
 ---
 title: "Geomagic Design X 2025.1 Shrink Wrap Tool for Multi-Mesh Watertight Repair, Decimate Mesh 2x 4x Faster Performance for Clean Optimized Data, Surface Fitting Accuracy for Complex Patch Networks, LiveTransfer to SolidWorks 2025 Creo 12 Inventor 2026, and Pipe Wizard Robust Results with 3D Polyline Sweep Path Export: Multi-Mesh Merge, Adaptive Decimation, Patch Network Correction, CAD Transfer Workflow, and Pipe Geometry Export"
 excerpt: "Geomagic Design X fails for 5 distinct reasons: multi-mesh topology issues requiring Shrink Wrap Tool, slow decimation performance requiring 2025.1 Decimate Mesh 2x 4x faster, inaccurate surface fitting for complex patch networks requiring 2025.1 improved fitting, LiveTransfer compatibility requiring SolidWorks 2025 Creo 12 Inventor 2026 support, and Pipe Wizard inaccurate results requiring 2025.1 robust improvements and 3D Polyline sweep path export. We cover each with fixes from Hexagon release notes."
-category: "mesh-and-surface-fitting-errors"
+category: "troubleshooting"
 softwareSlug: "geomagic-design-x"
 keyword: "Geomagic Design X 2025.1 Shrink Wrap multi-mesh watertight repair Decimate Mesh 2x 4x faster surface fitting complex patch networks LiveTransfer SolidWorks 2025 Creo 12 Inventor 2026 Pipe Wizard robust 3D Polyline sweep path export"
 slug: "geomagic-design-x-2025-1-shrink-wrap-multi-mesh-decimate-2x-4x-faster-surface-fitting-patch-networks-livetransfer-solidworks-2025-creo-12-inventor-2026-pipe-wizard-3d-polyline"

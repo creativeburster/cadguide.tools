@@ -1,7 +1,7 @@
 ---
 title: "Solid Edge 2026 AMD GPU Not Used and Delayed Viewport Update from OpenGL Hardware Acceleration Failure, Access Violation 0xc0000005 Crash in Hole Command on Frame Environment Save As Parts, Assembly File Crash After Part Edited Twice with Section View Active, Parts Library Navigation Very Slow in Solid Edge 2026, and Crash When Opening Large Assembly from Update 6: GPU Driver Update, Update 3 Rollback, Section View Disable, Settings Wizard Reset, and Update 6 Install"
 excerpt: "Solid Edge fails for 5 distinct reasons: AMD GPU not used and delayed viewport update from OpenGL hardware acceleration failure requiring GPU driver update, Access Violation 0xc0000005 crash in Hole command on Frame Environment Save As parts requiring Update 3 rollback, assembly file crash after part edited twice with Section view active requiring Section view disable, Parts Library navigation very slow in Solid Edge 2026 requiring Settings Wizard reset, and crash when opening large assembly from Update 6 requiring Update 6 install. We cover each with fixes from Siemens community."
-category: "graphics-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge 2026 AMD GPU not used delayed viewport update OpenGL hardware acceleration Access Violation 0xc0000005 Hole command Frame Environment Save As assembly crash part edited twice Section view Parts Library navigation slow crash opening large assembly Update 6"
 slug: "solid-edge-2026-amd-gpu-delayed-viewport-access-violation-hole-frame-assembly-section-view-parts-library-large-assembly"

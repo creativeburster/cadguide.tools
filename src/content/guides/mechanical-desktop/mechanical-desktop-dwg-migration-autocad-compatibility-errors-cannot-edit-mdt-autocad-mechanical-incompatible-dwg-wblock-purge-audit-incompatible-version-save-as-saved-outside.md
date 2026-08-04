@@ -1,8 +1,8 @@
 ---
 title: "Mechanical Desktop DWG Migration and AutoCAD Compatibility Errors: Cannot Edit MDT Drawings in AutoCAD Mechanical from Incompatible DWG Format Requiring Wblock Purge Audit Workflow, Incompatible Version Error from Newer Release or Third-Party Add-on Requiring Save As Correct Format, Drawing Saved Outside AutoCAD Mechanical Breaks Structured Objects Requiring Insert Purge Audit, MDT 3D Files Cannot Export 2D Layouts to DXF Requiring Inventor Conversion, and MDT 2009 to Inventor 2018 Migration Requires Both MDT 2009 and Inventor Installed"
 excerpt: "Mechanical Desktop fails for 5 distinct reasons: cannot edit MDT drawings in AutoCAD Mechanical from incompatible DWG format requiring Wblock Purge Audit workflow, incompatible version error from newer release or third-party add-on requiring Save As correct format, drawing saved outside AutoCAD Mechanical breaks structured objects requiring Insert Purge Audit, MDT 3D files cannot export 2D layouts to DXF requiring Inventor conversion, and MDT 2009 to Inventor 2018 migration requires both MDT 2009 and Inventor installed. We cover each with fixes from Autodesk Community."
-category: "dwg-migration-and-compatibility-errors"
-softwareSlug: "mechanical-desktop"
+category: "migration"
+softwareSlug: "autocad"
 keyword: "Mechanical Desktop MDT cannot edit AutoCAD Mechanical incompatible DWG format Wblock Purge Audit incompatible version newer release third-party add-on Save As drawing saved outside AutoCAD Mechanical structured objects Insert Purge Audit MDT 3D export 2D layouts DXF Inventor conversion MDT 2009 Inventor 2018 migration"
 slug: "mechanical-desktop-dwg-migration-autocad-compatibility-errors-cannot-edit-mdt-autocad-mechanical-incompatible-dwg-wblock-purge-audit-incompatible-version-save-as-saved-outside"
 author: "CADGuide Tools Editorial Team"

@@ -82,10 +82,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 3. **综合改写** — 将多个来源整合为一个连贯叙述。禁止复制粘贴。用自己的话改写并加入实际经验。
 
 ### 语气与风格
-- **第一人称** — "I see this issue when…", "In my experience…", "I recommend…"
 - **去 AI 味** — 禁止使用 "In this comprehensive guide, we will explore…", "It's worth noting that…", "Delve into", "Navigate the complexities of", "In the realm of" 等 AI 典型措辞。
 - **直接实用** — 像资深 CAD 管理员跟同事说话，不像教科书。
-- **实战经验** — 引用真实场景："A client called me last month because their Revit central model…", "I've seen this exact error on three different Inventor installs."
+- **实战经验** — 引用真实场景（须来自可核实来源，见禁止事项）。
 
 ### 质量标准
 - **1000+ 字** 每篇 guide
@@ -95,11 +94,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Frontmatter 必填** — title, excerpt, category, softwareSlug, keyword, slug, author, readTime, date, sources
 
 ### 分类
-**分类由真实搜索需求决定，不是先定分类再填内容。**
+**选题由真实搜索需求决定，不是先定选题再填内容；但 `category` 字段必须从下列受控枚举中取值。**
 
-流程：先搜索该工具的真实讨论、论坛帖子、搜索量数据 → 根据实际发现的内容确定分类 → 如果现有分类都不合适，创建新分类。
+流程：先搜索该工具的真实讨论、论坛帖子、搜索量数据 → 根据实际发现的内容确定选题与分类 → 分类只能取下方枚举之一。
 
-现有分类（参考，非强制）：
+受控枚举（与站点 UI 的 CATEGORY_LABELS 一一对应）：
 - `troubleshooting` — 错误修复、崩溃、文件损坏
 - `performance` — 速度优化、大文件、硬件
 - `migration` — 版本升级、平台切换
@@ -111,7 +110,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `workflow` — 工作流程教程
 - `comparison` — 软件对比
 
-**禁止按模板分配分类**（如"每个工具必须 1 篇 troubleshooting + 1 篇 performance…"）。每个工具的 5 篇 guide 分类应反映该工具真实的搜索需求分布，不同工具的分类组合应该不同。
+**严禁自造一次性分类值**（如 "crash-and-performance-errors"）：不在枚举内的分类值不会出现在 /guides 列表页的分类筛选下拉框中，相关文章匹配也会失效，等于把文章从站点导航中隐形。确需新增分类时，必须先同步更新 `src/app/guides/guides-list-client.tsx` 与 `src/app/guides/[slug]/page.tsx` 中的 CATEGORY_LABELS/CATEGORY_COLORS，再在 frontmatter 中使用。
+
+**禁止按模板分配分类**（如"每个工具必须 1 篇 troubleshooting + 1 篇 performance…"）。每个工具的 guide 分类组合应反映该工具真实的搜索需求分布，不同工具的组合应该不同。
 
 ### 禁止事项
 - 不研究真实需求就生成 guide

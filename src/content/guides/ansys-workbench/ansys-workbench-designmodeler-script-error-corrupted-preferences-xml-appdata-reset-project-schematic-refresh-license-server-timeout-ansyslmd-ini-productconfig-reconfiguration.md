@@ -1,7 +1,7 @@
 ---
 title: "Ansys Workbench DesignModeler Script Error from Corrupted Preferences XML, Project Schematic Refresh Error from Corrupted Workbench File, License Server Communication Timeout from Network Latency, DesignModeler Won't Start from Corrupted AppData, and Product Configuration Missing After Update: AppData Reset, Preferences XML Copy, ansyslmd.ini Timeout Settings, and ProductConfig Reconfiguration"
 excerpt: "Ansys Workbench fails for 5 distinct reasons: DesignModeler script error from corrupted settings requiring AppData reset or Preferences XML copy, project schematic refresh error from corrupted workbench file requiring project repair, license server communication timeout from network latency requiring ansyslmd.ini timeout settings, DesignModeler won't start from corrupted AppData requiring folder rename, and product configuration missing after update requiring ProductConfig reconfiguration. We cover each with fixes from Ansys Knowledge Base."
-category: "workbench-startup-and-license-errors"
+category: "deployment"
 softwareSlug: "ansys-workbench"
 keyword: "Ansys Workbench DesignModeler script error corrupted Preferences XML AppData reset project schematic refresh error license server timeout ansyslmd.ini ProductConfig reconfiguration"
 slug: "ansys-workbench-designmodeler-script-error-corrupted-preferences-xml-appdata-reset-project-schematic-refresh-license-server-timeout-ansyslmd-ini-productconfig-reconfiguration"

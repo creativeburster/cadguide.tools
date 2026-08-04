@@ -1,7 +1,7 @@
 ---
 title: "Carlson Survey Field-to-Finish and Coordinate Import: Point Node on Wrong Layer from Undefined F2F Codes, Description Truncation from C&G CRD Fixed Length, Lat/Long Scale Factor from NAD83 Import, Coordinate File Empty on Data Collector from Wrong Format, and Field Code Conversion for Client Requirements"
 excerpt: "Carlson Survey fails for 5 distinct reasons: Field-to-Finish puts point nodes on wrong layer when F2F codes are undefined in the .fld file, point descriptions truncate because C&G CRD format has fixed description length, lat/long points import at wrong scale because NAD83 coordinates need state plane conversion, coordinate files transfer empty to data collector because format is set to C&G Numeric instead of Carlson Numeric, and converting field codes for new client requirements has no built-in translation tool. We cover each with fixes from Carlson Software forums."
-category: "field-to-finish-and-coordinate-import"
+category: "workflow"
 softwareSlug: "carlson-survey"
 keyword: "Carlson Survey Field to Finish point node wrong layer undefined code description truncation C&G CRD fixed length lat long scale NAD83 coordinate file empty data collector C&G Numeric Carlson Numeric field code conversion"
 slug: "carlson-survey-field-to-finish-coordinate-import-wrong-layer-truncation-scale-empty-collector-code-conversion"

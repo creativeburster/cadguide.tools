@@ -1,7 +1,7 @@
 ---
 title: "Land F/X Plant Manager Freeze and Cloud Data Import Crash: Plant Manager Freezes AutoCAD from Firewall Blocking Cloud Data Endpoint, Black Screen Lockup from NVIDIA Display Driver Conflict, Cloud Data Import Crash from Security Software Blocking landfx.com, Unhandled Exception in dcl-slideview-load ARX from Corrupted Block Files, and No Function Definition LOOKUP from September 2025 Update Bug"
 excerpt: "Land F/X fails for 5 distinct reasons: Plant Manager freezes AutoCAD from firewall or security router blocking cloud data endpoint fixable by editing a plant first, black screen lockup from NVIDIA display driver conflict requiring driver version experimentation, cloud data import crash from security software blocking landfx.com requiring firewall exceptions, unhandled exception in dcl-slideview-load ARX from corrupted block or slide files, and No Function Definition LOOKUP error from September 2025 update requiring reinstall. We cover each with fixes from Land F/X support community."
-category: "plant-manager-freeze-and-import-crash-errors"
+category: "troubleshooting"
 softwareSlug: "land-fx"
 keyword: "Land F/X Plant Manager freeze AutoCAD firewall cloud data endpoint black screen NVIDIA display driver cloud data import crash security software landfx.com unhandled exception dcl-slideview-load ARX No Function Definition LOOKUP September 2025"
 slug: "land-fx-plant-manager-freeze-import-crash-errors-firewall-cloud-endpoint-nvidia-driver-security-software-dcl-slideview-arx-lookup-function"

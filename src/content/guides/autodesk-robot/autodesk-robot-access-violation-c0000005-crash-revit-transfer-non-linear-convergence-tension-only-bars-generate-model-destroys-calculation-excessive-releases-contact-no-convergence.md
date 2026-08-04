@@ -1,7 +1,7 @@
 ---
 title: "Autodesk Robot Access Violation c0000005 Crash from Revit Transfer, Non-Linear Convergence Error from Tension-Only Bars, Generate Model Destroys Calculation from Excessive Releases, Contact No Convergence from Mesh Quality, and Steel Connection Crash from 2024.0.1 Hotfix: Release Correction, Compression-Only Bars, Mesh Alignment, and Hotfix Installation"
 excerpt: "Autodesk Robot fails for 5 distinct reasons: access violation c0000005 crash from Revit model transfer requiring model correction, non-linear convergence error from tension-only bars in compression requiring release correction, generate model destroys calculation from excessive releases and intersecting bracing requiring release and generation fixes, contact no convergence from poor mesh quality requiring mesh alignment and freezing, and steel connection crash requiring 2024.0.1 hotfix. We cover each with fixes from Autodesk Community."
-category: "crash-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "autodesk-robot"
 keyword: "Autodesk Robot access violation c0000005 crash Revit transfer non-linear convergence tension-only bars compression generate model destroys calculation excessive releases bracing contact no convergence mesh quality steel connection crash 2024.0.1 hotfix"
 slug: "autodesk-robot-access-violation-c0000005-crash-revit-transfer-non-linear-convergence-tension-only-bars-generate-model-destroys-calculation-excessive-releases-contact-no-convergence"

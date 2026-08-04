@@ -1,7 +1,7 @@
 ---
 title: "MeshLab Mesh Processing and Export Errors: FBX and GLB Import Crash from Format Incompatibility Requiring Format Conversion, Export Crash After Quadric Edge Collapse Decimation from Version Bug Requiring 2020.05 or Mesh Size Reduction, Non-Manifold Edge Repair Not Persisting in STL from Format Limitation Requiring PLY or OBJ Save, Duplicate Faces After Repair from STL Vertex Duplication Requiring PLY Format, and Large Model 20-30M Face Crash from Memory Exhaustion Requiring Mesh Reduction or Older Version"
 excerpt: "MeshLab fails for 5 distinct reasons: FBX and GLB import crash from format incompatibility requiring format conversion, export crash after Quadric Edge Collapse Decimation from version bug requiring 2020.05 or mesh size reduction, non-manifold edge repair not persisting in STL from format limitation requiring PLY or OBJ save, duplicate faces after repair from STL vertex duplication requiring PLY format, and large model 20-30M face crash from memory exhaustion requiring mesh reduction or older version. We cover each with fixes from MeshLab GitHub Issues."
-category: "mesh-processing-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "meshlab"
 keyword: "MeshLab FBX GLB import crash format incompatibility conversion export crash Quadric Edge Collapse Decimation version bug 2020.05 non-manifold edge repair not persisting STL format limitation PLY OBJ save duplicate faces STL vertex duplication large model 20-30M face crash memory exhaustion mesh reduction older version"
 slug: "meshlab-mesh-processing-export-errors-fbx-glb-import-crash-export-crash-quadric-edge-collapse-decimation-non-manifold-edge-repair-not-persisting-stl-duplicate-faces-vertex"

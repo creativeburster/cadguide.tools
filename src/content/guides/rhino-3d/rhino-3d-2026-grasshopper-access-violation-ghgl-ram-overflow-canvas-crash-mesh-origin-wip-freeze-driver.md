@@ -1,7 +1,7 @@
 ---
 title: "Rhino 3D 2026 Grasshopper AccessViolationException Crash from GDI+ Connection Wire Drawing, GHGL Mesh Shader RAM Overflow from Untethered Components, Grasshopper Canvas Crash with Large Definitions During Zoom, Mesh Generation Crash from Far-From-Origin GIS Data, and Rhino WIP Freeze with Empty GH1 Running and Outdated GPU Drivers: Autosave Disable, Default Mesh Wiring, Plugin Troubleshoot, Origin Relocation, and Driver Update"
 excerpt: "Rhino 3D fails for 5 distinct reasons: Grasshopper AccessViolationException crash from GDI+ connection wire drawing requiring autosave disable, GHGL Mesh Shader RAM overflow from untethered components requiring default mesh wiring, Grasshopper canvas crash with large definitions during zoom requiring plugin troubleshoot, mesh generation crash from far-from-origin GIS data requiring origin relocation, and Rhino WIP freeze with empty GH1 running and outdated GPU drivers requiring driver update. We cover each with fixes from McNeel forum."
-category: "crash-and-display-errors"
+category: "troubleshooting"
 softwareSlug: "rhino-3d"
 keyword: "Rhino 3D 2026 Grasshopper AccessViolationException crash GDI+ connection wire drawing GHGL Mesh Shader RAM overflow untethered components Grasshopper canvas crash large definitions zoom mesh generation crash far-from-origin GIS data Rhino WIP freeze empty GH1 outdated GPU drivers"
 slug: "rhino-3d-2026-grasshopper-access-violation-ghgl-ram-overflow-canvas-crash-mesh-origin-wip-freeze-driver"

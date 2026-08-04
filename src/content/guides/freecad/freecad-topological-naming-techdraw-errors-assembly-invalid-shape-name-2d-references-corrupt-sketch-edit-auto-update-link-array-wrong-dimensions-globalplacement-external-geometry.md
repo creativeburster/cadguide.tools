@@ -1,7 +1,7 @@
 ---
 title: "FreeCAD Topological Naming Problem and TechDraw Dimension Errors: Assembly Invalid Shape Name from TNP Requiring Manual Reference Reassignment, TechDraw 2D References Corrupt from Sketch Edit Requiring Auto Update Disable, Link Array Objects Produce Wrong TechDraw Dimensions from Missing globalPlacement, External Geometry References Break on Previous Layer Edits from TNP, and Nested AppLink with StdPart Container Offset Renders Wrong TechDraw Position"
 excerpt: "FreeCAD fails for 5 distinct reasons: Assembly Invalid Shape Name from TNP requiring manual reference reassignment, TechDraw 2D references corrupt from Sketch edit requiring Auto Update disable in Sketcher settings, Link Array objects produce wrong TechDraw dimensions from missing globalPlacement equivalent, external geometry references break on previous layer edits from TNP requiring master sketches, and nested AppLink with StdPart container offset renders wrong TechDraw position from Part::Feature::getShape. We cover each with fixes from FreeCAD Forum and GitHub."
-category: "topological-naming-and-techdraw-errors"
+category: "troubleshooting"
 softwareSlug: "freecad"
 keyword: "FreeCAD topological naming problem TNP Assembly Invalid Shape Name TechDraw 2D references corrupt Sketch edit Auto Update disable Link Array wrong dimensions globalPlacement external geometry references break previous layer master sketches nested AppLink StdPart container offset wrong position Part Feature getShape"
 slug: "freecad-topological-naming-techdraw-errors-assembly-invalid-shape-name-2d-references-corrupt-sketch-edit-auto-update-link-array-wrong-dimensions-globalplacement-external-geometry"

@@ -1,7 +1,7 @@
 ---
 title: "Simplify3D Slicing Crashes and Model Errors: V5 Crash on Prepare to Print from Coasting/Wipe, Cannot Slice Any Model Only Generates Supports, Rotated Model Missing Geometry from Zero-Thickness Body, 978MB STL Crash and No GPU Usage in V5, and No Model After Prepare to Print from Corrupt Installation"
 excerpt: "Simplify3D fails for 5 distinct reasons: V5 crashes on Prepare to Print from confirmed coasting and wipe bug, cannot slice any model generating only supports from faulty STL or settings, rotating model 45 degrees causes missing geometry from zero-thickness body, V5.0.2 crashes on 978MB STL with no GPU usage unlike V4, and no model after Prepare to Print requires Visual C++ Redistributable reinstall. We cover each with fixes from Simplify3D forums."
-category: "slicing-crashes-and-model-errors"
+category: "printing"
 softwareSlug: "simplify3d"
 keyword: "Simplify3D V5 crash Prepare to Print coasting wipe cannot slice only supports rotated model zero-thickness 978MB STL no GPU V4 Visual C++ Redistributable"
 slug: "simplify3d-slicing-crashes-model-errors-v5-coasting-wipe-cannot-slice-rotated-zero-thickness-978mb-gpu-visual-cpp"

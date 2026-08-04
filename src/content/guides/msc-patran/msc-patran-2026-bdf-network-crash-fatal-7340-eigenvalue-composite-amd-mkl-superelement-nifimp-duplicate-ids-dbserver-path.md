@@ -1,7 +1,7 @@
 ---
 title: "MSC Patran 2026 BDF Import Crash from Network Drive Path, SYSTEM FATAL 7340 Eigenvalue Storage Exceeded from Buckling Analysis, Composite Material Analysis UFM 6134 on AMD CPU from Intel MKL Incompatibility, Superelement Duplicate Entity IDs from NIFIMP Import, and MscNastranDbServer Crash from BDF Path Length: Local Drive Copy, Eigenvalue Reduction, Intel CPU Workaround, ID Offsetting, and Path Shortening"
 excerpt: "MSC Patran fails for 5 distinct reasons: BDF import crash from network drive path requiring local drive copy, SYSTEM FATAL 7340 eigenvalue storage exceeded from buckling analysis requiring eigenvalue reduction, composite material analysis UFM 6134 on AMD CPU from Intel MKL incompatibility requiring Intel CPU workaround, superelement duplicate entity IDs from NIFIMP import requiring ID offsetting, and MscNastranDbServer crash from BDF path length requiring path shortening. We cover each with fixes from Patran community and release notes."
-category: "import-and-solver-errors"
+category: "troubleshooting"
 softwareSlug: "msc-patran"
 keyword: "MSC Patran 2026 BDF import crash network drive SYSTEM FATAL 7340 eigenvalue storage exceeded buckling analysis composite material UFM 6134 AMD CPU Intel MKL superelement duplicate entity IDs NIFIMP import MscNastranDbServer crash BDF path length"
 slug: "msc-patran-2026-bdf-network-crash-fatal-7340-eigenvalue-composite-amd-mkl-superelement-nifimp-duplicate-ids-dbserver-path"

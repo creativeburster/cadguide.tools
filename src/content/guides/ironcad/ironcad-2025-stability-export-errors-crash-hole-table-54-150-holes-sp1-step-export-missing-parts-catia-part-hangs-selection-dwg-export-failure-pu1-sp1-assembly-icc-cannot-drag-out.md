@@ -1,7 +1,7 @@
 ---
 title: "IronCAD 2025 Stability and Export Errors: Crash on Hole Table with 54 of 150 Holes from Known Bug Requiring SP1 Update, STEP Export Missing Parts from Export Failure Requiring Update, Imported CATIA Part Hangs on Selection from Geometry Complexity Requiring Simplification, DWG Export Failure from Version Bug Requiring PU1 SP1 Update, and Assembly Save to ICC Cannot Drag Out Causing Crash from File Corruption Requiring Recovery"
 excerpt: "IronCAD 2025 fails for 5 distinct reasons: crash on hole table with 54 of 150 holes from known bug requiring SP1 update, STEP export missing parts from export failure requiring update, imported CATIA part hangs on selection from geometry complexity requiring simplification, DWG export failure from version bug requiring PU1 SP1 update, and assembly save to ICC cannot drag out causing crash from file corruption requiring recovery. We cover each with fixes from IronCAD Release Notes."
-category: "stability-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "ironcad"
 keyword: "IronCAD 2025 crash hole table 54 of 150 holes SP1 update STEP export missing parts export failure imported CATIA part hangs selection geometry complexity simplification DWG export failure PU1 SP1 assembly save ICC cannot drag out crash file corruption recovery"
 slug: "ironcad-2025-stability-export-errors-crash-hole-table-54-150-holes-sp1-step-export-missing-parts-catia-part-hangs-selection-dwg-export-failure-pu1-sp1-assembly-icc-cannot-drag-out"

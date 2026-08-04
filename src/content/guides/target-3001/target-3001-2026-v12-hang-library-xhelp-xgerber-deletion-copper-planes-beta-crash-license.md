@@ -1,7 +1,7 @@
 ---
 title: "Target 3001! 2026 V12 Hang on Component Import from Corrupted Library Path, XHELP.INF Error from Missing Write Permissions, XGerber Import Deletion Layers Requiring Manual Separation to Area and Deletion Layers, Copper Planes Display Incorrectly in Gerber Export from Polygon Fill Settings, and Beta Version 15.4.0.6 Crash from Edition Mismatch with License File: Library Path Repair, Admin Installation, Layer Separation, Fill Method Switch, and Exe File Replacement"
 excerpt: "Target 3001! fails for 5 distinct reasons: V12 hang on component import from corrupted library path requiring library path repair, XHELP.INF error from missing write permissions requiring admin installation, XGerber import deletion layers requiring manual separation to area and deletion layers, copper planes display incorrectly in Gerber export from polygon fill settings requiring fill method switch, and beta version 15.4.0.6 crash from edition mismatch with license file requiring exe file replacement. We cover each with fixes from Target 3001! community."
-category: "import-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "target-3001"
 keyword: "Target 3001 2026 V12 hang component import corrupted library path XHELP.INF error missing write permissions admin installation XGerber import deletion layers manual separation area deletion copper planes Gerber export polygon fill settings beta 15.4.0.6 crash edition mismatch license file"
 slug: "target-3001-2026-v12-hang-library-xhelp-xgerber-deletion-copper-planes-beta-crash-license"

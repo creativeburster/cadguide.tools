@@ -1,7 +1,7 @@
 ---
 title: "Eagle PCB Custom Footprint DRC and Gerber Manufacturing Errors: Pad Overlapping from DRC Annular Ring Expanding Narrow Pads Beyond Design, Complex Footprint DRC Errors from Polygon Pad Connection Requiring Center Within Polygon Rule, DRC Connected Unrouted Paths from THT Pads Not Metalized Requiring Cutout Polygon Isolation, DRC Overlap Error from Board Layout Without Schematic Requiring Name Command to Unify Nets, and Gerber Solder Mask Vias Under BGA from Insufficient Mask Limit Causing Ball Suck-in"
 excerpt: "Eagle PCB fails for 5 distinct reasons: pad overlapping from DRC annular ring expanding narrow pads beyond design requiring circular pads with smaller diameter, complex footprint DRC errors from polygon pad connection requiring center within polygon rule, DRC connected unrouted paths from THT pads not metalized requiring cutout polygon isolation, DRC overlap error from board layout without schematic requiring Name command to unify nets, and Gerber solder mask vias under BGA from insufficient mask limit causing ball suck-in. We cover each with fixes from Autodesk Eagle Forum and EDABoard."
-category: "custom-footprint-drc-and-gerber-errors"
+category: "troubleshooting"
 softwareSlug: "eagle"
 keyword: "Eagle PCB pad overlapping DRC annular ring narrow pads circular smaller diameter complex footprint polygon pad connection center within polygon DRC connected unrouted paths THT pads not metalized cutout polygon isolation DRC overlap error without schematic Name command unify nets Gerber solder mask vias BGA ball suck-in mask limit"
 slug: "eagle-pcb-custom-footprint-drc-gerber-errors-pad-overlapping-annular-ring-complex-footprint-polygon-connection-unrouted-paths-tht-not-metalized-cutout-isolation-overlap-without"

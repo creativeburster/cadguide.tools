@@ -1,7 +1,7 @@
 ---
 title: "DipTrace Gerber Export and Autorouter: TrueType Font Gerber Export Failure, Autorouter Not Executing from Default 8.89mm Trace Width, 4-Layer Plane Net Autorouter Leaving Power/Ground Unrouted, Panelized PCB Errant Cross-Board Trace Bug, and Custom Mask Paste Settings Not Renewing from Schematic"
 excerpt: "DipTrace fails for 5 distinct reasons: TrueType font text on the board prevents Gerber export fixable by switching to Vector font, autorouter doesn't execute because default Net Class trace width is 8.89mm too wide for any path, 4-layer plane nets (power/ground) are left unrouted because copper pours must be redone after changes, panelized PCB Gerber contains errant traces between neighboring boards from a confirmed bug, and custom mask/paste settings don't renew from schematic because PCB Layout settings have higher priority. We cover each with fixes from DipTrace forums."
-category: "gerber-export-and-autorouter"
+category: "troubleshooting"
 softwareSlug: "diptrace"
 keyword: "DipTrace Gerber export TrueType font Vector autorouter not executing 8.89mm trace width 4-layer plane net unrouted copper pour panelized errant trace custom mask paste renew schematic"
 slug: "diptrace-gerber-export-autorouter-truetype-font-default-trace-width-plane-net-panelized-trace-custom-mask"

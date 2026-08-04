@@ -1,7 +1,7 @@
 ---
 title: "MIDAS Civil 2GB Memory Limit for Large Models with Excessive Nodes, Nonlinear Analysis Load Cases Not Converging from Default Tolerance, Application Error Crash from comctl32.dll and C++ Redistributable, Singular Errors from Plate and Solid Elements Without Rotational DOF, and Construction Stage Analysis Restart Inconsistency from Changed Stages: Mesh Size Optimization, Convergence Tolerance Adjustment, Windows Update, Rotational DOF Restraint, and Restart Reconfiguration"
 excerpt: "MIDAS Civil fails for 5 distinct reasons: 2GB memory limit for large models with excessive nodes requiring mesh size optimization, nonlinear analysis load cases not converging from default tolerance requiring convergence adjustment, application error crash from comctl32.dll and C++ redistributable requiring Windows update, singular errors from plate and solid elements without rotational DOF requiring rotational DOF restraint, and construction stage analysis restart inconsistency from changed stages requiring restart reconfiguration. We cover each with fixes from MIDAS support."
-category: "analysis-and-memory-errors"
+category: "troubleshooting"
 softwareSlug: "midas-civil"
 keyword: "MIDAS Civil 2GB memory limit large models nodes nonlinear analysis load cases not converging default tolerance application error crash comctl32.dll C++ redistributable singular errors plate solid elements rotational DOF construction stage analysis restart inconsistency"
 slug: "midas-civil-2gb-memory-limit-nonlinear-convergence-application-error-comctl32-singular-rotational-dof-construction-stage-restart"

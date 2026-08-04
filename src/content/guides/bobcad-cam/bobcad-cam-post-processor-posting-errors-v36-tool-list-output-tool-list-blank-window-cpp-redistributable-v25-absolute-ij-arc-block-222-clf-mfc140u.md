@@ -1,7 +1,7 @@
 ---
 title: "BobCAD-CAM Post Processor and Posting Errors: V36 Tool List Not Posting from Commented-Out output_tool_list, Blank Posting Window from Unmounted UI Panel or Missing C++ Redistributable, V25 Absolute I/J Arc Values Instead of Incremental from Block 222 Setting, CLF Not Found Error from Missing Toolpath Data, and MFC140u.dll Not Found from Incomplete Installation"
 excerpt: "BobCAD-CAM fails for 5 distinct reasons: V36 post doesn't output tool list because output_tool_list is commented out with // in block 0, posting window is blank from unmounted UI panel or missing 2010 x86 C++ Redistributable, V25 posts absolute I/J arc values instead of incremental from block 222 arc center setting, CLF Not Found error from missing cutter location file data, and MFC140u.dll not found from incomplete installation requiring admin reinstall. We cover each with fixes from BobCAD Support and Practical Machinist forums."
-category: "post-processor-and-posting-errors"
+category: "manufacturing"
 softwareSlug: "bobcad-cam"
 keyword: "BobCAD-CAM V36 tool list output_tool_list commented out blank posting window unmounted C++ Redistributable V25 absolute incremental IJ arc block 222 CLF not found MFC140u dll"
 slug: "bobcad-cam-post-processor-posting-errors-v36-tool-list-output-tool-list-blank-window-cpp-redistributable-v25-absolute-ij-arc-block-222-clf-mfc140u"

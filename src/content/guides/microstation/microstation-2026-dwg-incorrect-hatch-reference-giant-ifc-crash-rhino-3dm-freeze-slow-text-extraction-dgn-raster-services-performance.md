@@ -1,7 +1,7 @@
 ---
 title: "MicroStation 2026 DWG File Displaying Incorrectly from Hatch Reference Mismatch, Crashing When Opening Giant Size IFC File, Freezing While Importing Rhino 3DM Files, Extremely Slow Text Extraction for Attached DGN Files, and Performance Issues from Unavailable Raster Services When Opening DGN: Hatch Reference Fix, IFC Update, 3DM Import Fix, Text Extraction Optimization, and Raster Service Configuration"
 excerpt: "MicroStation fails for 5 distinct reasons: DWG file displaying incorrectly from hatch reference mismatch requiring 2026 update, crashing when opening or referencing giant size IFC file requiring 2026.0.1 fix, freezing while importing Rhino 3DM files requiring 2026 fix, extremely slow text extraction for attached DGN files requiring 2026 optimization, and performance issues from unavailable raster services requiring raster service configuration. We cover each with fixes from Bentley MicroStation 2026 release notes."
-category: "reference-and-performance-errors"
+category: "performance"
 softwareSlug: "microstation"
 keyword: "MicroStation 2026 DWG displaying incorrectly hatch reference mismatch crashing giant IFC file freezing Rhino 3DM import slow text extraction attached DGN performance unavailable raster services opening DGN"
 slug: "microstation-2026-dwg-incorrect-hatch-reference-giant-ifc-crash-rhino-3dm-freeze-slow-text-extraction-dgn-raster-services-performance"

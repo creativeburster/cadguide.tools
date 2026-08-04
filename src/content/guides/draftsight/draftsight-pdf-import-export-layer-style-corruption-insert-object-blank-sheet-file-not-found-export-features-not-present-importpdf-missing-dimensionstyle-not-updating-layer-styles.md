@@ -1,7 +1,7 @@
 ---
 title: "DraftSight PDF Import Export and Layer Style Corruption: PDF Import Inconsistent from INSERT OBJECT Showing Blank White Sheet or File Not Found, PDF Export Shows Features Not Present in Drawing from Layer Recollection and Blocking, ImportPDF Command Missing from Ribbon in DraftSight Professional, DimensionStyle Not Updating Without Switching Away and Back, and Layer Styles Corrupted on Export Requiring Master File Workaround"
 excerpt: "DraftSight fails for 5 distinct reasons: PDF import via INSERT OBJECT is inconsistent showing blank sheets or file not found errors, PDF export shows features not present in the drawing from layer recollection and blocking artifacts, ImportPDF command missing from the ribbon in DraftSight Professional, DimensionStyle not updating without switching to a different style and back, and layer styles corrupted on export requiring a master file with layer states workaround. We cover each with fixes from Dassault DraftSight Community and Eng-Tips."
-category: "pdf-import-export-and-layer-style-errors"
+category: "troubleshooting"
 softwareSlug: "draftsight"
 keyword: "DraftSight PDF import INSERT OBJECT blank white sheet file not found PDF export features not present layer recollection blocking ImportPDF command missing ribbon Professional DimensionStyle not updating switching layer styles corrupted export master file layer states"
 slug: "draftsight-pdf-import-export-layer-style-corruption-insert-object-blank-sheet-file-not-found-export-features-not-present-importpdf-missing-dimensionstyle-not-updating-layer-styles"

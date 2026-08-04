@@ -1,7 +1,7 @@
 ---
 title: "Lumion Ray Tracing and Crash Errors: Ray Tracing Artifacts and Blotches from Insufficient Samples Requiring Denoiser and Sample Adjustment, Frequent Crash When Rendering with Ray Tracing from NVIDIA Driver Incompatibility Requiring Driver Downgrade, DDS Texture Crash from Non-Divisible-by-4 Resolution Requiring Image Resize, Project Recovery Effects Reverted to Default from Crash Recovery Bug Requiring 2025.2 Update, and Merge Project Black Scene from Incompatible Project Files Requiring Version Match"
 excerpt: "Lumion fails for 5 distinct reasons: Ray Tracing artifacts and blotches from insufficient samples requiring denoiser and sample adjustment, frequent crash when rendering with Ray Tracing from NVIDIA driver incompatibility requiring driver downgrade, DDS texture crash from non-divisible-by-4 resolution requiring image resize, Project Recovery effects reverted to default from crash recovery bug requiring 2025.2 update, and Merge Project black scene from incompatible project files requiring version match. We cover each with fixes from Lumion Support and NVIDIA Forums."
-category: "ray-tracing-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion Ray Tracing artifacts blotches insufficient samples denoiser sample adjustment frequent crash rendering NVIDIA driver incompatibility driver downgrade DDS texture crash non-divisible-by-4 resolution image resize Project Recovery effects reverted default crash recovery bug 2025.2 update Merge Project black scene incompatible project files version match"
 slug: "lumion-ray-tracing-crash-errors-artifacts-blotches-samples-denoiser-frequent-crash-nvidia-driver-dds-texture-non-divisible-4-project-recovery-effects-reverted-default-merge-project"

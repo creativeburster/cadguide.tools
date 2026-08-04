@@ -1,7 +1,7 @@
 ---
 title: "Tebis 2026 Robot Singularity and Limit Switch Conflicts During Toolpath Calculation, TBN to DWG DXF Conversion Failure from File Corruption and Unrecognized Feature Format, Machine Head Collision in 2.5D Free-Form Features from Variable Tool Search, CATIA 3DEXPERIENCE 3DXML Import Data Exchange Issues, and Large Tool Library Search Performance with Zoller TMS and External Tebis Libraries: Robot Conflict Visualization, Problem Layer Isolation, Collision Check Enable, 3DXML Workflow, and Release 11 Update"
 excerpt: "Tebis fails for 5 distinct reasons: robot singularity and limit switch conflicts during toolpath calculation requiring robot conflict visualization, TBN to DWG DXF conversion failure from file corruption and unrecognized feature format requiring problem layer isolation, machine head collision in 2.5D free-form features from variable tool search requiring collision check enable, CATIA 3DEXPERIENCE 3DXML import data exchange issues requiring 3DXML workflow, and large tool library search performance with Zoller TMS and external Tebis libraries requiring Release 11 update. We cover each with fixes from Tebis community."
-category: "toolpath-and-import-errors"
+category: "manufacturing"
 softwareSlug: "tebis"
 keyword: "Tebis 2026 robot singularity limit switch conflicts toolpath calculation TBN DWG DXF conversion failure file corruption unrecognized feature format machine head collision 2.5D free-form features variable tool search CATIA 3DEXPERIENCE 3DXML import large tool library search Zoller TMS external Tebis libraries Release 11"
 slug: "tebis-2026-robot-singularity-tbn-dwg-dxf-collision-catia-3dxml-tool-library-zoller-release11"

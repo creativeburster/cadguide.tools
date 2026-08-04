@@ -1,7 +1,7 @@
 ---
 title: "ActCAD LISP Visual LISP vl- vla- vlax- vlr- Unsupported Functions, -BEDIT Dynamic Block Crash, LISP Open Command Hang, Move Command Slow Performance, and Graphics Zoom Pan Cancel Issue: IntelliCAD 13.1 Update, System Variable Fix, and ODA SDK Upgrade"
 excerpt: "ActCAD fails for 5 distinct reasons: Visual LISP vl- vla- vlax- vlr- functions unsupported by IntelliCAD requiring pure AutoLISP replacement, -BEDIT crash on Dynamic Blocks with Constraints from selection set conflict requiring update 1310508, LISP OPEN command hang from LISPCOMMANDHASMORE system variable requiring hiding, Move command slow on specific drawings requiring update fix, and Graphics zoom pan cancel issue from canceled CAD commands requiring update fix. We cover each with fixes from ActCAD release notes and documentation."
-category: "lisp-compatibility-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "actcad"
 keyword: "ActCAD LISP Visual LISP vl- vla- vlax- vlr- unsupported IntelliCAD -BEDIT Dynamic Block crash LISP OPEN command hang LISPCOMMANDHASMORE Move command slow Graphics zoom pan cancel ODA SDK update 1310508"
 slug: "actcad-lisp-visual-lisp-vl-vla-vlax-vlr-unsupported-bedit-dynamic-block-crash-open-command-hang-move-slow-graphics-zoom-pan-cancel-intellicad-13-1-oda-sdk-update"

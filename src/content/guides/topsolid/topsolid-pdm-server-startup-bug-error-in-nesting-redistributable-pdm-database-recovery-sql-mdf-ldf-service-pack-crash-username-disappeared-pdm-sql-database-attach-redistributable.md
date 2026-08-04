@@ -1,7 +1,7 @@
 ---
 title: "TopSolid PDM Server Startup Bug, Error in Nesting from Microsoft Redistributable, PDM Database Recovery from SQL MDF LDF Files, Service Pack Application Crash, and Windows Username Disappeared from PDM: SQL Database Attach, Redistributable Reinstall, Repair Installation, and PDM User Re-registration"
 excerpt: "TopSolid fails for 5 distinct reasons: PDM server startup bug after 7.18 update requiring admin mode launch, error in nesting from Microsoft redistributable package requiring reinstall, PDM database recovery from crashed PC requiring SQL MDF LDF file attach, service pack application crash requiring repair installation, and Windows username disappeared from PDM database requiring re-registration. We cover each with fixes from TopSolid forums and documentation."
-category: "pdm-and-installation-errors"
+category: "deployment"
 softwareSlug: "topsolid"
 keyword: "TopSolid PDM server startup bug 7.18 update admin mode error in nesting Microsoft redistributable package reinstall PDM database recovery SQL MDF LDF file attach service pack application crash repair installation Windows username disappeared PDM database re-registration"
 slug: "topsolid-pdm-server-startup-bug-error-in-nesting-redistributable-pdm-database-recovery-sql-mdf-ldf-service-pack-crash-username-disappeared-pdm-sql-database-attach-redistributable"

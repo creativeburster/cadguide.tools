@@ -1,7 +1,7 @@
 ---
 title: "Solid Edge 2025 Crash and Performance Errors: Random Crashes Every Couple Hours from Outdated BIOS and Drivers Requiring System Update, SP8 Crash and Performance Downgrade from 3DConnexion Driver Conflict Requiring Rollback to SP7, Update 10 Table Edit Crash from Regression PR 11375613 Requiring Rollback or Update 11, Very Slow Performance from Network Links and OneDrive Sync Requiring Configuration Cleanup, and Crash on Open or Create File from User Profile Corruption Requiring Safe Mode and New Profile"
 excerpt: "Solid Edge fails for 5 distinct reasons: random crashes every couple hours from outdated BIOS and drivers requiring system update, SP8 crash and performance downgrade from 3DConnexion driver conflict requiring rollback to SP7, Update 10 table edit crash from regression PR 11375613 requiring rollback or Update 11, very slow performance from network links and OneDrive sync requiring configuration cleanup, and crash on open or create file from user profile corruption requiring safe mode and new profile. We cover each with fixes from Siemens Community Forum."
-category: "crash-and-performance-errors"
+category: "troubleshooting"
 softwareSlug: "solid-edge"
 keyword: "Solid Edge 2025 random crashes every couple hours outdated BIOS drivers system update SP8 crash performance downgrade 3DConnexion driver conflict rollback SP7 Update 10 table edit crash regression PR 11375613 rollback Update 11 very slow performance network links OneDrive sync configuration cleanup crash open create file user profile corruption safe mode new profile"
 slug: "solid-edge-2025-crash-performance-errors-random-crashes-outdated-bios-drivers-sp8-crash-3dconnexion-driver-conflict-update-10-table-edit-crash-regression-very-slow-performance"

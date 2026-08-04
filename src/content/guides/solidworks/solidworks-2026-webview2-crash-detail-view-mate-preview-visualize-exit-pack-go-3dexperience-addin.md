@@ -1,7 +1,7 @@
 ---
 title: "SOLIDWORKS 2026 Crash After Launch from Microsoft Edge WebView2 Runtime 146 Update, Generic Crash When Opening Drawing and Changing Detail View Scale, Mate References Preview Dialog Low Performance and Component Movement Scattered, Visualize 2026 SP1.1 Crashes on File Exit, and Pack and Go Search Replace Filename Not Working with 3DEXPERIENCE Add-in: HotFix QA00000445516 Install, SP2.1 Update, Mate Preview Disable, Visualize Update, and Add-in Disable"
 excerpt: "SOLIDWORKS fails for 5 distinct reasons: crash after launch from Microsoft Edge WebView2 Runtime 146 update requiring HotFix QA00000445516 install, generic crash when opening drawing and changing detail view scale requiring SP2.1 update, mate references preview dialog low performance and component movement scattered requiring mate preview disable, Visualize 2026 SP1.1 crashes on File Exit requiring Visualize update, and Pack and Go search replace filename not working with 3DEXPERIENCE add-in requiring add-in disable. We cover each with fixes from SOLIDWORKS support."
-category: "crash-and-performance-errors"
+category: "troubleshooting"
 softwareSlug: "solidworks"
 keyword: "SOLIDWORKS 2026 crash after launch Microsoft Edge WebView2 Runtime 146 update generic crash opening drawing changing detail view scale mate references preview dialog low performance component movement scattered Visualize SP1.1 crashes File Exit Pack and Go search replace filename 3DEXPERIENCE add-in"
 slug: "solidworks-2026-webview2-crash-detail-view-mate-preview-visualize-exit-pack-go-3dexperience-addin"

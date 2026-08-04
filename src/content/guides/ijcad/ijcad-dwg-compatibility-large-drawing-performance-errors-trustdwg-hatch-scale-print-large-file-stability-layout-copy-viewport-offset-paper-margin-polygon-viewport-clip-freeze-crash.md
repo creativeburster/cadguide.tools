@@ -1,7 +1,7 @@
 ---
 title: "IJCAD DWG Compatibility and Large Drawing Performance Errors: TrustedDWG Files from Other CAD Show Hatch Scale Differences and Print Discrepancies Requiring Version Update, Large CAD File Opening Stability and Performance from IJCAD 6+ Improvements, Layout Space Object Copy Causes Viewport and Frame Offset from Paper Margin Setting Mismatch, Polygon Viewport Clip Causes Freeze and Crash on Non-TrustedDWG Files, and PLOT Command Single Character Text Not Printed by DWG to PDF"
 excerpt: "IJCAD fails for 5 distinct reasons: TrustedDWG files from other CAD show hatch scale differences and print discrepancies requiring version update, large CAD file opening stability and performance from IJCAD 6+ improvements, layout space object copy causes viewport and frame offset from paper margin setting mismatch, polygon viewport clip causes freeze and crash on non-TrustedDWG files, and PLOT command single character text not printed by DWG to PDF. We cover each with fixes from IJCAD Help Center and ITreview."
-category: "dwg-compatibility-and-performance-errors"
+category: "performance"
 softwareSlug: "ijcad"
 keyword: "IJCAD TrustedDWG hatch scale differences print discrepancies large CAD file opening stability performance layout space object copy viewport frame offset paper margin polygon viewport clip freeze crash non-TrustedDWG PLOT command single character text DWG to PDF"
 slug: "ijcad-dwg-compatibility-large-drawing-performance-errors-trustdwg-hatch-scale-print-large-file-stability-layout-copy-viewport-offset-paper-margin-polygon-viewport-clip-freeze-crash"

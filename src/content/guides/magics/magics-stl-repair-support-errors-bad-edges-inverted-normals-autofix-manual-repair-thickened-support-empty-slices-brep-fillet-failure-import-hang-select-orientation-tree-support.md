@@ -1,7 +1,7 @@
 ---
 title: "Magics STL Repair and Support Generation Errors: Bad Edges and Inverted Normals from STL Import Requiring AutoFix and Manual Repair, Thickened Support Empty Slices from Non-Solid Support Requiring 28.03 Update and Regeneration, BREP Fillet Failure from Convergent Body Errors Requiring Manual Edge Fix, Import Hang from Select Orientation Dialog Bug Requiring Settings Disable, and Tree Support Incorrect Generation from Close-to-Platform Surface Requiring Angle Adjustment"
 excerpt: "Magics fails for 5 distinct reasons: bad edges and inverted normals from STL import requiring AutoFix and manual repair, thickened support empty slices from non-solid support requiring 28.03 update and regeneration, BREP fillet failure from convergent body errors requiring manual edge fix, import hang from Select Orientation dialog bug requiring settings disable, and tree support incorrect generation from close-to-platform surface requiring angle adjustment. We cover each with fixes from Materialise Support and Magics Tutorials."
-category: "stl-repair-and-support-errors"
+category: "printing"
 softwareSlug: "magics"
 keyword: "Magics STL repair bad edges inverted normals AutoFix manual repair thickened support empty slices non-solid support 28.03 update regeneration BREP fillet failure convergent body errors manual edge fix import hang Select Orientation dialog bug settings disable tree support incorrect generation close-to-platform surface angle adjustment"
 slug: "magics-stl-repair-support-errors-bad-edges-inverted-normals-autofix-manual-repair-thickened-support-empty-slices-brep-fillet-failure-import-hang-select-orientation-tree-support"

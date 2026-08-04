@@ -1,7 +1,7 @@
 ---
 title: "BricsCAD Status Bar Freeze from Custom CUI and LISP Macros, GUI Crash on Linux from GTK Widget Critical, ARX Freeze After Using BricsCAD Commands Before Loading, LISP Stops Working on Second Drawing from Per-Document Loading, and on_doc_load LISP Not Loading from Errant Support Path: on_start.lsp and on_doc_load.lsp, Downgrade, Ribbon Tab Switch, ACADLSPASDOC, and Support Path Priority"
 excerpt: "BricsCAD fails for 5 distinct reasons: status bar freeze from custom CUI and LISP macros requiring on_start.lsp and on_doc_load.lsp configuration, GUI crash on Linux from GTK widget critical errors requiring downgrade to previous version, ARX freeze after using BricsCAD commands before loading requiring ribbon tab switch workaround, LISP stops working on second drawing from per-document loading requiring ACADLSPASDOC=1, and on_doc_load LISP not loading from errant support path requiring path priority correction. We cover each with fixes from BricsCAD Forum."
-category: "freeze-and-lisp-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "bricscad"
 keyword: "BricsCAD status bar freeze custom CUI LISP macros GUI crash Linux GTK widget critical ARX freeze commands before loading LISP stops working second drawing per-document ACADLSPASDOC on_doc_load errant support path on_start.lsp downgrade ribbon tab switch"
 slug: "bricscad-status-bar-freeze-custom-cui-lisp-macros-gui-crash-linux-gtk-widget-arx-freeze-commands-before-loading-lisp-stops-working-second-drawing-acadlspasdoc-on-doc-load-errant"

@@ -1,7 +1,7 @@
 ---
 title: "Simcenter STAR-CCM+ Mesh Divergence and Floating Point Errors: Non-Converging Residuals from Tetrahedral Mesh Requiring Polyhedral or Trimmed, Floating Point Error from Division by Zero in Field Functions and Bad Cells, NaN Residuals from External Fluid Region Boolean Subtraction and Detach, AMG Solver Divergence at First Iteration from Grid Sequencing, and Bad Cells at Interfaces from Cell Size Mismatch and Twisted CAD Topology"
 excerpt: "STAR-CCM+ fails for 5 distinct reasons: non-converging residuals from tetrahedral meshes requiring polyhedral or trimmed mesh for flow simulations, floating point error from division by zero in field functions or negative volume cells, NaN residuals from external fluid region created by boolean subtraction and detach instead of part-based meshing, AMG solver divergence at first iteration from grid sequencing transition, and bad cells at interfaces from cell size mismatch and twisted CAD topology requiring split by non-contiguous. We cover each with fixes from Siemens Community forums."
-category: "mesh-divergence-and-floating-point-errors"
+category: "troubleshooting"
 softwareSlug: "simcenter-star-ccm"
 keyword: "STAR-CCM+ non-converging residuals tetrahedral polyhedral trimmed mesh floating point error division by zero field function negative volume NaN residuals boolean subtraction detach part-based meshing AMG solver divergence first iteration grid sequencing bad cells interface cell size mismatch twisted CAD topology"
 slug: "simcenter-star-ccm-mesh-divergence-floating-point-errors-tetrahedral-polyhedral-trimmed-field-function-division-zero-boolean-subtraction-detach-amg-solver-divergence-bad-cells"

@@ -1,7 +1,7 @@
 ---
 title: "Vertex BD 2026 Truss Engineering Error from Product Not Strong Enough for Application, Problem with Piece Orientation from Top Chord Not Aligned with Roof Plane, Member Not Supported Indeterminate from Incomplete Load Path, Compression Design Error from Member Buckling or Design Failure, and IFC Import Rectangular Holes Not Recognized from Missing IFC4 Support: Single Truss Engineering Tool, Top Chord Alignment, Boundary Condition Review, FEA Analysis Check, and IFC Validator"
 excerpt: "Vertex BD fails for 5 distinct reasons: truss engineering error from product not strong enough for application requiring single truss engineering tool, problem with piece orientation from top chord not aligned with roof plane requiring top chord alignment, member not supported indeterminate from incomplete load path requiring boundary condition review, compression design error from member buckling or design failure requiring FEA analysis check, and IFC import rectangular holes not recognized from missing IFC4 support requiring IFC validator. We cover each with fixes from Vertex BD documentation."
-category: "engineering-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "vertex-bd"
 keyword: "Vertex BD 2026 truss engineering error product not strong enough problem piece orientation top chord not aligned roof plane member not supported indeterminate incomplete load path compression design error member buckling IFC import rectangular holes IFC4 support"
 slug: "vertex-bd-2026-truss-engineering-piece-orientation-member-supported-compression-ifc-rectangular-holes"

@@ -1,7 +1,7 @@
 ---
 title: "ESPRIT CAM Post Processor and DNC Errors: Undefined Vocabulary Error from Custom Format Requiring Keyword and Symbol Definition, DNC RS-232 Transfer to Haas from Baud Rate and Cable Pinout Mismatch Requiring Settings Sync, 4-Axis Toolpath Error from Tangent Entry Type Requiring Position Entry Type, P70 Arc Endpoint Deviation from Incorrect I Value Sign Requiring Post Processor Fix, and Subspindle Work Plane Orientation from Mirror Image Requiring Work Offset Redefinition"
 excerpt: "ESPRIT CAM fails for 5 distinct reasons: undefined vocabulary error from custom format requiring keyword and symbol definition, DNC RS-232 transfer to Haas from baud rate and cable pinout mismatch requiring settings sync, 4-axis toolpath error from tangent entry type requiring position entry type, P70 arc endpoint deviation from incorrect I value sign requiring post processor fix, and subspindle work plane orientation from mirror image requiring work offset redefinition. We cover each with fixes from Practical Machinist Forum."
-category: "post-processor-and-dnc-errors"
+category: "manufacturing"
 softwareSlug: "esprit"
 keyword: "ESPRIT CAM undefined vocabulary error custom format keyword symbol definition DNC RS-232 Haas baud rate cable pinout mismatch settings sync 4-axis toolpath error tangent entry type position entry P70 arc endpoint deviation incorrect I value sign post processor fix subspindle work plane orientation mirror image work offset redefinition"
 slug: "esprit-cam-post-processor-dnc-errors-undefined-vocabulary-custom-format-dnc-rs232-haas-baud-rate-cable-pinout-4axis-toolpath-tangent-entry-position-p70-arc-endpoint-deviation"

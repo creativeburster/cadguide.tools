@@ -1,7 +1,7 @@
 ---
 title: "Ultimaker Cura Slicing Engine Errors: CuraEngine.exe Crash in polyclipping.dll from Corrupt Profile, Slicing Hangup at 60% from Randomize Infill Starts Bug, Engine Cannot Connect to localhost 127.0.0.1 from AV/Firewall, Unnecessary Top/Bottom Layers from Single-Sided Surface Model, and TiledInfill Plugin Slicing Failure from Mesh Folds"
 excerpt: "Ultimaker Cura fails for 5 distinct reasons: CuraEngine.exe crashes in polyclipping.dll from corrupt custom profile fixable by switching to default profile, slicing hangs at 60% from Randomize Infill Starts bug in 5.12.0, CuraEngine cannot connect to localhost from antivirus/firewall blocking, single-sided surface models get unnecessary top/bottom layers requiring Surface Mode, and TiledInfill plugin causes slicing failure from mesh folds. We cover each with fixes from Ultimaker community and GitHub issues."
-category: "slicing-engine-errors"
+category: "printing"
 softwareSlug: "ultimaker-cura"
 keyword: "Ultimaker Cura CuraEngine polyclipping.dll crash corrupt profile Randomize Infill Starts hangup localhost antivirus firewall single-sided surface top bottom layers TiledInfill mesh folds"
 slug: "ultimaker-cura-slicing-engine-errors-polyclipping-randomize-infill-localhost-antivirus-surface-mode-tiledinfill"

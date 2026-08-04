@@ -1,7 +1,7 @@
 ---
 title: "TurboCAD DWG Block Corruption, Rendered Black Hole from ACIS Trim Curves, Parametric Constraint Freeze, Crash on macOS Sierra from Divide by Zero, and DWG Import Audit Mode for Corrupt Files"
 excerpt: "TurboCAD fails for 5 distinct reasons: DWG block import causes text and dimensions to appear backwards or upside down requiring block explosion, LightWorks rendered view shows black patches on concave surfaces from ACIS trim curve gaps, parametric constraints freeze from solver limitations with complex design history, TurboCAD Mac Pro V9 crashes on macOS Sierra from divide by zero in video generation, and DWG import requires audit or recover mode for corrupt files. We cover each with fixes from TurboCAD forums and community resources."
-category: "dwg-import-and-rendering-errors"
+category: "troubleshooting"
 softwareSlug: "turbocad"
 keyword: "TurboCAD DWG block import backwards text dimensions LightWorks black patches ACIS trim curve parametric constraint freeze solver macOS Sierra crash divide by zero DWG import audit recover"
 slug: "turbocad-dwg-import-rendering-errors-block-backwards-lightworks-black-acis-trim-constraint-freeze-macos-crash-audit-recover"

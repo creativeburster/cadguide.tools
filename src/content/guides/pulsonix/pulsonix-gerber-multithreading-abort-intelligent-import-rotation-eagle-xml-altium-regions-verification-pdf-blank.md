@@ -1,7 +1,7 @@
 ---
 title: "Pulsonix Gerber Multi-Threading Program Abort in Panel Design, Intelligent Gerber Import 90 Degree Pad Rotation and Incomplete Data, Eagle XML Library Import Failure from Missing XML Keyword, Altium Self-Intersecting Regions Pour Phase Incomplete, and Gerber Verification Plot PDF Blank or Program Quit: Multi-Threading Disable, Import Settings, XML Fix, Region Cleanup, and PDF Verification"
 excerpt: "Pulsonix fails for 5 distinct reasons: Gerber multi-threading program abort in panel design requiring multi-threading disable, Intelligent Gerber Import 90 degree pad rotation and incomplete data requiring import settings, Eagle XML library import failure from missing XML keyword requiring XML fix, Altium self-intersecting regions pour phase incomplete requiring region cleanup, and Gerber verification plot PDF blank or program quit requiring PDF verification. We cover each with fixes from Pulsonix change notes."
-category: "import-and-gerber-errors"
+category: "troubleshooting"
 softwareSlug: "pulsonix"
 keyword: "Pulsonix Gerber multi-threading program abort panel design Intelligent Gerber Import 90 degree pad rotation incomplete data Eagle XML library import failure missing XML keyword Altium self-intersecting regions pour phase incomplete Gerber verification plot PDF blank program quit"
 slug: "pulsonix-gerber-multithreading-abort-intelligent-import-rotation-eagle-xml-altium-regions-verification-pdf-blank"

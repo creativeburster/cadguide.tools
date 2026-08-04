@@ -1,7 +1,7 @@
 ---
 title: "KOMPAS-3D Assembly and File Recovery Errors: Assembly Crash on Rebuild from Top-Down Design Bug Requiring Save Before Rebuild, Invalid File Structure from Document Corruption Requiring Open with Verification, DXF DWG Export Failure from Graphical Document Errors Requiring Verification Repair, Lost Link to Variable Error from Missing Variable Names Requiring Variable Reassignment, and Fatal Error 0x0024 from cax_geometry.dll Access Violation Requiring Graphics Override Registry Fix"
 excerpt: "KOMPAS-3D fails for 5 distinct reasons: assembly crash on rebuild from top-down design bug requiring save before rebuild, invalid file structure from document corruption requiring open with verification, DXF DWG export failure from graphical document errors requiring verification repair, lost link to variable error from missing variable names requiring variable reassignment, and fatal error 0x0024 from cax_geometry.dll access violation requiring graphics override registry fix. We cover each with fixes from ASCON Help and KOMPAS Forum."
-category: "assembly-and-file-recovery-errors"
+category: "troubleshooting"
 softwareSlug: "kompas-3d"
 keyword: "KOMPAS-3D assembly crash rebuild top-down design save before rebuild invalid file structure document corruption open with verification DXF DWG export failure graphical document errors verification repair lost link to variable missing variable names variable reassignment fatal error 0x0024 cax_geometry.dll access violation graphics override registry fix"
 slug: "kompas-3d-assembly-file-recovery-errors-assembly-crash-rebuild-top-down-save-before-rebuild-invalid-file-structure-open-with-verification-dxf-dwg-export-failure-verification-repair"

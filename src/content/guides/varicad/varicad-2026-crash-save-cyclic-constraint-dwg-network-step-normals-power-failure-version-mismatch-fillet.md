@@ -1,7 +1,7 @@
 ---
 title: "VariCAD 2026 Crash on Save from Cyclic Constraint Dependencies in Parametric Core, DWG Save Error from Network Drive File Lock Mechanism, STEP Import Reverted Normals from Corrupted Data in STEP File, File Cannot Be Opened from Power Failure During Save, and Version Mismatch Fillet Feature Broken from 2024.2 Shape Representation Change: Dependency Graph Check, Local SSD Save, Normal Repair, File Recovery, and STEP Export Before Upgrade"
 excerpt: "VariCAD fails for 5 distinct reasons: crash on save from cyclic constraint dependencies in parametric core requiring dependency graph check, DWG save error from network drive file lock mechanism requiring local SSD save, STEP import reverted normals from corrupted data in STEP file requiring normal repair, file cannot be opened from power failure during save requiring file recovery, and version mismatch fillet feature broken from 2024.2 shape representation change requiring STEP export before upgrade. We cover each with fixes from VariCAD documentation."
-category: "crash-and-file-errors"
+category: "troubleshooting"
 softwareSlug: "varicad"
 keyword: "VariCAD 2026 crash save cyclic constraint dependencies parametric core DWG save error network drive file lock STEP import reverted normals corrupted data power failure version mismatch fillet feature broken shape representation change"
 slug: "varicad-2026-crash-save-cyclic-constraint-dwg-network-step-normals-power-failure-version-mismatch-fillet"

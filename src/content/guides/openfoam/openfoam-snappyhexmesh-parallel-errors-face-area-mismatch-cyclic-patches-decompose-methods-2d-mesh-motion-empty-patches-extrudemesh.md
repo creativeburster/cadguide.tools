@@ -1,7 +1,7 @@
 ---
 title: "OpenFOAM snappyHexMesh Parallel Errors: Face Area Mismatch from Cyclic Patches, Different Meshes from Different Decompose Methods, 2D Mesh-Motion Failure from Empty Patches, snappyHexMesh Cannot Handle 2D Empty Patches Requiring extrudeMesh, and Cell Count Differences Between Hierarchical and Scotch Decomposition"
 excerpt: "OpenFOAM snappyHexMesh fails for 5 distinct reasons: parallel face area mismatch from cyclic patches requiring patch type change before sHM, different decompose methods (hierarchical vs scotch) produce different meshes and results, 2D mesh-motion fails in parallel from empty patches causing normal vector error, snappyHexMesh cannot handle 2D empty patches requiring symmetryPlane then extrudeMesh workflow, and cell count differences between decomposition methods affect simulation results. We cover each with fixes from CFD Online forums."
-category: "snappyhexmesh-parallel-errors"
+category: "troubleshooting"
 softwareSlug: "openfoam"
 keyword: "OpenFOAM snappyHexMesh parallel face area mismatch cyclic patches different decompose methods hierarchical scotch 2D mesh-motion empty patches normal vector extrudeMesh changeDictionary cell count"
 slug: "openfoam-snappyhexmesh-parallel-errors-face-area-mismatch-cyclic-patches-decompose-methods-2d-mesh-motion-empty-patches-extrudemesh"

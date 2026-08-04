@@ -1,7 +1,7 @@
 ---
 title: "CrownCAD Cloud Assembly and Model Validation Errors: Large Assembly Performance from Part State Not Maintained on Refresh Requiring Large Assembly Mode, Invalid Faces and Edges from Geometry Import Requiring Check Entity Command, Virtual Parts Not Converting to Normal Parts Requiring Design Completion Conversion, Geometry Analysis Identifying Problematic Entities Requiring Manual Review, and Limited International Documentation and Plugin Ecosystem Requiring Community Workarounds"
 excerpt: "CrownCAD fails for 5 distinct reasons: large assembly performance from part state not maintained on refresh requiring large assembly mode, invalid faces and edges from geometry import requiring Check Entity command, virtual parts not converting to normal parts requiring design completion conversion, geometry analysis identifying problematic entities requiring manual review, and limited international documentation and plugin ecosystem requiring community workarounds. We cover each with fixes from CrownCAD Help and Community."
-category: "assembly-and-model-validation-errors"
+category: "troubleshooting"
 softwareSlug: "crowncad"
 keyword: "CrownCAD large assembly performance part state not maintained refresh large assembly mode invalid faces edges geometry import Check Entity command virtual parts converting normal parts design completion Geometry Analysis problematic entities manual review limited international documentation plugin ecosystem community workarounds"
 slug: "crowncad-cloud-assembly-model-validation-errors-large-assembly-performance-part-state-refresh-invalid-faces-edges-check-entity-virtual-parts-converting-normal-geometry-analysis"

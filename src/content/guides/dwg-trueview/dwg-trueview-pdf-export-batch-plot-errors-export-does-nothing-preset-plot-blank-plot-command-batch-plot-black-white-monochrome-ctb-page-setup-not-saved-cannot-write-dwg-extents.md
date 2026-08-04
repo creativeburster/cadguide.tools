@@ -1,7 +1,7 @@
 ---
 title: "DWG TrueView PDF Export and Batch Plot Errors: Export to PDF Does Nothing from Preset Plot Settings Pointing to Blank Area Requiring Plot Command Instead, Batch Plot Black and White Requires Monochrome CTB Page Setup Not Available by Default, Page Setup Not Saved Between Drawings Because TrueView Cannot Write to DWG Files, Batch Plot Extents Not Available for Model Space Requiring Paper Space Layouts, and Custom Plot Style Tables and Page Sizes Must Be Copied to TrueView Installation Directory"
 excerpt: "DWG TrueView fails for 5 distinct reasons: Export to PDF does nothing because preset plot settings point to a blank area requiring Plot command instead, Batch Plot black and white requires monochrome CTB page setup not available by default in TrueView, Page Setup is not saved between drawings because TrueView cannot write to DWG files, Batch Plot Extents option not available for Model Space requiring Paper Space layouts, and custom plot style tables and page sizes must be manually copied to TrueView installation directory. We cover each with fixes from Autodesk Community."
-category: "pdf-export-and-batch-plot-errors"
+category: "printing"
 softwareSlug: "dwg-trueview"
 keyword: "DWG TrueView Export to PDF does nothing preset plot settings blank area Plot command Batch Plot black and white monochrome CTB page setup Page Setup not saved cannot write DWG Batch Plot Extents Model Space Paper Space layouts custom plot style table page sizes installation directory"
 slug: "dwg-trueview-pdf-export-batch-plot-errors-export-does-nothing-preset-plot-blank-plot-command-batch-plot-black-white-monochrome-ctb-page-setup-not-saved-cannot-write-dwg-extents"

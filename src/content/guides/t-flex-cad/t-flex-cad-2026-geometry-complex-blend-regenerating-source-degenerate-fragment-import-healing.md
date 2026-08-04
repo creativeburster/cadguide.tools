@@ -1,7 +1,7 @@
 ---
 title: "T-FLEX CAD 2026 Geometry Too Complex Error from Blend Radius Under Current Conditions, Error Regenerating Source Parent Element from Dropped Regeneration, Degenerate Element from Self-Intersecting Hatches and Open Contours, Error Opening Fragment File from Non-Existent File Link, and Import Geometry Healing from Self-Intersections and Non-Sewed Surfaces: Geometric Parameter Adjustment, Source Element Restoration, 2D Construction Check, Fragment Path Verification, and Import Healing Options"
 excerpt: "T-FLEX CAD fails for 5 distinct reasons: geometry too complex error from blend radius under current conditions requiring geometric parameter adjustment, error regenerating source parent element from dropped regeneration requiring source element restoration, degenerate element from self-intersecting hatches and open contours requiring 2D construction check, error opening fragment file from non-existent file link requiring fragment path verification, and import geometry healing from self-intersections and non-sewed surfaces requiring import healing options. We cover each with fixes from T-FLEX CAD documentation."
-category: "modeling-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "t-flex-cad"
 keyword: "T-FLEX CAD 2026 geometry too complex blend radius error regenerating source parent element degenerate element self-intersecting hatches open contours error opening fragment file non-existent link import geometry healing self-intersections non-sewed surfaces"
 slug: "t-flex-cad-2026-geometry-complex-blend-regenerating-source-degenerate-fragment-import-healing"

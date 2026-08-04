@@ -1,7 +1,7 @@
 ---
 title: "Blender Large Scene Linking and Geometry Nodes Viewport Performance: Linking Objects Performs Worse Than Appending from GPU Triangle Overhead Not External Reference, Geometry Nodes Playback 2 FPS in 4.3 vs 8 FPS in 3.6 from EEVEE-Next Regression, UV Mapping Linked Duplicates with Unique Modifiers Requires Unlink and Separate Unwrap, Asset Library Geometry Nodes Self-Referencing Crash from Appending Back to Library, and Linked Collection Instance Missing Items in New Scene from Separate Children Option"
 excerpt: "Blender fails for 5 distinct reasons: linking objects performs worse than appending because GPU sees same triangles with external reference overhead, Geometry Nodes playback drops from 8 FPS in 3.6 to 2 FPS in 4.3 from EEVEE-Next viewport regression, UV mapping linked duplicates with unique modifiers requires unlinking and separate unwrapping, appending geometry nodes back to asset library causes self-referencing crash, and linked collection instances go missing in new scenes requiring Separate Children option. We cover each with fixes from Blender Artists and Stack Exchange."
-category: "large-scene-linking-and-viewport-performance"
+category: "performance"
 softwareSlug: "blender"
 keyword: "Blender linking objects worse than appending GPU triangles external reference Geometry Nodes playback 2 FPS 4.3 vs 8 FPS 3.6 EEVEE-Next regression UV mapping linked duplicates unique modifiers unlink separate unwrap asset library self-referencing crash linked collection instance missing Separate Children"
 slug: "blender-large-scene-linking-geometry-nodes-viewport-performance-linking-worse-appending-eevee-next-regression-uv-linked-duplicates-asset-library-self-reference-collection-instance"

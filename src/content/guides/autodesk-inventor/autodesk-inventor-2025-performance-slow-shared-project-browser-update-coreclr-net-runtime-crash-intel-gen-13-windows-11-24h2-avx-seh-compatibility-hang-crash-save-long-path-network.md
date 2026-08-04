@@ -1,7 +1,7 @@
 ---
 title: "Autodesk Inventor 2025 Performance Slow from Shared Project Browser Update, Random Crashes from coreclr.dll .NET Runtime on Intel Gen 13, Windows 11 24H2 AVX SEH Compatibility Crash, Hang or Crash on Save from Long Path and Network Design Data, and Windows Efficiency Mode Freezing Inventor: 2025.1.1 Update, FNTCACHE.DAT Rename, Registry Limit Increase, KB5067036, and Efficiency Mode Disable"
 excerpt: "Autodesk Inventor fails for 5 distinct reasons: 2025 performance slow from Shared Project unnecessary browser update requiring 2025.1.1 update, random crashes from coreclr.dll .NET runtime error on Intel Gen 13 CPU requiring registry limit increase and Windows updates, Windows 11 24H2 AVX and SEH compatibility crash requiring Inventor 2025.4 or downgrade to 23H2, hang or crash on save from long file path and network Design Data requiring local drive and path shortening, and Windows Efficiency Mode freezing Inventor requiring Efficiency Mode disable. We cover each with fixes from Autodesk Community and Support."
-category: "performance-crash-and-os-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor 2025 performance slow Shared Project browser update coreclr.dll .NET runtime crash Intel Gen 13 Windows 11 24H2 AVX SEH compatibility hang crash save long path network Design Data Windows Efficiency Mode FNTCACHE.DAT registry limit"
 slug: "autodesk-inventor-2025-performance-slow-shared-project-browser-update-coreclr-net-runtime-crash-intel-gen-13-windows-11-24h2-avx-seh-compatibility-hang-crash-save-long-path-network"

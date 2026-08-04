@@ -1,7 +1,7 @@
 ---
 title: "WorkNC Post Processor and Roughing Performance Errors: Concatenated Post File Number Adds Extra Digits from COMPOSITE_PP_NAME_SEPARATOR, Post Processor Development Requires .dat and .ang File Editing, Roughing Rest-Machining Performance Poor with Overmetal and Tool Size Changes, Contouring Does Not Stop on Edges Requiring Support Surface Construction, and Small Tool Scale Function Required for Miniature Work Increasing Calculation Times"
 excerpt: "WorkNC fails for 5 distinct reasons: concatenated post-processed file numbers add extra 2 digits from COMPOSITE_PP_NAME_SEPARATOR in menu97.cfg with no way to disable, post processor development requires editing .dat files and .ang scripts with slow support response, roughing rest-machining is not performing when changing from large to small tool with same overmetal, contouring toolpath does not stop on edges but rotates around requiring support surface construction, and small tools require scaling the part up for resolution with increased calculation times. We cover each with fixes from Practical Machinist and Italian CAD forums."
-category: "post-processor-and-roughing-performance-errors"
+category: "manufacturing"
 softwareSlug: "worknc"
 keyword: "WorkNC concatenated post file number COMPOSITE_PP_NAME_SEPARATOR menu97.cfg post processor .dat .ang roughing rest-machining overmetal tool size contouring edge stop support surface scale function miniature calculation time"
 slug: "worknc-post-processor-roughing-performance-errors-concatenated-file-number-composite-pp-name-separator-menu97-dat-ang-rest-machining-overmetal-contouring-edge-support-surface-scale"

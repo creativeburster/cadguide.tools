@@ -1,7 +1,7 @@
 ---
 title: "Alibre Design Assembly Hang on Open, Inventor Import Scale 1/10 Error, Path Pattern Crash, Orphaned Process Autokill, and Sheet Metal Invalid Part Drawing Crash: V28 SP3/SP4 Fixes, Constraint Update, and Crash Recovery"
 excerpt: "Alibre Design fails for 5 distinct reasons: assembly hang on open from complex constraint chains requiring V28 SP3 fix, Inventor import scaled by 1/10 and incorrect assembly locations from import filter error requiring V28.1 fix, path pattern crash from invalid pattern geometry requiring V28 SP3 fix, orphaned Alibre processes remaining after close requiring autokill mechanism, and drawing crash on invalid sheet metal parts from validation gap requiring V28.1 fix. We cover each with fixes from Alibre release history."
-category: "assembly-import-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "alibre-design"
 keyword: "Alibre Design assembly hang on open Inventor import scale 1/10 incorrect location path pattern crash orphaned process autokill sheet metal invalid part drawing crash V28 SP3 SP4 constraint update crash recovery"
 slug: "alibre-design-assembly-hang-open-inventor-import-scale-1-10-path-pattern-crash-orphaned-process-autokill-sheet-metal-invalid-part-drawing-crash-v28-sp3-sp4-constraint-fix-crash"

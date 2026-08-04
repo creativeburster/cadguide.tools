@@ -1,7 +1,7 @@
 ---
 title: "LS-DYNA Instability and Hourglass Errors: NaN Velocities and Negative Volume from Contact Penetration, Hourglass Energy Exceeding 10% from Under-Integrated Elements, Mass Scaling Causing Excessive Added Mass, Implicit Non-Convergence from Loose Parts and Rigid Body Modes, and Energy Balance Not Close to 1.0"
 excerpt: "LS-DYNA fails for 5 distinct reasons: NaN velocities and negative volume in brick elements from contact penetration requiring SOFT=1 and bucket sort adjustment, hourglass energy exceeding 10% of internal energy from under-integrated elements needing type 4 stiffness control with coefficient 0.03, mass scaling adding more than 1% physical mass from aggressive DT2MS, implicit non-convergence from unconnected sub-assemblies causing rigid body modes, and energy ratio not close to 1.0 from damping and contact issues. We cover each with fixes from LSTC support and ANSYS documentation."
-category: "instability-and-hourglass-errors"
+category: "troubleshooting"
 softwareSlug: "ls-dyna"
 keyword: "LS-DYNA NaN velocities negative volume brick element contact penetration hourglass energy under-integrated mass scaling implicit non-convergence rigid body modes energy balance"
 slug: "ls-dyna-instability-hourglass-errors-nan-negative-volume-contact-hourglass-energy-mass-scaling-implicit-convergence-energy-balance"

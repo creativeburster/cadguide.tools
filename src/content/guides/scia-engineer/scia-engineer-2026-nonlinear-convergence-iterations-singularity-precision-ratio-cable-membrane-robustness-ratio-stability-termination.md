@@ -1,7 +1,7 @@
 ---
 title: "SCIA Engineer 2026 Nonlinear Calculation Not Converging from Insufficient Iterations, Singularity Errors from Local Nonlinearities on Hinges and Supports, Solver Precision Ratio Too Strict for Cable and Membrane Structures, Solver Robustness Ratio for Sensitive Nonlinear Analysis, and Nonlinear Stability Analysis Termination from Singularity at Large Displacements: Iteration Increase, Singularity Diagnostics, Precision Ratio Reduction, Robustness Ratio Increase, and LOG File Analysis"
 excerpt: "SCIA Engineer fails for 5 distinct reasons: nonlinear calculation not converging from insufficient iterations requiring iteration increase, singularity errors from local nonlinearities on hinges and supports requiring singularity diagnostics, solver precision ratio too strict for cable and membrane structures requiring precision ratio reduction, solver robustness ratio for sensitive nonlinear analysis requiring robustness ratio increase, and nonlinear stability analysis termination from singularity at large displplacements requiring LOG file analysis. We cover each with fixes from SCIA help."
-category: "nonlinear-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "scia-engineer"
 keyword: "SCIA Engineer 2026 nonlinear calculation not converging insufficient iterations singularity errors local nonlinearities hinges supports solver precision ratio too strict cable membrane structures solver robustness ratio sensitive nonlinear analysis nonlinear stability analysis termination singularity large displacements"
 slug: "scia-engineer-2026-nonlinear-convergence-iterations-singularity-precision-ratio-cable-membrane-robustness-ratio-stability-termination"

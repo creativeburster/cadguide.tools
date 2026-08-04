@@ -1,7 +1,7 @@
 ---
 title: "OpenSCAD CGAL Rendering Errors: Nef_polyhedron3 Assertion Violation from Non-Manifold STL Import, Vertex Winding Order Causing Component Disappearance, Coincident Faces in Boolean Operations, Cache Interference Between F5 Preview and F6 Render, and Manifold Engine as CGAL Replacement"
 excerpt: "OpenSCAD fails for 5 distinct reasons: CGAL Nef_polyhedron3 assertion violation from non-manifold STL files with self-intersections and degenerate faces, vertex winding order mismatch causing components to disappear in render, coincident faces in union operations triggering CGAL errors, F5 preview cache interfering with F6 render causing false failures, and switching to Manifold engine resolves CGAL-only bugs. We cover each with fixes from GitHub issues and OpenSCAD mailing list."
-category: "cgal-rendering-errors"
+category: "troubleshooting"
 softwareSlug: "openscad"
 keyword: "OpenSCAD CGAL Nef_polyhedron3 assertion violation non-manifold STL vertex winding order coincident faces cache interference F5 F6 Manifold engine"
 slug: "openscad-cgal-rendering-errors-nef-polyhedron3-non-manifold-stl-winding-order-coincident-faces-cache-manifold"

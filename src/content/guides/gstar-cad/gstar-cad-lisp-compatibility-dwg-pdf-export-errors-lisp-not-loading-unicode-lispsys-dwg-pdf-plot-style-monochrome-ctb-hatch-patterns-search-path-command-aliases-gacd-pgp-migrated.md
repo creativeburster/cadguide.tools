@@ -1,7 +1,7 @@
 ---
 title: "GstarCAD LISP Compatibility and DWG PDF Export Errors: AutoCAD LISP Not Loading from Unicode Encoding Mismatch Requiring LISPSYS System Variable, DWG to PDF Export Missing Plot Style Table Requiring Monochrome CTB Configuration, Custom Hatch Patterns Not Found from Search Path Misconfiguration Requiring Options File Locations, Command Aliases Not Working from gacd.pgp File Not Migrated Requiring Settings Import, and Batch Plot to PDF Not Merging Multiple Drawings Requiring Individual Plot and External Merge"
 excerpt: "GstarCAD fails for 5 distinct reasons: AutoCAD LISP not loading from Unicode encoding mismatch requiring LISPSYS system variable switch, DWG to PDF export missing plot style table requiring monochrome CTB configuration in Plot dialog, custom hatch patterns not found from search path misconfiguration requiring Options File Locations setup, command aliases not working from gacd.pgp file not migrated requiring Settings Import from AutoCAD, and Batch Plot to PDF not merging multiple drawings requiring individual plot and external merge. We cover each with fixes from GstarCAD User Guide and CADTutor Forum."
-category: "lisp-compatibility-and-pdf-export-errors"
+category: "printing"
 softwareSlug: "gstarcad"
 keyword: "GstarCAD AutoCAD LISP not loading Unicode encoding LISPSYS system variable DWG to PDF export plot style table monochrome CTB custom hatch patterns search path Options File Locations command aliases gacd.pgp not migrated Settings Import Batch Plot PDF not merging individual plot external merge"
 slug: "gstar-cad-lisp-compatibility-dwg-pdf-export-errors-lisp-not-loading-unicode-lispsys-dwg-pdf-plot-style-monochrome-ctb-hatch-patterns-search-path-command-aliases-gacd-pgp-migrated"

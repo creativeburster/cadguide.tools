@@ -1,7 +1,7 @@
 ---
 title: "Ventuz Designer Multi-GPU Crash on Startup, License Manager Wrong Installation Code, Cluster TDR Timeout Crash from Machine Stall, BMD Decklink Board Crash on Start, and DataPortal Async Scene Validation Failure: GPU Count Reduction, License Re-registration, TDR Registry Fix, Board Update, and Scene Validation Repair"
 excerpt: "Ventuz fails for 5 distinct reasons: Designer crash on startup from 3-GPU scenarios requiring GPU count reduction, License Manager Wrong Installation Code from removing online license requiring re-registration, Cluster TDR timeout crash from machine stall requiring registry TdrLevel fix, BMD Decklink 100G board crash on start requiring Ventuz update, and DataPortal async scene validation failure requiring scene repair. We cover each with fixes from Ventuz release notes and documentation."
-category: "startup-and-cluster-errors"
+category: "troubleshooting"
 softwareSlug: "ventuz"
 keyword: "Ventuz Designer multi-GPU crash startup 3 GPUs License Manager Wrong Installation Code removing online license Cluster TDR timeout crash machine stall BMD Decklink 100G board crash DataPortal async scene validation failure TdrLevel registry fix re-registration"
 slug: "ventuz-designer-multi-gpu-crash-startup-license-manager-wrong-installation-code-cluster-tdr-timeout-crash-bmd-decklink-board-crash-dataportal-async-validation-failure-gpu-reduction"

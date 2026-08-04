@@ -1,7 +1,7 @@
 ---
 title: "SpaceClaim 2026 CAD File Imports with Missing Faces Gaps and Disconnected Surfaces, Loft Geometry Lost After STEP Import from Inventor, Crashes When Opening Very Large Assemblies, Split Edges Repair Tool Produces Worse Geometry, and Enclosure Creation Excludes Parts from Fluid Volume: Repair Tools Automatic Fix, Parasolid x_t Export, Lightweight Mode Virtual Memory, Selective Edge Split, and Multiple Translation Paths"
 excerpt: "SpaceClaim fails for 5 distinct reasons: CAD file imports with missing faces gaps and disconnected surfaces requiring Repair tools automatic fix, loft geometry lost after STEP import from Inventor requiring Parasolid x_t export, crashes when opening very large assemblies requiring Lightweight mode virtual memory, Split Edges repair tool produces worse geometry requiring selective edge split, and enclosure creation excludes parts from fluid volume requiring multiple translation paths. We cover each with fixes from Ansys community."
-category: "import-and-repair-errors"
+category: "troubleshooting"
 softwareSlug: "spaceclaim"
 keyword: "SpaceClaim 2026 CAD file imports missing faces gaps disconnected surfaces loft geometry lost STEP import Inventor crashes opening very large assemblies Split Edges repair tool worse geometry enclosure creation excludes parts fluid volume"
 slug: "spaceclaim-2026-missing-faces-loft-step-inventor-large-assembly-split-edges-enclosure-fluid-volume"

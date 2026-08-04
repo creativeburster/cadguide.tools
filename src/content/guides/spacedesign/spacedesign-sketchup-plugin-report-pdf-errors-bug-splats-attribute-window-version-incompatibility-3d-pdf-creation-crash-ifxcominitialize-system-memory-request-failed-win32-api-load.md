@@ -1,8 +1,8 @@
 ---
 title: "SpaceDesign SketchUp Plugin Report and PDF Errors: Bug Splats on Attribute Window from Version Incompatibility Requiring SketchUp Update, 3D PDF Creation Crash from IFXCOMInitialize Error Requiring Acrobat Reinstall, System Memory Request Failed from Large Model U3D Export Requiring Model Simplification, Win32 API Load Error from 64-Bit Mismatch Requiring Correct Version Install, and SketchUp 2015 Migration Error from Module Name Change Requiring Manual Ruby Fix"
 excerpt: "SpaceDesign fails for 5 distinct reasons: bug splats on attribute window from version incompatibility requiring SketchUp update, 3D PDF creation crash from IFXCOMInitialize error requiring Acrobat reinstall, system memory request failed from large model U3D export requiring model simplification, Win32 API load error from 64-bit mismatch requiring correct version install, and SketchUp 2015 migration error from module name change requiring manual Ruby fix. We cover each with fixes from Render Plus Forum."
-category: "report-and-pdf-errors"
-softwareSlug: "spacedesign"
+category: "troubleshooting"
+softwareSlug: "sketchup"
 keyword: "SpaceDesign SketchUp plugin bug splats attribute window version incompatibility SketchUp update 3D PDF creation crash IFXCOMInitialize error Acrobat reinstall system memory request failed large model U3D export model simplification Win32 API load error 64-bit mismatch correct version install SketchUp 2015 migration error module name change manual Ruby fix"
 slug: "spacedesign-sketchup-plugin-report-pdf-errors-bug-splats-attribute-window-version-incompatibility-3d-pdf-creation-crash-ifxcominitialize-system-memory-request-failed-win32-api-load"
 author: "CADGuide Tools Editorial Team"

@@ -1,7 +1,7 @@
 ---
 title: "Mastercam Toolpath and Verify Errors: 5-Axis Threadmill Crash, 5-Axis Toolpath on 3-Axis Post Error, MC26 Verify Unexpected Error on Drilling, Engraving Toolpath Geometry Selection Errors, and Toolpath Regeneration After Model Changes"
 excerpt: "Mastercam fails for 5 distinct reasons: 5-axis threadmill toolpath crashes the machine by following shortest path over 180 degrees, 5-axis toolpath output to a 3-axis post produces wrong G-code, MC26 verify throws 'Unexpected error occurred' on drilling toolpaths, engraving toolpath errors from incorrect geometry selection, and toolpaths don't regenerate after model changes requiring manual reselection. We cover each with fixes from eMastercam forums."
-category: "toolpath-and-verify-errors"
+category: "manufacturing"
 softwareSlug: "mastercam"
 keyword: "Mastercam 5-axis threadmill crash 3-axis post error MC26 verify unexpected error drilling engraving toolpath geometry selection regeneration"
 slug: "mastercam-toolpath-verify-errors-5-axis-threadmill-3-axis-post-mc26-drilling-engraving-regeneration"

@@ -1,7 +1,7 @@
 ---
 title: "Abaqus Contact Convergence Severe Discontinuity Iterations, Second-Order Tetrahedral Corner Node Zero Force, Initial Overclosure Interference Fit Resolution, Penalty Method vs Hard Contact Overconstraint, and Surface Mesh Crack Node Stuck: Surface-to-Surface Formulation, Penalty Enforcement, Automatic Overclosure Adjustment, and Small-Sliding Tracking"
 excerpt: "Abaqus/Standard contact simulations fail for 5 distinct reasons: severe discontinuity iterations from unresolved contact conditions requiring SDI conversion adjustment, second-order tetrahedral C3D10 corner node zero force with node-to-surface hard contact requiring surface-to-surface formulation, initial overclosure interference fit too large for single increment requiring multi-increment resolution, hard contact overconstraint from direct enforcement requiring penalty method, and surface mesh crack causing node stuck behind main surface requiring surface repair. We cover each with fixes from Abaqus documentation."
-category: "contact-convergence-and-mesh-errors"
+category: "troubleshooting"
 softwareSlug: "abaqus"
 keyword: "Abaqus contact convergence severe discontinuity iteration SDI second-order tetrahedral C3D10 corner node zero force initial overclosure interference fit penalty method hard contact overconstraint surface mesh crack node stuck surface-to-surface formulation small-sliding tracking"
 slug: "abaqus-contact-sdi-tetrahedral-corner-node-zero-force-overclosure-interference-fit-penalty-hard-contact-overconstraint-surface-mesh-crack-node-stuck-surface-to-surface-penalty"

@@ -1,7 +1,7 @@
 ---
 title: "SurfCAM 2026 Post Processor Not Visible in Menu from Manual postform.m Edit Without surfcam.pst Registration, Post Added to Library But Not Visible in Menu from Registry Parity Failure, G-Code Errors from Unsupported Commands in M-Post Output, Waveform 2D Toolpath Calculation Speed and Internal External Contour Issues, and Post Menu Wizard Permission Error from Lack of Administrator Rights: Post Menu Wizard Use, surfcam.pst Registration, G-Code Command Removal, CAMENGINE Update, and Administrator Rights"
 excerpt: "SurfCAM fails for 5 distinct reasons: post processor not visible in menu from manual postform.m edit without surfcam.pst registration requiring Post Menu Wizard use, post added to library but not visible in menu from registry parity failure requiring surfcam.pst registration, G-code errors from unsupported commands in M-Post output requiring G-code command removal, Waveform 2D toolpath calculation speed and internal external contour issues requiring CAMENGINE update, and Post Menu Wizard permission error from lack of administrator rights requiring administrator rights. We cover each with fixes from SurfCAM community."
-category: "post-processor-and-toolpath-errors"
+category: "manufacturing"
 softwareSlug: "surfcam"
 keyword: "SurfCAM 2026 post processor not visible menu manual postform.m edit surfcam.pst registration post added library not visible registry parity failure G-code errors unsupported commands M-Post output Waveform 2D toolpath calculation speed internal external contour Post Menu Wizard permission error administrator rights"
 slug: "surfcam-2026-post-not-visible-postform-surfcam-pst-gcode-mpost-waveform-2d-post-menu-wizard-administrator"

@@ -1,7 +1,7 @@
 ---
 title: "MagiCAD 2026 Duct Series Fittings Lose Connection After Property Changes, Support and Hangers Update Causes Revit Crash, Eccentric Reducer Sizing Wrong Offset Values, BCF Report Exception During Clash Checking, and Product Browser Crash with Search: Duct Series Reapply, S&H Update Before Open, Sizing Update, BCF Fix, and Browser Search Patch"
 excerpt: "MagiCAD fails for 5 distinct reasons: duct series fittings lose connection after property changes requiring reapply, Support and Hangers update causes Revit crash requiring update before open, eccentric reducer sizing wrong offset values requiring sizing update, BCF report exception during clash checking requiring BCF fix, and Product Browser crash with search requiring patch. We cover each with fixes from MagiCAD troubleshooting."
-category: "revit-and-mep-errors"
+category: "troubleshooting"
 softwareSlug: "magicad"
 keyword: "MagiCAD 2026 duct series fittings lose connection property changes Support Hangers update Revit crash eccentric reducer sizing wrong offset BCF report exception clash checking Product Browser crash search"
 slug: "magicad-2026-duct-series-fittings-connection-support-hangers-crash-eccentric-reducer-bcf-product-browser"

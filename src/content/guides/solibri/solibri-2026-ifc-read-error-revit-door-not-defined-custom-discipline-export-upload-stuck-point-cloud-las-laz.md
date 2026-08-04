@@ -1,7 +1,7 @@
 ---
 title: "Solibri 2026 IFC Read Errors from Syntax Error or Old Exporter Version, Revit 2026 IFC Export Door Openings Show as Not Defined from Missing Opening Type Information, Custom Discipline Export Failure from Export Bug, Model Upload Stuck in Loading Loop from Interrupted Upload, and Point Cloud Import LAS LAZ Settings Adjustment Issues: Authoring Tool Update, IFC Export Settings Check, 26.6.1 Update, Page Reload, and Import Settings Configuration"
 excerpt: "Solibri fails for 5 distinct reasons: IFC read errors from syntax error or old exporter version requiring authoring tool update, Revit 2026 IFC export door openings show as Not Defined from missing opening type information requiring IFC export settings check, custom discipline export failure from export bug requiring 26.6.1 update, model upload stuck in loading loop from interrupted upload requiring page reload, and point cloud import LAS LAZ settings adjustment issues requiring import settings configuration. We cover each with fixes from Solibri support."
-category: "import-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "solibri"
 keyword: "Solibri 2026 IFC read errors syntax error old exporter version Revit 2026 IFC export door openings Not Defined missing opening type information custom discipline export failure model upload stuck loading loop interrupted upload point cloud import LAS LAZ settings adjustment"
 slug: "solibri-2026-ifc-read-error-revit-door-not-defined-custom-discipline-export-upload-stuck-point-cloud-las-laz"

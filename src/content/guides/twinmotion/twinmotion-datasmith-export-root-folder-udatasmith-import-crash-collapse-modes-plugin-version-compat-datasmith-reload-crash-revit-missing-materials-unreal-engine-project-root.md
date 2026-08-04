@@ -1,7 +1,7 @@
 ---
 title: "Twinmotion Datasmith Export Root Folder Error, UDatasmith Import Crash on Collapse Modes, Twinmotion to Unreal Plugin Version Compatibility, Datasmith Reload Crash from Revit, and Missing Materials After Import to Unreal Engine: Project Root Folder Configuration, Keep Hierarchy Workaround, Plugin Version Matching, and Update Installation"
 excerpt: "Twinmotion fails for 5 distinct reasons: Datasmith export root folder error from saving in content folder instead of project root requiring correct folder selection, udatasmith import crash on Collapse by material or Collapse all modes in 2025.1.1 requiring Keep Hierarchy workaround, Twinmotion to Unreal plugin version mismatch causing missing materials requiring version compatibility check, Datasmith reload crash from Revit 2024 to TM 2024.1 requiring update installation, and missing materials after import from TM 2025 to UE 5.1 requiring UE 5.3+ upgrade. We cover each with fixes from Epic Developer Community Forums."
-category: "export-and-interoperability-errors"
+category: "troubleshooting"
 softwareSlug: "twinmotion"
 keyword: "Twinmotion Datasmith export root folder error udatasmith import crash Collapse by material Collapse all Keep Hierarchy 2025.1.1 Twinmotion to Unreal plugin version compatibility missing materials Datasmith reload crash Revit 2024 TM 2024.1 UE 5.1 UE 5.3 plugin version matching update installation"
 slug: "twinmotion-datasmith-export-root-folder-udatasmith-import-crash-collapse-modes-plugin-version-compat-datasmith-reload-crash-revit-missing-materials-unreal-engine-project-root"

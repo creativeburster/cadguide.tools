@@ -1,7 +1,7 @@
 ---
 title: "Siemens NX 2412 Very Slow Loading of CAM Assemblies from 2GB Wave Link Geometry, Toolpath Calculation Limited to 4 SMP Threads from Operation-Specific Multi-Threading, Journal Execution Error from mySelectedObject Nothing Reference, NumPy Crashes on Second Execution from nx:threaded Signal 11, and Toolpath Display Dots Slowing NX from UGII_CAM_TP_DISP_ENDPOINTS: Wave Link Cleanup, Thread Limit Understanding, Object Reference Debug, nx:main-interpreter Workaround, and Endpoint Variable Disable"
 excerpt: "Siemens NX fails for 5 distinct reasons: very slow loading of CAM assemblies from 2GB wave link geometry requiring wave link cleanup, toolpath calculation limited to 4 SMP threads from operation-specific multi-threading requiring thread limit understanding, Journal execution error from mySelectedObject nothing reference requiring object reference debug, NumPy crashes on second execution from nx:threaded signal 11 requiring nx:main-interpreter workaround, and toolpath display dots slowing NX from UGII_CAM_TP_DISP_ENDPOINTS requiring endpoint variable disable. We cover each with fixes from Siemens community."
-category: "performance-and-journal-errors"
+category: "performance"
 softwareSlug: "siemens-nx"
 keyword: "Siemens NX 2412 slow loading CAM assemblies 2GB wave link geometry toolpath calculation 4 SMP threads operation-specific multi-threading Journal execution error mySelectedObject nothing NumPy crashes second execution nx:threaded signal 11 toolpath display dots UGII_CAM_TP_DISP_ENDPOINTS"
 slug: "nx-2412-slow-cam-assembly-wave-link-4-smp-threads-journal-myselectedobject-numpy-crash-nx-threaded-toolpath-dots-endpoints"

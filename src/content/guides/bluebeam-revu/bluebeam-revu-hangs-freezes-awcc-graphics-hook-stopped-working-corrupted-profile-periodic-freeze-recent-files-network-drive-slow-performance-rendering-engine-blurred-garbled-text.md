@@ -1,7 +1,7 @@
 ---
 title: "Bluebeam Revu Hangs or Freezes from Alienware Command Center Graphics Hook, Stopped Working from Corrupted Profile, Periodic Freeze from Recent Files Network Drive Search, Slow Performance from Rendering Engine and Power Settings, and Blurred Garbled Text from AWCC Secondary Monitor: AWCC Update or Uninstall, Software Rendering, Profile Switch and Rebuild, Hardware Rendering and High Performance Power Plan, and Enable Recent Files Disable"
 excerpt: "Bluebeam Revu fails for 5 distinct reasons: hangs or freezes from Alienware Command Center graphics driver hooks requiring AWCC update or uninstall, stopped working from corrupted profile requiring profile switch and rebuild, periodic 5-10 second freeze from Recent Files searching network drive requiring Enable Recent Files disable, slow performance from rendering engine and power settings requiring Hardware rendering and High Performance power plan, and blurred garbled text from AWCC secondary monitor requiring Software Rendering. We cover each with fixes from Bluebeam Technical Support and Community."
-category: "freeze-and-performance-errors"
+category: "troubleshooting"
 softwareSlug: "bluebeam-revu"
 keyword: "Bluebeam Revu hangs freezes Alienware Command Center AWCC graphics hook stopped working corrupted profile periodic freeze Recent Files network drive slow performance rendering engine power settings blurred garbled text secondary monitor Software Rendering Hardware Rendering High Performance power plan"
 slug: "bluebeam-revu-hangs-freezes-awcc-graphics-hook-stopped-working-corrupted-profile-periodic-freeze-recent-files-network-drive-slow-performance-rendering-engine-blurred-garbled-text"

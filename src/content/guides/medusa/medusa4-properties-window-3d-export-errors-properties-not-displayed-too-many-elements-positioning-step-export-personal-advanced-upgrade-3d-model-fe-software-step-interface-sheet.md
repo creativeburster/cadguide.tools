@@ -1,7 +1,7 @@
 ---
 title: "MEDUSA4 Properties Window and 3D Export Errors: Properties Window Not Displayed from Too Many Elements Causing Element Positioning Problems Requiring Element Reduction, STEP Export Not Available in MEDUSA4 Personal Requiring Advanced Package Upgrade, 3D Model Export to FE Software Requires STEP Interface Module, 2D Sheet Metal and Parametrics Available in Personal but 3D Limited, and Element Insertion Causes Massive Positioning Problems Requiring Drawing Simplification"
 excerpt: "MEDUSA4 fails for 5 distinct reasons: properties window not displayed from too many elements causing element positioning problems requiring element reduction, STEP export not available in MEDUSA4 Personal requiring Advanced package upgrade, 3D model export to FE software requires STEP interface module, 2D sheet metal and parametrics available in Personal but 3D limited, and element insertion causes massive positioning problems requiring drawing simplification. We cover each with fixes from CAD.de Forum and CAD Schroer docs."
-category: "properties-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "medusa4"
 keyword: "MEDUSA4 properties window not displayed too many elements element positioning problems STEP export not available Personal Advanced package upgrade 3D model export FE software STEP interface module 2D sheet metal parametrics Personal 3D limited element insertion positioning problems drawing simplification"
 slug: "medusa4-properties-window-3d-export-errors-properties-not-displayed-too-many-elements-positioning-step-export-personal-advanced-upgrade-3d-model-fe-software-step-interface-sheet"

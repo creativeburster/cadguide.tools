@@ -1,7 +1,7 @@
 ---
 title: "CorelCAD DWG Print Configuration Crash When Switching Sheet Layout to Model Space, LISP Routine Crash from Jumping Between DWG Files, Non-Supported AutoCAD Features Preserved as File Attributes Causing Display Issues, Corrupted DWG and DXF Recovery for Legacy R12 Format Files, and VSTA Automation Plugin Development on Windows 11: Print Config Reset, Single DWG Script Workflow, Attribute Stripping, Recovery Command, and VSTA Compatibility"
 excerpt: "CorelCAD fails for 5 distinct reasons: DWG print configuration crash when switching from Sheet layout to Model Space requiring print config reset, LISP routine crash from jumping between DWG files requiring single-DWG script workflow, non-supported AutoCAD features preserved as file attributes causing display issues requiring attribute stripping, corrupted DWG and DXF recovery for legacy R12 format files requiring Recovery command, and VSTA automation plugin development on Windows 11 requiring compatibility verification. We cover each with fixes from Corel support and Autodesk Community."
-category: "dwg-and-lisp-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "corelcad"
 keyword: "CorelCAD DWG print configuration crash Sheet layout Model Space LISP routine crash jumping DWG files non-supported AutoCAD features file attributes corrupted DWG DXF recovery legacy R12 VSTA automation plugin Windows 11"
 slug: "corelcad-dwg-print-config-crash-sheet-layout-model-space-lisp-routine-crash-jumping-dwg-files-unsupported-autocad-attributes-corrupted-dwg-dxf-recovery-legacy-r12-vsta-automation"

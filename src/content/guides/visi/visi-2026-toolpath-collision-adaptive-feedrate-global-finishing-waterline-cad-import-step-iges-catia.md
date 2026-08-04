@@ -1,7 +1,7 @@
 ---
 title: "VISI 2026 Toolpath Generation Errors from Collision Handling Bugs, Adaptive Feedrate for 2-Axis Roughing Not Working from Configuration Issue, Global Finishing Options Not Applying Correctly from Strategy Bug, Waterline Machining Incomplete Toolpath from Enhanced Logic Error, and CAD Import Data Exchange Issues from STEP IGES CATIA Format Incompatibility: VISI 2026.2 Update, Adaptive Feedrate Enable, Global Finishing Configuration, Waterline Enhancement, and CAD Import Format Check"
 excerpt: "VISI fails for 5 distinct reasons: toolpath generation errors from collision handling bugs requiring VISI 2026.2 update, Adaptive Feedrate for 2-axis roughing not working from configuration issue requiring adaptive feedrate enable, Global Finishing options not applying correctly from strategy bug requiring global finishing configuration, Waterline machining incomplete toolpath from enhanced logic error requiring waterline enhancement, and CAD import data exchange issues from STEP IGES CATIA format incompatibility requiring CAD import format check. We cover each with fixes from VISI documentation."
-category: "toolpath-and-import-errors"
+category: "manufacturing"
 softwareSlug: "visi"
 keyword: "VISI 2026 toolpath generation errors collision handling bugs Adaptive Feedrate 2-axis roughing configuration Global Finishing options strategy bug Waterline machining incomplete toolpath enhanced logic CAD import data exchange STEP IGES CATIA format incompatibility"
 slug: "visi-2026-toolpath-collision-adaptive-feedrate-global-finishing-waterline-cad-import-step-iges-catia"

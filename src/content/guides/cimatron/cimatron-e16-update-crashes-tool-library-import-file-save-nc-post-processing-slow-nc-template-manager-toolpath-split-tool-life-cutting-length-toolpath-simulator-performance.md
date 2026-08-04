@@ -1,7 +1,7 @@
 ---
 title: "Cimatron E16 Update Causing Frequent Crashes on Tool Library Import and File Save, NC Post Processing Taking Twice as Long After Update, NC Template Manager Editing Workflow Changes, Toolpath Split by Tool Life or Cutting Length Configuration, and Toolpath Simulator Performance Improvement 30 Percent: Update Rollback, Post Processor Optimization, NC Template Configuration, Tool Life Parameters, and Simulator Cache"
 excerpt: "Cimatron fails for 5 distinct reasons: E16 update causing frequent crashes on tool library import and file save requiring update rollback, NC post processing taking twice as long after update requiring post processor optimization, NC Template Manager editing workflow changes requiring configuration, toolpath split by tool life or cutting length requiring parameter setup, and toolpath simulator performance improvement requiring cache optimization. We cover each with fixes from Practical Machinist and Cimatron Help."
-category: "crash-and-nc-performance-errors"
+category: "troubleshooting"
 softwareSlug: "cimatron"
 keyword: "Cimatron E16 update crashes tool library import file save NC post processing twice as long NC Template Manager toolpath split tool life cutting length toolpath simulator performance improvement rollback post processor optimization"
 slug: "cimatron-e16-update-crashes-tool-library-import-file-save-nc-post-processing-slow-nc-template-manager-toolpath-split-tool-life-cutting-length-toolpath-simulator-performance"

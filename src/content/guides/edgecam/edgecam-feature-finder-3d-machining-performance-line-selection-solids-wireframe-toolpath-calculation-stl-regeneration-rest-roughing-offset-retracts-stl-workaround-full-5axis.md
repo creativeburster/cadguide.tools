@@ -1,7 +1,7 @@
 ---
 title: "Edgecam Feature Finder and 3D Machining Performance Errors: Feature Finder OKAY But Lacks Line Selection on Solids Requiring Wireframe Geometry, Toolpath Calculation Takes 20-30 Minutes for Small End Mills from STL Stock Regeneration After Every Operation, Rest Roughing Forces Same Offset as Roughing Causing Dumb Retracts Requiring STL Stock Workaround, Full 5 Axis Advanced Toolpath Overwhelming Parameters Requiring Limit Variables Approach, and Waveform Too Slow for Single Part Manufacturing Under 2mm Tools"
 excerpt: "Edgecam fails for 5 distinct reasons: Feature Finder lacks line selection on solids requiring wireframe geometry from external CAD, toolpath calculation takes 20-30 minutes for small end mills from STL stock regeneration after every operation, rest roughing forces same offset as roughing causing dumb unchangeable retracts requiring STL stock workaround, full 5 axis Advanced toolpath has overwhelming parameters requiring limit variables approach, and waveform too slow for single part manufacturing under 2mm tools. We cover each with fixes from Practical Machinist and Edgecam Documentation."
-category: "feature-finder-and-3d-machining-performance"
+category: "manufacturing"
 softwareSlug: "edgecam"
 keyword: "Edgecam Feature Finder line selection solids wireframe geometry toolpath calculation 20-30 minutes small end mills STL stock regeneration rest roughing same offset dumb retracts STL stock workaround full 5 axis Advanced overwhelming parameters limit variables waveform slow single part 2mm tools"
 slug: "edgecam-feature-finder-3d-machining-performance-line-selection-solids-wireframe-toolpath-calculation-stl-regeneration-rest-roughing-offset-retracts-stl-workaround-full-5axis"

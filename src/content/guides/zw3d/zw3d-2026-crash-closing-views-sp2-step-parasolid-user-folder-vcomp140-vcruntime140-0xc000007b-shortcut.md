@@ -1,7 +1,7 @@
 ---
 title: "ZW3D 2026 Crash When Closing One of Several Opened Views from 2025 SP2 Stability Bug, STEP and Parasolid Import Incorrect from User Folder Corruption, Missing VCOMP140 VCRUNTIME140 DLL from Missing Visual C++ Redistributable, 0xc000007b Application Cannot Start from Missing System Dependencies, and ZW3D Does Not Respond After Double-Clicking Shortcut from User Folder Issue: 2025 SP1 Rollback, User Folder Rename, VC++ Redistributable Install, System Dependency Fix, and User Folder Cleanup"
 excerpt: "ZW3D fails for 5 distinct reasons: crash when closing one of several opened views from 2025 SP2 stability bug requiring 2025 SP1 rollback, STEP and Parasolid import incorrect from user folder corruption requiring user folder rename, missing VCOMP140 VCRUNTIME140 DLL from missing Visual C++ Redistributable requiring VC++ redistributable install, 0xc000007b application cannot start from missing system dependencies requiring system dependency fix, and ZW3D does not respond after double-clicking shortcut from user folder issue requiring user folder cleanup. We cover each with fixes from ZWSOFT support."
-category: "crash-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "zw3d"
 keyword: "ZW3D 2026 crash closing one several opened views 2025 SP2 stability bug STEP Parasolid import incorrect user folder corruption missing VCOMP140 VCRUNTIME140 DLL Visual C++ Redistributable 0xc000007b application cannot start missing system dependencies does not respond double-clicking shortcut user folder"
 slug: "zw3d-2026-crash-closing-views-sp2-step-parasolid-user-folder-vcomp140-vcruntime140-0xc000007b-shortcut"

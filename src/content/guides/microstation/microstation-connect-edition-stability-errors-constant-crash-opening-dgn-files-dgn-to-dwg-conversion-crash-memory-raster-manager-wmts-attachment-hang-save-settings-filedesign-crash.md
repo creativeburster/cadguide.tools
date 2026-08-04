@@ -1,7 +1,7 @@
 ---
 title: "MicroStation CONNECT Edition Stability Errors: Constant Crash While Opening DGN Files from Memory or File Corruption Requiring Update and Repair, DGN to DWG Conversion Crash from Lack of Memory Requiring Memory Management, Raster Manager WMTS Attachment Hang from Reprojection Requiring CS Fix, Save Settings FileDesign Crash from Update 16 Bug Requiring Update, and OBJ File Open or Reference Attach Crash from Format Handling Requiring Update"
 excerpt: "MicroStation fails for 5 distinct reasons: constant crash while opening DGN files from memory or file corruption requiring update and repair, DGN to DWG conversion crash from lack of memory requiring memory management, Raster Manager WMTS attachment hang from reprojection requiring CS fix, Save Settings fileDesign crash from Update 16 bug requiring update, and OBJ file open or reference attach crash from format handling requiring update. We cover each with fixes from Bentley Communities and Documentation."
-category: "stability-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "microstation"
 keyword: "MicroStation CONNECT Edition constant crash opening DGN files memory corruption repair DGN to DWG conversion crash lack of memory Raster Manager WMTS attachment hang reprojection CS fix Save Settings fileDesign crash Update 16 OBJ file open reference attach crash format handling update"
 slug: "microstation-connect-edition-stability-errors-constant-crash-opening-dgn-files-dgn-to-dwg-conversion-crash-memory-raster-manager-wmts-attachment-hang-save-settings-filedesign-crash"

@@ -1,7 +1,7 @@
 ---
 title: "Enscape Custom Asset Library and HDRI Skybox Errors: Custom Assets Not Showing from SourceDirectory Does Not Exist Requiring Local Folder Configuration, Assets Not Showing Up Post Upgrade from 4.10 to 4.11 Requiring Save As in New Folder, Custom Asset Import Scale Too Large Requiring Metric FBX Export, HDRI Skybox Cannot Be Scaled Requiring Model Scale Instead, and Custom Asset Location Not Recognized After Update from Cloud or Network Path"
 excerpt: "Enscape fails for 5 distinct reasons: custom assets not showing from SourceDirectory does not exist requiring local folder configuration, assets not showing up post upgrade from 4.10 to 4.11 requiring Save As in new folder workaround, custom asset import scale too large requiring metric FBX export from source software, HDRI Skybox cannot be scaled because 360 sphere covers entire view requiring model scale instead, and custom asset location not recognized after update from cloud or network path. We cover each with fixes from Chaos Forums."
-category: "custom-asset-and-hdri-skybox-errors"
+category: "troubleshooting"
 softwareSlug: "enscape"
 keyword: "Enscape custom assets not showing SourceDirectory does not exist local folder configuration assets not showing post upgrade 4.10 4.11 Save As new folder custom asset import scale too large metric FBX export HDRI Skybox cannot be scaled 360 sphere model scale custom asset location not recognized cloud network path"
 slug: "enscape-custom-asset-library-hdri-skybox-errors-sourcedirectory-not-exist-local-folder-assets-not-showing-post-upgrade-save-as-new-folder-import-scale-metric-fbx-hdri-cannot-scale"

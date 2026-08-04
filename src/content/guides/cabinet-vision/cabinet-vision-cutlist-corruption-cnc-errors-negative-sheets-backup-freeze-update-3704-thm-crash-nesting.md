@@ -1,7 +1,7 @@
 ---
 title: "Cabinet Vision Cut List Corruption, Backup Freeze, and CNC Errors: Negative Sheet Count from Corrupted Cabinet File, Backup Freeze from System Parameters, Update Error #3704 from Windows Update, THM.exe Crash on Nesting from Corrupt Database, and THM Software Crash on Jobs Over 30 Sheets from Full Hard Drive"
 excerpt: "Cabinet Vision fails for 5 distinct reasons: cut list shows -2147483647 sheets from corrupted cabinet file fixable by removing Part Editor cuts, backup freezes from system parameters and user permissions, update error #3704 from Windows update breaking database connection, THM.exe crashes when nesting from corrupt Control Nesting database requiring full uninstall/reinstall sequence, and THM crashes on jobs over 30 sheets from full hard drive. We cover each with fixes from Thermwood and WOODWEB forums."
-category: "cutlist-corruption-and-cnc-errors"
+category: "manufacturing"
 softwareSlug: "cabinet-vision"
 keyword: "Cabinet Vision cut list negative sheet count corrupted cabinet file backup freeze system parameters update error 3704 Windows update THM.exe crash nesting corrupt database jobs over 30 sheets full hard drive"
 slug: "cabinet-vision-cutlist-corruption-cnc-errors-negative-sheets-backup-freeze-update-3704-thm-crash-nesting"

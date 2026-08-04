@@ -1,7 +1,7 @@
 ---
 title: "dRofus Revit Sync and Room Data Management Errors: Duplicate ID Primary Key from Multiple Group Options Conflicting on Revit Parameter Mapping, Room Sync Link Status Issues with Unlinked Rooms Requiring Show in Model Navigation, Revit Property Update Changes Room Data Status from Template to Derived From Automatically, Tracking Deleted Revit Rooms with Update dRofus Option, and Large Project Sync Without Filter Clears Data from Wrong Revit Models"
 excerpt: "dRofus fails for 5 distinct reasons: duplicate ID primary key error from multiple Group options conflicting on Revit parameter mapping, Room sync Link Status issues with unlinked rooms requiring Show in Model navigation, Revit property updates automatically change Room Data Status from Template to Derived From, tracking deleted Revit Rooms with Update dRofus option clears linked data, and large project sync without dRofus filter clears data from wrong Revit models. We cover each with fixes from dRofus Help and Support."
-category: "revit-sync-and-room-data-errors"
+category: "troubleshooting"
 softwareSlug: "drofus"
 keyword: "dRofus duplicate ID primary key Group options Revit parameter mapping Room sync Link Status unlinked Show in Model Revit property update Room Data Status Template Derived From tracking deleted Revit Rooms Update dRofus large project sync without filter clears wrong models"
 slug: "drofus-revit-sync-room-data-management-duplicate-id-primary-key-group-options-link-status-unlinked-show-in-model-room-data-status-template-derived-from-tracking-deleted-rooms-large"

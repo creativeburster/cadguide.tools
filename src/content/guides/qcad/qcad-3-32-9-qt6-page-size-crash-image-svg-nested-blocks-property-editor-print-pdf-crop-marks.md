@@ -1,7 +1,7 @@
 ---
 title: "QCAD 3.32.9 Qt6 Page Size Not Recognized for Decimal Paper Sizes, Crash with Invalid Image of Size 0 from Layout Opening, SVG Export Very Slow with Nested Blocks Qt6, Property Editor Crash with Long Update Delays Qt6, and Print PDF Export Fails When Crop Marks Enabled macOS: Qt5 Fallback, Image Reference Cleanup, Block Flattening, Update Delay Fix, and Crop Marks Disable"
 excerpt: "QCAD fails for 5 distinct reasons: Qt6 page size not recognized for decimal paper sizes requiring Qt5 fallback, crash with invalid image of size 0 from layout opening requiring image reference cleanup, SVG export very slow with nested blocks Qt6 requiring block flattening, Property Editor crash with long update delays Qt6 requiring update delay fix, and Print PDF export fails when crop marks enabled macOS requiring crop marks disable. We cover each with fixes from QCAD forum and changelog."
-category: "crash-and-export-errors"
+category: "troubleshooting"
 softwareSlug: "qcad"
 keyword: "QCAD 3.32.9 Qt6 page size not recognized decimal paper sizes crash invalid image size 0 layout opening SVG export very slow nested blocks Property Editor crash long update delays Print PDF export fails crop marks enabled macOS"
 slug: "qcad-3-32-9-qt6-page-size-crash-image-svg-nested-blocks-property-editor-print-pdf-crop-marks"

@@ -1,7 +1,7 @@
 ---
 title: "Autodesk Netfabb Mesh Repair Damage, Access Violation Crash, and STL Load Failures: Repair Script Stairstepping from Remove Degenerate Faces, Access Violation from Corrupt AppData and Advanced Display, Failed to Load Mesh #103 from Invalid Floating Point, and Free Netfabb Basic Access"
 excerpt: "Netfabb fails for 5 distinct reasons: default repair script causes massive stairstepping from remove degenerate faces at wrong tolerance, access violation crash on startup from corrupt AppData folder, access violation during support generation from advanced display features, failed to load mesh #103 from invalid floating point operations in STL, and the free Netfabb Basic is hidden behind a non-obvious setting. We cover each with fixes from Autodesk forums."
-category: "mesh-repair-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "autodesk-netfabb"
 keyword: "Autodesk Netfabb repair script stairstepping remove degenerate faces access violation crash AppData failed to load mesh 103 invalid floating point free Basic"
 slug: "autodesk-netfabb-mesh-repair-damage-access-violation-stl-load-failures-degenerate-faces-appdata-floating-point"

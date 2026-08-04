@@ -1,8 +1,8 @@
 ---
 title: "Inventor CAM Post Processor and Toolpath Errors: Post Produces G01 Instead of G03 from 2024 Update Requiring Tolerance Adjustment or Version Downgrade, Post Processor ReferenceError from Version Mismatch Requiring Inventor CAM 2024 Upgrade, Haas NGC Post supportedFeatures Not Defined from Version Compatibility Requiring Previous Post Revision, Trunnion Post Requires Machine Configuration from Missing Setup Definition Requiring Machine Setup, and Empty Toolpath Could Cause Machine Crash from Known Bug Requiring 2025.1 Update"
 excerpt: "Inventor CAM fails for 5 distinct reasons: post produces G01 instead of G03 from 2024 update requiring tolerance adjustment or version downgrade, post processor ReferenceError from version mismatch requiring Inventor CAM 2024 upgrade, Haas NGC post supportedFeatures not defined from version compatibility requiring previous post revision, trunnion post requires machine configuration from missing setup definition requiring machine setup, and empty toolpath could cause machine crash from known bug requiring 2025.1 update. We cover each with fixes from Autodesk Community."
-category: "post-processor-and-toolpath-errors"
-softwareSlug: "inventor-cam"
+category: "manufacturing"
+softwareSlug: "autodesk-inventor"
 keyword: "Inventor CAM post processor G01 instead of G03 2024 update tolerance adjustment version downgrade ReferenceError createOutputVariable version mismatch Haas NGC supportedFeatures not defined previous post revision trunnion machine configuration setup empty toolpath machine crash 2025.1 update"
 slug: "inventor-cam-post-processor-toolpath-errors-g01-instead-g03-2024-update-tolerance-referenceerror-version-mismatch-haas-ngc-supportedfeatures-previous-post-revision-trunnion-machine"
 author: "CADGuide Tools Editorial Team"

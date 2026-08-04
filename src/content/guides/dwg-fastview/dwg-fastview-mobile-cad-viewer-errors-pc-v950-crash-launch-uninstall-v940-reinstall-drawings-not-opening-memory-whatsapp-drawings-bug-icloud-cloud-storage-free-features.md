@@ -1,7 +1,7 @@
 ---
 title: "DWG FastView Mobile CAD Viewer Errors: PC v9.5.0 Crash on Launch from Version Bug Requiring Uninstall and v9.4.0 Reinstall, Drawings Not Opening from Insufficient Running Memory or File Errors Requiring Memory Check, WhatsApp Shared Drawings Not Opening from Bug Requiring Latest Version Update, iCloud and Cloud Storage Access Limitations Requiring Local File Import, and Free Features Moved Behind Subscription Paywall Requiring Premium Upgrade or Alternative Apps"
 excerpt: "DWG FastView fails for 5 distinct reasons: PC v9.5.0 crash on launch from version bug requiring uninstall and v9.4.0 reinstall, drawings not opening from insufficient running memory or file errors requiring memory check, WhatsApp shared drawings not opening from bug requiring latest version update, iCloud and cloud storage access limitations requiring local file import, and free features moved behind subscription paywall requiring premium upgrade or alternative apps. We cover each with fixes from DWG FastView Blog and user reviews."
-category: "mobile-cad-viewer-errors"
+category: "troubleshooting"
 softwareSlug: "dwg-fastview"
 keyword: "DWG FastView PC v9.5.0 crash on launch uninstall v9.4.0 reinstall drawings not opening insufficient running memory file errors WhatsApp shared drawings not opening bug latest version update iCloud cloud storage access limitations local file import free features subscription paywall premium upgrade alternative apps"
 slug: "dwg-fastview-mobile-cad-viewer-errors-pc-v950-crash-launch-uninstall-v940-reinstall-drawings-not-opening-memory-whatsapp-drawings-bug-icloud-cloud-storage-free-features"

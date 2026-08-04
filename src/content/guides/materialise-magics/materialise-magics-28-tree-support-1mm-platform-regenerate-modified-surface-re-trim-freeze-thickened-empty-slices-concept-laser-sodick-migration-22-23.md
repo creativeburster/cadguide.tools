@@ -1,7 +1,7 @@
 ---
 title: "Materialise Magics 28 Incorrect Tree Support Generation for Surfaces Closer Than 1mm to Platform, Regenerate Not Working for Tree Supports with Modified Surface, Cancelling Re-Trim Support on Platform Causes Unresponsive Freeze, Thickened Supports Creating Empty Slices for Concept Laser Sodick Additive Industries Build Processors, and Migration Incompatibility of Support Parameters from Magics 22 to 23 Plus: Tree Support Angle Check, Support Type Toggle, Re-Trim Avoidance, 28.03 Update, and Profile Migration Verification"
 excerpt: "Materialise Magics fails for 5 distinct reasons: incorrect tree support generation for surfaces closer than 1mm to platform requiring angle check, Regenerate not working for tree supports with modified surface requiring support type toggle, cancelling Re-Trim Support on Platform causes unresponsive freeze requiring re-trim avoidance, thickened supports creating empty slices for Concept Laser Sodick Additive Industries requiring 28.03 update, and migration incompatibility of support parameters from Magics 22 to 23 requiring profile migration verification. We cover each with fixes from Materialise Support."
-category: "support-generation-and-slicing-errors"
+category: "printing"
 softwareSlug: "magics"
 keyword: "Materialise Magics 28 incorrect tree support generation surface 1mm platform regenerate not working modified surface cancelling re-trim support unresponsive freeze thickened supports empty slices Concept Laser Sodick Additive Industries migration incompatibility support parameters Magics 22 23"
 slug: "materialise-magics-28-tree-support-1mm-platform-regenerate-modified-surface-re-trim-freeze-thickened-empty-slices-concept-laser-sodick-migration-22-23"

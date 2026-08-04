@@ -1,7 +1,7 @@
 ---
 title: "Tebis CAM 5-Axis Post Processor and Machining Errors: Post Processor Requires Machine Configuration for 5-Axis Simultaneous Toolpath, onRewindMachine Logic Must Be Enabled with performRewinds true and Cyclic Axis Definition, Section.getInitialToolAxisABC Error from Missing optimizeMachineAngles in activateMachine, Swarf Toolpath on 4-Axis Post Requires Advanced Swarf Strategy, and Initial XY Positioning in TCP Coordinates Without TCP Enabled Requiring Safe Z Approach"
 excerpt: "Tebis and similar CAM post processors fail for 5 distinct reasons: post requires machine configuration for 5-axis simultaneous toolpath from undefined setup, onRewindMachine logic must be enabled with performRewinds=true and cyclic axis definition for continuous rotary axes, Section.getInitialToolAxisABC error from missing optimizeMachineAngles call in activateMachine function, Swarf toolpath on 4-axis post requires Advanced Swarf strategy to force 4-axis calculation, and initial XY positioning output in TCP coordinates before TCP is enabled requiring Safe Z approach method. We cover each with fixes from Autodesk HSM and Practical Machinist forums."
-category: "post-processor-and-5axis-machining-errors"
+category: "manufacturing"
 softwareSlug: "tebis"
 keyword: "Tebis CAM post processor machine configuration 5-axis simultaneous onRewindMachine performRewinds cyclic axis Section.getInitialToolAxisABC optimizeMachineAngles activateMachine Swarf 4-axis Advanced Swarf TCP coordinates Safe Z positioning G68.2"
 slug: "tebis-post-processor-5axis-machining-errors-machine-configuration-onrewindmachine-performrewinds-cyclic-axis-optimizemachineangles-swarf-4axis-advanced-tcp-coordinates-safe-z"

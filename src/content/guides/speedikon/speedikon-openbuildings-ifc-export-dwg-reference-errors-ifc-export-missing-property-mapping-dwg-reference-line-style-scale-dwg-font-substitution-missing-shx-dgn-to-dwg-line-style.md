@@ -1,7 +1,7 @@
 ---
 title: "OpenBuildings Speedikon IFC Export and DWG Reference Errors: IFC Export Full of Errors from Missing Property Mapping Requiring PCF and PropertySet Configuration, DWG Reference Line Style Scale from Global LTSCALE Not Applied Requiring Per-Element Scaling, DWG File Font Substitution from Missing SHX Files Requiring TrueType Fonts, DGN to DWG Line Style Drop from Incompatible Styles Requiring Drop Unsupported Option, and DWG Units Warning from Uninferable Units Requiring Manual Units Setting"
 excerpt: "OpenBuildings Speedikon fails for 5 distinct reasons: IFC export full of errors from missing property mapping requiring PCF and PropertySet configuration, DWG reference line style scale from global LTSCALE not applied requiring per-element scaling, DWG file font substitution from missing SHX files requiring TrueType fonts, DGN to DWG line style drop from incompatible styles requiring Drop Unsupported option, and DWG units warning from uninferable units requiring manual units setting. We cover each with fixes from Bentley Documentation and Community."
-category: "ifc-export-and-dwg-reference-errors"
+category: "troubleshooting"
 softwareSlug: "speedikon"
 keyword: "OpenBuildings Speedikon IFC export errors missing property mapping PCF PropertySet configuration DWG reference line style scale global LTSCALE not applied per-element scaling DWG font substitution missing SHX files TrueType fonts DGN to DWG line style drop incompatible styles Drop Unsupported option DWG units warning uninferable units manual units setting"
 slug: "speedikon-openbuildings-ifc-export-dwg-reference-errors-ifc-export-missing-property-mapping-dwg-reference-line-style-scale-dwg-font-substitution-missing-shx-dgn-to-dwg-line-style"

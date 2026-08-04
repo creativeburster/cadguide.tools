@@ -1,7 +1,7 @@
 ---
 title: "KOMPAS-3D Export Solid Becomes Surface and Assembly Performance Errors: Boolean Operation Creates Boundary Edges from Contour Exceeding Face by Tolerance Requiring Edge Alignment, Fillet Operation at Open Chain Ends Creates Split Edges Turning Solid to Surface on Export, Large Assembly Performance from Component Display Modes and Simplification, Sheet Metal Bend Unfold Requires Bend Table Configuration for Correct Flat Pattern, and Export Settings Must Enable Solids Transfer and Hide Source Objects to Avoid Duplication"
 excerpt: "KOMPAS-3D fails for 5 distinct reasons: Boolean operation creates boundary edges from contour exceeding face by tolerance requiring edge alignment, fillet operation at open chain ends creates split edges turning solid to surface on export, large assembly performance from component display modes and simplification, sheet metal bend unfold requires bend table configuration for correct flat pattern, and export settings must enable solids transfer and hide source objects to avoid duplication. We cover each with fixes from ASCON documentation and Habr."
-category: "export-solid-to-surface-and-assembly-errors"
+category: "troubleshooting"
 softwareSlug: "kompas-3d"
 keyword: "KOMPAS-3D Boolean operation boundary edges contour exceeding face tolerance edge alignment fillet open chain split edges solid surface export large assembly performance component display modes simplification sheet metal bend unfold bend table flat pattern export settings solids transfer hide source objects duplication"
 slug: "kompas-3d-export-solid-surface-assembly-performance-errors-boolean-boundary-edges-contour-tolerance-fillet-open-chain-split-edges-large-assembly-display-simplification-sheet-metal"

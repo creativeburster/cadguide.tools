@@ -1,7 +1,7 @@
 ---
 title: "Altium Designer PCB.DataModel.dll Crash on Routing and Polygon Repour, Un-Routed Net Dead Copper DRC Violations from Zero-Area Regions, DRC Clearance Errors on Same-Net Pads from Hidden Track Segments, Unrouted Nets DRC from Teardrop-Generated Zero-Width Regions, and Board Region Missing Stackup: Health Check Monitor, PCB Rules Panel, and Layer Stack Assignment"
 excerpt: "Altium Designer fails for 5 distinct reasons: PCB.DataModel.dll crash during routing or polygon repour from board region missing stackup requiring layer stack assignment, un-routed net dead copper DRC violations from zero-area regions requiring Health Check Monitor fix, DRC clearance errors on same-net pads from hidden track segments requiring extended selection inspection, unrouted nets DRC from teardrop-generated zero-width regions requiring PCB List panel deletion, and board region missing stackup causing DataModel crash requiring Multilayer selection. We cover each with fixes from Altium Knowledge Base and community forums."
-category: "pcb-crash-and-drc-violation-errors"
+category: "troubleshooting"
 softwareSlug: "altium-designer"
 keyword: "Altium Designer PCB.DataModel.dll crash routing polygon repour un-routed net dead copper DRC zero-area regions clearance error same-net hidden track segments unrouted nets teardrop zero-width regions board region missing stackup Health Check Monitor"
 slug: "altium-designer-datamodel-dll-crash-routing-polygon-repour-unrouted-net-dead-copper-drc-zero-area-clearance-error-same-net-hidden-track-teardrop-zero-width-board-region-missing"

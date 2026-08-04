@@ -1,7 +1,7 @@
 ---
 title: "IDEA StatiCa Connection Analysis 0 Percent or Not Reaching 100 Percent from Singularities, Stop at Limit Strain Halting Analysis at 25 Percent Load, GMNA Hollow Section Instability Break, Bolt Operations Incorrect Plate Selection and Slotted Hole Singularity, and Missing Welds at Gusset Plates Causing Singularity: Singularity Detection, Stop at Limit Strain Disable, GMNA Toggle, Bolt Model Verification, and Weld Addition"
 excerpt: "IDEA StatiCa fails for 5 distinct reasons: Connection analysis 0 percent or not reaching 100 percent from singularities requiring missing weld or bolt detection, Stop at Limit Strain halting analysis at 25 percent load requiring code setup disable, GMNA hollow section instability break requiring GMNA toggle, bolt operations incorrect plate selection and slotted hole singularity requiring bolt model verification, and missing welds at gusset plates causing singularity requiring weld addition. We cover each with fixes from IDEA StatiCa Support Center."
-category: "connection-analysis-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "idea-statica"
 keyword: "IDEA StatiCa connection analysis 0 percent not reaching 100 percent singularity Stop at Limit Strain GMNA hollow section instability bolt operations incorrect plate selection slotted hole missing welds gusset plates"
 slug: "idea-statica-connection-analysis-0-percent-singularity-stop-at-limit-strain-gmna-hollow-section-bolt-operations-slotted-hole-missing-welds-gusset-plates"

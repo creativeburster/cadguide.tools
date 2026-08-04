@@ -1,7 +1,7 @@
 ---
 title: "Lumion Ray Tracing Artifacts Blotches and Crash Errors: Ray Trace Rendering Produces Artifacts Blotches Patchy Renders from Insufficient Samples Requiring Sample Increase and Denoiser Configuration, NVIDIA Driver 577.00 Causes Frequent Crash with Ray Tracing Requiring Driver Rollback, 3D Grass Appears Very Reflective with Ray Tracing Requiring 2025.2 Update, Ocean Reflectivity Too High with Fully Ray-Traced Glass and Water Requiring 2025.2 Update, and Moving Blotches in Dark Areas from Insufficient Bounces Requiring Radiance Caching"
 excerpt: "Lumion fails for 5 distinct reasons: Ray Trace rendering produces artifacts blotches patchy renders from insufficient samples requiring sample increase and denoiser configuration, NVIDIA driver 577.00 causes frequent crash with ray tracing requiring driver rollback, 3D grass appears very reflective with ray tracing requiring 2025.2 update, ocean reflectivity too high with fully ray-traced glass and water requiring 2025.2 update, and moving blotches in dark areas from insufficient bounces requiring Radiance Caching. We cover each with fixes from Lumion Support and NVIDIA Forums."
-category: "ray-tracing-artifacts-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "lumion"
 keyword: "Lumion ray tracing artifacts blotches patchy renders insufficient samples denoiser NVIDIA driver 577.00 crash ray tracing driver rollback 3D grass reflective ray tracing 2025.2 ocean reflectivity fully ray-traced glass water moving blotches dark areas bounces Radiance Caching"
 slug: "lumion-ray-tracing-artifacts-blotches-crash-errors-artifacts-blotches-patchy-samples-denoiser-nvidia-577-crash-driver-rollback-3d-grass-reflective-2025.2-ocean-reflectivity-glass"

@@ -1,7 +1,7 @@
 ---
 title: "Gerber AccuMark V2026.1 AVX Instruction Set CPU Requirement for PDS Launch, Antivirus Quarantining AccuMark Executables sil2000.exe medpro.exe marking.exe amxplore.exe, Windows Insider Preview Build Incompatibility Causing AccuMark Malfunction, Piece Grouping in PDS for Multi-Piece Selection Operations, and PDF Marker Plot File Submission from Winplot: CPU-Z AVX Verification, Antivirus Exclusion Whitelist, Windows Update Rollback, Piece Group Workflow, and Winplot PDF Plot"
 excerpt: "Gerber AccuMark fails for 5 distinct reasons: PDS not launching on CPUs without AVX instruction set requiring CPU-Z verification, antivirus quarantining AccuMark executables requiring exclusion whitelist for sil2000.exe medpro.exe marking.exe amxplore.exe, Windows Insider Preview build incompatibility causing malfunction requiring Windows update rollback, piece grouping in PDS for multi-piece selection requiring group workflow, and PDF marker plot file submission from Winplot requiring PDF plot configuration. We cover each with fixes from Gerber Help."
-category: "launch-and-system-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "gerber-accumark"
 keyword: "Gerber AccuMark V2026.1 AVX instruction set CPU requirement PDS launch antivirus quarantine sil2000.exe medpro.exe marking.exe amxplore.exe Windows Insider Preview incompatibility piece grouping PDS multi-piece selection PDF marker plot Winplot"
 slug: "gerber-accumark-v2026-1-avx-cpu-requirement-pds-launch-antivirus-quarantine-exe-whitelist-windows-insider-preview-rollback-piece-grouping-pds-pdf-marker-plot-winplot"

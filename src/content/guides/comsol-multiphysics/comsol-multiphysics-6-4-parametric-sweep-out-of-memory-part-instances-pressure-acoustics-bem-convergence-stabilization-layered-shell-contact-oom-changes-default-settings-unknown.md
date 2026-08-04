@@ -1,7 +1,7 @@
 ---
 title: "COMSOL Multiphysics 6.4 Parametric Sweep Out of Memory with Part Instances, Pressure Acoustics BEM Convergence Slow with Old Stabilization Expression, Layered Shell and Contact Feature Simultaneous OOM Crash, Changes from Default Settings Unknown Default Values After 6.4 Update, and Implicit Time-Dependent Solver Memory Peak with Segregated Nonlinear Solver: Iterative Solver Selection, Stabilization Expression Update, Contact Layer Removal, Settings Reset, and 6.3 Update 3 Memory Reduction"
 excerpt: "COMSOL Multiphysics fails for 5 distinct reasons: parametric sweep with part instances running out of memory for large parameter counts requiring iterative solver selection, Pressure Acoustics BEM convergence slow with old stabilization expression requiring manual update to abs(pabe.k[m]), Layered Shell and contact feature simultaneous OOM crash requiring contact removal, Changes from Default Settings showing unknown default values after 6.4 update requiring settings reset, and implicit time-dependent solver memory peak with segregated nonlinear solver requiring 6.3 update 3. We cover each with fixes from COMSOL 6.3/6.4 release notes."
-category: "solver-and-memory-errors"
+category: "troubleshooting"
 softwareSlug: "comsol-multiphysics"
 keyword: "COMSOL Multiphysics 6.4 parametric sweep out of memory part instances Pressure Acoustics BEM convergence stabilization expression Layered Shell contact OOM Changes from Default Settings unknown default values implicit time-dependent solver memory peak segregated nonlinear solver iterative solver MUMPS PARDISO"
 slug: "comsol-multiphysics-6-4-parametric-sweep-out-of-memory-part-instances-pressure-acoustics-bem-convergence-stabilization-layered-shell-contact-oom-changes-default-settings-unknown"

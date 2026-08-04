@@ -1,7 +1,7 @@
 ---
 title: "Alphacam Nesting and Post Processor Errors: Subroutine Nesting Loses 90% of G-Code, .anc to .pgm Conversion Failure for Morbidelli Xilog, Post Processor Font Tracing Deviation from Open Contours, Accurite Millpwr Missing Post Processor, and Tool Direction Wrong Side from Incorrect Side Setting"
 excerpt: "Alphacam fails for 5 distinct reasons: subroutine nesting instead of linear loses 90% of G-code with 004 address not found error, .anc files can't convert to Morbidelli .pgm requiring .xxl rename and WinXISO, post processor font tracing deviates from open contours and loops in geometry, Accurite Millpwr controller has no available post processor, and tool direction appears on wrong side requiring Tool Directions correction. We cover each with fixes from WOODWEB and CNCZone forums."
-category: "nesting-and-post-processor-errors"
+category: "manufacturing"
 softwareSlug: "alphacam"
 keyword: "Alphacam subroutine nesting linear G-code 004 address not found anc pgm Morbidelli Xilog WinXISO post processor font tracing open contour Accurite Millpwr tool direction wrong side"
 slug: "alphacam-nesting-post-processor-errors-subroutine-linear-anc-pgm-morbidelli-xilog-font-tracing-accurite-tool-direction"

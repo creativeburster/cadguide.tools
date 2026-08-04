@@ -1,7 +1,7 @@
 ---
 title: "SimScale 2026 Sudden Bad Mesh Quality from Moving Wall Boundary Condition on XY Plane, Harmonic Solver Hang at 0% from Empty Void Bodies and High Edge Ratio, Meshing Pipeline Changes from Platform Updates Breaking Previous Setups, High Non-Orthogonality Above 70 from Dirty CAD Model Small Faces, and Overlapping Entities Error from Momentum Source Geometry Intersecting Flow Region: Geometry Underbody Inspection, Local Volume Refinement, Extrusion Mesh Refinement, CAD Cleanup, and Cell Zone Configuration"
 excerpt: "SimScale fails for 5 distinct reasons: sudden bad mesh quality from moving wall boundary condition on xy plane requiring geometry underbody inspection, harmonic solver hang at 0% from empty void bodies and high edge ratio requiring local volume refinement, meshing pipeline changes from platform updates breaking previous setups requiring extrusion mesh refinement, high non-orthogonality above 70 from dirty CAD model small faces requiring CAD cleanup, and overlapping entities error from momentum source geometry intersecting flow region requiring cell zone configuration. We cover each with fixes from SimScale forum."
-category: "mesh-and-solver-errors"
+category: "troubleshooting"
 softwareSlug: "simscale"
 keyword: "SimScale 2026 sudden bad mesh quality moving wall boundary condition xy plane harmonic solver hang 0% empty void bodies high edge ratio meshing pipeline changes platform updates high non-orthogonality dirty CAD model small faces overlapping entities momentum source geometry intersecting flow region"
 slug: "simscale-2026-bad-mesh-moving-wall-harmonic-hang-void-bodies-pipeline-non-orthogonality-overlapping-momentum-source"

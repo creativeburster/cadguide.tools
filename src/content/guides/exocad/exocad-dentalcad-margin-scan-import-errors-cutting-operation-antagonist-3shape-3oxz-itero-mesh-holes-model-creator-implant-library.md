@@ -1,7 +1,7 @@
 ---
 title: "exocad DentalCAD Margin Line, Scan Import, and Model Creator Errors: Cutting Operation Failed from Incorrect Antagonist Type, 3Shape .3oxz Import XML Error from Format Change, iTero Margin Won't Snap from Mesh Holes, Model Creator Crash from Implant Library, and Bad Margin Line Detection from Intraoral Scan Quality"
 excerpt: "exocad DentalCAD fails for 5 distinct reasons: cutting operation fails after margin line detection from incorrect scan orientation and antagonist type, 3Shape Trios .3oxz files show XML parsing error from format incompatibility, iTero scan margins won't snap from mesh holes requiring close holes in edit mesh, Model Creator crashes at scan body alignment from implant library bug, and bad margin lines from poor intraoral scan quality require manual drawing. We cover each with fixes from exocad wiki and Dental Lab Network."
-category: "margin-line-and-scan-import-errors"
+category: "troubleshooting"
 softwareSlug: "exocad"
 keyword: "exocad DentalCAD cutting operation failed antagonist type 3Shape 3oxz XML import error iTero margin snap mesh holes Model Creator crash implant library bad margin line intraoral scan"
 slug: "exocad-dentalcad-margin-scan-import-errors-cutting-operation-antagonist-3shape-3oxz-itero-mesh-holes-model-creator-implant-library"

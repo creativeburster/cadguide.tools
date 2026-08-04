@@ -1,7 +1,7 @@
 ---
 title: "Quadcept 11.1.4 Component References Invalid After Update or Replace, STEP Export Errors for Certain Components, Crash When Opening Project with Panel Sheets, Crash During 3D Rendering with Synchronization, and Gerber Import Macro Aperture Error: Component Reference Fix, STEP Export Update, Panel Sheet Patch, 3D Sync Improvement, and Gerber Macro Fix"
 excerpt: "Quadcept fails for 5 distinct reasons: component references invalid after update or replace requiring reference fix, STEP export errors for certain components requiring export update, crash when opening project with panel sheets requiring patch, crash during 3D rendering with synchronization requiring sync improvement, and Gerber import macro aperture error requiring macro fix. We cover each with fixes from Quadcept help center."
-category: "component-and-rendering-errors"
+category: "troubleshooting"
 softwareSlug: "quadcept"
 keyword: "Quadcept 11.1.4 component references invalid after update replace STEP export errors certain components crash opening project panel sheets crash 3D rendering synchronization Gerber import macro aperture error"
 slug: "quadcept-11-1-4-component-references-step-export-panel-sheets-3d-rendering-gerber-macro-aperture"

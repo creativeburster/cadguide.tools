@@ -1,7 +1,7 @@
 ---
 title: "DesignSpark Mechanical Export and 3D Printing Errors: DWG DXF Export Generates No File from Missing Translator Configuration Requiring Export Settings Check, DWG DXF Export Missing Geometry from Translator Glitch Requiring Alternative Export Method, AMF OBJ Non-Manifold Edges from DSM Export Requiring Mesh Repair in Slicer, Slow Export Performance with Large Assemblies from Single-Threaded Processing Requiring Assembly Optimization, and DSM6 Cannot Export to Cura from Export Command Failure Requiring STL Workaround"
 excerpt: "DesignSpark Mechanical fails for 5 distinct reasons: DWG DXF export generates no file from missing translator configuration requiring export settings check, DWG DXF export missing geometry from translator glitch requiring alternative export method, AMF OBJ non-manifold edges from DSM export requiring mesh repair in slicer, slow export performance with large assemblies from single-threaded processing requiring assembly optimization, and DSM6 cannot export to Cura from export command failure requiring STL workaround. We cover each with fixes from DesignSpark Forum."
-category: "export-and-3d-printing-errors"
+category: "printing"
 softwareSlug: "designspark-mechanical"
 keyword: "DesignSpark Mechanical DWG DXF export no file missing translator configuration DWG DXF missing geometry translator glitch alternative export AMF OBJ non-manifold edges DSM export mesh repair slicer slow export large assemblies single-threaded assembly optimization DSM6 cannot export Cura STL workaround"
 slug: "designspark-mechanical-export-3d-printing-errors-dwg-dxf-no-file-translator-dwg-dxf-missing-geometry-amf-obj-non-manifold-edges-slow-export-large-assemblies-dsm6-cannot-export-cura"

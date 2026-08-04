@@ -1,7 +1,7 @@
 ---
 title: "Browzwear VStitcher Crashes and Simulation Errors: Trim Stitched to Pattern Crash, Extra-Large Size Simulation Crash, Lightning Bolt Display from Graphics Card Settings, DXF Import Without Grading or Distorted Grading, and Save Outfit Crash with API Plugin Failure"
 excerpt: "Browzwear VStitcher fails for 5 distinct reasons: trims stitched to pattern pieces instead of directly applied cause crash, changing to extra-large sizes then running simulation crashes, lightning bolt or shattered glass display from incorrect graphics card settings, DXF files import without grading or with distorted grading, and saving an outfit causes crash with API plugin not working. We cover each with fixes from Browzwear release notes and help center."
-category: "crash-and-simulation-errors"
+category: "troubleshooting"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher crash trim stitched pattern extra-large size simulation lightning bolt shattered glass display graphics card DXF import grading distorted save outfit API plugin"
 slug: "browzwear-vstitcher-crash-simulation-errors-trim-pattern-extra-large-lightning-bolt-dxf-grading-save-outfit-api"

@@ -1,7 +1,7 @@
 ---
 title: "Ansys Fluent AMG Solver Divergence from Poor Mesh Quality, UDF Segmentation Violation from Wrong Thread Pointer in Eulerian Multiphase, Dynamic Mesh Negative Cell Volume from Quad Mesh Deformation, UDF Density Divergence from Initialization Issues, and Pressure-Far-Field Boundary Misuse in Closed Domain: Mesh Quality Improvement, Phase-Level Subthread, Tri Remeshing, Standard Initialization, and Pressure Outlet"
 excerpt: "Ansys Fluent fails for 5 distinct reasons: AMG solver divergence and floating point exception from mesh skewness above 0.98 requiring hex mesh generation, UDF segmentation violation SIGSEGV from accessing C_T and C_YI with mixture-level thread instead of phase-level subthread in Eulerian multiphase requiring thread pointer correction, dynamic mesh negative cell volume from quad mesh deformation requiring triangular remeshing, UDF density divergence from initialization issues requiring standard initialization without UDF hooking, and pressure-far-field boundary misuse in closed domain requiring pressure outlet boundary. We cover each with fixes from CFD Online and Ansys forums."
-category: "solver-divergence-and-udf-errors"
+category: "troubleshooting"
 softwareSlug: "ansys-fluent"
 keyword: "Ansys Fluent AMG solver divergence floating point exception mesh skewness UDF segmentation violation SIGSEGV C_T C_YI thread pointer Eulerian multiphase phase-level subthread dynamic mesh negative cell volume quad mesh triangular remeshing UDF density divergence initialization pressure-far-field pressure outlet"
 slug: "ansys-fluent-amg-divergence-mesh-skewness-udf-sigsegv-thread-pointer-eulerian-multiphase-dynamic-mesh-negative-cell-volume-quad-tri-remeshing-udf-density-divergence-initialization"

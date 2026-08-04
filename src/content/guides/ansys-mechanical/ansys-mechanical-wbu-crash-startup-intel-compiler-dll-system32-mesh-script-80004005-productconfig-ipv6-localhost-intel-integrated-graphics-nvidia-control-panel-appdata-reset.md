@@ -1,7 +1,7 @@
 ---
 title: "Ansys Mechanical Workbench AnsysWBU.exe Crash on Startup, Meshing Error from Intel Compiler DLL Conflict in System32, Mesh Script Error 80004005 from Corrupted Installation, IPv6 Localhost Resolution Preventing Workbench Launch, and Intel Integrated Graphics Overriding Professional GPU: AppData Reset, libiomp5md.dll Rename, ProductConfig Reconfiguration, IPv6 Disable, and NVIDIA Control Panel"
 excerpt: "Ansys Mechanical fails for 5 distinct reasons: AnsysWBU.exe crash on startup from corrupted AppData settings requiring folder rename, meshing error from Intel compiler runtime DLL conflict in C:\\Windows\\System32 requiring libiomp5md.dll and libmmd.dll rename, mesh script error 80004005 from corrupted installation requiring ProductConfig reconfiguration and VC++ reinstall, Workbench launch failure from IPv6 localhost resolution requiring IPv6 disable, and Intel Integrated Graphics overriding professional GPU requiring NVIDIA Control Panel preference setting. We cover each with fixes from Ansys Knowledge Base."
-category: "workbench-crash-and-meshing-errors"
+category: "troubleshooting"
 softwareSlug: "ansys-mechanical"
 keyword: "Ansys Mechanical Workbench AnsysWBU.exe crash startup meshing error Intel compiler DLL libiomp5md.dll libmmd.dll System32 mesh script error 80004005 ProductConfig IPv6 localhost Intel Integrated Graphics NVIDIA Control Panel AppData reset"
 slug: "ansys-mechanical-wbu-crash-startup-intel-compiler-dll-system32-mesh-script-80004005-productconfig-ipv6-localhost-intel-integrated-graphics-nvidia-control-panel-appdata-reset"

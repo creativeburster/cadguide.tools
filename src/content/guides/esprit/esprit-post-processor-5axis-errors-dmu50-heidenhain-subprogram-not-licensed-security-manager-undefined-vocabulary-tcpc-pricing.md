@@ -1,7 +1,7 @@
 ---
 title: "ESPRIT CAM Post Processor and 5-Axis Errors: DMU 50 Heidenhain Subprogram Errors from Missing Tool Numbers, Not Licensed to Run Post Processor from Unselected Machine License, Post Processor Custom Format Undefined Vocabulary Error, 5-Axis Without TCPC Old School Setup, and Post Processor Pricing and Reliability Issues"
 excerpt: "ESPRIT CAM fails for 5 distinct reasons: DMU 50 with Heidenhain iTNC 530 gets subprogram errors from missing tool numbers and malformed statements, Not Licensed to Run This Post Processor from unselected machine license in Security Manager, custom post format gets undefined vocabulary error from incorrect keyword definition, 5-axis without TCPC requires specific NC output and part setup configuration, and post processor pricing at $1000 per axis with $5000 annual maintenance. We cover each with fixes from Practical Machinist and PM Technologies."
-category: "post-processor-and-5axis-errors"
+category: "manufacturing"
 softwareSlug: "esprit"
 keyword: "ESPRIT CAM DMU 50 Heidenhain iTNC 530 subprogram missing tool number Not Licensed post processor Security Manager machine license custom format undefined vocabulary 5-axis TCPC post pricing"
 slug: "esprit-post-processor-5axis-errors-dmu50-heidenhain-subprogram-not-licensed-security-manager-undefined-vocabulary-tcpc-pricing"

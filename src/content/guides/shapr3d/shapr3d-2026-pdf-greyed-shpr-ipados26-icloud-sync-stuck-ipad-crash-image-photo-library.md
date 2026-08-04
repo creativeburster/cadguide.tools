@@ -1,7 +1,7 @@
 ---
 title: "Shapr3D 2026 Drawing Export PDF Greyed Out Button from iPad Files App, SHPR File Import Failure on iPadOS 26 from iCloud Storage, Synchronization Failure Between iPad and Windows from Cloud Sync Stuck, Constant Crashing on iPad During Basic Designing Inputs, and Drawing Image Import Restricted to Photo Library from Files App Option Missing: Share Icon Workaround, Local Copy Import, Version 26.82 Update, Support Ticket, and Platform Switch"
 excerpt: "Shapr3D fails for 5 distinct reasons: drawing export PDF greyed out button from iPad Files App requiring share icon workaround, SHPR file import failure on iPadOS 26 from iCloud storage requiring local copy import, synchronization failure between iPad and Windows from cloud sync stuck requiring version 26.82 update, constant crashing on iPad during basic designing inputs requiring support ticket, and drawing image import restricted to Photo Library from Files App option missing requiring platform switch. We cover each with fixes from Shapr3D community."
-category: "import-sync-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "shapr3d"
 keyword: "Shapr3D 2026 drawing export PDF greyed out button iPad Files App SHPR file import failure iPadOS 26 iCloud storage synchronization failure iPad Windows cloud sync stuck constant crashing iPad basic designing inputs drawing image import restricted Photo Library Files App option missing"
 slug: "shapr3d-2026-pdf-greyed-shpr-ipados26-icloud-sync-stuck-ipad-crash-image-photo-library"

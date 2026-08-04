@@ -1,7 +1,7 @@
 ---
 title: "Cadence Allegro PCB Editor DRC Crashes and Constraint Manager Errors: DRC Crash from Database Corruption Fixable by dbDoctor, Setup Function Crash from Graphics Driver and Window Position, Stale DRC Markers After Constraint Update Requiring DRC Update, Shape-to-Shape Spacing Constraint Not Found in Constraint Manager, and External DRC Rules from SKILL Programs and RAVEL"
 excerpt: "Allegro PCB Editor fails for 5 distinct reasons: DRC crashes from database corruption fixable by dbDoctor or single-thread mode, setup functions crash from graphics drivers requiring -safe and -noopengl launch, stale DRC markers persist after constraint updates requiring manual DRC update, shape-to-shape spacing constraints are hidden in expanded Constraint Manager columns, and external DRC rules appear from SKILL programs or RAVEL without user knowledge. We cover each with fixes from Cadence Community forums."
-category: "drc-and-constraint-manager-errors"
+category: "troubleshooting"
 softwareSlug: "allegro-pcb"
 keyword: "Cadence Allegro PCB Editor DRC crash dbDoctor database corruption single thread setup crash noopengl stale DRC markers shape-to-shape spacing constraint manager external DRC SKILL RAVEL"
 slug: "allegro-pcb-drc-constraint-manager-errors-dbdoctor-single-thread-noopengl-stale-drc-shape-spacing-external-rules"

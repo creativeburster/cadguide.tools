@@ -1,7 +1,7 @@
 ---
 title: "Allplan Planbar Precast Element Plan Crash and Data Corruption: BT_ASSERT_RELEASE Crash in Element Plan from NmKtLayoutCatCell, Data Corruption in Precast Projects from Drawing File Inconsistency, Associative View and View-and-Section Conflict in Pre-2023 Versions, Rebar Extrusion Crash from Single-Line Shape Without 3D Plane, and Assemblying Group for Bending Machine Export and Out-of-Element Bars"
 excerpt: "Planbar fails for 5 distinct reasons: element plan crash with BT_ASSERT_RELEASE in NA_Data_NmKtLayoutCatCell.cpp from catalog cell layout corruption, data corruption in precast projects causing drawing files to become unopenable and reinforcement to go corrupt, associative view and view-and-section cannot coexist in same drawing file before 2023, rebar extrusion crashes from single-line shape input where 3D plane cannot be determined, and assemblying group tool for bending machine export and connecting out-of-element bars in precast. We cover each with fixes from Allplan Community forums."
-category: "element-plan-crash-and-data-corruption-errors"
+category: "troubleshooting"
 softwareSlug: "planbar"
 keyword: "Planbar BT_ASSERT_RELEASE NA_Data_NmKtLayoutCatCell element plan crash data corruption precast drawing file associative view view-and-section conflict rebar extrusion single line 3D plane assemblying group bending machine out-of-element bars"
 slug: "planbar-element-plan-crash-data-corruption-bt-assert-release-nmktlayoutcatcell-associative-view-conflict-rebar-extrusion-single-line-assemblying-group-bending-machine"

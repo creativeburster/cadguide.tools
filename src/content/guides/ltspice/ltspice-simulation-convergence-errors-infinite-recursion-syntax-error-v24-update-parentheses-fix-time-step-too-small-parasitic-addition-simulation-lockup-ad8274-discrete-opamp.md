@@ -1,7 +1,7 @@
 ---
 title: "LTspice Simulation and Convergence Errors: Infinite Recursion and Syntax Error from v24.1 Update Requiring Parentheses Fix, Time Step Too Small Convergence Failure from Non-Physical Circuit Requiring Parasitic Addition, Simulation Lockup from AD8274 Model Instability Requiring Discrete Op-Amp Replacement, Inconsistent Convergence from Floating Nodes Requiring Capacitance Addition and Debugtran, and Labelled Net Name Ignored When Plotting from Component vs Net Name Confusion Requiring Net Label Addition"
 excerpt: "LTspice fails for 5 distinct reasons: Infinite recursion and syntax error from v24.1 update requiring parentheses fix, time step too small convergence failure from non-physical circuit requiring parasitic addition, simulation lockup from AD8274 model instability requiring discrete op-amp replacement, inconsistent convergence from floating nodes requiring capacitance addition and debugtran, and labelled net name ignored when plotting from component vs net name confusion requiring net label addition. We cover each with fixes from Analog Devices EngineerZone."
-category: "simulation-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "ltspice"
 keyword: "LTspice Infinite recursion syntax error v24.1 update parentheses fix time step too small convergence failure non-physical circuit parasitic addition simulation lockup AD8274 model instability discrete op-amp replacement inconsistent convergence floating nodes capacitance addition debugtran labelled net name ignored plotting component vs net name confusion"
 slug: "ltspice-simulation-convergence-errors-infinite-recursion-syntax-error-v24-update-parentheses-fix-time-step-too-small-parasitic-addition-simulation-lockup-ad8274-discrete-opamp"

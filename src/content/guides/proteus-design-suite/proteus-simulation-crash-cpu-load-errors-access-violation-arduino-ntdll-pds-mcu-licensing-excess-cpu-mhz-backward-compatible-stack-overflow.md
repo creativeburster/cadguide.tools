@@ -1,7 +1,7 @@
 ---
 title: "Proteus Design Suite Simulation Crashes and Errors: Access Violation from Arduino Library Import, PDS.exe Crash from MCU Simulation Licensing, Excess CPU Load from Analog Circuitry in MHz Range, Schematic File Not Backward Compatible Between Versions, and Stack Overflow from Complex Microcontroller Code"
 excerpt: "Proteus fails for 5 distinct reasons: importing Arduino library causes access violation in ntdll.dll and PDS.exe crash, MCU simulation crashes from licensing issues requiring version update to 8.4+, excess CPU load prevents real-time simulation in MHz range from analog circuitry overhead, schematic files are not backward compatible between 8.1 and 8.0 requiring redraw, and stack overflow from complex microcontroller code. We cover each with fixes from EDABoard and All About Circuits forums."
-category: "simulation-crash-and-cpu-load-errors"
+category: "troubleshooting"
 softwareSlug: "proteus-design-suite"
 keyword: "Proteus ISIS simulation crash access violation ntdll.dll PDS.exe Arduino library MCU licensing excess CPU load real time MHz analog circuitry backward compatible stack overflow"
 slug: "proteus-simulation-crash-cpu-load-errors-access-violation-arduino-ntdll-pds-mcu-licensing-excess-cpu-mhz-backward-compatible-stack-overflow"

@@ -1,7 +1,7 @@
 ---
 title: "ICEM Surf Export and Surface Modeling Errors: Export to Alias and CATIA V5 from EDF Name Shortening and CATIA V5 Export Window Error Requiring Format Workarounds, Modify Patch Trim Poor Performance in 2025.2 from Extrapolate Behavior Change Requiring Tangent Extrapolation, Rational Surface Weight Mismatch from Fillet Creation Requiring Weight Reset to 1, Alias 2017 CatPart Import COS from Trimmed Surfaces Requiring Untrim and Retrim, and ICEM Surf 2025.2 Bug Fixes in Trim Face RM and IO Requiring Update"
 excerpt: "ICEM Surf fails for 5 distinct reasons: export to Alias and CATIA V5 from EDF name shortening and CATIA V5 export window error requiring format workarounds, Modify Patch Trim poor performance in 2025.2 from extrapolate behavior change requiring tangent extrapolation, rational surface weight mismatch from fillet creation requiring weight reset to 1, Alias 2017 CatPart import COS from trimmed surfaces requiring untrim and retrim, and ICEM Surf 2025.2 bug fixes in trim face RM and IO requiring update. We cover each with fixes from 3DS Community and McNeel Forum."
-category: "export-and-surface-modeling-errors"
+category: "troubleshooting"
 softwareSlug: "icem-surf"
 keyword: "ICEM Surf export Alias CATIA V5 EDF name shortening export window error Modify Patch Trim poor performance 2025.2 extrapolate behavior tangent extrapolation rational surface weight mismatch fillet creation weight reset Alias 2017 CatPart import COS trimmed surfaces untrim retrim 2025.2 bug fixes trim face RM IO update"
 slug: "icem-surf-export-surface-modeling-errors-export-alias-catia-v5-edf-name-shortening-modify-patch-trim-poor-performance-2025-extrapolate-rational-surface-weight-mismatch-fillet-alias"

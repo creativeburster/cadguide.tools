@@ -1,7 +1,7 @@
 ---
 title: "Moldflow 2026 Memory Allocation Failure from Sparse Element Node Numbering, Meshing Fails on First Attempt from SCM Launch Issue, Beam Element Meshing Failure in 2026 from Cold Runner Beams, STAMP 3D Shrinkage Model Changed Warpage Predictions as New Default, and 3D Warp Increased Memory Usage from In-Memory Data Access: Squeeze Labels Fix, Second Launch Workaround, Beam Removal, STAMP Override, and Memory Planning"
 excerpt: "Moldflow fails for 5 distinct reasons: memory allocation failure from sparse element/node numbering requiring Squeeze entity labels, meshing and analysis fails to launch on first attempt from SCM issue requiring second launch, beam element meshing failure in 2026 from cold runner beams requiring beam removal or 2025.1 fallback, STAMP 3D shrinkage model changed warpage predictions as new default requiring override option, and 3D Warp increased memory usage from in-memory data access requiring memory planning. We cover each with fixes from Autodesk Moldflow 2026 documentation."
-category: "solver-and-meshing-errors"
+category: "troubleshooting"
 softwareSlug: "moldflow"
 keyword: "Moldflow 2026 memory allocation failure sparse element node numbering Squeeze entity labels meshing fails first attempt SCM beam element cold runner STAMP 3D shrinkage model warpage predictions default 3D Warp increased memory usage"
 slug: "moldflow-2026-memory-allocation-squeeze-labels-meshing-first-attempt-scm-beam-element-cold-runner-stamp-shrinkage-3d-warp-memory-usage"

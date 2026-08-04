@@ -1,8 +1,8 @@
 ---
 title: "Tekla Structures Spiral Beam Creation and CamWorks Spiral Machining Errors: SpiralBeamDataException DataMissing from Incomplete Part Data Requiring Full Parameter Input, DefinitionPointsTooClose from Points Closer Than Tolerance Requiring Minimum Spacing, ZeroTotalRiseWithMore360Degrees from Flat Helix Requiring Non-Zero Rise, CamWorks Spiral-In Toolpath Errors from Cutting Width Ignored and Direction Changes Requiring SP0 or Alternative Patterns, and Fusion 360 Spiral Toolpath Contact Point Boundary Dive from Finish Behavior Requiring Boundary Adjustment"
 excerpt: "Spiral modeling and machining fail for 5 distinct reasons: SpiralBeamDataException DataMissing from incomplete part data requiring full parameter input, DefinitionPointsTooClose from points closer than tolerance requiring minimum spacing, ZeroTotalRiseWithMore360Degrees from flat helix requiring non-zero rise, CamWorks spiral-in toolpath errors from cutting width ignored and direction changes requiring SP0 or alternative patterns, and Fusion 360 spiral toolpath contact point boundary dive from finish behavior requiring boundary adjustment. We cover each with fixes from Tekla Developer Center and Practical Machinist Forum."
-category: "spiral-beam-and-machining-errors"
-softwareSlug: "spiral-modeler"
+category: "manufacturing"
+softwareSlug: "tekla-structures"
 keyword: "Tekla Structures spiral beam SpiralBeamDataException DataMissing incomplete part data DefinitionPointsTooClose points closer than tolerance ZeroTotalRiseWithMore360Degrees flat helix non-zero rise CamWorks spiral-in toolpath errors cutting width ignored direction changes SP0 alternative patterns Fusion 360 spiral toolpath contact point boundary dive finish behavior boundary adjustment"
 slug: "spiral-modeler-tekla-spiral-beam-camworks-spiral-machining-errors-spiralbeamdataexception-datamissing-definitionpointstooclose-zero-total-rise-camworks-spiral-in-toolpath-cutting"
 author: "CADGuide Tools Editorial Team"

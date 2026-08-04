@@ -1,7 +1,7 @@
 ---
 title: "PowerMill 2026 Stock Model Stepover >= Tool Diameter Preventing Toolpath, E-Core and P-Core CPU Affinity Causing Inconsistent Calculation Speed, Freeze During Toolpath Calculation from AMD Graphics, Constant Z Finishing Crash from Cusp-Based Stepdowns, and Collision Avoidance Preventing Toolpath Completion: Stepover Correction, CPU Affinity Setting, Driver Update, Hot Fix Install, and Collision Settings"
 excerpt: "PowerMill fails for 5 distinct reasons: Stock Model Stepover >= Tool Diameter preventing toolpath requiring stepover correction, E-Core and P-Core CPU affinity causing inconsistent calculation speed requiring affinity setting, freeze during toolpath calculation from AMD graphics requiring driver update, Constant Z Finishing crash from cusp-based stepdowns requiring hot fix, and Collision Avoidance preventing toolpath completion requiring collision settings. We cover each with fixes from Autodesk community."
-category: "toolpath-and-performance-errors"
+category: "manufacturing"
 softwareSlug: "powermill"
 keyword: "PowerMill 2026 Stock Model Stepover Tool Diameter toolpath E-Core P-Core CPU affinity inconsistent calculation freeze toolpath AMD graphics Constant Z Finishing crash cusp stepdowns Collision Avoidance preventing completion"
 slug: "powermill-2026-stock-stepover-cpu-affinity-freeze-amd-constant-z-collision-avoidance-completion"

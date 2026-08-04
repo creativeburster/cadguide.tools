@@ -1,7 +1,7 @@
 ---
 title: "Plasticity 2026 Export Crash from Complex CAD Scene with Wires and Hoses, PolySplines Mesh-to-NURBS Conversion G2 Continuity Validation, Boolean Operation Failure from Complex Topology, Surface Sculpting Deformation on Hard-Surface Models, and OBJ Export Scale and Up Axis Configuration: Scene Simplification, Continuity Inspection, Adaptive Topology, Brush Settings, and Export Configuration"
 excerpt: "Plasticity fails for 5 distinct reasons: export crash from complex CAD scene with wires and hoses requiring scene simplification, PolySplines mesh-to-NURBS conversion requiring G2 continuity validation, boolean operation failure from complex topology requiring adaptive topology, surface sculpting deformation on hard-surface models requiring brush settings, and OBJ export scale and up axis requiring configuration. We cover each with fixes from Plasticity community and release notes."
-category: "export-and-modeling-errors"
+category: "troubleshooting"
 softwareSlug: "plasticity"
 keyword: "Plasticity 2026 export crash complex CAD scene wires hoses PolySplines mesh NURBS G2 continuity boolean operation failure complex topology adaptive topology surface sculpting deformation hard-surface OBJ export scale up axis"
 slug: "plasticity-2026-export-crash-polysplines-nurbs-boolean-topology-surface-sculpting-obj-export-scale-axis"

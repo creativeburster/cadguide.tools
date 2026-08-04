@@ -1,7 +1,7 @@
 ---
 title: "Substance 3D Painter Startup Crash, TDR GPU Timeout, Bake Crash, UV Tile Errors, and Export Crash: GPU Driver Compatibility and Registry TDR Fix, Disable GPU Raytracing for Bake Stability, Ryzen BIOS Update, UV Tile Mask Refresh, and Insufficient Disk Space Corruption"
 excerpt: "Substance 3D Painter fails for 5 distinct reasons: startup crash from wrong GPU or outdated drivers requiring GPU driver update, TDR crash from Windows GPU timeout requiring TdrDelay registry fix to 60 seconds, bake crash from GPU raytracing or Ryzen CPU requiring raytracing disable or BIOS update, UV tile mask refresh errors from height combination and overlapping UV spaces, and export crash from TDR timeout or insufficient disk space. We cover each with fixes from Adobe Experience League documentation."
-category: "startup-crash-and-gpu-errors"
+category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance 3D Painter startup crash wrong GPU outdated drivers TDR crash Windows GPU timeout TdrDelay registry fix 60 seconds bake crash GPU raytracing Ryzen CPU BIOS update UV tile mask refresh overlapping UV spaces export crash insufficient disk space corruption"
 slug: "substance-painter-startup-crash-tdr-gpu-timeout-bake-crash-uv-tile-errors-export-crash-gpu-driver-compatibility-registry-tdr-fix-disable-raytracing-ryzen-bios-update-uv-tile-mask"

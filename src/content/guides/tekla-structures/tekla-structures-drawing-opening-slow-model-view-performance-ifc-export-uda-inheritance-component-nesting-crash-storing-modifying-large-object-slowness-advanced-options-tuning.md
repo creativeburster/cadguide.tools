@@ -1,7 +1,7 @@
 ---
 title: "Tekla Structures Drawing Opening Slow, Model View Performance, IFC Export UDA Inheritance, Component Nesting Crash, and Storing Modifying Large Object Slowness: Advanced Options Tuning, Model History Collection, Graphics Driver Update, and Service Pack Fixes"
 excerpt: "Tekla Structures fails for 5 distinct reasons: drawing opening takes 20 minutes from object-level settings and internal lines requiring advanced option tuning, model view performance slow from repetitive geometry requiring part instancing, IFC export UDA inheritance errors from missing assembly values requiring XSR_DISABLE_ASSEMBLY_UDA_INHERITANCE, component nesting circular reference crash requiring SP13 update, and storing modifying large object slowness requiring 2025 SP1 update. We cover each with fixes from Trimble User Assistance."
-category: "performance-and-drawing-errors"
+category: "performance"
 softwareSlug: "tekla-structures"
 keyword: "Tekla Structures drawing opening slow object-level settings internal lines advanced options XS_DRAW_CAST_UNIT_INTERNAL_LINES XS_HIDDEN_REMOVE_DOUBLE_LINES model view performance part instancing IFC export UDA inheritance XSR_DISABLE_ASSEMBLY_UDA_INHERITANCE component nesting circular reference crash SP13 storing modifying large object slowness 2025 SP1"
 slug: "tekla-structures-drawing-opening-slow-model-view-performance-ifc-export-uda-inheritance-component-nesting-crash-storing-modifying-large-object-slowness-advanced-options-tuning"

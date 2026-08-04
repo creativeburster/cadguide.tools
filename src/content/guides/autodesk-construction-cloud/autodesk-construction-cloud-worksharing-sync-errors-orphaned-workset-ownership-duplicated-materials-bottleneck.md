@@ -1,7 +1,7 @@
 ---
 title: "Autodesk Construction Cloud Worksharing Sync Errors: Model Restored to Previous Version, Orphaned Workset Locks Blocking Sync, Operation Could Not Be Completed Element Ownership Loss, Duplicated Materials Freezing Sync, and Single-User-Only Sync Bottleneck"
 excerpt: "Autodesk Construction Cloud cloud worksharing fails for 5 distinct reasons: model restored to previous version after sync failure, orphaned workset locks from failed syncs block all users, element ownership lost after sync causing 'Operation could not be completed', duplicated materials freeze synchronization for everyone, and bloated sync transaction history limiting sync to one user at a time. We cover each with fixes from Autodesk community forums."
-category: "cloud-worksharing-sync-errors"
+category: "troubleshooting"
 softwareSlug: "autodesk-construction-cloud"
 keyword: "Autodesk Construction Cloud ACC BIM 360 sync error model restored previous version orphaned workset lock operation could not be completed element ownership duplicated materials single user sync bottleneck"
 slug: "autodesk-construction-cloud-worksharing-sync-errors-orphaned-workset-ownership-duplicated-materials-bottleneck"

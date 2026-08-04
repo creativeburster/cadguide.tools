@@ -1,7 +1,7 @@
 ---
 title: "Ultimaker Cura Slicing Failed from Corrupted Configuration Upgrade, USB Printing Plugin Interference, Material Settings Crash from Invalid Profile Values, Tiled Infill Plugin GLIBCXX Missing, and Printer Definition Version Mismatch After Windows Upgrade: Configuration Folder Reset, Plugin Disable, Profile Backup, and Cache Clear"
 excerpt: "Ultimaker Cura fails for 5 distinct reasons: slicing failed from corrupted quality upgrade configuration requiring config folder reset, USB printing plugin causing slicing hang from serial device conflict requiring plugin disable, material settings crash from invalid profile values requiring profile reset, Tiled Infill plugin GLIBCXX version not found requiring plugin disable or system update, and printer definition version mismatch after Windows upgrade requiring cache clear and profile re-import. We cover each with fixes from Ultimaker Cura GitHub issues."
-category: "slicing-and-configuration-errors"
+category: "printing"
 softwareSlug: "ultimaker-cura"
 keyword: "Ultimaker Cura slicing failed corrupted quality upgrade USB printing plugin serial device conflict material settings crash invalid profile values Tiled Infill GLIBCXX not found printer definition version mismatch Windows upgrade configuration folder reset plugin disable profile backup cache clear"
 slug: "ultimaker-cura-slicing-failed-corrupted-config-upgrade-usb-printing-plugin-material-settings-crash-tiled-infill-glibcxx-printer-definition-version-mismatch-config-folder-reset"

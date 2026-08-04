@@ -1,7 +1,7 @@
 ---
 title: "Substance Painter 2026 Crash During Export from TDR Timeout and Low Virtual Memory, Crash While Baking from GPU Raytracing and Ryzen CPU BIOS, Crash from Insufficient Disk Space and SVT Cache, Freeze on Export from Specific Projects, and Crash on Startup with NVIDIA GTX 10xx Series: TDR Registry Increase, Live Preview Disable, GPU Raytracing Disable, BIOS Update, and Disk Space Cleanup"
 excerpt: "Substance Painter fails for 5 distinct reasons: crash during export from TDR timeout and low virtual memory requiring TDR registry increase, crash while baking from GPU raytracing and Ryzen CPU BIOS requiring live preview disable, crash from insufficient disk space and SVT cache requiring disk space cleanup, freeze on export from specific projects requiring project rebuild, and crash on startup with NVIDIA GTX 10xx series requiring driver update. We cover each with fixes from Adobe support."
-category: "crash-and-stability-errors"
+category: "troubleshooting"
 softwareSlug: "substance-painter"
 keyword: "Substance Painter 2026 crash during export TDR timeout low virtual memory crash while baking GPU raytracing Ryzen CPU BIOS crash insufficient disk space SVT cache freeze export specific projects crash startup NVIDIA GTX 10xx series"
 slug: "substance-painter-2026-tdr-export-crash-baking-gpu-raytracing-ryzen-bios-disk-space-svt-freeze-nvidia-gtx10xx"

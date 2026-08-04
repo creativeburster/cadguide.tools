@@ -1,7 +1,7 @@
 ---
 title: "Altair HyperWorks Mesh and Solver Errors: HyperMesh 2025 Session Freeze from File Menu During Import Options Requiring Application Switch, FSI Analysis TCP Socket Write Error from Mesh Distortion Requiring Fluid Element Size Reduction, Invalid Argument Error During Solver Export from HyperMesh Requiring Model Check, hwx.exe Crash During OSSmooth Operation from File Compatibility Requiring Alternative Approach, and Application Crash When Importing Model After Results from Known Issue Requiring Restart"
 excerpt: "Altair HyperWorks fails for 5 distinct reasons: HyperMesh 2025 session freeze from File menu during import options requiring application switch, FSI analysis TCP socket write error from mesh distortion requiring fluid element size reduction, invalid argument error during solver export from HyperMesh requiring model check, hwx.exe crash during OSSmooth operation from file compatibility requiring alternative approach, and application crash when importing model after results from known issue requiring restart. We cover each with fixes from Altair Community."
-category: "mesh-and-solver-errors"
+category: "troubleshooting"
 softwareSlug: "altair-hyperworks"
 keyword: "Altair HyperWorks HyperMesh 2025 session freeze File menu import options FSI analysis TCP socket write error mesh distortion fluid element size reduction invalid argument error solver export hwx.exe crash OSSmooth file compatibility application crash importing model after results restart"
 slug: "hyperworks-mesh-solver-errors-hypermesh-2025-session-freeze-file-menu-import-fsi-tcp-socket-write-error-mesh-distortion-fluid-element-size-invalid-argument-solver-export-hwx-crash"

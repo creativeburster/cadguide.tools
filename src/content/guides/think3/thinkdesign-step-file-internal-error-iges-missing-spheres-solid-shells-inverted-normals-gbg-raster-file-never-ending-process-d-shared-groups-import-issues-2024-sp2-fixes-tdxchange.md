@@ -1,7 +1,7 @@
 ---
 title: "ThinkDesign STEP File Internal Error, IGES Missing Spheres, Solid Shells Inverted Normals, GBG Raster File Never Ending Process, and .d Shared Groups Import Issues: 2024.1 SP2 Fixes, TDXchange Converter Configuration, and Neutral Format Best Practices"
 excerpt: "ThinkDesign fails for 5 distinct reasons: STEP file internal error on load requiring 2024.1 SP2 update, IGES model missing spheres from import requiring converter update, solid shells with inverted normals requiring geometry repair, GBG raster file never ending process requiring file format update, and .d shared groups import issues requiring configuration manager fix. We cover each with fixes from DPT release notes and community forums."
-category: "import-and-geometry-errors"
+category: "troubleshooting"
 softwareSlug: "think3"
 keyword: "ThinkDesign think3 STEP file internal error IGES missing spheres solid shells inverted normals GBG raster file never ending process .d shared groups import TDXchange converter 2024.1 SP2 DPT release notes neutral format CATIA V5 conversion"
 slug: "thinkdesign-step-file-internal-error-iges-missing-spheres-solid-shells-inverted-normals-gbg-raster-file-never-ending-process-d-shared-groups-import-issues-2024-sp2-fixes-tdxchange"

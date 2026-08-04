@@ -1,7 +1,7 @@
 ---
 title: "Land F/X CAD Errors: Fatal Error on Opening F/X CAD 2025 from AutoCAD 2025 Bug Requiring Updater, CAD Crashes or Freezes from Web Dialog and Cloud Data Issues Requiring Troubleshooting, Planting Errors from No Function Definition LOOKUP and Unhandled Exception Requiring Updates, Xref Images Not Loading from Double-Click Open Bug Requiring Manual Xref Reload, and Plant Data Mismatch from Extended Data Corruption Requiring Verify Labels"
 excerpt: "Land F/X fails for 5 distinct reasons: fatal error on opening F/X CAD 2025 from AutoCAD 2025 bug requiring updater, CAD crashes or freezes from web dialog and cloud data issues requiring troubleshooting, planting errors from No Function Definition LOOKUP and unhandled exception requiring updates, Xref images not loading from double-click open bug requiring manual Xref reload, and plant data mismatch from extended data corruption requiring Verify Labels. We cover each with fixes from Land F/X Knowledge Base."
-category: "cad-crash-and-planting-errors"
+category: "troubleshooting"
 softwareSlug: "land-fx"
 keyword: "Land F/X fatal error F/X CAD 2025 AutoCAD 2025 bug updater CAD crashes freezes web dialog cloud data planting errors No Function Definition LOOKUP unhandled exception Xref images not loading double-click open plant data mismatch extended data corruption Verify Labels"
 slug: "land-fx-cad-errors-fatal-error-fxcad-2025-autocad-bug-updater-crashes-freezes-web-dialog-cloud-data-planting-errors-no-function-definition-lookup-unhandled-exception-xref-images"

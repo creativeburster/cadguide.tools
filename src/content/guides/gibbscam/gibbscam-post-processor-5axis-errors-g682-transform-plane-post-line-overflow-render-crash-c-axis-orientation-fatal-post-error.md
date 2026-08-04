@@ -1,7 +1,7 @@
 ---
 title: "GibbsCAM Post Processor and 5-Axis Errors: G68.2 Transform Plane Missing for Parallel CS, Post Line Overflow Infinite Loop, Crash During Render from Facet Body and Graphics Driver, C-Axis Orientation Crash from Post Not Canceling 5-Axis Motion, and Fatal Post Errors from Deprecated Commands and Null Toolpath Iterator"
 excerpt: "GibbsCAM fails for 5 distinct reasons: 5-axis translate error where post doesn't output G68.2 for parallel coordinate systems causing bad parts despite correct simulation, post line overflow warning loops infinitely requiring Task Manager kill, crash during render from corrupt facet body or graphics driver, C-axis orientation crash where post doesn't cancel 5-axis motion before indexing causing tool through part, and fatal post errors from deprecated commands and null toolpath iterator. We cover each with fixes from GibbsCAM forums and Compost Wiki."
-category: "post-processor-and-5axis-errors"
+category: "manufacturing"
 softwareSlug: "gibbscam"
 keyword: "GibbsCAM 5-axis translate error G68.2 transform plane parallel CS post line overflow infinite loop crash render facet body graphics driver C-axis orientation fatal post error deprecated command null toolpath iterator"
 slug: "gibbscam-post-processor-5axis-errors-g682-transform-plane-post-line-overflow-render-crash-c-axis-orientation-fatal-post-error"

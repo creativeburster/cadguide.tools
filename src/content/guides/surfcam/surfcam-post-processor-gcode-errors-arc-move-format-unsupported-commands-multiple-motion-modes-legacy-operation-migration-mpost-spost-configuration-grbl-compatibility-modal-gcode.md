@@ -1,7 +1,7 @@
 ---
 title: "SurfCAM Post Processor G-Code Errors, Arc Move Format Issues, Unsupported Commands, Multiple Motion Modes, and Legacy Operation Migration: M-Post and S-Post Configuration, Grbl Compatibility Fixes, Modal G-Code Correction, and Pocket Roughing Legacy Migration"
 excerpt: "SurfCAM fails for 5 distinct reasons: post processor G-code errors from unsupported commands requiring M-Post or S-Post configuration, arc move format errors from missing I/J coordinates requiring post processor edit, unsupported G-code commands like G70 G40 G80 requiring post customization, multiple motion modes from duplicate G00 requiring G-code cleanup, and pocket roughing moved to legacy operations requiring migration to new strategies. We cover each with fixes from Carbide 3D Community and Hexagon documentation."
-category: "post-processor-and-gcode-errors"
+category: "manufacturing"
 softwareSlug: "surfcam"
 keyword: "SurfCAM post processor G-code errors M-Post S-Post configuration arc move format missing I/J coordinates unsupported commands G70 G40 G80 multiple motion modes duplicate G00 pocket roughing legacy operations migration Grbl compatibility modal G-code correction"
 slug: "surfcam-post-processor-gcode-errors-arc-move-format-unsupported-commands-multiple-motion-modes-legacy-operation-migration-mpost-spost-configuration-grbl-compatibility-modal-gcode"

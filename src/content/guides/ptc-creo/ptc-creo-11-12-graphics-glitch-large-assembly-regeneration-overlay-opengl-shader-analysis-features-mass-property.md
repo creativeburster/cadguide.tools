@@ -1,7 +1,7 @@
 ---
 title: "PTC Creo 11/12 Parts and Drawings Glitching from Graphics Driver with Orange Triangles and Wireframe Only, Large Assembly Loading Slow from Single-Core Limit and Family Tables, Regeneration Progress Window Overlay Freeze from GPU Drivers, Lag When Zoomed from OpenGL Shader HDR and Ambient Occlusion, and Analysis Features Mass Property Recalculation During Mechanism Study: graphics win32_gdi, Config Options, Driver Update, OpenGL Shader Disable, and Regeneration Manager"
 excerpt: "PTC Creo fails for 5 distinct reasons: parts and drawings glitching from graphics driver requiring win32_gdi config, large assembly loading slow from single-core limit and family tables requiring config options, Regeneration Progress window overlay freeze from GPU drivers requiring driver update, lag when zoomed from OpenGL Shader HDR requiring shader disable, and Analysis Features mass property recalculation during mechanism study requiring Regeneration Manager. We cover each with fixes from PTC community."
-category: "graphics-and-performance-errors"
+category: "performance"
 softwareSlug: "ptc-creo"
 keyword: "PTC Creo 11 12 parts drawings glitching graphics driver orange triangles wireframe large assembly loading slow single-core family tables Regeneration Progress window overlay freeze GPU drivers lag zoomed OpenGL Shader HDR Ambient Occlusion Analysis Features mass property recalculation mechanism study"
 slug: "ptc-creo-11-12-graphics-glitch-large-assembly-regeneration-overlay-opengl-shader-analysis-features-mass-property"

@@ -1,7 +1,7 @@
 ---
 title: "Autodesk Inventor 2025 Assembly Errors: Crash on Finish Edit from Multi-Monitor Display Settings Requiring DPI Configuration, Assembly Update Save Loop from Model State Corruption Requiring Close and Reopen, Constraints Not Working After Part Edit from Transient Bug Requiring Reboot, Parts Not Moving After One Constraint from Design Doctor Errors Requiring Constraint Fix, and iLogic Assembly Constraints Requiring Click and Drag from Defer Update Requiring Update2 Call"
 excerpt: "Autodesk Inventor 2025 fails for 5 distinct reasons: crash on finish edit from multi-monitor display settings requiring DPI configuration, assembly update save loop from model state corruption requiring close and reopen, constraints not working after part edit from transient bug requiring reboot, parts not moving after one constraint from Design Doctor errors requiring constraint fix, and iLogic assembly constraints requiring click and drag from defer update requiring Update2 call. We cover each with fixes from Autodesk Community."
-category: "assembly-and-stability-errors"
+category: "troubleshooting"
 softwareSlug: "autodesk-inventor"
 keyword: "Autodesk Inventor 2025 crash finish edit multi-monitor display DPI settings assembly update save loop model state corruption close reopen constraints not working part edit transient bug reboot parts not moving one constraint Design Doctor iLogic assembly constraints click drag defer update Update2"
 slug: "inventor-2025-assembly-errors-crash-finish-edit-multi-monitor-dpi-update-save-loop-model-state-constraints-not-working-part-edit-reboot-parts-not-moving-one-constraint-design"

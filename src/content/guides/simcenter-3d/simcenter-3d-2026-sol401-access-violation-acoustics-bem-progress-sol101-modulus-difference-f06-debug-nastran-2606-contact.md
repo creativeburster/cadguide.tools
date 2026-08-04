@@ -1,7 +1,7 @@
 ---
 title: "Simcenter 3D 2026 SOL 401 Access Violation C0000005 from Nonlinear Contact in Sparse Solver, Acoustics BEM Internal Error Progress Bar Exceeded Steps, NX Nastran SOL 101 Access Violation from Large Young's Modulus Difference in Contact, Debugging Failed Nastran Simulation Using F06 UFM and SFM Error Codes, and Simcenter Nastran 2606 Refactored SOL401 Contact for Convergence: Solver Change to PARDISO, Block Size Reduction, Material Modulus Equalization, F06 File Analysis, and 2606 Update"
 excerpt: "Simcenter 3D fails for 5 distinct reasons: SOL 401 Access Violation C0000005 from nonlinear contact in sparse solver requiring solver change to PARDISO, Acoustics BEM internal error progress bar exceeded steps requiring block size reduction, NX Nastran SOL 101 Access Violation from large Young's modulus difference in contact requiring material modulus equalization, debugging failed Nastran simulation using F06 UFM and SFM error codes requiring F06 file analysis, and Simcenter Nastran 2606 refactored SOL401 contact for convergence requiring 2606 update. We cover each with fixes from Siemens community."
-category: "solver-and-access-violation-errors"
+category: "troubleshooting"
 softwareSlug: "simcenter-3d"
 keyword: "Simcenter 3D 2026 SOL 401 Access Violation C0000005 nonlinear contact sparse solver Acoustics BEM internal error progress bar exceeded steps NX Nastran SOL 101 Access Violation Young modulus difference contact debugging failed Nastran F06 UFM SFM error codes Simcenter Nastran 2606 refactored SOL401 contact convergence"
 slug: "simcenter-3d-2026-sol401-access-violation-acoustics-bem-progress-sol101-modulus-difference-f06-debug-nastran-2606-contact"

@@ -1,7 +1,7 @@
 ---
 title: "InfraWorks 2026 Stuck on Initializing from Autodesk License Service, Civil 3D DWG Import Cannot Connect to Data Sources from Missing Civil 3D Background Process, Corridor Import Failure from Coordinate System Mismatch with Missing Leading Y Coordinate, DWG Re-import Failure from Windows Security Network Blocking and OneDrive Path, and IMX Schema Version Error from Faulty Civil 3D Installation: License Service Downgrade, Civil 3D Reinstall, Coordinate Verification, Windows Security Exclusion, and IMX Export Workaround"
 excerpt: "InfraWorks fails for 5 distinct reasons: 2026 stuck on Initializing from Autodesk License Service requiring previous version install, Civil 3D DWG import cannot connect to data sources from missing Civil 3D background process requiring reinstall, corridor import failure from coordinate system mismatch with missing leading Y coordinate requiring coordinate verification, DWG re-import failure from Windows Security network blocking and OneDrive path requiring local drive and security exclusion, and IMX Schema Version error from faulty Civil 3D installation requiring IMX export workaround. We cover each with fixes from Autodesk Community."
-category: "import-and-license-errors"
+category: "deployment"
 softwareSlug: "infraworks"
 keyword: "InfraWorks 2026 stuck Initializing Autodesk License Service Civil 3D DWG import cannot connect data sources corridor import coordinate system mismatch missing leading Y coordinate DWG re-import Windows Security OneDrive IMX Schema Version faulty installation"
 slug: "infraworks-2026-stuck-initializing-license-service-civil-3d-dwg-import-cannot-connect-corridor-coordinate-mismatch-y-coordinate-windows-security-onedrive-imx-schema-version"

@@ -1,7 +1,7 @@
 ---
 title: "Glovius 2026 CATIA V5-6 2026 and Parasolid 38.1 Support, Compare Part-Level Attributes and Hierarchical Product Structure, Thickness Analysis Performance Improvements, Monolithic Assembly Open in New Window, and UNDO REDO for Measurements and Markups: CAD Format Update, Compare Enhancement, Thickness Speed, Assembly Window, and Measurement Undo"
 excerpt: "Glovius fails for 5 distinct reasons: unsupported CATIA V5-6 2026 files requiring 2026 version update, Compare missing part-level attributes requiring hierarchical comparison, Thickness Analysis slow performance requiring 2026 improvements, monolithic assemblies not opening in new window requiring Open in New Window support, and measurement errors not undoable requiring UNDO REDO for measurements. We cover each with fixes from Glovius release notes."
-category: "cad-viewing-and-analysis-errors"
+category: "troubleshooting"
 softwareSlug: "glovius"
 keyword: "Glovius 2026 CATIA V5-6 2026 Parasolid 38.1 Solid Edge 2026 Compare part-level attributes hierarchical product structure Thickness Analysis performance monolithic assembly Open in New Window UNDO REDO measurements markups"
 slug: "glovius-2026-catia-v5-6-2026-parasolid-38-1-compare-attributes-hierarchical-thickness-analysis-performance-monolithic-assembly-new-window-undo-redo-measurements-markups"

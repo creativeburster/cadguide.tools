@@ -1,7 +1,7 @@
 ---
 title: "TurboCAD Parallels Mac Crash Report, Corrupted INI Configuration Files, GDI OpenGL Rendering Compatibility, Crash Reporting Diagnostics, and Floating License Support: Built-in Folder Deletion, Default Workspace Reset, NVIDIA AMD GPU Configuration, and 2025.1 Service Pack Update"
 excerpt: "TurboCAD fails for 5 distinct reasons: Parallels Mac crash report from Apple silicon incompatibility requiring Windows native, corrupted INI configuration files from misbehaving settings requiring Built-in folder deletion, GDI OpenGL rendering compatibility from device type mismatch requiring Visualize mode configuration, startup crash diagnostics from missing logs requiring 2025.1 crash reporting system, and floating license management requiring 2025.1 update. We cover each with fixes from IMSI Design and PaulTheCAD."
-category: "startup-and-rendering-errors"
+category: "troubleshooting"
 softwareSlug: "turbocad"
 keyword: "TurboCAD Parallels Mac crash report Apple silicon corrupted INI configuration Built-in folder deletion GDI OpenGL rendering compatibility Visualize mode device type crash reporting diagnostics 2025.1 floating license NVIDIA AMD GPU configuration default workspace reset"
 slug: "turbocad-parallels-mac-crash-corrupted-ini-config-gdi-opengl-rendering-crash-reporting-diagnostics-floating-license-built-in-folder-deletion-default-workspace-reset-nvidia-amd-gpu"

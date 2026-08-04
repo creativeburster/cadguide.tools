@@ -1,7 +1,7 @@
 ---
 title: "NanoCAD Stability and File Compatibility Errors: Fatal Error Crash from Corrupted DWG Files Requiring RECOVER and RMPROXY, DWG 2018 File Not Opening in Free v5 from Version Limitation Requiring Platform Upgrade, Proxy Object Fatal Errors from nanoCAD Construction Conversion Requiring SPEXPLODEALL, File Loss After Trial Expiry from Pro11 to Free v5 Incompatibility Requiring TrueView Conversion, and Resaved DXF Objects Permanently Converted to Proxy Graphics Requiring DWG-Only Workflow"
 excerpt: "NanoCAD fails for 5 distinct reasons: fatal error crash from corrupted DWG files requiring RECOVER and RMPROXY, DWG 2018 file not opening in Free v5 from version limitation requiring platform upgrade, proxy object fatal errors from nanoCAD Construction conversion requiring SPEXPLODEALL, file loss after trial expiry from Pro11 to Free v5 incompatibility requiring TrueView conversion, and resaved DXF objects permanently converted to proxy graphics requiring DWG-only workflow. We cover each with fixes from nanoCAD Support Portal and Community Forums."
-category: "stability-and-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "nanocad"
 keyword: "NanoCAD fatal error crash corrupted DWG RECOVER RMPROXY DWG 2018 not opening Free v5 version limitation platform upgrade proxy object fatal error nanoCAD Construction SPEXPLODEALL file loss trial expiry Pro11 Free v5 incompatibility TrueView conversion resaved DXF objects permanently converted proxy graphics DWG-only workflow"
 slug: "nanocad-stability-compatibility-errors-fatal-error-crash-corrupted-dwg-recover-rmproxy-dwg2018-not-opening-free-v5-proxy-object-fatal-error-speexplodeall-file-loss-trial-expiry"

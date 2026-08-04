@@ -1,7 +1,7 @@
 ---
 title: "AVEVA E3D Design GUI Recovery After Crash with Unsaved Database Elements, PML unset(!A) Crash from Missing PMLVAR Support, IFC Property Import Failure, DGN Import Unexpected End of File and Insufficient Memory, and MultiCAD NWD Import Scale and Performance from Large Models: Session Recovery, 3.1.10 Fix, Property Set Mapping, BucketSize Option, and Model Simplification"
 excerpt: "AVEVA E3D Design fails for 5 distinct reasons: GUI recovery after crash with unsaved DB elements requiring session recovery, PML unset(!A) crash from missing PMLVAR support requiring 3.1.10 fix, IFC property import failure from unmapped property sets requiring 3.1.10 fix, DGN import unexpected end of file and insufficient memory requiring file verification, and MultiCAD NWD import incorrect scale and performance from large models requiring BucketSize option and model simplification. We cover each with fixes from AVEVA documentation."
-category: "crash-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "aveva-e3d-design"
 keyword: "AVEVA E3D Design GUI recovery crash unsaved database PML unset PMLVAR IFC property import DGN unexpected end of file insufficient memory MultiCAD NWD import scale BucketSize model simplification session recovery 3.1.10 fix"
 slug: "aveva-e3d-design-gui-recovery-crash-unsaved-database-pml-unset-pmlvar-ifc-property-import-dgn-unexpected-end-of-file-insufficient-memory-multicad-nwd-import-scale-bucketsize-model"

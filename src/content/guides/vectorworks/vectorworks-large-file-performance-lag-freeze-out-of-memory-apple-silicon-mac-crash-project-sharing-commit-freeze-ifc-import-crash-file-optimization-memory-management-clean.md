@@ -1,7 +1,7 @@
 ---
 title: "Vectorworks Large File Performance Lag Freeze, Out of Memory Error, Apple Silicon Mac Crash, Project Sharing Commit Freeze, and IFC Import Crash: File Optimization, Memory Management, Clean Reinstall, Project Sharing Repair, and Update SP4 Fixes"
 excerpt: "Vectorworks fails for 5 distinct reasons: large file performance lag and freeze from excessive symbols and hatches requiring file optimization, out of memory error from 32-bit limitations and large textures requiring memory management, Apple Silicon Mac crash from corrupted installation requiring clean reinstall, project sharing commit freeze from network sync issues requiring project repair, and IFC import crash from specific IFC structures requiring SP4 update. We cover each with fixes from Vectorworks Community and release notes."
-category: "performance-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "vectorworks"
 keyword: "Vectorworks large file performance lag freeze export issue out of memory Apple Silicon Mac crash project sharing commit freeze IFC import crash symbol hatch optimization clean reinstall SP4 update"
 slug: "vectorworks-large-file-performance-lag-freeze-out-of-memory-apple-silicon-mac-crash-project-sharing-commit-freeze-ifc-import-crash-file-optimization-memory-management-clean"

@@ -1,7 +1,7 @@
 ---
 title: "AutoCAD Crash and Performance Diagnostics: 2025 Graphics Regression Crash on Open, Parametric Constraint Performance Kill, Model/Layout Switch Crash from Legacy Solids, Fatal Access Violation from Corrupted DWG, and Windows Update Breaking Startup"
 excerpt: "AutoCAD fails for 5 distinct reasons: 2025 crashes on opening due to graphics regression fixed by 2025.1.1 update and -GRAPHICSCONFIG reset, parametric constraints applied to all objects cause severe lag fixable with DELCONSTRAINT, switching between Model and Layout tabs crashes from legacy solid data resolved in 2026, Fatal Error Unhandled Access Violation from corrupted DWG or faulty drive, and Windows Update breaking AutoCAD startup. We cover each with fixes from Autodesk community forums."
-category: "crash-and-performance-diagnostics"
+category: "troubleshooting"
 softwareSlug: "autocad"
 keyword: "AutoCAD 2025 crash on open graphics regression parametric constraint DELCONSTRAINT model layout switch crash legacy solids fatal error access violation corrupted DWG Windows update"
 slug: "autocad-crash-performance-diagnostics-graphics-regression-parametric-constraint-model-layout-legacy-solids"

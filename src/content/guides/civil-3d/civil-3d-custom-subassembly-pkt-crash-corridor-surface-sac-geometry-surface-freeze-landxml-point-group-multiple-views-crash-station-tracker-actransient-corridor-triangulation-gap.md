@@ -1,7 +1,7 @@
 ---
 title: "Civil 3D Custom Subassembly PKT Crash When Loading Corridor Surface, Surface Freeze from Mixed LandXML and Point Group Data, Multiple Views Crash After One Hour from Station Tracker and AcTransient, Corridor Surface Triangulation Across Gap Between Regions, and Corridor Surface Not Triangulating for Split Profile Regions: SAC Geometry Simplification, LandXML Export Reimport, Single Viewport Workflow, Separate Baselines, and Corridor Section Sequence"
 excerpt: "Civil 3D fails for 5 distinct reasons: custom subassembly PKT crash when loading corridor surface from SAC geometry requiring simplification, surface freeze from mixed LandXML and point group data requiring LandXML export and reimport, multiple views crash after one hour from station tracker and AcTransient requiring single viewport workflow, corridor surface triangulation across gap between regions requiring separate baselines, and corridor surface not triangulating for split profile regions requiring corridor section sequence correction. We cover each with fixes from Autodesk Community."
-category: "crash-and-corridor-surface-errors"
+category: "troubleshooting"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D custom subassembly PKT crash corridor surface SAC geometry surface freeze LandXML point group multiple views crash station tracker AcTransient corridor surface triangulation gap regions separate baselines split profile corridor section sequence"
 slug: "civil-3d-custom-subassembly-pkt-crash-corridor-surface-sac-geometry-surface-freeze-landxml-point-group-multiple-views-crash-station-tracker-actransient-corridor-triangulation-gap"

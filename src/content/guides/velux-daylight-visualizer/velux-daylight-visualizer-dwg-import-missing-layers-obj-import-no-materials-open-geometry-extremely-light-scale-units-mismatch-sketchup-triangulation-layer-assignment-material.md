@@ -1,7 +1,7 @@
 ---
 title: "VELUX Daylight Visualizer DWG Import Missing Layers, OBJ Import Without Materials, Open Geometry Extremely Light Results, Scale Units Mismatch After Import, and SketchUp Triangulation Requirements: Layer Assignment, Material Export, Geometry Closure, Scale Factor Correction, and Face Triangulation"
 excerpt: "VELUX Daylight Visualizer fails for 5 distinct reasons: DWG import missing surface materials from incorrect layer assignment requiring AutoCAD layer configuration, OBJ import without layers from missing material export options requiring Rhino naming page settings, open geometry causing extremely light simulation results from missing ceiling requiring geometry closure, scale units mismatch after import requiring scale factor correction, and SketchUp import requiring triangulated faces for proper import. We cover each with fixes from VELUX documentation and McNeel Forum."
-category: "import-and-simulation-errors"
+category: "troubleshooting"
 softwareSlug: "velux-daylight-visualizer"
 keyword: "VELUX Daylight Visualizer DWG import missing layers surface materials OBJ import without layers Rhino naming page open geometry extremely light simulation missing ceiling scale units mismatch scale factor SketchUp triangulation faces AutoCAD layer configuration material export"
 slug: "velux-daylight-visualizer-dwg-import-missing-layers-obj-import-no-materials-open-geometry-extremely-light-scale-units-mismatch-sketchup-triangulation-layer-assignment-material"

@@ -1,7 +1,7 @@
 ---
 title: "Tinkercad Shape Generator Failed to Build, Design Page Not Loading, STL Export Non-Manifold Geometry, Boolean Ghost Artifacts, and SVG Import Version Mismatch: Browser Compatibility, Overlap Prevention, Double-Group Technique, and SVG 1.0 Format Fix"
 excerpt: "Tinkercad fails for 5 distinct reasons: shape generator failed to build from custom font or complex groups requiring project simplification, design page not loading from browser blocking requiring browser switch or settings, STL export non-manifold geometry from zero-overlap faces requiring 0.1mm overlap minimum, Boolean ghost artifacts from floating-point precision requiring double-group technique, and SVG import version mismatch from SVG 1.1 requiring manual SVG 1.0 downgrade. We cover each with fixes from community forums."
-category: "browser-and-geometry-errors"
+category: "troubleshooting"
 softwareSlug: "tinkercad"
 keyword: "Tinkercad shape generator failed to build custom font design page not loading browser blocking STL export non-manifold geometry zero-overlap faces 0.1mm overlap Boolean ghost artifacts floating-point precision double-group technique SVG import version mismatch SVG 1.1 SVG 1.0 manual downgrade"
 slug: "tinkercad-shape-generator-failed-to-build-design-page-not-loading-stl-export-non-manifold-boolean-ghost-artifacts-svg-import-version-mismatch-browser-compatibility-overlap"

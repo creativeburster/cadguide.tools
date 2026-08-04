@@ -1,7 +1,7 @@
 ---
 title: "Fusion 360 Cloud Sync and Import Errors: Unable to Import from Cloud Upload Failure Requiring Offline Mode Toggle, Multiple Uploads Delayed from Stuck Upload Queue Requiring Cancel and Resave, Design Not Yet Available from AWS Crash Corruption Requiring Version Export and Reimport, Error Uploading to Cloud Storage from Corrupted W.login Folder Requiring Cache Clear, and Error Importing IPT and STEP Files from Online Converter Failure Requiring Local File Open"
 excerpt: "Fusion 360 fails for 5 distinct reasons: unable to import from cloud upload failure requiring offline mode toggle, multiple uploads delayed from stuck upload queue requiring cancel and resave, design not yet available from AWS crash corruption requiring version export and reimport, error uploading to cloud storage from corrupted W.login folder requiring cache clear, and error importing IPT and STEP files from online converter failure requiring local file open. We cover each with fixes from Autodesk Community."
-category: "cloud-sync-and-import-errors"
+category: "troubleshooting"
 softwareSlug: "fusion-360"
 keyword: "Fusion 360 unable to import cloud upload failure offline mode toggle multiple uploads delayed stuck upload queue cancel resave design not yet available AWS crash corruption version export reimport error uploading cloud storage corrupted W.login folder cache clear error importing IPT STEP files online converter failure local file open"
 slug: "fusion-360-cloud-sync-import-errors-unable-import-cloud-upload-offline-toggle-uploads-delayed-stuck-queue-cancel-resave-design-not-yet-available-aws-crash-corruption-version-export"

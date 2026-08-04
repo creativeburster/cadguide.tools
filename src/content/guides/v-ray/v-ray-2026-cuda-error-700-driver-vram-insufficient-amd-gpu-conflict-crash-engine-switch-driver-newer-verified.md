@@ -1,7 +1,7 @@
 ---
 title: "V-Ray 2026 GPU CUDA Error 700 from Unverified GPU Driver Version, GPU Memory VRAM Insufficient from Scene Exceeding Available Memory, AMD Integrated GPU Driver Conflict from Windows Update Version 26.5.1, V-Ray GPU Update 3 Hotfix 1 DR2 Crash on Engine Switch from AMD GPU Enumeration, and Installed Driver Version Newer Than Verified Causing CUDA Error: Recommended Driver Install, VRAM Optimization, AMD GPU Disable, Crash Dump Analysis, and Driver Rollback"
 excerpt: "V-Ray fails for 5 distinct reasons: GPU CUDA error 700 from unverified GPU driver version requiring recommended driver install, GPU memory VRAM insufficient from scene exceeding available memory requiring VRAM optimization, AMD integrated GPU driver conflict from Windows Update version 26.5.1 requiring AMD GPU disable, V-Ray GPU update 3 hotfix 1 DR2 crash on engine switch from AMD GPU enumeration requiring crash dump analysis, and installed driver version newer than verified causing CUDA error requiring driver rollback. We cover each with fixes from Chaos support."
-category: "gpu-and-render-errors"
+category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray 2026 GPU CUDA error 700 unverified GPU driver version GPU memory VRAM insufficient scene exceeding available memory AMD integrated GPU driver conflict Windows Update 26.5.1 V-Ray GPU update 3 hotfix 1 DR2 crash engine switch AMD GPU enumeration installed driver newer verified CUDA error driver rollback"
 slug: "v-ray-2026-cuda-error-700-driver-vram-insufficient-amd-gpu-conflict-crash-engine-switch-driver-newer-verified"

@@ -1,7 +1,7 @@
 ---
 title: "Ansys Discovery GPU Out of Memory in Explore Stage, License Activation Firewall Block, AMD Card Explore Stage Disabled, Prerequisite Check Failure on Launch, and NVIDIA Driver Version Incompatibility: Fidelity Slider, Port 443 Firewall Rules, NVIDIA Maxwell Minimum, Driver 528.33, and System Compatibility Check"
 excerpt: "Ansys Discovery fails for 5 distinct reasons: GPU out of memory in Explore stage from high fidelity settings requiring fidelity slider adjustment, license activation failure from firewall blocking port 443 to ansys-fno.flexnetoperations.com requiring firewall exception rules, AMD and non-compliant NVIDIA cards disabling Explore and Refine LiveGX stages requiring NVIDIA Maxwell or newer, prerequisite check failure on launch from missing or outdated drivers requiring system compatibility check, and NVIDIA driver version below 528.33 causing minor version incompatibility requiring driver update. We cover each with fixes from Ansys Help and Knowledge Base."
-category: "gpu-license-and-prerequisite-errors"
+category: "deployment"
 softwareSlug: "ansys-discovery"
 keyword: "Ansys Discovery GPU out of memory Explore stage fidelity slider license activation firewall port 443 AMD card disabled NVIDIA Maxwell prerequisite check failure driver 528.33 system compatibility LiveGX solver"
 slug: "ansys-discovery-gpu-out-of-memory-explore-license-firewall-port-443-amd-card-disabled-nvidia-maxwell-prerequisite-check-driver-528-33-system-compatibility-livegx"

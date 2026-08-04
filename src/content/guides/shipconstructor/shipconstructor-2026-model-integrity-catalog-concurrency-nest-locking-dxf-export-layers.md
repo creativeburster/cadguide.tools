@@ -1,7 +1,7 @@
 ---
 title: "ShipConstructor 2026 Model Integrity Issues During Complex Edits from Long Working Sessions, Catalog Inconsistencies from Intermittent Corruption, Concurrency Handling Issues for Large Teams from WorkShare Conflicts, Profile Nest Locking for Upstream Change Control, and Plate Nest DXF Export Multi-Layer Configuration for Double-Sided Marking: R3 Stability Update, Catalog Consistency Fix, Concurrency Improvement, Nest Lock Enable, and DXF Layer Configuration"
 excerpt: "ShipConstructor fails for 5 distinct reasons: model integrity issues during complex edits from long working sessions requiring R3 stability update, catalog inconsistencies from intermittent corruption requiring catalog consistency fix, concurrency handling issues for large teams from WorkShare conflicts requiring concurrency improvement, Profile Nest Locking for upstream change control requiring nest lock enable, and Plate Nest DXF Export multi-layer configuration for double-sided marking requiring DXF layer configuration. We cover each with fixes from SSI documentation."
-category: "stability-and-production-errors"
+category: "troubleshooting"
 softwareSlug: "shipconstructor"
 keyword: "ShipConstructor 2026 model integrity complex edits long working sessions catalog inconsistencies intermittent corruption concurrency handling large teams WorkShare conflicts Profile Nest Locking upstream change control Plate Nest DXF Export multi-layer double-sided marking"
 slug: "shipconstructor-2026-model-integrity-catalog-concurrency-nest-locking-dxf-export-layers"

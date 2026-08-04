@@ -1,7 +1,7 @@
 ---
 title: "KISSsoft Bearing Minimum Load and KISSsys Load Spectrum Errors: Bearing Warning Minimum Load from Insufficient Preload Requiring Adjusted Bearing Clearance, Load Spectrum Life Difference Two Orders of Magnitude from Torque-RPM Coefficient Definition Requiring Reference Value Verification, KISSsys to KISSdesign Migration Requiring System Module Transition, AGMA vs ISO Standard Default Causing Different Results Requiring Standard Switch, and Operating Mode Kinematic Verification Fails from Clutch Brake Configuration Requiring Power Flow Analysis"
 excerpt: "KISSsoft fails for 5 distinct reasons: bearing warning minimum load from insufficient preload requiring adjusted bearing clearance, load spectrum life difference two orders of magnitude from torque-RPM coefficient definition requiring reference value verification, KISSsys to KISSdesign migration requiring System Module transition, AGMA vs ISO standard default causing different results requiring standard switch, and operating mode kinematic verification fails from clutch brake configuration requiring power flow analysis. We cover each with fixes from KISSsoft documentation and Eng-Tips."
-category: "bearing-load-and-system-calculation-errors"
+category: "troubleshooting"
 softwareSlug: "kisssoft"
 keyword: "KISSsoft bearing warning minimum load insufficient preload bearing clearance load spectrum life difference two orders magnitude torque RPM coefficient reference value KISSsys KISSdesign migration System Module AGMA ISO standard default operating mode kinematic verification clutch brake power flow"
 slug: "kisssoft-bearing-minimum-load-kisssys-load-spectrum-errors-bearing-warning-preload-clearance-life-difference-torque-rpm-coefficient-kissdesign-migration-system-module-agma-iso"

@@ -1,7 +1,7 @@
 ---
 title: "V-Ray GPU CUDA Error 700 719 Optix Error 7900, Memory Leak from Non-Recommended Driver, VFB Render Region Crash, rt_cuda.dll Crash After Multiple Frames, and Standalone .vrscene Crash Exit Code 3221225477: Recommended Driver Clean Install, Progressive Sampler, GPU LC Workaround, and Memory Optimization"
 excerpt: "V-Ray GPU fails for 5 distinct reasons: CUDA error 700 719 and Optix error 7900 from non-verified GPU driver requiring recommended driver clean install, memory leak from non-recommended NVIDIA drivers requiring 572.16 clean installation, VFB render region crash from memory exhaustion requiring progressive sampler switch, rt_cuda.dll crash after rendering multiple frames from VRAM exhaustion requiring memory optimization, and Standalone .vrscene crash with exit code 3221225477 requiring scene debugging. We cover each with fixes from Chaos Help Center and Chaos Forum."
-category: "gpu-render-and-crash-errors"
+category: "troubleshooting"
 softwareSlug: "v-ray"
 keyword: "V-Ray GPU CUDA error 700 719 Optix error 7900 memory leak non-recommended driver 572.16 clean install VFB render region crash progressive sampler rt_cuda.dll crash multiple frames VRAM exhaustion Standalone vrscene crash exit code 3221225477 GPU LC workaround memory optimization"
 slug: "vray-gpu-cuda-error-700-719-optix-7900-memory-leak-driver-vfb-region-crash-rt-cuda-dll-crash-standalone-vrscene-crash-recommended-driver-clean-install-progressive-sampler-gpu-lc"

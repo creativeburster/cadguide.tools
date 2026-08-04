@@ -1,7 +1,7 @@
 ---
 title: "Autodesk ReCap Pro 2026 Point Cloud Stuck at Percentage During Import and Indexing, FARO FLS Scan Import Freeze and Crash on Windows 11, FARO SDK Discontinued in ReCap Pro 2025, Missing Data from FARO Focus Premium Import, and ReCap Pro 2027 FARO SDK Update for Topcon and Orbis: Project Split, Version Rollback, SCENE Processing, RCS Export, and 2027 Update"
 excerpt: "ReCap Pro fails for 5 distinct reasons: point cloud stuck at percentage during import and indexing requiring project split, FARO FLS scan import freeze and crash on Windows 11 requiring version rollback, FARO SDK discontinued in ReCap Pro 2025 requiring SCENE processing, missing data from FARO Focus Premium import requiring RCS export workaround, and ReCap Pro 2027 FARO SDK update for Topcon and Orbis requiring 2027 update. We cover each with fixes from Autodesk community."
-category: "import-and-scan-errors"
+category: "troubleshooting"
 softwareSlug: "recap-pro"
 keyword: "Autodesk ReCap Pro 2026 point cloud stuck percentage import indexing FARO FLS scan import freeze crash Windows 11 FARO SDK discontinued ReCap Pro 2025 missing data FARO Focus Premium import ReCap Pro 2027 FARO SDK Topcon Orbis"
 slug: "recap-pro-2026-point-cloud-stuck-faro-fls-freeze-sdk-discontinued-missing-data-2027-update"

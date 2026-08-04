@@ -1,7 +1,7 @@
 ---
 title: "ZBrush 2026 Crash from Smooth Brush on ZSpheres Project, Second Light Adjustment with Redshift Materials Causing Crash, Retopo Brush Crash from Welding Points at Symmetry Line, Applying Dynamic Subdivision Causes Crash, and GoZ for Autodesk Max and Maya 2027 Version Compatibility: 2026.1.2 Update, Light Adjustment Fix, Retopo Brush Update, Dynamic Subdivision Patch, and GoZ 2027 Support"
 excerpt: "ZBrush fails for 5 distinct reasons: crash from smooth brush on ZSpheres project requiring 2026.1.2 update, second light adjustment with Redshift materials causing crash requiring light adjustment fix, retopo brush crash from welding points at symmetry line requiring retopo brush update, applying Dynamic Subdivision causes crash requiring Dynamic Subdivision patch, and GoZ for Autodesk Max and Maya 2027 version compatibility requiring GoZ 2027 support. We cover each with fixes from Maxon release notes."
-category: "crash-and-compatibility-errors"
+category: "troubleshooting"
 softwareSlug: "zbrush"
 keyword: "ZBrush 2026 crash smooth brush ZSpheres second light adjustment Redshift materials retopo brush welding points symmetry line Dynamic Subdivision crash GoZ Autodesk Max Maya 2027 version compatibility"
 slug: "zbrush-2026-smooth-brush-zspheres-redshift-light-retopo-welding-dynamic-subdivision-goz-2027"

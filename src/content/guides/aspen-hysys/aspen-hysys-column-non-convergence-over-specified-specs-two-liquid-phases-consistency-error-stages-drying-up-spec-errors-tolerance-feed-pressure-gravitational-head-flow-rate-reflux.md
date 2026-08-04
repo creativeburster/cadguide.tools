@@ -1,7 +1,7 @@
 ---
 title: "Aspen HYSYS Column Non-Convergence from Over-Specified Specs, Two Liquid Phases Causing Consistency Error, Stages Drying Up from Impossible Specs, Column Won't Converge Even When Spec Errors Within Tolerance, and Feed Pressure Confusion from Gravitational Head: Spec Simplification, Water Removal, Flow Rate Specs, Converged Starting Point, and Feed Pressure Independence"
 excerpt: "Aspen HYSYS fails for 5 distinct reasons: column non-convergence from over-specified compositional specs requiring spec simplification, two liquid phases causing consistency error from water or glycol in feed requiring component removal, stages drying up from impossible column specs requiring flow rate and reflux ratio specs, column won't converge even when spec errors within tolerance from finite difference algorithm requiring different starting point, and feed pressure confusion from gravitational head requiring understanding that column pressure is independent of feed pressure. We cover each with fixes from Cheresources community."
-category: "column-convergence-and-simulation-errors"
+category: "troubleshooting"
 softwareSlug: "aspen-hysys"
 keyword: "Aspen HYSYS column non-convergence over-specified specs two liquid phases consistency error stages drying up impossible specs spec errors within tolerance feed pressure gravitational head flow rate reflux ratio water removal"
 slug: "aspen-hysys-column-non-convergence-over-specified-specs-two-liquid-phases-consistency-error-stages-drying-up-spec-errors-tolerance-feed-pressure-gravitational-head-flow-rate-reflux"

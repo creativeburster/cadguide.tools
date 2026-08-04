@@ -1,7 +1,7 @@
 ---
 title: "CircuitMaker Duplicate Item HRID Error When Generating Outputs from Copy-Paste, Cloud Sync Issues Requiring Internet Connection for Output Generation, Component Search Engine Nexar API Migration from Octopart, CoDesigner Fusion 360 Direct PCB Data Exchange, and Crash During Symbol Search in Select Item Revision Dialog: Project Clone Workaround, Manual Save and Commit, Nexar API Update, Fusion 360 Plugin, and Ctrl-Alt-Insert Crash Report"
 excerpt: "CircuitMaker fails for 5 distinct reasons: Duplicate Item HRID error when generating outputs from copy-paste requiring project clone workaround, cloud sync issues requiring internet connection for output generation requiring manual save and commit, component search engine Nexar API migration from Octopart requiring update to 2.3.0, CoDesigner Fusion 360 direct PCB data exchange requiring plugin installation, and crash during symbol search in Select Item Revision dialog requiring crash report. We cover each with fixes from Altium documentation and Stack Exchange."
-category: "output-and-sync-errors"
+category: "troubleshooting"
 softwareSlug: "circuitmaker"
 keyword: "CircuitMaker Duplicate Item HRID error generating outputs copy paste cloud sync internet connection Nexar API Octopart migration CoDesigner Fusion 360 PCB data exchange crash symbol search Select Item Revision project clone workaround manual save commit"
 slug: "circuitmaker-duplicate-item-hrid-generating-outputs-copy-paste-cloud-sync-internet-connection-nexar-api-octopart-migration-codesigner-fusion-360-pcb-exchange-crash-symbol-search"

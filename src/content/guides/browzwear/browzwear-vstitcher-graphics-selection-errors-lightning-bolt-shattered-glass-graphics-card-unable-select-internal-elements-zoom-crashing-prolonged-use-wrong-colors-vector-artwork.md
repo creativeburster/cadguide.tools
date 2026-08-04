@@ -1,7 +1,7 @@
 ---
 title: "Browzwear VStitcher Graphics and Selection Errors: Lightning Bolt or Shattered Glass Display from Incorrect Graphics Card Settings Requiring Driver Configuration, Unable to Select Internal Elements from Zoom Level Too Far Out Requiring Zoom In, VStitcher Crashing After Prolonged Use from Memory Accumulation Requiring 2024.2.3 Update, Wrong Colors on Vector Artwork Export from Print to File and Tech Pack Requiring 2024.2.3 Update, and Excessively Glossy Fabric Texture from Specular Metal Effects Requiring V-Ray Fur Material Mode Revert"
 excerpt: "Browzwear VStitcher fails for 5 distinct reasons: lightning bolt or shattered glass display from incorrect graphics card settings requiring driver configuration, unable to select internal elements from zoom level too far out requiring zoom in, VStitcher crashing after prolonged use from memory accumulation requiring 2024.2.3 update, wrong colors on vector artwork export from Print to File and Tech Pack requiring 2024.2.3 update, and excessively glossy fabric texture from specular metal effects requiring V-Ray Fur Material Mode revert. We cover each with fixes from Browzwear Help Center."
-category: "graphics-and-selection-errors"
+category: "troubleshooting"
 softwareSlug: "browzwear"
 keyword: "Browzwear VStitcher lightning bolt shattered glass display graphics card settings unable to select internal elements zoom level crashing after prolonged use 2024.2.3 update wrong colors vector artwork Print to File Tech Pack excessively glossy fabric texture specular metal effects V-Ray Fur Material Mode revert"
 slug: "browzwear-vstitcher-graphics-selection-errors-lightning-bolt-shattered-glass-graphics-card-unable-select-internal-elements-zoom-crashing-prolonged-use-wrong-colors-vector-artwork"

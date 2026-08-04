@@ -1,7 +1,7 @@
 ---
 title: "Tekla Tedds 2026 Memory Full Condition from Low Computer Memory, VBL File Sync Error from Document and Variable File Out of Sync, Windows 11 GDI Vertical Text Rotation Error from Drawing Layer Update, Analysis Sketches Bending Moment Deflection Shear Force Diagram Inversion for Vertical Members, and Unit Database Corruption from Missing or Corrupt File: Memory Increase, VBL File Delete and Recalculation, SP1 Update, Diagram Inversion Fix, and Unit Database Reinstall"
 excerpt: "Tekla Tedds fails for 5 distinct reasons: memory full condition from low computer memory requiring memory increase, VBL file sync error from document and variable file out of sync requiring VBL file delete and recalculation, Windows 11 GDI vertical text rotation error from drawing layer update requiring SP1 update, analysis sketches bending moment deflection shear force diagram inversion for vertical members requiring diagram inversion fix, and unit database corruption from missing or corrupt file requiring unit database reinstall. We cover each with fixes from Trimble support."
-category: "calculation-and-system-errors"
+category: "troubleshooting"
 softwareSlug: "tekla-tedds"
 keyword: "Tekla Tedds 2026 memory full condition low computer memory VBL file sync error document variable file out of sync Windows 11 GDI vertical text rotation drawing layer update analysis sketches bending moment deflection shear force diagram inversion vertical members unit database corruption missing corrupt file"
 slug: "tekla-tedds-2026-memory-full-vbl-sync-gdi-vertical-text-diagram-inversion-unit-database-corruption"

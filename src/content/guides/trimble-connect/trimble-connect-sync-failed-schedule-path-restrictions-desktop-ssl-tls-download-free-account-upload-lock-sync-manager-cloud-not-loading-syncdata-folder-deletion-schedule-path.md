@@ -1,7 +1,7 @@
 ---
 title: "Trimble Connect Sync Failed and Schedule Path Restrictions, Desktop SSL TLS Download Error, Free Account File Upload Lock, and Sync Manager Cloud Not Loading: SYNC-DATA Folder Deletion, Schedule Path Relaxation, Firewall and TLS Configuration, and Sync Manager Update"
 excerpt: "Trimble Connect fails for 5 distinct reasons: sync failed from corrupted SYNC-DATA folder requiring hidden folder deletion, schedule path restrictions from 2.70.1.0 update preventing same-path schedules, desktop SSL TLS download error from secure channel failure, free account file upload lock from storage limit not clearing after deletion, and Sync Manager not loading from cloud from deprecated map service requiring version 2.20.2.0 update. We cover each with fixes from Trimble Community."
-category: "sync-and-upload-errors"
+category: "troubleshooting"
 softwareSlug: "trimble-connect"
 keyword: "Trimble Connect sync failed SYNC-DATA folder deletion schedule path restrictions 2.70.1.0 update same-path schedules desktop SSL TLS download error secure channel free account file upload lock storage limit Sync Manager not loading cloud deprecated map service version 2.20.2.0"
 slug: "trimble-connect-sync-failed-schedule-path-restrictions-desktop-ssl-tls-download-free-account-upload-lock-sync-manager-cloud-not-loading-syncdata-folder-deletion-schedule-path"

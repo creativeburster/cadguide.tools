@@ -1,7 +1,7 @@
 ---
 title: "midas Gen Singular Errors and Crash Troubleshooting: Abnormal Displacement from Excessive Beam End Releases, NaN Error Norm from Wrong Material Assignment, DOF Singular from Pin-Pin Connected Nodes, Plate Mesh Quality Not Guaranteed by Auto Mesh, and Software Crash from C++ Redistributable and Graphics Driver"
 excerpt: "midas Gen fails for 5 distinct reasons: abnormal displacement warnings from excessive beam end releases leaving nodes unconstrained, ERROR NORM IS NaN from wrong material assignment to dummy beams, DOF MAY BE SINGULAR from all pin-pin connected elements at a node, Auto Mesh doesn't guarantee correct aspect ratio or skew angle, and software crash from outdated C++ Redistributable or graphics driver. We cover each with fixes from MIDAS Support."
-category: "singular-error-and-crash-troubleshooting"
+category: "troubleshooting"
 softwareSlug: "midas-gen"
 keyword: "midas Gen abnormal displacement excessive beam end releases NaN error norm wrong material assignment DOF singular pin-pin Auto Mesh aspect ratio crash C++ Redistributable graphics driver"
 slug: "midas-gen-singular-errors-crash-troubleshooting-abnormal-displacement-end-releases-nan-material-dof-singular-automesh-cpp-graphics"

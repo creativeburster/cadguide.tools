@@ -1,7 +1,7 @@
 ---
 title: "GstarCAD 2026 Drawing Opening Slow Over 40 Percent Improvement, Multileader Block Freeze Elimination, Hatch Pick-Point 30x Faster on Complex Drawings, EXTEND Fence Crossing 11x Faster, and Linux Double-Click Open Failure from Long File Paths: Performance Update, Block Explosion Fix, Hatch Optimization, Trim Extend Speed, and Path Length Stability"
 excerpt: "GstarCAD fails for 5 distinct reasons: drawing opening slow requiring 2026 40 percent improvement, multileader-heavy block freeze requiring 5x faster explosion fix, hatch pick-point slow on complex drawings requiring 30x faster optimization, EXTEND Fence Crossing slow requiring 11x faster update, and Linux double-click open failure from long file paths requiring 2026 stability fix. We cover each with fixes from GstarCAD 2026 release notes."
-category: "performance-and-stability-errors"
+category: "performance"
 softwareSlug: "gstarcad"
 keyword: "GstarCAD 2026 drawing opening slow 40 percent improvement multileader block freeze hatch pick-point 30x faster EXTEND Fence Crossing 11x Linux double-click open failure long file paths stability"
 slug: "gstarcad-2026-drawing-opening-slow-multileader-block-freeze-hatch-pick-point-extend-fence-linux-double-click-path-length"

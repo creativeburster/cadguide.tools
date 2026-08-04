@@ -1,7 +1,7 @@
 ---
 title: "VERICUT Spindle Off Collision Error During Broaching and Tapping, Cutter Compensation Not Activated, False Collision Detection from Corrupted Fixture Model, C-Axis Turning Tool Spindle Off Check Override, and Broaching Cycle Not Cutting Stock: CTL File Configuration, Process Cutter Comp Setting, Model Replacement, and Macro Override"
 excerpt: "VERICUT fails for 5 distinct reasons: spindle off collision error during broaching and tapping from M29 not recognized as spindle motion requiring CTL file configuration, cutter compensation not activated from Process Cutter Comp set to Off requiring On-Default to Full Radius, false collision detection from corrupted fixture model triangles requiring model replacement, C-axis turning tool spindle off check causing massive errors requiring ActiveSpindleOnOffOverride macro, and broaching cycle not cutting stock from insert geometry requiring DXF sweep profile. We cover each with fixes from CGTech VERICUT Users' Forum."
-category: "simulation-and-configuration-errors"
+category: "troubleshooting"
 softwareSlug: "vericut"
 keyword: "VERICUT spindle off collision error broaching tapping M29 CTL file cutter compensation not activated Process Cutter Comp Full Radius false collision detection corrupted fixture model C-axis turning tool spindle off check ActiveSpindleOnOffOverride macro broaching cycle not cutting stock DXF sweep insert profile"
 slug: "vericut-spindle-off-collision-broaching-tapping-cutter-comp-not-activated-false-collision-fixture-c-axis-spindle-off-override-broaching-not-cutting-ctl-config-process-cutter-comp"

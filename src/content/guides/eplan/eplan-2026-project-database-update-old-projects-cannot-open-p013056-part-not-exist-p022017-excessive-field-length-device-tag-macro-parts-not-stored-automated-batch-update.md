@@ -1,7 +1,7 @@
 ---
 title: "EPLAN 2026 Project Database Update Required for Old Projects Causing Cannot Open Error, Part Not Exist in Database P013056 from Deleted Parts or Changed Part Numbers, Excessive Field Length Values in Database P022017 from Long Device Tags, Macro Parts Data Not Automatically Stored Requiring Manual Synchronization, and Automated Batch Project Database Update via Project Management: Database Update Prompt, Part Exchange or Project Compress, Advanced Mode Reorganization, Parts Update and Complete Commands, and Automated Processing Scheme"
 excerpt: "EPLAN fails for 5 distinct reasons: 2026 project database update required for old projects causing cannot open error requiring update prompt confirmation, Part Not Exist in Database P013056 from deleted parts or changed part numbers requiring part exchange or project compress, Excessive Field Length Values P022017 from long device tags requiring Advanced Mode reorganization, macro parts data not automatically stored requiring manual Parts Update and Complete commands, and automated batch project database update via Project Management Automated Processing. We cover each with fixes from EPLAN Help 2026."
-category: "database-and-parts-management-errors"
+category: "troubleshooting"
 softwareSlug: "eplan"
 keyword: "EPLAN 2026 project database update old projects cannot open P013056 part not exist database deleted parts changed part number P022017 excessive field length values device tag macro parts data not stored synchronization automated batch processing"
 slug: "eplan-2026-project-database-update-old-projects-cannot-open-p013056-part-not-exist-p022017-excessive-field-length-device-tag-macro-parts-not-stored-automated-batch-update"

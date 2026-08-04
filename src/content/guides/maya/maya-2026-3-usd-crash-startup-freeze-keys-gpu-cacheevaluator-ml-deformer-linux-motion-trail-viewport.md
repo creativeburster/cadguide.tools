@@ -1,7 +1,7 @@
 ---
 title: "Maya 2026.3 Crashes on Startup from USD 0.34.0 AdskAssetResolver, Freeze When Making Keys from Non-Certified GPU, cacheEvaluator Plugin Crash from Windows Update, ML Deformer Error Training on Linux, and Motion Trail Editing Broken in Viewport: USD Rollback, DG Evaluation Mode, Plugin Disable, Deformer Update, and Graph Editor Workaround"
 excerpt: "Maya fails for 5 distinct reasons: 2026.3 crashes on startup from USD 0.34.0 AdskAssetResolver requiring USD rollback, freeze when making keys from non-certified GPU requiring DG evaluation mode, cacheEvaluator plugin crash from Windows update requiring plugin disable, ML Deformer error training on Linux requiring deformer update, and Motion Trail editing broken in viewport requiring Graph Editor workaround. We cover each with fixes from Autodesk community and release notes."
-category: "crash-and-performance-errors"
+category: "troubleshooting"
 softwareSlug: "maya"
 keyword: "Maya 2026.3 crashes startup USD 0.34.0 AdskAssetResolver freeze making keys non-certified GPU cacheEvaluator plugin crash Windows update ML Deformer error training Linux Motion Trail editing broken viewport Graph Editor"
 slug: "maya-2026-3-usd-crash-startup-freeze-keys-gpu-cacheevaluator-ml-deformer-linux-motion-trail-viewport"

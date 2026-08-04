@@ -1,7 +1,7 @@
 ---
 title: "Corona Renderer Fireflies HDRI Noise and Displacement Flicker: Fireflies from Small Sun Disk Reflections Requiring Larger Sun Disk or Highlight Clamping, HDRI Lighting Noisier than Corona Sun Sky from Difficult Sphere Sampling Requiring Light Samples Multiplier, Displacement Flicker in Animation from Screen Size Mode Requiring World Size, NaN Errors from Chrome Material with HDRI and CoronaColorCorrect in Corona 11, and Interactive Render Clean but Production Render Fireflies from Denoiser Not Enabled in Production"
 excerpt: "Corona Renderer fails for 5 distinct reasons: fireflies from small sun disk reflections requiring larger sun disk or highlight clamping, HDRI lighting noisier than Corona Sun Sky from difficult sphere sampling requiring Light Samples Multiplier increase, displacement flicker in animation from Screen Size mode requiring World Size, NaN errors from Chrome material with HDRI and CoronaColorCorrect in Corona 11, and Interactive Render clean but Production Render has fireflies from denoiser not enabled in production. We cover each with fixes from Chaos Forums."
-category: "fireflies-noise-and-displacement-flicker"
+category: "troubleshooting"
 softwareSlug: "corona-renderer"
 keyword: "Corona Renderer fireflies small sun disk reflections highlight clamping HDRI noisier Sun Sky Light Samples Multiplier displacement flicker animation Screen Size World Size NaN errors Chrome material HDRI CoronaColorCorrect Corona 11 Interactive Render clean Production fireflies denoiser not enabled"
 slug: "corona-renderer-fireflies-hdri-noise-displacement-flicker-sun-disk-highlight-clamping-light-samples-multiplier-world-size-nan-chrome-material-corona-11-interactive-clean-production"

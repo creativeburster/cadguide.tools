@@ -1,7 +1,7 @@
 ---
 title: "EPLAN Electric P8 Migration and Parts Database Export Errors: Parts Database Migration to AutoCAD Electrical Requires Multiple Excel Exports with Column Mapping, DWG Export Converts Embedded Images to XRefs with Fixed Paths Requiring Manual Image Folder Copy, EPLAN Macro Library Cannot Be Directly Imported to AutoCAD Electrical Requiring EDZ to MDB Conversion, Old DWG Editing in EPLAN Loses Electrical Logic and Explodes Blocks, and AutoCAD Electrical DWG Without Project Files Requires New Project Creation and Apply Project Defaults"
 excerpt: "EPLAN Electric P8 fails for 5 distinct reasons: parts database migration to AutoCAD Electrical requires multiple Excel exports with column mapping per category, DWG export converts embedded images to XRefs with fixed paths requiring manual image folder copy, EPLAN macro library cannot be directly imported to AutoCAD Electrical requiring EDZ to MDB and EMA to DWG conversion, old DWG editing in EPLAN loses electrical logic and explodes blocks on export, and AutoCAD Electrical DWG without project files requires new project creation and Apply Project Defaults. We cover each with fixes from Autodesk Community."
-category: "migration-and-parts-database-export-errors"
+category: "migration"
 softwareSlug: "eplan-electric-p8"
 keyword: "EPLAN Electric P8 parts database migration AutoCAD Electrical Excel export column mapping DWG export embedded images XRefs fixed paths image folder copy macro library EDZ MDB EMA DWG conversion old DWG editing electrical logic exploded blocks project files Apply Project Defaults"
 slug: "eplan-electric-p8-migration-parts-database-export-errors-excel-column-mapping-embedded-images-xrefs-fixed-paths-macro-edz-mdb-ema-dwg-old-dwg-electrical-logic-exploded-blocks"

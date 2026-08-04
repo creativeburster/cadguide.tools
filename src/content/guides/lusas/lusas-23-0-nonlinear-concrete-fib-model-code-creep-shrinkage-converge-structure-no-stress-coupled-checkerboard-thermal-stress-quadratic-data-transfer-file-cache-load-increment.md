@@ -1,7 +1,7 @@
 ---
 title: "LUSAS 23.0 Nonlinear Concrete fib Model Code 2010 Creep Shrinkage Fails to Converge, Structure with No Stress Fails to Converge Solver, Coupled Analysis Checkerboard Thermal Stress in Quadratic Elements, Fully Coupled Analysis Error in Data Transfer File, and Nonlinear Convergence from Load Increment Too Large and Stiff Element Round-Off: Iteration Increase, Stress-Free Model Check, Element Type Change, Cache Deletion, and Incrementation Adjustment"
 excerpt: "LUSAS fails for 5 distinct reasons: Nonlinear concrete fib Model Code 2010 creep and shrinkage fails to converge requiring solver update, structure with no stress fails to converge requiring model review, coupled analysis checkerboard thermal stress in quadratic elements requiring element type change, fully coupled analysis error in Data Transfer File requiring cache deletion, and nonlinear convergence from load increment too large and stiff element round-off requiring incrementation adjustment. We cover each with fixes from LUSAS release notes and convergence checklist."
-category: "solver-and-convergence-errors"
+category: "troubleshooting"
 softwareSlug: "lusas"
 keyword: "LUSAS 23.0 nonlinear concrete fib Model Code 2010 creep shrinkage fails converge structure no stress solver coupled analysis checkerboard thermal stress quadratic elements Data Transfer File cache load increment stiff element round-off"
 slug: "lusas-23-0-nonlinear-concrete-fib-model-code-creep-shrinkage-converge-structure-no-stress-coupled-checkerboard-thermal-stress-quadratic-data-transfer-file-cache-load-increment"

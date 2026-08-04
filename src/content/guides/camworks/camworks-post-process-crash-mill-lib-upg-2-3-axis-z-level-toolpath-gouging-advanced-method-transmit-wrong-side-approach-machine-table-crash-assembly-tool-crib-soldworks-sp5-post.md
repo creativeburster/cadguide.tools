@@ -1,7 +1,7 @@
 ---
 title: "CAMWorks Post Process Crash from Missing MILL.LIB and UPG-2, 3 Axis Z Level Toolpath Gouging from Advanced Method and User Defined Last Cut, TRANSMIT Command Wrong Side Approach Causing Machine Table Crash, Assembly Tool Crib Assignment Crash in SOLIDWORKS, and Post Processor A180 B-180 Axis Alarm from Generic Haas Post: UPG-2 Installation, Previous Method, Virtual Machine Check, SP5 Update, and Post Processor Customization"
 excerpt: "CAMWorks fails for 5 distinct reasons: Post Process crash from missing MILL.LIB and UPG-2 library requiring installation and path configuration, 3 Axis Z Level toolpath gouging from Advanced method and User Defined Last Cut requiring Previous method fallback, TRANSMIT command wrong side approach causing machine table crash requiring Virtual Machine verification, Assembly Tool Crib assignment crash in SOLIDWORKS requiring SP5 update, and Post Processor A180 B-180 axis alarm from generic Haas post requiring post customization. We cover each with fixes from CAMWorks Build Info and Practical Machinist."
-category: "post-processor-and-toolpath-errors"
+category: "manufacturing"
 softwareSlug: "camworks"
 keyword: "CAMWorks Post Process crash MILL.LIB UPG-2 3 Axis Z Level toolpath gouging Advanced method User Defined Last Cut TRANSMIT wrong side approach machine table crash Assembly Tool Crib SOLIDWORKS crash Post Processor A180 B-180 axis alarm generic Haas post"
 slug: "camworks-post-process-crash-mill-lib-upg-2-3-axis-z-level-toolpath-gouging-advanced-method-transmit-wrong-side-approach-machine-table-crash-assembly-tool-crib-soldworks-sp5-post"

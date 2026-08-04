@@ -1,7 +1,7 @@
 ---
 title: "TARGET 3001 PCB Design Signal Island Short Circuit, Ground Plane Island Orphan, Autorouter Suboptimal Routing, Star Ground Short Circuit Alert, and Schematic Signal Island Without REF Pin: DRC Check Procedures, Island Deletion, Router Strategy Configuration, and Signal Name Verification"
 excerpt: "TARGET 3001 fails for 5 distinct reasons: signal island short circuit from both resistor pins on same signal requiring signal highlighting and orphan track deletion, ground plane island orphan fragments from isolated copper requiring Delete islands option, autorouter suboptimal routing from poor strategy settings requiring Hybrid and Contour router comparison, star ground short circuit alert from united GND potentials requiring Generate Star Ground option, and schematic signal island without REF pin from missing reference symbols requiring signal name correction. We cover each with fixes from TARGET 3001 wiki documentation."
-category: "drc-and-routing-errors"
+category: "troubleshooting"
 softwareSlug: "target-3001"
 keyword: "TARGET 3001 PCB design signal island short circuit resistor pins same signal ground plane island orphan fragments Delete islands autorouter suboptimal routing Hybrid Contour router star ground short circuit alert Generate Star Ground schematic signal island without REF pin missing reference symbols signal name correction DRC check"
 slug: "target-3001-pcb-design-signal-island-short-circuit-ground-plane-island-orphan-autorouter-suboptimal-routing-star-ground-short-circuit-alert-schematic-signal-island-without-ref-pin"

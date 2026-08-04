@@ -1,7 +1,7 @@
 ---
 title: "CATIA V5 Crashes When Opening CATDrawings from Microsoft Defender OFFSYM.TTF Folder, V6 Crashing After Hotfix on AMD CPU GPU, V5-6R2024 Unable to Fetch Licenses from DSLS Configuration, Cache Visualization Mode Slower Than Design Mode on Uncertified Intel Arc Graphics, and V5-6R2018 Not Launching After Windows 11 24H2 Update: OFFSYM.TTF Deletion, Hotfix Rollback, DSLS Reconfiguration, Cache Off, and Network Media Sense Registry Fix"
 excerpt: "CATIA fails for 5 distinct reasons: V5 crashes when opening CATDrawings from Microsoft Defender creating OFFSYM.TTF folder in Fonts requiring deletion, V6 crashing after hotfix on AMD CPU GPU requiring hotfix rollback, V5-6R2024 unable to fetch licenses from DSLS configuration requiring reconfiguration, cache visualization mode slower than design mode on uncertified Intel Arc graphics requiring cache off, and V5-6R2018 not launching after Windows 11 24H2 requiring network media sense registry fix. We cover each with fixes from Dassault and Eng-Tips."
-category: "crash-and-license-errors"
+category: "deployment"
 softwareSlug: "catia"
 keyword: "CATIA V5 crashes CATDrawings Microsoft Defender OFFSYM.TTF Fonts folder V6 crashing hotfix AMD CPU GPU V5-6R2024 unable fetch licenses DSLS cache visualization mode slower design mode Intel Arc graphics V5-6R2018 not launching Windows 11 24H2 network media sense registry"
 slug: "catia-v5-crashes-catdrawings-offsym-ttf-microsoft-defender-v6-crashing-hotfix-amd-v5-6r2024-unable-fetch-licenses-dsls-cache-slower-intel-arc-v5-6r2018-not-launching-windows-11"

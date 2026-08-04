@@ -1,7 +1,7 @@
 ---
 title: "3ds Max V-Ray Proxy and Large Scene Performance: Optimize for Instances Causing 10x Slower Time to First Pixel with High RAM from Voxel Structure, 16000 Proxies Taking 26 Minutes to Load from Network Small Reads, Updating Instances Freeze for 60 Minutes from Xref Forest Pack RailClone Light Scattering, CoronaBitmap Slow Save 20 Seconds vs 1 Second Standard Bitmap, and Compiling Clearing Geometry Every Frame from Embree Acceleration Rebuild"
 excerpt: "3ds Max fails for 5 distinct reasons: V-Ray proxy Optimize for Instances creates voxel structure causing 10x slower first pixel and 2.5x RAM on non-instanced proxies, 16000 proxies over network take 26 minutes to load from many small reads requiring local caching, heavy scenes freeze 60 minutes at Updating Instances from Xref Forest Pack RailClone light scattering, CoronaBitmap causes 20-second file saves vs 1 second with standard Bitmap, and V-Ray compiles and clears geometry every frame from Embree acceleration structure rebuild. We cover each with fixes from Chaos Forums."
-category: "vray-proxy-and-large-scene-performance"
+category: "performance"
 softwareSlug: "3ds-max"
 keyword: "3ds Max V-Ray proxy optimize for instances voxel structure RAM time to first pixel 16000 proxies network load 26 minutes local caching updating instances freeze Forest Pack RailClone light scattering CoronaBitmap slow save 20 seconds standard bitmap compiling clearing geometry Embree acceleration rebuild"
 slug: "3ds-max-vray-proxy-large-scene-performance-optimize-instances-voxel-16000-proxies-network-load-updating-instances-freeze-coronabitmap-slow-save-embree-geometry-rebuild"

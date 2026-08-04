@@ -1,7 +1,7 @@
 ---
 title: "MSC Adams HHT Solver Hmin Error from Contact-Heavy Models, Acceleration Computation Failed to Converge from Self-Written Contact Subroutines, GSTIFF Corrector Failures at Small Step Sizes from Ill-Conditioned Jacobian, Discontinuities from MIN MAX IF Functions Causing Corrector Failures, and Native Solids Contact Instability from Faceting Tolerance Gaps: ADAPTIVITY Parameter, Model Debug, SI2 Formulation, Discontinuity Removal, and Faceting Adjustment"
 excerpt: "MSC Adams fails for 5 distinct reasons: HHT solver Hmin error from contact-heavy models requiring ADAPTIVITY parameter, acceleration computation failed to converge from self-written contact subroutines requiring model debug, GSTIFF corrector failures at small step sizes from ill-conditioned Jacobian requiring SI2 formulation, discontinuities from MIN MAX IF functions causing corrector failures requiring discontinuity removal, and native solids contact instability from faceting tolerance gaps requiring faceting adjustment. We cover each with fixes from Adams community and solver guide."
-category: "solver-and-contact-errors"
+category: "troubleshooting"
 softwareSlug: "msc-adams"
 keyword: "MSC Adams HHT solver Hmin error contact-heavy models acceleration computation failed converge self-written contact subroutines GSTIFF corrector failures small step size ill-conditioned Jacobian discontinuities MIN MAX IF functions native solids contact instability faceting tolerance"
 slug: "msc-adams-hht-hmin-contact-acceleration-converge-subroutines-gstiff-corrector-small-step-discontinuity-native-solids-faceting"

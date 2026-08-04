@@ -1,7 +1,7 @@
 ---
 title: "Trimble Business Center Import Export Crash, Traverse Angular Adjustment No Angles, CSV Import OptionsValidationException Filepath, Aerial Photogrammetry Child Process Crash from SentinelOne, and RL Reduction Not Working on Combined Traverses: Cleanup Utility, Closed Traverse Configuration, Antivirus Whitelisting, and Coordinate Adjustment"
 excerpt: "Trimble Business Center fails for 5 distinct reasons: import export crash from corrupted installation requiring cleanup utility and full reinstall, traverse angular adjustment showing only question marks from unclosed traverse requiring closing angle configuration, CSV import OptionsValidationException Filepath does not exist from corrupted configuration, aerial photogrammetry child process crash from SentinelOne antivirus requiring TBC folder whitelisting, and RL reduction not working on combined traverses from unknown height marks requiring coordinate connection. We cover each with fixes from Trimble Community."
-category: "import-crash-and-adjustment-errors"
+category: "troubleshooting"
 softwareSlug: "trimble-business-center"
 keyword: "Trimble Business Center TBC import export crash cleanup utility traverse angular adjustment no angles question marks unclosed traverse closing angle CSV import OptionsValidationException Filepath does not exist aerial photogrammetry child process crash SentinelOne antivirus whitelisting RL reduction combined traverses unknown height marks"
 slug: "tbc-import-export-crash-traverse-angular-adjustment-csv-import-optionsvalidation-photogrammetry-child-process-sentinelone-rl-reduction-combined-traverses-cleanup-utility-closed"

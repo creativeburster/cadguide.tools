@@ -1,7 +1,7 @@
 ---
 title: "Lantek Expert Nesting and Import Errors: Invalid Header Data from DXF DWG Version Mismatch Requiring Older Format Save, Workshop Sheet Logo Not Printing from File Path or Windows Update Requiring Acercade.bmp Check, Open Contours and Superimposed Lines from Drawing Errors Requiring Automatic Correction, Machine Reassignment from CNC Downtime Requiring Modify Machine Feature, and Nesting Plan Compatibility from Machine Differences Requiring Parameter Adjustment"
 excerpt: "Lantek Expert fails for 5 distinct reasons: Invalid Header Data from DXF DWG version mismatch requiring older format save, workshop sheet logo not printing from file path or Windows update requiring Acercade.bmp check, open contours and superimposed lines from drawing errors requiring automatic correction, machine reassignment from CNC downtime requiring Modify Machine feature, and nesting plan compatibility from machine differences requiring parameter adjustment. We cover each with fixes from myCAD Forum and Lantek Blog."
-category: "nesting-and-import-errors"
+category: "manufacturing"
 softwareSlug: "lantek-expert"
 keyword: "Lantek Expert Invalid Header Data DXF DWG version mismatch older format save workshop sheet logo not printing Acercade.bmp Windows update open contours superimposed lines drawing errors automatic correction machine reassignment CNC downtime Modify Machine nesting plan compatibility machine differences parameter adjustment"
 slug: "lantek-expert-nesting-import-errors-invalid-header-data-dxf-dwg-version-mismatch-workshop-sheet-logo-not-printing-acercade-bmp-open-contours-superimposed-lines-machine-reassignment"

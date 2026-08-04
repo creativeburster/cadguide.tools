@@ -1,7 +1,7 @@
 ---
 title: "Tekla Tedds Add-In Disabled Error 287, Word Instance Failed Error, VBL Variable File Out of Sync, Library Access System Memory Errors, and Calculation Fatal Error: Word Add-In Re-enable, Office Reinstall, VBL File Deletion and Recalculation, and Memory Management"
 excerpt: "Tekla Tedds fails for 5 distinct reasons: Word add-in disabled error 287 requiring re-enable in Word Options, failed to get active Word instance from 32-bit to 64-bit Office upgrade requiring full Office reinstall, VBL variable file out of sync requiring manual deletion and recalculation, Library Access System memory errors requiring application closure, and fatal calculation errors from system resource exhaustion. We cover each with fixes from Trimble User Assistance."
-category: "word-integration-and-calculation-errors"
+category: "troubleshooting"
 softwareSlug: "tekla-tedds"
 keyword: "Tekla Tedds add-in disabled error 287 Word Options disabled items failed to get active instance of Word 32-bit 64-bit Office upgrade VBL variable file out of sync manual deletion recalculation Library Access System memory errors clipboard fatal calculation system resource exhaustion"
 slug: "tekla-tedds-addin-disabled-error-287-word-instance-failed-vbl-variable-file-out-of-sync-library-access-system-memory-errors-calculation-fatal-error-word-addin-reenable-office"

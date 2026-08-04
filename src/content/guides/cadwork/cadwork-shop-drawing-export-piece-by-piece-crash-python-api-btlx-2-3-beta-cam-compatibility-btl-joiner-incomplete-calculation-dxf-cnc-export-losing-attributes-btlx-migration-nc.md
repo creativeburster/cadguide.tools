@@ -1,7 +1,7 @@
 ---
 title: "CADwork Shop Drawing Export Piece by Piece Crash via Python API, BTLx 2.3 Beta Version Compatibility with CAM Systems, BTL Joiner Incomplete Machine Calculation for Roof Framing Parts, DXF CNC Export Losing Attributes and Relationships vs BTLx, and NC-Hops Export BTLx Version Selection in 2025: API Crash Fix Update, CAM Version Verification, Operation Check Flags, BTLx Migration, and Machine Menu Navigation"
 excerpt: "CADwork fails for 5 distinct reasons: shop drawing export piece by piece crash via Python API requiring v2025 update, BTLx 2.3 beta version compatibility with CAM systems requiring version verification before export, BTL Joiner incomplete machine calculation for roof framing parts requiring operation check flag review, DXF CNC export losing attributes and relationships vs BTLx requiring BTLx migration, and NC-Hops export BTLx version selection in 2025 requiring machine menu navigation. We cover each with fixes from cadwork KB and GitHub issues."
-category: "export-and-machine-data-errors"
+category: "manufacturing"
 softwareSlug: "cadwork"
 keyword: "CADwork shop drawing export piece by piece crash Python API BTLx 2.3 beta CAM compatibility BTL Joiner incomplete calculation roof framing DXF CNC export losing attributes BTLx migration NC-Hops export version selection machine menu"
 slug: "cadwork-shop-drawing-export-piece-by-piece-crash-python-api-btlx-2-3-beta-cam-compatibility-btl-joiner-incomplete-calculation-dxf-cnc-export-losing-attributes-btlx-migration-nc"

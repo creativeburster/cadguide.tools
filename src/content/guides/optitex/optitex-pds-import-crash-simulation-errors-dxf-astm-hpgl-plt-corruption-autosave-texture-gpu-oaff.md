@@ -1,7 +1,7 @@
 ---
 title: "Optitex PDS Crashes and Import Errors: DXF and ASTM Import Crashes from Various Source Software, HPGL and PLT File Import Crash, PDS File Corruption and AutoSave Recovery, 3D Texture Problems from Graphics Card After Upgrade, and GPU Simulation Stretchy Results and O/Cloud Link Hang"
 excerpt: "Optitex fails for 5 distinct reasons: DXF and ASTM file imports crash from files created by Lectra, Gerber, Elitron, or Siemens with contour deformation, HPGL and PLT file imports crash the PDS application, PDS file corruption requires auto-save backup recovery via File Utilities, 3D texture problems after version upgrade from wrong graphics card or old driver, and GPU simulation produces stretchy results with O/Cloud Link hang when loading oaff files. We cover each with fixes from Optitex help center."
-category: "import-crash-and-simulation-errors"
+category: "troubleshooting"
 softwareSlug: "optitex"
 keyword: "Optitex PDS crash DXF ASTM import Lectra Gerber contour deformation HPGL PLT file corruption auto-save 3D texture graphics card GPU simulation stretchy O/Cloud Link oaff"
 slug: "optitex-pds-import-crash-simulation-errors-dxf-astm-hpgl-plt-corruption-autosave-texture-gpu-oaff"

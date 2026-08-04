@@ -1,7 +1,7 @@
 ---
 title: "exocad Dental CAD Scan Import and Design Errors: 3Shape Trios 3OXZ Import XML Error from Format Change Requiring STL or PLY Manual Import, Individual Dies Not Showing in Hide Show Box from Missing Separate Prep Files Requiring Scan Method Change, Unable to Load Scan Data on Duplicate Project from File Path Issue Requiring Manual Copy, Only Die Scan Imported from Missing Adjacent Tooth in Order Requiring Order Setup Fix, and Margin Line STL Export Not Available Requiring Web Share or Manual STL Save"
 excerpt: "exocad fails for 5 distinct reasons: 3Shape Trios 3OXZ import XML error from format change requiring STL or PLY manual import, individual dies not showing in hide show box from missing separate prep files requiring scan method change, unable to load scan data on duplicate project from file path issue requiring manual copy, only die scan imported from missing adjacent tooth in order requiring order setup fix, and margin line STL export not available requiring web share or manual STL save. We cover each with fixes from Dental Lab Network."
-category: "scan-import-and-design-errors"
+category: "troubleshooting"
 softwareSlug: "exocad"
 keyword: "exocad 3Shape Trios 3OXZ import XML error format change STL PLY manual import individual dies not showing hide show box missing separate prep files scan method Unable to Load Scan Data duplicate project file path only die scan imported missing adjacent tooth order setup margin line STL export web share manual STL save"
 slug: "exocad-dental-cad-scan-import-design-errors-3shape-trios-3oxz-import-xml-error-stl-ply-individual-dies-hide-show-box-missing-prep-files-unable-load-scan-data-duplicate-only-die"

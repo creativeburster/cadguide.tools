@@ -1,7 +1,7 @@
 ---
 title: "SigmaNEST 2026 CAD Import Errors from DXF DWG IGES STEP File Corruption, Nesting Optimization Suboptimal Material Utilization from Poor Part Placement, SigmaBEND .polp File Import Failure from Unsupported Format Version, DSTV Bevel Export Errors from Incorrect Configuration, and Creo Representation Import Issues from Missing CAD Import Direct License: Automatic Error Correction, Nesting Engine Selection, File Format Update, Bevel Export Configuration, and CAD Import Plus Fallback"
 excerpt: "SigmaNEST fails for 5 distinct reasons: CAD import errors from DXF DWG IGES STEP file corruption requiring automatic error correction, nesting optimization suboptimal material utilization from poor part placement requiring nesting engine selection, SigmaBEND .polp file import failure from unsupported format version requiring file format update, DSTV bevel export errors from incorrect configuration requiring bevel export configuration, and Creo representation import issues from missing CAD Import Direct license requiring CAD Import Plus fallback. We cover each with fixes from SigmaNEST documentation."
-category: "import-and-nesting-errors"
+category: "manufacturing"
 softwareSlug: "sigmanest"
 keyword: "SigmaNEST 2026 CAD import errors DXF DWG IGES STEP file corruption nesting optimization suboptimal material utilization poor part placement SigmaBEND polp file import failure unsupported format version DSTV bevel export errors incorrect configuration Creo representation import missing CAD Import Direct license"
 slug: "sigmanest-2026-cad-import-dxf-dwg-iges-step-nesting-sigmabend-polp-dstv-bevel-creo-cad-import-direct"
