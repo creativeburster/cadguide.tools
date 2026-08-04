@@ -2,7 +2,7 @@
 title: "STAR-CCM+ 2026 AMG Solver Divergence on ARM Linux from Unsupported Platform, Segregated Species Solver NaN Residuals from Bad External Fluid Region Mesh, VOF LMP Floating Point Error from AMR and Insufficient Precision, AMG Solver Divergence at First Iteration from Grid Sequencing, and Floating Point Error from Field Function Zero Denominator and Supersonic Segregated Solver: Platform Switch RHEL, 3D-CAD Geometry Rebuild, AMR Disable Double Precision, Grid Sequencing Debug, and Field Function Check"
 excerpt: "STAR-CCM+ fails for 5 distinct reasons: AMG solver divergence on ARM Linux from unsupported platform requiring platform switch RHEL, segregated species solver NaN residuals from bad external fluid region mesh requiring 3D-CAD geometry rebuild, VOF LMP floating point error from AMR and insufficient precision requiring AMR disable double precision, AMG solver divergence at first iteration from grid sequencing requiring grid sequencing debug, and floating point error from field function zero denominator and supersonic segregated solver requiring field function check. We cover each with fixes from Siemens community."
 category: "solver-and-mesh-errors"
-softwareSlug: "star-ccm"
+softwareSlug: "simcenter-star-ccm"
 keyword: "STAR-CCM+ 2026 AMG solver divergence ARM Linux unsupported platform segregated species solver NaN residuals bad external fluid region mesh VOF LMP floating point error AMR insufficient precision AMG solver divergence first iteration grid sequencing floating point error field function zero denominator supersonic segregated solver"
 slug: "star-ccm-2026-amg-arm-linux-species-nan-external-fluid-vof-lmp-amr-first-iteration-grid-sequencing-field-function"
 author: "CADGuide Tools Editorial Team"

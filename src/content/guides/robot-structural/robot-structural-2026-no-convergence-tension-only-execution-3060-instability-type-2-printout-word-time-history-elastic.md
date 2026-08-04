@@ -2,7 +2,7 @@
 title: "Robot Structural Analysis 2026 No Convergence of Nonlinear Problem from Tension-Only Bars in Compression, Execution Problem No 3060 from Modal Analysis of Revit-Imported Model, Instability Type 2 from Tension-Only Web Members and Stay Cables, Program Instability When Exporting Printout Tables to MS Word, and Time History Analysis Calculation Error with Elastic Supports: Auxiliary Analysis Type, Direct Modeling in Robot, Tension-Only to Regular Bar Change, CfgUsr Folder Reset, and HotFix 1 Install"
 excerpt: "Robot Structural Analysis fails for 5 distinct reasons: no convergence of nonlinear problem from tension-only bars in compression requiring auxiliary analysis type, execution problem No 3060 from modal analysis of Revit-imported model requiring direct modeling, instability type 2 from tension-only web members and stay cables requiring tension-only to regular bar change, program instability when exporting printout tables to MS Word requiring CfgUsr folder reset, and time history analysis calculation error with elastic supports requiring HotFix 1. We cover each with fixes from Autodesk community."
 category: "convergence-and-instability-errors"
-softwareSlug: "robot-structural"
+softwareSlug: "autodesk-robot"
 keyword: "Robot Structural Analysis 2026 no convergence nonlinear problem tension-only bars compression execution problem 3060 modal analysis Revit imported model instability type 2 tension-only web members stay cables program instability printout tables MS Word time history analysis elastic supports"
 slug: "robot-structural-2026-no-convergence-tension-only-execution-3060-instability-type-2-printout-word-time-history-elastic"
 author: "CADGuide Tools Editorial Team"
