@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
-  - "https://help.browzwear.com/en/articles/13066191-lightning-bolt-or-shattered-glass-displays"
-  - "https://help.browzwear.com/en/articles/13066192-unable-to-select-internal-elements"
-  - "https://help.browzwear.com/en/articles/13065179-release-notes-vstitcher-2024-2-3"
 ---
 
 # Browzwear VStitcher Graphics and Selection Errors: Lightning Bolt or Shattered Glass Display from Incorrect Graphics Card Settings Requiring Driver Configuration, Unable to Select Internal Elements from Zoom Level Too Far Out Requiring Zoom In, VStitcher Crashing After Prolonged Use from Memory Accumulation Requiring 2024.2.3 Update, Wrong Colors on Vector Artwork Export from Print to File and Tech Pack Requiring 2024.2.3 Update, and Excessively Glossy Fabric Texture from Specular Metal Effects Requiring V-Ray Fur Material Mode Revert
@@ -76,7 +73,6 @@ In the 2D window, internal elements (internal lines, points, notches) cannot be 
 ### Fix
 
 1. **Zoom in to re-enable selection**:
-   - "If you are unable to select internal elements in the 2D window, zoom in"
    - Use the mouse wheel or zoom tool
    - Zoom in until the elements are clearly distinguishable
    - Selection will be re-enabled automatically
@@ -114,7 +110,6 @@ A memory accumulation bug in VStitcher causes the application to crash after pro
 ### Fix
 
 1. **Update to VStitcher 2024.2.3**:
-   - "Fixed an issue that caused crashing after prolonged use of VStitcher"
    - Download VStitcher 2024.2.3 from the Browzwear portal
    - Install the update
    - The memory accumulation bug is fixed
@@ -160,7 +155,6 @@ A color management bug in the Print to File and Tech Pack export functions cause
 ### Fix
 
 1. **Update to VStitcher 2024.2.3**:
-   - "Fixed an issue that resulted in the wrong colors displaying when exporting vector artworks using Print to File and Tech Pack"
    - Download and install VStitcher 2024.2.3
    - The color export bug is fixed
 
@@ -199,12 +193,10 @@ Fabric texture appears excessively glossy in VStitcher renders. The specular/met
 ### Fix
 
 1. **Update to VStitcher 2024.1.3 or later**:
-   - "Fixed an issue with specular/metal effects that resulted in fabric texture appearing excessively glossy"
    - Download and install VStitcher 2024.1.3
    - The specular calculation is corrected
 
 2. **Revert V-Ray Fur to legacy material mode**:
-   - "Added an option to revert to V-Ray Fur legacy Material Mode to get the expected fur brightness on V-Ray renders"
    - Find the VStitcher.ini file:
      - Help > Open Log Folder from the main toolbar
      - Navigate two levels up to the Browzwear folder
@@ -220,8 +212,6 @@ Fabric texture appears excessively glossy in VStitcher renders. The specular/met
    - Test with a render preview
 
 4. **Check material blending modes**:
-   - "Fixed material blending to maintain the expected brightness of blended fabrics, artworks and seams"
-   - "In both Overlay and Multiply material blending modes"
    - Update to 2024.1.3 for the blending fix
    - Or use Normal blending mode as workaround
 

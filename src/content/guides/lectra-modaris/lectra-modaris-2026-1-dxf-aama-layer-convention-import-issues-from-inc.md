@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.lectra.com/en/fashion/products/modaris"
-  - "https://community.adobe.com/questions-652/illustrator-import-dxf-from-lectra-modaris-816295"
-  - "https://forum.seamly.io/t/exporting-dxf-pattern-to-be-imported-into-lectra/17010"
 ---
 
 # Lectra Modaris 2026.1 DXF AAMA Layer Convention Import Issues from Incorrect Layer Numbering, Illustrator 2022+ DXF Import Exploded Entities from Disabled Grouping Feature, DXF R10 AAMA as Only Reliable Import Format for VStitcher and CLO3D, Pattern Converter Web Application for Gerber AccuMark and DXF AAMA ASTM to MDL V8, and Modaris 3D Fit 2D 3D Sync Pattern Adjustment Workflow: Layer Number Verification, Block Creation, R10 AAMA Export, Pattern Converter, and 3D Sync
@@ -31,41 +28,26 @@ DXF AAMA files exported from other CAD systems (Rhino, Seamly, CLO3D) fail to im
 ### Fix
 
 1. **Verify layer numbering convention**:
-   - "Boundary Lines: 1, Grade/turn points: 2"
-   - "Internal lines (draw): 8, Internal Cut: 11"
-   - "Notches: 4, Drills: 13"
-   - "Base (grain) lines: 7, Sew lines: 14"
-   - "Quality lines: 15, Mirror lines: 6"
    - Verify all layer numbers match the convention
 
 2. **Create an empty layer called 0**:
-   - "An empty layer called 0"
    - Ensure the DXF file
    - Has an empty layer 0
    - As required by the AAMA convention
 
 3. **Put all components in layer 1 with sublayers**:
-   - "All components of the DXF should be in a layer called 1"
-   - "Then layer 1 should have those sublayers numbers"
    - Put all pattern elements
    - In layer 1 with numbered sublayers
 
 4. **Create DXF blocks for each piece**:
-   - "Each pieces should be one DXF block"
-   - "The block should be named [piece name]_[size]"
    - Create a DXF block
    - For each pattern piece
 
 5. **Add text fields for metadata**:
-   - "Each pieces should contain text fields:"
-   - "Piece Name, Size, Annotation, Category, Quantity, Material"
    - Add required text fields
    - To each pattern piece block
 
 6. **Use polylines instead of splines**:
-   - "Depending on the version of Modaris"
-   - "You will have varying degrees of success with splines"
-   - "I'd suggest trying a polylines export scheme"
    - Use polylines for better compatibility
 
 7. **Verify with Modaris import**:
@@ -91,15 +73,9 @@ Starting from Illustrator 2022, importing DXF files created by Lectra Modaris re
 ### Fix
 
 1. **Use Illustrator 2021 or earlier**:
-   - "Up to Illustrator 2021"
-   - "Importing a DXF created by Lectra Modaris"
-   - "The entities remained correctly grouped by size"
    - Use Illustrator 2021 for DXF import
 
 2. **Create blocks in the source CAD**:
-   - "Make sure that once the part is finished"
-   - "All layers of the part are selected"
-   - "And made into a DXF Block ('block' command in Rhino)"
    - Create DXF blocks before export
 
 3. **Group entities manually after import**:
@@ -121,8 +97,6 @@ Starting from Illustrator 2022, importing DXF files created by Lectra Modaris re
    - In Illustrator
 
 6. **Request Adobe to re-enable the feature**:
-   - "Perhaps it will be implemented again in the future"
-   - "But he has no idea if and when"
    - Submit a feature request
    - To Adobe for DXF grouping
 
@@ -149,27 +123,18 @@ When exporting patterns from Seamly2D or other pattern software for import into 
 ### Fix
 
 1. **Export as DXF R10 AAMA**:
-   - "The only Seamly2D export format"
-   - "That reliably imports into VStitcher is 10AAMA"
    - Export patterns as DXF R10 AAMA
    - For reliable import
 
 2. **Verify notches and grainlines**:
-   - "Unfortunately, notches and grainlines are not imported"
    - Be aware that notches and grainlines
    - May not import in R10 AAMA
    - Add them manually in VStitcher/CLO3D
 
 3. **Use AAMA format not ASTM**:
-   - "DXF-ASTM replaced DXF-AAMA as the standard"
-   - "But DXF-ASTM was so poorly defined"
-   - "That it isn't very useful"
    - Use AAMA format, not ASTM
 
 4. **Check DXF layer placement**:
-   - "I think though we have to look"
-   - "And make sure all the pattern piece objects"
-   - "Are being placed in the proper DXF layers"
    - Verify layer placement in the DXF
 
 5. **Test with R10 AAMA first**:
@@ -179,15 +144,9 @@ When exporting patterns from Seamly2D or other pattern software for import into 
    - Before trying other formats
 
 6. **Import into Lectra Modaris with AAMA format**:
-   - "I have in the past exported pattern as 2013 dxfs"
-   - "Then imported into Lectra Modaris as import AAMA format"
-   - "An R10 AAMA files as attached will also import"
    - Use AAMA import format in Modaris
 
 7. **Consider linked files**:
-   - "Is there also an option that imported files are links?"
-   - "If so, the pattern will adjust directly in 3D programs"
-   - "I know the patterns made in GRAFIS can be linked"
    - Check if linked file import is available
 
 ### Community Report
@@ -207,14 +166,9 @@ Users need to convert Gerber AccuMark CAD files (all versions before and includi
 ### Fix
 
 1. **Use the Pattern Converter web application**:
-   - "Pattern Converter is a web application"
-   - "That converts Gerber AccuMark CAD"
-   - "DXF AAMA and DXF ASTM files"
-   - "Into the MDL V8 format"
    - Use the Pattern Converter for file conversion
 
 2. **Convert Gerber AccuMark files**:
-   - "Gerber AccuMark CAD (all versions before and including V16)"
    - Use Pattern Converter for Gerber files
    - Up to V16
    - To MDL V8
@@ -238,15 +192,9 @@ Users need to convert Gerber AccuMark CAD files (all versions before and includi
    - Were correctly converted
 
 6. **Use Modaris Essential for native files**:
-   - "With Modaris Essential"
-   - "You can grade and industrialize patterns"
-   - "Saved in native Modaris files"
    - Use Modaris Essential for native MDL files
 
 7. **Share pattern files without data loss**:
-   - "Suppliers can work better with brands"
-   - "By sharing pattern files"
-   - "Without any data loss or errors"
    - Use Pattern Converter for supplier collaboration
 
 ### Community Report
@@ -266,44 +214,31 @@ When adjusting patterns in Modaris 3D, the 2D pattern and 3D prototype are not s
 ### Fix
 
 1. **Use Modaris 3D for automatic sync**:
-   - "Modaris 3D automatically syncs"
-   - "2D production patterns with their 3D prototypes"
    - Use Modaris 3D
    - For automatic 2D-3D synchronization
 
 2. **Apply adjustments to both 3D and 2D**:
-   - "It allows adjustments to be applied"
-   - "To both 3D and 2D at once"
    - Apply pattern adjustments
    - To both 2D and 3D simultaneously
 
 3. **Verify fit for all sizes**:
-   - "Guarantees a perfect fit"
-   - "For garments of all sizes"
    - Use 3D Fit to verify
    - The fit across all sizes
 
 4. **Use the fabric library**:
-   - "An extensive library of fabrics"
-   - "Categorized according to their characteristics"
    - Use the fabric library
    - For accurate 3D drape simulation
 
 5. **Use configurable or imported mannequins**:
-   - "Configurable or imported mannequins"
    - Use configurable mannequins
    - Or import custom mannequins
    - For accurate fit verification
 
 6. **Develop 3D production-ready prototypes**:
-   - "Develop high-quality 3D production-ready prototypes"
-   - "Using your patterns"
    - Use Modaris 3D to develop
    - Production-ready 3D prototypes
 
 7. **Use Diamino for marker making**:
-   - "Export patterns to Diamino"
-   - "Export cutting file"
    - Export adjusted patterns to Diamino
    - For marker making and production
 

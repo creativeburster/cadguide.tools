@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://github.com/openscad/openscad/issues/5000"
-  - "https://github.com/openscad/openscad/issues/5466"
-  - "https://github.com/openscad/openscad/issues/5447"
 ---
 
 # OpenSCAD STL Export and Import Errors: Assertion Failure Crash After rotate_extrude from Degenerate Triangle Vertices Requiring Version Update, STL Export Button Not Working on macOS 15.1.1 from Export Action Refactoring Bug Requiring PR Fix, Nondeterministic STL Export Assertion from Manifold Backend Mismatched Free Requiring Non-Manifold Backend, Non-Manifold STL Import Crash with Manifold Backend from nullptr Dereference Requiring Fix, and Corrupted Binary STL Export to stdout from Triangle Count Write Before Buffer Requiring Buffered Output Fix
@@ -31,13 +28,11 @@ OpenSCAD crashes with an assertion failure during STL export after using `rotate
 ### Fix
 
 1. **Update OpenSCAD to latest version**:
-   - "Try something after Feb 15 where this is fixed: https://github.com/openscad/openscad/pull/4990"
    - The fix was merged in PR #4990
    - Update to a build after February 15, 2024
    - This is the primary fix
 
 2. **Use 3MF export instead of STL**:
-   - "Export to 3mf does not crash, but reports an error in the console"
    - 3MF handles degenerate triangles differently
    - Use F7 > 3MF as workaround
    - Then convert 3MF to STL in another tool
@@ -61,7 +56,6 @@ OpenSCAD crashes with an assertion failure during STL export after using `rotate
    - Add small offsets to separate coincident vertices
 
 6. **Report with minimal reproducer**:
-   - "To reproduce, I enter just the following, press F6, then press F7"
    - `rotate_extrude() square([10, 10]);`
    - Report on GitHub with the minimal code
    - Include OpenSCAD version and OS
@@ -83,7 +77,6 @@ The version 2024-12-01 introduced export action refactoring that broke the expor
 ### Fix
 
 1. **Update to version after December 1, 2024**:
-   - "Fixed by #5465: More export action refactoring"
    - The fix was merged in PR #5465
    - Use a build after December 1, 2024
    - This fixes the export button regression
@@ -107,7 +100,6 @@ The version 2024-12-01 introduced export action refactoring that broke the expor
    - Check if 3MF or OBJ buttons work
 
 5. **Check for follow-up regression**:
-   - "Referenced by issue #5524: cdc33d4f81 breaks export buttons"
    - There was a follow-up regression
    - Check if the latest version has this issue
    - Report if export buttons are still broken
@@ -129,13 +121,11 @@ The nondeterministic crash is caused by memory corruption in the Manifold backen
 ### Fix
 
 1. **Use CGAL backend instead of Manifold**:
-   - "Test without Manifold"
    - Run: `openscad --backend CGAL -o output.stl input.scad`
    - The CGAL backend doesn't trigger the memory corruption
    - This is the most reliable workaround
 
 2. **Retry on failure**:
-   - "A second invocation is usually sufficient to get things working"
    - If the assertion fires, simply run again
    - The nondeterministic nature means it often works on retry
    - Use a script that retries on failure
@@ -181,7 +171,6 @@ The Manifold backend expects valid manifold geometry. When a non-manifold STL (l
 ### Fix
 
 1. **Update to version with fix**:
-   - "Fixed by #5825"
    - The fix adds null checks in PolySetRenderer
    - Update to a build after October 2025
    - This is the primary fix
@@ -233,7 +222,6 @@ The binary STL export writes the header and triangle count placeholder before wr
 ### Fix
 
 1. **Update to version with buffered output fix**:
-   - "Resolved Issues With Corrupted STL Files When Exporting to stdout (#5470)"
    - Commit c190dac fixes this by using std::ostringstream buffer
    - Update to a build after December 4, 2024
    - This is the primary fix
@@ -263,7 +251,6 @@ The binary STL export writes the header and triangle count placeholder before wr
    - If it's zero, the export was corrupted
 
 6. **Check for triangle count overflow**:
-   - "Triangle count exceeded 4294967295, so the STL file is not valid"
    - Binary STL has a 32-bit triangle count limit
    - If the model has more than 4 billion triangles
    - The STL is invalid regardless of the buffer fix

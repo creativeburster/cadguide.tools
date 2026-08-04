@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://help.gerbertechnology.com/Whats_New/AccuMark/SupportedVersions.htm"
-  - "https://help.gerbertechnology.com/Whats_New/AccuMark/Gerber%20AccuMark%20Software%20Installation.pdf"
-  - "https://www.lectra.com/en/events-webinars/discover-gerber-accumark-v20261-new-features"
 ---
 
 # Gerber AccuMark V2026.1 AVX Instruction Set CPU Requirement for PDS Launch, Antivirus Quarantining AccuMark Executables sil2000.exe medpro.exe marking.exe amxplore.exe, Windows Insider Preview Build Incompatibility Causing AccuMark Malfunction, Piece Grouping in PDS for Multi-Piece Selection Operations, and PDF Marker Plot File Submission from Winplot: CPU-Z AVX Verification, Antivirus Exclusion Whitelist, Windows Update Rollback, Piece Group Workflow, and Winplot PDF Plot
@@ -31,9 +28,6 @@ Gerber AccuMark PDS (Pattern Design System) does not open or run correctly on ce
 ### Fix
 
 1. **Verify AVX support with CPU-Z**:
-   - "Locate, download, install, and use the CPU-ID utility"
-   - "To determine if the CPU on the computer has the AVX instruction set included"
-   - "https://www.cpuid.com/softwares/cpu-z.html"
    - Download and run CPU-Z
 
 2. **Check AVX in CPU-Z**:
@@ -89,33 +83,23 @@ After installing AccuMark, some applications don't launch or function correctly.
 ### Fix
 
 1. **Whitelist AccuMark executables**:
-   - "The exe will have to be whitelisted before reinstalling the software"
-   - "Be sure all exe's that were impacted are included in the whitelist"
-   - "This includes sil2000.exe, medpro.exe, marking.exe, amxplore.exe and any others"
    - Add all AccuMark executables to antivirus exclusions
 
 2. **Create folder exclusions**:
-   - "These folders should be listed as trustworthy in the antivirus program"
    - "Folder locations" for AccuMark installation
    - Add the entire AccuMark installation folder
    - To the antivirus exclusion list
 
 3. **Disable antivirus during installation**:
-   - "It may also help to disable the antivirus program"
-   - "When downloading from GerberNet and also when installing the software"
    - Temporarily disable antivirus
    - During download and installation
 
 4. **Whitelist installation source folder**:
-   - "You need to white list the installation source folder as well"
    - If installing from a download or USB
    - Whitelist the source folder
    - Before installation
 
 5. **Report false positives**:
-   - "You can Google the antivirus software name like Kaspersky"
-   - "With 'report false positive'"
-   - "Then go to the link on how to report false positives"
    - Report the false positive to the antivirus vendor
 
 6. **Reinstall after whitelisting**:
@@ -125,8 +109,6 @@ After installing AccuMark, some applications don't launch or function correctly.
    - To restore quarantined files
 
 7. **Check corporate antivirus policy**:
-   - "You may need to make exclusions locally"
-   - "On the user's system and update your corporate policy"
    - For enterprise environments
    - Update the corporate antivirus policy
 
@@ -147,45 +129,29 @@ AccuMark was working fine, but after a Windows automatic update, it "all of a su
 ### Fix
 
 1. **Check Windows Update history**:
-   - "If at any time you experience such a problem after an automatic update"
-   - "Check the windows update history"
-   - "You can research the updates that are listed"
-   - "To see what is contained in the update"
    - Review recent Windows updates
 
 2. **Roll back the problematic update**:
-   - "Rolling back an update may correct the problem"
    - If a specific update caused the issue
    - Uninstall it
    - Via Windows Settings > Update & Security
 
 3. **Avoid Insider Preview builds**:
-   - "We recommend to avoid upgrading Windows 10 or Windows 11"
-   - "To Insider Preview builds"
    - Don't install Insider Preview builds
    - On production machines
 
 4. **Use only officially released Windows versions**:
-   - "Only officially released Operating Systems"
-   - "And system updates are supported"
    - Use stable Windows releases
    - For AccuMark production work
 
 5. **Check virus scan updates**:
-   - "Verify that no Virus Scan or Malware detection software"
-   - "Has updated and removed required AccuMark files"
    - Antivirus updates can also
    - Quarantine AccuMark files
 
 6. **Control update timing**:
-   - "It is best to pick a time to install and reboot your system"
-   - "Leaving you in better control"
-   - "And less chance of any data loss"
    - Don't allow automatic reboots during work
 
 7. **Use dedicated test machines for Insider builds**:
-   - "Only use them for testing"
-   - "On dedicated test machines"
    - If you need Insider Preview builds
    - Use separate test machines
 
@@ -206,46 +172,27 @@ In AccuMark PDS, selecting multiple pieces for operations that require several s
 ### Fix
 
 1. **Create piece groups in PDS**:
-   - "Creating one or more groups of pieces in the work area"
-   - "Is a powerful selection tool that will save time"
    - Select multiple pieces
    - And create a group
 
 2. **Use groups for multi-piece operations**:
-   - "The group will be maintained when saving a PDS work session file"
-   - "But not when saving the data, for example models or pieces"
    - Use groups for operations
    - That accept multiple piece selections
 
 3. **Rotate multiple pieces as a group**:
-   - "The Rotate Piece function in the Modify tab"
-   - "Has a multiple-piece selection to specify which pieces to rotate"
-   - "Select multiple pieces, create a group, rotate them"
-   - "And perform other actions as needed"
    - Use groups for rotate operations
 
 4. **Visual group highlighting**:
-   - "As the mouse is pointed at any piece in a piece group"
-   - "All the other pieces in the group are highlighted"
-   - "As the current piece"
    - Use visual highlighting to verify groups
 
 5. **Toggle group selection**:
-   - "Clicking on any piece within a piece group"
-   - "Will toggle the selection of all pieces in that group"
    - Click to select/deselect
    - All pieces in a group
 
 6. **Isolate pieces with current piece box**:
-   - "The current piece box can also be used"
-   - "To limit the selection of pieces in a group"
-   - "To only those that are selected in the box"
-   - "Click one or more pieces in the current piece box to isolate the piece"
    - Use the current piece box for isolation
 
 7. **Save groups in work session**:
-   - "The group will be maintained"
-   - "When saving a PDS work session file"
    - Save work sessions to preserve groups
    - For continued work
 
@@ -266,13 +213,10 @@ Users need to create PDF marker plot files from AccuMark and submit them to a pl
 ### Fix
 
 1. **Create a PDF marker plot file**:
-   - "AccuMark can create a PDF marker plot file"
-   - "As one of the Marker Plot options"
    - Select PDF as the plot format
    - In the Marker Plot options
 
 2. **Submit from Winplot**:
-   - "Now, that the PDF file can be submitted to a plotter from Winplot"
    - Use Winplot to submit
    - The PDF marker plot file
    - Directly to the plotter
@@ -284,16 +228,9 @@ Users need to create PDF marker plot files from AccuMark and submit them to a pl
    - In the Plotter Settings
 
 4. **Use plot size annotation**:
-   - "Size Name when plotting from PDS"
-   - "A new field in the plot preferences"
-   - "Allows the size name to be plotted along the piece perimeter"
-   - "Just as when using the piece plot form"
    - Use size name annotation for identification
 
 5. **Select annotation position**:
-   - "Top, Bottom, Left, Right, or All"
-   - "This new selection in PDS allows the same plot result"
-   - "As plotting from the piece plot form"
    - Choose the annotation position
 
 6. **Verify PDF plot output**:

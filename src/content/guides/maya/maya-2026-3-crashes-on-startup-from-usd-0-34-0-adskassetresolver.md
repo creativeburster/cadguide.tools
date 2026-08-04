@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-ReleaseNotes/files/MAYA_RELEASENOTES_2026_2_RELEASE_NOTES_HTML.html"
-  - "https://forums.autodesk.com/t5/maya-forum/maya-2026-crashes-immediately-when-opened/td-p/13839528"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Laggy-performance-or-freezing-in-Maya.html"
 ---
 
 # Maya 2026.3 Crashes on Startup from USD 0.34.0 AdskAssetResolver, Freeze When Making Keys from Non-Certified GPU, cacheEvaluator Plugin Crash from Windows Update, ML Deformer Error Training on Linux, and Motion Trail Editing Broken in Viewport: USD Rollback, DG Evaluation Mode, Plugin Disable, Deformer Update, and Graph Editor Workaround
@@ -31,41 +28,27 @@ Maya 2026.3 crashes during the USD plugin load phase at startup. The crash occur
 ### Fix
 
 1. **Roll back to USD 0.33.0**:
-   - "Uninstall the version that installed with Maya 2026.3 (v0.34.0)"
-   - "Head over to Github and grab the previous version"
-   - "https://github.com/Autodesk/maya-usd/releases/tag/v0.33.0"
    - Install USD 0.33.0
 
 2. **Update GPU drivers**:
-   - "I got mine to work (2026.3) after I updated my graphics card driver"
    - Update GPU drivers
    - To the latest version
 
 3. **Force close Autodesk background processes**:
-   - "Go into the task manager"
-   - "And force close all autodesk apps"
-   - "Before you are able to boot it up"
    - Close background processes
 
 4. **Reboot before launching Maya**:
-   - "I have to reboot my MacBook"
-   - "In order for Maya to load"
    - Reboot before
    - Launching Maya
 
 5. **Clean GPU driver install**:
-   - "Doing a clean GPU driver install (not express)"
    - Do a clean install
    - Of GPU drivers
 
 6. **Disable third-party plugins**:
-   - "Make sure no third-party plugins"
-   - "Are loading on startup"
    - Disable third-party plugins
 
 7. **Report persistent startup crashes**:
-   - "We are aware of these (Maya 2026.3) crashes"
-   - "And are working towards a solution"
    - Report to Autodesk support
 
 ### Community Report
@@ -85,24 +68,16 @@ Maya freezes whenever making a key to anything, from primitive shapes to rigged 
 ### Fix
 
 1. **Set Evaluation Mode to DG**:
-   - "In Preferences -> Animation"
-   - "Turn Evaluation Mode to DG"
    - Switch from Parallel to DG
 
 2. **Turn off GPU Instancing**:
-   - "In your Viewport Renderer"
-   - "Viewport 2.0 Settings"
-   - "Turn off GPU Instancing"
    - Disable GPU Instancing
 
 3. **Turn off Cached Playback**:
-   - "Turn off Cached Playback"
    - Disable Cached Playback
    - To reduce GPU load
 
 4. **Use OpenGL Legacy rendering**:
-   - "Select OpenGL-Legacy"
-   - "From the Rendering Engine setting"
    - Switch to OpenGL Legacy
 
 5. **Update GPU drivers**:
@@ -116,8 +91,6 @@ Maya freezes whenever making a key to anything, from primitive shapes to rigged 
    - For best performance
 
 7. **Remove peripheral devices**:
-   - "Devices such as Wacom tablets or 3D mice"
-   - "Have unique drivers that need to be updated"
    - Remove peripherals to test
 
 ### Community Report
@@ -136,35 +109,22 @@ Maya crashes when it gets to the loading plugins (cacheEvaluator) part during st
 
 ### Fix
 
-1. **Disable cacheEvaluator plugin**:
-   - "Disabling the cacheEvaluator plugin manually"
-   - "Went to the Maya install directory"
-   - "Opened the plug-ins folder"
-   - "Temporarily renamed the cacheEvaluator plugin file"
+1. **Disable cacheEvaluator plugin**.
 
 2. **Clean GPU driver install**:
-   - "Doing a clean GPU driver install (not express)"
    - Do a clean install
    - Of GPU drivers
 
 3. **Update Windows**:
-   - "Rolling back or fully updating Windows"
-   - "Helped stabilize things"
    - Update or roll back Windows
 
 4. **Re-enable plugin after GPU update**:
-   - "Once Maya was open"
-   - "I updated my GPU driver to a clean install"
-   - "And then re-enabled the plugin"
    - Re-enable after fixing
 
 5. **Remove third-party plugins**:
-   - "Make sure no third-party plugins"
-   - "Are loading on startup"
    - Remove third-party plugins
 
 6. **Force close Autodesk processes**:
-   - "Force close all autodesk apps"
    - In Task Manager
    - Before launching Maya
 
@@ -191,7 +151,6 @@ When using ML Deformer on Linux, an error occurs during training. The training p
 ### Fix
 
 1. **Update to Maya 2026.2 or later**:
-   - "ML Deformer: Error training with Linux MAYA-138160"
    - Fixed in 2026.2
    - Update to the latest version
 
@@ -242,13 +201,10 @@ When editing motion trail keys directly in the viewport, the editing is broken. 
 ### Fix
 
 1. **Use Graph Editor as workaround**:
-   - "Workaround: Edit the motion trail"
-   - "From the Graph Editor"
    - Use Graph Editor
    - For motion trail editing
 
 2. **Update to Maya 2026.2 or later**:
-   - "MAYA-139646"
    - Fixed in 2026.2
    - Update to the latest version
 

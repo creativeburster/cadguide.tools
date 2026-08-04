@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.turbocad.co.uk/imsi-design-releases-turbocad-2025-1/"
-  - "https://paulthecad.com/7647-2/"
-  - "https://forum.parallels.com/threads/turbocad-2024.364926/"
 ---
 
 # TurboCAD Parallels Mac Crash Report, Corrupted INI Configuration Files, GDI OpenGL Rendering Compatibility, Crash Reporting Diagnostics, and Floating License Support: Built-in Folder Deletion, Default Workspace Reset, NVIDIA AMD GPU Configuration, and 2025.1 Service Pack Update
@@ -32,7 +29,6 @@ TurboCAD is a Windows-native CAD application. Running it on Apple silicon (M1/M2
 
 1. **Use a Windows PC natively**:
    - TurboCAD is designed for Windows desktop PCs
-   - "IMSI Design announced the release of TurboCAD 2025.1 for Windows desktop PCs"
    - Use a native Windows computer
    - This is the most reliable solution
 
@@ -55,13 +51,11 @@ TurboCAD is a Windows-native CAD application. Running it on Apple silicon (M1/M2
    - With TurboCAD's rendering engine
 
 5. **Contact IMSI Design support**:
-   - "Anybody had success with this program at all?"
    - Contact IMSI Design support
    - Ask about Mac virtualization support
    - They may have specific recommendations
 
 6. **Check Parallels version compatibility**:
-   - "Latest version of Parallels: 19.4.1 (54985)"
    - Try the latest Parallels version
    - Or try a specific version known to work
    - Check Parallels forums for TurboCAD compatibility
@@ -70,7 +64,6 @@ TurboCAD is a Windows-native CAD application. Running it on Apple silicon (M1/M2
    - If TurboCAD can't run on your Mac
    - Consider Mac-native CAD software
    - Such as Vectorworks, AutoCAD for Mac, or Rhino
-   - "I have abandoned TurboCAD for Vectorworks"
 
 ### Community Report
 
@@ -89,33 +82,23 @@ TurboCAD misbehaves — tools don't work correctly, settings are lost, or featur
 ### Fix
 
 1. **Try the Default reset first**:
-   - "In very rare occasions TurboCAD misbehaves. The standard cure for this is a simple Default"
-   - "Tools menu – work space – customize – options tab – click 'Default'"
-   - "This fixes the problem 99% of the time"
    - Try this before the more drastic folder deletion
 
 2. **Close TurboCAD**:
-   - "Close TurboCAD"
    - Before deleting the Built-in folder
    - Ensure TurboCAD is completely closed
    - Check Task Manager for any TurboCAD processes
 
 3. **Navigate to the Profiles folder**:
-   - "Click OK and navigate the 'IMSIDesign' folder"
-   - "Drill down until you get to the 'Profiles' folder"
    - Path: `C:\Users\[username]\AppData\Roaming\IMSIDesign\TurboCAD 2021\Platinum (or Pro, Deluxe, Designer) x64\Profiles`
    - Adjust the version and edition for your installation
 
 4. **Delete the Built-in folder**:
-   - "Open the 'Profiles' folder to see the 'Built-in' folder"
-   - "Delete the 'Built-in' folder"
    - This forces TurboCAD to reconstruct it
    - From the installation files
 
 5. **Restart TurboCAD**:
-   - "Restart TurboCAD"
    - TurboCAD recreates the Built-in folder
-   - "This will restore most TurboCAD settings to those found in a brand new installation"
    - Reconfigure your custom settings
 
 6. **Back up your customizations first**:
@@ -148,10 +131,6 @@ In TurboCAD 2024, selected entities are drawn in green only, not with proper hig
 ### Fix
 
 1. **Update to TurboCAD 2025.1 or later**:
-   - "Advanced video adapter configuration enables NVIDIA and AMD high-performance modes"
-   - "With improved GDI/OpenGL compatibility"
-   - "Integrated NVAPI libraries ensure smoother rendering"
-   - "New warnings alert users when optimal GPU settings are not active"
    - Install the latest version
 
 2. **Check the device type**:
@@ -161,32 +140,26 @@ In TurboCAD 2024, selected entities are drawn in green only, not with proper hig
    - This enables the full Visualize mode features
 
 3. **Configure NVIDIA high-performance mode**:
-   - "Advanced video adapter configuration enables NVIDIA high-performance modes"
    - In NVIDIA Control Panel
    - Set TurboCAD to use the NVIDIA GPU
    - Not the integrated GPU
 
 4. **Configure AMD high-performance mode**:
-   - "Advanced video adapter configuration enables AMD high-performance modes"
    - In AMD Radeon Settings
    - Set TurboCAD to use the AMD GPU
    - Not the integrated GPU
 
 5. **Enable NVAPI libraries**:
-   - "Integrated NVAPI libraries ensure smoother rendering"
    - In TurboCAD 2025.1
    - NVAPI is integrated automatically
    - Ensure the latest NVIDIA drivers are installed
 
 6. **Check for GPU warnings**:
-   - "New warnings alert users when optimal GPU settings are not active"
    - Watch for GPU warnings in TurboCAD 2025.1
    - Follow the warning instructions
    - To configure optimal GPU settings
 
 7. **Use the classic selector as workaround**:
-   - "The classic selector is drawn in Visualize modes without using GDI"
-   - "This made it possible to bypass the limitations"
    - If the new selector doesn't work
    - Use the classic selector mode
 
@@ -207,8 +180,6 @@ Before TurboCAD 2025.1, there was no comprehensive logging system for startup ev
 ### Fix
 
 1. **Update to TurboCAD 2025.1 or later**:
-   - "A new logging system provides visibility into startup events"
-   - "Helping users and support teams resolve issues faster"
    - Install 2025.1
    - The new crash reporting system captures startup crashes
 
@@ -271,7 +242,6 @@ Before TurboCAD 2025.1, floating license support was not available. Each TurboCA
 ### Fix
 
 1. **Update to TurboCAD 2025.1 or later**:
-   - "TurboCAD 2025.1 delivers Floating Licence support"
    - Install 2025.1 on all workstations
    - Configure the floating license server
    - Licenses can now be shared among users
@@ -289,7 +259,6 @@ Before TurboCAD 2025.1, floating license support was not available. Each TurboCA
    - Licenses are returned when TurboCAD closes
 
 4. **Use the improved Licence Description Section**:
-   - "Improved Licence Description Section"
    - Check license status in the License Manager
    - See which users have active licenses
    - Reclaim licenses from inactive users

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.csiamerica.com/software/ETABS/22/ReleaseNotesETABSv2270plus2260.pdf"
-  - "https://www.csiamerica.com/software/ETABS/22/ReleaseNotesETABSv2251plus2250.pdf"
-  - "https://www.csiamerica.com/software/ETABS/23/ReleaseNotesETABSv2320.pdf"
 ---
 
 # ETABS v22.6.0 Staged Construction Change Operations Not Applied to Groups Besides All, Point Line Area Springs with Link Properties Fail to Converge in Nonlinear Large Displacements P-Delta, Compression Only Tension Only Area Springs Not Working in Nonlinear v22.5.0, Steady-State and PSD Load Cases Using Unstressed Zero State Stiffness Ignoring P-Delta, and Time History Drifts from Matched Response Spectrum Requiring Base Line Correction: Group All Workaround, Spring Link Convergence Fix, v22.5.1 Reanalysis, P-Delta Stiffness Case Fix, and Base Line Correction
@@ -31,10 +28,6 @@ In ETABS v22.6.0, the "Change Sections", "Change Section & Age", "Change Modifie
 ### Fix
 
 1. **Update to ETABS v22.7.0 or later**:
-   - "An incident was resolved where the 'Change Sections'"
-   - "Operations in Staged Construction load cases did not apply the intended effect"
-   - "When applied to groups besides group All"
-   - "This issue only affected ETABS v22.6.0"
    - Update to v22.7.0 or later
 
 2. **Use group All as workaround**:
@@ -90,10 +83,6 @@ Point, Line, or Area springs that use a link property fail to converge in nonlin
 ### Fix
 
 1. **Update to ETABS v22.7.0 or later**:
-   - "An incident was resolved where Point, Line or Area springs"
-   - "That used a link property could fail to converge"
-   - "When the geometric nonlinearity was set to Large Displacements and P-Delta"
-   - "This issue affected ETABS v22.4.0 to v22.6.0"
    - Update to v22.7.0+
 
 2. **Use simple spring constants instead of link properties**:
@@ -121,7 +110,6 @@ Point, Line, or Area springs that use a link property fail to converge in nonlin
    - In nonlinear load cases
 
 6. **Use event-to-event analysis**:
-   - "Event-to-event analysis method"
    - Try event-to-event analysis
    - Instead of Newton-Raphson
    - For better convergence with nonlinear springs
@@ -149,15 +137,9 @@ Compression-only or tension-only area springs are not working correctly in nonli
 ### Fix
 
 1. **Update to ETABS v22.5.1 or later**:
-   - "An incident was resolved where compression only or tension only area springs"
-   - "Were not working correctly in nonlinear analysis"
-   - "This was a bug inadvertently introduced in v22.5.0 only"
-   - "Models run in v22.5.0 need to be reanalyzed in v22.5.1 or later"
    - Update immediately
 
 2. **Reanalyze all models from v22.5.0**:
-   - "Models run in v22.5.0 need to be reanalyzed"
-   - "In v22.5.1 or later"
    - Any model using compression-only or tension-only area springs
    - Run in v22.5.0 must be reanalyzed
 
@@ -208,13 +190,9 @@ Steady-state and PSD load cases in ETABS v23.2.0 always use the stiffness from t
 ### Fix
 
 1. **Update to ETABS v23.2.0 update or later**:
-   - "An incident was resolved that addressed three issues"
-   - "(1) Steady-state and PSD load cases always used the stiffness"
-   - "From the unstressed (zero) state regardless of any specified P-delta case"
    - Update to the latest version
 
 2. **Check the analysis .LOG file**:
-   - "This could be seen by reviewing the analysis .LOG file"
    - Review the .LOG file
    - To verify which stiffness matrix
    - Was used for steady-state and PSD cases
@@ -232,21 +210,14 @@ Steady-state and PSD load cases in ETABS v23.2.0 always use the stiffness from t
    - After updating
 
 5. **Assess result significance**:
-   - "Results could be affected, depending on the significance of the P-delta effects"
    - Evaluate how significant
    - P-delta effects are for your structure
    - To determine if results changed meaningfully
 
 6. **Check modal load case ordering**:
-   - "(2) Modal load cases used for time history damping"
-   - "Were not always run before load cases referencing them"
-   - "Requiring the user to run the analysis for a second time"
    - Also fixed in the same update
 
 7. **Check nonlinear static modal loading**:
-   - "(3) Modal load cases used for loading in nonlinear static load cases"
-   - "Were not always run before load cases referencing them"
-   - "Resulting in the zero contribution from the applied mode shapes"
    - Also fixed in the same update
 
 ### Community Report
@@ -266,10 +237,6 @@ When using a time history matched to a response spectrum for time history analys
 ### Fix
 
 1. **Update to ETABS v22.7.0 or later**:
-   - "An enhancement has been made that addresses drifts"
-   - "In the velocity and displacement time histories"
-   - "When a time history matched to a response spectrum was used"
-   - "Base line correction has been applied to the matched time histories"
    - Update to v22.7.0+
 
 2. **Reapply spectrum matching**:

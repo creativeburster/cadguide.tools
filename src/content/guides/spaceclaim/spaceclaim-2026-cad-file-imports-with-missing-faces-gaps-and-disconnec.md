@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://help.spaceclaim.com/dsm/6.0/en/Discovery/user_manual/repair_overview.html"
-  - "https://phoenix-3d-art.blogspot.com/2026/05/ansys-spaceclaim.html"
-  - "https://innovationspace.ansys.com/forum/forums/topic/spaceclaim-problem-2/"
 ---
 
 # SpaceClaim 2026 CAD File Imports with Missing Faces Gaps and Disconnected Surfaces, Loft Geometry Lost After STEP Import from Inventor, Crashes When Opening Very Large Assemblies, Split Edges Repair Tool Produces Worse Geometry, and Enclosure Creation Excludes Parts from Fluid Volume: Repair Tools Automatic Fix, Parasolid x_t Export, Lightweight Mode Virtual Memory, Selective Edge Split, and Multiple Translation Paths
@@ -31,39 +28,22 @@ When importing CAD geometry from external CAD systems into SpaceClaim, the impor
 ### Fix
 
 1. **Run Repair tools automatically**:
-   - "Use the Repair tools (Prepare > Repair)"
-   - "To automatically identify and fix"
-   - "Gaps, missing faces, and short edges"
    - Run Repair tools
 
 2. **Use Manual Fill for gaps**:
-   - "Use the Fill tool"
-   - "To manually close gaps"
-   - "That the automatic repair doesn't address"
    - Manual Fill
 
 3. **Re-export in different format**:
-   - "Try re-exporting the original CAD file"
-   - "At a different tolerance or in a different format"
-   - "STEP is generally the most reliable"
    - Re-export as STEP
 
 4. **Use Check Geometry after import**:
-   - "Select Check Geometry"
-   - "After the file is opened or imported"
    - Check geometry
    - After import
 
 5. **Check Status Log for import errors**:
-   - "The reason for the failure"
-   - "Is reported in the Status Log"
-   - "On the lower right edge"
    - Check Status Log
 
 6. **Use Repair tools in order**:
-   - "Use the tools in the order"
-   - "They are presented in the ribbon"
-   - "(left to right)"
    - Use in order
 
 7. **Use Solidify tools**:
@@ -89,47 +69,25 @@ When generating complex geometries in Inventor using the loft function and expor
 ### Fix
 
 1. **Export Parasolid (.x_t) from Inventor**:
-   - "Export a Parasolid file from Inventor"
-   - "And open that in SpaceClaim 2025"
-   - "Only one translation"
-   - "Of shape is done"
    - Use Parasolid export
 
 2. **Use Parasolid to avoid double translation**:
-   - "When opening a Parasolid file"
-   - "No translation of shape takes place"
    - Use Parasolid
    - To minimize errors
 
 3. **Try ACIS .SAT export for SpaceClaim 2023**:
-   - "SpaceClaim 2023 uses an ACIS kernel"
-   - "Export an ACIS file (*.SAT) from Inventor"
-   - "Select Version 7"
    - Use ACIS for SC2023
 
 4. **Open Inventor file directly in SpaceClaim 2023**:
-   - "Inventor uses a kernel that was"
-   - "Forked from ACIS in 2001"
-   - "Try opening the Inventor file directly"
    - In SC2023
 
 5. **Use multiple translation paths**:
-   - "Take several translation paths"
-   - "Into different documents"
-   - "Then pick and choose the parts"
-   - "That translated most cleanly"
    - Multiple paths
 
 6. **Copy and paste clean bodies**:
-   - "Select the solid bodies"
-   - "And type Ctrl-C to copy"
-   - "Switching to the final document"
-   - "And typing Ctrl-V to paste"
    - Copy clean bodies
 
 7. **Check imported geometry with section views**:
-   - "Use section views to check"
-   - "For internal geometry issues"
    - Check with
    - Section views
 
@@ -150,35 +108,19 @@ SpaceClaim crashes when opening very large assemblies. The crash occurs during t
 ### Fix
 
 1. **Increase virtual memory**:
-   - "Increase the available virtual memory"
-   - "In your Windows performance settings"
    - Increase virtual
    - Memory in Windows
 
 2. **Use Lightweight mode**:
-   - "Open large assemblies in"
-   - "SpaceClaim's Lightweight mode"
-   - "If available, which loads"
-   - "Simplified geometry representations"
    - Use Lightweight mode
 
 3. **Split into sub-assemblies**:
-   - "Split very large assemblies"
-   - "Into sub-assemblies"
-   - "And prepare each separately"
-   - "Before recombining"
    - Split assemblies
 
 4. **Defeature before import**:
-   - "Remove simulation-irrelevant features"
-   - "Using Prepare > Defeaturing"
-   - "Or manual deletion"
    - Defeature first
 
 5. **Use improved import for large assemblies**:
-   - "Expanded import format support"
-   - "Including improved translation"
-   - "Of large assemblies"
    - Use 2026 import
 
 6. **Check available RAM**:
@@ -210,23 +152,12 @@ When using the Split Edges repair tool to fix imported geometry, some parts are 
 ### Fix
 
 1. **Exclude bad outcome points**:
-   - "When you are repairing using Split Edges"
-   - "You can exclude the points"
-   - "That result in a bad outcome"
    - Exclude bad points
 
 2. **Use multiple translation paths**:
-   - "Take several translation paths"
-   - "Into different documents"
-   - "Then pick and choose"
-   - "The parts that translated most cleanly"
    - Multiple paths
 
 3. **Copy and paste clean bodies**:
-   - "Select the solid bodies"
-   - "Type Ctrl-C to copy"
-   - "Switch to the final document"
-   - "Type Ctrl-V to paste"
    - Copy clean bodies
 
 4. **Try inexact edges carefully**:
@@ -248,8 +179,6 @@ When using the Split Edges repair tool to fix imported geometry, some parts are 
    - Verify improvement
 
 7. **Use Combine tool for overlaps**:
-   - "Use Fill and Combine"
-   - "To close gaps and resolve overlaps"
    - Use Combine
    - For overlaps
 
@@ -276,17 +205,9 @@ The enclosure creation algorithm may not properly handle geometry with import er
    - Creating enclosure
 
 2. **Use multiple translation paths**:
-   - "Take several translation paths"
-   - "Into different documents"
-   - "Pick and choose the parts"
-   - "That translated most cleanly"
    - Multiple paths
 
 3. **Copy and paste clean bodies**:
-   - "Select the solid bodies"
-   - "Type Ctrl-C to copy"
-   - "Switch to the final document"
-   - "Type Ctrl-V to paste"
    - Copy clean bodies
 
 4. **Repair geometry before enclosure**:
@@ -302,14 +223,10 @@ The enclosure creation algorithm may not properly handle geometry with import er
    - Solid bodies
 
 6. **Check for internal geometry issues**:
-   - "Use section views to check"
-   - "For internal geometry issues"
    - Check internal
    - Geometry
 
 7. **Use Combine to resolve overlaps**:
-   - "Use Fill and Combine"
-   - "To close gaps and resolve overlaps"
    - Resolve overlaps
    - Before enclosure
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forum.librecad.org/Import-Error-error-opening-DXF-DWG-file-1767-td5725137.html"
-  - "https://forum.librecad.org/Import-error-error-reading-DXF-DWG-sections-td5721715.html"
-  - "https://forum.librecad.org/Importing-to-Trueview-2024-gives-error-with-Leader-td5725489.html"
 ---
 
 # LibreCAD DXF Import and Entity Selection Errors: DXF Files Cannot Be Opened After Windows Reinstall from libdxfrw Library Bug Requiring Version Update, Large DXF Import Fails with Hatch Gap Errors from Non-Closed Contours Requiring QCAD Intermediate, Leader Entity Not Fully Deleted from DXF Causing TrueView Import Failure Requiring Manual Section Removal, Duplicate Tool Cannot Select Entity from Bounding Box Copy Bug Requiring Select-First Workaround, and DXF Version Compatibility from AC1027 and Newer Unsupported Features Requiring Downgrade Export
@@ -31,26 +28,21 @@ This is a known bug (#1767) in LibreCAD's libdxfrw library. The bug affects DXF 
 ### Fix
 
 1. **Update to the latest LibreCAD version**:
-   - "Identical error was reported as bug #1767 in GitHub and was fixed on May 12"
    - Download the latest version from LibreCAD.org
    - Try the latest alpha or nightly build if stable doesn't work
    - The fix is in the libdxfrw library
 
 2. **Use QCAD as a workaround**:
-   - "QCAD does open them"
    - Open the DXF file in QCAD (free version)
    - Save from QCAD
    - Open the QCAD-saved file in LibreCAD
 
 3. **Check for missing LibreCAD settings**:
-   - "I realise the installation is not identical, and I have a few missing pieces in the new LibreCAD settings"
    - After Windows reinstall, LibreCAD settings may be missing
    - Reset to default settings: Edit > Application Preferences > Reset
    - Restart LibreCAD
 
 4. **Share the file with developers**:
-   - "Could you share an example dxf file? You may directly email me one"
-   - "I will delete it after my troubleshooting"
    - Email the problematic DXF to the LibreCAD development team
    - This helps diagnose and fix the library bug
 
@@ -83,21 +75,15 @@ LibreCAD is very strict about hatch contour closure. "LibreCAD is very strict he
 ### Fix
 
 1. **Use QCAD as intermediate**:
-   - "One option is to try the latest QCAD version. They have still a free version"
-   - "When QCAD opens the files flawlessly, but misses tools you have to pay for"
-   - "You possibly can export smaller portions to use with LibreCAD then"
    - Open in QCAD, save, then open in LibreCAD
 
 2. **Use DWG TrueView for export**:
-   - "I can view the file in DWG TrueView"
    - Open the file in DWG TrueView
    - Use TrueView's Export to save as a simpler DXF
    - Try opening the simplified DXF in LibreCAD
 
 3. **Locate and fix hatch gaps**:
-   - "The error message should provide the length and coordinates of the gap to locate them"
    - Note the gap coordinates from the error message
-   - "We have no strategy or tool to solve this automatically"
    - Open in a text editor and fix the hatch contour coordinates
 
 4. **Remove hatches before import**:
@@ -113,9 +99,6 @@ LibreCAD is very strict about hatch contour closure. "LibreCAD is very strict he
    - Open each smaller file in LibreCAD
 
 6. **Check DXF version compatibility**:
-   - "The AC1021 stands for AutoCAD 2007, this is a version supported by our libdxfrw library"
-   - "My hope was that it is a newer version and providing an older one could solve the issue"
-   - "But as it is already 2007 this hope is gone"
    - If the DXF is newer than 2007, downgrade in TrueView
 
 ### Community Report
@@ -134,12 +117,7 @@ When a Leader entity is deleted in LibreCAD, the DXF file sometimes retains the 
 
 ### Fix
 
-1. **Manually delete the broken Leader section**:
-   - "I decided to manually change the layer in the DXF file one Leader section at a time"
-   - "Opening LibreCAD between each change, so I could identify which block of text was which Leader"
-   - "The 2nd one I changed didn't show up in the drawing on any layer"
-   - "I concluded it must have been one I had previously deleted"
-   - "I manually deleted the whole section, saved the file and the DXF opens in TrueView without problems"
+1. **Manually delete the broken Leader section**.
 
 2. **Identify the broken Leader**:
    - Open the DXF in a text editor (PSPad, Notepad++)
@@ -154,15 +132,11 @@ When a Leader entity is deleted in LibreCAD, the DXF file sometimes retains the 
    - Verify in TrueView
 
 4. **Re-create Leaders after deletion**:
-   - "If I go back and delete and re-do my Leaders, I eventually hit on the one causing the problem"
-   - "And opening in Trueview works"
    - Delete all Leaders in LibreCAD
    - Re-create them from scratch
    - Save and verify in TrueView
 
 5. **Report the bug to LibreCAD**:
-   - "The root cause seems to be because the Leader section is not being deleted completely from the DXF file sometimes"
-   - "Has this come up in other threads?"
    - Report on GitHub with example DXF file
    - This is a DXF writer bug in LibreCAD
 
@@ -189,7 +163,6 @@ Drawing a simple line in LibreCAD. Pressing the Duplicate tool. LibreCAD says "S
 ### Fix
 
 1. **Use the select-first workaround**:
-   - "A. (Workaround): 1. Draw a line. 2. Select line. 3. Press duplicate (this duplicates the line, now we have two overlapped lines). 4. Select line and press move tool (without keep originals) — you will see the duplicated line"
    - Select the entity BEFORE pressing Duplicate
    - This bypasses the selection bug
    - The duplicate is created even though the UI doesn't show it
@@ -201,20 +174,16 @@ Drawing a simple line in LibreCAD. Pressing the Duplicate tool. LibreCAD says "S
    - Specify the destination point
 
 3. **Update to the latest version**:
-   - "The fix: copying the bounding box after calling RS_Entity::init()"
    - The fix has been identified
    - Check if it's in the latest alpha build
    - Update to LibreCAD 2.2.2+ when available
 
 4. **Check offset settings**:
-   - "Did you set offset in the option tool? I feel you might have some invalid offset values in use"
    - Go to Edit > Application Preferences > Modify Tools
    - Check the Duplicate offset values
    - Reset to default if invalid
 
 5. **Restart LibreCAD after encountering the bug**:
-   - "When you exit from duplicate, it also affects other tools"
-   - "For example, when you select move/copy tool you can't select the line"
    - Restart LibreCAD to clear the invalid entity state
    - Save work before restarting
 
@@ -270,11 +239,9 @@ LibreCAD uses the libdxfrw library to read DXF files. The library supports DXF v
 5. **Check for unsupported features**:
    - Even if the DXF version is supported
    - Specific features (dynamic blocks, annotative objects, etc.) may not be
-   - "Could be the file version, possibly too new, with unsupported features"
    - Remove unsupported features in AutoCAD before export
 
 6. **Report unsupported features**:
-   - "Eventually TrueView can provide these info"
    - Check what features the DXF contains
    - Report unsupported features on LibreCAD GitHub
    - This helps improve libdxfrw compatibility

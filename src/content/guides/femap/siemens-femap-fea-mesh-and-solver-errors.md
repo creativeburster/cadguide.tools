@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000ZrYy1KAF/request-help-on-mesh-repair"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000cytweKAA/-user-fatal-message-316-ifpdrv-illegal-data-on-bulk-data-entry-blseg"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000cryYgKAI/plate-element-bonding-error-fatal-message-9137-and-pivot-ratio-issue"
 ---
 
 # Siemens Femap FEA Mesh and Solver Errors: Mesh Repair from Rogue Nodes and Poor Element Quality Requiring Meshing Toolbox and Geometry Slicing, USER FATAL MESSAGE 316 BLSEG from Connection Region GUI Mismatch Requiring Recreation, FATAL MESSAGE 9137 Plate Element Bonding and Excessive Pivot Ratios from Unconstrained Model Requiring SOL 103 Diagnosis, Run Time Elemental Errors from Tria with 4 Nodes and Non-Connected Nodes Requiring Pre-Analysis Detection, and Mesh Distortion from Uneven Element Transitions Requiring Mapped Mesh or Biasing
@@ -31,38 +28,27 @@ The automatic mesher placed a node in the middle of the rib segment due to meshi
 ### Fix
 
 1. **Use the Meshing Toolbox**:
-   - "If there is short edge, you can give a try combining curve in meshing toolbox"
    - Use Mesh > Meshing Toolbox
    - Use the Combine Curves tool to merge short edges
    - Use the Move Node tool to relocate the rogue node
    - Use the Delete Element tool to remove bad elements
 
 2. **Slice the geometry into smaller parts**:
-   - "A 'trick' is to slice the plate in many, many parts"
-   - "This helps the mesher to create a quality mesh"
    - Use Geometry > Surface > Break to split surfaces
    - Create smaller, simpler meshing regions
 
 3. **Use CBEAM elements for triangular ribs**:
-   - "I suggest to mesh the triangular pattern with 1-D CBEAM elements, is very easy"
    - Instead of solid meshing the ribs
    - Use beam elements to represent the ribs
    - This avoids the meshing challenge entirely
 
 4. **Use CHEXA extruded elements**:
-   - "You can mesh perfectly triangular pattern with 3-D SOLID CHEXA elements"
-   - "Extruding a 2-D QUAD4 (PLOT PLANAR) mesh to create the solid elements"
-   - "With two elements in the thickness"
    - Create a 2D mesh first, then extrude to 3D
 
 5. **Reduce element size for parabolic elements**:
-   - "If you insist to mesh with 3-D Solid CTETRA 10-nodes high order parabolic elements"
-   - "You need to reduce the element size to have 'at least' two elements in the wall thickness"
-   - "To account for stress gradient"
    - Smaller elements improve quality but increase solve time
 
 6. **Replicate mesh with COPY or REFLECT**:
-   - "You can mesh locally a portion and replicate using command MESH > COPY or MESH > REFLECT"
    - Mesh one rib segment perfectly
    - Copy/reflect to other segments
    - This ensures consistent quality across all ribs
@@ -84,32 +70,25 @@ Using Femap 2412. Error: "USER FATAL MESSAGE 316 (IFPDRV) ILLEGAL DATA ON BULK D
 ### Fix
 
 1. **Check the Nastran output file (.f06)**:
-   - "The reason of the error is explained in the nastran output file *.f06"
    - Open the .f06 file
    - Find the BLSEG error details
    - Identify which BLSEG entry has illegal data
 
 2. **Compare GUI settings with input file**:
-   - "The settings shown in the Preview Analysis Input File were different from what I had configured"
    - Use Model > Analysis > Preview Analysis Input File
    - Compare the BLSEG entries with GUI settings
    - Identify discrepancies
 
 3. **Delete and recreate Connection Regions**:
-   - "I was able to resolve the issue by identifying the incorrect Connection Region entries in the preview file"
-   - "Deleting them, and then recreating those Connection Regions from scratch"
-   - "After that, the analysis ran without errors"
    - Delete the problematic Connection Regions
    - Recreate them from scratch
 
 4. **Verify analysis type compatibility**:
-   - "The options to select in FEMAP are dependent of the analysis type"
    - Ensure the Connection Region type is compatible with the analysis type
    - GLUE and CONTACT EDGE options vary by analysis sequence
    - Check the Femap documentation for compatible options
 
 5. **Post the model for developer investigation**:
-   - "Please post here your FEMAP model to investigate the problem in depth by FEMAP developers"
    - If the issue persists after recreation
    - Share the model on the Siemens Community
    - Femap developers monitor the forum
@@ -131,38 +110,25 @@ Two plate (shell) elements bonded together in Femap. Running analysis produces: 
 ### Fix
 
 1. **Run SOL 103 normal modes analysis**:
-   - "The simply method is to run a normal modes/eigenvalue analysis (SOL103)"
-   - "The animation of first natural frequency (with a value of 0 Hz) will tell you where is the problem"
    - A 0 Hz mode indicates a rigid body motion
    - Animate the mode to see which part is free to move
 
 2. **Use PARAM,BAILOUT,-1**:
-   - "By using SOL 103 together with PARAM,BAILOUT,-1"
-   - "I'm able to clearly pinpoint where constraint issues exist"
    - This parameter forces Nastran to continue despite errors
    - Allowing you to identify all problem areas
 
 3. **Merge coincident nodes**:
-   - "Have you merged coincident nodes between plates?"
-   - "I suggest to use always the classical method of node merging"
    - Use Mesh > Geometry > Merge Coincident Nodes
    - This ensures plates are properly connected
 
-4. **Use node merging instead of GLUE for critical stresses**:
-   - "GLUE should be used in areas where stresses are not critical"
-   - "If I have to compute stresses for fatigue analysis in seam welds"
-   - "The use of GLUE is forgiven, not at all"
-   - "Classical node merging is the correct procedure"
+4. **Use node merging instead of GLUE for critical stresses**.
 
 5. **Relax PARAM MAXRATIO**:
-   - "You can try relaxing param maxratio default value"
    - This allows the solver to proceed with higher pivot ratios
    - Use with caution — results may be less accurate
    - Fix the root cause instead if possible
 
 6. **Check CROD element DOF**:
-   - "Remember CROD elements do not have rotational DOF, all is articulated"
-   - "So the stiffness matrix is singular, the user forgot to create diagonal bars"
    - If using CROD elements, add diagonal bars for stability
    - Or use CBEAM elements which have rotational DOF
 
@@ -183,19 +149,15 @@ When meshing from plates, several errors occur: tria elements with 4 nodes inste
 ### Fix
 
 1. **Use Femap's built-in element quality check**:
-   - "The inbuilt error detecting program of Femap does it within few minutes"
-   - "But only when we run the Program"
    - Use Model > Check > Element Quality
    - This identifies problematic elements before analysis
 
 2. **Set solver GEOM CHECK to NONE**:
-   - "From solver side, there is option of geom check as none to skip element quality"
    - This skips element quality checking during analysis
    - Use only if you're confident the elements are acceptable
    - Not recommended for production analysis
 
 3. **Use the API for pre-analysis error detection**:
-   - "Is there any way to call this inbuilt program of Femap that detects run time error without running the analysis?"
    - Write an API script to check elements before analysis
    - Access Femap's element quality checking via API
    - This saves time by catching errors early
@@ -219,7 +181,6 @@ When meshing from plates, several errors occur: tria elements with 4 nodes inste
    - Verify with Model > Check > Element Quality
 
 7. **Avoid editing mesh after creation**:
-   - "This happens when we merge some nodes or we change some plate after meshing"
    - Minimize post-meshing edits
    - If edits are necessary, re-check element quality
    - Consider remeshing the affected region
@@ -241,37 +202,25 @@ The mesh transition from coarse (central area) to fine (curve 3) is too abrupt. 
 ### Fix
 
 1. **Use mapped mesh for transitions**:
-   - "Create a nice mapped mesh at the density you want in the coarse area"
-   - "First, create a nice mapped mesh at the density you want"
    - Use Mesh > Geometry > Mapped Mesh
    - This creates structured mesh with controlled transitions
 
 2. **Use mesh biasing for transitions**:
-   - "Set Mesh Sizing on the curves to what you want transition wise"
-   - "Leverage mesh biasing to help the transition from coarse to fine"
    - Use Mesh > Mesh Sizing > Biased
    - This creates gradual transitions
 
 3. **Start with even number of divisions**:
-   - "To improve mesh quality of transition elements the 'trick' is to start with EVEN number of element divisions"
    - Even divisions create better transition patterns
    - Odd divisions create problematic transition elements
    - Use 2, 4, 6, 8... divisions instead of 3, 5, 7...
 
 4. **Use Body/On Mesh Mesher (STAR-CCM+ technology)**:
-   - "Use the Body/On Mesh Mesher (STAR-CCM+ technology)"
-   - "You can achieve some really nice transitions"
    - This mesher handles transitions better than the default
    - Available in newer Femap versions
 
-5. **Create an internal rectangular region via API**:
-   - "Using the API, I created an internal rectangular region"
-   - "One of the longest sides coinciding with curve 3"
-   - "This area is like a cage and behaves like a barrier"
-   - "That prevents the nodes close to curve 3 from dragging those in the central area"
+5. **Create an internal rectangular region via API**.
 
 6. **Slice the geometry for better meshing**:
-   - "The 'trick' is to slice the plate in many, many parts"
    - Break the cylinder section into smaller patches
    - Mesh each patch separately
    - This gives better control over transitions

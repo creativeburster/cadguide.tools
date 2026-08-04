@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.glovius.com/support/release-notes/"
-  - "https://www.glovius.com/cad-viewer/"
-  - "https://www.glovius.com/support/online-help/measure-cad-model/"
 ---
 
 # Glovius 2026 CATIA V5-6 2026 and Parasolid 38.1 Support, Compare Part-Level Attributes and Hierarchical Product Structure, Thickness Analysis Performance Improvements, Monolithic Assembly Open in New Window, and UNDO REDO for Measurements and Markups: CAD Format Update, Compare Enhancement, Thickness Speed, Assembly Window, and Measurement Undo
@@ -31,15 +28,10 @@ When attempting to open CATIA V5-6 2026 files in Glovius, the files fail to load
 ### Fix
 
 1. **Update to Glovius 2026 or later**:
-   - "New CAD Formats: Added support for CATIA V5-6 2026"
-   - "Parasolid 38.1, and Solid Edge 2026"
    - Update to the latest Glovius version
    - For the newest CAD format support
 
 2. **Check supported CAD formats**:
-   - "Glovius supports Parts and Assembly files from"
-   - "CATIA V5 and CATIA V6, NX, Creo, SolidWorks, Inventor, Solid Edge"
-   - "Glovius also supports STEP, DWG, DXF, IGES, & JT files"
    - Verify your CAD format is supported
 
 3. **Use STEP as fallback format**:
@@ -67,8 +59,6 @@ When attempting to open CATIA V5-6 2026 files in Glovius, the files fail to load
    - At support@glovius.com
 
 7. **Use Glovius Cloud as alternative**:
-   - "Glovius is available on Windows, iOS, Android"
-   - "And on cloud.glovius.com"
    - Try Glovius Cloud
    - Which may have the latest format support
 
@@ -89,8 +79,6 @@ When using the Compare feature in Glovius to compare two CAD files, the comparis
 ### Fix
 
 1. **Update to Glovius 2026 or later**:
-   - "Compare: Added support for Part-Level Attributes"
-   - "And Hierarchical Product Structure Comparison"
    - Update to 2026
    - For attribute and structure comparison
 
@@ -107,7 +95,6 @@ When using the Compare feature in Glovius to compare two CAD files, the comparis
    - (added/removed components)
 
 4. **Export Compare results**:
-   - "Export Compare results to HTML"
    - Export the comparison results
    - To HTML for documentation
    - And sharing
@@ -147,7 +134,6 @@ Thickness Analysis in Glovius is slow, especially for large or complex CAD parts
 ### Fix
 
 1. **Update to Glovius 2026 or later**:
-   - "Thickness Analysis: Performance improvements"
    - Update to 2026
    - For faster Thickness Analysis
 
@@ -157,20 +143,13 @@ Thickness Analysis in Glovius is slow, especially for large or complex CAD parts
    - For large and complex parts
 
 3. **Export Thickness Analysis results**:
-   - "Export Thickness Analysis results to HTML and PDF"
-   - "For easy sharing and documentation"
    - Export results for documentation
    - After analysis
 
 4. **Use Assembly Thickness Analysis**:
-   - "Assembly Support in Thickness Analysis"
-   - "Thickness Analysis now supports assemblies"
-   - "Allowing you to perform analyses on your entire product"
    - Use assembly-level analysis
 
 5. **Analyze material distribution**:
-   - "Compute the material distribution in a part"
-   - "To identify areas of material optimization"
    - Use Thickness Analysis
    - For material optimization
 
@@ -203,8 +182,6 @@ When working with monolithic assemblies in Glovius, users couldn't open the asse
 ### Fix
 
 1. **Update to Glovius 2026 or later**:
-   - "Assemblies: Added 'Open in New Window' support"
-   - "For Monolithic Assemblies"
    - Update to 2026
    - For monolithic assembly window support
 
@@ -227,21 +204,15 @@ When working with monolithic assemblies in Glovius, users couldn't open the asse
    - On multiple monitors
 
 5. **Use new keyboard shortcuts**:
-   - "Shortcuts: New keyboard shortcuts"
-   - "For Isolate, Hide, and Show All"
    - Use the new shortcuts
    - For faster workflow
 
 6. **Use Cylindrical Bounding Box**:
-   - "Analyze: Added support for Cylindrical Bounding Box"
    - Use the new Cylindrical Bounding Box
    - For analysis of cylindrical parts
    - In the new window
 
 7. **Use Automatic Exploded View**:
-   - "The one-click Automatic Exploded View"
-   - "Has been updated with a new algorithm"
-   - "For exploding assemblies"
    - Use the improved exploded view in new windows
 
 ### Community Report
@@ -261,8 +232,6 @@ When taking measurements or creating markups in Glovius, mistakes can't be undon
 ### Fix
 
 1. **Update to Glovius 2026 or later**:
-   - "UNDO/REDO – Added UNDO and REDO support for Measurements"
-   - "UNDO/REDO – Added UNDO and REDO support for Markups"
    - Update to 2026
    - For undo/redo support
 
@@ -279,27 +248,18 @@ When taking measurements or creating markups in Glovius, mistakes can't be undon
    - That you still want
 
 4. **Use Assistive Measurement**:
-   - "Quickly measure models and features with Assistive Measurement"
    - Use Assistive Measurement
    - For faster measurement workflow
    - With undo support
 
 5. **Use Tape Measure for continuous measurement**:
-   - "Tape Measure for continuous measurement"
-   - "Of edges and curves"
    - Use Tape Measure
    - With undo/redo support
 
 6. **Filter measurement entities**:
-   - "Filter points, edges, and faces for measurement"
-   - "18 predefined selection tools"
-   - "For fast and accurate measurement"
    - Use filters to avoid incorrect measurements
 
 7. **Use redesigned BOM dialog**:
-   - "The Bill of Materials (BOM) dialog"
-   - "Has been redesigned for better performance"
-   - "And a more intuitive user experience"
    - Use the improved BOM dialog
 
 ### Community Report

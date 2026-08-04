@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://blenderartists.org/t/clo-3d-to-blender-workflow/1519983"
-  - "https://support.clo3d.com/hc/en-us/articles/23206278838681-How-to-Prevent-CLO-File-Corruption"
-  - "https://hub.virtamate.com/threads/issue-with-unrealistic-physical-effects-during-self-made-clothing-creation-%EF%BC%88ai-translated%EF%BC%89.65368/"
 ---
 
 # CLO 3D Avatar Dressing Fabric Simulation and Export Errors: Low-Poly Retopology from CLO to Blender Loses Details from Triangle Topology, Fabric Simulation Buckling Stretching from Default Low Stiffness and Triangular Mesh, USD Export Workflow for Garment Simulation Data and Avatar Animation Cache, File Corruption from Insufficient Disk Space and Multiple CLO Instances, and OBJ Export Missing Fabric Textures from CLO No Longer Supporting JPEG Fabric Files
@@ -31,13 +28,11 @@ CLO 3D exports triangular mesh topology. Triangular meshes don't reduce cleanly 
 ### Fix
 
 1. **Produce lower density in CLO first**:
-   - "Best way is to produce them in some lower density in the first place or by using parameters"
    - Adjust the mesh resolution in CLO before exporting
    - Use CLO's built-in mesh reduction tools
    - This preserves garment structure better than post-export reduction
 
 2. **Manual retopology in Blender**:
-   - "There's no magic which will keep all details in 3900 tris. Make retopo by hands with keeping all necessary details"
    - Use Blender's retopology tools (Poly Build, Edge Loop, etc.)
    - Manually preserve critical details (buttons, seams, trims)
    - This is labor-intensive but produces the best results
@@ -46,7 +41,6 @@ CLO 3D exports triangular mesh topology. Triangular meshes don't reduce cleanly 
    - Export the high-poly garment from CLO
    - Create a low-poly version manually in Blender
    - Bake normal maps from high to low
-   - "If normal maps are in the game, then there shouldn't be any problems if cloth doesn't have self-collision spots"
    - Fix self-collisions in CLO before baking
 
 4. **Export without trims and graphics**:
@@ -55,7 +49,6 @@ CLO 3D exports triangular mesh topology. Triangular meshes don't reduce cleanly 
    - Apply textures to the low-poly mesh in Blender
 
 5. **Reduce button and trim polygon count**:
-   - "Is there a possibility to reduce the polygon count of trims and buttons?"
    - CLO doesn't offer direct polygon reduction for trims
    - Replace high-poly trims with simple geometry + texture
    - Export trims separately and simplify in Blender
@@ -85,7 +78,6 @@ CLO 3D's default fabric properties have low stiffness values. The triangular mes
    - Test simulation in CLO to verify realistic behavior
 
 2. **Retopologize to quadrilateral polygons**:
-   - "Could this be due to CLO3D's default triangular topology during export? Would retopology to quadrilateral polygons resolve this issue?"
    - Export from CLO, then retopologize in Blender to quad topology
    - Quad meshes simulate more stably in most physics engines
    - Use Blender's retopology tools or add-ons
@@ -95,7 +87,6 @@ CLO 3D's default fabric properties have low stiffness values. The triangular mes
      - Stiffness multiplier
      - Stretch resistance
      - Compression resistance
-   - "I attempted to adjust its stiffness and compression properties to maximum values in VAM, but observed no improvement"
    - The issue may be in the mesh topology, not just the properties
 
 4. **Use CLO's fabric presets**:
@@ -155,7 +146,6 @@ CLO's USD export has multiple options that affect what data is included. The USD
 
 5. **Cache Animation option**:
    - Enable "Cache Animation" to save pattern cache animation
-   - "Pattern Cache Animation is exported as a mesh itself, there is no separate Animation Type prim"
    - This bakes the garment animation into the mesh
 
 6. **Set Prim Paths**:
@@ -194,38 +184,29 @@ Multiple causes:
 ### Fix
 
 1. **Maintain at least 20GB free disk space**:
-   - "If disk space is insufficient during the process of designing and saving garments, file corruption may actually occur"
    - Regularly delete or back up unnecessary files
    - Monitor disk space during long sessions
 
 2. **Run only one CLO instance at a time**:
-   - "If you use two or more CLO software at the same time, there is a possibility that the internal data of the CLO project file may be lost or corrupted"
    - Close one instance before opening another
    - Save the final result with only one CLO running
 
 3. **Configure security software**:
-   - "Change the CLO software's Internet access and file read/write settings to 'Allow'"
    - Add CLO to antivirus exclusions
    - For enterprise users, contact IT/Security department
 
 4. **Avoid external storage for active work**:
-   - "File corruption may occur while reading or writing CLO files on external storage"
    - Work on local drives only
    - Transfer to external storage after saving and closing
 
 5. **Exclude CLO folders from cloud sync**:
-   - "Set cloud sync to sync only specific folders, excluding folders referenced by CLO software"
    - Disable syncing Desktop and Documents folders
    - Cloud sync may remove or damage files during sync
 
 6. **Check file size for corruption**:
-   - "If your files are smaller than expected, the internal data may be corrupted"
-   - "If your project file is less than 1MB, it cannot be recovered because all clothing data has been lost"
    - Compare with expected file size (~20MB for basic t-shirt + avatar)
 
 7. **Divide long animations into sections**:
-   - "When recording animations of flashy, heavy garments, the animation recording data may be fragile"
-   - "Dividing the entire scene into sections will help prevent file corruption"
    - Save each section as a separate file
 
 8. **Check disk health**:
@@ -257,7 +238,6 @@ CLO no longer supports JPEG files for fabrics. The fabric texture references in 
 
 2. **Use USD export instead of OBJ**:
    - USD export includes materials and textures
-   - "When exporting the Material, a Texture folder is created within the directory where the USD is saved"
    - All related textures are saved in the Texture folder
    - Import USD into Blender with textures intact
 
@@ -267,7 +247,6 @@ CLO no longer supports JPEG files for fabrics. The fabric texture references in 
    - Apply the texture in Blender
 
 4. **Purchase CLO fabric kit**:
-   - "You now have to spend $5K for their fabric kit to render your own textiles"
    - CLO's fabric kit includes proper texture export capabilities
    - This is a paid solution for professional workflows
 

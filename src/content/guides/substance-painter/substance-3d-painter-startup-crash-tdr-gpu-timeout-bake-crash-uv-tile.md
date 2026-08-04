@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/startup-issues/crash-or-freeze-during-startup"
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/gpu-issues/gpu-drivers-crash-with-long-computations-tdr-crash"
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-while-baking"
 ---
 
 # Substance 3D Painter Startup Crash, TDR GPU Timeout, Bake Crash, UV Tile Errors, and Export Crash: GPU Driver Compatibility and Registry TDR Fix, Disable GPU Raytracing for Bake Stability, Ryzen BIOS Update, UV Tile Mask Refresh, and Insufficient Disk Space Corruption
@@ -31,14 +28,12 @@ Substance 3D Painter crashes or freezes during startup. The application either d
 ### Fix
 
 1. **Force Painter to use the discrete GPU**:
-   - "If the application doesn't start on the right GPU it might lead to stability issues"
    - Windows Settings > System > Display > Graphics settings
    - Add Substance 3D Painter to the list
    - Set to "High performance" (discrete GPU)
    - Or use NVIDIA Control Panel > Manage 3D Settings
 
 2. **Update GPU drivers to the latest version**:
-   - "We recommend to use the latest GPU drivers when available"
    - NVIDIA: Download from NVIDIA website or GeForce Experience
    - AMD: Download from AMD website
    - Intel: Download from Intel website
@@ -52,21 +47,17 @@ Substance 3D Painter crashes or freezes during startup. The application either d
    - Avoid these specific driver versions
 
 4. **Fix incorrect system Path/Python Path**:
-   - "The application checks the system Path to load Python modules"
-   - "If the system has an incorrect setup it can lead to a crash"
    - Check system environment variables
    - Remove conflicting Python paths
    - Remove conflicting DLL paths
 
 5. **Fix crash on older versions (2018/4.x or older)**:
-   - "On Windows, version 2018 (4.x) or older may not start because one of the dll file provided with the installation folder is too old"
    - Navigate to Substance Painter installation folder
    - Rename `libeay32.dll` to `backup_libeay32.dll`
    - Download the updated `libeay32.dll` from Adobe
    - Extract into the installation folder
 
 6. **Check for crash on Nvidia GTX 10xx series**:
-   - "Crash during startup on Nvidia GTX 10xx series"
    - Update to the latest Painter version
    - Update GPU drivers
    - If persistent, use the previous version
@@ -94,7 +85,6 @@ During long GPU computations (baking, exporting, rendering), Substance 3D Painte
 ### Fix
 
 1. **Increase TdrDelay in the Windows Registry**:
-   - "Change both TdrDelay and TdrDdiDelay to a higher value (like 60 seconds)"
    - Open Registry Editor (regedit)
    - Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\GraphicsDrivers`
    - Right-click > New > DWORD (32bit) Value
@@ -108,19 +98,16 @@ During long GPU computations (baking, exporting, rendering), Substance 3D Painte
    - Double-click, set Base to Decimal, set value to 60
 
 3. **Restart the computer**:
-   - "The TdrValue is only looked at when the computer start, so to force a refresh a reboot is necessary"
    - Close all applications
    - Restart (not shutdown + power on)
    - The new TDR values take effect
 
 4. **If crashes persist, increase further**:
-   - "If the application still crashes when doing a long computation, try increasing the delay from 60 to 120"
    - Set both TdrDelay and TdrDdiDelay to 120
    - Restart the computer
    - Test again
 
 5. **Beware of Windows/GPU driver updates resetting TDR**:
-   - "These Keys can be reset to their default value by Windows updates or GPU Drivers updates"
    - After any Windows or GPU driver update
    - Check the TDR values
    - Re-apply if reset
@@ -137,7 +124,6 @@ During long GPU computations (baking, exporting, rendering), Substance 3D Painte
    - Double-click to apply after updates
 
 7. **Revert TDR to defaults if needed**:
-   - "Set the TdrDelay to 2s and the TdrDdiDelay to 5s"
    - Or remove the TdrDelay and TdrDdiDelay keys
    - Restart the computer
 
@@ -158,29 +144,18 @@ Two main causes: (1) "On some GPU with unstable drivers, the baking process may 
 ### Fix
 
 1. **Disable GPU raytracing**:
-   - "Use Edit > Settings to open the main settings"
-   - "Under General scroll down to the section named Baking Options"
-   - "Uncheck/Disable the option Enable GPU raytracing"
    - This forces CPU-based raytracing
    - More stable but slower
 
 2. **Update BIOS for Ryzen CPUs**:
-   - "An update of the BIOS usually fix the problem"
-   - "Many Motherboard constructors have issued new BIOS updates"
-   - "Refer to the Motherboard manual and constructor website"
    - Update to the latest BIOS version
    - This fixes the Ryzen multi-threading crash
 
 3. **Delete corrupted .assbin files**:
-   - "High-poly meshes are pre-processed into *.assbin files"
-   - "In some rare cases, loading these files may crash the application"
-   - "Simply deleting them should solve the problem"
    - Find .assbin files in the project cache
    - Delete them and re-bake
 
 4. **Disable in-progress baking viewport display**:
-   - "By default Substance 3D Painter display in the viewport the in-progress state of the baking"
-   - "On some computers this feature may lead to instabilities"
    - Disable in-progress display in Settings
    - This reduces GPU load during baking
 
@@ -219,14 +194,12 @@ UV tile handling in Substance Painter has several known issues: (1) "Height comb
 ### Fix
 
 1. **Manually refresh the height combination mask**:
-   - "Height combination mask is not refresh with UV Tile mask"
    - After changing a UV tile mask
    - Manually refresh the height combination mask
    - Toggle the mask visibility off and on
    - Or re-select the mask layer
 
 2. **Check for overlapping UV spaces manually**:
-   - "No error message on overlapping UV spaces with a specific mesh"
    - Don't rely on automatic error detection
    - Check UV layout in the UV view
    - Ensure no tiles overlap
@@ -239,31 +212,26 @@ UV tile handling in Substance Painter has several known issues: (1) "Height comb
    - Or use the naming convention for individual tiles
 
 4. **Apply anchor point alpha to all tiles**:
-   - "Anchor point's extracted alpha ignored by other tiles"
    - Create separate anchor points per tile
    - Or manually copy the alpha to other tiles
    - Use a fill layer with the alpha as a mask
 
 5. **Fix single image filling other UV tiles**:
-   - "Image sequence with a single image also fills other UV Tiles"
    - Don't use image sequence for a single image
    - Import as a regular image
    - Apply to the specific tile only
 
 6. **Use matching by name suffix carefully**:
-   - "Matching by name suffix interpretation is wrong"
    - Check the name suffix matching
    - Ensure names follow the convention
    - Verify the correct textures are matched
 
 7. **Check UV seams after mesh reimport**:
-   - "UV seams do not appear after mesh reimport"
    - After reimporting a mesh
    - Check UV seams in the UV view
    - Re-bake if seams are missing
 
 8. **Check displacement export with UV tiles**:
-   - "Displacement not exported with specific UV tiles set up"
    - Verify displacement maps are exported for all tiles
    - Check export settings
    - Export per-tile if needed
@@ -291,7 +259,6 @@ Two main causes: (1) TDR timeout — "The Timeout Detection and Recovery (TDR) i
    - This prevents TDR crashes during export
 
 2. **Check disk space before exporting**:
-   - "Saving with insufficient disk space can crash or corrupt projects"
    - Check available disk space
    - Ensure at least 2x the expected export size is free
    - Clear temporary files

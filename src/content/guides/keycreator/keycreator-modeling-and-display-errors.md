@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
-  - "https://forum.kubotekkosmos.com/Posts/7/Models-are-visually-going-into-wireframe"
-  - "https://forum.kubotekkosmos.com/Posts/18/Solids-look-semitransparent"
-  - "https://help.kubotekkosmos.com/KeyCreator/2025SP2/A10031"
 ---
 
 # KeyCreator Modeling and Display Errors: Models Going Into Wireframe from Body Corruption Requiring Clean Body or STEP Reimport, Solids Appear Semitransparent from Material Override Requiring Layer Toggle or Unset Material, PRT to CKD Conversion Problems from CADKEY Legacy Format Requiring Manual Fix, Import Gap Errors from Precision Mismatch Requiring Repair Problem Entities Option, and PDF Export Missing Model and Layout Pages Requiring SP1 Update
@@ -31,33 +28,27 @@ The solid body's display data becomes corrupted during feature operations. When 
 ### Fix
 
 1. **Use Clean Body**:
-   - "The model will go into a partial wireframe until Clean Body is used. Then it comes back."
    - Select the affected body
    - Use Tools > Clean Body
    - This rebuilds the wireframe and display data
    - The model returns to solid display
 
 2. **Use Rebuild Wires**:
-   - "What happens if you Clean (or Rebuild Wires) the body prior to making modifications?"
-   - "Does it still occur?"
    - Use Tools > Rebuild Wires before adding features
    - This may prevent the wireframe issue
 
 3. **Export to STEP and reimport**:
-   - "Only way out I found was to export a STEP and re-import again"
    - Export the model as STEP
    - Create a new file
    - Import the STEP file
    - This creates a clean body without corruption
 
 4. **Check if the model is imported or native**:
-   - "Is this a model you made or imported?"
    - Imported models may have underlying geometry issues
    - Native KeyCreator models should not have this issue
    - If imported, use Clean Body after import
 
 5. **Try different graphic driver options**:
-   - "I have tried all the graphic driver options with no success"
    - Tools > Options > Display > GraphicsDriver
    - Try OpenGL, DirectX, or software rendering
    - If none work, the issue is in the body data, not the driver
@@ -85,16 +76,12 @@ The Boolean operation applied a material or transparency override to the parts. 
 ### Fix
 
 1. **Toggle all layers OFF then ON**:
-   - "Once I toggled all layers OFF then ON (more than 50 layers) it came good"
-   - "All solids appear as normal now"
    - Use the layer manager
    - Turn off all layers
    - Turn them back on
    - This resets the display state
 
 2. **Use Unset Material**:
-   - "Solid/Surface select Tools, then press Face Tools icon, then press Unset Material icon"
-   - "Now select all the solids/surfaces you want to clear of any transparencies or materials"
    - Select all affected parts
    - Use Tools > Face Tools > Unset Material
    - This removes material overrides
@@ -106,7 +93,6 @@ The Boolean operation applied a material or transparency override to the parts. 
    - Remove or modify the material
 
 4. **Export and reimport as workaround**:
-   - "If I export any of the parts and open them in a new window, they appear fine"
    - Export the affected parts
    - Import them into a new file
    - The new parts won't have the transparency override
@@ -140,20 +126,15 @@ Converting CADKEY PRT files to KeyCreator CKD format. Some radial dimensions dis
 ### Fix
 
 1. **Manually fix radial dimensions after conversion**:
-   - "Arrows-out radial dimensions on incomplete arcs may come in with the arrow inside the arc"
    - After conversion, identify affected radial dimensions
    - Delete and recreate them in KeyCreator
    - Set the arrow direction correctly
 
 2. **Fix HLR and HLD instances**:
-   - "Layouts containing HLR and HLD instances may not be mapped correctly"
-   - "The program should restore the instance hidden line attributes to be the same as the current default"
    - Check layout instances after conversion
    - Manually set hidden line attributes
 
 3. **Fix Baseline Running Dimensions**:
-   - "Baseline Running Dimensions may not convert properly"
-   - "Dimensions may not line up properly and cause double leader lines to appear"
    - Delete the converted baseline dimensions
    - Recreate them using KeyCreator's dimensioning tools
 
@@ -164,7 +145,6 @@ Converting CADKEY PRT files to KeyCreator CKD format. Some radial dimensions dis
    - Fix issues incrementally
 
 5. **Contact KeyCreator Technical Support**:
-   - "If you experience a problem that does not appear in the list, please contact KeyCreator Technical Support"
    - Email: support@kubotek3d.com
    - Provide the PRT file and description of the issue
    - They may have additional conversion tools or fixes
@@ -192,12 +172,9 @@ When importing files from other CAD systems into KeyCreator, the translated enti
 ### Fix
 
 1. **Enable Repair Problem Entities option**:
-   - "It is strongly recommended that you select this option"
-   - "It corrects problems in the file being translated"
    - In the Import dialog, click Options
    - Go to Common Import Options tab
    - Check "Repair Problem Entities"
-   - "This also corrects the difference in precision by tolerizing the translated entities"
 
 2. **Use tolerizing after import**:
    - If gaps appear after import
@@ -246,8 +223,6 @@ The PDF export function in KeyCreator 2025 SP0 didn't have an option to export b
 ### Fix
 
 1. **Update to KeyCreator 2025 SP1 or later**:
-   - "A new option in the PDF export dialogs allows 'Export model mode and all layouts'"
-   - "Enabling this option when exporting 2D or 3D PDF from Model Mode will create a PDF with a page for the model and one for each drawing layout"
    - Install KeyCreator 2025 SP1
    - Use the new export option
 
@@ -270,10 +245,6 @@ The PDF export function in KeyCreator 2025 SP0 didn't have an option to export b
    - This gives both 3D and 2D content
 
 5. **Check SP1 translator updates**:
-   - "The newly released service pack upgrades several CAD translators"
-   - "Parasolid X_T reading and writing extended to support version 37"
-   - "Support for JT files now covers read of version 10.10"
-   - "Read capabilities for NX 3D and drawing files now handling 2406 format"
    - Update for both PDF export and translator improvements
 
 ### Community Report

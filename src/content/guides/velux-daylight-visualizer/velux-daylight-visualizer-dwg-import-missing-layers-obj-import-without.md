@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://skylightoffers.com/assets/vms/downloads/daylight-visualizer/userguide-daylight-visualizer-2.pdf"
-  - "https://discourse.mcneel.com/t/rhino-export-to-velux-daylight-visualizer/60916"
-  - "https://www.velux.com/healthy-buildings/research-and-knowledge/deic-basic-book/daylight/daylight-simulation-tools"
 ---
 
 # VELUX Daylight Visualizer DWG Import Missing Layers, OBJ Import Without Materials, Open Geometry Extremely Light Results, Scale Units Mismatch After Import, and SketchUp Triangulation Requirements: Layer Assignment, Material Export, Geometry Closure, Scale Factor Correction, and Face Triangulation
@@ -31,26 +28,19 @@ When importing a DWG file from AutoCAD into VELUX Daylight Visualizer, surface m
 ### Fix
 
 1. **Use AutoCAD layers for surface grouping**:
-   - "It is highly recommended to assign several layers to the model"
-   - "Each layer representing a group of building elements"
    - Create separate layers for: inner walls, ceiling, floor, window glass
    - Assign each building element to the correct layer
 
 2. **Name the layers descriptively**:
-   - "Optionally, name the layers to distinguish better between elements"
-   - "As the layer names are also imported"
    - Use names like "Inner_Walls", "Ceiling", "Floor", "Window_Glass"
    - This makes material assignment easier in Daylight Visualizer
 
 3. **Use 3D solids, regions, or 3D faces**:
-   - "Lines, polylines and rectangles drawn by the 'Rectangle' function will not be imported"
    - Use the "Region" function on lines
    - Use 3D Faces
    - Or create 3D solids
 
 4. **Assign materials in AutoCAD before export**:
-   - "Use the same material on elements with identical surface properties"
-   - "All inner walls could share one material while the ceiling had another"
    - This transfers to Daylight Visualizer via DWG layers
    - And simplifies material setup
 
@@ -89,21 +79,17 @@ When exporting a Rhino file to OBJ format and importing into VELUX Daylight Visu
 ### Fix
 
 1. **Configure Rhino OBJ export naming options**:
-   - "There are options in OBJ export that may help on the Naming page"
    - In Rhino, use File > Export Selected
    - Choose OBJ format
    - In the OBJ export dialog, go to the Naming page
    - Set the naming to include layer names
 
 2. **Use DWG as alternative for layer-based workflow**:
-   - "With the DWG-files, I can't define surface materials correctly"
    - But DWG preserves layers
    - If OBJ doesn't work, try DWG
    - And assign materials by layer in Daylight Visualizer
 
 3. **Assign materials in Rhino before export**:
-   - "When exporting the OBJ format, ensure that the materials assigned to the model are also exported"
-   - "There should be an option in the respective programs to ensure this"
    - In Rhino, assign materials to objects
    - Enable material export in OBJ options
 
@@ -148,8 +134,6 @@ After importing a model into VELUX Daylight Visualizer and running a daylight si
 ### Fix
 
 1. **Close all geometry before export**:
-   - "The problem was that I had not made any ceiling in my geometry"
-   - "Which caused the Velux Daylight Visualizer to calculate the room as extremely light"
    - Ensure the model has: floor, ceiling, all walls
    - No open faces except for windows
 
@@ -161,8 +145,6 @@ After importing a model into VELUX Daylight Visualizer and running a daylight si
 
 3. **Model windows as separate surfaces**:
    - Windows should be modeled as separate surfaces
-   - "Window panes should be modelled as a single layer of polygons"
-   - "Also if using multiple panes"
    - Don't leave window openings as holes in walls
 
 4. **Verify geometry after import**:
@@ -172,8 +154,6 @@ After importing a model into VELUX Daylight Visualizer and running a daylight si
    - Look for unexpected openings
 
 5. **Use the measure tool to verify**:
-   - "After importing a 3D model it is advised to check if the scale is correct"
-   - "Use the measure tool in the Plan or Section view"
    - Verify room dimensions
    - Check that surfaces are at expected positions
 
@@ -206,19 +186,14 @@ After importing a 3D model into VELUX Daylight Visualizer, the scale is incorrec
 ### Fix
 
 1. **Check scale after import**:
-   - "After importing a 3D model it is advised to check if the scale is correct"
-   - "Use the measure tool in the Plan or Section view"
-   - "To make sure that the dimensions are correct"
    - Measure known dimensions (e.g., room width)
 
 2. **Use the Units drop-down list**:
-   - "The Units' drop-down list enables the user to choose from SI units and American units"
    - Switch between SI and American units
    - See if the dimensions make sense in either system
    - This helps identify the unit mismatch
 
 3. **Use the scale factor to correct**:
-   - "Should the model be out of scale, it is possible to correct this by using the scale factor"
    - Calculate the required scale factor
    - If the model is 100x too large, use scale factor 0.01
    - If the model is 100x too small, use scale factor 100
@@ -230,7 +205,6 @@ After importing a 3D model into VELUX Daylight Visualizer, the scale is incorrec
    - This prevents unit conversion issues
 
 5. **Use the fit function**:
-   - "Use the fit function to zoom in/out on the complete model, if needed"
    - This helps visualize the entire model
    - And identify if the scale is obviously wrong
    - Before running the simulation
@@ -270,32 +244,23 @@ When importing a SketchUp model into VELUX Daylight Visualizer, some surfaces ar
 ### Fix
 
 1. **Ensure all faces are triangulated**:
-   - "Make sure that the faces are triangulated"
-   - "Closing 3 or more lines together in Sketch-Up will automatically create triangulated faces"
    - Check the SketchUp model for non-triangulated faces
    - Triangulate any non-triangulated polygons
 
 2. **Remove singular lines**:
-   - "Singular lines will not be imported"
    - Remove any standalone lines from the SketchUp model
    - Only faces (surfaces) are imported
    - Lines that don't form part of a face are ignored
 
 3. **Use the polygon and extrude functions**:
-   - "Using the polygon functions and extruding them is also possible"
    - These create properly triangulated faces
    - Avoid using just lines without creating faces
    - Ensure all geometry has surface faces
 
 4. **Assign materials in SketchUp**:
-   - "Use the paint bucket function to assign materials to the surfaces"
-   - "Use the same material on elements with identical surface properties"
-   - "All inner walls could share one material while the ceiling had another"
    - Material names are imported into Daylight Visualizer
 
 5. **Name materials descriptively**:
-   - "Optionally, name the material to distinguish better between elements"
-   - "As the material names are also imported"
    - Use names like "InnerWall", "Ceiling", "Floor", "WindowGlass"
    - This helps with material assignment in Daylight Visualizer
 

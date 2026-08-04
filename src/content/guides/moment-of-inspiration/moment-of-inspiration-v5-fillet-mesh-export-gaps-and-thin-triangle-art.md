@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://moi3d.com/forum/lmessages.php?msg=11521.34&webtag=MOI"
-  - "https://moi3d.com/forum/lmessages.php?msg=3793.2&webtag=MOI"
-  - "https://moi3d.com/forum/lmessages.php?msg=3869.116&webtag=MOI"
 ---
 
 # Moment of Inspiration v5 Fillet Mesh Export Gaps and Thin Triangle Artifacts from CentroidTriangulation, OBJ Export Cracks from Unjoined Separate Surfaces, Large Scale Model Joining Failure from 0.005 Tolerance, FBX Vertex Normal Loss from DCC Import Settings, and N-Gon Output Misunderstanding with Triangles from Trimming Boundaries: CentroidTriangulation Fix, Join Before Export, Scale Down, Normal Settings, and N-Gon Explanation
@@ -31,37 +28,22 @@ When exporting meshes from MoI v5, fillet surfaces produce gaps and thin triangl
 ### Fix
 
 1. **Set CentroidTriangulation=y in moi.ini**:
-   - "If you set CentroidTriangulation=y"
-   - "Inside moi.ini"
-   - "It should fix the mesh export for now"
    - Add CentroidTriangulation=y to moi.ini
 
 2. **Increase mesh density for fillets**:
-   - "Put in angle = 8 and divide larger than = 4"
-   - "That will make a much higher quality mesh"
-   - "For rendering at just 25k polygons"
    - Increase angle and divide settings
 
 3. **Set default angle in moi.ini**:
-   - "Set Angle=6 in moi.ini"
-   - "That should change what is used for the default angle"
    - Set Angle=6 for better default quality
 
 4. **Check for v5 fillet gaps**:
-   - "An unexpectedly large gap"
-   - "Between the fillet surface and the cylinder surface"
    - Check for gaps
    - In v5 fillet surfaces
 
 5. **Use higher poly count for curved areas**:
-   - "Move the slider towards the right"
-   - "So it will have more subdivisions"
-   - "In curved areas"
    - Increase subdivisions for curved areas
 
 6. **Verify in MoI export preview**:
-   - "The mesh MoI display at export time"
-   - "Should look exactly the same in your DCC viewport"
    - Verify the export preview
    - Matches the DCC viewport
 
@@ -88,16 +70,9 @@ When exporting OBJ files from MoI, cracks appear between mesh pieces. The cracks
 ### Fix
 
 1. **Join surfaces before export**:
-   - "They need to get joined together"
-   - "Into connected pieces"
-   - "To get the best mesh generation"
    - Use Edit > Join before exporting
 
 2. **Enable Join surfaces on IGES import**:
-   - "MoI will actually try to automatically join those surfaces"
-   - "When importing IGES files"
-   - "Unless you have disabled the setting"
-   - "Under Options > Import/Export > IGES options"
    - Enable Join surfaces on import
 
 3. **Check for naked edges**:
@@ -107,16 +82,9 @@ When exporting OBJ files from MoI, cracks appear between mesh pieces. The cracks
    - And need joining
 
 4. **Scale down large models before joining**:
-   - "MoI's joining process will join edges"
-   - "That are within 0.005 units apart"
-   - "If you have models created at a large numeric size"
-   - "It's possible that the gaps are larger than 0.005"
    - Scale down to fix joining
 
 5. **Use STEP instead of IGES**:
-   - "STEP seems to be the best format"
-   - "To import nurbs files from SW"
-   - "No need to join surfaces during the import process"
    - Use STEP for better import
 
 6. **Verify watertight mesh after join**:
@@ -126,9 +94,6 @@ When exporting OBJ files from MoI, cracks appear between mesh pieces. The cracks
    - Without cracks
 
 7. **Use N-Gon output for better topology**:
-   - "Output: N-gons"
-   - "Produces polygons that essentially follow"
-   - "The same topology as the original NURBS model"
    - Use N-Gon output for better results
 
 ### Community Report
@@ -148,25 +113,15 @@ When importing large-scale models (several thousand units in size), MoI fails to
 ### Fix
 
 1. **Scale the model down before joining**:
-   - "Scale the model to 1/100 of its previous size"
-   - "Then use Edit/Join"
-   - "To see if it will join together"
    - Scale down, join, then scale back up
 
 2. **Use Ctrl+A to select all**:
-   - "First do a Ctrl+A to select everything"
-   - "Then run the Transform > Scale command"
    - Select all before scaling
 
 3. **Set origin to 0,0,0**:
-   - "Type in 0 and push Enter"
-   - "To specify the 0,0,0 point as the origin"
    - Use 0,0,0 as the scale origin
 
 4. **Scale factor of 0.01**:
-   - "Type in 0.01 and push enter"
-   - "That will scale your model to 1/100"
-   - "Of its previous size"
    - Use 0.01 scale factor
 
 5. **Join after scaling**:
@@ -176,9 +131,6 @@ When importing large-scale models (several thousand units in size), MoI fails to
    - Then scale back up
 
 6. **Use STEP format for import**:
-   - "STEP seems to be the best format"
-   - "To import nurbs files from SW"
-   - "No need to join surfaces during the import process"
    - Use STEP to avoid joining issues
 
 7. **Check naked edges after joining**:
@@ -204,38 +156,27 @@ When importing FBX files exported from MoI into DCC applications (3ds Max, Houdi
 ### Fix
 
 1. **Preserve vertex normals in DCC import**:
-   - "The goal is to read vertex normals MoI's created"
-   - "There must be something about recomputing vertex normals"
-   - "Or creating Smoothing Groups that need to be disabled"
    - Disable normal recomputation in DCC import settings
 
 2. **Disable vertex merging**:
-   - "Vertex merging, attempt to reduce/edit the geometry"
-   - "Normals re-computing using an average method"
    - Disable vertex merging
    - In the DCC import settings
 
 3. **Disable smoothing group creation**:
-   - "Creating Smoothing Groups that need to be disabled"
    - Disable smoothing group creation
    - In the FBX import dialog
    - Of your DCC application
 
 4. **Verify MoI export preview matches DCC**:
-   - "The mesh MoI display at export time"
-   - "Should look exactly the same in your DCC viewport"
    - Verify the preview
    - Matches the DCC viewport
 
 5. **Use generic display mode in DCC**:
-   - "Using the 'generic' display mode (opengl/directx/Vulkan)"
    - Use generic display mode
    - To check for import issues
    - Without DCC-specific shading
 
 6. **Check for geometry modification**:
-   - "Something get mess-up after the import"
-   - "Attempt to reduce/edit the geometry"
    - Check if the DCC application
    - Modified the geometry during import
 
@@ -262,8 +203,6 @@ When using the N-Gon output option in MoI, some triangles still appear in the me
 ### Fix
 
 1. **Understand N-Gon output behavior**:
-   - "The only way that you will get a triangle"
-   - "Is if the underlying surface fragment is actually a triangle"
    - Triangles from triangular trimming boundaries
    - Are correct behavior
 
@@ -274,34 +213,21 @@ When using the N-Gon output option in MoI, some triangles still appear in the me
    - That produce the triangles
 
 3. **Don't expect zero triangles**:
-   - "Even Michael stated earlier"
-   - "That it is not possible to output without tris"
    - This is not accurate as a blanket statement
    - Triangles only appear from triangular surfaces
 
 4. **Use N-Gon output for topology matching**:
-   - "N-gon option produces polygons"
-   - "That essentially follow the same topology"
-   - "As the original NURBS model"
    - Use N-Gon for topology-matching output
 
 5. **Accept triangles from triangular surfaces**:
-   - "A triangle is the best kind of polygon"
-   - "To fit on a triangular trimming boundary"
    - Accept triangles
    - From triangular surfaces
 
 6. **Use quads for character animation**:
-   - "The only reason to use all quads"
-   - "Is if you are doing character animation and skinning"
    - Use all-quad output only
    - For character animation
 
 7. **Don't over-engineer mesh topology**:
-   - "You're doing a bunch of work"
-   - "For potentially worse results"
-   - "The original model just exported directly from MoI"
-   - "Already renders a perfect result"
    - Don't over-engineer mesh topology
 
 ### Community Report

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-08-03"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000iCYZkKAO/amg-solver-diverge-version-25022506-on-arm-and-linux"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
 ---
 
 # STAR-CCM+ Solver Divergence and GPU Errors: AMG Solver Diverged on ARM Linux from Platform-Specific Bug Requiring Supported OS Migration, Segregated Species Solver NaN Residuals from Bad External Fluid Region Geometry Requiring Part-Based Meshing, Floating Point Error Non-Finite Residual in Continuity from Division by Zero or Bad Boundary Conditions Requiring Systematic Debugging, GPU Acceleration Calculation Stuck from Unsupported Segregated Flow and LES Models Requiring CPU Mode, and AMG Solver Divergence at First Iteration from Grid Sequencing Transition Requiring AMG Tuning
@@ -31,37 +28,30 @@ The AMG solver divergence on ARM/Linux is a platform-specific bug in STAR-CCM+ v
 ### Fix
 
 1. **Switch to a supported ARM platform**:
-   - "A good first test should be to switch to a supported ARM platform (RHEL 8.7)"
-   - "The supported platforms show: Linux ARM64: Red Hat Enterprise Linux 8.7 only"
    - Migrate to RHEL 8.7 for ARM
    - Test if the divergence resolves
 
 2. **Run on Windows instead**:
-   - "The fact that it works in Windows but not Linux might have something to do"
    - If possible, run on Windows
    - The AMG solver works correctly on Windows
    - Use Windows HPC for critical simulations
 
 3. **Provide a non-confidential SIM to reproduce**:
-   - "We wait for a non-confidential SIM to reproduce the issue"
    - Create a simplified version of the simulation
    - Remove confidential geometry
    - Share on the Siemens forum for debugging
 
 4. **Roll back to version 2410**:
-   - "I had been using it for previous versions since 2410 or even before with no problems"
    - Version 2410 didn't have this bug
    - Roll back to 2410
    - Wait for a fix in a future version
 
 5. **Report the issue to Siemens**:
-   - "Please do not forget: Include a non-confidential simulation issue to support your findings"
    - Open a support case
    - Provide the simulation file
    - Include the error log
 
 6. **Check mesh diagnostics**:
-   - "Mesh diagnostics are not showing anything worrying"
    - Verify mesh quality
    - Check for negative volumes
    - Ensure mesh is valid
@@ -88,45 +78,28 @@ Simulating diffusion of glucose and oxygen through a biosensor in STAR-CCM+ usin
 
 ### Fix
 
-1. **Rebuild the external fluid region in 3D-CAD**:
-   - "Perhaps build it in 3D-CAD with the rest of the geometry"
-   - "You can then ensure that the geometry is consistent"
-   - "That all necessary subtractions and imprints have been done"
-   - "And then remesh"
+1. **Rebuild the external fluid region in 3D-CAD**.
 
 2. **Use Part-Based meshing correctly**:
-   - "The parts you create should be the ones you then assign to the Region and mesh"
-   - "What you want to do is create a volume and subtract the sensor"
-   - "Then use that resulting subtracted part as your external region"
    - Don't detach and delete
 
 3. **Perform an imprint**:
-   - "You'll probably want to do an imprint too"
-   - "So that you have your contacts set-up for any interfaces"
    - Imprint ensures proper interfaces between regions
    - This enables correct species transport
 
-4. **Check for isolated cells**:
-   - "You can try to check the mesh using the split by non-Contiguous in Region"
-   - "Right click on the region, Split by non-contiguous, and preview"
-   - "If no new region will be created, everything should be ok"
-   - "If new regions would be created, there are some isolated cells"
+4. **Check for isolated cells**.
 
 5. **Start small and build up**:
-   - "I would definitely suggest starting small (fewer regions and less physics)"
-   - "And then building up"
    - Remove the external part first
    - Test if the simulation runs without it
    - Then add it back with correct geometry
 
 6. **Lower relaxation factors**:
-   - "Lowering relaxation factors for the species solver"
    - Reduce relaxation factors to 0.3 or lower
    - This stabilizes the solver
    - Gradually increase as the simulation stabilizes
 
 7. **Reduce time steps**:
-   - "Reducing time steps"
    - Use smaller time steps
    - This helps the solver converge
    - Gradually increase once stable
@@ -148,50 +121,37 @@ During a multiphase simulation in STAR-CCM+, the error appears: "A floating poin
 ### Fix
 
 1. **Check expressions and Field Functions**:
-   - "Verify that none of their denominators become 0 or are very close to 0"
    - Review all field functions
    - Check for division operations
    - Add safeguards: `if(abs(denominator) < 1e-10, 0, numerator/denominator)`
 
 2. **Check Boundary Conditions**:
-   - "Verify that your setup is correct"
-   - "Ensure you're not using a velocity inlet with supersonic speed with the Segregated Solver"
    - Review all boundary conditions
    - Check for unphysical values
 
 3. **Check Initial Conditions and Reference Values**:
-   - "Check Initial Conditions, and Reference Values (especially gravity vector direction)"
    - Verify gravity is in the correct direction
    - Check initial pressure, velocity, temperature
    - Ensure they are physical
 
 4. **Check the mesh for bad cells**:
-   - "Check the mesh for bad cells (especially those with negative volume)"
    - Run mesh diagnostics
    - Check for negative volumes
    - Repair or remesh bad cells
 
 5. **Check the time step**:
-   - "If your simulation is transient — check if the time step isn't too large"
    - Reduce the time step
    - Use adaptive time stepping
    - Monitor CFL number
 
 6. **Check the simulation log for warnings**:
-   - "Check the simulation log for warnings"
    - Look for warnings before the error
    - Warnings often precede the crash
    - Address warnings proactively
 
-7. **Monitor convergence**:
-   - "Monitor simulation convergence on the residual and monitor plots"
-   - "Very rapid growth of residuals indicates that the simulation is diverging"
-   - "After establishing when the simulation started to diverge, rerun and monitor"
-   - "Visually in Scenes to locate problematic regions"
+7. **Monitor convergence**.
 
 8. **Read the KB article**:
-   - "You can have a look at the article I wrote on Support Center"
-   - "Some practical steps to understand the reason of a divergence or a floating point exception (FPE)"
    - Follow the systematic debugging steps
    - Use the Support Center resources
 
@@ -212,13 +172,11 @@ Performing a CFD simulation of 3-Mach wall-interfered cylinder flow using STAR-C
 ### Fix
 
 1. **Disable GPU acceleration**:
-   - "It runs normally when GPU acceleration is disabled"
    - Turn off GPU acceleration
    - Use CPU-only mode
    - The simulation will run correctly
 
 2. **Use Coupled Flow solver instead**:
-   - "GPU acceleration currently supports: Coupled flow solver"
    - Switch from segregated to coupled flow solver
    - This is supported on GPU
    - May require adjusting solver settings
@@ -230,7 +188,6 @@ Performing a CFD simulation of 3-Mach wall-interfered cylinder flow using STAR-C
    - LES is not fully supported on GPU
 
 4. **Check GPU compatibility**:
-   - "Not all models are GPU-accelerated"
    - Review the STAR-CCM+ GPU support documentation
    - Ensure your physics models are GPU-compatible
    - Don't enable GPU for unsupported models
@@ -270,13 +227,10 @@ The AMG solver divergence at the first iteration occurs during the transition fr
 ### Fix
 
 1. **Check the KB article**:
-   - "A KB article below may provide you with a few more ideas for further debugging"
-   - "How to debug 'AMG solver diverged on first iteration'"
    - Follow the debugging steps in the KB article
    - This is a known phenomenon
 
 2. **Tune AMG solver settings**:
-   - "Regardless of how I tune the AMG solver settings, I consistently encounter the following error"
    - Try different AMG coarsening levels
    - Adjust the AMG tolerance
    - Change the cycle type (V-cycle, W-cycle, F-cycle)
@@ -288,7 +242,6 @@ The AMG solver divergence at the first iteration occurs during the transition fr
    - Test different configurations
 
 4. **Check if results are affected**:
-   - "Can this initial AMG divergence affect the accuracy or reliability of the final results?"
    - If the simulation converges normally after
    - The initial divergence may be benign
    - Verify results against known data
@@ -300,13 +253,11 @@ The AMG solver divergence at the first iteration occurs during the transition fr
    - This may avoid the initial divergence
 
 6. **Refine the mesh**:
-   - "Could these boundary layer cells still be the source?"
    - Check boundary layer cells
    - Ensure smooth transitions
    - Avoid extremely small cells
 
 7. **Monitor the simulation**:
-   - "After this initial error, the simulation proceeds normally"
    - Monitor residuals after the first iteration
    - If residuals decrease normally
    - The initial divergence is likely benign

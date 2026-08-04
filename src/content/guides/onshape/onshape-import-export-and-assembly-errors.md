@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.onshape.com/discussion/26373/assembly-importing-issues"
-  - "https://forum.onshape.com/discussion/27693/im-having-issues-with-onshape-prematurely-crashing-with-imported-3d-scans-stls-and-objs"
-  - "https://forum.onshape.com/discussion/22945/step-file-export-import-bug"
 ---
 
 # Onshape Import Export and Assembly Errors: Assembly Import Distortion from Part Studio Geometry Requiring Reimport or Parasolid Format, Browser Crash with Large 3D Scan STL and OBJ from WebGL Memory Requiring Mesh Simplification, STEP Export Import Roundtrip Faulty Topology from 2-Micron Part Size Requiring Parasolid Export, Export Failed Resource Does Not Exist from Shared Assembly Permissions Requiring Copy Document, and SolidWorks Assembly Hidden Suppressed Parts Not Imported Requiring Visibility Toggle Before Export
@@ -37,8 +34,6 @@ The Assembly import process doesn't correctly translate all geometry from the Pa
    - Check if the distortion persists
 
 2. **Use Parasolid format for import**:
-   - "Parasolid is the native kernel of Onshape"
-   - "If you export to Parasolid and import, you should never have an issue"
    - Export from Part Studio as Parasolid (x_t)
    - Import the Parasolid into the Assembly
 
@@ -91,11 +86,9 @@ Onshape browser tab crashes when working with imported 3D scanned models (STL an
 2. **Use a more powerful GPU**:
    - Ensure the browser uses the dedicated GPU
    - Check browser GPU settings
-   - "Prioritizing WEBGL rendering with my GPU"
    - Use a GPU with more VRAM
 
 3. **Clear browser cache**:
-   - "Clearing Cache"
    - Clear Chrome's cache and WebGL data
    - Restart the browser
    - This may free up WebGL memory
@@ -113,8 +106,6 @@ Onshape browser tab crashes when working with imported 3D scanned models (STL an
    - Use the Mesh feature in Onshape
 
 6. **Use a desktop CAD tool for large scans**:
-   - "I've been working with a friend's CNC router, all their scripts are setup from MAC laptop with Fusion 360"
-   - "I was curiously surprised at how well Fusion ran with 5-6 detailed 3D scan clouds"
    - For large scan processing, use Fusion 360 or Blender
    - Import simplified results to Onshape
 
@@ -141,13 +132,10 @@ Created a simple design with parts from sketch rotations (360-degree revolves). 
 ### Fix
 
 1. **Use Parasolid export instead of STEP**:
-   - "Parasolid is the native kernel of Onshape. If you export to Parasolid and import, you should never have an issue"
-   - "STEP is not native"
    - Export as Parasolid (x_t or x_b)
    - Import the Parasolid — no topology errors
 
 2. **Use Derive feature instead of export/import**:
-   - "Why are you doing this in the first place? I would think using a 'Derive' feature would make more sense"
    - Instead of exporting and reimporting
    - Use Derive to reference the parts in another document
    - This preserves the parametric definition
@@ -166,7 +154,6 @@ Created a simple design with parts from sketch rotations (360-degree revolves). 
    - Use Parasolid for tiny parts
 
 5. **Report as a bug**:
-   - "This does seem like a bug: at the very least Onshape should be able to read back a STEP file it exported without error"
    - Onshape should handle its own STEP roundtrip
    - Report to Onshape support
    - This is a valid bug report
@@ -194,19 +181,15 @@ The shared assembly has permission restrictions. The user has view access to the
 ### Fix
 
 1. **Make a copy of the document**:
-   - "Making a copy of the particular project"
    - File > Copy the document
    - The copy gives you full ownership
    - Then export from the copy
 
 2. **Use "export unique parts as individual files"**:
-   - "The only way I can export models as STLs is to right click the assembly itself"
-   - "And export with 'export unique parts as individual files'"
    - This exports all parts at once
    - Individual export may fail due to permissions
 
 3. **Adjust permissions**:
-   - "Even after adjusting permissions"
    - Check the document sharing settings
    - Ensure you have "Edit" or "Full access" permission
    - Not just "View" or "Comment"
@@ -246,7 +229,6 @@ Onshape's SolidWorks importer only imports parts that are visible and unsuppress
 ### Fix
 
 1. **Unhide and unsuppress before export**:
-   - "If I have no access to SolidWorks to change the hidden/visible status"
    - If you have access to SolidWorks
    - Unhide all parts and unsuppress all components
    - Save the assembly

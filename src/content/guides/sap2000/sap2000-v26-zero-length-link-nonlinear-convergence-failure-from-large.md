@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.csiamerica.com/software/SAP2000/26/ReleaseNotesSAP2000v2630.pdf"
-  - "https://www.csiamerica.com/software/SAP2000/26/ReleaseNotesSAP2000v2620.pdf"
-  - "https://help.csiamerica.com/help/sap2000/26/26.0.0/SAP2000/WebHelp/Menus/Define/Load_Cases/Static/Nonlinear/Nonlinear_Iteration.htm"
 ---
 
 # SAP2000 v26 Zero-Length Link Nonlinear Convergence Failure from Large Displacements P-Delta, Staged Construction Incorrect Base Reactions from Time Dependent Items, AVI Movie Creation Crash from Compression, Contour Display Soil Pressure Max Min Inversion in Enveloping Load Cases, and API GroupDef.Delete Allowing Reserved ALL Group Deletion: Zero-Length Link Update, Staged Construction Fix, AVI Format Change, Contour Display Fix, and API Patch
@@ -31,9 +28,6 @@ Zero-length link elements fail to converge in nonlinear static, staged-construct
 ### Fix
 
 1. **Update to SAP2000 v26.3.0**:
-   - "An incident was resolved"
-   - "Where zero-length link elements"
-   - "Could fail to converge"
    - Update to v26.3.0
 
 2. **Use P-Delta only instead of Large Displacements**:
@@ -55,22 +49,13 @@ Zero-length link elements fail to converge in nonlinear static, staged-construct
    - Load cases
 
 5. **Adjust iteration parameters**:
-   - "Maximum Constant-Stiffness Iterations"
-   - "And Maximum Newton-Raphson Iterations"
    - Adjust iteration
    - Count
 
 6. **Reduce convergence tolerance**:
-   - "Iteration Convergence Tolerance (Relative)"
-   - "Significantly smaller values may be needed"
-   - "For large-displacement problems"
    - Adjust tolerance
 
 7. **Use constant-stiffness iteration first**:
-   - "Constant-stiffness iteration"
-   - "Is tried first"
-   - "If convergence is not achieved"
-   - "Newton-Raphson is tried"
    - Use both methods
 
 ### Community Report
@@ -90,9 +75,6 @@ Staged Construction load cases with both Instantaneous Load and Time Dependent I
 ### Fix
 
 1. **Update to SAP2000 v26.3.0**:
-   - "An incident was resolved"
-   - "Where Staged Construction load cases"
-   - "May report incorrect base reaction"
    - Update to v26.3.0
 
 2. **Separate Instantaneous and Time Dependent stages**:
@@ -108,8 +90,6 @@ Staged Construction load cases with both Instantaneous Load and Time Dependent I
    - Reactions
 
 4. **Check other analysis results**:
-   - "Did not affect other"
-   - "Analysis results"
    - Verify other
    - Results are correct
 
@@ -148,20 +128,12 @@ Creating AVI movies crashes the program. The crash occurs during the AVI creatio
 ### Fix
 
 1. **Update to latest SAP2000 version**:
-   - "An incident was resolved"
-   - "Where AVI creation"
-   - "Was crashing the program"
    - Update SAP2000
 
 2. **Use MPEG format instead of AVI**:
-   - "There are two options"
-   - "Now available to create movies"
-   - "i.e. AVI and MPEG format"
    - Use MPEG
 
 3. **Use uncompressed AVI**:
-   - "No compression is performed"
-   - "For AVI format"
    - Use uncompressed
    - AVI
 
@@ -206,10 +178,6 @@ The contour display and database table for soil pressures invert the max/min of 
 ### Fix
 
 1. **Update to SAP2000 v26.3.0**:
-   - "An incident was resolved"
-   - "Where the contour display"
-   - "And the database table"
-   - "For soil pressures"
    - Update to v26.3.0
 
 2. **Check soil pressure contours after update**:
@@ -265,9 +233,6 @@ The API GroupDef.Delete function allows the ALL group to be deleted. The ALL gro
 ### Fix
 
 1. **Update to SAP2000 v26.3.0**:
-   - "An incident was resolved"
-   - "In the Application Programming Interface"
-   - "Where the GroupDef.Delete function"
    - Update to v26.3.0
 
 2. **Add check in API scripts**:
@@ -277,10 +242,6 @@ The API GroupDef.Delete function allows the ALL group to be deleted. The ALL gro
    - ALL group
 
 3. **Don't delete ALL group in scripts**:
-   - "The ALL group is"
-   - "A reserved group"
-   - "That is not meant"
-   - "To be modified or deleted"
    - Don't delete ALL
 
 4. **Verify group integrity after API operations**:

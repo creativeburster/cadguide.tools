@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/warning-302105-flow-solution-failed-to-converge-within-the/td-p/11786917"
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/simulation-analysis-progress-stuck-at-0/td-p/13439661"
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/analysis-failed/td-p/11264901"
 ---
 
 # Autodesk Moldflow Insight Solver and Mesh Errors: WARNING 302105 Flow Solution Failed to Converge from Sequential Valve Gate and Hot Runner Volume Requiring Valve Gate Time Control or Hot Runner Optimization, Analysis Progress Stuck at 0% from Software or Network Issue Requiring Restart, ERROR 220120 No Connection Between Beam and Tetrahedral Cavity Elements from Node Mismatch Requiring Merge Nodes, Cool Analysis Failed from Insufficient RAM for Large Mesh Requiring Study Size Reduction or Cloud Computing, and BLM Mesh Analysis Failure from Refine Mesh Not Passed Requiring Mesh Quality Verification
@@ -31,25 +28,20 @@ Normal injection runs complete as scheduled. But with sequential condition injec
 ### Fix
 
 1. **Use valve gate control with specified time**:
-   - "Instead try for valve gate control using specified time"
    - Change from "valve gate control using flow front"
    - To "valve gate control using specified time"
    - This gives the solver explicit timing instead of flow-front-dependent timing
 
 2. **Optimize hot runner design**:
-   - "Optimize hot runner design — hope this will solve the issue"
-   - "Consult your hot runner supplier"
    - Reduce hot runner volume
    - Make runner channels smaller or shorter
 
 3. **Try faster filling**:
-   - "Try faster filling"
    - Reduce injection time from 4.5s
    - This may help the solver converge
    - But verify pressure doesn't exceed limits
 
 4. **Increase tolerance**:
-   - "You can try to increase the tolerance, this may reduce results accuracy"
    - In solver settings, increase convergence tolerance
    - This allows the solver to accept a less precise solution
    - May allow convergence but with reduced accuracy
@@ -67,7 +59,6 @@ Normal injection runs complete as scheduled. But with sequential condition injec
    - Adjust melt temperature if possible
 
 7. **Create Autodesk support ticket**:
-   - "Are you able to create an Autodesk support case?"
    - If the issue persists
    - Create a support ticket through Autodesk account
    - Provide the log file and study file
@@ -89,8 +80,6 @@ The analysis engine fails to start or communicate with the solver. This can be c
 ### Fix
 
 1. **Restart the computer**:
-   - "After restarting my computer this morning, it seems to be working fine again"
-   - "Yesterday when I encountered the issue, I had to restart at least 2-3 times"
    - Restart the computer
    - This restarts all Moldflow services
 
@@ -101,7 +90,6 @@ The analysis engine fails to start or communicate with the solver. This can be c
    - Restart if stopped
 
 3. **Check network connectivity**:
-   - "Not sure if it's a problem with network, my computer, or the software"
    - Verify network connection to license server
    - Check firewall settings
    - Ensure Moldflow can communicate through firewall
@@ -119,7 +107,6 @@ The analysis engine fails to start or communicate with the solver. This can be c
    - Verify license server port is open
 
 6. **Create Autodesk support case**:
-   - "I would suggest that if the issue persists, you should create a support case through your Autodesk account"
    - If the issue is frequent (1-2 times per month)
    - Create a support case
    - Provide details about frequency and workaround
@@ -147,13 +134,10 @@ The beam elements (representing the hot runner) and the tetrahedral elements (re
 ### Fix
 
 1. **Use Connectivity Diagnostic**:
-   - "Use connectivity diagnostic to identify where the problem is located"
-   - "Click Mesh > Mesh Diagnostic > Connectivity"
    - Run the connectivity diagnostic
    - Identify where the disconnection is
 
 2. **Merge nodes at connection point**:
-   - "If not connected, need to merge nodes"
    - Use Mesh > Mesh Tools > Merge Nodes
    - Select the beam endpoint node and the nearest tetra node
    - Merge them into a single node
@@ -177,7 +161,6 @@ The beam elements (representing the hot runner) and the tetrahedral elements (re
    - Set an appropriate merge tolerance
 
 6. **Use beam elements as cold runners**:
-   - "I set the gate location and used beam elements as cold runners"
    - If hot runner beams don't connect
    - Try using beam elements as cold runners first
    - Verify connectivity, then switch to hot runner
@@ -199,25 +182,20 @@ Running Cool Fill Pack analysis. The analysis fails. The Cool solver shows it's 
 ### Fix
 
 1. **Reduce study size**:
-   - "Could you simplify to reduce memory needed?"
-   - "Maybe would be sufficient to simulate only 4 cavities, not 16"
    - Reduce from 16 cavities to 4 or 8
    - Use symmetry if the mold is symmetric
 
 2. **Use half model**:
-   - "Maybe using ½ the model could be enough?"
    - If the part has symmetry
    - Use a half or quarter model
    - This reduces elements by 50-75%
 
 3. **Reduce mesh size**:
-   - "Could mesh size of cavity model be reduced?"
    - Use a coarser mesh
    - Reduce the number of tetrahedral elements
    - This directly reduces RAM requirement
 
 4. **Use cloud computing**:
-   - "Cloud computing has maximum 128GB RAM available"
    - Use Autodesk Cloud Computing
    - This provides more RAM than local machine
    - But 132GB may still exceed cloud limit
@@ -229,19 +207,14 @@ Running Cool Fill Pack analysis. The analysis fails. The Cool solver shows it's 
    - This eliminates disk usage
 
 6. **Adjust Cool solver parameters**:
-   - "Cool Solver Parameters dialog: Mold temperature convergence tolerance"
-   - "If the analysis is generating convergence problem warnings, try loosening the tolerance"
    - Loosen convergence tolerance
    - This may help the solver complete
 
 7. **Don't change iterations blindly**:
-   - "Generally the Cool solver parameters are rarely changed"
-   - "Better to work on study size, as discussed"
    - Reducing iterations doesn't reduce RAM
    - Focus on reducing mesh size instead
 
 8. **Check RAM requirement in log**:
-   - "Look earlier in analysis log to see how much RAM is needed"
    - The log shows the estimated RAM requirement
    - Compare with available RAM
    - If RAM < required, reduce mesh or use cloud
@@ -263,7 +236,6 @@ BLM (Boundary Layer Mesh) requires specific mesh quality standards beyond the ba
 ### Fix
 
 1. **Check Refine mesh result**:
-   - "I noticed the 'Refine mesh' option was not passed"
    - Run Mesh > Mesh Diagnostic > Refine Mesh
    - Check which elements fail the refinement check
    - Fix those elements

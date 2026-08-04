@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.autoform.com/en/how-the-process-description-influences-springback-results/"
-  - "https://formingworld.com/numisheet-2025-industrial-benchmark/"
-  - "https://formingworld.com/early-evaluation-springback-steps/"
 ---
 
 # AutoForm Springback Inaccuracy from Isotropic Hardening Model, Process Description Influencing Springback from Missing Secondary Operations, Element Type Selection BEM vs EPS for Springback Accuracy, Material Card Default vs Experimentally Calibrated Parameters, and Backdraft from Geometric Springback Compensation: Kinematic Hardening, Full Cycle Simulation, EPS-11 Shell Element, Cyclic Tension-Compression Test, and Coining with TS-11 Thick Shell
@@ -31,21 +28,15 @@ Springback simulation results don't match physical measurements. The simulated s
 ### Fix
 
 1. **Use kinematic hardening with calibrated parameters**:
-   - "Experimentally derived parameters have a significant influence"
-   - "On both the magnitude and directional response of springback"
    - Switch from isotropic to kinematic hardening
    - In the material model settings
 
 2. **Perform cyclic tension-compression tests**:
-   - "Cyclic tension-compression tests conducted at two natural aging times"
    - Test the actual material under cyclic loading
    - To obtain the kinematic hardening parameters
    - Including Young's modulus reduction factor (gamma), reduction rate (chi), and transient softening rate (K)
 
 3. **Calibrate material parameters**:
-   - "Key kinematic hardening parameters derived from cyclic tension-compression tests"
-   - "Including the Young's modulus reduction factor (gamma)"
-   - "Young's modulus reduction rate (chi), and transient softening rate (K)"
    - Use point-by-point fitting to identify these parameters
 
 4. **Use experimentally calibrated material card**:
@@ -55,7 +46,6 @@ Springback simulation results don't match physical measurements. The simulated s
    - For the specific material and temper
 
 5. **Account for natural aging time**:
-   - "The natural aging time strongly affects constitutive model performance"
    - For aluminum alloys, the aging time
    - Affects the material parameters
    - Test at the correct aging condition
@@ -67,7 +57,6 @@ Springback simulation results don't match physical measurements. The simulated s
    - That captures the Bauschinger effect
 
 7. **Validate against benchmark geometries**:
-   - "Numisheet 2022 benchmark related to the springback prediction"
    - Validate the calibrated material model
    - Against known benchmark cases
    - Before applying to production parts
@@ -89,44 +78,29 @@ Springback simulation results differ significantly depending on the process setu
 ### Fix
 
 1. **Use full cycle simulation**:
-   - "This precise representation of the complete process is called a full cycle simulation"
    - Include all secondary operations
    - With proper tool kinematics
    - Don't simplify by skipping tool closure
 
 2. **Simulate tool closure at secondary operations**:
-   - "Plastic deformation occurs during tool closure"
-   - "The plastic strain rate is analyzed at closing of pad and post"
    - Include pad and post closure
    - In trimming and flanging operations
 
 3. **Use segmented trimming**:
-   - "The trimming and piercing process is split up"
-   - "Segmented trimming T30, T40"
    - Simulate each trimming stage separately
    - With proper tool kinematics
 
 4. **Activate Locating/Gravity for secondary operations**:
-   - "Activating Locating/Gravity, Free Springback at End of Operation"
-   - "And using Cutting with Tools to all secondary trimming and forming operations"
-   - "Is essential to getting the most accurate result possible"
    - These settings relax stresses between operations
 
 5. **Analyze plastic strain rate at tool closure**:
-   - "The plastic strain rate is not only analyzed at the middle layer"
-   - "But also at the top and bottom layers of the sheet"
    - Check if plastic deformation occurs
    - During tool closure at secondary operations
 
 6. **Use consistent process setup**:
-   - "In order to obtain reliable springback results"
-   - "The correct process conditions must be considered"
-   - "The process setup must be studied carefully and described correctly"
    - Don't mix simplified and full cycle setups
 
 7. **Match simulation to press shop process**:
-   - "Setup B is similar to the process setup in a press shop"
-   - "The five images represent drawing, segmented trimming T30, T40, flanging and springback"
    - Model the actual press shop process
    - Including all tool movements
 
@@ -147,45 +121,30 @@ Springback analysis results vary significantly depending on the FE settings. Usi
 ### Fix
 
 1. **Use EPS shell elements for springback analysis**:
-   - "It is recommended to use the shell elements (classical or modified)"
-   - "For the springback analysis and for the following compensation"
    - Use CE+ or FV settings
    - For springback-critical simulations
 
 2. **Use BEM for early feasibility only**:
-   - "BEM elements are mostly applied for the first tryout simulations"
    - Use CE with BEM for initial feasibility
    - When springback accuracy is not critical
    - Switch to EPS for final validation
 
 3. **Use FV for final springback validation**:
-   - "AutoForm Final Validation (FV) or Concept Evaluation Plus (CE+) settings"
-   - "Ensure that the sheet and tool mesh are compatible"
-   - "And the proper element type is being used for springback evaluation"
    - Use FV for the most accurate results
 
 4. **Balance speed and accuracy**:
-   - "For now, we want to focus on a balance of speed, accuracy, and ease of use"
-   - "Not the ultimate goal of 100% accuracy"
    - Use CE+ for early evaluation
    - FV for final validation
 
 5. **Check mesh compatibility**:
-   - "Ensure that the sheet and tool mesh are compatible"
    - Incompatible meshes cause inaccurate contact
    - And springback prediction
    - Verify mesh compatibility in FV settings
 
 6. **Consider computation time**:
-   - "FE settings highly influences the number of finite elements"
-   - "Which results into growth of computation time and data consumption"
-   - "When a simulation of e.g. side panel is required"
-   - "The time needed for the computation is crucial (usually from 2 to 48 h)"
    - Plan for longer computation with EPS elements
 
 7. **Use TS-11 thick shell for coining**:
-   - "The TS-11 thick-shell element also takes into account stresses"
-   - "In the direction of the sheet thickness"
    - For coining operations with high normal stresses
    - Use TS-11 instead of standard EPS-11
 
@@ -206,44 +165,33 @@ Springback simulation using AutoForm's default material card doesn't match physi
 ### Fix
 
 1. **Generate material file from real testing**:
-   - "It is always considered best practice to generate a material file from real testing"
    - Perform uniaxial and cyclic tests
    - On the actual material
    - To generate a calibrated material card
 
 2. **Use material from same project**:
-   - "A material file tested from the same material used in a different project"
    - If the exact material isn't available
    - Use a material file from the same alloy
    - From a previous project
 
 3. **Use supplier-provided properties**:
-   - "Properties provided by the material supplier"
    - Material suppliers can provide
    - Stress-strain curves and material parameters
    - For their specific materials
 
 4. **Use OEM-provided properties**:
-   - "Properties provided by the OEM"
    - If working for an OEM
    - They may have material databases
    - With tested parameters
 
-5. **Calibrate from cyclic tension-compression tests**:
-   - "Cyclic tension-compression tests conducted at two natural aging times"
-   - "Reverse stress-strain relationships were analyzed using a point-by-point fitting approach"
-   - "Enabling the identification of critical parameters"
-   - "Including the Young's modulus reduction factor (gamma), reduction rate (chi), and transient softening rate (K)"
+5. **Calibrate from cyclic tension-compression tests**.
 
 6. **Account for natural aging in aluminum**:
-   - "The natural aging time strongly affects constitutive model performance"
    - For aluminum alloys
    - Test at the correct natural aging condition
    - That matches the production timeline
 
 7. **Update material card as material becomes available**:
-   - "Early in development, the material is typically not available for testing"
-   - "So alternatives need to be considered"
    - Start with default or supplier properties
    - Update with tested parameters when available
 
@@ -263,45 +211,21 @@ After applying geometric springback compensation to the tool, the part develops 
 
 ### Fix
 
-1. **Use coining to reduce springback**:
-   - "To reduce springback—and keep the part releasable despite backdraft risk—we used coining"
-   - "The radii are pressed with an offset smaller than the sheet thickness"
-   - "This introduces high normal stresses, which reduce the bending moment through the thickness"
-   - "And therefore reduce springback"
+1. **Use coining to reduce springback**.
 
-2. **Use TS-11 thick shell element for coining simulation**:
-   - "To capture these normal-stress effects in the simulation"
-   - "We used the TS-11 thick-shell element"
-   - "Unlike the standard EPS-11 AutoForm shell element"
-   - "The Thick Shell Element (TS-11) also takes into account stresses in the direction of the sheet thickness"
+2. **Use TS-11 thick shell element for coining simulation**.
 
-3. **Run RSPI study for process robustness**:
-   - "We ran an RSPI (Robust Sigma Process Improvement) study in AutoForm Sigma"
-   - "Where key inputs can be systematically varied"
-   - "By sweeping uncontrollable factors (thickness, yield stress, blank position, etc.)"
-   - "We quantified process robustness and then tuned the controllable levers"
+3. **Run RSPI study for process robustness**.
 
-4. **Optimize coining radii**:
-   - "Tuned the controllable levers—here, the Coining Radii—towards a more stable window"
-   - "The RSPI study defines the process window for the optimized coining radii"
-   - "Within this window, the process stays robust"
-   - "And springback remains geometrically compensatable"
+4. **Optimize coining radii**.
 
-5. **Use AutoForm Compensator for iterative compensation**:
-   - "We used AutoForm Compensator to compensate the crash-forming tool"
-   - "Based on the deviation between the target geometry and the springback result"
-   - "Compensation is inherently iterative: simulate with the updated tools"
-   - "Reassess the remaining deviation, and repeat until the gap to the STL is closed"
+5. **Use AutoForm Compensator for iterative compensation**.
 
 6. **Form as double part to maximize material utilization**:
-   - "Because the T-Node is used as both a left- and right-hand part"
-   - "We formed it as a double part to maximize sheet usage"
    - Forming as a double part
    - Can reduce springback asymmetry
 
 7. **Use AutoForm Trimline Optimization**:
-   - "The form blank was defined with AutoForm Trimline Optimization"
-   - "After crash forming, the two parts were separated"
    - Optimize the trim line
    - To minimize material waste while achieving target geometry
 

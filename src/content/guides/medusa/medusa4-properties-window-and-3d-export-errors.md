@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
-  - "https://ww3.cad.de/foren/ubb/Forum16/HTML/000150.shtml"
-  - "https://ww3.cad.de/foren/ubb/Forum16/HTML/000159.shtml"
-  - "https://en.wikipedia.org/wiki/MEDUSA4"
 ---
 
 # MEDUSA4 Properties Window and 3D Export Errors: Properties Window Not Displayed from Too Many Elements Causing Element Positioning Problems Requiring Element Reduction, STEP Export Not Available in MEDUSA4 Personal Requiring Advanced Package Upgrade, 3D Model Export to FE Software Requires STEP Interface Module, 2D Sheet Metal and Parametrics Available in Personal but 3D Limited, and Element Insertion Causes Massive Positioning Problems Requiring Drawing Simplification
@@ -31,7 +28,6 @@ MEDUSA4 has a limit on the number of elements it can handle in the properties wi
 ### Fix
 
 1. **Reduce the number of elements in the drawing**:
-   - "Properties window will not be displayed: too many elements"
    - Simplify the drawing by removing unnecessary elements
    - Group related elements into symbols or cells
    - Use layers to manage element visibility
@@ -49,7 +45,6 @@ MEDUSA4 has a limit on the number of elements it can handle in the properties wi
    - Use the symbol library for common components
 
 4. **Contact CAD Schroer support for TeamViewer session**:
-   - "Call me and I will help you in a TeamViewer session"
    - CAD Schroer offers direct support sessions
    - They can diagnose and fix the specific drawing
    - Contact: 02131 3860985 (Gerd Korhammer)
@@ -61,7 +56,6 @@ MEDUSA4 has a limit on the number of elements it can handle in the properties wi
    - Convert hatching to raster images for large areas
 
 6. **Use MEDUSA4 SMART Edit**:
-   - "MEDUSA4 Personal includes SMART Edit"
    - SMART Edit can help manage complex drawings
    - Use parametric editing to reduce manual element placement
    - This reduces the total element count
@@ -83,8 +77,6 @@ Need to export a 3D model from MEDUSA4 to STEP format for finite element analysi
 ### Fix
 
 1. **Upgrade to MEDUSA4 ADVANCED or higher**:
-   - "Which version of the software is required to use the STEP interface feature?"
-   - "The STEP interface is not available in MEDUSA4 Personal per the package overview"
    - Contact CAD Schroer for a commercial license
    - The ADVANCED package includes STEP export
 
@@ -107,7 +99,6 @@ Need to export a 3D model from MEDUSA4 to STEP format for finite element analysi
    - But useful for model verification
 
 5. **Use DXF for 2D surface export**:
-   - "Is it possible to export pure 2D surfaces, similar to sheet metal, so only surface information is available?"
    - DXF can export 2D geometry
    - For flat or developable surfaces, use DXF
    - FE software can import 2D DXF for shell analysis
@@ -135,7 +126,6 @@ FEA software typically requires STEP or IGES format for 3D model import. MEDUSA4
 ### Fix
 
 1. **Upgrade to MEDUSA4 with STEP interface**:
-   - "The STEP interface would be optimal for my application"
    - Contact CAD Schroer for the appropriate package
    - STEP preserves solid and surface geometry
    - Most FEA software prefers STEP
@@ -159,7 +149,6 @@ FEA software typically requires STEP or IGES format for 3D model import. MEDUSA4
    - This works for flat plates and developed surfaces
 
 5. **Use MEDUSA4 SMD Sheet Metal Design**:
-   - "MEDUSA4 Personal includes SMD Sheet Metal Design"
    - Use SMD to create and flatten sheet metal
    - Export the flattened profile as DXF
    - Import into FEA for shell analysis
@@ -193,25 +182,21 @@ Using MEDUSA4 Personal for 2D design. Need to know what 3D capabilities are avai
    - This is sufficient for most 2D work
 
 2. **Use SMD Sheet Metal Design**:
-   - "SMD Sheet Metal Design is included in Personal"
    - Create sheet metal parts in 2D
    - Flatten and develop sheet metal
    - Export as DXF for manufacturing
 
 3. **Use Parametrics for 2D**:
-   - "Parametrics is included in Personal"
    - Create parametric 2D drawings
    - Use parameters to control geometry
    - Update drawings by changing parameters
 
 4. **Use basic 3D for visualization**:
-   - "Basic 3D is included in Personal"
    - Create simple 3D models from 2D profiles
    - Use for visualization and verification
    - Not suitable for complex 3D assembly modeling
 
 5. **Use MEDRaster Colour for image editing**:
-   - "MEDRaster Colour image editing module is included"
    - Edit raster images within MEDUSA4
    - Combine raster and vector data
    - Useful for site plans and hybrid drawings
@@ -263,13 +248,11 @@ MEDUSA4's element handling has limits. When too many elements are inserted at on
    - Focus on the overall structure
 
 5. **Use parametrics for repetitive patterns**:
-   - "Parametrics is included in Personal"
    - Create parametric patterns for repetitive elements
    - Use array or pattern tools
    - This generates elements more efficiently
 
 6. **Contact CAD Schroer for direct support**:
-   - "Call me and I will help you in a TeamViewer session"
    - Direct support is available from CAD Schroer
    - They can diagnose the specific drawing issues
    - They may provide custom solutions

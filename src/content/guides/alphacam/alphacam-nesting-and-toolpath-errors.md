@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=872064"
-  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=785127"
-  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=834609"
 ---
 
 # Alphacam Nesting and Toolpath Errors: Multiple Copy Nesting Forgets 90 Percent of Code from Subroutine Nesting Instead of Linear Requiring Nesting Mode Change, Cannot Find Offset Path for Profiling Small Circular Geometry Requiring Geometry Break or Surface Creation, Pocket Toolpath Plunges Straight to Bottom Requiring Manual Lead In with Slope or AutoZ Ramp, Post Processor 004 Address Not Found from Rapid Traverse Z Height Change Requiring Post Review, and Feed Rate Customization for Blowout Prevention Requiring Advanced Toolpath Editor or Slow Down for Corners
@@ -31,31 +28,25 @@ Nesting 20 copies of the same part from a DXF file in Alphacam 2023. Single copy
 ### Fix
 
 1. **Switch from subroutine to linear nesting**:
-   - "I got it figured out through trial and error"
-   - "I have been erroneously using subroutines nesting instead of linear"
    - In Nesting settings, change from Subroutine to Linear
    - Linear nesting outputs complete code for each part
 
 2. **Check post processor subroutine support**:
    - The inherited post processor may not support subroutines
-   - "I suspect it's an issue with the postprocessor that I have also inherited"
    - Contact the post processor developer
    - Or use linear nesting as workaround
 
 3. **Convert DXF to ARD file**:
-   - "A quick option may be to convert the file to an ard file and then process as if it were a CV file"
    - Use Home Input CAD to convert DXF to Alphacam native format
    - Process as a Cabinet Vision file
    - This may avoid the nesting issue
 
 4. **Join non-circular geometry**:
-   - "I find that you need to join all non-circular geometry afterwards"
    - After DXF import, join all open geometry
    - Use Edit > Join Geometry
    - This ensures clean toolpath generation
 
 5. **Verify color coding**:
-   - "Alphacam always colour codes different toolpaths if they involve different tools"
    - If the first piece is white (no color), it's not properly recognized
    - Check that all pieces have correct operation assignments
    - Reassign operations if needed
@@ -77,24 +68,18 @@ The offset path algorithm can't create an offset for the circular geometry with 
 ### Fix
 
 1. **Break the circle and make two toolpaths**:
-   - "One thing you could try that has worked for me is not to profile the entire geometry"
-   - "Find a place to break it, and make two tool paths"
    - Break the circle at a point
    - Create two separate profile operations
 
 2. **Change path direction (left/right/center)**:
-   - "Have you tried changing the path to left or right if you are running on center"
    - Try Left, Right, and On Center options
    - Different offset directions may work
 
 3. **Reduce tool size in code**:
-   - "It may think the tool is too large for the diameters"
-   - "You may need to shrink the tool size in the code"
    - Define a smaller tool diameter
    - This allows the offset to be calculated
 
 4. **Create surfaces or solids**:
-   - "I think in the past, I have created surfaces, or made solids to machine"
    - Convert the 2D geometry to a surface or solid
    - Use 3D machining strategies instead of 2D profiling
    - This bypasses the 2D offset limitation
@@ -122,33 +107,25 @@ Using Alphacam Ultimate Router 2020 for pocketing thin stacked sheets. The bit p
 ### Fix
 
 1. **Use manual lead in with slope**:
-   - "I think all you need is a manual lead in with a slope"
    - In the pocketing operation, add a manual lead in
    - Set the lead in as a sloped line
    - Line length = tool radius x 4, approach angle = 0
 
 2. **Use AutoZ for automatic ramp**:
-   - "If you use AutoZ for your pocketing it gives you the option of an automatic ramp"
    - Enable AutoZ in the pocketing settings
    - Set the ramp angle
    - This creates a helical/ramped entry
 
 3. **Change slope angle in contour pocket**:
-   - "When in your contour pocket under LEVELS AND CUTS change your slope angle for lead-in to 1"
    - Set slope angle to 1 degree
    - This creates a gentle ramp entry
    - Works well with fly cutters
 
 4. **Use rough/finish lead in/out**:
-   - "On the lead-in do a line, sloping. Line length tool rad x 4, approach angle 0"
-   - "With your lead out choose none"
    - This creates a ramped entry without a lead out
    - Works perfect for pocketing
 
 5. **Enable cutter compensation for pocketing**:
-   - "Cutter compensation is in there for pocketing"
-   - "Click the box for include additional rough/finish pass"
-   - "You still have to add the lead in to prevent a plunge"
    - Lock lead ins in the project manager to prevent them from dropping
 
 6. **Use line length and approach angle settings**:
@@ -192,7 +169,6 @@ The post processor generates incorrect Z height values when processing nested pa
    - Check that settings don't change with nesting
 
 4. **Set safe rapid down and rapid traverse to same height**:
-   - "I tried setting safe rapid down and rapid traverse to the same height"
    - This may prevent the Z height change
    - But it doesn't fix the root cause
    - Use linear nesting instead
@@ -219,20 +195,14 @@ Alphacam's manual toolpath doesn't directly support variable feed rates within a
 
 ### Fix
 
-1. **Use Advanced Toolpath Editor**:
-   - "After part is tooled, go to Machine tab > Advanced Toolpath Editor"
-   - "Hit the ++ to open all operations"
-   - "Then you can edit speeds and feeds individually"
-   - "Any tool path that is bi-directional can't be edited in there — it will have to be edited in Operations tab"
+1. **Use Advanced Toolpath Editor**.
 
 2. **Use Slow Down for Corners**:
-   - "Have you looked at 'slow down for corners'?"
    - In Edit Machining settings
    - Enable slow down for corners
    - This automatically reduces feed rate at sharp corners
 
 3. **Edit the G-code directly**:
-   - "Edit the G code"
    - After posting, manually edit the G-code
    - Insert F commands at specific points
    - This gives full control over feed rates
@@ -244,8 +214,6 @@ Alphacam's manual toolpath doesn't directly support variable feed rates within a
    - More manageable than G-code editing
 
 5. **Use cutting strategies to minimize blowout**:
-   - "We have been cutting solid wood for some time"
-   - "There are cutting strategies that will minimize if not eliminate blowout"
    - Use climb cutting vs. conventional cutting strategically
    - Add a finish pass with smaller depth of cut
 

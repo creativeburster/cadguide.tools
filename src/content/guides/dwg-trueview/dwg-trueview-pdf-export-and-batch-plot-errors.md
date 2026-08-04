@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/dwg-trueview-forum/trueview-doesn-t-remember-default-plot-settings/td-p/12501523"
-  - "https://forums.autodesk.com/t5/dwg-trueview-forum/trueview-printing-black-and-white-in-batch-plotting/td-p/8976501"
-  - "https://forums.autodesk.com/t5/dwg-trueview/dwg-trueview-wont-export-to-pdf/td-p/5441134"
 ---
 
 # DWG TrueView PDF Export and Batch Plot Errors: Export to PDF Does Nothing from Preset Plot Settings Pointing to Blank Area Requiring Plot Command Instead, Batch Plot Black and White Requires Monochrome CTB Page Setup Not Available by Default, Page Setup Not Saved Between Drawings Because TrueView Cannot Write to DWG Files, Batch Plot Extents Not Available for Model Space Requiring Paper Space Layouts, and Custom Plot Style Tables and Page Sizes Must Be Copied to TrueView Installation Directory
@@ -31,8 +28,6 @@ The Export command uses preset plot settings stored in the DWG file. If the page
 ### Fix
 
 1. **Use Plot command instead of Export**:
-   - "'Export' uses preset plot settings in your file: if that is set to a blank spot in your file you get nothing"
-   - "Plot to PDF instead, and actively select what you want to plot and final output size"
    - Use Big Green D icon > Print > Plot
    - Select the area to plot, paper size, and plot style manually
 
@@ -52,7 +47,6 @@ The Export command uses preset plot settings stored in the DWG file. If the page
 
 4. **For 3D DWG files**:
    - TrueView's PDF export produces poor results for 3D models
-   - "You need full AutoCAD for the full expanded offerings under the SHADE PLOT pulldown menu"
    - Use Plot command and select shaded viewport options
    - Consider eDrawings Viewer for 3D model PDF export
 
@@ -117,8 +111,6 @@ DWG TrueView is a viewer — it cannot write to DWG files. Any page setup change
 ### Fix
 
 1. **Understand TrueView's limitations**:
-   - "TrueView is all about one-off functionality: nothing is saved for reuse"
-   - "It has no ability to write anything to the DWG file for reuse"
    - Page setups must be recreated for each drawing
 
 2. **Use Batch Plot with template override**:
@@ -141,7 +133,6 @@ DWG TrueView is a viewer — it cannot write to DWG files. Any page setup change
    - If batch plotting is a regular workflow
    - AutoCAD LT can save page setups in DWG files
    - AutoCAD LT has full Batch Plot/Publish functionality
-   - "If you need something even faster, you will need to purchase a software solution"
 
 6. **Use third-party DWG viewers with batch capabilities**:
    - Some third-party viewers can save settings
@@ -165,7 +156,6 @@ DWG TrueView's Batch Plot doesn't support Extents plotting for Model Space. Batc
 ### Fix
 
 1. **Use Paper Space layouts instead of Model Space**:
-   - "Paperspace tabs will follow the predefined pagesetup for each of those layouts"
    - If drawings have Paper Space layouts, Batch Plot uses their page setups
    - Model Space drawings need to be converted to Paper Space in AutoCAD
 
@@ -187,7 +177,6 @@ DWG TrueView's Batch Plot doesn't support Extents plotting for Model Space. Batc
    - This only works for Paper Space layouts, not Model Space
 
 5. **Accept that TrueView has limitations for Model Space**:
-   - "The free viewer does nothing like that as a built-in tool if you are only using modelspace"
    - For Model Space batch plotting, use AutoCAD or AutoCAD LT
    - TrueView is designed for viewing and one-off plotting, not batch processing
 
@@ -211,22 +200,17 @@ DWG TrueView looks for plot style tables (.ctb), plotter configuration files (.p
    - Copy .ctb files to TrueView's Plot Styles directory
    - Copy .pc3 files to TrueView's Plotters directory
    - Copy .pmp files to the same Plotters directory
-   - "DWG TrueView will fetch the proper .pmp, .ctb and .pc3 files by name"
 
 2. **Use the same file names**:
-   - "Names need to be the same"
    - If the DWG file references "monochrome_custom.ctb"
    - TrueView looks for that exact filename in its plot style directory
    - If found, it uses it; if not, it falls back to defaults
 
 3. **Understand that PAGESETUP overrides defaults**:
-   - "PAGESETUP settings in the DWG file will ALWAYS override program defaults"
-   - "Autodesk for 40+ years now gives the file creator total control inside each DWG file"
    - If the DWG has a page setup, it takes precedence over TrueView's defaults
    - This is not a bug — it's by design
 
 4. **Distribute custom files to all users**:
-   - "In order to have 1:1 outcome for each user, I copied those files to their DWG TrueView directory"
    - Each user needs the same .ctb, .pc3, and .pmp files
    - Create an installation script for deployment
    - Verify file names match exactly
@@ -240,7 +224,6 @@ DWG TrueView looks for plot style tables (.ctb), plotter configuration files (.p
 6. **Set defaults in TrueView Options**:
    - In TrueView Options, set default plot style table and printer
    - These defaults apply only when the DWG file doesn't have its own page setup
-   - "They work just fine except that even though they're set as default, they're not used when opening a DWG"
 
 ### Community Report
 

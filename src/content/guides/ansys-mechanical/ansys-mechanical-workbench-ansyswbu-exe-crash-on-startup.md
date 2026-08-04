@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://innovationspace.ansys.com/knowledge/forums/topic/error-unable-to-start-mechanical-in-workbench-windows-ansyswbu-exe-encountered-a-problem-a-diagnostic-file-has-been-written-cusersusernameappdatalocaltempansyswbdumpfile-dmp-and-an/"
-  - "https://innovationspace.ansys.com/knowledge/forums/topic/try-to-mesh-a-simple-geometry-e-g-a-cubic-in-workbench-mechanical-on-windows-get-a-misleading-error-of-the-mesh-generation-did-not-complete-due-to-poor-quality-elements-or-incorrect-input-please-try-meshing-with-another-mesh-method-or-different-mesh-options/"
-  - "https://innovationspace.ansys.com/forum/forums/topic/ansys-meshing-script-error-80004005-nothing-seems-to-fix-it/"
 ---
 
 # Ansys Mechanical Workbench AnsysWBU.exe Crash on Startup, Meshing Error from Intel Compiler DLL Conflict in System32, Mesh Script Error 80004005 from Corrupted Installation, IPv6 Localhost Resolution Preventing Workbench Launch, and Intel Integrated Graphics Overriding Professional GPU: AppData Reset, libiomp5md.dll Rename, ProductConfig Reconfiguration, IPv6 Disable, and NVIDIA Control Panel
@@ -31,45 +28,27 @@ The Ansys Workbench user settings in the AppData directory have become corrupted
 ### Fix
 
 1. **Close all Workbench sessions**:
-   - "Close out of all WorkBench sessions"
    - Ensure no Ansys processes are running
    - Check Task Manager for AnsysWBU.exe and related processes
    - Kill any remaining processes
 
-2. **Rename the Ansys AppData folder**:
-   - "In Windows Explorer in the Address bar type: %appdata%"
-   - "Open the folder 'Ansys'"
-   - "Locate the v150, v160, v170, v180 (whatever version corresponds to the version of Ansys)"
-   - "Rename the folder, for example, v150, v160, v170, v180 to v1#0_old"
+2. **Rename the Ansys AppData folder**.
 
 3. **Rename the .ansys temp folder**:
-   - "In Windows Explorer in the Address bar type: %temp%"
-   - "Rename the .ansys folder"
    - This removes corrupted temporary data
    - That may be causing the crash
 
 4. **Start a new Workbench session**:
-   - "Start a new Workbench session"
    - After renaming the folders
    - Workbench will create fresh settings
    - The crash should be resolved
 
 5. **Check graphics card and driver**:
-   - "In the RUN command type: dxdiag"
-   - "In the Display tab ensure that your graphics card is a supported Ansys graphics card"
-   - "And that you have the latest graphics driver"
    - Update drivers if necessary
 
-6. **Check localhost resolution**:
-   - "Make sure you can resolve localhost"
-   - "Open up a command window and type: ping localhost"
-   - "If it returns an IPv6 address disable IPv6"
-   - "It should return something like 127.0.0.1"
+6. **Check localhost resolution**.
 
 7. **Gather diagnostics if issue persists**:
-   - "Please launch the ANSLIC_ADMIN Utility"
-   - "Click View Status/Options, then Gather Diagnostic Information"
-   - "Click 'Yes' when prompted"
    - Send diagnostics to Ansys support
 
 ### Community Report
@@ -94,16 +73,9 @@ Trying to mesh even a simple geometry (e.g., a cube) in Workbench Mechanical on 
    - `libmmd.dll` (Math Library for Intel Compiler)
    - Check file dates and sizes
 
-2. **Compare with Ansys installation versions**:
-   - "Below files were found on two customers' C:\Windows\system32 folder:"
-   - "09/02/2010 08:20 PM 529,080 libiomp5md.dll"
-   - "09/02/2010 08:16 PM 2,838,200 libmmd.dll"
-   - "They are old dated, file size are much smaller than the below ones in Ansys installation:"
-   - "02/06/2019 08:38 AM 1,728,232 libiomp5md.dll"
-   - "02/06/2019 08:38 AM 4,271,848 libmmd.dll"
+2. **Compare with Ansys installation versions**.
 
 3. **Rename the conflicting DLLs**:
-   - "Try to rename the 2 files by adding .old"
    - Rename `C:\Windows\system32\libiomp5md.dll` to `libiomp5md.dll.old`
    - Rename `C:\Windows\system32\libmmd.dll` to `libmmd.dll.old`
    - Relaunch Workbench
@@ -115,14 +87,9 @@ Trying to mesh even a simple geometry (e.g., a cube) in Workbench Mechanical on 
    - Meshing should now work
 
 5. **Handle third-party application issues**:
-   - "If above renaming affects 3rd party applications"
-   - "Copy them to the folder where 3rd party application executable is located"
-   - "And rename them back"
    - The third-party app should use its local copies
 
 6. **Remove DLLs from System32 permanently**:
-   - "Such Intel compiler runtime library files should not be placed in C:\Windows\system32"
-   - "Since different applications or same application but different versions may need different version runtime libraries"
    - Move the DLLs to the third-party app's directory
    - Instead of System32
 
@@ -148,33 +115,15 @@ Ansys Meshing reports "script error 80004005" every time the mesh module is edit
 
 ### Fix
 
-1. **Run ProductConfig.exe as Administrator**:
-   - "Run the ProductConfig.exe from C:\Program Files\ANSYS Inc\v2xx"
-   - "Right clicking the productconfig.exe file and select 'Run as Administrator'"
-   - "Selecting all options"
-   - "Make sure you also click on 'Install Required Prerequisites'"
+1. **Run ProductConfig.exe as Administrator**.
 
-2. **Uninstall and reinstall Microsoft Visual C++**:
-   - "Please try uninstalling these:"
-   - "Microsoft Visual C++ 2019 / x86 and x64"
-   - "Microsoft Visual C++ 2017 / x86 and x64"
-   - "Download and install the Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019, both x86 and x64"
+2. **Uninstall and reinstall Microsoft Visual C++**.
 
-3. **Rename the Ansys AppData folder**:
-   - "Open a file explorer and enter %APPDATA% in the address line"
-   - "Here you will find an Ansys directory"
-   - "Inside this you will find various directories with the number of the release"
-   - "Rename that corresponding folder (i.e. v211) to a different name (i.e. backup_v211)"
+3. **Rename the Ansys AppData folder**.
 
-4. **Restart Workbench after reconfiguration**:
-   - "Then start Ansys Workbench again"
-   - "And test to open Ansys Meshing"
-   - "The folder will automatically get created again"
-   - "It only contains user settings, so typically can just be removed and re-created"
+4. **Restart Workbench after reconfiguration**.
 
 5. **Clean uninstall Ansys**:
-   - "If the above workaround doesn't help"
-   - "Can you try re-installing the Ansys version on client machine?"
    - Use the Ansys uninstaller
    - Then manually delete remaining Ansys folders
 
@@ -208,31 +157,19 @@ Ansys Workbench can't start or crashes during startup. The crash may be related 
 ### Fix
 
 1. **Check localhost resolution**:
-   - "Open up a command window and type: ping localhost"
    - If it returns `::1` (IPv6), that's the problem
    - It should return `127.0.0.1` (IPv4)
-   - "If it returns an IPv6 address disable IPv6"
 
 2. **Uncheck IPv6 on network adapter**:
-   - "Open up the properties of your network adapter"
-   - "And uncheck the IPv6 checkbox only"
    - This unbinds IPv6 from that particular network adapter
    - But doesn't disable IPv6 in Windows entirely
 
-3. **Disable IPv6 via registry (complete disable)**:
-   - "Doing this however, only unbinds IPv6 from that particular network adapter"
-   - "It doesn't disable IPv6 in Windows"
-   - "To cleanly disable IPv6 a registry key must be added"
-   - "Go to the following web site for a registry file: https://support.microsoft.com/en-us/kb/929852"
+3. **Disable IPv6 via registry (complete disable)**.
 
 4. **Verify IPv6 is disabled**:
-   - "Verify that IPv6 is disabled by typing ipconfig /all"
-   - "From the command prompt"
-   - "The output should only show IPv4 addresses"
    - No IPv6 addresses should appear
 
 5. **Reboot after disabling IPv6**:
-   - "When you have disabled IPv6 a reboot is necessary"
    - Restart the computer
    - Then try launching Workbench
    - The localhost should now resolve to 127.0.0.1
@@ -265,11 +202,7 @@ Ansys Workbench or Mechanical crashes, has display issues, or runs slowly. The s
 
 ### Fix
 
-1. **Set NVIDIA as preferred graphics processor**:
-   - "Open up Control Panel > nVidia Control Panel"
-   - "Go to 3D settings > Manage 3D settings"
-   - "Under Preferred Graphics Processor > choose nVidia"
-   - "Apply"
+1. **Set NVIDIA as preferred graphics processor**.
 
 2. **Set specific Ansys executables to use NVIDIA**:
    - In NVIDIA Control Panel > Manage 3D Settings > Program Settings
@@ -280,14 +213,9 @@ Ansys Workbench or Mechanical crashes, has display issues, or runs slowly. The s
    - Set each to use the NVIDIA GPU
 
 3. **Check dxdiag for active graphics card**:
-   - "In the RUN command type: dxdiag"
-   - "In the Display tab ensure that your graphics card is a supported Ansys graphics card"
-   - "And that you have the latest graphics driver"
    - Verify the professional GPU is active
 
 4. **Update graphics drivers**:
-   - "Please visit the graphics card vendors web site"
-   - "And download and install the newest graphics driver"
    - For NVIDIA: download from NVIDIA website
    - For AMD: download from AMD website
 
@@ -298,9 +226,6 @@ Ansys Workbench or Mechanical crashes, has display issues, or runs slowly. The s
    - But may affect battery life on laptops
 
 6. **Check supported graphics cards**:
-   - "If you have an AMD Radeon, Nvidia Matrix or are using the Intel Integrated graphics cards"
-   - "These will generally not work and are not supported"
-   - "Please visit the Ansys graphics cards tested page"
    - Ensure your professional GPU is on the supported list
 
 7. **Set Windows graphics performance preference**:

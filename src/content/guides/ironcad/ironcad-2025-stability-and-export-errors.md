@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
-  - "https://www.ironcad.com/product-update/2025pu1/"
-  - "https://www.ironcad.com/product-update/2025sp1/"
-  - "https://www.ironcad.com/product-update/2025pu1sp1/"
 ---
 
 # IronCAD 2025 Stability and Export Errors: Crash on Hole Table with 54 of 150 Holes from Known Bug Requiring SP1 Update, STEP Export Missing Parts from Export Failure Requiring Update, Imported CATIA Part Hangs on Selection from Geometry Complexity Requiring Simplification, DWG Export Failure from Version Bug Requiring PU1 SP1 Update, and Assembly Save to ICC Cannot Drag Out Causing Crash from File Corruption Requiring Recovery
@@ -34,7 +31,6 @@ Working with a part that has 150 holes in a hole table. When 54 of the 150 holes
    - Check the IronCAD product updates page
    - Install 2025 Product Update #1 or later
    - This may include fixes for the hole table crash
-   - "The complete release notes documentation is available to KeyCreator customers"
 
 2. **Split the hole table**:
    - Instead of one table with 150 holes
@@ -82,8 +78,6 @@ Exporting an assembly or part to STEP format. After export, some parts are missi
    - Resuppress after export if needed
 
 3. **Make all parts visible before export**:
-   - "Hidden solids and components are not written to STL format"
-   - "They may be or may not be written to STEP depending on settings"
    - Make all parts visible
    - Check export settings for hidden part handling
 

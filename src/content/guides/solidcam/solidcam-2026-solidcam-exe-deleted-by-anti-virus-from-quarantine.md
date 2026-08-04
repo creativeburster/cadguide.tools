@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://forum.solidcam.com/forum/technical-support/3059-solidcam-installation-problems-and-solutions"
-  - "https://forum.solidcam.com/forum/imachining/2517-2021-tool-path-engine-logs"
-  - "https://www.solidsolutions.co.uk/whats-new-in-solidcam-2026/"
 ---
 
 # SolidCAM 2026 SolidCAM.exe Deleted by Anti-Virus from Quarantine, MSVCR120.dll Missing from Missing Visual C++ Redistributable, SolidCAM Add-In Cam Manager Initialization Failure from Registration Issue, SolidWorks and SolidCAM Crash Without Error Reports on Part Opening, and iMachining 3D Incorrect Feeds and Spins for Floor Machining from TPE Bug: Anti-Virus Exclusion, VC++ Redistributable Install, HostLib.dll Registration, Clean Install, and TPE Update
@@ -31,15 +28,9 @@ SolidCAM.exe is missing from the root directory. The program cannot be started. 
 ### Fix
 
 1. **Check if SolidCAM.exe is in root directory**:
-   - "Check whether the Solidcam.exe"
-   - "Is still in the root directory"
    - Check root
 
 2. **Restore from anti-virus quarantine**:
-   - "This is often deleted"
-   - "By certain anti-virus"
-   - "Software solutions"
-   - "And placed in a quarantine"
    - Restore from quarantine
 
 3. **Add SolidCAM folder to anti-virus exclusions**:
@@ -89,9 +80,6 @@ The error "The code execution cannot proceed because MSVCR120.dll was not found.
 ### Fix
 
 1. **Install Microsoft Visual C++ 2013 Redistributable**:
-   - "MSVCR120.dll was not found"
-   - "Reinstalling the program"
-   - "May fix this problem"
    - Install VC++ 2013
 
 2. **Install both x86 and x64 versions**:
@@ -147,24 +135,17 @@ SolidCAM cannot be loaded in SolidWorks. The error "Cannot load SolidCAM -> Cam 
 ### Fix
 
 1. **Register SolidCAM HostLib.dll to SolidWorks**:
-   - "Registering SolidCAM"
-   - "HostLib.dll to SolidWorks"
    - Register HostLib.dll
 
 2. **Use SolidCAM Clean-Up Tool**:
-   - "SolidCAM Clean Install"
-   - "SolidCAM Clean-Up Tool"
    - Use Clean-Up Tool
 
 3. **Perform SolidCAM Clean Install**:
-   - "SolidCAM Clean Install"
    - Perform clean
    - Installation after
    - Clean-Up
 
 4. **Register SolidCAM to SolidWorks**:
-   - "Registering SolidCAM/InventorCAM"
-   - "To SolidWorks/Inventor"
    - Register to
    - SolidWorks
 
@@ -175,8 +156,6 @@ SolidCAM cannot be loaded in SolidWorks. The error "Cannot load SolidCAM -> Cam 
    - Entry
 
 6. **Verify SolidWorks installation**:
-   - "SolidWorks was not found"
-   - "On your machine"
    - Verify SolidWorks
    - Is installed
 
@@ -203,8 +182,6 @@ SolidWorks and SolidCAM crash without any error reports when opening parts. The 
 ### Fix
 
 1. **Perform SolidCAM Clean Install**:
-   - "SolidCAM Clean Install"
-   - "SolidCAM Clean-Up Tool"
    - Clean install
 
 2. **Use SolidCAM Clean-Up Tool first**:
@@ -260,9 +237,6 @@ iMachining 3D operations produce incorrect feeds and spindle speeds when machini
 ### Fix
 
 1. **Update to latest TPE version**:
-   - "Fixed incorrect feeds and spins"
-   - "For 3D iMachining"
-   - "When machining floors"
    - Update TPE
 
 2. **Check TPE version in SolidCAM**:
@@ -278,26 +252,15 @@ iMachining 3D operations produce incorrect feeds and spindle speeds when machini
    - Correct
 
 4. **Use iMachining Technology Wizard**:
-   - "The iMachining Technology Wizard"
-   - "Automatically calculates synchronized"
-   - "Values of feed rate, spindle speed"
    - Use Wizard
 
 5. **Keep Wizard On for optimal results**:
-   - "It is recommended"
-   - "To leave the Wizard On"
-   - "And utilize the optimal"
    - Keep Wizard On
 
 6. **Check for missing iFinish pass**:
-   - "Fixed missing iFinish pass"
-   - "For non rest material operations"
    - Check iFinish
 
 7. **Use iFinish protection for unmachined areas**:
-   - "Added iFinish protection"
-   - "From unmachined areas"
-   - "When using updated stock"
    - Use protection
 
 ### Community Report

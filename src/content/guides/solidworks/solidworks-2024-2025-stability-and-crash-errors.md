@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://3dswym.3dexperience.3ds.com/question/solidworks-user-forum/solidworks-2024-2025-stability-issues_QA3zv_hBTP6OD0Fc6j0ntQ"
-  - "https://forum.solidworks.com/forum-solidworks/MYfrK4r0RF6Fnd8tf5tAMA/solidworks-2025-sp0-crashes-when-opening-a-drawing-file"
-  - "https://3dswym.3dexperience.3ds.com/question/solidworks-user-forum/crash-on-file-new-in-solidworks-2025-sp5-0-%E2%80%93-missing-drawing-template_AWxaSvxhS_Kcvoak2wtuNA"
 ---
 
 # SolidWorks 2024 2025 Stability and Crash Errors: Crash on CTRL-Copy and Drag View from clr.dll NET Framework Conflict Requiring OpenGL Mode and Repair, SP0 Crash Opening Drawing from annotationwpf Module Error Requiring Template Repair, SP5.0 Crash on File New from Missing Drawing Template Requiring drwdot Restoration, SP5.0 Crash with Custom Library Mate References from Component Loading Bug Requiring Reference Removal, and GPU TDR Hard System Crash on Lenovo P16 from NVIDIA RTX Pro 3000 Driver Conflict Requiring Driver Rollback
@@ -31,7 +28,6 @@ The clr.dll crash is linked to a .NET Framework conflict in SolidWorks' assembly
 ### Fix
 
 1. **Run in OpenGL mode**:
-   - "They tried reinstalling it, running in OpenGL mode, repairing broken .dll's"
    - Tools > Options > System Options > Performance
    - Uncheck "Use Software OpenGL"
    - Or check it to force OpenGL mode
@@ -57,7 +53,6 @@ The clr.dll crash is linked to a .NET Framework conflict in SolidWorks' assembly
    - Re-enable one at a time
 
 5. **Update NVIDIA driver**:
-   - "Nvidia GeForce RTX 4060 Studio driver"
    - Download the latest NVIDIA Studio driver
    - Don't use Game Ready drivers
    - Perform a clean install
@@ -75,8 +70,6 @@ The clr.dll crash is linked to a .NET Framework conflict in SolidWorks' assembly
    - If it works, the old profile is corrupted
 
 8. **Contact technical support**:
-   - "I tried contacting my technical support"
-   - "They suggested windows reinstall"
    - Before reinstalling Windows, try all above steps
    - Escalate to Dassault support if needed
 
@@ -127,16 +120,13 @@ The `annotationwpf` module is SolidWorks' WPF-based annotation rendering compone
    - Update Windows to get latest .NET
 
 6. **Check for missing templates**:
-   - "Templates folder: C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2025\templates"
    - Verify Drawing.drwdot exists
    - If missing, copy from another installation
    - Or repair the installation
 
 7. **Use the error code for support**:
-   - "annotationwpf:0002e7ca"
    - Provide this error code to Dassault support
    - Search the forum for this specific code
-   - "How to fix error annotationwpf:0002e7ca when open drawing solidworks"
 
 ### Community Report
 
@@ -155,7 +145,6 @@ The Drawing.drwdot template file is missing from the templates folder. When File
 ### Fix
 
 1. **Restore the Drawing.drwdot template**:
-   - "Can anyone advise how to obtain the missing Drawing.drwdot template?"
    - Copy Drawing.drwdot from another SolidWorks 2025 installation
    - Or extract from the installation media
    - Place in `C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2025\templates`
@@ -191,7 +180,6 @@ The Drawing.drwdot template file is missing from the templates folder. When File
    - The path should be `C:\ProgramData\SOLIDWORKS\SOLIDWORKS 2025\templates`
 
 7. **Reset SOLIDWORKS folders**:
-   - "Reset of %APPDATA%\SOLIDWORKS and %LOCALAPPDATA%\SOLIDWORKS folders"
    - Delete both folders
    - Restart SolidWorks
    - Fresh configuration is created
@@ -225,7 +213,6 @@ SolidWorks 2024 SP5.0 introduced a change in how mate references are loaded from
    - Wait for a hotfix
 
 3. **Check for hotfixes**:
-   - "SOLIDWORKS 2024 SP5.0 Crashes with Custom Library Components having mate references"
    - Check the SOLIDWORKS hotfix page
    - Look for a hotfix for this specific issue
    - Install if available
@@ -295,7 +282,6 @@ The NVIDIA RTX Pro 3000 (Blackwell architecture) GPU driver has a conflict with 
    - Test with the latest driver
 
 5. **Check PCIe/WHEA errors**:
-   - "Looking for PCIe/WHEA insight"
    - Check Event Viewer for WHEA errors
    - These indicate hardware-level GPU issues
    - May require hardware replacement

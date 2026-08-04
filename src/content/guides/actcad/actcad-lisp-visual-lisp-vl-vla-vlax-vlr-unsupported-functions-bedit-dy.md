@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://actcad.com/faq.php"
-  - "https://dailycadcam.com/actcad-2025-update-1310508-released/"
-  - "https://actcad.com/blog-single.php?id=65&title=how-to-load-lisp-programs-in-actcad-software"
 ---
 
 # ActCAD LISP Visual LISP vl- vla- vlax- vlr- Unsupported Functions, -BEDIT Dynamic Block Crash, LISP Open Command Hang, Move Command Slow Performance, and Graphics Zoom Pan Cancel Issue: IntelliCAD 13.1 Update, System Variable Fix, and ODA SDK Upgrade
@@ -30,11 +27,7 @@ AutoLISP routines that work in AutoCAD fail in ActCAD. The routines use Visual L
 
 ### Fix
 
-1. **Check for Visual LISP functions before porting**:
-   - "Search for `vl-`, `vla-`, `vlax-`, `vlr-` — if found, the routine uses Visual LISP"
-   - "Search for `vla-get-`, `vla-put-` — ActiveX automation, unsupported"
-   - "Search for `gsm` — Geometric Constraint Manager APIs, unsupported"
-   - "If none of these searches return hits, the routine is pure AutoLISP"
+1. **Check for Visual LISP functions before porting**.
 
 2. **Replace vl- string functions with pure AutoLISP**:
    - Replace `vl-string-subst` with `substr` and `strcat`
@@ -66,7 +59,6 @@ AutoLISP routines that work in AutoCAD fail in ActCAD. The routines use Visual L
    - Use `:vlr-objectModified` equivalent through custom polling
 
 6. **Use ActCAD Developer Reference**:
-   - "Check the code thoroughly and compare with ACTCAD Help Developer Reference"
    - The Developer Reference lists supported functions
    - Check which IntelliCAD-specific functions are available
    - Some IntelliCAD extensions may provide similar functionality
@@ -94,9 +86,6 @@ Using the `-BEDIT` command on Dynamic Blocks that contain Constraints causes Act
 ### Fix
 
 1. **Update to ActCAD 2025 Update 1310508 or later**:
-   - "ActCAD 2025 New update 1310508 released based on latest IntelliCAD 13.1 engine"
-   - "Fixed crash issue when using -BEDIT on Dynamic Blocks with Constraints"
-   - "By clearing the selection set and adding a check for constraints"
    - This is the primary fix — update to the latest version
 
 2. **Use BEDIT (dialog version) instead of -BEDIT**:
@@ -146,8 +135,6 @@ When a LISP routine uses the `OPEN` command, ActCAD hangs or freezes. The hang o
 ### Fix
 
 1. **Update to ActCAD 2025 Update 1310508 or later**:
-   - "Resolved certain issue with the OPEN command via LISP"
-   - "By hiding the LISPCOMMANDHASMORE system variable"
    - This is the primary fix — update to the latest version
    - The update hides the variable from LISP routines
 
@@ -198,7 +185,6 @@ The Move command is very slow when working on certain drawings. Moving even simp
 ### Fix
 
 1. **Update to the latest ActCAD version**:
-   - "Fixed Move command slow issue for a given drawing"
    - This fix is included in recent ActCAD updates
    - Update to ActCAD 2025 or later
    - Check the release history for the specific fix
@@ -256,7 +242,6 @@ After canceling certain CAD commands (pressing ESC), graphics zoom and pan actio
 ### Fix
 
 1. **Update to the latest ActCAD version**:
-   - "Fixed Graphics zoom and pan actions issue when some CAD commands are canceled"
    - This fix is included in recent ActCAD updates
    - Update to ActCAD 2025 or later
    - Check the release history for the specific fix

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://github.com/openscad/openscad/issues/4313"
-  - "https://github.com/openscad/openscad/issues/3703"
-  - "https://3dprinting.stackexchange.com/questions/15769/openscad-render-f6-fails-with-error-cgal-error-in-cgal-nef-polyhedron3"
 ---
 
 # OpenSCAD CGAL Rendering Errors: Nef_polyhedron3 Assertion Violation from Non-Manifold STL Import, Vertex Winding Order Causing Component Disappearance, Coincident Faces in Boolean Operations, Cache Interference Between F5 Preview and F6 Render, and Manifold Engine as CGAL Replacement

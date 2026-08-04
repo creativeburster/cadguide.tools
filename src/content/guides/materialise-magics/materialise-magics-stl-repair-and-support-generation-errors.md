@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
-  - "https://wiya3d.com/community/postid/1248/"
-  - "https://wiya3d.com/community/postid/1249/"
 ---
 
 # Materialise Magics STL Repair and Support Generation Errors: Thickened Supports Create Open Contours and Empty Slices from Non-Solid Support Geometry Requiring 28.03 Update, No Support Generation Method Selected from Incomplete Machine Setup Requiring Machine Properties Configuration, Common STL Errors Bad Edges Inverted Normals Holes Intersecting Triangles Requiring AutoFix Workflow, Massive STL File Sizes Slow Viewport from High Polygon Count Requiring Triangle Reduction, and Support STL Export to Cura for FDM Requires Solid Support Export Format
@@ -31,25 +28,20 @@ The support thickening algorithm in Magics 28.0-28.02 creates non-solid geometry
 ### Fix
 
 1. **Update to Magics 28.03 or later**:
-   - "This issue is resolved as of Magics 28.03"
    - Download from the Materialise portal
    - Install Magics 28.03+
    - The thickening algorithm is fixed
 
 2. **Regenerate supports from previous versions**:
-   - "If supports are imported from a previous Magics version, it is mandatory to regenerate the supports prior to slicing"
-   - "Otherwise the slicing will use the imported, faulty support as input"
    - Delete imported supports
    - Regenerate supports in Magics 28.03
 
 3. **Convert solid support to STL**:
-   - "When using thickened support, set the parameters in Machine properties to convert solid support to .stl"
    - Go to Build Preparation > Machine Properties
    - Enable "Convert solid support to .stl"
    - This forces solid geometry output
 
 4. **Check for planar holes after SG mode**:
-   - "On exit from SG mode, check the 'planar holes' in the Part fixing info and run the fixing"
    - After generating supports, exit SG mode
    - Open Part Fixing Info
    - Check for planar holes
@@ -84,13 +76,9 @@ The machine and platform settings are not fully defined. Magics requires a suppo
 ### Fix
 
 1. **Configure Machine Properties for support generation**:
-   - "Go to Build Preparation and click Machine Properties"
-   - "In pop up window go to support generation parameters"
-   - "There you have the option support type selection to select support types"
    - Select the appropriate support type for your machine
 
 2. **Complete the machine setup**:
-   - "It seems still you haven't fully defined the machine, platform setting"
    - Go to Build Preparation > Machine Properties
    - Complete all required fields:
      - Machine type
@@ -139,42 +127,30 @@ Importing an STL file from CAD into Magics. The Part Fixing Info shows multiple 
 ### Fix
 
 1. **Check errors in Part Fixing Info (Diagnostics)**:
-   - "Check errors in Part Fixing Info (Diagnostics)"
    - Select the part
    - Go to Fixing tab > Part Fixing Info
    - Review all detected errors
    - Note the count and type of each error
 
 2. **Use AutoFix for quick repair**:
-   - "Use AutoFix for quick repair"
    - In the Fixing tab, click AutoFix
    - AutoFix automatically closes planar holes, flips inverted normals, and stitches bad edges
    - Review the results after AutoFix
 
 3. **Apply stitching, hole filling, and normals correction**:
-   - "Apply stitching, hole filling, and normals correction"
    - Use the Stitching tool for bad edges
    - Use the Fill Holes tool for gaps
    - Use the Fix Normals tool for inverted normals
    - Check Part Fixing Info after each fix
 
 4. **Use manual tools for complex geometry**:
-   - "Use manual tools for complex geometry issues"
    - Use the Triangle Fix tool for individual triangles
    - Use the Move Part Points tool for vertex adjustment
    - Use the Filter Triangles tool for small/sharp triangles
 
-5. **Fix intersecting triangles**:
-   - "Navigate to the Part Fixing Info tab, select the Triangle Fix tool"
-   - "Mark the overlapping geometries"
-   - "Use the Move Part Points tool to manually separate the vertices"
-   - "Until the collision error clears from the diagnostic screen"
+5. **Fix intersecting triangles**.
 
-6. **Fix inverted normals**:
-   - "If a triangle's internal face points outward, the printer cannot distinguish the inside from the outside"
-   - "Run the AutoFix command in the Fix ribbon"
-   - "Or manually orient the normals so all internal geometries display as solid red"
-   - "And external faces point uniformly outward"
+6. **Fix inverted normals**.
 
 7. **Verify after fixing**:
    - Run Part Fixing Info again
@@ -199,8 +175,6 @@ Importing a highly detailed native CAD file into Magics. The resulting STL has m
 ### Fix
 
 1. **Use triangle reduction (mesh decimation)**:
-   - "Utilize the triangle reduction or mesh decimation tools to lower the overall polygon count"
-   - "Retaining the necessary dimensional accuracy while making the file manageable"
    - Go to Tools > Reduce Triangles
    - Set the target polygon count or tolerance
 
@@ -288,7 +262,6 @@ Magics generates supports for industrial AM (metal/resin), not for FDM. The supp
 
 6. **Use Cura's support settings instead**:
    - For FDM printing, Cura's built-in support generation may be sufficient
-   - "Magics has more powerful & flexible support generating technique"
    - But Cura's supports are optimized for FDM
    - Consider using Cura's supports for FDM, Magics for industrial AM
 

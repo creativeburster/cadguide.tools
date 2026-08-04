@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000p2i6WKAQ/new-nx2506-install-the-licensing-shared-library-failed-to-load"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000BB9RRKA1/runjournal-error-failed-to-initialize-ufun-948822"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000WWqL3KAL/nx-license-error-cannot-connect-to-license-server-system-the-serverimgrd-has-not-been-started-yet-or-ugslicenseserver-is-set-to-the-wrong-port-host-15"
 ---
 
 # Siemens NX 2506 Licensing Shared Library Failed to Load from Anti-Virus Quarantining salt_clt.dll, run_journal Failed to Initialize UFUN 948822 from Missing SPLM_LICENSE_SERVER Environment Variable, License Error Cannot Connect to License Server from Wrong Port or Stopped Service, Journal Execution Error from Undefined Object Reference in Custom Macros, and Structure Designer License Not Available from Bundle Configuration Issues: Anti-Virus Exclusion, Environment Variable Set, License Server Verification, Object Reference Debug, and Bundle Update
@@ -31,9 +28,6 @@ After a full install of NX2506, the error "The licensing shared library failed t
 ### Fix
 
 1. **Disable anti-virus during installation**:
-   - "Is there any chance you"
-   - "Have anti-virus enabled"
-   - "That's affecting your install?"
    - Disable AV
 
 2. **Add NX installation folder to anti-virus exclusions**:
@@ -49,15 +43,9 @@ After a full install of NX2506, the error "The licensing shared library failed t
    - Restore it
 
 4. **Reinstall NX after disabling anti-virus**:
-   - "What did work was"
-   - "Hamstringing it via powershell"
-   - "Stopping the AV"
    - Reinstall NX
 
 5. **Use Siemens License Server (SLS) v4.x**:
-   - "From NX 2312 onward"
-   - "Use of SLS is mandatory"
-   - "And the old one will not work"
    - Use SLS
 
 6. **Verify salt_clt.dll exists after install**:
@@ -67,10 +55,6 @@ After a full install of NX2506, the error "The licensing shared library failed t
    - After install
 
 7. **Check for other quarantined files**:
-   - "Is the salt_clt.dll"
-   - "The only thing you guys"
-   - "Have seen get deleted"
-   - "Due to antivirus?"
    - Check other files
 
 ### Community Report
@@ -90,50 +74,26 @@ Running Python journals in batch mode via run_journal from the command line fail
 ### Fix
 
 1. **Set SPLM_LICENSE_SERVER environment variable**:
-   - "SPLM_LICENSE_SERVER"
-   - "Must be set for"
-   - "Run_journal to work again"
    - Set variable
 
 2. **Use NX Command Prompt instead of standard cmd**:
-   - "A best practice would be"
-   - "To launch run_journal from"
-   - "A NX Command prompt"
-   - "Rather than a standard cmd window"
    - Use NX Command Prompt
 
 3. **Set as Windows system environment variable**:
-   - "If you set the"
-   - "SPLM_LICENSE_SERVER variable"
-   - "As a Windows system"
-   - "Environment variable"
    - Set system variable
 
 4. **Verify license server is running**:
-   - "The variable is created"
-   - "By the NX installer"
-   - "To point to the"
-   - "Correct server"
    - Verify server
 
 5. **Check license server port**:
-   - "29000 is the new default"
-   - "But the previous default"
-   - "Was 28000"
    - Check port
 
 6. **Use correct format for variable**:
    - Format:
-   - "SPLM_LICENSE_SERVER=28000@server_name"
    - Or "29000@server_name"
    - Use correct format
 
 7. **Check for license changes between NX versions**:
-   - "Licenses can change"
-   - "Between NX releases"
-   - "So you might use an"
-   - "API method that now needs"
-   - "A different license"
    - Check license changes
 
 ### Community Report
@@ -153,47 +113,25 @@ The error "Cannot connect to license server system. The server (lmgrd) has not b
 ### Fix
 
 1. **Check if license service is running**:
-   - "Is the License Service"
-   - "Started and running?"
    - Check service
    - Status
 
 2. **Verify SPLM_LICENSE_SERVER port and host**:
-   - "Is the SERVER variable"
-   - "Pointing to the right name"
-   - "And port number"
    - Verify variable
 
 3. **Use correct port number**:
-   - "29000 is the new default"
-   - "But the previous default"
-   - "Was 28000"
    - Use correct port
 
 4. **Check license server status with lmutil**:
-   - "lmutil lmstat -a -c port@license_host"
-   - "If the license server is up"
-   - "You will see: license UP v11.19.5"
    - Use lmutil
 
 5. **Use Siemens License Server (SLS) for NX 2312+**:
-   - "If you are running NX 2312"
-   - "Or newer, you must use"
-   - "The newer Siemens License Server (SLS)"
    - Use SLS
 
 6. **Start license service**:
-   - "If it's on your own machine"
-   - "But if this is just a"
-   - "1 user, or Node Locked license"
-   - "There is no need to run"
-   - "It as a Service"
    - Start service
 
 7. **Check with IT for network licenses**:
-   - "This might be somewhere"
-   - "In your network so IT"
-   - "May need to do it"
    - Contact IT
 
 ### Community Report
@@ -213,47 +151,25 @@ A journal execution error occurs when running custom macros. The error appears a
 ### Fix
 
 1. **Find the original journal code**:
-   - "NX takes the original"
-   - "Journal code and copies/compiles"
-   - "It before it is run"
    - Find original code
 
 2. **Inspect the line mentioned in error**:
-   - "Start by inspecting line 130"
-   - "Specifically, what arguments"
-   - "Are you passing"
    - Inspect error line
 
 3. **Add logging to identify the issue**:
-   - "I suggest adding a few lines"
-   - "Of code to log what"
-   - "The current work part is"
    - Add logging
 
 4. **Check for undefined object references**:
-   - "MySelectedObject does not"
-   - "Refer to anything"
    - Check object
    - References
 
 5. **Find the original error**:
-   - "Errors beget more errors"
-   - "1/2 the battle is finding"
-   - "The original error"
    - Find original
 
 6. **Check variable declaration and assignment**:
-   - "Track down where"
-   - "mySelectedObject is defined"
-   - "And why it has"
-   - "No valid reference"
    - Check variables
 
 7. **Add echo to verify object state**:
-   - "Echo mySelectedObject is nothing:"
-   - "A true response will tell you"
-   - "That mySelectedObject doesn't"
-   - "Refer to anything"
    - Add echo
 
 ### Community Report
@@ -273,44 +189,24 @@ Within the Design group, clicking More and then Structure Designer results in a 
 ### Fix
 
 1. **Contact software licensing admin**:
-   - "Your software licensing admin"
-   - "Has reached out to Siemens"
-   - "About this issue"
    - Contact admin
 
 2. **Update license file**:
-   - "May need an updated"
-   - "License file"
    - Update license
 
 3. **Check Bundle settings**:
-   - "Something is wrong"
-   - "With the Bundle settings"
    - Check bundles
 
 4. **Set both ACD10 and ACD11 bundles**:
-   - "To run NX you need"
-   - "Both ACD10 and ACD11 set"
-   - "Since there are so many features"
-   - "In the Academic product"
    - Set both bundles
 
 5. **Verify Structure Designer license in log**:
-   - "The log file shows"
-   - "That the feature is included"
-   - "In the current license"
    - Verify log
 
 6. **Check for license count fluctuations**:
-   - "Licenses assigned briefly"
-   - "Went from 5 down to 1"
-   - "Then to 5"
    - Check fluctuations
 
 7. **Don't change bundles mid-session**:
-   - "Maybe you trying to change"
-   - "Bundles in mid-session"
-   - "But that should not be needed"
    - Don't change mid-session
 
 ### Community Report

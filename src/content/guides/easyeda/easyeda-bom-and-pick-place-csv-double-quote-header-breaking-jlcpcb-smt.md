@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://easyeda.com/forum/topic/JLCPCB-does-not-recognize-BOM-and-CPL-export-from-EasyEDA-when-adding-SMT-service-to-order-2a1403c7627f47a6bdb94b4143316bb7"
-  - "https://easyeda.com/forum/topic/BOM-and-Pick-And-Place-EasyEDA-format-export-issues-causing-Uploaded-file-format-is-incorrect-on-JLCPCB-SMT-Assembly-wizard-1b376a7cc4824fa1a0f665660fe7fe94"
-  - "https://www.schemalyzer.com/en/blog/easyeda/export-import/easyeda-bom-export-jlcpcb"
 ---
 
 # EasyEDA BOM and Pick Place CSV Double Quote Header Breaking JLCPCB SMT Assembly Upload, Unicode Text Tab Delimited BOM with CSV Extension Not Recognized by JLCPCB, Component Rotation Mismatch Between EasyEDA and JLCPCB Placement Preview, Missing LCSC Part Numbers Causing Part Not Matched Warnings, and Gerber Drill Coordinate Format Precision Offset in CAM350: CSV Save As Excel, Header Quote Removal, LCSC Part Number Assignment, Rotation Verification, and Drill Format 3:3 mm
@@ -31,19 +28,12 @@ BOM and Pick and Place files exported from EasyEDA starting from version 6.3.39 
 ### Fix
 
 1. **Update to EasyEDA v6.3.41 or later**:
-   - "It fixed at v6.3.41"
-   - "We will fix it soon, rollback the old format"
-   - "(fields without double quotes)"
    - Install the latest EasyEDA version
 
 2. **Remove double quotes from header row**:
-   - "I've solved the problem opening the BOM and Pick and Place files"
-   - "With a simple text editor (TextEdit on Mac)"
-   - "And removing the double quotes on the first row of the files"
    - Manually edit the CSV file header
 
 3. **Save As XLSX or XLS format**:
-   - "At present, the best way is csv SAVE AS to xlsx, xls format to upload"
    - Open the CSV in Excel
    - Save As XLSX or XLS
    - Upload the XLSX/XLS to JLCPCB
@@ -67,7 +57,6 @@ BOM and Pick and Place files exported from EasyEDA starting from version 6.3.39 
    - And EasyEDA version
 
 7. **Use JLCPCB's example files**:
-   - "I was able to use that to get something together using the example files"
    - Download JLCPCB's example BOM and CPL files
    - As a template for correct formatting
    - And match your export to the template
@@ -89,20 +78,12 @@ When uploading EasyEDA-exported BOM and CPL files to JLCPCB for SMT assembly, JL
 ### Fix
 
 1. **Save As CSV (Comma delimited) in Excel**:
-   - "The solution is to export the BOM and CPL files as you normally would from EasyEDA"
-   - "And store those to your local PC"
-   - "Then, open the files in EXCEL and perform a 'Save As'"
-   - "Making sure to select 'CSV (Comma delimited) (*.csv)' as the file type"
    - Open in Excel and Save As CSV
 
 2. **Reduce BOM output columns**:
-   - "I also find it necessary to reduce the output of the native BOM export"
-   - "So it makes it easier to identify the parts that are actually going to be placed on the board"
-   - "Since JLCPCB SMT services does not place certain parts"
    - Simplify the BOM to essential columns
 
 3. **Use modified BOM format**:
-   - "MODIFIED BOM Export: Name,Designator,Quantity,Manufacturer Part,Supplier Part"
    - Use a simplified BOM format
    - With only essential columns
    - For JLCPCB upload
@@ -126,8 +107,6 @@ When uploading EasyEDA-exported BOM and CPL files to JLCPCB for SMT assembly, JL
    - To avoid confusion
 
 7. **Request EasyEDA to add format option**:
-   - "It would be nice if the exports for BOM and CPL in EasyEDA"
-   - "Had an option for which file type should be exported"
    - Request the feature on the EasyEDA forum
    - For proper CSV export
 
@@ -148,29 +127,18 @@ Components appear correctly oriented in EasyEDA but show incorrect rotation in J
 ### Fix
 
 1. **Verify rotation in JLCPCB preview**:
-   - "Use JLCPCB's Parts Placement Editor to rotate the component to the correct orientation"
-   - "The preview is what you'll get"
    - Always check the JLCPCB placement preview
    - Before confirming the order
 
 2. **Use Parts Placement Editor**:
-   - "Click 'Review Parts Placement' in the quote step"
-   - "Check each component's rotation and position"
-   - "Use Parts Placement Editor to fix any issues"
-   - "Pay special attention to polarized components"
    - Use the editor to correct rotations
 
 3. **Check polarized components**:
-   - "Pay special attention to polarized components"
    - Verify polarity markers
    - For capacitors, diodes, and ICs
    - In the JLCPCB preview
 
 4. **Order small quantities first**:
-   - "For new designs, order 5 boards with assembly"
-   - "Before ordering 100"
-   - "This catches any BOM/CPL issues"
-   - "Before a large production run"
    - Test with a small batch first
 
 5. **Verify footprint rotation in EasyEDA**:
@@ -180,7 +148,6 @@ Components appear correctly oriented in EasyEDA but show incorrect rotation in J
    - Before exporting
 
 6. **Use Basic parts from JLCPCB**:
-   - "Prioritize Basic parts to minimize setup fees"
    - Basic parts are more likely
    - To have correct rotation data
    - In JLCPCB's database
@@ -208,45 +175,32 @@ When uploading BOM files to JLCPCB, some components show as "unmatched" during t
 ### Fix
 
 1. **Add LCSC part numbers to all components**:
-   - "Including LCSC part numbers in your BOM"
-   - "Is the single most important step for successful assembly"
-   - "Without them, JLCPCB's system must guess which parts to use"
    - Add LCSC numbers in EasyEDA schematic
 
 2. **Assign LCSC numbers in EasyEDA**:
-   - "Open your schematic in EasyEDA"
-   - "Click the BOM icon in the top toolbar"
-   - "In the dialog, review the component list"
-   - "And assign any missing LCSC part numbers"
    - Use the BOM dialog to assign numbers
 
 3. **Check part availability in JLCPCB inventory**:
-   - "Check that part is available in JLCPCB inventory"
    - Verify LCSC parts
    - Are in stock
    - Before placing the order
 
 4. **Manually select correct part from suggestions**:
-   - "Manually select correct part from suggestions"
    - If JLCPCB provides suggestions
    - For unmatched parts
    - Manually select the correct one
 
 5. **Consider substituting with available parts**:
-   - "Consider substituting with available Basic/Extended part"
    - If the exact part is not available
    - Substitute with an equivalent
    - From JLCPCB's inventory
 
 6. **Remove DNP parts from BOM**:
-   - "Remove DNP parts from both files"
    - Do Not Populate parts
    - Should be removed from
    - Both BOM and CPL files
 
 7. **Update PCB from schematic before export**:
-   - "Update PCB from schematic before exporting"
-   - "Ensure both are synchronized"
    - Always update the PCB
    - From the schematic before exporting
 
@@ -267,22 +221,13 @@ When viewing EasyEDA-exported Gerber files in CAM350 or other Gerber viewers, dr
 ### Fix
 
 1. **Adjust drill coordinate format**:
-   - "If you find drilling offsets in viewing tools such as CAM350"
-   - "You can adjust the drilling coordinate format"
-   - "(usually mm 3:3, inch 2:4)"
    - Change the drill format to 3:3 mm
 
 2. **Use custom output for drill format**:
-   - "You can also choose custom output when exporting"
-   - "And set the format precision"
    - Use the custom export option
    - To set the correct precision
 
 3. **Verify in Gerber Viewer before manufacturing**:
-   - "Before sending the Gerber file to the manufacturer"
-   - "Use the Gerber Viewer to double-check"
-   - "That the Gerber meets the design requirements"
-   - "And has no design flaws"
    - Always verify drill alignment
 
 4. **Check drill alignment with copper pads**:

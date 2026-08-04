@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8945.pdf"
-  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8469.pdf"
-  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8471.pdf"
 ---
 
 # Pulsonix Gerber Multi-Threading Program Abort in Panel Design, Intelligent Gerber Import 90 Degree Pad Rotation and Incomplete Data, Eagle XML Library Import Failure from Missing XML Keyword, Altium Self-Intersecting Regions Pour Phase Incomplete, and Gerber Verification Plot PDF Blank or Program Quit: Multi-Threading Disable, Import Settings, XML Fix, Region Cleanup, and PDF Verification
@@ -31,9 +28,6 @@ When plotting Gerber files in a Panel design using multi-threading, the program 
 ### Fix
 
 1. **Disable multi-threading for Gerber plotting**:
-   - "Plotting Gerber in a Panel design"
-   - "Using multi-threading"
-   - "Caused the program to abort"
    - Disable multi-threading
 
 2. **Use single-threaded Gerber output**:
@@ -61,9 +55,6 @@ When plotting Gerber files in a Panel design using multi-threading, the program 
    - Gerber files
 
 6. **Use Change output name carefully**:
-   - "Had create Gerber files issue"
-   - "When using Change output name"
-   - "And multi-threading"
    - Avoid Change output name with multi-threading
 
 7. **Report persistent abort issues**:
@@ -89,33 +80,24 @@ When importing Gerber files using Intelligent Gerber Import, pads end up rotated
 ### Fix
 
 1. **Check pad rotation after import**:
-   - "Pads ended up rotated by 90 degrees"
    - Check pad rotation
    - After Intelligent
    - Gerber Import
 
 2. **Verify imported data completeness**:
-   - "Imported data was incomplete"
    - Verify all data
    - Is imported correctly
    - After import
 
 3. **Check for missing cutouts**:
-   - "Had a few cutouts missing"
    - Check for
    - Missing cutouts
    - After import
 
 4. **Use auto weld after import**:
-   - "After import of Gerber files"
-   - "Using auto weld only welded"
-   - "One track (of two) to the via"
    - Use auto weld after import
 
 5. **Check G90 command recognition**:
-   - "We did not recognise"
-   - "The G90 command"
-   - "For setting absolute mode"
    - Verify G90 is recognized
 
 6. **Update to latest Pulsonix version**:
@@ -147,9 +129,6 @@ When importing an Eagle XML library file from a parts supplier, the import fails
 ### Fix
 
 1. **Add XML keyword to file start**:
-   - "Failed to import an Eagle XML"
-   - "Library file from a parts supplier"
-   - "As it had no XML keyword at the start"
    - Add XML declaration
 
 2. **Add XML declaration**:
@@ -205,8 +184,6 @@ When importing Altium designs, the pour phase does not complete. The issue occur
 ### Fix
 
 1. **Fix self-intersecting regions in Altium**:
-   - "The pour phase did not complete"
-   - "Due to importing self-intersecting regions"
    - Fix self-intersecting
    - Regions in Altium
 
@@ -235,8 +212,6 @@ When importing Altium designs, the pour phase does not complete. The issue occur
    - In Pulsonix
 
 6. **Check for missing prepreg layers**:
-   - "Altium - Had missing prepreg"
-   - "And core layers on import"
    - Check for missing
    - Prepreg and core layers
 
@@ -269,21 +244,14 @@ When plotting Gerber verification plots to PDF, the program quits. Alternatively
    - PDF issue
 
 2. **Check PDF font settings**:
-   - "PDF - Was substituting"
-   - "An incorrect Font"
    - Check font settings
    - For PDF plots
 
 3. **Check custom font display**:
-   - "PDF - The custom font"
-   - "Did not show correctly"
    - Verify custom fonts
    - Display correctly
 
 4. **Check PDF bookmarks**:
-   - "PDF - Could not use bookmarks"
-   - "Which start with things like"
-   - "Underscore, plus or minus"
    - Check bookmark characters
 
 5. **Use alternative PDF output**:
@@ -293,8 +261,6 @@ When plotting Gerber verification plots to PDF, the program quits. Alternatively
    - PDF output method
 
 6. **Check LPKF output**:
-   - "LPKF - Program quit"
-   - "When doing a particular LPKF output"
    - Check LPKF output
    - For similar issues
 

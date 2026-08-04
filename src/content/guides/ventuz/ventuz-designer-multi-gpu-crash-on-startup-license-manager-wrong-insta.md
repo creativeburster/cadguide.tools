@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.ventuz.com/resources/release-notes/"
-  - "https://www.ventuz.com/support/help/V4_05/HowTo/HowToClusterRendering.html"
-  - "https://www.ventuz.com/support/help/latest/NodeLogicCluster.html"
 ---
 
 # Ventuz Designer Multi-GPU Crash on Startup, License Manager Wrong Installation Code, Cluster TDR Timeout Crash from Machine Stall, BMD Decklink Board Crash on Start, and DataPortal Async Scene Validation Failure: GPU Count Reduction, License Re-registration, TDR Registry Fix, Board Update, and Scene Validation Repair
@@ -31,7 +28,6 @@ Ventuz Designer crashes on startup when the machine has 3 GPUs. The crash occurs
 ### Fix
 
 1. **Update Ventuz to the latest version**:
-   - "B17824: Designer: In certain multi-GPU scenarios, with 3 GPUs, the Designer crashed on startup. Fixed!"
    - Install the latest Ventuz version
    - The multi-GPU crash is fixed
 
@@ -49,12 +45,10 @@ Ventuz Designer crashes on startup when the machine has 3 GPUs. The crash occurs
 
 4. **Check GPU driver versions**:
    - Ensure all GPUs use the same driver version
-   - "All machines have exactly the same display driver version"
    - Mismatched drivers can cause multi-GPU issues
    - Install the same driver on all GPUs
 
 5. **Use identical GPUs**:
-   - "You are using machines with identical hardware"
    - Mixing different GPU models can cause issues
    - Use the same GPU model for all slots
    - This is especially important for cluster rendering
@@ -88,8 +82,6 @@ After removing an Online License from the Ventuz License Manager, the error "Wro
 ### Fix
 
 1. **Update Ventuz to the latest version**:
-   - "B18141: License Manager: Fixed an error where removing an Online License resulted in 'Wrong Installation Code'"
-   - "B18516: License Manager: Fixed case where a system stays partially registered for an online license"
    - Install the latest Ventuz version
    - Both license issues are fixed
 
@@ -112,13 +104,11 @@ After removing an Online License from the Ventuz License Manager, the error "Wro
    - Contact Ventuz support if the code still fails
 
 5. **Check for partially registered state**:
-   - "A system stays partially registered for an online license"
    - Check if the system shows as partially registered
    - Clear all registration state
    - Then register fresh
 
 6. **Remove expired temp/rental licenses from dongles**:
-   - "B18000: License Manager: Expired temp/rental licenses could not be removed from dongles. Fixed!"
    - If using a dongle with expired licenses
    - Update Ventuz to remove expired licenses
    - Then register new licenses
@@ -130,8 +120,6 @@ After removing an Online License from the Ventuz License Manager, the error "Wro
    - They can reset the registration server-side
 
 8. **Use the Community License option**:
-   - "F17446: Launcher: With the Launcher's License Manager it is now possible to quickly get a Community License"
-   - "Just hit the License button and click on Community License"
    - As a temporary workaround
    - Use the Community License
 
@@ -152,7 +140,6 @@ In a Ventuz Cluster setup, if one machine stalls for a longer period of time (mo
 ### Fix
 
 1. **Disable TDR via Registry**:
-   - "This might be avoided by the following Registry Key"
    - Open Registry Editor (regedit)
    - Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\GraphicsDrivers`
    - Create or modify `TdrLevel` as `REG_DWORD` with value `0`
@@ -168,46 +155,35 @@ In a Ventuz Cluster setup, if one machine stalls for a longer period of time (mo
    - The root cause is one machine stalling
    - Optimize the scene to prevent stalls
    - Ensure all machines have identical hardware
-   - "You are using machines with identical hardware"
 
 4. **Set Prevent D3D Queuing to ON**:
-   - "Set the Prevent D3D Queuing to ON in DirectX Output of the AV Configuration"
    - This helps with cluster synchronization
    - And reduces the chance of stalls
    - Configure on all cluster machines
 
 5. **Ensure identical graphics card settings**:
-   - "You are using identical project and graphics card settings"
-   - "A different anti-aliasing setting will bring the clock out of sync"
    - Check anti-aliasing settings on all machines
    - Make them identical
 
 6. **Disable Bezel or Overlap settings**:
-   - "Disable Bezel or Overlap settings in the graphics card"
-   - "As this feature is achieved by the Render Setup rendering in Ventuz"
    - Bezel/overlap settings can cause timing differences
    - Disable them on all machines
 
 7. **Use the same scene on all machines**:
-   - "You are using the same scene on all machines"
-   - "Use the SystemID node to apply machine specific settings"
    - Different scenes can cause different render times
    - And lead to stalls
 
 8. **Don't use consumer-grade graphics cards**:
-   - "Do not use consumer grade graphics cards. They cause too many weird problems"
    - Use professional-grade GPUs (NVIDIA RTX A-series, Quadro)
    - Consumer GPUs have less stable drivers
    - And may stall more frequently
 
 9. **Check firewall settings**:
-   - "If a firewall is used, make sure it does not block the cluster clock address/port (225.225.225.1:19300)"
    - Firewall blocking the cluster clock can cause sync issues
    - And lead to stalls
    - Configure firewall to allow cluster traffic
 
 10. **Ensure all machines are on the same network**:
-    - "All machines are connected to the same network"
     - Network issues can cause cluster sync problems
     - Use a dedicated network for cluster traffic
     - Avoid network congestion
@@ -229,7 +205,6 @@ Ventuz crashes on start when a Blackmagic Design (BMD) Decklink 100G ST2110 boar
 ### Fix
 
 1. **Update Ventuz to the latest version**:
-   - "B18574: SDI: The currently unsupported BMD Decklink 100G ST2110 board caused Ventuz to crash on start. Fixed!"
    - Install the latest Ventuz version
    - The board's presence will no longer cause a crash
 
@@ -247,7 +222,6 @@ Ventuz crashes on start when a Blackmagic Design (BMD) Decklink 100G ST2110 boar
    - Restart Ventuz
 
 4. **Wait for proper board support**:
-   - "Proper support for this board should be available soon"
    - Ventuz is working on full support
    - Check release notes for updates
    - Install when support is available
@@ -287,7 +261,6 @@ When asynchronously validating a scene with DataPortal nodes via Remoting or an 
 ### Fix
 
 1. **Update Ventuz to the latest version**:
-   - "B18492: Runtime: Asynchronously validating a scene with DataPortal nodes e.g. via Remoting or an async Scene Port/Layer failed and the scene would not render. Fixed!"
    - Install the latest Ventuz version
    - The async validation issue is fixed
 

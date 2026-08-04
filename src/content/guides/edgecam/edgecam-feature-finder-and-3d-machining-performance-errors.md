@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/edgecam-and-inventor-parts-2d-toolpaths.321820/"
-  - "https://www.practicalmachinist.com/forum/threads/edgecam-full-5-axis.389056/"
-  - "https://documentation-be.hexagon.com/bundle/edgecam_gs_2022.1/raw/resource/enus/edgecam_gs_2022.1.pdf"
 ---
 
 # Edgecam Feature Finder and 3D Machining Performance Errors: Feature Finder OKAY But Lacks Line Selection on Solids Requiring Wireframe Geometry, Toolpath Calculation Takes 20-30 Minutes for Small End Mills from STL Stock Regeneration After Every Operation, Rest Roughing Forces Same Offset as Roughing Causing Dumb Retracts Requiring STL Stock Workaround, Full 5 Axis Advanced Toolpath Overwhelming Parameters Requiring Limit Variables Approach, and Waveform Too Slow for Single Part Manufacturing Under 2mm Tools
@@ -31,35 +28,26 @@ Edgecam's Feature Finder is designed for production machining of similar parts a
 ### Fix
 
 1. **Use wireframe geometry for 2D toolpaths**:
-   - "I do all my design in Rhino, and only use Edgecam for toolpathing. Therefore I use a lot of wireframes for toolpath generation"
    - Import wireframe geometry alongside the solid model
    - Use wireframe lines, arcs, and profiles for 2D toolpaths
-   - "This way gives me complete control over what I want it to do"
 
 2. **Create base entities and surface curves in Edgecam**:
-   - "Edgecam wants you to create base entities and surface curves in order to drive off them"
    - Use Edgecam's geometry creation tools
    - Extract edges from solids
    - Create composite curves from solid edges
 
 3. **Import the solid for visual reference only**:
-   - "I do import the solid model for visual reference"
    - Use the solid for collision checking and backplot
    - Drive toolpaths from wireframe geometry
-   - "Edgecam's backplot leaves no surprises as to where the tool goes"
 
 4. **Use Composite Mill Feature command**:
-   - "Use the Composite Mill Feature command to combine several features into one feature"
-   - "This can be used to rough a solid directly from a strategy, rather than machining individual features"
    - Combines multiple features for unified machining
 
 5. **Generate 2D paths from wireframe for one-off parts**:
-   - "For the one-off, two-off mirrored parts that I do with a mix of 2D, 2.5D and complex surfacing, I found it best to generate all my 2D paths from wireframe"
    - Use solid-based toolpaths only for 3D surfacing
    - This gives complete control for one-off manufacturing
 
 6. **Consider alternative CAM for more control**:
-   - "My first suggestion is to go download Inventor HSM Express: it's free and you can choose all your own geometry"
    - HSMWorks, Mastercam, and Fusion 360 offer line-by-line geometry selection
    - Edgecam's strength is in production machining, not one-off parts
 
@@ -80,22 +68,16 @@ Edgecam calculates an STL file after every operation to track remaining stock. W
 ### Fix
 
 1. **Check output tolerance**:
-   - "Check your output tolerance, both in drawing and outputting code"
-   - "Could be that you have it set to something like 0.0001 which would cause it to generate very slow"
    - Typical tolerance: 0.01mm for milling
    - Reduce tolerance if it's unnecessarily tight
 
 2. **Disable STL stock tracking where not needed**:
-   - "Edgecam calculates an STL file after every operation to track remaining stock"
-   - "When you update/change an operation, it has to regen all those STL files"
    - Disable stock tracking for operations that don't need it
    - Use simpler stock models (2D stock, bounding box) where possible
 
 3. **Use waveform selectively**:
-   - "Waveform is great, but when it is single part manufacturing, we can't use 20-30 minutes looking at a frozen screen"
    - Use waveform for production runs (1000+ pieces)
    - Use conventional roughing for single parts
-   - "If we had to make 1000 pieces or more, it wouldn't bother me too much"
 
 4. **Optimize operation order**:
    - Order operations to minimize STL regeneration
@@ -104,12 +86,10 @@ Edgecam calculates an STL file after every operation to track remaining stock. W
 
 5. **Use rest roughing with STL stock import**:
    - "I bring the roughed stock in, and rough it using a smaller tool at 0.003" offset"
-   - "Now I've combined my semi finish and rest rough into one neat little package"
    - Import pre-calculated STL stock instead of letting Edgecam calculate it
    - This bypasses the STL regeneration bottleneck
 
 6. **Reinstall Edgecam if performance degrades**:
-   - "We will nuke the computer next week and install everything again"
    - Sometimes performance issues accumulate from updates and configuration changes
    - A clean reinstall can restore performance
    - Back up settings and tool libraries first
@@ -131,10 +111,7 @@ Edgecam's rest roughing feature is linked to the roughing operation's stock mode
 ### Fix
 
 1. **Use STL stock import instead of rest roughing checkbox**:
-   - "Edgecam's rest rough won't allow you to have a different offset to what you roughed with"
    - "I bring the roughed stock in, and rough it using a smaller tool (90% 1/2" ball) at say 0.003""
-   - "Now I've combined my semi finish and rest rough into one neat little package"
-   - "Using a toolpath strategy that actually cuts material and not air with a billion retracts"
 
 2. **Export roughed stock as STL**:
    - After roughing, export the remaining stock as STL
@@ -145,7 +122,6 @@ Edgecam's rest roughing feature is linked to the roughing operation's stock mode
 3. **Set custom retract and lead parameters**:
    - When using STL stock import (not rest roughing checkbox)
    - Full control over retract height, lead in/out, and approach
-   - "You gotta have your head in the game for retracts and leads"
    - Manually verify all retract moves in backplot
 
 4. **Use 90% stepover with ball mill for semi-finish**:
@@ -177,44 +153,27 @@ Edgecam's 5-axis toolpaths use Module Works' 5-axis engine, which has dozens of 
 ### Fix
 
 1. **Limit variables — get a toolpath first, then refine**:
-   - "Limit the amount of variables until you get a working toolpath. Then go back in and tweak it to perfection"
    - Start with default parameters
    - Get any toolpath to generate, even if imperfect
    - Then adjust one parameter at a time
 
-2. **Focus on drive surfaces and tool axis control**:
-   - "Focus on getting your drive surfaces and tool axis control down"
-   - "Even if the tool is coming into the part from the wrong vector or angle, it is a starting point"
-   - "Tool is coming in upside down! What variable can I change to modify how that tool is coming in?"
+2. **Focus on drive surfaces and tool axis control**.
 
 3. **Start on the Surface Paths tab**:
-   - "Start on the surface paths tab and set your pattern"
    - Then adjust parameters in the 'Sorting' section
-   - "This guides in to out, out to in, spiral, climb, zigzag"
-   - "Try not to mess with stepover, cusp heights, or surface quality for now"
 
-4. **Use Mastercam or CAMWorks 5-axis tutorials**:
-   - "Edgecam, Mastercam, and CAMWorks all use Module Works' 5-axis toolpaths"
-   - "The parameters in the dialogues are the same"
-   - "The pictures in the dialogues between the CAM systems is the EXACT same"
-   - "Look up YouTube videos for Mastercam 5-axis or CAMworks 5-axis tutorials"
+4. **Use Mastercam or CAMWorks 5-axis tutorials**.
 
 5. **Open a support case with Edgecam**:
-   - "I have a case open with EC asking for help with the 5 axis feature"
-   - "So far they have been very helpful"
    - But "they are unwilling to share a 5-axis machining file with me as I have no training"
    - Request formal 5-axis training
 
 6. **KISS principle**:
-   - "KISS — Keep It Simple, Stupid"
    - Don't try to use all parameters at once
    - Get a basic toolpath working
    - Add complexity gradually
 
 7. **Consider alternative CAM with better 5-axis support**:
-   - "Part of the reason I am a huge Mastercam fan is because of the forums and support"
-   - "A lot of CAM providers just don't have the resources to learn available for newbies"
-   - "I taught myself 5-axis programming because of the eMastercam forum"
    - Mastercam has larger community and more learning resources
 
 ### Community Report
@@ -234,7 +193,6 @@ Waveform toolpaths require complex geometric calculations to maintain constant t
 ### Fix
 
 1. **Use conventional roughing for single parts**:
-   - "When it is single part manufacturing, we can't use 20-30 minutes looking at a frozen screen"
    - Conventional roughing calculates in seconds
    - Accept slightly shorter tool life for single parts
    - Save waveform for production runs
@@ -256,15 +214,12 @@ Waveform toolpaths require complex geometric calculations to maintain constant t
    - This doesn't block the programming workstation
 
 5. **Use larger tools where possible**:
-   - "I'm not using waveform for end mills under 2mm"
    - Use the largest tool that fits the geometry
    - Waveform calculation time is more reasonable for larger tools
    - Switch to conventional for very small tools
 
 6. **Consider HSM strategies as alternative**:
-   - "I went through the same thing with CAMWorks and now use HSMWorks"
    - HSMWorks/Fusion 360 has faster adaptive toolpath calculation
-   - "Download Inventor HSM Express: it's free"
    - Test alternative CAM for small-tool work
 
 ### Community Report

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/navisworks-forum/bug-crash-manage-2026-u1-crash-when-grouping-clashes-after-not/td-p/13748825"
-  - "https://forums.autodesk.com/t5/navisworks-forum/navisworks-2026-crashing/td-p/13716123"
-  - "https://forums.autodesk.com/t5/navisworks-forum/navisworks-2025-crashes-sundely-when-creating-search-sets/td-p/13222611"
 ---
 
 # Navisworks Clash Detective and Stability Errors: Crash When Grouping Clashes After Not Maintaining Groups Requiring Select Screen Workaround or Update 2, 2026 Constant Crashing from Clash Manager Drag-Drop Bug Requiring Update 2, Search Set Creation Fatal Error from CLR Exception Requiring File Repair, Freezing When Grouping All Tests from Name Preview Generation Requiring Simplified Grouping, and Viewpoint Disappearing and Crash from Folder Drag-Drop Requiring Sort Workaround
@@ -31,7 +28,6 @@ In Navisworks Manage 2026 U1, if you group clashes without the "maintain existin
 ### Fix
 
 1. **Group clashes while in the Select screen**:
-   - "I think a work around is to group clashes while in the 'select' screen so that the old group names are not displayed while regrouping clashes"
    - Switch to the Select screen before grouping
    - Perform the grouping operation there
    - Then switch back to Results
@@ -43,8 +39,6 @@ In Navisworks Manage 2026 U1, if you group clashes without the "maintain existin
    - Then perform the grouping
 
 3. **Update to Navisworks 2026 Update 2**:
-   - "Not investigated yet, but has been ticketed for 2026 update 2"
-   - "Affects 2026/2026.1 and can occur when moving clashes into or out of a group via drag/drop"
    - Install Update 2 when available
    - This is the permanent fix
 
@@ -77,14 +71,10 @@ Navisworks 2026 continually crashes when doing simple selections and routine tas
 ### Fix
 
 1. **Update to Navisworks 2026 Update 2**:
-   - "Update 2 is now released, including this fix and many others"
-   - "Release notes can be found at https://help.autodesk.com/view/NAV/2026/ENU/?guid=Navisworks_2026_2_release"
    - Install Update 2
    - This is the primary fix
 
 2. **Use Navisworks 2025 as fallback**:
-   - "I'm using NW 2025 until this is addressed"
-   - "Which is a real shame, as some of the new features in NW 2026 are very useful"
    - If Update 2 doesn't fully fix the issue
    - Use 2025 for critical work
 
@@ -95,19 +85,13 @@ Navisworks 2026 continually crashes when doing simple selections and routine tas
    - This avoids the multi-selection drag/drop bug
 
 4. **Set auto-save to 2-3 minutes**:
-   - "I would recommend setting auto-save to be every 2-3 minutes"
-   - "I also save really often out of habit because I have lost too much work from crashes"
    - Set auto-save in application settings
    - Save manually after each grouping operation
 
 5. **Avoid shift-click multi selection**:
-   - "A crash will occur when you have a clash result selected that appears after a clash grouping"
-   - "Apply a filter, hold down shift and select another clash to multi select"
-   - "To avoid this crash, click the already selected clash prior to using shift click"
    - Click the already-selected clash first, then shift-click
 
 6. **Check for remaining crash after Update 2**:
-   - "Edit: Nope, clash manager still crashing when trying to move multiple clashes in to a folder"
    - Update 2 may not fully fix the issue
    - If crashes persist, use the workarounds
    - Report to Autodesk support
@@ -129,9 +113,7 @@ The CLR (Common Language Runtime) exception indicates a .NET runtime error in Na
 ### Fix
 
 1. **Try recommended crash fixes**:
-   - "I have also already tried all of these recommendations with no success"
    - Follow Autodesk's Navisworks crash troubleshooting guide
-   - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Navisworks-crashes-randomly.html"
    - Try all recommended steps
 
 2. **Create a new NWF file**:
@@ -162,7 +144,6 @@ The CLR (Common Language Runtime) exception indicates a .NET runtime error in Na
    - Submit a support ticket to Autodesk
    - Include the error details and the NWF file
    - The CLR exception details help developers
-   - "Erro: CLR exception - code e0434352"
 
 ### Community Report
 
@@ -193,8 +174,6 @@ Navisworks 2026 freezes up or is very slow when grouping all tests. Complex clas
    - Repeat for each test
 
 3. **Disable name preview**:
-   - "I think disabling the 'name preview' when you click 'select all'"
-   - "Or only limiting it to the first clash test in the list would resolve this issue"
    - Check if there's a setting to disable name preview
    - Or limit preview to first test
 
@@ -233,8 +212,6 @@ The viewpoint folder drag-drop has a bug similar to the clash grouping drag-drop
 ### Fix
 
 1. **Use Sort to recover disappeared viewpoints**:
-   - "I have found that when they disappear, if I 'Sort' the viewpoints they come back"
-   - "I have entire folders disappear and return with this method"
    - Click the Sort button in the Viewpoints window
    - This refreshes the viewpoint list and recovers disappeared items
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://dptlab.com/whats-new-in-td2024/"
-  - "https://dpt3.dptcorporate.com/Content/Help/language/rn_td_2023T1/whatsnew.htm"
-  - "https://www.cad3d.it/forum1/discussione/conversione-disegni-thinkdesign.60538/"
 ---
 
 # ThinkDesign STEP File Internal Error, IGES Missing Spheres, Solid Shells Inverted Normals, GBG Raster File Never Ending Process, and .d Shared Groups Import Issues: 2024.1 SP2 Fixes, TDXchange Converter Configuration, and Neutral Format Best Practices
@@ -31,8 +28,6 @@ The STEP file converter in ThinkDesign had bugs that caused internal errors when
 ### Fix
 
 1. **Update to ThinkDesign 2024.1 SP2 or later**:
-   - "Fixed 'Internal error when loading a STEP file'"
-   - "Fixed 'TD closes when opening a STEP file'"
    - Install the latest service pack
    - These specific STEP import crashes are fixed
 
@@ -61,8 +56,6 @@ The STEP file converter in ThinkDesign had bugs that caused internal errors when
    - Re-export from the source CAD
 
 6. **Use TDXchange Reader for proprietary formats**:
-   - "The converter TDXchange Reader offers an extended set of possibilities"
-   - "Enables the import into ThinkDesign of the latest and most popular proprietary 3D formats"
    - If STEP fails, try importing the native format
    - TDXchange may handle the geometry better
 
@@ -89,7 +82,6 @@ When importing an IGES model into ThinkDesign, spheres are missing from the impo
 ### Fix
 
 1. **Update to ThinkDesign 2024.1 SP2 or later**:
-   - "Fixed 'Missing spheres in loading an IGES model'"
    - Install the latest service pack
    - Spheres are now correctly imported from IGES
 
@@ -140,7 +132,6 @@ After importing a model into ThinkDesign, solid shells have inverted normals. Th
 ### Fix
 
 1. **Update to ThinkDesign 2024.1 SP2 or later**:
-   - "Fixed 'Solid Shells with Inverted Normals'"
    - Install the latest service pack
    - Normals are now correctly oriented on import
 
@@ -197,7 +188,6 @@ When opening a GBG raster file in ThinkDesign, the process never ends. The loadi
 ### Fix
 
 1. **Update to ThinkDesign 2024.1 SP2 or later**:
-   - "Fixed 'Never ending process opening a GBG raster file'"
    - Install the latest service pack
    - The infinite loop is fixed
 
@@ -248,7 +238,6 @@ When importing .d files (ThinkDesign 2D format) with shared groups, the import h
 ### Fix
 
 1. **Update to ThinkDesign 2024.1 SP2 or later**:
-   - "Fixed 'Issues in importing .d with shared groups'"
    - Install the latest service pack
    - Shared groups import correctly
 

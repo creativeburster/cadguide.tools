@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.altium.com/documentation/altium-circuitmaker/public-release-notes"
-  - "https://electronics.stackexchange.com/questions/666301/circuitmaker-error-duplicate-item-hrid-when-trying-to-generate-outputs"
-  - "https://www.altium.com/documentation/altium-circuitmaker/faqs"
 ---
 
 # CircuitMaker Duplicate Item HRID Error When Generating Outputs from Copy-Paste, Cloud Sync Issues Requiring Internet Connection for Output Generation, Component Search Engine Nexar API Migration from Octopart, CoDesigner Fusion 360 Direct PCB Data Exchange, and Crash During Symbol Search in Select Item Revision Dialog: Project Clone Workaround, Manual Save and Commit, Nexar API Update, Fusion 360 Plugin, and Ctrl-Alt-Insert Crash Report
@@ -31,15 +28,10 @@ The Duplicate Item HRID error is caused by internal HRID (Human-Readable ID) con
 ### Fix
 
 1. **Clone the project to a new one**:
-   - "The workaround for me was to clone the project to a new one"
-   - "And Generate Output from the clone"
-   - "No changes were necessary on the clone; it 'just worked'"
    - Right-click the project name in the Projects sidebar
    - Click Clone
 
 2. **Generate outputs from the clone**:
-   - "The original project, however, remains 'broken'"
-   - "So this is more a workaround than a solution"
    - Use the cloned project
    - For generating outputs
 
@@ -50,15 +42,10 @@ The Duplicate Item HRID error is caused by internal HRID (Human-Readable ID) con
    - Or clone the project before making changes
 
 4. **Check for duplicate folder HRIDs**:
-   - "Two folders cannot have the same name in the same area of the folder structure"
-   - "Trying to do so will result in a Duplicate Folder HRID error"
    - Check for duplicate folder names
    - In the project structure
 
 5. **Use unique names for pasted folders**:
-   - "Paste the folder structure to another temporary area"
-   - "Then rename the top level folder"
-   - "Then drag and drop back to where you really want the folder to be"
    - For folder structure duplication
 
 6. **Update to CircuitMaker 2.3.0 or later**:
@@ -68,9 +55,6 @@ The Duplicate Item HRID error is caused by internal HRID (Human-Readable ID) con
    - From Altium
 
 7. **Report the issue on the CircuitMaker Forum**:
-   - "The CircuitMaker Forum is the best place to report issues"
-   - "Please provide as many details as possible"
-   - "As well as images and any step-by-step instructions"
    - Report the HRID duplication bug
 
 ### Community Report
@@ -90,14 +74,10 @@ When trying to generate outputs (Gerber, NC Drill, BOM), the release process fai
 ### Fix
 
 1. **Save and commit manually before generating outputs**:
-   - "If the release process fails, try saving and committing your design manually"
-   - "Before attempting to generate outputs again"
    - Save the design
    - And commit changes to the cloud
 
 2. **Verify internet connection**:
-   - "CircuitMaker requires an internet connection for most operations"
-   - "Including generating and downloading output files"
    - Verify your internet connection
    - Is stable and fast enough
 
@@ -114,8 +94,6 @@ When trying to generate outputs (Gerber, NC Drill, BOM), the release process fai
    - After ensuring the design is saved
 
 5. **Use alternative software for offline work**:
-   - "If you need offline capabilities"
-   - "You may need to consider alternative PCB design software"
    - CircuitMaker can't work offline
    - Consider Altium Designer or KiCad for offline use
 
@@ -126,8 +104,6 @@ When trying to generate outputs (Gerber, NC Drill, BOM), the release process fai
    - And configure proxy settings
 
 7. **Download output files after generation**:
-   - "Your output files are stored on Altium's servers"
-   - "You need to download them to a local folder"
    - After successful generation
    - Download the output files locally
 
@@ -148,8 +124,6 @@ After updating to CircuitMaker 2.3.0, the component search engine behaves differ
 ### Fix
 
 1. **Update to CircuitMaker 2.3.0 or later**:
-   - "Component search engine has been replaced from Octopart API to Nexar API"
-   - "Version 2.3.0, Build: 3, Date: 1 July 2024"
    - Install the latest version
    - Which uses the Nexar API
 
@@ -206,20 +180,13 @@ After CircuitMaker 2.3.0, CoDesigner support for Autodesk Fusion 360 has been ad
 ### Fix
 
 1. **Update CircuitMaker to 2.3.0 or later**:
-   - "Altium CoDesigner added to CircuitMaker"
-   - "Supporting direct PCB data exchange"
-   - "Between CircuitMaker and Autodesk Fusion 360"
    - Install CircuitMaker 2.3.0+
 
 2. **Install the Altium Autodesk Fusion plugin**:
-   - "In Autodesk Fusion 360, install the AltiumAutodeskFusion<2.8.0.6 or higher> plugin"
-   - "Which can be downloaded from the Altium website"
    - Download the plugin from Altium
    - And install it in Fusion 360
 
 3. **Access CoDesigner via View ribbon**:
-   - "In CircuitMaker, CoDesigner is access via the Fusion 360 CoDesigner panel"
-   - "(View ribbon)"
    - Go to the View ribbon tab
    - And open the Fusion 360 CoDesigner panel
 
@@ -264,22 +231,13 @@ CircuitMaker crashes when searching for a symbol in the Select Item Revision dia
 ### Fix
 
 1. **Update to CircuitMaker 2.3.0 or later**:
-   - "Crash occurred during searching for a symbol in the Select Item Revision dialog"
    - This crash was fixed in version 2.3.0
    - Update to the latest version
    - To resolve the crash
 
-2. **Use Ctrl+Alt+Insert for frozen crashes**:
-   - "If there is a crash that does not raise an exception dialog"
-   - "And the software hangs in an apparent frozen state"
-   - "Use the Ctrl+Alt+Insert keyboard shortcut to force a crash report"
-   - "This dialog may pop up behind the CircuitMaker application window"
+2. **Use Ctrl+Alt+Insert for frozen crashes**.
 
-3. **Send crash reports**:
-   - "CircuitMaker provides you with the ability to send a crash report"
-   - "Through to the Altium Developers"
-   - "In the error/exception dialog, click the Send Report button"
-   - "And add a description of what you were doing at the time"
+3. **Send crash reports**.
 
 4. **Avoid the Select Item Revision dialog**:
    - If the crash persists on older versions
@@ -294,13 +252,9 @@ CircuitMaker crashes when searching for a symbol in the Select Item Revision dia
    - The null reference bug
 
 6. **Report on the CircuitMaker Forum**:
-   - "The CircuitMaker Forum is the best place to report issues"
-   - "Please provide as many details as possible"
-   - "As well as images and any step-by-step instructions to recreate the issue"
    - Report the crash with details
 
 7. **Check for dialog behind the application**:
-   - "This dialog may pop up behind the CircuitMaker application window"
    - If CircuitMaker appears frozen
    - Check behind the application window
    - For the crash report dialog

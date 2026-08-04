@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/civil-3d-forum/a-custom-subassembly-is-causing-a-crash-in-civil3d-when-using-it/td-p/13774019"
-  - "https://forums.autodesk.com/t5/civil-3d-forum/surface-consisting-partially-from-landxml-and-partially-from/td-p/12978007"
-  - "https://forums.autodesk.com/t5/civil-3d-forum/crashes-when-using-multiple-views/td-p/12892631"
 ---
 
 # Civil 3D Custom Subassembly PKT Crash When Loading Corridor Surface, Surface Freeze from Mixed LandXML and Point Group Data, Multiple Views Crash After One Hour from Station Tracker and AcTransient, Corridor Surface Triangulation Across Gap Between Regions, and Corridor Surface Not Triangulating for Split Profile Regions: SAC Geometry Simplification, LandXML Export Reimport, Single Viewport Workflow, Separate Baselines, and Corridor Section Sequence
@@ -31,8 +28,6 @@ A custom subassembly created in Subassembly Composer (SAC) causes Civil 3D to cr
 ### Fix
 
 1. **Remove circles and complex shapes from SAC**:
-   - "I tried removing the 2 circles and the shape (the actual pipe) in SAC"
-   - "And looks fine now"
    - Remove circular geometry and complex shapes
    - From the SAC subassembly
 
@@ -43,8 +38,6 @@ A custom subassembly created in Subassembly Composer (SAC) causes Civil 3D to cr
    - That may cause surface loading crashes
 
 3. **Test with a simple corridor first**:
-   - "Create a simple corridor (just a line as the alignment, plus the profile, surfaces, etc.)"
-   - "Create sample lines. Sample the three resources and create section views for all of them"
    - Test the subassembly with a simple corridor
    - Before using it in production
 
@@ -67,8 +60,6 @@ A custom subassembly created in Subassembly Composer (SAC) causes Civil 3D to cr
    - To identify which element causes the crash
 
 7. **Share the PKT and DWG with Autodesk**:
-   - "I uploaded the pkt so you can check it"
-   - "Can you share your DWG also?"
    - Share both the PKT and DWG
    - With Autodesk support for analysis
 
@@ -89,9 +80,6 @@ The surface freeze is caused by mixing LandXML data and Point Group data in the 
 ### Fix
 
 1. **Export the surface as LandXML and reimport**:
-   - "To correct the issue, I exported the surface as LandXML"
-   - "Then deleted it and finally Imported the LandXML"
-   - "This solved the problem and Civil 3D (2025) was running smoothly"
    - Export > Delete > Reimport
 
 2. **Don't mix LandXML and Point Group data**:
@@ -101,22 +89,15 @@ The surface freeze is caused by mixing LandXML data and Point Group data in the 
    - Use one data source per surface
 
 3. **Test in a blank drawing**:
-   - "I tried in a clean dwg, still problem"
    - Test the surface in a blank drawing
    - To verify the issue is with the surface
    - Not the drawing
 
 4. **Share the LandXML file**:
-   - "Share your Landxml file with me if you can"
-   - "Landxml will typically not export illegal or corrupt objects"
    - Share the LandXML with Autodesk support
    - For analysis
 
-5. **Check the drawing first**:
-   - "I would double check the drawing is clean first"
-   - "Have you tried this in a blank drawing?"
-   - "I usually point my finger at the drawing first"
-   - "Unless it has been completely eliminated as a cause"
+5. **Check the drawing first**.
 
 6. **Use separate surfaces for each data source**:
    - Create one surface from LandXML
@@ -147,44 +128,30 @@ Civil 3D 2024 crashes with a fatal error after working for about 1-2 hours. The 
 ### Fix
 
 1. **Use a single viewport**:
-   - "Works fine if I don't use the dual views, just slows production way down"
    - The crash only occurs with multiple views
    - Use a single viewport
    - To avoid the crash
 
 2. **Disable station tracker**:
-   - "Turn on the station tracker to all viewports"
    - The station tracker to all viewports
    - May trigger the AcTransient crash
    - Try disabling the station tracker
 
 3. **Check for non-Autodesk plugins**:
-   - "Do you have any plugins installed?"
-   - "Theoretically, hovering over some polylines could cause such behaviour"
-   - "When there are non-Autodesk plugins installed"
    - Disable non-Autodesk plugins
 
 4. **Toggle hardware acceleration**:
-   - "You may also try toggling the hardware acceleration setting"
    - In Civil 3D settings
    - Toggle hardware acceleration
    - To see if it affects the crash
 
 5. **Update all software**:
-   - "I would make sure you have applied the most recent updates"
-   - "C3D has updates, so does AutoCAD, AutoCAD Architecture, and Map 3D"
-   - "The later updates sometimes take a little digging to get the installs"
    - Install all available updates
 
 6. **Update .NET Framework**:
-   - "I did need a .NET framework update and thought that was it"
-   - "Because I worked 2 days without a crash"
-   - "But no luck, happened multiple time again yesterday"
    - Update .NET Framework (may help temporarily)
 
 7. **Avoid dynamic north arrows and bar scales**:
-   - "Are you using dynamic north arrows or bar scales?"
-   - "These two items cause problems, avoid them"
    - Don't use dynamic north arrows
    - Or bar scales in viewports
 
@@ -204,46 +171,26 @@ A single corridor with many baselines has triangulation across an intersection w
 
 ### Fix
 
-1. **Create separate baselines for each side of the intersection**:
-   - "The corridor which intersects the road doesn't just need to have a gap between regions"
-   - "But must also be separated into two different baselines"
-   - "Add a new baseline using the same alignment and profile"
-   - "Then copy the corridor region(s) properties associated with one side"
+1. **Create separate baselines for each side of the intersection**.
 
 2. **Uncheck or delete regions from the original baseline**:
-   - "Then uncheck (or delete) these regions from the original baseline"
-   - "By creating two different baselines for each side of the intersection"
-   - "The triangulation across the intersection stops"
    - This is the correct solution
 
 3. **Check for corridor bowtie overlap**:
-   - "If the corridor extents as a boundary is not working"
-   - "This is usually because your corridor overlaps itself somewhere (bowtie)"
-   - "If you can find and fix this then the boundary should work again"
    - Check for and fix bowtie overlaps
 
 4. **Cut a small region out of the corridor**:
-   - "You may have created a closed area within your corridors"
-   - "You can usually fix this if you cut a small region out of your corridor"
-   - "To prevent the closed area"
    - Cut a small region to break the closed area
 
 5. **Limit triangle link length**:
-   - "Try limiting the triangle link length in the surface build properties"
-   - "To be just long enough to handle the assembly links but no more"
    - Adjust the maximum triangle link length
    - In the surface build properties
 
 6. **Break a closed gap**:
-   - "If you have created a closed gap, break it"
-   - "And the surface boundary should return"
    - If the gap forms a closed area
    - Break it to restore the boundary
 
 7. **Add interpolated points and links**:
-   - "I created my own assembly with additional interpolated points and links"
-   - "I added these to my corridor surface to increase triangulation"
-   - "I then used the max triangle size on surface method"
    - As a last resort for complex cases
 
 ### Community Report
@@ -263,21 +210,13 @@ A corridor surface is not triangulating through regions where a split profile de
 ### Fix
 
 1. **Set proper corridor section sequence**:
-   - "You have to set proper sequence for corridor sections"
-   - "See the big side (down) of the yellow triangle"
-   - "This should not be like this, especially in the middle of your intersection"
    - Review and correct the section sequence
 
 2. **Check surface point generation**:
-   - "The sidewalk and EOP are generating the correct surface points"
-   - "But the curbing and inside edge of pavement surface points are not generating correctly"
    - Check which surface points are generating
    - And which are not
 
 3. **Verify split profile regions**:
-   - "The WB lanes are following the split profile for the regions"
-   - "The split profile is designed to lower the WB lanes"
-   - "To make the intersection grading work"
    - Verify the split profile is correctly applied
 
 4. **Check corridor section frequency**:
@@ -293,15 +232,10 @@ A corridor surface is not triangulating through regions where a split profile de
    - Verify the targeting parameters
 
 6. **Add feature lines to corridor data**:
-   - "I have tried adding different feature lines to the corridor data"
-   - "But cannot seem to fix the surface"
    - Try adding feature lines
    - To supplement the surface data
 
 7. **Check for yellow triangle areas**:
-   - "The area that you highlighted is the surface area that is not triangulating correctly"
-   - "The big side (down) of the yellow triangle"
-   - "Should not be like this"
    - Investigate yellow triangle areas in the surface
 
 ### Community Report

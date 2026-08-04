@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://learn.microsoft.com/en-ca/answers/questions/5567033/cad-software-not-working-after-windows-11-august-u"
-  - "https://teamarmaan.com/nanocad/"
-  - "https://www.nanocad.in/2D-design-3D-modeling-solution/25/en/topic/ncad-lsp"
 ---
 
 # nanoCAD 26 cax_geometry.dll Access Violation Crash from Dynamic Vertex Buffer Overflow, Windows 11 UAC Hardening Freeze from August Update, Memory Leak from Large 3D Models and Hatches, DWG Translator Data Loss from AutoCAD 2024 2026 Format, and LISP .NET API Null Reference from Multiple Assembly Conflicts: GraphicsOverride Registry, Run as Admin, Build 305 Update, DWG Format Fix, and API Cleanup
@@ -31,19 +28,14 @@ nanoCAD crashes with an access violation in cax_geometry.dll. The crash signatur
 ### Fix
 
 1. **Set GraphicsOverride registry key**:
-   - "Windows Registry Editor Version 5.00"
-   - "[HKEY_CURRENT_USER\Software\nanoCAD\Profiles\Default\General\]"
    - '"GraphicsOverride" = DWORD:00000001'
    - Set GraphicsOverride to 1 in registry
 
 2. **Delete corrupted local drawing caches**:
-   - "Navigate to C:\Users\%USERNAME%\AppData\Local\$nanoCAD\"
-   - "Safely delete dynamic drawing recovery lockfiles"
    - '(.ac$ or .sv$) and cached coordinate options'
    - Delete corrupted cache files
 
 3. **Terminate stalled nanoCAD processes**:
-   - "taskkill /f /im nanocad.exe"
    - Terminate stalled processes
    - Before attempting
    - To restart
@@ -55,7 +47,6 @@ nanoCAD crashes with an access violation in cax_geometry.dll. The crash signatur
    - Temporary files
 
 5. **Run in diagnostics mode**:
-   - "Relaunch nanoCAD in diagnostics mode"
    - After applying the fixes
    - Run in diagnostics mode
    - To verify the fix
@@ -67,7 +58,6 @@ nanoCAD crashes with an access violation in cax_geometry.dll. The crash signatur
    - Or using a backup
 
 7. **Reset workspace coordinates**:
-   - "Resetting workspace coordinates configuration"
    - Reset the workspace
    - To clear corrupted
    - Coordinate data
@@ -89,45 +79,29 @@ After the Windows 11 August update, nanoCAD Free freezes for an endless amount o
 ### Fix
 
 1. **Run as administrator**:
-   - "Right-click nanocad.exe > Properties"
-   - "> Compatibility > Run this program as administrator"
    - Set nanoCAD to always
    - Run as administrator
 
 2. **Add to Exploit Protection allowlist**:
-   - "Open Windows Security > App & browser control"
-   - "> Exploit protection > Program settings"
-   - "Add nanocad.exe and disable Force randomization"
-   - "Or Mandatory ASLR if present"
    - Add to exploit protection allowlist
 
 3. **Reinstall Visual C++ runtimes**:
-   - "Install latest Microsoft Visual C++ Redistributables"
-   - "(x86/x64, all years)"
    - Reinstall all
    - C++ runtimes
 
 4. **Confirm .NET Framework 4.8+**:
-   - "Confirm .NET Framework 4.8+ is present"
    - Verify .NET Framework
    - Version 4.8 or later
    - Is installed
 
 5. **Clean reinstall nanoCAD**:
-   - "Uninstall NanoCAD, remove leftover folders"
-   - "In Program Files, ProgramData, and AppData\Roaming"
-   - "Delete registry key: HKEY_CURRENT_USER\SOFTWARE\Nanosoft AS"
-   - "Reinstall fresh"
    - Perform a clean reinstall
 
 6. **Update or roll back GPU drivers**:
-   - "Get latest drivers from NVIDIA/AMD/Intel"
-   - "If issue began after GPU update, roll back"
    - Update or roll back
    - GPU drivers
 
 7. **Use Windows 8 compatibility mode**:
-   - "Run NanoCAD in Windows 8 or Windows 7 compatibility mode"
    - Try compatibility mode
    - As a workaround
    - For UAC issues
@@ -149,15 +123,9 @@ Older versions of nanoCAD consume increasing amounts of RAM as the user works. M
 ### Fix
 
 1. **Update to Build 305 (26.0.7476.4950)**:
-   - "Build 305 introduces a new garbage collection system"
-   - "That actively releases memory"
-   - "From closed drawings, purged unreferenced blocks"
-   - "And cleared Undo history"
    - Update to Build 305
 
 2. **Verify memory stability**:
-   - "Memory usage remained stable at 1.2GB"
-   - "Instead of climbing to 8GB and crashing"
    - Verify memory usage
    - Is stable after update
 
@@ -186,8 +154,6 @@ Older versions of nanoCAD consume increasing amounts of RAM as the user works. M
    - Early
 
 7. **Use x64 architecture**:
-   - "The x64 architecture ensures"
-   - "That the software can address more than 4GB of RAM"
    - Use 64-bit nanoCAD
    - For large drawings
 
@@ -208,27 +174,15 @@ When opening AutoCAD 2024 or 2026 native DWG files in older nanoCAD versions, da
 ### Fix
 
 1. **Update to Build 305**:
-   - "The DWG translator engine has been rebuilt"
-   - "From the ground up to handle"
-   - "AutoCAD 2024 and 2026 native file formats"
-   - "Without data loss, text corruption, or layer mismapping"
    - Update to Build 305
 
 2. **Open DWG files directly**:
-   - "You can open native AutoCAD 2024 and AutoCAD 2026 .dwg files"
-   - "Directly, including files with dynamic blocks"
-   - "Annotative text, and custom object enablers"
    - Open DWG files directly without conversion
 
 3. **Verify entity preservation**:
-   - "The software preserves every entity"
-   - "Layer state, and xref path"
-   - "Exactly as the original designer intended"
    - Verify all entities are preserved
 
 4. **Check for text corruption**:
-   - "No data loss. No text replacement warnings"
-   - "No missing proxy graphics"
    - Check for text corruption
    - After opening DWG files
 
@@ -239,13 +193,11 @@ When opening AutoCAD 2024 or 2026 native DWG files in older nanoCAD versions, da
    - To older formats
 
 6. **Verify dynamic blocks**:
-   - "Including files with dynamic blocks"
    - Verify dynamic blocks
    - Display correctly
    - After opening
 
 7. **Check xref paths**:
-   - "Preserves every entity, layer state, and xref path"
    - Verify xref paths
    - Are correctly maintained
    - After opening
@@ -267,40 +219,22 @@ LISP routines fail randomly in nanoCAD. .NET plugins throw null reference except
 ### Fix
 
 1. **Update to Build 305**:
-   - "Build 305 cleans up these API endpoints"
-   - "Ensuring that custom scripts run reliably"
    - Update to Build 305
    - For API fixes
 
 2. **Load multiple .NET assemblies**:
-   - "The software now supports loading"
-   - "Multiple .NET assemblies simultaneously"
-   - "Without conflicts"
    - Load multiple assemblies after update
 
 3. **Verify LISP functions**:
-   - "LISP functions like vl-load-com"
-   - "And vlax-get-acad-object"
-   - "Now work consistently"
    - Verify LISP functions work
 
 4. **Use ncad.lsp for auto-loading**:
-   - "The root nanoCAD folder contains"
-   - "Important ncad.lsp file"
-   - "That is being automatically loaded"
-   - "On nanoCAD session start"
    - Use ncad.lsp for LISP auto-loading
 
 5. **Check LISP compatibility**:
-   - "Most AutoCAD LISP routines run in nanoCAD"
-   - "Without modification"
-   - "Complex scripts that rely on AutoCAD-specific"
-   - "ObjectARX functions may need minor adjustments"
    - Check LISP compatibility
 
 6. **Use .NET, C++, VBScript, JavaScript APIs**:
-   - "nanoCAD supports LISP (with DCL), .NET, C++"
-   - "VBScript, and JavaScript APIs"
    - Use the appropriate API
    - For your automation needs
 

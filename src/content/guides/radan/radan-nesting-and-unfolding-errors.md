@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://sncsolutions.com.au/whats-new-in-radan-2024-1/"
-  - "https://hexagon.com/products/product-groups/computer-aided-manufacturing-cad-cam-software/radan/release-history"
-  - "https://www.stillam.com/radan-2025-1/"
 ---
 
 # RADAN Nesting and Unfolding Errors: Automatic Tooling Report Cleared Too Often from Multi-Part Nesting Clearing Bug Requiring Update to 2024.1, Auto Tooling Crash from Cut Features in Clamp Dead Zone Requiring Dead Zone Clearance, Overlapping Unfold Faces from 3D Model Unfold Collision Requiring Graphic Feedback and Geometry Fix, Flange Too Short Warning from Designer Validation Requiring Flange Length Check, and Auto Tooling Selecting Internal Profile as Start Profile from Common Cut Bug Requiring Profile Order Verification
@@ -31,8 +28,6 @@ When running Multi-Part Nesting or Finish Project Nesting, the automatic tooling
 ### Fix
 
 1. **Update to RADAN 2024.1**:
-   - "The automatic tooling report is now only cleared prior to auto tooling the first nest when running the Multi-Part Nesting or Finish Project Nesting"
-   - "This makes it clearer which errors occur on which nest"
    - Update to RADAN 2024.1 or later
    - This is the primary fix
 
@@ -43,7 +38,6 @@ When running Multi-Part Nesting or Finish Project Nesting, the automatic tooling
    - This preserves the error list per nest
 
 3. **Use the Workflow Status page**:
-   - "This behaviour can now be controlled in the Machine Configuration Editor on the Workflow Status page"
    - Configure how tooling errors and warnings are handled
    - Set whether failed corner fillets stop automation
    - Control whether short un-tooled features are permissible
@@ -77,7 +71,6 @@ Auto Order crashes when there are cut features in the clamp dead zone. The crash
 ### Fix
 
 1. **Update to RADAN 2021.0 or later**:
-   - "A condition where the presence of cut features in the clamp dead zone could cause Auto Order to crash has been identified and resolved"
    - The fix is included in RADAN 2021.0
    - Update to the latest version
    - This is the primary fix
@@ -101,8 +94,6 @@ Auto Order crashes when there are cut features in the clamp dead zone. The crash
    - But requires more time
 
 5. **Use the tooling error handling**:
-   - "In many cases, a failed corner fillet is not a cause to stop automation"
-   - "In some cases, leaving a very short feature un-tooled is equally permissible"
    - Configure the Workflow Status page
    - Allow automation to continue despite warnings
 
@@ -129,8 +120,6 @@ When unfolding a 3D sheet metal model, the unfold doesn't work correctly. Faces 
 ### Fix
 
 1. **Update to RADAN 2024.1 or later**:
-   - "Feedback is now provided on overlapping unfolds"
-   - "The user is now notified of this and shown the issue graphically"
    - Update to RADAN 2024.1
    - The graphic feedback shows exactly where faces overlap
 
@@ -138,10 +127,8 @@ When unfolding a 3D sheet metal model, the unfold doesn't work correctly. Faces 
    - Verify all bend angles are correct
    - Check bend radii match the actual geometry
    - Use RADAN Designer to correct bend parameters
-   - "RADAN Designer now indicates bends where the design radius differs from the expected result radius"
 
 3. **Use V-width unfolding method**:
-   - "RADAN Designer now indicates bends where the design radius differs from the expected result radius when using V-width as the unfolding method"
    - Switch to V-width unfolding
    - This uses the actual die V-width for calculation
    - More accurate for production tooling
@@ -153,19 +140,15 @@ When unfolding a 3D sheet metal model, the unfold doesn't work correctly. Faces 
    - Add complex features after unfolding
 
 5. **Use Unfold Preparation tools**:
-   - "Several powerful sheet metal functions are available to prepare a part for unfolding"
-   - "RADAN Designer has functionality to correct the thickness, change bend radii and make changes to flange angles and lengths"
    - Use these tools to fix the model before unfolding
 
 6. **Check material library**:
    - Verify the material is correctly defined
    - Check bend allowance calculations
    - Use the correct material for the unfolding method
-   - "Unfolding parameters, such as bend allowances, can be controlled independently of the geometry"
 
 7. **Use setback or k-factor method**:
    - Try different unfolding methods
-   - "Available are unfolding using a setback at 90 degrees, a k-factor, DIN correction, or using only the V-width"
    - Different methods may produce different results
    - Choose the method that matches your production process
 
@@ -186,8 +169,6 @@ RADAN Designer warns that flanges are too short to be produced. The warning appe
 ### Fix
 
 1. **Update to RADAN 2024.1**:
-   - "DESIGNER now automatically warns users about flanges that are too short to be produced"
-   - "Any parts with errors can easily be singled out for inspection"
    - Update to RADAN 2024.1
    - The validation is automatic
 
@@ -210,13 +191,11 @@ RADAN Designer warns that flanges are too short to be produced. The warning appe
    - Update the tooling database
 
 5. **Use Unfold Preparation**:
-   - "RADAN Designer has functionality to correct the thickness, change bend radii and make changes to flange angles and lengths"
    - Use Unfold Preparation to adjust flanges
    - Correct flange lengths before unfolding
    - This prevents production issues
 
 6. **Inspect flagged parts**:
-   - "Any parts with errors can easily be singled out for inspection"
    - Use the validation report to identify problem parts
    - Inspect each flagged part
    - Fix or exclude from production
@@ -244,7 +223,6 @@ When adding common cut profile tooling to a group of profiles, auto tooling some
 ### Fix
 
 1. **Update to RADAN 2021.0 or later**:
-   - "When adding common cut profile tooling to a group of profiles, auto tooling sometimes selected an internal profile as the start profile. This bug has now been fixed. RDFT-9354"
    - Update to RADAN 2021.0 or later
    - This is the primary fix
 
@@ -279,7 +257,6 @@ When adding common cut profile tooling to a group of profiles, auto tooling some
    - Internal features after
 
 7. **Use tooling hints in RADAN 2025.1**:
-   - "Smarter Tooling Hints: click on any item in the error list, and RADAN will instantly zoom in"
    - Update to RADAN 2025.1
    - Use the tooling hints to identify and fix tooling errors
    - The zoom feature helps locate problem profiles

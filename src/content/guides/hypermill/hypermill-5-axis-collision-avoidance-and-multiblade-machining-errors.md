@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.openmind-tech.com/en/cam/5-axis-milling/collision-avoidance/"
-  - "https://www.openmind-tech.com/en/cam/5-axis-milling/tilt-strategies/"
-  - "https://www.openmind-tech.com/en/cam/5-axis-milling/impeller-blisk/"
 ---
 
 # hyperMILL 5-Axis Collision Avoidance and Multiblade Machining Errors: Automatic Collision-Free Tool Angle Calculation Fails from Insufficient Reference Job Requiring Manual Tilt Curve Definition, Multiblade Roughing Plunge Mode Not Available Without Optional Module Requiring Standard Roughing, Smooth Overlap Option Leaves Visible Approach Marks from Incorrect Lead Angle Smooth Factor, 5-Axis Rest Machining Misses Rest Material Areas from New Algorithm Requiring Version 2024 Update, and Barrel Cutter Finishing MAXX Machining Collision Check Not Performed in Shape Calculation
@@ -31,33 +28,25 @@ hyperMILL 2024 introduced "optimized collision avoidance that works on the basis
 ### Fix
 
 1. **Define a reference job for collision avoidance**:
-   - "Optimized collision avoidance works on the basis of a reference job during machining"
-   - "Machining is carried out with as little collision risk as the tool reach allows"
    - Create a reference job that covers the machining area
    - The reference job defines the safe working zone
 
 2. **Use manual tilt curves as alternative**:
-   - "The continuous movement of the tool around the Z-axis is either automatically calculated by hyperMILL or calculated as a result of defined tilt curves"
    - Define tilt curves manually for areas where automatic calculation fails
    - Tilt curves specify the tool axis orientation along the toolpath
 
 3. **Prioritize rotation axis**:
-   - "The user can decide which axis of rotation should be prioritized in collision avoidance depending on the machine kinematics"
    - Set the priority axis in the collision avoidance settings
    - This guides the algorithm to prefer one rotary axis over another
 
 4. **Use longer tool lengths as fallback**:
-   - "If there are collisions, 3D and/or tilted machining is cancelled, the toolpaths with collisions are left out, and then milling is carried out using longer tool lengths and/or modified tool angles"
    - The system automatically tries longer tools when collisions are detected
    - Ensure tool library has tools with various lengths
 
 5. **Use automatic indexing for 3+2 machining**:
-   - "The automatic indexing feature scans for fixed tool inclinations and the corresponding tool paths"
-   - "If there are potential toolholder collisions, the respective path segment can be sub-divided automatically into smaller segments with the corresponding tool positions"
    - Switch from 5-axis simultaneous to 3+2 automatic indexing
 
 6. **Use lateral path movement during roughing**:
-   - "During roughing, the paths can be moved laterally allowing greater machining depths"
    - Enable lateral path movement in roughing settings
    - This avoids collisions by shifting the toolpath sideways
 
@@ -78,14 +67,9 @@ Plunge roughing in the Multiblade module is an optional add-on. The base Multibl
 ### Fix
 
 1. **Purchase the Plunge Roughing optional module**:
-   - "Plunge roughing is an alternative if horizontal feed rates cannot be effectively achieved with long, slim tools"
-   - "This process allows the most rigid tool to be employed to rough a pocket between blades"
-   - "This is provided as an optional module"
    - Contact OPEN MIND sales for pricing
 
 2. **Use standard Multiblade Roughing as alternative**:
-   - "In the roughing cycle, the blades are machined in a continual process starting from pre-turned stock or a semi-finished workpiece"
-   - "No time-consuming simulation of the removal of material is required"
    - Use standard roughing with shorter tools
    - Accept slower feed rates for deep pockets
 
@@ -102,7 +86,6 @@ Plunge roughing in the Multiblade module is an optional add-on. The base Multibl
    - This leverages the other CAM's plunge capability
 
 5. **Use rest machining after standard roughing**:
-   - "This machining strategy can also be applied as rest machining near blades"
    - After standard roughing, use Multiblade rest machining
    - This removes remaining material in corners
    - May reduce the need for plunge roughing
@@ -124,26 +107,18 @@ The Smooth factor controls the length and smoothness of the transition between g
 ### Fix
 
 1. **Adjust the Smooth factor**:
-   - "The smooth factor can be used to limit the length/smoothing of the transition between the global and local tool axis settings"
-   - "With a small factor, the transition between the specified lead angles can be relatively hard"
-   - "A larger factor makes the transitions smoother, but can lead to longer drill or upward cuts"
    - Start with factor = 2 × tool radius, increase if marks persist
 
 2. **Set Lead angle up and Lead angle down correctly**:
-   - "This makes it possible to control the area of the drill or upward cuts for both cutting directions independently"
    - Set different lead angles for up-cutting and down-cutting
    - Match the lead angles to the blade surface curvature
    - Consistent lead angles reduce transition marks
 
 3. **Enable Smooth overlap for surface blending**:
-   - "The 'Smooth overlap' option offers the opportunity to smoothly blend the entry and retract moves with the surface"
-   - "Thus almost completely avoid visible approach and retract marks"
    - Ensure this option is enabled in the strategy settings
    - Check that the surface is selected for blending
 
 4. **Use Zigzag smooth instead of Zigzag direct**:
-   - "Zigzag direct: The machining direction changes after each passed profile. An approach macro is used for the infeed to the first milling path and a retract macro is used for retraction after the last milling path"
-   - "Zigzag smooth: Connects individual paths with a fillet"
    - Zigzag smooth creates smoother transitions between paths
 
 5. **Verify tool axis continuity**:
@@ -169,8 +144,6 @@ hyperMILL 2024 introduced "a new algorithm for rest material detection" that was
 ### Fix
 
 1. **Update to the latest hyperMILL 2024 service release**:
-   - "We have revised and improved this strategy from scratch"
-   - "A new algorithm for rest material detection ensures comprehensive detection of all rest material areas"
    - Install the latest service pack
    - The algorithm may have been refined in updates
 
@@ -178,16 +151,12 @@ hyperMILL 2024 introduced "a new algorithm for rest material detection" that was
    - The detection algorithm uses tolerance settings
    - Increase the detection tolerance to catch smaller rest material areas
    - Check the "Accuracy" parameter in collision check settings
-   - "Defines the quality of the model (mesh) against which the check takes place"
 
 3. **Use the optimized intersection detection**:
-   - "The optimized detection of intersection areas where paths meet, combined with a new tool path layout, ensures perfect machining of the rest material"
    - Enable intersection area detection in the rest machining settings
    - This catches material at path crossing points
 
 4. **Use automatic 5-axis Indexing mode**:
-   - "Updated functions for indexed approach calculation and path calculation"
-   - "This is reflected in a faster calculation time and better approach calculation for the automatic 5-axis 'Indexing' mode"
    - Switch to Indexing mode for better rest material coverage
 
 5. **Manually define rest material areas**:
@@ -219,7 +188,6 @@ The barrel cutter shape optimization function "does not carry out a collision ch
 ### Fix
 
 1. **Run collision check after shape calculation**:
-   - "The function does not carry out a collision check! This is performed in the cycle"
    - After calculating the optimal barrel shape
    - Run the machining cycle with collision checking enabled
    - Review collision reports before executing
@@ -231,8 +199,6 @@ The barrel cutter shape optimization function "does not carry out a collision ch
    - Reduces collision risk
 
 3. **Check determined maximum values**:
-   - "The determined maximum possible barrel radius that fits the area is output"
-   - "The determined maximum base diameter (shaft side) that fits the surface is output"
    - Review these values before using them
    - Consider using smaller values for safety margin
 
@@ -243,14 +209,12 @@ The barrel cutter shape optimization function "does not carry out a collision ch
    - Run collision check to verify
 
 5. **Use hyperMILL's optimized collision avoidance**:
-   - "Optimized collision avoidance that works on the basis of a reference job during machining"
    - Set up a reference job for the barrel cutter operation
    - The collision avoidance will modify tool angles to prevent collisions
    - This works during cycle execution, not shape calculation
 
 6. **Verify with VIRTUAL Machining simulation**:
    - Use hyperMILL's VIRTUAL Machining for full simulation
-   - "Significant performance improvements in NC code generation and collision checking"
    - Simulate the barrel cutter toolpath with full machine kinematics
    - Catch collisions before running on the actual machine
 

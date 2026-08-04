@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://help.materialise.com/magics-known-issues/known-issues-magics"
-  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
-  - "https://help.materialise.com/manuals-magics/magics-29"
 ---
 
 # Materialise Magics 28 Incorrect Tree Support Generation for Surfaces Closer Than 1mm to Platform, Regenerate Not Working for Tree Supports with Modified Surface, Cancelling Re-Trim Support on Platform Causes Unresponsive Freeze, Thickened Supports Creating Empty Slices for Concept Laser Sodick Additive Industries Build Processors, and Migration Incompatibility of Support Parameters from Magics 22 to 23 Plus: Tree Support Angle Check, Support Type Toggle, Re-Trim Avoidance, 28.03 Update, and Profile Migration Verification
@@ -31,13 +28,11 @@ Tree supports are generated incorrectly for parts that have surfaces partially o
 ### Fix
 
 1. **Check part-to-platform distance**:
-   - "A surface that is (partially) closer than 1mm to the platform"
    - Check if any part surfaces
    - Are closer than 1mm
    - To the platform
 
 2. **Disable angling for near-platform surfaces**:
-   - "Supported by trees with angling applied"
    - Disable the angling option
    - For tree supports near
    - The platform surface
@@ -89,14 +84,9 @@ After modifying a tree support surface (e.g., adding or removing triangles), cli
 ### Fix
 
 1. **Change support type and back**:
-   - "Changing to and from another support type"
-   - "Will trigger the update of Tree supports"
-   - "With the modified surface"
    - Switch to block supports and back to tree
 
 2. **Modify a parameter to trigger update**:
-   - "Modifying a parameter"
-   - "Will trigger the update"
    - Change any support parameter
    - To trigger the regeneration
 
@@ -147,9 +137,6 @@ When cancelling the "Re-trim support on platform" operation for parts containing
 ### Fix
 
 1. **Don't cancel Re-trim for tree supports**:
-   - "Cancelling 'Re-trim support on platform'"
-   - "For parts containing Tree support"
-   - "Will cause Magics to become unresponsive"
    - Avoid cancelling the re-trim operation
 
 2. **Let the re-trim complete**:
@@ -205,26 +192,16 @@ When using thickened supports, empty slices appear in the support structure duri
 ### Fix
 
 1. **Update to Magics 28.03 or later**:
-   - "This issue is resolved as of Magics 28.03"
    - Update to 28.03
    - To fix the empty slices
 
 2. **Regenerate supports from previous versions**:
-   - "If supports are imported from a previous Magics version"
-   - "It is mandatory to regenerate the supports prior to slicing"
-   - "Otherwise the slicing will use the imported, faulty support as input"
    - Regenerate imported supports before slicing
 
 3. **Use solid support conversion**:
-   - "When using thickened support"
-   - "Set the parameters in Machine properties"
-   - "To convert solid support to .stl"
    - Convert supports to solid STL
 
 4. **Check planar holes after SG mode**:
-   - "On exit from SG mode"
-   - "Check the 'planar holes' in the Part fixing info"
-   - "And run the fixing"
    - Check for and fix planar holes
 
 5. **Use a different Build Processor**:
@@ -262,8 +239,6 @@ When converting a 'Support library' from Magics 22 or older to a 'Support genera
 ### Fix
 
 1. **Verify migrated support profiles**:
-   - "The rescaled center parameter"
-   - "Might receive a wrong value"
    - After migration
    - Verify all support parameters
 

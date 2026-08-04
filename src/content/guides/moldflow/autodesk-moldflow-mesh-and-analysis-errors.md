@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/issue-running-analysis-with-blm-mesh/td-p/13717864"
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/effect-of-mesh-quantity-on-melt-flow/td-p/13739586"
-  - "https://forums.autodesk.com/t5/moldflow-insight-forum/ami-2026-meshing-failes-caused-by-beam-elements/td-p/13403844"
 ---
 
 # Autodesk Moldflow Mesh and Analysis Errors: BLM Mesh Analysis Fails to Run from Refine Mesh Not Passing Requiring Mesh Quality Verification, Mesh Quantity Affects Melt Flow Convergence Requiring 6 Layers Minimum for Accurate Fill Simulation, Beam Elements Cannot Visualize Cross-Sectional Temperature Distribution Requiring 3D Tetrahedral Mesh, AMI 2026 Meshing Fails with Beam Elements from Cold Runner Requiring AMI 2025.1 or Element Removal, and Error 220120 No Connection Between Beam and Tetrahedral Cavity Elements Requiring Node Merge
@@ -31,7 +28,6 @@ The "Refine mesh" check is a separate quality criterion from the standard mesh q
 ### Fix
 
 1. **Check Refine Mesh diagnostic**:
-   - "The 'Refine mesh' option was not passed — I'm not sure if that could be the reason"
    - Run Mesh > Mesh Diagnostic > Refine Mesh
    - Identify which elements fail the refinement check
    - Fix those elements specifically
@@ -77,31 +73,25 @@ Completely identical simulation models, differing only in the number of mesh ele
 ### Fix
 
 1. **Use 6 layers minimum for fill simulation**:
-   - "As per my experience for flow simulation, 6 layers shows accurate result (assuming material data is complete)"
    - For Dual Domain or BLM mesh, set layers to 6 minimum
    - This provides adequate through-thickness resolution
    - Verify material data is complete for accuracy
 
 2. **Use more layers for fiber-filled materials**:
-   - "If your processing technique changes or in case of fibre filled material, number of layers will be more"
    - Fiber-filled materials need 8-12 layers
    - To capture fiber orientation through the thickness
    - More layers = more accurate orientation prediction
 
 3. **Verify grid independence**:
-   - "How to verify the grid independence of the model?"
    - Run simulations with increasing mesh density
    - Compare key results (fill time, pressure, temperature)
    - When results converge between successive refinements, grid independence is achieved
 
 4. **Use similar magnitude meshes for comparison**:
-   - "Simulation results using grids of similar magnitudes show a convergent state"
-   - "When the difference in the number of grids is large, the result error is significant"
    - Don't compare results from very different mesh densities
    - Use consistent mesh density across comparison studies
 
 5. **Increase layers for small models**:
-   - "If your model is small and simulation computation time is less, you can test higher number of layers"
    - For small parts, use 8-10 layers
    - The computation time is manageable
    - This improves accuracy for small geometries
@@ -123,45 +113,29 @@ Studying the MeltFlipper technique in Moldflow. Need to visualize the full cross
 ### Fix
 
 1. **Use 3D tetrahedral mesh for runners**:
-   - "The runners must be meshed in 3D"
-   - "Beams cannot be used to pick up shear induced imbalances, at least in the branching runner as flow is assumed symmetrical around the axis"
-   - "3D tetrahedral elements must be used"
    - Model the runner as a solid, not as curves
 
-2. **Use 20 layers of tetrahedral elements**:
-   - "You need to have a very fine mesh and increase the number of layers of tetrahedral elements"
-   - "20 layers would be my recommendation"
-   - "You can go up to 40 layers, but typically aspect ratio becomes a problem"
-   - "To keep mesh/aspect ratio equivalent to 20 layers, it would require 8 times more elements"
+2. **Use 20 layers of tetrahedral elements**.
 
 3. **Model the machine nozzle**:
-   - "Modeling the machine nozzle (in beams) gives improved results if you can"
    - The nozzle affects the melt entering the runner
    - Model it as beam elements attached to the 3D runner
    - This provides more accurate inlet conditions
 
 4. **Increase temperature cap**:
-   - "You have to increase the temperature cap"
-   - "This is done by editing the molding material's Absolute maximum melt temperature to the max allowed"
    - This allows the solver to capture high shear temperatures
    - Without the cap, the solver clips temperatures artificially
 
 5. **Utilize symmetry in mesh**:
-   - "Utilize symmetry in your mesh"
    - If the runner has geometric symmetry, model only half or quarter
    - This reduces element count while maintaining resolution
    - Apply symmetry boundary conditions
 
 6. **Don't enable inertia and gravity**:
-   - "Inertia and gravity do not need to be turned on — this is an old reference"
-   - "Back in 2019ish, the higher accuracy flow front advancement calculation was incorporated into the standard solver"
    - Inertia was only needed before this improvement
    - Save computation time by leaving them off
 
 7. **Create 3D runners in external CAD**:
-   - "In Moldflow, it's possible to generate beam elements starting from curves or surface meshing. But not the reverse"
-   - "To model the runners, you have to use a 3D drawing software"
-   - "If you have a Moldflow license, you can try Fusion 360 freely"
    - Import the 3D runner as STL or STEP
 
 ### Community Report
@@ -181,13 +155,11 @@ This is a version-specific bug in AMI 2026. The meshing algorithm in AMI 2026 ha
 ### Fix
 
 1. **Use AMI 2025.1 as workaround**:
-   - "The meshing completes with AMI 2025.1 (meshing completes with beam elements)"
    - Keep AMI 2025.1 installed alongside AMI 2026
    - Use 2025.1 for models with beam element cold runners
    - Wait for a fix in AMI 2026
 
 2. **Remove beam elements before meshing**:
-   - "The meshing completes without the beam elements"
    - Remove the beam elements (cold runners) from the model
    - Run the meshing without beam elements
    - Add beam elements after meshing completes
@@ -229,13 +201,10 @@ The beam elements (representing the hot runner) and the tetrahedral elements (re
 ### Fix
 
 1. **Use Connectivity Diagnostic**:
-   - "Use connectivity diagnostic to identify where the problem is located"
-   - "Click Mesh > Mesh Diagnostic > Connectivity"
    - Run the diagnostic
    - Identify the disconnected nodes
 
 2. **Merge nodes at the gate**:
-   - "If not connected, need to merge nodes"
    - Use Mesh > Mesh Tools > Merge Nodes
    - Select the beam end node and the tetrahedral node
    - Merge them into a single node

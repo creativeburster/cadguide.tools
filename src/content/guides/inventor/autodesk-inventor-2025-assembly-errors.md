@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-02"
 sources:
-  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-1-2-crashing-multiple-times-a-day-on-finish-edits/td-p/13088787"
-  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-2-1-assembly-update-required-after-saving-loop/td-p/13344625"
-  - "https://forums.autodesk.com/t5/inventor-forum/constraint-issues-inventor-2025/td-p/13765336"
 ---
 
 # Autodesk Inventor 2025 Assembly Errors: Crash on Finish Edit from Multi-Monitor Display Settings Requiring DPI Configuration, Assembly Update Save Loop from Model State Corruption Requiring Close and Reopen, Constraints Not Working After Part Edit from Transient Bug Requiring Reboot, Parts Not Moving After One Constraint from Design Doctor Errors Requiring Constraint Fix, and iLogic Assembly Constraints Requiring Click and Drag from Defer Update Requiring Update2 Call
@@ -31,38 +28,28 @@ Inventor 2025.1.2 crashes multiple times per day. Crashes usually occur on Finis
 ### Fix
 
 1. **Set Windows Display to recommended resolution and scale**:
-   - "Go to Windows Display settings -> select the recommended resolution and scale"
    - Right-click desktop > Display settings
    - Set each monitor to its recommended resolution
    - Set scale to the recommended value (usually 100% or 125%)
 
 2. **Change High DPI settings for Inventor**:
-   - "Right-click on Inventor desktop icon -> Properties -> Compatibility -> Change High DPI settings"
    - Check both boxes:
-     - "Use this setting to fix scaling problems for this program"
-     - "Override high DPI scaling behavior"
    - Set scaling override to "Application"
 
 3. **Set Inventor monitor as primary**:
-   - "Set the monitor hosting Inventor as the primary monitor"
    - Go to Display settings
    - Select the monitor where Inventor runs
    - Check "Make this my main display"
 
 4. **Click on another monitor when spinning starts**:
-   - "When we do a finish edit and it starts spinning like it's going to crash"
-   - "We mouse over to another monitor and click on apps to start up"
-   - "This may prevent the Inventor shutdowns"
    - This is a workaround, not a permanent fix
 
 5. **Set environment variable for crash reporting**:
-   - "Try setting the following environment variable: INV_ENABLE_WER_SUPPORT=1"
    - This won't fix the crash but may allow the Error Report dialog to show
    - Set via System Properties > Environment Variables
    - Submit crash reports to Autodesk for analysis
 
 6. **Update to latest Inventor 2025 patch**:
-   - "It might be a known issue which has been fixed internally on a build targeting 2025.2 update"
    - Check for updates via Autodesk Access app
    - Install the latest service pack
    - Contact Autodesk support with crash details
@@ -84,38 +71,31 @@ After upgrading from Inventor 2024 to 2025.2.1, assemblies and sub-assemblies as
 ### Fix
 
 1. **Close all files and reopen**:
-   - "If we close down all open files and reopen them then we do not have this loop"
    - Close all open Inventor files
    - Reopen the assembly
    - The loop should be resolved temporarily
 
 2. **Check Model States**:
-   - "Probably one of the subassemblies is in non-Primary PosRep but needs to be updated in Primary PosRep"
    - Verify all subassemblies are in Primary Position Representation
    - Switch any non-Primary PosRep to Primary
    - Update and save
 
 3. **Check for dirty flags in Vault**:
-   - "We can usually trace the problem to a Vaulted and Released sub-component that has some sort of dirty flag"
    - Use CTRL-D from Inventor About screen to check dirty flags
    - Move files to editable state in Vault
    - Open, rebuild, and save them
    - Move back to Released state
 
 4. **Reproduce and report to Autodesk**:
-   - "I managed to consistently reproduce the update loop bug"
    - Create a Pack and Go with reproduction steps
    - Send to Autodesk support (johnson.shiue@autodesk.com)
    - Include the exact workflow that triggers the loop
 
 5. **Avoid editing subassemblies in tabs**:
-   - "Maybe something to do that a sub assembly needs updating in tab"
-   - "After save something happens"
    - Don't leave subassemblies open in tabs while editing
    - Close subassembly tabs before saving the top assembly
 
 6. **Use Quick Change state in Vault**:
-   - "Thank goodness we kept a Quick Change state that does not trigger a Revision bump"
    - If using Vault, set up a Quick Change state
    - This allows editing without revision changes
    - Move files to Quick Change, rebuild, save, move back
@@ -137,14 +117,12 @@ This is a transient bug in Inventor 2025's constraint solving engine. After edit
 ### Fix
 
 1. **Reboot Inventor**:
-   - "Rebooted Inventor and the issue was solved by itself"
    - Close Inventor completely
    - Restart Inventor
    - Open the assembly
    - The constraints should work correctly
 
 2. **Edit the constraint to force update**:
-   - "If you edit the constraint that fixes the plate at the end of the column, the plate will move"
    - Right-click the constraint
    - Edit it (change a value or reselect geometry)
    - Apply the change
@@ -185,25 +163,18 @@ Placing a part in an assembly (100+ parts) and constraining it — the part no l
 ### Fix
 
 1. **Check and fix Design Doctor errors**:
-   - "Check if the Design Doctor is active (Red Cross on instead of grey)"
-   - "Click the red cross and solve all the issues listed"
-   - "After fixing the errors, the constraints behavior should be like you expected"
    - Resolve all sick constraints in the assembly
 
 2. **Check for grounded components**:
-   - "It's odd you don't have a grounded component"
    - Verify no parts are accidentally grounded
    - Right-click parts in the browser
    - Uncheck "Grounded" if not intended
 
 3. **Install the latest updates**:
-   - "There was an issue where adding a constraint stopped things moving. It's fixed in an update"
    - Check for Inventor updates via Autodesk Access
    - Install the latest service pack
-   - "You can update the software without moving to a new version"
 
 4. **Check for flexible or adaptive components**:
-   - "It's probably to do with what Carlos describes — a conflict or maybe a flexible or adaptive component"
    - Check if any parts are set to Flexible or Adaptive
    - These can cause unexpected locking behavior
    - Disable flexibility/adaptivity if not needed
@@ -215,7 +186,6 @@ Placing a part in an assembly (100+ parts) and constraining it — the part no l
    - Gradually add parts to identify the culprit
 
 6. **Check project file settings**:
-   - "Do you use a specific project file to this model?"
    - Verify the correct project file is active
    - Check project file paths and references
    - Missing references can cause constraint issues
@@ -237,13 +207,11 @@ Assemblies updated via iLogic — suppress certain constraints, activate others.
 ### Fix
 
 1. **Check Defer Update setting**:
-   - "Check ThisApplication.AssemblyOptions.DeferUpdate"
    - Go to Application Options > Assembly tab
    - Uncheck "Defer Update" at the top
    - This setting can get checked and forgotten
 
 2. **Use Document.Update2(true) instead of iLogicvb.UpdateWhenDone**:
-   - "Instead of relying on iLogicvb.UpdateWhenDone, try calling Document.Update2(true)"
    - ```visual-basic
      Dim assemblyDoc As AssemblyDocument = ThisDoc.Document
      assemblyDoc.Update2(true)
@@ -258,7 +226,6 @@ Assemblies updated via iLogic — suppress certain constraints, activate others.
    - More reliable than iLogicvb.DocumentUpdate()
 
 4. **Use ThisApplication.ActiveView.Update**:
-   - "Another way of forcing a screen update"
    - ```visual-basic
      ThisApplication.ActiveView.Update()
      ```
@@ -266,20 +233,14 @@ Assemblies updated via iLogic — suppress certain constraints, activate others.
    - May help if ScreenUpdating was turned off
 
 5. **Check ScreenUpdating setting**:
-   - "If ThisApplication.ScreenUpdating has been turned off by code"
-   - "The code errored out or exited before turning it back on"
    - Ensure all iLogic rules properly reset ScreenUpdating
    - Add error handling to reset on failure
 
 6. **Nudge a component to trigger update**:
-   - "Try to nudge a component — set its position to anywhere else"
-   - "If constraints will fix its position, then you can put it back if needed"
    - This forces the constraint solver to run
    - Use as a last resort workaround
 
 7. **Suppress and unsuppress the problem constraint**:
-   - "Suppress the problem constraint and unsuppress"
-   - "There could be conflicting relationships"
    - This forces the constraint to re-evaluate
    - May resolve the delayed update
 

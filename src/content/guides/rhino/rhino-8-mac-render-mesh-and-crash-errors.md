@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://discourse.mcneel.com/t/bug-render-mesh-broken-after-updating-to-8-20/204476"
-  - "https://discourse.mcneel.com/t/rhino-8-mac-os-crash/213914"
-  - "https://discourse.mcneel.com/t/rhino-8-mac-performance-and-stability-issues/173721/1"
 ---
 
 # Rhino 8 Mac Render Mesh and Crash Errors: Render Mesh Broken After Update to 8.20 from Metal Renderer Regression Requiring SRC Update or Downgrade, Constant Crashes in Rendered View from Metal GPU Rendering Requiring CPU Render Switch, Performance and Stability Issues from UI Bugs and Beach Ball Lag Requiring Version Update, Crash After macOS Update from Material Rendering Conflict Requiring CPU Render Setting, and Slow Copy Paste and Window Focus Switching from UI State Bug Requiring Restart
@@ -31,19 +28,15 @@ After updating to Rhino 8.20 on Mac, render meshes are broken. Simple SubD objec
 ### Fix
 
 1. **Update to SRC 8.20.25140.13002 or later**:
-   - "We just published an updated SRC: 8.20.25140.13002. This should fix the issue"
    - Download the Service Release Candidate from McNeel
    - Install over the current 8.20
    - Verify the render meshes are correct
 
 2. **Downgrade to Rhino 8.19**:
-   - "It was verified that the current official version of Rhino 8, that is 8.19, works fine"
-   - "I just downgraded to 8.18 and everything seems to be ok now"
    - Download 8.19 or 8.18 from McNeel's archive
    - Install and use until the fix is in the official release
 
 3. **Use RefreshShade command**:
-   - "I had something like this and Grok recommended several things. First thing I tried was RefreshShade, and it worked"
    - Run the `RefreshShade` command in Rhino
    - This may temporarily fix the display
    - But the issue may recur
@@ -83,7 +76,6 @@ The Metal renderer in Rhino 8 has stability issues on certain Mac configurations
 ### Fix
 
 1. **Switch to CPU render device**:
-   - "Restart Rhino without opening a document, then Rhino 8 > Settings > Rhino Render. Switch to the CPU tab and make sure CPU is checked as render device."
    - Restart Rhino after changing the setting
    - This bypasses the Metal renderer for rendering
    - But the viewport may still use Metal
@@ -95,7 +87,6 @@ The Metal renderer in Rhino 8 has stability issues on certain Mac configurations
    - Use for everyday work, Cycles for final renders
 
 3. **Update to latest Rhino 8 SR**:
-   - "I already checked your crash reports. The instructions to switch to CPU will help until a fix is released"
    - Install the latest Service Release
    - McNeel releases fixes for crash issues
    - Check for updates regularly
@@ -107,8 +98,6 @@ The Metal renderer in Rhino 8 has stability issues on certain Mac configurations
    - Re-enable one at a time to identify the culprit
 
 5. **Submit crash reports**:
-   - "Please send in crash reports when the Rhino crash reporter dialog appears"
-   - "Do fill in your email address, that helps us to understand better about crashes"
    - Always submit crash reports
    - Include your email for follow-up
 
@@ -159,7 +148,6 @@ Rhino 8 for Mac was released with significant UI and stability issues. The Eto U
    - This reduces the beach ball lag
 
 5. **Restart Rhino regularly**:
-   - "Rhino 8 freezes and needs to be forced to quit a lot"
    - Restart Rhino every 1-2 hours
    - This clears accumulated UI state
    - Prevents freezes from memory buildup
@@ -177,7 +165,6 @@ Rhino 8 for Mac was released with significant UI and stability issues. The Eto U
    - Re-enable one at a time
 
 8. **Report issues to McNeel**:
-   - "Thanks for reporting the issues and sending in the crash reports"
    - Share files that demonstrate the issues
    - McNeel uses these to fix bugs
    - Check the forum for updates
@@ -198,27 +185,19 @@ The macOS update changed the Metal framework or graphics driver in a way that co
 
 ### Fix
 
-1. **Switch to CPU render before opening files**:
-   - "Restart Rhino without opening a document"
-   - "Rhino 8 > Settings > Rhino Render"
-   - "Switch to the CPU tab and make sure CPU is checked as render device"
-   - "Then restart Rhino"
+1. **Switch to CPU render before opening files**.
 
 2. **Update Rhino to latest SR**:
-   - "The instructions to switch to CPU will help until a fix is released"
    - Check for Rhino updates
    - McNeel releases fixes for macOS compatibility
    - Install the latest SR
 
 3. **Disable Enscape and third-party plugins**:
-   - "Does Rhino also crash if you disable Enscape?"
    - Disable all third-party plugins
    - Test if crashes still occur
    - Re-enable one at a time
 
 4. **Submit crash reports**:
-   - "Are you submitting the crash report? That would help finding the cause"
-   - "If you have older builds of Rhino, do they crash as well?"
    - Always submit crash reports
    - Include email address
 

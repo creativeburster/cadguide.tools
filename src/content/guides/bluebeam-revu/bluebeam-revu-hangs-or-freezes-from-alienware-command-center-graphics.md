@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://support.bluebeam.com/revu/troubleshooting/hangs-or-freezes-when-opening-a-pdf.html"
-  - "https://support.bluebeam.com/revu/troubleshooting/error-revu-has-stopped-working.html"
-  - "https://support.bluebeam.com/revu/troubleshooting/performance-improvement.html"
 ---
 
 # Bluebeam Revu Hangs or Freezes from Alienware Command Center Graphics Hook, Stopped Working from Corrupted Profile, Periodic Freeze from Recent Files Network Drive Search, Slow Performance from Rendering Engine and Power Settings, and Blurred Garbled Text from AWCC Secondary Monitor: AWCC Update or Uninstall, Software Rendering, Profile Switch and Rebuild, Hardware Rendering and High Performance Power Plan, and Enable Recent Files Disable
@@ -31,23 +28,11 @@ Revu hangs, freezes, or causes graphical issues on Dell and Alienware computers 
 ### Fix
 
 1. **Update AWCC to the latest version**:
-   - "Launch the AWCC application on your system"
-   - "You should be prompted to install the latest update"
-   - "After updating, reboot your system and note if the issue persists"
    - This is the first recommended fix
 
-2. **Uninstall AWCC if update doesn't help**:
-   - "If updating to the latest version of AWCC did not resolve your issue"
-   - "Consider uninstalling the AWCC application from your system"
-   - "Uninstall Alienware Command Center, Alienware Command Center Suite, and Alienware OC Controls"
-   - "After uninstalling, reboot your system"
+2. **Uninstall AWCC if update doesn't help**.
 
-3. **Enable Software Rendering**:
-   - "If the problem continues after attempting the solution(s) above, enable Software Rendering"
-   - "Go to Revu > Preferences"
-   - "In the Preferences sidebar, select Advanced"
-   - "On the 2D Rendering tab, from the Rendering Engine dropdown menu, select Software"
-   - "And then select OK"
+3. **Enable Software Rendering**.
 
 4. **Set external monitor as primary**:
    - If using an external monitor
@@ -68,7 +53,6 @@ Revu hangs, freezes, or causes graphical issues on Dell and Alienware computers 
    - Not from Windows Update
 
 7. **Contact Bluebeam support**:
-   - "If none of the suggested workarounds solve this issue, please contact us"
    - If the issue persists after all fixes
    - Contact Bluebeam Technical Support
    - With system details and crash information
@@ -90,44 +74,24 @@ PDF files do not open in Revu and only the File tab is visible. The error messag
 ### Fix
 
 1. **Start Revu without opening a document**:
-   - "Start Revu without opening a document"
-   - "Select a different profile and then open a file"
    - Don't open a PDF directly
    - Launch Revu first, then switch profiles
 
 2. **Switch to a different profile**:
-   - "Navigate to Revu > Profiles"
-   - "Select a different Profile from the menu"
-   - "Open a PDF file to see if it displays"
    - If the PDF displays, the original profile is corrupted
 
 3. **Switch back to original profile**:
-   - "If the file displays correctly, switch back to your original profile"
-   - "By switching between profiles, functionality should return to the original profile"
    - Sometimes the act of switching profiles
    - Resets the corrupted state
 
-4. **Delete the corrupted profile**:
-   - "If this does not fix the problem, then the original profile will need to be deleted"
-   - "Navigate to Revu > Profiles"
-   - "Click Manage Profiles"
-   - "Select the profile you wish to delete, and click Delete"
+4. **Delete the corrupted profile**.
 
-5. **Rebuild the profile**:
-   - "If the profile you've deleted was a preloaded profile"
-   - "A new copy will be automatically imported the next time Revu starts"
-   - "If it was a custom profile or a preloaded profile that you customized"
-   - "You'll need to rebuild it"
+5. **Rebuild the profile**.
 
 6. **Back up Revu settings**:
-   - "Once you've rebuilt the profile, it's recommended to back up your Revu settings"
-   - "The backup includes all your profiles and tool sets"
-   - "And will be useful if you need to install Revu on a new machine"
    - Create backups regularly
 
 7. **Note that tool sets are preserved**:
-   - "Deleting the profile does not delete any tool sets"
-   - "That may have been associated with it"
    - Tool sets are stored separately
    - And survive profile deletion
 
@@ -148,7 +112,6 @@ Revu freezes for 5-10 seconds approximately every 60 seconds. The freeze occurs 
 ### Fix
 
 1. **Disable Enable Recent Files**:
-   - "Unchecking 'Enable Recent Files' in Preferences > Interface > File Access solved the issue"
    - Go to Revu > Preferences > Interface > File Access
    - Uncheck "Enable Recent Files"
    - This immediately stops the periodic freeze
@@ -178,9 +141,6 @@ Revu freezes for 5-10 seconds approximately every 60 seconds. The freeze occurs 
    - While keeping the feature enabled for local files
 
 6. **Report the threading issue**:
-   - "This function needs to be running on a separate thread"
-   - "So that it does not freeze the application"
-   - "When it struggles to access a file location"
    - Report to Bluebeam as a feature request
 
 7. **Use offline mode for network files**:
@@ -205,53 +165,30 @@ Multiple causes contribute to slow performance: (1) Software rendering enabled i
 
 ### Fix
 
-1. **Use Hardware rendering**:
-   - "Hardware rendering generally works best, especially if you have a dedicated graphics card"
-   - "Go to Revu > Preferences"
-   - "In the Preferences dialog, select Advanced"
-   - "Select the 2D Rendering tab"
-   - "From the Rendering Engine dropdown menu, select Hardware"
+1. **Use Hardware rendering**.
 
 2. **Use Wait for Completion rendering mode**:
-   - "The Wait for Completion rendering mode disables partial redrawing of the display"
-   - "The screen will not update until the full page is ready to display"
-   - "Which reduces the total redraw time for the PDF, especially for 4k displays"
    - From the Rendering Mode dropdown, select "Wait for completion"
 
-3. **Set Windows power to High Performance**:
-   - "Aggressive power saving settings sacrifice display performance"
-   - "To reduce power consumption and extend battery life"
-   - "Click Start, type power settings, and select Choose a power plan"
-   - "Select the High performance or Maximum performance setting"
+3. **Set Windows power to High Performance**.
 
 4. **Update Microsoft Visual C++ Redistributable**:
-   - "Install the latest version of the Microsoft Visual C++ Redistributable"
-   - "These updates will improve rendering performance for large images and scans within Revu"
    - Download from Microsoft's website
    - Install both x86 and x64 versions
 
 5. **Update Microsoft .NET Framework**:
-   - "Install the latest Microsoft .NET Framework that your PC can work with"
-   - "Once the .NET installation is complete, documents will open faster"
-   - "And the general performance and responsiveness of the program will improve"
    - Restart after installation
 
 6. **Check RAM and file location**:
-   - "How much RAM does this computer have?"
-   - "Are you accessing the files locally or across a network?"
    - Ensure adequate RAM (8GB+ recommended)
    - Access files locally for best performance
 
 7. **Check for 4K display impact**:
-   - "Are you using a high resolution monitor, such as a 4K display?"
    - 4K displays require more rendering power
    - Use Wait for Completion rendering mode
    - And ensure hardware rendering is enabled
 
 8. **Contact Technical Support**:
-   - "If none of the steps above improve your performance, please contact the Support team"
-   - "You'll get the fastest resolution by opening Revu and going to Help > Report an Issue"
-   - "Which attaches the Revu log files and settings to a new email message"
    - Include detailed description and sample files
 
 ### Community Report
@@ -271,21 +208,12 @@ Revu displays blurred and garbled text on a secondary monitor. Certain elements 
 ### Fix
 
 1. **Update AWCC**:
-   - "Launch the AWCC application on your system"
-   - "You should be prompted to install the latest update"
-   - "After updating, reboot your system and note if the issue persists"
    - This is the first recommended fix
 
 2. **Uninstall AWCC**:
-   - "If updating did not resolve your issue, consider uninstalling the AWCC application"
-   - "Uninstall Alienware Command Center, Alienware Command Center Suite, and Alienware OC Controls"
-   - "After uninstalling, reboot your system"
    - This removes the graphics hooks entirely
 
 3. **Enable Software Rendering**:
-   - "If the problem continues, enable Software Rendering"
-   - "Go to Revu > Preferences > Advanced > 2D Rendering tab"
-   - "From the Rendering Engine dropdown menu, select Software"
    - Software rendering bypasses the graphics hooks
 
 4. **Set secondary monitor as primary**:
@@ -307,7 +235,6 @@ Revu displays blurred and garbled text on a secondary monitor. Certain elements 
    - The AWCC hook interference
 
 7. **See Graphical issues in Revu menus and interface**:
-   - "Please see Graphical issues in Revu menus and interface"
    - Refer to Bluebeam's graphical issues guide
    - For additional troubleshooting steps
    - Specific to interface rendering

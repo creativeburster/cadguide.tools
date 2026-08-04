@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.alibre.com/release-history/"
-  - "https://www.alibre.com/version-28-sp3/"
-  - "https://www.alibre.com/version-281/"
 ---
 
 # Alibre Design Assembly Hang on Open, Inventor Import Scale 1/10 Error, Path Pattern Crash, Orphaned Process Autokill, and Sheet Metal Invalid Part Drawing Crash: V28 SP3/SP4 Fixes, Constraint Update, and Crash Recovery
@@ -31,14 +28,12 @@ Opening some assemblies causes Alibre Design to hang indefinitely. The hang occu
 ### Fix
 
 1. **Update to Alibre Design V28 SP3 or later**:
-   - "Fixed an issue causing the software to hang when opening some assemblies"
    - This fix is included in V28 SP3 (launched February 10, 2025)
    - Update to the latest version of Alibre Design
    - Check the release history for the specific fix
 
 2. **Open with Design Explorer disabled**:
    - If the assembly has patterns
-   - "Design Explorer could take a long while if the assembly has patterns in it"
    - Try opening with Design Explorer disabled
    - This can bypass the hang
 
@@ -89,9 +84,6 @@ When importing Autodesk Inventor parts into Alibre Design, some parts come in sc
 ### Fix
 
 1. **Update to Alibre Design V28.1 or later**:
-   - "BugFix: Inventor Import Size and Location"
-   - "Some imported Inventor parts come into Alibre Design scaled by 1/10"
-   - "And assemblies come in with parts in incorrect location"
    - This fix is included in V28.1
 
 2. **Check units before importing**:
@@ -147,7 +139,6 @@ Creating a path pattern in Alibre Design causes the application to crash. The cr
 ### Fix
 
 1. **Update to Alibre Design V28 SP3 or later**:
-   - "Some path patterns might cause a crash"
    - This fix is included in V28 SP3 (launched February 10, 2025)
    - Update to the latest version
    - The fix validates pattern geometry before creating the pattern
@@ -205,7 +196,6 @@ After closing Alibre Design, the application's process remains running in the Wi
 ### Fix
 
 1. **Update to Alibre Design V28 SP3 or later**:
-   - "Now, these orphaned processes are autodetected and killed when Alibre Design starts"
    - This fix is included in V28 SP3 (launched February 10, 2025)
    - The autokill mechanism detects and terminates orphaned processes
    - When Alibre Design starts
@@ -263,8 +253,6 @@ Creating a drawing of a sheet metal part causes Alibre Design to crash. The cras
 ### Fix
 
 1. **Update to Alibre Design V28.1 or later**:
-   - "BugFix: Crash on Invalid Sheet Metal Part"
-   - "Creating a drawing of certain kinds of invalid sheet metal parts could crash the application"
    - This fix is included in V28.1
    - The fix validates sheet metal geometry before drawing creation
 

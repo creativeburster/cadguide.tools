@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.irendernxt.com/forum/topics/bug-splats-in-spacedesign"
-  - "https://forum.irendernxt.com/forum/topics/SpaceDesign++3D+PDF"
-  - "https://renderplus.com/wk/Attributes_and_Reports.htm/"
 ---
 
 # SpaceDesign SketchUp Plugin Report and PDF Errors: Bug Splats on Attribute Window from Version Incompatibility Requiring SketchUp Update, 3D PDF Creation Crash from IFXCOMInitialize Error Requiring Acrobat Reinstall, System Memory Request Failed from Large Model U3D Export Requiring Model Simplification, Win32 API Load Error from 64-Bit Mismatch Requiring Correct Version Install, and SketchUp 2015 Migration Error from Module Name Change Requiring Manual Ruby Fix
@@ -31,19 +28,16 @@ The new SpaceDesign version was built for a newer version of SketchUp than the o
 ### Fix
 
 1. **Update SketchUp to the compatible version**:
-   - "I'm curious if JI28sd was built just for sketchup 8?"
    - Check SpaceDesign's compatibility requirements
    - Update SketchUp to the required version
    - SpaceDesign 2025 supports SketchUp 2021-2025
 
 2. **Reinstall the previous SpaceDesign version**:
-   - "I will reinstall JI20sd if that is the only upgrade"
    - Download the version that worked
    - Uninstall the new version
    - Install the older compatible version
 
 3. **Check version compatibility**:
-   - "SketchUp Compatibility: SketchUp 2025, 2024, 2023, 2022, 2021"
    - Verify your SketchUp version is supported
    - Check the Extension Warehouse for compatibility info
    - Don't install versions for newer SketchUp
@@ -83,7 +77,6 @@ The IFXCOMInitialize error (0x80000003) indicates that the 3D PDF component cann
 ### Fix
 
 1. **Reinstall Adobe Acrobat Pro**:
-   - "I have Adobe Acrobat Pro X"
    - Uninstall Acrobat completely
    - Reinstall the latest version
    - Ensure 64-bit Acrobat if using 64-bit SketchUp
@@ -102,7 +95,6 @@ The IFXCOMInitialize error (0x80000003) indicates that the 3D PDF component cann
 
 4. **Run SketchUp as Administrator**:
    - Right-click SketchUp shortcut
-   - "Run as Administrator"
    - This gives SpaceDesign permission to access COM
    - Test if the PDF creation works
 
@@ -205,7 +197,6 @@ The error occurs because the SpaceDesign version being used is a 32-bit build, b
 ### Fix
 
 1. **Install the 64-bit SpaceDesign version**:
-   - "I have 64bit installed"
    - Download the 64-bit version of SpaceDesign
    - Don't use the 32-bit version with 64-bit SketchUp
    - Check the download page for 64-bit option
@@ -257,7 +248,6 @@ After upgrading from SketchUp 8 to SketchUp 2015 and installing the new version 
 ### Fix
 
 1. **Manually fix the module name**:
-   - "Replacing MD_RPS_Ruby with MD_SpaceDesign_Ruby allowed me to load and use the plugin"
    - Open the SpaceDesign Ruby files in a text editor
    - Find references to `MD_RPS_Ruby`
    - Replace with `MD_SpaceDesign_Ruby`

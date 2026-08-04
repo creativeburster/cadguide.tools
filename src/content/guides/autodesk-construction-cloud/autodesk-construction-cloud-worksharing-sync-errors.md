@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/revit-architecture-forum/revit-2026-4-unable-to-sync-workshared-model-quot-your-model-has/td-p/13986866"
-  - "https://forums.autodesk.com/t5/revit-cloud-worksharing-forum/revit-2025-quot-operation-could-not-be-completed-quot-error/td-p/14041627"
-  - "https://forums.autodesk.com/t5/revit-cloud-worksharing-forum/unable-to-synch-in-revit-2024/td-p/14089386"
 ---
 
 # Autodesk Construction Cloud Worksharing Sync Errors: Model Restored to Previous Version, Orphaned Workset Locks Blocking Sync, Operation Could Not Be Completed Element Ownership Loss, Duplicated Materials Freezing Sync, and Single-User-Only Sync Bottleneck

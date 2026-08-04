@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://help.browzwear.com/en/articles/13065219-release-notes-2021-2-1"
-  - "https://help.browzwear.com/en/articles/13066191-lightning-bolt-or-shattered-glass-displays"
-  - "https://help.browzwear.com/en/articles/13065188-release-notes-vstitcher-2023-3-1"
 ---
 
 # Browzwear VStitcher Crashes and Simulation Errors: Trim Stitched to Pattern Crash, Extra-Large Size Simulation Crash, Lightning Bolt Display from Graphics Card Settings, DXF Import Without Grading or Distorted Grading, and Save Outfit Crash with API Plugin Failure

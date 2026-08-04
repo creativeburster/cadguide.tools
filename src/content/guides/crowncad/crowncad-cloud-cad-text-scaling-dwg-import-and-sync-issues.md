@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://cloud.tencent.com/developer/news/1037628"
-  - "https://www.crowncad.com/english/guide/navigation.html"
-  - "https://sde.vn/en/cad-collaboration-real-time-collaborative-design-on-crowncad/"
 ---
 
 # CrownCAD Cloud CAD Text Scaling, DWG Import, and Sync Issues: Text Cannot Scale or Stretch Without Exploding to Curves, Sketch Zoom Limitation Prevents Text Enlargement, DWG Insert into Sketch from 2026 R2, Engineering Drawing Template Date Format Errors, and Internet Disconnection Auto-Save Recovery

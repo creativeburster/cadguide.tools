@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://forum.kicad.info/t/altium-importer-importing-to-non-existent-layer/62895"
-  - "https://forum.kicad.info/t/creating-project-from-existing-altium-files/58571"
-  - "https://forum.kicad.info/t/strange-behaviour-when-importing-pcb-from-altium/65917"
 ---
 
 # KiCad Altium Importer and PCB Design Workflow Errors: Altium Importer Assigns Tracks to Non-Existent In8.Cu Layer from Missing Power Plane Mapping Requiring Manual kicad_pcb Edit, Schematic PCB Link Lost After Separate Import Requiring Update PCB from Schematic with Re-link Footprints, Silkscreen Text Size and Position Wrong from Importer Requiring Manual Correction, Zero-Sized TH Pads Created for SMD Pads Causing Plane Voids Requiring Python Script Cleanup, and Missing Footprint Library Linkage Causing DRC Warnings Requiring Export to Library
@@ -31,42 +28,25 @@ Altium distinguishes between signal layers and power plane layers. KiCad doesn't
 ### Fix
 
 1. **Check layer assignment in the import dialog**:
-   - "I reimported the Altium file using the automatic layer assignment dialog"
-   - "I carefully checked the layer assignment that the importer picked"
-   - "It was missing a copper layer called Pwr2"
-   - "Missing was In4.Cu which it couldn't find a match for but obviously should have been Pwr2"
    - Always verify all layers are mapped before completing import
 
 2. **Edit the .kicad_pcb file directly**:
-   - "I pulled the .kicad_pcb file into a text editor"
-   - "In8.Cu is not listed as one of the layers at the beginning of the file"
-   - "When I search for it, it appears 355 times"
-   - "I did a global find and replace changing the In8.Cu fields to In4.Cu"
-   - "I opened the file by launching the pcb editor from the manager and everything is there"
    - Back up the file before editing
    - Use a text editor with find-and-replace
 
 3. **Identify which Altium layer maps to the missing KiCad layer**:
-   - "I can see Pwr2 in my Altium Reader software, but it doesn't appear in the list of Altium layers that KiCad found"
-   - "It found the other 7 copper layers and matched those just fine"
    - Use Altium Reader or Altium Designer to identify all layers
    - Map missing layers manually in the import dialog
 
 4. **File a bug report**:
-   - "Definitely report this as a bug. You can create an issue on Gitlab quickly via KiCad > Help > Report a bug"
-   - "If you mark the issue as confidential, only the core dev team will be able to see it"
    - Provide both the Altium source and KiCad converted files
    - This helps improve the importer
 
 5. **Use nightly builds for improved layer mapping**:
-   - "In the nightly KiCad you can select which Altium layers you want to put to which KiCad layer"
-   - "This is the corresponding feature request which was implemented, but only for KiCad nightly, not 8.0.x"
    - Use nightly builds for better layer assignment control
    - Check if the feature is in the stable release
 
 6. **Verify all zones after import**:
-   - "When I launch Zone Manager there are zones in In.8"
-   - "These zones don't appear anywhere when I cycle through the layers"
    - Check Zone Manager for zones on non-existent layers
    - Reassign zones to correct layers
 
@@ -87,38 +67,27 @@ KiCad imports the Altium schematic and PCB as separate operations, not as a proj
 ### Fix
 
 1. **Use Update PCB from Schematic with Re-link**:
-   - "The normal method is to use Update PCB from Schematic [F8] with the option: Re-link footprints to schematic symbols based on their reference designators"
    - Open the schematic editor
    - Press F8 (or Tools > Update PCB from Schematic)
    - Check "Re-link footprints to schematic symbols based on their reference designators"
    - Click Update PCB
 
 2. **Import schematic and PCB separately, then link**:
-   - "You import the schematic and the PCB separately, and not the 'project'"
-   - "As a result, KiCad loses the connection between schematic symbols and footprints on the PCB"
    - After importing both, use the Re-link option
    - This re-establishes the symbol-footprint connection
 
 3. **Set grid to mil before import**:
-   - "The grid was set to metric in the schematic editor, and that does not work in KiCad"
-   - "So I set the grid to mill, and those grid warnings went away"
    - Altium designs often use mil grid
    - Set KiCad grid to mil before importing
 
 4. **Align elements to grid after import**:
-   - "I attempted to fix the grid issue by selecting everything and executing Align Elements to grid"
-   - "That did not work this time"
    - Set grid to mil first, then align elements
    - This fixes most grid warnings
 
 5. **Run multiple rounds of Update PCB/Schematic**:
-   - "I did a few rounds of Update PCB from Schematic [F8] and Update Schematic from PCB"
-   - "Also exported the footprints to Library_2.pretty, updated the schematic with those links"
-   - "And exported the symbols to Library_2.pretty/Library_2.kicad_sym"
    - Multiple rounds may be needed to resolve all links
 
 6. **Start from scratch for complex designs**:
-   - "I think tomorrow, I'll start from scratch, because there's still over 4-500 warnings and maybe 50-60 errors left in DRC"
    - For complex Altium designs with many custom components
    - It may be faster to recreate the design in KiCad
    - Use the Altium design as reference only
@@ -140,38 +109,27 @@ The Altium importer doesn't correctly convert Altium text properties to KiCad te
 ### Fix
 
 1. **Manually correct text size and position**:
-   - "The text size, position and layering issue is still present"
-   - "Not only is the text too large (approx double size) but it is in the wrong position"
    - Select each text element
    - Edit properties: reduce size by ~50%, reposition
 
 2. **Use Arial font instead of KiCad Font**:
-   - "Text imported as 'KiCad Font' has this issue, the text in Arial seems fine"
    - In Altium, use Arial font for silkscreen text
    - This avoids the KiCad Font conversion bug
    - If already imported, change font to Arial in KiCad
 
 3. **Check and fix layer assignment**:
-   - "KiCad is merging some silk screen info from the bottom layer into the top"
    - Select text that should be on the bottom silkscreen
    - Change layer to B.SilkS (or B.Silkscreen)
    - Verify all silkscreen text is on the correct layer
 
 4. **Use nightly builds for improved import**:
-   - "Some things have recently changed with Altium import, yes"
-   - "It's a fairly new feature, but in its original version did not support as many things as it does today"
    - Nightly builds may have improved text import
    - Check if the fix is in the latest stable release
 
 5. **Report the bug with test project**:
-   - "The two problems you mentioned are not ones that the team is currently aware of"
-   - "It would be helpful if you could report a bug with the Altium file attached"
-   - "You can mark it as confidential if needed"
    - Create a minimal test project that reproduces the issue
 
 6. **Replace imported text with native KiCad text**:
-   - "If this was my project, my next step would be to replace most of the symbols and footprints with native KiCad parts"
-   - "That would fix most of the font and silkscreen issues"
    - Delete imported silkscreen text
    - Re-create with KiCad's native text tools
 
@@ -192,9 +150,6 @@ The Altium importer creates a 0mm through-hole pad for each SMD pad during conve
 ### Fix
 
 1. **Delete zero-sized TH pads with Python script**:
-   - "When importing the project from Altium, KiCad created a 0mm TH pad for each SMD pad"
-   - "I deleted all the TH 0mm pads with a Python script directly from the layout file"
-   - "And the problem was solved"
    - Write a Python script to parse the .kicad_pcb file
    - Remove all pads with drill size 0 and type through-hole
 
@@ -210,7 +165,6 @@ The Altium importer creates a 0mm through-hole pad for each SMD pad during conve
    ```
 
 3. **Check for "Invalid zero-sized pad pinned to 1um"**:
-   - "The problem seems to be related to multiple 'Invalid zero-sized pad pinned to 1um' created by the importer tool"
    - Check the DRC messages for this warning
    - These are the problematic zero-sized pads
    - Delete them from the file
@@ -222,14 +176,10 @@ The Altium importer creates a 0mm through-hole pad for each SMD pad during conve
    - The voids around SMD pads should disappear
 
 5. **Use KiCad 9.0+ for improved import**:
-   - "Bug fixes to the Altium importer are very frequent"
-   - "Application: KiCad x64 on x64, Version: 9.0.7-rc1"
    - Update to the latest KiCad version
    - The zero-sized pad bug may be fixed
 
 6. **Report the bug**:
-   - "Always provide your exact KiCad version and OS"
-   - "Bug fixes to the Altium importer are very frequent"
    - Report with the Altium source file
    - Mark as confidential if needed
 
@@ -250,13 +200,10 @@ The Altium importer creates footprints in the PCB but doesn't properly link them
 ### Fix
 
 1. **Export footprints to a library**:
-   - "Exported the footprints to Library_2.pretty"
-   - "Updated the schematic with those links"
    - In the PCB editor: File > Export > Footprints to Library
    - Create a new library for the imported footprints
 
 2. **Export symbols to a library**:
-   - "Exported the symbols to Library_2.pretty/Library_2.kicad_sym"
    - In the schematic editor: File > Export > Symbols to Library
    - Create a new symbol library
 
@@ -267,27 +214,18 @@ The Altium importer creates footprints in the PCB but doesn't properly link them
    - Ensure all symbols point to the new library
 
 4. **Replace imported parts with native KiCad parts**:
-   - "If this was my project, my next step would be to replace most of the symbols and footprints with native KiCad parts"
-   - "That would fix most of the font and silkscreen issues"
-   - "The project has to be checked anyway"
    - Replace custom parts with KiCad's built-in library equivalents
 
 5. **Accept remaining warnings after verification**:
-   - "I also noticed a bunch of issues related to text and overlapping silkscreen"
-   - "KiCad is a bit annoying in that regard"
    - After replacing parts and fixing silkscreen
    - Remaining warnings may be acceptable
    - Verify each warning is not a real design issue
 
 6. **Start from scratch for complex designs**:
-   - "I am close to giving up on this, and start from scratch"
-   - "There's still over 4-500 warnings and maybe 50-60 errors left in DRC"
-   - "I am feeling that I am losing control over all the changes"
    - For complex designs, recreating in KiCad may be faster
    - Use the Altium design as a reference
 
 7. **Use Altium consultant for critical projects**:
-   - "Honestly, at one low point, I thought of putting the job out to an Altium consultant"
    - For time-critical projects with complex Altium imports
    - Consider hiring a consultant with Altium + KiCad experience
    - This may be more cost-effective than struggling with import issues

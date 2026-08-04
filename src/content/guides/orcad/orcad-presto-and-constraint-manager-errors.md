@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://community.cadence.com/cadence_technology_forums/orcadx/f/orcad-x-presto-pcb/65107/using-presto-every-day-is-a-real-struggle-with-all-the-bugs-and-crashes-etc-anyone-else-using-it-100-of-the-time-is-the-other-pcb-editor-as-buggy"
-  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/47184/constraint-manager-rules-are-reset-emptied-when-design-sync-pcb-schematic-is-performed-in-17-4-s012"
-  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/48373/error-when-editing-constaints-in-allegro-17-4-cmavp-2"
 ---
 
 # OrCAD Presto and Constraint Manager Errors: Presto PCB Editor Daily Crashes and Sync Failures Requiring Close and Reopen Workaround, Constraint Manager Rules Reset When Design Sync PCB to Schematic in 17.4 S012 Requiring DCF Export Import, CMAVP-2 Error When Editing Constraints from Version Migration Corruption Requiring DB Check and ECS Disable, Unable to Modify or Delete Nested Net Group in Constraint Manager from Old Version Bug Requiring 17.4 Hotfix, and CSV Import Only Populates Single Worksheet Requiring TCFX Technology File for Multi-Worksheet Import
@@ -31,31 +28,25 @@ Using Presto PCB Editor daily is a struggle with bugs and crashes. Schematic-to-
 ### Fix
 
 1. **Close and reopen both tools before sync**:
-   - "Shutting the pcb and schematic tools fixes whatever issue I had"
    - Close both Capture and Presto
    - Reopen both tools
    - Then attempt the sync
 
 2. **Use the old PCB editor for sync**:
-   - "I've given up on synching with Presto. I'm just using the old pcb tool for synching now"
    - Use OrCAD PCB Editor (not Presto) for sync
    - The old tool is more stable for sync operations
    - Use Presto for layout editing only
 
 3. **Use netlist instead of sync**:
-   - "Instead of sync I create netlists the old way and then invoke the PCB editor"
    - Export netlist from Capture
    - Import netlist in PCB Editor
    - This is more reliable than direct sync
 
 4. **Update to 25.1**:
-   - "25.1 has updates both for OrCAD and Allegro"
-   - "We will be sharing what's new soon"
    - Update to the latest version
    - Many sync bugs may be fixed
 
 5. **Install latest hotfix**:
-   - "I'm on 24.1 and now have Hot Fix 6. Even after the update, both tools are still buggy"
    - Install the latest hotfix
    - Even with hotfixes, the close/reopen workaround may be needed
    - Check for newer hotfixes
@@ -83,7 +74,6 @@ The design sync from PCB to schematic in 17.4 S012 has a bug that resets Constra
 ### Fix
 
 1. **Export constraints to DCF before sync**:
-   - "I export the constraints to a dcf file in my Allegro directory"
    - Before performing PCB-to-schematic sync
    - Export constraints: File > Export > Constraints in CM
    - Save as .dcf file
@@ -95,13 +85,11 @@ The design sync from PCB to schematic in 17.4 S012 has a bug that resets Constra
    - Then sync from schematic to PCB
 
 3. **Disable ECS export during netlist**:
-   - "The simple solution I found is to disable the ECS export during netlist"
    - In Capture, configure netlist export
    - Disable ECS (Extended Constraint System) export
    - This prevents constraints from being overwritten
 
 4. **Update to latest hotfix**:
-   - "Last hotfix for 17.2 is S083"
    - Check for newer 17.4 hotfixes
    - The bug may be fixed in later hotfixes
    - Download from downloads.cadence.com
@@ -113,7 +101,6 @@ The design sync from PCB to schematic in 17.4 S012 has a bug that resets Constra
    - This avoids the constraint reset
 
 6. **Use belt and suspenders approach**:
-   - "I have found a belt and suspenders approach"
    - Export constraints to DCF regularly
    - Also disable ECS export
    - Both measures together prevent constraint loss
@@ -135,19 +122,16 @@ Allegro .brd originally done in 17.2, moved to 17.4. Engineer made changes that 
 ### Fix
 
 1. **Run database check**:
-   - "Try run a database check on the design to see if anything shows up"
    - In Allegro: Tools > Database Check
    - Check for corruption
    - Fix any errors found
 
 2. **Check in 17.2 first**:
-   - "Go back to the prior design in 17.2 and do a DB Check there"
    - Open the original 17.2 design
    - Run database check in 17.2
    - Then open in 17.4
 
 3. **Disable ECS export during netlist**:
-   - "The simple solution I found is to disable the ECS export during netlist"
    - In Capture, disable ECS export
    - This prevents constraints from being changed during netlist import
    - The Physical Cset won't be reset to default
@@ -159,14 +143,11 @@ Allegro .brd originally done in 17.2, moved to 17.4. Engineer made changes that 
    - Then edit the constraints
 
 5. **Check Physical Cset assignments**:
-   - "The Physical Cset had changed with the new netin"
    - Check which Cset is assigned to the affected nets
    - It may have changed to "Default"
    - Reassign the correct Cset
 
 6. **Verify schematic properties**:
-   - "Netin is seeing something derived from the schematic"
-   - "Perhaps a diff-pair or critical net got assigned a property in the schematic"
    - Check schematic properties for constraint-related assignments
    - Remove any unintended properties
 
@@ -187,19 +168,14 @@ In OrCAD 17.2 Professional, a net group is nested within another net group in th
 ### Fix
 
 1. **Update to 17.4 with ISR#32 or later**:
-   - "It got fixed later on with 17.4 near about ISR#32 or 33"
-   - "I'd recommend you to try this with some latest hotfix of the tool"
    - Update to 17.4 with ISR#32 or later
    - This is the primary fix
 
 2. **Download latest version**:
-   - "17.2 is quite old version and you are using its base release"
-   - "You can download any of the latest releases either 22.1 or 23.1 from downloads.cadence.com"
    - Download 22.1 or 23.1
    - These versions have the fix
 
 3. **Last hotfix for 17.2**:
-   - "Last hotfix for 17.2 is S083"
    - If staying on 17.2, install S083
    - This is the last hotfix for 17.2
    - The fix may or may not be included
@@ -239,8 +215,6 @@ The CSV import in Constraint Manager only supports a single worksheet per file. 
 ### Fix
 
 1. **Use TCFX technology file**:
-   - "Did you try exporting and importing the constraints via technology file (.tcfx)"
-   - "It will allow you to export all the constraints at once and you can import the same into CM"
    - Export: File > Export > Technology File (.tcfx)
    - Import: File > Import > Technology File (.tcfx)
 

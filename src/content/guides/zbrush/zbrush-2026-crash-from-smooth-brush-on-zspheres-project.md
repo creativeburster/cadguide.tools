@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://support.maxon.net/hc/en-us/articles/26688543507100-ZBrush-2026-1-2-Release-Notes-March-17-2026"
-  - "https://support.maxon.net/hc/en-us/articles/7945200949404-Why-is-Zbrush-is-Frequently-Crashing"
-  - "https://support.maxon.net/hc/en-us/articles/15780513877788-ZBrush-2026-2-0-Release-Notes-April-15-2026"
 ---
 
 # ZBrush 2026 Crash from Smooth Brush on ZSpheres Project, Second Light Adjustment with Redshift Materials Causing Crash, Retopo Brush Crash from Welding Points at Symmetry Line, Applying Dynamic Subdivision Causes Crash, and GoZ for Autodesk Max and Maya 2027 Version Compatibility: 2026.1.2 Update, Light Adjustment Fix, Retopo Brush Update, Dynamic Subdivision Patch, and GoZ 2027 Support
@@ -31,9 +28,6 @@ ZBrush crashes when the smooth brush is used in a project with ZSpheres. The cra
 ### Fix
 
 1. **Update to ZBrush 2026.1.2**:
-   - "Crash if the smooth brush"
-   - "Is used in a project"
-   - "With ZSpheres"
    - Update to 2026.1.2
 
 2. **Avoid smooth brush on ZSpheres**:
@@ -89,9 +83,6 @@ ZBrush crashes when adjusting a second light with Redshift materials applied. Th
 ### Fix
 
 1. **Update to ZBrush 2026.1.2**:
-   - "Second Light adjustment"
-   - "With Redshift materials"
-   - "Causing crash"
    - Update to 2026.1.2
 
 2. **Adjust lights before applying Redshift materials**:
@@ -147,9 +138,6 @@ The retopo brush crashes when welding points near the symmetry line. The crash o
 ### Fix
 
 1. **Update to ZBrush 2026.1.2**:
-   - "Retopo brush – some occasions"
-   - "A crash would occur"
-   - "When welding points"
    - Update to 2026.1.2
 
 2. **Avoid welding at symmetry line**:
@@ -165,9 +153,6 @@ The retopo brush crashes when welding points near the symmetry line. The crash o
    - Symmetry line
 
 4. **Check for isolated points**:
-   - "Deleting edge at"
-   - "Symmetry line would leave"
-   - "Some isolated points"
    - Check points
 
 5. **Clean up isolated points manually**:
@@ -177,14 +162,9 @@ The retopo brush crashes when welding points near the symmetry line. The crash o
    - Deletion
 
 6. **Check faces near symmetry line**:
-   - "Occasionally will create"
-   - "Faces within accurate points"
-   - "When close to symmetry line"
    - Check faces
 
 7. **Deleting retopo Subtool mesh crash**:
-   - "Deleting a retopo Subtool"
-   - "Mesh may cause ZBrush to crash"
    - Save before
    - Deleting
 
@@ -205,8 +185,6 @@ Applying Dynamic Subdivision to a model causes ZBrush to crash. The crash occurs
 ### Fix
 
 1. **Update to ZBrush 2026.2.1**:
-   - "Applying Dynamic"
-   - "Subdivision causes crash"
    - Update to 2026.2.1
 
 2. **Check geometry before applying**:
@@ -262,8 +240,6 @@ GoZ doesn't work with Autodesk Max and Maya 2027 versions. The GoZ transfer betw
 ### Fix
 
 1. **Update to ZBrush 2026.2**:
-   - "GoZ for Autodesk Max"
-   - "And Maya 2027 versions"
    - Update to 2026.2
 
 2. **Configure GoZ for 2027 versions**:

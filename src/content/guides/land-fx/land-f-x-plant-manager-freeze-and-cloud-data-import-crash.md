@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.landfx.com/community/plant-manager-freezes-autocad-2021.html"
-  - "https://www.landfx.com/kb/planting-issues/adding/4358-import-crash"
-  - "https://www.landfx.com/kb/planting-issues/errors.html"
 ---
 
 # Land F/X Plant Manager Freeze and Cloud Data Import Crash: Plant Manager Freezes AutoCAD from Firewall Blocking Cloud Data Endpoint, Black Screen Lockup from NVIDIA Display Driver Conflict, Cloud Data Import Crash from Security Software Blocking landfx.com, Unhandled Exception in dcl-slideview-load ARX from Corrupted Block Files, and No Function Definition LOOKUP from September 2025 Update Bug
@@ -77,13 +74,11 @@ NVIDIA display driver conflict with Land F/X's plant block rendering. When Land 
    - The fix involves multiple steps, not just a driver update
 
 2. **Try different NVIDIA driver versions**:
-   - "It may take some experimentation with different driver versions"
    - The latest driver isn't always the best — try older versions
    - Try Studio drivers instead of Game Ready drivers (or vice versa)
    - NVIDIA's driver quality varies between versions
 
 3. **Three distinct steps in the KB**:
-   - "It is not a single correction — there are two other distinct steps mentioned beyond replacing the video driver"
    - Follow all steps in the KB article, not just the driver update
    - Each step addresses a different aspect of the conflict
 
@@ -96,7 +91,6 @@ NVIDIA display driver conflict with Land F/X's plant block rendering. When Land 
 5. **Submit a tech support ticket**:
    - If the KB steps don't resolve the issue
    - Land F/X can have a technician assist
-   - "We have had this happen multiple times and have followed the steps each time. It does not help. Mostly it resolves itself after a day or so."
 
 ### Community Report
 

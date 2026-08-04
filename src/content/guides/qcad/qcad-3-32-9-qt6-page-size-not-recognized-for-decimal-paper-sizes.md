@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://qcad.org/en/changelog"
-  - "http://forum.qcad.org/t/qcad-will-not-save-paper-size/11680"
-  - "http://forum.qcad.org/t/opening-a-layout-crashes-qcad/11767"
 ---
 
 # QCAD 3.32.9 Qt6 Page Size Not Recognized for Decimal Paper Sizes, Crash with Invalid Image of Size 0 from Layout Opening, SVG Export Very Slow with Nested Blocks Qt6, Property Editor Crash with Long Update Delays Qt6, and Print PDF Export Fails When Crop Marks Enabled macOS: Qt5 Fallback, Image Reference Cleanup, Block Flattening, Update Delay Fix, and Crop Marks Disable
@@ -31,15 +28,9 @@ In QCAD 3.32.9 Qt6, the paper size is not recognized for page sizes with decimal
 ### Fix
 
 1. **Use Qt5 version of QCAD**:
-   - "I just installed version 3.32.9"
-   - "(qcad-3.32.9-pro-win64-installer)"
-   - "Using the QT5 windows download"
-   - "And all is working better"
    - Use Qt5 version
 
 2. **Delete configuration file**:
-   - "I also deleted the configuration file"
-   - "And started fresh"
    - Delete .ini config
    - And restart
 
@@ -56,14 +47,9 @@ In QCAD 3.32.9 Qt6, the paper size is not recognized for page sizes with decimal
    - Paper size
 
 5. **Use Qt5 installer for paper size issues**:
-   - "The 3.32.6 version"
-   - "That works properly"
-   - "In regard to paper size"
-   - "Does not appear to be QT6"
    - Use Qt5 installer
 
 6. **Report Qt6 page size issues**:
-   - "Bug report at: FS#2726"
    - Report Qt6 issues
    - To QCAD developers
    - For fixing
@@ -91,26 +77,17 @@ When opening a layout in a DXF/DWG file, QCAD crashes. The file contains drawing
 ### Fix
 
 1. **Remove corrupted image references**:
-   - "Delete the selected and corrupted"
-   - "Image reference and all should be OK"
    - Delete corrupted
    - Image references
 
 2. **Box-select around origin in Block**:
-   - "Box-select around the origin"
-   - "In that Block"
-   - "That would select 1 image entity"
    - Box-select at origin
 
 3. **Use Selection Filter**:
-   - "Found in Block with the"
-   - "Selection Filter (Image filename contains)"
    - Use Selection Filter
    - To find corrupted images
 
 4. **Keep images in drawing directory**:
-   - "It is wise to keep all images"
-   - "In the drawing directory"
    - Keep images
    - In same directory
 
@@ -121,14 +98,10 @@ When opening a layout in a DXF/DWG file, QCAD crashes. The file contains drawing
    - Before opening
 
 6. **Fix NaN width and height**:
-   - "Width and Height factor"
-   - "Equal to NaN"
    - Fix NaN values
    - To valid numbers
 
 7. **Remove all images from blocks**:
-   - "For each Block (Including Model-Space)"
-   - "Box-select around the origin"
    - Remove all corrupted
    - Image entities
 
@@ -167,15 +140,11 @@ SVG export is very slow when the drawing contains nested blocks. The issue occur
    - Nesting
 
 4. **Use Advanced SVG Export**:
-   - "File > Advanced SVG Export"
    - Try Advanced SVG Export
    - As alternative
    - To standard export
 
 5. **Check for scaled viewports**:
-   - "FS#2706 - Scaled viewports"
-   - "Fail to inversely scale"
-   - "Linetype patterns"
    - Check viewport settings
 
 6. **Update to latest QCAD version**:
@@ -265,8 +234,6 @@ File > Print / PDF Export fails when crop marks are enabled on macOS (M1/M2/M3).
 ### Fix
 
 1. **Disable crop marks**:
-   - "Fails when crop marks"
-   - "Are enabled"
    - Disable crop marks
    - For print/PDF export
 
@@ -295,8 +262,6 @@ File > Print / PDF Export fails when crop marks are enabled on macOS (M1/M2/M3).
    - With crop marks
 
 6. **Check paper size in print dialog**:
-   - "FS#2400 - Print / PDF Export"
-   - "Page size always A4"
    - Check paper size
    - In print dialog
 

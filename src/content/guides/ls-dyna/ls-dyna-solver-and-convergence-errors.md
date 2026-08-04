@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://lsdyna.ansys.com/when-the-constraint-contact-is-used-the-calculation-crashes-during-the-forming-analysis-what-needs-to-be-done-to-prevent-this/"
-  - "https://lsdyna.ansys.com/convergence/"
-  - "https://groups.google.com/g/ls-dyna2/c/zHJ5X9jWo5o"
 ---
 
 # LS-DYNA Solver and Convergence Errors: Constraint Contact Crash from Double-Sided Constraint Requiring Penalty Contact on One Side, Nonlinear Solver Failed to Find Equilibrium from Implicit Analysis Requiring Explicit Alternative, Out of Range Residual from Instability Requiring Timestep Reduction and ISNAN Diagnosis, Negative Eigenvalues MF2 Initialization Error from Material Model Requiring Solver or Material Change, and Convergence Problems from Penetrations and Contact Requiring Model Checking and IGNORE Parameter
@@ -31,7 +28,6 @@ Using constraint contact in a forming analysis. The calculation crashes during t
 ### Fix
 
 1. **Use penalty contact on one side**:
-   - "It is suggested that, at least for one side of the blank, the commonly used penalty contact is used"
    - Keep constraint contact on one side (e.g., the punch side)
    - Use penalty contact on the other side (e.g., the die side)
    - This avoids the double-sided constraint conflict
@@ -71,43 +67,30 @@ Running an implicit analysis with CNRBs at both ends of a box. Applied rotation 
 ### Fix
 
 1. **Use *BOUNDARY_PRESCRIBED_MOTION_RIGID instead**:
-   - "This can be applied to the rigid body (CNRB) directly"
-   - "Works in explicit analysis"
    - Replace *BOUNDARY_PRESCRIBED_MOTION_NODE with _RIGID
    - This applies motion to the rigid body, not individual nodes
 
 2. **Use *LOAD_BODY_GENERALIZED**:
-   - "Can specify angular velocity/acceleration"
-   - "Works well with explicit analysis"
-   - "More stable than direct rotation prescription"
    - Apply angular velocity instead of prescribed motion
 
 3. **Use *LOAD_NODE_POINT**:
-   - "Apply moments directly to create rotation"
-   - "May need to carefully control the loading rate"
    - Apply moments instead of prescribed displacement
    - This may converge better in implicit
 
 4. **Use *DEFINE_CURVE and *LOAD_RIGID_BODY**:
-   - "Define the rotation curve"
-   - "Apply it to the rigid body"
    - This is an alternative to prescribed motion
    - May work better with implicit solver
 
 5. **Switch to explicit analysis**:
-   - "I want to use explicit analysis, is there another way?"
    - If implicit convergence fails consistently
    - Switch to explicit analysis
    - Use mass scaling to speed up quasi-static analysis
 
 6. **Use *DATABASE_BNDOUT for reaction moments**:
-   - "Do you have the *Database_BNDOUT?"
-   - "That's the card you would need to be able to pull moment"
    - Add *DATABASE_BNDOUT to output boundary forces and moments
    - This works with both implicit and explicit
 
 7. **Use CONSTRAINED_EXTRA_NODE instead of CNRB**:
-   - "CONSTRAINED_EXTRA_NODE needs to be used instead of CNRB"
    - For extracting reaction moments
    - *BOUNDARY_PRESCRIBED_MOTION_RIGID outputs moment in binout
    - But *BOUNDARY_PRESCRIBED_MOTION_NODE does not
@@ -129,55 +112,46 @@ Running a time history analysis using implicit FE code. After some seconds of ap
 ### Fix
 
 1. **Use the latest version of LS-DYNA**:
-   - "Use the latest version of LS-DYNA"
    - Newer versions have improved numerical stability
    - Check for updates
    - Bug fixes may address the issue
 
 2. **Reduce the timestep scale factor**:
-   - "Reduce the timestep scale factor"
    - Set DT2MS on *CONTROL_TIMESTEP to a smaller value
    - This makes the solver take smaller steps
    - More stable but slower
 
 3. **Set ISNAN=1 in *CONTROL_SOLUTION**:
-   - "Set ISNAN=1 in *CONTROL_SOLUTION to identify node IDs where out-of-range forces first appear"
    - This diagnostic flag identifies the problematic nodes
    - Check the nodes for constraint or contact issues
    - Fix the root cause at those nodes
 
 4. **Try hourglass type 4 with coefficient 0.05**:
-   - "Try hourglass type 4 with a coefficient of 0.05"
    - Set QH=4 on *HOURGLASS
    - Set QM=0.05
    - This controls hourglass energy modes
 
 5. **Avoid type 2 solids**:
-   - "Avoid type 2 solids"
    - Use ELFORM=1 (constant stress) or ELFORM=-1 for solids
    - Type 2 (full integrated) can be less stable
    - Check element formulation on *SECTION_SOLID
 
 6. **Set bucket sort cycles to zero**:
-   - "Set the number of cycles between bucket sorts to zero"
    - Set BSCT=0 on *CONTACT
    - This forces bucket sorting every cycle
    - More accurate contact detection
 
 7. **Eliminate loads and contacts one by one**:
-   - "Eliminate loads and/or contacts, one by one, to identify the trigger"
    - Remove contacts and rerun
    - Add them back one at a time
    - Identify which contact causes the instability
 
 8. **Reduce the loading rate**:
-   - "Try reducing the loading rate"
    - Slow down the ground motion application
    - Use a longer analysis time
    - This helps the implicit solver converge
 
 9. **Write plot states frequently**:
-   - "Write plot states frequently"
    - Set DT on *DATABASE_BINARY_D3PLOT to a small value
    - This captures the state before the crash
    - Helps diagnose the issue
@@ -199,25 +173,20 @@ Running quasi-static cyclic load on RC column with implicit dynamics. Error: "Wa
 ### Fix
 
 1. **Use a different solver**:
-   - "You might consider using a different solver"
    - Change LSOLVR on *CONTROL_IMPLICIT_SOLVER
    - Try LSOLVR=1 (direct sparse) or LSOLVR=4 (BCS)
    - The MF2 solver may not handle the matrix condition
 
 2. **Check MAT024 stress-strain curve conversion**:
-   - "I suggest converting your *mat_003 data (eg. etan=1000) to a simple *mat_024 data"
-   - "Please check for a correct conversion from etan to two point stress-strain input"
    - Verify the stress-strain curve is correctly defined
    - Check for negative slopes or discontinuities
 
 3. **Use MAT Plastic Kinematics (MAT003)**:
-   - "When I run the same model with MAT Plastic Kinematics, I managed to get a Normal Termination"
    - If MAT024 causes issues, try MAT003
    - MAT003 is simpler and more stable
    - May be sufficient for the analysis
 
 4. **Deactivate material failure**:
-   - "Material damage/failure defined by *MAT_ADD_{EROSION/DAMAGE_...} keywords can be deactivated globally by setting MAEF=1 on *CONTROL_MAT"
    - If failure criteria are active, deactivate them
    - Element erosion can cause convergence problems
    - Get a working model without failure first
@@ -229,7 +198,6 @@ Running quasi-static cyclic load on RC column with implicit dynamics. Error: "Wa
    - This prevents negative tangent stiffness
 
 6. **Use implicit to explicit switching**:
-   - "Automatically switching from implicit to explicit analysis"
    - Use *CONTROL_IMPLICIT_AUTO to switch
    - When implicit fails, switch to explicit
    - This can handle material failure better
@@ -251,40 +219,23 @@ Implicit analysis has convergence problems. The relative displacement norm is "j
 ### Fix
 
 1. **Set NLPRINT=3 on *CONTROL_IMPLICIT_SOLUTION**:
-   - "It is recommended to set NLPRINT=3 on *CONTROL_IMPLICIT_SOLUTION"
-   - "In order to obtain detailed information on the progress of the convergence"
    - Check d3hsp and mes* files
    - Monitor displacement norm, energy norm, and force residual
 
 2. **Use Model Checking in LS-PrePost**:
-   - "Use the built-in tools of your preprocessor"
-   - "In LS-PrePost, from the main menu bar select Application"
-   - "Go to Model Checking and then General Checking"
    - Check for penetrations before submitting
 
 3. **Set IGNORE=-2 for single-surface contact**:
-   - "If much bigger penetrations than expected are reported"
-   - "One possible remedy could be to set IGNORE=-2"
-   - "In case the contact is of single-surface type"
    - This ignores initial penetrations
 
 4. **Set PENMAX for tetrahedral elements**:
-   - "If tetrahedral elements are involved"
-   - "Try specifying a reasonably small contact search depth"
-   - "By the PENMAX variable on Optional Card B"
    - This limits the contact search distance
 
 5. **Check initial penetration report**:
-   - "It is good practice to check this initial report"
-   - "To confirm that penetrations reported are in line with expectations"
    - Compare with preprocessor checks
    - Fix unexpected penetrations
 
 6. **Adjust convergence tolerances**:
-   - "DCTOL is the displacement relative convergence tolerance"
-   - "ECTOL is the energy relative convergence tolerance"
-   - "RCTOL is the residual force relative tolerance"
-   - "Convergence is detected if all criteria are met"
    - Adjust tolerances on *CONTROL_IMPLICIT_SOLUTION
 
 7. **Use line search**:
@@ -294,9 +245,6 @@ Implicit analysis has convergence problems. The relative displacement norm is "j
    - This helps the solver find the equilibrium path
 
 8. **Deactivate failure criteria initially**:
-   - "It may be wise to first obtain a working model without failure"
-   - "And once this is established try if also material failure is feasible"
-   - "Element erosion can lead to severe convergence problems"
    - Add failure after the model works
 
 ### Community Report

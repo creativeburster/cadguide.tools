@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://support.lumion.com/knowledge-base/rendering-questions"
-  - "https://support.lumion.com/knowledge-base/lumion-2025.2-release-notes"
-  - "https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/586679/frequent-crash-lumion-2024-when-render-with-ray-tr/"
 ---
 
 # Lumion Ray Tracing Artifacts Blotches and Crash Errors: Ray Trace Rendering Produces Artifacts Blotches Patchy Renders from Insufficient Samples Requiring Sample Increase and Denoiser Configuration, NVIDIA Driver 577.00 Causes Frequent Crash with Ray Tracing Requiring Driver Rollback, 3D Grass Appears Very Reflective with Ray Tracing Requiring 2025.2 Update, Ocean Reflectivity Too High with Fully Ray-Traced Glass and Water Requiring 2025.2 Update, and Moving Blotches in Dark Areas from Insufficient Bounces Requiring Radiance Caching
@@ -31,20 +28,15 @@ Ray tracing uses stochastic sampling to simulate light bounces. With insufficien
 ### Fix
 
 1. **Increase render samples**:
-   - "Why do you get artifacts, blotches or patchy looking renders with Ray Tracing?"
    - In Render settings, increase the number of samples
    - More samples = less noise but longer render time
    - Try 4x or 8x the default sample count
 
 2. **Enable and configure the denoiser**:
-   - "The introduction of the real-time denoiser, NRD, for build, photo, and movie modes"
-   - "This tool reduces the noise in previews when ray tracing is enabled"
    - Enable NRD (NVIDIA Real-Time Denoiser) in render settings
    - NRD requires fewer samples for clean results
 
 3. **Use NRD instead of OIDN**:
-   - "NRD also significantly reduced the time it takes to render ray-traced videos compared to OIDN"
-   - "Since NRD requires fewer samples, you can now create movies of comparable quality — up to five times faster"
    - Switch from OIDN to NRD denoiser
    - NRD is more efficient and produces cleaner results
 
@@ -55,20 +47,14 @@ Ray tracing uses stochastic sampling to simulate light bounces. With insufficien
    - This reduces the contrast that makes blotches visible
 
 5. **Use Radiance Caching (Lumion 2025+)**:
-   - "The implementation of Radiance Caching for real-time Ray Tracing"
-   - "Cached radiance values help smooth out noise in global illumination, leading to cleaner images"
-   - "In previous versions, similar conditions would often produce noticeable moving blotches"
-   - "With Radiance Cache, these artifacts are significantly reduced"
    - Update to Lumion 2025 or later
 
 6. **Increase ray bounces**:
    - More bounces = more accurate indirect lighting
    - But also more noise per bounce
    - Balance bounces with sample count
-   - "Even with just one bounce, the effect gradually accumulates, resulting in a stable and consistent render over time"
 
 7. **Use AI Upscaler for final output**:
-   - "How does the AI Upscaler work in Lumion?"
    - Render at lower resolution with more samples
    - Use AI Upscaler to upscale to final resolution
    - This gives cleaner results than rendering at full resolution with fewer samples
@@ -90,13 +76,10 @@ NVIDIA driver version 577.00 introduced a compatibility issue with Lumion 2024's
 ### Fix
 
 1. **Roll back NVIDIA driver**:
-   - "Everything was okay until the driver version 577.00"
-   - "Now it frequently crashes if render with RT on"
    - Uninstall driver 577.00 using DDU (Display Driver Uninstaller)
    - Install the previous working driver version (576.x or earlier)
 
 2. **Use Studio Driver instead of Game Ready**:
-   - "I use the studio driver"
    - If using Game Ready driver, switch to Studio Driver
    - Studio Drivers are more stable for professional applications
    - Download from NVIDIA's Studio Driver page
@@ -148,7 +131,6 @@ The 3D Grass material's reflectivity is not properly handled by the ray tracing 
 ### Fix
 
 1. **Update to Lumion 2025.2**:
-   - "3D Grass: Fixed a problem that could cause 3D Grass to look very reflective when using Ray Tracing"
    - This is a confirmed fix in the 2025.2 release
    - Download and install Lumion 2025.2
    - The grass should render correctly after update
@@ -166,7 +148,6 @@ The 3D Grass material's reflectivity is not properly handled by the ray tracing 
    - Switch to ray tracing only for non-grass scenes
 
 4. **Replace 3D Grass with Landscape Grass**:
-   - "Landscape Grass: Blending of the grass and Landscape have been improved in both rasterization and Ray Tracing pipelines"
    - Use Landscape Grass instead of 3D Grass
    - Landscape Grass may not have the reflectivity bug
    - This is a workaround until update
@@ -194,8 +175,6 @@ The Fully Ray-Traced Water feature overestimates the reflectivity of the ocean s
 ### Fix
 
 1. **Update to Lumion 2025.2**:
-   - "Raytracing Effect: Reduced the Reflectivity of the Ocean when using Fully Ray-Traced Glass and Water"
-   - "Fully Ray-Traced Water: Water colors are now rendered correctly when Fully Ray-Traced Water is enabled"
    - Install Lumion 2025.2 for both fixes
    - The ocean should render with correct reflectivity and color
 
@@ -224,7 +203,6 @@ The Fully Ray-Traced Water feature overestimates the reflectivity of the ocean s
    - Use ray tracing only for interior or non-water scenes
 
 6. **Fix dark shading near horizon**:
-   - "Raytracing Effect: Fixed the dark shading near the horizon edge of the Ocean"
    - If you see dark shading at the horizon
    - Update to 2025.2
    - This is a separate but related ocean rendering fix
@@ -246,23 +224,15 @@ Without Radiance Caching, dark areas require many samples and bounces to produce
 ### Fix
 
 1. **Enable Radiance Caching (Lumion 2025+)**:
-   - "The implementation of Radiance Caching for real-time Ray Tracing"
-   - "With Radiance Cache, these artifacts are significantly reduced, leading to smoother and more refined lighting results"
-   - "In previous versions, similar conditions would often produce noticeable moving blotches"
    - Update to Lumion 2025 or later
    - Enable Radiance Caching in ray tracing settings
 
-2. **Understand how Radiance Caching works**:
-   - "Cached radiance values help smooth out noise in global illumination, leading to cleaner images"
-   - "It allows for early termination of ray paths, reducing the number of shading operations and texture loads"
-   - "It enhances indirect lighting accuracy without requiring excessive ray bounces"
-   - "Even with just one bounce, the effect gradually accumulates, resulting in a stable and consistent render over time"
+2. **Understand how Radiance Caching works**.
 
 3. **Increase samples for animations**:
    - For animations, each frame needs sufficient samples
    - Use higher sample count than for still images
    - NRD denoiser helps with animation noise
-   - "NRD requires fewer samples, so you can create movies of comparable quality up to five times faster"
 
 4. **Add fill lights in dark areas**:
    - Add area lights or point lights in dark corners
@@ -272,7 +242,6 @@ Without Radiance Caching, dark areas require many samples and bounces to produce
 
 5. **Use more bounces with Radiance Caching**:
    - With Radiance Caching, more bounces are feasible
-   - "Better Global Illumination: It enhances indirect lighting accuracy"
    - Try 2-3 bounces with Radiance Caching enabled
    - The cache makes additional bounces affordable
 

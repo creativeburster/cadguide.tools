@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb000006dfRWKAY/excessive-pivot-ratio-fatal-error-9137"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000aYjNnKAK/sol-103-response-dynamics-simulation-gets-stuck-at-certain-frequency"
-  - "https://www.eng-tips.com/threads/nastran-limitation-configuration.506947/"
 ---
 
 # MSC Nastran Fatal 9137 Pivot Ratio and Solver Errors: Excessive Pivot Ratios in Matrix KLL from Rigid Body Motion Requiring SOL 103 Diagnosis, SOL 103 Response Dynamics Stuck at Frequency from Disk Space and MUMPS Solver, Fatal 4291 EQD4S Singular J-Matrix from Orthotropic Material Missing Shear Moduli, No Results Found in SOL 101 from BAILOUT and AUTOMPC Misuse, and Unable to Allocate Open Core from Memory Configuration on Linux
@@ -42,7 +39,6 @@ The stiffness matrix is ill-conditioned — either from a rigid body motion (mec
    - This is the most reliable diagnostic method
    - Look for modes with frequency near 0 Hz — these are rigid body modes
    - The mode shape animation shows exactly which part is unconstrained
-   - "The most reliable method is to run a modal/eigenvalue analysis (SOL 103), this will solve the model and identify the rigid body motion immediately associated to a frequency value of near to 0 Hz"
 
 2. **Check the .f06 file for DIAGONAL RATIO values**:
    - Look for nodes with DIAGONAL RATIO of 1E15 or higher
@@ -63,13 +59,10 @@ The stiffness matrix is ill-conditioned — either from a rigid body motion (mec
    - These create singular stiffness matrix entries
 
 5. **Check mesh connectivity**:
-   - "Your mesh doesn't seem connected near this cylinder"
    - Use node merging to connect coincident nodes
    - Verify that contact/glue regions are properly defined
 
 6. **Do NOT use BAILOUT=-1 as a permanent fix**:
-   - "PARAM,BAILOUT,-1 is very dangerous because you get the linear static solution, yes, but it is not an effective method to identify the error"
-   - "I have found users setting BAILOUT by default in all of their linear static analysis — what an error!!"
    - BAILOUT is for debugging only, not for production runs
 
 ### Community Report
@@ -93,7 +86,6 @@ Two potential causes:
 ### Fix
 
 1. **Check disk space**:
-   - "There was not enough disk space, and the solver filled the available memory while solving"
    - Free up disk space on the scratch directory drive
    - Ensure at least 2-3x the model size in free disk space
 
@@ -109,7 +101,6 @@ Two potential causes:
    - Open a support case with Siemens if MUMPS continues to fail
 
 4. **Use RDMODES**:
-   - "RDMODES will reduce solving time"
    - RDMODES is a residual flexibility approach that can speed up Response Dynamics
    - Check the Nastran documentation for RDMODES usage
 
@@ -154,7 +145,6 @@ The MAT8 orthotropic material card requires three shear moduli (G12, G1Z, G2Z). 
 
 1. **Enter all three shear moduli**:
    - MAT8 requires G12, G1Z, and G2Z
-   - "I tried to put all 3 shear modulus and run the analysis, apparently the solution work"
    - If test data is not available for G1Z and G2Z, use G12 as an approximation
 
 2. **Use PARAM, SHELLTVSMATTYPE**:
@@ -196,7 +186,6 @@ The solver produced fatal 9137 (excessive pivot ratios) but the user didn't chec
 ### Fix
 
 1. **Check the .f06 file for fatal errors**:
-   - "Check your .f06 file for Fatal error messages"
    - The .f06 file contains all solver messages
    - Look for "USER FATAL MESSAGE" entries
    - The .log file does not contain useful troubleshooting information
@@ -204,7 +193,6 @@ The solver produced fatal 9137 (excessive pivot ratios) but the user didn't chec
 2. **Understand BAILOUT=-1**:
    - `PARAM,BAILOUT,-1` forces Nastran to continue despite mechanisms
    - **For debugging only** — never for production results
-   - "Param Bailout should never be used to obtain a solution. It's only for debug purposes and should be used with caution."
    - Results obtained with BAILOUT are potentially invalid
 
 3. **Understand AUTOMPC=YES**:
@@ -214,12 +202,10 @@ The solver produced fatal 9137 (excessive pivot ratios) but the user didn't chec
    - Use temporarily to get past the error, then fix the root cause
 
 4. **Run SOL 103 to diagnose**:
-   - "Run a SOL 103 to see what's 'flying' — ie not attached properly"
    - 0 Hz modes show exactly which parts are unconstrained
    - Fix the constraints based on the mode shape
 
 5. **Include FEM and SIM files when seeking help**:
-   - "Your rar file only includes the SIM file. You would also need to supply the FEM file."
    - Without both files, others can't examine the model
    - Always include .fem, .sim, and .f06 files
 
@@ -252,7 +238,6 @@ The default memory allocation is half the installed RAM (mem=max in the rc file)
    - Use the `top` command on Linux to see which processes are resident
    - Check how much memory is currently allocated
    - Kill any zombie processes consuming memory
-   - "Either there is a hardware problem with the memory, or one or more processes were consuming more than half the installed RAM"
 
 2. **Specify memory explicitly**:
    - Use `mem=` on the command line instead of mem=max
@@ -260,12 +245,10 @@ The default memory allocation is half the installed RAM (mem=max in the rc file)
    - Allocate less than half the installed RAM to leave room for the OS
 
 3. **Remove unnecessary INIT and ASSIGN statements**:
-   - "You might be better off removing them and using the default allocations for scratch files"
    - The default scratch file allocation is usually sufficient
    - Custom INIT/ASSIGN statements can cause memory issues
 
 4. **Reboot if needed**:
-   - "If all else fails, reboot the computer to kill off any zombie'd processes"
    - Zombie processes can hold large amounts of memory
    - A reboot clears all process memory
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://www.mathworks.com/matlabcentral/answers/2179463-simulink-model-simulation-huge-time-differences-between-simulation-arrangements"
-  - "https://www.mathworks.com/matlabcentral/answers/2182884-simulink-simulation-becomes-very-slow-after-adding-foc-to-a-6-phase-pmsm-drive-with-chb-inverter"
-  - "https://www.mathworks.com/matlabcentral/answers/2177379-wrong-norm-result-in-generated-c-code-for-matlab-function-block-simulink-r2024b"
 ---
 
 # MATLAB Simulink Simulation Performance and Code Generation Errors: Huge Time Differences Between Programmatic and GUI Simulation from Referenced Model Solver Settings Left Unchanged, Simulation Becomes Very Slow After Adding FOC from 100kHz Global Step Rate Forcing All Blocks Requiring Multirate Design, Treat Each Discrete Rate as Separate Task Auto-Generates Rate Transition Causing Signal Delay Requiring Multitasking Understanding, Wrong Norm Result in Generated C Code from Accelerator Mode Code Generation Bug, and R2024b Code Generation Assertion Failed from Variant Subsystem Expression Compile Requiring Technical Support
@@ -31,8 +28,6 @@ When using model referencing (the model is referenced inside a test bench), the 
 ### Fix
 
 1. **Check referenced model solver settings**:
-   - "I was changing the simulation properties of the test bench, while the properties of the so called 'referenced model', just a few pixels down the menu, were left unchanged"
-   - "These happened to be the 'wrong' ones, with fixed-step and automatically chosen solver"
    - Right-click the Model Reference block > Model Parameters
    - Set the solver to match the top model
 
@@ -78,31 +73,22 @@ Simulating a 6-phase PMSM drive with CHB inverter in Simulink R2025b. Without FO
 ### Fix
 
 1. **Use multirate design**:
-   - "The fix is a proper multirate design: run your current loops at 10-20 kHz and your speed loop at 1-2 kHz"
-   - "They do not need to be coupled to your switching frequency"
    - Set different sample times for different blocks
    - Use Rate Transition blocks between different rates
 
 2. **Switch to variable-step solver**:
-   - "If you are just doing desktop simulation and not targeting code generation, swap ode14x for ode23t or ode15s"
-   - "They are variable-step and will handle your mixed fast/slow dynamics far more efficiently"
    - Configuration Parameters > Solver > Variable-step
    - Use ode23t (trapezoidal) or ode15s (stiff)
 
 3. **Use Rapid Accelerator mode**:
-   - "If you are running in Normal mode, just switching to Rapid Accelerator alone can give you a 10x speedup with zero changes to your model"
    - Simulation > Mode > Rapid Accelerator
    - This compiles the model for faster execution
    - No model changes required
 
 4. **Use local solver for Simscape networks**:
-   - "If your inverter and PMSM are built in Simscape, assign a local solver like Backward Euler directly to that physical network"
-   - "So the stiff electrical portion is isolated and not dragging the whole model down"
    - Configuration Parameters > Solver > Local Solver for physical networks
 
 5. **Run Performance Advisor**:
-   - "Run Performance Advisor from the Debug tab before touching anything else"
-   - "MathWorks has documented cases where it alone produced close to 96% reduction in simulation time"
    - Debug tab > Performance Advisor
    - Follow the advisor's recommendations
 
@@ -129,13 +115,10 @@ Preparing a Simulink discrete model for autocoding. Enabling "Treat each discret
 ### Fix
 
 1. **Understand multitasking execution**:
-   - "When you enable 'Treat each discrete rate as a separate task', Simulink switches from single-tasking to multitasking execution"
-   - "Each unique discrete sample time is now run in its own task"
    - Rate transitions are necessary for data integrity
    - The delay is a consequence of multitasking safety
 
 2. **Use "Whenever possible" for rate transition**:
-   - "I've only achieved is to reduce the delay to 1s (changing the configuration parameter from 'whenever posible' to 'never')"
    - Configuration Parameters > Solver > Rate Transition for:
    - Set to "Whenever possible, for deterministic results"
    - This minimizes delays while maintaining safety
@@ -159,7 +142,6 @@ Preparing a Simulink discrete model for autocoding. Enabling "Treat each discret
    - This prevents unexpected rate transitions
 
 6. **Test in R2025 or later**:
-   - "I'm working in 2018a. I've not checked if this still happens in the 2025 version"
    - Newer MATLAB versions may handle this better
    - Test with the latest version
    - The behavior may have been improved
@@ -193,7 +175,6 @@ This is a code generation bug in R2024b. The MATLAB Function block's code genera
    - The explicit calculation generates correct C code
 
 3. **Report to MathWorks technical support**:
-   - "This is a code generation bug in R2024b"
    - Contact MathWorks Support with:
      - MATLAB version: R2024b (24.2.0.2863752 Update 5)
      - The MATLAB Function block code
@@ -234,14 +215,9 @@ This is an internal MathWorks code generation bug in R2024b. The CGIR (Code Gene
 
 ### Fix
 
-1. **Contact MathWorks technical support**:
-   - "It is highly unlikely that anyone in this forum is going to be able to help you with this"
-   - "May I suggest that you contact technical support"
-   - "Start at Contact Support - MATLAB & Simulink"
-   - "Click on Product Usage and take it from there"
+1. **Contact MathWorks technical support**.
 
 2. **Use R2024a as workaround**:
-   - "With the R2024a version, my Simulink model was generating code"
    - Keep R2024a installed alongside R2024b
    - Use R2024a for code generation until the fix is available
    - Both versions can coexist
@@ -265,7 +241,6 @@ This is an internal MathWorks code generation bug in R2024b. The CGIR (Code Gene
    - The fix may be in Update 6 or later
 
 6. **Report with reproduction steps**:
-   - "Please report this to MathWorks if you can cause it to recur"
    - Provide the minimal model that reproduces the issue
    - Include the variant subsystem configuration
    - Include the exact error message

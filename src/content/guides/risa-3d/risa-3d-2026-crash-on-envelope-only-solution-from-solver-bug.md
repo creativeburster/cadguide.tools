@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://risa.com/hubfs/Release%20Notes/Release_Notes_3D_v19.pdf?hsLang=en"
-  - "https://help.risa.com/risahelp/risa3d/Content/Warning-Log.htm"
-  - "https://blog.risa.com/post/the-ultimate-guide-to-instability-warnings-in-risa-3d"
 ---
 
 # RISA-3D 2026 Crash on Envelope Only Solution from Solver Bug, P-Delta Divergence Error from Node and Load Combination Misidentification, Instability from Member End Releases at Boundary Conditions, Tension-Only Members Causing Instability from Stiffness Matrix Removal, and Model File Corruption from Custom Shapes: Envelope Solution Update, P-Delta Error Fix, End Release Adjustment, Tension-Only Bracing Review, and Custom Shape Validation
@@ -31,9 +28,6 @@ The program closes unexpectedly when solving for an Envelope Only solution. The 
 ### Fix
 
 1. **Update to latest RISA-3D version**:
-   - "Corrected an issue that caused"
-   - "The program to close unexpectedly"
-   - "When solving for an Envelope Only solution"
    - Update RISA-3D
 
 2. **Solve single load combinations first**:
@@ -43,7 +37,6 @@ The program closes unexpectedly when solving for an Envelope Only solution. The 
    - Solution
 
 3. **Solve Batch + Envelope instead**:
-   - "Solving a batch + envelope solution"
    - Try Batch + Envelope
    - Instead of Envelope
    - Only
@@ -55,9 +48,6 @@ The program closes unexpectedly when solving for an Envelope Only solution. The 
    - Envelope solution
 
 5. **Avoid moving loads with Envelope**:
-   - "Solving a batch + envelope solution"
-   - "With moving loads would cause"
-   - "The model to close unexpectedly"
    - Avoid moving loads
 
 6. **Save model before solving**:
@@ -89,9 +79,6 @@ A P-Delta divergence error message appears during solution. The error message do
 ### Fix
 
 1. **Update to latest RISA-3D version**:
-   - "Fixed the P-Delta divergence error message"
-   - "Which was occasionally not properly"
-   - "Specifying node and load combination"
    - Update RISA-3D
 
 2. **Check for model instability**:
@@ -113,20 +100,14 @@ A P-Delta divergence error message appears during solution. The error message do
    - Find the problem
 
 5. **Check for member instabilities**:
-   - "Locked instabilities"
    - Check for
    - Locked nodes
    - In the model
 
 6. **Review Warning Log**:
-   - "The Warning Log Spreadsheet"
-   - "Provides you with a record"
-   - "Of any warnings or errors"
    - Check Warning Log
 
 7. **Contact RISA support with model**:
-   - "Contact RISA Support"
-   - "And send your model"
    - If issue persists
    - After update
 
@@ -147,10 +128,6 @@ Instability warnings appear at the base of columns or ends of beams. The warning
 ### Fix
 
 1. **Check for moment releases at boundary conditions**:
-   - "Look for members where"
-   - "Moment releases are applied"
-   - "Directly at nodes with"
-   - "Pinned or fixed boundary conditions"
    - Check releases
 
 2. **Remove redundant end releases**:
@@ -166,15 +143,9 @@ Instability warnings appear at the base of columns or ends of beams. The warning
    - Output
 
 4. **Check for locked instabilities**:
-   - "A joint instability which"
-   - "Has been automatically LOCKED"
-   - "By the program"
    - Check locked joints
 
 5. **Uncheck Lock isolated rotational instabilities**:
-   - "Uncheck the Lock isolated"
-   - "ROTATIONAL instabilities"
-   - "Without notification box"
    - Uncheck option
 
 6. **Add rotational restraint**:
@@ -206,9 +177,6 @@ Instability warnings occur when using diagonal braces or ties in lateral systems
 ### Fix
 
 1. **Check if tension-only members are sole load path**:
-   - "Check if braces or other"
-   - "Tension-only members are the only"
-   - "Load path for stabilizing"
    - Check load path
 
 2. **Add redundant load paths**:
@@ -230,8 +198,6 @@ Instability warnings occur when using diagonal braces or ties in lateral systems
    - Stability
 
 5. **Add lateral restraints**:
-   - "Add temporary lateral restraints"
-   - "Or diaphragm constraints"
    - To stabilize
    - The model
 
@@ -242,10 +208,6 @@ Instability warnings occur when using diagonal braces or ties in lateral systems
    - Not just some
 
 7. **Perform global stability check**:
-   - "Perform a global stability check"
-   - "Add temporary lateral restraints"
-   - "To see if the model"
-   - "Becomes stable"
    - Global check
 
 ### Community Report
@@ -265,15 +227,9 @@ A model file becomes corrupt when custom shapes are added. Custom shapes with ce
 ### Fix
 
 1. **Update to latest RISA-3D version**:
-   - "Resolved an issue causing"
-   - "A model file to become corrupt"
-   - "When custom shapes are added"
    - Update RISA-3D
 
 2. **Avoid numeric-starting shape names**:
-   - "Custom shapes with certain"
-   - "Name formats (e.g. names starting"
-   - "With numeric values)"
    - Avoid numeric names
 
 3. **Use alphanumeric shape names**:

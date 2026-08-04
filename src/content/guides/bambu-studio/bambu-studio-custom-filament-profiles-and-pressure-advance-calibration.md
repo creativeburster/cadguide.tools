@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://forum.bambulab.com/t/added-second-x1c-and-all-profiles-pa-start-crashing/83651"
-  - "https://forum.bambulab.com/t/factor-k-pressure-advance-slicers-and-g-code/154298"
-  - "https://github.com/bambulab/BambuStudio/issues/8196"
 ---
 
 # Bambu Studio Custom Filament Profiles and Pressure Advance Calibration Errors: Custom Profiles Disappearing After Adding Second Printer from AMS Sync Conflict, Pressure Advance Always Default 0.20 from Calibration Data Not Syncing Without Manage Result Trigger, PA Values All Messed Up After One Calibration from Custom Name Not Surviving Power Cycle, Automatic PA Calibration Produces Incorrect K Values on A1 vs P2S from Different Extruder Motor Types, and Flow Dynamics Calibration Overrides All Filament Profile and Device Tab K Values
@@ -35,13 +32,11 @@ Bambu Studio stores calibration information in the printer/AMS (or Bambu cloud) 
 ### Fix
 
 1. **Use OrcaSlicer as an alternative**:
-   - "OrcaSlicer is a fork of Bambu Studio. It contains a superset of functions."
    - OrcaSlicer's filament preset editor can enable pressure advance and store a K value
    - Bambu Studio's editor cannot do this directly
    - Both slicers can coexist on the same machine
 
 2. **Delete configuration folder and set up from scratch**:
-   - "I deleted all content of the configuration folder and set Bambu Studio up from scratch"
    - This sometimes fixes the automatic PA value selection
    - Access via Help menu > Configuration Folder
    - Warning: this removes all presets and settings
@@ -53,12 +48,10 @@ Bambu Studio stores calibration information in the printer/AMS (or Bambu cloud) 
    - But also prevents cloud-based preset sharing
 
 4. **Back up local profiles**:
-   - "Both Studio and OrcaSlicer store their User Profiles locally. As local files, they can be backed up."
    - Regularly back up the configuration folder
    - Restore from backup when profiles disappear
 
 5. **Do NOT downgrade firmware**:
-   - "Bambu has put a lock on firmware, you cannot downgrade"
    - Some users report being able to downgrade via Handy app
    - But this may not work for all firmware versions
    - Wait for Bambu to fix the issue in a future update
@@ -85,14 +78,10 @@ Bambu Studio's synchronization of calibration data from the printer to the softw
 ### Fix
 
 1. **Open Calibration > Manage Result to trigger sync**:
-   - "I can open BS, immediately go to device and manage result and then the device tab shows the pressure advance"
    - This forces Bambu Studio to sync calibration data from the printer
    - Must be done every time Bambu Studio is opened
-   - "Until I do that, every single time I open BS, even if it was closed 1 minute prior, it doesn't show the PA"
 
 2. **Delete configuration folder and reinstall**:
-   - "I deleted all content of the configuration folder and set Bambu Studio up from scratch"
-   - "It now automatically selects the corresponding PA Value"
    - This is a nuclear option but has worked for some users
    - Back up any important presets first
 
@@ -103,15 +92,11 @@ Bambu Studio's synchronization of calibration data from the printer to the softw
    - Disable Flow Dynamics Calibration to use stored K values
 
 4. **Ensure printers are in online mode**:
-   - "Three other printers working online synchronize instantly"
    - Printers in local mode may not sync properly
-   - "These printers synchronize flow calibration data approximately 3-5 minutes after being turned on"
    - Online mode enables instant sync
 
 5. **Wait for the fix**:
-   - "Our R&D team has already identified this issue, and it will be fixed"
    - The fix was released but some users report it regressed
-   - "It worked for exactly 2 days. Now it again does not swap to the saved values"
 
 6. **Use OrcaSlicer to force PA from filament settings**:
    - OrcaSlicer allows enabling pressure advance in filament properties
@@ -135,31 +120,25 @@ Custom calibration profiles with custom names (not the original filament name) d
 ### Fix
 
 1. **Save calibration with the original filament name**:
-   - "If I store a calibration with the original name (eg. 'Bambu PLA Basic'), it will be there after a power cycle"
-   - "But if I call it anything else (eg. 'PLA Basic black'), it will not"
    - Use the exact original name when saving calibration results
 
 2. **Manually re-select profiles after power on**:
-   - "Every time after I power on, I need to go over each filament in each AMS and correct it"
    - The profile is still there, just not selected
    - Use the touch screen or Bambu Studio to re-select
    - This is tedious but works
 
 3. **Use Bambu Handy app**:
-   - "I'm pretty sure I could do this correction in Bambu Handy a couple versions ago"
    - Recent versions may have removed this capability
    - Check if the current Handy app version supports profile selection
 
 4. **Keep printer powered on**:
    - If the printer stays powered on, calibration profiles persist
    - Sleep mode may also preserve profiles
-   - "If the printers go into sleep mode after printing, the procedure must be repeated"
    - Full power off is what causes the loss
 
 5. **Use OrcaSlicer for persistent K values**:
    - OrcaSlicer stores K values in the filament profile
    - These are local files that don't depend on printer memory
-   - "OrcaSlicer's filament preset editor can enable pressure advance and store a K value"
    - This completely bypasses the printer's calibration storage
 
 6. **Workaround: manual K value in g-code**:
@@ -184,28 +163,23 @@ The A1 and P2S have different extruder motor designs. The A1 uses a different ex
 ### Fix
 
 1. **Use manual calibration instead of automatic**:
-   - "When I run a manual calibration print, I usually end up choosing values around 0.035-0.04"
    - Manual calibration is more accurate for the A1
    - Print a manual PA calibration pattern
    - Visually inspect the results and choose the best K value
 
 2. **Don't compare K values directly between printers**:
-   - "The values of PA shouldn't be compared directly between printers, especially since the extruders are so very different between A1 and the P2's servo based one"
    - Each printer has its own optimal K value
    - The same filament may need different K values on different printers
 
 3. **Understand what affects K value**:
-   - "Pressure advance is mainly influenced by print speed, hotend/nozzle diameter, filament characteristics, and filament moisture content"
    - The extruder motor type also affects how the automatic calibration interprets results
    - Manual calibration accounts for all factors visually
 
 4. **Use default K values as a starting point**:
-   - "Many people eventually gave up and started using default values, saying that the A1's automatic calibration doesn't work properly"
    - Default K=0.02 is a reasonable starting point
    - Fine-tune with manual calibration if needed
 
 5. **Match calibration to print settings**:
-   - "You can match it to the exact motion inputs of your outer walls (speed, accel, jerk)"
    - Manual calibration uses the same motion parameters as actual printing
    - Automatic calibration only measures extrusion output via eddy current sensor
    - This may not capture all motion-related factors
@@ -245,7 +219,6 @@ The printer performs its own flow rate calibration during the printing preparati
    - Printer ignores all stored K values
    - Printer calibrates flow rate during printing preparation
    - Uses the calibrated K value for the print
-   - "Enabling Flow Dynamics Calibration forces printer to ignore both filament profile and stored K values"
 
 3. **Pressure Advance enabled in filament properties (OrcaSlicer)**:
    - G-code contains `; enable_pressure_advance = 1` and `; pressure_advance = <value>`
@@ -279,7 +252,6 @@ The printer performs its own flow rate calibration during the printing preparati
    - Overrides Device Tab but not Flow Dynamics Calibration
 
 5. **Selecting filament on Device Tab still matters**:
-   - "The only purpose of selecting filament on Device tab is to let printer know what Factor K should be used"
    - Also used for safety prompts (min/max nozzle temperature)
    - Required for AMS operation
    - Not just for K value selection

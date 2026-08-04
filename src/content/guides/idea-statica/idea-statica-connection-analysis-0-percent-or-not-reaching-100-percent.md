@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.ideastatica.com/support-center/analysis-convergence"
-  - "https://www.ideastatica.com/support-center/connection-analysis-0-or-doesn-t-reach-100"
-  - "https://www.ideastatica.com/support-center/blog/troubleshooting-idea-statica-connection-models"
 ---
 
 # IDEA StatiCa Connection Analysis 0 Percent or Not Reaching 100 Percent from Singularities, Stop at Limit Strain Halting Analysis at 25 Percent Load, GMNA Hollow Section Instability Break, Bolt Operations Incorrect Plate Selection and Slotted Hole Singularity, and Missing Welds at Gusset Plates Causing Singularity: Singularity Detection, Stop at Limit Strain Disable, GMNA Toggle, Bolt Model Verification, and Weld Addition
@@ -31,46 +28,26 @@ The connection analysis shows 0% or stops at a percentage below 100%. The analys
 ### Fix
 
 1. **Check the deformed shape for singularities**:
-   - "The deformed shape is shown with the items which caused the first singularity"
-   - "Moved 1 m so that singularity may be easily detected"
    - View the deformed shape
    - To identify the singularity source
 
 2. **Check for missing welds or bolts**:
-   - "A user is notified and should check the model"
-   - "For missing welds or bolts"
    - Review all connections
    - For missing welds or bolts
 
 3. **Increase analysis iterations**:
-   - "When the joint model is very complex"
-   - "Raise the values of the Number of analysis iterations"
-   - "From default value 25 to higher (e.g., 50)"
-   - "And the Divergent iterations count from default value 3 to higher (e.g., 5)"
    - Increase iterations in Code setup
 
 4. **Check material properties**:
-   - "If a material property is filled with 0 (zero)"
-   - "Or some non-acceptable value"
-   - "The finite element model can not be calculated"
    - Verify all material properties are valid
 
 5. **Review operation order**:
-   - "Only operations above the current operation"
-   - "Can be used in the current operation"
-   - "The order of operations matters"
    - Verify operation order is correct
 
 6. **Check for excessive deformations**:
-   - "A warning system for excessive deformations"
-   - "Improves the model stability assessment"
-   - "The overall results display a warning"
-   - "When large displacements over 1 m are detected"
    - Check for deformations over 1 m
 
 7. **Use transparent mode to verify welds**:
-   - "The butt weld is represented by a yellow line"
-   - "Visible when the 3D screen is switched to transparent mode"
    - Use transparent mode
    - To verify weld creation
 
@@ -91,15 +68,9 @@ The analysis stops before reaching 100% of the applied loads. The analysis may s
 ### Fix
 
 1. **Disable Stop at Limit Strain**:
-   - "If I uncheck the stop-at-limit strain"
-   - "The software will run 100% of the loads"
-   - "So that you can see the whole picture"
    - Uncheck Stop at Limit Strain in Code setup
 
 2. **Review the utilization ratios**:
-   - "The welds utilization ratio was 99%"
-   - "So the analysis stopped"
-   - "And only 25% of the loads were applied"
    - Review which component triggered the stop
 
 3. **Increase component capacity**:
@@ -109,13 +80,9 @@ The analysis stops before reaching 100% of the applied loads. The analysis may s
    - To allow the analysis to reach 100%
 
 4. **Check if the connection is truly overloaded**:
-   - "If the connection is overloaded"
-   - "The analysis stops before the inputted load effects"
-   - "Are fully applied"
    - Determine if the design needs modification
 
 5. **Use the analysis percentage as diagnostic**:
-   - "The actual percentage of used loads is displayed"
    - Use the percentage
    - To assess how much
    - The connection can carry
@@ -149,40 +116,23 @@ When using HSS (Hollow Structural Section) members as bearing members, the analy
 ### Fix
 
 1. **Disable GMNA in Code setup**:
-   - "By disabling the GMNA in the Code setup"
-   - "The analysis finishes with 100%"
-   - "Revealing the failure of the hollow section"
-   - "And other parts of the connections"
    - Turn off GMNA to complete the analysis
 
 2. **Confirm Stop at Limit Strain is not active**:
-   - "Look at the Code setup"
-   - "And confirm that Stop at limit strain is not active"
    - Disable both GMNA and Stop at Limit Strain
    - For full analysis
 
 3. **Check deformed shape for large deformations**:
-   - "Look at the deformed shape"
-   - "Spot large and unrealistic deformations"
-   - "Review the operations related to the large deformations"
-   - "And fix the modeling issue"
    - Review deformations after disabling GMNA
 
 4. **Fix design issues**:
-   - "Spot the design issue, fix it"
-   - "And re-run it"
    - After identifying the failure
    - Fix the design and re-run
 
 5. **Re-enable GMNA after fixing design**:
-   - "If the design is good"
-   - "Return to the Code setup"
-   - "Activate the GMNA again"
-   - "And ensure the design is OK"
    - Re-enable GMNA after fixing
 
 6. **Use GMNA workflow steps**:
-   - "Here are the steps to get the analysis to work when running GMNA:"
    - 1. Confirm Stop at limit strain is not active
    - 2. Check deformed shape for large deformations
    - 3. Fix modeling issues
@@ -212,26 +162,19 @@ Bolt operations fail or create singularities in the connection model. Common iss
 ### Fix
 
 1. **Verify plate selection in bolt operations**:
-   - "Incorrect plate selection in a grid operation"
    - Verify the correct plates
    - Are selected in each bolt operation
    - Especially in grid operations
 
 2. **Check bolt gap**:
-   - "The maximum allowable gap between plates"
    - "Connected by bolts is 1/16""
    - Verify the gap between plates
    - Doesn't exceed 1/16"
 
 3. **Check slotted hole orientation**:
-   - "Slotted hole in the direction of the load"
-   - "The direction of the slot is released"
-   - "That can create a singularity"
-   - "As there is no restraint in that direction"
    - Verify slotted holes don't align with load direction
 
 4. **Check for overlapping openings**:
-   - "Opening in the same position as the bolt"
    - Verify no openings
    - Are placed at the same position
    - As bolts
@@ -243,16 +186,9 @@ Bolt operations fail or create singularities in the connection model. Common iss
    - (e.g., add a utility weld)
 
 6. **Review bolt detailing checks**:
-   - "IDEA StatiCa checks bolt spacing and weld sizes required by AISC"
-   - "Go to the Check tab > Bolt/weld tab results"
-   - "Review the detailing column"
-   - "And find the item failing"
    - Check bolt detailing warnings
 
 7. **Reset Code setup properties**:
-   - "Some options can influence the analysis"
-   - "Within the code setup in the design tab"
-   - "So I always try to reset code setup properties"
    - Reset Code setup if issues persist
 
 ### Community Report
@@ -272,41 +208,25 @@ The connection analysis fails with a singularity warning. The deformed shape sho
 ### Fix
 
 1. **View the deformed shape**:
-   - "Visual results such as the deformed shape"
-   - "Plastic strains, or contact pressure"
-   - "Are often the most helpful for identifying modeling errors"
    - View the deformed shape first
 
 2. **Check stress results**:
-   - "The provided model incorrectly omitted the weld"
-   - "Between the web connection plate and the column flange"
-   - "This is most clearly seen in the stress results"
-   - "Where the plate is shown to be unstressed"
    - Check for unstressed plates
 
 3. **Check deflected shape for gaps**:
-   - "In the deflected shape"
-   - "Where a gap opens between the plate and the column"
    - Look for gaps
    - Between plates and members
 
 4. **Add the missing weld**:
-   - "Adding the weld corrects the error"
    - Add the missing weld operation
    - Between the gusset plate
    - And the connecting member
 
 5. **Verify weld in transparent mode**:
-   - "The butt weld is represented by a yellow line"
-   - "Visible when the 3D screen is switched to transparent mode"
    - Switch to transparent mode
    - To verify the weld is created
 
 6. **Check operation order**:
-   - "Only operations above the current operation"
-   - "Can be used in the current operation"
-   - "When you look at the list of operations in a model"
-   - "You can't add a weld to a plate that is lower in the list"
    - Ensure the plate operation is above the weld
 
 7. **Re-run analysis after adding weld**:

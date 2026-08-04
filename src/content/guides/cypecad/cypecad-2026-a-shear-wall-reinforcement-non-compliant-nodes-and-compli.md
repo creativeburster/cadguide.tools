@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://info.cype.com/en/subject/shear-walls/"
-  - "https://info.cype.com/en/new-features/2026-a-version/"
-  - "https://info.cype.com/en/subject/seismic-analysis-introduction/"
 ---
 
 # CYPECAD 2026.a Shear Wall Reinforcement Non-Compliant Nodes and Compliance Factor, Seismic Modal Spectral Analysis CQC Combination Stress Check, Non-Structural Element Interaction Open Floor Force Amplification, StruBIM Shear Wall Export for Reinforcement Design, and CYPE 3D Nonlinear Analysis with Spectral Modal Seismic Action: Compliance Factor Adjustment, CQC Stress Verification, Amplification Factor Application, BIMserver.center Export, and 2026.a Nonlinear Seismic
@@ -31,47 +28,26 @@ After analyzing shear walls in CYPECAD, the reinforcement display shows non-comp
 ### Fix
 
 1. **Adjust the compliance factor**:
-   - "The compliance of all nodes can be reduced to a certain %"
-   - "Defined in the program options"
-   - "Using what we have called 'compliance factor'"
    - Navigate to General data > By position > Steel types in bars > Options for columns, shear walls, walls and corbels > Compliance factor required by walls and shear walls
 
 2. **Review non-compliant nodes**:
-   - "By clicking on the 'Show additional reinforcement' option"
-   - "The red nodes change colour and can be selected"
-   - "A report will be displayed on the screen"
-   - "Showing the non-reinforcement, the ratio factor of each"
    - Review the additional reinforcement report
 
 3. **Modify reinforcement tables**:
-   - "Shear wall and wall horizontal reinf. tables"
-   - "Shear wall and wall vertical reinf. tables"
-   - "Allows users to check and modify the reinforcement"
    - Add more reinforcement options to the tables
 
 4. **Increase reinforcement sequence**:
-   - "The reinforcement is obtained from sequentially ordered tables"
-   - "The reinforcement is increased until all the nodes are compliant"
    - Add higher reinforcement options
    - To the sequence in the tables
 
 5. **Check for slenderness limit exceeded**:
-   - "The slenderness limits are also checked on shear walls, for each side"
-   - "And a message is displayed if it is exceeded"
    - Check if slenderness limits are exceeded
    - Which may require section modifications
 
 6. **Check dimensional requirements**:
-   - "Dimensional checks of the sides"
-   - "The width of a side is greater than five times its thickness"
-   - "If this is verified, the program displays an informative message"
-   - "And the imposed limits for columns are applied to it"
    - Verify dimensional requirements are met
 
 7. **Use symmetrical reinforcement**:
-   - "If a symmetrical reinforcement on two faces is desired"
-   - "The table must be modified, leaving a single and identical reinforcement"
-   - "In 'Major reinf.' for each sequence defined in 'Minor face reinf.'"
    - Configure symmetrical reinforcement if needed
 
 ### Community Report
@@ -91,16 +67,10 @@ When using modal spectral analysis for seismic action in CYPECAD, only individua
 ### Fix
 
 1. **Update to CYPECAD 2026.a or later**:
-   - "As of version 2026.a"
-   - "This is now also possible for the CQC modal combination"
    - Install CYPECAD 2026.a
    - Which includes CQC stress checking
 
 2. **Check CQC stresses after analysis**:
-   - "Should the modal spectral analysis be selected to consider the effect of earthquake"
-   - "The maximum response of the structure in the seismic load is estimated"
-   - "By combining the results of the modes of vibration"
-   - "By means of the Complete Quadratic Combination (CQC)"
    - Check CQC combination stresses directly
 
 3. **View CQC combination results**:
@@ -110,9 +80,6 @@ When using modal spectral analysis for seismic action in CYPECAD, only individua
    - In the results views
 
 4. **Generate seismic justification report**:
-   - "We can consult the Justification of seismic action report"
-   - "And view the groups of combinations generated"
-   - "And the results of the spectral modal analysis for each of them"
    - Use the justification report for documentation
 
 5. **Verify CQC vs SRSS**:
@@ -150,27 +117,17 @@ Buildings with open floors or floors with less rigid partitions than other floor
 ### Fix
 
 1. **Apply force amplification factors**:
-   - "CYPECAD allows users to introduce the moment and shear amplification factors"
-   - "For columns, beams, walls and shear walls"
-   - "On the desired floors"
    - Navigate to General data > Amplification forces by floor
 
 2. **Select floors with reduced stiffness**:
-   - "Users can select the floors where they wish to apply them"
-   - "Users also can indicate the factors they desire"
    - Select the open floors or floors
    - With less rigid partitions
 
 3. **Use code-specific amplification**:
-   - "If the selected code considers the effect of the reduced stiffness"
-   - "The program will display the corresponding moment and shear amplification factors"
    - Use code-specific factors
    - Such as IS 13920 (India) Soft Storey or CIRSOC 103-2008 (Argentina) Piso débil
 
 4. **Use the Interaction of Structure with Construction Elements module**:
-   - "CYPECAD has a software tool that takes a more accurate look"
-   - "At the influence that the distribution of partitions and external walls has"
-   - "The 'Interaction of the structure with the construction elements' module"
    - Use this module for accurate analysis
 
 5. **Verify column shear capacity**:
@@ -180,14 +137,10 @@ Buildings with open floors or floors with less rigid partitions than other floor
    - Without brittle failure
 
 6. **Consider dynamic analysis**:
-   - "A dynamic analysis of buildings subjected to seismic actions"
-   - "That include the effect of non-structural construction elements"
    - Use the dynamic analysis module
    - For more accurate results
 
 7. **Check code requirements**:
-   - "Some codes require the absence or reduction of stiffness"
-   - "Of the partitions and external walls on certain floors"
    - Check if your code requires
    - Soft-story force amplification
 
@@ -208,38 +161,25 @@ CYPECAD analyzes shear wall forces but doesn't design the reinforcement accordin
 ### Fix
 
 1. **Link to BIMserver.center project**:
-   - "You must link the job to a BIMserver.center project"
-   - "And, after exporting the results from CYPECAD"
    - Link your CYPECAD project
    - To a BIMserver.center project
 
 2. **Export from CYPECAD**:
-   - "After exporting the results from CYPECAD"
    - Export the shear wall forces
    - And geometry to BIMserver.center
    - From CYPECAD
 
 3. **Create StruBIM Shear Walls file**:
-   - "Create a new file in the StruBIM Shear Walls program"
-   - "And link it to the same project"
    - Create a new StruBIM Shear Walls file
    - Linked to the same BIMserver.center project
 
 4. **Import and design in StruBIM**:
-   - "In the StruBIM Shear Walls program"
-   - "You can design and verify reinforcement"
-   - "In accordance with all the requirements of the selected standard"
    - Import the CYPECAD data and design in StruBIM
 
 5. **Use 2026.a elevation drawings**:
-   - "Version 2026.a of StruBIM Shear Walls incorporates tools"
-   - "That can automatically or manually generate drawings with shear wall elevations"
-   - "Designed in StruBIM, making it easier to graphically document designs"
    - Use the new elevation drawing tools
 
 6. **Label shear walls in CYPECAD**:
-   - "All walls with the same label are grouped to form a shear wall"
-   - "Assign to act as shear wall"
    - Properly label and assign shear walls
    - In CYPECAD before export
 
@@ -266,13 +206,9 @@ Before CYPE 2026.a, nonlinear analysis in CYPE 3D couldn't consider seismic acti
 ### Fix
 
 1. **Update to CYPE 2026.a or later**:
-   - "As of version 2026.a, CYPE 3D will include the option"
-   - "Of considering seismic action by means of a spectral modal analysis"
-   - "When launching a non-linear analysis"
    - Install CYPE 2026.a
 
 2. **Define nonlinear combinations with seismic loads**:
-   - "Non-linear combinations (NLC) involving seismic loads can be defined"
    - Create NLCs that include
    - Seismic load cases
    - In CYPE 3D
@@ -284,15 +220,9 @@ Before CYPE 2026.a, nonlinear analysis in CYPE 3D couldn't consider seismic acti
    - Enabled
 
 4. **Check justification of seismic action report**:
-   - "We can consult the Justification of seismic action report"
-   - "And view the groups of combinations generated"
-   - "And the results of the spectral modal analysis for each of them"
    - Review the seismic justification report
 
 5. **Use CYPE 3D modal vibration analysis**:
-   - "As of version 2026.a, CYPE 3D will include a modal vibration analysis module"
-   - "An essential feature for evaluating how a structure responds to dynamic loads"
-   - "Such as wind, traffic or earthquakes"
    - Use the new modal vibration analysis module
 
 6. **Verify nonlinear results**:
@@ -302,7 +232,6 @@ Before CYPE 2026.a, nonlinear analysis in CYPE 3D couldn't consider seismic acti
    - To understand the nonlinear effects
 
 7. **Review CQC stresses in CYPE 3D**:
-   - "Checking CQC stresses for seismic loads in CYPECAD and CYPE 3D"
    - Check the CQC combination stresses
    - In CYPE 3D results
    - For the nonlinear seismic analysis

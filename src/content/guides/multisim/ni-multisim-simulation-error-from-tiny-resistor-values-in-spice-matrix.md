@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019RqVSAU"
-  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P9m0SAC&l=en-US"
-  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000001DbgTSAS&l=en-US"
 ---
 
 # NI Multisim Simulation Error from Tiny Resistor Values in SPICE Matrix, Convergence Failure Requiring Gear Integration Method, Simulation Stops After Few Seconds from Transient Convergence, License Activation Error from Wrong Edition Installer, and Convergence Assistant Unable to Fix Circuit: Resistance Increase, Tolerance Adjustment, Gear Method, Edition Match, and Manual Circuit Debug
@@ -31,31 +28,21 @@ When running a simulation, a pop-up appears: "A simulation error has occurred. W
 ### Fix
 
 1. **Use a different component**:
-   - "Use a different component"
-   - "That provides the same functionality"
    - Replace low-resistance components
    - With alternatives
 
 2. **Increase minimum resistance**:
-   - "Increase the minimum resistance"
-   - "Of the component"
    - Increase resistance values
    - To reduce matrix instability
 
 3. **Add GROUND component**:
-   - "Use the GROUND component"
-   - "To add a clear reference"
-   - "To the circuit"
    - Add proper ground reference
 
 4. **Run Convergence Assistant first**:
-   - "First let the Convergence Assistant"
-   - "Attempt to solve the problem"
    - Run Convergence Assistant
    - Before manual fixes
 
 5. **Check for parallel voltage sources**:
-   - "Parallel voltage sources and inductors"
    - Check for parallel
    - Voltage sources
    - And inductors
@@ -89,46 +76,30 @@ After checking for tiny resistor values and ground references, the simulation st
 ### Fix
 
 1. **Change integration method to Gear**:
-   - "Under the Transient tab"
-   - "Change the Integration method [METHOD] to Gear"
    - Switch from trapezoidal
    - To Gear method
 
 2. **Increase ABSTOL to 1e-6**:
-   - "Increase ABSTOL"
-   - "To no greater than 1e-6"
    - Increase absolute
    - Current tolerance
 
 3. **Increase VNTOL to 1e-3**:
-   - "Increase VNTOL"
-   - "To no greater than 1e-3"
    - Increase absolute
    - Voltage tolerance
 
 4. **Increase RELTOL to 0.01**:
-   - "Increase RELTOL"
-   - "To no greater than 0.01"
    - Increase relative
    - Tolerance
 
 5. **Access analysis options**:
-   - "Select Simulate >> Interactive simulation settings"
-   - "Select the Analysis options tab"
-   - "Click Customize"
    - Access tolerance settings
 
 6. **Check parallel voltage sources**:
-   - "Parallel voltage sources and inductors"
    - Check for parallel
    - Sources and inductors
    - That cause convergence issues
 
 7. **Use Convergence Assistant as first step**:
-   - "First let the Convergence Assistant"
-   - "Attempt to solve the problem"
-   - "If it is not able to fix it"
-   - "Look for the following causes"
    - Try Convergence Assistant first
 
 ### Community Report
@@ -148,34 +119,21 @@ The simulation runs correctly for a few seconds, then stops working. The signal 
 ### Fix
 
 1. **Change integration method to Gear**:
-   - "Go to the Transient options"
-   - "And select Gear as Integration method"
    - Switch to Gear
    - Integration method
 
 2. **Access Interactive Simulation settings**:
-   - "Simulate >> Analyses and simulation"
-   - "Interactive Simulation >> Analysis options"
-   - ">> Customize"
    - Access settings
 
 3. **Save settings after change**:
-   - "Click Ok on the Custom Analysis Options window"
-   - "And click Save on the Analyses and Simulation window"
    - Save settings
    - Before running
 
 4. **Check for convergence popup**:
-   - "Most of the times if the software cannot converge"
-   - "It will display a pop up"
    - Watch for convergence
    - Error popups
 
 5. **Verify signal after simulation**:
-   - "Sometimes, Multisim does not detect"
-   - "The convergence issue"
-   - "So it continues to display"
-   - "The simulated signaled which goes wrong"
    - Verify signal integrity
 
 6. **Adjust tolerances if Gear doesn't fix**:
@@ -207,48 +165,27 @@ After installing Multisim, activation fails with "Invalid serial number" or "Inv
 ### Fix
 
 1. **Install correct Multisim edition**:
-   - "Make sure you installed the Multisim edition"
-   - "That your serial number can activate"
    - Install the correct
    - Edition for your serial
 
 2. **Check edition compatibility**:
-   - "NI Circuit Design Suite Education Edition"
-   - "And Student Edition"
-   - "NI Circuit Design Suite Power Professional"
-   - "Full and Base Editions"
    - Match edition to serial
 
 3. **Verify installed version**:
-   - "Verify your exact installed version"
-   - "In NI License Manager"
-   - "Or in Multisim by going to"
-   - "Help >> About Multisim"
    - Check installed version
 
 4. **Don't add spaces to serial number**:
-   - "Adding spaces to the serial"
-   - "Or activation code"
    - Don't add extra
    - Spaces to the code
 
 5. **Check version compatibility**:
-   - "Confirm you have the right software version"
-   - "For your serial number"
-   - "For example Multisim 14.2"
    - Match version to serial
 
 6. **Use correct installer from NI Package Manager**:
-   - "If you are installing through NI Package Manager"
-   - "The editions are two different product pages"
    - Select the correct
    - Product page
 
 7. **Contact NI Support**:
-   - "If you are still unable to activate"
-   - "After trying the previous steps"
-   - "Contact NI Support"
-   - "For further assistance"
    - Contact NI Support
 
 ### Community Report
@@ -268,8 +205,6 @@ The Convergence Assistant applies automatic fixes for common convergence issues,
 ### Fix
 
 1. **Run Convergence Assistant first**:
-   - "First let the Convergence Assistant"
-   - "Attempt to solve the problem"
    - Always try the
    - Convergence Assistant first
 
@@ -280,26 +215,18 @@ The Convergence Assistant applies automatic fixes for common convergence issues,
    - In the circuit
 
 3. **Adjust tolerances manually**:
-   - "Increase RELTOL to no greater than 0.01"
-   - "Increase VNTOL to no greater than 1e-3"
-   - "Increase ABSTOL to no greater than 1e-6"
    - Adjust tolerances manually
 
 4. **Change to Gear integration method**:
-   - "Under the Transient tab"
-   - "Change the Integration method [METHOD] to Gear"
    - Switch to Gear
    - Integration method
 
 5. **Check component models**:
-   - "I created an adder circuit with LM324AD"
    - Check component models
    - For compatibility issues
    - With the SPICE solver
 
 6. **Add proper ground references**:
-   - "Use the GROUND component"
-   - "To add a clear reference"
    - Add proper ground
    - References to the circuit
 

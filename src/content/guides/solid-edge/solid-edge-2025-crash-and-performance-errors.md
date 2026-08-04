@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000WOQQTKA5/solid-edge-2025-keeps-crashing-every-couple-hours"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000k3x58KAA/se-2025-sp-8-crashing-general-downgrade-in-performance"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000pFybEKAS/solid-edge-2025-update-10-announcement"
 ---
 
 # Solid Edge 2025 Crash and Performance Errors: Random Crashes Every Couple Hours from Outdated BIOS and Drivers Requiring System Update, SP8 Crash and Performance Downgrade from 3DConnexion Driver Conflict Requiring Rollback to SP7, Update 10 Table Edit Crash from Regression PR 11375613 Requiring Rollback or Update 11, Very Slow Performance from Network Links and OneDrive Sync Requiring Configuration Cleanup, and Crash on Open or Create File from User Profile Corruption Requiring Safe Mode and New Profile
@@ -31,44 +28,35 @@ Solid Edge 2025 keeps crashing every couple of hours. No specific trigger — cr
 ### Fix
 
 1. **Update BIOS, firmware, and all drivers**:
-   - "If you have not updated the BIOS, firmware, and drivers, I would suggest doing so"
    - Update BIOS from the motherboard manufacturer
    - Update GPU drivers to the latest version
    - Update chipset drivers
    - Update Windows 11 to the latest build
 
 2. **Empty the temporary folder**:
-   - "Empty your temporary folder (close Solid Edge, hit win+r, type %temp% and press enter, select all and delete)"
-   - "I do this twice a day, at minimum. Solid Edge performs a lot better when this file is empty"
    - Close Solid Edge first
    - Delete all temp files
 
 3. **Update video card drivers**:
-   - "Update your video card drivers to the latest available"
    - Download from NVIDIA or AMD directly
    - Use the Studio driver for NVIDIA
    - Don't use old driver versions
 
 4. **Reset Solid Edge to factory defaults**:
-   - "Try running using the settings and preferences wizard to reset Solid Edge to its factory defaults"
    - Run the Settings and Preferences Wizard
    - Reset to factory defaults
    - Restart Solid Edge
 
 5. **Post system information**:
-   - "Please post your system information with any personal information redacted"
    - Run `SESysInfo.exe`
    - Share the output on the forum
    - Experienced users can spot problems
 
 6. **Set paging file to 2x RAM**:
-   - "Your paging file size is not set to 2 X RAM on all the workstations"
-   - "Increase both the min and max values to 2 X RAM"
    - System Properties > Advanced > Virtual Memory
    - Set custom size to 2x your RAM
 
 7. **Disable third-party add-ins**:
-   - "Temporarily uninstall the third-party Solid Edge add-in"
    - Disable or uninstall add-ins one at a time
    - Test stability without each add-in
    - Identify the culprit
@@ -90,44 +78,31 @@ The 3DConnexion SpaceMouse driver has a conflict with Solid Edge 2025 SP8. The d
 ### Fix
 
 1. **Roll back to Update 7**:
-   - "It's recommended to uninstall Update Patch 08 and roll back to Update patch 07"
-   - "We have had to roll back to update 007 and all is now stable again"
    - Uninstall SP8 from Control Panel
    - Install SP7
 
 2. **Update or disable 3DConnexion driver**:
-   - "There is a newer NVidia graphics driver available, version 573.75"
-   - "You could temporarily disable it in Device Manager"
-   - "Unplugging it might do the same thing"
    - Update to the latest 3DConnexion driver
    - Or temporarily disable the SpaceMouse
 
 3. **Update NVIDIA driver**:
-   - "There is a newer driver available. It is version 573.65"
    - Download the latest NVIDIA driver
    - Use Studio driver for stability
    - Don't use old driver versions
 
 4. **Open a Support Case**:
-   - "It's always much better practice to open a Support Case for each Solid Edge crash incident"
-   - "Please send the crashlogf.txt and crashlogf.dmp to GTAC"
-   - "Confirm that all three files share the same creation date and time"
    - Include steps to reproduce if possible
 
 5. **Reinstall Solid Edge**:
-   - "You could reinstall SE. That way you could move to the last SP that wasn't causing problems"
    - Completely uninstall Solid Edge
    - Install the latest stable SP
    - Don't install SP8 if it causes issues
 
 6. **Disable printer TSRs**:
-   - "You should temporarily disable any printer TSRs that are running"
-   - "Some of the crashlogs show a KONICA MINOLTA printer driver running"
    - Close printer applications in the System Tray
    - Test stability without printer drivers
 
 7. **Update Windows 11**:
-   - "I would suggest updating Windows 11 as your build is an April release"
    - Install the latest Windows 11 quality update
    - Check for monthly updates
    - Keep the OS current
@@ -149,16 +124,12 @@ After installing Solid Edge 2025 Update 10, editing any table causes an immediat
 ### Fix
 
 1. **Roll back to Update 9 or earlier**:
-   - "For now, it is probably best to revert to a previous Update"
    - Uninstall Update 10
    - Install Update 9 or Update 7
    - Wait for Update 11
 
 2. **Install Update 11 when available**:
-   - "We are fast-tracking Update 11 to help address the crash as quickly as possible"
-   - "Current target availability for Update 11, 27-OCT"
    - Update 11 fixes PR 11375613
-   - "PR 11375613: Crash when trying to edit a table in the drafting environment"
 
 3. **Don't edit tables directly**:
    - Until the fix is available
@@ -167,16 +138,13 @@ After installing Solid Edge 2025 Update 10, editing any table causes an immediat
    - Or edit the BOM in the model
 
 4. **Report the issue**:
-   - "We are also experiencing the same issue with all user input tables"
    - Confirm the issue on the Siemens forum
    - Provide your Update version
    - Siemens tracks affected users
 
 5. **Check for the regression PR**:
-   - "PR#11375613 has been opened"
    - Monitor the Update 11 announcement
    - Verify the fix is included
-   - "PR 11375613: Crash when trying to edit a table in the drafting environment"
 
 6. **Use external BOM editing**:
    - Export the BOM to Excel
@@ -201,44 +169,31 @@ Solid Edge 2025 is unusably slow. Even basic tasks like updating small assemblie
 ### Fix
 
 1. **Restore factory settings**:
-   - "First, I would restore Solid Edge's factory settings and check if the issue is reproducible using the OTB templates"
    - Run the Settings and Preferences Wizard
    - Reset to factory defaults
    - Test with out-of-the-box templates
 
 2. **Check for network links**:
-   - "It happened to me in the past that everything started to slow down; in my case were some old links leading to a server not anymore in the network"
-   - "To check if this case is similar, just unplug the network cable to disable the network card"
    - If performance improves with no network
    - Find and remove old network links
 
 3. **Disable OneDrive sync for SE files**:
-   - "The files are stored locally on the drive. But then backed up onto OneDrive"
-   - "We have the allow distributed file access on, with the SELOCK setup"
    - Exclude Solid Edge files from OneDrive sync
    - Or disable OneDrive while working in SE
 
-4. **Kill Siemens Connector and WebView2**:
-   - "We noticed that Siemens Connector is one of the performance issues"
-   - "In the Task Manager, you can check if you have an excessive number of WebView2 instances"
-   - "After about 1h you can have even 120 instances"
-   - "We just kill the Connector and WebView2 tasks in the Task Manager every 30 minutes or so"
+4. **Kill Siemens Connector and WebView2**.
 
 5. **Delete .cfg files for assemblies**:
-   - "What about deleting the .cfg file for the assemblies?"
-   - "I am wondering if this is causing some sort of corruption in the assembly"
    - Close the assembly
    - Delete the .cfg file
    - Reopen the assembly
 
 6. **Check for simulation overhead**:
-   - "My locally saved SE 2024 files with simulations become very slow when saving or editing"
    - Remove simulations from files if not needed
    - Simulations add significant overhead to save/edit operations
    - Use ANSYS or external simulation instead
 
 7. **Use Component Tracker**:
-   - "SE 2024 seems to be reluctant to update or save changed components without the use of the Component Tracker"
    - Use the Component Tracker to manage updates
    - Don't use "Update All" on large assemblies
    - Update components individually
@@ -260,21 +215,16 @@ The Windows user profile has become corrupted, causing Solid Edge to crash when 
 ### Fix
 
 1. **Run Solid Edge in safe mode**:
-   - "Try running Solid Edge from the command line in safe mode"
    - `"C:\Program Files\Siemens\Solid Edge 2024\Program\Edge.exe"`
    - If safe mode works, the issue is in the user profile
    - Use safe mode as a temporary workaround
 
 2. **Create a new Windows user profile**:
-   - "Temporarily try creating a new Windows User Profile and running Solid Edge under a clean user profile"
    - Create a new user account in Windows Settings
    - Log in as the new user
    - Run Solid Edge — if it works, the old profile is corrupted
 
 3. **Update Windows 11**:
-   - "Your operating system build version shown in the crashlog is 22631.3007"
-   - "The latest quality update from Microsoft is 22631.3085"
-   - "Please update your operating system"
    - Install all pending Windows updates
 
 4. **Reset Solid Edge settings**:
@@ -284,7 +234,6 @@ The Windows user profile has become corrupted, causing Solid Edge to crash when 
    - Restart Solid Edge
 
 5. **Check graphics driver compatibility**:
-   - "The onboard graphics is a non-supported adaptor"
    - Ensure you're using a supported GPU
    - Intel integrated graphics may not be supported
    - Use a dedicated NVIDIA or AMD card

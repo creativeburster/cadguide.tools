@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/worknc-v19-postpro-question.319972/"
-  - "https://www.practicalmachinist.com/forum/threads/about-work-nc.243960/"
-  - "https://3dcad.news/community/threads/worknc-per-stampi.61849/"
 ---
 
 # WorkNC Post Processor and Roughing Performance Errors: Concatenated Post File Number Adds Extra Digits from COMPOSITE_PP_NAME_SEPARATOR, Post Processor Development Requires .dat and .ang File Editing, Roughing Rest-Machining Performance Poor with Overmetal and Tool Size Changes, Contouring Does Not Stop on Edges Requiring Support Surface Construction, and Small Tool Scale Function Required for Miniature Work Increasing Calculation Times
@@ -38,7 +35,6 @@ The concatenated post-processing feature automatically appends a sequence number
    - The separator is used between the program number and the sequence digits
 
 2. **Post as a single (non-concatenated) post**:
-   - "You can set the programme number if you post it as a Concatenated post"
    - When posting as a single post, the extra digits are not added
    - Use this if you need exact control over the program number
 
@@ -95,7 +91,6 @@ WorkNC post processors are not standard open formats. They use proprietary .dat 
    - Gradually add complexity
 
 4. **Contact WorkNC support (with patience)**:
-   - "Maybe you can contact support and they'll get back to you in a few weeks or months"
    - WorkNC support is known to be slow
    - Provide detailed information about your machine and requirements
    - Follow up regularly
@@ -106,7 +101,6 @@ WorkNC post processors are not standard open formats. They use proprietary .dat 
    - Share post processor solutions with other users
 
 6. **Consider alternative CAM packages**:
-   - "WorkNC is very bad when it comes to post processing"
    - Some users switched to hyperMILL or other CAM systems
    - Evaluate if post processor issues justify a CAM switch
 
@@ -143,8 +137,6 @@ WorkNC's roughing rest-machining strategy doesn't efficiently detect and machine
    - These strategies are designed to detect remaining stock
 
 4. **Consider switching to hyperMILL or PowerMill**:
-   - "We went to hyperMILL because WorkNC did not puncture from a 3D model"
-   - "For roughing and rest-machining, I do not find WorkNC performing"
    - Other CAM systems have more efficient rest-machining algorithms
 
 5. **Use stock model tracking**:
@@ -171,7 +163,6 @@ WorkNC's contouring strategy doesn't have native edge-detection or tangency exte
 ### Fix
 
 1. **Construct support surfaces**:
-   - "The assistance told me that you have to protect the edge by building support surfaces"
    - Create support surfaces (also called "drive surfaces" or "check surfaces") at the edges
    - These surfaces act as boundaries for the toolpath
    - The toolpath stops at the support surface instead of wrapping around
@@ -218,7 +209,6 @@ WorkNC's internal precision and resolution is optimized for typical mold/die man
    - Scale the part up by 10x or 100x
    - Program the toolpaths at the larger scale
    - Scale the G-code output back down
-   - "The scale function increases the resolution to a higher degree for increased precision with the trade-off of making the calc times longer"
 
 2. **Accept longer calculation times**:
    - Scaling increases calculation times proportionally
@@ -239,7 +229,6 @@ WorkNC's internal precision and resolution is optimized for typical mold/die man
 5. **Check if the latest version improves small tool support**:
    - WorkNC has been updating its capabilities
    - Check if the latest version supports small tools without scaling
-   - "Task threading, 64-bit compatible, and parallel processing — that was new and innovative 8 years ago"
 
 ### Community Report
 

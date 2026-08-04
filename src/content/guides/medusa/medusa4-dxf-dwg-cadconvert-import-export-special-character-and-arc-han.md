@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.cad-schroer.com/tech-support/faqmedusa-2589/"
-  - "https://www.cad-schroer.com/fileadmin/Download/datasheet/MEDUSA4-Brochure-CAD-Software_en.pdf"
-  - "https://en.wikipedia.org/wiki/MEDUSA4"
 ---
 
 # MEDUSA4 DXF DWG CADConvert Import Export Special Character and Arc Handling Issues, Very Large Drawing Sheet Performance from Excessive Layers, Parametric Design Object 2D to 3D Model Sync Failures, MEDRaster Colour Raster to Vector Integration Quality, and CADConvert Pro Advanced DXF DWG Scale and Text Position Accuracy: Special Character Fix, Layer Optimization, Parametric Sync, Raster Quality, and Scale Correction
@@ -31,44 +28,35 @@ When importing or exporting DXF/DWG files using CADConvert, special characters i
 ### Fix
 
 1. **Update to MEDUSA4 Version 5.1.2 or later**:
-   - "In MEDUSA4 Version 5.1.2"
-   - "Wurden Verbesserungen an der DXF/DWG-Schnittstelle CADConvert vorgenommen"
    - Update to 5.1.2 or later
    - For improved DXF/DWG handling
 
 2. **Check special character encoding**:
-   - "Verbesserte Handhabung von Sonderzeichen"
    - Verify special characters
    - Are correctly converted
    - After import/export
 
 3. **Verify arc geometry**:
-   - "Verbesserung von Bögen"
    - Check arc geometry
    - After conversion
    - For accuracy
 
 4. **Check text element positioning**:
-   - "Positionierung von Textelementen"
    - Verify text positions
    - After import/export
    - For correct placement
 
 5. **Use moderate scaling factors**:
-   - "Nutzung sehr kleiner oder sehr großer Skalierungen"
    - Avoid extreme scaling
    - Use moderate scale factors
    - To prevent conversion issues
 
 6. **Use CADConvert Pro for advanced conversion**:
-   - "CADConvert pro - Advanced DXF/DWG interface"
    - Use CADConvert Pro
    - For better DXF/DWG
    - Conversion results
 
 7. **Create custom conversion mappings**:
-   - "An intuitive user interface allows you"
-   - "To create your own conversion mappings"
    - Create custom mappings
    - For specific DXF/DWG files
 
@@ -89,9 +77,6 @@ When working with very large drawing sheets containing many layers, MEDUSA4 beco
 ### Fix
 
 1. **Update to MEDUSA4 Version 5.1.2 or later**:
-   - "Das Handling sehr großer Zeichnungsblätter wurde optimiert"
-   - "Die Performance bei der Nutzung vieler Layern"
-   - "Auf einem Blatt wurde verbessert"
    - Update for improved large sheet handling
 
 2. **Reduce active layers**:
@@ -113,7 +98,6 @@ When working with very large drawing sheets containing many layers, MEDUSA4 beco
    - Layer count
 
 5. **Use SMART Drafting tools**:
-   - "SMART Drafting Tool"
    - Use SMART Drafting
    - For efficient drafting
    - On large sheets
@@ -125,7 +109,6 @@ When working with very large drawing sheets containing many layers, MEDUSA4 beco
    - To reduce sheet complexity
 
 7. **Use Design Objects for repeated content**:
-   - "Design Objects functionality"
    - Use Design Objects
    - For repeated content
    - To reduce layer complexity
@@ -147,26 +130,19 @@ When using MEDUSA4's parametric Design Objects to create 3D models from 2D drawi
 ### Fix
 
 1. **Verify parametric constraints**:
-   - "MEDUSA4 PARAMETRICS"
-   - "Extensive parametrics functionality"
    - Verify all 2D parametric constraints
    - Are properly defined
 
 2. **Use SMART Drafting for 2D geometry**:
-   - "SMART Drafting Tool"
    - Use SMART Drafting
    - To create properly constrained
    - 2D geometry
 
 3. **Check Design Object associations**:
-   - "Design Objects functionality"
-   - "Combines 2D ease with 3D design capabilities"
    - Verify Design Object
    - 2D-to-3D associations
 
 4. **Use the 3D viewer for verification**:
-   - "An integral viewer for interacting with models"
-   - "By zooming, spinning and panning"
    - Use the 3D viewer
    - To verify 3D model sync
 
@@ -177,7 +153,6 @@ When using MEDUSA4's parametric Design Objects to create 3D models from 2D drawi
    - To re-establish associations
 
 6. **Use Parametrics for design automation**:
-   - "Design process automation"
    - Use Parametrics
    - To automate the 2D-to-3D
    - Design process
@@ -217,7 +192,6 @@ When incorporating colour or monochrome raster data (scanned drawings, photograp
    - Before importing
 
 3. **Use raster editing tools**:
-   - "Edit and store colour and monochrome raster data"
    - Use MEDRaster Colour's editing tools
    - To improve raster quality
    - After import
@@ -229,7 +203,6 @@ When incorporating colour or monochrome raster data (scanned drawings, photograp
    - For proper integration
 
 5. **Use combined raster and vector support**:
-   - "Combined raster and vector data support"
    - Use the combined mode
    - For displaying raster
    - And vector together
@@ -241,7 +214,6 @@ When incorporating colour or monochrome raster data (scanned drawings, photograp
    - And performance
 
 7. **Use MEDRaster Colour View**:
-   - "MEDRaster Colour View"
    - Use the Colour View module
    - For viewing raster data
    - In the Basic package
@@ -263,9 +235,6 @@ When using CADConvert Pro for advanced DXF/DWG conversion, the scale of imported
 ### Fix
 
 1. **Update to MEDUSA4 Version 5.1.2 or later**:
-   - "Positionierung von Textelementen"
-   - "Nutzung sehr kleiner oder sehr großer Skalierungen"
-   - "Wurden verbessert"
    - Update for improved scale and text handling
 
 2. **Use moderate scale factors**:
@@ -281,14 +250,11 @@ When using CADConvert Pro for advanced DXF/DWG conversion, the scale of imported
    - For correct placement
 
 4. **Use CADConvert Pro for advanced conversion**:
-   - "CADConvert pro - Advanced DXF/DWG interface"
    - Use CADConvert Pro
    - For better conversion
    - Of complex DXF/DWG files
 
 5. **Create custom conversion mappings**:
-   - "An intuitive user interface allows you"
-   - "To create your own conversion mappings"
    - Create custom mappings
    - For specific scale requirements
 
@@ -299,7 +265,6 @@ When using CADConvert Pro for advanced DXF/DWG conversion, the scale of imported
    - To detect scale issues
 
 7. **Use DXF/DWG format R12-2012**:
-   - "DXF/DWG-Format von AutoCAD R12 bis AutoCAD 2012"
    - Use supported DXF/DWG formats
    - (R12 through 2012)
    - For best compatibility

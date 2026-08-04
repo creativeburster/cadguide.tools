@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.rs-online.com/designspark/mechanical-software-support-faqs"
-  - "https://www.rs-online.com/designspark/problem-with-cylinder-hole-and-stl-export"
-  - "https://www.rs-online.com/designspark/cant-export-stl"
 ---
 
 # DesignSpark Mechanical STL Export and Crash Errors: STL Export Not Available in Free Tier Requiring Upgrade, Cylinder Hole Not Going Through Due to Boolean Failure, Blank Posting Window from Corrupted User Config Requiring AppData Cleanup, FIPS Mode Crash from Network Adapter Encryption Setting, and Graphics Card Renderer Crash Requiring Driver Update

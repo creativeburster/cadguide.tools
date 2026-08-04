@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-fail-trunnion/td-p/14135598"
-  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/problem-not-able-to-use-my-post-processor-for-simultaneous-5/td-p/7393180"
-  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/error-section-getinitialtoolaxisabc-is-not-allowed-for-section/td-p/11005891"
 ---
 
 # Tebis CAM 5-Axis Post Processor and Machining Errors: Post Processor Requires Machine Configuration for 5-Axis Simultaneous Toolpath, onRewindMachine Logic Must Be Enabled with performRewinds true and Cyclic Axis Definition, Section.getInitialToolAxisABC Error from Missing optimizeMachineAngles in activateMachine, Swarf Toolpath on 4-Axis Post Requires Advanced Swarf Strategy, and Initial XY Positioning in TCP Coordinates Without TCP Enabled Requiring Safe Z Approach
@@ -50,7 +47,6 @@ The machine is not defined in the setup, or machine configuration is not enabled
    - The post needs the machine kinematics for 5-axis simultaneous output
 
 3. **Use the latest post from the library**:
-   - "The post you are using is deprecated, please use the latest post from the library"
    - Download the latest post for your machine from the CAM vendor's post library
    - Deprecated posts may not support current 5-axis features
 
@@ -101,7 +97,6 @@ The `onRewindMachine` logic is not properly configured. The C-axis must be defin
    - `table:true` defines it as a table axis (not head axis)
 
 3. **Check axis type (table vs. head)**:
-   - "You define the C-axis as being a head, which I am pretty sure is supposed to be a table"
    - Most trunnion C-axes are table axes, not head axes
    - Verify the correct axis type in the machine configuration
 
@@ -172,7 +167,6 @@ The `section.optimizeMachineAngles` call is missing or not being executed in the
    ```
 
 2. **Check the test condition for optimizeMachineAngles**:
-   - "Both were there (AnglesByMachine and Angles2), but with a wrong test, so it was never done"
    - The test condition that gates the `optimizeMachineAngles` call may be wrong
    - Verify the condition evaluates to true for 5-axis operations
    - Fix the test so `optimizeMachineAngles` is called for simultaneous 5-axis
@@ -184,7 +178,6 @@ The `section.optimizeMachineAngles` call is missing or not being executed in the
 
 4. **Test with Swarf operations**:
    - After adding `optimizeMachineAngles`, test with a Swarf toolpath
-   - "Fixing this allows me to have 5 axis continuous working on a Swarf operation"
    - Test with multiple strategies to ensure robustness
 
 5. **Check defineWorkPlane function**:
@@ -216,10 +209,8 @@ Swarf is a 5-axis toolpath strategy. The post processor is configured for 4 axes
 ### Fix
 
 1. **Use Advanced Swarf strategy**:
-   - "The Swarf toolpath is a 5 axis operation. The error is due to trying to postprocess a 5 axis toolpath using a 4-axis postprocessor."
    - Use "Advanced Swarf" instead of standard "Swarf"
    - Advanced Swarf allows forcing a 4-axis calculation
-   - "I suggest you try using the 'Advanced Swarf' strategy which allows you to force a 4 axis calculation"
 
 2. **Configure Advanced Swarf for 4-axis**:
    - In the Advanced Swarf parameters, set the tool axis control to 4-axis
@@ -294,12 +285,10 @@ The post outputs the initial XY position in TCP coordinates (compensated for rot
 
 5. **Check for G54.2 support**:
    - Some Fanuc controls use G54.2 instead of G68.2
-   - "The machine does not support G68.2, it uses G54.2"
    - Implement G54.2 logic if the control supports it
    - Contact the machine builder for G54.2 format
 
 6. **Verify TCP is working on the machine**:
-   - "TCP is working fine on the machine, I verified that with Fanuc"
    - The issue is in the post, not the machine
    - The post must enable TCP before outputting TCP-compensated coordinates
 

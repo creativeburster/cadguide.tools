@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/infraworks-forum/unable-to-run-infraworks-2026/td-p/13699197"
-  - "https://forums.autodesk.com/t5/infraworks-forum/infraworks-2025-civil-dwg-import-error/td-p/13074219"
-  - "https://forums.autodesk.com/t5/infraworks-forum/civil3d-corridor-to-infraworks/td-p/14121269"
 ---
 
 # InfraWorks 2026 Stuck on Initializing from Autodesk License Service, Civil 3D DWG Import Cannot Connect to Data Sources from Missing Civil 3D Background Process, Corridor Import Failure from Coordinate System Mismatch with Missing Leading Y Coordinate, DWG Re-import Failure from Windows Security Network Blocking and OneDrive Path, and IMX Schema Version Error from Faulty Civil 3D Installation: License Service Downgrade, Civil 3D Reinstall, Coordinate Verification, Windows Security Exclusion, and IMX Export Workaround
@@ -31,26 +28,17 @@ InfraWorks 2026 gets stuck on the "Initializing" screen and never launches. The 
 ### Fix
 
 1. **Install previous Autodesk License Service**:
-   - "This is a known issue with the current version of the Autodesk License Service"
-   - "It will be fixed with the next version"
-   - "You can install the previous version"
-   - "That is attached to this article"
    - Install the previous license service version
 
 2. **Check the Autodesk knowledge article**:
-   - "https://knowledge.autodesk.com/article/"
-   - "The-screen-always-show-initializing-when-launching-Infraworks"
    - Follow the knowledge article
    - For the latest fix
 
 3. **Verify other Autodesk products work**:
-   - "Other programs, such as Civil 3D 2026"
-   - "Are working perfectly fine"
    - Verify other products work
    - To confirm it's InfraWorks-specific
 
 4. **Wait for the next license service update**:
-   - "It will be fixed with the next version"
    - If you can't install the previous version
    - Wait for the updated license service
    - To be released
@@ -90,44 +78,31 @@ InfraWorks cannot import Civil 3D DWG files. The error message "Autodesk InfraWo
 ### Fix
 
 1. **Export IMX from Civil 3D as workaround**:
-   - "A workaround for you could be"
-   - "To export an IMX from Civil 3D"
-   - "And import that into InfraWorks"
    - Export IMX from Civil 3D and import to InfraWorks
 
 2. **Clean reinstall Civil 3D**:
-   - "It could be that a clean re-installation solves the issue"
    - Uninstall Civil 3D completely
    - Then reinstall
    - The same version as InfraWorks
 
 3. **Verify Civil 3D version matches**:
-   - "InfraWorks needs to have Civil 3D installed"
-   - "In the same version"
    - Verify the Civil 3D version
    - Matches the InfraWorks version
 
 4. **Check for multiple Civil 3D versions**:
-   - "I have Civil 2022, 2023, 2024 and 2025"
-   - "All installed on my computer"
    - Multiple versions can cause conflicts
    - Consider uninstalling older versions
 
 5. **Install InfraWorks hotfix**:
-   - "Installing Infraworks Hotfix"
-   - "That came out at the end of september"
    - Check for InfraWorks hotfixes
    - That may address the issue
 
 6. **Delete local cache**:
-   - "Deleting local cache"
    - Delete the InfraWorks local cache
    - And retry the import
    - To clear corrupted cache data
 
 7. **Update both Civil 3D and InfraWorks**:
-   - "I try to update both civil and infra"
-   - "Then the problem is fixed"
    - Update both products
    - To the latest versions
 
@@ -148,45 +123,28 @@ Civil 3D corridors fail to import into InfraWorks 2026. The error occurs even wh
 ### Fix
 
 1. **Compare coordinates between Civil 3D and InfraWorks**:
-   - "Easiest way to see that is by comparing the coordinates"
-   - "In Civil 3D and InfraWorks"
    - Compare the coordinate values
    - In both applications
 
 2. **Load aerial images to verify position**:
-   - "Load the aerial images in Civil 3D with GEOMAP"
-   - "They are far away"
    - Use GEOMAP to load aerial images
    - And check if objects are in the right location
 
 3. **Check for missing leading Y coordinate digits**:
-   - "It looks as if the leading 5 of the Y coordinate is missing"
-   - "So, instead of 5 200 000 it is 200 000"
    - Check if the Y coordinate
    - Is missing leading digits
 
 4. **Move objects to correct coordinates**:
-   - "The solution is to move all drawing objects"
-   - "'0, 5000000, 0', means 5000000 units to the north"
-   - "Then reimport the DWG into InfraWorks"
    - Move objects to correct position
 
 5. **Verify Model Properties coordinate system**:
-   - "Click on Model Properties"
-   - "And make sure it matches your Civil 3D coordinate system"
    - Verify the InfraWorks model
    - Uses the same coordinate system
 
 6. **Don't use data source offset for corridors**:
-   - "Normally, it is also possible to move objects"
-   - "In the data source configuration in InfraWorks"
-   - "I tested that, but it doesn't work for the corridor"
-   - "It's probably because the corridor is dependent"
-   - "On so many other objects"
    - Move in Civil 3D, not in InfraWorks
 
 7. **Use IMX export for corridors**:
-   - "The option is going to be IMX"
    - Export the corridor as IMX from Civil 3D
    - Then import the IMX into InfraWorks
    - As an alternative to DWG import
@@ -208,32 +166,22 @@ DWG files that previously imported successfully into InfraWorks now fail to impo
 ### Fix
 
 1. **Add InfraWorks to Windows Security allowed apps**:
-   - "I added Infraworks to the allowed apps in Windows Security"
-   - "And it seems to be working consistently now"
    - Add InfraWorks to the allowed apps list
    - In Windows Security > Firewall
 
 2. **Store files on local drive instead of OneDrive**:
-   - "I made a new project and set the files to be stored"
-   - "On my local drive, rather than on Onedrive"
-   - "Like it was before. It did start working after that"
    - Use local drive for InfraWorks files
 
 3. **Check the InfraWorks log file**:
-   - "Can you send the InfraWorks log file"
-   - "From path %AppData%\Roaming\Autodesk\Autodesk InfraWorks\logs"
    - Check the log file
    - For network error messages
 
 4. **Create a new project**:
-   - "If I start a new project then it will"
    - Creating a new project
    - Can bypass the corrupted project
    - As a workaround
 
 5. **Use reconnect for existing data sources**:
-   - "Is it a separate data source import?"
-   - "Or do you refresh/reconnect the existing DWG data?"
    - Try both reconnecting
    - And importing fresh
 
@@ -244,8 +192,6 @@ DWG files that previously imported successfully into InfraWorks now fail to impo
    - To a non-OneDrive location
 
 7. **Check for recurring issues**:
-   - "This happened to me 2x today"
-   - "I did start getting issues again today"
    - Monitor for recurring issues
    - After applying the fixes
 
@@ -266,26 +212,18 @@ When importing Civil 3D DWG files into InfraWorks, an "IMX Schema Version" error
 ### Fix
 
 1. **Reinstall Civil 3D**:
-   - "Due to a faulty installation of Civil 3D"
-   - "It had to be reinstalled"
    - Uninstall and reinstall Civil 3D
    - To fix the faulty installation
 
 2. **Export IMX from Civil 3D**:
-   - "What happens if you export to an IMX format"
-   - "In Civil 3D and import the IMX file into InfraWorks?"
    - Try exporting IMX from Civil 3D
    - And importing to InfraWorks
 
 3. **Copy DWG to local drive**:
-   - "Can you try and copy the DWG from path P:\"
-   - "To a local drive and retest?"
    - Copy the DWG from network drive
    - To a local drive before importing
 
 4. **Update both Civil 3D and InfraWorks**:
-   - "I try to update both civil and infra"
-   - "Then the problem is fixed"
    - Update both products
    - To the latest versions
 
@@ -302,8 +240,6 @@ When importing Civil 3D DWG files into InfraWorks, an "IMX Schema Version" error
    - To see if the schema matches
 
 7. **Send log file to Autodesk support**:
-   - "Can you send the full log file"
-   - "From %AppData%\Roaming\Autodesk\Autodesk InfraWorks\logs?"
    - Send the log file
    - To Autodesk support for analysis
 

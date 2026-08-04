@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://zw3dforum.com/t/zw3d-crash-when-closing-one-of-several-opened-views/1989"
-  - "https://zw3dforum.com/t/importing-problem-stp-sw-and-more/654"
-  - "https://www.zwsoft.com/support/zw3d"
 ---
 
 # ZW3D 2026 Crash When Closing One of Several Opened Views from 2025 SP2 Stability Bug, STEP and Parasolid Import Incorrect from User Folder Corruption, Missing VCOMP140 VCRUNTIME140 DLL from Missing Visual C++ Redistributable, 0xc000007b Application Cannot Start from Missing System Dependencies, and ZW3D Does Not Respond After Double-Clicking Shortcut from User Folder Issue: 2025 SP1 Rollback, User Folder Rename, VC++ Redistributable Install, System Dependency Fix, and User Folder Cleanup
@@ -31,41 +28,24 @@ ZW3D crashes when closing one of several opened views. The crash is 100% reprodu
 ### Fix
 
 1. **Rollback to 2025 SP1**:
-   - "Problem solved: Deinstalled"
-   - "2025 SP2, installed 2025 SP1"
    - Rollback to SP1
 
 2. **Update to ZW3D 2026**:
-   - "ZW3D 2026 is"
-   - "Definitely much more stable"
    - Update to 2026
 
 3. **Check dedicated GPU**:
-   - "Modern 3D software typically"
-   - "Requires a more powerful"
-   - "Dedicated graphics card"
    - Check GPU
 
 4. **Use dedicated GPU with 8GB VRAM**:
-   - "Approximately 8 GB"
-   - "Of dedicated memory"
-   - "Is generally recommended"
    - Use 8GB GPU
 
 5. **Verify Windows 11 Pro**:
-   - "Using Windows 11 Pro"
-   - "Instead of the Home edition"
-   - "Is also advisable"
    - Use Pro
 
 6. **Check 32GB RAM sufficiency**:
-   - "Your 32 GB of RAM"
-   - "Is sufficient"
    - Verify RAM
 
 7. **Manually select dedicated GPU**:
-   - "Ensure it is manually"
-   - "Selected for use with ZW3D"
    - Select GPU
 
 ### Community Report
@@ -85,25 +65,15 @@ Importing STEP, SolidWorks, OBJ, and Parasolid files produces incorrect results.
 ### Fix
 
 1. **Rename user folder**:
-   - "I have renamed user folder"
-   - "ZW3D2024 to .ZW3D2024"
    - Rename folder
 
 2. **Restart ZW3D after rename**:
-   - "Restarted the application"
-   - "A new folder is"
-   - "Created automatically"
    - Restart
 
 3. **Let new folder be created**:
-   - "A new folder is"
-   - "Created automatically and"
-   - "The import problem is solved"
    - New folder
 
 4. **Check user folder path**:
-   - "C:\Users\info\AppData"
-   - "\Roaming\ZWSOFT\ZW3D\ZW3D\ZW3D2024"
    - Check path
 
 5. **Test import after folder reset**:
@@ -113,13 +83,9 @@ Importing STEP, SolidWorks, OBJ, and Parasolid files produces incorrect results.
    - Parasolid import
 
 6. **Use old render engine for mesh data**:
-   - "For mesh data the old"
-   - "Render engine works better"
    - Use old engine
 
 7. **Update to latest version**:
-   - "There is a newer"
-   - "Version available"
    - Update ZW3D
 
 ### Community Report
@@ -139,9 +105,6 @@ ZW3D fails to start with the error message about missing "VCOMP140.DLL", "VCRUNT
 ### Fix
 
 1. **Install Microsoft Visual C++ Redistributable**:
-   - "Missing VCOMP140.DLL"
-   - "VCRUNTIME140.DLL"
-   - "VCRUNTIME140_1.DLL"
    - Install VC++
 
 2. **Install both x86 and x64 versions**:
@@ -197,9 +160,6 @@ ZW3D displays the error message "The application cannot be started normally (0xc
 ### Fix
 
 1. **Install all Visual C++ Redistributables**:
-   - "The application cannot"
-   - "Be started normally"
-   - "(0xc000007b)"
    - Install VC++
 
 2. **Install .NET Framework**:
@@ -255,9 +215,6 @@ ZW3D does not respond after double-clicking the shortcut icon. The program doesn
 ### Fix
 
 1. **Clean up user folder**:
-   - "How to clean up"
-   - "The user folder when"
-   - "ZW3D fails to start"
    - Clean folder
 
 2. **Rename user folder**:

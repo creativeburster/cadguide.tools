@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forum.simplify3d.com/viewtopic.php?t=16870"
-  - "https://forum.simplify3d.com/viewtopic.php?t=23493"
-  - "https://forum.simplify3d.com/viewtopic.php?t=23600"
 ---
 
 # Simplify3D Slicing Crashes and Model Errors: V5 Crash on Prepare to Print from Coasting/Wipe, Cannot Slice Any Model Only Generates Supports, Rotated Model Missing Geometry from Zero-Thickness Body, 978MB STL Crash and No GPU Usage in V5, and No Model After Prepare to Print from Corrupt Installation
@@ -43,7 +40,6 @@ This is a **confirmed bug** in V5 related to the coasting and wipe features. Whe
    - The crash is random — reopening and slicing often works
 
 4. **Update to V5.0.1 or later** — the fix was planned for the 5.0.1 release:
-   - "We know of one confirmed issue with coasting and wiping which we are working on right now. We should have a fix out shortly."
 
 5. **Note**: Disabling coasting and wipe is a workaround, not a fix. Users who need these features must wait for the patch or use V4.
 
@@ -87,7 +83,6 @@ When importing any model and clicking "Prepare to Print," Simplify3D only genera
    - A corrupt installation can cause slicing to fail entirely
 
 5. **Check for cracked software** — pirated copies often have missing registry entries that prevent slicing:
-   - "This is because you are using cracked software!"
    - Purchase a legitimate license
 
 ## 3. Rotated Model Missing Geometry: Zero-Thickness Body

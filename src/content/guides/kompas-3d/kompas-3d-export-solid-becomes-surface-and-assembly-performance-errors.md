@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://habr.com/en/companies/ascon/articles/437076/"
-  - "https://help.ascon.ru/KOMPAS/23/en-US/2223_244_2_1_osobennosti_exporta.html"
-  - "https://help.ascon.ru/KOMPAS/24/en-US/idd_sheetmetal.html"
 ---
 
 # KOMPAS-3D Export Solid Becomes Surface and Assembly Performance Errors: Boolean Operation Creates Boundary Edges from Contour Exceeding Face by Tolerance Requiring Edge Alignment, Fillet Operation at Open Chain Ends Creates Split Edges Turning Solid to Surface on Export, Large Assembly Performance from Component Display Modes and Simplification, Sheet Metal Bend Unfold Requires Bend Table Configuration for Correct Flat Pattern, and Export Settings Must Enable Solids Transfer and Hide Source Objects to Avoid Duplication
@@ -31,14 +28,10 @@ The CAD designer traced a contour on a face, extruded it, and unioned it with th
 ### Fix
 
 1. **Align the contour to the face edges**:
-   - "The cause was the addition of boundary edges that stemmed from a Boolean operation"
-   - "The CAD designer had traced a contour on a face, extruded it, and then unioned it with the parent body"
-   - "But the contour slightly exceeded the size of the face because of the peculiarities of the constraints"
    - Edit the sketch to ensure the contour stays within the face boundary
    - Use coincident constraints to align contour edges with face edges
 
 2. **Use a larger tolerance for the contour**:
-   - "The contour stuck out by just a little, by an amount equivalent to the tolerance"
    - Reduce the contour size so it's well within the face
    - Don't rely on tolerance-level alignment
    - Ensure at least 0.01mm clearance from face edges
@@ -46,11 +39,9 @@ The CAD designer traced a contour on a face, extruded it, and unioned it with th
 3. **Check the model for boundary edges before export**:
    - Use KOMPAS-3D's model checking tools
    - Look for open edges or boundary edges
-   - "The closed shell opened upon going through translation"
    - Fix any detected boundary edges before exporting
 
 4. **Update KOMPAS-3D to the latest version**:
-   - "Our programmers resolved it by tuning the criteria that decided whether or not to create faces"
    - The C3D Modeler kernel was updated to handle this case
    - Update to the latest KOMPAS-3D version
    - The fix prevents boundary edge creation in Boolean operations
@@ -84,13 +75,10 @@ Fillet operations are not strictly local — they affect not only the faces touc
 ### Fix
 
 1. **Use closed edge chains for fillets**:
-   - "Difficult situations can arise at the ends of open chains"
-   - "Constructing fillets correctly requires the modification of the faces of all edges that adjoin outer vertices"
    - Select complete closed loops of edges for filleting
    - Avoid open chains where possible
 
 2. **Reduce fillet radius at chain ends**:
-   - "If a fillet's radius is larger than the adjacent face"
    - Use a smaller radius that fits within the adjacent face
    - Or use variable radius fillet with smaller radius at ends
    - This prevents split edge creation
@@ -108,7 +96,6 @@ Fillet operations are not strictly local — they affect not only the faces touc
    - Use Insert > Blend > Face Blend
 
 5. **Update KOMPAS-3D for kernel fixes**:
-   - "Another source of the boundary edges bug was found in the fillet operation"
    - The C3D Modeler kernel was updated to handle fillet open chains
    - Update to the latest version
    - The fix prevents split edges at fillet chain ends
@@ -148,8 +135,6 @@ KOMPAS-3D loads all component geometry in full detail by default. Large assembli
    - Unsuppress when needed
 
 3. **Use lightweight components**:
-   - "Designers can model purchased parts with imported lightweight shell entities"
-   - "Or dramatically simplified/featureless solids instead of precise editable solids"
    - Replace complex purchased parts with simplified versions
    - Maintain geometric location for assembly references
 
@@ -194,37 +179,30 @@ KOMPAS-3D uses a bend table to determine bend allowances. The default bend table
 ### Fix
 
 1. **Configure bend table in sheet solid properties**:
-   - "Settings — Parameters... and in the dialog box, select Current document — Sheet solid properties"
-   - "To select a table file, Open button and the desired file in the standard file selection dialog"
    - Select the appropriate bend table for your material and method
    - The full path is displayed in the field
 
 2. **Understand bend table format**:
-   - "Selecting a new fold table will affect bends that already exist in the model"
    - The bend table maps (thickness, radius, angle) to bend allowance
    - Different tables for different materials (steel, aluminum, stainless)
    - Different tables for different bending methods (air bending, bottoming)
 
 3. **Set bend radius correctly**:
-   - "Changing the way bend radii are set"
    - Use consistent bend radius across the part
    - Match the radius to the tooling available
    - Verify radius is achievable with the material thickness
 
 4. **Configure angle interpretation**:
-   - "Angle interpretation change"
    - KOMPAS-3D may interpret bend angles differently (90° vs. 270°)
    - Verify the angle interpretation matches your convention
    - Check the flat pattern after changing interpretation
 
 5. **Set release form (relief cut)**:
-   - "Release form"
    - Configure the relief cut type and size
    - This affects the flat pattern at bend intersections
    - Match the relief to your shop's standard practice
 
 6. **Use K-factor as alternative to bend table**:
-   - "Selecting a method for determining the length of sweeps, including changing the bend table"
    - If a bend table is not available, use K-factor
    - K-factor is a material-dependent constant (0.3-0.5 typically)
    - Verify K-factor with physical test pieces
@@ -252,44 +230,27 @@ KOMPAS-3D's export settings have specific rules for what gets exported. "Hidden 
 ### Fix
 
 1. **Enable solids in export parameters**:
-   - "In order to transfer most objects of the required type when setting the export parameters, the corresponding options must be enabled"
-   - "Polygonal objects are exported unconditionally"
    - In the export dialog, click Parameters
    - Enable "Solids" option
 
-2. **Hide source solids when polygonal objects exist**:
-   - "If the model contains polygonal objects obtained by transformation of solids/surfaces, and the source solids/surfaces are kept in the model"
-   - "To avoid data duplication, it is recommended to hide the source solids/surfaces before performing the export"
-   - "Or disable the transfer of solids/surfaces when configuring export parameters"
+2. **Hide source solids when polygonal objects exist**.
 
 3. **Understand hidden solid behavior**:
-   - "Hidden solids and components are not written to STL format"
-   - "They may or may not be written to STEP, JT and C3D formats depending on the settings"
    - For STEP: check export settings for hidden objects
    - For STL: hidden objects are automatically excluded
 
 4. **Exclude objects from calculation**:
-   - "Solids and components excluded from the calculation are not written to the target format"
-   - "They are regarded as removed from the model"
    - Use Exclude from Calculation to remove objects from export
    - This is more reliable than hiding
 
 5. **Check object type preservation**:
-   - "Solids, surfaces, and points are transferred without changing the object type"
-   - "Only solids available in the model KOMPAS-3D are written into the final file"
    - Verify the export preserves solid type (not converting to surface)
    - Check the imported result in the target CAD
 
 6. **Handle assembly components with same source**:
-   - "Assembly components with the same source may be converted into inserts during export"
-   - "Each of which has its own source"
-   - "This happens if it is not possible through other means to obtain in the target format a model identical to the source"
-   - "For example, if insertions of the same component are assigned different colors or modified by operations in the assembly"
    - Be aware that components may be duplicated in export
 
 7. **Configure JT export specifically**:
-   - "Surfaces existing in the model are transmitted in approximated form — multi-faceted surfaces with triangular faces"
-   - "Enable option to set the maximum permissible deviation along the normal of the triangular face"
    - Set appropriate tessellation quality for JT export
    - Balance file size vs. geometric accuracy
 

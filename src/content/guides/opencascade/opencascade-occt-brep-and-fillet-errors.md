@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://github.com/Open-Cascade-SAS/OCCT/issues/1163"
-  - "https://github.com/Open-Cascade-SAS/OCCT/issues/1039"
-  - "https://github.com/Open-Cascade-SAS/OCCT/discussions/1052"
 ---
 
 # OpenCASCADE OCCT BREP and Fillet Errors: Segfault in ChFi3d Builder IntersectMoreCorner from Stale Topology After Boolean Operations Requiring BRepBuilderAPI_Copy, Missing Intersection Edges in Face-Model BREP Intersection from Adjacent Sliced Faces Requiring Geometry Validation, BRepCheck SubshapeNotInShape from Incomplete Shell Sewing Before Solidification Requiring Sewing Order Fix, Inconsistent Generated Modified IsDeleted Across BRepBuilderAPI Classes Requiring Per-Class Workarounds, and Implicit Topology Natural Bounds Creating Special Cases Requiring Explicit Boundary Population
@@ -31,8 +28,6 @@ BRepFilletAPI_MakeChamfer or BRepFilletAPI_MakeFillet crashes with a segmentatio
 ### Fix
 
 1. **Use BRepBuilderAPI_Copy before chamfering**:
-   - "Applying BRepBuilderAPI_Copy to the shape before chamfering/filleting eliminates the crash"
-   - "By creating a deep copy that breaks the stale TShape pointer sharing"
    ```cpp
    BRepBuilderAPI_Copy copier(shape);
    TopoDS_Shape cleanShape = copier.Shape();
@@ -64,7 +59,6 @@ BRepFilletAPI_MakeChamfer or BRepFilletAPI_MakeFillet crashes with a segmentatio
    ```
 
 5. **Report to OCCT developers**:
-   - "Affected version: OCCT 7.9.3 and current master"
    - The bug is in the OCCT source code
    - Report on GitHub with the test file
    - The fix requires adding null guards in IntersectMoreCorner
@@ -147,7 +141,6 @@ After deforming a shape (discretizing edges, moving points, creating BSpline cur
 ### Fix
 
 1. **Sew the shell before solidification**:
-   - "This problem was due to a lack of sewing of the shell before the solidification"
    - Use BRepBuilderAPI_Sewing on the shell before BRepBuilderAPI_MakeSolid
    - ```cpp
    BRepBuilderAPI_Sewing sewing;
@@ -221,7 +214,6 @@ Using BRepFilletAPI_MakeFillet or BRepFilletAPI_MakeChamfer, IsDeleted() returns
    ```
 
 2. **Use BRepOffset_MakeOffset as reference**:
-   - "Reference implementation: BRepOffset_MakeOffset handles this correctly"
    - BRepOffset_MakeOffset maps all shapes, not just faces
    - Copy the pattern from BRepOffset_MakeOffset::IsDeleted
    - This maps all shapes and checks properly
@@ -239,7 +231,6 @@ Using BRepFilletAPI_MakeFillet or BRepFilletAPI_MakeChamfer, IsDeleted() returns
    - Use Modified() instead for faces
 
 5. **Report to OCCT developers**:
-   - "These inconsistencies make it difficult to write generic code"
    - The issue is open on GitHub (#1036)
    - The suggested fix is to update IsDeleted() to check Generated and Modified
    - And to remove the face exclusion in BRepFeat_Form::Generated
@@ -284,9 +275,6 @@ When working with TopoDS shapes, algorithms encounter special cases where a face
    - Then process normally
 
 3. **Use BRepGraph for explicit topology**:
-   - "BRepGraph uses a stricter rule: a bounded geometric face should provide explicit topology below it"
-   - "The boundary is represented as face -> wire -> coedge -> edge -> vertex"
-   - "If a source TopoDS face uses natural bounds, population should normalize it"
    - BRepGraph (OCCT 8.0+) handles this automatically
 
 4. **Handle both modes in algorithms**:

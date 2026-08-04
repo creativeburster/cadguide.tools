@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/autocad-electrical-forum/eplan-parts-database-to-autocad-electrical/td-p/13821300"
-  - "https://forums.autodesk.com/t5/autocad-electrical-forum/problem-with-exporting-eplan-project-to-autocad/td-p/9803368"
-  - "https://forums.autodesk.com/t5/autocad-electrical-forum/arguments-to-keep-using-autocad-instead-of-eplan-when-editing/td-p/13953980"
 ---
 
 # EPLAN Electric P8 Migration and Parts Database Export Errors: Parts Database Migration to AutoCAD Electrical Requires Multiple Excel Exports with Column Mapping, DWG Export Converts Embedded Images to XRefs with Fixed Paths Requiring Manual Image Folder Copy, EPLAN Macro Library Cannot Be Directly Imported to AutoCAD Electrical Requiring EDZ to MDB Conversion, Old DWG Editing in EPLAN Loses Electrical Logic and Explodes Blocks, and AutoCAD Electrical DWG Without Project Files Requires New Project Creation and Apply Project Defaults
@@ -31,35 +28,27 @@ EPLAN and AutoCAD Electrical use completely different database structures. EPLAN
 ### Fix
 
 1. **Export EPLAN parts to Excel**:
-   - "You can easily export your EPLAN parts database to Excel, with just the columns you have available in AcadE"
    - In EPLAN: Parts Management > Extras > Edit Externally
    - Select columns that match AutoCAD Electrical's catalog database fields
    - Export to Excel
 
 2. **Perform multiple exports per category**:
-   - "You'll have to do several exports, as the product grouping is different in AcadE"
    - Export circuit breakers separately with CB table columns
    - Export relays separately with relay table columns
    - Map each EPLAN category to the corresponding AcadE table
 
 3. **Open default_cat.mdb in Microsoft Access**:
-   - "You can open the default_cat.mdb in Microsoft Access and look at the table names"
    - Check table structures: CB, CR, R, wire, etc.
-   - "Copy the relevant columns of data for example, circuit breakers to CB table"
 
 4. **Map manufacturer pin details**:
-   - "Each manufacturer has _PINLIST table and relevant pin details can be added there"
    - Export pin data from EPLAN separately
    - Import to the corresponding _PINLIST table in AcadE
 
 5. **Refer to AcadE help documentation**:
    - "About the Catalog Database Structure" in AutoCAD Electrical Help
-   - "To Work With Editing the Catalog Database Records"
-   - "Best Practices for Customizing the Catalog Database"
    - These provide table structures and field mappings
 
 6. **Accept that some data won't transfer**:
-   - "With ACADE parts are deemed unimportant hence the quality of what's delivered with ACADE is variable at best"
    - Some EPLAN-specific fields have no equivalent in AcadE
    - Prioritize manufacturer, part number, description, and ratings
 
@@ -79,10 +68,7 @@ EPLAN handles embedded images differently from AutoCAD. When EPLAN exports to DW
 
 ### Fix
 
-1. **Copy the image folder with the DWG files**:
-   - "Manually copy images used in EPLAN schematic to folder with exported .dwg files"
-   - "When .dwg is opened it should automatically load graphics from main folder"
-   - "If you want to share .dwg files, you have to always attach graphics"
+1. **Copy the image folder with the DWG files**.
 
 2. **Use relative paths instead of absolute**:
    - After exporting from EPLAN, open each DWG in AutoCAD
@@ -103,7 +89,6 @@ EPLAN handles embedded images differently from AutoCAD. When EPLAN exports to DW
    - Images travel with the DWG file
 
 5. **Keep EPLAN and AutoCAD image folders synchronized**:
-   - "There's no easy way to do this. Mainly because of how differently EPLAN and AutoCAD handles images"
    - Maintain a shared image folder on the network
    - Use the same folder structure in both systems
    - Document the image folder location for all users
@@ -131,13 +116,11 @@ EPLAN and AutoCAD Electrical use completely different library formats. EPLAN mac
 ### Fix
 
 1. **Convert EDZ to MDB format**:
-   - "You need an application to convert the EPLAN EDZ file into MDB or SQL for the parts data"
    - No direct converter exists
    - Export from EPLAN to Excel, then import to Access MDB
    - Use the Excel export method described in Problem 1
 
 2. **Convert EMA to DWG block**:
-   - "You need another application to map the EMA file into a DWG block"
    - Open the macro in EPLAN
    - Export the macro as DWG
    - Import the DWG as a block in AutoCAD Electrical
@@ -149,13 +132,10 @@ EPLAN and AutoCAD Electrical use completely different library formats. EPLAN mac
    - Add attribute definitions for tag, wire numbers, etc.
 
 4. **Check for installed manufacturer libraries**:
-   - "Check to see if they are installed: Start > Control Panel > Programs > [ACE version] Change/Uninstall"
-   - "Select Add or Remove Features to see what has been loaded"
    - Some manufacturer libraries may already be available
    - Install additional libraries from the AcadE installation media
 
 5. **Search for manufacturer-specific content**:
-   - "I didn't find blocks or catalog for some manufacturers like Mitsubishi Electric, nor blocks for VFD and SSD"
    - Search manufacturer websites for AutoCAD Electrical content
    - Some manufacturers provide AcadE-compatible libraries
    - Check the Autodesk App Store for third-party libraries
@@ -183,37 +163,27 @@ EPLAN converts DWG geometry to its internal format on import. On export back to 
 ### Fix
 
 1. **Keep one AutoCAD license for editing old DWG files**:
-   - "As a general rule, when switching systems, I recommend keeping one license of the old tool to edit old projects, for a while"
    - Use AutoCAD for simple edits to old DWG files
    - Use EPLAN for new projects
    - Gradually migrate old projects when major changes are needed
 
 2. **Be aware of image conversion**:
-   - "EPLAN will turn embedded images to XRefs with fixed paths"
-   - "Being aware of this limitation will be important"
    - Copy image folders when sharing exported DWGs
    - See Problem 2 for detailed fixes
 
 3. **Redraw old projects in EPLAN for full value**:
-   - "If you edit old drawings a LOT, I would redraw everything in the new tool, to get the full value"
-   - "Eplan have a group of people redrawing old projects as a service. The result is excellent!"
    - Contact EPLAN about their project conversion service
    - This gives old projects full EPLAN intelligence
 
 4. **Accept that conversion is never 100%**:
-   - "Different tools use different logic, so there will never be a 100% conversion when switching between systems"
    - Plan for manual cleanup after any conversion
    - Budget time for verifying converted data
 
 5. **Use AutoCAD Electrical for DWG with remaining logic**:
    - If DWG files were created in AutoCAD Electrical and still have electrical symbols
-   - "Create a new project and add all DWG files to the new project"
-   - "You would be right away able to use functions like wire numbers, component tags, reports"
    - Don't use EPLAN for these files — use AutoCAD Electrical
 
 6. **Weigh the time investment**:
-   - "If all you're doing is adding a sensor on one random page, there would be no value to recreate a project"
-   - "But if you need to modify many pages, add/remove devices, update wire numbers — definitely worth adding drawings to project"
    - Choose the tool based on the scope of changes
 
 ### Community Report
@@ -232,32 +202,23 @@ AutoCAD Electrical stores project-level settings (cross-referencing format, wire
 
 ### Fix
 
-1. **Create a new project and add DWG files**:
-   - "If the original drawings were created using AutoCAD Electrical, they would have electrical symbols with acade recognized attributes"
-   - "Create a new project and add all the DWG files to the new project"
-   - "You would be right away able to use functions like wire numbers, component tags, new components, reports"
+1. **Create a new project and add DWG files**.
 
 2. **Define project-level properties**:
-   - "You will have to define project level properties on how you want the cross-referencing, wire numbering, etc to work"
    - Configure cross-referencing format
    - Configure wire numbering scheme
    - Configure tag formatting
 
 3. **Use Apply Project Defaults**:
-   - "Select all drawings and click Apply Project Defaults"
-   - "This way you can restore the missing project files"
    - This applies the new project settings to all added DWG files
    - Existing drawing-level data is preserved
 
 4. **Don't edit these DWGs in EPLAN**:
-   - "If by editing the DWG in EPLAN can ruin this potential link to the native AutoCAD-Electrical project files"
    - EPLAN may strip AcadE attributes and intelligence
    - Keep these files in AutoCAD Electrical
    - Use EPLAN only for new projects
 
 5. **Weigh the effort vs. benefit**:
-   - "If all you're doing is adding a sensor on one random page, there would be no value to recreate a project"
-   - "But if you need to modify many pages — then it is definitely worth adding the drawings to project"
    - Create the project only for multi-page modifications
 
 6. **Back up project files going forward**:

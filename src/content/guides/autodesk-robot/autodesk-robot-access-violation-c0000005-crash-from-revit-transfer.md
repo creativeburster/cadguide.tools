@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/autodesk-robot-access-violation-code-c0000005-constantly/td-p/13430756"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/robot-structural-analysis-generate-model-destroys-calculation/td-p/13415264"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/contact-between-steel-plate-no-convergence-error/td-p/13392101"
 ---
 
 # Autodesk Robot Access Violation c0000005 Crash from Revit Transfer, Non-Linear Convergence Error from Tension-Only Bars, Generate Model Destroys Calculation from Excessive Releases, Contact No Convergence from Mesh Quality, and Steel Connection Crash from 2024.0.1 Hotfix: Release Correction, Compression-Only Bars, Mesh Alignment, and Hotfix Installation
@@ -31,8 +28,6 @@ The Revit-to-Robot transfer introduced model inconsistencies that cause access v
 ### Fix
 
 1. **Install Robot 2024.0.1 hotfix**:
-   - "Corrected program instabilities while running analysis for a model containing steel connection definition"
-   - "Corrected the issue related to run-time error while sending the model containing analytical openings from Revit to Robot"
    - Download and install the hotfix
    - From the Autodesk website
 
@@ -43,21 +38,16 @@ The Revit-to-Robot transfer introduced model inconsistencies that cause access v
    - Before transferring to Robot
 
 3. **Check for intersecting elements**:
-   - "Bracing elements (19, 20) cuts each other and create instable chain in node (17)"
    - Check for intersecting bracing or members
    - That create instability in the model
    - Correct intersections before analysis
 
 4. **Remove excessive releases**:
-   - "There are excessive releases on members. They can simply rotate around their axis"
    - Check member releases
    - Remove unnecessary rotation releases
    - That cause instability
 
 5. **Verify support definitions**:
-   - "Similar for the columns 1 to 4, they rotate around their axis"
-   - "They are based on pinned supports and all adjacent elements have pinned releases"
-   - "You may block RZ rotation on 'Basis' support label"
    - Add rotational restraints to prevent instability
 
 6. **Use the model correction tools**:
@@ -89,7 +79,6 @@ During non-linear analysis, Robot reports "convergence of a non-linear" error. T
 ### Fix
 
 1. **Remove tension-only designation where not needed**:
-   - "You don't need using nonlinear analysis and 'tension only' beams"
    - If the bars are not actually tension-only in the real structure
    - Remove the tension-only designation
    - And use regular bars
@@ -103,11 +92,9 @@ During non-linear analysis, Robot reports "convergence of a non-linear" error. T
 3. **Use compression-only bars for compression members**:
    - If bars are subjected to compression only
    - Use compression-only bars instead
-   - "Use 'compression only' bars directly"
    - Without nonlinear bar releases
 
 4. **Check wind direction effects**:
-   - "Even though you change wx wind direction, the sloped members will handle the compression"
    - Verify that wind direction changes
    - Don't put tension-only bars in compression
    - In any load case
@@ -119,13 +106,11 @@ During non-linear analysis, Robot reports "convergence of a non-linear" error. T
    - With tension-only bars
 
 6. **Adjust non-linear parameters**:
-   - "I changed the nonlinear analysis parameter"
    - In the non-linear analysis settings
    - Adjust the convergence tolerance
    - And maximum iterations
 
 7. **Review support conditions**:
-   - "What does this support represents in real world?"
    - Check that support conditions are correct
    - Incorrect supports can cause unexpected forces
    - In tension-only bars
@@ -147,37 +132,24 @@ After generating a calculation model from the structural model, the calculation 
 ### Fix
 
 1. **Turn off intersecting bracing elements**:
-   - "Bracing elements (19, 20) cuts each other and create instable chain in node (17)"
-   - "Turn off elements 19 and 20 from model generation, in order not to split them"
    - In the model generation settings
    - Exclude intersecting bracing from generation
 
 2. **Remove excessive releases**:
-   - "There are excessive releases on members. They can simply rotate around their axis"
-   - "Change 'Gelenking-Gelenking' release label definition"
-   - "Switching off the Rx rotation release at the beginning or end"
    - Remove unnecessary rotation releases
 
 3. **Don't apply releases on truss elements**:
-   - "Actually, you don't need to apply releases on Truss elements"
-   - "They are treated as pinned already"
    - Remove releases from truss elements
    - Robot handles them as pinned by default
 
 4. **Block column rotation**:
-   - "Similar for the columns 1 to 4, they rotate around their axis"
-   - "They are based on pinned supports and all adjacent elements have pinned releases"
-   - "You may block RZ rotation on 'Basis' support label"
    - Add rotational restraint to supports
 
 5. **Correct model before generating**:
-   - "I guess you might have changed something in your model"
-   - "Then after the generation the results are not as expected"
    - Check the model carefully before generating
    - Fix all issues first
 
 6. **Save before model generation**:
-   - "Is there a possibility to undo this step? The normal way to undo steps did not work"
    - Always save before model generation
    - If the generation produces wrong results
    - Revert to the saved version
@@ -205,45 +177,31 @@ A steel stool model with contact between UC sections reports "No convergence of 
 ### Fix
 
 1. **Use compression-only bars directly**:
-   - "Use 'compression only' bars directly"
-   - "Without having to deal with nonlinear bar releases"
-   - "On Geometry/additional attributes/Advanced member properties"
    - This is simpler than released contact bars
 
 2. **Use recommended non-linear parameters**:
-   - "This last model with 'compression only' bars is working OK"
-   - "For all combinations with the recommended non-linear parameters"
    - Use the default non-linear parameters
    - Don't over-adjust tolerances
 
 3. **Fix mesh quality**:
-   - "You should review and fix your mesh"
-   - "Areas which have many nodes grouped very closed to each other are suspect"
    - Clean up clustered nodes
    - Improve mesh precision
 
 4. **Align contact bars**:
-   - "Align the contact bars"
    - Ensure contact bars are properly aligned
    - With the contact surfaces
    - Misalignment causes convergence issues
 
 5. **Mesh vertical plates first, then horizontal**:
-   - "Mesh the vertical plates 1st and the horizontal plates after"
    - The meshing sequence affects quality
    - Mesh vertical plates first
    - Then horizontal plates
 
 6. **Freeze meshes after satisfaction**:
-   - "Remember to freeze all the meshes after you are satisfied"
-   - "In order to save analysis precious time"
    - Freeze meshes to prevent re-meshing
    - And save computation time
 
 7. **Use released bars for non-converging cases**:
-   - "If you really need results for SW alone"
-   - "Then you should stick to your 1st model with released contact bars"
-   - "That is working fine with the recommended non-linear parameters"
    - Sometimes released bars converge better than compression-only
 
 ### Community Report
@@ -263,8 +221,6 @@ Robot crashes when running analysis for a model containing steel connection defi
 ### Fix
 
 1. **Install Robot 2024.0.1 hotfix**:
-   - "Corrected program instabilities while running analysis for a model containing steel connection definition"
-   - "Corrected the issue related to run-time error while sending the model containing analytical openings from Revit to Robot"
    - This is the primary fix
    - Download from Autodesk
 

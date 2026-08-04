@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://digitalproduction.com/2026/04/21/plasticity-2026-1/"
-  - "https://www.skool.com/ultimate-3d-membership-7140/unable-to-export-plasticity-keeps-crashing"
-  - "https://80.lv/articles/plasticity-2026-1-adds-new-commands-improves-old-ones"
 ---
 
 # Plasticity 2026 Export Crash from Complex CAD Scene with Wires and Hoses, PolySplines Mesh-to-NURBS Conversion G2 Continuity Validation, Boolean Operation Failure from Complex Topology, Surface Sculpting Deformation on Hard-Surface Models, and OBJ Export Scale and Up Axis Configuration: Scene Simplification, Continuity Inspection, Adaptive Topology, Brush Settings, and Export Configuration
@@ -55,8 +52,6 @@ The complex CAD scene with wires, hoses, and many small parts creates a heavy ge
    - To reduce memory
 
 5. **Use OBJ export with scale field**:
-   - "The OBJ exporter"
-   - "Now includes a Scale field"
    - Use OBJ export
    - With appropriate scale
 
@@ -89,21 +84,13 @@ When using PolySplines to convert mesh objects to NURBS surfaces, the conversion
 ### Fix
 
 1. **Validate surface editability**:
-   - "Validate the surface editability"
-   - "And continuity inspection"
-   - "On shapes that normally break conversions"
-   - "Not on the easy hero demo mesh"
    - Test on complex shapes
 
 2. **Check G2 continuity**:
-   - "Generating clean single and multi-span surfaces"
-   - "With G2 continuity"
    - Verify G2 continuity
    - Across all boundaries
 
 3. **Test before production use**:
-   - "New tools and innovations"
-   - "Should be tested before use in production"
    - Test PolySplines
    - Before production use
 
@@ -114,15 +101,9 @@ When using PolySplines to convert mesh objects to NURBS surfaces, the conversion
    - Before complex shapes
 
 5. **Inspect surface quality**:
-   - "That makes it relevant for workflows"
-   - "Where a mesh starts the shape exploration"
-   - "But a solid or surfacing stage"
-   - "Needs continuity you can inspect"
    - Inspect surface quality
 
 6. **Verify editability after conversion**:
-   - "Rather than freezing the result"
-   - "Into a one-way conversion"
    - Verify surfaces remain
    - Editable after conversion
 
@@ -149,9 +130,6 @@ Boolean operations (Union, Difference, Intersection, Slice) fail on complex geom
 ### Fix
 
 1. **Use Adaptive Topology**:
-   - "The 2025 update introduced Adaptive Topology"
-   - "Which analyzes the input geometry"
-   - "And generates cleaner edge flows"
    - Enable Adaptive Topology
 
 2. **Simplify input geometry**:
@@ -161,35 +139,21 @@ Boolean operations (Union, Difference, Intersection, Slice) fail on complex geom
    - Operations
 
 3. **Use Live Boolean for preview**:
-   - "Live Boolean feature"
-   - "See real-time previews"
-   - "Of boolean operations"
-   - "Before committing"
    - Use Live Boolean
 
 4. **Use Boolean History for non-destructive workflow**:
-   - "The 2026 version added Boolean History"
-   - "Which tracks all boolean operations"
-   - "And allows artists to modify or delete"
-   - "Individual operations"
    - Use Boolean History
 
 5. **Try different boolean mode**:
-   - "Five distinct modes: Union, Difference"
-   - "Intersection, Slice, and Soft Boolean"
    - Try different
    - Boolean modes
 
 6. **Use Soft Boolean for complex intersections**:
-   - "The new Soft Boolean introduced in 2026"
    - Use Soft Boolean
    - For complex intersections
    - That fail with standard modes
 
 7. **Align edges with natural flow**:
-   - "The system automatically aligns edges"
-   - "With the natural flow"
-   - "Of the part's geometry"
    - Let the system align edges
 
 ### Community Report
@@ -209,9 +173,6 @@ When using Surface Sculpting tools on hard-surface models, the deformation may c
 ### Fix
 
 1. **Use Push/Pull for controlled deformation**:
-   - "The Push/Pull tool allows artists"
-   - "To deform surfaces while maintaining"
-   - "Their underlying structure"
    - Use Push/Pull tool
 
 2. **Adjust brush settings carefully**:
@@ -221,15 +182,10 @@ When using Surface Sculpting tools on hard-surface models, the deformation may c
    - Deformation
 
 3. **Use Surface Sculpting for organic details only**:
-   - "Add organic details"
-   - "To hard-surface models"
    - Use for organic details
    - Not for precision changes
 
 4. **Verify geometry precision after sculpting**:
-   - "Without compromising"
-   - "The underlying precision"
-   - "Of the geometry"
    - Verify precision after sculpting
 
 5. **Use lower brush strength**:
@@ -267,13 +223,10 @@ When exporting to OBJ format, the exported model has incorrect scale or orientat
 ### Fix
 
 1. **Set Scale field in OBJ export**:
-   - "The OBJ exporter"
-   - "Now includes a Scale field"
    - Set the correct
    - Scale for export
 
 2. **Set Up Axis toggle**:
-   - "And Up Axis toggle"
    - Set the correct
    - Up Axis (Y or Z)
    - For target software
@@ -285,27 +238,16 @@ When exporting to OBJ format, the exported model has incorrect scale or orientat
    - For correct scale and orientation
 
 4. **Use precise distance values**:
-   - "Commands that share the Gizmo"
-   - "Can use Tab to enter"
-   - "A precise distance value"
    - Use precise values
 
 5. **Copy decimal places with Ctrl+C**:
-   - "Commands that use the input function (=)"
-   - "Now copy up to 8 decimal places"
-   - "With Ctrl+C"
    - Use Ctrl+C for precision
 
 6. **Use Export Hidden Line for SVG**:
-   - "Export Hidden Line"
-   - "Generates technical drawings as SVG"
    - Use Export Hidden Line
    - For technical drawings
 
 7. **Check SVG output**:
-   - "Confirm your SVG consumers"
-   - "Interpret strokes, dashes, and hatching"
-   - "The way your team expects"
    - Verify SVG output
 
 ### Community Report

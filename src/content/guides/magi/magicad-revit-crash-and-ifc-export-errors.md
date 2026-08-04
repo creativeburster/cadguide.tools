@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.magicad.com/mep-design/support-training/support/troubleshooting/"
-  - "https://www.magicad.com/service-release-magicad-2025-ur-1-1-for-autocad-and-bricscad/"
-  - "https://community.graphisoft.com/t5/Collaboration-with-other/Problems-with-Archicad-IFC-export-to-MagiCAD/td-p/262938"
 ---
 
 # MagiCAD Revit Crash and IFC Export Errors: Fatal Error AccessViolationException When Checking Dataset Writing Permission in Worksharing Environment, Updating Support and Hangers in Older Project Causes Revit to Crash from Version Conflict, Wrong Friction Loss Method in Sprinkler Calculation from Hazen-Williams Instead of Darcy-Weissbach Requiring System Option Rerun, Active Storey Changes After Duct or Pipe Calculations with Multiple Drawings Open, and IFC Export Version Conflict McHpv Requiring ARX BRX File Update
@@ -31,7 +28,6 @@ MagiCAD checks dataset writing permissions when opening a project. In worksharin
 ### Fix
 
 1. **Update to the latest MagiCAD service release**:
-   - "Fatal error happened in certain scenarios in worksharing environment when dataset content was opened"
    - Check for MagiCAD updates in the Download Portal
    - Install the latest UR (Update Release) version
    - The fix may be included in a service release
@@ -55,7 +51,6 @@ MagiCAD checks dataset writing permissions when opening a project. In worksharin
    - Configure in MagiCAD User Settings
 
 5. **Contact MagiCAD support**:
-   - "Fatal error: AccessViolationException when checking the dataset writing permission"
    - This is listed as a known issue on the troubleshooting page
    - Report the specific worksharing scenario to support
    - Provide the Revit version and MagiCAD version
@@ -77,7 +72,6 @@ Older MagiCAD projects have Support & Hangers data in a format incompatible with
 ### Fix
 
 1. **Update MagiCAD before opening the project**:
-   - "If you update the S&H products when opening the project or after the project is already open, Revit crashes"
    - Install the latest MagiCAD UR before opening the old project
    - The latest UR may have fixed the crash
    - Check the MagiCAD Download Portal
@@ -101,7 +95,6 @@ Older MagiCAD projects have Support & Hangers data in a format incompatible with
    - Check for errors after migration
 
 5. **Contact MagiCAD support for migration assistance**:
-   - "Updating Support & Hangers in older project causes Revit to crash"
    - This is listed as a known issue in MagiCAD 2024
    - Contact support with the project file
    - They may provide a manual migration procedure
@@ -123,13 +116,10 @@ This is a known bug in MagiCAD 2025 UR-1 and earlier. The Network calculation op
 ### Fix
 
 1. **Update to MagiCAD 2025 UR-1.1 or later**:
-   - "The Network option for calculating sprinkler networks uses the wrong method for friction loss (Hazen-Williams instead of Darcy-Weissbach)"
-   - "Fixed in MagiCAD 2025 UR-1.1 for AutoCAD and BricsCAD"
    - Download from the MagiCAD Download Portal
    - Use Check for Updates in MagiCAD
 
 2. **Use the System option instead of Network**:
-   - "If the calculation is later performed with the System option, the Network option also changes to the correct method"
    - Run the calculation with the System option first
    - This temporarily fixes the Network option
    - Results will be correct for the current session
@@ -141,7 +131,6 @@ This is a known bug in MagiCAD 2025 UR-1 and earlier. The Network calculation op
    - This ensures the correct friction loss method
 
 4. **Delete the unnecessary system**:
-   - "Performing the calculation with the wrong calculation method also adds a new unnecessary system into the project"
    - After calculation, check for extra systems in the project browser
    - Delete the unnecessary system
    - This prevents confusion in system management
@@ -169,8 +158,6 @@ MagiCAD for BricsCAD sometimes changes the active storey after duct or pipe calc
 ### Fix
 
 1. **Update to MagiCAD 2025 UR-1.1 or later**:
-   - "MagiCAD for BricsCAD sometimes changes the active storey after duct or pipe calculations if multiple drawings are open at the same time"
-   - "Active storey changes after running duct or pipe calculations — Fixed in MagiCAD 2025 UR-1.1"
    - Download from the MagiCAD Download Portal
 
 2. **Close other drawings before running calculations**:
@@ -244,7 +231,6 @@ MagiCAD uses ARX (AutoCAD Runtime Extension) or BRX (BricsCAD Runtime Extension)
    - Remove old MagiCAD folders from the path
 
 6. **Contact MagiCAD support**:
-   - "A Version conflict with McHpv_r24x64.arx or Version conflict with McHpv_V24.brx error when starting the IFC Export"
    - This is listed as a known issue
    - Contact support with the MagiCAD version and AutoCAD/BricsCAD version
    - They can provide the correct ARX/BRX files

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.moldex3d.cloud/question/analysis-failed-randomly-intels-crashing-13th-and-14th-gen-cpus/"
-  - "https://forum.moldex3d.cloud/answer/re-error-4000-during-cooling-in-an-overmolding-simulation/"
-  - "https://forum.moldex3d.cloud/question/issue-with-high-shear-rates-in-exponential-phan-thien-tanner-viscoelastic-model/"
 ---
 
 # Moldex3D Injection Molding Simulation Errors: Random Analysis Failure from Intel 13th 14th Gen CPU Instability Requiring CPU Replacement or AMD Workaround, Error 4000 During Cooling from Non-Matching Mesh Between Part and Insert Requiring Matching Mesh with Non-Matching Faces Disabled, High Shear Rates in PTT Viscoelastic Model from Corner Instability Requiring Mesh Refinement or Solver Settings, License Task Exceeded from Concurrent Jobs Requiring License Management, and Symmetry Mesh Preprocessing Crash from Mesh Issues Requiring 2025 R1 Update
@@ -37,7 +34,6 @@ Random analysis failure in every stage of Moldex3D analysis — COOL, FLOW, and 
    - This is the primary fix from Intel
 
 2. **Use AMD-based workstation**:
-   - "All our tests are based on AMD CPU"
    - If possible, run Moldex3D on AMD-based systems
    - AMD CPUs don't have the 13th/14th Gen instability issue
    - This is the most reliable workaround
@@ -83,13 +79,11 @@ Error 4000 during cooling in an overmolding simulation. The error occurs even wi
 ### Fix
 
 1. **Regenerate the mesh**:
-   - "Try to regenerate the mesh, and it should start running on your server"
    - Delete the existing mesh
    - Regenerate from scratch
    - This may create matching meshes
 
 2. **Disable "Allow non-matching faces"**:
-   - "Tip to create 'matching mesh' — please untick 'Allow non-matching faces' at preference setting interface"
    - Go to Preference Settings
    - Untick "Allow non-matching faces"
    - This forces the mesher to create matching meshes
@@ -225,7 +219,6 @@ Moldex3D uses a license system that limits the number of concurrent analysis tas
 6. **Monitor license usage**:
    - Use the Computing Manager to monitor
    - Set maximum tasks to match available licenses
-   - "RC Server更改IP後造成計算管理員顯示的最大任務為0無法跑分析"
    - If max tasks shows 0 after IP change, reconfigure the server
 
 ### Community Report
@@ -245,7 +238,6 @@ Moldex3D crashes during preprocessing when using symmetry mesh. The crash occurs
 ### Fix
 
 1. **Update to Moldex3D 2025 R1**:
-   - "Fixed symmetry mesh issues causing preprocessing crashes"
    - Install Moldex3D 2025 R1
    - This is the primary fix
    - The symmetry mesh bug is resolved

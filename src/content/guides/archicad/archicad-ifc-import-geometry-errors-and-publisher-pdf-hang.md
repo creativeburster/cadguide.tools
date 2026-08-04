@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://community.graphisoft.com/t5/Documentation/PDF-Purgatory/td-p/690440"
-  - "https://community.graphisoft.com/t5/Collaboration-with-other/Ifc-placed-with-hotlink-has-errors-in-geometry/td-p/368435"
-  - "https://community.graphisoft.com/t5/Collaboration-with-other/My-Experience-with-Archicad-IFC-Mapping-Methods/td-p/653254"
 ---
 
 # ArchiCAD IFC Import Geometry Errors and Publisher PDF Hang: IFC General Import Produces Incorrect Geometry from Parametric Construction Elements Translator Requiring Objects Conversion, BREP Geometry in IFC Can Only Import as Morphs or Objects Not Native Construction Elements, Publisher Hangs on Section Elevation Sheets from Vector Fill Overload and Image Textures, IFC Property Mapping Limitations for Complex Data Transformations Requiring Hybrid Property Manager Approach, and Hotlink Module IFC Geometry Errors from Missing Translator Settings
@@ -33,18 +30,15 @@ The "General Import" translator has a geometry conversion option set to "Paramet
 1. **Switch geometry conversion to "Objects"**:
    - In the IFC Translator settings for "General Import"
    - Change "Building elements for conversion" from "Parametric Construction and MEP Elements" to "Objects"
-   - "If you switch this one to 'Objects' you should get correct geometry conversion"
    - This matches the "Exact Geometry" translator settings
 
 2. **Trade-off: elements become Objects instead of native**:
-   - "Beams, columns are now objects"
    - Properties are still accessible in the element dialog
    - But hovering over an element won't show the IFC type popup
    - Users need to open the dialog to consult properties
 
 3. **Suspend groups to select individual elements**:
    - When imported as Objects, all elements may be grouped as one object
-   - "Maybe you only have to suspend groups, then you can select each element"
    - Use Edit > Suspend Groups to select individual elements
 
 4. **Use "Exact Geometry (object based)" translator**:
@@ -53,7 +47,6 @@ The "General Import" translator has a geometry conversion option set to "Paramet
    - Elements are individually selectable after suspending groups
 
 5. **Link IFC into an empty PLN first**:
-   - "We usually link IFCs into an empty PLN started from our template, troubleshoot there, save, and then link into the master file as a Module"
    - This allows troubleshooting in isolation
    - Save the cleaned file and link it into the master model
 
@@ -86,12 +79,10 @@ The IFC file was exported with BREP (Boundary Representation) geometry. ArchiCAD
 
 3. **Accept Morphs/Objects for BREP IFC files**:
    - If SweptSolid export is not possible, accept Morphs or Objects
-   - "With BREP geometry in IFC, you can only get either Morphs or Objects after import in ArchiCAD"
    - Properties and classification data are still preserved
    - Use schedules and classification systems to manage the data
 
 4. **Use Solibri for model checking**:
-   - "In Solibri Anywhere the model looks OK"
    - Solibri handles BREP geometry natively
    - Use Solibri for clash detection and model checking
    - Use ArchiCAD for documentation and detailing
@@ -118,13 +109,11 @@ ArchiCAD's PDF output contains unoptimized vector fills and image textures. Sect
 ### Fix
 
 1. **Publish sheets individually**:
-   - "We can, painstakingly, publish them one sheet at a time"
    - This works but is very time-consuming
    - Use batch publishing for plans and 3D views (which work fine)
 
 2. **Reduce image compression settings**:
    - In Publisher settings, change image compression from "Lossless" to compressed
-   - "Change image compression from lossless will make for much smaller files"
    - Warning: previous attempts at compression produced "psychedelic art" textures
    - Test with a single sheet first
 
@@ -134,24 +123,18 @@ ArchiCAD's PDF output contains unoptimized vector fills and image textures. Sect
    - These reduce PDF complexity and file size
 
 4. **Flatten PDF after export**:
-   - "Open the file in Pixelmator Pro (Mac) and export as flattened PDF"
-   - "File size drops from 36MB to less than 10MB and opens instantly"
    - This is a post-processing workaround but effective
    - Other tools: Adobe Acrobat Pro, PDF Optimizer
 
 5. **Use JPEG/TIFF/PNG output instead of PDF**:
-   - "Attempts to output in jpeg, tiff, or png format reduces the size"
    - Warning: output has 2-3cm empty border making drawings out of scale
    - Not a viable workaround for scaled drawings
 
 6. **Cull non-visible elements**:
-   - "AC views need to be able to cull non-visible elements"
-   - "You open a PDF in Acrobat, delete a fill, and find a million lines underneath it"
    - Use the "Cut Fill" display options to reduce visible fills
    - Use "Solid" or "Empty" cut fills instead of "Vector" patterns
 
 7. **Request "flattened" PDF option from Graphisoft**:
-   - "Graphisoft: Please add the option to publish 'flattened' PDF files to a user defined resolution"
    - This would resolve the issue at the source
    - Vote for feature requests on Graphisoft Community
 
@@ -172,13 +155,11 @@ The IFC Translator's Property Mapping is designed for simple one-to-one property
 ### Fix
 
 1. **Use a hybrid approach**:
-   - "Using Property/Classification Managers for data serving multiple purposes in our workflow, while using the IFC Translator for export-specific mappings"
    - Property Manager expressions for complex calculations
    - Classification Manager for consistent classification
    - IFC Translator for final export mapping
 
 2. **Use Property Manager expressions**:
-   - "Property Manager expressions with Classification Manager offers significantly more control"
    - Create sophisticated conditional expressions
    - Use mathematical operations on element parameters
    - Data lives in the model, available for schedules and quantity takeoffs
@@ -190,7 +171,6 @@ The IFC Translator's Property Mapping is designed for simple one-to-one property
    - Also available for schedules and visualizations
 
 4. **Accept increased model complexity**:
-   - "The downside is increased model complexity"
    - More properties = larger model file size
    - Balance between data richness and model performance
    - Only create properties that serve multiple purposes
@@ -205,7 +185,6 @@ The IFC Translator's Property Mapping is designed for simple one-to-one property
    - Properties serving multiple purposes → Property Manager
    - Export-specific properties → IFC Translator
    - Classification data → Classification Manager
-   - "Has anyone developed best practices for deciding which properties belong in which system?"
 
 ### Community Report
 
@@ -224,25 +203,21 @@ The IFC file from Revit may use geometry representations that ArchiCAD's transla
 ### Fix
 
 1. **Try different IFC import translators**:
-   - "Try to use different IFC import parameters from Archicad which will undoubtedly be able to correct the model"
    - Test "Exact Geometry" vs. "General Import" translators
    - Test with different geometry conversion options (Objects, Morphs, Parametric)
 
 2. **Check Revit IFC export settings**:
-   - "What were the IFC export settings from Revit? What were the geometry conversion options?"
    - Request the Revit user to use specific export settings
    - Ask for "SweptSolid" geometry representation if possible
    - Ask for IFC2x3 or IFC4 coordination view
 
 3. **Link IFC into an empty PLN first**:
-   - "We usually link IFCs into an empty PLN started from our template, troubleshoot there, save, and then link into the master file as a Module"
    - This isolates the IFC import from the master model
    - Troubleshoot geometry in the empty PLN
    - Save and link the cleaned file as a Module
 
 4. **Remove unnecessary elements before linking**:
    - In the empty PLN, remove rivets, nuts, bolts, and washers
-   - "Quite necessary on a 24,000m² distribution facility"
    - These small elements bloat the model and cause performance issues
    - Use layer combos to manage visibility
 

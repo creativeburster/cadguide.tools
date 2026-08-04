@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/142347/a-legacy-dimensions-in-true-position-reporting-question"
-  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/147220/cad-import-and-measurement"
-  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/141885/cad-model-refuses-to-align-with-reality"
 ---
 
 # PC-DMIS CAD Alignment and True Position Reporting Errors: Legacy Dimensions True Position Uses Internal Datum Reference Frame D1 D2 D3 Differing from Program Alignment, CAD Model Axis Mismatch Requiring Part/Machine Setup Axis Configuration, CAD Refuses to Align with Reality from Original Translation Overriding Alignment Requiring CAD=PART, Point Cloud Best Fit Alignment Doesn't Match Specific Surface Requiring Plane Alignment and CAD Offset, and CAD Import Coordinate System Upside Down Z Facing Down Requiring Transform or Axis Reassignment
@@ -31,31 +28,21 @@ Legacy dimensions with "use datum" and "fit to datums" checked create an interna
 ### Fix
 
 1. **Understand the two methods**:
-   - "In the first dimension, you have 'use datum' and 'fit to datums' checked"
-   - "This means it will use those features to create a datum reference frame in the background — essentially an internal alignment"
-   - "Your other dimensions are coming from whatever alignment you have in your program"
    - The difference is between auto alignment vs. programmed alignment
 
 2. **Use consistent alignment method**:
-   - "I was taught to never use auto alignment"
-   - "A very simple alignment: level to plane A, rotate from B to C, then transfer XYZ to A or B"
    - Create a manual alignment using datum features
    - This ensures the program alignment matches the datum reference frame
 
 3. **Use BFRE for datum plane calculation**:
-   - "Plane A consists of 12 points from A1 and A2, I think it should use BFRE instead of BF"
    - BFRE (Best Fit Recompensate Error) removes form error from the datum calculation
-   - "Construct a Primary Datum plane and use the Constrained_L2 math type with BFRE"
    - This provides more accurate datum reference
 
 4. **Use Max_insc for B and C datums**:
-   - "In order to reduce diameter out of spec, B and C use Max_insc"
    - Maximum inscribed cylinder/circle simulates the mating envelope
    - This is the correct math type for datum features that are holes/cylinders
 
 5. **Migrate to XactMeasure or Geometric Tolerance**:
-   - "Constructing a primary datum plane to use in the alignment would only make sense if running a current version using the geometric tolerance command"
-   - "Both 2015.1 and 2019.2 use XactMeasure which does not recalculate features"
    - XactMeasure handles datum reference frames internally and consistently
    - Geometric Tolerance command (PC-DMIS 2018+) is the most accurate
 
@@ -81,37 +68,24 @@ The CAD model was created with a different axis convention than the CMM. The CAD
 ### Fix
 
 1. **Configure Part/Machine axis mapping**:
-   - "Go to Setup Options (F5), Part/Machine tab, Part Setup"
-   - "Change the CAD AXIS to the Machine AXIS"
-   - "By doing this, it will 'change' the vector of the points you use for your manual alignment"
    - Map CAD Z to Machine -Z (or appropriate axis)
 
 2. **Use Read Point alignment**:
-   - "You can either do it with a read point, and then a readpoint alignment"
-   - "Or if you are used to doing manual alignments, measure your alignment features, then do your actual alignment, and then select CAD = PART"
    - Read Point is quicker for one-off parts
 
 3. **Transform CAD coordinate system**:
-   - "How do I transform coordinate system to other point on my CAD model?"
    - Use Transform function in PC-DMIS to rotate/translate the CAD model
    - Or use external CAD software (SolidWorks, etc.) to reorient before import
 
 4. **Use CAD=PART after alignment**:
-   - "Measure your alignment features, then do your actual alignment, and then select CAD = PART"
    - This syncs the CAD model position with the measured part position
-   - "Save the program before doing this as it can not be undone"
 
 5. **Check part/machine axis configuration before alignment**:
-   - "The first thing I would check is to see if the part/machine axis are configured to your part"
    - F5 > Part/Machine tab
    - Verify axis mapping is correct
    - Adjust before performing any alignment
 
-6. **Use Readpoint for new users**:
-   - "If you are brand new, use the readpoint function — it's the quickest way to help your machine find the part"
-   - "Insert a readpoint by typing 'read' in the edit window"
-   - "Place your probe manually at the readpoint position"
-   - "Then execute the program from the readpoint"
+6. **Use Readpoint for new users**.
 
 ### Community Report
 
@@ -130,37 +104,25 @@ When the CAD model is imported, PC-DMIS stores an original translation. This tra
 ### Fix
 
 1. **Understand CAD translation vs. alignment**:
-   - "The original translation of the CAD when uploading will not automatically translate to the alignment"
-   - "It will move the alignment to the original translation"
-   - "I figured this out by moving the original translation and PC-DMIS moved the alignment to that translation"
    - The CAD translation has priority over the alignment
 
 2. **Transform the CAD model before alignment**:
    - Use Insert > Transform to move the CAD model to the desired position
-   - "The position and orientation of the model origin is set either in an external CAD software or via the transform function within PC-DMIS"
    - Transform the CAD so its origin matches the desired alignment origin
    - Then perform the alignment
 
 3. **Use CAD=PART carefully**:
-   - "CAD=PART can not be undone — save the program first"
-   - "Just make sure you save the program before doing the CAD=PART command, just in case it does something weird"
    - After alignment, use CAD=PART to sync the model with the part
    - If it doesn't work, close without saving and try again
 
 4. **Use external CAD software to reposition**:
-   - "I recommend using an external CAD software to do that"
    - Open the CAD model in SolidWorks, Fusion 360, etc.
    - Move the origin to the desired position
    - Re-export and import into PC-DMIS
 
-5. **Create a partial alignment**:
-   - "Use the 'new alignment' tool to level and origin to the plane, just in the direction perpendicular to the plane"
-   - "Now translate back the nominal CAD distance to put the trihedron back at the CAD origin"
-   - "This is only a partial alignment as you only constrained 3 degrees of freedom"
-   - "You will probably have to do a CAD=PART command once you translate back"
+5. **Create a partial alignment**.
 
 6. **Avoid fully manual programming**:
-   - "I really want to avoid doing a fully manual program if I can avoid it"
    - Use the transform + alignment + CAD=PART workflow
    - If all else fails, re-export the CAD with correct origin from external software
 
@@ -181,39 +143,24 @@ The point cloud alignment utility performs a global best fit, which minimizes ov
 ### Fix
 
 1. **Create a plane on the critical surface**:
-   - "Create a plane on the surface you want to use in the alignment"
-   - "Then align using the created plane"
    - Extract the plane from the point cloud on the desired surface
    - Use this plane in the alignment
 
 2. **Use point cloud alignment tool for initial best fit**:
-   - "Use the point cloud alignment tool and do a best fit"
    - This gets the point cloud roughly aligned with the CAD
    - Then refine with the targeted plane alignment
 
 3. **Use CAD offset to filter edge points**:
-   - "Go back and do an auto plane on the desired plane"
-   - "Use the 'CAD offset' to filter out the points around the edge"
-   - "So you are not picking up any fillets or anything like that"
    - This ensures only the flat surface is used for alignment
 
 4. **Use New Alignment for plane leveling**:
-   - "Use the 'new alignment' tool to level and origin to the plane"
-   - "Just in the direction perpendicular to the plane"
-   - "Now translate back the nominal CAD distance to put the trihedron back at the CAD origin"
    - This constrains 3 degrees of freedom (plane orientation and Z-origin)
 
 5. **Perform CAD=PART after partial alignment**:
-   - "You will probably have to do a CAD=PART command once you translate back to the CAD origin"
-   - "As this is only a partial alignment"
    - Save the program before CAD=PART
    - CAD=PART cannot be undone
 
-6. **Understand alignment vs. CAD origin**:
-   - "Using the 'new alignment' does not change the position and orientation of the origin on the CAD model"
-   - "The 'new alignment' changes the position and orientation of the trihedron"
-   - "The whole concept is to make the trihedron match the CAD origin"
-   - "Once you do that, the COP will overlay the model"
+6. **Understand alignment vs. CAD origin**.
 
 ### Community Report
 
@@ -232,10 +179,7 @@ The CAD model was created with a Z-down convention (common in aerospace and some
 ### Fix
 
 1. **Change CAD axis to Machine axis mapping**:
-   - "Go to Setup Options (F5), Part/Machine tab, Part Setup"
-   - "Change the CAD AXIS to the Machine AXIS"
    - Map CAD Z to Machine -Z
-   - "By doing this, it will 'change' the vector of the points you use for your manual alignment"
 
 2. **Transform the CAD model**:
    - Use Insert > Transform > Rotate
@@ -250,8 +194,6 @@ The CAD model was created with a Z-down convention (common in aerospace and some
    - Re-import into PC-DMIS
 
 4. **Use Readpoint alignment**:
-   - "Use the readpoint function — it's the quickest way to help your machine find the part"
-   - "Insert a readpoint by typing 'read' in the edit window"
    - Place probe at the readpoint position manually
    - Execute from the readpoint
 
@@ -261,11 +203,7 @@ The CAD model was created with a Z-down convention (common in aerospace and some
    - The point vectors should now be correct
    - Then use CAD=PART to sync
 
-6. **For high-volume parts, use DCC alignment**:
-   - "If this is going to be a high-volume part with repeatable setup"
-   - "Use the manual alignment option with marked features"
-   - "The routine goes directly into DCC measurement once executed"
-   - "Eliminating the need for the operator to position the probe every run"
+6. **For high-volume parts, use DCC alignment**.
 
 ### Community Report
 

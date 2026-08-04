@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://nextlimitsupport.atlassian.net/wiki/spaces/maxwell/pages/22686242/Network+troubleshooting"
-  - "https://forum.maxwellrender.com/viewtopic.php?p=402128"
-  - "https://forum.maxwellrender.com/viewtopic.php?f=1&p=399762&t=45682"
 ---
 
 # Maxwell Render Network Rendering and Firefly Errors: Network Node Communication Fails from Firewall Blocking TCP UDP Ports 45454-45474 Requiring Firewall Rules, MXI Merging Fails from Different Maxwell Versions on Nodes Requiring Version Sync, Antivirus Interferes with Network Rendering Causing Node to Stop Communicating Requiring AV Exclusion, Fireflies and Noise in Ultra-Reflective Scene with Many Light Sources Requiring Denoiser and Scene Openings, and Render Crashes at 9SL from RAM Exhaustion in Complex Mirrored Space Requiring Resolution Reduction
@@ -31,8 +28,6 @@ Maxwell Network uses TCP and UDP ports 45454-45474 by default. Firewalls on the 
 ### Fix
 
 1. **Create firewall rules for Maxwell Network**:
-   - "Make sure firewalls do not interfere with the network communication by first running a job with firewalls disabled"
-   - "Network uses by default the TCP and UDP port range of 45454-45474"
    - Windows Firewall: "Allow an app through Windows Firewall"
    - Add mxnetwork application from the Maxwell installation folder
 
@@ -43,26 +38,21 @@ Maxwell Network uses TCP and UDP ports 45454-45474 by default. Firewalls on the 
    - Re-enable firewall with proper rules
 
 3. **Change port range if needed**:
-   - "You can change this port range but it is very important to change the range in the preferences of Manager/Monitor and all Nodes"
    - File > Preferences in Manager/Monitor/Node
    - Change the port range to a non-blocked range
    - Update all machines to the same port range
 
 4. **Check Manager log for warnings**:
-   - "The 'Minimum Log Verbosity' setting in Manager preferences must be set to at least 'Warnings' level"
    - File > Preferences > Logging > Minimum Log Verbosity: Warnings
    - Check the log for node connection attempts
    - Identify which nodes are blocked
 
 5. **Use gigabit network**:
-   - "We recommend gigabit network"
    - Ensure all machines are on a gigabit network
    - Wi-Fi connections may be too slow or unreliable
    - Use wired Ethernet for network rendering
 
 6. **Set computers to Never sleep**:
-   - "When a computer enters in Sleep mode, it stops all its activity"
-   - "Set the sleep option for all your network computers to Never"
    - Power Options > Put the computer to sleep: Never
    - This prevents nodes from going offline during rendering
 
@@ -83,14 +73,9 @@ Network cooperative rendering job completes on all nodes. The Manager attempts t
 ### Fix
 
 1. **Sync Maxwell versions on all nodes**:
-   - "Make sure that all the machines in the network have the same version of Maxwell Render installed"
-   - "Many transference problems in the network are caused by having different Maxwell Render versions"
-   - "Updating to the last version on all machines will ensure the best communication"
    - Check version in the title window of Manager/Monitor/Node
 
 2. **Check Manager log for version warnings**:
-   - "You can check the Manager log for any warnings of different versions running"
-   - "It will also inform you which Node(s) is running a different version"
    - Set Minimum Log Verbosity to Warnings
    - Identify and update the outdated node(s)
 
@@ -101,15 +86,10 @@ Network cooperative rendering job completes on all nodes. The Manager attempts t
    - Verify all nodes show the same version
 
 4. **Use homogeneous network**:
-   - "Keep your network as homogeneous as possible"
-   - "Similar computing powers and transference ratios will make the communication much easier"
    - Use similar GPUs and CPUs across nodes
    - This ensures consistent rendering and merging
 
 5. **Check MXI file sizes**:
-   - "When rendering at high resolution and especially with Multilight turned on, each MXI file can grow to several gigabytes"
-   - "Ensure you have enough disc space available in the final output paths"
-   - "The Manager will give you an error message if there is insufficient disc space"
    - Check disk space before starting cooperative jobs
 
 ### Community Report
@@ -129,14 +109,10 @@ A Maxwell Network Node stops communicating with the Manager during rendering. Th
 ### Fix
 
 1. **Exclude Maxwell folders from antivirus scanning**:
-   - "The solution was to prevent the Anti Virus application from monitoring the activity of the Maxwell install folder and the temporary folder"
-   - "Make sure in AV software to exclude monitoring of the network temp folder and the Maxwell install folder"
    - Add the Maxwell installation folder to AV exclusions
    - Add the temp folder to AV exclusions
 
 2. **Find the temp folder location**:
-   - "You can find out where the temporary folder is on a particular node by going to the Node UI"
-   - "File > Open temp folder"
    - Note the temp folder path
    - Add this path to AV exclusions
 
@@ -159,7 +135,6 @@ A Maxwell Network Node stops communicating with the Manager during rendering. Th
    - Apply the AV exclusion fix
 
 6. **Use UNC paths for output**:
-   - "UNC format is the safest way to write the output paths"
    - Use `\\computername\myfolder\myrender.png` format
    - This ensures all nodes can write to the output location
    - Local paths may not be accessible from all nodes
@@ -181,26 +156,18 @@ Ultra-reflective scenes with many light sources create extremely complex light t
 ### Fix
 
 1. **Use Maxwell 5.1+ Denoiser with firefly removal**:
-   - "If v5, try using the Denoiser which has an option to remove fireflies"
    - Enable Denoiser in render settings
    - Enable the firefly removal option
    - The denoiser can clean up most fireflies
 
 2. **Reduce camera resolution**:
-   - "Maybe also look at reducing the camera resolution to lower the file size"
-   - "So it doesn't bomb-out as your RAM gets used up"
    - Lower resolution reduces memory usage
    - Use AI upscaling for final output if needed
 
 3. **Add openings in the model**:
-   - "Including opening(s) in the model to allow light rays to exit the scene"
-   - "Which reduces the light rays bouncing around for longer periods"
-   - "This might require turning off the wall(s) behind the camera"
-   - "And not shown in any reflection off the wall mirrors"
    - Remove or hide one wall to let light escape
 
 4. **Reduce spotlight intensity**:
-   - "The spotlights seem to make things significantly worse"
    - Reduce spotlight intensity
    - Use more diffuse area lights instead of spotlights
    - This reduces concentrated high-intensity areas
@@ -212,7 +179,6 @@ Ultra-reflective scenes with many light sources create extremely complex light t
    - This reduces infinite bounce paths
 
 6. **Use the black horizon fix**:
-   - "There's a way to make it not show at all"
    - Increase the maximum ray bounce depth
    - Or add a subtle environment light to fill dark areas
    - The black horizon is from rays exhausting their bounce limit
@@ -224,8 +190,6 @@ Ultra-reflective scenes with many light sources create extremely complex light t
    - Balance SL with denoiser strength
 
 8. **Use GPU engine improvements (Maxwell 5.1+)**:
-   - "The transparent materials now do not produce incorrect white fireflies"
-   - "Better firefly cleanup"
    - Update to Maxwell 5.1 or later
    - GPU engine has improved firefly handling
 
@@ -246,13 +210,10 @@ Complex scenes with many reflective surfaces generate large MXI files. Each addi
 ### Fix
 
 1. **Reduce render resolution**:
-   - "Reducing the camera resolution to lower the file size being generated"
-   - "So it doesn't bomb-out as your RAM gets used up"
    - Halve the resolution to reduce memory by ~4x
    - Use AI upscaling for final output
 
 2. **Disable Multilight**:
-   - "When rendering at high resolution and especially with Multilight turned on, each MXI file can grow to several gigabytes"
    - Disable Multilight if not needed
    - Multilight stores per-light contributions, increasing file size
    - This significantly reduces memory usage
@@ -282,7 +243,6 @@ Complex scenes with many reflective surfaces generate large MXI files. Each addi
    - This reduces per-render memory usage
 
 7. **Use Maxwell 5.1+ GPU engine**:
-   - "Tons of improvements in the GPU engine"
    - GPU rendering uses GPU VRAM instead of system RAM
    - May have different memory limits
    - Test if GPU rendering avoids the crash

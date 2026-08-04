@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://support.spitfirepm.com/kba-01810/"
-  - "https://support.spitfirepm.com/kba-01853/"
-  - "https://support.spitfirepm.com/kba-01466/"
 ---
 
 # Spitfire Project Management File and Data Errors: SOV Workbook Data Set Not OK from Invalid XML Control Characters Requiring Data Cleanup, Word File Not Found from sfLink Lock Timeout Requiring MinUNCEditSeconds.dev Configuration, Cannot Open Word or Excel from Chromium Browser from ClickOnce Extension and VSTO Issues Requiring Device Setup, Integrity Check Report Data Issues from CCO Lines and Orphan Pay Requests Requiring Manual Repair, and XTS Project Task Sync Error from Empty Task ID or Description Requiring Cost Code Fix
@@ -31,31 +28,19 @@ When trying to open the SOV (Schedule of Values) workbook on a Pay Application, 
 ### Fix
 
 1. **Create a dev file to capture the XML**:
-   - "Create an empty file named C:\SPITFIRE\sfSOVBilling.Dev"
-   - "Be sure the extension is .dev, not .dev.txt"
    - This enables dev mode for the SOV workbook
    - The XML data will be saved to a file
 
-2. **Find the invalid XML data**:
-   - "Open the SOV workbook and proceed through the prompts"
-   - "When you get the Data Set is NOT OK message, look for c:\spitfire\sfSOVLoadUp.xml"
-   - "Open c:\spitfire\sfSOVLoadUp.xml in an XML validation tool (for example Notepad++)"
-   - "The invalid node(s) are the cause of the issue"
+2. **Find the invalid XML data**.
 
 3. **Fix the invalid data**:
-   - "You can use the sfPMS POKE tool (with the bad node's RowGuid)"
-   - "Or expose the document item grid to simplify the data for that row"
    - Find the description with invalid characters
    - Remove or simplify the problematic characters
 
 4. **Alternative: use %temp% folder**:
-   - "Don't have access to c:\spitfire? Open SOV normally (skip step 1)"
-   - "At step 3 above look in the %temp% folder for the newest .XML file"
-   - "Copy this someplace and use your XML validation tool"
    - Find and fix the invalid data
 
 5. **Remove the dev file after fixing**:
-   - "Remember to remove the C:\SPITFIRE\sfSOVBilling.dev file!"
    - Delete the dev file
    - Restart the SOV workbook
    - Verify it opens correctly
@@ -67,9 +52,6 @@ When trying to open the SOV (Schedule of Values) workbook on a Pay Application, 
    - Use only standard ASCII characters
 
 7. **Use the Items Grid**:
-   - "If the SOV is small, you might make the Items Grid visible"
-   - "Review the descriptions"
-   - "But this can become a needle in a haystack approach"
    - Use the XML method for large SOVs
 
 ### Community Report
@@ -89,39 +71,25 @@ When trying to open a Word file attachment in Spitfire, the message appears: "So
 ### Fix
 
 1. **Check the Documents folder path**:
-   - "Spitfire temporarily places files in a Spitfire Catalog folder created in the default Windows Documents folder"
-   - "If the pathname for 'My Documents' has been changed or corrupted, Spitfire and the file editor may get confused"
    - Right-click Documents > Properties > Location tab
    - Ensure the path is straightforward
 
-2. **Create or edit MinUNCEditSeconds.dev**:
-   - "Open sfLink, right click on the [S] icon in the tray and choose 'Show Local Catalog Folder'"
-   - "Drill into the Backups folder"
-   - "Look for the file MinUNCEditSeconds.dev"
-   - "If it's there, open and increase the number of seconds"
-   - "If not, create a text file called MinUNCEditSeconds.dev"
+2. **Create or edit MinUNCEditSeconds.dev**.
 
 3. **Set the timeout value**:
-   - "The following should be in the file: MinEditSeconds=45;"
    - Increase from the default to 45 seconds or more
    - This gives Word more time to acquire the lock
    - Save and close the file
 
 4. **Restart sfLink**:
-   - "Close sfLink"
-   - "Go to the very bottom of your screen, to your system tray"
-   - "Click to expand it, then select the Spitfire icon"
-   - "Right-mouse click to open a menu, then select Close sfPMS Link Helper"
    - Restart sfLink
 
 5. **Fix the Documents folder location**:
-   - "If your folder path is not straightforward, contact your IT Admin to correct it"
    - Move Documents back to default location
    - Remove special characters from the path
    - Avoid OneDrive or VPN paths for Documents
 
 6. **Check for OneDrive interference**:
-   - "The path is remote (stored on a VPN or on OneDrive)"
    - Exclude the Spitfire Catalog folder from OneDrive sync
    - Or disable OneDrive temporarily
    - Use a local Documents folder
@@ -149,37 +117,26 @@ The ClickOnce extension in Chrome is not properly configured, or the sfLink help
 ### Fix
 
 1. **Close sfPMS Link Helper**:
-   - "Right-click on the Spitfire [S] icon, then select Close sfPMS Link Helper"
    - Close sfLink completely
    - Restart sfLink
    - Try opening the file again
 
 2. **Set up the device**:
-   - "Try loading http://try.spitfirepm.com/sfPMS/cabs/sflink/sfLink.application?ShowUI=1"
-   - "The 'Setup this Device' dialog should appear"
    - Follow the setup wizard
    - Ensure all components are installed
 
-3. **Check Office Integration**:
-   - "If Office Integration is not green: Click the button to add Microsoft Visual Studio Tools for Office (VSTO)"
-   - "VSTO must be added after Office is installed"
-   - "Sometimes our prerequisite installer is not able to do the job"
-   - "You can install this Microsoft component directly from Microsoft's page"
+3. **Check Office Integration**.
 
 4. **Check sfPMS Trust**:
-   - "If sfPMS Trust is not green, see KBA-01047"
    - Establish trust between the browser and sfPMS
    - Add the Spitfire URL to trusted sites
    - Install the trust certificate
 
 5. **Check ClickOnce errors**:
-   - "If you get Microsoft ClickOnce errors, see KBA-01373"
-   - "Then try to Set Up Device again"
    - Clear ClickOnce cache
    - Reinstall the ClickOnce extension
 
 6. **Check if Word opens but Excel doesn't**:
-   - "If Word files open but Excel files do not, see also KBA-01822"
    - Excel may need separate configuration
    - Check Excel-specific settings
    - Verify Excel is the default application
@@ -207,50 +164,37 @@ Data integrity issues accumulate over time from various operations: manual edits
 ### Fix
 
 1. **Run the Integrity Check report**:
-   - "Found on the Admin folder"
-   - "Select the IC Type to focus the report"
-   - "Click the Run Report button to see your results"
    - Review all reported issues
 
 2. **Fix CCO Lines not on Subcontract**:
-   - "Approved CCO lines do not exist on Commitment"
-   - "Usually happens if the Commitment is manually edited by a Sys Admin after having been committed"
-   - "This data condition is only reported, not automatically repaired"
    - Cancel the CCO or force it back to In Process and repost
 
 3. **Fix Orphan Pay Requests**:
-   - "Pay Requests with no parent Commitment (e.g., because the Commitment has been deleted)"
    - Delete the orphan pay request
    - Or recreate the parent commitment
    - Link the pay request to the new commitment
 
 4. **Fix Duplicate Commitment Numbers**:
-   - "Projects with more than one Commitment with the same commitment number"
    - Find the duplicate commitments
    - Renumber one of them
    - Verify uniqueness
 
 5. **Fix Closed Documents Without Closed Date**:
-   - "Documents with a status mapped to 'closed' but with no closed date"
    - Update the document status
    - Set the closed date manually
    - Or change the status back to approved
 
 6. **Fix Bad Subcontract Line Data**:
-   - "CCO/Pay Request documents with cost code or accounting data that do not match the parent Commitment"
    - Compare CCO/Pay Request data with the parent commitment
    - Correct the mismatched data
    - Repost the document
 
 7. **Fix Catalog Issues**:
-   - "Catalog: No File Name — Files in the Catalog with no filename"
-   - "Catalog: Bad GZ Flag — A binary entry marked as compressed but is not"
    - Clean up catalog entries
    - Remove orphaned files
    - Fix compression flags
 
 8. **Fix Duplicate Item Numbers**:
-   - "Documents with more than one Item with the same item number"
    - Find the duplicate items
    - Renumber one of them
    - Verify uniqueness within the document
@@ -272,31 +216,26 @@ A SendWBS watchdog alert appears in the Watchdog Alerts part. The alert says: "X
 ### Fix
 
 1. **Open Cost Code Maintenance**:
-   - "Open the Cost Code Maintenance window on your project"
    - Navigate to the project
    - Open Cost Code Maintenance
    - Review all rows
 
 2. **Find empty Task ID or Description**:
-   - "Find the row with an empty Task ID and/or Description"
    - Look for blank fields
    - Check all rows in the grid
    - Identify the problematic row(s)
 
 3. **Make the row inactive**:
-   - "Make that row inactive"
    - Set the row status to inactive
    - This excludes it from the sync
    - The empty fields won't cause an error
 
 4. **Save and close**:
-   - "Save and close the Cost Code Maintenance window"
    - Save the changes
    - Close the window
    - The sync should resume
 
 5. **Verify sync resumes**:
-   - "Syncing should resume correctly after a few minutes"
    - Wait a few minutes
    - Check the Watchdog Alerts
    - The error should clear

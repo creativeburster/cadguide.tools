@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://groups.io/g/LTspice/topic/unable_to_converge_a_simple/106784532"
-  - "https://electronics.stackexchange.com/questions/736052/ltspice-ir2104-synchrobuck-simulation-problem"
-  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/589415/simulation-failure-with-ltspice-24-0-12"
 ---
 
 # LTspice Buck Converter Convergence and Transient Simulation Errors: Manufacturer SiC MOSFET Model Time-Step Too Small from 2.5GHz Gate Oscillation Requiring Gate Resistance Increase or Model Replacement, IR2104 Synchronous Buck Simulation Stuck at 0% from NMOS Switching Edge Convergence Failure Requiring Alternate Solver or Bordodynov Library, .op Operating Point Fails from Feedback Loop Instability Requiring Open-Loop Test and Nodeset Directives, LTspice 24.0.12 Convergence Bug at 80us from B-Source PFC Circuit Requiring Beta Update, and Transient Simulation Runs Infinitely from uic Option and Averaged Model Complexity Requiring Start Small Approach
@@ -35,37 +32,25 @@ The GENESIC SiC MOSFET SPICE model has a fundamental flaw causing 2.5 GHz oscill
 ### Fix
 
 1. **Increase gate drive resistance**:
-   - "Try changing the value of the two gate drive resistors. I used 4.7 ohm and it ran fine"
    - Increase gate resistance from default (e.g., 1-2 ohm) to 4.7 ohm or higher
    - This dampens the gate oscillation
-   - "It improved a bit with the increased gate resistance but stuck again after 4-5 switching cycles"
 
 2. **Replace with Wolfspeed SiC MOSFET model**:
-   - "The spice model from GENESIC is really bad. If you look at the gt and gb nodes, they have a 2.5 GHz oscillation"
-   - "I replaced the MOSFET parts with C3M0016120D devices from Wolfspeed"
-   - "The simulation is completely stable in 2 ms and delivers very close to 200 VDC"
    - Use Wolfspeed C3M series SiC MOSFET models instead
 
 3. **Use the Alternate solver**:
-   - "I get error codes (e.g., 1.#QNAN volts) unless I switch to the Alternate solver"
-   - "Even with the Alternate solver, it runs very slowly"
    - Settings > SPICE > Solver: Alternate
    - Note: LTspice saves this setting unless changed back
 
 4. **Add parasitic components**:
-   - "You might experiment with the parasitics in the manner described there"
-   - "To see if you can overcome the problem without masking it by degrading the simulation"
    - Add gate-source capacitance (e.g., 100pF)
    - Add gate trace inductance (e.g., 5nH)
 
 5. **Conform to datasheet timing**:
-   - "I strictly conformed to the datasheet specs for rise and fall times with deadtime margin of a few times that"
-   - "It produces 175V into a 5 ohm load"
    - Set rise/fall times per datasheet
    - Add adequate deadtime (3-5x rise/fall time)
 
 6. **Contact manufacturer for fixed model**:
-   - "You need to discard these parts or have GENESIC fix the encrypted library"
    - Report the 2.5 GHz oscillation to GENESIC
    - Request a corrected SPICE model
    - Use alternative parts until fixed
@@ -78,11 +63,6 @@ The GENESIC SiC MOSFET SPICE model has a fundamental flaw causing 2.5 GHz oscill
 
 ### Error Messages
 
-- "Direct Newton iteration failed to find .op point"
-- "Gmin stepping failed"
-- "Source stepping failed"
-- "Pseudo Transient failed in finding the operating point"
-- "Simulation tolerance relaxed to achieve convergence"
 
 ### Symptom
 
@@ -95,13 +75,11 @@ The IR2104 SPICE model's internal MOSFETs (level 1) have channel lengths shorter
 ### Fix
 
 1. **Use Bordodynov's MOSFET library**:
-   - "Maybe your model for MOSFETs is not working correctly. Try Bordodynov's excellent library"
    - Download from: http://bordodynov.ltwiki.org/
    - Replace the NMOS with a model from Bordodynov's library
    - These models are better behaved for switching simulations
 
 2. **Switch to the Alternate solver**:
-   - "I get error codes unless I switch to the Alternate solver"
    - Settings > SPICE > Solver: Alternate
    - The Alternate solver handles stiff switching better
    - Trade-off: slower simulation speed
@@ -131,7 +109,6 @@ The IR2104 SPICE model's internal MOSFETs (level 1) have channel lengths shorter
    - Gear is more stable for switching circuits
 
 7. **Start with simplified circuit**:
-   - "I simulated your circuit in LTSpice and got no errors"
    - Some users report no issues with the same circuit
    - Check for wiring errors
    - Verify MOSFET model connections
@@ -144,11 +121,6 @@ The IR2104 SPICE model's internal MOSFETs (level 1) have channel lengths shorter
 
 ### Error Messages
 
-- "Direct Newton iteration failed to find .op point"
-- "Gmin stepping failed"
-- "Source stepping failed"
-- "Pseudo Transient failed in finding the operating point"
-- "Simulation Failed: Trouble releasing nodesets"
 
 ### Symptom
 
@@ -161,15 +133,11 @@ The feedback loop creates a circular dependency in the DC operating point calcul
 ### Fix
 
 1. **Use .nodeset directives**:
-   - "I recommend .nodeset v(3)=15 v(5)=5 v(6)=4.144 v(8)=0.536"
    - Provide initial voltage guesses for key nodes
    - This helps the Newton iteration converge
    - Start with approximate values from the `.tran` results
 
 2. **Test in open-loop first**:
-   - "I recommend to start small, with generic/simplified subcircuits and perhaps in open-loop"
-   - "You externally fix the operating point with a dc source on the D input first"
-   - "Once it converges ok — check the bias points are meaningful — then add the loop around it"
    - Disconnect the feedback, fix the duty cycle with a DC source
 
 3. **Use .option noopiter**:
@@ -179,21 +147,15 @@ The feedback loop creates a circular dependency in the DC operating point calcul
    - Use with `.tran` with `uic`
 
 4. **Add clamping to the PWM modulator**:
-   - "Source B1 realizes the pulse-width modulator gain and clamps the maximum output below 1V"
-   - "1V is a 100% duty ratio. These limits are important during the bias point determination"
    - Clamp the modulator output to 0-1V range
    - This prevents the operating point from diverging
 
 5. **Use simplified op-amp model**:
-   - "The op-amp is my generic model and I can easily set the output levels"
    - Use a simple voltage-controlled voltage source instead of a full op-amp model
    - Set gain and output limits explicitly
    - This reduces convergence difficulty
 
 6. **Check power supply connections**:
-   - "The most obvious problem is the power to the opamp U1"
-   - "You have a 12V supply with its negative terminal connected to the opamp's positive supply pin"
-   - "Try connecting the supply's positive terminal to the opamp + pin and the negative terminal to ground"
    - Verify all power connections are correct
 
 7. **Use .tran with uic instead of .op**:
@@ -219,26 +181,21 @@ This is a confirmed bug in LTspice 24.0.12. "It's a very subtle bug in LTspice. 
 ### Fix
 
 1. **Update to LTspice 24.1 beta or later**:
-   - "It's a very subtle bug in LTspice. Will be fixed in the next update of 24.1 beta"
    - Check for beta updates on the Analog Devices website
    - Download and install the latest beta
    - The fix is specifically in the 24.1 beta channel
 
 2. **Use LTspice XVII as workaround**:
-   - "With the LTspice XVII (17.0.37.0) release the circuit could be simulated without any problems"
    - Keep LTspice XVII installed alongside LTspice 24
    - Use XVII for circuits that fail in 24
    - Both versions can coexist
 
 3. **Don't use abstol workaround**:
-   - "I can force convergence by setting abstol to 1E-9, but the results aren't compatible with the LTspice XVII results"
    - Changing abstol masks the bug but produces wrong results
    - Don't relax tolerances to force convergence
    - This gives false confidence in incorrect results
 
 4. **Check for defcon messages in XVII**:
-   - "It's not actually true that your schematics run 'without any problems' in XVII"
-   - "There are a couple of defcons in the log file"
    - Check the XVII log file for defcon (definite convergence) messages
    - These indicate near-convergence failures even in XVII
 
@@ -249,7 +206,6 @@ This is a confirmed bug in LTspice 24.0.12. "It's a very subtle bug in LTspice. 
    - Test each B-source independently
 
 6. **Report new convergence bugs**:
-   - "Thanks a lot for taking the time to report this. Your's is a great test case"
    - Report convergence bugs on EngineerZone
    - Provide the netlist (as PDF if .asc not accepted)
    - Include both XVII and 24 results for comparison
@@ -271,13 +227,10 @@ The `uic` (Use Initial Conditions) option skips the operating point calculation 
 ### Fix
 
 1. **Start with open-loop simulation**:
-   - "I recommend to start small, with generic/simplified subcircuits and perhaps in open-loop"
-   - "You externally fix the operating point with a dc source on the D input first"
    - Disconnect the feedback loop
    - Fix the duty cycle with a DC source on the modulator input
 
 2. **Add .nodeset for faster convergence**:
-   - "There are no .nodeset directives and the circuit converges ok"
    - But for slow-converging circuits, add nodeset:
    - `.nodeset v(out)=5 v(comp)=2.5`
    - This provides initial guesses, reducing transient settling time
@@ -295,14 +248,11 @@ The `uic` (Use Initial Conditions) option skips the operating point calculation 
    - The simulation starts from steady-state
 
 5. **Simplify the averaged model**:
-   - "Replace the simplified models with more comprehensive ones if need be"
    - Start with the simplest possible averaged model
    - Use an ideal voltage-controlled voltage source for the PWM
    - Add complexity gradually
 
 6. **Clamp the modulator output**:
-   - "Clamps the maximum output below 1V (1V is a 100% duty ratio)"
-   - "These limits are important during the bias point determination"
    - Add clamping to the B-source PWM modulator
    - This prevents the duty cycle from exceeding 100%
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026/ReadMe/en/topics/Concept/defects_resolved_in_microstation_2026.html"
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026.0.1/Help/en/topics/Concept/defects_resolved_in_microstation_2026.html"
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026.0.1/Help/en/topics/1970029/GUID-F07BB6CA-86D6-4AED-941C-436BC3AC4A3B.html"
 ---
 
 # MicroStation 2026 DWG File Displaying Incorrectly from Hatch Reference Mismatch, Crashing When Opening Giant Size IFC File, Freezing While Importing Rhino 3DM Files, Extremely Slow Text Extraction for Attached DGN Files, and Performance Issues from Unavailable Raster Services When Opening DGN: Hatch Reference Fix, IFC Update, 3DM Import Fix, Text Extraction Optimization, and Raster Service Configuration
@@ -31,9 +28,6 @@ When opening or referencing DWG files in MicroStation, the file displays incorre
 ### Fix
 
 1. **Update to MicroStation 2026.0.1**:
-   - "Fixed the problem of the DWG file displaying incorrectly"
-   - "Resolved issue of DWG references not matching the actual DWG"
-   - "Causing hatch failures"
    - Update to 2026.0.1
 
 2. **Verify DWG display after update**:
@@ -49,20 +43,14 @@ When opening or referencing DWG files in MicroStation, the file displays incorre
    - For correct display
 
 4. **Use Batch Convert as workaround**:
-   - "Resolved issues with Batch Convert from DGN to DWG"
-   - "Retained non-displayed self-references"
    - Use Batch Convert to convert
    - DWG to DGN as workaround
 
 5. **Verify reference attachment method**:
-   - "REFERENCE SET ATTACHMETHOD=coincidentworld"
-   - "And 'coincident' did not work"
    - Verify the reference attachment method
    - Is correctly set
 
 6. **Check for self-references**:
-   - "Batch Convert from DGN to DWG"
-   - "Retained non-displayed self-references"
    - Check for self-references
    - In the DWG file
 
@@ -89,8 +77,6 @@ MicroStation crashes when opening or referencing very large (giant size) IFC fil
 ### Fix
 
 1. **Update to MicroStation 2026.0.1**:
-   - "Fixed MicroStation crashing"
-   - "When opening or referencing Giant size IFC File"
    - Update to 2026.0.1
 
 2. **Check IFC file size**:
@@ -106,9 +92,6 @@ MicroStation crashes when opening or referencing very large (giant size) IFC fil
    - Than a direct open
 
 4. **Check IFC level count**:
-   - "Resolved issues with the number of levels"
-   - "In attached IFC files decreased"
-   - "After attaching or merging references"
    - Check IFC level count after attaching
 
 5. **Split large IFC files**:
@@ -146,8 +129,6 @@ MicroStation freezes when importing Rhino 3DM files. The freeze occurs during th
 ### Fix
 
 1. **Update to MicroStation 2026**:
-   - "Resolved MicroStation and Descartes freezing"
-   - "While importing Rhino 3DM files"
    - Update to 2026
 
 2. **Simplify 3DM before import**:
@@ -169,7 +150,6 @@ MicroStation freezes when importing Rhino 3DM files. The freeze occurs during th
    - The freeze
 
 5. **Use Descartes for 3DM import**:
-   - "MicroStation and Descartes freezing"
    - Try importing with Descartes
    - If MicroStation freezes
    - As an alternative
@@ -203,37 +183,22 @@ When extracting text from attached DGN reference files, the process is extremely
 ### Fix
 
 1. **Update to MicroStation 2026**:
-   - "Resolved extremely slow text extraction"
-   - "For attached DGN files"
    - Update to 2026
 
 2. **Use Cached Visible Edges**:
-   - "Cached Visible Edges option stores the edges"
-   - "For a drawing or sheet attachment"
-   - "In an intelligent cache"
    - Use Cached Visible Edges for references
 
 3. **Set cache to Disconnected mode**:
-   - "Disconnected - Retains the cache in its state"
-   - "This allows very fast file opening"
    - Use Disconnected mode
    - For fast file opening
 
 4. **Use incremental cache updates**:
-   - "The cache generation process has been improved"
-   - "To generate an incremental solution"
-   - "Based on the previous cache"
    - Use incremental cache updates
 
 5. **Disable window ghosting**:
-   - "The long processing time causes Windows OS"
-   - "To believe the task is unresponsive"
-   - "Set MS_DISABLEWINDOWGHOSTING to 1"
    - To disable ghosting during long operations
 
 6. **Use MS_REF_NO_CVE_LOAD**:
-   - "Setting MS_REF_NO_CVE_LOAD"
-   - "Can reduce the time to open large data sets"
    - Set this configuration variable
    - For faster opening of large datasets
 
@@ -260,9 +225,6 @@ When opening DGN files, MicroStation experiences performance issues. The opening
 ### Fix
 
 1. **Update to MicroStation 2026**:
-   - "Fixed performance issues"
-   - "Caused by unavailable raster services"
-   - "When opening DGNs"
    - Update to 2026
 
 2. **Check raster service availability**:
@@ -272,27 +234,18 @@ When opening DGN files, MicroStation experiences performance issues. The opening
    - Before opening DGN files
 
 3. **Use Hybrid Background Maps carefully**:
-   - "Resolved performance issues in MicroStation 2024"
-   - "When using Hybrid Background Maps in rotated views"
    - Use Hybrid Background Maps cautiously
    - In rotated views
 
 4. **Optimize loading with WorkSets**:
-   - "Optimized MicroStation loading"
-   - "With a large number of WorkSets"
-   - "And multiple references from mapped network drives"
    - Optimize WorkSet configuration
 
 5. **Check network drive connectivity**:
-   - "Multiple references from mapped network drives"
    - Verify network drive connectivity
    - Before opening DGN files
    - With network references
 
 6. **Use Properties Dialog efficiently**:
-   - "Improved performance on the Properties Dialog"
-   - "When it is open while selecting a cell"
-   - "From the cell library that resides on a network drive"
    - Be aware of network drive performance
 
 7. **Reduce raster attachments**:

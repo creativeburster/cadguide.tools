@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D54O00007lYiGySAK/nonconverging-residuals-due-to-poor-mesh"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
 ---
 
 # Simcenter STAR-CCM+ Mesh Divergence and Floating Point Errors: Non-Converging Residuals from Tetrahedral Mesh Requiring Polyhedral or Trimmed, Floating Point Error from Division by Zero in Field Functions and Bad Cells, NaN Residuals from External Fluid Region Boolean Subtraction and Detach, AMG Solver Divergence at First Iteration from Grid Sequencing, and Bad Cells at Interfaces from Cell Size Mismatch and Twisted CAD Topology
@@ -45,12 +42,10 @@ At a box corner where three walls meet:
 ### Fix
 
 1. **Switch to polyhedral or trimmed mesh**:
-   - "Do not use tetrahedral meshes in Simcenter STAR-CCM+ for flow simulations. Please choose either poly or trim meshes."
    - Polyhedral mesh: better for complex geometry
    - Trimmed mesh: better for structured domains
 
 2. **Start with tutorials**:
-   - "A good idea would be to try first with the tutorials before embarking on more complex simulations"
    - Tutorials provide mesh best practices
    - Foundation Tutorials → Geometry Parts → Creating the Main Fluid Volume
 
@@ -128,7 +123,6 @@ Multiple potential causes:
    - Rerun and monitor solution development in Scenes to locate problematic regions
 
 7. **Use the Support Center article**:
-   - "Some practical steps to understand the reason of a divergence or a floating point exception (FPE)"
    - Available on Siemens Support Center
 
 ### Community Report
@@ -155,7 +149,6 @@ The external fluid region was created incorrectly. The user created a block arou
 ### Fix
 
 1. **Use part-based meshing — don't detach and delete**:
-   - "The meshing approach in Simcenter STAR-CCM+ is based on Part-Based meshing. There should be no need for detaching and deleting."
    - Create a volume and subtract the sensor
    - Use the resulting subtracted part as the external region
    - Perform an imprint to set up contacts for interfaces
@@ -171,7 +164,6 @@ The external fluid region was created incorrectly. The user created a block arou
    - This tutorial demonstrates the correct workflow
 
 4. **Debug by building up incrementally**:
-   - "Start small — fewer regions and less physics — then build up"
    - Remove the external part and see if the simulation runs
    - If it runs, the external part is the problem
    - Rebuild the external part correctly in 3D-CAD
@@ -213,12 +205,10 @@ The AMG (Algebraic Multi-Grid) solver diverges during the transition from grid s
 ### Fix
 
 1. **Check if results are affected**:
-   - "After this initial error, the simulation proceeds normally and eventually converges"
    - If the simulation converges to valid results, the initial AMG divergence may be harmless
    - Compare results with a simulation that doesn't show the error
 
 2. **Check the KB article**:
-   - "How to debug 'AMG solver diverged on first iteration'"
    - Available on Siemens Support Center
    - Provides additional debugging steps
 
@@ -260,19 +250,16 @@ Initialization also initializes interfaces in the model. If interfaces have sign
 ### Fix
 
 1. **Match cell sizes at interfaces**:
-   - "You most likely have an interface with significant differences in cell sizes on both sides"
    - Ensure similar mesh sizes on both sides of interfaces
    - Use mesh refinement controls to match sizes
    - The cell size ratio across an interface should be < 5:1
 
 2. **Check interface type**:
    - Different mesh types at interfaces (poly and trimmed) can create bad cells
-   - "Mesh elements at the interface were different (Poly and Trimmed cells) but mesh sizing was same"
    - Use the same mesh type on both sides if possible
    - Or use a conformal mesh interface
 
 3. **Fix twisted CAD topology**:
-   - "CAD surfaces connected to perforation were somewhat twisted in topology (needle shape)"
    - Clean up the CAD geometry before meshing
    - Remove or repair needle-shaped surfaces
    - Use CAD cleanup tools in 3D-CAD
@@ -283,7 +270,6 @@ Initialization also initializes interfaces in the model. If interfaces have sign
    - Fix any unintended disconnections
 
 5. **Check physical intersection values**:
-   - "Your physical intersection values cause the program to match cells outside the interface"
    - Verify interface topology
    - Ensure interfaces only connect the intended regions
 

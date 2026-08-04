@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Cannot-produce-toolpath-Stock-Model-Stepover-is-Tool-Diameter-in-Model-rest-area-clearance-in-PowerMill.html"
-  - "https://forums.autodesk.com/t5/powermill-forum/e-cores-and-p-cores-cpu-tip/td-p/13714169"
-  - "https://forums.autodesk.com/t5/powermill-forum/freeze-when-calculating-toolpath/td-p/10023055"
 ---
 
 # PowerMill 2026 Stock Model Stepover >= Tool Diameter Preventing Toolpath, E-Core and P-Core CPU Affinity Causing Inconsistent Calculation Speed, Freeze During Toolpath Calculation from AMD Graphics, Constant Z Finishing Crash from Cusp-Based Stepdowns, and Collision Avoidance Preventing Toolpath Completion: Stepover Correction, CPU Affinity Setting, Driver Update, Hot Fix Install, and Collision Settings
@@ -31,28 +28,22 @@ When using Model Rest Area Clearance in PowerMill, the error "Cannot produce too
 ### Fix
 
 1. **Open Stock Model settings**:
-   - "Open the setting of the Stock Model"
    - Open the stock model
    - Settings dialog
 
 2. **Enter correct stepover value**:
-   - "Enter the correct value in Stepover"
    - Set stepover
    - Less than tool diameter
 
 3. **Click Accept**:
-   - "Click Accept"
    - Accept the
    - New stepover value
 
 4. **Calculate Stock Model**:
-   - "Calculate the Stock Model"
    - Recalculate the
    - Stock model
 
 5. **Recalculate toolpath**:
-   - "Recalculate the Rest model"
-   - "Area clearance toolpath"
    - Recalculate the
    - Rest area clearance
 
@@ -86,17 +77,12 @@ PowerMill toolpath calculation is inconsistently slow. Sometimes it flies, other
 
 1. **Set CPU affinity to P-Cores**:
    - "C:\Windows\System32\cmd.exe /c start "" /Normal /affinity FF"
-   - "C:\Program Files\Autodesk\PowerMill 2026\sys\exec64\pmill.exe"
    - Set affinity to P-Cores only
 
 2. **Use correct affinity mask**:
-   - "(/ affinity FF) means my 8 P-Cores"
-   - "Go google for more help"
-   - "On how many F's you need"
    - Calculate correct mask for your CPU
 
 3. **Set in shortcut target**:
-   - "Yes in the target"
    - Set the affinity command
    - In the shortcut
    - Target field
@@ -107,22 +93,12 @@ PowerMill toolpath calculation is inconsistently slow. Sometimes it flies, other
    - For the process
 
 5. **Test with different affinity masks**:
-   - "Using /Normal /affinity FF line"
-   - "I got it down to 40 mins"
-   - "And using /Normal /affinity FFFF"
-   - "It was 39 mins"
    - Test different masks
 
 6. **Let Windows use E-Cores for other tasks**:
-   - "I have 16 E-Cores just sat there"
-   - "Doing nothing so I assume"
-   - "They take slack for other stuff"
    - Let E-Cores handle other tasks
 
 7. **Don't disable E-Cores in BIOS**:
-   - "I did start by shutting the E-Cores down"
-   - "In BIOS but found the computer laggy"
-   - "When processing"
    - Don't disable E-Cores
 
 ### Community Report
@@ -142,39 +118,24 @@ PowerMill freezes during toolpath calculation, forcing the user to end the progr
 ### Fix
 
 1. **Update AMD graphics driver**:
-   - "See if there are any updates"
-   - "For the driver"
    - Update AMD
    - Graphics driver
 
 2. **Upgrade to NVIDIA Quadro**:
-   - "You might want to upgrade"
-   - "To an NVIDIA Quadro"
    - Consider upgrading
    - To NVIDIA Quadro
 
 3. **Change stepdown, tolerance, or block size**:
-   - "Normally I can get passed it"
-   - "By changing the stepdown, tolerance"
-   - "Or block size just so powermill"
-   - "Looks at the model differently"
    - Change calculation parameters
 
 4. **Turn off rest machining**:
-   - "Turn off rest machining"
-   - "Since its not really needed"
-   - "In this instance"
    - Disable rest machining
 
 5. **Check for dedicated graphics card**:
-   - "There doesn't seem to be"
-   - "A dedicated graphics card installed"
    - Verify a dedicated
    - Graphics card is present
 
 6. **Save after every successful calculation**:
-   - "I have to save after every"
-   - "Successful calculation"
    - Save frequently
    - To prevent data loss
 
@@ -201,8 +162,6 @@ PowerMill closes unexpectedly when calculating a Constant Z Finishing toolpath. 
 ### Fix
 
 1. **Install PowerMill 2026.0.1 Hot Fix**:
-   - "PowerMill 2026.0.1 Hot Fix"
-   - "Is now available for download"
    - Install the latest
    - Hot fix
 
@@ -212,27 +171,19 @@ PowerMill closes unexpectedly when calculating a Constant Z Finishing toolpath. 
    - As workaround
 
 3. **Update to PowerMill 2027**:
-   - "Fixed in PowerMill 2027"
    - PMILL-11324, PMILL-23162
    - Update to 2027
    - For permanent fix
 
 4. **Verify version after hot fix**:
-   - "Check that you're working in"
-   - "Version: 2026.0.1.2026014"
    - Verify version
    - After installing hot fix
 
 5. **Download from Autodesk Access**:
-   - "Download and install"
-   - "Through the Autodesk Access App"
    - Or from Autodesk Account
    - Product Updates
 
 6. **Use Calculate Locally for stepdowns**:
-   - "Calculate Locally calculates stepdowns"
-   - "At each level by considering"
-   - "The slope within a local region"
    - Use Calculate Locally
 
 7. **Report persistent crashes**:
@@ -259,7 +210,6 @@ A toolpath calculation fails to complete when using Collision Avoidance. The too
 
 1. **Update to PowerMill 2027**:
    - PMILL-23194, PMILL-22966, PMILL-23406
-   - "Fixed in PowerMill 2027"
    - Update to 2027
 
 2. **Install 2026.0.1 Hot Fix**:
@@ -274,21 +224,14 @@ A toolpath calculation fails to complete when using Collision Avoidance. The too
    - As workaround
 
 4. **Check negative thickness settings**:
-   - "5-axis toolpaths to be incomplete"
-   - "When using a negative thickness"
-   - "With model components"
    - PMILL-23136
    - Check negative thickness
 
 5. **Verify colliding moves after calculation**:
-   - "Colliding moves to remain"
-   - "In the toolpath"
    - Verify no colliding
    - Moves remain
 
 6. **Check Flowline Finishing for breaks**:
-   - "Breaks and distortions"
-   - "In a Flowline Finishing toolpath"
    - PMILL-22613, PMILL-23294
    - Check Flowline Finishing
 

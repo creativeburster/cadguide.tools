@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/595594/simulation-errors-with-spice-models-after-update-to-lt-spice-v24-1-8"
-  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/582233/bugs-in-ltspice24"
-  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/596524/simulation-lockup"
 ---
 
 # LTspice Simulation and Convergence Errors: Infinite Recursion and Syntax Error from v24.1 Update Requiring Parentheses Fix, Time Step Too Small Convergence Failure from Non-Physical Circuit Requiring Parasitic Addition, Simulation Lockup from AD8274 Model Instability Requiring Discrete Op-Amp Replacement, Inconsistent Convergence from Floating Nodes Requiring Capacitance Addition and Debugtran, and Labelled Net Name Ignored When Plotting from Component vs Net Name Confusion Requiring Net Label Addition
@@ -31,20 +28,17 @@ After updating from LTspice v24.0.12 to v24.1.8, SPICE models that previously wo
 ### Fix
 
 1. **Fix syntax errors in SPICE models**:
-   - "There is one ')' too much here. You simply have to fix your syntax errors"
    - Open the .sub file in a text editor
    - Find the line with the error
    - Remove the extra parenthesis: `VALUE={(.0001*V(3,4)/.075))*(EXP(...))}` → `VALUE={(.0001*V(3,4)/.075)*(EXP(...))}`
    - Save and retry
 
 2. **Fix Infinite recursion error**:
-   - "It might be helpful to close LT-Spice between attempts"
    - The infinite recursion may be related to .lib include cycles
    - Check for circular .lib references
    - Close LTspice between simulation attempts
 
 3. **Use older LTspice version as workaround**:
-   - "I can simulate my diode models without error messages up to and including LT-Spice version v24.0.12"
    - If fixing syntax is not feasible
    - Use v24.0.12 until models are fixed
    - But fix the syntax errors for long-term compatibility
@@ -56,8 +50,6 @@ After updating from LTspice v24.0.12 to v24.1.8, SPICE models that previously wo
    - Test each model individually
 
 5. **Accept that old results may have been wrong**:
-   - "Don't assume your netlists 'worked' simply because there was no error message"
-   - "In many of those cases it would wrongfully ignore parts of the input"
    - Previous simulation results may have been incorrect
    - Fixing syntax may change results
 
@@ -78,7 +70,6 @@ Error: "Analysis: Time step too small; time = 0.000282627, timestep = 1.25e-19: 
 ### Fix
 
 1. **Add parasitic capacitance to floating nodes**:
-   - "A few small circuit parasitics, 10pF here, 1R there, 10nH, would solve the maths errors"
    - Add 10pF capacitor from floating node to ground
    - Add 1R series resistance to ideal voltage sources
    - Add 10nH series inductance to ideal current sources
@@ -90,9 +81,6 @@ Error: "Analysis: Time step too small; time = 0.000282627, timestep = 1.25e-19: 
    - `.options gmin=1e-9` — add minimum conductance
 
 3. **Use .options debugtran**:
-   - "Try running each with the directive .options debugtran"
-   - "Slows it down, but a convergence grade is given to each component and node"
-   - "Any number above 50 is usually a problem"
    - Identify and fix problematic nodes
 
 4. **Replace ideal components with realistic ones**:
@@ -134,20 +122,14 @@ The AD8274 built-in model has instability issues that cause the solver to hang. 
 ### Fix
 
 1. **Replace AD8274 with discrete op-amp implementation**:
-   - "I decided to roll my own diff amp out of an op amp and four resistors"
-   - "Placed on a schematic, packaged up with a symbol identical to the AD8274 symbol as a drop-in replacement"
    - Use ADA4511 op-amp with four resistors
    - This avoids the AD8274 model instability
 
 2. **Try different op-amp models**:
-   - "ADA4620 caused many defcons. ADA4610 also caused many defcons"
    - Try different op-amps until one works
-   - "The first op amp I picked was ADA4610"
    - Test each model individually
 
 3. **Check motor model separately**:
-   - "My recent work was centered around a diff amp. My project controls DC motors"
-   - "I put the motor back and I got many defcons and a singular matrix"
    - Test the motor model separately
    - Replace motor with resistor for testing
 
@@ -158,14 +140,10 @@ The AD8274 built-in model has instability issues that cause the solver to hang. 
    - `.options trtol=7` — relax transient tolerance
 
 5. **Simplify the circuit for debugging**:
-   - "I started with just a resistor instead of the motor model"
-   - "The power only section simulated in about 45 seconds"
    - Build the circuit block by block
    - Identify which block causes the lockup
 
 6. **Use older LTspice version**:
-   - "The same project always causes 24.1.9 to lockup"
-   - "24.0.12 stopped simulating my project"
    - Try different versions
    - Report the issue on EngineerZone
 
@@ -186,15 +164,10 @@ Two nearly identical netlists — one with a 0.1pF capacitor added, one without.
 ### Fix
 
 1. **Add small capacitance to floating nodes**:
-   - "It's a pretty common solution to add a little capacitance to solve convergence problems"
-   - "SPICE doesn't like non-physical components/nodes"
    - Add 0.1pF from floating node to ground
    - This is physically reasonable (stray capacitance)
 
 2. **Use .options debugtran**:
-   - "Try running each with the directive .options debugtran"
-   - "Slows it down, but a convergence grade is given to each component and node"
-   - "Any number above 50 is usually a problem"
    - This may also fix the convergence issue
 
 3. **Add high-value resistors to floating nodes**:
@@ -209,13 +182,11 @@ Two nearly identical netlists — one with a 0.1pF capacitor added, one without.
    - This prevents singular matrix errors
 
 5. **Check MOSFET length warnings**:
-   - "Instance xu217:M50: Length shorter than recommended for a level 1 MOSFET"
    - These warnings indicate potential model issues
    - Increase MOSFET channel length
    - Or use a higher level MOSFET model
 
 6. **Fix singular matrix at specific nodes**:
-   - "The singular matrix error occurs at xu217:v57#branch and xu217:64"
    - Identify the specific nodes causing the singularity
    - Add DC paths or capacitance to those nodes
    - Test after each fix
@@ -237,20 +208,14 @@ A net is labelled "Vref" but when plotted, the trace is labelled V(n005) instead
 ### Fix
 
 1. **Add a net name to the node**:
-   - "Simply adding a net name to the node solves this problem"
-   - "Here, I've done so by adding the net name 'Vref'"
-   - "Net name in red, component name in white"
    - Use the net label tool (F4) to add a net name
 
 2. **Distinguish net names from component names**:
-   - "In my color scheme, net names are red, component names (e.g. Vin) in white"
    - Check the color of the label
    - Red = net name (can be referenced as V(netname))
    - White = component name (cannot be referenced as V(componentname))
 
 3. **Reference the correct net in behavioral sources**:
-   - "You cannot reference V([component name]), since a component may not necessarily have a voltage"
-   - "You must reference V([net name])"
    - In behavioral sources, use V(netname) not V(componentname)
    - Add a net name first, then reference it
 

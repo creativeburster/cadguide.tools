@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://community.altair.com/discussion/38588/fit-polynurbs-in-altair-inspire"
-  - "https://community.altair.com/discussion/38352/%E6%9C%80%E9%81%A9%E5%8C%96%E5%BD%A2%E7%8A%B6%E3%81%8B%E3%82%89polynurbs%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%A8%E4%BD%95%E3%82%82%E4%BD%9C%E6%88%90%E3%81%95%E3%82%8C%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%8A-inspire%E3%81%8C%E8%90%BD%E3%81%A1%E3%82%8B%E5%A0%B4%E5%90%88"
-  - "https://help.altair.com/inspire/en_us/topics/inspire/structure/fit_polynurbs_c.htm"
 ---
 
 # Altair Inspire PolyNURBS Fit Crash and Topology Optimization CAD Export: PolyNURBS Fit Produces Nothing or Crashes from Insufficient Smoothing Iterations and Topology Slider Position, PolyNURBS Gaps at Non-Design Contacts from Shrinkwrap Size Mismatch Requiring Manual Editing, Lattice Structures Additive Manufacturing Export Errors from Unsupported Unit Cell Types, Motion Analysis Mechanism Simulation Over-Constrained Joints from Redundant Constraints, and Topology Optimization Contact Errors from Loads Applied to Design Space Instead of Non-Design Geometry
@@ -35,13 +32,11 @@ The PolyNURBS fit algorithm fails when:
 ### Fix
 
 1. **Position the topology slider correctly**:
-   - "Position the Topology slider two ticks from the far right — this is the point at which the generated shape is fully connected"
    - Too far right: disconnected members, small holes
    - Too far left: loss of important geometric detail
    - Ensure all significant members are connected before fitting
 
 2. **Enable Smooth Results before fitting**:
-   - "It is best to smooth the results before attempting to fit a PolyNURBS to the results"
    - Turn on "Smooth Results" option in the Shape Explorer
    - This creates a cleaner surface for the shrinkwrap and PolyNURBS fit
 
@@ -52,7 +47,6 @@ The PolyNURBS fit algorithm fails when:
 
 4. **Adjust PolyNURBS fit parameters**:
    - Number of PolyNURBS Faces: default 2500, reduce to 1200 for smoother geometry
-   - "Reducing the Number of PolyNURBS Faces will increase the size of the PolyNURBS cages, but will capture less detail"
    - Curvature: default 50%, reduce to 40% for smoother results
    - Shrinkwrap Size: use default, adjust if geometry is very large or small
 
@@ -90,7 +84,6 @@ The shrinkwrap process creates an isosurface around both design and non-design s
 
 2. **Manually close gaps with PolyNURBS editing tools**:
    - After fitting, use PolyNURBS editing tools to close gaps
-   - "Fix these gaps using the tools on the PolyNURBS ribbon so that high stress concentration areas are not found"
    - Move control points, add faces, or reshape the PolyNURBS cage
 
 3. **Adjust shrinkwrap size**:
@@ -99,14 +92,12 @@ The shrinkwrap process creates an isosurface around both design and non-design s
    - Find the balance that minimizes gaps while maintaining smoothness
 
 4. **Disable Intersect for overlapping geometry**:
-   - "When Intersect is not selected, the original PolyNURBS geometry is preserved, overlapping the nondesign regions"
    - This eliminates gaps but requires manual trimming
    - Use when gaps at contacts are too large to fix manually
 
 5. **Re-run analysis after fixing gaps**:
    - After closing gaps, run a new analysis
    - Verify that stress concentrations at contacts are reduced
-   - "The maximum displacement should be approximately .5 mm, but your results will vary"
 
 6. **Use the hybrid approach**:
    - Fit PolyNURBS with Intersect ON for the main body
@@ -212,7 +203,6 @@ Loads and constraints must be applied to non-design geometry, not to the design 
 ### Fix
 
 1. **Apply loads and constraints to non-design parts only**:
-   - "Loads and constraints must all be applied to nondesign geometry"
    - Create non-design parts at load application points (bosses, mounts, bearing surfaces)
    - Apply forces, pressures, and displacements to these non-design parts
 
@@ -227,7 +217,6 @@ Loads and constraints must be applied to non-design geometry, not to the design 
    - Use "Sliding" or "Separating" contact for interfaces that may separate
 
 4. **Suppress unnecessary parts**:
-   - "Suppressing a part prevents it from being included in analysis"
    - Suppress parts that are not relevant to the optimization
    - This reduces computation time and avoids interference
 
@@ -238,7 +227,6 @@ Loads and constraints must be applied to non-design geometry, not to the design 
 
 6. **Run a reanalysis after optimization**:
    - Use the "Analyze" button in the Shape Explorer
-   - "This reanalysis gives a quick indication of part performance indicating whether a topology concept is feasible"
    - Verify that the optimized shape can carry the required loads
 
 ### Community Report

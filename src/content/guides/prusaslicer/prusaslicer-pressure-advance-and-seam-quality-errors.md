@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.prusa3d.com/forum/original-prusa-xl-tool-changer-hardware-firmware-and-software-help/pressure-advance-code-not-working/"
-  - "https://forum.prusa3d.com/forum/english-forum-original-prusa-i3-mk4s-hardware-firmware-and-software-help/mk4s-pressure-advance/"
-  - "https://forum.prusa3d.com/forum/input-shaping/mk4-is-seam-scar/"
 ---
 
 # PrusaSlicer Pressure Advance and Seam Quality Errors: Pressure Advance Code Not Working from Wrong G-code Location Requiring Filament Start G-code Configuration, MK4S Incorrect Stock Pressure Advance Value for HF Nozzle Requiring Calibration and M572 Update, Toolchanger SET_PRESSURE_ADVANCE ADVANCE=0 Hardcoded G-code Disabling PA Permanently Requiring Custom Post-Processing, MK4 Input Shaper Seam Scar from Slicer 2.7.1 Regression Requiring Slicer 2.6.0 or Scarf Seam, and Pressure Advance Calibration Dependent on Speeds and Acceleration Requiring Standard Profile Calibration
@@ -31,7 +28,6 @@ The pressure advance G-code is placed in the wrong location in PrusaSlicer setti
 ### Fix
 
 1. **Place M572 in filament Start G-code**:
-   - "Just have to change the single number here"
    - In PrusaSlicer: Filament Settings > Custom G-code > Start G-code
    - Add: `M572 S{if nozzle_diameter[0]==0.4}0.02{elsif nozzle_diameter[0]==0.6}0.01{else}0{endif} ; Set Pressure Advance`
    - This is the correct location for PA commands
@@ -43,19 +39,15 @@ The pressure advance G-code is placed in the wrong location in PrusaSlicer setti
    - Check PrusaSlicer variable documentation
 
 3. **Check printer firmware supports M572**:
-   - "M572 is used to set parameters for Pressure Advance"
-   - "It replaces Linear Advance on MK4/S, MK3.9/S, XL, and MINI/+ from firmware version 5.0.0"
    - Ensure firmware is 5.0.0 or later
    - Older firmware uses M900 (Linear Advance)
 
 4. **Verify PA is not overridden**:
    - Check if the printer's start G-code also sets M572
    - The last M572 command takes effect
-   - "The Pressure Advance value is set based on the latest command, either M900 or M572"
    - Ensure your filament G-code runs after the printer G-code
 
 5. **Use the default start G-code**:
-   - "The default start GCode includes an M572 command"
    - Don't remove the default M572 from printer start G-code
    - Override the value in filament start G-code
    - The filament G-code runs after printer G-code
@@ -94,26 +86,19 @@ After MK4S HF (High Flow) nozzle upgrade, print quality is poor. The stock Press
    - `M572 S{if nozzle_diameter[0]==0.4}0.054{elsif nozzle_diameter[0]==0.5}0.026{elsif nozzle_diameter[0]==0.6}0.02{elsif nozzle_diameter[0]==0.8}0.015{else}0{endif}`
 
 3. **Calibrate for each filament type**:
-   - "I will have to test on other PRUSAMENT filament types and other brands"
    - PA values differ by filament material and brand
    - Run calibration for each filament
    - Don't use one value for all filaments
 
 4. **Use standard speeds for calibration**:
-   - "The result highly depends on speeds/acceleration"
-   - "Your high S values suggest that you are calibrating on slow speeds"
-   - "0.054 is certainly not a good value for MK4S/Prusament at standard speeds"
    - Calibrate at the speeds you normally print at
 
 5. **Be aware of speed dependence**:
    - PA values change with print speed and acceleration
    - A value calibrated at slow speeds won't work at fast speeds
-   - "Such value will result in significant underextrusion at the corners"
    - Use the default profile speeds for calibration
 
 6. **Check for firmware updates**:
-   - "PRUSA has changed the old Linear Advance technique with a new Pressure Advance"
-   - "The old M900 command has been deprecated, and on the new GCODE there are only M572"
    - Ensure firmware is up to date
    - M900 commands are auto-converted to M572
 
@@ -158,7 +143,6 @@ Using a custom Voron-based toolchanger with multiple extruders. PrusaSlicer 2.6.
    - In the After Tool Change G-code
 
 4. **Report on GitHub**:
-   - "This issue is on GitHub: prusa3d/PrusaSlicer/issues/11187"
    - Report with your toolchanger configuration
    - Include the G-code file
    - Request a setting to disable the hardcoded PA=0
@@ -192,44 +176,32 @@ Since updating to Input Shaper on the MK4, seam lines appear on prints. The seam
 ### Fix
 
 1. **Use PrusaSlicer 2.6.0**:
-   - "With Slicer 2.6.0 it is much better"
    - Downgrade to PrusaSlicer 2.6.0
    - The seam regression is not present in 2.6.0
    - This is the most reliable workaround
 
 2. **Adjust Pressure Advance**:
-   - "Have you played with adjusting Pressure Advance settings?"
-   - "It looks like you are not getting enough filament extruded right when you accelerate away from the seam"
    - Increase PA slightly to improve seam extrusion
    - Run PA calibration at Input Shaper speeds
 
 3. **Use scarf seam**:
-   - "You might be interested in scarf seam"
-   - "A python script can be used to post-process gcode files and change the seam from simple to scarf"
    - Scarf seams overlap layers gradually
    - Nearly invisible seams
 
 4. **Reduce acceleration**:
-   - "Lower acceleration? Kind of defeats some of the purpose of the higher speeds with the MK4"
    - Reduce acceleration in printer settings
    - Lower acceleration reduces seam scarring
    - But also reduces print speed
 
 5. **Adjust retraction settings**:
-   - "Try less retraction to begin with"
-   - "You could play with deretraction extra length but that causes additional problems"
    - Reduce retraction length slightly
    - This may improve seam quality
 
 6. **Try OrcaSlicer scarf joint**:
-   - "There is now an implementation of scarf joint seams being worked on for OrcaSlicer"
    - OrcaSlicer has built-in scarf seam support
-   - "It can make the seams disappear almost entirely"
    - Consider switching to OrcaSlicer
 
 7. **Report on GitHub**:
-   - "See the discussions of seam minimising methods here: github.com/prusa3d/PrusaSlicer/issues/11621"
-   - "And here: github.com/prusa3d/PrusaSlicer/issues/11948"
    - Report your findings
    - Include photos of the seam scars
 
@@ -256,20 +228,15 @@ PA calibration tests produce different optimal values depending on the print spe
    - This ensures the PA value works in production
 
 2. **Use the stock PA value as baseline**:
-   - "We recommend keeping the default S parameter, optimized for most applications"
    - Start with the stock PA value
    - Only adjust if print quality issues are observed
    - The stock values are calibrated for standard speeds
 
 3. **Consider adaptive PA**:
-   - "Orcaslicer has an adaptive pressure advance feature"
-   - "Which allows you to compensate for the different pressure advance values seen at different flow rates"
    - OrcaSlicer varies PA with speed
    - This handles the speed dependence automatically
 
 4. **Don't use calibration from other slicers**:
-   - "Pressure Advance values from tests generated by OrcaSlicer are strictly tuned for the OrcaSlicer profiles"
-   - "One transferred in PrusaSlicer they mess all"
    - Calibrate within PrusaSlicer using PrusaSlicer profiles
    - Don't transfer values between slicers
 
@@ -286,8 +253,6 @@ PA calibration tests produce different optimal values depending on the print spe
    - The optimal value balances these
 
 7. **Use Prusa's calibration tool**:
-   - "You actually have a calibration feature"
-   - "https://garethky.github.io/PrusaSlicerPressureAdvanceCalibration/"
    - Use the official calibration tool
    - Follow the instructions carefully
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://precice.discourse.group/t/elastic-tube-3d-tutorial-fails-with-openfoam-v2406/2469"
-  - "https://www.cfd-online.com/Forums/openfoam-solving/227276-residuals-suddenly-explode-aerodynamics.html"
-  - "https://precice.discourse.group/t/openfoam-calculix-fsi-simulation-crashes-at-5s-help-needed/2549"
 ---
 
 # OpenFOAM Solver Convergence and FSI Errors: Floating Point Exception from leastSquaresVectors Mesh Motion in FSI Requiring preCICE 3.3.0 Update, Residuals Suddenly Explode After Convergence from Mesh Quality or Boundary Conditions Requiring Mesh Refinement, FSI Simulation Crash from Interface Decomposition Splitting Coupling Boundary Requiring Decomposition Avoidance, Solid Solver Relative Residuals Not Converging from Under-Relaxation Factor Requiring BC and Rheology Verification, and chtMultiRegionFoam Steady State Not Stopping from Transient Solver Misunderstanding Requiring localEuler or chtMultiRegionSimpleFoam
@@ -31,13 +28,10 @@ Running the elastic-tube-3D tutorial with OpenFOAM v2406 or v2412. The OpenFOAM 
 ### Fix
 
 1. **Update to preCICE v3.3.0**:
-   - "This was actually a bug in the QR3 filter set as default preCICE v3.2.0"
-   - "Update to v3.3.0"
    - preCICE v3.3.0 fixes the QR3 filter bug
    - This is the primary fix
 
 2. **Use preCICE v3.1.2 as fallback**:
-   - "I can always run elastic-tube-3d and my pipe FSI cases without any issues using OpenFOAM-v2406 and preCICE-3.1.2"
    - If v3.3.0 is not available
    - Downgrade to preCICE v3.1.2
    - This version doesn't have the QR3 filter issue
@@ -67,7 +61,6 @@ Running the elastic-tube-3D tutorial with OpenFOAM v2406 or v2412. The OpenFOAM 
    - This may avoid the leastSquaresVectors crash
 
 6. **Verify OpenFOAM version compatibility**:
-   - "If v2412 works, v2406 should also work"
    - The issue is preCICE version, not OpenFOAM version
    - But verify both are compatible
    - Check preCICE adapter compatibility matrix
@@ -120,7 +113,6 @@ Sudden residual explosion after apparent convergence is typically caused by: (1)
    - Use inletOutlet for velocity at outlet if needed
 
 5. **Use potentialFlow initialization**:
-   - "potentialFlow { nNonOrthogonalCorrectors 10; }"
    - Initialize with potential flow before running the full solver
    - This provides a better initial field
    - Reduces the chance of divergence
@@ -160,7 +152,6 @@ Running a 2D FSI simulation coupling OpenFOAM and CalculiX using preCICE. The si
 ### Fix
 
 1. **Avoid splitting the coupling interface**:
-   - "I modified my OpenFOAM decomposition to avoid splitting the coupling interface itself"
    - Use simple decomposition method
    - Ensure the coupling interface is on a single processor
    - This doubled the runtime (from 5s to 8.4s)
@@ -191,19 +182,16 @@ Running a 2D FSI simulation coupling OpenFOAM and CalculiX using preCICE. The si
    - But may be slower for large cases
 
 5. **Check for force oscillations**:
-   - "OpenFOAM-side forces show violent oscillations, with extreme spikes at the first iteration of every time window"
    - Monitor coupling forces at each iteration
    - If forces oscillate, the decomposition is likely the cause
    - Adjust decomposition to avoid oscillations
 
 6. **Disable subcycling**:
-   - "It is known that CalculiX / the CalculiX adapter has issues with subcycling"
    - Don't use subcycling with CalculiX
    - Set the end time in CalculiX >= preCICE max-time
    - Subcycling causes checkpointing issues
 
 7. **Check pressure field**:
-   - "The pressure at the last timestep is significantly abnormal"
    - Monitor pressure at each timestep
    - If pressure spikes before the crash
    - The fluid solver is the source of the instability
@@ -247,13 +235,11 @@ The solid solver residuals not converging indicates the displacement equations a
    - Check fixedDisplacement values
 
 2. **Verify rheology properties**:
-   - "I changed it randomly, and it didn't alter the diverged results"
    - Check rheologyProperties file
    - Ensure density, Young's modulus, Poisson's ratio are correct
    - Wrong material properties cause convergence issues
 
 3. **Reduce under-relaxation factor**:
-   - "The current fsi under-relaxation factor is huge"
    - In fsiProperties:
    ```
    relaxationFactors
@@ -265,13 +251,11 @@ The solid solver residuals not converging indicates the displacement equations a
    - Gradually increase if stable
 
 4. **Check mesh generation**:
-   - "I generated it from the fluid patch using extrudeMesh command"
    - Verify the solid mesh is properly generated
    - Check mesh quality with checkMesh
    - Ensure the solid and fluid meshes are conformal at the interface
 
 5. **Follow the 3dTube example exactly**:
-   - "I followed the exact steps proposed here"
    - Use the exact same settings as the tutorial
    - Don't modify parameters until the base case works
    - Then change one parameter at a time
@@ -305,7 +289,6 @@ Using OpenFOAM 6 with chtMultiRegionFoam for a steady-state conjugate heat trans
 ### Fix
 
 1. **Use localEuler for steady-state behavior**:
-   - "You can setup scheme for time derivative to localEuler"
    - In controlDict or fvSchemes:
    ```
    ddtSchemes
@@ -317,7 +300,6 @@ Using OpenFOAM 6 with chtMultiRegionFoam for a steady-state conjugate heat trans
    - Pseudo-transient continuation
 
 2. **Use OpenFOAM 5 with chtMultiRegionSimpleFoam**:
-   - "Another possibility is to use OpenFOAM 5 and chtMultiRegionSimpleFoam"
    - If available, use OpenFOAM 5
    - chtMultiRegionSimpleFoam is a true steady-state solver
    - It stops when converged
@@ -335,15 +317,11 @@ Using OpenFOAM 6 with chtMultiRegionFoam for a steady-state conjugate heat trans
    - Stop the simulation manually
 
 5. **Understand the solver type**:
-   - "The official documentation of OF6 for chtMultiRegionFoam tells: Solver for steady or transient fluid flow and solid heat conduction"
    - It can do steady state with localEuler
    - But it's fundamentally a transient solver
    - residualControl controls inner loops, not termination
 
 6. **Check wallHeatTransferCoeff**:
-   - "I try the new functionality wallHeatTransferCoeff"
-   - "But I see that it works only for incompressible fluids"
-   - "cht is for compressible fluids"
    - This function object may not work for CHT cases
    - Use wallHeatFlux instead
 

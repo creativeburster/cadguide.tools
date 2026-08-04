@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.eng-tips.com/threads/what-are-the-most-common-reasons-that-caesar-ii-diverges.386445/"
-  - "https://www.eng-tips.com/threads/caesar-ii-error-incore-solver.529286/"
-  - "https://docs.hexagonppm.com/r/en-US/CAESAR-II-Users-Guide/Version-12/1219921"
 ---
 
 # CAESAR II Nonconvergence from Support Gaps and Friction, Incore Solver Error from Account Number Lock, FRP Pipe Divergence from Ineffective Restraints and Uplift, Nonlinear Friction Stiffness Zero No Convergence, and Dynamic Analysis Equation Errors: Gap Reduction, Hexagon Support Ticket, Friction Coefficient Removal, TR-TX-35834 Fix, and Version 12 Update
@@ -31,19 +28,13 @@ CAESAR II diverges during analysis of FRP pipes. The model includes restraints w
 ### Fix
 
 1. **Reduce support gaps**:
-   - "The gap is too large to be effective"
-   - "The pipe will either not touch the support at all"
    - Reduce gap sizes to ensure
    - The pipe contacts the support during operation
 
 2. **Remove friction from ineffective supports**:
-   - "If you have any restraints which are not effective during operating case (uplift)"
-   - "Take the friction coefficient off the support"
-   - "Or it will cause the convergence"
    - Remove friction from supports that experience uplift
 
 3. **Check if supports are effective**:
-   - "The pipe will not expand enough to cause enough friction"
    - Verify that each support
    - Is actually engaged during the operating case
    - Remove or adjust ineffective supports
@@ -55,20 +46,15 @@ CAESAR II diverges during analysis of FRP pipes. The model includes restraints w
    - During thermal expansion
 
 5. **Review seismic load effects**:
-   - "I'm modeling with seismic case loads, without wind and outdoors pipes"
    - Seismic loads can cause pipe uplift
    - Making supports ineffective
    - Adjust supports for seismic conditions
 
 6. **Use convergence diagnostic tools**:
-   - "Diagnostic tools in Caesar II help identify specific nonlinear restraints"
-   - "That are not converging"
    - Use the built-in diagnostic tools
    - To identify problem restraints
 
 7. **Make minor changes to parameters**:
-   - "Minor changes to parameters like temperature"
-   - "May resolve convergence without other modifications needed"
    - Try slightly adjusting temperature or other parameters
    - To help the solver converge
 
@@ -89,15 +75,10 @@ The incore solver error is related to licensing or account configuration. The po
 ### Fix
 
 1. **Contact Hexagon support**:
-   - "You're going to need to reach out to Hexagon support for this one"
-   - "And create a support ticket"
    - This is not a user-fixable issue
    - Hexagon support must intervene
 
 2. **Don't attempt to change account number**:
-   - "I already try to change the account number"
-   - "But every time I try to this windows pops up"
-   - "I can't write anything there"
    - Don't force the account number change
 
 3. **Check license server connectivity**:
@@ -153,8 +134,6 @@ FRP pipes have different thermal expansion properties than steel pipes. The comb
    - Reduce or eliminate gaps for FRP pipes
 
 2. **Remove friction from uplift supports**:
-   - "If you have any restraints which are not effective during operating case (uplift)"
-   - "Take the friction coefficient off the support"
    - For supports that experience uplift
    - Set friction coefficient to 0
 
@@ -183,8 +162,6 @@ FRP pipes have different thermal expansion properties than steel pipes. The comb
    - Then add nonlinear elements gradually
 
 7. **Attend CAU-Express convergence session**:
-   - "In this year's CAU-Express we are presenting a session on convergence issues"
-   - "And methods to resolve them"
    - Attend the CAU-Express conference
    - For convergence troubleshooting training
 
@@ -205,8 +182,6 @@ CAESAR II fails to converge when modeling friction at supports. The support has 
 ### Fix
 
 1. **Update to CAESAR II Version 12 or later**:
-   - "Fixed a non-converging solution for friction modeling of supports with no friction stiffness"
-   - "(TR-TX-35834)"
    - Install Version 12 or later
    - Which includes the friction stiffness fix
 
@@ -263,7 +238,6 @@ Dynamic analysis results are incorrect or inconsistent. The analysis completes b
 ### Fix
 
 1. **Update to CAESAR II Version 12 or later**:
-   - "Fixed Dynamic Analysis equations. (TR-TX-33065)"
    - Install Version 12 or later
    - Which includes the dynamic analysis fix
    - This is critical for all dynamic analyses

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-performance-slow/td-p/12844087"
-  - "https://forums.autodesk.com/t5/inventor-forum/inventor-random-crashes-due-to-microsoft-netcore-app-8-0-12/td-p/13292805"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Inventor-crashing-after-updating-to-Windows-11-24H2.html"
 ---
 
 # Autodesk Inventor 2025 Performance Slow from Shared Project Browser Update, Random Crashes from coreclr.dll .NET Runtime on Intel Gen 13, Windows 11 24H2 AVX SEH Compatibility Crash, Hang or Crash on Save from Long Path and Network Design Data, and Windows Efficiency Mode Freezing Inventor: 2025.1.1 Update, FNTCACHE.DAT Rename, Registry Limit Increase, KB5067036, and Efficiency Mode Disable
@@ -31,43 +28,30 @@ After upgrading to Inventor 2025, every action — deleting a constraint, modify
 ### Fix
 
 1. **Install Inventor 2025.1.1 or later**:
-   - "2025.1.1 has been released. It contains the fix to resolve the issue"
-   - "The root cause is related to an unnecessary browser update for shared project type"
-   - "We are in the process of integrating the fix to affected releases"
    - This is the primary fix — update to 2025.1.1
 
 2. **Switch to Single-User Project (workaround)**:
-   - "It does not reproduce with Single-User Project"
    - If possible, switch from Shared Project to Single-User Project
    - This eliminates the unnecessary browser updates
    - Until the fix is installed
 
 3. **Check if the assembly is open on another machine**:
-   - "It seems the assembly I've been working with is also opened on my coworker's PC"
-   - "If I open an assembly that he doesn't have open I have no issues at all"
    - Shared Project locks cause additional browser updates
    - When multiple users access the same assembly
 
 4. **Clean up %TEMP%**:
-   - "Clean up %temp%"
    - Delete temporary files
    - That may slow down Inventor
    - Especially on Shared Project
 
 5. **Rename FNTCACHE.DAT**:
-   - "Go to C:\\Windows\\System32 and find 'FNTCACHE.DAT'"
-   - "Rename it to something else. Restart the machine"
    - This can improve font caching performance
    - Which affects browser rendering
 
 6. **Run as Admin and set High DPI**:
-   - "Right-click on Inventor desktop icon -> Properties -> Compatibility"
-   - "Check 'Run as Admin'"
-   - "Click 'Change High DPI settings' -> check both boxes"
    - This can improve overall performance
 
 7. **Disable Dell system management tools**:
-   - "If you are using Dell machines, try disabling any Dell system managing tools"
    - Dell bloatware can interfere with Inventor performance
    - Disable Dell Optimizer and similar tools
    - Test performance after disabling
@@ -88,44 +72,31 @@ Inventor crashes without warning. No popups or crash reports appear. The only si
 
 ### Fix
 
-1. **Install Intel CPU stability updates**:
-   - "The Intel Gen 13 CPU has a general stability issue due to high voltage"
-   - "Intel has been working with PC vendors to publish updates"
-   - "Please go to PC vendor site and install all critical updates"
-   - "To your specific machine"
+1. **Install Intel CPU stability updates**.
 
 2. **Install all critical Windows updates**:
-   - "Please make sure all critical Windows updates are installed"
-   - "And the graphics driver is updated"
    - Keep Windows fully updated
    - To ensure OS-level compatibility
 
 3. **Install latest Inventor update**:
-   - "Install the latest Inventor update to your Inventor release"
    - Check for updates in Autodesk desktop app
    - Install the latest service pack
    - For your Inventor version
 
 4. **Enable WER support**:
-   - "Go to Control Panel -> System -> Advanced System Settings -> Environment Variables"
-   - "Add 'INV_ENABLE_WER_SUPPORT' and set it to 1"
    - This enables Windows Error Reporting
    - Which may capture more crash information
 
 5. **Increase registry limits**:
-   - "Run Regedit.exe and find the following two registry keys"
-   - "Change the value to 1000000:"
    - `Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\USERPostMessageLimit`
    - `HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\GDIProcessHandleQuota`
 
 6. **Disable overclocking or turbo**:
-   - "Disable any performance ability (overclock or turbo) on the machine"
    - Intel Gen 13 instability is worse with overclocking
    - Disable turbo boost in BIOS
    - To improve stability
 
 7. **Use Microsoft Disk Cleanup**:
-   - "Use Microsoft Disk Cleanup to remove cached files"
    - Clean up old .NET runtime caches
    - And Windows update caches
    - That may cause conflicts
@@ -147,45 +118,29 @@ After updating to Windows 11 24H2, Inventor frequently crashes during various op
 ### Fix
 
 1. **Install Inventor 2025.4 or 2026.0.1**:
-   - "This incident has been resolved in: Inventor 2023.5.3, Inventor 2025.4, Inventor 2024.3.5, Inventor 2026.0.1"
    - Update to the latest version
    - That includes the compatibility fix
    - Check Autodesk desktop app for updates
 
-2. **Install Microsoft KB5067036**:
-   - "Microsoft have released KB5067036"
-   - "Is an update for Win11 25H2 & Win11 24H2"
-   - "OS Builds 26200.7019 and 26100.7019"
-   - "That should be installed to improve stability"
+2. **Install Microsoft KB5067036**.
 
 3. **Downgrade to Windows 11 23H2**:
-   - "To avoid stability issues, CAD users are advised to avoid applying Windows 11 24H2"
-   - "And if possible downgrade to Windows 11 23H2"
-   - "Until Microsoft have released fixes for this issue"
    - See Microsoft's downgrade guide
 
 4. **Ensure both Autodesk and Microsoft updates are installed**:
-   - "Ensure that the latest update from both Microsoft and Autodesk are installed"
    - Install Inventor updates first
    - Then install Windows updates
    - Or vice versa — both must be current
 
 5. **Check Windows 11 24H2 known issues**:
-   - "The Autodesk Inventor team is continuing to partner with Microsoft"
-   - "To identify and implement more solutions"
-   - "Related to Windows 11, version 24H2"
-   - "Windows 11, version 24H2 known issues and notifications"
    - Monitor Microsoft's known issues page
 
 6. **Avoid Windows 11 24H2 for CAD**:
-   - "CAD users are advised to avoid applying Windows 11 24H2"
    - If you haven't updated yet
    - Stay on 23H2 until all fixes are released
    - This is the safest approach
 
 7. **Follow General Inventor Stability troubleshooting**:
-   - "General Inventor Stability troubleshooting guidance can be found here"
-   - "Troubleshooting Inventor stability, crash and hanging issues"
    - Follow Autodesk's general stability guide
    - For additional troubleshooting steps
 
@@ -206,61 +161,39 @@ Multiple causes can produce save/open hangs: "The file path to files is too long
 ### Fix
 
 1. **Reduce file and folder paths**:
-   - "Make sure that the save path of the file is shorter than 255 characters"
    - Move the project to a shorter path
    - Use drive substitution: `subst I: C:\\Users\\name\\Documents\\Projects\\VeryLongPath`
    - To create shorter paths
 
 2. **Move Design Data to local drive**:
-   - "The Design Data is situated on a distant network drive"
    - Move Design Data to a local drive
    - Configure the project to use local Design Data
    - Network Design Data causes significant delays
 
 3. **Move Templates to local drive**:
-   - "The Templates folder is situated on a distant network drive"
    - Move Templates to a local drive
    - Configure the project to use local Templates
    - Network Templates cause delays and potential corruption
 
 4. **Delete temporary files**:
-   - "%TEMP% folder is running out of space"
-   - "Click Windows Start, paste '%TEMP%', click Enter"
-   - "Delete temporary files"
    - Ensure adequate free space in temp
 
 5. **Set up antivirus exclusions**:
-   - "Set up exceptions for Antivirus"
-   - "Exceptions should be done also on the server when working on the network drive"
-   - "New Antivirus exceptions should be done always after installing a new version of Inventor"
    - Add Inventor executables and project folders to exclusions
 
 6. **Check for corrupted templates**:
-   - "The template files are corrupted"
-   - "Try to use the default drawing files"
-   - "If it works, create a new template using the default template"
    - Recreate templates from defaults
 
-7. **Check .NET Framework**:
-   - "The required .NET framework version is not installed or is corrupted"
-   - "Verify the .NET Framework is turned on"
-   - "Control Panel -> Programs and Features -> Turn Windows features on or off"
-   - "Repair or reinstall .NET Framework"
+7. **Check .NET Framework**.
 
 8. **Avoid multiple Inventor sessions**:
-   - "Opening Inventor files in different sessions causing conflicts"
-   - "Files opened in multiple sessions can lead to crashes on save"
-   - "As both sessions attempt to lock the files"
    - Use only one Inventor session
 
 9. **Update 3D mouse driver**:
-   - "The driver of 3D mouse hangs Inventor"
-   - "Testing without the 3D Mouse and unload this from the Add-ins"
    - Update or uninstall 3D mouse drivers
    - If they cause hangs
 
 10. **Check for bad bodies**:
-    - "Checking for Bad Bodies. How to utilize the CTRL + F7 in Inventor to find bad bodies"
     - Use Ctrl+F7 to check for bad bodies
     - In part files
     - Bad bodies can cause save/open crashes
@@ -282,13 +215,9 @@ Inventor randomly freezes during various operations — measuring between two po
 ### Fix
 
 1. **Close Chrome and other background apps**:
-   - "I always have Plex running in Chrome to stream music from my PC at home"
-   - "I closed the chrome tab that had Plex running and now Inventor doesn't randomly freeze"
-   - "So maybe Plex/Chrome was fighting Inventor for system resources"
    - Close browser tabs and background apps
 
 2. **Disable Windows Efficiency Mode**:
-   - "Inventor will freeze as soon as Windows puts another app into Efficiency Mode"
    - Open Task Manager
    - Find apps in Efficiency Mode (leaf icon)
    - Right-click and "Disable Efficiency Mode"
@@ -300,7 +229,6 @@ Inventor randomly freezes during various operations — measuring between two po
    - Set Inventor to "High performance" power mode
 
 4. **Monitor Task Manager for Efficiency Mode**:
-   - "I've had Task Manager open all day on my second monitor"
    - Watch for when Windows puts apps into Efficiency Mode
    - If Inventor freezes when another app enters Efficiency Mode
    - Disable Efficiency Mode for that app
@@ -318,7 +246,6 @@ Inventor randomly freezes during various operations — measuring between two po
    - Disable unnecessary visual effects
 
 7. **Ensure adequate graphics RAM**:
-   - "Make sure the graphics card has adequate RAM (8GB+)"
    - Insufficient graphics memory
    - Can cause Inventor to freeze
    - When Windows throttles other apps

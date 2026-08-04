@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://industrialmonitordirect.com/blogs/knowledgebase/adding-custom-posts-in-surfcam-velocity-step-by-step-guide"
-  - "https://hexagon.com/products/surfcam-post-processors"
-  - "https://pmtechnologies.com/blog/surfcam-2025-1-workflow-and-toolpath-improvements/"
 ---
 
 # SurfCAM 2026 Post Processor Not Visible in Menu from Manual postform.m Edit Without surfcam.pst Registration, Post Added to Library But Not Visible in Menu from Registry Parity Failure, G-Code Errors from Unsupported Commands in M-Post Output, Waveform 2D Toolpath Calculation Speed and Internal External Contour Issues, and Post Menu Wizard Permission Error from Lack of Administrator Rights: Post Menu Wizard Use, surfcam.pst Registration, G-Code Command Removal, CAMENGINE Update, and Administrator Rights
@@ -31,47 +28,24 @@ A post processor added manually to postform.m doesn't appear in the post selecto
 ### Fix
 
 1. **Use Post Menu Wizard instead of manual edit**:
-   - "The Post Menu Wizard"
-   - "Exists specifically to maintain"
-   - "Parity between these two stores"
    - Use Wizard
 
 2. **Register post in surfcam.pst manually**:
-   - "Register the post manually"
-   - "By editing \Surfcam\Velocity\surfcam.pst"
-   - "And appending the post name"
-   - "On a new line"
    - Register in surfcam.pst
 
 3. **Use one post name per line format**:
-   - "The format is one post name"
-   - "Per line, matching the entry's"
-   - "Display string in postform.m"
-   - "Do not add a file extension"
    - One name per line
 
 4. **Close SURFCAM before editing**:
-   - "SURFCAM Velocity must be closed"
-   - "Before any manual edit"
-   - "To postform.m or surfcam.pst"
    - Close SURFCAM
 
 5. **Backup postform.m before editing**:
-   - "Create a backup copy"
-   - "Of postform.m in a safe location"
-   - "Before any manual edit"
    - Backup first
 
 6. **Check for read-only attribute**:
-   - "Confirm the file is not marked read-only"
-   - "A read-only attribute silently drops"
-   - "Manual edits on the next launch"
    - Check read-only
 
 7. **Verify menu visibility after restart**:
-   - "Launch SURFCAM Velocity"
-   - "Click the post selector"
-   - "The new post should appear"
    - Verify visibility
 
 ### Community Report
@@ -91,10 +65,6 @@ The post exists in the postform.m library but doesn't appear in the post selecto
 ### Fix
 
 1. **Use Post Menu Wizard for automatic parity**:
-   - "The Post Menu Wizard"
-   - "Handles both the Postlib library update"
-   - "And the surfcam.pst registry update"
-   - "In a single transaction"
    - Use Wizard
 
 2. **Update both files manually**:
@@ -104,34 +74,18 @@ The post exists in the postform.m library but doesn't appear in the post selecto
    - Maintain parity
 
 3. **Verify parity after manual edit**:
-   - "A failed verification"
-   - "Indicates a registry/library"
-   - "Parity problem"
    - Verify parity
 
 4. **Check menu visibility**:
-   - "Menu visibility check"
-   - "The new post should appear"
-   - "In the drop-down list"
    - Check menu
 
 5. **Check post-bind**:
-   - "Post-bind check"
-   - "Select the new post"
-   - "And open the post configuration dialog"
    - Check post-bind
 
 6. **Restore from backup if corrupted**:
-   - "A corrupted library"
-   - "Is not recoverable without"
-   - "A backup or full reinstall"
    - Restore backup
 
 7. **Don't modify byte offsets of existing records**:
-   - "Do not modify the byte offsets"
-   - "Of existing records"
-   - "Corrupting an existing entry"
-   - "Invalidates that post"
    - Don't modify offsets
 
 ### Community Report
@@ -151,45 +105,26 @@ The M-Post processor generates G-code with commands that are not supported by al
 ### Fix
 
 1. **Remove unsupported G-code commands**:
-   - "Removed G70"
-   - "After removing G70 G40 and G80"
-   - "This error went away"
    - Remove unsupported
 
 2. **Remove duplicate motion modes**:
-   - "Error on Line 8: Multiple Motion Modes"
-   - "G00 G90 G00 X0.3509"
-   - "Removed the second G00"
    - Remove duplicates
 
 3. **Fix arc format with I/J parameters**:
-   - "Error in line 13: bad arc format"
-   - "No I/J"
-   - "G03 X0.2936 Y-0.5977"
    - Add I/J parameters
 
 4. **Remove program number line**:
-   - "Error in line 2: Syntax Error"
-   - "O0001(INCAAA)"
    - Remove program
    - Number line
 
 5. **Use Mach3 post as starting point**:
-   - "There is supposed to be"
-   - "A Mach 3 post-processor"
    - Use Mach3 post
    - As base
 
 6. **Edit M-Post header and footer**:
-   - "MPost from SurfCAM"
-   - "Lets me edit the header"
-   - "And footer of the gcode"
    - Edit header/footer
 
 7. **Contact SURFCAM support for custom post**:
-   - "Their support told me"
-   - "They have to make the post"
-   - "If it affects the motion"
    - Contact support
 
 ### Community Report
@@ -209,44 +144,27 @@ The Waveform 2D toolpath calculation is slow. The ability to machine both intern
 ### Fix
 
 1. **Update to SURFCAM 2025.1 or later**:
-   - "The Waveform 2D command"
-   - "Has been updated using"
-   - "The latest Hexagon CAMENGINE interface"
    - Update SURFCAM
 
 2. **Use updated Waveform 2D for speed**:
-   - "Significantly improving"
-   - "Calculation speed"
    - Use updated
    - Waveform 2D
 
 3. **Machine internal and external in single toolpath**:
-   - "Restores the ability to machine"
-   - "Both internal and external contours"
-   - "In a single toolpath"
    - Single toolpath
 
 4. **Eliminate multiple roughing operations**:
-   - "You get faster toolpath generation"
-   - "And more efficient roughing strategies"
-   - "Without needing multiple operations"
    - Eliminate multiple ops
 
 5. **Install via Hexagon Customer Portal**:
-   - "SURFCAM 2025.1 can be installed"
-   - "Through the Hexagon Customer Portal"
    - Or Universal Updater
    - Install update
 
 6. **Regenerate toolpaths after update**:
-   - "Toolpaths must be regenerated"
-   - "After changes to reflect updates"
    - Regenerate
    - Toolpaths
 
 7. **Check toolpath comments in SQL database**:
-   - "Toolpath comments are now stored"
-   - "In the SURFCAM SQL database"
    - Check SQL
    - Comments
 
@@ -267,20 +185,14 @@ The Post Menu Wizard fails with a permission error. The wizard silently drops th
 ### Fix
 
 1. **Run as Administrator**:
-   - "Local administrator rights"
-   - "On the workstation"
    - Run as
    - Administrator
 
 2. **Verify write access to Program Files**:
-   - "The Post Menu Wizard writes"
-   - "To Program Files-equivalent locations"
    - Verify write
    - Access
 
 3. **Check surfcam.pst write permissions**:
-   - "And to the protected"
-   - "surfcam.pst registry"
    - Check write
    - Permissions
 
@@ -291,13 +203,9 @@ The Post Menu Wizard fails with a permission error. The wizard silently drops th
    - Department
 
 5. **Verify successful addition after wizard**:
-   - "Menu visibility check"
-   - "The new post should appear"
-   - "In the drop-down list"
    - Verify addition
 
 6. **Check for silent failure**:
-   - "Silently drops the additions"
    - Check if post
    - Was actually
    - Added

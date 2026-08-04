@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://help.drofus.com/en/English/Learning/synchronize-with-revit"
-  - "https://support.drofus.com/en/support/solutions/articles/16000085851-the-value-you-tried-to-insert-has-an-id-number-primary-key-which-already-exists-in-the-database-pl"
-  - "https://help.drofus.com/en/English/Learning/tips"
 ---
 
 # dRofus Revit Sync and Room Data Management Errors: Duplicate ID Primary Key from Multiple Group Options Conflicting on Revit Parameter Mapping, Room Sync Link Status Issues with Unlinked Rooms Requiring Show in Model Navigation, Revit Property Update Changes Room Data Status from Template to Derived From Automatically, Tracking Deleted Revit Rooms with Update dRofus Option, and Large Project Sync Without Filter Clears Data from Wrong Revit Models
@@ -40,7 +37,6 @@ A Revit parameter is mapped to a dRofus field that uses Group options. The same 
    - Look for fields that use drop-down menus (Groups, Room Data fields, Item Data fields)
 
 2. **Remove duplicate options in dRofus**:
-   - "Avoid duplicate options in various formats in Groups, Room Data fields, Item Data fields, or any other locations where a menu of options are available"
    - Check Groups: ensure each group name is unique
    - Check Room Data drop-down menus: ensure no duplicate values
    - Check Item Data drop-down menus: ensure no duplicate values
@@ -87,7 +83,6 @@ Rooms may become unlinked during sync due to:
    - Use the Search field and dRofus filter to narrow down
 
 2. **Use "Show in Model" to navigate**:
-   - "Under the 'Not Linked in Revit Only' field, right click to 'Show in Model'"
    - This automatically navigates to the room in the Revit model
    - Use this to find and fix each unlinked room
 
@@ -97,18 +92,14 @@ Rooms may become unlinked during sync due to:
    - If using custom parameter (like Room ID), ensure it exists in both systems
 
 4. **Use IFC GUID as key**:
-   - "Using Revit's built-in IFC GUID as the key to link rooms does not require creating custom fields"
    - This is the most reliable key attribute
    - No need for custom shared parameters or project parameters
 
 5. **Add unplaced rooms to schedule**:
-   - "Add unplaced to schedule: Adds all Rooms from dRofus into the Revit Schedule"
    - Set Revit filter to "All in schedule"
    - This adds rooms that exist in dRofus but not in Revit
 
 6. **Remove or clear unmatched rooms**:
-   - "Remove unmatched from Revit: Removes all Rooms not found in dRofus from the Revit Schedule"
-   - "Clear unmatched in Revit: Clears all dRofus-driven information within Revit Rooms that are not matched"
    - Use carefully — these operations delete data
 
 ### Community Report
@@ -136,7 +127,6 @@ dRofus's automatic status management:
    - These changes are intentional and track data provenance
 
 2. **Use the same rules as Excel updates**:
-   - "All the rules when updating attributes within the Room Data using an Excel update also apply when using the Revit Add-On"
    - Be aware that any data write changes the status
    - This is consistent across update methods
 
@@ -157,10 +147,8 @@ dRofus's automatic status management:
    - Adjust mappings to prevent unwanted overrides
 
 6. **Use the "placed in Revit" tracking attribute**:
-   - "There is a feature to notify whether a Room in dRofus is placed or not within Revit"
    - Map this to a logic (Yes/No) attribute in Room Data
    - After sync, dRofus shows which rooms are placed in Revit
-   - "When you deleted the Revit Room or unlink it, this logic attribute will be unchecked"
 
 ### Community Report
 
@@ -183,7 +171,6 @@ The tracking feature is designed to handle room deletions gracefully. When a Rev
 ### Fix
 
 1. **Choose the right deletion option**:
-   - "Leave the Room in the Revit schedule and update dRofus with the latest design information"
    - This preserves the room data in dRofus for reference
    - The room remains in Revit's schedule as unplaced
 
@@ -194,23 +181,18 @@ The tracking feature is designed to handle room deletions gracefully. When a Rev
 
 3. **Use "Clear unmatched in dRofus"**:
    - If you want to remove dRofus data for deleted rooms
-   - "Clears all Revit-driven information within dRofus Rooms that are not matched against Revit Rooms"
    - Set Revit filter to "All in schedule" or "All placed"
    - This removes outdated data from dRofus
 
 4. **Don't combine "Clear unmatched" with "Add unplaced"**:
-   - "This cannot be combined with the 'Add unplaced to schedule' option"
    - Choose one operation per sync
    - Run separate sync operations for different actions
 
 5. **Use Auto Sync for automatic updates**:
-   - "When tracking is activated and changes are made to a room, the entire configuration is synchronized accordingly"
    - Auto Sync handles wall moves, room name changes, and area updates
    - Ensure both Design Area and Room Name are configured for sync
 
 6. **Verify key attribute has data**:
-   - "The field used as the key attribute has to contain data for this function to work"
-   - "If the field is empty, dRofus would register the room as a new room that does not contain any information that needs to be cleared"
    - Ensure key attributes are populated before sync
 
 ### Community Report
@@ -230,7 +212,6 @@ Without a dRofus filter, the sync operation applies to all rooms in the active R
 ### Fix
 
 1. **Always use a dRofus filter for large projects**:
-   - "If you have a large project and you do not have all the Revit Rooms in one model, using this without a dRofus filter could result in the clearing"
    - Apply a filter using dRofus Properties attributes
    - Narrow down to only the rooms in the current Revit model
 
@@ -245,12 +226,10 @@ Without a dRofus filter, the sync operation applies to all rooms in the active R
    - This prevents cross-model data clearing
 
 4. **Link rooms in the "Rooms Model" first**:
-   - "Start by linking Rooms to dRofus in your 'Rooms Model'"
    - Then link the Rooms Model into other models (Instances Model)
    - Import or sync rooms as if they were in your model
 
 5. **Use linked model rooms**:
-   - "As long as you have a model linked that has rooms with rooms linked to dRofus, you can import and sync the instances"
    - This allows working with rooms from linked models
    - No need to copy rooms into linked models (required in v2.14 and earlier)
 

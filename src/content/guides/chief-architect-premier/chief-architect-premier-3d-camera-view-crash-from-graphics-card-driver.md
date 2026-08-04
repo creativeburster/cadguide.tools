@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.chiefarchitect.com/support/article/KB-00106/troubleshooting-3d-camera-view-display-problems-in-chief-architect.html"
-  - "https://www.chiefarchitect.com/support/article/KB-03049/troubleshooting-chief-architect-software-closing-unexpectedly-on-windows.html"
-  - "https://www.chiefarchitect.com/support/article/KB-00802/troubleshooting-exception-and-assertion-error-messages.html"
 ---
 
 # Chief Architect Premier 3D Camera View Crash from Graphics Card Driver and Multi-Monitor, SEH Exception and Assertion Failure from File Corruption and Network Storage, LoadLibrary Error 87 from Parameter Incorrect, RivaTuner Statistics Server Internal Rendering Error in Library Browser, and Intel Arc Graphics SEH Error from GPU Ray Tracing: Driver Update, Local File Storage, Selective Startup, RivaTuner Uninstall, and GPU Ray Tracing Disable
@@ -31,46 +28,28 @@ Chief Architect Premier produces errors from 3D camera view crashes, SEH excepti
 ### Fix
 
 1. **Update graphics card driver**:
-   - "These issues can usually be resolved by updating the driver for your computer's graphics card"
    - Download the latest driver
    - From the graphics card manufacturer's website
    - Not from Windows Update
 
 2. **Verify system requirements**:
-   - "Windows: 4 GB of dedicated RAM or Intel integrated graphics on 11th generation or newer"
-   - "DirectX 12 requires Shader Model 6.0 or newer"
-   - "Mac: Apple M1 or newer"
    - Ensure your graphics card meets minimum requirements
 
 3. **Disconnect extra monitors**:
-   - "If you use multiple monitors and continue to experience crashing after updating the driver"
-   - "Try temporarily disconnecting the extra monitors"
-   - "If the crashing no longer occurs, then it is likely that your graphics card is not capable of supporting the extra monitors"
    - Test with a single monitor
 
 4. **Shut down completely after driver update**:
-   - "After updating the driver, shut down the system completely"
-   - "Then start the system back up"
-   - "Even if the end of the installation does not prompt you to do so"
    - A full restart is required
 
 5. **Don't use emulators or virtual machines**:
-   - "You're attempting to run in an unsupported fashion"
-   - "Such as using an emulator or virtual machine environment"
-   - "Common examples include Parallels, VirtualBox, VMWare Fusion"
-   - "Or when accessing a computer remotely such as by using Remote Desktop"
    - Run natively on supported hardware
 
 6. **Check for known incompatibilities**:
-   - "Visit the Known Incompatibilities page to learn more"
    - Check the Chief Architect known incompatibilities page
    - For your specific hardware and software
    - That may conflict with Chief Architect
 
 7. **Roll back Windows if needed**:
-   - "If you have upgraded your Windows operating system from an older version"
-   - "Keep in mind that your graphics card may not have drivers compatible with Windows 10 or 11"
-   - "Please rollback your Windows installation to the version that your hardware was designed to run on"
    - If no compatible drivers exist
 
 ### Community Report
@@ -89,44 +68,33 @@ Error messages appear stating something about an exception. Two common errors ar
 
 ### Fix
 
-1. **Copy files to local hard drive**:
-   - "File corruption and data loss can be caused by a hard drive failure, power outage, or forced system restart"
-   - "If you have been working on files saved anywhere other than your local machine's hard drive"
-   - "We recommend that you always copy plan, layout, and/or project files to your local hard drive before you open them"
-   - "When you're finished working, exit out of the program and then copy them back"
+1. **Copy files to local hard drive**.
 
 2. **Check system requirements**:
-   - "The first step to troubleshooting an error in any program is to make sure that your computer meets the minimum system requirements"
    - Verify your computer meets
    - The minimum system requirements
    - For Chief Architect Premier
 
 3. **Update video card drivers**:
-   - "Update your video card drivers to the most recent version compatible with your operating system"
    - Download from the manufacturer's website
    - Install the latest driver
    - And restart the computer
 
 4. **Run a repair on the program**:
-   - "Try running a repair on the program"
    - Use the Chief Architect installer
    - To repair the installation
    - This fixes corrupted program files
 
 5. **Access Archive files**:
-   - "If this only occurs in one particular file, rather than all files"
-   - "Access your Archives to see if a recent copy of the file exists which does not generate the error message"
    - Chief Architect automatically creates archives
    - Check for a recent uncorrupted copy
 
 6. **Perform Selective Startup**:
-   - "Perform a Selective Startup"
    - Disable all non-Microsoft services
    - To identify if a third-party application
    - Is causing the conflict
 
 7. **Create a new user account**:
-   - "Create a New User Account"
    - Test if the error occurs
    - In a new Windows user account
    - To rule out profile corruption
@@ -160,7 +128,6 @@ The LoadLibrary error 87 is caused by a graphics driver incompatibility. The Dir
    - Then start it back up
 
 3. **Verify DirectX 12 support**:
-   - "DirectX 12 requires Shader Model 6.0 or newer"
    - Verify your graphics card
    - Supports DirectX 12 with Shader Model 6.0
    - Upgrade if it doesn't
@@ -206,13 +173,11 @@ Chief Architect produces an internal rendering error when looking at 3D previews
 ### Fix
 
 1. **Uninstall RivaTuner Statistics Server**:
-   - "Uninstall RivaTuner Statistics Server to resolve the issue"
    - This is the definitive fix
    - Remove RivaTuner from the system
    - Via Control Panel > Programs and Features
 
 2. **Uninstall MSI Afterburner**:
-   - "It may also be bundled in MSI Afterburner software"
    - If RivaTuner is part of MSI Afterburner
    - Uninstall MSI Afterburner
    - Or just the RivaTuner component
@@ -224,7 +189,6 @@ Chief Architect produces an internal rendering error when looking at 3D previews
    - Into Chief Architect
 
 4. **Check for RivaTuner on MSI systems**:
-   - "RivaTuner Statistics Server is often preinstalled on MSI branded systems"
    - If you have an MSI system
    - Check for preinstalled RivaTuner
    - Even if you didn't install it yourself
@@ -264,8 +228,6 @@ Internal rendering errors or SEH errors appear when taking a perspective camera 
 ### Fix
 
 1. **Disable GPU Ray Tracing**:
-   - "Uncheck 'Enable GPU Ray Tracing' within the Render panel of Preferences"
-   - "To disable the GPU ray tracing and avoid these errors"
    - Go to Edit > Preferences > Render
    - Uncheck "Enable GPU Ray Tracing"
 
@@ -282,7 +244,6 @@ Internal rendering errors or SEH errors appear when taking a perspective camera 
    - GPU ray tracing compatibility
 
 4. **Check known incompatibilities**:
-   - "Intel Arc Graphics (Applies to Chief Architect X13 / Home Designer 2022 and newer)"
    - Check the Known Incompatibilities page
    - For the latest information
    - On Intel Arc compatibility

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.chaos.com/t/custom-assets-not-showing-in-custom-asset-library/179213"
-  - "https://forums.chaos.com/t/version-4-11-0-162-enscape-assets-not-showing-up-post-upgrade/180421"
-  - "https://forums.chaos.com/t/skybox-hdri-images-scale-and-position/179798"
 ---
 
 # Enscape Custom Asset Library and HDRI Skybox Errors: Custom Assets Not Showing from SourceDirectory Does Not Exist Requiring Local Folder Configuration, Assets Not Showing Up Post Upgrade from 4.10 to 4.11 Requiring Save As in New Folder, Custom Asset Import Scale Too Large Requiring Metric FBX Export, HDRI Skybox Cannot Be Scaled Requiring Model Scale Instead, and Custom Asset Location Not Recognized After Update from Cloud or Network Path
@@ -35,8 +32,6 @@ The Custom Asset Editor requires a local folder as the source directory. If the 
 ### Fix
 
 1. **Use a local folder, not cloud or network**:
-   - "It should be a local folder that's on your computer, so not somewhere in the cloud"
-   - "It should exist, so when you open it in Explorer there should be a folder there"
    - Use a path like `C:\EnscapeAssets\` not `C:\Users\OneDrive\EnscapeAssets\`
 
 2. **Follow the Custom Asset Editor configuration**:
@@ -46,13 +41,11 @@ The Custom Asset Editor requires a local folder as the source directory. If the 
    - Ensure both directories exist and have write permissions
 
 3. **Check folder permissions**:
-   - "All Enscape knows is that there seems to be no folder at that location, or it's not accessible due to lacking connection or rights"
    - Right-click the folder > Properties > Security
    - Ensure the current user has Full Control
    - Run Enscape as administrator to test
 
 4. **Submit a support request with logs**:
-   - "Please submit a dedicated support report (including logs)"
    - Use the "Submit a Request" button in Enscape
    - This sends log files and machine information to Chaos support
 
@@ -78,18 +71,12 @@ Version 4.11 introduced changes to the asset loading system. Existing project fi
 ### Fix
 
 1. **Save As the file in a new folder**:
-   - "Save the file in a different folder and launch Enscape"
-   - "If the issue persists, try enabling some options in General Settings, then use Save As in another folder"
-   - "That usually resolves it. Why? I don't know..."
    - This is the most reliable workaround
 
 2. **Enable Ray Traced Artificial Lighting**:
-   - "As soon as I enabled the 'Ray traced artificial lighting' option, the error stopped appearing"
-   - "Maybe a workaround for some that have the right hardware"
    - Enable in Visual Settings > Lighting
 
 3. **Launch Enscape twice**:
-   - "Open the file, launch Enscape, with errors on the first try, but it works on the second try"
    - Close Enscape, relaunch from the same file
 
 4. **Clean reinstall**:
@@ -98,12 +85,10 @@ Version 4.11 introduced changes to the asset loading system. Existing project fi
    - Reconfigure asset library locations
 
 5. **Reinstall Cosmos to latest version**:
-   - "Please make sure to follow all steps including reinstalling Cosmos to its latest version"
    - Cosmos is the asset delivery system
    - Download and install the latest Cosmos version
 
 6. **Roll back to previous version**:
-   - "I will go back to version 4.9 and stay there until my license runs out"
    - If the issue is critical and no workaround helps
    - Wait for a fixed update before upgrading
 
@@ -124,29 +109,22 @@ The FBX export from the source software uses a different unit system than Enscap
 ### Fix
 
 1. **Use metric units when exporting FBX**:
-   - "When it comes to scale, I make sure I use metric when I make the final save to FBX"
    - In SketchUp: export as FBX with meters as the unit
    - In 3ds Max: set system units to meters before FBX export
    - In Blender: set scene units to metric (meters) before export
 
 2. **Set scale during custom asset import**:
-   - "You can assign the desired scaling during custom asset import"
    - In the Custom Asset Editor, set the scale factor
-   - "This way you don't have to change the scale whenever you're placing the asset"
 
 3. **Check export settings of source software**:
-   - "If you'd like to affect the scale of the model even before that, look at the export settings"
    - SketchUp: File > Export > FBX > Options > Units: Meters
    - 3ds Max: FBX Export > Advanced Options > Units > Centimeters
    - Blender: FBX Export > Transform > Scale: 1.0
 
 4. **Use SketchUp as intermediary for asset creation**:
-   - "Mainly I am using Sketchup to model my assets, apply materials to specific faces, and convert to FBX"
-   - "Then I create the custom asset in Enscape, making sure to map the textures to the correct file"
    - SketchUp has reliable FBX export with unit control
 
 5. **Zoom to fit in preview window**:
-   - "In Enscape, you can use 4, 6, 8, 2 on your numpad"
    - These controls adjust the preview camera
 
 ### Community Report
@@ -166,21 +144,15 @@ An HDRI skybox maps to a full 360-degree sphere by definition. The sphere covers
 ### Fix
 
 1. **Scale the model, not the HDRI**:
-   - "It looks like the best way is to scale the model than the image"
    - If the HDRI looks too large, the model may be too small
    - Check model units and scale the model up
 
-2. **Understand HDRI sphere limitations**:
-   - "You can't really scale a 360 background as by definition it needs to cover the entire 360 sphere"
-   - "If you scale it down, you'll see a border/edge where it ends and distortion"
+2. **Understand HDRI sphere limitations**.
 
 3. **Edit HDRI in Photoshop as workaround**:
-   - "Make the canvas bigger (try 200%) while keeping the proportion the same"
-   - "In Enscape the background will look 'smaller' but you'll see where the image ends"
    - Partial workaround with visible borders
 
 4. **Request HDRI scale and height controls**:
-   - "Add two new sliders: HDRI Size (Scale) and HDRI Height"
    - Vote for feature requests on Chaos Forum
    - No current timeline for implementation
 
@@ -189,7 +161,6 @@ An HDRI skybox maps to a full 360-degree sphere by definition. The sphere covers
    - Add background buildings as 3D geometry instead of HDRI
 
 6. **Choose HDRI images with distant horizons**:
-   - "Less noticeable if it is just a distant horizon"
    - Avoid HDRIs with close-up buildings or objects
 
 ### Community Report
@@ -209,17 +180,14 @@ Enscape updates may change the default asset library location or the configurati
 ### Fix
 
 1. **Reconnect the old custom asset library location**:
-   - "Connect an older custom asset library location"
    - In Enscape Settings, navigate to Custom Asset Library
    - Browse to the old folder location and re-link
 
 2. **Delete placeholders and re-place assets**:
-   - "Delete that placeholder from the project file and re-place the asset"
    - Remove the broken placeholder from the project
    - Place the asset again from the reconnected library
 
 3. **Relocate material storage folder**:
-   - "Click the settings icon in the bottom left corner of the Enscape Material Editor"
    - Change the material storage location to a local folder
 
 4. **Keep assets in a consistent local location**:
@@ -228,13 +196,10 @@ Enscape updates may change the default asset library location or the configurati
    - Back up this folder regularly
 
 5. **Check for cloud sync interference**:
-   - "I have 30 some folders on my Documents folder"
    - Documents folder may be synced by OneDrive
    - Move assets to a non-synced folder
 
 6. **Use individual folders for imported materials**:
-   - "When importing a new material from the Enscape Material Library, it will be stored in its own individual folder"
-   - "This is meant to prevent unwanted duplicates overriding each other"
    - Don't consolidate material folders manually
 
 ### Community Report

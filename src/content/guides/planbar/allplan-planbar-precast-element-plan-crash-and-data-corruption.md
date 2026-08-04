@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://campus.allplan.com/de/forum/themen/topic/topics/cad-engineering/planbar-error.html"
-  - "https://connect.allplan.com/de/forum/themen/topic/topics/cad-engineering/aec-2023-data-getting-corrupt-over-and-over-again.html"
-  - "https://connect.allplan.com/forum/topics/topic/topics/cad-engineering/different-types-of-view-must-not-to-gather-or-loaded-together.html"
 ---
 
 # Allplan Planbar Precast Element Plan Crash and Data Corruption: BT_ASSERT_RELEASE Crash in Element Plan from NmKtLayoutCatCell, Data Corruption in Precast Projects from Drawing File Inconsistency, Associative View and View-and-Section Conflict in Pre-2023 Versions, Rebar Extrusion Crash from Single-Line Shape Without 3D Plane, and Assemblying Group for Bending Machine Export and Out-of-Element Bars
@@ -92,7 +89,6 @@ Drawing file data degrades over time, especially when files are not regularly op
 2. **Use proper backup strategy**:
    - Maintain versioned backups, not just the latest
    - Keep backups from multiple points in time
-   - "The ways to recover data even with proper backups is completely inconsistent"
 
 3. **Repair drawing files**:
    - Try copying via Project Pilot
@@ -143,7 +139,6 @@ Until version 2022, there was a limitation: Associative Views (Reinforcement Vie
 
 1. **For Planbar 2022 and earlier**:
    - Keep Associative Views and standard Views & Sections in separate drawing files
-   - "You can make precast elements and Associative Views, but the other views must be placed in another drawing file"
    - All precast users should use only Associative Views until version 2022
    - Don't mix View & Section with Associative View in the same file
 
@@ -160,7 +155,6 @@ Until version 2022, there was a limitation: Associative Views (Reinforcement Vie
    - Bars are converted to View & Section in the background
 
 4. **Use only Associative Views for precast (pre-2023)**:
-   - "Usually, all precast users use only Associative View until version 2022"
    - Don't use View & Section for precast elements
    - This avoids the conflict entirely
 
@@ -200,7 +194,6 @@ A single line (two points) doesn't define a 3D plane. The extrusion algorithm ne
    - For straight rebar, use `AllplanReinf.BendingShape()` directly
    - Create the bending shape with a polyline
    - Add it to the BendingShape list
-   - "Using rebar extrusion for a straight rebar is like using a sledgehammer to crack a nut"
 
 4. **Use the correct API for straight rebar**:
    - `ExtrudeBarPlacement` is for cross-sectional bars along a curve
@@ -237,7 +230,6 @@ When exporting data for a bending machine, the Assemblying Group tool groups ele
 
 In Planbar precast, bars that extend outside the precast element boundary are normally not allowed to be combined with the precast element. The Assemblying Group tool connects these out-of-element bars to the precast element. Example use case:
 - Top bars of a precast beam that extend beyond the element boundary
-- "The bars are in the air, so they can normally not be combined to the precast element"
 - The Assemblying Group forces the connection
 
 ### How to Use

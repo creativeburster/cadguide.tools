@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.altium.com/documentation/knowledge-base/altium-designer/altium-pcb-datamodel-dll-crash-on-pcbdoc"
-  - "https://www.altium.com/documentation/knowledge-base/altium-designer/resolving-un-routed-net-dead-copper-drc-violations"
-  - "https://www.eevblog.com/forum/altium/unrouted-nets-drc-error-when-routed-(fixed)/"
 ---
 
 # Altium Designer PCB.DataModel.dll Crash on Routing and Polygon Repour, Un-Routed Net Dead Copper DRC Violations from Zero-Area Regions, DRC Clearance Errors on Same-Net Pads from Hidden Track Segments, Unrouted Nets DRC from Teardrop-Generated Zero-Width Regions, and Board Region Missing Stackup: Health Check Monitor, PCB Rules Panel, and Layer Stack Assignment
@@ -30,25 +27,14 @@ Altium Designer crashes with a "Altium.PCB.DataModel.dll" error message when try
 
 ### Fix
 
-1. **Enable Multilayer and select Board Region**:
-   - "Make sure that the Multilayer layer is enabled and is the active Layer"
-   - "Select the Panel tab (in the bottom right) » View Configurations"
-   - "Scroll down to Other Layers and there should be an eye icon next to Multilayer"
-   - "Make sure that it is not crossed out"
+1. **Enable Multilayer and select Board Region**.
 
-2. **Enter Board Planning Mode**:
-   - "Enter Board Planning Mode by using View » Board Planning Mode (shortcut: press 1 key)"
-   - "At the bottom in the Active Layers bar, select the Multilayer layer to make it Active"
-   - "You should be able to select the Board region"
+2. **Enter Board Planning Mode**.
 
 3. **Assign Layer Stack to Board Region**:
-   - "Double-click the board region to open the Board Region properties"
-   - "Select the Layer Stack Drop-down"
-   - "Make sure it is set to a Board Layer Stack"
    - This is the critical fix — assign a valid layer stack
 
 4. **Verify Selection Filter**:
-   - "In the Properties panel, make sure that the Selection Filter is set to enable for All - On"
    - If the selection filter is too restrictive
    - You won't be able to select the board region
    - Enable all selection types
@@ -87,31 +73,13 @@ DRC reports "Un-Routed Net Constraint: Region (0 hole(s)) Dead Copper - Net Not 
 
 ### Fix
 
-1. **Use PCB Health Check Monitor (Altium 22+)**:
-   - "Altium Designer 22 introduced the Health Check Monitor functionality"
-   - "Which can automatically detect and fix zero-area polygons or dead copper"
-   - "With nothing selected in the PCB document open the Properties Panel"
-   - "Click on the Health Check tab"
-   - "Click Check All"
-   - "Select the Zero Area Regions check"
-   - "Click on Fix Issues to automatically delete zero area regions"
+1. **Use PCB Health Check Monitor (Altium 22+)**.
 
-2. **Manual Removal via PCB Rules And Violations Panel**:
-   - "Run the DRC: Tools » Design Rule Check... » Run Design Rule Check"
-   - "Open the PCB Rules And Violations Panel"
-   - "Ensure the Select option is enabled in the panel"
-   - "Navigate to and select the UnRoutedNet rule"
-   - "Select the 'Dead Copper - Net Not Assigned' violation"
-   - "Press Delete or use Edit » Delete to delete the dead copper"
+2. **Manual Removal via PCB Rules And Violations Panel**.
 
-3. **Use PCB List Panel for inspection**:
-   - "Dead copper and zero-area objects can further be inspected with the PCB List Panel"
-   - "Open the PCB List Panel"
-   - "Check the Area Size and Layer of the suspected objects"
-   - "Right-click and choose Zoom Selected to locate the objects on the layout"
+3. **Use PCB List Panel for inspection**.
 
 4. **Check for teardrop-generated regions**:
-   - "I think it might have been the teardrop generator as half of them were at T junctions"
    - If teardrops were recently added
    - Check for zero-width regions created by the teardrop tool
    - Delete them from the PCB List panel
@@ -150,27 +118,13 @@ The DRC is detecting hidden track segments that are not on the same net or are s
 
 ### Fix
 
-1. **Right-click and check Violations**:
-   - "Right-click on the violation track or pad and select Violations from the context menu"
-   - "From there you can select individual design rules that have triggered the violation"
-   - "Or Show All Violations"
-   - "Reviewing this list and the descriptions can often help you determine which elements are involved"
+1. **Right-click and check Violations**.
 
-2. **Enable all layers**:
-   - "Ensure that all layers are being shown"
-   - "Sometimes a violation will be unclear as an element involved is hidden"
-   - "Click Used On in the View Configuration panel"
-   - "Cycle through layers to find hidden design rule violations"
+2. **Enable all layers**.
 
-3. **Use extended selection to find hidden segments**:
-   - "Select one of the violating tracks or pads"
-   - "Then press Tab to extend the selection to connected copper"
-   - "This can be helpful when there exists geometry that's not obvious but causing a violation"
-   - "For example, a segment of track that isn't assigned the same net"
+3. **Use extended selection to find hidden segments**.
 
 4. **Check for tiny segments within pads**:
-   - "Sometimes a very small track segment will reside within a component pad"
-   - "And cause be the cause of a DRC violation"
    - Zoom into pad areas
    - Look for tiny track segments
 
@@ -180,11 +134,7 @@ The DRC is detecting hidden track segments that are not on the same net or are s
    - Or by clicking on them after zooming in
    - Delete them to resolve the clearance error
 
-6. **Disable rules one at a time**:
-   - "Try disabling design rules (remove the checkbox from the Enabled column)"
-   - "In the PCB Rules and Constraints Editor"
-   - "Often by enabling rules one at a time (or changing the priority of rules)"
-   - "You can see how they are causing an undesired or unintended effect"
+6. **Disable rules one at a time**.
 
 7. **Re-route the connection**:
    - If hidden segments can't be found
@@ -209,25 +159,21 @@ DRC reports unrouted nets that are visually routed correctly. Pressing Ctrl+H se
 ### Fix
 
 1. **Check PCB List for zero-width regions**:
-   - "I found there were regions with 0 width under the offending traces"
    - Open the PCB List panel
    - Filter for Region objects
    - Look for regions with width = 0
 
 2. **Delete zero-width regions**:
-   - "Deleting these solved the issue"
    - Select the zero-width regions in the PCB List
    - Delete them
    - Re-run DRC to verify the violations are resolved
 
 3. **Check at T junctions**:
-   - "Half of them were at T junctions"
    - Zoom into T junctions where teardrops were added
    - Look for zero-width regions
    - Delete them
 
 4. **Check in multichannel designs**:
-   - "The regions showed up under the same tracks in every room"
    - In multichannel designs
    - Check all rooms for zero-width regions
    - They may appear in every room instance
@@ -239,7 +185,6 @@ DRC reports unrouted nets that are visually routed correctly. Pressing Ctrl+H se
    - Re-add teardrops with updated settings
 
 6. **Use PCB List panel to find suspicious regions**:
-   - "Solved by looking for suspicious Regions on PCB List"
    - Open PCB List panel
    - Filter for Region objects
    - Sort by width or area to find zero-width/zero-area regions
@@ -267,27 +212,16 @@ Altium Designer crashes with "Altium.PCB.DataModel.dll" error when performing ro
 ### Fix
 
 1. **Set Selection Filter to All - On**:
-   - "In the Properties panel, make sure that the Selection Filter is set to enable for All - On"
    - This ensures you can select all object types
    - Including board regions
    - Which may be filtered out by default
 
-2. **Enable Multilayer in View Configurations**:
-   - "Select the Panel tab (in the bottom right) » View Configurations"
-   - "Scroll down to Other Layers"
-   - "There should be an eye icon next to Multilayer"
-   - "Make sure that it is not crossed out"
+2. **Enable Multilayer in View Configurations**.
 
 3. **Enter Board Planning Mode**:
-   - "Enter Board Planning Mode by using View » Board Planning Mode (shortcut: press 1 key)"
    - This is the only mode where board regions can be selected
-   - "At the bottom in the Active Layers bar, select the Multilayer layer to make it Active"
 
-4. **Select and edit the Board Region**:
-   - "You should be able to select the Board region"
-   - "Double-click the board region to open the Board Region properties"
-   - "Select the Layer Stack Drop-down"
-   - "Make sure it is set to a Board Layer Stack"
+4. **Select and edit the Board Region**.
 
 5. **Check all board regions in rigid-flex**:
    - For rigid-flex designs with multiple regions

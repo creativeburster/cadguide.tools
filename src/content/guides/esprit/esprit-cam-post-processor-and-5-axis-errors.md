@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/dmg-mori-deckel-maho-dmu-50-error-messages-esprit-cad-cam.352999/"
-  - "https://pmtechnologies.com/blog/esprit-not-licensed-to-run-this-post-processor/"
-  - "https://www.practicalmachinist.com/forum/threads/esprit-cam-a-review.417653/"
 ---
 
 # ESPRIT CAM Post Processor and 5-Axis Errors: DMU 50 Heidenhain iTNC 530 Subprogram Errors from Missing Tool Numbers, Not Licensed to Run Post Processor from Unselected Machine License, Post Processor Custom Format Undefined Vocabulary Error, 5-Axis Without TCPC Old School Setup, and Post Processor Pricing and Reliability Issues
@@ -22,7 +19,6 @@ ESPRIT CAM's post processors produce incorrect G-code, licensing blocks post exe
 
 ### Error Messages
 
-- "Tool Number Is Missing"
 - Various errors in the subprogram section after M30
 - Errors related to tilt commands in subprograms
 

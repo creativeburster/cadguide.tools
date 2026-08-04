@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://support.easterngraphics.nl/en-gb/article/224-pcon-planner-application-error"
-  - "https://support.easterngraphics.nl/en-gb/article/43-frequently-asked-questions-about-pcon-planner"
-  - "https://en.blog.pcon-solutions.com/2024/06/19/maximizing-performance-in-pcon-planner-how-to-use-the-dedicated-graphics-card/"
 ---
 
 # pCon.planner Performance and Display Errors: Application Error Crash from Outdated GPU Drivers and RAM Overload Requiring Driver Update and Memory Management, Drawing Parts Disappear While Zooming from UCS Distance Requiring Place UCS as WCS Origin, Slow Performance and Constant Loading from 3D Warehouse Overload Requiring Purge and New File Copy, Dedicated GPU Not Used on Laptops from Battery Mode Switching Requiring Windows Graphics Settings, and Second Monitor Crash from Graphics Card Memory Shortage Requiring Single Monitor Operation
@@ -31,31 +28,26 @@ pCon.planner shows an "Application error" message and crashes. The crash occurs 
 ### Fix
 
 1. **Update NVIDIA graphics driver**:
-   - "Nvidia graphic driver (external graphics card) is not up to date"
    - Download the latest driver from NVIDIA's website
    - Perform a clean install (not express)
    - Use drivers not older than 1 year
 
 2. **Update Intel graphics driver**:
-   - "Intel graphics driver is not up to date"
    - Download the latest Intel graphics driver
    - Even with a dedicated GPU, Intel drivers can conflict
    - Update both drivers
 
 3. **Close programs while working**:
-   - "RAM load is too large. Close programs while working in pCon.planner"
    - Close browser tabs, other CAD software, unnecessary applications
    - Free up RAM for pCon.planner
    - Monitor RAM usage in Task Manager
 
 4. **Check system requirements**:
-   - "The system does not meet the system requirements"
    - Verify your system meets minimum requirements
    - Check RAM, GPU, CPU specifications
    - Upgrade hardware if below minimum
 
 5. **Check graphics info in pCon.planner**:
-   - "Go to Help/Systeminfo/Rendering/Hardware"
    - Verify the correct GPU is listed
    - Check driver version
    - Ensure pCon.planner is using the dedicated GPU
@@ -67,8 +59,6 @@ pCon.planner shows an "Application error" message and crashes. The crash occurs 
    - Slower but more stable on problematic systems
 
 7. **Update pCon.planner**:
-   - "Make sure you are working in the most recent version of pCon.planner"
-   - "Many problems have already been solved by working in the most recent version"
    - Check for updates
    - Install the latest version
 
@@ -89,14 +79,11 @@ While zooming in on the drawing, parts of the drawing disappear. The disappearin
 ### Fix
 
 1. **Place UCS as WCS origin**:
-   - "Right-click in the white area and click on Place UCS as WCS origin"
    - This resets the UCS to the world coordinate system origin
    - The geometry should be centered around the origin
    - This fixes the depth buffer issue
 
 2. **Move drawing to UCS**:
-   - "If the UCS is already in the correct place, and you have problems"
-   - "Select the drawing and move it to the UCS"
    - Select all geometry
    - Move it to the origin (0, 0, 0)
 
@@ -141,13 +128,11 @@ pCon.planner runs slow and is often loading. The application becomes unresponsiv
 ### Fix
 
 1. **Clean up the drawing**:
-   - "Clean up the drawing: File/Purge"
    - Use File > Purge to remove unused elements
    - This removes deleted objects that are still in the file
    - Reduces file size and improves performance
 
 2. **Copy/paste to a new file**:
-   - "Copy/paste to place the drawing in a new file"
    - Create a new empty file
    - Copy all elements from the old file
    - Paste into the new file
@@ -160,31 +145,22 @@ pCon.planner runs slow and is often loading. The application becomes unresponsiv
    - Replace with simpler 2D representations
 
 4. **Adjust Level of Detail**:
-   - "Program Settings, tab Miscellaneous: The Level of Detail option influences the display of solids"
-   - "A high value improves these objects, but may have a negative effect on performance"
    - Lower the Level of Detail value
    - This improves performance at the cost of visual quality
 
 5. **Disable synchronization options**:
-   - "In Program Settings there are two items relating to synchronization"
-   - "Synchronize centers of orthographic views and Synchronize fields of view in orthographic views"
-   - "Both should be disabled if the graphic performance is weak"
    - Disabling these improves performance
 
 6. **Reduce screen area**:
-   - "Reducing the size of the screen area used for the software on your monitor"
-   - "Will mean the graphics are computed faster"
    - Don't maximize the pCon.planner window
    - Use a smaller window size
 
 7. **Use single viewport**:
-   - "Work without subdividing into a number of viewports"
    - Multiple viewports require rendering each viewport separately
    - Use a single viewport for better performance
    - Switch to multiple viewports only when needed
 
 8. **Update graphics drivers**:
-   - "Make sure you have the latest graphics card drivers (if possible not older than 1 year)"
    - Updated drivers improve rendering performance
    - Check for driver updates regularly
    - Install the latest version
@@ -205,15 +181,9 @@ On laptops with both integrated and dedicated graphics, pCon.planner uses the in
 
 ### Fix
 
-1. **Configure Windows Graphics settings**:
-   - "Right-click on the desktop and open Display settings"
-   - "At the bottom, find the Graphics settings section"
-   - "Use the Browse button to select the installation path of pCon.planner"
-   - "Add planner.exe to the list"
-   - "Select High performance to ensure the software uses the dedicated graphics card"
+1. **Configure Windows Graphics settings**.
 
 2. **Connect to external power**:
-   - "If your notebook is not connected to an external power source, this can prevent pCon.planner from using the 3D graphics card"
    - Connect the laptop to power
    - The OS should switch to the dedicated GPU
    - Verify in Help > About
@@ -225,13 +195,10 @@ On laptops with both integrated and dedicated graphics, pCon.planner uses the in
    - Set preferred graphics processor to NVIDIA
 
 4. **Connect monitor to external GPU**:
-   - "Please also ensure that the monitor is connected to the external graphics card"
-   - "Otherwise, it cannot be assigned"
    - On desktops, connect the monitor to the dedicated GPU
    - Not the motherboard port
 
 5. **Verify in Help > About**:
-   - "Go to Help > About and verify the name of the graphic card"
    - Check which GPU pCon.planner is using
    - If it shows Intel, the configuration is wrong
    - Reconfigure and restart pCon.planner
@@ -243,7 +210,6 @@ On laptops with both integrated and dedicated graphics, pCon.planner uses the in
    - This prevents GPU switching
 
 7. **Use software rendering as fallback**:
-   - "pCon.planner offers a software rendering mode to support onboard systems"
    - If the dedicated GPU can't be configured
    - Enable Software Rendering in Program Settings
    - This uses CPU for rendering — slower but functional
@@ -265,7 +231,6 @@ When using a second monitor or projector while pCon.planner is running, picture 
 ### Fix
 
 1. **Use only one monitor**:
-   - "We recommend that you operate only one monitor while running pCon.planner"
    - Disconnect the second monitor
    - Or disable it in Windows Display Settings
    - This eliminates the memory shortage

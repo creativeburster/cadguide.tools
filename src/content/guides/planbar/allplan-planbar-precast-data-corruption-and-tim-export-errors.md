@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.allplan.com/system/releasenotes/2025/allplan-2025-0-2/"
-  - "https://connect.allplan.com/de/forum/themen/topic/topics/cad-engineering/aec-2023-data-getting-corrupt-over-and-over-again.html"
-  - "https://help.allplan.com/Allplan/2025-0/1034/Allplan/352199.htm"
 ---
 
 # Allplan PLANBAR Precast Data Corruption and TIM Export Errors: Drawing File Corruption After Weeks of Not Opening from Version Update Failure Requiring Recovery Tools, TIM Export Canceled from Detailed Drawing Files Loaded by Other Users Requiring File Unload, Crash from Double-Click Middle Mouse Before Complete Drawing Load Requiring Patience or Update, MSA Reinforcement Group Crash on Positioning from Modification Bug Requiring Update, and IFC Assistant Layer Validation Errors from Incorrect Layer Number Assignment Requiring Ascending Order and Touching Layers
@@ -49,7 +46,6 @@ Drawing files that haven't been opened for weeks or months fall behind the curre
    - Try on a copy first
 
 4. **Restore from backup**:
-   - "The ways to recover data even with proper backups is completely inconsistent"
    - Restore from a backup made before the version update
    - Open in the old version if possible
    - Then migrate to the new version
@@ -101,7 +97,6 @@ When exporting TIM data, the export is canceled with an error message. The error
    - Automated export can be scheduled
 
 3. **Use the synchronization feature**:
-   - "The Export TIM Data option now automatically synchronizes the attributes of the model precast element with the detailed precast element"
    - The synchronization happens during export
    - Ensure no one is editing the detailed file
    - The sync requires exclusive access
@@ -113,14 +108,11 @@ When exporting TIM data, the export is canceled with an error message. The error
    - Then retry the export
 
 5. **Export only changed elements**:
-   - "Decide whether you want to export all precast elements or only those amended since the last export"
    - Export only changed elements
    - This may reduce the number of detailed files needed
    - Faster and less likely to conflict
 
 6. **Use Precast Data Validator**:
-   - "If the catalog path features a file with the name Precast-QualityValidatorRules.xml"
-   - "Certain properties will be checked using the Precast Data Validator"
    - Run the validator before export
    - Fix any validation errors first
 
@@ -187,7 +179,6 @@ Modifying an MSA reinforcement group with positioning causes the program to cras
 ### Fix
 
 1. **Update to Allplan 2025-0-2**:
-   - "Modifying an MSA reinforcement group with positioning caused the program to crash; this has now been fixed"
    - The fix is included in Allplan 2025-0-2
    - Update to the latest version
    - This is the primary fix
@@ -217,7 +208,6 @@ Modifying an MSA reinforcement group with positioning causes the program to cras
    - But require more manual work
 
 6. **Also check: directly modifying objects twice**:
-   - "In certain cases, directly modifying objects twice in the bar placement led to the program crashing"
    - Don't modify bar placement objects twice in succession
    - Save between modifications
    - This is also fixed in 2025-0-2
@@ -239,50 +229,39 @@ Using the IFC Assistant to prepare heterogeneous 3D data for precast element des
 ### Fix
 
 1. **Check layer numbers are ascending**:
-   - "The layer numbers must be in ascending order"
    - Verify layer numbers go 1, 2, 3, etc.
    - No gaps or out-of-order numbers
    - Renumber if necessary
 
 2. **Ensure layers touch**:
-   - "The layers must touch"
    - Check for gaps between layers in the geometry
    - Adjust geometry to eliminate gaps
    - Layers must be physically adjacent
 
 3. **Assign layer types correctly**:
-   - "Each layer number must have at least one component type that defines the type"
    - Types: concrete layer, insulating layer, tile layer, or in-situ concrete layer
    - Ensure each layer has a defining type
    - Add a type component if missing
 
 4. **Check area assignments**:
-   - "Concrete areas, insulation areas and tiling areas must be assigned correctly"
-   - "They must be in respective layers"
    - Verify concrete areas are in concrete layers
    - Verify insulation areas are in insulation layers
 
 5. **Check strip assignments**:
-   - "Insulating strips and concrete strips must be assigned correctly"
-   - "They must be in respective layers"
    - Verify strips are in the correct layers
    - Move strips to correct layers
 
 6. **Check modeled parts and openings**:
-   - "Modeled parts and openings must be in one and the same layer"
    - Verify openings are in the same layer as the modeled part
    - Move openings to the correct layer
    - Don't split them across layers
 
 7. **Correct entries and click Apply again**:
-   - "If the entries have been amended, click Apply again"
    - After fixing all errors
    - Click Apply to retry the creation
    - PLANBAR revalidates the entries
 
 8. **Use input data in background drawing file**:
-   - "Enter the input data into an active background drawing file"
-   - "Save any data created using the IFC Assistant on a separate, independent drawing file"
    - This separates input from output
    - Easier to identify and fix issues
 

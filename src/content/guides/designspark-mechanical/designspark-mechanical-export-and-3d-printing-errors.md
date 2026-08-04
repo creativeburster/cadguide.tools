@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
-  - "https://www.rs-online.com/designspark/cant-export-file-as-dwg-or-dxf"
-  - "https://www.rs-online.com/designspark/dwg-dxf-export-does-not-capture-all-geometry"
-  - "https://www.rs-online.com/designspark/amfobj-non-manifold-edges-bambu-studio-error"
 ---
 
 # DesignSpark Mechanical Export and 3D Printing Errors: DWG DXF Export Generates No File from Missing Translator Configuration Requiring Export Settings Check, DWG DXF Export Missing Geometry from Translator Glitch Requiring Alternative Export Method, AMF OBJ Non-Manifold Edges from DSM Export Requiring Mesh Repair in Slicer, Slow Export Performance with Large Assemblies from Single-Threaded Processing Requiring Assembly Optimization, and DSM6 Cannot Export to Cura from Export Command Failure Requiring STL Workaround
@@ -31,7 +28,6 @@ The DWG/DXF translator may not be properly configured or installed. DSM uses ext
 ### Fix
 
 1. **Check export settings**:
-   - "I tried multiple export options to no avail"
    - File > Export > DWG/DXF
    - Verify the output directory is writable
    - Check the file name doesn't contain invalid characters
@@ -43,7 +39,6 @@ The DWG/DXF translator may not be properly configured or installed. DSM uses ext
    - Check the DSM installation for translator components
 
 3. **Try both translators**:
-   - "I tried both Teigha and Autocad Real dwg translators to no avail"
    - Switch between Teigha and Real DWG translators
    - In DSM settings, select the alternative translator
    - One may work when the other doesn't
@@ -83,7 +78,6 @@ Using DesignSpark Mechanical Creator. DWG and DXF export doesn't capture all geo
 ### Fix**
 
 1. **Try both translators**:
-   - "I tried all possible export options as well as both Teigha and Autocad Real dwg translators to no avail"
    - Switch between Teigha and Real DWG
    - One may capture geometry the other misses
    - Test with a simple drawing first
@@ -135,8 +129,6 @@ Exporting a design from DSM as AMF or OBJ for multi-color 3D printing on a Bambu
 ### Fix**
 
 1. **Use the slicer repair function**:
-   - "I can use the 'repair' option in the slicer and it slices fine after that"
-   - "However, it loses all color data and can no longer detect edges to easily color them"
    - Use Bambu Studio's repair as a fallback
    - Accept the loss of color data if multi-color isn't needed
 
@@ -159,8 +151,6 @@ Exporting a design from DSM as AMF or OBJ for multi-color 3D printing on a Bambu
    - STL is more robust than AMF/OBJ from DSM
 
 5. **Request 3MF support from DSM**:
-   - "Bambu recommends 3mf, however, DSM does not currently support it"
-   - "I beg for you to please add this"
    - 3MF preserves color and avoids non-manifold issues
    - Vote for 3MF support on the DesignSpark forum
 
@@ -187,7 +177,6 @@ DSM's export process appears to be single-threaded, not utilizing multiple CPU c
 ### Fix**
 
 1. **Optimize assemblies**:
-   - "I'm thinking of streamlining my assemblies by removing redundant or unnecessary parts"
    - Remove duplicate or unnecessary parts
    - Use simplified representations for non-critical components
    - Reduce the total part count
@@ -205,19 +194,15 @@ DSM's export process appears to be single-threaded, not utilizing multiple CPU c
    - Only export full detail for critical parts
 
 4. **Check for external resources**:
-   - "My assemblies sometimes rely on external resources"
-   - "Could these be causing bottlenecks?"
    - Check for linked files or external references
    - Consolidate external resources into the assembly
 
 5. **Update DSM to latest version**:
-   - "Could a software update potentially resolve this issue?"
    - Check for the latest DSM version
    - Performance improvements may be included
    - Update and test export performance
 
 6. **Use faster export formats**:
-   - "Which export formats have you found to be faster?"
    - STL is typically faster than STEP or IGES
    - For 3D printing, use STL
    - For CAD exchange, STEP is necessary but slower

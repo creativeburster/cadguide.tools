@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.unrealengine.com/t/ue5-4-error-with-usdimport-node-in-cloth-asset-invalid-input-lod-0/1765424"
-  - "https://forums.unrealengine.com/t/marvelous-designer-material-appears-differently-in-unreal-engine-usd-import-chaos-cloth-asset/2223232"
-  - "https://forums.unrealengine.com/t/chaos-cloth-strange-shadow-artifacts-on-marvelous-designer-clothes/2715906"
 ---
 
 # Marvelous Designer USD Export and Unreal Engine Errors: Invalid Input LOD 0 from USD Import to Chaos Cloth Asset Requiring Static Mesh Workflow, Materials Appear Translucent from USDImportTranslucentMaterial Requiring Material Parent Change, Strange Shadow Artifacts on Chaos Cloth from Normal or Material Issues Requiring Opaque Blend Mode, Cloth Falls Down from Missing Physics Asset Setup Requiring Physics Asset Configuration, and Export Splits Everything Up Requiring Mesh Merge Before Import
@@ -31,38 +28,28 @@ Creating a Cloth Asset in UE5.4, importing a USD exported from Marvelous Designe
 ### Fix
 
 1. **Use Static Mesh Import instead of USDImport**:
-   - "Solved the problem by importing USD into content browser, then replaced USDImport with StaticMeshImport by linking meshes from USD"
    - Import the USD file into Content Browser as Static Mesh
    - In the Cloth Asset, use StaticMeshImport node instead of USDImport
    - Link the imported static mesh to the StaticMeshImport node
 
 2. **Merge mesh parts before import**:
-   - "When I export on Marvelous Designer, it splits everything up"
-   - "I followed Marvelous Designer tips on how to merge everything into one"
    - In MD, use the Merge option to combine all garment parts
    - Export as a single mesh
 
 3. **Set correct export options in Marvelous Designer**:
-   - "In MD use quadrangulate option. Don't use too close point distance (I use 10)"
-   - "In MD export as USD a Thin and no avatar, and default scale (mm)"
    - Use Thin export (not Thick)
    - Exclude avatar from export
    - Use millimeter scale
 
 4. **Import and merge in Unreal**:
-   - "Import in UE the USD file as a Static Mesh"
-   - "Transfer all mesh parts into the scene and set 0 0 0 coordinates"
-   - "Merge this parts into one Static Mesh"
    - Use Merge Actors tool in UE
 
 5. **Check scale and position**:
-   - "Check the scale and position with MTH body asset — should fit fine"
    - Verify the merged mesh matches the character body
    - Adjust scale if needed
    - Ensure proper alignment
 
 6. **Import to Chaos Cloth as Static Mesh**:
-   - "Import to Chaos cloth as a static mesh"
    - Use the Chaos Cloth Component
    - Set the merged static mesh as the cloth mesh
    - Configure cloth properties
@@ -83,29 +70,18 @@ Exporting a garment from Marvelous Designer to USD, uploading to UE 5.5 Chaos Cl
 
 ### Fix
 
-1. **Change material parent from Translucent to Opaque**:
-   - "Find what the material there is. In my case, it was MI_Unified_Material"
-   - "Double click that to open it"
-   - "Under 'General' that it has 'USDImportTranslucentMaterial'"
-   - "Change that to 'USDImportMaterial'"
-   - "Click save"
-   - "Go back and open the cloth asset, and it should be ok"
+1. **Change material parent from Translucent to Opaque**.
 
 2. **Change Blend Mode to Opaque**:
-   - "Clipping and Translucent problems are all concern Material"
-   - "Changed the parent or turn the Blend Mode to Opaque can resolve"
    - Open the material instance
    - Change Blend Mode from Translucent to Opaque
    - Save and apply
 
 3. **Revert to older Marvelous Designer version**:
-   - "I tried reverting to an old version of Marvelous Designer — v 2024.0.191.48532"
-   - "And it fixed the issue!"
    - The older version uses USDImportMaterial as parent
    - This avoids the translucent issue
 
 4. **Check for flipped normals**:
-   - "My whole materials are somewhat see through — I wonder if it's a flipped normal issue"
    - Check normals on the garment mesh
    - Flip normals if needed
    - This may fix the see-through appearance
@@ -117,7 +93,6 @@ Exporting a garment from Marvelous Designer to USD, uploading to UE 5.5 Chaos Cl
    - This gives full control over material properties
 
 6. **Use Marvelous Designer 2024.0.173+ for garment simulation data**:
-   - "USD Export: Garment Simulation Data Option (2024.0.173)"
    - "Include Garment Simulation Data" in USD export
    - This provides simulation setup data for UE 5.4
    - May improve material handling
@@ -151,7 +126,6 @@ The shadow artifacts are caused by either: (1) incorrect normals from the Marvel
    - Use Thick if shadow artifacts appear with Thin
 
 3. **Create new materials in Unreal**:
-   - "Creating new materials in Unreal, nothing works"
    - But try creating a simple opaque material
    - Apply it to the cloth mesh
    - If artifacts disappear, the issue is material-related
@@ -163,13 +137,11 @@ The shadow artifacts are caused by either: (1) incorrect normals from the Marvel
    - This can cause shadow artifacts
 
 5. **Disable Nanite on cloth meshes**:
-   - "Enabling Nanite doesn't fix the problem"
    - Nanite may actually cause issues with cloth
    - Disable Nanite on the cloth mesh
    - Use standard rendering for cloth
 
 6. **Use quadrangulated mesh**:
-   - "In MD use quadrangulate option"
    - Quadrangulated meshes have better normal continuity
    - Avoid triangle-only meshes
    - Use a reasonable point distance (10)
@@ -197,7 +169,6 @@ After importing Marvelous Designer clothing into Chaos Cloth in Unreal Engine, t
 ### Fix
 
 1. **Set up physics asset for character**:
-   - "In this module you need to set up the physics asset"
    - Create or assign a physics asset to the character's skeletal mesh
    - Add collision bodies for torso, arms, legs
    - Adjust body sizes to match character
@@ -215,7 +186,6 @@ After importing Marvelous Designer clothing into Chaos Cloth in Unreal Engine, t
    - The character drives the collision
 
 4. **Set cloth attachment points**:
-   - "Setting 0 for the cloth distance at neck points doesn't help"
    - Use the Chaos Cloth's "Max Distances" feature
    - Set max distance to 0 at attachment points (neck, waist, cuffs)
    - This pins the cloth to the character
@@ -255,15 +225,11 @@ Marvelous Designer exports each pattern piece as a separate mesh by default. Thi
 ### Fix
 
 1. **Merge in Marvelous Designer before export**:
-   - "I followed Marvelous Designer tips on how to merge everything into one"
    - In MD, select all pattern pieces
    - Use the Merge function
    - Export the merged mesh as USD
 
 2. **Merge in Unreal Engine after import**:
-   - "Import in UE the USD file as a Static Mesh"
-   - "Transfer all mesh parts into the scene and set 0 0 0 coordinates"
-   - "Merge this parts into one Static Mesh"
    - Use Unreal's Merge Actors tool
 
 3. **Set correct coordinates**:
@@ -273,7 +239,6 @@ Marvelous Designer exports each pattern piece as a separate mesh by default. Thi
    - Before merging
 
 4. **Check scale after merge**:
-   - "Check the scale and position with MTH body asset — should fit fine"
    - Verify the merged mesh matches the character
    - Adjust scale if the export scale was wrong
    - MD default scale is mm, UE uses cm

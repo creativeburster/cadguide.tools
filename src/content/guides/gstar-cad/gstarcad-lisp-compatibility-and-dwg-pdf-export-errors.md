@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.cadtutor.net/forum/topic/78569-help-me-to-fix-an-autocad-lisp-to-work-with-gstarcad/"
-  - "https://blog.gstarcad.net/how-to-convert-dwg-to-pdf-with-gstarcad-2026-and-other-methods/"
-  - "https://cdn-sg-gw.gstarcad.net/gstarsoft_pdf/GstarCAD_2027_User_Guide.pdf"
 ---
 
 # GstarCAD LISP Compatibility and DWG PDF Export Errors: AutoCAD LISP Not Loading from Unicode Encoding Mismatch Requiring LISPSYS System Variable, DWG to PDF Export Missing Plot Style Table Requiring Monochrome CTB Configuration, Custom Hatch Patterns Not Found from Search Path Misconfiguration Requiring Options File Locations, Command Aliases Not Working from gacd.pgp File Not Migrated Requiring Settings Import, and Batch Plot to PDF Not Merging Multiple Drawings Requiring Individual Plot and External Merge
@@ -32,7 +29,6 @@ GstarCAD's LISP engine historically used ASCII (MBCS) character encoding, while 
 
 1. **Set LISPSYS system variable**:
    - GstarCAD 2024+ has a LISPSYS system variable
-   - "Supports switching between using ASCII (MBCS) or Unicode character sets when saving or compiling LSP files"
    - Set LISPSYS to 1 for full Unicode support
    - LISPSYS = 0: ASCII (MBCS), VS Code as editor, GstarLisp doesn't fully support Unicode
    - LISPSYS = 1: Full Unicode support, VS Code as editor
@@ -41,24 +37,18 @@ GstarCAD's LISP engine historically used ASCII (MBCS) character encoding, while 
    - Open the LISP file in VS Code
    - Save with UTF-8 encoding (without BOM)
    - Or save with the encoding matching LISPSYS setting
-   - "The compatibility of the LISP engine with Unicode encoding has been improved"
 
 3. **Check DCL file encoding**:
-   - "The compatibility of DCL with Unicode encoding has also been improved"
-   - "Resolving the issue of software stuck caused by failed dialog calls"
    - Re-save DCL files with UTF-8 encoding
    - Ensure Chinese support in DCL code is fixed
 
 4. **Use FAS5 protocol for compiled files**:
-   - "Supports the FAS5 protocol type in LISP binary compiled files"
-   - "Supports the parsing of Unicode characters in file paths and file names"
    - Compile LISP files to FAS5 format for better Unicode compatibility
 
 5. **Check for unsupported AutoCAD LISP functions**:
    - Some AutoCAD-specific LISP functions may not be implemented in GstarCAD
    - Check GstarCAD's LISP documentation for supported functions
    - Use GRX, .NET, or VBA alternatives for unsupported functions
-   - "GstarCAD offers friendly development interfaces such as GRX, .NET, VBA, LISP, and COM"
 
 6. **Use the LISP Debugger**:
    - GstarCAD includes a LISP Debugger (Chapter 15.4 in User Guide)
@@ -82,8 +72,6 @@ GstarCAD's default installation may not include monochrome.ctb in the plot style
 ### Fix
 
 1. **Use the Plot command with DWG to PDF.pc3**:
-   - "Click File in the top menu bar, then select Plot"
-   - "Printer/Plotter: From the dropdown, select 'DWG To PDF.pc3'"
    - This is GstarCAD's built-in virtual PDF printer
 
 2. **Configure plot style table**:
@@ -93,7 +81,6 @@ GstarCAD's default installation may not include monochrome.ctb in the plot style
 
 3. **Set plot style search path in Options**:
    - Go to Options > Files > Plot Style Table Search Path
-   - "Set the search path to find drawing support files such as text fonts, drawings, linetypes, and hatch patterns"
    - Add the path to the folder containing monochrome.ctb
    - Default: `(install drive):\Program Files\GstarCAD\Plot Styles\`
 
@@ -103,15 +90,9 @@ GstarCAD's default installation may not include monochrome.ctb in the plot style
    - Place in GstarCAD's Plot Styles folder
    - Restart GstarCAD
 
-5. **Use Export > PDF as alternative**:
-   - "Click Export > PDF to export your CAD drawings to PDF"
-   - "Click 'Option' button in the popped up dialog box for more options"
-   - "There isn't much difference between 'Export to PDF' and 'Plot to PDF'"
+5. **Use Export > PDF as alternative**.
 
-6. **Hide layers for selective PDF output**:
-   - "For layer-specific conversion, first hide unwanted layers in the DWG"
-   - "Then use 'Window' or 'Extents' to define the print area"
-   - "Only visible layers will appear in the PDF"
+6. **Hide layers for selective PDF output**.
 
 ### Community Report
 
@@ -131,7 +112,6 @@ GstarCAD looks for hatch pattern files (.pat) in the search path defined in Opti
 
 1. **Set hatch pattern search path in Options**:
    - Go to Options > Files tab
-   - "Search Path: Set the search path to find drawing support files such as text fonts, drawings, linetypes, and hatch patterns"
    - Add the folder containing custom .pat files
    - Apply and restart GstarCAD
 
@@ -142,18 +122,15 @@ GstarCAD looks for hatch pattern files (.pat) in the search path defined in Opti
    - Restart GstarCAD
 
 3. **Import settings from AutoCAD**:
-   - "GstarCAD offers several methods to import your customized settings such as CUI, Lisp program, Shortcut settings, Blocks, DWT, Tool palettes, Plotters"
    - Use Settings Import to bring in hatch patterns from AutoCAD
    - "Hatch pattern (*.pat)" is included in the imported settings
 
 4. **Use the Hatch Quick Preview**:
-   - "In GstarCAD, hatch preview remains quick and real-time even in complex drawings"
    - Use the preview to verify custom patterns are loaded
    - If preview shows the pattern, it's working correctly
 
 5. **Check .pat file format**:
    - GstarCAD uses the same .pat format as AutoCAD
-   - "Hatch Pattern File (PAT) — compatible with ACAD"
    - Ensure the .pat file follows the standard format
    - Open in a text editor to verify format
 
@@ -179,10 +156,8 @@ GstarCAD uses its own alias file called gacd.pgp (equivalent to AutoCAD's acad.p
 ### Fix
 
 1. **Import settings from AutoCAD**:
-   - "GstarCAD offers several methods to import your customized settings"
    - Use the Settings Import wizard
    - "Alias file (gacd.pgp)" is included in imported settings
-   - "In just a few minutes, you can recreate the interface that you're familiar with"
 
 2. **Manually edit gacd.pgp**:
    - Find gacd.pgp in GstarCAD's support folder
@@ -192,14 +167,11 @@ GstarCAD uses its own alias file called gacd.pgp (equivalent to AutoCAD's acad.p
    - Example: `L, *LINE`
 
 3. **Use the Customize User Interface**:
-   - "Customize User Interface: Workspace, toolbars, ribbon customization, command, keyboard and mouse button customizations"
    - Access through the Customize dialog
    - Add or modify command aliases
    - Save and restart GstarCAD
 
 4. **Export/Import settings between GstarCAD versions**:
-   - "GstarCAD supports importing and exporting settings"
-   - "Importing settings of old version enables users to avoid repeating same settings"
    - Export from old GstarCAD version
    - Import to new version
 
@@ -217,7 +189,6 @@ GstarCAD uses its own alias file called gacd.pgp (equivalent to AutoCAD's acad.p
    - Font mapping file (gacd.fmp)
 
 6. **Note: migration overwrites current settings**:
-   - "After migration from older version, the relevant settings of current version will be overwritten, and can't be restored"
    - Back up current settings before importing
    - Export current settings first as a safety measure
 
@@ -238,10 +209,6 @@ GstarCAD's Batch Plot tool converts each DWG to a separate PDF file. The "DWG To
 ### Fix
 
 1. **Use Batch Plot for individual PDFs**:
-   - "Go to File → Batch Plot, select multiple DWG files"
-   - "Choose 'DWG To PDF.pc3' as the printer"
-   - "Configure settings (paper size, scale)"
-   - "Click 'OK' to convert all files at once"
    - Each DWG produces a separate PDF
 
 2. **Merge PDFs with external tool**:
@@ -254,7 +221,6 @@ GstarCAD's Batch Plot tool converts each DWG to a separate PDF file. The "DWG To
 3. **Use Plot command with layout tabs**:
    - If all drawings are layouts in a single DWG file
    - Use Plot and select multiple layouts
-   - "In the Print dialog, under Print Range, select Layout to convert a specific layout"
    - Plot each layout to the same PDF file (append)
 
 4. **Print to Adobe PDF with append**:

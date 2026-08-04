@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.thermwood.com/forums/viewtopic.php?t=10693"
-  - "https://woodweb.com/cgi-bin/forums/cad.pl?read=830961"
-  - "https://www.thermwood.com/forums/viewtopic.php?t=18321"
 ---
 
 # Cabinet Vision Cut List Corruption, Backup Freeze, and CNC Errors: Negative Sheet Count from Corrupted Cabinet File, Backup Freeze from System Parameters, Update Error #3704 from Windows Update, THM.exe Crash on Nesting from Corrupt Database, and THM Software Crash on Jobs Over 30 Sheets from Full Hard Drive
@@ -103,7 +100,6 @@ Windows updates can break the database connection that Cabinet Vision relies on.
    - Try uninstalling the most recent update and running Cabinet Vision
 
 2. **Reinstall Windows** — multiple users report this as the only permanent fix:
-   - "I need to reinstall windows to fix that error, and it happens again and again after windows update."
    - This is drastic but may be necessary if the database components are deeply corrupted
 
 3. **Repair Windows database components**:

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-02"
 sources:
-  - "https://forum.freecad.org/viewtopic.php?t=98913"
-  - "https://github.com/FreeCAD/FreeCAD/issues/20929"
-  - "https://github.com/FreeCAD/FreeCAD/issues/17041"
 ---
 
 # FreeCAD Assembly and Topological Naming Errors: Invalid Shape Name from Topological Naming Problem Requiring Reference Reassignment, Sketcher Invalid Input from Toponaming Bug on Windows Weekly Build Requiring Stable Bundle, Face Edge IDs Change After Recompute from Fillet on Rectangle with Hole Requiring Attachment Editor Fix, Assembly Joints Break After Part Modification Requiring Joint Recreation, and Crash on Selecting Sketch from Invalid Shape Name Edge Requiring Update
@@ -31,38 +28,30 @@ After making a small change on a part in a FreeCAD assembly, error: "Assembly: I
 ### Fix
 
 1. **Reassign references using the attachment editor**:
-   - "You might be able to rectify some lost references by reassigning e.g. 'new' face names"
    - Open the broken constraint or joint
    - Use the attachment editor to select the new face/edge name
    - Reassign all broken references
 
 2. **Use master sketches as references**:
-   - "One approach is using master sketches on which you base other sketches (like a reference)"
    - Create a master sketch that defines key geometry
    - Attach other sketches to the master sketch, not to faces
    - This reduces TNP exposure
 
 3. **Avoid attaching sketches to faces**:
-   - "Another one to avoid attaching sketches to e.g. faces"
    - Attach sketches to planes with offsets instead
    - Use datum planes for sketch attachment
    - Datum planes are more stable than face references
 
 4. **Keep models broken down in simple bodies**:
-   - "I try to keep my models broken down in simple bodies"
    - Avoid complex single-body parts
    - Use Std.Part as an Assembly Container for static assemblies
    - Use Assembly WBs for kinematic analysis only
 
 5. **Try alternative Assembly workbenches**:
-   - "There are other Assembly WBs that are favoured over the stock Assembly WB, like A2plus or Assembly4"
-   - "I suspect they are also prone to TNP issues"
    - But they may have better recovery tools
    - Test which works best for your workflow
 
 6. **Copy working directory before critical changes**:
-   - "I will probably copy the entire working directory before every critical change"
-   - "So that I can restore the original state"
    - This is a workaround, not a fix
    - But it prevents losing work to TNP
 
@@ -83,7 +72,6 @@ Using FreeCAD weekly build on Windows. Adding geometry to existing sketches brea
 ### Fix
 
 1. **Use the FreeCAD-Bundle weekly build**:
-   - "FreeCAD/FreeCAD-Bundle/releases works"
    - Download from: https://github.com/FreeCAD/FreeCAD-Bundle/releases/tag/weekly-builds
    - This build pipeline doesn't have the toponaming bug
    - Use this instead of the main repo weekly
@@ -95,8 +83,6 @@ Using FreeCAD weekly build on Windows. Adding geometry to existing sketches brea
    - Avoid weekly/dev builds for production work
 
 3. **Use a libpack build**:
-   - "I tried a libpack build and it looks like it works correctly"
-   - "So it seems to be a pixi specific bug"
    - Build from source using libpack
    - This avoids the pixi build issue
 
@@ -107,8 +93,6 @@ Using FreeCAD weekly build on Windows. Adding geometry to existing sketches brea
    - Attach the error messages from the report view
 
 5. **Workaround — add all geometry in one command**:
-   - "Multiple lines can be added without issues if they are created by the same action"
-   - "A single rectangle or a polyline with multiple lines don't trigger the issue"
    - Plan your sketch geometry to minimize separate commands
    - Use polylines instead of individual lines
 
@@ -129,7 +113,6 @@ FreeCAD 1.0 RC2 and nightly builds. Create a rectangle, pad it. Create a sketch 
 ### Fix
 
 1. **Use the attachment editor to fix references**:
-   - "After modifying the sketch, still need to fix with attachment editor"
    - Open the pocket sketch properties
    - Use the attachment editor to reassign the reference face
    - Select the correct face on the modified (filleted) pad
@@ -147,8 +130,6 @@ FreeCAD 1.0 RC2 and nightly builds. Create a rectangle, pad it. Create a sketch 
    - Fillets won't break datum plane attachments
 
 4. **Use the latest development build**:
-   - "I think this is one of the cases that PR #16803 may fix"
-   - "Toponaming: Add a plane matching based heuristic to TNP mitigation"
    - Update to the latest nightly build
    - Check if the fix has been merged
 
@@ -181,7 +162,6 @@ Assembly was working fine. Modified a part within the assembly — added a groov
 ### Fix
 
 1. **Delete and recreate affected joints**:
-   - "The assembly is basically trash, as long as I do not delete all the joints and assemble everything again"
    - Identify which joints reference the modified surfaces
    - Delete those joints
    - Recreate them with the new surface names
@@ -193,8 +173,6 @@ Assembly was working fine. Modified a part within the assembly — added a groov
    - This prevents joint breakage from face renaming
 
 3. **Copy working directory before modifications**:
-   - "Copy the entire working directory before every critical change"
-   - "So that I can restore the original state"
    - This is a precautionary workaround
    - Restore if the assembly breaks
 
@@ -205,7 +183,6 @@ Assembly was working fine. Modified a part within the assembly — added a groov
    - Then update the assembly
 
 5. **Use A2plus or Assembly4 workbenches**:
-   - "There are other Assembly WBs that are favoured over the stock Assembly WB, like A2plus or Assembly4"
    - These may have better reference recovery
    - Test with your workflow
    - They handle TNP differently
@@ -233,8 +210,6 @@ The topological naming system encounters an invalid edge name (?Edge9) that does
 ### Fix
 
 1. **Update to the latest version**:
-   - "It doesn't crash anymore with version 0.22.0dev.37819"
-   - "Likely fixed by PR #14699"
    - Update to FreeCAD 1.0 or later
    - The crash has been fixed in recent builds
 

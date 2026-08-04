@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://support.tekla.com/doc/tekla-tedds/2026/ref_errormessages"
-  - "https://support.tekla.com/doc/tekla-tedds/2026/rel_2026_sp1"
-  - "https://support.tekla.com/doc/tekla-tedds/2026/calcs_reactingtoerrors"
 ---
 
 # Tekla Tedds 2026 Memory Full Condition from Low Computer Memory, VBL File Sync Error from Document and Variable File Out of Sync, Windows 11 GDI Vertical Text Rotation Error from Drawing Layer Update, Analysis Sketches Bending Moment Deflection Shear Force Diagram Inversion for Vertical Members, and Unit Database Corruption from Missing or Corrupt File: Memory Increase, VBL File Delete and Recalculation, SP1 Update, Diagram Inversion Fix, and Unit Database Reinstall
@@ -31,9 +28,6 @@ Multiple error messages appear: "A problem has occurred in the Expression Evalua
 ### Fix
 
 1. **Increase available RAM**:
-   - "The error usually occurs"
-   - "When your computer"
-   - "Is running low on memory"
    - Increase RAM
 
 2. **Close other applications**:
@@ -89,29 +83,16 @@ The error "The Tedds document and its associated variable file (.VBL) are out of
 ### Fix
 
 1. **Delete the VBL file**:
-   - "You must delete this file"
-   - "And then perform"
-   - "A complete document"
-   - "Re-calculation"
    - Delete VBL
 
 2. **Perform complete document recalculation**:
-   - "A complete document"
-   - "Re-calculation is required"
    - Recalculate
    - The document
 
 3. **Check for disk space issues**:
-   - "Unable to create temporary"
-   - "Variable (.VBL) file"
-   - "Running low on disk space"
    - Check disk space
 
 4. **Check for disk corruption**:
-   - "The data in the temporary"
-   - "Library file is invalid"
-   - "Your disk has become"
-   - "Corrupted in some way"
    - Check disk
 
 5. **Verify VBL file location**:
@@ -149,15 +130,9 @@ Vertical text and dimensions are drawn with incorrect rotation. The issue occurs
 ### Fix
 
 1. **Update to Tekla Tedds 2026 SP1**:
-   - "TEDDS-9911"
-   - "Fixed issue where"
-   - "A Windows 11 update"
    - Update to SP1
 
 2. **Download SP1 from Trimble Downloads**:
-   - "Tekla Tedds 2026"
-   - "Service Pack 1 (version 28.1.0.6)"
-   - "Is available in Trimble Downloads"
    - Download SP1
 
 3. **Check Windows 11 version**:
@@ -207,9 +182,6 @@ The bending moment, deflection, and shear force diagrams for vertical members ar
 ### Fix
 
 1. **Update to Tekla Tedds 2026 SP1**:
-   - "TEDDS-10133"
-   - "Resolved a previous change"
-   - "To the analysis sketches"
    - Update to SP1
 
 2. **Verify diagrams for vertical members**:
@@ -283,10 +255,6 @@ The error "Unable to open unit database (in read-only mode)" appears. The unit d
    - From backup
 
 4. **Check for disk corruption**:
-   - "The data in the temporary"
-   - "Library file is invalid"
-   - "Your disk has become"
-   - "Corrupted in some way"
    - Check disk
 
 5. **Verify file permissions**:
@@ -296,15 +264,9 @@ The error "Unable to open unit database (in read-only mode)" appears. The unit d
    - Database
 
 6. **Contact Tekla Tedds support**:
-   - "Report the error"
-   - "And the actions that lead to it"
-   - "To the Tekla Support Department"
    - Contact support
 
 7. **Use Support tool for crash dumps**:
-   - "If you want to send"
-   - "Additional crash dump files"
-   - "Click Add crash dumps"
    - Use Support tool
 
 ### Community Report

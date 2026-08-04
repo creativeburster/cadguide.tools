@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.qualitydigest.com/inside/innovation-news/hexagon-releases-geomagic-design-x-20251-121025.html"
-  - "https://www.thesolidexperts.com/hubfs/Geomagic%20Data%20Sheets/Geomagic-DesignX-VersionsComparison-2025.1%20(1).pdf?hsLang=en"
-  - "https://nexus.hexagon.com/home/product/geomagic-design-x/"
 ---
 
 # Geomagic Design X 2025.1 Shrink Wrap Tool for Multi-Mesh Watertight Repair, Decimate Mesh 2x 4x Faster Performance for Clean Optimized Data, Surface Fitting Accuracy for Complex Patch Networks, LiveTransfer to SolidWorks 2025 Creo 12 Inventor 2026, and Pipe Wizard Robust Results with 3D Polyline Sweep Path Export: Multi-Mesh Merge, Adaptive Decimation, Patch Network Correction, CAD Transfer Workflow, and Pipe Geometry Export
@@ -31,8 +28,6 @@ Combining multiple meshes traditionally creates topology issues at the boundarie
 ### Fix
 
 1. **Use the Shrink Wrap Tool (2025.1)**:
-   - "Shrink Wrap Tool: Create a single watertight mesh from multiple meshes"
-   - "By capturing only external surfaces while repairing mesh topology issues"
    - Use the new Shrink Wrap Tool
    - In Geomagic Design X 2025.1
 
@@ -89,10 +84,6 @@ Mesh decimation in older versions of Geomagic Design X is slow, especially for l
 ### Fix
 
 1. **Update to Geomagic Design X 2025.1**:
-   - "Decimate Mesh: Retain design intent"
-   - "And achieve robust and adaptive results"
-   - "With 2x or 4x faster performance"
-   - "For cleaner, optimized data"
    - Update to 2025.1
 
 2. **Use the new Decimate Mesh tool**:
@@ -148,9 +139,6 @@ When using auto-surfacing on complex scan data, the surface fitting results are 
 ### Fix
 
 1. **Update to Geomagic Design X 2025.1**:
-   - "More accurate surface fitting"
-   - "With improved performance"
-   - "For complex patch networks"
    - Update to 2025.1
 
 2. **Use the improved surface fitting**:
@@ -160,13 +148,10 @@ When using auto-surfacing on complex scan data, the surface fitting results are 
    - In auto-surfacing
 
 3. **Check Accuracy Analyzer**:
-   - "Use Accuracy Analyzer, our patented real-time tool"
-   - "To compare your 3D model with scan data"
    - Use the Accuracy Analyzer
    - To verify surface fitting accuracy
 
 4. **Identify deviation areas**:
-   - "Uncover deviations, and ensure compliance"
    - Use the Accuracy Analyzer
    - To identify areas
    - Where surfaces deviate from scan data
@@ -178,7 +163,6 @@ When using auto-surfacing on complex scan data, the surface fitting results are 
    - The underlying geometry
 
 6. **Use selective surfacing**:
-   - "Auto Surface with Selective Surfacing"
    - Use selective surfacing
    - To control which areas
    - Are auto-surfaced
@@ -206,7 +190,6 @@ When attempting to transfer a CAD model from Geomagic Design X to SolidWorks 202
 ### Fix
 
 1. **Update to Geomagic Design X 2025.1**:
-   - "Live Transfer to SolidWorks 2025, Creo 12 and Inventor 2026"
    - Update to 2025.1
    - For the latest CAD version support
 
@@ -217,13 +200,10 @@ When attempting to transfer a CAD model from Geomagic Design X to SolidWorks 202
    - Before attempting LiveTransfer
 
 3. **Use LiveTransfer for parametric models**:
-   - "Patented LiveTransfer output"
-   - "Straight into SOLIDWORKS, Siemens NX, Solid Edge, Autodesk Inventor, and PTC Creo"
    - Use LiveTransfer for parametric
    - Feature-based CAD models
 
 4. **Use neutral export as fallback**:
-   - "Plus neutral STEP, IGES, DXF"
    - If LiveTransfer fails
    - Export as STEP, IGES, or DXF
    - As a neutral format
@@ -241,9 +221,6 @@ When attempting to transfer a CAD model from Geomagic Design X to SolidWorks 202
    - Is complete and editable
 
 7. **Use LiveTransfer for editable models**:
-   - "The result is a true parametric CAD model"
-   - "With an editable feature tree — not a frozen mesh"
-   - "So it is ready to manufacture and to modify"
    - LiveTransfer creates editable models
 
 ### Community Report
@@ -263,7 +240,6 @@ When using the Pipe Wizard in Geomagic Design X to extract pipe geometry from sc
 ### Fix
 
 1. **Update to Geomagic Design X 2025.1**:
-   - "More Robust and Accurate Results from the Pipe Wizard"
    - Update to 2025.1
    - For improved pipe extraction
 
@@ -274,7 +250,6 @@ When using the Pipe Wizard in Geomagic Design X to extract pipe geometry from sc
    - Or complex pipe geometries
 
 3. **Export sweep path as 3D Polyline**:
-   - "Output the Sweep Path as a 3D Polyline in the Sweep Wizard"
    - Use the new 3D Polyline export
    - For the sweep path
    - In the Sweep Wizard

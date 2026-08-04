@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://theindustrialmaker.com/software-digital-tools/cad-software/fixing-variCAD-crashes-file-encoding-issues"
-  - "https://www.varicad.com/userdata/files/help/en/manual26.htm"
-  - "https://www.varicad.com/en/home/support/discussion-forum/index.php?action=show_post&caller=1e2734ae19fb0cf52b6e00b2c06d29b0endiscussion1&cat=18&post=202"
 ---
 
 # VariCAD 2026 Crash on Save from Cyclic Constraint Dependencies in Parametric Core, DWG Save Error from Network Drive File Lock Mechanism, STEP Import Reverted Normals from Corrupted Data in STEP File, File Cannot Be Opened from Power Failure During Save, and Version Mismatch Fillet Feature Broken from 2024.2 Shape Representation Change: Dependency Graph Check, Local SSD Save, Normal Repair, File Recovery, and STEP Export Before Upgrade
@@ -31,45 +28,24 @@ VariCAD freezes or crashes when saving a file with 50+ parts and heavy constrain
 ### Fix
 
 1. **Enable dependency graph viewer**:
-   - "Go to View → Panels →"
-   - "Constraints Graph"
-   - "Look for any red lines"
-   - "That indicate cyclic references"
    - Enable graph
 
 2. **Delete offending cyclic constraint**:
-   - "If you see a loop"
-   - "Delete the offending constraint"
    - Delete cycle
 
 3. **Force rebuild before saving**:
-   - "Hit the Recompute button"
-   - "Wait until it finishes"
    - Force rebuild
 
 4. **Turn off auto-recompute**:
-   - "Turning off auto-recompute"
-   - "Under Edit → Preferences → General"
-   - "And manually recalculating"
    - Turn off auto
 
 5. **Save as STEP for backup**:
-   - "Before any major save"
-   - "Hit File → Export → STEP"
-   - "The STEP exporter doesn't"
-   - "Touch the constraint solver"
    - Save as STEP
 
 6. **Save to local SSD not network drive**:
-   - "VariCAD's file lock mechanism"
-   - "Is garbage. Always save to"
-   - "Local SSD, then copy to server"
    - Save locally
 
 7. **Use DXF reimport trick for complex parts**:
-   - "Delete all constraints"
-   - "Export as DXF, clean up"
-   - "Reimport and add constraints fresh"
    - DXF reimport
 
 ### Community Report
@@ -89,15 +65,9 @@ Saving as DWG on a network drive doesn't work. The error "Error while writing fi
 ### Fix
 
 1. **Save DWG to local drive first**:
-   - "Save them locally"
-   - "And copy them back"
-   - "To the share"
    - Save locally
 
 2. **Use DXF as alternative on network**:
-   - "If you create a dxf file"
-   - "Instead of dwg, it should work"
-   - "The data are exactly the same"
    - Use DXF
 
 3. **Copy to network after local save**:
@@ -107,26 +77,15 @@ Saving as DWG on a network drive doesn't work. The error "Error while writing fi
    - To network
 
 4. **Check for entities preventing DWG save**:
-   - "This seems to have been related"
-   - "To some entities in the dwb file"
-   - "Preventing saving as a dwg"
    - Check entities
 
 5. **Delete drawing border block**:
-   - "I deleted the drawing"
-   - "Boarder (a block) and"
-   - "The file saved as a dwg"
    - Delete block
 
 6. **Check DWG group code error**:
-   - "Error while writing file:67"
-   - "- invalid group code"
    - Check error
 
 7. **Update to latest VariCAD version**:
-   - "Within a few months"
-   - "The approach to dwg/dxf"
-   - "Interface will be rewritten"
    - Update VariCAD
 
 ### Community Report
@@ -146,21 +105,12 @@ Objects loaded from STEP have reverted normals. Either all normals on the entire
 ### Fix
 
 1. **Use VariCAD normal repair tools**:
-   - "VariCAD provides tools"
-   - "For solving problems or for"
-   - "Partial reparations of corrupted"
-   - "Internal data, files or objects"
    - Use repair tools
 
 2. **Convert solid to imported object**:
-   - "Converts a Solid to Imported Object"
-   - "After conversion, all history"
-   - "Of solid's creation is lost"
    - Use TOIMP
 
 3. **Fix reverted normals**:
-   - "Reverted normals can be"
-   - "Described as inside out"
    - Fix normals
 
 4. **Re-export from source software**:
@@ -204,35 +154,18 @@ A VariCAD native format file cannot be opened. The file was being saved when a p
 ### Fix
 
 1. **Use file recovery command**:
-   - "Recovery commands may help"
-   - "To solve the problem"
-   - "Select a file from file dialogue"
    - Use recovery
 
 2. **Open without active sections**:
-   - "Optionally, you can select"
-   - "Opening of file without"
-   - "Active sections"
    - Open without sections
 
 3. **Rebuild internal data structures**:
-   - "The command rebuilds"
-   - "Some internal data structures"
-   - "And the file may be"
-   - "Opened again"
    - Rebuild data
 
 4. **Insert corrupted file into existing 3D space**:
-   - "Another method how a file"
-   - "Can be recovered is to insert"
-   - "A corrupted file into an"
-   - "Existing 3D space"
    - Insert file
 
 5. **Recover 2D part if 3D is damaged**:
-   - "If the 3D part is damaged"
-   - "You can recover at least"
-   - "The 2D part"
    - Recover 2D
 
 6. **Use STEP backup if available**:
@@ -264,21 +197,12 @@ Opening a file saved with VariCAD 2024.2 in an earlier version shows fillet feat
 ### Fix
 
 1. **Never upgrade mid-project**:
-   - "My rule: never upgrade"
-   - "Mid-project unless you can"
-   - "Freeze the version"
    - Don't upgrade
 
 2. **Export all parts as STEP before upgrading**:
-   - "And if you do, export all"
-   - "Parts as STEP before upgrading"
-   - "Trust nothing"
    - Export STEP
 
 3. **Recompute broken fillet features**:
-   - "You can recompute it"
-   - "But it often changes"
-   - "The geometry slightly"
    - Recompute
 
 4. **Verify geometry after recompute**:

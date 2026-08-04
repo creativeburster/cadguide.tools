@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://help.solibri.com/hc/en-us/articles/4412358702743-How-to-resolve-IFC-read-errors-in-Solibri"
-  - "https://www.solibri.com/articles/solibri-release-notes-26-6-1"
-  - "https://www.solibri.com/articles/solibri-release-notes-june-2026"
 ---
 
 # Solibri 2026 IFC Read Errors from Syntax Error or Old Exporter Version, Revit 2026 IFC Export Door Openings Show as Not Defined from Missing Opening Type Information, Custom Discipline Export Failure from Export Bug, Model Upload Stuck in Loading Loop from Interrupted Upload, and Point Cloud Import LAS LAZ Settings Adjustment Issues: Authoring Tool Update, IFC Export Settings Check, 26.6.1 Update, Page Reload, and Import Settings Configuration
@@ -31,44 +28,26 @@ When trying to open an IFC file in Solibri, a read error message appears and the
 ### Fix
 
 1. **Open IFC file in text editor**:
-   - "Open the IFC file"
-   - "In a text editor"
-   - "From there, you can see"
-   - "The version the authoring tool"
    - Open in editor
 
 2. **Update authoring tool and IFC exporter**:
-   - "Update the authoring tool"
-   - "And/or IFC exporter"
    - Update both
 
 3. **Check IFC mapping and export settings**:
-   - "Check the IFC mapping"
-   - "And/or export settings"
    - Check settings
 
 4. **Re-export the IFC file**:
-   - "Re-export the IFC file"
    - Re-export
    - With updated
    - Settings
 
 5. **Don't use old version of authoring tool**:
-   - "You shouldn't use"
-   - "An old version"
-   - "Of the tool"
    - Update tool
 
 6. **Contact authoring tool support**:
-   - "If the error persists"
-   - "Contact the authoring"
-   - "Tool support"
    - Contact support
 
 7. **Contact Solibri for IFC4 issues**:
-   - "IFC4 is partly supported"
-   - "But not yet certified"
-   - "Please contact us directly"
    - Contact Solibri
 
 ### Community Report
@@ -88,10 +67,6 @@ When exporting IFC from Revit 2026 and opening it in Solibri, all door openings 
 ### Fix
 
 1. **Contact Autodesk support**:
-   - "They suggested I contact"
-   - "Autodesk to find out"
-   - "How to include it"
-   - "In the export"
    - Contact Autodesk
 
 2. **Check Revit IFC export settings**:
@@ -101,9 +76,6 @@ When exporting IFC from Revit 2026 and opening it in Solibri, all door openings 
    - Opening type
 
 3. **Verify IFC type assignment**:
-   - "I already set the IFC type"
-   - "To IfcDoorType with"
-   - "Predefined Type = DOOR"
    - Verify type
 
 4. **Use alternative IFC exporter**:
@@ -125,8 +97,6 @@ When exporting IFC from Revit 2026 and opening it in Solibri, all door openings 
    - In Solibri
 
 7. **Report to Solibri support**:
-   - "I contacted Solibri support"
-   - "And they informed me"
    - Report to
    - Solibri
 
@@ -147,9 +117,6 @@ Exporting a custom discipline fails. The export operation produces an error or d
 ### Fix
 
 1. **Update to Solibri 26.6.1**:
-   - "Fixed an issue where"
-   - "Exporting a custom discipline"
-   - "Could fail"
    - Update to 26.6.1
 
 2. **Check custom discipline configuration**:
@@ -205,9 +172,6 @@ When a model upload gets interrupted, reloading the page results in that model b
 ### Fix
 
 1. **Reload the page**:
-   - "Reloading the page"
-   - "Will result in that model"
-   - "Being stuck in a loading loop"
    - Reload page
 
 2. **Clear browser cache and cookies**:
@@ -263,19 +227,12 @@ Importing .las and .laz point cloud models has settings adjustment issues. The p
 ### Fix
 
 1. **Update to Solibri June 2026 release**:
-   - "You can now import"
-   - ".las and .laz models"
-   - "In addition to .e57"
    - Update to latest
 
 2. **Adjust settings during import**:
-   - "More options to adjust"
-   - "Point cloud settings"
-   - "During import"
    - Adjust during
 
 3. **Adjust settings after import**:
-   - "And after import"
    - Adjust settings
    - After import
    - As needed

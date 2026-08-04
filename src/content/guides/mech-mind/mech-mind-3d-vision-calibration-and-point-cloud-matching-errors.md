@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://docs.mech-mind.net/en/suite-software-manual/latest/vision-calibration/calib-troubleshooting.html"
-  - "https://community.mech-mind.com/t/topic/2731"
-  - "https://docs.mech-mind.net/en/suite-tutorial/2.1.0/topic-3d-matching/3d-matching-common-issues.html"
 ---
 
 # Mech-Mind 3D Vision Calibration and Point Cloud Matching Errors: Calibration Board Not Detected from Small Circle Interference on NANO with OCB-20 Requiring Nut Covering or Exposure Reduction, Movement Distance Mismatch Between Robot and Camera from Intrinsic Parameter Error or Camera Offset Requiring Robot Accuracy Check and Recalibration, Poor Calibration Results from Overexposure and Point Cloud Fluctuation Requiring Single Exposure and Strong Smoothing, 3D Matching Failure from Incorrect STL Normals Requiring Normal Correction Tool, and Remove Overlapped Poses Filters Correct Matches from Inconsistent Reference Frame Requiring Camera Frame Alignment
@@ -31,25 +28,18 @@ The small circles on the calibration board (specifically around the mounting nut
 ### Fix
 
 1. **Cover the mounting nut on the calibration board**:
-   - "The reason for the inability to recognize is that the small circles on the calibration board interfered with the automatic detection"
-   - "You can solve the problem by covering this position or painting the nut black"
    - Cover the nut with black tape or paint it black
    - This eliminates the reflective interference
 
 2. **Reduce exposure time**:
-   - "Due to the extended overall exposure time and the overall reflection of the screws, misidentification occurred"
-   - "By appropriately reducing the exposure, it's also possible to mitigate this issue"
    - In Mech-Eye Viewer, reduce the exposure time
    - This reduces reflection from the screws
 
 3. **Verify the correct calibration board**:
-   - "The calibration board may not have been chosen correctly"
-   - "You can find the recommended calibration boards for each camera model from the camera material table"
    - Check the Download Center for the correct board for NANO
    - Ensure OCB-20 is the recommended board for NANO
 
 4. **Check for modified intrinsic parameters**:
-   - "The customer had set the offset of the intrinsic parameters"
    - Check the extri_param.json file for modified offsets
    - Reset to factory intrinsic parameters in Mech-Eye Viewer
    - If reset fails ("Please retry or contact Technical Support"), contact support
@@ -77,37 +67,29 @@ Three possible causes: (1) Camera intrinsic parameter error — if the intrinsic
 ### Fix
 
 1. **Check camera intrinsic parameters**:
-   - "First, check if there's an issue with the camera's intrinsic parameters"
-   - "If the intrinsic error is too large, it can lead to this type of error"
-   - "If the camera hasn't been hit or bumped, the intrinsic parameters can be optimized by rectification"
    - Run intrinsic parameter check in Mech-Eye Viewer
 
 2. **Check for physical camera damage**:
-   - "If the camera has been hit by something or fallen to the ground, please contact Mech-Mind's technical support"
    - Physical impact changes the lens position
    - This requires factory recalibration
    - Don't attempt to fix physically damaged cameras
 
 3. **Verify robot accuracy**:
-   - "Investigate the accuracy of the robot (compare measured values with the distance displayed on the robot's teach pendant)"
    - Move the robot a known distance
    - Measure the actual distance with a ruler
    - Compare with the teach pendant display
 
 4. **Check robot zero points**:
-   - "Check the zero points of each robot axis to troubleshoot robot accuracy issues"
    - Verify each axis zero position
    - Re-master if necessary
    - Incorrect zero points cause cumulative errors
 
 5. **Check for camera internal offset**:
-   - "This problem arises when there were issues during previous calibration processes, and compensation parameters had to be recalculated"
    - Check if compensation parameters were previously recalculated
    - Reset compensation parameters
    - Perform a fresh calibration
 
 6. **Fix planar point cloud issue**:
-   - "If the point cloud output becomes a planar point cloud, it's also related to the camera offset"
    - This indicates a depth map conversion error
    - Check the camera's depth calculation parameters
    - Reset to factory defaults and recalibrate
@@ -129,20 +111,15 @@ Overexposure leads to point cloud loss and increased point cloud fluctuation, wh
 ### Fix
 
 1. **Disable gain and use single exposure**:
-   - "Disable gain, use a single exposure, and set 3D exposure appropriately"
-   - "Overexposure and overexposure not only lead to point cloud loss, but also cause point cloud fluctuation to increase"
    - In Mech-Eye Viewer: disable gain
    - Set exposure mode to single exposure
    - Adjust 3D exposure to appropriate level
 
 2. **Set point cloud smoothing to strong**:
-   - "If the point cloud of the calibration board fluctuates greatly in the DEEP-GL or LSR camera, the calibration result is poor"
-   - "Change the point cloud smoothing mode to 'strong'"
    - In Mech-Eye Viewer: Settings > Point Cloud Smoothing > Strong
    - This reduces fluctuation in the calibration board point cloud
 
 3. **Check individual red calibration points**:
-   - "If individual calibration points in the point cloud viewer are red"
    - Red points indicate high error
    - Recapture those specific calibration poses
    - Ensure the calibration board is fully visible and well-lit
@@ -160,7 +137,6 @@ Overexposure leads to point cloud loss and increased point cloud fluctuation, wh
    - Avoid direct sunlight on the calibration board
 
 6. **Use extrinsic parameter calibration report**:
-   - "Mech-MSR's camera calibration tool has provided the 'extrinsic parameter calibration report' function"
    - Generate the report after calibration
    - Check the recommended troubleshooting steps
    - Follow the report's guidance for improving accuracy
@@ -182,7 +158,6 @@ Using 3D Matching in Mech-Vision 2.0+. After importing an STL model into the tar
 ### Fix
 
 1. **Use the STL Model Normal Correction Tool**:
-   - "If the normals of the STL model are incorrect, you can use the 'STL Model Normal Correction Tool' to repair the STL model"
    - In Mech-Vision: Tools > STL Model Normal Correction Tool
    - Load the STL model
    - Run the normal correction
@@ -195,13 +170,11 @@ Using 3D Matching in Mech-Vision 2.0+. After importing an STL model into the tar
    - Import into Mech-Vision
 
 3. **Use point cloud model generated directly by Steps**:
-   - "It is recommended to use the point cloud model generated by the Step directly for matching"
    - Instead of importing an STL model
    - Use the point cloud from a Step (e.g., Point Cloud Clustering)
    - This avoids the STL normal issue
 
 4. **Check for abnormal normals after Step processing**:
-   - "The edge point cloud model contains abnormal normals or tangents after being processed by Steps such as 'Point Cloud Clustering,' 'Get Highest-Layer Clouds'"
    - Verify normals after each Step
    - Use the point cloud model before Step processing for matching
    - Or fix normals after Step processing
@@ -229,13 +202,10 @@ After enabling "Remove Overlapped Poses" in the 3D Matching Step, correct matchi
 ### Fix
 
 1. **Ensure consistent reference frames**:
-   - "During matching, ensure that the point cloud input to the '3D Matching' Step shares the same reference frame as the point cloud model"
    - Use the camera reference frame for both the model and the point cloud to be matched
    - Don't mix camera frame and robot frame
 
 2. **Use camera reference frame for the model**:
-   - "It is recommended to use the point cloud in the camera reference frame as the point cloud model"
-   - "Ensure that the point cloud to be matched input to the '3D Matching' Step matches the reference frame of the point cloud model"
    - Capture the model point cloud directly from the camera
    - Don't transform it to the robot frame before matching
 
@@ -246,8 +216,6 @@ After enabling "Remove Overlapped Poses" in the 3D Matching Step, correct matchi
    - Manually verify the matching results
 
 4. **Check Angle Threshold after adjustment**:
-   - "When Angle Threshold was set to 180 degrees, the matching was successful. After adjusting the Angle Threshold, the matching results differed greatly"
-   - "The reference frame of the point cloud model and that of the target object was inconsistent"
    - If adjusting Angle Threshold causes wrong results
    - Check reference frame consistency first
 

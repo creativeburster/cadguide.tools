@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.lusas.com/releases/v23.0/23.0-2/LUSAS%2023.0%20Error%20Fix%20and%20Modification%20Release%20Note.pdf"
-  - "https://www.lusas.com/user_area/instruct/convergence_checklist.html"
-  - "https://www.lusas.com/user_area/warning/failed_to_converge.html"
 ---
 
 # LUSAS 23.0 Nonlinear Concrete fib Model Code 2010 Creep Shrinkage Fails to Converge, Structure with No Stress Fails to Converge Solver, Coupled Analysis Checkerboard Thermal Stress in Quadratic Elements, Fully Coupled Analysis Error in Data Transfer File, and Nonlinear Convergence from Load Increment Too Large and Stiff Element Round-Off: Iteration Increase, Stress-Free Model Check, Element Type Change, Cache Deletion, and Incrementation Adjustment
@@ -31,26 +28,17 @@ When using the nonlinear concrete material model (109) with the 'fib Model Code 
 ### Fix
 
 1. **Update to LUSAS 23.0-2 or later**:
-   - "Nonlinear concrete (109) with 'fib Model Code 2010'"
-   - "Creep and shrinkage fails to converge Solver"
    - Fixed in 23.0-2c4
    - Update to the latest kit
 
 2. **Increase analysis iterations**:
-   - "Increase the number of iterations permitted per increment"
-   - "To 20-25 (Load case properties > Nonlinear > Set"
-   - "> Solution strategy > 'Max number of iterations')"
    - Increase max iterations
 
 3. **Use automatic nonlinear incrementation**:
-   - "Change to automatic nonlinear incrementation"
-   - "And increase the load more gradually"
    - Switch to automatic incrementation
    - For more gradual loading
 
 4. **Reduce load increment**:
-   - "If automatic incrementation is already being utilised"
-   - "Reduce the load increment still further"
    - Reduce the starting load factor
    - In Load case properties > Nonlinear
 
@@ -61,14 +49,10 @@ When using the nonlinear concrete material model (109) with the 'fib Model Code 
    - Creep and shrinkage model
 
 6. **Use full Newton-Raphson**:
-   - "Make sure that full Newton-Raphson iterations"
-   - "Are being used rather than modified"
    - Use full Newton-Raphson
    - For better convergence
 
 7. **Enable line search**:
-   - "Make sure that the line search method"
-   - "Has not been switched off"
    - Enable line search
    - In Solution strategy > Advanced
 
@@ -89,7 +73,6 @@ A structure with no applied stress or load fails to converge in the LUSAS solver
 ### Fix
 
 1. **Update to LUSAS 23.0-1 or later**:
-   - "Structure with no stress fails to converge Solver"
    - Fixed in 23.0-1c3
    - Update to the latest kit
 
@@ -112,14 +95,10 @@ A structure with no applied stress or load fails to converge in the LUSAS solver
    - Which can cause convergence issues
 
 5. **Review the LUSAS output file**:
-   - "The LUSAS output file should be investigated"
-   - "In the first instance"
    - Check the output file
    - For warnings and errors
 
 6. **Check for pivot warnings**:
-   - "If there are pivot or diagonal decay warnings"
-   - "These should be dealt with"
    - Address pivot warnings
    - Before further analysis
 
@@ -146,8 +125,6 @@ When performing a coupled analysis in LUSAS, checkerboard patterns appear in the
 ### Fix
 
 1. **Update to LUSAS 23.0-1 or later**:
-   - "Coupled analysis: Checkerboard thermal stress"
-   - "In quadratic elements Solver"
    - Fixed in 23.0-1c3
    - Update to the latest kit
 
@@ -176,7 +153,6 @@ When performing a coupled analysis in LUSAS, checkerboard patterns appear in the
    - No longer shows checkerboard
 
 6. **Use fine integration**:
-   - "Invoke the fine integration rule"
    - For elements that support it
    - To improve the integration
    - And reduce numerical issues
@@ -204,14 +180,10 @@ When attempting to solve a fully coupled analysis in the LUSAS Modeller, an erro
 ### Fix
 
 1. **Update to LUSAS 23.0-2 or later**:
-   - "Unable to solve a fully coupled analysis in modeller"
-   - "'Error in the Data Transfer File' is seen"
    - Fixed in 23.0-2c4
    - Update to the latest kit
 
 2. **Check cache settings**:
-   - "Existing caches are deleted"
-   - "After using 'Now' option for Cache Results"
    - Avoid using the 'Now' option
    - If you need to preserve caches
 
@@ -262,64 +234,36 @@ A nonlinear analysis in LUSAS fails to converge. The warning message "***WARNING
 ### Fix
 
 1. **Use automatic nonlinear incrementation**:
-   - "Change to automatic nonlinear incrementation"
-   - "And increase the load more gradually"
    - Switch from manual to automatic
    - For more gradual loading
 
 2. **Reduce load increment**:
-   - "If automatic incrementation is already being utilised"
-   - "Reduce the load increment still further"
    - Reduce the Starting load factor
    - In Load case properties > Nonlinear > Set > Incrementation
 
 3. **Increase iterations per increment**:
-   - "Increase the number of iterations permitted per increment"
-   - "To 20-25"
    - In Load case properties > Nonlinear > Set
    - "> Solution strategy > Max number of iterations
 
 4. **Use full Newton-Raphson**:
-   - "Make sure that full Newton-Raphson iterations"
-   - "Are being used rather than modified"
-   - "(modified NR is the only option in MODELLER)"
    - Use full Newton-Raphson
 
 5. **Enable line search**:
-   - "Make sure that the line search method"
-   - "Has not been switched off"
-   - "Load case properties > Nonlinear > Set"
-   - "> Solution strategy > Advanced > Max number of line searches"
    - Set max line searches to 5
 
 6. **Reduce stiff element stiffness**:
-   - "Relatively stiff elements can produce numerical round-off problems"
-   - "Reducing the stiffness by one or two orders of magnitude"
-   - "Can have significant effects on the convergence rate"
    - Reduce rigid link stiffness
 
 7. **Check element aspect ratios**:
-   - "Elements that have poor aspect ratios (greater than 1:10)"
-   - "Can produce significant difficulties"
-   - "In the nonlinear solution process"
    - Improve element aspect ratios
 
 8. **Use fine integration**:
-   - "Element mechanisms may have been excited"
-   - "By the loading patterns"
-   - "That may be eliminated by invoking the fine integration rule"
    - Enable fine integration
 
 9. **Check convergence criteria**:
-   - "Have the nonlinear convergence criteria been slackened?"
-   - "The default setting for the displacement and residual norms"
-   - "Should be used in general"
    - Use default convergence criteria
 
 10. **Review residual norm behavior**:
-    - "For increments that do not converge"
-    - "The manner in which rdnrm behaves"
-    - "Can provide valuable indicators"
     - Review the residual norm in the log file
 
 ### Community Report

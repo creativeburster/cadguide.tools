@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.gstarcad.net/news/gstarcad-2026-launches-with-breakthrough-speed-enhanced-precision-and-a-reimagined-user-experience?id=288"
-  - "https://blog.gstarcad.net/gstarcad-2026-for-linux-released-enhanced-experience-with-new-features-and-performance-boost/"
-  - "https://file.e-disti.com/GstarCAD2026_Overview.pdf"
 ---
 
 # GstarCAD 2026 Drawing Opening Slow Over 40 Percent Improvement, Multileader Block Freeze Elimination, Hatch Pick-Point 30x Faster on Complex Drawings, EXTEND Fence Crossing 11x Faster, and Linux Double-Click Open Failure from Long File Paths: Performance Update, Block Explosion Fix, Hatch Optimization, Trim Extend Speed, and Path Length Stability
@@ -31,14 +28,9 @@ Opening large drawings in GstarCAD 2025 is slow, especially drawings with multip
 ### Fix
 
 1. **Update to GstarCAD 2026**:
-   - "Drawing opening speed improved by over 40% on average"
-   - "Multi-reference drawing opening (without clipping)"
-   - "Previously lag-prone drawings now open in under 1 minute"
    - Update to 2026 for significant improvement
 
 2. **Use clipped blocks and Xrefs**:
-   - "Clipped blocks & Xrefs: 2.9x faster opening"
-   - "4.2x faster layout switching"
    - Use clipping for Xrefs
    - To improve opening speed
 
@@ -49,19 +41,15 @@ Opening large drawings in GstarCAD 2025 is slow, especially drawings with multip
    - Into the main drawing
 
 4. **Use block editing preview**:
-   - "Block editing preview (BEDIT/REFEDIT/INSERT): 7x faster"
    - Use block editing preview
    - For faster block operations
    - In 2026
 
 5. **Monitor performance gains**:
-   - "Common operations improved by over 20%"
-   - "REGEN, MOVE, COPYCLIP, MIRROR, UNDO, REDO, etc."
    - Track performance improvements
    - Across common operations
 
 6. **Use Drawing Merge for combined files**:
-   - "Drawing Merge streamlines workflows"
    - Use Drawing Merge
    - To combine multiple drawings
    - Instead of multiple Xrefs
@@ -89,9 +77,6 @@ When working with blocks that contain many multileader objects, GstarCAD 2025 fr
 ### Fix
 
 1. **Update to GstarCAD 2026**:
-   - "5x faster block creation with high-coordinate entities"
-   - "5x faster explosion of inserted blocks"
-   - "Freeze eliminated for multileader-heavy blocks"
    - Update to 2026 to eliminate the freeze
 
 2. **Reduce multileader count per block**:
@@ -101,7 +86,6 @@ When working with blocks that contain many multileader objects, GstarCAD 2025 fr
    - To minimize freeze duration
 
 3. **Use MIRROR operation improvements**:
-   - "MIRROR operation: 1.4x faster"
    - Use MIRROR for duplicating
    - Multileader-heavy content
    - Instead of block creation
@@ -113,7 +97,6 @@ When working with blocks that contain many multileader objects, GstarCAD 2025 fr
    - Multileader count
 
 5. **Use block editing preview**:
-   - "Block editing preview (BEDIT/REFEDIT/INSERT): 7x faster"
    - Use block editing preview
    - To edit multileader blocks
    - Without full block explosion
@@ -147,7 +130,6 @@ Using the hatch pick-point method on complex drawings in GstarCAD 2025 is extrem
 ### Fix
 
 1. **Update to GstarCAD 2026**:
-   - "Hatch (pick-point on complex drawings): 30x faster"
    - Update to 2026
    - For dramatically faster hatch
 
@@ -164,13 +146,11 @@ Using the hatch pick-point method on complex drawings in GstarCAD 2025 is extrem
    - Near the hatch area
 
 4. **Use TRIM improvements**:
-   - "TRIM (Fence/Crossing): 2x faster"
    - Use TRIM to clean up
    - Complex boundaries
    - Before hatching
 
 5. **Use EXTEND improvements**:
-   - "EXTEND (Fence/Crossing): 11x faster"
    - Use EXTEND to clean up
    - Incomplete boundaries
    - Before hatching
@@ -182,7 +162,6 @@ Using the hatch pick-point method on complex drawings in GstarCAD 2025 is extrem
    - In real-world scenarios
 
 7. **Use Batch Purge for cleanup**:
-   - "Batch Purge further enhances usability"
    - Use Batch Purge
    - To clean up drawings
    - Before hatching
@@ -204,7 +183,6 @@ The EXTEND command with Fence or Crossing selection methods is slow in GstarCAD 
 ### Fix
 
 1. **Update to GstarCAD 2026**:
-   - "EXTEND (Fence/Crossing): 11x faster"
    - Update to 2026
    - For dramatically faster EXTEND
 
@@ -221,7 +199,6 @@ The EXTEND command with Fence or Crossing selection methods is slow in GstarCAD 
    - For bulk operations
 
 4. **Combine with TRIM improvements**:
-   - "TRIM (Fence/Crossing): 2x faster"
    - Use TRIM and EXTEND together
    - For efficient editing
    - Of complex drawings
@@ -233,8 +210,6 @@ The EXTEND command with Fence or Crossing selection methods is slow in GstarCAD 
    - In real-world scenarios
 
 6. **Use common operations improvements**:
-   - "Common operations improved by over 20%"
-   - "REGEN, MOVE, COPYCLIP, MIRROR, UNDO, REDO, etc."
    - Use the improved common operations
    - For faster overall workflow
 
@@ -261,9 +236,6 @@ On GstarCAD 2025 for Linux, drawings fail to open when double-clicking if the fi
 ### Fix
 
 1. **Update to GstarCAD 2026 for Linux**:
-   - "Known issues — such as failures to open drawings via double-click"
-   - "When file paths are too long"
-   - "Are addressed"
    - Update to 2026 for Linux
 
 2. **Use OPEN command as workaround**:
@@ -273,8 +245,6 @@ On GstarCAD 2025 for Linux, drawings fail to open when double-clicking if the fi
    - To open files with long paths
 
 3. **Use drag-and-drop as workaround**:
-   - "DWF drawings can now be opened"
-   - "Via drag-and-drop into the command line"
    - Use drag-and-drop
    - As an alternative to double-click
 
@@ -285,14 +255,10 @@ On GstarCAD 2025 for Linux, drawings fail to open when double-clicking if the fi
    - In 2025
 
 5. **Use DWF double-click support**:
-   - "DWF drawings (*.dwf, *.dwfx) can now be opened"
-   - "Directly by double-clicking"
    - Use DWF double-click support
    - New in 2026 for Linux
 
 6. **Verify annotation consistency**:
-   - "Annotation inconsistencies in certain drawings"
-   - "Are addressed"
    - Check for annotation issues
    - After updating to 2026
 

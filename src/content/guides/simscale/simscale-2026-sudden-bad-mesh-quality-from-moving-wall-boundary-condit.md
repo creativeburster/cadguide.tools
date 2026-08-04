@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.simscale.com/forum/t/sudden-bad-mesh-quality-and-all-solvers-diverging/100848"
-  - "https://www.simscale.com/forum/t/harmonic-solver-hangs-at-0-after-geometry-simplification-empty-void-bodies-causing-singular-stiffness-matrix/100883"
-  - "https://www.simscale.com/forum/t/meshing-and-convergence-issue/98792"
 ---
 
 # SimScale 2026 Sudden Bad Mesh Quality from Moving Wall Boundary Condition on XY Plane, Harmonic Solver Hang at 0% from Empty Void Bodies and High Edge Ratio, Meshing Pipeline Changes from Platform Updates Breaking Previous Setups, High Non-Orthogonality Above 70 from Dirty CAD Model Small Faces, and Overlapping Entities Error from Momentum Source Geometry Intersecting Flow Region: Geometry Underbody Inspection, Local Volume Refinement, Extrusion Mesh Refinement, CAD Cleanup, and Cell Zone Configuration
@@ -31,23 +28,12 @@ A meshing setup that worked for over a year suddenly produces very bad mesh qual
 ### Fix
 
 1. **Inspect car underbody and ground plane**:
-   - "Carefully inspect the car's underbody"
-   - "And the ground plane for"
-   - "Any small faces, sharp angles"
-   - "Or other geometric imperfections"
    - Inspect geometry
 
 2. **Check tire-to-floor connection**:
-   - "Tire-to-floor connection: meshing issues"
-   - "Are frequently observed in tight spaces"
-   - "Like the one between the car and the road"
    - Check tire gap
 
 3. **Remove gap between tire and floor**:
-   - "Make sure to remove it"
-   - "By adding a flat step to the tire"
-   - "Or moving it farther away"
-   - "From the ground"
    - Remove gap
 
 4. **Use Mesh Inspection to locate bad cells**:
@@ -63,15 +49,10 @@ A meshing setup that worked for over a year suddenly produces very bad mesh qual
    - Interface
 
 6. **Check for platform updates**:
-   - "Whether there has been"
-   - "Any updates in the software"
    - Check for
    - Updates
 
 7. **Follow race car aerodynamics tutorial**:
-   - "This tutorial on the"
-   - "Aerodynamics of a race car"
-   - "Covers the entire workflow"
    - Follow tutorial
 
 ### Community Report
@@ -91,45 +72,24 @@ The harmonic solver hangs at 0% after geometry simplification. The simulation bu
 ### Fix
 
 1. **Add local Volume custom sizing refinement**:
-   - "Add local Volume custom sizing"
-   - "Refinement regions around"
-   - "Each pocket location"
    - Add refinement
 
 2. **Use geometry primitives for refinement**:
-   - "Using geometry primitives"
-   - "(spheres or cylinders placed"
-   - "At pocket coordinates)"
    - Use primitives
 
 3. **Size refinement 1.5x pocket diameter**:
-   - "Sized ~1.5x pocket diameter"
-   - "Fineness 5.7 vs global 5.0"
    - Size appropriately
 
 4. **Force smooth mesh grading**:
-   - "This should force smooth"
-   - "Mesh grading through"
-   - "The transition zone"
    - Smooth grading
 
 5. **Reduce core count for cost efficiency**:
-   - "You'd be able to run this"
-   - "With maybe 32 cores/4 processes"
-   - "Or maybe 32 cores/2 processes"
    - Reduce cores
 
 6. **Don't use excessive parallel processes**:
-   - "The solve time does not"
-   - "Scale linearly"
-   - "Having 192 cores doesn't mean"
-   - "192x faster"
    - Optimize cores
 
 7. **Pre-validate mesh before full run**:
-   - "Is there any way to pre-validate"
-   - "That a mesh will not produce"
-   - "A singular stiffness matrix"
    - Pre-validate
 
 ### Community Report
@@ -149,45 +109,24 @@ A meshing setup that worked for 10 months suddenly produces different results. M
 ### Fix
 
 1. **Use extrusion mesh refinements**:
-   - "You can basically replicate"
-   - "The meshes from 10 months ago"
-   - "By using extrusion"
-   - "Mesh refinements"
    - Use extrusion
 
 2. **Check for settings differences**:
-   - "The settings from the latest mesh"
-   - "Are quite different from"
-   - "Some of the earlier meshes"
    - Check settings
 
 3. **Review local element size refinements**:
-   - "Local element size refinements"
-   - "Are finer, there's a larger"
-   - "Gap refinement factor"
    - Review refinements
 
 4. **Check curvature definition**:
-   - "There is a manual curvature"
-   - "Definition for the local"
-   - "Element size/global mesh settings"
    - Check curvature
 
 5. **Use no more than 4 cores for meshing**:
-   - "You will virtually never"
-   - "Need to use more than 4 cores"
-   - "To generate a mesh"
    - Limit cores
 
 6. **Clean dirty CAD model**:
-   - "The poor cells are likely"
-   - "Generated due to a dirty CAD model"
-   - "(see the extremely small faces)"
    - Clean CAD
 
 7. **Redo convergence tests after updates**:
-   - "I may have to do"
-   - "Convergence tests again"
    - Redo tests
    - After updates
 
@@ -208,45 +147,25 @@ The mesh has extremely high non-orthogonality values. Maximum non-orthogonality 
 ### Fix
 
 1. **Keep non-orthogonality below 70**:
-   - "It's recommended to keep"
-   - "The maximum non-orthogonality"
-   - "Below 70"
    - Keep below 70
 
 2. **Use Isovolume filter to locate bad cells**:
-   - "Identify exactly where"
-   - "The bad cells are"
-   - "Using the Isovolume filter"
    - Use Isovolume
 
 3. **Set filter for high non-orthogonality**:
-   - "By setting the filter to show"
-   - "Only the cells with"
-   - "High non-orthogonality"
    - Set filter
 
 4. **Identify geometric features causing problems**:
-   - "Get a better understanding"
-   - "Of which geometric features"
-   - "Are causing the problem"
    - Identify features
 
 5. **Target meshing refinements effectively**:
-   - "This can help you to"
-   - "Target your meshing refinements"
-   - "More effectively"
    - Target refinements
 
 6. **Simplify CAD model**:
-   - "I have tried simplifying"
-   - "The CAD"
    - Simplify CAD
    - Model
 
 7. **Don't proceed with non-orthogonality above 70**:
-   - "I would strongly advise"
-   - "Against proceeding"
-   - "With the simulation"
    - Don't proceed
 
 ### Community Report
@@ -266,44 +185,26 @@ The meshing error "Conformal meshing cannot be generated with overlapping entiti
 ### Fix
 
 1. **Define momentum sources as cell zones**:
-   - "Momentum sources must be"
-   - "Defined as cell zones"
    - Use cell
    - Zones
 
 2. **Check Cell zones documentation**:
-   - "Make sure to have a look"
-   - "At this documentation page"
-   - "Cell zones"
    - Check docs
 
 3. **Enable Physics based meshing**:
-   - "Somehow Physics based meshing"
-   - "Got turned off"
    - Enable physics
    - Based meshing
 
 4. **Perform interference check in CAD**:
-   - "Please perform an interference check"
-   - "With your CAD tool"
-   - "And resolve them"
    - Check interference
 
 5. **Subtract or move intersecting parts**:
-   - "By subtracting or moving"
-   - "Intersecting parts"
-   - "Before importing"
    - Subtract parts
 
 6. **Reduce mesh fineness if too fine**:
-   - "The mesh could not be generated"
-   - "As the mesh sizing is too fine"
    - Reduce fineness
 
 7. **Check Gap refinement factor**:
-   - "The mesh is quite sensitive"
-   - "To the Gap refinement factor"
-   - "(default is 0.05)"
    - Check gap factor
 
 ### Community Report

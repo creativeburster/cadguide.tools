@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/robot-structural-analysis-professional-2026-hotfix-1/td-p/13748656"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/No-convergence-of-nonlinear-problem-while-simple-load-cases-calculation-in-in-Robot-Structural-Analysis.html"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/instability-and-no-convergence-of-nonlinear-problem/td-p/13726480"
 ---
 
 # Robot Structural Analysis 2026 No Convergence of Nonlinear Problem from Tension-Only Bars in Compression, Execution Problem No 3060 from Modal Analysis of Revit-Imported Model, Instability Type 2 from Tension-Only Web Members and Stay Cables, Program Instability When Exporting Printout Tables to MS Word, and Time History Analysis Calculation Error with Elastic Supports: Auxiliary Analysis Type, Direct Modeling in Robot, Tension-Only to Regular Bar Change, CfgUsr Folder Reset, and HotFix 1 Install
@@ -31,34 +28,19 @@ Tension-only bars are designed to resist only tensile forces. When a load case p
 ### Fix
 
 1. **Change analysis type to Auxiliary**:
-   - "Select not convergent load case"
-   - "In Case list"
-   - "Click Change analysis type button"
-   - "Check Auxiliary then OK"
    - Change to Auxiliary
 
 2. **Change tension-only bars to regular bars**:
-   - "No need to assign those diagonals"
-   - "As tension only bars"
-   - "Change them back to regular bars"
-   - "And the model will converge"
    - Change to regular bars
 
 3. **Use truss bars for tension and compression**:
-   - "Keep those diagonals as truss bars"
-   - "But resisting tension and compression"
    - Use truss bars
    - Instead of tension-only
 
 4. **Check bar releases for instability**:
-   - "Change the releases pinned-fixed"
-   - "And fixed-pinned to be blocked"
-   - "On the RX direction (torsion)"
    - Fix releases
 
 5. **Don't use nonlinear analysis with tension-only**:
-   - "You don't need using nonlinear analysis"
-   - "And tension only beams"
    - Avoid nonlinear analysis
    - With tension-only bars
 
@@ -91,14 +73,9 @@ Models imported from Revit may have issues with element definitions, boundary co
 ### Fix
 
 1. **Build model directly in Robot**:
-   - "From my experience, it is much better"
-   - "And less painful to build the model"
-   - "Directly in Robot instead of importing from Revit"
    - Build directly in Robot
 
 2. **Save model without results before sharing**:
-   - "Save the model without results"
-   - "And zip it before sharing"
    - Save without results
    - For sharing
 
@@ -121,8 +98,6 @@ Models imported from Revit may have issues with element definitions, boundary co
    - Of imported model
 
 6. **Watch Structural Analysis IQ series**:
-   - "I would highly recommend"
-   - "Watching this series: Structural Analysis IQ"
    - Watch tutorial series
    - For beginners
 
@@ -149,21 +124,12 @@ A tower frame model with tension-only web members and stay cables shows error me
 ### Fix
 
 1. **Change tension-only diagonals to regular bars**:
-   - "No need to assign those diagonals"
-   - "As tension only bars"
-   - "Change them back to regular bars"
-   - "And the model will converge"
    - Change to regular bars
 
 2. **Block RX direction in releases**:
-   - "Change the releases pinned-fixed"
-   - "And fixed-pinned to be blocked"
-   - "On the RX direction (torsion)"
    - Block RX direction
 
 3. **Use truss bars instead of tension-only**:
-   - "Keep those diagonals as truss bars"
-   - "But resisting tension and compression"
    - Use truss bars
    - For both tension and compression
 
@@ -208,25 +174,15 @@ When exporting a printout composition containing tables to an MS Word document, 
 ### Fix
 
 1. **Install Robot Structural Analysis 2026 HotFix 1**:
-   - "Corrected program instability"
-   - "When printout composition containing tables"
-   - "Was exported to MS Word document"
    - Install HotFix 1
 
 2. **Reset CfgUsr folder**:
-   - "Clear (recreate, keeping the backup copy)"
-   - "The CfgUsr folder"
    - Reset CfgUsr folder
 
 3. **Rename CfgUsr folder**:
-   - "Go to C:\Users\...\AppData\Roaming\"
-   - "Autodesk\Robot Structural Analysis Professional 2026"
-   - "Rename the CfgUsr folder to CfgUsr1"
    - Rename CfgUsr
 
 4. **Restart Robot Structural Analysis**:
-   - "Restart Autodesk Robot"
-   - "Structural Analysis Professional"
    - Restart after
    - Renaming CfgUsr
 
@@ -265,10 +221,6 @@ Time History analysis produces incorrect results for models with elastic support
 ### Fix
 
 1. **Install Robot Structural Analysis 2026 HotFix 1**:
-   - "Corrected calculations of Time History analysis"
-   - "For a model with elastic supports"
-   - "Concerning Hilber-Hughes-Taylor"
-   - "And Newmark-acceleration methods"
    - Install HotFix 1
 
 2. **Verify elastic support properties**:
@@ -296,15 +248,10 @@ Time History analysis produces incorrect results for models with elastic support
    - With HotFix 1
 
 6. **Check spectral analysis base shear**:
-   - "Corrected zero base shear value"
-   - "For Spectral Analysis Seismic load cases"
    - Check spectral analysis
    - Base shear values
 
 7. **Verify load-to-mass conversion**:
-   - "When automatic base shear calculated"
-   - "With disregard density and load to mass"
-   - "Conversion was set"
    - Verify load-to-mass
 
 ### Community Report

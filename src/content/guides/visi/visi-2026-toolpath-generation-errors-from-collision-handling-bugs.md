@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://pmtechnologies.com/blog/whats-new-in-visi-2026-2/"
-  - "https://www.veroprojectgroup.com/en/visi-machining-3d/"
-  - "https://www.veroprojectgroup.com/en/visi-machining-5-axis/"
 ---
 
 # VISI 2026 Toolpath Generation Errors from Collision Handling Bugs, Adaptive Feedrate for 2-Axis Roughing Not Working from Configuration Issue, Global Finishing Options Not Applying Correctly from Strategy Bug, Waterline Machining Incomplete Toolpath from Enhanced Logic Error, and CAD Import Data Exchange Issues from STEP IGES CATIA Format Incompatibility: VISI 2026.2 Update, Adaptive Feedrate Enable, Global Finishing Configuration, Waterline Enhancement, and CAD Import Format Check
@@ -31,9 +28,6 @@ Toolpath generation produces errors related to collision handling. The toolpath 
 ### Fix
 
 1. **Update to VISI 2026.2**:
-   - "VISI 2026.2 is focused on"
-   - "Improving everyday productivity"
-   - "With enhancements across CAD, CAM"
    - Update to 2026.2
 
 2. **Check collision detection settings**:
@@ -43,8 +37,6 @@ Toolpath generation produces errors related to collision handling. The toolpath 
    - Configured
 
 3. **Use kinematic simulation**:
-   - "Realistic kinematic"
-   - "Toolpath simulation"
    - Use simulation
 
 4. **Verify tool and holder definitions**:
@@ -60,8 +52,6 @@ Toolpath generation produces errors related to collision handling. The toolpath 
    - Defined
 
 6. **Use instant collision detection**:
-   - "Instant collision and"
-   - "Interference detection"
    - Use detection
 
 7. **Report persistent collision issues**:
@@ -87,9 +77,6 @@ The Adaptive Feedrate feature for 2-axis roughing doesn't work. The feedrate doe
 ### Fix
 
 1. **Update to VISI 2026.2**:
-   - "Official release of"
-   - "Adaptive Feedrate"
-   - "For 2-axis roughing"
    - Update to 2026.2
 
 2. **Enable Adaptive Feedrate in roughing settings**:
@@ -145,8 +132,6 @@ Global Finishing options don't apply correctly to the toolpath. The finishing st
 ### Fix
 
 1. **Update to VISI 2026.2**:
-   - "Better Global"
-   - "Finishing options"
    - Update to 2026.2
 
 2. **Check Global Finishing settings**:
@@ -202,8 +187,6 @@ Waterline machining produces incomplete toolpaths. The toolpath doesn't cover al
 ### Fix
 
 1. **Update to VISI 2026.2**:
-   - "Waterline"
-   - "Enhancements"
    - Update to 2026.2
 
 2. **Check Waterline settings**:
@@ -259,9 +242,6 @@ Importing CAD files from STEP, IGES, or CATIA formats produces errors or incorre
 ### Fix
 
 1. **Update to VISI 2026.2**:
-   - "VISI 2026.2 includes"
-   - "A large number of fixes"
-   - "Across data exchange"
    - Update to 2026.2
 
 2. **Check CAD format version**:
@@ -283,20 +263,12 @@ Importing CAD files from STEP, IGES, or CATIA formats produces errors or incorre
    - Before import
 
 5. **Use hybrid handling**:
-   - "Hybrid handling of"
-   - "Wireframe, surfaces"
-   - "Solids, and mesh"
    - Use hybrid
 
 6. **Check for clean data handling**:
-   - "Reduced rework"
-   - "Thanks to clean"
-   - "Data handling"
    - Check data
 
 7. **Use integrated CAD tools**:
-   - "Simplified model prep"
-   - "With integrated CAD tools"
    - Use integrated
    - Tools
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://community.trimble.com/discussion/trimble-connect-sync-issues-1"
-  - "https://community.trimble.com/question/trimble-connect-unable-to-load-files-cause-and-fixing"
-  - "https://community.trimble.com/discussion/trimble-sync-manager-not-loading-from-the-cloud"
 ---
 
 # Trimble Connect Sync Failed and Schedule Path Restrictions, Desktop SSL TLS Download Error, Free Account File Upload Lock, and Sync Manager Cloud Not Loading: SYNC-DATA Folder Deletion, Schedule Path Relaxation, Firewall and TLS Configuration, and Sync Manager Update
@@ -31,45 +28,36 @@ Trimble Connect Sync reports "Sync Failed" when trying to sync a project. Syncin
 ### Fix
 
 1. **Delete the hidden SYNC-DATA folder**:
-   - "The only option at the moment is to delete the hidden folder 'SYNC-DATA'"
    - Navigate to `C:\Users\[username]\AppData\Local\Trimble Connect Sync\ApplicationLog`
-   - "You may need to turn hidden items visible in the Windows Explorer"
    - Look for the SYNC-DATA folder
    - Delete it
 
 2. **Resynchronize from scratch**:
-   - "Then the tool simply resynchronizes the entire contents of the cloud locally to the computer"
    - After deleting SYNC-DATA
    - Restart Trimble Connect Sync
    - It will perform a full resynchronization
    - This may take time depending on project size
 
 3. **Update to the latest Sync version**:
-   - "New version of Sync will be released quite soon"
-   - "The current version number is 2.48.13.0"
    - Update to the latest version
    - This may prevent future SYNC-DATA corruption
 
 4. **Check if the problem persists after update**:
-   - "I have updated the version and still have the same situation"
    - If updating doesn't fix it
    - Delete the SYNC-DATA folder
    - And resynchronize
 
 5. **Report the issue with logs**:
-   - "Please contact support connect-support@trimble.com"
    - If the problem persists after deleting SYNC-DATA and updating
    - Contact Trimble Connect support
    - Include the sync logs from the ApplicationLog folder
 
 6. **Submit bug reports through Sync**:
-   - "We submitted the issue through Sync report Bugs"
    - Use the built-in bug reporting
    - https://docs.sync.connect.trimble.com/getting-started/reporting-bugs
    - This sends logs directly to the development team
 
 7. **Be aware of repeated failures**:
-   - "The next time you try to synchronize, the show starts all over again"
    - The SYNC-DATA corruption may recur
    - Keep the deletion steps handy
    - Until a permanent fix is released
@@ -91,9 +79,6 @@ After the Trimble Connect Sync update 2.70.1.0, schedules can no longer be creat
 ### Fix
 
 1. **Wait for the path restriction relaxation**:
-   - "We are taking your feedback and will be relaxing the convoluted restrictions"
-   - "Please give us some time"
-   - "We are consolidating feedback from other customers too"
    - Trimble is working on relaxing the restrictions
 
 2. **Use a single bidirectional schedule**:
@@ -109,14 +94,11 @@ After the Trimble Connect Sync update 2.70.1.0, schedules can no longer be creat
    - This satisfies the path uniqueness requirement
 
 4. **Report the impact to Trimble**:
-   - "What's the point for schedules if we can't use same path?"
    - Report how this affects your workflow
    - Provide feedback through the Sync bug reporting
    - Trimble is consolidating customer feedback
 
 5. **Share sync error logs**:
-   - "On the second issue of seeing multiple errors on file sync"
-   - "Could you please share the logs to our support team"
    - Email connect-support@trimble.com
    - Include the sync logs
 
@@ -161,7 +143,6 @@ Trimble Connect Desktop has stopped syncing — it won't download models, PDFs, 
    - For both 32-bit and 64-bit .NET
 
 3. **Check firewall and proxy settings**:
-   - "Tried to completely disable firewall, but that did not help"
    - While disabling firewall didn't help in this case
    - Check proxy settings
    - Ensure Trimble Connect can access the internet
@@ -174,7 +155,6 @@ Trimble Connect Desktop has stopped syncing — it won't download models, PDFs, 
    - Use the .NET Framework repair tool
 
 5. **Clean uninstall and reinstall**:
-   - "Tried to clean uninstall everything — did not work"
    - While a clean uninstall didn't fix this specific case
    - It's still worth trying with the latest version
    - Use the Trimble Connect uninstall tool
@@ -186,7 +166,6 @@ Trimble Connect Desktop has stopped syncing — it won't download models, PDFs, 
    - That affect cryptographic protocols
 
 7. **Contact Trimble Connect support**:
-   - "Could you please send these details to our Support team"
    - Email connect-support@trimble.com
    - Include the event logger output
    - Include the exact error message
@@ -278,8 +257,6 @@ Trimble Sync Manager is not loading files from the cloud into jobs. The Coordina
 ### Fix
 
 1. **Update to Sync Manager version 2.20.2.0**:
-   - "Are you using the latest version 2.20.2.0 of Trimble Sync Manager?"
-   - "Installation files are available here: https://help.trimblegeospatial.com/SyncManager/en/Installation.htm"
    - Download and install the latest version
    - This connects to the new map service
 
@@ -290,13 +267,11 @@ Trimble Sync Manager is not loading files from the cloud into jobs. The Coordina
    - Restart the computer
 
 3. **Check the Sync Manager log directory**:
-   - "Include a copy of the `C:\Users\[username]\AppData\Local\Trimble\Trimble Sync Manager\` directory"
    - If the problem persists after updating
    - Collect the log files
    - Send to your channel partner or Trimble support
 
 4. **Raise the issue through your channel partner**:
-   - "If you are still experiencing difficulties can you raise the issue through your channel partner"
    - Contact your Trimble dealer
    - They can escalate to Trimble support
    - Include the log directory

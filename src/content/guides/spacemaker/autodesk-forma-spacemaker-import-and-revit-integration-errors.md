@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Georeferenced-DXF-is-imported-in-the-wrong-position-in-Spacemaker.html"
-  - "https://forums.autodesk.com/t5/forma-for-design-forum/autodesk-forma-revit-connectivity/td-p/11856522"
-  - "https://forums.autodesk.com/t5/forma-for-design-forum/weird-terrain-results/td-p/11856225"
 ---
 
 # Autodesk Forma Spacemaker Import and Revit Integration Errors: Georeferenced DXF Imported in Wrong Position from AutoCAD GEO Command Limitation Requiring Manual Coordinate Transform, Revit Connectivity Failure from Side-by-Side Add-in Installation Requiring 0.7.7 Update, Weird Terrain Results in NextGen from Missing Building Pads Requiring Classic Workflow, Project North vs True North Misalignment from Add-in Not Checking Project North Requiring Unlink Before Rotation, and Geolocation Missing from Revit Add-in v0.9.17 Bug Requiring Rollback to v0.9.15
@@ -31,13 +28,11 @@ When importing a DXF file in Spacemaker, the position is incorrect. The DXF file
 ### Fix
 
 1. **Manually transform coordinates**:
-   - "Transform the latitude and longitude of the point to XY coordinates using an online tool"
    - Use epsg.io or similar coordinate converter
    - Input/source: EPSG:4326 WGS 84
    - Output/target: your local coordinate system
 
 2. **Use AutoCAD Map 3D or Civil 3D**:
-   - "Export to AutoCAD Map 3D, and expect the model to position itself automatically"
    - AutoCAD Map 3D properly stores coordinate system info
    - Export from Map 3D with georeferencing
    - Import the georeferenced file into Spacemaker
@@ -90,7 +85,6 @@ Using Autodesk Forma and trying to import the model to Revit 2023. Following the
 ### Fix
 
 1. **Update to add-in version 0.7.7**:
-   - "We have a 0.7.7 update that can be downloaded from either inside of Spacemaker Next-Gen or directly from this link"
    - Download from `https://app.spacemaker.ai/api/revit/installer/latest`
    - Install the updated add-in
    - Restart Revit
@@ -102,31 +96,25 @@ Using Autodesk Forma and trying to import the model to Revit 2023. Following the
    - This avoids the side-by-side conflict
 
 3. **Check the correct tab**:
-   - "Revit Addin Installs from Spacemaker 'Classic' are located in a Spacemaker tab"
-   - "Revit Addin Installs from Spacemaker 'Next Gen' are located in the Massing & Site tab"
    - Look in the correct tab for the import function
    - The Classic tab may not be visible in newer Revit versions
 
 4. **Turn on all categories**:
-   - "I turned on all the categories, all the worksets"
    - In the Load Forma Proposal dialog
    - Check all element categories
    - Check all worksets
 
 5. **Check for error messages**:
-   - "Most of the time I get an error message in revit saying that it has not worked"
    - Note the exact error message
    - Report to Autodesk Forma team
    - Check the Forma forum for known issues
 
 6. **Use a new empty Revit project**:
-   - "We recommend syncing the Forma proposal into a new, empty Revit project"
    - Create a new Revit project
    - Load the Forma proposal into it
    - Then link the new project into your existing project
 
 7. **Verify Revit version compatibility**:
-   - "Revit versions 2022, 2023, 2024, and 2025 currently supported"
    - Ensure your Revit version is supported
    - Update Revit if necessary
    - Use the matching add-in version
@@ -148,13 +136,11 @@ Developing a model in Toronto, Canada. In Spacemaker Classic, the terrain looks 
 ### Fix
 
 1. **Use Spacemaker Classic for terrain**:
-   - "Building pads are only available in Spacemaker Classic"
    - Use Classic for terrain modification
    - Add building pads to flatten areas
    - Then switch to NextGen for analysis
 
 2. **Use building pads in Classic**:
-   - "Just found out about building pads, problem solved"
    - In Classic, add building pads to flatten terrain
    - Set the pad elevation to the desired level
    - This creates level areas for buildings
@@ -166,13 +152,11 @@ Developing a model in Toronto, Canada. In Spacemaker Classic, the terrain looks 
    - This provides controlled terrain data
 
 4. **Use flat terrain option**:
-   - "Is there a way to make everything level?"
    - In some versions, you can disable terrain
    - Use a flat site for conceptual design
    - Add terrain later in Revit
 
 5. **Wait for NextGen terrain support**:
-   - "Spacemaker does not have yet support to terrain modification in the Next-Gen version"
    - Terrain modification may be added in future updates
    - Check the release notes for new features
    - Use Classic in the meantime
@@ -206,44 +190,37 @@ Importing a Forma proposal into Revit. The toposolid is not aligned with true no
 ### Fix
 
 1. **Load Forma data before setting project north**:
-   - "If you just want to bring in the Forma data for context"
    - Load the Forma proposal first
    - Then set project north
    - This avoids the misalignment
 
 2. **Unlink the proposal before rotating**:
-   - "Load the Forma data, Unlink the proposal, and then rotate project north"
    - Load Forma data
    - Unlink the proposal from Forma
    - Then rotate project north
    - This prevents update issues
 
 3. **Fix satellite image rotation**:
-   - "If you chose to bring in the satellite image, you'll need to edit the material to change the rotation"
    - Edit the toposolid material
    - Adjust the rotation of the satellite image
    - Align it with the terrain
 
 4. **Use a new empty Revit project**:
-   - "We recommend syncing the Forma proposal into a new, empty Revit project"
    - Create a new Revit project
    - Load Forma data into it
    - Link the new project into your existing project
 
 5. **Don't update after changing project north**:
-   - "If you then use Update to send the data back to Forma, it will convert everything to meshes that are rotated"
    - After changing project north
    - Don't use Update to send data back to Forma
    - This would corrupt the geometry
 
 6. **The Forma import should always align with True North**:
-   - "The Forma import should always be aligned with True North, not Project North"
    - This is a known limitation
    - Vote for the feature request
    - Use the workaround above
 
 7. **Use true north for GIS data**:
-   - "I can't think of a single scenario where GIS-based data shouldn't be aligned to True North"
    - Always align GIS data with true north
    - Use project north only for sheet layout
    - Don't mix the two
@@ -265,14 +242,12 @@ After a recent add-in update, Forma imports to Revit no longer include any CRS (
 ### Fix
 
 1. **Roll back to add-in v0.9.15**:
-   - "We have rolled it back, and you can download the former version, 0.9.15, through the in-app appstore in the extension panel"
    - Open Forma
    - Go to the Extensions panel
    - Download v0.9.15 from the in-app appstore
    - Install the older version
 
 2. **Confirm the fix**:
-   - "That solved it. I got the plugin rolled back to 0.9.15 overnight and I've managed to re-import the proposal this morning with geolocation information"
    - After installing v0.9.15
    - Re-import the Forma proposal
    - Verify geolocation data is present
@@ -290,7 +265,6 @@ After a recent add-in update, Forma imports to Revit no longer include any CRS (
    - Install when the fix is available
 
 5. **Report the issue**:
-   - "This is a bit of a deal breaker for us"
    - Confirm the issue on the forum
    - Provide your workflow details
    - Autodesk prioritizes based on user impact

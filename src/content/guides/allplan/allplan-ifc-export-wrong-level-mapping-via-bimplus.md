@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://campus.allplan.com/forum/topics/topic/topics/bimplus-user-forum/exporting-allplan-models-in-ifc-format-does-not-work.html"
-  - "https://connect.allplan.com/forum/topics/topic/topics/notifications/problem-with-slabs-conversion-to-allplan-2025.html"
-  - "https://campus.allplan.com/at/forum/themen/topic/topics/cad-allgemein-1/ifc-2x3-export-fehlermeldung-bei-viega-tga-software.html"
 ---
 
 # Allplan IFC Export Wrong Level Mapping via bimplus, Slab Conversion Loses Associated References in 2025, IFC 2x3 Dedicated Exporter Bugs, IFC Import Ignored Elements from Defective Data, and Multiple Building Instance Error: 2025-0-3 Hotfix, Data Healer, and Standard IFC Export
@@ -31,14 +28,11 @@ When exporting an Allplan project to IFC and re-importing it into Allplan, the l
 ### Fix
 
 1. **Use direct Allplan IFC export instead of bimplus**:
-   - "IFC export and direct re-import into Allplan: levels correspond correctly"
    - Use Allplan's built-in IFC export
    - Instead of the bimplus pipeline
    - The direct export preserves level mapping correctly
 
 2. **Verify project structure is IFC compliant**:
-   - "The example above is a project whose structure is not IFC compliant"
-   - "I have tried a new one from scratch, conforming to IFC"
    - Ensure the Allplan project follows IFC structure rules
    - With proper building storey assignments
 
@@ -61,8 +55,6 @@ When exporting an Allplan project to IFC and re-importing it into Allplan, the l
    - Check for updates
 
 6. **Contact Allplan support**:
-   - "To find out, what causes the Issues in your case we need the original IFC Data"
-   - "Is it possible that you send reduced Data to our support?"
    - If the issue persists, contact Allplan support
    - Provide the IFC file and Allplan project
 
@@ -89,27 +81,15 @@ When upgrading a project from a previous Allplan version to Allplan 2025, slabs 
 ### Fix
 
 1. **Wait for 2025-0-3 or use it for new conversions**:
-   - "2025-0-3 version would already contain fixed conversion"
-   - "If you save your drawing files with slabs to the 2024.zip package"
-   - "And reimport it back, replacing the same drawing files, slabs would be fixed"
    - Release date: January 22, 2025
 
-2. **Wait for 2025-0-4 for automatic fix of already-converted slabs**:
-   - "A special hotfix 2025-0-4 version will be created sooner than usual"
-   - "This version will allow already upgraded slabs to be modified automatically"
-   - "Additionally, we will add a fix to the data healer function"
-   - "Which will enable the slabs to recover the lost associated references"
+2. **Wait for 2025-0-4 for automatic fix of already-converted slabs**.
 
-3. **Correct it manually (Option 1)**:
-   - "To rectify such a faulty slab, you need to add at least one new attribute"
-   - "To the hyper slab object"
-   - "After this step, the slab will function correctly"
-   - "However, the original association is still lost and must be recreated"
+3. **Correct it manually (Option 1)**.
 
 4. **Don't convert until 2025-0-3 is available**:
    - If you haven't converted yet
    - Wait until 2025-0-3 is released
-   - "The projects converted by 2025-0-3 and further would not be affected by this issue"
    - This is the safest approach
 
 5. **Backup before conversion**:
@@ -121,8 +101,6 @@ When upgrading a project from a previous Allplan version to Allplan 2025, slabs 
 6. **Use the data healer**:
    - After 2025-0-4 is released
    - Run the data healer on converted projects
-   - "We will add a fix to the data healer function"
-   - "Which will enable the slabs to recover the lost associated references"
 
 7. **Recreate lost associations manually**:
    - If you need to work before the fix is available
@@ -147,7 +125,6 @@ When exporting IFC 2x3 using the dedicated 2x3 exporter in Allplan, the resultin
 ### Fix
 
 1. **Use the standard IFC export instead of the dedicated 2x3 exporter**:
-   - "Bist du auf IFC Daten Exportieren gegangen und hast dann 2x3 statt 4 als Dateiformat ausgewählt?"
    - Use "IFC Data Export" and select IFC 2x3 as the format
    - Instead of the dedicated 2x3 exporter
    - The standard export path is more reliable
@@ -159,19 +136,15 @@ When exporting IFC 2x3 using the dedicated 2x3 exporter in Allplan, the resultin
    - With better Allplan support
 
 3. **Check for multiple building instances**:
-   - "Manche Programme haben auch Schwierigkeiten mehr als ein Bauwerk pro IFC einzulesen"
    - Some programs have difficulty reading more than one building per IFC
    - Export only one building per IFC file
    - Select only the relevant building section
 
 4. **Separate demolition and new construction**:
-   - "Bei einem Projekt Abbruch/Neubau 2 Modelle übergeben werden sollten"
-   - "Um Kollisionen zu vermeiden. Ein Abbruchmodell und ein Neubaumodell"
    - For renovation projects, export two separate IFC files
    - One for demolition, one for new construction
 
 5. **Hide demolition planning before export**:
-   - "Die ich per Darstellungsfavorit nicht sichtbar geschaltet habe"
    - Use display favorites to hide demolition planning
    - Before exporting the new construction IFC
    - This prevents confusion in downstream software
@@ -205,8 +178,6 @@ When importing an IFC model into Allplan, the import report lists elements under
 ### Fix
 
 1. **Check the import report for ignored elements**:
-   - "After import I can see import report, which includes information about all imported elements"
-   - "There is category 'Ignored elements' where Allplan lists elements which weren't imported"
    - Review the list of ignored elements
    - Identify the element types and IDs
 
@@ -235,14 +206,10 @@ When importing an IFC model into Allplan, the import report lists elements under
    - That may cause import issues
 
 6. **Send reduced data to Allplan support**:
-   - "Is it possible that you send reduced Data to our support?"
-   - "To find out, what causes the Issues in your case we need the original IFC Data"
    - If you can't fix the IFC file
    - Send it to Allplan support for analysis
 
 7. **Import in Allplan 2024 vs 2025**:
-   - "Today I tried the same IFC model in AllPlan 2024 and no error occurred"
-   - "Both doors were imported correctly"
    - Try importing in a different Allplan version
    - Newer versions may have better import tolerance
 
@@ -263,19 +230,14 @@ When exporting an IFC 2x3 file from Allplan for a TGA (building services) planne
 ### Fix
 
 1. **Export only one building section**:
-   - "Ich habe auch nur einen Bautabschnitt ausgewählt"
-   - "I have selected only one construction section"
    - Select only the relevant building section for export
    - Exclude other sections that create multiple building instances
 
 2. **Separate demolition and new construction**:
-   - "Bei einem Projekt Abbruch/Neubau 2 Modelle übergeben werden sollten"
-   - "Ein Abbruchmodell und ein Neubaumodell"
    - Export two separate IFC files
    - One for demolition, one for new construction
 
 3. **Use display favorites to exclude demolition**:
-   - "Die ich per Darstellungsfavorit nicht sichtbar geschaltet habe"
    - Create a display favorite that hides all demolition elements
    - Use this favorite during IFC export
    - Ensure demolition elements are excluded from the export
@@ -287,7 +249,6 @@ When exporting an IFC 2x3 file from Allplan for a TGA (building services) planne
    - This prevents multiple building instances
 
 5. **Use the standard IFC export, not the dedicated 2x3 exporter**:
-   - "Der dezidierte 2x3 Export macht leider oft Probleme"
    - The dedicated 2x3 exporter has known bugs
    - Use "IFC Data Export" with 2x3 format
    - Instead of the dedicated exporter
@@ -299,7 +260,6 @@ When exporting an IFC 2x3 file from Allplan for a TGA (building services) planne
    - To verify the structure
 
 7. **Use the Umbaukategorie attribute**:
-   - "Sämtliche Abbruchkomponenten sollten in der Regel ganz einfach über das Attribut Umbaukategorie bzw. Pset_Status gegliedert werden können"
    - Use the renovation category attribute
    - To classify demolition vs new construction
    - Export only elements with the correct status

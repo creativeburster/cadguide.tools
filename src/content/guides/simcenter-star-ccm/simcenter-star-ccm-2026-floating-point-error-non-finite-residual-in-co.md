@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://community.sw.siemens.com/s/article/Mesh-Requirements-for-good-convergence"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000jCadxKAC/original-surface-is-selfintersecting-mesh-error"
 ---
 
 # Simcenter STAR-CCM+ 2026 Floating Point Error Non-Finite Residual in Continuity from Segregated Flow Solver, Self-Intersecting Surface Mesh Error from Vertex with Too Many Edges, High Aspect Ratio Cells from Prism Layer Causing Coupled Solver Divergence, Volume Change Less Than 10e-2 at Prism-to-Core Transition, and Mapped Faces Mesh Generation Failed from Mixed Mesh: Field Function Denominator Check, Vertex Split, Prism Layer Parameter Adjustment, Surface Growth Rate Reduction, and Interface Density Increase
@@ -31,45 +28,26 @@ During a multiphase simulation, the error "A floating point error has occurred. 
 ### Fix
 
 1. **Check field function denominators**:
-   - "Check expressions and Field Functions"
-   - "Verify that none of their denominators"
-   - "Become 0 or are very close to 0"
    - Check denominators
 
 2. **Check boundary and initial conditions**:
-   - "Check Boundary Conditions, Initial Conditions"
-   - "And Reference Values"
-   - "(especially gravity vector direction)"
    - Check conditions
 
 3. **Don't use supersonic with Segregated Solver**:
-   - "Ensure you're not using"
-   - "A velocity inlet with supersonic speed"
-   - "With the Segregated Solver"
    - Check solver compatibility
 
 4. **Check mesh for bad cells**:
-   - "Check the mesh for bad cells"
-   - "(especially those with negative volume)"
    - Check for
    - Negative volume cells
 
 5. **Check time step for transient**:
-   - "If your simulation is transient"
-   - "Check if the time step isn't too large"
    - Reduce time step
    - If too large
 
 6. **Monitor residual plots**:
-   - "Monitor simulation convergence"
-   - "On the residual and monitor plots"
-   - "Very rapid growth of residuals"
-   - "Indicates diverging"
    - Monitor residuals
 
 7. **Check simulation log for warnings**:
-   - "Check the simulation log"
-   - "For warnings"
    - Check log
    - For warnings
 
@@ -90,45 +68,28 @@ When meshing a complex geometry, the error "Original surface is self-intersectin
 ### Fix
 
 1. **Check error coordinates**:
-   - "The error provided the coordinates"
-   - "Of some vertices"
    - Check coordinates
    - In error message
 
 2. **Use Surface Repair tool**:
-   - "I checked them using"
-   - "The Surface Repair tool"
-   - "And split some of them"
    - Use Surface Repair
 
 3. **Split vertices with too many edges**:
-   - "Split some of them"
-   - "And it seems to be working now"
    - Split problematic
    - Vertices
 
 4. **Refine mesh at sharp edges**:
-   - "Refine the mesh"
-   - "At the sharp edge"
    - Refine at
    - Sharp edges
 
 5. **Clear and relaunch mesh**:
-   - "I cleared all the mesh"
-   - "And relaunched it again"
    - Clear and
    - Relaunch mesh
 
 6. **Check for imprint contacts**:
-   - "You have parts that share an interface"
-   - "And there is no contact created beforehand"
-   - "An imprint to create the contacts"
    - Create imprint contacts
 
 7. **Fine mesh for coarse intersection**:
-   - "The surface mesh created is very coarse"
-   - "Which causes the intersection"
-   - "Fine mesh should solve the problem"
    - Use finer mesh
 
 ### Community Report
@@ -148,26 +109,16 @@ The coupled solver diverges during simulation. The divergence is caused by high 
 ### Fix
 
 1. **Keep aspect ratio below 50-75 for coupled solver**:
-   - "When using the coupled solver"
-   - "You must avoid high aspect ratio cells"
-   - "(higher than 50-75)"
    - Keep below 50-75
 
 2. **Choose prism layer parameters carefully**:
-   - "In order to avoid high aspect ratio cells"
-   - "Choose carefully the prism layer parameters"
    - Adjust prism
    - Layer parameters
 
 3. **Use Near Core Layer Aspect Ratio**:
-   - "Use the Near Core Layer Aspect Ratio option"
-   - "In the Prism layer mesher model"
-   - "Set the value to for example 0.5"
    - Set NCLAR to 0.5
 
 4. **Use Maximum Core/Prism Transition Ratio**:
-   - "For Trimmer mesher"
-   - "Use the option Maximum Core/Prism Transition Ratio"
    - Use transition
      - Ratio option
 
@@ -206,45 +157,27 @@ The mesh has volume change less than 10e-2 at the transition between prism layer
 ### Fix
 
 1. **Avoid volume change less than 10e-2**:
-   - "Try to avoid having"
-   - "A volume change less than 10e-2"
    - Keep above 10e-2
 
 2. **Set mesh sizes carefully on boundaries**:
-   - "If you set mesh sizes that are too different"
-   - "On boundaries that are close one to another"
-   - "You would have to change the default values"
    - Set sizes carefully
 
 3. **Reduce Surface Growth Rate**:
-   - "Reduce the Surface Growth Rate"
-   - "To improve the volume change"
-   - "And the mesh quality"
    - Reduce growth rate
 
 4. **Use Near Core Layer Aspect Ratio**:
-   - "Use the Near Core Layer Aspect Ratio option"
-   - "Set the value to for example 0.5"
    - Set NCLAR
    - To 0.5
 
 5. **Use Maximum Core/Prism Transition Ratio**:
-   - "For Trimmer mesher"
-   - "Use Maximum Core/Prism Transition Ratio"
    - Use transition
    - Ratio
 
 6. **Set Mesh Density for smooth transition**:
-   - "Change the default values for Mesh Density"
-   - "In order to get a smooth transition"
    - Adjust Mesh
    - Density
 
 7. **Check mesh quality after generation**:
-   - "After the mesh generation"
-   - "The mesh must be checked"
-   - "And improved according to"
-   - "Quality metrics"
    - Check mesh quality
 
 ### Community Report
@@ -264,20 +197,13 @@ The error "Creation of new nodes is not allowed on MAPPED faces. Mesh generation
 ### Fix
 
 1. **Change to non-mixed mesh**:
-   - "Change the mesh so"
-   - "It is not a mixed mesh"
    - Use same
    - Mesh generator
 
 2. **Increase mesh density at interface**:
-   - "Increase the density of the mesh"
-   - "At the interface between"
-   - "The mapped and automatic mesh"
    - Increase density
 
 3. **Change mesh algorithm**:
-   - "You can also try"
-   - "To change the mesh algorithm"
    - Try different
    - Mesh algorithm
 
@@ -294,13 +220,10 @@ The error "Creation of new nodes is not allowed on MAPPED faces. Mesh generation
    - Before meshing
 
 6. **Use pyramid insertion**:
-   - "The algorithm to repair non-conformities"
-   - "By inserting pyramids"
    - Verify pyramid
    - Insertion works
 
 7. **Use thinner meshes as suggested**:
-   - "Try again with thinner meshes"
    - Use thinner
    - Meshes at
    - Interface

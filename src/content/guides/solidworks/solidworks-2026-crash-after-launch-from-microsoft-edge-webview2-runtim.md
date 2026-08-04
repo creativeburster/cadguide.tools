@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.solidworks.com/support/general-hotfixes"
-  - "https://support.hawkridgesys.com/hc/en-us/articles/44396298148877-SOLIDWORKS-Design-Crashes-Immediately-after-Launch-BR10000422063"
-  - "https://help.solidworks.com/2026/english/SolidWorks/sldworks/c_graphics_adapters_drivers.htm"
 ---
 
 # SOLIDWORKS 2026 Crash After Launch from Microsoft Edge WebView2 Runtime 146 Update, Generic Crash When Opening Drawing and Changing Detail View Scale, Mate References Preview Dialog Low Performance and Component Movement Scattered, Visualize 2026 SP1.1 Crashes on File Exit, and Pack and Go Search Replace Filename Not Working with 3DEXPERIENCE Add-in: HotFix QA00000445516 Install, SP2.1 Update, Mate Preview Disable, Visualize Update, and Add-in Disable
@@ -31,40 +28,23 @@ SOLIDWORKS 2026 crashes immediately after launch with "SOLIDWORKS 2026 has encou
 ### Fix
 
 1. **Install HotFix QA00000445516**:
-   - "The HotFix is provided in QA00000445516"
-   - "Hotfix for user-license versions"
-   - "Of SOLIDWORKS Design"
    - Install HotFix
 
-2. **Download and install HotFix**:
-   - "Download the hotfix file attachment"
-   - "Double-click the hotfix file"
-   - "In the WinZip Self-Extractor dialog"
-   - "Click Unzip then OK"
+2. **Download and install HotFix**.
 
 3. **Restart Windows before installing**:
-   - "Restart Windows"
    - Before installing
    - The HotFix
    - For clean state
 
 4. **Undo previous workarounds**:
-   - "Undo any previous workaround(s)"
-   - "You applied or attempted"
    - Before installing
    - The HotFix
 
 5. **Rename SWK3DCompassAddin.dll as workaround**:
-   - "Rename SWK3DCompassAddin.dll"
-   - "To SWK3DCompassAddin.dll.bak"
-   - "In C:\Program Files\Dassault Systemes\"
-   - "SOLIDWORKS 3DEXPERIENCE R2026x\win_b64\code\bin\SWXDesktopAddins"
    - Rename as workaround
 
 6. **Update to 3DEXPERIENCE R2026x HotFix 1.8**:
-   - "The fix has been delivered with"
-   - "3DEXPERIENCE R2026x HotFix 1.8"
-   - "For SOLIDWORKS Design app"
    - Update to HF 1.8
 
 7. **Check WebView2 Runtime version**:
@@ -90,7 +70,6 @@ A generic crash or hang occurs when opening a drawing and changing the view scal
 ### Fix
 
 1. **Update to SP2.1**:
-   - "2026 Release SP2.1"
    - Check if the fix
    - Is included in
    - SP2.1
@@ -178,16 +157,10 @@ Mate References with mate preview dialog generate low performance. Components' m
    - Operations
 
 6. **Check graphics performance settings**:
-   - "Clear Enhanced graphics performance"
-   - "(requires SOLIDWORKS Design restart)"
    - Check graphics
    - Performance settings
 
 7. **Use Software OpenGL for testing**:
-   - "Start SOLIDWORKS Design"
-   - "By using Software OpenGL"
-   - "This disables the graphics adapter"
-   - "Hardware accelerator"
    - Use Software OpenGL
 
 ### Community Report
@@ -271,7 +244,6 @@ Search and Replace of Filename does not work in Pack and Go when run from SOLIDW
    - Pack and Go
 
 2. **Update to latest SP**:
-   - "2026 Release SP2.1"
    - Check if the fix
    - Is included in
    - SP2.1

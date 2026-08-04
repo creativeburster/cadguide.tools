@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
-  - "https://3dswym.3dexperience.3ds.com/post/catia-creative-design-styling-user-community/is-it-possible-to-export-from-icem-to-alias-catia-and-not-die-trying_KNfZiAhKSLWB9WsV9SmvFw"
-  - "https://3dswym.3dexperience.3ds.com/post/catia-creative-design-styling-user-community/icem-surf-2025-modify-patch-trim-is-really-poor_5B6nrAKWTzu7fgXv5Qloxw"
-  - "https://discourse.mcneel.com/t/odd-issue-with-single-span-surface/138950"
 ---
 
 # ICEM Surf Export and Surface Modeling Errors: Export to Alias and CATIA V5 from EDF Name Shortening and CATIA V5 Export Window Error Requiring Format Workarounds, Modify Patch Trim Poor Performance in 2025.2 from Extrapolate Behavior Change Requiring Tangent Extrapolation, Rational Surface Weight Mismatch from Fillet Creation Requiring Weight Reset to 1, Alias 2017 CatPart Import COS from Trimmed Surfaces Requiring Untrim and Retrim, and ICEM Surf 2025.2 Bug Fixes in Trim Face RM and IO Requiring Update
@@ -31,13 +28,10 @@ The EDF format truncates list names to fit its naming convention limitations. Th
 ### Fix
 
 1. **Use EDF format with name adjustment**:
-   - "The only format that's worked for us has been EDF"
-   - "But the problem is that the names of the different lists that group the surfaces are modified (it shortens them)"
    - After export, manually rename the lists in Alias
    - Or use shorter list names in ICEM Surf before export
 
 2. **Try CATIA V5 export with different settings**:
-   - "When I try to export as Catia v5, oops! This window appears"
    - Check the CATIA V5 export settings
    - Try different export options (version, precision)
    - Verify the CATIA V5 export license is available
@@ -85,19 +79,16 @@ ICEM Surf 2025.2 Modify Patch - Trim function is very poor compared to 2021.2. I
 ### Fix
 
 1. **Enable Tangent extrapolation**:
-   - "In 2025.2 now, it refuses to do it until maybe Tangent extrapolation is turned on"
    - In the Modify Patch - Trim dialog
    - Enable Tangent extrapolation
    - This allows the trim to work with slightly incomplete curves
 
 2. **Don't use Extrapolate with Tangent/Curvature**:
-   - "If I turn this on, the patch now seems to disappear into outer space!"
    - Don't enable the Extrapolate option when Tangent or Curvature is on
    - Use only one extrapolation method at a time
    - The combination causes the patch to disappear
 
 3. **Use 2021.2 for critical trim operations**:
-   - "I am getting many complaints from users about how poor it is compared to 2021.2"
    - If 2025.2 trim is too problematic
    - Keep 2021.2 installed for critical work
    - Use 2025.2 for other tasks
@@ -115,8 +106,6 @@ ICEM Surf 2025.2 Modify Patch - Trim function is very poor compared to 2021.2. I
    - The behavior is the same as the new Modify Patch - Trim
 
 6. **Report to 3DS**:
-   - "I don't know what you have done to the Modify Patch - Trim function"
-   - "But I am getting many complaints from users"
    - Report the regression on the 3DS Community
    - Request restoration of 2021.2 behavior or a fix
 
@@ -137,33 +126,23 @@ Matching Surface A into Surface B in Rhino — control points from Surface A get
 ### Fix
 
 1. **Reset all CV weights to 1**:
-   - "Select all CVs of this surface and set weight to 1"
-   - "Check again if export-import behaves better"
    - In Rhino, select all control points
    - Use SetWeight command to set all to 1
    - This makes the surface non-rational
 
 2. **Avoid rational surfaces for precision modeling**:
-   - "In general for precision modeling, rational surfaces (some or all weights not equal to 1) are best avoided"
-   - "An exception is for special cases such as spheres, cylinders, etc where non-unity weights are required to exactly represent conics"
    - Check weights after any fillet or conic operation
    - Reset to 1 if exact matching is needed
 
 3. **Use G2 blend instead of circular arc fillet**:
-   - "FilletSrf in V7 has an option to use a G2 (curvature continuity) blend surface rather than a circular arc surface"
-   - "The G2 blend surface will be non-rational, single span of degree 5 with 6 control points"
    - This avoids rational weights entirely
    - But the result is not a constant radius fillet
 
 4. **Rebuild fillet to non-rational**:
-   - "A circular arc fillet can be rebuilt to a non-rational degree 3 surface using RebuildUV in the V direction"
-   - "Note that the result may be multi-span in the V direction"
    - Use RebuildUV after creating the fillet
    - This removes rational weights
 
 5. **Use degree 6 for arc fillet accuracy**:
-   - "When I worked in the Class-A dept of an Auto manufacturer, we surfaced in single span only"
-   - "Tangential arc fillets were degree 6 (order 7) because it was deemed to be the least number of control points but the most accurate to an arc within manufacturing tolerance"
    - Use degree 6 single span for arc approximation
    - This is non-rational and accurate
 
@@ -190,13 +169,11 @@ Importing CatPart files saved from the latest ICEM Surf into Alias 2017. Getting
 ### Fix
 
 1. **Use Alias 2016 for ICEM Surf CatPart import**:
-   - "This does not happen in 2016"
    - If Alias 2016 is available, use it for importing ICEM Surf CatParts
    - Import in 2016, then open in 2017
    - This avoids the translator issue
 
 2. **Untrim surfaces before export**:
-   - "Untrim the surface and you'll see it"
    - In ICEM Surf, untrim the surfaces before exporting
    - Export untrimmed surfaces
    - Retrim in Alias after import
@@ -214,8 +191,6 @@ Importing CatPart files saved from the latest ICEM Surf into Alias 2017. Getting
    - Check if COS are created correctly
 
 5. **Report to Autodesk**:
-   - "You might try reporting the problem to Autodesk"
-   - "I don't know if this is a bug or a feature, but it is annoying"
    - Report the translator behavior change
    - Provide sample files for testing
 
@@ -242,13 +217,11 @@ ICEM Surf 2025.2 includes bug fixes for Trim, Face, RM, and I/O areas. These are
 ### Fix
 
 1. **Update to ICEM Surf 2025.2**:
-   - "ICEM Surf 2025.2 is ready for download since last weekend"
    - Go to https://software.3ds.com/
    - Navigate to CATIA section and choose ICEM Surf
    - Download and install 2025.2
 
 2. **Check release notes for specific fixes**:
-   - "Some bug fixes in the area of Trim, Face, RM, i/o"
    - Review the 2025.2 release notes
    - Verify your specific issues are fixed
    - Test after updating

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://society.solibri.com/topic/3306/bcf-live-connecter-not-importing-issues"
-  - "https://society.solibri.com/topic/3320/bcf-live-connector-bugs"
-  - "https://helpcenter.bimcollab.com/en/articles/351296-synchronizing-issues-to-your-bimcollab-space"
 ---
 
 # BIMcollab BCF Live Connector Not Importing Issues, Comment Jumping and Saving Mid-Sentence on Synchronized Issues, Delete Key Accidentally Deleting Issues, Revit BCF Manager Crash in Family Environment and on Invalid Milestones, and Navisworks Bulk Import Issues Not Auto-Syncing: Performance Fix 23.5.1, June 2025 Beta, Auto-Sync Configuration, and Revit Bundle Update
@@ -31,13 +28,11 @@ The BCF Live Connector appears to be working — no error messages, no freezing 
 ### Fix
 
 1. **Update to Solibri 23.5.1 or later**:
-   - "This would be the performance issue solved in today's release (23.5.1)"
    - Install the latest Solibri update
    - Which fixes the BCF Live Connector performance issue
    - For large rule result sets
 
 2. **Be patient with large imports**:
-   - "Note that it might still be slow, in my case it takes about 2 minutes"
    - Even after the fix, large imports take time
    - Wait at least 2 minutes
    - Before concluding the import failed
@@ -49,22 +44,14 @@ The BCF Live Connector appears to be working — no error messages, no freezing 
    - Before attempting to import issues
 
 4. **Check if Solibri is freezing**:
-   - "If Solibri is freezing it doesn't show at all"
-   - "Actually it seems to be working fine"
-   - "But no new issues show up in the live connector"
    - The issue is silent — no freeze, just no results
 
 5. **Try manual issue creation**:
-   - "Yes I can manually add issues"
    - If manual creation works but import doesn't
    - The issue is specifically with the import function
    - Not with the connector itself
 
-6. **Send log files to support**:
-   - "Please send a support request"
-   - "It would be good to include a screen recording of the behaviour"
-   - "Along with the log files and model (if possible)"
-   - "Logs can be found here: https://help.solibri.com/hc/en-us/articles/21911035161111"
+6. **Send log files to support**.
 
 7. **Use a fresh Solibri file**:
    - If the issue persists with an old file
@@ -89,12 +76,10 @@ When commenting on synchronized issues in the BCF Live Connector, comments are o
 ### Fix
 
 1. **Update to Solibri 25.6.0 or later**:
-   - "The fix for comments jumping up and saving mid-sentence is now available in 25.6.0"
    - Install the latest version
    - That includes the comment jumping fix
 
 2. **Turn off automatic synchronization**:
-   - "Automatic synchronization is turned off"
    - In the synchronization menu
    - Turn off auto-sync
    - To reduce premature comment saves
@@ -106,7 +91,6 @@ When commenting on synchronized issues in the BCF Live Connector, comments are o
    - To avoid mid-sentence saves
 
 4. **Use the beta version**:
-   - "Beta is out, happy testing!"
    - If the stable release is not yet available
    - Use the beta version
    - That includes the fix
@@ -118,8 +102,6 @@ When commenting on synchronized issues in the BCF Live Connector, comments are o
    - Focus on one issue at a time
 
 6. **Report persistent issues**:
-   - "I reported this more than one year ago"
-   - "It is super frustrating to see that nothing happens in this case"
    - If the fix doesn't resolve the issue
    - Report to Solibri support with details
 
@@ -146,7 +128,6 @@ When using the Delete key in the Description field or 3D window of the BCF Live 
 ### Fix
 
 1. **Update to the latest version**:
-   - "The deletion is also interesting, and will try to get this reproduced in house for further investigation"
    - The Solibri team is investigating this issue
    - Check for updates that may include a fix
    - For the focus management issue
@@ -170,7 +151,6 @@ When using the Delete key in the Description field or 3D window of the BCF Live 
    - Use right-click context menu instead
 
 5. **Turn off auto-sync to prevent deletion propagation**:
-   - "Automatic synchronization is turned off"
    - If auto-sync is off
    - Deleted issues may not be propagated to the server
    - And can potentially be recovered
@@ -182,7 +162,6 @@ When using the Delete key in the Description field or 3D window of the BCF Live 
    - If sync hadn't occurred before deletion
 
 7. **Report the issue with video**:
-   - "I am attaching videos where I have reconstructed the problems"
    - Record a video of the deletion behavior
    - Submit to Solibri support
    - To help them reproduce and fix the issue
@@ -204,9 +183,6 @@ Multiple crash bugs in the BCF Manager for Revit: (1) "Fixed a crash that occurr
 ### Fix
 
 1. **Update to the latest BCF Manager for Revit**:
-   - "Fixed a crash that occurred in offline mode for the Revit family environment"
-   - "Fixed a crash when synchronizing issues with invalid milestones"
-   - "Fixed a SelectionUpdate event crash on Revit 2023 and 2024"
    - Install the latest version from the Autodesk App Store
 
 2. **Avoid using BCF Manager in family environment**:
@@ -216,13 +192,11 @@ Multiple crash bugs in the BCF Manager for Revit: (1) "Fixed a crash that occurr
    - Exit the family editor first
 
 3. **Validate milestones before syncing**:
-   - "Fixed a crash when synchronizing issues with invalid milestones"
    - Check that all milestones referenced by issues
    - Are valid and exist in the BIMcollab space
    - Before synchronizing
 
 4. **Use the new Revit bundle installer**:
-   - "New version of Revit bundle installer 2023-2026 is released"
    - Use the latest installer
    - That supports Revit 2023 through 2026
    - From the Autodesk App Store
@@ -240,7 +214,6 @@ Multiple crash bugs in the BCF Manager for Revit: (1) "Fixed a crash that occurr
    - Include log files
 
 7. **Use online mode instead of offline**:
-   - "Fixed a crash that occurred in offline mode"
    - If using offline mode causes crashes
    - Switch to online mode
    - By connecting to BIMcollab Nexus
@@ -262,27 +235,19 @@ Issues generated via bulk import from Navisworks clashes are not automatically s
 ### Fix
 
 1. **Manually synchronize bulk-imported issues**:
-   - "Issues generated via bulk import from Navisworks Clashes are not automatically synchronized"
    - Click the 'synchronize project' button
    - At the top of the menu
    - To manually sync bulk-imported issues
 
 2. **Understand auto-sync behavior**:
-   - "Information is automatically submitted to BIMcollab space when an Issue is manually created or edited"
-   - "Information is automatically retrieved from BIMcollab spaces when an Issue is selected"
    - Auto-sync only applies to manual creation/editing
    - Not to bulk import
 
 3. **Turn on auto-sync for other issues**:
-   - "To turn on/off the Auto-sync function, open the synchronization menu"
-   - "By default Auto-sync is turned off"
    - Enable auto-sync for manually created issues
    - But remember bulk import still requires manual sync
 
 4. **Identify waiting-to-sync issues**:
-   - "New or edited Issues which are not yet synchronized"
-   - "Can be recognized by the 'waiting to sync' icon"
-   - "In the Issue list or on an Issue tile"
    - Look for this icon to identify unsynced issues
 
 5. **Sync after bulk import**:
@@ -292,8 +257,6 @@ Issues generated via bulk import from Navisworks clashes are not automatically s
    - As it won't happen automatically
 
 6. **Use BIMcollab Nexus for online workflow**:
-   - "It is advised to always use the BCF Manager with an online workflow"
-   - "By connecting to BIMcollab Nexus"
    - Using the online workflow
    - Ensures issues are properly synced
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://help.optitex.com/1382687/Content/Whats_New/Main_Release_Notes.htm"
-  - "https://help.optitex.com/1382687/Content/Optitex_3D/GPU-Simulation-Important-Inforamtion.htm"
-  - "https://help.optitex.com/1382687/Content/FAQ/3D_Questions.htm"
 ---
 
 # Optitex PDS Crash and 3D Simulation Errors: PDS Crash with Outer Notch on Internal Piece from Notch Validation Bug Requiring Update to O26, View Fabric Cannot Be Turned Off and Pieces Disappear After 3DDI Export from NVIDIA Settings Requiring GPU Configuration, Stitches Not Visible in 3D Window from Stitching Issue on Half Piece Requiring Stitch Rebuild, PDS Crash When Bending Field Empty in HQR with Texture from Missing Validation Requiring Bending Value, and OAFF File Load Hangs PDS When Not Logged Into O-Cloud Link Requiring Authentication Before Load
@@ -31,7 +28,6 @@ The notch validation code in PDS doesn't properly handle notches placed on inter
 ### Fix
 
 1. **Update to Optitex O/26.0**:
-   - "PDS crash with outer notch on an internal piece | Fixed | O/26.0"
    - The fix is included in Optitex 26.0
    - Update to the latest version
    - This is the primary fix
@@ -83,7 +79,6 @@ Two related issues: (1) View Fabric (pattern displayed on the desk) cannot be tu
 ### Fix
 
 1. **Configure NVIDIA Control Panel settings**:
-   - "The solution is in the Nvidia settings"
    - Open NVIDIA Control Panel
    - Navigate to Manage 3D Settings > Program Settings
    - Add PDS.exe to the list
@@ -102,13 +97,11 @@ Two related issues: (1) View Fabric (pattern displayed on the desk) cannot be tu
    - Use single display mode
 
 4. **Update NVIDIA driver**:
-   - "Make sure your graphic card is updated. If not, upgrade it."
    - Download the latest NVIDIA driver
    - Perform a clean install (not express install)
    - This removes old settings that may conflict
 
 5. **Check PDS is using the correct GPU**:
-   - "Go to Help > About and verify the name of the graphic card"
    - Ensure PDS shows the NVIDIA card
    - Not the Intel integrated graphics
    - If wrong, configure in NVIDIA Control Panel
@@ -142,8 +135,6 @@ Stitches are not visible in the 3D Window. The stitches exist in the 2D pattern 
 ### Fix
 
 1. **Update to Optitex O/26.0**:
-   - "Stitching issue resulting in different simulation on half piece | Fixed | O/26.0"
-   - "Stitches are not visible in 3D Window | Fixed | O/26.0"
    - Both issues are fixed in version 26.0
    - Update to the latest version
 
@@ -246,7 +237,6 @@ Loading an OAFF file (Optitex Avatar Framework) while not logged in to O-Cloud L
 ### Fix
 
 1. **Log into O-Cloud Link before loading OAFF**:
-   - "Make sure you are logged in before attempting to load an oaff file"
    - Open O-Cloud Link
    - Log in with your Optitex account
    - Then load the OAFF file in PDS

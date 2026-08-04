@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-november-2025-released/"
-  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-2024-r2-1-released/"
-  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-may-2025-released/"
 ---
 
 # ShipConstructor 2026 Model Integrity Issues During Complex Edits from Long Working Sessions, Catalog Inconsistencies from Intermittent Corruption, Concurrency Handling Issues for Large Teams from WorkShare Conflicts, Profile Nest Locking for Upstream Change Control, and Plate Nest DXF Export Multi-Layer Configuration for Double-Sided Marking: R3 Stability Update, Catalog Consistency Fix, Concurrency Improvement, Nest Lock Enable, and DXF Layer Configuration
@@ -31,10 +28,6 @@ Model integrity becomes inconsistent during complex edits. The issues occur duri
 ### Fix
 
 1. **Update to ShipConstructor 2026 R3**:
-   - "More consistent model integrity"
-   - "During complex edits"
-   - "Reduced crash rate"
-   - "During long working sessions"
    - Update to R3
 
 2. **Save regularly during long sessions**:
@@ -90,8 +83,6 @@ Catalog data becomes intermittently inconsistent. The catalog corruption affects
 ### Fix
 
 1. **Update to ShipConstructor 2026 R3**:
-   - "Fixed intermittent"
-   - "Catalog inconsistencies"
    - Update to R3
 
 2. **Check catalog integrity regularly**:
@@ -147,15 +138,9 @@ Large teams experience concurrency handling issues during WorkShare operations. 
 ### Fix
 
 1. **Update to ShipConstructor 2026 R3**:
-   - "Improved concurrency"
-   - "Handling for"
-   - "Large teams"
    - Update to R3
 
 2. **Use SQL Server 2022 for large teams**:
-   - "SQL Server 2022 CU 4+"
-   - "SQL Enterprise 2019+"
-   - "For WorkShare Teams"
    - Use proper SQL
 
 3. **Coordinate team editing to avoid conflicts**:
@@ -177,10 +162,6 @@ Large teams experience concurrency handling issues during WorkShare operations. 
    - Conflicts
 
 6. **Limit concurrent users on Express SQL**:
-   - "Express editions are"
-   - "Suitable for projects"
-   - "With 5 or fewer"
-   - "Users only"
    - Limit users
 
 7. **Report persistent concurrency issues**:
@@ -206,27 +187,15 @@ Changes introduced upstream of the nesting process aren't properly tracked. User
 ### Fix
 
 1. **Enable Profile Nest Locking**:
-   - "Profile Nest Locking"
-   - "Allows for precise control"
-   - "Over changes introduced upstream"
    - Enable locking
 
 2. **Track necessary adjustments before fabrication**:
-   - "Enabling users to track"
-   - "Necessary adjustments in nests"
-   - "Before fabrication"
    - Track adjustments
 
 3. **Update to ShipConstructor 2024 R2.1 or later**:
-   - "ShipConstructor 2024 R2.1"
-   - "Brings enhancements to production"
-   - "And project management"
    - Update version
 
 4. **Use Catalog Management for tracking**:
-   - "Catalog Management"
-   - "Ensuring precise control"
-   - "And effective tracking"
    - Use catalog
 
 5. **Review nests after upstream changes**:
@@ -236,9 +205,6 @@ Changes introduced upstream of the nesting process aren't properly tracked. User
    - Before fabrication
 
 6. **Use WorkShare Graphic Compare for changes**:
-   - "WorkShare Graphic Compare"
-   - "Supports efficiency"
-   - "In handling engineering changes"
    - Use Graphic Compare
 
 7. **Lock nests before fabrication**:
@@ -264,46 +230,27 @@ The DXF export for Plate Nest doesn't include multiple layers for double-sided m
 ### Fix
 
 1. **Update to ShipConstructor 2024 R2.1 or later**:
-   - "The DXF export"
-   - "For Plate Nest now includes"
-   - "Multiple layers"
    - Update version
 
 2. **Configure near-side and far-side layers**:
-   - "Allowing for differentiation"
-   - "Of near-side and"
-   - "Far-side information"
    - Configure layers
 
 3. **Separate mark text and mark lines**:
-   - "Including mark text"
-   - "And mark lines"
    - Separate text
    - And lines
 
 4. **Use specific layer for Datum line**:
-   - "A specific layer"
-   - "For Datum line"
-   - "Information"
    - Use Datum layer
 
 5. **Configure for double-sided marking**:
-   - "This facilitates"
-   - "Double-sided marking"
    - Configure for
    - Double-sided
 
 6. **Use varied marking/etching approaches**:
-   - "And varied marking"
-   - "Etching approaches"
    - Use different
    - Approaches
 
 7. **Integrate with third-party nesting solutions**:
-   - "Makes it easier for"
-   - "The production team to take"
-   - "Advantage of leading third-party"
-   - "Nesting solutions"
    - Integrate third-party
 
 ### Community Report

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://moi3d.com/forum/lmessages.php?msg=11678.1&webtag=MOI"
-  - "https://moi3d.com/forum/lmessages.php?msg=11381.1&webtag=MOI"
-  - "https://moi3d.com/forum/lmessages.php?msg=11653.1&webtag=MOI"
 ---
 
 # MoI3D NURBS Import and Export Errors: STEP Export Incompatibility with Tube Bender Software from Sweep Surface Structure Requiring Split Closed Surfaces Setting, STEP Import Trim Boundary Errors from Seam Crossing Requiring V5 Beta or CAD Exchanger Conversion, Solid Import Naked Edges from Alibre Export Quality Requiring Manual Repair or SAT Format, FBX Import Not Available from Polygon-Only Format Requiring SubD Import or Alternative Workflow, and STP Bevel Corner Errors from Trim Boundary on Closed Surface Requiring File Analysis and Improvement
@@ -31,8 +28,6 @@ Using MoI to create parts files for a tube bender. 95% of files go through witho
 ### Fix
 
 1. **Set ExportSplitClosedSurfaces in moi.ini**:
-   - "Set the option in moi so it will be treating closed surfaces similar to SolidWorks"
-   - "The moi.ini setting [STEP] ExportSplitClosedSurfaces=y"
    - This splits closed surfaces (like tube ends) into separate faces
    - Similar to SolidWorks "Split periodic faces" setting
 
@@ -43,7 +38,6 @@ Using MoI to create parts files for a tube bender. 95% of files go through witho
    - Test if the tube bender accepts the result
 
 3. **Draw circle at start of curve for Sweep**:
-   - "I have also tried drawing in the circle at the start of the curve to get Sweep"
    - Create a circle profile at the path start
    - Use Sweep command instead of PIPE script
    - This may produce different surface structure
@@ -62,7 +56,6 @@ Using MoI to create parts files for a tube bender. 95% of files go through witho
    - This produces analytic surfaces
 
 6. **Check curve direction consistency**:
-   - "I make sure that when I create the path curve the direction or the start of the curve is all the same way"
    - Ensure all path curves have consistent direction
    - This may affect how the sweep generates end surfaces
    - Use Dir command to check and fix curve directions
@@ -84,14 +77,10 @@ Importing STEP files into MoI. Some geometries look very different from what is 
 ### Fix
 
 1. **Use MoI v5 beta**:
-   - "There have been improvements in v5 for that"
-   - "I'd recommend testing with the current v5 beta"
    - Download from https://moi3d.com/beta.htm
    - The STEP import is improved in v5
 
 2. **Use CAD Exchanger for conversion**:
-   - "Another thing you can try is to use CAD Exchanger to convert from STEP to .3DM"
-   - "Then import the .3DM into MoI"
    - CAD Exchanger handles seam crossing differently
    - The .3DM format preserves MoI's expected structure
 
@@ -108,13 +97,11 @@ Importing STEP files into MoI. Some geometries look very different from what is 
    - Use the correct geometry as reference
 
 5. **Request file analysis from MoI developer**:
-   - "If you can send me the file at moi@moi3d.com I might be able to figure out how to improve the import"
    - Send the problematic STEP file
    - The developer can analyze and improve the import
    - But NDA restrictions may prevent this
 
 6. **Check STEP file version**:
-   - "There are different STEP-file variations"
    - Check if the file is AP203, AP214, or AP242
    - Different versions may import differently
    - Convert to a different STEP version if possible
@@ -136,27 +123,18 @@ Created a design in Alibre as a solid. When importing into MoI as SAT or IGES, t
 ### Fix
 
 1. **Check Alibre export options**:
-   - "Maybe there is some type of tolerance setting that has it be 'Light' in Alibre"
-   - "But doesn't allow the surface join to translate out"
    - Check Alibre's export tolerance settings
    - Tighten the tolerance for better geometry
 
 2. **Export as SAT from Alibre**:
-   - "Since Alibre is ACIS based, the best export out should be the SAT format"
    - Use SAT format instead of STEP or IGES
    - SAT is Alibre's native kernel format
    - This should preserve geometry better
 
 3. **Separate and re-export from Alibre**:
-   - "Try separating everything in Alibre"
-   - "Exporting all separate surfaces"
-   - "See if it can be joined into a solid outside"
    - Join the surfaces in MoI or Rhino
 
 4. **Fix naked edges in MoI**:
-   - "I cleaned a bunch of stuff to verify the model works"
-   - "Due to my lack of patience to work on it for 3 or 4 hours"
-   - "I heavily altered a few areas to speed it up"
    - Use MoI's Join command to close naked edges
    - Reconstruct areas with micro edges
 
@@ -190,8 +168,6 @@ Trying to import an FBX file into MoI3D. The FBX import option is missing or doe
 ### Fix
 
 1. **Use SubD import for FBX**:
-   - "The sub-d importer is on the side pane under SubD > Create > 'From file'"
-   - "That can process .obj or .fbx files that contain sub-d control cages"
    - If the FBX contains subdivision surface control cages
    - Use SubD > Create > From file
 
@@ -202,13 +178,11 @@ Trying to import an FBX file into MoI3D. The FBX import option is missing or doe
    - This converts polygons to NURBS
 
 3. **Use OBJ import via SubD**:
-   - "You can write out to an .obj file but cannot read .obj format into MoI"
    - Same as FBX â€” OBJ is polygon format
    - But SubD import can process OBJ with sub-d control cages
    - Use SubD > Create > From file for OBJ
 
 4. **Use SVG import (V5)**:
-   - "Thanks for adding SVG import/export"
    - V5 adds SVG import/export
    - For 2D vector graphics, use SVG
    - This is a vector format, not polygon
@@ -242,8 +216,6 @@ Using MoI to convert STP files to FBX. Occasionally run into errors on models â€
 ### Fix
 
 1. **Send the file to MoI developer**:
-   - "Is it possible for you to e-mail that .stp file at moi@moi3d.com?"
-   - "It's something that I want to try and improve"
    - The developer actively works on improving STEP import
    - Send the problematic STP file
 
@@ -254,8 +226,6 @@ Using MoI to convert STP files to FBX. Occasionally run into errors on models â€
    - Report if it persists
 
 3. **Check STEP file version**:
-   - "There are different STEP-file variations"
-   - "One should know about the originating CAD-system"
    - Check if AP203, AP214, or AP242
    - Convert to a different version if possible
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.emastercam.com/forums/topic/114671-mastercam-2025-recognizing-post-but-mastercam-2026-is-not/"
-  - "https://www.practicalmachinist.com/forum/threads/mastercam-post-with-no-is-or-js.446960/"
-  - "https://www.practicalmachinist.com/forum/threads/mastercam-ignoring-updates-to-tool-numbers-or-f-s.433712/"
 ---
 
 # Mastercam Post Processing and Parameter Errors: G-Code Missing I and J Arcs from Linearize Toolpath or Spline Geometry Requiring Uncheck Linearize and Simplify Splines, 4+1 Posting Full 5-Axis Simultaneous Moves from Clearance Blend Spline Requiring Retract to Clearance Plane, Tool Numbers and Feeds Speeds Ignored from Common Parameters Bug Requiring Update 2 or Edit Tool Menu, Post Not Recognized in 2026 from Machine Definition Mismatch Requiring Updated Control Definition, and Rotating Tombstone Hole Locations Incorrect in G-Code from Coordinate System Issue Requiring Plane Verification
@@ -31,38 +28,29 @@ Two possible causes: (1) "Linearize toolpath" is checked on the Arc Filter page 
 ### Fix
 
 1. **Uncheck "Linearize toolpath"**:
-   - "If this is a simple 3 axis path, un-check 'linearize toolpath' on the arc filter page in the thread mill path"
    - In the operation parameters
    - Go to Arc Filter page
    - Uncheck "Linearize toolpath"
    - Regenerate and post
 
 2. **Simplify splines to arcs and lines**:
-   - "Make sure your wireframe are not splines"
-   - "If they are, try to simplify spline to arcs and lines"
    - Use AutoCurve or Simplify Spline
    - Then reselect wireframe and regenerate
 
 3. **Check Control Definition arc support**:
-   - "Make sure your control definition is still allowing arcs"
-   - "Control Definition > Arc/Helix support"
    - Verify arc output is enabled
    - Check maximum arc radius settings
 
 4. **Use Top/Plane/Plane instead of 4/5 axis**:
-   - "If this is a multi-axis path, it will always spit out linear moves with no comp"
-   - "What I do in this case is to create a plane and use Top/plane/plane instead of 4/5 axis"
    - This forces 3-axis output with arcs
    - Instead of multi-axis linearized output
 
 5. **Check for "Break arcs into lines" option**:
-   - "You need to look for an option like 'break arcs into lines' and turn it off"
    - In the post or operation settings
    - This option converts arcs to linear moves
    - Disable it
 
 6. **Verify with a simple contour**:
-   - "I posted a simple contour and it picked up the Is and Js"
    - Test with a known arc contour
    - If it posts correctly, the issue is operation-specific
    - Compare settings between working and non-working operations
@@ -84,7 +72,6 @@ Running a 4+1 machine (not yet upgraded to full 5-axis). Mastercam generates bea
 ### Fix
 
 1. **Change linking parameters to Retract to Clearance Plane**:
-   - "If that's causing an alarm, change that to 'retract to clearance plane'"
    - In the operation parameters
    - Go to Linking Parameters
    - Change "Clearance Blend Spline" to "Retract to Clearance Plane"
@@ -109,13 +96,11 @@ Running a 4+1 machine (not yet upgraded to full 5-axis). Mastercam generates bea
    - Contact your reseller for a proper 4+1 post
 
 5. **Verify in machine simulation**:
-   - "In my simulations (simulating using my external post) the tilt axis acts the way it should"
    - Simulation may not match posted output
    - Always verify posted G-code
    - Use NC simulation with the actual post
 
 6. **Share the Mastercam file for diagnosis**:
-   - "Might be best if you create a Z2G file"
    - Create a Z2Go file for support
    - Share with your reseller or eMastercam forum
    - They can identify the parameter causing the issue
@@ -137,25 +122,20 @@ Changing tool numbers or feeds and speeds in Mastercam 2025. After changing para
 ### Fix
 
 1. **Update to Mastercam 2025 Update 2 or later**:
-   - "I was running an out of date version. I was told it was fixed in Mcam2025 update 2"
-   - "Software is up to date now, and the bug is gone"
    - Install the latest update
    - This is the primary fix
 
 2. **Click green check immediately after changes**:
-   - "If you change parameters and then immediately click the green check and exit out of the operation... then the changes will take"
    - Don't click around within the operation after making changes
    - Make changes → immediately click OK
    - This prevents the revert bug
 
 3. **Use Edit Tool menu instead**:
-   - "I don't renumber a single tool this way. I do it from the edit tool menu"
    - Use the Edit Tool menu to change tool numbers
    - This avoids the common parameters bug
    - Changes persist through the Edit Tool menu
 
 4. **Avoid common parameters sync**:
-   - "Both issues are related to the 'common parameters' function not properly updating all operations"
    - Disable common parameters sync if possible
    - Or be aware that changes may revert
    - Always verify after making changes
@@ -167,7 +147,6 @@ Changing tool numbers or feeds and speeds in Mastercam 2025. After changing para
    - Post only after confirming values are correct
 
 6. **Report persistent bugs**:
-   - "I did end up making a post on their forum"
    - Report on eMastercam forums
    - Contact your reseller
    - Include screenshots or video of the bug
@@ -189,25 +168,21 @@ Mastercam 2026 changed the machine definition and control definition system. Pos
 ### Fix
 
 1. **Get updated post from reseller**:
-   - "From your reseller"
    - Contact your Mastercam reseller
    - Request an updated post for 2026
    - The reseller provides compatible machine and control definitions
 
 2. **Update machine and control definitions**:
-   - "The techno geeks sent me updated files I had to dump into Mastercam"
    - Get updated machine definition (.mcam-mmd) files
    - Get updated control definition (.mcam-cd) files
    - Install them in the correct Mastercam directories
 
 3. **Check serial number compatibility**:
-   - "Each of which needs to see a valid serial number of the correct vintage to run"
    - Ensure your license serial number is valid for 2026
    - Contact reseller if serial number issues
    - The definitions check the serial number
 
 4. **Don't mix version files**:
-   - "Even when you've bought a license, you can fiddle with it for weeks before everything works"
    - Use only 2026-compatible files
    - Don't mix 2025 and 2026 definition files
    - Clean install of definitions
@@ -253,13 +228,11 @@ The coordinate system or plane definition doesn't properly account for the tombs
    - Verify work offset output
 
 3. **Use the correct plane for rotation**:
-   - "Create a plane and use Top/plane/plane instead of 4/5 axis"
    - Define a plane that matches the tombstone face
    - Use this plane for the operation
    - This ensures correct coordinate output
 
 4. **Verify in NC simulation**:
-   - "Rotating a part on a tombstone and the hole locations are not correct in G-Code but look fine in simulation"
    - Use NC simulation with the actual post
    - This shows what the G-code actually produces
    - Compare with Mastercam's internal simulation

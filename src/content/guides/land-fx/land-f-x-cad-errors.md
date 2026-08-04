@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.landfx.com/kb/autocad-fxcad/errors/7586-fatal-error-2025.html"
-  - "https://www.landfx.com/kb/autocad-fxcad/performance/623-cad-crash-freeze"
-  - "https://www.landfx.com/kb/planting-issues/errors.html"
 ---
 
 # Land F/X CAD Errors: Fatal Error on Opening F/X CAD 2025 from AutoCAD 2025 Bug Requiring Updater, CAD Crashes or Freezes from Web Dialog and Cloud Data Issues Requiring Troubleshooting, Planting Errors from No Function Definition LOOKUP and Unhandled Exception Requiring Updates, Xref Images Not Loading from Double-Click Open Bug Requiring Manual Xref Reload, and Plant Data Mismatch from Extended Data Corruption Requiring Verify Labels
@@ -31,14 +28,11 @@ After a fresh install of F/X CAD 2025, opening the software shows a Fatal Error 
 ### Fix
 
 1. **Download and run the F/X CAD 2025 Updater**:
-   - "You can resolve this error quickly by downloading and running the F/X CAD 2025 Updater"
    - Go to the Land F/X website
    - Download the F/X CAD 2025 Updater
    - Run the updater after fresh install
 
 2. **Run the Updater on all fresh installations**:
-   - "Take care to run the Updater on any fresh version of F/X CAD 2025 installed in your office"
-   - "It's a crucial part of the installation steps"
    - Include the updater in your office's installation checklist
    - Run on every new machine
 
@@ -71,38 +65,31 @@ Multiple causes: (1) Web-based dialogs fail to load due to browser component iss
 ### Fix
 
 1. **For web-based dialog crashes**:
-   - "AutoCAD or F/X CAD crashes or freezes as soon as you open a Web-based Land F/X dialog box"
    - Update AutoCAD to the latest version
    - Check Internet Explorer/Edge WebView components
    - Run AutoCAD as administrator
 
 2. **For Cloud Data import freezes**:
-   - "AutoCAD freezes or crashes when you attempt to import plants, Concept Plants, Reference Notes, details, or irrigation equipment from a project or template — and your office has Cloud Data"
    - Check internet connection stability
    - Try importing smaller batches
    - Contact Land F/X support if Cloud Data server is slow
 
 3. **For schedule placement freezes**:
-   - "CAD freezes or lags after you place a schedule (Plant, RefNote, Irrigation, etc.) or other block"
    - Check block file integrity
    - Purge and audit the drawing
    - Reduce block complexity
 
 4. **For invisible dialog boxes**:
-   - "You opened a Land F/X or AutoCAD tool and are unable to see the appropriate dialog box, and CAD crashed or froze"
-   - "You can stop it from freezing by pressing the ESC key"
    - Reset AutoCAD display settings
    - Check multi-monitor configuration
    - Reset Land F/X preferences
 
 5. **For Plant Outlines or Exclude Shrubs freeze**:
-   - "AutoCAD froze or began to run slowly after you tried using either our Plant Outlines or Exclude Shrubs tool"
    - Update Land F/X to the latest version
    - Check drawing complexity
    - Simplify plant data
 
 6. **For 2026 frequent crashes**:
-   - "AutoCAD or F/X CAD 2026 is crashing, freezing, or locking up frequently"
    - Check the Known Issues by CAD Year Version page
    - Apply all available updates
    - Contact Land F/X support
@@ -153,7 +140,6 @@ Error: "No Function Definition: LOOKUP" when placing or regenerating a Plant Sch
    - Or upgrade AutoCAD to the version that created the file
 
 6. **For AutoCAD Variable Settings Rejected: CLAYER**:
-   - "Running an Irrigation or Plant Schedule"
    - Reset AutoCAD system variables
    - Check for locked layers
    - Use RECOVER to fix the drawing
@@ -224,7 +210,6 @@ Not all plants in the drawing match the project data. Plant data mismatch error.
 1. **Run Verify Labels**:
    - Use the Verify Labels tool
    - This checks and repairs plant data mismatches
-   - "Plant Labels Disappear After Running Verify Labels or Editing a Plant in the Plant Manager"
    - If labels disappear, re-run Verify Labels
 
 2. **Reconnect to the correct project**:
@@ -235,24 +220,20 @@ Not all plants in the drawing match the project data. Plant data mismatch error.
 
 3. **Fix Error Adding Extended Data to Entity**:
    - Check for locked layers
-   - "Unable to Update Object. Please Ensure Applicable Layers are Not Locked"
    - Unlock all Land F/X related layers
    - Retry placing or editing plants
 
 4. **Fix INVALID Error**:
-   - "Attempting to Place a Plant or Other Block"
    - Check the block file integrity
    - Verify the block exists in the Land F/X block library
    - Reinstall block files if missing
 
 5. **Fix Error Updating Data, Data Too Long for Symbol**:
-   - "Adding or Placing Plants"
    - The plant symbol name is too long
    - Shorten the symbol name in the Plant Manager
    - Retry placing the plant
 
 6. **Fix Error: Not a Plant, or Empty Plant Leader**:
-   - "Labeling Plants"
    - The leader is not pointing to a valid plant
    - Delete the invalid leader
    - Recreate the label for the correct plant

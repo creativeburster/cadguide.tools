@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://github.com/cwapi3d/cwapi3dpython/issues/255"
-  - "https://kb.cadwork.ch/en/news/manual/1819/export-of-machine-data"
-  - "https://kb.cadwork.ch/en/news/manual/1871/export-of-machine-data"
 ---
 
 # CADwork Shop Drawing Export Piece by Piece Crash via Python API, BTLx 2.3 Beta Version Compatibility with CAM Systems, BTL Joiner Incomplete Machine Calculation for Roof Framing Parts, DXF CNC Export Losing Attributes and Relationships vs BTLx, and NC-Hops Export BTLx Version Selection in 2025: API Crash Fix Update, CAM Version Verification, Operation Check Flags, BTLx Migration, and Machine Menu Navigation
@@ -31,13 +28,11 @@ The Python API function `export_piece_by_piece_with_clipboard` has a stability i
 ### Fix
 
 1. **Update to the latest CADwork V2025**:
-   - "Issue is fixed - please update cadwork 3d v2025"
    - The crash has been fixed in a later V2025 update
    - Update to version 258 or later
    - Check for updates in CADwork
 
 2. **Add progress bar manually**:
-   - "If you want to show some progress bar, you have to set it up yourself"
    - Use the built-in progress bar:
    ```python
    import utility_controller as uc
@@ -49,8 +44,6 @@ The Python API function `export_piece_by_piece_with_clipboard` has a stability i
    - Or use PyQt for custom progress bars
 
 3. **Use manual export as workaround**:
-   - "Like, for example, it does when you use the manual export"
-   - "Shop drawings - piece by piece - export command"
    - If the API continues to crash
    - Use the manual export command instead
 
@@ -95,8 +88,6 @@ After upgrading to CADwork 2025, BTLx 2.3 is available as a new export version. 
 ### Fix
 
 1. **Verify CAM system supports BTLx 2.3**:
-   - "Please check whether your CAM software or machine used for further processing supports this version"
-   - "Before exporting in this new BTL version"
    - Contact your CAM software provider
    - To verify BTLx 2.3 support
 
@@ -106,11 +97,7 @@ After upgrading to CADwork 2025, BTLx 2.3 is available as a new export version. 
    - For export until CAM support is available
    - The earlier versions are stable
 
-3. **Check BTLx 2.3 new features**:
-   - "The attributes for fasteners (nails, screws, cramps) have been completed"
-   - "So that it is only with this version that a differentiation between fasteners makes sense"
-   - "One new feature of the BTLx 2.3 interface is the 'PatternContourType'"
-   - "Which can be used to describe acoustic surfaces very effectively"
+3. **Check BTLx 2.3 new features**.
 
 4. **Use BTLx 2.3 for fastener differentiation**:
    - If your CAM system supports BTLx 2.3
@@ -119,21 +106,15 @@ After upgrading to CADwork 2025, BTLx 2.3 is available as a new export version. 
    - Or acoustic surface descriptions
 
 5. **Check design2machine.com for updates**:
-   - "Will be officially released on www.design2machine.com in the near future"
    - Monitor the design2machine website
    - For the official BTLx 2.3 release
    - And CAM system compatibility updates
 
 6. **Use process groups for X-Fix fasteners**:
-   - "Until the necessary information has been exchanged between them and the CAM software manufacturers"
-   - "Process groups can be used in cadwork (e.g. for X-Fix fasteners)"
    - Use process groups as a workaround
    - For fasteners not yet supported in BTLx
 
 7. **Download the free BTL viewer**:
-   - "A free BTL viewer is available there for download"
-   - "Supporting both BTL and BTLx formats"
-   - "And serving as a reference for manufacturers of writing (CAD) and reading (CAM) software"
    - Use the BTL viewer to verify exports
 
 ### Community Report
@@ -159,16 +140,11 @@ When using the BTL Joiner machine export (Machine > BTL General > BTL Joiner), p
    - For parts with complex operations
 
 2. **Check operation check flags**:
-   - "Flagged as faulty by the operation check"
    - Review the operation check output
    - To identify which operations
    - Are not supported by BTL Joiner
 
-3. **Understand BTL Joiner limitations**:
-   - "The configuration is sufficient for classic 3-axis operations"
-   - "Groove/rebate, angle cuts, rip cuts, laps, and drillings"
-   - "Rotated at most about the C-axis"
-   - "As commonly found in furniture making"
+3. **Understand BTL Joiner limitations**.
 
 4. **Use BTL Joiner only for furniture parts**:
    - BTL Joiner is licensed separately
@@ -177,9 +153,6 @@ When using the BTL Joiner machine export (Machine > BTL General > BTL Joiner), p
    - With simple 3-axis operations
 
 5. **Recognize Birdsmouth limitation**:
-   - "The birdsmouth is not recognized because the Birdsmouth operation is not permitted"
-   - "The birdsmouth could be recognized as a lap"
-   - "But that would be inclined and therefore not allowed"
    - Use full BTL export for parts with Birdsmouth
 
 6. **Verify operation compatibility before export**:
@@ -189,8 +162,6 @@ When using the BTL Joiner machine export (Machine > BTL General > BTL Joiner), p
    - For BTL Joiner
 
 7. **Use BTLx process code display in 2026**:
-   - "In version 2026, this BTLx process code is displayed in the single-bar check"
-   - "When a BTLx output format is selected"
    - The keyword and orientation information
    - Helps identify unsupported operations
 
@@ -216,33 +187,19 @@ When exporting machine data via DXF format for CNC, important information is los
    - For all CNC machine data exchange
    - To preserve attributes and relationships
 
-2. **Use BTLx for laser projection**:
-   - "From the BTLx file, components, fastening rows or points, milling/sawing operations"
-   - "Markings, labels, etc. can be selected separately in each processing layer"
-   - "In the grouped view, you can laser all window headers with one selection"
-   - "And all staple rows with another"
+2. **Use BTLx for laser projection**.
 
 3. **Use multilingual part names**:
-   - "The labels are in English because the BTLx file was exported from cadwork"
-   - "Using the option Settings > Language > Multilingual for part names in English"
    - Use multilingual part names
    - For international production teams
 
-4. **Use BTLx for panel prefab machines**:
-   - "The same BTLx file can be used for production on a panel prefab machine"
-   - "A mix of manual and automatic processing is also possible"
-   - "The structure and sheathing are fastened by the prefab machine"
-   - "And then the positions of the battens are projected with the laser"
+4. **Use BTLx for panel prefab machines**.
 
 5. **Check if machine supports BTLx**:
-   - "During trade fairs or purchase negotiations for production-related products"
-   - "Ask about BTLx import or export"
    - Verify that your CNC machine
    - Supports BTLx import
 
 6. **Use BTL viewer for verification**:
-   - "A free BTL viewer is available for download"
-   - "Supporting both BTL and BTLx formats"
    - Use the BTL viewer
    - To verify exported data before sending to production
 
@@ -269,31 +226,24 @@ In CADwork 2025, the NC-Hops export has moved to a different menu location. User
 ### Fix
 
 1. **Find NC-Hops in the new menu location**:
-   - "The menu items under 3 are exports to CAM systems controlled via BTL/BTLx"
-   - "New for Version 25, the NC hops export is now listed in this section"
    - Look under Export > Machine > CAM systems section
    - Not under machine manufacturers
 
 2. **Select the correct BTLx version**:
-   - "Two BTLx interface versions can be selected in Version 2025"
-   - "For controlling the NC-Hops CAM system"
    - Check which BTLx version
    - Your NC-Hops CAM system supports
 
 3. **Find Kuka export under Others**:
-   - "The Kuka export has been moved under Others"
    - If looking for Kuka export
    - Navigate to Export > Machine > Others
    - It has been moved from its previous location
 
 4. **Use function keys for quick access**:
-   - "Use the function keys to quickly switch to the machine menu"
    - Use function keys
    - To quickly navigate to the machine export menu
    - Instead of navigating through menus
 
 5. **Compare V30 and V2025 menu layouts**:
-   - "Machine menu in version 30 (left) and in version 2025 (right)"
    - The menu structure has changed significantly
    - Compare the old and new layouts
    - To find familiar exports

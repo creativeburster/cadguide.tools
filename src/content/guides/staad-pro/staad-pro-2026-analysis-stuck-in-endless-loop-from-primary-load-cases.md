@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://bentleysystems.service-now.com/community?id=kb_article_view&sys_kb_id=ed74ed01870d8b10e25dbb35dabb35bf"
-  - "https://bentleysystems.service-now.com/community?id=kb_article_view&sysparm_article=KB0115901"
-  - "https://docs.bentley.com/LiveContent/web/STAAD.Pro-v2025.0.0/Help/en/topics/Commands_TechRef/r-stpst_Direct_Analysis.html"
 ---
 
 # STAAD Pro 2026 Analysis Stuck in Endless Loop from Primary Load Cases in Job Setup, P-Delta Iteration Divergence from Displacement Not Converging, Instability at Joint from Disjointed Structure and Duplicate Joints, Crash from External UPT Files with Multiple Profile Points, P-Delta Divergence Detection, Joint Connectivity Check, UPT File Update, and Direct Analysis Parameter Tuning
@@ -31,27 +28,16 @@ The analysis gets stuck in an endless loop, terminates with an error, or produce
 ### Fix
 
 1. **Remove primary load cases from Job Setup**:
-   - "Edit the job to remove them"
-   - "As shown below"
    - Remove primary
    - Load cases
 
 2. **Use load combinations instead**:
-   - "Design should only be performed"
-   - "Using load combinations"
-   - "As opposed to individual primary load cases"
    - Use combinations
 
 3. **Include dead load with lateral loads**:
-   - "Seismic loads would never act"
-   - "On a foundation without dead load"
-   - "Acting simultaneously"
    - Include dead load
 
 4. **Check Job Setup before analysis**:
-   - "First check the Job Setup"
-   - "To see if it includes"
-   - "The primary load cases"
    - Check Job Setup
 
 5. **Create proper load combinations**:
@@ -95,16 +81,9 @@ During P-Delta analysis, the displacements diverge with each iteration. The P-De
    - The applied loads
 
 2. **Review P-Delta analysis settings**:
-   - "The method used to monitor"
-   - "And report on the progress"
-   - "Of a P-Delta analysis"
    - Check settings
 
 3. **Increase iteration count**:
-   - "PDiter i5: The number of iterations"
-   - "Used in the iterative PDelta"
-   - "With SmallDelta analysis"
-   - "5 to 25 iterations"
    - Increase iterations
 
 4. **Check for mechanism**:
@@ -120,9 +99,6 @@ During P-Delta analysis, the displacements diverge with each iteration. The P-De
    - The structure's capacity
 
 6. **Use Direct Analysis instead**:
-   - "Perform iterations of"
-   - "The iterative PDelta"
-   - "With SmallDelta analysis"
    - Try Direct Analysis
 
 7. **Check support conditions**:
@@ -148,9 +124,6 @@ A warning appears: "Instability at joint 147 in all directions, structure is dis
 ### Fix
 
 1. **Check for duplicate joints**:
-   - "Joint 147 is a duplicate joint"
-   - "That isn't actually connected"
-   - "To anything"
    - Check duplicates
 
 2. **Merge coincident joints**:
@@ -206,9 +179,6 @@ STAAD Pro crashes during analysis when processing external UPT files of type GEN
 ### Fix
 
 1. **Update STAAD Pro to latest version**:
-   - "The analysis engine"
-   - "Has been updated"
-   - "To address this issue"
    - Update STAAD Pro
 
 2. **Simplify UPT file entries**:
@@ -236,10 +206,6 @@ STAAD Pro crashes during analysis when processing external UPT files of type GEN
    - By STAAD Pro
 
 6. **Check for invalid characters in filename**:
-   - "The file processing routine"
-   - "Used with the Save As operation"
-   - "Has been updated to catch"
-   - "If the filename is specified with invalid characters"
    - Check filename
 
 7. **Report persistent crash**:
@@ -265,46 +231,24 @@ The Direct Analysis doesn't converge. The Tau-b values don't stabilize between i
 ### Fix
 
 1. **Adjust TAUTOL tolerance**:
-   - "TAUTOL f1: 0.01"
-   - "Tau-b tolerance f1"
-   - "Is normally 0.001 to 1.0"
    - Adjust TAUTOL
 
 2. **Adjust DISPTOL tolerance**:
-   - "DISPTOL f2"
-   - "Displacement tolerance f2"
-   - "Should not be too tight"
    - Adjust DISPTOL
 
 3. **Increase ITERDIRECT iterations**:
-   - "ITERDIRECT i3: 1"
-   - "Limits the number of iterations"
-   - "A value between 1 to 10"
-   - "Is typically sufficient"
    - Increase iterations
 
 4. **Increase PDiter iterations**:
-   - "PDiter i5: 15"
-   - "5 to 25 iterations"
-   - "Is the normal range"
    - Increase PDiter
 
 5. **Use TBITER for Tau-b iteration**:
-   - "If this command is present"
-   - "Then the analysis procedure"
-   - "Will iterate Tau-b"
    - Use TBITER
 
 6. **Use SET NOPRINT DIRECT**:
-   - "Use the SET NOPRINT DIRECT command"
-   - "To turn off the tau-b details"
-   - "In the output file"
    - Reduce output
 
 7. **Check for control/dependent node issues**:
-   - "If the reactions on control nodes"
-   - "Are not included in a statics check"
-   - "Then an out of balance report may result"
    - Check control nodes
 
 ### Community Report

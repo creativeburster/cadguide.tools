@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://developer.tekla.com/doc/tekla-structures/2025/spiral-beam-data-exception-class-53847"
-  - "https://developer.tekla.com/doc/tekla-structures/2025/spiral-beam-error-status-enumeration-53846"
-  - "https://www.practicalmachinist.com/forum/threads/camworks-spiral-in-issue.442850/"
 ---
 
 # Tekla Structures Spiral Beam Creation and CamWorks Spiral Machining Errors: SpiralBeamDataException DataMissing from Incomplete Part Data Requiring Full Parameter Input, DefinitionPointsTooClose from Points Closer Than Tolerance Requiring Minimum Spacing, ZeroTotalRiseWithMore360Degrees from Flat Helix Requiring Non-Zero Rise, CamWorks Spiral-In Toolpath Errors from Cutting Width Ignored and Direction Changes Requiring SP0 or Alternative Patterns, and Fusion 360 Spiral Toolpath Contact Point Boundary Dive from Finish Behavior Requiring Boundary Adjustment
@@ -31,7 +28,6 @@ The `SpiralBeamDataException` with `DataMissing` status occurs when required par
 ### Fix
 
 1. **Provide all required parameters**:
-   - "Status when some part data is missing"
    - Ensure all definition points are set
    - Set the sweep direction vector
    - Set the rotation angle
@@ -86,7 +82,6 @@ The `DefinitionPointsTooClose` error occurs when the distance between the spiral
 ### Fix
 
 1. **Increase the distance between definition points**:
-   - "Status when definition points are too close"
    - Move the definition points further apart
    - Ensure minimum spacing between points
    - The minimum distance depends on the model units
@@ -138,7 +133,6 @@ The `ZeroTotalRiseWithMore360Degrees` error occurs when the spiral beam has a to
 ### Fix
 
 1. **Set a non-zero total rise**:
-   - "Status when total rise is zero and rotation angle more than 360 degrees"
    - Set the total rise to a non-zero value
    - Even a small rise makes the helix valid
    - This creates a proper 3D spiral
@@ -190,45 +184,35 @@ In CamWorks 2025 SP3, spiral-in machining generates erroneous toolpaths. The cut
 ### Fix
 
 1. **Roll back to CamWorks 2025 SP0**:
-   - "In 2025 SP0, they reported they fixed it"
    - SP0 has the fix for the spiral-in bug
    - Uninstall SP3
    - Install SP0
    - Test the spiral-in toolpath
 
 2. **Use VoluMill instead of spiral-in**:
-   - "I would recommend using the VoluMill or Offset Roughing Pattern"
-   - "Both will cut your toolpath cycle time in half"
    - VoluMill: 1.01 min vs Spiral In: 3.62 min
    - Offset Roughing: 1.37 min vs Spiral In: 3.62 min
 
 3. **Use Offset Roughing Pattern**:
-   - "Offset Roughing Pattern, both will cut your toolpath cycle time in half"
    - More reliable than spiral-in for non-circular shapes
    - Follows the contour of the pocket
    - No direction change issues
 
 4. **Use round stock for circular parts**:
-   - "If you update your original file to use round stock and re-simulate, you'll see how it behaves differently"
    - Spiral-in works best with round stock
    - For non-circular parts, use offset roughing
    - Match stock shape to toolpath strategy
 
 5. **Report the regression to support**:
-   - "Support has since acknowledged the problem"
    - Confirm the SP3 regression
    - Provide test files
    - Request a hotfix
 
 6. **Test with Fusion 360 as alternative**:
-   - "I tested the same model in the free Fusion 360 program"
-   - "It generated a spiral with a path 30% shorter than Volumill in CamWorks"
    - Consider Fusion 360 for spiral machining
    - Compare results
 
 7. **Use spiral-in only for round parts**:
-   - "I've only used Spiral In on a Part Perimeter like you are doing if the part is round"
-   - "It doesn't make sense for anything else"
    - For non-round parts, use other strategies
    - Spiral-in is designed for circular features
 
@@ -249,7 +233,6 @@ The spiral toolpath's finish behavior with a contact point boundary causes the t
 ### Fix
 
 1. **Check the simulation carefully**:
-   - "I did not catch it on the tool path, and in hindsight it shows in the simulation"
    - Always simulate the toolpath
    - Look for unexpected Z movements
    - Check the finish behavior

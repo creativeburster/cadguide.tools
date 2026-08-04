@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://github.com/cnr-isti-vclab/meshlab/issues/1485"
-  - "https://github.com/cnr-isti-vclab/meshlab/issues/1486"
-  - "https://github.com/cnr-isti-vclab/meshlab/issues/1533"
 ---
 
 # MeshLab Mesh Processing and Export Errors: FBX and GLB Import Crash from Format Incompatibility Requiring Format Conversion, Export Crash After Quadric Edge Collapse Decimation from Version Bug Requiring 2020.05 or Mesh Size Reduction, Non-Manifold Edge Repair Not Persisting in STL from Format Limitation Requiring PLY or OBJ Save, Duplicate Faces After Repair from STL Vertex Duplication Requiring PLY Format, and Large Model 20-30M Face Crash from Memory Exhaustion Requiring Mesh Reduction or Older Version
@@ -31,31 +28,25 @@ MeshLab's FBX and GLB import filters have compatibility issues with certain file
 ### Fix
 
 1. **Convert FBX to OBJ or PLY before import**:
-   - "FBX files exported from Gravity Sketch consistently crash Meshlab but seem to work fine in other apps (Blender and Rhino)"
    - Open the FBX in Blender
    - Export as OBJ or PLY
    - Import the OBJ or PLY into MeshLab
 
 2. **Convert GLB to GLTF or PLY**:
-   - "The .GLB file loads as expected in 3D Viewer"
-   - "At an attempt to load the file in MeshLab the app quits w/o any error messages"
    - Use an online GLB to GLTF converter
    - Or open in Blender and export as PLY
 
 3. **Use older MeshLab version**:
-   - "Meshlab 2020.05 work well on Windows 11 Pro 23H2. All other versions crashed"
    - Try MeshLab 2020.05 for FBX import
    - The older FBX parser may be more compatible
    - Keep multiple versions installed
 
 4. **Check file with AssImp**:
-   - "The file is produced by AssImp Library version: 5.3.1778959262"
    - If the GLB was produced by AssImp
    - Try re-exporting with a different AssImp version
    - Or use a different GLB exporter
 
 5. **Report the crash on GitHub**:
-   - "I have found .fbx files exported from Gravity Sketch consistently crash Meshlab"
    - Create a GitHub issue with the crash details
    - Attach a simple test file that reproduces the crash
    - Include MeshLab version and OS info
@@ -83,19 +74,15 @@ Applying "Quadric Edge Collapse Decimation" on a model, then exporting the new m
 ### Fix
 
 1. **Use MeshLab 2020.05**:
-   - "Meshlab 2020.05 work well on Windows 11 Pro 23H2"
-   - "All other versions crashed"
    - Download MeshLab 2020.05
    - Use this version for decimation and export
 
 2. **Use MeshLab 2016**:
-   - "I use Meshlab 2016 and all work well"
    - MeshLab 2016 is another stable version
    - Try this if 2020.05 doesn't work
    - Keep multiple versions for different tasks
 
 3. **Reduce mesh size before decimation**:
-   - "It is very large models about 20-30M faces"
    - Reduce the mesh size before decimation
    - Use a simpler decimation method first
    - Then apply Quadric Edge Collapse on the smaller mesh
@@ -135,33 +122,23 @@ Repairing non-manifold edges in MeshLab using "Repair non manifold edges (option
 ### Fix
 
 1. **Save in PLY or OBJ instead of STL**:
-   - "If you avoid the STL format (just save in PLY, OBJ, or any other format), you should not get the error again"
    - After repair, save as PLY
    - PLY stores indexed mesh data
    - Vertex sharing is preserved on reload
 
 2. **Use the delete option instead of split**:
-   - "If I use the repair option by deleting (not split option) the bad faces, it deletes them, and saves correctly with the deletions"
    - Instead of "Repair non manifold edges (split vertices)"
    - Use "Repair non manifold edges (delete faces)"
    - Deletions persist in STL format
 
 3. **Convert to PLY for repair workflow**:
-   - "I load my STL, save it to PLY, reload the PLY"
-   - "I correct the error in PLY, save back to PLY and the error is gone"
    - Load STL → Save as PLY → Reload PLY → Repair → Save PLY
    - Convert to STL only for final 3D printing
 
 4. **Understand STL limitations**:
-   - "STL does not allow the file because two faces of seven are repeated"
-   - "Creating the PLY file, it declares wrong too, but repairing it reorders the vertices"
-   - "But keeps the duplicate faces"
-   - "Basically PLY allows the overlapping of equal faces"
    - STL is for final output, not for repair workflows
 
 5. **Check for duplicate faces**:
-   - "Thanks, I isolated the problem in the STL file on only 7 faces"
-   - "Two faces of seven are repeated"
    - Use MeshLab's "Remove Duplicate Faces" filter
    - This may fix the issue before saving
 
@@ -194,8 +171,6 @@ After repairing non-manifold edges and saving to PLY, the repair seems to work. 
    - Verify with the mesh info
 
 2. **Use delete option for non-manifold repair**:
-   - "If I use the repair option by deleting (not split option) the bad faces"
-   - "It deletes them, and saves correctly with the deletions"
    - This removes the problematic faces entirely
    - No duplicates to worry about
 
@@ -212,8 +187,6 @@ After repairing non-manifold edges and saving to PLY, the repair seems to work. 
    - Export back to PLY or STL
 
 5. **Manual inspection**:
-   - "I isolated the problem in the STL file on only 7 faces"
-   - "Two faces of seven are repeated"
    - Use MeshLab's selection tools
    - Manually select and delete duplicate faces
 
@@ -240,8 +213,6 @@ MeshLab loads the entire mesh into memory. For 20-30M face meshes, this requires
 ### Fix
 
 1. **Use MeshLab 2020.05 or 2016**:
-   - "I use Meshlab 2016 and all work well. It is very large models about 20-30M faces"
-   - "Meshlab 2020.05 work well on Windows 11 Pro 23H2"
    - Older versions may have lower memory overhead
    - Try different versions for large models
 
@@ -264,7 +235,6 @@ MeshLab loads the entire mesh into memory. For 20-30M face meshes, this requires
    - This provides overflow memory
 
 5. **Use 64-bit MeshLab**:
-   - "Meshlab 64 bit v2023.12"
    - Ensure using 64-bit version
    - 32-bit version is limited to ~4GB RAM
    - 64-bit can use all available RAM

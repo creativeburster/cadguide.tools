@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.bricsys.com/discussion/38901/status-bar-freezes-after-running-custom-macros-and-lisps"
-  - "https://forum.bricsys.com/discussion/38959/v24-2-05-suddenly-crashes-when-loading-the-gui"
-  - "https://forum.bricsys.com/discussion/40056/lisp-loads-then-stops-working"
 ---
 
 # BricsCAD Status Bar Freeze from Custom CUI and LISP Macros, GUI Crash on Linux from GTK Widget Critical, ARX Freeze After Using BricsCAD Commands Before Loading, LISP Stops Working on Second Drawing from Per-Document Loading, and on_doc_load LISP Not Loading from Errant Support Path: on_start.lsp and on_doc_load.lsp, Downgrade, Ribbon Tab Switch, ACADLSPASDOC, and Support Path Priority
@@ -31,37 +28,27 @@ The status bar freeze occurs when BricsCAD's UI framework encounters a conflict 
 ### Fix
 
 1. **Use on_start.lsp and on_doc_load.lsp**:
-   - "User LISP file names to use are: on_start.lsp and on_doc_load.lsp"
-   - "on_start.lsp (equivalent to acad.lsp). Loaded automatically on application startup"
-   - "on_doc_load.lsp (equivalent to acaddoc.lsp). Loaded automatically with each drawing opened"
    - Use these files instead of custom CUI for LISP loading
 
 2. **Unload custom partial CUI files**:
-   - "Unloaded one Custom Partial CUI file (included two custom button macros)"
    - Test if the freeze resolves after unloading
    - If it does, the CUI file is the cause
    - Rebuild the CUI without status bar interactions
 
 3. **Use autoload function**:
-   - "Look into using the 'Autoload' function in your single lisp"
    - "(autoload 'COPY0' '(\"COPY0\"))"
    - Autoload demand-loads LISP when the command is typed
    - Reducing memory usage and potential conflicts
 
 4. **Consolidate LISP files**:
-   - "Using the Appload Start up suite, you do not have to have multiple single lisps"
-   - "You can load one big one with all your custom lisps in it"
    - Consolidate multiple LISP files into one
    - To reduce loading conflicts
 
 5. **Clean reinstall**:
-   - "Uninstalled per BricsCAD Help instructions"
-   - "Renamed existing installation's two folders - appended filenames with 'OLD'"
    - Do a clean reinstall
    - Removing old configuration files
 
 6. **Test on local and cloud copies**:
-   - "Worked on a DWG file copy on both the cloud and a copy saved locally"
    - Test if the issue is network-related
    - By trying both cloud and local files
    - Network latency can worsen the freeze
@@ -89,25 +76,15 @@ The crash is caused by a compatibility issue between BricsCAD V24.2.05 and the G
 ### Fix
 
 1. **Downgrade to V24.2.04**:
-   - "A downgrade to the previous version 24.2.04 resulted in a working program"
-   - "I did that twice to confirm that the problem only occurs in 24.2.05"
    - Uninstall V24.2.05
    - Install V24.2.04
 
-2. **Create a support request**:
-   - "Please create a support request for this crash"
-   - "In which you add the crash report, and your config file"
-   - "You can find the config by making sure that the Show hidden Files is enabled"
-   - "Then go to Home > .bricscad"
+2. **Create a support request**.
 
 3. **Check GTK warnings**:
-   - "The warnings show up in both versions of BricsCAD I tested"
-   - "Even when the program is running normally"
-   - "So this might not be connected to the crash"
    - GTK warnings alone don't indicate the crash
 
 4. **Try a different desktop environment**:
-   - "Same behavior here, bricscad V24.2.06-1 and openSUSE Leap 15.5 KDE"
    - The issue occurs on multiple Linux distributions
    - Try a different desktop environment
    - (e.g., XFCE instead of GNOME/KDE)
@@ -119,7 +96,6 @@ The crash is caused by a compatibility issue between BricsCAD V24.2.05 and the G
    - As a workaround
 
 6. **Check for OS updates**:
-   - "Seems related to libc and others"
    - Ensure all Linux library updates are installed
    - Especially libc and GTK packages
    - Newer library versions may resolve the issue
@@ -147,13 +123,9 @@ When loading a custom-built ARX immediately after starting BricsCAD (without usi
 ### Fix
 
 1. **Load ARX before using any commands**:
-   - "When I load the ARX right after starting BricsCAD"
-   - "Without using any BricsCAD commands before loading the ARX"
-   - "It successfully loads with no issues"
    - Load the ARX first, then use commands
 
 2. **Switch ribbon tabs before loading**:
-   - "Does anything change if you switch to a different ribbon tab, then back to Home, before loading your app?"
    - Try switching to a different ribbon tab
    - Then back to Home
    - Before loading the ARX
@@ -165,8 +137,6 @@ When loading a custom-built ARX immediately after starting BricsCAD (without usi
    - "(arxload \"path/to/your.arx\")"
 
 4. **Submit a support ticket**:
-   - "I suggest submitting a support ticket so the problem can be investigated"
-   - "Yes I have submitted a support ticket now"
    - Report the issue to Bricsys
    - With reproduction steps and the ARX file
 
@@ -205,43 +175,27 @@ Custom LISP routines load and work correctly when BricsCAD starts and the first 
 ### Fix
 
 1. **Use on_doc_load.lsp for per-document loading**:
-   - "on_doc_load.lsp (equivalent to acaddoc.lsp)"
-   - "Loaded automatically with each drawing opened"
    - Place LISP loading calls in on_doc_load.lsp
    - So LISP loads for every drawing
 
 2. **Set ACADLSPASDOC = 1**:
-   - "You can force on_start.lsp to load with each drawing"
-   - "By Setting ACADLSPASDOC = 1"
    - This setting makes on_start.lsp
    - Load for every document
 
-3. **Use APPLOAD autoload**:
-   - "Use 'APPLOAD' command"
-   - "That command let you choose all the lisps that you want to load"
-   - "And set them to autoload for every drawing load"
-   - "Those lisp's calls are saved to appload.dfs"
+3. **Use APPLOAD autoload**.
 
 4. **Use autoload function**:
-   - "Look into using the 'Autoload' function"
    - "(autoload 'COPY0' '(\"COPY0\"))"
-   - "When you type the command the lisp is loaded"
    - Autoload demand-loads LISP per command
 
 5. **Don't use default file names**:
-   - "on_doc_load_default.lsp & on_start_default.lsp shouldn't be used"
-   - "These are reserved files for the use of Bricsys"
-   - "And maybe be overwritten by them!"
    - Use on_doc_load.lsp and on_start.lsp instead
 
 6. **Consolidate into one LISP file**:
-   - "You can load one big one with all your custom lisps in it"
-   - "My Custom.lsp has some 38 defuns in it plus lots of 'Autoload'"
    - Consolidate all LISP routines into one file
    - And load it from on_doc_load.lsp
 
 7. **Place LISP on support search path**:
-   - "These Lisp need to be placed somewhere on your support file search path (SRCHPATH)"
    - Ensure the LISP files are in a folder
    - That's on the SRCHPATH
    - So BricsCAD can find them
@@ -263,43 +217,29 @@ A LISP routine will not load via the on_doc_load file. Using APPLOAD, the routin
 ### Fix
 
 1. **Check support file search paths**:
-   - "In reading support path when you have multiple paths"
-   - "Make sure top priority one is the 1st entry"
-   - "In the other CAD once a program etc is found it stops looking"
    - Remove old version paths from SRCHPATH
 
 2. **Remove errant version paths**:
-   - "It was an errant reference the V24 in the support file path"
-   - "As soon as I removed that, it worked fine"
    - Check for old version references (V24, V25, etc.)
    - In the support file search path
 
 3. **Verify path order**:
-   - "Make sure top priority one is the 1st entry"
    - The correct path should be first
    - In the support file search path list
    - BricsCAD searches in order
 
 4. **Use APPLOAD startup suite**:
-   - "Using the Appload Start up suite"
-   - "You do not have to have multiple single lisps loaded"
-   - "You can load one big one with all your custom lisps in it"
    - Add the LISP to the APPLOAD startup suite
 
 5. **Check appload.dfs location**:
-   - "Those lisp's calls are saved to a file name 'appload.dfs'"
-   - "Saved in: C:\\Users\\User\\AppData\\Roaming\\Bricsys\\BricsCAD\\V26x64\\en_US"
    - Verify the appload.dfs file
    - Is in the correct version folder
 
 6. **Check for missing text styles**:
-   - "I didn't have your textstyles in my drawing, so added the style"
-   - "And the routine worked"
    - LISP routines that reference text styles
    - Will fail if the style doesn't exist
 
 7. **Use on_doc_load.lsp correctly**:
-   - "Added it to my on_doc_load.lsp and it also worked no problem"
    - Call the LISP from on_doc_load.lsp
    - Using (load "path/to/lisp.lsp")
    - For automatic per-document loading

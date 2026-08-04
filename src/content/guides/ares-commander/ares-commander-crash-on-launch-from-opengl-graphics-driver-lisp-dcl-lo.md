@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://help.graebert.com/en/articles/6202248-troubleshooting-crash-on-start-launch-ares-commander-2022-and-newer-versions"
-  - "https://help.graebert.com/en/articles/9260031-ares-commander-2025-release-notes"
-  - "https://help.graebert.com/en/articles/7903865-ares-commander-2024-release-notes"
 ---
 
 # ARES Commander Crash on Launch from OpenGL Graphics Driver, LISP DCL load_dialog Failure, DWG Background Image Crash on Open, TTR TTT Circle Creation Unsupported via Script, and LISP Korean Language Parameter Processing Failure: OpenGL Profile Switch, FLISP Editor, Empty Row Fix, and Language Workarounds
@@ -31,38 +28,23 @@ ARES Commander 2022 and newer versions won't launch. The application crashes imm
 ### Fix
 
 1. **Update graphics drivers**:
-   - "Make sure your Display device driver is updated"
-   - "We recommend that you download the driver directly from the device manufacturer's website"
    - Download from NVIDIA, AMD, or Intel directly
    - Not from Windows Update
 
 2. **Update the operating system**:
-   - "Make sure your OS is updated"
-   - "Check the Historic of updates for Failed or Pending updates"
-   - "And repeat the action as appropriate"
    - Install all pending Windows updates
 
 3. **Try a different OpenGL profile**:
-   - "You can try to 'force' the application to start under a different OpenGL profile"
-   - "Using the OPENGLPROFILE command"
    - If the application can't launch at all
    - Use the desktop shortcut method below
 
-4. **Add /glprofile angle to shortcut**:
-   - "Select the ARES Commander desktop shortcut, and press mouse-right click"
-   - "Select 'Properties'"
-   - "Go to the 'Shortcut' tab"
-   - "In the 'Target' field, add /glprofile angle after ARESC-exe"
-   - "Click OK. Launch ARES Commander via the edited shortcut"
+4. **Add /glprofile angle to shortcut**.
 
 5. **Try compatibility OpenGL profile**:
-   - "If the application does not start with the recommended core OpenGL profile"
-   - "You can try the start parameter compatibility"
    - Add `/glprofile compatibility` to the shortcut target
    - This uses a more compatible but slower OpenGL profile
 
 6. **Check system requirements**:
-   - "Make sure that your Computer meets (ideally exceeds) the application's System Requirements"
    - Check the Graebert Help Center for system requirements
    - Ensure adequate RAM and graphics memory
    - For your ARES Commander version
@@ -90,7 +72,6 @@ LISP routines that use dialog boxes (DCL files) fail in ARES Commander. The `loa
 ### Fix
 
 1. **Update to ARES Commander 2024 or later**:
-   - "Address the error preventing the loading of .dcl files with the LISP load_dialog function"
    - This fix is included in ARES Commander 2024
    - Update to the latest version
    - To resolve the DCL loading issue
@@ -107,11 +88,7 @@ LISP routines that use dialog boxes (DCL files) fail in ARES Commander. The `loa
    - Avoid AutoCAD-specific DCL features
    - That may not be supported
 
-4. **Use the FLISP Editor for debugging**:
-   - "Debugging LISP programs can sometimes be challenging"
-   - "This new LISP Editor is a Visual Studio Code extension"
-   - "That enables you to easily edit and debug your code"
-   - "If there is an issue, the debugger will show you where your code is breaking"
+4. **Use the FLISP Editor for debugging**.
 
 5. **Load DCL files manually**:
    - If `load_dialog` fails
@@ -148,8 +125,6 @@ Opening a DWG file that references a missing background image causes ARES Comman
 ### Fix
 
 1. **Restore the missing background image**:
-   - "The application is unable to locate the view's background image"
-   - "From same folder than current DWG"
    - Find the missing image file
    - Place it in the same folder as the DWG file
 
@@ -206,7 +181,6 @@ Creating TTR (Tangent, Tangent, Radius) or TTT (Tangent, Tangent, Tangent) circl
 ### Fix
 
 1. **Create TTR/TTT circles manually**:
-   - "Creating TTR/TTT circles through Script or LISP is not possible"
    - Use the UI command to create these circles
    - Manually select the tangent objects and enter the radius
    - This is the only supported method
@@ -230,8 +204,6 @@ Creating TTR (Tangent, Tangent, Radius) or TTT (Tangent, Tangent, Tangent) circl
    - Check the release notes
 
 5. **Use the FLISP Editor for debugging**:
-   - "This new LISP Editor is a Visual Studio Code extension"
-   - "That enables you to easily edit and debug your code"
    - Use the FLISP editor to develop
    - Alternative approaches to tangent circle creation
 
@@ -264,7 +236,6 @@ Some LISP routines fail in ARES Commander when using the Korean language version
 ### Fix
 
 1. **Update to ARES Commander 2025 or later**:
-   - "Some LISP routines fail as commands do not process parameters in the Korean language as expected"
    - This issue is listed in the 2025 release notes
    - Check if the fix is included in the latest update
    - Update to the newest version
@@ -288,9 +259,6 @@ Some LISP routines fail in ARES Commander when using the Korean language version
    - Especially for Korean characters
 
 5. **Use the FLISP Editor for debugging**:
-   - "This new LISP Editor is a Visual Studio Code extension"
-   - "That enables you to easily edit and debug your code"
-   - "If there is an issue, the debugger will show you where your code is breaking"
    - Use it to identify the exact failure point
 
 6. **Report the issue to Graebert**:

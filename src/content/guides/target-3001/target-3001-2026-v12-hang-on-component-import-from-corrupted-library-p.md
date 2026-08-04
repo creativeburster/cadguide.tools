@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php/FAQ:_Installation,_license,_updates_and_prices"
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Problems_with_the_import_of_X-Gerber"
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Update_error"
 ---
 
 # Target 3001! 2026 V12 Hang on Component Import from Corrupted Library Path, XHELP.INF Error from Missing Write Permissions, XGerber Import Deletion Layers Requiring Manual Separation to Area and Deletion Layers, Copper Planes Display Incorrectly in Gerber Export from Polygon Fill Settings, and Beta Version 15.4.0.6 Crash from Edition Mismatch with License File: Library Path Repair, Admin Installation, Layer Separation, Fill Method Switch, and Exe File Replacement
@@ -31,22 +28,14 @@ TARGET 3001! V12 hangs up when trying to import a component. The program freezes
 ### Fix
 
 1. **Repair library path**:
-   - "The component library entry"
-   - "In the properties window"
-   - "Might be corrupted"
    - Repair path
 
 2. **Check default library path**:
-   - "The default library path in V12"
    - Verify the default
    - Library path
    - Is correct
 
 3. **Verify symbol has proposed package**:
-   - "Symbol must have"
-   - "A proposed package"
-   - "Which is to be found"
-   - "In the path libraries"
    - Verify package
 
 4. **Clear corrupted library entry**:
@@ -90,20 +79,12 @@ An error message appears: "CANNOT CREATE XHELP.INF." The error occurs when TARGE
 ### Fix
 
 1. **Install as Administrator**:
-   - "Install TARGET 3001! as admin"
-   - "This will offer all"
-   - "Writing permissions"
-   - "To your installations"
    - Install as admin
 
 2. **Check directory write permissions**:
-   - "Writing permission needed"
-   - "This directory must exist"
-   - "And you need writing permission"
    - Check permissions
 
 3. **Verify directory exists**:
-   - "This directory must exist"
    - Verify the
    - Target directory
    - Exists
@@ -149,48 +130,25 @@ When importing XGerber data into Target 3001!, the data contains deletion inform
 ### Fix
 
 1. **Read XGerber file normally**:
-   - "Read in XGerber file as normal"
-   - "Use File/Input/Output Formats"
-   - "File transfer/Documentation"
-   - "Read in X-Gerber and Excellon"
    - Read normally
 
 2. **X-ray the layout**:
-   - "X-ray the layout"
-   - "Use the hash key [#]"
-   - "You see: all structures"
-   - "Are there but partly"
-   - "They cover each other"
    - Use X-ray
 
 3. **Select complete polygon**:
-   - "Press in the Pointer toolbar"
-   - "The bottom icon (green arrow)"
-   - "Click on the biggest triangle"
-   - "Of the groundplane"
    - Select polygon
 
 4. **Move ground plane to Area layer**:
-   - "Press key [e] for edition"
-   - "Set the layer from 16, copper top"
-   - "To 14, area top"
    - Move to Area
 
 5. **Move deletion elements to Deletion layer**:
-   - "Press key [e] for edition"
-   - "Set the layer from 16, copper top"
-   - "To 15, deletion top"
    - Move to Deletion
 
 6. **Repeat for all deletion elements**:
-   - "With all other deletion elements"
-   - "Please do the same"
    - Repeat for
    - All elements
 
 7. **Return to solid view**:
-   - "Press the hash-key [#] again"
-   - "And get back to the solid view"
    - Verify result
    - In solid view
 
@@ -211,44 +169,28 @@ Ground planes or power planes don't export properly in Gerber files. The copper 
 ### Fix
 
 1. **Check polygon fill settings**:
-   - "Check your polygon fill settings"
-   - "In the Special dialog"
    - Check fill
    - Settings
 
 2. **Switch between fill methods**:
-   - "Try switching between"
-   - "Fill methods"
    - Try different
    - Fill methods
 
 3. **Verify area layers configuration**:
-   - "Verify that your area layers"
-   - "(3 and 15)"
    - Verify area
    - Layers
 
 4. **Verify deletion layers configuration**:
-   - "And deletion layers"
-   - "(4 and 14)"
-   - "Are correctly configured"
    - Verify deletion
 
 5. **Run DRC before Gerber export**:
-   - "Run this check to identify"
-   - "Spacing violations, unconnected nets"
-   - "Fix all errors before generating Gerber"
    - Run DRC
 
 6. **Check Smallest Aperture setting**:
-   - "Typically 0.15mm (6 mil)"
-   - "Works for most fabricators"
    - Check aperture
    - Setting
 
 7. **Review info file after generation**:
-   - "Review this file before"
-   - "Sending data to your manufacturer"
    - Review info
    - File
 
@@ -269,33 +211,20 @@ The beta version 15.4.0.6 crashes after a while. The program shows "Professional
 ### Fix
 
 1. **Contact support for new exe-file**:
-   - "Contact us by eMail"
-   - "So that we immediately"
-   - "Can send a new exe-file"
-   - "To you"
    - Contact support
 
 2. **Don't use beta version 15.4.0.6**:
-   - "The beta-version 15.4.0.6"
-   - "Has a bug in the exe-file"
    - Avoid using
    - This version
 
 3. **Check edition matches license**:
-   - "Lower editions will show"
-   - "Professional edition which they are not"
    - Verify edition
    - Matches license
 
 4. **Verify license file compatibility**:
-   - "Those ones won't match"
-   - "With the license file"
-   - "Of your purchased edition"
    - Check license
 
 5. **Backup project files**:
-   - "Problems with the project"
-   - "File can occur"
    - Backup projects
    - Before update
 

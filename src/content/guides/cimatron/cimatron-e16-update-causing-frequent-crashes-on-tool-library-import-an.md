@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/cimatron-update-causing-lots-of-crashes.410639/"
-  - "https://www.cimatron.com/en/news/cimatron-releases-version-2024"
-  - "https://help.cimatron.com/en/2026/nc_functions.htm"
 ---
 
 # Cimatron E16 Update Causing Frequent Crashes on Tool Library Import and File Save, NC Post Processing Taking Twice as Long After Update, NC Template Manager Editing Workflow Changes, Toolpath Split by Tool Life or Cutting Length Configuration, and Toolpath Simulator Performance Improvement 30 Percent: Update Rollback, Post Processor Optimization, NC Template Configuration, Tool Life Parameters, and Simulator Cache
@@ -31,13 +28,10 @@ The E16 update introduced instability in the tool library import and file save r
 ### Fix
 
 1. **Roll back to the previous version**:
-   - "I updated my Cimatron about a month back to the latest release of E16"
-   - "So far it crashes all the time"
    - If the crashes started after the update
    - Roll back to the previous version
 
 2. **Report the crashes to Cimatron support**:
-   - "Anyone else experiencing these issues?"
    - Report the crashes to your Cimatron reseller
    - With the crash logs
    - And steps to reproduce
@@ -113,8 +107,6 @@ After updating to Cimatron E16, posting NC programs takes twice as long or more 
    - Split large programs into smaller ones
 
 5. **Use the APT CL post processor**:
-   - "Provide the ability to ignore an unsupported post operation"
-   - "And continue posting the next operation when using the APT CL post processor"
    - Try using the APT CL post processor
    - Which may be faster
 
@@ -147,8 +139,6 @@ After updating to Cimatron 2024, the NC Template Manager has a new interface and
 ### Fix
 
 1. **Review the new NC Template Manager documentation**:
-   - "A new NC Template Manager has been implemented"
-   - "Simplifying the editing process for users"
    - Read the Cimatron 2024 documentation
    - For the new NC Template Manager
 
@@ -159,26 +149,17 @@ After updating to Cimatron 2024, the NC Template Manager has a new interface and
    - Use the import function to load old templates
 
 3. **Use the NC Process Manager**:
-   - "The NC Process Manager consists of a collapsible tree"
-   - "Containing detailed information of all toolpaths and their procedures"
    - Use the NC Process Manager
    - To view and manage toolpaths and procedures
 
 4. **Save toolpaths as templates**:
-   - "To help save time in future toolpath / procedure creation"
-   - "You can save a toolpath or procedure to a template"
-   - "This template contains milling strategies, parameters, and geometry"
    - Save commonly used toolpaths as templates
 
 5. **Load and apply NC templates**:
-   - "Load and apply one or more NC templates"
-   - "To create toolpath(s)/procedure(s) in the NC Process Manager"
    - Use the template loading function
    - To apply templates to new toolpaths
 
 6. **Check template status flags**:
-   - "The Process Manager displays the status of each toolpath and procedure"
-   - "By using status flags and symbols"
    - Monitor the status flags
    - To identify issues with templates
 
@@ -205,7 +186,6 @@ After updating to Cimatron 2024, toolpaths can now be split based on tool life o
 ### Fix
 
 1. **Configure tool life parameters**:
-   - "Toolpaths can now be split based on tool life or cutting length"
    - In the tool definition
    - Set the maximum tool life
    - (cutting time or length)
@@ -217,8 +197,6 @@ After updating to Cimatron 2024, toolpaths can now be split based on tool life o
    - And a new tool is used
 
 3. **Use the NC Setup for defaults**:
-   - "The NC Setup enables you to predefine multiple project-related options"
-   - "The data defined in the NC Setup is later used as the default"
    - Define tool life defaults
    - In the NC Setup
 
@@ -229,14 +207,10 @@ After updating to Cimatron 2024, toolpaths can now be split based on tool life o
    - Are appropriate for your tools
 
 5. **Use Sandvik Coromant integration**:
-   - "Direct integration with the CoroPlus Tool Library"
-   - "Users gain access to over 900,000 cutting tool items"
    - Use the CoroPlus integration
    - For recommended tool life values
 
 6. **Check the NC Report**:
-   - "The NC Report is a file that provides various information"
-   - "About a set of selected procedures"
    - Use the NC Report
    - To verify tool life and split information
 
@@ -263,14 +237,10 @@ After updating to Cimatron 2024, the toolpath simulator runs significantly faste
 ### Fix
 
 1. **Verify simulation results**:
-   - "The toolpath simulator calculation time has been significantly improved"
-   - "Resulting in an average productivity gain of over 30%"
    - Verify that the simulation results
    - Are consistent with previous versions
 
 2. **Use Machining Simulation tools**:
-   - "The Machining Simulation tools offer a combined environment"
-   - "That includes material removal simulation, machine simulation, and verifier"
    - Use the combined simulation environment
    - For comprehensive verification
 
@@ -281,20 +251,14 @@ After updating to Cimatron 2024, the toolpath simulator runs significantly faste
    - And adjust as needed
 
 4. **Display toolpath nodes**:
-   - "The ability to display toolpath nodes"
-   - "Offers valuable visualization capabilities"
-   - "Aiding CAM users in predicting the quality of finishing toolpaths"
    - Use toolpath nodes to verify quality
 
 5. **Use Fine Surface Quality options**:
-   - "Particularly when utilizing Fine Surface Quality options"
    - Use the Fine Surface Quality options
    - For better finishing toolpaths
    - And verify with toolpath nodes
 
 6. **Run simulation before machining**:
-   - "Enable you to simulate and verify your NC toolpaths and procedures"
-   - "Before implementing them on the shop floor"
    - Always run the simulator
    - Before machining on the actual machine
 

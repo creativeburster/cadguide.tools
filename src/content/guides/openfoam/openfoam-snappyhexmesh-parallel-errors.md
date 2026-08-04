@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://www.cfd-online.com/Forums/openfoam-meshing/100269-snappyhexmesh-parallel-problem.html"
-  - "https://www.cfd-online.com/Forums/openfoam-meshing/239985-shm-parallel-different-decompose-methods-different-meshes-results.html"
-  - "https://www.cfd-online.com/Forums/openfoam-meshing/178909-snappyhexmesh-parallel-run-face-ordering-problem.html"
 ---
 
 # OpenFOAM snappyHexMesh Parallel Errors: Face Area Mismatch from Cyclic Patches, Different Meshes from Different Decompose Methods, 2D Mesh-Motion Failure from Empty Patches, snappyHexMesh Cannot Handle 2D Empty Patches Requiring extrudeMesh, and Cell Count Differences Between Hierarchical and Scotch Decomposition

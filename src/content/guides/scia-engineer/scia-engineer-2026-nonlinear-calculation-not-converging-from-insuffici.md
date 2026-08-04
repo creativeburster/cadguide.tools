@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://help.scia.net/26.0/en/analysis/solver_setup/nonlinear_solution_methods/nonlinear_analysis.htm"
-  - "https://www.scia.net/en/support/faq/scia-engineer/analysis/check-convergence-nonlinear-analysis"
-  - "https://help.scia.net/25.0/en/analysis/calculation/nonlinear_stability_calculation.htm"
 ---
 
 # SCIA Engineer 2026 Nonlinear Calculation Not Converging from Insufficient Iterations, Singularity Errors from Local Nonlinearities on Hinges and Supports, Solver Precision Ratio Too Strict for Cable and Membrane Structures, Solver Robustness Ratio for Sensitive Nonlinear Analysis, and Nonlinear Stability Analysis Termination from Singularity at Large Displacements: Iteration Increase, Singularity Diagnostics, Precision Ratio Reduction, Robustness Ratio Increase, and LOG File Analysis
@@ -31,46 +28,27 @@ The nonlinear calculation doesn't converge. The calculation terminates after rea
 ### Fix
 
 1. **Increase maximum number of iterations**:
-   - "The maximum number of iteration"
-   - "Must be increased"
    - Increase iterations
    - In solver settings
 
 2. **Check if solution oscillates**:
-   - "If the solution oscillates"
-   - "The increased number of iterations"
-   - "Won't help"
    - Check for oscillation
 
 3. **Increase number of increments**:
-   - "Load applied on structure"
-   - "Is divided into increments"
    - Increase increments
    - For better convergence
 
 4. **Use appropriate calculation method**:
-   - "4 basic types: Newton-Raphson"
-   - "Modified Newton-Raphson"
-   - "Picard method"
-   - "Picard and Newton Raphson"
    - Choose appropriate method
 
 5. **Check convergence graphs**:
-   - "Visualize these graphs in Excel"
-   - "Open the file $001$064.GRF1000001"
    - Check convergence
    - Graphs
 
 6. **Verify results after termination**:
-   - "Evaluate the obtained results"
-   - "And decide whether"
-   - "The results may be accepted"
    - Evaluate results
 
 7. **Use NL_ST_DIAG_TOOL**:
-   - "The NL_ST_DIAG_TOOL"
-   - "Might be used to check"
-   - "The graph of convergence"
    - Use diagnostic tool
 
 ### Community Report
@@ -108,14 +86,9 @@ The nonlinear calculation fails with singularity errors. The errors occur when l
    - Of support
 
 4. **Use solver robustness ratio**:
-   - "A high value of this parameter"
-   - "Ensures a more stable"
-   - "But slower convergence"
    - Increase robustness ratio
 
 5. **Check for tension-only elements**:
-   - "Tension only elements"
-   - "Pressure only"
    - Check tension-only
    - Elements for singularity
 
@@ -148,32 +121,18 @@ The nonlinear calculation fails to converge for cable or membrane structures. Th
 ### Fix
 
 1. **Reduce solver precision ratio**:
-   - "A coefficient value lower than 1"
-   - "Means that the tolerances will be larger"
-   - "Hence the convergence will be achieved more easily"
    - Reduce precision ratio
 
 2. **Use ratio = 0.1 for cable/membrane**:
-   - "It might be necessary to use"
-   - "Less strict convergence criteria"
-   - "(e.g. ratio = 0.1)"
    - Use 0.1 for cables
 
 3. **Note that criteria remain tight**:
-   - "Even with a ratio = 0.1"
-   - "The convergence criteria"
-   - "Remain very tight"
    - Criteria still tight
 
 4. **Increase precision for accuracy**:
-   - "A coefficient value higher than 1"
-   - "Means that the tolerances will be smaller"
-   - "Hence the calculation will be more accurate"
    - Increase for accuracy
 
 5. **Access solver settings**:
-   - "All calculation settings"
-   - "Are located in Solver settings"
    - Access solver
    - Settings
 
@@ -184,9 +143,6 @@ The nonlinear calculation fails to converge for cable or membrane structures. Th
    - And results are acceptable
 
 7. **Use Newton-Raphson for cables**:
-   - "Newton-Raphson method"
-   - "Can provide a solution"
-   - "Even for extremely large deformations"
    - Use Newton-Raphson
 
 ### Community Report
@@ -206,15 +162,9 @@ The nonlinear calculation is unstable or doesn't converge for sensitive structur
 ### Fix
 
 1. **Increase solver robustness ratio**:
-   - "A high value of this parameter"
-   - "Ensures a more stable"
-   - "But slower convergence"
    - Increase robustness ratio
 
 2. **Use for sensitive nonlinear analysis**:
-   - "It can help in case"
-   - "Of sensitive nonlinear analysis"
-   - "Where convergence is problematic"
    - Use for sensitive cases
 
 3. **Accept slower convergence**:
@@ -224,9 +174,6 @@ The nonlinear calculation is unstable or doesn't converge for sensitive structur
    - But more stable
 
 4. **Check damping of stiffness changes**:
-   - "Affects the damping"
-   - "(speed of change) of the stiffness"
-   - "And internal forces"
    - Check damping
 
 5. **Combine with precision ratio adjustment**:
@@ -264,26 +211,15 @@ The nonlinear stability analysis terminates prematurely. The termination occurs 
 ### Fix
 
 1. **Check LOG file for termination reason**:
-   - "Check the LOG file"
-   - "Of the corresponding analysis"
-   - "In the TEMP folder"
    - Check LOG file
 
 2. **Check ending conditions**:
-   - "#E1 = deformation limit"
-   - "#E2 = maximum increments"
-   - "#E3 = singularity"
    - Identify ending condition
 
 3. **Check last increment in LOG**:
-   - "The last increment (INCR)"
-   - "Is increment number 3"
-   - "Afterwards the analysis is terminated"
    - Check last increment
 
 4. **Check GRF file for displacements**:
-   - "Check in the corresponding"
-   - "$001$064.GRF4000001 file"
    - Check displacement
    - Data in GRF file
 
@@ -295,14 +231,10 @@ The nonlinear stability analysis terminates prematurely. The termination occurs 
 
 6. **Increase maximum increments**:
    - If terminated by #E2
-   - "The default is 100"
    - Increase maximum
    - Number of increments
 
 7. **Use NL_ST_DIAG_TOOL for convergence**:
-   - "The NL_ST_DIAG_TOOL"
-   - "Might be used to check"
-   - "The graph of convergence"
    - Use diagnostic tool
 
 ### Community Report

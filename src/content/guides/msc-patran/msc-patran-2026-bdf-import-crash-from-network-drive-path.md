@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://mscsoftware.my.site.com/customers/s/article/What-s-New-in-Patran-2026-1"
-  - "https://www.eng-tips.com/threads/importing-bdf-files.280440/"
-  - "https://nexus.hexagon.com/community/public/msc-nastran/f/msc-nastran-community-forum/162986/cannot-run-simple-static-analysis-with-composite-materials-on-amd-machine/907587"
 ---
 
 # MSC Patran 2026 BDF Import Crash from Network Drive Path, SYSTEM FATAL 7340 Eigenvalue Storage Exceeded from Buckling Analysis, Composite Material Analysis UFM 6134 on AMD CPU from Intel MKL Incompatibility, Superelement Duplicate Entity IDs from NIFIMP Import, and MscNastranDbServer Crash from BDF Path Length: Local Drive Copy, Eigenvalue Reduction, Intel CPU Workaround, ID Offsetting, and Path Shortening
@@ -31,15 +28,10 @@ When importing a BDF file into Patran, the error "The MscNastranDbServer has Cra
 ### Fix
 
 1. **Copy BDF to local C:\ drive**:
-   - "The bdf file must be located locally"
-   - "On the C:\ drive"
    - Copy BDF files to
    - Local C:\ drive
 
 2. **Restart Patran after crash**:
-   - "You will crash Patran with an error"
-   - "And need to restart the program"
-   - "For any future successful imports"
    - Restart Patran
 
 3. **Use short local path**:
@@ -55,10 +47,6 @@ When importing a BDF file into Patran, the error "The MscNastranDbServer has Cra
    - To prevent crashes
 
 5. **Completely exit Patran before restart**:
-   - "Completely exiting the program"
-   - "Restarting it"
-   - "And then loading a bdf file"
-   - "From the local drive"
    - Fully exit and restart
 
 6. **Check for locked files after crash**:
@@ -90,8 +78,6 @@ When running a buckling analysis on a thin Kapton structure, the solver crashes 
 ### Fix
 
 1. **Use part of the buckling load**:
-   - "Use part of the buckling load"
-   - "To balance the system"
    - Reduce the applied load
    - To prevent buckling in static subcase
 
@@ -102,8 +88,6 @@ When running a buckling analysis on a thin Kapton structure, the solver crashes 
    - From buckling before eigenvalue analysis
 
 3. **Check if static subcase buckles**:
-   - "The problem might be that"
-   - "The static subcase buckles the structure"
    - Check if the static
    - Subcase causes buckling
 
@@ -148,15 +132,9 @@ The MSC Nastran solver uses Intel Math Kernel Library (MKL) for matrix operation
 ### Fix
 
 1. **Use Intel CPU machine**:
-   - "Running the same .bdf file"
-   - "On a machine with an Intel CPU"
-   - "Works as expected"
    - Use Intel CPU
 
 2. **Remove PCOMP elements as workaround**:
-   - "Removing the elements with PCOMP properties"
-   - "Assigned to them is successful"
-   - "And the analysis runs as expected"
    - Remove PCOMP elements
 
 3. **Check for AMD-specific patches**:
@@ -172,21 +150,13 @@ The MSC Nastran solver uses Intel Math Kernel Library (MKL) for matrix operation
    - As workaround
 
 5. **Contact Hexagon for AMD support**:
-   - "I think I do not have access"
-   - "To these files (Intel/AMD specific)"
    - Contact Hexagon support
    - For AMD-compatible version
 
 6. **Verify model correctness**:
-   - "Checked the model"
-   - "No coincident nodes or elements"
-   - "Appropriately restrained"
    - Verify model is correct
 
 7. **Check student edition limitations**:
-   - "The number of nodes is well below"
-   - "The 5000 nodes limit"
-   - "Of the student edition"
    - Check student edition limits
 
 ### Community Report
@@ -206,42 +176,27 @@ When importing MSC Nastran input files containing part superelements via NIFIMP,
 ### Fix
 
 1. **Use Patran 2026.1 for automatic ID offsetting**:
-   - "Duplicate entity IDs across superelements"
-   - "Are automatically managed via ID offsetting"
    - Update to Patran 2026.1
 
 2. **Verify connectivity after import**:
-   - "Preserving connectivity"
-   - "While consistently updating"
-   - "All dependent entities"
    - Verify connectivity
 
 3. **Check dependent entities**:
-   - "Including properties, materials"
-   - "Loads, and boundary conditions"
    - Check all dependent
    - Entities after import
 
 4. **Verify SELOC and SEMPLN entries**:
-   - "Primary partitioned superelement"
-   - "(SELOC or SEMPLN) entries"
-   - "Are correctly repositioned and mirrored"
    - Verify SELOC/SEMPN
 
 5. **Import secondary and external superelements**:
-   - "Patran 2026.1 imports secondary"
-   - "And external superelements"
    - Import all superelement
    - Types
 
 6. **Check case control definitions**:
-   - "Recognizes case control definitions"
-   - "For complete assembly-level workflows"
    - Verify case control
    - Definitions
 
 7. **Use unified environment for assembly**:
-   - "Within a unified environment"
    - Use Patran 2026.1
    - For complete assembly-level
    - Workflows
@@ -299,8 +254,6 @@ The MscNastranDbServer has a path length limitation. When the BDF file path exce
    - To minimize path issues
 
 7. **Check for special characters in path**:
-   - "The file path where the analysis is ran"
-   - "Does not contain any unusual characters"
    - Check for special
    - Characters in path
 

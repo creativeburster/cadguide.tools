@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/revit-architecture-forum/shared-parameter-conflict-and-family-load-failure-in-revit-2025/td-p/13720988"
-  - "https://forums.autodesk.com/t5/revit-architecture-forum/revit-2025-1-crash-on-parameter-deletion/td-p/12844434"
-  - "https://forums.autodesk.com/t5/revit-architecture-forum/global-parameters-broken-with-groups-in-revit-2025/td-p/13265060"
 ---
 
 # Revit 2025 Parameter and Family Load Errors: Shared Parameter Conflict and Family Load Failure from Type Mismatch Requiring Parameter Rename, Crash on Parameter Deletion from Corrupted Project Parameters Requiring Audit Before Delete, Global Parameters Broken with Groups from Multiple Instance Bug Requiring 2026 Hotfix, Air Terminal Family Crash from Network Based Calculations Requiring MEP Setting Disable, and Schema Conflict Crash on Opening Upgraded Models from Extensible Storage Missing Schema Requiring 2025 Update
@@ -31,13 +28,11 @@ Loading a custom window family (VELUX) into a Revit 2025 project fails with "Cou
 ### Fix
 
 1. **Rename the parameter in the family**:
-   - "Yes, it should solve the problem, but it will cause problems with tags, schedule, etc."
    - Open the family in the Family Editor
    - Rename the conflicting parameter (e.g., VentilationArea_Area)
    - Reload the family
 
 2. **Include parameter type in the name**:
-   - "If you mean parameters with the same name, you can include the parameter type"
    - VentilationArea_Text, VentilationArea_Area
    - ThermalTransmittance_Text, ThermalTransmittance_Number
    - This prevents future conflicts
@@ -49,7 +44,6 @@ Loading a custom window family (VELUX) into a Revit 2025 project fails with "Cou
    - This is the cleanest solution
 
 4. **No native force-overwrite option**:
-   - "No, Revit does not provide a native option to automatically overwrite or reconcile conflicting shared parameters during family load"
    - You must manually resolve the conflict
    - Either rename in the family or remove from the project
 
@@ -82,19 +76,16 @@ The parameter deletion code in Revit 2025.1 has a bug that causes a crash when c
 ### Fix
 
 1. **Audit the model before deleting**:
-   - "Maybe you misunderstood. I DID NOT have the issue after Opening the Project with Audit checked."
    - File > Open > check the "Audit" checkbox
    - Open the model with audit
    - Then try deleting the parameter
 
 2. **Save to a new location first**:
-   - "When I opened the model and saved it to a new location, I was able to delete the parameter without issue"
    - Save As to a new file location
    - Close and reopen the new file
    - Then delete the parameter
 
 3. **Check parameter category association**:
-   - "Is it always a project parameter associated with a category that isn't relevant?"
    - Check if the parameter is associated with a category not used in the model
    - If so, the parameter may cause the crash
    - Try adding an element of that category first
@@ -113,7 +104,6 @@ The parameter deletion code in Revit 2025.1 has a bug that causes a crash when c
 
 6. **Update to latest Revit 2025 hotfix**:
    - Check for hotfixes
-   - "I just updated to the latest for 2025 available"
    - Install the latest update
    - The crash may be fixed in newer versions
 
@@ -140,44 +130,34 @@ In Revit 2025, it's no longer possible to attach global parameters to elements i
 ### Fix
 
 1. **Update to Revit 2026 or later hotfix**:
-   - "This is an issue and it's fixed in 2026"
-   - "It has been reproduced in the latest Revit build & is now under investigation. Logged as REVIT-235288"
    - Update to Revit 2026
    - Or wait for a 2025 hotfix
 
 2. **Use only one group instance**:
-   - "It works perfectly if there is only one group instance of a specific group type"
    - Until the fix is available
    - Use only one instance of each group type
    - Or don't use global parameters with groups
 
 3. **Remove global parameters from group elements**:
-   - "To keep the groups, remove the global parameter from the reported elements"
-   - "No workaround until Autodesk issues a fix"
    - Remove global parameter bindings from grouped elements
    - Use direct values instead
 
 4. **Never use "Fix Groups" option**:
-   - "Never use Fix Groups option, you will most likely end up with duplicates of the groups, excluded elements or elements transferred from the group to the model"
    - If the "Fix Groups" dialog appears
    - Don't click "Fix Groups"
    - Review the warning and fix elements manually
 
 5. **Use similar groups instead of identical groups**:
-   - "You should use similar groups"
    - Similar groups allow different parameter values per instance
    - But they're not identical group types
    - This avoids the multiple instance bug
 
 6. **Avoid global parameters on walls in groups**:
-   - "It seems this issue specifically affects walls"
    - Don't attach global parameters to walls in groups
    - Use other element types if possible
    - Or use direct values
 
 7. **Test in Revit 2026**:
-   - "While testing the newly released Revit 2026, the bug was still there"
-   - "In the pre-release test it worked but in the released public version of 2026 it's not working"
    - The fix may not be complete in 2026
    - Check for hotfixes
 
@@ -198,32 +178,26 @@ A louver family with a shared Airflow parameter crashes Revit when changing the 
 ### Fix
 
 1. **Disable network based calculations**:
-   - "The solution I was able to use was to simply uncheck the 'Enable network based calculations' box in the MEP settings"
    - Manage > MEP Settings > deselect "Enable network based calculations"
    - This stops the network calculation that conflicts with the shared parameter
    - Things should work after this
 
 2. **Unlink shared parameter from flow**:
-   - "Unlinking our shared parameter from the flow parameter seems to work"
    - In the family, remove the formula linking the shared parameter to the flow parameter
    - This prevents the conflict
    - But you lose the automatic link
 
 3. **Create a new Airflow shared parameter**:
-   - "Perhaps creating a new Airflow shared parameter would fix this issue and allow network calculations"
    - Create a new shared parameter in Revit 2024+
    - It will be compatible with network calculations
    - Replace the old parameter in all families
 
 4. **Update Revit to latest version**:
-   - "There have been several posts on this topic and the solution appears to be to apply an update to Revit"
    - Check for Revit updates
    - Install the latest hotfix
    - The crash may be fixed in newer versions
 
 5. **Don't change project units**:
-   - "Initially, I had airflow with CFM as unit symbol. This didn't allow me to change the Flow parameter"
-   - "Then the program just crashed when changing the flow"
    - Don't change project units as a workaround
    - Keep the original units
 
@@ -250,13 +224,11 @@ Revit 2024 crashes with a prompt to send a CER (Customer Error Report) when tryi
 ### Fix
 
 1. **Update to Revit 2025**:
-   - "This incident has been resolved in: Revit 2025"
    - Update to Revit 2025
    - The schema conflict crash is fixed in 2025
    - Open the model in 2025
 
 2. **Follow the Schema Conflicts article**:
-   - "To avoid these crashes, follow the instructions in the Solution section of the Schema Conflicts article"
    - Follow Autodesk's schema conflict resolution steps
    - This may involve removing the add-in data
    - Or installing the missing add-in
@@ -280,7 +252,6 @@ Revit 2024 crashes with a prompt to send a CER (Customer Error Report) when tryi
    - This may remove the corrupted schema data
 
 6. **Check for schema conflict warning**:
-   - "See the following article for more information on troubleshooting 'Schema conflict when Loading a file'"
    - Look for schema conflict warnings when opening
    - Don't ignore schema conflict warnings
    - Resolve them before proceeding

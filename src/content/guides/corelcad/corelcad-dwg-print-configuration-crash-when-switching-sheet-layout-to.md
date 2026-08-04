@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.coreldraw.com/en/support/updates/cad2021/dot5.html"
-  - "https://www.corel.com/content/vpk/cad/corelcad_reviewers_guide_en.pdf"
-  - "https://forums.autodesk.com/t5/visual-lisp-autolisp-and-general/running-a-lisp-routine-in-autocad-lt-2026-crashes-program/td-p/13831865"
 ---
 
 # CorelCAD DWG Print Configuration Crash When Switching Sheet Layout to Model Space, LISP Routine Crash from Jumping Between DWG Files, Non-Supported AutoCAD Features Preserved as File Attributes Causing Display Issues, Corrupted DWG and DXF Recovery for Legacy R12 Format Files, and VSTA Automation Plugin Development on Windows 11: Print Config Reset, Single DWG Script Workflow, Attribute Stripping, Recovery Command, and VSTA Compatibility
@@ -31,8 +28,6 @@ DWG files that contain specific print configuration settings generate an applica
 ### Fix
 
 1. **Update to CorelCAD 2021.5 or later**:
-   - "DWG files that contain specific print configuration settings no longer generate an application error"
-   - "Specifically when switching from Sheet layout to Model space"
    - Install CorelCAD 2021.5 or later
    - Which includes the fix
 
@@ -89,23 +84,14 @@ A LISP routine that opens DWG files and modifies layer properties crashes CorelC
 ### Fix
 
 1. **Use a script file instead of LISP for batch processing**:
-   - "If you want to continue to use LT then maybe look at writing a script"
-   - "This should work with LT"
-   - "Just edit your current code so it runs on current open dwg"
-   - "Save and close can live in the lisp"
    - Use a script file that opens each DWG
    - And runs the LISP on each one
 
 2. **Process one DWG at a time**:
-   - "Open dwg1, (load 'mycleanup'), open dwg2, (load 'mycleanup')"
-   - "And so on"
    - Process each DWG file individually
    - Don't try to jump between files in LISP
 
 3. **Use BricsCAD as alternative**:
-   - "I downloaded BricsCAD as a trial version"
-   - "And am able to run the LISP routine with no issues"
-   - "It flawlessly executed the script"
    - BricsCAD may handle cross-DWG LISP better
 
 4. **Use ScriptPro or MultiFileTool**:
@@ -115,7 +101,6 @@ A LISP routine that opens DWG files and modifies layer properties crashes CorelC
    - Without LISP cross-file issues
 
 5. **Modify LISP to save and close before opening next**:
-   - "Save and close can live in the lisp"
    - Modify the LISP routine
    - To save and close the current DWG
    - Before the script opens the next one
@@ -149,19 +134,13 @@ DWG files created in AutoCAD contain features not supported by CorelCAD. When op
 ### Fix
 
 1. **Understand attribute preservation**:
-   - "CorelCAD can handle the file attributes of non-supported AutoCAD features"
-   - "And preserves functionality in DWG files"
-   - "Eliminating conversion and sharing issues"
    - Non-supported features are preserved, not rendered
 
 2. **Use DWG as native format**:
-   - "The native file format in CorelCAD is DWG"
-   - "Ensuring total fidelity with the industry-standard file format"
    - DWG files maintain maximum compatibility
    - Between CorelCAD and AutoCAD
 
 3. **Check compatibility with AutoCAD versions**:
-   - "CorelCAD also offers compatibility with any file created in AutoCAD R12 right up to AutoCAD 2012"
    - Verify which AutoCAD features
    - Are used in the DWG file
    - And whether CorelCAD supports them
@@ -179,8 +158,6 @@ DWG files created in AutoCAD contain features not supported by CorelCAD. When op
    - DXF may strip non-supported attributes
 
 6. **Check file version compatibility**:
-   - "The ability to save drawings back to widely adopted R12 DWG and DXF formats"
-   - "Allows you to keep using any legacy hardware"
    - Save in an older DWG version
    - For maximum compatibility
 
@@ -207,8 +184,6 @@ File corruption can occur from various sources: hard drive failures, improper fi
 ### Fix
 
 1. **Use the Recovery command**:
-   - "CorelCAD even helps you recover damaged or corrupted DWG and DXF files"
-   - "In all format versions"
    - Use the Recovery command in CorelCAD
    - To open corrupted files
 
@@ -219,9 +194,6 @@ File corruption can occur from various sources: hard drive failures, improper fi
    - For DWG files
 
 3. **Save to R12 format as fallback**:
-   - "The ability to save drawings back to widely adopted R12 DWG and DXF formats"
-   - "Allows you to keep using any legacy hardware"
-   - "Such as a laser engraver or plotter"
    - Save recovered files in R12 format for legacy compatibility
 
 4. **Check file integrity**:
@@ -265,7 +237,6 @@ When developing VSTA (Microsoft Visual Studio Tools for Applications) automation
 ### Fix
 
 1. **Verify VSTA is installed**:
-   - "Microsoft Visual Studio Tools for Applications (VSTA) support"
    - Ensure VSTA is installed
    - With CorelCAD
    - Not all installations include VSTA by default
@@ -277,8 +248,6 @@ When developing VSTA (Microsoft Visual Studio Tools for Applications) automation
    - Install missing .NET versions
 
 3. **Use LISP as alternative**:
-   - "You can extend your productivity by taking advantage of the LISP"
-   - "Programming interfaces to automate repetitive tasks"
    - If VSTA doesn't work
    - Use LISP for automation instead
 
@@ -289,8 +258,6 @@ When developing VSTA (Microsoft Visual Studio Tools for Applications) automation
    - For Windows 11 compatibility
 
 5. **Access the plug-in store**:
-   - "You can also access the plug-in store for CorelCAD Add-Ons"
-   - "And third party enhancements"
    - Check the plug-in store
    - For pre-built plugins instead of developing your own
 

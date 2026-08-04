@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.sketchup.com/t/su-2025-macos-ram-usage-increases-just-by-moving-around-my-model-using-3d-mouse-then-crashes/325710"
-  - "https://forums.sketchup.com/t/sketchup-2024-ram-maxed-out-crashes-when-exporting-images/277583"
-  - "https://forums.sketchup.com/t/disabling-garbage-collection-while-loading-an-extension-fix-for-su2024-startup-crashes/274297"
 ---
 
 # SketchUp 2024 2025 Memory Leak and Crash Errors: MacOS RAM Usage Increases with 3D SpaceMouse from Memory Leak Requiring Driver Update and Periodic Restart, RAM Maxed Out and Crash When Exporting Images from New Render Engine Requiring Classic Engine Switch, Profile Builder 4 Startup Crash from Ruby Garbage Collection Conflict Requiring GC Disable or PB4 4.0.3 Update, Memory Not Freed After Deleting Groups from DefinitionList Retention Requiring Purge Definitions, and Multiple Documents Memory Leak from Non-Closing Documents Requiring Single Document Workflow
@@ -31,37 +28,30 @@ After updating from SU 2021 Pro to SU 2025 on MacOS Sequoia, SU lockups occur af
 ### Fix
 
 1. **Update 3Dconnexion driver**:
-   - "There was a known memory leak issue with the 3d connexion. Have you installed the latest drivers for it?"
    - Download the latest 3Dconnexion driver for Mac
-   - "3DxMacCore version 1.3.7.529 and 3DxWare version 10.8.7"
    - Install and restart
 
 2. **Update SpaceMouse firmware**:
-   - "My SpaceMouse Pro Wireless firmware = 4.39"
    - Check for firmware updates in 3DxWare
    - Update to the latest firmware
    - This may fix the memory leak
 
 3. **Use regular mouse instead of SpaceMouse**:
-   - "If I have the SM connected, but only use my Logi MX Master 3S or Apple Magic Mouse 2, the memory usage remains pretty stable"
    - Stop using the SpaceMouse
    - Use a regular mouse for navigation
    - This avoids the memory leak entirely
 
 4. **Restart SketchUp periodically**:
-   - "When SU-2025 eventually lockups with the spinning beachball the RAM used has grown to 12-20 GB"
    - Save your work
    - Restart SketchUp every 30-45 minutes
    - This clears the leaked memory
 
 5. **Use memory clean tools**:
-   - "The solution was to manually purge RAM using solutions like memory clean"
    - Use MacOS memory management tools
    - Purge RAM when SU usage gets high
    - This is a temporary fix
 
 6. **Downgrade to SU 2023**:
-   - "Working fine with 2023"
    - If the leak is unbearable
    - Downgrade to SketchUp 2023
    - The 3D mouse leak is not present in 2023
@@ -89,7 +79,6 @@ The new render engine in SketchUp 2024 uses significantly more RAM than the clas
 ### Fix
 
 1. **Switch to classic render engine**:
-   - "I toggle off the new render engine and move to classic, restart Sketchup, and all the above problems go away"
    - View > Face Style > uncheck "Enable ambient occlusion"
    - Or disable the new render engine in Preferences
    - Restart SketchUp
@@ -101,7 +90,6 @@ The new render engine in SketchUp 2024 uses significantly more RAM than the clas
    - Purge unused textures
 
 3. **Use a more powerful graphics card**:
-   - "I can't use the new engine because it gobbles up enough ram on my rtx2070 that it prevents me from rendering using Enscape"
    - The new render engine needs a GPU with more VRAM
    - Use a card with 8GB+ VRAM
    - Or use the classic engine
@@ -119,7 +107,6 @@ The new render engine in SketchUp 2024 uses significantly more RAM than the clas
    - May prevent the crash
 
 6. **Don't use new render engine for large files**:
-   - "If they decide to ditch the classic engine in 2025 it's going to cause a lot of problems for users without powerful graphics cards"
    - For files with large textures
    - Use the classic engine
    - Reserve the new engine for smaller models
@@ -147,14 +134,11 @@ SketchUp 2024 crashes during startup. The crash occurs while extensions are load
 ### Fix
 
 1. **Update to Profile Builder 4.0.3**:
-   - "The problem is fixed by PB4 version 4.0.3, Fix for SketchUp crashing on startup when Profile Builder 4 is installed"
    - Download PB4 4.0.3 from mind.sight.studios
    - Install the latest version
    - This is the primary fix
 
 2. **Disable garbage collection during load**:
-   - "I found a solution to these crashes by disabling Ruby garbage collection while Profile Builder 4 is being loaded"
-   - "Once the extension is loaded, I then re-enable GC"
    - This is implemented in PB4 4.0.3
    - If using an older version, contact mind.sight.studios
 
@@ -165,27 +149,22 @@ SketchUp 2024 crashes during startup. The crash occurs while extensions are load
    - Then reinstall PB4 4.0.3
 
 4. **Use Extension Manager**:
-   - "Use the extension manager to remove it under the management tab"
    - Open Extension Manager
    - Disable PB4
    - Restart SketchUp
    - Then install PB4 4.0.3
 
 5. **Check SketchUp log file**:
-   - "I found a log in my temp directory which put me on the trail"
    - Check the temp folder for SketchUp logs
    - The log shows which extension caused the crash
    - This helps identify the culprit
 
 6. **Don't use Ruby 3.2.2**:
-   - "You might try Ruby 3.2.4 on Windows SU"
-   - "Some of the changes between 3.2.2 and 3.2.4 might affect the issue"
    - The GC issue may be Ruby version specific
    - Check if SketchUp update changes Ruby version
 
 7. **Wrap code in a module**:
    - For extension developers
-   - "All code should be inside a namespace module to prevent defining anything at the top level"
    - Wrap Ruby Encoder snippets in a module
    - This prevents GC from collecting local variables
 
@@ -206,13 +185,11 @@ After creating many groups in SketchUp (e.g., via a plugin like SketchFramer), R
 ### Fix
 
 1. **Purge unused definitions**:
-   - "If your code does not also purge the DefinitionList collection, the group geometry will still be held"
    - Window > Model Info > Statistics > Purge Unused
    - This removes unused component and group definitions
    - Frees the memory within SketchUp
 
 2. **Use `GC.start` in Ruby**:
-   - "You can also execute GC.start to have Ruby do a round of garbage collection"
    - For extension developers
    - Call `GC.start` after deleting groups
    - This forces Ruby garbage collection
@@ -224,22 +201,18 @@ After creating many groups in SketchUp (e.g., via a plugin like SketchFramer), R
    - `model.definitions.purge_unused`
 
 4. **Close and reopen SketchUp**:
-   - "Only working way which I know is to close/open Sketchup"
    - Save the model
    - Close SketchUp
    - Reopen the model
    - This resets the memory
 
 5. **Save, open empty, reopen**:
-   - "Save the model, open a new empty model, then reopen the working model"
    - On Mac, close the working document window
    - Open a new empty model
    - Then reopen the working model
    - This may free some memory
 
 6. **Check "show nested components"**:
-   - "Check the 'show nested components' box in model info"
-   - "The model might have a lot more content than you realize"
    - Hidden nested components consume memory
    - Purge them if unused
 
@@ -250,7 +223,6 @@ After creating many groups in SketchUp (e.g., via a plugin like SketchFramer), R
    - And reduces memory usage
 
 8. **Monitor definition count**:
-   - "Be aware of the component definition count as your extension does its thing"
    - For extension developers
    - Track the number of definitions
    - Purge unused definitions regularly
@@ -272,7 +244,6 @@ Mac users experience SketchUp eating memory over time. RAM usage grows continuou
 ### Fix
 
 1. **Close unused documents**:
-   - "They rarely close SketchUp and they have multiple documents open"
    - Close documents you're not actively working on
    - On Mac, close the document window (not just minimize)
    - This frees the document's memory
@@ -290,7 +261,6 @@ Mac users experience SketchUp eating memory over time. RAM usage grows continuou
    - You may be surprised by the count
 
 4. **Restart SketchUp regularly**:
-   - "After open the memory usage reset and it is again low RAM (300-1000MB)"
    - Save all documents
    - Close SketchUp completely
    - Reopen only the document you need

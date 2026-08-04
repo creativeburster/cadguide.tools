@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.comsol.com/product-update/6.4"
-  - "https://www.comsol.com/product-update/6.3"
-  - "https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/comsol_ref_modeling.19.041.html"
 ---
 
 # COMSOL Multiphysics 6.4 Parametric Sweep Out of Memory with Part Instances, Pressure Acoustics BEM Convergence Slow with Old Stabilization Expression, Layered Shell and Contact Feature Simultaneous OOM Crash, Changes from Default Settings Unknown Default Values After 6.4 Update, and Implicit Time-Dependent Solver Memory Peak with Segregated Nonlinear Solver: Iterative Solver Selection, Stabilization Expression Update, Contact Removal, Settings Reset, and 6.3 Update 3 Memory Reduction
@@ -31,20 +28,13 @@ When running a parametric sweep with part instances in COMSOL 6.4, the simulatio
 ### Fix
 
 1. **Update to COMSOL 6.4 update 2 or later**:
-   - "Fixed a problem where parametric sweeps with part instances could run out of memory"
-   - "For a large number of parameter values"
    - Install update 2 (build 6.4.0.378)
    - Released March 19, 2026
 
 2. **Use iterative linear system solver**:
-   - "Check that you have selected an iterative linear system solver"
-   - "Normally you do not need to worry about which solver to use"
-   - "Because the physics interface makes an appropriate default choice"
    - Verify the solver is iterative, not direct
 
 3. **Use MUMPS or PARDISO out-of-core solvers**:
-   - "The MUMPS and PARDISO out-of-core solvers can make use of available disk space"
-   - "To solve large models that do not fit in the available memory"
    - Enable out-of-core mode
    - For MUMPS or PARDISO solvers
 
@@ -55,20 +45,15 @@ When running a parametric sweep with part instances in COMSOL 6.4, the simulatio
    - Between parameter values
 
 5. **Use symmetry to reduce model size**:
-   - "Often you can find symmetry planes and reduce the model to half, a quarter, or even an eighth"
-   - "Memory usage does not scale linearly but rather polynomially (Cnk, k > 1)"
    - Use symmetry to reduce memory
    - By more than half
 
 6. **Use linear elements**:
-   - "Using linear elements if this is the default setting in some physics interfaces"
    - Switch to linear elements
    - Instead of quadratic
    - To reduce memory usage
 
 7. **Monitor memory usage**:
-   - "You can monitor the memory use in the lower-right corner of the COMSOL Desktop"
-   - "Where the program displays the amount of physical memory and total virtual memory used"
    - Watch the memory indicator
    - During the parametric sweep
 
@@ -89,13 +74,9 @@ Models using the Pressure Acoustics, Boundary Elements interface converge slowly
 ### Fix
 
 1. **Update the stabilization expression manually**:
-   - "For models created in earlier versions"
-   - "You can take advantage of this new formulation"
-   - "By manually updating the stabilization expression to abs(pabe.k[m])"
    - Replace the old expression in the Pressure Acoustics settings
 
 2. **Update to COMSOL 6.3 update 1 or later**:
-   - "Which is the default for models created in version 6.3 update 1 and later"
    - Install COMSOL 6.3 update 1 or later
    - New models will automatically use
    - The improved stabilization expression
@@ -147,8 +128,6 @@ When a Layered Shell interface and a contact feature are simultaneously present 
 ### Fix
 
 1. **Update to COMSOL 6.3 update 1 or later**:
-   - "Fixed an out-of-memory error that could occur"
-   - "When a Layered Shell interface and a contact feature were simultaneously present"
    - Install COMSOL 6.3 update 1 or later
    - Which includes the fix
 
@@ -205,7 +184,6 @@ After updating to COMSOL 6.4, the Changes from Default Settings section in solve
 ### Fix
 
 1. **Reset changed properties manually**:
-   - "Previously changed properties remain listed with unknown default values"
    - Since Undo Changes doesn't work
    - Manually reset each changed property
    - To its default value
@@ -223,13 +201,11 @@ After updating to COMSOL 6.4, the Changes from Default Settings section in solve
    - Using the documented changes
 
 4. **Use the new format going forward**:
-   - "The storage format for Changes from Default Settings in solver features has been changed"
    - New changes made in 6.4
    - Will use the new format
    - And will work correctly with Undo Changes
 
 5. **Don't rely on Undo Changes for old models**:
-   - "Changes recorded in previous versions cannot be reverted by Undo Changes"
    - For old models
    - Don't expect Undo Changes to work
    - After updating to 6.4
@@ -263,8 +239,6 @@ When using the implicit time-dependent solver combined with the segregated nonli
 ### Fix
 
 1. **Update to COMSOL 6.3 update 3 or later**:
-   - "The memory peak for the initialization of the implicit time-dependent solvers has been reduced"
-   - "In particular when combined with the segregated nonlinear solver"
    - Install COMSOL 6.3 update 3 (build 6.3.0.638)
    - Released March 26, 2026
 

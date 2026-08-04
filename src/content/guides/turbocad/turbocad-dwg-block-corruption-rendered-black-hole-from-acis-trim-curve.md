@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://community.sketchucation.com/topic/139218/turbocad-19-delux"
-  - "https://theindustrialmaker.com/software-digital-tools/cad-software/three-common-turbocad-professional-failures-and-fixes"
-  - "https://docs.imsidesign.com/projects/TurboCAD-2022-Userguide/TurboCAD-2022-Userguide/Getting-Started-with-TurboCAD-2022/Importing-and-Exporting-Files.html"
 ---
 
 # TurboCAD DWG Block Corruption, Rendered Black Hole from ACIS Trim Curves, Parametric Constraint Freeze, Crash on macOS Sierra from Divide by Zero, and DWG Import Audit Mode for Corrupt Files

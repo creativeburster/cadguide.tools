@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://support.quadcept.com/en/quadcept-11-1-4-released/"
-  - "https://support.quadcept.com/en/quadcept-11-0-5-released/"
-  - "https://support.quadcept.com/en/quadcept-11-1-2-released/"
 ---
 
 # Quadcept 11.1.4 Component References Invalid After Update or Replace, STEP Export Errors for Certain Components, Crash When Opening Project with Panel Sheets, Crash During 3D Rendering with Synchronization, and Gerber Import Macro Aperture Error: Component Reference Fix, STEP Export Update, Panel Sheet Patch, 3D Sync Improvement, and Gerber Macro Fix
@@ -31,9 +28,6 @@ After updating or replacing components in Quadcept 11.1.0-11.1.3, component refe
 ### Fix
 
 1. **Update to Quadcept 11.1.4**:
-   - "Improved an issue where"
-   - "Component references became invalid"
-   - "After updating or replacing components"
    - Update to 11.1.4
 
 2. **Verify component references after update**:
@@ -61,14 +55,9 @@ After updating or replacing components in Quadcept 11.1.0-11.1.3, component refe
    - Library definitions
 
 6. **Check for footprint assignment errors**:
-   - "Fixed an issue where an unintended"
-   - "Database was referenced during netlist input"
-   - "Resulting in a footprint assignment error"
    - Check footprint assignments
 
 7. **Verify footprint updates**:
-   - "Fixed an issue where footprint shapes"
-   - "Were not updated during component updates"
    - Verify footprints
    - Are updated correctly
 
@@ -89,9 +78,6 @@ When exporting PCB data to STEP format, errors occur for certain components. The
 ### Fix
 
 1. **Update to Quadcept 11.1.4**:
-   - "Improved an issue where errors occurred"
-   - "For certain components when exporting"
-   - "PCB data to STEP"
    - Update to 11.1.4
 
 2. **Check component geometry**:
@@ -101,8 +87,6 @@ When exporting PCB data to STEP format, errors occur for certain components. The
    - To avoid errors
 
 3. **Verify STEP registration**:
-   - "Components with registered STEP geometry"
-   - "Are excluded from height restrictions"
    - Verify STEP geometry
    - Is properly registered
 
@@ -113,8 +97,6 @@ When exporting PCB data to STEP format, errors occur for certain components. The
    - Before export
 
 5. **Use revised STEP output**:
-   - "Part output specifications for STEP export"
-   - "Have been partially revised"
    - Use revised
    - STEP output
 
@@ -125,8 +107,6 @@ When exporting PCB data to STEP format, errors occur for certain components. The
    - Identify problem components
 
 7. **Verify 3D shape preview**:
-   - "Added 3D shape preview display"
-   - "To the CCM Component Search dialog"
    - Use 3D preview
    - To verify geometry
 
@@ -147,9 +127,6 @@ When opening a project that contains panel sheets, Quadcept crashes. The crash o
 ### Fix
 
 1. **Update to Quadcept 11.0.5 or later**:
-   - "Fixed an issue where opening a project"
-   - "Containing panel sheets could cause"
-   - "The CAD software to crash"
    - Update to 11.0.5+
 
 2. **Remove panel sheets before opening**:
@@ -183,10 +160,6 @@ When opening a project that contains panel sheets, Quadcept crashes. The crash o
    - And crash details
 
 7. **Check for CCM review crash**:
-   - "Fixed an issue where opening"
-   - "The setting dialog for a footprint"
-   - "Under CCM review caused the CAD"
-   - "Software to crash"
    - Check CCM review settings
 
 ### Community Report
@@ -206,9 +179,6 @@ Quadcept crashes during 3D rendering. The crash occurs when the 3D view is synch
 ### Fix
 
 1. **Update to Quadcept 11.1.2 or later**:
-   - "Improved an issue where"
-   - "The system could crash"
-   - "During 3D rendering"
    - Update to 11.1.2+
 
 2. **Disable 3D synchronization**:
@@ -230,8 +200,6 @@ Quadcept crashes during 3D rendering. The crash occurs when the 3D view is synch
    - 3D sync
 
 5. **Update 3D shape preview**:
-   - "Added 3D shape preview display"
-   - "To the CCM Component Search dialog"
    - Use 3D preview
    - To verify before rendering
 
@@ -264,9 +232,6 @@ When importing Gerber data containing certain macro apertures, an error occurs. 
 ### Fix
 
 1. **Update to Quadcept 11.1.0 or later**:
-   - "Fixed an error that occurred"
-   - "When importing Gerber data"
-   - "Containing certain macro apertures"
    - Update to 11.1.0+
 
 2. **Check macro aperture definitions**:
@@ -294,14 +259,10 @@ When importing Gerber data containing certain macro apertures, an error occurs. 
    - Compliant
 
 6. **Check for DXF import issues**:
-   - "Improved an issue where errors"
-   - "Occurred when importing certain DXF files"
    - Check DXF import
    - For similar issues
 
 7. **Check DXF spline input**:
-   - "Improved input accuracy"
-   - "For DXF files containing splines"
    - Verify DXF spline
    - Input accuracy
 

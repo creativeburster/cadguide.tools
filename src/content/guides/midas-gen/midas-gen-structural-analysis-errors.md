@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://support.midasuser.com/hc/en-us/articles/49481841031449--GEN-FAQ-What-Does-the-Warning-DISPLACEMENT-AT-NODE-NO-IS-ABNORMAL-Mean"
-  - "https://gtc.midasuser.com/helpdesk/KB/View/19403071-convergence"
-  - "https://gtc.midasuser.com/helpdesk/KB/View/23324665-how-to-resolve-the-crashing-error-caused-by-multilinear-elastic-link-"
 ---
 
 # Midas Gen Structural Analysis Errors: Displacement Abnormal from Insufficient Boundary Conditions and Beam End Releases Requiring Constraint Correction, Non-Linear Time History Zero Section Properties from Dummy Wireframe Members Requiring Deletion or Property Assignment, Error 2103 Convergence Failure from Non-Linearity Requiring Initial Stiffness Scheme or Strength Increase, Multi-Linear Elastic Link Crash from Zero Stiffness Requiring Non-Zero but Negligible Value, and DOF Singular from Pin-Pin Connected Elements Requiring Single Element End Release
@@ -31,37 +28,28 @@ Warning message: "DISPLACEMENT RY AT NODE NO. 358 IS ABNORMAL" or "DISPLACEMENT 
 ### Fix
 
 1. **Review and correct boundary conditions**:
-   - "Ensure sufficient constraints exist for all DOFs where necessary"
-   - "Confirm that the overall model has adequate support to avoid rigid body motion"
    - Check all support definitions
    - Verify the model is properly constrained in all 6 DOFs
 
 2. **Adjust beam end releases**:
-   - "Avoid applying releases to all connected members at the same node"
-   - "Preferably, apply releases to only one element per node connection"
    - If multiple elements meet at a node, release only one
    - Keep at least one element rigid at each node
 
 3. **Use point spring supports**:
-   - "Apply point springs with very low stiffness to stabilize unconstrained nodes"
-   - "After analysis, verify that these springs show near-zero reactions"
    - Add springs with stiffness like 0.001 kN/mm
    - This provides numerical stability without affecting results
 
 4. **Check reaction forces**:
-   - "Artificial spring supports should exhibit negligible reaction forces"
    - If springs show significant reactions, the constraint is not artificial
    - Increase the model's actual constraints
    - Remove or reduce the artificial springs
 
 5. **Review displacement patterns**:
-   - "Displacement contours should be reasonable and continuous"
    - If displacement is extremely large at one node, it's likely unconstrained
    - Check the displacement contour plot
    - Identify and fix the unconstrained area
 
 6. **Progressive model validation**:
-   - "Start with a fully restrained model and progressively release DOFs"
    - Begin with all nodes fixed
    - Release DOFs one at a time
    - Identify which release causes the instability
@@ -83,7 +71,6 @@ Running a non-linear time history analysis with direct integration method. Error
 ### Fix
 
 1. **Delete wireframe members**:
-   - "If you delete the wireframe members you should be able to run the analysis"
    - Remove all dummy/wireframe members from the model
    - These are not needed for analysis
    - Only for display or reference
@@ -101,7 +88,6 @@ Running a non-linear time history analysis with direct integration method. Error
    - The flexibility matrix is non-singular
 
 4. **Check for 2D model issues**:
-   - "This type of the problem may happen in the nonlinear time history analysis of the 2D-model with zero section properties related to the out-of-plane deformation"
    - In 2D models, out-of-plane properties may be zero
    - Assign non-zero out-of-plane properties
    - Or use 3D analysis instead
@@ -135,31 +121,25 @@ Error 2103 is a convergence failure in non-linear analysis. The solver can't fin
 ### Fix
 
 1. **Use initial stiffness scheme**:
-   - "I'm recommending you to carry out the analysis with initial stiffness scheme"
-   - "You can use this method when the non-linearity is so weak with your material properties"
    - Change the convergence method to initial stiffness
    - This may help with weak non-linearity
 
 2. **Increase soil material strength**:
-   - "Please increase the strength of soil material"
    - If the soil is too weak, the analysis can't converge
    - Increase cohesion, friction angle, or stiffness
    - This provides more resistance for convergence
 
 3. **Install more structural reinforcement**:
-   - "Or install more structural reinforcement"
    - Add more supports, anchors, or structural elements
    - This provides additional stiffness
    - Helps the solver find equilibrium
 
 4. **View partial results from failed phase**:
-   - "You can see separated steps from result work-tree"
    - In the results work-tree
    - Expand the failed phase
    - View results from individual steps before failure
 
 5. **Check mesh quality**:
-   - "Maybe it is a problem in the mesh, soil, construction etc."
    - Review mesh quality
    - Check for distorted elements
    - Refine mesh in critical areas
@@ -193,7 +173,6 @@ Analysis crashes when using multi-linear elastic links. The analysis is not runn
 ### Fix
 
 1. **Use non-zero but negligible stiffness**:
-   - "Kindly update the multi-linear property such that the stiffness value is negligible but not zero"
    - Instead of zero stiffness, use a very small value
    - For example: 0.0001 kN/m instead of 0 kN/m
    - This prevents the singular matrix
@@ -239,7 +218,6 @@ Warning: "DOF MAY BE SINGULAR" and "DISPLACEMENT DZ AT NODE NO. 643 IS ABNORMAL"
 ### Fix
 
 1. **Apply end release to only one element**:
-   - "Change those condition to apply beam end release on the only one of the horizontal or vertical elements"
    - At each beam-column connection
    - Release either the beam OR the column, not both
    - This leaves one element rigid at the node

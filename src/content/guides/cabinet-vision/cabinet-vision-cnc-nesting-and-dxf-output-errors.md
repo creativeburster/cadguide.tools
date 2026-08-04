@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=868129"
-  - "https://woodweb.com/cgi-bin/forums/cabinetmaking.pl?read=861432"
-  - "https://woodweb.com/cgi-bin/forums/cad.pl?read=864092"
 ---
 
 # Cabinet Vision CNC Nesting and DXF Output Errors: Nested Pocketing Cutter Not Exiting from Machine Optimizer Removing Lead Out Requiring Machine Setting Adjustment, Door Reveals Off from Premill Edgebanding Not Configured Requiring S2M Preferences Setup, DXF Output Missing Operations from License File or Unassigned Tools Requiring License Check and Tool Assignment, Tool Not Found at Machine from Incorrect Tool ID Requiring Machine Configuration Sync, and 64-Bit Migration Performance Degradation and Feature Breakage Requiring Workarounds and Patience
@@ -76,33 +73,24 @@ Cabinet Vision doesn't know the edgebander is premilling. Without the premill se
 
 ### Fix
 
-1. **Configure premill edgebanding in S2M Center**:
-   - "In the S2M Center tab, go to File > Preferences > Geometry"
-   - "Verify there's a check in the 'Pre-mill edgebanding' box"
-   - "The drop down box is set to Fixed"
-   - "Enter the amount your bander's premill station is set to"
-   - "It will add that amount to the door dimensions"
+1. **Configure premill edgebanding in S2M Center**.
 
 2. **Verify banding material thickness**:
-   - "Verify your banding material has the right thickness in the Material Manager"
    - Open Material Manager
    - Check the banding material thickness
    - Ensure it matches the actual tape thickness (0.8mm)
 
 3. **Verify material schedule banding setting**:
-   - "Verify the material schedule for your door type shows Banding: Yes in the left hand column"
    - If banding is set to No, CV won't account for banding thickness
    - Set to Yes for all banded edges
    - This ensures CV adjusts dimensions correctly
 
 4. **Verify parts dimensions**:
-   - "Are you verifying the parts to see if they are correct size?"
    - Use CV's verify function to check part dimensions
    - Compare with expected dimensions
    - If dimensions are wrong, the premill setting is the likely cause
 
 5. **Check hinge setup**:
-   - "Could be your hinges are not setup correctly"
    - Verify hinge boring positions
    - Incorrect hinge setup can cause door alignment issues
    - Check hinge type and overlay settings
@@ -124,19 +112,16 @@ Moving from a beam saw point-to-point setup to a nested router. DXF output is mi
 ### Fix**
 
 1. **Check the license file**:
-   - "99% of missing functions if an issue with the license file"
    - Contact CV support to verify the license includes nested router operations
    - Request a license file update if needed
    - Consider a software-based license backup
 
 2. **Assign tools to operations**:
-   - "First check whether you assigned tools for those operations"
    - In S2M Center > Machine Setup
    - Verify each operation has a tool assigned
    - Dados, hinge boring, lockdowel channels all need tool assignments
 
 3. **Check machine configuration**:
-   - "When moving from a beam saw point-to-point setup to a nested router, it's common to run into missing operations"
    - The machine configuration needs to be updated for the nested router
    - Create a new machine profile for the nested router
    - Assign all operations to the new machine
@@ -148,7 +133,6 @@ Moving from a beam saw point-to-point setup to a nested router. DXF output is mi
    - Enable them in the operation settings
 
 5. **Check for runtime errors**:
-   - "Only a handful of times it's a runtime error"
    - Check CV's error log
    - Look for runtime errors during DXF generation
    - Contact CV support if runtime errors are found
@@ -188,8 +172,6 @@ The Tool ID in Cabinet Vision doesn't match the machine's actual tool numbering.
    - Use the correct ID range for the spindle
 
 4. **Contact CV or machine support**:
-   - "Call our office. I'm sure one of our techs can answer your question"
-   - "Might be a CV issue, if so we will know this as well"
    - Contact CV support or the machine manufacturer
    - They can verify the correct tool ID configuration
 
@@ -216,8 +198,6 @@ After upgrading to Cabinet Vision 2022 (64-bit), performance is slower with each
 ### Fix**
 
 1. **Clean up drawing scenes manually**:
-   - "I never use a drawing scene without cleaning it up first"
-   - "Send to drawing, remove extra lines, redimension, hatch, annotate"
    - This works around auto-dimensioning issues
    - And produces cleaner drawings
 
@@ -228,25 +208,20 @@ After upgrading to Cabinet Vision 2022 (64-bit), performance is slower with each
    - These are temporary workarounds until bugs are fixed
 
 3. **Optimize 3D view performance**:
-   - "CV would ignore it and still struggle to hit 5 FPS when rotating a 3D view"
    - Reduce 3D detail level in settings
    - Use 2D views for most work
    - Only switch to 3D when necessary
 
 4. **Keep CV updated**:
-   - "I think they are working on that now that the whole 64 bit thing is behind them"
    - Install the latest updates and service packs
    - Performance and stability improvements are being released
    - Monitor eSupport for fixes
 
 5. **Consider alternative software**:
-   - "I'm done with it. The software is constantly breaking"
-   - "I'm certain at some point in the near future I'll get mad enough to ask for a Microvellum demo"
    - If CV's issues are too disruptive
    - Evaluate alternatives: Microvellum, Mozaik, SketchList
 
 6. **Use AutoCAD for complex drawing**:
-   - "I hate having to draw everything in AutoCAD and then draw it all over again in Cabinet Vision"
    - For complex drawings, use AutoCAD first
    - Import the DXF into CV for cutlisting and CNC
    - This leverages AutoCAD's superior drafting tools

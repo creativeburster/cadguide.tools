@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-capture-cis/65835/how-to-fix-errors-orcap-2434-and-orcap-2435-with-a-design-that-was-done-by-an-outside-contractor"
-  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/62829/loading-footprints-keep-getting-db-doctor-message"
-  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/65262/smd-pad-with-opening"
 ---
 
 # Cadence Allegro PCB Library Link and Padstack Errors: ORCAP-2434 Footprint Missing from Library Path Requiring Path Configuration and Footprint Reassociation, ORCAP-2435 Pin Count Mismatch from Case-Sensitive Alphanumeric Pin Numbers Requiring Casing Verification, DB Doctor Required When Loading 16.5 Footprints in 23.1 Requiring Batch dbdoctor_ui.exe Update, SMD Pad with Void Error SPMHCS-3 Shape Symbol Cannot Have Void Requiring Split Pad or Shape Body Workaround, and Replacing Padstacks Forces Batch DRC Requiring Acceptance of Mandatory DRC Check
@@ -31,7 +28,6 @@ The footprint library path in Capture.ini doesn't include the directory where th
 ### Fix
 
 1. **Check Capture.ini library paths**:
-   - "Are you using relative paths or absolute paths in Capture.ini?"
    - Open Capture.ini in a text editor
    - Check the `LIBRARYPATH` entries
    - Add the directory containing the missing footprints
@@ -55,13 +51,11 @@ The footprint library path in Capture.ini doesn't include the directory where th
    - Reassociate all affected parts
 
 5. **Check for duplicate library names**:
-   - "Make sure that same named footprint is not present in the library path"
    - If two libraries have the same footprint name
    - Capture may pick the wrong one
    - Remove duplicates from the path
 
 6. **Prevent future issues**:
-   - "How did this issue even happen and how do I make sure it does not happen again?"
    - Establish a shared library location
    - Use version control for libraries
    - Document library paths for all users
@@ -83,20 +77,16 @@ Warning: "ORCAP-2435: Number of pins in footprint XXXXX and instance XXX does no
 ### Fix
 
 1. **Verify pin number casing**:
-   - "Alphanumeric pin numbers are case sensitive"
-   - "Pin number's casing should be same in the schematic symbol and the footprint"
    - Check each pin number in the schematic symbol
    - Compare with the footprint pin numbers
    - Match the casing exactly (e.g., "A1" not "a1")
 
 2. **Check for duplicate footprint names**:
-   - "Make sure that same named footprint is not present in the library path"
    - A different version of the footprint may be loaded
    - With different pin numbering
    - Remove duplicates from the library path
 
 3. **Check for hidden pins**:
-   - "I checked for hidden pins and there are none that show up"
    - In the symbol editor, check all pin visibility
    - Some symbols have hidden power pins
    - Make all pins visible for verification
@@ -108,7 +98,6 @@ Warning: "ORCAP-2435: Number of pins in footprint XXXXX and instance XXX does no
    - Save to the correct library
 
 5. **Use the Cadence support article**:
-   - "Article (20495508) Title: WARNING(ORCAP-2435): Number of pins in footprint XXXXX and instance XXX does not match"
    - Check the Cadence support portal
    - Follow the article's specific steps
 
@@ -129,9 +118,6 @@ Footprints created in Allegro 16.5 use an older database format. Allegro 23.1 re
 ### Fix
 
 1. **Use dbdoctor_ui.exe for batch processing**:
-   - "There is a 'separate' executable GUI version of DBDoctor in the \tools\bin"
-   - "This version supports wild cards. No need to load each footprint"
-   - "You can get that to run on all files in a folder by specifying a wildcard"
    - Example: `C:\folder\lib\*.*`
 
 2. **Run dbdoctor_ui.exe**:
@@ -141,7 +127,6 @@ Footprints created in Allegro 16.5 use an older database format. Allegro 23.1 re
    - This updates all design files in the folder
 
 3. **Update padstacks separately**:
-   - "I have to open the footprint in 23.1, save the padstack then save the footprint"
    - After DB Doctor updates the footprints
    - Open each footprint in 23.1
    - Save the padstacks and the footprint
@@ -175,32 +160,24 @@ Cadence Allegro doesn't allow voids in shape symbols used for padstacks. The sha
 ### Fix
 
 1. **Use a shape body with single pin**:
-   - "You could treat the part as a one pin part only and draw the body as a shape around the pin"
-   - "In the PCB editor you would assign a net to the shape — Gnd"
-   - "From the perspective of the PCB Editor there is only one pin even though the body exists too as a shape"
    - This simplifies part creation
 
 2. **Split the ground pad into two halves**:
-   - "It can probably work similarly well if the ground pad is split in two halves with a gap in between"
    - Create two separate pads with different pin numbers (e.g., 1 and 2)
    - Both connect to GND net
    - This avoids the duplicate pin number error
 
 3. **Manually create void after importing**:
-   - "One workaround is to manually create a void on the pad after importing the .dra into the board"
    - Create the padstack without the void
    - Place the footprint in the board
    - Add the void manually in the board editor
 
 4. **Use the manufacturer's footprint**:
-   - "The manufacturer does offer footprints for it but you have to contact them"
    - Contact the connector manufacturer
    - Request the Allegro footprint
    - This may have the correct padstack definition
 
 5. **Check board material requirements**:
-   - "It would be good to ask the MFR if there is a particular board material that is needed to meet spec"
-   - "Depending on the intended frequency a standard FR4 board may not work very well above 1GHz"
    - High-frequency connectors may need specific PCB materials
    - Verify material compatibility before finalizing the footprint
 
@@ -221,8 +198,6 @@ Need to replace many padstacks in a design. Each time a padstack is replaced, Al
 ### Fix
 
 1. **Accept the mandatory DRC**:
-   - "It cannot be turned off"
-   - "This is required because this is a forced change and can potentially cause a serious DRC condition"
    - The DRC ensures the padstack change doesn't create violations
    - Accept the DRC after each replacement
 

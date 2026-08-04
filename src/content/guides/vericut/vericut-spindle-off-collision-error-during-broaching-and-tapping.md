@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.cgtech.com/viewtopic.php?id=2185"
-  - "https://forum.cgtech.com/viewtopic.php?id=498"
-  - "https://forum.cgtech.com/viewtopic.php?id=2080"
 ---
 
 # VERICUT Spindle Off Collision Error During Broaching and Tapping, Cutter Compensation Not Activated, False Collision Detection from Corrupted Fixture Model, C-Axis Turning Tool Spindle Off Check Override, and Broaching Cycle Not Cutting Stock: CTL File Configuration, Process Cutter Comp Setting, Model Replacement, and Macro Override
@@ -31,44 +28,37 @@ During simulation of a tapping cycle, VERICUT reports "Collision between cutter 
 ### Fix
 
 1. **Configure M29 as SpindleMotionCW in Word/Address**:
-   - "Do you have your control file setup to have it recognize M[#923] as SpindleMotionCW in the control word/address?"
    - Open Configuration > Word/Address
    - Find M29 in the M-word list
    - Change from `IgnoreMacro` to `SpindleMotionCW`
    - This tells VERICUT that M29 activates the spindle
 
 2. **Add SpindleMotionCCW for left-hand tapping**:
-   - "M29 is used for both right and left hand threads"
    - For G74 (left-hand tapping), M29 also needs SpindleMotionCCW
    - Add both SpindleMotionCW and SpindleMotionCCW to M29
    - Or use separate M-codes for CW and CCW
 
 3. **Check the G84 and G74 cycle definitions**:
-   - "G74 (G84) ** Variable 4009 Variable 4209 CyclesTap"
    - Verify the tapping cycle is correctly defined
    - In the Cycles section of the CTL file
    - Ensure G84 and G74 are mapped to CyclesTap
 
 4. **Verify the return to initial plane (G99)**:
-   - "Is your return to initial plane correct in your .ctl file? (G99)"
    - Check that G99 is correctly defined
    - For the return to initial plane
    - An incorrect G99 definition can cause collision errors
 
 5. **Check if the model is STL**:
-   - "Is it an .stl? I have issues with holes & .stl files."
    - STL models can have precision issues with holes
    - Try using a different model format (STEP, IGES)
    - Or increase the STL precision
 
 6. **Test with M3 S0 as workaround**:
-   - "The tool will cut like a boring bar if I throw a M3 S0 in"
    - Adding M3 S0 (spindle on at 0 RPM) before the tapping cycle
    - Tricks VERICUT into thinking the spindle is on
    - This is a workaround, not a proper fix
 
 7. **Contact CGTech tech support**:
-   - "If this doesn't work speak to your local CGTech Tech Support guy"
    - If configuring M29 doesn't resolve the issue
    - Contact CGTech support
    - Provide the CTL file and G-code
@@ -89,11 +79,7 @@ When simulating a tool path with cutter compensation applied, VERICUT doesn't ap
 
 ### Fix
 
-1. **Set Process Cutter Comp to On**:
-   - "Click on the Setup in the Project Tree"
-   - "At the bottom of the Project Tree there should be two tabs"
-   - "Click on the G-Code tab"
-   - "Where it says Process Cutter Comp change the pulldown to On - Default to Full Radius"
+1. **Set Process Cutter Comp to On**.
 
 2. **Choose the correct compensation mode**:
    - "On - Default to Full Radius" — uses the full tool radius for compensation
@@ -126,7 +112,6 @@ When simulating a tool path with cutter compensation applied, VERICUT doesn't ap
    - Then test with the actual program
 
 7. **Contact CGTech support**:
-   - "If this doesn't work speak to your local CGTech Tech Support guy"
    - If Process Cutter Comp is On but compensation still doesn't work
    - Contact CGTech support
    - Provide the project file and G-code
@@ -148,19 +133,13 @@ VERICUT reports a collision between the spindle and the fixture, but the tool an
 ### Fix
 
 1. **Replace the fixture model with simple shapes**:
-   - "Try to replace the fixture model with blocks and cylinders"
-   - "That represent the approximate size and shape"
-   - "And see if the collision is still detected"
    - If the collision disappears, the model is the problem
 
 2. **Export the fixture with a different file type**:
-   - "If you can, output your fixture with a different file type"
-   - "Like STEP, IGES or STL"
    - Different formats may not have the corrupted triangles
    - Try each format to see which works
 
 3. **Try a different output precision**:
-   - "Or try a different output precision"
    - When exporting the fixture model from the source CAD
    - Change the precision/tolerance settings
    - Higher precision may eliminate corrupted triangles
@@ -185,13 +164,11 @@ VERICUT reports a collision between the spindle and the fixture, but the tool an
    - Remove them before importing into VERICUT
 
 7. **Use the fixture from the working project**:
-   - "This set up I imported from difference Project file that was a good file"
    - If the fixture from the working project doesn't cause collisions
    - Use that fixture model instead
    - The original fixture model is corrupted
 
 8. **Don't rely on disabling collision detection**:
-   - "Even I disable collision detect in the Configuration /machine setting but still showing me the Error"
    - Disabling collision detection may not work for all collision types
    - Fix the model instead of trying to disable detection
    - The model corruption is the root cause
@@ -212,39 +189,18 @@ When simulating a 6-axis turning process on a milling machine (turning tool in t
 
 ### Fix
 
-1. **Add ActiveSpindleOnOffOverride macros to C-axis motion**:
-   - "Configuration > Word/Address... under Registers, select C"
-   - "Select the condition *, with CAxisMotion"
-   - "Right-click, Add/Modify"
-   - "Macro name = ActiveSpindleActiveToolAdd"
-   - "Macro name = ActiveSpindleOnOffOverride, Value = 1"
-   - "Add (leave the panel open to add more macros)"
-   - "Macro name = ActiveSpindleOnOffOverride, Value = 0"
-   - "Check the box 'Process After Motion'"
+1. **Add ActiveSpindleOnOffOverride macros to C-axis motion**.
 
 2. **This turns the spindle on with C-axis motion but off after**:
-   - "This will turn on the spindle with a C-axis motion"
-   - "But will turn it off immediately after the C axis command"
-   - "This will avoid the error without affecting your simulation"
    - The spindle is momentarily "on" during C-axis moves
 
 3. **Keep spindle on until next tool change (alternative)**:
-   - "You could turn on the spindle with C axis but only turn it off with the next tool change"
-   - "When this special turning tool is loaded, it will stay in a revolved state"
-   - "Until the next tool is loaded"
    - Add spindle off macros to the tool change macros
 
 4. **Accept slower simulation as trade-off**:
-   - "Simulation is even slower than before"
-   - "Because for every C move, VERICUT spins the active turning tool around Z axis"
-   - "Thus creating a revolved body"
-   - "These constant transformations slow down simulation"
    - This is a trade-off for avoiding the errors
 
 5. **Disable tool shape update (if possible)**:
-   - "Is it possible to disable this tool shape update?"
-   - "That would solve my problem"
-   - "I have searched for such a macro but haven't found it so far"
    - This macro may not exist
    - Contact CGTech support for guidance
 
@@ -277,34 +233,25 @@ When simulating a broaching cycle, VERICUT reports "Collision between Cutter of 
 ### Fix
 
 1. **Create the insert as a DXF sweep profile**:
-   - "So I drew the insert as a dxf file"
-   - "And made the insert that way"
-   - "Was able to sweep it to my thickness I needed"
-   - "And it works"
    - Create the insert profile as a DXF file
    - Import it into the tool definition
    - Sweep it to the required thickness
 
 2. **Give the insert sufficient thickness**:
-   - "Making a sweep of the insert profile and giving it about .001 thickness"
    - The insert needs some 3D thickness
    - For VERICUT to recognize it as a cutting tool
    - Even a small thickness (.001) is sufficient
 
 3. **Use the BroachModeOnOff macro**:
-   - "I looked at the example broaching file provided"
-   - "Add the CGTECH_MACRO 'BroachModeOnOff' '' 1"
    - This enables broaching mode in VERICUT
    - But it also requires proper insert geometry
 
 4. **Check the spindle configuration for broaching**:
    - Broaching typically doesn't use spindle rotation
-   - "I have used not spin with spindle turned that off and on under the tool library"
    - Ensure the spindle is configured correctly for broaching
    - The spindle may need to be off for broaching
 
 5. **Use M3 S0 or M13 S0 for spindle control**:
-   - "The tool will cut like a boring bar if I throw a M3 S0 OR M13 S0 in"
    - Adding M3 S0 (spindle on at 0 RPM)
    - May help VERICUT recognize the tool as cutting
    - Even with the spindle not rotating
@@ -316,7 +263,6 @@ When simulating a broaching cycle, VERICUT reports "Collision between Cutter of 
    - Ensure the cutting zone matches the insert geometry
 
 7. **Reference the broaching example file**:
-   - "I looked at the example broaching file provided"
    - VERICUT includes a broaching example
    - Study the example's tool definition and CTL configuration
    - Model your tool after the example

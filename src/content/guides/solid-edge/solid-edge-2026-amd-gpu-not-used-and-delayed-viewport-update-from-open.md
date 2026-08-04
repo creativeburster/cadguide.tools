@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00001GH2NNKA1/serious-graphicsrendering-issue-in-solid-edge-2026-amd-gpu-not-used-delayed-viewport-update"
-  - "https://community.sw.siemens.com/s/question/0D5Vb000018s5tnKAA/se2026-mp4-is-crashing-while-using-hole"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00001KKtsNKAT/designcenter-solid-edge-2026-update-6-announcement"
 ---
 
 # Solid Edge 2026 AMD GPU Not Used and Delayed Viewport Update from OpenGL Hardware Acceleration Failure, Access Violation 0xc0000005 Crash in Hole Command on Frame Environment Save As Parts, Assembly File Crash After Part Edited Twice with Section View Active, Parts Library Navigation Very Slow in Solid Edge 2026, and Crash When Opening Large Assembly from Update 6: GPU Driver Update, Update 3 Rollback, Section View Disable, Settings Wizard Reset, and Update 6 Install
@@ -31,44 +28,31 @@ In Solid Edge 2026 with AMD Radeon RX 9060 XT, the viewport does not update in r
 ### Fix
 
 1. **Update AMD GPU drivers**:
-   - "Latest AMD driver installed"
-   - "Updated GPU drivers (latest AMD Adrenalin)"
    - Update to
    - Latest AMD driver
 
 2. **Run Solid Edge in Safe mode**:
-   - "Run Solid Edge in safe mode"
-   - "C:\Program Files\Siemens\Solid Edge 2026\Program\Edge.exe /Safe"
    - Run in Safe mode
    - To disable add-ins
 
 3. **Reset graphics settings**:
-   - "Reset all graphics settings in Solid Edge"
    - Reset graphics
    - Settings to
    - Defaults
 
 4. **Delete AppData configuration files**:
-   - "Deleted user/AppData configuration files"
    - Delete configuration
    - Files and
    - Restart
 
 5. **Verify hardware acceleration**:
-   - "Checked hardware acceleration settings"
-   - "(enabled)"
    - Verify hardware
    - Acceleration is enabled
 
 6. **Use Settings and Preferences Wizard**:
-   - "Using the Solid Edge Settings"
-   - "And Preferences Wizard to reset"
-   - "Solid Edge to factory settings"
    - Use Settings Wizard
 
 7. **Check View Overrides settings**:
-   - "Anti-alias level = None"
-   - "Disable shadows, reflections, textures"
    - Disable view
    - Overrides
 
@@ -89,45 +73,26 @@ Solid Edge 2026 Update 4 crashes when using the Hole command. The crash occurs w
 ### Fix
 
 1. **Revert to Update 3**:
-   - "Until we get the crash investigated"
-   - "And resolved, it may be best"
-   - "For you to revert to Update 3"
    - Revert to Update 3
 
 2. **Open a case with Siemens support**:
-   - "Have you opened a case?"
-   - "If not, please do so"
-   - "And let me know the number"
    - Open support case
 
 3. **Use native parts instead of Save As**:
-   - "I can add a hole without issue"
-   - "On my end with native parts"
    - Use native parts
    - Instead of Save As
 
 4. **Try 2027 Early Access Program**:
-   - "If you can reproduce on"
-   - "The latest 2027 Early Access Program"
-   - "(Beta) version"
    - Try 2027 EAP
 
 5. **Check hole database access**:
-   - "Have you got write access"
-   - "To your hole database"
-   - "And is SE looking in"
-   - "The correct location"
    - Check database access
 
 6. **Optimize parts before adding holes**:
-   - "Some frame members Saved As"
-   - "From the Frame Env have optimization issue"
    - Optimize parts
    - Before adding holes
 
 7. **Update NVIDIA driver if applicable**:
-   - "I updated the Nvidia driver lately"
-   - "Maybe this is the reason"
    - Check if GPU
    - Driver update caused issue
 
@@ -154,7 +119,6 @@ The assembly file crashes after a part is edited twice if the Section view is ac
    - Assembly
 
 2. **Update to Update 6**:
-   - "PR 11391086: Resolved"
    - In Update 6
    - Update to
    - Latest Update
@@ -206,20 +170,14 @@ Navigating in Parts Library is very slow, especially in Solid Edge 2026. The slo
 ### Fix
 
 1. **Update to Update 6**:
-   - "PR 11408577"
    - Resolved in
    - Update 6
    - Install Update 6
 
 2. **Use Solid Edge Settings Wizard**:
-   - "Using the Solid Edge Settings"
-   - "And Preferences Wizard to reset"
-   - "Solid Edge to factory settings"
    - Reset settings
 
 3. **Run in Safe mode**:
-   - "Run Solid Edge in safe mode"
-   - "C:\Program Files\Siemens\Solid Edge 2026\Program\Edge.exe /Safe"
    - Run in Safe mode
 
 4. **Check Parts Library location**:
@@ -235,14 +193,10 @@ Navigating in Parts Library is very slow, especially in Solid Edge 2026. The slo
    - To improve speed
 
 6. **Check View Overrides**:
-   - "Anti-alias level = None"
-   - "Disable shadows, reflections, textures"
    - Disable view
    - Overrides
 
 7. **Verify Arc-smoothness settings**:
-   - "Arc-smoothness = 3"
-   - "Auto-sharpen = Off"
    - Check view
    - Tab settings
 
@@ -263,7 +217,6 @@ Solid Edge crashes when opening a large assembly. The crash occurs during the as
 ### Fix
 
 1. **Update to Update 6**:
-   - "PR 11420773"
    - Resolved in
    - Update 6
    - Install Update 6
@@ -275,7 +228,6 @@ Solid Edge crashes when opening a large assembly. The crash occurs during the as
    - To reduce load
 
 3. **Open assembly in Safe mode**:
-   - "C:\Program Files\Siemens\Solid Edge 2026\Program\Edge.exe /Safe"
    - Open in
    - Safe mode
    - To disable add-ins
@@ -293,14 +245,10 @@ Solid Edge crashes when opening a large assembly. The crash occurs during the as
    - Full assembly
 
 6. **Update video drivers**:
-   - "Make sure your video drivers"
-   - "Are up to date"
    - Update video
    - Drivers
 
 7. **Check Teamcenter integration**:
-   - "PR 11417645: Solid Edge 2025 Update 12"
-   - "Crash Issue with Teamcenter Integration"
    - Check Teamcenter
    - Integration settings
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://support.tekla.com/article/how-do-i-resolve-tedds-add-in-disabled-and-or-teddsadd-in-error-287-in-tedds-for-word"
-  - "https://support.tekla.com/article/i-cannot-calculate-within-tedds-the-error-message-failed-to-get-the-active-instance-of-word"
-  - "https://support.tekla.com/doc/tekla-tedds/2025/ref_errormessages"
 ---
 
 # Tekla Tedds Add-In Disabled Error 287, Word Instance Failed Error, VBL Variable File Out of Sync, Library Access System Memory Errors, and Calculation Fatal Error: Word Add-In Re-enable, Office Reinstall, VBL File Deletion and Recalculation, and Memory Management
@@ -30,14 +27,7 @@ When running Tedds for Word, a message appears stating "The Tekla Tedds Add-in i
 
 ### Fix
 
-1. **Re-enable the add-in in Word Options**:
-   - "Run Microsoft Word on its own"
-   - "Open Word Options (File > Options)"
-   - "Select the Add-ins page"
-   - "Select 'Disabled Items' from the Manage options at the bottom"
-   - "Enable anything listed as disabled to do with Tedds"
-   - "OK and close Microsoft Word"
-   - "Now try launching Tedds for Word"
+1. **Re-enable the add-in in Word Options**.
 
 2. **Run Word as administrator**:
    - The add-in "can only be connected or disconnected by an administrator"
@@ -86,29 +76,21 @@ When running any calculation command in Tedds, an error prevents calculating. Er
 ### Fix
 
 1. **Full uninstall and reinstall of Microsoft Office**:
-   - "In most cases carrying out a full Uninstall and Reinstall of Microsoft Office should resolve the problem"
-   - "While a Repair may resolve the issue we have often found that it does not"
    - Close all Office applications (Outlook, Excel, etc.)
    - Use the Microsoft Office uninstall support tool
    - Reboot after reinstall
    - Try Tedds for Word again
 
 2. **Fix registry TypeLib version keys**:
-   - "Browse to HKEY_CLASSES_ROOT\Wow6432Node\TypeLib\{00020905-0000-0000-C000-000000000046}"
    - Check for sub-keys: 8.4 (Office 2007), 8.5 (Office 2010), 8.6 (Office 2013), 8.7 (Office 2016)
-   - "If a key exists for a version of Office later than the version you have installed, rename the key"
    - Put an underscore before the later version (e.g., `_8.7`)
    - Try calculating in Tedds for Word
 
 3. **Create a registry file for quick workaround**:
-   - "Creating a registry file to remove this key is recommended"
-   - "Which will provide a quick workaround in case the issue returns"
    - Save the registry edit as a .reg file
    - Run it if the problem recurs
 
 4. **Check for Lync or other Office components**:
-   - "The key for the later version Office component e.g. Lync is repaired/updated/patched"
-   - "Then the later version registry key is likely to be restored and re-create the problem"
    - If Lync or other Office components are installed
    - They may register newer TypeLib versions
    - Remove or update them
@@ -120,8 +102,6 @@ When running any calculation command in Tedds, an error prevents calculating. Er
    - It should say "64-bit"
 
 6. **Contact Trimble support**:
-   - "If the issue persists after attempting the above"
-   - "Please contact your local Trimble Helpdesk for further information"
    - Provide the exact error messages
    - Include Office version and Tedds version
 
@@ -142,47 +122,37 @@ Tedds displays: "The Tedds document variable file (.VBL) does not exist; a compl
 ### Fix
 
 1. **Recalculate the entire document**:
-   - "Recalculate the entire document in order to recreate it"
    - Open the document in Tedds for Word
    - Run a full recalculation
    - This recreates the VBL file
 
 2. **Delete the VBL file manually**:
-   - "You must delete this file and then perform a complete document re-calculation"
    - Close the document in Tedds
    - Find the .VBL file (same name as the Word document, .VBL extension)
    - Delete it manually
    - Open the document and recalculate
 
 3. **Check for read-only VBL file**:
-   - "This may occur when the variable file is set to be read-only"
    - Right-click the .VBL file > Properties
    - Uncheck "Read-only"
    - Try recalculation again
 
 4. **Fix corrupt VBL file**:
-   - "The variable file that you are using has been deleted or has become corrupt"
-   - "Save and close the document. Delete the .VBL file. Open the document. Recalculate the document."
    - This creates a fresh VBL file
 
 5. **Unable to add section to variables file**:
-   - "The variable file either does not exist, or it is corrupt"
    - Same fix: Save and close, delete .VBL, reopen, recalculate
 
 6. **Unable to open variables file**:
-   - "The variable file has been deleted or has become corrupt"
    - Save and close the document
    - Delete the .VBL file
    - Open and recalculate
 
 7. **Unable to tidy temporary variable file**:
-   - "The error may occur when you are running low on disk space"
-   - "Remove any unwanted files from your disk"
    - Free up disk space
    - Recalculate the document
 
 8. **Unable to create temporary VBL file**:
-   - "The error usually occurs when your computer is running low on memory"
    - Close other applications
    - Restart the computer
    - Try again
@@ -204,21 +174,17 @@ Tedds displays: "Unable to launch the Library Access System," "Failed to get Cli
 ### Fix
 
 1. **Close applications to free memory**:
-   - "Close some applications. Try again."
    - Close other Office applications
    - Close browser tabs
    - Close unnecessary programs
    - Restart Tedds
 
 2. **Close calculation sets**:
-   - "Close calculation sets or other running applications. Try again."
    - Close open calculation sets in Tedds
    - This frees memory used by the sets
    - Reopen only what you need
 
 3. **Free up disk space**:
-   - "The error is most likely to occur because the disk is full"
-   - "Delete some old files or documents"
    - Clear temporary files
    - Empty the recycle bin
    - Ensure at least 1GB free space
@@ -231,25 +197,21 @@ Tedds displays: "Unable to launch the Library Access System," "Failed to get Cli
    - Restart the computer if needed
 
 5. **Check for invalid library file names**:
-   - "The name of the library file that you have given contains invalid characters"
    - Check the library file name
    - Remove special characters
    - Use only alphanumeric characters and underscores
 
 6. **Fix incorrect set format**:
-   - "The format of the set which you have selected is incorrect"
    - Check the calculation set format
    - Re-create the set if corrupted
    - Import from a backup
 
 7. **Fix file does not exist error**:
-   - "You have entered a set name which does not exist"
    - Check the set name spelling
    - Browse to select the correct set
    - Verify the set file exists
 
 8. **Fix clipboard data validation**:
-   - "You have attempted to add data into the library, but the data on the clipboard is invalid"
    - Ensure the data on the clipboard is valid
    - Copy the data again from the source
    - Try adding to the library again
@@ -271,7 +233,6 @@ During a Tedds calculation, the System error dialog appears. The error informs a
 ### Fix
 
 1. **Click Abort and free resources**:
-   - "Click Abort and return to your document, leaving it as it was before starting the calculation"
    - The document is restored to its pre-calculation state
    - Free up memory and disk space
    - Try the calculation again
@@ -284,27 +245,17 @@ During a Tedds calculation, the System error dialog appears. The error informs a
    - Then run the calculation
 
 3. **Free disk space**:
-   - "Unable to create temporary variable (.VBL) file. The error usually occurs when your computer is running low on memory."
-   - "Unable to create a temporary copy of the variable (.VBL) file. The error usually occurs when you are running low on disk space."
-   - "Unable to copy temporary variable file to the document variable (.VBL) file. The error usually occurs when you are running low on disk space."
    - Delete unnecessary files
    - Clear temp files
    - Ensure adequate free space
 
 4. **Fix Expression Evaluation filter errors**:
-   - "A problem has occurred in the Expression Evaluation filter"
-   - "The Expression Evaluation filter has failed to initialize correctly"
-   - "The error may occur when you are running low on memory"
    - Close applications and retry
 
 5. **Handle variable definition errors**:
-   - "Variable definition errors occur when you try to use a variable that has not been defined"
-   - "Is not one of the standard system variables, or is formatted incorrectly"
-   - "Tedds for Word only alerts you about variable definition errors if you have selected the Error on undefined variable option"
    - Check the Tedds options for error handling settings
 
 6. **Handle dimensional or non-fatal errors**:
-   - "Dimensional and non-fatal errors occur when Tedds for Word cannot complete the calculation for some reason"
    - These are not system errors
    - Check the calculation input
    - Fix the dimensional or input error

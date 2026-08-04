@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://discourse.shapr3d.com/t/drawing-sheet-bug-import-export/40175"
-  - "https://discourse.shapr3d.com/t/synchronization-is-failing/40826"
-  - "https://discourse.shapr3d.com/t/import-shapr-file/39189"
 ---
 
 # Shapr3D 2026 Drawing Export PDF Greyed Out Button from iPad Files App, SHPR File Import Failure on iPadOS 26 from iCloud Storage, Synchronization Failure Between iPad and Windows from Cloud Sync Stuck, Constant Crashing on iPad During Basic Designing Inputs, and Drawing Image Import Restricted to Photo Library from Files App Option Missing: Share Icon Workaround, Local Copy Import, Version 26.82 Update, Support Ticket, and Platform Switch
@@ -31,14 +28,9 @@ On iPad, the PDF export option is available and can be selected, but the EXPORT 
 ### Fix
 
 1. **Use share icon as workaround**:
-   - "The only way to make it work"
-   - "Is to tap the share icon"
-   - "And then select Save to Files"
    - Use share icon
 
 2. **Close and retry EXPORT/PDF**:
-   - "I have to close the window"
-   - "And select EXPORT/PDF again"
    - Close and
    - Retry
 
@@ -67,8 +59,6 @@ On iPad, the PDF export option is available and can be selected, but the EXPORT 
    - For destination
 
 7. **Report to Shapr3D support**:
-   - "Please open a support ticket"
-   - "On this link"
    - Report the
    - Issue
 
@@ -89,10 +79,6 @@ On iPadOS 26 Public Beta, SHPR files cannot be imported into the iPad. The impor
 ### Fix
 
 1. **Copy file from iCloud to local storage**:
-   - "I need to manually copy"
-   - "The file from iCloud"
-   - "To the iPad's local storage"
-   - "Before I am able to import it"
    - Copy locally
 
 2. **Use Files app to copy**:
@@ -108,10 +94,6 @@ On iPadOS 26 Public Beta, SHPR files cannot be imported into the iPad. The impor
    - SHPR file
 
 4. **Test on Windows or macOS**:
-   - "I have tested the same"
-   - "Import process on both Windows"
-   - "And macOS computers"
-   - "And it works without any issues"
    - Test on desktop
 
 5. **Update iPadOS to latest beta**:
@@ -127,9 +109,6 @@ On iPadOS 26 Public Beta, SHPR files cannot be imported into the iPad. The impor
    - App Store
 
 7. **Report to Shapr3D support**:
-   - "Please reach out"
-   - "To the support team"
-   - "To create a bug report"
    - Report issue
 
 ### Community Report
@@ -149,29 +128,15 @@ Models created on iPad don't synchronize to Windows. The downloading on Windows 
 ### Fix
 
 1. **Update to version 26.82**:
-   - "Updating to 26.82"
-   - "(as proposed this morning)"
-   - "Fixed my issue"
-   - "Syncho is working again"
    - Update to 26.82
 
 2. **Export and reimport as new project**:
-   - "On my Ipad, I exported"
-   - "The project to a Shapr file"
-   - "And reimported into a new project"
    - Export and reimport
 
 3. **Duplicate the project on iPad**:
-   - "I made a duplicate"
-   - "This morning on my Ipad"
-   - "To test a variance"
-   - "That got synchronized correctly"
    - Duplicate project
 
 4. **Wait for sync to complete**:
-   - "Day later"
-   - "It synchronized correctly"
-   - "Go figure"
    - Wait for sync
 
 5. **Check cloud storage status**:
@@ -209,16 +174,9 @@ Shapr3D constantly crashes on iPad during basic designing inputs. The crashes oc
 ### Fix
 
 1. **Open a support ticket**:
-   - "Please open a support ticket"
-   - "On this link"
-   - "And share the design"
    - Open ticket
 
 2. **Share design and version info**:
-   - "Share the design"
-   - "Shapr3D version"
-   - "And the hardware & software"
-   - "Specifications of your device"
    - Share details
 
 3. **Update Shapr3D to latest version**:
@@ -246,9 +204,6 @@ Shapr3D constantly crashes on iPad during basic designing inputs. The crashes oc
    - Shapr3D
 
 7. **Use desktop as workaround**:
-   - "Seem to be"
-   - "Working fine"
-   - "On a laptop"
    - Use desktop
 
 ### Community Report

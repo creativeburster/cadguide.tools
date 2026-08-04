@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Pointcloud-is-stuck-at-a-certain-percentage-when-importing-and-indexing-scans-in-ReCap-Pro.html"
-  - "https://forums.autodesk.com/t5/recap-forum/importing-scans-freeze/td-p/13073482"
-  - "https://forums.autodesk.com/t5/recap-forum/recap-not-importing-all-data-from-faro-focus-premium/td-p/14057559"
 ---
 
 # Autodesk ReCap Pro 2026 Point Cloud Stuck at Percentage During Import and Indexing, FARO FLS Scan Import Freeze and Crash on Windows 11, FARO SDK Discontinued in ReCap Pro 2025, Missing Data from FARO Focus Premium Import, and ReCap Pro 2027 FARO SDK Update for Topcon and Orbis: Project Split, Version Rollback, SCENE Processing, RCS Export, and 2027 Update
@@ -31,43 +28,27 @@ When importing or indexing scans, ReCap Pro hangs at a certain percentage and do
 ### Fix
 
 1. **Allow more time for large projects**:
-   - "Allow more time, especially if the project is large"
-   - "ReCap Pro may temporarily stick"
-   - "But after a while, it will progress"
    - Wait for large projects
 
 2. **Split project into smaller ones**:
-   - "Split the project into smaller ones"
-   - "Create two or more new projects"
-   - "And import portions of the scans there"
    - Split large projects
 
 3. **Ensure C:\ drive has enough space**:
-   - "Make sure that there is enough space"
-   - "On the C:\ drive"
-   - "More than 10% capacity"
    - Ensure disk space
 
 4. **Check for tmp files in support folder**:
-   - "Check for tmp files in the support folder"
-   - "If found, either registration or indexing"
-   - "Fails to generate RCS files"
    - Check for tmp files
 
 5. **Save files locally**:
-   - "Save files locally"
-   - "To rule out network issues"
    - Save locally
    - Not on network
 
 6. **Run as Administrator**:
-   - "Run the program as Administrator"
    - Run ReCap Pro
    - As Administrator
    - For proper permissions
 
 7. **Update ReCap Pro**:
-   - "Update ReCap Pro to the latest version"
    - Update to
    - Latest version
    - For bug fixes
@@ -89,21 +70,12 @@ The FARO FLS import on Windows 11 has compatibility issues with certain hardware
 ### Fix
 
 1. **Roll back to ReCap Pro 2024**:
-   - "My solution was to go back"
-   - "To Recap Pro 2024"
-   - "Where the import works like always"
    - Roll back to 2024
 
 2. **Remove ReCap Pro 2025 before installing 2024**:
-   - "You can not have 2 Recap installations"
-   - "In parallel on your machine"
-   - "You need to remove Recap Pro 2025"
-   - "Before installing Recap Pro 2024"
    - Remove 2025 first
 
 3. **Try ReCap Pro 2023**:
-   - "Maybe the 2023 is"
-   - "The more stable one for FARO"
    - Try 2023
    - For FARO stability
 
@@ -114,20 +86,12 @@ The FARO FLS import on Windows 11 has compatibility issues with certain hardware
    - Compatibility
 
 5. **Check FARO SDK installation**:
-   - "The Autodesk Recap FARO converter"
-   - "Is missing in the task manager"
-   - "When using 2025"
    - Check FARO converter
 
 6. **Use FARO SCENE LT workaround**:
-   - "See that video for a workaround"
-   - "It shows Recap Pro 2023"
-   - "And FARO SCENE LT 2022"
    - Use SCENE LT
 
 7. **Try ReCap Pro 2027**:
-   - "The latest ReCap 2027 Release"
-   - "Contains the latest FARO SDK"
    - Try 2027
    - For latest SDK
 
@@ -148,45 +112,27 @@ In ReCap Pro 2025, FARO FLS scan import fails. The "Autodesk ReCap FARO converte
 ### Fix
 
 1. **Use ReCap Pro 2024 or earlier**:
-   - "Go back to Recap Pro 2024"
-   - "Where the import works like always"
    - Use 2024
    - For FARO import
 
 2. **Process in FARO SCENE first**:
-   - "Process all scans in Scene first"
-   - "Then export all the FLS files"
-   - "Back out after processing"
    - Use SCENE processing
 
 3. **Export as RCS from SCENE**:
-   - "Export the cleaned point cloud"
-   - "As an RCS file"
    - Export RCS from SCENE
    - Import RCS to ReCap
 
 4. **Use ReCap Pro 2027 with latest SDK**:
-   - "The latest ReCap 2027 Release"
-   - "Contains the latest FARO SDK"
-   - "To enable Faro-Topcon and Faro Orbis support"
    - Use 2027
 
 5. **Import processed scans**:
-   - "I then bring the processed scans"
-   - "Into Recap and it works fine"
    - Import processed
    - Not raw scans
 
 6. **Batch import for large datasets**:
-   - "I recommend doing a few at a time"
-   - "Letting those process"
-   - "Then do another batch"
    - Batch import
 
 7. **Let run overnight for 80+ scans**:
-   - "It'll take a very long time"
-   - "To initially start processing in Recap"
-   - "(30-60 minutes) if you've imported 80+ scans"
    - Let run overnight
 
 ### Community Report
@@ -206,46 +152,28 @@ ReCap Pro's FARO import engine doesn't properly handle all data from FARO Focus 
 ### Fix
 
 1. **Process in SCENE first**:
-   - "I usually do is process all scans"
-   - "In Scene first"
-   - "Then export all the FLS files"
-   - "Back out after processing"
    - Process in SCENE
 
 2. **Import processed scans to ReCap**:
-   - "I then bring the processed scans"
-   - "Into Recap and it works fine"
    - Import processed
    - Scans to ReCap
 
 3. **Export as RCS from SCENE**:
-   - "Export the cleaned point cloud"
-   - "As an RCS file"
    - Export RCS
    - Import to ReCap
 
 4. **Use ReCap Pro 2027**:
-   - "The latest ReCap 2027 Release"
-   - "Contains the latest FARO SDK"
-   - "It is working without data loss"
    - Use 2027
 
 5. **Batch import**:
-   - "Doing a few at a time"
-   - "Letting those process"
-   - "Then do another batch"
    - Batch import
 
 6. **Let run overnight**:
-   - "Just let it run over night"
    - For 80+ scans
    - Let run
    - Overnight
 
 7. **Check for Ricoh Z1 camera issue**:
-   - "If you use the Ricoh Z1 camera"
-   - "For creating the colored scans"
-   - "Then Recap cannot process them"
    - Check camera compatibility
 
 ### Community Report
@@ -265,21 +193,14 @@ FARO-Topcon and FARO Orbis scan support is missing in older ReCap Pro versions. 
 ### Fix
 
 1. **Update to ReCap Pro 2027**:
-   - "The latest ReCap 2027 Release"
-   - "Contains the latest FARO SDK"
    - Update to 2027
    - For Topcon/Orbis
 
 2. **Verify data import**:
-   - "It is working without data loss"
-   - "For the data that we are testing with"
    - Verify data
    - Import results
 
 3. **Report persistent data loss**:
-   - "Please let us know"
-   - "If your data is still failing"
-   - "So that we can investigate further"
    - Report data loss
 
 4. **Check FARO SDK version**:

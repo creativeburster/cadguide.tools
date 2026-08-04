@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-02"
 sources:
-  - "https://help.ascon.ru/KOMPAS/23/en-US/cm_file_recover.html"
-  - "https://forum.ascon.ru/index.php?topic=927.0"
-  - "https://help.ascon.ru/KOMPAS/24/en-US/2223_244_2_1_osobennosti_exporta.html"
 ---
 
 # KOMPAS-3D Assembly and File Recovery Errors: Assembly Crash on Rebuild from Top-Down Design Bug Requiring Save Before Rebuild, Invalid File Structure from Document Corruption Requiring Open with Verification, DXF DWG Export Failure from Graphical Document Errors Requiring Verification Repair, Lost Link to Variable Error from Missing Variable Names Requiring Variable Reassignment, and Fatal Error 0x0024 from cax_geometry.dll Access Violation Requiring Graphics Override Registry Fix
@@ -31,8 +28,6 @@ The top-down design workflow creates external references between the assembly an
 ### Fix
 
 1. **Save and close before rebuild**:
-   - "Create a simple part, save it. Create an assembly and place the part. Create a new part in the assembly. Save the assembly. On the rebuild question answer 'No.' Close the window. Reopen the assembly, answer 'Yes' to rebuild — it works."
-   - "If rebuilt immediately without closing the assembly window — KOMPAS crashes."
    - Save the assembly
    - Answer "No" to rebuild
    - Close the assembly
@@ -45,13 +40,11 @@ The top-down design workflow creates external references between the assembly an
    - This is a workaround for a known bug
 
 3. **Update KOMPAS-3D**:
-   - "What release of KOMPAS-3D do you have?"
    - Check for updates
    - Newer versions may have fixed this bug
    - Contact ASCON support for patch information
 
 4. **Report to ASCON support**:
-   - "If you have a licensed version, send the question to support@kompas.kolomna.ru"
    - Provide the assembly and part files
    - Describe the exact workflow that causes the crash
    - Include the KOMPAS version and release number
@@ -85,40 +78,28 @@ The KOMPAS document file has become corrupted. This can happen from: improper sh
 ### Fix
 
 1. **Use Open with Verification**:
-   - "The File — Open with verification command searches for and fixes errors in the file being opened"
    - File > Open with Verification
    - Select the corrupted file
    - KOMPAS will attempt to repair the file structure
 
 2. **Create backup copies before opening**:
-   - "Before you open files with verification, we recommend: create copies of files"
    - Copy the corrupted file to a backup location
    - Then use Open with Verification on the copy
    - This preserves the original if verification makes things worse
 
 3. **Remove protection before verification**:
-   - "Remove protection from files protected with KOMPAS Protection"
    - If the file is protected, remove protection first
    - Then use Open with Verification
    - Reapply protection after recovery
 
 4. **Fix model shell display issues**:
-   - "Fix a model with operations without history that is incorrectly displayed"
-   - "Before invoking Open with verification, create the file Kompas.ini"
-   - "Within it — the [RestoreShells] section with the RestoreName key"
    - This enables shell restoration during verification
 
 5. **Rebuild after verification**:
-   - "Once a model is opened with verification, it generally needs to be rebuilt"
-   - "Loss of links between objects is possible in this process"
    - After opening, run a full rebuild
    - Check for and fix any lost links
 
 6. **Fix specific error types**:
-   - "Correct errors related to matings of components in assembly"
-   - "Correct errors related to sketches"
-   - "Correct errors related to displaying model objects"
-   - "Correct errors related to setup of the graphical document"
    - Verification addresses all these error types
 
 ### Community Report
@@ -138,27 +119,22 @@ Cannot export a KOMPAS graphical document (drawing) to DXF or DWG format. The ex
 ### Fix
 
 1. **Use Open with Verification before export**:
-   - "Correct the impossibility to export a graphical document to DXF or DWG format"
    - File > Open with Verification
    - Select the drawing file
    - Let verification fix the errors
    - Then try exporting to DXF/DWG
 
 2. **Check for invalid projection links**:
-   - "Failure to call the command Remove invalid projection links"
    - Use the command to remove invalid links
    - Tools > Remove Invalid Projection Links
    - Then attempt the export
 
 3. **Check technical requirements and designations**:
-   - "Errors related to the drawing technical requirements"
-   - "Errors related to designations"
    - Check all technical requirement entries
    - Remove or fix any corrupted entries
    - Retry the export
 
 4. **Check rendering of graphical document**:
-   - "Errors related to the rendering of the graphical document"
    - Verify the drawing renders correctly in KOMPAS
    - Fix any rendering issues
    - Then export
@@ -192,7 +168,6 @@ Error: "Lost Link to variable" in a KOMPAS document. The variable is referenced 
 ### Fix
 
 1. **Use Open with Verification**:
-   - "Correct the 'Lost Link to variable' error"
    - File > Open with Verification
    - Select the file with the lost link error
    - Verification will attempt to fix the variable link

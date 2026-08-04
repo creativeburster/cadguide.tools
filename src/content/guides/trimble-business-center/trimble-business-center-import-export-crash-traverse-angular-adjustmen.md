@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://community.trimble.com/discussion/tbc-crashes-when-i-try-to-import-or-export-anything"
-  - "https://community.trimble.com/discussion/traverse-angular-adjustment"
-  - "https://community.trimble.com/discussion/tbc-aerial-photogrammetry-adjust-photo-stations-error-child-process-reconstruction-terminated-unexpectedly-error"
 ---
 
 # Trimble Business Center Import Export Crash, Traverse Angular Adjustment No Angles, CSV Import OptionsValidationException Filepath, Aerial Photogrammetry Child Process Crash from SentinelOne, and RL Reduction Not Working on Combined Traverses: Cleanup Utility, Closed Traverse Configuration, Antivirus Whitelisting, and Coordinate Adjustment
@@ -31,43 +28,35 @@ The TBC installation has become corrupted. This can happen from partial updates,
 ### Fix
 
 1. **Run the TBC Cleanup Utility**:
-   - "The best bet is to run the cleanup Utility"
    - Download the TBC Cleanup Utility from Trimble
    - Run it to remove all TBC installation files and registry entries
    - This ensures a clean slate for reinstallation
 
 2. **Restart the computer**:
-   - "Then restart"
    - After running the cleanup utility
    - Restart the computer
    - This clears any remaining TBC processes
 
 3. **Fully install the latest version**:
-   - "Then fully install the latest version"
    - Download the latest TBC version from Trimble Downloads
    - Perform a complete installation
    - Don't install over an existing version
 
 4. **Allow approximately 35 minutes**:
-   - "It took about 35 minutes altogether"
    - The cleanup and reinstall process takes time
    - Plan for the downtime
-   - "Everything is snappy again!"
 
 5. **Check for OneDrive interference**:
-   - "I have tried moving files to the C drive (instead of my documents which are synced to onedrive)"
    - While OneDrive wasn't the cause in this case
    - It can cause issues with TBC project files
    - Store .vce files on a local drive
 
 6. **Check for locked-down IT restrictions**:
-   - "My computer is locked down very tight and I have to get IT support to make any changes remotely"
    - If your PC is IT-managed
    - Request IT support to run the cleanup and reinstall
    - Admin rights are required
 
 7. **Don't waste time troubleshooting individual crashes**:
-   - "By the time I try to figure it out, running the cleanup utility and fully installing tends to be more efficient"
    - For persistent crashes, cleanup + reinstall is faster
    - Than trying to identify the specific cause
    - Especially for import/export module crashes
@@ -89,44 +78,34 @@ During a traverse adjustment in TBC, distance errors appear as expected, but the
 ### Fix
 
 1. **Ensure the traverse is closed**:
-   - "Most of the time there is not a closed traverse"
    - The traverse must return to the starting point
    - The closing angle must be between the starting and second points
    - Don't end the survey before closing
 
 2. **Reuse original point names for closing points**:
-   - "If you do have a closed traverse, try renaming the closing points to their original names"
-   - "I would have named point 5 as point 1, and point 6 as point 2"
    - When the data collector asks to average points
-   - "Select to store as another point"
 
 3. **Never use a new point name for existing points**:
-   - "With TBC you never use a 'new' point name when observing a point that is already in your collector"
    - Reuse the original point name
    - TBC recognizes it as the same point
    - This enables proper traverse closure
 
 4. **Check the closing angle**:
-   - "The closing angle is between points 5&6"
    - Verify the closing angle was observed
    - The traverse must have a final angle measurement
    - That closes back to the starting reference
 
 5. **Verify the .job file export**:
-   - "My colleague collected this data on Survey Pro and was exported using a .job file"
    - Check the .job file includes angle observations
    - Verify the export settings include angles
    - Re-export if angles are missing
 
 6. **Check if you re-occupied the first setup point**:
-   - "Looks like you made an observation to your first setup point but didn't re-occupy it"
    - The traverse must physically return to the starting point
    - Not just sight it from the last setup
    - Re-occupy and re-measure if needed
 
 7. **Use TBC's dynamic network adjustment as alternative**:
-   - "I combine total station observations, RTK, and static — never need to do a traditional traverse"
-   - "That is rather outdated with the dynamic Network adjustment of TBC"
    - Consider using the network adjustment instead
    - It's more flexible than traditional traverse adjustment
 
@@ -205,14 +184,12 @@ When performing a relative adjustment in TBC's Aerial Photogrammetry module, the
 ### Fix
 
 1. **Whitelist the TBC installation folder**:
-   - "Whitelisting the TBC installation and its subfolders should be the resolution"
    - In SentinelOne management console
    - Add the TBC installation directory to the exclusion list
    - Include all subfolders
    - This prevents SentinelOne from scanning TBC processes
 
 2. **Temporarily disable SentinelOne to verify**:
-   - "All users who have been running this have disabled the AV software to prove this"
    - Temporarily disable SentinelOne
    - Run the aerial photogrammetry adjustment
    - If it succeeds, SentinelOne is confirmed as the cause
@@ -236,7 +213,6 @@ When performing a relative adjustment in TBC's Aerial Photogrammetry module, the
    - Other AV solutions may not block TBC processes
 
 6. **Wait for a TBC fix**:
-   - "While the developers work to combat this issue occurring by default"
    - Trimble is working on a fix
    - That prevents SentinelOne from interfering
    - Check for TBC updates
@@ -306,8 +282,6 @@ The post-construction traverse started on marks with unknown heights. While it o
    - That can be used for height transfer
 
 8. **Use cleaned-up CSV files**:
-   - "I have uploaded the raw .job files, but these contain a lot of junk"
-   - "So have also uploaded cleaned up csv's"
    - Clean the raw data before importing
    - Remove erroneous observations
 

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://support.hawkridgesys.com/hc/en-us/articles/37491616937741-Restore-the-Connection-between-SOLIDWORKS-and-the-3DEXPERIENCE-Platform"
-  - "https://3dswym.3dexperience.3ds.com/wiki/solidworks-news-info/understanding-solidworks-my-session-architecture-and-optimizing-performance-solidpractices_bJFmXC4ZTxedM2WKrd0kUw"
-  - "https://seacadtech.com/blog/3dexprienc-platform-upgrade-to-r2025x-additional-information/"
 ---
 
 # 3DEXPERIENCE SOLIDWORKS Connection Error After Platform Upgrade, MySession Refresh Freeze on Large Assemblies, On-the-Fly Conversion Performance Degradation, Multi-Configuration Save Delays, and xCAD Connector Reinstall: Trusted Sites, Asynchronous Refresh, Dynamic Tree Expansion, and Clean Reinstall
@@ -31,44 +28,29 @@ After a 3DEXPERIENCE platform upgrade to R2025x, SOLIDWORKS Connected can't conn
 ### Fix
 
 1. **Add *.3ds.com to Trusted Sites**:
-   - "Add *.3ds.com (and/or https://*.3ds.com) to the sites list in your Trusted sites zone"
    - Internet Options > Security > Trusted Sites > Sites
    - Add `*.3ds.com`
    - Add `https://*.3ds.com`
 
 2. **Reset Internet Explorer**:
-   - "Delete the Internet Explorer 11 cache (INetCache)"
-   - "Reset the Internet zone to the default level"
-   - "Restore advanced settings"
    - CEF uses IE security settings for authentication
 
 3. **Run the Cloud Eligibility Checker**:
-   - "Run the Cloud Eligibility Checker provided by Dassault Systèmes"
-   - "To ensure your environment meets the requirements"
    - Check network bandwidth and latency
    - Verify all required domains and ports are open
 
 4. **Check firewall and VPN settings**:
-   - "Make sure that the connection is not being blocked by network security solutions"
-   - "Like a firewall, Virtual Private Network (VPN), proxy server, and Zero Trust Network Access (ZTNA)"
    - Add exceptions for *.3ds.com domains
    - Disable VPN temporarily to test
 
 5. **Clean uninstall and reinstall SOLIDWORKS Connected**:
-   - "Clean uninstall SOLIDWORKS Connected and 3DEXPERIENCE Launcher"
    - Uninstall: 3DEXPERIENCE Launcher, CEF for SOLIDWORKS Applications, Dassault Systemes SOLIDWORKS 3DEXPERIENCE R202Xx
    - Delete: `%localappdata%\DassaultSystemes`, `%appdata%\DassaultSystemes`, `%programdata%\DassaultSystemes\3DEXPERIENCELauncher`
    - Reinstall SOLIDWORKS Connected from the platform
 
-6. **Reboot before reinstalling**:
-   - "It's always better to take precautions than to deal with issues later"
-   - "Reboot the system before beginning the installation process"
-   - "This helps prevent conflicts with processes such as PLMCSA and EDMServerV6"
-   - "Which may have DLLs in use"
+6. **Reboot before reinstalling**.
 
 7. **Uninstall and reinstall xCAD Connector (Design with SOLIDWORKS only)**:
-   - "Uninstalling and reinstalling the application that provides this connection"
-   - "This step is only applicable to users with Design with SOLIDWORKS / Collaborative Designer for SOLIDWORKS"
    - Windows Start Menu > Add or Remove Programs
    - Locate and uninstall "Dassault Systèmes xCAD Connectors 3DEXPERIENCE R202Xx"
    - Relaunch Design with SOLIDWORKS from the platform to trigger reinstallation
@@ -90,45 +72,26 @@ When working with large assemblies in SOLIDWORKS with the 3DEXPERIENCE tab activ
 ### Fix
 
 1. **Update to R2024x FD03 or later**:
-   - "MySession content refreshes as needed beginning with 3DEXPERIENCE R2024x FD03"
-   - "SOLIDWORKS 2024 Service Pack 2.0 and higher"
    - This enables refresh-only-when-needed behavior
    - And asynchronous retrieval of 3DEXPERIENCE data
 
-2. **Disable "Refresh MySession after opening files"**:
-   - "When you disable 'Refresh MySession after opening files' in Options from the Tools tab"
-   - "Opening the file will load only the first level of child components"
-   - "Subsequent expansion only opens one level at a time"
-   - "Helping reduce load times and improving file structure browsing"
+2. **Disable "Refresh MySession after opening files"**.
 
-3. **Use Dynamic Tree Expansion**:
-   - "Dynamic Tree Expansion In MySession — open and navigate large assemblies easily"
-   - "Experience better performance when opening large models with complex assembly structures"
-   - "The entire tree structure in MySession is completely expanded and updates on each file"
-   - "Now when you disable refresh, it loads only the first level"
+3. **Use Dynamic Tree Expansion**.
 
 4. **Reduce the number of rows in MySession**:
-   - "This option may help improve refresh performance if you work with very large SOLIDWORKS Assembly structures"
-   - "With many instances and you notice a delay updating the 3DEXPERIENCE information in MySession"
-   - "This reduces the number of rows to display within MySession"
    - Filter to show only the active document
 
 5. **Save SOLIDWORKS files locally**:
-   - "If you have saved SOLIDWORKS files on your computer you may experience much less network activity"
-   - "With the 3DEXPERIENCE platform network services during the open procedure"
    - Local files don't require network download
    - Significantly reducing open time
 
 6. **Run the Performance Evaluation tool**:
-   - "A good place to start is to run the Performance Evaluation tool"
    - If SOLIDWORKS takes a very long time to open files
    - And the network requests happen very fast
    - The issue is local, not network-related
 
 7. **Check network performance**:
-   - "Your network performance (bandwidth and latency) is a key influencer"
-   - "For the time that it takes to download the SOLIDWORKS files"
-   - "Check your network performance by running the Cloud Eligibility tool"
    - Improve network bandwidth if possible
 
 ### Community Report
@@ -148,9 +111,6 @@ Platform-native Physical Products (including Duplicates and those created using 
 ### Fix
 
 1. **Save SOLIDWORKS files locally**:
-   - "If you have saved SOLIDWORKS files on your computer"
-   - "You may experience much less network activity"
-   - "With the 3DEXPERIENCE platform network services during the open procedure"
    - Always save files to local work folder after first open
 
 2. **Use the 3DEXPERIENCE local cache**:
@@ -178,8 +138,6 @@ Platform-native Physical Products (including Duplicates and those created using 
    - Use envelope parts for reference
 
 6. **Check network performance**:
-   - "The size of the SOLIDWORKS files and your network performance"
-   - "Are the key influencers for the time to open"
    - Run the Cloud Eligibility tool
    - Improve network bandwidth if possible
 
@@ -264,26 +222,17 @@ The connection between SOLIDWORKS and the 3DEXPERIENCE platform is broken or int
 ### Fix
 
 1. **Uninstall the xCAD Connector**:
-   - "Windows Start Menu > Add or Remove Programs"
-   - "Locate and uninstall 'Dassault Systèmes xCAD Connectors 3DEXPERIENCE R202Xx'"
    - This removes the corrupted connector
    - And its configuration files
 
 2. **Delete remaining installation data**:
-   - "Locate folder listed below and delete it by using 'Run Command'"
    - Delete `%localappdata%\DassaultSystemes`
    - Delete `%appdata%\DassaultSystemes`
    - Delete `%programdata%\DassaultSystemes\3DEXPERIENCELauncher`
 
-3. **Reboot the system**:
-   - "It's always better to take precautions"
-   - "Reboot the system before beginning the installation process"
-   - "This helps prevent conflicts with processes such as PLMCSA and EDMServerV6"
-   - "Which may have DLLs in use"
+3. **Reboot the system**.
 
 4. **Reinstall from the platform**:
-   - "Launch Design with SOLIDWORKS from the 3DEXPERIENCE platform"
-   - "This will prompt the reinstallation of the xCAD Connector"
    - The platform will download and install the latest connector
    - With correct configuration for the current platform version
 
@@ -294,13 +243,10 @@ The connection between SOLIDWORKS and the 3DEXPERIENCE platform is broken or int
    - Test file save and open operations
 
 6. **Run Cloud Eligibility Checker**:
-   - "Run the Cloud Eligibility Checker provided by Dassault Systèmes"
-   - "To ensure your environment meets the requirements"
    - Verify all domains and ports are accessible
    - Check QA00000302341 in the Knowledge Base for details
 
 7. **Contact support if issues persist**:
-   - "If the connection issues persist, please contact our support team"
    - Contact Hawk Ridge Systems at 877.266.4469 (US) or 866.587.6803 (Canada)
    - Or contact Dassault Systèmes support directly
    - Provide error messages and troubleshooting steps already tried

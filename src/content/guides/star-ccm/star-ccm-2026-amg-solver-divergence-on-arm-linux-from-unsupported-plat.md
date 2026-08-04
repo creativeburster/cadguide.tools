@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000iCYZkKAO/amg-solver-diverge-version-25022506-on-arm-and-linux"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000CeleTKAR/floating-point-error-in-vof-lmp-simulation"
 ---
 
 # STAR-CCM+ 2026 AMG Solver Divergence on ARM Linux from Unsupported Platform, Segregated Species Solver NaN Residuals from Bad External Fluid Region Mesh, VOF LMP Floating Point Error from AMR and Insufficient Precision, AMG Solver Divergence at First Iteration from Grid Sequencing, and Floating Point Error from Field Function Zero Denominator and Supersonic Segregated Solver: Platform Switch RHEL, 3D-CAD Geometry Rebuild, AMR Disable Double Precision, Grid Sequencing Debug, and Field Function Check
@@ -31,32 +28,20 @@ AMG solver diverges when running on HPC with ARM processors (AWS EC2 with Amazon
 ### Fix
 
 1. **Switch to supported ARM platform (RHEL 8.7)**:
-   - "A good first test should be"
-   - "To switch to a supported ARM platform"
-   - "(RHEL 8.7)"
    - Switch to RHEL
 
 2. **Check certified platforms**:
-   - "Amazon Linux 2023 is"
-   - "Indeed listed as a certified platform"
-   - "For Linux ARM64 in 2506"
    - Check certification
 
 3. **Test with non-confidential simulation**:
-   - "We wait for a non-confidential SIM"
-   - "To reproduce the issue"
    - Create test
    - Simulation
 
 4. **Run on Windows for comparison**:
-   - "The fact that it works"
-   - "In Windows but not in Linux"
    - Compare Windows
    - vs Linux results
 
 5. **Check mesh diagnostics**:
-   - "Mesh diagnostics are not"
-   - "Showing anything worrying"
    - Check mesh
    - Diagnostics
 
@@ -89,45 +74,26 @@ The segregated species solver returns NaN residuals and diverges immediately. Th
 ### Fix
 
 1. **Rebuild external fluid region in 3D-CAD**:
-   - "Revisit how you built your external Fluid part"
-   - "Perhaps build it in 3D-CAD"
-   - "With the rest of the geometry"
    - Rebuild in 3D-CAD
 
 2. **Use proper part-based meshing**:
-   - "The meshing approach is based on"
-   - "Part-Based meshing"
-   - "There should be no need for"
-   - "Detaching and deleting"
    - Use part-based
 
 3. **Create volume and subtract sensor**:
-   - "Create a volume and subtract the sensor"
-   - "Then use that resulting subtracted part"
-   - "As your external region"
    - Subtract sensor
 
 4. **Use imprint for contacts**:
-   - "You'll probably want to do an imprint"
-   - "So that you have your contacts"
    "Set-up for any interfaces"
    - Use imprint
 
 5. **Check mesh with split by non-contiguous**:
-   - "Check the mesh using the split by non-contiguous"
-   - "Right click on the region"
-   - "Split by non-contiguous, and preview"
    - Check non-contiguous
 
 6. **Start with fewer regions and less physics**:
-   - "Starting small (fewer regions and less physics)"
-   - "And then building up"
    - Start simple
    - Build up
 
 7. **Lower relaxation factors**:
-   - "Lowering relaxation factors"
-   - "For the species solver"
    - Lower relaxation
    - Factors
 
@@ -148,46 +114,26 @@ During VOF and LMP simulation of two colliding water jets, a floating point erro
 ### Fix
 
 1. **Use double precision (R8) version**:
-   - "This may indicate"
-   - "Double precision version is needed"
-   - "Are you using double precision"
-   - "Which is R8 version?"
    - Use R8
 
 2. **Disable AMR**:
-   - "I would try without the AMR"
-   - "Create a good coarse mesh"
-   - "To check your settings"
    - Disable AMR
 
 3. **Create good coarse mesh first**:
-   - "Create a good coarse mesh"
-   - "To check your settings"
    - Start with
    - Coarse mesh
 
 4. **Ensure CFL below 1**:
-   - "The time step should give you"
-   - "A CFL below 1"
    - Check CFL
    - Below 1
 
 5. **Pay attention to phase interface CFL**:
-   - "Pay attention about the phase interface"
-   - "This should be solved"
-   - "Pay attention about the CFL there as well"
    - Check interface CFL
 
 6. **Re-enable AMR after stable run**:
-   - "If everything works well"
-   - "Then I would try to turn the AMR on"
-   - "Checking always the CFL"
    - Re-enable AMR
 
 7. **Monitor residuals for divergence**:
-   - "I was able to identify"
-   - "The extremely high residuals"
-   - "In the crashed sim"
    - Monitor residuals
 
 ### Community Report
@@ -207,40 +153,21 @@ The AMG solver divergence at the first iteration occurs during the transition fr
 ### Fix
 
 1. **Check if simulation converges after initial divergence**:
-   - "After this initial error"
-   - "The simulation proceeds normally"
-   - "And eventually converges"
    - Check convergence
 
 2. **Debug AMG solver divergence**:
-   - "A KB article below"
-   - "May provide you with a few more ideas"
-   - "For further debugging"
-   - "How to debug AMG solver diverged on first iteration"
    - Use KB article
 
 3. **Check mesh quality metrics**:
-   - "I've thoroughly checked"
-   - "All mesh quality metrics"
-   - "And everything looks good"
    - Check mesh
 
 4. **Verify boundary layer cells**:
-   - "The smallest cells are located"
-   - "In the boundary layer"
-   - "And yield a y+ ≈ 1"
    - Check y+
 
 5. **Adjust AMG solver settings**:
-   - "Regardless of how I tune"
-   - "The AMG solver settings"
-   - "I consistently encounter"
    - Try different AMG settings
 
 6. **Verify final results accuracy**:
-   - "Can this initial AMG divergence"
-   - "Affect the accuracy or reliability"
-   - "Of the final results?"
    - Verify results
 
 7. **Use different grid sequencing settings**:
@@ -266,45 +193,26 @@ During a multiphase simulation, the error "A floating point error has occurred. 
 ### Fix
 
 1. **Check field function denominators**:
-   - "Check expressions and Field Functions"
-   - "Verify that none of their denominators"
-   - "Become 0 or are very close to 0"
    - Check denominators
 
 2. **Check boundary and initial conditions**:
-   - "Check Boundary Conditions, Initial Conditions"
-   - "And Reference Values"
-   - "(especially gravity vector direction)"
    - Check conditions
 
 3. **Don't use supersonic with Segregated Solver**:
-   - "Ensure you're not using"
-   - "A velocity inlet with supersonic speed"
-   - "With the Segregated Solver"
    - Check solver compatibility
 
 4. **Check mesh for negative volume cells**:
-   - "Check the mesh for bad cells"
-   - "(especially those with negative volume)"
    - Check for
    - Negative volumes
 
 5. **Check time step for transient**:
-   - "If your simulation is transient"
-   - "Check if the time step isn't too large"
    - Reduce time
    - Step if needed
 
 6. **Monitor residual plots**:
-   - "Monitor simulation convergence"
-   - "On the residual and monitor plots"
-   - "Very rapid growth of residuals"
-   - "Indicates diverging"
    - Monitor residuals
 
 7. **Check simulation log for warnings**:
-   - "Check the simulation log"
-   - "For warnings"
    - Check log
    - For warnings
 

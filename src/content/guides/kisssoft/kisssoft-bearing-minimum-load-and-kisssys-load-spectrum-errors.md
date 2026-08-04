@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://www.kisssoft.com/en/products/trial-version/brochures/release-2024-selected-features"
-  - "https://www.kisssoft.com/en/news-and-events/newsroom/kisssoft-system-module-operating-modes-and-load-spectra"
-  - "https://www.eng-tips.com/threads/gear-design-software.523946/"
 ---
 
 # KISSsoft Bearing Minimum Load and KISSsys Load Spectrum Errors: Bearing Warning Minimum Load from Insufficient Preload Requiring Adjusted Bearing Clearance, Load Spectrum Life Difference Two Orders of Magnitude from Torque-RPM Coefficient Definition Requiring Reference Value Verification, KISSsys to KISSdesign Migration Requiring System Module Transition, AGMA vs ISO Standard Default Causing Different Results Requiring Standard Switch, and Operating Mode Kinematic Verification Fails from Clutch Brake Configuration Requiring Power Flow Analysis
@@ -37,8 +34,6 @@ Rolling element bearings require a minimum load to ensure proper rolling motion 
    - Verify the preload doesn't cause excessive heat generation
 
 2. **Adjust bearing clearance**:
-   - "The ISO fits for bearing seats can now be selected from a table"
-   - "There is additionally the option to input your own allowance values"
    - Reduce internal clearance (C3 to C2 or normal)
    - This increases the effective load on rolling elements
 
@@ -83,13 +78,11 @@ The load spectrum defines torque and RPM as coefficients (factors) relative to a
 ### Fix
 
 1. **Verify reference torque and RPM values**:
-   - "Torque and RPM are defined as coefficients, with 21 N·m and 9000 RPM as reference"
    - Check the reference values in both load spectrum versions
    - Ensure the reference values are identical
    - Even a 10% change in reference torque can cause 10x life difference
 
 2. **Compare load spectra side by side**:
-   - "The load spectrum is what affects life — compare both spectra"
    - Export both load spectra to Excel
    - Compare frequency, torque coefficient, and RPM coefficient for each bin
    - Identify bins with significant differences
@@ -135,38 +128,26 @@ KISSsoft 2024 replaced KISSsys with the new System Module (KISSdesign). "KISSsof
 ### Fix
 
 1. **Understand the migration path**:
-   - "The new system module KISSdesign accelerates the calculation of complex drive trains and replaces the previous KISSsys software"
    - KISSsys models need to be recreated or migrated in KISSdesign
    - The calculation methods are compatible but the interface is different
    - Plan time for migration and training
 
 2. **Use the System Module for new projects**:
-   - "System Module is fully integrated into KISSsoft"
    - Start new projects in KISSdesign
    - Don't invest time in KISSsys for new work
    - Use KISSsys only for maintaining legacy models
 
 3. **Leverage improved features in KISSdesign**:
-   - "Intuitive modeling for concept development"
-   - "A multitude of additional functions are described in separate documents"
    - The new module is more user-friendly than KISSsys
    - Take advantage of the improved workflow
 
 4. **Use operating modes for complex transmissions**:
-   - "The KISSsoft System Module allows you to predefine any possible combination of shifting positions"
-   - "By combining them into operating modes"
-   - "These operating modes specify which synchronizers, clutches, or brakes are activated"
    - This replaces KISSsys's simpler shifting model
 
 5. **Get training for the transition**:
-   - "It is important to get training. It has a long learning curve"
-   - "Free and cheap training courses on their website"
-   - "Free training seminar coming up regarding the system software"
    - Contact KISSsoft US reps for training options
 
 6. **Use SKRIPT for custom calculations**:
-   - "Development environment with SKRIPT"
-   - "Company-specific calculations can be implemented in KISSsoft"
    - Migrate custom KISSsys scripts to the new SKRIPT environment
    - This preserves company-specific calculation logic
 
@@ -187,7 +168,6 @@ KISSsoft is a European-origin software that defaults to ISO/DIN standards. AGMA 
 ### Fix
 
 1. **Switch to AGMA standard in settings**:
-   - "The user can choose to use AGMA or ISO. English or metric data"
    - In KISSsoft gear calculation: Settings > Standard > AGMA
    - Verify the standard is set for each calculation
    - The setting may not persist between sessions
@@ -199,8 +179,6 @@ KISSsoft is a European-origin software that defaults to ISO/DIN standards. AGMA 
    - Don't expect identical numbers between standards
 
 3. **Use AGMA for North American applications**:
-   - "Our gear guy uses KISSsoft and really only designs to AGMA standards"
-   - "Perhaps it's about reconfiguring it or locating the AGMA calculations within it"
    - AGMA is the standard for North American gear design
    - Ensure all calculations use AGMA consistently
 
@@ -217,8 +195,6 @@ KISSsoft is a European-origin software that defaults to ISO/DIN standards. AGMA 
    - Select the appropriate AGMA standard version
 
 6. **Contact US reps for AGMA guidance**:
-   - "The US reps for KISSsoft are usually fairly responsive if you talk to them directly"
-   - "Free and cheap training courses on their website"
    - Contact US representatives for AGMA-specific training
    - They can help locate AGMA settings in the interface
 
@@ -239,19 +215,14 @@ The operating mode defines which synchronizers, clutches, or brakes are activate
 ### Fix
 
 1. **Verify clutch and brake combinations**:
-   - "The kinematic viability of each operating mode is automatically and instantly verified during setup"
-   - "Ensuring no kinematic errors will occur later"
    - Check each operating mode's clutch/brake configuration
    - Ensure no conflicting paths are simultaneously engaged
 
 2. **Use the kinematic verification tool**:
-   - "Operating modes specify which synchronizers, clutches, or brakes are activated"
-   - "And which load data should be applied at specific system boundaries"
    - Use the automatic kinematic verification during setup
    - Fix errors before proceeding to load spectrum
 
 3. **Check for power flow reversal**:
-   - "With this, a reversal of the power flow, i.e., a change from driving to coasting condition, is represented"
    - Verify the power flow direction in each operating mode
    - Coasting conditions may have different clutch configurations
    - Ensure clutch configuration matches the intended power flow
@@ -269,14 +240,10 @@ The operating mode defines which synchronizers, clutches, or brakes are activate
    - Use the system model diagram to verify
 
 6. **Use load spectrum with operating mode assignment**:
-   - "In the load spectrum, each load bin is assigned one of these operating modes"
-   - "This also provides a clear visual indication of the required load data input for each load bin"
    - Ensure each load bin has a valid operating mode
    - Invalid operating modes cause load spectrum calculation failures
 
 7. **Review detailed reports after calculation**:
-   - "After running a load spectrum calculation, the system module provides detailed reports"
-   - "With results on bearings, gears, shafts, and the kinematics of the system"
    - Review kinematic reports for each operating mode
    - Identify modes with warnings or errors
 

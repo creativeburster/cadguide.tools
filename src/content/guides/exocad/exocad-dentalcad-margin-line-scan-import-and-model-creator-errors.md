@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://wiki.exocad.com/wiki/index.php/Troubleshooting_-_Preparation_margin_cutting_operation_failed"
-  - "https://dentallabnetwork.com/forums/threads/error-when-trying-to-import-3xoz-3shape-trios-files-to-exocad.37178/"
-  - "https://dentallabnetwork.com/forums/threads/itero-exocad-margin-problems.26109/"
 ---
 
 # exocad DentalCAD Margin Line, Scan Import, and Model Creator Errors: Cutting Operation Failed from Incorrect Antagonist Type, 3Shape .3oxz Import XML Error from Format Change, iTero Margin Won't Snap from Mesh Holes, Model Creator Crash from Implant Library, and Bad Margin Line Detection from Intraoral Scan Quality
@@ -22,8 +19,6 @@ exocad DentalCAD is a leading dental CAD tool, but margin line detection failure
 
 ### Error Messages
 
-- "Cutting Operation Failed"
-- "A problem occurred while processing scan data"
 - Crown bottom / coping is created on the wrong side of the scan data (outside the preparation)
 
 ### Symptom

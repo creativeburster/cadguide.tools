@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.topsolid.com/viewtopic.php?f=2&t=2504"
-  - "https://forum.topsolid.com/viewtopic.php?t=2388"
-  - "https://forum.topsolid.fr/viewtopic.php?t=11018"
 ---
 
 # TopSolid PDM Server Startup Bug, Error in Nesting from Microsoft Redistributable, PDM Database Recovery from SQL MDF LDF Files, Service Pack Application Crash, and Windows Username Disappeared from PDM: SQL Database Attach, Redistributable Reinstall, Repair Installation, and PDM User Re-registration
@@ -31,7 +28,6 @@ After updating TopSolid from 7.17 to 7.18, the PDM server has a bug at startup. 
 ### Fix
 
 1. **Launch the PDM server admin as administrator**:
-   - "Try launching the executable TopSolid.Pdm.ServerServiceAdmin.exe in admin mode"
    - Navigate to `C:\Program Files\TOPSOLID\TopSolid 7.18\bin`
    - Right-click `TopSolid.Pdm.ServerServiceAdmin.exe`
    - Run as administrator
@@ -44,20 +40,14 @@ After updating TopSolid from 7.17 to 7.18, the PDM server has a bug at startup. 
    - Ensure all Windows updates are installed
 
 3. **Check SQL database permissions**:
-   - "It seems to be a problem with rights on the SQL database"
-   - "Since it worked in 7.17 it should work in 7.18"
-   - "I don't know that security was strengthened on this"
    - Check SQL Server permissions for the TopSolid user
    - Grant db_owner rights if needed
 
 4. **Check Windows username in PDM database**:
-   - "My Windows username had disappeared from the PDM database"
-   - "I think it's a bug or a problem during a PC reinstallation"
    - Check if your Windows user is registered in the PDM
    - Re-add the user if missing
 
 5. **Contact the hotline**:
-   - "I will contact the hotline, I don't see why it doesn't work"
    - If the above steps don't work
    - Contact TopSolid support
    - Provide the exact error message
@@ -85,34 +75,27 @@ TopSolid was working well yesterday. Today it doesn't launch — "Error in nesti
 ### Fix
 
 1. **Reinstall Microsoft Visual C++ Redistributables**:
-   - "The solution is to reinstall the good one"
-   - "In the sources of the install of TopSolid there is a folder where you can find all of them"
    - Find the redistributables in the TopSolid installation folder
    - Install the latest one first
    - If the problem continues, install the N-1 version
 
 2. **Use the TopSolid repair installation**:
-   - "Repair worked, finally"
    - Go to Control Panel > Programs and Features
    - Find TopSolid
    - Right-click > Change > Repair
    - This reinstalls the correct redistributables
 
 3. **Check Windows updates**:
-   - "Looks like some Windows updates installed overnight"
    - Check recently installed Windows updates
    - If a redistributable update was installed
    - Uninstall that specific update
    - Or reinstall the correct redistributable
 
 4. **Install redistributables in order**:
-   - "Install the latest one, then start TopSolid"
-   - "If the problem continues install the N-1 latest"
    - Try versions from newest to oldest
    - One of them will be the correct version
 
 5. **Don't use system restore**:
-   - "Tried to restore back earlier date, no luck"
    - System restore may not restore redistributables correctly
    - Use the repair or reinstall method instead
    - It's more reliable
@@ -146,13 +129,9 @@ A PC totally crashed. The only data saved is the TopSolidPdm folder. The files h
 ### Fix
 
 1. **Find the SQL database files**:
-   - "You need also the database from SQL"
-   - "Usually it is on C:\Program Files\Microsoft SQL Server\..."
-   - "They are two files needed, the .mdf and .ldf files"
    - Look for `localPDMServer_log.ldf` and `localPDMserverServer.mdf`
 
 2. **Attach the MDF file to SQL Server**:
-   - "You have to attach the mdf file"
    - Open SQL Server Management Studio (SSMS)
    - Connect to the SQL Server instance
    - Right-click Databases > Attach
@@ -160,8 +139,6 @@ A PC totally crashed. The only data saved is the TopSolidPdm folder. The files h
    - The database is restored
 
 3. **Use the TopSolid Backup tool**:
-   - "Does the PDM backup contain both a Database and a Vault?"
-   - "Yes, if you use the TopSolid Backup tool you will get both"
    - For future protection, use the TopSolid Backup tool
    - It backs up both the database and vault
 
@@ -207,7 +184,6 @@ After installing a TopSolid 7.18 demo that worked, the user downloaded and insta
 ### Fix
 
 1. **Use the repair installation**:
-   - "I tried to do a repair, I go back to the original version"
    - Repair reverts to the base version
    - This gets TopSolid running again
    - But without the service pack fixes
@@ -231,7 +207,6 @@ After installing a TopSolid 7.18 demo that worked, the user downloaded and insta
    - Prevents installation corruption
 
 5. **Check Windows compatibility**:
-   - "This application cannot run on your PC"
    - Check Windows version compatibility
    - Check 32-bit vs 64-bit
    - Ensure Windows is fully updated

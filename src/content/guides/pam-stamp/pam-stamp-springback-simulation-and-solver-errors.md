@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.sciencedirect.com/science/article/abs/pii/S0924013604003577"
-  - "https://technicalgamer.org/how-to-save-time-and-monitor-simulation-in-pamstamp/"
-  - "https://doi.org/10.17973/mmsj.2024_02_2023138"
 ---
 
 # PAM-STAMP Springback Simulation and Solver Errors: Springback Convergence Failure from Implicit Solver Material Non-Linearity Requiring Explicit Damping Method, Upper Pad Stop Criterion Not Working from Distance Detection Failure Requiring Pinch Test Alternative, Springback Accuracy from Sensitive Damping Value and Integration Points Requiring Pre-Simulation Tuning, Mesh Strategy Impact on Springback Prediction Requiring Springback or Compensation Mesh Setting, and Solver Selection for Springback Stage Requiring SMP-DP Advanced Implicit Instead of SMP-SP Explicit
@@ -31,20 +28,16 @@ Springback simulation using the implicit solver fails to converge. The implicit 
 ### Fix
 
 1. **Use explicit solution instead of implicit**:
-   - "The explicit solution is realized by the damping of the stress field. It doesn't have a convergence problem"
    - Switch from implicit to explicit springback method
    - In PAM-STAMP, select explicit solver for springback stage
    - This eliminates the convergence issue
 
 2. **Improve forming stage accuracy**:
-   - "When the accuracy of the stress field after forming is poor, the convergence problem becomes more serious"
    - Improve the forming simulation accuracy first
    - Use finer mesh in the forming stage
    - Better stress field = better springback convergence
 
 3. **Use pre-simulation for damping value**:
-   - "A reasonable nodal damping value cannot be obtained beforehand"
-   - "Usually pre-simulation being needed to obtain a suitable damping value"
    - Run a pre-simulation to determine the damping value
    - Then use that value in the main springback simulation
 
@@ -141,20 +134,16 @@ Springback simulation results are inaccurate. The predicted springback doesn't m
 ### Fix
 
 1. **Use seven integration points**:
-   - "Usually seven integration points is the best value"
    - Set through-thickness integration points to 7
    - This provides the best accuracy for springback
    - Don't use too many or too few
 
 2. **Run pre-simulation for damping value**:
-   - "Usually pre-simulation being needed to obtain a suitable damping value"
    - Run a short pre-simulation with different damping values
    - Compare springback results with measurements
    - Select the damping value that matches best
 
 3. **Use appropriate mesh size**:
-   - "The blank sheet element size is sensitive in springback simulation"
-   - "Use element size < 25% of (fillet radius + half of blank thickness)"
    - For springback: mesh size < 25% of (fillet radius + half thickness)
    - This ensures accurate stress distribution
 
@@ -165,19 +154,12 @@ Springback simulation results are inaccurate. The predicted springback doesn't m
    - Use the actual process velocity
 
 5. **Use PAM-Autostamp with SSU**:
-   - "Use PAM-Autostamp. It gives the best results and is fast"
-   - "Don't use PAM-Quikstamp Plus — it is a fast solver with lower result quality"
-   - "Use PAM-Autostamp with SSU enabled — equally fast and gives better results"
    - SSU (Smooth Surface Update) improves contact accuracy
 
 6. **Enable speed-up option**:
-   - "PAM-STAMP uses a new simulation method to speed up the calculation"
-   - "Enable the speed up in the Global Object → CPU control attribute"
-   - "Default value of the speed up is 100%, which corresponds to the fastest setting"
    - This doesn't change results, only speed
 
 7. **Use Double Precision for springback**:
-   - "SMP-DP (Shared Memory Process - Double Precision) for springback"
    - Use double precision solver for springback stage
    - Single precision may introduce rounding errors
    - Especially important for springback accuracy
@@ -199,7 +181,6 @@ Springback prediction varies significantly depending on the mesh strategy used f
 ### Fix
 
 1. **Use Springback mesh strategy**:
-   - "The mesh strategies 'Springback' and 'Compensation' for creation of elements on tools"
    - In PAM-STAMP, select the "Springback" mesh strategy
    - This creates appropriate elements for springback accuracy
    - Available in the mesh wizard
@@ -211,31 +192,25 @@ Springback prediction varies significantly depending on the mesh strategy used f
    - Choose based on your workflow
 
 3. **Use mesh size ≈ 2× sliding fillet radius**:
-   - "Mesh size ≈ 2× the sliding fillet radius"
-   - "Final element size < radius of sliding fillet"
    - This ensures the mesh captures the fillet geometry
    - Critical for accurate contact and stress
 
 4. **Use adaptive mesh refinement**:
-   - "Use adaptive mesh refinement to reduce computation time and improve results"
    - Start with coarser mesh
    - Refine in critical areas during simulation
    - This balances accuracy and computation time
 
 5. **Refine blank outline for complex shapes**:
-   - "For crash forming or complex blanks, refine the blank outline"
    - Complex blank shapes need finer mesh at the outline
    - This prevents distortion during forming
    - And improves springback accuracy
 
 6. **Use Reference Points System (RPS)**:
-   - "Three points of the reference points system (RPS) for measurement of dimensional deviations"
    - Define RPS points in the simulation
    - These match the physical measurement points
    - This ensures accurate comparison
 
 7. **Compare with physical measurements**:
-   - "Simulation results were compared with measurements on real stampings"
    - Use a coordinate measuring machine (CMM)
    - Compare simulation springback with measured springback
    - Adjust parameters until they match
@@ -257,45 +232,35 @@ Springback simulation results are inaccurate or the solver crashes when using th
 ### Fix
 
 1. **Use Multihost for different solver types**:
-   - "The function 'Multihost' was used due to the requirement of different types of solvers"
    - Use Multihost to set different solvers for different stages
    - This allows each stage to use the optimal solver
    - Configure in the process definition
 
 2. **Use SMP-SP Explicit for forming stages**:
-   - "SMP-SP (Shared Memory Process - Single Precision) for holding and stamping"
    - Use single-precision explicit for forming
    - This is fast and accurate enough for forming
    - Calculation type: "Explicit"
 
 3. **Use SMP-DP Advanced Implicit for springback**:
-   - "SMP-DP (Shared Memory Process - Double Precision) for springback"
    - Use double-precision implicit for springback
    - Calculation type: "Advanced Implicit"
    - This provides the best springback accuracy
 
 4. **Use the DoubleAction.ksa macro**:
-   - "The macro 'DoubleAction.ksa' was chosen"
    - This macro automates the solver selection
    - It sets the correct solver for each stage
    - Use it for springback simulations
 
 5. **Don't use PAM-Quikstamp Plus**:
-   - "Don't use PAM-Quikstamp Plus. It is a fast solver with lower result quality"
-   - "Use PAM-Autostamp with SSU enabled instead: equally fast and gives better results"
    - Always use PAM-Autostamp for production simulations
    - Quikstamp is only for quick previews
 
 6. **Enable SSU (Smooth Surface Update)**:
-   - "PAM-Autostamp with SSU enabled"
    - SSU improves contact surface representation
    - This improves stress field accuracy
    - Better stress field = better springback
 
 7. **Monitor simulation progress**:
-   - "Watch the results of every simulation stage instantly"
-   - "Stop the simulation if you see something went wrong"
-   - "Correct the issue and restart"
    - Use the GUI monitoring tools
 
 ### Community Report

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.edaboard.com/threads/proteus-simulation-crash.348087/"
-  - "https://www.edaboard.com/threads/proteus-isis-suddenly-crashes-on-simulation.333934/"
-  - "https://www.edaboard.com/threads/proteus-error-excess-cpu-load-simulation-cannot-run-in-real-time.261791/"
 ---
 
 # Proteus Design Suite Simulation Crashes and Errors: Access Violation from Arduino Library Import, PDS.exe Crash from MCU Simulation Licensing, Excess CPU Load from Analog Circuitry in MHz Range, Schematic File Not Backward Compatible Between Versions, and Stack Overflow from Complex Microcontroller Code
@@ -22,9 +19,6 @@ Proteus Design Suite crashes during simulation, especially with Arduino librarie
 
 ### Error Messages
 
-- "Access violation in module ntdll.dll"
-- "Proteus access violation in module 'UNKNOWN'"
-- "PDS.exe has stopped working"
 
 ### Symptom
 
@@ -37,11 +31,9 @@ The Arduino library files (ARDUINO.IDX, ARDUINO.LIB) are incompatible with the i
 ### Fix
 
 1. **Use Proteus 7 for Arduino simulation** — the library works fine in Proteus 7:
-   - "I checked the above library file with Proteus 7, it is working!"
    - If you have a Proteus 7 license, use it for Arduino projects
 
 2. **Update to Proteus 8.4 or later**:
-   - "Proteus 8.0 is very buggy, you should update to 8.4 or downgrade to 7.11"
    - Newer versions have better Arduino library support
    - The access violation may be fixed in newer versions
 
@@ -89,7 +81,6 @@ The crash is related to licensing issues. MCU simulation requires specific licen
 ### Fix
 
 1. **Update to Proteus 8.4 or later**:
-   - "Proteus 8.0 is very buggy, you should update to 8.4 or downgrade to 7.11"
    - Version 8.0 has known MCU simulation bugs
    - 8.4+ has improved stability for MCU simulation
 
@@ -99,7 +90,6 @@ The crash is related to licensing issues. MCU simulation requires specific licen
    - Note: schematic files are not backward compatible (see Section 4)
 
 3. **Check licensing**:
-   - "I suspect the reason the simulation keeps crashing is due to the licensing of the software"
    - Verify the license includes MCU simulation features
    - Contact LabCenter support for licensing issues
    - Ensure the license is properly activated
@@ -108,7 +98,6 @@ The crash is related to licensing issues. MCU simulation requires specific licen
    - Proteus has a crash reporting system
    - After a crash and successful restart, it prompts to upload a crash dump
    - Enable this mechanism to help LabCenter diagnose the issue
-   - "Crash dumps will be extremely helpful in understanding why a particular crash occurred"
 
 5. **Check if the issue is MCU-specific**:
    - Try simulating non-MCU circuits — if they work, the issue is MCU-related
@@ -140,7 +129,6 @@ As the clock frequency increases, the simulation time quanta decreases. At MHz f
 1. **Remove analog circuitry from the simulation**:
    - Remove power supply circuits (transformers, rectifiers, filter caps, regulators)
    - Use a simple DC source instead of a full power supply
-   - "After reading this I just selected the power supply circuit and cut it from the circuit. Run the simulation with no other changes I saw the LED goes on and off, and the error didn't appear again."
 
 2. **Simplify the circuit**:
    - Remove dividers and filters from the input
@@ -153,7 +141,6 @@ As the clock frequency increases, the simulation time quanta decreases. At MHz f
    - This improves convergence and reduces CPU load
 
 4. **Accept real-time simulation limitations**:
-   - "Not being able to run Proteus simulations in real time is fairly typical, no matter how fast the host system"
    - Real-time simulation of MHz-range mixed-signal is not possible on desktop systems
    - Use the simulation clock in the lower corner to track critical timings
    - Focus on functional correctness, not real-time performance
@@ -164,7 +151,6 @@ As the clock frequency increases, the simulation time quanta decreases. At MHz f
    - Don't expect the simulation to match real-time execution
 
 6. **Consider FPGA-based simulation**:
-   - "If real-time simulations of digital hardware are required, they are typically implemented on an FPGA platform, not emulated on another processor/OS"
    - For true real-time digital simulation, use FPGA tools
 
 ### Community Report
@@ -186,7 +172,6 @@ Proteus schematic files are not backward compatible. Files created in a newer ve
 ### Fix
 
 1. **Redraw the circuit in the older version**:
-   - "It is not backwards version compatible, you have to redraw"
    - This is the only option if you must use the older version
    - Export a netlist or component list from the newer version to guide the redraw
 

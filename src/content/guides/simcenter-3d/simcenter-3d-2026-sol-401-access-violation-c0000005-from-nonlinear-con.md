@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000ad8J9KAI/problem-with-sol-401-non-linear-contact-analysismain-access-violation-c0000005-exception-encountered"
-  - "https://community.sw.siemens.com/s/article/How-to-Debug-or-Troubleshoot-a-failed-Nastran-simulation"
-  - "https://community.sw.siemens.com/s/question/0D54O000061xlYYSAY/access-violation-c0000005"
 ---
 
 # Simcenter 3D 2026 SOL 401 Access Violation C0000005 from Nonlinear Contact in Sparse Solver, Acoustics BEM Internal Error Progress Bar Exceeded Steps, NX Nastran SOL 101 Access Violation from Large Young's Modulus Difference in Contact, Debugging Failed Nastran Simulation Using F06 UFM and SFM Error Codes, and Simcenter Nastran 2606 Refactored SOL401 Contact for Convergence: Solver Change to PARDISO, Block Size Reduction, Material Modulus Equalization, F06 File Analysis, and 2606 Update
@@ -31,44 +28,26 @@ When running SOL 401 nonlinear contact analysis on a structure with shell elemen
 ### Fix
 
 1. **Change solver to PARDISO via NLCNTL**:
-   - "Try one of the other SOLVER options"
-   - "On NLCNTL to see if they"
-   - "Exhibit the same behavior"
    - Change to PARDISO
 
 2. **Try MUMPS solver**:
-   - "Unless you had MUMPS"
-   - "Or PARDISO selected via NLCNTL"
    - Try MUMPS solver
    - As alternative
 
 3. **Check .f04 and .log files**:
-   - "Can't really get more specific"
-   - "Without seeing the .f04 and .log files"
    - Check .f04 and .log
    - For details
 
 4. **Verify memory settings**:
-   - "The .log shows that you are using"
-   - "The default memory settings"
-   - "(mem=0.45*physical)"
    - Check memory settings
 
 5. **Test without contact first**:
-   - "I solved the model earlier"
-   - "Without contact, only with gluing"
-   - "Connections and it solved"
    - Test without contact
 
 6. **Update to Simcenter Nastran 2606**:
-   - "Refactored SOL401 contact"
-   - "Designed to optimise convergence"
-   - "Reduce iterations"
    - Update to 2606
 
 7. **Check model size vs memory**:
-   - "The problem is not particularly large"
-   - "(~500k grids, ~250k contacts)"
    - Verify model size
    - Is within memory limits
 
@@ -89,9 +68,6 @@ The BEM acoustics solver has a bug in the block processing algorithm. When proce
 ### Fix
 
 1. **Reduce block size**:
-   - "Due to memory constraints"
-   - "The conversion will be done in 6 blocks"
-   - "These blocks will be 50.539 Gb big"
    - Reduce block size
 
 2. **Increase memory allocation**:
@@ -101,8 +77,6 @@ The BEM acoustics solver has a bug in the block processing algorithm. When proce
      - Analysis
 
 3. **Check BEM matrix dimensions**:
-   - "Processing block # 1/6 (diagonal)"
-   - "With 225184x225184 elements"
    - Check matrix
    - Dimensions
 
@@ -119,13 +93,10 @@ The BEM acoustics solver has a bug in the block processing algorithm. When proce
    - BEM matrix size
 
 6. **Check CGNS export settings**:
-   - "CFD-aeroacoustic with"
-   - "CGNS export in Fluent"
    - Check CGNS
    - Export settings
 
 7. **Report as bug**:
-   - "I think this is a bug"
    - Report to Siemens
    - With the .f04
    - And .log files
@@ -147,33 +118,19 @@ NX Nastran SOL 101 crashes with "MAIN: Access violation (C0000005) exception enc
 ### Fix
 
 1. **Reduce Young's modulus difference**:
-   - "The huge difference in Young modulus"
-   - "Caused this strange memory access error"
-   - "I lowered the first value to 6000"
    - Reduce modulus difference
 
 2. **Increase BUFFSIZE**:
-   - "I tried doubling BUFFSIZE"
-   - "And after that the job"
-   - "Finished without any error"
    - Increase BUFFSIZE
 
 3. **Change NASTRAN SYSTEM(206)**:
-   - "NASTRAN SYSTEM(206)=1"
-   - "Without error, running time 00:59:52"
    - Try SYSTEM(206)=1
    - Or SYSTEM(206)=2
 
 4. **Use element-to-element contact**:
-   - "After i changed surface to surface contact"
-   - "To element to element"
-   - "The job finished ok"
    - Use element-to-element
 
 5. **Check GAP element stiffness**:
-   - "Weird singularity errors"
-   - "Because of insane compression stiffness"
-   - "Of GAP elements (something like 10^26)"
    - Check GAP stiffness
 
 6. **Avoid extreme material properties**:
@@ -183,8 +140,6 @@ NX Nastran SOL 101 crashes with "MAIN: Access violation (C0000005) exception enc
    - Contacting bodies
 
 7. **Check BUFFSIZE maximum**:
-   - "BUFFSIZE 65537 actually IS max value"
-   - "So increasing it has no effect"
    - Check BUFFSIZE
    - Maximum value
 
@@ -205,45 +160,27 @@ A Nastran simulation fails, but the user doesn't know why. The Results icon may 
 ### Fix
 
 1. **Browse simulation folder**:
-   - "Browse the folder where"
-   - "The simulations files are generated"
-   - "(RMB on Simulation and choose Browse)"
    - Browse folder
 
 2. **Check F06 file for errors**:
-   - "Your F06 file is the most important"
-   - "For analysis Debugging"
    - Check F06
    - For errors
 
 3. **Look for UFM error codes**:
-   - "UFM - User Fatal Message"
-   - "These errors arise when user"
-   - "Has missed to define anything"
    - Look for UFM
 
 4. **Look for SFM error codes**:
-   - "SFM - System Fatal Message"
-   - "These errors arise when system"
-   - "Could not solve the simulation"
    - Look for SFM
 
 5. **Check F04 for performance**:
-   - "*.f04 file - Contains information"
-   - "To monitor & tune the performance"
    - Check F04
    - For performance
 
 6. **Check LOG for system details**:
-   - "*.log file - Contains system details"
-   - "Errors or warning during analysis"
    - Check LOG
    - For system errors
 
 7. **Refer to Simcenter Nastran Error List**:
-   - "Refer Simcenter Nastran Error List"
-   - "In the documentation"
-   - "For detailed information"
    - Refer to error list
 
 ### Community Report
@@ -263,44 +200,24 @@ SOL 401 nonlinear contact analysis is slow, requires many iterations, and may no
 ### Fix
 
 1. **Update to Simcenter Nastran 2606**:
-   - "Refactored SOL401 contact"
-   - "Designed to optimise convergence"
-   - "Reduce iterations"
    - Update to 2606
 
 2. **Verify smoother contact results**:
-   - "Deliver a faster, more robust"
-   - "Nonlinear solution with"
-   - "Smoother contact results"
    - Verify smoother results
 
 3. **Check enhanced offset handling**:
-   - "Enhanced offset handling"
-   - "For differential stiffness"
-   - "Improves the accuracy of linear analysis"
    - Check offset handling
 
 4. **Use integrated forces at monitor points**:
-   - "Integrated forces and moments"
-   - "Are now available at monitor points"
-   - "For modal frequency and modal transient"
    - Use monitor points
 
 5. **Check coupled loads analysis support**:
-   - "Improves out-of-the-box support"
-   - "For coupled loads analysis"
-   - "Reducing dependence on customised DMAPs"
    - Use CLA support
 
 6. **Verify shell and beam offsets under preload**:
-   - "Accounting for shell and beam offsets"
-   - "Under preload"
-   - "Helping ensure correct load transfer"
    - Verify offset handling
 
 7. **Use Simcenter Optistruct 2026.1**:
-   - "Simcenter Optistruct 2026.1 release"
-   - "Aligned with Simcenter 2606"
    - Use Optistruct
    - 2026.1
 

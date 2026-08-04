@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/news_p_projekte_datenbankaktualisieren_504102.htm"
-  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/messages_p_013056.htm"
-  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/messages_p_022017.htm"
 ---
 
 # EPLAN 2026 Project Database Update Required for Old Projects Causing Cannot Open Error, Part Not Exist in Database P013056 from Deleted Parts or Changed Part Numbers, Excessive Field Length Values in Database P022017 from Long Device Tags, Macro Parts Data Not Automatically Stored Requiring Manual Synchronization, and Automated Batch Project Database Update via Project Management: Database Update Prompt, Part Exchange or Project Compress, Advanced Mode Reorganization, Parts Update and Complete Commands, and Automated Processing Scheme
@@ -31,33 +28,20 @@ After upgrading to EPLAN 2026, old projects created in previous versions cannot 
 ### Fix
 
 1. **Confirm the update prompt with Yes**:
-   - "Old projects are updated the first time they are opened with the current Eplan version"
-   - "At the time, you will be prompted whether you wish to import the project in the current version"
-   - "If you confirm with [Yes], the project is first updated and then opened"
    - Always click Yes to update
 
 2. **Verify backup copy creation**:
-   - "A backup copy with the not-updated project databases is created in the project directory"
-   - "The backup file *.zw1 can be simply restored by using the command File > Open"
    - Verify the .zw1 backup was created
    - In the project directory
 
 3. **Use Automated Processing for batch updates**:
-   - "In case of a program update, you can update several older projects in one go"
-   - "In the project management (command path: File > Project management)"
-   - "Select the marked projects in the popup menu item Automated processing"
-   - "The 'Project import' scheme is now available in the Run: Automated processing dialog"
    - Use batch update for multiple projects
 
 4. **Don't skip the update**:
-   - "If you do not update an old project"
-   - "You will not be able to open this project in the version 2026"
    - The update is mandatory
    - There is no workaround
 
 5. **Be aware of backward incompatibility**:
-   - "It will no longer be possible to open new projects and old projects that have been updated"
-   - "With old Eplan versions"
    - Once updated, projects can't go back
    - To old EPLAN versions
 
@@ -90,21 +74,12 @@ The message P013056 appears: "The part with part number '<x>' and variant '<y>' 
 ### Fix
 
 1. **For placed parts — exchange the part**:
-   - "Locate the object with the stored part by using the Go to (graphic) functionality"
-   - "From the popup menu in the Message management dialog"
-   - "Open the Properties dialog of the object and bring the Parts tab to the foreground"
-   - "Exchange the part or the part variant for a suitable part from the parts database"
    - Use Go to (graphic) to find the object
 
 2. **For unplaced parts — compress the project**:
-   - "Clean up the project. Select File > Extras > Command group Organize > Project > Command group Optimize > Compress project"
-   - "In the Settings field select 'Remove unnecessary project data'"
-   - "Activate the Remove project data check box"
-   - "And additionally the Unused parts and Unused part variants check boxes"
    - Compress to remove unused parts
 
 3. **Start a new check run**:
-   - "If required, start a new check run"
    - After exchanging parts or compressing
    - Run the check again
    - To verify the message is resolved
@@ -128,8 +103,6 @@ The message P013056 appears: "The part with part number '<x>' and variant '<y>' 
    - In the parts database
 
 7. **Note: offline check only**:
-   - "This check run is not activated by default"
-   - "And can only be performed offline"
    - The P013056 check
    - Must be run offline
 
@@ -150,32 +123,16 @@ The message P022017 appears: "The project contains excessive field length values
 ### Fix
 
 1. **Reorganize the project with Advanced Mode**:
-   - "Reorganize the project"
-   - "Select File > Extras > Command group Organize > Project > Command group Optimize > Compress project"
-   - "Click [...] next to the Settings field"
-   - "In the Settings: Compression dialog, select the scheme you want to edit or create a new one"
-   - "In the field Data to be compressed select the check box Advanced mode"
-   - "Below the check box Reorganize project"
    - Use Advanced Mode reorganization
 
 2. **Save and run the reorganization**:
-   - "Click (Save). Click [OK]"
-   - "Wait until the reorganization procedure is completed"
-   - "Subsequently start a new check run for the entire project"
    - Wait for completion and recheck
 
 3. **Keep device tags short**:
-   - "Keep the device tags as short as possible"
-   - "For the sake of an easy overview and to prevent errors"
    - Use short, concise device tags
    - To prevent field length overflow
 
 4. **Check field length limits**:
-   - "Eplan supports the following number of characters:"
-   - "16 characters for the prefix"
-   - "16 characters for the identifier"
-   - "64 characters for the counter"
-   - "16 characters for the subcounter"
    - Verify device tags don't exceed these limits
 
 5. **Shorten existing long device tags**:
@@ -213,27 +170,15 @@ When inserting a macro containing parts into a project, the parts data is not au
 ### Fix
 
 1. **Use Parts Update for macro parts**:
-   - "Parts in macros are synchronized with the master data parts"
-   - "i.e., the data in the parts database are transferred into the macros"
-   - "Select: Tab Master data > Command group Part > Update"
    - Use the Parts Update command
 
 2. **Use Parts Complete for missing master data**:
-   - "If the macro contains a plot frame or form, it will not be automatically stored"
-   - "Select: Tab Master data > Command group Part > Complete"
-   - "The project searches for the missing master data contained in the macro"
-   - "And then stores it automatically"
    - Use the Parts Complete command
 
 3. **Use Synchronize for selective synchronization**:
-   - "For selective synchronization of individual parts in a project"
-   - "You can use the Synchronization of parts dialog"
-   - "Select: Tab Master data > Command group Part > Synchronize"
    - Use Synchronize for individual parts
 
 4. **Note: Update overwrites project data**:
-   - "Please note that this action will overwrite all other project-related parts data"
-   - "With master data"
    - Be aware that Update overwrites
    - Project-related parts data
 
@@ -272,27 +217,21 @@ After upgrading to EPLAN 2026, many old projects need to be updated to the new d
 ### Fix
 
 1. **Open Project Management**:
-   - "In the project management (command path: File > Project management)"
    - Open the Project Management dialog
    - From the File menu
    - In EPLAN 2026
 
 2. **Select multiple projects**:
-   - "Select the marked projects"
    - Select the projects
    - That need to be updated
    - In the Project Management list
 
 3. **Use Automated Processing**:
-   - "In the popup menu item Automated processing"
    - Right-click the selected projects
    - And choose Automated Processing
    - From the popup menu
 
 4. **Select the Project Import scheme**:
-   - "To update the project databases"
-   - "The 'Project import' scheme is now available"
-   - "In the Run: Automated processing dialog"
    - Select the Project Import scheme
 
 5. **Run the batch update**:

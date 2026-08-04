@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/autocad-forum/autocad-2025-keeps-crashing-on-opening/td-p/13252445"
-  - "https://forums.autodesk.com/t5/autocad-forum/super-laggy-dwg-file/td-p/13385968"
-  - "https://forums.autodesk.com/t5/autocad-forum/autocad-2025-1-2-crashes-while-switching-between-model-amp-amp/td-p/13736176"
 ---
 
 # AutoCAD Crash and Performance Diagnostics: 2025 Graphics Regression Crash on Open, Parametric Constraint Performance Kill, Model/Layout Switch Crash from Legacy Solids, Fatal Access Violation from Corrupted DWG, and Windows Update Breaking Startup
@@ -39,7 +36,6 @@ AutoCAD 2025 introduced a graphics engine regression that affects certain GPU/dr
 
 3. **Check graphics compatibility**:
    - Verify GPU is on the certified graphics hardware list: https://www.autodesk.com/support/system-requirements/certified-graphics-hardware/autocad
-   - "Exceeding requirements is not the same as being compatible with requirements"
    - Update GPU driver from manufacturer website (NVIDIA, AMD, Intel)
 
 4. **Perform clean uninstall** if the issue persists:

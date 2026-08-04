@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://kben.vertex.fi/bd/truss-engineering-errors-and-warnings"
-  - "https://kben.vertex.fi/bd/ifc-bd-2026"
-  - "https://docs.vertex.fi/bd2026en/html/bd/construction/truss_4/truss_out_11.html"
 ---
 
 # Vertex BD 2026 Truss Engineering Error from Product Not Strong Enough for Application, Problem with Piece Orientation from Top Chord Not Aligned with Roof Plane, Member Not Supported Indeterminate from Incomplete Load Path, Compression Design Error from Member Buckling or Design Failure, and IFC Import Rectangular Holes Not Recognized from Missing IFC4 Support: Single Truss Engineering Tool, Top Chord Alignment, Boundary Condition Review, FEA Analysis Check, and IFC Validator
@@ -31,21 +28,12 @@ Truss engineering produces a design error. The error message indicates the produ
 ### Fix
 
 1. **Use Single Truss Engineering tool**:
-   - "Please investigate and"
-   - "Trouble shoot the failure"
-   - "In Single truss engineering tool"
    - Use single truss tool
 
 2. **Check error message for failure nature**:
-   - "The latter half of the error"
-   - "Indicate the nature"
-   - "Of the failure"
    - Check error
 
 3. **Change truss product**:
-   - "The product is not strong enough"
-   - "For this application"
-   - "Change either"
    - Change product
 
 4. **Review truss design parameters**:
@@ -67,10 +55,6 @@ Truss engineering produces a design error. The error message indicates the produ
    - For truss
 
 7. **Contact technical help team**:
-   - "If the calculation message"
-   - "You received is not in the list"
-   - "Please seek assistance"
-   - "From our technical help team"
    - Contact support
 
 ### Community Report
@@ -90,21 +74,12 @@ The error "Problem with piece orientation! Check piece location compared to stru
 ### Fix
 
 1. **Check top chord alignment with roof plane**:
-   - "It often means that"
-   - "The top chord is not"
-   - "Aligned correctly with"
-   - "The roof plane"
    - Check alignment
 
 2. **Verify piece location compared to structure**:
-   - "Check piece location"
-   - "Compared to structure"
    - Verify location
 
 3. **Check for Unsupported object found error**:
-   - "This error often comes"
-   - "With Unsupported object"
-   - "Found error"
    - Check for errors
 
 4. **Align top chord to roof plane**:
@@ -114,10 +89,6 @@ The error "Problem with piece orientation! Check piece location compared to stru
    - Roof plane
 
 5. **Verify load path completeness**:
-   - "The load path from"
-   - "The architecture roof to"
-   - "The truss framing members"
-   - "Is incomplete"
    - Check load path
 
 6. **Review truss layout**:
@@ -127,8 +98,6 @@ The error "Problem with piece orientation! Check piece location compared to stru
    - Alignment
 
 7. **Check area loads**:
-   - "In this case the area loads"
-   - "Are not truss structures"
    - Check area
    - Loads
 
@@ -149,14 +118,9 @@ The error "Member is not supported or is in an indeterminate" appears. The error
 ### Fix
 
 1. **Review boundary conditions**:
-   - "The boundary condition"
-   - "Of the object of design"
-   - "Is not correctly defined"
    - Review conditions
 
 2. **Check roof panel support**:
-   - "Certain roof panel"
-   - "Is not sufficiently supported"
    - Check support
 
 3. **Verify member support**:
@@ -166,10 +130,6 @@ The error "Member is not supported or is in an indeterminate" appears. The error
    - In the model
 
 4. **Review truss engineering boundary conditions**:
-   - "Modification to the boundary"
-   - "Conditions is necessary"
-   - "Depending on the type"
-   - "Of message"
    - Modify conditions
 
 5. **Check for indeterminate members**:
@@ -207,23 +167,12 @@ The error "Compression design error. Member buckles or design fails for other re
 ### Fix
 
 1. **Review model for adequate support**:
-   - "Member or structure supported"
-   - "By this object is not"
-   - "Adequately supported!"
-   - "Please review your model"
    - Review model
 
 2. **Check structure above truss**:
-   - "Please check that"
-   - "The structure above"
-   - "Is sufficiently supported"
    - Check above
 
 3. **Verify load from above is normal**:
-   - "This error occurs if"
-   - "The load coming from"
-   - "The structure above"
-   - "The truss is abnormal"
    - Check loads
 
 4. **Use Single Truss Engineering tool**:
@@ -245,9 +194,6 @@ The error "Compression design error. Member buckles or design fails for other re
    - Configuration
 
 7. **Modify boundary conditions**:
-   - "Modification to the"
-   - "Boundary conditions"
-   - "Is necessary"
    - Modify conditions
 
 ### Community Report
@@ -267,43 +213,25 @@ IFC import doesn't recognize rectangular holes in pipes. The software can't auto
 ### Fix
 
 1. **Update to Vertex BD 2026**:
-   - "This update adds support"
-   - "For rectangular holes"
-   - "When importing IFC pipes"
    - Update to 2026
 
 2. **Use IFC Validator**:
-   - "The IFC validator UI"
-   - "Was introduced to make"
-   - "Validating IFC files easier"
    - Use validator
 
 3. **Validate IFC files before import**:
-   - "Validate IFC files directly"
-   - "Within Vertex BD"
    - Validate before
    - Import
 
 4. **Check validation results log**:
-   - "Validation results are"
-   - "Saved in a log file"
    - Check log
 
 5. **Use IFC 4 format**:
-   - "Starting with version 2023"
-   - "Vertex BD supports"
-   - "The IFC 4 file format"
    - Use IFC4
 
 6. **Use IFC Conversion Tool**:
-   - "Conversion Tool, users can"
-   - "Convert IFC objects"
-   - "To Vertex BD objects"
    - Use conversion
 
 7. **Review IFC documentation**:
-   - "Please visit IFC documentation"
-   - "https://standards.buildingsmart.org"
    - Check docs
 
 ### Community Report

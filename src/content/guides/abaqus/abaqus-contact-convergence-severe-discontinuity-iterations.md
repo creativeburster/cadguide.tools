@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contacttrouble.htm"
-  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contactconstraints.htm"
-  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contactdiagnostics.htm"
 ---
 
 # Abaqus Contact Convergence Severe Discontinuity Iterations, Second-Order Tetrahedral Corner Node Zero Force, Initial Overclosure Interference Fit Resolution, Penalty Method vs Hard Contact Overconstraint, and Surface Mesh Crack Node Stuck: Surface-to-Surface Formulation, Penalty Enforcement, Automatic Overclosure Adjustment, and Small-Sliding Tracking
@@ -32,10 +29,6 @@ Abaqus/Standard contact analysis aborts with "CONVERGENCE IS JUDGED DIFFICULT" o
 
 1. **Check if SDIs are tending toward zero**:
    - Use the contact diagnostics tool in Abaqus/CAE
-   - "Plot the number of contact status changes over the course of an attempt"
-   - "If the changes are tending toward zero, increasing the allowed number of SDIs"
-   - "Or adjusting the SDI conversion settings may allow Abaqus to resolve"
-   - "If the changes are not tending toward zero, you will need to revise your model"
 
 2. **Increase the maximum number of SDIs**:
    - In the step definition
@@ -44,26 +37,19 @@ Abaqus/Standard contact analysis aborts with "CONVERGENCE IS JUDGED DIFFICULT" o
    - Try 20 or higher for complex contact
 
 3. **Adjust SDI conversion settings**:
-   - "Adjusting the SDI conversion settings"
    - Set `CONTROLS, PARAMETERS=TIME INCREMENTATION`
    - Modify the SDI conversion criteria
    - Allow more SDIs before conversion to equilibrium iterations
 
 4. **Use small-sliding tracking approach**:
-   - "It is typically easier to resolve contact conditions for contact pairs using the small-sliding tracking approach"
-   - "Than for those using the finite-sliding tracking approach"
    - If applicable to your model
    - Switch from finite-sliding to small-sliding
 
 5. **Identify problematic contact pairs**:
-   - "If a particular contact pair or surface region is causing a majority of the status fluctuations"
-   - "You may need to modify characteristics of the associated interaction"
    - Use the diagnostics tool to highlight problematic regions
    - Focus on the most active contact pairs
 
 6. **Reduce initial contact changes**:
-   - "It is common to have convergence difficulties in the first increment"
-   - "If the contact status changes over a large portion of the contact area upon initial loading"
    - Apply loads gradually
    - Use a smaller initial time increment
 
@@ -90,15 +76,10 @@ Contact analysis using second-order tetrahedral elements (C3D10 or C3D10HS) as t
 ### Fix
 
 1. **Use surface-to-surface contact formulation**:
-   - "Use the surface-to-surface contact formulation (generally recommended)"
-   - "Instead of the node-to-surface contact formulation"
    - This is the primary recommended fix
    - Surface-to-surface handles second-order elements correctly
 
 2. **Use penalty constraint enforcement method**:
-   - "Use the penalty constraint enforcement method (generally recommended)"
-   - "Or augmented Lagrange constraint enforcement method"
-   - "Instead of strict enforcement of hard contact"
    - The penalty method allows some penetration and is more robust
 
 3. **Use modified tetrahedral elements (C3D10M)**:
@@ -108,9 +89,6 @@ Contact analysis using second-order tetrahedral elements (C3D10 or C3D10HS) as t
    - With node-to-surface formulation
 
 4. **Let Abaqus auto-convert elements**:
-   - "Abaqus/Standard automatically converts most three-dimensional second-order elements with no midface node"
-   - "(i.e., serendipity elements) that form a secondary surface into elements with a midface node"
-   - "C3D20(RH) → C3D27(RH), C3D15(H) → C3D15V(H), S8R5 → S9R5, M3D8 → M3D9"
    - But C3D10 is NOT auto-converted — you must use the fixes above
 
 5. **Use first-order elements for contact surfaces**:
@@ -119,11 +97,7 @@ Contact analysis using second-order tetrahedral elements (C3D10 or C3D10HS) as t
    - First-order elements don't have the corner node zero force issue
    - But may require finer mesh
 
-6. **Specify penalty method for coupled-field elements**:
-   - "Abaqus/Standard does not convert second-order coupled temperature-displacement"
-   - "Coupled thermal-electrical-structural, and coupled pore pressure-displacement elements"
-   - "Specify a penalty or augmented Lagrange constraint enforcement method"
-   - "To approximate hard pressure-overclosure behavior"
+6. **Specify penalty method for coupled-field elements**.
 
 ### Community Report
 
@@ -142,38 +116,23 @@ Contact analysis with initial overclosure (interference fit) aborts in the first
 ### Fix
 
 1. **Remove unintended overclosures**:
-   - "Remove any initial overclosures that are an unintended result of mesh discretization"
-   - "Or errors in defining contact surfaces"
    - Use contact initialization to adjust secondary surface positions
    - Ensure all secondary nodes start in contact without penetration
 
 2. **Use general contact for automatic multi-increment resolution**:
-   - "If you choose to have initial overclosures treated as interference fits for general contact"
-   - "They are automatically resolved over multiple increments"
    - Switch from contact pairs to general contact
    - For automatic interference fit resolution
 
 3. **Modify contact model for multi-increment resolution**:
-   - "In this situation you should modify the contact model"
-   - "To allow resolution of overclosures over multiple increments"
    - Use `*CONTACT INTERFERENCE` with shrink fit
    - This resolves the interference gradually
 
 4. **Use contact initialization data**:
-   - "Abaqus/Standard adjust the position of the secondary surface"
-   - "To ensure that all secondary nodes that should initially be in contact"
-   - "Start out in contact without any penetration"
    - Use `*CONTACT INITIALIZATION DATA` with ADJUST
 
-5. **Specify precise clearance/overclosure for small-sliding**:
-   - "When an intended initial clearance or overclosure is small"
-   - "Compared to typical dimensions of the bodies in contact"
-   - "And a small-sliding contact pair is used"
-   - "You can specify the clearance or overclosure precisely"
+5. **Specify precise clearance/overclosure for small-sliding**.
 
 6. **Check for incorrect surface normals**:
-   - "Specifying incorrect surface normals can cause the contact initialization algorithm"
-   - "To interpret a physical gap as a penetration"
    - Verify surface normals are correct
    - Especially for shell-like surfaces
 
@@ -199,23 +158,11 @@ Contact analysis using hard contact with the direct enforcement method produces 
 
 ### Fix
 
-1. **Use the penalty method**:
-   - "The penalty method approximates hard pressure-overclosure behavior"
-   - "With this method the contact force is proportional to the penetration distance"
-   - "So some degree of penetration will occur"
-   - "Numerical softening associated with the penalty method can mitigate overconstraint issues"
+1. **Use the penalty method**.
 
-2. **Use augmented Lagrange method**:
-   - "The augmented Lagrange method applies only to hard pressure-overclosure relationships"
-   - "Abaqus/Standard finds a converged solution with the penalty method"
-   - "If a secondary node penetrates by more than a specified tolerance"
-   - "The contact pressure is augmented and another series of iterations is executed"
+2. **Use augmented Lagrange method**.
 
-3. **Use softened pressure-overclosure relationship**:
-   - "The direct method can be used to model softened contact behavior"
-   - "Regardless of the type of contact formulation"
-   - "Modeling stiff interface behavior with a contact formulation"
-   - "That is prone to overconstraints can be difficult"
+3. **Use softened pressure-overclosure relationship**.
 
 4. **Switch to surface-to-surface discretization**:
    - For 3D self-contact
@@ -230,15 +177,9 @@ Contact analysis using hard contact with the direct enforcement method produces 
    - For models with complex self-contact
 
 6. **Reduce penalty stiffness**:
-   - "The low initial penalty stiffness typically results in better convergence"
-   - "Of the Newton iterations and better robustness"
-   - "While the higher final stiffness keeps the overclosure at an acceptable level"
    - Specify a lower penalty stiffness for difficult contact
 
 7. **Use reduced penalty stiffness in first increment**:
-   - "An approach that tends to improve convergence behavior"
-   - "Is to use a reduced penalty stiffness in the early iterations of the first increment"
-   - "And return to the default penalty stiffness for the final iterations"
    - This helps establish initial contact conditions
 
 ### Community Report
@@ -264,7 +205,6 @@ Contact analysis with finite-sliding, node-to-surface or surface-to-surface cont
    - Use the mesh module to verify surface continuity
 
 2. **Use surface-to-surface contact**:
-   - "Similar problems can occur for finite-sliding, surface-to-surface contact"
    - But surface-to-surface is generally more robust
    - Than node-to-surface for faceted surfaces
    - It considers the entire facet, not just individual nodes

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
-  - "https://www.crowncad.com/english/help/2025R2/Comprehensive.html"
-  - "https://www.linkedin.com/posts/crowncad_crowncad2026-upgrades-in-assembly-design-activity-7405133090018324480-b5eE"
-  - "https://cadguide.tools/tools/crowncad"
 ---
 
 # CrownCAD Cloud Assembly and Model Validation Errors: Large Assembly Performance from Part State Not Maintained on Refresh Requiring Large Assembly Mode, Invalid Faces and Edges from Geometry Import Requiring Check Entity Command, Virtual Parts Not Converting to Normal Parts Requiring Design Completion Conversion, Geometry Analysis Identifying Problematic Entities Requiring Manual Review, and Limited International Documentation and Plugin Ecosystem Requiring Community Workarounds
@@ -31,8 +28,6 @@ In older CrownCAD versions, the lightweight/reduced state of parts was not prese
 ### Fix
 
 1. **Enable Large Assembly Mode**:
-   - "The lightweight and reduced state of parts can be maintained in large assembly mode"
-   - "When the large assembly is opened, refresh the web page or switch the document, the system will keep the restore state of the parts"
    - Enable Large Assembly Mode in the assembly settings
    - This preserves part states across refreshes
 
@@ -43,15 +38,10 @@ In older CrownCAD versions, the lightweight/reduced state of parts was not prese
    - The states are maintained in 2025 R2
 
 3. **Edit features in large assembly mode**:
-   - "In large assembly mode, you can edit features, fits, etc."
-   - "The system will automatically restore relevant parts after prompting for editing"
    - Only the parts being edited are restored to full state
    - Other parts remain lightweight
 
 4. **Use Virtual Parts for preliminary design**:
-   - "In the preliminary design stage, the assembly structure and parts need to be changed frequently"
-   - "Virtual parts are stored in the assembly without generating independent documents"
-   - "Can be quickly added, deleted, changed and checked"
    - This avoids producing a large number of invalid part documents
 
 5. **Optimize browser performance**:
@@ -77,7 +67,6 @@ Imported geometry from other CAD systems may contain topological errors from for
 ### Fix
 
 1. **Use the Check Entity command**:
-   - "New 'Check Entity' command, which can be used to automatically find invalid faces, invalid edges, short edges, and other elements in the model"
    - Available in CrownCAD 2025 R2
    - Run Check Entity on imported models
    - Identify all invalid entities
@@ -101,7 +90,6 @@ Imported geometry from other CAD systems may contain topological errors from for
    - Export as STEP AP242 for best compatibility
 
 5. **Use Geometry Analysis for comprehensive check**:
-   - "New 'Geometry Analysis' command to identify geometrical entities in parts that may cause problems"
    - Run Geometry Analysis after Check Entity
    - This identifies additional problematic entities
    - Fix all identified issues before proceeding
@@ -129,13 +117,11 @@ Using Virtual Parts in the preliminary design stage. Virtual parts are stored in
    - Incomplete parts can't be converted
 
 2. **Use the Convert to Normal Part command**:
-   - "After the design is completed, the virtual parts can be converted into ordinary parts"
    - Right-click the virtual part in the assembly tree
    - Select "Convert to Normal Part"
    - The part is saved as an independent document
 
 3. **Check for naming conflicts**:
-   - "Avoid producing documents with the same name"
    - Ensure the converted part name doesn't conflict
    - With existing parts in the project
    - Rename if necessary before conversion
@@ -148,7 +134,6 @@ Using Virtual Parts in the preliminary design stage. Virtual parts are stored in
 
 5. **Use virtual parts only for preliminary design**:
    - Virtual parts are designed for the preliminary stage
-   - "The assembly structure and parts need to be changed frequently"
    - Don't use virtual parts for final design
    - Convert to normal parts before detailed design
 
@@ -228,7 +213,6 @@ CrownCAD is developed by Huayun 3D, a Chinese company. "Limited international do
 
 2. **Follow CrownCAD on LinkedIn**:
    - CrownCAD posts tutorials and updates on LinkedIn
-   - "Getting started with assembly design in CrownCAD"
    - Step-by-step tutorials for beginners
    - Feature announcements and tips
 
@@ -240,9 +224,6 @@ CrownCAD is developed by Huayun 3D, a Chinese company. "Limited international do
 
 4. **Leverage standard CAD knowledge**:
    - CrownCAD's interface is similar to SolidWorks
-   - "Supports both top-down and bottom-up assembly design"
-   - "Enables efficient component mating"
-   - "Ensures real-time synchronization between assemblies and parts"
    - Standard CAD workflows transfer to CrownCAD
 
 5. **Use the CADGuide.tools review**:

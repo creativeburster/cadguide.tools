@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://ftp.lstc.com/anonymous/outgoing/support/FAQ/instability.tips"
-  - "https://www.dynasupport.com/faq/general/have-you-any-tips-on-how-to-to-combat-instability"
-  - "https://ftp.lstc.com/anonymous/outgoing/support/FAQ/hourglass_condensed"
 ---
 
 # LS-DYNA Instability and Hourglass Errors: NaN Velocities and Negative Volume from Contact Penetration, Hourglass Energy Exceeding 10% from Under-Integrated Elements, Mass Scaling Causing Excessive Added Mass, Implicit Non-Convergence from Loose Parts and Rigid Body Modes, and Energy Balance Not Close to 1.0
@@ -23,8 +20,6 @@ LS-DYNA explicit and implicit simulations fail from numerical instabilities, hou
 ### Error Messages
 
 - "out-of-range velocities" (NaN — Not a Number)
-- "negative volume in brick element"
-- "termination due to mass increase"
 
 ### Symptom
 

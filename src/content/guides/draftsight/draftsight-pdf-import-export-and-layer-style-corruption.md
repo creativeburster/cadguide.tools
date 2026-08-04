@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://3dswym.3dexperience.3ds.com/question/draftsight-user-community/importing-pdf-issues_9035"
-  - "https://3dswym.3dexperience.3ds.com/question/draftsight-user-community/resulting-output-files-from-pdf-export-shows-features-not-present-in-draftsight-model-or-layout_10474"
-  - "https://www.eng-tips.com/threads/draftsight-vba-dimensionstyle-not-updating.480200/"
 ---
 
 # DraftSight PDF Import Export and Layer Style Corruption: PDF Import Inconsistent from INSERT OBJECT Showing Blank White Sheet or File Not Found, PDF Export Shows Features Not Present in Drawing from Layer Recollection and Blocking, ImportPDF Command Missing from Ribbon in DraftSight Professional, DimensionStyle Not Updating Without Switching Away and Back, and Layer Styles Corrupted on Export Requiring Master File Workaround
@@ -65,7 +62,6 @@ DraftSight's INSERT OBJECT command uses OLE (Object Linking and Embedding) to in
 
 6. **Reinstall or repair DraftSight**:
    - If ImportPDF command is missing from the ribbon
-   - "My DraftSight Professional is no longer showing the option to import a PDF"
    - Run the DraftSight installer in Repair mode
    - Check that the Professional license is active
 
@@ -116,7 +112,6 @@ DraftSight's PDF export retains layer state history — previous positions and s
    - Use their PDF export, which may handle layers and hatches better
 
 7. **Flatten in Adobe Illustrator**:
-   - "I opened one of the PDFs in Adobe Illustrator and when selecting each feature, while isolated, appeared as it did in DraftSight"
    - Use Illustrator to clean up the PDF
    - Remove blocking objects and re-export
 
@@ -184,7 +179,6 @@ DraftSight's DimensionStyle update mechanism has a bug where style changes don't
 ### Fix
 
 1. **Switch to a different DimensionStyle and back**:
-   - "You need to change to different DimensionStyle, and then back to the one you want and then it gets updated"
    - In the DimensionStyle Manager, select a different style
    - Set it as current
    - Then switch back to the desired style
@@ -232,10 +226,7 @@ DraftSight's layer style export has a bug where multiple custom colors in a laye
 
 ### Fix
 
-1. **Use the master file workaround**:
-   - "I made a master file with all my layer styles drawn out in a row of lines on a blank file"
-   - "I copied and pasted the drawing to another file, opened the layer states manager, and added a layer state"
-   - "I was then able to import my layer styles on that file, but only if they matched the layer names"
+1. **Use the master file workaround**.
 
 2. **Use Layer States instead of Layer Style export**:
    - Create Layer States in the Layer States Manager
@@ -243,7 +234,6 @@ DraftSight's layer style export has a bug where multiple custom colors in a laye
    - Export and import Layer States instead of individual layer styles
 
 3. **Limit to one custom color per style**:
-   - "At least 1 custom color will also save and export properly"
    - Multiple custom colors trigger the corruption
    - Use default colors for additional layers
    - Manually change colors after import
@@ -261,7 +251,6 @@ DraftSight's layer style export has a bug where multiple custom colors in a laye
    - More reliable than export/import
 
 6. **Check file with Notepad++**:
-   - "I opened the Layer files with Notepad++ and compared with functional files — they all look fine"
    - The file content is correct but DraftSight's parser fails
    - This confirms it's a DraftSight bug, not a file issue
 

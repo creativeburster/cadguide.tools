@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://support.midasuser.com/hc/en-us/articles/12359299956249--CIVIL-What-is-the-appropriate-mesh-size-for-Plate-Solid-elements"
-  - "https://midassupport.jitbit.com/KB/View/20526019-what-steps-can-be-taken-to-resolve-the-application-error-issue-in-midas-civil-when-it-crashes-"
-  - "https://midassupport.jitbit.com/KB/View/5262846--analysis-warnings-displayed-during-analysis-that-certain-load-cases-have-not-converged-how-to-converge-all-the-load-cases-"
 ---
 
 # MIDAS Civil 2GB Memory Limit for Large Models with Excessive Nodes, Nonlinear Analysis Load Cases Not Converging from Default Tolerance, Application Error Crash from comctl32.dll and C++ Redistributable, Singular Errors from Plate and Solid Elements Without Rotational DOF, and Construction Stage Analysis Restart Inconsistency from Changed Stages: Mesh Size Optimization, Convergence Tolerance Adjustment, Windows Update, Rotational DOF Restraint, and Restart Reconfiguration
@@ -31,14 +28,10 @@ Large models with many nodes and elements exceed MIDAS Civil's 2GB memory limit.
 ### Fix
 
 1. **Optimize mesh size**:
-   - "It is recommended not to divide the mesh size too finely"
-   - "Considering the system's performance"
    - Use coarser mesh
    - For large models
 
 2. **Use convergence testing for mesh size**:
-   - "Results tend to converge after a certain number of elements"
-   - "If the error is in the allowable range"
    - Test mesh convergence
    - To find optimal size
 
@@ -89,20 +82,14 @@ During nonlinear analysis, warnings are displayed that certain load cases have n
 ### Fix
 
 1. **Increase number of iterations**:
-   - "The number of iterations for load case convergence"
-   - "Can be increased"
    - Increase the number
    - Of iterations
 
 2. **Adjust convergence tolerance**:
-   - "Convergence tolerance can be altered"
-   - "If load cases do not converge"
    - Adjust the tolerance
    - To be less strict
 
 3. **Access Main Control Data**:
-   - "From Main Menu select"
-   - "Analysis > Main Control Data"
    - Access Main Control Data
    - For convergence settings
 
@@ -124,8 +111,6 @@ During nonlinear analysis, warnings are displayed that certain load cases have n
    - To prevent mechanisms
 
 7. **Use construction stage convergence**:
-   - "Convergence for Creep Iteration"
-   - "Specify the convergence requirement"
    - Use creep iteration
    - Convergence settings
 
@@ -146,8 +131,6 @@ MIDAS Civil crashes with an "application error" when opening the software. The c
 ### Fix
 
 1. **Install Windows updates**:
-   - "Crash when you open the software"
-   - "Windows update and C++ redistributable package"
    - Install latest
    - Windows updates
 
@@ -157,13 +140,9 @@ MIDAS Civil crashes with an "application error" when opening the software. The c
    - All versions (x86 and x64)
 
 3. **Update graphics card driver**:
-   - "Crash when you open the model file"
-   - "Graphic card driver update"
    - Update GPU drivers
 
 4. **Check comctl32.dll**:
-   - "If you google comctl32.dll"
-   - "You can easily check why it happened"
    - Check for comctl32.dll
    - System file issues
 
@@ -201,9 +180,6 @@ The analysis fails with a singular error. The error occurs at nodes where plate 
 ### Fix
 
 1. **Let MIDAS Civil restrain rotational DOF**:
-   - "MIDAS Civil prevents such singular errors"
-   - "By restraining the rotational d.o.f."
-   - "At the corresponding nodes"
    - Enable automatic restraint
 
 2. **Check element connections**:
@@ -225,21 +201,12 @@ The analysis fails with a singular error. The error occurs at nodes where plate 
    - To prevent mechanisms
 
 5. **Check for released DOF**:
-   - "A singularity error can result"
-   - "In a case where a particular degree of freedom"
-   - "Is released"
    - Check for released DOF
 
 6. **Verify aspect ratios**:
-   - "An aspect ratio close to a unity (1:1)"
-   - "Yields an optimum solution"
-   - "At least a 1:4 ratio should be maintained"
    - Check element aspect ratios
 
 7. **Check corner angles**:
-   - "Corner angles near 90 degrees"
-   - "For quadrilateral elements"
-   - "Near 60 degrees for triangular elements"
    - Check element corner angles
 
 ### Community Report
@@ -259,9 +226,6 @@ When using the restart function in construction stage analysis, the analysis res
 ### Fix
 
 1. **Don't use restart after model changes**:
-   - "When there are some changes"
-   - "That can affect the results"
-   - "Of the stages after"
    - Don't use restart after changes
 
 2. **Run full analysis after changes**:
@@ -271,21 +235,12 @@ When using the restart function in construction stage analysis, the analysis res
    - The restart function
 
 3. **Select save intermediate files**:
-   - "It would be wise of time and storage"
-   - "To select save intermediate files"
-   - "In case the program stops"
    - Save intermediate files
 
 4. **Specify convergence criteria**:
-   - "Specify the basis on which"
-   - "To assess the convergence"
-   - "Enter the norm values"
    - For Energy, displacement, and member forces
 
 5. **Use correct convergence norm**:
-   - "In the case of Displacement Norm"
-   - "If this value is smaller than"
-   - "The specified value, a convergence is considered"
    - Use appropriate norm
 
 6. **Verify results after restart**:

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v242/en/disco_unified_releasenotes/disco_cav_kils.html"
-  - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v261/en/install_discovery/disc_prereq.html"
-  - "https://innovationspace.ansys.com/knowledge/forums/topic/discovery-license-activation-troubleshooting/"
 ---
 
 # Ansys Discovery GPU Out of Memory in Explore Stage, License Activation Firewall Block, AMD Card Explore Stage Disabled, Prerequisite Check Failure on Launch, and NVIDIA Driver Version Incompatibility: Fidelity Slider, Port 443 Firewall Rules, NVIDIA Maxwell Minimum, Driver 528.33, and System Compatibility Check
@@ -31,15 +28,12 @@ When solving in the Explore stage, the GPU runs out of memory and starts using t
 ### Fix
 
 1. **Adjust fidelity slider to a lower position**:
-   - "Adjust fidelity slider to a lower position"
    - In the Explore stage
    - Lower the fidelity slider
    - This reduces the simulation mesh density
    - And the GPU memory requirement
 
 2. **Disable shared memory**:
-   - "Disabling shared memory may also be a workaround"
-   - "See https://nvidia.custhelp.com/app/answers/detail/a_id/5490"
    - Disable GPU shared memory in NVIDIA settings
    - This forces the solver to use only dedicated GPU memory
    - And may improve performance
@@ -91,22 +85,13 @@ Discovery can't activate the subscription license. Error messages include "There
 ### Fix
 
 1. **Enable outbound communication over port 443**:
-   - "If your network is protected by a firewall, the following exception rules need to be implemented"
-   - "Enable outbound communication over port 443 (https) to the following:"
    - Add firewall exception for port 443
    - For ansys-fno.flexnetoperations.com
 
 2. **Add ansysls_client.exe to exclusions**:
-   - "Add the ansysls_client.exe (subscription handler) executable"
-   - "To your endpoint and network security exclusions"
-   - "(for example, whitelisting solutions)"
    - Add to antivirus allowed apps list
 
-3. **Configure proxy server settings**:
-   - "If your network uses a proxy server, additional configuration is required"
-   - "In the Windows Control Panel under Internet Properties"
-   - "Click on the Connections tab and then click on LAN settings"
-   - "Specify proxy server address and its port"
+3. **Configure proxy server settings**.
 
 4. **Set proxy environment variable**:
    - If proxy settings don't work
@@ -115,21 +100,15 @@ Discovery can't activate the subscription license. Error messages include "There
    - Where host and port are the proxy host and port
 
 5. **Install ansysls_client patch (pre-2019 R1)**:
-   - "Download ansysls_client patch if you are using any version prior to 2019 R1"
    - Go to `Shared Files\Licensing\winx64`
    - Rename `ansysls_client.exe` to `ansysls_client_old.exe`
    - Copy the patched version to this location
 
 6. **Check antivirus and user permissions**:
-   - "ANSYS Discovery products licensing requests might also be denied"
-   - "By your antivirus software or by missing user permissions in Windows"
    - Add ansysls_client.exe to antivirus exclusions
    - Ensure the user has administrator permissions
 
 7. **Gather diagnostics for Ansys support**:
-   - "Open Windows Explorer, browse to %temp%"
-   - "Find the directory named .ansys"
-   - "Right-click on the directory, select Send To and then Compressed (zipped) folder"
    - Send the diagnostics to ANSYS support
 
 ### Community Report
@@ -149,14 +128,10 @@ Discovery launches but the Explore stage is disabled. The Refine stage with Live
 ### Fix
 
 1. **Use an NVIDIA GPU, Maxwell series or newer**:
-   - "Dedicated NVIDIA GPU, Maxwell series or newer"
-   - "4 GB of dedicated video memory"
    - This is the minimum requirement for Explore stage
    - Maxwell = NVIDIA GeForce 900 series or newer
 
 2. **Use NVIDIA Pascal series or newer (recommended)**:
-   - "Dedicated NVIDIA GPU, Pascal series or newer"
-   - "8 GB dedicated video memory"
    - Pascal = NVIDIA GeForce 1000 series or newer
    - This is the recommended configuration
 
@@ -168,8 +143,6 @@ Discovery launches but the Explore stage is disabled. The Refine stage with Live
 
 4. **Use the Model stage only**:
    - The Model stage works with any dedicated graphics card
-   - "Dedicated graphics card with the latest vendor drivers"
-   - "Supporting OpenGL version 4.6 and a minimum of 2 GB"
    - But without simulation capabilities
 
 5. **Check GPU compatibility**:
@@ -179,14 +152,9 @@ Discovery launches but the Explore stage is disabled. The Refine stage with Live
    - To verify GPU compatibility
 
 6. **Update NVIDIA drivers**:
-   - "We recommend you update your graphics card to the latest drivers"
-   - "From the NVIDIA website prior to installation"
-   - "Minimum required driver version being >= 528.33"
    - Update drivers from NVIDIA's website
 
 7. **Use Intel Arc Pro for Model stage**:
-   - "Intel Arc Pro graphics cards are also supported"
-   - "In the Modeling stage"
    - Intel Arc Pro can be used for the Model stage
    - But not for Explore or Refine LiveGX
 
@@ -207,21 +175,16 @@ When launching Discovery after installation, a dialog box reports missing or out
 ### Fix
 
 1. **Check the prerequisite check dialog**:
-   - "The results of these checks are reported in several ways"
-   - "A dialog box reports any missing or out-of-date prerequisites"
    - Read the dialog carefully
    - Note which prerequisites are missing or outdated
 
 2. **Check the Discovery application log**:
-   - "Results of the prerequisite checks are captured in the Discovery application log"
    - Find the log in the Discovery installation directory
    - Or in `%TEMP%\.ansys`
    - Review the log for detailed prerequisite information
 
 3. **Run system compatibility check**:
-   - "Open the Windows command prompt as administrator"
    - Run: `"<install_path>/Framework/bin/Win64/Ans.DriverSetup.exe" --check-system-compatibility`
-   - "Capture the output of the command"
    - This provides detailed compatibility information
 
 4. **Update graphics drivers**:
@@ -243,8 +206,6 @@ When launching Discovery after installation, a dialog box reports missing or out
    - As specified in the prerequisite check
 
 7. **Contact Ansys customer support**:
-   - "Include the command output and the Discovery application log"
-   - "When contacting Ansys customer support"
    - If the prerequisite check still fails after updates
    - Contact support with the diagnostic information
 
@@ -265,9 +226,6 @@ Discovery launches but experiences graphical glitches, crashes, or performance i
 ### Fix
 
 1. **Update NVIDIA drivers to 528.33 or newer**:
-   - "We recommend you update your graphics card to the latest drivers"
-   - "From the NVIDIA website prior to installation"
-   - "With the minimum required driver version for minor version compatibility being >= 528.33"
    - Download from https://www.nvidia.com/drivers
 
 2. **Use NVIDIA Studio Driver instead of Game Ready**:
@@ -289,7 +247,6 @@ Discovery launches but experiences graphical glitches, crashes, or performance i
    - Restart Discovery after driver update
 
 5. **Check for unsupported cards**:
-   - "The following cards are no longer supported at 2026 R1"
    - Check the Ansys graphics cards tested list
    - If your card is no longer supported
    - You may need to upgrade your GPU

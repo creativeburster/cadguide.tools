@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://github.com/solvespace/solvespace/issues/1569"
-  - "https://github.com/solvespace/solvespace/issues/1247"
-  - "https://github.com/solvespace/solvespace/issues/1466"
 ---
 
 # SolveSpace Handle Limit and Constraint Solver Errors: Handle Isn't Unique Crash from 32-Bit Entity Handle Limit Requiring Assembly Split, Solver Fails on Angle Constraint Jumps from Numerical Convergence Failure Requiring Incremental Changes, Constraints Are Incompatible from Large Object Solver Convergence Requiring Unit Scaling, Constraining Entities from Previous Groups Fails from Group Order Dependency Requiring Sequential Constraint, and Linked Parts Import as REF from Multi-Instance Propagation Failure Requiring Single Instance Editing
@@ -31,13 +28,11 @@ A moderately complex assembly file teeters on the edge of crashing. Changing the
 ### Fix
 
 1. **Split the assembly into multiple files**:
-   - "Most users find ways around it by linking multiple files for their design"
    - Divide the assembly into sub-assemblies
    - Each sub-assembly in its own file
    - Link the sub-assemblies in a master assembly file
 
 2. **Reduce translated copies**:
-   - "It also crashes if I just try increasing the translate count over 15 or so"
    - Reduce the number of translated copies
    - Use fewer copies per group
    - Split across multiple groups
@@ -49,19 +44,16 @@ A moderately complex assembly file teeters on the edge of crashing. Changing the
    - Each entity contributes to the handle count
 
 4. **Link fewer sub-assemblies**:
-   - "Nine other designs loaded as an assembly each in its own group"
    - Reduce the number of linked sub-assemblies
    - Combine some parts into single files
    - This reduces total entity count
 
 5. **Avoid deep nesting**:
-   - "Some of those assemblies are themselves assembled from other sub-assemblies"
    - Deep nesting multiplies entity count
    - Flatten the assembly hierarchy
    - Link parts directly instead of through sub-assemblies
 
 6. **Wait for 64-bit handle fix**:
-   - "In my head I've had an idea/plan how to do it for a while"
    - The developers plan to make handles 64-bit
    - This requires a file format change
    - No timeline available
@@ -119,14 +111,12 @@ Opening a test file and modifying an angle constraint. Changing from 60Â° to 30Â
    - Check DOF (degrees of freedom)
 
 6. **Report simple test cases**:
-   - "Thank you for such a simple test case"
    - Simple test cases help developers fix the solver
    - Report on GitHub with minimal reproduction
    - Include the .slvs file
 
 7. **Wait for solver improvements**:
    - The solver is being improved
-   - "Solver: clean up and optimise SolveBySubstitution() and WriteJacobian()"
    - Future versions may handle larger jumps
    - Update to the latest version
 
@@ -147,19 +137,16 @@ When constraining an assembly, the error "the following constraints are incompat
 ### Fix
 
 1. **Use smaller units (mm or 0.1-inch)**:
-   - "A simple work around is to use mm or .1-inch where inches are meant"
    - If using inches, switch to mm
    - Or scale the geometry down
    - This improves solver convergence
 
 2. **Scale down the geometry**:
-   - "If you decrease the size of box.slvs to 127x40 and the size of floor.slvs to 152 it works fine"
    - Scale the parts to smaller dimensions
    - Solve the constraints
    - Then scale back up if needed
 
 3. **Use SolveSpace 3.0**:
-   - "Tom said it worked for him using 3.0"
    - The Eigen library change in 3.1 may have worsened the issue
    - Try SolveSpace 3.0
    - It may handle large objects better
@@ -171,7 +158,6 @@ When constraining an assembly, the error "the following constraints are incompat
    - This may help the solver converge
 
 5. **Avoid "constrain symmetric"**:
-   - "I think the error has something to do with the constrain symmetric in box.slvs"
    - Remove symmetric constraints
    - Use other constraint types
    - This may resolve the incompatibility
@@ -205,22 +191,15 @@ Creating a block (extruded rectangle) and saving. Creating a new assembly file a
 ### Fix
 
 1. **Constrain each part as you bring it in**:
-   - "When building up an assembly you need to constrain each part as you bring it into the assembly"
    - Import the first part, constrain it
    - Import the second part, constrain it relative to the first
    - Don't import all parts then try to constrain
 
 2. **Create constraints in the correct group**:
-   - "Maybe you're creating the constraints in the wrong group?"
-   - "It has to be in the group for the part you're constraining"
    - Select the correct group before adding constraints
    - The constraint must be in the part's group
 
-3. **Drag parts to approximate position first**:
-   - "Did you try dragging each part to about the right orientation"
-   - "Then constraining two normals with same-orientation"
-   - "Then constraining the points coincident"
-   - "That always works for me"
+3. **Drag parts to approximate position first**.
 
 4. **Use same-orientation before point-on-point**:
    - First constrain same-orientation on two normals
@@ -229,13 +208,11 @@ Creating a block (extruded rectangle) and saving. Creating a new assembly file a
    - The solver can converge step by step
 
 5. **Don't constrain within the same part**:
-   - "Are you sure the two points/normals you're constraining aren't actually both on the same part?"
    - Check that you're selecting entities from different parts
    - Not two entities on the same part
    - Or on the original references
 
 6. **Link parts in assembly order**:
-   - "If you linked the parts in the order they need to be assembled"
    - Import parts in the order they'll be constrained
    - This ensures previous groups are available
    - For each new constraint
@@ -263,44 +240,35 @@ Creating 10 objects separately in SolveSpace. Making a 3D model from the compone
 ### Fix
 
 1. **Edit parts in the same SolveSpace instance**:
-   - "If we open both parts in different instances of solvespace and try to make changes in cube.slvs, even after regenerate all, it does not reflect changes in newFile.slvs"
-   - "It runs fine if both files are open in a single instance turn by turn"
    - Open both files in the same SolveSpace instance
    - Switch between them with tabs
 
 2. **Save and reopen to propagate changes**:
-   - "If you change a dimension in a linked object, you have to re-open and save the object that imports it to propagate the changes"
    - Edit the part file
    - Save it
    - Reopen the assembly file
    - Changes should propagate
 
 3. **Use a skeleton sketch**:
-   - "You could make a construction drawing as a skeleton for sizing parts in other drawings"
    - Create a master sketch with key dimensions
    - Link this sketch in each part file
    - Changes to the skeleton propagate to all parts
 
 4. **Don't expect parametric propagation**:
-   - "The remaining degrees of freedom in the original file can not be changed within the assembly"
    - SolveSpace doesn't support parametric assembly
    - Linked parts are static
    - Only location and orientation can be constrained
 
 5. **Extrude within the assembly**:
-   - "For extrusions like 80/20 you can link a 2D sketch and then extrude within the assembly sketch"
-   - "This can be done multiple times using the same sketch but have each extrusion a different length"
    - Link the 2D profile
    - Extrude in the assembly with different lengths
 
 6. **Use the scale/resize option**:
-   - "There is an option in the text window to scale/resize the linked part"
    - This is the only parametric control in the assembly
    - Scale the linked part
    - But this scales all dimensions uniformly
 
 7. **Zip all files when sharing**:
-   - "When uploading a multi-file project, you need to zip up all relevant files"
    - The assembly file references part files
    - Share all files together
    - Otherwise links break as #REF

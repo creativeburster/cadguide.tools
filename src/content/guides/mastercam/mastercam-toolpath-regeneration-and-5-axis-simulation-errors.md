@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://www.emastercam.com/forums/topic/113558-painfully-slow-to-regenerate-some-toolpaths/"
-  - "https://www.practicalmachinist.com/forum/threads/mastercam-simulation-5-axis-question.441366/"
-  - "https://fabacademy.org/2024/labs/chaihuo/students/dion-tsang/assignments/Week07/ResolvedIssues.pdf"
 ---
 
 # Mastercam Toolpath Regeneration and 5-Axis Simulation Errors: Painfully Slow Toolpath Regeneration from Referenced Stock Model and Collision Checking Requiring Calculation Mode Optimization, 5-Axis Simulation Displays Wrong Position from NCI vs G-Code Mismatch Requiring Machine Definition Correction, Dynamic OptiRough Collision Checking Causes Gouging and Missing Areas from Stock Model Handling Requiring Update, Stock Model Does Not Default to Solid Body Selection Requiring Manual Selection, and Mastercam Simulator Gets Incorrect Collision from Machine Definition Limits Requiring MD Settings Verification
@@ -89,31 +86,24 @@ After modifying the post processor for a 5-axis machine, the posted G-code is co
 ### Fix
 
 1. **Configure machine definition correctly**:
-   - "You shouldn't have to mod the post, the machine def is where limits/rotation parameters should be set"
    - Set rotation limits and parameters in the Machine Definition
    - Don't rely on post processor modifications for machine limits
    - The simulator reads from the MD, not the post
 
 2. **Set machine definition limits**:
-   - "I needed to go through the various settings in the MD and control definitions"
    - Open Machine Definition > Settings
    - Set correct travel limits for X, Y, Z, B, C axes
    - Set rotation parameters and pivot point distances
 
 3. **Use CAMplete or Vericut for G-code simulation**:
-   - "Mastercam has its verification inside the software, but it is just going off the toolpaths, not the actual G-code"
-   - "You can go with CAMplete and get simulation AND a post for less than Vericut"
-   - "Vericut simulates the actual posted G-code, not just the toolpath"
    - Use third-party G-code simulators for accurate verification
 
 4. **Don't modify the post for machine limits**:
-   - "I had to modify the maximum X to zero and the minimum B to zero"
    - This modification is in the post only, not in the NCI
    - Set these limits in the Machine Definition instead
    - The simulator will then display correctly
 
 5. **Verify with Cimco Edit**:
-   - "A basic form of Cimco Edit comes free with Mastercam"
    - Use Cimco Edit to view the posted G-code
    - Check min/max positions in the toolpath statistics
    - This shows the actual machine positions from G-code
@@ -122,7 +112,6 @@ After modifying the post processor for a 5-axis machine, the posted G-code is co
    - Mastercam's Machine Simulation uses the Machine Definition
    - It's more accurate than backplot for 5-axis
    - Configure the MD correctly for accurate simulation
-   - "SUCCESS! I needed to go through the various settings in the MD and control definitions"
 
 ### Community Report
 
@@ -153,7 +142,6 @@ Multiple known bugs in Mastercam's Dynamic OptiRough collision checking: "Dynami
    - Use manual verification instead
 
 3. **Use negative stock to leave carefully**:
-   - "3D high speed toolpaths handle negative Stock to leave incorrectly"
    - Avoid negative stock to leave values with OptiRough
    - If needed, use a smaller tool instead of negative stock
    - This avoids the handling bug
@@ -193,7 +181,6 @@ This is a known issue (R-30295): "Stock Model does not default to solid body sel
 ### Fix
 
 1. **Update to Mastercam 2024 or later**:
-   - "Stock Model does not default to solid body selection (R-30295) — fixed"
    - Install the latest Mastercam 2024 version
    - The default selection mode is corrected
 
@@ -238,7 +225,6 @@ Mastercam Simulator shows false collisions between the stock and jaws during a p
 ### Fix
 
 1. **Update to Mastercam 2024 or later**:
-   - "Mastercam Simulator gets incorrect collision — addressed in Mastercam 2024"
    - Install the latest Mastercam 2024 version
    - The false collision bug may be fixed
 
@@ -254,8 +240,6 @@ Mastercam Simulator shows false collisions between the stock and jaws during a p
    - Incorrect transfer positions cause false collisions during transfer
 
 4. **Use Vericut or CAMplete for accurate simulation**:
-   - "Vericut simulates the actual posted G-code, not just the toolpath"
-   - "CAMplete gives simulation AND a post for less than Vericut"
    - For critical operations, use G-code-based simulation
    - These simulators use the actual G-code, not NCI
 

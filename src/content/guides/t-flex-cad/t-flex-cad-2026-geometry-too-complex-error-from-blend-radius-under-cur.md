@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/diagnostics_window.htm"
-  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/iges_format.htm"
-  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/16/edit_3d_2.htm"
 ---
 
 # T-FLEX CAD 2026 Geometry Too Complex Error from Blend Radius Under Current Conditions, Error Regenerating Source Parent Element from Dropped Regeneration, Degenerate Element from Self-Intersecting Hatches and Open Contours, Error Opening Fragment File from Non-Existent File Link, and Import Geometry Healing from Self-Intersections and Non-Sewed Surfaces: Geometric Parameter Adjustment, Source Element Restoration, 2D Construction Check, Fragment Path Verification, and Import Healing Options
@@ -31,39 +28,26 @@ During model recalculation, the error "Geometry is too complex" appears in the d
 ### Fix
 
 1. **Explore surrounding geometry**:
-   - "Explore the surrounding geometry"
-   - "Around the place of the operation"
    - Check nearby
    - Geometry
 
 2. **Change geometric parameter value**:
-   - "Or change the value"
-   - "Of the geometric parameter"
    - Adjust blend
    - Radius value
 
 3. **Check diagnostics window**:
-   - "Errors can occur when setting"
-   - "Incorrect operation parameters"
    - Check diagnostics
    - Window
 
 4. **Use Show Fragment Structure**:
-   - "The Show Fragment Structure command"
-   - "Becomes available from the context menu"
    - Use Show
    - Fragment Structure
 
 5. **Select message line to identify element**:
-   - "By selecting a message line"
    "In the diagnostics window"
-   - "You automatically select the respective element"
    - Select message
 
 6. **Use context menu for editing**:
-   - "You can call the context menu"
-   - "Containing the commands"
-   - "For the selected element"
    - Use context menu
 
 7. **Verify model after parameter change**:
@@ -89,45 +73,30 @@ During model recalculation, the error "Error regenerating source/parent element"
 ### Fix
 
 1. **Restore the source element**:
-   - "Try to restore the source item"
    - Check what caused
    - The source element
    - To drop out
 
 2. **Rebuild the operation**:
-   - "Or rebuild the operation"
    - If source can't
    - Be restored
    - Rebuild operation
 
 3. **Check for recursive links**:
-   - "The system warns about"
-   - "An attempt to create recursive links"
-   - "Dependencies on itself"
    - Check recursive
 
 4. **Break recursive relations**:
-   - "It is necessary to find"
-   - "And break recursive relations"
    - Break recursive
    - Dependencies
 
 5. **Use Open Fragment command**:
-   - "Use the command Open Fragment"
-   - "Detail"
    - To investigate
    - Fragment model
 
 6. **Check fragment variable values**:
-   - "An error in the fragment model"
-   - "Can be caused if an incorrect value"
-   - "Of the fragment variable is specified"
    - Check variables
 
 7. **Use Detail button for fragment values**:
-   - "To open a fragment with"
-   - "The current values of variables"
-   - "Use the Detail button"
    - Use Detail
 
 ### Community Report
@@ -147,10 +116,6 @@ During model recalculation, the error "Degenerate element" appears. The source d
 ### Fix
 
 1. **Check source 2D constructions**:
-   - "Check the source 2D constructions"
-   - "(self-intersecting hatches"
-   - "Violation of the integrity"
-   - "Of the contour, etc.)"
    - Check 2D
 
 2. **Fix self-intersecting hatches**:
@@ -184,9 +149,6 @@ During model recalculation, the error "Degenerate element" appears. The source d
    - Complete
 
 7. **Use Check Model command**:
-   - "Use the Check Model command"
-   - "For a more detailed description"
-   - "Of the problem"
    - Use Check Model
 
 ### Community Report
@@ -212,7 +174,6 @@ The error "Error opening Fragment file ... Link to non-existent file:" appears. 
    - File
 
 2. **Check assembly file folder**:
-   - "The folder of the assembly file"
    - Check if fragment
    - Is in the
    - Assembly folder
@@ -230,15 +191,9 @@ The error "Error opening Fragment file ... Link to non-existent file:" appears. 
    - To new location
 
 5. **Use Open button to investigate**:
-   - "To eliminate the error"
-   - "You can open the fragment file"
-   - "By clicking the Open button"
    - Use Open
 
 6. **Check fragment variable values**:
-   - "An incorrect value"
-   - "Of the fragment variable"
-   - "Is specified"
    - Check variables
 
 7. **Recreate fragment if file is lost**:
@@ -264,45 +219,24 @@ When importing models from other CAD formats (STEP, IGES, ACIS, SolidWorks, etc.
 ### Fix
 
 1. **Enable Geometry healing on import**:
-   - "The system tries to correct"
-   - "The erroneous geometry"
-   - "In the imported model"
    - Enable healing
 
 2. **Use Yes (Including Face Orientation)**:
-   - "This option is available"
-   - "For STEP format"
-   - "It allows the system"
-   - "To invert normals of faces"
    - Use face orientation
 
 3. **Use Auto for automatic decision**:
-   - "The system decides"
-   - "Whether it should try"
-   - "To heal it or not"
    - Use Auto
 
 4. **Enable Check Solids after import**:
-   - "If the Check Solids option is active"
-   - "The imported geometry will be checked"
-   - "And all found errors will be listed"
    - Enable Check Solids
 
 5. **Use Check Model for detailed description**:
-   - "To get a more detailed description"
-   - "Of the problem"
-   - "You can use the Check Model command"
    - Use Check Model
 
 6. **Check diagnostics window for errors**:
-   - "All objects with errors"
-   - "Will be marked in the model tree"
-   - "Special warning will also be displayed"
    - Check diagnostics
 
 7. **Use Assembly import mode**:
-   - "The model will be imported"
-   - "With the creation of the assembly structure"
    - Use Assembly
    - Mode
 

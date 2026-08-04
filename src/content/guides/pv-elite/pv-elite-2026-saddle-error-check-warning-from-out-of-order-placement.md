@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.hexagonali.com/r/en-US/PV-Elite-Help/26/1406163?contentId=vByagUcP2TDZfqvjPpGJ3A"
-  - "https://docs.hexagonali.com/r/en-US/PV-Elite-Help/27/1447265?contentId=GsUJbbxjJqfyGvaohBd35Q"
-  - "https://docs.hexagonppm.com/r/en-US/PV-Elite-Help/Version-25/304296?contentId=v_i6%7EHv9hNse6OUdZPoM1Q"
 ---
 
 # PV Elite 2026 Saddle Error Check Warning from Out-of-Order Placement, Nozzle UG-45 Calculation Error for Manway and Access Openings, External Pressure Thickness Calculation EN 13445 Lobes Out of Bounds, MAWP Small ASME Vessel Only UG-45 Not UG-37, and Error Check Only Before Analysis Preventing Execution: Saddle Reorder, Nozzle Report Fix, Lobe Value Correction, UG-37 Reinforcement Check, and Error Correction
@@ -31,8 +28,6 @@ A saddle error check warning appears when saddles are not placed in order from l
 ### Fix
 
 1. **Reorder saddles left to right**:
-   - "Saddles are not placed in order"
-   - "From left to right in the model"
    - Reorder saddles
    - Left to right
 
@@ -61,9 +56,6 @@ A saddle error check warning appears when saddles are not placed in order from l
    - Are correct
 
 6. **Run Error Check Only**:
-   - "Use the Error Check Only option"
-   - "Immediately after any"
-   - "Questionable data is entered"
    - Run error check after fix
 
 7. **Check saddle report**:
@@ -95,21 +87,16 @@ For nozzles specified as Manway or Access Openings, the required thickness calcu
    - Access Opening
 
 2. **Check UG-45 status**:
-   - "UG-45 passed/failed"
    - Check the UG-45
    - Status field
    - For pass/fail
 
 3. **Check Area status**:
-   - "Area passed/failed"
    - Check the Area
    - Status field
    - For pass/fail
 
 4. **Review Nozzle Calculations report**:
-   - "The software prints"
-   - "The required thickness calculation"
-   - "In the Nozzle Calculations report"
    - Review the report
 
 5. **Verify against ASME Sec VIII Div 1**:
@@ -119,10 +106,6 @@ For nozzles specified as Manway or Access Openings, the required thickness calcu
    - UG-45 requirements
 
 6. **Update to latest PV Elite version**:
-   - "Updated the note for openings"
-   - "And made cosmetic changes"
-   - "To warning and error messages"
-   - "For the Nozzle Calculations report"
    - Update for fixes
 
 7. **Check nozzle reinforcement**:
@@ -148,9 +131,6 @@ When performing external pressure thickness calculation for EN 13445-3, the numb
 ### Fix
 
 1. **Check n value against Figure 8.5-4**:
-   - "A warning displays"
-   - "That the n value is out of bounds"
-   - "According to external pressure Figure 8.5-4"
    - Check n value
 
 2. **Keep n value within bounds**:
@@ -172,8 +152,6 @@ When performing external pressure thickness calculation for EN 13445-3, the numb
    - And n value
 
 5. **Update to latest PV Elite version**:
-   - "Corrected the external pressure"
-   - "Thickness calculation for EN 13445-3"
    - Update for
    - Corrected calculation
 
@@ -184,10 +162,6 @@ When performing external pressure thickness calculation for EN 13445-3, the numb
    - EN 13445-3 requirements
 
 7. **Use Quick Calculation for testing**:
-   - "Added a Quick Calculation option"
-   - "To Tubesheet Analysis"
-   - "For testing design changes"
-   - "Without running a full analysis"
    - Use Quick Calculation
 
 ### Community Report
@@ -207,9 +181,6 @@ The MAWP (Maximum Allowable Working Pressure) of a small ASME vessel is only the
 ### Fix
 
 1. **Check MAWP calculation basis**:
-   - "MAWP is only the function"
-   - "Of the UG-45 calculation"
-   - "And not UG-37"
    - Check calculation basis
 
 2. **Manually check UG-37 reinforcement**:
@@ -265,27 +236,17 @@ When running analysis, PV Elite performs an error check first. If errors are fou
 ### Fix
 
 1. **Use Error Check Only first**:
-   - "Use the Error Check Only option"
-   - "Immediately after any"
-   - "Questionable data is entered"
    - Run error check first
 
 2. **Review error reports**:
-   - "Comments from an error check"
-   - "Can be examined using Review Reports"
    - Review error
    - Reports
 
 3. **Correct all errors before analysis**:
-   - "Errors must be corrected"
-   - "Before the analysis can proceed"
    - Fix all errors
    - Before running analysis
 
 4. **Check output for exact error**:
-   - "Check the output"
-   - "To determine the exact error"
-   - "Discovered by the program"
    - Check output
 
 5. **Use Error Check Only for validation**:
@@ -295,15 +256,10 @@ When running analysis, PV Elite performs an error check first. If errors are fou
    - Full analysis
 
 6. **Address warnings**:
-   - "There are also some warnings"
-   - "That may be helpful"
    - Address warnings
    - As well as errors
 
 7. **Check input data carefully**:
-   - "The input program will have"
-   - "Already caught most of the errors"
-   - "That are easily made"
    - Check input data
 
 ### Community Report

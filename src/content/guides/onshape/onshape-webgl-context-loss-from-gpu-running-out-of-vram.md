@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://cad.onshape.com/help/Content/Home/hardware_and_graphics_performance_recommendations.htm"
-  - "https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-use-the-performance-panel-in-onshape"
-  - "https://forum.onshape.com/discussion/31316/part-studio-intermittently-becomes-very-slow-when-editing-features"
 ---
 
 # Onshape WebGL Context Loss from GPU Running Out of VRAM, Part Studio Intermittent Slowdown from Heavy Derived Features and Browser Cache, Assembly Mate Solve Time High from Complex Part Workspaces, Performance Degradation from Excessive Tab Count Over 100, and Chrome VRAM Throttling for Large Models Requiring Firefox Switch: VRAM Upgrade, Cache Clear, Version References, Tab Reduction, and Browser Switch
@@ -31,44 +28,26 @@ Onshape displays the error "Rats! WebGL hit a snag" or "It looks like your brows
 ### Fix
 
 1. **Upgrade to a GPU with more VRAM**:
-   - "If the GPU has relatively little video RAM"
-   - "(less than 1 GB)"
-   - "2GB or more is ideal for large assemblies"
    - Upgrade to 2GB+ VRAM GPU
 
 2. **Lower tessellation quality**:
-   - "Video RAM memory usage may be reduced"
-   - "By lowering tessellation quality"
-   - "For parts contained within the tab"
    - Lower tessellation quality
 
 3. **Use a discrete graphics card**:
-   - "A discrete graphics card with dedicated video memory"
-   - "Is recommended"
-   - "At least 1GB of VRAM for everyday use"
    - Use discrete GPU
 
 4. **Set browser to use discrete GPU**:
-   - "Specify that the browser always use"
-   - "The discrete graphics card"
    - Set browser to use
    - Discrete GPU
 
 5. **Disable automatic graphics switching**:
-   - "Set your browser to always use the discrete graphics card"
-   - "Or disable automatic graphics switching"
    - Disable auto-switching
    - On laptops
 
 6. **Update graphics drivers**:
-   - "Update your graphics drivers"
-   - "To the most recent version"
-   - "From the manufacturer"
    - Update GPU drivers
 
 7. **Override GPU blacklist**:
-   - "Some graphics cards are blacklisted"
-   - "Because of poor WebGL support"
    - Override blacklist
    - In Chrome or Firefox
 
@@ -89,45 +68,28 @@ A Part Studio with about 147 features becomes intermittently very slow when edit
 ### Fix
 
 1. **Clear browser cache**:
-   - "You could try clearing your browser cache"
    - Clear the browser cache
    - To resolve intermittent
    - Slowdown issues
 
 2. **Avoid daisy-chaining derived features**:
-   - "Be sure to not derive a part"
-   - "Into multiple Part Studios"
-   - "Using the method known as daisy-chaining"
    - Avoid daisy-chaining
 
 3. **Always derive from the original part**:
-   - "When deriving a part"
-   - "Always derive from the original part instance"
    - Derive from original
    - Not from another derived part
 
 4. **Derive from versions instead of workspaces**:
-   - "Derive parts from a version"
-   - "Instead of workspace"
-   - "To reduce the amount of regeneration"
    - Use version references
 
 5. **Disable apply per instance in patterns**:
-   - "Not enabling 'apply per instance' in a pattern"
-   - "This option will calculate each pattern instance"
-   - "Instead of calculating the first instance"
    - Disable apply per instance
 
 6. **Reduce feature count**:
-   - "Keep the number of features in a Part Studio low"
-   - "We recommend 250 or fewer"
    - Reduce features
    - To below 250
 
 7. **Use Performance Panel to identify slow features**:
-   - "Feature Regeneration Time"
-   - "Warns you that a specific feature"
-   - "Takes longer than 10 seconds to generate"
    - Use Performance Panel
 
 ### Community Report
@@ -147,44 +109,29 @@ The Onshape Performance Panel warns that the Assembly Solve Time is high. The am
 ### Fix
 
 1. **Insert versions instead of workspaces**:
-   - "Consider inserting a version of a complex part"
-   - "Instead of the workspace"
    - Insert versions
    - For complex parts
 
 2. **Use subassemblies**:
-   - "Make use of subassemblies"
-   - "Subassemblies create a hierarchy"
-   - "For mates to load"
    - Use subassemblies
 
 3. **Use mates with fewer degrees of freedom**:
-   - "Using mates with fewer degrees of freedom"
-   - "Speeds up the mate solve times"
    - Use simpler mates
    - With fewer DOF
 
 4. **Reduce mate limits**:
-   - "Reducing the use of mate limits"
-   - "Speeds up the mate solve times"
    - Reduce mate limits
    - For faster solving
 
 5. **Suppress mates when not needed**:
-   - "Suppressing the mate until it's needed"
-   - "When working in the Assembly"
    - Suppress unused mates
    - To speed up solving
 
 6. **Keep feature count below 250**:
-   - "Keep the number of features in a Part Studio low"
-   - "We recommend 250 or fewer"
    - Reduce features
    - To speed up mates
 
 7. **Use Performance Panel to diagnose**:
-   - "The Performance Panel can answer those questions"
-   - "What your Assembly mate solve time is"
    - Use the Performance Panel
    - To identify slow mates
 
@@ -205,19 +152,13 @@ Documents with a high number of tabs become slow. The performance degradation af
 ### Fix
 
 1. **Keep tab count below 40**:
-   - "We recommend 40 or fewer"
-   - "But it depends on complexity"
    - Keep tabs
    - Below 40
 
 2. **Move tabs to other documents**:
-   - "Move tabs to other documents"
-   - "Having tabs in other documents"
-   - "Can provide greater control"
    - Move tabs to other documents
 
 3. **Use in-context modeling**:
-   - "Utilize modeling in-context"
    - Use in-context modeling
    - To reduce the need
    - For multiple tabs
@@ -229,15 +170,9 @@ Documents with a high number of tabs become slow. The performance degradation af
    - Each
 
 5. **Use versions for references**:
-   - "Use versions"
-   - "Using version references for Parts"
-   - "Will speed up an assembly's overall load time"
    - Use version references
 
 6. **Check Performance Panel for tab warnings**:
-   - "Amount of Tabs in a Document"
-   - "Documents with higher tab counts"
-   - "Can slow down performance"
    - Check Performance Panel
 
 7. **Archive unused tabs**:
@@ -263,21 +198,12 @@ Chrome performs well for small-to-mid-sized models but slows down with large mod
 ### Fix
 
 1. **Switch to Firefox for large models**:
-   - "Firefox can handle more memory"
-   - "When compared to Chrome"
-   - "And is preferred when dealing with large models"
    - Switch to Firefox
 
 2. **Use Chrome for small-to-mid-sized models**:
-   - "Chrome works well if users need"
-   - "To switch between many tabs"
-   - "Consisting of small-to-mid-sized models"
    - Use Chrome for smaller models
 
 3. **Use 64-bit browser**:
-   - "Use the 64-bit version"
-   - "Of a preferred browser"
-   - "If their system supports it"
    - Use 64-bit browser
 
 4. **Reduce open tabs in Chrome**:
@@ -287,20 +213,12 @@ Chrome performs well for small-to-mid-sized models but slows down with large mod
    - Memory throttling
 
 5. **Use Firefox for fewer tabs with large models**:
-   - "Firefox is preferred"
-   - "When dealing with large models"
-   - "Across fewer tabs"
    - Use Firefox for large models
 
 6. **Ensure hardware acceleration is enabled**:
-   - "Ensure your preferred browser"
-   - "Has WebGL enabled"
-   - "And uses hardware acceleration"
    - Enable hardware acceleration
 
 7. **Update browser to latest version**:
-   - "Onshape supports the latest stable versions"
-   - "Of several browsers"
    - Update to the
    - Latest browser version
 

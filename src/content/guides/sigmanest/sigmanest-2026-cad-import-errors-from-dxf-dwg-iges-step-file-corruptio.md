@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://www.sigmanest.com/en/whats-new"
-  - "https://www.sigmanest.com/en/cad-integration"
-  - "https://www.sigmanest.com/en/sigmanest"
 ---
 
 # SigmaNEST 2026 CAD Import Errors from DXF DWG IGES STEP File Corruption, Nesting Optimization Suboptimal Material Utilization from Poor Part Placement, SigmaBEND .polp File Import Failure from Unsupported Format Version, DSTV Bevel Export Errors from Incorrect Configuration, and Creo Representation Import Issues from Missing CAD Import Direct License: Automatic Error Correction, Nesting Engine Selection, File Format Update, Bevel Export Configuration, and CAD Import Plus Fallback
@@ -31,15 +28,9 @@ Importing DXF, DWG, IGES, DSTV, or STEP files produces errors. The files contain
 ### Fix
 
 1. **Enable automatic error correction**:
-   - "Automatic error correction"
-   - "For DXF, DWG, CDL, IGES"
-   - "DSTV, STEP files"
    - Enable correction
 
 2. **Use interactive mapping tools**:
-   - "Interactive mapping tools"
-   - "To choose which elements"
-   - "To import for part creation"
    - Use mapping
 
 3. **Check file before import**:
@@ -49,14 +40,10 @@ Importing DXF, DWG, IGES, DSTV, or STEP files produces errors. The files contain
    - SigmaNEST
 
 4. **Use 2D mapping options**:
-   - "From 2D mapping options"
-   - "For Layer/Color/Line Type"
    - Use 2D
    - Mapping
 
 5. **Use 3D property filtering**:
-   - "The robust property filtering"
-   - "For 3D"
    - Use 3D
    - Filtering
 
@@ -89,16 +76,9 @@ The default nesting engine may not be optimal for the specific part mix and mate
 ### Fix
 
 1. **Use HD SuperNest for time-based optimization**:
-   - "HD SuperNest is a time-based"
-   - "Nesting engine that continuously"
-   - "Nests and renests parts"
-   - "Until the yield cannot be improved"
    - Use SuperNest
 
 2. **Set appropriate time interval**:
-   - "If the selected time interval"
-   - "Is 30 seconds, SigmaNEST"
-   - "Will immediately create a nest"
    - Set time
 
 3. **Try different nesting engines**:
@@ -108,25 +88,17 @@ The default nesting engine may not be optimal for the specific part mix and mate
    - Part types
 
 4. **Use Common Shape nesting**:
-   - "Common Shape"
    - Module for
    - Common part
    - Shapes
 
 5. **Optimize part sorting**:
-   - "Automatically sort them"
-   - "Into tasks by material"
-   - "And machine"
    - Sort parts
 
 6. **Use remnants for scrap reduction**:
-   - "How to use remnants"
-   - "As an automatic workflow"
    - Use remnants
 
 7. **Combine work orders**:
-   - "Combine work orders"
-   - "For scrap reduction"
    - Combine orders
 
 ### Community Report
@@ -146,8 +118,6 @@ SigmaBEND .polp files cannot be imported. The import fails with an error or prod
 ### Fix
 
 1. **Update to SigmaTEK 26 Suite**:
-   - "Expanded import/export support"
-   - "Including SigmaBEND .polp files"
    - Update to v26
 
 2. **Check .polp file version**:
@@ -169,14 +139,11 @@ SigmaBEND .polp files cannot be imported. The import fails with an error or prod
    - Format
 
 5. **Verify data consistency after import**:
-   - "Improve data consistency"
    - Verify data
    - After import
    - Is correct
 
 6. **Check for smoother CAD-to-CAM integration**:
-   - "Ensure smoother"
-   - "CAD-to-CAM integration"
    - Check integration
    - Workflow
 
@@ -203,9 +170,6 @@ DSTV bevel export produces incorrect output. The bevel information is missing or
 ### Fix
 
 1. **Update to SigmaTEK 26 Suite**:
-   - "DSTV bevel export"
-   - "Expanded import/export"
-   - "For DSTV files"
    - Update to v26
 
 2. **Configure DSTV bevel export settings**:
@@ -261,19 +225,12 @@ Creo representation files cannot be imported. The import requires a local Creo i
 ### Fix
 
 1. **Use CAD Import Plus as fallback**:
-   - "CAD Import Plus does not"
-   - "Require local CAD installation"
-   - "Or licensing"
    - Use Plus
 
 2. **Ensure local Creo installation**:
-   - "CAD Import Direct requires"
-   - "A local installation"
-   - "Of the 3D CAD package"
    - Install Creo
 
 3. **Verify Creo license availability**:
-   - "And license availability"
    - Verify Creo
    - License is
    - Available
@@ -285,21 +242,12 @@ Creo representation files cannot be imported. The import requires a local Creo i
    - Base SigmaNEST
 
 5. **Check CAD Import Direct compatibility**:
-   - "CAD Import Direct also"
-   - "Stays up to date with"
-   - "The latest version"
-   - "Of the CAD software"
    - Check compatibility
 
 6. **Use advanced filtering with Direct**:
-   - "Filters assemblies and"
-   - "Multibody files according"
-   - "To CAD properties"
    - Use filtering
 
 7. **Use flat pattern recognition**:
-   - "Flat pattern recognition"
-   - "For formed sheet metal parts"
    - Use flat
    - Pattern
 

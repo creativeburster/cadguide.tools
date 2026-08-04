@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/autocad-mechanical-forum/cannot-edit-autodesk-mechanical-desktop-drawings-in-autocad/td-p/10319820"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Mechanical-Error-message-Incompatible-Version-when-opening-specific-DWG-files.html"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-This-drawing-was-last-saved-outside-of-AutoCAD-Mechanical.html"
 ---
 
 # Mechanical Desktop DWG Migration and AutoCAD Compatibility Errors: Cannot Edit MDT Drawings in AutoCAD Mechanical from Incompatible DWG Format Requiring Wblock Purge Audit Workflow, Incompatible Version Error from Newer Release or Third-Party Add-on Requiring Save As Correct Format, Drawing Saved Outside AutoCAD Mechanical Breaks Structured Objects Requiring Insert Purge Audit, MDT 3D Files Cannot Export 2D Layouts to DXF Requiring Inventor Conversion, and MDT 2009 to Inventor 2018 Migration Requires Both MDT 2009 and Inventor Installed
@@ -31,7 +28,6 @@ Opening a 3D object created in Autodesk Mechanical Desktop 2009 in AutoCAD Mecha
 ### Fix
 
 1. **Use the Wblock Purge Audit workflow**:
-   - "Some MDT .dwg file formats can be converted using plain AutoCAD"
    - Open the MDT file using plain AutoCAD (not AutoCAD Mechanical)
    - Run as Vanilla AutoCAD: Start > All Programs > Autodesk > AutoCAD Mechanical 20xx > AutoCAD 20xx
    - Use `-WBLOCK` command, choose whole drawing
@@ -42,7 +38,6 @@ Opening a 3D object created in Autodesk Mechanical Desktop 2009 in AutoCAD Mecha
    - Save in AutoCAD Mechanical format
 
 2. **Use Inventor for conversion**:
-   - "Drawing files created in MDT can be converted using Inventor 2012 as long as Autodesk MDT 2009 is installed on the system"
    - Install both MDT 2009 and Inventor on the same machine
    - Use Inventor's MDT migration tool
    - This is the most accurate conversion method
@@ -54,7 +49,6 @@ Opening a 3D object created in Autodesk Mechanical Desktop 2009 in AutoCAD Mecha
    - This preserves 2D drawing data without 3D objects
 
 4. **Don't use Save As in ACADM**:
-   - "I tried to save as different format but tool is not allowing to do so"
    - ACADM blocks all commands including Save As
    - Use plain AutoCAD for the initial conversion
    - Then open in ACADM for editing
@@ -76,32 +70,22 @@ Opening a DWG file in AutoCAD Mechanical shows: "Drawing was created by an incom
 ### Fix
 
 1. **Open in the original software release**:
-   - "Open the drawing in the software release that it was created in"
    - Identify which version created the file
    - Use that version to open and edit
    - Save to a compatible format
 
 2. **Install required third-party add-ons**:
-   - "Install any 3rd-party add-ons or plug-ins installed when the file was created"
    - Check with the file creator for required add-ons
    - Install matching versions
    - Then open the drawing
 
 3. **Convert to previous format**:
-   - "Open the file in the latest release of AutoCAD Mechanical"
-   - "Execute the command 'Save as...'"
-   - "Select the required AutoCAD Mechanical format"
    - This downgrades the file format
 
 4. **Set default Mechanical file format**:
-   - "In a mixed-format environment, set a default Mechanical file format"
-   - "Navigate to the Open and Save tab"
-   - "Under the Save as section, select a file format that all drafters can use"
    - This prevents version conflicts in mixed environments
 
 5. **Don't save as plain AutoCAD format**:
-   - "Avoid setting the file format to plain AutoCAD drawing formats"
-   - "This will break any objects with AutoCAD Mechanical intelligence in the drawing"
    - Always use AutoCAD Mechanical format for Mechanical drawings
    - Plain DWG loses Mechanical objects
 
@@ -121,16 +105,9 @@ Opening a drawing in AutoCAD Mechanical shows: "This drawing was last saved outs
 
 ### Fix
 
-1. **Use the Insert Purge Audit workflow**:
-   - "Open a new blank drawing file"
-   - "Insert the affected drawing: CLASSICINSERT, select the file, clear Specify On-screen, check Explode, OK"
-   - "Purge Registered Applications: -PURGE, R for Regapps"
-   - "Purge All: -PURGE, A for All"
-   - "Audit: AUDIT, Y to fix errors"
-   - "Save in AutoCAD Mechanical .dwg format"
+1. **Use the Insert Purge Audit workflow**.
 
 2. **Set EXPERT system variable to 5**:
-   - "To suppress this prompt, you can set the variable EXPERT to a value of 5"
    - This suppresses the consistency check dialog
    - Type `EXPERT` at command prompt, set to 5
    - This doesn't fix the broken objects but prevents the prompt
@@ -148,7 +125,6 @@ Opening a drawing in AutoCAD Mechanical shows: "This drawing was last saved outs
    - Run Purge and Audit
 
 5. **Run Overkill for duplicate objects**:
-   - "OVERKILL, select objects, check properties to ignore, OK"
    - This removes duplicate geometry
    - Run after the Insert Purge Audit workflow
    - Reduces file size and improves stability
@@ -198,7 +174,6 @@ MDT files contain proprietary 3D objects that lock the file format. AutoCAD can 
    - This is a lossy workaround
 
 5. **Use third-party DWG converters**:
-   - "There may be a third party product that can convert your MDT format files"
    - Check the Autodesk file import list
    - Use ODA (Open Design Alliance) tools
    - These may handle MDT format conversion
@@ -232,13 +207,11 @@ Need to migrate MDT 2009 files to Inventor 2018. The Inventor MDT migration tool
    - Run the migration in the VM
 
 3. **Use Inventor 2012 for migration**:
-   - "MDT files can be converted using Inventor 2012"
    - Inventor 2012 has the most stable MDT migration tool
    - After converting to Inventor 2012, upgrade to 2018
    - This two-step migration is more reliable
 
 4. **Follow the Autodesk migration guide**:
-   - "Import Mechanical Desktop 2009 files into Inventor 2018"
    - Check the Autodesk Knowledge Network article
    - Follow the step-by-step migration process
    - Verify migrated models for accuracy

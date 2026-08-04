@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.tebis.com/en/software/cam-software/cnc-simulator"
-  - "https://www.tebis.com/en/software/products/tebis-4-1-release-7"
-  - "https://www.tebis.com/en/software/products/tebis-4-1-release-12"
 ---
 
 # Tebis CAM Collision Check, 5-Axis Avoidance Milling, CAD Import CATIA 3DXML, NC Job Recalculation Control, and Sister Tool Automatic Change: CNC Simulator Digital Twin Setup, Machine Head Collision Prevention, Postprocessor Synchronization, and Tool Life Management
@@ -31,45 +28,36 @@ Tebis collision check reports false positives or misses real collisions. The CNC
 ### Fix
 
 1. **Set up complete digital twin libraries**:
-   - "All machines, tools, units and clamping devices are stored with components on a one-to-one basis"
    - Add all machines to the machine library
    - Add all tools with holders to the tool library
    - Add all clamping devices and units
 
 2. **Use the Tebis machine library**:
-   - "The machine library includes over 1,400 virtual machine models from different manufacturers in 3,700 variants"
    - Download the correct machine model
    - Verify it matches your physical machine
    - Contact Tebis for custom adaptations
 
 3. **Store tool assemblies with precision**:
-   - "All tool assemblies can be represented with absolute precision in the tool library"
-   - "Including HPC cutters and circle-segment cutters with all holders"
    - Add complete tool assemblies
    - Include all holders and adapters
 
 4. **Add clamping devices and units**:
-   - "Zero-point clamping systems and units such as jaw chucks, steady rests and tailstocks are fully accounted for"
    - Add all clamping devices
    - Add all units (chucks, rests, tailstocks)
    - Verify positioning is correct
 
 5. **Use the accepted machine model**:
-   - "The basis for the NC calculation is usually the accepted machine model"
    - Don't use simplified substitute geometries
    - Use the full machine geometry
    - This ensures accurate collision detection
 
 6. **Run collision check during CAM calculation**:
-   - "Collision checking during CAM calculation"
    - Enable collision check during toolpath calculation
    - Not just in the simulator afterward
    - This catches issues earlier
 
 7. **Check collision results in the structured list**:
-   - "Potential conflicts such as cutter collisions, head collisions or limit switch collisions are displayed in a clearly structured list"
    - Review all reported conflicts
-   - "You decide based on the application whether you want to accept or correct conflicts"
    - Correct critical conflicts before NC output
 
 ### Community Report
@@ -89,46 +77,32 @@ During 5-axis simultaneous machining, collisions occur between the machine head 
 ### Fix
 
 1. **Update to Tebis 4.1 Release 7 or later**:
-   - "The machine head is fully accounted for in collision checking/automatic area reduction"
-   - "Consistent integration of the machine head into all collision avoidance strategies"
    - Install the latest release
    - This enables automatic head collision avoidance
 
 2. **Enable automatic area reduction**:
-   - "Milling areas are automatically reduced or excluded from machining"
-   - "In the event of potential collisions with the machine head"
    - Enable area reduction in the machining strategy
    - Tebis automatically excludes collision-prone areas
 
 3. **Use 5-axis simultaneous avoidance milling**:
-   - "In 5-axis simultaneous avoidance milling, programs for simultaneous 5-axis milling with optimal axial positions are generated automatically"
-   - "From 3+2-axis NC programs with fixed positional axes"
    - Convert 3+2 programs to 5-axis simultaneous
    - Tebis automatically avoids collisions
 
 4. **Let Tebis determine pivot positions**:
-   - "Tebis automatically determines the correct pivot positions"
-   - "Even users with limited experience can now generate comprehensive, collision-checked NC programs"
    - Don't manually set pivot positions
    - Let the system calculate them
 
 5. **Use the correct machine head model**:
    - Ensure the machine head is in the digital twin library
-   - "Taking into consideration the precise machine head geometry"
    - The head geometry must be accurate
    - Contact Tebis for your specific machine head
 
 6. **Check collisions before NC programming**:
-   - "You can detect and prevent collisions before even starting NC programming"
-   - "Move the tool along critical part areas — such as cavities, deep holes and undercuts"
-   - "Directly on the virtual machine with a special planning function"
    - Identify potential collisions early
 
 7. **Use indexed machining for problematic areas**:
    - If 5-axis simultaneous can't avoid all collisions
    - Use indexed machining (3+2) for those areas
-   - "The most appropriate strategy depends primarily on the specific component geometry"
-   - "The machining task and especially the available machine"
 
 ### Community Report
 
@@ -147,26 +121,18 @@ CATIA 3DEXPERIENCE uses a database-driven platform, not traditional file-based s
 ### Fix
 
 1. **Update to Tebis 4.1 Release 12 or later**:
-   - "The new import interface for CATIA 3DEXPERIENCE allows direct exchange of CAD data"
-   - "From Dassault Systèmes' database-driven platform"
    - Install Release 12 or later
    - This adds native 3DXML import support
 
 2. **Export to 3DXML from CATIA 3DEXPERIENCE**:
-   - "Data is imported via 3DXML files"
-   - "Which can be loaded seamlessly into Tebis and processed as normal"
    - Export the 3DEXPERIENCE data to 3DXML format
    - Import the 3DXML file into Tebis
 
 3. **Use the established CATIA V5 workflow**:
-   - "The functionality and scope of this feature follow those of the proven CATIA V5 integration"
-   - "So established processes and workflows remain unchanged"
    - If you already have CATIA V5 workflows
    - The 3DXML import works the same way
 
 4. **Ensure seamless processing**:
-   - "Reliable integration of state-of-the-art data models into your manufacturing processes"
-   - "Latest platform technologies"
    - The 3DXML data is processed like any other CAD format
    - No special handling needed
 
@@ -205,39 +171,28 @@ When a CAD model is changed, Tebis automatically recalculates all associated CAM
 ### Fix
 
 1. **Use Tebis's user-controlled recalculation**:
-   - "Tebis is different: The user independently specifies the changes that should result in a recalculation of the toolpath and those that shouldn't"
    - After a CAD model change
    - Review which NCJobs are marked for recalculation
    - Deselect jobs that don't need recalculation
 
 2. **Link CAD object parameters with CAM parameters**:
-   - "The new ability to link CAD object parameters directly with CAM parameters is a special feature of Release 8"
-   - "These can include numerically defined geometric properties like length and height"
    - Link specific parameters
    - Only changes to linked parameters trigger recalculation
 
 3. **Use control parameters**:
-   - "Many Tebis customers also define individual formula-based 'control parameters'"
-   - "To simplify design and data preparation"
-   - "These results can be transferred right to the CAM world"
    - Control which parameters affect CAM
 
 4. **Break down machining sequences**:
    - "Machining sequences can now be broken down into individual NCJobs with a single click" (Release 8)
-   - "Jobs can be added or modified and processing sequences can be changed"
    - Break sequences into individual jobs
    - Recalculate only the affected jobs
 
 5. **Save and restore toolpath settings**:
-   - "After a dissatisfying routing result you may wish to recall the former settings"
    - Save toolpath settings before recalculation
    - If recalculation produces worse results
    - Restore the previous settings
 
 6. **Use NC templates**:
-   - "This knowledge should be stored in NC templates"
-   - "The CAM programmer only needs to select the machine and machining elements"
-   - "The appropriate collision avoidance strategy is then automatically assigned"
    - Templates preserve optimized settings
 
 7. **Review changes before recalculation**:
@@ -263,49 +218,36 @@ Without sister tool (twin tool) configuration, the NC program has no fallback wh
 ### Fix
 
 1. **Define sister tools in Tebis** (Release 12+):
-   - "Twin tools (sister tools) are predefined in Tebis"
-   - "To ensure a continuous manufacturing process in the event of wear and tear or breakage"
    - Define sister tools in the tool library
    - Each sister tool is identical to the primary tool
 
 2. **Set tool life limits**:
-   - "As soon as a specified limit is reached, such as tool life or path length"
-   - "The system automatically generates the appropriate tool change along the toolpath"
    - Set tool life in minutes
    - Or set maximum path length
 
 3. **Configure automatic tool change**:
-   - "The tool is changed automatically according to specifications"
    - Configure the tool change parameters
    - Tebis inserts the tool change in the NC program
    - At the appropriate point in the toolpath
 
 4. **Program tool breakage checks**:
-   - "It is possible to automatically program and simulate tool breakage checks"
-   - "And other machine cycles, such as timed flushing pulses to improve chip removal"
    - Add tool breakage checks to the NC program
    - These detect broken tools during machining
 
 5. **Simulate the tool change**:
-   - "Improved process safety through integrated tool breakage detection and simulation"
    - Simulate the tool change in the CNC Simulator
    - Verify the change doesn't cause collisions
    - Check the transition is smooth
 
 6. **Set configurable limits**:
-   - "Predictable tool life thanks to configurable limits on time or path length, for example"
    - Set limits based on your tooling experience
    - Adjust limits based on material and cutting conditions
    - Monitor and refine over time
 
 7. **Use the NC Organizer for tool change optimization**:
-   - "The NC Organizer automatically orders your NCJobs"
-   - "Based on tool parameters, kinematic parameters, and user-specific parameters"
-   - "The system carries out targeted optimization of processing by reducing the number of tool changes"
    - Minimize unnecessary tool changes
 
 8. **Integrate with the manufacturing process**:
-   - "This automates the tool change process and integrates it reliably into the NC sequence"
    - The sister tool change is part of the NC program
    - No operator intervention needed
    - Continuous manufacturing process

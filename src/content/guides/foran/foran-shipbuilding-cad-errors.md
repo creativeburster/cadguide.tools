@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
-  - "https://www.boatdesign.net/threads/nupas-cadmaric-and-foran.7610/"
-  - "https://cadguide.tools/tools/foran"
-  - "https://www.marinelog.com/shipbuilding/shipyards/shipyard-news/fincantieri-bay-shipbuilding-implements-foran/"
 ---
 
 # FORAN Shipbuilding CAD Errors: Non-Windows Interface and Steep Learning Curve from Unix Heritage Requiring Formal Training, Poor 3D Model Import Export from Weak Geometry Kernel Requiring STEP or Parasolid Conversion, Heavy System Resource Requirements from Oracle Database Dependency Requiring Infrastructure Investment, Poor Documentation Making Self-Learning Impossible Requiring Vendor Training, and Comparison with ShipConstructor and CADMATIC for Feature Set and Usability
@@ -31,7 +28,6 @@ FORAN's interface is very different from standard Windows applications. Menus ar
 ### Fix
 
 1. **Invest in formal training**:
-   - "Usually you have to buy training. To learn it without training practically impossible due to poor documentation"
    - Contact SENER (now Siemens) for official training courses
    - Budget for 1-2 weeks of initial training per user
    - Follow up with advanced training as needed
@@ -39,7 +35,6 @@ FORAN's interface is very different from standard Windows applications. Menus ar
 2. **Use the CAM Wizard or equivalent tutorials**:
    - Look for FORAN-specific tutorial resources
    - SENER provides training as part of implementation
-   - "Installation, setup, training and support for the three main FORAN disciplines"
    - Use vendor-provided learning materials
 
 3. **Start with one discipline**:
@@ -49,7 +44,6 @@ FORAN's interface is very different from standard Windows applications. Menus ar
    - Expand to other disciplines after proficiency
 
 4. **Leverage remote access solutions**:
-   - "Subcontractors are accessing the data remotely by using a Citrix access solution"
    - Use Citrix or terminal server for remote access
    - This standardizes the interface across users
    - Reduces local installation issues
@@ -77,25 +71,21 @@ Need to import 3D models from sub-suppliers using SolidWorks, CATIA, ProE, Inven
 ### Fix
 
 1. **Use STEP as intermediate format**:
-   - "The standard exchange formats are Parasolid (.x_t), ACIS (.sat) or STEP (.stp)"
    - Export from source CAD as STEP
    - Import STEP into FORAN
    - Verify geometry after import
 
 2. **Use Parasolid format if supported**:
-   - "SolidWorks is based on Parasolid"
    - If FORAN supports Parasolid import, use .x_t format
    - This preserves geometry better than STEP
    - Check FORAN's supported import formats
 
 3. **Use ACIS format as alternative**:
-   - "Inventor, Mechanical Desktop, AutoCAD are based on ACIS"
    - If FORAN supports ACIS import, use .sat format
    - For AutoCAD-based supplier models
    - Verify after import
 
 4. **Use AutoCAD DWG as intermediate**:
-   - "To import 3D-models into Cadmatic you have to go: ACIS (version 4.0 not higher) > AutoCAD .dwg > then Cadmatic"
    - For FORAN, try: Export as ACIS > Import to AutoCAD > Export DWG > Import to FORAN
    - This multi-step conversion may work when direct import fails
 
@@ -139,7 +129,6 @@ FORAN requires significant computing resources. Runs slowly on standard workstat
    - Professional GPUs for 3D rendering
 
 3. **Use Citrix for remote access**:
-   - "Subcontractors are accessing the data remotely by using a Citrix access solution"
    - Install FORAN on a powerful server
    - Users access via Citrix terminal server
    - This centralizes resources and simplifies IT
@@ -151,13 +140,10 @@ FORAN requires significant computing resources. Runs slowly on standard workstat
    - Regular database maintenance (Check Consistency, Clean Database)
 
 5. **Regular database health checks**:
-   - "Preserve Project DB health: Check Consistency, Clean Database"
-   - "Project Backup and restores"
    - Run database consistency checks regularly
    - Clean up unused data to reduce database size
 
 6. **Monitor license usage**:
-   - "Monitor License Usage"
    - Ensure licenses are available when needed
    - Track usage patterns
    - Optimize license allocation across teams
@@ -179,10 +165,8 @@ Trying to learn FORAN without formal training. The documentation is poor and doe
 ### Fix**
 
 1. **Budget for formal training**:
-   - "Usually you have to buy training"
    - Include training in the software purchase budget
    - SENER provides training as part of implementation
-   - "Installation, setup, training and support for the three main FORAN disciplines"
 
 2. **Create internal knowledge base**:
    - Document workflows as you learn them
@@ -197,7 +181,6 @@ Trying to learn FORAN without formal training. The documentation is poor and doe
    - Learn from experienced users
 
 4. **Use vendor support effectively**:
-   - "Handle service requests to the software vendor specifying errors, changes, and request new functionality"
    - Document issues clearly with screenshots
    - Build a relationship with the support team
    - Use support tickets as learning opportunities
@@ -206,10 +189,8 @@ Trying to learn FORAN without formal training. The documentation is poor and doe
    - When possible, hire users with FORAN experience
    - They can mentor new users
    - Reduce the training burden on the organization
-   - "User Support, Software Implementation and CAD management"
 
 6. **Review release notes for updates**:
-   - "Review new release notes to aid in application update/upgrade"
    - Stay current with new features and fixes
    - Release notes may include usage tips
    - Apply updates to get documentation improvements
@@ -231,37 +212,18 @@ Each shipbuilding CAD system has different strengths. FORAN is comprehensive but
 ### Fix**
 
 1. **FORAN strengths**:
-   - "Fully integrated CAD/CAE/CAM ship design software system"
-   - "Covers all stages of vessel design and production"
-   - "Multi-disciplinary design environment"
-   - "Concurrent collaborative design"
    - Used by major shipyards (Fincantieri, Severnoye PKB)
 
 2. **FORAN weaknesses**:
-   - "Steep learning curve for shipbuilding workflows"
-   - "Requires significant training"
-   - "High cost for small shipyards"
-   - "Windows only, no macOS or Linux support"
    - Poor import/export of 3D models
 
 3. **ShipConstructor comparison**:
-   - "ShipConstructor is in my opinion a lighter NUPAS"
-   - "With the advantage of its interaction between the Maxsurf family"
-   - "None of these problems in ShipConstructor"
-   - "It's also cheaper than others"
    - Better for smaller shipyards
 
 4. **CADMATIC comparison**:
-   - "CADMATIC looks much more professional"
-   - "CADMATIC has problems with importing/exporting 3D models"
-   - "FORAN is waaaay harder to use (too much steps in between your idea and the pipe on the definitive place)"
-   - "NUPAS is easy to use, easy to maintain"
    - CADMATIC is middle ground
 
 5. **Consider generic CAD for machinery**:
-   - "For the long run I wouldn't use either FORAN, NUPAS-CADMATIC or Tribon for machinery and outfitting"
-   - "Shipbuilding is an assembly industry and you will need 3D-models from sub suppliers"
-   - "The suppliers are working with Unigraphics, Catia, ProE, SolidWorks, Inventor"
    - Consider generic CAD for machinery, shipbuilding CAD for hull
 
 6. **Evaluate based on shipyard needs**:

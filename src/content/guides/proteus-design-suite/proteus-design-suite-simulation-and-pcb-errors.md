@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.edaboard.com/threads/simulation-problem-using-proteus.412878/"
-  - "https://forum.allaboutcircuits.com/threads/simulation-issue-with-imported-components-in-proteus.206508/"
-  - "https://www.ee-diary.net/2026/03/how-to-fix-high-frequency-simulation.html"
 ---
 
 # Proteus Design Suite Simulation and PCB Errors: GSM SIM800L Simulation Failure from AVR Program Property Not Defined Requiring HEX File Configuration, Imported Component Simulation Failure from Missing SPICE Models Requiring SPICE Model Linking or Equivalent Components, HD44780 Controller Received Command Whilst Busy from Timing Issues Requiring Delay or LCD Command Buffer, Timestep Too Small and GMIN Stepping Crash from High Frequency Circuits Requiring SPICE Tolerance Tuning, and Zone Overlap Pre-Production Check Error from VCC VDD Power Plane Touching Unrouted Region Requiring Plane Boundary Fix
@@ -49,7 +46,6 @@ Simulating a GSM SIM800L project with Arduino ATmega328P in Proteus 8.15.01. The
    - Ensure it matches the actual hardware
 
 4. **Check Arduino HEX file path**:
-   - "Loading HEX file from AppData\Local\Temp\arduino\sketches"
    - Verify the HEX file path is correct
    - Recompile the Arduino sketch
    - Ensure the HEX file is generated before simulation
@@ -83,13 +79,11 @@ Components like PC817 work perfectly in Proteus simulation (included by default)
 ### Fix
 
 1. **Link SPICE models to components**:
-   - "Link appropriate SPICE models to these components within Proteus"
    - Download SPICE models from the manufacturer
    - In Proteus: right-click the component > Properties
    - Add the SPICE model file (.lib, .sub, .mod)
 
 2. **Find simulation-compatible equivalents**:
-   - "Find equivalent components that are simulation-compatible"
    - Look for Proteus built-in components with similar functionality
    - Check the Proteus component library for equivalents
    - Use generic models with similar specifications
@@ -165,13 +159,11 @@ Simulating an automatic power factor correction system with Arduino Nano and HD4
    - This reduces the command rate
 
 5. **Accept the warning**:
-   - "Your project might work fine in real world"
    - The error is a simulation timing issue
    - The real hardware may work correctly
    - Test on actual hardware to verify
 
 6. **Reduce CPU load**:
-   - "Simulation is not running in real time due to excessive CPU load"
    - Simplify the circuit
    - Reduce the number of simulated components
    - Close other applications
@@ -200,51 +192,37 @@ Simulating high-frequency circuits (AM/FM transmitter, buck converter with Ardui
 ### Fix
 
 1. **Reduce Max SPICE Timestep**:
-   - "Change Max. SPICE Timestep to 10u (10 microseconds) or at least 100u"
-   - "A high frequency signal like 31kHz PWM cycle happens every 32 microseconds"
-   - "If your timestep is 25ms, the simulator is blind to what the MOSFET is doing"
    - System > Set Animation Options > Advanced
 
 2. **Relax tolerance settings**:
    - RELTOL: change from 0.001 to 0.01
-   - "Allows for a 1% margin of error, prevents simulator from panicking over tiny spikes"
    - ABSTOL (VNTOL): change from 1e-006 to 1e-003
-   - "Less strict voltage tolerance"
 
 3. **Increase GMIN**:
    - GMIN: change from 1e-012 to 1e-009
-   - "Very high-value resistor across every node to prevent math from reaching infinity"
    - TRANGMIN: change from 1e-009 to 1e-007
    - This helps with convergence
 
 4. **Increase TRTOL**:
    - TRTOL: change from 7 to 15
-   - "Tells the simulator to be less strict when it sees a sudden voltage spike"
    - This prevents the timestep from being reduced too aggressively
    - Reduces "Timestep too small" errors
 
 5. **Set TMIN (minimum timestep)**:
    - TMIN: change from 1e-018 to 1e-012
-   - "This is the most important fix — sets a floor at 10^-12"
-   - "Stops the simulator from trying to calculate impossible numbers"
    - Prevents the "Timestep too small" crash
 
 6. **Use GEAR integration method**:
-   - "Go to Iteration tab and make sure GEAR method is selected"
-   - "GEAR method is much better for power electronics"
-   - "Suppresses the ringing that usually crashes the simulator"
    - Default is trapezoidal — switch to GEAR
 
 7. **Increase ITL4**:
    - ITL4: change from 10 to 40
-   - "Upper transient iteration limit"
    - More iterations per timestep
    - Better convergence for switching circuits
 
 8. **Adjust FPS and Timestep per Frame**:
    - FPS: keep at 20 or 25
    - Timestep per Frame: reduce to 10m or 20m
-   - "Forces the animation to be smoother"
    - May make simulation run slower than real time
 
 ### Community Report
@@ -264,8 +242,6 @@ Running a pre-production check (DRC) in Proteus. Error: "Zone overlap problem." 
 ### Fix
 
 1. **Check VCC/VDD power planes**:
-   - "If you have a VCC/VDD power plane, check it"
-   - "It should not be touching an unrouted or undefined region"
    - Visually inspect all power plane boundaries
    - Look for overlaps with unrouted areas
 

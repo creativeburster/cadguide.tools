@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.bentley.com/LiveContent/web/OpenRoads%20Designer-v2026.0.0/Help/en/topics/723708/defects_fixed_in_2026_update_release.html"
-  - "https://bentleysystems.service-now.com/community?id=kb_article&sysparm_article=KB0018203"
-  - "https://docs.bentley.com/LiveContent/web/OpenRoads%20Designer-v2026.0.0/Help/en/topics/1296840/GUID-A04BDB28-A093-490B-8131-E1C89EDA3EF2.html"
 ---
 
 # OpenRoads Designer 2026 DWG Export Survey Curves Incorrect as B-Spline vs Line String, Alternating Template Drops Cause Point Control to Stop Working, Export to SHP Exception from Gaps Within Templates, Corridor Feature Not Following Horizontal Curve, and Terrain Batch Process Export Not Exporting Terrains Correctly: Survey Curve Fix, Template Drop Reorder, Gap Repair, Curve Following, and Terrain Export Update
@@ -31,8 +28,6 @@ When exporting to DWG, some survey curves are not exported correctly. Some curve
 ### Fix
 
 1. **Update to OpenRoads Designer 2026**:
-   - "Some Survey curves are not exported correctly to DWG"
-   - "Some are exported as B-Spline but some others as Line Strings"
    - Fixed in 2026 release
    - Update to the latest version
 
@@ -43,7 +38,6 @@ When exporting to DWG, some survey curves are not exported correctly. Some curve
    - The correct curve type
 
 3. **Use Civil File Manager for alignment**:
-   - "Civil File Manager has replaced Version Checker"
    - Use Civil File Manager
    - To align DGN files
    - Before export
@@ -55,7 +49,6 @@ When exporting to DWG, some survey curves are not exported correctly. Some curve
    - That may affect export
 
 5. **Use Align All for branding**:
-   - "To brand the DGN select Action > Align All"
    - Use Align All
    - To ensure proper
    - DGN branding before export
@@ -89,8 +82,6 @@ When using alternating template drops in a corridor, point control stops working
 ### Fix
 
 1. **Update to OpenRoads Designer 2026**:
-   - "CS0476478 | Modeling - Corridors"
-   - "Alternating Template Drops cause point control to stop working"
    - Fixed in 2026
    - Update to the latest version
 
@@ -147,9 +138,6 @@ When using Export to SHP (Shapefile), an exception occurs. The exception happens
 ### Fix
 
 1. **Update to OpenRoads Designer 2026**:
-   - "CS0336799 | Modeling - Corridors"
-   - "Exception occurs when using Export to SHP"
-   - "And there are gaps within templates"
    - Fixed in 2026
 
 2. **Repair gaps in templates**:
@@ -205,9 +193,6 @@ The corridor feature at a horizontal curve is not following the curve. The featu
 ### Fix
 
 1. **Update to OpenRoads Designer 2026**:
-   - "CS0290964 | Modeling - Corridors"
-   - "The corridor feature at the horizontal curve"
-   - "Is not following the curve"
    - Fixed in 2026
 
 2. **Check corridor feature at curves**:
@@ -263,9 +248,6 @@ When using Terrain Batch Process Export, terrains are not exported correctly. Th
 ### Fix
 
 1. **Update to OpenRoads Designer 2026**:
-   - "CS0344822 | Terrain"
-   - "Terrain Batch Process Export"
-   - "Does not export Terrains correctly"
    - Fixed in 2026
 
 2. **Export terrains individually**:

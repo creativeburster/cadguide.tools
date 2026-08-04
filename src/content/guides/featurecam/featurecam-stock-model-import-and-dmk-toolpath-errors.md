@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/featurecam-forum/milling-cutter-moves-through-part-in-simulation-but-toolpath/td-p/13163078"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/DMK-Toolpath-Error-when-using-stock-solid-in-FeatureCAM.html"
-  - "https://www.practicalmachinist.com/forum/threads/featurecam-model-stock-question.441158/"
 ---
 
 # FeatureCAM Stock Model Import and DMK Toolpath Errors: 5-Axis Simulation Workpiece Repositioned Causing Cutter Through Part from Add-In Toolpath Feature, Round Stock Import Gives Offset Oversized OD Never Asking for Sizing from STEP Export Orientation, DMK Toolpath Error TPDMK01 from Feature Depth Overridden Past Stock Solid Limits, Casting as Stock Requires Multibody Solid or Separate Import with Alignment, and UCCNC Post Processor Not Available Requiring Fanuc Base Customization in xBuild
@@ -33,7 +30,6 @@ The add-in generates toolpath points correctly but doesn't properly handle the 5
 1. **Verify toolpath points are truly correct**:
    - Check X, Y, Z, I, J, K values at the transition point
    - Compare with expected values from the add-in documentation
-   - "The toolpath points all seem to have been created correctly"
    - The issue is in simulation interpretation, not toolpath generation
 
 2. **Check rotary axis limits**:
@@ -77,7 +73,6 @@ FeatureCAM's stock wizard auto-detects stock from the imported model's bounding 
 1. **Orient the model correctly before import**:
    - In Fusion 360, ensure the Z-axis aligns with the part's rotational axis
    - Export the STEP file with the correct orientation
-   - "Model was drawn in F360 and exported as a step"
    - Re-export with proper orientation
 
 2. **Use manual stock definition after import**:
@@ -126,28 +121,23 @@ DMK toolpaths require the tool tip to be in contact with the material for adding
 ### Fix
 
 1. **Use a non-DMK strategy**:
-   - "Use a non-DMK strategy as Spiral or Zig-Zag"
    - Switch from NT Spiral/Zig-Zag to standard Spiral or Zig-Zag
    - These don't have the DMK limitation with stock solids
 
 2. **Alter the stock solid to encompass the feature**:
-   - "Alter the stock solid to encompass the desired feature dimensions"
    - Extend the stock solid in the Z-direction
    - Ensure the stock covers the full feature depth
    - Re-import the modified stock solid
 
 3. **Alter the feature dimensions**:
-   - "Alter the feature dimensions to stay within the stock limits"
    - Reduce the feature depth to stay within the stock solid
    - Machine the remaining depth in a separate operation
 
 4. **Change stock type from User Defined to Block/Round/N-Sided**:
-   - "Change the stock type from User Defined to Block/Round/N-Sided"
    - These stock types don't have the DMK limitation
    - Trade-off: less precise stock definition
 
 5. **Uncheck Equal Depth of Cut**:
-   - "By unticking the Equal depth of cut from Misc, toolpath can calculate without DMK toolpath error"
    - In the feature's Misc tab, uncheck "Equal depth of cut"
    - This allows the toolpath to calculate with variable depth cuts
 
@@ -168,7 +158,6 @@ FeatureCAM has two stock concepts: "Stock definition" (applies to all features) 
 ### Fix
 
 1. **Combine casting and part in one multibody solid**:
-   - "The best method I found is to combine the casting and the part in one model using multibody solids"
    - In CAD software (Fusion 360, SolidWorks, etc.):
    - Create the casting and part as separate bodies in one file
    - Align them properly in the CAD software
@@ -176,27 +165,18 @@ FeatureCAM has two stock concepts: "Stock definition" (applies to all features) 
 
 2. **Import and align in FeatureCAM**:
    - Import the multibody STEP file
-   - "Do your part alignment to your finished part"
-   - "Accept the defaults for the stock"
-   - "When all is done, in the STOCK definition, change to the casting as the stock"
 
 3. **Import separately and align individually**:
-   - "They can be imported separately into FC and align them individually"
    - Import the part STEP file
    - Import the casting STEP file
    - Use FeatureCAM's alignment tools to position both
    - Define the casting as stock
 
 4. **Understand Stock Definition vs. Stock Model**:
-   - "Stock definition by picking an imported solid is for the entire part"
-   - "Stock model applies only to a single feature"
    - Use Stock Definition for the casting — applies to all features
    - Don't use Stock Model for this purpose
 
-5. **Use Stock Model for per-feature stock**:
-   - "If he later wants to use a Stock Model for a single feature (perhaps a 3D feature which was previously roughed near net)"
-   - "He can create a stock model from an operation or multiple operations"
-   - "Use that as the boundary just for the 3D finishing toolpath"
+5. **Use Stock Model for per-feature stock**.
 
 ### Community Report
 
@@ -215,16 +195,12 @@ FeatureCAM doesn't include a UCCNC-specific post processor. UCCNC is a CNC contr
 ### Fix
 
 1. **Start with a Fanuc post processor**:
-   - "UCCNC should be close to a Fanuc post processor"
    - Look in: `(install drive):\Program Files\Autodesk\FeatureCAM 2025\Posts\Mill\3-Axis`
    - Find a Fanuc 3-axis post processor
    - Copy and rename it for UCCNC
 
 2. **Edit the post in xBuild**:
-   - "Editing a post can be done using xBuild"
    - Open xBuild from FeatureCAM
-   - "Select the post in the dropdown listbox using the Browse button"
-   - "Click on the Edit button to change the post"
 
 3. **Key modifications for UCCNC**:
    - Check line numbering format (UCCNC may use N-word or no line numbers)
@@ -241,7 +217,6 @@ FeatureCAM doesn't include a UCCNC-specific post processor. UCCNC is a CNC contr
    - Verify all G-code is accepted
 
 5. **Contact FeatureCAM support**:
-   - "Is there someone who can help me?"
    - FeatureCAM support may have unofficial UCCNC posts
    - Check the FeatureCAM forum for user-contributed posts
    - Post a request on the Autodesk FeatureCAM Forum

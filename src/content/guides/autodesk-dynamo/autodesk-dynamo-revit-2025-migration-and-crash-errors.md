@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://forum.dynamobim.com/t/troubleshooting-graph-revit-2025/113137"
-  - "https://github.com/DynamoDS/Dynamo/issues/15090"
-  - "https://forum.dynamobim.com/t/revit-2025-and-old-dynamo-routines/106066"
 ---
 
 # Autodesk Dynamo Revit 2025 Migration and Crash Errors: Old Graphs Return Null Without Error Messages from IronPython2 to CPython3 Migration Requiring Script Update, Running Script Crashes Revit 2025 from Incompatible Package Versions Requiring Package Update or Removal, Revit 2025 Dynamo and Unifi Content Catalog Conflict Requiring Unifi 3.10.0.5 Update or Content Catalog Migration, Multi-Version Revit Environments Require Separate Graph Versions per Revit Release, and Troubleshooting Harder in New Dynamo Version from Null Returns Without Warnings Requiring Node-by-Node Freeze Debugging
@@ -31,31 +28,22 @@ Dynamo in Revit 2025 uses CPython3 instead of IronPython2. Old graphs with Pytho
 ### Fix
 
 1. **Update IronPython2 scripts to CPython3**:
-   - "Best practice here is to update your IronPython2 scripts for CPython3"
-   - "Most will update without issue"
    - Change Python script engine from IronPython2 to CPython3
    - Update syntax differences (e.g., `print` statements, string formatting)
 
 2. **Install IronPython2 engine for backward compatibility**:
-   - "If you and your company doesn't want to bother and don't mind running software which hasn't been patched since early 2020 (IronPython2)"
-   - "Then you can install the right IronPython version for your Dynamo version"
    - Install DynamoIronPython2.7 package
    - Read the package details closely
 
 3. **Test without custom nodes**:
-   - "Try it without any custom nodes"
-   - "I encountered a pretty nasty bug lately — the cause was some clr/python based calls that for some reason Dynamo did not like"
-   - "Ended up effectively breaking clr referencing until I rebooted Dynamo"
    - Remove custom nodes and test with out-of-the-box nodes
 
 4. **Use node-by-node freeze debugging**:
-   - "I have to freeze node for node to inch through the entire graph"
    - Freeze nodes one by one from the end
    - Check if the preceding node returns data when the following is frozen
    - This identifies the failing node
 
 5. **Update packages**:
-   - "If the Python is in a package, updating to a new package without an IronPython2 dependency would be the best path forward"
    - Check package versions in Package Manager
    - Update to versions compatible with CPython3
    - Remove packages with IronPython2 dependencies
@@ -77,7 +65,6 @@ Some packages used in the graph are not updated for Revit 2025 (Core) and are on
 ### Fix
 
 1. **Update all packages to Revit 2025 compatible versions**:
-   - "Some of the packages included in the script are not updated to Revit 2025 (Core) and are suitable for previous versions"
    - Open Package Manager in Dynamo for Revit 2025
    - Update all packages to latest versions
    - Check package documentation for Revit 2025 compatibility
@@ -89,19 +76,15 @@ Some packages used in the graph are not updated for Revit 2025 (Core) and are on
    - Contact the package developer for update timeline
 
 3. **Test packages individually**:
-   - "Have you tested all the packages used in this graph with Dynamo 3.0.x and Revit 2025?"
-   - "On their own external to this graph"
    - Create a simple test graph for each package
    - Run in Revit 2025 to identify which package crashes
 
 4. **Use standard Dynamo UI (not headless)**:
-   - "This issue came when running through the standard Dynamo UI"
    - If using NonicaTAB or other headless runners
    - Test in standard Dynamo UI first
    - Headless execution may have different crash behavior
 
 5. **Report the crash to Dynamo team**:
-   - "I think that Dynamo shouldn't crash Revit in that scenario, it should be able to manage such exceptions"
    - Report on GitHub with the script and crash details
    - Include the Revit and Dynamo versions
    - Include the list of packages used
@@ -123,31 +106,26 @@ The Unifi add-in (acquired by Autodesk in 2023) is not compatible with Revit 202
 ### Fix
 
 1. **Update Unifi add-in to 3.10.0.5**:
-   - "There's an update to the Unifi add-in 3.10.0.5 that in theory fixes it"
    - Download the update from the Unifi/Autodesk portal
    - Install the updated add-in
    - Restart Revit and test Dynamo
 
 2. **Migrate to Content Catalog add-in**:
-   - "If you wish to use the Autodesk solution you need to use the Content Catalog app and not the old UNIFI plugin"
    - Log in to your Autodesk account
    - Under Revit Extensions, download Content_Catalog_Revit_Addin
    - Uninstall the old Unifi plugin first
 
 3. **Uninstall Unifi as workaround**:
-   - "If revit or dynamo is crashing that would be on UNIFI and sadly you might need to uninstall it"
    - Uninstall the Unifi add-in
    - Use Dynamo without Unifi
    - Reinstall when a compatible version is available
 
 4. **Wait for Revit 2026 support**:
-   - "We were told Unifi (Now Content Catalog) will be supported thru Revit 2026"
    - If the update doesn't fix the issue
    - Wait for Revit 2026 which should have full Content Catalog support
    - Use Revit 2024 in the meantime
 
 5. **Use separate machines**:
-   - "I can't use 2 machines (which would partly solve the issue)"
    - If possible, use one machine with Unifi (no Dynamo)
    - And another with Dynamo (no Unifi)
    - This is not ideal but allows using both tools
@@ -169,28 +147,18 @@ Need to maintain Dynamo scripts that work across Revit 2022, 2023, 2024, and 202
 ### Fix
 
 1. **Create separate graph versions per Revit version**:
-   - "Version your .dyns just like you do your .rfa, .rft, .rte and .rvt files"
    - Create a naming convention: `script_2022.dyn`, `script_2023.dyn`, etc.
    - Maintain separate versions for each Revit release
    - Don't try to make one graph work everywhere
 
 2. **Configure packages for each environment**:
-   - "Configure your standard packages in 2022"
-   - "Get the list of packages installed in 2022, and find and install the versions for Revit 2023, 2024, and 2025"
    - Each Revit version has its own Dynamo package environment
    - Don't share package folders between versions
 
 3. **Use the migration workflow**:
-   - "Write a graph for 2022 and confirm it runs perfectly. Save it and close"
-   - "Do a save as and open up the 2022 graph in your 2023 environment"
-   - "Take note of any packages noted as 'not being the same version'"
-   - "Update the graph as needed for 2023 so it runs perfectly again"
    - Repeat for 2024 and 2025
 
 4. **Don't uninstall IronPython2**:
-   - "Don't uninstall it"
-   - "Your Python engines are part of your Dynamo environment"
-   - "Each environment (way to launch Dynamo) has its own set of packages"
    - IronPython2 for 2022, CPython3 for 2025
 
 5. **Use the 'Install Specified Version' feature**:
@@ -216,26 +184,19 @@ The new Dynamo version (3.0.x) has different error handling behavior. Some nodes
 ### Fix
 
 1. **Use node-by-node freeze debugging**:
-   - "I have to freeze node for node to inch through the entire graph to find out what node isn't working correctly"
    - Start from the end of the graph
    - Freeze the last node
    - Check if the preceding node returns data
    - Work backwards until you find the failing node
 
 2. **Check for null inputs**:
-   - "My guess is that either you are feeding nulls in or asking for a higher index than your list(s) have available"
-   - "Both would trigger an error"
-   - "Passing on nulls will generally just make more downstream errors also"
    - Use a Watch node to inspect data at each stage
 
 3. **Follow warnings upstream**:
-   - "Warnings will be consistently passed down the full length of the stream"
-   - "If Element.GetLocation fails, the Point.Z will also fail"
    - Start from the first warning in the graph
    - Fix it before looking at downstream issues
 
 4. **Check for nodes returning null by design**:
-   - "Since Element.Host doesn't show a warning but the code block does, I'm guessing that Element.Host is returning 'null' but without throwing a warning as that's by design"
    - Some nodes return null without warnings
    - This is expected behavior, not a bug
    - Handle nulls explicitly with conditional logic
@@ -247,7 +208,6 @@ The new Dynamo version (3.0.x) has different error handling behavior. Some nodes
    - This visual approach helps identify where data breaks
 
 6. **Reboot Dynamo if CLR breaks**:
-   - "Ended up effectively breaking clr referencing until I rebooted Dynamo"
    - If CLR/Python calls break, reboot Dynamo
    - Close and reopen Dynamo from Revit
    - This may restore CLR functionality

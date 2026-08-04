@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://forum.mycad.visiativ.com/t/lantek-expert/98389?lang=en&locale=en"
-  - "https://forum.mycad.visiativ.com/t/appel-aux-utilisateurs-de-lantek-expert/106427"
-  - "https://www.lantek.com/ae/blog/modify-machine-feature"
 ---
 
 # Lantek Expert Nesting and Import Errors: Invalid Header Data from DXF DWG Version Mismatch Requiring Older Format Save, Workshop Sheet Logo Not Printing from File Path or Windows Update Requiring Acercade.bmp Check, Open Contours and Superimposed Lines from Drawing Errors Requiring Automatic Correction, Machine Reassignment from CNC Downtime Requiring Modify Machine Feature, and Nesting Plan Compatibility from Machine Differences Requiring Parameter Adjustment
@@ -31,31 +28,20 @@ Opening a DXF file in a Lantek Expert job produces error messages before the fil
 ### Fix
 
 1. **Save DXF in older AutoCAD format**:
-   - "When I register under AutoCAD 2007, I get about twenty error messages"
-   - "Under 2004, I have 2"
-   - "Under 2000, I don't have any more!"
    - In AutoCAD: File > Save As > choose DXF format > AutoCAD 2000 or 2004
 
 2. **Re-save through another CAD software**:
-   - "Re-recording via another software (DraftSight and Profirst) also works!"
    - Open the DXF in DraftSight
    - Save as DXF
    - Import into Lantek Expert
 
-3. **Remove attribute definitions in AutoCAD**:
-   - "To do this in AutoCAD: Object window then Properties"
-   - "Click on quick selection"
-   - "Apply to: Entire drawing, Object Type: Attribute Definition, Operator: Select all"
-   - "Click OK and then delete"
+3. **Remove attribute definitions in AutoCAD**.
 
 4. **Click through the errors**:
-   - "It doesn't impact the part"
-   - "You can import it like that, do ok ok ok ok and keep working"
    - The errors are warnings, not blocking errors
    - The geometry imports correctly despite the warnings
 
 5. **Use SolidWorks to re-save**:
-   - "If you save your dxf with SolidWorks, you won't have any problems importing into Lantek"
    - Open the DXF in SolidWorks
    - Save as DXF
    - Import into Lantek Expert
@@ -82,38 +68,27 @@ The company logo on the workshop sheet (PDF report) stopped printing. The logo a
 ### Fix
 
 1. **Check for multiple Acercade.bmp files**:
-   - "If it replaces your logo with the base image, it means that it exists somewhere"
-   - "Look for the acercade file in other folders"
    - Search all Lantek directories for Acercade.bmp
    - Replace all instances with your company logo
 
 2. **Verify the correct file path**:
-   - "I placed it in C:/Lantek/EasyPunch/BITMAPS/Acercade.bmp and everything prints correctly"
    - Check both: C:\Lantek\Expert\Bitmaps\ and C:\Lantek\EasyPunch\BITMAPS\
    - Replace the file in all possible locations
-   - "Remember to respect the case"
 
 3. **Check Windows update effects**:
-   - "Could it be that the culprit is a Windows update?"
-   - "I did the last Windows update and suddenly my logo came back"
    - Check if a recent Windows update changed file permissions
    - Run Windows Update to see if a fix is available
 
 4. **Verify bitmap format**:
-   - "Is the new logo the same size as the old one?"
    - Ensure the replacement BMP has the same dimensions
    - Use the same color depth (24-bit BMP)
    - Keep the same file name exactly: Acercade.bmp
 
 5. **Repair Lantek installation**:
-   - "I don't like this tendency of Lantek to lose its parameters"
-   - "The Lantek tech had done a software repair"
    - Use the Lantek installation CD/DVD to repair
    - This may restore correct file paths
 
 6. **Check Lantek version**:
-   - "What is the version of your Lantek?"
-   - "I am due for an updated version"
    - Older versions may have path issues
    - Update to the latest Lantek Expert version
 
@@ -134,8 +109,6 @@ Imported DXF/DWG files have drawing errors: open contours, superimposed lines, o
 ### Fix
 
 1. **Use Lantek's automatic contour correction**:
-   - "Lantek gives a good view of open contours"
-   - "It has some functions that allow you to automatically correct errors of this type"
    - Use the contour cleaning tools in Lantek Expert
    - Automatically close open contours
 
@@ -146,13 +119,10 @@ Imported DXF/DWG files have drawing errors: open contours, superimposed lines, o
    - Purge unused elements
 
 3. **Use Profirst for drawing cleaning**:
-   - "Profirst integrates very practical functions"
-   - "The cleaning of the contours you are talking about, I find them in Lantek Expert"
    - Use Profirst (included with Lantek) for cleaning
    - Or use Lantek's built-in tools
 
 4. **Check for open contours visually**:
-   - "It's hard to get it wrong, Lantek gives a good view of open contours"
    - Review the imported drawing in Lantek
    - Identify open contours visually
    - Fix them manually or automatically
@@ -186,37 +156,26 @@ A CNC machine (laser, punch, waterjet) goes down for maintenance or breakdown. N
 ### Fix
 
 1. **Use the Modify Machine feature**:
-   - "Lantek Expert introduces the Modify Machine feature"
-   - "This innovative function empowers users to adapt their existing nesting plans to a different machine seamlessly"
    - Select a new machine from the drop-down list
    - Modify Machine adjusts the plans automatically
 
-2. **How Modify Machine works**:
-   - "Modify Machine reads existing nesting and cutting plans"
-   - "Adjusts them automatically to work with a chosen machine"
-   - "Applies them to that unit"
-   - "Adds new lead-ins, places micro-joints, adjusts parameters"
+2. **How Modify Machine works**.
 
 3. **Apply to all selected nests**:
-   - "It takes these calculations and applies them to all selected nests"
    - Select all nests that need reassignment
    - Choose the new machine
    - Modify Machine applies changes to all
 
 4. **Drag and drop for customization**:
-   - "If desired, operators can drag and drop nests as needed for added customizability"
    - After automatic reassignment
    - Manually adjust nest positions if needed
    - Fine-tune the layout
 
 5. **Set up machines in advance**:
-   - "A program can be written once, with one machine in mind"
-   - "But can then be applied to any machine uploaded in the Expert system"
    - Upload all shop machines to Lantek Expert
    - This enables quick reassignment when needed
 
 6. **Use for production flexibility**:
-   - "When almost any project can be run on almost any machine, machines rarely sit unused"
    - Use Modify Machine for load balancing
    - Redirect work to less busy machines
    - Maximize machine utilization
@@ -238,7 +197,6 @@ Different CNC machines have different cutting areas, tool configurations, speed 
 ### Fix
 
 1. **Use Modify Machine for automatic adjustment**:
-   - "Modify does the rest: adding new lead-ins, placing micro-joints, adjusting parameters"
    - This handles most compatibility issues automatically
    - Review the adjusted plan before sending to the machine
 
@@ -260,7 +218,6 @@ Different CNC machines have different cutting areas, tool configurations, speed 
    - Test with a sample cut if possible
 
 5. **Use 2D and 3D nesting**:
-   - "Users interact with Modify Machine in Lantek Expert's 2D and 3D nesting"
    - Both nesting modes support Modify Machine
    - Choose the appropriate nesting type for your material
 

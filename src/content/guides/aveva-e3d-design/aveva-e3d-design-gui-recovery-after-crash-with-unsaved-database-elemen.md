@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.aveva.com/bundle/e3d-design/page/909529.html"
-  - "https://koulakengineering.com/aveva-e3d-design-3-1-10-known-issue-fixes/"
-  - "https://docs.aveva.com/bundle/e3d-design/page/938070.html"
 ---
 
 # AVEVA E3D Design GUI Recovery After Crash with Unsaved Database Elements, PML unset(!A) Crash from Missing PMLVAR Support, IFC Property Import Failure, DGN Import Unexpected End of File and Insufficient Memory, and MultiCAD NWD Import Scale and Performance from Large Models: Session Recovery, 3.1.10 Fix, Property Set Mapping, BucketSize Option, and Model Simplification
@@ -31,44 +28,27 @@ After AVEVA E3D Design crashes, the GUI windows fail to initialize properly on r
 ### Fix
 
 1. **Understand that unsaved elements are lost**:
-   - "These elements no longer exist"
-   - "When AVEVA E3D Design is relaunched, these elements no longer exist"
    - Any elements created after the last savework
    - Are permanently lost after a crash
 
 2. **Recreate lost Reference Datums**:
-   - "A Reference Datum might have been created and used for a failed export"
-   - "The System cannot use that, and then refers to the default Reference Datum, IFCGLOBAL"
-   - "The Reference Datum must be created again"
    - Recreate any lost Reference Datums
 
 3. **Don't worry about IFCGLOBAL**:
-   - "If IFCGLOBAL has not been saved before crashing, the message is displayed"
-   - "In this case, no action is required"
-   - "As the default Reference Datum, IFCGLOBAL, is created automatically"
    - IFCGLOBAL is auto-created on relaunch
 
 4. **Remove stale settings files**:
-   - "This error might occur when trying to use a settings file"
-   - "Which refers to functions that no longer exist"
-   - "The System might need alternative information before export"
    - Delete or recreate stale settings files
 
 5. **Save work frequently**:
-   - "When a savework is made a new session will be created on the database"
-   - "The changed data will always be written to the end of the file"
    - Use savework frequently
    - To minimize data loss from crashes
 
 6. **Use Getwork to see latest changes**:
-   - "If you do want to see the changes made by others then you must do a 'Getwork'"
-   - "'Getwork' will always reposition you to view the latest session"
    - Use Getwork after relaunch
    - To see the latest saved state
 
 7. **Check session history**:
-   - "Internally there is a linked list between sessions"
-   - "Once a session is written, it will never be changed"
    - Check the session history
    - To identify which session to recover from
 
@@ -89,8 +69,6 @@ E3D Design crashes when running PML code that uses the `unset(!A)` command. The 
 ### Fix
 
 1. **Update to E3D Design 3.1.10 or later**:
-   - "Issue About q unset(!A) will cause E3D Crash"
-   - "Resolution: Fixed – Added missing support for PMLVAR"
    - Install the latest version
    - That includes the PMLVAR fix
 
@@ -147,8 +125,6 @@ When importing IFC files into E3D Design, property sets are not imported correct
 ### Fix
 
 1. **Update to E3D Design 3.1.10 or later**:
-   - "Issue with IFC property import in E3D"
-   - "Resolution: Fixed – identified property sets are successfully imported"
    - Install the latest version
    - That includes the IFC import fix
 
@@ -177,7 +153,6 @@ When importing IFC files into E3D Design, property sets are not imported correct
    - And add them manually in E3D
 
 6. **Check import log for warnings**:
-   - "Open User Messages to see descriptive messages for each import failure"
    - Check the User Messages window
    - For import warnings or errors
    - That indicate missing properties
@@ -205,44 +180,32 @@ When importing DGN files into E3D Design, errors occur: "Unexpected End of File 
 ### Fix
 
 1. **Verify DGN file integrity**:
-   - "Unexpected End of File was found"
    - Check the DGN file for corruption
    - Try opening it in MicroStation or other DGN viewer
    - To verify it's not corrupted
 
 2. **Check file accessibility**:
-   - "Cannot open file"
    - Ensure the file is accessible
    - Check file permissions
    - And that the file is not locked by another process
 
 3. **Simplify the DGN file**:
-   - "Insufficient memory space"
    - If the file is too large
    - Simplify it in MicroStation
    - Remove unnecessary elements or reduce complexity
 
 4. **Use AVEVA Model Simplification**:
-   - "Where possible, we recommend using simpler versions of the original CAD model"
-   - "Either with export options in the original system"
-   - "Or trying AVEVA Model Simplification"
    - To reduce model complexity before import
 
 5. **Contact AVEVA Customer Support for specific errors**:
-   - "If the following errors occur, contact the AVEVA Customer Support desk"
-   - "Not all the allocated memory has been cleared"
-   - "Insufficient memory space"
-   - "Pointer was not found in buffer store"
    - These indicate internal bugs
 
 6. **Check DGN format compatibility**:
-   - "Unexpected record for a complex shape hole"
    - The DGN file may use features
    - Not supported by E3D's import
    - Try saving in a different DGN version
 
 7. **Close other applications**:
-   - "Insufficient memory space"
    - Close other applications
    - To free up memory for the import
    - And restart E3D before importing
@@ -264,43 +227,29 @@ When importing NWD (Navisworks) files using MultiCAD, the imported model has inc
 ### Fix
 
 1. **Use BucketSize option for large models**:
-   - "It is important to use the 'Limit no. of import elements per level' option"
-   - "In the IMP command the option is for example 'Bucketsize 300'"
    - Use the BucketSize option
    - To limit elements per level
 
 2. **Use AVEVA Model Simplification**:
-   - "We recommend using simpler versions of the original CAD model"
-   - "Either with export options in the original system"
-   - "Or trying AVEVA Model Simplification"
    - Simplify the model before importing
 
 3. **Use Unified Engineering for large models**:
-   - "Unified Engineering is better for large models that E3D Design 3.1 series"
-   - "As it can use more memory (as a 64-bit process)"
    - For very large models
    - Use Unified Engineering instead of E3D Design 3.1
 
 4. **Fix STL scale with SCALE command**:
-   - "MultiCAD has been changed to assume that a STL file is defined in millimetres"
-   - "The workaround for non-millimetre files is to use a SCALE and command line input"
    - For non-mm STL files
    - Use the SCALE command after import
 
 5. **Export simpler versions from original system**:
-   - "Where possible, we recommend using simpler versions of the original CAD model"
-   - "Either with export options in the original system"
    - Use export options in Navisworks
    - To reduce model complexity
 
 6. **Be aware of internal resource limits**:
-   - "Both E3D Design 3.1 series and Unified Engineering can occasionally fail"
-   - "With very complicated models which can exceed various internal resource limits"
    - Very complex models may exceed limits
    - In both E3D Design and Unified Engineering
 
 7. **Monitor performance after import**:
-   - "Complex imported models such as this are always relatively slow to work with"
    - After import, monitor performance
    - If the model is too slow
    - Consider simplifying further

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://community.ptc.com/3d-part-assembly-design-327/parts-and-drawings-glitching-173046"
-  - "https://community.ptc.com/3d-part-assembly-design-327/creo-large-assy-loading-speed-166821"
-  - "https://community.ptc.com/3d-part-assembly-design-327/creo-parametric-9-0-freezes-due-to-a-regeneration-progress-window-overlay-139022"
 ---
 
 # PTC Creo 11/12 Parts and Drawings Glitching from Graphics Driver with Orange Triangles and Wireframe Only, Large Assembly Loading Slow from Single-Core Limit and Family Tables, Regeneration Progress Window Overlay Freeze from GPU Drivers, Lag When Zoomed from OpenGL Shader HDR and Ambient Occlusion, and Analysis Features Mass Property Recalculation During Mechanism Study: graphics win32_gdi, Config Options, Driver Update, OpenGL Shader Disable, and Regeneration Manager
@@ -31,34 +28,19 @@ After a crash, drawings load but display nothing — no template, model, or anno
 ### Fix
 
 1. **Set graphics win32_gdi in config**:
-   - "Try setting this config option"
-   - "graphics win32_gdi"
    - Set to win32_gdi
    - To bypass OpenGL
 
 2. **Retest with win32_gdi**:
-   - "Retest with this config set"
-   - "The graphics may be quite slow"
-   - "With this set"
    - Test if models render correctly
 
 3. **Update graphics driver**:
-   - "If the models render correctly"
-   - "Then your issue is like"
-   - "With your graphics card driver"
-   - "Update your driver"
    - Update GPU driver
 
 4. **Use HW supplier recommended driver**:
-   - "Update your driver to that"
-   - "Recommended by your HW supplier"
-   - "For use with Creo"
    - Use certified driver
 
 5. **Check ISV certified hardware**:
-   - "If you are not using ISV certified hardware"
-   - "You may need to experiment"
-   - "With different drivers"
    - Check ISV certification
 
 6. **Reinstall Creo after driver update**:
@@ -90,44 +72,25 @@ Large assemblies take a very long time to load in Creo. The loading speed is sig
 ### Fix
 
 1. **Use Simplified Representations**:
-   - "open_simplified_rep_by_default"
-   - "Recommended so you don't accidentally"
-   - "Open the master rep on a large assy"
    - Use simplified reps
 
 2. **Disable auto regen**:
-   - "enable_auto_regen"
-   - "Yes (default) has potentially"
-   - "Negative large assy effects"
    - Disable auto regen
 
 3. **Turn off auto regen views**:
-   - "auto_regen_views"
-   - "REQUIRED - you must manually"
-   - "Regen sheets/views"
-   - "Otherwise causes significant delays"
    - Turn off auto regen views
 
 4. **Reduce shade quality**:
-   - "shade_quality"
-   - "Is EXTREMELY DETRIMENTAL"
-   - "TO LARGE ASSY PERFORMANCE"
    - Reduce shade quality
 
 5. **Disable interface options**:
-   - "check_interference_of_matches"
-   - "comp_assemble_with_interface"
-   - "create_temp_interfaces"
    - Disable interface options
 
 6. **Use Performance Reporting tool**:
-   - "Starting in Creo 11"
-   - "There is a new performance reporting tool"
    - Use the tool
    - To identify bottlenecks
 
 7. **Set allow_freeze_failed_assy_comp**:
-   - "allow_freeze_failed_assy_comp"
    - Enable this option
    - To handle failed
    - Assembly components
@@ -149,21 +112,13 @@ When clicking OK or deleting datum planes, a "Regeneration Progress" window over
 ### Fix
 
 1. **Update NVIDIA GPU drivers**:
-   - "The solution was to update"
-   - "My NVIDIA GPU drivers"
-   - "Which were only 3 months old"
    - Update GPU drivers
 
 2. **Fresh install of Creo**:
-   - "After that and a fresh install"
-   - "Of creo it seemed to be work fine"
    - Fresh install
    - After driver update
 
 3. **Use Task Manager as last resort**:
-   - "Solution is still to end it all"
-   - "Through task manager"
-   - "And deal with the file loss"
    - Use Task Manager if frozen
 
 4. **Save before regeneration**:
@@ -207,40 +162,30 @@ When zoomed into a model, significant lag occurs when panning, rotating, and ske
 ### Fix
 
 1. **Set ENABLE_OPENGL_SHADER to no**:
-   - "The most critical of these being"
-   - "ENABLE_OPENGL_SHADER set to no"
    - Disable OpenGL Shader
    - To eliminate lag
 
 2. **Set graphics opengl**:
-   - "graphics opengl"
    - Set graphics
    - To opengl mode
 
 3. **Set use_software_opengl no**:
-   - "use_software_opengl no"
    - Don't use
    - Software OpenGL
 
 4. **Set ENABLE_OPENGL_DEBUGGING yes**:
-   - "ENABLE_OPENGL_DEBUGGING yes"
    - Enable OpenGL
    - Debugging
 
 5. **Set ENABLE_OPENGL_FBO yes**:
-   - "ENABLE_OPENGL_FBO yes"
    - Enable Frame
    - Buffer Object
 
 6. **Set ENABLE_OPENGL_VBO yes**:
-   - "ENABLE_OPENGL_VBO yes"
    - Enable Vertex
    - Buffer Object
 
 7. **Accept reduced graphics quality**:
-   - "In the 3D workspace, disabling this"
-   - "Reduces the quality of graphics"
-   - "But at least the lag is gone"
    - Accept reduced quality
 
 ### Community Report
@@ -260,48 +205,26 @@ When running a kinematic/position study in Creo Mechanism, severe performance la
 ### Fix
 
 1. **Use Regeneration Manager**:
-   - "Exclude from Regeneration"
-   - "Unchecking them before initiating the MDO run"
-   - "Provided the values are already current"
    - Use Regeneration Manager
 
 2. **Access Regeneration Manager**:
-   - "Click Regenerate"
-   - "Regeneration Manager"
-   - "The Regeneration Manager dialog box opens"
    - Access the manager
 
 3. **Clear component checkboxes**:
-   - "By default, all components and features"
-   - "That need regeneration are selected"
-   - "Clear the component check box"
-   - "To prevent regeneration"
    - Uncheck analysis features
 
 4. **Set Mass Property Handling**:
-   - "Set a Mass Property Handling option"
-   - "Automatic Update"
-   - "Report Outdateness"
-   - "By Request"
-   - "Check Upon Save"
    - Set to By Request
 
 5. **Use By Request option**:
-   - "By Request - Prompts to update"
-   - "Mass properties on regeneration"
    - Use By Request
    - To prevent auto-update
 
 6. **Create backup models**:
-   - "To create a backup model"
-   - "Before regeneration click Create Backup Models"
    - Create backup
    - Before regeneration
 
 7. **Search for specific features**:
-   - "To search for a specific component"
-   - "Type the name in the search box"
-   - "And press ENTER"
    - Search for analysis features
 
 ### Community Report

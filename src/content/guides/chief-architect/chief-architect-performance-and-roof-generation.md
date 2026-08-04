@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.chiefarchitect.com/support/article/KB-00521/troubleshooting-slowness-in-chief-architect-projects.html"
-  - "https://chieftalk.chiefarchitect.com/topic/46404-x14-crashes-every-time-i-select-material-from-library/"
-  - "https://cloud.chiefarchitect.com/1/pdf/documentation/chief-architect-x17-update-notes.pdf"
 ---
 
 # Chief Architect Performance and Roof Generation: Network Drive File Corruption and Slowness, Multi-Monitor 3D Camera Redraw Overhead, Auto Roof Return Errant Plane Generation, Library Material Selection Crash in X14, and Automatic Truss Overlap Causing Elevation Slowness
@@ -80,7 +77,6 @@ Auto Roof Returns generate errant roof planes — unexpected roof planes appear 
 ### Fix
 
 1. **Update to latest version** — this is a documented bug fixed in Chief Architect X17:
-   - "Fixed a specific case in which Auto Roof Returns caused errant roof planes to be generated"
 
 2. **Delete errant roof planes manually** — select and delete the incorrect planes
 3. **Check roof return settings** — verify the roof return parameters are set correctly for each wall
@@ -140,7 +136,6 @@ When automatic trusses overlap roof planes with retained rafter framing, Chief A
 ### Fix
 
 1. **Update to X17** — this issue is fixed:
-   - "Fixed an issue in which automatic trusses that overlapped a roof plane with rafters that was set to retain framing caused slowness when generating elevations and CAD details from views"
 
 2. **Don't retain rafter framing** when automatic trusses are present:
    - Uncheck "Retain Framing" for roof planes that overlap with trusses

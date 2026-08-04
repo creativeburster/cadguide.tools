@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/autodesk-robot-access-violation-code-c0000005-constantly/td-p/13430756"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/direct-integration-with-revit-2025-is-not-working/td-p/12887837"
-  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/instability-and-no-convergence-of-nonlinear-problem/td-p/13726480"
 ---
 
 # Robot Structural Analysis Solver and Revit Integration Errors: Access Violation Crash from Revit Transfer Model Corruption Requiring Model Rebuild, Direct Integration with Revit 2025 Not Working from Revit-Side-Only Change Requiring Revit Ribbon Link, Calculation Freeze During Analysis from Meshing and Load Combination Overload Requiring Mesh Simplification, No Convergence of Nonlinear Problem from Tension Only Members and Excessive Releases Requiring Release Correction, and Generate Model Destroys Calculation from Bracing Intersection and Release Overload Requiring Element Generation Control
@@ -55,7 +52,6 @@ The model was created in Revit and transferred to Robot via the structural link.
    - This may resolve the corruption
 
 5. **Update Robot to latest version**:
-   - "Version 2024, updated"
    - Check for the latest Robot 2024 update
    - Install all hotfixes
    - The crash may be fixed in newer versions
@@ -88,11 +84,7 @@ Trying to send a model from Robot to Revit 2025. The direct integration option i
 
 ### Fix
 
-1. **Use Revit's Analyze tab**:
-   - "Direct integration is available from Revit side only"
-   - "Open your model in Robot Structural Analysis program"
-   - "Run Robot Structural Analysis Link from Analyze tab in Revit ribbon"
-   - "Click Update Model and accept with OK button"
+1. **Use Revit's Analyze tab**.
 
 2. **Use .smxx file export/import**:
    - If the Revit link doesn't work
@@ -101,7 +93,6 @@ Trying to send a model from Robot to Revit 2025. The direct integration option i
    - Or use the Revit Robot link to import
 
 3. **Check for assembly loading error**:
-   - "Could not load file or assembly 'Autodesk.Common.AResourcesControl, Version=38.0.0.11069'"
    - This error prevents the Revit-Robot link
    - Reinstall both Revit and Robot 2025
    - Repair the Autodesk installation
@@ -199,38 +190,28 @@ A tower frame model with tension-only web members and stay cables. Error message
 ### Fix
 
 1. **Change tension-only members to regular bars**:
-   - "Change them back to regular bars and the model will converge with no instabilities"
    - Remove the tension-only assignment
    - Use regular bars instead
    - This eliminates the nonlinear convergence issue
 
 2. **Use truss bars instead of tension-only**:
-   - "Keep those diagonals as truss bars, but resisting tension and compression"
    - Truss bars are pinned by default
    - They resist both tension and compression
    - This provides stability
 
 3. **Fix excessive releases**:
-   - "Change the releases pinned-fixed and fixed-pinned to be blocked on the RX direction (torsion)"
-   - "This is causing the instability type 2 which cannot be ignored"
    - Block RX rotation release
    - This prevents torsional instability
 
 4. **Don't apply releases on truss elements**:
-   - "You don't need to apply releases on Truss elements, they are treated as pinned already"
    - Remove releases from truss elements
    - They're already pinned
    - Additional releases create instability
 
 5. **Block RZ rotation on supports**:
-   - "Similar for the columns 1 to 4, they rotate around their axis"
-   - "They are based on pinned supports and all adjacent elements have pinned releases"
-   - "You may block RZ rotation on 'Basis' support label"
    - This prevents column rotation
 
 6. **Check for intersecting bracing**:
-   - "Bracing elements (19, 20) cut each other and create unstable chain in node (17)"
-   - "Turn off elements 19 and 20 from model generation, in order not to split them"
    - Intersecting bracing creates unstable nodes
    - Disable model generation for intersecting elements
 
@@ -257,31 +238,24 @@ A model that worked correctly with correct calculation results. After going from
 ### Fix
 
 1. **Turn off intersecting elements from generation**:
-   - "Turn off elements 19 and 20 from model generation, in order not to split them"
    - In the model generation settings
    - Disable generation for intersecting bracing elements
    - This prevents the unstable chain
 
 2. **Fix release definitions**:
-   - "Change 'Gelenking-Gelenking' release label definition, switching off the Rx rotation release at the beginning or end"
    - Remove the RX rotation release
    - This prevents torsional rotation
    - Which causes the moment triangle
 
 3. **Remove releases from truss elements**:
-   - "You don't need to apply releases on Truss elements, they are treated as pinned already"
    - Remove all releases from truss elements
    - They're already pinned by definition
    - Additional releases cause instability
 
 4. **Block RZ on column supports**:
-   - "Similar for the columns 1 to 4, they rotate around their axis"
-   - "They are based on pinned supports and all adjacent elements have pinned releases"
-   - "You may block RZ rotation on 'Basis' support label"
    - This prevents column rotation
 
 5. **Can't undo generate model**:
-   - "The normal way to undo steps did not work"
    - There is no undo for generate model
    - You must fix the issues manually
    - Or restore from a backup

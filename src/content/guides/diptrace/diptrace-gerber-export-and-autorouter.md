@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://diptrace.com/forum/viewtopic.php?t=12649"
-  - "https://diptrace.com/forum/viewtopic.php?t=13908"
-  - "https://diptrace.com/forum/viewtopic.php?t=15606"
 ---
 
 # DipTrace Gerber Export and Autorouter: TrueType Font Gerber Export Failure, Autorouter Not Executing from Default 8.89mm Trace Width, 4-Layer Plane Net Autorouter Leaving Power/Ground Unrouted, Panelized PCB Errant Cross-Board Trace Bug, and Custom Mask/Paste Settings Not Renewing from Schematic
@@ -137,7 +134,6 @@ This is a **confirmed DipTrace bug** in panelization. The panelization feature i
 ### Fix
 
 1. **Update DipTrace** — the bug has been fixed in source code and will be included in future versions:
-   - "We have already fixed the bug in our source codes. The fix will be included in the next version"
    - Check if the latest version includes this fix
 
 2. **Manually verify panelized Gerber** — before sending to manufacturing:

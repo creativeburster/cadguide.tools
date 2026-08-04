@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://www.caddit.net/forum.21/viewtopic.php?t=687"
-  - "https://www.caddit.net/forum.21/viewtopic.php?t=55"
-  - "https://forums.autodesk.com/t5/autocad-map-3d-ideas/progecad-dwg-compatibility-problems-in-autocad-map-3d/idi-p/12475858"
 ---
 
 # progeCAD DWG Compatibility and Field Corruption Errors: Title Block Fields Corrupt After Save from 2010 DWG Back-Conversion Requiring Pre-Save in AutoCAD 2010, ePermanentlyErased Crash Opening progeCAD DWGs in AutoCAD from XREF Issues Requiring Audit and Recover, Invalid DWG Version Error from 2007 Format Save Requiring 2004 Format Save, DWG Geometry Misalignment in AutoCAD Map 3D from Translation Loss Requiring DWG Audit, and progeCAD Drawings Not Opening in Older AutoCAD from Version Mismatch Requiring Save As Correct Version
@@ -31,13 +28,11 @@ progeCAD user opens a DWG with a title block created in AutoCAD. The title block
 ### Fix
 
 1. **Pre-save in AutoCAD 2010 format**:
-   - "As a temporary work-around to prevent any data loss, you have to always save the drawing to 2010 format from AutoCAD first before opening in progeCAD"
    - In AutoCAD: File > Save As > AutoCAD 2010 DWG
    - Then open in progeCAD
    - This avoids the back-conversion in progeCAD
 
 2. **Update to next major progeCAD release**:
-   - "This issue with the data fields in AutoCAD 2015 will probably be addressed in the next major release of progeCAD, because the 2010 back-conversion process is no longer used then"
    - Update to the latest progeCAD version
    - The back-conversion process is removed in newer versions
    - Check release notes for field data fixes
@@ -61,7 +56,6 @@ progeCAD user opens a DWG with a title block created in AutoCAD. The title block
    - Reapply only the progeCAD user's changes manually
 
 6. **Use progeCAD 2024+ with IntelliCAD 11.1**:
-   - "New Engine Based on the latest IntelliCAD 11.1 source code. Hundreds of bugs fixed"
    - progeCAD 2024 uses a new engine
    - Many compatibility bugs are fixed
    - Update to progeCAD 2024 or later
@@ -83,13 +77,11 @@ Drawings originally created in AutoCAD, worked on in progeCAD, and saved as 2004
 ### Fix
 
 1. **Run AUDIT and RECOVER in progeCAD first**:
-   - "Have you tried to 'audit' and 'recover' commands in progeCAD first before saving back to AutoCAD?"
    - In progeCAD: run AUDIT command to fix errors
    - Then run RECOVER command
    - Save the file after auditing
 
 2. **Check for XREF issues**:
-   - "It might well have something to do with an invalid XREF"
    - Check XREF references in progeCAD
    - Detach any invalid or missing XREFs
    - Reattach them if needed
@@ -113,13 +105,11 @@ Drawings originally created in AutoCAD, worked on in progeCAD, and saved as 2004
    - Then open the WBLOCK'd file in AutoCAD
 
 6. **Check block references**:
-   - "Do your drawings contain XREF or blocks?"
    - Check for corrupted block definitions
    - Purge unused blocks
    - Redefine corrupted blocks
 
 7. **Update progeCAD version**:
-   - "You should upgrade to 8.0.18.18"
    - Check for the latest progeCAD version
    - Many DWG compatibility issues are fixed in updates
    - Install the latest version before working on critical files
@@ -141,26 +131,20 @@ Every time a DWG file is opened in progeCAD 2009 PRO, a dialog box appears: "Inv
 ### Fix
 
 1. **Save as AutoCAD 2004 format**:
-   - "I tried re-saving the .dwg's in AutoCad 2004 format and now they're okay"
-   - "I used to save the drawing files in AutoCad 2007"
    - In progeCAD: File > Save As > AutoCAD 2004 DWG
    - The 2004 format is fully supported by progeCAD 2009
 
 2. **Don't use AutoCAD 2007 format**:
-   - "I overlooked the save as option"
    - Avoid saving in AutoCAD 2007 format
    - Use 2004 or earlier format
    - progeCAD 2009 fully supports these
 
 3. **Update progeCAD version**:
-   - "Are you using the latest version of progeCAD 9.0.28.10?"
    - Update to the latest progeCAD version
    - Newer versions support newer DWG formats
    - progeCAD 2024 supports up to AutoCAD 2024 DWG
 
 4. **Run AUDIT on files**:
-   - "Do you have errors in your drawing files?"
-   - "Check them in AutoCAD first using the audit and purge commands"
    - Run AUDIT in AutoCAD before sending to progeCAD
    - Fix any errors first
 
@@ -171,8 +155,6 @@ Every time a DWG file is opened in progeCAD 2009 PRO, a dialog box appears: "Inv
    - If 2007+, resave as 2004 in AutoCAD
 
 6. **Use progeCAD 2024 with IntelliCAD 11.1**:
-   - "New Engine Based on the latest IntelliCAD 11.1 source code"
-   - "Hundreds of bugs fixed"
    - progeCAD 2024 supports modern DWG formats
    - No more "Invalid DWG Version" errors
 
@@ -229,8 +211,6 @@ progeCAD and AutoCAD Map 3D use different implementations of the DWG format. pro
    - Report discrepancies to the contractor
 
 7. **Update progeCAD to 2024**:
-   - "New Engine Based on the latest IntelliCAD 11.1 source code"
-   - "Hundreds of bugs fixed"
    - progeCAD 2024 has improved DWG compatibility
    - Update to reduce translation issues
 
@@ -251,7 +231,6 @@ Drawings created in progeCAD cannot be opened in AutoCAD 2005-2007. The error sa
 ### Fix
 
 1. **Save As the correct AutoCAD version**:
-   - "You need to choose the correct version using the 'save as..' dialogue box"
    - In progeCAD: File > Save As
    - Select AutoCAD 2004 DWG format
    - This is readable by AutoCAD 2004-2006
@@ -282,7 +261,6 @@ Drawings created in progeCAD cannot be opened in AutoCAD 2005-2007. The error sa
 
 6. **Update progeCAD for better version support**:
    - progeCAD 2024 supports saving to multiple DWG versions
-   - "New Engine Based on the latest IntelliCAD 11.1 source code"
    - Update to the latest version
    - Better version management
 

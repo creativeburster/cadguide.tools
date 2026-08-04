@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://tadviser.com/index.php/Product:T-FLEX_CAD"
-  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/autocad_formats_import.htm"
-  - "https://www.tflex.ru/about/news/detail/index.php?ID=5561"
 ---
 
 # T-FLEX CAD 3D Projection Crash, DWG Import Errors, Large Assembly Freeze, Hatch and Position Placement Freeze, and DXF DWG Non-Parametric Import: System Stability Updates, Projection Algorithm Fixes, Assembly Loading Optimization, and Import Parameter Configuration
@@ -31,14 +28,10 @@ T-FLEX CAD crashes (falls) when working with 3D projections. The crash occurs wh
 ### Fix
 
 1. **Update to T-FLEX CAD 17.1.33.0 or later**:
-   - "The errors associated with the fall of the system in projections were fixed"
-   - "Stability and performance of the system were improved"
    - Download from Top Systems
    - Install the latest build
 
 2. **Update to T-FLEX CAD 17.1.40.0 for additional fixes**:
-   - "Fixed a number of errors when working with 2D projections and drawing views"
-   - "3D assemblies, API, sheet metal"
    - More projection fixes in this build
    - Install the latest available version
 
@@ -49,7 +42,6 @@ T-FLEX CAD crashes (falls) when working with 3D projections. The crash occurs wh
    - Reduce the number of projected elements
 
 4. **Use local sections carefully**:
-   - "The algorithm of 2D projections, local sections and breaks is also optimized"
    - Avoid creating too many local sections
    - Test each section individually
    - Update sections one at a time
@@ -89,7 +81,6 @@ When importing DWG files into T-FLEX CAD, elements may be missing, incorrectly p
    - Install the latest build
 
 2. **Configure import parameters correctly**:
-   - "When importing AutoCAD documents into T-FLEX CAD, you need to specify the following parameters"
    - Set the correct units
    - Set the correct scale factor
    - Choose the appropriate import options
@@ -115,14 +106,10 @@ When importing DWG files into T-FLEX CAD, elements may be missing, incorrectly p
    - Review the import log for warnings
 
 6. **Use the Recognize Annotation Objects option**:
-   - "Added the Recognize Annotation Objects flag"
-   - "Drop-down list to select the font of imported annotations"
    - Enable this option in the Import Options dialog
    - This improves dimension and annotation import
 
 7. **Import as non-parametric and parametrize manually**:
-   - "Drawings in DXF and DWG formats are not parametric"
-   - "They remain non-parametric in T-FLEX"
    - Import the DWG as-is
    - Manually add T-FLEX parametric relations
 
@@ -143,44 +130,33 @@ T-FLEX CAD freezes or is very slow when opening large assemblies. Assemblies wit
 ### Fix
 
 1. **Update to T-FLEX CAD 17 or later**:
-   - "Loading, editing, and recalculating assemblies is up to ten times faster"
    - "T-FLEX CAD 16: 5 min 15 sec → T-FLEX CAD 17: 38 sec" (48,372 bodies)
    - The new assembly loading mechanism is 10x faster
    - Install the latest version
 
 2. **Use the default assembly loading mode**:
-   - "By default, the Assembly will be loaded without bodies, which accelerates the loading process"
    - Don't choose "full load" unless needed
    - Use "minimal load" for browsing the assembly tree
    - Load bodies only when needed
 
 3. **Load bodies on demand**:
-   - "After the assembly is loaded you can set the loading method for each fragment"
    - Options: Solid+Meshes+Support, Meshes+Support, Support, Don't Load
    - Load bodies only for fragments you're working on
    - Unload bodies for fragments you're done with
 
 4. **Disable automatic structure saving**:
-   - "Automatically save changes to the product structure when fragment synchronization is enabled"
-   - "You can now disable this option to improve performance when working with large assemblies"
    - Disable in Preferences > T-FLEX DOCs
    - This reduces I/O during assembly work
 
 5. **Use unloaded geometry and mesh**:
-   - "Now you can work with assemblies with unloaded geometry and mesh"
-   - "Including the insertion of such fragments"
-   - "Data on grids and solid geometry is loaded by the user's request"
    - Or automatically if necessary during designing
 
 6. **Optimize fragment loading**:
-   - "If an Assembly fragment is selected as an element of any modeling or measurement operation, bodies are automatically loaded for it"
    - Don't select fragments unnecessarily
    - This triggers automatic body loading
    - Use the assembly tree for navigation instead
 
 7. **Use the standby window to interrupt loading**:
-   - "A standby window appears during model loading"
-   - "If you need to interrupt the download, use the corresponding button"
    - If loading takes too long, cancel
    - Reload with minimal load
 
@@ -201,8 +177,6 @@ T-FLEX CAD freezes when working with hatches on large assemblies. Placing positi
 ### Fix
 
 1. **Update to T-FLEX CAD 17.1.36.0 or later**:
-   - "Fixed freezes in hatches and when placing positions on large assemblies"
-   - "Improved system stability and performance"
    - Install the latest version
    - The freeze should be resolved
 
@@ -252,8 +226,6 @@ After importing a DXF or DWG file into T-FLEX CAD, the drawing is non-parametric
 ### Fix
 
 1. **Understand the limitation**:
-   - "Drawings in DXF and DWG formats are not parametric"
-   - "They remain non-parametric in T-FLEX"
    - This is a format limitation, not a bug
    - Plan for manual parametrization
 
@@ -277,7 +249,6 @@ After importing a DXF or DWG file into T-FLEX CAD, the drawing is non-parametric
    - But still requires manual parametrization
 
 5. **Use the import parameters to preserve geometry**:
-   - "When importing AutoCAD documents, you need to specify the following parameters"
    - Set parameters to preserve geometric relationships
    - Import dimensions as reference
    - Use them to guide parametrization

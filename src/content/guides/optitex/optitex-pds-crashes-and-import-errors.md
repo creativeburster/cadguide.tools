@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://help.optitex.com/1382687/Content/Whats_New/Previous_Versions/Earlier_Releases_Fixes.htm"
-  - "https://help.optitex.com/1382687/Content/FAQ/PDS_Questions.htm"
-  - "https://help.optitex.com/1382687/Content/FAQ/3D_Questions.htm"
 ---
 
 # Optitex PDS Crashes and Import Errors: DXF and ASTM Import Crashes from Various Source Software, HPGL and PLT File Import Crash, PDS File Corruption and AutoSave Recovery, 3D Texture Problems from Graphics Card After Upgrade, and GPU Simulation Stretchy Results and O/Cloud Link Hang
@@ -135,7 +132,6 @@ PDS files can become corrupted from software crashes, power outages, or disk wri
    - Rename .bak to .pds and try opening
 
 4. **Cannot import files when internals exceed 5000**:
-   - "Cannot import files when the number of internals is higher than 5000"
    - Reduce the number of internal lines/pieces before importing
    - Split the file into smaller parts
 
@@ -247,7 +243,6 @@ GPU simulation produces results that are too stretchy — garments deform more t
 ### Fix for O/Cloud Link Hang
 
 1. **Log in to O/Cloud Link before loading .oaff files**:
-   - "Make sure you are logged in to O/Cloud Link before attempting to load an oaff file"
    - This is the direct fix — log in first, then load
 
 2. **If PDS hangs**:
@@ -258,7 +253,6 @@ GPU simulation produces results that are too stretchy — garments deform more t
    - Then load the .oaff file
 
 3. **STL file format cannot be loaded**:
-   - "STL file format cannot be loaded"
    - Use FBX or other supported formats instead
    - For 3D scanner objects, use OBJ or FBX
 

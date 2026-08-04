@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.bentley.com/LiveContent/web/OpenBuildings%20Speedikon%20Help-v5/en/GUID-5BEA51DC-F2B2-77FD-2588-30B61403120B.html"
-  - "https://bentleysystems.service-now.com/community?id=community_question&sys_id=47c9572c472186109091861f536d43fe"
-  - "https://docs.bentley.com/LiveContent/web/OpenBuildings%20Speedikon%20Help-v4/en/GUID-610971AE-03F8-D5B8-A3E8-7C9B3D0E9377.html"
 ---
 
 # OpenBuildings Speedikon IFC Export and DWG Reference Errors: IFC Export Full of Errors from Missing Property Mapping Requiring PCF and PropertySet Configuration, DWG Reference Line Style Scale from Global LTSCALE Not Applied Requiring Per-Element Scaling, DWG File Font Substitution from Missing SHX Files Requiring TrueType Fonts, DGN to DWG Line Style Drop from Incompatible Styles Requiring Drop Unsupported Option, and DWG Units Warning from Uninferable Units Requiring Manual Units Setting
@@ -31,19 +28,16 @@ The IFC export is missing property mapping configuration. Speedikon requires two
 ### Fix
 
 1. **Use the correct PCF file**:
-   - "Navigate one folder more into \BuildingExamples where you should find the PCF files for the delivered AECOsim projects/datasets"
    - Don't use `untitled.pcf`
    - Use the BuildingExamples PCF for AECOsim/Speedikon
    - This includes building-specific data
 
 2. **Configure IFC_PropertyMapping.set**:
-   - "Modify IFC_PropertyMapping.set"
    - This file maps Speedikon properties to IFC properties
    - Ensure all required properties are mapped
    - Follow the Bentley wiki for property mapping
 
 3. **Enable required properties**:
-   - "Export to IFC and COBie - Enabling the Required Properties"
    - Follow the Bentley wiki article
    - Enable properties in the PCF file
    - Set `IFC_Project=1` in the PCF
@@ -55,8 +49,6 @@ The IFC export is missing property mapping configuration. Speedikon requires two
    - Add missing mappings to the PropertyMapping.set
 
 5. **Raise a Service Request**:
-   - "I would request you to kindly raise a Service Request for this issue"
-   - "As this needs detail investigations, please attach the IFC files"
    - Bentley support can analyze the export
    - Provide the DGN and IFC files
 
@@ -90,8 +82,6 @@ When opening a DWG file directly, it looks fine. But when opening the same DWG a
 ### Fix
 
 1. **Set line style scale per element**:
-   - "You should not use the global line style scale in files that are used as references"
-   - "Instead, create line styles at an appropriate size or set the line style scale of the individual elements"
    - Open the DWG in AutoCAD
    - Set line style scale on each element individually
    - Don't rely on global LTSCALE
@@ -104,12 +94,10 @@ When opening a DWG file directly, it looks fine. But when opening the same DWG a
 
 3. **Use the Scale Line Styles reference setting**:
    - Preferences > Reference Category
-   - "Scale Line Styles — If on (the default), custom line style components are scaled by the reference scale"
    - Enable this option
    - This scales line styles by the reference scale factor
 
 4. **Set True Scale for references**:
-   - "True Scale — If on (the default), units in the active model and those in the referenced model are used to calculate an appropriate scaling factor"
    - Enable True Scale
    - This ensures real-world scaling
    - Line styles will scale with the reference
@@ -121,7 +109,6 @@ When opening a DWG file directly, it looks fine. But when opening the same DWG a
    - But it can help match the reference appearance
 
 6. **Use the MS_DWGREF_ALLOWMASTERCOLORS variable**:
-   - "Set the MS_DWGREF_ALLOWMASTERCOLORS configuration variable to 1"
    - This allows DWG references to use master colors
    - May help with line style display
    - Set in the configuration file
@@ -143,13 +130,11 @@ A DWG file looks fine on a computer with AutoCAD installed, but when moved to a 
 ### Fix
 
 1. **Use TrueType fonts instead of SHX**:
-   - "If possible, use TrueType fonts rather than either SHX or Speedikon fonts, as they are more likely to exist on other computers"
    - Replace SHX fonts with TrueType in AutoCAD
    - TrueType fonts are embedded in the DWG
    - They display correctly on all computers
 
 2. **Include SHX files when sharing DWGs**:
-   - "You must include these SHX files (as well as any SHX files used for text) when sending a DWG file"
    - Copy all SHX files referenced by the DWG
    - Send them with the DWG file
    - Place them in the Speedikon font directory
@@ -167,7 +152,6 @@ A DWG file looks fine on a computer with AutoCAD installed, but when moved to a 
    - Text will display correctly
 
 5. **Check for missing line style symbols**:
-   - "The symbols used in a DWG line style are stored in separate SHX files"
    - If line styles are missing symbols
    - Find and copy the SHX files
    - Place in the Speedikon directory
@@ -195,14 +179,12 @@ When saving a DGN file containing compound OpenBuildings Speedikon line styles t
 ### Fix
 
 1. **Use the Drop Unsupported Line Styles option**:
-   - "If the Drop Unsupported Line Styles option on the Save As DWG/DXF Options dialog is used, complex OpenBuildings Speedikon line styles maintain their appearance"
    - File > Save As > DWG/DXF
    - Open Save As DWG/DXF Options dialog
    - Enable "Drop Unsupported Line Styles"
    - The line styles are converted to geometry
 
 2. **Understand the trade-off**:
-   - "Although the elements appear the same, they actually are many small geometry components in series rather than one line with an assigned style"
    - The visual appearance is preserved
    - But the elements are no longer lines with styles
    - They are individual geometry components
@@ -248,7 +230,6 @@ When opening a DWG file, a warning appears saying OpenBuildings Speedikon cannot
 ### Fix
 
 1. **Set units in the warning dialog**:
-   - "The warning dialog displays the units for the DWG file, and lets you change the units setting"
    - Select the correct units in the dialog
    - Choose the units that match the DWG file's intended units
    - Click OK to open with those units

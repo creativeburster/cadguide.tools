@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://cadexchanger.com/step-to-iges/"
-  - "https://prepomax.discourse.group/t/error-importing-step-and-iges-files/2352"
-  - "https://prepomax.discourse.group/t/disappearing-compound-part/2105"
 ---
 
 # CAD Exchanger STEP IGES Conversion and Import Errors: IGES B-Rep Edge Connectivity Limitations Causing Inconsistent Orientations Requiring STEP Format Instead, Split Periodic Surfaces Option Breaking Defeaturing Requiring Disable Before Import, STEP File Round-Off Errors from Text Format Accumulating Precision Loss Requiring Binary or Tolerant Import, Disappearing Compound Parts from IGES Shell Import Requiring STEP Conversion, and AutoCAD STEP Export Entity Cannot Be Converted Requiring Inventor or Fusion 360 Intermediate Processing
@@ -31,8 +28,6 @@ Importing an IGES file into CAD Exchanger. The model imports but has topology is
 ### Fix
 
 1. **Use STEP format instead of IGES**:
-   - "Newer formats, such as STEP, have been developed to support the inclusion and preservation of PMI data"
-   - "These formats provide dedicated mechanisms to store and communicate PMI information"
    - STEP preserves B-Rep topology including edge connectivity
    - Always prefer STEP over IGES for B-Rep models
 
@@ -43,14 +38,11 @@ Importing an IGES file into CAD Exchanger. The model imports but has topology is
    - This intermediate conversion can fix some topology issues
 
 3. **Use CAD Exchanger's IGES V2 engine**:
-   - "CAD Exchanger 3.4.1 delivered the last piece in the IGES V2 puzzle"
    - The V2 IGES engine has improved conversion drivers
    - Ensure you're using CAD Exchanger 3.4.1 or later
    - The V1 engine is phased out
 
 4. **Check for PMI data loss**:
-   - "The IGES format does not have a standardized way to represent or store PMI data"
-   - "When exporting a CAD model with PMI to an IGES file, this valuable information is typically lost"
    - Use STEP to preserve PMI data
    - IGES will lose all PMI information
 
@@ -77,20 +69,16 @@ Importing STEP files from manufacturer websites. After import, defeature operati
 ### Fix
 
 1. **Disable split periodic surfaces option**:
-   - "Disable this option and it should work"
    - In the import settings, uncheck "Split periodic surfaces"
    - Reimport the STEP file
    - Defeaturing should work correctly
 
 2. **Split periodic surfaces in source CAD**:
-   - "I did not have problems with my models since I use Solidworks"
-   - "And export the STEP files with the option to split periodic surfaces before exportation"
    - If you control the source CAD
    - Split surfaces during export instead of during import
    - This preserves defeaturing capability in the receiving software
 
 3. **Make split a post-import feature**:
-   - "Subsequently splitting the surfaces with a separate feature would be the better option"
    - Import without splitting
    - Perform defeature operations first
    - Split surfaces after defeaturing if needed
@@ -170,25 +158,20 @@ Importing an IGES file containing shell elements (surface models). Creating a co
 ### Fix
 
 1. **Use STEP format instead of IGES**:
-   - "Try with a .step file, there seems to be some issue with .igs in this case"
-   - "I created a step file using FreeCAD which has resolved the issue"
    - Convert the IGES to STEP before import
    - Use FreeCAD, CAD Exchanger, or another converter
 
 2. **Export from PrePoMax to STEP and reimport**:
-   - "I tried exporting all the parts into step files using PrePoMax and then importing them back and creating the compound, and it worked"
    - Export the IGES shells as STEP from within the software
    - Reimport the STEP files
    - Create the compound from the STEP-imported parts
 
 3. **Convert IGES to STEP internally**:
-   - "I do simple export an Iges file successfully loaded to Step file by feature available, then re-imported"
    - Use the software's internal conversion feature
    - Export the imported IGES as STEP
    - Reimport the STEP file
 
 4. **Use solid models instead of shells**:
-   - "A solid model (closed surface) not shown any issue related"
    - If possible, use solid models instead of shell elements
    - Solid models import more reliably from IGES
    - The compound issue is specific to shell elements from IGES
@@ -216,19 +199,15 @@ AutoCAD's STEP export has limited entity support. Some 3D entities created in Au
 ### Fix
 
 1. **Use Inventor or Fusion 360 for intermediate processing**:
-   - "Is it recommended to use Inventor/Fusion360 for intermediate processing? — Yes, It's recommended"
    - Import the AutoCAD DWG into Inventor or Fusion 360
    - Use Inventor/Fusion 360's STEP export
    - These tools have proper STEP export engines
 
 2. **Use AUDIT and EXPORTTOAUTOCAD**:
-   - "Would you try to AUDIT your drawing then SAVE it"
-   - "Then try to use EXPORTTOAUTOCAD command and see if any changes"
    - AUDIT fixes drawing errors
    - EXPORTTOAUTOCAD creates a clean drawing
 
 3. **Use CONVERTTO3DSOLID on surfaces**:
-   - "Attempt to convert some surface entities using CONVERTTO3DSOLID"
    - Convert surface entities to 3D solids
    - STEP export works better with solids than surfaces
    - Not all surfaces can be converted
@@ -240,13 +219,11 @@ AutoCAD's STEP export has limited entity support. Some 3D entities created in Au
    - This bypasses AutoCAD's limited STEP export
 
 5. **Check for incompatible entities**:
-   - "Are there any entities that must meet certain requirements (such as complete enclosure, smooth multi-segment surfaces)?"
    - STEP requires valid B-Rep solids
    - Surfaces must be completely enclosed
    - Remove or fix non-manifold geometry
 
 6. **Use CHECK command to verify**:
-   - "Using the CHECK command to check the model, no errors were found"
    - Even if CHECK passes, the model may have entities
    - That AutoCAD can't convert to STEP
    - Use Inventor for a more thorough check

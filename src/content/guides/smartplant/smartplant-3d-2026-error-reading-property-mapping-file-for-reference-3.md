@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Troubleshooting-Reference/13/1254757?contentId=SgZvXKNExm52gIdL9qD4Vg"
-  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Troubleshooting-Reference/13/34212?contentId=xh6Lmi_XSuh46ziQr%7EHJ%7Eg"
-  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Common/13.1/523234?contentId=xnBgJySmh0oGUCWdQVbNSQ"
 ---
 
 # SmartPlant 3D 2026 Error Reading Property Mapping File for Reference 3D Model Data, Schema Component Message Helper Not Installed, Export File Already Exists Read Only, Failed to Unpack Reference 3D Model Data Files Being Used by Another Process, and PDS Design File Limit 26.8 Kilometers from Global Origin: Mapping File Path Check, Schema Component Install, Read Only Attribute Removal, Process Lock Resolution, and Coordinate System Verification
@@ -89,8 +86,6 @@ The Smart 3D Schema Component is not installed or is incorrectly configured. The
 ### Fix
 
 1. **Install Smart 3D Schema Component**:
-   - "Verify that Smart 3D"
-   - "Schema Component is installed"
    - Install the
    - Schema Component
 
@@ -147,21 +142,15 @@ When exporting data from SmartPlant 3D, the export fails because a file in the s
 ### Fix
 
 1. **Specify a different file name**:
-   - "Either specify a different file name"
    - For your export file
    - Use a unique
    - File name
 
 2. **Specify a different folder**:
-   - "Or different folder"
-   - "For your export file"
    - Export to a
    - Different folder
 
 3. **Remove Read-only attribute**:
-   - "Change the properties"
-   - "Of the existing file"
-   - "Removing the Read-only attribute"
    - Remove Read-only
 
 4. **Delete existing file**:
@@ -223,8 +212,6 @@ When unpacking Reference 3D Model data files, the process fails. The error state
    - To release file locks
 
 4. **Try again after reboot**:
-   - "Model was not attached"
-   - "Recovery: Try again"
    - Try unpacking
    - Again after reboot
 
@@ -263,9 +250,6 @@ When exporting from Smart 3D to PDS, the design file will not open in PDS. Smart
 ### Fix
 
 1. **Verify objects within 26.8 km limit**:
-   - "Before starting the export process"
-   - "Make sure that the modeled objects"
-   - "Are within the PDS design file limits"
    - Check coordinates
 
 2. **Move coordinate system origin**:
@@ -299,10 +283,6 @@ When exporting from Smart 3D to PDS, the design file will not open in PDS. Smart
    - Within the limit
 
 7. **Verify equipment and nozzle names**:
-   - "If an equipment or nozzle name"
-   - "Is not defined in Smart 3D"
-   - "The connection between any pipe run"
-   - "And that pipe nozzle is lost"
    - Define all names
 
 ### Community Report

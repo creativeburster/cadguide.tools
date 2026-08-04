@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Check_project"
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Remove_groundplane_islands"
-  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Autorouter"
 ---
 
 # TARGET 3001 PCB Design Signal Island Short Circuit, Ground Plane Island Orphan, Autorouter Suboptimal Routing, Star Ground Short Circuit Alert, and Schematic Signal Island Without REF Pin: DRC Check Procedures, Island Deletion, Router Strategy Configuration, and Signal Name Verification
@@ -31,22 +28,14 @@ After running "Check project" in TARGET 3001, the error "Island without Ref Pin"
 ### Fix
 
 1. **Highlight the signal to find the error**:
-   - "Set the highlighting mode to 'mark the signal island hit'"
-   - "Highlight by M1 all islands of a signal after each other"
    - Click on each signal island
    - Identify which islands are incorrectly connected
 
 2. **Use the binoculars to find the complete signal**:
-   - "Highlight the complete signal by the use of the binoculars"
-   - "Find and select a Component or Signal"
    - This shows all tracks and pads of the signal
    - Look for unintended connections
 
-3. **Search for orphan signal track pieces**:
-   - "Search for 'orphan' signal track pieces, which might lay under an already existing signal track"
-   - "Use keyboard key [s] (for select) several times when the cursor is close to a suspicious spot"
-   - "Different elements being close to the cursor will flash though eventually invisible"
-   - "If it flashes, press Enter and then delete it"
+3. **Search for orphan signal track pieces**.
 
 4. **Fix the resistor pin connections**:
    - If both pins of a resistor are on the same signal
@@ -54,11 +43,7 @@ After running "Check project" in TARGET 3001, the error "Island without Ref Pin"
    - Check the schematic for the error
    - Re-run Check project
 
-5. **Delete the signal segment and reconnect**:
-   - "Delete the signal segment, double click REF symbol (GND), change signal name to GND, connect new"
-   - "Do a project reorganization (menu Actions)"
-   - "In order to make the error marker vanish"
-   - "Do a project test again (menu Actions)"
+5. **Delete the signal segment and reconnect**.
 
 6. **Check for hidden tracks under other tracks**:
    - Use the select key [s] repeatedly
@@ -67,7 +52,6 @@ After running "Check project" in TARGET 3001, the error "Island without Ref Pin"
    - Re-run Check project
 
 7. **Verify with signal name display**:
-   - "In menu Settings/Options you can make TARGET 3001! display the signal name to every signal segment"
    - Enable signal name display
    - Check all segments have the correct signal name
    - Fix any mismatches
@@ -89,23 +73,13 @@ After creating a ground plane in TARGET 3001, isolated copper fragments (islands
 ### Fix
 
 1. **Enable Delete islands option**:
-   - "Start the 'Create signal polygon' dialog (Menu Actions/Ground planes/Entire PCB area...)"
-   - "Within this dialog tick the box: 'Delete islands'"
-   - "If you don't want to have a gridded ground plane but a solid one, set the 'Grid spacing' zero"
-   - "Press the OK button"
    - Islands are automatically removed
 
 2. **Convert ground plane to lines**:
-   - "A conversion of the ground plane to lines helps because it needs a definition of a line width"
-   - "Which cares for the existence of copper 'corridors', ligaments, at least having the strength of the line width"
    - This ensures all copper is connected
    - No isolated islands
 
-3. **Run Check project before manufacturing**:
-   - "When outputting data for manufacturing, the correct recalculation of all surfaces is then carried out"
-   - "Which can lead to differences"
-   - "To make sure that the PCB looks on the screen as it will be produced"
-   - "Always run 'Check Project' as the last step before ordering"
+3. **Run Check project before manufacturing**.
 
 4. **Check for isolated elements**:
    - After deleting islands
@@ -120,14 +94,9 @@ After creating a ground plane in TARGET 3001, isolated copper fragments (islands
    - Use ground vias to connect fragmented ground areas
 
 6. **Use signal polygons instead of ground planes**:
-   - "From TARGET V18 onwards, a ground plane is treated as a signal polygon"
-   - "Can be equipped with individual attributes"
-   - "Any number of signal polygons can be created on one copper side"
    - More control over copper filling
 
 7. **Recalculate after changes**:
-   - "When you render the filling of a ground plane, this is done exactly representing the conditions at the time of rendering"
-   - "If you make changes to elements having an aura afterwards, the area will have the wrong shape"
    - "The area always will be recalculated" during Check project
    - Always run Check project after changes
 
@@ -148,55 +117,36 @@ The TARGET 3001 autorouter produces unsatisfying routing results. Routes are not
 ### Fix
 
 1. **Try both internal routers**:
-   - "Use the two routers with different routing strategies (Settings)"
    - Run the Hybrid autorouter first
    - Then try the Contour autorouter
    - Compare results and choose the better one
 
 2. **Configure preferred directions**:
-   - "The predefinition of a 'preferable direction' makes sense only if you are moving upon two or more signal layers"
    - Set horizontal preferred direction on one layer
    - Set vertical preferred direction on the other
-   - "Both sliding buttons should not be set to 'forbidden' neither to 'all the same'"
 
 3. **Configure via usage**:
-   - "The use of vias we leave on 'doesn't matter'"
-   - "So we don't wish them but we accept them"
    - Set via usage to minimize vias
    - But allow them when necessary
 
 4. **Reserve layers for specific signals**:
-   - "You can reserve a layer especially for one single signal (e.g. GND or VCC)"
-   - "Or close a layer for all signals"
    - Use inner layers for power/ground
    - Route signals on outer layers
 
 5. **Use the Pilot Router for manual assistance**:
-   - "Also a very useful feature is the Pilot Router, assisting you when manually routing"
-   - "You are the pilot and set the route with the mouse pointer without clicking"
-   - "When you arrive at the destination, the track is routed accordingly with just one click"
    - Use for critical or complex routes
 
 6. **Try external autorouters**:
-   - "If the internal routers do not help, try the 14-day trial version of the Autorouter ELECTRA"
-   - "Which is embedded as an external Autorouter in the TARGET 3001! environment"
    - Also try FreeRouting — "a very useful free external router is supported"
    - External routers may produce better results
 
 7. **Optimize manually after autorouting**:
-   - "Check your project optically after autorouting"
-   - "Often the paths have to be optimized manually"
-   - "Use the function 'Check project' to exclude errors"
    - Clean up suboptimal routes
 
 8. **Define routing prohibition areas**:
-   - "If there are areas in your layout where no tracks are wanted you might define a routing-prohibition area"
-   - "Assign a layer function 'Route prohibition' to a certain layer"
-   - "Draw your routing prohibition area upon this layer"
    - This guides the autorouter around critical areas
 
 9. **Don't give up on the first attempt**:
-   - "Do not give up on the attempt if you are not satisfied with the result"
    - Try different settings
    - Try different routers
    - Iterate until satisfactory
@@ -218,45 +168,31 @@ When using a star-shaped ground in TARGET 3001 where different ground potentials
 ### Fix
 
 1. **Use Generate Star Ground option**:
-   - "Use option 'Actions/Ground planes/Generate Star Ground'"
-   - "To designate those signals whose linkage shall be tolerated by TARGET 3001!"
    - Select the signals to unite (e.g., AGND and DGND)
    - The DRC check will tolerate the connection
 
 2. **Manually place the junction point**:
-   - "You may manually place such a green junction point with key [.] (= period)"
    - Place the star ground junction at the desired location
    - This marks the intentional connection
    - The DRC check tolerates it
 
 3. **Add a ground symbol for clarification**:
-   - "You can place such a ground symbol for clarification"
    - Add a GND reference symbol at the junction
    - This documents the star ground connection
    - Makes the schematic clearer
 
 4. **Create the connection in PCB manually**:
-   - "The autorouters ignore this all"
-   - "You have to make the junction in PCB manually"
    - The autorouter won't create the star ground connection
    - Route the connection by hand
 
 5. **Verify the connection exists**:
-   - "Whether a connection e.g. between AGND and DGND really is created somewhere at all"
-   - "Currently can not be checked automatically by TARGET 3001!"
-   - "This will stay your work"
    - Manually verify the star ground is properly connected
 
 6. **Use a solder jumper as alternative**:
-   - "You can also use this function for a closed solder jumper"
-   - "To avoid a short-circuit message when testing"
    - Create a solder jumper between the ground potentials
    - Close it with solder when needed
 
 7. **Check signal names carefully**:
-   - "Only the genuine ground symbol does not need a text"
-   - "Just the signal name exactly needs to be GND"
-   - "All other signals need the display of their name in the REF"
    - Ensure signal names are correct
 
 ### Community Report
@@ -276,49 +212,35 @@ The "Check project" function reports "Island without Ref Pin" in the schematic. 
 ### Fix
 
 1. **Add reference symbols to all signal islands**:
-   - "Every signal island must show its ownership visually to a signal through reference symbols"
    - Add a REF symbol to each signal island
    - Set the signal name on the REF symbol
    - This connects the island to the named signal
 
 2. **Check the signal name on REF symbols**:
-   - "Double click REF symbol (GND), change signal name to GND, connect new"
    - Double-click each REF symbol
    - Verify the signal name is correct
    - Fix any mismatches
 
 3. **Use the correct GND symbol**:
-   - "Only the genuine ground symbol does not need a text"
-   - "Just the signal name exactly needs to be GND"
-   - "All other signals need the display of their name in the REF"
    - Use the correct symbol type for each signal
 
 4. **Highlight signal islands to find the missing REF**:
-   - "Set the highlighting mode to 'mark the signal island hit'"
-   - "Highlight by M1 all islands of a signal after each other"
    - Click on each island
    - Find the one without a REF symbol
 
 5. **Check for short circuits**:
-   - "This error message might point at a short circuit in the schematic"
-   - "Example: at a resistor both pins are connected to the same signal"
    - Check for components with both pins on the same signal
    - Fix the schematic error
 
 6. **Do a project reorganization**:
-   - "Do a project reorganization (menu Actions)"
-   - "In order to make the error marker vanish"
-   - "Do a project test again (menu Actions)"
    - This clears old error markers
 
 7. **Use buses for multi-signal connections**:
-   - "The connection in fact must be effected by reference symbols or by buses"
    - Use bus connections for multi-bit signals
    - Ensure each signal on the bus has a REF symbol
    - Check bus entries are correct
 
 8. **Display signal names on all segments**:
-   - "In menu Settings/Options you can make TARGET 3001! display the signal name to every signal segment"
    - Enable signal name display
    - Visually verify all segments have the correct name
    - Fix any mismatches

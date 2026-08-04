@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.autodesk.com/t5/autocad-plant-3d-forum/plant-2025-spec-editor-errors-using-a-catalog-builder/td-p/13842124"
-  - "https://forums.autodesk.com/t5/autocad-plant-3d-forum/problems-with-2025-spec-viewer/td-p/13644978"
-  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-Unable-to-load-spec-file-spec-name.html"
 ---
 
 # AutoCAD Plant 3D 2025 Spec Viewer Empty from Network Drive Pathing, Catalog Builder Error from Show Details Hyperlink in Empty Row, Unable to Load Spec File from Renamed or Moved .pspc/.pspx, Auto Routing Error Connecting Different Size Components, and No Connection Defined for End Types GRV and FL: 2025.0.1 Patch, Empty Row Deletion, Spec File Path Verification, Connection Manager Settings, and Clamp Class Configuration
@@ -31,45 +28,29 @@ After installing Plant 3D 2025, the Spec Viewer palette shows the spec name but 
 ### Fix
 
 1. **Install the 2025.0.1 patch**:
-   - "It sounds like a bug that was solved with the 2025.0.1 patch"
-   - "Can't use 2025. How do I install this patch?"
    - Check for updates in the Autodesk desktop app
    - Or download from Autodesk Account
 
 2. **Copy specs to local drive (workaround)**:
-   - "I relocated the same specs it wouldn't open to my hard drive"
-   - "And it opened them with no issue"
    - Copy spec files to C: drive
    - As a temporary workaround
 
 3. **Check .rels file pathing**:
-   - "This sounds a lot like what happens when a .pspx file cannot find its matching .pspc file"
-   - "Check by opening the .rels file in 7zip"
-   - "And checking the name/pathing of the .pspc file"
    - Verify the path in the .rels file is correct
 
 4. **Check drive letter vs UNC path**:
-   - "Are your projects drive letter based or UNC path based?"
-   - "v2025 may handle the pathing differently"
-   - "UNC, mapped drive, relative path, etc."
    - Try switching between UNC and mapped drive
 
 5. **Compare .rels files between 2023 and 2025**:
-   - "I'd check the .rels file content in one of your specs"
-   - "Vs. one created with 2025"
    - Compare the pathing format
    - To identify the difference
 
 6. **Synchronize content data**:
-   - "Synchronise content data with content folder 2025"
    - In the spec editor
    - Run the content synchronization
    - To ensure 2025 can find the content
 
 7. **Check if standard specs also fail**:
-   - "I copied a standard 150 flanged spec that loaded with 2025"
-   - "Into my project. It gave me the same results"
-   - "Spec will not show up in the spec viewer"
    - If even standard specs fail, it's an installation issue
 
 ### Community Report
@@ -89,21 +70,16 @@ When using Catalog Builder in Plant 3D 2025, errors occur after duplicating part
 ### Fix
 
 1. **Delete the Show details hyperlink row**:
-   - "Either delete row 7 or delete the hyperlink and it will clear the error"
    - After exporting the Excel sheet
    - Delete the row containing the Show details hyperlink
    - Or delete just the hyperlink content
 
 2. **Ensure an empty row after data**:
-   - "If you ensure there is an empty row after the data, it's not an issue"
    - After the last data row
    - Make sure the next row is completely empty
    - Before running Catalog Builder
 
 3. **Move the Show details link**:
-   - "I simply moved the Show details to the next row"
-   - "As I will need other users to refer to the linked picture"
-   - "And it fixed the issue"
    - Move the hyperlink to a row further down
 
 4. **Check all worksheets for hyperlink rows**:
@@ -113,20 +89,16 @@ When using Catalog Builder in Plant 3D 2025, errors occur after duplicating part
    - Remove or move them all
 
 5. **Add another pipe size to avoid the issue**:
-   - "If you had added another pipe size you wouldn't have seen the error"
    - If the hyperlink is in a row between data rows
    - Catalog Builder processes it as data
    - But it happens to work if there's another data row after it
 
 6. **Use 2023 Spec Editor as workaround**:
-   - "We still have both 2023 and 2025 installed"
    - If 2025 Catalog Builder continues to have issues
    - Use the 2023 Spec Editor
    - But note: files saved in 2025 are not editable in 2023
 
 7. **Report the issue to Autodesk**:
-   - "Either they need to move this link to another position when exporting"
-   - "Or tell Catalog builder to ignore it"
    - This is a bug in the Excel export
    That should be fixed by Autodesk
 
@@ -147,8 +119,6 @@ When trying to route pipe from a spec in AutoCAD Plant 3D, the error "Unable to 
 ### Fix
 
 1. **Check that both spec files exist**:
-   - "The error appears when the two spec files (*.pspc and *.pspx)"
-   - "Are not in the expected location"
    - Verify both files exist in the spec directory
    - If one is missing, restore from backup
 
@@ -159,8 +129,6 @@ When trying to route pipe from a spec in AutoCAD Plant 3D, the error "Unable to 
    - Rename the file back to the original name
 
 3. **Check the .rels file**:
-   - "This can be checked by opening the .rels file in 7zip"
-   - "And checking the name/pathing of the .pspc file"
    - Open the .pspx file in 7zip
    - And verify the .rels file references the correct .pspc name
 
@@ -205,26 +173,21 @@ When trying to connect two components with different sizes (e.g., size 75 elbow 
 ### Fix
 
 1. **Check snap points**:
-   - "Incorrect snap points activated"
    - Verify the correct snap points are active
    - In the snap settings
    - Ensure endpoint and center snaps are enabled
 
 2. **Check connection manager configuration**:
-   - "Error in the configuration of the connection manager"
    - Open the Connection Manager
    - Verify the end type connections
    - For the sizes being connected
 
 3. **Check spec S1 and S2 settings**:
-   - "Error in the pipe spec with the settings S1 and S2"
    - In the spec, verify S1 and S2 end types
    - For both component sizes
    - Ensure they're compatible
 
 4. **Avoid 100% linear alignment**:
-   - "100% linear alignment of the connection points"
-   - "Even differences of a few 1/1000mm can lead to this"
    - Slightly offset the components
    - To give the router room to maneuver
 
@@ -235,8 +198,6 @@ When trying to connect two components with different sizes (e.g., size 75 elbow 
    - With the correct end types
 
 6. **Check property mismatch**:
-   - "Sometimes I am also getting a property mismatched error"
-   - "Even if the property is the same"
    - Check for hidden property differences
    - Such as schedule, material, or end type
 
@@ -263,32 +224,22 @@ When attempting to route off a grooved (GRV) pipe part or connect two grooved pa
 ### Fix
 
 1. **Check if the clamp has FL end types**:
-   - "Is the component that plant 3d is trying to insert from the spec to make your connection FL?"
-   - "Do you have both an FL and non FL version of a clamp in your spec?"
    - Check the clamp component's end types in the spec
    - If the clamp has FL ends, it will trigger the FL error
 
 2. **Define GRV-to-GRV connection in the config**:
-   - "No connection defined for end types GRV and FL in the config file"
    - Open the Connection Manager
    - Add a connection definition for GRV to GRV
    - With the appropriate clamp component
 
 3. **Check clamp class configuration**:
-   - "We have our Victaulic couplings in the spec under the 'Clamp' class"
-   - "As opposed to 'Coupling'"
-   - "So that they place automatically rather than having to be placed manually"
    - Verify the clamp class is set correctly
 
 4. **Verify both component end types**:
-   - "I've verified both ends of both components each time"
-   - "In all cases where this is occurring, the two ends I am trying to connect are GRV"
    - Double-check the end types in the spec
    - For both components being connected
 
 5. **Check for coupling class weld symbols**:
-   - "The issue with having them under the 'Coupling' class is that this results in two weld-like connection symbols appearing on isos"
-   - "At the coupling connection"
    - Use Clamp class to avoid weld symbols on isos
    - But ensure the connection config supports it
 
@@ -299,7 +250,6 @@ When attempting to route off a grooved (GRV) pipe part or connect two grooved pa
    - With the appropriate clamp component
 
 7. **Share spec with Autodesk support**:
-   - "Is there any chance you can share your spec?"
    - If the issue persists
    - Share the spec file with Autodesk support
    - They can diagnose the connection configuration issue

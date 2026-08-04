@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://community.ultimaker.com/topic/44597-unexpected-error-when-slicing/"
-  - "https://github.com/Ultimaker/Cura/issues/21530"
-  - "https://github.com/Ultimaker/Cura/issues/21603"
 ---
 
 # Ultimaker Cura Slicing Engine Errors: CuraEngine.exe Crash in polyclipping.dll from Corrupt Profile, Slicing Hangup at 60% from Randomize Infill Starts Bug, Engine Cannot Connect to localhost 127.0.0.1 from AV/Firewall, Unnecessary Top/Bottom Layers from Single-Sided Surface Model, and TiledInfill Plugin Slicing Failure from Mesh Folds
@@ -84,7 +81,6 @@ This is a **confirmed bug** in Cura 5.12.0 related to the "Randomize Infill Star
    - Try slicing — should complete in about 1 second
 
 2. **Update to Cura 5.13 or later** — the bug has been addressed:
-   - "This bug has been addressed and will be fixed in 5.13."
 
 3. **Fall back to Cura 5.11** — if you need Randomize Infill Starts:
    - Install Cura 5.11 alongside 5.12

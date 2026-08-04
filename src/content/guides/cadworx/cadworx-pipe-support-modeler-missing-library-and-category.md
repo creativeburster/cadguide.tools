@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://docs.hexagonali.com/r/en-US/CADWorx-Plant/24/1432250"
-  - "https://support.ecedesign.com/support/solutions/articles/24000060455-enhancing-cadworx-pipe-specs-before-converting-to-autocad-plant-3d-specs"
-  - "https://docs.hexagonppm.com/r/en-US/CADWorx-Spec-Editor/25/752890"
 ---
 
 # CADWorx Pipe Support Modeler Missing Library and Category, Short Description Blank Causing P3D Crash on Pipe Routing, Content Folder Network Path and VPN Copy Breaking Spec Components, FACING Custom Data Missing for Flanged and Grooved Connections, and Multiple Content Folder Switching Creating Hidden Path Dependencies: PipeSupport Category, Short Description Population, Local Content Folder, FACING Custom Data, and Single Master Content Folder
@@ -31,43 +28,30 @@ The Pipe Support Modeler palette doesn't display any pipe support components. Th
 ### Fix
 
 1. **Configure Pipe Support Library in the project**:
-   - "You must have both the Pipe Support Library in a project"
    - In the project configuration
    - Add a Pipe Support Library
    - That contains the assembly data
 
 2. **Add PipeSupport category to the catalog**:
-   - "And the PipeSupport category in a catalog"
    - In the CADWorx Spec Editor
    - Add a PipeSupport category
    - To the catalog being used
 
-3. **Select the correct library**:
-   - "Specifies the library that contains the assembly data associated with the project"
-   - "Or pipe support libraries file"
-   - "The list displays all of the libraries in your libraries file"
-   - "Selecting a new library changes the library and assembly data that displays"
+3. **Select the correct library**.
 
 4. **Verify the project directory**:
-   - "The directory location for the project containing the pipe support data"
-   - "Lists below Main Size and Library and Assembly Data"
-   - "Along with the assembly data for the pipe supports"
    - Verify the project path is correct
 
 5. **Install latest object enablers**:
-   - "To view the enhanced pipe supports in supported Autodesk Vertical Products"
-   - "You must install the latest object enablers"
    - Install the latest CADWorx object enablers
    - For your Autodesk product
 
 6. **Check version compatibility**:
-   - "Enhanced pipe supports are not compatible with versions of CADWorx Plant earlier than Version 2016 (16.0)"
    - Ensure CADWorx Plant is version 2016 or later
    - For enhanced pipe supports
    - Older versions don't support them
 
 7. **Use REPLACEPIPESUPPORT command**:
-   - "You can also type REPLACEPIPESUPPORT on the command line"
    - To replace existing pipe supports
    - With supports from the correct library
    - If the library was changed
@@ -89,9 +73,6 @@ After converting CADWorx pipe specs to AutoCAD Plant 3D specs, P3D crashes while
 ### Fix
 
 1. **Populate all Short Descriptions before conversion**:
-   - "CADWorx Short Descriptions are loaded into the P3D Short Description field"
-   - "They are mandatory because if left blank, or empty"
-   - "P3D will crash while routing pipe and using the PipeFitting option"
    - Fill in all Short Descriptions in CADWorx before converting
 
 2. **Check for blank Short Descriptions after conversion**:
@@ -101,26 +82,16 @@ After converting CADWorx pipe specs to AutoCAD Plant 3D specs, P3D crashes while
    - Fill in any that are blank
 
 3. **Use meaningful Short Descriptions**:
-   - "Short Descriptions are used as selection variables in every portal"
-   - "The P3D interface does a good job presenting Long Descriptions"
-   - "So users can accurately choose parts"
    - Make Short Descriptions unique and meaningful
 
 4. **Tailor Short Descriptions for P3D**:
-   - "SPECWorx users should consider the Short Description role in the P3D piping specs"
-   - "And consider tailoring them"
-   - "This is important because users will be interacting with them on every transaction"
    - Adjust Short Descriptions for P3D workflow
 
 5. **Verify in the Dynamic Pipe Spec Tab**:
-   - "Many users rely on the Dynamic Pipe Spec Tab on the Piping Components palette"
-   - "Here Short Descriptions are followed by End Type, Pressure Class, Facing, Schedule, and Spec Ref"
    - Check that Short Descriptions display correctly
    - In the Dynamic Pipe Spec Tab
 
 6. **Populate Description and Short Description**:
-   - "If there are Description and Short Description property values they will be converted"
-   - "Populating these values prior to SPECWorx processing is highly recommended"
    - Fill in both Description and Short Description
    - In CADWorx before conversion
 
@@ -147,27 +118,18 @@ After copying the entire Plant 3D Content folder from a VPN/home network to the 
 ### Fix
 
 1. **Use a single local Content folder**:
-   - "OneDrive is a pain as a shared location"
-   - "(speaking from a Plant 3D perspective)"
    - Keep the Content folder on a local drive
    - Not on a network or cloud location
 
 2. **Don't copy Content folder across networks**:
-   - "I copied the entire Plant 3D Content folder from my personal network (home VPN)"
-   - "To our project drive on the office network"
    - Don't copy Content folders across networks
    - Use a fresh installation on each network
 
 3. **Clarify IT infrastructure**:
-   - "Please clarify your IT infrastructure with your administrators"
-   - "The workspace you're describing is NOT supported by AutoCAD Plant 3D"
    - Ensure the IT infrastructure
    - Meets Plant 3D requirements
 
 4. **Check for hidden path dependencies**:
-   - "Some paths, block references, or permissions did not copy properly"
-   - "My spec may be pointing to symbols/blocks that only exist"
-   - "Or resolve when connected to the home VPN"
    - Check for hidden path references in the spec files
 
 5. **Recreate specs on the correct network**:
@@ -177,8 +139,6 @@ After copying the entire Plant 3D Content folder from a VPN/home network to the 
    - Using a fresh Content folder
 
 6. **Avoid multiple Content folder copies**:
-   - "I have multiple Content folders — local C: drive, shared drive, server"
-   - "I switch between them by changing the path"
    - Don't maintain multiple Content folders
    - Use one master folder
 
@@ -205,21 +165,14 @@ After converting CADWorx specs to Plant 3D, flanged and grooved components don't
 ### Fix
 
 1. **Add FACING to CWX Catalog Data Custom Data**:
-   - "If FACING values are found in the CWX Catalog Data as Custom Data"
-   - "Then those values are converted"
    - Add FACING as Custom Data
    - To the CADWorx catalog data table
 
 2. **Add FACING to CWX Project Custom Data**:
-   - "If no value is found in CWX Catalog Data"
-   - "SPECWorx searches for FACING values in Project Custom Data"
    - Add FACING as Project Custom Data
    - As a fallback
 
 3. **Populate FACING before conversion**:
-   - "If no values exist in either location"
-   - "FACING will not be populated"
-   - "And users will have to populate this value post-conversion"
    - Using the P3D Spec Editor
    - Add FACING values before conversion for best results
 
@@ -230,8 +183,6 @@ After converting CADWorx specs to Plant 3D, flanged and grooved components don't
    - Use the appropriate grooved facing value
 
 5. **Add PNPCLASS and PARTCATEGORY for Usershapes**:
-   - "Users must add PNPCLASS and PARTCATEGORY fields as Project Custom Data"
-   - "If these values are not entered, then SPECWorx will not process Usershapes"
    - Add these custom data fields
    - For Usershape components
 
@@ -242,7 +193,6 @@ After converting CADWorx specs to Plant 3D, flanged and grooved components don't
    - To ensure FACING is correctly mapped
 
 7. **Note that SPECWorx won't process Usershape Valves**:
-   - "SPECWorx will not process Usershapes into the Valve Part Category"
    - For valve Usershapes
    - Manual creation in P3D is required
    - As SPECWorx can't convert them
@@ -264,14 +214,11 @@ The user has multiple Content folders — one on local C: drive, one on a shared
 ### Fix
 
 1. **Consolidate to one master Content folder**:
-   - "Should I merge and lock down one master?"
    - Yes — consolidate all Content into one folder
    - And use only that folder
    - For all projects
 
 2. **Don't switch between Content folders**:
-   - "I switch between them — whenever I want to use a different one"
-   - "I just change the path in Spec Editor or Project Setup"
    - Don't switch between Content folders
    - This creates broken references
 

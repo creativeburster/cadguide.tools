@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://help.materialise.com/magics-known-issues/known-issues-magics"
-  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
-  - "https://www.materialise.com/en/academy/industrial/magics/video-tutorials/master-basic-stl-file-repair"
 ---
 
 # Magics STL Repair and Support Generation Errors: Bad Edges and Inverted Normals from STL Import Requiring AutoFix and Manual Repair, Thickened Support Empty Slices from Non-Solid Support Requiring 28.03 Update and Regeneration, BREP Fillet Failure from Convergent Body Errors Requiring Manual Edge Fix, Import Hang from Select Orientation Dialog Bug Requiring Settings Disable, and Tree Support Incorrect Generation from Close-to-Platform Surface Requiring Angle Adjustment
@@ -31,46 +28,27 @@ STL files from various CAD systems or 3D scans contain geometric errors. Bad edg
 ### Fix
 
 1. **Use AutoFix for automatic repair**:
-   - "Click 'AutoFix' in the 'Fix' ribbon"
-   - "Refresh Part Fixing Info again to confirm that most errors have been fixed"
    - Select the part
    - Click Part Fixing Info tab > Refresh
    - Click AutoFix in the Fix ribbon
    - Check remaining errors
 
 2. **Use semi-automatic fixing (Follow)**:
-   - "Click the 'Follow' button to automatically fix each step"
-   - "Until the remaining errors can no longer be fixed"
    - This steps through each error category
    - Fixes what it can automatically
 
 3. **Fix inverted normals manually**:
-   - "Click the Invert Normals icon in the Fix menu"
-   - "Select the Mark Triangle icon and choose the triangles to invert"
    - Or use the semi-automatic wrench icon to fix all inverted normals
-   - "If no triangles are marked, this function will invert all triangles"
 
 4. **Fix bad edges by stitching**:
-   - "Set the desired number of stitching Iterations and click Stitch"
-   - "Review the stitching tolerance, which Magics estimates automatically"
-   - "Adjust the Max gap size if necessary"
    - Navigate to Near Bad Edges page
 
-5. **Fix holes manually**:
-   - "For irregular holes: select the Freedom icon, click Fill hole mode"
-   - "For curved holes: select the Ruled icon, choose User defined"
-   - "For complex triangular holes: select Create triangle function"
-   - "For planar holes: select the Planar icon, click Fill hole mode"
+5. **Fix holes manually**.
 
 6. **Fix noise shells**:
-   - "Select the noise shell, and press the Delete key"
-   - "The first is typically the main model"
-   - "The second likely has few triangles and is therefore a noise shell"
    - Navigate to the Shell page in the fixing pop-up
 
 7. **Fix intersecting triangles**:
-   - "Try filtering sharp triangles by clicking Collapse"
-   - "Navigate to the Triangle page in the fixing pop-up"
    - Use semi-automatic fixing tools to remove extra noise shells
    - Manually adjust triangle positions with Move Part Points
 
@@ -91,21 +69,13 @@ After thickening non-solid supports, empty slices appear in the support structur
 ### Fix
 
 1. **Update to Magics 28.03 or later**:
-   - "This issue is resolved as of Magics 28.03"
    - Update to the latest version of Magics
    - The fix prevents open contours from thickening
 
 2. **Regenerate supports from previous versions**:
-   - "If supports are imported from a previous Magics version"
-   - "It is mandatory to regenerate the supports prior to slicing"
-   - "Otherwise the slicing will use the imported, faulty support as input"
    - Delete old supports and regenerate in the current version
 
-3. **Fix thickened support in Magics**:
-   - "When using thickened support, set the parameters in Machine properties"
-   - "To convert solid support to .stl"
-   - "On exit from SG mode, check the 'planar holes' in the Part fixing info"
-   - "Run the fixing"
+3. **Fix thickened support in Magics**.
 
 4. **Check for planar holes after thickening**:
    - After thickening supports
@@ -143,7 +113,6 @@ Applying a BREP Fillet operation on a convergent body results in an error. Some 
 
 1. **Update to latest Magics version**:
    - Check if the edge rendering bug is fixed
-   - "In some cases, filleting a convergent body might result in error"
    - Newer versions may properly highlight failing edges
    - Install the latest Magics update
 
@@ -195,13 +164,11 @@ Importing a part onto the platform causes Magics to hang indefinitely. The 'Sele
 ### Fix
 
 1. **Disable Select Orientation dialog in settings**:
-   - "As workaround, the 'Select Orientation' dialog should be disabled in Magics settings"
    - Go to Magics Settings
    - Find the Select Orientation option
    - Disable automatic orientation dialog on import
 
 2. **Update to Magics 28.03 or later**:
-   - "Resolved in MGX 28.03"
    - The hang bug is fixed in this version
    - Update to the latest Magics
    - The dialog should work properly
@@ -225,9 +192,6 @@ Importing a part onto the platform causes Magics to hang indefinitely. The 'Sele
    - Convert the file to a different format
 
 6. **Check for MatConvert version issues**:
-   - "Specific Inventor files may have geometrical errors"
-   - "Using earlier versions of MatConvert may result in less geometrical errors"
-   - "For this specific issue, we suggest to use MatConvert 10.2 or earlier"
    - Check MatConvert version in settings
 
 ### Community Report

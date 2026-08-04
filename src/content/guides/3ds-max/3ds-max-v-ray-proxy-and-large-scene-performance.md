@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.chaos.com/t/vray-proxies-optimization/184729"
-  - "https://forums.chaos.com/t/extreamly-heavy-scene-stuck-at-updating-instances-about-one-hour-each-time-i-start-rendering/123040"
-  - "https://forums.chaos.com/t/vray-proxy-workflow-very-slow-startup-times-need-to-resolve/115306"
 ---
 
 # 3ds Max V-Ray Proxy and Large Scene Performance: Optimize for Instances Causing 10x Slower Time to First Pixel with High RAM from Voxel Structure, 16000 Proxies Taking 26 Minutes to Load from Network Small Reads, Updating Instances Freeze for 60 Minutes from Xref Forest Pack RailClone Light Scattering, CoronaBitmap Slow Save 20 Seconds vs 1 Second Standard Bitmap, and Compiling Clearing Geometry Every Frame from Embree Acceleration Rebuild
@@ -49,7 +46,6 @@ V-Ray proxies created with "Optimize for instances" enabled cause scenes to be w
    - Unpack the existing proxy, then re-export with the option off
 
 3. **There is no way to toggle this after creation**:
-   - "Once a vrayproxy is created, there's no way to switch this optimize for instance on/off"
    - The only option is to unpack and recreate the proxy
    - Plan proxy creation strategy before exporting
 
@@ -75,18 +71,15 @@ Loading thousands of proxy files over a network causes many small file reads. Ev
 ### Fix
 
 1. **Local asset caching**:
-   - "Consider local caching to the rendering machines. Adding a single quick drive to each machine can shave years of wasted network comms time."
    - Copy proxy files to local SSD on each render node before rendering
    - Use rsync, GoodSync, or a push script to distribute assets
    - This eliminates network small-read overhead
 
 2. **Only include visible objects in render submissions**:
-   - "I managed to speed things up by telling our render pass submission pipeline to only include visible objects in the file per pass"
    - This brought startup times from 25 minutes to under 5 minutes
    - Hidden layers with proxies are excluded from the file
 
 3. **Cache to V-Ray Scene format**:
-   - "Could you try caching this out to vray scene perhaps and seeing if that is better to load on the farm"
    - V-Ray Scene files may load more efficiently than proxies in the .max file
 
 4. **Reduce proxy count by combining geometry**:
@@ -122,20 +115,16 @@ An Xref file containing a Forest Pack object with V-Ray sphere lights distribute
 1. **Identify the problematic Xref**:
    - Disable Xref scenes one by one
    - Render after each disable to find the culprit
-   - "Without this file the render freezes just a couple of minutes"
 
 2. **Replace scattered lights with light material planes**:
    - Replace V-Ray sphere lights in Forest Pack with planes using V-Ray Light Material
-   - "This seems to work but the image is extremely noisy now"
    - Add more samples or use denoiser to compensate
 
 3. **Use Forest Tools to instantiate lights**:
-   - "I tried to use forest tools and RC tools to instantiate the lights but no luck"
    - Convert scattered lights to instances rather than unique objects
    - This may reduce the update burden
 
 4. **Hide proxies during light debugging**:
-   - "One of my colleagues said he tried to render with the proxies hidden and that seems to work"
    - Hide proxy geometry while debugging light issues
    - This isolates the problem to the light scattering
 
@@ -145,7 +134,6 @@ An Xref file containing a Forest Pack object with V-Ray sphere lights distribute
    - Converted proxies may have suboptimal voxel structure
 
 6. **Reduce texture sizes**:
-   - "All textures were optimized and reduced at maximum 512px except context ones"
    - Large textures contribute to memory pressure
    - Reduce non-critical textures to 512px or smaller
 
@@ -173,16 +161,12 @@ CoronaBitmap has a bug related to Out-of-Core (OOC) textures. Even with OOC disa
 1. **Convert CoronaBitmaps to standard Bitmaps**:
    - Use Corona Scene Converter to convert all CoronaBitmaps to standard Bitmaps
    - This immediately reduces save time from 20 seconds to 1 second
-   - "After converting all CoronaBitmaps to standard Bitmaps: File save duration: 1 seconds"
 
 2. **Check if Out-of-Core textures is enabled**:
    - Disable OOC textures in Corona render settings
-   - "Maybe it's worth to turn it off and see if that helps"
    - Even with OOC off, some HD read/write may still occur
 
 3. **Test render speed difference**:
-   - "I was not able to measure any significant speed gain in standard production scenes"
-   - "It makes no difference if a scene renders 4h20m32s or 4h19m11s"
    - The render speed difference is negligible — use standard Bitmaps
 
 4. **Keep proxies in wire mode**:
@@ -196,7 +180,6 @@ CoronaBitmap has a bug related to Out-of-Core (OOC) textures. Even with OOC disa
    - Avoid HDD storage for proxy-heavy scenes
 
 6. **Report the issue to Chaos**:
-   - "If you have the scene where this can be reproduced, please send it over and we will investigate"
    - Chaos is aware of the CoronaBitmap save issue
    - Future updates may fix it
 
@@ -217,30 +200,23 @@ V-Ray uses Embree for ray tracing acceleration. The acceleration structure (BVH)
 ### Fix
 
 1. **Re-export proxies with "Optimize for instances" OFF**:
-   - "Try re-exporting the combined geometry as proxy with this option off"
    - The default "on" setting is the culprit for multi-mesh proxies
    - With it off, proxies load more efficiently for non-instanced geometry
 
 2. **Understand the Embree acceleration rebuild**:
-   - "The partitioning of triangles into the (embree) acceleration structure is likely what you are facing"
-   - "This geometry preparation is an unavoidable step, and it's camera-related, so it requires rebuilding each time a render starts"
    - This is normal behavior — there is no secret workaround
 
 3. **Display full mesh at cost of RAM/VRAM**:
-   - "At the cost of considerable RAM and VRAM, you could set the proxies to display the full mesh"
    - This gets quicker time to first pixel
    - Risk: may crash Max or video drivers if RAM/VRAM is insufficient
 
 4. **Check available RAM**:
-   - "V-Ray hasn't crashed, so it's not too much for it — maybe you're running out of available RAM and swapping to disk"
    - Monitor RAM usage in Task Manager during render
    - If swapping occurs, add more RAM or reduce scene complexity
 
 5. **For Vantage crashes**:
-   - "If you're running out of system RAM, I can't imagine the scene to fit into your VRAM"
    - Vantage requires everything in VRAM — more restrictive than V-Ray
    - Hide vrmeshes not in view to reduce VRAM pressure
-   - "I have to constantly hide some vrmeshes in order to prevent Vantage from crashing"
 
 6. **Separate workshops into individual vrmeshes**:
    - The user separated 5 workshops into 15 vrmeshes (walls, pipes, equipment per workshop)
@@ -248,7 +224,6 @@ V-Ray uses Embree for ray tracing acceleration. The acceleration structure (BVH)
    - Reduces memory pressure for both V-Ray and Vantage
 
 7. **Consider Unreal Engine for factory visualization**:
-   - "If we could have Nanite in V-Ray, that will be great!"
    - Unreal Engine's Nanite handles massive geometry more efficiently
    - For interactive visualization, consider Datasmith export to Unreal
 

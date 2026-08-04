@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://support.nanocad.com/helpdesk/KB/View/66719854-nanocad-crashes-sends-fatal-error-message"
-  - "https://community.nanocad.com/KB/faq/post/nanocad-free-nanocad-v-5-can-t-open-a-dwg-2018-file-6tAEiJmZfqShsoO"
-  - "https://supportnanocad.jitbit.com/KB/View/66719772-nanocad-can-t-open-can-t-display-correctly-specific-files"
 ---
 
 # NanoCAD Stability and File Compatibility Errors: Fatal Error Crash from Corrupted DWG Files Requiring RECOVER and RMPROXY, DWG 2018 File Not Opening in Free v5 from Version Limitation Requiring Platform Upgrade, Proxy Object Fatal Errors from nanoCAD Construction Conversion Requiring SPEXPLODEALL, File Loss After Trial Expiry from Pro11 to Free v5 Incompatibility Requiring TrueView Conversion, and Resaved DXF Objects Permanently Converted to Proxy Graphics Requiring DWG-Only Workflow
@@ -31,38 +28,26 @@ NanoCAD crashes and sends a Fatal Error message when working on specific DWG fil
 ### Fix
 
 1. **Use RECOVER command**:
-   - "Run nanoCAD, then call the RECOVER command to open the file"
    - RECOVER attempts to fix errors in the file structure
    - It rebuilds damaged objects and removes invalid data
    - This is the first step for any corrupted file
 
 2. **Remove proxy objects**:
-   - "Call the command RMPROXY — Nongraphical proxies to remove proxy objects that do not have a graphic"
-   - "You can also use the XPROXY command to explode visible proxy entities"
    - Proxy objects from other CAD systems can cause crashes
    - Remove or explode them
 
 3. **Purge waste objects**:
-   - "Use the Purge command to clear waste objects"
-   - "We also recommend to use the -PURGE command (works in the command line, without dialog)"
-   - "Using its different options, especially ANnotscales and sorTTable"
    - Remove unused annotation scales and sortable objects
 
 4. **Flatten and Audit**:
-   - "Select all, then call the Flatten command. You can do it twice because some objects can be flattened only the second time"
-   - "Use the Audit command"
-   - "Use the Audit Geometry command twice: first audit z-coordinates, then hatches"
    - These commands fix geometry and hatch errors
 
 5. **Repeat the process**:
-   - "Sometimes it is necessary to repeat steps 3-6 several times to fix the file"
    - Recovery may not work on the first pass
    - Repeat RECOVER, RMPROXY, Purge, Flatten, Audit
    - Until the file is stable
 
 6. **Create crash report**:
-   - "Open nanoCAD Platform, click on the nanoCAD icon, select Utilities, click on Problem Report"
-   - "After system collects data, click Select All, Save report"
    - Send the report to nanoCAD support
    - This helps them investigate the crash
 
@@ -83,7 +68,6 @@ nanoCAD Free (v5) cannot open a DWG 2018 file. The file was created or saved in 
 ### Fix
 
 1. **Upgrade to nanoCAD Platform**:
-   - "To work with DWG files of this format, upgrade to the nanoCAD Platform"
    - nanoCAD Platform supports DWG 2018 and later
    - This is the official solution
    - Purchase a nanoCAD Platform license
@@ -95,8 +79,6 @@ nanoCAD Free (v5) cannot open a DWG 2018 file. The file was created or saved in 
    - Then open in nanoCAD Free
 
 3. **Use RECOVER in nanoCAD 24**:
-   - "If your file is version 2013 or earlier and you still encounter issues"
-   - "Run nanoCAD 24, then call the RECOVER command to open the file"
    - nanoCAD 24 is a newer version that may handle the file better
    - Use the trial version if needed
 
@@ -107,7 +89,6 @@ nanoCAD Free (v5) cannot open a DWG 2018 file. The file was created or saved in 
    - This prevents compatibility issues
 
 5. **Use nanoCAD Plus trial**:
-   - "Prova a farla con la versione di prova di nanoCAD Plus"
    - Download nanoCAD Plus trial
    - It supports newer DWG formats
    - Convert the file and save as DWG 2013
@@ -129,38 +110,29 @@ Files created with nanoCAD Construction contain custom objects. When opened in s
 ### Fix
 
 1. **Use SPEXPLODEALL before sharing**:
-   - "To dismember all objects nanoCAD Construction, use the command SPEXPLODEALL"
-   - "This command automatically selects all objects nanoCAD Construction in the drawing and explodes them into primitives"
    - Run SPEXPLODEALL before sharing with non-Construction users
    - This converts custom objects to standard primitives
 
 2. **Use EXPLODE for individual objects**:
-   - "To dismember individual objects nanoCAD Construction, use the standard command EXPLODE"
    - Select specific objects and explode them
    - This preserves other objects as intelligent
    - Use for selective sharing
 
 3. **Save only in DWG format**:
-   - "Drawings must be saved only in *.dwg format"
    - Never save nanoCAD Construction files as DXF
    - DXF permanently converts objects to proxy graphics
    - Always use DWG
 
 4. **Install nanoCAD Construction Enabler**:
-   - "When transferring files to a user or customer drawings that do not have nanoCAD Construction"
-   - "And not having the ability or desire to use nanoCAD Construction Enabler"
    - The Enabler allows viewing and basic editing of Construction objects
    - Without the full Construction license
 
 5. **Convert to standard primitives before resaving**:
-   - "You need to convert all the objects nanoCAD Construction in the standard system primitives"
    - Before resaving to a different DWG version
    - Use SPEXPLODEALL first
    - Then save as the target version
 
 6. **Avoid resaving with proxy objects**:
-   - "When resaving a drawing that has proxy objects without an installed nanoCAD Construction"
-   - "To other versions of the *.dwg format, the objects will be converted to proxy graphics"
    - Don't resave files with proxy objects
    - Explode them first or install Construction
 
@@ -181,21 +153,17 @@ User downloaded nanoCAD Pro11 trial. After the trial expired, downloaded and act
 ### Fix
 
 1. **Convert with Autodesk TrueView**:
-   - "Ho provato a convertire i file ad una versione meno recente con True view di autodesk"
    - Use Autodesk DWG TrueView (free download)
    - Open the Pro11 DWG file
    - Save as DWG 2013 or earlier
    - Then open in nanoCAD Free v5
 
 2. **Use nanoCAD Plus trial**:
-   - "Prova a farla con la versione di prova di nanoCAD Plus"
    - Download nanoCAD Plus trial
    - It supports newer DWG formats
    - Open the Pro11 files and save as DWG 2013
 
 3. **Check for crash after conversion**:
-   - "Così facendo Nanocad 5 me li apre e li visualizzo ma non posso fare niente"
-   - "Appena tocco qualsiasi comando va in crash ed esce messaggio fatal error"
    - If the converted file opens but crashes on any command
    - The conversion may not be perfect
    - Use RECOVER command in nanoCAD to fix
@@ -235,7 +203,6 @@ A drawing created with nanoCAD Construction is resaved in DXF format. After resa
 ### Fix
 
 1. **Always save in DWG format**:
-   - "Drawings must be saved only in *.dwg format"
    - Never use DXF for nanoCAD Construction files
    - DWG preserves custom object definitions
    - DXF permanently destroys them

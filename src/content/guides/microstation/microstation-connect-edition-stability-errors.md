@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://bentleysystems.service-now.com/community?id=community_question&sys_id=ec2fb5aa47821e1088c56642846d43a6"
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2025/ReadMe/en/topics/369286/GUID-D2BD6E6D-C524-4E9F-80F1-7199D979C9B7.html"
-  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2025.0.1/ReadMe/en/topics/369286/GUID-B0169FB1-2FED-44BA-9ECE-4108BD682069.html"
 ---
 
 # MicroStation CONNECT Edition Stability Errors: Constant Crash While Opening DGN Files from Memory or File Corruption Requiring Update and Repair, DGN to DWG Conversion Crash from Lack of Memory Requiring Memory Management, Raster Manager WMTS Attachment Hang from Reprojection Requiring CS Fix, Save Settings FileDesign Crash from Update 16 Bug Requiring Update, and OBJ File Open or Reference Attach Crash from Format Handling Requiring Update

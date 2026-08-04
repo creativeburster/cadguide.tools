@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D5Vb000014O4vhKAC/tc2506-nx2412-very-slow-loading-of-nxcam-assemblies"
-  - "https://community.sw.siemens.com/s/question/0D5Vb000017KwZdKAK/is-there-a-way-to-increase-the-number-of-processor-threads-nx-uses-for-toolpath-calculation"
-  - "https://community.sw.siemens.com/s/question/0D5Vb00000pdtSYKAY/numpy-crashes-on-second-execution-despite-nx-threaded-external-python-environment"
 ---
 
 # Siemens NX 2412 Very Slow Loading of CAM Assemblies from 2GB Wave Link Geometry, Toolpath Calculation Limited to 4 SMP Threads from Operation-Specific Multi-Threading, Journal Execution Error from mySelectedObject Nothing Reference, NumPy Crashes on Second Execution from nx:threaded Signal 11, and Toolpath Display Dots Slowing NX from UGII_CAM_TP_DISP_ENDPOINTS: Wave Link Cleanup, Thread Limit Understanding, Object Reference Debug, nx:main-interpreter Workaround, and Endpoint Variable Disable
@@ -31,9 +28,6 @@ NX-CAM assemblies (type NC Machining Operation) take up to 30 minutes to open. E
 ### Fix
 
 1. **Check for wave link geometry**:
-   - "You might have a wave link geometry"
-   - "In the CAM-assembly part"
-   - "These can make the file big"
    - Check for wave link geometry in the assembly
 
 2. **Remove unnecessary wave links**:
@@ -43,15 +37,10 @@ NX-CAM assemblies (type NC Machining Operation) take up to 30 minutes to open. E
    - Assembly file size
 
 3. **Use Structure Only loading**:
-   - "Loading the assembly with Structure Only enabled"
-   - "Takes more than 5 minutes"
    - Use Structure Only
    - For faster initial loading
 
 4. **Check assembly file size vs part sum**:
-   - "When I sum up the file sizes"
-   - "Of all parts contained in this assembly"
-   - "The total is only about 92 MB"
    - Compare assembly size to part sum
 
 5. **Clean up CAM data**:
@@ -89,9 +78,6 @@ NX uses only 4 threads for toolpath calculation despite having 32 processors ava
 ### Fix
 
 1. **Understand operation-specific threading**:
-   - "Multi-threading is operation specific"
-   - "3D Adaptive Roughing and Quick Roughing"
-   - "Utilize multi-threading"
    - Understand which operations benefit from threading
 
 2. **Use multi-threaded operations**:
@@ -101,33 +87,23 @@ NX uses only 4 threads for toolpath calculation despite having 32 processors ava
    - For multi-threaded performance
 
 3. **Use Parallel Tool Path Generation**:
-   - "Check customer defaults for Parallel Tool Path Generation"
    - Use Parallel Generation
    - For multiple operations
    - To utilize more cores
 
 4. **Set Maximum Concurrent Processes to 8**:
-   - "Maximum Concurrent Processes"
-   - "The setting has maxed at 8"
    - Set to 8 for
    - Parallel generation
 
 5. **Don't set unnecessary environment variables**:
-   - "I tried the followings commands"
-   - "UGII_SMP_ENABLE=1, MT_MAX_THREADS=8"
-   - "Nothing changed"
    - Don't set variables that don't affect CAM
 
 6. **Use Background Generate**:
-   - "Background Generate"
    - For parallel processing
    - But verify it works
    - In your NX version
 
 7. **Accept 4-thread limit for most operations**:
-   - "Beyond 4 processors"
-   - "The overhead of multiprocessing"
-   - "Ate up any time savings"
    - Accept the 4-thread limit
 
 ### Community Report
@@ -147,46 +123,29 @@ A custom NX journal macro fails with a Journal Execution Error. The error refere
 ### Fix
 
 1. **Find the original error**:
-   - "Errors beget more errors"
-   - "1/2 the battle is finding the original error"
    - Find the first error
    - Not subsequent cascade errors
 
 2. **Check if mySelectedObject is Nothing**:
-   - "mySelectedObject does not refer to anything"
    - Add debug code:
-   - "echo(mySelectedObject is nothing: "
-   - "& isNothing(mySelectedObject).ToString)"
    - Check if the object is Nothing
 
 3. **Inspect the SelectAnObj subroutine**:
-   - "SelectAnObj is not an NXOpen command"
-   - "It is likely a subroutine created by someone"
-   - "At your organization"
    - Inspect the custom selection subroutine
 
 4. **Add logging after selection**:
-   - "Right after the call to SelectAnObj"
    - Add logging to verify
    - The selection returned
    - A valid object
 
 5. **Check NXJournals temporary folder**:
-   - "NX takes the original journal code"
-   - "And copies/compiles it before it is run"
    - Don't look for journal0.vb
    - In the temp folder
 
 6. **Inspect the save as function**:
-   - "What arguments are you passing"
-   - "To the save as function?"
-   - "Are these arguments correct?"
    - Verify save as arguments
 
 7. **Add comprehensive logging**:
-   - "Add a few lines of code to log"
-   - "What the current work part is"
-   - "And what is being passed into the save as function"
    - Add logging for debugging
 
 ### Community Report
@@ -206,43 +165,29 @@ When using NumPy in NX external Python environment, the first execution works pe
 ### Fix
 
 1. **Use # nx: main-interpreter in NX 2506**:
-   - "As a workaround in NX 2506 only"
-   - "Replace # nx: threaded"
-   - "With # nx: main-interpreter"
    - Use main-interpreter in 2506
 
 2. **Update to NX 2512**:
-   - "This issue has been fixed for NX 2512"
-   - "NX 2512 will again require # nx: threaded"
    - Update to NX 2512
    - For the permanent fix
 
 3. **Use # nx: threaded in NX 2512**:
-   - "This change was removed from NX 2512"
-   - "NX 2512 will again require # nx: threaded"
    - Use nx:threaded
    - In NX 2512 and later
 
 4. **Restart NX after each NumPy execution**:
-   - "Users need to click buttons multiple times"
-   - "But currently must restart NX"
-   - "After each NumPy-based operation"
    - Restart as workaround
 
 5. **Use subprocess for NumPy operations**:
-   - "Subprocess approach"
-   - "Attempted to run NumPy tests in a subprocess"
    - Use subprocess
    - As alternative workaround
 
 6. **Preload NumPy at NX startup**:
-   - "Is preloading NumPy at NX startup a viable solution?"
    - Consider preloading
    - NumPy at startup
    - To avoid reimport issues
 
 7. **Check Python version compatibility**:
-   - "Python 3.12.9, NumPy 1.26.4"
    - Verify Python and NumPy
    - Version compatibility
    - With your NX version
@@ -264,20 +209,12 @@ When generating or playing toolpaths in NX CAM, the display shows toolpath lines
 ### Fix
 
 1. **Set UGII_CAM_TP_DISP_ENDPOINTS to 0**:
-   - "I put number 0 for the ENV Variable"
-   - "It may have turned off the end point"
-   - "And it worked"
    - Set the variable to 0
 
 2. **Remove the environment variable**:
-   - "Removing the environment variable"
-   - "From wherever it is being set"
-   - "Would also be an option"
    - Remove the variable entirely
 
 3. **Check NX log file**:
-   - "If it's set it should be visible"
-   - "In the NX log file"
    - Check the log file
    - For the variable
 
@@ -294,8 +231,6 @@ When generating or playing toolpaths in NX CAM, the display shows toolpath lines
    - If found
 
 6. **Use toolpath verification without dots**:
-   - "I have another tool path verifying button"
-   - "That allows me to inspect tool paths without dots"
    - Use the alternative
    - Verification method
 

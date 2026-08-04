@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://forums.sketchup.com/t/crash-when-opening-sketchup-2026/346259"
-  - "https://forums.sketchup.com/t/bug-crash-on-startup-dx12-engine-usenewrenderer-on-dual-gpu-system-amd-nvidia/348478"
-  - "https://forums.sketchup.com/t/sketchup-2026-crashes-while-opening/344282"
 ---
 
 # SketchUp 2026 Crash on Startup from Lumion Plugin Loading, DX12 New Graphics Engine Crash on Dual GPU AMD+NVIDIA Laptops, Advanced Camera Tools and Curic Extension Crash During Initialization, Scan Essentials Crash on Startup with Point Cloud Projects, and 2026.1.256 Qt6Core.dll Instant Crash on New Graphics Engine: Lumion Plugin Removal, UseNewRenderer False, Extension Migrator Bypass, Scan Essentials Uninstall, and Classic Graphics Engine
@@ -31,44 +28,26 @@ SketchUp 2026 crashes with a Bug Splat every time it opens. The crash happens du
 ### Fix
 
 1. **Remove Lumion plugin from Plugins folder**:
-   - "Go into this folder to remove the Lumion file and folder"
-   - "%AppData%\SketchUp\SketchUp 2026\SketchUp\Plugins\"
    - Remove Lumion
    - Plugin files
 
 2. **Move Lumion folder and .rb file**:
-   - "Try moving the Lumion folder"
-   - "And .rb file to somewhere else"
-   - "And then open SketchUp"
    - Move not delete
 
 3. **Install SketchUp as Administrator**:
-   - "Right clicking on the downloaded installer"
-   - "And selecting Run as administrator"
-   - "From the Context menu"
    - Install as Admin
 
 4. **Repair installation**:
-   - "Repair the installation by finding the installer"
-   - "Right clicking on it, choosing Run as administrator"
-   - "And then when prompted, Repair"
    - Repair installation
 
 5. **Do a cold reboot**:
-   - "After that do a cold reboot"
-   - "Of your computer"
    - Cold reboot
    - After repair
 
 6. **Check for Lumion update**:
-   - "Maybe you'll get away with reloading Lumion"
-   - "But I wouldn't count on it"
-   - "Unless there's a new release of Lumion"
    - Check for update
 
 7. **Use alternative rendering application**:
-   - "Might be worth looking at"
-   - "A different rendering application"
    - Consider alternative
    - Rendering tool
 
@@ -89,45 +68,25 @@ SketchUp 2026 opens and immediately closes upon startup. The Welcome Window appe
 ### Fix
 
 1. **Set UseNewRenderer to false**:
-   - "Edit the file: PrivatePreferences.json"
-   - "UseNewRenderer: false"
-   - "This forces SketchUp to use the classic OpenGL engine"
    - Set to false
 
 2. **Access PrivatePreferences.json**:
-   - "C:\Users\[user]\AppData\Local\"
-   - "SketchUp\SketchUp 2026\SketchUp\PrivatePreferences.json"
    - Edit the file
 
 3. **Disable su_diffusion from ShippedExtensions**:
-   - "Rename su_diffusion.rb to su_diffusion.rb.DISABLED"
-   - "Rename su_diffusion to su_diffusion.DISABLED"
-   - "In ShippedExtensions folder"
    - Disable su_diffusion
 
 4. **Use classic OpenGL engine**:
-   - "Which is completely stable"
-   - "With this device's dual GPU configuration"
    - Use classic
    - OpenGL engine
 
 5. **Verify PrivatePreferences after updates**:
-   - "If SketchUp 2026 crashes again"
-   - "After an update"
-   - "Verify that PrivatePreferences.json"
-   - "Has UseNewRenderer: false"
    - Verify after updates
 
 6. **Reinstall AI Render from Extension Warehouse**:
-   - "To reinstall AI Render"
-   - "Do a clean install"
-   - "From the Extension Warehouse"
    - Reinstall AI Render
 
 7. **Check for cascading plugin pattern**:
-   - "This cascading pattern was the key"
-   - "To understanding that the plugins"
-   - "Were not the actual cause"
    - Check cascading
 
 ### Community Report
@@ -147,44 +106,26 @@ SketchUp 2026 crashes while opening. The user must open 2025 first, then open th
 ### Fix
 
 1. **Disable Advanced Camera Tools**:
-   - "All of your crashes happened"
-   - "While Advanced Camera Tools was loading"
    - Disable Advanced
    - Camera Tools
 
 2. **Disable Curic extensions**:
-   - "Curic 2D was causing many of my crashes"
-   - "Other Curic extensions were causing"
-   - "Crashing during initialisation"
    - Disable Curic
 
 3. **Don't use extension migrator**:
-   - "Start again with getting your extensions"
-   - "Into 2026, without using the extension migrator"
    - Manual extension
    - Installation
 
 4. **Rename Plugins folder for testing**:
-   - "Try renaming the Plugins folder"
-   - "So that SketchUp starts up"
-   - "With only the shipped extensions"
    - Rename Plugins
 
 5. **Move extensions a few at a time**:
-   - "Move a few extensions at a time"
-   - "Into the newly created Plugins folder"
-   - "If it suddenly doesn't open again"
-   - "One of the last few extensions is the cause"
    - Batch test
 
 6. **Check for new tools added to toolbar**:
-   - "New tools are added to my custom toolbar"
-   - "If I disable the plugin of the added tool"
-   - "I can open SketchUp next time"
    - Check toolbar
 
 7. **Disable automatic updates**:
-   - "I have disabled automatic updates"
    - Disable auto
    - Updates to
    - Prevent issues
@@ -206,44 +147,27 @@ SketchUp 2026 crashes on startup. All crashes happen while Scan Essentials is lo
 ### Fix
 
 1. **Delete su_pcp.rb and su_pcp folder**:
-   - "Go into this folder: %AppData%\SketchUp\SketchUp 2026\SketchUp\Plugins\"
-   - "Delete su_pcp.rb and the su_pcp folder"
    - Delete Scan
    - Essentials files
 
 2. **Uncheck Scan Essentials in installer**:
-   - "Run the installer again"
-   - "And choose the option to modify add ons"
-   - "Uncheck Scan Essentials"
    - Uncheck in installer
 
 3. **Delete files after installer modification**:
-   - "You may need to go and delete"
-   - "The file and folder I had mentioned"
    - Delete after
    - Modification
 
 4. **Restart SketchUp after removal**:
-   - "Then open SketchUp"
-   - "And it should be free of Scan Essentials"
    - Restart after
    - Removal
 
 5. **Check for other extension crashes**:
-   - "That did change things"
-   - "The crash now happens when"
-   - "Sandbox Tools is loading"
    - Check next crash
 
 6. **Rename Plugins folder for clean start**:
-   - "Rename the Plugins folder"
-   - "So that SketchUp starts up"
-   - "With only the shipped extensions"
    - Rename Plugins
 
 7. **Move extensions back gradually**:
-   - "Move a few extensions at a time"
-   - "Into the newly created Plugins folder"
    - Move gradually
    - To identify cause
 
@@ -264,8 +188,6 @@ SketchUp 2026.1.256 introduced a Qt6 update that is incompatible with certain GP
 ### Fix
 
 1. **Switch to classic graphics engine**:
-   - "Sketchup 2026.1.256"
-   - "Classic graphics engine - works perfectly"
    - Switch to classic
    - Graphics engine
 
@@ -276,19 +198,14 @@ SketchUp 2026.1.256 introduced a Qt6 update that is incompatible with certain GP
    - For classic engine
 
 3. **Roll back to 2026.0.429**:
-   - "SketchUp 2026.0.429"
-   - "Works perfectly on new graphics engine"
    - Roll back
    - To 2026.0.429
 
 4. **Update NVIDIA drivers**:
-   - "NVIDIA RTX 4060"
-   - "(Driver 596.36)"
    - Update GPU
    - Drivers
 
 5. **Check hybrid GPU settings**:
-   - "Hybrid GPU setup"
    - Check hybrid
    - GPU configuration
    - Settings

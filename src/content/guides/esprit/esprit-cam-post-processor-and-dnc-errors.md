@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/help-adding-custom-format-to-esprit-post.398661/"
-  - "https://www.practicalmachinist.com/forum/threads/dnc-using-esprit-software.188306/"
-  - "https://www.practicalmachinist.com/forum/threads/esprit-wire-cam-help.447388/"
 ---
 
 # ESPRIT CAM Post Processor and DNC Errors: Undefined Vocabulary Error from Custom Format Requiring Keyword and Symbol Definition, DNC RS-232 Transfer to Haas from Baud Rate and Cable Pinout Mismatch Requiring Settings Sync, 4-Axis Toolpath Error from Tangent Entry Type Requiring Position Entry Type, P70 Arc Endpoint Deviation from Incorrect I Value Sign Requiring Post Processor Fix, and Subspindle Work Plane Orientation from Mirror Image Requiring Work Offset Redefinition
@@ -37,7 +34,6 @@ When copying a format in the ESPRIT post processor, simply changing the KEYWORD 
    - Add the new keyword with proper definition
 
 2. **Use an existing format as template**:
-   - "I copied PROGRAMNUMBER and modified it just to get it to post"
    - Copy a working format completely
    - Change only the keyword name
    - Keep all other parameters identical
@@ -76,19 +72,9 @@ Transferring G-code from a computer to a Haas mill using RS-232 cable and ESPRIT
 
 ### Fix
 
-1. **Match Haas RS-232 settings**:
-   - "Set as follows on Haas:"
-   - "11 BAUD RATE SELECT: 9600"
-   - "12 PARITY SELECT: EVEN"
-   - "13 STOP BIT: 1"
-   - "14 SYNCHRONIZATION: RTS/CTS"
-   - "37 RS-232 DATA BITS: 7"
-   - "25 EOB PATTERN: CR LF"
-   - "41 ADD SPACES RS232 OUT: ON"
-   - "50 AUX AXIS SYNC: XON/XOFF"
+1. **Match Haas RS-232 settings**.
 
 2. **Use correct cable pinout**:
-   - "Haas needs a Null modem cable"
    - DB-9 to DB-25 pin connections:
    - Pin 1 (GRD) to Pin 1 (GRD)
    - Pin 2 (TD) to Pin 2 (RD)
@@ -98,7 +84,6 @@ Transferring G-code from a computer to a Haas mill using RS-232 cable and ESPRIT
    - Pin 7 (SGD) to Pin 7 (SGD)
 
 3. **Use alternative DNC software**:
-   - "I don't think Esprit supports their DNC any longer"
    - Use SE DNC: "We use SE DNC with little problems"
    - Or use HyperTerminal (Windows built-in)
    - Or use Procomm software
@@ -112,7 +97,6 @@ Transferring G-code from a computer to a Haas mill using RS-232 cable and ESPRIT
    - Flow control: Hardware (RTS/CTS)
 
 5. **Use Xmodem protocol**:
-   - "I use 8,N,1 and X modem and com port 2"
    - Set the transfer protocol to Xmodem
    - This is a reliable protocol for RS-232 transfer
    - Some Haas controls prefer Xmodem over raw transfer
@@ -140,8 +124,6 @@ The entry type was set to "Tangent" by default. For the specific geometry where 
 ### Fix
 
 1. **Change Entry Type to Position**:
-   - "Needed to use Entry Type 'Position' because I picked those two points visible in the image"
-   - "I had tangent entry as a default"
    - In the toolpath settings, change Entry Type from Tangent to Position
    - This uses the picked points directly as entry positions
 
@@ -186,14 +168,12 @@ Using a new ESPRIT post processor with a Mitsubishi M70 control. Running a pocke
 ### Fix
 
 1. **Fix the post processor I value output**:
-   - "Your I value is always a positive number. For the path you are describing, it needs be negative on some of the lines"
    - Open the post processor file
    - Find the arc output section
    - Ensure I and J values include the correct sign
    - Don't use absolute values for I and J
 
 2. **Change precision from 4 to 5 decimal places**:
-   - "Changing from a 4 to 5 place value helped some"
    - In the post processor, increase arc output precision
    - 4 decimal places may not be sufficient for some controls
    - 5 decimal places reduces endpoint deviation
@@ -214,7 +194,6 @@ Using a new ESPRIT post processor with a Mitsubishi M70 control. Running a pocke
    - After posting, find the lines with incorrect I values
    - Change the sign of the I value where needed
    - This is a temporary fix until the post is corrected
-   - "Guess I am waiting until Monday to get the post tweaked"
 
 ### Community Report
 
@@ -233,7 +212,6 @@ Running a Doosan Puma 2600SYII with ESPRIT. Main spindle operations work fine. A
 ### Fix
 
 1. **Understand the mirror image**:
-   - "The sub spindle is the mirror image of the main. Everything is reversed"
    - X-axis is reversed on the subspindle
    - Z-axis direction may also change
    - All coordinates must account for this mirror
@@ -245,25 +223,21 @@ Running a Doosan Puma 2600SYII with ESPRIT. Main spindle operations work fine. A
    - Use a different offset number (e.g., G55 for subspindle)
 
 3. **Set the correct work plane**:
-   - "How to adjust or reorient the work plane for machining on the subspindle"
    - In ESPRIT, define a new work plane for the subspindle
    - The plane should account for the mirror orientation
    - Use the Work Plane dialog to set the correct orientation
 
 4. **Verify tool orientation in simulation**:
-   - "Any tips for verifying tool orientation and simulation setup before posting"
    - Run ESPRIT's simulation before posting
    - Check that tools approach from the correct direction
    - Verify the coordinate system matches the physical machine
 
 5. **Use CAM Wizard tutorials**:
-   - "I learned from the Cam Wizard tutorials which were great resources!"
    - Visit www.thecamwizard.net for ESPRIT training tutorials
    - Look for subspindle-specific tutorials
    - These provide step-by-step guidance
 
 6. **Contact ESPRIT support or reseller**:
-   - "I don't have access to SMC (my local Esprit support), as they weren't very helpful"
    - If local support isn't helpful, contact ESPRIT directly
    - Or find a different reseller with subspindle expertise
    - Request specific training for subspindle setup

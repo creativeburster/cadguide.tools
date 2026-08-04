@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
-  - "https://community.carbide3d.com/t/surfcam-post-processor-nomad/5975"
-  - "https://hexagon.com/products/surfcam-post-processors"
-  - "https://pmtechnologies.com/surfcam/surfcam-post-processors/"
 ---
 
 # SurfCAM Post Processor G-Code Errors, Arc Move Format Issues, Unsupported Commands, Multiple Motion Modes, and Legacy Operation Migration: M-Post and S-Post Configuration, Grbl Compatibility Fixes, Modal G-Code Correction, and Pocket Roughing Legacy Migration
@@ -31,14 +28,12 @@ SurfCAM Traditional's built-in post processors output G-code that includes comma
 ### Fix
 
 1. **Use M-Post to edit the header and footer**:
-   - "From what I can see in MPost from SurfCAM, this lets me edit the header and footer of the gcode"
    - Open M-Post from SurfCAM
    - Select the closest post processor
    - Edit the header to remove unsupported commands
    - Edit the footer similarly
 
 2. **Use S-Post for more complex customization**:
-   - "S-POST has an easy-to-use generator module with dynamic menus, context sensitive help and a powerful Factory Interface Language (FIL) utility"
    - S-Post supports more complex post processing
    - Use the Option File Generator to create custom posts
    - No programming required for basic customization
@@ -50,25 +45,21 @@ SurfCAM Traditional's built-in post processors output G-code that includes comma
    - Remove program numbers (O0001) for GRBL controllers
 
 4. **Use a Mach3 post as a starting point**:
-   - "There is supposed to be a Mach 3 post-processor at machsupport.com"
    - Download the Mach3 post for SurfCAM
    - Use as a base for customization
    - Mach3 posts are closer to GRBL compatibility
 
 5. **Contact SurfCAM support for custom posts**:
-   - "Their support told me they have to make the post if it affects the motion of the tool"
    - If the post change affects tool motion
    - SurfCAM support must create the post
    - Provide machine specs and controller details
 
 6. **Use third-party post processors**:
-   - "OmegaPost is a 3rd party, high performance CNC code generator"
    - "3DPost" is another third-party option
    - These support more complex machines
    - Contact CAMcad Technologies for OmegaPost
 
 7. **Manually edit the output G-code**:
-   - "Users can also make on-the-fly changes to M-Post NC code directly in any text editor"
    - Post the toolpath
    - Open the .NCC file in a text editor
    - Remove unsupported commands
@@ -91,7 +82,6 @@ G-code output from SurfCAM produces "bad arc format, No I/J" errors on the CNC c
 ### Fix
 
 1. **Ensure arc plane is defined**:
-   - "The plane of the move is not defined"
    - Add G17 (XY plane) before arc moves
    - Or ensure the post processor includes G17 in the header
    - This tells the controller which plane to use
@@ -115,13 +105,11 @@ G-code output from SurfCAM produces "bad arc format, No I/J" errors on the CNC c
    - Set the tolerance appropriately
 
 5. **Check for modal arc mode issues**:
-   - "G00 would cancel the flow on effect of the G02/G03"
    - After a G00 or G01 move, the arc mode (G02/G03) is canceled
    - The post must re-output G02 or G03 after any G00/G01
    - Check the post's modal handling
 
 6. **Verify arc endpoints match**:
-   - "The start and endpoints don't line up to the last decimal, and GRBL doesn't like that"
    - Ensure arc start and end points are precise
    - Rounding errors can cause arc failures
    - Use higher precision in the post
@@ -149,7 +137,6 @@ SurfCAM's default post processors output multiple G-codes on a single line in th
 ### Fix
 
 1. **Remove unsupported G-codes from the post**:
-   - "After removing G70 G40 and G80, this error went away"
    - Edit the post header in M-Post
    - Remove G70 (use G21 for metric instead)
    - Remove G40 (not needed if no cutter compensation is used)
@@ -169,7 +156,6 @@ SurfCAM's default post processors output multiple G-codes on a single line in th
 
 4. **Remove program number line**:
    - "O0001(INCAAA)" — not supported by GRBL
-   - "Error in line 2: Syntax Error"
    - Remove the program number line from the post header
    - GRBL doesn't use program numbers
 
@@ -208,7 +194,6 @@ The SurfCAM post processor outputs G00 in both the safety block (G00 G90) and th
 ### Fix
 
 1. **Remove duplicate G00 from the post**:
-   - "Removed the second G00"
    - Edit the post template
    - Remove G00 from either the safety block or the motion block
    - Keep G00 only where the actual motion occurs
@@ -260,7 +245,6 @@ After updating to SurfCAM 2025.1, the Pocket Roughing operation is no longer in 
 ### Fix
 
 1. **Find Pocket Roughing in Legacy Operations**:
-   - "Pocket Roughing / Moved to Legacy Operations"
    - Look in the Legacy Operations category
    - The operation is still available
    - But not in the standard menu
@@ -291,7 +275,6 @@ After updating to SurfCAM 2025.1, the Pocket Roughing operation is no longer in 
 
 6. **Use the updated Tool Library**:
    - "Updated Tool Library (SQL Database)" in 2025.1
-   - "Tool Library Application update – Delete/Remove"
    - Set up tools in the new SQL database
    - Use with new operations
 

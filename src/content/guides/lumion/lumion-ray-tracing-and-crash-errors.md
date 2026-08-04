@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
-  - "https://support.lumion.com/knowledge-base/rendering-questions"
-  - "https://support.lumion.com/knowledge-base/lumion-2025.2-release-notes"
-  - "https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/586679/frequent-crash-lumion-2024-when-render-with-ray-tr/"
 ---
 
 # Lumion Ray Tracing and Crash Errors: Ray Tracing Artifacts and Blotches from Insufficient Samples Requiring Denoiser and Sample Adjustment, Frequent Crash When Rendering with Ray Tracing from NVIDIA Driver Incompatibility Requiring Driver Downgrade, DDS Texture Crash from Non-Divisible-by-4 Resolution Requiring Image Resize, Project Recovery Effects Reverted to Default from Crash Recovery Bug Requiring 2025.2 Update, and Merge Project Black Scene from Incompatible Project Files Requiring Version Match
@@ -31,41 +28,29 @@ Rendering with Ray Tracing produces artifacts, blotches, or patchy-looking rende
 ### Fix
 
 1. **Use the built-in Denoiser**:
-   - "Lumion 2024.0 advanced the capability to use Ray Tracing much more in Movie Mode by implementing a high performance neural Denoiser"
    - Enable the Denoiser effect in Photo or Movie mode
    - The neural denoiser removes noise while preserving detail
    - This is the primary fix for blotches
 
 2. **Increase sample count**:
-   - "Multiple sampling techniques and improving light distribution to produce a higher accuracy result"
    - In render settings, increase the number of samples
    - More samples = less noise but longer render time
    - Find the balance between quality and speed
 
 3. **Use Radiance Cache (2025.1+)**:
-   - "Real Time Preview Performance and Quality: Radiance Cache Technology"
-   - "Smoother and more refined lighting is added to the Real-time preview"
-   - "Cached radiance values help smooth out noise in global illumination"
-   - "Leading to cleaner images"
    - Update to Lumion 2025.1 or later
 
 4. **Increase light bounces**:
-   - "Even with just one bounce, the effect gradually accumulates"
-   - "Resulting in a stable and consistent render over time"
    - Increase the number of bounces in Ray Trace settings
    - More bounces = better indirect lighting but longer render
 
 5. **Use Rasterization for fast previews**:
-   - "Lumion continues the full featured Rasterization rendering approach"
-   - "Or using the full Ray Trace rendering using Path Tracing approach"
-   - "You choose which best suits any Photo, Movie or 360 Panorama"
    - Use Rasterization for quick previews, Ray Tracing for final renders
 
 6. **Render at higher resolution**:
    - Render at a higher resolution and downscale
    - This averages out noise
    - Use the AI Upscaler for final output
-   - "How does the AI Upscaler work in Lumion?"
 
 ### Community Report
 
@@ -84,13 +69,11 @@ The NVIDIA driver update (577.00 and later) introduced changes that are incompat
 ### Fix
 
 1. **Downgrade NVIDIA driver**:
-   - "Still working on older version like Ver: 572.83"
    - Download NVIDIA driver version 572.83 or earlier
    - Use NVIDIA Studio Driver (not Game Ready)
    - Perform a clean install of the older driver
 
 2. **Try the hotfix driver**:
-   - "Try the 576.15 Hot Fix"
    - NVIDIA may release hotfix drivers
    - Check the NVIDIA forums for hotfix announcements
    - Test if the hotfix resolves the crash
@@ -102,8 +85,6 @@ The NVIDIA driver update (577.00 and later) introduced changes that are incompat
    - Test with the latest NVIDIA driver
 
 4. **Use Rasterization instead of Ray Tracing**:
-   - "There still may be a need to render using the Rasterization rendering option"
-   - "For fastest possible outcomes (Project dependent)"
    - Switch to Rasterization mode
    - This avoids the RT crash entirely
 
@@ -136,7 +117,6 @@ Loading a .DDS texture file causes Lumion to crash. The crash occurs when the te
 ### Fix
 
 1. **Update to Lumion 2025.2 or later**:
-   - "Lumion no longer crashes when loading a .DDS texture with a resolution that is not divisible by 4"
    - This is fixed in Lumion 2025.2
    - Update to the latest version
    - The fix handles non-standard DDS dimensions
@@ -182,7 +162,6 @@ After a crash, Lumion's Project Recovery feature recovers the project. But some 
 ### Fix
 
 1. **Update to Lumion 2025.2**:
-   - "This has been fixed"
    - The Project Recovery Effect issue is fixed in 2025.2
    - Update to the latest version
    - Crash recovery will now preserve Effect settings
@@ -228,8 +207,6 @@ Using Merge Project to combine projects. After merging, the scene is completely 
 ### Fix
 
 1. **Update to Lumion 2025.2**:
-   - "Resolved an issue caused by merging incompatible Project files"
-   - "Which could result in a completely black scene"
    - This is fixed in Lumion 2025.2
    - Update to the latest version
 

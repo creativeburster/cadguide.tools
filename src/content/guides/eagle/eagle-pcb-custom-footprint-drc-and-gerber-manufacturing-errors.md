@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
-  - "https://forums.autodesk.com/t5/eagle-forum/custom-part-footprint-error-pad-overlapping/td-p/8666322"
-  - "https://forums.autodesk.com/t5/eagle-forum/what-is-the-quot-right-quot-way-to-do-complex-footprints/td-p/9419360"
-  - "https://www.edaboard.com/threads/gerber-file-check-before-manufacturing.221644/"
 ---
 
 # Eagle PCB Custom Footprint DRC and Gerber Manufacturing Errors: Pad Overlapping from DRC Annular Ring Expanding Narrow Pads Beyond Design, Complex Footprint DRC Errors from Polygon Pad Connection Requiring Center Within Polygon Rule, DRC Connected Unrouted Paths from THT Pads Not Metalized Requiring Cutout Polygon Isolation, DRC Overlap Error from Board Layout Without Schematic Requiring Name Command to Unify Nets, and Gerber Solder Mask Vias Under BGA from Insufficient Mask Limit Causing Ball Suck-in
@@ -30,25 +27,18 @@ Eagle's DRC (Design Rule Check) imposes a minimum "restring" (annular ring) size
 
 ### Fix
 
-1. **Understand DRC annular ring rules**:
-   - "Your library specifies a drill diameter and optionally a pad size"
-   - "DRC imposes a minimum restring (annular ring) size"
-   - "If your library part is designed to use a ring that is too narrow, the board editor will expand the pads to meet the DRC"
+1. **Understand DRC annular ring rules**.
 
 2. **Change pad shape to circular with smaller diameter**:
-   - "I solved it by simply changing the shape of the pads to a circle with a smaller diameter"
    - Circular pads have smaller overall size than elongated pads
    - This prevents expansion from causing overlap
 
 3. **Adjust DRC restring settings**:
    - In DRC > Restring tab, reduce minimum annular ring values
    - Check what your board house can fabricate
-   - "Set high enough to ensure reliable fabrication but not too much higher"
    - Typical minimum: 0.15mm (6 mil) for standard PCBs
 
 4. **Reduce elongation settings**:
-   - "You are using elongated pads, which isn't helping here"
-   - "You can adjust the amount of elongation in the DRC settings"
    - Reduce elongation to minimize pad expansion
    - Or switch to round pads entirely
 
@@ -58,7 +48,6 @@ Eagle's DRC (Design Rule Check) imposes a minimum "restring" (annular ring) size
    - Example: 0.8mm drill + 2 × 0.15mm restring = 1.1mm pad diameter
 
 6. **Check board house capabilities**:
-   - "Check what your board house can do"
    - Some board houses support smaller annular rings
    - Adjust DRC to match board house capabilities
    - Don't use pessimistic DRC settings if your board house can do better
@@ -80,28 +69,22 @@ Eagle's DRC doesn't recognize polygon-to-pad connections unless the pad center l
 ### Fix
 
 1. **Ensure pad center is within the polygon**:
-   - "A polygon in a signal layer is considered connected to a pad if the center of the pad lies within the area defined by the center lines of the polygon wires"
    - Extend the polygon so the pad center is inside it
    - Not just touching the pad edge
 
 2. **Route connections in the footprint itself**:
-   - "It may work if you route the VIN and LX connections in the footprint itself, not the board"
    - This creates internal connections that DRC recognizes
    - Reduces airwires on the board
 
 3. **Set pad connection mode correctly**:
-   - "Eagle allows you to define multiple pads being the same signal but then YOU have to tell it whether they are 'any' or 'all'"
    - **"any"**: connect to one pad only (e.g., switch pairs)
    - **"all"**: must connect to all pads (e.g., ground pins)
    - Check datasheet to determine correct mode
 
 4. **Use arbitrary pad shapes**:
-   - "Create arbitrary pad shapes by drawing a polygon around a pad"
-   - "Or by drawing wires that have one end connected to the pad"
    - This creates custom pad shapes that DRC recognizes
 
 5. **Accept remaining airwires for "all" mode pads**:
-   - "It still doesn't quite understand that the pads and poly are the same signal, so there are still some airwires"
    - For "all" mode, airwires indicate required connections
    - Route these connections explicitly on the board
    - Approve any remaining DRC errors after verification
@@ -128,12 +111,9 @@ Eagle's DRC assumes THT pads connect top and bottom layers through plating. If t
 ### Fix
 
 1. **Use cutout polygons to isolate bottom-layer pads**:
-   - "Place a polygon defined as a cutout around each of those pins on the bottom layer"
-   - "So that the plane being connected to them does not reach them"
    - This prevents the ground plane from connecting to non-metalized pads
 
 2. **Create SMT pad with non-plated hole in library**:
-   - "Create a round SMT pad and place a non-plated hole in it"
    - This tells Eagle the pad is surface-mount only
    - The hole doesn't connect top and bottom
    - May lead to DRC errors but accurately represents the board
@@ -144,12 +124,10 @@ Eagle's DRC assumes THT pads connect top and bottom layers through plating. If t
    - Use a multimeter on the prototype to verify
 
 4. **Inform DRC about non-plated holes**:
-   - "It seems there is no way to inform DRC that some components can't connect top and bottom"
    - Eagle's DRC doesn't support non-plated THT pads natively
    - Use workarounds (cutout polygons, SMT pads with holes)
 
 5. **Move cutout polygons with components**:
-   - "When component is shifted to another place, it is necessary to remember to shift all related polygons"
    - Group the component and its cutout polygons
    - Use group move to keep them together
 
@@ -175,20 +153,16 @@ Eagle expects board layouts to be created from schematics. When drawing directly
 ### Fix
 
 1. **Use the NAME command to unify nets**:
-   - "Using the NAME command is usually sufficient to rename the traces"
    - Select a trace, use NAME command (Edit > Name)
    - Give connected traces the same net name
    - This tells Eagle they are the same net
 
 2. **Draw the schematic first (recommended)**:
-   - "I think this error is caused by not doing the layout after drawing the schematic"
    - Create the schematic with proper net connections
    - Then switch to board layout
    - Eagle maintains net consistency between schematic and board
 
 3. **Approve DRC errors if Gerber is correct**:
-   - "Even though there is overlap error at DRC, when it is well connected at PCB Viewer, is it okay?"
-   - "Yes it will be OK, so you can approve the errors and proceed"
    - Verify in Gerber viewer that connections are correct
    - Approve the DRC errors manually
 
@@ -226,46 +200,32 @@ Eagle's DRC Mask tab has a "Limit" value that determines which drill holes get s
 ### Fix
 
 1. **Increase the Mask Limit in DRC**:
-   - "If you want solder resist over your vias, increase the 'limit' value on the MASKS tab of the DRC"
-   - "Any drill smaller than LIMIT will have solder resist"
    - Set Limit to cover via drills (e.g., 0.3mm or 0.4mm)
    - This applies solder mask to small vias
 
 2. **Reduce solder mask enlargement**:
-   - "Reduce solder mask openings to a size slightly larger than the drills"
-   - "To achieve sufficient pad to via spacing, particularly under the BGA"
    - In DRC > Masks tab, reduce Solder Mask expansion
    - Typical: 0.05mm (2 mil) expansion
 
 3. **Remove unconnected via and PTH pads on inner layers**:
-   - "It's recommended to remove unconnected via and PTH pads on inner layers"
-   - "If dynamic pad and vias are not supported by your tool, it can be done by the PCB manufacturer"
    - This reduces routing congestion under BGA
 
 4. **Use blind/buried vias only when necessary**:
-   - "It seems to me that the blind via option won't be strictly required for this design"
-   - "There's plenty of room for standard vias"
    - Blind vias add significant cost
    - Use standard vias where possible
 
 5. **Create a separate outline plot**:
-   - "You would want to have a separate outline plot with your gerber file"
-   - "But it can be extracted from the silk screen plots"
    - Include board outline in a separate Gerber layer
    - Some manufacturers require this
 
 6. **Verify Gerber files before manufacturing**:
    - Use GC-Prevue (free) or other Gerber viewer
-   - "Load the drill files as well as the Gerber files"
    - Check solder mask coverage on all vias
    - Verify BGA pad spacing and mask openings
-   - "I have had a look at the Eagle files and there are no problems I can see"
 
 7. **Use manufacturer's design rules**:
-   - "You have obviously got the design rules from Sunstone"
    - Download DRC files from your board house
    - Import them into Eagle: File > Open > DRC
-   - "When you load the design rules into your PCB, they stay there"
 
 ### Community Report
 

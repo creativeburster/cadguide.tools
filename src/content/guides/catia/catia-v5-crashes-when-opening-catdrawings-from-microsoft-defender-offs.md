@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://technia.jira.com/wiki/spaces/TCC/pages/4330816114/EN+CATIA+V5+crashes+when+opening+CATDrawings"
-  - "https://3dswym.3dexperience.3ds.com/post/catia-user-community/catia-v5-6r2024-unable-to-fetch-licenses_KwE27Me-RGeO9ePaLZ5Tsg"
-  - "https://www.eng-tips.com/threads/catia-v5-6-r2018-not-launching-after-windows-11-24h2-update.525121/"
 ---
 
 # CATIA V5 Crashes When Opening CATDrawings from Microsoft Defender OFFSYM.TTF Folder, V6 Crashing After Hotfix on AMD CPU GPU, V5-6R2024 Unable to Fetch Licenses from DSLS Configuration, Cache Visualization Mode Slower Than Design Mode on Uncertified Intel Arc Graphics, and V5-6R2018 Not Launching After Windows 11 24H2 Update: OFFSYM.TTF Deletion, Hotfix Rollback, DSLS Reconfiguration, Cache Off, and Network Media Sense Registry Fix
@@ -31,26 +28,18 @@ Since mid-January 2024, older CATIA V5 releases up to V5-6R2021 crash on some Wi
 ### Fix
 
 1. **Delete the OFFSYM.TTF folder**:
-   - "Delete the folder `OFFSYM.TTF` in `C:\\Windows\\Fonts`"
    - Navigate to C:\\Windows\\Fonts
    - Find the OFFSYM.TTF folder (not a file)
    - Delete it
 
 2. **Migrate to V5-6R2022 or newer**:
-   - "Current CATIA V5 releases V5-6R2022 and newer are not affected"
-   - "As there are no longer any fixes for older CATIA V5 releases"
-   - "Migration to a current CATIA V5 release is recommended"
    - This is the permanent fix
 
 3. **Change virus scanner**:
-   - "A change to another virus scanner can also be considered"
-   - "As long as older CATIA V5 releases are still in use"
    - Switch from Windows Defender to another antivirus
    - That doesn't create the OFFSYM.TTF folder
 
 4. **Uninstall the Microsoft update**:
-   - "Uninstall the Microsoft updates in question"
-   - "Or reset Windows to the state it was in before the Microsoft updates"
    - Remove the January 2024 Microsoft update
    - That causes the OFFSYM.TTF folder creation
 
@@ -89,7 +78,6 @@ The hotfix introduced a compatibility issue with AMD CPUs and GPUs. The crash ca
 ### Fix
 
 1. **Roll back the hotfix**:
-   - "We are currently experiencing some software issues after the most recent hotfix"
    - If possible, roll back to the previous version
    - Before the hotfix was applied
    - This is the most reliable fix
@@ -107,7 +95,6 @@ The hotfix introduced a compatibility issue with AMD CPUs and GPUs. The crash ca
    - Check the Dassault certified workstation list
 
 4. **Check Dassault certified workstations**:
-   - "DASSAULT CERTIFIED WORKSTATIONS"
    - Verify if your hardware is certified
    - For CATIA V6
    - uncertified hardware may have compatibility issues
@@ -119,8 +106,6 @@ The hotfix introduced a compatibility issue with AMD CPUs and GPUs. The crash ca
    - Resolves the crash
 
 6. **Contact Dassault support**:
-   - "We were wondering if anyone has also experienced these issues"
-   - "And if so, how to fix it"
    - Report the issue to Dassault support
    - With hardware details and crash logs
 
@@ -165,7 +150,6 @@ CATIA V5-6R2024 may require a different DSLS configuration or version than V5-6R
    - Match the DSLS configuration
 
 4. **Compare R2022 and R2024 configurations**:
-   - "The same setup with Catia V5-6R2022 works and fetches the licenses"
    - Compare the configuration files
    - Between R2022 and R2024
    - To identify differences
@@ -183,7 +167,6 @@ CATIA V5-6R2024 may require a different DSLS configuration or version than V5-6R
    - Not the R2022 version
 
 7. **Contact Dassault support**:
-   - "Am I missing anything in CATIA V5-6R2024"
    - If the issue persists
    - Contact Dassault support
    - With DSLS configuration details
@@ -205,25 +188,17 @@ On a new laptop with Intel Arc 140v graphics (not CATIA certified), CATIA V5-201
 ### Fix
 
 1. **Work with cache off (Design Mode)**:
-   - "The performance is perfect. I can easily pan-rotate-zoom complex assemblies"
-   - "With very detailed parts such as engine, transmission"
    - If Design Mode works better
    - Use it instead of cache mode
 
 2. **Use CATIA-certified graphics card**:
-   - "My graphics card is not CATIA certified"
-   - "So it is not listed on the website"
    - Use a CATIA-certified NVIDIA or AMD card
    - For proper cache mode performance
 
 3. **Try different driver versions**:
-   - "I have tried a couple of versions of the drivers"
-   - "Those which are listed on intel web site"
-   - "And did not get any improvement"
    - Try older or beta drivers
 
 4. **Check Dassault certified workstation list**:
-   - "DASSAULT CERTIFIED WORKSTATIONS"
    - Check the certified hardware list
    - Before purchasing hardware for CATIA
    - uncertified hardware may have issues
@@ -263,19 +238,12 @@ CATIA V5-6R2018 is an older release that is incompatible with Windows 11 24H2. T
 ### Fix
 
 1. **Use the network media sense registry fix**:
-   - "Make sure your network card is active while no connection"
-   - "There is a registry setting for that something related to media sense"
-   - "So you can have the hardware id available while in network is not connected"
    - Set the registry key to disable media sense
 
 2. **Use the offline license workaround**:
-   - "Extract offline license, start catia wait a minute or so"
-   - "Unplug your network cable, then you will see catia window pop up"
-   - "Now connect your network cable back"
    - This is a workaround for the license issue
 
 3. **Keep CATIA running**:
-   - "Working with catia, don't close it unless you have to"
    - Once CATIA is running
    - Don't close it
    - To avoid having to repeat the workaround

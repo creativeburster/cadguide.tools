@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://community.sw.siemens.com/s/question/0D54O00006ndvAKSAY/why-pads-cannot-access-library-when-i-am-trying-to-change-a-footprint"
-  - "https://community.sw.siemens.com/s/question/0D5Vb0000031nbRKAQ/pads-professional-student-edition-vx212-designer-and-layout-library-tools-having-difficulty-renaming-pins"
-  - "https://community.sw.siemens.com/s/question/0D54O00006eo5ppSAA/pads-logic-pcb-decal-library-lock"
 ---
 
 # PADS Professional Unable to Open Central Library from Lock Files and sysindex.cbf, Pin Rename Error Symbol Pin Name Not Found in PDB from Update Local Libraries, PCB Decal Library Lock from LCK Files Requiring Restart, Thermal Spokes Missing After Import from Smoothing Radius and Add Thermals Setting, and Forward Annotation Failure from Stale Central Library Data: Lock File Delete, Update Local Libraries, LCK Cleanup, Thermal Settings, and Central Library Sync
@@ -31,38 +28,27 @@ When trying to annotate or change a footprint, the error "Unable to open central
 ### Fix
 
 1. **Close all PADS editors**:
-   - "Close all editors"
    - Close Designer
    - And Layout
    - Before proceeding
 
 2. **Delete *.lck and *.lock files**:
-   - "Delete any *.lck or *.lock files"
-   - "In Library folder"
    - Delete all lock files
    - In the library folder
 
 3. **Delete or rename sysindex.cbf**:
-   - "Delete or rename the \sysindex.cbf file"
-   - "This will rebuild the library indexes"
    - Delete or rename
    - sysindex.cbf
 
 4. **Reselect the library.lmc**:
-   - "I deleted some *.lck files"
-   - "And Reselected the library.lmc"
-   - "It works now"
    - Reselect the central library
 
 5. **Verify library path**:
-   - "Is the library still available this path?"
    - Verify the library path
    - Is correct and
    - The file exists
 
 6. **Open library in standalone mode**:
-   - "Can you open this library in standalone mode"
-   - "(from start menu)?"
    - Test library access
    - In standalone mode
 
@@ -89,33 +75,24 @@ After renaming pins in a symbol using Find and Replace, the Pin Integrity Checke
 ### Fix
 
 1. **Update local libraries with Central Library data**:
-   - "Clicking on Update local libraries"
-   - "With newer Central Library Data"
-   - "Then forward annotate"
-   - "Allowed the forward annotation to complete successfully"
    - Update local libraries
 
 2. **Use Tools > Update Libraries**:
-   - "Tools->Update Libraries"
    - After renaming pins
    - Use Update Libraries
    - In Designer
 
 3. **Verify pin name in PDB**:
-   - "Symbol pin name: TAB not found in PDB"
    - Verify the pin name
    - In the PDB
    - Not just the Pin Mapping
 
 4. **Check Pin Mapping vs PDB**:
-   - "The new pin name is in the Pin Mapping"
    - But the PDB
    - May still have
    - The old name
 
 5. **Don't rely on Pin Integrity Checker alone**:
-   - "Pin Integrity Checker started"
-   - "No errors found"
    - The checker doesn't verify
    - PDB consistency
 
@@ -126,8 +103,6 @@ After renaming pins in a symbol using Find and Replace, the Pin Integrity Checke
    - Changes are loaded
 
 7. **Report pin rename issues**:
-   - "It would be nice to know why Designer and Layout"
-   - "Have such difficulty with pin renaming"
    - Report persistent issues
    - To Siemens support
 
@@ -148,8 +123,6 @@ When trying to edit a PCB decal in PADS Logic, the error "Library locked" and "o
 ### Fix
 
 1. **Restart PADS**:
-   - "Only solution is to restart PADS"
-   - "And try again"
    - Restart PADS
    - As the primary workaround
 
@@ -166,9 +139,6 @@ When trying to edit a PCB decal in PADS Logic, the error "Library locked" and "o
    - Library indexes
 
 4. **Check library availability**:
-   - "When you look at the library"
-   - "It is totally empty"
-   - "And PADS needs to be restarted"
    - Check if library is empty
 
 5. **Verify library path at startup**:
@@ -178,15 +148,9 @@ When trying to edit a PCB decal in PADS Logic, the error "Library locked" and "o
    - At startup
 
 6. **Check for OS-specific issues**:
-   - "It is obviously related to OS"
-   - "And no fix is available"
-   - "Those who did not have issues on WIN7"
-   - "They have now on WIN10 and vice versa"
    - Check OS-specific behavior
 
 7. **Save work before creating decals**:
-   - "All the efforts for creating"
-   - "The footprint is wasted"
    - Save work before
    - Creating decals
 
@@ -207,44 +171,29 @@ When importing an old PADS layout into a newer version (VX.2.8), thermal spokes 
 ### Fix
 
 1. **Enable Add thermals to routed component pads**:
-   - "One setting was missing"
-   - "'Add thermals to routed component pads'"
    - Enable this setting
    - In PADS 2.8
 
 2. **Adjust smoothing radius for copper pours**:
-   - "Adjusting the smoothing radius"
-   - "For copper pours"
    - Adjust the smoothing radius
    - For copper pours
 
 3. **Use Place Thermal Override**:
-   - "For an individual pin"
-   - "You can use the RMB"
-   - "'Place Thermal Override' command"
    - Use Place Thermal Override
 
 4. **Manually place thermal spokes**:
-   - "I still had to manually place"
-   - "Some thermal spokes using copper areas"
    - Manually place thermal spokes
    - Where missing
 
 5. **Use copper keepout areas**:
-   - "I also had to place some copper keepout areas"
-   - "To adjust areas that were now over-pouring"
    - Use keepout areas
    - To control copper pour
 
 6. **Compare gerbers before and after**:
-   - "Export gerbers, compare the new gerbers"
-   - "Against the old gerbers"
    - Compare gerbers
    - To verify thermal spokes
 
 7. **Check plane settings for thermal ties**:
-   - "In VX, thermal ties (spokes)"
-   - "Are controlled in the plane settings"
    - Check plane settings
    - For thermal tie configuration
 
@@ -265,31 +214,25 @@ The Project Integration button doesn't go from Amber to Green. The message windo
 ### Fix
 
 1. **Update local libraries with Central Library data**:
-   - "Update local libraries"
-   - "With newer Central Library Data"
    - Update local libraries
    - Before forward annotation
 
 2. **Use Tools > Update Libraries in Designer**:
-   - "Tools->Update Libraries"
    - After any central library
    - Changes, use
    - Update Libraries
 
 3. **Check PartPkg.log for errors**:
-   - "See LogFiles/PartPkg.log for details"
    - Check the log file
    - For specific
    - Error details
 
 4. **Verify symbol pin names match PDB**:
-   - "Symbol pin name: TAB not found in PDB"
    - Verify pin names
    - Match between
    - Symbol and PDB
 
 5. **Reselect central library**:
-   - "Reselected the library.lmc"
    - Reselect the central library
    - To refresh
    - The connection

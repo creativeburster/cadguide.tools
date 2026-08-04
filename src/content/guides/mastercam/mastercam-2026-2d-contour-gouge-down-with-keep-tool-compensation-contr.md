@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.mastercam.com/about/media/mastercam-releases-2026-r2/"
-  - "https://www.mastercam.com/community/blog/why-gpu-simulation-is-a-breakthrough-for-complex-cnc-programming-now-in-mastercam-2026-r2/"
-  - "https://www.mastercam-china.com/static/file/mastercam2026-release-notes.pdf"
 ---
 
 # Mastercam 2026 2D Contour Gouge Down with Keep Tool Compensation Control, Machine Simulation Regression from Refactored Code Causing Gouging, Verify Gouges When Compensation Set to Control, GPU Simulation 10x Faster with Vulkan 1.3 and RTX 3060, and Mastercam Copilot AI Voice-Controlled Feed Rate and Spindle Speed Adjustment: R-40092 Fix, R-40335 Regression Fix, R-39611 Compensation Fix, GPU Setup, and Copilot Workflow
@@ -31,9 +28,6 @@ When using 2D contour toolpaths with the "Keep tool" compensation control option
 ### Fix
 
 1. **Update to Mastercam 2026**:
-   - "R-40092 | PB 1 | Milling Toolpaths"
-   - "2D contour causes a gouge down"
-   - "With Keep tool compensation Control"
    - Fixed in 2026 release
 
 2. **Use Control compensation instead of Keep tool**:
@@ -89,10 +83,6 @@ Machine Simulation in Mastercam 2025/2026 shows gouging that wasn't present in p
 ### Fix
 
 1. **Update to Mastercam 2026**:
-   - "R-40335 | TP 4 | Milling Toolpaths"
-   - "Machine Simulation has regression"
-   - "In Mastercam 2025/26 that causes gouging"
-   - "From a refactored code"
    - Fixed in 2026
 
 2. **Use Mastercam Simulator instead of Machine Simulation**:
@@ -126,7 +116,6 @@ Machine Simulation in Mastercam 2025/2026 shows gouging that wasn't present in p
    - And simulation screenshots
 
 7. **Use GPU simulation in 2026.R2**:
-   - "GPU simulation delivers up to 10x speed improvement"
    - Use GPU simulation in 2026.R2
    - Which uses updated simulation code
    - Without the regression
@@ -148,8 +137,6 @@ When running Verify (simulation) with the compensation type set to "Control," go
 ### Fix
 
 1. **Update to Mastercam 2026**:
-   - "R-39611 | TP 4 | Backplot/Verify/Simulation"
-   - "Verify gouges when compensation is set to Control"
    - Fixed in 2026
    - Update to the latest version
 
@@ -172,7 +159,6 @@ When running Verify (simulation) with the compensation type set to "Control," go
    - Simulation results
 
 5. **Verify with GPU simulation in 2026.R2**:
-   - "GPU simulation delivers up to 10x speed improvement"
    - Use GPU simulation in 2026.R2
    - For more accurate results
    - With Control compensation
@@ -206,47 +192,27 @@ Simulation and verification of complex toolpaths in Mastercam is slow, especiall
 ### Fix
 
 1. **Update to Mastercam 2026.R2**:
-   - "Mastercam 2026.R2 introduces GPU accelerated Simulation"
-   - "And Verification"
-   - "Up to 10x compared to CPU based simulation"
    - Update to 2026.R2
 
 2. **Verify GPU compatibility**:
-   - "A compatible GPU (recommended):"
-   - "NVIDIA GeForce RTX 3060 (12 GB) or"
-   - "AMD Radeon RX 7800 XT"
-   - "Vulkan 1.3 support"
-   - "Sufficient VRAM (12 GB recommended)"
    - Verify your GPU meets requirements
 
 3. **Enable GPU simulation**:
-   - "GPU Simulation is native to Mastercam 2026.R2"
-   - "And works within both Machine Simulation"
-   - "(external post) and Mastercam Simulator"
    - Enable GPU simulation in settings
 
 4. **Verify Vulkan 1.3 support**:
-   - "Parallel computation optimized through Vulkan 1.3"
    - Verify your GPU driver
    - Supports Vulkan 1.3
    - Update drivers if needed
 
 5. **Use full resolution simulation**:
-   - "Full resolution simulations become practical"
-   - "For everyday work"
    - Use full resolution
    - For accurate collision detection
 
 6. **Compare CPU vs GPU performance**:
-   - "Verification that took nearly 90 minutes"
-   - "With CPU simulation"
-   - "Completed in just over 22 minutes"
-   - "With GPU acceleration"
    - Compare performance
 
 7. **Use Tool vs. Stock collision detection**:
-   - "Realtime performance gains"
-   - "When Tool vs. Stock collision detection is enabled"
    - Enable Tool vs. Stock collision
    - For best GPU performance
 
@@ -267,43 +233,31 @@ Adjusting feed rates and spindle speeds across multiple operations is time-consu
 ### Fix
 
 1. **Update to Mastercam 2026.R2**:
-   - "Mastercam Copilot brings AI automation"
-   - "To everyday programming tasks"
    - Update to 2026.R2
    - For Copilot access
 
 2. **Use voice commands for adjustments**:
-   - "Machinists can adjust feed rates and spindle speeds"
-   - "Across multiple operations using voice or text commands"
    - Use voice commands
    - For feed rate and spindle speed changes
 
 3. **Use confirmation prompts**:
-   - "With confirmation prompts built in for safety"
    - Always review the confirmation prompt
    - Before accepting
    - Any Copilot adjustment
 
 4. **Use hands-free mode**:
-   - "A hands-free mode, activated by the keyword 'Copilot'"
-   - "Enables voice-controlled operation"
-   - "For users who prefer to keep their hands on the work"
    - Use hands-free mode with keyword "Copilot"
 
 5. **Build machine groups with Copilot**:
-   - "Can build complete machine groups"
-   - "Based on verbal descriptions"
    - Use Copilot to build
    - Machine groups from descriptions
 
 6. **Verify supported toolpath types**:
-   - "The assistant supports approximately 200 toolpath types"
    - Verify your toolpath type
    - Is supported by Copilot
    - Before using voice commands
 
 7. **Use text commands as alternative**:
-   - "Using voice or text commands"
    - If voice commands don't work
    - Use text commands
    - As an alternative

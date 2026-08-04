@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://forums.unrealengine.com/t/datasmith-exporter-gives-error-for-twinmotion-2024-1/1848129"
-  - "https://issues.unrealengine.com/issue/TM-20848"
-  - "https://forums.unrealengine.com/t/datasmith-reloading-file-crashes-revit-2024-tm-2024-1/1909447"
 ---
 
 # Twinmotion Datasmith Export Root Folder Error, UDatasmith Import Crash on Collapse Modes, Twinmotion to Unreal Plugin Version Compatibility, Datasmith Reload Crash from Revit, and Missing Materials After Import to Unreal Engine: Project Root Folder Configuration, Keep Hierarchy Workaround, Plugin Version Matching, and Update Installation
@@ -31,26 +28,19 @@ When exporting a Datasmith file from Twinmotion 2024.1, the error "Please select
 ### Fix
 
 1. **Save in the project root folder, not Content**:
-   - "You must specify the project's root folder"
-   - "Instead of saving it in the content folder, save it in the same location as the content folder"
    - Navigate to the UE project folder
    - Save at the same level as the Content folder
    - Not inside the Content folder
 
 2. **Create an Unreal Engine project first**:
-   - "You will need to create an UnrealEngine project first and have it saved somewhere on your computer"
-   - "Once the project file is created, UE creates a folder in that saved file location"
    - Create the UE project before exporting from Twinmotion
    - This gives you the correct folder structure
 
 3. **Export directly into the UE project folder**:
-   - "In Twinmotion, you will need to export the datasmith file into the UE project folder directly"
-   - "You can't just export datasmith files to random folders anymore"
    - Browse to the UE project root folder
    - Save the .udatasmith file there
 
 4. **Check for network drive issues**:
-   - "My original project is stored on a network drive, so wondering if that is the cause of it?"
    - Network drives may cause permission or path issues
    - Try exporting to a local drive
    - Then copy to the network drive if needed
@@ -69,8 +59,6 @@ When exporting a Datasmith file from Twinmotion 2024.1, the error "Please select
    - Updating to the latest version is recommended
 
 7. **Check for the same issue with other users**:
-   - "Can we get an update on this thread? I'm running into the same issue"
-   - "The same issue is here, does anyone know how to fix this?"
    - This is a common issue
    - The root folder solution works for most users
 
@@ -91,20 +79,16 @@ Importing a .udatasmith file in Twinmotion 2025.1.1 consistently crashes. The cr
 ### Fix
 
 1. **Use Keep Hierarchy mode as workaround**:
-   - "Keep Hierarchy mode did not crash"
    - When importing .udatasmith files
    - Set Collapse mode to "Keep Hierarchy"
    - This avoids the crash entirely
    - The hierarchy is preserved instead of collapsed
 
 2. **Update to Twinmotion 2025.2 beta 3 or later**:
-   - "Target Fix: twinmotion 2025.2 beta 3"
-   - "Resolved: Aug 11, 2025"
    - The fix is in Twinmotion 2025.2
    - Install the latest version
 
 3. **Use a prior Twinmotion version**:
-   - "Crash does not occur in prior versions"
    - If you can't update to 2025.2
    - Use Twinmotion 2025.1.0 or earlier
    - The collapse modes work correctly in those versions
@@ -122,7 +106,6 @@ Importing a .udatasmith file in Twinmotion 2025.1.1 consistently crashes. The cr
    - This helps verify the fix
 
 6. **Check the issue tracker**:
-   - "Unreal Engine Issues and Bug Tracker (TM-20848)"
    - Check the issue status at issues.unrealengine.com
    - Verify the fix is in your version
    - Report if the crash persists after the fix
@@ -144,43 +127,28 @@ After importing a Twinmotion Datasmith export into Unreal Engine, materials are 
 ### Fix
 
 1. **Check version compatibility**:
-   - "Twinmotion 2024 Datasmith Exports WILL work with UE 5.4 WITHOUT the datasmith Plugin"
-   - "Twinmotion 2024 Datasmith Exports will NOT work with UE 5.3's version of the plugin"
-   - "Only Twinmotion 2023.3.1.2 Datasmith Exports WILL work with UE 5.3"
    - Check the compatibility matrix before importing
 
 2. **Install the correct plugins**:
-   - "Please install Twinmotion Content for Unreal Engine Plugin (Beta 4)"
-   - "And Datasmith Twinmotion Importer Plugin (Beta 4)"
-   - "And enable both plugins"
    - Install from UE Marketplace
 
 3. **Use UE 5.4+ for Twinmotion 2024 exports**:
-   - "Twinmotion 2024 Datasmith Exports WILL work with UE 5.4"
-   - "WITHOUT the datasmith Plugin"
    - Upgrade to UE 5.4 or later
    - This simplifies the workflow
 
 4. **Use UE 5.1-5.2 for Twinmotion 2022 or older**:
-   - "Twinmotion 2022 or older didn't have a datasmith exporter"
-   - "It is only compatible with the 'retired' Twinmotion to unreal plugin in UE 5.1"
-   - "Also worked with UE 5.2"
    - Use the retired plugin for old Twinmotion versions
 
 5. **Upgrade UE for Twinmotion 2025**:
-   - "Is UE 5.1 compatible with TM 2025, or should I upgrade to 5.3 or higher?"
    - Upgrade to UE 5.4 or later for Twinmotion 2025
    - UE 5.1 is not compatible with TM 2025
    - Materials will not import correctly
 
 6. **Reinstall plugins after updating**:
-   - "After updating the plugin I have no more material on the landscape"
-   - "Error: No compatible asset for path"
    - Reinstall both plugins after any update
    - Verify plugin versions match
 
 7. **Check the Twinmotion Materials package**:
-   - "The Twinmotion Materials for Unreal Engine package is not related to the Twinmotion To Unreal plugin"
    - These are separate packages
    - Install both for full material support
    - Don't confuse the two
@@ -202,34 +170,24 @@ The Datasmith reload function in Twinmotion 2024.1 had a bug that caused an acce
 ### Fix
 
 1. **Install the latest Twinmotion update**:
-   - "There was a recent update, which I installed, and apparently this has resolved this issue"
-   - "I have been able to Export new Datasmith files (overwriting the existing one)"
-   - "And in TM, reload the DS file"
-   - "I have been able to do this 4 times now, without incident"
    - Install the latest Twinmotion update
 
 2. **Import as new and delete old as workaround**:
-   - "Sure, I can import the new model, then delete the old one"
-   - "Then RE-APPLY ALL my Materials"
    - If the reload crashes
    - Import the updated model as a new import
    - Delete the old model
    - Re-apply materials manually
 
 3. **Use Direct Link instead of Datasmith export**:
-   - "A livelink isn't an available option (as you need 2025 for that version)"
    - For Revit 2025+, use Direct Link
    - This avoids the export/reload workflow
    - Direct Link updates automatically
 
 4. **Check the update installation location**:
-   - "Where was the location for the update installation?"
-   - "I checked Autodesk Access but there is no new version available"
    - Check Twinmotion for updates, not Autodesk Access
    - The update is for Twinmotion, not Revit
 
 5. **Save before reloading**:
-   - "I'm still cringing a little as the progress bar gets to the end"
    - Always save your Twinmotion project before reloading
    - If the reload crashes, you can restore
    - Without losing your work
@@ -264,20 +222,14 @@ Twinmotion 2025 is not compatible with Unreal Engine 5.1's Datasmith plugin. The
 ### Fix
 
 1. **Upgrade to UE 5.4 or later**:
-   - "Twinmotion 2024 Datasmith Exports WILL work with UE 5.4"
    - Twinmotion 2025 requires UE 5.4 or later
    - Upgrade your Unreal Engine version
    - This is the primary fix
 
 2. **Install the correct plugin versions**:
-   - "Install Twinmotion Content for Unreal Engine Plugin (Beta 4)"
-   - "And Datasmith Twinmotion Importer Plugin (Beta 4)"
-   - "And enable both plugins"
    - Get them from the UE Marketplace
 
 3. **Check the output log for material errors**:
-   - "DatasmithImport: Error: No compatible asset for path"
-   - "Skipping material ..."
    - These errors confirm the version mismatch
    - Upgrade UE to resolve
 
@@ -288,7 +240,6 @@ Twinmotion 2025 is not compatible with Unreal Engine 5.1's Datasmith plugin. The
    - Verify all textures are applied
 
 5. **Check for DrawScale warnings**:
-   - "I see invalid DrawScale/DrawScale3D warnings in the output log"
    - These may indicate scale issues in the import
    - Check the scale settings in the Datasmith import options
    - Verify the model scale is correct
@@ -297,7 +248,6 @@ Twinmotion 2025 is not compatible with Unreal Engine 5.1's Datasmith plugin. The
    - If you can't upgrade to UE 5.4
    - Use Twinmotion 2023.3.1.2
    - This is the only version compatible with UE 5.3
-   - "Any other version of Twinmotion Datasmith exports will not work with UE 5.3"
 
 7. **Don't use UE 5.1 with Twinmotion 2025**:
    - UE 5.1 is not compatible with TM 2025

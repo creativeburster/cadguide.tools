@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
-  - "https://www.practicalmachinist.com/forum/threads/bobcad-v36-post-processor-not-posting-tool-list.418295/"
-  - "https://bobcad.com/editing-a-post-processor-in-bobcad-cam/"
-  - "https://bobcadsupport.com/knowledgebase/posting-window-is-blank-no-g-code-showing/"
 ---
 
 # BobCAD-CAM Post Processor and Posting Errors: V36 Post Processor Not Posting Tool List from output_tool_list Commented Out Requiring Uncomment, Posting Window Blank from Unmounted Window or Missing C++ Redistributable Requiring Remount or vcredist Install, CL File Not Found from Old Version NC Path Requiring Current Settings Update, Grooving G71 Canned Cycle Rapids Along Profile with No Clearance Requiring G01 Move Fix, and Exception Raised in Calculation Routine from Machine Tolerance or Step Over Requiring Parameter Adjustment
@@ -31,7 +28,6 @@ The V36 post processor has the `output_tool_list` command commented out with `//
 ### Fix
 
 1. **Uncomment the output_tool_list line**:
-   - "In block 0 (zero) add or copy paste this on its own line: output_tool_list"
    - Open the post processor file (.BCPst) in a text editor
    - Find the line `//output_tool_list`
    - Remove the `//` to uncomment it
@@ -46,13 +42,10 @@ The V36 post processor has the `output_tool_list` command commented out with `//
    - `(T8 - 12.7 DIA. ENDMILL ROUGH)`
 
 3. **Check the original post processor**:
-   - "The original post processor shows the line as: //output_tool_list"
-   - "I went in and removed the block delete line // so it now reads: output_tool_list"
    - Always compare with a known working post processor
    - Keep backup copies
 
 4. **Use V34 post as reference**:
-   - "If I post the program using the older V34 post processor, it posts just fine"
    - Compare V34 and V36 post files
    - Identify all differences
    - Apply V34 settings to V36
@@ -73,31 +66,18 @@ Two potential causes: (1) The posting window has become unmounted from the softw
 
 ### Fix
 
-1. **Remount the posting window**:
-   - "Move the Posting window by holding left-click on the top bar"
-   - "There will be arrows that pop up"
-   - "Drag your cursor into one of the arrows and let go"
-   - "This will mount it back into the software"
+1. **Remount the posting window**.
 
 2. **Reset the UI layout**:
-   - "Go to File > User Profile"
-   - "Right-click on one of the 'Profile Layouts'"
-   - "Select 'Load'"
    - This resets all windows to their default positions
 
-3. **Refresh the screen**:
-   - "Click on 'File' and then click back to the 'Home' tab"
-   - "This refreshes the screen"
-   - "You should now see the G-Code in the posting window after posting out"
+3. **Refresh the screen**.
 
 4. **Install C++ 2010 x86 redistributable**:
-   - "You need to make sure you have 2010 x86 installed"
-   - "This is what the Posting Engine uses to post out the code"
    - Download from Microsoft: vcredist_x86.exe
    - Restart your computer after installation
 
 5. **Complete reinstall for persistent issues**:
-   - "Login to main Admin account and do a complete uninstall/reinstall"
    - This ensures all dependencies are installed
    - Don't install under a standard user account
    - Use the main Admin account
@@ -119,7 +99,6 @@ Posting a toolpath produces: "CL file not found" or "C:\BobCAD-CAM Data\BobCAD-C
 ### Fix
 
 1. **Update NC file path in Current Settings**:
-   - "Set NC File Path to: C:\BobCAD-CAM Data\BobCAD-CAM V(current version)\NC\(Machine Type)"
    - Right-click CAM Defaults in CAM Tree > Current Settings
    - Go to Posting page
    - Update the NC file path to the current version
@@ -214,19 +193,16 @@ The calculation routine encounters an error in the 3D trimming algorithm. This c
 ### Fix
 
 1. **Adjust Machine Tolerance**:
-   - "Try adjusting Machine Tolerance"
    - In Current Settings > Machine Parameters
    - Increase or decrease the tolerance value
    - Try values between 0.001 and 0.01
 
 2. **Adjust Step Over**:
-   - "Try adjusting Step over"
    - In the toolpath parameters
    - Reduce the step over value
    - Try 50% of tool diameter or less
 
 3. **Check Job geometry**:
-   - "Try adjusting geometry of Job"
    - Verify the geometry is clean (no self-intersections)
    - Check for duplicate surfaces
    - Simplify complex geometry
@@ -238,8 +214,6 @@ The calculation routine encounters an error in the 3D trimming algorithm. This c
    - Check stock definition
 
 5. **Set non-zero radius for thread milling**:
-   - "Can not build orthogonal vector on base, base and direction are colinear"
-   - "Set the 'Radius' value on the Leads page to a non-zero number in the Mill Thread Feature"
    - Zero radius causes the vector calculation to fail
    - Set radius to a small non-zero value
 

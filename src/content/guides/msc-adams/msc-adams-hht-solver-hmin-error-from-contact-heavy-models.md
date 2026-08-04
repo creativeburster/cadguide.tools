@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://help-be.hexagonmi.com/bundle/Adams_2021.0.2_Adams_Solver_User_Guide/raw/resource/enus/Adams_2021.0.2_Adams_Solver_User_Guide.pdf"
-  - "https://nexus.hexagon.com/community/public/adams/f/adams-community-forum/145769/hht-solver-hmin-error"
-  - "https://nexus.hexagon.com/community/public/adams/f/adams-community-forum/145186/simulation-error-urgent-help-is-needed"
 ---
 
 # MSC Adams HHT Solver Hmin Error from Contact-Heavy Models, Acceleration Computation Failed to Converge from Self-Written Contact Subroutines, GSTIFF Corrector Failures at Small Step Sizes from Ill-Conditioned Jacobian, Discontinuities from MIN MAX IF Functions Causing Corrector Failures, and Native Solids Contact Instability from Faceting Tolerance Gaps: ADAPTIVITY Parameter, Model Debug, SI2 Formulation, Discontinuity Removal, and Faceting Adjustment
@@ -31,44 +28,27 @@ When running the HHT solver for an Adams/View model, the simulation errors becau
 ### Fix
 
 1. **Set ADAPTIVITY parameter**:
-   - "Setting the parameter ADAPTIVITY=1e-9"
-   - "Typically prevents this from happening"
-   - "Without any ill effects"
    - Set ADAPTIVITY under INTEGRATOR
 
 2. **Set ADAPTIVITY to typical_timestep/1000**:
-   - "Adaptivity defaults to 100*HMIN"
-   - "But as HMIN is so small for HHT"
-   - "It barely helps without explicitly setting it"
-   - "To something meaningful (like typical_timestep/1000)"
    - Set to meaningful value
 
 3. **Use GSTIFF as alternative**:
-   - "I've never encountered this with GSTIFF"
    - Use GSTIFF integrator
    - As alternative to HHT
 
 4. **Upgrade to Adams 2023.3**:
-   - "In 2023.2 (I think) adaptivity was introduced"
-   - "In the C++ solver"
-   - "Upgrade to 2023.3 which is more stable"
    - And have improved solver features
 
 5. **Check contact definition**:
-   - "How do you define the contacts"
-   - "Are you using parasolids, native parts"
    - Check contact definition
    - Method
 
 6. **Use parasolids instead of native solids**:
-   - "When I substitute 3 of the parasolids"
-   - "With native solids the model is even more unstable"
    - Use parasolids
    - For more stable contact
 
 7. **Adjust solver error**:
-   - "The only work around I have found"
-   - "Is adjusting the solver error"
    - Adjust solver error
    - As workaround
 
@@ -89,46 +69,27 @@ The simulation fails with "ERROR: Time 0.000000E+00: Acceleration computation fa
 ### Fix
 
 1. **Check the .adm file for PART/100**:
-   - "PART/100 is defined in the .adm file"
-   - "This file should be in the working directory"
-   - "Otherwise create it by doing"
-   - "File > Export > Adams Solver Dataset + ok"
    - Check the .adm file
 
 2. **Debug self-written subroutines**:
-   - "I use self-written subroutines"
-   - "For contact detection"
    - Debug the subroutines
    - For invalid forces
 
 3. **Check mass and inertia properties**:
-   - "Check mass and inertia properties"
-   - "To ensure they are valid"
    - Verify mass and inertia
    - Are correct
 
 4. **Verify units**:
-   - "Make sure the choice of units"
-   - "Is appropriate for the system"
-   - "Systems that have very small inertias"
-   - "May benefit from small force units"
    - Check units
 
 5. **Check motion generators**:
-   - "Check that motion generators are valid"
-   - "And no redundant constraints exist"
    - Verify motion generators
    - And constraints
 
 6. **Check impact functions**:
-   - "Check if impact functions"
-   - "Caused a strange response"
-   - "Verify properties"
    - Check impact functions
 
 7. **Use GSTIFF SI2 formulation**:
-   - "ADAMS GSTIFF integrator"
-   - "With SI2 formulation"
    - Use SI2 for
    - Better accuracy
 
@@ -149,47 +110,26 @@ GSTIFF I3 integrator encounters corrector failures at small step sizes. The corr
 ### Fix
 
 1. **Use GSTIFF SI2 formulation**:
-   - "Corrector failures that small step sizes cause"
-   - "Occur less frequently than with GSTIFF I3"
-   - "Singular matrices due to small step sizes"
-   - "Occur less frequently"
    - Use SI2
 
 2. **Control HMAX for constant step size**:
-   - "Control HMAX so that the integrator"
-   - "Runs at a constant step size"
-   - "And runs consistently at a high order (three or more)"
    - Set HMAX
 
 3. **Set HINIT=HMAX**:
-   - "Try setting HINIT=HMAX"
    - Set initial step size
    - Equal to maximum
    - For consistency
 
 4. **Don't let integrator step over events**:
-   - "Don't let the integrator step over important events"
-   - "Short duration events like an impulse"
-   - "Can be captured by setting HMAX"
-   - "To value less than impulse width"
    - Set HMAX for events
 
 5. **Use SI2 for contact and friction models**:
-   - "Recommended for models where velocity"
-   - "Or high frequency accuracy might be important"
-   - "Common examples include models with contact or friction"
    - Use SI2 for contact
 
 6. **Accept 25-100% slower for SI2**:
-   - "Is typically 25% to 100% slower"
-   - "Than regular GSTIFF"
-   - "When run with the same error"
    - Accept slower speed
 
 7. **Ensure smooth velocity inputs**:
-   - "Requires that all velocity inputs be differentiable"
-   - "Non-smooth motions cause failures"
-   - "In the SI2 formulation"
    - Ensure smooth inputs
 
 ### Community Report
@@ -209,8 +149,6 @@ The simulation fails with corrector failures. The model uses discontinuous funct
 ### Fix
 
 1. **Remove discontinuous functions**:
-   - "Discontinuities are the root cause"
-   - "Of most simulation failures"
    - Remove MIN, MAX, DIM, MOD, IF
    - From the model
 
@@ -227,28 +165,17 @@ The simulation fails with corrector failures. The model uses discontinuous funct
    - For conditional logic
 
 4. **Check for discontinuous forces**:
-   - "Discontinuous forces cause corrector failures"
    - Check all force definitions
    - For discontinuities
    - And replace with smooth functions
 
 5. **Check for discontinuous motions**:
-   - "Non-smooth motions, which theoretically"
-   - "Cause infinite accelerations"
-   - "Cause failures in the SI2 formulation"
    - Use smooth motions
 
 6. **Use contact with penetration**:
-   - "Contacts should penetrate before statics"
-   - "Models with impacts should have"
-   - "Slight penetration in model position"
-   - "When doing statics"
    - Allow slight penetration
 
 7. **Perform initial static first**:
-   - "Perform initial static first, when applicable"
-   - "A static solution may be more difficult"
-   - "Than a dynamic solution"
    - Run static first
 
 ### Community Report
@@ -268,21 +195,13 @@ When substituting parasolids with native solids for contact definition, the mode
 ### Fix
 
 1. **Adjust faceting_tolerance**:
-   - "Native solids getting out of hand"
-   - "May be due to the faceting_tolerance"
-   - "That you are using (possibly default?)"
    - Adjust faceting tolerance
 
 2. **Use parasolids instead of native solids**:
-   - "When I substitute 3 of the parasolids"
-   - "With native solids the model is even more unstable"
    - Use parasolids
    - For more stable contact
 
 3. **Check for gaps in faceting**:
-   - "If one surface is very complex"
-   - "There may be gaps in the faceting"
-   - "Even if it is considered a solid"
    - Check for faceting gaps
 
 4. **Use finer faceting for complex surfaces**:
@@ -292,8 +211,6 @@ When substituting parasolids with native solids for contact definition, the mode
    - In the contact geometry
 
 5. **Verify contact direction**:
-   - "This made the contact to reverse"
-   - "And the parts were jammed together"
    - Verify contact direction
    - Is correct
 
@@ -304,9 +221,6 @@ When substituting parasolids with native solids for contact definition, the mode
    - For better stability
 
 7. **Use flex body contact softening**:
-   - "A new softening factor for contact stiffness"
-   - "And damping helps compensate for artificial stiffening"
-   - "When flexible-body contact is distributed across many nodes"
    - Use softening factor
 
 ### Community Report

@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-during-export"
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-while-baking"
-  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/known-issues"
 ---
 
 # Substance Painter 2026 Crash During Export from TDR Timeout and Low Virtual Memory, Crash While Baking from GPU Raytracing and Ryzen CPU BIOS, Crash from Insufficient Disk Space and SVT Cache, Freeze on Export from Specific Projects, and Crash on Startup with NVIDIA GTX 10xx Series: TDR Registry Increase, Live Preview Disable, GPU Raytracing Disable, BIOS Update, and Disk Space Cleanup
@@ -31,20 +28,13 @@ Substance 3D Painter crashes while exporting, especially at very high resolution
 ### Fix
 
 1. **Increase TDR delay in Windows Registry**:
-   - "The TDR is a safety mechanism"
-   - "Too restrictive for Substance 3D Painter"
    - Increase TdrDelay
    - In registry
 
 2. **Increase virtual memory**:
-   - "If the virtual memory size is too small"
-   - "Substance 3D Painter will crash"
-   - "Because it ran out of total memory"
    - Increase virtual memory
 
 3. **Export at lower resolution**:
-   - "Especially at very high resolution"
-   - "(such as 4K or 8K)"
    - Export at
    - 2K instead
 
@@ -55,9 +45,6 @@ Substance 3D Painter crashes while exporting, especially at very high resolution
    - Exporting
 
 5. **Disable GPU overclocking**:
-   - "Overclocked GPUs can often"
-   - "Be more unstable"
-   - "Disable the overclocking"
    - Disable overclock
 
 6. **Increase system RAM**:
@@ -89,24 +76,12 @@ Substance 3D Painter crashes during the baking process. The crash occurs during 
 ### Fix
 
 1. **Disable live preview baking**:
-   - "Disable the option"
-   - "Enable live preview baking process"
-   - "Edit > Settings > General"
-   - "Baking Options"
    - Disable live preview
 
 2. **Disable GPU raytracing**:
-   - "Uncheck/Disable the option"
-   - "Enable GPU raytracing"
-   - "Edit > Settings > General"
-   - "Baking Options"
    - Disable raytracing
 
 3. **Update BIOS for Ryzen CPUs**:
-   - "An update of the BIOS"
-   - "Usually fix the problem"
-   - "Refer to the Motherboard manual"
-   - "And constructor website"
    - Update BIOS
 
 4. **Update GPU drivers**:
@@ -116,9 +91,6 @@ Substance 3D Painter crashes during the baking process. The crash occurs during 
    - For baking
 
 5. **Delete incompatible assbin files**:
-   - "Simply deleting them"
-   - "Should solve the problem"
-   - "As they will be regenerated"
    - Delete assbin files
 
 6. **Use CPU baking instead of GPU**:
@@ -150,15 +122,9 @@ Substance 3D Painter crashes due to lack of disk space. The crash occurs when Sp
 ### Fix
 
 1. **Free up disk space**:
-   - "If there is not enough free space"
-   - "On your disk, it may lead"
-   - "To a crash"
    - Free disk space
 
 2. **Move SVT cache location**:
-   - "Cache location can be moved"
-   - "From the default system"
-   - "Temporary files folder"
    - Move cache
 
 3. **Use SSD with sufficient space**:
@@ -238,8 +204,6 @@ Export from specific projects causes a crash or freeze. The issue is project-spe
    - Version
 
 6. **Check UV tile configuration**:
-   - "UV Tiles: No error message"
-   - "On overlapping UV spaces"
    - Check UV
    - Tile setup
 
@@ -278,8 +242,6 @@ Substance 3D Painter crashes during startup on machines with NVIDIA GTX 10xx ser
    - Ready drivers
 
 3. **Update Substance Painter**:
-   - "Crash during startup"
-   - "On Nvidia GTX 10xx series"
    - Update to
    - Latest version
 

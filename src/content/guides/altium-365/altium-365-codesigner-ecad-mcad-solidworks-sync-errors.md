@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
-  - "https://www.altium.com/documentation/knowledge-base/altium-designer/mcad-codesigner-troubleshooting-guide"
-  - "https://www.altium.com/documentation/knowledge-base/altium-designer/troubleshoot-solidworks-codesigner-panel-error--there-is-no-document-opened"
-  - "https://www.altium.com/documentation/knowledge-base/altium-designer/troubleshoot-the-internal-id-does-not-match-issue-with-solidworks-mcad"
 ---
 
 # Altium 365 CoDesigner ECAD-MCAD SolidWorks Sync Errors: SpeedPak Configuration Deletes CoDesigner Link Properties Causing No Document Opened, Internal ID Does Not Match from Multiple Boards Without Common Component Folder, AddALU_items Failed from Insufficient Workspace Permissions, Components Shifted from Negative Coordinates in SolidWorks, and SOLIDWORKS Decal Rendering Issues from Graphics Card Compatibility and Enhanced Graphics Performance
@@ -46,7 +43,6 @@ CoDesigner stores the link to Altium's PCB Project (and other properties) in the
    - This restores the link between SolidWorks and Altium
 
 3. **Prevent the issue in the future**:
-   - "To avoid this situation in the future, simply add one more configuration together with adding the SpeedPak"
    - That additional configuration will keep Altium's properties alive
    - The SpeedPak configuration won't delete properties from other configurations
 
@@ -164,29 +160,24 @@ SolidWorks allows negative coordinates, but Altium Designer cannot place compone
 ### Fix
 
 1. **Work in positive coordinates in MCAD**:
-   - "It is important to work in positive co-ordinates in MCAD because Altium Designer cannot place in negative co-ordinates"
    - Keep the board origin at (0,0,0) or in positive space
    - Don't move the board or components into negative coordinates
 
 2. **Use the absolute Origin for placement**:
-   - "MCAD CoDesigner uses the absolute Origin to place components"
    - Don't change the origin in SolidWorks after pulling the design
    - If the origin must be changed, regenerate the assembly from Altium
 
 3. **Regenerate the assembly if shifted**:
    - If components are already shifted, the assembly needs to be regenerated
-   - "This can cause issues and the assembly will need to be generated again"
    - Delete the current assembly in SolidWorks
    - Pull the design from Altium into a new folder
 
 4. **Check MCAD templates**:
-   - "This can also be caused by incompatible templates in MCAD"
    - Verify that the SolidWorks template used for CoDesigner is correct
    - Check template paths in CoDesigner settings
    - Use the recommended template from Altium documentation
 
 5. **Verify template paths**:
-   - "Verify that the MCAD template paths are configured correctly"
    - Pull the design into a new folder to test
    - If successful, replace the previous assembly generated with incorrect templates
 
@@ -207,13 +198,11 @@ Decal rendering in SolidWorks depends on graphics card and driver compatibility.
 ### Fix
 
 1. **Verify graphics card and driver compatibility**:
-   - "Verify that your graphics card and driver are supported by SOLIDWORKS"
    - Check the SolidWorks certified graphics card list
    - Update to the latest certified driver
    - Use SolidWorks Rx to check graphics system status
 
 2. **Adjust Enhanced Graphics Performance**:
-   - "Enable or disable the Enhanced Graphics Performance under System > Performance"
    - Try toggling this setting and restart SolidWorks
    - One state may fix decal rendering while the other breaks it
 
@@ -230,7 +219,6 @@ Decal rendering in SolidWorks depends on graphics card and driver compatibility.
    - Without this, decals may not transfer through CoDesigner
 
 5. **Disable conflicting third-party plugins**:
-   - "Another third-party plugin may be interfering with operation"
    - Temporarily disable other add-ins in SolidWorks
    - Tools > Add-Ins > clear checkboxes under Active Add-ins
    - Re-enable add-ins one by one to identify conflicts

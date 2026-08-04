@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://innovationspace.ansys.com/knowledge/forums/topic/how-to-fix-designmodeler-when-it-cannot-be-started-anymore-in-workbench/"
-  - "https://innovationspace.ansys.com/knowledge/forums/topic/how-to-solve-problem-with-starting-designmodeler-in-workbench-on-windows/"
-  - "https://innovationspace.ansys.com/forum/forums/topic/licensing-problems-with-anything-after-2021h2/"
 ---
 
 # Ansys Workbench DesignModeler Script Error from Corrupted Preferences XML, Project Schematic Refresh Error from Corrupted Workbench File, License Server Communication Timeout from Network Latency, DesignModeler Won't Start from Corrupted AppData, and Product Configuration Missing After Update: AppData Reset, Preferences XML Copy, ansyslmd.ini Timeout Settings, and ProductConfig Reconfiguration
@@ -30,18 +27,10 @@ DesignModeler suddenly cannot be started from Workbench, when it worked before. 
 
 ### Fix
 
-1. **Rename or delete the Ansys AppData folder**:
-   - "These are found in the folder %APPDATA%\\ANSYS"
-   - "Or C:\\Users\\<username>\\AppData\\Roaming\\Ansys"
-   - "In this folder subfolders can be found for each installed ANSYS version"
-   - "You can simply delete (or rename) the folder for the ANSYS version"
-   - "The folder will be re-generated automatically"
+1. **Rename or delete the Ansys AppData folder**.
 
 2. **Copy the default Preferences XML from installation**:
-   - "If the above does not fix the issue, then it might be related to a corrupted Preferences file"
-   - "Copy the file from your installation folder:"
    - `C:\\Program Files\\ANSYS Inc\\v195\\aisol\\AGP\\AGPages\\Language\\en-us\\xml\\agPreferences.xml`
-   - "To: C:\\Users\\<username>\\AppData\\Roaming\\Ansys\\v195\\en-us\\agPreferences.xml"
 
 3. **Check for multiple Ansys versions**:
    - If multiple Ansys versions are installed
@@ -96,7 +85,6 @@ The Workbench project file (.wbpj) or its associated database files have become 
    - This is the most reliable fix
 
 2. **Use the Workbench project recovery**:
-   - "How to restore the corrupted project in ANSYS Workbench"
    - Workbench has a built-in recovery mechanism
    - Try opening the project with the recovery option
    - If available in your version
@@ -148,9 +136,6 @@ Ansys Workbench 2022R1 and newer can't communicate with the licensing server. Wo
 ### Fix
 
 1. **Add timeout settings to ansyslmd.ini**:
-   - "Go to C:\\Program Files\\ANSYS Inc\\Shared Files\\Licensing directory"
-   - "Copy the ansyslmd.ini file to the desktop"
-   - "Open the ansyslmd.ini file using Notepad and add the following lines:"
    ```
    ANSYSLI_FNP_IP_ENV=1
    ANSYSLI_TIMEOUT_FLEXLM=20
@@ -160,27 +145,19 @@ Ansys Workbench 2022R1 and newer can't communicate with the licensing server. Wo
    ```
 
 2. **Check network connectivity**:
-   - "Open a command prompt and execute ping <license_server>"
    - Check for packet loss or high latency
    - If using VPN, test with and without VPN
    - Network instability causes license timeouts
 
 3. **Verify license server settings**:
-   - "Open the Licensing Settings 2023R1"
-   - "See if the server info is populated"
-   - "Does the test button return a green tick?"
    - Ensure the correct server is configured
 
 4. **Check for multiple Ansys versions**:
-   - "Can you check if you are pointed to the same server"
-   - "In the Client Licensing Settings 2021R1/R2 as well?"
    - Different Ansys versions may have different license server settings
    - Ensure all versions point to the same server
 
 5. **Update license server manager**:
-   - "License Manager is 2023R1 version 1.5.1 on the server"
    - Ensure the license server runs a compatible version
-   - "Your license server must be using a minimum of Ansys License Manager Release 2024 R1.03"
    - For Ansys 2025 R1 and newer
 
 6. **Check firewall settings**:
@@ -190,8 +167,6 @@ Ansys Workbench 2022R1 and newer can't communicate with the licensing server. Wo
    - Firewall can cause intermittent timeouts
 
 7. **Test with individual solvers**:
-   - "Can you launch SpaceClaim 2021R2 and 2023R1 one at a time"
-   - "Are you able to launch it without errors?"
    - If individual solvers work but Workbench doesn't
    - The issue is Workbench-specific timeout
 
@@ -212,43 +187,35 @@ The user's Ansys settings in AppData have become corrupted. The corruption may b
 ### Fix
 
 1. **Update graphics card driver**:
-   - "Check that the graphics card driver is up to date"
    - Download the latest driver from NVIDIA or AMD
    - Install and restart
    - Try launching DesignModeler
 
 2. **Unconfigure and reconfigure the product**:
-   - "Unconfigure and re-configure the product and CAD installation"
-   - "With 'Product & CAD Configuration' tool available from the Start menu"
    - Run ProductConfig.exe as Administrator
    - Select all options and install prerequisites
 
 3. **Check if the issue is user-specific**:
-   - "Is the issue user specific, i.e. try with a different user login?"
    - If DesignModeler works for other users
    - The issue is in the user's profile
    - Follow the AppData reset steps
 
 4. **Rename AppData\\Ansys folder**:
-   - "Open %APPDATA% and rename or remove the directory 'Ansys'"
    - This removes all corrupted user settings
    - The folder will be recreated on next launch
    - With default settings
 
 5. **Rename %TEMP%\\.ansys folder**:
-   - "Open %TEMP% and rename or remove the directory '.ansys'"
    - This removes corrupted temporary data
    - That may prevent DesignModeler from starting
    - Restart Workbench after renaming
 
 6. **Recreate the Windows user profile**:
-   - "If the above does not help, re-create the user profile on the Windows machine"
    - This is a last resort
    - Create a new Windows user account
    - And migrate to the new profile
 
 7. **Check firewall and antivirus**:
-   - "Check Firewall and virus scanner settings, or deactivate temporarily"
    - Firewall or antivirus may block DesignModeler
    - Add Ansys to exclusions
    - Test with antivirus temporarily disabled
@@ -269,33 +236,17 @@ The Product Configuration step was not properly completed during the update. Ans
 
 ### Fix
 
-1. **Run ProductConfig.exe as Administrator**:
-   - "Run the ProductConfig.exe from C:\\Program Files\\ANSYS Inc\\v2xx"
-   - "Right clicking the productconfig.exe file and select 'Run as Administrator'"
-   - "Selecting all options"
-   - "Make sure you also click on 'Install Required Prerequisites'"
+1. **Run ProductConfig.exe as Administrator**.
 
-2. **Uninstall and reinstall Visual C++ redistributables**:
-   - "Please try uninstalling these:"
-   - "Microsoft Visual C++ 2019 / x86 and x64"
-   - "Microsoft Visual C++ 2017 / x86 and x64"
-   - "Download and install the Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019, both x86 and x64"
+2. **Uninstall and reinstall Visual C++ redistributables**.
 
-3. **Rename the Ansys AppData folder**:
-   - "Open a file explorer and enter %APPDATA% in the address line"
-   - "Here you will find an Ansys directory"
-   - "Rename that corresponding folder (i.e. v211) to a different name (i.e. backup_v211)"
-   - "The folder will automatically get created again"
+3. **Rename the Ansys AppData folder**.
 
 4. **Restart Workbench after reconfiguration**:
-   - "Then start Ansys Workbench again"
-   - "And test to open Ansys Meshing"
    - The fresh configuration should resolve the issue
    - If not, proceed to clean reinstall
 
 5. **Clean uninstall and reinstall**:
-   - "If the above workaround doesn't help"
-   - "Can you try re-installing the Ansys version on client machine?"
    - Uninstall Ansys completely
    - Delete remaining folders, then reinstall
 

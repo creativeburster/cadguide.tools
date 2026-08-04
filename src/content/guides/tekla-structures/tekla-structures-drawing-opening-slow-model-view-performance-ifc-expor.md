@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://support.tekla.com/article/drawing-takes-a-very-long-time-to-open"
-  - "https://support.tekla.com/article/tekla-structures-performance-issues"
-  - "https://support.tekla.com/doc/tekla-structures/2025/rel_changes_in_advanced_options"
 ---
 
 # Tekla Structures Drawing Opening Slow, Model View Performance, IFC Export UDA Inheritance, Component Nesting Crash, and Storing Modifying Large Object Slowness: Advanced Options Tuning, Model History Collection, Graphics Driver Update, and Service Pack Fixes
@@ -38,7 +35,6 @@ A Tekla Structures drawing takes around 20 minutes to open. The project has seve
    - These reduce the number of internal lines computed
 
 2. **Reduce view depth in drawings**:
-   - "Lines can be hidden behind other lines if a view depth is set too high"
    - Open the drawing view properties
    - Reduce the view depth to the minimum needed
    - This reduces hidden line computation
@@ -50,17 +46,14 @@ A Tekla Structures drawing takes around 20 minutes to open. The project has seve
    - Reduce the number of per-object overrides
 
 4. **Update to the latest service pack**:
-   - "Install the latest service pack of the Tekla Structures version"
    - Each service pack includes performance improvements
    - Drawing opening speed is improved in recent versions
 
 5. **Use Autosave to prevent data loss**:
-   - "Use the Autosave option in Tekla Structures to automatically back up your work"
    - Set autosave interval in File > Settings > Options > General settings > Autosave
    - This doesn't fix the speed but prevents data loss during long waits
 
 6. **Remove reference models if views are slow**:
-   - "Remove reference models if there are issues with the views"
    - Reference models add to the view computation load
    - Detach unnecessary reference models
    - Use lightweight reference models
@@ -82,27 +75,19 @@ Before Tekla Structures 2024, each repetitive part geometry was rendered indepen
 ### Fix
 
 1. **Update to Tekla Structures 2024 or later**:
-   - "Model view rendering now uses part geometry instancing"
-   - "This speeds up the model view opening considerably when there is a large number of repetitive steel part, precast part, and item geometries"
-   - "There is significant memory save on the initial view opening"
    - Install the latest version
 
 2. **Disable model history collection**:
-   - "Set value of the XS_COLLECT_MODEL_HISTORY advanced option to FALSE"
    - Go to File > Settings > Advanced options
    - Set `XS_COLLECT_MODEL_HISTORY=FALSE`
    - This stops automatic collection of model history, saving memory
 
 3. **Update graphics card drivers**:
-   - "Issues with graphics cards might affect the performance"
-   - "Windows updates can affect the graphics card drivers"
    - Visit the graphics card manufacturer's website
    - Install the latest driver
    - In some cases, downgrading the driver helps
 
 4. **Avoid high contrast mode**:
-   - "Avoid using high contrast mode in Windows 10 or newer"
-   - "In previous versions of Windows, avoid using the Windows Basic or High Contrast themes"
    - Use the standard Windows theme
    - High contrast affects rendering performance
 
@@ -113,14 +98,11 @@ Before Tekla Structures 2024, each repetitive part geometry was rendered indepen
    - Hide unnecessary parts
 
 6. **Be aware of navigation memory consumption**:
-   - "Navigating in the model still consumes more memory if there are a lot of geometry instances to be rendered"
    - Even with instancing, navigation uses memory
    - Work in smaller areas of the model
    - Close views when not needed
 
 7. **Meet hardware recommendations**:
-   - "Ensure that your device meets the latest Tekla Structures hardware recommendations"
-   - "The latest versions of Tekla Structures have many more features than older versions"
    - Check RAM, GPU, and CPU requirements
    - Upgrade hardware if below recommendations
 
@@ -141,12 +123,10 @@ When exporting to IFC4, user-defined attribute (UDA) values that were inherited 
 ### Fix
 
 1. **Update to Tekla Structures 2025 or later**:
-   - "Previously, the user-defined attribute values that were inherited from the assembly main part were not written to assembly objects in the IFC4 export. This issue has now been fixed."
    - Install Tekla Structures 2025
    - The IFC4 export now correctly inherits UDAs
 
 2. **Configure XSR_DISABLE_ASSEMBLY_UDA_INHERITANCE**:
-   - "You can disable this functionality using the advanced option XSR_DISABLE_ASSEMBLY_UDA_INHERITANCE"
    - Set to `FALSE` (default): UDA is inherited from the main part
    - Set to `TRUE`: UDA is left empty or uses assembly level's default value
    - Choose based on your project requirements
@@ -170,12 +150,9 @@ When exporting to IFC4, user-defined attribute (UDA) values that were inherited 
    - Compare with the IFC2x3 export
 
 6. **Use IFC4 for rebar assemblies**:
-   - "Rebar assemblies do not work in the IFC2x3 export"
-   - "For the IFC export of rebar assemblies, use the IFC4 export version"
    - This is another reason to use IFC4 after the fix
 
 7. **Check IFC property set configuration**:
-   - "The IFC property set configuration files have been moved from \common\inp to \common\collaboration\ifc"
    - Update your environment to use the new location
    - Set `XS_INP` to include `\common\collaboration\ifc`
    - This ensures property sets are found
@@ -197,9 +174,6 @@ Tekla Structures crashes when nesting specific components — adding component A
 ### Fix
 
 1. **Update to Tekla Structures 2024 SP13 or later**:
-   - "Nesting specific components could cause Tekla Structures to crash"
-   - "The logic has been updated to prevent this circular behavior"
-   - "And ensure model stability"
    - Install 2024 SP13 or later
 
 2. **Avoid circular component nesting**:
@@ -249,8 +223,6 @@ In Tekla Structures 2025, storing, deleting, and modifying large numbers of mode
 ### Fix
 
 1. **Update to Tekla Structures 2025 SP1 or later**:
-   - "The performance of storing, deleting, and modifying large numbers of model objects was slightly slower"
-   - "This issue has now been fixed"
    - Install 2025 SP1 or later
    - The performance regression is resolved
 
@@ -279,7 +251,6 @@ In Tekla Structures 2025, storing, deleting, and modifying large numbers of mode
    - Reduces the load on individual instances
 
 6. **Check stirrup dimensioning performance**:
-   - "When using the drawing dimensioning method Filter to dimension a large group of stirrups created with a rebar set, the drawing creation and update was very slow"
    - This was also fixed (TSAC-7169)
    - Update to the latest version
    - Stirrup dimensioning speed is back to normal

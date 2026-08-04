@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
-  - "https://www.magicad.com/mep-design/support-training/support/troubleshooting/"
-  - "https://portal.magicad.com/Downloader.ashx?id=12386&type=product"
-  - "https://portal.magicad.com/Downloader.ashx?id=12182&type=product"
 ---
 
 # MagiCAD 2026 Duct Series Fittings Lose Connection After Property Changes, Support and Hangers Update Causes Revit Crash, Eccentric Reducer Sizing Wrong Offset Values, BCF Report Exception During Clash Checking, and Product Browser Crash with Search: Duct Series Reapply, S&H Update Before Open, Sizing Update, BCF Fix, and Browser Search Patch
@@ -31,7 +28,6 @@ When changing duct series properties, updated fittings lose connection to the du
 ### Fix
 
 1. **Update to MagiCAD 2026 MR**:
-   - "Fixed to MagiCAD for Revit 2026 MR"
    - Update to the latest
    - MagiCAD version
 
@@ -138,7 +134,6 @@ After sizing the network, eccentric reducers get wrong Offset Height and Offset 
 ### Fix
 
 1. **Install MagiCAD 2024 UR2.1 or later**:
-   - "Fixed to MagiCAD 2024 UR2.1"
    - Install the latest
    - MagiCAD update
 

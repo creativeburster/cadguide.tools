@@ -9,9 +9,6 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
-  - "https://opendcl.com/forum/index.php?topic=2848.0"
-  - "https://www.architools.com/en-GB/support/gstarcad/solutions-to-problems-after-windows-updates"
-  - "https://stackoverflow.com/questions/77716864/gstarcad-transient-graphics"
 ---
 
 # GstarCAD Compatibility and Stability Errors: OpenDCL Crash from Docking Bar Pin Button Requiring Update to 9.2.0.4, DWG File Association Error from Incorrect Windows Association Requiring Default App Reset, Menus and Toolbars Disappear from Windows Update Requiring Settings Reset, AutoLISP Incompatibility from API Differences Requiring Code Adaptation, and Transient Graphics Memory Corruption from GRX API Differences Requiring Workaround
@@ -31,19 +28,16 @@ Running OpenDCL sample demos with GstarCAD 2023. The application crashes when tr
 ### Fix
 
 1. **Update OpenDCL to 9.2.0.4 or later**:
-   - "I've implemented a workaround in 9.2.0.4, to just hide the button instead of destroying it"
    - Download OpenDCL 9.2.0.4 or later
    - This fixes the docking bar pin button crash
    - The button is hidden instead of destroyed
 
 2. **Update OpenDCL to 9.2.0.5 for DwgPreview fix**:
-   - "The DwgPreview issue should be fixed in 9.2.0.5"
    - Download OpenDCL 9.2.0.5 or later
    - This fixes the DwgPreview control crash
    - Browsing multiple DWG files no longer crashes
 
 3. **Contact GstarCAD support**:
-   - "I suggest to contact them about the problem, in case it is an issue with their code"
    - Report the crash to GstarCAD support
    - Provide crash details and reproduction steps
    - They may fix the underlying issue in GstarCAD
@@ -84,9 +78,6 @@ Double-clicking a DWG file shows: "Error while sending command to program." Or G
    - If multiple entries appear, try each one
 
 2. **Handle multiple GstarCAD versions**:
-   - "If several entries named GstarCAD DWG Launcher appear, this means several versions are installed"
-   - "Try one first and see which version the DWG opens with"
-   - "If the wrong one opens, repeat by choosing the other entry"
    - Select the correct version's launcher
 
 3. **Use Windows Default Apps settings**:
@@ -124,27 +115,18 @@ After a Windows update, GstarCAD has abnormal behavior: using a command to open 
 ### Fix
 
 1. **Use Reset Settings to Default (GstarCAD 2023+)**:
-   - "Click on the Windows Start menu, then click on All Apps"
-   - "Scroll until you find GstarCAD 2025, then click on Reset Settings to Default"
-   - "Choose between Backup and Restore or simple Restore"
    - Backup saves current settings before restoring
    - Restore resets to factory defaults
 
 2. **Reset via Registry Editor**:
-   - "From the Start menu type: regedit [enter]"
    - Navigate to: HKEY_CURRENT_USER > Software > Gstarsoft > GstarCAD
-   - "Locate the key for the version to be reset and rename it"
-   - "For example, rename R24 to R24original"
    - Repeat for HKEY_LOCAL_MACHINE
 
 3. **Clean install if registry reset doesn't work**:
-   - "Uninstall GstarCAD"
-   - "Clean the folders that were not deleted with the uninstallation"
    - Delete: C:\Program Files\Gstarsoft\GstarCAD2024
    - Delete: %appdata%\Gstarsoft\GstarCAD\R24
 
 4. **Close all GstarCAD instances first**:
-   - "Before continuing, close any still open instances of GstarCAD"
    - Check Task Manager for running processes
    - End all GstarCAD processes
    - Then proceed with reset
@@ -184,13 +166,10 @@ An AutoLISP routine that works in AutoCAD doesn't work correctly in GstarCAD. So
    - Identify specific API differences
 
 3. **Check GstarCAD documentation**:
-   - "GstarCAD 2025 is perfectly compatible with AutoCAD development interface"
-   - "LISP VBA SDS GRX in GstarCAD is perfectly compatible with AutoCAD"
    - Check the GRX documentation for API differences
    - Look for known incompatibility notes
 
 4. **Use Python development interface**:
-   - "Python secondary development interface is added in GstarCAD 2025"
    - If LISP compatibility is problematic
    - Consider using Python for new development
    - This may have better compatibility
@@ -224,19 +203,16 @@ Creating transient graphics in GstarCAD using code that works in AutoCAD. Memory
 ### Fix
 
 1. **Check for null before disposing**:
-   - "Check that dBObject is not null before disposing"
    - Add null checks before calling EraseTransients
    - This prevents accessing freed memory
    - Add defensive programming throughout
 
 2. **Monitor memory usage**:
-   - "Check Task Manager and verify memory usage when error occurs"
    - Monitor GstarCAD's memory consumption
    - If memory grows unexpectedly, the transient manager is leaking
    - Restart GstarCAD to clear memory
 
 3. **Use UpdateTransient instead of EraseTransients**:
-   - "I know about UpdateTransient function, but it is not what I need for my purposes"
    - If EraseTransients causes corruption
    - Try using UpdateTransient to update instead of erase
    - This may avoid the memory issue
