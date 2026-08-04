@@ -4,7 +4,7 @@ excerpt: "COMSOL Multiphysics fails for 5 distinct reasons: parametric sweep wit
 category: "solver-and-memory-errors"
 softwareSlug: "comsol-multiphysics"
 keyword: "COMSOL Multiphysics 6.4 parametric sweep out of memory part instances Pressure Acoustics BEM convergence stabilization expression Layered Shell contact OOM Changes from Default Settings unknown default values implicit time-dependent solver memory peak segregated nonlinear solver iterative solver MUMPS PARDISO"
-slug: "comsol-multiphysics-6-4-parametric-sweep-out-of-memory-part-instances-pressure-acoustics-bem-convergence-stabilization-layered-shell-contact-oom-changes-default-settings-unknown-default-implicit-solver-memory-peak-segregated-nonlinear"
+slug: "comsol-multiphysics-6-4-parametric-sweep-out-of-memory-part-instances-pressure-acoustics-bem-convergence-stabilization-layered-shell-contact-oom-changes-default-settings-unknown"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

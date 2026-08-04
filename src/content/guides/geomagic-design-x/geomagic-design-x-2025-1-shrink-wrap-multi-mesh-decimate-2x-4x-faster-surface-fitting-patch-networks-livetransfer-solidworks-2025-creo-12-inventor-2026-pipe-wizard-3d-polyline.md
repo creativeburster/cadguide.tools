@@ -4,7 +4,7 @@ excerpt: "Geomagic Design X fails for 5 distinct reasons: multi-mesh topology is
 category: "mesh-and-surface-fitting-errors"
 softwareSlug: "geomagic-design-x"
 keyword: "Geomagic Design X 2025.1 Shrink Wrap multi-mesh watertight repair Decimate Mesh 2x 4x faster surface fitting complex patch networks LiveTransfer SolidWorks 2025 Creo 12 Inventor 2026 Pipe Wizard robust 3D Polyline sweep path export"
-slug: "geomagic-design-x-2025-1-shrink-wrap-multi-mesh-decimate-2x-4x-faster-surface-fitting-patch-networks-livetransfer-solidworks-2025-creo-12-inventor-2026-pipe-wizard-3d-polyline-sweep"
+slug: "geomagic-design-x-2025-1-shrink-wrap-multi-mesh-decimate-2x-4x-faster-surface-fitting-patch-networks-livetransfer-solidworks-2025-creo-12-inventor-2026-pipe-wizard-3d-polyline"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

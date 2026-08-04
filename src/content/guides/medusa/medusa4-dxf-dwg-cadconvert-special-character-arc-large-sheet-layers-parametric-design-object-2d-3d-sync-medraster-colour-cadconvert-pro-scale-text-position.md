@@ -2,7 +2,7 @@
 title: "MEDUSA4 DXF DWG CADConvert Import Export Special Character and Arc Handling Issues, Very Large Drawing Sheet Performance from Excessive Layers, Parametric Design Object 2D to 3D Model Sync Failures, MEDRaster Colour Raster to Vector Integration Quality, and CADConvert Pro Advanced DXF DWG Scale and Text Position Accuracy: Special Character Fix, Layer Optimization, Parametric Sync, Raster Quality, and Scale Correction"
 excerpt: "MEDUSA4 fails for 5 distinct reasons: DXF DWG CADConvert import export special character and arc handling requiring version 5.1.2 update, very large drawing sheet performance from excessive layers requiring layer optimization, parametric Design Object 2D to 3D model sync failures requiring parametric validation, MEDRaster Colour raster to vector integration quality requiring raster resolution check, and CADConvert Pro advanced DXF DWG scale and text position accuracy requiring scale correction. We cover each with fixes from CAD Schroer documentation."
 category: "dxf-import-and-drafting-errors"
-softwareSlug: "medusa"
+softwareSlug: "medusa4"
 keyword: "MEDUSA4 DXF DWG CADConvert import export special character arc handling large drawing sheet layers parametric Design Object 2D 3D sync MEDRaster Colour raster vector CADConvert Pro scale text position accuracy"
 slug: "medusa4-dxf-dwg-cadconvert-special-character-arc-large-sheet-layers-parametric-design-object-2d-3d-sync-medraster-colour-cadconvert-pro-scale-text-position"
 author: "CADGuide Tools Editorial Team"

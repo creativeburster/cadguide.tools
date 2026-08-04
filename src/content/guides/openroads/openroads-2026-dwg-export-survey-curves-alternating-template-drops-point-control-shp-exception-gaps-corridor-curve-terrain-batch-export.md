@@ -2,7 +2,7 @@
 title: "OpenRoads Designer 2026 DWG Export Survey Curves Incorrect as B-Spline vs Line String, Alternating Template Drops Cause Point Control to Stop Working, Export to SHP Exception from Gaps Within Templates, Corridor Feature Not Following Horizontal Curve, and Terrain Batch Process Export Not Exporting Terrains Correctly: Survey Curve Fix, Template Drop Reorder, Gap Repair, Curve Following, and Terrain Export Update"
 excerpt: "OpenRoads Designer fails for 5 distinct reasons: DWG export survey curves incorrect as B-Spline vs Line String requiring export format check, alternating template drops cause point control to stop working requiring drop reorder, export to SHP exception from gaps within templates requiring gap repair, corridor feature not following horizontal curve requiring curve following update, and terrain batch process export not exporting correctly requiring export update. We cover each with fixes from Bentley 2026 release notes."
 category: "corridor-and-export-errors"
-softwareSlug: "openroads"
+softwareSlug: "openroads-designer"
 keyword: "OpenRoads Designer 2026 DWG export survey curves B-Spline Line String alternating template drops point control stop working export SHP exception gaps templates corridor feature horizontal curve terrain batch process export"
 slug: "openroads-2026-dwg-export-survey-curves-alternating-template-drops-point-control-shp-exception-gaps-corridor-curve-terrain-batch-export"
 author: "CADGuide Tools Editorial Team"

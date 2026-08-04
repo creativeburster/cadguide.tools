@@ -2,7 +2,7 @@
 title: "nanoCAD 26 cax_geometry.dll Access Violation Crash from Dynamic Vertex Buffer Overflow, Windows 11 UAC Hardening Freeze from August Update, Memory Leak from Large 3D Models and Hatches, DWG Translator Data Loss from AutoCAD 2024 2026 Format, and LISP .NET API Null Reference from Multiple Assembly Conflicts: GraphicsOverride Registry, Run as Admin, Build 305 Update, DWG Format Fix, and API Cleanup"
 excerpt: "nanoCAD fails for 5 distinct reasons: cax_geometry.dll access violation crash from dynamic vertex buffer overflow requiring GraphicsOverride registry, Windows 11 UAC hardening freeze from August update requiring run as admin, memory leak from large 3D models and hatches requiring Build 305 update, DWG translator data loss from AutoCAD 2024 2026 format requiring rebuilt engine, and LISP .NET API null reference from multiple assembly conflicts requiring API cleanup. We cover each with fixes from Microsoft Q&A and community."
 category: "crash-and-compatibility-errors"
-softwareSlug: "nano-cad"
+softwareSlug: "nanocad"
 keyword: "nanoCAD 26 cax_geometry.dll access violation crash dynamic vertex buffer overflow Windows 11 UAC hardening freeze August update memory leak large 3D models hatches DWG translator data loss AutoCAD 2024 2026 LISP .NET API null reference multiple assembly conflicts"
 slug: "nano-cad-26-cax-geometry-dll-access-violation-windows-11-uac-freeze-memory-leak-dwg-translator-lisp-dotnet-api-null-reference"
 author: "CADGuide Tools Editorial Team"

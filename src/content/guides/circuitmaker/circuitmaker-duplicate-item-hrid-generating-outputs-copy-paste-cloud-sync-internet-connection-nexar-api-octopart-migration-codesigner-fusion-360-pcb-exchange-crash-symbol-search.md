@@ -4,7 +4,7 @@ excerpt: "CircuitMaker fails for 5 distinct reasons: Duplicate Item HRID error w
 category: "output-and-sync-errors"
 softwareSlug: "circuitmaker"
 keyword: "CircuitMaker Duplicate Item HRID error generating outputs copy paste cloud sync internet connection Nexar API Octopart migration CoDesigner Fusion 360 PCB data exchange crash symbol search Select Item Revision project clone workaround manual save commit"
-slug: "circuitmaker-duplicate-item-hrid-generating-outputs-copy-paste-cloud-sync-internet-connection-nexar-api-octopart-migration-codesigner-fusion-360-pcb-exchange-crash-symbol-search-select-item-revision"
+slug: "circuitmaker-duplicate-item-hrid-generating-outputs-copy-paste-cloud-sync-internet-connection-nexar-api-octopart-migration-codesigner-fusion-360-pcb-exchange-crash-symbol-search"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

@@ -4,7 +4,7 @@ excerpt: "EasyEDA fails for 5 distinct reasons: BOM and Pick Place CSV double qu
 category: "bom-and-gerber-export-errors"
 softwareSlug: "easyeda"
 keyword: "EasyEDA BOM Pick Place CSV double quote header JLCPCB SMT assembly upload Unicode Text tab delimited CSV extension component rotation mismatch LCSC part numbers Part Not Matched Gerber drill coordinate format precision CAM350 offset"
-slug: "easyeda-bom-pick-place-csv-double-quote-header-jlcpcb-smt-upload-unicode-text-tab-delimited-component-rotation-mismatch-lcsc-part-numbers-not-matched-gerber-drill-coordinate-precision-cam350-offset"
+slug: "easyeda-bom-pick-place-csv-double-quote-header-jlcpcb-smt-upload-unicode-text-tab-delimited-component-rotation-mismatch-lcsc-part-numbers-not-matched-gerber-drill-coordinate"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

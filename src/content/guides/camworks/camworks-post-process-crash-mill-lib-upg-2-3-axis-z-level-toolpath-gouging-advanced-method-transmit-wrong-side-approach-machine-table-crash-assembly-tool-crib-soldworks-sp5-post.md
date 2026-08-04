@@ -4,7 +4,7 @@ excerpt: "CAMWorks fails for 5 distinct reasons: Post Process crash from missing
 category: "post-processor-and-toolpath-errors"
 softwareSlug: "camworks"
 keyword: "CAMWorks Post Process crash MILL.LIB UPG-2 3 Axis Z Level toolpath gouging Advanced method User Defined Last Cut TRANSMIT wrong side approach machine table crash Assembly Tool Crib SOLIDWORKS crash Post Processor A180 B-180 axis alarm generic Haas post"
-slug: "camworks-post-process-crash-mill-lib-upg-2-3-axis-z-level-toolpath-gouging-advanced-method-transmit-wrong-side-approach-machine-table-crash-assembly-tool-crib-soldworks-sp5-post-processor-a180-b180-haas-generic-post"
+slug: "camworks-post-process-crash-mill-lib-upg-2-3-axis-z-level-toolpath-gouging-advanced-method-transmit-wrong-side-approach-machine-table-crash-assembly-tool-crib-soldworks-sp5-post"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

@@ -4,7 +4,7 @@ excerpt: "CADWorx fails for 5 distinct reasons: pipe support modeler missing Pip
 category: "spec-and-content-path-errors"
 softwareSlug: "cadworx"
 keyword: "CADWorx pipe support modeler missing library PipeSupport category Short Description blank P3D crash pipe routing Content folder network path VPN copy FACING custom data flanged grooved multiple Content folder switching hidden path dependencies single master"
-slug: "cadworx-pipe-support-modeler-missing-library-pipesupport-category-short-description-blank-p3d-crash-content-folder-network-vpn-facing-custom-data-multiple-content-folder-switching-single-master"
+slug: "cadworx-pipe-support-modeler-missing-library-pipesupport-category-short-description-blank-p3d-crash-content-folder-network-vpn-facing-custom-data-multiple-content-folder-switching"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

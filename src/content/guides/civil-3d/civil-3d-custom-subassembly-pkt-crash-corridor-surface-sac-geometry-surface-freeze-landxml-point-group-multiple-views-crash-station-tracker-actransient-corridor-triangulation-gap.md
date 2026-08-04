@@ -4,7 +4,7 @@ excerpt: "Civil 3D fails for 5 distinct reasons: custom subassembly PKT crash wh
 category: "crash-and-corridor-surface-errors"
 softwareSlug: "civil-3d"
 keyword: "Civil 3D custom subassembly PKT crash corridor surface SAC geometry surface freeze LandXML point group multiple views crash station tracker AcTransient corridor surface triangulation gap regions separate baselines split profile corridor section sequence"
-slug: "civil-3d-custom-subassembly-pkt-crash-corridor-surface-sac-geometry-surface-freeze-landxml-point-group-multiple-views-crash-station-tracker-actransient-corridor-triangulation-gap-regions-separate-baselines-split-profile"
+slug: "civil-3d-custom-subassembly-pkt-crash-corridor-surface-sac-geometry-surface-freeze-landxml-point-group-multiple-views-crash-station-tracker-actransient-corridor-triangulation-gap"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

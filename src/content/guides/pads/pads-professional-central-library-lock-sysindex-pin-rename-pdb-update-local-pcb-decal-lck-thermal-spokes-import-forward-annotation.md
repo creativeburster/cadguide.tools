@@ -2,7 +2,7 @@
 title: "PADS Professional Unable to Open Central Library from Lock Files and sysindex.cbf, Pin Rename Error Symbol Pin Name Not Found in PDB from Update Local Libraries, PCB Decal Library Lock from LCK Files Requiring Restart, Thermal Spokes Missing After Import from Smoothing Radius and Add Thermals Setting, and Forward Annotation Failure from Stale Central Library Data: Lock File Delete, Update Local Libraries, LCK Cleanup, Thermal Settings, and Central Library Sync"
 excerpt: "PADS fails for 5 distinct reasons: unable to open central library from lock files and sysindex.cbf requiring lock file deletion, pin rename error symbol pin name not found in PDB from stale local libraries requiring update local libraries, PCB decal library lock from LCK files requiring restart, thermal spokes missing after import from smoothing radius and add thermals setting requiring setting adjustment, and forward annotation failure from stale central library data requiring central library sync. We cover each with fixes from Siemens community."
 category: "library-and-annotation-errors"
-softwareSlug: "pads"
+softwareSlug: "pads-professional"
 keyword: "PADS Professional unable open central library lock files sysindex.cbf pin rename symbol pin name not found PDB update local libraries PCB decal library lock LCK restart thermal spokes missing import smoothing radius add thermals forward annotation stale central library"
 slug: "pads-professional-central-library-lock-sysindex-pin-rename-pdb-update-local-pcb-decal-lck-thermal-spokes-import-forward-annotation"
 author: "CADGuide Tools Editorial Team"

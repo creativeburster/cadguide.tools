@@ -4,7 +4,7 @@ excerpt: "D5 Render fails for 5 distinct reasons: 3.0 black screen after update 
 category: "black-screen-and-crash-errors"
 softwareSlug: "d5-render"
 keyword: "D5 Render 3.0 black screen launcher subprocess Livesync black background neon flickering Vectorworks 2026 RTX 4050 laptop viewport black Contrasted Themes RTX 3060 monitor signal loss GPU power TDR configuration crashing every 5 minutes Live Sync abort CPU GPU overclocking BIOS disable"
-slug: "d5-render-3-0-black-screen-launcher-subprocess-livesync-neon-flickering-vectorworks-2026-rtx-4050-viewport-black-contrasted-themes-rtx-3060-monitor-signal-loss-gpu-power-tdr-crashing-5-minutes-live-sync-abort-overclocking-bios"
+slug: "d5-render-3-0-black-screen-launcher-subprocess-livesync-neon-flickering-vectorworks-2026-rtx-4050-viewport-black-contrasted-themes-rtx-3060-monitor-signal-loss-gpu-power-tdr"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

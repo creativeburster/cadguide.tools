@@ -4,7 +4,7 @@ excerpt: "CorelCAD fails for 5 distinct reasons: DWG print configuration crash w
 category: "dwg-and-lisp-compatibility-errors"
 softwareSlug: "corelcad"
 keyword: "CorelCAD DWG print configuration crash Sheet layout Model Space LISP routine crash jumping DWG files non-supported AutoCAD features file attributes corrupted DWG DXF recovery legacy R12 VSTA automation plugin Windows 11"
-slug: "corelcad-dwg-print-config-crash-sheet-layout-model-space-lisp-routine-crash-jumping-dwg-files-unsupported-autocad-attributes-corrupted-dwg-dxf-recovery-legacy-r12-vsta-automation-plugin-windows-11"
+slug: "corelcad-dwg-print-config-crash-sheet-layout-model-space-lisp-routine-crash-jumping-dwg-files-unsupported-autocad-attributes-corrupted-dwg-dxf-recovery-legacy-r12-vsta-automation"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

@@ -4,7 +4,7 @@ excerpt: "CAESAR II fails for 5 distinct reasons: nonconvergence from support ga
 category: "convergence-and-solver-errors"
 softwareSlug: "caesar-ii"
 keyword: "CAESAR II nonconvergence support gaps friction incore solver error account number FRP pipe divergence ineffective restraints uplift nonlinear friction stiffness zero TR-TX-35834 dynamic analysis equation errors Version 12 Hexagon support"
-slug: "caesar-ii-nonconvergence-support-gaps-friction-incore-solver-account-number-frp-pipe-divergence-ineffective-restraints-uplift-nonlinear-friction-stiffness-zero-tr-tx-35834-dynamic-analysis-equation-errors-version-12"
+slug: "caesar-ii-nonconvergence-support-gaps-friction-incore-solver-account-number-frp-pipe-divergence-ineffective-restraints-uplift-nonlinear-friction-stiffness-zero-tr-tx-35834-dynamic"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

@@ -2,7 +2,7 @@
 title: "Chief Architect Premier 3D Camera View Crash from Graphics Card Driver and Multi-Monitor, SEH Exception and Assertion Failure from File Corruption and Network Storage, LoadLibrary Error 87 from Parameter Incorrect, RivaTuner Statistics Server Internal Rendering Error in Library Browser, and Intel Arc Graphics SEH Error from GPU Ray Tracing: Driver Update, Local File Storage, Selective Startup, RivaTuner Uninstall, and GPU Ray Tracing Disable"
 excerpt: "Chief Architect Premier fails for 5 distinct reasons: 3D camera view crash from graphics card driver or multi-monitor requiring driver update and monitor disconnect, SEH Exception and Assertion Failure from file corruption and network storage requiring local file copy, LoadLibrary error 87 from parameter incorrect requiring graphics driver update, RivaTuner Statistics Server internal rendering error in Library Browser requiring uninstall, and Intel Arc Graphics SEH error from GPU ray tracing requiring disable. We cover each with fixes from Chief Architect Support."
 category: "crash-and-3d-rendering-errors"
-softwareSlug: "chief-architect-premier"
+softwareSlug: "chief-architect"
 keyword: "Chief Architect Premier 3D camera view crash graphics card driver multi-monitor SEH Exception Assertion Failure file corruption network storage LoadLibrary error 87 RivaTuner Statistics Server internal rendering Library Browser Intel Arc Graphics GPU ray tracing"
 slug: "chief-architect-premier-3d-camera-crash-graphics-driver-multi-monitor-seh-exception-assertion-failure-file-corruption-loadlibrary-error-87-rivatuner-intel-arc-gpu-ray-tracing"
 author: "CADGuide Tools Editorial Team"

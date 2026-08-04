@@ -4,7 +4,7 @@ excerpt: "CATIA fails for 5 distinct reasons: V5 crashes when opening CATDrawing
 category: "crash-and-license-errors"
 softwareSlug: "catia"
 keyword: "CATIA V5 crashes CATDrawings Microsoft Defender OFFSYM.TTF Fonts folder V6 crashing hotfix AMD CPU GPU V5-6R2024 unable fetch licenses DSLS cache visualization mode slower design mode Intel Arc graphics V5-6R2018 not launching Windows 11 24H2 network media sense registry"
-slug: "catia-v5-crashes-catdrawings-offsym-ttf-microsoft-defender-v6-crashing-hotfix-amd-v5-6r2024-unable-fetch-licenses-dsls-cache-slower-intel-arc-v5-6r2018-not-launching-windows-11-24h2-network-media-sense"
+slug: "catia-v5-crashes-catdrawings-offsym-ttf-microsoft-defender-v6-crashing-hotfix-amd-v5-6r2024-unable-fetch-licenses-dsls-cache-slower-intel-arc-v5-6r2018-not-launching-windows-11"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

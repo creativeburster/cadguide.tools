@@ -4,7 +4,7 @@ excerpt: "CYPECAD fails for 5 distinct reasons: shear wall reinforcement non-com
 category: "seismic-and-shear-wall-design-errors"
 softwareSlug: "cypecad"
 keyword: "CYPECAD 2026.a shear wall reinforcement non-compliant nodes compliance factor seismic modal spectral analysis CQC combination stress check non-structural element interaction open floor force amplification StruBIM shear wall export BIMserver.center CYPE 3D nonlinear analysis spectral modal seismic"
-slug: "cypecad-2026-a-shear-wall-reinforcement-non-compliant-nodes-compliance-factor-seismic-cqc-stress-check-non-structural-element-open-floor-amplification-strubim-export-bimserver-cype-3d-nonlinear-spectral-modal"
+slug: "cypecad-2026-a-shear-wall-reinforcement-non-compliant-nodes-compliance-factor-seismic-cqc-stress-check-non-structural-element-open-floor-amplification-strubim-export-bimserver-cype"
 author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"

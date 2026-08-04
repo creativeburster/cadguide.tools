@@ -2,7 +2,7 @@
 title: "MagiCAD Revit Crash and IFC Export Errors: Fatal Error AccessViolationException When Checking Dataset Writing Permission in Worksharing Environment, Updating Support and Hangers in Older Project Causes Revit to Crash from Version Conflict, Wrong Friction Loss Method in Sprinkler Calculation from Hazen-Williams Instead of Darcy-Weissbach Requiring System Option Rerun, Active Storey Changes After Duct or Pipe Calculations with Multiple Drawings Open, and IFC Export Version Conflict McHpv Requiring ARX BRX File Update"
 excerpt: "MagiCAD fails for 5 distinct reasons: fatal error AccessViolationException when checking dataset writing permission in worksharing environment, updating Support and Hangers in older project causes Revit to crash from version conflict, wrong friction loss method in sprinkler calculation from Hazen-Williams instead of Darcy-Weissbach requiring System option rerun, active storey changes after duct or pipe calculations with multiple drawings open, and IFC export version conflict McHpv requiring ARX BRX file update. We cover each with fixes from MagiCAD troubleshooting and Graphisoft Community."
 category: "revit-crash-and-calculation-errors"
-softwareSlug: "magi"
+softwareSlug: "magicad"
 keyword: "MagiCAD fatal error AccessViolationException dataset writing permission worksharing Support Hangers update crash version conflict wrong friction loss sprinkler Hazen-Williams Darcy-Weissbach active storey changes duct pipe calculations multiple drawings IFC export McHpv ARX BRX"
 slug: "magicad-revit-crash-ifc-export-errors-accessviolation-dataset-worksharing-support-hangers-crash-friction-loss-sprinkler-hazen-williams-darcy-weissbach-active-storey-duct-pipe-ifc"
 author: "CADGuide Tools Editorial Team"
