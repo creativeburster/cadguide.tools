@@ -14,6 +14,8 @@ import { activeDeals, type Deal } from '@/lib/deals-data';
 export default function DealsPage() {
   const [activeTab, setActiveTab] = useState<'all' | 'Promo' | 'Evergreen' | 'FreeStudent'>('all');
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(24);
+  const PAGE_SIZE = 24;
 
   const handleCopy = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
@@ -23,9 +25,15 @@ export default function DealsPage() {
     }, 2000);
   };
 
+  const selectTab = (tab: 'all' | 'Promo' | 'Evergreen' | 'FreeStudent') => {
+    setActiveTab(tab);
+    setVisibleCount(PAGE_SIZE);
+  };
+
   const filteredDeals = activeDeals.filter(
     (deal) => activeTab === 'all' || deal.type === activeTab
   );
+  const visibleDeals = filteredDeals.slice(0, visibleCount);
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -47,7 +55,7 @@ export default function DealsPage() {
       <section className="container mx-auto px-4 -mt-10 relative z-20 mb-8">
         <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-white/90 backdrop-blur border border-slate-200/50 shadow-xl shadow-slate-200/40 rounded-2xl max-w-2xl mx-auto">
           <button
-            onClick={() => setActiveTab('all')}
+            onClick={() => selectTab('all')}
             className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === 'all'
                 ? 'bg-slate-900 text-white shadow-md'
@@ -57,7 +65,7 @@ export default function DealsPage() {
             All Offers ({activeDeals.length})
           </button>
           <button
-            onClick={() => setActiveTab('Promo')}
+            onClick={() => selectTab('Promo')}
             className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === 'Promo'
                 ? 'bg-slate-900 text-white shadow-md'
@@ -67,7 +75,7 @@ export default function DealsPage() {
             Promo Codes & Sales
           </button>
           <button
-            onClick={() => setActiveTab('Evergreen')}
+            onClick={() => selectTab('Evergreen')}
             className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === 'Evergreen'
                 ? 'bg-slate-900 text-white shadow-md'
@@ -77,7 +85,7 @@ export default function DealsPage() {
             Evergreen Savings
           </button>
           <button
-            onClick={() => setActiveTab('FreeStudent')}
+            onClick={() => selectTab('FreeStudent')}
             className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === 'FreeStudent'
                 ? 'bg-slate-900 text-white shadow-md'
@@ -92,7 +100,7 @@ export default function DealsPage() {
       {/* Main Deals Grid */}
       <section className="container mx-auto px-4 pb-24 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredDeals.map((deal) => {
+          {visibleDeals.map((deal) => {
             const tool = tools.find((t) => t.id === deal.toolId);
             return (
               <Card
@@ -201,6 +209,21 @@ export default function DealsPage() {
             );
           })}
         </div>
+
+        {/* Load More */}
+        {visibleCount < filteredDeals.length && (
+          <div className="flex flex-col items-center gap-4 mt-12">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              Showing {Math.min(visibleCount, filteredDeals.length)} of {filteredDeals.length} offers
+            </p>
+            <Button
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+              className="bg-slate-900 hover:bg-blue-600 text-white font-bold h-14 px-10 rounded-2xl text-xs uppercase tracking-widest shadow-xl shadow-slate-200 transition-all"
+            >
+              Load More Deals ({filteredDeals.length - visibleCount} more)
+            </Button>
+          </div>
+        )}
 
         {/* Empty State */}
         {filteredDeals.length === 0 && (
