@@ -132,23 +132,6 @@ export default async function ToolboxDetailPlaceholderPage({ params }: { params:
           <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest px-2">Continue Exploring</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link
-              href={`/guides/${(() => {
-                const s = slug.toLowerCase();
-                if (s.includes('dwg') || s.includes('dxf') || s.includes('font') || s.includes('version') || s.includes('regapp')) return 'troubleshooting';
-                if (s.includes('pdf') || s.includes('print') || s.includes('viewport')) return 'printing';
-                if (s.includes('step') || s.includes('stl') || s.includes('obj') || s.includes('gltf') || s.includes('k-factor') || s.includes('thread') || s.includes('weld') || s.includes('spring') || s.includes('screw') || s.includes('pipe')) return 'manufacturing';
-                if (s.includes('ifc') || s.includes('revit') || s.includes('skp') || s.includes('fbx')) return 'standards';
-                if (s.includes('license') || s.includes('audit')) return 'procurement';
-                if (s.includes('compare') || s.includes('diff') || s.includes('layer')) return 'standards';
-                if (s.includes('point-cloud') || s.includes('las') || s.includes('mesh')) return 'manufacturing';
-                return 'troubleshooting';
-              })()}`}
-              className="p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
-            >
-              <div className="text-sm font-black text-blue-600 uppercase tracking-widest mb-1">📖 Expert Guides</div>
-              <div className="text-base font-bold text-slate-600 group-hover:text-blue-600 transition-colors">Related Tutorials</div>
-            </Link>
-            <Link
               href="/toolbox"
               className="p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
             >

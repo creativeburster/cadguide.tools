@@ -50,45 +50,7 @@ export default function KFactorCalculatorPage() {
         </section>
 
         {/* Related Expert Guides Section — dev-only; guides are noindex+302→404 in production */}
-        {process.env.NODE_ENV === 'development' && (
-        <section className="pb-24 pt-4 max-w-[1200px] mx-auto px-6 md:px-12">
-          <div className="border-t border-slate-200/80 pt-12">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-              <div>
-                <span className="text-sm font-black uppercase tracking-widest text-violet-600 block mb-1">Expert Reading</span>
-                <h2 className="text-2xl font-black text-slate-900 tracking-tight">3D Geometry & Manufacturing Guides</h2>
-                <p className="text-base text-slate-500 font-medium mt-1">Further reading on 3D MCAD kernels, STEP conversion rules, and CAM benders.</p>
-              </div>
-              <Link href="/guides" className="text-base font-black text-violet-600 hover:underline">
-                Explore Guides Library (6,160+) →
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link 
-                href="/guides/kernel-solidworks-siemens-nx"
-                className="group p-6 rounded-2xl bg-white border border-slate-150 hover:border-violet-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-20 h-20 bg-violet-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
-                <span className="text-[9px] font-mono font-black text-violet-600 uppercase tracking-wider block mb-1">3D Kernels</span>
-                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-violet-600 transition-colors">B-Rep Lossless Geometry Translation →</h3>
-                <p className="text-base text-slate-500 mt-2 font-medium">Prevent coordinate drift and face deformation when exporting CAD boundaries to sheet metal CAM benders.</p>
-              </Link>
-
-              <Link 
-                href="/guides/solidworks-manufacturing-0"
-                className="group p-6 rounded-2xl bg-white border border-slate-150 hover:border-violet-300 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-20 h-20 bg-violet-500/5 rounded-full blur-xl -mr-6 -mt-6 group-hover:scale-125 transition-transform"></div>
-                <span className="text-[9px] font-mono font-black text-violet-600 uppercase tracking-wider block mb-1">CAM Rules</span>
-                <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-violet-600 transition-colors">DIN 6935 Bend Allowance Configurations →</h3>
-                <p className="text-base text-slate-500 mt-2 font-medium">Configure sheet metal thickness tables and flat patterns automatically for press brake bending tools.</p>
-              </Link>
-            </div>
-          </div>
-        </section>
-        )}
-      </main>
+              </main>
     </>
   );
 }
