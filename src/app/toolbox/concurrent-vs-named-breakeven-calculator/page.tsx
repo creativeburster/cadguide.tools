@@ -1,6 +1,7 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import FlexlmConcurrentBreakevenClient from './calculator-client';
+import { EmbedSnippet } from '@/components/embed-snippet';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Concurrent vs Named-User License Break-Even Calculator',
@@ -37,6 +38,9 @@ export default function FlexlmConcurrentBreakevenPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <FlexlmConcurrentBreakevenClient />
+          <div className="mt-8">
+            <EmbedSnippet slug="concurrent-vs-named-breakeven-calculator" title="Concurrent vs Named-User Break-Even Calculator" />
+          </div>
         </section>
       </main>
     </>

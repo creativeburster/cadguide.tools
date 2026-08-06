@@ -3,6 +3,7 @@ import "./globals.css";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Navbar } from "@/components/navbar";
+import { HideInEmbed } from "@/components/hide-in-embed";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
 import { BackToTop } from "@/components/back-to-top";
@@ -93,14 +94,18 @@ export default function RootLayout({
           }}
         />
         <PWARegistration />
-        <SiteNotice />
-        <Navbar />
+        <HideInEmbed>
+          <SiteNotice />
+          <Navbar />
+        </HideInEmbed>
         <main className="flex-grow w-full">
           {children}
         </main>
-        <Footer />
-        <CookieConsent />
-        <BackToTop />
+        <HideInEmbed>
+          <Footer />
+          <CookieConsent />
+          <BackToTop />
+        </HideInEmbed>
       </body>
     </html>
   );

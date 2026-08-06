@@ -1,6 +1,7 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import CadLicenseTcoCalculatorClient from './calculator-client';
+import { EmbedSnippet } from '@/components/embed-snippet';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD License TCO Calculator — Subscription vs Perpetual Over N Years',
@@ -37,6 +38,9 @@ export default function CadLicenseTcoCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <CadLicenseTcoCalculatorClient />
+          <div className="mt-8">
+            <EmbedSnippet slug="cad-license-tco-calculator" title="CAD License TCO Calculator" />
+          </div>
         </section>
       </main>
     </>

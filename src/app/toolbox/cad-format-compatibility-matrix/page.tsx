@@ -1,6 +1,7 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import CadFormatCompatibilityClient from './calculator-client';
+import { EmbedSnippet } from '@/components/embed-snippet';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Format Compatibility Matrix — DWG, STEP, IFC, IGES Interop Finder',
@@ -37,6 +38,9 @@ export default function CadFormatCompatibilityMatrixPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <CadFormatCompatibilityClient />
+          <div className="mt-8">
+            <EmbedSnippet slug="cad-format-compatibility-matrix" title="CAD Format Compatibility Matrix" />
+          </div>
         </section>
       </main>
     </>
