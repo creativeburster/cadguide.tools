@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
-import { Search, ArrowRight, Wrench, BookOpen, Sparkles, Trophy, GitCompare } from 'lucide-react';
+import { Search, ArrowRight, Wrench, Sparkles, Trophy, GitCompare } from 'lucide-react';
 
 export const metadata: Metadata = {
   ...pageMetadata({
@@ -28,14 +28,6 @@ const POPULAR_TOOLS = [
   { slug: 'inventor', name: 'Inventor' },
 ];
 
-const POPULAR_GUIDES = [
-  { slug: 'autocad-performance-speed-up-slow-drawing-fix', title: 'AutoCAD Running Slow? 12 Ways to Speed Up Your Drawings' },
-  { slug: 'solidworks-crash-recovery-corrupt-file-fix', title: 'SolidWorks Crash Recovery: Fix Corrupt Files & Prevent Data Loss' },
-  { slug: 'revit-central-model-corruption-sync-conflict-fix', title: 'Revit Central Model Corruption: Sync Conflicts & Recovery' },
-  { slug: 'fusion-360-performance-optimization-large-assembly', title: 'Fusion 360 Performance Optimization for Large Assemblies' },
-  { slug: 'blender-render-noise-fireflies-denoiser-settings', title: 'Blender Render Noise & Fireflies: Denoiser Settings Guide' },
-  { slug: 'rhino-file-corruption-recovery-autosave-restore', title: 'Rhino File Corruption Recovery: Autosave & Restore Methods' },
-];
 
 const QUICK_LINKS = [
   { href: '/tools', icon: Wrench, label: 'Browse Tools', desc: '50+ CAD, BIM & CAE tools' },
@@ -114,27 +106,6 @@ export default function NotFound() {
                   </Link>
                 ))}
               </div>
-            </div>
-
-            {/* Popular guides */}
-            <div className="rounded-2xl bg-white border border-slate-100 shadow-sm p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <BookOpen className="w-4 h-4 text-blue-600" />
-                <h2 className="text-sm font-black text-slate-900 uppercase tracking-wider">Popular Guides</h2>
-              </div>
-              <ul className="space-y-2">
-                {POPULAR_GUIDES.map(guide => (
-                  <li key={guide.slug}>
-                    <Link
-                      href={`/guides/${guide.slug}`}
-                      className="flex items-start gap-2 px-3 py-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
-                    >
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-blue-500 mt-0.5 shrink-0" />
-                      <span className="text-xs font-semibold text-slate-600 group-hover:text-blue-600 leading-relaxed">{guide.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
 
