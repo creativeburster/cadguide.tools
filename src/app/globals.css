@@ -99,3 +99,19 @@
 .site-notice-dismissed .site-notice {
   display: none !important;
 }
+
+/* Print optimization for cheatsheets */
+@media print {
+  header, footer {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  button.fixed {
+    display: none !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}

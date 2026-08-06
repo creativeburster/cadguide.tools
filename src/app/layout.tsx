@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
 import { Navbar } from "@/components/navbar";
 import { HideInEmbed } from "@/components/hide-in-embed";
+import { PrintFab } from "@/components/print-fab";
 import { PWARegistration } from "@/components/pwa-registration";
 import { SiteNotice } from "@/components/site-notice";
 import { BackToTop } from "@/components/back-to-top";
@@ -105,6 +106,7 @@ export default function RootLayout({
           <Footer />
           <CookieConsent />
           <BackToTop />
+        <PrintFab />
         </HideInEmbed>
       </body>
     </html>
