@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.sigmanest.com/en/whats-new"
+  - "https://www.sigmanest.com/en/cad-integration"
+  - "https://www.sigmanest.com/en/sigmanest"
 ---
 
 # SigmaNEST 2026 CAD Import Errors from DXF DWG IGES STEP File Corruption, Nesting Optimization Suboptimal Material Utilization from Poor Part Placement, SigmaBEND .polp File Import Failure from Unsupported Format Version, DSTV Bevel Export Errors from Incorrect Configuration, and Creo Representation Import Issues from Missing CAD Import Direct License: Automatic Error Correction, Nesting Engine Selection, File Format Update, Bevel Export Configuration, and CAD Import Plus Fallback

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://moi3d.com/forum/lmessages.php?msg=11678.1&webtag=MOI"
+  - "https://moi3d.com/forum/lmessages.php?msg=11381.1&webtag=MOI"
+  - "https://moi3d.com/forum/lmessages.php?msg=11653.1&webtag=MOI"
 ---
 
 # MoI3D NURBS Import and Export Errors: STEP Export Incompatibility with Tube Bender Software from Sweep Surface Structure Requiring Split Closed Surfaces Setting, STEP Import Trim Boundary Errors from Seam Crossing Requiring V5 Beta or CAD Exchanger Conversion, Solid Import Naked Edges from Alibre Export Quality Requiring Manual Repair or SAT Format, FBX Import Not Available from Polygon-Only Format Requiring SubD Import or Alternative Workflow, and STP Bevel Corner Errors from Trim Boundary on Closed Surface Requiring File Analysis and Improvement

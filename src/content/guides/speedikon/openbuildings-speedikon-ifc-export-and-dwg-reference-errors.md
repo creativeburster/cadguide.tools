@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.bentley.com/LiveContent/web/OpenBuildings%20Speedikon%20Help-v5/en/GUID-5BEA51DC-F2B2-77FD-2588-30B61403120B.html"
+  - "https://bentleysystems.service-now.com/community?id=community_question&sys_id=47c9572c472186109091861f536d43fe"
+  - "https://docs.bentley.com/LiveContent/web/OpenBuildings%20Speedikon%20Help-v4/en/GUID-610971AE-03F8-D5B8-A3E8-7C9B3D0E9377.html"
 ---
 
 # OpenBuildings Speedikon IFC Export and DWG Reference Errors: IFC Export Full of Errors from Missing Property Mapping Requiring PCF and PropertySet Configuration, DWG Reference Line Style Scale from Global LTSCALE Not Applied Requiring Per-Element Scaling, DWG File Font Substitution from Missing SHX Files Requiring TrueType Fonts, DGN to DWG Line Style Drop from Incompatible Styles Requiring Drop Unsupported Option, and DWG Units Warning from Uninferable Units Requiring Manual Units Setting

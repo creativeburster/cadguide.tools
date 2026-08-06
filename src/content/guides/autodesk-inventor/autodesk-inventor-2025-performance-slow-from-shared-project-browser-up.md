@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-performance-slow/td-p/12844087"
+  - "https://forums.autodesk.com/t5/inventor-forum/inventor-random-crashes-due-to-microsoft-netcore-app-8-0-12/td-p/13292805"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Inventor-crashing-after-updating-to-Windows-11-24H2.html"
 ---
 
 # Autodesk Inventor 2025 Performance Slow from Shared Project Browser Update, Random Crashes from coreclr.dll .NET Runtime on Intel Gen 13, Windows 11 24H2 AVX SEH Compatibility Crash, Hang or Crash on Save from Long Path and Network Design Data, and Windows Efficiency Mode Freezing Inventor: 2025.1.1 Update, FNTCACHE.DAT Rename, Registry Limit Increase, KB5067036, and Efficiency Mode Disable

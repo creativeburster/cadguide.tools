@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.openmind-tech.com/en/cam/5-axis-milling/collision-avoidance/"
+  - "https://www.openmind-tech.com/en/cam/5-axis-milling/tilt-strategies/"
+  - "https://www.openmind-tech.com/en/cam/5-axis-milling/impeller-blisk/"
 ---
 
 # hyperMILL 5-Axis Collision Avoidance and Multiblade Machining Errors: Automatic Collision-Free Tool Angle Calculation Fails from Insufficient Reference Job Requiring Manual Tilt Curve Definition, Multiblade Roughing Plunge Mode Not Available Without Optional Module Requiring Standard Roughing, Smooth Overlap Option Leaves Visible Approach Marks from Incorrect Lead Angle Smooth Factor, 5-Axis Rest Machining Misses Rest Material Areas from New Algorithm Requiring Version 2024 Update, and Barrel Cutter Finishing MAXX Machining Collision Check Not Performed in Shape Calculation

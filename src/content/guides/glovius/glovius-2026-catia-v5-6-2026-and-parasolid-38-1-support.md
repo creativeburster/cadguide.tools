@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.glovius.com/support/release-notes/"
+  - "https://www.glovius.com/cad-viewer/"
+  - "https://www.glovius.com/support/online-help/measure-cad-model/"
 ---
 
 # Glovius 2026 CATIA V5-6 2026 and Parasolid 38.1 Support, Compare Part-Level Attributes and Hierarchical Product Structure, Thickness Analysis Performance Improvements, Monolithic Assembly Open in New Window, and UNDO REDO for Measurements and Markups: CAD Format Update, Compare Enhancement, Thickness Speed, Assembly Window, and Measurement Undo

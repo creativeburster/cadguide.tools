@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.landfx.com/community/plant-manager-freezes-autocad-2021.html"
+  - "https://www.landfx.com/kb/planting-issues/adding/4358-import-crash"
+  - "https://www.landfx.com/kb/planting-issues/errors.html"
 ---
 
 # Land F/X Plant Manager Freeze and Cloud Data Import Crash: Plant Manager Freezes AutoCAD from Firewall Blocking Cloud Data Endpoint, Black Screen Lockup from NVIDIA Display Driver Conflict, Cloud Data Import Crash from Security Software Blocking landfx.com, Unhandled Exception in dcl-slideview-load ARX from Corrupted Block Files, and No Function Definition LOOKUP from September 2025 Update Bug

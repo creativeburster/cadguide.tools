@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/featurecam-forum/milling-cutter-moves-through-part-in-simulation-but-toolpath/td-p/13163078"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/DMK-Toolpath-Error-when-using-stock-solid-in-FeatureCAM.html"
+  - "https://www.practicalmachinist.com/forum/threads/featurecam-model-stock-question.441158/"
 ---
 
 # FeatureCAM Stock Model Import and DMK Toolpath Errors: 5-Axis Simulation Workpiece Repositioned Causing Cutter Through Part from Add-In Toolpath Feature, Round Stock Import Gives Offset Oversized OD Never Asking for Sizing from STEP Export Orientation, DMK Toolpath Error TPDMK01 from Feature Depth Overridden Past Stock Solid Limits, Casting as Stock Requires Multibody Solid or Separate Import with Alignment, and UCCNC Post Processor Not Available Requiring Fanuc Base Customization in xBuild

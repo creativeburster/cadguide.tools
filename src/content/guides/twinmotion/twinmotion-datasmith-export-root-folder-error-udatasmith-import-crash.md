@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.unrealengine.com/t/datasmith-exporter-gives-error-for-twinmotion-2024-1/1848129"
+  - "https://issues.unrealengine.com/issue/TM-20848"
+  - "https://forums.unrealengine.com/t/datasmith-reloading-file-crashes-revit-2024-tm-2024-1/1909447"
 ---
 
 # Twinmotion Datasmith Export Root Folder Error, UDatasmith Import Crash on Collapse Modes, Twinmotion to Unreal Plugin Version Compatibility, Datasmith Reload Crash from Revit, and Missing Materials After Import to Unreal Engine: Project Root Folder Configuration, Keep Hierarchy Workaround, Plugin Version Matching, and Update Installation

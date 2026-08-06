@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Georeferenced-DXF-is-imported-in-the-wrong-position-in-Spacemaker.html"
+  - "https://forums.autodesk.com/t5/forma-for-design-forum/autodesk-forma-revit-connectivity/td-p/11856522"
+  - "https://forums.autodesk.com/t5/forma-for-design-forum/weird-terrain-results/td-p/11856225"
 ---
 
 # Autodesk Forma Spacemaker Import and Revit Integration Errors: Georeferenced DXF Imported in Wrong Position from AutoCAD GEO Command Limitation Requiring Manual Coordinate Transform, Revit Connectivity Failure from Side-by-Side Add-in Installation Requiring 0.7.7 Update, Weird Terrain Results in NextGen from Missing Building Pads Requiring Classic Workflow, Project North vs True North Misalignment from Add-in Not Checking Project North Requiring Unlink Before Rotation, and Geolocation Missing from Revit Add-in v0.9.17 Bug Requiring Rollback to v0.9.15

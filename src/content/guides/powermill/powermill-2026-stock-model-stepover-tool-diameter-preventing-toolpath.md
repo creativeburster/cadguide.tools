@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Cannot-produce-toolpath-Stock-Model-Stepover-is-Tool-Diameter-in-Model-rest-area-clearance-in-PowerMill.html"
+  - "https://forums.autodesk.com/t5/powermill-forum/e-cores-and-p-cores-cpu-tip/td-p/13714169"
+  - "https://forums.autodesk.com/t5/powermill-forum/freeze-when-calculating-toolpath/td-p/10023055"
 ---
 
 # PowerMill 2026 Stock Model Stepover >= Tool Diameter Preventing Toolpath, E-Core and P-Core CPU Affinity Causing Inconsistent Calculation Speed, Freeze During Toolpath Calculation from AMD Graphics, Constant Z Finishing Crash from Cusp-Based Stepdowns, and Collision Avoidance Preventing Toolpath Completion: Stepover Correction, CPU Affinity Setting, Driver Update, Hot Fix Install, and Collision Settings

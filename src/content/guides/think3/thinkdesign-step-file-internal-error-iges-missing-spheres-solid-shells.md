@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://dptlab.com/whats-new-in-td2024/"
+  - "https://dpt3.dptcorporate.com/Content/Help/language/rn_td_2023T1/whatsnew.htm"
+  - "https://www.cad3d.it/forum1/discussione/conversione-disegni-thinkdesign.60538/"
 ---
 
 # ThinkDesign STEP File Internal Error, IGES Missing Spheres, Solid Shells Inverted Normals, GBG Raster File Never Ending Process, and .d Shared Groups Import Issues: 2024.1 SP2 Fixes, TDXchange Converter Configuration, and Neutral Format Best Practices

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.prusa3d.com/forum/original-prusa-xl-tool-changer-hardware-firmware-and-software-help/pressure-advance-code-not-working/"
+  - "https://forum.prusa3d.com/forum/english-forum-original-prusa-i3-mk4s-hardware-firmware-and-software-help/mk4s-pressure-advance/"
+  - "https://forum.prusa3d.com/forum/input-shaping/mk4-is-seam-scar/"
 ---
 
 # PrusaSlicer Pressure Advance and Seam Quality Errors: Pressure Advance Code Not Working from Wrong G-code Location Requiring Filament Start G-code Configuration, MK4S Incorrect Stock Pressure Advance Value for HF Nozzle Requiring Calibration and M572 Update, Toolchanger SET_PRESSURE_ADVANCE ADVANCE=0 Hardcoded G-code Disabling PA Permanently Requiring Custom Post-Processing, MK4 Input Shaper Seam Scar from Slicer 2.7.1 Regression Requiring Slicer 2.6.0 or Scarf Seam, and Pressure Advance Calibration Dependent on Speeds and Acceleration Requiring Standard Profile Calibration

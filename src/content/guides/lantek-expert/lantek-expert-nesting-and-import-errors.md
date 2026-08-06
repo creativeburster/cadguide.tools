@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.mycad.visiativ.com/t/lantek-expert/98389?lang=en&locale=en"
+  - "https://forum.mycad.visiativ.com/t/appel-aux-utilisateurs-de-lantek-expert/106427"
+  - "https://www.lantek.com/ae/blog/modify-machine-feature"
 ---
 
 # Lantek Expert Nesting and Import Errors: Invalid Header Data from DXF DWG Version Mismatch Requiring Older Format Save, Workshop Sheet Logo Not Printing from File Path or Windows Update Requiring Acercade.bmp Check, Open Contours and Superimposed Lines from Drawing Errors Requiring Automatic Correction, Machine Reassignment from CNC Downtime Requiring Modify Machine Feature, and Nesting Plan Compatibility from Machine Differences Requiring Parameter Adjustment

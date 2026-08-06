@@ -582,7 +582,7 @@ export const c3Tools: Tool[] = [
   country: "Finland",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 2400,
+  starting_price: 2500,
   platforms: ["Windows"],
   industries: ["Structural Engineering", "Construction"],
 
@@ -642,7 +642,7 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "The choice for massive steel stadiums and complex plants.",
-  version: "2025",
+  version: "2026",
   last_updated: "2025-02-20",
   free_trial_days: 30,
 

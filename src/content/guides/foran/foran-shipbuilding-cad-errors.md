@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://www.boatdesign.net/threads/nupas-cadmaric-and-foran.7610/"
+  - "https://cadguide.tools/tools/foran"
+  - "https://www.marinelog.com/shipbuilding/shipyards/shipyard-news/fincantieri-bay-shipbuilding-implements-foran/"
 ---
 
 # FORAN Shipbuilding CAD Errors: Non-Windows Interface and Steep Learning Curve from Unix Heritage Requiring Formal Training, Poor 3D Model Import Export from Weak Geometry Kernel Requiring STEP or Parasolid Conversion, Heavy System Resource Requirements from Oracle Database Dependency Requiring Infrastructure Investment, Poor Documentation Making Self-Learning Impossible Requiring Vendor Training, and Comparison with ShipConstructor and CADMATIC for Feature Set and Usability

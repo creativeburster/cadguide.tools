@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://groups.io/g/LTspice/topic/unable_to_converge_a_simple/106784532"
+  - "https://electronics.stackexchange.com/questions/736052/ltspice-ir2104-synchrobuck-simulation-problem"
+  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/589415/simulation-failure-with-ltspice-24-0-12"
 ---
 
 # LTspice Buck Converter Convergence and Transient Simulation Errors: Manufacturer SiC MOSFET Model Time-Step Too Small from 2.5GHz Gate Oscillation Requiring Gate Resistance Increase or Model Replacement, IR2104 Synchronous Buck Simulation Stuck at 0% from NMOS Switching Edge Convergence Failure Requiring Alternate Solver or Bordodynov Library, .op Operating Point Fails from Feedback Loop Instability Requiring Open-Loop Test and Nodeset Directives, LTspice 24.0.12 Convergence Bug at 80us from B-Source PFC Circuit Requiring Beta Update, and Transient Simulation Runs Infinitely from uic Option and Averaged Model Complexity Requiring Start Small Approach

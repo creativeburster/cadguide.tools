@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.comsol.com/product-update/6.4"
+  - "https://www.comsol.com/product-update/6.3"
+  - "https://doc.comsol.com/6.4/doc/com.comsol.help.comsol/comsol_ref_modeling.19.041.html"
 ---
 
 # COMSOL Multiphysics 6.4 Parametric Sweep Out of Memory with Part Instances, Pressure Acoustics BEM Convergence Slow with Old Stabilization Expression, Layered Shell and Contact Feature Simultaneous OOM Crash, Changes from Default Settings Unknown Default Values After 6.4 Update, and Implicit Time-Dependent Solver Memory Peak with Segregated Nonlinear Solver: Iterative Solver Selection, Stabilization Expression Update, Contact Removal, Settings Reset, and 6.3 Update 3 Memory Reduction

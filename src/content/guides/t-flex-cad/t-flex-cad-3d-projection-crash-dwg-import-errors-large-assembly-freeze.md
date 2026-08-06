@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://tadviser.com/index.php/Product:T-FLEX_CAD"
+  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/autocad_formats_import.htm"
+  - "https://www.tflex.ru/about/news/detail/index.php?ID=5561"
 ---
 
 # T-FLEX CAD 3D Projection Crash, DWG Import Errors, Large Assembly Freeze, Hatch and Position Placement Freeze, and DXF DWG Non-Parametric Import: System Stability Updates, Projection Algorithm Fixes, Assembly Loading Optimization, and Import Parameter Configuration

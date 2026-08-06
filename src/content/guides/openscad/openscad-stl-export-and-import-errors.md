@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/openscad/openscad/issues/5000"
+  - "https://github.com/openscad/openscad/issues/5466"
+  - "https://github.com/openscad/openscad/issues/5447"
 ---
 
 # OpenSCAD STL Export and Import Errors: Assertion Failure Crash After rotate_extrude from Degenerate Triangle Vertices Requiring Version Update, STL Export Button Not Working on macOS 15.1.1 from Export Action Refactoring Bug Requiring PR Fix, Nondeterministic STL Export Assertion from Manifold Backend Mismatched Free Requiring Non-Manifold Backend, Non-Manifold STL Import Crash with Manifold Backend from nullptr Dereference Requiring Fix, and Corrupted Binary STL Export to stdout from Triangle Count Write Before Buffer Requiring Buffered Output Fix

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.chaos.com/hc/en-us/articles/4408121939089-V-Ray-GPU-Cuda-error-700-Cuda-error-719-Optix-error-7900"
+  - "https://forums.chaos.com/forum/chaos-common/chaos-common-hardware/1231812-nvidia-rtx-6000-ada-crashing-vray-7-3dsmax-2024-gpu-rt"
+  - "https://forums.chaos.com/t/error-memorymanagergpu-releaseunmappedmemoryfrominstance-700-could-not-release-device-buffer/121928"
 ---
 
 # V-Ray GPU CUDA Error 700 719 Optix Error 7900, Memory Leak from Non-Recommended Driver, VFB Render Region Crash, rt_cuda.dll Crash After Multiple Frames, and Standalone .vrscene Crash Exit Code 3221225477: Recommended Driver Clean Install, Progressive Sampler, GPU LC Workaround, and Memory Optimization

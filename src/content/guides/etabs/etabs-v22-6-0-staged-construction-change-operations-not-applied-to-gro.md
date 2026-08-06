@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.csiamerica.com/software/ETABS/22/ReleaseNotesETABSv2270plus2260.pdf"
+  - "https://www.csiamerica.com/software/ETABS/22/ReleaseNotesETABSv2251plus2250.pdf"
+  - "https://www.csiamerica.com/software/ETABS/23/ReleaseNotesETABSv2320.pdf"
 ---
 
 # ETABS v22.6.0 Staged Construction Change Operations Not Applied to Groups Besides All, Point Line Area Springs with Link Properties Fail to Converge in Nonlinear Large Displacements P-Delta, Compression Only Tension Only Area Springs Not Working in Nonlinear v22.5.0, Steady-State and PSD Load Cases Using Unstressed Zero State Stiffness Ignoring P-Delta, and Time History Drifts from Matched Response Spectrum Requiring Base Line Correction: Group All Workaround, Spring Link Convergence Fix, v22.5.1 Reanalysis, P-Delta Stiffness Case Fix, and Base Line Correction

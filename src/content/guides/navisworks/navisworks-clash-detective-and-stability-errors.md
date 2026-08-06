@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/navisworks-forum/bug-crash-manage-2026-u1-crash-when-grouping-clashes-after-not/td-p/13748825"
+  - "https://forums.autodesk.com/t5/navisworks-forum/navisworks-2026-crashing/td-p/13716123"
+  - "https://forums.autodesk.com/t5/navisworks-forum/navisworks-2025-crashes-sundely-when-creating-search-sets/td-p/13222611"
 ---
 
 # Navisworks Clash Detective and Stability Errors: Crash When Grouping Clashes After Not Maintaining Groups Requiring Select Screen Workaround or Update 2, 2026 Constant Crashing from Clash Manager Drag-Drop Bug Requiring Update 2, Search Set Creation Fatal Error from CLR Exception Requiring File Repair, Freezing When Grouping All Tests from Name Preview Generation Requiring Simplified Grouping, and Viewpoint Disappearing and Crash from Folder Drag-Drop Requiring Sort Workaround

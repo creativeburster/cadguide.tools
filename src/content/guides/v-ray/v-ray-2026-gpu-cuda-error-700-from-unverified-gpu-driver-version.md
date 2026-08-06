@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://support.chaos.com/hc/en-us/articles/4408121939089-V-Ray-GPU-Cuda-error-700-Cuda-error-719-Optix-error-7900"
+  - "https://forums.chaos.com/t/vray-doesnt-work-while-rendering-with-gpu-after-the-updates/124727"
+  - "https://forums.chaos.com/t/vray-gpu-update-3-hotfix1-dr2-crash-on-load/184789"
 ---
 
 # V-Ray 2026 GPU CUDA Error 700 from Unverified GPU Driver Version, GPU Memory VRAM Insufficient from Scene Exceeding Available Memory, AMD Integrated GPU Driver Conflict from Windows Update Version 26.5.1, V-Ray GPU Update 3 Hotfix 1 DR2 Crash on Engine Switch from AMD GPU Enumeration, and Installed Driver Version Newer Than Verified Causing CUDA Error: Recommended Driver Install, VRAM Optimization, AMD GPU Disable, Crash Dump Analysis, and Driver Rollback

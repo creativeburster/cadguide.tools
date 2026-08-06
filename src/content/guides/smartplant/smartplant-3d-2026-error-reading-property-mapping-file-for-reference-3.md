@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Troubleshooting-Reference/13/1254757?contentId=SgZvXKNExm52gIdL9qD4Vg"
+  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Troubleshooting-Reference/13/34212?contentId=xh6Lmi_XSuh46ziQr%7EHJ%7Eg"
+  - "https://docs.hexagonppm.com/r/en-US/Intergraph-Smart-3D-Common/13.1/523234?contentId=xnBgJySmh0oGUCWdQVbNSQ"
 ---
 
 # SmartPlant 3D 2026 Error Reading Property Mapping File for Reference 3D Model Data, Schema Component Message Helper Not Installed, Export File Already Exists Read Only, Failed to Unpack Reference 3D Model Data Files Being Used by Another Process, and PDS Design File Limit 26.8 Kilometers from Global Origin: Mapping File Path Check, Schema Component Install, Read Only Attribute Removal, Process Lock Resolution, and Coordinate System Verification

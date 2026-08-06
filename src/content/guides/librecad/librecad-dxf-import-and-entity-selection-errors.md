@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.librecad.org/Import-Error-error-opening-DXF-DWG-file-1767-td5725137.html"
+  - "https://forum.librecad.org/Import-error-error-reading-DXF-DWG-sections-td5721715.html"
+  - "https://forum.librecad.org/Importing-to-Trueview-2024-gives-error-with-Leader-td5725489.html"
 ---
 
 # LibreCAD DXF Import and Entity Selection Errors: DXF Files Cannot Be Opened After Windows Reinstall from libdxfrw Library Bug Requiring Version Update, Large DXF Import Fails with Hatch Gap Errors from Non-Closed Contours Requiring QCAD Intermediate, Leader Entity Not Fully Deleted from DXF Causing TrueView Import Failure Requiring Manual Section Removal, Duplicate Tool Cannot Select Entity from Bounding Box Copy Bug Requiring Select-First Workaround, and DXF Version Compatibility from AC1027 and Newer Unsupported Features Requiring Downgrade Export

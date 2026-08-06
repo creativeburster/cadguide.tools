@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/bobcad-v36-post-processor-not-posting-tool-list.418295/"
+  - "https://bobcadsupport.com/knowledgebase/posting-window-is-blank-no-g-code-showing/"
+  - "https://www.practicalmachinist.com/forum/threads/bobccad-25-posting-to-mach-3-issues.280744/"
 ---
 
 # BobCAD-CAM Post Processor and Posting Errors: V36 Tool List Not Posting from Commented-Out output_tool_list, Blank Posting Window from Unmounted UI Panel or Missing C++ Redistributable, V25 Absolute I/J Arc Values Instead of Incremental from Block 222 Setting, CLF Not Found Error from Missing Toolpath Data, and MFC140u.dll Not Found from Incomplete Installation

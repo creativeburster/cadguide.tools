@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/infraworks-forum/unable-to-run-infraworks-2026/td-p/13699197"
+  - "https://forums.autodesk.com/t5/infraworks-forum/infraworks-2025-civil-dwg-import-error/td-p/13074219"
+  - "https://forums.autodesk.com/t5/infraworks-forum/civil3d-corridor-to-infraworks/td-p/14121269"
 ---
 
 # InfraWorks 2026 Stuck on Initializing from Autodesk License Service, Civil 3D DWG Import Cannot Connect to Data Sources from Missing Civil 3D Background Process, Corridor Import Failure from Coordinate System Mismatch with Missing Leading Y Coordinate, DWG Re-import Failure from Windows Security Network Blocking and OneDrive Path, and IMX Schema Version Error from Faulty Civil 3D Installation: License Service Downgrade, Civil 3D Reinstall, Coordinate Verification, Windows Security Exclusion, and IMX Export Workaround

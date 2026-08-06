@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://support.ijcad.jp/hc/en-us/articles/202730179-IJCAD-and-AutoCAD-of-relationship"
+  - "https://www.itreview.jp/products/ijcad/reviews/136802"
+  - "https://ja.stackoverflow.com/questions/51282/ijcad%e3%81%a7%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e7%a9%ba%e9%96%93%e3%81%ab%e3%82%aa%e3%83%96%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%82%92%e3%82%b3%e3%83%94%e3%83%bc%e3%81%99%e3%82%8b%e3%81%a8%e5%9b%b3%e6%9e%a0%e3%82%84%e3%83%93%e3%83%a5%e3%83%bc%e3%83%9d%e3%83%bc%e3%83%88%e3%81%8c%e3%81%af%e3%81%bf%e5%87%ba%e3%82%8b"
 ---
 
 # IJCAD DWG Compatibility and Large Drawing Performance Errors: TrustedDWG Files from Other CAD Show Hatch Scale Differences and Print Discrepancies Requiring Version Update, Large CAD File Opening Stability and Performance from IJCAD 6+ Improvements, Layout Space Object Copy Causes Viewport and Frame Offset from Paper Margin Setting Mismatch, Polygon Viewport Clip Causes Freeze and Crash on Non-TrustedDWG Files, and PLOT Command Single Character Text Not Printed by DWG to PDF

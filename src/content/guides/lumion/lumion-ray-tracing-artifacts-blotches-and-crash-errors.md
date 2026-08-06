@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://support.lumion.com/knowledge-base/rendering-questions"
+  - "https://support.lumion.com/knowledge-base/lumion-2025.2-release-notes"
+  - "https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/586679/frequent-crash-lumion-2024-when-render-with-ray-tr/"
 ---
 
 # Lumion Ray Tracing Artifacts Blotches and Crash Errors: Ray Trace Rendering Produces Artifacts Blotches Patchy Renders from Insufficient Samples Requiring Sample Increase and Denoiser Configuration, NVIDIA Driver 577.00 Causes Frequent Crash with Ray Tracing Requiring Driver Rollback, 3D Grass Appears Very Reflective with Ray Tracing Requiring 2025.2 Update, Ocean Reflectivity Too High with Fully Ray-Traced Glass and Water Requiring 2025.2 Update, and Moving Blotches in Dark Areas from Insufficient Bounces Requiring Radiance Caching

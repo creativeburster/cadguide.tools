@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://blenderartists.org/t/blenders-link-feature-and-viewport-performance/1637855"
+  - "https://blenderartists.org/t/geometry-nodes-playback-performance-faster-in-old-version-3-6-vs-new-version-4-3/1580211"
+  - "https://blenderartists.org/t/uv-mapping-linked-duplicates-with-unique-modifiers-workflow-issue/1588536"
 ---
 
 # Blender Large Scene Linking and Geometry Nodes Viewport Performance: Linking Objects Performs Worse Than Appending from GPU Triangle Overhead Not External Reference, Geometry Nodes Playback 2 FPS in 4.3 vs 8 FPS in 3.6 from EEVEE-Next Regression, UV Mapping Linked Duplicates with Unique Modifiers Requires Unlink and Separate Unwrap, Asset Library Geometry Nodes Self-Referencing Crash from Appending Back to Library, and Linked Collection Instance Missing Items in New Scene from Separate Children Option

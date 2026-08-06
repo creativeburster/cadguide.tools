@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.topsolid.com/viewtopic.php?f=2&t=2504"
+  - "https://forum.topsolid.com/viewtopic.php?t=2388"
+  - "https://forum.topsolid.fr/viewtopic.php?t=11018"
 ---
 
 # TopSolid PDM Server Startup Bug, Error in Nesting from Microsoft Redistributable, PDM Database Recovery from SQL MDF LDF Files, Service Pack Application Crash, and Windows Username Disappeared from PDM: SQL Database Attach, Redistributable Reinstall, Repair Installation, and PDM User Re-registration

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.altium.com/documentation/knowledge-base/altium-designer/mcad-codesigner-troubleshooting-guide"
+  - "https://www.altium.com/documentation/knowledge-base/altium-designer/troubleshoot-solidworks-codesigner-panel-error--there-is-no-document-opened"
+  - "https://www.altium.com/documentation/knowledge-base/altium-designer/troubleshoot-the-internal-id-does-not-match-issue-with-solidworks-mcad"
 ---
 
 # Altium 365 CoDesigner ECAD-MCAD SolidWorks Sync Errors: SpeedPak Configuration Deletes CoDesigner Link Properties Causing No Document Opened, Internal ID Does Not Match from Multiple Boards Without Common Component Folder, AddALU_items Failed from Insufficient Workspace Permissions, Components Shifted from Negative Coordinates in SolidWorks, and SOLIDWORKS Decal Rendering Issues from Graphics Card Compatibility and Enhanced Graphics Performance

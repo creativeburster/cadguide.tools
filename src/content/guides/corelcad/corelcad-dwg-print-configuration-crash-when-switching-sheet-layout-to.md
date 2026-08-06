@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.coreldraw.com/en/support/updates/cad2021/dot5.html"
+  - "https://www.corel.com/content/vpk/cad/corelcad_reviewers_guide_en.pdf"
+  - "https://forums.autodesk.com/t5/visual-lisp-autolisp-and-general/running-a-lisp-routine-in-autocad-lt-2026-crashes-program/td-p/13831865"
 ---
 
 # CorelCAD DWG Print Configuration Crash When Switching Sheet Layout to Model Space, LISP Routine Crash from Jumping Between DWG Files, Non-Supported AutoCAD Features Preserved as File Attributes Causing Display Issues, Corrupted DWG and DXF Recovery for Legacy R12 Format Files, and VSTA Automation Plugin Development on Windows 11: Print Config Reset, Single DWG Script Workflow, Attribute Stripping, Recovery Command, and VSTA Compatibility

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.dynamobim.com/t/troubleshooting-graph-revit-2025/113137"
+  - "https://github.com/DynamoDS/Dynamo/issues/15090"
+  - "https://forum.dynamobim.com/t/revit-2025-and-old-dynamo-routines/106066"
 ---
 
 # Autodesk Dynamo Revit 2025 Migration and Crash Errors: Old Graphs Return Null Without Error Messages from IronPython2 to CPython3 Migration Requiring Script Update, Running Script Crashes Revit 2025 from Incompatible Package Versions Requiring Package Update or Removal, Revit 2025 Dynamo and Unifi Content Catalog Conflict Requiring Unifi 3.10.0.5 Update or Content Catalog Migration, Multi-Version Revit Environments Require Separate Graph Versions per Revit Release, and Troubleshooting Harder in New Dynamo Version from Null Returns Without Warnings Requiring Node-by-Node Freeze Debugging

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/eagle-forum/custom-part-footprint-error-pad-overlapping/td-p/8666322"
+  - "https://forums.autodesk.com/t5/eagle-forum/what-is-the-quot-right-quot-way-to-do-complex-footprints/td-p/9419360"
+  - "https://www.edaboard.com/threads/gerber-file-check-before-manufacturing.221644/"
 ---
 
 # Eagle PCB Custom Footprint DRC and Gerber Manufacturing Errors: Pad Overlapping from DRC Annular Ring Expanding Narrow Pads Beyond Design, Complex Footprint DRC Errors from Polygon Pad Connection Requiring Center Within Polygon Rule, DRC Connected Unrouted Paths from THT Pads Not Metalized Requiring Cutout Polygon Isolation, DRC Overlap Error from Board Layout Without Schematic Requiring Name Command to Unify Nets, and Gerber Solder Mask Vias Under BGA from Insufficient Mask Limit Causing Ball Suck-in

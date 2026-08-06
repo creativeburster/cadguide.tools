@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.hexagonali.com/r/en-US/PV-Elite-Help/26/1406163?contentId=vByagUcP2TDZfqvjPpGJ3A"
+  - "https://docs.hexagonali.com/r/en-US/PV-Elite-Help/27/1447265?contentId=GsUJbbxjJqfyGvaohBd35Q"
+  - "https://docs.hexagonppm.com/r/en-US/PV-Elite-Help/Version-25/304296?contentId=v_i6%7EHv9hNse6OUdZPoM1Q"
 ---
 
 # PV Elite 2026 Saddle Error Check Warning from Out-of-Order Placement, Nozzle UG-45 Calculation Error for Manway and Access Openings, External Pressure Thickness Calculation EN 13445 Lobes Out of Bounds, MAWP Small ASME Vessel Only UG-45 Not UG-37, and Error Check Only Before Analysis Preventing Execution: Saddle Reorder, Nozzle Report Fix, Lobe Value Correction, UG-37 Reinforcement Check, and Error Correction

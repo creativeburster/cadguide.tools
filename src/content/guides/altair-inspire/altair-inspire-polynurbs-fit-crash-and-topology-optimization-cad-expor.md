@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://community.altair.com/discussion/38588/fit-polynurbs-in-altair-inspire"
+  - "https://community.altair.com/discussion/38352/%E6%9C%80%E9%81%A9%E5%8C%96%E5%BD%A2%E7%8A%B6%E3%81%8B%E3%82%89polynurbs%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%A8%E4%BD%95%E3%82%82%E4%BD%9C%E6%88%90%E3%81%95%E3%82%8C%E3%81%AA%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%8A-inspire%E3%81%8C%E8%90%BD%E3%81%A1%E3%82%8B%E5%A0%B4%E5%90%88"
+  - "https://help.altair.com/inspire/en_us/topics/inspire/structure/fit_polynurbs_c.htm"
 ---
 
 # Altair Inspire PolyNURBS Fit Crash and Topology Optimization CAD Export: PolyNURBS Fit Produces Nothing or Crashes from Insufficient Smoothing Iterations and Topology Slider Position, PolyNURBS Gaps at Non-Design Contacts from Shrinkwrap Size Mismatch Requiring Manual Editing, Lattice Structures Additive Manufacturing Export Errors from Unsupported Unit Cell Types, Motion Analysis Mechanism Simulation Over-Constrained Joints from Redundant Constraints, and Topology Optimization Contact Errors from Loads Applied to Design Space Instead of Non-Design Geometry

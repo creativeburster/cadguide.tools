@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://discourse.mcneel.com/t/bug-render-mesh-broken-after-updating-to-8-20/204476"
+  - "https://discourse.mcneel.com/t/rhino-8-mac-os-crash/213914"
+  - "https://discourse.mcneel.com/t/rhino-8-mac-performance-and-stability-issues/173721/1"
 ---
 
 # Rhino 8 Mac Render Mesh and Crash Errors: Render Mesh Broken After Update to 8.20 from Metal Renderer Regression Requiring SRC Update or Downgrade, Constant Crashes in Rendered View from Metal GPU Rendering Requiring CPU Render Switch, Performance and Stability Issues from UI Bugs and Beach Ball Lag Requiring Version Update, Crash After macOS Update from Material Rendering Conflict Requiring CPU Render Setting, and Slow Copy Paste and Window Focus Switching from UI State Bug Requiring Restart

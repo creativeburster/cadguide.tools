@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.chiefarchitect.com/support/article/KB-00106/troubleshooting-3d-camera-view-display-problems-in-chief-architect.html"
+  - "https://www.chiefarchitect.com/support/article/KB-03049/troubleshooting-chief-architect-software-closing-unexpectedly-on-windows.html"
+  - "https://www.chiefarchitect.com/support/article/KB-00802/troubleshooting-exception-and-assertion-error-messages.html"
 ---
 
 # Chief Architect Premier 3D Camera View Crash from Graphics Card Driver and Multi-Monitor, SEH Exception and Assertion Failure from File Corruption and Network Storage, LoadLibrary Error 87 from Parameter Incorrect, RivaTuner Statistics Server Internal Rendering Error in Library Browser, and Intel Arc Graphics SEH Error from GPU Ray Tracing: Driver Update, Local File Storage, Selective Startup, RivaTuner Uninstall, and GPU Ray Tracing Disable

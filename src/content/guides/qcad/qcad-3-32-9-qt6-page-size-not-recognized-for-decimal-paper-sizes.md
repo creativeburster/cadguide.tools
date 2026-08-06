@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://qcad.org/en/changelog"
+  - "http://forum.qcad.org/t/qcad-will-not-save-paper-size/11680"
+  - "http://forum.qcad.org/t/opening-a-layout-crashes-qcad/11767"
 ---
 
 # QCAD 3.32.9 Qt6 Page Size Not Recognized for Decimal Paper Sizes, Crash with Invalid Image of Size 0 from Layout Opening, SVG Export Very Slow with Nested Blocks Qt6, Property Editor Crash with Long Update Delays Qt6, and Print PDF Export Fails When Crop Marks Enabled macOS: Qt5 Fallback, Image Reference Cleanup, Block Flattening, Update Delay Fix, and Crop Marks Disable

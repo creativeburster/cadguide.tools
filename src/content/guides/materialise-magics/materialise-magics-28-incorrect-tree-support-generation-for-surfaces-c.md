@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://help.materialise.com/magics-known-issues/known-issues-magics"
+  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
+  - "https://help.materialise.com/manuals-magics/magics-29"
 ---
 
 # Materialise Magics 28 Incorrect Tree Support Generation for Surfaces Closer Than 1mm to Platform, Regenerate Not Working for Tree Supports with Modified Surface, Cancelling Re-Trim Support on Platform Causes Unresponsive Freeze, Thickened Supports Creating Empty Slices for Concept Laser Sodick Additive Industries Build Processors, and Migration Incompatibility of Support Parameters from Magics 22 to 23 Plus: Tree Support Angle Check, Support Type Toggle, Re-Trim Avoidance, 28.03 Update, and Profile Migration Verification

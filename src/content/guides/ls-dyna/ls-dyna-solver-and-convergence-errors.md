@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://lsdyna.ansys.com/when-the-constraint-contact-is-used-the-calculation-crashes-during-the-forming-analysis-what-needs-to-be-done-to-prevent-this/"
+  - "https://lsdyna.ansys.com/convergence/"
+  - "https://groups.google.com/g/ls-dyna2/c/zHJ5X9jWo5o"
 ---
 
 # LS-DYNA Solver and Convergence Errors: Constraint Contact Crash from Double-Sided Constraint Requiring Penalty Contact on One Side, Nonlinear Solver Failed to Find Equilibrium from Implicit Analysis Requiring Explicit Alternative, Out of Range Residual from Instability Requiring Timestep Reduction and ISNAN Diagnosis, Negative Eigenvalues MF2 Initialization Error from Material Model Requiring Solver or Material Change, and Convergence Problems from Penetrations and Contact Requiring Model Checking and IGNORE Parameter

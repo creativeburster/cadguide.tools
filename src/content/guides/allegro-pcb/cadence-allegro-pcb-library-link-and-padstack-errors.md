@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-capture-cis/65835/how-to-fix-errors-orcap-2434-and-orcap-2435-with-a-design-that-was-done-by-an-outside-contractor"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/62829/loading-footprints-keep-getting-db-doctor-message"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/65262/smd-pad-with-opening"
 ---
 
 # Cadence Allegro PCB Library Link and Padstack Errors: ORCAP-2434 Footprint Missing from Library Path Requiring Path Configuration and Footprint Reassociation, ORCAP-2435 Pin Count Mismatch from Case-Sensitive Alphanumeric Pin Numbers Requiring Casing Verification, DB Doctor Required When Loading 16.5 Footprints in 23.1 Requiring Batch dbdoctor_ui.exe Update, SMD Pad with Void Error SPMHCS-3 Shape Symbol Cannot Have Void Requiring Split Pad or Shape Body Workaround, and Replacing Padstacks Forces Batch DRC Requiring Acceptance of Mandatory DRC Check

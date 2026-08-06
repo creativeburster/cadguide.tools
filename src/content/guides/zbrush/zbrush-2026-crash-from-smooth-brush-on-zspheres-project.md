@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://support.maxon.net/hc/en-us/articles/26688543507100-ZBrush-2026-1-2-Release-Notes-March-17-2026"
+  - "https://support.maxon.net/hc/en-us/articles/7945200949404-Why-is-Zbrush-is-Frequently-Crashing"
+  - "https://support.maxon.net/hc/en-us/articles/15780513877788-ZBrush-2026-2-0-Release-Notes-April-15-2026"
 ---
 
 # ZBrush 2026 Crash from Smooth Brush on ZSpheres Project, Second Light Adjustment with Redshift Materials Causing Crash, Retopo Brush Crash from Welding Points at Symmetry Line, Applying Dynamic Subdivision Causes Crash, and GoZ for Autodesk Max and Maya 2027 Version Compatibility: 2026.1.2 Update, Light Adjustment Fix, Retopo Brush Update, Dynamic Subdivision Patch, and GoZ 2027 Support

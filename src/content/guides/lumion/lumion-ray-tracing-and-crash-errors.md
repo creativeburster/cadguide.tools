@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://support.lumion.com/knowledge-base/rendering-questions"
+  - "https://support.lumion.com/knowledge-base/lumion-2025.2-release-notes"
+  - "https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/586679/frequent-crash-lumion-2024-when-render-with-ray-tr/"
 ---
 
 # Lumion Ray Tracing and Crash Errors: Ray Tracing Artifacts and Blotches from Insufficient Samples Requiring Denoiser and Sample Adjustment, Frequent Crash When Rendering with Ray Tracing from NVIDIA Driver Incompatibility Requiring Driver Downgrade, DDS Texture Crash from Non-Divisible-by-4 Resolution Requiring Image Resize, Project Recovery Effects Reverted to Default from Crash Recovery Bug Requiring 2025.2 Update, and Merge Project Black Scene from Incompatible Project Files Requiring Version Match

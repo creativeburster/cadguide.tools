@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000p2i6WKAQ/new-nx2506-install-the-licensing-shared-library-failed-to-load"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000BB9RRKA1/runjournal-error-failed-to-initialize-ufun-948822"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000WWqL3KAL/nx-license-error-cannot-connect-to-license-server-system-the-serverimgrd-has-not-been-started-yet-or-ugslicenseserver-is-set-to-the-wrong-port-host-15"
 ---
 
 # Siemens NX 2506 Licensing Shared Library Failed to Load from Anti-Virus Quarantining salt_clt.dll, run_journal Failed to Initialize UFUN 948822 from Missing SPLM_LICENSE_SERVER Environment Variable, License Error Cannot Connect to License Server from Wrong Port or Stopped Service, Journal Execution Error from Undefined Object Reference in Custom Macros, and Structure Designer License Not Available from Bundle Configuration Issues: Anti-Virus Exclusion, Environment Variable Set, License Server Verification, Object Reference Debug, and Bundle Update

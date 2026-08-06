@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/Open-Cascade-SAS/OCCT/issues/1163"
+  - "https://github.com/Open-Cascade-SAS/OCCT/issues/1039"
+  - "https://github.com/Open-Cascade-SAS/OCCT/discussions/1052"
 ---
 
 # OpenCASCADE OCCT BREP and Fillet Errors: Segfault in ChFi3d Builder IntersectMoreCorner from Stale Topology After Boolean Operations Requiring BRepBuilderAPI_Copy, Missing Intersection Edges in Face-Model BREP Intersection from Adjacent Sliced Faces Requiring Geometry Validation, BRepCheck SubshapeNotInShape from Incomplete Shell Sewing Before Solidification Requiring Sewing Order Fix, Inconsistent Generated Modified IsDeleted Across BRepBuilderAPI Classes Requiring Per-Class Workarounds, and Implicit Topology Natural Bounds Creating Special Cases Requiring Explicit Boundary Population

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=868129"
+  - "https://woodweb.com/cgi-bin/forums/cabinetmaking.pl?read=861432"
+  - "https://woodweb.com/cgi-bin/forums/cad.pl?read=864092"
 ---
 
 # Cabinet Vision CNC Nesting and DXF Output Errors: Nested Pocketing Cutter Not Exiting from Machine Optimizer Removing Lead Out Requiring Machine Setting Adjustment, Door Reveals Off from Premill Edgebanding Not Configured Requiring S2M Preferences Setup, DXF Output Missing Operations from License File or Unassigned Tools Requiring License Check and Tool Assignment, Tool Not Found at Machine from Incorrect Tool ID Requiring Machine Configuration Sync, and 64-Bit Migration Performance Degradation and Feature Breakage Requiring Workarounds and Patience

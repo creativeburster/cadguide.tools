@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://habr.com/en/companies/ascon/articles/437076/"
+  - "https://help.ascon.ru/KOMPAS/23/en-US/2223_244_2_1_osobennosti_exporta.html"
+  - "https://help.ascon.ru/KOMPAS/24/en-US/idd_sheetmetal.html"
 ---
 
 # KOMPAS-3D Export Solid Becomes Surface and Assembly Performance Errors: Boolean Operation Creates Boundary Edges from Contour Exceeding Face by Tolerance Requiring Edge Alignment, Fillet Operation at Open Chain Ends Creates Split Edges Turning Solid to Surface on Export, Large Assembly Performance from Component Display Modes and Simplification, Sheet Metal Bend Unfold Requires Bend Table Configuration for Correct Flat Pattern, and Export Settings Must Enable Solids Transfer and Hide Source Objects to Avoid Duplication

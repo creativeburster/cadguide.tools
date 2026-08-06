@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://community.carbide3d.com/t/surfcam-post-processor-nomad/5975"
+  - "https://hexagon.com/products/surfcam-post-processors"
+  - "https://pmtechnologies.com/surfcam/surfcam-post-processors/"
 ---
 
 # SurfCAM Post Processor G-Code Errors, Arc Move Format Issues, Unsupported Commands, Multiple Motion Modes, and Legacy Operation Migration: M-Post and S-Post Configuration, Grbl Compatibility Fixes, Modal G-Code Correction, and Pocket Roughing Legacy Migration

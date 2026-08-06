@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-fail-trunnion/td-p/14135598"
+  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/problem-not-able-to-use-my-post-processor-for-simultaneous-5/td-p/7393180"
+  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/error-section-getinitialtoolaxisabc-is-not-allowed-for-section/td-p/11005891"
 ---
 
 # Tebis CAM 5-Axis Post Processor and Machining Errors: Post Processor Requires Machine Configuration for 5-Axis Simultaneous Toolpath, onRewindMachine Logic Must Be Enabled with performRewinds true and Cyclic Axis Definition, Section.getInitialToolAxisABC Error from Missing optimizeMachineAngles in activateMachine, Swarf Toolpath on 4-Axis Post Requires Advanced Swarf Strategy, and Initial XY Positioning in TCP Coordinates Without TCP Enabled Requiring Safe Z Approach

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://actcad.com/faq.php"
+  - "https://dailycadcam.com/actcad-2025-update-1310508-released/"
+  - "https://actcad.com/blog-single.php?id=65&title=how-to-load-lisp-programs-in-actcad-software"
 ---
 
 # ActCAD LISP Visual LISP vl- vla- vlax- vlr- Unsupported Functions, -BEDIT Dynamic Block Crash, LISP Open Command Hang, Move Command Slow Performance, and Graphics Zoom Pan Cancel Issue: IntelliCAD 13.1 Update, System Variable Fix, and ODA SDK Upgrade

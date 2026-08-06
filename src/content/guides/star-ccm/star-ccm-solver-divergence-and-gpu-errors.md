@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-08-03"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000iCYZkKAO/amg-solver-diverge-version-25022506-on-arm-and-linux"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
 ---
 
 # STAR-CCM+ Solver Divergence and GPU Errors: AMG Solver Diverged on ARM Linux from Platform-Specific Bug Requiring Supported OS Migration, Segregated Species Solver NaN Residuals from Bad External Fluid Region Geometry Requiring Part-Based Meshing, Floating Point Error Non-Finite Residual in Continuity from Division by Zero or Bad Boundary Conditions Requiring Systematic Debugging, GPU Acceleration Calculation Stuck from Unsupported Segregated Flow and LES Models Requiring CPU Mode, and AMG Solver Divergence at First Iteration from Grid Sequencing Transition Requiring AMG Tuning

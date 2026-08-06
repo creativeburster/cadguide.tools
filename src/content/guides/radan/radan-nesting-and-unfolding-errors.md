@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://sncsolutions.com.au/whats-new-in-radan-2024-1/"
+  - "https://hexagon.com/products/product-groups/computer-aided-manufacturing-cad-cam-software/radan/release-history"
+  - "https://www.stillam.com/radan-2025-1/"
 ---
 
 # RADAN Nesting and Unfolding Errors: Automatic Tooling Report Cleared Too Often from Multi-Part Nesting Clearing Bug Requiring Update to 2024.1, Auto Tooling Crash from Cut Features in Clamp Dead Zone Requiring Dead Zone Clearance, Overlapping Unfold Faces from 3D Model Unfold Collision Requiring Graphic Feedback and Geometry Fix, Flange Too Short Warning from Designer Validation Requiring Flange Length Check, and Auto Tooling Selecting Internal Profile as Start Profile from Common Cut Bug Requiring Profile Order Verification

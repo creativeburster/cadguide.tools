@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.sciencedirect.com/science/article/abs/pii/S0924013604003577"
+  - "https://technicalgamer.org/how-to-save-time-and-monitor-simulation-in-pamstamp/"
+  - "https://doi.org/10.17973/mmsj.2024_02_2023138"
 ---
 
 # PAM-STAMP Springback Simulation and Solver Errors: Springback Convergence Failure from Implicit Solver Material Non-Linearity Requiring Explicit Damping Method, Upper Pad Stop Criterion Not Working from Distance Detection Failure Requiring Pinch Test Alternative, Springback Accuracy from Sensitive Damping Value and Integration Points Requiring Pre-Simulation Tuning, Mesh Strategy Impact on Springback Prediction Requiring Springback or Compensation Mesh Setting, and Solver Selection for Springback Stage Requiring SMP-DP Advanced Implicit Instead of SMP-SP Explicit

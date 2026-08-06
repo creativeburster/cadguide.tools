@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019RqVSAU"
+  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P9m0SAC&l=en-US"
+  - "https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000001DbgTSAS&l=en-US"
 ---
 
 # NI Multisim Simulation Error from Tiny Resistor Values in SPICE Matrix, Convergence Failure Requiring Gear Integration Method, Simulation Stops After Few Seconds from Transient Convergence, License Activation Error from Wrong Edition Installer, and Convergence Assistant Unable to Fix Circuit: Resistance Increase, Tolerance Adjustment, Gear Method, Edition Match, and Manual Circuit Debug

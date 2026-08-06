@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/help-adding-custom-format-to-esprit-post.398661/"
+  - "https://www.practicalmachinist.com/forum/threads/dnc-using-esprit-software.188306/"
+  - "https://www.practicalmachinist.com/forum/threads/esprit-wire-cam-help.447388/"
 ---
 
 # ESPRIT CAM Post Processor and DNC Errors: Undefined Vocabulary Error from Custom Format Requiring Keyword and Symbol Definition, DNC RS-232 Transfer to Haas from Baud Rate and Cable Pinout Mismatch Requiring Settings Sync, 4-Axis Toolpath Error from Tangent Entry Type Requiring Position Entry Type, P70 Arc Endpoint Deviation from Incorrect I Value Sign Requiring Post Processor Fix, and Subspindle Work Plane Orientation from Mirror Image Requiring Work Offset Redefinition

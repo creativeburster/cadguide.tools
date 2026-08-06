@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://3dswym.3dexperience.3ds.com/question/solidworks-user-forum/solidworks-2024-2025-stability-issues_QA3zv_hBTP6OD0Fc6j0ntQ"
+  - "https://forum.solidworks.com/forum-solidworks/MYfrK4r0RF6Fnd8tf5tAMA/solidworks-2025-sp0-crashes-when-opening-a-drawing-file"
+  - "https://3dswym.3dexperience.3ds.com/question/solidworks-user-forum/crash-on-file-new-in-solidworks-2025-sp5-0-%E2%80%93-missing-drawing-template_AWxaSvxhS_Kcvoak2wtuNA"
 ---
 
 # SolidWorks 2024 2025 Stability and Crash Errors: Crash on CTRL-Copy and Drag View from clr.dll NET Framework Conflict Requiring OpenGL Mode and Repair, SP0 Crash Opening Drawing from annotationwpf Module Error Requiring Template Repair, SP5.0 Crash on File New from Missing Drawing Template Requiring drwdot Restoration, SP5.0 Crash with Custom Library Mate References from Component Loading Bug Requiring Reference Removal, and GPU TDR Hard System Crash on Lenovo P16 from NVIDIA RTX Pro 3000 Driver Conflict Requiring Driver Rollback

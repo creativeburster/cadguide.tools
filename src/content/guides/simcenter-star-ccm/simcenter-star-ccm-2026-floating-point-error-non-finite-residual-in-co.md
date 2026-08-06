@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://community.sw.siemens.com/s/article/Mesh-Requirements-for-good-convergence"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000jCadxKAC/original-surface-is-selfintersecting-mesh-error"
 ---
 
 # Simcenter STAR-CCM+ 2026 Floating Point Error Non-Finite Residual in Continuity from Segregated Flow Solver, Self-Intersecting Surface Mesh Error from Vertex with Too Many Edges, High Aspect Ratio Cells from Prism Layer Causing Coupled Solver Divergence, Volume Change Less Than 10e-2 at Prism-to-Core Transition, and Mapped Faces Mesh Generation Failed from Mixed Mesh: Field Function Denominator Check, Vertex Split, Prism Layer Parameter Adjustment, Surface Growth Rate Reduction, and Interface Density Increase

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.ventuz.com/resources/release-notes/"
+  - "https://www.ventuz.com/support/help/V4_05/HowTo/HowToClusterRendering.html"
+  - "https://www.ventuz.com/support/help/latest/NodeLogicCluster.html"
 ---
 
 # Ventuz Designer Multi-GPU Crash on Startup, License Manager Wrong Installation Code, Cluster TDR Timeout Crash from Machine Stall, BMD Decklink Board Crash on Start, and DataPortal Async Scene Validation Failure: GPU Count Reduction, License Re-registration, TDR Registry Fix, Board Update, and Scene Validation Repair

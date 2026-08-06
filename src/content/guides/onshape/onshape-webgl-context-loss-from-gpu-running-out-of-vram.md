@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://cad.onshape.com/help/Content/Home/hardware_and_graphics_performance_recommendations.htm"
+  - "https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-use-the-performance-panel-in-onshape"
+  - "https://forum.onshape.com/discussion/31316/part-studio-intermittently-becomes-very-slow-when-editing-features"
 ---
 
 # Onshape WebGL Context Loss from GPU Running Out of VRAM, Part Studio Intermittent Slowdown from Heavy Derived Features and Browser Cache, Assembly Mate Solve Time High from Complex Part Workspaces, Performance Degradation from Excessive Tab Count Over 100, and Chrome VRAM Throttling for Large Models Requiring Firefox Switch: VRAM Upgrade, Cache Clear, Version References, Tab Reduction, and Browser Switch

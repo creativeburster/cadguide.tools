@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/diagnostics_window.htm"
+  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/17/iges_format.htm"
+  - "https://www.tflex.com/help/eng/T-FLEX%20CAD/16/edit_3d_2.htm"
 ---
 
 # T-FLEX CAD 2026 Geometry Too Complex Error from Blend Radius Under Current Conditions, Error Regenerating Source Parent Element from Dropped Regeneration, Degenerate Element from Self-Intersecting Hatches and Open Contours, Error Opening Fragment File from Non-Existent File Link, and Import Geometry Healing from Self-Intersections and Non-Sewed Surfaces: Geometric Parameter Adjustment, Source Element Restoration, 2D Construction Check, Fragment Path Verification, and Import Healing Options

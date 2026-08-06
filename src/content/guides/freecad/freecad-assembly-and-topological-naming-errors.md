@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-02"
 sources:
+  - "https://forum.freecad.org/viewtopic.php?t=98913"
+  - "https://github.com/FreeCAD/FreeCAD/issues/20929"
+  - "https://github.com/FreeCAD/FreeCAD/issues/17041"
 ---
 
 # FreeCAD Assembly and Topological Naming Errors: Invalid Shape Name from Topological Naming Problem Requiring Reference Reassignment, Sketcher Invalid Input from Toponaming Bug on Windows Weekly Build Requiring Stable Bundle, Face Edge IDs Change After Recompute from Fillet on Rectangle with Hole Requiring Attachment Editor Fix, Assembly Joints Break After Part Modification Requiring Joint Recreation, and Crash on Selecting Sketch from Invalid Shape Name Edge Requiring Update

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.qualitydigest.com/inside/innovation-news/hexagon-releases-geomagic-design-x-20251-121025.html"
+  - "https://www.thesolidexperts.com/hubfs/Geomagic%20Data%20Sheets/Geomagic-DesignX-VersionsComparison-2025.1%20(1).pdf?hsLang=en"
+  - "https://nexus.hexagon.com/home/product/geomagic-design-x/"
 ---
 
 # Geomagic Design X 2025.1 Shrink Wrap Tool for Multi-Mesh Watertight Repair, Decimate Mesh 2x 4x Faster Performance for Clean Optimized Data, Surface Fitting Accuracy for Complex Patch Networks, LiveTransfer to SolidWorks 2025 Creo 12 Inventor 2026, and Pipe Wizard Robust Results with 3D Polyline Sweep Path Export: Multi-Mesh Merge, Adaptive Decimation, Patch Network Correction, CAD Transfer Workflow, and Pipe Geometry Export

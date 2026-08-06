@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://discourse.mcneel.com/t/mysterious-matrixgold-logo-not-in-stl-file-but-in-3d-printed-wax/202411"
+  - "https://discourse.mcneel.com/t/matrixgold-3-9-the-performance-update/204377"
+  - "https://blog.stuller.com/introducing-matrixgold-3-9-the-performance-update/"
 ---
 
 # MatrixGold Jewelry Design Errors: Mysterious Logo Watermark in 3D Printed Wax from MatrixGold Processing Requiring Quad Remesh to Remove, Rhino Crash from Trimming Curves in Profile Editor Requiring 3.9 Update, Graph Desync from Pasting Geometry and Missing Original Objects Requiring 3.9 Fix, Ring Resizer Odd Shapes from Default Tolerance Requiring Lowered Tolerance and Geometry Validation, and Slow Recalculation from Complex Multi-Operation Designs Requiring Dynamic Power Toggle

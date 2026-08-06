@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://theindustrialmaker.com/software-digital-tools/cad-software/fixing-variCAD-crashes-file-encoding-issues"
+  - "https://www.varicad.com/userdata/files/help/en/manual26.htm"
+  - "https://www.varicad.com/en/home/support/discussion-forum/index.php?action=show_post&caller=1e2734ae19fb0cf52b6e00b2c06d29b0endiscussion1&cat=18&post=202"
 ---
 
 # VariCAD 2026 Crash on Save from Cyclic Constraint Dependencies in Parametric Core, DWG Save Error from Network Drive File Lock Mechanism, STEP Import Reverted Normals from Corrupted Data in STEP File, File Cannot Be Opened from Power Failure During Save, and Version Mismatch Fillet Feature Broken from 2024.2 Shape Representation Change: Dependency Graph Check, Local SSD Save, Normal Repair, File Recovery, and STEP Export Before Upgrade

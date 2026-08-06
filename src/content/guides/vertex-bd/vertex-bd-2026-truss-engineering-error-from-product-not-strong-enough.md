@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://kben.vertex.fi/bd/truss-engineering-errors-and-warnings"
+  - "https://kben.vertex.fi/bd/ifc-bd-2026"
+  - "https://docs.vertex.fi/bd2026en/html/bd/construction/truss_4/truss_out_11.html"
 ---
 
 # Vertex BD 2026 Truss Engineering Error from Product Not Strong Enough for Application, Problem with Piece Orientation from Top Chord Not Aligned with Roof Plane, Member Not Supported Indeterminate from Incomplete Load Path, Compression Design Error from Member Buckling or Design Failure, and IFC Import Rectangular Holes Not Recognized from Missing IFC4 Support: Single Truss Engineering Tool, Top Chord Alignment, Boundary Condition Review, FEA Analysis Check, and IFC Validator

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://help.optitex.com/1382687/Content/Whats_New/Previous_Versions/Earlier_Releases_Fixes.htm"
+  - "https://help.optitex.com/1382687/Content/FAQ/PDS_Questions.htm"
+  - "https://help.optitex.com/1382687/Content/FAQ/3D_Questions.htm"
 ---
 
 # Optitex PDS Crashes and Import Errors: DXF and ASTM Import Crashes from Various Source Software, HPGL and PLT File Import Crash, PDS File Corruption and AutoSave Recovery, 3D Texture Problems from Graphics Card After Upgrade, and GPU Simulation Stretchy Results and O/Cloud Link Hang

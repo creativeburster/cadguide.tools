@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://community.graphisoft.com/t5/Documentation/PDF-Purgatory/td-p/690440"
+  - "https://community.graphisoft.com/t5/Collaboration-with-other/Ifc-placed-with-hotlink-has-errors-in-geometry/td-p/368435"
+  - "https://community.graphisoft.com/t5/Collaboration-with-other/My-Experience-with-Archicad-IFC-Mapping-Methods/td-p/653254"
 ---
 
 # ArchiCAD IFC Import Geometry Errors and Publisher PDF Hang: IFC General Import Produces Incorrect Geometry from Parametric Construction Elements Translator Requiring Objects Conversion, BREP Geometry in IFC Can Only Import as Morphs or Objects Not Native Construction Elements, Publisher Hangs on Section Elevation Sheets from Vector Fill Overload and Image Textures, IFC Property Mapping Limitations for Complex Data Transformations Requiring Hybrid Property Manager Approach, and Hotlink Module IFC Geometry Errors from Missing Translator Settings

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.bentley.com/LiveContent/web/OpenRoads%20Designer-v2026.0.0/Help/en/topics/723708/defects_fixed_in_2026_update_release.html"
+  - "https://bentleysystems.service-now.com/community?id=kb_article&sysparm_article=KB0018203"
+  - "https://docs.bentley.com/LiveContent/web/OpenRoads%20Designer-v2026.0.0/Help/en/topics/1296840/GUID-A04BDB28-A093-490B-8131-E1C89EDA3EF2.html"
 ---
 
 # OpenRoads Designer 2026 DWG Export Survey Curves Incorrect as B-Spline vs Line String, Alternating Template Drops Cause Point Control to Stop Working, Export to SHP Exception from Gaps Within Templates, Corridor Feature Not Following Horizontal Curve, and Terrain Batch Process Export Not Exporting Terrains Correctly: Survey Curve Fix, Template Drop Reorder, Gap Repair, Curve Following, and Terrain Export Update

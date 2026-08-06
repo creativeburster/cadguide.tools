@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-02"
 sources:
+  - "https://forums.autodesk.com/t5/fusion-support-forum/more-broken-cloud-features-unable-to-import-and-no-info-in-error/td-p/12824157"
+  - "https://forums.autodesk.com/t5/fusion-support-forum/multiple-uploads-delayed-for-a-very-long-time/td-p/13645925"
+  - "https://forums.autodesk.com/t5/fusion-support-forum/quot-design-not-yet-available-quot-amp-quot-error-saving-to/td-p/13878562"
 ---
 
 # Fusion 360 Cloud Sync and Import Errors: Unable to Import from Cloud Upload Failure Requiring Offline Mode Toggle, Multiple Uploads Delayed from Stuck Upload Queue Requiring Cancel and Resave, Design Not Yet Available from AWS Crash Corruption Requiring Version Export and Reimport, Error Uploading to Cloud Storage from Corrupted W.login Folder Requiring Cache Clear, and Error Importing IPT and STEP Files from Online Converter Failure Requiring Local File Open

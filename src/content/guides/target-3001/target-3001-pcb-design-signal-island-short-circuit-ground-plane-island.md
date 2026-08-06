@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Check_project"
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Remove_groundplane_islands"
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Autorouter"
 ---
 
 # TARGET 3001 PCB Design Signal Island Short Circuit, Ground Plane Island Orphan, Autorouter Suboptimal Routing, Star Ground Short Circuit Alert, and Schematic Signal Island Without REF Pin: DRC Check Procedures, Island Deletion, Router Strategy Configuration, and Signal Name Verification

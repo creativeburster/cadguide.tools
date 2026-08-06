@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://community.ptc.com/3d-part-assembly-design-327/parts-and-drawings-glitching-173046"
+  - "https://community.ptc.com/3d-part-assembly-design-327/creo-large-assy-loading-speed-166821"
+  - "https://community.ptc.com/3d-part-assembly-design-327/creo-parametric-9-0-freezes-due-to-a-regeneration-progress-window-overlay-139022"
 ---
 
 # PTC Creo 11/12 Parts and Drawings Glitching from Graphics Driver with Orange Triangles and Wireframe Only, Large Assembly Loading Slow from Single-Core Limit and Family Tables, Regeneration Progress Window Overlay Freeze from GPU Drivers, Lag When Zoomed from OpenGL Shader HDR and Ambient Occlusion, and Analysis Features Mass Property Recalculation During Mechanism Study: graphics win32_gdi, Config Options, Driver Update, OpenGL Shader Disable, and Regeneration Manager

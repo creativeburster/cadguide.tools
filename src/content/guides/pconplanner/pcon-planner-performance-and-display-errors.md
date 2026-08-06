@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://support.easterngraphics.nl/en-gb/article/224-pcon-planner-application-error"
+  - "https://support.easterngraphics.nl/en-gb/article/43-frequently-asked-questions-about-pcon-planner"
+  - "https://en.blog.pcon-solutions.com/2024/06/19/maximizing-performance-in-pcon-planner-how-to-use-the-dedicated-graphics-card/"
 ---
 
 # pCon.planner Performance and Display Errors: Application Error Crash from Outdated GPU Drivers and RAM Overload Requiring Driver Update and Memory Management, Drawing Parts Disappear While Zooming from UCS Distance Requiring Place UCS as WCS Origin, Slow Performance and Constant Loading from 3D Warehouse Overload Requiring Purge and New File Copy, Dedicated GPU Not Used on Laptops from Battery Mode Switching Requiring Windows Graphics Settings, and Second Monitor Crash from Graphics Card Memory Shortage Requiring Single Monitor Operation

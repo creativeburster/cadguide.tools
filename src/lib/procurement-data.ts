@@ -38,19 +38,16 @@ export const PROCUREMENT_LIST: ProcurementIndustry[] = [
     directiveCode: 'CAD-PROC-PCB88',
     reference: 'IPC-2221 / IEEE ECAD Standard',
     intro: 'High-frequency printed circuit board (PCB) design requires rigorous signal integrity (SI), power integrity (PI), and electromagnetic compatibility (EMC) simulation wrappers. Selecting the correct platform involves balancing enterprise licensing overheads, Named-User compliance sweep risks, and Parasolid-to-ACIS MCAD alignment tolerances.',
-    complianceShieldTitle: 'Cadence & Altium Named-User Telemetry Shield',
-    complianceShieldDesc: 'Wipe corporate network MAC address pings and disable licensing validation background checks on local workstation adapter configurations.',
+    complianceShieldTitle: 'ECAD License Audit Readiness',
+    complianceShieldDesc: 'Export a named-user seat inventory and reconcile assignments in the vendor admin console ahead of the audit window.',
     codeSnippet: `@echo off
 echo ===================================================
-echo   CAD DIRECTIVE: ECAD TELEMETRY PORT BLOCKER
+echo   CAD DIRECTIVE: ECAD LICENSE AUDIT READINESS
 echo ===================================================
-echo [+] Blocking outbound named-user license sweep telemetry...
-netsh advfirewall firewall add rule name="BlockAltiumTelemetry" dir=out action=block program="%PROGRAMFILES%\\Altium\\AD24\\X2.EXE" enable=yes
-netsh advfirewall firewall add rule name="BlockCadenceTelemetry" dir=out action=block program="%CDSROOT%\\tools\\bin\\allegro.exe" enable=yes
-echo [+] Resolving local licensing hosts loopbacks...
-echo 127.0.0.1 services.altium.com >> %WINDIR%\\system32\\drivers\\etc\\hosts
-echo 127.0.0.1 genuine.cadence.com >> %WINDIR%\\system32\\drivers\\etc\\hosts
-echo [+] Complete. ECAD local licensing shield active.`,
+echo [+] Exporting installed ECAD seat inventory...
+powershell -Command "Get-ItemProperty 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' | Where-Object { $_.DisplayName -match 'Altium|Cadence|Allegro|OrCAD' } | Select-Object DisplayName, DisplayVersion | Export-Csv C:\\cad-audit\\ecad-seats.csv -NoTypeInformation"
+echo [+] Inventory written to C:\\cad-audit\\ecad-seats.csv
+echo [+] Reconcile named-user assignments in the Altium / Cadence admin console before the audit window.`,
     platforms: [
       {
         name: 'Altium Designer',
@@ -146,7 +143,7 @@ echo [+] Release completed. Re-establish database server socket bindings.`,
       },
       {
         name: 'AVEVA E3D Design',
-        toolSlug: 'microstation', // Using Microstation since AVEVA itself is not in tools
+        toolSlug: 'aveva-e3d-design', // Using Microstation since AVEVA itself is not in tools
         licenseModel: 'Enterprise Token Allocation',
         tco3Yr: '$42,000 (High-End Industrial)',
         auditRisk: 'Medium',
@@ -156,7 +153,7 @@ echo [+] Release completed. Re-establish database server socket bindings.`,
       },
       {
         name: 'Smart 3D',
-        toolSlug: 'solidworks', // Alternate mapping for linking
+        toolSlug: 'smartplant-3d', // Alternate mapping for linking
         licenseModel: 'Perpetual / Floating server',
         tco3Yr: '$38,500 (High-End Industrial)',
         auditRisk: 'High',
@@ -255,7 +252,7 @@ GROUP Structural_Team user4 user5`,
       },
       {
         name: 'COMSOL Multiphysics',
-        toolSlug: 'freecad',
+        toolSlug: 'comsol-multiphysics',
         licenseModel: 'Perpetual / Floating Server',
         tco3Yr: '$22,000 (Academic/Corp)',
         auditRisk: 'Medium',
@@ -454,7 +451,7 @@ GROUP Design_Studio user1 user2`,
     platforms: [
       {
         name: 'Alias AutoStudio',
-        toolSlug: 'alias',
+        toolSlug: 'alias-autostudio',
         licenseModel: 'Named User Subscription',
         tco3Yr: '$31,500 (Design Studio)',
         auditRisk: 'High',
@@ -817,7 +814,7 @@ echo [+] Completed. Relaunch Jewelry design tools.`,
       },
       {
         name: 'ZBrush (Jewelry Focus)',
-        toolSlug: 'maya',
+        toolSlug: 'zbrush',
         licenseModel: 'Subscription / Maxon License',
         tco3Yr: '$1,200 (Organic Sculpting)',
         auditRisk: 'High',
@@ -923,15 +920,16 @@ echo [+] Completed. Re-establish model server connection.`,
     directiveCode: 'CAD-PROC-OPT22',
     reference: 'ISO 10110 Optical Drawing Standard',
     intro: 'Optical design demands G3 curve continuity to prevent refractive deviations. Selecting software requires analyzing raytracing performance and corporate named-user telemetry tracking sweeps.',
-    complianceShieldTitle: 'Optical CAD genuine telemetry block',
-    complianceShieldDesc: 'Block outbound named-user license validation pings and disable licensing audit background scans.',
+    complianceShieldTitle: 'Optical Suite License Audit Readiness',
+    complianceShieldDesc: 'Inventory Zemax OpticStudio seats and license-server usage so procurement can answer vendor audits with evidence.',
     codeSnippet: `@echo off
 echo ===================================================
-echo   CAD DIRECTIVE: OPTICAL SOFTWARE SHIELD
+echo   CAD DIRECTIVE: OPTICAL LICENSE AUDIT READINESS
 echo ===================================================
-echo [+] Blocking outbound optical suite telemetry...
-netsh advfirewall firewall add rule name="BlockZemaxTelemetry" dir=out action=block program="%PROGRAMFILES%\\Zemax\\Zemax.exe" enable=yes
-echo [+] Completed. Optical design workspace offline shield active.`,
+echo [+] Exporting installed optical suite inventory...
+powershell -Command "Get-ItemProperty 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' | Where-Object { $_.DisplayName -match 'Zemax|OpticStudio' } | Select-Object DisplayName, DisplayVersion | Export-Csv C:\\cad-audit\\optical-seats.csv -NoTypeInformation"
+echo [+] Inventory written to C:\\cad-audit\\optical-seats.csv
+echo [+] Pull license-server usage logs (Ansys Licensing Portal) and attach to the procurement file.`,
     platforms: [
       {
         name: 'Zemax OpticStudio',
@@ -1054,7 +1052,7 @@ echo [+] Completed. Re-import LandXML alignment data.`,
       },
       {
         name: 'midas Civil',
-        toolSlug: 'freecad',
+        toolSlug: 'midas-civil',
         licenseModel: 'Perpetual / Floating Server',
         tco3Yr: '$19,000 (Solver Focus)',
         auditRisk: 'Medium',
@@ -1555,15 +1553,16 @@ echo [+] Re-run PDM model check-in.`,
     directiveCode: 'CAD-PROC-ELC44',
     reference: 'IEC 60617 / IEEE 315',
     intro: 'Electrical control design requires precise schematic wiring calculations and terminal block layout options. Selecting software requires analyzing drafting speed and named-user subscription TCO curves.',
-    complianceShieldTitle: 'Electrical CAD genuine telemetry block',
-    complianceShieldDesc: 'Block outbound named-user license validation pings and disable licensing audit background scans.',
+    complianceShieldTitle: 'Electrical CAD License Audit Readiness',
+    complianceShieldDesc: 'Inventory EPLAN and AutoCAD Electrical seats and reconcile named-user assignments before vendor audits.',
     codeSnippet: `@echo off
 echo ===================================================
-echo   CAD DIRECTIVE: ELECTRICAL SOFTWARE SHIELD
+echo   CAD DIRECTIVE: ELECTRICAL LICENSE AUDIT READINESS
 echo ===================================================
-echo [+] Blocking outbound electrical suite telemetry...
-netsh advfirewall firewall add rule name="BlockEplanTelemetry" dir=out action=block program="%PROGRAMFILES%\\EPLAN\\Eplan.exe" enable=yes
-echo [+] Completed. Electrical workspace offline shield active.`,
+echo [+] Exporting installed electrical suite inventory...
+powershell -Command "Get-ItemProperty 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' | Where-Object { $_.DisplayName -match 'EPLAN|AutoCAD Electrical' } | Select-Object DisplayName, DisplayVersion | Export-Csv C:\\cad-audit\\electrical-seats.csv -NoTypeInformation"
+echo [+] Inventory written to C:\\cad-audit\\electrical-seats.csv
+echo [+] Reconcile EPLAN ePulse / named-user assignments in the vendor portal before the audit window.`,
     platforms: [
       {
         name: 'AutoCAD Electrical',

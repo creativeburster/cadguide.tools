@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.irendernxt.com/forum/topics/bug-splats-in-spacedesign"
+  - "https://forum.irendernxt.com/forum/topics/SpaceDesign++3D+PDF"
+  - "https://renderplus.com/wk/Attributes_and_Reports.htm/"
 ---
 
 # SpaceDesign SketchUp Plugin Report and PDF Errors: Bug Splats on Attribute Window from Version Incompatibility Requiring SketchUp Update, 3D PDF Creation Crash from IFXCOMInitialize Error Requiring Acrobat Reinstall, System Memory Request Failed from Large Model U3D Export Requiring Model Simplification, Win32 API Load Error from 64-Bit Mismatch Requiring Correct Version Install, and SketchUp 2015 Migration Error from Module Name Change Requiring Manual Ruby Fix

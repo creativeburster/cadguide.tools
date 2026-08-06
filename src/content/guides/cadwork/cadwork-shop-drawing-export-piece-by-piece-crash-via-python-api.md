@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/cwapi3d/cwapi3dpython/issues/255"
+  - "https://kb.cadwork.ch/en/news/manual/1819/export-of-machine-data"
+  - "https://kb.cadwork.ch/en/news/manual/1871/export-of-machine-data"
 ---
 
 # CADwork Shop Drawing Export Piece by Piece Crash via Python API, BTLx 2.3 Beta Version Compatibility with CAM Systems, BTL Joiner Incomplete Machine Calculation for Roof Framing Parts, DXF CNC Export Losing Attributes and Relationships vs BTLx, and NC-Hops Export BTLx Version Selection in 2025: API Crash Fix Update, CAM Version Verification, Operation Check Flags, BTLx Migration, and Machine Menu Navigation

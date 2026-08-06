@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.bluebeam.com/revu/troubleshooting/hangs-or-freezes-when-opening-a-pdf.html"
+  - "https://support.bluebeam.com/revu/troubleshooting/error-revu-has-stopped-working.html"
+  - "https://support.bluebeam.com/revu/troubleshooting/performance-improvement.html"
 ---
 
 # Bluebeam Revu Hangs or Freezes from Alienware Command Center Graphics Hook, Stopped Working from Corrupted Profile, Periodic Freeze from Recent Files Network Drive Search, Slow Performance from Rendering Engine and Power Settings, and Blurred Garbled Text from AWCC Secondary Monitor: AWCC Update or Uninstall, Software Rendering, Profile Switch and Rebuild, Hardware Rendering and High Performance Power Plan, and Enable Recent Files Disable

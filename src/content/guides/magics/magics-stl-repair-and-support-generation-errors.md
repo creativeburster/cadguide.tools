@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://help.materialise.com/magics-known-issues/known-issues-magics"
+  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
+  - "https://www.materialise.com/en/academy/industrial/magics/video-tutorials/master-basic-stl-file-repair"
 ---
 
 # Magics STL Repair and Support Generation Errors: Bad Edges and Inverted Normals from STL Import Requiring AutoFix and Manual Repair, Thickened Support Empty Slices from Non-Solid Support Requiring 28.03 Update and Regeneration, BREP Fillet Failure from Convergent Body Errors Requiring Manual Edge Fix, Import Hang from Select Orientation Dialog Bug Requiring Settings Disable, and Tree Support Incorrect Generation from Close-to-Platform Surface Requiring Angle Adjustment

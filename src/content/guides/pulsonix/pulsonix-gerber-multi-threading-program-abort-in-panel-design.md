@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8945.pdf"
+  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8469.pdf"
+  - "https://www.pulsonix.com/downloads/updates/documents/Fixes8471.pdf"
 ---
 
 # Pulsonix Gerber Multi-Threading Program Abort in Panel Design, Intelligent Gerber Import 90 Degree Pad Rotation and Incomplete Data, Eagle XML Library Import Failure from Missing XML Keyword, Altium Self-Intersecting Regions Pour Phase Incomplete, and Gerber Verification Plot PDF Blank or Program Quit: Multi-Threading Disable, Import Settings, XML Fix, Region Cleanup, and PDF Verification

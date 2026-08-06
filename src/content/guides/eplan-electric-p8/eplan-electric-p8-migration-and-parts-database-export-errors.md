@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/autocad-electrical-forum/eplan-parts-database-to-autocad-electrical/td-p/13821300"
+  - "https://forums.autodesk.com/t5/autocad-electrical-forum/problem-with-exporting-eplan-project-to-autocad/td-p/9803368"
+  - "https://forums.autodesk.com/t5/autocad-electrical-forum/arguments-to-keep-using-autocad-instead-of-eplan-when-editing/td-p/13953980"
 ---
 
 # EPLAN Electric P8 Migration and Parts Database Export Errors: Parts Database Migration to AutoCAD Electrical Requires Multiple Excel Exports with Column Mapping, DWG Export Converts Embedded Images to XRefs with Fixed Paths Requiring Manual Image Folder Copy, EPLAN Macro Library Cannot Be Directly Imported to AutoCAD Electrical Requiring EDZ to MDB Conversion, Old DWG Editing in EPLAN Loses Electrical Logic and Explodes Blocks, and AutoCAD Electrical DWG Without Project Files Requires New Project Creation and Apply Project Defaults

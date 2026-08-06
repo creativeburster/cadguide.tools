@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://industrialmonitordirect.com/blogs/knowledgebase/adding-custom-posts-in-surfcam-velocity-step-by-step-guide"
+  - "https://hexagon.com/products/surfcam-post-processors"
+  - "https://pmtechnologies.com/blog/surfcam-2025-1-workflow-and-toolpath-improvements/"
 ---
 
 # SurfCAM 2026 Post Processor Not Visible in Menu from Manual postform.m Edit Without surfcam.pst Registration, Post Added to Library But Not Visible in Menu from Registry Parity Failure, G-Code Errors from Unsupported Commands in M-Post Output, Waveform 2D Toolpath Calculation Speed and Internal External Contour Issues, and Post Menu Wizard Permission Error from Lack of Administrator Rights: Post Menu Wizard Use, surfcam.pst Registration, G-Code Command Removal, CAMENGINE Update, and Administrator Rights

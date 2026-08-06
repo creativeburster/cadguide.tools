@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://community.trimble.com/discussion/trimble-connect-sync-issues-1"
+  - "https://community.trimble.com/question/trimble-connect-unable-to-load-files-cause-and-fixing"
+  - "https://community.trimble.com/discussion/trimble-sync-manager-not-loading-from-the-cloud"
 ---
 
 # Trimble Connect Sync Failed and Schedule Path Restrictions, Desktop SSL TLS Download Error, Free Account File Upload Lock, and Sync Manager Cloud Not Loading: SYNC-DATA Folder Deletion, Schedule Path Relaxation, Firewall and TLS Configuration, and Sync Manager Update

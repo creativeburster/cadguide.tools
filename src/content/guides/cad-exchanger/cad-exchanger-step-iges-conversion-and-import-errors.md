@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://cadexchanger.com/step-to-iges/"
+  - "https://prepomax.discourse.group/t/error-importing-step-and-iges-files/2352"
+  - "https://prepomax.discourse.group/t/disappearing-compound-part/2105"
 ---
 
 # CAD Exchanger STEP IGES Conversion and Import Errors: IGES B-Rep Edge Connectivity Limitations Causing Inconsistent Orientations Requiring STEP Format Instead, Split Periodic Surfaces Option Breaking Defeaturing Requiring Disable Before Import, STEP File Round-Off Errors from Text Format Accumulating Precision Loss Requiring Binary or Tolerant Import, Disappearing Compound Parts from IGES Shell Import Requiring STEP Conversion, and AutoCAD STEP Export Entity Cannot Be Converted Requiring Inventor or Fusion 360 Intermediate Processing

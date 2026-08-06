@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.caddit.net/forum.21/viewtopic.php?t=687"
+  - "https://www.caddit.net/forum.21/viewtopic.php?t=55"
+  - "https://forums.autodesk.com/t5/autocad-map-3d-ideas/progecad-dwg-compatibility-problems-in-autocad-map-3d/idi-p/12475858"
 ---
 
 # progeCAD DWG Compatibility and Field Corruption Errors: Title Block Fields Corrupt After Save from 2010 DWG Back-Conversion Requiring Pre-Save in AutoCAD 2010, ePermanentlyErased Crash Opening progeCAD DWGs in AutoCAD from XREF Issues Requiring Audit and Recover, Invalid DWG Version Error from 2007 Format Save Requiring 2004 Format Save, DWG Geometry Misalignment in AutoCAD Map 3D from Translation Loss Requiring DWG Audit, and progeCAD Drawings Not Opening in Older AutoCAD from Version Mismatch Requiring Save As Correct Version

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.hexagonali.com/r/en-US/CADWorx-Plant/24/1432250"
+  - "https://support.ecedesign.com/support/solutions/articles/24000060455-enhancing-cadworx-pipe-specs-before-converting-to-autocad-plant-3d-specs"
+  - "https://docs.hexagonppm.com/r/en-US/CADWorx-Spec-Editor/25/752890"
 ---
 
 # CADWorx Pipe Support Modeler Missing Library and Category, Short Description Blank Causing P3D Crash on Pipe Routing, Content Folder Network Path and VPN Copy Breaking Spec Components, FACING Custom Data Missing for Flanged and Grooved Connections, and Multiple Content Folder Switching Creating Hidden Path Dependencies: PipeSupport Category, Short Description Population, Local Content Folder, FACING Custom Data, and Single Master Content Folder

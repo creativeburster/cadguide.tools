@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/37619/17-2-pcb-designer-crashes-every-time-drc-is-run"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/41997/pcb-editor-17-2-2016-s055-crashing-without-error"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/48384/actual-value-is-meeting-the-constraint-value-but-still-seeing-the-drc-e-g-actual-value-higher-than-constraint-value-for-line-to-line-spacing-but-the-drc-is-still-present"
 ---
 
 # Cadence Allegro PCB Editor DRC Crashes and Constraint Manager Errors: DRC Crash from Database Corruption Fixable by dbDoctor, Setup Function Crash from Graphics Driver and Window Position, Stale DRC Markers After Constraint Update Requiring DRC Update, Shape-to-Shape Spacing Constraint Not Found in Constraint Manager, and External DRC Rules from SKILL Programs and RAVEL

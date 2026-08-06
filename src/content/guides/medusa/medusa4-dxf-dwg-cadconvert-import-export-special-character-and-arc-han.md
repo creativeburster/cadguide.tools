@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.cad-schroer.com/tech-support/faqmedusa-2589/"
+  - "https://www.cad-schroer.com/fileadmin/Download/datasheet/MEDUSA4-Brochure-CAD-Software_en.pdf"
+  - "https://en.wikipedia.org/wiki/MEDUSA4"
 ---
 
 # MEDUSA4 DXF DWG CADConvert Import Export Special Character and Arc Handling Issues, Very Large Drawing Sheet Performance from Excessive Layers, Parametric Design Object 2D to 3D Model Sync Failures, MEDRaster Colour Raster to Vector Integration Quality, and CADConvert Pro Advanced DXF DWG Scale and Text Position Accuracy: Special Character Fix, Layer Optimization, Parametric Sync, Raster Quality, and Scale Correction

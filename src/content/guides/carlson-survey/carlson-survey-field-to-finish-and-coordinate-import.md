@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://cf.carlsonsw.com/forum/viewtopic.php?f=5&t=4512"
+  - "https://cf.carlsonsw.com/forum/viewtopic.php?f=5&t=4926"
+  - "https://cf.carlsonsw.com/forum/viewtopic.php?f=15&t=3695"
 ---
 
 # Carlson Survey Field-to-Finish and Coordinate Import: Point Node on Wrong Layer from Undefined F2F Codes, Description Truncation from C&G CRD Fixed Length, Lat/Long Scale Factor from NAD83 Import, Coordinate File Empty on Data Collector from Wrong Format, and Field Code Conversion for Client Requirements

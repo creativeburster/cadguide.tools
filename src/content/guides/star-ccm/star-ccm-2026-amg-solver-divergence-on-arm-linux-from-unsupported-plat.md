@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000iCYZkKAO/amg-solver-diverge-version-25022506-on-arm-and-linux"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000CeleTKAR/floating-point-error-in-vof-lmp-simulation"
 ---
 
 # STAR-CCM+ 2026 AMG Solver Divergence on ARM Linux from Unsupported Platform, Segregated Species Solver NaN Residuals from Bad External Fluid Region Mesh, VOF LMP Floating Point Error from AMR and Insufficient Precision, AMG Solver Divergence at First Iteration from Grid Sequencing, and Floating Point Error from Field Function Zero Denominator and Supersonic Segregated Solver: Platform Switch RHEL, 3D-CAD Geometry Rebuild, AMR Disable Double Precision, Grid Sequencing Debug, and Field Function Check

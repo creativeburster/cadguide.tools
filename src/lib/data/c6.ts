@@ -187,7 +187,7 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
-  version: "25",
+  version: "26",
   last_updated: "2026-08-03",
   free_trial_days: 15,
 

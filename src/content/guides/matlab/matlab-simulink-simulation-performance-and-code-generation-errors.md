@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://www.mathworks.com/matlabcentral/answers/2179463-simulink-model-simulation-huge-time-differences-between-simulation-arrangements"
+  - "https://www.mathworks.com/matlabcentral/answers/2182884-simulink-simulation-becomes-very-slow-after-adding-foc-to-a-6-phase-pmsm-drive-with-chb-inverter"
+  - "https://www.mathworks.com/matlabcentral/answers/2177379-wrong-norm-result-in-generated-c-code-for-matlab-function-block-simulink-r2024b"
 ---
 
 # MATLAB Simulink Simulation Performance and Code Generation Errors: Huge Time Differences Between Programmatic and GUI Simulation from Referenced Model Solver Settings Left Unchanged, Simulation Becomes Very Slow After Adding FOC from 100kHz Global Step Rate Forcing All Blocks Requiring Multirate Design, Treat Each Discrete Rate as Separate Task Auto-Generates Rate Transition Causing Signal Delay Requiring Multitasking Understanding, Wrong Norm Result in Generated C Code from Accelerator Mode Code Generation Bug, and R2024b Code Generation Assertion Failed from Variant Subsystem Expression Compile Requiring Technical Support

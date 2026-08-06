@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://nextlimitsupport.atlassian.net/wiki/spaces/maxwell/pages/22686242/Network+troubleshooting"
+  - "https://forum.maxwellrender.com/viewtopic.php?p=402128"
+  - "https://forum.maxwellrender.com/viewtopic.php?f=1&p=399762&t=45682"
 ---
 
 # Maxwell Render Network Rendering and Firefly Errors: Network Node Communication Fails from Firewall Blocking TCP UDP Ports 45454-45474 Requiring Firewall Rules, MXI Merging Fails from Different Maxwell Versions on Nodes Requiring Version Sync, Antivirus Interferes with Network Rendering Causing Node to Stop Communicating Requiring AV Exclusion, Fireflies and Noise in Ultra-Reflective Scene with Many Light Sources Requiring Denoiser and Scene Openings, and Render Crashes at 9SL from RAM Exhaustion in Complex Mirrored Space Requiring Resolution Reduction

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://manuals.keyshot.com/keyshot2024/manual/gpu-mode.html"
+  - "https://discourse.mcneel.com/t/rhino-8-maps-not-translating-to-keyshot-2023/174428"
+  - "https://support.keyshot.com/en/knowledge-base/gpu-mode-not-updating-real-time-display-in-keyshot"
 ---
 
 # KeyShot GPU Mode and Texture Mapping Errors: GPU Mode Not Updating Real-Time Display from Windows Graphics Settings Requiring High Performance Assignment, Rhino 8 Texture Maps Not Translating from UV Coordinate Change Requiring TestFillInLegacyTextureCoordinates, GPU Mode Crashes with Certain Geometries and Area Light on Flake from Known Bugs Requiring 2024.2 Update, NVLink Multi-GPU Memory Not Combined from Driver Issues Requiring Specific Driver Versions, and GPU Runs Out of Memory Reverting to CPU from High-Resolution Textures Requiring Resolution Reduction

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://help.graebert.com/en/articles/6202248-troubleshooting-crash-on-start-launch-ares-commander-2022-and-newer-versions"
+  - "https://help.graebert.com/en/articles/9260031-ares-commander-2025-release-notes"
+  - "https://help.graebert.com/en/articles/7903865-ares-commander-2024-release-notes"
 ---
 
 # ARES Commander Crash on Launch from OpenGL Graphics Driver, LISP DCL load_dialog Failure, DWG Background Image Crash on Open, TTR TTT Circle Creation Unsupported via Script, and LISP Korean Language Parameter Processing Failure: OpenGL Profile Switch, FLISP Editor, Empty Row Fix, and Language Workarounds

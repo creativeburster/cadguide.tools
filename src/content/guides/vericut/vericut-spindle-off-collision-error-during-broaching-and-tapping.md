@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.cgtech.com/viewtopic.php?id=2185"
+  - "https://forum.cgtech.com/viewtopic.php?id=498"
+  - "https://forum.cgtech.com/viewtopic.php?id=2080"
 ---
 
 # VERICUT Spindle Off Collision Error During Broaching and Tapping, Cutter Compensation Not Activated, False Collision Detection from Corrupted Fixture Model, C-Axis Turning Tool Spindle Off Check Override, and Broaching Cycle Not Cutting Stock: CTL File Configuration, Process Cutter Comp Setting, Model Replacement, and Macro Override

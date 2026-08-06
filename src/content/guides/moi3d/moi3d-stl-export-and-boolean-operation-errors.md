@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://moi3d.com/forum/lmessages.php?msg=11597.1&webtag=MOI"
+  - "https://moi3d.com/forum/messages.php?msg=10358.1&webtag=MOI"
+  - "https://moi3d.com/forum/messages.php?webtag=MOI&msg=4270.1"
 ---
 
 # MoI3D STL Export and Boolean Operation Errors: Open Edges from Stray Fillet Surfaces, False Faces from Non-Planar Union, BSOD Crash on Export from Intel Graphics Driver, Mesh Export Artifacts from Fillet Gaps Requiring CentroidTriangulation, and Non-Manifold Edges from Barely Grazing Cylinders

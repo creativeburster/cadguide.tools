@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://help.materialise.com/magics-known-issues/thickened-supports-might-create-open-contours-and-empty-slices"
+  - "https://wiya3d.com/community/postid/1248/"
+  - "https://wiya3d.com/community/postid/1249/"
 ---
 
 # Materialise Magics STL Repair and Support Generation Errors: Thickened Supports Create Open Contours and Empty Slices from Non-Solid Support Geometry Requiring 28.03 Update, No Support Generation Method Selected from Incomplete Machine Setup Requiring Machine Properties Configuration, Common STL Errors Bad Edges Inverted Normals Holes Intersecting Triangles Requiring AutoFix Workflow, Massive STL File Sizes Slow Viewport from High Polygon Count Requiring Triangle Reduction, and Support STL Export to Cura for FDM Requires Solid Support Export Format

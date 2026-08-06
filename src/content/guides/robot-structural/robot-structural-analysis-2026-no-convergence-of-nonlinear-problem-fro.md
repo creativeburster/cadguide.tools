@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/robot-structural-analysis-professional-2026-hotfix-1/td-p/13748656"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/No-convergence-of-nonlinear-problem-while-simple-load-cases-calculation-in-in-Robot-Structural-Analysis.html"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/instability-and-no-convergence-of-nonlinear-problem/td-p/13726480"
 ---
 
 # Robot Structural Analysis 2026 No Convergence of Nonlinear Problem from Tension-Only Bars in Compression, Execution Problem No 3060 from Modal Analysis of Revit-Imported Model, Instability Type 2 from Tension-Only Web Members and Stay Cables, Program Instability When Exporting Printout Tables to MS Word, and Time History Analysis Calculation Error with Elastic Supports: Auxiliary Analysis Type, Direct Modeling in Robot, Tension-Only to Regular Bar Change, CfgUsr Folder Reset, and HotFix 1 Install

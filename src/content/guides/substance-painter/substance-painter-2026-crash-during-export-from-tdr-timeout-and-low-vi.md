@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-during-export"
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-while-baking"
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/release-notes/known-issues"
 ---
 
 # Substance Painter 2026 Crash During Export from TDR Timeout and Low Virtual Memory, Crash While Baking from GPU Raytracing and Ryzen CPU BIOS, Crash from Insufficient Disk Space and SVT Cache, Freeze on Export from Specific Projects, and Crash on Startup with NVIDIA GTX 10xx Series: TDR Registry Increase, Live Preview Disable, GPU Raytracing Disable, BIOS Update, and Disk Space Cleanup

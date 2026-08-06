@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.hawkridgesys.com/hc/en-us/articles/37491616937741-Restore-the-Connection-between-SOLIDWORKS-and-the-3DEXPERIENCE-Platform"
+  - "https://3dswym.3dexperience.3ds.com/wiki/solidworks-news-info/understanding-solidworks-my-session-architecture-and-optimizing-performance-solidpractices_bJFmXC4ZTxedM2WKrd0kUw"
+  - "https://seacadtech.com/blog/3dexprienc-platform-upgrade-to-r2025x-additional-information/"
 ---
 
 # 3DEXPERIENCE SOLIDWORKS Connection Error After Platform Upgrade, MySession Refresh Freeze on Large Assemblies, On-the-Fly Conversion Performance Degradation, Multi-Configuration Save Delays, and xCAD Connector Reinstall: Trusted Sites, Asynchronous Refresh, Dynamic Tree Expansion, and Clean Reinstall

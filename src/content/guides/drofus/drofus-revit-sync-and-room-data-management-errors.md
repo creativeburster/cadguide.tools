@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://help.drofus.com/en/English/Learning/synchronize-with-revit"
+  - "https://support.drofus.com/en/support/solutions/articles/16000085851-the-value-you-tried-to-insert-has-an-id-number-primary-key-which-already-exists-in-the-database-pl"
+  - "https://help.drofus.com/en/English/Learning/tips"
 ---
 
 # dRofus Revit Sync and Room Data Management Errors: Duplicate ID Primary Key from Multiple Group Options Conflicting on Revit Parameter Mapping, Room Sync Link Status Issues with Unlinked Rooms Requiring Show in Model Navigation, Revit Property Update Changes Room Data Status from Template to Derived From Automatically, Tracking Deleted Revit Rooms with Update dRofus Option, and Large Project Sync Without Filter Clears Data from Wrong Revit Models

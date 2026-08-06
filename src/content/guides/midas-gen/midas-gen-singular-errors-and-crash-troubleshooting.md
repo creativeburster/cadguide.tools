@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://support.midasuser.com/hc/en-us/articles/49481841031449--GEN-FAQ-What-Does-the-Warning-DISPLACEMENT-AT-NODE-NO-IS-ABNORMAL-Mean"
+  - "https://gtc.midasuser.com/helpdesk/KB/View/16224290-why-error-norm-is-nan-or-infinite-error-occurs-"
+  - "https://midassupport.jitbit.com/helpdesk/KB/View/15803638-midas-gen-warning-message-dof-may-be-singular-displacement-dz-at-node-no-643-is-abnormal-"
 ---
 
 # midas Gen Singular Errors and Crash Troubleshooting: Abnormal Displacement from Excessive Beam End Releases, NaN Error Norm from Wrong Material Assignment, DOF Singular from Pin-Pin Connected Nodes, Plate Mesh Quality Not Guaranteed by Auto Mesh, and Software Crash from C++ Redistributable and Graphics Driver

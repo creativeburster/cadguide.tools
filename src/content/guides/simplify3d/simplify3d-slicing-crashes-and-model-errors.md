@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.simplify3d.com/viewtopic.php?t=16870"
+  - "https://forum.simplify3d.com/viewtopic.php?t=23493"
+  - "https://forum.simplify3d.com/viewtopic.php?t=23600"
 ---
 
 # Simplify3D Slicing Crashes and Model Errors: V5 Crash on Prepare to Print from Coasting/Wipe, Cannot Slice Any Model Only Generates Supports, Rotated Model Missing Geometry from Zero-Thickness Body, 978MB STL Crash and No GPU Usage in V5, and No Model After Prepare to Print from Corrupt Installation

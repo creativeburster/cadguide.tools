@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.turbocad.co.uk/imsi-design-releases-turbocad-2025-1/"
+  - "https://paulthecad.com/7647-2/"
+  - "https://forum.parallels.com/threads/turbocad-2024.364926/"
 ---
 
 # TurboCAD Parallels Mac Crash Report, Corrupted INI Configuration Files, GDI OpenGL Rendering Compatibility, Crash Reporting Diagnostics, and Floating License Support: Built-in Folder Deletion, Default Workspace Reset, NVIDIA AMD GPU Configuration, and 2025.1 Service Pack Update

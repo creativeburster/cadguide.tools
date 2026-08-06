@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/dwg-trueview-forum/trueview-doesn-t-remember-default-plot-settings/td-p/12501523"
+  - "https://forums.autodesk.com/t5/dwg-trueview-forum/trueview-printing-black-and-white-in-batch-plotting/td-p/8976501"
+  - "https://forums.autodesk.com/t5/dwg-trueview/dwg-trueview-wont-export-to-pdf/td-p/5441134"
 ---
 
 # DWG TrueView PDF Export and Batch Plot Errors: Export to PDF Does Nothing from Preset Plot Settings Pointing to Blank Area Requiring Plot Command Instead, Batch Plot Black and White Requires Monochrome CTB Page Setup Not Available by Default, Page Setup Not Saved Between Drawings Because TrueView Cannot Write to DWG Files, Batch Plot Extents Not Available for Model Space Requiring Paper Space Layouts, and Custom Plot Style Tables and Page Sizes Must Be Copied to TrueView Installation Directory

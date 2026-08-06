@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.autoform.com/en/how-the-process-description-influences-springback-results/"
+  - "https://formingworld.com/numisheet-2025-industrial-benchmark/"
+  - "https://formingworld.com/early-evaluation-springback-steps/"
 ---
 
 # AutoForm Springback Inaccuracy from Isotropic Hardening Model, Process Description Influencing Springback from Missing Secondary Operations, Element Type Selection BEM vs EPS for Springback Accuracy, Material Card Default vs Experimentally Calibrated Parameters, and Backdraft from Geometric Springback Compensation: Kinematic Hardening, Full Cycle Simulation, EPS-11 Shell Element, Cyclic Tension-Compression Test, and Coining with TS-11 Thick Shell

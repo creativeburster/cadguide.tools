@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://discourse.shapr3d.com/t/drawing-sheet-bug-import-export/40175"
+  - "https://discourse.shapr3d.com/t/synchronization-is-failing/40826"
+  - "https://discourse.shapr3d.com/t/import-shapr-file/39189"
 ---
 
 # Shapr3D 2026 Drawing Export PDF Greyed Out Button from iPad Files App, SHPR File Import Failure on iPadOS 26 from iCloud Storage, Synchronization Failure Between iPad and Windows from Cloud Sync Stuck, Constant Crashing on iPad During Basic Designing Inputs, and Drawing Image Import Restricted to Photo Library from Files App Option Missing: Share Icon Workaround, Local Copy Import, Version 26.82 Update, Support Ticket, and Platform Switch

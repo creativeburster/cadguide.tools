@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.gstarcad.net/news/gstarcad-2026-launches-with-breakthrough-speed-enhanced-precision-and-a-reimagined-user-experience?id=288"
+  - "https://blog.gstarcad.net/gstarcad-2026-for-linux-released-enhanced-experience-with-new-features-and-performance-boost/"
+  - "https://file.e-disti.com/GstarCAD2026_Overview.pdf"
 ---
 
 # GstarCAD 2026 Drawing Opening Slow Over 40 Percent Improvement, Multileader Block Freeze Elimination, Hatch Pick-Point 30x Faster on Complex Drawings, EXTEND Fence Crossing 11x Faster, and Linux Double-Click Open Failure from Long File Paths: Performance Update, Block Explosion Fix, Hatch Optimization, Trim Extend Speed, and Path Length Stability

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://support.spitfirepm.com/kba-01810/"
+  - "https://support.spitfirepm.com/kba-01853/"
+  - "https://support.spitfirepm.com/kba-01466/"
 ---
 
 # Spitfire Project Management File and Data Errors: SOV Workbook Data Set Not OK from Invalid XML Control Characters Requiring Data Cleanup, Word File Not Found from sfLink Lock Timeout Requiring MinUNCEditSeconds.dev Configuration, Cannot Open Word or Excel from Chromium Browser from ClickOnce Extension and VSTO Issues Requiring Device Setup, Integrity Check Report Data Issues from CCO Lines and Orphan Pay Requests Requiring Manual Repair, and XTS Project Task Sync Error from Empty Task ID or Description Requiring Cost Code Fix

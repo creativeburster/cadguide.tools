@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/bobcad-v36-post-processor-not-posting-tool-list.418295/"
+  - "https://bobcad.com/editing-a-post-processor-in-bobcad-cam/"
+  - "https://bobcadsupport.com/knowledgebase/posting-window-is-blank-no-g-code-showing/"
 ---
 
 # BobCAD-CAM Post Processor and Posting Errors: V36 Post Processor Not Posting Tool List from output_tool_list Commented Out Requiring Uncomment, Posting Window Blank from Unmounted Window or Missing C++ Redistributable Requiring Remount or vcredist Install, CL File Not Found from Old Version NC Path Requiring Current Settings Update, Grooving G71 Canned Cycle Rapids Along Profile with No Clearance Requiring G01 Move Fix, and Exception Raised in Calculation Routine from Machine Tolerance or Step Over Requiring Parameter Adjustment

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contacttrouble.htm"
+  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contactconstraints.htm"
+  - "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEITNRefMap/simaitn-c-contactdiagnostics.htm"
 ---
 
 # Abaqus Contact Convergence Severe Discontinuity Iterations, Second-Order Tetrahedral Corner Node Zero Force, Initial Overclosure Interference Fit Resolution, Penalty Method vs Hard Contact Overconstraint, and Surface Mesh Crack Node Stuck: Surface-to-Surface Formulation, Penalty Enforcement, Automatic Overclosure Adjustment, and Small-Sliding Tracking

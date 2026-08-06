@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.allplan.com/system/releasenotes/2025/allplan-2025-0-2/"
+  - "https://connect.allplan.com/de/forum/themen/topic/topics/cad-engineering/aec-2023-data-getting-corrupt-over-and-over-again.html"
+  - "https://help.allplan.com/Allplan/2025-0/1034/Allplan/352199.htm"
 ---
 
 # Allplan PLANBAR Precast Data Corruption and TIM Export Errors: Drawing File Corruption After Weeks of Not Opening from Version Update Failure Requiring Recovery Tools, TIM Export Canceled from Detailed Drawing Files Loaded by Other Users Requiring File Unload, Crash from Double-Click Middle Mouse Before Complete Drawing Load Requiring Patience or Update, MSA Reinforcement Group Crash on Positioning from Modification Bug Requiring Update, and IFC Assistant Layer Validation Errors from Incorrect Layer Number Assignment Requiring Ascending Order and Touching Layers

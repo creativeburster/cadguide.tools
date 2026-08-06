@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://campus.allplan.com/de/forum/themen/topic/topics/cad-engineering/planbar-error.html"
+  - "https://connect.allplan.com/de/forum/themen/topic/topics/cad-engineering/aec-2023-data-getting-corrupt-over-and-over-again.html"
+  - "https://connect.allplan.com/forum/topics/topic/topics/cad-engineering/different-types-of-view-must-not-to-gather-or-loaded-together.html"
 ---
 
 # Allplan Planbar Precast Element Plan Crash and Data Corruption: BT_ASSERT_RELEASE Crash in Element Plan from NmKtLayoutCatCell, Data Corruption in Precast Projects from Drawing File Inconsistency, Associative View and View-and-Section Conflict in Pre-2023 Versions, Rebar Extrusion Crash from Single-Line Shape Without 3D Plane, and Assemblying Group for Bending Machine Export and Out-of-Element Bars

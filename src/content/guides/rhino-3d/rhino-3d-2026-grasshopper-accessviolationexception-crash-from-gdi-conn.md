@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://discourse.mcneel.com/t/grasshopper-has-become-unstable-over-the-past-couple-weeks/216785"
+  - "https://discourse.mcneel.com/t/ghgl-seems-broken-in-9-0-26055-12305/216387"
+  - "https://discourse.mcneel.com/t/grasshopper-keeps-crashing-when-generating-meshes/197542"
 ---
 
 # Rhino 3D 2026 Grasshopper AccessViolationException Crash from GDI+ Connection Wire Drawing, GHGL Mesh Shader RAM Overflow from Untethered Components, Grasshopper Canvas Crash with Large Definitions During Zoom, Mesh Generation Crash from Far-From-Origin GIS Data, and Rhino WIP Freeze with Empty GH1 Running and Outdated GPU Drivers: Autosave Disable, Default Mesh Wiring, Plugin Troubleshoot, Origin Relocation, and Driver Update

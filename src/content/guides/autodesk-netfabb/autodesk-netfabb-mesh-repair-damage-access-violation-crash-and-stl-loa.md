@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/netfabb-forum/import-repair-script-damages-mesh/td-p/8921033"
+  - "https://forums.autodesk.com/t5/netfabb-forum/access-violation-error-in-netfabb-2020-3/td-p/9287094"
+  - "https://forums.autodesk.com/t5/netfabb-forum/failed-to-load-mesh-103/td-p/10321186"
 ---
 
 # Autodesk Netfabb Mesh Repair Damage, Access Violation Crash, and STL Load Failures: Repair Script Stairstepping from Remove Degenerate Faces, Access Violation Crash from Corrupt AppData, Access Violation During Support Generation from Advanced Display, Failed to Load Mesh #103 from Invalid Floating Point, and Free Netfabb Basic Access

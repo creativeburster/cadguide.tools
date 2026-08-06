@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://support.tekla.com/doc/tekla-structures/2026/ins_troubleshooting_tekla_structures"
+  - "https://support.tekla.com/doc/tekla-structures/2026/rel_2026_sp3_new_features_and_improvements"
+  - "https://support.tekla.com/doc/tekla-structures/2026/rel_2026_new_features_and_improvements"
 ---
 
 # Tekla Structures 2026 APPCRASH ntdll.dll from Other Software Hooking, Slow Drawing Inspection from Section View Associativity Dialog, Crash on Close from Keyboard Shortcuts, Select Component Dialog Crash on Close, and System.DllNotFoundException from Missing Redistributable Packages: Software Hooking Check, SP3.1 Update, Keyboard Shortcut Disable, Dialog Closure, and Redistributable Installation

@@ -534,7 +534,11 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return t.starting_price > 0 ? `$${t.starting_price}/year` : 'Varies by seat';
                 }
                 if (key === 'monthly_pricing') {
-                  return t.starting_price > 0 ? `$${Math.round(t.starting_price / 12)}/month` : 'Quote only';
+                  return t.starting_price > 0
+                    ? `$${Math.round(t.starting_price / 12)}/month`
+                    : ['Free', 'Open Source', 'Freemium'].includes(t.pricing_type)
+                      ? 'Free'
+                      : 'Quote only';
                 }
                 if (key === 'multi_year_disc') {
                   return 'Up to 10% on 3-Year';
@@ -546,7 +550,11 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return t.score > 4.5 ? 'SSO / SAML Hub' : 'Simple license pool';
                 }
                 if (key === 'buyout_price') {
-                  return t.starting_price > 0 ? `$${t.starting_price} (One-time)` : '$1,390 buyout';
+                  return t.starting_price > 0
+                    ? `$${t.starting_price} (One-time)`
+                    : ['Free', 'Open Source'].includes(t.pricing_type)
+                      ? 'Free'
+                      : 'Quote only';
                 }
                 if (key === 'maintenance_cost') {
                   return 'Optional annual update';

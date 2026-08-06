@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/edgecam-and-inventor-parts-2d-toolpaths.321820/"
+  - "https://www.practicalmachinist.com/forum/threads/edgecam-full-5-axis.389056/"
+  - "https://documentation-be.hexagon.com/bundle/edgecam_gs_2022.1/raw/resource/enus/edgecam_gs_2022.1.pdf"
 ---
 
 # Edgecam Feature Finder and 3D Machining Performance Errors: Feature Finder OKAY But Lacks Line Selection on Solids Requiring Wireframe Geometry, Toolpath Calculation Takes 20-30 Minutes for Small End Mills from STL Stock Regeneration After Every Operation, Rest Roughing Forces Same Offset as Roughing Causing Dumb Retracts Requiring STL Stock Workaround, Full 5 Axis Advanced Toolpath Overwhelming Parameters Requiring Limit Variables Approach, and Waveform Too Slow for Single Part Manufacturing Under 2mm Tools

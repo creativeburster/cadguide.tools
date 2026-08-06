@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://help-be.hexagonmi.com/bundle/Adams_2021.0.2_Adams_Solver_User_Guide/raw/resource/enus/Adams_2021.0.2_Adams_Solver_User_Guide.pdf"
+  - "https://nexus.hexagon.com/community/public/adams/f/adams-community-forum/145769/hht-solver-hmin-error"
+  - "https://nexus.hexagon.com/community/public/adams/f/adams-community-forum/145186/simulation-error-urgent-help-is-needed"
 ---
 
 # MSC Adams HHT Solver Hmin Error from Contact-Heavy Models, Acceleration Computation Failed to Converge from Self-Written Contact Subroutines, GSTIFF Corrector Failures at Small Step Sizes from Ill-Conditioned Jacobian, Discontinuities from MIN MAX IF Functions Causing Corrector Failures, and Native Solids Contact Instability from Faceting Tolerance Gaps: ADAPTIVITY Parameter, Model Debug, SI2 Formulation, Discontinuity Removal, and Faceting Adjustment

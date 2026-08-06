@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb000014O4vhKAC/tc2506-nx2412-very-slow-loading-of-nxcam-assemblies"
+  - "https://community.sw.siemens.com/s/question/0D5Vb000017KwZdKAK/is-there-a-way-to-increase-the-number-of-processor-threads-nx-uses-for-toolpath-calculation"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000pdtSYKAY/numpy-crashes-on-second-execution-despite-nx-threaded-external-python-environment"
 ---
 
 # Siemens NX 2412 Very Slow Loading of CAM Assemblies from 2GB Wave Link Geometry, Toolpath Calculation Limited to 4 SMP Threads from Operation-Specific Multi-Threading, Journal Execution Error from mySelectedObject Nothing Reference, NumPy Crashes on Second Execution from nx:threaded Signal 11, and Toolpath Display Dots Slowing NX from UGII_CAM_TP_DISP_ENDPOINTS: Wave Link Cleanup, Thread Limit Understanding, Object Reference Debug, nx:main-interpreter Workaround, and Endpoint Variable Disable

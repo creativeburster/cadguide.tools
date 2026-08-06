@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/solvespace/solvespace/issues/1569"
+  - "https://github.com/solvespace/solvespace/issues/1247"
+  - "https://github.com/solvespace/solvespace/issues/1466"
 ---
 
 # SolveSpace Handle Limit and Constraint Solver Errors: Handle Isn't Unique Crash from 32-Bit Entity Handle Limit Requiring Assembly Split, Solver Fails on Angle Constraint Jumps from Numerical Convergence Failure Requiring Incremental Changes, Constraints Are Incompatible from Large Object Solver Convergence Requiring Unit Scaling, Constraining Entities from Previous Groups Fails from Group Order Dependency Requiring Sequential Constraint, and Linked Parts Import as REF from Multi-Instance Propagation Failure Requiring Single Instance Editing

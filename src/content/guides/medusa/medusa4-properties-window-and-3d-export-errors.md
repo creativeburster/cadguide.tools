@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://ww3.cad.de/foren/ubb/Forum16/HTML/000150.shtml"
+  - "https://ww3.cad.de/foren/ubb/Forum16/HTML/000159.shtml"
+  - "https://en.wikipedia.org/wiki/MEDUSA4"
 ---
 
 # MEDUSA4 Properties Window and 3D Export Errors: Properties Window Not Displayed from Too Many Elements Causing Element Positioning Problems Requiring Element Reduction, STEP Export Not Available in MEDUSA4 Personal Requiring Advanced Package Upgrade, 3D Model Export to FE Software Requires STEP Interface Module, 2D Sheet Metal and Parametrics Available in Personal but 3D Limited, and Element Insertion Causes Massive Positioning Problems Requiring Drawing Simplification

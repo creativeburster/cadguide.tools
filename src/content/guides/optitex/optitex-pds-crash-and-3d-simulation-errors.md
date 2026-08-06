@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://help.optitex.com/1382687/Content/Whats_New/Main_Release_Notes.htm"
+  - "https://help.optitex.com/1382687/Content/Optitex_3D/GPU-Simulation-Important-Inforamtion.htm"
+  - "https://help.optitex.com/1382687/Content/FAQ/3D_Questions.htm"
 ---
 
 # Optitex PDS Crash and 3D Simulation Errors: PDS Crash with Outer Notch on Internal Piece from Notch Validation Bug Requiring Update to O26, View Fabric Cannot Be Turned Off and Pieces Disappear After 3DDI Export from NVIDIA Settings Requiring GPU Configuration, Stitches Not Visible in 3D Window from Stitching Issue on Half Piece Requiring Stitch Rebuild, PDS Crash When Bending Field Empty in HQR with Texture from Missing Validation Requiring Bending Value, and OAFF File Load Hangs PDS When Not Logged Into O-Cloud Link Requiring Authentication Before Load

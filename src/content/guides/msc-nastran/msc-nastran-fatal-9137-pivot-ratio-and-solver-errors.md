@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb000006dfRWKAY/excessive-pivot-ratio-fatal-error-9137"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000aYjNnKAK/sol-103-response-dynamics-simulation-gets-stuck-at-certain-frequency"
+  - "https://www.eng-tips.com/threads/nastran-limitation-configuration.506947/"
 ---
 
 # MSC Nastran Fatal 9137 Pivot Ratio and Solver Errors: Excessive Pivot Ratios in Matrix KLL from Rigid Body Motion Requiring SOL 103 Diagnosis, SOL 103 Response Dynamics Stuck at Frequency from Disk Space and MUMPS Solver, Fatal 4291 EQD4S Singular J-Matrix from Orthotropic Material Missing Shear Moduli, No Results Found in SOL 101 from BAILOUT and AUTOMPC Misuse, and Unable to Allocate Open Core from Memory Configuration on Linux

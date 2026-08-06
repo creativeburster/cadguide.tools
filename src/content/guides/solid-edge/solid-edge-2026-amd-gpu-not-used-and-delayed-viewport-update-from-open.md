@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00001GH2NNKA1/serious-graphicsrendering-issue-in-solid-edge-2026-amd-gpu-not-used-delayed-viewport-update"
+  - "https://community.sw.siemens.com/s/question/0D5Vb000018s5tnKAA/se2026-mp4-is-crashing-while-using-hole"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00001KKtsNKAT/designcenter-solid-edge-2026-update-6-announcement"
 ---
 
 # Solid Edge 2026 AMD GPU Not Used and Delayed Viewport Update from OpenGL Hardware Acceleration Failure, Access Violation 0xc0000005 Crash in Hole Command on Frame Environment Save As Parts, Assembly File Crash After Part Edited Twice with Section View Active, Parts Library Navigation Very Slow in Solid Edge 2026, and Crash When Opening Large Assembly from Update 6: GPU Driver Update, Update 3 Rollback, Section View Disable, Settings Wizard Reset, and Update 6 Install

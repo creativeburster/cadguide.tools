@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.solidworks.com/support/general-hotfixes"
+  - "https://support.hawkridgesys.com/hc/en-us/articles/44396298148877-SOLIDWORKS-Design-Crashes-Immediately-after-Launch-BR10000422063"
+  - "https://help.solidworks.com/2026/english/SolidWorks/sldworks/c_graphics_adapters_drivers.htm"
 ---
 
 # SOLIDWORKS 2026 Crash After Launch from Microsoft Edge WebView2 Runtime 146 Update, Generic Crash When Opening Drawing and Changing Detail View Scale, Mate References Preview Dialog Low Performance and Component Movement Scattered, Visualize 2026 SP1.1 Crashes on File Exit, and Pack and Go Search Replace Filename Not Working with 3DEXPERIENCE Add-in: HotFix QA00000445516 Install, SP2.1 Update, Mate Preview Disable, Visualize Update, and Add-in Disable

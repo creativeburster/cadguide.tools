@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.gibbscam.com/forum/gibbscam-discussion-forum/-4-and-5-axis-machining/78260-5-axis-translate-error"
+  - "https://forums.gibbscam.com/forum/gibbscam-discussion-forum/gibbscam-installation-getting-started-troubleshooting/73818-crashing-and-closing-constantly-v23-0-48-0"
+  - "https://compost.gibbscam.com/index.php?title=Fatal_Post_Errors"
 ---
 
 # GibbsCAM Post Processor and 5-Axis Errors: G68.2 Transform Plane Missing for Parallel CS, Post Line Overflow Infinite Loop, Crash During Render from Facet Body and Graphics Driver, C-Axis Orientation Crash from Post Not Canceling 5-Axis Motion, and Fatal Post Errors from Deprecated Commands and Null Toolpath Iterator

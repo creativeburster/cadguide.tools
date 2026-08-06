@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.onshape.com/discussion/26373/assembly-importing-issues"
+  - "https://forum.onshape.com/discussion/27693/im-having-issues-with-onshape-prematurely-crashing-with-imported-3d-scans-stls-and-objs"
+  - "https://forum.onshape.com/discussion/22945/step-file-export-import-bug"
 ---
 
 # Onshape Import Export and Assembly Errors: Assembly Import Distortion from Part Studio Geometry Requiring Reimport or Parasolid Format, Browser Crash with Large 3D Scan STL and OBJ from WebGL Memory Requiring Mesh Simplification, STEP Export Import Roundtrip Faulty Topology from 2-Micron Part Size Requiring Parasolid Export, Export Failed Resource Does Not Exist from Shared Assembly Permissions Requiring Copy Document, and SolidWorks Assembly Hidden Suppressed Parts Not Imported Requiring Visibility Toggle Before Export

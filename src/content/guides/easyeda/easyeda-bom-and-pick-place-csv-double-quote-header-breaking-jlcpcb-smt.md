@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://easyeda.com/forum/topic/JLCPCB-does-not-recognize-BOM-and-CPL-export-from-EasyEDA-when-adding-SMT-service-to-order-2a1403c7627f47a6bdb94b4143316bb7"
+  - "https://easyeda.com/forum/topic/BOM-and-Pick-And-Place-EasyEDA-format-export-issues-causing-Uploaded-file-format-is-incorrect-on-JLCPCB-SMT-Assembly-wizard-1b376a7cc4824fa1a0f665660fe7fe94"
+  - "https://www.schemalyzer.com/en/blog/easyeda/export-import/easyeda-bom-export-jlcpcb"
 ---
 
 # EasyEDA BOM and Pick Place CSV Double Quote Header Breaking JLCPCB SMT Assembly Upload, Unicode Text Tab Delimited BOM with CSV Extension Not Recognized by JLCPCB, Component Rotation Mismatch Between EasyEDA and JLCPCB Placement Preview, Missing LCSC Part Numbers Causing Part Not Matched Warnings, and Gerber Drill Coordinate Format Precision Offset in CAM350: CSV Save As Excel, Header Quote Removal, LCSC Part Number Assignment, Rotation Verification, and Drill Format 3:3 mm

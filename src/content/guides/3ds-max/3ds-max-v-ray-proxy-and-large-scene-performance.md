@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.chaos.com/t/vray-proxies-optimization/184729"
+  - "https://forums.chaos.com/t/extreamly-heavy-scene-stuck-at-updating-instances-about-one-hour-each-time-i-start-rendering/123040"
+  - "https://forums.chaos.com/t/vray-proxy-workflow-very-slow-startup-times-need-to-resolve/115306"
 ---
 
 # 3ds Max V-Ray Proxy and Large Scene Performance: Optimize for Instances Causing 10x Slower Time to First Pixel with High RAM from Voxel Structure, 16000 Proxies Taking 26 Minutes to Load from Network Small Reads, Updating Instances Freeze for 60 Minutes from Xref Forest Pack RailClone Light Scattering, CoronaBitmap Slow Save 20 Seconds vs 1 Second Standard Bitmap, and Compiling Clearing Geometry Every Frame from Embree Acceleration Rebuild

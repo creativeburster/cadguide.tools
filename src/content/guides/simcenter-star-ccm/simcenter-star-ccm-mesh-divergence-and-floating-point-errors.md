@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D54O00007lYiGySAK/nonconverging-residuals-due-to-poor-mesh"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000duTTzKAM/how-to-identify-root-cause-of-floating-point-error-nonfinite-residual-in-continuity-in-starccm"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000MVvygKAD/why-is-my-starccm-segregated-species-solver-returning-nan-residuals-and-diverging-immediately-despite-valid-mesh-and-double-precision"
 ---
 
 # Simcenter STAR-CCM+ Mesh Divergence and Floating Point Errors: Non-Converging Residuals from Tetrahedral Mesh Requiring Polyhedral or Trimmed, Floating Point Error from Division by Zero in Field Functions and Bad Cells, NaN Residuals from External Fluid Region Boolean Subtraction and Detach, AMG Solver Divergence at First Iteration from Grid Sequencing, and Bad Cells at Interfaces from Cell Size Mismatch and Twisted CAD Topology

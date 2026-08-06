@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://mscsoftware.my.site.com/customers/s/article/What-s-New-in-Patran-2026-1"
+  - "https://www.eng-tips.com/threads/importing-bdf-files.280440/"
+  - "https://nexus.hexagon.com/community/public/msc-nastran/f/msc-nastran-community-forum/162986/cannot-run-simple-static-analysis-with-composite-materials-on-amd-machine/907587"
 ---
 
 # MSC Patran 2026 BDF Import Crash from Network Drive Path, SYSTEM FATAL 7340 Eigenvalue Storage Exceeded from Buckling Analysis, Composite Material Analysis UFM 6134 on AMD CPU from Intel MKL Incompatibility, Superelement Duplicate Entity IDs from NIFIMP Import, and MscNastranDbServer Crash from BDF Path Length: Local Drive Copy, Eigenvalue Reduction, Intel CPU Workaround, ID Offsetting, and Path Shortening

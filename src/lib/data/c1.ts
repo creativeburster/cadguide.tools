@@ -379,7 +379,7 @@ export const c1Tools: Tool[] = [
   country: "China",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 899,
+  starting_price: 999,
 
   platforms: [
     "Windows",
@@ -959,7 +959,7 @@ export const c1Tools: Tool[] = [
   country: "France",
   category_id: "c1",
   pricing_type: "Subscription",
-  starting_price: 249,
+  starting_price: 299,
 
   platforms: [
     "Windows",
@@ -1039,7 +1039,7 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  version: "2025",
+  version: "2026",
 
   expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
 

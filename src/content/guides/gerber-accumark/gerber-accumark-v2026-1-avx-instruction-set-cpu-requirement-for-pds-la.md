@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://help.gerbertechnology.com/Whats_New/AccuMark/SupportedVersions.htm"
+  - "https://help.gerbertechnology.com/Whats_New/AccuMark/Gerber%20AccuMark%20Software%20Installation.pdf"
+  - "https://www.lectra.com/en/events-webinars/discover-gerber-accumark-v20261-new-features"
 ---
 
 # Gerber AccuMark V2026.1 AVX Instruction Set CPU Requirement for PDS Launch, Antivirus Quarantining AccuMark Executables sil2000.exe medpro.exe marking.exe amxplore.exe, Windows Insider Preview Build Incompatibility Causing AccuMark Malfunction, Piece Grouping in PDS for Multi-Piece Selection Operations, and PDF Marker Plot File Submission from Winplot: CPU-Z AVX Verification, Antivirus Exclusion Whitelist, Windows Update Rollback, Piece Group Workflow, and Winplot PDF Plot

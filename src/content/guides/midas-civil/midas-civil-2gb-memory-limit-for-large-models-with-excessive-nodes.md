@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.midasuser.com/hc/en-us/articles/12359299956249--CIVIL-What-is-the-appropriate-mesh-size-for-Plate-Solid-elements"
+  - "https://midassupport.jitbit.com/KB/View/20526019-what-steps-can-be-taken-to-resolve-the-application-error-issue-in-midas-civil-when-it-crashes-"
+  - "https://midassupport.jitbit.com/KB/View/5262846--analysis-warnings-displayed-during-analysis-that-certain-load-cases-have-not-converged-how-to-converge-all-the-load-cases-"
 ---
 
 # MIDAS Civil 2GB Memory Limit for Large Models with Excessive Nodes, Nonlinear Analysis Load Cases Not Converging from Default Tolerance, Application Error Crash from comctl32.dll and C++ Redistributable, Singular Errors from Plate and Solid Elements Without Rotational DOF, and Construction Stage Analysis Restart Inconsistency from Changed Stages: Mesh Size Optimization, Convergence Tolerance Adjustment, Windows Update, Rotational DOF Restraint, and Restart Reconfiguration

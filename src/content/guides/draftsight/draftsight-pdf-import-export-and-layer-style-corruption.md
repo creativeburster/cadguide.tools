@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://3dswym.3dexperience.3ds.com/question/draftsight-user-community/importing-pdf-issues_9035"
+  - "https://3dswym.3dexperience.3ds.com/question/draftsight-user-community/resulting-output-files-from-pdf-export-shows-features-not-present-in-draftsight-model-or-layout_10474"
+  - "https://www.eng-tips.com/threads/draftsight-vba-dimensionstyle-not-updating.480200/"
 ---
 
 # DraftSight PDF Import Export and Layer Style Corruption: PDF Import Inconsistent from INSERT OBJECT Showing Blank White Sheet or File Not Found, PDF Export Shows Features Not Present in Drawing from Layer Recollection and Blocking, ImportPDF Command Missing from Ribbon in DraftSight Professional, DimensionStyle Not Updating Without Switching Away and Back, and Layer Styles Corrupted on Export Requiring Master File Workaround

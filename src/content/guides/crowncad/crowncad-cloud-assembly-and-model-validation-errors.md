@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://www.crowncad.com/english/help/2025R2/Comprehensive.html"
+  - "https://www.linkedin.com/posts/crowncad_crowncad2026-upgrades-in-assembly-design-activity-7405133090018324480-b5eE"
+  - "https://cadguide.tools/tools/crowncad"
 ---
 
 # CrownCAD Cloud Assembly and Model Validation Errors: Large Assembly Performance from Part State Not Maintained on Refresh Requiring Large Assembly Mode, Invalid Faces and Edges from Geometry Import Requiring Check Entity Command, Virtual Parts Not Converting to Normal Parts Requiring Design Completion Conversion, Geometry Analysis Identifying Problematic Entities Requiring Manual Review, and Limited International Documentation and Plugin Ecosystem Requiring Community Workarounds

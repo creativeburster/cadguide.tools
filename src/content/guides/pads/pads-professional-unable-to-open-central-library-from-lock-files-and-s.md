@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D54O00006ndvAKSAY/why-pads-cannot-access-library-when-i-am-trying-to-change-a-footprint"
+  - "https://community.sw.siemens.com/s/question/0D5Vb0000031nbRKAQ/pads-professional-student-edition-vx212-designer-and-layout-library-tools-having-difficulty-renaming-pins"
+  - "https://community.sw.siemens.com/s/question/0D54O00006eo5ppSAA/pads-logic-pcb-decal-library-lock"
 ---
 
 # PADS Professional Unable to Open Central Library from Lock Files and sysindex.cbf, Pin Rename Error Symbol Pin Name Not Found in PDB from Update Local Libraries, PCB Decal Library Lock from LCK Files Requiring Restart, Thermal Spokes Missing After Import from Smoothing Radius and Add Thermals Setting, and Forward Annotation Failure from Stale Central Library Data: Lock File Delete, Update Local Libraries, LCK Cleanup, Thermal Settings, and Central Library Sync

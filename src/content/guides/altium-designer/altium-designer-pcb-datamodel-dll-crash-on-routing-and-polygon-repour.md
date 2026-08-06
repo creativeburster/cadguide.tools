@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.altium.com/documentation/knowledge-base/altium-designer/altium-pcb-datamodel-dll-crash-on-pcbdoc"
+  - "https://www.altium.com/documentation/knowledge-base/altium-designer/resolving-un-routed-net-dead-copper-drc-violations"
+  - "https://www.eevblog.com/forum/altium/unrouted-nets-drc-error-when-routed-(fixed)/"
 ---
 
 # Altium Designer PCB.DataModel.dll Crash on Routing and Polygon Repour, Un-Routed Net Dead Copper DRC Violations from Zero-Area Regions, DRC Clearance Errors on Same-Net Pads from Hidden Track Segments, Unrouted Nets DRC from Teardrop-Generated Zero-Width Regions, and Board Region Missing Stackup: Health Check Monitor, PCB Rules Panel, and Layer Stack Assignment

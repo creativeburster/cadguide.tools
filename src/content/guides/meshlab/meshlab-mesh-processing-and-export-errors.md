@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/cnr-isti-vclab/meshlab/issues/1485"
+  - "https://github.com/cnr-isti-vclab/meshlab/issues/1486"
+  - "https://github.com/cnr-isti-vclab/meshlab/issues/1533"
 ---
 
 # MeshLab Mesh Processing and Export Errors: FBX and GLB Import Crash from Format Incompatibility Requiring Format Conversion, Export Crash After Quadric Edge Collapse Decimation from Version Bug Requiring 2020.05 or Mesh Size Reduction, Non-Manifold Edge Repair Not Persisting in STL from Format Limitation Requiring PLY or OBJ Save, Duplicate Faces After Repair from STL Vertex Duplication Requiring PLY Format, and Large Model 20-30M Face Crash from Memory Exhaustion Requiring Mesh Reduction or Older Version

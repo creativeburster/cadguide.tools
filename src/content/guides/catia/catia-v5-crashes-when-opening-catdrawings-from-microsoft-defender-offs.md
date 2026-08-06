@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://technia.jira.com/wiki/spaces/TCC/pages/4330816114/EN+CATIA+V5+crashes+when+opening+CATDrawings"
+  - "https://3dswym.3dexperience.3ds.com/post/catia-user-community/catia-v5-6r2024-unable-to-fetch-licenses_KwE27Me-RGeO9ePaLZ5Tsg"
+  - "https://www.eng-tips.com/threads/catia-v5-6-r2018-not-launching-after-windows-11-24h2-update.525121/"
 ---
 
 # CATIA V5 Crashes When Opening CATDrawings from Microsoft Defender OFFSYM.TTF Folder, V6 Crashing After Hotfix on AMD CPU GPU, V5-6R2024 Unable to Fetch Licenses from DSLS Configuration, Cache Visualization Mode Slower Than Design Mode on Uncertified Intel Arc Graphics, and V5-6R2018 Not Launching After Windows 11 24H2 Update: OFFSYM.TTF Deletion, Hotfix Rollback, DSLS Reconfiguration, Cache Off, and Network Media Sense Registry Fix

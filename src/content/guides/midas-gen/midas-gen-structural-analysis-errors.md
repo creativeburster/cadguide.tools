@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://support.midasuser.com/hc/en-us/articles/49481841031449--GEN-FAQ-What-Does-the-Warning-DISPLACEMENT-AT-NODE-NO-IS-ABNORMAL-Mean"
+  - "https://gtc.midasuser.com/helpdesk/KB/View/19403071-convergence"
+  - "https://gtc.midasuser.com/helpdesk/KB/View/23324665-how-to-resolve-the-crashing-error-caused-by-multilinear-elastic-link-"
 ---
 
 # Midas Gen Structural Analysis Errors: Displacement Abnormal from Insufficient Boundary Conditions and Beam End Releases Requiring Constraint Correction, Non-Linear Time History Zero Section Properties from Dummy Wireframe Members Requiring Deletion or Property Assignment, Error 2103 Convergence Failure from Non-Linearity Requiring Initial Stiffness Scheme or Strength Increase, Multi-Linear Elastic Link Crash from Zero Stiffness Requiring Non-Zero but Negligible Value, and DOF Singular from Pin-Pin Connected Elements Requiring Single Element End Release

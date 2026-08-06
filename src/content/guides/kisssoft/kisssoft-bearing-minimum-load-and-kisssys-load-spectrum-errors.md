@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://www.kisssoft.com/en/products/trial-version/brochures/release-2024-selected-features"
+  - "https://www.kisssoft.com/en/news-and-events/newsroom/kisssoft-system-module-operating-modes-and-load-spectra"
+  - "https://www.eng-tips.com/threads/gear-design-software.523946/"
 ---
 
 # KISSsoft Bearing Minimum Load and KISSsys Load Spectrum Errors: Bearing Warning Minimum Load from Insufficient Preload Requiring Adjusted Bearing Clearance, Load Spectrum Life Difference Two Orders of Magnitude from Torque-RPM Coefficient Definition Requiring Reference Value Verification, KISSsys to KISSdesign Migration Requiring System Module Transition, AGMA vs ISO Standard Default Causing Different Results Requiring Standard Switch, and Operating Mode Kinematic Verification Fails from Clutch Brake Configuration Requiring Power Flow Analysis

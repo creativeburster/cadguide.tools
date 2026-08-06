@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/warning-302105-flow-solution-failed-to-converge-within-the/td-p/11786917"
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/simulation-analysis-progress-stuck-at-0/td-p/13439661"
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/analysis-failed/td-p/11264901"
 ---
 
 # Autodesk Moldflow Insight Solver and Mesh Errors: WARNING 302105 Flow Solution Failed to Converge from Sequential Valve Gate and Hot Runner Volume Requiring Valve Gate Time Control or Hot Runner Optimization, Analysis Progress Stuck at 0% from Software or Network Issue Requiring Restart, ERROR 220120 No Connection Between Beam and Tetrahedral Cavity Elements from Node Mismatch Requiring Merge Nodes, Cool Analysis Failed from Insufficient RAM for Large Mesh Requiring Study Size Reduction or Cloud Computing, and BLM Mesh Analysis Failure from Refine Mesh Not Passed Requiring Mesh Quality Verification

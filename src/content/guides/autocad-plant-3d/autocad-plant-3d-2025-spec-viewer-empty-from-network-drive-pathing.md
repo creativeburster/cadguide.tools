@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/autocad-plant-3d-forum/plant-2025-spec-editor-errors-using-a-catalog-builder/td-p/13842124"
+  - "https://forums.autodesk.com/t5/autocad-plant-3d-forum/problems-with-2025-spec-viewer/td-p/13644978"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-Unable-to-load-spec-file-spec-name.html"
 ---
 
 # AutoCAD Plant 3D 2025 Spec Viewer Empty from Network Drive Pathing, Catalog Builder Error from Show Details Hyperlink in Empty Row, Unable to Load Spec File from Renamed or Moved .pspc/.pspx, Auto Routing Error Connecting Different Size Components, and No Connection Defined for End Types GRV and FL: 2025.0.1 Patch, Empty Row Deletion, Spec File Path Verification, Connection Manager Settings, and Clamp Class Configuration

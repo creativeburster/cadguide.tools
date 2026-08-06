@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://developer.tekla.com/doc/tekla-structures/2025/spiral-beam-data-exception-class-53847"
+  - "https://developer.tekla.com/doc/tekla-structures/2025/spiral-beam-error-status-enumeration-53846"
+  - "https://www.practicalmachinist.com/forum/threads/camworks-spiral-in-issue.442850/"
 ---
 
 # Tekla Structures Spiral Beam Creation and CamWorks Spiral Machining Errors: SpiralBeamDataException DataMissing from Incomplete Part Data Requiring Full Parameter Input, DefinitionPointsTooClose from Points Closer Than Tolerance Requiring Minimum Spacing, ZeroTotalRiseWithMore360Degrees from Flat Helix Requiring Non-Zero Rise, CamWorks Spiral-In Toolpath Errors from Cutting Width Ignored and Direction Changes Requiring SP0 or Alternative Patterns, and Fusion 360 Spiral Toolpath Contact Point Boundary Dive from Finish Behavior Requiring Boundary Adjustment

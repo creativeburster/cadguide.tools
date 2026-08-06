@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.moldex3d.cloud/question/analysis-failed-randomly-intels-crashing-13th-and-14th-gen-cpus/"
+  - "https://forum.moldex3d.cloud/answer/re-error-4000-during-cooling-in-an-overmolding-simulation/"
+  - "https://forum.moldex3d.cloud/question/issue-with-high-shear-rates-in-exponential-phan-thien-tanner-viscoelastic-model/"
 ---
 
 # Moldex3D Injection Molding Simulation Errors: Random Analysis Failure from Intel 13th 14th Gen CPU Instability Requiring CPU Replacement or AMD Workaround, Error 4000 During Cooling from Non-Matching Mesh Between Part and Insert Requiring Matching Mesh with Non-Matching Faces Disabled, High Shear Rates in PTT Viscoelastic Model from Corner Instability Requiring Mesh Refinement or Solver Settings, License Task Exceeded from Concurrent Jobs Requiring License Management, and Symmetry Mesh Preprocessing Crash from Mesh Issues Requiring 2025 R1 Update

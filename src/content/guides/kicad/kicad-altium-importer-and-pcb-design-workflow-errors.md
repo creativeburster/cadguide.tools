@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.kicad.info/t/altium-importer-importing-to-non-existent-layer/62895"
+  - "https://forum.kicad.info/t/creating-project-from-existing-altium-files/58571"
+  - "https://forum.kicad.info/t/strange-behaviour-when-importing-pcb-from-altium/65917"
 ---
 
 # KiCad Altium Importer and PCB Design Workflow Errors: Altium Importer Assigns Tracks to Non-Existent In8.Cu Layer from Missing Power Plane Mapping Requiring Manual kicad_pcb Edit, Schematic PCB Link Lost After Separate Import Requiring Update PCB from Schematic with Re-link Footprints, Silkscreen Text Size and Position Wrong from Importer Requiring Manual Correction, Zero-Sized TH Pads Created for SMD Pads Causing Plane Voids Requiring Python Script Cleanup, and Missing Footprint Library Linkage Causing DRC Warnings Requiring Export to Library

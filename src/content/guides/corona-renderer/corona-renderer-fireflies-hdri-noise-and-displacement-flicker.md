@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.chaos.com/t/fireflies/158007"
+  - "https://forums.chaos.com/t/flickering-with-hdri/156122"
+  - "https://forums.chaos.com/t/noise-on-bump-nan-error-window-on-viewport-ir/157383"
 ---
 
 # Corona Renderer Fireflies HDRI Noise and Displacement Flicker: Fireflies from Small Sun Disk Reflections Requiring Larger Sun Disk or Highlight Clamping, HDRI Lighting Noisier than Corona Sun Sky from Difficult Sphere Sampling Requiring Light Samples Multiplier, Displacement Flicker in Animation from Screen Size Mode Requiring World Size, NaN Errors from Chrome Material with HDRI and CoronaColorCorrect in Corona 11, and Interactive Render Clean but Production Render Fireflies from Denoiser Not Enabled in Production

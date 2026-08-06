@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
+  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-produces-g01-instead-of-g03-inventor-cam-2024/td-p/12416858"
+  - "https://forums.autodesk.com/t5/hsm-forum/inventor-cam-post-processor/td-p/12483828"
+  - "https://forums.autodesk.com/t5/hsm-post-processor-forum/haas-ngc-post-not-working/td-p/14020127"
 ---
 
 # Inventor CAM Post Processor and Toolpath Errors: Post Produces G01 Instead of G03 from 2024 Update Requiring Tolerance Adjustment or Version Downgrade, Post Processor ReferenceError from Version Mismatch Requiring Inventor CAM 2024 Upgrade, Haas NGC Post supportedFeatures Not Defined from Version Compatibility Requiring Previous Post Revision, Trunnion Post Requires Machine Configuration from Missing Setup Definition Requiring Machine Setup, and Empty Toolpath Could Cause Machine Crash from Known Bug Requiring 2025.1 Update

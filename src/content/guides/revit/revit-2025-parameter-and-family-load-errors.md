@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/revit-architecture-forum/shared-parameter-conflict-and-family-load-failure-in-revit-2025/td-p/13720988"
+  - "https://forums.autodesk.com/t5/revit-architecture-forum/revit-2025-1-crash-on-parameter-deletion/td-p/12844434"
+  - "https://forums.autodesk.com/t5/revit-architecture-forum/global-parameters-broken-with-groups-in-revit-2025/td-p/13265060"
 ---
 
 # Revit 2025 Parameter and Family Load Errors: Shared Parameter Conflict and Family Load Failure from Type Mismatch Requiring Parameter Rename, Crash on Parameter Deletion from Corrupted Project Parameters Requiring Audit Before Delete, Global Parameters Broken with Groups from Multiple Instance Bug Requiring 2026 Hotfix, Air Terminal Family Crash from Network Based Calculations Requiring MEP Setting Disable, and Schema Conflict Crash on Opening Upgraded Models from Extensible Storage Missing Schema Requiring 2025 Update

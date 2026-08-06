@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/civil-3d-forum/a-custom-subassembly-is-causing-a-crash-in-civil3d-when-using-it/td-p/13774019"
+  - "https://forums.autodesk.com/t5/civil-3d-forum/surface-consisting-partially-from-landxml-and-partially-from/td-p/12978007"
+  - "https://forums.autodesk.com/t5/civil-3d-forum/crashes-when-using-multiple-views/td-p/12892631"
 ---
 
 # Civil 3D Custom Subassembly PKT Crash When Loading Corridor Surface, Surface Freeze from Mixed LandXML and Point Group Data, Multiple Views Crash After One Hour from Station Tracker and AcTransient, Corridor Surface Triangulation Across Gap Between Regions, and Corridor Surface Not Triangulating for Split Profile Regions: SAC Geometry Simplification, LandXML Export Reimport, Single Viewport Workflow, Separate Baselines, and Corridor Section Sequence

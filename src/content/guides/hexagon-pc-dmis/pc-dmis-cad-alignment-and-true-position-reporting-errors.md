@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/142347/a-legacy-dimensions-in-true-position-reporting-question"
+  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/147220/cad-import-and-measurement"
+  - "https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/141885/cad-model-refuses-to-align-with-reality"
 ---
 
 # PC-DMIS CAD Alignment and True Position Reporting Errors: Legacy Dimensions True Position Uses Internal Datum Reference Frame D1 D2 D3 Differing from Program Alignment, CAD Model Axis Mismatch Requiring Part/Machine Setup Axis Configuration, CAD Refuses to Align with Reality from Original Translation Overriding Alignment Requiring CAD=PART, Point Cloud Best Fit Alignment Doesn't Match Specific Surface Requiring Plane Alignment and CAD Offset, and CAD Import Coordinate System Upside Down Z Facing Down Requiring Transform or Axis Reassignment

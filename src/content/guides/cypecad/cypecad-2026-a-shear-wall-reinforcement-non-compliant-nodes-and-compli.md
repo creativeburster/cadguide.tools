@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://info.cype.com/en/subject/shear-walls/"
+  - "https://info.cype.com/en/new-features/2026-a-version/"
+  - "https://info.cype.com/en/subject/seismic-analysis-introduction/"
 ---
 
 # CYPECAD 2026.a Shear Wall Reinforcement Non-Compliant Nodes and Compliance Factor, Seismic Modal Spectral Analysis CQC Combination Stress Check, Non-Structural Element Interaction Open Floor Force Amplification, StruBIM Shear Wall Export for Reinforcement Design, and CYPE 3D Nonlinear Analysis with Spectral Modal Seismic Action: Compliance Factor Adjustment, CQC Stress Verification, Amplification Factor Application, BIMserver.center Export, and 2026.a Nonlinear Seismic

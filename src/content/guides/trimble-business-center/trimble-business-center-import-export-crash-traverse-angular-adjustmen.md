@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://community.trimble.com/discussion/tbc-crashes-when-i-try-to-import-or-export-anything"
+  - "https://community.trimble.com/discussion/traverse-angular-adjustment"
+  - "https://community.trimble.com/discussion/tbc-aerial-photogrammetry-adjust-photo-stations-error-child-process-reconstruction-terminated-unexpectedly-error"
 ---
 
 # Trimble Business Center Import Export Crash, Traverse Angular Adjustment No Angles, CSV Import OptionsValidationException Filepath, Aerial Photogrammetry Child Process Crash from SentinelOne, and RL Reduction Not Working on Combined Traverses: Cleanup Utility, Closed Traverse Configuration, Antivirus Whitelisting, and Coordinate Adjustment

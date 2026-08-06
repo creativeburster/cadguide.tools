@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.emastercam.com/forums/topic/114671-mastercam-2025-recognizing-post-but-mastercam-2026-is-not/"
+  - "https://www.practicalmachinist.com/forum/threads/mastercam-post-with-no-is-or-js.446960/"
+  - "https://www.practicalmachinist.com/forum/threads/mastercam-ignoring-updates-to-tool-numbers-or-f-s.433712/"
 ---
 
 # Mastercam Post Processing and Parameter Errors: G-Code Missing I and J Arcs from Linearize Toolpath or Spline Geometry Requiring Uncheck Linearize and Simplify Splines, 4+1 Posting Full 5-Axis Simultaneous Moves from Clearance Blend Spline Requiring Retract to Clearance Plane, Tool Numbers and Feeds Speeds Ignored from Common Parameters Bug Requiring Update 2 or Edit Tool Menu, Post Not Recognized in 2026 from Machine Definition Mismatch Requiring Updated Control Definition, and Rotating Tombstone Hole Locations Incorrect in G-Code from Coordinate System Issue Requiring Plane Verification

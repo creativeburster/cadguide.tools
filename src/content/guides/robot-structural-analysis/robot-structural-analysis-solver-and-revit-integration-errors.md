@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/autodesk-robot-access-violation-code-c0000005-constantly/td-p/13430756"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/direct-integration-with-revit-2025-is-not-working/td-p/12887837"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/instability-and-no-convergence-of-nonlinear-problem/td-p/13726480"
 ---
 
 # Robot Structural Analysis Solver and Revit Integration Errors: Access Violation Crash from Revit Transfer Model Corruption Requiring Model Rebuild, Direct Integration with Revit 2025 Not Working from Revit-Side-Only Change Requiring Revit Ribbon Link, Calculation Freeze During Analysis from Meshing and Load Combination Overload Requiring Mesh Simplification, No Convergence of Nonlinear Problem from Tension Only Members and Excessive Releases Requiring Release Correction, and Generate Model Destroys Calculation from Bracing Intersection and Release Overload Requiring Element Generation Control

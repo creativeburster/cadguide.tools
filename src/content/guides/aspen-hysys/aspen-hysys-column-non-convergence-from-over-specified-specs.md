@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.cheresources.com/invision/topic/22673-lpg-from-natural-gas-hysys-simulation-problem/"
+  - "https://www.cheresources.com/invision/topic/31372-absorber-convergence-error-aspen-hysys-v11/"
+  - "https://www.cheresources.com/invision/topic/25175-column-does-not-converge-even-when-spec-error-are-within-limits/"
 ---
 
 # Aspen HYSYS Column Non-Convergence from Over-Specified Specs, Two Liquid Phases Causing Consistency Error, Stages Drying Up from Impossible Specs, Column Won't Converge Even When Spec Errors Within Tolerance, and Feed Pressure Confusion from Gravitational Head: Spec Simplification, Water Removal, Flow Rate Specs, Converged Starting Point, and Feed Pressure Independence

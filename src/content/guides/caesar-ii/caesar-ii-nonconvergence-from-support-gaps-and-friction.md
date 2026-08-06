@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.eng-tips.com/threads/what-are-the-most-common-reasons-that-caesar-ii-diverges.386445/"
+  - "https://www.eng-tips.com/threads/caesar-ii-error-incore-solver.529286/"
+  - "https://docs.hexagonppm.com/r/en-US/CAESAR-II-Users-Guide/Version-12/1219921"
 ---
 
 # CAESAR II Nonconvergence from Support Gaps and Friction, Incore Solver Error from Account Number Lock, FRP Pipe Divergence from Ineffective Restraints and Uplift, Nonlinear Friction Stiffness Zero No Convergence, and Dynamic Analysis Equation Errors: Gap Reduction, Hexagon Support Ticket, Friction Coefficient Removal, TR-TX-35834 Fix, and Version 12 Update

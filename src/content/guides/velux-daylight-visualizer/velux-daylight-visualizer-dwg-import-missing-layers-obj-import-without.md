@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://skylightoffers.com/assets/vms/downloads/daylight-visualizer/userguide-daylight-visualizer-2.pdf"
+  - "https://discourse.mcneel.com/t/rhino-export-to-velux-daylight-visualizer/60916"
+  - "https://www.velux.com/healthy-buildings/research-and-knowledge/deic-basic-book/daylight/daylight-simulation-tools"
 ---
 
 # VELUX Daylight Visualizer DWG Import Missing Layers, OBJ Import Without Materials, Open Geometry Extremely Light Results, Scale Units Mismatch After Import, and SketchUp Triangulation Requirements: Layer Assignment, Material Export, Geometry Closure, Scale Factor Correction, and Face Triangulation

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.tekla.com/article/drawing-takes-a-very-long-time-to-open"
+  - "https://support.tekla.com/article/tekla-structures-performance-issues"
+  - "https://support.tekla.com/doc/tekla-structures/2025/rel_changes_in_advanced_options"
 ---
 
 # Tekla Structures Drawing Opening Slow, Model View Performance, IFC Export UDA Inheritance, Component Nesting Crash, and Storing Modifying Large Object Slowness: Advanced Options Tuning, Model History Collection, Graphics Driver Update, and Service Pack Fixes

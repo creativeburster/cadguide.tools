@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.sketchup.com/t/su-2025-macos-ram-usage-increases-just-by-moving-around-my-model-using-3d-mouse-then-crashes/325710"
+  - "https://forums.sketchup.com/t/sketchup-2024-ram-maxed-out-crashes-when-exporting-images/277583"
+  - "https://forums.sketchup.com/t/disabling-garbage-collection-while-loading-an-extension-fix-for-su2024-startup-crashes/274297"
 ---
 
 # SketchUp 2024 2025 Memory Leak and Crash Errors: MacOS RAM Usage Increases with 3D SpaceMouse from Memory Leak Requiring Driver Update and Periodic Restart, RAM Maxed Out and Crash When Exporting Images from New Render Engine Requiring Classic Engine Switch, Profile Builder 4 Startup Crash from Ruby Garbage Collection Conflict Requiring GC Disable or PB4 4.0.3 Update, Memory Not Freed After Deleting Groups from DefinitionList Retention Requiring Purge Definitions, and Multiple Documents Memory Leak from Non-Closing Documents Requiring Single Document Workflow

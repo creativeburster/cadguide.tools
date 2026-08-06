@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.vectorworks.net/index.php?/topic/129946-struggling-with-large-vectorworks-file-performance-lag-freezes-export-issues/"
+  - "https://www.vectorworksforum.eu/topic/30210-vectorworks-2025-crashes-every-time-on-a-macbook-apple-m1-max-with-macos-145-several-re-installation-did-not-help/"
+  - "https://release.vectorworks.net/nnapub/updaters/29/NNA/eng/meta/releasenotes/Update4.html"
 ---
 
 # Vectorworks Large File Performance Lag Freeze, Out of Memory Error, Apple Silicon Mac Crash, Project Sharing Commit Freeze, and IFC Import Crash: File Optimization, Memory Management, Clean Reinstall, Project Sharing Repair, and Update SP4 Fixes

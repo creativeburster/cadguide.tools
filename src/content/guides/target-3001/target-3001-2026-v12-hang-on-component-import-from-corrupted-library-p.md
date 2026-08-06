@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php/FAQ:_Installation,_license,_updates_and_prices"
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Problems_with_the_import_of_X-Gerber"
+  - "https://server.ibfriedrich.com/wiki/ibfwikien/index.php?title=Update_error"
 ---
 
 # Target 3001! 2026 V12 Hang on Component Import from Corrupted Library Path, XHELP.INF Error from Missing Write Permissions, XGerber Import Deletion Layers Requiring Manual Separation to Area and Deletion Layers, Copper Planes Display Incorrectly in Gerber Export from Polygon Fill Settings, and Beta Version 15.4.0.6 Crash from Edition Mismatch with License File: Library Path Repair, Admin Installation, Layer Separation, Fill Method Switch, and Exe File Replacement

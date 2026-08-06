@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://docs.mech-mind.net/en/suite-software-manual/latest/vision-calibration/calib-troubleshooting.html"
+  - "https://community.mech-mind.com/t/topic/2731"
+  - "https://docs.mech-mind.net/en/suite-tutorial/2.1.0/topic-3d-matching/3d-matching-common-issues.html"
 ---
 
 # Mech-Mind 3D Vision Calibration and Point Cloud Matching Errors: Calibration Board Not Detected from Small Circle Interference on NANO with OCB-20 Requiring Nut Covering or Exposure Reduction, Movement Distance Mismatch Between Robot and Camera from Intrinsic Parameter Error or Camera Offset Requiring Robot Accuracy Check and Recalibration, Poor Calibration Results from Overexposure and Point Cloud Fluctuation Requiring Single Exposure and Strong Smoothing, 3D Matching Failure from Incorrect STL Normals Requiring Normal Correction Tool, and Remove Overlapped Poses Filters Correct Matches from Inconsistent Reference Frame Requiring Camera Frame Alignment

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-november-2025-released/"
+  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-2024-r2-1-released/"
+  - "https://www.ssi-corporate.com/blog-lighthouse/ssi-may-2025-released/"
 ---
 
 # ShipConstructor 2026 Model Integrity Issues During Complex Edits from Long Working Sessions, Catalog Inconsistencies from Intermittent Corruption, Concurrency Handling Issues for Large Teams from WorkShare Conflicts, Profile Nest Locking for Upstream Change Control, and Plate Nest DXF Export Multi-Layer Configuration for Double-Sided Marking: R3 Stability Update, Catalog Consistency Fix, Concurrency Improvement, Nest Lock Enable, and DXF Layer Configuration

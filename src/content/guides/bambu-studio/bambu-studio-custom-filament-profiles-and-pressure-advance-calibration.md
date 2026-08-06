@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.bambulab.com/t/added-second-x1c-and-all-profiles-pa-start-crashing/83651"
+  - "https://forum.bambulab.com/t/factor-k-pressure-advance-slicers-and-g-code/154298"
+  - "https://github.com/bambulab/BambuStudio/issues/8196"
 ---
 
 # Bambu Studio Custom Filament Profiles and Pressure Advance Calibration Errors: Custom Profiles Disappearing After Adding Second Printer from AMS Sync Conflict, Pressure Advance Always Default 0.20 from Calibration Data Not Syncing Without Manage Result Trigger, PA Values All Messed Up After One Calibration from Custom Name Not Surviving Power Cycle, Automatic PA Calibration Produces Incorrect K Values on A1 vs P2S from Different Extruder Motor Types, and Flow Dynamics Calibration Overrides All Filament Profile and Device Tab K Values

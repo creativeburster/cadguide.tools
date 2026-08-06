@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.thecadforums.com/threads/custom-font-errors-out.80546/"
+  - "https://forums.autodesk.com/t5/reported-community-website/autodesk-tinkercad-not-loading-previous-or-new-designs/idi-p/12500180"
+  - "https://theindustrialmaker.com/software-digital-tools/cad-software/common-tinkercad-problems-and-fixes"
 ---
 
 # Tinkercad Shape Generator Failed to Build, Design Page Not Loading, STL Export Non-Manifold Geometry, Boolean Ghost Artifacts, and SVG Import Version Mismatch: Browser Compatibility, Overlap Prevention, Double-Group Technique, and SVG 1.0 Format Fix

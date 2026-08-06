@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/autodesk-robot-access-violation-code-c0000005-constantly/td-p/13430756"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/robot-structural-analysis-generate-model-destroys-calculation/td-p/13415264"
+  - "https://forums.autodesk.com/t5/robot-structural-analysis-forum/contact-between-steel-plate-no-convergence-error/td-p/13392101"
 ---
 
 # Autodesk Robot Access Violation c0000005 Crash from Revit Transfer, Non-Linear Convergence Error from Tension-Only Bars, Generate Model Destroys Calculation from Excessive Releases, Contact No Convergence from Mesh Quality, and Steel Connection Crash from 2024.0.1 Hotfix: Release Correction, Compression-Only Bars, Mesh Alignment, and Hotfix Installation

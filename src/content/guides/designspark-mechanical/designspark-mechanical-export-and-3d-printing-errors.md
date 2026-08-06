@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://www.rs-online.com/designspark/cant-export-file-as-dwg-or-dxf"
+  - "https://www.rs-online.com/designspark/dwg-dxf-export-does-not-capture-all-geometry"
+  - "https://www.rs-online.com/designspark/amfobj-non-manifold-edges-bambu-studio-error"
 ---
 
 # DesignSpark Mechanical Export and 3D Printing Errors: DWG DXF Export Generates No File from Missing Translator Configuration Requiring Export Settings Check, DWG DXF Export Missing Geometry from Translator Glitch Requiring Alternative Export Method, AMF OBJ Non-Manifold Edges from DSM Export Requiring Mesh Repair in Slicer, Slow Export Performance with Large Assemblies from Single-Threaded Processing Requiring Assembly Optimization, and DSM6 Cannot Export to Cura from Export Command Failure Requiring STL Workaround

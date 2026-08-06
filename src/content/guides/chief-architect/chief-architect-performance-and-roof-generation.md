@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.chiefarchitect.com/support/article/KB-00521/troubleshooting-slowness-in-chief-architect-projects.html"
+  - "https://chieftalk.chiefarchitect.com/topic/46404-x14-crashes-every-time-i-select-material-from-library/"
+  - "https://cloud.chiefarchitect.com/1/pdf/documentation/chief-architect-x17-update-notes.pdf"
 ---
 
 # Chief Architect Performance and Roof Generation: Network Drive File Corruption and Slowness, Multi-Monitor 3D Camera Redraw Overhead, Auto Roof Return Errant Plane Generation, Library Material Selection Crash in X14, and Automatic Truss Overlap Causing Elevation Slowness

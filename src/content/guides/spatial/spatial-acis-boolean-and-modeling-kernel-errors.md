@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://blog.spatial.com/what-to-do-when-your-3d-modeling-boolean-operations-fail"
+  - "http://www.q-solid.com/ACIS_Docs_R17/online/SPAacisuserTechArticles/SPAacisuser_erroramsgs.htm"
+  - "http://www.q-solid.com/ACIS_Docs_R17/online/SPAacisuserTechArticles/SPAacisuser_asmlimits.htm"
 ---
 
 # Spatial ACIS Boolean and Modeling Kernel Errors: Boolean Operation Fail from Near-Coincident Faces and Sliver Edges Requiring Incremental Boolean Workflow, EDGECOIN_PROBLEM from System Inconsistency Processing Edge Coincidence Requiring Model Healing, DS_BAD_GEOM_CONDITION from Poorly Conditioned Surface or Pcurve Requiring Geometry Repair, Vertex Gap Errors from Tolerance Violations Requiring api_check_vertex_errors, and Assembly Modeling ASAT File Load Failure from Complex Sharing Structure Requiring Default Entity Manager Factory

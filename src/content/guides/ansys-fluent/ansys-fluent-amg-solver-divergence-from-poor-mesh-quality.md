@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.cfd-online.com/Forums/fluent/226214-divergence-detected-amg-solver-floating-point-exception-ansys-fluent.html"
+  - "https://www.cfd-online.com/Forums/fluent-udf/246757-fluent-udfs-crash-initialization-run-temperature-species-macros.html"
+  - "https://www.cfd-online.com/Forums/fluent/224653-divergence-error-structured-mesh-dynamic-mesh.html"
 ---
 
 # Ansys Fluent AMG Solver Divergence from Poor Mesh Quality, UDF Segmentation Violation from Wrong Thread Pointer in Eulerian Multiphase, Dynamic Mesh Negative Cell Volume from Quad Mesh Deformation, UDF Density Divergence from Initialization Issues, and Pressure-Far-Field Boundary Misuse in Closed Domain: Mesh Quality Improvement, Phase-Level Subthread, Tri Remeshing, Standard Initialization, and Pressure Outlet

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://bentleysystems.service-now.com/community?id=kb_article_view&sys_kb_id=ed74ed01870d8b10e25dbb35dabb35bf"
+  - "https://bentleysystems.service-now.com/community?id=kb_article_view&sysparm_article=KB0115901"
+  - "https://docs.bentley.com/LiveContent/web/STAAD.Pro-v2025.0.0/Help/en/topics/Commands_TechRef/r-stpst_Direct_Analysis.html"
 ---
 
 # STAAD Pro 2026 Analysis Stuck in Endless Loop from Primary Load Cases in Job Setup, P-Delta Iteration Divergence from Displacement Not Converging, Instability at Joint from Disjointed Structure and Duplicate Joints, Crash from External UPT Files with Multiple Profile Points, P-Delta Divergence Detection, Joint Connectivity Check, UPT File Update, and Direct Analysis Parameter Tuning

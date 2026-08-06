@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://campus.allplan.com/forum/topics/topic/topics/bimplus-user-forum/exporting-allplan-models-in-ifc-format-does-not-work.html"
+  - "https://connect.allplan.com/forum/topics/topic/topics/notifications/problem-with-slabs-conversion-to-allplan-2025.html"
+  - "https://campus.allplan.com/at/forum/themen/topic/topics/cad-allgemein-1/ifc-2x3-export-fehlermeldung-bei-viega-tga-software.html"
 ---
 
 # Allplan IFC Export Wrong Level Mapping via bimplus, Slab Conversion Loses Associated References in 2025, IFC 2x3 Dedicated Exporter Bugs, IFC Import Ignored Elements from Defective Data, and Multiple Building Instance Error: 2025-0-3 Hotfix, Data Healer, and Standard IFC Export

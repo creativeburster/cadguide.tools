@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://support.tekla.com/doc/tekla-tedds/2026/ref_errormessages"
+  - "https://support.tekla.com/doc/tekla-tedds/2026/rel_2026_sp1"
+  - "https://support.tekla.com/doc/tekla-tedds/2026/calcs_reactingtoerrors"
 ---
 
 # Tekla Tedds 2026 Memory Full Condition from Low Computer Memory, VBL File Sync Error from Document and Variable File Out of Sync, Windows 11 GDI Vertical Text Rotation Error from Drawing Layer Update, Analysis Sketches Bending Moment Deflection Shear Force Diagram Inversion for Vertical Members, and Unit Database Corruption from Missing or Corrupt File: Memory Increase, VBL File Delete and Recalculation, SP1 Update, Diagram Inversion Fix, and Unit Database Reinstall

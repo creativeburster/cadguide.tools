@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/netfabb-forum/netfabb-repairs-lost-on-export-of-model-to-stl/td-p/12744052"
+  - "https://forums.autodesk.com/t5/netfabb-forum/needing-a-solution-for-quot-broken-quot-stl-files-that-the-quot/td-p/13793057"
+  - "https://forums.autodesk.com/t5/netfabb-forum/how-to-fix-wall-thickness/td-p/13445413"
 ---
 
 # Autodesk Netfabb STL Repair and Export Errors: Repairs Lost on STL Export from Format Limitations Requiring 3MF Format or Selective Manual Repair, Windows Service Repair Hangs on Complex Files Requiring Free Netfabb Basic Mode, Wall Thickness Errors on Repeated Petal Geometry Requiring CAD Recreation Not Mesh Repair, Check File Quality Errors on Export from Degenerate Triangles and Non-Manifold Edges Requiring Direct Repair Not Export Check, and Prusa Slicer Netfabb Repair Not Autodesk-Supported Requiring Fusion 360 Manufacture Workspace Alternative

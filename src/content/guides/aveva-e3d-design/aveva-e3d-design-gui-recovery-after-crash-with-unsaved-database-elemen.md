@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.aveva.com/bundle/e3d-design/page/909529.html"
+  - "https://koulakengineering.com/aveva-e3d-design-3-1-10-known-issue-fixes/"
+  - "https://docs.aveva.com/bundle/e3d-design/page/938070.html"
 ---
 
 # AVEVA E3D Design GUI Recovery After Crash with Unsaved Database Elements, PML unset(!A) Crash from Missing PMLVAR Support, IFC Property Import Failure, DGN Import Unexpected End of File and Insufficient Memory, and MultiCAD NWD Import Scale and Performance from Large Models: Session Recovery, 3.1.10 Fix, Property Set Mapping, BucketSize Option, and Model Simplification

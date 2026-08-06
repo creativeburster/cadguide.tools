@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/issue-running-analysis-with-blm-mesh/td-p/13717864"
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/effect-of-mesh-quantity-on-melt-flow/td-p/13739586"
+  - "https://forums.autodesk.com/t5/moldflow-insight-forum/ami-2026-meshing-failes-caused-by-beam-elements/td-p/13403844"
 ---
 
 # Autodesk Moldflow Mesh and Analysis Errors: BLM Mesh Analysis Fails to Run from Refine Mesh Not Passing Requiring Mesh Quality Verification, Mesh Quantity Affects Melt Flow Convergence Requiring 6 Layers Minimum for Accurate Fill Simulation, Beam Elements Cannot Visualize Cross-Sectional Temperature Distribution Requiring 3D Tetrahedral Mesh, AMI 2026 Meshing Fails with Beam Elements from Cold Runner Requiring AMI 2025.1 or Element Removal, and Error 220120 No Connection Between Beam and Tetrahedral Cavity Elements Requiring Node Merge

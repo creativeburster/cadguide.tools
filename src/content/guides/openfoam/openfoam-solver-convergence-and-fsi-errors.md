@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://precice.discourse.group/t/elastic-tube-3d-tutorial-fails-with-openfoam-v2406/2469"
+  - "https://www.cfd-online.com/Forums/openfoam-solving/227276-residuals-suddenly-explode-aerodynamics.html"
+  - "https://precice.discourse.group/t/openfoam-calculix-fsi-simulation-crashes-at-5s-help-needed/2549"
 ---
 
 # OpenFOAM Solver Convergence and FSI Errors: Floating Point Exception from leastSquaresVectors Mesh Motion in FSI Requiring preCICE 3.3.0 Update, Residuals Suddenly Explode After Convergence from Mesh Quality or Boundary Conditions Requiring Mesh Refinement, FSI Simulation Crash from Interface Decomposition Splitting Coupling Boundary Requiring Decomposition Avoidance, Solid Solver Relative Residuals Not Converging from Under-Relaxation Factor Requiring BC and Rheology Verification, and chtMultiRegionFoam Steady State Not Stopping from Transient Solver Misunderstanding Requiring localEuler or chtMultiRegionSimpleFoam

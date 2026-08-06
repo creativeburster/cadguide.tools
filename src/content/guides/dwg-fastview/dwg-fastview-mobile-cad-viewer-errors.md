@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://blog.dwgfastview.com/urgent-notice-bug-in-dwg-fastview-for-pc-v9-5-0-crash-on-launch-open/"
+  - "https://blog.dwgfastview.com/faq/"
+  - "https://justuseapp.com/en/app/456933691/dwg-fastview-cad-viewer-editor/problems"
 ---
 
 # DWG FastView Mobile CAD Viewer Errors: PC v9.5.0 Crash on Launch from Version Bug Requiring Uninstall and v9.4.0 Reinstall, Drawings Not Opening from Insufficient Running Memory or File Errors Requiring Memory Check, WhatsApp Shared Drawings Not Opening from Bug Requiring Latest Version Update, iCloud and Cloud Storage Access Limitations Requiring Local File Import, and Free Features Moved Behind Subscription Paywall Requiring Premium Upgrade or Alternative Apps

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=872064"
+  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=785127"
+  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=834609"
 ---
 
 # Alphacam Nesting and Toolpath Errors: Multiple Copy Nesting Forgets 90 Percent of Code from Subroutine Nesting Instead of Linear Requiring Nesting Mode Change, Cannot Find Offset Path for Profiling Small Circular Geometry Requiring Geometry Break or Surface Creation, Pocket Toolpath Plunges Straight to Bottom Requiring Manual Lead In with Slope or AutoZ Ramp, Post Processor 004 Address Not Found from Rapid Traverse Z Height Change Requiring Post Review, and Feed Rate Customization for Blowout Prevention Requiring Advanced Toolpath Editor or Slow Down for Corners

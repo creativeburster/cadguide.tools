@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
+  - "https://3dswym.3dexperience.3ds.com/post/catia-creative-design-styling-user-community/is-it-possible-to-export-from-icem-to-alias-catia-and-not-die-trying_KNfZiAhKSLWB9WsV9SmvFw"
+  - "https://3dswym.3dexperience.3ds.com/post/catia-creative-design-styling-user-community/icem-surf-2025-modify-patch-trim-is-really-poor_5B6nrAKWTzu7fgXv5Qloxw"
+  - "https://discourse.mcneel.com/t/odd-issue-with-single-span-surface/138950"
 ---
 
 # ICEM Surf Export and Surface Modeling Errors: Export to Alias and CATIA V5 from EDF Name Shortening and CATIA V5 Export Window Error Requiring Format Workarounds, Modify Patch Trim Poor Performance in 2025.2 from Extrapolate Behavior Change Requiring Tangent Extrapolation, Rational Surface Weight Mismatch from Fillet Creation Requiring Weight Reset to 1, Alias 2017 CatPart Import COS from Trimmed Surfaces Requiring Untrim and Retrim, and ICEM Surf 2025.2 Bug Fixes in Trim Face RM and IO Requiring Update

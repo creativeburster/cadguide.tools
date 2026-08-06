@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://camworks.s3.amazonaws.com/Releases/CW/CW2024/SP5/CW2024BuildInfo.pdf"
+  - "https://camworks.s3.amazonaws.com/Releases/CW/CW2025/SP1/CW2025BuildInfo.pdf"
+  - "https://www.practicalmachinist.com/forum/threads/camworks-post.443216/"
 ---
 
 # CAMWorks Post Process Crash from Missing MILL.LIB and UPG-2, 3 Axis Z Level Toolpath Gouging from Advanced Method and User Defined Last Cut, TRANSMIT Command Wrong Side Approach Causing Machine Table Crash, Assembly Tool Crib Assignment Crash in SOLIDWORKS, and Post Processor A180 B-180 Axis Alarm from Generic Haas Post: UPG-2 Installation, Previous Method, Virtual Machine Check, SP5 Update, and Post Processor Customization

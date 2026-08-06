@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
+  - "https://forum.kubotekkosmos.com/Posts/7/Models-are-visually-going-into-wireframe"
+  - "https://forum.kubotekkosmos.com/Posts/18/Solids-look-semitransparent"
+  - "https://help.kubotekkosmos.com/KeyCreator/2025SP2/A10031"
 ---
 
 # KeyCreator Modeling and Display Errors: Models Going Into Wireframe from Body Corruption Requiring Clean Body or STEP Reimport, Solids Appear Semitransparent from Material Override Requiring Layer Toggle or Unset Material, PRT to CKD Conversion Problems from CADKEY Legacy Format Requiring Manual Fix, Import Gap Errors from Precision Mismatch Requiring Repair Problem Entities Option, and PDF Export Missing Model and Layout Pages Requiring SP1 Update

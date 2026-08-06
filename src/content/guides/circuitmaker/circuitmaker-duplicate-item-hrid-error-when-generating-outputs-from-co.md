@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.altium.com/documentation/altium-circuitmaker/public-release-notes"
+  - "https://electronics.stackexchange.com/questions/666301/circuitmaker-error-duplicate-item-hrid-when-trying-to-generate-outputs"
+  - "https://www.altium.com/documentation/altium-circuitmaker/faqs"
 ---
 
 # CircuitMaker Duplicate Item HRID Error When Generating Outputs from Copy-Paste, Cloud Sync Issues Requiring Internet Connection for Output Generation, Component Search Engine Nexar API Migration from Octopart, CoDesigner Fusion 360 Direct PCB Data Exchange, and Crash During Symbol Search in Select Item Revision Dialog: Project Clone Workaround, Manual Save and Commit, Nexar API Update, Fusion 360 Plugin, and Ctrl-Alt-Insert Crash Report

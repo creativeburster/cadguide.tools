@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.lectra.com/en/fashion/products/modaris"
+  - "https://community.adobe.com/questions-652/illustrator-import-dxf-from-lectra-modaris-816295"
+  - "https://forum.seamly.io/t/exporting-dxf-pattern-to-be-imported-into-lectra/17010"
 ---
 
 # Lectra Modaris 2026.1 DXF AAMA Layer Convention Import Issues from Incorrect Layer Numbering, Illustrator 2022+ DXF Import Exploded Entities from Disabled Grouping Feature, DXF R10 AAMA as Only Reliable Import Format for VStitcher and CLO3D, Pattern Converter Web Application for Gerber AccuMark and DXF AAMA ASTM to MDL V8, and Modaris 3D Fit 2D 3D Sync Pattern Adjustment Workflow: Layer Number Verification, Block Creation, R10 AAMA Export, Pattern Converter, and 3D Sync

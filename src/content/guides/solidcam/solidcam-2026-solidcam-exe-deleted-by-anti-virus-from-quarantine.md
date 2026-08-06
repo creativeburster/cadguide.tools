@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://forum.solidcam.com/forum/technical-support/3059-solidcam-installation-problems-and-solutions"
+  - "https://forum.solidcam.com/forum/imachining/2517-2021-tool-path-engine-logs"
+  - "https://www.solidsolutions.co.uk/whats-new-in-solidcam-2026/"
 ---
 
 # SolidCAM 2026 SolidCAM.exe Deleted by Anti-Virus from Quarantine, MSVCR120.dll Missing from Missing Visual C++ Redistributable, SolidCAM Add-In Cam Manager Initialization Failure from Registration Issue, SolidWorks and SolidCAM Crash Without Error Reports on Part Opening, and iMachining 3D Incorrect Feeds and Spins for Floor Machining from TPE Bug: Anti-Virus Exclusion, VC++ Redistributable Install, HostLib.dll Registration, Clean Install, and TPE Update

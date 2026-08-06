@@ -93,7 +93,7 @@ export const c2Tools: Tool[] = [
   alternatives: ["autodesk-inventor", "onshape", "ptc-creo"],
   country: "USA",
   category_id: "c2",
-  pricing_type: "Subscription",
+  pricing_type: "Subscription / Perpetual",
   starting_price: 2700,
   platforms: ["Windows"],
   industries: ["Mechanical", "Manufacturing", "Automotive"],
@@ -289,7 +289,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
-  starting_price: 119,
+  starting_price: 129,
   platforms: ["Windows", "macOS", "Web", "Android", "iOS"],
   industries: ["Architecture", "Interior Design", "Landscape"],
   core_features: [
@@ -859,7 +859,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
 
-  version: "8.19",
+  version: "8.27",
   last_updated: "2026-08-03",
   free_trial_days: 90,
 
@@ -1299,7 +1299,7 @@ export const c2Tools: Tool[] = [
     "2D Technical Drawing (TechDraw)",
   ],
 
-  version: "1.0",
+  version: "1.1",
   last_updated: "2025-11-15",
   free_trial_days: 0,
 
@@ -1716,7 +1716,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 1200,
+  starting_price: 1320,
   platforms: ["Windows"],
   industries: ["Mechanical", "Industrial Design"],
 
@@ -1778,7 +1778,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "OpenGL",
     standards: ["PAR", "STEP", "IGES", "JT"],
   },
-  version: "2025",
+  version: "2026",
 
   expert_verdict: "Solid Edge is the 'thinking man's' SolidWorks.",
 

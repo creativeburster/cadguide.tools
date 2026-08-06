@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://woodweb.com/cgi-bin/forums/cnc.pl?read=872064"
+  - "https://en.cncarena.com/forum/thread/261381-morbidelli-alphacam-help-please/"
+  - "https://woodweb.com/knowledge_base/PostProcessor_Runs_Amuck.html"
 ---
 
 # Alphacam Nesting and Post Processor Errors: Subroutine Nesting Loses 90% of G-Code, .anc to .pgm Conversion Failure for Morbidelli Xilog, Post Processor Font Tracing Deviation from Open Contours, Accurite Millpwr Missing Post Processor, and Tool Direction Wrong Side from Incorrect Side Setting

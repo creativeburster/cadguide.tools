@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/how-to-fix-designmodeler-when-it-cannot-be-started-anymore-in-workbench/"
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/how-to-solve-problem-with-starting-designmodeler-in-workbench-on-windows/"
+  - "https://innovationspace.ansys.com/forum/forums/topic/licensing-problems-with-anything-after-2021h2/"
 ---
 
 # Ansys Workbench DesignModeler Script Error from Corrupted Preferences XML, Project Schematic Refresh Error from Corrupted Workbench File, License Server Communication Timeout from Network Latency, DesignModeler Won't Start from Corrupted AppData, and Product Configuration Missing After Update: AppData Reset, Preferences XML Copy, ansyslmd.ini Timeout Settings, and ProductConfig Reconfiguration

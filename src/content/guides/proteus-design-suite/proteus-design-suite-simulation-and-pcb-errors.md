@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.edaboard.com/threads/simulation-problem-using-proteus.412878/"
+  - "https://forum.allaboutcircuits.com/threads/simulation-issue-with-imported-components-in-proteus.206508/"
+  - "https://www.ee-diary.net/2026/03/how-to-fix-high-frequency-simulation.html"
 ---
 
 # Proteus Design Suite Simulation and PCB Errors: GSM SIM800L Simulation Failure from AVR Program Property Not Defined Requiring HEX File Configuration, Imported Component Simulation Failure from Missing SPICE Models Requiring SPICE Model Linking or Equivalent Components, HD44780 Controller Received Command Whilst Busy from Timing Issues Requiring Delay or LCD Command Buffer, Timestep Too Small and GMIN Stepping Crash from High Frequency Circuits Requiring SPICE Tolerance Tuning, and Zone Overlap Pre-Production Check Error from VCC VDD Power Plane Touching Unrouted Region Requiring Plane Boundary Fix

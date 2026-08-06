@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/fusion-support-forum/slow-design-uploads-network-diag-fails-on-collaborator/td-p/12988684"
+  - "https://forums.autodesk.com/t5/fusion-support-forum/all-joints-are-failing-in-new-update-fusion-2605-1-18-arm64/td-p/13892038"
+  - "https://forums.autodesk.com/t5/fusion-support-forum/a-specific-design-always-fails-to-sync-to-the-cloud/td-p/12817311"
 ---
 
 # Fusion 360 Cloud Sync and Joint Timeline Errors: Slow Design Uploads and Collaborator Network Diagnostic Failures from NVIDIA Driver Conflict Requiring Clean Reinstall, All Joints Failing After Update from Lost Component References Requiring Timeline Isolation, Assembly Constraints vs Joints Performance from Conflicting Constraints Requiring Joint Migration, Cloud Sync Stuck on Specific Design from Corrupted Upload Queue Requiring Q Folder Deletion, and Offline Mode Fails from Missing Team Hub Requiring Browser Team Hub Creation

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://bentleysystems.service-now.com/community?id=kb_article&sysparm_article=KB0108431"
+  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2025.0.1/Help/en/topics/123015/GUID-900A3745-640A-4FDF-084D-E5FB6C345F7C.html"
+  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2024.2/Help/en/html5/topics/122973/GUID-60315B0B-658B-8F49-E056-36074C2C7A8E.html"
 ---
 
 # MicroStation DGN Reference Attachment and DWG Export Errors: Nested References Not Showing from Ignore Attachment When Live Nesting Enabled Requiring Dialog Setting Disable, DGN Unable to Load After Windows Update from Reference File Attachment Requiring Path Verification, Self-Reference Attachments Not Supported in DWG Format Requiring Merge to Cell, Clipping Masks Lost When Saving to DWG with Retain Setting Requiring Merge Instead, and Reference Attachments Not Portable from Full Absolute Paths Requiring Save Relative Path or Configuration Variables

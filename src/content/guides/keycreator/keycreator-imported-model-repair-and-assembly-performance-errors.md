@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://help.kubotekkosmos.com/keycreator/2024SP1/A10024"
+  - "https://help.kubotekkosmos.com/keycreator/2024SP1/107894"
+  - "https://forum.kubotekkosmos.com/Posts/18/Solids-look-semitransparent"
 ---
 
 # KeyCreator Imported Model Repair and Assembly Performance Errors: Imported Solids Show Gap Errors from Precision Differences Requiring Repair Problem Entities, Boolean Operations Fail from Face-Face Intersection Errors Requiring Diagnose Solids, Solids Appear Semitransparent After Boolean from Applied Materials Requiring Unset Material, Large Assembly Performance from Multi-Process Reading and File Cache, and Blend Chamfer Complex Edges Fail from Non-Tangent Edge Sets Requiring Tangency Highlighting

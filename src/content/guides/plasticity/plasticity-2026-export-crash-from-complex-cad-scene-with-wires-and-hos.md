@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://digitalproduction.com/2026/04/21/plasticity-2026-1/"
+  - "https://www.skool.com/ultimate-3d-membership-7140/unable-to-export-plasticity-keeps-crashing"
+  - "https://80.lv/articles/plasticity-2026-1-adds-new-commands-improves-old-ones"
 ---
 
 # Plasticity 2026 Export Crash from Complex CAD Scene with Wires and Hoses, PolySplines Mesh-to-NURBS Conversion G2 Continuity Validation, Boolean Operation Failure from Complex Topology, Surface Sculpting Deformation on Hard-Surface Models, and OBJ Export Scale and Up Axis Configuration: Scene Simplification, Continuity Inspection, Adaptive Topology, Brush Settings, and Export Configuration

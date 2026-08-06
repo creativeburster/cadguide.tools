@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://pmtechnologies.com/blog/whats-new-in-visi-2026-2/"
+  - "https://www.veroprojectgroup.com/en/visi-machining-3d/"
+  - "https://www.veroprojectgroup.com/en/visi-machining-5-axis/"
 ---
 
 # VISI 2026 Toolpath Generation Errors from Collision Handling Bugs, Adaptive Feedrate for 2-Axis Roughing Not Working from Configuration Issue, Global Finishing Options Not Applying Correctly from Strategy Bug, Waterline Machining Incomplete Toolpath from Enhanced Logic Error, and CAD Import Data Exchange Issues from STEP IGES CATIA Format Incompatibility: VISI 2026.2 Update, Adaptive Feedrate Enable, Global Finishing Configuration, Waterline Enhancement, and CAD Import Format Check

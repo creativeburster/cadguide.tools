@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.simscale.com/forum/t/sudden-bad-mesh-quality-and-all-solvers-diverging/100848"
+  - "https://www.simscale.com/forum/t/harmonic-solver-hangs-at-0-after-geometry-simplification-empty-void-bodies-causing-singular-stiffness-matrix/100883"
+  - "https://www.simscale.com/forum/t/meshing-and-convergence-issue/98792"
 ---
 
 # SimScale 2026 Sudden Bad Mesh Quality from Moving Wall Boundary Condition on XY Plane, Harmonic Solver Hang at 0% from Empty Void Bodies and High Edge Ratio, Meshing Pipeline Changes from Platform Updates Breaking Previous Setups, High Non-Orthogonality Above 70 from Dirty CAD Model Small Faces, and Overlapping Entities Error from Momentum Source Geometry Intersecting Flow Region: Geometry Underbody Inspection, Local Volume Refinement, Extrusion Mesh Refinement, CAD Cleanup, and Cell Zone Configuration

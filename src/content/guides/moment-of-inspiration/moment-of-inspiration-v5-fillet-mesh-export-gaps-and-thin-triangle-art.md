@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://moi3d.com/forum/lmessages.php?msg=11521.34&webtag=MOI"
+  - "https://moi3d.com/forum/lmessages.php?msg=3793.2&webtag=MOI"
+  - "https://moi3d.com/forum/lmessages.php?msg=3869.116&webtag=MOI"
 ---
 
 # Moment of Inspiration v5 Fillet Mesh Export Gaps and Thin Triangle Artifacts from CentroidTriangulation, OBJ Export Cracks from Unjoined Separate Surfaces, Large Scale Model Joining Failure from 0.005 Tolerance, FBX Vertex Normal Loss from DCC Import Settings, and N-Gon Output Misunderstanding with Triangles from Trimming Boundaries: CentroidTriangulation Fix, Join Before Export, Scale Down, Normal Settings, and N-Gon Explanation

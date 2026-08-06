@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000ad8J9KAI/problem-with-sol-401-non-linear-contact-analysismain-access-violation-c0000005-exception-encountered"
+  - "https://community.sw.siemens.com/s/article/How-to-Debug-or-Troubleshoot-a-failed-Nastran-simulation"
+  - "https://community.sw.siemens.com/s/question/0D54O000061xlYYSAY/access-violation-c0000005"
 ---
 
 # Simcenter 3D 2026 SOL 401 Access Violation C0000005 from Nonlinear Contact in Sparse Solver, Acoustics BEM Internal Error Progress Bar Exceeded Steps, NX Nastran SOL 101 Access Violation from Large Young's Modulus Difference in Contact, Debugging Failed Nastran Simulation Using F06 UFM and SFM Error Codes, and Simcenter Nastran 2606 Refactored SOL401 Contact for Convergence: Solver Change to PARDISO, Block Size Reduction, Material Modulus Equalization, F06 File Analysis, and 2606 Update

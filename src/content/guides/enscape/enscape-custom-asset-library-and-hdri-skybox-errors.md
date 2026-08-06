@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.chaos.com/t/custom-assets-not-showing-in-custom-asset-library/179213"
+  - "https://forums.chaos.com/t/version-4-11-0-162-enscape-assets-not-showing-up-post-upgrade/180421"
+  - "https://forums.chaos.com/t/skybox-hdri-images-scale-and-position/179798"
 ---
 
 # Enscape Custom Asset Library and HDRI Skybox Errors: Custom Assets Not Showing from SourceDirectory Does Not Exist Requiring Local Folder Configuration, Assets Not Showing Up Post Upgrade from 4.10 to 4.11 Requiring Save As in New Folder, Custom Asset Import Scale Too Large Requiring Metric FBX Export, HDRI Skybox Cannot Be Scaled Requiring Model Scale Instead, and Custom Asset Location Not Recognized After Update from Cloud or Network Path

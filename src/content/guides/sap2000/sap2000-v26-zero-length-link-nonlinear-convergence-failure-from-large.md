@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.csiamerica.com/software/SAP2000/26/ReleaseNotesSAP2000v2630.pdf"
+  - "https://www.csiamerica.com/software/SAP2000/26/ReleaseNotesSAP2000v2620.pdf"
+  - "https://help.csiamerica.com/help/sap2000/26/26.0.0/SAP2000/WebHelp/Menus/Define/Load_Cases/Static/Nonlinear/Nonlinear_Iteration.htm"
 ---
 
 # SAP2000 v26 Zero-Length Link Nonlinear Convergence Failure from Large Displacements P-Delta, Staged Construction Incorrect Base Reactions from Time Dependent Items, AVI Movie Creation Crash from Compression, Contour Display Soil Pressure Max Min Inversion in Enveloping Load Cases, and API GroupDef.Delete Allowing Reserved ALL Group Deletion: Zero-Length Link Update, Staged Construction Fix, AVI Format Change, Contour Display Fix, and API Patch

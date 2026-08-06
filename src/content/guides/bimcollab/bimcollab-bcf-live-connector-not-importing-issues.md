@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://society.solibri.com/topic/3306/bcf-live-connecter-not-importing-issues"
+  - "https://society.solibri.com/topic/3320/bcf-live-connector-bugs"
+  - "https://helpcenter.bimcollab.com/en/articles/351296-synchronizing-issues-to-your-bimcollab-space"
 ---
 
 # BIMcollab BCF Live Connector Not Importing Issues, Comment Jumping and Saving Mid-Sentence on Synchronized Issues, Delete Key Accidentally Deleting Issues, Revit BCF Manager Crash in Family Environment and on Invalid Milestones, and Navisworks Bulk Import Issues Not Auto-Syncing: Performance Fix 23.5.1, June 2025 Beta, Auto-Sync Configuration, and Revit Bundle Update

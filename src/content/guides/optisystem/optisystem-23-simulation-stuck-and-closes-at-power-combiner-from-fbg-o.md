@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://optiwave.com/forums/topic/simulation-stucks-and-closes-the-application-automaticaly/"
+  - "https://optiwave.com/forums/topic/calculation-did-not-converge/"
+  - "https://optiwave.com/latest-news/optisystem-23-1-press-release/"
 ---
 
 # OptiSystem 23 Simulation Stuck and Closes at Power Combiner from FBG OTDR Sensor Model, Calculation Did Not Converge from BER Test Set Multiple Parameter Sweep, SPM TDF Crash from OptiSystem Version 20 Bug, Report Page Crash from Deleted Component Data Reference, and Directly Detected Eye Analyzer Buffer Emptying Error: Power Combiner Simplification, Single Parameter Sweep, SPM Update, Report Page Cleanup, and Analyzer Buffer Fix

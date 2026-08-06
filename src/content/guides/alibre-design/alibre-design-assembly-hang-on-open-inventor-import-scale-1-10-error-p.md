@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.alibre.com/release-history/"
+  - "https://www.alibre.com/version-28-sp3/"
+  - "https://www.alibre.com/version-281/"
 ---
 
 # Alibre Design Assembly Hang on Open, Inventor Import Scale 1/10 Error, Path Pattern Crash, Orphaned Process Autokill, and Sheet Metal Invalid Part Drawing Crash: V28 SP3/SP4 Fixes, Constraint Update, and Crash Recovery

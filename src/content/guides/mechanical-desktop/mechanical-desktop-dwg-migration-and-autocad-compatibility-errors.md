@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://forums.autodesk.com/t5/autocad-mechanical-forum/cannot-edit-autodesk-mechanical-desktop-drawings-in-autocad/td-p/10319820"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Mechanical-Error-message-Incompatible-Version-when-opening-specific-DWG-files.html"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-This-drawing-was-last-saved-outside-of-AutoCAD-Mechanical.html"
 ---
 
 # Mechanical Desktop DWG Migration and AutoCAD Compatibility Errors: Cannot Edit MDT Drawings in AutoCAD Mechanical from Incompatible DWG Format Requiring Wblock Purge Audit Workflow, Incompatible Version Error from Newer Release or Third-Party Add-on Requiring Save As Correct Format, Drawing Saved Outside AutoCAD Mechanical Breaks Structured Objects Requiring Insert Purge Audit, MDT 3D Files Cannot Export 2D Layouts to DXF Requiring Inventor Conversion, and MDT 2009 to Inventor 2018 Migration Requires Both MDT 2009 and Inventor Installed

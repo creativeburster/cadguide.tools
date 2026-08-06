@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://help.solibri.com/hc/en-us/articles/4412358702743-How-to-resolve-IFC-read-errors-in-Solibri"
+  - "https://www.solibri.com/articles/solibri-release-notes-26-6-1"
+  - "https://www.solibri.com/articles/solibri-release-notes-june-2026"
 ---
 
 # Solibri 2026 IFC Read Errors from Syntax Error or Old Exporter Version, Revit 2026 IFC Export Door Openings Show as Not Defined from Missing Opening Type Information, Custom Discipline Export Failure from Export Bug, Model Upload Stuck in Loading Loop from Interrupted Upload, and Point Cloud Import LAS LAZ Settings Adjustment Issues: Authoring Tool Update, IFC Export Settings Check, 26.6.1 Update, Page Reload, and Import Settings Configuration

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v242/en/disco_unified_releasenotes/disco_cav_kils.html"
+  - "https://ansyshelp.ansys.com/public/Views/Secured/corp/v261/en/install_discovery/disc_prereq.html"
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/discovery-license-activation-troubleshooting/"
 ---
 
 # Ansys Discovery GPU Out of Memory in Explore Stage, License Activation Firewall Block, AMD Card Explore Stage Disabled, Prerequisite Check Failure on Launch, and NVIDIA Driver Version Incompatibility: Fidelity Slider, Port 443 Firewall Rules, NVIDIA Maxwell Minimum, Driver 528.33, and System Compatibility Check

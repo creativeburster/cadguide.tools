@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://zw3dforum.com/t/zw3d-crash-when-closing-one-of-several-opened-views/1989"
+  - "https://zw3dforum.com/t/importing-problem-stp-sw-and-more/654"
+  - "https://www.zwsoft.com/support/zw3d"
 ---
 
 # ZW3D 2026 Crash When Closing One of Several Opened Views from 2025 SP2 Stability Bug, STEP and Parasolid Import Incorrect from User Folder Corruption, Missing VCOMP140 VCRUNTIME140 DLL from Missing Visual C++ Redistributable, 0xc000007b Application Cannot Start from Missing System Dependencies, and ZW3D Does Not Respond After Double-Clicking Shortcut from User Folder Issue: 2025 SP1 Rollback, User Folder Rename, VC++ Redistributable Install, System Dependency Fix, and User Folder Cleanup

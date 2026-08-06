@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-07-31"
 sources:
+  - "https://help.browzwear.com/en/articles/13066191-lightning-bolt-or-shattered-glass-displays"
+  - "https://help.browzwear.com/en/articles/13066192-unable-to-select-internal-elements"
+  - "https://help.browzwear.com/en/articles/13065179-release-notes-vstitcher-2024-2-3"
 ---
 
 # Browzwear VStitcher Graphics and Selection Errors: Lightning Bolt or Shattered Glass Display from Incorrect Graphics Card Settings Requiring Driver Configuration, Unable to Select Internal Elements from Zoom Level Too Far Out Requiring Zoom In, VStitcher Crashing After Prolonged Use from Memory Accumulation Requiring 2024.2.3 Update, Wrong Colors on Vector Artwork Export from Print to File and Tech Pack Requiring 2024.2.3 Update, and Excessively Glossy Fabric Texture from Specular Metal Effects Requiring V-Ray Fur Material Mode Revert

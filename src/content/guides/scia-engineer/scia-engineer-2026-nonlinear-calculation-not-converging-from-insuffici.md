@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://help.scia.net/26.0/en/analysis/solver_setup/nonlinear_solution_methods/nonlinear_analysis.htm"
+  - "https://www.scia.net/en/support/faq/scia-engineer/analysis/check-convergence-nonlinear-analysis"
+  - "https://help.scia.net/25.0/en/analysis/calculation/nonlinear_stability_calculation.htm"
 ---
 
 # SCIA Engineer 2026 Nonlinear Calculation Not Converging from Insufficient Iterations, Singularity Errors from Local Nonlinearities on Hinges and Supports, Solver Precision Ratio Too Strict for Cable and Membrane Structures, Solver Robustness Ratio for Sensitive Nonlinear Analysis, and Nonlinear Stability Analysis Termination from Singularity at Large Displacements: Iteration Increase, Singularity Diagnostics, Precision Ratio Reduction, Robustness Ratio Increase, and LOG File Analysis

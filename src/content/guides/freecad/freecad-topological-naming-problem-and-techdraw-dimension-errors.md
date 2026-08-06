@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "13 min"
 date: "2025-07-31"
 sources:
+  - "https://forum.freecad.org/viewtopic.php?t=98913"
+  - "https://forum.freecad.org/viewtopic.php?style=1&t=104002"
+  - "https://github.com/FreeCAD/FreeCAD/issues/13375"
 ---
 
 # FreeCAD Topological Naming Problem and TechDraw Dimension Errors: Assembly Invalid Shape Name from TNP Requiring Manual Reference Reassignment, TechDraw 2D References Corrupt from Sketch Edit Requiring Auto Update Disable, Link Array Objects Produce Wrong TechDraw Dimensions from Missing globalPlacement, External Geometry References Break on Previous Layer Edits from TNP, and Nested AppLink with StdPart Container Offset Renders Wrong TechDraw Position

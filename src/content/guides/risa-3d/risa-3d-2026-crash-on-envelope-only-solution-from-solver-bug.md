@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://risa.com/hubfs/Release%20Notes/Release_Notes_3D_v19.pdf?hsLang=en"
+  - "https://help.risa.com/risahelp/risa3d/Content/Warning-Log.htm"
+  - "https://blog.risa.com/post/the-ultimate-guide-to-instability-warnings-in-risa-3d"
 ---
 
 # RISA-3D 2026 Crash on Envelope Only Solution from Solver Bug, P-Delta Divergence Error from Node and Load Combination Misidentification, Instability from Member End Releases at Boundary Conditions, Tension-Only Members Causing Instability from Stiffness Matrix Removal, and Model File Corruption from Custom Shapes: Envelope Solution Update, P-Delta Error Fix, End Release Adjustment, Tension-Only Bracing Review, and Custom Shape Validation

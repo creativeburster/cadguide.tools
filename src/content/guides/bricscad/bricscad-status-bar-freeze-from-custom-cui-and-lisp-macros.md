@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://forum.bricsys.com/discussion/38901/status-bar-freezes-after-running-custom-macros-and-lisps"
+  - "https://forum.bricsys.com/discussion/38959/v24-2-05-suddenly-crashes-when-loading-the-gui"
+  - "https://forum.bricsys.com/discussion/40056/lisp-loads-then-stops-working"
 ---
 
 # BricsCAD Status Bar Freeze from Custom CUI and LISP Macros, GUI Crash on Linux from GTK Widget Critical, ARX Freeze After Using BricsCAD Commands Before Loading, LISP Stops Working on Second Drawing from Per-Document Loading, and on_doc_load LISP Not Loading from Errant Support Path: on_start.lsp and on_doc_load.lsp, Downgrade, Ribbon Tab Switch, ACADLSPASDOC, and Support Path Priority

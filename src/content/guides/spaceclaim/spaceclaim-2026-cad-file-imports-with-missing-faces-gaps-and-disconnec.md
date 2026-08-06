@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://help.spaceclaim.com/dsm/6.0/en/Discovery/user_manual/repair_overview.html"
+  - "https://phoenix-3d-art.blogspot.com/2026/05/ansys-spaceclaim.html"
+  - "https://innovationspace.ansys.com/forum/forums/topic/spaceclaim-problem-2/"
 ---
 
 # SpaceClaim 2026 CAD File Imports with Missing Faces Gaps and Disconnected Surfaces, Loft Geometry Lost After STEP Import from Inventor, Crashes When Opening Very Large Assemblies, Split Edges Repair Tool Produces Worse Geometry, and Enclosure Creation Excludes Parts from Fluid Volume: Repair Tools Automatic Fix, Parasolid x_t Export, Lightweight Mode Virtual Memory, Selective Edge Split, and Multiple Translation Paths

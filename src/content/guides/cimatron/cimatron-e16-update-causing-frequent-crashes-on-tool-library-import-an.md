@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/cimatron-update-causing-lots-of-crashes.410639/"
+  - "https://www.cimatron.com/en/news/cimatron-releases-version-2024"
+  - "https://help.cimatron.com/en/2026/nc_functions.htm"
 ---
 
 # Cimatron E16 Update Causing Frequent Crashes on Tool Library Import and File Save, NC Post Processing Taking Twice as Long After Update, NC Template Manager Editing Workflow Changes, Toolpath Split by Tool Life or Cutting Length Configuration, and Toolpath Simulator Performance Improvement 30 Percent: Update Rollback, Post Processor Optimization, NC Template Configuration, Tool Life Parameters, and Simulator Cache

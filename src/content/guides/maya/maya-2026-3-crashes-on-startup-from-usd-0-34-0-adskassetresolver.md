@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-ReleaseNotes/files/MAYA_RELEASENOTES_2026_2_RELEASE_NOTES_HTML.html"
+  - "https://forums.autodesk.com/t5/maya-forum/maya-2026-crashes-immediately-when-opened/td-p/13839528"
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Laggy-performance-or-freezing-in-Maya.html"
 ---
 
 # Maya 2026.3 Crashes on Startup from USD 0.34.0 AdskAssetResolver, Freeze When Making Keys from Non-Certified GPU, cacheEvaluator Plugin Crash from Windows Update, ML Deformer Error Training on Linux, and Motion Trail Editing Broken in Viewport: USD Rollback, DG Evaluation Mode, Plugin Disable, Deformer Update, and Graph Editor Workaround

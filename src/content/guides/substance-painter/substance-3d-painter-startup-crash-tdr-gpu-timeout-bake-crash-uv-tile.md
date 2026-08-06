@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/startup-issues/crash-or-freeze-during-startup"
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/gpu-issues/gpu-drivers-crash-with-long-computations-tdr-crash"
+  - "https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/technical-issues/stability-issues/crash-while-baking"
 ---
 
 # Substance 3D Painter Startup Crash, TDR GPU Timeout, Bake Crash, UV Tile Errors, and Export Crash: GPU Driver Compatibility and Registry TDR Fix, Disable GPU Raytracing for Bake Stability, Ryzen BIOS Update, UV Tile Mask Refresh, and Insufficient Disk Space Corruption

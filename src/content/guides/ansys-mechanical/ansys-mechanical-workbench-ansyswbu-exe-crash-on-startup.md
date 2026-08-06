@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/error-unable-to-start-mechanical-in-workbench-windows-ansyswbu-exe-encountered-a-problem-a-diagnostic-file-has-been-written-cusersusernameappdatalocaltempansyswbdumpfile-dmp-and-an/"
+  - "https://innovationspace.ansys.com/knowledge/forums/topic/try-to-mesh-a-simple-geometry-e-g-a-cubic-in-workbench-mechanical-on-windows-get-a-misleading-error-of-the-mesh-generation-did-not-complete-due-to-poor-quality-elements-or-incorrect-input-please-try-meshing-with-another-mesh-method-or-different-mesh-options/"
+  - "https://innovationspace.ansys.com/forum/forums/topic/ansys-meshing-script-error-80004005-nothing-seems-to-fix-it/"
 ---
 
 # Ansys Mechanical Workbench AnsysWBU.exe Crash on Startup, Meshing Error from Intel Compiler DLL Conflict in System32, Mesh Script Error 80004005 from Corrupted Installation, IPv6 Localhost Resolution Preventing Workbench Launch, and Intel Integrated Graphics Overriding Professional GPU: AppData Reset, libiomp5md.dll Rename, ProductConfig Reconfiguration, IPv6 Disable, and NVIDIA Control Panel

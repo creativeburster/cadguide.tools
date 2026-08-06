@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-07-31"
 sources:
+  - "https://dentallabnetwork.com/forums/threads/error-when-trying-to-import-3xoz-3shape-trios-files-to-exocad.37178/"
+  - "https://dentallabnetwork.com/forums/threads/exocad-help.36519/"
+  - "https://dentallabnetwork.com/forums/threads/always-failed-when-open-duplicate-file.35584/"
 ---
 
 # exocad Dental CAD Scan Import and Design Errors: 3Shape Trios 3OXZ Import XML Error from Format Change Requiring STL or PLY Manual Import, Individual Dies Not Showing in Hide Show Box from Missing Separate Prep Files Requiring Scan Method Change, Unable to Load Scan Data on Duplicate Project from File Path Issue Requiring Manual Copy, Only Die Scan Imported from Missing Adjacent Tooth in Order Requiring Order Setup Fix, and Margin Line STL Export Not Available Requiring Web Share or Manual STL Save

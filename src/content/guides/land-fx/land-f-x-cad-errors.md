@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://www.landfx.com/kb/autocad-fxcad/errors/7586-fatal-error-2025.html"
+  - "https://www.landfx.com/kb/autocad-fxcad/performance/623-cad-crash-freeze"
+  - "https://www.landfx.com/kb/planting-issues/errors.html"
 ---
 
 # Land F/X CAD Errors: Fatal Error on Opening F/X CAD 2025 from AutoCAD 2025 Bug Requiring Updater, CAD Crashes or Freezes from Web Dialog and Cloud Data Issues Requiring Troubleshooting, Planting Errors from No Function Definition LOOKUP and Unhandled Exception Requiring Updates, Xref Images Not Loading from Double-Click Open Bug Requiring Manual Xref Reload, and Plant Data Mismatch from Extended Data Corruption Requiring Verify Labels

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "14 min"
 date: "2025-07-31"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D54O000061xoO5SAI/suggested-workflow-for-meshing-errors"
+  - "https://community.sw.siemens.com/s/question/0D54O000061xkl0SAA/error-9058"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000cryYgKAI/plate-element-bonding-error-fatal-message-9137-and-pivot-ratio-issue"
 ---
 
 # Siemens Femap Mesh Quality and Nastran Fatal Errors: 4297 EQD4D Mesh Distortion from Failed Quad Elements Found via Element Quality Check, Fatal 9058 from Plot Planar 2D Triangular Elements Not Exported to Nastran, Fatal 9137 Plate Bonding and Pivot Ratio from Rigid Body Motion and Unconstrained Parts, Crash on Analyze from Nested INCLUDE File Path Errors, and Contact Non-Convergence from Curved Surfaces Requiring Increased Iterations

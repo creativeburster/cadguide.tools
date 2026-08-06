@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000ZrYy1KAF/request-help-on-mesh-repair"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000cytweKAA/-user-fatal-message-316-ifpdrv-illegal-data-on-bulk-data-entry-blseg"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000cryYgKAI/plate-element-bonding-error-fatal-message-9137-and-pivot-ratio-issue"
 ---
 
 # Siemens Femap FEA Mesh and Solver Errors: Mesh Repair from Rogue Nodes and Poor Element Quality Requiring Meshing Toolbox and Geometry Slicing, USER FATAL MESSAGE 316 BLSEG from Connection Region GUI Mismatch Requiring Recreation, FATAL MESSAGE 9137 Plate Element Bonding and Excessive Pivot Ratios from Unconstrained Model Requiring SOL 103 Diagnosis, Run Time Elemental Errors from Tria with 4 Nodes and Non-Connected Nodes Requiring Pre-Analysis Detection, and Mesh Distortion from Uneven Element Transitions Requiring Mapped Mesh or Biasing

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://learn.microsoft.com/en-ca/answers/questions/5567033/cad-software-not-working-after-windows-11-august-u"
+  - "https://teamarmaan.com/nanocad/"
+  - "https://www.nanocad.in/2D-design-3D-modeling-solution/25/en/topic/ncad-lsp"
 ---
 
 # nanoCAD 26 cax_geometry.dll Access Violation Crash from Dynamic Vertex Buffer Overflow, Windows 11 UAC Hardening Freeze from August Update, Memory Leak from Large 3D Models and Hatches, DWG Translator Data Loss from AutoCAD 2024 2026 Format, and LISP .NET API Null Reference from Multiple Assembly Conflicts: GraphicsOverride Registry, Run as Admin, Build 305 Update, DWG Format Fix, and API Cleanup

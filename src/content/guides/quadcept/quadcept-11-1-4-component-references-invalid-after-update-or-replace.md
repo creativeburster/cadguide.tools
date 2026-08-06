@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://support.quadcept.com/en/quadcept-11-1-4-released/"
+  - "https://support.quadcept.com/en/quadcept-11-0-5-released/"
+  - "https://support.quadcept.com/en/quadcept-11-1-2-released/"
 ---
 
 # Quadcept 11.1.4 Component References Invalid After Update or Replace, STEP Export Errors for Certain Components, Crash When Opening Project with Panel Sheets, Crash During 3D Rendering with Synchronization, and Gerber Import Macro Aperture Error: Component Reference Fix, STEP Export Update, Panel Sheet Patch, 3D Sync Improvement, and Gerber Macro Fix

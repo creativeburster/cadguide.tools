@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://community.cadence.com/cadence_technology_forums/orcadx/f/orcad-x-presto-pcb/65107/using-presto-every-day-is-a-real-struggle-with-all-the-bugs-and-crashes-etc-anyone-else-using-it-100-of-the-time-is-the-other-pcb-editor-as-buggy"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/pcb-design/47184/constraint-manager-rules-are-reset-emptied-when-design-sync-pcb-schematic-is-performed-in-17-4-s012"
+  - "https://community.cadence.com/cadence_technology_forums/pcb-design/f/allegro-x-pcb-editor/48373/error-when-editing-constaints-in-allegro-17-4-cmavp-2"
 ---
 
 # OrCAD Presto and Constraint Manager Errors: Presto PCB Editor Daily Crashes and Sync Failures Requiring Close and Reopen Workaround, Constraint Manager Rules Reset When Design Sync PCB to Schematic in 17.4 S012 Requiring DCF Export Import, CMAVP-2 Error When Editing Constraints from Version Migration Corruption Requiring DB Check and ECS Disable, Unable to Modify or Delete Nested Net Group in Constraint Manager from Old Version Bug Requiring 17.4 Hotfix, and CSV Import Only Populates Single Worksheet Requiring TCFX Technology File for Multi-Worksheet Import

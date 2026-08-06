@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-02"
 sources:
+  - "https://help.ascon.ru/KOMPAS/23/en-US/cm_file_recover.html"
+  - "https://forum.ascon.ru/index.php?topic=927.0"
+  - "https://help.ascon.ru/KOMPAS/24/en-US/2223_244_2_1_osobennosti_exporta.html"
 ---
 
 # KOMPAS-3D Assembly and File Recovery Errors: Assembly Crash on Rebuild from Top-Down Design Bug Requiring Save Before Rebuild, Invalid File Structure from Document Corruption Requiring Open with Verification, DXF DWG Export Failure from Graphical Document Errors Requiring Verification Repair, Lost Link to Variable Error from Missing Variable Names Requiring Variable Reassignment, and Fatal Error 0x0024 from cax_geometry.dll Access Violation Requiring Graphics Override Registry Fix

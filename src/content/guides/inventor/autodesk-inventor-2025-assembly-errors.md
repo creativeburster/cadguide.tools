@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-02"
 sources:
+  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-1-2-crashing-multiple-times-a-day-on-finish-edits/td-p/13088787"
+  - "https://forums.autodesk.com/t5/inventor-forum/inventor-2025-2-1-assembly-update-required-after-saving-loop/td-p/13344625"
+  - "https://forums.autodesk.com/t5/inventor-forum/constraint-issues-inventor-2025/td-p/13765336"
 ---
 
 # Autodesk Inventor 2025 Assembly Errors: Crash on Finish Edit from Multi-Monitor Display Settings Requiring DPI Configuration, Assembly Update Save Loop from Model State Corruption Requiring Close and Reopen, Constraints Not Working After Part Edit from Transient Bug Requiring Reboot, Parts Not Moving After One Constraint from Design Doctor Errors Requiring Constraint Fix, and iLogic Assembly Constraints Requiring Click and Drag from Defer Update Requiring Update2 Call

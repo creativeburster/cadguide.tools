@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000WOQQTKA5/solid-edge-2025-keeps-crashing-every-couple-hours"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000k3x58KAA/se-2025-sp-8-crashing-general-downgrade-in-performance"
+  - "https://community.sw.siemens.com/s/question/0D5Vb00000pFybEKAS/solid-edge-2025-update-10-announcement"
 ---
 
 # Solid Edge 2025 Crash and Performance Errors: Random Crashes Every Couple Hours from Outdated BIOS and Drivers Requiring System Update, SP8 Crash and Performance Downgrade from 3DConnexion Driver Conflict Requiring Rollback to SP7, Update 10 Table Edit Crash from Regression PR 11375613 Requiring Rollback or Update 11, Very Slow Performance from Network Links and OneDrive Sync Requiring Configuration Cleanup, and Crash on Open or Create File from User Profile Corruption Requiring Safe Mode and New Profile

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/595594/simulation-errors-with-spice-models-after-update-to-lt-spice-v24-1-8"
+  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/582233/bugs-in-ltspice24"
+  - "https://ez.analog.com/design-tools-and-calculators/ltspice/f/q-a/596524/simulation-lockup"
 ---
 
 # LTspice Simulation and Convergence Errors: Infinite Recursion and Syntax Error from v24.1 Update Requiring Parentheses Fix, Time Step Too Small Convergence Failure from Non-Physical Circuit Requiring Parasitic Addition, Simulation Lockup from AD8274 Model Instability Requiring Discrete Op-Amp Replacement, Inconsistent Convergence from Floating Nodes Requiring Capacitance Addition and Debugtran, and Labelled Net Name Ignored When Plotting from Component vs Net Name Confusion Requiring Net Label Addition

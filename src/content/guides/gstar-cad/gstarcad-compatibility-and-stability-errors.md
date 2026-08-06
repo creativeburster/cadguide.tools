@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "10 min"
 date: "2025-08-02"
 sources:
+  - "https://opendcl.com/forum/index.php?topic=2848.0"
+  - "https://www.architools.com/en-GB/support/gstarcad/solutions-to-problems-after-windows-updates"
+  - "https://stackoverflow.com/questions/77716864/gstarcad-transient-graphics"
 ---
 
 # GstarCAD Compatibility and Stability Errors: OpenDCL Crash from Docking Bar Pin Button Requiring Update to 9.2.0.4, DWG File Association Error from Incorrect Windows Association Requiring Default App Reset, Menus and Toolbars Disappear from Windows Update Requiring Settings Reset, AutoLISP Incompatibility from API Differences Requiring Code Adaptation, and Transient Graphics Memory Corruption from GRX API Differences Requiring Workaround

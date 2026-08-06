@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026/ReadMe/en/topics/Concept/defects_resolved_in_microstation_2026.html"
+  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026.0.1/Help/en/topics/Concept/defects_resolved_in_microstation_2026.html"
+  - "https://docs.bentley.com/LiveContent/web/MicroStation-v2026.0.1/Help/en/topics/1970029/GUID-F07BB6CA-86D6-4AED-941C-436BC3AC4A3B.html"
 ---
 
 # MicroStation 2026 DWG File Displaying Incorrectly from Hatch Reference Mismatch, Crashing When Opening Giant Size IFC File, Freezing While Importing Rhino 3DM Files, Extremely Slow Text Extraction for Attached DGN Files, and Performance Issues from Unavailable Raster Services When Opening DGN: Hatch Reference Fix, IFC Update, 3DM Import Fix, Text Extraction Optimization, and Raster Service Configuration

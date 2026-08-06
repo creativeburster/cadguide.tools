@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.ideastatica.com/support-center/analysis-convergence"
+  - "https://www.ideastatica.com/support-center/connection-analysis-0-or-doesn-t-reach-100"
+  - "https://www.ideastatica.com/support-center/blog/troubleshooting-idea-statica-connection-models"
 ---
 
 # IDEA StatiCa Connection Analysis 0 Percent or Not Reaching 100 Percent from Singularities, Stop at Limit Strain Halting Analysis at 25 Percent Load, GMNA Hollow Section Instability Break, Bolt Operations Incorrect Plate Selection and Slotted Hole Singularity, and Missing Welds at Gusset Plates Causing Singularity: Singularity Detection, Stop at Limit Strain Disable, GMNA Toggle, Bolt Model Verification, and Weld Addition

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://blenderartists.org/t/clo-3d-to-blender-workflow/1519983"
+  - "https://support.clo3d.com/hc/en-us/articles/23206278838681-How-to-Prevent-CLO-File-Corruption"
+  - "https://hub.virtamate.com/threads/issue-with-unrealistic-physical-effects-during-self-made-clothing-creation-%EF%BC%88ai-translated%EF%BC%89.65368/"
 ---
 
 # CLO 3D Avatar Dressing Fabric Simulation and Export Errors: Low-Poly Retopology from CLO to Blender Loses Details from Triangle Topology, Fabric Simulation Buckling Stretching from Default Low Stiffness and Triangular Mesh, USD Export Workflow for Garment Simulation Data and Avatar Animation Cache, File Corruption from Insufficient Disk Space and Multiple CLO Instances, and OBJ Export Missing Fabric Textures from CLO No Longer Supporting JPEG Fabric Files

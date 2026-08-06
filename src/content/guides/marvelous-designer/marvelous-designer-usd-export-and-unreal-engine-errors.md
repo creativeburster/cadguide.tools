@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://forums.unrealengine.com/t/ue5-4-error-with-usdimport-node-in-cloth-asset-invalid-input-lod-0/1765424"
+  - "https://forums.unrealengine.com/t/marvelous-designer-material-appears-differently-in-unreal-engine-usd-import-chaos-cloth-asset/2223232"
+  - "https://forums.unrealengine.com/t/chaos-cloth-strange-shadow-artifacts-on-marvelous-designer-clothes/2715906"
 ---
 
 # Marvelous Designer USD Export and Unreal Engine Errors: Invalid Input LOD 0 from USD Import to Chaos Cloth Asset Requiring Static Mesh Workflow, Materials Appear Translucent from USDImportTranslucentMaterial Requiring Material Parent Change, Strange Shadow Artifacts on Chaos Cloth from Normal or Material Issues Requiring Opaque Blend Mode, Cloth Falls Down from Missing Physics Asset Setup Requiring Physics Asset Configuration, and Export Splits Everything Up Requiring Mesh Merge Before Import

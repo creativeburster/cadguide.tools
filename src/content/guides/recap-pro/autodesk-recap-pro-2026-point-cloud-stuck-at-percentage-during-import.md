@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Pointcloud-is-stuck-at-a-certain-percentage-when-importing-and-indexing-scans-in-ReCap-Pro.html"
+  - "https://forums.autodesk.com/t5/recap-forum/importing-scans-freeze/td-p/13073482"
+  - "https://forums.autodesk.com/t5/recap-forum/recap-not-importing-all-data-from-faro-focus-premium/td-p/14057559"
 ---
 
 # Autodesk ReCap Pro 2026 Point Cloud Stuck at Percentage During Import and Indexing, FARO FLS Scan Import Freeze and Crash on Windows 11, FARO SDK Discontinued in ReCap Pro 2025, Missing Data from FARO Focus Premium Import, and ReCap Pro 2027 FARO SDK Update for Topcon and Orbis: Project Split, Version Rollback, SCENE Processing, RCS Export, and 2027 Update

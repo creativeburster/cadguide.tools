@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "11 min"
 date: "2025-08-03"
 sources:
+  - "https://support.tekla.com/article/how-do-i-resolve-tedds-add-in-disabled-and-or-teddsadd-in-error-287-in-tedds-for-word"
+  - "https://support.tekla.com/article/i-cannot-calculate-within-tedds-the-error-message-failed-to-get-the-active-instance-of-word"
+  - "https://support.tekla.com/doc/tekla-tedds/2025/ref_errormessages"
 ---
 
 # Tekla Tedds Add-In Disabled Error 287, Word Instance Failed Error, VBL Variable File Out of Sync, Library Access System Memory Errors, and Calculation Fatal Error: Word Add-In Re-enable, Office Reinstall, VBL File Deletion and Recalculation, and Memory Management

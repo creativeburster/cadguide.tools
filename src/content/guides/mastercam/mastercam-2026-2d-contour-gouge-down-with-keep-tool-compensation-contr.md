@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.mastercam.com/about/media/mastercam-releases-2026-r2/"
+  - "https://www.mastercam.com/community/blog/why-gpu-simulation-is-a-breakthrough-for-complex-cnc-programming-now-in-mastercam-2026-r2/"
+  - "https://www.mastercam-china.com/static/file/mastercam2026-release-notes.pdf"
 ---
 
 # Mastercam 2026 2D Contour Gouge Down with Keep Tool Compensation Control, Machine Simulation Regression from Refactored Code Causing Gouging, Verify Gouges When Compensation Set to Control, GPU Simulation 10x Faster with Vulkan 1.3 and RTX 3060, and Mastercam Copilot AI Voice-Controlled Feed Rate and Spindle Speed Adjustment: R-40092 Fix, R-40335 Regression Fix, R-39611 Compensation Fix, GPU Setup, and Copilot Workflow

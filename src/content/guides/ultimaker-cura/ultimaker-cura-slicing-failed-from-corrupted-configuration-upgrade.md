@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://github.com/Ultimaker/Cura/issues/20577"
+  - "https://github.com/Ultimaker/Cura/issues/18145"
+  - "https://github.com/Ultimaker/Cura/issues/21218"
 ---
 
 # Ultimaker Cura Slicing Failed from Corrupted Configuration Upgrade, USB Printing Plugin Interference, Material Settings Crash from Invalid Profile Values, Tiled Infill Plugin GLIBCXX Missing, and Printer Definition Version Mismatch After Windows Upgrade: Configuration Folder Reset, Plugin Disable, Profile Backup, and Cache Clear

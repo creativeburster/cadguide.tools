@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://www.tebis.com/en/tebis-4.1-release-11-a-virtual-start-for-safe-precise-manufacturing/n3886"
+  - "https://archivelabs.me/tbn2cad-2026-4-12825-cad-interoperability/"
+  - "https://www.tebis.com/en/software/products/tebis-4.1-release-12"
 ---
 
 # Tebis 2026 Robot Singularity and Limit Switch Conflicts During Toolpath Calculation, TBN to DWG DXF Conversion Failure from File Corruption and Unrecognized Feature Format, Machine Head Collision in 2.5D Free-Form Features from Variable Tool Search, CATIA 3DEXPERIENCE 3DXML Import Data Exchange Issues, and Large Tool Library Search Performance with Zoller TMS and External Tebis Libraries: Robot Conflict Visualization, Problem Layer Isolation, Collision Check Enable, 3DXML Workflow, and Release 11 Update

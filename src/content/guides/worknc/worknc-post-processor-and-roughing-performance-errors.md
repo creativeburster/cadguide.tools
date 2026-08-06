@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.practicalmachinist.com/forum/threads/worknc-v19-postpro-question.319972/"
+  - "https://www.practicalmachinist.com/forum/threads/about-work-nc.243960/"
+  - "https://3dcad.news/community/threads/worknc-per-stampi.61849/"
 ---
 
 # WorkNC Post Processor and Roughing Performance Errors: Concatenated Post File Number Adds Extra Digits from COMPOSITE_PP_NAME_SEPARATOR, Post Processor Development Requires .dat and .ang File Editing, Roughing Rest-Machining Performance Poor with Overmetal and Tool Size Changes, Contouring Does Not Stop on Edges Requiring Support Surface Construction, and Small Tool Scale Function Required for Miniature Work Increasing Calculation Times

@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.cadtutor.net/forum/topic/78569-help-me-to-fix-an-autocad-lisp-to-work-with-gstarcad/"
+  - "https://blog.gstarcad.net/how-to-convert-dwg-to-pdf-with-gstarcad-2026-and-other-methods/"
+  - "https://cdn-sg-gw.gstarcad.net/gstarsoft_pdf/GstarCAD_2027_User_Guide.pdf"
 ---
 
 # GstarCAD LISP Compatibility and DWG PDF Export Errors: AutoCAD LISP Not Loading from Unicode Encoding Mismatch Requiring LISPSYS System Variable, DWG to PDF Export Missing Plot Style Table Requiring Monochrome CTB Configuration, Custom Hatch Patterns Not Found from Search Path Misconfiguration Requiring Options File Locations, Command Aliases Not Working from gacd.pgp File Not Migrated Requiring Settings Import, and Batch Plot to PDF Not Merging Multiple Drawings Requiring Individual Plot and External Merge

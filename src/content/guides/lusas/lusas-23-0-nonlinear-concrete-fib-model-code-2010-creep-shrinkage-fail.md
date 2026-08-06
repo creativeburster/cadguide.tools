@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.lusas.com/releases/v23.0/23.0-2/LUSAS%2023.0%20Error%20Fix%20and%20Modification%20Release%20Note.pdf"
+  - "https://www.lusas.com/user_area/instruct/convergence_checklist.html"
+  - "https://www.lusas.com/user_area/warning/failed_to_converge.html"
 ---
 
 # LUSAS 23.0 Nonlinear Concrete fib Model Code 2010 Creep Shrinkage Fails to Converge, Structure with No Stress Fails to Converge Solver, Coupled Analysis Checkerboard Thermal Stress in Quadratic Elements, Fully Coupled Analysis Error in Data Transfer File, and Nonlinear Convergence from Load Increment Too Large and Stiff Element Round-Off: Iteration Increase, Stress-Free Model Check, Element Type Change, Cache Deletion, and Incrementation Adjustment

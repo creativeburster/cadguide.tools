@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-04"
 sources:
+  - "https://forums.sketchup.com/t/crash-when-opening-sketchup-2026/346259"
+  - "https://forums.sketchup.com/t/bug-crash-on-startup-dx12-engine-usenewrenderer-on-dual-gpu-system-amd-nvidia/348478"
+  - "https://forums.sketchup.com/t/sketchup-2026-crashes-while-opening/344282"
 ---
 
 # SketchUp 2026 Crash on Startup from Lumion Plugin Loading, DX12 New Graphics Engine Crash on Dual GPU AMD+NVIDIA Laptops, Advanced Camera Tools and Curic Extension Crash During Initialization, Scan Essentials Crash on Startup with Point Cloud Projects, and 2026.1.256 Qt6Core.dll Instant Crash on New Graphics Engine: Lumion Plugin Removal, UseNewRenderer False, Extension Migrator Bypass, Scan Essentials Uninstall, and Classic Graphics Engine

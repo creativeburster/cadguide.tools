@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-07-31"
 sources:
+  - "https://www.magicad.com/mep-design/support-training/support/troubleshooting/"
+  - "https://www.magicad.com/service-release-magicad-2025-ur-1-1-for-autocad-and-bricscad/"
+  - "https://community.graphisoft.com/t5/Collaboration-with-other/Problems-with-Archicad-IFC-export-to-MagiCAD/td-p/262938"
 ---
 
 # MagiCAD Revit Crash and IFC Export Errors: Fatal Error AccessViolationException When Checking Dataset Writing Permission in Worksharing Environment, Updating Support and Hangers in Older Project Causes Revit to Crash from Version Conflict, Wrong Friction Loss Method in Sprinkler Calculation from Hazen-Williams Instead of Darcy-Weissbach Requiring System Option Rerun, Active Storey Changes After Duct or Pipe Calculations with Multiple Drawings Open, and IFC Export Version Conflict McHpv Requiring ARX BRX File Update

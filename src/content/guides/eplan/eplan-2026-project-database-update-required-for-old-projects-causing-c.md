@@ -9,6 +9,9 @@ author: "CADGuide Tools Editorial Team"
 readTime: "12 min"
 date: "2025-08-03"
 sources:
+  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/news_p_projekte_datenbankaktualisieren_504102.htm"
+  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/messages_p_013056.htm"
+  - "https://www.eplan.help/en-US/Infoportal/Content/Plattform/2026/Content/htm/messages_p_022017.htm"
 ---
 
 # EPLAN 2026 Project Database Update Required for Old Projects Causing Cannot Open Error, Part Not Exist in Database P013056 from Deleted Parts or Changed Part Numbers, Excessive Field Length Values in Database P022017 from Long Device Tags, Macro Parts Data Not Automatically Stored Requiring Manual Synchronization, and Automated Batch Project Database Update via Project Management: Database Update Prompt, Part Exchange or Project Compress, Advanced Mode Reorganization, Parts Update and Complete Commands, and Automated Processing Scheme
