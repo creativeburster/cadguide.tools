@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import CloudCadTelemetryBlockerWizardClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Enterprise CAD Telemetry Blockers & Proxy Rules | CADGuide.tools',
-  description: 'Benchmark the best firewall configuration rules and proxy scripts to block CAD outbound telemetry and compliance pings.',
+  title: 'CAD Telemetry Privacy & Firewall Rule Tools for IT Admins | CADGuide.tools',
+  description: 'Benchmark firewall and proxy configurations that limit CAD outbound telemetry in line with corporate privacy and security policy (GDPR data minimization, air-gapped networks).',
   path: '/toolbox/cloud-cad-telemetry-blocker-wizard',
 });
 
@@ -12,7 +12,7 @@ export default function CloudCadTelemetryBlockerWizardPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Enterprise CAD Telemetry Blocker Configuration Portal', path: '/toolbox/cloud-cad-telemetry-blocker-wizard' },
+    { name: 'Enterprise CAD Telemetry Privacy Configuration Portal', path: '/toolbox/cloud-cad-telemetry-blocker-wizard' },
   ]);
 
   return (
@@ -32,10 +32,10 @@ export default function CloudCadTelemetryBlockerWizardPage() {
               Cloud Referral & Evaluation Hub
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Enterprise CAD Telemetry Blocker Configuration Portal
+              Enterprise CAD Telemetry Privacy Configuration Portal
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct navigation to objective in-depth evaluation and anti-audit. 
+              Direct navigation to objective in-depth telemetry-privacy and network-isolation tooling. 
             </p>
           </div>
         </section>

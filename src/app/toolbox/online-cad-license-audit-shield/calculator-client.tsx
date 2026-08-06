@@ -49,7 +49,7 @@ const RECOMMENDED_TOOLS = [
     ],
     "pros": [
       "100% LAN offline verification",
-      "Avoid external domain name scanning and evidence collection"
+      "Runs entirely on the intranet, no external scanning"
     ],
     "cons": [
       "Manual census terminal is required"
@@ -58,7 +58,7 @@ const RECOMMENDED_TOOLS = [
     "verdict": "The most reliable security solution at present. Through domain control (Group Policy) Script queries installed CAD registry keys on the intranet. "
   },
   {
-    "name": "CAD Telemetry Shield Script",
+    "name": "CAD Telemetry Privacy Script",
     "rating": 9.3,
     "metrics": [
       {
@@ -75,14 +75,14 @@ const RECOMMENDED_TOOLS = [
       }
     ],
     "pros": [
-      "Automatically block network silent return",
-      "Prevent agents from port scanning without warning"
+      "Limits outbound CAD telemetry per corporate privacy policy",
+      "Reduces background network noise on managed fleets"
     ],
     "cons": [
       "Rules need to be constantly adjusted based on software updates"
     ],
     "officialUrl": "https://github.com/",
-    "verdict": "Enterprise-level network blocking rule package for filtering data captured from the external network, which can prevent agents from crawling MAC and IP forensics. "
+    "verdict": "Enterprise firewall rule set for minimizing outbound CAD telemetry in line with corporate privacy and security policy (e.g. GDPR data minimization). "
   }
 ];
 const BEST_PRACTICES = [
@@ -113,10 +113,10 @@ const FAQS = [
 export default function OnlineCadLicenseAuditShieldClient() {
   return (
     <CloudReferralClient
-      title="Enterprise CAD Software Anti-Piracy Audit Shield Guide"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
+      title="Enterprise CAD Software Asset Management (SAM) Self-Check Guide"
+      subtitle="Direct navigation to objective in-depth SAM and telemetry-privacy tooling evaluations. "
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="Many enterprise IT departments often face problems due to individual employees downloading and installing cracked versions of software without permission., and unexpectedly received an Autodesk or SolidWorks The problem of legal copyright compliance audit letters sent by agents. This usually leads to high repurchase fines and litigation disputes. SAM Administrators need to complete self-examination and defensive blocking before receiving the letter. "
+      painPointDesc="Many enterprise IT departments often face problems due to individual employees downloading and installing cracked versions of software without permission., and unexpectedly received an Autodesk or SolidWorks The problem of legal copyright compliance audit letters sent by agents. This usually leads to high repurchase fines and litigation disputes. SAM Administrators need to complete self-examination and remediation before any letter arrives. "
       riskWarning="Enterprise anti-piracy compliance self-examination must comply with national intellectual property laws and company SAM management boundaries. This guide only provides IT compliance white paper technical solutions for asset self-examination and limiting the monitoring of irrelevant domain names., Should not be used to cover up any known violations. Corporate legalization is the only legal path to long-term development. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

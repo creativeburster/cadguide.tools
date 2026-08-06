@@ -95,8 +95,8 @@ const BEST_PRACTICES = [
     "desc": "Go to CAD ➔ Help ➔ Desktop Analytics Program, uncheck'Allows us to collect usage data', reducing telemetry events at their source. "
   },
   {
-    "title": "Configure anti-piracy legal isolation",
-    "desc": "Block domain names using a private hosts list, Prevent agents' automated evidence collection tools from silently collecting evidence in the background in the LAN. "
+    "title": "Configure telemetry isolation per privacy policy",
+    "desc": "Limit outbound telemetry domains via a managed hosts list, in line with corporate data-minimization and privacy requirements (e.g. GDPR). "
   }
 ];
 const FAQS = [
@@ -113,10 +113,10 @@ const FAQS = [
 export default function CloudCadTelemetryBlockerWizardClient() {
   return (
     <CloudReferralClient
-      title="Enterprise CAD Telemetry Blocker Configuration Portal"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
+      title="Enterprise CAD Telemetry Privacy Configuration Portal"
+      subtitle="Direct navigation to objective in-depth telemetry-privacy and network-isolation tooling. "
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="Commercial CAD software (Such as AutoCAD, SolidWorks, Revit) will silently collect user usage habits in the background, Computer MAC address and network IP node, and via a hidden telemetry service (Telemetry Services) Regularly upload to the official server. This not only often causes the system to freeze for unknown reasons., It may also result in false positive anti-piracy compliance review letters."
+      painPointDesc="Commercial CAD software (Such as AutoCAD, SolidWorks, Revit) will silently collect user usage habits in the background, Computer MAC address and network IP node, and via a hidden telemetry service (Telemetry Services) Regularly upload to the official server. This not only often causes the system to freeze for unknown reasons., It also raises data-privacy concerns under corporate policies such as GDPR."
       riskWarning="The Telemetry Blocking Wizard is only used as a technical reference for personal and enterprise IT to securely isolate networks and reduce bandwidth usage.. Please use within the authorization compliance boundaries of your enterprise IT department. The Windows Firewall blocking rules and hosts Documentation should not be used to counter legitimate genuine license compliance audits. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

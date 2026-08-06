@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import OnlineCadLicenseAuditShieldClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best CAD Software Anti-Piracy Audit Shield & Asset Guides | CADGuide.tools',
-  description: 'Compare the best tools and checklists for enterprise Software Asset Management (SAM) to defend against Autodesk and SolidWorks license audits.',
+  title: 'CAD Software Asset Management (SAM) & Telemetry Privacy Tools | CADGuide.tools',
+  description: 'Compare the best tools and checklists for enterprise Software Asset Management (SAM): inventory CAD seats, remove unauthorized installs, and limit outbound telemetry per your privacy policy.',
   path: '/toolbox/online-cad-license-audit-shield',
 });
 
@@ -12,7 +12,7 @@ export default function OnlineCadLicenseAuditShieldPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Enterprise CAD Software Anti-Piracy Audit Shield Guide', path: '/toolbox/online-cad-license-audit-shield' },
+    { name: 'Enterprise CAD Software Asset Management (SAM) Self-Check Guide', path: '/toolbox/online-cad-license-audit-shield' },
   ]);
 
   return (
@@ -32,10 +32,10 @@ export default function OnlineCadLicenseAuditShieldPage() {
               Cloud Referral & Evaluation Hub
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Enterprise CAD Software Anti-Piracy Audit Shield Guide
+              Enterprise CAD Software Asset Management (SAM) Self-Check Guide
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct navigation to objective in-depth evaluation and anti-audit. 
+              Direct navigation to objective in-depth SAM and telemetry-privacy tooling evaluations. 
             </p>
           </div>
         </section>
