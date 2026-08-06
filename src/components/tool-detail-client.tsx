@@ -11,6 +11,7 @@ import { RelatedTools } from '@/components/related-tools';
 import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Calendar, Tag, Languages, Cloud, Code2, Lock, Star } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
+import { priceSuffix } from "@/lib/utils";
 import { comparisonPairs } from "@/lib/seo-content";
 import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from "@/lib/guides-data";
 import { getBestDealForTool } from '@/lib/deals-data';
@@ -501,7 +502,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                   value: tool.discontinued
                     ? "Discontinued"
                     : tool.starting_price > 0
-                      ? `$${tool.starting_price.toLocaleString()}`
+                      ? `$${tool.starting_price.toLocaleString()}${priceSuffix(tool) === "one-time" ? " one-time" : " " + priceSuffix(tool)}`
                       : tool.quote_only
                         ? "Contact"
                         : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type)
@@ -1171,7 +1172,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                           ${tool.starting_price.toLocaleString()}
                         </span>
                         <span className="text-slate-400 font-bold text-sm">
-                          /year
+                          {priceSuffix(tool)}
                         </span>
                       </>
                     ) : tool.quote_only ? (

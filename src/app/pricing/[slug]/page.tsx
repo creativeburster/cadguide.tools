@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { tools, Tool } from '@/lib/data';
+import { annualizedPrice } from "@/lib/utils";
 import { PRICING_PAGES, type PricingPageContent } from '@/lib/pricing-licensing-content';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL, softwareApplicationLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
@@ -531,14 +532,17 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return '5GB free cloud';
                 }
                 if (key === 'pro_upgrade_cost') {
-                  return t.starting_price > 0 ? `$${t.starting_price}/year` : 'Varies by seat';
+                  return t.starting_price > 0 ? `$${annualizedPrice(t)}/year` : 'Varies by seat';
                 }
                 if (key === 'monthly_pricing') {
-                  return t.starting_price > 0
-                    ? `$${Math.round(t.starting_price / 12)}/month`
-                    : ['Free', 'Open Source', 'Freemium'].includes(t.pricing_type)
-                      ? 'Free'
-                      : 'Quote only';
+                  if (t.starting_price > 0) {
+                    if (t.price_period === 'month') return `$${t.starting_price}/month`;
+                    if (t.price_period === 'one-time') return 'N/A (perpetual)';
+                    return `$${Math.round(t.starting_price / 12)}/month`;
+                  }
+                  return ['Free', 'Open Source', 'Freemium'].includes(t.pricing_type)
+                    ? 'Free'
+                    : 'Quote only';
                 }
                 if (key === 'multi_year_disc') {
                   return 'Up to 10% on 3-Year';
@@ -551,7 +555,9 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                 }
                 if (key === 'buyout_price') {
                   return t.starting_price > 0
-                    ? `$${t.starting_price} (One-time)`
+                    ? t.price_period === 'one-time'
+                      ? `$${t.starting_price} (One-time)`
+                      : 'N/A (subscription)'
                     : ['Free', 'Open Source'].includes(t.pricing_type)
                       ? 'Free'
                       : 'Quote only';

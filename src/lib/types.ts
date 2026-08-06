@@ -25,6 +25,8 @@ export interface Tool {
   category_id: string;
   pricing_type: PricingType;
   starting_price: number;
+  /** What starting_price denotes: monthly subscription, annual subscription, or one-time buyout. */
+  price_period?: "month" | "year" | "one-time";
   platforms: string[];
   industries: string[];
   core_features: string[];

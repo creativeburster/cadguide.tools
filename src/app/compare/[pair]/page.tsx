@@ -7,6 +7,7 @@ import {
   parseComparisonPair,
 } from '@/lib/seo-content';
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
+import { annualizedPrice } from '@/lib/utils';
 import type { Tool } from '@/lib/data';
 import { categories } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
@@ -26,14 +27,16 @@ function pairTitle(a: Tool, b: Tool): string {
 }
 
 function pairDescription(a: Tool, b: Tool): string {
-  const aPrice =
-    a.starting_price > 0
-      ? `from $${a.starting_price}`
-      : a.pricing_type.toLowerCase();
-  const bPrice =
-    b.starting_price > 0
-      ? `from $${b.starting_price}`
-      : b.pricing_type.toLowerCase();
+  const label = (t: Tool) =>
+    t.starting_price > 0
+      ? t.price_period === 'month'
+        ? `from $${t.starting_price}/mo`
+        : t.price_period === 'one-time'
+          ? `from $${t.starting_price}`
+          : `from $${t.starting_price}/yr`
+      : t.pricing_type.toLowerCase();
+  const aPrice = label(a);
+  const bPrice = label(b);
   return `${a.name} (${aPrice}) vs ${b.name} (${bPrice}). Side-by-side comparison of pricing, platforms, file formats, ratings, and use cases. Pick the right CAD tool for your team in ${YEAR}.`;
 }
 
@@ -56,7 +59,10 @@ function pricingCell(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) return `$${t.starting_price} (${t.pricing_type})`;
+  if (t.starting_price > 0) {
+    const suffix = t.price_period === 'month' ? '/mo' : t.price_period === 'one-time' ? ' one-time' : '/yr';
+    return `$${t.starting_price}${suffix} (${t.pricing_type})`;
+  }
   return t.pricing_type;
 }
 
@@ -220,7 +226,7 @@ function decisionText(a: Tool, b: Tool): { pickA: string; pickB: string } {
     b.pricing_type === 'Free' || b.pricing_type === 'Open Source';
   const aIsCloud = a.deployment_options?.includes('Cloud') ?? false;
   const bIsCloud = b.deployment_options?.includes('Cloud') ?? false;
-  const aPriceDelta = a.starting_price - b.starting_price;
+  const aPriceDelta = annualizedPrice(a) - annualizedPrice(b);
 
   const pickAReasons: string[] = [];
   const pickBReasons: string[] = [];
@@ -235,9 +241,9 @@ function decisionText(a: Tool, b: Tool): { pickA: string; pickB: string } {
 
   if (!aFree && !bFree) {
     if (aPriceDelta < 0)
-      pickAReasons.push(`cheaper starting price ($${a.starting_price} vs $${b.starting_price})`);
+      pickAReasons.push(`lower annual cost ($${annualizedPrice(a)} vs $${annualizedPrice(b)} per year)`);
     else if (aPriceDelta > 0)
-      pickBReasons.push(`cheaper starting price ($${b.starting_price} vs $${a.starting_price})`);
+      pickBReasons.push(`lower annual cost ($${annualizedPrice(b)} vs $${annualizedPrice(a)} per year)`);
   }
 
   if (aIsCloud && !bIsCloud) pickAReasons.push('runs in the cloud');
@@ -336,8 +342,8 @@ function productCompareLd(a: Tool, b: Tool) {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'USD',
-      highPrice: Math.max(a.starting_price, b.starting_price).toString(),
-      lowPrice: Math.min(a.starting_price, b.starting_price).toString(),
+      highPrice: Math.max(annualizedPrice(a), annualizedPrice(b)).toString(),
+      lowPrice: Math.min(annualizedPrice(a), annualizedPrice(b)).toString(),
       offerCount: '2'
     }
   };

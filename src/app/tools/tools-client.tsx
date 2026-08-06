@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import { ToolLogo } from '@/components/tool-logo';
 import { SlidersHorizontal, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn, priceSuffix } from '@/lib/utils';
 
 // Items per page on the directory grid. Mirrors `ITEMS_PER_PAGE` in
 // src/app/tools/page.tsx so canonical URLs and client pagination agree.
@@ -730,7 +730,15 @@ function ToolsList() {
                                 ? 'FREE'
                                 : 'Quote'}
                       </div>
-                      <div className="text-[9px] text-slate-500 group-hover:text-blue-200 font-bold uppercase mt-1 transition-colors">Per Year / Seat</div>
+                      <div className="text-[9px] text-slate-500 group-hover:text-blue-200 font-bold uppercase mt-1 transition-colors">
+                        {tool.starting_price > 0 && !tool.discontinued
+                          ? priceSuffix(tool) === 'month'
+                            ? 'Per Month / Seat'
+                            : priceSuffix(tool) === 'one-time'
+                              ? 'One-time / Seat'
+                              : 'Per Year / Seat'
+                          : 'Per Year / Seat'}
+                      </div>
                     </div>
                   </div>
                   

@@ -14,6 +14,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1500,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -107,6 +108,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 7900,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -227,6 +229,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -347,6 +350,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2000,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -440,6 +444,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 15000,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -540,6 +545,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 600,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -679,6 +685,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 5000,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -772,6 +779,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 899,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -867,6 +875,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 6000,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -961,6 +970,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 500,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1054,6 +1064,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 4500,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -1228,6 +1239,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 260,
+  price_period: "month",
 
   platforms: [
     "Windows"
@@ -1381,6 +1393,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2010,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1534,6 +1547,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 399,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1675,6 +1689,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1299,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1828,6 +1843,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1149,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1981,6 +1997,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 575,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -2134,6 +2151,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 445,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -2743,6 +2761,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 199,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -2920,6 +2939,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 4070,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -3095,6 +3115,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3000,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -3269,6 +3290,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3500,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -3442,6 +3464,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3500,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -3615,6 +3638,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 3600,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -3789,6 +3813,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 480,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -4141,6 +4166,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 2200,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -4313,6 +4339,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Freemium",
   starting_price: 38,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -4489,6 +4516,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 540,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -4666,6 +4694,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 395,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -4840,6 +4869,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 240,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -5020,6 +5050,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1995,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -5194,6 +5225,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2400,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -5473,6 +5505,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Perpetual",
   starting_price: 1500,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -5697,6 +5730,7 @@ export const c7Tools: Tool[] = [
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 8000,
+  price_period: "year",
 
   platforms: [
     "Windows"

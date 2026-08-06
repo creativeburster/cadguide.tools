@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
 import { alternativesFor, alternativesPagePaths, comparisonPairs } from '@/lib/seo-content';
 import { getToolBySlug, type Tool } from '@/lib/data';
+import { annualizedPrice } from "@/lib/utils";
 import { pageMetadata, siteBreadcrumbLd, SITE_URL } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 import { FoldingList } from '@/components/folding-list';
@@ -22,7 +23,11 @@ function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) return `from $${t.starting_price}`;
+  if (t.starting_price > 0) {
+    if (t.price_period === 'month') return `from $${t.starting_price}/mo`;
+    if (t.price_period === 'one-time') return `from $${t.starting_price}`;
+    return `from $${t.starting_price}/yr`;
+  }
   return t.pricing_type;
 }
 
@@ -59,15 +64,17 @@ function whyTryInstead(target: Tool, alt: Tool): string {
   if (alt.pricing_type === 'Free' || alt.pricing_type === 'Open Source') {
     bits.push(`it's ${alt.pricing_type.toLowerCase()}`);
   } else if (target.starting_price > 0 && alt.starting_price > 0) {
-    if (alt.starting_price < target.starting_price * 0.6) {
+    const targetAnnual = annualizedPrice(target);
+    const altAnnual = annualizedPrice(alt);
+    if (altAnnual < targetAnnual * 0.6) {
       bits.push(
         `it's roughly ${Math.round(
-          ((target.starting_price - alt.starting_price) /
-            target.starting_price) *
+          ((targetAnnual - altAnnual) /
+            targetAnnual) *
             100,
-        )}% cheaper at $${alt.starting_price} starting`,
+        )}% cheaper on annual cost (${pricingLabel(alt)})`,
       );
-    } else if (alt.starting_price > target.starting_price * 1.4) {
+    } else if (altAnnual > targetAnnual * 1.4) {
       bits.push('it sits one tier above on capability vs price');
     }
   } else if (alt.pricing_type === 'Perpetual' && target.pricing_type === 'Subscription') {
@@ -457,8 +464,8 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
                     {alt.pros[0]}{alt.pros[1] ? ` ${alt.pros[1]}` : ''}
                     {alt.pricing_type === 'Free' || alt.pricing_type === 'Open Source'
                       ? ` Available at no cost.`
-                      : tool.starting_price > 0 && alt.starting_price > 0 && alt.starting_price < tool.starting_price * 0.7
-                      ? ` Starting at $${alt.starting_price} — ${Math.round((1 - alt.starting_price / tool.starting_price) * 100)}% less than ${tool.name}.`
+                      : tool.starting_price > 0 && alt.starting_price > 0 && annualizedPrice(alt) < annualizedPrice(tool) * 0.7
+                      ? ` Starting at ${pricingLabel(alt)} — ${Math.round((1 - annualizedPrice(alt) / annualizedPrice(tool)) * 100)}% less than ${tool.name} on annual cost.`
                       : ''}
                   </div>
                 )}

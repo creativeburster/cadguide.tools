@@ -95,6 +95,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
   starting_price: 2700,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Mechanical", "Manufacturing", "Automotive"],
   core_features: [
@@ -290,6 +291,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 129,
+  price_period: "year",
   platforms: ["Windows", "macOS", "Web", "Android", "iOS"],
   industries: ["Architecture", "Interior Design", "Landscape"],
   core_features: [
@@ -564,6 +566,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 85,
+  price_period: "month",
   platforms: ["Windows", "macOS", "Android", "iOS"],
   industries: ["Industrial Design", "Electronics", "Prototyping"],
 
@@ -802,6 +805,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 995,
+  price_period: "one-time",
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Industrial Design", "Jewelry"],
 
@@ -1049,6 +1053,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 7080,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Aerospace", "Automotive", "Shipbuilding"],
 
@@ -1474,6 +1479,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 2500,
+  price_period: "year",
   platforms: ["Web", "iOS", "Android"],
   industries: ["Startups", "Consumer Products", "Robotics"],
 
@@ -1717,6 +1723,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1320,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Mechanical", "Industrial Design"],
 
@@ -1824,6 +1831,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 315,
+  price_period: "month",
   platforms: ["Windows"],
   industries: ["Manufacturing"],
   core_features: ["iLogic Automation", "Shared Views"],
@@ -2012,6 +2020,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 2430,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Manufacturing", "High-Tech", "Medical"],
   core_features: [
@@ -2311,6 +2320,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 299,
+  price_period: "year",
   platforms: ["Windows", "macOS", "iOS"],
   industries: ["Industrial Design", "Prototyping", "AEC"],
 
@@ -2498,6 +2508,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 950,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Mechanical", "Manufacturing", "Prototyping"],
   core_features: ["Parametric Modeling", "Global Variables", "Sheet Metal"],
@@ -2588,6 +2599,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 700,
+  price_period: "one-time",
   platforms: ["Windows", "Linux"],
   industries: ["Mechanical", "Hobbyist"],
   core_features: ["3D Modeling", "2D Drafting", "Standard Parts Lib"],
@@ -2651,6 +2663,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1875,
+  price_period: "year",
   platforms: ["Windows", "macOS", "Linux"],
   industries: ["VFX", "Gaming", "Animation"],
 
@@ -3014,6 +3027,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 3950,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Industrial Design", "Machine Design", "Packaging"],
 
@@ -3153,6 +3167,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 1500,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Tool & Die", "Mold Design", "Rapid Prototyping"],
 
@@ -3232,6 +3247,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 5000,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Reverse Engineering", "Quality Control"],
 
@@ -3311,6 +3327,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 12000,
+  price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Automotive", "Industrial Design"],
   core_features: [
@@ -3383,6 +3400,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 2995,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Manufacturing", "Mechanical", "Mold Design"],
 
@@ -3542,6 +3560,7 @@ export const c2Tools: Tool[] = [
   "category_id": "c2",
   "pricing_type": "Perpetual",
   "starting_price": 149,
+  price_period: "one-time",
   "platforms": ["Windows", "macOS", "Linux"],
   "industries": ["Product Design", "Games", "Industrial Design"],
 
@@ -3650,6 +3669,7 @@ export const c2Tools: Tool[] = [
   "category_id": "c2",
   "pricing_type": "Perpetual",
   "starting_price": 295,
+  price_period: "one-time",
   "platforms": ["Windows", "macOS"],
   "industries": ["Product Design", "Industrial Design", "Games"],
 
@@ -4103,6 +4123,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 2000,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -4317,6 +4338,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 3150,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -5303,6 +5325,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Subscription",
   starting_price: 5000,
+  price_period: "year",
 
   platforms: [
     "Windows",

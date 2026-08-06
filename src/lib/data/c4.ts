@@ -105,6 +105,7 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 240,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -279,6 +280,7 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 2835,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -433,6 +435,7 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 3500,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -705,6 +708,7 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Subscription",
   starting_price: 360,
+  price_period: "year",
 
   platforms: [
     "Windows"

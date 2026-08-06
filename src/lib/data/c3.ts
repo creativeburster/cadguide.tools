@@ -55,6 +55,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 355,
+  price_period: "month",
   platforms: ["Windows"],
   industries: ["AEC", "Construction", "Structural Engineering"],
   core_features: [
@@ -329,6 +330,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2700,
+  price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Interior Design"],
 
@@ -583,6 +585,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2500,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Structural Engineering", "Construction"],
 
@@ -738,6 +741,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription / Perpetual",
   starting_price: 1530,
+  price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Landscape", "Entertainment"],
 
@@ -898,6 +902,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1995,
+  price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Residential Architecture", "Remodeling"],
 
@@ -973,6 +978,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2615,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Civil Engineering", "Transportation"],
 
@@ -1123,6 +1129,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 153,
+  price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Landscape Architecture", "Urban Planning"],
 
@@ -1198,6 +1205,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 1800,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Architecture", "Structural Engineering", "Construction"],
 
@@ -1357,6 +1365,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 4000,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Civil Engineering", "Transportation", "Infrastructure"],
 
@@ -1583,6 +1592,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 4000,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Mechanical Engineering", "Plant Design", "Steel Construction", "Sheet Metal"],
   core_features: ["2D/3D CAD", "Sheet Metal", "Steel Construction", "PDM/PLM", "Parametric Design"],
@@ -1702,6 +1712,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2500,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Architecture", "Construction", "Engineering", "MEP"],
   core_features: ["BIM Modeling", "Architecture", "Structural", "MEP", "Russian Standards"],
@@ -1826,6 +1837,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2000,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Architecture", "Engineering", "Construction", "MEP"],
   core_features: ["BIM Modeling", "IFC Certified", "Architecture", "Structural", "MEP"],
@@ -1951,6 +1963,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 1500,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Architecture", "Construction", "Interior Design"],
   core_features: ["Architectural BIM", "IFC Certified", "Documentation", "Visualization"],
@@ -2068,6 +2081,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 5000,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["Timber Construction", "Wood Engineering", "Architecture"],
   core_features: ["Timber CAD", "CAM", "CNC", "Structural", "BIM"],
@@ -2187,6 +2201,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 3000,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["MEP", "HVAC", "Electrical", "Construction"],
   core_features: ["MEP Design", "HVAC", "Electrical", "BIM", "Manufacturer Content"],
@@ -2304,6 +2319,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Perpetual",
   starting_price: 2500,
+  price_period: "one-time",
   platforms: ["Windows"],
   industries: ["MEP", "HVAC", "Electrical", "Construction"],
   core_features: ["MEP Design", "HVAC", "Electrical", "BIM", "Calculation"],
@@ -2428,6 +2444,7 @@ export const c3Tools: Tool[] = [
   category_id: "c3",
   pricing_type: "Subscription",
   starting_price: 2000,
+  price_period: "year",
   platforms: ["Windows", "Web"],
   industries: ["Architecture", "Construction", "Engineering", "Healthcare"],
   core_features: ["Data Management", "BIM Integration", "Requirements", "Collaboration"],
@@ -2511,6 +2528,7 @@ export const c3Tools: Tool[] = [
   "category_id": "c3",
   "pricing_type": "Subscription",
   "starting_price": 2615,
+  price_period: "year",
   "platforms": ["Windows"],
   "industries": ["Energy", "Chemical", "Oil & Gas", "Power"],
 
@@ -2619,6 +2637,7 @@ export const c3Tools: Tool[] = [
   "category_id": "c3",
   "pricing_type": "Subscription",
   "starting_price": 18000,
+  price_period: "year",
   "platforms": ["Windows"],
   "industries": ["Oil & Gas", "Chemical", "Power", "Marine"],
 
@@ -2727,6 +2746,7 @@ export const c3Tools: Tool[] = [
   "category_id": "c3",
   "pricing_type": "Subscription",
   "starting_price": 5000,
+  price_period: "year",
   "platforms": ["Windows"],
   "industries": ["Oil & Gas", "Chemical", "Power"],
 
@@ -2835,6 +2855,7 @@ export const c3Tools: Tool[] = [
   "category_id": "c3",
   "pricing_type": "Subscription",
   "starting_price": 1080,
+  price_period: "year",
   "platforms": ["Web", "Windows", "iOS", "Android"],
   "industries": ["AEC", "Construction"],
 
@@ -3051,6 +3072,7 @@ export const c3Tools: Tool[] = [
   "category_id": "c3",
   "pricing_type": "Subscription",
   "starting_price": 590,
+  price_period: "year",
   "platforms": ["Web", "Windows", "macOS"],
   "industries": ["AEC", "Construction"],
 

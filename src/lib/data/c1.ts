@@ -104,6 +104,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 255,
+  price_period: "month",
 
   platforms: [
     "Windows",
@@ -380,6 +381,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 999,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -573,6 +575,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 590,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -775,6 +778,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 2500,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -960,6 +964,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 299,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -1172,6 +1177,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 1500,
+  price_period: "year",
 
   platforms: [
     "Windows"
@@ -1333,6 +1339,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 499,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -2227,6 +2234,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 399,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -2842,6 +2850,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 545,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -3029,6 +3038,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 999,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -3237,6 +3247,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 499,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -3556,6 +3567,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 800,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -3727,6 +3739,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 310,
+  price_period: "year",
 
   platforms: [
     "Windows",
@@ -3950,6 +3963,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 3000,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -4569,6 +4583,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 800,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -4851,6 +4866,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 1000,
+  price_period: "one-time",
 
   platforms: [
     "Windows"
@@ -5093,6 +5109,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Perpetual",
   starting_price: 249,
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -5338,6 +5355,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription",
   starting_price: 19,
+  price_period: "month",
 
   platforms: [
     "Android",
