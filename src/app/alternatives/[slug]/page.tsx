@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
 import { alternativesFor, alternativesPagePaths, comparisonPairs } from '@/lib/seo-content';
 import { getToolBySlug, type Tool } from '@/lib/data';
 import { annualizedPrice } from "@/lib/utils";
@@ -516,53 +515,6 @@ function renderAlternativesCTA(tool: Tool) {
   );
 }
 
-function renderAlternativesGuides(tool: Tool, style: AlternativeStyle) {
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-  const compatibleGuides = ARTICLES_LIST
-    .filter(g => isArticleCompatibleWithTool(g.title, g.category, tool))
-    .slice(0, 3);
-
-  if (compatibleGuides.length === 0) return null;
-
-  const guides = compatibleGuides.map(g => {
-    const localized = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, tool);
-    return {
-      ...g,
-      title: localized.title,
-      excerpt: localized.excerpt,
-      slug: `${tool.slug}-${g.category}-${g.id.split('-').pop()}`,
-    };
-  });
-
-  return (
-    <section className="mt-12 rounded-2xl bg-white border border-slate-200 p-6 shadow-sm">
-      <div className="flex items-center gap-2 mb-5">
-        <span className={`w-1.5 h-6 rounded-full bg-gradient-to-b ${style.gradient}`} />
-        <h2 className="text-xl font-bold text-slate-900 tracking-tight">Expert Technical Guides for {tool.name}</h2>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {guides.map(g => (
-          <Link
-            key={g.id}
-            href={`/guides/${g.slug}`}
-            className="block p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 hover:shadow-sm transition-all group"
-          >
-            <span className={`text-[9px] font-bold uppercase tracking-widest ${style.accentText}`}>
-              {g.category}
-            </span>
-            <h3 className="text-sm font-bold text-slate-900 mt-1.5 line-clamp-2 group-hover:text-blue-600 transition-colors leading-snug">
-              {g.title}
-            </h3>
-            <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">{g.excerpt}</p>
-            <span className="text-[10px] font-bold text-slate-400 mt-3 block">{g.readTime}</span>
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function renderRelatedLinks(tool: Tool) {
   const licensingTools = [
@@ -609,25 +561,7 @@ function renderRelatedLinks(tool: Tool) {
           <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">Side-by-Side Comparison</div>
           <div className="mt-1 font-bold text-slate-900">{comparisonLabel}</div>
         </Link>
-        {hasShield && (
-          <Link
-            href={`/guides/shield-${tool.slug}`}
-            className="block p-4 rounded-2xl bg-white border border-rose-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <div className="text-xs uppercase tracking-wider text-rose-500 font-bold">License Security</div>
-            <div className="mt-1 font-bold text-slate-900">{tool.name} EULA Audit Guard</div>
-          </Link>
-        )}
-        {hasStandards && (
-          <Link
-            href={`/guides/standards-iso-${tool.slug}`}
-            className="block p-4 rounded-2xl bg-white border border-emerald-200 hover:border-emerald-300 hover:shadow-sm transition-all"
-          >
-            <div className="text-xs uppercase tracking-wider text-emerald-600 font-bold">Drafting Standard</div>
-            <div className="mt-1 font-bold text-slate-900">{tool.name} ISO Layer Mapping</div>
-          </Link>
-        )}
-      </div>
+                      </div>
     </section>
   );
 }
@@ -762,7 +696,6 @@ export default async function AlternativesPage(
               {renderAlternativesList(tool, alts, style)}
               {renderAlternativesFAQs(tool, alts, style)}
               {renderAlternativesCTA(tool)}
-              {renderAlternativesGuides(tool, style)}
               {renderRelatedLinks(tool)}
             </>
           )}
@@ -774,7 +707,6 @@ export default async function AlternativesPage(
               {renderAlternativesList(tool, alts, style)}
               {renderAlternativesFAQs(tool, alts, style)}
               {renderAlternativesCTA(tool)}
-              {renderAlternativesGuides(tool, style)}
               {renderRelatedLinks(tool)}
             </>
           )}
@@ -786,7 +718,6 @@ export default async function AlternativesPage(
               <OpenStandardsWidget />
               {renderAlternativesFAQs(tool, alts, style)}
               {renderAlternativesCTA(tool)}
-              {renderAlternativesGuides(tool, style)}
               {renderRelatedLinks(tool)}
             </>
           )}

@@ -13,35 +13,18 @@ import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { priceSuffix } from "@/lib/utils";
 import { comparisonPairs } from "@/lib/seo-content";
-import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from "@/lib/guides-data";
 import { getBestDealForTool } from '@/lib/deals-data';
-import type { MarkdownGuide } from '@/lib/guides-markdown';
 
 interface Props {
   tool: Tool;
   category?: Category;
   alternativeTools: (Tool | undefined)[];
-  guides?: MarkdownGuide[];
 }
 
-export function ToolDetailClient({ tool, category, alternativeTools, guides = [] }: Props) {
+export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
-  // Helper flags to render contextual B-End compliance & standards guides inside sidebar
-  const hasLicensingShield = process.env.NODE_ENV === 'development' && [
-    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
-    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
-    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
-    'bricscad', 'draftsight', 'gstarcad', 'zwcad', 'nanocad'
-  ].includes(tool.slug);
-
-  const hasDraftingStandards = process.env.NODE_ENV === 'development' && [
-    'autocad', 'solidworks', 'revit', 'autodesk-inventor', 'rhino-3d',
-    'microstation', 'archicad', 'sketchup', 'ptc-creo', 'catia',
-    'siemens-nx', 'vectorworks', 'freecad', 'fusion-360', 'civil-3d',
-    'bricscad', 'draftsight', 'gstarcad', 'zwcad'
-  ].includes(tool.slug);
 
   // Helper functions for dynamic tree capillaries
   const getPlatformSlug = (platName: string): string | null => {
@@ -97,8 +80,6 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
     (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
   );
 
-  // Use real markdown guides passed from server, take up to 8 for the section
-  const relatedGuides = guides.slice(0, 8);
 
 
   // Surface Compatibility / Trust sub-nav entries only when at least
@@ -274,7 +255,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                       {category && (
                         <Link href={`/best/${category.slug}`}>
                           <Badge className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
-                            <Award className="w-3 h-3 text-indigo-500" /> Best {category.name} Guides
+                            <Award className="w-3 h-3 text-indigo-500" /> Best {category.name} Picks
                           </Badge>
                         </Link>
                       )}
@@ -1297,91 +1278,9 @@ export function ToolDetailClient({ tool, category, alternativeTools, guides = []
                 </div>
               </div>
 
-              {/* Troubleshooting & Technical Guides Sidebar Card */}
-              {relatedGuides.length > 0 && (
-                <div className="bg-white border border-slate-100 p-6 md:p-8 rounded-[24px] md:rounded-[40px] shadow-sm space-y-5">
-                  <div className="flex items-center gap-2 border-b border-slate-50 pb-3">
-                    <FileText className="w-4 h-4 text-blue-600" />
-                    <h4 className="font-black text-slate-900 text-xs uppercase tracking-wider text-[11px] text-slate-400">
-                      Troubleshooting & Guides
-                    </h4>
-                  </div>
-                  <div className="space-y-3">
-                    {relatedGuides.map((g) => (
-                      <Link
-                        key={g.slug}
-                        href={`/guides/${g.slug}`}
-                        className="block p-3 rounded-2xl bg-slate-50 hover:bg-blue-50/50 transition-all border border-slate-50 hover:border-blue-100 group"
-                      >
-                        <div className="flex items-center justify-between mb-1.5">
-                          <span className="text-[8px] font-mono font-black text-blue-600 uppercase tracking-widest">
-                            {g.category}
-                          </span>
-                          <span className="text-[9px] text-slate-400 font-bold">{g.readTime}</span>
-                        </div>
-                        <h5 className="font-bold text-slate-800 text-xs line-clamp-2 leading-snug group-hover:text-blue-600 transition-colors">
-                          {g.title}
-                        </h5>
-                      </Link>
-                    ))}
-                  </div>
-                  <Link
-                    href="/guides"
-                    className="block text-center text-[10px] font-bold text-blue-600 hover:underline uppercase tracking-widest transition-colors pt-1"
-                  >
-                    Explore All Guides →
-                  </Link>
-                </div>
-              )}
-
-              {/* Contextual EULA Compliance Shield (Metropolitan Interlink Entry) */}
-              {hasLicensingShield && (
-                <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-955 border border-red-900/30 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl group">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-red-600/5 rounded-full blur-xl -mr-12 -mt-12 group-hover:scale-150 transition-all duration-700"></div>
-                  <div className="relative z-10 space-y-3">
-                    <div className="text-red-400 font-mono font-black uppercase text-[8px] tracking-[0.25em] flex items-center gap-1.5">
-                      <ShieldCheck className="w-3.5 h-3.5" /> EULA Compliance
-                    </div>
-                    <h4 className="text-base font-black leading-tight text-slate-100 group-hover:text-red-400 transition-colors">
-                      {tool.name} Audit Shield
-                    </h4>
-                    <p className="text-slate-400 text-[11px] font-medium leading-relaxed">
-                      Facing vendor telemetry sweeps or subscription audit warnings? Get silent deployment configurations and port block rules.
-                    </p>
-                    <Link
-                      href={`/guides/shield-${tool.slug}`}
-                      className="w-full flex items-center justify-center bg-red-950/40 text-red-300 hover:text-red-200 border border-red-900/50 hover:bg-red-900/30 font-black rounded-2xl h-11 text-[10px] uppercase tracking-wider transition-all active:scale-95"
-                    >
-                      Configure Telemetry Blocker →
-                    </Link>
-                  </div>
-                </div>
-              )}
-
-              {/* Contextual Drafting Standards Mapping (Metropolitan Interlink Entry) */}
-              {hasDraftingStandards && (
-                <div className="bg-gradient-to-br from-slate-955 via-slate-900 to-zinc-955 border border-teal-900/30 p-6 md:p-8 rounded-[24px] md:rounded-[40px] text-white relative overflow-hidden shadow-xl group">
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-teal-600/5 rounded-full blur-xl -mr-12 -mt-12 group-hover:scale-150 transition-all duration-700"></div>
-                  <div className="relative z-10 space-y-3">
-                    <div className="text-teal-400 font-mono font-black uppercase text-[8px] tracking-[0.25em] flex items-center gap-1.5">
-                      <Layers className="w-3.5 h-3.5" /> Detailing Standards
-                    </div>
-                    <h4 className="text-base font-black leading-tight text-slate-100 group-hover:text-teal-400 transition-colors">
-                      {tool.name} Layer & Pen Styles
-                    </h4>
-                    <p className="text-slate-400 text-[11px] font-medium leading-relaxed">
-                      Deploy official ISO 128, AIA & Chinese GB/T line weight rules. Import native layer scripts directly inside {tool.name}.
-                    </p>
-                    <Link
-                      href={`/guides/standards-iso-${tool.slug}`}
-                      className="w-full flex items-center justify-center bg-teal-950/40 text-teal-300 hover:text-teal-200 border border-teal-900/50 hover:bg-teal-900/30 font-black rounded-2xl h-11 text-[10px] uppercase tracking-wider transition-all active:scale-95"
-                    >
-                      Import Layers Standard →
-                    </Link>
-                  </div>
-                </div>
-              )}
-
+              
+              
+              
               {/* Newsletter Subscription */}
               <RelatedTools compact limit={3} />
 

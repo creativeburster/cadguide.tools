@@ -12,7 +12,6 @@ import type { Tool } from '@/lib/data';
 import { categories } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
 import { CompareWidget } from '@/components/compare-widget';
-import { ARTICLES_LIST, getLocalizedTitleAndExcerpt, isArticleCompatibleWithTool } from '@/lib/guides-data';
 
 export const dynamicParams = false;
 
@@ -656,57 +655,6 @@ export default async function ComparePairPage(
     </section>
   );
 
-  // Metropolitan Interlink: Cross-linked Guides for both tools
-  const guidesForA = process.env.NODE_ENV === 'development'
-    ? ARTICLES_LIST
-        .filter(g => isArticleCompatibleWithTool(g.title, g.category, a))
-        .slice(0, 2)
-        .map(g => {
-          const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, a);
-          return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${a.slug}-${g.category}-${g.id.split('-').pop()}` };
-        })
-    : [];
-  const guidesForB = process.env.NODE_ENV === 'development'
-    ? ARTICLES_LIST
-        .filter(g => isArticleCompatibleWithTool(g.title, g.category, b))
-        .slice(0, 2)
-        .map(g => {
-          const loc = getLocalizedTitleAndExcerpt(g.title, g.excerpt, g.keyword, g.category, b);
-          return { ...g, title: loc.title, excerpt: loc.excerpt, slug: `${b.slug}-${g.category}-${g.id.split('-').pop()}` };
-        })
-    : [];
-  // Dedupe by slug
-  const seenSlugs = new Set<string>();
-  const mergedGuides = [...guidesForA, ...guidesForB].filter(g => {
-    if (seenSlugs.has(g.slug)) return false;
-    seenSlugs.add(g.slug);
-    return true;
-  }).slice(0, 4);
-
-  const guidesBlock = process.env.NODE_ENV !== 'development' ? null : (mergedGuides.length > 0 ? (
-    <section key="guides-block" className="mb-8 rounded-2xl bg-white border border-slate-200 p-6 shadow-xs">
-      <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-        <svg className={`w-5 h-5 ${layout.accentText}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-        Expert Guides for {a.name} & {b.name}
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {mergedGuides.map(g => (
-          <Link
-            key={g.slug}
-            href={`/guides/${g.slug}`}
-            className={`block p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all group ${layout.borderHighlight}`}
-          >
-            <span className={`text-[9px] font-bold uppercase tracking-widest ${layout.accentText}`}>{g.category}</span>
-            <h3 className="text-sm font-bold text-slate-900 mt-1.5 line-clamp-2 group-hover:text-blue-600 transition-colors leading-snug">{g.title}</h3>
-            <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">{g.excerpt}</p>
-            <span className="text-[10px] font-bold text-slate-400 mt-3 block">{g.readTime}</span>
-          </Link>
-        ))}
-      </div>
-    </section>
-  ) : null);
 
   const shortlistCtaBlock = (
     <section key="shortlist-cta-block" className="rounded-2xl bg-slate-900 border border-slate-800 p-6 md:p-8 text-white relative overflow-hidden shadow-md">
@@ -772,22 +720,7 @@ export default async function ComparePairPage(
             Best {categoryForA.name}
           </Link>
         )}
-        {is3DMCAD && (
-          <Link href={`/guides/kernel-${a.slug}-${b.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-violet-50 hover:bg-violet-100 border border-violet-100 hover:border-violet-200 rounded-xl text-xs font-bold text-violet-700 transition-all">
-            ⚡ {a.name} &gt; {b.name} 3D Conversion
-          </Link>
-        )}
-        {hasShieldA && (
-          <Link href={`/guides/shield-${a.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-100 hover:border-rose-200 rounded-xl text-xs font-bold text-rose-700 transition-all">
-            🛡️ {a.name} Audit Shield
-          </Link>
-        )}
-        {hasShieldB && a.slug !== b.slug && (
-          <Link href={`/guides/shield-${b.slug}`} className="inline-flex items-center gap-1.5 px-4 py-2 bg-rose-50 hover:bg-rose-100 border border-rose-100 hover:border-rose-200 rounded-xl text-xs font-bold text-rose-700 transition-all">
-            🛡️ {b.name} Audit Shield
-          </Link>
-        )}
-      </div>
+                              </div>
     </section>
   );
 
@@ -802,7 +735,6 @@ export default async function ComparePairPage(
             {interactiveWidgetBlock}
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{picksBlock}</div>
-            <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
             {exploreBlock}
           </>
@@ -815,7 +747,6 @@ export default async function ComparePairPage(
             <div className="mt-8">{quickSpecsBlock}</div>
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{tableBlock}</div>
-            <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
             {exploreBlock}
           </>
@@ -828,7 +759,6 @@ export default async function ComparePairPage(
             {interactiveWidgetBlock}
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{quickSpecsBlock}</div>
-            <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
             {exploreBlock}
           </>
@@ -841,7 +771,6 @@ export default async function ComparePairPage(
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{quickSpecsBlock}</div>
-            <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
             {exploreBlock}
           </>
@@ -854,7 +783,6 @@ export default async function ComparePairPage(
             {tableBlock}
             {interactiveWidgetBlock}
             <div className="mt-8">{picksBlock}</div>
-            <div className="mt-8">{guidesBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
             {exploreBlock}
           </>
