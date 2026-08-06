@@ -12,9 +12,9 @@ export const metadata: Metadata = {
       'Current discounts, education plans, free trials, and student offers for CAD, BIM, CAE/CAM, and EDA software. Updated regularly.',
     path: '/deals',
   }),
-  // Verified authentic CAD deals are now wired up; allow Google to index
-  // the page and follow outgoing links.
-  robots: { index: true, follow: true },
+  // Section hidden per owner decision (2026-08): keep the page live for
+  // direct URLs but remove it from the search index.
+  robots: { index: false, follow: false },
 };
 
 export default function Page() {

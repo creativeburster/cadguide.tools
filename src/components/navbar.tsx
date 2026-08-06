@@ -16,7 +16,6 @@ export function Navbar() {
     { name: 'Directory', href: '/tools' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },
-    { name: 'Deals', href: '/deals' },
   ];
 
   return (

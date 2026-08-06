@@ -4,7 +4,7 @@ import { comparisonPairs } from '@/lib/seo-content';
 import { tools } from '@/lib/data';
 import Link from 'next/link';
 import MatchmakerClient from './matchmaker-client';
-import { Sparkles, Scale, Layers, BookOpen, Settings, Tag, ArrowRight } from 'lucide-react';
+import { Sparkles, Scale, Layers, BookOpen, Settings, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 export const metadata: Metadata = pageMetadata({
@@ -136,31 +136,6 @@ export default function Page() {
                   <Link
                     key={item.slug}
                     href={`/toolbox/${item.slug}`}
-                    className="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors py-2 px-2.5 hover:bg-slate-50 rounded-xl group"
-                  >
-                    <span className="truncate">{item.name}</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition-colors group-hover:translate-x-0.5 shrink-0" />
-                  </Link>
-                ))}
-              </div>
-            </Card>
-            
-            {/* Card 6: Software Deals */}
-            <Card className="rounded-[24px] md:rounded-[32px] border border-slate-100 shadow-xs p-6 bg-white hover:shadow-md transition-shadow">
-              <h3 className="flex items-center gap-2 text-[10px] font-mono font-black text-slate-400 uppercase tracking-widest border-b border-slate-50 pb-3 mb-4">
-                <Tag className="w-4 h-4 text-indigo-500" /> Active Promo Codes
-              </h3>
-              <div className="space-y-1">
-                {[
-                  { name: 'AutoCAD Active Discount Code', slug: 'autocad' },
-                  { name: 'SolidWorks Promo Seats Deal', slug: 'solidworks' },
-                  { name: 'SketchUp Official Discount Code', slug: 'sketchup' },
-                  { name: 'Autodesk Fusion 360 Special Offer', slug: 'fusion-360' },
-                  { name: 'BricsCAD Silent Seat Coupon', slug: 'bricscad' }
-                ].map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/deals?tool=${item.slug}`}
                     className="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 hover:text-blue-600 transition-colors py-2 px-2.5 hover:bg-slate-50 rounded-xl group"
                   >
                     <span className="truncate">{item.name}</span>

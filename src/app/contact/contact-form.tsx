@@ -70,9 +70,6 @@ export function ContactBody() {
                 <Link href="/matchmaker" className="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium">
                   Smart Matchmaker
                 </Link>
-                <Link href="/deals" className="inline-flex items-center px-4 py-2 bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium">
-                  Active Deals
-                </Link>
                 <Link href="/compare" className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-700 rounded-lg hover:bg-orange-100 transition-colors text-sm font-medium">
                   Compare Tools
                 </Link>

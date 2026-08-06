@@ -37,7 +37,6 @@ export default function AllToolsPage() {
               <li><Link href="/" className="text-blue-600 hover:underline font-medium">Homepage</Link></li>
               <li><Link href="/tools" className="text-blue-600 hover:underline font-medium">Full Software Directory</Link></li>
               <li><Link href="/matchmaker" className="text-blue-600 hover:underline font-medium">Smart Matchmaker Tool</Link></li>
-              <li><Link href="/deals" className="text-blue-600 hover:underline font-medium">Software Deals & Discounts</Link></li>
               <li><Link href="/sponsor" className="text-blue-600 hover:underline font-medium">Sponsor & Submission</Link></li>
             </ul>
           </section>

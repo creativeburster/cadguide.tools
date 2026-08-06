@@ -35,7 +35,7 @@ export async function GET() {
     { url: '/free', priority: 0.9, changefreq: 'monthly' },
     { url: '/open-source', priority: 0.9, changefreq: 'monthly' },
     { url: '/pricing', priority: 0.9, changefreq: 'monthly' },
-    { url: '/deals', priority: 0.90, changefreq: 'daily' },
+    // REMOVED: /deals — section hidden per owner decision (noindex, no nav entries).
     // REMOVED: /guides — already blocked by robots.txt Disallow + meta noindex + 302→404.
     // Submitting it here at priority 0.95 contradicts all three signals and harms site trust.
     { url: '/about', priority: 0.50, changefreq: 'monthly' },

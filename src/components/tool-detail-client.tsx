@@ -1229,9 +1229,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                     >
                       Claim This Deal →
                     </a>
-                    <Link href="/deals" className="block text-center mt-3 text-emerald-200 text-[10px] font-bold uppercase tracking-widest hover:text-white transition-colors">
-                      See All Active Deals →
-                    </Link>
                   </div>
                 </div>
               )}
