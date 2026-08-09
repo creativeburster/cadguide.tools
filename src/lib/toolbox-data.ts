@@ -3,7 +3,7 @@ export interface ToolboxItem {
   title: string;
   description: string;
   detailDesc: string;
-  category: 'cheatsheet' | 'calculator' | 'converter' | 'troubleshoot';
+  category: 'cheatsheet' | 'calculator' | 'converter' | 'troubleshoot' | 'viewer' | 'generator' | 'validator' | 'comparator' | 'library';
   status: 'released' | 'coming-soon';
   origin: 'native' | 'third-party';
   releasedDate?: string;
@@ -16,6 +16,11 @@ export const TOOLBOX_CATEGORIES = [
   { id: 'calculator', name: 'Engineering Calculators' },
   { id: 'converter', name: 'Parsers & File Converters' },
   { id: 'troubleshoot', name: 'Troubleshooting Wizards' },
+  { id: 'viewer', name: 'Viewers & Inspectors' },
+  { id: 'generator', name: 'Generators & Creators' },
+  { id: 'validator', name: 'Validators & Checkers' },
+  { id: 'comparator', name: 'Comparators & Diff Tools' },
+  { id: 'library', name: 'Libraries & Asset Stores' },
 ] as const;
 
 export const TOOLBOX_DATA: ToolboxItem[] = [
@@ -6028,5 +6033,328 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['solidworks installation error', 'solidworks license error', 'solidworks install troubleshooting', 'solidnetwork license manager', 'solidworks flexnet error', 'solidworks license server', 'solidworks activation error', 'solidworks could not obtain license', 'solidworks clean uninstall', 'solidworks install fix']
+  },
+
+  // ==================== PHASE 1: Viewers & Inspectors ====================
+
+  {
+    slug: 'dxf-2d-viewer',
+    title: 'DXF 2D Drawing Viewer',
+    description: 'Drag-and-drop a DXF file to instantly view 2D geometry, layers, blocks, and text annotations entirely in your browser.',
+    detailDesc: 'Client-side DXF viewer using dxf-parser and Canvas rendering. Supports DXF R12 through R2018 (ASCII and binary). Features: pan/zoom with mouse, layer visibility toggle, entity type filtering (LINE, CIRCLE, ARC, LWPOLYLINE, POLYLINE, INSERT, TEXT, MTEXT, DIMENSION, HATCH), block reference highlighting, measurement tool (distance, angle), bounding box display, and entity count per layer. Color-coded by layer with linetype visualization. No file upload — all parsing happens locally in the browser.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf viewer', 'online dxf viewer', 'dxf file viewer', 'view dxf online', 'dxf 2d viewer', 'dxf renderer', 'dxf layers viewer', 'dxf browser viewer', 'free dxf viewer', 'dxf drawing viewer']
+  },
+  {
+    slug: 'stl-3d-mesh-viewer',
+    title: 'STL 3D Mesh Viewer',
+    description: 'View STL mesh files in 3D with orbit controls, wireframe toggle, and mesh statistics — all client-side, no upload required.',
+    detailDesc: 'Client-side STL viewer using Three.js. Supports both ASCII and binary STL formats. Features: orbit/pan/zoom camera controls, auto-center and auto-scale, wireframe/solid/shaded display modes, face normal visualization, mesh statistics (triangle count, vertex count, bounding box dimensions X/Y/Z, file size, manifold edge count), color-coded surface curvature, and screenshot export. Handles files up to 50MB. All processing in-browser via WebGL — no server upload.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['stl viewer', 'online stl viewer', 'stl 3d viewer', 'view stl online', 'stl mesh viewer', 'stl file viewer', 'stl renderer browser', '3d mesh viewer online', 'free stl viewer', 'stl visualizer']
+  },
+  {
+    slug: 'obj-3d-model-viewer',
+    title: 'OBJ 3D Model Viewer',
+    description: 'View OBJ 3D models with material textures (MTL), orbit controls, and multiple shading modes — fully in-browser.',
+    detailDesc: 'Client-side OBJ viewer using Three.js OBJLoader and MTLLoader. Supports OBJ geometry with associated MTL material files and texture images. Features: orbit/pan/zoom, auto-rotate, shading modes (flat, smooth, wireframe, points), material transparency toggle, vertex/face/edge count display, bounding box, and model scale ruler. Handles multi-object OBJ files with group hierarchy display. All rendering via WebGL — no server upload.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['obj viewer', 'online obj viewer', 'obj 3d viewer', 'view obj online', 'obj model viewer', 'obj mtl viewer', 'obj file viewer', 'obj renderer browser', 'free obj viewer', 'obj visualizer']
+  },
+  {
+    slug: 'gcode-toolpath-visualizer',
+    title: 'G-Code Toolpath Visualizer',
+    description: 'Upload a G-Code file to visualize CNC toolpaths in 2D/3D with rapid/feed moves, spindle states, and cutting time estimation.',
+    detailDesc: 'Client-side G-Code visualizer. Parses standard G-Code (Fanuc/Haas/LinuxCNC/GRBL compatible). Features: 2D top-down view and 3D isometric view, color-coded moves (G00 rapid=blue, G01 feed=green, G02/G03 arc=orange), tool change markers, spindle on/off indicators, coordinate system display (G54-G59), feed rate and spindle speed overlay, total cutting time estimation, rapid vs feed distance statistics, and line-by-line stepping with current position indicator. Supports incremental (G91) and absolute (G90) modes.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gcode viewer', 'gcode visualizer', 'cnc toolpath viewer', 'gcode simulator', 'gcode 3d viewer', 'cnc path visualizer', 'gcode online viewer', 'gcode renderer', 'cnc simulation online', 'gcode toolpath simulator']
+  },
+  {
+    slug: '3d-print-slice-previewer',
+    title: '3D Print Slice Previewer',
+    description: 'Upload an STL file to preview slice layers, estimate print time, and visualize infill patterns in your browser.',
+    detailDesc: 'Client-side 3D print slice previewer using Three.js. Loads STL mesh and simulates slicing with adjustable parameters: layer height (0.05-0.3mm), infill density (0-100%), infill pattern (grid, triangular, hexagonal, gyroid), nozzle diameter, print speed, and filament type. Visualizes: individual layer cross-sections, toolpath per layer, support structure generation for overhangs >45 degrees, and estimated print time per layer. Outputs: total layers, estimated print time, filament length/weight, and support volume. All computation in-browser.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['3d print previewer', 'stl slice preview', '3d printing slicer online', 'slice viewer stl', '3d print simulator', 'infill preview 3d print', 'layer preview 3d print', 'stl slicing visualization', '3d print time estimator', 'stl layer viewer']
+  },
+  {
+    slug: 'svg-viewer-optimizer',
+    title: 'SVG Viewer & Optimizer',
+    description: 'View, clean, and optimize SVG files — remove metadata, simplify paths, and reduce file size without quality loss.',
+    detailDesc: 'Client-side SVG viewer and optimizer. Viewer features: render SVG with pan/zoom, layer/group tree display, element count and file size stats, and XML source view with syntax highlighting. Optimizer features (SVGO-based): remove editor metadata (Inkscape, Illustrator, Sketch namespaces), collapse groups, merge paths, convert shapes to paths, simplify path data (rounding precision), remove hidden elements (display:none, opacity:0), minify output, and convert styles to attributes. Shows before/after file size comparison and optimization ratio.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['svg viewer', 'svg optimizer', 'svg minifier', 'svg cleaner', 'svg compressor', 'svg online viewer', 'svg optimize online', 'svg file size reducer', 'svg path simplifier', 'svg editor metadata remover']
+  },
+  {
+    slug: 'dxf-layer-browser',
+    title: 'DXF Layer & Entity Browser',
+    description: 'Inspect DXF file structure: browse layers, entity types, block definitions, and text content with searchable filtering.',
+    detailDesc: 'Client-side DXF structure inspector. Parses DXF and presents: layer table (layer name, color, linetype, lineweight, plot flag, entity count per layer), entity summary (type distribution: LINE, CIRCLE, ARC, POLYLINE, INSERT, TEXT, etc. with count and bounding box), block definition table (block name, base point, entity count, nested block references), text/mtext content search (searchable list of all text entities with coordinates), and style/table dictionaries (DIMSTYLE, LTYPE, TEXTSTYLE entries). Includes DXF version detection and codepage identification.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf layer browser', 'dxf inspector', 'dxf structure viewer', 'dxf entity browser', 'dxf block viewer', 'dxf text search', 'dxf layer list', 'dxf metadata viewer', 'dxf analysis tool', 'dxf content viewer']
+  },
+  {
+    slug: 'step-iges-metadata-viewer',
+    title: 'STEP / IGES Metadata Viewer',
+    description: 'Extract and display header metadata, file structure, and entity statistics from STEP and IGES CAD files.',
+    detailDesc: 'Client-side STEP/IGES metadata parser. For STEP files (ISO 10303): parses HEADER section (file_description, file_name, time_stamp, author, organization, originating_system, authorization), extracts ENTITY type distribution (cartesian_point, direction, axis2_placement_3d, advanced_face, edge_curve, vertex_point, etc.), counts total entities, and identifies geometric topology (open/closed shell, manifold solid_brep). For IGES files: parses Start Section, Global Section (delimiter, send/receive identifiers, author, software), Directory Entry Section (entity type counts), and Parameter Data Section summary. No geometry rendering — metadata only.',
+    category: 'viewer',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['step file viewer', 'iges file viewer', 'step metadata viewer', 'iges metadata viewer', 'step header parser', 'iges header parser', 'step file inspector', 'iges file inspector', 'step entity viewer', 'iges entity viewer']
+  },
+
+  // ==================== PHASE 2: Generators & Creators ====================
+
+  {
+    slug: 'involute-gear-dxf-generator',
+    title: 'Involute Gear DXF Generator',
+    description: 'Generate spur gear tooth profiles with full involute geometry and export as DXF or SVG for laser cutting or CNC.',
+    detailDesc: 'Client-side involute spur gear generator. Inputs: module (m, 0.5-10mm), number of teeth (z, 8-200), pressure angle (14.5/20/25 degrees), addendum coefficient, dedendum coefficient, profile shift coefficient (x), and center bore diameter. Calculates: pitch diameter, base diameter, outside diameter, root diameter, circular pitch, tooth thickness, and root fillet radius. Generates true involute tooth profile using parametric equations (x = rb*cos(t) + rb*t*sin(t), y = rb*sin(t) - rb*t*cos(t)). Outputs: DXF (R12) with LWPOLYLINE entities, SVG for laser cutting, and gear parameters summary. Supports internal (ring) gear and rack generation.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gear generator', 'involute gear generator', 'spur gear dxf', 'gear profile generator', 'gear cad generator', 'involute gear dxf', 'gear svg generator', 'laser cut gear generator', 'cnc gear generator', 'gear tooth profile generator']
+  },
+  {
+    slug: 'fastener-profile-generator',
+    title: 'Standard Fastener 2D Profile Generator',
+    description: 'Generate 2D drawing profiles for bolts, screws, nuts, and washers per ISO/DIN/ANSI standards — export as DXF or SVG.',
+    detailDesc: 'Client-side fastener profile generator. Supports: hex bolts (ISO 4014/4017, DIN 933/931), socket head cap screws (ISO 4762, DIN 912), countersunk screws (ISO 10642), hex nuts (ISO 4032, DIN 934), washers (ISO 7089/7090, DIN 125), and spring washers (DIN 127). Inputs: thread size (M3-M48), thread pitch (standard or fine), bolt length, and drawing standard (first-angle/ third-angle projection). Generates: front view and top view with correct head/body proportions, thread representation (detailed or schematic), chamfer angles, and dimension lines. Outputs DXF and SVG with title block.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fastener profile generator', 'bolt drawing generator', 'nut profile generator', 'iso bolt cad generator', 'din fastener generator', 'screw 2d profile', 'washer drawing generator', 'fastener dxf generator', 'fastener svg generator', 'standard fastener cad']
+  },
+  {
+    slug: 'title-block-drawing-frame-generator',
+    title: 'Drawing Title Block & Frame Generator',
+    description: 'Generate customizable engineering drawing frames and title blocks per ISO 5457, ANSI Y14.1, or custom templates — export as DXF or SVG.',
+    detailDesc: 'Client-side drawing frame generator. Supports: ISO 5457 (A0-A4 portrait/landscape), ANSI Y14.1 (A-E sizes), ARCH (A-E architectural), and custom user-defined sizes. Title block fields: drawing title, drawing number, revision, date, drawn by, checked by, approved by, company name, project name, scale, sheet number, projection symbol (first/third angle), and units (mm/inch). Border options: margin width, zoning (alpha-numeric grid), trimming marks, and center marks. Logo placement support (SVG/PNG import). Outputs DXF (with TEXT and LWPOLYLINE entities) and SVG.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['title block generator', 'drawing frame generator', 'drawing border generator', 'iso 5457 template', 'ansi y14.1 template', 'cad title block dxf', 'drawing template generator', 'a0 a4 drawing frame', 'title block svg', 'engineering drawing border']
+  },
+  {
+    slug: 'dxf-bom-extractor',
+    title: 'DXF Block Attribute BOM Extractor',
+    description: 'Extract block attributes from DXF files to generate a Bill of Materials (BOM) table exportable as CSV or JSON.',
+    detailDesc: 'Client-side BOM extraction tool. Parses DXF files and extracts all INSERT entities with associated ATTRIB data. Features: auto-detect block names and attribute tags, group identical blocks and sum quantities, extract attribute values (part number, description, quantity, material, supplier, etc.), sort by block name or attribute value, filter by block name pattern, and display insertion coordinates. Outputs: CSV (compatible with Excel), JSON (structured), and HTML table preview. Handles nested block references and identifies missing attributes. Supports multiple DXF file batch processing.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf bom extractor', 'block attribute extractor', 'bom from dxf', 'bill of materials dxf', 'dxf attribute extraction', 'autocad bom extract', 'dxf data extraction', 'block data extractor', 'dxf insert attributes', 'cad bom generator']
+  },
+  {
+    slug: 'cnc-2d-profile-toolpath-generator',
+    title: 'CNC 2D Profile Toolpath Generator',
+    description: 'Generate CNC G-Code for 2D profile cutting from DXF geometry with lead-in/lead-out, cutter compensation, and multiple passes.',
+    detailDesc: 'Client-side 2D profile toolpath generator. Imports DXF geometry (LINE, ARC, CIRCLE, LWPOLYLINE) and generates CNC G-Code for profiling. Features: cutter diameter compensation (G41/G42 left/right), lead-in (arc or linear) and lead-out to prevent entry/exit marks, multiple depth passes with step-down, roughing and finishing passes, island detection and pocketing, tab/bridge insertion for part holding, feed rate optimization (reduced speed on corners), and spindle/coolant M-code integration. Outputs: G-Code compatible with Fanuc, Haas, LinuxCNC, and GRBL. Includes estimated cycle time and total cut length.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc toolpath generator', '2d profile gcode generator', 'dxf to gcode converter', 'cnc profile cutting', 'cutter compensation generator', 'lead in lead out cnc', 'cnc pocketing generator', 'dxf to nc code', 'cnc programming generator', '2d contour toolpath']
+  },
+  {
+    slug: 'spring-flat-pattern-generator',
+    title: 'Spring Flat Pattern & Spec Generator',
+    description: 'Generate 2D flat patterns for compression, extension, and torsion springs with full specification sheet — export as DXF or SVG.',
+    detailDesc: 'Client-side spring flat pattern generator. Supports three spring types: Compression (inputs: wire diameter, outer diameter, free length, total coils, active coils, spring rate, material), Extension (inputs: wire diameter, outer diameter, hook type, free length, initial tension), and Torsion (inputs: wire diameter, coil diameter, arm length, arm angle, torque). Generates: 2D flat pattern showing coil geometry and end configurations, force-deflection diagram, stress analysis (Wahl factor, shear stress), and specification table (spring rate, solid height, natural frequency, buckling check). Outputs DXF and SVG with dimension lines and material specification.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['spring flat pattern generator', 'compression spring generator', 'extension spring generator', 'torsion spring generator', 'spring dxf generator', 'spring cad generator', 'spring design generator', 'spring svg generator', 'spring specification generator', 'spring drawing generator']
+  },
+  {
+    slug: 'cam-profile-generator',
+    title: 'Cam Profile & Displacement Diagram Generator',
+    description: 'Generate cam profiles from motion curves (SHM, cycloidal, polynomial) with follower displacement, velocity, and acceleration diagrams.',
+    detailDesc: 'Client-side cam profile generator. Inputs: cam type (disk/flat-face/roller follower), base circle radius, follower radius, rise angle, dwell angle, return angle, lift distance, and motion law (uniform, parabolic, simple harmonic, cycloidal, 3-4-5 polynomial, 4-5-6-7 polynomial). Generates: cam profile coordinates (pitch curve and working curve), follower displacement diagram (theta vs s), velocity diagram (theta vs v), acceleration diagram (theta vs a), and pressure angle distribution. Calculates: maximum pressure angle, undercut check, and cam-follower contact stress estimate. Outputs: DXF cam profile, SVG diagrams, and coordinate table (CSV).',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cam profile generator', 'cam design generator', 'cam displacement diagram', 'cam motion curve generator', 'cam dxf generator', 'cam follower generator', 'cam profile calculator', 'cam svg generator', 'cam pitch curve generator', 'cam design tool']
+  },
+
+  // ==================== PHASE 3: Validators & Checkers ====================
+
+  {
+    slug: '3d-print-manufacturability-checker',
+    title: '3D Print Manufacturability Checker',
+    description: 'Analyze STL files for printability issues: thin walls, overhangs, minimum features, bridging, and support requirements.',
+    detailDesc: 'Client-side 3D print manufacturability analyzer. Loads STL mesh and performs geometric checks: minimum wall thickness (detect walls thinner than user-set threshold, default 0.8mm), overhang analysis (highlight faces exceeding 45 degrees from vertical, color-coded severity map), minimum feature size (detect posts, holes, and channels below threshold), bridging distance (identify unsupported horizontal spans and estimate sag risk), flat bed contact area (verify first layer adhesion surface), manifold check (identify holes, non-manifold edges, and reversed normals), and support volume estimation. Outputs: issue report with location markers on 3D model, pass/warn/fail summary, and recommended print orientation.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['3d print checker', 'stl manufacturability', '3d print analysis', 'stl overhang check', 'wall thickness checker', '3d print validation', 'stl printability check', '3d print issue detector', 'stl mesh analysis', '3d print quality check']
+  },
+  {
+    slug: 'dxf-drawing-standards-checker',
+    title: 'DXF Drawing Standards Compliance Checker',
+    description: 'Check DXF drawings against company or industry standards: layer naming, linetype, dimension style, text height, and plot configuration.',
+    detailDesc: 'Client-side DXF drawing standards validator. Configurable ruleset checks: layer naming convention (prefix-based, e.g. A-WALL, M-PIPE, E-LIGHT), layer color assignment per discipline, linetype usage (CONTINUOUS, DASHED, CENTER, PHANTOM), lineweight compliance, dimension style parameters (DIMSCALE, DIMTXT, DIMASZ, arrowhead type, text height), text style compliance (font, height, width factor), annotation layer separation, viewport scale consistency in paper space, and plot style table (CTB/STB) assignment. Outputs: compliance report with pass/warn/fail per rule, list of non-compliant entities with coordinates, and summary score. Supports custom ruleset import (JSON).',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf standards checker', 'drawing compliance checker', 'cad drawing validation', 'layer naming check', 'dimension style checker', 'drawing standards validator', 'dxf audit tool', 'cad quality check', 'drawing standards compliance', 'dxf quality assurance']
+  },
+  {
+    slug: 'gdt-annotation-completeness-checker',
+    title: 'GD&T Annotation Completeness Checker',
+    description: 'Analyze DXF drawings for GD&T completeness: datum references, feature control frames, basic dimensions, and tolerance zones.',
+    detailDesc: 'Client-side GD&T annotation validator. Parses DXF for GD&T entities (TOLERANCE, LEADER, MTEXT with GD&T symbols). Checks: datum feature symbols present and referenced (A, B, C hierarchy), feature control frame completeness (geometric characteristic, tolerance value, material condition modifier, datum references), basic dimensions identified and linked to true position/profile, datum target points/areas defined, and composite tolerance frame validity. Identifies: missing datums for position/profile tolerances, orphaned datum references (datum referenced but not defined), missing basic dimensions for true position, and inconsistent tolerance accumulation. Outputs: annotated issue list and completeness score.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gdt checker', 'gd&t completeness', 'gd&t annotation check', 'datum reference checker', 'feature control frame validator', 'gd&t drawing audit', 'geometric tolerance check', 'gd&t compliance', 'basic dimension check', 'gd&t validation tool']
+  },
+  {
+    slug: 'cnc-machinability-checker',
+    title: 'CNC Machinability Checker for 2D Drawings',
+    description: 'Analyze DXF geometry for CNC manufacturability: internal corner radii, deep pockets, tool access, and feature spacing.',
+    detailDesc: 'Client-side CNC machinability validator. Parses DXF geometry and checks: internal corner radius (flag corners smaller than tool radius, default 3mm — creates impossible-to-machine sharp internal corners), pocket depth-to-width ratio (flag pockets with depth/diameter > 3 for standard tooling), tool access clearance (detect features blocked by adjacent walls or obstructions), minimum hole diameter (flag holes smaller than standard drill sizes), feature spacing (check minimum distance between features for tool clearance), thread tap clearance (verify adequate space for tap operation), and tolerance feasibility (check if specified tolerances are achievable with standard CNC equipment). Outputs: issue map overlay on drawing and manufacturability score.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc machinability checker', 'cnc design check', 'dfm cnc checker', 'cnc manufacturability', 'internal corner radius check', 'tool access checker', 'cnc feature check', 'design for manufacturing cnc', 'dxf machinability', 'cnc feasibility check']
+  },
+  {
+    slug: 'stl-mesh-quality-checker',
+    title: 'STL Mesh Quality & Integrity Checker',
+    description: 'Analyze STL files for mesh errors: non-manifold edges, holes, reversed normals, self-intersections, and degenerate triangles.',
+    detailDesc: 'Client-side STL mesh quality analyzer. Performs comprehensive mesh integrity checks: manifold validation (identifies non-manifold edges — edges shared by more or fewer than 2 faces), hole detection (identifies boundary edges forming open holes in the mesh), normal consistency (detects faces with reversed or inconsistent normal directions), self-intersection detection (identifies triangles that intersect other triangles), degenerate triangle detection (zero-area triangles, collapsed vertices), duplicate vertex cleanup (identifies and merges coincident vertices within tolerance), and aspect ratio analysis (flags skinny triangles with poor aspect ratio for FEM/3D print). Outputs: issue count per category, 3D visualization with problem areas highlighted, and repair recommendations.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['stl mesh checker', 'stl quality check', 'mesh integrity checker', 'non-manifold detection', 'stl repair check', 'mesh validation', 'stl error checker', 'mesh analysis tool', 'stl normal check', '3d mesh quality']
+  },
+  {
+    slug: 'drawing-scale-consistency-checker',
+    title: 'Drawing Scale Consistency Checker',
+    description: 'Verify that drawing scales are consistent across title block, viewport, dimensions, and annotation text in DXF files.',
+    detailDesc: 'Client-side drawing scale consistency validator. Parses DXF and cross-checks: title block scale field (extracts declared scale from title block text), viewport scale (calculates actual viewport scale from paper space viewport ratio), dimension scale factor (checks DIMSCALE and DIMLFAC consistency), annotation text height (verifies text height matches declared scale, e.g. 3mm at 1:100 should be 300mm in model space), linetype scale (checks LTSCALE and CELTSCALE consistency), and hatch pattern scale. Identifies mismatches between any of these scale indicators and flags inconsistent annotations. Outputs: scale audit table with declared vs actual values and discrepancy warnings.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['drawing scale checker', 'scale consistency check', 'viewport scale check', 'dimscale check', 'annotation scale check', 'drawing scale audit', 'cad scale verification', 'title block scale check', 'dimension scale consistency', 'drawing scale validator']
+  },
+
+  // ==================== PHASE 4: Comparators & Diff Tools ====================
+
+  {
+    slug: 'bom-comparator',
+    title: 'BOM Comparison & Diff Tool',
+    description: 'Compare two BOM files (CSV/JSON) and highlight added, removed, modified, and quantity-changed items.',
+    detailDesc: 'Client-side BOM comparison tool. Accepts two BOM files (CSV or JSON format) and performs intelligent diff. Matching logic: part number primary key, with fallback to description + specification matching. Identifies: added items (in new BOM but not old), removed items (in old BOM but not new), modified items (same part number but changed description/spec/material), quantity changes (same part, different quantity), and supplier changes. Outputs: side-by-side comparison table with color-coded differences (green=added, red=removed, yellow=modified, blue=quantity change), summary statistics (total changes by type), and exportable diff report (CSV/HTML). Handles multi-level indented BOMs with parent-child relationships.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bom comparator', 'bom diff tool', 'bill of materials comparison', 'bom comparison tool', 'bom change tracker', 'bom difference checker', 'bom revision compare', 'bom version diff', 'bom analysis tool', 'bom merge tool']
+  },
+  {
+    slug: 'gcode-diff-comparator',
+    title: 'G-Code Diff & Comparison Tool',
+    description: 'Compare two G-Code files line-by-line with toolpath difference visualization and parameter change detection.',
+    detailDesc: 'Client-side G-Code comparison tool. Accepts two G-Code files and performs: line-by-line text diff (added/removed/modified lines with syntax highlighting), toolpath difference visualization (overlay both toolpaths in 2D/3D with color-coded differences), parameter change detection (feed rate, spindle speed, tool changes, coordinate shifts), and program structure comparison (subprogram calls, loop counts, canned cycle parameters). Outputs: unified diff view with G-Code syntax highlighting, toolpath overlay visualization, summary of changed parameters, and estimated cycle time difference. Supports Fanuc, Haas, and LinuxCNC dialects.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gcode diff', 'gcode comparison', 'cnc program compare', 'gcode comparator', 'nc code diff', 'cnc toolpath diff', 'gcode difference tool', 'gcode version compare', 'cnc program diff', 'gcode change checker']
+  },
+  {
+    slug: 'dxf-geometry-diff-comparator',
+    title: 'DXF Geometry Diff & Comparison Tool',
+    description: 'Compare two DXF drawings and highlight geometric differences: added, removed, and modified entities with visual overlay.',
+    detailDesc: 'Client-side DXF geometry comparison tool. Parses two DXF files and performs geometric entity matching. Matching logic: entity type + geometric proximity (tolerance-based coordinate matching). Identifies: added entities (in new but not old, shown in green), removed entities (in old but not new, shown in red), moved entities (same type, position changed beyond tolerance, shown with before/after arrows), modified entities (same position but geometry changed, e.g. radius changed, shown in yellow), and layer differences (layer added/removed/renamed). Outputs: visual overlay comparison in Canvas viewer with toggle between old/new/both/diff modes, entity-level change list with coordinates, and summary statistics.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf diff', 'dxf comparison', 'cad drawing compare', 'dxf geometry diff', 'drawing version compare', 'cad file diff', 'dxf change tracker', 'drawing difference tool', 'dxf revision compare', 'cad drawing diff tool']
+  },
+
+  // ==================== PHASE 5: Libraries & Asset Stores ====================
+
+  {
+    slug: 'material-properties-database',
+    title: 'Engineering Material Properties Database',
+    description: 'Searchable database of 200+ engineering materials with mechanical, thermal, and electrical properties.',
+    detailDesc: 'Client-side material properties database. Covers 200+ materials across categories: metals (steel grades, aluminum alloys, copper, titanium, nickel, magnesium), polymers (ABS, PC, PTFE, PVC, Nylon, PEEK), ceramics (alumina, zirconia, silicon carbide), composites (CFRP, GFRP), and woods. Properties per material: density, Young modulus, Poisson ratio, yield strength, tensile strength, elongation, hardness (Brinell/Rockwell/Vickers), thermal conductivity, thermal expansion coefficient, specific heat, electrical conductivity, and melting point. Features: search by name/grade, filter by property range, comparison table (select up to 4 materials side-by-side), and export to CSV. Data sourced from ASM Handbook, MatWeb, and manufacturer datasheets.',
+    category: 'library',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['material properties database', 'material database', 'engineering materials', 'metal properties search', 'steel properties database', 'aluminum properties', 'material comparison', 'material selector', 'mechanical properties database', 'material data search']
+  },
+  {
+    slug: 'standard-fasteners-specification-library',
+    title: 'Standard Fasteners Specification Library',
+    description: 'Searchable library of ISO, DIN, ANSI, and JIS fastener specifications: bolts, screws, nuts, washers, pins, and rivets.',
+    detailDesc: 'Client-side fastener specification library. Covers standards: ISO (4014, 4017, 4762, 7089, 7090, 10642), DIN (931, 933, 912, 934, 125, 127), ANSI/ASME (B18.2.1, B18.2.2, B18.3), and JIS (B 1180, B 1182). Fastener types: hex bolts, socket head cap screws, countersunk screws, hex nuts, lock nuts, flat washers, spring washers, dowel pins, cotter pins, and pop rivets. For each fastener: thread size (M3-M48 / #0-1"), pitch, head diameter, head height, body diameter, wrench size, weight, tensile stress area, and recommended torque values per property class. Features: search by standard/size/type, dimensional drawing preview, torque calculator integration, and export to CSV.',
+    category: 'library',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fastener specification library', 'bolt specification database', 'iso din fastener specs', 'standard fastener lookup', 'fastener dimensions', 'bolt torque specs', 'nut specification', 'washer specification', 'fastener data library', 'fastener reference library']
+  },
+  {
+    slug: 'surface-roughness-conversion-library',
+    title: 'Surface Roughness Conversion & Comparison Library',
+    description: 'Complete cross-reference between Ra, Rz, Rmax, RMS, N-grade, and microinch surface finish values with material compatibility.',
+    detailDesc: 'Client-side surface roughness conversion library. Provides instant conversion between: Ra (arithmetic average, micrometers and microinches), Rz (ten-point height, micrometers), Rmax (maximum roughness depth, micrometers), RMS (root mean square, microinches), and N-grade (N1-N12 per ISO 1302). Includes: typical surface finish values for common manufacturing processes (turning, milling, grinding, lapping, polishing, EDM, casting, forging), recommended surface finish per application (sealing surfaces, bearing surfaces, sliding surfaces, coating preparation), and measurement method comparison (contact stylus vs optical). Features: bidirectional conversion, process capability chart, and printable reference card.',
+    category: 'library',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['surface roughness conversion', 'ra rz conversion', 'surface finish comparison', 'n grade surface', 'ra to rms', 'surface roughness chart', 'surface finish conversion', 'ra microinch conversion', 'surface roughness library', 'surface finish reference']
+  },
+  {
+    slug: 'cad-symbol-block-library',
+    title: 'CAD Symbol & Block Library',
+    description: 'Browseable library of 500+ common engineering symbols as downloadable SVG and DXF: electrical, hydraulic, pneumatic, and architectural.',
+    detailDesc: 'Client-side CAD symbol library with 500+ pre-drawn symbols. Categories: Electrical (IEC 60617 symbols — resistors, capacitors, inductors, diodes, transistors, switches, relays, motors, transformers, grounds), Hydraulic (ISO 1219 symbols — pumps, motors, cylinders, valves, accumulators, filters, pressure gauges), Pneumatic (ISO 1219 pneumatic symbols — air compressors, FRL units, directional valves, cylinders, flow controls), Piping (valves, fittings, flanges per ISO 14617), and Architectural (doors, windows, stairs, furniture, appliances, sanitary fixtures per ISO 4157). Each symbol: preview SVG, download as DXF or SVG, metadata (symbol ID, standard reference, description), and insert scale guidance. Search by name or standard number.',
+    category: 'library',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cad symbol library', 'cad block library', 'engineering symbols', 'electrical symbols dxf', 'hydraulic symbols svg', 'pneumatic symbols', 'architectural symbols cad', 'iso symbol library', 'iec 60617 symbols', 'cad blocks download']
   },
 ];

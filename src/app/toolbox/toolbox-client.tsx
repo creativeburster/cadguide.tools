@@ -71,6 +71,16 @@ export default function ToolboxClient() {
         return '📂';
       case 'troubleshoot':
         return '🚨';
+      case 'viewer':
+        return '🔍';
+      case 'generator':
+        return '⚙️';
+      case 'validator':
+        return '✅';
+      case 'comparator':
+        return '🔄';
+      case 'library':
+        return '📚';
     }
   };
 
