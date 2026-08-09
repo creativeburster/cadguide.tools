@@ -5759,4 +5759,274 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'third-party',
     keywords: ['calculatoredge', 'free engineering calculators', 'online calculator electrical', 'mechanical calculator online', 'civil engineering calculator', 'chemical engineering calculator', 'electronics calculator', 'physics calculator', 'multi discipline calculators', 'free online engineering tools']
   },
+
+  // ==================== BATCH 7A: Additional Cheatsheets & References ====================
+
+  {
+    slug: 'autocad-3d-shortcuts-cheatsheet',
+    title: 'AutoCAD 3D Modeling Shortcuts Cheat Sheet',
+    description: 'Complete reference of AutoCAD 3D modeling commands: solid creation, surface editing, viewport navigation, and rendering shortcuts.',
+    detailDesc: 'AutoCAD 3D modeling shortcut reference covering: solid primitives (BOX, CYLINDER, SPHERE, CONE, WEDGE, TORUS), solid editing (UNION, SUBTRACT, INTERSECT, SLICE, THICKEN, IMPRINT, FILLETEDGE, CHAMFEREDGE), surface modeling (SURFEXTRUDE, SURFREVOLVE, SURFLOFT, SURFSWEEP, SURFTRIM, SURFPATCH), mesh editing (MESHSMOOTH, MESHREFINE, MESHCREASE), viewport navigation (3DORBIT, 3DORBITCTR, VPOINT, PLAN, VIEW), visual styles (VSCURRENT), and rendering (RENDER, MATBROWSER, LIGHT, SUNPROPERTIES). Includes UCS manipulation commands (UCS, UCSICON, UCSMAN) and 3D object snaps.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad 3d shortcuts', 'autocad 3d commands', 'autocad 3d modeling cheat sheet', 'autocad solid commands', 'autocad surface modeling', '3dorbit autocad', 'autocad ucs commands', 'autocad 3d primitives', 'autocad rendering shortcuts', 'autocad 3d reference']
+  },
+  {
+    slug: 'autocad-250-commands-reference',
+    title: 'AutoCAD 250+ Command Aliases Ultimate Reference',
+    description: 'Searchable, printable reference of 250+ AutoCAD command aliases organized by category: drawing, modifying, annotation, layers, blocks, and utilities.',
+    detailDesc: 'Comprehensive AutoCAD command alias reference with 250+ entries from acad.pgp file. Categories: Drawing (L/LINE, C/CIRCLE, A/ARC, PL/POLYLINE, REC/RECTANGLE, EL/ELLIPSE, SPL/SPLINE, H/HATCH, BH/HATCHEDIT, T/MTEXT, DT/DTEXT), Modifying (M/MOVE, CO/COPY, RO/ROTATE, SC/SCALE, MI/MIRROR, O/OFFSET, TR/TRIM, EX/EXTEND, BR/BREAK, J/JOIN, AR/ARRAY, E/ERASE, X/EXPLODE), Annotation (D/DIMSTYLE, DAL/DIMALIGNED, DLI/DIMLINEAR, DRA/DIMRADIUS, DDI/DIMDIAMETER, DAN/DIMANGULAR, QLEADER, TOL/TOLERANCE), Layers (LA/LAYER, LAYISO, LAYUNISO, LAYWALK, LAYMRG), Blocks (B/BLOCK, I/INSERT, W/WBLOCK, BCOUNT, BURST, XBIND), Utilities (AREA, DIST, ID, LI/LIST, PR/PROPERTIES, MA/MATCHPROP, PU/PURGE, AUDIT, RECOVER, OVERKILL). Includes function key mapping and Ctrl+key combinations.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad command aliases', 'autocad 250 commands', 'autocad command list', 'autocad acad pgp', 'autocad shortcut reference', 'autocad all commands', 'autocad command cheat sheet', 'autocad drawing commands', 'autocad modify commands', 'autocad annotation commands']
+  },
+  {
+    slug: 'cnc-m-code-reference-table',
+    title: 'CNC M-Code Quick Reference Table (Fanuc / Haas / Siemens)',
+    description: 'Complete searchable reference of CNC M-codes for machine functions: spindle, coolant, tool changes, program control, and optional stops.',
+    detailDesc: 'CNC M-code reference covering Fanuc, Haas, and Siemens controllers. Common M-codes: M00 (program stop), M01 (optional stop), M02 (program end), M03 (spindle CW), M04 (spindle CCW), M05 (spindle stop), M06 (tool change), M07/M08 (coolant on), M09 (coolant off), M30 (program end and reset), M98 (subprogram call), M99 (subprogram end), M19 (spindle orient), M97 (local subprogram). Haas-specific: M29 (rigid tap), M104 (parts counter), M130 (through-spindle coolant). Siemens-specific: M70 (spindle at preset), M71-M79 (axis clamping). Includes controller comparison table.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc m code', 'm code reference', 'fanuc m code', 'haas m code', 'siemens m code', 'cnc machine codes', 'm00 m01 m03 m05', 'm06 tool change', 'cnc coolant code', 'cnc program control codes']
+  },
+  {
+    slug: 'haas-cnc-g-code-reference',
+    title: 'Haas CNC G-Code Complete Reference Chart',
+    description: 'Searchable reference of all Haas-specific and standard G-codes with syntax, parameters, and programming examples.',
+    detailDesc: 'Haas CNC G-code reference with full syntax and parameter descriptions. Covers: G00 (rapid), G01 (linear feed), G02/G03 (arc CW/CCW with R or I/J/K), G04 (dwell), G09 (exact stop), G10 (programmable offset setting), G12/G13 (circular pocket milling), G17/G18/G19 (plane selection), G20/G21 (inch/metric), G28/G30 (home return), G31 (skip), G40/G41/G42 (cutter compensation), G43/G44 (tool length offset), G54-G59 (work offsets), G70 (bolt hole circle), G71 (bolt hole arc), G72 (bolt hole line), G73 (high speed peck drill), G74 (left hand tap), G76 (fine boring), G80 (cancel cycle), G81-G89 (canned cycles), G90/G91 (absolute/incremental), G94/G95 (feed per min/rev), G96/G97 (constant surface speed). Includes Haas-specific G-codes and examples.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['haas g code', 'haas cnc g code reference', 'g code chart haas', 'haas g12 g13', 'haas g70 g71 g72', 'haas canned cycles', 'haas g code list', 'haas programming reference', 'g54 haas', 'haas g code syntax']
+  },
+  {
+    slug: 'fanuc-cnc-g-code-reference',
+    title: 'Fanuc CNC G-Code Complete Reference Chart',
+    description: 'Searchable reference of all Fanuc G-codes for milling and turning with syntax, parameters, and programming examples.',
+    detailDesc: 'Fanuc CNC G-code reference for both milling (Fanuc 0M/16M/18M/21M/30i/31i) and turning (Fanuc 0T/16T/18T/21T/30i). Milling: G00-G03 (motion), G04 (dwell), G09 (exact stop), G10 (offset setting), G15/G16 (polar coord), G17-G19 (planes), G20/G21 (units), G28 (home), G31 (skip), G40-G42 (cutter comp), G43-G44 (tool length), G54-G59 (work offsets), G73-G89 (canned cycles), G90-G91 (abs/inc), G94/G95 (feed modes), G96/G97 (CSS). Turning: G32 (threading), G70 (finishing cycle), G71 (roughing cycle OD/ID), G72 (facing roughing), G73 (pattern repeating), G74 (peck drilling), G75 (grooving), G76 (threading cycle), G90 (OD/ID turning cycle), G92 (threading cycle), G94 (facing cycle). Includes Fanuc Series 30i/31i/32i advanced features.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fanuc g code', 'fanuc cnc g code reference', 'fanuc g code chart', 'fanuc g71 g70 g76', 'fanuc canned cycles', 'fanuc turning cycles', 'fanuc milling g codes', 'fanuc g code list', 'fanuc 0i g code', 'fanuc programming reference']
+  },
+  {
+    slug: 'cnc-feeds-speeds-starting-values-chart',
+    title: 'CNC Feeds & Speeds Starting Values Quick Reference Chart',
+    description: 'Recommended starting RPM, feed rate, and depth of cut for common tool/material combinations in CNC milling and turning.',
+    detailDesc: 'CNC feeds and speeds starting values reference for common scenarios. Organized by material (aluminum 6061, steel 1018, stainless 304, cast iron, brass, copper, titanium, plastic) and tool type (HSS, carbide, coated carbide, ceramic). For each combination provides: recommended surface speed (SFM/SSM), chip load per tooth (FPT), RPM range, feed rate (IPM/mm per min), radial depth of cut (% of diameter), axial depth of cut, and coolant recommendation. Includes adjustment factors for slotting vs profiling, roughing vs finishing, and tool diameter ratios. Based on manufacturer recommendations (Kennametal, Sandvik, Iscar) and CNC Cookbook data.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc feeds and speeds chart', 'starting feeds speeds', 'cnc speed feed reference', 'sfm chart cnc', 'chip load chart', 'carbide feeds speeds', 'aluminum cutting speed', 'steel cutting speed', 'cnc starting parameters', 'material cutting speed chart']
+  },
+  {
+    slug: 'sheet-metal-bend-deduction-chart',
+    title: 'Sheet Metal Bend Deduction & K-Factor Quick Reference Chart',
+    description: 'Bend deduction, bend allowance, and K-factor values for common sheet metal materials and thicknesses.',
+    detailDesc: 'Sheet metal bend reference chart for press brake operations. Covers bend deduction (BD), bend allowance (BA), and K-factor for common materials: mild steel (AISI 1006/1008), stainless steel (304/316), aluminum (5052/6061), copper, and brass. Organized by material thickness (0.5mm to 6mm / 0.020" to 0.250"), inside bend radius (0.5T to 4T), and bend angle (30, 45, 60, 90, 120, 150 degrees). Includes default K-factor values per material (0.33 for soft materials, 0.42 for medium, 0.5 for hard), minimum bend radius rules, and air bend vs bottom bend force comparison.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bend deduction chart', 'bend allowance chart', 'k factor sheet metal', 'sheet metal bend reference', 'press brake calculation', 'bend deduction table', 'k factor reference', 'sheet metal thickness chart', 'bend radius chart', 'sheet metal fabrication reference']
+  },
+  {
+    slug: '3d-printing-parameters-reference-chart',
+    title: '3D Printing Parameters & Material Reference Chart',
+    description: 'Recommended printing parameters for FDM/FFF 3D printing: nozzle temp, bed temp, speed, layer height, and cooling for common filaments.',
+    detailDesc: '3D printing parameters reference for FDM/FFF printers. Covers common filaments: PLA, PETG, ABS, ASA, TPU (flexible), Nylon (PA6/PA12), PC (polycarbonate), PVA (support), HIPS, PEEK, ULTEM. For each material provides: recommended nozzle temperature (190-420C), bed temperature (0-120C), print speed (20-100 mm/s), layer height range (0.05-0.3mm), cooling fan setting (0-100%), retraction distance (0.5-7mm), bed adhesion method (blue tape, PEI, glass, brim, raft), enclosure requirement, and known issues (warping, stringing, moisture sensitivity). Includes recommended hot end and extruder types per material.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['3d printing parameters', '3d printing temperature chart', 'pla petg abs settings', 'fdm printing reference', '3d printer material guide', 'nozzle temperature chart', 'bed temperature 3d print', '3d printing speed reference', 'filament settings chart', '3d printing material reference']
+  },
+  {
+    slug: 'wire-gauge-chart-swg-bwg-awg',
+    title: 'Wire Gauge Chart — SWG / BWG / AWG Cross Reference',
+    description: 'Cross-reference table for Standard Wire Gauge (SWG), Birmingham Wire Gauge (BWG), and American Wire Gauge (AWG) with metric conversions.',
+    detailDesc: 'Wire gauge cross-reference chart covering SWG (Imperial Standard Wire Gauge, used in UK), BWG (Birmingham Wire Gauge, used for steel tubing), and AWG (American Wire Gauge, used in North America). For each gauge number (0000 to 36): provides diameter in inches, millimeters, cross-sectional area (mm2 and circular mils), and resistance per 1000 feet (ohms, for AWG copper). Includes steel sheet thickness equivalents for MSG (Manufacturer Standard Gauge) and Galvanized Steel Gauge. Covers common applications: electrical wiring (AWG), steel tubing/wire (BWG), and UK/general wire (SWG).',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['wire gauge chart', 'swg bwg awg', 'standard wire gauge', 'birmingham wire gauge', 'american wire gauge', 'wire gauge conversion', 'wire gauge mm', 'wire size chart', 'gauge to mm conversion', 'wire gauge cross reference']
+  },
+  {
+    slug: 'fastener-strength-grade-reference',
+    title: 'Fastener Strength Grade & Property Class Reference Chart',
+    description: 'Mechanical strength properties for ISO, ASTM, SAE, and DIN bolt grades: proof load, yield strength, tensile strength, and hardness.',
+    detailDesc: 'Fastener property class reference covering: ISO 898-1 property classes (4.6, 4.8, 5.6, 5.8, 6.8, 8.8, 9.8, 10.9, 12.9), SAE J995 grades (1, 2, 4, 5, 7, 8), ASTM A325/A490 structural bolts, and DIN 933/931 equivalents. For each grade: nominal size range, proof load stress (MPa/ksi), yield strength (MPa/ksi), tensile strength (MPa/ksi), core hardness (HRC/HB), and minimum elongation. Includes stainless steel bolt grades (A2-70, A2-80, A4-70, A4-80) per ISO 3506. Also covers nut compatibility (ISO 898-2) and washer specifications.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fastener grade chart', 'bolt property class', 'iso 898 bolt grades', 'astm a325 a490', 'sae bolt grades', 'bolt strength reference', 'proof load bolt', 'yield strength bolt', 'bolt hardness chart', 'fastener strength reference']
+  },
+  {
+    slug: 'cnc-tool-specifications-reference',
+    title: 'CNC Cutting Tool Specifications Quick Reference',
+    description: 'Standard CNC tool sizes, geometries, and applications: end mills, drills, taps, reamers, and inserts for milling and turning.',
+    detailDesc: 'CNC tool specification reference covering: solid carbide end mills (square, ball, corner radius, roughing, finishing) with standard diameters (1mm-25mm / 0.031"-1.0"), flute counts (2/3/4/5/6/7 flute selection guide), helix angles (30-55 degrees), and coating recommendations (TiAlN, AlCrN, DLC, uncoated). Twist drills (jobber, screw machine, reduced shank) with standard sizes and point angles (118, 135, 140 degrees). Taps (cut taps, form taps, spiral flute, spiral point) with class fit (2B, 3B). Reamers (chucking, machine, expansion) with stock allowance. Indexable inserts (CNMG, DNMG, TNMG, WNMG, CCMT, DCMT) with ISO/ANSI designation system. Includes speed/feed multiplier factors per tool type.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc tool specifications', 'end mill sizes', 'cnc tool reference', 'carbide end mill chart', 'drill size reference', 'tap drill chart', 'reamer sizes', 'indexable insert designation', 'cnc tooling guide', 'cutting tool reference']
+  },
+  {
+    slug: 'drawing-standards-comparison-reference',
+    title: 'Engineering Drawing Standards Comparison — ISO vs ASME vs DIN vs JIS',
+    description: 'Side-by-side comparison of major engineering drawing standards: dimensioning rules, tolerancing, projection methods, and sheet sizes.',
+    detailDesc: 'Engineering drawing standards comparison covering ISO 128/ISO 8015 (international), ASME Y14.5/Y14.100 (USA), DIN 199/DIN 406 (Germany), and JIS B 0001/B 0002 (Japan). Comparison areas: projection method (first angle ISO/DIN/JIS vs third angle ASME), dimensioning rules (arrow styles, text placement, dimension line spacing), tolerance expression (general tolerances: ISO 2768 vs ASME default), geometric tolerancing (ISO GPS vs ASME GD&T), surface finish symbols (Ra/Rz vs microinch), thread callout format (M10x1.5 vs 3/8-16 UNC), and sheet sizes (A0-A4 vs A-D ANSI). Includes conversion tables for key dimensioning differences.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['drawing standards comparison', 'iso vs asme', 'first angle vs third angle', 'iso 128 drawing', 'asme y14.5', 'din drawing standard', 'jis drawing standard', 'engineering drawing standards', 'dimensioning standards', 'gd&t vs gps']
+  },
+  {
+    slug: 'autocad-system-variables-reference',
+    title: 'AutoCAD System Variables Complete Reference',
+    description: 'Searchable reference of 200+ AutoCAD system variables with default values, storage location, and effect on drawing behavior.',
+    detailDesc: 'AutoCAD system variable reference with 200+ entries. Categories: Display (VIEWRES, FACETRES, ISOLINES, DISPSILH), Drawing Setup (INSUNITS, MEASUREMENT, LUNITS, LUPREC, AUNITS), Dimensioning (DIMSTYLE, DIMSCALE, DIMLFAC, DIMTIH, DIMTOH, DIMASZ, DIMTXT), Plotting (CTB, STB, PLOTSTYLEMODE, PAPERUPDATE), Selection (PICKBOX, PICKADD, PICKAUTO, PICKDRAG), Performance (CACHELAYOUT, CACHEMAXTOTAL, XLOADCTL, INDEXCTL), Snaps (OSMODE, AUTOSNAP, OSMODEMAC, SNAPMODE, GRIDMODE), Layers (CLAYER, LAYERFILTERALERT, LAYERNOTIFY), and File Management (SAVEFILEPATH, REMEMBERFOLDERS, FILEDIA, ROAMABLEROOTPREFIX). Each entry includes: data type (integer, real, string, boolean), default value, saved in (drawing vs registry), and related commands.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad system variables', 'autocad sysvar reference', 'autocad variables list', 'dimscale autocad', 'osmode autocad', 'insunits autocad', 'viewres facetres', 'autocad setvar reference', 'autocad environment variables', 'autocad drawing variables']
+  },
+  {
+    slug: 'revit-family-formula-reference',
+    title: 'Revit Family Parameter Formula Reference Guide',
+    description: 'Complete syntax reference for Revit family parameter formulas: math functions, conditional statements, trigonometry, and type catalog functions.',
+    detailDesc: 'Revit family formula reference covering: arithmetic operators (+, -, *, /, ^), conditional statements (if(condition, true, false), nested if, AND, OR, NOT), comparison operators (<, >, =, <=, >=), math functions (round, rounddown, roundup, abs, sqrt, power, exp, log), trigonometry (sin, cos, tan, asin, acos, atan, pi), string functions (no native string functions, but parameter concatenation via text parameters), and array functions. Includes common formula patterns: visibility driven by checkbox, dimensional constraints (if(Length > 100, Length * 0.5, Length * 0.3)), rounding to standard sizes (round(Length / 10) * 10), and type catalog syntax. Lists reserved keywords and unit conversion rules within formulas.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['revit formula reference', 'revit family formulas', 'revit parameter formula', 'revit if statement', 'revit formula syntax', 'revit conditional formula', 'revit math functions', 'revit round formula', 'revit family parameters', 'revit type catalog formula']
+  },
+
+  // ==================== BATCH 7B: Additional Troubleshooting Wizards ====================
+
+  {
+    slug: 'autocad-install-error-wizard',
+    title: 'AutoCAD Installation Error Troubleshooting Wizard',
+    description: 'Step-by-step diagnostic wizard for resolving AutoCAD installation failures, stuck installers, and licensing setup errors.',
+    detailDesc: 'Interactive decision-tree wizard for AutoCAD installation problems. Covers: installer stuck on initializing (antivirus interference, corrupted OS, Windows update pending), installation rollback (insufficient disk space, prerequisite failure, .NET Framework version conflict), post-install crash on first launch (graphics driver incompatibility, corrupted user profile, missing Visual C++ redistributable), and licensing setup errors (network license timeout, FlexNet service stopped, product key mismatch). Each branch provides: symptom description, root cause analysis, step-by-step fix instructions, and verification steps. Includes Autodesk Install/Uninstall Tool and MS FixIt recommendations.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad installation error', 'autocad install stuck', 'autocad install wizard', 'autocad installation troubleshooting', 'autocad install rollback', 'autocad setup error', 'autocad install fix', 'autocad prerequisite error', 'autocad install failed', 'autodesk installation troubleshoot']
+  },
+  {
+    slug: 'dwg-corruption-repair-wizard',
+    title: 'DWG File Corruption Repair & Recovery Wizard',
+    description: 'Diagnostic wizard for repairing corrupted DWG files: RECOVER, AUDIT, DRAWINGRECOVERY, WBLOCK, and manual recovery techniques.',
+    detailDesc: 'Step-by-step DWG corruption repair wizard. Decision tree covers: file will not open (try RECOVER command from blank drawing, RECOVERALL for xrefs, partial open), file opens but displays errors (run AUDIT with Y for fix, -PURGE, OVERKILL), file opens but crashes on save (WBLOCK out to new file, QSELECT to isolate problem entities), file missing entities (DRAWINGRECOVERY manager, .bak file recovery, .sv$ autosave recovery), and severe corruption (use third-party DWG repair tool, recover from previous version, extract data via DXF export). Includes preventative measures: AUDIT on close, ISAVEPERCENT setting, and backup strategies.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dwg corruption repair', 'dwg file recovery', 'autocad recover command', 'dwg repair wizard', 'autocad audit fix', 'drawing recovery manager', 'dwg file fix', 'corrupted dwg repair', 'autocad bak file recovery', 'dwg autosave recovery']
+  },
+  {
+    slug: 'autocad-display-graphics-wizard',
+    title: 'AutoCAD Display & Graphics Issues Troubleshooting Wizard',
+    description: 'Resolve blank screens, flickering, ghosting, selection highlighting issues, and visual glitches in AutoCAD.',
+    detailDesc: 'AutoCAD display/graphics troubleshooting wizard. Covers: blank or black screen on launch (GRAPHICSCONFIG hardware acceleration toggle, graphics driver update, clean uninstall of GPU driver with DDU), flickering or ghosting (disable hardware acceleration, update to WHQL-certified driver, check for dual GPU conflicts), selection highlighting not working (SELECTIONEFFECT, SELECTIONPREVIEW settings), cursor lag/jumping (SNAPANG, APERTURE, PICKBOX, OSNAP settings, mouse driver conflict), ribbon/toolbar display issues (reset workspace, CUI load, MENUBAR), and hatch/gradient display problems (HPMAXLINES, HPMAXAREAS, FILLMODE). Includes recommended GPU drivers per AutoCAD version.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad display problem', 'autocad graphics issue', 'autocad blank screen', 'autocad flickering fix', 'autocad hardware acceleration', 'autocad cursor lag', 'autocad visual glitch', 'autocad graphics driver', 'autocad display troubleshooting', 'autocad screen fix']
+  },
+  {
+    slug: 'autocad-lisp-plugin-conflict-wizard',
+    title: 'AutoCAD LISP Routine & Plugin Conflict Troubleshooting Wizard',
+    description: 'Diagnose and resolve crashes, errors, and performance issues caused by LISP routines, custom plugins, and third-party add-ins.',
+    detailDesc: 'AutoCAD LISP/plugin conflict diagnostic wizard. Decision tree: AutoCAD crashes on startup (safe mode launch with /nossm, disable all LISP via LISPINIT=0, rename acaddoc.lsp/acaddoc.fas), LISP routine error on load (check VLISP debugger, verify function availability, check APPLOAD error log), third-party add-in causes instability (APPLOAD dialog to disable, check Demand Load registry keys, isolate via process of elimination), Express Tools missing (reinstall from deployment, check EXPRESSTOOLS system variable), and custom CUIX causes menu corruption (reset CUI to default, rebuild with CUI command). Includes LISP debugging tips and common error messages with solutions.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad lisp error', 'autocad plugin conflict', 'autocad add-in crash', 'autocad lisp troubleshooting', 'autocad lisp debug', 'autocad plugin fix', 'autocad express tools missing', 'autocad cuix corruption', 'autocad safe mode', 'autocad appload error']
+  },
+  {
+    slug: 'revit-file-corruption-recovery-wizard',
+    title: 'Revit File Corruption Recovery & Repair Wizard',
+    description: 'Step-by-step recovery wizard for corrupted Revit models: audit, compact, detach, rollback, and worksharing recovery.',
+    detailDesc: 'Revit file corruption recovery wizard. Covers: model will not open (try Open and Audit, detach from central, clear local cache for BIM 360/ACC projects), model opens with errors (Review Warnings dialog, isolate corrupt elements via Worksets, delete and recreate problem elements), model crashes on sync (try Reload Latest before sync, create new local file, check element ID from journal file), model crashes on specific view (delete and recreate view, check view-specific overrides, purge unused), and severe corruption (restore from backup .0001.rvt, use journal file to identify corrupt element, rebuild model via transfer project standards). Includes preventative: Worksharing monitor, regular audit schedule, and model maintenance best practices.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['revit file corruption', 'revit model recovery', 'revit audit repair', 'revit corrupt model fix', 'revit file recovery', 'revit detach from central', 'revit worksharing recovery', 'revit model crash fix', 'revit journal file recovery', 'revit backup recovery']
+  },
+  {
+    slug: 'revit-family-corruption-wizard',
+    title: 'Revit Family Corruption Diagnostic & Repair Wizard',
+    description: 'Identify and fix corrupted Revit families causing model crashes, missing geometry, and performance degradation.',
+    detailDesc: 'Revit family corruption diagnostic wizard. Covers: family causes model crash on load (identify via journal file, test family in blank project, recreate from catalog), family displays missing geometry (check visibility/graphics overrides, subcategory visibility, detail level, phase filter), family parameters broken (check formula errors, delete and recreate parameters, verify shared parameter file), family type catalog errors (verify CSV format, check parameter order, validate units), and in-place family corruption (explode and recreate as loadable family). Includes family health check checklist and recommended family creation best practices to prevent corruption.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['revit family corruption', 'revit family crash', 'revit family fix', 'revit family repair', 'revit family missing geometry', 'revit family parameters broken', 'revit family diagnostic', 'revit family error fix', 'revit in place family corruption', 'revit family health check']
+  },
+  {
+    slug: 'revit-sync-c4r-wizard',
+    title: 'Revit Sync & Collaboration for Revit (C4R) Issue Wizard',
+    description: 'Troubleshoot Revit worksharing sync failures, BIM 360/ACC collaboration errors, and central model access problems.',
+    detailDesc: 'Revit sync and C4R collaboration troubleshooting wizard. Covers: sync fails with error message (check network connectivity, verify BIM 360/ACC project health, try Reload Latest then Sync), element borrow conflict (use Worksharing Monitor, identify borrower, request or force relinquish), central model inaccessible (check network path, verify permissions, recreate local file), BIM 360/ACC local cache corruption (clear %localappdata%\\Autodesk\\Revit\\CollaborationCache), model upgrade conflicts (all users must upgrade simultaneously, coordinate via BIM coordinator), and performance issues during sync (compact model, purge unused, reduce warnings). Includes C4R best practices and bandwidth requirements.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['revit sync error', 'revit c4r troubleshooting', 'revit worksharing sync', 'bim 360 revit error', 'revit central model access', 'revit collaboration cache', 'revit sync failed', 'revit relinquish conflict', 'revit bim 360 fix', 'revit worksharing monitor']
+  },
+  {
+    slug: 'revit-warnings-cleanup-wizard',
+    title: 'Revit Warnings Cleanup & Model Health Wizard',
+    description: 'Systematic wizard for resolving Revit model warnings that degrade performance and cause model instability.',
+    detailDesc: 'Revit warnings cleanup wizard. Covers: identifying warning types (Review Warnings dialog, Ideate BIMLink warning export, journal file warning count), common warning categories and fixes — unjoined geometry (use Join Geometry tool, check cut/join order), slightly off-axis lines (use Realign tool, check angle tolerance), room separation line issues (delete redundant separation lines, check room bounding), duplicate elements (use Select All Instances, delete duplicates), elements slightly out of plane (adjust elevation, check level offsets), and circular references in formulas (break formula chain, use intermediate parameters). Includes warning prioritization matrix and recommended model maintenance schedule.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['revit warnings cleanup', 'revit model health', 'revit warning fix', 'revit unjoined geometry', 'revit duplicate elements', 'revit model maintenance', 'revit warning review', 'revit performance warnings', 'revit model cleanup wizard', 'revit warning diagnostic']
+  },
+  {
+    slug: 'dwg-version-compatibility-wizard',
+    title: 'DWG Version Compatibility & Conversion Wizard',
+    description: 'Resolve DWG version mismatch errors, convert between AutoCAD versions, and ensure backward compatibility.',
+    detailDesc: 'DWG version compatibility wizard. Covers: "drawing file was created by a newer version" error (identify DWG version via file header, use DWG TrueView for free conversion, batch convert via ScriptPro), DWGSAVEAS command for version downgrade (AutoCAD 2018 -> 2013/2010/2007/2004/2000/R14), compatibility issues when downgrading (new entities like associative arrays, dynamic blocks, parametric constraints may lose functionality), mixed-version project management (establish project DWG version standard, use Sheet Set Manager for consistent publishing), and third-party DWG file compatibility (BricsCAD, GStarCAD, ZWCAD version mapping). Includes DWG version number reference (AC1032=2018, AC1027=2013, AC1024=2010, etc.).',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dwg version compatibility', 'dwg version error', 'dwg convert to older version', 'autocad version mismatch', 'dwg trueview convert', 'dwgsaveas command', 'dwg version downgrade', 'dwg file version check', 'dwg batch convert', 'autocad backward compatibility']
+  },
+  {
+    slug: 'solidworks-install-license-wizard',
+    title: 'SolidWorks Installation & License Error Troubleshooting Wizard',
+    description: 'Resolve SolidWorks installation failures, license activation errors, and FlexNet/SolidNetwork License Manager issues.',
+    detailDesc: 'SolidWorks installation and license troubleshooting wizard. Covers: installation failure (check Windows updates, .NET Framework, Visual C++ prerequisites, antivirus interference, disk space), license activation error (check SolidNetWork License Manager service, verify serial number, check firewall for port 25734/25735, ping license server), "could not obtain license" error (verify license server availability, check SNL Manager port settings, check license borrowing expiration, verify MAC address binding), upgrade compatibility issues (check hardware certification, GPU driver compatibility, remove old version remnants via Windows Registry), and toolbox/standard library migration errors (relocate toolbox folder, update references, check hole wizard database). Includes clean uninstall procedure.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['solidworks installation error', 'solidworks license error', 'solidworks install troubleshooting', 'solidnetwork license manager', 'solidworks flexnet error', 'solidworks license server', 'solidworks activation error', 'solidworks could not obtain license', 'solidworks clean uninstall', 'solidworks install fix']
+  },
 ];
