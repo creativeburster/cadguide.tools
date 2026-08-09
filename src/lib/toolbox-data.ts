@@ -5313,4 +5313,205 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     keywords: ['autocad slow performance', 'autocad lag fix', 'hardware acceleration autocad', 'autocad regen slow', 'osmode performance', 'viewres autocad', 'graphicsconfig autocad', 'autocad speed optimization', 'autocad drawing slow', 'autocad performance tuning']
   },
+
+  // ==================== BATCH 5: Competitor Research — Additional Converters ====================
+
+  {
+    slug: 'scan2cad-image-to-dxf-converter',
+    title: 'Scan2CAD — Image & PDF to DXF/DWG Vector Converter',
+    description: 'Convert raster images (JPG, PNG, TIFF) and PDFs to editable DXF or DWG vector files with OCR text recognition.',
+    detailDesc: 'Scan2CAD is professional-grade raster-to-vector conversion software for Windows and macOS. Converts scanned drawings, floor plans, and PDFs to DXF/DWG with automatic layer separation, text OCR recognition, and object detection (lines, arcs, circles, polylines). Also exports to CNC G-Code for laser, plasma, and waterjet cutting. Offers batch conversion and Python automation API.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['scan2cad', 'image to dxf', 'pdf to dwg vector', 'raster to vector cad', 'jpg to dxf', 'png to dwg', 'ocr cad drawing', 'pdf to gcode', 'cnc conversion', 'vectorization cad']
+  },
+  {
+    slug: 'zamzar-dwg-to-tiff-bmp-gif-converter',
+    title: 'Zamzar — DWG/DXF to TIFF, BMP & GIF Online Converter',
+    description: 'Cloud-based batch conversion of DWG and DXF files to TIFF, BMP, and GIF raster image formats.',
+    detailDesc: 'Zamzar supports DWG and DXF to TIFF (high-resolution, multi-page), BMP (uncompressed raster), and GIF (compressed) conversion entirely in the cloud. Free tier supports files up to 50MB; paid plans remove size limits and extend file retention. Trusted since 2006 with over 510 million files converted. No software installation required.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['zamzar', 'dwg to tiff', 'dwg to bmp', 'dwg to gif', 'dxf to tiff', 'dxf to bmp', 'dxf to gif', 'online cad to image', 'batch dwg converter', 'cloud cad raster export']
+  },
+  {
+    slug: 'cloudconvert-dwg-to-eps-wmf-cgm-converter',
+    title: 'CloudConvert — DWG to EPS, WMF & CGM Vector Export',
+    description: 'Convert DWG files to EPS (Encapsulated PostScript), WMF (Windows Metafile), and CGM (Computer Graphics Metafile) formats.',
+    detailDesc: 'CloudConvert extends DWG conversion to vector print formats: EPS for professional printing workflows, WMF for Windows Office embedding, and CGM for technical illustration standards. Also supports DWG to GIF for animated previews. REST API available for batch automation with webhook callbacks and secure cloud processing.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['cloudconvert', 'dwg to eps', 'dwg to wmf', 'dwg to cgm', 'dwg to gif', 'eps converter cad', 'windows metafile cad', 'computer graphics metafile', 'cad vector print export', 'dwg to encapsulated postscript']
+  },
+  {
+    slug: 'total-cad-converter-plt-hpgl',
+    title: 'Total CAD Converter — PLT, HPGL & CGM to PDF/JPG Batch',
+    description: 'Batch convert PLT, HPGL, CGM, DWFX, and SVG CAD plot files to PDF, JPEG, TIFF, or DXF without AutoCAD.',
+    detailDesc: 'Total CAD Converter by CoolUtils handles legacy and specialty CAD plot formats: PLT (plotter), HPGL/HPGL2 (Hewlett-Packard Graphics Language), CGM (Computer Graphics Metafile), DWFX (DWF compressed), and SVG. Converts to PDF, JPG, TIFF, BMP, WMF, PNG, PS, and SWF. Features batch folder processing, multi-page TIFF/PDF combining, image DPI control, compression settings, watermarking, and command-line interface for automated pipelines.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['total cad converter', 'plt to pdf', 'hpgl to pdf', 'plt to jpg', 'hpgl to dxf', 'cgm to pdf', 'dwfx to pdf', 'cgm to jpg', 'batch plot converter', 'coolutils cad converter']
+  },
+  {
+    slug: 'emachineshop-free-cad-converter',
+    title: 'eMachineShop — Free DXF, IGES, STEP & STL Online Converter',
+    description: 'Free browser-based converter for DXF, IGES, STEP, and STL files with no signup or software download required.',
+    detailDesc: 'eMachineShop offers a free online CAD file converter supporting DXF, IGES, STEP, and STL formats. Works on mobile and desktop (Windows, macOS, Linux, Android, iOS). Converts files from SolidWorks, AutoCAD, Fusion 360, CATIA, Solid Edge, NX, Creo, FreeCAD, TurboCAD, Rhino, and more. Also provides free online CAD file viewers for STEP, DXF, IGES, and STL files.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['emachineshop', 'free cad converter', 'dxf to step', 'iges to stl', 'step to dxf', 'stl to step', 'online cad converter free', 'no signup cad converter', 'mobile cad converter', 'browser cad file conversion']
+  },
+  {
+    slug: 'mygeodata-gis-cad-converter',
+    title: 'MyGeodata — GIS & CAD Full Format Converter with Coordinate Transform',
+    description: 'Convert between 50+ GIS and CAD vector/raster formats with automatic coordinate system transformation.',
+    detailDesc: 'MyGeodata Cloud supports conversion between ESRI Shapefile, KML/KMZ, GeoJSON, GML, GPX, DXF, DWG, DGN, GeoPackage, MapInfo TAB/MIF, CSV, SQLite/Spatialite, TopoJSON, FlatGeobuf, FileGDB, and more. Also handles raster formats: GeoTIFF, JPEG, PNG, JPEG2000, MBTiles, netCDF, HDF, SRTM, and DEM. Performs coordinate system reprojection (WGS84, UTM, State Plane, national grids) during conversion. Cloud-based with no software installation.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['mygeodata', 'gis to cad converter', 'shapefile to geojson', 'kml to dxf', 'geojson to dwg', 'coordinate system transform', 'geotiff converter', 'gis data conversion', 'gpx to dxf', 'mapinfo to autocad', 'geopackage converter']
+  },
+  {
+    slug: 'datakit-crossmanager-cad-converter',
+    title: 'DataKit CrossManager — Professional Native CAD Format Translator',
+    description: 'Standalone desktop software for converting between native CAD formats (CATIA, SolidWorks, NX, Creo, Inventor, Rhino) without CAD licenses.',
+    detailDesc: 'DataKit CrossManager is a professional-grade CAD format converter that reads and writes native CAD formats without requiring the original CAD software. Supports CATIA V4/V5/V6, SolidWorks, Siemens NX, PTC Creo, Autodesk Inventor, Rhino, ACIS, Parasolid, JT, STEP, IGES, and more. Available as standalone software or as plug-ins for SolidWorks and Rhino. Enterprise pricing with annual maintenance. Ideal for supply chain collaboration and OEM data exchange.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['datakit', 'crossmanager', 'catia to solidworks converter', 'native cad format converter', 'cad translation software', 'catia v5 to step', 'nx to catia converter', 'creo to solidworks', 'parasolid converter', 'jt file converter', 'professional cad translator']
+  },
+  {
+    slug: 'nvidia-omniverse-cad-to-usd-converter',
+    title: 'NVIDIA Omniverse — CAD to USD Format Converter',
+    description: 'Convert CAD files (STEP, IGES, JT, OBJ, FBX) to Universal Scene Description (USD) for 3D visualization and digital twins.',
+    detailDesc: 'NVIDIA Omniverse CAD Converter Kit extension converts common CAD file formats to USD (Universal Scene Description) for use in NVIDIA Omniverse 3D collaboration platform. Supports STEP, IGES, JT, OBJ, FBX, and glTF input. Produces USD/USDA/USDC files with material, assembly hierarchy, and transform preservation. Designed for digital twin workflows, real-time visualization, and AI-enhanced 3D simulation pipelines.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['nvidia omniverse', 'cad to usd converter', 'universal scene description', 'step to usd', 'iges to usd', 'jt to usd', 'digital twin cad', '3d visualization converter', 'omniverse cad converter', 'usda usdc converter']
+  },
+  {
+    slug: 'online-creo-to-step-iges-converter',
+    title: 'Online PTC Creo to STEP/IGES Converter',
+    description: 'Convert PTC Creo Parametric part (.prt) and assembly (.asm) files to STEP or IGES without Creo installed.',
+    detailDesc: 'Cloud translators that parse PTC Creo Parametric .prt and .asm files and export neutral STEP AP203/AP214/AP242 or IGES format. Preserves parametric features, assembly structure, and flexible modeling data. Enables downstream CAM, CAE, and PLM workflows for users without PTC Creo licenses. Also supports legacy Pro/ENGINEER file formats.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['creo to step', 'ptc creo to step converter', 'creo prt to step', 'creo asm to step', 'creo to iges', 'pro e to step', 'pro engineer to step', 'creo file converter online', 'creo export without license', 'creo to universal cad']
+  },
+  {
+    slug: 'online-solid-edge-to-step-iges-converter',
+    title: 'Online Siemens Solid Edge to STEP/IGES Converter',
+    description: 'Convert Siemens Solid Edge part (.par) and assembly (.psm) files to STEP or IGES without Solid Edge installed.',
+    detailDesc: 'Cloud translators that read Siemens Solid Edge .par (part) and .psm (assembly) files and export STEP AP203/AP214 or IGES neutral format. Preserves synchronous technology features, assembly relationships, and PMI annotations. Enables CAM, FEA, and cross-platform CAD collaboration for users without Solid Edge licenses.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['solid edge to step', 'siemens solid edge to step converter', 'solid edge par to step', 'solid edge psm to step', 'solid edge to iges', 'solid edge file converter online', 'solid edge export without license', 'solid edge to universal cad']
+  },
+  {
+    slug: 'online-convert-cad-to-dwg-dxf',
+    title: 'Online-Convert — Multi-Format to DWG/DXF Free Converter',
+    description: 'Free online converter transforming images, PDFs, and vector files into DWG or DXF CAD format.',
+    detailDesc: 'Online-Convert.com offers free browser-based conversion to DWG and DXF formats. Accepts various source formats including PDF, SVG, images, and other vector files. Features browser extensions for Chrome, Firefox, and Edge for quick file conversion. No registration required for basic conversions. Supported by a large user base with 300,000+ Chrome extension users.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['online convert', 'free dwg converter', 'convert to dwg online', 'convert to dxf online', 'pdf to dwg free', 'image to dwg', 'svg to dwg', 'browser extension converter', 'free cad file converter', 'online convert cad']
+  },
+  {
+    slug: 'online-dwg-dxf-to-tiff-converter',
+    title: 'Online DWG/DXF to TIFF High-Resolution Batch Converter',
+    description: 'Convert DWG and DXF drawings to high-resolution TIFF images with DPI control and multi-page support.',
+    detailDesc: 'Cloud-based DWG/DXF to TIFF converter that produces high-resolution raster images suitable for archival, printing, and document management. Controls output DPI (72-1200), color depth (monochrome, grayscale, 24-bit color), and compression (LZW, PackBits, CCITT Group 4). Supports multi-page TIFF for drawings with multiple layout tabs. Batch processing for folders of drawings.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['dwg to tiff', 'dxf to tiff', 'cad to tiff converter', 'high resolution dwg export', 'multipage tiff cad', 'tiff dpi control', 'batch dwg to tiff', 'cad raster archival', 'dwg to tiff online', 'dxf to tiff converter']
+  },
+  {
+    slug: 'online-cad-to-gltf-glb-converter',
+    title: 'Online CAD to glTF/GLB Web 3D Format Converter',
+    description: 'Convert STEP, IGES, STL, FBX, and OBJ CAD files to glTF or GLB for web-based 3D visualization and AR/VR.',
+    detailDesc: 'Cloud converters that transform CAD models (STEP, IGES, STL, FBX, OBJ, DAE) to glTF 2.0 (.gltf/.glb) format for web-based 3D rendering with Three.js, Babylon.js, or Apple QuickLook AR. Preserves materials (PBR), textures, animations, and scene hierarchy. Optimizes mesh resolution and file size for web streaming. Ideal for product configurators, AR try-on, and online 3D viewers.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['cad to gltf', 'cad to glb', 'step to gltf', 'stl to gltf', 'fbx to glb', 'obj to gltf', 'web 3d cad', 'ar vr cad converter', 'three.js cad model', 'online 3d viewer format', 'gltf 2.0 converter']
+  },
+  {
+    slug: 'online-rhino-3dm-to-step-iges-converter',
+    title: 'Online Rhino 3DM to STEP/IGES/OBJ Converter',
+    description: 'Convert Rhinoceros 3DM model files to STEP, IGES, OBJ, STL, or DAE without Rhino installed.',
+    detailDesc: 'Cloud translators that read Rhino 3D .3dm files (Rhino 5/6/7/8) and export STEP AP203/AP214, IGES, OBJ (with materials), STL (binary/ASCII), or Collada DAE. Preserves NURBS surfaces, curves, points, and mesh geometry. Enables downstream manufacturing, 3D printing, and rendering workflows for users without Rhino licenses.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['rhino 3dm to step', '3dm to iges', '3dm to obj', 'rhino to step converter', 'rhinoceros file converter online', '3dm to stl', '3dm to dae', 'rhino 3d export without license', '3dm to universal cad', 'nurbs to step converter']
+  },
+  {
+    slug: 'svg-to-pdf-converter',
+    title: 'SVG to PDF Vector Export Tool',
+    description: 'Convert SVG vector files to PDF format entirely in your browser with no upload required.',
+    detailDesc: 'Client-side SVG to PDF converter that renders SVG vector graphics and exports them as high-quality PDF documents. Supports embedded fonts, gradients, patterns, clipping paths, and multi-page output. No file upload to servers — all processing happens locally in your browser using Canvas and PDF-lib. Ideal for converting CAD exports, floor plans, and technical illustrations from SVG to print-ready PDF.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['svg to pdf', 'svg to pdf converter', 'svg vector to pdf', 'browser svg converter', 'client-side svg to pdf', 'svg to print pdf', 'svg to pdf free', 'svg to pdf no upload', 'svg to pdf online', 'svg export pdf']
+  },
+  {
+    slug: 'svg-to-jpg-png-converter',
+    title: 'SVG to JPG/PNG Raster Image Converter',
+    description: 'Convert SVG vector files to JPG or PNG raster images in your browser with resolution and quality control.',
+    detailDesc: 'Client-side SVG to raster image converter that renders SVG files at configurable resolutions (72-1200 DPI) and exports as JPG (with quality control) or PNG (with transparency support). Supports batch conversion of multiple SVG files. No server upload — all rendering via browser Canvas API. Ideal for creating preview thumbnails of CAD drawings or web-optimized images from SVG exports.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['svg to jpg', 'svg to png', 'svg to image converter', 'svg to raster', 'svg to png transparent', 'svg to jpg quality', 'browser svg converter', 'client-side svg to image', 'svg to png high resolution', 'svg to jpg free online']
+  },
+  {
+    slug: 'dxf-info-extractor',
+    title: 'DXF File Info & Geometry Extractor',
+    description: 'Parse DXF files locally in your browser to extract layer names, entity counts, bounding box, and geometry statistics.',
+    detailDesc: 'Client-side DXF parser that reads ASCII and binary DXF files without uploading to any server. Extracts: layer names and properties, entity types and counts (LINE, CIRCLE, ARC, LWPOLYLINE, TEXT, INSERT, etc.), drawing bounding box (min/max coordinates), units (INSUNITS), header variables, and block definitions. Displays a summary report with geometry statistics. Useful for pre-conversion analysis and drawing auditing.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf info extractor', 'dxf parser online', 'dxf file analyzer', 'dxf layer list', 'dxf entity count', 'dxf bounding box', 'dxf metadata reader', 'dxf geometry statistics', 'dxf audit tool', 'dxf viewer info']
+  },
+  {
+    slug: 'online-dwg-to-wmf-converter',
+    title: 'Online DWG to WMF (Windows Metafile) Converter',
+    description: 'Convert DWG drawings to Windows Metafile (WMF) format for Office document embedding and legacy applications.',
+    detailDesc: 'Cloud-based DWG to WMF converter that exports drawing vector geometry as Windows Metafile format, compatible with Microsoft Office (Word, PowerPoint, Excel) OLE embedding and legacy Windows applications. Preserves vector lines, arcs, text, and layer colors. Supports batch conversion and output scaling. Ideal for embedding CAD drawings in technical reports and presentations.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['dwg to wmf', 'dwg to windows metafile', 'cad to wmf converter', 'dwg to office embed', 'dwg to word', 'dwg to powerpoint', 'wmf vector export', 'dwg to wmf online', 'cad to wmf', 'dwg to legacy format']
+  },
 ];
