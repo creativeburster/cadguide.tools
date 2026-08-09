@@ -5514,4 +5514,249 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'third-party',
     keywords: ['dwg to wmf', 'dwg to windows metafile', 'cad to wmf converter', 'dwg to office embed', 'dwg to word', 'dwg to powerpoint', 'wmf vector export', 'dwg to wmf online', 'cad to wmf', 'dwg to legacy format']
   },
+
+  // ==================== BATCH 6: Competitor Research — Additional Calculators ====================
+
+  {
+    slug: 'truss-analysis-2d-calculator',
+    title: '2D Truss Analysis Calculator',
+    description: 'Analyze 2D truss structures for member forces, support reactions, and nodal displacements using the method of joints.',
+    detailDesc: 'Solve 2D trusses with the direct stiffness method. Define nodes (coordinates), members (connectivity, cross-section, material), and supports (pin/roller). Apply joint loads and calculate: axial forces (tension/compression), support reactions, and nodal displacements. Includes internal stability check (m >= 2j-3) and external determinacy check. Supports up to 50 members with graphical force diagram output.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['truss analysis', '2d truss calculator', 'truss member forces', 'method of joints', 'truss calculator online', 'truss solver', 'axial force truss', 'truss reactions', 'truss displacement', 'structural truss analysis']
+  },
+  {
+    slug: 'frame-analysis-2d-calculator',
+    title: '2D Frame Structural Analysis Calculator',
+    description: 'Analyze 2D frame structures for bending moments, shear forces, axial forces, and displacements using the stiffness method.',
+    detailDesc: 'Solve 2D plane frames using the direct stiffness method (matrix analysis). Define nodes, beam-column members (EI, EA, length), and boundary conditions (fixed, pinned, roller, spring). Apply nodal loads and distributed loads. Calculate: member end forces (axial, shear, moment), nodal displacements, support reactions, and internal force diagrams (N, V, M). Includes sway/non-sway frame detection and moment distribution verification.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['frame analysis', '2d frame calculator', 'stiffness method frame', 'moment distribution', 'frame structural analysis', 'beam column analysis', 'frame member forces', 'frame calculator online', 'plane frame solver', 'matrix structural analysis']
+  },
+  {
+    slug: 'diaphragm-analysis-calculator',
+    title: 'Flexible Diaphragm Shear Distribution Calculator',
+    description: 'Calculate shear force distribution from lateral loads to vertical resisting elements through flexible floor diaphragms.',
+    detailDesc: 'Diaphragm analysis for flexible floor systems: distributes lateral seismic/wind forces to shear walls, braced frames, and moment frames based on their relative stiffness. Supports rigid diaphragm (center of rigidity, torsional distribution) and flexible diaphragm (tributary area) methods. Inputs: wall/frame stiffness, lateral load magnitude and location, diaphragm dimensions. Outputs: force per resisting element, torsional moment, and drift check.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['diaphragm analysis', 'flexible diaphragm', 'shear distribution', 'lateral force distribution', 'shear wall force', 'center of rigidity', 'torsional shear', 'diaphragm calculator', 'seismic force distribution', 'wind load distribution']
+  },
+  {
+    slug: 'bolt-group-analysis-calculator',
+    title: 'Steel Bolt Group Load Analysis Calculator',
+    description: 'Analyze bolt group connections for maximum bolt force under eccentric loading per AISC methodology.',
+    detailDesc: 'Bolt group analysis per AISC 360: calculates force distribution in bolt patterns (rectangular, circular, staggered) under eccentric shear and moment loads. Uses elastic method (neutral axis) and instantaneous center of rotation method (IC). Inputs: bolt pattern coordinates, bolt diameter/strength, applied load (magnitude, eccentricity). Outputs: maximum bolt shear force, critical bolt force vector, and connection capacity check. Includes bolt shear and bearing strength checks per AISC J3.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bolt group analysis', 'bolt pattern calculator', 'eccentric bolt load', 'aisc bolt analysis', 'bolt shear distribution', 'instantaneous center', 'bolt connection design', 'bolt group force', 'steel bolt calculator', 'bolt capacity check']
+  },
+  {
+    slug: 'rc-section-design-calculator',
+    title: 'Reinforced Concrete Section Design Calculator',
+    description: 'Design and verify RC beam and column sections for flexural and axial capacity per ACI 318 or Eurocode 2.',
+    detailDesc: 'RC section design per ACI 318-19 / Eurocode 2 EN1992-1-1: rectangular and T-beam flexural design (tension steel area, moment capacity, neutral axis depth), column interaction diagram (axial-b capacity curve, balanced point, minimum steel), shear design (stirrup spacing, shear capacity), and crack width check. Inputs: section dimensions, concrete strength (fc/ck), steel yield (fy), cover, bar sizes. Outputs: capacity ratio, required reinforcement, and code compliance status.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['rc section design', 'reinforced concrete calculator', 'aci 318 design', 'eurocode 2 design', 'rc beam design', 'rc column design', 'interaction diagram', 'flexural capacity rc', 'shear design rc', 'concrete section calculator']
+  },
+  {
+    slug: 'moving-load-beam-calculator',
+    title: 'Moving Load Beam Maximum Moment Calculator',
+    description: 'Calculate maximum bending moment and shear force in a beam under moving wheel loads (bridge/crane girder).',
+    detailDesc: 'Moving load analysis for simply supported beams: calculates maximum bending moment and maximum shear force at any section due to moving concentrated loads (2-5 wheel loads). Uses influence line theory to position loads for maximum effect. Inputs: span length, number of wheel loads, wheel load magnitudes and spacings. Outputs: absolute maximum bending moment and its location, maximum shear at supports, maximum shear at any specified section, and critical load position diagram.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['moving load analysis', 'moving load beam', 'maximum bending moment moving load', 'influence line beam', 'bridge load analysis', 'crane girder load', 'wheel load beam', 'moving load calculator', 'absolute max moment', 'beam moving loads']
+  },
+  {
+    slug: 'principal-stress-transformation-calculator',
+    title: 'Principal Stress & Stress Transformation Calculator',
+    description: 'Calculate principal stresses, maximum shear stress, and stress components on any inclined plane from a 2D stress state.',
+    detailDesc: '2D stress transformation calculator: inputs sigma_x, sigma_y, tau_xy (plane stress state). Calculates: principal stresses (sigma_1, sigma_2) and their orientations (theta_p1, theta_p2), maximum in-plane shear stress (tau_max) and its orientation, stress components on any inclined plane at angle theta (sigma_n, tau_nt), von Mises equivalent stress, and Mohr circle parameters (center, radius). Includes graphical Mohr circle visualization.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['principal stress', 'stress transformation', 'mohr circle calculator', 'maximum shear stress', 'plane stress analysis', 'stress on inclined plane', 'sigma1 sigma2', 'stress rotation', 'von mises stress', '2d stress state calculator']
+  },
+  {
+    slug: 'slab-load-distribution-calculator',
+    title: 'One-Way & Two-Way Slab Load Distribution Calculator',
+    description: 'Calculate load distribution from one-way and two-way slabs to supporting beams based on span ratios and support conditions.',
+    detailDesc: 'Slab load distribution per classical theory: one-way slabs (L/B > 2) distribute load to two supporting beams as uniform load. Two-way slabs (L/B <= 2) distribute load to all four beams using triangular/trapezoidal yield line patterns. Inputs: slab dimensions (short span Lx, long span Ly), slab thickness, unit weight, live load, and finish load. Outputs: beam load distribution diagrams (triangular, trapezoidal, uniform), equivalent uniform load for each beam, and maximum bending moment in slab.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['slab load distribution', 'one way slab', 'two way slab', 'slab to beam load', 'tributary load slab', 'slab design calculator', 'triangular trapezoidal load', 'slab span ratio', 'slab load transfer', 'slab beam distribution']
+  },
+  {
+    slug: 'concrete-mix-design-aci-calculator',
+    title: 'Concrete Mix Design Calculator (ACI 211 Method)',
+    description: 'Design concrete mix proportions per ACI 211.1 for target compressive strength, workability, and durability.',
+    detailDesc: 'ACI 211.1-91 mix design: calculates proportions for normal weight concrete. Inputs: target fc, slump, nominal max aggregate size, fineness modulus of sand, specific gravity of cement/coarse/fine aggregate, aggregate moisture content, and exposure condition. Outputs: water-cement ratio, cement content, coarse aggregate content, fine aggregate content, total water, and adjusted batch weights for field moisture. Includes durability checks for sulfate exposure and freeze-thaw.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['concrete mix design', 'aci 211', 'concrete proportioning', 'mix design calculator', 'water cement ratio', 'concrete batch weights', 'aci mix design', 'concrete strength design', 'mix ratio calculator', 'concrete mix proportions']
+  },
+  {
+    slug: 'braced-excavation-analysis-calculator',
+    title: 'Braced Excavation Stability Analysis Calculator',
+    description: 'Calculate earth pressure distribution, strut loads, and wall bending moments for braced excavation systems.',
+    detailDesc: 'Braced excavation analysis using apparent earth pressure diagrams (Peck/Terzaghi/MSHA methods). Inputs: excavation depth, soil properties (gamma, c, phi, Su for clay), groundwater level, surcharge load, strut spacing, and wall type (steel sheet pile, soldier pile, concrete diaphragm). Outputs: earth pressure distribution diagram, strut loads at each level, maximum wall bending moment, required wall section modulus, and embedment depth check. Supports both sand and clay soil profiles.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['braced excavation', 'excavation support', 'strut load calculator', 'apparent earth pressure', 'peck earth pressure', 'sheet pile excavation', 'soldier pile excavation', 'braced cut analysis', 'excavation wall design', 'deep excavation calculator']
+  },
+  {
+    slug: 'anchored-excavation-analysis-calculator',
+    title: 'Anchored Excavation Wall Analysis Calculator',
+    description: 'Calculate anchor forces, wall bending moments, and stability for anchored retaining wall excavation systems.',
+    detailDesc: 'Anchored excavation analysis using free earth support method. Inputs: excavation depth, soil properties (gamma, c, phi), groundwater level, anchor inclination and free length, surcharge load, wall stiffness. Outputs: required anchor force per level, anchor bond length, wall bending moment diagram, maximum bending moment and location, embedment depth for passive resistance, and global stability check. Supports multi-level anchor systems and tied-back sheet pile walls.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['anchored excavation', 'anchor wall analysis', 'ground anchor design', 'tied back wall', 'anchor force calculator', 'free earth support', 'sheet pile anchor', 'anchored retaining wall', 'excavation anchor design', 'anchor bond length']
+  },
+  {
+    slug: 'tunnel-settlement-calculator',
+    title: 'Tunnel Excavation Ground Settlement Calculator',
+    description: 'Calculate surface settlement trough above tunnel excavations using Gaussian/Peck curve method.',
+    detailDesc: 'Tunnel settlement per Peck/Schmidt Gaussian curve: S(x) = Smax * exp(-x^2/(2*i^2)). Inputs: tunnel radius/depth, ground loss ratio (Vl), soil type (clay/sand/rock), volume loss percentage, and tunnel construction method (TBM, NATM, shield). Outputs: maximum settlement (Smax), settlement trough width (i), surface settlement profile at any distance from tunnel centerline, volume of settlement trough, and building damage risk assessment (Burland category). Includes multi-tunnel interaction.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['tunnel settlement', 'ground settlement tunnel', 'peck settlement curve', 'gaussian settlement trough', 'surface settlement excavation', 'tunnel induced settlement', 'volume loss tunnel', 'building damage assessment', 'tunneling settlement', 'subsidence tunnel calculator']
+  },
+  {
+    slug: 'tunnel-rmr-support-calculator',
+    title: 'Tunnel Rock Mass Rating (RMR) & Support Design Calculator',
+    description: 'Calculate Bieniawski RMR score and recommend tunnel support systems based on rock mass quality.',
+    detailDesc: 'RMR (Rock Mass Rating) per Bieniawski 1989: evaluates 5 parameters — uniaxial compressive strength (UCS), RQD, joint spacing, joint condition (roughness, filling, weathering), and groundwater condition. Includes orientation adjustment. Inputs: UCS, RQD, joint data, water inflow, tunnel orientation. Outputs: RMR score (0-100), rock class (I-V), tunnel stand-up time, average joint spacing, and recommended support categories (rock bolts spacing, shotcrete thickness, steel sets, and excavation method).',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['rmr calculator', 'rock mass rating', 'beniawski rmr', 'tunnel support design', 'rock classification', 'tunnel support system', 'rock bolt spacing', 'shotcrete thickness', 'rock quality designation', 'tunnel excavation method']
+  },
+  {
+    slug: 'pipe-jacking-force-calculator',
+    title: 'Pipe Jacking Thrust Force Calculator',
+    description: 'Calculate jacking thrust force required for pipe installation in trenchless pipe jacking operations.',
+    detailDesc: 'Pipe jacking force calculation: total jacking force = face resistance + frictional resistance along pipe length. Face resistance depends on soil type (sand: N-value based, clay: Su based) and cutter face area. Frictional resistance depends on overburden pressure, soil-pipe friction coefficient, pipe outer diameter, and lubrication (bentonite) effectiveness. Inputs: pipe OD, length, depth, soil properties, groundwater level, lubrication type. Outputs: required jacking force per stage, maximum intermediate jacking station (IJS) spacing, pipe stress check, and jacking frame capacity requirement.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['pipe jacking force', 'jacking thrust calculator', 'trenchless pipe installation', 'pipe jacking design', 'jacking force calculation', 'intermediate jacking station', 'pipe jacking friction', 'microtunneling force', 'pipe jacking capacity', 'trenchless calculator']
+  },
+  {
+    slug: 'formwork-design-calculator',
+    title: 'Concrete Formwork Design & Lateral Pressure Calculator',
+    description: 'Calculate concrete lateral pressure on formwork and design formwork components per ACI 347.',
+    detailDesc: 'Formwork design per ACI 347-01: calculates lateral pressure of fresh concrete on vertical formwork (Pmax = Cw*Cc*[150+9000R/T] for walls, Pmax = Cw*Cc*[150+9000R/T] with rate and temperature limits). Inputs: concrete unit weight, placement rate (R), temperature (T), chemical retarder type, pour height, and form height. Outputs: maximum lateral pressure, pressure distribution diagram, required stud spacing, wale spacing, tie rod capacity and spacing, sheathing thickness check, and deflection limit verification (L/360).',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['formwork design', 'concrete formwork calculator', 'lateral pressure concrete', 'aci 347 formwork', 'formwork stud spacing', 'wale design', 'tie rod spacing', 'formwork pressure', 'concrete placement rate', 'formwork deflection check']
+  },
+  {
+    slug: 'scaffold-design-calculator',
+    title: 'Scaffold Design & Load Capacity Calculator',
+    description: 'Calculate scaffold loading, post capacity, and stability per OSHA 1926 and BS EN 12810 standards.',
+    detailDesc: 'Scaffold design per OSHA 29 CFR 1926.451 and BS EN 12810-1: calculates design loads for supported scaffolds. Inputs: scaffold type (tube-and-clamp, system, frame), number of tiers, bay dimensions, lift height, plank type, intended live load (light/medium/heavy duty), wind speed, and number of working levels. Outputs: leg load per standard, required post capacity, brace force, tie-in force and spacing, base plate size, allowable height, and stability ratio. Includes load combination per ASCE 7 and wind load on scaffolding.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['scaffold design', 'scaffold load capacity', 'scaffold calculator', 'osha scaffold', 'bs en 12810', 'scaffolding load', 'scaffold post capacity', 'scaffold tie in', 'scaffold stability', 'tube clamp scaffold design']
+  },
+  {
+    slug: 'bal-fire-risk-assessment-calculator',
+    title: 'Bushfire Attack Level (BAL) Risk Assessment Calculator',
+    description: 'Assess bushfire risk per AS 3959-2018 with both Simplified and Appendix B detailed methods.',
+    detailDesc: 'BAL assessment per AS 3959-2018: calculates Bushfire Attack Level (BAL-LOW to BAL-FZ) using two concurrent methods. Simplified method: uses FDI (Fire Danger Index) lookup tables, vegetation classification, slope distance, and site slope. Appendix B detailed method: calculates radiant heat flux (kW/m2) using flame temperature, emissivity, flame height, view factor, and distance attenuation. Inputs: vegetation type, slope (site and approach), distance to vegetation, FDI region. Outputs: BAL rating, radiant heat flux, recommended construction sections (AS 3959 Sections 3-9), and comparison of both methods.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bal calculator', 'bushfire attack level', 'as 3959', 'bushfire risk assessment', 'radiant heat flux', 'bal low to bal fz', 'bushfire construction standard', 'fire danger index', 'bushfire zone calculator', 'bal assessment tool']
+  },
+  {
+    slug: 'cad-drawing-scale-calculator',
+    title: 'CAD Drawing Scale & Ratio Calculator',
+    description: 'Convert real-world measurements to CAD drawing scales and find the closest standard architectural or engineering scale.',
+    detailDesc: 'Drawing scale calculator: converts between real-world dimensions and drawing dimensions for any scale ratio. Inputs: real-world measurement (with units), drawing measurement, or desired scale ratio. Supports standard architectural scales (1/16, 1/8, 1/4, 1/2, 3/8, 3/4, 1, 1.5, 3 inches per foot) and engineering scales (1:1, 1:2, 1:5, 1:10, 1:20, 1:50, 1:100, 1:200, 1:500, 1:1000). Outputs: exact scale ratio, closest standard scale, scale factor for CAD (LTSCALE, DIMSCALE), viewport zoom factor for paper space, and text height recommendations for each scale.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cad drawing scale', 'scale calculator cad', 'architectural scale converter', 'engineering scale calculator', 'drawing scale ratio', 'ltscale calculator', 'dimscale autocad', 'viewport scale factor', 'cad scale conversion', 'paper space scale']
+  },
+  {
+    slug: 'psychrometric-chart-calculator',
+    title: 'Psychrometric Chart & Air Properties Calculator',
+    description: 'Calculate moist air thermodynamic properties: humidity ratio, enthalpy, dew point, wet bulb, and specific volume.',
+    detailDesc: 'Psychrometric calculator for HVAC and building science: inputs dry-bulb temperature and one of (wet-bulb, relative humidity, dew point, humidity ratio). Calculates: humidity ratio (W, kg/kg), relative humidity (RH, %), enthalpy (h, kJ/kg), dew point temperature (Tdp), wet-bulb temperature (Twb), specific volume (v, m3/kg), vapor pressure (Pv), and saturation pressure (Psat). Supports both SI and IP units. Includes psychrometric process calculations: sensible heating/cooling, humidification, dehumidification, and mixing of two air streams.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['psychrometric calculator', 'air properties calculator', 'humidity ratio', 'wet bulb temperature', 'dew point calculator', 'enthalpy air', 'psychrometric chart', 'moist air properties', 'hvac psychrometric', 'specific volume air']
+  },
+  {
+    slug: 'mitcalc-mechanical-calculator-suite',
+    title: 'MITCalc — Professional Mechanical Engineering Calculation Suite',
+    description: 'Comprehensive Excel-based mechanical calculation library: gears, belts, bearings, springs, shafts, bolts, tolerances, and more.',
+    detailDesc: 'MITCalc is a multi-standard (ANSI, ISO, DIN, BS, CSN, JIS) mechanical engineering calculation suite built on Microsoft Excel. Covers: spur/internal/rack gears, bevel/hypoid gears, worm gears, planetary gearing, timing/V-belt/chain drives, brakes and clutches, rolling/plain bearings, springs (compression/tension/torsion/leaf), beams/buckling/plates/shells, shafts, power/ball screws, flywheels, bolted/shaft/pin connections, force couplings, tolerances and tolerance analysis, welded connections, fluid mechanics, and thermomechanics. Direct 2D/3D CAD output to AutoCAD, Inventor, SolidWorks, CATIA, Creo, and more. Free trial available; paid licenses for full functionality.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['mitcalc', 'mechanical calculation software', 'excel engineering calculator', 'gear design software', 'bearing calculation', 'spring design calculator', 'shaft calculator', 'bolt connection design', 'tolerance analysis software', 'mechanical engineering excel', 'cad integrated calculation']
+  },
+  {
+    slug: 'ptc-mathcad-engineering-calculator',
+    title: 'PTC Mathcad — Engineering Calculation Platform',
+    description: 'Professional engineering calculation software with natural math notation, unit intelligence, and Creo CAD integration.',
+    detailDesc: 'PTC Mathcad Prime is an engineering calculation platform that uses natural math notation with automatic unit tracking and conversion. Features: live mathematical worksheets, symbolic and numeric computation, 2D/3D plotting, programming constructs, data analysis, solve blocks for systems of equations, and CAD integration with PTC Creo (Engineering Notebook). Supports mechanical (stress, dynamics, friction, efficiency), civil/structural (beams, seismic, wind, composite sections), and electrical engineering calculations. Part of PTC ecosystem with Windchill PLM and ThingWorx IoT connectivity. Commercial software with free limited Express version.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['ptc mathcad', 'mathcad prime', 'engineering calculation software', 'mathcad calculator', 'creo mathcad integration', 'engineering notebook', 'unit intelligence calculation', 'mathcad express free', 'windchill integration', 'engineering math software']
+  },
+  {
+    slug: 'calculatoredge-multi-discipline-calculators',
+    title: 'CalculatorEdge — 500+ Free Multi-Discipline Engineering Calculators',
+    description: 'Hundreds of free online engineering calculators across electrical, mechanical, civil, chemical, electronics, and physics disciplines.',
+    detailDesc: 'CalculatorEdge hosts one of the largest collections of free online engineering calculators with hundreds of tools across disciplines: Electrical (Ohms law, power, impedance, transformer, motor), Mechanical (gear, bearing, shaft, beam, stress, fluid), Civil/Structural (beam deflection, column, foundation, concrete), Electronics (RC/RL circuits, filter, oscillator), Chemical (flow, mixing, reaction), Metallurgy (heat treatment, alloy), Oil & Gas (pipe flow, pressure, drilling), Optical (lens, mirror, fiber), Plastics (molding, extrusion), Ceramics, and Physics (kinematics, dynamics, thermodynamics). All calculators are free with no registration.',
+    category: 'calculator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['calculatoredge', 'free engineering calculators', 'online calculator electrical', 'mechanical calculator online', 'civil engineering calculator', 'chemical engineering calculator', 'electronics calculator', 'physics calculator', 'multi discipline calculators', 'free online engineering tools']
+  },
 ];
