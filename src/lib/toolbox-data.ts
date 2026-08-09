@@ -2028,8 +2028,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate involute gear profile parameters: base circle, tooth thickness, and contact ratio.',
     detailDesc: 'db=d*cos(a), contact ratio = sqrt(rb2^2-rb1^2)-sqrt(ra2^2-rb2^2))/(pi*m*cos(a)',
     category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
+    status: 'coming-soon',
+    releasedDate: '2026-07-30',
     origin: 'native',
     keywords: ["involute","mechanical","calculator"]
   },
@@ -4838,5 +4838,479 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     releasedDate: '2026-08-07',
     keywords: ['solid edge shortcuts', 'solid edge hotkeys', 'solid edge keyboard commands'],
+  },
+
+  // ==================== BATCH 1: CAD Format Conversion Third-Party Tools ====================
+
+  {
+    slug: 'cloudconvert-cad-converter',
+    title: 'CloudConvert — Universal CAD File Format Converter',
+    description: 'Convert DWG, DXF, STEP, IGES, STL, OBJ, DGN, and 200+ formats in the cloud with API access.',
+    detailDesc: 'CloudConvert supports over 200 format conversions including CAD-specific formats like DWG→DXF, STEP→STL, DWG→PDF, and IGES→STEP. Offers REST API for batch automation, webhook notifications, and secure cloud processing with automatic file deletion.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['cloudconvert', 'cad format converter', 'dwg to dxf online', 'step to stl converter', 'cloud file conversion api', 'batch cad converter', 'iges to step', 'online cad translator']
+  },
+  {
+    slug: 'autodwg-dwg-to-pdf-converter',
+    title: 'AutoDWG — DWG to PDF & Image Batch Converter',
+    description: 'Batch convert DWG/DXF drawings to high-quality PDF, JPG, PNG, or TIFF without AutoCAD installed.',
+    detailDesc: 'AutoDWG provides standalone desktop and online conversion of DWG/DXF files to PDF with layout preservation, line weight control, and batch processing. Supports AutoCAD R2.5 through 2024 versions. Also exports to raster image formats (JPG, PNG, TIFF, BMP) and DWG↔DXF mutual conversion.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['autodwg', 'dwg to pdf converter', 'dwg to jpg', 'dwg to image', 'batch dwg converter', 'dxf to pdf', 'autocad to pdf without autocad', 'dwg raster export']
+  },
+  {
+    slug: 'anydwg-dwg-converter',
+    title: 'AnyDWG — DWG/DFX to PDF, DOC & Image Converter',
+    description: 'Convert DWG and DXF files to PDF, Word DOC, or image formats with layer and layout preservation.',
+    detailDesc: 'AnyDWG offers DWG→PDF, DWG→DOC (editable Word with vector objects), DWG→Image (JPG/PNG/TIF/GIF/BMP), and DWG↔DXF conversion. Supports batch processing, layout tab preservation, pen width and color mapping, and AutoCAD version downgrading (2024→R14).',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['anydwg', 'dwg to doc converter', 'dwg to pdf', 'dwg to image', 'dxf to word', 'dwg dxf converter', 'autocad to word', 'batch dwg to pdf']
+  },
+  {
+    slug: 'online-dwg-to-svg-converter',
+    title: 'Online DWG to SVG Vector Export Converter',
+    description: 'Convert DWG/DXF drawings to scalable vector graphics (SVG) for web embedding and responsive display.',
+    detailDesc: 'Evaluate cloud-based DWG→SVG converters that preserve vector geometry, layer structure, and text annotations as editable SVG paths. Ideal for web-based CAD viewers, interactive floor plans, and responsive drawing display without rasterization quality loss.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['dwg to svg converter', 'dxf to svg', 'cad to vector web', 'scalable drawing export', 'svg floor plan', 'dwg to svg online', 'autocad to svg', 'responsive cad drawing']
+  },
+  {
+    slug: 'online-step-iges-mutual-converter',
+    title: 'Online STEP ↔ IGES Mutual CAD Translator',
+    description: 'Bidirectional conversion between STEP (ISO 10303) and IGES (Initial Graphics Exchange Specification) formats.',
+    detailDesc: 'Cloud-based translators that convert between STEP (.stp/.step) and IGES (.igs/.iges) parametric CAD formats. Preserves B-rep solids, surface geometry, assembly hierarchy, and PMI annotations. Essential for cross-platform CAD interoperability between CATIA, NX, Creo, SolidWorks, and Inventor.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['step to iges converter', 'iges to step', 'cad format translator', 'iso 10303 converter', 'iges file converter', 'step file converter online', 'parametric cad translation', 'brep converter']
+  },
+  {
+    slug: 'online-sldprt-to-step-converter',
+    title: 'Online SolidWorks SLDPRT/SLDASM to STEP Converter',
+    description: 'Convert proprietary SolidWorks part and assembly files to universal STEP/IGES without SolidWorks license.',
+    detailDesc: 'Cloud services that parse SolidWorks SLDPRT (parts) and SLDASM (assemblies) and export them as STEP AP203/AP214/AP242 files. Preserves parametric features, assembly mates, and configuration data. Enables CAM, FEA, and downstream CAD workflows without a SolidWorks seat.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['sldprt to step', 'solidworks to step converter', 'sldasm to step', 'solidworks file converter online', 'sldprt to iges', 'solidworks export without license', 'solidworks to universal cad']
+  },
+  {
+    slug: 'online-catia-to-step-converter',
+    title: 'Online CATIA V5/V6 to STEP/IGES Converter',
+    description: 'Convert Dassault CATIA CATPart/CATProduct files to neutral STEP or IGES formats in the cloud.',
+    detailDesc: 'Cloud translators that read CATIA V5 (.CATPart, .CATProduct, .CATDrawing) and CATIA V6 (3DXML) files and export them as STEP AP214 or AP242 with full geometric and assembly fidelity. Essential for supply chain collaboration where CATIA licenses are unavailable.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['catia to step converter', 'catpart to step', 'catproduct to step', 'catia v5 to iges', 'catia file converter online', '3dxml to step', 'dassault to universal cad', 'catia export without license']
+  },
+  {
+    slug: 'online-nx-to-step-converter',
+    title: 'Online Siemens NX PRT to STEP/IGES Converter',
+    description: 'Convert Siemens NX part files (.prt) to STEP, IGES, or JT format without NX software.',
+    detailDesc: 'Cloud services that parse Siemens NX .prt files and export neutral STEP AP203/AP214, IGES, or JT (ISO 14306) lightweight visualization format. Preserves feature tree, assembly structure, and PMI data for downstream CAM, CAE, and PLM workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['nx prt to step', 'siemens nx to step converter', 'nx to iges', 'nx file converter online', 'nx to jt converter', 'ug to step', 'siemens nx export without license', 'nx prt translator']
+  },
+  {
+    slug: 'online-inventor-ipt-to-step-converter',
+    title: 'Online Autodesk Inventor IPT/IAM to STEP Converter',
+    description: 'Convert Inventor part (.ipt) and assembly (.iam) files to STEP/IGES without Inventor installed.',
+    detailDesc: 'Cloud translators that read Autodesk Inventor IPT and IAM files and export STEP AP203/AP214 or IGES with parametric geometry, assembly constraints, and iProperties metadata. Enables CAM and FEA workflows for users without Inventor licenses.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['inventor ipt to step', 'inventor iam to step', 'autodesk inventor to step converter', 'ipt to iges', 'inventor file converter online', 'inventor export without license', 'ipt to universal cad']
+  },
+  {
+    slug: 'online-stl-obj-mesh-converter',
+    title: 'Online STL ↔ OBJ ↔ PLY 3D Mesh Format Converter',
+    description: 'Convert between STL, OBJ, PLY, 3MF, and other polygon mesh formats for 3D printing and rendering.',
+    detailDesc: 'Cloud mesh converters that handle STL (binary/ASCII), OBJ (with MTL materials), PLY, 3MF, FBX, and Collada DAE formats. Supports mesh repair (hole filling, normal unification), resolution reduction (decimation), and batch conversion for 3D printing preparation workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['stl to obj converter', 'obj to stl', 'ply to stl', '3mf to stl', 'mesh format converter', '3d printing file converter', 'fbx to stl', 'mesh repair online', 'dae to stl', 'polygon mesh converter']
+  },
+  {
+    slug: 'online-dwg-to-kml-gis-converter',
+    title: 'Online DWG to KML/KMZ GIS Coordinate Converter',
+    description: 'Convert AutoCAD DWG drawings with geospatial data to Google Earth KML/KMZ format.',
+    detailDesc: 'Cloud GIS converters that transform DWG drawings containing coordinate data (latitude/longitude or projected coordinates) into KML/KMZ files for Google Earth visualization. Handles coordinate system transformation, attribute mapping, layer-to-folder conversion, and style mapping for civil and surveying workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['dwg to kml converter', 'dwg to kmz', 'cad to google earth', 'autocad to kml', 'gis coordinate converter', 'dwg to gis', 'civil 3d to kml', 'geospatial cad export']
+  },
+  {
+    slug: 'online-shapefile-to-dwg-converter',
+    title: 'Online Shapefile (SHP) to DWG/DXF GIS Converter',
+    description: 'Convert ESRI Shapefile vector GIS data to AutoCAD DWG or DXF format with attribute preservation.',
+    detailDesc: 'Cloud GIS-to-CAD converters that read ESRI Shapefile (.shp/.shx/.dbf) bundles and export DWG/DXF drawings with layer mapping from GIS attributes. Preserves polyline, polygon, point, and annotation geometries. Supports coordinate system reprojection (WGS84, UTM, State Plane) for civil engineering and surveying workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['shapefile to dwg', 'shp to dxf converter', 'gis to cad converter', 'esri shapefile converter', 'shp to autocad', 'gis vector to dwg', 'shapefile to dxf online', 'arcgis to autocad']
+  },
+  {
+    slug: 'online-dwf-to-dwg-converter',
+    title: 'Online DWF/DWFx to DWG Reverser Converter',
+    description: 'Convert Autodesk DWF and DWFx design web format files back to editable DWG drawings.',
+    detailDesc: 'Cloud converters that reverse-engineer DWF/DWFx (Autodesk Design Web Format) files back into DWG or DXF format. Recovers vector geometry, text, layer structure, and sheet metadata. Useful when original DWG source files are lost but DWF distribution copies remain available.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['dwf to dwg converter', 'dwfx to dwg', 'dwf to dxf', 'autodesk design web format converter', 'dwf reverser', 'dwf to autocad', 'dwf to editable dwg', 'dwf recovery converter']
+  },
+  {
+    slug: 'online-las-to-laz-compressor',
+    title: 'Online LAS to LAZ Point Cloud Compressor',
+    description: 'Compress raw LiDAR LAS files to efficient LAZ format and vice versa for faster cloud transfer.',
+    detailDesc: 'Cloud point cloud compression tools that convert LAS (LiDAR ASCII/binary) to LAZ (lossless compressed) format, reducing file sizes by 70-90% while preserving full point data integrity. Supports batch compression, LAZ→LAS decompression, and metadata preservation for surveying and BIM workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['las to laz converter', 'laz to las', 'lidar file compression', 'point cloud compressor', 'las file compressor online', 'lidar data compression', 'laz decompression', 'point cloud optimization']
+  },
+  {
+    slug: 'online-rvt-to-nwd-navisworks-converter',
+    title: 'Online Revit RVT to Navisworks NWD/NWC Exporter',
+    description: 'Convert Revit models to Navisworks clash detection and project review format in the cloud.',
+    detailDesc: 'Cloud exporters that convert Autodesk Revit (.rvt) models to Navisworks Cache (.nwc) or Navisworks Document (.nwd) format for clash detection, project review, and 4D simulation. Preserves model geometry, material properties, and BIM metadata for multi-disciplinary coordination workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['rvt to nwd converter', 'revit to navisworks', 'rvt to nwc', 'navisworks export online', 'bim clash detection format', 'revit to navisworks converter', 'nwd exporter', 'bim coordination converter']
+  },
+  {
+    slug: 'online-fbx-dae-to-dwg-converter',
+    title: 'Online FBX / Collada DAE to DWG Geometry Converter',
+    description: 'Convert Autodesk FBX and Collada DAE 3D exchange files to DWG/DXF 2D and 3D geometry.',
+    detailDesc: 'Cloud converters that import Autodesk FBX (Filmbox) and Collada DAE (Digital Asset Exchange) 3D animation and exchange files and export them as DWG or DXF geometry. Extracts mesh geometry, texture coordinates, and transform matrices for architectural visualization and game-asset-to-CAD workflows.',
+    category: 'converter',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'third-party',
+    keywords: ['fbx to dwg converter', 'dae to dwg', 'collada to autocad', 'fbx to dxf', 'fbx to cad geometry', 'dae to dxf converter', '3d exchange to dwg', 'fbx geometry extractor']
+  },
+
+  // ==================== BATCH 2: Engineering Reference Cheatsheets ====================
+
+  {
+    slug: 'gdt-symbols-cheatsheet',
+    title: 'GD&T Symbols Quick Reference Chart (ASME Y14.5)',
+    description: 'Complete interactive reference for all 14 ASME Y14.5 Geometric Dimensioning & Tolerancing symbols with tolerance zones and usage examples.',
+    detailDesc: 'Searchable chart of all GD&T symbols: form (straightness, flatness, circularity, cylindricity), profile (line, surface), orientation (parallelism, perpendicularity, angularity), location (position, concentricity, symmetry), runout (circular, total), and datum reference frames. Includes material condition modifiers (MMC, LMC, RFS) and bonus tolerance calculations.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gdt symbols', 'geometric dimensioning and tolerancing', 'asme y14.5', 'gd&t chart', 'tolerance symbols', 'datum reference frame', 'mmc lmc rfs', 'bonus tolerance', 'profile tolerance', 'position tolerance']
+  },
+  {
+    slug: 'welding-symbols-cheatsheet',
+    title: 'Welding Symbols Quick Reference Chart (AWS A2.4 & ISO 2553)',
+    description: 'Interactive guide to AWS A2.4 and ISO 2553 welding symbols including fillet, groove, plug, slot, and surfacing welds with supplementary symbols.',
+    detailDesc: 'Complete welding symbol reference: basic weld types (fillet, square, V, bevel, U, J, flare-V, flare-bevel groove), plug and slot welds, surfacing and backing welds. Supplementary symbols (field weld, all-around, melt-through, backing, spacer). AWS vs ISO symbol comparison side-by-side. Includes weld size, length, pitch, and angle notation rules.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['welding symbols', 'aws a2.4', 'iso 2553', 'weld symbol chart', 'fillet weld symbol', 'groove weld symbol', 'welding notation', 'weld callout', 'welding blueprint reading', 'supplementary weld symbols']
+  },
+  {
+    slug: 'iso-286-tolerance-table',
+    title: 'ISO 286 Limits & Fits Tolerance Grade Reference Table',
+    description: 'Interactive lookup for ISO 286 standard tolerance grades (IT01-IT18) and fundamental deviations for shaft and hole fits.',
+    detailDesc: 'ISO 286-1/2 reference: tolerance grades IT01 through IT18 for nominal sizes 0-3150mm. Fundamental deviations for shafts (a-z) and holes (A-Z). Fit types: clearance (H/h, G/g, F/f), transition (J/j, K/k, N/n), interference (P/p, R/r, S/s). Interactive calculator: enter nominal size and fit designation to get upper/lower deviation limits.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['iso 286', 'limits and fits', 'tolerance grade', 'it01 it18', 'fundamental deviation', 'shaft tolerance', 'hole tolerance', 'clearance fit', 'interference fit', 'transition fit', 'iso limits fits table']
+  },
+  {
+    slug: 'metric-thread-spec-table',
+    title: 'Metric & Imperial Thread Specification Reference Table',
+    description: 'Complete thread data for ISO metric, UNF, UNC, BSW, and NPT threads including pitch, major/minor diameter, tap drill size, and tensile stress area.',
+    detailDesc: 'Thread specification reference: ISO metric coarse (M1-M68) and fine pitches, UNC (1/4-20 to 4-4), UNF (1/4-28 to 1-12), BSW, BSF, NPT, and NPTF. For each thread: major diameter, minor diameter, pitch, threads per inch, tap drill size, tensile stress area, and thread engagement length recommendations. Includes thread class (6g/6h, 2A/2B/3A/3B) tolerances.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['metric thread table', 'iso thread specification', 'unc unf thread', 'npt thread chart', 'tap drill size', 'thread pitch', 'minor diameter', 'tensile stress area', 'thread engagement', 'bsw bsf thread', 'thread class tolerance']
+  },
+  {
+    slug: 'steel-section-properties-table',
+    title: 'Steel Section Properties Reference Table (I-Beam, Channel, Angle, Tube)',
+    description: 'Interactive lookup for standard steel section dimensions, area, moment of inertia, section modulus, and radius of gyration.',
+    detailDesc: 'Steel section properties reference: wide-flange I-beams (W shapes, AISC), European IPE/HEA/HEB, HSS square/rectangular tubes, channels (C/MC), angles (L), and TS round tubes. For each section: depth, flange width, web thickness, cross-sectional area, moment of inertia (Ix/Iy), section modulus (Zx/Zy), radius of gyration (rx/ry), and torsional constant. Searchable by designation or dimensions.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['steel section properties', 'i-beam properties', 'aisc steel shapes', 'ipe heb section', 'hss tube properties', 'channel properties', 'angle iron properties', 'moment of inertia steel', 'section modulus table', 'radius of gyration']
+  },
+  {
+    slug: 'pipe-schedule-reference-table',
+    title: 'Pipe Schedule & Dimensions Reference Table (NPS, DN, Sch 10-160)',
+    description: 'Complete pipe schedule reference with NPS, DN, OD, wall thickness, inside diameter, and weight for steel, stainless, and PVC pipes.',
+    detailDesc: 'Pipe schedule reference: NPS 1/8 through 48, DN 6 through 1200. For each size and schedule (Sch 10, 20, 30, 40, 60, 80, 100, 120, 140, 160, XXS): outside diameter, wall thickness, inside diameter, plain-end weight, and hydrostatic test pressure. Includes ASME B36.10M (carbon steel) and B36.19M (stainless steel) data. PVC and CPVC schedule comparisons included.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['pipe schedule chart', 'nps pipe sizes', 'dn pipe dimensions', 'pipe wall thickness', 'schedule 40 80 pipe', 'asme b36.10', 'pipe inside diameter', 'pipe weight chart', 'stainless pipe schedule', 'pvc pipe dimensions']
+  },
+  {
+    slug: 'cad-file-format-guide',
+    title: 'CAD File Format Comparison Guide (DWG, DXF, STEP, IGES, STL, IFC)',
+    description: 'Side-by-side comparison of 20+ CAD file formats: compatibility, use cases, open vs proprietary, and recommended workflows.',
+    detailDesc: 'CAD file format reference: DWG (AutoCAD native), DXF (open exchange), STEP (ISO 10303, parametric solids), IGES (legacy surface), STL (polygon mesh), OBJ (mesh+materials), IFC (openBIM), RVT (Revit), SLDPRT (SolidWorks), CATPart (CATIA), PRT (NX/I-DEAS), IPT (Inventor), DGN (MicroStation), 3DM (Rhino), JT (lightweight vis), FBX (animation exchange), DAE (Collada), GLTF/GLB (web 3D), 3MF (3D print), AMF (additive mfg). For each: file extension, open/proprietary, typical size, geometry type, and best-use scenario.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cad file format guide', 'dwg vs dxf', 'step vs iges', 'stl vs obj', 'ifc file format', 'cad format comparison', 'cad file types', 'cad interoperability', 'cad translation guide', 'cad file extension reference']
+  },
+  {
+    slug: 'bim-lod-level-reference',
+    title: 'BIM Level of Development (LOD 100-500) Reference Guide',
+    description: 'Interactive guide to BIM LOD levels per AIA G202 and BIMForum specifications with examples and model element requirements.',
+    detailDesc: 'BIM LOD reference: LOD 100 (conceptual/symbolic), LOD 200 (generic approximate), LOD 300 (specific precise geometry), LOD 350 (interfaces with adjacent systems), LOD 400 (fabrication-ready), LOD 500 (as-built verified). For each level: definition, graphical representation, non-graphical data requirements, typical use cases, and example model elements. Includes LOD matrix template for project execution plans.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bim lod', 'level of development', 'lod 100 200 300 400 500', 'aia g202', 'bimforum lod', 'bim model progression', 'lod specification', 'bim execution plan', 'lod matrix', 'bim detail level']
+  },
+  {
+    slug: 'pid-symbols-reference',
+    title: 'P&ID Pipe & Instrumentation Diagram Symbols Library',
+    description: 'Complete interactive reference for ISA-5.1 P&ID symbols: valves, instruments, equipment, piping, and signal types.',
+    detailDesc: 'P&ID symbol reference per ISA-5.1 standard: valves (gate, globe, check, ball, butterfly, relief, control), actuators (pneumatic, electric, hydraulic, solenoid), instruments (transmitters, indicators, controllers, recorders, alarms), equipment (pumps, compressors, heat exchangers, vessels, towers), piping (main, branch, reducer, trap), and signal types (pneumatic, electric, hydraulic, capillary, internal software link). Includes tag numbering convention and instrument letter meanings (T, I, C, R, V, A, S).',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['pid symbols', 'piping and instrumentation diagram', 'isa 5.1', 'valve symbols', 'instrument symbols', 'pid legend', 'control diagram symbols', 'pid drawing symbols', 'process flow symbols', 'isa standard symbols']
+  },
+  {
+    slug: 'electrical-drawing-symbols-reference',
+    title: 'Electrical & Schematic Diagram Symbols Reference Library',
+    description: 'Interactive reference for IEC 60617 and ANSI/IEEE electrical symbols: power, lighting, control, and protection devices.',
+    detailDesc: 'Electrical symbol reference: power sources (battery, generator, transformer, UPS), switching devices (circuit breaker, contactor, relay, switch, fuse), protection (overcurrent, earth leakage, surge protector), lighting (lamp types, emergency, exit), wiring (conductors, junction boxes, conduits, cable trays), grounding (earth, equipotential bonding), motors and generators, and measurement instruments (voltmeter, ammeter, wattmeter). IEC vs ANSI symbol comparison included.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['electrical symbols', 'iec 60617', 'ansi ieee electrical symbols', 'schematic diagram symbols', 'circuit breaker symbol', 'transformer symbol', 'electrical drawing legend', 'lighting symbols', 'wiring diagram symbols', 'electrical blueprint symbols']
+  },
+  {
+    slug: 'hvac-drawing-symbols-reference',
+    title: 'HVAC & Mechanical Drawing Symbols Reference Library',
+    description: 'Interactive reference for HVAC, ductwork, piping, and mechanical equipment symbols per ASHRAE and ISO standards.',
+    detailDesc: 'HVAC symbol reference: air handling units (AHU, RTU, FCU, VAV), ductwork (supply, return, exhaust, flexible, fire damper, volume damper, diffuser, register, grille), piping (chilled water, hot water, steam, refrigerant, condensate), equipment (boiler, chiller, cooling tower, pump, fan, compressor, heat exchanger), valves (globe, gate, check, balancing, control), and instrumentation (temperature, pressure, flow sensors). ASHRAE Standard 135 and ISO 14617 compliant.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['hvac symbols', 'ductwork symbols', 'mechanical drawing symbols', 'ashrae symbols', 'hvac legend', 'duct symbol chart', 'piping symbols hvac', 'mechanical equipment symbols', 'hvac blueprint reading', 'iso 14617 symbols']
+  },
+  {
+    slug: 'architectural-drawing-symbols-reference',
+    title: 'Architectural Drawing Symbols & Notation Reference Library',
+    description: 'Complete reference for architectural plan symbols: doors, windows, walls, stairs, fixtures, and annotation marks.',
+    detailDesc: 'Architectural symbol reference: doors (single, double, sliding, folding, pocket, fire-rated with swing direction), windows (casement, awning, sliding, fixed, bay), walls (exterior, interior, partition, bearing, fire-rated, CMU, brick, concrete), stairs (direction, tread/riser count, up/down notation), plumbing fixtures (toilet, sink, shower, bathtub, urinal, floor drain), kitchen fixtures (stove, refrigerator, dishwasher, sink), electrical (outlets, switches, panels), and annotation (section marks, detail callouts, elevation references, grid lines, level marks). Includes AIA and ISO 7010 conventions.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['architectural symbols', 'floor plan symbols', 'door symbol architecture', 'window symbol drawing', 'wall types symbols', 'architectural drawing legend', 'plumbing fixture symbols', 'architectural notation', 'aia drawing symbols', 'blueprint symbols architecture']
+  },
+
+  // ==================== BATCH 3: Additional CAD Software Shortcuts ====================
+
+  {
+    slug: 'fusion360-shortcuts-sheet',
+    title: 'Autodesk Fusion 360 Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable Fusion 360 shortcut reference for sketch, model, surface, and assembly workflows.',
+    detailDesc: 'Default Fusion 360 keyboard shortcuts from Autodesk official documentation. Covers sketch mode (L for line, R for rectangle, C for circle, A for arc), modeling (E for extrude, J for hole, F for fillet), navigation (Shift+M for home, F6 for fit), and assembly (J for joint). Includes S-key customizable shortcut palette and marking menu gestures.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fusion 360 shortcuts', 'fusion 360 hotkeys', 'autodesk fusion keyboard commands', 'fusion 360 cheat sheet', 'fusion 360 s key', 'fusion 360 marking menu']
+  },
+  {
+    slug: 'catia-shortcuts-sheet',
+    title: 'CATIA V5 Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable CATIA V5 shortcut reference for Part Design, Sketcher, Assembly, and Drafting workbenches.',
+    detailDesc: 'Default CATIA V5 keyboard shortcuts from Dassault official documentation. Covers Sketcher workbench (geometry creation, constraints, trimming), Part Design (pad, pocket, shaft, fillet, chamfer), Assembly Design (manipulation, snap, constraints), and Drafting (view creation, dimensioning, annotations). Includes mouse button combinations and customizable shortcuts.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['catia shortcuts', 'catia v5 hotkeys', 'catia keyboard commands', 'catia cheat sheet', 'dassault catia shortcuts', 'catia sketcher shortcuts', 'catia part design hotkeys']
+  },
+  {
+    slug: 'nx-shortcuts-sheet',
+    title: 'Siemens NX Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable Siemens NX shortcut reference for Modeling, Sketch, Assembly, and Drafting applications.',
+    detailDesc: 'Default Siemens NX keyboard shortcuts from official documentation. Covers Modeling (X for extrude, T for trim, O for offset), Sketch mode (geometry creation, constraints, dimensions), Assembly (add component, mate, move), and Drafting (view, dimension, annotation). Includes role-based shortcut variations and customizable quick access toolbar.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['siemens nx shortcuts', 'nx hotkeys', 'ug nx keyboard commands', 'nx cheat sheet', 'nx modeling shortcuts', 'nx sketch shortcuts', 'unigraphics shortcuts']
+  },
+  {
+    slug: 'creo-shortcuts-sheet',
+    title: 'PTC Creo Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable PTC Creo Parametric shortcut reference for sketch, part, assembly, and drawing modes.',
+    detailDesc: 'Default PTC Creo Parametric keyboard shortcuts from official documentation. Covers sketch mode (line, arc, circle, dimension), part modeling (extrude, revolve, hole, round, chamfer), assembly (component placement, constraints), and drawing (view, dimension, note). Includes mapkey customization guide and legacy Pro/E key mappings.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['creo shortcuts', 'ptc creo hotkeys', 'creo parametric keyboard commands', 'creo cheat sheet', 'pro e shortcuts', 'pro engineer shortcuts', 'creo mapkeys']
+  },
+  {
+    slug: 'bricscad-shortcuts-sheet',
+    title: 'BricsCAD Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable BricsCAD shortcut reference covering 2D drafting, 3D modeling, and BIM workflows.',
+    detailDesc: 'Default BricsCAD keyboard shortcuts from official documentation. Covers 2D drafting (L for line, C for circle, PL for polyline, H for hatch), 3D modeling (DM for direct modeling, 3DROTATE, PUSH/PULL), BIM tools (BIM classification, sections, quantities), and common commands (COPY, MOVE, ROTATE, SCALE, TRIM, EXTEND). Includes LISP compatibility notes and customizable CUI.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bricscad shortcuts', 'bricscad hotkeys', 'bricscad keyboard commands', 'bricscad cheat sheet', 'bricscad 2d shortcuts', 'bricscad 3d shortcuts', 'bricscad bim shortcuts']
+  },
+  {
+    slug: 'freecad-shortcuts-sheet',
+    title: 'FreeCAD Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable FreeCAD shortcut reference for Part Design, Sketcher, Draft, and TechDraw workbenches.',
+    detailDesc: 'Default FreeCAD keyboard shortcuts from official documentation. Covers Part Design workbench (pad, pocket, fillet, chamfer), Sketcher (line, arc, circle, polyline, constraint), Draft workbench (line, rectangle, circle, polygon, dimension), and TechDraw (view, dimension, annotation). Includes workbench switching shortcuts and customizable Python macro triggers.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['freecad shortcuts', 'freecad hotkeys', 'freecad keyboard commands', 'freecad cheat sheet', 'freecad part design shortcuts', 'freecad sketcher shortcuts', 'freecad draft workbench']
+  },
+  {
+    slug: 'civil3d-shortcuts-sheet',
+    title: 'Autodesk Civil 3D Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable Civil 3D shortcut reference for points, surfaces, alignments, profiles, and pipe networks.',
+    detailDesc: 'Default Civil 3D keyboard shortcuts from Autodesk official documentation. Covers points (point creation, coordinate input), surfaces (TIN editing, contours, volumes), alignments (creation, editing, stationing), profiles and sections (sampling, editing), pipe networks (layout, editing, flow analysis), and grading. Includes contextual ribbon tab shortcuts and transparent commands.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['civil 3d shortcuts', 'civil 3d hotkeys', 'autodesk civil 3d keyboard commands', 'civil 3d cheat sheet', 'civil 3d transparent commands', 'civil 3d alignment shortcuts', 'civil 3d surface shortcuts']
+  },
+  {
+    slug: 'microstation-shortcuts-sheet',
+    title: 'Bentley MicroStation Keyboard Shortcuts Cheat Sheet',
+    description: 'Searchable, printable MicroStation shortcut reference for 2D/3D drafting, referencing, and rendering workflows.',
+    detailDesc: 'Default MicroStation keyboard shortcuts from Bentley official documentation. Covers drawing tools (line, arc, circle, block, cell placement), manipulation (move, copy, rotate, scale, mirror), referencing (attach, detach, update), 3D modeling (solid, surface, mesh), and rendering (material, light, camera). Includes function key mapping and task navigation dialog shortcuts.',
+    category: 'cheatsheet',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['microstation shortcuts', 'microstation hotkeys', 'bentley microstation keyboard commands', 'microstation cheat sheet', 'microstation function keys', 'microstation task navigation', 'microstation drawing shortcuts']
+  },
+
+  // ==================== BATCH 4: Troubleshooting Wizards ====================
+
+  {
+    slug: 'dwg-file-size-optimizer-wizard',
+    title: 'DWG File Size Optimizer & Cleanup Wizard',
+    description: 'Decision tree for diagnosing and fixing bloated DWG files: purge nested blocks, remove orphan data, compress, and audit.',
+    detailDesc: 'Step-by-step diagnostic wizard for oversized DWG files. Checks: unreferenced blocks/named objects (PURGE with nested option), orphan DVIEW data, excess annotative scales (SCALELISTEDIT), hidden proxy objects, embedded images/OLE objects, Wipeout frames, dense hatch patterns, unused layers/blocks/linetypes. Recommends commands: PURGE, -PURGE (Regapps), AUDIT, RECOVER, OVERKILL, WBLOCK cleanup, and QSAVE with ISAVEPERCENT tuning.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dwg file too large', 'autocad file size bloat', 'purge dwg', 'reduce dwg size', 'overkill autocad', 'wblock cleanup', 'dwg optimization', 'autocad performance tuning', 'scalelistedit', 'audit recover dwg']
+  },
+  {
+    slug: 'ctb-stb-print-style-troubleshooter',
+    title: 'CTB / STB Print Style Troubleshooter',
+    description: 'Decision tree for diagnosing plot style table issues: missing CTB/STB, wrong line weights, color-mapped vs named styles.',
+    detailDesc: 'Diagnostic wizard for AutoCAD plot style problems. Covers: CTB (color-dependent) vs STB (named) style conflicts, missing plot style table files, line weight not matching CTB settings, page setup override issues, monochrome vs grayscale output, plot style conversion (CONVERTCTB, CONVERTPSTYLES), and CTB file path resolution. Includes troubleshooting for network-shared CTB/STB files and page setup manager conflicts.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['ctb print style', 'stb plot style', 'autocad plot style problem', 'ctb missing', 'convertctb', 'convertpstyles', 'line weight not printing', 'plot style table error', 'color dependent vs named plot style', 'autocad printing troubleshoot']
+  },
+  {
+    slug: 'xref-binding-troubleshooter',
+    title: 'XREF External Reference Binding Troubleshooter',
+    description: 'Decision tree for resolving XREF attachment, binding, and path issues in AutoCAD drawings.',
+    detailDesc: 'Step-by-step diagnostic for XREF problems: unresolved references (file not found), relative vs absolute path issues (RELPATH), nested XREFs, XREF binding errors (BIND vs INSERT vs XBIND), circular references, XCLIP boundary issues, XREF layer visibility overrides, and XREF detach/refuse errors. Covers XREF palette (XREF command), XREFNOTIFY system variable, and PROJECTNAME path resolution.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['xref problem autocad', 'external reference binding', 'xref not found', 'xref path issue', 'bind xref autocad', 'xbind vs bind', 'nested xref', 'xref unresolved', 'xref detach error', 'relative path xref']
+  },
+  {
+    slug: 'layer-property-troubleshooter',
+    title: 'AutoCAD Layer Property Troubleshooter',
+    description: 'Decision tree for diagnosing layer visibility, color, linetype, and property override issues.',
+    detailDesc: 'Diagnostic wizard for layer property problems: layers not displaying (frozen/off/locked), color overrides not applying (CECOLOR, BYLAYER vs BYBLOCK), linetype scale issues (LTSCALE, PSLTSCALE, CELTSCALE), lineweight not showing (LWDISPLAY), layer transparency not plotting (PLOTTRANSPARENCYOVERRIDE), viewport layer overrides (VP freeze, VP color), and layer filter issues. Includes LAYISO, LAYUNISO, LAYWALK, and LAYMRG troubleshooting.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad layer problem', 'layer not showing', 'layer frozen off locked', 'bylayer vs byblock', 'linetype scale issue', 'ltscale psltscale', 'viewport layer override', 'layer color override', 'layiso layuniso', 'autocad layer troubleshoot']
+  },
+  {
+    slug: 'cad-license-error-diagnostic',
+    title: 'CAD License Error Diagnostic Wizard',
+    description: 'Decision tree for diagnosing AutoCAD, Revit, and SolidWorks license errors: network, standalone, and subscription issues.',
+    detailDesc: 'Step-by-step license error diagnostic covering: Autodesk single-user sign-in failures (AdSSO, Autodesk Account), network license server timeout (LMTOOLS, FLEXlm, LMGRD), license borrowing errors, SolidWorks SolidNetWork license issues, expired or mismatched serial numbers, product key errors, "License manager not functioning" (LMGRD not running), port 2080 firewall blocking, and license transfer/deactivation problems. Includes registry key locations and LMUTIL diagnostics.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad license error', 'network license timeout', 'lmtools flexlm', 'autodesk sign in error', 'solidworks license problem', 'license manager not functioning', 'lmgrd not running', 'autodesk license diagnostic', 'flexlm port 2080', 'license borrowing error']
+  },
+  {
+    slug: 'autocad-performance-slowdown-wizard',
+    title: 'AutoCAD Performance Slowdown Diagnostic Wizard',
+    description: 'Decision tree for diagnosing and fixing AutoCAD slowdowns: hardware, drawing corruption, system variables, and display settings.',
+    detailDesc: 'Performance diagnostic wizard covering: hardware acceleration (GEOMAP, HARDWAREACCELERATION, GFXDX11), display performance (WHIPARC, DRAGMODE, RENDERQUALITY), drawing corruption (AUDIT, RECOVER), excessive snap markers (OSMODE, APERTURE), regen slowdowns (REGENMODE, VIEWRES), large coordinate values (UCS follow), annotation scale buildup (SCALELISTEDIT), and system resource checks (memory, disk space, page file). Includes recommended system variable resets and GRAPHICSCONFIG settings.',
+    category: 'troubleshoot',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['autocad slow performance', 'autocad lag fix', 'hardware acceleration autocad', 'autocad regen slow', 'osmode performance', 'viewres autocad', 'graphicsconfig autocad', 'autocad speed optimization', 'autocad drawing slow', 'autocad performance tuning']
   },
 ];
