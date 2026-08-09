@@ -1805,7 +1805,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'worm-gear-calculator',
     title: 'Worm Gear Ratio & Efficiency Calculator',
-    description: 'Calculate worm gear ratio, output speed, torque, and efficiency.',
+    description: 'Calculate worm gear ratio, output speed, torque, and efficiency. Free browser-based engineering calculator.',
     detailDesc: 'i=z2/z1, n2=n1/i, eta=tan(g)*(cos(a)-u*sin(g))/(cos(a)*u+tan(g))',
     category: 'calculator',
     status: 'released',
@@ -1816,7 +1816,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'bevel-gear-calculator',
     title: 'Bevel Gear Geometry Calculator',
-    description: 'Calculate bevel gear pitch cone angles and pitch diameters.',
+    description: 'Calculate bevel gear pitch cone angles and pitch diameters. Free browser-based engineering calculator.',
     detailDesc: 'd1=atan(z1/z2), d2=90-d1, pd=m*z',
     category: 'calculator',
     status: 'released',
@@ -1827,7 +1827,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'power-screw-calculator',
     title: 'Power Screw Torque Calculator',
-    description: 'Calculate torque to raise or lower a load with a power screw.',
+    description: 'Calculate torque to raise or lower a load with a power screw. Free browser-based engineering calculator.',
     detailDesc: 'T_raise = F*dm/2*(l+pi*u*dm)/(pi*dm-u*l)',
     category: 'calculator',
     status: 'released',
@@ -1838,7 +1838,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'keyway-stress-calculator',
     title: 'Keyway Shear & Crushing Stress Calculator',
-    description: 'Calculate shear and compressive stress on a key transmitting torque.',
+    description: 'Calculate shear and compressive stress on a key transmitting torque. Free browser-based engineering calculator.',
     detailDesc: 'tau=2T/(d*w*l), sigma_c=4T/(d*h*l)',
     category: 'calculator',
     status: 'released',
@@ -1860,7 +1860,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'friction-force-calculator',
     title: 'Friction Force Calculator',
-    description: 'Calculate friction force, normal force on flat and inclined surfaces.',
+    description: 'Calculate friction force, normal force on flat and inclined surfaces. Free browser-based engineering calculator.',
     detailDesc: 'Ff=u*N, N=mg*cos(theta)',
     category: 'calculator',
     status: 'released',
@@ -1871,7 +1871,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'pulley-system-calculator',
     title: 'Pulley Mechanical Advantage Calculator',
-    description: 'Calculate mechanical advantage and effort force for pulley systems.',
+    description: 'Calculate mechanical advantage and effort force for pulley systems. Free browser-based engineering calculator.',
     detailDesc: 'MA=n, F=W/MA, L=MA*d',
     category: 'calculator',
     status: 'released',
@@ -1893,7 +1893,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'brake-torque-calculator',
     title: 'Brake Torque & Stopping Distance Calculator',
-    description: 'Calculate braking torque, deceleration, and stopping distance.',
+    description: 'Calculate braking torque, deceleration, and stopping distance. Free browser-based engineering calculator.',
     detailDesc: 'T=Fb*R, a=Fb/m, d=v^2/(2a)',
     category: 'calculator',
     status: 'released',
@@ -1904,7 +1904,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'coupling-torque-calculator',
     title: 'Coupling Torque Calculator',
-    description: 'Calculate coupling nominal and design torque from power and speed.',
+    description: 'Calculate coupling nominal and design torque from power and speed. Free browser-based engineering calculator.',
     detailDesc: 'Tn=P*9550/n, Td=Tn*SF',
     category: 'calculator',
     status: 'released',
@@ -1926,7 +1926,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'planetary-gear-calculator',
     title: 'Planetary Gear Set Ratio Calculator',
-    description: 'Calculate planetary gear ratios for sun, ring, and carrier configs.',
+    description: 'Calculate planetary gear ratios for sun, ring, and carrier configs. Free browser-based engineering calculator.',
     detailDesc: '(ws-wc)/(wr-wc)=-zr/zs',
     category: 'calculator',
     status: 'released',
@@ -1948,7 +1948,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'wind-load-calculator',
     title: 'Wind Load Pressure Calculator ASCE 7',
-    description: 'Calculate wind pressure on structures using ASCE 7 parameters.',
+    description: 'Calculate wind pressure on structures using ASCE 7 parameters. Free browser-based engineering calculator.',
     detailDesc: 'qz=0.613*Kz*Kzt*Kd*V^2, p=qz*G*Cp',
     category: 'calculator',
     status: 'released',
@@ -1959,7 +1959,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'snow-load-calculator',
     title: 'Snow Load Calculator ASCE 7',
-    description: 'Calculate roof snow load from ground snow and exposure factors.',
+    description: 'Calculate roof snow load from ground snow and exposure factors. Free browser-based engineering calculator.',
     detailDesc: 'pf=0.7*Ce*Ct*Is*pg, ps=pf*Cs',
     category: 'calculator',
     status: 'released',
@@ -1981,7 +1981,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'retaining-wall-calculator',
     title: 'Retaining Wall Earth Pressure Calculator',
-    description: 'Calculate active and passive earth pressure using Rankine method.',
+    description: 'Calculate active and passive earth pressure using Rankine method. Free browser-based engineering calculator.',
     detailDesc: 'Ka=tan(45-f/2)^2, Pa=0.5*g*H^2*Ka',
     category: 'calculator',
     status: 'released',
@@ -1992,7 +1992,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'bearing-capacity-calculator',
     title: 'Soil Bearing Capacity Calculator Terzaghi',
-    description: 'Calculate ultimate bearing capacity of shallow foundations.',
+    description: 'Calculate ultimate bearing capacity of shallow foundations. Free browser-based engineering calculator.',
     detailDesc: 'qu=c*Nc+g*Df*Nq+0.5*g*B*Ng',
     category: 'calculator',
     status: 'released',
@@ -2080,7 +2080,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'torsion-bar-calculator',
     title: 'Torsion Bar Spring Calculator',
-    description: 'Calculate torsion bar spring rate, angle of twist, and shear stress.',
+    description: 'Calculate torsion bar spring rate, angle of twist, and shear stress. Free browser-based engineering calculator.',
     detailDesc: 'theta=TL/(GJ), tau=T*r/J, J=pi*d^4/32',
     category: 'calculator',
     status: 'released',
@@ -2091,7 +2091,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'impact-force-calculator',
     title: 'Impact Force Calculator',
-    description: 'Calculate impact force from drop height, mass, and stopping distance.',
+    description: 'Calculate impact force from drop height, mass, and stopping distance. Free browser-based engineering calculator.',
     detailDesc: 'F = m*g*h/d + m*g',
     category: 'calculator',
     status: 'released',
@@ -2135,7 +2135,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'steel-beam-load-calculator',
     title: 'Steel Beam Load Capacity Calculator',
-    description: 'Calculate allowable load and bending stress for steel beams.',
+    description: 'Calculate allowable load and bending stress for steel beams. Free browser-based engineering calculator.',
     detailDesc: 'M = sigma_z * Z, W = 8*M/L^2 for simply supported',
     category: 'calculator',
     status: 'released',
@@ -2157,7 +2157,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'pile-capacity-calculator',
     title: 'Pile End Bearing Capacity Calculator',
-    description: 'Calculate pile end bearing and skin friction capacity.',
+    description: 'Calculate pile end bearing and skin friction capacity. Free browser-based engineering calculator.',
     detailDesc: 'Qb = Ap*Nc*cu, Qs = sum(As*alpha*cu)',
     category: 'calculator',
     status: 'released',
@@ -2179,7 +2179,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'settlement-calculator',
     title: 'Foundation Settlement Calculator',
-    description: 'Calculate immediate settlement of shallow foundations on soil.',
+    description: 'Calculate immediate settlement of shallow foundations on soil. Free browser-based engineering calculator.',
     detailDesc: 'S = q*B*(1-v^2)*Iw/E',
     category: 'calculator',
     status: 'released',
@@ -2190,7 +2190,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'thermal-stress-calculator',
     title: 'Thermal Stress Calculator',
-    description: 'Calculate thermal stress and expansion in constrained members.',
+    description: 'Calculate thermal stress and expansion in constrained members. Free browser-based engineering calculator.',
     detailDesc: 'sigma = E*alpha*dT, dL = alpha*L*dT',
     category: 'calculator',
     status: 'released',
@@ -2201,7 +2201,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'composite-section-calculator',
     title: 'Composite Section Transform Calculator',
-    description: 'Calculate transformed section properties for composite beams.',
+    description: 'Calculate transformed section properties for composite beams. Free browser-based engineering calculator.',
     detailDesc: 'n = E1/E2, A_trans = n*A, I_trans = n*I',
     category: 'calculator',
     status: 'released',
@@ -2256,7 +2256,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'weir-flow-calculator',
     title: 'Weir Flow Rate Calculator',
-    description: 'Calculate flow rate over rectangular and V-notch weirs.',
+    description: 'Calculate flow rate over rectangular and V-notch weirs. Free browser-based engineering calculator.',
     detailDesc: 'Rect: Q=2/3*Cd*b*sqrt(2g)*H^1.5, V: Q=8/15*Cd*tan(a/2)*sqrt(2g)*H^2.5',
     category: 'calculator',
     status: 'released',
@@ -2300,7 +2300,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cooling-load-calculator',
     title: 'Cooling Load Calculator',
-    description: 'Calculate sensible, latent, and total cooling load for HVAC design.',
+    description: 'Calculate sensible, latent, and total cooling load for HVAC design. Free browser-based engineering calculator.',
     detailDesc: 'QS = 1.23*Q*dT, QL = 3*Q*dW, QT = QS+QL',
     category: 'calculator',
     status: 'released',
@@ -2520,7 +2520,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'forging-force-calculator',
     title: 'Forging Force Calculator',
-    description: 'Calculate forging force and work for hot and cold forging operations.',
+    description: 'Calculate forging force and work for hot and cold forging operations. Free browser-based engineering calculator.',
     detailDesc: 'F = sigma_f * A * flow_factor',
     category: 'calculator',
     status: 'released',
@@ -2542,7 +2542,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'rolling-force-calculator',
     title: 'Rolling Force Calculator',
-    description: 'Calculate rolling force and torque for flat rolling operations.',
+    description: 'Calculate rolling force and torque for flat rolling operations. Free browser-based engineering calculator.',
     detailDesc: 'F = sigma * L * w, L = sqrt(R*dh)',
     category: 'calculator',
     status: 'released',
@@ -2597,7 +2597,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: '3d-print-layer-time-calculator',
     title: '3D Print Layer Time Calculator',
-    description: 'Calculate time per layer and total print time from layer parameters.',
+    description: 'Calculate time per layer and total print time from layer parameters. Free browser-based engineering calculator.',
     detailDesc: 't_layer = perimeter/v + infill_area/(v*nozzle)',
     category: 'calculator',
     status: 'released',
@@ -2740,7 +2740,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'paint-quantity-calculator',
     title: 'Paint Quantity Calculator',
-    description: 'Calculate paint liters needed from area, coats, and coverage rate.',
+    description: 'Calculate paint liters needed from area, coats, and coverage rate. Free browser-based engineering calculator.',
     detailDesc: 'L = A * coats / coverage',
     category: 'calculator',
     status: 'released',
@@ -2762,7 +2762,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'insulation-r-value-calculator',
     title: 'Insulation R-Value Calculator',
-    description: 'Calculate total R-value for multi-layer wall assemblies and U-value.',
+    description: 'Calculate total R-value for multi-layer wall assemblies and U-value. Free browser-based engineering calculator.',
     detailDesc: 'R_total = sum(R_i), U = 1/R_total',
     category: 'calculator',
     status: 'released',
@@ -2795,7 +2795,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cut-fill-volume-calculator',
     title: 'Cut & Fill Volume Calculator',
-    description: 'Calculate cut and fill earthwork volumes from grid levels.',
+    description: 'Calculate cut and fill earthwork volumes from grid levels. Free browser-based engineering calculator.',
     detailDesc: 'V = A_grid * sum(depths)/n for each grid cell',
     category: 'calculator',
     status: 'released',
@@ -2806,7 +2806,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'concrete-slab-volume-calculator',
     title: 'Concrete Slab Volume Calculator',
-    description: 'Calculate concrete volume, bags of cement, and cost for slab pours.',
+    description: 'Calculate concrete volume, bags of cement, and cost for slab pours. Free browser-based engineering calculator.',
     detailDesc: 'V = L*W*T, bags = V/m3_per_bag',
     category: 'calculator',
     status: 'released',
@@ -2817,7 +2817,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'rebar-spacing-calculator',
     title: 'Rebar Spacing & Quantity Calculator',
-    description: 'Calculate rebar quantity, spacing, and weight for slabs and walls.',
+    description: 'Calculate rebar quantity, spacing, and weight for slabs and walls. Free browser-based engineering calculator.',
     detailDesc: 'N = ceil(L/spacing)+1, weight = N*L*unit_weight',
     category: 'calculator',
     status: 'released',
@@ -2828,7 +2828,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'mortar-quantity-calculator',
     title: 'Mortar Quantity Calculator',
-    description: 'Calculate mortar volume and cement bags for brick and block walls.',
+    description: 'Calculate mortar volume and cement bags for brick and block walls. Free browser-based engineering calculator.',
     detailDesc: 'V_mortar = wall_volume * mortar_ratio',
     category: 'calculator',
     status: 'released',
@@ -2883,7 +2883,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'water-pipe-sizing-calculator',
     title: 'Water Pipe Sizing Calculator',
-    description: 'Calculate minimum pipe diameter from flow rate and maximum velocity.',
+    description: 'Calculate minimum pipe diameter from flow rate and maximum velocity. Free browser-based engineering calculator.',
     detailDesc: 'D = sqrt(4*Q/(pi*v_max))',
     category: 'calculator',
     status: 'released',
@@ -2894,7 +2894,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'stormwater-runoff-calculator',
     title: 'Stormwater Runoff Calculator (Rational Method)',
-    description: 'Calculate peak stormwater runoff using the rational method Q = C*i*A.',
+    description: 'Calculate peak stormwater runoff using the rational method Q = C*i*A. Free browser-based engineering calculator.',
     detailDesc: 'Q = C * i * A / 360',
     category: 'calculator',
     status: 'released',
@@ -2916,7 +2916,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'rack-pinion-calculator',
     title: 'Rack & Pinion Calculator',
-    description: 'Calculate rack and pinion linear speed, force, and torque conversion.',
+    description: 'Calculate rack and pinion linear speed, force, and torque conversion. Free browser-based engineering calculator.',
     detailDesc: 'v = pi*d*n/60, F = 2*T/d',
     category: 'calculator',
     status: 'released',
@@ -2949,7 +2949,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'hertz-contact-stress-calculator',
     title: 'Hertz Contact Stress Calculator',
-    description: 'Calculate Hertzian contact stress between two curved surfaces.',
+    description: 'Calculate Hertzian contact stress between two curved surfaces. Free browser-based engineering calculator.',
     detailDesc: 'sigma_max = 0.918*sqrt(F*E_sum/(R_sum*L))',
     category: 'calculator',
     status: 'released',
@@ -2960,7 +2960,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'von-mises-stress-calculator',
     title: 'Von Mises Stress Calculator',
-    description: 'Calculate von Mises equivalent stress from 3D principal stresses.',
+    description: 'Calculate von Mises equivalent stress from 3D principal stresses. Free browser-based engineering calculator.',
     detailDesc: 'svm = sqrt(0.5*((s1-s2)^2+(s2-s3)^2+(s3-s1)^2))',
     category: 'calculator',
     status: 'released',
@@ -3026,7 +3026,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'natural-frequency-calculator',
     title: 'Natural Frequency Calculator',
-    description: 'Calculate natural frequency of spring-mass, beam, and shaft systems.',
+    description: 'Calculate natural frequency of spring-mass, beam, and shaft systems. Free browser-based engineering calculator.',
     detailDesc: 'fn = 1/(2pi)*sqrt(k/m) for SDOF',
     category: 'calculator',
     status: 'released',
@@ -3059,7 +3059,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'gyroscopic-couple-calculator',
     title: 'Gyroscopic Couple Calculator',
-    description: 'Calculate gyroscopic couple and precession for rotating discs.',
+    description: 'Calculate gyroscopic couple and precession for rotating discs. Free browser-based engineering calculator.',
     detailDesc: 'C = I*omega*omega_p',
     category: 'calculator',
     status: 'released',
@@ -3070,7 +3070,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'manometer-pressure-calculator',
     title: 'Manometer Pressure Calculator',
-    description: 'Calculate pressure difference from manometer fluid height difference.',
+    description: 'Calculate pressure difference from manometer fluid height difference. Free browser-based engineering calculator.',
     detailDesc: 'dP = (rho_fluid - rho_air) * g * h',
     category: 'calculator',
     status: 'released',
@@ -3092,7 +3092,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'pump-power-calculator',
     title: 'Pump Hydraulic Power Calculator',
-    description: 'Calculate hydraulic and shaft power for pumps from head and flow.',
+    description: 'Calculate hydraulic and shaft power for pumps from head and flow. Free browser-based engineering calculator.',
     detailDesc: 'Ph = rho*g*Q*H, Ps = Ph/eta',
     category: 'calculator',
     status: 'released',
@@ -3114,7 +3114,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'drag-force-calculator',
     title: 'Drag Force Calculator',
-    description: 'Calculate aerodynamic and hydrodynamic drag force on objects.',
+    description: 'Calculate aerodynamic and hydrodynamic drag force on objects. Free browser-based engineering calculator.',
     detailDesc: 'Fd = 0.5 * Cd * rho * A * v^2',
     category: 'calculator',
     status: 'released',
@@ -3147,7 +3147,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'welding-fillet-size-calculator',
     title: 'Welding Fillet Size Calculator',
-    description: 'Calculate minimum fillet weld size per AWS and ISO standards.',
+    description: 'Calculate minimum fillet weld size per AWS and ISO standards. Free browser-based engineering calculator.',
     detailDesc: 'Min leg size = 1/8 * thinner plate, max = 3/4 * thickness',
     category: 'calculator',
     status: 'released',
@@ -3158,7 +3158,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'bending-force-calculator',
     title: 'Press Brake Bending Force Calculator',
-    description: 'Calculate press brake tonnage for air bending V-die operations.',
+    description: 'Calculate press brake tonnage for air bending V-die operations. Free browser-based engineering calculator.',
     detailDesc: 'F = 1.42 * sigma_t * L * t^2 / V',
     category: 'calculator',
     status: 'released',
@@ -3169,7 +3169,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'punching-force-calculator',
     title: 'Punching Force Calculator',
-    description: 'Calculate punching and shearing force for sheet metal operations.',
+    description: 'Calculate punching and shearing force for sheet metal operations. Free browser-based engineering calculator.',
     detailDesc: 'F = perimeter * thickness * shear_strength',
     category: 'calculator',
     status: 'released',
@@ -3180,7 +3180,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'sheet-metal-blank-calculator',
     title: 'Sheet Metal Blank Size Calculator',
-    description: 'Calculate blank development length for bent sheet metal parts.',
+    description: 'Calculate blank development length for bent sheet metal parts. Free browser-based engineering calculator.',
     detailDesc: 'L = L1 + L2 + BA, BA = (angle/360)*2pi*(R+K*T)',
     category: 'calculator',
     status: 'released',
@@ -3378,7 +3378,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'heat-transfer-conduction-calculator',
     title: 'Conduction Heat Transfer Calculator',
-    description: 'Calculate heat transfer through walls and slabs using Fourier law.',
+    description: 'Calculate heat transfer through walls and slabs using Fourier law. Free browser-based engineering calculator.',
     detailDesc: 'Q = k * A * dT / L',
     category: 'calculator',
     status: 'released',
@@ -3389,7 +3389,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'fin-efficiency-calculator',
     title: 'Fin Efficiency Calculator',
-    description: 'Calculate fin efficiency and effectiveness for heat sink design.',
+    description: 'Calculate fin efficiency and effectiveness for heat sink design. Free browser-based engineering calculator.',
     detailDesc: 'eta = tanh(m*L)/(m*L), m = sqrt(2*h/(k*t))',
     category: 'calculator',
     status: 'released',
@@ -3488,7 +3488,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'stack-height-calculator',
     title: 'Chimney Stack Height Calculator',
-    description: 'Calculate required chimney height for natural draft and dispersion.',
+    description: 'Calculate required chimney height for natural draft and dispersion. Free browser-based engineering calculator.',
     detailDesc: 'H = draft / (rho*g*(1/Tamb-1/Tstack))',
     category: 'calculator',
     status: 'released',
@@ -3577,7 +3577,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'revit-family-param-calculator',
     title: 'Revit Family Parameter Calculator',
-    description: 'Calculate Revit family type parameters and dimensional constraints.',
+    description: 'Calculate Revit family type parameters and dimensional constraints. Free browser-based engineering calculator.',
     detailDesc: 'Rough opening = dim + 2*clearance',
     category: 'calculator',
     status: 'released',
@@ -3588,7 +3588,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'ifc-entity-counter',
     title: 'IFC Entity Counter and Validator',
-    description: 'Calculate IFC file entity counts and spatial hierarchy metrics.',
+    description: 'Calculate IFC file entity counts and spatial hierarchy metrics. Free browser-based engineering calculator.',
     detailDesc: 'Count by IfcClass, check hierarchy levels',
     category: 'calculator',
     status: 'released',
@@ -3610,7 +3610,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'survey-stakeout-calculator',
     title: 'Survey Stakeout Coordinate Calculator',
-    description: 'Calculate stakeout coordinates from benchmark bearing and distance.',
+    description: 'Calculate stakeout coordinates from benchmark bearing and distance. Free browser-based engineering calculator.',
     detailDesc: 'Easting/Northing from bearing and distance',
     category: 'calculator',
     status: 'released',
@@ -3632,7 +3632,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'coordinate-converter-calculator',
     title: 'Coordinate System Converter',
-    description: 'Convert between lat/long and UTM coordinate systems.',
+    description: 'Convert between lat/long and UTM coordinate systems. Free online engineering unit converter.',
     detailDesc: 'Lat/lon to UTM zone and easting/northing',
     category: 'calculator',
     status: 'released',
@@ -3643,7 +3643,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'material-density-calculator',
     title: 'Material Density and Weight Calculator',
-    description: 'Calculate weight and volume of engineering materials from dimensions.',
+    description: 'Calculate weight and volume of engineering materials from dimensions. Free browser-based engineering calculator.',
     detailDesc: 'W = density * volume',
     category: 'calculator',
     status: 'released',
@@ -3676,7 +3676,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'corrosion-rate-calculator',
     title: 'Corrosion Rate Calculator',
-    description: 'Calculate corrosion rate from mass loss and exposure area.',
+    description: 'Calculate corrosion rate from mass loss and exposure area. Free browser-based engineering calculator.',
     detailDesc: 'CR = 87.6*W/(D*A*T) mm/year',
     category: 'calculator',
     status: 'released',
@@ -3687,7 +3687,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'paint-coverage-calculator',
     title: 'Paint Coverage and Cost Calculator',
-    description: 'Calculate paint quantity, coverage, and cost from surface area.',
+    description: 'Calculate paint quantity, coverage, and cost from surface area. Free browser-based engineering calculator.',
     detailDesc: 'Volume = Area * coats / coverage_rate',
     category: 'calculator',
     status: 'released',
@@ -3698,7 +3698,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'steel-grade-selector',
     title: 'Steel Grade Strength Calculator',
-    description: 'Calculate yield and tensile strength for common steel grades.',
+    description: 'Calculate yield and tensile strength for common steel grades. Free browser-based engineering calculator.',
     detailDesc: 'Properties from grade lookup table',
     category: 'calculator',
     status: 'released',
@@ -3709,7 +3709,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'wood-beam-calculator',
     title: 'Wood Beam Span Calculator',
-    description: 'Calculate allowable span and deflection for wood beams.',
+    description: 'Calculate allowable span and deflection for wood beams. Free browser-based engineering calculator.',
     detailDesc: 'M_allow = Fb*S, check deflection L/360',
     category: 'calculator',
     status: 'released',
@@ -3742,7 +3742,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'thread-lead-calculator',
     title: 'Thread Lead and Pitch Calculator',
-    description: 'Calculate thread lead, pitch, helix angle, and turns per inch.',
+    description: 'Calculate thread lead, pitch, helix angle, and turns per inch. Free browser-based engineering calculator.',
     detailDesc: 'Lead = pitch * starts, helix = atan(lead/(pi*dm))',
     category: 'calculator',
     status: 'released',
@@ -3753,7 +3753,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'gear-ratio-bike-calculator',
     title: 'Bicycle Gear Ratio Calculator',
-    description: 'Calculate bicycle gear ratio, development, and cadence speed.',
+    description: 'Calculate bicycle gear ratio, development, and cadence speed. Free browser-based engineering calculator.',
     detailDesc: 'Ratio = chainring/cog, speed = ratio * wheel * cadence',
     category: 'calculator',
     status: 'released',
@@ -3764,7 +3764,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'horsepower-torque-calculator',
     title: 'Horsepower and Torque Calculator',
-    description: 'Calculate horsepower from torque and RPM.',
+    description: 'Calculate horsepower from torque and RPM. Free browser-based engineering calculator.',
     detailDesc: 'HP = T*RPM/5252',
     category: 'calculator',
     status: 'released',
@@ -3775,7 +3775,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'gear-module-pitch-calculator',
     title: 'Gear Module and Diametral Pitch Calculator',
-    description: 'Convert between metric module and imperial diametral pitch.',
+    description: 'Convert between metric module and imperial diametral pitch. Free online engineering unit converter.',
     detailDesc: 'm = 25.4/DP, d = m*z',
     category: 'calculator',
     status: 'released',
@@ -3797,7 +3797,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'bearing-static-load-calculator',
     title: 'Bearing Static Load Capacity Calculator',
-    description: 'Calculate bearing static load rating and equivalent static load.',
+    description: 'Calculate bearing static load rating and equivalent static load. Free browser-based engineering calculator.',
     detailDesc: 'P0 = X0*Fr + Y0*Fa',
     category: 'calculator',
     status: 'released',
@@ -3808,7 +3808,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'v-belt-length-calculator',
     title: 'V-Belt Length Calculator',
-    description: 'Calculate V-belt length from pulley diameters and center distance.',
+    description: 'Calculate V-belt length from pulley diameters and center distance. Free browser-based engineering calculator.',
     detailDesc: 'L = 2C + pi*(D+d)/2 + (D-d)^2/(4C)',
     category: 'calculator',
     status: 'released',
@@ -3830,7 +3830,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'hydrostatic-pressure-calculator',
     title: 'Hydrostatic Pressure Calculator',
-    description: 'Calculate hydrostatic pressure at depth in fluids.',
+    description: 'Calculate hydrostatic pressure at depth in fluids. Free browser-based engineering calculator.',
     detailDesc: 'P = rho*g*h',
     category: 'calculator',
     status: 'released',
@@ -3841,7 +3841,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'lift-force-calculator',
     title: 'Aerodynamic Lift Force Calculator',
-    description: 'Calculate lift force from velocity, wing area, and lift coefficient.',
+    description: 'Calculate lift force from velocity, wing area, and lift coefficient. Free browser-based engineering calculator.',
     detailDesc: 'Fl = 0.5*rho*v^2*Cl*A',
     category: 'calculator',
     status: 'released',
@@ -3852,7 +3852,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'manometer-calculator',
     title: 'Manometer Pressure Calculator',
-    description: 'Calculate pressure difference from manometer fluid height.',
+    description: 'Calculate pressure difference from manometer fluid height. Free browser-based engineering calculator.',
     detailDesc: 'dP = (rho_fluid - rho_air) * g * h',
     category: 'calculator',
     status: 'released',
@@ -3863,7 +3863,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'notch-stress-calculator',
     title: 'Notch Stress Concentration Calculator',
-    description: 'Calculate stress concentration factor at notches and fillets.',
+    description: 'Calculate stress concentration factor at notches and fillets. Free browser-based engineering calculator.',
     detailDesc: 'Kt = 1 + 2*sqrt(a/r), sigma_max = Kt*sigma_nom',
     category: 'calculator',
     status: 'released',
@@ -3874,7 +3874,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'press-fit-calculator',
     title: 'Press Fit Interference Calculator',
-    description: 'Calculate interference fit pressure and assembly force for shaft-hub.',
+    description: 'Calculate interference fit pressure and assembly force for shaft-hub. Free browser-based engineering calculator.',
     detailDesc: 'p = delta*E/(2*D), F = p*pi*D*L*mu',
     category: 'calculator',
     status: 'released',
@@ -3885,7 +3885,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'gasket-seal-calculator',
     title: 'Gasket Sealing Pressure Calculator',
-    description: 'Calculate gasket seating pressure and bolt torque for flanged joints.',
+    description: 'Calculate gasket seating pressure and bolt torque for flanged joints. Free browser-based engineering calculator.',
     detailDesc: 'Wm = A*g*y, T = Wm*k*d/2',
     category: 'calculator',
     status: 'released',
@@ -3896,7 +3896,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'vibration-frequency-calculator',
     title: 'Natural Frequency Calculator',
-    description: 'Calculate natural frequency of spring-mass and beam systems.',
+    description: 'Calculate natural frequency of spring-mass and beam systems. Free browser-based engineering calculator.',
     detailDesc: 'fn = 1/(2pi)*sqrt(k/m)',
     category: 'calculator',
     status: 'released',
@@ -3918,7 +3918,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'pressure-unit-converter',
     title: 'Pressure Unit Converter',
-    description: 'Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, and kg/cm2.',
+    description: 'Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, and kg/cm2. Free online engineering unit converter.',
     detailDesc: '1 bar = 100kPa = 14.5psi = 0.987atm',
     category: 'converter',
     status: 'released',
@@ -3929,7 +3929,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'force-unit-converter',
     title: 'Force Unit Converter',
-    description: 'Convert between N, kN, MN, kgf, lbf, and ton-force.',
+    description: 'Convert between N, kN, MN, kgf, lbf, and ton-force. Free online engineering unit converter.',
     detailDesc: '1 kgf = 9.807N, 1 lbf = 4.448N',
     category: 'converter',
     status: 'released',
@@ -3940,7 +3940,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'energy-unit-converter',
     title: 'Energy Unit Converter',
-    description: 'Convert between J, kJ, MJ, kWh, cal, BTU, and ft-lbf.',
+    description: 'Convert between J, kJ, MJ, kWh, cal, BTU, and ft-lbf. Free online engineering unit converter.',
     detailDesc: '1 kWh = 3.6MJ = 3412 BTU',
     category: 'converter',
     status: 'released',
@@ -3951,7 +3951,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'flow-rate-unit-converter',
     title: 'Flow Rate Unit Converter',
-    description: 'Convert between L/s, m3/h, GPM, CFM, and L/min.',
+    description: 'Convert between L/s, m3/h, GPM, CFM, and L/min. Free online engineering unit converter.',
     detailDesc: '1 m3/h = 0.278 L/s = 4.403 GPM',
     category: 'converter',
     status: 'released',
@@ -3973,7 +3973,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'torque-unit-converter',
     title: 'Torque Unit Converter',
-    description: 'Convert between Nm, kNm, ft-lbf, in-lbf, kgf-m torque units.',
+    description: 'Convert between Nm, kNm, ft-lbf, in-lbf, kgf-m torque units. Free online engineering unit converter.',
     detailDesc: '1 ft-lbf = 1.356 Nm',
     category: 'converter',
     status: 'released',
@@ -3984,7 +3984,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'power-unit-converter',
     title: 'Power Unit Converter',
-    description: 'Convert between W, kW, MW, HP, BTU/h, and tons refrigeration.',
+    description: 'Convert between W, kW, MW, HP, BTU/h, and tons refrigeration. Free online engineering unit converter.',
     detailDesc: '1 HP = 745.7W, 1 ton = 3.517kW',
     category: 'converter',
     status: 'released',
@@ -3995,7 +3995,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'density-unit-converter',
     title: 'Density Unit Converter',
-    description: 'Convert between kg/m3, g/cm3, lb/ft3, lb/in3, and kg/L.',
+    description: 'Convert between kg/m3, g/cm3, lb/ft3, lb/in3, and kg/L. Free online engineering unit converter.',
     detailDesc: '1 g/cm3 = 1000 kg/m3 = 62.43 lb/ft3',
     category: 'converter',
     status: 'released',
@@ -4006,7 +4006,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'viscosity-unit-converter',
     title: 'Viscosity Unit Converter',
-    description: 'Convert between cP, Pa.s, Poise, lb/ft.s, and cSt.',
+    description: 'Convert between cP, Pa.s, Poise, lb/ft.s, and cSt. Free online engineering unit converter.',
     detailDesc: '1 Pa.s = 1000 cP = 10 Poise',
     category: 'converter',
     status: 'released',
@@ -4017,7 +4017,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'area-unit-converter',
     title: 'Area Unit Converter',
-    description: 'Convert between m2, cm2, mm2, ft2, in2, acre, hectare, and km2.',
+    description: 'Convert between m2, cm2, mm2, ft2, in2, acre, hectare, and km2. Free online engineering unit converter.',
     detailDesc: '1 m2 = 10.764 ft2, 1 acre = 4047 m2',
     category: 'converter',
     status: 'released',
@@ -4028,7 +4028,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'volume-unit-converter',
     title: 'Volume Unit Converter',
-    description: 'Convert between m3, L, mL, ft3, in3, gallon, barrel, and cm3.',
+    description: 'Convert between m3, L, mL, ft3, in3, gallon, barrel, and cm3. Free online engineering unit converter.',
     detailDesc: '1 m3 = 1000L = 35.315 ft3 = 264.17 gal',
     category: 'converter',
     status: 'released',
@@ -4039,7 +4039,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'speed-unit-converter',
     title: 'Speed Unit Converter',
-    description: 'Convert between m/s, km/h, mph, ft/s, knot, and mach.',
+    description: 'Convert between m/s, km/h, mph, ft/s, knot, and mach. Free online engineering unit converter.',
     detailDesc: '1 m/s = 3.6 km/h = 2.237 mph',
     category: 'converter',
     status: 'released',
@@ -4050,7 +4050,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'mass-unit-converter',
     title: 'Mass Unit Converter',
-    description: 'Convert between kg, g, mg, ton, lb, oz, slug, and quintal.',
+    description: 'Convert between kg, g, mg, ton, lb, oz, slug, and quintal. Free online engineering unit converter.',
     detailDesc: '1 kg = 2.205 lb, 1 ton = 1000 kg',
     category: 'converter',
     status: 'released',
@@ -4061,7 +4061,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'temperature-unit-converter',
     title: 'Temperature Unit Converter',
-    description: 'Convert between Celsius, Fahrenheit, Kelvin, and Rankine.',
+    description: 'Convert between Celsius, Fahrenheit, Kelvin, and Rankine. Free online engineering unit converter.',
     detailDesc: 'C=(F-32)*5/9, K=C+273.15',
     category: 'converter',
     status: 'released',
@@ -4072,7 +4072,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'length-unit-converter',
     title: 'Length Unit Converter',
-    description: 'Convert between m, cm, mm, km, in, ft, yd, mile, and nautical mile.',
+    description: 'Convert between m, cm, mm, km, in, ft, yd, mile, and nautical mile. Free online engineering unit converter.',
     detailDesc: '1 m = 3.281 ft = 39.37 in',
     category: 'converter',
     status: 'released',
@@ -4105,7 +4105,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'fillet-weld-size-calculator',
     title: 'Fillet Weld Size Calculator',
-    description: 'Calculate minimum fillet weld size and throat thickness.',
+    description: 'Calculate minimum fillet weld size and throat thickness. Free browser-based engineering calculator.',
     detailDesc: 'Throat = 0.707*leg',
     category: 'calculator',
     status: 'released',
@@ -4116,7 +4116,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'hole-stackup-calculator',
     title: 'Hole Position Tolerance Stackup Calculator',
-    description: 'Calculate worst-case and statistical hole position tolerance stackup.',
+    description: 'Calculate worst-case and statistical hole position tolerance stackup. Free browser-based engineering calculator.',
     detailDesc: 'WC=sum(t), RSS=sqrt(sum(t^2))',
     category: 'calculator',
     status: 'released',
@@ -4127,7 +4127,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cutting-speed-calculator',
     title: 'Cutting Surface Speed Calculator',
-    description: 'Calculate cutting speed from spindle RPM and diameter.',
+    description: 'Calculate cutting speed from spindle RPM and diameter. Free browser-based engineering calculator.',
     detailDesc: 'Vc = pi*D*n/1000 m/min',
     category: 'calculator',
     status: 'released',
