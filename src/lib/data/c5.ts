@@ -450,7 +450,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "The 'gold standard' for the professional machine shop.",
 
-
   last_updated: "2025-07-03",
   version: "2027"
 },
@@ -604,7 +603,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "The future of advanced manufacturing design.",
 
-
   last_updated: "2024-08-30",
   version: "2024"
 },
@@ -738,7 +736,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "iMachining is literal magic for CNC shops.",
-
 
   last_updated: "2024-11-26",
   version: "2026"
@@ -892,144 +889,7 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
 
-
   last_updated: "2023-09-12",
-  version: "2024"
-},
-{
-  id: "t40",
-  name: "OpenCASCADE",
-  slug: "opencascade",
-  logo_url: getLogo("OC"),
-  short_desc: "The open-source geometry kernel for CAD developers.",
-  description: "Open CASCADE Technology (OCCT) is an open-source development platform for 3D CAD/CAM/CAE. It provides a geometry modeling kernel and data exchange tools.",
-
-  pricing_tiers: [
-    {
-      name: "Open Source",
-      price: "0",
-      period: "/yr",
-      features: [
-        "B-Rep kernel",
-        "Visualization",
-        "Data exchange"
-      ],
-      is_popular: true
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Kernel",
-      items: [
-        {
-          name: "B-Rep Modeler",
-          status: true
-        },
-        {
-          name: "STEP/IGES Lib",
-          status: true
-        },
-        {
-          name: "Visualization",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "freecad",
-    "siemens-nx",
-    "solidcam"
-  ],
-
-  country: "France",
-  category_id: "c5",
-  pricing_type: "Free",
-  starting_price: 0,
-
-  platforms: [
-    "Windows",
-    "macOS",
-    "Linux"
-  ],
-
-  industries: [
-    "Software Dev",
-    "Research"
-  ],
-
-  core_features: [
-    "B-Rep Modeling Kernel",
-    "Data Exchange",
-    "Visualization Lib"
-  ],
-
-  user_scales: [
-    "Individuals",
-    "Enterprise"
-  ],
-
-  official_url: "https://www.opencascade.com",
-  pricing_url: "https://www.opencascade.com",
-  affiliate_url: null,
-  score: 4.8,
-
-  pros: [
-    "Complete free B-Rep kernel",
-    "Foundation of FreeCAD",
-    "Customizable"
-  ],
-
-  cons: [
-    "Very hard to learn",
-    "C++ knowledge req",
-    "Basic documentation"
-  ],
-
-  faqs: [
-    {
-      q: "What is OpenCASCADE used for?",
-      a: "The open-source geometry kernel for CAD developers. OpenCASCADE is a CAE / CAM solution widely adopted in Software Dev, Research."
-    },
-    {
-      q: "How much does OpenCASCADE cost?",
-      a: "OpenCASCADE is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
-    },
-    {
-      q: "Is OpenCASCADE really free?",
-      a: "Yes — OpenCASCADE is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
-    },
-    {
-      q: "What operating systems does OpenCASCADE support?",
-      a: "OpenCASCADE runs on Windows, macOS, and Linux."
-    },
-    {
-      q: "Which file formats does OpenCASCADE support?",
-      a: "OpenCASCADE works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
-    },
-    {
-      q: "What are the best alternatives to OpenCASCADE?",
-      a: "The closest alternatives within the CAE/CAM space are FreeCAD, Siemens NX, SolidCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "OpenCASCADE Kernel",
-    multicore: "High",
-    gpu_optimization: "Customizable",
-    standards: [
-      "STEP",
-      "IGES",
-      "B-Rep"
-    ]
-  },
-
-  expert_verdict: "The most important open-source project in CAD history.",
-
-
-  last_updated: "2026-08-03",
   version: "2024"
 },
 {
@@ -1122,7 +982,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
-
 
   last_updated: "2026-08-03",
   version: "2024"
@@ -1217,7 +1076,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
-
 
   last_updated: "2026-08-03",
   version: "2024"
@@ -1378,7 +1236,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-12-30",
   version: "2026 R1"
 },
@@ -1500,7 +1357,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2023-06-10",
   version: "2024"
@@ -1629,103 +1485,6 @@ export const c5Tools: Tool[] = [
   version: "2024"
 },
 {
-  id: "t87",
-  name: "ESI Visual-Environment",
-  slug: "esi-visual-environment",
-  logo_url: "",
-  short_desc: "Virtual prototyping platform for crash and comfort simulation.",
-  description: "ESI Visual-Environment is a unified pre- and post-processing platform for virtual manufacturing and performance simulation, covering crash, NVH, welding and composites.",
-  country: "France",
-  category_id: "c5",
-  pricing_type: "Subscription",
-  starting_price: 15000,
-  price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
-
-  industries: [
-    "Automotive",
-    "Aerospace",
-    "Shipbuilding"
-  ],
-
-  core_features: [
-    "Crash Simulation (PAM-CRASH)",
-    "NVH Analysis",
-    "Welding Simulation",
-    "Composites Design"
-  ],
-
-  user_scales: [
-    "Enterprise"
-  ],
-
-  official_url: "https://www.esi-group.com/products/virtual-performance",
-  pricing_url: "https://www.esi-group.com/products/virtual-performance",
-  affiliate_url: null,
-  score: 4.7,
-
-  pros: [
-    "Leading crash simulation (PAM-CRASH)",
-    "Comprehensive virtual manufacturing",
-    "Strong automotive heritage"
-  ],
-
-  cons: [
-    "Niche market focus",
-    "Very high cost",
-    "Limited community resources"
-  ],
-
-  faqs: [
-    {
-      q: "What is ESI Visual-Environment used for?",
-      a: "Virtual prototyping platform for crash and comfort simulation. ESI Visual-Environment is a CAE / CAM solution widely adopted in Automotive, Aerospace, Shipbuilding."
-    },
-    {
-      q: "How much does ESI Visual-Environment cost?",
-      a: "ESI Visual-Environment starts at $15,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
-    },
-    {
-      q: "Is there a free version of ESI Visual-Environment?",
-      a: "ESI Visual-Environment is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
-    },
-    {
-      q: "What operating systems does ESI Visual-Environment support?",
-      a: "ESI Visual-Environment runs on Windows and Linux."
-    },
-    {
-      q: "Which file formats does ESI Visual-Environment support?",
-      a: "ESI Visual-Environment works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
-    },
-    {
-      q: "What are the best alternatives to ESI Visual-Environment?",
-      a: "The closest alternatives within the CAE/CAM space are Siemens NX, SolidCAM, Altair HyperWorks. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "PAM-CRASH Solver",
-    multicore: "Ultra",
-    gpu_optimization: "High",
-    standards: [
-      "STEP",
-      "IGES",
-      "LS-DYNA",
-      "Nastran"
-    ]
-  },
-
-  expert_verdict: "The automotive crash simulation specialist trusted by European OEMs for decades.",
-
-
-  last_updated: "2026-08-03",
-  version: "2024"
-},
-{
   id: "t93",
   name: "CAMWorks",
   slug: "camworks",
@@ -1817,7 +1576,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
-
 
   last_updated: "2026-08-03",
   version: "2026"
@@ -1973,413 +1731,7 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
 
-
   last_updated: "2023-10-26",
-  version: "2024"
-},
-{
-  id: "t106",
-  name: "BeckerCAD",
-  slug: "beckercad",
-  logo_url: getLogo("BE"),
-  short_desc: "German CAD/CAM software for mechanical engineering and manufacturing.",
-  description: "BeckerCAD is a German CAD/CAM software solution designed for mechanical engineering and manufacturing. It provides integrated tools for 2D/3D design, sheet metal working, and CNC machining. The software is particularly popular in the German-speaking market for its comprehensive manufacturing capabilities.",
-
-  pricing_tiers: [
-    {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "Basic CAD/CAM tools",
-        "Sheet metal design",
-        "CNC machining"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "All Standard features",
-        "Advanced modeling",
-        "Automation tools",
-        "API integration"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "CAD",
-      items: [
-        {
-          name: "2D/3D CAD modeling",
-          status: true
-        },
-        {
-          name: "Parametric design",
-          status: true
-        },
-        {
-          name: "Assembly design",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Sheet Metal",
-      items: [
-        {
-          name: "Sheet metal design",
-          status: true
-        },
-        {
-          name: "Bending calculation",
-          status: true
-        },
-        {
-          name: "Unfolding",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "CAM",
-      items: [
-        {
-          name: "2.5D to 5-axis milling",
-          status: true
-        },
-        {
-          name: "Turning",
-          status: true
-        },
-        {
-          name: "NC code generation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Integration",
-      items: [
-        {
-          name: "PDM integration",
-          status: true
-        },
-        {
-          name: "ERP connection",
-          status: true
-        },
-        {
-          name: "Team collaboration",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "topsolid",
-    "cadmeister",
-    "visi"
-  ],
-
-  country: "Germany",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 3000,
-  price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Mechanical Engineering",
-    "Sheet Metal",
-    "Manufacturing"
-  ],
-
-  core_features: [
-    "CAD/CAM",
-    "Sheet Metal",
-    "CNC",
-    "Parametric"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company"
-  ],
-
-  official_url: "https://www.beckercad.de/",
-  pricing_url: "https://www.beckercad.de/",
-  affiliate_url: null,
-  score: 3.4,
-
-  pros: [
-    "Reliable German engineering standards",
-    "Strong sheet metal design tools",
-    "Integrated CAD/CAM workflow",
-    "Excellent cost-performance ratio",
-    "Strong European market presence"
-  ],
-
-  cons: [
-    "Smaller global plugin ecosystem",
-    "Limited English documentation",
-    "Fewer advanced 3D surfacing tools"
-  ],
-
-  faqs: [
-    {
-      q: "What is BeckerCAD used for?",
-      a: "BeckerCAD is German CAD/CAM software for mechanical engineering and manufacturing."
-    },
-    {
-      q: "How much does BeckerCAD cost?",
-      a: "BeckerCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
-    },
-    {
-      q: "Is there a free version of BeckerCAD?",
-      a: "BeckerCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
-    },
-    {
-      q: "What operating systems does BeckerCAD support?",
-      a: "BeckerCAD runs on Windows."
-    },
-    {
-      q: "Which file formats does BeckerCAD support?",
-      a: "BeckerCAD works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to BeckerCAD?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, CADmeister, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "BeckerCAD Engine",
-    multicore: "Yes",
-    gpu_optimization: "Basic",
-    standards: [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF"
-    ]
-  },
-
-  expert_verdict: "An accessible German 2D/3D CAD utility, excellent for architectural layouts and mechanical drafting.",
-
-
-  last_updated: "2023-06-30",
-  version: "2024"
-},
-{
-  id: "t112",
-  name: "CADmeister",
-  slug: "cadmeister",
-  logo_url: getLogo("CA"),
-  short_desc: "Japanese CAD/CAM software for mold and die design with 3D modeling capabilities.",
-  description: "CADmeister is a Japanese CAD/CAM software solution designed for mold and die design with comprehensive 3D modeling capabilities. It provides integrated tools for mold design, electrode design, and CNC machining. The software is particularly popular in the Japanese manufacturing industry for its specialized mold design features.",
-
-  pricing_tiers: [
-    {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "Basic CAD/CAM features",
-        "Mold design tools",
-        "3D modeling"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "All Standard features",
-        "Electrode design",
-        "Advanced CAM modules",
-        "Design automation"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Mold Design",
-      items: [
-        {
-          name: "3D mold design",
-          status: true
-        },
-        {
-          name: "Parting surface",
-          status: true
-        },
-        {
-          name: "Cooling channel design",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Electrode Design",
-      items: [
-        {
-          name: "Electrode modeling",
-          status: true
-        },
-        {
-          name: "Burn area calculation",
-          status: true
-        },
-        {
-          name: "Electrode management",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "CAM",
-      items: [
-        {
-          name: "2.5D to 5-axis milling",
-          status: true
-        },
-        {
-          name: "High-speed machining",
-          status: true
-        },
-        {
-          name: "NC code generation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Integration",
-      items: [
-        {
-          name: "DWG compatibility",
-          status: true
-        },
-        {
-          name: "STEP/IGES import",
-          status: true
-        },
-        {
-          name: "Team collaboration",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "topsolid",
-    "beckercad",
-    "visi"
-  ],
-
-  country: "Japan",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 4000,
-  price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Mold Making",
-    "Die Design",
-    "Manufacturing"
-  ],
-
-  core_features: [
-    "Mold Design",
-    "Electrode",
-    "CAD/CAM",
-    "3D Modeling"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company"
-  ],
-
-  official_url: "https://www.biprogy-uel.co.jp/cadmeister/",
-  pricing_url: "https://www.biprogy-uel.co.jp/cadmeister/",
-  affiliate_url: null,
-  score: 3.4,
-
-  pros: [
-    "Dedicated mold and die design automation",
-    "Renowned electrode design capabilities",
-    "High DWG format compatibility",
-    "Strong manufacturing automation features",
-    "Excellent localized industry support"
-  ],
-
-  cons: [
-    "Limited global plugin ecosystem",
-    "Fewer English documentation resources",
-    "Narrow focus on mold-specific engineering",
-    "Premium pricing tiers"
-  ],
-
-  faqs: [
-    {
-      q: "What is CADmeister used for?",
-      a: "CADmeister is Japanese CAD/CAM software for mold and die design with 3D modeling capabilities."
-    },
-    {
-      q: "How much does CADmeister cost?",
-      a: "CADmeister is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
-    },
-    {
-      q: "Is there a free version of CADmeister?",
-      a: "CADmeister is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
-    },
-    {
-      q: "What operating systems does CADmeister support?",
-      a: "CADmeister runs on Windows."
-    },
-    {
-      q: "Which file formats does CADmeister support?",
-      a: "CADmeister works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to CADmeister?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, Visi. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "CADmeister Engine",
-    multicore: "Yes",
-    gpu_optimization: "Basic",
-    standards: [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF"
-    ]
-  },
-
-  expert_verdict: "A specialized Japanese CAD/CAM system for mold and die design, offering highly efficient tooling algorithms.",
-  last_updated: "2023-05-04",
   version: "2024"
 },
 {
@@ -2582,7 +1934,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
-
 
   last_updated: "2024-04-14",
   version: "2024"
@@ -2789,7 +2140,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
 
-
   last_updated: "2024-06-19",
   version: "2024"
 },
@@ -2992,7 +2342,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
-
 
   last_updated: "2023-06-09",
   version: "2024"
@@ -3199,7 +2548,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Autodesk's feature-based CAM software, designed to automate CNC programming through built-in intelligence.",
 
-
   last_updated: "2023-09-15",
   version: "2026"
 },
@@ -3405,7 +2753,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A highly visual, task-oriented CAM system, exceptionally efficient for programming multi-task machining centers.",
 
-
   last_updated: "2024-09-23",
   version: "2024"
 },
@@ -3609,7 +2956,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "OPEN MIND's premier 5-axis CAM suite, outstanding for high-precision machining and collision avoidance.",
-
 
   last_updated: "2023-01-02",
   version: "2026.1"
@@ -3815,7 +3161,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
 
-
   last_updated: "2023-04-04",
   version: "2024"
 },
@@ -4019,7 +3364,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
 
-
   last_updated: "2024-12-11",
   version: "2024"
 },
@@ -4222,7 +3566,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
 
-
   last_updated: "2023-02-17",
   version: "2024"
 },
@@ -4424,7 +3767,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
-
 
   last_updated: "2024-09-25",
   version: "2024"
@@ -4629,7 +3971,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
 
-
   last_updated: "2023-04-01",
   version: "2024"
 },
@@ -4833,7 +4174,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
 
-
   last_updated: "2023-09-28",
   version: "2024"
 },
@@ -5036,213 +4376,7 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
 
-
   last_updated: "2024-05-30",
-  version: "2024"
-},
-{
-  id: "t178",
-  name: "WoodWOP",
-  slug: "woodwop",
-  logo_url: "/logos/woodwop.png",
-  short_desc: "German CAM software for woodworking machinery, furniture, and kitchen production.",
-  description: "WoodWOP by HOMAG is a German CAM software solution for woodworking machinery, furniture, and kitchen production. It provides comprehensive tools for CNC programming of woodworking machines with a focus on furniture production, flooring, kitchen cabinets, and solid wood processing.",
-
-  pricing_tiers: [
-    {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "Basic wood machining",
-        "Cabinet design templates",
-        "CNC router programming"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "All Standard features",
-        "Advanced nesting",
-        "Barcode/labeling automation",
-        "HOMAG machine bridge"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Woodworking",
-      items: [
-        {
-          name: "Furniture production",
-          status: true
-        },
-        {
-          name: "Kitchen production",
-          status: true
-        },
-        {
-          name: "Solid wood processing",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "CAM",
-      items: [
-        {
-          name: "CNC programming",
-          status: true
-        },
-        {
-          name: "NC code generation",
-          status: true
-        },
-        {
-          name: "Machine simulation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Integration",
-      items: [
-        {
-          name: "HOMAG integration",
-          status: true
-        },
-        {
-          name: "CAD import",
-          status: true
-        },
-        {
-          name: "Production line",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Optimization",
-      items: [
-        {
-          name: "Material optimization",
-          status: true
-        },
-        {
-          name: "Nesting",
-          status: true
-        },
-        {
-          name: "Cost reduction",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
-  ],
-
-  country: "Germany",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 4500,
-  price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Furniture",
-    "Woodworking",
-    "Kitchen",
-    "Flooring"
-  ],
-
-  core_features: [
-    "CAM",
-    "Woodworking",
-    "CNC",
-    "Furniture"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company",
-    "Enterprise"
-  ],
-
-  official_url: "https://www.homag.com/en/product-detail/software-woodwop",
-  pricing_url: "https://www.homag.com/en/product-detail/software-woodwop",
-  affiliate_url: null,
-  score: 3.7,
-
-  pros: [
-    "Indispensable specialization for woodworking and cabinetry CNC",
-    "Direct, seamless integration with HOMAG CNC machinery",
-    "Highly visual and user-friendly workshop programming",
-    "Outstanding nesting and material yield optimization",
-    "Deeply trusted in European cabinetry and kitchen industries"
-  ],
-
-  cons: [
-    "Premium software acquisition cost",
-    "Restricted mostly to HOMAG hardware ecosystems",
-    "Completely unsuited for metal CNC machining"
-  ],
-
-  faqs: [
-    {
-      q: "What is WoodWOP used for?",
-      a: "WoodWOP is German CAM software for woodworking machinery, furniture, and kitchen production."
-    },
-    {
-      q: "How much does WoodWOP cost?",
-      a: "WoodWOP is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
-    },
-    {
-      q: "Is there a free version of WoodWOP?",
-      a: "WoodWOP is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
-    },
-    {
-      q: "What operating systems does WoodWOP support?",
-      a: "WoodWOP runs on Windows."
-    },
-    {
-      q: "Which file formats does WoodWOP support?",
-      a: "WoodWOP works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to WoodWOP?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "WoodWOP Engine",
-    multicore: "Yes",
-    gpu_optimization: "Basic",
-    standards: [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF"
-    ]
-  },
-
-  expert_verdict: "HOMAG's dedicated CNC programming system, engineered specifically for wood fabrication and router routing.",
-
-
-  last_updated: "2023-04-07",
   version: "2024"
 },
 {
@@ -5444,7 +4578,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
-
 
   last_updated: "2023-02-14",
   version: "2024"
@@ -5648,7 +4781,6 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
 
-
   last_updated: "2024-09-10",
   version: "2024"
 },
@@ -5850,7 +4982,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
-
 
   last_updated: "2023-08-20",
   version: "2024"
@@ -6055,211 +5186,7 @@ export const c5Tools: Tool[] = [
 
   expert_verdict: "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
 
-
   last_updated: "2024-02-29",
-  version: "2024"
-},
-{
-  id: "t184",
-  name: "MetaCAM",
-  slug: "metacam",
-  logo_url: getLogo("ME"),
-  short_desc: "US-based sheet metal CAD/CAM software for punching, cutting, and fabrication.",
-  description: "MetaCAM by Metamation is a US-based sheet metal CAD/CAM software solution for punching, cutting, and fabrication. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and automation for fabrication workshops.",
-
-  pricing_tiers: [
-    {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "Basic sheet metal design",
-        "CNC profiling",
-        "Standard nesting"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "All Standard features",
-        "Press brake bending simulation",
-        "Laser cutting programming",
-        "Production automation"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Sheet Metal",
-      items: [
-        {
-          name: "Sheet metal design",
-          status: true
-        },
-        {
-          name: "Unfolding",
-          status: true
-        },
-        {
-          name: "Bending calculation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Nesting",
-      items: [
-        {
-          name: "Automatic nesting",
-          status: true
-        },
-        {
-          name: "Material optimization",
-          status: true
-        },
-        {
-          name: "Cost reduction",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "CAM",
-      items: [
-        {
-          name: "CNC punching",
-          status: true
-        },
-        {
-          name: "Laser cutting",
-          status: true
-        },
-        {
-          name: "NC code generation",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Integration",
-      items: [
-        {
-          name: "CAD integration",
-          status: true
-        },
-        {
-          name: "Machine simulation",
-          status: true
-        },
-        {
-          name: "Production management",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
-  ],
-
-  country: "USA",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 3500,
-  price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Sheet Metal",
-    "Fabrication",
-    "Manufacturing"
-  ],
-
-  core_features: [
-    "CAD/CAM",
-    "Sheet Metal",
-    "Nesting",
-    "Punching"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company"
-  ],
-
-  official_url: "https://www.metamation.com/",
-  pricing_url: "https://www.metamation.com/",
-  affiliate_url: null,
-  score: 3.5,
-
-  pros: [
-    "Unified sheet metal cutting and press brake bending programming",
-    "Automated nesting and collision-free bending simulation",
-    "Excellent post-processor support for major fabrication machines",
-    "Highly competitive cost-to-performance ratio",
-    "Trusted by custom sheet metal shops"
-  ],
-
-  cons: [
-    "Fewer enterprise ERP inventory integrations",
-    "Requires dedicated operator training",
-    "Unsuited for 3D continuous milling"
-  ],
-
-  faqs: [
-    {
-      q: "What is MetaCAM used for?",
-      a: "MetaCAM is US-based sheet metal CAD/CAM software for punching, cutting, and fabrication."
-    },
-    {
-      q: "How much does MetaCAM cost?",
-      a: "MetaCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
-    },
-    {
-      q: "Is there a free version of MetaCAM?",
-      a: "MetaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
-    },
-    {
-      q: "What operating systems does MetaCAM support?",
-      a: "MetaCAM runs on Windows."
-    },
-    {
-      q: "Which file formats does MetaCAM support?",
-      a: "MetaCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to MetaCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "MetaCAM Engine",
-    multicore: "Yes",
-    gpu_optimization: "Basic",
-    standards: [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF"
-    ]
-  },
-
-  expert_verdict: "An advanced, enterprise-grade sheet metal CAD/CAM solution featuring outstanding automatic tooling calculations.",
-
-
-  last_updated: "2023-09-06",
   version: "2024"
 },
 {
@@ -6448,7 +5375,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-11-26",
   version: "2026 R1"
 },
@@ -6625,7 +5551,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-08-06",
   version: "2024"
@@ -6804,7 +5729,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2023-04-05",
   version: "2024"
 },
@@ -6981,7 +5905,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2025-06-03",
   version: "2025"
@@ -7162,7 +6085,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2025-07-08",
   version: "6.3"
 },
@@ -7337,7 +6259,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2023-05-11",
   version: "2024"
@@ -7515,7 +6436,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-05-14",
   version: "2412"
@@ -7696,7 +6616,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-04-27",
   version: "2024"
 },
@@ -7873,7 +6792,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-06-30",
   version: "2024"
 },
@@ -8048,7 +6966,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2023-05-28",
   version: "2024"
@@ -8575,7 +7492,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-09-08",
   version: "2024"
 },
@@ -8748,7 +7664,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-01-12",
   version: "2024"
@@ -8925,7 +7840,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2023-06-17",
   version: "2024"
 },
@@ -9101,7 +8015,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-09-29",
   version: "2024"
 },
@@ -9273,7 +8186,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-02-19",
   version: "2024"
@@ -9451,7 +8363,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2023-08-23",
   version: "2024"
 },
@@ -9627,7 +8538,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2023-05-01",
   version: "2024"
@@ -9806,7 +8716,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2024-07-22",
   version: "2024"
 },
@@ -9981,7 +8890,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-08-17",
   version: "2024"
@@ -10158,7 +9066,6 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-
   last_updated: "2026-08-03",
   version: "2024"
 },
@@ -10333,7 +9240,6 @@ export const c5Tools: Tool[] = [
       ]
     }
   ],
-
 
   last_updated: "2024-03-05",
   version: "2024"
@@ -10511,531 +9417,6 @@ export const c5Tools: Tool[] = [
 
   last_updated: "2024-03-14",
   version: "2024"
-},
-{
-  id: "t109",
-  name: "SINOVATION",
-  slug: "sinovation",
-  logo_url: "/logos/sinovation.png",
-  short_desc: "3D CAD/CAM software for mold and die design with integrated manufacturing capabilities.",
-  description: "SINOVATION is a comprehensive 3D CAD/CAM software developed by Hoteam Soft, specifically designed for mold and die design with integrated manufacturing capabilities. It provides advanced tools for part design, mold design, and CNC machining in a unified platform. The software is widely used in the manufacturing industry for complex mold development and production.",
-
-  pricing_tiers: [
-    {
-      name: "Standard",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "Basic 3D design",
-        "Mold design features",
-        "CNC machining modules"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "perpetual",
-      features: [
-        "All Standard features",
-        "Advanced mold design",
-        "Multi-axis machining",
-        "API integration"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Design",
-      items: [
-        {
-          name: "3D parametric modeling",
-          status: true
-        },
-        {
-          name: "Surface modeling",
-          status: true
-        },
-        {
-          name: "Part design",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Mold Design",
-      items: [
-        {
-          name: "Mold base design",
-          status: true
-        },
-        {
-          name: "Parting surface creation",
-          status: true
-        },
-        {
-          name: "Ejector system design",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "CAM",
-      items: [
-        {
-          name: "2-5 axis CNC machining",
-          status: true
-        },
-        {
-          name: "Tool path generation",
-          status: true
-        },
-        {
-          name: "Simulation and verification",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Collaboration",
-      items: [
-        {
-          name: "Team collaboration",
-          status: true
-        },
-        {
-          name: "Design data management",
-          status: true
-        },
-        {
-          name: "Integration with ERP",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "3dexperience",
-    "medusa4",
-    "pconplanner"
-  ],
-
-  country: "China",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 5000,
-  price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Mold Making",
-    "Die Design",
-    "Manufacturing",
-    "Automotive"
-  ],
-
-  core_features: [
-    "3D Design",
-    "Mold Design",
-    "CAM",
-    "CNC Machining",
-    "Integration"
-  ],
-
-  user_scales: [
-    "Small Business",
-    "Mid-Sized Company",
-    "Enterprise"
-  ],
-
-  official_url: "https://sv.hoteamsoft.com/",
-  pricing_url: "https://sv.hoteamsoft.com/",
-  affiliate_url: null,
-  score: 3.5,
-
-  pros: [
-    "Specialized mold and die design tools",
-    "Seamless CAD/CAM manufacturing workflow",
-    "Advanced multi-axis machining support",
-    "Strong industrial customer base",
-    "Robust technical support for manufacturing"
-  ],
-
-  cons: [
-    "Not suited for general mechanical drafting",
-    "Premium licensing costs",
-    "Steep training requirements",
-    "Smaller global developer community"
-  ],
-
-  faqs: [
-    {
-      q: "What is SINOVATION used for?",
-      a: "SINOVATION is 3D CAD/CAM software for mold and die design with integrated manufacturing capabilities."
-    },
-    {
-      q: "How much does SINOVATION cost?",
-      a: "SINOVATION is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
-    },
-    {
-      q: "Is there a free version of SINOVATION?",
-      a: "SINOVATION is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
-    },
-    {
-      q: "What operating systems does SINOVATION support?",
-      a: "SINOVATION runs on Windows."
-    },
-    {
-      q: "Which file formats does SINOVATION support?",
-      a: "SINOVATION works with standard CAD interchange formats including DWG, DXF, STEP, and PDF. Check the vendor's official documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to SINOVATION?",
-      a: "The closest alternatives within the 2D CAD space are 3DEXPERIENCE, MEDUSA4, pCon.planner. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "SINOVATION Engine",
-    multicore: "Yes",
-    gpu_optimization: "Yes",
-    standards: [
-      "DWG",
-      "DXF",
-      "STEP",
-      "PDF"
-    ]
-  },
-  version: "2024",
-
-  expert_verdict: "A high-end 3D CAD/CAM software for mold and die design, widely adopted by automotive manufacturers in Asia.",
-},
-{
-  id: "t123",
-  name: "LUSAS",
-  slug: "lusas",
-  logo_url: "/logos/lusas.png",
-  short_desc: "UK-based finite element analysis software for bridge, civil, structural, composites, and general engineering applications with specialized modules.",
-  description: "LUSAS is a UK-based finite element analysis (FEA) software developed by Finite Element Analysis Ltd., specializing in infrastructure analysis and design. It provides comprehensive solutions for bridge engineering, structural engineering, storage tank analysis, composites engineering, mechanical engineering, and academic/research applications. LUSAS offers specialized modules for different engineering disciplines, including Bridge, Civil, Structural, and Composite analysis. The software supports linear and nonlinear static and dynamic analysis, with capabilities for seismic analysis, geotechnical applications, and BIM integration. LUSAS is widely used by consulting engineers, government agencies, and academic institutions for complex engineering projects requiring advanced structural analysis. Its perpetual licensing model and focus on specific engineering domains make it a preferred choice for specialized analysis work where general-purpose CAD/CAE software may lack depth.",
-
-  pricing_tiers: [
-    {
-      name: "Perpetual License",
-      price: "Contact Sales",
-      period: "perpetual",
-      features: [
-        "Selected module (e.g., Bridge, Civil, Structural)",
-        "Finite element analysis capabilities",
-        "Standard support",
-        "Annual maintenance option"
-      ],
-      is_popular: true
-    },
-    {
-      name: "Academic License",
-      price: "Discounted",
-      period: "perpetual",
-      features: [
-        "Full commercial functionality",
-        "Educational use only",
-        "Student/Research licenses available",
-        "Academic support"
-      ],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Analysis Capabilities",
-      items: [
-        {
-          name: "Linear static analysis",
-          status: true
-        },
-        {
-          name: "Nonlinear analysis",
-          status: true
-        },
-        {
-          name: "Dynamic analysis",
-          status: true
-        },
-        {
-          name: "Seismic analysis",
-          status: true
-        },
-        {
-          name: "Buckling analysis",
-          status: true
-        },
-        {
-          name: "Modal analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Specialized Modules",
-      items: [
-        {
-          name: "Bridge engineering analysis",
-          status: true
-        },
-        {
-          name: "Civil engineering analysis",
-          status: true
-        },
-        {
-          name: "Structural engineering",
-          status: true
-        },
-        {
-          name: "Composites analysis",
-          status: true
-        },
-        {
-          name: "Storage tank analysis",
-          status: true
-        },
-        {
-          name: "Mechanical engineering",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Modeling & Integration",
-      items: [
-        {
-          name: "3D finite element modeling",
-          status: true
-        },
-        {
-          name: "CAD import (DWG, DXF)",
-          status: true
-        },
-        {
-          name: "BIM integration",
-          status: true
-        },
-        {
-          name: "Mesh generation",
-          status: true
-        },
-        {
-          name: "Post-processing visualization",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Advanced Features",
-      items: [
-        {
-          name: "Geotechnical analysis",
-          status: true
-        },
-        {
-          name: "Cable and tendon analysis",
-          status: true
-        },
-        {
-          name: "Construction stage analysis",
-          status: true
-        },
-        {
-          name: "External plugin support",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "midas-civil",
-    "ansys-mechanical",
-    "abaqus"
-  ],
-
-  country: "UK",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  quote_only: true,
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [
-    "Civil Engineering",
-    "Bridge Engineering",
-    "Structural Engineering",
-    "Mechanical Engineering",
-    "Aerospace",
-    "Automotive",
-    "Academic/Research"
-  ],
-
-  core_features: [
-    "Finite Element Analysis",
-    "Bridge Engineering",
-    "Structural Analysis",
-    "Nonlinear Analysis",
-    "Seismic Analysis",
-    "BIM Integration"
-  ],
-
-  user_scales: [
-    "Mid-Sized Company",
-    "Enterprise",
-    "Academic/Research"
-  ],
-
-  official_url: "https://www.lusas.com/",
-  pricing_url: "https://www.lusas.com/",
-  affiliate_url: null,
-  score: 3.5,
-
-  pros: [
-    "Specialized for bridge and civil engineering",
-    "Comprehensive FEA capabilities",
-    "Perpetual licensing model",
-    "UK-based with local support",
-    "Strong academic and research presence",
-    "Specialized modules for specific engineering domains"
-  ],
-
-  cons: [
-    "Windows only, no macOS or Linux support",
-    "Steep learning curve for FEA beginners",
-    "Higher cost compared to general-purpose CAD",
-    "Limited global user community compared to Ansys/Abaqus",
-    "Specialized focus may limit general engineering use",
-    "Pricing not publicly available"
-  ],
-
-  faqs: [
-    {
-      q: "What is LUSAS used for?",
-      a: "LUSAS is a finite element analysis software for bridge, civil, structural, composites, and general engineering applications. It is used for advanced structural analysis, seismic evaluation, and infrastructure design by consulting engineers and academic institutions."
-    },
-    {
-      q: "How much does LUSAS cost?",
-      a: "LUSAS is offered on a perpetual license model with module-based pricing. The vendor does not publish a fixed list price; pricing scales with module bundles, seat counts, and maintenance options. Contact LUSAS for a quotation."
-    },
-    {
-      q: "Is there a free version of LUSAS?",
-      a: "LUSAS is a commercial product without a free permanent tier. Evaluation licenses are available on request. Special academic pricing is available for universities and research institutions."
-    },
-    {
-      q: "What operating systems does LUSAS support?",
-      a: "LUSAS runs on Windows. Specific version compatibility should be confirmed with the vendor."
-    },
-    {
-      q: "Which file formats does LUSAS support?",
-      a: "LUSAS supports DWG and DXF formats for CAD import. It also supports its own LUSAS model files and various export formats. Check the vendor's documentation for the complete list."
-    },
-    {
-      q: "What are the best alternatives to LUSAS?",
-      a: "The closest alternatives to LUSAS are midas Civil, ANSYS Mechanical, Abaqus. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "LUSAS FEA Engine",
-    multicore: "Yes",
-    gpu_optimization: "Limited",
-    standards: [
-      "Eurocode",
-      "AASHTO",
-      "British Standards"
-    ]
-  },
-
-  expert_verdict: "A highly advanced structural finite element analysis program, crucial for complex bridge and structural engineering.",
-  version: "21.0",
-  last_updated: "2025-05-21",
-  free_trial_days: 30,
-
-  languages: [
-    "English"
-  ],
-
-  file_formats_in: [
-    "DWG",
-    "DXF"
-  ],
-
-  file_formats_out: [
-    "DWG",
-    "DXF",
-    "PDF"
-  ],
-
-  integrations: [
-    "BIM Platforms",
-    "CAD Systems"
-  ],
-
-  deployment_options: [
-    "Desktop"
-  ],
-
-  license_types: [
-    "Perpetual",
-    "Educational",
-    "Commercial"
-  ],
-
-  support_channels: [
-    "Email",
-    "Phone",
-    "Documentation",
-    "Training"
-  ],
-
-  security_compliance: [],
-
-  api_sdk: {
-    has_api: true,
-    has_sdk: true,
-    api_type: "API / SDK (C++, Python)",
-    sdk_languages: [
-      "C++",
-      "Python"
-    ],
-    docs_url: "https://www.lusas.com/support/"
-  },
-
-  pricing_breakdown: [
-    {
-      tier: "Module License",
-      price: "Contact Sales",
-      notes: "Perpetual license per module (e.g., Bridge, Civil, Structural)"
-    },
-    {
-      tier: "Academic License",
-      price: "Discounted",
-      notes: "Educational and research use with full functionality"
-    }
-  ],
-
-  key_capabilities: [
-    "FEA Analysis",
-    "Bridge Engineering",
-    "Structural Analysis",
-    "Nonlinear Analysis",
-    "Seismic Analysis"
-  ],
-
 },
 {
   id: "t126",
@@ -11486,158 +9867,6 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
-},
-{
-  id: "t135",
-  name: "OOFELIE",
-  slug: "oofelie",
-  logo_url: "",
-  short_desc: "Multiphysics simulation software for strongly coupled thermo-mechanical analysis in optics, MEMS, and aerospace.",
-  description: "OOFELIE::Multiphysics, from Open Engineering (Belgium), is a simulation suite for strongly coupled multiphysics problems such as thermo-mechanical and piezoelectric analysis, used in precision optics, MEMS, and aerospace engineering.",
-
-  pricing_tiers: [
-    {
-      name: "Perpetual",
-      price: "N/A",
-      period: "initial",
-      features: [],
-      is_popular: false
-    }
-  ],
-
-  detailed_features: [
-    {
-      category: "Simulation",
-      items: [
-        {
-          name: "Multiphysics simulation",
-          status: true
-        },
-        {
-          name: "Engineering simulation",
-          status: true
-        },
-        {
-          name: "Analysis",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Engineering",
-      items: [
-        {
-          name: "Engineering tools",
-          status: true
-        },
-        {
-          name: "High-tech solutions",
-          status: true
-        },
-        {
-          name: "Engineering services",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "European",
-      items: [
-        {
-          name: "European supplier",
-          status: true
-        },
-        {
-          name: "High-tech",
-          status: true
-        },
-        {
-          name: "Quality solutions",
-          status: true
-        }
-      ]
-    },
-    {
-      category: "Software",
-      items: [
-        {
-          name: "Simulation software",
-          status: true
-        },
-        {
-          name: "CAD tools",
-          status: true
-        },
-        {
-          name: "Engineering suite",
-          status: true
-        }
-      ]
-    }
-  ],
-
-  alternatives: [
-    "comsol-multiphysics",
-    "ansys-mechanical",
-    "abaqus"
-  ],
-
-  country: "Belgium",
-  category_id: "c5",
-  pricing_type: "Perpetual",
-  starting_price: 0,
-  quote_only: true,
-
-  platforms: [
-    "Windows"
-  ],
-
-  industries: [],
-  core_features: [],
-  user_scales: [],
-  official_url: "https://www.open-engineering.com/",
-  pricing_url: "https://www.open-engineering.com/",
-  affiliate_url: null,
-  score: 0,
-  pros: [],
-  cons: [],
-
-  faqs: [
-    {
-      q: "What is OOFELIE used for?",
-      a: "OOFELIE is a multiphysics simulation (CAE) solution."
-    },
-    {
-      q: "How much does OOFELIE cost?",
-      a: "OOFELIE is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
-    },
-    {
-      q: "Is there a free version of OOFELIE?",
-      a: "OOFELIE is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
-    },
-    {
-      q: "What operating systems does OOFELIE support?",
-      a: "OOFELIE runs on Windows."
-    },
-    {
-      q: "Which file formats does OOFELIE support?",
-      a: "OOFELIE works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
-    },
-    {
-      q: "What are the best alternatives to OOFELIE?",
-      a: "The closest alternatives to OOFELIE are COMSOL Multiphysics, ANSYS Mechanical, Abaqus. The right fit depends on workflow, file-format compatibility, and pricing model — compare them side-by-side using the CADGuide comparison tool."
-    }
-  ],
-
-  tech_specs: {
-    engine: "OOFELIE Engine",
-    multicore: "N/A",
-    gpu_optimization: "N/A",
-    standards: []
-  },
-  version: "2024",
-
-  expert_verdict: "An advanced multiphysics simulation and optimization suite, tailored for optomechatronic systems.",
 },
 {
   id: "t147",

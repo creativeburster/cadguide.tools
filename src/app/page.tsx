@@ -113,7 +113,7 @@ function HomeBody() {
         <div className="max-w-[1360px] mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-black bg-blue-100 text-blue-700 border border-blue-200 mb-4 uppercase tracking-widest">
-              🧮 45+ Free Engineering Calculators
+              🧮 560+ Free Engineering Tools
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
               Engineering <span className="text-blue-600">Toolbox</span> — No Sign-up Required
@@ -153,7 +153,7 @@ function HomeBody() {
           <div className="text-center">
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold h-14 rounded-xl px-8 shadow-lg shadow-blue-200">
               <Link href="/toolbox" className="flex items-center gap-2 text-base">
-                Explore All 45+ Tools
+                Explore All 560+ Tools
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
               </Link>
             </Button>
@@ -346,7 +346,7 @@ function HomeBody() {
             </Link>
             {/* Added Box 10: Interactive Toolbox */}
             <Link href="/toolbox" className="block p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">45+ Tools</div>
+              <div className="text-xs uppercase tracking-wider text-blue-600 font-black">560+ Tools</div>
               <div className="mt-1 text-lg font-black text-slate-900">Toolbox</div>
               <div className="mt-1 text-xs text-slate-600">Free engineering calculators, converters & cheat sheets…</div>
             </Link>
