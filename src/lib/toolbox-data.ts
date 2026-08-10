@@ -106,17 +106,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     keywords: ['inventor shortcuts', 'inventor keys', 'autodesk inventor hotkeys', 'cad assembly shortcuts']
   },
-  {
-    slug: 'microstation-shortcuts-sheet',
-    title: 'Bentley MicroStation V8i Keyboard Shortcuts Guide',
-    description: 'Searchable index of MicroStation keyboard shortcuts, mouse shortcuts, and workspace mappings.',
-    detailDesc: 'Learn the core key-ins and mouse shortcuts for MicroStation. Compare the drawing engine mappings to standard AutoCAD controls.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['microstation shortcuts', 'microstation hotkeys', 'microstation cheat sheet', 'bentley keys']
-  },
+
   {
     slug: 'archicad-shortcuts-sheet',
     title: 'Graphisoft Archicad Keyboard Shortcuts Chart',
@@ -128,50 +118,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     keywords: ['archicad shortcuts', 'archicad hotkeys', 'graphisoft shortcuts', 'bim tool shortcuts']
   },
-  {
-    slug: 'catia-shortcuts-sheet',
-    title: 'Dassault CATIA V5/V6 Key Shortcuts Table',
-    description: 'Printable cheat sheet for CATIA Sketcher, Part Design, and Generative Shape Design shortcuts.',
-    detailDesc: 'Quickly lookup shortcuts in CATIA. Optimize your mechanical assembly design workflows with customized mouse/keyboard modifiers.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['catia shortcuts', 'catia hotkeys', 'part design hotkeys', 'sketcher hotkeys']
-  },
-  {
-    slug: 'creo-shortcuts-sheet',
-    title: 'PTC Creo Parametric Shortcut Keys Reference',
-    description: 'Essential keyboard shortcuts and mouse modifiers reference for PTC Creo 3D modeling and assembly.',
-    detailDesc: 'Search all keyboard commands in Creo. Categorized by sketching, modeling, configuration variables, and custom macro triggers.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['creo shortcuts', 'creo parametric hotkeys', 'ptc creo cheat sheet', 'assembly hotkeys']
-  },
-  {
-    slug: 'freecad-shortcuts-sheet',
-    title: 'FreeCAD Open-Source CAD Hotkeys & Mouse Navigation',
-    description: 'Searchable index of FreeCAD shortcuts for PartDesign, Draft, and TechDraw workbenches.',
-    detailDesc: 'A complete index of hotkeys in FreeCAD. Includes navigation styles like Blender, CAD, and Inventor presets.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['freecad shortcuts', 'freecad workbenches', 'open source cad keys', 'partdesign hotkeys']
-  },
-  {
-    slug: 'fusion360-shortcuts-sheet',
-    title: 'Autodesk Fusion 360 Keyboard Hotkeys Reference',
-    description: 'Printable reference for Fusion 360 sculpting, modeling, CAM path planning, and rendering tools.',
-    detailDesc: 'Quickly search all shortcut keys in Fusion 360. Includes shortcuts for the parametric modeling environment, generative design, and CAM toolpaths.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['fusion 360 shortcuts', 'fusion 360 hotkeys', 'fusion 360 cheat sheet', 'cam hotkeys']
-  },
+
   {
     slug: 'draftsight-shortcuts-sheet',
     title: 'DraftSight Keyboard Shortcuts & Command Aliases',
@@ -183,17 +130,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     keywords: ['draftsight shortcuts', 'draftsight aliases', 'draftsight vs autocad', 'cad key mappings']
   },
-  {
-    slug: 'bricscad-shortcuts-sheet',
-    title: 'BricsCAD Hotkeys & Command Customization Guide',
-    description: 'Interactive index of BricsCAD Lite, Pro, and BIM keyboard commands and quad cursor controls.',
-    detailDesc: 'Compare BricsCAD shortcuts to standard CAD models. Includes quad cursor settings, shortcut customization paths, and custom command macros.',
-    category: 'cheatsheet',
-    status: 'released',
-    releasedDate: '2026-06-05',
-    origin: 'native',
-    keywords: ['bricscad shortcuts', 'quad cursor controls', 'bricscad command aliases', 'bricscad hotkeys']
-  },
+
   {
     slug: 'vectorworks-shortcuts-sheet',
     title: 'Vectorworks Keyboard Shortcuts Reference Chart',
@@ -1173,29 +1110,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ['belt drive length calculator', 'v-belt length formula', 'timing belt center distance', 'pulley speed ratio', 'belt drive calculation', 'center distance calculator', 'belt length formula', 'pulley rpm calculator']
   },
 
-  // ==================== NEW NATIVE CHEATSHEETS ====================
-  {
-    slug: 'nx-shortcuts-sheet',
-    title: 'Siemens NX Keyboard Shortcuts & Mouse Gestures Guide',
-    description: 'Searchable cheat sheet for Siemens NX (Unigraphics) modeling, sketching, and assembly shortcuts.',
-    detailDesc: 'Complete index of NX keyboard shortcuts including sketcher tools, feature modeling, assembly constraints, and synchronous technology. Covers NX 12 through NX 2307 series with mouse gesture and radial tool button guides.',
-    category: 'cheatsheet',
-    status: 'released',
-    origin: 'native',
-    releasedDate: '2026-07-09',
-    keywords: ['nx shortcuts', 'siemens nx hotkeys', 'ug nx keyboard', 'nx sketcher shortcuts', 'nx mouse gestures', 'nx command aliases', 'unigraphics shortcuts', 'nx assembly shortcuts']
-  },
-  {
-    slug: 'civil3d-shortcuts-sheet',
-    title: 'Autodesk Civil 3D Keyboard Shortcuts & Command Aliases',
-    description: 'Quick reference for Civil 3D surface, alignment, profile, and corridor modeling shortcuts.',
-    detailDesc: 'Searchable index of Civil 3D-specific shortcuts beyond standard AutoCAD, including surface editing, alignment layout, profile view, corridor section, and pipe network commands. Optimized for civil/transportation design workflows.',
-    category: 'cheatsheet',
-    status: 'released',
-    origin: 'native',
-    releasedDate: '2026-07-09',
-    keywords: ['civil 3d shortcuts', 'civil 3d hotkeys', 'autocad civil shortcuts', 'civil 3d command aliases', 'corridor shortcuts', 'alignment profile shortcuts', 'civil 3d cheat sheet', 'civil engineering cad keys']
-  },
+
 
   // ==================== NEW NATIVE CONVERTERS ====================
   {
@@ -3557,17 +3472,6 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ["open","fluid","calculator"]
   },
 
-  {
-    slug: ' edm-material-removal-calculator',
-    title: 'EDM Material Removal Rate Calculator',
-    description: 'Calculate EDM material removal rate from discharge energy and frequency.',
-    detailDesc: 'MRR = K * I * Ton * f',
-    category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
-    origin: 'native',
-    keywords: ["Calculate","EDM","material","removal","rate","from","discharge","energy","and","frequency."]
-  },
   {
     slug: 'bim-clash-count-calculator',
     title: 'BIM Clash Detection Count Calculator',

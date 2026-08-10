@@ -825,42 +825,6 @@
     "country": "USA"
   },
   {
-    "id": "t40",
-    "name": "OpenCASCADE",
-    "slug": "opencascade",
-    "short_desc": "The open-source geometry kernel for CAD developers.",
-    "score": 4.8,
-    "logo_url": "/logos/oc.png",
-    "official_url": "https://www.opencascade.com",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Software Dev",
-      "Research"
-    ],
-    "features": [],
-    "country": "France"
-  },
-  {
-    "id": "t41",
-    "name": "VariCAD",
-    "slug": "varicad",
-    "short_desc": "Compact CAD system for mechanical engineering.",
-    "score": 4,
-    "logo_url": "/logos/vc.png",
-    "official_url": "https://www.varicad.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical",
-      "Hobbyist"
-    ],
-    "features": [],
-    "country": "Czech Republic"
-  },
-  {
     "id": "t42",
     "name": "Eagle",
     "slug": "eagle",
@@ -875,26 +839,6 @@
       "Electronics",
       "IoT",
       "Education"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t43",
-    "name": "CADra",
-    "slug": "cadra",
-    "short_desc": "High-end 2D CAD system for design automation, programmable drafting, and extreme schematic speed in manufacturing and automation industries.",
-    "score": 3.3,
-    "logo_url": "/logos/cadra.png",
-    "official_url": "https://www.adra.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Industrial Automation",
-      "Mechanical Engineering",
-      "Electrical Engineering"
     ],
     "features": [],
     "country": "USA"
@@ -1104,44 +1048,6 @@
     "country": "Italy"
   },
   {
-    "id": "t58",
-    "name": "IronCAD",
-    "slug": "ironcad",
-    "short_desc": "The fastest way to 3D design and manufacturing.",
-    "score": 4.8,
-    "logo_url": "https://www.ironcad.com/wp-content/uploads/2018/10/ironcad-logo-1.png",
-    "official_url": "https://www.ironcad.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Industrial Design",
-      "Machine Design",
-      "Packaging"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t59",
-    "name": "KeyCreator",
-    "slug": "keycreator",
-    "short_desc": "Direct modeling CAD for fast manufacturing design.",
-    "score": 4.6,
-    "logo_url": "https://www.kubotekkosmos.com/images/keycreator-logo.png",
-    "official_url": "https://www.kubotekkosmos.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Tool & Die",
-      "Mold Design",
-      "Rapid Prototyping"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t60",
     "name": "LibreCAD",
     "slug": "librecad",
@@ -1164,27 +1070,6 @@
       "drafting-detailing"
     ],
     "country": "Community/International"
-  },
-  {
-    "id": "t61",
-    "name": "CADopia",
-    "slug": "cadopia",
-    "short_desc": "Professional 2D/3D DWG CAD built on the ARES engine, offering AutoCAD-like functionality with perpetual licensing for engineering and design professionals.",
-    "score": 3.5,
-    "logo_url": "/logos/cadopia.png",
-    "official_url": "https://www.cadopia.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Architecture",
-      "Civil Engineering",
-      "Interior Design",
-      "Construction"
-    ],
-    "features": [],
-    "country": "USA"
   },
   {
     "id": "t62",
@@ -1224,24 +1109,6 @@
     "country": "Germany"
   },
   {
-    "id": "t64",
-    "name": "PC SCHEMATIC Automation",
-    "slug": "pc-schematic",
-    "short_desc": "Intelligent electrical CAD for automation.",
-    "score": 4.7,
-    "logo_url": "https://www.pcschematic.com/images/pcs_logo_new.png",
-    "official_url": "https://www.pcschematic.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Automation",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "Denmark"
-  },
-  {
     "id": "t65",
     "name": "MatrixGold",
     "slug": "matrixgold",
@@ -1255,42 +1122,6 @@
     "industries": [
       "Jewelry Design",
       "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t66",
-    "name": "exocad DentalCAD",
-    "slug": "exocad",
-    "short_desc": "Leading dental CAD software for labs.",
-    "score": 4.8,
-    "logo_url": "https://exocad.com/typo3conf/ext/exocad_site/Resources/Public/Images/exocad_logo.svg",
-    "official_url": "https://exocad.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Dental",
-      "Medical"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t67",
-    "name": "Cabinet Vision",
-    "slug": "cabinet-vision",
-    "short_desc": "Essential tool for the woodworking industry.",
-    "score": 4.7,
-    "logo_url": "https://www.cabinetvision.com/images/logo.png",
-    "official_url": "https://www.cabinetvision.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Woodworking",
-      "Furniture"
     ],
     "features": [],
     "country": "USA"
@@ -1351,24 +1182,6 @@
     "country": "USA"
   },
   {
-    "id": "t75",
-    "name": "Shoemaster",
-    "slug": "shoemaster",
-    "short_desc": "Leading CAD/CAM for the global footwear industry.",
-    "score": 4.7,
-    "logo_url": "",
-    "official_url": "https://atom-shoemaster.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Footwear",
-      "Apparel"
-    ],
-    "features": [],
-    "country": "Italy"
-  },
-  {
     "id": "t76",
     "name": "VISI Modelling",
     "slug": "visi-modelling",
@@ -1385,42 +1198,6 @@
     ],
     "features": [],
     "country": "UK"
-  },
-  {
-    "id": "t77",
-    "name": "WYSIWYG",
-    "slug": "wysiwyg",
-    "short_desc": "The standard for lighting design and pre-visualization.",
-    "score": 4.9,
-    "logo_url": "https://cast-soft.com/wp-content/themes/cast/images/wysiwyg_logo.png",
-    "official_url": "https://cast-soft.com/wysiwyg/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Event Design",
-      "Theatre",
-      "Concerts"
-    ],
-    "features": [],
-    "country": "Canada"
-  },
-  {
-    "id": "t78",
-    "name": "3Design",
-    "slug": "3design",
-    "short_desc": "Parametric 3D CAD for professional jewelry.",
-    "score": 4.7,
-    "logo_url": "https://3design.com/wp-content/uploads/2019/06/Logo-3Design-Simple-Couleur.png",
-    "official_url": "https://3design.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Jewelry Design"
-    ],
-    "features": [],
-    "country": "France"
   },
   {
     "id": "t79",
@@ -1482,41 +1259,6 @@
     "country": "Israel"
   },
   {
-    "id": "t82",
-    "name": "Land F/X",
-    "slug": "land-fx",
-    "short_desc": "Professional AutoCAD plugin for landscape architects.",
-    "score": 4.6,
-    "logo_url": "https://www.landfx.com/images/logo.png",
-    "official_url": "https://www.landfx.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Landscape Architecture",
-      "Irrigation"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t83",
-    "name": "ICAD3D+",
-    "slug": "icad3d-plus",
-    "short_desc": "3D design and pattern engineering for footwear.",
-    "score": 4.7,
-    "logo_url": "https://www.icad3dplus.com/img/logo.png",
-    "official_url": "https://www.icad3dplus.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Footwear"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t84",
     "name": "ANSYS Mechanical",
     "slug": "ansys-mechanical",
@@ -1575,25 +1317,6 @@
     ],
     "features": [],
     "country": "USA"
-  },
-  {
-    "id": "t87",
-    "name": "ESI Visual-Environment",
-    "slug": "esi-visual-environment",
-    "short_desc": "Virtual prototyping platform for crash and comfort simulation.",
-    "score": 4.7,
-    "logo_url": "",
-    "official_url": "https://www.esi-group.com/products/virtual-performance",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Automotive",
-      "Aerospace",
-      "Shipbuilding"
-    ],
-    "features": [],
-    "country": "France"
   },
   {
     "id": "t88",
@@ -1679,44 +1402,6 @@
     "country": "Germany"
   },
   {
-    "id": "t92",
-    "name": "ArcSite",
-    "slug": "arcsite",
-    "short_desc": "Mobile CAD and floor plan creation tool for field work.",
-    "score": 4.3,
-    "logo_url": "",
-    "official_url": "https://arcsite.app",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Construction",
-      "Engineering"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t92",
-    "name": "Synopsys Fusion Compiler",
-    "slug": "synopsys-fusion-compiler",
-    "short_desc": "Next-generation RTL-to-GDSII EDA compiler from Synopsys.",
-    "score": 4.9,
-    "logo_url": "",
-    "official_url": "https://www.synopsys.com/implementation-and-signoff/physical-implementation/fusion-compiler.html",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [
-      "Semiconductor",
-      "IC Design",
-      "Electronics"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t93",
     "name": "CAD Reader",
     "slug": "cad-reader",
@@ -1758,25 +1443,6 @@
   },
   {
     "id": "t94",
-    "name": "UVCAD",
-    "slug": "uvcad",
-    "short_desc": "Mobile 2D CAD drawing and drafting application.",
-    "score": 4.1,
-    "logo_url": "",
-    "official_url": "https://uvcad.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Architecture",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t94",
     "name": "Allplan",
     "slug": "allplan",
     "short_desc": "Professional BIM platform by Nemetschek for AEC.",
@@ -1793,25 +1459,6 @@
     ],
     "features": [],
     "country": "Germany"
-  },
-  {
-    "id": "t95",
-    "name": "Updraw",
-    "slug": "updraw",
-    "short_desc": "Mobile 2D CAD drawing application with dimension tools.",
-    "score": 4,
-    "logo_url": "",
-    "official_url": "https://apps.apple.com/us/app/updraw-create-2d-cad-drawings-with-dimensions/id1111676719",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Architecture",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
   },
   {
     "id": "t95",
@@ -1871,21 +1518,6 @@
     "country": "France"
   },
   {
-    "id": "t102",
-    "name": "BIMoffice",
-    "slug": "bimoffice",
-    "short_desc": "BIMoffice is a comprehensive BIM project management and estimation platform.",
-    "score": 0,
-    "logo_url": "/logos/bi.png",
-    "official_url": "https://www.bimoffice.fr/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "France"
-  },
-  {
     "id": "t103",
     "name": "EPLAN",
     "slug": "eplan",
@@ -1911,234 +1543,6 @@
     "country": "Germany"
   },
   {
-    "id": "t104",
-    "name": "MEDUSA4",
-    "slug": "medusa4",
-    "short_desc": "Intelligent 2D & 3D CAD software for mechanical engineering, factory layout, and plant design with AR/VR capabilities.",
-    "score": 3.6,
-    "logo_url": "/logos/medusa4.png",
-    "official_url": "https://www.cad-schroer.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Plant Design",
-      "Factory Layout",
-      "Architecture"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t105",
-    "name": "HiCAD",
-    "slug": "hicad",
-    "short_desc": "Comprehensive 2D/3D CAD and PDM/PLM solution for mechanical engineering, plant design, sheet metal, and steel construction.",
-    "score": 3.6,
-    "logo_url": "/logos/hi.png",
-    "official_url": "https://www.isdgroup.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Plant Design",
-      "Steel Construction",
-      "Sheet Metal"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t106",
-    "name": "BeckerCAD",
-    "slug": "beckercad",
-    "short_desc": "German CAD/CAM software for mechanical engineering and manufacturing.",
-    "score": 3.4,
-    "logo_url": "/logos/be.png",
-    "official_url": "https://www.beckercad.de/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Sheet Metal",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t107",
-    "name": "pCon.planner",
-    "slug": "pconplanner",
-    "short_desc": "Professional space planning and interior design software for furniture and office layout.",
-    "score": 3.9,
-    "logo_url": "/logos/pconplanner.png",
-    "official_url": "https://pcon-planner.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Interior Design",
-      "Office Planning",
-      "Furniture",
-      "Architecture"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t108",
-    "name": "CrownCAD",
-    "slug": "crowncad",
-    "short_desc": "Cloud-based 3D CAD platform with proprietary geometric modeling engine and constraint solver.",
-    "score": 3.4,
-    "logo_url": "/logos/crowncad.png",
-    "official_url": "https://www.crowncad.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Automotive",
-      "Aerospace",
-      "Machinery"
-    ],
-    "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t109",
-    "name": "SINOVATION",
-    "slug": "sinovation",
-    "short_desc": "3D CAD/CAM software for mold and die design with integrated manufacturing capabilities.",
-    "score": 3.5,
-    "logo_url": "/logos/sinovation.png",
-    "official_url": "https://sv.hoteamsoft.com/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Mold Making",
-      "Die Design",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t111",
-    "name": "CR-8000",
-    "slug": "cr-8000",
-    "short_desc": "Zuken Americas is part of a global software company offering advanced design solutions for the creation and management o",
-    "score": 0,
-    "logo_url": "/logos/cr.png",
-    "official_url": "https://www.zuken.com/",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Japan"
-  },
-  {
-    "id": "t112",
-    "name": "CADmeister",
-    "slug": "cadmeister",
-    "short_desc": "Japanese CAD/CAM software for mold and die design with 3D modeling capabilities.",
-    "score": 3.4,
-    "logo_url": "/logos/ca.png",
-    "official_url": "https://www.biprogy-uel.co.jp/cadmeister/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Mold Making",
-      "Die Design",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "Japan"
-  },
-  {
-    "id": "t113",
-    "name": "IJCAD",
-    "slug": "ijcad",
-    "short_desc": "IJCAD is highly compatible with AutoCAD and widely used in construction, engineering, and manufacturing for any DWG-based drawing task.",
-    "score": 3.8,
-    "logo_url": "/logos/ijcad.png",
-    "official_url": "https://www.ijcad.jp/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Engineering",
-      "Manufacturing",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Japan"
-  },
-  {
-    "id": "t114",
-    "name": "Quadcept",
-    "slug": "quadcept",
-    "short_desc": "Quadcept is a pay as you go cloud based CAD system offering robust features.",
-    "score": 0,
-    "logo_url": "/logos/qu.png",
-    "official_url": "https://www.quadcept.com/",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Japan"
-  },
-  {
-    "id": "t115",
-    "name": "RootPro CAD",
-    "slug": "rootpro-cad",
-    "short_desc": "RootPro CAD is 2D general-purpose CAD software that can create design drawings for various fields such as mechanical, architecture, civil engineering, and electronics.",
-    "score": 3.5,
-    "logo_url": "/logos/rootpro-cad.png",
-    "official_url": "https://www.rootprocad.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Engineering",
-      "Manufacturing",
-      "Electronics"
-    ],
-    "features": [],
-    "country": "Japan"
-  },
-  {
-    "id": "t116",
-    "name": "V-nas",
-    "slug": "v-nas",
-    "short_desc": "Japanese 2D CAD solution developed by KTS (Kawada Techno Systems), offering practical drafting tools for mechanical and architectural design.",
-    "score": 3.1,
-    "logo_url": "/logos/v-nas.jpg",
-    "official_url": "https://www.kts.co.jp/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Architecture",
-      "Construction",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "Japan"
-  },
-  {
     "id": "t117",
     "name": "KOMPAS-3D",
     "slug": "kompas-3d",
@@ -2162,73 +1566,6 @@
       "Rail Transportation",
       "Metallurgy",
       "Construction"
-    ],
-    "features": [],
-    "country": "Russia"
-  },
-  {
-    "id": "t118",
-    "name": "T-FLEX CAD",
-    "slug": "t-flex-cad",
-    "short_desc": "Full-function parametric CAD software with Parasolid-based 3D modeling, powerful 2D drafting, and integrated analysis tools for mechanical design.",
-    "score": 0,
-    "logo_url": "/logos/t-flex-cad.png",
-    "official_url": "https://www.tflex.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Industrial Machinery",
-      "Heavy Equipment",
-      "Consumer Products",
-      "Electronics",
-      "Medical Devices",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Russia"
-  },
-  {
-    "id": "t119",
-    "name": "Renga",
-    "slug": "renga",
-    "short_desc": "Russian BIM system for collaborative architectural design, structural engineering, MEP, and building technology.",
-    "score": 3.4,
-    "logo_url": "/logos/re.png",
-    "official_url": "https://rengabim.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Construction",
-      "Engineering",
-      "MEP"
-    ],
-    "features": [],
-    "country": "Russia"
-  },
-  {
-    "id": "t120",
-    "name": "Model Studio CS",
-    "slug": "model-studio-cs",
-    "short_desc": "Russian BIM/CAD platform for industrial and civil engineering design, with specialized modules for MEP, electrical, piping, and structural design.",
-    "score": 3.3,
-    "logo_url": "/logos/model-studio-cs.png",
-    "official_url": "https://www.csoft.ru/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Construction",
-      "Industrial Engineering",
-      "Civil Engineering",
-      "Architecture",
-      "MEP Engineering",
-      "Power Engineering",
-      "Infrastructure"
     ],
     "features": [],
     "country": "Russia"
@@ -2276,29 +1613,6 @@
       "Education",
       "Small Business",
       "Consumer Electronics"
-    ],
-    "features": [],
-    "country": "UK"
-  },
-  {
-    "id": "t123",
-    "name": "LUSAS",
-    "slug": "lusas",
-    "short_desc": "UK-based finite element analysis software for bridge, civil, structural, composites, and general engineering applications with specialized modules.",
-    "score": 3.5,
-    "logo_url": "/logos/lusas.png",
-    "official_url": "https://www.lusas.com/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Civil Engineering",
-      "Bridge Engineering",
-      "Structural Engineering",
-      "Mechanical Engineering",
-      "Aerospace",
-      "Automotive",
-      "Academic/Research"
     ],
     "features": [],
     "country": "UK"
@@ -2388,88 +1702,6 @@
     "country": "South Korea"
   },
   {
-    "id": "t128",
-    "name": "CADian",
-    "slug": "cadian",
-    "short_desc": "Korean 2D CAD software with 30+ years of development history, offering reliable CAD drafting and design capabilities.",
-    "score": 0,
-    "logo_url": "/logos/cadian.png",
-    "official_url": "https://www.cadian.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Construction",
-      "Manufacturing",
-      "Engineering",
-      "Architecture",
-      "Education"
-    ],
-    "features": [],
-    "country": "South Korea"
-  },
-  {
-    "id": "t130",
-    "name": "Edificius",
-    "slug": "edificius",
-    "short_desc": "BIM software with the highest number of IFC certified solutions for architecture, engineering, and construction.",
-    "score": 3.8,
-    "logo_url": "/logos/edificius.png",
-    "official_url": "https://www.accasoftware.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Engineering",
-      "Construction",
-      "MEP"
-    ],
-    "features": [],
-    "country": "Italy"
-  },
-  {
-    "id": "t131",
-    "name": "EdiLus",
-    "slug": "edilus",
-    "short_desc": "Architectural BIM software for building design and documentation with IFC certification.",
-    "score": 3.5,
-    "logo_url": "/logos/edilus.png",
-    "official_url": "https://www.accasoftware.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Construction",
-      "Interior Design"
-    ],
-    "features": [],
-    "country": "Italy"
-  },
-  {
-    "id": "t132",
-    "name": "think3",
-    "slug": "think3",
-    "short_desc": "Italian 3D CAD software (ThinkDesign) with hybrid modeling, Global Shape Modeling (GSM), and 2D/3D integration for product design and engineering.",
-    "score": 3.4,
-    "logo_url": "/logos/think3.png",
-    "official_url": "https://dptlab.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Industrial Design",
-      "Product Design",
-      "Mechanical Engineering",
-      "Automotive",
-      "Consumer Products",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "Italy"
-  },
-  {
     "id": "t133",
     "name": "Maptek Vulcan",
     "slug": "maptek-vulcan",
@@ -2485,36 +1717,6 @@
     "country": "Australia"
   },
   {
-    "id": "t134",
-    "name": "Promine",
-    "slug": "promine",
-    "short_desc": "AutoCAD-based mining software for underground mine design, surveying, and grade control.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.promine.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Canada"
-  },
-  {
-    "id": "t135",
-    "name": "OOFELIE",
-    "slug": "oofelie",
-    "short_desc": "Multiphysics simulation software for strongly coupled thermo-mechanical analysis in optics, MEMS, and aerospace.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.open-engineering.com/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Belgium"
-  },
-  {
     "id": "t136",
     "name": "CYPECAD",
     "slug": "cypecad",
@@ -2522,21 +1724,6 @@
     "score": 0,
     "logo_url": "",
     "official_url": "https://www.cype.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Spain"
-  },
-  {
-    "id": "t137",
-    "name": "TeKton3D",
-    "slug": "tekton3d",
-    "short_desc": "Spanish BIM software for structural analysis and MEP building services design, aligned with the Spanish Technical Building Code (CTE).",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.imventa.com/",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
@@ -2631,60 +1818,6 @@
     "industries": [],
     "features": [],
     "country": "Sweden"
-  },
-  {
-    "id": "t143",
-    "name": "ActCAD",
-    "slug": "actcad",
-    "short_desc": "IntelliCAD-based 2D/3D CAD software with DWG compatibility, perpetual licensing, and specialized add-ons for CNC, nesting, and mapping applications.",
-    "score": 3.4,
-    "logo_url": "/logos/actcad.png",
-    "official_url": "https://actcad.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Interior Design",
-      "Structural Engineering",
-      "Construction",
-      "Manufacturing",
-      "Surveying",
-      "Mapping",
-      "Engineering"
-    ],
-    "features": [],
-    "country": "India"
-  },
-  {
-    "id": "t145",
-    "name": "Eberick",
-    "slug": "eberick",
-    "short_desc": "Brazilian BIM software for structural analysis and design of reinforced concrete buildings, part of the AltoQi ecosystem.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.altoqi.com.br/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Brazil"
-  },
-  {
-    "id": "t146",
-    "name": "Promob",
-    "slug": "promob",
-    "short_desc": "Brazilian furniture design and manufacturing software with integrated rendering, quoting, and CNC cut-list output.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://promob.com/promob/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Brazil"
   },
   {
     "id": "t147",
@@ -3016,44 +2149,6 @@
     "country": "USA"
   },
   {
-    "id": "t164",
-    "name": "Pulsonix",
-    "slug": "pulsonix",
-    "short_desc": "Affordable, powerful, and intuitive schematic capture and PCB design software for professional electronic design automation.",
-    "score": 0,
-    "logo_url": "/logos/pulsonix.png",
-    "official_url": "https://www.pulsonix.com/",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [
-      "Consumer Electronics",
-      "Industrial Automation",
-      "Embedded Systems",
-      "IoT",
-      "Automotive",
-      "Medical Devices",
-      "Telecommunications"
-    ],
-    "features": [],
-    "country": "UK"
-  },
-  {
-    "id": "t165",
-    "name": "Target 3001!",
-    "slug": "target-3001",
-    "short_desc": "Integrated schematic, PCB layout, and 3D simulation suite popular in Europe.",
-    "score": 0,
-    "logo_url": "/logos/ta.png",
-    "official_url": "https://ibfriedrich.com/",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Germany"
-  },
-  {
     "id": "t166",
     "name": "AutoForm",
     "slug": "autoform",
@@ -3133,158 +2228,6 @@
     "country": "Taiwan"
   },
   {
-    "id": "t170",
-    "name": "ShipConstructor",
-    "slug": "shipconstructor",
-    "short_desc": "AutoCAD-based shipbuilding CAD/CAM software for hull structure, piping, and outfitting, backed by a central product model.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.ssi-corporate.com/products/shipconstructor/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Canada"
-  },
-  {
-    "id": "t171",
-    "name": "NAPA",
-    "slug": "napa",
-    "short_desc": "Ship design and maritime safety software covering 3D hull modeling, stability, and structural design.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.napa.fi/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Finland"
-  },
-  {
-    "id": "t172",
-    "name": "FORAN",
-    "slug": "foran",
-    "short_desc": "Siemens' integrated CAD/CAE/CAM ship design software for marine vessels, covering concept design through production to operations.",
-    "score": 4,
-    "logo_url": "/logos/foran.png",
-    "official_url": "https://www.siemens.com/en-us/technology/foran-marine-software/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Shipbuilding",
-      "Marine Engineering",
-      "Naval Architecture",
-      "Offshore",
-      "Maritime"
-    ],
-    "features": [],
-    "country": "Spain"
-  },
-  {
-    "id": "t173",
-    "name": "Pytha",
-    "slug": "pytha",
-    "short_desc": "3D CAD software for furniture making, interior design, and exhibition/shop fitting, with integrated rendering and CNC output.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.pytha.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t174",
-    "name": "imos iX",
-    "slug": "imos-ix",
-    "short_desc": "CAD/CAM software for furniture and interior fitting, linking sales, design, and CNC manufacturing in one data flow.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.imos3d.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t175",
-    "name": "20-20 Design",
-    "slug": "20-20-design",
-    "short_desc": "Kitchen, bathroom, and office interior design and sales software with manufacturer catalogs and rendering.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.2020spaces.com/2020design/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t176",
-    "name": "Palette CAD",
-    "slug": "palette-cad",
-    "short_desc": "German 3D planning software for trades, showrooms, and interior design, with cloud-based collaboration.",
-    "score": 0,
-    "logo_url": "",
-    "official_url": "https://www.palettecad.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t177",
-    "name": "KD Max",
-    "slug": "kd-max",
-    "short_desc": "YFCAD's specialized 3D kitchen, bathroom, and cabinet design software with rapid space planning and photo-realistic rendering.",
-    "score": 3.4,
-    "logo_url": "/logos/kd-max.png",
-    "official_url": "https://www.yfcad.com/kd-max/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Interior Design",
-      "Cabinet Making",
-      "Kitchen Design",
-      "Furniture Manufacturing",
-      "Home Improvement"
-    ],
-    "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t178",
-    "name": "WoodWOP",
-    "slug": "woodwop",
-    "short_desc": "German CAM software for woodworking machinery, furniture, and kitchen production.",
-    "score": 3.7,
-    "logo_url": "/logos/woodwop.png",
-    "official_url": "https://www.homag.com/en/product-detail/software-woodwop",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Furniture",
-      "Woodworking",
-      "Kitchen",
-      "Flooring"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
     "id": "t179",
     "name": "AlphaCAM",
     "slug": "alphacam",
@@ -3350,25 +2293,6 @@
     "score": 3.8,
     "logo_url": "/logos/sigmanest.png",
     "official_url": "https://www.sigmanest.com/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t184",
-    "name": "MetaCAM",
-    "slug": "metacam",
-    "short_desc": "US-based sheet metal CAD/CAM software for punching, cutting, and fabrication.",
-    "score": 3.5,
-    "logo_url": "/logos/me.png",
-    "official_url": "https://www.metamation.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
@@ -4038,81 +2962,6 @@
     "country": "USA"
   },
   {
-    "id": "t218",
-    "name": "Optitex",
-    "slug": "optitex",
-    "short_desc": "2D pattern making and 3D digital prototyping for fashion and apparel.",
-    "score": 4.3,
-    "logo_url": "",
-    "official_url": "https://optitex.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Fashion",
-      "Apparel",
-      "Textile"
-    ],
-    "features": [],
-    "country": "Israel"
-  },
-  {
-    "id": "t219",
-    "name": "Gerber AccuMark",
-    "slug": "gerber-accumark",
-    "short_desc": "Lectra's Gerber AccuMark — the long-standing global standard for apparel pattern and marker making.",
-    "score": 4.4,
-    "logo_url": "",
-    "official_url": "https://www.lectra.com/en/fashion/products/gerber-accumark-fashion",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Fashion",
-      "Apparel",
-      "Textile"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t220",
-    "name": "Lectra Modaris",
-    "slug": "lectra-modaris",
-    "short_desc": "Lectra's professional pattern design and grading tool for apparel manufacturing.",
-    "score": 4.3,
-    "logo_url": "",
-    "official_url": "https://www.lectra.com/en/fashion/products/modaris",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Fashion",
-      "Apparel",
-      "Luxury"
-    ],
-    "features": [],
-    "country": "France"
-  },
-  {
-    "id": "t221",
-    "name": "Browzwear",
-    "slug": "browzwear",
-    "short_desc": "Cloud-connected 3D fashion design software for virtual sampling and digital twins.",
-    "score": 4.5,
-    "logo_url": "",
-    "official_url": "https://browzwear.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Fashion",
-      "Apparel"
-    ],
-    "features": [],
-    "country": "Singapore"
-  },
-  {
     "id": "t222",
     "name": "Marvelous Designer",
     "slug": "marvelous-designer",
@@ -4130,40 +2979,6 @@
     ],
     "features": [],
     "country": "South Korea"
-  },
-  {
-    "id": "t223",
-    "name": "RhinoGold",
-    "slug": "rhinogold",
-    "short_desc": "Rhino-based jewelry CAD plugin with gem setting and parametric jewelry libraries — now superseded by RhinoArtisan.",
-    "score": 4.2,
-    "logo_url": "",
-    "official_url": "https://www.rhinoartisan.com/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Jewelry"
-    ],
-    "features": [],
-    "country": "Spain"
-  },
-  {
-    "id": "t224",
-    "name": "JewelCAD Pro",
-    "slug": "jewelcad-pro",
-    "short_desc": "Asia-popular dedicated jewelry CAD with parametric setting and rendering.",
-    "score": 4.1,
-    "logo_url": "",
-    "official_url": "https://www.jcadcam.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Jewelry"
-    ],
-    "features": [],
-    "country": "Hong Kong"
   },
   {
     "id": "t225",
