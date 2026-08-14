@@ -74,9 +74,9 @@ function HomeBody() {
     <main className="min-h-screen bg-white overflow-x-hidden w-full">
       {/* Hero Section - Deep ocean blue */}
       <section className="bg-gradient-to-br from-blue-950 via-[#0a192f] to-blue-900 text-white pt-24 pb-32 relative overflow-hidden w-full px-4">
-        {/* Abstract background elements - pure blue glow effect */}
-        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/30 rounded-full blur-[100px] -mr-40 -mt-40"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/20 rounded-full blur-[100px] -ml-40 -mb-40"></div>
+        {/* Abstract background elements - lightweight glow effect */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl -ml-40 -mb-40 pointer-events-none"></div>
         
         <div className="w-full max-w-4xl mx-auto px-2 sm:px-4 text-center relative z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 text-blue-200 border border-white/20 px-4 py-2 rounded-full text-[10px] sm:text-xs font-bold mb-10 backdrop-blur-md">
@@ -109,7 +109,7 @@ function HomeBody() {
       </section>
 
       {/* 0. TOOLBOX HIGHLIGHT — Prominent placement right after hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-blue-50 to-white py-20 border-b border-slate-100 cv-auto">
         <div className="max-w-[1360px] mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-black bg-blue-100 text-blue-700 border border-blue-200 mb-4 uppercase tracking-widest">
@@ -129,7 +129,7 @@ function HomeBody() {
               <div className="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">Gear Ratio</div>
             </Link>
             <Link href="/toolbox/hydraulic-cylinder-force-calculator" className="group bg-white p-5 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all text-center">
-              <div className="text-2xl mb-2"> Hydraulic</div>
+              <div className="text-2xl mb-2">🌊</div>
               <div className="text-sm font-black text-slate-900 group-hover:text-blue-600 transition-colors">Cylinder Force</div>
             </Link>
             <Link href="/toolbox/ohms-law-calculator" className="group bg-white p-5 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all text-center">
@@ -162,7 +162,7 @@ function HomeBody() {
       </section>
 
       {/* 1. TOP RATED SHELF */}
-      <section className="max-w-[1360px] mx-auto px-6 py-16">
+      <section className="max-w-[1360px] mx-auto px-6 py-16 cv-auto">
         <div className="flex items-center justify-between mb-10 gap-4 border-b border-slate-100 pb-6">
           <div>
             <h2 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">Industry Standards</h2>
@@ -190,7 +190,7 @@ function HomeBody() {
                       <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-amber-500 text-sm font-black">★ {tool.score}</span>
+                      <span className="text-amber-600 text-sm font-black">★ {tool.score}</span>
                       <Badge variant="outline" className="text-[9px] uppercase font-bold tracking-widest h-5 bg-slate-50">{tool.pricing_type}</Badge>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ function HomeBody() {
       </section>
 
       {/* 2. BIM & AEC SHELF - Light Gray Background */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-20 cv-auto">
         <div className="max-w-[1360px] mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
              <div className="flex items-center gap-4">
@@ -235,7 +235,7 @@ function HomeBody() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2">
                     <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-sm sm:text-base transition-colors truncate">{tool.name}</h3>
-                    <span className="text-amber-500 text-xs font-black shrink-0">★ {tool.score}</span>
+                    <span className="text-amber-600 text-xs font-black shrink-0">★ {tool.score}</span>
                   </div>
                   <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-0.5">{tool.pricing_type} • AEC Industry</p>
                   <p className="text-xs text-slate-600 line-clamp-1 mt-1.5 font-medium leading-relaxed">{tool.short_desc}</p>
@@ -247,8 +247,8 @@ function HomeBody() {
       </section>
 
       {/* 3. VERTICAL GEMS - Dark Blue Background */}
-      <section className="bg-[#0a192f] py-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]"></div>
+      <section className="bg-[#0a192f] py-24 relative overflow-hidden cv-auto">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-[1360px] mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Specialized Vertical Gems</h2>
@@ -272,7 +272,7 @@ function HomeBody() {
       </section>
 
       {/* Trust Section */}
-      <section className="bg-white text-slate-900 py-24 border-y border-slate-100">
+      <section className="bg-white text-slate-900 py-24 border-y border-slate-100 cv-auto">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-black mb-4 tracking-tight">Independent & Objective Analysis</h2>
           <p className="text-slate-600 mb-12 max-w-2xl mx-auto text-lg font-medium leading-relaxed">We don&apos;t accept paid rankings. Our scores are derived from technical parameters, user feedback, and market performance.</p>
@@ -292,8 +292,9 @@ function HomeBody() {
           </div>
         </div>
       </section>
+
       {/* Browse by … Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50 cv-auto">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100 font-black uppercase text-[10px] tracking-[0.25em] py-1 px-3 rounded-full">Discover</Badge>
@@ -355,9 +356,9 @@ function HomeBody() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700 rounded-full blur-3xl opacity-50 -ml-32 -mb-32"></div>
+      <section className="py-24 bg-blue-600 text-white overflow-hidden relative cv-auto">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-50 -mr-32 -mt-32 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700 rounded-full blur-3xl opacity-50 -ml-32 -mb-32 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6">Can&apos;t Find Your Preferred Software?</h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
