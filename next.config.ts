@@ -2,6 +2,21 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  compress: true,
+  reactStrictMode: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
+  },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
+      '@radix-ui/react-slot',
+      'class-variance-authority',
+      '@base-ui/react'
+    ],
+  },
   allowedDevOrigins: ['127.0.0.1'],
   // redirects is not supported with output: export.
   // We migrated these redirect rules to public/_redirects.

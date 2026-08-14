@@ -1,143 +1,14 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import tools from '@/lib/search-index.json';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ToolLogo } from '@/components/tool-logo';
-import { FileText, Sparkles } from 'lucide-react';
-import { 
-  searchArticles, 
-  determineSearchMode
-} from '@/lib/seo-content';
-
-// 1. Levenshtein Distance for Typo-Tolerant Fuzzy Matching
-function getLevenshteinDistance(a: string, b: string): number {
-  const matrix: number[][] = [];
-  for (let i = 0; i <= a.length; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= b.length; j++) {
-    matrix[0][j] = j;
-  }
-  for (let i = 1; i <= a.length; i++) {
-    for (let j = 1; j <= b.length; j++) {
-      matrix[i][j] = Math.min(
-        matrix[i - 1][j] + 1, // deletion
-        matrix[i][j - 1] + 1, // insertion
-        matrix[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1) // substitution
-      );
-    }
-  }
-  return matrix[a.length][b.length];
-}
-
-// 2. Determine if a query word fuzzy matches a target word with typo tolerance
-function isFuzzyMatch(queryWord: string, targetWord: string): boolean {
-  if (queryWord.length < 3) return targetWord.startsWith(queryWord);
-  
-  // Direct substring check
-  if (targetWord.includes(queryWord)) return true;
-  
-  // Check edit distance for typos
-  const distance = getLevenshteinDistance(queryWord, targetWord);
-  if (queryWord.length <= 4) return distance <= 1; // 1 typo max for short words
-  if (queryWord.length <= 7) return distance <= 2; // 2 typos max for medium words
-  return distance <= 3; // 3 typos max for longer words
-}
-
-const STOP_WORDS = new Set(['best', 'software', 'cad', 'tool', 'tools', 'top', 'for', 'vs', 'program', 'programs']);
-
-interface SearchTool {
-  id: string;
-  name: string;
-  slug: string;
-  short_desc: string;
-  score: number;
-  logo_url: string;
-  official_url: string;
-  category_id: string;
-  category_name?: string;
-  aliases?: string[];
-  industries?: string[];
-  features?: string[];
-  country?: string;
-}
-
-// Upgraded robust fuzzy match for tools with stop-words filtering
-function fuzzyMatchTool(tool: SearchTool, query: string): boolean {
-  if (!query) return true;
-  const normalizedQuery = normalizeString(query);
-  if (!normalizedQuery) return true;
-
-  const toolNameNormalized = normalizeString(tool.name);
-  
-  // 1. Direct name match (starts with or includes)
-  if (toolNameNormalized.includes(normalizedQuery)) return true;
-  
-  // 2. Fuzzy match on name (handling typos like "autoad" -> "autocad")
-  if (isFuzzyMatch(normalizedQuery, toolNameNormalized)) return true;
-
-  // Check aliases
-  if (tool.aliases) {
-    for (const alias of tool.aliases) {
-      const aliasNorm = normalizeString(alias);
-      if (aliasNorm.includes(normalizedQuery) || isFuzzyMatch(normalizedQuery, aliasNorm)) {
-        return true;
-      }
-    }
-  }
-
-  // 3. For multi-word queries (e.g. "solid woks" -> "solidworks"), check if removing spaces matches
-  const queryWords = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  if (queryWords.length > 1) {
-    const concatQuery = queryWords.join('');
-    if (toolNameNormalized.includes(concatQuery) || isFuzzyMatch(concatQuery, toolNameNormalized)) {
-      return true;
-    }
-  }
-
-  // 4. Tokenized AND matching with typo tolerance and stop-words filtering
-  let tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  
-  // Filter out common search noise words (stop words) if there are other terms to search
-  const filteredTokens = tokens.filter(t => !STOP_WORDS.has(t));
-  if (filteredTokens.length > 0) {
-    tokens = filteredTokens;
-  }
-
-  if (tokens.length > 0) {
-    const fieldsToMatch = [
-      toolNameNormalized,
-      normalizeString(tool.short_desc || ''),
-      normalizeString(tool.category_name || ''),
-      normalizeString(tool.country || ''),
-      ...(tool.industries || []).map(normalizeString),
-      ...(tool.features || []).map(normalizeString),
-    ];
-    
-    // Check if every token matches at least one field (either as substring or fuzzy match)
-    return tokens.every(token => {
-      const normToken = normalizeString(token);
-      if (!normToken) return true;
-      return fieldsToMatch.some(field => field.includes(normToken) || isFuzzyMatch(normToken, field));
-    });
-  }
-
-  return false;
-}
-
-// String normalization helper
-function normalizeString(str: string): string {
-  if (!str) return '';
-  return str
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]/g, '');
-}
+import { FileText, Sparkles, Loader2 } from 'lucide-react';
+import type { SearchTool, SearchResult } from '@/lib/search-engine';
+import type { ArticleSearchItem } from '@/lib/seo-content';
 
 function getArticleTypeLabel(type: string): string {
   switch (type) {
@@ -155,48 +26,84 @@ function getArticleTypeLabel(type: string): string {
 export function SmartSearch() {
   const [inputValue, setInputValue] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [searchSuggestions, setSearchSuggestions] = useState<SearchResult>({
+    tools: [],
+    articles: [],
+    mode: 'both',
+  });
+  const [isLoadingEngine, setIsLoadingEngine] = useState(false);
+  
+  const searchEngineRef = useRef<((query: string) => SearchResult) | null>(null);
   const router = useRouter();
 
-  const toolNames = useMemo(() => tools.map((t) => t.name), []);
+  // Lazy-load the search engine module asynchronously
+  const loadSearchEngine = useCallback(async () => {
+    if (searchEngineRef.current) return searchEngineRef.current;
+    try {
+      setIsLoadingEngine(true);
+      const mod = await import('@/lib/search-engine');
+      searchEngineRef.current = mod.performSearch;
+      setIsLoadingEngine(false);
+      return mod.performSearch;
+    } catch {
+      setIsLoadingEngine(false);
+      return null;
+    }
+  }, []);
 
-  const searchSuggestions = useMemo(() => {
+  // Prewarm search engine in idle time without blocking main thread
+  useEffect(() => {
+    let idleId: number | NodeJS.Timeout;
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        idleId = (window as unknown as { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback(
+          () => {
+            loadSearchEngine();
+          },
+          { timeout: 3000 }
+        );
+      } else {
+        idleId = setTimeout(() => {
+          loadSearchEngine();
+        }, 2000);
+      }
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        if ('cancelIdleCallback' in window && typeof idleId === 'number') {
+          (window as unknown as { cancelIdleCallback: (id: number) => void }).cancelIdleCallback(idleId);
+        } else {
+          clearTimeout(idleId as NodeJS.Timeout);
+        }
+      }
+    };
+  }, [loadSearchEngine]);
+
+  // Perform search whenever inputValue changes
+  useEffect(() => {
     if (!inputValue.trim()) {
-      return { tools: [], articles: [], mode: 'both' as const };
+      setSearchSuggestions({ tools: [], articles: [], mode: 'both' });
+      return;
     }
 
-    const mode = determineSearchMode(inputValue, toolNames);
+    let active = true;
+    const runSearch = async () => {
+      const searchFn = await loadSearchEngine();
+      if (active && searchFn) {
+        const results = searchFn(inputValue);
+        setSearchSuggestions(results);
+      }
+    };
 
-    // Search for tools - with Levenshtein fuzzy matching and scoring
-    const matchingTools = tools
-      .filter((tool) => fuzzyMatchTool(tool, inputValue))
-      .sort((a, b) => {
-        // Exact name match first
-        const aExactName = normalizeString(a.name) === normalizeString(inputValue);
-        const bExactName = normalizeString(b.name) === normalizeString(inputValue);
-        if (aExactName && !bExactName) return -1;
-        if (!aExactName && bExactName) return 1;
-        
-        // Then name starts with query
-        const aStartsWith = normalizeString(a.name).startsWith(normalizeString(inputValue));
-        const bStartsWith = normalizeString(b.name).startsWith(normalizeString(inputValue));
-        if (aStartsWith && !bStartsWith) return -1;
-        if (!aStartsWith && bStartsWith) return 1;
-        
-        // Then higher score
-        return b.score - a.score;
-      })
-      .slice(0, 5);
-
-    // Search for articles matching query
-    const matchingArticles = searchArticles(inputValue, 5);
-
-    return { tools: matchingTools, articles: matchingArticles, mode };
-  }, [inputValue, toolNames]);
+    runSearch();
+    return () => {
+      active = false;
+    };
+  }, [inputValue, loadSearchEngine]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      // If there is a highly matching article at the top in article mode, redirect directly to it!
       if (searchSuggestions.articles.length > 0 && searchSuggestions.mode === 'articles') {
         router.push(searchSuggestions.articles[0].url);
       } else {
@@ -209,14 +116,24 @@ export function SmartSearch() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-3 sm:p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-3 max-w-3xl mx-auto w-full relative">
+    <form 
+      onSubmit={handleSubmit} 
+      onMouseEnter={() => loadSearchEngine()}
+      className="bg-white p-3 sm:p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-3 max-w-3xl mx-auto w-full relative"
+    >
       <div className="flex-1 relative flex items-center">
         <input 
           type="text" 
           placeholder="e.g. Free 2D CAD for Mac or Electrical..." 
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          onFocus={() => setShowSuggestions(true)}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+            loadSearchEngine();
+          }}
+          onFocus={() => {
+            setShowSuggestions(true);
+            loadSearchEngine();
+          }}
           onBlur={() => setTimeout(() => setShowSuggestions(false), 250)}
           className="w-full px-5 py-4 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 text-base"
         />
@@ -224,7 +141,12 @@ export function SmartSearch() {
         {/* Search Suggestions Dropdown */}
         {showSuggestions && inputValue.trim() && (
           <div className="absolute top-full left-0 right-0 mt-3 bg-white border border-slate-200 rounded-xl shadow-2xl overflow-hidden z-50 max-h-[480px] overflow-y-auto">
-            {searchSuggestions.mode === 'articles' ? (
+            {isLoadingEngine && searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 ? (
+              <div className="p-6 text-center text-slate-400 flex items-center justify-center gap-2 text-sm">
+                <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
+                <span>Searching directory...</span>
+              </div>
+            ) : searchSuggestions.mode === 'articles' ? (
               // 1. Long-tail article search mode: Show articles first, then matching products
               <>
                 {/* Articles Section */}
@@ -232,10 +154,10 @@ export function SmartSearch() {
                   <div className="p-2 border-b border-slate-100 bg-slate-50/50">
                     <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-blue-600 flex items-center gap-1.5">
                       <FileText className="w-3.5 h-3.5" />
-                      {process.env.NODE_ENV === 'development' ? "Matching Guides & Comparisons" : "Matching Lists & Comparisons"}
+                      Matching Lists & Comparisons
                     </div>
                     <div className="space-y-0.5 mt-1">
-                      {searchSuggestions.articles.map((article) => (
+                      {searchSuggestions.articles.map((article: ArticleSearchItem) => (
                         <Link
                           key={`${article.type}-${article.slug}`}
                           href={article.url}
@@ -270,7 +192,7 @@ export function SmartSearch() {
                       Matching Software Products
                     </div>
                     <div className="space-y-0.5 mt-1">
-                      {searchSuggestions.tools.map((tool) => (
+                      {searchSuggestions.tools.map((tool: SearchTool) => (
                         <Link
                           key={tool.id}
                           href={`/tools/${tool.slug}`}
@@ -317,7 +239,7 @@ export function SmartSearch() {
                       Matching Software Products
                     </div>
                     <div className="space-y-0.5 mt-1">
-                      {searchSuggestions.tools.map((tool) => (
+                      {searchSuggestions.tools.map((tool: SearchTool) => (
                         <Link
                           key={tool.id}
                           href={`/tools/${tool.slug}`}
@@ -358,10 +280,10 @@ export function SmartSearch() {
                   <div className="p-2 bg-slate-50/50">
                     <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-blue-600 flex items-center gap-1.5">
                       <FileText className="w-3.5 h-3.5" />
-                      {process.env.NODE_ENV === 'development' ? "Related Guides & Comparisons" : "Related Lists & Comparisons"}
+                      Related Lists & Comparisons
                     </div>
                     <div className="space-y-0.5 mt-1">
-                      {searchSuggestions.articles.map((article) => (
+                      {searchSuggestions.articles.map((article: ArticleSearchItem) => (
                         <Link
                           key={`${article.type}-${article.slug}`}
                           href={article.url}
@@ -391,7 +313,7 @@ export function SmartSearch() {
             )}
 
             {/* No results found */}
-            {searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 && (
+            {!isLoadingEngine && searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 && (
               <div className="px-4 py-8 text-center bg-slate-50">
                 <div className="text-sm font-semibold text-slate-600">No matching tools or articles found</div>
                 <div className="text-xs text-slate-400 mt-1">Check spelling or try a broader engineering keyword</div>

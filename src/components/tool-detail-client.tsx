@@ -12,16 +12,22 @@ import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, 
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { priceSuffix } from "@/lib/utils";
-import { comparisonPairs } from "@/lib/seo-content";
 import { getBestDealForTool } from '@/lib/deals-data';
+
+export interface ComparisonPairSummary {
+  pairSlug: string;
+  a: { slug: string; name: string };
+  b: { slug: string; name: string };
+}
 
 interface Props {
   tool: Tool;
   category?: Category;
   alternativeTools: (Tool | undefined)[];
+  toolComparisons?: ComparisonPairSummary[];
 }
 
-export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
+export function ToolDetailClient({ tool, category, alternativeTools, toolComparisons = [] }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
@@ -75,10 +81,6 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
     
     return links.slice(0, 2);
   };
-
-  const toolComparisons = comparisonPairs().filter(
-    (pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug
-  );
 
 
 
@@ -1095,7 +1097,7 @@ export function ToolDetailClient({ tool, category, alternativeTools }: Props) {
                           className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500"
                         />
                         <h5 className="font-black text-xl mb-2">{alt.name}</h5>
-                        <div className="text-yellow-500 font-black text-sm mb-8">
+                        <div className="text-amber-500 font-black text-sm mb-8">
                           ★ {alt.score}{" "}
                           <span className="text-slate-300">/ 5.0</span>
                         </div>

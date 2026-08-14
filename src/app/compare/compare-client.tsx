@@ -2,7 +2,6 @@
 
 import { useState, useMemo, Suspense, useRef } from 'react';
 import { tools, Tool } from '@/lib/data';
-import { editorPickPairs, comparisonPairs } from '@/lib/seo-content';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
@@ -10,7 +9,12 @@ import Link from 'next/link';
 import { X, Scale, Search as SearchIcon, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 
-function CompareContent() {
+interface CompareContentProps {
+  initialEditorPicks?: { pairSlug: string; a: Tool; b: Tool; blurb: string }[];
+  initialAllPairs?: { pairSlug: string; a: Tool; b: Tool }[];
+}
+
+function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: CompareContentProps) {
   const searchParams = useSearchParams();
   const initialIds = searchParams.get('ids')?.split(',').filter(Boolean) || [];
 
@@ -19,11 +23,11 @@ function CompareContent() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Editor-picked top comparisons. Static data — compute once.
-  const editorPicks = useMemo(() => editorPickPairs(), []);
+  // Editor-picked top comparisons. Static data — passed from server.
+  const editorPicks = useMemo(() => initialEditorPicks, [initialEditorPicks]);
 
-  // Load all 67 comparison pairs
-  const allPairs = useMemo(() => comparisonPairs(), []);
+  // Load all comparison pairs
+  const allPairs = useMemo(() => initialAllPairs, [initialAllPairs]);
 
   const disciplines = useMemo(() => [
     {
@@ -563,10 +567,10 @@ function CompareContent() {
   );
 }
 
-export default function ComparePage() {
+export default function ComparePage({ initialEditorPicks = [], initialAllPairs = [] }: CompareContentProps) {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading comparison...</div>}>
-      <CompareContent />
+      <CompareContent initialEditorPicks={initialEditorPicks} initialAllPairs={initialAllPairs} />
     </Suspense>
   );
 }

@@ -29,9 +29,9 @@ export function Footer() {
 
           {/* Browse by Role */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
               <Link href="/for" className="hover:text-blue-400 transition-colors">By Role</Link>
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/for/architects" className="hover:text-blue-400 transition-colors">Architects</Link></li>
               <li><Link href="/for/mechanical-engineers" className="hover:text-blue-400 transition-colors">Mechanical</Link></li>
@@ -43,9 +43,9 @@ export function Footer() {
 
           {/* Browse Software */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
               <Link href="/tools" className="hover:text-blue-400 transition-colors">Browse</Link>
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/alternatives" className="hover:text-blue-400 transition-colors">Alternatives</Link></li>
               <li><Link href="/platforms" className="hover:text-blue-400 transition-colors">Platforms</Link></li>
@@ -57,9 +57,9 @@ export function Footer() {
 
           {/* Pricing & License */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
               <Link href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
               <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
@@ -71,9 +71,9 @@ export function Footer() {
 
           {/* Toolbox */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">
               <Link href="/toolbox" className="hover:text-blue-400 transition-colors">Toolbox</Link>
-            </h4>
+            </h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/toolbox/dwg-version-checker" className="hover:text-blue-400 transition-colors">DWG Checker</Link></li>
               <li><Link href="/toolbox/shortcuts" className="hover:text-blue-400 transition-colors">CAD Shortcuts</Link></li>
@@ -85,7 +85,7 @@ export function Footer() {
 
           {/* Ecosystem */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Ecosystem</h4>
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Ecosystem</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Matchmaker</Link></li>
               <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Comparisons</Link></li>
@@ -96,7 +96,7 @@ export function Footer() {
 
           {/* Organization */}
           <div>
-            <h4 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h4>
+            <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">Methodology</Link></li>

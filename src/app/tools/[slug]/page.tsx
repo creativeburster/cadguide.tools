@@ -1,6 +1,7 @@
 import { tools, categories } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import { ToolDetailClient } from '@/components/tool-detail-client';
+import { comparisonPairs } from '@/lib/seo-content';
 import {
   toolTitle,
   toolDescription,
@@ -83,6 +84,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const faq = faqLd(tool);
   const reviews = reviewLd(tool);
 
+  const toolComparisons = comparisonPairs()
+    .filter((pair) => pair.a.slug === tool.slug || pair.b.slug === tool.slug)
+    .map((pair) => ({
+      pairSlug: pair.pairSlug,
+      a: { slug: pair.a.slug, name: pair.a.name },
+      b: { slug: pair.b.slug, name: pair.b.name },
+    }));
+
   return (
     <>
       <script
@@ -109,7 +118,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           dangerouslySetInnerHTML={{ __html: JSON.stringify(review) }}
         />
       ))}
-      <ToolDetailClient tool={tool} category={category} alternativeTools={alternativeTools} />
+      <ToolDetailClient 
+        tool={tool} 
+        category={category} 
+        alternativeTools={alternativeTools} 
+        toolComparisons={toolComparisons} 
+      />
     </>
   );
 }
