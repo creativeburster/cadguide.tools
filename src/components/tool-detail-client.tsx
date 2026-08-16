@@ -1097,7 +1097,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500"
                         />
                         <h5 className="font-black text-xl mb-2">{alt.name}</h5>
-                        <div className="text-amber-600 font-black text-sm mb-8">
+                        <div className="text-amber-800 font-black text-sm mb-8">
                           ★ {alt.score}{" "}
                           <span className="text-slate-300">/ 5.0</span>
                         </div>

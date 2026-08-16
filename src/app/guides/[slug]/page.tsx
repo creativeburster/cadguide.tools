@@ -447,7 +447,7 @@ export default async function GuideArticlePage(
                   <div>
                     <h4 className="font-black text-slate-900 text-base">{matchedTool.name}</h4>
                     {matchedTool.score > 0 && (
-                      <span className="text-amber-600 font-black text-xs">★ {matchedTool.score} / 5.0 Rating</span>
+                      <span className="text-amber-800 font-black text-xs">★ {matchedTool.score} / 5.0 Rating</span>
                     )}
                   </div>
                 </div>

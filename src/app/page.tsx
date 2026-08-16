@@ -190,7 +190,7 @@ function HomeBody() {
                       <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-amber-600 text-sm font-black">★ {tool.score}</span>
+                      <span className="text-amber-800 text-sm font-black">★ {tool.score}</span>
                       <Badge variant="outline" className="text-[9px] uppercase font-bold tracking-widest h-5 bg-slate-50">{tool.pricing_type}</Badge>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ function HomeBody() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2">
                     <h3 className="font-black text-slate-900 group-hover:text-blue-600 text-sm sm:text-base transition-colors truncate">{tool.name}</h3>
-                    <span className="text-amber-600 text-xs font-black shrink-0">★ {tool.score}</span>
+                    <span className="text-amber-800 text-xs font-black shrink-0">★ {tool.score}</span>
                   </div>
                   <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-0.5">{tool.pricing_type} • AEC Industry</p>
                   <p className="text-xs text-slate-600 line-clamp-1 mt-1.5 font-medium leading-relaxed">{tool.short_desc}</p>

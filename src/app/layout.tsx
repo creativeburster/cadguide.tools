@@ -62,15 +62,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans ${inter.className}`}>
-        {/* Google Analytics - afterInteractive ensures it never blocks FCP/LCP */}
+        {/* Google Analytics - lazyOnload ensures it never contends for bandwidth or blocks FCP/LCP */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           data-cfasync="false"
         />
         <Script
           id="google-analytics-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           data-cfasync="false"
           dangerouslySetInnerHTML={{
             __html: `
