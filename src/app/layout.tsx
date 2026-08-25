@@ -48,6 +48,19 @@ export default function RootLayout({
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt Index" />
         
+        {/* Google Analytics for Search Console Verification & Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2NC8HV27GC');
+            `,
+          }}
+        />
+
         {/* Sync script to prevent layout shift for returning users who dismissed notice */}
         <script
           dangerouslySetInnerHTML={{
@@ -62,25 +75,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`min-h-screen w-full flex flex-col bg-slate-50 text-slate-900 font-sans ${inter.className}`}>
-        {/* Google Analytics - lazyOnload ensures it never contends for bandwidth or blocks FCP/LCP */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"
-          strategy="lazyOnload"
-          data-cfasync="false"
-        />
-        <Script
-          id="google-analytics-init"
-          strategy="lazyOnload"
-          data-cfasync="false"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-2NC8HV27GC');
-            `,
-          }}
-        />
         <Script
           id="brandreward-sdk"
           strategy="lazyOnload"
