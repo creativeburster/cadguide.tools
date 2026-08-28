@@ -158,6 +158,7 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
     switch (category) {
       case 'cheatsheet': return 'Cheat Sheet & Reference';
       case 'calculator': return 'Engineering Calculator';
+      case '3d-converter': return '3D CAD & Mesh Converter';
       case 'converter': return 'File Parser & Converter';
       case 'troubleshoot': return 'Troubleshooting Wizard';
       default: return 'Engineering Utility';

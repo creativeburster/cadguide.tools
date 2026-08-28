@@ -87,7 +87,7 @@ export function Footer() {
           <div>
             <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Ecosystem</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/toolbox/convert" className="hover:text-blue-400 transition-colors font-bold text-blue-400">3D Converters</Link></li>
+              <li><Link href="/toolbox" className="hover:text-blue-400 transition-colors font-bold text-blue-400">3D Converters</Link></li>
               <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Matchmaker</Link></li>
               <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Comparisons</Link></li>
               <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Directory</Link></li>
