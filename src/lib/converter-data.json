@@ -479,6 +479,36 @@
       "affiliateUrl": null,
       "pricing": "Commercial License / Free Trial",
       "verdict": "The premier tool for quality control engineers reviewing and redlining CAD drawings."
+    },
+    "fastview": {
+      "name": "DWG FastView Cloud 3D (Official Sponsor)",
+      "badge": "⚡ Official Sponsor • In Development",
+      "rating": 9.9,
+      "metrics": [
+        {
+          "name": "Cloud 2D/3D Viewing",
+          "score": 5
+        },
+        {
+          "name": "Cross-Platform App",
+          "score": 5
+        },
+        {
+          "name": "3D Conversion Engine",
+          "score": 4.9
+        }
+      ],
+      "pros": [
+        "World-leading lightweight CAD viewer on Web, Mobile (iOS/Android) & Windows PC",
+        "High-speed Cloud 3D Conversion & CAD SDK API currently under active development (Coming Soon)"
+      ],
+      "cons": [
+        "Direct cloud 3D mesh format conversion pipeline is in development; 2D/3D viewing & markup available today"
+      ],
+      "officialUrl": "https://en.dwgfastview.com/",
+      "affiliateUrl": null,
+      "pricing": "Free Cloud CAD / 3D Converter Coming Soon",
+      "verdict": "The official sponsor of CADGuide.tools. Global lightweight CAD platform with upcoming cloud 3D format conversion capabilities."
     }
   },
   "formats": {

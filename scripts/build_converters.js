@@ -193,6 +193,21 @@ const toolsDb = {
     affiliateUrl: null,
     pricing: 'Commercial License / Free Trial',
     verdict: 'The premier tool for quality control engineers reviewing and redlining CAD drawings.'
+  },
+  fastview: {
+    name: 'DWG FastView Cloud 3D (Official Sponsor)',
+    badge: '⚡ Official Sponsor • In Development',
+    rating: 9.9,
+    metrics: [{ name: 'Cloud 2D/3D Viewing', score: 5 }, { name: 'Cross-Platform App', score: 5 }, { name: '3D Conversion Engine', score: 4.9 }],
+    pros: [
+      'World-leading lightweight CAD viewer on Web, Mobile (iOS/Android) & Windows PC',
+      'High-speed Cloud 3D Conversion & CAD SDK API currently under active development (Coming Soon)'
+    ],
+    cons: ['Direct cloud 3D mesh format conversion pipeline is in development; 2D/3D viewing & markup available today'],
+    officialUrl: 'https://en.dwgfastview.com/',
+    affiliateUrl: null,
+    pricing: 'Free Cloud CAD / 3D Converter Coming Soon',
+    verdict: 'The official sponsor of CADGuide.tools. Global lightweight CAD platform with upcoming cloud 3D format conversion capabilities.'
   }
 };
 
@@ -2231,9 +2246,40 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
         </div>
       </section>
 
-      {/* 2. Full Recommended Converter Tools Matrix */}
+      {/* 2. Official Sponsor & Curated Converter Tools Matrix */}
       <section className="space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        {/* DWG FastView Official Sponsor Banner */}
+        <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-black border border-blue-400/30">
+              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+              <span>Official Sponsor • 3D Cloud Converter Engine</span>
+            </div>
+            <h3 className="text-xl font-black tracking-tight">
+              DWG FastView Cloud 3D Engine
+              <span className="ml-2.5 text-xs font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 px-2.5 py-0.5 rounded-full">
+                In Development / Coming Soon
+              </span>
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+              DWG FastView is building a high-speed, server-grade 3D CAD conversion & rendering pipeline. While the dedicated cloud 3D converter API is under active development, you can use DWG FastView for instant 2D/3D multi-format viewing and markup on Web & Mobile today, or launch our verified offline/cloud partner tools below.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full md:w-auto">
+            <a
+              href="https://en.dwgfastview.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all text-center"
+            >
+              <span>Explore DWG FastView</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-4">
           <div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900">
               Curated {pair.title} Benchmark Tools
@@ -2243,7 +2289,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
             </p>
           </div>
           <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full self-start sm:self-auto">
-            {pair.recommendedTools.length} Verified Options
+            {pair.recommendedTools.length} Active Partner Tools
           </span>
         </div>
 
