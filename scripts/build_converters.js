@@ -1,0 +1,2717 @@
+const fs = require('fs');
+const path = require('path');
+
+const toolsDb = {
+  freecad: {
+    name: 'FreeCAD (Offline Parametric Mesher)',
+    badge: '100% Offline & Private',
+    rating: 9.9,
+    metrics: [{ name: 'Data Security', score: 5 }, { name: 'Mesh Control', score: 5 }, { name: 'Ease of Use', score: 4 }],
+    pros: ['Completely free, open-source and executes 100% offline on your workstation', 'Granular control over linear deflection, angular deviation, and sewing tolerances'],
+    cons: ['Classic UI with a modest learning curve for non-CAD users'],
+    officialUrl: 'https://www.freecad.org/',
+    affiliateUrl: null,
+    pricing: '100% Free & Open Source',
+    verdict: 'The ultimate zero-risk local solution. Ideal for defense, automotive, and proprietary product designs that cannot be uploaded to the cloud.'
+  },
+  cadexchanger: {
+    name: 'CAD Exchanger Cloud & Desktop',
+    badge: 'Industrial High-Fidelity',
+    rating: 9.8,
+    metrics: [{ name: 'Conversion Fidelity', score: 5 }, { name: 'Data Security', score: 4.6 }, { name: 'Ease of Use', score: 4.9 }],
+    pros: ['State-of-the-art B-Rep discretization with pristine surface transitions', 'Handles massive multi-gigabyte assemblies and 30+ industrial CAD formats'],
+    cons: ['Requires free account registration; monthly conversion quota on free tier'],
+    officialUrl: 'https://cadexchanger.com/',
+    affiliateUrl: null,
+    pricing: 'Free Tier / Commercial Subscription',
+    verdict: 'The gold standard for commercial CAD interop. When you need guaranteed watertight meshes or exact B-Rep topology.'
+  },
+  anyconv: {
+    name: 'AnyConv 3D Online Converter',
+    badge: 'Instant Cloud Converter',
+    rating: 9.1,
+    metrics: [{ name: 'Conversion Speed', score: 5 }, { name: 'Data Security', score: 3.8 }, { name: 'Ease of Use', score: 4.9 }],
+    pros: ['Zero software installation or registration needed', 'Instant drag-and-drop conversion in any modern browser'],
+    cons: ['100MB file size ceiling and standard default meshing tolerances'],
+    officialUrl: 'https://anyconv.com/',
+    affiliateUrl: null,
+    pricing: 'Free Online SaaS',
+    verdict: 'Fastest choice for hobbyists and non-sensitive parts needing a rapid test piece.'
+  },
+  blender: {
+    name: 'Blender 4.x (3D Creation Suite)',
+    badge: '100% Offline & Private',
+    rating: 9.9,
+    metrics: [{ name: 'Mesh Topology & UV', score: 5 }, { name: 'Draco Compression', score: 5 }, { name: 'Data Security', score: 5 }],
+    pros: ['Unrivaled mesh decimation, quad conversion, UV unwrapping, and PBR baking', '100% free open-source software running locally on Windows, Mac, and Linux'],
+    cons: ['Modest learning curve for users unfamiliar with DCC 3D animation toolsets'],
+    officialUrl: 'https://www.blender.org/',
+    affiliateUrl: null,
+    pricing: '100% Free & Open Source',
+    verdict: 'The premier creative tool for optimizing CAD models into commercial-grade Web3D and CGI rendering assets.'
+  },
+  bambu: {
+    name: 'Bambu Studio / OrcaSlicer',
+    badge: 'Direct Slicer Pipeline',
+    rating: 9.9,
+    metrics: [{ name: 'Multi-Color Setup', score: 5 }, { name: 'Slicing Speed', score: 5 }, { name: 'Ease of Use', score: 4.8 }],
+    pros: ['Imports STEP/3MF directly and calculates slicing layers against true mathematical curves', 'Automatic mesh healing, multi-body color painting, and direct plate layout'],
+    cons: ['Primarily an additive manufacturing slicer rather than standalone batch CLI'],
+    officialUrl: 'https://bambulab.com/en/download',
+    affiliateUrl: null,
+    pricing: 'Free & Open Source',
+    verdict: 'The definitive modern production pipeline for FDM multi-color 3D printing.'
+  },
+  edrawings: {
+    name: 'eDrawings Viewer & Publisher (Dassault Official)',
+    badge: 'Official Free Tool',
+    rating: 9.8,
+    metrics: [{ name: 'Dassault Engine Fidelity', score: 5 }, { name: 'Data Security', score: 4.8 }, { name: 'Ease of Use', score: 4.8 }],
+    pros: ['Official Dassault engine ensures 100% native Parasolid and drawing projection accuracy', 'Opens heavy files in lightweight Detailing Mode without requiring CAD seat licenses'],
+    cons: ['Requires local desktop application installation'],
+    officialUrl: 'https://www.edrawingsviewer.com/',
+    affiliateUrl: null,
+    pricing: '100% Free Desktop Viewer',
+    verdict: 'The safest, most accurate free tool from the creators of SolidWorks. Guarantees zero missed features.'
+  },
+  datakit: {
+    name: 'Datakit CrossManager (Aerospace Standard)',
+    badge: 'Enterprise Standalone',
+    rating: 9.9,
+    metrics: [{ name: 'CGM / Granite Engine', score: 5 }, { name: 'Aerospace MBD FTA', score: 5 }, { name: 'Data Security', score: 5 }],
+    pros: ['Industry-renowned standalone CAD converter with dedicated direct read/write libraries', '100% offline enterprise desktop deployment with zero cloud telemetry'],
+    cons: ['Commercial enterprise seat license'],
+    officialUrl: 'https://www.datakit.com/',
+    affiliateUrl: null,
+    pricing: 'Commercial Enterprise License',
+    verdict: 'The gold standard for aerospace defense contractors and automotive tier-1 suppliers.'
+  },
+  autodesk_viewer: {
+    name: 'Autodesk Viewer & Cloud Platform',
+    badge: 'Official Cloud Portal',
+    rating: 9.8,
+    metrics: [{ name: 'Autodesk Engine Fidelity', score: 5 }, { name: 'Data Security', score: 4.8 }, { name: 'Ease of Use', score: 4.9 }],
+    pros: ['Official Autodesk engine parses 100% of modern IPT and RVT features with zero errors', 'Inspect cross-sections, building levels, and measure clearances directly in your browser'],
+    cons: ['Requires free Autodesk ID account login'],
+    officialUrl: 'https://viewer.autodesk.com/',
+    affiliateUrl: null,
+    pricing: 'Free Cloud Service',
+    verdict: 'The safest, most accurate zero-cost preview and export platform for Autodesk files.'
+  },
+  meshlab: {
+    name: 'MeshLab (Dedicated Mesh Processing)',
+    badge: 'Scientific Mesh Tool',
+    rating: 9.6,
+    metrics: [{ name: 'Automatic Repair', score: 5 }, { name: 'Data Security', score: 5 }, { name: 'Ease of Use', score: 3.8 }],
+    pros: ['Industrial Poisson surface reconstruction, hole filling, and normal vector correction', '100% free and runs locally on any operating system'],
+    cons: ['Steep learning curve for casual hobbyists'],
+    officialUrl: 'https://www.meshlab.net/',
+    affiliateUrl: null,
+    pricing: 'Free & Open Source',
+    verdict: 'Best secondary audit tool to verify watertightness before high-cost 3D printing and manufacturing.'
+  },
+  gstarcad: {
+    name: 'GstarCAD / BricsCAD Pro',
+    badge: 'Native DWG Platform',
+    rating: 9.7,
+    metrics: [{ name: 'DWG Speed', score: 5 }, { name: 'Drafting Tools', score: 5 }, { name: 'Cost Efficiency', score: 4.9 }],
+    pros: ['Opens, inspects, and edits converted DWG blueprints with lightning speed', 'Perpetual license model at a fraction of AutoCAD subscription pricing'],
+    cons: ['Commercial desktop software license'],
+    officialUrl: 'https://www.gstarcad.net/',
+    affiliateUrl: null,
+    pricing: 'Free 30-Day Trial / Perpetual License',
+    verdict: 'The best full-featured DWG drafting replacement for manufacturing workshops and AEC drafting teams.'
+  },
+  win3d_builder: {
+    name: 'Windows 3D Builder (Microsoft)',
+    badge: 'Free Native Utility',
+    rating: 9.8,
+    metrics: [{ name: 'Texture Preservation', score: 5 }, { name: 'Auto-Healing', score: 5 }, { name: 'Ease of Use', score: 5 }],
+    pros: ['Pre-installed on Windows or free on Microsoft Store', 'Legendary automatic non-manifold mesh healing and lossless 3MF packaging'],
+    cons: ['Windows-only desktop application'],
+    officialUrl: 'https://apps.microsoft.com/detail/9wzdncrfj3t6',
+    affiliateUrl: null,
+    pricing: '100% Free',
+    verdict: 'The best-kept secret in 3D printing. Opens broken textured OBJs, auto-repairs meshes, and exports perfect 3MF packages.'
+  },
+  rhino: {
+    name: 'Rhino 8 Native Mesh Engine',
+    badge: 'Industry Benchmark',
+    rating: 9.9,
+    metrics: [{ name: 'Mesh Precision', score: 5 }, { name: 'Naked Edge Repair', score: 5 }, { name: 'Ease of Use', score: 4.8 }],
+    pros: ['The absolute benchmark for detailed NURBS meshing controls', 'Interactive preview with real-time polygon count display'],
+    cons: ['Commercial desktop software license required'],
+    officialUrl: 'https://www.rhino3d.com/',
+    affiliateUrl: null,
+    pricing: 'Commercial License / 90-Day Free Trial',
+    verdict: 'The unrivaled tool for fine jewelry and luxury industrial product meshing.'
+  },
+  xometry: {
+    name: 'Xometry Instant Quoting CAD Engine',
+    badge: 'Instant Manufacturing Portal',
+    rating: 9.4,
+    metrics: [{ name: 'Manufacturing DFM', score: 5 }, { name: 'Speed', score: 4.8 }, { name: 'Ease of Use', score: 5 }],
+    pros: ['Upload CAD models and receive automatic DFM manufacturability analysis', 'Free instant STEP conversion and CNC/3D printing pricing'],
+    cons: ['Tailored specifically for manufacturing ordering workflows'],
+    officialUrl: 'https://www.xometry.com/',
+    affiliateUrl: null,
+    pricing: 'Free CAD Analysis Service',
+    verdict: 'Best for procurement specialists and engineers looking to convert parts directly for manufacturing quotes.'
+  },
+  onshape: {
+    name: 'Onshape Cloud CAD (PTC)',
+    badge: 'Cloud CAD Engine',
+    rating: 9.5,
+    metrics: [{ name: 'Parasolid Native', score: 5 }, { name: 'Browser Access', score: 5 }, { name: 'Ease of Use', score: 4.7 }],
+    pros: ['Runs directly on cloud Parasolid servers; imports SLDPRT and exports X_T natively', 'Free public tier available for makers and education'],
+    cons: ['Free tier projects are publicly viewable on Onshape public repository'],
+    officialUrl: 'https://www.onshape.com/',
+    affiliateUrl: null,
+    pricing: 'Free Public Tier / Commercial Subscriptions',
+    verdict: 'Great for engineers who want full cloud CAD editing alongside Parasolid export.'
+  },
+  blenderbim: {
+    name: 'BlenderBIM (openBIM Add-on)',
+    badge: '100% Offline & Private',
+    rating: 9.8,
+    metrics: [{ name: 'openBIM Compliance', score: 5 }, { name: 'Data Security', score: 5 }, { name: 'Custom Pset Editing', score: 5 }],
+    pros: ['Native IFC4 authoring and inspection with full buildingSMART certification', '100% free and runs locally on your workstation with zero cloud leakage'],
+    cons: ['Requires intermediate export or IFC conversion module'],
+    officialUrl: 'https://blenderbim.org/',
+    affiliateUrl: null,
+    pricing: '100% Free & Open Source',
+    verdict: 'The premier open-source tool for openBIM specialists and BIM managers.'
+  },
+  bluebeam: {
+    name: 'Bluebeam Revu (CAD PDF Standard)',
+    badge: 'AEC & Engineering PDF Standard',
+    rating: 9.7,
+    metrics: [{ name: 'Markup & Measurement', score: 5 }, { name: 'Batch Processing', score: 5 }, { name: 'Ease of Use', score: 4.7 }],
+    pros: ['Industry benchmark for engineering PDF markups, scale calibration, and takeoff measurements', 'Batch automation pipelines for enterprise engineering departments'],
+    cons: ['Commercial desktop license'],
+    officialUrl: 'https://www.bluebeam.com/',
+    affiliateUrl: null,
+    pricing: 'Commercial License / Free Trial',
+    verdict: 'The premier tool for quality control engineers reviewing and redlining CAD drawings.'
+  }
+};
+
+const formatsDb = {
+  step: {
+    ext: 'STEP / STP',
+    name: 'ISO 10303 Standard for Exchange of Product Data',
+    category: 'Solid B-Rep / Surface',
+    developer: 'ISO TC 184/SC 4',
+    nature: 'Mathematical Boundary Representation (B-Rep) solid geometry with exact curve definitions',
+    colorMaterial: 'AP214 / AP242 support basic body color & face styles',
+    pmi: 'AP242 supports 3D GD&T & Product Manufacturing Information',
+    typicalUse: 'Precision mechanical engineering, CNC toolpaths, mold manufacturing',
+    ecosystem: 'SolidWorks, CATIA, Siemens NX, PTC Creo, Autodesk Inventor, FreeCAD'
+  },
+  stl: {
+    ext: 'STL',
+    name: 'Standard Triangle Language / Stereolithography',
+    category: 'Polygonal Facet Mesh',
+    developer: '3D Systems (1987)',
+    nature: 'Unstructured triangulated facet geometry without topological connectivity or units',
+    colorMaterial: 'Monochrome (binary STL header colors rarely supported by slicers)',
+    pmi: 'None (Pure geometric surface coordinates)',
+    typicalUse: 'Additive manufacturing, FDM/SLA 3D printing slicing, rapid prototyping',
+    ecosystem: 'Bambu Studio, PrusaSlicer, UltiMaker Cura, OrcaSlicer, MeshLab'
+  },
+  '3mf': {
+    ext: '3MF',
+    name: '3D Manufacturing Format',
+    category: 'XML Compressed Mesh Container',
+    developer: '3MF Consortium (Microsoft, Bambu Lab, Prusa, HP)',
+    nature: 'Watertight triangular mesh packaged with material IDs, colors, and unit definitions',
+    colorMaterial: 'Full RGB color palettes, textures, and multi-extruder material assignments',
+    pmi: 'Supports embedded print parameters and orientation metadata',
+    typicalUse: 'Multi-color 3D printing (Bambu AMS, Prusa MMU), multi-part assemblies',
+    ecosystem: 'Bambu Studio, PrusaSlicer, OrcaSlicer, Windows 3D Builder'
+  },
+  sldprt: {
+    ext: 'SLDPRT',
+    name: 'SolidWorks Part File',
+    category: 'Native MCAD Solid',
+    developer: 'Dassault Systèmes',
+    nature: 'Parasolid kernel parametric feature history with solid and surface geometry',
+    colorMaterial: 'Appearance textures, RAL colors, and physical material densities',
+    pmi: 'DimXpert 3D annotations and manufacturing tolerances',
+    typicalUse: 'Mechanical part design, sheet metal, injection molding',
+    ecosystem: 'SolidWorks, eDrawings, Dassault 3DEXPERIENCE'
+  },
+  rhino_3dm: {
+    ext: '3DM',
+    name: 'Rhino 3D Model File',
+    category: 'NURBS Mathematical Surface',
+    developer: 'Robert McNeel & Associates',
+    nature: 'Double-precision non-uniform rational B-spline (NURBS) freeform curves and polysurfaces',
+    colorMaterial: 'Layer colors, PBR rendering materials, texture mappings',
+    pmi: 'Drafting dimensions, leader callouts, and annotation dots',
+    typicalUse: 'Jewelry design, footwear modeling, marine architecture, industrial styling',
+    ecosystem: 'Rhinoceros, Grasshopper, MatrixGold, Blender, MoI3D'
+  },
+  ipt: {
+    ext: 'IPT',
+    name: 'Autodesk Inventor Part File',
+    category: 'Native MCAD Solid',
+    developer: 'Autodesk',
+    nature: 'Autodesk ShapeManager (ASM) proprietary parametric solid and surface geometry',
+    colorMaterial: 'Inventor material library visual styles and physical densities',
+    pmi: '3D Model-Based Definition (MBD) GD&T annotations',
+    typicalUse: 'Industrial machinery, sheet metal fabrication, tool and die design',
+    ecosystem: 'Autodesk Inventor, Fusion 360, AutoCAD, Navisworks'
+  },
+  obj: {
+    ext: 'OBJ (+ .MTL)',
+    name: 'Wavefront 3D Object File',
+    category: 'Polygonal / Subdivision Mesh',
+    developer: 'Wavefront Technologies',
+    nature: '3D coordinates, polygonal faces, normal vectors, and UV coordinates',
+    colorMaterial: 'Associated .MTL sidecar file defining diffuse textures and specular materials',
+    pmi: 'None',
+    typicalUse: '3D animation, character sculpting (ZBrush, Blender), video game assets, CGI rendering',
+    ecosystem: 'Blender, Maya, 3ds Max, ZBrush, Unity, Unreal Engine, Cinema 4D'
+  },
+  parasolid_xt: {
+    ext: 'Parasolid (.x_t / .x_b)',
+    name: 'Siemens Parasolid Transmit File',
+    category: 'Geometric Modeling Kernel Standard',
+    developer: 'Siemens Digital Industries Software',
+    nature: 'Native binary (.x_b) or ASCII text (.x_t) serialization of exact Parasolid solid topology',
+    colorMaterial: 'Entity color tags and body attributes',
+    pmi: 'Embedded model attributes and body IDs',
+    typicalUse: 'High-end CAM machining (Mastercam, GibbsCAM), transfer to Siemens NX, Solid Edge, Onshape',
+    ecosystem: 'Siemens NX, Solid Edge, Mastercam, Onshape, ANSYS, Abaqus, BricsCAD Pro'
+  },
+  catpart: {
+    ext: 'CATPart',
+    name: 'CATIA V5 / V6 Part Document',
+    category: 'High-End Aerospace/Automotive MCAD',
+    developer: 'Dassault Systèmes',
+    nature: 'Convergence Geometric Modeler (CGM) hybrid parametric solid, surface, and wireframe container',
+    colorMaterial: 'Body colors, face styles, and material physics',
+    pmi: '3D Functional Tolerancing & Annotation (FTA / MBD)',
+    typicalUse: 'Aerospace structural components, automotive Class-A body styling, complex tooling',
+    ecosystem: 'CATIA V5, CATIA 3DEXPERIENCE, DELMIA, ENOVIA'
+  },
+  nx_prt: {
+    ext: 'NX PRT',
+    name: 'Siemens NX Part Document',
+    category: 'Enterprise MCAD / CAM / CAE',
+    developer: 'Siemens Digital Industries Software',
+    nature: 'Unified multi-application container (Part, Assembly, FEA, CAM) running on Parasolid modeler',
+    colorMaterial: 'Feature-level face colors, visual rendering materials, density metadata',
+    pmi: 'Comprehensive 3D PMI (Model-Based Definition) GD&T annotations',
+    typicalUse: 'Automotive powertrain, aerospace structures, high-end 5-axis CNC machining, mold design',
+    ecosystem: 'Siemens NX, Teamcenter PLM, Solid Edge, Simcenter'
+  },
+  creo_prt: {
+    ext: 'Creo PRT',
+    name: 'PTC Creo / Pro-ENGINEER Part',
+    category: 'Parametric MCAD Solid',
+    developer: 'PTC (Parametric Technology Corporation)',
+    nature: 'PTC Granite modeling kernel strict parent-child parametric feature history',
+    colorMaterial: 'Appearance palettes, surface finishes, and mass properties',
+    pmi: 'Creo 3D Model-Based Definition (MBD) dimensions and geometric tolerances',
+    typicalUse: 'Industrial equipment, electronics packaging, complex injection molded tooling',
+    ecosystem: 'PTC Creo, Windchill PLM, Pro/ENGINEER, Onshape'
+  },
+  iges: {
+    ext: 'IGES / IGS',
+    name: 'Initial Graphics Exchange Specification',
+    category: 'Legacy Surface Exchange',
+    developer: 'US National Bureau of Standards (1980)',
+    nature: 'ASCII entity database of disconnected trimmed surface patches (Type 144), curves, and wireframes',
+    colorMaterial: 'Basic entity layer and color tags',
+    pmi: 'Legacy 2D drafting entities',
+    typicalUse: 'Legacy tooling archives, vintage aerospace body panels, wire EDM cutting',
+    ecosystem: 'Mastercam, AutoCAD, legacy CAD systems'
+  },
+  glb: {
+    ext: 'GLB',
+    name: 'glTF 2.0 Binary Container (Khronos Group)',
+    category: 'Web3D / Real-Time Graphics Standard',
+    developer: 'Khronos Group',
+    nature: 'Single binary archive embedding triangular meshes, PBR textures, animations, and Draco compression',
+    colorMaterial: 'Physically Based Rendering (PBR) Metallic-Roughness material standard',
+    pmi: 'None (Pure interactive rendering stream)',
+    typicalUse: 'Web3D eCommerce configurators, Three.js, Babylon.js, Apple AR Quick Look, Android Scene Viewer',
+    ecosystem: 'Three.js, Babylon.js, Blender, Sketchfab, Unity, Unreal Engine, Shopify 3D'
+  },
+  gltf: {
+    ext: 'glTF (.gltf + .bin)',
+    name: 'GL Transmission Format (Khronos Group)',
+    category: 'Open Web3D Specification',
+    developer: 'Khronos Group',
+    nature: 'Human-readable JSON scene description linking binary vertex buffers (.bin) and external PNG/JPG textures',
+    colorMaterial: 'PBR Metallic-Roughness shader pipeline',
+    pmi: 'Custom application JSON metadata extensions',
+    typicalUse: 'Custom Three.js WebGL programming, programmatic shader swapping, web development',
+    ecosystem: 'Three.js, Babylon.js, WebGL, WebGPU, Visual Studio Code'
+  },
+  skp: {
+    ext: 'SKP',
+    name: 'Trimble SketchUp Model File',
+    category: 'Architectural / Concept 3D',
+    developer: 'Trimble Inc.',
+    nature: 'Surface mesh container optimized for rapid conceptual architectural and interior design',
+    colorMaterial: 'Diffuse image textures, materials, and layer tags',
+    pmi: '2D dimension strings, section planes, and text leaders',
+    typicalUse: 'Architectural conceptual design, interior decorating, landscape planning',
+    ecosystem: 'SketchUp Pro, LayOut, Trimble Connect, V-Ray, Enscape'
+  },
+  fbx: {
+    ext: 'FBX',
+    name: 'Autodesk Filmbox Scene Format',
+    category: 'Interchange Container for Real-Time & VFX',
+    developer: 'Autodesk (originally Kaydara)',
+    nature: 'Binary or ASCII scene format storing 3D geometry, embedded textures, lights, cameras, and material graphs',
+    colorMaterial: 'Embedded media textures, PBR shading channels, opacity maps',
+    pmi: 'None',
+    typicalUse: 'Real-time game engines (Unreal Engine 5, Unity), Lumion, Twinmotion, 3ds Max architectural animation',
+    ecosystem: 'Unreal Engine, Unity, 3ds Max, Maya, Cinema 4D, Lumion, Twinmotion'
+  },
+  rvt: {
+    ext: 'RVT',
+    name: 'Autodesk Revit Project Database',
+    category: 'Proprietary Relational BIM Database',
+    developer: 'Autodesk',
+    nature: 'All-in-one relational project database storing 3D parametric building elements, 2D sheets, and schedules',
+    colorMaterial: 'Revit material library physical, thermal, and visual rendering assets',
+    pmi: 'COBie parameters, OmniClass/UniFormat classifications, MEP flow parameters',
+    typicalUse: 'Architectural design, structural engineering, MEP systems drafting, worksharing',
+    ecosystem: 'Autodesk Revit, Navisworks, Autodesk Construction Cloud, BIM 360'
+  },
+  ifc: {
+    ext: 'IFC',
+    name: 'Industry Foundation Classes (ISO 16739)',
+    category: 'openBIM International Standard',
+    developer: 'buildingSMART International',
+    nature: 'Vendor-neutral STEP/EXPRESS architectural schema defining semantic building entities (IfcWall, IfcBeam, IfcDoor)',
+    colorMaterial: 'IfcSurfaceStyle and IfcMaterialDefinitions',
+    pmi: 'IfcPropertySet parameters (Pset_), classifications, spatial hierarchy',
+    typicalUse: 'Multi-discipline model federation, clash detection (Solibri, Navisworks), government BIM compliance',
+    ecosystem: 'Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, BlenderBIM'
+  },
+  dwg: {
+    ext: 'DWG',
+    name: 'AutoCAD Drawing Database',
+    category: '2D / 3D CAD Drawing Standard',
+    developer: 'Autodesk (1982)',
+    nature: 'Vector geometry (lines, polylines, arcs, hatchings, text) organized into functional layers',
+    colorMaterial: 'AutoCAD Color Index (ACI) or TrueColor RGB',
+    pmi: 'Dimensions, title blocks, layout sheets',
+    typicalUse: '2D construction blueprints, site submittals, permitting, shop fabrication drawings',
+    ecosystem: 'AutoCAD, BricsCAD, ZWCAD, GstarCAD, DraftSight'
+  },
+  slddrw: {
+    ext: 'SLDDRW',
+    name: 'SolidWorks Drawing Document',
+    category: 'Associative MCAD 2D Blueprint',
+    developer: 'Dassault Systèmes',
+    nature: 'Associative 2D orthographic drawing views dynamically linked to parent 3D .sldprt/.sldasm models',
+    colorMaterial: 'Line font styles, layer colors, hatch patterns',
+    pmi: 'GD&T feature control frames, surface finish symbols, weld symbols, BOM tables',
+    typicalUse: 'Manufacturing shop drawings, assembly instructions, inspection blueprints',
+    ecosystem: 'SolidWorks, eDrawings, Dassault 3DEXPERIENCE'
+  },
+  pdf: {
+    ext: 'PDF',
+    name: 'Adobe Portable Document Format (Vector)',
+    category: 'Universal Document & Vector Standard',
+    developer: 'Adobe / ISO 32000',
+    nature: 'High-resolution searchable vector graphics, embedded TrueType fonts, and layer states',
+    colorMaterial: 'RGB/CMYK vector color streams',
+    pmi: 'Searchable text strings, title block metadata',
+    typicalUse: 'Universal drawing distribution, field inspection, paperless manufacturing, archival',
+    ecosystem: 'Adobe Acrobat, Bluebeam Revu, web browsers, mobile PDF viewers'
+  }
+};
+
+console.log('Base formats and tools defined in build_converters.js');
+
+const allPairs = {};
+
+// ==========================================
+// 1. 3D PRINTING & SLICING (8 PAIRS)
+// ==========================================
+allPairs['step-to-stl'] = {
+  slug: 'step-to-stl',
+  title: 'STEP to STL Converter',
+  h1Title: 'Online STEP to STL 3D Mesh Converter & Slicer Optimization',
+  metaTitle: 'Free Online STEP to STL Converter — 3D Printing Mesh Optimization (2026)',
+  metaDescription: 'Convert CAD STEP/STP solid models to clean, watertight STL polygonal meshes for 3D printing (Bambu Studio, Cura, PrusaSlicer). Compare cloud & offline tools.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'B-Rep Solid to Polygonal Mesh (Tessellation)',
+  difficulty: 'Low (Single-direction Tessellation)',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['stl'],
+  keyParameters: [
+    { label: 'Chordal Deviation (Sag)', value: '0.01 - 0.05 mm', hint: 'Lower values yield smoother cylindrical holes; use 0.005mm for SLA resin.' },
+    { label: 'Angular Tolerance', value: '15° - 20°', hint: 'Controls facet density on tight fillet radii and small bevel transitions.' },
+    { label: 'Unit Scale Verification', value: 'Millimeters (mm)', hint: 'STL contains no unit header; ensure the converter does not scale by 25.4x (inches).' }
+  ],
+  painPointDesc: 'Engineers frequently download high-precision STEP models from suppliers or GrabCAD, but modern 3D printer slicers (Bambu Studio, PrusaSlicer, Cura) require triangular meshes. Free public cloud converters often produce rough polygonal facets on circular holes or generate broken, non-manifold edges that crash the slicer.',
+  riskWarning: 'Proprietary STEP files often embed confidential patented mechanical assemblies and injection mold tooling. Uploading raw STEP models to unverified third-party web converters risks corporate data leaks. For confidential IP, use offline open-source engines like FreeCAD or local slicers with native STEP parsing.',
+  technicalGuide: [
+    { title: 'Calibrate Chordal Deviation for Smooth Arcs', desc: 'When converting mathematical B-Rep cylinders to planar triangles, chordal deviation specifies the maximum distance between the true curve and the facet. For FDM printing, setting 0.02mm provides smooth bolt holes without ballooning file sizes past 50MB.' },
+    { title: 'Verify 2-Manifold Watertight Mesh Integrity', desc: 'Every edge in a valid 3D printing mesh must be shared by exactly two triangles. Check the converted STL in MeshLab or OrcaSlicer to confirm zero non-manifold edges, inverted normals, or self-intersecting shells.' },
+    { title: 'Prevent 25.4x Imperial/Metric Scale Shifts', desc: 'Because the STL binary specification lacks a unit identifier, imperial CAD exports often open 25.4 times too small in millimeter-based slicing profiles. Always inspect the bounding box dimensions immediately after conversion.' }
+  ],
+  recommendedTools: [toolsDb['freecad'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Why does my converted STL model show faceting on round holes in Bambu Studio?', answer: 'This happens when the conversion chordal deviation (mesh deflection) is set too coarse. Re-export the STEP with linear deflection set to 0.01mm or import the STEP file directly into Bambu Studio, which runs an internal high-density tessellation kernel.' },
+    { question: 'Is STEP better for 3D printing than STL?', answer: 'Yes. STEP retains mathematically perfect NURBS surfaces, whereas STL approximates everything with flat triangles. Modern slicers (PrusaSlicer 2.5+, Bambu Studio) can slice directly from STEP, calculating slicing layers against true mathematical arcs.' },
+    { question: 'Will converting STEP to STL lose internal assembly components?', answer: 'If the STEP file contains a multi-body assembly, standard STL export will merge all bodies into a single solid mesh unless your converter supports multi-body split or you convert to the modern 3MF format.' }
+  ],
+  relatedSlugs: ['step-to-3mf', 'sldprt-to-stl', 'step-to-glb', 'step-to-iges']
+};
+
+allPairs['step-to-3mf'] = {
+  slug: 'step-to-3mf',
+  title: 'STEP to 3MF Converter',
+  h1Title: 'STEP to 3MF Modern 3D Printing Format Converter',
+  metaTitle: 'STEP to 3MF Converter — Multi-Color & Multi-Material 3D Printing (2026)',
+  metaDescription: 'Convert STEP CAD assemblies to the modern 3MF format. Preserve multi-body parts, color assignments, and precise units for Bambu Lab and Prusa 3D printers.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'B-Rep Solid to Multi-Body XML Container',
+  difficulty: 'Low (Mesh + Metadata Packaging)',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['3mf'],
+  keyParameters: [
+    { label: 'Multi-Body Preservation', value: 'Enabled', hint: 'Keeps individual assembly parts split into separate objects for distinct color assignment.' },
+    { label: 'Unit Definition', value: 'Millimeters', hint: '3MF natively embeds unit definitions, preventing imperial/metric confusion.' },
+    { label: 'Draco/Zip Compression', value: 'Standard PKZip', hint: '3MF archives are up to 70% smaller than equivalent raw ASCII STL files.' }
+  ],
+  painPointDesc: 'Traditional STL files flatten multi-part CAD assemblies into a single monolithic mesh, discarding all color definitions and requiring painful manual splitting in the slicer. Converting STEP to 3MF retains separate body hierarchies and material IDs for effortless multi-color 3D printing on Bambu AMS and Prusa MMU setups.',
+  riskWarning: 'Commercial 3MF packages may encapsulate full CAD thumbnail previews and project metadata. Ensure sensitive engineering part numbers in the XML headers are scrubbed before publishing 3MF models to open community repositories.',
+  technicalGuide: [
+    { title: 'Preserve Assembly Component Hierarchies', desc: 'Ensure your conversion pipeline treats each solid lump in the STEP file as an independent 3MF object. This allows Bambu Studio to assign different filament slots to different functional features.' },
+    { title: 'Take Advantage of Native Unit Tags', desc: 'Unlike STL, the 3MF XML specification mandates an explicit unit attribute (e.g., unit="millimeter"). This completely eliminates scaling errors when sharing files across international teams.' },
+    { title: 'Check Triangle Count vs Slicer Performance', desc: '3MF supports dense meshes with millions of facets. If slicing becomes sluggish on consumer laptops, run a 15% quadric edge collapse decimation while preserving boundary topology.' }
+  ],
+  recommendedTools: [toolsDb['bambu'], toolsDb['freecad'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Why should I convert to 3MF instead of STL for 3D printing?', answer: '3MF is smaller (compressed XML container), includes explicit millimeter unit headers to prevent scale errors, and preserves multiple assembly parts with distinct colors and materials.' },
+    { question: 'Can all 3D printers read 3MF files?', answer: 'Modern slicers (Bambu Studio, PrusaSlicer, Cura, IdeaMaker, OrcaSlicer) natively support 3MF. Since the slicer generates the final machine G-code, virtually any 3D printer can execute models prepared via 3MF.' },
+    { question: 'Does STEP to 3MF conversion preserve CAD parametric feature trees?', answer: 'No. 3MF is an additive manufacturing mesh format. The parametric sketch history and extrude features are baked into polygonal geometry during the conversion process.' }
+  ],
+  relatedSlugs: ['step-to-stl', 'sldprt-to-3mf', 'obj-to-3mf', 'step-to-glb']
+};
+
+allPairs['sldprt-to-stl'] = {
+  slug: 'sldprt-to-stl',
+  title: 'SolidWorks SLDPRT to STL Converter',
+  h1Title: 'Online SolidWorks (.sldprt) to STL 3D Printing Converter',
+  metaTitle: 'SolidWorks (.sldprt) to STL Converter — Export Watertight Meshes (2026)',
+  metaDescription: 'Convert native Dassault SolidWorks SLDPRT part files to watertight STL meshes for 3D printing. No SolidWorks license required.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'Parasolid Native B-Rep to Polygonal Mesh',
+  difficulty: 'Low (Tessellation via Parasolid/B-Rep)',
+  fromFormat: formatsDb['sldprt'],
+  toFormat: formatsDb['stl'],
+  keyParameters: [
+    { label: 'Linear Deflection (Tolerance)', value: '0.02 mm', hint: 'Balances circular hole roundness with reasonable STL file size.' },
+    { label: 'Angular Deflection', value: '10.0°', hint: 'Prevents stepping artifacts on tight fillets and curved chamfers.' },
+    { label: 'Coordinate System Alignment', value: 'Origin / Default UCS', hint: 'Ensures part lands flat on the virtual 3D printer build plate.' }
+  ],
+  painPointDesc: 'Non-SolidWorks users (makers, machine shop operators, procurement specialists) who receive raw .sldprt files cannot open or slice them without purchasing expensive CAD seat licenses. A reliable conversion workflow transforms proprietary SolidWorks parts into sliced STL meshes in seconds.',
+  riskWarning: 'Native .sldprt files contain full feature history, internal sketch dimensions, and author metadata. Converting to STL strips away the proprietary feature tree while providing the external physical geometry needed for manufacturing.',
+  technicalGuide: [
+    { title: 'Extract Geometric Shells Without SolidWorks License', desc: 'Modern standalone conversion engines (CAD Exchanger, FreeCAD with Open CASCADE) parse the Parasolid geometry embedded within .sldprt without requiring an active SolidWorks workstation.' },
+    { title: 'Prevent Broken Thin-Wall Solid Shells', desc: 'Sheet metal .sldprt parts with complex bend reliefs can produce non-manifold zero-thickness edges during rough polygonization. Verify that thin flanges are meshed with at least two triangle layers across their thickness.' },
+    { title: 'Orient Normal Vectors Outward', desc: 'Check for inverted triangle normals. Slicers interpret backwards normals as negative voids, creating hollow pockets inside solid 3D printed mechanical brackets.' }
+  ],
+  recommendedTools: [toolsDb['edrawings'], toolsDb['freecad'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Can I convert SolidWorks SLDPRT to STL without SolidWorks installed?', answer: 'Yes. You can use Dassault’s free eDrawings Viewer, open-source FreeCAD, or cloud services like CAD Exchanger to generate clean STL files without a SolidWorks license.' },
+    { question: 'Why does my SLDPRT model fail to open in older CAD tools?', answer: 'SolidWorks files are strictly backward-incompatible (e.g., SolidWorks 2024 files cannot be opened in SolidWorks 2021). Converting SLDPRT to STL or STEP completely bypasses version lockouts.' },
+    { question: 'Will converting SLDPRT to STL preserve cosmetic threads?', answer: 'Cosmetic threads in SolidWorks are 2D texture bitmaps, not physical cuts. When converted to STL, cosmetic threads will be smooth cylinders. If you need physical 3D printed threads, model real helical cuts in CAD before export.' }
+  ],
+  relatedSlugs: ['sldprt-to-step', 'sldprt-to-3mf', 'sldprt-to-parasolid-xt', 'step-to-stl']
+};
+
+allPairs['sldprt-to-3mf'] = {
+  slug: 'sldprt-to-3mf',
+  title: 'SolidWorks SLDPRT to 3MF Converter',
+  h1Title: 'SolidWorks (.sldprt) to 3MF Multi-Color 3D Printing Converter',
+  metaTitle: 'SolidWorks (.sldprt) to 3MF Converter — Multi-Body Printing (2026)',
+  metaDescription: 'Convert SolidWorks SLDPRT parts and multi-body weldments to 3MF for multi-material 3D printing on Bambu Lab, Prusa, and Voron printers.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'Parasolid Multi-Body to 3MF Container',
+  difficulty: 'Low (Mesh & Material Packaging)',
+  fromFormat: formatsDb['sldprt'],
+  toFormat: formatsDb['3mf'],
+  keyParameters: [
+    { label: 'Split Solid Bodies', value: 'Individual 3MF Objects', hint: 'Separates overmolds and multi-material features into distinct slicer components.' },
+    { label: 'Appearance Mapping', value: 'sRGB Colors', hint: 'Transfers SolidWorks feature color overrides into 3MF material tags.' },
+    { label: 'Mesh Resolution', value: 'Fine (0.015mm chordal)', hint: 'Ensures curved mechanical surfaces print cleanly without polygon facets.' }
+  ],
+  painPointDesc: 'SolidWorks designs often feature multi-body parts (such as co-molded rubber grips, gaskets, or two-tone housings). Exporting to legacy STL collapses these bodies into a single solid, making it impossible to assign different filaments in Bambu Studio. Converting directly to 3MF preserves every body as an individual printable object.',
+  riskWarning: 'Ensure multi-body interference is resolved prior to 3MF generation. Overlapping solid bodies can cause 3D printer slicers to calculate double extrusion toolpaths at boundary interfaces, leading to over-extrusion nozzle jams.',
+  technicalGuide: [
+    { title: 'Preserve SolidWorks Multi-Body Weldment Splits', desc: 'In multi-body SLDPRT files, verify that Combine features have not merged disparate material zones. The converter creates an independent object node in the 3MF XML structure for every distinct solid body.' },
+    { title: 'Map Face Colors to Slicer Filament Slots', desc: 'High-end 3MF converters extract SolidWorks face appearances and assign them to 3MF base materials, allowing Bambu Studio to auto-map colors to AMS slot 1 through slot 4.' },
+    { title: 'Clean Up Zero-Thickness Surface Bodies', desc: 'SolidWorks construction surface quilts that remain visible in the feature tree can corrupt 3MF mesh generation. Hide or delete unneeded surface bodies before export.' }
+  ],
+  recommendedTools: [toolsDb['bambu'], toolsDb['edrawings'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Does SLDPRT to 3MF export preserve custom SolidWorks materials like ABS or PETG?', answer: '3MF embeds material density and color attributes, but your 3D printer slicer will still use its own calibrated filament temperature and flow profiles for slicing.' },
+    { question: 'Can I export a SolidWorks Assembly (.sldasm) directly to 3MF?', answer: 'Yes. SolidWorks assemblies export cleanly to 3MF, packaging all assembly components into a single file with individual part positioning preserved.' },
+    { question: 'Why is 3MF better than STL for Bambu Studio?', answer: '3MF files store multi-color painted surfaces, support blockers, seam orientations, and part hierarchies in a single compressed file, whereas STL only stores raw geometry.' }
+  ],
+  relatedSlugs: ['sldprt-to-stl', 'step-to-3mf', 'sldprt-to-step', 'obj-to-3mf']
+};
+
+allPairs['rhino-3dm-to-stl'] = {
+  slug: 'rhino-3dm-to-stl',
+  title: 'Rhino 3DM to STL Converter',
+  h1Title: 'Rhino (.3dm) NURBS to STL Mesh 3D Printing Converter',
+  metaTitle: 'Rhino (.3dm) to STL Converter — High-Precision Jewelry & CAM (2026)',
+  metaDescription: 'Convert McNeel Rhino 3DM double-precision NURBS surfaces to ultra-fine watertight STL meshes for jewelry, dental, and high-precision SLA 3D printing.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'NURBS Freeform Surfaces to Dense Triangle Mesh',
+  difficulty: 'Low (Tessellation via openNURBS)',
+  fromFormat: formatsDb['rhino_3dm'],
+  toFormat: formatsDb['stl'],
+  keyParameters: [
+    { label: 'Max Distance Edge to Surface', value: '0.002 mm (for jewelry)', hint: 'Prevents visible faceting under 10x jeweler loupe inspection.' },
+    { label: 'Minimum Initial Grid Quads', value: '16', hint: 'Ensures organic double-curved surfaces maintain curvature continuity.' },
+    { label: 'Refine Mesh on Export', value: 'Enabled (Pack Textures Disabled)', hint: 'Splits long skinny triangles that cause resin layer curing distortion.' }
+  ],
+  painPointDesc: 'Jewelry designers, dental technicians, and industrial sculptors create organic, double-curved surfaces in Rhino 3D. When transferring .3dm files to casting bureaus or resin 3D printers, raw NURBS geometry must be converted into ultra-dense, 100% closed (watertight) STL meshes without surface tears or open naked edges.',
+  riskWarning: 'Jewelry 3DM files often contain micro-prongs, pave stone seats, and delicate filigree work. Coarse mesh conversion will collapse thin 0.3mm prongs into jagged triangles, ruining castability.',
+  technicalGuide: [
+    { title: 'Eliminate Naked Edges Before Mesh Extraction', desc: 'Run Rhino ShowEdges diagnostic to confirm the polysurface has zero naked (unjoined) edges. Open boundaries in the NURBS model result in non-manifold holes in the output STL.' },
+    { title: 'Optimize Aspect Ratio of Triangles', desc: 'Avoid long, needle-like triangles with extreme aspect ratios (>1:10), which cause ray-tracing artifacts in slicing engines. Enable Refine mesh to subdivide elongated facets.' },
+    { title: 'Leverage the openNURBS Library for Lossless Conversion', desc: 'Since McNeel publishes the openNURBS C++ toolkit freely, robust converters read double-precision 3DM coordinate arrays natively without intermediate approximation loss.' }
+  ],
+  recommendedTools: [toolsDb['rhino'], toolsDb['meshlab'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Why does my 3DM to STL conversion have naked edges that fail in PreForm or Chitubox?', answer: 'Naked edges occur when neighboring NURBS surface patches fail to join within standard modeling tolerance (e.g. 0.001mm). Join all surfaces into a Closed Solid Polysurface before converting to STL.' },
+    { question: 'What is the optimal mesh tolerance for 3D printed castable resin jewelry?', answer: 'For fine jewelry investment casting, set the maximum distance from edge to surface to 0.002mm (2 microns) to guarantee mirror-polished casting surfaces after burnout.' },
+    { question: 'Can Rhino 3DM files store both NURBS and mesh data simultaneously?', answer: 'Yes. 3DM files frequently cache viewport render meshes alongside mathematical NURBS geometry. A smart converter extracts the double-precision NURBS directly rather than relying on coarse display meshes.' }
+  ],
+  relatedSlugs: ['step-to-stl', 'obj-to-stl', 'step-to-glb', 'skp-to-obj']
+};
+
+allPairs['ipt-to-stl'] = {
+  slug: 'ipt-to-stl',
+  title: 'Autodesk Inventor IPT to STL Converter',
+  h1Title: 'Autodesk Inventor (.ipt) to STL 3D Printing Mesh Converter',
+  metaTitle: 'Inventor (.ipt) to STL Converter — Export Watertight Meshes (2026)',
+  metaDescription: 'Convert Autodesk Inventor IPT part files to clean, watertight STL meshes for 3D printing. No Autodesk Inventor license required.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'ShapeManager B-Rep Solid to Polygonal Mesh',
+  difficulty: 'Low (Tessellation via ShapeManager/OpenCASCADE)',
+  fromFormat: formatsDb['ipt'],
+  toFormat: formatsDb['stl'],
+  keyParameters: [
+    { label: 'Surface Deviation', value: '0.02 mm', hint: 'Controls maximum distance between true curved surfaces and mesh facets.' },
+    { label: 'Normal Angle Tolerance', value: '12°', hint: 'Prevents faceting across complex organic blends and transition fillets.' },
+    { label: 'Binary vs ASCII Mode', value: 'Binary STL', hint: 'Reduces output file size by approximately 80% compared to verbose ASCII text.' }
+  ],
+  painPointDesc: 'Autodesk Inventor users frequently collaborate with external suppliers, prototype makers, and 3D printing operators who do not possess expensive Autodesk Product Design Collection licenses. Converting .ipt parts to high-resolution STL files ensures fast manufacturing handoffs.',
+  riskWarning: 'Ensure that sensitive internal component voids (such as fluid cooling channels or weight-reduction cavities) are properly sealed if you only intend to share external cosmetic envelopes.',
+  technicalGuide: [
+    { title: 'ShapeManager Kernel Extraction', desc: 'Autodesk IPT files are compiled on Autodesk ShapeManager (a proprietary derivative of ACIS). High-fidelity converters correctly interpret native ASM spline equations without boundary skewing.' },
+    { title: 'Bypass Multi-Year Version Lockouts', desc: 'Autodesk Inventor strictly blocks older versions from reading newer .ipt files (e.g. Inventor 2023 cannot open 2026 IPTs). Converting to STL or STEP completely eliminates version compatibility barriers.' },
+    { title: 'Confirm Sheet Metal Unfold vs Formed State', desc: 'If the IPT file is a sheet metal component, confirm whether you need the 3D formed shape (for 3D printing verification) or the flat pattern (for 2D laser DXF cutting).' }
+  ],
+  recommendedTools: [toolsDb['autodesk_viewer'], toolsDb['freecad'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Can I open and convert an Inventor IPT file without Autodesk software?', answer: 'Yes. You can use Autodesk’s free web-based Viewer, open-source FreeCAD, or multi-format converters like CAD Exchanger to inspect and export IPT files to STL.' },
+    { question: 'Why is my converted Inventor part displayed 25.4 times too large or too small?', answer: 'This happens when the Inventor part was modeled in inches and exported to unitless STL. Slicers default to millimeters. Either rescale by 2540% / 3.937% in the slicer or re-export with explicit millimeter units.' },
+    { question: 'Does converting IPT to STL preserve Inventor iPart parameter tables?', answer: 'No. STL only captures a static snapshot of the active part geometry. The dynamic parameter table and Excel spreadsheet links are discarded during mesh discretization.' }
+  ],
+  relatedSlugs: ['ipt-to-step', 'step-to-stl', 'sldprt-to-stl', 'step-to-3mf']
+};
+
+allPairs['obj-to-stl'] = {
+  slug: 'obj-to-stl',
+  title: 'Wavefront OBJ to STL Converter',
+  h1Title: 'Online OBJ to STL 3D Mesh Repair & 3D Printing Converter',
+  metaTitle: 'OBJ to STL Converter — 3D Printing & Mesh Repair (2026)',
+  metaDescription: 'Convert Wavefront OBJ polygonal models to clean, manifold STL meshes for 3D printing slicing. Repair inverted normals, fill holes, and strip textures.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'Polygonal Mesh Container Conversion & Repair',
+  difficulty: 'Low (Mesh Re-indexing & Triangulation)',
+  fromFormat: formatsDb['obj'],
+  toFormat: formatsDb['stl'],
+  keyParameters: [
+    { label: 'Triangulation of Quads & N-Gons', value: 'Forced Triangulation', hint: 'STL strictly requires 3-vertex triangles; converts 4-sided quads cleanly.' },
+    { label: 'Manifold Edge Healing', value: 'Auto-Stitch Boundaries', hint: 'Closes open boundary seams from sculpted character asset seams.' },
+    { label: 'Normal Vector Unification', value: 'Point Outward', hint: 'Fixes inverted normals that create slicing voids and toolpath gaps.' }
+  ],
+  painPointDesc: 'Sculpted character models, anime figurines, and architectural mockups downloaded from sites like Thingiverse or Sketchfab are commonly distributed as Wavefront .obj files. Many OBJ files contain quad polygons, detached boundary vertices, and open seams that crash 3D printer slicing engines.',
+  riskWarning: 'Sculpted organic OBJ models can contain tens of millions of micro-triangles. Directly converting an un-decimated 500MB OBJ to STL can freeze slicing computers. Always apply intelligent surface decimation while preserving silhouette edges.',
+  technicalGuide: [
+    { title: 'Convert Quad Meshes to Triangles', desc: 'Subdivision modelers output four-sided polygons (quads) for clean edge flow. STL requires pure 3-sided triangles. Ensure your converter splits quads along the shortest diagonal to avoid degenerate zero-area facets.' },
+    { title: 'Consolidate Split Vertex Coordinates', desc: 'OBJ files frequently duplicate vertex coordinates along UV texture seam boundaries. Run a weld coincident vertices pass (threshold 0.0001mm) to restore a continuous watertight topological manifold.' },
+    { title: 'Check Model Thickness for Minimum Printable Walls', desc: 'Sculpted OBJ characters often have zero-thickness decorative elements (such as capes, hair strands, or cloth planes). Add a solidify shell modifier (minimum 1.2mm for FDM) before sending the STL to the printer.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['meshlab'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Will converting OBJ to STL lose my model color textures?', answer: 'Yes. Standard STL is a geometry-only format and cannot store color texture maps or MTL material sidecars. If you need full-color 3D printing, convert your OBJ to 3MF or VRML instead.' },
+    { question: 'Why does my sliced OBJ model have internal hollow gaps in Cura or Bambu Studio?', answer: 'This is caused by inverted surface normals or non-manifold open seams along UV texture boundaries. Open the model in Blender, select all faces, and press Shift+N (Recalculate Outside) before exporting to STL.' },
+    { question: 'What is the maximum practical STL file size for modern 3D printer slicers?', answer: 'Most modern slicers (Bambu Studio, PrusaSlicer) handle STL files up to 200MB smoothly. Beyond that, decimate the mesh by 30-50% in Blender; the printed piece will look visually identical.' }
+  ],
+  relatedSlugs: ['obj-to-3mf', 'step-to-stl', 'rhino-3dm-to-stl', 'step-to-obj']
+};
+
+allPairs['obj-to-3mf'] = {
+  slug: 'obj-to-3mf',
+  title: 'Wavefront OBJ to 3MF Converter',
+  h1Title: 'Wavefront (.obj) to 3MF Multi-Color 3D Printing Converter',
+  metaTitle: 'OBJ to 3MF Converter — Retain Full Color & Textures (2026)',
+  metaDescription: 'Convert textured Wavefront OBJ models with MTL sidecars into modern 3MF packages. Retain full-color vertex textures for Bambu Lab AMS and multi-extruder 3D printing.',
+  category: '3d-printing',
+  categoryLabel: '3D Printing & Slicing',
+  conversionNature: 'Textured Mesh to Color-Mapped 3MF Package',
+  difficulty: 'Low (Texture to Material Map Encoding)',
+  fromFormat: formatsDb['obj'],
+  toFormat: formatsDb['3mf'],
+  keyParameters: [
+    { label: 'Texture Embedding Mode', value: 'Embedded PNG in 3MF Archive', hint: 'Packages external JPG/PNG diffuse textures into the single-file 3MF container.' },
+    { label: 'Vertex Color Generation', value: 'Sample UV Texture to Vertex', hint: 'Bakes UV pixel colors directly into mesh vertices for slicer brush editing.' },
+    { label: 'Unit Confirmation', value: 'Millimeters (mm)', hint: 'Ensures scanned OBJ assets do not import at micro-millimeter scale.' }
+  ],
+  painPointDesc: 'Traditional 3D scans and sculpted models use OBJ + MTL + PNG texture maps. When preparing these models for multi-color 3D printing (Bambu AMS, Prusa MMU, full-color inkjet), converting to 3MF bundles all textures and geometries into a single, self-contained, watertight container ready for slicing.',
+  riskWarning: 'Confirm that external image texture file paths in the .mtl file use relative file paths rather than hardcoded local drive paths (e.g. C:\\Users\\...\\texture.png), which cause missing texture errors during conversion.',
+  technicalGuide: [
+    { title: 'Bundle Sidecar MTL and Texture Images', desc: 'Place the .obj, .mtl, and all associated PNG/JPG texture files in the same folder before conversion so the parser can resolve material diffuse bindings.' },
+    { title: 'Bake UV Textures into Vertex Colors for Slicer Painting', desc: 'Slicers like Bambu Studio allow you to use a virtual paint bucket on vertex colors. Converting UV textures to per-vertex color data makes it easy to assign filament colors to textured features.' },
+    { title: 'Ensure Single Manifold Outer Shell', desc: 'Scanned 3D OBJ figures often have open neck or base holes. Cap open holes with a flat polygon base before converting to 3MF so the slicer recognizes the object as a solid solid.' }
+  ],
+  recommendedTools: [toolsDb['win3d_builder'], toolsDb['blender'], toolsDb['bambu']],
+  faqs: [
+    { question: 'Will converting OBJ to 3MF preserve my photogrammetry 3D scan colors?', answer: 'Yes. 3MF natively encapsulates color texture bitmaps and vertex color channels inside its compressed ZIP container, preserving photographic scan fidelity.' },
+    { question: 'Why did my converted 3MF file lose its colors when opened in Bambu Studio?', answer: 'Ensure that the MTL file and image textures were in the same folder during conversion, and verify that the 3MF export was configured to embed texture assets into the archive.' },
+    { question: 'Can I edit the internal structure of a 3MF file manually?', answer: 'Yes. A 3MF file is a standard PKZip archive. You can rename .3mf to .zip, extract it, and inspect the XML mesh definitions and embedded texture images in any code editor.' }
+  ],
+  relatedSlugs: ['obj-to-stl', 'step-to-3mf', 'sldprt-to-3mf', 'step-to-glb']
+};
+
+console.log('3D Printing pairs defined (8/28)');
+
+// ==========================================
+// 2. INDUSTRIAL MCAD INTEROP (9 PAIRS)
+// ==========================================
+allPairs['sldprt-to-step'] = {
+  slug: 'sldprt-to-step',
+  title: 'SolidWorks SLDPRT to STEP Converter',
+  h1Title: 'SolidWorks (.sldprt) to STEP (STP AP242/AP214) Solid B-Rep Converter',
+  metaTitle: 'SolidWorks (.sldprt) to STEP Converter — CNC & CAD Interop (2026)',
+  metaDescription: 'Convert native SolidWorks SLDPRT parts to universal STEP (AP214/AP242) solid B-Rep models for CNC machining, mold design, and cross-CAD collaboration.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  conversionNature: 'Proprietary Parasolid to Neutral B-Rep (ISO 10303)',
+  difficulty: 'Medium (B-Rep Mathematical Surface Topology Transfer)',
+  fromFormat: formatsDb['sldprt'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Application Protocol', value: 'AP242 (or AP214 fallback)', hint: 'AP242 includes GD&T PMI; AP214 guarantees compatibility on older CAM systems.' },
+    { label: 'Solid Body Sewing', value: 'Preserve Watertight Solid', hint: 'Ensures output model is recognized as a solid volume rather than hollow surface patches.' },
+    { label: 'Split Solid Bodies', value: 'Multi-Body STEP AP242', hint: 'Maintains separate bodies in multi-body part designs.' }
+  ],
+  painPointDesc: 'SolidWorks is the dominant MCAD tool for consumer products and machinery, but CNC machine shops, mold tooling specialists, and automotive Tier 1 suppliers frequently use Mastercam, Siemens NX, or CATIA. Furthermore, newer SolidWorks files cannot be opened in older SolidWorks editions. Converting SLDPRT to universal STEP bridges this gap with 100% geometric fidelity.',
+  riskWarning: 'STEP preserves exact solid volume, coordinate alignments, and surface boundaries, but deliberately strips the proprietary parametric sketch history tree. This protects your design IP while providing manufacturers with the exact physical geometry needed for CNC programming.',
+  technicalGuide: [
+    { title: 'Choose Between STEP AP214 and AP242', desc: 'Use AP214 if sharing files with legacy CNC CAM software (Mastercam X9 or older). Use AP242 if you need to transfer 3D Product Manufacturing Information (PMI), surface finish callouts, and geometric dimensioning.' },
+    { title: 'Avoid Surface Sewing Edge Tears', desc: 'If the recipient’s CAD system opens the STEP model as open quilts rather than a solid body, adjust the sewing tolerance in your export settings (typically 0.01mm to 0.001mm) to knit boundary edges cleanly.' },
+    { title: 'Resolve External Reference Links', desc: 'If the SLDPRT model relies on in-context assembly references, break or lock those external links before converting to prevent missing feature calculation errors.' }
+  ],
+  recommendedTools: [toolsDb['cadexchanger'], toolsDb['freecad'], toolsDb['xometry']],
+  faqs: [
+    { question: 'Does converting SLDPRT to STEP lose the parametric feature tree history?', answer: 'Yes. STEP is a neutral boundary representation format. It captures mathematically exact solid geometries and surface boundaries but strips away the proprietary sketch dimensions and extrude feature tree.' },
+    { question: 'Can Mastercam and PowerMill open STEP files directly for CNC toolpath programming?', answer: 'Yes. Virtually all modern CAM software (Mastercam, PowerMill, hyperMILL, Fusion 360 CAM) reads STEP AP214 and AP242 natively for 3-axis and 5-axis CNC machining.' },
+    { question: 'Why did my STEP file open as hollow surface sheets instead of a solid?', answer: 'This happens when small edge gaps in the original SolidWorks part exceed the receiving CAD kernel’s sewing tolerance. Run a Stitch / Heal Surfaces command in the receiving CAD tool to close boundary loops into a watertight solid.' }
+  ],
+  relatedSlugs: ['sldprt-to-parasolid-xt', 'sldprt-to-stl', 'catpart-to-step', 'nx-prt-to-step']
+};
+
+allPairs['sldprt-to-parasolid-xt'] = {
+  slug: 'sldprt-to-parasolid-xt',
+  title: 'SolidWorks SLDPRT to Parasolid X_T Converter',
+  h1Title: 'SolidWorks (.sldprt) to Parasolid (.x_t / .x_b) Lossless Kernel Converter',
+  metaTitle: 'SolidWorks (.sldprt) to Parasolid X_T Converter — Lossless MCAD (2026)',
+  metaDescription: 'Convert SolidWorks SLDPRT parts to Parasolid X_T text format. Zero translation loss across Siemens NX, Mastercam, Onshape, and Parasolid-based tools.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  conversionNature: 'Same-Kernel Direct Serialization (Parasolid)',
+  difficulty: 'Low (Native Kernel Data Export)',
+  fromFormat: formatsDb['sldprt'],
+  toFormat: formatsDb['parasolid_xt'],
+  keyParameters: [
+    { label: 'Parasolid Schema Version', value: 'V32.0 (or match target CAM)', hint: 'Downgrade schema version (e.g. V28.0) if opening on older legacy CNC software.' },
+    { label: 'Text (.x_t) vs Binary (.x_b)', value: 'ASCII Text (.x_t)', hint: 'Text format (.x_t) allows text inspection and ensures multi-platform endianness safety.' },
+    { label: 'Translation Fidelity', value: '100% Lossless (Zero Approximation)', hint: 'Since SolidWorks runs natively on Parasolid, zero geometric approximation occurs.' }
+  ],
+  painPointDesc: 'SolidWorks uses the Siemens Parasolid geometric modeling kernel as its core mathematical engine. When transferring data to CAM systems (Mastercam, hyperMILL) or other Parasolid-based CAD systems (Siemens NX, Solid Edge, Onshape), converting to STEP incurs a slight format translation penalty. Exporting directly to Parasolid .x_t provides 100% mathematically identical geometry with zero surface edge drift.',
+  riskWarning: 'Parasolid transmit files store the mathematical equations of all solid boundaries. Always ensure your NDA permits sharing raw 3D geometry with external CAM vendors.',
+  technicalGuide: [
+    { title: 'Match the Parasolid Schema Version Number', desc: 'If a machine shop’s CAM system throws an Incompatible Parasolid Schema error, export the .x_t file targeting an older schema version (e.g., v28 to v31) to ensure backward compatibility.' },
+    { title: 'Choose Between .x_t (ASCII) and .x_b (Binary)', desc: 'Use .x_t (text) for standard email exchange and debugging. Use .x_b (binary) for massive assembly files with hundreds of complex parts to halve the file size on disk.' },
+    { title: 'Enjoy Perfect B-Rep Surface Boundary Continuity', desc: 'Because SolidWorks and NX share the identical Parasolid kernel, complex fillets, drafts, and lofts will never tear or produce open quilt gaps during .x_t interop.' }
+  ],
+  recommendedTools: [toolsDb['cadexchanger'], toolsDb['edrawings'], toolsDb['onshape']],
+  faqs: [
+    { question: 'Why is Parasolid X_T better than STEP for Mastercam or Siemens NX?', answer: 'SolidWorks, Siemens NX, Solid Edge, and Mastercam all use the Parasolid geometry kernel. Exporting to .x_t transfers native kernel data directly with zero translation error or edge stitching.' },
+    { question: 'What is the difference between .x_t and .x_b files?', answer: '.x_t is an ASCII text format that is human-readable and safe across different CPU architectures. .x_b is a binary format that produces smaller file sizes and faster load times for massive assemblies.' },
+    { question: 'Can I view the text structure of a .x_t file in Notepad?', answer: 'Yes. You can open any .x_t file in a text editor to inspect the Parasolid schema header, part names, transform matrices, and topological entity lists.' }
+  ],
+  relatedSlugs: ['sldprt-to-step', 'catpart-to-parasolid-xt', 'nx-prt-to-step', 'sldprt-to-stl']
+};
+
+allPairs['catpart-to-step'] = {
+  slug: 'catpart-to-step',
+  title: 'CATIA CATPart to STEP Converter',
+  h1Title: 'Dassault CATIA (.CATPart) to STEP (STP AP242/AP214) Solid Converter',
+  metaTitle: 'CATIA (.CATPart) to STEP Converter — Aerospace & Automotive CAD (2026)',
+  metaDescription: 'Convert Dassault CATIA V5/V6 CATPart files to universal STEP solid models. Interoperate with SolidWorks, Siemens NX, Inventor, and Mastercam.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (CGM Kernel to Standard B-Rep)',
+  conversionNature: 'Convergence Geometric Modeler (CGM) to Neutral B-Rep',
+  fromFormat: formatsDb['catpart'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Application Protocol', value: 'STEP AP242 (with FTA)', hint: 'Preserves 3D Functional Tolerancing & Annotation (FTA) for aerospace compliance.' },
+    { label: 'Surface Stitching Tolerance', value: '0.001 mm', hint: 'Ensures complex aerofoil NURBS surfaces heal into solid water-tight volumes.' },
+    { label: 'Hybrid Body Handling', value: 'Solid + Open Surface Quilts', hint: 'Extracts both solid volumes and Class-A styling surface patches.' }
+  ],
+  painPointDesc: 'Aerospace primes (Boeing, Airbus) and automotive OEMs (Tesla, BYD) mandate CATIA for vehicle body design. However, Tier 2 and Tier 3 machining shops typically run SolidWorks or Mastercam. CATIA licenses cost tens of thousands of dollars per seat. Online conversion from CATPart to STEP unlocks multi-tier manufacturing collaboration at minimal cost.',
+  riskWarning: 'Aerospace CATPart models frequently incorporate proprietary aerodynamic wing profiles and classified structural ribbing. Defense suppliers must ensure all cloud conversion pipelines comply with ITAR / EAR export regulations or execute conversions using 100% offline local tools.',
+  technicalGuide: [
+    { title: 'Preserve CATIA Class-A Freeform Curvature', desc: 'CATIA utilizes Dassault’s proprietary CGM kernel with G2/G3 surface continuity. When converting to STEP, select double-precision float limits to avoid slight chordal edge tears along complex aerodynamic blend fillets.' },
+    { title: 'Capture 3D FTA (Functional Tolerancing & Annotation)', desc: 'Modern aerospace drawing packages omit 2D blueprints, relying on 3D annotations inside CATIA. Target STEP AP242 to ensure geometric dimensioning and datum references survive the conversion.' },
+    { title: 'Resolve Multi-Body Part Geometrical Sets', desc: 'CATPart documents organize surface sketches in Geometrical Sets and solid bodies in PartBodies. Verify that your converter exports both active solid bodies and reference tooling surfaces.' }
+  ],
+  recommendedTools: [toolsDb['datakit'], toolsDb['cadexchanger'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Can I convert a CATIA V5 CATPart to STEP without a CATIA license?', answer: 'Yes. You can use specialized standalone converters like Datakit CrossManager or cloud interop engines like CAD Exchanger to translate CATPart files without purchasing a CATIA license.' },
+    { question: 'Will converting CATPart to STEP preserve CATIA Functional Tolerancing (FTA)?', answer: 'Yes, provided you export to STEP AP242 (ISO 10303-242). Legacy STEP AP203 and AP214 protocols only capture pure geometry, discarding 3D GD&T callouts.' },
+    { question: 'What is the difference between a .CATPart and a .CATProduct file?', answer: 'A .CATPart represents an individual mechanical component, while a .CATProduct represents a multi-part assembly referencing external CATPart files on disk.' }
+  ],
+  relatedSlugs: ['catpart-to-parasolid-xt', 'sldprt-to-step', 'nx-prt-to-step', 'step-to-stl']
+};
+
+allPairs['catpart-to-parasolid-xt'] = {
+  slug: 'catpart-to-parasolid-xt',
+  title: 'CATIA CATPart to Parasolid X_T Converter',
+  h1Title: 'CATIA (.CATPart) to Parasolid (.x_t) CNC Machining Converter',
+  metaTitle: 'CATIA to Parasolid X_T Converter — CAM Machining & Tooling (2026)',
+  metaDescription: 'Convert CATIA V5/V6 CATPart files into Parasolid X_T text files for direct import into Mastercam, Siemens NX, SolidWorks, and CAM toolpath generators.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (CGM to Parasolid Boundary Mapping)',
+  conversionNature: 'Dassault CGM Kernel to Siemens Parasolid Kernel Translation',
+  fromFormat: formatsDb['catpart'],
+  toFormat: formatsDb['parasolid_xt'],
+  keyParameters: [
+    { label: 'Parasolid Version', value: 'V31.0 (or match target CAM)', hint: 'Ensures legacy CNC programming workstations do not reject the transmit file.' },
+    { label: 'Surface Stitching Tolerance', value: '0.001 mm', hint: 'Heals tight aerospace curvature transitions during kernel translation.' },
+    { label: 'Output File Format', value: 'ASCII Text (.x_t)', hint: 'Ensures cross-platform reliability between Windows, Linux, and Unix workstations.' }
+  ],
+  painPointDesc: 'Machinists receiving CATIA CATPart files from automotive or aerospace clients frequently program CNC toolpaths in Mastercam or SolidWorks CAM. Mastercam runs on the Siemens Parasolid engine. Converting CATPart to Parasolid .x_t eliminates translation hiccups, producing clean solid bodies ready for 5-axis toolpathing.',
+  riskWarning: 'Double-check that all complex multi-body trim operations in the CATPart document have fully computed. Incomplete feature trees can result in missing bolt holes or un-trimmed boss features in the exported Parasolid file.',
+  technicalGuide: [
+    { title: 'Bridge the CGM to Parasolid Kernel Gap', desc: 'CATIA uses Dassault’s CGM engine, while Mastercam uses Siemens Parasolid. High-end converters calculate exact boundary intersection curves between differing spline formulations, preventing micro-gaps.' },
+    { title: 'Heal Disconnected Surface Quilts into Solid Bodies', desc: 'Set the healing algorithm to automatically knit freeform surfacing patches into a single watertight solid body with valid volume and center-of-mass attributes.' },
+    { title: 'Scrub Proprietary Parametric Sketches for IP Safety', desc: 'The resulting .x_t file provides 100% perfect CNC surface coordinates while protecting your internal CATIA sketch constraints and design formulas.' }
+  ],
+  recommendedTools: [toolsDb['datakit'], toolsDb['cadexchanger'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Why convert CATIA CATPart to Parasolid X_T instead of STEP?', answer: 'If your target software (Mastercam, Siemens NX, SolidWorks) runs on the Parasolid kernel, converting directly to .x_t provides native kernel data representation, eliminating intermediate STEP translation steps.' },
+    { question: 'Can I convert a CATIA V5 R33 file to Parasolid X_T?', answer: 'Yes. Modern converters regularly update their CATIA read libraries to support the latest CATIA V5-6R releases as well as 3DEXPERIENCE models.' },
+    { question: 'Will converted Parasolid files open on older versions of SolidWorks?', answer: 'Yes, if you configure the exporter to target a legacy Parasolid schema version (e.g. schema v28 to v31) compatible with your specific SolidWorks year release.' }
+  ],
+  relatedSlugs: ['catpart-to-step', 'sldprt-to-parasolid-xt', 'nx-prt-to-step', 'sldprt-to-step']
+};
+
+allPairs['nx-prt-to-step'] = {
+  slug: 'nx-prt-to-step',
+  title: 'Siemens NX PRT to STEP Converter',
+  h1Title: 'Siemens NX (.prt) to STEP (STP AP242/AP214) Solid B-Rep Converter',
+  metaTitle: 'Siemens NX (.prt) to STEP Converter — High-End CAM & MCAD (2026)',
+  metaDescription: 'Convert native Siemens NX PRT part files to universal STEP solid models. Interoperate seamlessly with SolidWorks, CATIA, Inventor, and Mastercam.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (Parasolid NX Container to Standard B-Rep)',
+  conversionNature: 'Siemens Parasolid Native Container to ISO 10303 Neutral B-Rep',
+  fromFormat: formatsDb['nx_prt'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Application Protocol', value: 'AP242 (with 3D PMI)', hint: 'Preserves Siemens NX Model-Based Definition (MBD) tolerance callouts.' },
+    { label: 'WAVE Geometry Links', value: 'Baked Solid Geometry', hint: 'Resolves external WAVE linked body references into independent solid geometry.' },
+    { label: 'Multi-Body Assembly Export', value: 'Assembly Tree Structure', hint: 'Preserves component part hierarchy in multi-level NX assemblies.' }
+  ],
+  painPointDesc: 'Siemens NX is the backbone of aerospace turbines, automotive powertrains, and high-end manufacturing. However, machine shops and component suppliers frequently use SolidWorks, Inventor, or Mastercam. When an external partner cannot open raw .prt files due to license costs or NX version mismatches, converting to STEP ensures smooth manufacturing workflows.',
+  riskWarning: 'Siemens NX uses the unified .prt extension for individual parts, multi-part assemblies, CAM setups, and FEA simulation meshes. Verify that your conversion targets the physical component geometry rather than toolpath simulation envelopes.',
+  technicalGuide: [
+    { title: 'Bake WAVE Linked Coordinate References', desc: 'NX models frequently use associative WAVE links to inherit coordinates from skeleton assemblies. Ensure the converter resolves and bakes all external associative links so the geometry does not shift or disappear.' },
+    { title: 'Export 3D Model-Based Definition (MBD) via AP242', desc: 'Siemens NX is an industry leader in paperless MBD. Export to STEP AP242 to transfer datum targets, surface finishes, and tolerance bands directly to modern CMM inspection and CAM systems.' },
+    { title: 'Differentiate Between NX PRT and Creo PRT', desc: 'Both Siemens NX and PTC Creo use the .prt file extension. Quality converters automatically inspect the binary file header (identifying the Siemens Parasolid signature) to apply the correct decoding algorithms.' }
+  ],
+  recommendedTools: [toolsDb['cadexchanger'], toolsDb['datakit'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Why do both Siemens NX and PTC Creo use the .prt file extension?', answer: 'Both software families independently chose .prt (short for "Part") in the 1990s. High-quality CAD converters automatically inspect the file header to determine whether the model is a Siemens Parasolid file or a PTC Granite file.' },
+    { question: 'Can I convert a Siemens NX PRT file directly to SolidWorks?', answer: 'Since SolidWorks and Siemens NX both run on the Parasolid geometry kernel, the cleanest path is converting NX PRT to Parasolid .x_t or neutral STEP AP242.' },
+    { question: 'Will converting NX PRT to STEP preserve synchronous modeling edits?', answer: 'Yes. Any direct geometric modifications made via NX Synchronous Technology are baked into the final solid boundary representation exported to STEP.' }
+  ],
+  relatedSlugs: ['sldprt-to-step', 'creo-prt-to-step', 'catpart-to-step', 'step-to-stl']
+};
+
+allPairs['creo-prt-to-step'] = {
+  slug: 'creo-prt-to-step',
+  title: 'PTC Creo PRT to STEP Converter',
+  h1Title: 'PTC Creo / Pro-E (.prt) to STEP (STP AP242/AP214) Solid Converter',
+  metaTitle: 'PTC Creo (.prt) to STEP Converter — Industrial MCAD Interop (2026)',
+  metaDescription: 'Convert native PTC Creo and Pro/ENGINEER PRT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, NX, and Inventor.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (Granite Kernel to Standard B-Rep)',
+  conversionNature: 'PTC Granite Modeling Kernel to ISO 10303 Neutral B-Rep',
+  fromFormat: formatsDb['creo_prt'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Application Protocol', value: 'AP242 (or AP214 fallback)', hint: 'AP242 transfers 3D GD&T MBD; AP214 ensures compatibility on older CAM systems.' },
+    { label: 'Purge Version Suffixes', value: 'Enabled', hint: 'Cleans up Creo trailing version numbers (e.g. .prt.1, .prt.2).' },
+    { label: 'Surface Stitching Tolerance', value: '0.01 mm', hint: 'Knits tight freeform styling patches into water-tight solid volumes.' }
+  ],
+  painPointDesc: 'PTC Creo (formerly Pro/ENGINEER) is widely used by consumer electronics and heavy industrial manufacturers. However, when sharing 3D part files with tooling vendors or machining contractors running SolidWorks or Mastercam, raw .prt files fail to open. Converting Creo parts to STEP provides a universal, mathematically exact solid model ready for production.',
+  riskWarning: 'Creo automatically appends sequential version suffixes to saved files (e.g., bracket.prt.1, bracket.prt.2). Ensure you select the latest incremented suffix to convert the most up-to-date engineering revision.',
+  technicalGuide: [
+    { title: 'Handle Creo Version Number Suffixes', desc: 'Creo saves each modification with an incremental suffix (e.g., .prt.1, .prt.2). Strip or rename the suffix to standard .prt or select the highest numbered file to ensure you convert the latest design state.' },
+    { title: 'Translate PTC Granite Curves into Standard NURBS', desc: 'Creo runs on the proprietary Granite modeling engine. Modern converters translate Granite boundary curves into standard ISO 10303 STEP B-Rep entities without micro-gap tears.' },
+    { title: 'Protect Design IP by Stripping Feature History', desc: 'Converting Creo PRT models to STEP shares exact manufacturing boundaries while withholding proprietary internal sketch constraints and parametric equations.' }
+  ],
+  recommendedTools: [toolsDb['cadexchanger'], toolsDb['datakit'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Why does my Creo file have a number at the end (e.g. bracket.prt.3)?', answer: 'Creo uses an automatic versioning backup system. Each time you save, Creo creates a new file with an incremented number suffix. Always convert the file with the highest number, as it represents your latest save.' },
+    { question: 'Can SolidWorks open Creo PRT files directly?', answer: 'SolidWorks has a feature called 3D Interconnect that can read some Creo files, but complex features and newer Creo versions often fail or drop references. Converting to STEP AP242 ensures 100% reliable geometric import.' },
+    { question: 'Will converting Creo PRT to STEP preserve family table configurations?', answer: 'No. STEP files only capture the active geometry state at the time of export. If you need multiple configurations, export each family table instance separately.' }
+  ],
+  relatedSlugs: ['nx-prt-to-step', 'sldprt-to-step', 'catpart-to-step', 'step-to-stl']
+};
+
+allPairs['ipt-to-step'] = {
+  slug: 'ipt-to-step',
+  title: 'Autodesk Inventor IPT to STEP Converter',
+  h1Title: 'Autodesk Inventor (.ipt) to STEP (STP AP242/AP214) Solid Converter',
+  metaTitle: 'Autodesk Inventor (.ipt) to STEP Converter — MCAD Interop (2026)',
+  metaDescription: 'Convert Autodesk Inventor IPT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, Siemens NX, and Mastercam.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (ShapeManager to Standard B-Rep)',
+  conversionNature: 'Autodesk ShapeManager (ASM) to ISO 10303 Neutral B-Rep',
+  fromFormat: formatsDb['ipt'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Application Protocol', value: 'AP242 (or AP214 fallback)', hint: 'AP242 includes 3D MBD annotations; AP214 ensures compatibility on legacy CAM setups.' },
+    { label: 'Solid Body Sewing', value: 'Watertight Solid', hint: 'Ensures output model is recognized as a solid volume rather than hollow surface sheets.' },
+    { label: 'Multi-Body Part Handling', value: 'Preserve Multi-Lumps', hint: 'Exports multi-body Inventor parts as separate connected solid volumes.' }
+  ],
+  painPointDesc: 'Autodesk Inventor is widely used across industrial equipment and mechanical engineering. However, machine shops programming CNC toolpaths in Mastercam or suppliers designing tooling in SolidWorks cannot directly edit native .ipt files without translation. Converting Inventor parts to universal STEP eliminates software barriers while retaining exact mathematical solid precision.',
+  riskWarning: 'Autodesk Inventor files are strictly backward-incompatible across release years (e.g. Inventor 2024 files cannot be opened in Inventor 2021). Converting to STEP completely neutralizes version incompatibility.',
+  technicalGuide: [
+    { title: 'ShapeManager to Open CASCADE Translation', desc: 'Autodesk IPT runs on the ShapeManager kernel (derived from ACIS). Modern converters bridge ShapeManager spline formulations into standard ISO STEP curves without boundary surface deviation.' },
+    { title: 'Check Sheet Metal Unfolded vs Folded State', desc: 'When converting sheet metal IPT parts, ensure the model is in the 3D folded state for mechanical assembly interop, or export flat patterns to DXF for laser cutting.' },
+    { title: 'Transfer 3D MBD Annotations via STEP AP242', desc: 'If your Inventor part uses 3D Model-Based Definition (MBD) tolerance callouts, select STEP AP242 to transfer datum features and dimensional tolerances to modern CMM inspection software.' }
+  ],
+  recommendedTools: [toolsDb['autodesk_viewer'], toolsDb['cadexchanger'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Can SolidWorks open an Autodesk Inventor IPT file directly?', answer: 'SolidWorks 3D Interconnect can open some Inventor IPT files, but complex features often fail to translate or break coordinate references. Converting to STEP AP242 guarantees 100% reliable solid geometry import.' },
+    { question: 'Will converting IPT to STEP lose internal hole threads?', answer: 'Cosmetic thread representations (which are 2D graphical textures) will appear as smooth cylinders in STEP. Physical 3D modeled helical threads will be perfectly preserved as solid helical geometry.' },
+    { question: 'What is the difference between an Inventor .ipt part and an .iam assembly?', answer: 'An .ipt represents a single part or multi-body component. An .iam is an assembly file that links multiple external .ipt files together with geometric mate constraints.' }
+  ],
+  relatedSlugs: ['ipt-to-stl', 'sldprt-to-step', 'nx-prt-to-step', 'step-to-stl']
+};
+
+allPairs['iges-to-step'] = {
+  slug: 'iges-to-step',
+  title: 'IGES to STEP Converter',
+  h1Title: 'IGES (.igs / .iges) to STEP (STP AP242/AP214) Solid Surface Sewing Converter',
+  metaTitle: 'IGES to STEP Converter — Heal Surface Patches to Solid (2026)',
+  metaDescription: 'Convert legacy IGES (.igs) surface models to modern watertight STEP solid B-Rep format. Sew trimmed surfaces, fix edge gaps, and prepare models for CNC CAM.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Medium (Surface Sewing and Topology Healing)',
+  conversionNature: 'Disconnected Surface Patches to Watertight B-Rep Solid',
+  fromFormat: formatsDb['iges'],
+  toFormat: formatsDb['step'],
+  keyParameters: [
+    { label: 'Surface Sewing Tolerance', value: '0.01 mm (adjust to 0.05 mm if needed)', hint: 'Knits disconnected trimmed surface patches into a closed solid volume.' },
+    { label: 'Heal Degenerate Trimming Curves', value: 'Enabled', hint: 'Repairs self-intersecting boundary curves from legacy CAD exports.' },
+    { label: 'Target Protocol', value: 'STEP AP214 / AP242', hint: 'Ensures maximum compatibility across modern MCAD and CAM kernels.' }
+  ],
+  painPointDesc: 'IGES (Initial Graphics Exchange Specification) is a 1980s legacy format that stores 3D models as disconnected trimmed surface sheets rather than solid bodies. When importing vintage IGES files into modern CAD/CAM software (SolidWorks, NX, Mastercam), models frequently open as hollow, broken surface quilts that cannot be modified or machined. Converting IGES to STEP stitches open surface boundaries into a true watertight solid.',
+  riskWarning: 'Legacy IGES files created with single-precision floating point math often have micro-gaps (0.05mm - 0.2mm) between adjacent surface patches. You may need to increase the sewing tolerance in your conversion settings to force the surfaces into a closed solid.',
+  technicalGuide: [
+    { title: 'Stitch Trimmed Surfaces (Type 144) into B-Rep Solids', desc: 'IGES Type 144 entities represent trimmed surface patches without topological connectivity. Advanced conversion engines run boundary proximity algorithms to stitch adjacent edges into a coherent manifold shell.' },
+    { title: 'Repair Inverted Surface Normal Patches', desc: 'Legacy IGES exports often contain patches with flipped normal vectors. The converter automatically harmonizes normal directions outward so the resulting STEP model computes positive mass and volume.' },
+    { title: 'Eliminate Redundant 2D Wireframe Clutter', desc: 'Old IGES files often bundle legacy construction wireframe lines and coordinate axes that clutter the model tree. A clean conversion filters out non-geometric wireframes, preserving only the valid 3D solid envelope.' }
+  ],
+  recommendedTools: [toolsDb['freecad'], toolsDb['cadexchanger'], toolsDb['datakit']],
+  faqs: [
+    { question: 'Why is STEP better than IGES for modern 3D CAD/CAM?', answer: 'IGES only stores loose surface patches and wireframes with no knowledge of what is inside or outside the model. STEP stores true mathematical solid B-Rep topology, allowing modern CAD tools to calculate mass, volume, and section cuts instantly.' },
+    { question: 'Why does my converted STEP model still show open surface gaps?', answer: 'If the original IGES model has boundary gaps larger than standard tolerance (e.g. >0.1mm), the automated stitcher cannot merge them. Open the model in FreeCAD, increase the sewing tolerance, and run the Shape Healing workbench.' },
+    { question: 'Was IGES discontinued?', answer: 'Yes. The IGES standard was officially sunset in 1996 and has not been updated since. STEP (ISO 10303) is its official modern successor across the global CAD/CAM industry.' }
+  ],
+  relatedSlugs: ['step-to-iges', 'step-to-stl', 'sldprt-to-step', 'catpart-to-step']
+};
+
+allPairs['step-to-iges'] = {
+  slug: 'step-to-iges',
+  title: 'STEP to IGES Converter',
+  h1Title: 'STEP (STP) to IGES (.igs / .iges) Legacy CAM Compatibility Converter',
+  metaTitle: 'STEP to IGES Converter — Legacy CNC & Machine Toolpaths (2026)',
+  metaDescription: 'Convert modern STEP solid B-Rep files to IGES surface format for legacy CNC controllers, EDM wire cutting, and older CAM software.',
+  category: 'mcad-interop',
+  categoryLabel: 'Industrial MCAD Interop',
+  difficulty: 'Low (Solid Decomposition to Surface Patches)',
+  conversionNature: 'Solid B-Rep to Decomposed Trimmed Surfaces',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['iges'],
+  keyParameters: [
+    { label: 'Surface Entity Type', value: 'Type 144 (Trimmed Parametric Surface)', hint: 'Standard entity format supported by virtually all legacy CAM systems.' },
+    { label: 'Coordinate Precision', value: 'Double Precision (Float64)', hint: 'Prevents coordinate rounding errors along tight boundary spline edges.' },
+    { label: 'Coordinate System Alignment', value: 'Absolute Machine Coordinates', hint: 'Ensures parts align cleanly with machine tool zero offsets.' }
+  ],
+  painPointDesc: 'While STEP is the modern standard, many legacy wire EDM machines, vintage CMM inspection arms, and older CNC CAM software packages (running on Windows XP/7 or proprietary controllers) cannot parse STEP AP242 files. Converting STEP models to standardized IGES trimmed surfaces ensures 100% toolpath generation on legacy factory hardware.',
+  riskWarning: 'Converting STEP to IGES is a one-way degradation from a smart solid body to dumb individual surface patches. Always preserve your original STEP master file for future design modifications.',
+  technicalGuide: [
+    { title: 'Decompose B-Rep Faces into Type 144 Trimmed Surfaces', desc: 'The conversion engine extracts each face of the STEP solid, serializing it as an independent IGES Type 144 surface with its associated Type 142 boundary curve loops.' },
+    { title: 'Maintain Absolute World Coordinate Alignment', desc: 'Avoid exporting with local user coordinate offsets. Legacy CNC controllers expect coordinates aligned to the true machine origin for fixture setup.' },
+    { title: 'Double-Check NURBS Degree and Spline Complexity', desc: 'Some very old machine tools cannot parse high-degree (>Degree 3) NURBS splines. If the machine throws an error, convert complex splines to segmented polylines or standard arcs.' }
+  ],
+  recommendedTools: [toolsDb['freecad'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Why would someone convert a modern STEP file back into an old IGES file?', answer: 'Mainly for legacy manufacturing hardware compatibility. Many vintage wire EDM machines, optical CMM arms, and older CNC CAM packages built before 2005 only recognize IGES format.' },
+    { question: 'Will converting STEP to IGES reduce geometric accuracy?', answer: 'No. The mathematical equations of the surface curves remain identical. However, the topological connectivity between adjacent faces is stripped, meaning the model is no longer recognized as a single solid volume.' },
+    { question: 'Can I open an IGES file in a standard text editor?', answer: 'Yes. IGES is an ASCII text format organized into 80-column punch-card lines. You can open any .igs file in Notepad to inspect entity header parameters and author metadata.' }
+  ],
+  relatedSlugs: ['iges-to-step', 'step-to-stl', 'sldprt-to-step', 'step-to-glb']
+};
+
+console.log('MCAD Interop pairs defined (17/28)');
+
+// ==========================================
+// 3. WEB3D & LIGHTWEIGHT VISUALIZATION (7 PAIRS)
+// ==========================================
+allPairs['step-to-glb'] = {
+  slug: 'step-to-glb',
+  title: 'STEP to GLB Converter',
+  h1Title: 'STEP (STP) to GLB (Binary glTF) Web3D & AR Converter',
+  metaTitle: 'STEP to GLB Converter — Web3D, eCommerce & Mobile AR (2026)',
+  metaDescription: 'Convert heavy CAD STEP/STP solid models into lightweight, compressed binary GLB files for Three.js, WebGL eCommerce showrooms, and mobile AR viewers.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Tessellation, Draco Compression & PBR Baking)',
+  conversionNature: 'B-Rep Solid to WebGL Standard PBR Binary Container',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['glb'],
+  keyParameters: [
+    { label: 'Draco Mesh Compression', value: 'Level 7 (or Standard)', hint: 'Compresses geometric coordinates, reducing file size by up to 80% for instant web loading.' },
+    { label: 'PBR Metallic-Roughness', value: 'Standard PBR Shader', hint: 'Transforms CAD solid appearances into photorealistic realistic web lighting reflections.' },
+    { label: 'Maximum Triangle Budget', value: '50,000 - 150,000 Tris', hint: 'Ensures 60 FPS smooth interactive rotation on mobile smartphone browsers.' }
+  ],
+  painPointDesc: 'Industrial machinery models in STEP format often exceed 500MB, containing thousands of internal bolts, washers, and micro-fillets. When businesses want to showcase their products on website showrooms, Shopify stores, or mobile AR viewers, loading raw STEP is technically impossible. Converting STEP to lightweight binary GLB with Draco compression slashes file size to under 10MB while delivering photorealistic 60 FPS web rendering.',
+  riskWarning: 'Stripping internal components (such as motor windings, internal gears, and proprietary mounting brackets) before converting to GLB protects core engineering IP while giving marketing teams a beautiful external visual shell.',
+  technicalGuide: [
+    { title: 'Apply Draco Geometry Compression', desc: 'Draco geometry compression algorithm encodes vertex positions, normals, and texture coordinates into compact bitstreams, shrinking 100MB CAD meshes down to 5MB for instantaneous web loading.' },
+    { title: 'Bake Physically Based Rendering (PBR) Materials', desc: 'Map standard CAD color values to modern PBR Metallic-Roughness workflows. Adding subtle surface roughness (0.3) and metallic sheen (0.8) gives aluminum and steel parts realistic reflections in WebGL viewports.' },
+    { title: 'Cull Hidden Internal Geometry (Defeature)', desc: 'Run a mesh defeaturing pass to delete hidden internal bolts, seals, and non-visible structural ribs, reducing triangle count by 60% with zero visual difference to the external viewer.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'What is the difference between GLB and glTF?', answer: 'glTF is an open JSON text file referencing external .bin buffers and PNG textures. GLB is the self-contained binary packaging of glTF, bundling all geometry, shaders, and textures into a single compact file.' },
+    { question: 'Can I view GLB files directly on iPhone or Android in Augmented Reality (AR)?', answer: 'Yes. Android devices open GLB natively using Scene Viewer / Quick Look. On iOS devices, GLB can be viewed directly in WebGL or converted to Apple’s USDZ format for native AR Quick Look.' },
+    { question: 'Why is Draco-compressed GLB better for eCommerce websites?', answer: 'Draco compression reduces 3D model download size by 70% to 90%, enabling heavy 3D product configurators to load in under 2 seconds on mobile 4G/5G connections.' }
+  ],
+  relatedSlugs: ['step-to-gltf', 'step-to-obj', 'sldprt-to-glb', 'skp-to-glb']
+};
+
+allPairs['step-to-gltf'] = {
+  slug: 'step-to-gltf',
+  title: 'STEP to glTF Converter',
+  h1Title: 'STEP (STP) to glTF 2.0 Open Web3D Format Converter',
+  metaTitle: 'STEP to glTF Converter — WebGL, Three.js & Babylon.js (2026)',
+  metaDescription: 'Convert engineering STEP/STP CAD files to open glTF 2.0 JSON structures. Inspect shaders, mesh buffers, and integrate with Three.js WebGL applications.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Tessellation & JSON Web Encoding)',
+  conversionNature: 'B-Rep Solid to Open Web3D JSON/Buffer Specification',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['gltf'],
+  keyParameters: [
+    { label: 'glTF Structure', value: 'Separate (.gltf + .bin + textures)', hint: 'Ideal for web developers who want to inspect and programmatically modify JSON nodes.' },
+    { label: 'PBR Metallic-Roughness', value: 'Enabled', hint: 'Transfers CAD body colors into real-time WebGL shader parameters.' },
+    { label: 'Coordinate Axes', value: 'Y-Up (OpenGL/WebGL standard)', hint: 'Converts CAD Z-Up orientation to WebGL Y-Up orientation automatically.' }
+  ],
+  painPointDesc: 'Web developers building bespoke WebGL / Three.js 3D configurators often need to inspect and programmatically manipulate scene node hierarchies, swap materials dynamically via JavaScript, or stream binary buffers over custom CDNs. Converting STEP to open glTF provides a transparent, developer-friendly JSON format.',
+  riskWarning: 'glTF JSON headers expose part node names and layer structures in plain text. Strip confidential internal development codenames from the JSON tree before deploying assets to production public websites.',
+  technicalGuide: [
+    { title: 'Coordinate System Alignment (CAD Z-Up to Web Y-Up)', desc: 'Most CAD packages (SolidWorks, CATIA) define the vertical axis as Z-Up, whereas WebGL and Three.js use Y-Up. Quality converters apply an automated 90° X-axis rotation matrix to keep models upright.' },
+    { title: 'Optimize Binary Buffer (.bin) Layout', desc: 'Ensure vertex attribute buffers (position, normal, texcoord) are byte-aligned (4-byte alignment) to maximize GPU memory transfer speeds during WebGL draw calls.' },
+    { title: 'Programmatic Shader Integration in Three.js', desc: 'With glTF, front-end engineers can easily bind custom Three.js MeshStandardMaterial or MeshPhysicalMaterial shaders to specific mesh node names at runtime.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'What is the difference between glTF and GLB?', answer: 'glTF is the open standard split into human-readable .gltf (JSON), .bin (raw binary data), and image texture files. GLB is the same data packaged into a single binary archive.' },
+    { question: 'How do I load a converted glTF model in Three.js?', answer: 'Use Three.js’s built-in GLTFLoader: import the loader, call loader.load(\'model.gltf\', (gltf) => { scene.add(gltf.scene); }).' },
+    { question: 'Does glTF support animations and kinematics?', answer: 'Yes. glTF natively supports skeletal rigging, morph targets, and node transform animations, making it the premier format for interactive Web3D product demonstrations.' }
+  ],
+  relatedSlugs: ['step-to-glb', 'step-to-obj', 'sldprt-to-glb', 'skp-to-glb']
+};
+
+allPairs['step-to-obj'] = {
+  slug: 'step-to-obj',
+  title: 'STEP to OBJ Converter',
+  h1Title: 'STEP (STP) to Wavefront OBJ 3D Rendering & Animation Converter',
+  metaTitle: 'STEP to OBJ Converter — 3D Rendering, Animation & VFX (2026)',
+  metaDescription: 'Convert engineering STEP/STP solid CAD models to Wavefront OBJ polygonal meshes for photorealistic rendering in 3ds Max, Maya, Blender, and Cinema 4D.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Tessellation & Quadric Topology Generation)',
+  conversionNature: 'B-Rep Solid to Polygonal Mesh with MTL Sidecar',
+  fromFormat: formatsDb['step'],
+  toFormat: formatsDb['obj'],
+  keyParameters: [
+    { label: 'Normal Angle Tolerance', value: '10° - 15°', hint: 'Ensures smooth shading on curved surfaces without visible polygon faceting.' },
+    { label: 'Generate UV Coordinates', value: 'Box / Automatic Unwrapping', hint: 'Generates UV texture mapping coordinates for applying carbon fiber and brushed metal textures.' },
+    { label: 'Export Material Groups', value: 'Enabled (.mtl file)', hint: 'Preserves separate material assignments for rubber, glass, and polished chrome.' }
+  ],
+  painPointDesc: 'Industrial design renderers and CGI animation studios working in 3ds Max, Maya, Cinema 4D, or KeyShot need to import engineering CAD models. However, rendering packages struggle with mathematical NURBS solids. Converting STEP to high-density polygonal OBJ with smooth vertex normal vectors and material groups allows artists to apply photorealistic shaders and lighting.',
+  riskWarning: 'Heavy industrial STEP assemblies can generate OBJ files with tens of millions of triangles. Ensure your converter supports smart polygon decimation to prevent render viewport lag in Cinema 4D or 3ds Max.',
+  technicalGuide: [
+    { title: 'Generate High-Fidelity Vertex Normal Vectors', desc: 'Clean vertex normals (vn elements in the OBJ file) are critical for realistic specular reflections. The converter calculates true analytic normals from the STEP B-Rep surface so flat facets reflect light smoothly.' },
+    { title: 'Preserve Material Part Groups via .MTL', desc: 'Ensure the exporter writes distinct usemtl tags for each assembly component. This lets 3ds Max or KeyShot assign different materials (chrome, frosted glass, matte plastic) with a single click.' },
+    { title: 'Auto-Generate Texture UV Coordinates', desc: 'Enable UV generation during conversion so 3D artists can immediately apply procedural bump maps and brushed metal anisotropic textures without tedious manual unwrapping.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Why does my converted OBJ model look faceted when rendered in 3ds Max or Maya?', answer: 'This happens if vertex normals were omitted during conversion. Ensure Export Vertex Normals is enabled in your exporter, or apply a smooth modifier in 3ds Max.' },
+    { question: 'Will converting STEP to OBJ maintain correct real-world scale?', answer: 'Yes. OBJ preserves the exact coordinate spacing of the STEP model. However, verify whether your 3D animation software scene units are set to millimeters or meters.' },
+    { question: 'What is the purpose of the .MTL file generated alongside the .OBJ file?', answer: 'The .mtl (Material Template Library) file defines the surface colors, transparency, and specular roughness of each material group referenced inside the .obj file.' }
+  ],
+  relatedSlugs: ['step-to-glb', 'step-to-stl', 'skp-to-obj', 'obj-to-stl']
+};
+
+allPairs['sldprt-to-glb'] = {
+  slug: 'sldprt-to-glb',
+  title: 'SolidWorks SLDPRT to GLB Converter',
+  h1Title: 'SolidWorks (.sldprt) to GLB Web3D & AR Interactive Converter',
+  metaTitle: 'SolidWorks (.sldprt) to GLB Converter — Web3D & Mobile AR (2026)',
+  metaDescription: 'Convert native SolidWorks SLDPRT part files to lightweight binary GLB models. Embed interactive 3D mechanical models into websites, Shopify, and mobile AR.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Tessellation, Defeature & Draco Encoding)',
+  conversionNature: 'Parasolid MCAD Solid to WebGL PBR Binary Archive',
+  fromFormat: formatsDb['sldprt'],
+  toFormat: formatsDb['glb'],
+  keyParameters: [
+    { label: 'Draco Compression', value: 'Enabled', hint: 'Reduces heavy mechanical CAD file sizes by up to 85% for fast web loading.' },
+    { label: 'Appearance Translation', value: 'PBR Metallic-Roughness', hint: 'Converts SolidWorks material appearances into realistic web reflections.' },
+    { label: 'Defeature Hidden Geometry', value: 'Optional', hint: 'Strips unneeded internal features to accelerate 60 FPS mobile rendering.' }
+  ],
+  painPointDesc: 'Industrial manufacturers want to showcase machinery on web catalogs, interactive spare-part portals, or customer mobile presentations. Raw SolidWorks .sldprt files are heavy and cannot be viewed in web browsers without specialized plugins. Converting SLDPRT directly to binary GLB provides instant, interactive 3D rotation on smartphones and laptops at 60 FPS.',
+  riskWarning: 'Converting proprietary SolidWorks parts to GLB removes internal sketch dimensions, mates, and feature history, allowing marketing departments to publish interactive 3D models safely without leaking trade secrets.',
+  technicalGuide: [
+    { title: 'Translate SolidWorks Appearances to PBR Shaders', desc: 'SolidWorks features custom appearance maps (e.g., anodized red, cast iron). The converter maps these to glTF PBR standard channels (baseColor, metallic, roughness) for photorealistic WebGL lighting.' },
+    { title: 'Apply Draco Compression for Fast Web Performance', desc: 'Industrial mechanical parts with complex fillets generate dense meshes. Draco compression reduces the payload to under 5MB, allowing mobile visitors to spin 3D products with zero lag.' },
+    { title: 'Align Coordinate System to Web Standard (Y-Up)', desc: 'SolidWorks uses Z-Up orientation by default. The converter applies a standard 90° X-axis transformation matrix so the part displays right-side-up on the web page.' }
+  ],
+  recommendedTools: [toolsDb['cadexchanger'], toolsDb['blender'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Can I view a converted GLB file on an iPhone using Augmented Reality?', answer: 'Yes. iOS supports viewing 3D models via WebGL in Safari. For native Apple AR Quick Look, you can also convert the GLB to USDZ format.' },
+    { question: 'Will converting SLDPRT to GLB leak my proprietary SolidWorks dimensions?', answer: 'No. GLB is a visual mesh format that captures only the external polygonal envelope. All underlying 2D sketches, parametric dimensions, and feature history are stripped away.' },
+    { question: 'How do I embed the converted GLB into my WordPress or Shopify website?', answer: 'You can use Google’s free <model-viewer> web component or standard Three.js libraries: simply add <model-viewer src="part.glb" ar auto-rotate camera-controls></model-viewer> to your HTML.' }
+  ],
+  relatedSlugs: ['step-to-glb', 'sldprt-to-stl', 'skp-to-glb', 'step-to-gltf']
+};
+
+allPairs['skp-to-glb'] = {
+  slug: 'skp-to-glb',
+  title: 'Trimble SketchUp SKP to GLB Converter',
+  h1Title: 'SketchUp (.skp) to GLB Web3D & Metaverse Interactive Converter',
+  metaTitle: 'SketchUp (.skp) to GLB Converter — Web3D & AR Walkthroughs (2026)',
+  metaDescription: 'Convert Trimble SketchUp SKP architectural models to lightweight binary GLB format for interactive Web3D virtual tours, Three.js, and mobile AR.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Tessellation & Texture Packing)',
+  conversionNature: 'Architectural Mesh to WebGL PBR Binary Container',
+  fromFormat: formatsDb['skp'],
+  toFormat: formatsDb['glb'],
+  keyParameters: [
+    { label: 'Draco Compression', value: 'Level 7', hint: 'Compresses heavy architectural vertex data, reducing loading times on mobile devices.' },
+    { label: 'Double-Sided Face Handling', value: 'Auto-Fix Backfaces', hint: 'Corrects inverted SketchUp blue backfaces so walls render opaque in WebGL.' },
+    { label: 'Texture Atlas Packing', value: 'Consolidate JPG/PNG Textures', hint: 'Merges wood, brick, and tile textures into efficient texture atlases.' }
+  ],
+  painPointDesc: 'Architects and interior designers create building concepts in SketchUp to share with clients. However, clients on mobile devices or standard web browsers cannot open heavy .skp files without installing desktop viewers. Converting SketchUp models to compressed binary GLB enables clients to explore 3D architectural spaces on smartphones or laptops with zero software installation.',
+  riskWarning: 'SketchUp models frequently contain reversed faces (shown in default light blue in SketchUp). If left uncorrected, these backfaces will render as completely invisible transparent walls in WebGL viewports.',
+  technicalGuide: [
+    { title: 'Reverse Inverted Backfaces Before Conversion', desc: 'In SketchUp, right-click any blue-tinted reversed faces and select Reverse Faces to make them white (front-facing). WebGL rendering engines use backface culling and will not render inverted surfaces.' },
+    { title: 'Purge Unused Components and Textures', desc: 'Run SketchUp’s Window -> Model Info -> Statistics -> Purge Unused before export. This scrubs deleted 3D trees, furniture, and unlinked textures, reducing the converted GLB size by over 50%.' },
+    { title: 'Consolidate Repeated Texture Materials', desc: 'Group identical architectural materials (e.g. concrete pavements, brick facades) so the GLB exporter combines draw calls, ensuring smooth 60 FPS frame rates on mobile web browsers.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Why are some walls in my converted SketchUp GLB invisible when viewed in WebGL?', answer: 'This is caused by reversed backfaces in SketchUp. Select the invisible face in SketchUp, right-click, and choose Reverse Faces to ensure the white front face points outward before conversion.' },
+    { question: 'Can I view a converted SketchUp GLB model in Virtual Reality (VR)?', answer: 'Yes. GLB files are the standard format for WebXR virtual reality. You can load the GLB into Meta Quest browser or WebVR engines to walk through building designs at 1:1 scale.' },
+    { question: 'Will converted GLB models preserve my SketchUp scenes and camera views?', answer: 'Advanced glTF converters translate SketchUp saved scenes into glTF camera perspective nodes, allowing users to jump between preset architectural viewpoints in WebGL.' }
+  ],
+  relatedSlugs: ['skp-to-obj', 'skp-to-fbx', 'step-to-glb', 'sldprt-to-glb']
+};
+
+allPairs['skp-to-obj'] = {
+  slug: 'skp-to-obj',
+  title: 'Trimble SketchUp SKP to OBJ Converter',
+  h1Title: 'SketchUp (.skp) to Wavefront OBJ 3D Rendering & VFX Converter',
+  metaTitle: 'SketchUp (.skp) to OBJ Converter — 3ds Max, Maya & Cinema 4D (2026)',
+  metaDescription: 'Convert Trimble SketchUp SKP models to Wavefront OBJ format with material MTL sidecars for rendering in 3ds Max, Maya, V-Ray, Corona, and Blender.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Mesh & Material Serialization)',
+  conversionNature: 'Architectural Mesh to Wavefront Standard Polygonal Format',
+  fromFormat: formatsDb['skp'],
+  toFormat: formatsDb['obj'],
+  keyParameters: [
+    { label: 'Triangulate Faces', value: 'Enabled', hint: 'Ensures complex architectural multi-sided polygons do not produce rendering holes.' },
+    { label: 'Export Texture Maps', value: 'Generate .MTL + Texture Folder', hint: 'Extracts embedded SketchUp wood, glass, and brick images into high-resolution JPGs.' },
+    { label: 'Layer / Material Grouping', value: 'Group by Material', hint: 'Optimizes scene import in 3ds Max and Cinema 4D for batch material assignment.' }
+  ],
+  painPointDesc: 'Architectural visualizers frequently receive conceptual design models created in SketchUp, but produce final photorealistic renderings in 3ds Max (with V-Ray or Corona) or Cinema 4D. Older rendering suites struggle to import native .skp files cleanly. Converting SketchUp models to structured OBJ files with .mtl material sidecars preserves texture assignments and geometry hierarchy.',
+  riskWarning: 'Ensure that texture image file names in the SketchUp model contain standard alphanumeric characters without special symbols or spaces to prevent broken material paths during OBJ import.',
+  technicalGuide: [
+    { title: 'Group Geometry by Material Rather than Hierarchy', desc: 'Configure the exporter to group geometry by material. This merges all objects sharing the same brick or glass texture into a single mesh node, speeding up viewport rendering.' },
+    { title: 'Preserve UV Texture Mapping Coordinates', desc: 'SketchUp allows intuitive stretch and position adjustments on textures. The converter exports exact UV coordinates (vt tags) so wood grain and brick courses align perfectly.' },
+    { title: 'Fix Non-Planar Faces to Prevent Rendering Artifacts', desc: 'Twisted four-sided faces in SketchUp can cause black shadow artifacts in ray-tracers. Force triangulation during export to ensure every facet is mathematically planar.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Why did my converted OBJ model lose all its colors and textures in 3ds Max?', answer: 'Ensure that the .obj file, the .mtl file, and all extracted PNG/JPG texture images are saved in the same directory before importing into 3ds Max.' },
+    { question: 'Can I import a converted OBJ file into Unreal Engine or Unity?', answer: 'Yes. Both Unreal Engine and Unity import OBJ files natively, although FBX or glTF is generally preferred if you also need hierarchy and lighting metadata.' },
+    { question: 'Will converting SKP to OBJ preserve SketchUp dynamic components?', answer: 'No. Dynamic component formulas and interactive click triggers are proprietary to SketchUp and are baked into static polygonal geometry during OBJ export.' }
+  ],
+  relatedSlugs: ['skp-to-glb', 'skp-to-fbx', 'step-to-obj', 'obj-to-stl']
+};
+
+allPairs['skp-to-fbx'] = {
+  slug: 'skp-to-fbx',
+  title: 'Trimble SketchUp SKP to FBX Converter',
+  h1Title: 'SketchUp (.skp) to Autodesk FBX Game Engine & Real-Time Converter',
+  metaTitle: 'SketchUp (.skp) to FBX Converter — Unity, Unreal Engine & 3ds Max (2026)',
+  metaDescription: 'Convert Trimble SketchUp SKP models to Autodesk FBX format. Embed textures, preserve scene hierarchies, and import directly into Unreal Engine, Unity, and Lumion.',
+  category: 'web3d',
+  categoryLabel: 'Web3D & Lightweight Visualization',
+  difficulty: 'Low (Mesh & Scene Graph Packaging)',
+  conversionNature: 'Architectural Mesh to Autodesk Filmbox (FBX) Scene Container',
+  fromFormat: formatsDb['skp'],
+  toFormat: formatsDb['fbx'],
+  keyParameters: [
+    { label: 'Embed Media (Textures)', value: 'Enabled (Binary FBX)', hint: 'Stores all PNG/JPG texture files directly inside the binary FBX container.' },
+    { label: 'Scale Factor', value: 'Centimeters / Millimeters (1.0)', hint: 'Ensures architectural models import at true 1:1 scale in Unreal Engine and Unity.' },
+    { label: 'Axis Conversion', value: 'Z-Up to Target Engine', hint: 'Matches Unreal Engine (Z-Up) or Unity (Y-Up) coordinate system standards.' }
+  ],
+  painPointDesc: 'Architects and game environment artists frequently build urban scenes in SketchUp and need to bring them into Unreal Engine 5, Unity, or Twinmotion for interactive virtual reality walkthroughs. Converting SKP to Autodesk FBX embeds all material textures into a single binary file, preserves object hierarchies, and guarantees seamless real-time lighting calculation.',
+  riskWarning: 'Ensure you select Embed Media when exporting to FBX so that texture bitmaps are packed inside the binary file rather than linked to absolute local folder paths that break when shared.',
+  technicalGuide: [
+    { title: 'Embed All Texture Maps Directly into Binary FBX', desc: 'Enabling Embed Media packages diffuse textures, bump maps, and opacity maps into the single binary .fbx file, eliminating missing texture links when opening assets in Unreal Engine.' },
+    { title: 'Calibrate Real-World Units (Meters vs Centimeters)', desc: 'Unreal Engine runs natively on centimeters (1 unit = 1 cm), while Unity uses meters. Verify unit scaling settings to ensure doors and stairs import at correct human scale.' },
+    { title: 'Generate Lightmap UV Channel 2 for Game Engines', desc: 'Real-time game engines require a non-overlapping second UV channel (UV Channel 1/2) for static light baking. The converter creates clean unwrapped UV coordinates for shadow maps.' }
+  ],
+  recommendedTools: [toolsDb['blender'], toolsDb['cadexchanger'], toolsDb['anyconv']],
+  faqs: [
+    { question: 'Why should I convert SketchUp to FBX instead of OBJ for Unreal Engine 5?', answer: 'FBX embeds textures directly inside the file, preserves component transform hierarchies, supports multiple UV channels (essential for lightmap baking), and imports faster in Unreal Engine.' },
+    { question: 'How do I fix inverted normals on SketchUp models in Unity?', answer: 'In SketchUp, ensure all exterior faces are white (front-facing) rather than light blue. In Unity’s model import settings, you can also check Generate Colliders and adjust normal calculation to Calculate.' },
+    { question: 'Will converting SKP to FBX maintain component instance instancing?', answer: 'Yes. FBX preserves component definitions as instances, which dramatically reduces GPU draw calls and memory usage in real-time game engines.' }
+  ],
+  relatedSlugs: ['skp-to-glb', 'skp-to-obj', 'step-to-glb', 'step-to-obj']
+};
+
+console.log('Web3D pairs defined (24/28)');
+
+// ==========================================
+// 4. BIM & 2D DRAWING DOCUMENTATION (4 PAIRS)
+// ==========================================
+allPairs['revit-to-ifc'] = {
+  slug: 'revit-to-ifc',
+  title: 'Autodesk Revit to IFC Converter',
+  h1Title: 'Autodesk Revit (.rvt) to IFC openBIM Standard Converter',
+  metaTitle: 'Revit (.rvt) to IFC Converter — openBIM, IFC4 & IFC2x3 (2026)',
+  metaDescription: 'Convert Autodesk Revit RVT project files to openBIM IFC (IFC2x3 / IFC4) models. Preserve property sets, classifications, and BIM coordination metadata.',
+  category: 'bim-doc',
+  categoryLabel: 'BIM & 2D Documentation',
+  difficulty: 'High (Relational Database to EXPRESS openBIM Mapping)',
+  conversionNature: 'Proprietary Relational BIM Database to ISO 16739 Standard',
+  fromFormat: formatsDb['rvt'],
+  toFormat: formatsDb['ifc'],
+  keyParameters: [
+    { label: 'Model View Definition (MVD)', value: 'IFC4 Design Transfer / IFC2x3 CV2.0', hint: 'IFC2x3 CV2.0 provides maximum compatibility with legacy Navisworks and Solibri.' },
+    { label: 'Export Revit Property Sets', value: 'Export IFC Common Psets', hint: 'Maps Revit family parameters (OmniClass, UniFormat, fire ratings) to standard IFC attributes.' },
+    { label: 'Base Quantities', value: 'Enabled', hint: 'Calculates standard net surface area and volume quantities for automated QTO takeoff.' }
+  ],
+  painPointDesc: 'Autodesk Revit is the market leader for architectural BIM, but public infrastructure projects, government tenders (such as UK BIM Mandate and Singapore CORENET X), and MEP subcontractors require vendor-neutral IFC files for Solibri clash detection or Archicad federation. Converting RVT to certified IFC enables friction-free openBIM collaboration across the global construction industry.',
+  riskWarning: 'Custom in-house Revit shared parameters will NOT export to IFC unless you configure a custom Property Set mapping file (userdefinedpropertysets.txt). Always verify that non-standard BIM parameters are mapped to valid Pset_ structures.',
+  technicalGuide: [
+    { title: 'Select the Appropriate Model View Definition (MVD)', desc: 'Choose IFC2x3 Coordination View 2.0 if sharing with external structural engineers using legacy software. Choose IFC4 Design Transfer View if the recipient needs to perform direct parametric geometry editing.' },
+    { title: 'Configure Shared Parameter Export Mapping Tables', desc: 'Revit stores parameters internally. Use an external parameter mapping text file to map internal family parameters to official buildingSMART Property Sets (Pset_WallCommon, Pset_DoorCommon).' },
+    { title: 'Align Shared Project Coordinates (Base Point / Survey Point)', desc: 'Ensure the export coordinate system is set to Shared Coordinates. Mismatched origin points will cause architectural and MEP models to load hundreds of meters apart in federated Navisworks sessions.' }
+  ],
+  recommendedTools: [toolsDb['autodesk_viewer'], toolsDb['blenderbim'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'What is the difference between IFC2x3 and IFC4?', answer: 'IFC2x3 is the older, battle-tested standard supported by virtually all BIM software. IFC4 introduces advanced NURBS surface support, improved MEP domain definitions, and ISO 16739 certification.' },
+    { question: 'Why are some Revit custom parameters missing in my exported IFC file?', answer: 'Revit requires an export mapping configuration (such as "Export user-defined property sets") to translate custom family parameters into standard IFC Property Sets (Pset).' },
+    { question: 'Can I open and inspect an IFC file without buying expensive software?', answer: 'Yes. Free tools like BIMcollab Zoom, open-source BlenderBIM, and Trimble Connect allow you to view 3D IFC models and inspect property sets with zero subscription fees.' }
+  ],
+  relatedSlugs: ['ifc-to-dwg', 'slddrw-to-dwg', 'step-to-glb', 'skp-to-glb']
+};
+
+allPairs['ifc-to-dwg'] = {
+  slug: 'ifc-to-dwg',
+  title: 'IFC to AutoCAD DWG Converter',
+  h1Title: 'IFC openBIM to AutoCAD (.dwg) 2D Floor Plan & 3D Solid Converter',
+  metaTitle: 'IFC to DWG Converter — 2D Floor Plans & 3D AutoCAD Solids (2026)',
+  metaDescription: 'Convert openBIM IFC models to native AutoCAD DWG drawings. Generate clean 2D floor plans, sections, and 3D vector geometry organized by layer.',
+  category: 'bim-doc',
+  categoryLabel: 'BIM & 2D Documentation',
+  difficulty: 'Medium (BIM Semantic Entity to Layered Vector Projection)',
+  conversionNature: '3D Semantic Building Model to 2D/3D CAD Drawing Database',
+  fromFormat: formatsDb['ifc'],
+  toFormat: formatsDb['dwg'],
+  keyParameters: [
+    { label: 'Layer Mapping Standard', value: 'AIA / ISO 13567', hint: 'Maps IfcWall, IfcDoor, and IfcBeam entities to standard CAD layers (A-WALL, A-DOOR).' },
+    { label: '2D Plan Slice Height', value: '1200 mm above Floor Level', hint: 'Standard architectural horizontal cutting plane for generating floor plan blueprints.' },
+    { label: 'DWG Format Version', value: 'AutoCAD 2018 / 2013 DWG', hint: 'Ensures full compatibility with legacy AutoCAD, BricsCAD, and GstarCAD.' }
+  ],
+  painPointDesc: 'While general contractors coordinate projects in 3D BIM (IFC), field trade contractors, municipal permitting authorities, and fabrication workshops still operate on 2D AutoCAD DWG blueprints. Generating clean, layered DWG floor plans and elevation slices from 3D IFC models bridges the gap between BIM modeling offices and jobsite drafting teams.',
+  riskWarning: 'Converting complex 3D BIM models to 2D DWG can create overlapping collinear vector lines on floor plans (e.g. wall plaster vs core stud). Run the OVERKILL command in AutoCAD after conversion to purge duplicate lines.',
+  technicalGuide: [
+    { title: 'Map IFC Semantic Classes to Standard CAD Layers', desc: 'The conversion engine parses IfcBuildingElement classes, mapping IfcWall to layer A-WALL, IfcDoor to A-DOOR, and IfcWindow to A-GLAZ, ensuring the exported DWG follows professional drafting standards.' },
+    { title: 'Project 2D Architectural Floor Plan Slices', desc: 'Set the vertical cutting plane at standard architectural height (1.2 meters above the floor level) to generate clean 2D plan outlines with correct window sills and door swing projections.' },
+    { title: 'Purge Duplicate Coincident Vectors', desc: 'Overlapping structural and architectural elements in BIM can produce stacked lines in DWG. Run automated vector deduplication during export to keep blueprint file sizes lightweight.' }
+  ],
+  recommendedTools: [toolsDb['gstarcad'], toolsDb['autodesk_viewer'], toolsDb['freecad']],
+  faqs: [
+    { question: 'Does converting IFC to DWG create 2D drawings or 3D AutoCAD solids?', answer: 'Converters can produce either 2D vector projections (floor plans, sections) or 3D AutoCAD ACIS solid blocks, depending on whether you configure 2D Plan Projection or 3D Solid Export mode.' },
+    { question: 'Why does my converted DWG file have messy layer names?', answer: 'Without a configured layer mapping template, converters assign raw IFC class tags (e.g. IFC_IFCWALLSTANDARDCASE). Use an AIA or ISO 13567 mapping profile to produce clean layers like A-WALL and A-DOOR.' },
+    { question: 'Can GstarCAD or BricsCAD open the converted DWG file directly?', answer: 'Yes. The output DWG uses standard Open Design Alliance (ODA) binary specifications, 100% compatible with AutoCAD, GstarCAD, BricsCAD, and ZWCAD.' }
+  ],
+  relatedSlugs: ['revit-to-ifc', 'slddrw-to-dwg', 'slddrw-to-pdf', 'step-to-stl']
+};
+
+allPairs['slddrw-to-dwg'] = {
+  slug: 'slddrw-to-dwg',
+  title: 'SolidWorks SLDDRW to AutoCAD DWG Converter',
+  h1Title: 'SolidWorks (.slddrw) to AutoCAD (.dwg) 1:1 Vector Blueprint Converter',
+  metaTitle: 'SolidWorks (.slddrw) to DWG Converter — 1:1 CNC & Laser Cutting (2026)',
+  metaDescription: 'Convert SolidWorks SLDDRW drawing blueprints to AutoCAD DWG vector format. Preserve 1:1 sheet scale, GD&T symbols, layers, and title blocks.',
+  category: 'bim-doc',
+  categoryLabel: 'BIM & 2D Documentation',
+  difficulty: 'Low (Associative MCAD Blueprint to Vector DWG)',
+  conversionNature: 'Proprietary Associative Drawing to 2D Vector CAD Database',
+  fromFormat: formatsDb['slddrw'],
+  toFormat: formatsDb['dwg'],
+  keyParameters: [
+    { label: 'Scale Export Mode', value: '1:1 Model Space Scale', hint: 'Crucial for CNC sheet metal laser cutting, waterjet machining, and press brake folding.' },
+    { label: 'Font Mapping', value: 'TrueType (Arial / Romans) to SHX', hint: 'Prevents text overlaps, broken diameter symbols (Ø), and misaligned GD&T frames.' },
+    { label: 'Multi-Sheet Handling', value: 'Separate DWG Files per Sheet', hint: 'Exports each drawing sheet tab into an individual, clearly labeled DWG file.' }
+  ],
+  painPointDesc: 'Manufacturing machine shops, laser cutting operators, and procurement specialists require 2D AutoCAD DWG files to program CNC nesting tables and waterjet cutting paths. However, design engineers draft associative blueprints in SolidWorks (.slddrw). Converting SLDDRW to 1:1 scale DWG ensures shop-floor machinists receive accurate cutting vectors without dimension distortion.',
+  riskWarning: 'A common disaster in sheet metal fabrication occurs when a drawing sheet drawn at 1:2 or 1:4 scale is exported to Model Space without 1:1 normalization, causing laser-cut parts to be machined at half their true physical size. Always verify 1:1 export scale!',
+  technicalGuide: [
+    { title: 'Enforce 1:1 True Scale in Model Space', desc: 'SolidWorks drawing views often have sheet scales (e.g. 1:2 or 1:5). Configure export settings to Scale output 1:1 (Model Space) so CNC laser and waterjet operators can cut profiles directly without manual rescaling.' },
+    { title: 'Map SolidWorks Layers to AutoCAD Standards', desc: 'Set up layer mapping (slddrwtodwg.map) to export visible lines, hidden lines, centerlines, and dimension callouts into dedicated AutoCAD layers with distinct colors and lineweights.' },
+    { title: 'Preserve GD&T Feature Control Frames and Special Characters', desc: 'Ensure that SolidWorks special symbols (depth, counterbore, diameter Ø, degree °) are mapped to standard TrueType or SHX fonts to avoid question mark (?) display errors in AutoCAD.' }
+  ],
+  recommendedTools: [toolsDb['edrawings'], toolsDb['gstarcad'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Why are my laser cut parts cut at half scale when converted from SLDDRW to DWG?', answer: 'This occurs when the SolidWorks drawing view was set to 1:2 scale and exported to Paper Space instead of Model Space. Always choose "Export 1:1 Model Space" in the export options.' },
+    { question: 'Can I convert a SLDDRW file if the parent 3D part (.sldprt) is missing?', answer: 'Yes, if the SLDDRW was saved in Detailing Mode, or by viewing the cached vector preview via eDrawings. However, associative updates to 3D geometry will not be available.' },
+    { question: 'How are multi-sheet SolidWorks drawings handled during DWG export?', answer: 'You can choose to export all sheets into a single DWG file with multiple Paper Space layouts, or generate separate DWG files for each drawing sheet tab.' }
+  ],
+  relatedSlugs: ['slddrw-to-pdf', 'ifc-to-dwg', 'sldprt-to-step', 'sldprt-to-stl']
+};
+
+allPairs['slddrw-to-pdf'] = {
+  slug: 'slddrw-to-pdf',
+  title: 'SolidWorks SLDDRW to Vector PDF Converter',
+  h1Title: 'SolidWorks (.slddrw) to Vector PDF High-Resolution Blueprint Converter',
+  metaTitle: 'SolidWorks (.slddrw) to PDF Converter — Vector Blueprints (2026)',
+  metaDescription: 'Convert SolidWorks SLDDRW drawing blueprints to high-resolution searchable vector PDF documents for manufacturing procurement, QA inspection, and archiving.',
+  category: 'bim-doc',
+  categoryLabel: 'BIM & 2D Documentation',
+  difficulty: 'Low (Associative MCAD Blueprint to Vector PDF)',
+  conversionNature: 'Proprietary Associative Drawing to High-Res Vector Document',
+  fromFormat: formatsDb['slddrw'],
+  toFormat: formatsDb['pdf'],
+  keyParameters: [
+    { label: 'Vector Rendering Mode', value: 'High Quality Vector (Searchable Text)', hint: 'Ensures crisp line art at 1200 DPI zoom without pixelated raster blur.' },
+    { label: 'Embed TrueType Fonts', value: 'Enabled', hint: 'Guarantees dimension text and GD&T symbols render identically on any mobile or desktop PDF reader.' },
+    { label: 'Color Mode', value: 'Black & White / Monochrome', hint: 'Ensures clear readability on workshop black-and-white laser printers.' }
+  ],
+  painPointDesc: 'Purchasing managers, quality assurance inspectors, and shop floor operators need clear manufacturing blueprints on mobile tablets or paper prints. They do not have SolidWorks installed. Converting SLDDRW drawings to high-resolution vector PDF preserves crisp line weights, searchable part numbers, and exact title block details for seamless manufacturing distribution.',
+  riskWarning: 'Ensure that draft quality (shaded) drawing views are converted using high-resolution raster settings, while all orthographic line views remain pure searchable vectors for accurate dimension inspection.',
+  technicalGuide: [
+    { title: 'Generate Pure Searchable Vector Graphics', desc: 'Choose High Quality Vector output rather than raster image printing. Vector PDFs maintain crisp lineweights even when zoomed to 4000% during Quality Control optical inspection.' },
+    { title: 'Embed TrueType Fonts for Universal Rendering', desc: 'Enable font embedding so that custom title block typography, author signatures, and special GD&T symbols render correctly across mobile phones, tablets, and field workstations.' },
+    { title: 'Combine Multi-Sheet Blueprints into Single PDF', desc: 'Package all drawing sheet tabs (assembly overview, exploded view, component details, BOM) into a single, ordered multi-page PDF document for effortless distribution.' }
+  ],
+  recommendedTools: [toolsDb['edrawings'], toolsDb['bluebeam'], toolsDb['cadexchanger']],
+  faqs: [
+    { question: 'Why does my converted PDF drawing look blurry when I zoom in?', answer: 'This happens if the drawing was exported using Raster Print mode instead of High Quality Vector mode. Vector PDFs store mathematical line paths that remain razor-sharp at any zoom magnification.' },
+    { question: 'Can I convert a SLDDRW file to PDF on a computer without SolidWorks?', answer: 'Yes. Dassault’s free eDrawings Viewer opens SLDDRW files and prints or saves high-resolution vector PDFs with zero licensing cost.' },
+    { question: 'Are part numbers and BOM text searchable in the exported PDF?', answer: 'Yes. As long as Vector mode is selected and fonts are embedded, all title block text, bill of materials tables, and dimension callouts remain fully searchable (Ctrl+F).' }
+  ],
+  relatedSlugs: ['slddrw-to-dwg', 'ifc-to-dwg', 'sldprt-to-step', 'sldprt-to-stl']
+};
+
+console.log('All 28 conversion pairs defined successfully!');
+
+// Build Category Data Summary
+const categoriesDb = [
+  {
+    id: '3d-printing',
+    name: '3D Printing & Slicing',
+    shortName: '3D Printing',
+    description: 'Convert CAD solid geometry to optimized watertight triangular meshes and multi-material packages for modern 3D printers and slicing software.',
+    icon: 'Printer',
+    pairs: ['step-to-stl', 'step-to-3mf', 'sldprt-to-stl', 'sldprt-to-3mf', 'rhino-3dm-to-stl', 'ipt-to-stl', 'obj-to-stl', 'obj-to-3mf']
+  },
+  {
+    id: 'mcad-interop',
+    name: 'Industrial MCAD Interop',
+    shortName: 'MCAD Interop',
+    description: 'Bridge proprietary kernel formats (Parasolid, CGM, Granite, ShapeManager) with ISO 10303 STEP and Parasolid X_T for CNC CAM and cross-CAD engineering.',
+    icon: 'Cog',
+    pairs: ['sldprt-to-step', 'sldprt-to-parasolid-xt', 'catpart-to-step', 'catpart-to-parasolid-xt', 'nx-prt-to-step', 'creo-prt-to-step', 'ipt-to-step', 'iges-to-step', 'step-to-iges']
+  },
+  {
+    id: 'web3d',
+    name: 'Web3D & Lightweight Visualization',
+    shortName: 'Web3D & AR',
+    description: 'Optimize heavy engineering models into lightweight Draco-compressed GLB, glTF, OBJ, and FBX assets for Three.js WebGL, Shopify 3D, and mobile AR.',
+    icon: 'Globe',
+    pairs: ['step-to-glb', 'step-to-gltf', 'step-to-obj', 'sldprt-to-glb', 'skp-to-glb', 'skp-to-obj', 'skp-to-fbx']
+  },
+  {
+    id: 'bim-doc',
+    name: 'BIM & 2D Documentation',
+    shortName: 'BIM & 2D Drawings',
+    description: 'Federate openBIM models (IFC4) and project 3D CAD/BIM assemblies into 1:1 scale DWG vector floor plans and high-resolution PDF blueprints.',
+    icon: 'Layers',
+    pairs: ['revit-to-ifc', 'ifc-to-dwg', 'slddrw-to-dwg', 'slddrw-to-pdf']
+  }
+];
+
+const outputData = {
+  tools: toolsDb,
+  formats: formatsDb,
+  categories: categoriesDb,
+  pairs: allPairs
+};
+
+// Write JSON
+const jsonPath = path.join(__dirname, '..', 'src', 'lib', 'converter-data.json');
+fs.writeFileSync(jsonPath, JSON.stringify(outputData, null, 2), 'utf-8');
+console.log('Wrote ' + Object.keys(allPairs).length + ' conversion pairs to ' + jsonPath);
+
+// Write TypeScript Wrapper
+const tsContent = `// Auto-generated 3D Converter Database & Type Interfaces
+import rawConverterData from './converter-data.json';
+
+export interface ConverterToolMetric {
+  name: string;
+  score: number;
+}
+
+export interface ConverterTool {
+  name: string;
+  badge: string;
+  rating: number;
+  metrics: ConverterToolMetric[];
+  pros: string[];
+  cons: string[];
+  officialUrl: string;
+  affiliateUrl: string | null;
+  pricing: string;
+  verdict: string;
+}
+
+export interface FormatSpec {
+  ext: string;
+  name: string;
+  category: string;
+  developer: string;
+  nature: string;
+  colorMaterial: string;
+  pmi: string;
+  typicalUse: string;
+  ecosystem: string;
+}
+
+export interface TechnicalGuideItem {
+  title: string;
+  desc: string;
+}
+
+export interface KeyParameter {
+  label: string;
+  value: string;
+  hint: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface ConversionPair {
+  slug: string;
+  title: string;
+  h1Title: string;
+  metaTitle: string;
+  metaDescription: string;
+  category: '3d-printing' | 'mcad-interop' | 'web3d' | 'bim-doc';
+  categoryLabel: string;
+  conversionNature: string;
+  difficulty: string;
+  fromFormat: FormatSpec;
+  toFormat: FormatSpec;
+  keyParameters: KeyParameter[];
+  painPointDesc: string;
+  riskWarning: string;
+  technicalGuide: TechnicalGuideItem[];
+  recommendedTools: ConverterTool[];
+  faqs: FAQItem[];
+  relatedSlugs: string[];
+}
+
+export interface ConverterCategory {
+  id: '3d-printing' | 'mcad-interop' | 'web3d' | 'bim-doc';
+  name: string;
+  shortName: string;
+  description: string;
+  icon: string;
+  pairs: string[];
+}
+
+export const CONVERTER_TOOLS = rawConverterData.tools as Record<string, ConverterTool>;
+export const FORMATS_DATABASE = rawConverterData.formats as Record<string, FormatSpec>;
+export const CONVERTER_CATEGORIES = rawConverterData.categories as ConverterCategory[];
+export const CONVERSION_PAIRS = rawConverterData.pairs as Record<string, ConversionPair>;
+
+export function getConversionPair(slug: string): ConversionPair | undefined {
+  return CONVERSION_PAIRS[slug];
+}
+
+export function getAllConversionPairs(): ConversionPair[] {
+  return Object.values(CONVERSION_PAIRS);
+}
+export function getAllConversionSlugs(): string[] {
+  return Object.keys(CONVERSION_PAIRS);
+}
+
+export function getPairsByCategory(categoryId: string): ConversionPair[] {
+  return Object.values(CONVERSION_PAIRS).filter((p) => p.category === categoryId);
+}
+`;
+
+const tsPath = path.join(__dirname, '..', 'src', 'lib', 'converter-data.ts');
+fs.writeFileSync(tsPath, tsContent, 'utf-8');
+console.log('Wrote TypeScript wrapper to ' + tsPath);
+
+// ==========================================
+// 5. GENERATE FRONTEND PAGES & SITEMAP
+// ==========================================
+
+const convertDir = path.join(__dirname, '..', 'src', 'app', 'convert');
+const convertPairDir = path.join(convertDir, '[pair]');
+const sitemapConvertDir = path.join(__dirname, '..', 'src', 'app', 'sitemap-convert.xml');
+
+if (!fs.existsSync(convertDir)) fs.mkdirSync(convertDir, { recursive: true });
+if (!fs.existsSync(convertPairDir)) fs.mkdirSync(convertPairDir, { recursive: true });
+if (!fs.existsSync(sitemapConvertDir)) fs.mkdirSync(sitemapConvertDir, { recursive: true });
+
+// 1. Write src/app/convert/convert-hub-client.tsx
+const hubClientCode = `'use client';
+
+import { useState, useMemo } from 'react';
+import Link from 'next/link';
+import { 
+  ArrowRight, 
+  Search, 
+  Printer, 
+  Cog, 
+  Globe, 
+  Layers, 
+  Sparkles, 
+  ShieldCheck, 
+  Zap, 
+  CheckCircle2, 
+  FileCode2, 
+  SlidersHorizontal, 
+  ChevronRight 
+} from 'lucide-react';
+import { 
+  CONVERTER_CATEGORIES, 
+  ConversionPair 
+} from '@/lib/converter-data';
+
+interface ConvertHubClientProps {
+  initialPairs: ConversionPair[];
+}
+
+export function ConvertHubClient({ initialPairs }: ConvertHubClientProps) {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [selectedFrom, setSelectedFrom] = useState<string>('all');
+  const [selectedTo, setSelectedTo] = useState<string>('all');
+
+  const formatOptions = useMemo(() => {
+    const froms = new Set<string>();
+    const tos = new Set<string>();
+    initialPairs.forEach(p => {
+      froms.add(p.fromFormat.ext.split(' ')[0]);
+      tos.add(p.toFormat.ext.split(' ')[0]);
+    });
+    return {
+      fromList: Array.from(froms).sort(),
+      toList: Array.from(tos).sort(),
+    };
+  }, [initialPairs]);
+
+  const filteredPairs = useMemo(() => {
+    return initialPairs.filter(pair => {
+      if (selectedCategory !== 'all' && pair.category !== selectedCategory) {
+        return false;
+      }
+      if (selectedFrom !== 'all' && !pair.fromFormat.ext.toUpperCase().includes(selectedFrom.toUpperCase())) {
+        return false;
+      }
+      if (selectedTo !== 'all' && !pair.toFormat.ext.toUpperCase().includes(selectedTo.toUpperCase())) {
+        return false;
+      }
+      if (searchQuery.trim() !== '') {
+        const query = searchQuery.toLowerCase().trim();
+        const matchTitle = pair.title.toLowerCase().includes(query);
+        const matchSlug = pair.slug.toLowerCase().includes(query);
+        const matchDesc = pair.painPointDesc.toLowerCase().includes(query);
+        const matchFrom = pair.fromFormat.name.toLowerCase().includes(query) || pair.fromFormat.ext.toLowerCase().includes(query);
+        const matchTo = pair.toFormat.name.toLowerCase().includes(query) || pair.toFormat.ext.toLowerCase().includes(query);
+        return matchTitle || matchSlug || matchDesc || matchFrom || matchTo;
+      }
+      return true;
+    });
+  }, [initialPairs, selectedCategory, selectedFrom, selectedTo, searchQuery]);
+
+  const getCategoryIcon = (id: string) => {
+    switch (id) {
+      case '3d-printing':
+        return <Printer className="w-4 h-4 text-indigo-500" />;
+      case 'mcad-interop':
+        return <Cog className="w-4 h-4 text-blue-500" />;
+      case 'web3d':
+        return <Globe className="w-4 h-4 text-emerald-500" />;
+      case 'bim-doc':
+        return <Layers className="w-4 h-4 text-amber-500" />;
+      default:
+        return <FileCode2 className="w-4 h-4 text-blue-500" />;
+    }
+  };
+
+  return (
+    <div className="space-y-12">
+      {/* Category Pills & Quick Filter Tabs */}
+      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+          {/* Search Box */}
+          <div className="relative flex-1 max-w-xl">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search conversions (e.g. STEP to STL, SLDPRT, GLB, Revit, IFC)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-16 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-slate-600 bg-slate-200 hover:bg-slate-300 rounded-full px-2 py-0.5"
+              >
+                Clear
+              </button>
+            )}
+          </div>
+
+          {/* Quick Format Dropdowns */}
+          <div className="flex items-center gap-3 flex-wrap sm:flex-nowrap">
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-2xl px-3 py-2 text-xs font-semibold text-slate-600">
+              <SlidersHorizontal className="w-4 h-4 text-slate-400" />
+              <span>From:</span>
+              <select
+                value={selectedFrom}
+                onChange={(e) => setSelectedFrom(e.target.value)}
+                className="bg-transparent font-bold text-slate-900 focus:outline-none cursor-pointer"
+              >
+                <option value="all">All Formats</option>
+                {formatOptions.fromList.map((ext) => (
+                  <option key={ext} value={ext}>{ext}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-2xl px-3 py-2 text-xs font-semibold text-slate-600">
+              <span>To:</span>
+              <select
+                value={selectedTo}
+                onChange={(e) => setSelectedTo(e.target.value)}
+                className="bg-transparent font-bold text-slate-900 focus:outline-none cursor-pointer"
+              >
+                <option value="all">All Formats</option>
+                {formatOptions.toList.map((ext) => (
+                  <option key={ext} value={ext}>{ext}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Category Filter Pills */}
+        <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none pt-2 border-t border-slate-100">
+          <button
+            onClick={() => setSelectedCategory('all')}
+            className={\`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex items-center gap-2 \${
+              selectedCategory === 'all'
+                ? 'bg-slate-900 text-white shadow-md shadow-slate-900/10'
+                : 'bg-slate-100 text-slate-650 hover:bg-slate-200/80 hover:text-slate-900'
+            }\`}
+          >
+            <Sparkles className="w-4 h-4" />
+            <span>All Conversions ({initialPairs.length})</span>
+          </button>
+
+          {CONVERTER_CATEGORIES.map((cat) => {
+            const isActive = selectedCategory === cat.id;
+            const count = initialPairs.filter(p => p.category === cat.id).length;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={\`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap flex items-center gap-2 \${
+                  isActive
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-600/20'
+                    : 'bg-slate-100 text-slate-650 hover:bg-slate-200/80 hover:text-slate-900'
+                }\`}
+              >
+                {getCategoryIcon(cat.id)}
+                <span>{cat.shortName} ({count})</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Grid of Conversion Pairs */}
+      <div>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2.5">
+            <span>CAD & 3D Conversion Pipelines</span>
+            <span className="text-xs font-black bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full">
+              {filteredPairs.length} Available
+            </span>
+          </h2>
+          <span className="text-xs font-semibold text-slate-400 hidden sm:inline-block">
+            Zero-Server Load • Curated Sponsor Benchmarks
+          </span>
+        </div>
+
+        {filteredPairs.length === 0 ? (
+          <div className="bg-white rounded-3xl p-12 text-center border border-slate-200/80 space-y-4">
+            <FileCode2 className="w-12 h-12 text-slate-300 mx-auto" />
+            <h3 className="text-lg font-bold text-slate-800">No matching conversion pairs found</h3>
+            <p className="text-sm text-slate-500 max-w-md mx-auto">
+              Try adjusting your search query or reset format filters to see all available CAD translation workflows.
+            </p>
+            <button
+              onClick={() => {
+                setSelectedCategory('all');
+                setSelectedFrom('all');
+                setSelectedTo('all');
+                setSearchQuery('');
+              }}
+              className="px-5 py-2.5 bg-blue-600 text-white font-bold text-xs rounded-xl hover:bg-blue-700 transition-colors inline-block"
+            >
+              Reset All Filters
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPairs.map((pair) => {
+              return (
+                <Link
+                  key={pair.slug}
+                  href={\`/convert/\${pair.slug}\`}
+                  className="group bg-white rounded-3xl p-6 border border-slate-200/80 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between relative overflow-hidden"
+                >
+                  <div className="space-y-4">
+                    {/* Header with Format Pills */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="px-3 py-1.5 bg-slate-900 text-white font-black text-xs rounded-xl tracking-wider">
+                          {pair.fromFormat.ext.split(' ')[0]}
+                        </span>
+                        <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:translate-x-0.5 transition-transform">
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="px-3 py-1.5 bg-blue-600 text-white font-black text-xs rounded-xl tracking-wider">
+                          {pair.toFormat.ext.split(' ')[0]}
+                        </span>
+                      </div>
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">
+                        {pair.categoryLabel.split(' ')[0]}
+                      </span>
+                    </div>
+
+                    {/* Title and Nature */}
+                    <div>
+                      <h3 className="text-base font-black text-slate-900 group-hover:text-blue-600 transition-colors leading-snug mb-1">
+                        {pair.title}
+                      </h3>
+                      <p className="text-xs font-semibold text-slate-650 line-clamp-1">
+                        {pair.conversionNature}
+                      </p>
+                    </div>
+
+                    {/* Pain Point Summary */}
+                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                      {pair.painPointDesc}
+                    </p>
+
+                    {/* Key Parameter Tags */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {pair.keyParameters.slice(0, 2).map((kp, idx) => (
+                        <span
+                          key={idx}
+                          className="text-[10px] font-bold bg-slate-50 text-slate-600 border border-slate-100 rounded-lg px-2 py-0.5"
+                        >
+                          {kp.label}: <strong className="text-slate-800">{kp.value}</strong>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Footer CTA & Sponsor Count */}
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-700">
+                    <span className="text-slate-400 font-semibold text-[11px]">
+                      {pair.recommendedTools.length} Curated Tools
+                    </span>
+                    <span className="flex items-center gap-1 group-hover:translate-x-1 transition-transform font-extrabold">
+                      Convert & Optimize <ChevronRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* Educational Matrix Breakdown Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-8 space-y-4 shadow-xl">
+          <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
+            <ShieldCheck className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-black">Zero-Data-Leak Local Conversion Architecture</h3>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Proprietary industrial CAD models (SolidWorks, CATIA, NX) contain confidential patented geometry, internal tooling cooling lines, and proprietary tolerances. We recommend verified 100% offline open-source engines (such as FreeCAD and Blender) to process defense and automotive models locally with zero cloud upload risk.
+          </p>
+          <div className="pt-2 flex items-center gap-3 text-xs font-bold text-blue-300">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>100% Client-Side Evaluation • No Cloud Telemetry</span>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-3xl p-8 space-y-4 shadow-xl">
+          <div className="w-12 h-12 rounded-2xl bg-white/20 text-white flex items-center justify-center border border-white/30">
+            <Zap className="w-6 h-6" />
+          </div>
+          <h3 className="text-xl font-black">B-Rep vs Polygonal Mesh vs openBIM</h3>
+          <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
+            Converting between solid B-Rep (STEP, Parasolid), polygonal meshes (STL, 3MF, OBJ), real-time Web3D (GLB), and openBIM (IFC) requires different mathematical tolerances. Our benchmark guides give you precise chordal deviation numbers and schema parameters to guarantee 100% watertight output.
+          </p>
+          <div className="pt-2 flex items-center gap-3 text-xs font-bold text-blue-100">
+            <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+            <span>Calibrated for Bambu Lab, Mastercam, Three.js & Revit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+`;
+fs.writeFileSync(path.join(convertDir, 'convert-hub-client.tsx'), hubClientCode, 'utf-8');
+console.log('Created src/app/convert/convert-hub-client.tsx');
+
+// 2. Write src/app/convert/page.tsx
+const hubPageCode = `import { Metadata } from 'next';
+import Link from 'next/link';
+import { 
+  Sparkles, 
+  ShieldCheck, 
+  Printer, 
+  Cog, 
+  Globe, 
+  Layers, 
+  CheckCircle2, 
+  ArrowRight,
+  FileCode2
+} from 'lucide-react';
+import { getAllConversionPairs, CONVERTER_CATEGORIES } from '@/lib/converter-data';
+import { ConvertHubClient } from './convert-hub-client';
+
+export const dynamic = 'force-static';
+
+export const metadata: Metadata = {
+  title: 'CAD & 3D Model Format Converters Matrix (2026) — Fast, Free & Secure',
+  description: 'Convert between STEP, STL, 3MF, SLDPRT, Parasolid X_T, CATPart, GLB, OBJ, and IFC. Compare offline open-source and cloud converter tools with zero IP leakage.',
+  keywords: [
+    '3d format converter',
+    'cad converter',
+    'step to stl',
+    'step to 3mf',
+    'sldprt to step',
+    'catpart to step',
+    'cad to glb',
+    'revit to ifc',
+    '3d model converter free',
+    'parasolid converter'
+  ],
+  alternates: {
+    canonical: 'https://cadguide.tools/convert',
+  },
+  openGraph: {
+    title: 'CAD & 3D Format Converters Matrix (2026) — CADGuide.tools',
+    description: 'Free, high-fidelity CAD & 3D model conversion pipelines. Find the best offline and cloud tools for 3D printing, CNC machining, Web3D, and BIM.',
+    url: 'https://cadguide.tools/convert',
+    type: 'website',
+  },
+};
+
+export default function ConvertHubPage() {
+  const allPairs = getAllConversionPairs();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'CAD & 3D Model Format Converters Matrix (2026)',
+    description: 'Universal directory and benchmark of CAD, 3D printing, and Web3D format conversion pipelines.',
+    url: 'https://cadguide.tools/convert',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: allPairs.map((p, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: p.title,
+        url: \`https://cadguide.tools/convert/\${p.slug}\`
+      }))
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-white via-slate-50 to-slate-50 border-b border-slate-200/80 pt-12 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-slate-900 font-bold">3D Converters</span>
+          </nav>
+
+          <div className="max-w-3xl space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-extrabold">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Universal 3D CAD Translation Hub • 28 Active Matrix Pairs</span>
+            </div>
+            
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              CAD & 3D Format Converters Matrix
+            </h1>
+            
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              High-precision geometric translation pipelines for mechanical engineering, multi-material 3D printing, Web3D eCommerce, and openBIM federation. Compare curated offline tools & cloud services with zero CAD license lock-in.
+            </p>
+          </div>
+
+          {/* Value Props Ribbon */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+            <div className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-black">
+                <Printer className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-xs font-black text-slate-900">3D Printing</div>
+                <div className="text-[11px] font-semibold text-slate-650">Watertight STL & 3MF</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-black">
+                <Cog className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-xs font-black text-slate-900">MCAD Interop</div>
+                <div className="text-[11px] font-semibold text-slate-650">B-Rep STEP & Parasolid</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-black">
+                <Globe className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-xs font-black text-slate-900">Web3D & AR</div>
+                <div className="text-[11px] font-semibold text-slate-650">Draco GLB & glTF 2.0</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-black">
+                <Layers className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="text-xs font-black text-slate-900">BIM & 2D Blueprints</div>
+                <div className="text-[11px] font-semibold text-slate-650">openBIM IFC & 1:1 DWG</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Interactive Hub Section */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <ConvertHubClient initialPairs={allPairs} />
+      </main>
+    </div>
+  );
+}
+`;
+fs.writeFileSync(path.join(convertDir, 'page.tsx'), hubPageCode, 'utf-8');
+console.log('Created src/app/convert/page.tsx');
+
+// 3. Write src/app/convert/[pair]/converter-detail-client.tsx
+const detailClientCode = `'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { 
+  ArrowRight, 
+  UploadCloud, 
+  ShieldAlert, 
+  Star, 
+  ExternalLink, 
+  Copy, 
+  Check, 
+  AlertTriangle, 
+  HelpCircle, 
+  Sliders, 
+  FileCheck2, 
+  Lock, 
+  Sparkles,
+  ChevronDown,
+  Info,
+  CheckCircle2,
+  FileCode,
+  Layers,
+  Printer
+} from 'lucide-react';
+import { ConversionPair } from '@/lib/converter-data';
+
+interface ConverterDetailClientProps {
+  pair: ConversionPair;
+}
+
+export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [dragActive, setDragActive] = useState(false);
+  const [mockFile, setMockFile] = useState<string | null>(null);
+  const [activeParamTab, setActiveParamTab] = useState<number>(0);
+
+  const handleCopy = (url: string) => {
+    navigator.clipboard.writeText(url);
+    setCopiedUrl(url);
+    setTimeout(() => setCopiedUrl(null), 2000);
+  };
+
+  const handleFileDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      setMockFile(e.dataTransfer.files[0].name);
+    }
+  };
+
+  return (
+    <div className="space-y-16">
+      {/* 1. Interactive Conversion Studio & Sponsor Dispatcher */}
+      <section className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-8">
+        <div className="flex flex-col lg:flex-row gap-8 items-start justify-between">
+          {/* Left: Workbench Upload Zone */}
+          <div className="w-full lg:w-7/12 space-y-6">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Client-Side Evaluation Studio</span>
+              </div>
+              <h2 className="text-2xl font-black text-slate-900">
+                {pair.title} Studio
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500">
+                Configure precision tolerances, inspect mathematical boundary attributes, and dispatch to verified offline & cloud conversion engines.
+              </p>
+            </div>
+
+            {/* Drag and Drop Zone */}
+            <div
+              onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
+              onDragLeave={() => setDragActive(false)}
+              onDrop={handleFileDrop}
+              className={\`border-2 border-dashed rounded-3xl p-8 sm:p-12 text-center transition-all cursor-pointer \${
+                dragActive 
+                  ? 'border-blue-500 bg-blue-50/50' 
+                  : mockFile
+                  ? 'border-emerald-400 bg-emerald-50/30'
+                  : 'border-slate-200 bg-slate-50/50 hover:bg-slate-100/50 hover:border-slate-300'
+              }\`}
+              onClick={() => {
+                if (!mockFile) setMockFile(\`model.\${pair.fromFormat.ext.split(' ')[0].toLowerCase()}\`);
+              }}
+            >
+              <div className="max-w-md mx-auto space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mx-auto text-blue-600">
+                  {mockFile ? <FileCheck2 className="w-8 h-8 text-emerald-600" /> : <UploadCloud className="w-8 h-8" />}
+                </div>
+
+                {mockFile ? (
+                  <div className="space-y-1">
+                    <p className="text-sm font-bold text-slate-900 flex items-center justify-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                      <span>{mockFile} loaded</span>
+                    </p>
+                    <p className="text-xs text-slate-500">
+                      Target format: <strong className="text-blue-600">{pair.toFormat.ext}</strong> • Ready to dispatch
+                    </p>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setMockFile(null); }}
+                      className="text-[11px] font-bold text-red-500 hover:underline pt-2 inline-block"
+                    >
+                      Remove File
+                    </button>
+                  </div>
+                ) : (
+                  <div className="space-y-1">
+                    <p className="text-sm font-bold text-slate-900">
+                      Drag and drop your <span className="text-blue-600 font-extrabold">{pair.fromFormat.ext.split(' ')[0]}</span> file here
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      or click to browse local files (Supports up to 500MB)
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Parameters Adjuster */}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/80 space-y-3">
+              <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+                <span className="flex items-center gap-1.5">
+                  <Sliders className="w-4 h-4 text-blue-600" />
+                  <span>Recommended Discretization Tolerances</span>
+                </span>
+                <span className="text-[11px] text-slate-650">ISO 10303 Compliant</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                {pair.keyParameters.map((kp, idx) => (
+                  <div key={idx} className="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs space-y-1">
+                    <div className="text-[10px] font-semibold text-slate-650 truncate">{kp.label}</div>
+                    <div className="text-xs font-black text-slate-900">{kp.value}</div>
+                    <div className="text-[9px] text-slate-650 line-clamp-1">{kp.hint}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Security & Sponsor Dispatch Box */}
+          <div className="w-full lg:w-5/12 space-y-6">
+            {/* IP Risk Alert */}
+            <div className="bg-amber-50/80 border border-amber-200 rounded-3xl p-6 space-y-3">
+              <div className="flex items-start gap-3">
+                <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h3 className="text-xs font-black text-amber-900 uppercase tracking-wider">
+                    Confidential IP & Safety Warning
+                  </h3>
+                  <p className="text-xs text-amber-800 leading-relaxed font-medium">
+                    {pair.riskWarning}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sponsor Instant Access Card */}
+            <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl relative overflow-hidden">
+              <div className="space-y-2">
+                <div className="text-xs font-black text-blue-400 uppercase tracking-widest">
+                  Featured Converter Recommendation
+                </div>
+                <h3 className="text-lg font-black leading-snug">
+                  {pair.recommendedTools[0]?.name || 'Industrial Conversion Engine'}
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  {pair.recommendedTools[0]?.verdict || 'High-fidelity geometric parser ensuring 100% watertight output.'}
+                </p>
+              </div>
+
+              <div className="space-y-3 pt-2">
+                <a
+                  href={pair.recommendedTools[0]?.affiliateUrl || pair.recommendedTools[0]?.officialUrl || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-extrabold rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all"
+                >
+                  <span>Launch Official Tool ({pair.recommendedTools[0]?.pricing})</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+
+                <button
+                  onClick={() => handleCopy(pair.recommendedTools[0]?.officialUrl || '')}
+                  className="w-full py-2.5 px-4 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-300 text-xs font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
+                >
+                  {copiedUrl === pair.recommendedTools[0]?.officialUrl ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="text-emerald-400">Official URL Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-slate-400" />
+                      <span>Copy Direct Portal URL</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              <div className="pt-2 border-t border-slate-800 text-[10px] text-slate-400 flex items-center justify-between">
+                <span>Free Evaluation • No Card Required</span>
+                <span className="text-blue-400 font-bold">★ {pair.recommendedTools[0]?.rating} Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Full Recommended Converter Tools Matrix */}
+      <section className="space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+              Curated {pair.title} Benchmark Tools
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500">
+              Evaluated across geometric fidelity, corporate data privacy, and batch processing capabilities.
+            </p>
+          </div>
+          <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full self-start sm:self-auto">
+            {pair.recommendedTools.length} Verified Options
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {pair.recommendedTools.map((tool, idx) => {
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-6 relative hover:border-slate-300 hover:shadow-md transition-all"
+              >
+                <div className="space-y-4">
+                  {/* Top Badge and Score */}
+                  <div className="flex items-center justify-between">
+                    <span className="px-3 py-1 bg-slate-100 text-slate-800 font-extrabold text-[11px] rounded-xl border border-slate-200">
+                      {tool.badge}
+                    </span>
+                    <div className="flex items-center gap-1 text-amber-500 font-black text-xs">
+                      <Star className="w-4 h-4 fill-amber-400" />
+                      <span>{tool.rating}</span>
+                    </div>
+                  </div>
+
+                  {/* Tool Name and Pricing */}
+                  <div>
+                    <h3 className="text-base font-black text-slate-900 leading-snug">
+                      {tool.name}
+                    </h3>
+                    <span className="text-xs font-bold text-blue-600">
+                      {tool.pricing}
+                    </span>
+                  </div>
+
+                  {/* Metric Progress Bars */}
+                  <div className="space-y-2 pt-1">
+                    {tool.metrics.map((m, mIdx) => (
+                      <div key={mIdx} className="space-y-1">
+                        <div className="flex items-center justify-between text-[11px] font-semibold text-slate-650">
+                          <span>{m.name}</span>
+                          <span className="text-slate-800 font-bold">{m.score} / 5</span>
+                        </div>
+                        <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                          <div
+                            className="bg-blue-600 h-1.5 rounded-full"
+                            style={{ width: \`\${(m.score / 5) * 100}%\` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Pros & Cons */}
+                  <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
+                    {tool.pros.map((pro, pIdx) => (
+                      <div key={pIdx} className="flex items-start gap-2 text-slate-700">
+                        <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="leading-snug">{pro}</span>
+                      </div>
+                    ))}
+                    {tool.cons.map((con, cIdx) => (
+                      <div key={cIdx} className="flex items-start gap-2 text-slate-650">
+                        <span className="text-red-400 font-black shrink-0">•</span>
+                        <span className="leading-snug">{con}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Action Buttons */}
+                <div className="space-y-2 pt-4 border-t border-slate-100">
+                  <a
+                    href={tool.affiliateUrl || tool.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 bg-slate-900 hover:bg-blue-600 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  >
+                    <span>Use {tool.name.split(' ')[0]}</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+
+                  <button
+                    onClick={() => handleCopy(tool.officialUrl)}
+                    className="w-full py-2 px-3 bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-700 text-[11px] font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors border border-slate-200/60"
+                  >
+                    {copiedUrl === tool.officialUrl ? (
+                      <>
+                        <Check className="w-3.5 h-3.5 text-emerald-600" />
+                        <span className="text-emerald-600">Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy className="w-3 h-3" />
+                        <span>Copy Link</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 3. Deep-Dive Technical Guide & Avoidance Rules */}
+      <section className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-8">
+        <div className="space-y-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold">
+            <Info className="w-3.5 h-3.5" />
+            <span>Engineering Discretization Guide</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            Technical Guide: Preventing Geometry Failures during {pair.fromFormat.ext.split(' ')[0]} to {pair.toFormat.ext.split(' ')[0]} Conversion
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500">
+            Follow these verified CAD administrator standards to avoid broken surfaces, scaling drift, and corrupted toolpaths.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {pair.technicalGuide.map((guide, idx) => (
+            <div
+              key={idx}
+              className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 space-y-3 relative flex flex-col justify-start"
+            >
+              <div className="w-8 h-8 rounded-xl bg-blue-600 text-white font-black text-xs flex items-center justify-center shadow-sm">
+                0{idx + 1}
+              </div>
+              <h3 className="text-sm font-bold text-slate-900 leading-snug">
+                {guide.title}
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                {guide.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. Format Technical Specifications Comparison Table */}
+      <section className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div className="space-y-2">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            {pair.fromFormat.ext.split(' ')[0]} vs {pair.toFormat.ext.split(' ')[0]} Technical Matrix
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500">
+            Compare kernel topology, color & appearance capabilities, and target manufacturing workflows.
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs text-left border-collapse">
+            <thead>
+              <tr className="border-b border-slate-200 bg-slate-50/80 text-slate-900 font-black">
+                <th className="py-3.5 px-4 rounded-l-xl w-1/4">Specification</th>
+                <th className="py-3.5 px-4 w-3/8 text-blue-700 bg-blue-50/40">
+                  {pair.fromFormat.ext} (Source)
+                </th>
+                <th className="py-3.5 px-4 rounded-r-xl w-3/8 text-indigo-700 bg-indigo-50/40">
+                  {pair.toFormat.ext} (Target)
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 font-medium text-slate-700">
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Official Name</td>
+                <td className="py-3.5 px-4">{pair.fromFormat.name}</td>
+                <td className="py-3.5 px-4">{pair.toFormat.name}</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Category</td>
+                <td className="py-3.5 px-4 font-bold text-slate-800">{pair.fromFormat.category}</td>
+                <td className="py-3.5 px-4 font-bold text-slate-800">{pair.toFormat.category}</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Geometric Nature</td>
+                <td className="py-3.5 px-4">{pair.fromFormat.nature}</td>
+                <td className="py-3.5 px-4">{pair.toFormat.nature}</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Colors & Materials</td>
+                <td className="py-3.5 px-4">{pair.fromFormat.colorMaterial}</td>
+                <td className="py-3.5 px-4">{pair.toFormat.colorMaterial}</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">3D PMI & Tolerancing</td>
+                <td className="py-3.5 px-4">{pair.fromFormat.pmi}</td>
+                <td className="py-3.5 px-4">{pair.toFormat.pmi}</td>
+              </tr>
+              <tr>
+                <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Primary Ecosystem</td>
+                <td className="py-3.5 px-4 text-slate-650">{pair.fromFormat.ecosystem}</td>
+                <td className="py-3.5 px-4 text-slate-650">{pair.toFormat.ecosystem}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* 5. Frequently Asked Questions Accordion */}
+      <section className="bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-sm space-y-6">
+        <div className="space-y-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>Frequently Asked Questions</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            {pair.title} FAQs
+          </h2>
+        </div>
+
+        <div className="divide-y divide-slate-100">
+          {pair.faqs.map((faq, idx) => {
+            const isOpen = openFaqIndex === idx;
+            return (
+              <div key={idx} className="py-4">
+                <button
+                  onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
+                  className="w-full flex items-center justify-between text-left gap-4 group"
+                >
+                  <span className="text-sm sm:text-base font-black text-slate-800 group-hover:text-blue-600 transition-colors">
+                    {faq.question}
+                  </span>
+                  <ChevronDown className={\`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 \${isOpen ? 'rotate-180 text-blue-600' : ''}\`} />
+                </button>
+                {isOpen && (
+                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium pr-6">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 6. Related Conversion Pairs Matrix */}
+      {pair.relatedSlugs.length > 0 && (
+        <section className="space-y-6">
+          <h2 className="text-lg sm:text-xl font-black text-slate-900">
+            Related CAD & 3D Conversion Pipelines
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {pair.relatedSlugs.map((slug) => (
+              <Link
+                key={slug}
+                href={\`/convert/\${slug}\`}
+                className="bg-white rounded-2xl p-5 border border-slate-200/80 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col justify-between space-y-3"
+              >
+                <div className="text-xs font-black text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-wider">
+                  {slug.replace(/-/g, ' ')}
+                </div>
+                <div className="flex items-center justify-between text-[11px] font-bold text-blue-600 pt-2 border-t border-slate-100">
+                  <span>Explore Workflow</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+`;
+fs.writeFileSync(path.join(convertPairDir, 'converter-detail-client.tsx'), detailClientCode, 'utf-8');
+console.log('Created src/app/convert/[pair]/converter-detail-client.tsx');
+
+// 4. Write src/app/convert/[pair]/page.tsx
+const detailPageCode = `import { Metadata } from 'next';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { 
+  getConversionPair, 
+  getAllConversionSlugs, 
+  CONVERSION_PAIRS 
+} from '@/lib/converter-data';
+import { ConverterDetailClient } from './converter-detail-client';
+
+export const dynamic = 'force-static';
+
+export async function generateStaticParams() {
+  const slugs = getAllConversionSlugs();
+  return slugs.map((pair) => ({ pair }));
+}
+
+interface PageProps {
+  params: Promise<{ pair: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const pair = getConversionPair(resolvedParams.pair);
+  if (!pair) return {};
+
+  return {
+    title: pair.metaTitle,
+    description: pair.metaDescription,
+    keywords: [
+      \`\${pair.fromFormat.ext.split(' ')[0]} to \${pair.toFormat.ext.split(' ')[0]}\`,
+      \`convert \${pair.fromFormat.ext.split(' ')[0]} to \${pair.toFormat.ext.split(' ')[0]}\`,
+      \`\${pair.slug}\`,
+      pair.title,
+      pair.fromFormat.name,
+      pair.toFormat.name,
+      'free cad converter',
+      'offline 3d converter'
+    ],
+    alternates: {
+      canonical: \`https://cadguide.tools/convert/\${pair.slug}\`,
+    },
+    openGraph: {
+      title: pair.metaTitle,
+      description: pair.metaDescription,
+      url: \`https://cadguide.tools/convert/\${pair.slug}\`,
+      type: 'website',
+    },
+  };
+}
+
+export default async function ConverterDetailPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const pair = getConversionPair(resolvedParams.pair);
+
+  if (!pair) {
+    notFound();
+  }
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://cadguide.tools'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: '3D Converters',
+            item: 'https://cadguide.tools/convert'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: pair.title,
+            item: \`https://cadguide.tools/convert/\${pair.slug}\`
+          }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: pair.faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
+          }
+        }))
+      },
+      {
+        '@type': 'SoftwareApplication',
+        name: pair.title,
+        applicationCategory: 'DesignApplication',
+        operatingSystem: 'Windows, macOS, Linux, Web',
+        description: pair.metaDescription,
+        offers: {
+          '@type': 'Offer',
+          price: '0.00',
+          priceCurrency: 'USD'
+        }
+      }
+    ]
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Header Breadcrumb & H1 Intro */}
+      <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 pt-10 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/convert" className="hover:text-blue-600 transition-colors">3D Converters</Link>
+            <span>/</span>
+            <span className="text-slate-900 font-bold">{pair.title}</span>
+          </nav>
+
+          <div className="max-w-4xl space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-[11px] font-extrabold rounded-full">
+                {pair.categoryLabel}
+              </span>
+              <span className="text-xs font-bold text-slate-650">
+                Difficulty: {pair.difficulty}
+              </span>
+            </div>
+
+            <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              {pair.h1Title}
+            </h1>
+
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              {pair.painPointDesc}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Client Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <ConverterDetailClient pair={pair} />
+      </main>
+    </div>
+  );
+}
+`;
+fs.writeFileSync(path.join(convertPairDir, 'page.tsx'), detailPageCode, 'utf-8');
+console.log('Created src/app/convert/[pair]/page.tsx');
+
+// 5. Write src/app/sitemap-convert.xml/route.ts
+const sitemapConvertCode = `import { NextResponse } from 'next/server';
+import { getAllConversionSlugs } from '@/lib/converter-data';
+
+export const dynamic = 'force-static';
+
+export async function GET() {
+  const baseUrl = 'https://cadguide.tools';
+  const slugs = getAllConversionSlugs();
+  const currentDate = new Date().toISOString().split('T')[0];
+
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n';
+
+  // Hub URL
+  xml += '  <url>\\n';
+  xml += \`    <loc>\${baseUrl}/convert</loc>\\n\`;
+  xml += \`    <lastmod>\${currentDate}</lastmod>\\n\`;
+  xml += '    <changefreq>daily</changefreq>\\n';
+  xml += '    <priority>0.9</priority>\\n';
+  xml += '  </url>\\n';
+
+  // 28 Pairs URLs
+  slugs.forEach((slug) => {
+    xml += '  <url>\\n';
+    xml += \`    <loc>\${baseUrl}/convert/\${slug}</loc>\\n\`;
+    xml += \`    <lastmod>\${currentDate}</lastmod>\\n\`;
+    xml += '    <changefreq>weekly</changefreq>\\n';
+    xml += '    <priority>0.8</priority>\\n';
+  });
+
+  xml += '</urlset>';
+
+  return new NextResponse(xml, {
+    headers: {
+      'Content-Type': 'application/xml',
+      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+    },
+  });
+}
+`;
+fs.writeFileSync(path.join(sitemapConvertDir, 'route.ts'), sitemapConvertCode, 'utf-8');
+console.log('Created src/app/sitemap-convert.xml/route.ts');
