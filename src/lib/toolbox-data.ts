@@ -12,6 +12,7 @@ export interface ToolboxItem {
 
 export const TOOLBOX_CATEGORIES = [
   { id: 'all', name: 'All Utilities' },
+  { id: '3d-converter', name: '3D CAD & Mesh Converters' },
   { id: 'cheatsheet', name: 'Cheat Sheets & References' },
   { id: 'calculator', name: 'Engineering Calculators' },
   { id: 'converter', name: 'Parsers & File Converters' },

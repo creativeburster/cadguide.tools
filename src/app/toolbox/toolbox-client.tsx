@@ -67,6 +67,8 @@ export default function ToolboxClient() {
         return '📝';
       case 'calculator':
         return '🧮';
+      case '3d-converter':
+        return '🧊';
       case 'converter':
         return '📂';
       case 'troubleshoot':
