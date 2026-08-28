@@ -13,19 +13,20 @@ export async function GET() {
 
   // Hub URL
   xml += '  <url>\n';
-  xml += `    <loc>${baseUrl}/convert</loc>\n`;
+  xml += `    <loc>${baseUrl}/toolbox/convert</loc>\n`;
   xml += `    <lastmod>${currentDate}</lastmod>\n`;
   xml += '    <changefreq>daily</changefreq>\n';
   xml += '    <priority>0.9</priority>\n';
   xml += '  </url>\n';
 
-  // 28 Pairs URLs
+  // 28 Pairs under /toolbox/[slug]
   slugs.forEach((slug) => {
     xml += '  <url>\n';
-    xml += `    <loc>${baseUrl}/convert/${slug}</loc>\n`;
+    xml += `    <loc>${baseUrl}/toolbox/${slug}</loc>\n`;
     xml += `    <lastmod>${currentDate}</lastmod>\n`;
     xml += '    <changefreq>weekly</changefreq>\n';
     xml += '    <priority>0.8</priority>\n';
+    xml += '  </url>\n';
   });
 
   xml += '</urlset>';

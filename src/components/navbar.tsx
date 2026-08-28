@@ -13,7 +13,7 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Toolbox', href: '/toolbox' },
-    { name: '3D Convert', href: '/convert' },
+    { name: '3D Convert', href: '/toolbox/convert' },
     { name: 'Directory', href: '/tools' },
     { name: 'Compare', href: '/compare' },
     { name: 'Matchmaker', href: '/matchmaker' },

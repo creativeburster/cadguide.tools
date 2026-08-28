@@ -6240,15 +6240,200 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ['fastener specification library', 'bolt specification database', 'iso din fastener specs', 'standard fastener lookup', 'fastener dimensions', 'bolt torque specs', 'nut specification', 'washer specification', 'fastener data library', 'fastener reference library']
   },
   {
-    slug: 'surface-roughness-conversion-library',
-    title: 'Surface Roughness Conversion & Comparison Library',
-    description: 'Complete cross-reference between Ra, Rz, Rmax, RMS, N-grade, and microinch surface finish values with material compatibility.',
-    detailDesc: 'Client-side surface roughness conversion library. Provides instant conversion between: Ra (arithmetic average, micrometers and microinches), Rz (ten-point height, micrometers), Rmax (maximum roughness depth, micrometers), RMS (root mean square, microinches), and N-grade (N1-N12 per ISO 1302). Includes: typical surface finish values for common manufacturing processes (turning, milling, grinding, lapping, polishing, EDM, casting, forging), recommended surface finish per application (sealing surfaces, bearing surfaces, sliding surfaces, coating preparation), and measurement method comparison (contact stylus vs optical). Features: bidirectional conversion, process capability chart, and printable reference card.',
+    slug: 'fastener-profile-generator',
+    title: 'Standard Fastener 2D Profile Generator',
+    description: 'Generate 2D drawing profiles for bolts, screws, nuts, and washers per ISO/DIN/ANSI standards — export as DXF or SVG.',
+    detailDesc: 'Client-side fastener profile generator. Supports: hex bolts (ISO 4014/4017, DIN 933/931), socket head cap screws (ISO 4762, DIN 912), countersunk screws (ISO 10642), hex nuts (ISO 4032, DIN 934), washers (ISO 7089/7090, DIN 125), and spring washers (DIN 127). Inputs: thread size (M3-M48), thread pitch (standard or fine), bolt length, and drawing standard (first-angle/ third-angle projection). Generates: front view and top view with correct head/body proportions, thread representation (detailed or schematic), chamfer angles, and dimension lines. Outputs DXF and SVG with title block.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fastener profile generator', 'bolt drawing generator', 'nut profile generator', 'iso bolt cad generator', 'din fastener generator', 'screw 2d profile', 'washer drawing generator', 'fastener dxf generator', 'fastener svg generator', 'standard fastener cad']
+  },
+  {
+    slug: 'title-block-drawing-frame-generator',
+    title: 'Drawing Title Block & Frame Generator',
+    description: 'Generate customizable engineering drawing frames and title blocks per ISO 5457, ANSI Y14.1, or custom templates — export as DXF or SVG.',
+    detailDesc: 'Client-side drawing frame generator. Supports: ISO 5457 (A0-A4 portrait/landscape), ANSI Y14.1 (A-E sizes), ARCH (A-E architectural), and custom user-defined sizes. Title block fields: drawing title, drawing number, revision, date, drawn by, checked by, approved by, company name, project name, scale, sheet number, projection symbol (first/third angle), and units (mm/inch). Border options: margin width, zoning (alpha-numeric grid), trimming marks, and center marks. Logo placement support (SVG/PNG import). Outputs DXF (with TEXT and LWPOLYLINE entities) and SVG.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['title block generator', 'drawing frame generator', 'drawing border generator', 'iso 5457 template', 'ansi y14.1 template', 'cad title block dxf', 'drawing template generator', 'a0 a4 drawing frame', 'title block svg', 'engineering drawing border']
+  },
+  {
+    slug: 'dxf-bom-extractor',
+    title: 'DXF Block Attribute BOM Extractor',
+    description: 'Extract block attributes from DXF files to generate a Bill of Materials (BOM) table exportable as CSV or JSON.',
+    detailDesc: 'Client-side BOM extraction tool. Parses DXF files and extracts all INSERT entities with associated ATTRIB data. Features: auto-detect block names and attribute tags, group identical blocks and sum quantities, extract attribute values (part number, description, quantity, material, supplier, etc.), sort by block name or attribute value, filter by block name pattern, and display insertion coordinates. Outputs: CSV (compatible with Excel), JSON (structured), and HTML table preview. Handles nested block references and identifies missing attributes. Supports multiple DXF file batch processing.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf bom extractor', 'block attribute extractor', 'bom from dxf', 'bill of materials dxf', 'dxf attribute extraction', 'autocad bom extract', 'dxf data extraction', 'block data extractor', 'dxf insert attributes', 'cad bom generator']
+  },
+  {
+    slug: 'cnc-2d-profile-toolpath-generator',
+    title: 'CNC 2D Profile Toolpath Generator',
+    description: 'Generate CNC G-Code for 2D profile cutting from DXF geometry with lead-in/lead-out, cutter compensation, and multiple passes.',
+    detailDesc: 'Client-side 2D profile toolpath generator. Imports DXF geometry (LINE, ARC, CIRCLE, LWPOLYLINE) and generates CNC G-Code for profiling. Features: cutter diameter compensation (G41/G42 left/right), lead-in (arc or linear) and lead-out to prevent entry/exit marks, multiple depth passes with step-down, roughing and finishing passes, island detection and pocketing, tab/bridge insertion for part holding, feed rate optimization (reduced speed on corners), and spindle/coolant M-code integration. Outputs: G-Code compatible with Fanuc, Haas, LinuxCNC, and GRBL. Includes estimated cycle time and total cut length.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc toolpath generator', '2d profile gcode generator', 'dxf to gcode converter', 'cnc profile cutting', 'cutter compensation generator', 'lead in lead out cnc', 'cnc pocketing generator', 'dxf to nc code', 'cnc programming generator', '2d contour toolpath']
+  },
+  {
+    slug: 'spring-flat-pattern-generator',
+    title: 'Spring Flat Pattern & Spec Generator',
+    description: 'Generate 2D flat patterns for compression, extension, and torsion springs with full specification sheet — export as DXF or SVG.',
+    detailDesc: 'Client-side spring flat pattern generator. Supports three spring types: Compression (inputs: wire diameter, outer diameter, free length, total coils, active coils, spring rate, material), Extension (inputs: wire diameter, outer diameter, hook type, free length, initial tension), and Torsion (inputs: wire diameter, coil diameter, arm length, arm angle, torque). Generates: 2D flat pattern showing coil geometry and end configurations, force-deflection diagram, stress analysis (Wahl factor, shear stress), and specification table (spring rate, solid height, natural frequency, buckling check). Outputs DXF and SVG with dimension lines and material specification.',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['spring flat pattern generator', 'compression spring generator', 'extension spring generator', 'torsion spring generator', 'spring dxf generator', 'spring cad generator', 'spring design generator', 'spring svg generator', 'spring specification generator', 'spring drawing generator']
+  },
+  {
+    slug: 'cam-profile-generator',
+    title: 'Cam Profile & Displacement Diagram Generator',
+    description: 'Generate cam profiles from motion curves (SHM, cycloidal, polynomial) with follower displacement, velocity, and acceleration diagrams.',
+    detailDesc: 'Client-side cam profile generator. Inputs: cam type (disk/flat-face/roller follower), base circle radius, follower radius, rise angle, dwell angle, return angle, lift distance, and motion law (uniform, parabolic, simple harmonic, cycloidal, 3-4-5 polynomial, 4-5-6-7 polynomial). Generates: cam profile coordinates (pitch curve and working curve), follower displacement diagram (theta vs s), velocity diagram (theta vs v), acceleration diagram (theta vs a), and pressure angle distribution. Calculates: maximum pressure angle, undercut check, and cam-follower contact stress estimate. Outputs: DXF cam profile, SVG diagrams, and coordinate table (CSV).',
+    category: 'generator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cam profile generator', 'cam design generator', 'cam displacement diagram', 'cam motion curve generator', 'cam dxf generator', 'cam follower generator', 'cam profile calculator', 'cam svg generator', 'cam pitch curve generator', 'cam design tool']
+  },
+
+  // ==================== PHASE 3: Validators & Checkers ====================
+
+  {
+    slug: '3d-print-manufacturability-checker',
+    title: '3D Print Manufacturability Checker',
+    description: 'Analyze STL files for printability issues: thin walls, overhangs, minimum features, bridging, and support requirements.',
+    detailDesc: 'Client-side 3D print manufacturability analyzer. Loads STL mesh and performs geometric checks: minimum wall thickness (detect walls thinner than user-set threshold, default 0.8mm), overhang analysis (highlight faces exceeding 45 degrees from vertical, color-coded severity map), minimum feature size (detect posts, holes, and channels below threshold), bridging distance (identify unsupported horizontal spans and estimate sag risk), flat bed contact area (verify first layer adhesion surface), manifold check (identify holes, non-manifold edges, and reversed normals), and support volume estimation. Outputs: issue report with location markers on 3D model, pass/warn/fail summary, and recommended print orientation.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['3d print checker', 'stl manufacturability', '3d print analysis', 'stl overhang check', 'wall thickness checker', '3d print validation', 'stl printability check', '3d print issue detector', 'stl mesh analysis', '3d print quality check']
+  },
+  {
+    slug: 'dxf-drawing-standards-checker',
+    title: 'DXF Drawing Standards Compliance Checker',
+    description: 'Check DXF drawings against company or industry standards: layer naming, linetype, dimension style, text height, and plot configuration.',
+    detailDesc: 'Client-side DXF drawing standards validator. Configurable ruleset checks: layer naming convention (prefix-based, e.g. A-WALL, M-PIPE, E-LIGHT), layer color assignment per discipline, linetype usage (CONTINUOUS, DASHED, CENTER, PHANTOM), lineweight compliance, dimension style parameters (DIMSCALE, DIMTXT, DIMASZ, arrowhead type, text height), text style compliance (font, height, width factor), annotation layer separation, viewport scale consistency in paper space, and plot style table (CTB/STB) assignment. Outputs: compliance report with pass/warn/fail per rule, list of non-compliant entities with coordinates, and summary score. Supports custom ruleset import (JSON).',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf standards checker', 'drawing compliance checker', 'cad drawing validation', 'layer naming check', 'dimension style checker', 'drawing standards validator', 'dxf audit tool', 'cad quality check', 'drawing standards compliance', 'dxf quality assurance']
+  },
+  {
+    slug: 'gdt-annotation-completeness-checker',
+    title: 'GD&T Annotation Completeness Checker',
+    description: 'Analyze DXF drawings for GD&T completeness: datum references, feature control frames, basic dimensions, and tolerance zones.',
+    detailDesc: 'Client-side GD&T annotation validator. Parses DXF for GD&T entities (TOLERANCE, LEADER, MTEXT with GD&T symbols). Checks: datum feature symbols present and referenced (A, B, C hierarchy), feature control frame completeness (geometric characteristic, tolerance value, material condition modifier, datum references), basic dimensions identified and linked to true position/profile, datum target points/areas defined, and composite tolerance frame validity. Identifies: missing datums for position/profile tolerances, orphaned datum references (datum referenced but not defined), missing basic dimensions for true position, and inconsistent tolerance accumulation. Outputs: annotated issue list and completeness score.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gdt checker', 'gd&t completeness', 'gd&t annotation check', 'datum reference checker', 'feature control frame validator', 'gd&t drawing audit', 'geometric tolerance check', 'gd&t compliance', 'basic dimension check', 'gd&t validation tool']
+  },
+  {
+    slug: 'cnc-machinability-checker',
+    title: 'CNC Machinability Checker for 2D Drawings',
+    description: 'Analyze DXF geometry for CNC manufacturability: internal corner radii, deep pockets, tool access, and feature spacing.',
+    detailDesc: 'Client-side CNC machinability validator. Parses DXF geometry and checks: internal corner radius (flag corners smaller than tool radius, default 3mm — creates impossible-to-machine sharp internal corners), pocket depth-to-width ratio (flag pockets with depth/diameter > 3 for standard tooling), tool access clearance (detect features blocked by adjacent walls or obstructions), minimum hole diameter (flag holes smaller than standard drill sizes), feature spacing (check minimum distance between features for tool clearance), thread tap clearance (verify adequate space for tap operation), and tolerance feasibility (check if specified tolerances are achievable with standard CNC equipment). Outputs: issue map overlay on drawing and manufacturability score.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['cnc machinability checker', 'cnc design check', 'dfm cnc checker', 'cnc manufacturability', 'internal corner radius check', 'tool access checker', 'cnc feature check', 'design for manufacturing cnc', 'dxf machinability', 'cnc feasibility check']
+  },
+  {
+    slug: 'stl-mesh-quality-checker',
+    title: 'STL Mesh Quality & Integrity Checker',
+    description: 'Analyze STL files for mesh errors: non-manifold edges, holes, reversed normals, self-intersections, and degenerate triangles.',
+    detailDesc: 'Client-side STL mesh quality analyzer. Performs comprehensive mesh integrity checks: manifold validation (identifies non-manifold edges — edges shared by more or fewer than 2 faces), hole detection (identifies boundary edges forming open holes in the mesh), normal consistency (detects faces with reversed or inconsistent normal directions), self-intersection detection (identifies triangles that intersect other triangles), degenerate triangle detection (zero-area triangles, collapsed vertices), duplicate vertex cleanup (identifies and merges coincident vertices within tolerance), and aspect ratio analysis (flags skinny triangles with poor aspect ratio for FEM/3D print). Outputs: issue count per category, 3D visualization with problem areas highlighted, and repair recommendations.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['stl mesh checker', 'stl quality check', 'mesh integrity checker', 'non-manifold detection', 'stl repair check', 'mesh validation', 'stl error checker', 'mesh analysis tool', 'stl normal check', '3d mesh quality']
+  },
+  {
+    slug: 'drawing-scale-consistency-checker',
+    title: 'Drawing Scale Consistency Checker',
+    description: 'Verify that drawing scales are consistent across title block, viewport, dimensions, and annotation text in DXF files.',
+    detailDesc: 'Client-side drawing scale consistency validator. Parses DXF and cross-checks: title block scale field (extracts declared scale from title block text), viewport scale (calculates actual viewport scale from paper space viewport ratio), dimension scale factor (checks DIMSCALE and DIMLFAC consistency), annotation text height (verifies text height matches declared scale, e.g. 3mm at 1:100 should be 300mm in model space), linetype scale (checks LTSCALE and CELTSCALE consistency), and hatch pattern scale. Identifies mismatches between any of these scale indicators and flags inconsistent annotations. Outputs: scale audit table with declared vs actual values and discrepancy warnings.',
+    category: 'validator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['drawing scale checker', 'scale consistency check', 'viewport scale check', 'dimscale check', 'annotation scale check', 'drawing scale audit', 'cad scale verification', 'title block scale check', 'dimension scale consistency', 'drawing scale validator']
+  },
+
+  // ==================== PHASE 4: Comparators & Diff Tools ====================
+
+  {
+    slug: 'bom-comparator',
+    title: 'BOM Comparison & Diff Tool',
+    description: 'Compare two BOM files (CSV/JSON) and highlight added, removed, modified, and quantity-changed items.',
+    detailDesc: 'Client-side BOM comparison tool. Accepts two BOM files (CSV or JSON format) and performs intelligent diff. Matching logic: part number primary key, with fallback to description + specification matching. Identifies: added items (in new BOM but not old), removed items (in old BOM but not new), modified items (same part number but changed description/spec/material), quantity changes (same part, different quantity), and supplier changes. Outputs: side-by-side comparison table with color-coded differences (green=added, red=removed, yellow=modified, blue=quantity change), summary statistics (total changes by type), and exportable diff report (CSV/HTML). Handles multi-level indented BOMs with parent-child relationships.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['bom comparator', 'bom diff tool', 'bill of materials comparison', 'bom comparison tool', 'bom change tracker', 'bom difference checker', 'bom revision compare', 'bom version diff', 'bom analysis tool', 'bom merge tool']
+  },
+  {
+    slug: 'gcode-diff-comparator',
+    title: 'G-Code Diff & Comparison Tool',
+    description: 'Compare two G-Code files line-by-line with toolpath difference visualization and parameter change detection.',
+    detailDesc: 'Client-side G-Code comparison tool. Accepts two G-Code files and performs: line-by-line text diff (added/removed/modified lines with syntax highlighting), toolpath difference visualization (overlay both toolpaths in 2D/3D with color-coded differences), parameter change detection (feed rate, spindle speed, tool changes, coordinate shifts), and program structure comparison (subprogram calls, loop counts, canned cycle parameters). Outputs: unified diff view with G-Code syntax highlighting, toolpath overlay visualization, summary of changed parameters, and estimated cycle time difference. Supports Fanuc, Haas, and LinuxCNC dialects.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['gcode diff', 'gcode comparison', 'cnc program compare', 'gcode comparator', 'nc code diff', 'cnc toolpath diff', 'gcode difference tool', 'gcode version compare', 'cnc program diff', 'gcode change checker']
+  },
+  {
+    slug: 'dxf-geometry-diff-comparator',
+    title: 'DXF Geometry Diff & Comparison Tool',
+    description: 'Compare two DXF drawings and highlight geometric differences: added, removed, and modified entities with visual overlay.',
+    detailDesc: 'Client-side DXF geometry comparison tool. Parses two DXF files and performs geometric entity matching. Matching logic: entity type + geometric proximity (tolerance-based coordinate matching). Identifies: added entities (in new but not old, shown in green), removed entities (in old but not new, shown in red), moved entities (same type, position changed beyond tolerance, shown with before/after arrows), modified entities (same position but geometry changed, e.g. radius changed, shown in yellow), and layer differences (layer added/removed/renamed). Outputs: visual overlay comparison in Canvas viewer with toggle between old/new/both/diff modes, entity-level change list with coordinates, and summary statistics.',
+    category: 'comparator',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['dxf diff', 'dxf comparison', 'cad drawing compare', 'dxf geometry diff', 'drawing version compare', 'cad file diff', 'dxf change tracker', 'drawing difference tool', 'dxf revision compare', 'cad drawing diff tool']
+  },
+
+  // ==================== PHASE 5: Libraries & Asset Stores ====================
+
+  {
+    slug: 'material-properties-database',
+    title: 'Engineering Material Properties Database',
+    description: 'Searchable database of 200+ engineering materials with mechanical, thermal, and electrical properties.',
+    detailDesc: 'Client-side material properties database. Covers 200+ materials across categories: metals (steel grades, aluminum alloys, copper, titanium, nickel, magnesium), polymers (ABS, PC, PTFE, PVC, Nylon, PEEK), ceramics (alumina, zirconia, silicon carbide), composites (CFRP, GFRP), and woods. Properties per material: density, Young modulus, Poisson ratio, yield strength, tensile strength, elongation, hardness (Brinell/Rockwell/Vickers), thermal conductivity, thermal expansion coefficient, specific heat, electrical conductivity, and melting point. Features: search by name/grade, filter by property range, comparison table (select up to 4 materials side-by-side), and export to CSV. Data sourced from ASM Handbook, MatWeb, and manufacturer datasheets.',
     category: 'library',
     status: 'released',
     releasedDate: '2026-08-09',
     origin: 'native',
-    keywords: ['surface roughness conversion', 'ra rz conversion', 'surface finish comparison', 'n grade surface', 'ra to rms', 'surface roughness chart', 'surface finish conversion', 'ra microinch conversion', 'surface roughness library', 'surface finish reference']
+    keywords: ['material properties database', 'material database', 'engineering materials', 'metal properties search', 'steel properties database', 'aluminum properties', 'material comparison', 'material selector', 'mechanical properties database', 'material data search']
+  },
+  {
+    slug: 'standard-fasteners-specification-library',
+    title: 'Standard Fasteners Specification Library',
+    description: 'Searchable library of ISO, DIN, ANSI, and JIS fastener specifications: bolts, screws, nuts, washers, pins, and rivets.',
+    detailDesc: 'Client-side fastener specification library. Covers standards: ISO (4014, 4017, 4762, 7089, 7090, 10642), DIN (931, 933, 912, 934, 125, 127), ANSI/ASME (B18.2.1, B18.2.2, B18.3), and JIS (B 1180, B 1182). Fastener types: hex bolts, socket head cap screws, countersunk screws, hex nuts, lock nuts, flat washers, spring washers, dowel pins, cotter pins, and pop rivets. For each fastener: thread size (M3-M48 / #0-1"), pitch, head diameter, head height, body diameter, wrench size, weight, tensile stress area, and recommended torque values per property class. Features: search by standard/size/type, dimensional drawing preview, torque calculator integration, and export to CSV.',
+    category: 'library',
+    status: 'released',
+    releasedDate: '2026-08-09',
+    origin: 'native',
+    keywords: ['fastener specification library', 'bolt specification database', 'iso din fastener specs', 'standard fastener lookup', 'fastener dimensions', 'bolt torque specs', 'nut specification', 'washer specification', 'fastener data library', 'fastener reference library']
   },
   {
     slug: 'cad-symbol-block-library',
@@ -6261,4 +6446,313 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     keywords: ['cad symbol library', 'cad block library', 'engineering symbols', 'electrical symbols dxf', 'hydraulic symbols svg', 'pneumatic symbols', 'architectural symbols cad', 'iso symbol library', 'iec 60617 symbols', 'cad blocks download']
   },
+  // ==================== 3D CONVERTERS (28 Pairs) ====================
+  {
+    slug: 'step-to-stl',
+    title: 'STEP to STL Converter',
+    description: 'Convert CAD STEP/STP solid models to clean, watertight STL polygonal meshes for 3D printing (Bambu Studio, Cura, PrusaSlicer). Compare cloud & offline tools.',
+    detailDesc: 'Engineers frequently download high-precision STEP models from suppliers or GrabCAD, but modern 3D printer slicers (Bambu Studio, PrusaSlicer, Cura) require triangular meshes. Free public cloud converters often produce rough polygonal facets on circular holes or generate broken, non-manifold edges that crash the slicer.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to stl', 'convert step to stl', 'step-to-stl', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'step-to-3mf',
+    title: 'STEP to 3MF Converter',
+    description: 'Convert STEP CAD assemblies to the modern 3MF format. Preserve multi-body parts, color assignments, and precise units for Bambu Lab and Prusa 3D printers.',
+    detailDesc: 'Traditional STL files flatten multi-part CAD assemblies into a single monolithic mesh, discarding all color definitions and requiring painful manual splitting in the slicer. Converting STEP to 3MF retains separate body hierarchies and material IDs for effortless multi-color 3D printing on Bambu AMS and Prusa MMU setups.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to 3mf', 'convert step to 3mf', 'step-to-3mf', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'sldprt-to-stl',
+    title: 'SolidWorks SLDPRT to STL Converter',
+    description: 'Convert native Dassault SolidWorks SLDPRT part files to watertight STL meshes for 3D printing. No SolidWorks license required.',
+    detailDesc: 'Non-SolidWorks users (makers, machine shop operators, procurement specialists) who receive raw .sldprt files cannot open or slice them without purchasing expensive CAD seat licenses. A reliable conversion workflow transforms proprietary SolidWorks parts into sliced STL meshes in seconds.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['sldprt to stl', 'convert sldprt to stl', 'sldprt-to-stl', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'sldprt-to-3mf',
+    title: 'SolidWorks SLDPRT to 3MF Converter',
+    description: 'Convert SolidWorks SLDPRT parts and multi-body weldments to 3MF for multi-material 3D printing on Bambu Lab, Prusa, and Voron printers.',
+    detailDesc: 'SolidWorks designs often feature multi-body parts (such as co-molded rubber grips, gaskets, or two-tone housings). Exporting to legacy STL collapses these bodies into a single solid, making it impossible to assign different filaments in Bambu Studio. Converting directly to 3MF preserves every body as an individual printable object.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['sldprt to 3mf', 'convert sldprt to 3mf', 'sldprt-to-3mf', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'rhino-3dm-to-stl',
+    title: 'Rhino 3DM to STL Converter',
+    description: 'Convert McNeel Rhino 3DM double-precision NURBS surfaces to ultra-fine watertight STL meshes for jewelry, dental, and high-precision SLA 3D printing.',
+    detailDesc: 'Jewelry designers, dental technicians, and industrial sculptors create organic, double-curved surfaces in Rhino 3D. When transferring .3dm files to casting bureaus or resin 3D printers, raw NURBS geometry must be converted into ultra-dense, 100% closed (watertight) STL meshes without surface tears or open naked edges.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['3dm to stl', 'convert 3dm to stl', 'rhino-3dm-to-stl', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'ipt-to-stl',
+    title: 'Autodesk Inventor IPT to STL Converter',
+    description: 'Convert Autodesk Inventor IPT part files to clean, watertight STL meshes for 3D printing. No Autodesk Inventor license required.',
+    detailDesc: 'Autodesk Inventor users frequently collaborate with external suppliers, prototype makers, and 3D printing operators who do not possess expensive Autodesk Product Design Collection licenses. Converting .ipt parts to high-resolution STL files ensures fast manufacturing handoffs.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['ipt to stl', 'convert ipt to stl', 'ipt-to-stl', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'obj-to-stl',
+    title: 'Wavefront OBJ to STL Converter',
+    description: 'Convert Wavefront OBJ polygonal models to clean, manifold STL meshes for 3D printing slicing. Repair inverted normals, fill holes, and strip textures.',
+    detailDesc: 'Sculpted character models, anime figurines, and architectural mockups downloaded from sites like Thingiverse or Sketchfab are commonly distributed as Wavefront .obj files. Many OBJ files contain quad polygons, detached boundary vertices, and open seams that crash 3D printer slicing engines.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['obj to stl', 'convert obj to stl', 'obj-to-stl', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'obj-to-3mf',
+    title: 'Wavefront OBJ to 3MF Converter',
+    description: 'Convert textured Wavefront OBJ models with MTL sidecars into modern 3MF packages. Retain full-color vertex textures for Bambu Lab AMS and multi-extruder 3D printing.',
+    detailDesc: 'Traditional 3D scans and sculpted models use OBJ + MTL + PNG texture maps. When preparing these models for multi-color 3D printing (Bambu AMS, Prusa MMU, full-color inkjet), converting to 3MF bundles all textures and geometries into a single, self-contained, watertight container ready for slicing.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['obj to 3mf', 'convert obj to 3mf', 'obj-to-3mf', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'sldprt-to-step',
+    title: 'SolidWorks SLDPRT to STEP Converter',
+    description: 'Convert native SolidWorks SLDPRT parts to universal STEP (AP214/AP242) solid B-Rep models for CNC machining, mold design, and cross-CAD collaboration.',
+    detailDesc: 'SolidWorks is the dominant MCAD tool for consumer products and machinery, but CNC machine shops, mold tooling specialists, and automotive Tier 1 suppliers frequently use Mastercam, Siemens NX, or CATIA. Furthermore, newer SolidWorks files cannot be opened in older SolidWorks editions. Converting SLDPRT to universal STEP bridges this gap with 100% geometric fidelity.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['sldprt to step', 'convert sldprt to step', 'sldprt-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'sldprt-to-parasolid-xt',
+    title: 'SolidWorks SLDPRT to Parasolid X_T Converter',
+    description: 'Convert SolidWorks SLDPRT parts to Parasolid X_T text format. Zero translation loss across Siemens NX, Mastercam, Onshape, and Parasolid-based tools.',
+    detailDesc: 'SolidWorks uses the Siemens Parasolid geometric modeling kernel as its core mathematical engine. When transferring data to CAM systems (Mastercam, hyperMILL) or other Parasolid-based CAD systems (Siemens NX, Solid Edge, Onshape), converting to STEP incurs a slight format translation penalty. Exporting directly to Parasolid .x_t provides 100% mathematically identical geometry with zero surface edge drift.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['sldprt to parasolid', 'convert sldprt to parasolid', 'sldprt-to-parasolid-xt', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'catpart-to-step',
+    title: 'CATIA CATPart to STEP Converter',
+    description: 'Convert Dassault CATIA V5/V6 CATPart files to universal STEP solid models. Interoperate with SolidWorks, Siemens NX, Inventor, and Mastercam.',
+    detailDesc: 'Aerospace primes (Boeing, Airbus) and automotive OEMs (Tesla, BYD) mandate CATIA for vehicle body design. However, Tier 2 and Tier 3 machining shops typically run SolidWorks or Mastercam. CATIA licenses cost tens of thousands of dollars per seat. Online conversion from CATPart to STEP unlocks multi-tier manufacturing collaboration at minimal cost.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['catpart to step', 'convert catpart to step', 'catpart-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'catpart-to-parasolid-xt',
+    title: 'CATIA CATPart to Parasolid X_T Converter',
+    description: 'Convert CATIA V5/V6 CATPart files into Parasolid X_T text files for direct import into Mastercam, Siemens NX, SolidWorks, and CAM toolpath generators.',
+    detailDesc: 'Machinists receiving CATIA CATPart files from automotive or aerospace clients frequently program CNC toolpaths in Mastercam or SolidWorks CAM. Mastercam runs on the Siemens Parasolid engine. Converting CATPart to Parasolid .x_t eliminates translation hiccups, producing clean solid bodies ready for 5-axis toolpathing.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['catpart to parasolid', 'convert catpart to parasolid', 'catpart-to-parasolid-xt', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'nx-prt-to-step',
+    title: 'Siemens NX PRT to STEP Converter',
+    description: 'Convert native Siemens NX PRT part files to universal STEP solid models. Interoperate seamlessly with SolidWorks, CATIA, Inventor, and Mastercam.',
+    detailDesc: 'Siemens NX is the backbone of aerospace turbines, automotive powertrains, and high-end manufacturing. However, machine shops and component suppliers frequently use SolidWorks, Inventor, or Mastercam. When an external partner cannot open raw .prt files due to license costs or NX version mismatches, converting to STEP ensures smooth manufacturing workflows.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['nx to step', 'convert nx to step', 'nx-prt-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'creo-prt-to-step',
+    title: 'PTC Creo PRT to STEP Converter',
+    description: 'Convert native PTC Creo and Pro/ENGINEER PRT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, NX, and Inventor.',
+    detailDesc: 'PTC Creo (formerly Pro/ENGINEER) is widely used by consumer electronics and heavy industrial manufacturers. However, when sharing 3D part files with tooling vendors or machining contractors running SolidWorks or Mastercam, raw .prt files fail to open. Converting Creo parts to STEP provides a universal, mathematically exact solid model ready for production.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['creo to step', 'convert creo to step', 'creo-prt-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'ipt-to-step',
+    title: 'Autodesk Inventor IPT to STEP Converter',
+    description: 'Convert Autodesk Inventor IPT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, Siemens NX, and Mastercam.',
+    detailDesc: 'Autodesk Inventor is widely used across industrial equipment and mechanical engineering. However, machine shops programming CNC toolpaths in Mastercam or suppliers designing tooling in SolidWorks cannot directly edit native .ipt files without translation. Converting Inventor parts to universal STEP eliminates software barriers while retaining exact mathematical solid precision.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['ipt to step', 'convert ipt to step', 'ipt-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'iges-to-step',
+    title: 'IGES to STEP Converter',
+    description: 'Convert legacy IGES (.igs) surface models to modern watertight STEP solid B-Rep format. Sew trimmed surfaces, fix edge gaps, and prepare models for CNC CAM.',
+    detailDesc: 'IGES (Initial Graphics Exchange Specification) is a 1980s legacy format that stores 3D models as disconnected trimmed surface sheets rather than solid bodies. When importing vintage IGES files into modern CAD/CAM software (SolidWorks, NX, Mastercam), models frequently open as hollow, broken surface quilts that cannot be modified or machined. Converting IGES to STEP stitches open surface boundaries into a true watertight solid.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['iges to step', 'convert iges to step', 'iges-to-step', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'step-to-iges',
+    title: 'STEP to IGES Converter',
+    description: 'Convert modern STEP solid B-Rep files to IGES surface format for legacy CNC controllers, EDM wire cutting, and older CAM software.',
+    detailDesc: 'While STEP is the modern standard, many legacy wire EDM machines, vintage CMM inspection arms, and older CNC CAM software packages (running on Windows XP/7 or proprietary controllers) cannot parse STEP AP242 files. Converting STEP models to standardized IGES trimmed surfaces ensures 100% toolpath generation on legacy factory hardware.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to iges', 'convert step to iges', 'step-to-iges', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'step-to-glb',
+    title: 'STEP to GLB Converter',
+    description: 'Convert heavy CAD STEP/STP solid models into lightweight, compressed binary GLB files for Three.js, WebGL eCommerce showrooms, and mobile AR viewers.',
+    detailDesc: 'Industrial machinery models in STEP format often exceed 500MB, containing thousands of internal bolts, washers, and micro-fillets. When businesses want to showcase their products on website showrooms, Shopify stores, or mobile AR viewers, loading raw STEP is technically impossible. Converting STEP to lightweight binary GLB with Draco compression slashes file size to under 10MB while delivering photorealistic 60 FPS web rendering.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to glb', 'convert step to glb', 'step-to-glb', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'step-to-gltf',
+    title: 'STEP to glTF Converter',
+    description: 'Convert engineering STEP/STP CAD files to open glTF 2.0 JSON structures. Inspect shaders, mesh buffers, and integrate with Three.js WebGL applications.',
+    detailDesc: 'Web developers building bespoke WebGL / Three.js 3D configurators often need to inspect and programmatically manipulate scene node hierarchies, swap materials dynamically via JavaScript, or stream binary buffers over custom CDNs. Converting STEP to open glTF provides a transparent, developer-friendly JSON format.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to gltf', 'convert step to gltf', 'step-to-gltf', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'step-to-obj',
+    title: 'STEP to OBJ Converter',
+    description: 'Convert engineering STEP/STP solid CAD models to Wavefront OBJ polygonal meshes for photorealistic rendering in 3ds Max, Maya, Blender, and Cinema 4D.',
+    detailDesc: 'Industrial design renderers and CGI animation studios working in 3ds Max, Maya, Cinema 4D, or KeyShot need to import engineering CAD models. However, rendering packages struggle with mathematical NURBS solids. Converting STEP to high-density polygonal OBJ with smooth vertex normal vectors and material groups allows artists to apply photorealistic shaders and lighting.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['step to obj', 'convert step to obj', 'step-to-obj', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'sldprt-to-glb',
+    title: 'SolidWorks SLDPRT to GLB Converter',
+    description: 'Convert native SolidWorks SLDPRT part files to lightweight binary GLB models. Embed interactive 3D mechanical models into websites, Shopify, and mobile AR.',
+    detailDesc: 'Industrial manufacturers want to showcase machinery on web catalogs, interactive spare-part portals, or customer mobile presentations. Raw SolidWorks .sldprt files are heavy and cannot be viewed in web browsers without specialized plugins. Converting SLDPRT directly to binary GLB provides instant, interactive 3D rotation on smartphones and laptops at 60 FPS.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['sldprt to glb', 'convert sldprt to glb', 'sldprt-to-glb', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'skp-to-glb',
+    title: 'Trimble SketchUp SKP to GLB Converter',
+    description: 'Convert Trimble SketchUp SKP architectural models to lightweight binary GLB format for interactive Web3D virtual tours, Three.js, and mobile AR.',
+    detailDesc: 'Architects and interior designers create building concepts in SketchUp to share with clients. However, clients on mobile devices or standard web browsers cannot open heavy .skp files without installing desktop viewers. Converting SketchUp models to compressed binary GLB enables clients to explore 3D architectural spaces on smartphones or laptops with zero software installation.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['skp to glb', 'convert skp to glb', 'skp-to-glb', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'skp-to-obj',
+    title: 'Trimble SketchUp SKP to OBJ Converter',
+    description: 'Convert Trimble SketchUp SKP models to Wavefront OBJ format with material MTL sidecars for rendering in 3ds Max, Maya, V-Ray, Corona, and Blender.',
+    detailDesc: 'Architectural visualizers frequently receive conceptual design models created in SketchUp, but produce final photorealistic renderings in 3ds Max (with V-Ray or Corona) or Cinema 4D. Older rendering suites struggle to import native .skp files cleanly. Converting SketchUp models to structured OBJ files with .mtl material sidecars preserves texture assignments and geometry hierarchy.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['skp to obj', 'convert skp to obj', 'skp-to-obj', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'skp-to-fbx',
+    title: 'Trimble SketchUp SKP to FBX Converter',
+    description: 'Convert Trimble SketchUp SKP models to Autodesk FBX format. Embed textures, preserve scene hierarchies, and import directly into Unreal Engine, Unity, and Lumion.',
+    detailDesc: 'Architects and game environment artists frequently build urban scenes in SketchUp and need to bring them into Unreal Engine 5, Unity, or Twinmotion for interactive virtual reality walkthroughs. Converting SKP to Autodesk FBX embeds all material textures into a single binary file, preserves object hierarchies, and guarantees seamless real-time lighting calculation.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['skp to fbx', 'convert skp to fbx', 'skp-to-fbx', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'revit-to-ifc',
+    title: 'Autodesk Revit to IFC Converter',
+    description: 'Convert Autodesk Revit RVT project files to openBIM IFC (IFC2x3 / IFC4) models. Preserve property sets, classifications, and BIM coordination metadata.',
+    detailDesc: 'Autodesk Revit is the market leader for architectural BIM, but public infrastructure projects, government tenders (such as UK BIM Mandate and Singapore CORENET X), and MEP subcontractors require vendor-neutral IFC files for Solibri clash detection or Archicad federation. Converting RVT to certified IFC enables friction-free openBIM collaboration across the global construction industry.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['rvt to ifc', 'convert rvt to ifc', 'revit-to-ifc', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'ifc-to-dwg',
+    title: 'IFC to AutoCAD DWG Converter',
+    description: 'Convert openBIM IFC models to native AutoCAD DWG drawings. Generate clean 2D floor plans, sections, and 3D vector geometry organized by layer.',
+    detailDesc: 'While general contractors coordinate projects in 3D BIM (IFC), field trade contractors, municipal permitting authorities, and fabrication workshops still operate on 2D AutoCAD DWG blueprints. Generating clean, layered DWG floor plans and elevation slices from 3D IFC models bridges the gap between BIM modeling offices and jobsite drafting teams.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['ifc to dwg', 'convert ifc to dwg', 'ifc-to-dwg', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'slddrw-to-dwg',
+    title: 'SolidWorks SLDDRW to AutoCAD DWG Converter',
+    description: 'Convert SolidWorks SLDDRW drawing blueprints to AutoCAD DWG vector format. Preserve 1:1 sheet scale, GD&T symbols, layers, and title blocks.',
+    detailDesc: 'Manufacturing machine shops, laser cutting operators, and procurement specialists require 2D AutoCAD DWG files to program CNC nesting tables and waterjet cutting paths. However, design engineers draft associative blueprints in SolidWorks (.slddrw). Converting SLDDRW to 1:1 scale DWG ensures shop-floor machinists receive accurate cutting vectors without dimension distortion.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['slddrw to dwg', 'convert slddrw to dwg', 'slddrw-to-dwg', '3d cad converter', 'mesh converter']
+  },
+  {
+    slug: 'slddrw-to-pdf',
+    title: 'SolidWorks SLDDRW to Vector PDF Converter',
+    description: 'Convert SolidWorks SLDDRW drawing blueprints to high-resolution searchable vector PDF documents for manufacturing procurement, QA inspection, and archiving.',
+    detailDesc: 'Purchasing managers, quality assurance inspectors, and shop floor operators need clear manufacturing blueprints on mobile tablets or paper prints. They do not have SolidWorks installed. Converting SLDDRW drawings to high-resolution vector PDF preserves crisp line weights, searchable part numbers, and exact title block details for seamless manufacturing distribution.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-08-28',
+    keywords: ['slddrw to pdf', 'convert slddrw to pdf', 'slddrw-to-pdf', '3d cad converter', 'mesh converter']
+  }
 ];
