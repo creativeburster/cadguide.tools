@@ -379,7 +379,6 @@ const RAW_COMPARISON_PAIRS: [string, string][] = [
   ["ultimaker-cura", "prusaslicer"],
   ["ultimaker-cura", "bambu-studio"],
   ["prusaslicer", "bambu-studio"],
-  ["3design", "matrixgold"],
   ["clo-3d", "marvelous-designer"],
 ];
 

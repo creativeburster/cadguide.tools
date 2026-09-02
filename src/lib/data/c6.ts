@@ -323,8 +323,7 @@ export const c6Tools: Tool[] = [
 
   alternatives: [
     "altium-designer",
-    "eplan-electric-p8",
-    "synopsys-fusion-compiler"
+    "eplan-electric-p8"
   ],
 
   country: "USA",
@@ -718,8 +717,6 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "cr-8000",
-    "quadcept",
     "allegro-pcb"
   ],
 
@@ -905,9 +902,7 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eplan",
-    "cr-8000",
-    "quadcept"
+    "eplan"
   ],
 
   country: "USA",
@@ -1140,9 +1135,7 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eplan",
-    "cr-8000",
-    "quadcept"
+    "eplan"
   ],
 
   country: "USA",
@@ -1387,9 +1380,7 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eplan",
-    "cr-8000",
-    "quadcept"
+    "eplan"
   ],
 
   country: "USA",
@@ -1575,9 +1566,7 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eplan",
-    "cr-8000",
-    "quadcept"
+    "eplan"
   ],
 
   country: "USA",

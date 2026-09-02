@@ -50,3 +50,23 @@
 /guides/sketchup-shortcuts-sheet /toolbox/sketchup-shortcuts-sheet 301
 /guides/solidworks-shortcuts-sheet /toolbox/solidworks-shortcuts-sheet 301
 /guides/vectorworks-shortcuts-sheet /toolbox/vectorworks-shortcuts-sheet 301
+
+# 7. Removed long-tail tools (catalog trim 2026-09) — 301 the Google-indexed ones
+/tools/varicad /all-tools 301
+/alternatives/varicad /all-tools 301
+/pricing/varicad /all-tools 301
+/tools/actcad /all-tools 301
+/alternatives/actcad /all-tools 301
+/pricing/actcad /all-tools 301
+/tools/woodwop /all-tools 301
+/alternatives/woodwop /all-tools 301
+/pricing/woodwop /all-tools 301
+/tools/jewelcad-pro /all-tools 301
+/alternatives/jewelcad-pro /all-tools 301
+/pricing/jewelcad-pro /all-tools 301
+/tools/icad3d-plus /all-tools 301
+/alternatives/icad3d-plus /all-tools 301
+/pricing/icad3d-plus /all-tools 301
+/tools/synopsys-fusion-compiler /all-tools 301
+/alternatives/synopsys-fusion-compiler /all-tools 301
+/pricing/synopsys-fusion-compiler /all-tools 301

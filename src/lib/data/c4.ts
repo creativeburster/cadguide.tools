@@ -1216,8 +1216,7 @@ export const c4Tools: Tool[] = [
   ],
 
   alternatives: [
-    "dwg-fastview",
-    "uvcad"
+    "dwg-fastview"
   ],
 
   country: "China",

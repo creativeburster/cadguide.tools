@@ -4937,7 +4937,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete interactive reference for all 14 ASME Y14.5 Geometric Dimensioning & Tolerancing symbols with tolerance zones and usage examples.',
     detailDesc: 'Searchable chart of all GD&T symbols: form (straightness, flatness, circularity, cylindricity), profile (line, surface), orientation (parallelism, perpendicularity, angularity), location (position, concentricity, symmetry), runout (circular, total), and datum reference frames. Includes material condition modifiers (MMC, LMC, RFS) and bonus tolerance calculations.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gdt symbols', 'geometric dimensioning and tolerancing', 'asme y14.5', 'gd&t chart', 'tolerance symbols', 'datum reference frame', 'mmc lmc rfs', 'bonus tolerance', 'profile tolerance', 'position tolerance']
@@ -4948,7 +4948,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive guide to AWS A2.4 and ISO 2553 welding symbols including fillet, groove, plug, slot, and surfacing welds with supplementary symbols.',
     detailDesc: 'Complete welding symbol reference: basic weld types (fillet, square, V, bevel, U, J, flare-V, flare-bevel groove), plug and slot welds, surfacing and backing welds. Supplementary symbols (field weld, all-around, melt-through, backing, spacer). AWS vs ISO symbol comparison side-by-side. Includes weld size, length, pitch, and angle notation rules.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['welding symbols', 'aws a2.4', 'iso 2553', 'weld symbol chart', 'fillet weld symbol', 'groove weld symbol', 'welding notation', 'weld callout', 'welding blueprint reading', 'supplementary weld symbols']
@@ -4959,7 +4959,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive lookup for ISO 286 standard tolerance grades (IT01-IT18) and fundamental deviations for shaft and hole fits.',
     detailDesc: 'ISO 286-1/2 reference: tolerance grades IT01 through IT18 for nominal sizes 0-3150mm. Fundamental deviations for shafts (a-z) and holes (A-Z). Fit types: clearance (H/h, G/g, F/f), transition (J/j, K/k, N/n), interference (P/p, R/r, S/s). Interactive calculator: enter nominal size and fit designation to get upper/lower deviation limits.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['iso 286', 'limits and fits', 'tolerance grade', 'it01 it18', 'fundamental deviation', 'shaft tolerance', 'hole tolerance', 'clearance fit', 'interference fit', 'transition fit', 'iso limits fits table']
@@ -4970,7 +4970,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete thread data for ISO metric, UNF, UNC, BSW, and NPT threads including pitch, major/minor diameter, tap drill size, and tensile stress area.',
     detailDesc: 'Thread specification reference: ISO metric coarse (M1-M68) and fine pitches, UNC (1/4-20 to 4-4), UNF (1/4-28 to 1-12), BSW, BSF, NPT, and NPTF. For each thread: major diameter, minor diameter, pitch, threads per inch, tap drill size, tensile stress area, and thread engagement length recommendations. Includes thread class (6g/6h, 2A/2B/3A/3B) tolerances.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['metric thread table', 'iso thread specification', 'unc unf thread', 'npt thread chart', 'tap drill size', 'thread pitch', 'minor diameter', 'tensile stress area', 'thread engagement', 'bsw bsf thread', 'thread class tolerance']
@@ -4981,7 +4981,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive lookup for standard steel section dimensions, area, moment of inertia, section modulus, and radius of gyration.',
     detailDesc: 'Steel section properties reference: wide-flange I-beams (W shapes, AISC), European IPE/HEA/HEB, HSS square/rectangular tubes, channels (C/MC), angles (L), and TS round tubes. For each section: depth, flange width, web thickness, cross-sectional area, moment of inertia (Ix/Iy), section modulus (Zx/Zy), radius of gyration (rx/ry), and torsional constant. Searchable by designation or dimensions.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['steel section properties', 'i-beam properties', 'aisc steel shapes', 'ipe heb section', 'hss tube properties', 'channel properties', 'angle iron properties', 'moment of inertia steel', 'section modulus table', 'radius of gyration']
@@ -4992,7 +4992,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete pipe schedule reference with NPS, DN, OD, wall thickness, inside diameter, and weight for steel, stainless, and PVC pipes.',
     detailDesc: 'Pipe schedule reference: NPS 1/8 through 48, DN 6 through 1200. For each size and schedule (Sch 10, 20, 30, 40, 60, 80, 100, 120, 140, 160, XXS): outside diameter, wall thickness, inside diameter, plain-end weight, and hydrostatic test pressure. Includes ASME B36.10M (carbon steel) and B36.19M (stainless steel) data. PVC and CPVC schedule comparisons included.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['pipe schedule chart', 'nps pipe sizes', 'dn pipe dimensions', 'pipe wall thickness', 'schedule 40 80 pipe', 'asme b36.10', 'pipe inside diameter', 'pipe weight chart', 'stainless pipe schedule', 'pvc pipe dimensions']
@@ -5003,7 +5003,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Side-by-side comparison of 20+ CAD file formats: compatibility, use cases, open vs proprietary, and recommended workflows.',
     detailDesc: 'CAD file format reference: DWG (AutoCAD native), DXF (open exchange), STEP (ISO 10303, parametric solids), IGES (legacy surface), STL (polygon mesh), OBJ (mesh+materials), IFC (openBIM), RVT (Revit), SLDPRT (SolidWorks), CATPart (CATIA), PRT (NX/I-DEAS), IPT (Inventor), DGN (MicroStation), 3DM (Rhino), JT (lightweight vis), FBX (animation exchange), DAE (Collada), GLTF/GLB (web 3D), 3MF (3D print), AMF (additive mfg). For each: file extension, open/proprietary, typical size, geometry type, and best-use scenario.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cad file format guide', 'dwg vs dxf', 'step vs iges', 'stl vs obj', 'ifc file format', 'cad format comparison', 'cad file types', 'cad interoperability', 'cad translation guide', 'cad file extension reference']
@@ -5014,7 +5014,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive guide to BIM LOD levels per AIA G202 and BIMForum specifications with examples and model element requirements.',
     detailDesc: 'BIM LOD reference: LOD 100 (conceptual/symbolic), LOD 200 (generic approximate), LOD 300 (specific precise geometry), LOD 350 (interfaces with adjacent systems), LOD 400 (fabrication-ready), LOD 500 (as-built verified). For each level: definition, graphical representation, non-graphical data requirements, typical use cases, and example model elements. Includes LOD matrix template for project execution plans.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bim lod', 'level of development', 'lod 100 200 300 400 500', 'aia g202', 'bimforum lod', 'bim model progression', 'lod specification', 'bim execution plan', 'lod matrix', 'bim detail level']
@@ -5025,7 +5025,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete interactive reference for ISA-5.1 P&ID symbols: valves, instruments, equipment, piping, and signal types.',
     detailDesc: 'P&ID symbol reference per ISA-5.1 standard: valves (gate, globe, check, ball, butterfly, relief, control), actuators (pneumatic, electric, hydraulic, solenoid), instruments (transmitters, indicators, controllers, recorders, alarms), equipment (pumps, compressors, heat exchangers, vessels, towers), piping (main, branch, reducer, trap), and signal types (pneumatic, electric, hydraulic, capillary, internal software link). Includes tag numbering convention and instrument letter meanings (T, I, C, R, V, A, S).',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['pid symbols', 'piping and instrumentation diagram', 'isa 5.1', 'valve symbols', 'instrument symbols', 'pid legend', 'control diagram symbols', 'pid drawing symbols', 'process flow symbols', 'isa standard symbols']
@@ -5036,7 +5036,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive reference for IEC 60617 and ANSI/IEEE electrical symbols: power, lighting, control, and protection devices.',
     detailDesc: 'Electrical symbol reference: power sources (battery, generator, transformer, UPS), switching devices (circuit breaker, contactor, relay, switch, fuse), protection (overcurrent, earth leakage, surge protector), lighting (lamp types, emergency, exit), wiring (conductors, junction boxes, conduits, cable trays), grounding (earth, equipotential bonding), motors and generators, and measurement instruments (voltmeter, ammeter, wattmeter). IEC vs ANSI symbol comparison included.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['electrical symbols', 'iec 60617', 'ansi ieee electrical symbols', 'schematic diagram symbols', 'circuit breaker symbol', 'transformer symbol', 'electrical drawing legend', 'lighting symbols', 'wiring diagram symbols', 'electrical blueprint symbols']
@@ -5047,7 +5047,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Interactive reference for HVAC, ductwork, piping, and mechanical equipment symbols per ASHRAE and ISO standards.',
     detailDesc: 'HVAC symbol reference: air handling units (AHU, RTU, FCU, VAV), ductwork (supply, return, exhaust, flexible, fire damper, volume damper, diffuser, register, grille), piping (chilled water, hot water, steam, refrigerant, condensate), equipment (boiler, chiller, cooling tower, pump, fan, compressor, heat exchanger), valves (globe, gate, check, balancing, control), and instrumentation (temperature, pressure, flow sensors). ASHRAE Standard 135 and ISO 14617 compliant.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['hvac symbols', 'ductwork symbols', 'mechanical drawing symbols', 'ashrae symbols', 'hvac legend', 'duct symbol chart', 'piping symbols hvac', 'mechanical equipment symbols', 'hvac blueprint reading', 'iso 14617 symbols']
@@ -5058,7 +5058,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete reference for architectural plan symbols: doors, windows, walls, stairs, fixtures, and annotation marks.',
     detailDesc: 'Architectural symbol reference: doors (single, double, sliding, folding, pocket, fire-rated with swing direction), windows (casement, awning, sliding, fixed, bay), walls (exterior, interior, partition, bearing, fire-rated, CMU, brick, concrete), stairs (direction, tread/riser count, up/down notation), plumbing fixtures (toilet, sink, shower, bathtub, urinal, floor drain), kitchen fixtures (stove, refrigerator, dishwasher, sink), electrical (outlets, switches, panels), and annotation (section marks, detail callouts, elevation references, grid lines, level marks). Includes AIA and ISO 7010 conventions.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['architectural symbols', 'floor plan symbols', 'door symbol architecture', 'window symbol drawing', 'wall types symbols', 'architectural drawing legend', 'plumbing fixture symbols', 'architectural notation', 'aia drawing symbols', 'blueprint symbols architecture']
@@ -5163,7 +5163,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for diagnosing and fixing bloated DWG files: purge nested blocks, remove orphan data, compress, and audit.',
     detailDesc: 'Step-by-step diagnostic wizard for oversized DWG files. Checks: unreferenced blocks/named objects (PURGE with nested option), orphan DVIEW data, excess annotative scales (SCALELISTEDIT), hidden proxy objects, embedded images/OLE objects, Wipeout frames, dense hatch patterns, unused layers/blocks/linetypes. Recommends commands: PURGE, -PURGE (Regapps), AUDIT, RECOVER, OVERKILL, WBLOCK cleanup, and QSAVE with ISAVEPERCENT tuning.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dwg file too large', 'autocad file size bloat', 'purge dwg', 'reduce dwg size', 'overkill autocad', 'wblock cleanup', 'dwg optimization', 'autocad performance tuning', 'scalelistedit', 'audit recover dwg']
@@ -5174,7 +5174,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for diagnosing plot style table issues: missing CTB/STB, wrong line weights, color-mapped vs named styles.',
     detailDesc: 'Diagnostic wizard for AutoCAD plot style problems. Covers: CTB (color-dependent) vs STB (named) style conflicts, missing plot style table files, line weight not matching CTB settings, page setup override issues, monochrome vs grayscale output, plot style conversion (CONVERTCTB, CONVERTPSTYLES), and CTB file path resolution. Includes troubleshooting for network-shared CTB/STB files and page setup manager conflicts.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['ctb print style', 'stb plot style', 'autocad plot style problem', 'ctb missing', 'convertctb', 'convertpstyles', 'line weight not printing', 'plot style table error', 'color dependent vs named plot style', 'autocad printing troubleshoot']
@@ -5185,7 +5185,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for resolving XREF attachment, binding, and path issues in AutoCAD drawings.',
     detailDesc: 'Step-by-step diagnostic for XREF problems: unresolved references (file not found), relative vs absolute path issues (RELPATH), nested XREFs, XREF binding errors (BIND vs INSERT vs XBIND), circular references, XCLIP boundary issues, XREF layer visibility overrides, and XREF detach/refuse errors. Covers XREF palette (XREF command), XREFNOTIFY system variable, and PROJECTNAME path resolution.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['xref problem autocad', 'external reference binding', 'xref not found', 'xref path issue', 'bind xref autocad', 'xbind vs bind', 'nested xref', 'xref unresolved', 'xref detach error', 'relative path xref']
@@ -5196,7 +5196,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for diagnosing layer visibility, color, linetype, and property override issues.',
     detailDesc: 'Diagnostic wizard for layer property problems: layers not displaying (frozen/off/locked), color overrides not applying (CECOLOR, BYLAYER vs BYBLOCK), linetype scale issues (LTSCALE, PSLTSCALE, CELTSCALE), lineweight not showing (LWDISPLAY), layer transparency not plotting (PLOTTRANSPARENCYOVERRIDE), viewport layer overrides (VP freeze, VP color), and layer filter issues. Includes LAYISO, LAYUNISO, LAYWALK, and LAYMRG troubleshooting.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad layer problem', 'layer not showing', 'layer frozen off locked', 'bylayer vs byblock', 'linetype scale issue', 'ltscale psltscale', 'viewport layer override', 'layer color override', 'layiso layuniso', 'autocad layer troubleshoot']
@@ -5207,7 +5207,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for diagnosing AutoCAD, Revit, and SolidWorks license errors: network, standalone, and subscription issues.',
     detailDesc: 'Step-by-step license error diagnostic covering: Autodesk single-user sign-in failures (AdSSO, Autodesk Account), network license server timeout (LMTOOLS, FLEXlm, LMGRD), license borrowing errors, SolidWorks SolidNetWork license issues, expired or mismatched serial numbers, product key errors, "License manager not functioning" (LMGRD not running), port 2080 firewall blocking, and license transfer/deactivation problems. Includes registry key locations and LMUTIL diagnostics.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad license error', 'network license timeout', 'lmtools flexlm', 'autodesk sign in error', 'solidworks license problem', 'license manager not functioning', 'lmgrd not running', 'autodesk license diagnostic', 'flexlm port 2080', 'license borrowing error']
@@ -5218,7 +5218,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Decision tree for diagnosing and fixing AutoCAD slowdowns: hardware, drawing corruption, system variables, and display settings.',
     detailDesc: 'Performance diagnostic wizard covering: hardware acceleration (GEOMAP, HARDWAREACCELERATION, GFXDX11), display performance (WHIPARC, DRAGMODE, RENDERQUALITY), drawing corruption (AUDIT, RECOVER), excessive snap markers (OSMODE, APERTURE), regen slowdowns (REGENMODE, VIEWRES), large coordinate values (UCS follow), annotation scale buildup (SCALELISTEDIT), and system resource checks (memory, disk space, page file). Includes recommended system variable resets and GRAPHICSCONFIG settings.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad slow performance', 'autocad lag fix', 'hardware acceleration autocad', 'autocad regen slow', 'osmode performance', 'viewres autocad', 'graphicsconfig autocad', 'autocad speed optimization', 'autocad drawing slow', 'autocad performance tuning']
@@ -5386,7 +5386,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SVG vector files to PDF format entirely in your browser with no upload required.',
     detailDesc: 'Client-side SVG to PDF converter that renders SVG vector graphics and exports them as high-quality PDF documents. Supports embedded fonts, gradients, patterns, clipping paths, and multi-page output. No file upload to servers — all processing happens locally in your browser using Canvas and PDF-lib. Ideal for converting CAD exports, floor plans, and technical illustrations from SVG to print-ready PDF.',
     category: 'converter',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['svg to pdf', 'svg to pdf converter', 'svg vector to pdf', 'browser svg converter', 'client-side svg to pdf', 'svg to print pdf', 'svg to pdf free', 'svg to pdf no upload', 'svg to pdf online', 'svg export pdf']
@@ -5397,7 +5397,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SVG vector files to JPG or PNG raster images in your browser with resolution and quality control.',
     detailDesc: 'Client-side SVG to raster image converter that renders SVG files at configurable resolutions (72-1200 DPI) and exports as JPG (with quality control) or PNG (with transparency support). Supports batch conversion of multiple SVG files. No server upload — all rendering via browser Canvas API. Ideal for creating preview thumbnails of CAD drawings or web-optimized images from SVG exports.',
     category: 'converter',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['svg to jpg', 'svg to png', 'svg to image converter', 'svg to raster', 'svg to png transparent', 'svg to jpg quality', 'browser svg converter', 'client-side svg to image', 'svg to png high resolution', 'svg to jpg free online']
@@ -5408,7 +5408,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Parse DXF files locally in your browser to extract layer names, entity counts, bounding box, and geometry statistics.',
     detailDesc: 'Client-side DXF parser that reads ASCII and binary DXF files without uploading to any server. Extracts: layer names and properties, entity types and counts (LINE, CIRCLE, ARC, LWPOLYLINE, TEXT, INSERT, etc.), drawing bounding box (min/max coordinates), units (INSUNITS), header variables, and block definitions. Displays a summary report with geometry statistics. Useful for pre-conversion analysis and drawing auditing.',
     category: 'converter',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf info extractor', 'dxf parser online', 'dxf file analyzer', 'dxf layer list', 'dxf entity count', 'dxf bounding box', 'dxf metadata reader', 'dxf geometry statistics', 'dxf audit tool', 'dxf viewer info']
@@ -5433,7 +5433,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze 2D truss structures for member forces, support reactions, and nodal displacements using the method of joints.',
     detailDesc: 'Solve 2D trusses with the direct stiffness method. Define nodes (coordinates), members (connectivity, cross-section, material), and supports (pin/roller). Apply joint loads and calculate: axial forces (tension/compression), support reactions, and nodal displacements. Includes internal stability check (m >= 2j-3) and external determinacy check. Supports up to 50 members with graphical force diagram output.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['truss analysis', '2d truss calculator', 'truss member forces', 'method of joints', 'truss calculator online', 'truss solver', 'axial force truss', 'truss reactions', 'truss displacement', 'structural truss analysis']
@@ -5444,7 +5444,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze 2D frame structures for bending moments, shear forces, axial forces, and displacements using the stiffness method.',
     detailDesc: 'Solve 2D plane frames using the direct stiffness method (matrix analysis). Define nodes, beam-column members (EI, EA, length), and boundary conditions (fixed, pinned, roller, spring). Apply nodal loads and distributed loads. Calculate: member end forces (axial, shear, moment), nodal displacements, support reactions, and internal force diagrams (N, V, M). Includes sway/non-sway frame detection and moment distribution verification.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['frame analysis', '2d frame calculator', 'stiffness method frame', 'moment distribution', 'frame structural analysis', 'beam column analysis', 'frame member forces', 'frame calculator online', 'plane frame solver', 'matrix structural analysis']
@@ -5455,7 +5455,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate shear force distribution from lateral loads to vertical resisting elements through flexible floor diaphragms.',
     detailDesc: 'Diaphragm analysis for flexible floor systems: distributes lateral seismic/wind forces to shear walls, braced frames, and moment frames based on their relative stiffness. Supports rigid diaphragm (center of rigidity, torsional distribution) and flexible diaphragm (tributary area) methods. Inputs: wall/frame stiffness, lateral load magnitude and location, diaphragm dimensions. Outputs: force per resisting element, torsional moment, and drift check.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['diaphragm analysis', 'flexible diaphragm', 'shear distribution', 'lateral force distribution', 'shear wall force', 'center of rigidity', 'torsional shear', 'diaphragm calculator', 'seismic force distribution', 'wind load distribution']
@@ -5466,7 +5466,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze bolt group connections for maximum bolt force under eccentric loading per AISC methodology.',
     detailDesc: 'Bolt group analysis per AISC 360: calculates force distribution in bolt patterns (rectangular, circular, staggered) under eccentric shear and moment loads. Uses elastic method (neutral axis) and instantaneous center of rotation method (IC). Inputs: bolt pattern coordinates, bolt diameter/strength, applied load (magnitude, eccentricity). Outputs: maximum bolt shear force, critical bolt force vector, and connection capacity check. Includes bolt shear and bearing strength checks per AISC J3.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bolt group analysis', 'bolt pattern calculator', 'eccentric bolt load', 'aisc bolt analysis', 'bolt shear distribution', 'instantaneous center', 'bolt connection design', 'bolt group force', 'steel bolt calculator', 'bolt capacity check']
@@ -5477,7 +5477,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Design and verify RC beam and column sections for flexural and axial capacity per ACI 318 or Eurocode 2.',
     detailDesc: 'RC section design per ACI 318-19 / Eurocode 2 EN1992-1-1: rectangular and T-beam flexural design (tension steel area, moment capacity, neutral axis depth), column interaction diagram (axial-b capacity curve, balanced point, minimum steel), shear design (stirrup spacing, shear capacity), and crack width check. Inputs: section dimensions, concrete strength (fc/ck), steel yield (fy), cover, bar sizes. Outputs: capacity ratio, required reinforcement, and code compliance status.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['rc section design', 'reinforced concrete calculator', 'aci 318 design', 'eurocode 2 design', 'rc beam design', 'rc column design', 'interaction diagram', 'flexural capacity rc', 'shear design rc', 'concrete section calculator']
@@ -5488,7 +5488,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate maximum bending moment and shear force in a beam under moving wheel loads (bridge/crane girder).',
     detailDesc: 'Moving load analysis for simply supported beams: calculates maximum bending moment and maximum shear force at any section due to moving concentrated loads (2-5 wheel loads). Uses influence line theory to position loads for maximum effect. Inputs: span length, number of wheel loads, wheel load magnitudes and spacings. Outputs: absolute maximum bending moment and its location, maximum shear at supports, maximum shear at any specified section, and critical load position diagram.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['moving load analysis', 'moving load beam', 'maximum bending moment moving load', 'influence line beam', 'bridge load analysis', 'crane girder load', 'wheel load beam', 'moving load calculator', 'absolute max moment', 'beam moving loads']
@@ -5499,7 +5499,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate principal stresses, maximum shear stress, and stress components on any inclined plane from a 2D stress state.',
     detailDesc: '2D stress transformation calculator: inputs sigma_x, sigma_y, tau_xy (plane stress state). Calculates: principal stresses (sigma_1, sigma_2) and their orientations (theta_p1, theta_p2), maximum in-plane shear stress (tau_max) and its orientation, stress components on any inclined plane at angle theta (sigma_n, tau_nt), von Mises equivalent stress, and Mohr circle parameters (center, radius). Includes graphical Mohr circle visualization.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['principal stress', 'stress transformation', 'mohr circle calculator', 'maximum shear stress', 'plane stress analysis', 'stress on inclined plane', 'sigma1 sigma2', 'stress rotation', 'von mises stress', '2d stress state calculator']
@@ -5510,7 +5510,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate load distribution from one-way and two-way slabs to supporting beams based on span ratios and support conditions.',
     detailDesc: 'Slab load distribution per classical theory: one-way slabs (L/B > 2) distribute load to two supporting beams as uniform load. Two-way slabs (L/B <= 2) distribute load to all four beams using triangular/trapezoidal yield line patterns. Inputs: slab dimensions (short span Lx, long span Ly), slab thickness, unit weight, live load, and finish load. Outputs: beam load distribution diagrams (triangular, trapezoidal, uniform), equivalent uniform load for each beam, and maximum bending moment in slab.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['slab load distribution', 'one way slab', 'two way slab', 'slab to beam load', 'tributary load slab', 'slab design calculator', 'triangular trapezoidal load', 'slab span ratio', 'slab load transfer', 'slab beam distribution']
@@ -5521,7 +5521,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Design concrete mix proportions per ACI 211.1 for target compressive strength, workability, and durability.',
     detailDesc: 'ACI 211.1-91 mix design: calculates proportions for normal weight concrete. Inputs: target fc, slump, nominal max aggregate size, fineness modulus of sand, specific gravity of cement/coarse/fine aggregate, aggregate moisture content, and exposure condition. Outputs: water-cement ratio, cement content, coarse aggregate content, fine aggregate content, total water, and adjusted batch weights for field moisture. Includes durability checks for sulfate exposure and freeze-thaw.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['concrete mix design', 'aci 211', 'concrete proportioning', 'mix design calculator', 'water cement ratio', 'concrete batch weights', 'aci mix design', 'concrete strength design', 'mix ratio calculator', 'concrete mix proportions']
@@ -5532,7 +5532,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate earth pressure distribution, strut loads, and wall bending moments for braced excavation systems.',
     detailDesc: 'Braced excavation analysis using apparent earth pressure diagrams (Peck/Terzaghi/MSHA methods). Inputs: excavation depth, soil properties (gamma, c, phi, Su for clay), groundwater level, surcharge load, strut spacing, and wall type (steel sheet pile, soldier pile, concrete diaphragm). Outputs: earth pressure distribution diagram, strut loads at each level, maximum wall bending moment, required wall section modulus, and embedment depth check. Supports both sand and clay soil profiles.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['braced excavation', 'excavation support', 'strut load calculator', 'apparent earth pressure', 'peck earth pressure', 'sheet pile excavation', 'soldier pile excavation', 'braced cut analysis', 'excavation wall design', 'deep excavation calculator']
@@ -5543,7 +5543,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate anchor forces, wall bending moments, and stability for anchored retaining wall excavation systems.',
     detailDesc: 'Anchored excavation analysis using free earth support method. Inputs: excavation depth, soil properties (gamma, c, phi), groundwater level, anchor inclination and free length, surcharge load, wall stiffness. Outputs: required anchor force per level, anchor bond length, wall bending moment diagram, maximum bending moment and location, embedment depth for passive resistance, and global stability check. Supports multi-level anchor systems and tied-back sheet pile walls.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['anchored excavation', 'anchor wall analysis', 'ground anchor design', 'tied back wall', 'anchor force calculator', 'free earth support', 'sheet pile anchor', 'anchored retaining wall', 'excavation anchor design', 'anchor bond length']
@@ -5554,7 +5554,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate surface settlement trough above tunnel excavations using Gaussian/Peck curve method.',
     detailDesc: 'Tunnel settlement per Peck/Schmidt Gaussian curve: S(x) = Smax * exp(-x^2/(2*i^2)). Inputs: tunnel radius/depth, ground loss ratio (Vl), soil type (clay/sand/rock), volume loss percentage, and tunnel construction method (TBM, NATM, shield). Outputs: maximum settlement (Smax), settlement trough width (i), surface settlement profile at any distance from tunnel centerline, volume of settlement trough, and building damage risk assessment (Burland category). Includes multi-tunnel interaction.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['tunnel settlement', 'ground settlement tunnel', 'peck settlement curve', 'gaussian settlement trough', 'surface settlement excavation', 'tunnel induced settlement', 'volume loss tunnel', 'building damage assessment', 'tunneling settlement', 'subsidence tunnel calculator']
@@ -5565,7 +5565,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate Bieniawski RMR score and recommend tunnel support systems based on rock mass quality.',
     detailDesc: 'RMR (Rock Mass Rating) per Bieniawski 1989: evaluates 5 parameters — uniaxial compressive strength (UCS), RQD, joint spacing, joint condition (roughness, filling, weathering), and groundwater condition. Includes orientation adjustment. Inputs: UCS, RQD, joint data, water inflow, tunnel orientation. Outputs: RMR score (0-100), rock class (I-V), tunnel stand-up time, average joint spacing, and recommended support categories (rock bolts spacing, shotcrete thickness, steel sets, and excavation method).',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['rmr calculator', 'rock mass rating', 'beniawski rmr', 'tunnel support design', 'rock classification', 'tunnel support system', 'rock bolt spacing', 'shotcrete thickness', 'rock quality designation', 'tunnel excavation method']
@@ -5576,7 +5576,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate jacking thrust force required for pipe installation in trenchless pipe jacking operations.',
     detailDesc: 'Pipe jacking force calculation: total jacking force = face resistance + frictional resistance along pipe length. Face resistance depends on soil type (sand: N-value based, clay: Su based) and cutter face area. Frictional resistance depends on overburden pressure, soil-pipe friction coefficient, pipe outer diameter, and lubrication (bentonite) effectiveness. Inputs: pipe OD, length, depth, soil properties, groundwater level, lubrication type. Outputs: required jacking force per stage, maximum intermediate jacking station (IJS) spacing, pipe stress check, and jacking frame capacity requirement.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['pipe jacking force', 'jacking thrust calculator', 'trenchless pipe installation', 'pipe jacking design', 'jacking force calculation', 'intermediate jacking station', 'pipe jacking friction', 'microtunneling force', 'pipe jacking capacity', 'trenchless calculator']
@@ -5587,7 +5587,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate concrete lateral pressure on formwork and design formwork components per ACI 347.',
     detailDesc: 'Formwork design per ACI 347-01: calculates lateral pressure of fresh concrete on vertical formwork (Pmax = Cw*Cc*[150+9000R/T] for walls, Pmax = Cw*Cc*[150+9000R/T] with rate and temperature limits). Inputs: concrete unit weight, placement rate (R), temperature (T), chemical retarder type, pour height, and form height. Outputs: maximum lateral pressure, pressure distribution diagram, required stud spacing, wale spacing, tie rod capacity and spacing, sheathing thickness check, and deflection limit verification (L/360).',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['formwork design', 'concrete formwork calculator', 'lateral pressure concrete', 'aci 347 formwork', 'formwork stud spacing', 'wale design', 'tie rod spacing', 'formwork pressure', 'concrete placement rate', 'formwork deflection check']
@@ -5598,7 +5598,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate scaffold loading, post capacity, and stability per OSHA 1926 and BS EN 12810 standards.',
     detailDesc: 'Scaffold design per OSHA 29 CFR 1926.451 and BS EN 12810-1: calculates design loads for supported scaffolds. Inputs: scaffold type (tube-and-clamp, system, frame), number of tiers, bay dimensions, lift height, plank type, intended live load (light/medium/heavy duty), wind speed, and number of working levels. Outputs: leg load per standard, required post capacity, brace force, tie-in force and spacing, base plate size, allowable height, and stability ratio. Includes load combination per ASCE 7 and wind load on scaffolding.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['scaffold design', 'scaffold load capacity', 'scaffold calculator', 'osha scaffold', 'bs en 12810', 'scaffolding load', 'scaffold post capacity', 'scaffold tie in', 'scaffold stability', 'tube clamp scaffold design']
@@ -5609,7 +5609,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Assess bushfire risk per AS 3959-2018 with both Simplified and Appendix B detailed methods.',
     detailDesc: 'BAL assessment per AS 3959-2018: calculates Bushfire Attack Level (BAL-LOW to BAL-FZ) using two concurrent methods. Simplified method: uses FDI (Fire Danger Index) lookup tables, vegetation classification, slope distance, and site slope. Appendix B detailed method: calculates radiant heat flux (kW/m2) using flame temperature, emissivity, flame height, view factor, and distance attenuation. Inputs: vegetation type, slope (site and approach), distance to vegetation, FDI region. Outputs: BAL rating, radiant heat flux, recommended construction sections (AS 3959 Sections 3-9), and comparison of both methods.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bal calculator', 'bushfire attack level', 'as 3959', 'bushfire risk assessment', 'radiant heat flux', 'bal low to bal fz', 'bushfire construction standard', 'fire danger index', 'bushfire zone calculator', 'bal assessment tool']
@@ -5620,7 +5620,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert real-world measurements to CAD drawing scales and find the closest standard architectural or engineering scale.',
     detailDesc: 'Drawing scale calculator: converts between real-world dimensions and drawing dimensions for any scale ratio. Inputs: real-world measurement (with units), drawing measurement, or desired scale ratio. Supports standard architectural scales (1/16, 1/8, 1/4, 1/2, 3/8, 3/4, 1, 1.5, 3 inches per foot) and engineering scales (1:1, 1:2, 1:5, 1:10, 1:20, 1:50, 1:100, 1:200, 1:500, 1:1000). Outputs: exact scale ratio, closest standard scale, scale factor for CAD (LTSCALE, DIMSCALE), viewport zoom factor for paper space, and text height recommendations for each scale.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cad drawing scale', 'scale calculator cad', 'architectural scale converter', 'engineering scale calculator', 'drawing scale ratio', 'ltscale calculator', 'dimscale autocad', 'viewport scale factor', 'cad scale conversion', 'paper space scale']
@@ -5631,7 +5631,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Calculate moist air thermodynamic properties: humidity ratio, enthalpy, dew point, wet bulb, and specific volume.',
     detailDesc: 'Psychrometric calculator for HVAC and building science: inputs dry-bulb temperature and one of (wet-bulb, relative humidity, dew point, humidity ratio). Calculates: humidity ratio (W, kg/kg), relative humidity (RH, %), enthalpy (h, kJ/kg), dew point temperature (Tdp), wet-bulb temperature (Twb), specific volume (v, m3/kg), vapor pressure (Pv), and saturation pressure (Psat). Supports both SI and IP units. Includes psychrometric process calculations: sensible heating/cooling, humidification, dehumidification, and mixing of two air streams.',
     category: 'calculator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['psychrometric calculator', 'air properties calculator', 'humidity ratio', 'wet bulb temperature', 'dew point calculator', 'enthalpy air', 'psychrometric chart', 'moist air properties', 'hvac psychrometric', 'specific volume air']
@@ -5678,7 +5678,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete reference of AutoCAD 3D modeling commands: solid creation, surface editing, viewport navigation, and rendering shortcuts.',
     detailDesc: 'AutoCAD 3D modeling shortcut reference covering: solid primitives (BOX, CYLINDER, SPHERE, CONE, WEDGE, TORUS), solid editing (UNION, SUBTRACT, INTERSECT, SLICE, THICKEN, IMPRINT, FILLETEDGE, CHAMFEREDGE), surface modeling (SURFEXTRUDE, SURFREVOLVE, SURFLOFT, SURFSWEEP, SURFTRIM, SURFPATCH), mesh editing (MESHSMOOTH, MESHREFINE, MESHCREASE), viewport navigation (3DORBIT, 3DORBITCTR, VPOINT, PLAN, VIEW), visual styles (VSCURRENT), and rendering (RENDER, MATBROWSER, LIGHT, SUNPROPERTIES). Includes UCS manipulation commands (UCS, UCSICON, UCSMAN) and 3D object snaps.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad 3d shortcuts', 'autocad 3d commands', 'autocad 3d modeling cheat sheet', 'autocad solid commands', 'autocad surface modeling', '3dorbit autocad', 'autocad ucs commands', 'autocad 3d primitives', 'autocad rendering shortcuts', 'autocad 3d reference']
@@ -5689,7 +5689,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable, printable reference of 250+ AutoCAD command aliases organized by category: drawing, modifying, annotation, layers, blocks, and utilities.',
     detailDesc: 'Comprehensive AutoCAD command alias reference with 250+ entries from acad.pgp file. Categories: Drawing (L/LINE, C/CIRCLE, A/ARC, PL/POLYLINE, REC/RECTANGLE, EL/ELLIPSE, SPL/SPLINE, H/HATCH, BH/HATCHEDIT, T/MTEXT, DT/DTEXT), Modifying (M/MOVE, CO/COPY, RO/ROTATE, SC/SCALE, MI/MIRROR, O/OFFSET, TR/TRIM, EX/EXTEND, BR/BREAK, J/JOIN, AR/ARRAY, E/ERASE, X/EXPLODE), Annotation (D/DIMSTYLE, DAL/DIMALIGNED, DLI/DIMLINEAR, DRA/DIMRADIUS, DDI/DIMDIAMETER, DAN/DIMANGULAR, QLEADER, TOL/TOLERANCE), Layers (LA/LAYER, LAYISO, LAYUNISO, LAYWALK, LAYMRG), Blocks (B/BLOCK, I/INSERT, W/WBLOCK, BCOUNT, BURST, XBIND), Utilities (AREA, DIST, ID, LI/LIST, PR/PROPERTIES, MA/MATCHPROP, PU/PURGE, AUDIT, RECOVER, OVERKILL). Includes function key mapping and Ctrl+key combinations.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad command aliases', 'autocad 250 commands', 'autocad command list', 'autocad acad pgp', 'autocad shortcut reference', 'autocad all commands', 'autocad command cheat sheet', 'autocad drawing commands', 'autocad modify commands', 'autocad annotation commands']
@@ -5700,7 +5700,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete searchable reference of CNC M-codes for machine functions: spindle, coolant, tool changes, program control, and optional stops.',
     detailDesc: 'CNC M-code reference covering Fanuc, Haas, and Siemens controllers. Common M-codes: M00 (program stop), M01 (optional stop), M02 (program end), M03 (spindle CW), M04 (spindle CCW), M05 (spindle stop), M06 (tool change), M07/M08 (coolant on), M09 (coolant off), M30 (program end and reset), M98 (subprogram call), M99 (subprogram end), M19 (spindle orient), M97 (local subprogram). Haas-specific: M29 (rigid tap), M104 (parts counter), M130 (through-spindle coolant). Siemens-specific: M70 (spindle at preset), M71-M79 (axis clamping). Includes controller comparison table.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc m code', 'm code reference', 'fanuc m code', 'haas m code', 'siemens m code', 'cnc machine codes', 'm00 m01 m03 m05', 'm06 tool change', 'cnc coolant code', 'cnc program control codes']
@@ -5711,7 +5711,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable reference of all Haas-specific and standard G-codes with syntax, parameters, and programming examples.',
     detailDesc: 'Haas CNC G-code reference with full syntax and parameter descriptions. Covers: G00 (rapid), G01 (linear feed), G02/G03 (arc CW/CCW with R or I/J/K), G04 (dwell), G09 (exact stop), G10 (programmable offset setting), G12/G13 (circular pocket milling), G17/G18/G19 (plane selection), G20/G21 (inch/metric), G28/G30 (home return), G31 (skip), G40/G41/G42 (cutter compensation), G43/G44 (tool length offset), G54-G59 (work offsets), G70 (bolt hole circle), G71 (bolt hole arc), G72 (bolt hole line), G73 (high speed peck drill), G74 (left hand tap), G76 (fine boring), G80 (cancel cycle), G81-G89 (canned cycles), G90/G91 (absolute/incremental), G94/G95 (feed per min/rev), G96/G97 (constant surface speed). Includes Haas-specific G-codes and examples.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['haas g code', 'haas cnc g code reference', 'g code chart haas', 'haas g12 g13', 'haas g70 g71 g72', 'haas canned cycles', 'haas g code list', 'haas programming reference', 'g54 haas', 'haas g code syntax']
@@ -5722,7 +5722,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable reference of all Fanuc G-codes for milling and turning with syntax, parameters, and programming examples.',
     detailDesc: 'Fanuc CNC G-code reference for both milling (Fanuc 0M/16M/18M/21M/30i/31i) and turning (Fanuc 0T/16T/18T/21T/30i). Milling: G00-G03 (motion), G04 (dwell), G09 (exact stop), G10 (offset setting), G15/G16 (polar coord), G17-G19 (planes), G20/G21 (units), G28 (home), G31 (skip), G40-G42 (cutter comp), G43-G44 (tool length), G54-G59 (work offsets), G73-G89 (canned cycles), G90-G91 (abs/inc), G94/G95 (feed modes), G96/G97 (CSS). Turning: G32 (threading), G70 (finishing cycle), G71 (roughing cycle OD/ID), G72 (facing roughing), G73 (pattern repeating), G74 (peck drilling), G75 (grooving), G76 (threading cycle), G90 (OD/ID turning cycle), G92 (threading cycle), G94 (facing cycle). Includes Fanuc Series 30i/31i/32i advanced features.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fanuc g code', 'fanuc cnc g code reference', 'fanuc g code chart', 'fanuc g71 g70 g76', 'fanuc canned cycles', 'fanuc turning cycles', 'fanuc milling g codes', 'fanuc g code list', 'fanuc 0i g code', 'fanuc programming reference']
@@ -5733,7 +5733,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Recommended starting RPM, feed rate, and depth of cut for common tool/material combinations in CNC milling and turning.',
     detailDesc: 'CNC feeds and speeds starting values reference for common scenarios. Organized by material (aluminum 6061, steel 1018, stainless 304, cast iron, brass, copper, titanium, plastic) and tool type (HSS, carbide, coated carbide, ceramic). For each combination provides: recommended surface speed (SFM/SSM), chip load per tooth (FPT), RPM range, feed rate (IPM/mm per min), radial depth of cut (% of diameter), axial depth of cut, and coolant recommendation. Includes adjustment factors for slotting vs profiling, roughing vs finishing, and tool diameter ratios. Based on manufacturer recommendations (Kennametal, Sandvik, Iscar) and CNC Cookbook data.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc feeds and speeds chart', 'starting feeds speeds', 'cnc speed feed reference', 'sfm chart cnc', 'chip load chart', 'carbide feeds speeds', 'aluminum cutting speed', 'steel cutting speed', 'cnc starting parameters', 'material cutting speed chart']
@@ -5744,7 +5744,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Bend deduction, bend allowance, and K-factor values for common sheet metal materials and thicknesses.',
     detailDesc: 'Sheet metal bend reference chart for press brake operations. Covers bend deduction (BD), bend allowance (BA), and K-factor for common materials: mild steel (AISI 1006/1008), stainless steel (304/316), aluminum (5052/6061), copper, and brass. Organized by material thickness (0.5mm to 6mm / 0.020" to 0.250"), inside bend radius (0.5T to 4T), and bend angle (30, 45, 60, 90, 120, 150 degrees). Includes default K-factor values per material (0.33 for soft materials, 0.42 for medium, 0.5 for hard), minimum bend radius rules, and air bend vs bottom bend force comparison.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bend deduction chart', 'bend allowance chart', 'k factor sheet metal', 'sheet metal bend reference', 'press brake calculation', 'bend deduction table', 'k factor reference', 'sheet metal thickness chart', 'bend radius chart', 'sheet metal fabrication reference']
@@ -5755,7 +5755,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Recommended printing parameters for FDM/FFF 3D printing: nozzle temp, bed temp, speed, layer height, and cooling for common filaments.',
     detailDesc: '3D printing parameters reference for FDM/FFF printers. Covers common filaments: PLA, PETG, ABS, ASA, TPU (flexible), Nylon (PA6/PA12), PC (polycarbonate), PVA (support), HIPS, PEEK, ULTEM. For each material provides: recommended nozzle temperature (190-420C), bed temperature (0-120C), print speed (20-100 mm/s), layer height range (0.05-0.3mm), cooling fan setting (0-100%), retraction distance (0.5-7mm), bed adhesion method (blue tape, PEI, glass, brim, raft), enclosure requirement, and known issues (warping, stringing, moisture sensitivity). Includes recommended hot end and extruder types per material.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['3d printing parameters', '3d printing temperature chart', 'pla petg abs settings', 'fdm printing reference', '3d printer material guide', 'nozzle temperature chart', 'bed temperature 3d print', '3d printing speed reference', 'filament settings chart', '3d printing material reference']
@@ -5766,7 +5766,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Cross-reference table for Standard Wire Gauge (SWG), Birmingham Wire Gauge (BWG), and American Wire Gauge (AWG) with metric conversions.',
     detailDesc: 'Wire gauge cross-reference chart covering SWG (Imperial Standard Wire Gauge, used in UK), BWG (Birmingham Wire Gauge, used for steel tubing), and AWG (American Wire Gauge, used in North America). For each gauge number (0000 to 36): provides diameter in inches, millimeters, cross-sectional area (mm2 and circular mils), and resistance per 1000 feet (ohms, for AWG copper). Includes steel sheet thickness equivalents for MSG (Manufacturer Standard Gauge) and Galvanized Steel Gauge. Covers common applications: electrical wiring (AWG), steel tubing/wire (BWG), and UK/general wire (SWG).',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['wire gauge chart', 'swg bwg awg', 'standard wire gauge', 'birmingham wire gauge', 'american wire gauge', 'wire gauge conversion', 'wire gauge mm', 'wire size chart', 'gauge to mm conversion', 'wire gauge cross reference']
@@ -5777,7 +5777,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Mechanical strength properties for ISO, ASTM, SAE, and DIN bolt grades: proof load, yield strength, tensile strength, and hardness.',
     detailDesc: 'Fastener property class reference covering: ISO 898-1 property classes (4.6, 4.8, 5.6, 5.8, 6.8, 8.8, 9.8, 10.9, 12.9), SAE J995 grades (1, 2, 4, 5, 7, 8), ASTM A325/A490 structural bolts, and DIN 933/931 equivalents. For each grade: nominal size range, proof load stress (MPa/ksi), yield strength (MPa/ksi), tensile strength (MPa/ksi), core hardness (HRC/HB), and minimum elongation. Includes stainless steel bolt grades (A2-70, A2-80, A4-70, A4-80) per ISO 3506. Also covers nut compatibility (ISO 898-2) and washer specifications.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fastener grade chart', 'bolt property class', 'iso 898 bolt grades', 'astm a325 a490', 'sae bolt grades', 'bolt strength reference', 'proof load bolt', 'yield strength bolt', 'bolt hardness chart', 'fastener strength reference']
@@ -5788,7 +5788,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Standard CNC tool sizes, geometries, and applications: end mills, drills, taps, reamers, and inserts for milling and turning.',
     detailDesc: 'CNC tool specification reference covering: solid carbide end mills (square, ball, corner radius, roughing, finishing) with standard diameters (1mm-25mm / 0.031"-1.0"), flute counts (2/3/4/5/6/7 flute selection guide), helix angles (30-55 degrees), and coating recommendations (TiAlN, AlCrN, DLC, uncoated). Twist drills (jobber, screw machine, reduced shank) with standard sizes and point angles (118, 135, 140 degrees). Taps (cut taps, form taps, spiral flute, spiral point) with class fit (2B, 3B). Reamers (chucking, machine, expansion) with stock allowance. Indexable inserts (CNMG, DNMG, TNMG, WNMG, CCMT, DCMT) with ISO/ANSI designation system. Includes speed/feed multiplier factors per tool type.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc tool specifications', 'end mill sizes', 'cnc tool reference', 'carbide end mill chart', 'drill size reference', 'tap drill chart', 'reamer sizes', 'indexable insert designation', 'cnc tooling guide', 'cutting tool reference']
@@ -5799,7 +5799,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Side-by-side comparison of major engineering drawing standards: dimensioning rules, tolerancing, projection methods, and sheet sizes.',
     detailDesc: 'Engineering drawing standards comparison covering ISO 128/ISO 8015 (international), ASME Y14.5/Y14.100 (USA), DIN 199/DIN 406 (Germany), and JIS B 0001/B 0002 (Japan). Comparison areas: projection method (first angle ISO/DIN/JIS vs third angle ASME), dimensioning rules (arrow styles, text placement, dimension line spacing), tolerance expression (general tolerances: ISO 2768 vs ASME default), geometric tolerancing (ISO GPS vs ASME GD&T), surface finish symbols (Ra/Rz vs microinch), thread callout format (M10x1.5 vs 3/8-16 UNC), and sheet sizes (A0-A4 vs A-D ANSI). Includes conversion tables for key dimensioning differences.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['drawing standards comparison', 'iso vs asme', 'first angle vs third angle', 'iso 128 drawing', 'asme y14.5', 'din drawing standard', 'jis drawing standard', 'engineering drawing standards', 'dimensioning standards', 'gd&t vs gps']
@@ -5810,7 +5810,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable reference of 200+ AutoCAD system variables with default values, storage location, and effect on drawing behavior.',
     detailDesc: 'AutoCAD system variable reference with 200+ entries. Categories: Display (VIEWRES, FACETRES, ISOLINES, DISPSILH), Drawing Setup (INSUNITS, MEASUREMENT, LUNITS, LUPREC, AUNITS), Dimensioning (DIMSTYLE, DIMSCALE, DIMLFAC, DIMTIH, DIMTOH, DIMASZ, DIMTXT), Plotting (CTB, STB, PLOTSTYLEMODE, PAPERUPDATE), Selection (PICKBOX, PICKADD, PICKAUTO, PICKDRAG), Performance (CACHELAYOUT, CACHEMAXTOTAL, XLOADCTL, INDEXCTL), Snaps (OSMODE, AUTOSNAP, OSMODEMAC, SNAPMODE, GRIDMODE), Layers (CLAYER, LAYERFILTERALERT, LAYERNOTIFY), and File Management (SAVEFILEPATH, REMEMBERFOLDERS, FILEDIA, ROAMABLEROOTPREFIX). Each entry includes: data type (integer, real, string, boolean), default value, saved in (drawing vs registry), and related commands.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad system variables', 'autocad sysvar reference', 'autocad variables list', 'dimscale autocad', 'osmode autocad', 'insunits autocad', 'viewres facetres', 'autocad setvar reference', 'autocad environment variables', 'autocad drawing variables']
@@ -5821,7 +5821,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Complete syntax reference for Revit family parameter formulas: math functions, conditional statements, trigonometry, and type catalog functions.',
     detailDesc: 'Revit family formula reference covering: arithmetic operators (+, -, *, /, ^), conditional statements (if(condition, true, false), nested if, AND, OR, NOT), comparison operators (<, >, =, <=, >=), math functions (round, rounddown, roundup, abs, sqrt, power, exp, log), trigonometry (sin, cos, tan, asin, acos, atan, pi), string functions (no native string functions, but parameter concatenation via text parameters), and array functions. Includes common formula patterns: visibility driven by checkbox, dimensional constraints (if(Length > 100, Length * 0.5, Length * 0.3)), rounding to standard sizes (round(Length / 10) * 10), and type catalog syntax. Lists reserved keywords and unit conversion rules within formulas.',
     category: 'cheatsheet',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['revit formula reference', 'revit family formulas', 'revit parameter formula', 'revit if statement', 'revit formula syntax', 'revit conditional formula', 'revit math functions', 'revit round formula', 'revit family parameters', 'revit type catalog formula']
@@ -5835,7 +5835,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Step-by-step diagnostic wizard for resolving AutoCAD installation failures, stuck installers, and licensing setup errors.',
     detailDesc: 'Interactive decision-tree wizard for AutoCAD installation problems. Covers: installer stuck on initializing (antivirus interference, corrupted OS, Windows update pending), installation rollback (insufficient disk space, prerequisite failure, .NET Framework version conflict), post-install crash on first launch (graphics driver incompatibility, corrupted user profile, missing Visual C++ redistributable), and licensing setup errors (network license timeout, FlexNet service stopped, product key mismatch). Each branch provides: symptom description, root cause analysis, step-by-step fix instructions, and verification steps. Includes Autodesk Install/Uninstall Tool and MS FixIt recommendations.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad installation error', 'autocad install stuck', 'autocad install wizard', 'autocad installation troubleshooting', 'autocad install rollback', 'autocad setup error', 'autocad install fix', 'autocad prerequisite error', 'autocad install failed', 'autodesk installation troubleshoot']
@@ -5846,7 +5846,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Diagnostic wizard for repairing corrupted DWG files: RECOVER, AUDIT, DRAWINGRECOVERY, WBLOCK, and manual recovery techniques.',
     detailDesc: 'Step-by-step DWG corruption repair wizard. Decision tree covers: file will not open (try RECOVER command from blank drawing, RECOVERALL for xrefs, partial open), file opens but displays errors (run AUDIT with Y for fix, -PURGE, OVERKILL), file opens but crashes on save (WBLOCK out to new file, QSELECT to isolate problem entities), file missing entities (DRAWINGRECOVERY manager, .bak file recovery, .sv$ autosave recovery), and severe corruption (use third-party DWG repair tool, recover from previous version, extract data via DXF export). Includes preventative measures: AUDIT on close, ISAVEPERCENT setting, and backup strategies.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dwg corruption repair', 'dwg file recovery', 'autocad recover command', 'dwg repair wizard', 'autocad audit fix', 'drawing recovery manager', 'dwg file fix', 'corrupted dwg repair', 'autocad bak file recovery', 'dwg autosave recovery']
@@ -5857,7 +5857,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Resolve blank screens, flickering, ghosting, selection highlighting issues, and visual glitches in AutoCAD.',
     detailDesc: 'AutoCAD display/graphics troubleshooting wizard. Covers: blank or black screen on launch (GRAPHICSCONFIG hardware acceleration toggle, graphics driver update, clean uninstall of GPU driver with DDU), flickering or ghosting (disable hardware acceleration, update to WHQL-certified driver, check for dual GPU conflicts), selection highlighting not working (SELECTIONEFFECT, SELECTIONPREVIEW settings), cursor lag/jumping (SNAPANG, APERTURE, PICKBOX, OSNAP settings, mouse driver conflict), ribbon/toolbar display issues (reset workspace, CUI load, MENUBAR), and hatch/gradient display problems (HPMAXLINES, HPMAXAREAS, FILLMODE). Includes recommended GPU drivers per AutoCAD version.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad display problem', 'autocad graphics issue', 'autocad blank screen', 'autocad flickering fix', 'autocad hardware acceleration', 'autocad cursor lag', 'autocad visual glitch', 'autocad graphics driver', 'autocad display troubleshooting', 'autocad screen fix']
@@ -5868,7 +5868,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Diagnose and resolve crashes, errors, and performance issues caused by LISP routines, custom plugins, and third-party add-ins.',
     detailDesc: 'AutoCAD LISP/plugin conflict diagnostic wizard. Decision tree: AutoCAD crashes on startup (safe mode launch with /nossm, disable all LISP via LISPINIT=0, rename acaddoc.lsp/acaddoc.fas), LISP routine error on load (check VLISP debugger, verify function availability, check APPLOAD error log), third-party add-in causes instability (APPLOAD dialog to disable, check Demand Load registry keys, isolate via process of elimination), Express Tools missing (reinstall from deployment, check EXPRESSTOOLS system variable), and custom CUIX causes menu corruption (reset CUI to default, rebuild with CUI command). Includes LISP debugging tips and common error messages with solutions.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['autocad lisp error', 'autocad plugin conflict', 'autocad add-in crash', 'autocad lisp troubleshooting', 'autocad lisp debug', 'autocad plugin fix', 'autocad express tools missing', 'autocad cuix corruption', 'autocad safe mode', 'autocad appload error']
@@ -5879,7 +5879,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Step-by-step recovery wizard for corrupted Revit models: audit, compact, detach, rollback, and worksharing recovery.',
     detailDesc: 'Revit file corruption recovery wizard. Covers: model will not open (try Open and Audit, detach from central, clear local cache for BIM 360/ACC projects), model opens with errors (Review Warnings dialog, isolate corrupt elements via Worksets, delete and recreate problem elements), model crashes on sync (try Reload Latest before sync, create new local file, check element ID from journal file), model crashes on specific view (delete and recreate view, check view-specific overrides, purge unused), and severe corruption (restore from backup .0001.rvt, use journal file to identify corrupt element, rebuild model via transfer project standards). Includes preventative: Worksharing monitor, regular audit schedule, and model maintenance best practices.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['revit file corruption', 'revit model recovery', 'revit audit repair', 'revit corrupt model fix', 'revit file recovery', 'revit detach from central', 'revit worksharing recovery', 'revit model crash fix', 'revit journal file recovery', 'revit backup recovery']
@@ -5890,7 +5890,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Identify and fix corrupted Revit families causing model crashes, missing geometry, and performance degradation.',
     detailDesc: 'Revit family corruption diagnostic wizard. Covers: family causes model crash on load (identify via journal file, test family in blank project, recreate from catalog), family displays missing geometry (check visibility/graphics overrides, subcategory visibility, detail level, phase filter), family parameters broken (check formula errors, delete and recreate parameters, verify shared parameter file), family type catalog errors (verify CSV format, check parameter order, validate units), and in-place family corruption (explode and recreate as loadable family). Includes family health check checklist and recommended family creation best practices to prevent corruption.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['revit family corruption', 'revit family crash', 'revit family fix', 'revit family repair', 'revit family missing geometry', 'revit family parameters broken', 'revit family diagnostic', 'revit family error fix', 'revit in place family corruption', 'revit family health check']
@@ -5901,7 +5901,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Troubleshoot Revit worksharing sync failures, BIM 360/ACC collaboration errors, and central model access problems.',
     detailDesc: 'Revit sync and C4R collaboration troubleshooting wizard. Covers: sync fails with error message (check network connectivity, verify BIM 360/ACC project health, try Reload Latest then Sync), element borrow conflict (use Worksharing Monitor, identify borrower, request or force relinquish), central model inaccessible (check network path, verify permissions, recreate local file), BIM 360/ACC local cache corruption (clear %localappdata%\\Autodesk\\Revit\\CollaborationCache), model upgrade conflicts (all users must upgrade simultaneously, coordinate via BIM coordinator), and performance issues during sync (compact model, purge unused, reduce warnings). Includes C4R best practices and bandwidth requirements.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['revit sync error', 'revit c4r troubleshooting', 'revit worksharing sync', 'bim 360 revit error', 'revit central model access', 'revit collaboration cache', 'revit sync failed', 'revit relinquish conflict', 'revit bim 360 fix', 'revit worksharing monitor']
@@ -5912,7 +5912,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Systematic wizard for resolving Revit model warnings that degrade performance and cause model instability.',
     detailDesc: 'Revit warnings cleanup wizard. Covers: identifying warning types (Review Warnings dialog, Ideate BIMLink warning export, journal file warning count), common warning categories and fixes — unjoined geometry (use Join Geometry tool, check cut/join order), slightly off-axis lines (use Realign tool, check angle tolerance), room separation line issues (delete redundant separation lines, check room bounding), duplicate elements (use Select All Instances, delete duplicates), elements slightly out of plane (adjust elevation, check level offsets), and circular references in formulas (break formula chain, use intermediate parameters). Includes warning prioritization matrix and recommended model maintenance schedule.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['revit warnings cleanup', 'revit model health', 'revit warning fix', 'revit unjoined geometry', 'revit duplicate elements', 'revit model maintenance', 'revit warning review', 'revit performance warnings', 'revit model cleanup wizard', 'revit warning diagnostic']
@@ -5923,7 +5923,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Resolve DWG version mismatch errors, convert between AutoCAD versions, and ensure backward compatibility.',
     detailDesc: 'DWG version compatibility wizard. Covers: "drawing file was created by a newer version" error (identify DWG version via file header, use DWG TrueView for free conversion, batch convert via ScriptPro), DWGSAVEAS command for version downgrade (AutoCAD 2018 -> 2013/2010/2007/2004/2000/R14), compatibility issues when downgrading (new entities like associative arrays, dynamic blocks, parametric constraints may lose functionality), mixed-version project management (establish project DWG version standard, use Sheet Set Manager for consistent publishing), and third-party DWG file compatibility (BricsCAD, GStarCAD, ZWCAD version mapping). Includes DWG version number reference (AC1032=2018, AC1027=2013, AC1024=2010, etc.).',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dwg version compatibility', 'dwg version error', 'dwg convert to older version', 'autocad version mismatch', 'dwg trueview convert', 'dwgsaveas command', 'dwg version downgrade', 'dwg file version check', 'dwg batch convert', 'autocad backward compatibility']
@@ -5934,7 +5934,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Resolve SolidWorks installation failures, license activation errors, and FlexNet/SolidNetwork License Manager issues.',
     detailDesc: 'SolidWorks installation and license troubleshooting wizard. Covers: installation failure (check Windows updates, .NET Framework, Visual C++ prerequisites, antivirus interference, disk space), license activation error (check SolidNetWork License Manager service, verify serial number, check firewall for port 25734/25735, ping license server), "could not obtain license" error (verify license server availability, check SNL Manager port settings, check license borrowing expiration, verify MAC address binding), upgrade compatibility issues (check hardware certification, GPU driver compatibility, remove old version remnants via Windows Registry), and toolbox/standard library migration errors (relocate toolbox folder, update references, check hole wizard database). Includes clean uninstall procedure.',
     category: 'troubleshoot',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['solidworks installation error', 'solidworks license error', 'solidworks install troubleshooting', 'solidnetwork license manager', 'solidworks flexnet error', 'solidworks license server', 'solidworks activation error', 'solidworks could not obtain license', 'solidworks clean uninstall', 'solidworks install fix']
@@ -5948,7 +5948,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Drag-and-drop a DXF file to instantly view 2D geometry, layers, blocks, and text annotations entirely in your browser.',
     detailDesc: 'Client-side DXF viewer using dxf-parser and Canvas rendering. Supports DXF R12 through R2018 (ASCII and binary). Features: pan/zoom with mouse, layer visibility toggle, entity type filtering (LINE, CIRCLE, ARC, LWPOLYLINE, POLYLINE, INSERT, TEXT, MTEXT, DIMENSION, HATCH), block reference highlighting, measurement tool (distance, angle), bounding box display, and entity count per layer. Color-coded by layer with linetype visualization. No file upload — all parsing happens locally in the browser.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf viewer', 'online dxf viewer', 'dxf file viewer', 'view dxf online', 'dxf 2d viewer', 'dxf renderer', 'dxf layers viewer', 'dxf browser viewer', 'free dxf viewer', 'dxf drawing viewer']
@@ -5959,7 +5959,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'View STL mesh files in 3D with orbit controls, wireframe toggle, and mesh statistics — all client-side, no upload required.',
     detailDesc: 'Client-side STL viewer using Three.js. Supports both ASCII and binary STL formats. Features: orbit/pan/zoom camera controls, auto-center and auto-scale, wireframe/solid/shaded display modes, face normal visualization, mesh statistics (triangle count, vertex count, bounding box dimensions X/Y/Z, file size, manifold edge count), color-coded surface curvature, and screenshot export. Handles files up to 50MB. All processing in-browser via WebGL — no server upload.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['stl viewer', 'online stl viewer', 'stl 3d viewer', 'view stl online', 'stl mesh viewer', 'stl file viewer', 'stl renderer browser', '3d mesh viewer online', 'free stl viewer', 'stl visualizer']
@@ -5970,7 +5970,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'View OBJ 3D models with material textures (MTL), orbit controls, and multiple shading modes — fully in-browser.',
     detailDesc: 'Client-side OBJ viewer using Three.js OBJLoader and MTLLoader. Supports OBJ geometry with associated MTL material files and texture images. Features: orbit/pan/zoom, auto-rotate, shading modes (flat, smooth, wireframe, points), material transparency toggle, vertex/face/edge count display, bounding box, and model scale ruler. Handles multi-object OBJ files with group hierarchy display. All rendering via WebGL — no server upload.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['obj viewer', 'online obj viewer', 'obj 3d viewer', 'view obj online', 'obj model viewer', 'obj mtl viewer', 'obj file viewer', 'obj renderer browser', 'free obj viewer', 'obj visualizer']
@@ -5981,7 +5981,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Upload a G-Code file to visualize CNC toolpaths in 2D/3D with rapid/feed moves, spindle states, and cutting time estimation.',
     detailDesc: 'Client-side G-Code visualizer. Parses standard G-Code (Fanuc/Haas/LinuxCNC/GRBL compatible). Features: 2D top-down view and 3D isometric view, color-coded moves (G00 rapid=blue, G01 feed=green, G02/G03 arc=orange), tool change markers, spindle on/off indicators, coordinate system display (G54-G59), feed rate and spindle speed overlay, total cutting time estimation, rapid vs feed distance statistics, and line-by-line stepping with current position indicator. Supports incremental (G91) and absolute (G90) modes.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gcode viewer', 'gcode visualizer', 'cnc toolpath viewer', 'gcode simulator', 'gcode 3d viewer', 'cnc path visualizer', 'gcode online viewer', 'gcode renderer', 'cnc simulation online', 'gcode toolpath simulator']
@@ -5992,7 +5992,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Upload an STL file to preview slice layers, estimate print time, and visualize infill patterns in your browser.',
     detailDesc: 'Client-side 3D print slice previewer using Three.js. Loads STL mesh and simulates slicing with adjustable parameters: layer height (0.05-0.3mm), infill density (0-100%), infill pattern (grid, triangular, hexagonal, gyroid), nozzle diameter, print speed, and filament type. Visualizes: individual layer cross-sections, toolpath per layer, support structure generation for overhangs >45 degrees, and estimated print time per layer. Outputs: total layers, estimated print time, filament length/weight, and support volume. All computation in-browser.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['3d print previewer', 'stl slice preview', '3d printing slicer online', 'slice viewer stl', '3d print simulator', 'infill preview 3d print', 'layer preview 3d print', 'stl slicing visualization', '3d print time estimator', 'stl layer viewer']
@@ -6003,7 +6003,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'View, clean, and optimize SVG files — remove metadata, simplify paths, and reduce file size without quality loss.',
     detailDesc: 'Client-side SVG viewer and optimizer. Viewer features: render SVG with pan/zoom, layer/group tree display, element count and file size stats, and XML source view with syntax highlighting. Optimizer features (SVGO-based): remove editor metadata (Inkscape, Illustrator, Sketch namespaces), collapse groups, merge paths, convert shapes to paths, simplify path data (rounding precision), remove hidden elements (display:none, opacity:0), minify output, and convert styles to attributes. Shows before/after file size comparison and optimization ratio.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['svg viewer', 'svg optimizer', 'svg minifier', 'svg cleaner', 'svg compressor', 'svg online viewer', 'svg optimize online', 'svg file size reducer', 'svg path simplifier', 'svg editor metadata remover']
@@ -6014,7 +6014,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Inspect DXF file structure: browse layers, entity types, block definitions, and text content with searchable filtering.',
     detailDesc: 'Client-side DXF structure inspector. Parses DXF and presents: layer table (layer name, color, linetype, lineweight, plot flag, entity count per layer), entity summary (type distribution: LINE, CIRCLE, ARC, POLYLINE, INSERT, TEXT, etc. with count and bounding box), block definition table (block name, base point, entity count, nested block references), text/mtext content search (searchable list of all text entities with coordinates), and style/table dictionaries (DIMSTYLE, LTYPE, TEXTSTYLE entries). Includes DXF version detection and codepage identification.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf layer browser', 'dxf inspector', 'dxf structure viewer', 'dxf entity browser', 'dxf block viewer', 'dxf text search', 'dxf layer list', 'dxf metadata viewer', 'dxf analysis tool', 'dxf content viewer']
@@ -6025,7 +6025,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Extract and display header metadata, file structure, and entity statistics from STEP and IGES CAD files.',
     detailDesc: 'Client-side STEP/IGES metadata parser. For STEP files (ISO 10303): parses HEADER section (file_description, file_name, time_stamp, author, organization, originating_system, authorization), extracts ENTITY type distribution (cartesian_point, direction, axis2_placement_3d, advanced_face, edge_curve, vertex_point, etc.), counts total entities, and identifies geometric topology (open/closed shell, manifold solid_brep). For IGES files: parses Start Section, Global Section (delimiter, send/receive identifiers, author, software), Directory Entry Section (entity type counts), and Parameter Data Section summary. No geometry rendering — metadata only.',
     category: 'viewer',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['step file viewer', 'iges file viewer', 'step metadata viewer', 'iges metadata viewer', 'step header parser', 'iges header parser', 'step file inspector', 'iges file inspector', 'step entity viewer', 'iges entity viewer']
@@ -6039,7 +6039,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate spur gear tooth profiles with full involute geometry and export as DXF or SVG for laser cutting or CNC.',
     detailDesc: 'Client-side involute spur gear generator. Inputs: module (m, 0.5-10mm), number of teeth (z, 8-200), pressure angle (14.5/20/25 degrees), addendum coefficient, dedendum coefficient, profile shift coefficient (x), and center bore diameter. Calculates: pitch diameter, base diameter, outside diameter, root diameter, circular pitch, tooth thickness, and root fillet radius. Generates true involute tooth profile using parametric equations (x = rb*cos(t) + rb*t*sin(t), y = rb*sin(t) - rb*t*cos(t)). Outputs: DXF (R12) with LWPOLYLINE entities, SVG for laser cutting, and gear parameters summary. Supports internal (ring) gear and rack generation.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gear generator', 'involute gear generator', 'spur gear dxf', 'gear profile generator', 'gear cad generator', 'involute gear dxf', 'gear svg generator', 'laser cut gear generator', 'cnc gear generator', 'gear tooth profile generator']
@@ -6050,7 +6050,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate 2D drawing profiles for bolts, screws, nuts, and washers per ISO/DIN/ANSI standards — export as DXF or SVG.',
     detailDesc: 'Client-side fastener profile generator. Supports: hex bolts (ISO 4014/4017, DIN 933/931), socket head cap screws (ISO 4762, DIN 912), countersunk screws (ISO 10642), hex nuts (ISO 4032, DIN 934), washers (ISO 7089/7090, DIN 125), and spring washers (DIN 127). Inputs: thread size (M3-M48), thread pitch (standard or fine), bolt length, and drawing standard (first-angle/ third-angle projection). Generates: front view and top view with correct head/body proportions, thread representation (detailed or schematic), chamfer angles, and dimension lines. Outputs DXF and SVG with title block.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fastener profile generator', 'bolt drawing generator', 'nut profile generator', 'iso bolt cad generator', 'din fastener generator', 'screw 2d profile', 'washer drawing generator', 'fastener dxf generator', 'fastener svg generator', 'standard fastener cad']
@@ -6061,7 +6061,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate customizable engineering drawing frames and title blocks per ISO 5457, ANSI Y14.1, or custom templates — export as DXF or SVG.',
     detailDesc: 'Client-side drawing frame generator. Supports: ISO 5457 (A0-A4 portrait/landscape), ANSI Y14.1 (A-E sizes), ARCH (A-E architectural), and custom user-defined sizes. Title block fields: drawing title, drawing number, revision, date, drawn by, checked by, approved by, company name, project name, scale, sheet number, projection symbol (first/third angle), and units (mm/inch). Border options: margin width, zoning (alpha-numeric grid), trimming marks, and center marks. Logo placement support (SVG/PNG import). Outputs DXF (with TEXT and LWPOLYLINE entities) and SVG.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['title block generator', 'drawing frame generator', 'drawing border generator', 'iso 5457 template', 'ansi y14.1 template', 'cad title block dxf', 'drawing template generator', 'a0 a4 drawing frame', 'title block svg', 'engineering drawing border']
@@ -6072,7 +6072,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Extract block attributes from DXF files to generate a Bill of Materials (BOM) table exportable as CSV or JSON.',
     detailDesc: 'Client-side BOM extraction tool. Parses DXF files and extracts all INSERT entities with associated ATTRIB data. Features: auto-detect block names and attribute tags, group identical blocks and sum quantities, extract attribute values (part number, description, quantity, material, supplier, etc.), sort by block name or attribute value, filter by block name pattern, and display insertion coordinates. Outputs: CSV (compatible with Excel), JSON (structured), and HTML table preview. Handles nested block references and identifies missing attributes. Supports multiple DXF file batch processing.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf bom extractor', 'block attribute extractor', 'bom from dxf', 'bill of materials dxf', 'dxf attribute extraction', 'autocad bom extract', 'dxf data extraction', 'block data extractor', 'dxf insert attributes', 'cad bom generator']
@@ -6083,7 +6083,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate CNC G-Code for 2D profile cutting from DXF geometry with lead-in/lead-out, cutter compensation, and multiple passes.',
     detailDesc: 'Client-side 2D profile toolpath generator. Imports DXF geometry (LINE, ARC, CIRCLE, LWPOLYLINE) and generates CNC G-Code for profiling. Features: cutter diameter compensation (G41/G42 left/right), lead-in (arc or linear) and lead-out to prevent entry/exit marks, multiple depth passes with step-down, roughing and finishing passes, island detection and pocketing, tab/bridge insertion for part holding, feed rate optimization (reduced speed on corners), and spindle/coolant M-code integration. Outputs: G-Code compatible with Fanuc, Haas, LinuxCNC, and GRBL. Includes estimated cycle time and total cut length.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc toolpath generator', '2d profile gcode generator', 'dxf to gcode converter', 'cnc profile cutting', 'cutter compensation generator', 'lead in lead out cnc', 'cnc pocketing generator', 'dxf to nc code', 'cnc programming generator', '2d contour toolpath']
@@ -6094,7 +6094,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate 2D flat patterns for compression, extension, and torsion springs with full specification sheet — export as DXF or SVG.',
     detailDesc: 'Client-side spring flat pattern generator. Supports three spring types: Compression (inputs: wire diameter, outer diameter, free length, total coils, active coils, spring rate, material), Extension (inputs: wire diameter, outer diameter, hook type, free length, initial tension), and Torsion (inputs: wire diameter, coil diameter, arm length, arm angle, torque). Generates: 2D flat pattern showing coil geometry and end configurations, force-deflection diagram, stress analysis (Wahl factor, shear stress), and specification table (spring rate, solid height, natural frequency, buckling check). Outputs DXF and SVG with dimension lines and material specification.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['spring flat pattern generator', 'compression spring generator', 'extension spring generator', 'torsion spring generator', 'spring dxf generator', 'spring cad generator', 'spring design generator', 'spring svg generator', 'spring specification generator', 'spring drawing generator']
@@ -6105,7 +6105,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate cam profiles from motion curves (SHM, cycloidal, polynomial) with follower displacement, velocity, and acceleration diagrams.',
     detailDesc: 'Client-side cam profile generator. Inputs: cam type (disk/flat-face/roller follower), base circle radius, follower radius, rise angle, dwell angle, return angle, lift distance, and motion law (uniform, parabolic, simple harmonic, cycloidal, 3-4-5 polynomial, 4-5-6-7 polynomial). Generates: cam profile coordinates (pitch curve and working curve), follower displacement diagram (theta vs s), velocity diagram (theta vs v), acceleration diagram (theta vs a), and pressure angle distribution. Calculates: maximum pressure angle, undercut check, and cam-follower contact stress estimate. Outputs: DXF cam profile, SVG diagrams, and coordinate table (CSV).',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cam profile generator', 'cam design generator', 'cam displacement diagram', 'cam motion curve generator', 'cam dxf generator', 'cam follower generator', 'cam profile calculator', 'cam svg generator', 'cam pitch curve generator', 'cam design tool']
@@ -6119,7 +6119,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze STL files for printability issues: thin walls, overhangs, minimum features, bridging, and support requirements.',
     detailDesc: 'Client-side 3D print manufacturability analyzer. Loads STL mesh and performs geometric checks: minimum wall thickness (detect walls thinner than user-set threshold, default 0.8mm), overhang analysis (highlight faces exceeding 45 degrees from vertical, color-coded severity map), minimum feature size (detect posts, holes, and channels below threshold), bridging distance (identify unsupported horizontal spans and estimate sag risk), flat bed contact area (verify first layer adhesion surface), manifold check (identify holes, non-manifold edges, and reversed normals), and support volume estimation. Outputs: issue report with location markers on 3D model, pass/warn/fail summary, and recommended print orientation.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['3d print checker', 'stl manufacturability', '3d print analysis', 'stl overhang check', 'wall thickness checker', '3d print validation', 'stl printability check', '3d print issue detector', 'stl mesh analysis', '3d print quality check']
@@ -6130,7 +6130,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Check DXF drawings against company or industry standards: layer naming, linetype, dimension style, text height, and plot configuration.',
     detailDesc: 'Client-side DXF drawing standards validator. Configurable ruleset checks: layer naming convention (prefix-based, e.g. A-WALL, M-PIPE, E-LIGHT), layer color assignment per discipline, linetype usage (CONTINUOUS, DASHED, CENTER, PHANTOM), lineweight compliance, dimension style parameters (DIMSCALE, DIMTXT, DIMASZ, arrowhead type, text height), text style compliance (font, height, width factor), annotation layer separation, viewport scale consistency in paper space, and plot style table (CTB/STB) assignment. Outputs: compliance report with pass/warn/fail per rule, list of non-compliant entities with coordinates, and summary score. Supports custom ruleset import (JSON).',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf standards checker', 'drawing compliance checker', 'cad drawing validation', 'layer naming check', 'dimension style checker', 'drawing standards validator', 'dxf audit tool', 'cad quality check', 'drawing standards compliance', 'dxf quality assurance']
@@ -6141,7 +6141,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze DXF drawings for GD&T completeness: datum references, feature control frames, basic dimensions, and tolerance zones.',
     detailDesc: 'Client-side GD&T annotation validator. Parses DXF for GD&T entities (TOLERANCE, LEADER, MTEXT with GD&T symbols). Checks: datum feature symbols present and referenced (A, B, C hierarchy), feature control frame completeness (geometric characteristic, tolerance value, material condition modifier, datum references), basic dimensions identified and linked to true position/profile, datum target points/areas defined, and composite tolerance frame validity. Identifies: missing datums for position/profile tolerances, orphaned datum references (datum referenced but not defined), missing basic dimensions for true position, and inconsistent tolerance accumulation. Outputs: annotated issue list and completeness score.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gdt checker', 'gd&t completeness', 'gd&t annotation check', 'datum reference checker', 'feature control frame validator', 'gd&t drawing audit', 'geometric tolerance check', 'gd&t compliance', 'basic dimension check', 'gd&t validation tool']
@@ -6152,7 +6152,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze DXF geometry for CNC manufacturability: internal corner radii, deep pockets, tool access, and feature spacing.',
     detailDesc: 'Client-side CNC machinability validator. Parses DXF geometry and checks: internal corner radius (flag corners smaller than tool radius, default 3mm — creates impossible-to-machine sharp internal corners), pocket depth-to-width ratio (flag pockets with depth/diameter > 3 for standard tooling), tool access clearance (detect features blocked by adjacent walls or obstructions), minimum hole diameter (flag holes smaller than standard drill sizes), feature spacing (check minimum distance between features for tool clearance), thread tap clearance (verify adequate space for tap operation), and tolerance feasibility (check if specified tolerances are achievable with standard CNC equipment). Outputs: issue map overlay on drawing and manufacturability score.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc machinability checker', 'cnc design check', 'dfm cnc checker', 'cnc manufacturability', 'internal corner radius check', 'tool access checker', 'cnc feature check', 'design for manufacturing cnc', 'dxf machinability', 'cnc feasibility check']
@@ -6163,7 +6163,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze STL files for mesh errors: non-manifold edges, holes, reversed normals, self-intersections, and degenerate triangles.',
     detailDesc: 'Client-side STL mesh quality analyzer. Performs comprehensive mesh integrity checks: manifold validation (identifies non-manifold edges — edges shared by more or fewer than 2 faces), hole detection (identifies boundary edges forming open holes in the mesh), normal consistency (detects faces with reversed or inconsistent normal directions), self-intersection detection (identifies triangles that intersect other triangles), degenerate triangle detection (zero-area triangles, collapsed vertices), duplicate vertex cleanup (identifies and merges coincident vertices within tolerance), and aspect ratio analysis (flags skinny triangles with poor aspect ratio for FEM/3D print). Outputs: issue count per category, 3D visualization with problem areas highlighted, and repair recommendations.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['stl mesh checker', 'stl quality check', 'mesh integrity checker', 'non-manifold detection', 'stl repair check', 'mesh validation', 'stl error checker', 'mesh analysis tool', 'stl normal check', '3d mesh quality']
@@ -6174,7 +6174,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Verify that drawing scales are consistent across title block, viewport, dimensions, and annotation text in DXF files.',
     detailDesc: 'Client-side drawing scale consistency validator. Parses DXF and cross-checks: title block scale field (extracts declared scale from title block text), viewport scale (calculates actual viewport scale from paper space viewport ratio), dimension scale factor (checks DIMSCALE and DIMLFAC consistency), annotation text height (verifies text height matches declared scale, e.g. 3mm at 1:100 should be 300mm in model space), linetype scale (checks LTSCALE and CELTSCALE consistency), and hatch pattern scale. Identifies mismatches between any of these scale indicators and flags inconsistent annotations. Outputs: scale audit table with declared vs actual values and discrepancy warnings.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['drawing scale checker', 'scale consistency check', 'viewport scale check', 'dimscale check', 'annotation scale check', 'drawing scale audit', 'cad scale verification', 'title block scale check', 'dimension scale consistency', 'drawing scale validator']
@@ -6188,7 +6188,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two BOM files (CSV/JSON) and highlight added, removed, modified, and quantity-changed items.',
     detailDesc: 'Client-side BOM comparison tool. Accepts two BOM files (CSV or JSON format) and performs intelligent diff. Matching logic: part number primary key, with fallback to description + specification matching. Identifies: added items (in new BOM but not old), removed items (in old BOM but not new), modified items (same part number but changed description/spec/material), quantity changes (same part, different quantity), and supplier changes. Outputs: side-by-side comparison table with color-coded differences (green=added, red=removed, yellow=modified, blue=quantity change), summary statistics (total changes by type), and exportable diff report (CSV/HTML). Handles multi-level indented BOMs with parent-child relationships.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bom comparator', 'bom diff tool', 'bill of materials comparison', 'bom comparison tool', 'bom change tracker', 'bom difference checker', 'bom revision compare', 'bom version diff', 'bom analysis tool', 'bom merge tool']
@@ -6199,7 +6199,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two G-Code files line-by-line with toolpath difference visualization and parameter change detection.',
     detailDesc: 'Client-side G-Code comparison tool. Accepts two G-Code files and performs: line-by-line text diff (added/removed/modified lines with syntax highlighting), toolpath difference visualization (overlay both toolpaths in 2D/3D with color-coded differences), parameter change detection (feed rate, spindle speed, tool changes, coordinate shifts), and program structure comparison (subprogram calls, loop counts, canned cycle parameters). Outputs: unified diff view with G-Code syntax highlighting, toolpath overlay visualization, summary of changed parameters, and estimated cycle time difference. Supports Fanuc, Haas, and LinuxCNC dialects.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gcode diff', 'gcode comparison', 'cnc program compare', 'gcode comparator', 'nc code diff', 'cnc toolpath diff', 'gcode difference tool', 'gcode version compare', 'cnc program diff', 'gcode change checker']
@@ -6210,7 +6210,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two DXF drawings and highlight geometric differences: added, removed, and modified entities with visual overlay.',
     detailDesc: 'Client-side DXF geometry comparison tool. Parses two DXF files and performs geometric entity matching. Matching logic: entity type + geometric proximity (tolerance-based coordinate matching). Identifies: added entities (in new but not old, shown in green), removed entities (in old but not new, shown in red), moved entities (same type, position changed beyond tolerance, shown with before/after arrows), modified entities (same position but geometry changed, e.g. radius changed, shown in yellow), and layer differences (layer added/removed/renamed). Outputs: visual overlay comparison in Canvas viewer with toggle between old/new/both/diff modes, entity-level change list with coordinates, and summary statistics.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf diff', 'dxf comparison', 'cad drawing compare', 'dxf geometry diff', 'drawing version compare', 'cad file diff', 'dxf change tracker', 'drawing difference tool', 'dxf revision compare', 'cad drawing diff tool']
@@ -6224,7 +6224,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable database of 200+ engineering materials with mechanical, thermal, and electrical properties.',
     detailDesc: 'Client-side material properties database. Covers 200+ materials across categories: metals (steel grades, aluminum alloys, copper, titanium, nickel, magnesium), polymers (ABS, PC, PTFE, PVC, Nylon, PEEK), ceramics (alumina, zirconia, silicon carbide), composites (CFRP, GFRP), and woods. Properties per material: density, Young modulus, Poisson ratio, yield strength, tensile strength, elongation, hardness (Brinell/Rockwell/Vickers), thermal conductivity, thermal expansion coefficient, specific heat, electrical conductivity, and melting point. Features: search by name/grade, filter by property range, comparison table (select up to 4 materials side-by-side), and export to CSV. Data sourced from ASM Handbook, MatWeb, and manufacturer datasheets.',
     category: 'library',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['material properties database', 'material database', 'engineering materials', 'metal properties search', 'steel properties database', 'aluminum properties', 'material comparison', 'material selector', 'mechanical properties database', 'material data search']
@@ -6235,7 +6235,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable library of ISO, DIN, ANSI, and JIS fastener specifications: bolts, screws, nuts, washers, pins, and rivets.',
     detailDesc: 'Client-side fastener specification library. Covers standards: ISO (4014, 4017, 4762, 7089, 7090, 10642), DIN (931, 933, 912, 934, 125, 127), ANSI/ASME (B18.2.1, B18.2.2, B18.3), and JIS (B 1180, B 1182). Fastener types: hex bolts, socket head cap screws, countersunk screws, hex nuts, lock nuts, flat washers, spring washers, dowel pins, cotter pins, and pop rivets. For each fastener: thread size (M3-M48 / #0-1"), pitch, head diameter, head height, body diameter, wrench size, weight, tensile stress area, and recommended torque values per property class. Features: search by standard/size/type, dimensional drawing preview, torque calculator integration, and export to CSV.',
     category: 'library',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fastener specification library', 'bolt specification database', 'iso din fastener specs', 'standard fastener lookup', 'fastener dimensions', 'bolt torque specs', 'nut specification', 'washer specification', 'fastener data library', 'fastener reference library']
@@ -6246,7 +6246,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate 2D drawing profiles for bolts, screws, nuts, and washers per ISO/DIN/ANSI standards — export as DXF or SVG.',
     detailDesc: 'Client-side fastener profile generator. Supports: hex bolts (ISO 4014/4017, DIN 933/931), socket head cap screws (ISO 4762, DIN 912), countersunk screws (ISO 10642), hex nuts (ISO 4032, DIN 934), washers (ISO 7089/7090, DIN 125), and spring washers (DIN 127). Inputs: thread size (M3-M48), thread pitch (standard or fine), bolt length, and drawing standard (first-angle/ third-angle projection). Generates: front view and top view with correct head/body proportions, thread representation (detailed or schematic), chamfer angles, and dimension lines. Outputs DXF and SVG with title block.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fastener profile generator', 'bolt drawing generator', 'nut profile generator', 'iso bolt cad generator', 'din fastener generator', 'screw 2d profile', 'washer drawing generator', 'fastener dxf generator', 'fastener svg generator', 'standard fastener cad']
@@ -6257,7 +6257,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate customizable engineering drawing frames and title blocks per ISO 5457, ANSI Y14.1, or custom templates — export as DXF or SVG.',
     detailDesc: 'Client-side drawing frame generator. Supports: ISO 5457 (A0-A4 portrait/landscape), ANSI Y14.1 (A-E sizes), ARCH (A-E architectural), and custom user-defined sizes. Title block fields: drawing title, drawing number, revision, date, drawn by, checked by, approved by, company name, project name, scale, sheet number, projection symbol (first/third angle), and units (mm/inch). Border options: margin width, zoning (alpha-numeric grid), trimming marks, and center marks. Logo placement support (SVG/PNG import). Outputs DXF (with TEXT and LWPOLYLINE entities) and SVG.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['title block generator', 'drawing frame generator', 'drawing border generator', 'iso 5457 template', 'ansi y14.1 template', 'cad title block dxf', 'drawing template generator', 'a0 a4 drawing frame', 'title block svg', 'engineering drawing border']
@@ -6268,7 +6268,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Extract block attributes from DXF files to generate a Bill of Materials (BOM) table exportable as CSV or JSON.',
     detailDesc: 'Client-side BOM extraction tool. Parses DXF files and extracts all INSERT entities with associated ATTRIB data. Features: auto-detect block names and attribute tags, group identical blocks and sum quantities, extract attribute values (part number, description, quantity, material, supplier, etc.), sort by block name or attribute value, filter by block name pattern, and display insertion coordinates. Outputs: CSV (compatible with Excel), JSON (structured), and HTML table preview. Handles nested block references and identifies missing attributes. Supports multiple DXF file batch processing.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf bom extractor', 'block attribute extractor', 'bom from dxf', 'bill of materials dxf', 'dxf attribute extraction', 'autocad bom extract', 'dxf data extraction', 'block data extractor', 'dxf insert attributes', 'cad bom generator']
@@ -6279,7 +6279,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate CNC G-Code for 2D profile cutting from DXF geometry with lead-in/lead-out, cutter compensation, and multiple passes.',
     detailDesc: 'Client-side 2D profile toolpath generator. Imports DXF geometry (LINE, ARC, CIRCLE, LWPOLYLINE) and generates CNC G-Code for profiling. Features: cutter diameter compensation (G41/G42 left/right), lead-in (arc or linear) and lead-out to prevent entry/exit marks, multiple depth passes with step-down, roughing and finishing passes, island detection and pocketing, tab/bridge insertion for part holding, feed rate optimization (reduced speed on corners), and spindle/coolant M-code integration. Outputs: G-Code compatible with Fanuc, Haas, LinuxCNC, and GRBL. Includes estimated cycle time and total cut length.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc toolpath generator', '2d profile gcode generator', 'dxf to gcode converter', 'cnc profile cutting', 'cutter compensation generator', 'lead in lead out cnc', 'cnc pocketing generator', 'dxf to nc code', 'cnc programming generator', '2d contour toolpath']
@@ -6290,7 +6290,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate 2D flat patterns for compression, extension, and torsion springs with full specification sheet — export as DXF or SVG.',
     detailDesc: 'Client-side spring flat pattern generator. Supports three spring types: Compression (inputs: wire diameter, outer diameter, free length, total coils, active coils, spring rate, material), Extension (inputs: wire diameter, outer diameter, hook type, free length, initial tension), and Torsion (inputs: wire diameter, coil diameter, arm length, arm angle, torque). Generates: 2D flat pattern showing coil geometry and end configurations, force-deflection diagram, stress analysis (Wahl factor, shear stress), and specification table (spring rate, solid height, natural frequency, buckling check). Outputs DXF and SVG with dimension lines and material specification.',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['spring flat pattern generator', 'compression spring generator', 'extension spring generator', 'torsion spring generator', 'spring dxf generator', 'spring cad generator', 'spring design generator', 'spring svg generator', 'spring specification generator', 'spring drawing generator']
@@ -6301,7 +6301,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Generate cam profiles from motion curves (SHM, cycloidal, polynomial) with follower displacement, velocity, and acceleration diagrams.',
     detailDesc: 'Client-side cam profile generator. Inputs: cam type (disk/flat-face/roller follower), base circle radius, follower radius, rise angle, dwell angle, return angle, lift distance, and motion law (uniform, parabolic, simple harmonic, cycloidal, 3-4-5 polynomial, 4-5-6-7 polynomial). Generates: cam profile coordinates (pitch curve and working curve), follower displacement diagram (theta vs s), velocity diagram (theta vs v), acceleration diagram (theta vs a), and pressure angle distribution. Calculates: maximum pressure angle, undercut check, and cam-follower contact stress estimate. Outputs: DXF cam profile, SVG diagrams, and coordinate table (CSV).',
     category: 'generator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cam profile generator', 'cam design generator', 'cam displacement diagram', 'cam motion curve generator', 'cam dxf generator', 'cam follower generator', 'cam profile calculator', 'cam svg generator', 'cam pitch curve generator', 'cam design tool']
@@ -6315,7 +6315,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze STL files for printability issues: thin walls, overhangs, minimum features, bridging, and support requirements.',
     detailDesc: 'Client-side 3D print manufacturability analyzer. Loads STL mesh and performs geometric checks: minimum wall thickness (detect walls thinner than user-set threshold, default 0.8mm), overhang analysis (highlight faces exceeding 45 degrees from vertical, color-coded severity map), minimum feature size (detect posts, holes, and channels below threshold), bridging distance (identify unsupported horizontal spans and estimate sag risk), flat bed contact area (verify first layer adhesion surface), manifold check (identify holes, non-manifold edges, and reversed normals), and support volume estimation. Outputs: issue report with location markers on 3D model, pass/warn/fail summary, and recommended print orientation.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['3d print checker', 'stl manufacturability', '3d print analysis', 'stl overhang check', 'wall thickness checker', '3d print validation', 'stl printability check', '3d print issue detector', 'stl mesh analysis', '3d print quality check']
@@ -6326,7 +6326,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Check DXF drawings against company or industry standards: layer naming, linetype, dimension style, text height, and plot configuration.',
     detailDesc: 'Client-side DXF drawing standards validator. Configurable ruleset checks: layer naming convention (prefix-based, e.g. A-WALL, M-PIPE, E-LIGHT), layer color assignment per discipline, linetype usage (CONTINUOUS, DASHED, CENTER, PHANTOM), lineweight compliance, dimension style parameters (DIMSCALE, DIMTXT, DIMASZ, arrowhead type, text height), text style compliance (font, height, width factor), annotation layer separation, viewport scale consistency in paper space, and plot style table (CTB/STB) assignment. Outputs: compliance report with pass/warn/fail per rule, list of non-compliant entities with coordinates, and summary score. Supports custom ruleset import (JSON).',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf standards checker', 'drawing compliance checker', 'cad drawing validation', 'layer naming check', 'dimension style checker', 'drawing standards validator', 'dxf audit tool', 'cad quality check', 'drawing standards compliance', 'dxf quality assurance']
@@ -6337,7 +6337,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze DXF drawings for GD&T completeness: datum references, feature control frames, basic dimensions, and tolerance zones.',
     detailDesc: 'Client-side GD&T annotation validator. Parses DXF for GD&T entities (TOLERANCE, LEADER, MTEXT with GD&T symbols). Checks: datum feature symbols present and referenced (A, B, C hierarchy), feature control frame completeness (geometric characteristic, tolerance value, material condition modifier, datum references), basic dimensions identified and linked to true position/profile, datum target points/areas defined, and composite tolerance frame validity. Identifies: missing datums for position/profile tolerances, orphaned datum references (datum referenced but not defined), missing basic dimensions for true position, and inconsistent tolerance accumulation. Outputs: annotated issue list and completeness score.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gdt checker', 'gd&t completeness', 'gd&t annotation check', 'datum reference checker', 'feature control frame validator', 'gd&t drawing audit', 'geometric tolerance check', 'gd&t compliance', 'basic dimension check', 'gd&t validation tool']
@@ -6348,7 +6348,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze DXF geometry for CNC manufacturability: internal corner radii, deep pockets, tool access, and feature spacing.',
     detailDesc: 'Client-side CNC machinability validator. Parses DXF geometry and checks: internal corner radius (flag corners smaller than tool radius, default 3mm — creates impossible-to-machine sharp internal corners), pocket depth-to-width ratio (flag pockets with depth/diameter > 3 for standard tooling), tool access clearance (detect features blocked by adjacent walls or obstructions), minimum hole diameter (flag holes smaller than standard drill sizes), feature spacing (check minimum distance between features for tool clearance), thread tap clearance (verify adequate space for tap operation), and tolerance feasibility (check if specified tolerances are achievable with standard CNC equipment). Outputs: issue map overlay on drawing and manufacturability score.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cnc machinability checker', 'cnc design check', 'dfm cnc checker', 'cnc manufacturability', 'internal corner radius check', 'tool access checker', 'cnc feature check', 'design for manufacturing cnc', 'dxf machinability', 'cnc feasibility check']
@@ -6359,7 +6359,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Analyze STL files for mesh errors: non-manifold edges, holes, reversed normals, self-intersections, and degenerate triangles.',
     detailDesc: 'Client-side STL mesh quality analyzer. Performs comprehensive mesh integrity checks: manifold validation (identifies non-manifold edges — edges shared by more or fewer than 2 faces), hole detection (identifies boundary edges forming open holes in the mesh), normal consistency (detects faces with reversed or inconsistent normal directions), self-intersection detection (identifies triangles that intersect other triangles), degenerate triangle detection (zero-area triangles, collapsed vertices), duplicate vertex cleanup (identifies and merges coincident vertices within tolerance), and aspect ratio analysis (flags skinny triangles with poor aspect ratio for FEM/3D print). Outputs: issue count per category, 3D visualization with problem areas highlighted, and repair recommendations.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['stl mesh checker', 'stl quality check', 'mesh integrity checker', 'non-manifold detection', 'stl repair check', 'mesh validation', 'stl error checker', 'mesh analysis tool', 'stl normal check', '3d mesh quality']
@@ -6370,7 +6370,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Verify that drawing scales are consistent across title block, viewport, dimensions, and annotation text in DXF files.',
     detailDesc: 'Client-side drawing scale consistency validator. Parses DXF and cross-checks: title block scale field (extracts declared scale from title block text), viewport scale (calculates actual viewport scale from paper space viewport ratio), dimension scale factor (checks DIMSCALE and DIMLFAC consistency), annotation text height (verifies text height matches declared scale, e.g. 3mm at 1:100 should be 300mm in model space), linetype scale (checks LTSCALE and CELTSCALE consistency), and hatch pattern scale. Identifies mismatches between any of these scale indicators and flags inconsistent annotations. Outputs: scale audit table with declared vs actual values and discrepancy warnings.',
     category: 'validator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['drawing scale checker', 'scale consistency check', 'viewport scale check', 'dimscale check', 'annotation scale check', 'drawing scale audit', 'cad scale verification', 'title block scale check', 'dimension scale consistency', 'drawing scale validator']
@@ -6384,7 +6384,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two BOM files (CSV/JSON) and highlight added, removed, modified, and quantity-changed items.',
     detailDesc: 'Client-side BOM comparison tool. Accepts two BOM files (CSV or JSON format) and performs intelligent diff. Matching logic: part number primary key, with fallback to description + specification matching. Identifies: added items (in new BOM but not old), removed items (in old BOM but not new), modified items (same part number but changed description/spec/material), quantity changes (same part, different quantity), and supplier changes. Outputs: side-by-side comparison table with color-coded differences (green=added, red=removed, yellow=modified, blue=quantity change), summary statistics (total changes by type), and exportable diff report (CSV/HTML). Handles multi-level indented BOMs with parent-child relationships.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['bom comparator', 'bom diff tool', 'bill of materials comparison', 'bom comparison tool', 'bom change tracker', 'bom difference checker', 'bom revision compare', 'bom version diff', 'bom analysis tool', 'bom merge tool']
@@ -6395,7 +6395,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two G-Code files line-by-line with toolpath difference visualization and parameter change detection.',
     detailDesc: 'Client-side G-Code comparison tool. Accepts two G-Code files and performs: line-by-line text diff (added/removed/modified lines with syntax highlighting), toolpath difference visualization (overlay both toolpaths in 2D/3D with color-coded differences), parameter change detection (feed rate, spindle speed, tool changes, coordinate shifts), and program structure comparison (subprogram calls, loop counts, canned cycle parameters). Outputs: unified diff view with G-Code syntax highlighting, toolpath overlay visualization, summary of changed parameters, and estimated cycle time difference. Supports Fanuc, Haas, and LinuxCNC dialects.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['gcode diff', 'gcode comparison', 'cnc program compare', 'gcode comparator', 'nc code diff', 'cnc toolpath diff', 'gcode difference tool', 'gcode version compare', 'cnc program diff', 'gcode change checker']
@@ -6406,7 +6406,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Compare two DXF drawings and highlight geometric differences: added, removed, and modified entities with visual overlay.',
     detailDesc: 'Client-side DXF geometry comparison tool. Parses two DXF files and performs geometric entity matching. Matching logic: entity type + geometric proximity (tolerance-based coordinate matching). Identifies: added entities (in new but not old, shown in green), removed entities (in old but not new, shown in red), moved entities (same type, position changed beyond tolerance, shown with before/after arrows), modified entities (same position but geometry changed, e.g. radius changed, shown in yellow), and layer differences (layer added/removed/renamed). Outputs: visual overlay comparison in Canvas viewer with toggle between old/new/both/diff modes, entity-level change list with coordinates, and summary statistics.',
     category: 'comparator',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['dxf diff', 'dxf comparison', 'cad drawing compare', 'dxf geometry diff', 'drawing version compare', 'cad file diff', 'dxf change tracker', 'drawing difference tool', 'dxf revision compare', 'cad drawing diff tool']
@@ -6420,7 +6420,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable database of 200+ engineering materials with mechanical, thermal, and electrical properties.',
     detailDesc: 'Client-side material properties database. Covers 200+ materials across categories: metals (steel grades, aluminum alloys, copper, titanium, nickel, magnesium), polymers (ABS, PC, PTFE, PVC, Nylon, PEEK), ceramics (alumina, zirconia, silicon carbide), composites (CFRP, GFRP), and woods. Properties per material: density, Young modulus, Poisson ratio, yield strength, tensile strength, elongation, hardness (Brinell/Rockwell/Vickers), thermal conductivity, thermal expansion coefficient, specific heat, electrical conductivity, and melting point. Features: search by name/grade, filter by property range, comparison table (select up to 4 materials side-by-side), and export to CSV. Data sourced from ASM Handbook, MatWeb, and manufacturer datasheets.',
     category: 'library',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['material properties database', 'material database', 'engineering materials', 'metal properties search', 'steel properties database', 'aluminum properties', 'material comparison', 'material selector', 'mechanical properties database', 'material data search']
@@ -6431,7 +6431,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Searchable library of ISO, DIN, ANSI, and JIS fastener specifications: bolts, screws, nuts, washers, pins, and rivets.',
     detailDesc: 'Client-side fastener specification library. Covers standards: ISO (4014, 4017, 4762, 7089, 7090, 10642), DIN (931, 933, 912, 934, 125, 127), ANSI/ASME (B18.2.1, B18.2.2, B18.3), and JIS (B 1180, B 1182). Fastener types: hex bolts, socket head cap screws, countersunk screws, hex nuts, lock nuts, flat washers, spring washers, dowel pins, cotter pins, and pop rivets. For each fastener: thread size (M3-M48 / #0-1"), pitch, head diameter, head height, body diameter, wrench size, weight, tensile stress area, and recommended torque values per property class. Features: search by standard/size/type, dimensional drawing preview, torque calculator integration, and export to CSV.',
     category: 'library',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['fastener specification library', 'bolt specification database', 'iso din fastener specs', 'standard fastener lookup', 'fastener dimensions', 'bolt torque specs', 'nut specification', 'washer specification', 'fastener data library', 'fastener reference library']
@@ -6442,7 +6442,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Browseable library of 500+ common engineering symbols as downloadable SVG and DXF: electrical, hydraulic, pneumatic, and architectural.',
     detailDesc: 'Client-side CAD symbol library with 500+ pre-drawn symbols. Categories: Electrical (IEC 60617 symbols — resistors, capacitors, inductors, diodes, transistors, switches, relays, motors, transformers, grounds), Hydraulic (ISO 1219 symbols — pumps, motors, cylinders, valves, accumulators, filters, pressure gauges), Pneumatic (ISO 1219 pneumatic symbols — air compressors, FRL units, directional valves, cylinders, flow controls), Piping (valves, fittings, flanges per ISO 14617), and Architectural (doors, windows, stairs, furniture, appliances, sanitary fixtures per ISO 4157). Each symbol: preview SVG, download as DXF or SVG, metadata (symbol ID, standard reference, description), and insert scale guidance. Search by name or standard number.',
     category: 'library',
-    status: 'released',
+    status: 'coming-soon',
     releasedDate: '2026-08-09',
     origin: 'native',
     keywords: ['cad symbol library', 'cad block library', 'engineering symbols', 'electrical symbols dxf', 'hydraulic symbols svg', 'pneumatic symbols', 'architectural symbols cad', 'iso symbol library', 'iec 60617 symbols', 'cad blocks download']
@@ -6454,7 +6454,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert CAD STEP/STP solid models to clean, watertight STL polygonal meshes for 3D printing (Bambu Studio, Cura, PrusaSlicer). Compare cloud & offline tools.',
     detailDesc: 'Engineers frequently download high-precision STEP models from suppliers or GrabCAD, but modern 3D printer slicers (Bambu Studio, PrusaSlicer, Cura) require triangular meshes. Free public cloud converters often produce rough polygonal facets on circular holes or generate broken, non-manifold edges that crash the slicer.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to stl', 'convert step to stl', 'step-to-stl', '3d cad converter', 'mesh converter']
@@ -6465,7 +6465,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert STEP CAD assemblies to the modern 3MF format. Preserve multi-body parts, color assignments, and precise units for Bambu Lab and Prusa 3D printers.',
     detailDesc: 'Traditional STL files flatten multi-part CAD assemblies into a single monolithic mesh, discarding all color definitions and requiring painful manual splitting in the slicer. Converting STEP to 3MF retains separate body hierarchies and material IDs for effortless multi-color 3D printing on Bambu AMS and Prusa MMU setups.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to 3mf', 'convert step to 3mf', 'step-to-3mf', '3d cad converter', 'mesh converter']
@@ -6476,7 +6476,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert native Dassault SolidWorks SLDPRT part files to watertight STL meshes for 3D printing. No SolidWorks license required.',
     detailDesc: 'Non-SolidWorks users (makers, machine shop operators, procurement specialists) who receive raw .sldprt files cannot open or slice them without purchasing expensive CAD seat licenses. A reliable conversion workflow transforms proprietary SolidWorks parts into sliced STL meshes in seconds.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['sldprt to stl', 'convert sldprt to stl', 'sldprt-to-stl', '3d cad converter', 'mesh converter']
@@ -6487,7 +6487,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SolidWorks SLDPRT parts and multi-body weldments to 3MF for multi-material 3D printing on Bambu Lab, Prusa, and Voron printers.',
     detailDesc: 'SolidWorks designs often feature multi-body parts (such as co-molded rubber grips, gaskets, or two-tone housings). Exporting to legacy STL collapses these bodies into a single solid, making it impossible to assign different filaments in Bambu Studio. Converting directly to 3MF preserves every body as an individual printable object.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['sldprt to 3mf', 'convert sldprt to 3mf', 'sldprt-to-3mf', '3d cad converter', 'mesh converter']
@@ -6498,7 +6498,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert McNeel Rhino 3DM double-precision NURBS surfaces to ultra-fine watertight STL meshes for jewelry, dental, and high-precision SLA 3D printing.',
     detailDesc: 'Jewelry designers, dental technicians, and industrial sculptors create organic, double-curved surfaces in Rhino 3D. When transferring .3dm files to casting bureaus or resin 3D printers, raw NURBS geometry must be converted into ultra-dense, 100% closed (watertight) STL meshes without surface tears or open naked edges.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['3dm to stl', 'convert 3dm to stl', 'rhino-3dm-to-stl', '3d cad converter', 'mesh converter']
@@ -6509,7 +6509,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Autodesk Inventor IPT part files to clean, watertight STL meshes for 3D printing. No Autodesk Inventor license required.',
     detailDesc: 'Autodesk Inventor users frequently collaborate with external suppliers, prototype makers, and 3D printing operators who do not possess expensive Autodesk Product Design Collection licenses. Converting .ipt parts to high-resolution STL files ensures fast manufacturing handoffs.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['ipt to stl', 'convert ipt to stl', 'ipt-to-stl', '3d cad converter', 'mesh converter']
@@ -6520,7 +6520,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Wavefront OBJ polygonal models to clean, manifold STL meshes for 3D printing slicing. Repair inverted normals, fill holes, and strip textures.',
     detailDesc: 'Sculpted character models, anime figurines, and architectural mockups downloaded from sites like Thingiverse or Sketchfab are commonly distributed as Wavefront .obj files. Many OBJ files contain quad polygons, detached boundary vertices, and open seams that crash 3D printer slicing engines.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['obj to stl', 'convert obj to stl', 'obj-to-stl', '3d cad converter', 'mesh converter']
@@ -6531,7 +6531,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert textured Wavefront OBJ models with MTL sidecars into modern 3MF packages. Retain full-color vertex textures for Bambu Lab AMS and multi-extruder 3D printing.',
     detailDesc: 'Traditional 3D scans and sculpted models use OBJ + MTL + PNG texture maps. When preparing these models for multi-color 3D printing (Bambu AMS, Prusa MMU, full-color inkjet), converting to 3MF bundles all textures and geometries into a single, self-contained, watertight container ready for slicing.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['obj to 3mf', 'convert obj to 3mf', 'obj-to-3mf', '3d cad converter', 'mesh converter']
@@ -6542,7 +6542,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert native SolidWorks SLDPRT parts to universal STEP (AP214/AP242) solid B-Rep models for CNC machining, mold design, and cross-CAD collaboration.',
     detailDesc: 'SolidWorks is the dominant MCAD tool for consumer products and machinery, but CNC machine shops, mold tooling specialists, and automotive Tier 1 suppliers frequently use Mastercam, Siemens NX, or CATIA. Furthermore, newer SolidWorks files cannot be opened in older SolidWorks editions. Converting SLDPRT to universal STEP bridges this gap with 100% geometric fidelity.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['sldprt to step', 'convert sldprt to step', 'sldprt-to-step', '3d cad converter', 'mesh converter']
@@ -6553,7 +6553,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SolidWorks SLDPRT parts to Parasolid X_T text format. Zero translation loss across Siemens NX, Mastercam, Onshape, and Parasolid-based tools.',
     detailDesc: 'SolidWorks uses the Siemens Parasolid geometric modeling kernel as its core mathematical engine. When transferring data to CAM systems (Mastercam, hyperMILL) or other Parasolid-based CAD systems (Siemens NX, Solid Edge, Onshape), converting to STEP incurs a slight format translation penalty. Exporting directly to Parasolid .x_t provides 100% mathematically identical geometry with zero surface edge drift.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['sldprt to parasolid', 'convert sldprt to parasolid', 'sldprt-to-parasolid-xt', '3d cad converter', 'mesh converter']
@@ -6564,7 +6564,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Dassault CATIA V5/V6 CATPart files to universal STEP solid models. Interoperate with SolidWorks, Siemens NX, Inventor, and Mastercam.',
     detailDesc: 'Aerospace primes (Boeing, Airbus) and automotive OEMs (Tesla, BYD) mandate CATIA for vehicle body design. However, Tier 2 and Tier 3 machining shops typically run SolidWorks or Mastercam. CATIA licenses cost tens of thousands of dollars per seat. Online conversion from CATPart to STEP unlocks multi-tier manufacturing collaboration at minimal cost.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['catpart to step', 'convert catpart to step', 'catpart-to-step', '3d cad converter', 'mesh converter']
@@ -6575,7 +6575,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert CATIA V5/V6 CATPart files into Parasolid X_T text files for direct import into Mastercam, Siemens NX, SolidWorks, and CAM toolpath generators.',
     detailDesc: 'Machinists receiving CATIA CATPart files from automotive or aerospace clients frequently program CNC toolpaths in Mastercam or SolidWorks CAM. Mastercam runs on the Siemens Parasolid engine. Converting CATPart to Parasolid .x_t eliminates translation hiccups, producing clean solid bodies ready for 5-axis toolpathing.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['catpart to parasolid', 'convert catpart to parasolid', 'catpart-to-parasolid-xt', '3d cad converter', 'mesh converter']
@@ -6586,7 +6586,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert native Siemens NX PRT part files to universal STEP solid models. Interoperate seamlessly with SolidWorks, CATIA, Inventor, and Mastercam.',
     detailDesc: 'Siemens NX is the backbone of aerospace turbines, automotive powertrains, and high-end manufacturing. However, machine shops and component suppliers frequently use SolidWorks, Inventor, or Mastercam. When an external partner cannot open raw .prt files due to license costs or NX version mismatches, converting to STEP ensures smooth manufacturing workflows.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['nx to step', 'convert nx to step', 'nx-prt-to-step', '3d cad converter', 'mesh converter']
@@ -6597,7 +6597,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert native PTC Creo and Pro/ENGINEER PRT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, NX, and Inventor.',
     detailDesc: 'PTC Creo (formerly Pro/ENGINEER) is widely used by consumer electronics and heavy industrial manufacturers. However, when sharing 3D part files with tooling vendors or machining contractors running SolidWorks or Mastercam, raw .prt files fail to open. Converting Creo parts to STEP provides a universal, mathematically exact solid model ready for production.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['creo to step', 'convert creo to step', 'creo-prt-to-step', '3d cad converter', 'mesh converter']
@@ -6608,7 +6608,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Autodesk Inventor IPT part models to universal STEP solid B-Rep format. Interoperate with SolidWorks, CATIA, Siemens NX, and Mastercam.',
     detailDesc: 'Autodesk Inventor is widely used across industrial equipment and mechanical engineering. However, machine shops programming CNC toolpaths in Mastercam or suppliers designing tooling in SolidWorks cannot directly edit native .ipt files without translation. Converting Inventor parts to universal STEP eliminates software barriers while retaining exact mathematical solid precision.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['ipt to step', 'convert ipt to step', 'ipt-to-step', '3d cad converter', 'mesh converter']
@@ -6619,7 +6619,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert legacy IGES (.igs) surface models to modern watertight STEP solid B-Rep format. Sew trimmed surfaces, fix edge gaps, and prepare models for CNC CAM.',
     detailDesc: 'IGES (Initial Graphics Exchange Specification) is a 1980s legacy format that stores 3D models as disconnected trimmed surface sheets rather than solid bodies. When importing vintage IGES files into modern CAD/CAM software (SolidWorks, NX, Mastercam), models frequently open as hollow, broken surface quilts that cannot be modified or machined. Converting IGES to STEP stitches open surface boundaries into a true watertight solid.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['iges to step', 'convert iges to step', 'iges-to-step', '3d cad converter', 'mesh converter']
@@ -6630,7 +6630,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert modern STEP solid B-Rep files to IGES surface format for legacy CNC controllers, EDM wire cutting, and older CAM software.',
     detailDesc: 'While STEP is the modern standard, many legacy wire EDM machines, vintage CMM inspection arms, and older CNC CAM software packages (running on Windows XP/7 or proprietary controllers) cannot parse STEP AP242 files. Converting STEP models to standardized IGES trimmed surfaces ensures 100% toolpath generation on legacy factory hardware.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to iges', 'convert step to iges', 'step-to-iges', '3d cad converter', 'mesh converter']
@@ -6641,7 +6641,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert heavy CAD STEP/STP solid models into lightweight, compressed binary GLB files for Three.js, WebGL eCommerce showrooms, and mobile AR viewers.',
     detailDesc: 'Industrial machinery models in STEP format often exceed 500MB, containing thousands of internal bolts, washers, and micro-fillets. When businesses want to showcase their products on website showrooms, Shopify stores, or mobile AR viewers, loading raw STEP is technically impossible. Converting STEP to lightweight binary GLB with Draco compression slashes file size to under 10MB while delivering photorealistic 60 FPS web rendering.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to glb', 'convert step to glb', 'step-to-glb', '3d cad converter', 'mesh converter']
@@ -6652,7 +6652,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert engineering STEP/STP CAD files to open glTF 2.0 JSON structures. Inspect shaders, mesh buffers, and integrate with Three.js WebGL applications.',
     detailDesc: 'Web developers building bespoke WebGL / Three.js 3D configurators often need to inspect and programmatically manipulate scene node hierarchies, swap materials dynamically via JavaScript, or stream binary buffers over custom CDNs. Converting STEP to open glTF provides a transparent, developer-friendly JSON format.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to gltf', 'convert step to gltf', 'step-to-gltf', '3d cad converter', 'mesh converter']
@@ -6663,7 +6663,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert engineering STEP/STP solid CAD models to Wavefront OBJ polygonal meshes for photorealistic rendering in 3ds Max, Maya, Blender, and Cinema 4D.',
     detailDesc: 'Industrial design renderers and CGI animation studios working in 3ds Max, Maya, Cinema 4D, or KeyShot need to import engineering CAD models. However, rendering packages struggle with mathematical NURBS solids. Converting STEP to high-density polygonal OBJ with smooth vertex normal vectors and material groups allows artists to apply photorealistic shaders and lighting.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['step to obj', 'convert step to obj', 'step-to-obj', '3d cad converter', 'mesh converter']
@@ -6674,7 +6674,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert native SolidWorks SLDPRT part files to lightweight binary GLB models. Embed interactive 3D mechanical models into websites, Shopify, and mobile AR.',
     detailDesc: 'Industrial manufacturers want to showcase machinery on web catalogs, interactive spare-part portals, or customer mobile presentations. Raw SolidWorks .sldprt files are heavy and cannot be viewed in web browsers without specialized plugins. Converting SLDPRT directly to binary GLB provides instant, interactive 3D rotation on smartphones and laptops at 60 FPS.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['sldprt to glb', 'convert sldprt to glb', 'sldprt-to-glb', '3d cad converter', 'mesh converter']
@@ -6685,7 +6685,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Trimble SketchUp SKP architectural models to lightweight binary GLB format for interactive Web3D virtual tours, Three.js, and mobile AR.',
     detailDesc: 'Architects and interior designers create building concepts in SketchUp to share with clients. However, clients on mobile devices or standard web browsers cannot open heavy .skp files without installing desktop viewers. Converting SketchUp models to compressed binary GLB enables clients to explore 3D architectural spaces on smartphones or laptops with zero software installation.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['skp to glb', 'convert skp to glb', 'skp-to-glb', '3d cad converter', 'mesh converter']
@@ -6696,7 +6696,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Trimble SketchUp SKP models to Wavefront OBJ format with material MTL sidecars for rendering in 3ds Max, Maya, V-Ray, Corona, and Blender.',
     detailDesc: 'Architectural visualizers frequently receive conceptual design models created in SketchUp, but produce final photorealistic renderings in 3ds Max (with V-Ray or Corona) or Cinema 4D. Older rendering suites struggle to import native .skp files cleanly. Converting SketchUp models to structured OBJ files with .mtl material sidecars preserves texture assignments and geometry hierarchy.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['skp to obj', 'convert skp to obj', 'skp-to-obj', '3d cad converter', 'mesh converter']
@@ -6707,7 +6707,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Trimble SketchUp SKP models to Autodesk FBX format. Embed textures, preserve scene hierarchies, and import directly into Unreal Engine, Unity, and Lumion.',
     detailDesc: 'Architects and game environment artists frequently build urban scenes in SketchUp and need to bring them into Unreal Engine 5, Unity, or Twinmotion for interactive virtual reality walkthroughs. Converting SKP to Autodesk FBX embeds all material textures into a single binary file, preserves object hierarchies, and guarantees seamless real-time lighting calculation.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['skp to fbx', 'convert skp to fbx', 'skp-to-fbx', '3d cad converter', 'mesh converter']
@@ -6718,7 +6718,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert Autodesk Revit RVT project files to openBIM IFC (IFC2x3 / IFC4) models. Preserve property sets, classifications, and BIM coordination metadata.',
     detailDesc: 'Autodesk Revit is the market leader for architectural BIM, but public infrastructure projects, government tenders (such as UK BIM Mandate and Singapore CORENET X), and MEP subcontractors require vendor-neutral IFC files for Solibri clash detection or Archicad federation. Converting RVT to certified IFC enables friction-free openBIM collaboration across the global construction industry.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['rvt to ifc', 'convert rvt to ifc', 'revit-to-ifc', '3d cad converter', 'mesh converter']
@@ -6729,7 +6729,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert openBIM IFC models to native AutoCAD DWG drawings. Generate clean 2D floor plans, sections, and 3D vector geometry organized by layer.',
     detailDesc: 'While general contractors coordinate projects in 3D BIM (IFC), field trade contractors, municipal permitting authorities, and fabrication workshops still operate on 2D AutoCAD DWG blueprints. Generating clean, layered DWG floor plans and elevation slices from 3D IFC models bridges the gap between BIM modeling offices and jobsite drafting teams.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['ifc to dwg', 'convert ifc to dwg', 'ifc-to-dwg', '3d cad converter', 'mesh converter']
@@ -6740,7 +6740,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SolidWorks SLDDRW drawing blueprints to AutoCAD DWG vector format. Preserve 1:1 sheet scale, GD&T symbols, layers, and title blocks.',
     detailDesc: 'Manufacturing machine shops, laser cutting operators, and procurement specialists require 2D AutoCAD DWG files to program CNC nesting tables and waterjet cutting paths. However, design engineers draft associative blueprints in SolidWorks (.slddrw). Converting SLDDRW to 1:1 scale DWG ensures shop-floor machinists receive accurate cutting vectors without dimension distortion.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['slddrw to dwg', 'convert slddrw to dwg', 'slddrw-to-dwg', '3d cad converter', 'mesh converter']
@@ -6751,7 +6751,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     description: 'Convert SolidWorks SLDDRW drawing blueprints to high-resolution searchable vector PDF documents for manufacturing procurement, QA inspection, and archiving.',
     detailDesc: 'Purchasing managers, quality assurance inspectors, and shop floor operators need clear manufacturing blueprints on mobile tablets or paper prints. They do not have SolidWorks installed. Converting SLDDRW drawings to high-resolution vector PDF preserves crisp line weights, searchable part numbers, and exact title block details for seamless manufacturing distribution.',
     category: '3d-converter',
-    status: 'released',
+    status: 'coming-soon',
     origin: 'native',
     releasedDate: '2026-08-28',
     keywords: ['slddrw to pdf', 'convert slddrw to pdf', 'slddrw-to-pdf', '3d cad converter', 'mesh converter']

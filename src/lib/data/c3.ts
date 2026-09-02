@@ -1483,7 +1483,7 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
-  alternatives: ["bimoffice", "hicad", "renga"],
+  alternatives: [],
   country: "Switzerland",
   category_id: "c3",
   pricing_type: "Perpetual",
@@ -1608,7 +1608,7 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["bimoffice", "hicad", "renga"],
+  alternatives: [],
   country: "Finland",
   category_id: "c3",
   pricing_type: "Perpetual",
@@ -1735,7 +1735,7 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["bimoffice", "hicad", "renga"],
+  alternatives: [],
   country: "Norway",
   category_id: "c3",
   pricing_type: "Perpetual",
@@ -1866,7 +1866,7 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["bimoffice", "hicad", "renga"],
+  alternatives: [],
   country: "Norway",
   category_id: "c3",
   pricing_type: "Subscription",
@@ -2796,7 +2796,6 @@ export const c3Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eberick",
     "etabs",
     "autodesk-robot"
   ],
@@ -2968,8 +2967,7 @@ export const c3Tools: Tool[] = [
 
   alternatives: [
     "cadwork",
-    "scia-engineer",
-    "hicad"
+    "scia-engineer"
   ],
 
   country: "Finland",

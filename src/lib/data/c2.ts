@@ -2510,7 +2510,10 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  alternatives: ["solidworks", "varicad", "zw3d"],
+  alternatives: [
+    "solidworks",
+    "zw3d"
+  ],
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
@@ -3846,7 +3849,6 @@ export const c2Tools: Tool[] = [
   ],
 
   alternatives: [
-    "t-flex-cad",
     "zw3d",
     "solidworks"
   ],

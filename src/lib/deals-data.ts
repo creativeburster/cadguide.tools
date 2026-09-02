@@ -570,12 +570,7 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial Request', type: 'Evergreen',
     link: 'https://hexagon.com/products/caesar-ii',
   },
-  {
-    id: 'd-lusas-trial', toolId: 't123', title: 'LUSAS Free Trial',
-    description: 'Request a free trial of LUSAS for structural, bridge, and geotechnical analysis.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.lusas.com/',
-  },
+  
   {
     id: 'd-scia-trial', toolId: 't147', title: 'SCIA Engineer Free Trial',
     description: 'Request a free trial of SCIA Engineer for structural analysis and design of buildings and bridges.',
@@ -662,12 +657,7 @@ export const activeDeals: Deal[] = [
     discount: '100% FREE Forever', type: 'FreeStudent',
     link: 'https://www.meshlab.net/',
   },
-  {
-    id: 'd-pconplanner-free', toolId: 't107', title: 'pCon.planner Free 3D Interior Design',
-    description: 'pCon.planner is a free 3D interior design and space planning tool with DWG support, rendering, and furniture catalog integration.',
-    discount: '100% FREE Forever', type: 'FreeStudent',
-    link: 'https://pcon-planner.com/',
-  },
+  
   {
     id: 'd-dwg-trueview-free', toolId: 't49', title: 'DWG TrueView Free Viewer',
     description: 'DWG TrueView is Autodesk free DWG viewer for viewing, plotting, and converting DWG and DXF files without a CAD license.',
@@ -686,36 +676,16 @@ export const activeDeals: Deal[] = [
     discount: '100% FREE Forever', type: 'FreeStudent',
     link: 'https://www.tinkercad.com/',
   },
-  {
-    id: 'd-opencascade-free', toolId: 't40', title: 'OpenCASCADE Free CAD Platform',
-    description: 'OpenCASCADE is a free, open-source 3D modeling kernel and CAD development platform for custom CAD applications.',
-    discount: '100% FREE Open Source', type: 'FreeStudent',
-    link: 'https://www.opencascade.com/',
-  },
-  {
-    id: 'd-rootpro-free', toolId: 't115', title: 'RootPro CAD Free Edition',
-    description: 'RootPro CAD offers a free edition with full 2D drafting capabilities. Upgradable to Professional for advanced features.',
-    discount: '100% FREE Edition', type: 'FreeStudent',
-    link: 'https://www.rootprocad.com/',
-  },
-  {
-    id: 'd-crowncad-free', toolId: 't108', title: 'CrownCAD Free Cloud CAD',
-    description: 'CrownCAD offers a free plan for cloud-based 3D CAD with parametric modeling, assembly design, and collaboration tools.',
-    discount: 'FREE Cloud Plan', type: 'FreeStudent',
-    link: 'https://www.crowncad.com/',
-  },
+  
+  
+  
   {
     id: 'd-easyeda-free', toolId: 't199', title: 'EasyEDA Free Online PCB Design',
     description: 'EasyEDA is a free, browser-based PCB design suite with schematic capture, SPICE simulation, and PCB layout.',
     discount: '100% FREE Online', type: 'FreeStudent',
     link: 'https://easyeda.com/',
   },
-  {
-    id: 'd-arcsite-free', toolId: 't92', title: 'ArcSite Free Plan',
-    description: 'ArcSite offers a free plan for mobile CAD drawing and field documentation on iPad and Android tablets.',
-    discount: 'FREE Mobile Plan', type: 'FreeStudent',
-    link: 'https://arcsite.app/pricing',
-  },
+  
   {
     id: 'd-cad-reader-free', toolId: 't93', title: 'CAD Reader Free DWG Viewer',
     description: 'CAD Reader is a free mobile and desktop DWG/DXF viewer with measurement, markup, and sharing tools.',
@@ -776,36 +746,11 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial', type: 'Evergreen',
     link: 'https://www.labcenter.com/download/',
   },
-  {
-    id: 'd-pulsonix-trial', toolId: 't164', title: 'Pulsonix Free Trial',
-    description: 'Try Pulsonix free for 30 days for PCB design with schematic capture and autorouting.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.pulsonix.com/free-trial',
-  },
-  {
-    id: 'd-quadcept-trial', toolId: 't114', title: 'Quadcept Free Trial',
-    description: 'Try Quadcept free for 30 days — cloud-based EDA for schematic capture and PCB design.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.quadcept.com/trial',
-  },
-  {
-    id: 'd-varicad-trial', toolId: 't41', title: 'VariCAD Free Trial',
-    description: 'Try VariCAD free for 30 days — 3D parametric mechanical CAD with sheet metal and BOM.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.varicad.com/en/demo/',
-  },
-  {
-    id: 'd-ironcad-trial', toolId: 't58', title: 'IronCAD Free Trial',
-    description: 'Try IronCAD free for 30 days for 3D design with innovative drag-and-drop modeling.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.ironcad.com/free-trial/',
-  },
-  {
-    id: 'd-actcad-trial', toolId: 't143', title: 'ActCAD Free Trial',
-    description: 'Try ActCAD free for 30 days — professional DWG-compatible 2D/3D CAD with IntelliCAD engine.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://actcad.com/free-trial',
-  },
+  
+  
+  
+  
+  
   {
     id: 'd-clo3d-trial', toolId: 't69', title: 'CLO 3D Free Trial',
     description: 'Try CLO 3D free for 30 days for 3D garment design, pattern making, and virtual sampling.',
@@ -818,12 +763,7 @@ export const activeDeals: Deal[] = [
     discount: '30-Day Free Trial', type: 'Evergreen',
     link: 'https://marvelousdesigner.com/trial',
   },
-  {
-    id: 'd-browzwear-trial', toolId: 't221', title: 'Browzwear Free Trial',
-    description: 'Request a free trial of Browzwear VStitcher for 3D garment design and virtual fashion prototyping.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://browzwear.com/free-trial',
-  },
+  
   {
     id: 'd-simplify3d-trial', toolId: 't216', title: 'Simplify3D Free Trial',
     description: 'Try Simplify3D free for 14 days for advanced 3D printing slicer software with multi-process support.',
@@ -878,18 +818,8 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial', type: 'Evergreen',
     link: 'https://www.chiefarchitect.com/free-trial/',
   },
-  {
-    id: 'd-cabinet-vision-trial', toolId: 't67', title: 'Cabinet Vision Free Trial',
-    description: 'Request a free trial of Cabinet Vision for cabinet design, nesting, and manufacturing documentation.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.cabinetvision.com/free-trial',
-  },
-  {
-    id: 'd-exocad-trial', toolId: 't66', title: 'exocad DentalCAD Free Trial',
-    description: 'Request a free trial of exocad DentalCAD for digital dentistry and dental CAD/CAM design.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://exocad.com/contact/',
-  },
+  
+  
   {
     id: 'd-3dexperience-trial', toolId: 't100', title: '3DEXPERIENCE Free Trial',
     description: 'Request a free trial of the 3DEXPERIENCE platform for collaborative 3D design, simulation, and PLM workflows.',
@@ -908,12 +838,7 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial Request', type: 'Evergreen',
     link: 'https://www.3dsystems.com/software/geomagic-design-x',
   },
-  {
-    id: 'd-keycreator-trial', toolId: 't59', title: 'KeyCreator Free Trial',
-    description: 'Request a free trial of KeyCreator for direct 3D CAD modeling without parametric history constraints.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.kubotekkosmos.com/products/keycreator',
-  },
+  
   {
     id: 'd-zw3d-trial', toolId: 't89', title: 'ZW3D Free Trial',
     description: 'Try ZW3D free for 30 days for 3D CAD/CAM with parametric modeling and machining.',
@@ -932,24 +857,9 @@ export const activeDeals: Deal[] = [
     discount: '30-Day Free Trial', type: 'Evergreen',
     link: 'https://ascon.net/products/kompas-3d/',
   },
-  {
-    id: 'd-cadopia-trial', toolId: 't61', title: 'CADopia Free Trial',
-    description: 'Try CADopia free for 30 days — professional DWG-compatible 2D/3D CAD with IntelliCAD engine.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.cadopia.com/download',
-  },
-  {
-    id: 'd-cadian-trial', toolId: 't128', title: 'CADian Free Trial',
-    description: 'Try CADian free for 30 days — DWG-compatible 2D/3D CAD with native IntelliCAD engine.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.cadian.com/',
-  },
-  {
-    id: 'd-tflex-trial', toolId: 't118', title: 'T-FLEX CAD Free Trial',
-    description: 'Try T-FLEX CAD free for 30 days — parametric 3D mechanical CAD with integrated PDM.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.tflex.com/',
-  },
+  
+  
+  
   {
     id: 'd-magics-trial', toolId: 't38', title: 'Materialise Magics Free Trial',
     description: 'Try Magics free for 30 days — the industry standard for 3D printing data preparation and file repair.',
@@ -968,30 +878,15 @@ export const activeDeals: Deal[] = [
     discount: '30-Day Free Trial', type: 'Evergreen',
     link: 'https://cadexchanger.com/free-trial',
   },
-  {
-    id: 'd-landfx-trial', toolId: 't82', title: 'Land F/X Free Trial',
-    description: 'Request a free trial of Land F/X for AutoCAD-based irrigation design, planting, and site planning.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.landfx.com/Trial',
-  },
+  
   {
     id: 'd-carlson-trial', toolId: 't239', title: 'Carlson Survey Free Trial',
     description: 'Try Carlson Survey free for 30 days for land surveying, COGO, and field-to-finish workflows.',
     discount: '30-Day Free Trial', type: 'Evergreen',
     link: 'https://www.carlsonsw.com/free-trial/',
   },
-  {
-    id: 'd-edificius-trial', toolId: 't130', title: 'Edificius Free Trial',
-    description: 'Try Edificius free for 30 days for BIM architectural design with integrated rendering and quantity takeoff.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.accasoftware.com/en/edificius',
-  },
-  {
-    id: 'd-edilus-trial', toolId: 't131', title: 'EdiLus Free Trial',
-    description: 'Try EdiLus free for 30 days for structural analysis and BIM modeling of buildings per Eurocode.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://www.accasoftware.com/en/edilus',
-  },
+  
+  
   {
     id: 'd-planbar-trial', toolId: 't158', title: 'Allplan Planbar Free Trial',
     description: 'Request a free trial of Planbar for precast concrete design, BIM modeling, and production drawing automation.',
@@ -1022,18 +917,8 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial Request', type: 'Evergreen',
     link: 'https://cadwork.com/',
   },
-  {
-    id: 'd-renga-trial', toolId: 't119', title: 'Renga Free Trial',
-    description: 'Try Renga free for 30 days for BIM architectural and structural design with Russian and CIS standards.',
-    discount: '30-Day Free Trial', type: 'Evergreen',
-    link: 'https://rengabim.com/',
-  },
-  {
-    id: 'd-hicad-trial', toolId: 't105', title: 'HiCAD Free Trial',
-    description: 'Request a free trial of HiCAD for 2D/3D mechanical and plant design CAD.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.isdgroup.com/',
-  },
+  
+  
   {
     id: 'd-topsolid-trial', toolId: 't101', title: 'TopSolid Free Trial',
     description: 'Request a free trial of TopSolid for integrated CAD/CAM and ERP manufacturing workflows.',
@@ -1058,24 +943,9 @@ export const activeDeals: Deal[] = [
     discount: 'Free Trial Request', type: 'Evergreen',
     link: 'https://www.configura.com/',
   },
-  {
-    id: 'd-promob-trial', toolId: 't146', title: 'Promob Free Trial',
-    description: 'Request a free trial of Promob for furniture design, 3D visualization, and manufacturing documentation.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.promob.com/',
-  },
-  {
-    id: 'd-medusa4-trial', toolId: 't104', title: 'MEDUSA4 Free Trial',
-    description: 'Request a free trial of MEDUSA4 for 2D/3D mechanical and plant design CAD.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://www.cad-schroer.com/products/medusa4/',
-  },
-  {
-    id: 'd-3design-trial', toolId: 't78', title: '3Design Free Trial',
-    description: 'Request a free trial of 3Design CAD for jewelry design and 3D modeling.',
-    discount: 'Free Trial Request', type: 'Evergreen',
-    link: 'https://3design.com/',
-  },
+  
+  
+  
   {
     id: 'd-matrixgold-trial', toolId: 't65', title: 'MatrixGold Free Trial',
     description: 'Request a free trial of MatrixGold for jewelry design with parametric modeling and rendering.',

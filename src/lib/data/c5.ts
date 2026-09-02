@@ -1669,8 +1669,6 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "beckercad",
-    "cadmeister",
     "visi"
   ],
 
@@ -1853,9 +1851,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "UK",
@@ -2057,9 +2053,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "UK",
@@ -2261,9 +2255,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Switzerland",
@@ -2465,9 +2457,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -2670,9 +2660,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -2875,9 +2863,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Germany",
@@ -3079,9 +3065,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Germany",
@@ -3283,9 +3267,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "France",
@@ -3486,9 +3468,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -3688,9 +3668,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -3890,9 +3868,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Switzerland",
@@ -4093,9 +4069,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -4296,9 +4270,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Taiwan",
@@ -4498,9 +4470,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "UK",
@@ -4701,9 +4671,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "UK",
@@ -4903,9 +4871,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "Spain",
@@ -5105,9 +5071,7 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "topsolid",
-    "beckercad",
-    "cadmeister"
+    "topsolid"
   ],
 
   country: "USA",
@@ -5844,7 +5808,6 @@ export const c5Tools: Tool[] = [
 
   alternatives: [
     "siemens-nx",
-    "esi-visual-environment",
     "ansys-fluent"
   ],
 
@@ -6198,7 +6161,6 @@ export const c5Tools: Tool[] = [
 
   alternatives: [
     "siemens-nx",
-    "esi-visual-environment",
     "ansys-fluent"
   ],
 
@@ -6553,7 +6515,6 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "opencascade",
     "ansys-discovery",
     "altair-inspire"
   ],
@@ -9559,7 +9520,6 @@ export const c5Tools: Tool[] = [
   ],
 
   alternatives: [
-    "lusas",
     "sap2000",
     "scia-engineer"
   ],

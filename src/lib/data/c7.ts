@@ -157,11 +157,7 @@ export const c7Tools: Tool[] = [
     "Major Shipyards"
   ],
 
-  alternatives: [
-    "shipconstructor",
-    "foran",
-    "napa"
-  ],
+  alternatives: [],
 
   official_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
   pricing_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
@@ -2095,8 +2091,6 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "jewelcad-pro",
-    "rhinogold",
     "carlson-survey"
   ],
 
@@ -2269,11 +2263,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  alternatives: [
-    "optitex",
-    "lectra-modaris",
-    "gerber-accumark"
-  ],
+  alternatives: [],
 
   detailed_features: [
     {
@@ -2449,8 +2439,7 @@ export const c7Tools: Tool[] = [
 
   alternatives: [
     "substance-painter",
-    "v-ray",
-    "browzwear"
+    "v-ray"
   ],
 
   detailed_features: [
@@ -2802,7 +2791,6 @@ export const c7Tools: Tool[] = [
 
   alternatives: [
     "marvelous-designer",
-    "browzwear",
     "trimble-business-center"
   ],
 
@@ -2976,8 +2964,7 @@ export const c7Tools: Tool[] = [
 
   alternatives: [
     "marvelous-designer",
-    "substance-painter",
-    "browzwear"
+    "substance-painter"
   ],
 
   detailed_features: [
@@ -3156,8 +3143,7 @@ export const c7Tools: Tool[] = [
 
   alternatives: [
     "marvelous-designer",
-    "v-ray",
-    "browzwear"
+    "v-ray"
   ],
 
   detailed_features: [
@@ -3328,11 +3314,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  alternatives: [
-    "rhinogold",
-    "pc-schematic",
-    "jewelcad-pro"
-  ],
+  alternatives: [],
 
   detailed_features: [
     {
@@ -3506,7 +3488,6 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [
-    "browzwear",
     "marvelous-designer",
     "v-ray"
   ],
@@ -3899,9 +3880,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  alternatives: [
-    "promine"
-  ],
+  alternatives: [],
 
   country: "Australia",
   category_id: "c7",
@@ -4068,11 +4047,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  alternatives: [
-    "20-20-design",
-    "promob",
-    "pconplanner"
-  ],
+  alternatives: [],
 
   country: "Sweden",
   category_id: "c7",
