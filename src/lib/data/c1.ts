@@ -7,7 +7,7 @@ export const c1Tools: Tool[] = [
   id: "t1",
   name: "AutoCAD",
   slug: "autocad",
-  logo_url: "",
+  logo_url: "/logos/autocad.svg",
   short_desc: "The global industrial standard for 2D drafting and 3D modeling.",
   description: "AutoCAD is the industry-leading computer-aided design software developed by Autodesk. As the pioneer of the CAD industry, it defined the .DWG format standard and remains an essential foundation tool for AEC and manufacturing.",
 
@@ -191,8 +191,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The definitive global industry standard for 2D drafting and documentation, crucial for AEC standard compatibility.",
-  version: "2026",
-  last_updated: "2026-04-15",
+  version: "2027",
+  last_updated: "2026-09-02",
   free_trial_days: 30,
 
   languages: [
@@ -305,7 +305,7 @@ export const c1Tools: Tool[] = [
   id: "t12",
   name: "ZWCAD",
   slug: "zwcad",
-  logo_url: "",
+  logo_url: "/logos/zwcad.ico",
   short_desc: "The most cost-effective and compatible alternative to AutoCAD.",
   description: "ZWCAD is a powerful 2D CAD solution with high compatibility with the .DWG format.",
 
@@ -499,7 +499,7 @@ export const c1Tools: Tool[] = [
   id: "t13",
   name: "BricsCAD",
   slug: "bricscad",
-  logo_url: "",
+  logo_url: "/logos/bricscad.png",
   short_desc: "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
   description: "BricsCAD uses AI-driven tools to speed up design workflows in a single environment.",
 
@@ -692,7 +692,7 @@ export const c1Tools: Tool[] = [
   id: "t21",
   name: "MicroStation",
   slug: "microstation",
-  logo_url: "",
+  logo_url: "/logos/microstation.png",
   short_desc: "The infrastructure engineering standard for massive projects.",
   description: "MicroStation is the CAD platform of choice for the world's most demanding infrastructure projects. It handles massive datasets with ease, providing native DGN support.",
 
@@ -867,7 +867,7 @@ export const c1Tools: Tool[] = [
   id: "t22",
   name: "DraftSight",
   slug: "draftsight",
-  logo_url: "",
+  logo_url: "/logos/draftsight.png",
   short_desc: "Professional-grade 2D CAD solution from Dassault Systèmes.",
   description: "DraftSight is the go-to AutoCAD alternative for firms using SolidWorks. It offers a familiar interface and full DWG compatibility.",
 
@@ -1053,7 +1053,7 @@ export const c1Tools: Tool[] = [
   id: "t54",
   name: "GstarCAD",
   slug: "gstarcad",
-  logo_url: "https://www.gstarcad.net/Public/Home/images/logo.png",
+  logo_url: "/logos/gstarcad.png",
   short_desc: "High-performance AutoCAD alternative.",
   description: "GstarCAD is built on an independent core, offering 99% compatibility with AutoCAD and superior speed for large drawings.",
   country: "China",
@@ -1095,7 +1095,7 @@ export const c1Tools: Tool[] = [
   ],
 
   cons: [
-    "Windows only",
+    "Windows-only",
     "Brand awareness in West",
     "Fewer add-ons"
   ],
@@ -1202,7 +1202,7 @@ export const c1Tools: Tool[] = [
   id: "t55",
   name: "QCAD",
   slug: "qcad",
-  logo_url: "/logos/qcad.png",
+  logo_url: "/logos/qcad.jpg",
   short_desc: "Open-source 2D CAD application for creating technical drawings, praised for its simplicity, cross-platform support, and focused toolset.",
   description: "QCAD is an open-source 2D computer-aided design (CAD) application developed by RibbonSoft, designed for creating technical drawings such as architectural plans, mechanical parts, schematics, and diagrams. Built on the Qt framework, it runs natively on Windows, macOS, and Linux, making it one of the few truly cross-platform CAD solutions. QCAD offers a comprehensive set of 2D drafting tools including layers, blocks, hatching, dimensioning, and scripting via ECMAScript (JavaScript). While the community edition is open-source and free, a commercial Pro version adds DWG import/export support and additional features. Its small footprint, clean interface, and low cost make it ideal for hobbyists, students, small businesses, and professionals needing straightforward 2D drafting without subscription overhead.",
 
@@ -1683,7 +1683,7 @@ export const c1Tools: Tool[] = [
   ],
 
   cons: [
-    "Windows only, no macOS or Linux support",
+    "Windows-only, no macOS or Linux support",
     "3D capabilities less advanced than premium CAD",
     "Smaller ecosystem of third-party plugins",
     "Some advanced features require Plus/Platform tier",
@@ -1730,8 +1730,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A strong DWG-compatible CAD suite with specialized engineering modules and a competitive perpetual licensing option.",
-  version: "23.0",
-  last_updated: "2025-05-20",
+  version: "26",
+  last_updated: "2026-09-02",
   free_trial_days: 0,
 
   languages: [
@@ -1999,7 +1999,7 @@ export const c1Tools: Tool[] = [
   ],
 
   cons: [
-    "Windows only, no macOS or Linux support",
+    "Windows-only, no macOS or Linux support",
     "Can experience instability with very large files",
     "Annual update cycle may lag behind competitors",
     "Smaller ecosystem than AutoCAD",
@@ -2446,7 +2446,7 @@ export const c1Tools: Tool[] = [
   id: "t62",
   name: "TurboCAD Platinum",
   slug: "turbocad",
-  logo_url: "https://www.turbocad.com/media/wysiwyg/TurboCAD-Logo.png",
+  logo_url: "/logos/turbocad.png",
   short_desc: "All-in-one professional 2D/3D design suite.",
   description: "TurboCAD is a brilliant collection of professional 2D/3D CAD tools to design, modify, present, and document in an integrated fashion. It is known for its versatility and large library of architectural and mechanical tools.",
   country: "USA",
@@ -3147,7 +3147,7 @@ export const c1Tools: Tool[] = [
   id: "t91",
   name: "ARES Commander",
   slug: "ares-commander",
-  logo_url: "",
+  logo_url: "/logos/ares-commander.png",
   short_desc: "Professional DWG CAD with cross-platform trinity.",
   description: "ARES Commander by Graebert is a professional CAD software with full DWG support, available on Desktop, Mobile (ARES Touch) and Cloud (ARES Kudo) — the only true CAD trinity.",
   country: "Germany",

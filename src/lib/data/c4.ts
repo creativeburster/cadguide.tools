@@ -7,7 +7,7 @@ export const c4Tools: Tool[] = [
   id: "t34",
   name: "Bluebeam Revu",
   slug: "bluebeam-revu",
-  logo_url: "",
+  logo_url: "/logos/bluebeam-revu.png",
   short_desc: "The AEC standard for PDF markup and collaboration.",
   description: "Bluebeam Revu is a project efficiency and collaboration solution that allows users to markup, takeoff, and organize PDF files.",
 
@@ -194,7 +194,7 @@ export const c4Tools: Tool[] = [
   id: "t35",
   name: "Navisworks",
   slug: "navisworks",
-  logo_url: "",
+  logo_url: "/logos/navisworks.svg",
   short_desc: "Project review software for clash detection.",
   description: "Navisworks allows architecture, engineering, and construction professionals to holistically review integrated models and data with stakeholders to better control project outcomes.",
 
@@ -370,7 +370,7 @@ export const c4Tools: Tool[] = [
   id: "t36",
   name: "Solibri",
   slug: "solibri",
-  logo_url: "",
+  logo_url: "/logos/solibri.png",
   short_desc: "The BIM quality assurance and QC leader.",
   description: "Solibri is the market leader in BIM Quality Assurance and Quality Control. It provides tools for BIM managers to check for model integrity and coordination issues.",
 
@@ -523,7 +523,7 @@ export const c4Tools: Tool[] = [
   id: "t37",
   name: "MeshLab",
   slug: "meshlab",
-  logo_url: "",
+  logo_url: "/logos/meshlab.png",
   short_desc: "Open-source system for processing 3D meshes.",
   description: "MeshLab is an open-source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.",
 
@@ -660,7 +660,7 @@ export const c4Tools: Tool[] = [
   id: "t39",
   name: "Recap Pro",
   slug: "recap-pro",
-  logo_url: "",
+  logo_url: "/logos/recap-pro.svg",
   short_desc: "Reality capture and 3D scanning software.",
   description: "Autodesk ReCap Pro converts laser scans and photos into 3D models or point clouds. It is essential for scan-to-BIM workflows.",
 
@@ -789,14 +789,14 @@ export const c4Tools: Tool[] = [
   expert_verdict: "The gateway to reality capture in the BIM world.",
 
 
-  last_updated: "2024-04-22",
-  version: "2024"
+  last_updated: "2026-09-02",
+  version: "2027"
 },
 {
   id: "t48",
   name: "Solid Edge Viewer",
   slug: "solid-edge-viewer",
-  logo_url: "",
+  logo_url: "/logos/solid-edge-viewer.png",
   short_desc: "Free viewer for Solid Edge and 2D CAD files.",
   description: "View Solid Edge assemblies, parts, and drafts for free.",
   country: "USA",
@@ -836,7 +836,7 @@ export const c4Tools: Tool[] = [
   ],
 
   cons: [
-    "Windows only",
+    "Windows-only",
     "No editing",
     "Large install"
   ],
@@ -889,7 +889,7 @@ export const c4Tools: Tool[] = [
   id: "t49",
   name: "DWG TrueView",
   slug: "dwg-trueview",
-  logo_url: "",
+  logo_url: "/logos/dwg-trueview.svg",
   short_desc: "Official free DWG viewer and converter.",
   description: "The official viewer for DWG files, built on the AutoCAD engine.",
   country: "USA",
@@ -979,7 +979,7 @@ export const c4Tools: Tool[] = [
   id: "t53",
   name: "DWG FastView",
   slug: "dwg-fastview",
-  logo_url: "https://en.dwgfastview.com/wp-content/themes/gstarcad-en/images/logo.png",
+  logo_url: "/logos/dwg-fastview.ico",
   short_desc: "Lightweight cross-platform CAD viewer & editor.",
   description: "DWG FastView allows you to view and edit CAD drawings on mobile, web, and desktop with extreme speed and cloud synchronization.",
   country: "China",
@@ -1161,7 +1161,7 @@ export const c4Tools: Tool[] = [
   id: "t93",
   name: "CAD Reader",
   slug: "cad-reader",
-  logo_url: "",
+  logo_url: "/logos/cad-reader.png",
   short_desc: "Mobile DWG viewer and measurement tool by Glodon.",
   description: "CAD Reader is a mobile DWG viewing and measurement application developed by Glodon. It allows users to view, measure, and annotate CAD drawings on Android and iOS devices, making it convenient for field work and on-site inspections.",
 

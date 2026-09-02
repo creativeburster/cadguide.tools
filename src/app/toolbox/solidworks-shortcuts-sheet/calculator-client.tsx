@@ -308,7 +308,7 @@ export default function SolidWorksShortcutsClient() {
                   <>
                     {/* Up: -22.5 to 22.5 deg */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(-22.5, 100, 100)"
                       fill={hoveredGesture === 'up' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'up' ? 0.35 : 1}
@@ -320,7 +320,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* UR */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(22.5, 100, 100)"
                       fill={hoveredGesture === 'ur' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'ur' ? 0.35 : 1}
@@ -332,7 +332,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* Right */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(67.5, 100, 100)"
                       fill={hoveredGesture === 'right' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'right' ? 0.35 : 1}
@@ -344,7 +344,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* DR */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(112.5, 100, 100)"
                       fill={hoveredGesture === 'dr' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'dr' ? 0.35 : 1}
@@ -356,7 +356,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* Down */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(157.5, 100, 100)"
                       fill={hoveredGesture === 'down' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'down' ? 0.35 : 1}
@@ -368,7 +368,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* DL */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(202.5, 100, 100)"
                       fill={hoveredGesture === 'dl' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'dl' ? 0.35 : 1}
@@ -380,7 +380,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* Left */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(247.5, 100, 100)"
                       fill={hoveredGesture === 'left' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'left' ? 0.35 : 1}
@@ -392,7 +392,7 @@ export default function SolidWorksShortcutsClient() {
                     />
                     {/* UL */}
                     <path
-                      d="M 100 10 L A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
+                      d="M 100 10 A 90 90 0 0 1 134.4 20.6 L 117.2 60.3 A 45 45 0 0 0 100 55 Z"
                       transform="rotate(292.5, 100, 100)"
                       fill={hoveredGesture === 'ul' ? '#3b82f6' : 'transparent'}
                       opacity={hoveredGesture === 'ul' ? 0.35 : 1}

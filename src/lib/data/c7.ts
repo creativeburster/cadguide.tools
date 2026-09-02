@@ -7,7 +7,7 @@ export const c7Tools: Tool[] = [
   id: "t65",
   name: "MatrixGold",
   slug: "matrixgold",
-  logo_url: "https://www.gemvision.com/images/matrixgold-logo.png",
+  logo_url: "/logos/matrixgold.png",
   short_desc: "The world's most advanced jewelry design software.",
   description: "MatrixGold combines the top features of Matrix and RhinoGold with a simplified interface to provide a powerful 3D jewelry design experience.",
   country: "USA",
@@ -127,7 +127,7 @@ export const c7Tools: Tool[] = [
   id: "t68",
   name: "AVEVA Marine",
   slug: "aveva-marine",
-  logo_url: "https://www.aveva.com/content/dam/aveva/images/logos/aveva-logo.svg",
+  logo_url: "/logos/aveva-marine.ico",
   short_desc: "Integrated engineering and design for shipbuilding.",
   description: "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms.",
   country: "UK",
@@ -227,7 +227,7 @@ export const c7Tools: Tool[] = [
   id: "t69",
   name: "CLO 3D",
   slug: "clo-3d",
-  logo_url: "https://www.clo3d.com/images/common/logo_clo.png",
+  logo_url: "/logos/clo-3d.png",
   short_desc: "3D garment visualization and design.",
   description: "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies.",
   country: "South Korea",
@@ -366,7 +366,7 @@ export const c7Tools: Tool[] = [
   id: "ext-infraworks",
   name: "Infraworks",
   slug: "infraworks",
-  logo_url: "",
+  logo_url: "/logos/infraworks.svg",
   short_desc: "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
   description: "Autodesk InfraWorks is a conceptual design platform for civil infrastructure. It enables rapid 3D modeling of terrain, roads, bridges, and urban environments, supporting preliminary design and stakeholder communication for transportation and site planning.",
 
@@ -460,9 +460,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Civil Engineering", "Infrastructure", "Transportation"],
 
   user_scales: [
     "Mid-Market",
@@ -473,8 +471,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.autodesk.com/products/infraworks/overview",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Rapid contextual modeling with real GIS data",
+    "Great for proposals and stakeholder visuals",
+    "Interoperates with Civil 3D via IMX"
+  ],
+  cons: [
+    "Not a detailed engineering design tool",
+    "Performance degrades on very large models",
+    "Requires AEC Collection"
+  ],
 
   faqs: [
     {
@@ -512,14 +518,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
 
-  last_updated: "2023-07-18",
-  version: "2024"
+  last_updated: "2026-09-02",
+  version: "2027"
 },
 {
   id: "ext-3ds-max",
   name: "3ds Max",
   slug: "3ds-max",
-  logo_url: "",
+  logo_url: "/logos/3ds-max.svg",
   short_desc: "Industry-standard 3D modeling, animation, and rendering software for games, film, and visualization.",
   description: "Autodesk 3ds Max is a professional 3D modeling, animation, and rendering application widely used in games, film, visual effects, and architectural visualization. It offers advanced polygon modeling, character rigging, particle systems, and integration with Arnold and V-Ray renderers.",
 
@@ -613,9 +619,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Architecture", "Game Development", "Film & VFX"],
 
   user_scales: [
     "Mid-Market",
@@ -626,8 +630,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.autodesk.com/products/3ds-max/pricing",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Industry standard for archviz and game art",
+    "Powerful modifier and procedural stack",
+    "Deep plugin ecosystem"
+  ],
+  cons: [
+    "Windows-only",
+    "Expensive subscription",
+    "Not parametric for precision MCAD"
+  ],
 
   faqs: [
     {
@@ -665,14 +677,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
 
-  last_updated: "2026-03-26",
+  last_updated: "2026-09-02",
   version: "2027"
 },
 {
   id: "ext-zbrush",
   name: "ZBrush",
   slug: "zbrush",
-  logo_url: "",
+  logo_url: "/logos/zbrush.ico",
   short_desc: "Digital sculpting and painting software for high-resolution character and creature modeling.",
   description: "ZBrush, from Maxon, is the industry-standard digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel.",
 
@@ -766,9 +778,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Game Development", "Film & VFX", "Character Art"],
 
   user_scales: [
     "Mid-Market",
@@ -779,8 +789,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.maxon.net/en/buy",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Unmatched high-poly sculpting performance",
+    "Standard for character and creature art",
+    "Decimation Master preps models for 3D printing"
+  ],
+  cons: [
+    "Unconventional UI takes time to master",
+    "Not suited to precise engineering CAD",
+    "Sculpt-focused: weak for 2D documentation"
+  ],
 
   faqs: [
     {
@@ -818,14 +836,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
 
-  last_updated: "2024-08-22",
+  last_updated: "2026-09-02",
   version: "2024"
 },
 {
   id: "ext-keyshot",
   name: "KeyShot",
   slug: "keyshot",
-  logo_url: "",
+  logo_url: "/logos/keyshot.svg",
   short_desc: "Real-time ray-tracing rendering software for product visualization and industrial design.",
   description: "KeyShot, from Luxion, is a real-time ray-tracing renderer for product visualization and industrial design. It imports CAD geometry directly and provides physically accurate materials, lighting, and studio environments with drag-and-drop simplicity.",
 
@@ -907,9 +925,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Product Design", "Manufacturing", "Marketing"],
 
   user_scales: [
     "Mid-Market",
@@ -920,8 +936,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.keyshot.com/pricing/",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Fastest CAD-to-photorealistic workflow",
+    "Large material and environment library",
+    "Engineers can learn it in days"
+  ],
+  cons: [
+    "No real modeling: needs external CAD",
+    "Premium perpetual or subscription cost",
+    "Animation toolset is basic"
+  ],
 
   faqs: [
     {
@@ -959,14 +983,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
 
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-02",
   version: "2026"
 },
 {
   id: "ext-lumion",
   name: "Lumion",
   slug: "lumion",
-  logo_url: "",
+  logo_url: "/logos/lumion.png",
   short_desc: "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
   description: "Lumion, from Act-3D, is an architectural visualization tool that turns 3D CAD and BIM models into photorealistic images, videos, and 360 panoramas. It features a large asset library, weather effects, and real-time preview for fast iteration.",
 
@@ -1060,9 +1084,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Architecture", "Landscape Design", "Urban Planning"],
 
   user_scales: [
     "Mid-Market",
@@ -1073,8 +1095,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://lumion.com/pricing",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Fast, beginner-friendly rendering",
+    "Vast asset and effects library",
+    "LiveSync with Revit, SketchUp, Archicad"
+  ],
+  cons: [
+    "Windows-only",
+    "Needs a powerful GPU for large scenes",
+    "Not for industrial product visualization"
+  ],
 
   faqs: [
     {
@@ -1112,14 +1142,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
 
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-02",
   version: "2026"
 },
 {
   id: "ext-enscape",
   name: "Enscape",
   slug: "enscape",
-  logo_url: "",
+  logo_url: "/logos/enscape.png",
   short_desc: "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
   description: "Enscape, from Chaos, is a real-time rendering and virtual reality plugin that integrates directly into Revit, SketchUp, Rhino, and Archicad. It provides instant visual feedback, asset libraries, and one-click VR export for architectural design review.",
 
@@ -1213,9 +1243,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Architecture", "Interior Design", "Construction"],
 
   user_scales: [
     "Mid-Market",
@@ -1226,8 +1254,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://enscape3d.com/pricing/",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Real-time rendering inside the CAD window",
+    "One-click walkthroughs and VR",
+    "Minimal learning curve"
+  ],
+  cons: [
+    "Quality trails offline ray tracers",
+    "Dependent on host CAD performance",
+    "Per-seat pricing adds up"
+  ],
 
   faqs: [
     {
@@ -1265,14 +1301,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
 
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-02",
   version: "4.11"
 },
 {
   id: "ext-twinmotion",
   name: "Twinmotion",
   slug: "twinmotion",
-  logo_url: "",
+  logo_url: "/logos/twinmotion.png",
   short_desc: "Real-time visualization tool built on Unreal Engine for architecture and construction.",
   description: "Twinmotion, from Epic Games, is a real-time visualization tool built on Unreal Engine. It enables architects and construction professionals to create high-quality renderings, panoramas, and VR experiences from CAD and BIM data with an intuitive interface.",
 
@@ -1366,9 +1402,7 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [
-    "Engineering"
-  ],
+  industries: ["Architecture", "Landscape Design", "Real Estate"],
 
   user_scales: [
     "Mid-Market",
@@ -1379,8 +1413,16 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.twinmotion.com/pricing",
   affiliate_url: null,
   score: 4.5,
-  pros: [],
-  cons: [],
+  pros: [
+    "Free tier for small firms and students",
+    "Real-time Unreal Engine quality",
+    "Direct sync with major archviz CAD"
+  ],
+  cons: [
+    "GPU-hungry with heavy scenes",
+    "Visualization only: no precision modeling",
+    "Large asset library needs fast storage"
+  ],
 
   faqs: [
     {
@@ -1418,14 +1460,14 @@ export const c7Tools: Tool[] = [
 
   expert_verdict: "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
 
-  last_updated: "2026-01-05",
+  last_updated: "2026-09-02",
   version: "2026"
 },
 {
   id: "t213",
   name: "UltiMaker Cura",
   slug: "ultimaker-cura",
-  logo_url: "",
+  logo_url: "/logos/ultimaker-cura.png",
   short_desc: "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
   description: "UltiMaker Cura is the dominant free, open-source slicer for FDM/FFF 3D printing — supports 400+ printer profiles out of the box, scripting via post-processing plugins, and a marketplace of third-party material profiles.",
   country: "Netherlands",
@@ -1603,7 +1645,7 @@ export const c7Tools: Tool[] = [
   id: "t214",
   name: "PrusaSlicer",
   slug: "prusaslicer",
-  logo_url: "",
+  logo_url: "/logos/prusaslicer.png",
   short_desc: "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
   description: "PrusaSlicer is Prusa Research's open-source slicer, originally a Slic3r fork, now the slicer with the fastest pace of innovation — Organic Supports, ironing, multi-material with Prusa MMU, and SLA support.",
   country: "Czech Republic",
@@ -1781,7 +1823,7 @@ export const c7Tools: Tool[] = [
   id: "t215",
   name: "Bambu Studio",
   slug: "bambu-studio",
-  logo_url: "",
+  logo_url: "/logos/bambu-studio.png",
   short_desc: "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
   description: "Bambu Studio is the slicer for Bambu Lab's high-speed CoreXY 3D printers — a PrusaSlicer fork tuned for very high accelerations, AMS multi-color, and cloud-connected workflows. Free and increasingly multi-vendor.",
   country: "China",
@@ -1959,7 +2001,7 @@ export const c7Tools: Tool[] = [
   id: "t216",
   name: "Simplify3D",
   slug: "simplify3d",
-  logo_url: "",
+  logo_url: "/logos/simplify3d.ico",
   short_desc: "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
   description: "Simplify3D is a long-standing commercial FDM slicer that built its reputation on granular per-part settings, manual support placement, and stable output — now competing with rapid-evolving free slicers.",
   country: "USA",
@@ -2136,7 +2178,7 @@ export const c7Tools: Tool[] = [
   id: "t217",
   name: "Autodesk Netfabb",
   slug: "autodesk-netfabb",
-  logo_url: "",
+  logo_url: "/logos/autodesk-netfabb.svg",
   short_desc: "Industrial additive manufacturing prep, lattice, and build-plate optimization.",
   description: "Autodesk Netfabb is the industrial-grade 3D-printing prep platform — used for metal AM, polymer SLS, and powder-bed fusion build-plate packing, support generation, lattice generation, and simulation of distortion.",
   country: "USA",
@@ -2311,7 +2353,7 @@ export const c7Tools: Tool[] = [
   id: "t222",
   name: "Marvelous Designer",
   slug: "marvelous-designer",
-  logo_url: "",
+  logo_url: "/logos/marvelous-designer.png",
   short_desc: "3D garment design used widely in games, animation, film, and apparel concepting.",
   description: "Marvelous Designer is the dominant 3D garment design tool in the games, film, and animation industry — and an approachable entry point for apparel designers exploring 3D before moving to CLO or Browzwear.",
   country: "South Korea",
@@ -2489,7 +2531,7 @@ export const c7Tools: Tool[] = [
   id: "t225",
   name: "D5 Render",
   slug: "d5-render",
-  logo_url: "",
+  logo_url: "/logos/d5-render.png",
   short_desc: "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
   description: "D5 Render is a real-time GPU ray-traced renderer aimed at architects and interior designers — live link to SketchUp, Revit, Rhino, ArchiCAD, and 3ds Max, with a free Community Edition that includes commercial use.",
   country: "China",
@@ -2665,7 +2707,7 @@ export const c7Tools: Tool[] = [
   id: "t226",
   name: "V-Ray",
   slug: "v-ray",
-  logo_url: "",
+  logo_url: "/logos/v-ray.ico",
   short_desc: "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
   description: "V-Ray from Chaos is the world's most-used production renderer across architecture, automotive, and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
   country: "Bulgaria",
@@ -2842,7 +2884,7 @@ export const c7Tools: Tool[] = [
   id: "t227",
   name: "Corona Renderer",
   slug: "corona-renderer",
-  logo_url: "",
+  logo_url: "/logos/corona-renderer.ico",
   short_desc: "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
   description: "Corona Renderer (Chaos) is a CPU-based unbiased renderer that won the interior-visualization community with very fast interactive preview, simple material setup, and excellent out-of-box quality.",
   country: "Czech Republic",
@@ -3016,7 +3058,7 @@ export const c7Tools: Tool[] = [
   id: "t228",
   name: "Adobe Substance 3D Painter",
   slug: "substance-painter",
-  logo_url: "",
+  logo_url: "/logos/substance-painter.ico",
   short_desc: "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
   description: "Adobe Substance 3D Painter is the industry-default PBR texture-painting application — used to texture characters, vehicles, environments, and products with smart materials, generators, and a non-destructive layer stack.",
   country: "France",
@@ -3196,7 +3238,7 @@ export const c7Tools: Tool[] = [
   id: "t239",
   name: "Carlson Survey",
   slug: "carlson-survey",
-  logo_url: "",
+  logo_url: "/logos/carlson-survey.png",
   short_desc: "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
   description: "Carlson Survey is the field-to-finish surveying CAD popular with US land surveyors — runs on AutoCAD or the bundled IntelliCAD engine, with strong total-station, GNSS, and data-collector integration.",
   country: "USA",
@@ -3370,7 +3412,7 @@ export const c7Tools: Tool[] = [
   id: "t240",
   name: "Trimble Business Center",
   slug: "trimble-business-center",
-  logo_url: "",
+  logo_url: "/logos/trimble-business-center.png",
   short_desc: "Office software for processing survey, GIS, and construction-layout field data.",
   description: "Trimble Business Center (TBC) is the office-side companion to Trimble field instruments — processes GNSS, total-station, scanner, and UAV data into deliverables for survey, GIS, and construction-layout workflows.",
   country: "USA",
@@ -3694,8 +3736,8 @@ export const c7Tools: Tool[] = [
   affiliate_url: null,
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
-  cons: ["Very high cost", "Steep learning curve", "Windows-only platform", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
-  last_updated: "2025-05-21",
+  cons: ["Very high cost", "Steep learning curve", "Windows-only", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
+  last_updated: "2026-09-02",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "German", "French", "Spanish", "Russian"],
   file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IFC", "RVM"],
@@ -3766,12 +3808,13 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
+  version: "3.1"
 },
 {
   id: "t133",
   name: "Maptek Vulcan",
   slug: "maptek-vulcan",
-  logo_url: "",
+  logo_url: "/logos/maptek-vulcan.png",
   short_desc: "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
   description: "Maptek Vulcan is a 3D mining software suite for geological modeling, resource estimation, open-pit and underground mine design, and production scheduling.",
 
@@ -3870,15 +3913,33 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [],
-  core_features: [],
+  industries: ["Mining", "Geology", "Civil Engineering"],
+
+  core_features: [
+    "Geological Modeling",
+    "Block Modeling",
+    "Mine Design",
+    "Drill & Blast Planning",
+    "Surveying"
+  ],
+
   user_scales: [],
   official_url: "https://www.maptek.com/",
   pricing_url: "https://www.maptek.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+
+  pros: [
+    "Mining industry standard for decades",
+    "Deep geological and block modeling",
+    "Scales from open-pit to underground"
+  ],
+
+  cons: [
+    "Domain-specific, not general-purpose CAD",
+    "Premium enterprise licensing",
+    "Steep learning curve for newcomers"
+  ],
 
   faqs: [
     {
@@ -3913,15 +3974,16 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
-  version: "2025",
 
+  version: "2025",
   expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
+  last_updated: "2026-09-02"
 },
 {
   id: "t142",
   name: "CET Designer",
   slug: "cet-designer",
-  logo_url: "",
+  logo_url: "/logos/cet-designer.png",
   short_desc: "Space planning and specification software for commercial interiors, with live rendering and manufacturer catalogs.",
   description: "CET Designer, from Configura, is a space planning and specification platform for commercial interiors. It combines drag-and-drop layout, live rendering, quoting, and order documentation driven by real manufacturer catalogs.",
 
@@ -4021,15 +4083,33 @@ export const c7Tools: Tool[] = [
     "Windows"
   ],
 
-  industries: [],
-  core_features: [],
+  industries: ["Interior Design", "Furniture", "Space Planning"],
+
+  core_features: [
+    "3D Space Planning",
+    "Manufacturer Catalogs",
+    "Specification & BOM",
+    "Rendering",
+    "Ordering Integration"
+  ],
+
   user_scales: [],
   official_url: "https://www.configura.com/",
   pricing_url: "https://www.configura.com/",
   affiliate_url: null,
   score: 0,
-  pros: [],
-  cons: [],
+
+  pros: [
+    "Deep manufacturer catalog integration",
+    "Layout to quote in one workflow",
+    "Standard among contract furniture dealers"
+  ],
+
+  cons: [
+    "Annual subscription is costly",
+    "Steep learning curve for specification power",
+    "Windows-only"
+  ],
 
   faqs: [
     {
@@ -4064,8 +4144,9 @@ export const c7Tools: Tool[] = [
     gpu_optimization: "N/A",
     standards: []
   },
-  version: "2025",
 
+  version: "2025",
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
+  last_updated: "2026-09-02"
 },
 ];
