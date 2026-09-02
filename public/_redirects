@@ -26,3 +26,27 @@
 /tools/chief-architect-pro /tools/chief-architect 301
 /alternatives/chief-architect-pro /alternatives/chief-architect 301
 /pricing/chief-architect-pro /pricing/chief-architect 301
+
+# 7. Pricing aliases → modern canonicals (migrated from the removed Next.js
+#    middleware, which never ran in production under output: 'export')
+/pricing/free /free 301
+/pricing/open-source /open-source 301
+
+# 8. Legacy /guides cheatsheet pages → /toolbox canonicals
+/guides/shortcuts /toolbox/shortcuts 301
+/guides/archicad-shortcuts-sheet /toolbox/archicad-shortcuts-sheet 301
+/guides/autocad-vs-gstarcad-shortcuts /toolbox/autocad-vs-gstarcad-shortcuts 301
+/guides/autocad-vs-zwcad-shortcuts /toolbox/autocad-vs-zwcad-shortcuts 301
+/guides/bricscad-shortcuts-sheet /toolbox/bricscad-shortcuts-sheet 301
+/guides/catia-shortcuts-sheet /toolbox/catia-shortcuts-sheet 301
+/guides/creo-shortcuts-sheet /toolbox/creo-shortcuts-sheet 301
+/guides/draftsight-shortcuts-sheet /toolbox/draftsight-shortcuts-sheet 301
+/guides/freecad-shortcuts-sheet /toolbox/freecad-shortcuts-sheet 301
+/guides/fusion360-shortcuts-sheet /toolbox/fusion360-shortcuts-sheet 301
+/guides/inventor-shortcuts-sheet /toolbox/inventor-shortcuts-sheet 301
+/guides/microstation-shortcuts-sheet /toolbox/microstation-shortcuts-sheet 301
+/guides/revit-shortcuts-sheet /toolbox/revit-shortcuts-sheet 301
+/guides/rhino-shortcuts-sheet /toolbox/rhino-shortcuts-sheet 301
+/guides/sketchup-shortcuts-sheet /toolbox/sketchup-shortcuts-sheet 301
+/guides/solidworks-shortcuts-sheet /toolbox/solidworks-shortcuts-sheet 301
+/guides/vectorworks-shortcuts-sheet /toolbox/vectorworks-shortcuts-sheet 301

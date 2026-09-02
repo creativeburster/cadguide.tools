@@ -1,5 +1,20 @@
 // Cloudflare Pages Function: intercept deleted URLs and return 410 Gone
 // This tells Google to permanently de-index these pages instead of recrawling them.
+// Also blocks resource-draining SEO/analytics crawlers — the robots.txt Disallow
+// for these agents is advisory only and ignored by misbehaving bots.
+
+const BLOCKED_USER_AGENTS = [
+  'ahrefsbot',
+  'semrushbot',
+  'dotbot',
+  'blexbot',
+  'mj12bot',
+  'megaindex',
+  'dataforseobot',
+  'bytespider',
+  'petalbot',
+  'baiduspider',
+];
 
 // All 173 deleted URLs from GSC 404 report (2026-07-08)
 const GONE_PATHS = new Set([
@@ -367,6 +382,14 @@ const GONE_PATHS = new Set([
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const path = url.pathname;
+
+  const userAgent = (context.request.headers.get('user-agent') || '').toLowerCase();
+  if (BLOCKED_USER_AGENTS.some(ua => userAgent.includes(ua))) {
+    return new Response('Access Denied: Your bot is blocked to conserve server resources.', {
+      status: 403,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
 
   // Regex to detect legacy AI-generated guides patterns, e.g. /guides/allplan-troubleshooting-0
   // Categories: troubleshooting, performance, migration, standards, procurement, deployment, manufacturing, printing, workflow, comparison

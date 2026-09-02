@@ -61,7 +61,7 @@ export function Footer() {
               <Link href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
             </h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/pricing/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
+              <li><Link href="/free" className="hover:text-blue-400 transition-colors">Free CAD</Link></li>
               <li><Link href="/pricing/perpetual" className="hover:text-blue-400 transition-colors">Perpetual</Link></li>
               <li><Link href="/pricing/subscription" className="hover:text-blue-400 transition-colors">Subscription</Link></li>
               <li><Link href="/pricing/network" className="hover:text-blue-400 transition-colors">Floating Net</Link></li>

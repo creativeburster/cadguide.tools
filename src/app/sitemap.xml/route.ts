@@ -10,7 +10,8 @@ export async function GET() {
     `${BASE_URL}/sitemap-toolbox.xml`,
     `${BASE_URL}/sitemap-compare.xml`,
     `${BASE_URL}/sitemap-alternatives.xml`,
-    `${BASE_URL}/sitemap-guides.xml`,
+    // No sitemap-guides.xml: guides are a hidden noindex section (owner
+    // decision) and must stay out of the sitemap.
     `${BASE_URL}/sitemap-convert.xml`,
   ];
 
