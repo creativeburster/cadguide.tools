@@ -33,7 +33,7 @@
 - [x] **Day 11**：Pinterest CAD Resources Board 创建 (DA 94 - *已于 2026-06-04 完成*)
 - [x] **Day 12**：About.me 个人页面与外链锚点 (DA 92 - *已于 2026-06-15 完成*)
 - [x] **Day 13**：Gravatar 个人资料外链 (DA 90 - *已于 2026-06-04 完成*)
-- [ ] **Day 14 (📍今日进行)**：Slant.co "AutoCAD 最佳替代品" 社区推荐与回链 (DA 86 | Dofollow)
+- [x] **Day 14 (⚠️ 平台已死)**：Slant.co 返回 SSL 526 错误（证书失效，站点实质不可用），从计划移除，不再追跟
 - [x] **Day 15 (🎉 自动化完成)**：Uneed.best (DA 68 | 顶流独立工具库) 全自动表单注入并提交成功
 - [x] **Day 16 (📋 转付费候选)**：BetaList 草稿 #182866 已 100% 就绪；平台已全面付费化（Lite $39 含 Dofollow DR76），按站长指示转入选购清单，见 docs/paid-listing-candidates.md
 - [x] **Day 17 (🎉 自动化完成)**：Launching Next 表单全自动填写并提交（站长手动点击确认），即时生效
@@ -62,6 +62,9 @@
 
 - [x] **Day 31 (🎉 API 自动发布)**：Dev.to 架构文章 #2《[Parsing AutoCAD DWG Headers in Pure Client-Side JavaScript (Zero Uploads)](https://dev.to/cadguidetools/parsing-autocad-dwg-headers-in-pure-client-side-javascript-zero-uploads-kml)》已成功上线！
 - [x] **Day 32 (🎉 已发布)**：Hashnode Dofollow 文章《[How We Serve 1,000+ Static CAD Pages at Zero Hosting Cost](https://cadguidetools.hashnode.dev/how-we-serve-1-000-static-cad-pages-at-zero-hosting-cost)》已上线（418 词，5 标签 webdev/nextjs/cloudflare/performance/ssg，双链回主页；数据口径已按当前站点实际 1,045 页修正）
+- [x] **Day 22 (🎉 已发布)**：X 品牌帖《AutoCAD $2,030/yr vs GstarCAD $499 once》以 @cadguidetools 身份发布并置顶（定价数据源自 CADGuide 索引）
+- [x] **Day 33 (🎉 已发布)**：Medium《[The Real Cost of CAD: Subscription vs. Perpetual Licensing (2026 Numbers)](https://willsunagency.medium.com/the-real-cost-of-cad-subscription-vs-perpetual-licensing-2026-numbers-53cb5d5e1d73)》— 全部价格取自站点真实索引数据
+- [x] **Day 41 (🎉 提前完成)**：Dev.to《[Cross-Platform CAD Shortcuts: Your Muscle Memory Survives the Switch](https://dev.to/willsun/cross-platform-cad-shortcuts-your-muscle-memory-survives-the-switch-5h6p)》— 基于 shortcuts-data.ts 的 31 条真实命令对比，4 标签
 - [ ] **Day 33**：Medium 深度科普《The Real Cost of CAD: Subscription vs. Perpetual Licensing》
 - [ ] **Day 34**：HackerNoon 投稿《Why CAD Engineers are Moving Away from Monopoly Software》
 - [ ] **Day 35**：Substack 官方 Newsletter 开通与首期《The CAD Optimization Digest #1》
@@ -97,7 +100,7 @@
 
 - [ ] **Day 61**：Reddit 搜索 `r/cad` 关于 "AutoCAD alternative" 提问，发布高赞科普回复
 - [ ] **Day 62**：Reddit 搜索 `r/architecture` 关于 "Cheap CAD for floor plans"，精准解答
-- [ ] **Day 63**：Quora 回答："What is the best free alternative to AutoCAD in 2026?"
+- [x] **Day 63 (🎉 提前完成)**：Quora 回答《[What is the best free alternative to AutoCAD?](https://www.quora.com/What-is-the-best-free-alternative-to-AutoCAD/answer/Will-Sun-52)》— FreeCAD/LibreCAD/QCAD/Fusion 360/Onshape 免费方案科普 + GstarCAD/ZWCAD 付费替代 + /compare 链接（Will Sun 名下）
 - [ ] **Day 64**：Quora 回答："How do I check which AutoCAD version created a DWG file?"
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
 - [ ] **Day 66**：Stack Overflow / SuperUser 回答关于 DWG 转换与版本兼容性问题
