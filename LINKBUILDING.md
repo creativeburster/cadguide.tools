@@ -180,7 +180,7 @@
 | **AlternativeTo** | `https://alternativeto.net` | `[x] 已提交` | 2026-06-15 | 审核中，约需 1-3 天 |
 | **Product Hunt** | `https://www.producthunt.com` | `[x] 已发布` | 2026-07-02 | 当天生效，DA 91 高流量 |
 | **Slant.co** | `https://www.slant.co` | `[ ] 待提交` | - | 直接关联到 AutoCAD 替代问题 |
-| **BetaList** | `https://betalist.com` | `[ ] 待提交` | - | 免费排队审核较慢 |
+| **BetaList** | `https://betalist.com` | `[~] 平台已付费化` | - | 草稿 #182866 已 100% 就绪；平台取消免费通道（Lite $39 / Standard $99 / Premium $299，均含 Dofollow DR76），待站长决策，详见 [docs/paid-listing-candidates.md](docs/paid-listing-candidates.md) |
 
 ### 阶段 1.5：零等待快速外链
 
@@ -192,10 +192,10 @@
 | **Medium** | `https://medium.com` | `[x] 已创建` | 2026-06-15 | 注册即发，已发布 AutoCAD 选型干货文章 |
 | **HackerNoon** | `https://hackernoon.com` | `[x] 已投稿` | 2026-07-01 | 24h 审核，Dofollow，技术架构文章 |
 | **SaaSHub** | `https://www.saashub.com` | `[x] 已创建` | 2026-06-15 | 1-2 天审核，已完成验证 |
-| **ToolPilot.ai** | `https://www.toolpilot.ai` | `[ ] 待提交` | - | 当天通过 |
+| **ToolPilot.ai** | `https://www.toolpilot.ai` | `[x] 已提交` | 2026-09-07 | Free With Backlink 档，JotForm 全自动提交成功，审核最长 60 天；回链徽章已加入 footer |
 | **SideProjectors** | `https://www.sideprojectors.com` | `[x] 已创建` | 2026-06-15 | 提交成功，已在广场中展示 |
-| **Launching Next** | `https://www.launchingnext.com` | `[ ] 待提交` | - | 即时生效 |
-| **StartupBase** | `https://startupbase.io` | `[ ] 待提交` | - | 即时生效 |
+| **Launching Next** | `https://www.launchingnext.com` | `[x] 已提交` | 2026-09-07 | 表单全自动填写，站长手动点击提交 |
+| **StartupBase** | `https://startupbase.io` | `[~] 草稿就绪` | 2026-09-07 | 草稿 100% Complete（名称/描述/标签/Logo/截图/定价 Free）；选免费档需站点徽章（已备 footer），待部署后点 Free launch 排队 |
 
 ### 阶段 1.5：Profile 外链
 

@@ -116,7 +116,27 @@ export function Footer() {
         </div>
 
         <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-400">
-          <div className="hidden md:block" />
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://startupbase.io/"
+              target="_blank"
+              rel="noopener"
+              aria-label="CADGuide.tools on StartupBase"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/badges/launched-on-sb.svg" alt="Launched on StartupBase" className="h-7 w-auto rounded-md" loading="lazy" />
+            </a>
+            <a
+              href="https://www.toolpilot.ai/"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 rounded-md border border-slate-800 bg-slate-900/60 px-2.5 py-1.5 text-[11px] font-semibold text-slate-300 opacity-80 hover:opacity-100 hover:text-white transition-all"
+            >
+              <span>Featured on</span>
+              <span className="text-blue-400">ToolPilot.AI</span>
+            </a>
+          </div>
           <div className="flex items-center gap-4 justify-center whitespace-nowrap">
             <span>© {new Date().getFullYear()} CADGuide.tools</span>
             <span>•</span>
