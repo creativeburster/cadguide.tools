@@ -69,7 +69,7 @@
 - [ ] **Day 34**：HackerNoon 投稿《Why CAD Engineers are Moving Away from Monopoly Software》
 - [ ] **Day 35**：Substack 官方 Newsletter 开通与首期《The CAD Optimization Digest #1》
 - [ ] **Day 36**：Dev.to 工具软文《How to Parse DWG File Versions in Browser with Zero Server Load》
-- [ ] **Day 37**：LinkedIn Pulse 行业长文《Top 5 AutoCAD Alternatives with Full AutoLISP Support》
+- [~] **Day 37 (📝 文案就绪，站长手动发布)**：LinkedIn Pulse《Top 5 AutoCAD Alternatives with Full AutoLISP Support》— 全文存于 docs/linkedin-article-1.md（5 款 LISP 兼容替代品 + 真实价格，均取自站点索引数据）；站长在自有浏览器发布（LinkedIn 会话在站长的常用浏览器里）
 - [ ] **Day 38**：Hashnode 技术剖析《Client-Side K-Factor Bending Calculations Explained》
 - [ ] **Day 39**：Medium 实操干货《Fixing CAD Fatal Errors: The Complete Diagnostic Blueprint》
 - [ ] **Day 40**：Telegraph / Write.as 纯净匿名技术文档分发
