@@ -62,7 +62,7 @@
 
 - [x] **Day 31 (🎉 API 自动发布)**：Dev.to 架构文章 #2《[Parsing AutoCAD DWG Headers in Pure Client-Side JavaScript (Zero Uploads)](https://dev.to/cadguidetools/parsing-autocad-dwg-headers-in-pure-client-side-javascript-zero-uploads-kml)》已成功上线！
 - [x] **Day 32 (🎉 已发布)**：Hashnode Dofollow 文章《[How We Serve 1,000+ Static CAD Pages at Zero Hosting Cost](https://cadguidetools.hashnode.dev/how-we-serve-1-000-static-cad-pages-at-zero-hosting-cost)》已上线（418 词，5 标签 webdev/nextjs/cloudflare/performance/ssg，双链回主页；数据口径已按当前站点实际 1,045 页修正）
-- [x] **Day 22 (🎉 已发布)**：X 品牌帖《AutoCAD $2,030/yr vs GstarCAD $499 once》以 @cadguidetools 身份发布并置顶（定价数据源自 CADGuide 索引）
+- [~] **Day 22 (⚠️ 账号受限)**：X 品牌帖内容已备好但发布被 X 软拦截（@dahuanshi 为 0 粉新号，测试帖也被静默吞掉）。**建议**：站长在常用浏览器人工养号数日（关注/点赞/互动）后手动发布；或在 X 设置把用户名改为 @cadguidetools（需密码）与 StartupBase maker 档案对齐；推文文案见 docs/paid-listing-candidates.md 同期记录
 - [x] **Day 33 (🎉 已发布)**：Medium《[The Real Cost of CAD: Subscription vs. Perpetual Licensing (2026 Numbers)](https://willsunagency.medium.com/the-real-cost-of-cad-subscription-vs-perpetual-licensing-2026-numbers-53cb5d5e1d73)》— 全部价格取自站点真实索引数据
 - [x] **Day 41 (🎉 提前完成)**：Dev.to《[Cross-Platform CAD Shortcuts: Your Muscle Memory Survives the Switch](https://dev.to/willsun/cross-platform-cad-shortcuts-your-muscle-memory-survives-the-switch-5h6p)》— 基于 shortcuts-data.ts 的 31 条真实命令对比，4 标签
 - [ ] **Day 33**：Medium 深度科普《The Real Cost of CAD: Subscription vs. Perpetual Licensing》
