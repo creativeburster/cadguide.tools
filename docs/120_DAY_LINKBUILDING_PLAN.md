@@ -66,7 +66,7 @@
 - [x] **Day 33 (🎉 已发布)**：Medium《[The Real Cost of CAD: Subscription vs. Perpetual Licensing (2026 Numbers)](https://willsunagency.medium.com/the-real-cost-of-cad-subscription-vs-perpetual-licensing-2026-numbers-53cb5d5e1d73)》— 全部价格取自站点真实索引数据
 - [x] **Day 41 (🎉 提前完成)**：Dev.to《[Cross-Platform CAD Shortcuts: Your Muscle Memory Survives the Switch](https://dev.to/willsun/cross-platform-cad-shortcuts-your-muscle-memory-survives-the-switch-5h6p)》— 基于 shortcuts-data.ts 的 31 条真实命令对比，4 标签
 - [ ] **Day 33**：Medium 深度科普《The Real Cost of CAD: Subscription vs. Perpetual Licensing》
-- [ ] **Day 34**：HackerNoon 投稿《Why CAD Engineers are Moving Away from Monopoly Software》
+- [~] **Day 34 (📝 文案就绪，站长手动提交)**：HackerNoon《Building a Niche SaaS Directory With Next.js and Zero Infrastructure》— 全文存于 docs/hackernoon-article-1.md（已按 1,045 页/170+ 工具/480+ 工具箱的真实口径重写）；站长在自有浏览器提交（HN 会话在站长侧）
 - [ ] **Day 35**：Substack 官方 Newsletter 开通与首期《The CAD Optimization Digest #1》
 - [ ] **Day 36**：Dev.to 工具软文《How to Parse DWG File Versions in Browser with Zero Server Load》
 - [~] **Day 37 (📝 文案就绪，站长手动发布)**：LinkedIn Pulse《Top 5 AutoCAD Alternatives with Full AutoLISP Support》— 全文存于 docs/linkedin-article-1.md（5 款 LISP 兼容替代品 + 真实价格，均取自站点索引数据）；站长在自有浏览器发布（LinkedIn 会话在站长的常用浏览器里）
