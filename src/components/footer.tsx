@@ -118,7 +118,7 @@ export function Footer() {
         <div className="pt-10 border-t border-slate-900 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-[11px] font-medium text-slate-400">
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://startupbase.io/"
+              href="https://startupbase.io/products/cadguide-tools"
               target="_blank"
               rel="noopener"
               aria-label="CADGuide.tools on StartupBase"

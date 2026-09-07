@@ -195,7 +195,7 @@
 | **ToolPilot.ai** | `https://www.toolpilot.ai` | `[x] 已提交` | 2026-09-07 | Free With Backlink 档，JotForm 全自动提交成功，审核最长 60 天；回链徽章已加入 footer |
 | **SideProjectors** | `https://www.sideprojectors.com` | `[x] 已创建` | 2026-06-15 | 提交成功，已在广场中展示 |
 | **Launching Next** | `https://www.launchingnext.com` | `[x] 已提交` | 2026-09-07 | 表单全自动填写，站长手动点击提交 |
-| **StartupBase** | `https://startupbase.io` | `[~] 草稿就绪` | 2026-09-07 | 草稿 100% Complete（名称/描述/标签/Logo/截图/定价 Free）；选免费档需站点徽章（已备 footer），待部署后点 Free launch 排队 |
+| **StartupBase** | `https://startupbase.io` | `[x] 已上线` | 2026-09-07 | 站长完成社区任务（3 赞+1 评）并通过徽章验证，加入免费优先队列后产品页已公开：https://startupbase.io/products/cadguide-tools；footer 徽章已深链到产品页 |
 
 ### 阶段 1.5：Profile 外链
 

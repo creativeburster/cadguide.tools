@@ -37,7 +37,7 @@
 - [x] **Day 15 (🎉 自动化完成)**：Uneed.best (DA 68 | 顶流独立工具库) 全自动表单注入并提交成功
 - [x] **Day 16 (📋 转付费候选)**：BetaList 草稿 #182866 已 100% 就绪；平台已全面付费化（Lite $39 含 Dofollow DR76），按站长指示转入选购清单，见 docs/paid-listing-candidates.md
 - [x] **Day 17 (🎉 自动化完成)**：Launching Next 表单全自动填写并提交（站长手动点击确认），即时生效
-- [x] **Day 18 (🎉 半自动完成)**：StartupBase 草稿补完至 100%（Logo/截图/标签/Free 定价/发布说明），选免费档（挂徽章排队 4-5 周）；徽章已加入 footer，待部署后点击 Free launch；付费升级选项见 docs/paid-listing-candidates.md
+- [x] **Day 18 (🎉 已上线)**：StartupBase 草稿补完至 100%，站长完成社区任务（3 upvotes + 1 评论）并通过徽章验证，加入免费优先队列，产品页已公开：https://startupbase.io/products/cadguide-tools（footer 徽章已深链该页）；付费升级选项见 docs/paid-listing-candidates.md
 - [ ] **Day 19**：Crunchbase 机构与产品 Profile 创建 (DA 91)
 - [ ] **Day 20**：Wellfound (AngelList) 创业项目 Profile (DA 88)
 - [ ] **Day 21**：Behance UI/UX 设计展示页面与站点回链 (DA 92)
