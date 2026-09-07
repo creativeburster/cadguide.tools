@@ -101,7 +101,8 @@
 - [ ] **Day 61**：Reddit 搜索 `r/cad` 关于 "AutoCAD alternative" 提问，发布高赞科普回复
 - [ ] **Day 62**：Reddit 搜索 `r/architecture` 关于 "Cheap CAD for floor plans"，精准解答
 - [x] **Day 63 (🎉 提前完成)**：Quora 回答《[What is the best free alternative to AutoCAD?](https://www.quora.com/What-is-the-best-free-alternative-to-AutoCAD/answer/Will-Sun-52)》— FreeCAD/LibreCAD/QCAD/Fusion 360/Onshape 免费方案科普 + GstarCAD/ZWCAD 付费替代 + /compare 链接（Will Sun 名下）
-- [ ] **Day 64**：Quora 回答："How do I check which AutoCAD version created a DWG file?"
+- [x] **Day 64 (🎉 提前完成)**：Quora 回答《[How do you check the DWG file version?](https://www.quora.com/How-do-you-check-the-DWG-file-version/answer/Will-Sun-52)》— AC10xx 版本对照表 + DWG Version Checker 工具链接（Will Sun 名下）
+- [x] **Day 64.5 (🎉 自动化补充)**：GitHub Awesome List 补充 PR ×2：[m2n037/awesome-mecheng#73](https://github.com/m2n037/awesome-mecheng/pull/73)（⭐1687，Online Calculators 区块）+ [brandonhimpfen/awesome-mechanical-engineering#23](https://github.com/brandonhimpfen/awesome-mechanical-engineering/pull/23)（CAD 区块）
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
 - [ ] **Day 66**：Stack Overflow / SuperUser 回答关于 DWG 转换与版本兼容性问题
 - [ ] **Day 67**：Reddit `r/3Dprinting` 分享 3D 打印切片与 CAD 导出 STEP/IGES 教程
