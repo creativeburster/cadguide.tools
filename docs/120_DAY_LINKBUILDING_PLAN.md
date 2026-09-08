@@ -104,7 +104,9 @@
 - [x] **Day 64 (🎉 提前完成)**：Quora 回答《[How do you check the DWG file version?](https://www.quora.com/How-do-you-check-the-DWG-file-version/answer/Will-Sun-52)》— AC10xx 版本对照表 + DWG Version Checker 工具链接（Will Sun 名下）
 - [x] **Day 64.5 (🎉 自动化补充)**：GitHub Awesome List 补充 PR ×2：[m2n037/awesome-mecheng#73](https://github.com/m2n037/awesome-mecheng/pull/73)（⭐1687，Online Calculators 区块）+ [brandonhimpfen/awesome-mechanical-engineering#23](https://github.com/brandonhimpfen/awesome-mechanical-engineering/pull/23)（CAD 区块）
 - [x] **Day 37.5 (🎉 已提交)**：SaaSHub 竞品关系提交成功——CADGuide.tools 关联 AlternativeTo + Capterra（诚实原则：不虚标 AutoCAD 等绘图软件为"可被替代"，改列真实同类对比平台）；Dev.to 第二篇《[We Shipped 480+ Single-Page Engineering Calculators](https://dev.to/willsun/we-shipped-480-single-page-engineering-calculators-heres-the-playbook-40eg)》已上线
+- [x] **Day 37.5 (🎉 已提交)**：SaaSHub 竞品关系提交成功——CADGuide.tools 关联 AlternativeTo + Capterra（诚实原则：不虚标 AutoCAD 等绘图软件为"可被替代"，改列真实同类对比平台）；Dev.to 第二篇《[We Shipped 480+ Single-Page Engineering Calculators](https://dev.to/willsun/we-shipped-480-single-page-engineering-calculators-heres-the-playbook-40eg)》已上线
 - [x] **Day 79.5 (🎉 已发布)**：Medium 第二篇《["Free" CAD: What You Actually Get (and Don't) in Every Free Tier](https://willsunagency.medium.com/free-cad-what-you-actually-get-and-dont-in-every-free-tier-70913e312210)》— 开源/免费增值/个人许可三类免费方案横评（FreeCAD/LibreCAD/QCAD/nanoCAD/Fusion 360/Onshape），数据取自站点索引
+- [~] **Day 79.6 (⏳ 草稿就绪，24h 限额待发布)**：Medium 第三篇《AutoCAD on macOS: What Works, What's Missing, and What Mac Users Actually Run》— macOS 原生 CAD 工具盘点（BricsCAD/DraftSight/Rhino/Fusion/Shapr3D/FreeCAD），草稿已存（标题+副标题已校准）；触发 Medium **2 篇/24h 发布限额**，2026-09-09 限额重置后发布：打开草稿 → Publish → 加话题（建议 Technology/Engineering/Software/Design）→ 确认即可
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
 - [ ] **Day 66**：Stack Overflow / SuperUser 回答关于 DWG 转换与版本兼容性问题
 - [ ] **Day 67**：Reddit `r/3Dprinting` 分享 3D 打印切片与 CAD 导出 STEP/IGES 教程
