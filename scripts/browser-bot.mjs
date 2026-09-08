@@ -89,6 +89,40 @@ async function handle(body) {
     await state.page.waitForTimeout(body.ms || 800);
     return { clicked: true, x: body.x, y: body.y };
   }
+  if (a === 'typeReal') {
+    const loc = state.page.locator(body.selector).first();
+    await loc.click({ timeout: 8000 });
+    await state.page.keyboard.type(body.text, { delay: Number(body.delay) || 40 });
+    if (body.enter) await state.page.keyboard.press('Enter');
+    await state.page.waitForTimeout(body.ms || 600);
+    return { typed: body.text };
+  }
+  if (a === 'keys') {
+    for (const k of body.keys || []) {
+      await state.page.keyboard.press(k);
+      await state.page.waitForTimeout(120);
+    }
+    await state.page.waitForTimeout(body.ms || 500);
+    return { pressed: body.keys };
+  }
+  if (a === 'pages') {
+    if (!state.context) return { pages: [] };
+    const pages = [];
+    for (const [i, p] of (await state.context.pages()).entries()) {
+      let title = '';
+      try { title = await p.title(); } catch {}
+      pages.push({ i, url: p.url().slice(0, 90), title: title.slice(0, 50) });
+    }
+    return { pages };
+  }
+  if (a === 'switch') {
+    const pages = state.context ? await state.context.pages() : [];
+    const p = pages[Number(body.index) || 0];
+    if (!p) throw new Error('no such page');
+    state.page = p;
+    await p.bringToFront().catch(() => {});
+    return pageState();
+  }
   if (a === 'state') return pageState();
   if (a === 'shot') {
     const file = path.join(LOG_DIR, `${body.name || 'shot'}.png`);
