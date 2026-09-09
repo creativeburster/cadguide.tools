@@ -109,6 +109,10 @@
 - [x] **Day 37.5 (🎉 已提交)**：SaaSHub 竞品关系提交成功——CADGuide.tools 关联 AlternativeTo + Capterra（诚实原则：不虚标 AutoCAD 等绘图软件为"可被替代"，改列真实同类对比平台）；Dev.to 第二篇《[We Shipped 480+ Single-Page Engineering Calculators](https://dev.to/willsun/we-shipped-480-single-page-engineering-calculators-heres-the-playbook-40eg)》已上线
 - [x] **Day 37.5 (🎉 已提交)**：SaaSHub 竞品关系提交成功——CADGuide.tools 关联 AlternativeTo + Capterra（诚实原则：不虚标 AutoCAD 等绘图软件为"可被替代"，改列真实同类对比平台）；Dev.to 第二篇《[We Shipped 480+ Single-Page Engineering Calculators](https://dev.to/willsun/we-shipped-480-single-page-engineering-calculators-heres-the-playbook-40eg)》已上线
 - [x] **Day 79.5 (🎉 已发布)**：Medium 第二篇《["Free" CAD: What You Actually Get (and Don't) in Every Free Tier](https://willsunagency.medium.com/free-cad-what-you-actually-get-and-dont-in-every-free-tier-70913e312210)》— 开源/免费增值/个人许可三类免费方案横评（FreeCAD/LibreCAD/QCAD/nanoCAD/Fusion 360/Onshape），数据取自站点索引
+- [x] **Day 40.5 (🎉 已发布)**：Telegraph《2026 CAD Pricing Cheat Sheet: Subscription vs Perpetual》快速参考页 https://telegra.ph/2026-CAD-Pricing-Cheat-Sheet-Subscription-vs-Perpetual-09-09 （无需注册秒发）
+- [x] **Day 37.6 (📝 投稿包就绪)**：CAD 垂直媒体投稿包 docs/cad-media-outreach.md — DEVELOP3D / Cadalyst / UPFRONT.eZine(Ralph Grabowski) / AEC Magazine 四家定制角度 + 英文 pitch 模板，站长从 contact@ 邮箱手动发送
+- [~] **Day 96 (⚠️ 需站长注册)**：Capterra / G2 免费收录需 Vendor 账号（Gartner Digital Markets，企业邮箱验证），站长注册后提交；SourceForge 手动 listing 文案已在投稿包内
+
 - [~] **Day 79.7 (⏳ Hashnode 浏览器流程彻底失败 ×2)**：免费 CAD 横评 + 三工具对比文两次经浏览器自动发布的稿子均静默丢失（/edit 可开但公开页 404、不进 sitemap/RSS）——**结论：放弃 Hashnode 浏览器自动化，改用 GraphQL API + PAT 重发**（需站长生成 PAT）。三工具对比文全文已存 docs/hashnode-article-3-draft.md 备用；：Medium 第三篇《AutoCAD on macOS: What Works, What's Missing, and What Mac Users Actually Run》— macOS 原生 CAD 工具盘点（BricsCAD/DraftSight/Rhino/Fusion/Shapr3D/FreeCAD），草稿已存（标题+副标题已校准）；触发 Medium **2 篇/24h 发布限额**，2026-09-09 限额重置后发布：打开草稿 → Publish → 加话题（建议 Technology/Engineering/Software/Design）→ 确认即可
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
 - [ ] **Day 66**：Stack Overflow / SuperUser 回答关于 DWG 转换与版本兼容性问题
