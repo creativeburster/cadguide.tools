@@ -130,7 +130,7 @@
 - [ ] **Day 82**：Quora 回答："What are the best shortcuts to speed up CAD drafting?"
 - [ ] **Day 83**：Eng-Tips 论坛（工程顶级论坛）合规探讨与排错分享
 - [ ] **Day 84**：Reddit `r/BIM` 回答关于 IFC 与 DWG 协同图元丢失问题
-- [ ] **Day 85**：Quora 回答："How to convert newer DWG to older DWG format for free?"
+- [x] **Day 85 (🎉 提前完成)**：Quora 回答《[Can we edit AutoCAD drawings of the newer version in the older version?](https://www.quora.com/Can-we-edit-AutoCAD-drawings-of-the-newer-version-in-the-older-version/answer/Will-Sun-52)》— AC10xx 版本码原理 + 四种降版本方案 + DWG Version Checker 导流
 - [ ] **Day 86**：3DCADForums 注册并参与替代方案热帖探讨
 - [ ] **Day 87**：Reddit `r/freelance` 自由建筑师/设计师软件成本控制讨论
 - [ ] **Day 88**：Quora 回答："What is the difference between perpetual and subscription CAD?"
