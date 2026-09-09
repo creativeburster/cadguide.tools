@@ -31,9 +31,11 @@ async function contextAlive() {
 
 async function ensureBrowser() {
   if (await contextAlive()) return;
+  // 默认无头；BOT_HEADLESS=0 时切有头（用于需要人机交互验证码的场景）
+  const headless = process.env.BOT_HEADLESS !== '0';
   state.context = await chromium.launchPersistentContext(SESSION_DIR, {
     channel: 'msedge',
-    headless: true, // 无头模式：省内存、不干扰站长（站长指示 2026-09-10）
+    headless,
     slowMo: 40,
     viewport: { width: 1380, height: 920 },
     userAgent:
