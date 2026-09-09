@@ -33,9 +33,11 @@ async function ensureBrowser() {
   if (await contextAlive()) return;
   state.context = await chromium.launchPersistentContext(SESSION_DIR, {
     channel: 'msedge',
-    headless: false,
+    headless: true, // 无头模式：省内存、不干扰站长（站长指示 2026-09-10）
     slowMo: 40,
     viewport: { width: 1380, height: 920 },
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0',
     args: [
       '--disable-blink-features=AutomationControlled',
       '--no-first-run',
