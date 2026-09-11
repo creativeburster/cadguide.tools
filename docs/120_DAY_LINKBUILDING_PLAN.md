@@ -47,6 +47,8 @@
 - [ ] **Day 25**：SourceForge 开放目录收录申请 (DA 91 | Dofollow)
 - [ ] **Day 26**：Futurepedia / There's An AI For That 相关工具板块提交 (DA 78)
 - [ ] **Day 27**：Trustpilot / Sitejabber 品牌点评页创建 (DA 90+)
+> ⚠️ **2026-09-10 更新：GitHub 账号 gstar-byte 被 flagged**——本节所有 PR 外链视为失效（对外隐藏）。站长可从 GitHub Settings → 联系 Support 申诉复审；解封前不做任何 GitHub 操作。
+
 - [x] **Day 23 (🎉 自动化完成)**：向 GitHub 顶级设计仓库 `goabstract/Awesome-Design-Tools` (⭐ 40.9k+ Stars) 提交收录 PR ([PR #587](https://github.com/goabstract/Awesome-Design-Tools/pull/587))
 - [x] **Day 24 (🎉 自动化完成)**：向专业 CAD 生态仓库 `mlightcad/awesome-cad` 提交工具收录 PR ([PR #8](https://github.com/mlightcad/awesome-cad/pull/8))
 - [x] **Day 25 (🎉 自动化完成)**：向出海独立开发者工具库 `iAmCorey/awesome-indie-hacker-tools` (⭐ 1.4k+ Stars) 提交收录 PR ([PR #172](https://github.com/iAmCorey/awesome-indie-hacker-tools/pull/172))
@@ -111,7 +113,35 @@
 - [x] **Day 79.5 (🎉 已发布)**：Medium 第二篇《["Free" CAD: What You Actually Get (and Don't) in Every Free Tier](https://willsunagency.medium.com/free-cad-what-you-actually-get-and-dont-in-every-free-tier-70913e312210)》— 开源/免费增值/个人许可三类免费方案横评（FreeCAD/LibreCAD/QCAD/nanoCAD/Fusion 360/Onshape），数据取自站点索引
 - [x] **Day 40.5 (🎉 已发布)**：Telegraph《2026 CAD Pricing Cheat Sheet: Subscription vs Perpetual》快速参考页 https://telegra.ph/2026-CAD-Pricing-Cheat-Sheet-Subscription-vs-Perpetual-09-09 （无需注册秒发）
 - [x] **Day 37.6 (📝 投稿包就绪)**：CAD 垂直媒体投稿包 docs/cad-media-outreach.md — DEVELOP3D / Cadalyst / UPFRONT.eZine(Ralph Grabowski) / AEC Magazine 四家定制角度 + 英文 pitch 模板，站长从 contact@ 邮箱手动发送
+- [x] **Day 97 (🎉 已创建)**：Wikidata 结构化条目 [Q141382124](https://www.wikidata.org/wiki/Q141382124) 已创建（label CADGuide.tools / 描述 / P31 website / P856 官网）— 账号 WillSun-CAD（注册邮箱 willpostpony@gmail.com，密码存 scratch/wiki-password.txt）。这是合规的品牌实体建设（喂 Google 知识图谱）；**维基百科正文档需先取得媒体报道**（见 Day 37.6 投稿包），有独立报道后可合规建条
+
 - [~] **Day 96 (⚠️ 需站长注册)**：Capterra / G2 免费收录需 Vendor 账号（Gartner Digital Markets，企业邮箱验证），站长注册后提交；SourceForge 手动 listing 文案已在投稿包内
+
+- [x] **Day 68.5 (🎉 已发布 9/10)**：Dev.to《[GstarCAD vs ZWCAD vs BricsCAD: Choosing the Right AutoCAD Alternative](https://dev.to/willsun/gstarcad-vs-zwcad-vs-bricscad-choosing-the-right-autocad-alternative-2a6k)》三工具对比（表格数据来自站点索引）
+- [x] **Day 59.5 (🎉 已发布 9/10)**：Dev.to《[The Open-Source CAD Ecosystem in 2026](https://dev.to/willsun/the-open-source-cad-ecosystem-in-2026-six-projects-that-matter-47pn)》— FreeCAD/LibreCAD/QCAD/BRL-CAD/LibreDWG/OCCT 六项目盘点
+- [x] **Day 82.5 (🎉 已发布 9/10)**：Quora《[How can I get an alphabetical list of commands and system variables in AutoCAD?](https://www.quora.com/How-can-I-get-an-alphabetical-list-of-commands-and-system-variables-in-AutoCAD/answer/Will-Sun-52)》— PGP/SETVAR/SYSVDLG 三法 + PGP 编辑器导流
+- [x] **Day 85.6 (🎉 已发布 9/10)**：GitHub Gist《[AutoCAD PGP alias starter file](https://gist.github.com/gstar-byte/62d777a2af56d171025f558ef49d8328)》— 字母序 PGP 启动表（公开 Gist，含工具箱导流）
+- [x] **Day 40.7 (🎉 已发布 9/10)**：write.as《[K-Factor and Bend Allowance: the sheet metal math](https://write.as/j9h7a885o7oj2)》+ Telegraph《[Bearing L10 Life Explained](https://telegra.ph/Bearing-L10-Life-Explained-The-Formula-a-Worked-Example-and-the-Fine-Print-09-10)》两篇独立工程数学指南（ProxyAgent 代理方式稳定）。rentry.co Django CSRF 403 放弃
+
+- [~] **Day 40.6 (⚠️ 网络不通)**：Telegraph《DWG Version Codes Quick Reference》— api.telegra.ph 今日直连+代理均被断，网络恢复后可秒发（内容已备 scratch/telegraph-dwg.mjs）
+
+- [x] **Day 85.7 (🎉 已发布 9/10)**：Quora 第六答《[What is the best CAD software for structural engineers?](https://www.quora.com/What-is-the-best-computer-aided-design-CAD-software-for-structural-engineers-out-there-both-free-paid-options-considered/answer/Will-Sun-52)》— unanswered 问题抢到首答（结构工程师工具链：Revit+Robot/Tekla/ETABS/SAP2000/STAAD + 免费方案）
+- [📝] **Day 59.6 (📝 王牌内容暂存，明日 Dev.to 首发)**：《The 2026 CAD Licensing Report: What 164 Tools Tell Us About the Subscription Wave》— 原创数据研究（52% 订阅制 vs 28% 永久制、永久授权中位数 $3,000、macOS 支持率 25%），全部由站点数据库真实计算得出，存 scratch/devto-article6.md
+
+- [x] **Day 82.6 (🎉 已发布 9/10)**：Telegraph《[DWG Version Codes Quick Reference (AC1015–AC1032)](https://telegra.ph/DWG-Version-Codes-Quick-Reference-AC1015AC1032-09-10)》版本码速查页
+- [x] **Day 68.6 (🎉 已发布 9/10)**：Quora《[Which is the best software among SolidWorks, Creo, ProEngineer, Catia, ANSYS and Autodesk 3ds Max?](https://www.quora.com/Which-is-the-best-software-among-SolidWorks-Creo-ProEngineer-Catia-ANSYS-and-Autodesk-3ds-Max/answer/Will-Sun-52)》— 五工具定位澄清（ANSYS 是仿真、3ds Max 是可视化，不是 CAD 竞品）
+- [x] **Day 82.7 (🎉 已发布 9/10)**：Quora《[How can I get an alphabetical list of commands and system variables in AutoCAD?](https://www.quora.com/How-can-I-get-an-alphabetical-list-of-commands-and-system-variables-in-AutoCAD/answer/Will-Sun-52)》— PGP/SETVAR/SYSVDLG 三法
+- [x] **Day 59.5 (🎉 已发布 9/10)**：Dev.to《[The Open-Source CAD Ecosystem in 2026](https://dev.to/willsun/the-open-source-cad-ecosystem-in-2026-six-projects-that-matter-47pn)》— 六项目盘点
+- [x] **Day 68.5 (🎉 已发布 9/10)**：Dev.to《[GstarCAD vs ZWCAD vs BricsCAD](https://dev.to/willsun/gstarcad-vs-zwcad-vs-bricscad-choosing-the-right-autocad-alternative-2a6k)》三工具对比
+
+- [x] **Day 40.8 (🎉 已发布 9/10)**：Telegraph《[5 Free Ways to Check Which AutoCAD Version Created a DWG File](https://telegra.ph/5-Free-Ways-to-Check-Which-AutoCAD-Version-Created-a-DWG-File-09-10)》— 五种免费检查方法（与版本码速查页互补）
+
+## 9/11 批次（11 条 / 5 根域）
+- [x] Medium《[BIM vs CAD](https://willsunagency.medium.com/bim-vs-cad-when-to-move-your-architecture-workflow-up-a-level-3a2034388d07)》+《[Large Assembly Slowdowns](https://willsunagency.medium.com/large-assembly-slowdowns-a-practical-optimization-checklist-for-cad-workstations-b44971cb7c06)》（2/2 限额打满）
+- [x] Dev.to《[Workstation Buyer Guide](https://dev.to/willsun/the-realistic-cad-workstation-buyers-guide-2026-what-actually-matters-12bg)》+《[LISP Migration Checklist](https://dev.to/willsun/migrating-your-autolisp-routines-to-a-new-cad-platform-a-field-checklist-177b)》+《[PDM Alternatives](https://dev.to/willsun/cad-file-version-chaos-managing-drawings-without-a-pdm-system-5607)》（3/3 打满）
+- [x] Quora 三答：[笔记本选型](https://www.quora.com/What-are-the-best-laptops-for-AutoCAD/answer/Will-Sun-52) + [K-factor 原理](https://www.quora.com/What-is-the-K-factor-in-sheet-metal-fabrication/answer/Will-Sun-52) + [大二学生路线](https://www.quora.com/I-am-a-2nd-year-civil-engineering-student-Is-learning-CAD-good-for-me-or-not-What-should-I-learn-in-CAD/answer/Will-Sun-52)（3/3 打满）
+- [x] Telegraph《[Shortcut Migration Cheat Sheet](https://telegra.ph/AutoCAD-to-GstarCADZWCAD-The-Shortcut-Migration-Cheat-Sheet-09-11)》+《[Workstation Priority](https://telegra.ph/CAD-Workstation-Priority-Cheat-Sheet-CPU-RAM-SSD-GPU-In-That-Order-09-11)》
+- [x] write.as《[LibreDWG 三十年](https://write.as/flfvi79xp8m8g)》
 
 - [~] **Day 79.7 (⏳ Hashnode 浏览器流程彻底失败 ×2)**：免费 CAD 横评 + 三工具对比文两次经浏览器自动发布的稿子均静默丢失（/edit 可开但公开页 404、不进 sitemap/RSS）——**结论：放弃 Hashnode 浏览器自动化，改用 GraphQL API + PAT 重发**（需站长生成 PAT）。三工具对比文全文已存 docs/hashnode-article-3-draft.md 备用；：Medium 第三篇《AutoCAD on macOS: What Works, What's Missing, and What Mac Users Actually Run》— macOS 原生 CAD 工具盘点（BricsCAD/DraftSight/Rhino/Fusion/Shapr3D/FreeCAD），草稿已存（标题+副标题已校准）；触发 Medium **2 篇/24h 发布限额**，2026-09-09 限额重置后发布：打开草稿 → Publish → 加话题（建议 Technology/Engineering/Software/Design）→ 确认即可
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
