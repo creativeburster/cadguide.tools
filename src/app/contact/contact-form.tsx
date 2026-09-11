@@ -2,12 +2,23 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export function ContactBody() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [subject, setSubject] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlSubject = params.get('subject');
+      if (urlSubject) {
+        setSubject(urlSubject);
+      }
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -150,7 +161,14 @@ export function ContactBody() {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700 ml-1">Subject</label>
-                <Input name="subject" placeholder="Inquiry about..." className="h-12 rounded-xl" required />
+                <Input 
+                  name="subject" 
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  placeholder="Inquiry about..." 
+                  className="h-12 rounded-xl" 
+                  required 
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700 ml-1">Message</label>
