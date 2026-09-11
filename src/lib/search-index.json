@@ -3376,6 +3376,27 @@
     "country": "India"
   },
   {
+    "id": "t248",
+    "name": "Accelygen",
+    "slug": "accelygen",
+    "short_desc": "Cloud PLM and BOM management software for fast-moving hardware teams.",
+    "score": 4.3,
+    "logo_url": "/logos/accelygen.png",
+    "official_url": "https://www.accelygen.com",
+    "category_id": "c7",
+    "category_name": "Specialized",
+    "aliases": [],
+    "industries": [
+      "Hardware Startups",
+      "Consumer Electronics",
+      "Robotics",
+      "Industrial Equipment",
+      "Contract Manufacturing"
+    ],
+    "features": [],
+    "country": "Australia"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",

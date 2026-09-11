@@ -2002,7 +2002,7 @@ export const c6Tools: Tool[] = [
   country: "Ukraine",
   category_id: "c6",
   pricing_type: "Perpetual",
-  starting_price: 145,
+  starting_price: 75,
   price_period: "one-time",
 
   platforms: [
@@ -2032,20 +2032,84 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://diptrace.com",
-  pricing_url: "https://diptrace.com",
+  pricing_url: "https://diptrace.com/buy/commercial-editions/",
   affiliate_url: null,
   score: 4.4,
 
+  pricing_tiers: [
+    {
+      name: "Starter",
+      price: "75",
+      period: "one-time",
+      features: [
+        "Perpetual commercial license",
+        "Up to 300 pins limit",
+        "2 signal layers",
+        "Unlimited plane layers (power/ground)",
+        "3D preview and STEP export"
+      ]
+    },
+    {
+      name: "Lite",
+      price: "145",
+      period: "one-time",
+      features: [
+        "Perpetual commercial license",
+        "Up to 500 pins limit",
+        "2 signal layers",
+        "Unlimited plane layers",
+        "Shape-based autorouter"
+      ]
+    },
+    {
+      name: "Standard",
+      price: "395",
+      period: "one-time",
+      is_popular: true,
+      features: [
+        "Perpetual commercial license",
+        "Up to 1,000 pins limit",
+        "4 signal layers",
+        "Unlimited plane layers",
+        "Differential pair & length matching"
+      ]
+    },
+    {
+      name: "Extended",
+      price: "695",
+      period: "one-time",
+      features: [
+        "Perpetual commercial license",
+        "Up to 2,000 pins limit",
+        "6 signal layers",
+        "Unlimited plane layers",
+        "Full high-density interconnect routing"
+      ]
+    },
+    {
+      name: "Full",
+      price: "995",
+      period: "one-time",
+      features: [
+        "Perpetual commercial license",
+        "Unlimited pins",
+        "Unlimited signal & plane layers",
+        "Full capability without design limits",
+        "Priority technical support"
+      ]
+    }
+  ],
+
   pros: [
-    "Perpetual license at ~$300 for the Standard edition",
-    "Friendly learning curve",
-    "Free Starter edition for non-profit use"
+    "True perpetual license starting at just $75 with no subscriptions",
+    "Friendly learning curve and intuitive modern interface",
+    "Non-profit & academic discounts available for students and makers"
   ],
 
   cons: [
-    "Not aimed at high-speed digital or RF",
-    "Smaller ecosystem than KiCad / Altium",
-    "Limited team-collaboration features"
+    "Not aimed at ultra-high-speed RF/microwave PCB design",
+    "Smaller ecosystem than Altium / KiCad",
+    "Limited cloud team-collaboration features"
   ],
 
   tech_specs: {
@@ -2068,7 +2132,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does DipTrace cost?",
-      a: "DipTrace starts at $145 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "DipTrace starts at $75 for the Starter edition (300 pins / 2 signal layers) on a perpetual buyout license. Higher tiers scale to Lite ($145), Standard ($395), Extended ($695), and Full ($995 for unlimited pins). There are no mandatory monthly or annual subscription fees."
     },
     {
       q: "Is there a free version of DipTrace?",
@@ -2165,8 +2229,8 @@ export const c6Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2026-09-02",
-  version: "2024"
+  last_updated: "2026-09-11",
+  version: "5.1"
 },
 {
   id: "t201",

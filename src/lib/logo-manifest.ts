@@ -5,6 +5,7 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "3dexperience": "3dexperience.png",
   "3ds-max": "3ds-max.svg",
   "abaqus": "abaqus.png",
+  "accelygen": "accelygen.png",
   "actcad": "actcad.png",
   "alias-autostudio": "alias-autostudio.svg",
   "alibre-design": "alibre-design.png",

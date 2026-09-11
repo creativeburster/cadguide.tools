@@ -4124,4 +4124,167 @@ export const c7Tools: Tool[] = [
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
   last_updated: "2026-09-02"
 },
+{
+  id: "t248",
+  name: "Accelygen",
+  slug: "accelygen",
+  logo_url: "/logos/accelygen.png",
+  short_desc: "Cloud PLM and BOM management software for fast-moving hardware teams.",
+  description: "Accelygen helps hardware teams move from CAD and spreadsheet BOMs into structured parts, assemblies, suppliers, RFQs, costs, procurement, and build-readiness workflows in one connected product record.",
+  country: "Australia",
+  category_id: "c7",
+  pricing_type: "Subscription",
+  starting_price: 0,
+  quote_only: true,
+  free_trial_days: 14,
+  price_period: "month",
+
+  platforms: [
+    "Web",
+    "Cloud"
+  ],
+
+  industries: [
+    "Hardware Startups",
+    "Consumer Electronics",
+    "Robotics",
+    "Industrial Equipment",
+    "Contract Manufacturing"
+  ],
+
+  core_features: [
+    "Single connected product record",
+    "Multi-level BOM & assembly tree management",
+    "CAD-to-BOM import and part tracking",
+    "Supplier, RFQ & procurement workflows",
+    "Cost rollups and build-readiness checks",
+    "Cloud collaboration without spreadsheet chaos"
+  ],
+
+  user_scales: [
+    "Hardware Startups",
+    "SMB Engineering Teams",
+    "Rapid Prototyping Teams"
+  ],
+
+  official_url: "https://www.accelygen.com",
+  pricing_url: "https://www.accelygen.com",
+  affiliate_url: null,
+  score: 4.3,
+
+  pros: [
+    "Eliminates spreadsheet BOM chaos with an intuitive, connected product record",
+    "Tailored specifically for agile hardware startups and rapid prototyping teams",
+    "Unifies BOM structure, RFQs, suppliers, and procurement into one workspace"
+  ],
+
+  cons: [
+    "Newer platform with an evolving third-party integration ecosystem",
+    "Cloud-first focus may not fit air-gapped on-premise defense environments",
+    "Custom enterprise quotes required for high-volume manufacturing deployments"
+  ],
+
+  tech_specs: {
+    engine: "Cloud-native PLM",
+    multicore: "Cloud",
+    gpu_optimization: "N/A",
+    standards: [
+      "STEP",
+      "CSV/Excel BOM",
+      "REST API"
+    ]
+  },
+
+  expert_verdict: "A modern, lightweight cloud PLM built to rescue hardware startups from spreadsheet hell, streamlining the bridge between CAD models and contract manufacturing.",
+
+  faqs: [
+    {
+      q: "What is Accelygen used for?",
+      a: "Accelygen is a cloud-based PLM and BOM management platform built for agile hardware startups and engineering teams. It organizes CAD assemblies, parts, suppliers, RFQs, and build-readiness workflows into a single connected product record."
+    },
+    {
+      q: "How does Accelygen compare to traditional enterprise PLM systems?",
+      a: "Unlike legacy enterprise PLM suites (such as Teamcenter or Windchill) that require months of deployment and complex IT overhead, Accelygen is lightweight, cloud-native, and designed to replace spreadsheet BOMs with minimal setup friction."
+    },
+    {
+      q: "Does Accelygen offer a free trial?",
+      a: "Yes, Accelygen offers a free evaluation trial for hardware teams to test BOM imports, supplier tracking, and part management workflows."
+    },
+    {
+      q: "What operating systems does Accelygen support?",
+      a: "Accelygen is a cloud-native SaaS application accessible via modern web browsers on Windows, macOS, and Linux."
+    },
+    {
+      q: "Which file formats and CAD integrations does Accelygen support?",
+      a: "Accelygen supports standard BOM formats including CSV, Excel, and CAD assembly metadata structures, enabling smooth handoff from tools like Onshape, SolidWorks, and Fusion 360 to contract manufacturers."
+    },
+    {
+      q: "What are the best alternatives to Accelygen?",
+      a: "The closest alternatives in the cloud BOM and lightweight PLM space include Duro, OpenBOM, Arena PLM, and Propel. The right choice depends on team size, CAD integrations, and whether you need end-to-end ERP linkage."
+    }
+  ],
+
+  alternatives: [
+    "onshape",
+    "solidworks",
+    "fusion-360"
+  ],
+
+  detailed_features: [
+    {
+      category: "BOM Management",
+      items: [
+        {
+          name: "Multi-level BOM tree",
+          status: true
+        },
+        {
+          name: "CAD metadata import",
+          status: true
+        },
+        {
+          name: "Part revision control",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Procurement & Sourcing",
+      items: [
+        {
+          name: "Supplier management",
+          status: true
+        },
+        {
+          name: "RFQ tracking",
+          status: true
+        },
+        {
+          name: "Cost rollups",
+          status: true
+        }
+      ]
+    },
+    {
+      category: "Manufacturing Readiness",
+      items: [
+        {
+          name: "Build-readiness checks",
+          status: true
+        },
+        {
+          name: "Assembly handoff",
+          status: true
+        },
+        {
+          name: "Cloud team collaboration",
+          status: true
+        }
+      ]
+    }
+  ],
+
+  version: "Cloud SaaS",
+  last_updated: "2026-09-11"
+}
 ];
