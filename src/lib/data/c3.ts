@@ -741,6 +741,42 @@ export const c3Tools: Tool[] = [
   starting_price: 1530,
   price_period: "year",
   platforms: ["Windows", "macOS"],
+
+  file_formats_in: [
+    "VWX",
+    "DWG",
+    "DXF",
+    "DWT",
+    "IFC",
+    "IFCZIP",
+    "RVT",
+    "RFA",
+    "SKP",
+    "3DM",
+    "OBJ",
+    "STEP",
+    "IGES",
+    "PDF",
+    "SHP",
+  ],
+
+  file_formats_out: [
+    "VWX",
+    "DWG",
+    "DXF",
+    "DWT",
+    "IFC",
+    "3D PDF",
+    "OBJ",
+    "STEP",
+    "IGES",
+    "STL",
+    "3DM",
+    "KML",
+    "PDF",
+    "SVG",
+  ],
+
   industries: ["Architecture", "Landscape", "Entertainment"],
 
   core_features: [

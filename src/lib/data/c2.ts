@@ -289,7 +289,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
-  starting_price: 129,
+  starting_price: 119,
   price_period: "year",
   platforms: ["Windows", "macOS", "Web", "Android", "iOS"],
   industries: ["Architecture", "Interior Design", "Landscape"],
@@ -1051,7 +1051,7 @@ export const c2Tools: Tool[] = [
   country: "France",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 7080,
+  starting_price: 2700,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Aerospace", "Automotive", "Shipbuilding"],
@@ -1639,17 +1639,27 @@ export const c2Tools: Tool[] = [
 
   pricing_tiers: [
     {
+      name: "Foundation",
+      price: "1,320",
+      period: "/yr",
+      features: [
+        "Part & Assembly Modeling",
+        "Synchronous Technology",
+        "Automated 2D Drawings",
+        "Sheet Metal Design",
+      ],
+      is_popular: false,
+    },
+    {
       name: "Classic (Annual)",
       price: "2,500",
       period: "/yr",
-
       features: [
-        "Synchronous Technology",
-        "Advanced Assemblies",
-        "Sheet Metal",
-        "Simulation",
+        "All Foundation features",
+        "Advanced Assembly Tools",
+        "Engineering Reference Lib",
+        "Basic FEA Simulation",
       ],
-
       is_popular: true,
     },
     {
@@ -1722,6 +1732,40 @@ export const c2Tools: Tool[] = [
   starting_price: 1320,
   price_period: "year",
   platforms: ["Windows"],
+
+  file_formats_in: [
+    "PAR",
+    "ASM",
+    "DFT",
+    "PWD",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "JT",
+    "CATPart",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF",
+    "STL",
+  ],
+
+  file_formats_out: [
+    "PAR",
+    "ASM",
+    "DFT",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "JT",
+    "STL",
+    "3MF",
+    "DWG",
+    "DXF",
+    "PDF",
+    "OBJ",
+  ],
+
   industries: ["Mechanical", "Industrial Design"],
 
   core_features: [

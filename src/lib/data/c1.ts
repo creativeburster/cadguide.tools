@@ -380,14 +380,33 @@ export const c1Tools: Tool[] = [
   country: "China",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 999,
+  starting_price: 899,
   price_period: "year",
 
   platforms: [
     "Windows",
-    "Linux",
-    "Android",
-    "iOS"
+    "Linux"
+  ],
+
+  file_formats_in: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "DGN",
+    "SAT",
+    "PDF"
+  ],
+
+  file_formats_out: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "PDF",
+    "DWF",
+    "SAT",
+    "STL",
+    "PNG",
+    "JPG"
   ],
 
   industries: [
@@ -581,6 +600,33 @@ export const c1Tools: Tool[] = [
     "Windows",
     "macOS",
     "Linux"
+  ],
+
+  file_formats_in: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "DGN",
+    "SAT",
+    "STEP",
+    "IGES",
+    "IFC",
+    "SKP",
+    "PDF"
+  ],
+
+  file_formats_out: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "DGN",
+    "SAT",
+    "STEP",
+    "IGES",
+    "IFC",
+    "STL",
+    "PDF",
+    "SVG"
   ],
 
   industries: [
@@ -777,11 +823,38 @@ export const c1Tools: Tool[] = [
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
-  starting_price: 2500,
+  starting_price: 2150,
   price_period: "year",
 
   platforms: [
     "Windows"
+  ],
+
+  file_formats_in: [
+    "DGN",
+    "DWG",
+    "DXF",
+    "STEP",
+    "IGES",
+    "SAT",
+    "OBJ",
+    "SKP",
+    "IFC",
+    "SHP",
+    "PDF"
+  ],
+
+  file_formats_out: [
+    "DGN",
+    "DWG",
+    "DXF",
+    "STEP",
+    "IGES",
+    "SAT",
+    "OBJ",
+    "3D PDF",
+    "U3D",
+    "i-model"
   ],
 
   industries: [
@@ -874,7 +947,7 @@ export const c1Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Professional",
-      price: "249",
+      price: "299",
       period: "/yr",
       features: [
         "API Support",
@@ -886,7 +959,7 @@ export const c1Tools: Tool[] = [
     },
     {
       name: "Premium",
-      price: "549",
+      price: "599",
       period: "/yr",
       features: [
         "3D Modeling",
@@ -969,6 +1042,26 @@ export const c1Tools: Tool[] = [
   platforms: [
     "Windows",
     "macOS"
+  ],
+
+  file_formats_in: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "DGN",
+    "PDF"
+  ],
+
+  file_formats_out: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "PDF",
+    "SAT",
+    "STL",
+    "SVG",
+    "PNG",
+    "JPG"
   ],
 
   industries: [
@@ -1056,6 +1149,45 @@ export const c1Tools: Tool[] = [
   logo_url: "/logos/gstarcad.png",
   short_desc: "High-performance AutoCAD alternative.",
   description: "GstarCAD is built on an independent core, offering 99% compatibility with AutoCAD and superior speed for large drawings.",
+
+  pricing_tiers: [
+    {
+      name: "Standard",
+      price: "499",
+      period: "one-time",
+      features: [
+        "Full 2D Drafting & Annotation",
+        "Dynamic Blocks & LISP Support",
+        "Express Tools & Custom UI",
+        "Perpetual Buyout"
+      ],
+      is_popular: true
+    },
+    {
+      name: "Professional",
+      price: "699",
+      period: "one-time",
+      features: [
+        "All Standard features",
+        "3D ACIS Solid Modeling",
+        "GRX/VBA/.NET/LISP APIs",
+        "Batch Purge & File Compare"
+      ],
+      is_popular: false
+    },
+    {
+      name: "Network Floating",
+      price: "Custom",
+      period: "quote",
+      features: [
+        "Multi-user concurrent license server",
+        "Roaming licenses support",
+        "Enterprise IT deployment"
+      ],
+      is_popular: false
+    }
+  ],
+
   country: "China",
   category_id: "c1",
   pricing_type: "Perpetual",
@@ -1064,6 +1196,27 @@ export const c1Tools: Tool[] = [
 
   platforms: [
     "Windows"
+  ],
+
+  file_formats_in: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "DGN",
+    "SAT",
+    "PDF"
+  ],
+
+  file_formats_out: [
+    "DWG",
+    "DXF",
+    "DWT",
+    "PDF",
+    "DWF",
+    "SAT",
+    "STL",
+    "EMF",
+    "SVG"
   ],
 
   industries: [

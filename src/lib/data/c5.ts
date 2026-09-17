@@ -104,7 +104,7 @@ export const c5Tools: Tool[] = [
   country: "Germany",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 6000,
+  starting_price: 3000,
   price_period: "year",
 
   platforms: [

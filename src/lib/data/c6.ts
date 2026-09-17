@@ -104,7 +104,7 @@ export const c6Tools: Tool[] = [
   country: "USA",
   category_id: "c6",
   pricing_type: "Subscription",
-  starting_price: 3850,
+  starting_price: 3500,
   price_period: "year",
 
   platforms: [
@@ -1645,6 +1645,24 @@ export const c6Tools: Tool[] = [
   logo_url: "/logos/kicad.png",
   short_desc: "Free, open-source professional schematic capture and PCB layout suite.",
   description: "KiCad is the dominant open-source EDA suite — schematic capture, PCB layout, 3D viewer, SPICE simulation, and Gerber output — backed by CERN and used in hardware startups, education, and increasingly serious commercial work.",
+
+  pricing_tiers: [
+    {
+      name: "Community Edition",
+      price: "0",
+      period: "/forever",
+      features: [
+        "Schematic Capture (Eeschema)",
+        "PCB Layout up to 32 copper layers",
+        "Interactive Push & Shove Router",
+        "3D PCB Viewer & Raytracing",
+        "SPICE Simulation & DRC",
+        "Gerber Viewer (GerbView)",
+      ],
+      is_popular: true,
+    },
+  ],
+
   country: "Community/International",
   category_id: "c6",
   pricing_type: "Open Source",
@@ -1654,6 +1672,35 @@ export const c6Tools: Tool[] = [
     "Windows",
     "macOS",
     "Linux"
+  ],
+
+  file_formats_in: [
+    "kicad_pcb",
+    "kicad_sch",
+    "kicad_pro",
+    "SchDoc",
+    "PcbDoc",
+    "EAGLE (BRD/SCH)",
+    "EasyEDA",
+    "DXF",
+    "SVG",
+    "STEP",
+    "IGES",
+  ],
+
+  file_formats_out: [
+    "kicad_pcb",
+    "kicad_sch",
+    "Gerber (RS-274X)",
+    "Excellon Drill",
+    "ODB++",
+    "IPC-2581",
+    "STEP",
+    "VRML",
+    "DXF",
+    "PDF",
+    "SVG",
+    "BOM (CSV)",
   ],
 
   industries: [

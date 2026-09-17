@@ -380,6 +380,20 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare with another tool
                       </Link>
                     </Button>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="rounded-2xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 font-medium h-12 md:h-14 px-3 sm:px-4 text-xs sm:text-sm"
+                    >
+                      <Link
+                        href={`/contact?subject=Data%20Correction%20for%20${encodeURIComponent(tool.name)}`}
+                        title="Found inaccurate specs or pricing? Suggest an edit to our editorial team."
+                        className="flex items-center gap-1.5"
+                      >
+                        <HelpCircle className="w-4 h-4 text-slate-400" />
+                        <span>Spot an error?</span>
+                      </Link>
+                    </Button>
                   </div>
 
                   <div className="flex flex-wrap gap-3">
@@ -612,13 +626,22 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
 
             {/* Tech Specs Section */}
             <section id="specs" className="scroll-mt-36 space-y-6 md:space-y-10">
-              <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
-                  <BarChart3 className="w-6 h-6" />
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-center gap-5">
+                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
+                    <BarChart3 className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+                    Technical Audit
+                  </h2>
                 </div>
-                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
-                  Technical Audit
-                </h2>
+                <Link
+                  href={`/contact?subject=Data%20Correction%20for%20${encodeURIComponent(tool.name)}`}
+                  className="text-xs font-bold text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1.5 bg-slate-50 hover:bg-blue-50 px-3.5 py-2 rounded-xl border border-slate-100"
+                >
+                  <HelpCircle className="w-3.5 h-3.5" />
+                  <span>Spot an inaccuracy? Suggest an edit →</span>
+                </Link>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
