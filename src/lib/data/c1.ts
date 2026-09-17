@@ -3426,4 +3426,101 @@ export const c1Tools: Tool[] = [
   file_formats_in: ["DWG", "DXF", "DWT", "DGN", "PDF"],
   file_formats_out: ["DWG", "DXF", "DWT", "PDF", "SAT", "STL", "SVG", "PNG", "JPG"]
 },
+{
+  id: "t252",
+  name: "AutoCAD LT",
+  slug: "autocad-lt",
+  logo_url: "/logos/autocad.svg",
+  short_desc: "Autodesk's 2D-only drafting subscription at a fraction of full AutoCAD pricing.",
+  description: "AutoCAD LT is Autodesk's 2D drafting and documentation product, built on the same DWG engine as full AutoCAD. It delivers the complete 2D drafting toolset — annotation, blocks, layers, plotting, and DWG/DXF compatibility — while dropping 3D modeling, visualization, and the specialized toolsets, which is what brings the subscription down to roughly a quarter of full AutoCAD pricing. The 2027 release adds Geometry Cleanup tools, Smart Blocks improvements, and the Autodesk Assistant AI, and every LT subscription includes the AutoCAD web and mobile apps.",
+  country: "USA",
+  category_id: "c1",
+  pricing_type: "Subscription",
+  starting_price: 70,
+  price_period: "month",
+  platforms: ["Windows", "macOS", "Web"],
+  industries: ["Architecture", "Engineering", "Construction", "Manufacturing"],
+  core_features: ["2D drafting & documentation", "Native DWG compatibility", "Blocks, layers & annotation", "Web & mobile apps included"],
+  user_scales: ["Individuals", "Small Business", "Mid-Market"],
+  official_url: "https://www.autodesk.com/products/autocad-lt/overview",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
+    "Native DWG workflow at roughly a quarter of full AutoCAD's price",
+    "Same 2D drafting core and file compatibility as full AutoCAD",
+    "Web and mobile apps included in every subscription"
+  ],
+  cons: [
+    "No 3D modeling, visualization, or rendering tools",
+    "Specialized toolsets (Mechanical, Electrical, Architecture) not included",
+    "Subscription only — no perpetual license"
+  ],
+  faqs: [
+    {
+      q: "What is AutoCAD LT used for?",
+      a: "AutoCAD LT is for 2D drafting and documentation — construction documents, floor plans, schematics, and detail drawings — using the same DWG format and drafting tools as full AutoCAD, minus 3D modeling."
+    },
+    {
+      q: "How much does AutoCAD LT cost?",
+      a: "AutoCAD LT costs $70 per month or $540 per year for a single-user subscription; a 3-year subscription runs $1,620 (billed as three annual payments)."
+    },
+    {
+      q: "Is there a free version of AutoCAD LT?",
+      a: "There is no free permanent tier, but Autodesk offers a 30-day free trial, and the AutoCAD web app with limited free viewing is available with an Autodesk account."
+    },
+    {
+      q: "What is the difference between AutoCAD and AutoCAD LT?",
+      a: "LT keeps the full 2D drafting, DWG, and AutoLISP toolset but drops 3D modeling, visualization, and the industry-specific toolsets. The practical difference for most drafting-only seats is price: $540/yr versus $2,030/yr."
+    },
+    {
+      q: "What operating systems does AutoCAD LT support?",
+      a: "AutoCAD LT runs natively on Windows and macOS, and an LT subscription also includes the browser-based AutoCAD web app."
+    },
+    {
+      q: "What are the best alternatives to AutoCAD LT?",
+      a: "BricsCAD Lite, DraftSight, and nanoCAD compete directly in the 2D DWG drafting space, often at lower prices with perpetual options. If your work needs 3D, full AutoCAD or BricsCAD Pro are the upgrade paths — compare them side-by-side on CADGuide."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Monthly",
+      price: "70",
+      period: "/mo",
+      features: [
+        "Full 2D drafting toolset",
+        "Native DWG save",
+        "Web & mobile apps",
+        "Cancel anytime"
+      ]
+    },
+    {
+      name: "Annual",
+      price: "540",
+      period: "/yr",
+      features: [
+        "Everything in Monthly",
+        "Save vs monthly billing",
+        "Autodesk Assistant AI (2027)",
+        "Standard support"
+      ],
+      is_popular: true
+    },
+    {
+      name: "3-Year",
+      price: "1,620",
+      period: "/3yr",
+      features: [
+        "Everything in Annual",
+        "Locked-in pricing",
+        "Three annual payments"
+      ]
+    }
+  ],
+  alternatives: ["autocad", "bricscad", "draftsight"],
+  expert_verdict: "The default choice when the work is 2D documentation and DWG compatibility matters — most drafting-only seats never miss full AutoCAD, and the price gap pays for itself within months.",
+  version: "2027",
+  last_updated: "2026-09-17",
+  file_formats_in: ["DWG", "DXF", "DWT", "DWF"],
+  file_formats_out: ["DWG", "DXF", "DWT", "PDF", "PNG", "JPG"]
+}
 ];

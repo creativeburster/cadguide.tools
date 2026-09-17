@@ -3455,6 +3455,26 @@
     "country": ""
   },
   {
+    "id": "t252",
+    "name": "AutoCAD LT",
+    "slug": "autocad-lt",
+    "short_desc": "Autodesk's 2D-only drafting subscription at a fraction of full AutoCAD pricing.",
+    "score": 4.6,
+    "logo_url": "/logos/autocad.svg",
+    "official_url": "https://www.autodesk.com/products/autocad-lt/overview",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Engineering",
+      "Construction",
+      "Manufacturing"
+    ],
+    "features": [],
+    "country": "USA"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
