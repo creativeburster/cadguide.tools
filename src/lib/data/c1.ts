@@ -2685,9 +2685,11 @@ export const c1Tools: Tool[] = [
       "IFC"
     ]
   },
-  version: "2025",
 
+  version: "2025",
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
+  file_formats_in: ["DWG", "DXF", "TCW", "DGN", "STEP", "IGES", "SAT", "SKP", "PDF"],
+  file_formats_out: ["DWG", "DXF", "TCW", "DGN", "STEP", "IGES", "SAT", "STL", "PDF", "SVG"]
 },
 {
   id: "t88",
@@ -3389,8 +3391,8 @@ export const c1Tools: Tool[] = [
       "PDF"
     ]
   },
-  version: "2025",
 
+  version: "2025",
   expert_verdict: "The undisputed king of cross-platform DWG CAD — desktop, mobile, and cloud in perfect sync.",
 
   pricing_tiers: [
@@ -3419,5 +3421,7 @@ export const c1Tools: Tool[] = [
     }
   ],
 
+  file_formats_in: ["DWG", "DXF", "DWT", "DGN", "PDF"],
+  file_formats_out: ["DWG", "DXF", "DWT", "PDF", "SAT", "STL", "SVG", "PNG", "JPG"]
 },
 ];

@@ -2465,15 +2465,20 @@ export const c2Tools: Tool[] = [
   description:
     "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
 
-  pricing_tiers: [
-    {
-      name: "Open Source",
-      price: "0",
-      period: "/yr",
-      features: ["Full feature set", "Free forever", "No registration"],
-      is_popular: true,
-    },
-  ],
+  pricing_tiers: [{
+    name: "Open Source",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Parametric 2D/3D modeling",
+      "Geometric constraint solver",
+      "Assembly mechanisms",
+      "G-code export"
+    ],
+
+    is_popular: true
+  }],
 
   detailed_features: [
     {
@@ -2537,7 +2542,9 @@ export const c2Tools: Tool[] = [
 
   version: "3.1",
   expert_verdict: "A masterclass in minimalist parametric design.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["DXF", "DWG", "SVG"],
+  file_formats_out: ["STEP", "STL", "OBJ", "DXF", "SVG", "PDF", "EPS"]
 },
 {
   id: "t30",
@@ -2823,7 +2830,9 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["MB", "MA", "FBX", "OBJ", "glTF", "ABC", "USD", "DAE", "3DS"],
+  file_formats_out: ["MB", "MA", "FBX", "OBJ", "glTF", "ABC", "USD", "DAE", "STL"]
 },
 {
   id: "t51",
@@ -3117,21 +3126,56 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Ultra",
     standards: ["STEP", "IGES", "STL"],
   },
+
   version: "2025",
 
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
 
+  quote_only: true,
+  file_formats_in: ["PLY", "OBJ", "STL", "XYZ", "PTX", "E57", "LAS", "STEP", "IGES"],
+
+  file_formats_out: [
+    "STEP",
+    "IGES",
+    "Parasolid (X_T)",
+    "SAT",
+    "SolidWorks LiveTransfer",
+    "Inventor",
+    "Creo",
+    "NX",
+    "CATIA",
+    "STL"
+  ],
+
+  pricing_tiers: [{
+    name: "Design X Commercial",
+    price: "Custom",
+    period: "quote",
+
+    features: [
+      "LiveTransfer to major CAD",
+      "Automated surface fitting",
+      "Point cloud mesh processing",
+      "Parametric hybrid modeling"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t80",
   name: "Alias AutoStudio",
   slug: "alias-autostudio",
+
   logo_url:
     "/logos/alias-autostudio.svg",
+
   short_desc: "Industrial design and automotive styling software.",
+
   description:
     "Alias software provides surfacing, modeling, and visualization tools for industrial, product, and automotive design.",
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
@@ -3139,26 +3183,31 @@ export const c2Tools: Tool[] = [
   price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Automotive", "Industrial Design"],
+
   core_features: [
     "Class-A Surfacing",
     "Conceptual Sketching",
     "VR Visualization",
     "Dynamo Integration",
   ],
+
   user_scales: ["Enterprise", "Design Agencies"],
   official_url: "https://www.autodesk.com/products/alias/overview",
   affiliate_url: null,
   score: 4.9,
+
   pros: [
     "Gold standard for Class-A surfaces",
     "Stunning visualization",
     "Unified design workflow",
   ],
+
   cons: [
     "Extremely high cost",
     "Steepest learning curve in CAD",
     "Niche expertise needed",
   ],
+
   faqs: [
     {
       q: "What is Alias AutoStudio used for?",
@@ -3185,15 +3234,21 @@ export const c2Tools: Tool[] = [
       a: "The closest alternatives within the 3D Modeling space are SolidWorks, PTC Creo, CATIA. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "Alias Core",
     multicore: "High",
     gpu_optimization: "Ultra",
     standards: ["STEP", "IGES", "VDAFS"],
   },
+
   version: "2025",
+
   expert_verdict:
     "The software behind almost every beautiful car you see on the road.",
+
+  file_formats_in: ["WIRE", "STEP", "IGES", "CATPart", "NX", "DWG", "DXF", "FBX", "OBJ"],
+  file_formats_out: ["WIRE", "STEP", "IGES", "CATPart", "NX", "FBX", "OBJ", "STL"]
 },
 {
   id: "t89",
@@ -3271,6 +3326,7 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["STEP", "IGES", "DXF", "STL"],
   },
+
   version: "2025",
 
   expert_verdict:
@@ -3357,6 +3413,31 @@ export const c2Tools: Tool[] = [
     },
   ],
 
+  file_formats_in: [
+    "Z3",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "CATPart",
+    "PRT",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF",
+    "STL"
+  ],
+
+  file_formats_out: [
+    "Z3",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "STL",
+    "3D PDF",
+    "NC (G-Code)",
+    "DWG",
+    "DXF"
+  ]
 },
 {
   id: "t237",
@@ -3810,7 +3891,25 @@ export const c2Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+
+  file_formats_in: [
+    "CATPart",
+    "CATProduct",
+    "PRT",
+    "SLDPRT",
+    "SLDASM",
+    "IPT",
+    "IAM",
+    "STEP",
+    "IGES",
+    "JT",
+    "DWG",
+    "DXF",
+    "STL"
+  ],
+
+  file_formats_out: ["3D PDF", "STEP", "IGES", "STL", "3MF", "HTML", "Images"]
 },
 {
   id: "t246",
@@ -3901,7 +4000,46 @@ export const c2Tools: Tool[] = [
 
   version: "3.25",
   expert_verdict: "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "JT",
+    "ACIS",
+    "Parasolid",
+    "DWG",
+    "DXF",
+    "SolidWorks",
+    "CATIA",
+    "CREO",
+    "Inventor",
+    "Rhino",
+    "IFC",
+    "FBX",
+    "glTF",
+    "OBJ",
+    "STL",
+    "3MF"
+  ],
+
+  file_formats_out: [
+    "STEP",
+    "IGES",
+    "JT",
+    "ACIS",
+    "Parasolid",
+    "DWG",
+    "DXF",
+    "Rhino",
+    "IFC",
+    "FBX",
+    "glTF",
+    "OBJ",
+    "STL",
+    "3MF",
+    "USD"
+  ]
 },
 {
   id: "t117",

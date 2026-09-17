@@ -1012,7 +1012,8 @@ export const c3Tools: Tool[] = [
   version: "X16",
   last_updated: "2025-01-10",
   free_trial_days: 30,
-
+  file_formats_in: ["PLAN", "DWG", "DXF", "SKP", "OBJ", "3DS", "PDF"],
+  file_formats_out: ["PLAN", "DWG", "DXF", "3D PDF", "OBJ", "DAE", "STL", "PDF"]
 },
 {
   id: "t44",
@@ -1247,11 +1248,14 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "Shapefile"],
   },
+
   version: "2025",
 
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
 
+  file_formats_in: ["VWX", "DWG", "DXF", "SHP", "IFC", "SketchUp", "Rhino 3DM", "PDF"],
+  file_formats_out: ["VWX", "DWG", "DXF", "IFC", "SHP", "3D PDF", "KML", "SVG"]
 },
 {
   id: "t94",
@@ -1499,11 +1503,14 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DGN", "DWG", "LandXML"],
   },
+
   version: "2025",
 
   expert_verdict:
     "The definitive platform for highway and infrastructure projects at enterprise scale.",
 
+  file_formats_in: ["DGN", "DWG", "DXF", "LandXML", "IFC", "SHP", "LAS", "LAZ"],
+  file_formats_out: ["DGN", "DWG", "LandXML", "IFC", "i-model", "3D PDF"]
 },
 {
   id: "t139",
@@ -1512,6 +1519,7 @@ export const c3Tools: Tool[] = [
   logo_url: "/logos/cadwork.png",
   short_desc: "CAD/CAM software specialized for timber construction and wood building design.",
   description: "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
+
   pricing_tiers: [
     {
       name: "Standard",
@@ -1528,6 +1536,7 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
   ],
+
   detailed_features: [
     {
       category: "Timber Design",
@@ -1562,6 +1571,7 @@ export const c3Tools: Tool[] = [
       ],
     },
   ],
+
   alternatives: [],
   country: "Switzerland",
   category_id: "c3",
@@ -1575,6 +1585,7 @@ export const c3Tools: Tool[] = [
   official_url: "https://www.cadwork.com/",
   affiliate_url: null,
   score: 3.7,
+
   pros: [
     "Highly specialized solution for timber construction",
     "Seamless CNC machine integration from design to manufacture",
@@ -1582,12 +1593,14 @@ export const c3Tools: Tool[] = [
     "High Swiss engineering reliability and precision",
     "Built-in compliance with Eurocode structural standards",
   ],
+
   cons: [
     "Unsuited for non-timber construction projects",
     "Premium pricing structure",
     "Steep learning curve for specialized workflows",
     "Niche developer and plugin ecosystem",
   ],
+
   faqs: [
     {
       q: "What is cadwork used for?",
@@ -1614,14 +1627,18 @@ export const c3Tools: Tool[] = [
       a: "The closest alternatives within the BIM space are BIMoffice, HiCAD, Renga. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.",
     },
   ],
+
   tech_specs: {
     engine: "cadwork Engine",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
+
   version: "2025",
   expert_verdict: "cadwork is the premier CAD/CAM suite for wood engineering and timber frame design, offering seamless transitions from 3D modeling directly to CNC machinery output. Highly regarded for its Swiss precision and deep integration, it carries a premium price and steep learning curve, making it an essential investment for timber specialists but irrelevant for general contractors.",
+  file_formats_in: ["IFC", "DWG", "DXF", "STEP", "SAT", "PDF"],
+  file_formats_out: ["IFC", "BTL", "BTLx", "DWG", "DXF", "PDF"]
 },
 {
   id: "t140",
@@ -1752,7 +1769,9 @@ export const c3Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["RVT", "DWG", "DXF", "IFC"],
+  file_formats_out: ["RVT", "DWG", "DXF", "IFC", "BCF"]
 },
 {
   id: "t157",
@@ -1879,7 +1898,9 @@ export const c3Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "DDS-CAD is an established MEP BIM solution covering mechanical, electrical, and piping trades. With native energy calculations and solid Nordic market adoption, it is a highly reliable tool. It lacks versatile general architectural modeling, making it a dedicated engineering choice for building systems professionals.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["IFC", "DWG", "DXF", "PDF", "gbXML"],
+  file_formats_out: ["IFC", "DWG", "DXF", "PDF", "BCF"]
 },
 {
   id: "t159",
@@ -2010,7 +2031,9 @@ export const c3Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["Excel", "IFC", "RVT", "PLN"],
+  file_formats_out: ["PDF", "Excel", "XML", "COBie", "IFC"]
 },
 {
   id: "t206",
@@ -2131,7 +2154,9 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["DWG", "DXF", "PCF", "STEP", "IGES", "DGN"],
+  file_formats_out: ["DWG", "DXF", "PCF (Isogen)", "NWC", "PDF"]
 },
 {
   id: "t207",
@@ -2241,7 +2266,10 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  quote_only: true,
+  file_formats_in: ["VUE", "STEP", "IGES", "DWG", "DGN", "MicroStation", "SAT"],
+  file_formats_out: ["VUE", "STEP", "PCF", "DWG", "DGN", "SmartPlant Schema"]
 },
 {
   id: "t208",
@@ -2351,7 +2379,9 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["DWG", "DXF", "PCF", "STEP", "CAESAR II"],
+  file_formats_out: ["DWG", "DXF", "PCF", "CAESAR II", "PV Elite", "PDF"]
 },
 {
   id: "t229",
@@ -2400,8 +2430,8 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "N/A",
     "standards": ["IFC", "RVT", "DWG", "Navisworks NWD"],
   },
-  version: "2025",
 
+  version: "2025",
   "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
 
   faqs: [{
@@ -2461,6 +2491,8 @@ export const c3Tools: Tool[] = [
     },
   ],
 
+  file_formats_in: ["RVT", "DWG", "NWD", "PDF", "IFC", "BCF", "DOCX", "XLSX"],
+  file_formats_out: ["PDF", "BCF", "DWG", "RVT", "NWD", "CSV"]
 },
 {
   id: "t230",
@@ -2569,7 +2601,9 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["IFC", "DWG", "DXF", "RVT", "SKP", "STEP", "PDF", "BCF"],
+  file_formats_out: ["IFC", "BCF", "PDF", "STEP", "DWG"]
 },
 {
   id: "t231",
@@ -2679,7 +2713,9 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["BCF", "BCFZIP", "IFC", "PDF"],
+  file_formats_out: ["BCF", "BCFZIP", "Excel", "PDF"]
 },
 {
   id: "t232",
@@ -2727,9 +2763,10 @@ export const c3Tools: Tool[] = [
     "gpu_optimization": "N/A",
     "standards": ["RVT", "DWG", "IFC"],
   },
-  version: "2025",
 
+  version: "2025",
   "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
+
   faqs: [{
     q: 'What is Autodesk Dynamo used for?',
     a: 'Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM. Autodesk Dynamo is a BIM solution widely adopted in AEC, Construction.',
@@ -2749,7 +2786,9 @@ export const c3Tools: Tool[] = [
     q: 'What are the best alternatives to Autodesk Dynamo?',
     a: 'The closest alternatives within the BIM space are Trimble Connect, BIMcollab, Autodesk Construction Cloud. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
+
   alternatives: ['trimble-connect', 'bimcollab', 'autodesk-construction-cloud'],
+
   detailed_features: [
     {
       category: "Visual Programming",
@@ -2783,7 +2822,10 @@ export const c3Tools: Tool[] = [
         { name: "Package manager", status: true },
       ],
     },
-  ]
+  ],
+
+  file_formats_in: ["DYN", "DYF", "JSON", "SAT", "Excel", "DWG", "RVT"],
+  file_formats_out: ["DYN", "JSON", "SAT", "Excel", "RVT elements", "DWG"]
 },
 {
   id: "t136",
@@ -2953,7 +2995,9 @@ export const c3Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["IFC", "DWG", "DXF", "PDF"],
+  file_formats_out: ["IFC", "DWG", "DXF", "PDF", "BVBS", "CIS/2"]
 },
 {
   id: "t141",
@@ -3123,7 +3167,9 @@ export const c3Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["IFC", "DWG", "DXF", "PDF"],
+  file_formats_out: ["IFC", "NC (Light Steel)", "DWG", "DXF", "PDF"]
 },
 {
   id: "t158",

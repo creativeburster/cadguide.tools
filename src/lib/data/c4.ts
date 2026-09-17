@@ -534,19 +534,20 @@ export const c4Tools: Tool[] = [
   short_desc: "Open-source system for processing 3D meshes.",
   description: "MeshLab is an open-source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.",
 
-  pricing_tiers: [
-    {
-      name: "Community",
-      price: "0",
-      period: "/yr",
-      features: [
-        "Open source",
-        "Mesh editing",
-        "Point cloud"
-      ],
-      is_popular: true
-    }
-  ],
+  pricing_tiers: [{
+    name: "Open Source",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Mesh cleaning & filtering",
+      "Point cloud reconstruction",
+      "3D surface inspection",
+      "Texture mapping"
+    ],
+
+    is_popular: true
+  }],
 
   detailed_features: [
     {
@@ -658,10 +659,10 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
-
-
   last_updated: "2026-08-03",
-  version: "2024.12"
+  version: "2024.12",
+  file_formats_in: ["PLY", "STL", "OBJ", "3DS", "OFF", "PTX", "XYZ", "PTS", "GLTF"],
+  file_formats_out: ["PLY", "STL", "OBJ", "3DS", "OFF", "U3D", "VRML", "DXF"]
 },
 {
   id: "t39",
@@ -794,10 +795,10 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The gateway to reality capture in the BIM world.",
-
-
   last_updated: "2026-09-02",
-  version: "2027"
+  version: "2027",
+  file_formats_in: ["E57", "LAS", "LAZ", "PTX", "PTS", "ZFS", "FLS", "Faro", "Leica"],
+  file_formats_out: ["RCP", "RCS", "E57", "PTS", "PCG", "FBX (Mesh)"]
 },
 {
   id: "t48",
@@ -887,10 +888,25 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The standard for viewing Solid Edge data in production.",
-
-
   last_updated: "2023-04-12",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["PAR", "ASM", "DFT", "STEP", "IGES", "JT", "DWG", "DXF"],
+  file_formats_out: ["Print", "PDF", "BMP", "JPG"],
+
+  pricing_tiers: [{
+    name: "Free Viewer",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "View Solid Edge 3D & 2D",
+      "Cross-section slicing",
+      "Measurement tools",
+      "Free to distribute"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t49",
@@ -980,7 +996,24 @@ export const c4Tools: Tool[] = [
 
   expert_verdict: "The essential utility for DWG version management.",
   last_updated: "2024-11-27",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DWG", "DXF", "DWT"],
+  file_formats_out: ["DWG (R14-2027 conversion)", "PDF", "DWF", "DWFx"],
+
+  pricing_tiers: [{
+    name: "Free Utility",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "100% accurate DWG view",
+      "Batch convert DWG versions",
+      "Plot & publish to PDF",
+      "Geometric measurement"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t53",
@@ -1163,6 +1196,8 @@ export const c4Tools: Tool[] = [
     }
   ],
 
+  file_formats_in: ["DWG", "DXF", "DWT", "DWF"],
+  file_formats_out: ["PDF", "JPG", "PNG", "BMP", "DWG"]
 },
 {
   id: "t93",
@@ -1301,8 +1336,10 @@ export const c4Tools: Tool[] = [
       "DXF"
     ]
   },
-  version: "2025",
 
+  version: "2025",
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
+  file_formats_in: ["DWG", "DXF", "PDF"],
+  file_formats_out: ["PDF", "PNG", "JPG", "DWG"]
 }
 ];

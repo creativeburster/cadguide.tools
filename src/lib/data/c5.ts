@@ -472,19 +472,20 @@ export const c5Tools: Tool[] = [
   short_desc: "Engineering design software for additive manufacturing.",
   description: "nTop uses implicit modeling technology to enable the design of high-performance parts with complex lattices and topology optimization.",
 
-  pricing_tiers: [
-    {
-      name: "Enterprise",
-      price: "7500",
-      period: "/yr",
-      features: [
-        "Full implicit engine",
-        "Lattice design",
-        "Support"
-      ],
-      is_popular: true
-    }
-  ],
+  pricing_tiers: [{
+    name: "nTop Enterprise",
+    price: "Custom",
+    period: "quote",
+
+    features: [
+      "Implicit modeling engine",
+      "Lattice & TPMS generative design",
+      "Topology optimization",
+      "Direct slice export for AM"
+    ],
+
+    is_popular: true
+  }],
 
   detailed_features: [
     {
@@ -613,9 +614,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The future of advanced manufacturing design.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STEP", "Parasolid", "IGES", "STL", "OBJ", "CDB", "INP"],
+  file_formats_out: ["STEP", "Parasolid", "STL", "3MF", "FE Mesh", "CSV"]
 },
 {
   id: "t32",
@@ -747,9 +750,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "iMachining is literal magic for CNC shops.",
-
   last_updated: "2026-09-02",
-  version: "2026"
+  version: "2026",
+  file_formats_in: ["SLDPRT", "SLDASM", "STEP", "IGES", "Parasolid", "DWG", "DXF"],
+  file_formats_out: ["NC (G-Code)", "APT", "CLDATA", "STEP", "STL"]
 },
 {
   id: "t38",
@@ -899,9 +903,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Magics is the industrial benchmark for fixable unprintable meshes.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STL", "3MF", "STEP", "IGES", "Parasolid", "CATPart", "SLDPRT", "OBJ"],
+  file_formats_out: ["STL", "3MF", "CLI", "SLC", "SLI", "Machine build files"]
 },
 {
   id: "t76",
@@ -993,9 +999,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "If you are making plastic injection molds, VISI is your best friend.",
-
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "CATPart", "PRT", "SLDPRT", "DWG", "DXF"],
+  file_formats_out: ["STEP", "IGES", "Parasolid", "NC (G-Code)", "DWG", "DXF"]
 },
 {
   id: "t81",
@@ -1408,7 +1415,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["BDF", "DAT", "STEP", "IGES", "Parasolid", "CATPart"],
+  file_formats_out: ["OP2", "H5", "PCH", "F06", "CSV"]
 },
 {
   id: "t86",
@@ -1636,9 +1646,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
-
   last_updated: "2026-09-02",
-  version: "2026"
+  version: "2026",
+  file_formats_in: ["SLDPRT", "SLDASM", "STEP", "IGES", "Parasolid"],
+  file_formats_out: ["NC (G-Code)", "STEP", "IGES", "STL"]
 },
 {
   id: "t101",
@@ -2028,9 +2039,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "CATPart", "PRT", "SLDPRT", "DWG", "DXF"],
+  file_formats_out: ["STEP", "IGES", "Parasolid", "NC (G-Code)", "DWG", "DXF"]
 },
 {
   id: "t125",
@@ -2231,9 +2243,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
-
   last_updated: "2024-06-19",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "SolidWorks", "Inventor", "DWG", "DXF"],
+  file_formats_out: ["NC (G-Code)", "APT", "PPF", "DXF"]
 },
 {
   id: "t138",
@@ -2432,9 +2445,18 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STEP", "Parasolid", "IGES", "KISSsys", "Excel", "DXF"],
+
+  file_formats_out: [
+    "STEP",
+    "Parasolid",
+    "3D Tooth Profiles",
+    "G-Code (Gear grinding)",
+    "PDF reports"
+  ]
 },
 {
   id: "t149",
@@ -3259,9 +3281,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
-
   last_updated: "2023-04-04",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["CATPart", "STEP", "IGES", "Parasolid", "NX", "Creo", "STL"],
+  file_formats_out: ["NC (G-Code)", "STEP", "IGES", "Parasolid", "STL"]
 },
 {
   id: "t154",
@@ -3460,9 +3484,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "CATPart", "NX", "DWG", "DXF"],
+  file_formats_out: ["NC (G-Code)", "ISO", "WorkNC WP"]
 },
 {
   id: "t155",
@@ -4057,9 +4082,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STEP", "IGES", "CATPart", "Parasolid", "AF"],
+  file_formats_out: ["STEP", "IGES", "AF results", "Compensated CAD", "Reports"]
 },
 {
   id: "t168",
@@ -4258,9 +4285,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["UDM", "STEP", "IGES", "Parasolid", "SAT", "SLDPRT", "IPT", "STL"],
+  file_formats_out: ["MFR", "STEP (Warpage)", "Patran (PAT)", "CSV", "HTML reports"]
 },
 {
   id: "t169",
@@ -4458,9 +4486,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
-
   last_updated: "2024-05-30",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STEP", "IGES", "Parasolid", "STL", "MFE", "NASTRAN"],
+  file_formats_out: ["STEP (Deformed)", "CSV", "PDF", "VRML", "LS-DYNA"]
 },
 {
   id: "t179",
@@ -4659,9 +4689,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "Parasolid", "Rhino 3DM", "SketchUp"],
+  file_formats_out: ["NC (G-Code)", "ANC", "DXF"]
 },
 {
   id: "t180",
@@ -4859,9 +4890,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "SAT", "SolidWorks", "Inventor"],
+  file_formats_out: ["NC (G-Code)", "RAD", "CSV", "PDF"]
 },
 {
   id: "t182",
@@ -5059,9 +5091,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
-
   last_updated: "2023-08-20",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "SAT"],
+  file_formats_out: ["NC (CNC Cut code)", "MEC", "DXF", "Reports"]
 },
 {
   id: "t183",
@@ -5260,9 +5294,11 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
-
   last_updated: "2024-02-29",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["DWG", "DXF", "STEP", "IGES", "SolidWorks", "Inventor", "Creo", "DSTV"],
+  file_formats_out: ["NC (CNC G-Code)", "DXF", "CSV", "PDF nesting layouts"]
 },
 {
   id: "t185",
@@ -6428,7 +6464,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["K", "KEY", "INP", "NASTRAN (BDF)", "IGES", "STEP"],
+  file_formats_out: ["D3PLOT", "BINOUT", "CSV", "VTK"]
 },
 {
   id: "t191",
@@ -6605,7 +6644,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2412"
+  version: "2412",
+  quote_only: true,
+  file_formats_in: ["STEP", "IGES", "Parasolid", "CATPart", "STL", "CGNS", "NASTRAN"],
+  file_formats_out: ["Star-CCM+ sim", "VTK", "EnSight", "CSV", "Images"]
 },
 {
   id: "t192",
@@ -6970,7 +7012,19 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2024-06-30",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid (X_T)",
+    "STL",
+    "SolidWorks",
+    "Inventor",
+    "Rhino"
+  ],
+
+  file_formats_out: ["VTK", "CSV", "Cloud Interactive 3D", "PDF report"]
 },
 {
   id: "t194",
@@ -7145,7 +7199,19 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2023-05-28",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "STEP",
+    "Parasolid",
+    "IGES",
+    "SAT",
+    "NASTRAN (BDF)",
+    "Ansys (CDB)",
+    "Abaqus (INP)"
+  ],
+
+  file_formats_out: ["NASTRAN", "Ansys", "Abaqus", "STEP", "JT", "CSV"]
 },
 {
   id: "t195",
@@ -7508,7 +7574,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["PAT", "STEP", "IGES", "Parasolid", "CATPart", "BDF"],
+  file_formats_out: ["BDF", "INP", "CDB", "STEP", "IGES"]
 },
 {
   id: "t197",
@@ -7683,7 +7752,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["ADM", "CMD", "STEP", "IGES", "Parasolid", "CATPart", "SLDPRT"],
+  file_formats_out: ["GRA", "RES", "CSV", "Animation MP4"]
 },
 {
   id: "t209",
@@ -7856,7 +7928,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2024-01-12",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["CII", "PCF", "CAESAR Neutral", "CADWorx", "SmartPlant", "AutoPIPE"],
+  file_formats_out: ["CII", "Stress Reports (PDF/Excel)", "3D Deflection Visuals", "PCF"]
 },
 {
   id: "t210",
@@ -8031,7 +8106,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DAT", "PCF", "AutoPIPE Neutral", "PDS", "OpenPlant", "CAESAR II"],
+  file_formats_out: ["DAT", "PDF", "Word", "Excel", "PCF", "CAESAR Neutral"]
 },
 {
   id: "t211",
@@ -8206,7 +8283,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["PVI", "CADWorx", "AutoCAD (DXF)", "SolidWorks"],
+  file_formats_out: ["PVI", "ASME Code Calculation Reports", "3D PDF", "DXF", "Word", "Excel"]
 },
 {
   id: "t212",
@@ -8378,7 +8458,10 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["HSC", "HYSYS xml", "Excel", "DEX", "DWG"],
+  file_formats_out: ["HSC", "Excel", "PDF", "P&ID Process Data", "XML"]
 },
 {
   id: "t233",
@@ -8554,7 +8637,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["SDB", "EDBS", "DWG", "DXF", "IFC", "CSiXRevit", "CIS/2"],
+  file_formats_out: ["SDB", "DWG", "DXF", "IFC", "Excel", "PDF Analysis Reports"]
 },
 {
   id: "t234",
@@ -8730,7 +8815,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["EDB", "DWG", "DXF", "IFC", "CSiXRevit", "CIS/2"],
+  file_formats_out: ["EDB", "DWG", "DXF", "IFC", "Excel", "PDF Analysis Reports"]
 },
 {
   id: "t235",
@@ -8907,7 +8994,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STD", "DWG", "DXF", "CIS/2", "ISM", "IFC"],
+  file_formats_out: ["STD", "CIS/2", "ISM", "DWG", "DXF", "PDF Reports"]
 },
 {
   id: "t236",
@@ -9270,7 +9359,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["RTD", "RVT (Direct Link)", "IFC", "DWG", "DXF"],
+  file_formats_out: ["RTD", "RVT", "DWG", "DXF", "PDF Calculation Notes"]
 },
 {
   id: "t243",
@@ -9445,7 +9536,20 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "Tekla (Direct link)",
+    "Revit",
+    "Advance Steel",
+    "STAAD",
+    "SAP2000",
+    "Robot",
+    "IFC",
+    "SAF"
+  ],
+
+  file_formats_out: ["IDEA project", "DWG", "DXF", "3D PDF", "Detailed Code Check Report"]
 },
 {
   id: "t244",
@@ -9619,7 +9723,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["R3D", "DXF", "Revit", "SDNF", "CIS/2"],
+  file_formats_out: ["R3D", "DXF", "Revit", "SDNF", "PDF"]
 },
 {
   id: "t126",
@@ -10237,7 +10343,9 @@ export const c5Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["IFC", "DWG", "DXF", "SDNF", "STEP", "XML"],
+  file_formats_out: ["IFC", "DWG", "DXF", "PDF reports", "Excel"]
 },
 {
   id: "t148",

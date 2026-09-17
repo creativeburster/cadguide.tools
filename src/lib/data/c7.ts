@@ -121,7 +121,10 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2024-01-19",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["3DM", "STEP", "STL", "OBJ"],
+  file_formats_out: ["3DM", "STL", "3MF", "Renderings (PNG, MP4)", "Job bag reports"]
 },
 {
   id: "t68",
@@ -158,7 +161,6 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [],
-
   official_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
   pricing_url: "https://www.aveva.com/en/products/hull-and-outfitting/",
   affiliate_url: null,
@@ -215,9 +217,17 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The undisputed king of heavy-duty maritime engineering.",
-
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+  quote_only: true,
+  file_formats_in: ["STEP", "IGES", "DWG", "DGN", "AVEVA RVM", "Tribon"],
+
+  file_formats_out: [
+    "AVEVA RVM",
+    "Production Drawings (DWG, PDF)",
+    "CNC Plate Cutting Code",
+    "BOM"
+  ]
 },
 {
   id: "t69",
@@ -356,7 +366,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DXF-AAMA", "DXF-ASTM", "OBJ", "FBX", "glTF", "AI", "PDF"],
+  file_formats_out: ["OBJ", "FBX", "glTF", "USD", "ZPrj", "DXF-AAMA", "PDF"]
 },
 {
   id: "ext-infraworks",
@@ -804,8 +816,8 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "Germany",
 
+  country: "Germany",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 399,
@@ -826,11 +838,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.maxon.net/en/buy",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Unmatched high-poly sculpting performance",
     "Standard for character and creature art",
     "Decimation Master preps models for 3D printing"
   ],
+
   cons: [
     "Unconventional UI takes time to master",
     "Not suited to precise engineering CAD",
@@ -872,9 +886,19 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["ZTL", "ZPR", "OBJ", "FBX", "MA", "STL", "PLY"],
+
+  file_formats_out: [
+    "ZTL",
+    "ZPR",
+    "OBJ",
+    "FBX",
+    "STL",
+    "VRML",
+    "Displacement & Normal Maps (EXR, TIFF)"
+  ]
 },
 {
   id: "ext-keyshot",
@@ -1699,7 +1723,24 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2026-08-03",
-  version: "5.13"
+  version: "5.13",
+  file_formats_in: ["STL", "3MF", "OBJ", "AMF"],
+  file_formats_out: ["G-Code", "3MF", "UFP"],
+
+  pricing_tiers: [{
+    name: "Open Source Edition",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "400+ printer profiles",
+      "Advanced infill & support algorithms",
+      "Plugin marketplace integration",
+      "Tree support generation"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t214",
@@ -1877,7 +1918,24 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2025-11-10",
-  version: "2.9.0"
+  version: "2.9.0",
+  file_formats_in: ["STL", "3MF", "OBJ", "STEP", "AMF"],
+  file_formats_out: ["G-Code", "3MF", "SL1", "Toolpath preview"],
+
+  pricing_tiers: [{
+    name: "Open Source",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Organic tree supports",
+      "Multi-material painting",
+      "Direct STEP file import",
+      "Built-in cut & hollow tools"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t215",
@@ -2055,7 +2113,24 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2024-03-18",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STL", "3MF", "STEP", "OBJ"],
+  file_formats_out: ["Bambu 3MF", "G-Code", "Timelapse video"],
+
+  pricing_tiers: [{
+    name: "Open Source Community",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Multi-color AMS painting",
+      "High-speed flow calibration",
+      "Remote camera monitoring",
+      "Direct STEP import"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t216",
@@ -2230,7 +2305,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2025-09-30",
-  version: "5.2"
+  version: "5.2",
+  file_formats_in: ["STL", "OBJ", "3MF"],
+  file_formats_out: ["G-Code", "B3D", "X3G"]
 },
 {
   id: "t217",
@@ -2401,7 +2478,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2023-09-03",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "STL", "3MF", "CLI", "SLC"],
+  file_formats_out: ["CLI", "SLC", "EOS/SLM Build Files", "STL", "3MF", "STEP"]
 },
 {
   id: "t222",
@@ -2578,7 +2657,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2023-04-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["OBJ", "FBX", "glTF", "AI", "PDF"],
+  file_formats_out: ["OBJ", "FBX", "glTF", "USD", "ZPrj", "Animation cache"]
 },
 {
   id: "t225",
@@ -3371,7 +3452,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2024-02-22",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["FBX", "OBJ", "glTF", "USD", "DAE", "SPP"],
+  file_formats_out: ["PNG", "TIFF", "EXR", "TGA", "PSD", "glTF", "USD"]
 },
 {
   id: "t239",
@@ -3541,7 +3624,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2024-08-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["DWG", "DXF", "LandXML", "LAS", "LAZ", "CRD", "CSV", "SHP"],
+  file_formats_out: ["DWG", "DXF", "LandXML", "KML", "CSV", "PDF Stakeout Reports"]
 },
 {
   id: "t240",
@@ -3717,7 +3802,9 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2024-06-07",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["VCE", "DWG", "DXF", "LandXML", "RINEX", "LAS", "LAZ", "JobXML"],
+  file_formats_out: ["DWG", "DXF", "LandXML", "KML", "CSV", "Machine Control files"]
 },
 {
   id: "t121",
@@ -4034,7 +4121,6 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [],
-
   country: "Australia",
   category_id: "c7",
   pricing_type: "Perpetual",
@@ -4109,7 +4195,9 @@ export const c7Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["DWG", "DXF", "CSV", "LandXML", "Surpac", "Micromine", "Datamine", "LAS"],
+  file_formats_out: ["DWG", "DXF", "3D Mine Solid", "CSV Block Models", "Reports"]
 },
 {
   id: "t142",
@@ -4201,7 +4289,6 @@ export const c7Tools: Tool[] = [
   ],
 
   alternatives: [],
-
   country: "Sweden",
   category_id: "c7",
   pricing_type: "Freemium",
@@ -4275,7 +4362,18 @@ export const c7Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  quote_only: true,
+  file_formats_in: ["DWG", "DXF", "Revit (RVT)", "Sketchup", "IFC"],
+
+  file_formats_out: [
+    "DWG",
+    "DXF",
+    "Revit",
+    "PDF",
+    "3D Photo Renders",
+    "Bill of Materials (Excel)"
+  ]
 },
 {
   id: "t248",
@@ -4438,6 +4536,8 @@ export const c7Tools: Tool[] = [
   ],
 
   version: "Cloud SaaS",
-  last_updated: "2026-09-11"
+  last_updated: "2026-09-11",
+  file_formats_in: ["PDB", "MOL", "SDF", "CSV", "XYZ"],
+  file_formats_out: ["PDB", "MOL", "SDF", "CSV", "PDF Analysis"]
 }
 ];

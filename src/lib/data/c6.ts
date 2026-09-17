@@ -330,6 +330,7 @@ export const c6Tools: Tool[] = [
   category_id: "c6",
   pricing_type: "Subscription",
   starting_price: 0,
+  quote_only: true,
 
   platforms: [
     "Windows",
@@ -410,11 +411,12 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "The standard for mid-level professional PCB design.",
-
   last_updated: "2026-09-02",
   discontinued: true,
-  discontinued_note: "Discontinued in June 2021 — EAGLE's schematic and PCB functionality is now part of Autodesk Fusion 360 Electronics.",
-  version: "9.6 (final standalone release)"
+  discontinued_note: "Autodesk has fully integrated EAGLE into Autodesk Fusion 360 and ceased standalone sales and renewal in early 2026. EAGLE .sch and .brd files open seamlessly in Fusion Electronics.",
+  version: "9.6 (final standalone release)",
+  file_formats_in: ["BRD", "SCH", "LBR", "DXF", "Gerber"],
+  file_formats_out: ["BRD", "SCH", "Gerber (RS-274X)", "Excellon", "PDF", "DXF"]
 },
 {
   id: "t63",
@@ -508,20 +510,20 @@ export const c6Tools: Tool[] = [
 
   expert_verdict: "The gold standard for anyone serious about industrial electrical design.",
 
-  pricing_tiers: [
-    {
-      name: "Subscription",
-      price: "Contact",
-      period: "/yr",
-      features: [
-        "Electrical Design",
-        "Schematic Creation",
-        "Standard Parts Data",
-        "Cloud services"
-      ],
-      is_popular: true
-    }
-  ],
+  pricing_tiers: [{
+    name: "Electric P8 Standard",
+    price: "Custom",
+    period: "quote",
+
+    features: [
+      "Automated schematic generation",
+      "Automatic wire numbering",
+      "Terminal diagram generation",
+      "Panel 2D layout"
+    ],
+
+    is_popular: true
+  }],
 
   detailed_features: [
     {
@@ -569,7 +571,17 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["EPJ", "ZW1", "DWG", "DXF", "PDF", "STEP", "PLC XML"],
+
+  file_formats_out: [
+    "PDF (Smart Jump Links)",
+    "DWG",
+    "DXF",
+    "Excel",
+    "XML",
+    "STEP (Cabinet 3D)"
+  ]
 },
 {
   id: "t103",
@@ -916,6 +928,7 @@ export const c6Tools: Tool[] = [
   ],
 
   industries: ["Electronics", "PCB Design", "Aerospace", "Automotive"],
+
   core_features: [
     "Schematic Capture",
     "PCB Layout & Routing",
@@ -923,16 +936,19 @@ export const c6Tools: Tool[] = [
     "Signal Integrity",
     "ECAD-MCAD Collaboration"
   ],
+
   user_scales: [],
   official_url: "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
   pricing_url: "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
   affiliate_url: null,
   score: 0,
+
   pros: [
     "Constraint-driven enterprise routing",
     "Scales to complex rigid-flex boards",
     "Deep SI/PI analysis integration"
   ],
+
   cons: [
     "Very expensive",
     "Steep learning curve",
@@ -974,9 +990,10 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Cadence's high-end enterprise PCB layout platform, built for complex high-speed design and system constraints.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["BRD", "DRA", "DSN", "STEP", "DXF", "IDF", "IPC-2581", "ODB++"],
+  file_formats_out: ["BRD", "Gerber", "ODB++", "IPC-2581", "STEP (3D)", "NC Drill", "PDF"]
 },
 {
   id: "t161",
@@ -1580,6 +1597,7 @@ export const c6Tools: Tool[] = [
   ],
 
   industries: ["Electronics", "PCB Design", "Aerospace", "Automotive"],
+
   core_features: [
     "Constraint-Driven Layout",
     "High-Speed Analysis",
@@ -1587,16 +1605,19 @@ export const c6Tools: Tool[] = [
     "DFM Analysis",
     "Enterprise Data Management"
   ],
+
   user_scales: [],
   official_url: "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
   pricing_url: "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
   affiliate_url: null,
   score: 0,
+
   pros: [
     "Top-tier high-speed and RF co-design",
     "Enterprise data management",
     "Strong DFM sign-off"
   ],
+
   cons: ["Enterprise pricing", "Complex setup and licensing", "Windows-only"],
 
   faqs: [
@@ -1634,9 +1655,10 @@ export const c6Tools: Tool[] = [
   },
 
   expert_verdict: "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["PCB", "SCH", "STEP", "DXF", "IDF", "ODB++", "IPC-2581"],
+  file_formats_out: ["Gerber", "ODB++", "IPC-2581", "STEP", "NC Drill", "PDF", "BOM"]
 },
 {
   id: "t198",
@@ -2037,7 +2059,9 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["EasyEDA JSON", "Altium SchDoc/PcbDoc", "EAGLE", "KiCad", "DXF"],
+  file_formats_out: ["Gerber", "Pick and Place (CSV)", "BOM", "PDF", "SVG", "STEP 3D"]
 },
 {
   id: "t200",
@@ -2277,7 +2301,9 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-11",
-  version: "5.1"
+  version: "5.1",
+  file_formats_in: ["DIP", "DXF", "EAGLE", "Altium", "P-CAD", "STEP"],
+  file_formats_out: ["Gerber", "Excellon", "ODB++", "IPC-D-356", "STEP", "DXF", "PDF"]
 },
 {
   id: "t201",
@@ -2452,7 +2478,9 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["MS14", "Ultiboard", "SPICE netlist", "LabVIEW"],
+  file_formats_out: ["MS14", "SPICE netlist", "Ultiboard (PCB)", "Excel", "PDF"]
 },
 {
   id: "t202",
@@ -2627,7 +2655,24 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2023-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["ASC", "ASY", "NET", "CIR", "LIB"],
+  file_formats_out: ["RAW (Waveforms)", "NET", "TXT", "BMP", "WMF"],
+
+  pricing_tiers: [{
+    name: "Freeware",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "High-performance SPICE engine",
+      "Built-in Analog Devices macromodels",
+      "Transient, AC, and Noise analysis",
+      "Unlimited nodes"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t203",
@@ -2803,7 +2848,9 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2023-11-16",
-  version: "8.18"
+  version: "8.18",
+  file_formats_in: ["DSN", "LYT", "HEX", "ELF", "DXF", "Gerber"],
+  file_formats_out: ["Gerber", "Excellon", "ODB++", "PDF", "STEP", "BOM"]
 },
 {
   id: "t204",
@@ -2980,7 +3027,9 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["PrjPcb", "SchDoc", "PcbDoc", "Gerber", "BOM"],
+  file_formats_out: ["Gerber", "ODB++", "IPC-2581", "STEP", "PDF release packages"]
 },
 {
   id: "t205",
@@ -3152,6 +3201,8 @@ export const c6Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["CMPcb", "CMSch", "DXF", "STEP"],
+  file_formats_out: ["Gerber", "NC Drill", "STEP", "PDF", "BOM"]
 }
 ];
