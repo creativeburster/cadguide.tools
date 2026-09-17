@@ -1341,5 +1341,89 @@ export const c4Tools: Tool[] = [
   expert_verdict: "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
   file_formats_in: ["DWG", "DXF", "PDF"],
   file_formats_out: ["PDF", "PNG", "JPG", "DWG"]
+},
+{
+  id: "t250",
+  name: "DXF Medic",
+  slug: "dxf-medic",
+  logo_url: "/logos/dxf-medic.svg",
+  short_desc: "Browser-based DXF and SVG geometry checks and repair.",
+  description: "DXF Medic is a browser utility from Madegrain that diagnoses DXF and SVG cutting files for geometry problems before they reach a laser, plasma, or CNC table. Diagnosis is free and runs locally in the browser; repaired file downloads are free for results with up to five parts, with a one-time upgrade for unlimited repairs.",
+  country: "Germany",
+  category_id: "c4",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  price_period: "one-time",
+  platforms: ["Web"],
+  industries: ["Laser Cutting", "Metal Fabrication", "Manufacturing"],
+  core_features: ["DXF & SVG diagnosis", "Geometry issue report", "Automatic repair", "Local in-browser processing"],
+  user_scales: ["Individuals", "Small Business"],
+  official_url: "https://madegrain.com/dxfmedic/",
+  affiliate_url: null,
+  score: 4.3,
+  pros: [
+    "Free diagnosis with no install or account",
+    "Runs locally — drawing files never leave the browser",
+    "One-time €9 upgrade instead of a subscription"
+  ],
+  cons: [
+    "Repairs capped at five parts per result on the free tier",
+    "2D drawing files only — no 3D models",
+    "No batch processing of whole folders"
+  ],
+  faqs: [
+    {
+      q: "What is DXF Medic used for?",
+      a: "DXF Medic checks DXF and SVG files for geometry problems before cutting, so laser, plasma, and CNC jobs don't fail on broken contours — and repairs what it finds."
+    },
+    {
+      q: "How much does DXF Medic cost?",
+      a: "Diagnosis is free. Repaired downloads are free for results with up to five parts; a €9 one-time upgrade unlocks unlimited repaired downloads."
+    },
+    {
+      q: "Is there a free version of DXF Medic?",
+      a: "Yes — diagnosing any DXF or SVG file is free, and small results (up to five parts) can be downloaded repaired at no cost."
+    },
+    {
+      q: "What operating systems does DXF Medic support?",
+      a: "DXF Medic runs in modern desktop browsers on Windows, macOS, and Linux — nothing to install."
+    },
+    {
+      q: "Which file formats does DXF Medic support?",
+      a: "DXF Medic accepts DXF and SVG files, the common exchange formats for 2D cutting workflows."
+    },
+    {
+      q: "What are the best alternatives to DXF Medic?",
+      a: "Autodesk's free DWG TrueView inspects and converts DWG files, and CAD Reader views DWG/DXF drawings in the field. For fixing broken geometry before a cut, DXF Medic focuses specifically on repair — compare based on whether you need viewing, conversion, or repair."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "€0",
+      period: "forever",
+      features: [
+        "Diagnose any DXF or SVG file",
+        "Repaired downloads up to 5 parts",
+        "Runs locally in the browser",
+        "No account required"
+      ]
+    },
+    {
+      name: "Pro (Lifetime)",
+      price: "€9",
+      period: "one-time",
+      features: [
+        "Unlimited repaired downloads",
+        "All future fixes included",
+        "No subscription"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["dwg-trueview", "cad-reader"],
+  last_updated: "2026-09-17",
+  file_formats_in: ["DXF", "SVG"],
+  file_formats_out: ["DXF", "SVG"]
 }
 ];

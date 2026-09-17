@@ -3397,6 +3397,45 @@
     "country": "Australia"
   },
   {
+    "id": "t249",
+    "name": "NestForge",
+    "slug": "nestforge",
+    "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
+    "score": 4.4,
+    "logo_url": "/logos/nestforge.svg",
+    "official_url": "https://madegrain.com/nestforge/",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Laser Cutting",
+      "Metal Fabrication",
+      "Woodworking",
+      "Manufacturing"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
+    "id": "t250",
+    "name": "DXF Medic",
+    "slug": "dxf-medic",
+    "short_desc": "Browser-based DXF and SVG geometry checks and repair.",
+    "score": 4.3,
+    "logo_url": "/logos/dxf-medic.svg",
+    "official_url": "https://madegrain.com/dxfmedic/",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Laser Cutting",
+      "Metal Fabrication",
+      "Manufacturing"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",

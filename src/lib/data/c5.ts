@@ -11057,5 +11057,90 @@ export const c5Tools: Tool[] = [
   ],
 
   key_capabilities: ["Sheet Metal Forming", "Spring Back Compensation", "FEA Analysis", "Die Design", "Process Simulation"],
+},
+{
+  id: "t249",
+  name: "NestForge",
+  slug: "nestforge",
+  logo_url: "/logos/nestforge.svg",
+  short_desc: "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
+  description: "NestForge is a browser-based nesting tool from Madegrain that arranges SVG and DXF parts on sheet layouts for laser, plasma, waterjet, and CNC cutting. Spacing, rotation, and grain-direction rules are applied while every calculation runs locally in the browser, so part files never leave the workstation.",
+  country: "Germany",
+  category_id: "c5",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  price_period: "one-time",
+  platforms: ["Web"],
+  industries: ["Laser Cutting", "Metal Fabrication", "Woodworking", "Manufacturing"],
+  core_features: ["SVG & DXF import", "Spacing & rotation control", "Grain-direction rules", "Local in-browser nesting"],
+  user_scales: ["Individuals", "Small Business"],
+  official_url: "https://madegrain.com/nestforge/",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
+    "Runs locally in the browser — part files never leave the workstation",
+    "One-time payment, no subscription",
+    "Handles both SVG and DXF round-trips"
+  ],
+  cons: [
+    "2D nesting only — no tube or 3D cutting",
+    "Free tier capped at 10 parts per sheet",
+    "No plugin integration with CAM suites"
+  ],
+  faqs: [
+    {
+      q: "What is NestForge used for?",
+      a: "NestForge arranges SVG and DXF parts on sheet layouts for laser, CNC, and plasma cutting, applying spacing, rotation, and grain-direction rules in the browser."
+    },
+    {
+      q: "How much does NestForge cost?",
+      a: "NestForge is free for up to 10 parts on one sheet. The Pro upgrade is a €29 one-time payment for unlimited nesting — no subscription."
+    },
+    {
+      q: "Is there a free version of NestForge?",
+      a: "Yes — the free tier covers nesting of up to 10 parts on a single sheet, with no account or installation required."
+    },
+    {
+      q: "What operating systems does NestForge support?",
+      a: "NestForge runs locally in modern desktop browsers, so it works on Windows, macOS, and Linux without an install."
+    },
+    {
+      q: "Which file formats does NestForge support?",
+      a: "NestForge imports and exports SVG and DXF, the two formats most laser and plasma cutting workflows use."
+    },
+    {
+      q: "What are the best alternatives to NestForge?",
+      a: "SigmaNEST is the established commercial nesting suite for production-scale operations. For occasional sheet layouts, NestForge's free in-browser tier covers small jobs — compare options based on part volume and machine integration needs."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "€0",
+      period: "forever",
+      features: [
+        "Nest up to 10 parts per sheet",
+        "Spacing, rotation & grain rules",
+        "SVG & DXF import",
+        "Runs locally in the browser"
+      ]
+    },
+    {
+      name: "Pro (Lifetime)",
+      price: "€29",
+      period: "one-time",
+      features: [
+        "Unlimited parts per sheet",
+        "Multi-sheet layouts",
+        "DXF & SVG export",
+        "No subscription"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["sigmanest"],
+  last_updated: "2026-09-17",
+  file_formats_in: ["SVG", "DXF"],
+  file_formats_out: ["SVG", "DXF"]
 }
 ];
