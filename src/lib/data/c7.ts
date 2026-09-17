@@ -445,17 +445,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "USA",
 
+  country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 260,
   price_period: "month",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows"],
   industries: ["Civil Engineering", "Infrastructure", "Transportation"],
 
   user_scales: [
@@ -467,11 +463,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.autodesk.com/products/infraworks/overview",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Rapid contextual modeling with real GIS data",
     "Great for proposals and stakeholder visuals",
     "Interoperates with Civil 3D via IMX"
   ],
+
   cons: [
     "Not a detailed engineering design tool",
     "Performance degrades on very large models",
@@ -513,9 +511,24 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
-
   last_updated: "2026-09-02",
-  version: "2027"
+  version: "2027",
+
+  file_formats_in: [
+    "IMX",
+    "Civil 3D (DWG)",
+    "Revit (RVT)",
+    "SHP",
+    "SDF",
+    "CityGML",
+    "LAS",
+    "LAZ",
+    "FBX",
+    "OBJ",
+    "SKP"
+  ],
+
+  file_formats_out: ["IMX", "FBX", "OBJ", "DWG", "LandXML"]
 },
 {
   id: "ext-3ds-max",
@@ -604,17 +617,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "USA",
 
+  country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 2010,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows"],
   industries: ["Architecture", "Game Development", "Film & VFX"],
 
   user_scales: [
@@ -626,11 +635,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.autodesk.com/products/3ds-max/pricing",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Industry standard for archviz and game art",
     "Powerful modifier and procedural stack",
     "Deep plugin ecosystem"
   ],
+
   cons: [
     "Windows-only",
     "Expensive subscription",
@@ -672,9 +683,39 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
-
   last_updated: "2026-09-02",
-  version: "2027"
+  version: "2027",
+
+  file_formats_in: [
+    "MAX",
+    "FBX",
+    "OBJ",
+    "DWG",
+    "DXF",
+    "3DS",
+    "STEP",
+    "IGES",
+    "SAT",
+    "SKP",
+    "glTF",
+    "ABC",
+    "USD"
+  ],
+
+  file_formats_out: [
+    "MAX",
+    "FBX",
+    "OBJ",
+    "DWG",
+    "DXF",
+    "3DS",
+    "glTF",
+    "GLB",
+    "USD",
+    "USDZ",
+    "STL",
+    "ABC"
+  ]
 },
 {
   id: "ext-zbrush",
@@ -910,17 +951,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "USA",
 
+  country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1299,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows", "macOS"],
   industries: ["Product Design", "Manufacturing", "Marketing"],
 
   user_scales: [
@@ -932,11 +969,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.keyshot.com/pricing/",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Fastest CAD-to-photorealistic workflow",
     "Large material and environment library",
     "Engineers can learn it in days"
   ],
+
   cons: [
     "No real modeling: needs external CAD",
     "Premium perpetual or subscription cost",
@@ -978,9 +1017,28 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
-
   last_updated: "2026-09-02",
-  version: "2026"
+  version: "2026",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "OBJ",
+    "FBX",
+    "3DM",
+    "SLDPRT",
+    "SLDASM",
+    "IPT",
+    "IAM",
+    "PRT",
+    "CATPart",
+    "SKP",
+    "GLTF",
+    "USD"
+  ],
+
+  file_formats_out: ["PNG", "JPG", "EXR", "TIFF", "PSD", "GLTF", "GLB", "USDZ", "MP4", "AVI"]
 },
 {
   id: "ext-lumion",
@@ -1069,17 +1127,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "Netherlands",
 
+  country: "Netherlands",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 1149,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows"],
   industries: ["Architecture", "Landscape Design", "Urban Planning"],
 
   user_scales: [
@@ -1091,11 +1145,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://lumion.com/pricing",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Fast, beginner-friendly rendering",
     "Vast asset and effects library",
     "LiveSync with Revit, SketchUp, Archicad"
   ],
+
   cons: [
     "Windows-only",
     "Needs a powerful GPU for large scenes",
@@ -1137,9 +1193,10 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
-
   last_updated: "2026-09-02",
-  version: "2026"
+  version: "2026",
+  file_formats_in: ["DAE", "SKP", "FBX", "DWG", "DXF", "3DS", "OBJ", "MAX", "IFC"],
+  file_formats_out: ["MP4", "PNG", "JPG", "BMP", "TGA", "VR Panorama (360)"]
 },
 {
   id: "ext-enscape",
@@ -1228,17 +1285,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "Germany",
 
+  country: "Germany",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 575,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Interior Design", "Construction"],
 
   user_scales: [
@@ -1250,11 +1303,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://enscape3d.com/pricing/",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Real-time rendering inside the CAD window",
     "One-click walkthroughs and VR",
     "Minimal learning curve"
   ],
+
   cons: [
     "Quality trails offline ray tracers",
     "Dependent on host CAD performance",
@@ -1296,9 +1351,19 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
-
   last_updated: "2026-09-02",
-  version: "4.11"
+  version: "4.11",
+  file_formats_in: ["Revit", "SketchUp", "Rhino", "ArchiCAD", "Vectorworks"],
+
+  file_formats_out: [
+    "Standalone EXE",
+    "Web Standalone",
+    "PNG",
+    "JPG",
+    "EXR",
+    "MP4",
+    "360 Panorama"
+  ]
 },
 {
   id: "ext-twinmotion",
@@ -1387,17 +1452,13 @@ export const c7Tools: Tool[] = [
       ]
     }
   ],
-  country: "USA",
 
+  country: "USA",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 445,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Landscape Design", "Real Estate"],
 
   user_scales: [
@@ -1409,11 +1470,13 @@ export const c7Tools: Tool[] = [
   pricing_url: "https://www.twinmotion.com/pricing",
   affiliate_url: null,
   score: 4.5,
+
   pros: [
     "Free tier for small firms and students",
     "Real-time Unreal Engine quality",
     "Direct sync with major archviz CAD"
   ],
+
   cons: [
     "GPU-hungry with heavy scenes",
     "Visualization only: no precision modeling",
@@ -1455,9 +1518,10 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
-
   last_updated: "2026-09-02",
-  version: "2026"
+  version: "2026",
+  file_formats_in: ["FBX", "SKP", "OBJ", "DATASMITH", "glTF", "C4D", "3DS", "DAE", "IFC"],
+  file_formats_out: ["MP4", "PNG", "EXR", "Twinmotion Cloud", "Panoramic 360", "EXE"]
 },
 {
   id: "t213",
@@ -2526,12 +2590,9 @@ export const c7Tools: Tool[] = [
   country: "China",
   category_id: "c7",
   pricing_type: "Freemium",
-  starting_price: 38,
+  starting_price: 360,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "AEC",
@@ -2690,7 +2751,49 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2023-04-29",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "SKP",
+    "FBX",
+    "3DM",
+    "ABC",
+    "OBJ",
+    "Revit",
+    "3ds Max",
+    "Archicad",
+    "Blender",
+    "Cinema 4D"
+  ],
+
+  file_formats_out: ["PNG", "EXR", "TIF", "JPG", "MP4", "AVI", "VR 360", "Virtual Tour"],
+
+  pricing_tiers: [{
+    name: "Community",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Core real-time rendering",
+      "Standard material library",
+      "No commercial watermark"
+    ],
+
+    is_popular: true
+  }, {
+    name: "Pro",
+    price: "360",
+    period: "/yr",
+
+    features: [
+      "Full 10,000+ asset library",
+      "Sequencer video rendering",
+      "VR panorama tour",
+      "AI atmosphere enhancer"
+    ],
+
+    is_popular: false
+  }]
 },
 {
   id: "t226",
@@ -2704,11 +2807,7 @@ export const c7Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 540,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "macOS"
-  ],
+  platforms: ["Windows", "macOS", "Linux"],
 
   industries: [
     "AEC",
@@ -2866,7 +2965,48 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2026-08-03",
-  version: "7"
+  version: "7",
+
+  file_formats_in: [
+    "3ds Max",
+    "Maya",
+    "SketchUp",
+    "Rhino",
+    "Revit",
+    "Cinema 4D",
+    "VRSCENE",
+    "OBJ",
+    "FBX"
+  ],
+
+  file_formats_out: ["EXR", "PNG", "TIFF", "JPG", "VRIMG", "VRSCENE"],
+
+  pricing_tiers: [{
+    name: "Solo",
+    price: "540",
+    period: "/yr",
+
+    features: [
+      "Node-locked license",
+      "Access to all V-Ray integrations",
+      "CPU & GPU rendering"
+    ],
+
+    is_popular: true
+  }, {
+    name: "Premium",
+    price: "890",
+    period: "/yr",
+
+    features: [
+      "Floating license",
+      "Chaos Cosmos library",
+      "Chaos Cloud credits",
+      "Chaos Vantage access"
+    ],
+
+    is_popular: false
+  }]
 },
 {
   id: "t227",
@@ -2880,10 +3020,7 @@ export const c7Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 395,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "AEC",
@@ -3039,7 +3176,23 @@ export const c7Tools: Tool[] = [
   ],
 
   last_updated: "2026-08-03",
-  version: "13"
+  version: "13",
+  file_formats_in: ["3ds Max", "Cinema 4D", "OBJ", "FBX"],
+  file_formats_out: ["EXR", "PNG", "TIFF", "JPG", "CXR (Corona EXR)"],
+
+  pricing_tiers: [{
+    name: "Solo",
+    price: "395",
+    period: "/yr",
+    features: ["1 fixed workstation", "All host app plugins", "Chaos Cosmos assets"],
+    is_popular: true
+  }, {
+    name: "Premium",
+    price: "590",
+    period: "/yr",
+    features: ["Floating license", "Chaos Phoenix", "Chaos Player access"],
+    is_popular: false
+  }]
 },
 {
   id: "t228",

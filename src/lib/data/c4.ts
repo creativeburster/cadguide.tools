@@ -106,10 +106,7 @@ export const c4Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 240,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "AEC",
@@ -185,10 +182,10 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
-
-
   last_updated: "2023-07-16",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["PDF", "DWG", "DXF", "DGN", "IFC", "TIFF", "JPG", "PNG"],
+  file_formats_out: ["PDF", "TIFF", "JPG", "PNG", "CSV", "XML", "HTML", "TXT"]
 },
 {
   id: "t35",
@@ -281,10 +278,7 @@ export const c4Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 2835,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Construction",
@@ -361,10 +355,27 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
-
-
   last_updated: "2026-08-03",
-  version: "2027"
+  version: "2027",
+
+  file_formats_in: [
+    "NWD",
+    "NWC",
+    "NWF",
+    "RVT",
+    "DWG",
+    "DXF",
+    "DGN",
+    "IFC",
+    "SKP",
+    "FBX",
+    "3DS",
+    "STEP",
+    "IGES",
+    "JT"
+  ],
+
+  file_formats_out: ["NWD", "NWF", "FBX", "KML", "DWF", "DWFx"]
 },
 {
   id: "t36",
@@ -436,11 +447,7 @@ export const c4Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 3500,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "macOS"
-  ],
+  platforms: ["Windows", "macOS"],
 
   industries: [
     "AEC",
@@ -514,10 +521,10 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
-
-
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["IFC", "IFCZIP", "DWG", "DXF", "PDF", "BCF", "BCFZIP"],
+  file_formats_out: ["SMC", "BCF", "BCFZIP", "PDF", "Excel", "XML"]
 },
 {
   id: "t37",

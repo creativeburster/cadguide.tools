@@ -369,10 +369,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 3000,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Manufacturing",
@@ -448,9 +445,24 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The 'gold standard' for the professional machine shop.",
-
   last_updated: "2025-07-03",
-  version: "2027"
+  version: "2027",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "SLDPRT",
+    "IPT",
+    "CATPart",
+    "PRT",
+    "DWG",
+    "DXF",
+    "STL"
+  ],
+
+  file_formats_out: ["NC (G-Code)", "NCI", "STEP", "IGES", "Parasolid", "STL", "DWG", "DXF"]
 },
 {
   id: "t31",
@@ -997,10 +1009,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 3500,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Mold Design",
@@ -1075,9 +1084,38 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A robust, battle-tested workhorse for the precision tooling industry.",
-
   last_updated: "2026-08-03",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "CATPart",
+    "PRT",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF",
+    "STL"
+  ],
+
+  file_formats_out: ["NC (G-Code)", "ELT", "STEP", "IGES", "Parasolid", "STL", "DWG", "DXF"],
+
+  pricing_tiers: [{
+    name: "Mold & Die Design",
+    price: "3,500",
+    period: "/yr",
+    features: ["Core & Cavity separation", "ECO management", "Runner & Cooling lines"],
+    is_popular: true
+  }, {
+    name: "NC Programming Bundle",
+    price: "6,200",
+    period: "/yr",
+    features: ["2.5 to 5-axis milling", "Micro-milling & EDM electrode automation"],
+    is_popular: false
+  }]
 },
 {
   id: "t84",
@@ -1091,11 +1129,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 25000,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
+  platforms: ["Windows", "Linux"],
 
   industries: [
     "Aerospace",
@@ -1236,7 +1270,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2024-12-30",
-  version: "2026 R1"
+  version: "2026 R1",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "CATPart",
+    "SLDPRT",
+    "IPT",
+    "PRT",
+    "SCDM",
+    "DWG",
+    "DXF"
+  ],
+
+  file_formats_out: ["CDB", "RST", "STEP", "IGES", "STL", "3D PDF", "VTK"]
 },
 {
   id: "t85",
@@ -1372,11 +1422,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 12000,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
+  platforms: ["Windows", "Linux"],
 
   industries: [
     "Automotive",
@@ -1481,7 +1527,22 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2024-06-13",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "HM",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "CATPart",
+    "PRT",
+    "SLDPRT",
+    "NASTRAN",
+    "INP",
+    "CDB"
+  ],
+
+  file_formats_out: ["HM", "FEM", "INP", "CDB", "STEP", "IGES", "H3D"]
 },
 {
   id: "t247",
@@ -1677,12 +1738,9 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 0,
   quote_only: true,
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows"],
   industries: ["Manufacturing", "Woodworking", "Machinery", "Tooling"],
+
   core_features: [
     "Integrated CAD/CAM",
     "Woodworking Design",
@@ -1690,16 +1748,19 @@ export const c5Tools: Tool[] = [
     "Mold & Tooling Design",
     "Built-in PDM"
   ],
+
   user_scales: [],
   official_url: "https://www.topsolid.com/",
   pricing_url: "https://www.topsolid.com/",
   affiliate_url: null,
   score: 0,
+
   pros: [
     "Single database from CAD to CAM",
     "Strong woodworking and machining focus",
     "Perpetual licensing available"
   ],
+
   cons: [
     "Smaller community than mainstream MCAD",
     "Limited third-party add-on market",
@@ -1741,9 +1802,33 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "TOP",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "CATPart",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF"
+  ],
+
+  file_formats_out: [
+    "TOP",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "NC (G-Code)",
+    "PDF",
+    "DWG",
+    "DXF",
+    "STL"
+  ]
 },
 {
   id: "t124",
@@ -2465,10 +2550,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 3000,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Manufacturing",
@@ -2550,9 +2632,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's feature-based CAM software, designed to automate CNC programming through built-in intelligence.",
-
   last_updated: "2023-09-15",
-  version: "2026"
+  version: "2026",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "SLDPRT", "IPT", "DWG", "DXF"],
+  file_formats_out: ["NC (G-Code)", "FM", "STEP", "IGES", "STL"]
 },
 {
   id: "t150",
@@ -2668,10 +2751,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 5000,
   price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Manufacturing",
@@ -2753,9 +2833,22 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A highly visual, task-oriented CAM system, exceptionally efficient for programming multi-task machining centers.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF",
+    "VDA-FS"
+  ],
+
+  file_formats_out: ["NC (G-Code)", "APT", "STEP", "IGES", "STL"]
 },
 {
   id: "t152",
@@ -2871,10 +2964,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 6000,
   price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Manufacturing",
@@ -2955,9 +3045,21 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "OPEN MIND's premier 5-axis CAM suite, outstanding for high-precision machining and collision avoidance.",
-
   last_updated: "2023-01-02",
-  version: "2026.1"
+  version: "2026.1",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "CATPart",
+    "SolidWorks",
+    "NX",
+    "Inventor",
+    "STL"
+  ],
+
+  file_formats_out: ["NC (G-Code)", "POF", "STEP", "IGES", "STL"]
 },
 {
   id: "t153",
@@ -3476,10 +3578,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 4000,
   price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "General Machining",
@@ -3558,9 +3657,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "DWG", "DXF", "SLDPRT", "IPT", "STL"],
+  file_formats_out: ["NC (G-Code)", "STEP", "IGES", "DXF"]
 },
 {
   id: "t156",
@@ -3676,10 +3776,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 3000,
   price_period: "one-time",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "General Machining",
@@ -3758,9 +3855,10 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
-
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "DWG", "DXF", "SLDPRT", "STL", "3DM"],
+  file_formats_out: ["NC (G-Code)", "BBCD", "STEP", "IGES", "DXF"]
 },
 {
   id: "t166",
@@ -5178,11 +5276,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 30000,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
+  platforms: ["Windows", "Linux"],
 
   industries: [
     "Aerospace",
@@ -5353,7 +5447,9 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2026 R1"
+  version: "2026 R1",
+  file_formats_in: ["MSH", "CAS", "STEP", "IGES", "Parasolid", "CGNS", "STL"],
+  file_formats_out: ["DAT", "CAS", "CGNS", "EnSight", "FieldView", "Tecplot", "VTK", "CSV"]
 },
 {
   id: "t186",
@@ -5367,11 +5463,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 30000,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
+  platforms: ["Windows", "Linux"],
 
   industries: [
     "Aerospace",
@@ -5530,7 +5622,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["WBPJ", "STEP", "IGES", "Parasolid", "CATPart", "SLDPRT", "IPT"],
+  file_formats_out: ["WBPZ", "STEP", "IGES", "Parasolid", "STL", "PDF"],
+
+  pricing_tiers: [{
+    name: "Enterprise CAE Suite",
+    price: "30,000",
+    period: "/yr",
+
+    features: [
+      "Multiphysics project tree",
+      "Parametric design points & optimization",
+      "Direct CAD bidirectional links"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t187",
@@ -5544,10 +5652,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 2280,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Manufacturing",
@@ -5707,7 +5812,47 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+
+  file_formats_in: [
+    "SCDM",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "SLDPRT",
+    "IPT",
+    "CATPart",
+    "STL",
+    "OBJ"
+  ],
+
+  file_formats_out: ["SCDM", "STEP", "IGES", "Parasolid", "STL", "3MF", "WBPJ"],
+
+  pricing_tiers: [{
+    name: "Standard Exploration",
+    price: "2,280",
+    period: "/yr",
+
+    features: [
+      "Real-time GPU physics simulation",
+      "Direct geometry editing",
+      "Modal & thermal instant feedback"
+    ],
+
+    is_popular: true
+  }, {
+    name: "High-Fidelity Refinement",
+    price: "5,500",
+    period: "/yr",
+
+    features: [
+      "Integrated Ansys Mechanical & Fluent solvers",
+      "Hex-dominant automated meshing"
+    ],
+
+    is_popular: false
+  }]
 },
 {
   id: "t188",
@@ -5721,11 +5866,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 25000,
   price_period: "year",
-
-  platforms: [
-    "Windows",
-    "Linux"
-  ],
+  platforms: ["Windows", "Linux"],
 
   industries: [
     "Aerospace",
@@ -5883,7 +6024,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2025"
+  version: "2025",
+  file_formats_in: ["INP", "STEP", "IGES", "Parasolid", "SAT", "CATPart", "STL"],
+  file_formats_out: ["ODB", "INP", "FIL", "STEP", "IGES", "STL", "CSV"],
+
+  pricing_tiers: [{
+    name: "Abaqus/Standard & Explicit",
+    price: "25,000",
+    period: "/yr",
+
+    features: [
+      "Non-linear structural analysis",
+      "Explicit crash & impact dynamics",
+      "Advanced composite damage models"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t189",
@@ -5897,12 +6054,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 3995,
   price_period: "one-time",
-
-  platforms: [
-    "Windows",
-    "macOS",
-    "Linux"
-  ],
+  platforms: ["Windows", "macOS", "Linux"],
 
   industries: [
     "Electronics",
@@ -6062,7 +6214,47 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "6.3"
+  version: "6.3",
+
+  file_formats_in: [
+    "MPH",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "DXF",
+    "DWG",
+    "STL",
+    "PLY",
+    "NASTRAN"
+  ],
+
+  file_formats_out: [
+    "MPH",
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "STL",
+    "PLY",
+    "VTK",
+    "CSV",
+    "TXT",
+    "MP4"
+  ],
+
+  pricing_tiers: [{
+    name: "Core Platform",
+    price: "3,995",
+    period: "one-time",
+
+    features: [
+      "Base Multiphysics environment",
+      "Custom PDE solver",
+      "Application Builder standalone export"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t190",
@@ -6426,12 +6618,7 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Free",
   starting_price: 0,
-
-  platforms: [
-    "Linux",
-    "Windows",
-    "macOS"
-  ],
+  platforms: ["Linux", "Windows", "macOS"],
 
   industries: [
     "Research",
@@ -6591,7 +6778,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["blockMeshDict", "snappyHexMeshDict", "STL", "OBJ", "MSH", "UNV", "CGNS"],
+  file_formats_out: ["VTK", "OpenFOAM time dirs", "EnSight", "ParaView (.foam)", "CSV"],
+
+  pricing_tiers: [{
+    name: "Community Open Source",
+    price: "0",
+    period: "/forever",
+
+    features: [
+      "Full OpenFOAM CFD solver suite",
+      "Unlimited parallel MPI cores",
+      "Zero licensing fees"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t193",
@@ -6956,10 +7159,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 6000,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "Aerospace",
@@ -7118,7 +7318,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "SLDPRT", "IPT", "CATPart", "STL"],
+  file_formats_out: ["STEP", "IGES", "Parasolid", "STL", "3MF", "FEM"],
+
+  pricing_tiers: [{
+    name: "Inspire Generative",
+    price: "6,000",
+    period: "/yr",
+
+    features: [
+      "Topology optimization with OptiStruct",
+      "Sheet metal forming & casting analysis",
+      "Motion dynamics simulation"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t196",
@@ -8705,10 +8921,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 2400,
   price_period: "year",
-
-  platforms: [
-    "Windows"
-  ],
+  platforms: ["Windows"],
 
   industries: [
     "AEC",
@@ -8866,7 +9079,23 @@ export const c5Tools: Tool[] = [
   ],
 
   last_updated: "2026-09-02",
-  version: "2024"
+  version: "2024",
+  file_formats_in: ["TED", "RTF", "PDF", "Excel"],
+  file_formats_out: ["TED", "PDF", "RTF", "Word", "Excel"],
+
+  pricing_tiers: [{
+    name: "Tedds Standalone",
+    price: "2,400",
+    period: "/yr",
+
+    features: [
+      "Automated structural calculations",
+      "Code-compliant calculation library",
+      "Custom calculation writing in MS Word"
+    ],
+
+    is_popular: true
+  }]
 },
 {
   id: "t242",
@@ -10449,11 +10678,7 @@ export const c5Tools: Tool[] = [
   pricing_type: "Perpetual",
   starting_price: 0,
   quote_only: true,
-
-  platforms: [
-    "Windows"
-  ],
-
+  platforms: ["Windows"],
   industries: ["Manufacturing", "Machining", "Tooling"],
 
   core_features: [
@@ -10514,7 +10739,22 @@ export const c5Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "Parasolid",
+    "SAT",
+    "CATPart",
+    "SLDPRT",
+    "IPT",
+    "DWG",
+    "DXF",
+    "STL"
+  ],
+
+  file_formats_out: ["NC (G-Code)", "ESP", "STEP", "IGES", "STL"]
 },
 {
   id: "t167",

@@ -2303,7 +2303,9 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "OpenSCAD is the ultimate tool for engineers who think in code.",
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["SCAD", "DXF", "SVG", "STL", "OFF", "AMF", "3MF"],
+  file_formats_out: ["STL", "OFF", "AMF", "3MF", "DXF", "SVG", "CSG", "PNG", "PDF"]
 },
 {
   id: "t25",
@@ -2423,7 +2425,35 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "Shapr3D has done the impossible: made professional CAD fun.",
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+
+  file_formats_in: [
+    "STEP",
+    "IGES",
+    "X_T",
+    "X_B",
+    "SLDPRT",
+    "SLDASM",
+    "DWG",
+    "DXF",
+    "STL",
+    "OBJ",
+    "SHAPR"
+  ],
+
+  file_formats_out: [
+    "STEP",
+    "IGES",
+    "X_T",
+    "X_B",
+    "DWG",
+    "DXF",
+    "STL",
+    "OBJ",
+    "3MF",
+    "USDZ",
+    "PDF"
+  ]
 },
 {
   id: "t29",
@@ -2558,6 +2588,7 @@ export const c2Tools: Tool[] = [
     "solidworks",
     "zw3d"
   ],
+
   country: "USA",
   category_id: "c2",
   pricing_type: "Perpetual",
@@ -2615,7 +2646,34 @@ export const c2Tools: Tool[] = [
 
   version: "2025",
   expert_verdict: "No mandatory subscriptions, just solid parametric tools.",
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+
+  file_formats_in: [
+    "AD_PRT",
+    "AD_ASM",
+    "AD_DRW",
+    "STEP",
+    "IGES",
+    "SAT",
+    "DWG",
+    "DXF",
+    "STL",
+    "SolidWorks"
+  ],
+
+  file_formats_out: [
+    "AD_PRT",
+    "AD_ASM",
+    "AD_DRW",
+    "STEP",
+    "IGES",
+    "SAT",
+    "DWG",
+    "DXF",
+    "STL",
+    "3D PDF",
+    "PDF"
+  ]
 },
 {
   id: "t50",
@@ -3312,7 +3370,7 @@ export const c2Tools: Tool[] = [
   "pricing_type": "Perpetual",
   "starting_price": 149,
   price_period: "one-time",
-  "platforms": ["Windows", "macOS", "Linux"],
+  platforms: ["Windows", "macOS", "Linux"],
   "industries": ["Product Design", "Games", "Industrial Design"],
 
   "core_features": [
@@ -3408,7 +3466,35 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02"
+  last_updated: "2026-09-02",
+  file_formats_in: ["STEP", "IGES", "OBJ", "STL", "DXF", "SVG"],
+  file_formats_out: ["STEP", "IGES", "OBJ", "FBX", "STL", "DXF", "SVG"],
+
+  pricing_tiers: [{
+    name: "Indie License",
+    price: "149",
+    period: "one-time",
+
+    features: [
+      "Full Parasolid NURBS toolset",
+      "Perpetual license (1 yr updates)",
+      "Revenue under $100k"
+    ],
+
+    is_popular: true
+  }, {
+    name: "Studio License",
+    price: "299",
+    period: "one-time",
+
+    features: [
+      "All Indie features",
+      "Commercial usage for any company size",
+      "Priority Discord support"
+    ],
+
+    is_popular: false
+  }]
 },
 {
   id: "t238",
@@ -3422,7 +3508,7 @@ export const c2Tools: Tool[] = [
   "pricing_type": "Perpetual",
   "starting_price": 295,
   price_period: "one-time",
-  "platforms": ["Windows", "macOS"],
+  platforms: ["Windows", "macOS"],
   "industries": ["Product Design", "Industrial Design", "Games"],
 
   "core_features": [
@@ -3457,9 +3543,10 @@ export const c2Tools: Tool[] = [
     "gpu_optimization": "OpenGL",
     "standards": ["STEP", "IGES", "OBJ", "3DM"],
   },
-  version: "4.0",
 
+  version: "4.0",
   "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
+
   faqs: [{
     q: 'What is MoI3D used for?',
     a: 'Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design. MoI3D is a 3D modeling solution widely adopted in Product Design, Industrial Design, Games.',
@@ -3479,7 +3566,9 @@ export const c2Tools: Tool[] = [
     q: 'What are the best alternatives to MoI3D?',
     a: 'The closest alternatives within the 3D Modeling space are Plasticity, Alibre Design, ZW3D. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool.',
   }],
+
   alternatives: ['plasticity', 'alibre-design', 'zw3d'],
+
   detailed_features: [
     {
       category: "NURBS",
@@ -3514,6 +3603,43 @@ export const c2Tools: Tool[] = [
       ],
     },
   ],
+
+  file_formats_in: ["3DM", "STEP", "IGES", "SAT", "DXF", "PDF", "AI"],
+
+  file_formats_out: [
+    "3DM",
+    "STEP",
+    "IGES",
+    "SAT",
+    "OBJ",
+    "STL",
+    "3DS",
+    "LWO",
+    "FBX",
+    "DXF",
+    "PDF",
+    "AI"
+  ],
+
+  pricing_tiers: [{
+    name: "V4/V5 Commercial",
+    price: "295",
+    period: "one-time",
+
+    features: [
+      "Full NURBS modeling suite",
+      "World-class N-gon mesher",
+      "Perpetual commercial rights"
+    ],
+
+    is_popular: true
+  }, {
+    name: "Upgrade",
+    price: "100",
+    period: "one-time",
+    features: ["Upgrade from any prior MoI version", "Full commercial use"],
+    is_popular: false
+  }]
 },
 {
   id: "t26",
@@ -3550,7 +3676,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Free",
   starting_price: 0,
-  platforms: ["Web", "Android", "iOS"],
+  platforms: ["Web", "iOS", "Android"],
   industries: ["Education", "Hobbyist", "Prototyping"],
   core_features: ["3D Design", "Electronics", "Coding"],
   user_scales: ["Education", "Individuals"],
@@ -3589,10 +3715,11 @@ export const c2Tools: Tool[] = [
     gpu_optimization: "Basic",
     standards: ["STL", "OBJ", "SVG"],
   },
+
   version: "2025",
-
   expert_verdict: "Tinkercad is the best free starting point for learning 3D design and electronics.",
-
+  file_formats_in: ["STL", "OBJ", "SVG"],
+  file_formats_out: ["STL", "OBJ", "GLTF", "SVG", "USDZ"]
 },
 {
   id: "t245",

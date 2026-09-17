@@ -646,7 +646,20 @@ export const c3Tools: Tool[] = [
   version: "2026",
   last_updated: "2026-09-02",
   free_trial_days: 30,
+  file_formats_in: ["IFC", "DWG", "DXF", "DGN", "STEP", "IGES", "SKP", "XML", "CIS/2", "SDNF"],
 
+  file_formats_out: [
+    "IFC",
+    "DWG",
+    "DXF",
+    "DGN",
+    "STEP",
+    "3D PDF",
+    "NC (DSTV)",
+    "BVBS",
+    "CIS/2",
+    "SDNF"
+  ]
 },
 {
   id: "t17",
@@ -1148,6 +1161,21 @@ export const c3Tools: Tool[] = [
     },
   ],
 
+  file_formats_in: [
+    "DWG",
+    "DXF",
+    "DGN",
+    "LandXML",
+    "IFC",
+    "SHP",
+    "SDF",
+    "DEM",
+    "LAS",
+    "LAZ",
+    "TIF"
+  ],
+
+  file_formats_out: ["DWG", "DXF", "DGN", "LandXML", "IFC", "SDF", "KML", "KMZ", "PDF", "NWC"]
 },
 {
   id: "t74",
@@ -1301,6 +1329,7 @@ export const c3Tools: Tool[] = [
     gpu_optimization: "High",
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
+
   version: "2025",
 
   expert_verdict:
@@ -1384,6 +1413,20 @@ export const c3Tools: Tool[] = [
     },
   ],
 
+  file_formats_in: ["IFC", "DWG", "DXF", "DGN", "SKP", "Rhino 3DM", "Cinema 4D", "PDF", "STEP"],
+
+  file_formats_out: [
+    "IFC",
+    "DWG",
+    "DXF",
+    "DGN",
+    "SKP",
+    "Cinema 4D",
+    "PDF",
+    "3D PDF",
+    "BVBS",
+    "U3D"
+  ]
 },
 {
   id: "t95",
