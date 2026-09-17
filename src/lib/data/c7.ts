@@ -4539,5 +4539,98 @@ export const c7Tools: Tool[] = [
   last_updated: "2026-09-11",
   file_formats_in: ["PDB", "MOL", "SDF", "CSV", "XYZ"],
   file_formats_out: ["PDB", "MOL", "SDF", "CSV", "PDF Analysis"]
+},
+{
+  id: "t251",
+  name: "pic2CAD",
+  slug: "pic2cad",
+  logo_url: "/logos/pic2cad.png",
+  short_desc: "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
+  description: "pic2CAD turns pictures of people, objects, and furniture into clean line drawings and exports them as DXF, SVG, and PNG, ready to drop straight into a CAD file. Where ordinary vectorizers trace pixel edges and tangle curves around every shadow, pic2CAD reads what is actually in the picture and draws it as a line block. It targets architects and everyday CAD users building their own entourage and furniture blocks from real people and furniture, plus laser cutting and engraving workflows. Conversion modes cover Picture accurate, Subject only, and an Orthographic view (beta) that scales the drawing to a real-world height, and a shared library of 300+ community blocks ships with it.",
+  category_id: "c7",
+  pricing_type: "Freemium",
+  starting_price: 0,
+  price_period: "month",
+  platforms: ["Web"],
+  industries: ["Architecture", "Interior Design", "Laser Cutting"],
+  core_features: ["Photo → line drawing conversion", "DXF / SVG / PNG export", "Orthographic entourage view (beta)", "300+ shared 2D block library"],
+  user_scales: ["Individuals", "Small Business"],
+  official_url: "https://pic2cad.ai",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
+    "Draws clean line blocks from photos instead of tracing pixel noise around shadows",
+    "DXF, SVG, and PNG downloads stay free on every plan",
+    "Orthographic mode scales drawings to real height for entourage use"
+  ],
+  cons: [
+    "Free plan capped at 3 drawings per month",
+    "Orthographic view is still beta",
+    "Line style suits blocks and templates, not precision as-built capture"
+  ],
+  faqs: [
+    {
+      q: "What is pic2CAD used for?",
+      a: "pic2CAD converts a picture of a person, object, or piece of furniture into a clean line drawing and exports it as DXF, SVG, or PNG — typically for architect entourage, furniture blocks, or laser cutter and engraver templates."
+    },
+    {
+      q: "How much does pic2CAD cost?",
+      a: "The free plan covers 3 drawings per month. The Creator plan is €8 per month billed yearly (€96 per year, VAT included) with 30 drawings a month, the full block gallery, and beta tools. DXF, SVG, and PNG downloads are free on every plan."
+    },
+    {
+      q: "Is there a free version of pic2CAD?",
+      a: "Yes — 3 drawings per month for free, with retries and DXF, SVG, and PNG export included. No credit card needed to try it."
+    },
+    {
+      q: "What operating systems does pic2CAD support?",
+      a: "pic2CAD runs in the browser, so it works on Windows, macOS, Linux, and tablets without an install."
+    },
+    {
+      q: "Which file formats does pic2CAD support?",
+      a: "You feed it ordinary photos and export DXF, SVG, and PNG — the DXF drops straight into AutoCAD-style drafting files."
+    },
+    {
+      q: "What are the best alternatives to pic2CAD?",
+      a: "Generic vectorizers such as Inkscape's Trace Bitmap are free but trace pixel edges, so photos of people or furniture come back as tangled curves. Scan2CAD is the established commercial raster-to-vector converter for technical drawings. pic2CAD focuses specifically on reading the subject and drawing it as a clean CAD block."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "€0",
+      period: "forever",
+      features: [
+        "3 drawings per month",
+        "Retries included",
+        "DXF / SVG / PNG export",
+        "Limited shared gallery"
+      ]
+    },
+    {
+      name: "Creator",
+      price: "€8",
+      period: "/mo",
+      features: [
+        "30 drawings per month",
+        "Full 300+ block gallery",
+        "Beta tools (Orthographic view)",
+        "Billed yearly (€96/yr, VAT incl.)"
+      ],
+      is_popular: true
+    },
+    {
+      name: "Studios",
+      price: "Custom",
+      period: "",
+      features: [
+        "Volume conversion",
+        "Custom block libraries",
+        "Team workflows"
+      ]
+    }
+  ],
+  expert_verdict: "A niche time-saver for architects and laser hobbyists: turn your own photos into usable entourage and template blocks without hand-tracing.",
+  last_updated: "2026-09-17",
+  file_formats_out: ["DXF", "SVG", "PNG"]
 }
 ];

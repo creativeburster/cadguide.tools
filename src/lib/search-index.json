@@ -3436,6 +3436,25 @@
     "country": "Germany"
   },
   {
+    "id": "t251",
+    "name": "pic2CAD",
+    "slug": "pic2cad",
+    "short_desc": "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
+    "score": 4.4,
+    "logo_url": "/logos/pic2cad.png",
+    "official_url": "https://pic2cad.ai",
+    "category_id": "c7",
+    "category_name": "Specialized",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Interior Design",
+      "Laser Cutting"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
