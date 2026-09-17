@@ -525,17 +525,18 @@ export const c1Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Lite (2D)",
-      price: "590",
+      price: "345",
       period: "/yr",
       features: [
         "2D Drafting",
         "Full LISP",
-        "DWG Native"
+        "DWG Native",
+        "Sold in 5-seat minimums"
       ]
     },
     {
       name: "Pro (3D)",
-      price: "1150",
+      price: "780",
       period: "/yr",
       features: [
         "3D Direct Modeling",
@@ -546,7 +547,7 @@ export const c1Tools: Tool[] = [
     },
     {
       name: "Ultimate",
-      price: "2150",
+      price: "1,500",
       period: "/yr",
       features: [
         "Mechanical & BIM",
@@ -593,7 +594,7 @@ export const c1Tools: Tool[] = [
   country: "Belgium",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 590,
+  starting_price: 780,
   price_period: "year",
 
   platforms: [
@@ -670,7 +671,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does BricsCAD cost?",
-      a: "BricsCAD starts at $590 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "BricsCAD subscriptions start at $345 per year for Lite (sold in 5-seat minimums); single-user Pro is $780 per year and Ultimate about $1,500 per year."
     },
     {
       q: "Is there a free version of BricsCAD?",
@@ -704,7 +705,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A powerful, modern DWG-native alternative combining fast 2D CAD, direct 3D modeling, and BIM in one package.",
   version: "V26",
-  last_updated: "2026-05-05",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   pricing_breakdown: [
@@ -745,7 +746,7 @@ export const c1Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Virtuosity Annual",
-      price: "2,150",
+      price: "2,656",
       period: "/yr",
       features: [
         "Full 2D/3D CAD",
@@ -823,7 +824,7 @@ export const c1Tools: Tool[] = [
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
-  starting_price: 2150,
+  starting_price: 2656,
   price_period: "year",
 
   platforms: [
@@ -900,7 +901,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does MicroStation cost?",
-      a: "MicroStation starts at $2,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "A 12-month MicroStation Virtuoso subscription starts at $2,656 (one license plus training/service keys); enterprise licensing is quoted by Bentley."
     },
     {
       q: "Is there a free version of MicroStation?",
@@ -931,7 +932,8 @@ export const c1Tools: Tool[] = [
       "STEP"
     ]
   },
-  version: "2024",
+  version: "2026",
+  last_updated: "2026-09-17",
 
   expert_verdict: "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
 
@@ -1570,8 +1572,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The quintessential lightweight, cross-platform open-source 2D CAD tool for straightforward technical drafting.",
-  version: "3.29",
-  last_updated: "2025-05-20",
+  version: "3.33.1",
+  last_updated: "2026-09-17",
   free_trial_days: 0,
 
   languages: [
@@ -2501,8 +2503,8 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "The go-to completely free, open-source 2D CAD tool for students, makers, and basic layout projects.",
-  version: "2.2.0",
-  last_updated: "2025-05-20",
+  version: "2.2.1.5",
+  last_updated: "2026-09-17",
   free_trial_days: 0,
 
   languages: [

@@ -17,20 +17,20 @@ export const c3Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "355",
+      price: "380",
       period: "/mo",
       features: ["Full BIM features", "Worksharing", "Cloud access"],
     },
     {
       name: "Annual",
-      price: "2830",
+      price: "3,005",
       period: "/yr",
-      features: ["Save 33%", "Multi-user collaboration", "Priority Support"],
+      features: ["Save vs monthly", "Multi-user collaboration", "Priority Support"],
       is_popular: true,
     },
     {
       name: "3-Year",
-      price: "8490",
+      price: "9,015",
       period: "/3yr",
       features: ["Enterprise scale", "Price protection", "Flex licensing"],
     },
@@ -53,7 +53,7 @@ export const c3Tools: Tool[] = [
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 355,
+  starting_price: 380,
   price_period: "month",
   platforms: ["Windows"],
   industries: ["AEC", "Construction", "Structural Engineering"],
@@ -83,7 +83,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Revit cost?",
-      a: "Revit starts at $355 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Revit costs $380 per month or $3,005 per year per seat; a 3-year subscription runs $9,015. Free educational licenses are available for students and educators.",
     },
     {
       q: "Does Revit offer a free trial?",
@@ -113,7 +113,7 @@ export const c3Tools: Tool[] = [
   expert_verdict:
     "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
   version: "2027",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   pricing_breakdown: [
@@ -262,15 +262,15 @@ export const c3Tools: Tool[] = [
       is_popular: false,
     },
     {
-      name: "BIMcloud",
-      price: "47",
-      period: "/mo",
+      name: "Studio (Annual)",
+      price: "2,414",
+      period: "/yr",
 
       features: [
-        "Cloud Coordination",
-        "Real-time multi-user sync",
-        "Infinite projects",
-        "Security",
+        "Everything in Studio",
+        "Billed annually (save vs monthly)",
+        "Standard BIM tools",
+        "Documentation",
       ],
 
       is_popular: false,
@@ -328,8 +328,8 @@ export const c3Tools: Tool[] = [
   country: "Hungary",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 2700,
-  price_period: "year",
+  starting_price: 201,
+  price_period: "month",
   platforms: ["Windows", "macOS"],
   industries: ["Architecture", "Interior Design"],
 
@@ -362,7 +362,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does ArchiCAD cost?",
-      a: "ArchiCAD starts at $1,800 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Archicad Studio costs $201 per month month-to-month, or $2,414 per year billed annually; Archicad Collaborate is $237 per month. Graphisoft now sells Archicad by subscription only.",
     },
     {
       q: "Does ArchiCAD offer a free trial?",
@@ -391,7 +391,7 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "ArchiCAD is built by architects, for architects.",
   version: "29",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   languages: [
@@ -489,8 +489,8 @@ export const c3Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Carbon",
-      price: "3,800",
-      period: "/yr",
+      price: "Custom",
+      period: "",
 
       features: [
         "Viewing & Collaboration",
@@ -503,8 +503,8 @@ export const c3Tools: Tool[] = [
     },
     {
       name: "Graphite",
-      price: "7,200",
-      period: "/yr",
+      price: "Custom",
+      period: "",
 
       features: [
         "Modeling & Documentation",
@@ -517,8 +517,8 @@ export const c3Tools: Tool[] = [
     },
     {
       name: "Diamond",
-      price: "12,500",
-      period: "/yr",
+      price: "Custom",
+      period: "",
 
       features: [
         "Full Automation",
@@ -582,7 +582,8 @@ export const c3Tools: Tool[] = [
   country: "Finland",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 2500,
+  quote_only: true,
+  starting_price: 0,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Structural Engineering", "Construction"],
@@ -615,7 +616,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Tekla Structures cost?",
-      a: "Tekla Structures starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Trimble does not publish Tekla Structures pricing. It is sold through local resellers as Carbon, Graphite, and Diamond subscription tiers — contact Trimble or a partner for a quote.",
     },
     {
       q: "Is there a free version of Tekla Structures?",
@@ -644,7 +645,7 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "The choice for massive steel stadiums and complex plants.",
   version: "2026",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
   file_formats_in: ["IFC", "DWG", "DXF", "DGN", "STEP", "IGES", "SKP", "XML", "CIS/2", "SDNF"],
 
@@ -853,8 +854,8 @@ export const c3Tools: Tool[] = [
 
   expert_verdict:
     "If you work in landscape or lighting design, Vectorworks is the standard.",
-  version: "2026",
-  last_updated: "2026-09-02",
+  version: "2027",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
 },
@@ -1009,8 +1010,8 @@ export const c3Tools: Tool[] = [
   },
 
   expert_verdict: "If you build houses, buy Chief Architect.",
-  version: "X16",
-  last_updated: "2025-01-10",
+  version: "X18",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
   file_formats_in: ["PLAN", "DWG", "DXF", "SKP", "OBJ", "3DS", "PDF"],
   file_formats_out: ["PLAN", "DWG", "DXF", "3D PDF", "OBJ", "DAE", "STL", "PDF"]
@@ -1021,7 +1022,7 @@ export const c3Tools: Tool[] = [
   slug: "civil-3d",
   logo_url: "/logos/civil-3d.png",
   short_desc: "Civil engineering design and documentation software.",
-  description: "Civil 3D supports BIM for enhanced civil engineering design.",
+  description: "Civil 3D is Autodesk's civil infrastructure design application, built on the AutoCAD engine. Its dynamic, model-based tools for corridors, grading, alignments, profiles, and pipe networks propagate revisions automatically across drawings, tables, and civil objects.",
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
@@ -1182,16 +1183,43 @@ export const c3Tools: Tool[] = [
   id: "t74",
   name: "Vectorworks Landmark",
   slug: "vectorworks-landmark",
-  logo_url: "/logos/vectorworks-landmark.ico",
+  logo_url: "/logos/vectorworks.png",
   short_desc: "The premier CAD software for landscape design.",
 
   description:
     "Vectorworks Landmark provides a specialized toolset for landscape architects and designers, integrating GIS, BIM, and advanced 2D/3D drafting in one package.",
 
+  pricing_tiers: [
+    {
+      name: "Monthly",
+      price: "170",
+      period: "/mo",
+      features: [
+        "Full Landmark toolset",
+        "GIS integration",
+        "Plant & irrigation databases",
+        "Standard support",
+      ],
+      is_popular: false,
+    },
+    {
+      name: "Annual",
+      price: "1,530",
+      period: "/yr",
+      features: [
+        "Everything in Monthly",
+        "Billed annually ($127.50/mo)",
+        "VW Partner products discounts",
+        "Free updates during term",
+      ],
+      is_popular: true,
+    },
+  ],
+
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 153,
+  starting_price: 1530,
   price_period: "year",
   platforms: ["Windows", "macOS"],
   industries: ["Landscape Architecture", "Urban Planning"],
@@ -1222,7 +1250,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Vectorworks Landmark cost?",
-      a: "Vectorworks Landmark starts at $153 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Vectorworks Landmark costs $170 per month, or $1,530 per year when billed annually (the equivalent of $127.50 per month).",
     },
     {
       q: "Is there a free version of Vectorworks Landmark?",
@@ -1249,7 +1277,8 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "Shapefile"],
   },
 
-  version: "2025",
+  version: "2027",
+  last_updated: "2026-09-17",
 
   expert_verdict:
     "The undisputed gold standard for professional landscape architecture.",
@@ -1270,7 +1299,7 @@ export const c3Tools: Tool[] = [
   country: "Germany",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 1800,
+  starting_price: 3480,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Architecture", "Structural Engineering", "Construction"],
@@ -1307,7 +1336,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Allplan cost?",
-      a: "Allplan starts at $1,800 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "ALLPLAN lists US pricing at $3,480 per year for Professional and $4,704 per year for Ultimate; other packages and enterprise deals are quoted by sales.",
     },
     {
       q: "Is there a free version of Allplan?",
@@ -1334,15 +1363,16 @@ export const c3Tools: Tool[] = [
     standards: ["IFC", "DWG", "DXF", "STEP"],
   },
 
-  version: "2025",
+  version: "2026",
+  last_updated: "2026-09-17",
 
   expert_verdict:
     "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
 
   pricing_tiers: [
     {
-      name: "Architecture",
-      price: "2,800",
+      name: "Professional",
+      price: "3,480",
       period: "/yr",
 
       features: [
@@ -1355,14 +1385,14 @@ export const c3Tools: Tool[] = [
       is_popular: true,
     },
     {
-      name: "Engineering",
-      price: "3,200",
+      name: "Ultimate",
+      price: "4,704",
       period: "/yr",
 
       features: [
-        "Civil Engineering",
+        "Everything in Professional",
+        "Advanced workflows",
         "Precast elements",
-        "Quantity takeoff",
         "Bimplus integration",
       ],
 

@@ -14,8 +14,8 @@ export const c5Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Core CAD (NX X)",
-      price: "3,000",
-      period: "/yr",
+      price: "Custom",
+      period: "quote",
       features: [
         "Parametric Modeling",
         "Synchronous Technology",
@@ -26,8 +26,8 @@ export const c5Tools: Tool[] = [
     },
     {
       name: "Advanced Designer",
-      price: "6,500",
-      period: "/yr",
+      price: "Custom",
+      period: "quote",
       features: [
         "Advanced Surfacing",
         "Sheet Metal",
@@ -104,7 +104,8 @@ export const c5Tools: Tool[] = [
   country: "Germany",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 3000,
+  quote_only: true,
+  starting_price: 0,
   price_period: "year",
 
   platforms: [
@@ -154,7 +155,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does Siemens NX cost?",
-      a: "Siemens NX starts at $6,000 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Siemens does not publish official NX pricing — subscriptions are quoted by role and configuration. Community sources put entry NX CAD/CAM around $3,000 per year; contact Siemens or a reseller for exact figures."
     },
     {
       q: "Does Siemens NX offer a free trial?",
@@ -187,8 +188,8 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "A high-end enterprise PLM and CAD suite, delivering unmatched power for aerospace and automotive engineering.",
-  version: "NX 2512",
-  last_updated: "2026-01-08",
+  version: "NX 2606",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   languages: [
@@ -445,7 +446,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "The 'gold standard' for the professional machine shop.",
-  last_updated: "2025-07-03",
+  last_updated: "2026-09-17",
   version: "2027",
 
   file_formats_in: [
@@ -1134,7 +1135,8 @@ export const c5Tools: Tool[] = [
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 25000,
+  quote_only: true,
+  starting_price: 0,
   price_period: "year",
   platforms: ["Windows", "Linux"],
 
@@ -1182,7 +1184,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does ANSYS Mechanical cost?",
-      a: "ANSYS Mechanical starts at $25,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Ansys does not publish prices — Mechanical is sold quote-only through sales and resellers, priced per seat, module bundle, and HPC configuration. Contact Ansys or a partner for a quote."
     },
     {
       q: "Is there a free version of ANSYS Mechanical?",
@@ -1218,9 +1220,9 @@ export const c5Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Premium (Annual)",
-      price: "15,000",
-      period: "/yr",
+      name: "Subscription (Annual)",
+      price: "Custom",
+      period: "quote",
       features: [
         "Static Structural",
         "Modal Analysis",
@@ -1276,7 +1278,7 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2024-12-30",
+  last_updated: "2026-09-17",
   version: "2026 R1",
 
   file_formats_in: [
@@ -1305,7 +1307,8 @@ export const c5Tools: Tool[] = [
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 18000,
+  quote_only: true,
+  starting_price: 0,
   price_period: "year",
 
   platforms: [
@@ -1331,7 +1334,7 @@ export const c5Tools: Tool[] = [
   ],
 
   official_url: "https://nexus.hexagon.com/home/product/msc-nastran/",
-  pricing_url: "https://hexagon.com/products/msc-nastran",
+  pricing_url: "https://nexus.hexagon.com/home/product/msc-nastran/",
   affiliate_url: null,
   score: 4.9,
 
@@ -1354,7 +1357,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does MSC Nastran cost?",
-      a: "MSC Nastran starts at $18,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Hexagon does not publish prices — MSC Nastran is quote-only via sales and resellers, priced by solver modules, seats, and HPC packs. Contact Hexagon or a distributor for a quote."
     },
     {
       q: "Is there a free version of MSC Nastran?",
@@ -1389,9 +1392,9 @@ export const c5Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Annual",
-      price: "12,000",
-      period: "/yr",
+      name: "Subscription (Annual)",
+      price: "Custom",
+      period: "quote",
       features: [
         "Advanced FEA",
         "Structural Dynamics",
@@ -1414,9 +1417,8 @@ export const c5Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   version: "2024",
-  quote_only: true,
   file_formats_in: ["BDF", "DAT", "STEP", "IGES", "Parasolid", "CATPart"],
   file_formats_out: ["OP2", "H5", "PCH", "F06", "CSV"]
 },

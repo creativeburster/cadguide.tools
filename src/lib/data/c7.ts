@@ -740,7 +740,7 @@ export const c7Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "39",
+      price: "49",
       period: "/mo",
       features: [
         "Industry Standard Sculpt",
@@ -752,7 +752,7 @@ export const c7Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "359",
+      price: "399",
       period: "/yr",
       features: [
         "Full license access",
@@ -886,7 +886,7 @@ export const c7Tools: Tool[] = [
   },
 
   expert_verdict: "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   version: "2024",
   file_formats_in: ["ZTL", "ZPR", "OBJ", "FBX", "MA", "STL", "PLY"],
 

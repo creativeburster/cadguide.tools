@@ -253,20 +253,20 @@ export const c2Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Go",
-      price: "119",
+      price: "129",
       period: "/yr",
       features: ["Web Modeler", "iPad support", "Unlimited cloud storage"],
     },
     {
       name: "Pro",
-      price: "349",
+      price: "399",
       period: "/yr",
       features: ["Desktop Modeler", "LayOut 2D", "Style Builder"],
       is_popular: true,
     },
     {
       name: "Studio",
-      price: "749",
+      price: "819",
       period: "/yr",
       features: ["V-Ray Rendering", "Scan Data import", "Revit Importer"],
     },
@@ -289,7 +289,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Freemium",
-  starting_price: 119,
+  starting_price: 129,
   price_period: "year",
   platforms: ["Windows", "macOS", "Web", "Android", "iOS"],
   industries: ["Architecture", "Interior Design", "Landscape"],
@@ -315,7 +315,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does SketchUp cost?",
-      a: "SketchUp starts at $119 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "SketchUp Go costs $129 per year, Pro $399 per year, and Studio $819 per year. A free web-based version is available for hobbyists, and Pro is heavily discounted for education.",
     },
     {
       q: "Does SketchUp offer a free trial?",
@@ -345,7 +345,7 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
   version: "2026",
-  last_updated: "2026-05-01",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   pricing_breakdown: [
@@ -470,8 +470,8 @@ export const c2Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Fusion (Standard)",
-      price: "57",
+      name: "Monthly",
+      price: "85",
       period: "/mo",
 
       features: [
@@ -481,35 +481,21 @@ export const c2Tools: Tool[] = [
         "Team Collaboration",
       ],
 
+      is_popular: false,
+    },
+    {
+      name: "Annual",
+      price: "680",
+      period: "/yr",
+
+      features: [
+        "All Monthly features",
+        "Cloud collaboration & data management",
+        "Extensions available à la carte",
+        "Generative Design credits option",
+      ],
+
       is_popular: true,
-    },
-    {
-      name: "For Manufacturing",
-      price: "128",
-      period: "/mo",
-
-      features: [
-        "All Standard features",
-        "Advanced Machining (4 & 5-axis)",
-        "Nesting & Fabrication",
-        "Steep & Shallow finishing",
-      ],
-
-      is_popular: false,
-    },
-    {
-      name: "For Design",
-      price: "137",
-      period: "/mo",
-
-      features: [
-        "All Standard features",
-        "Generative Design",
-        "Advanced Simulation",
-        "Complex Surfacing",
-      ],
-
-      is_popular: false,
     },
   ],
 
@@ -622,8 +608,8 @@ export const c2Tools: Tool[] = [
   },
 
   expert_verdict: "Fusion 360 is the future of agile hardware design.",
-  version: "2.0.18516",
-  last_updated: "2026-09-02",
+  version: "Continuous (cloud)",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   languages: [
@@ -1303,8 +1289,8 @@ export const c2Tools: Tool[] = [
     "2D Technical Drawing (TechDraw)",
   ],
 
-  version: "1.1",
-  last_updated: "2025-11-15",
+  version: "1.1.3",
+  last_updated: "2026-09-17",
   free_trial_days: 0,
 
   languages: [
@@ -1394,9 +1380,21 @@ export const c2Tools: Tool[] = [
   short_desc:
     "The professional CAD system built for agile cloud development.",
   description:
-    "Onshape is the first and only pure-cloud professional 3D CAD system.",
+    "Onshape is a cloud-native SaaS CAD platform developed by PTC. All modeling, simulation, and data management run entirely in a web browser, so teams collaborate on the same design from any device, with no installs and no PDM servers to maintain.",
 
   pricing_tiers: [
+    {
+      name: "Standard",
+      price: "1,500",
+      period: "/yr",
+      features: [
+        "Core Modeling",
+        "Team Management",
+        "Standard Parts",
+        "Mobile apps",
+      ],
+      is_popular: false,
+    },
     {
       name: "Professional",
       price: "2,500",
@@ -1410,18 +1408,6 @@ export const c2Tools: Tool[] = [
       ],
 
       is_popular: true,
-    },
-    {
-      name: "Standard",
-      price: "1,500",
-      period: "/yr",
-      features: [
-        "Core Modeling",
-        "Team Management",
-        "Standard Parts",
-        "Mobile apps",
-      ],
-      is_popular: false,
     },
   ],
 
@@ -1476,7 +1462,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 2500,
+  starting_price: 1500,
   price_period: "year",
   platforms: ["Web", "iOS", "Android"],
   industries: ["Startups", "Consumer Products", "Robotics"],
@@ -1539,7 +1525,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "Onshape is the 'Google Docs' of CAD.",
   version: "Continuous (cloud)",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
   free_trial_days: 30,
 
   languages: [
@@ -2325,17 +2311,23 @@ export const c2Tools: Tool[] = [
       features: ["2 Designs", "Low-res export", "Basic tools"],
     },
     {
+      name: "Solo",
+      price: "249.99",
+      period: "/yr",
+      features: ["100 designs", "High-res export", "Parasolid engine"],
+    },
+    {
       name: "Pro",
       price: "299",
       period: "/yr",
-      features: ["Unlimited designs", "High-res export", "Parasolid engine"],
+      features: ["Unlimited designs", "Import/export CAD", "All platforms"],
       is_popular: true,
     },
     {
-      name: "Enterprise",
-      price: "499",
+      name: "Studio",
+      price: "450",
       period: "/yr",
-      features: ["Network licensing", "Priority support", "Deployment tools"],
+      features: ["2 seats", "Team features", "Priority support"],
     },
   ],
 
@@ -2361,8 +2353,8 @@ export const c2Tools: Tool[] = [
   alternatives: ["fusion-360", "solidworks", "onshape"],
   country: "Hungary",
   category_id: "c2",
-  pricing_type: "Subscription",
-  starting_price: 299,
+  pricing_type: "Freemium",
+  starting_price: 0,
   price_period: "year",
   platforms: ["Windows", "macOS", "iOS"],
   industries: ["Industrial Design", "Prototyping", "AEC"],
@@ -2393,7 +2385,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does Shapr3D cost?",
-      a: "Shapr3D starts at $299 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Shapr3D has a free plan for occasional use; paid plans are Solo at $249.99 per year, Pro at $299 per year, and Studio at $450 per year for two seats.",
     },
     {
       q: "Is there a free version of Shapr3D?",
@@ -2425,7 +2417,7 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "Shapr3D has done the impossible: made professional CAD fun.",
 
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-17",
 
   file_formats_in: [
     "STEP",
@@ -2690,7 +2682,7 @@ export const c2Tools: Tool[] = [
   short_desc: "3D animation, modeling, and simulation software.",
 
   description:
-    "Maya is professional 3D software for creating realistic characters and effects.",
+    "Maya is Autodesk's professional 3D animation software, used across film, television, and game production. It covers modeling, character rigging, animation, dynamics, and rendering, and is scriptable through MEL and Python for studio pipeline integration.",
 
   country: "USA",
   category_id: "c2",
@@ -2841,7 +2833,7 @@ export const c2Tools: Tool[] = [
   logo_url: "/logos/blender.png",
   short_desc: "The free and open-source 3D creation suite.",
   description:
-    "Blender supports the entirety of the 3D pipeline for modeling and animation.",
+    "Blender is the free and open-source 3D creation suite, covering modeling, sculpting, animation, simulation, video editing, and rendering with the Cycles and EEVEE engines. It is maintained by a worldwide community under the GNU GPL and runs on Windows, macOS, and Linux.",
   country: "Netherlands",
   category_id: "c2",
   pricing_type: "Free",

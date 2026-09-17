@@ -14,7 +14,7 @@ export const c4Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Basics",
-      price: "240",
+      price: "260",
       period: "/yr",
       features: [
         "PDF Markup Tools",
@@ -26,7 +26,7 @@ export const c4Tools: Tool[] = [
     },
     {
       name: "Core",
-      price: "300",
+      price: "330",
       period: "/yr",
       features: [
         "Advanced Measurement",
@@ -38,7 +38,7 @@ export const c4Tools: Tool[] = [
     },
     {
       name: "Complete",
-      price: "400",
+      price: "440",
       period: "/yr",
       features: [
         "Full Automation",
@@ -104,7 +104,7 @@ export const c4Tools: Tool[] = [
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
-  starting_price: 240,
+  starting_price: 260,
   price_period: "year",
   platforms: ["Windows"],
 
@@ -151,7 +151,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "How much does Bluebeam Revu cost?",
-      a: "Bluebeam Revu starts at $240 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Bluebeam Revu comes in Basics ($260 per user per year), Core ($330), and Complete ($440) subscription plans."
     },
     {
       q: "Is there a free version of Bluebeam Revu?",
@@ -182,8 +182,8 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "You cannot run a modern construction project without Bluebeam.",
-  last_updated: "2023-07-16",
-  version: "2024",
+  last_updated: "2026-09-17",
+  version: "Revu 21.11",
   file_formats_in: ["PDF", "DWG", "DXF", "DGN", "IFC", "TIFF", "JPG", "PNG"],
   file_formats_out: ["PDF", "TIFF", "JPG", "PNG", "CSV", "XML", "HTML", "TXT"]
 },
@@ -210,7 +210,7 @@ export const c4Tools: Tool[] = [
     },
     {
       name: "Simulate",
-      price: "1,100",
+      price: "1,070",
       period: "/yr",
       features: [
         "Timeline simulation",
@@ -276,7 +276,7 @@ export const c4Tools: Tool[] = [
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
-  starting_price: 2835,
+  starting_price: 1070,
   price_period: "year",
   platforms: ["Windows"],
 
@@ -323,7 +323,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "How much does Navisworks cost?",
-      a: "Navisworks starts at $1,050 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Navisworks Simulate costs $1,070 per year and Navisworks Manage $2,645 per year (also $330 monthly) on standard Autodesk subscriptions."
     },
     {
       q: "Is there a free version of Navisworks?",
@@ -355,7 +355,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-17",
   version: "2027",
 
   file_formats_in: [
@@ -806,7 +806,7 @@ export const c4Tools: Tool[] = [
   slug: "solid-edge-viewer",
   logo_url: "/logos/solid-edge-viewer.png",
   short_desc: "Free viewer for Solid Edge and 2D CAD files.",
-  description: "View Solid Edge assemblies, parts, and drafts for free.",
+  description: "Solid Edge Viewer is Siemens' free desktop application for opening Solid Edge part, assembly, and draft files. Engineers can rotate, measure, and section designs and share markups without tying up a full CAD seat.",
   country: "USA",
   category_id: "c4",
   pricing_type: "Free",
@@ -914,7 +914,7 @@ export const c4Tools: Tool[] = [
   slug: "dwg-trueview",
   logo_url: "/logos/dwg-trueview.svg",
   short_desc: "Official free DWG viewer and converter.",
-  description: "The official viewer for DWG files, built on the AutoCAD engine.",
+  description: "DWG TrueView is Autodesk's free viewer built on the same engine as AutoCAD. Beyond opening and plotting DWG files, its DWG Convert tool upgrades or downgrades drawings between release formats, making it the standard utility for checking files from external partners.",
   country: "USA",
   category_id: "c4",
   pricing_type: "Free",
