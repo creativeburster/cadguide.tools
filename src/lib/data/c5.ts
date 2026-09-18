@@ -11142,5 +11142,98 @@ export const c5Tools: Tool[] = [
   last_updated: "2026-09-17",
   file_formats_in: ["SVG", "DXF"],
   file_formats_out: ["SVG", "DXF"]
+},
+{
+  id: "t253",
+  name: "QuantCAD-Hybrid",
+  slug: "quantcad-hybrid",
+  logo_url: "/logos/quantcad-hybrid.png",
+  short_desc: "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
+  description: "QuantCAD-Hybrid is DINAMIC PRO's desktop software for CNC manufacturing quotation and cost estimation. It ingests RFQs containing STEP and PDF files into a multi-part lot workspace with automatic document matching, provides a per-part 3D review (Setup View), and produces an editable industrial costing per part — setup, cycle time, material, tools, external operations, QA, scrap, overhead, and margin. A local materials library handles blank dimensions, weight, and EUR/kg costing, while DINAMIC Time Intelligence learns from the shop's own production history (imported from Excel/CSV) to estimate machining times with comparable-part ranges. It runs fully offline as a licensed Windows client with device-locked .qlic licensing and a local SQLite library, so RFQ files never leave the shop.",
+  country: "Romania",
+  category_id: "c5",
+  pricing_type: "Subscription / Perpetual",
+  quote_only: true,
+  starting_price: 0,
+  price_period: "year",
+  platforms: ["Windows"],
+  industries: ["Manufacturing", "CNC Machining"],
+  core_features: ["STEP & PDF RFQ import", "Multi-part lot workspace", "Per-part 3D review (Setup View)", "Production-history time estimation"],
+  user_scales: ["Small Business", "Mid-Market"],
+  official_url: "https://dinamicpro.ro/quantcad-hybrid.html",
+  affiliate_url: null,
+  score: 4.2,
+  pros: [
+    "Per-part editable cost breakdown down to scrap, QA, and overhead",
+    "Fully offline — RFQ files and costing data stay on local hardware",
+    "Time estimates improve with the shop's own production history"
+  ],
+  cons: [
+    "Quote-only pricing, no self-serve trial",
+    "Windows desktop only",
+    "Estimation accuracy depends on the shop's own historical data"
+  ],
+  faqs: [
+    {
+      q: "What is QuantCAD-Hybrid used for?",
+      a: "It helps CNC manufacturing companies analyze RFQs containing STEP and PDF files, estimate machining operations, materials, and costs, and prepare traceable quotations — without uploading customer files to the cloud."
+    },
+    {
+      q: "How much does QuantCAD-Hybrid cost?",
+      a: "DINAMIC PRO does not publish prices — licensing is quote-only. Three license forms exist: a 1-year industrial license, a 3-year industrial license, and a perpetual offline license that includes 12 months of updates. Installation, training, and on-site services are optional extras."
+    },
+    {
+      q: "Is there a free version of QuantCAD-Hybrid?",
+      a: "No self-serve trial is published. Contact DINAMIC PRO for a demo — the product is licensed per device with a .qlic offline license file."
+    },
+    {
+      q: "What operating systems does QuantCAD-Hybrid support?",
+      a: "QuantCAD-Hybrid is a Windows desktop application that runs offline; there is no web or macOS version."
+    },
+    {
+      q: "Which file formats does QuantCAD-Hybrid support?",
+      a: "It imports STEP/STP models and PDF documents from RFQs, and imports production-history data from Excel/CSV. Quotation documents are produced inside the application."
+    },
+    {
+      q: "What are the best alternatives to QuantCAD-Hybrid?",
+      a: "DigiFabster and Paperless Parts are the established cloud RFQ-quoting platforms for job shops. QuantCAD-Hybrid's differentiator is the opposite bet: fully offline operation with local data, per-part editable costings, and time estimation trained on your own history."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Industrial (1-Year)",
+      price: "Custom",
+      period: "quote",
+      features: [
+        "Full RFQ & costing modules",
+        "12 months of updates",
+        "Email support"
+      ]
+    },
+    {
+      name: "Industrial (3-Year)",
+      price: "Custom",
+      period: "quote",
+      features: [
+        "Everything in 1-Year",
+        "36 months of updates",
+        "Multi-seat options"
+      ],
+      is_popular: true
+    },
+    {
+      name: "Perpetual Offline",
+      price: "Custom",
+      period: "quote",
+      features: [
+        "Permanent license",
+        "12 months of updates included",
+        "Device-locked .qlic licensing"
+      ]
+    }
+  ],
+  expert_verdict: "A niche quoting workhorse for CNC shops that want RFQ analysis and costing kept on-premise. Its time-estimation engine is only as good as the production history you feed it, so it rewards shops that already track real cycle times.",
+  last_updated: "2026-09-17",
+  file_formats_in: ["STEP", "STP", "PDF", "XLSX", "CSV"]
 }
 ];

@@ -3475,6 +3475,24 @@
     "country": "USA"
   },
   {
+    "id": "t253",
+    "name": "QuantCAD-Hybrid",
+    "slug": "quantcad-hybrid",
+    "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
+    "score": 4.2,
+    "logo_url": "/logos/quantcad-hybrid.png",
+    "official_url": "https://dinamicpro.ro/quantcad-hybrid.html",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Manufacturing",
+      "CNC Machining"
+    ],
+    "features": [],
+    "country": "Romania"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
