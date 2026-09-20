@@ -50,6 +50,7 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "cadian": "cadian.png",
   "cadmeister": "cadmeister.png",
   "cadopia": "cadopia.png",
+  "cadprops": "cadprops.svg",
   "cadra": "cadra.png",
   "cadwork": "cadwork.png",
   "cadworx": "cadworx.png",

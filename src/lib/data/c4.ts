@@ -1425,5 +1425,95 @@ export const c4Tools: Tool[] = [
   last_updated: "2026-09-17",
   file_formats_in: ["DXF", "SVG"],
   file_formats_out: ["DXF", "SVG"]
+},
+{
+  id: "t254",
+  name: "CADProps",
+  slug: "cadprops",
+  logo_url: "/logos/cadprops.svg",
+  short_desc: "Free browser-based multi-format CAD viewer and engineering measurement platform.",
+  description: "CADProps is a free web-based CAD viewer and inspection platform that lets mechanical engineers, machinists, and procurement teams open, inspect, and analyze 3D models directly in the browser without software installation or account creation. It supports native formats like SolidWorks (SLDPRT/SLDASM), Siemens NX (PRT), Autodesk Inventor (IPT/IAM), CATIA (CATPart/CATProduct), alongside standard exchange formats including STEP, IGES, Parasolid X_T, SAT, JT, STL, OBJ, 3MF, and GLB/glTF. Built-in engineering tools provide accurate dimension measurement, volume calculations, surface area evaluation, weight estimation, bounding box inspection, and link-based 3D sharing.",
+  country: "United States",
+  category_id: "c4",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: ["Web"],
+  industries: ["Mechanical Engineering", "CNC Machining", "Manufacturing", "Prototyping", "Quality Assurance", "Procurement"],
+  core_features: [
+    "Multi-format 3D CAD viewing (STEP, SLDPRT, NX, CATIA, IPT, IGES, STL)",
+    "In-browser dimension, distance and angle measurement",
+    "Precise volume, surface area and weight estimation",
+    "Bounding box inspection and CAD property analysis",
+    "Password-protected 3D link sharing and model embed",
+    "Zero installation, no registration required, privacy-safe local processing"
+  ],
+  user_scales: ["Individuals", "Small Business", "Engineering Teams"],
+  official_url: "https://www.cadprops.com",
+  affiliate_url: null,
+  score: 4.4,
+  pros: [
+    "100% free with no account creation or desktop software installation required",
+    "Broad native CAD format support including SolidWorks, NX, CATIA, Inventor, and STEP",
+    "Instant client-side engineering measurement, mass property estimation, and bounding box inspection",
+    "Secure sharing links with optional password protection"
+  ],
+  cons: [
+    "Read-only inspection and viewing utility — no parametric CAD modeling or editing",
+    "Mesh format measurements (STL/OBJ) are polygonal approximations rather than B-Rep solids",
+    "Extremely complex, multi-gigabyte assemblies may experience browser memory constraints"
+  ],
+  tech_specs: {
+    engine: "WebAssembly / WebGL CAD Kernel",
+    multicore: "Browser-threaded",
+    gpu_optimization: "WebGL 2.0 Hardware Acceleration",
+    standards: ["STEP AP203/AP214/AP242", "Parasolid", "IGES", "B-Rep", "glTF 2.0"]
+  },
+  expert_verdict: "An agile, remarkably frictionless online CAD viewer that allows engineers, machinists, and procurement teams to inspect models and compute physical volume/mass properties without launching heavyweight desktop CAD packages.",
+  faqs: [
+    {
+      q: "What is CADProps used for?",
+      a: "CADProps is a free browser-based CAD viewer and engineering measurement platform. It enables users to open, inspect, and analyze 3D CAD models directly in a web browser without installing desktop software or signing up for an account."
+    },
+    {
+      q: "Which CAD file formats does CADProps support?",
+      a: "CADProps supports proprietary CAD formats including SolidWorks (SLDPRT, SLDASM), Siemens NX (PRT), Autodesk Inventor (IPT, IAM), and CATIA (CATPart, CATProduct), alongside universal and mesh formats like STEP/STP, IGES/IGS, Parasolid (X_T), ACIS (SAT), JT, STL, OBJ, 3MF, GLB, and glTF. It also handles assembly components packaged in ZIP archives."
+    },
+    {
+      q: "How does CADProps calculate model weight and volume?",
+      a: "CADProps analyzes the underlying 3D solid geometry (B-Rep or tessellated mesh) to determine precise volume and surface area. By applying standard or custom material density values (such as Aluminum 6061, Steel 4140, Delrin, or Titanium), it computes instant weight estimates for manufacturing and shipping calculations."
+    },
+    {
+      q: "Are my uploaded CAD files secure on CADProps?",
+      a: "CADProps processes files temporarily for visualization and measurement directly in the client browser environment without permanent cloud storage or training AI models on user data."
+    },
+    {
+      q: "How much does CADProps cost?",
+      a: "CADProps is completely free to use. All standard viewing, measurement, volume/weight calculation, and 3D link sharing features are available without subscriptions, credit cards, or paywalls."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "$0",
+      period: "forever",
+      features: [
+        "View SolidWorks, NX, Inventor, CATIA & STEP files",
+        "Interactive 3D dimension and angle measurement",
+        "Volume, surface area, and weight estimation",
+        "Bounding box inspection",
+        "Share models by link with password protection",
+        "No installation or registration required"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["dwg-trueview", "cad-reader", "dxf-medic", "cad-exchanger"],
+  last_updated: "2026-09-20",
+  file_formats_in: [
+    "STEP", "STP", "SLDPRT", "SLDASM", "PRT", "CATPart", "CATProduct", "IPT", "IAM", "X_T", "SAT", "JT", "IGES", "IGS", "STL", "OBJ", "3MF", "GLB", "GLTF", "ZIP"
+  ],
+  file_formats_out: [
+    "STEP", "STL", "OBJ", "GLB", "3MF"
+  ]
 }
 ];

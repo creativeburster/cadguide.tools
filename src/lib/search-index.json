@@ -3493,6 +3493,28 @@
     "country": "Romania"
   },
   {
+    "id": "t254",
+    "name": "CADProps",
+    "slug": "cadprops",
+    "short_desc": "Free browser-based multi-format CAD viewer and engineering measurement platform.",
+    "score": 4.4,
+    "logo_url": "/logos/cadprops.svg",
+    "official_url": "https://www.cadprops.com",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "CNC Machining",
+      "Manufacturing",
+      "Prototyping",
+      "Quality Assurance",
+      "Procurement"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
