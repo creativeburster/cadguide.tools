@@ -63,7 +63,7 @@ export const c3Tools: Tool[] = [
     "Cloud Worksharing",
   ],
   user_scales: ["Enterprise", "Mid-Market"],
-  official_url: "https://www.autodesk.com/products/revit",
+  official_url: "https://www.autodesk.com/products/revit/overview",
   affiliate_url: null,
   score: 4.9,
   pros: [
@@ -119,18 +119,23 @@ export const c3Tools: Tool[] = [
   pricing_breakdown: [
     {
       tier: "Monthly",
-      price: "$290/mo",
-      notes: "Flexible BIM access",
+      price: "$380/mo",
+      notes: "Flexible monthly BIM access",
     },
     {
       tier: "Annual",
-      price: "$2,310/yr",
-      notes: "Professional BIM standard",
+      price: "$3,005/yr",
+      notes: "Professional BIM standard (most popular)",
+    },
+    {
+      tier: "3-Year",
+      price: "$9,015/3yr",
+      notes: "Multi-year price lock ($3,005/yr)",
     },
     {
       tier: "AEC Collection",
-      price: "$2,825/yr",
-      notes: "Bundle with AutoCAD, Civil 3D, etc.",
+      price: "$3,560/yr",
+      notes: "Bundle with AutoCAD, Civil 3D, Navisworks, etc.",
     },
   ],
 
@@ -1026,7 +1031,7 @@ export const c3Tools: Tool[] = [
   country: "USA",
   category_id: "c3",
   pricing_type: "Subscription",
-  starting_price: 2615,
+  starting_price: 2870,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Civil Engineering", "Transportation"],
@@ -1040,7 +1045,8 @@ export const c3Tools: Tool[] = [
   ],
 
   user_scales: ["Enterprise", "Mid-Market"],
-  official_url: "https://www.autodesk.com/civil-3d",
+  official_url: "https://www.autodesk.com/products/civil-3d/overview",
+  pricing_url: "https://www.autodesk.com/products/civil-3d/overview",
   affiliate_url: null,
   score: 4.8,
   pros: ["Road design standard", "Dynamic objects", "Infra BIM essential"],
@@ -1053,7 +1059,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Civil 3D cost?",
-      a: "Civil 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Civil 3D costs $2,870 per year or about $360 per month per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
     },
     {
       q: "Is there a free version of Civil 3D?",
@@ -1082,13 +1088,13 @@ export const c3Tools: Tool[] = [
 
   expert_verdict: "The industry standard for civil engineering projects.",
   version: "2027",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "330",
+      price: "360",
       period: "/mo",
 
       features: [
@@ -1102,7 +1108,7 @@ export const c3Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "2,645",
+      price: "2,870",
       period: "/yr",
 
       features: [
@@ -1250,7 +1256,7 @@ export const c3Tools: Tool[] = [
     },
     {
       q: "How much does Vectorworks Landmark cost?",
-      a: "Vectorworks Landmark costs $170 per month, or $1,530 per year when billed annually (the equivalent of $127.50 per month).",
+      a: "Vectorworks Landmark costs $1,530 per year when billed annually (the equivalent of $127.50 per month), or $170 per month on a monthly commitment.",
     },
     {
       q: "Is there a free version of Vectorworks Landmark?",
@@ -2070,23 +2076,30 @@ export const c3Tools: Tool[] = [
   "name": "AutoCAD Plant 3D",
   "slug": "autocad-plant-3d",
   logo_url: "/logos/autocad-plant-3d.png",
-  "short_desc": "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform.",
-  "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings on top of vanilla AutoCAD, used by mid-size EPC firms.",
+  "short_desc": "Autodesk's specialized plant-design toolkit for piping, equipment, and P&ID workflows — included with AutoCAD subscription.",
+  "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings. Rather than a standalone purchase, it is included as a specialized toolset within every full AutoCAD subscription ($2,095/year or $260/month).",
 
   pricing_tiers: [
     {
-      name: "Subscription",
-      price: "2615",
-      period: "/year",
-      features: ["AutoCAD Plant 3D toolset", "P&ID design", "3D piping", "Isometric generation"],
+      name: "Included with AutoCAD (Annual)",
+      price: "2,095",
+      period: "/yr",
+      features: ["Plant 3D specialized toolset", "Full AutoCAD included", "All 7 specialized toolsets", "Cloud collaboration & web access"],
       is_popular: true,
+    },
+    {
+      name: "Included with AutoCAD (Monthly)",
+      price: "260",
+      period: "/mo",
+      features: ["Monthly flexible access", "Full AutoCAD + Plant 3D", "All 7 specialized toolsets"],
+      is_popular: false,
     },
   ],
 
   "country": "USA",
   "category_id": "c3",
   "pricing_type": "Subscription",
-  "starting_price": 2615,
+  "starting_price": 2095,
   price_period: "year",
   "platforms": ["Windows"],
   "industries": ["Energy", "Chemical", "Oil & Gas", "Power"],
@@ -2101,7 +2114,8 @@ export const c3Tools: Tool[] = [
   ],
 
   "user_scales": ["Mid-Market", "Enterprise"],
-  "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+  "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/plant-3d",
+  "pricing_url": "https://www.autodesk.com/products/autocad/overview",
   "affiliate_url": null,
   "score": 4.3,
 
@@ -2125,6 +2139,7 @@ export const c3Tools: Tool[] = [
   },
 
   version: "2027",
+  last_updated: "2026-09-20",
   "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
 
   faqs: [{
@@ -2132,7 +2147,7 @@ export const c3Tools: Tool[] = [
     a: 'Autodesk\'s plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform. AutoCAD Plant 3D is a BIM solution widely adopted in Energy, Chemical, Oil & Gas.',
   }, {
     q: 'How much does AutoCAD Plant 3D cost?',
-    a: 'AutoCAD Plant 3D starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.',
+    a: 'AutoCAD Plant 3D is not sold as a standalone license; it is fully included with an AutoCAD subscription at $2,095 per year (or $260 per month), which gives you full AutoCAD access along with all 7 specialized toolsets.',
   }, {
     q: 'Is there a free version of AutoCAD Plant 3D?',
     a: 'AutoCAD Plant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students.',
@@ -2184,7 +2199,6 @@ export const c3Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02",
   file_formats_in: ["DWG", "DXF", "PCF", "STEP", "IGES", "DGN"],
   file_formats_out: ["DWG", "DXF", "PCF (Isogen)", "NWC", "PDF"]
 },

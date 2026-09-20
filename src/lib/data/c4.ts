@@ -197,20 +197,8 @@ export const c4Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Manage (Annual)",
-      price: "2,645",
-      period: "/yr",
-      features: [
-        "Full Clash Detection",
-        "4D Scheduling",
-        "5D Cost analysis",
-        "Quantification"
-      ],
-      is_popular: true
-    },
-    {
       name: "Simulate",
-      price: "1,070",
+      price: "1,145",
       period: "/yr",
       features: [
         "Timeline simulation",
@@ -219,6 +207,18 @@ export const c4Tools: Tool[] = [
         "NWD conversion"
       ],
       is_popular: false
+    },
+    {
+      name: "Manage (Annual)",
+      price: "2,870",
+      period: "/yr",
+      features: [
+        "Full Clash Detection",
+        "4D Scheduling",
+        "5D Cost analysis",
+        "Quantification"
+      ],
+      is_popular: true
     }
   ],
 
@@ -276,7 +276,7 @@ export const c4Tools: Tool[] = [
   country: "USA",
   category_id: "c4",
   pricing_type: "Subscription",
-  starting_price: 1070,
+  starting_price: 1145,
   price_period: "year",
   platforms: ["Windows"],
 
@@ -299,8 +299,8 @@ export const c4Tools: Tool[] = [
     "Mid-Market"
   ],
 
-  official_url: "https://www.autodesk.com/navisworks",
-  pricing_url: "https://www.autodesk.com/navisworks",
+  official_url: "https://www.autodesk.com/products/navisworks/overview",
+  pricing_url: "https://www.autodesk.com/products/navisworks/overview",
   affiliate_url: null,
   score: 4.8,
 
@@ -323,7 +323,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "How much does Navisworks cost?",
-      a: "Navisworks Simulate costs $1,070 per year and Navisworks Manage $2,645 per year (also $330 monthly) on standard Autodesk subscriptions."
+      a: "Navisworks Simulate costs $1,145 per year and Navisworks Manage costs $2,870 per year (or $360 monthly) on standard Autodesk subscriptions."
     },
     {
       q: "Is there a free version of Navisworks?",
@@ -355,7 +355,7 @@ export const c4Tools: Tool[] = [
   },
 
   expert_verdict: "Navisworks is where Virtual Design and Construction happens.",
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-20",
   version: "2027",
 
   file_formats_in: [

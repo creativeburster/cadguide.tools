@@ -14,7 +14,7 @@ export const c1Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "255",
+      price: "260",
       period: "/mo",
       features: [
         "2D Drafting",
@@ -26,7 +26,7 @@ export const c1Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "2,030",
+      price: "2,095",
       period: "/yr",
       features: [
         "All Monthly features",
@@ -38,7 +38,7 @@ export const c1Tools: Tool[] = [
     },
     {
       name: "3-Year",
-      price: "6,090",
+      price: "6,285",
       period: "/3yr",
       features: [
         "Locked-in pricing",
@@ -103,7 +103,7 @@ export const c1Tools: Tool[] = [
   country: "USA",
   category_id: "c1",
   pricing_type: "Subscription",
-  starting_price: 255,
+  starting_price: 260,
   price_period: "month",
 
   platforms: [
@@ -133,8 +133,8 @@ export const c1Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/autocad",
-  pricing_url: "https://www.autodesk.com/products/autocad/pricing",
+  official_url: "https://www.autodesk.com/products/autocad/overview",
+  pricing_url: "https://www.autodesk.com/products/autocad/overview",
   affiliate_url: null,
   score: 4.8,
 
@@ -157,7 +157,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does AutoCAD cost?",
-      a: "AutoCAD starts at $255 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "AutoCAD starts at $260/month or $2,095/year per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
     },
     {
       q: "Does AutoCAD offer a free trial?",
@@ -192,7 +192,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "The definitive global industry standard for 2D drafting and documentation, crucial for AEC standard compatibility.",
   version: "2027",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   languages: [
@@ -426,8 +426,8 @@ export const c1Tools: Tool[] = [
     "Mid-Market"
   ],
 
-  official_url: "https://www.zwsoft.com/zwcad",
-  pricing_url: "https://www.zwsoft.com/zwcad/buy",
+  official_url: "https://www.zwsoft.com/product/zwcad",
+  pricing_url: "https://www.zwsoft.com/product/zwcad",
   affiliate_url: null,
   score: 4.6,
 
@@ -484,13 +484,13 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A highly responsive, familiar AutoCAD clone offering perpetual licensing and native DWG interoperability.",
   version: "2026",
-  last_updated: "2026-03-25",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   pricing_breakdown: [
     {
       tier: "Standard",
-      price: "~$799",
+      price: "~$899",
       notes: "Perpetual (2D drafting focus)"
     },
     {
@@ -520,7 +520,7 @@ export const c1Tools: Tool[] = [
   slug: "bricscad",
   logo_url: "/logos/bricscad.png",
   short_desc: "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
-  description: "BricsCAD uses AI-driven tools to speed up design workflows in a single environment.",
+  description: "Octave BricsCAD (formerly Bricsys, rebranded to Octave in March 2026 after the Hexagon spin-off) uses AI-driven tools to speed up design workflows in a single DWG-native environment.",
 
   pricing_tiers: [
     {
@@ -547,7 +547,7 @@ export const c1Tools: Tool[] = [
     },
     {
       name: "Ultimate",
-      price: "1,500",
+      price: "1,300",
       period: "/yr",
       features: [
         "Mechanical & BIM",
@@ -594,7 +594,7 @@ export const c1Tools: Tool[] = [
   country: "Belgium",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 780,
+  starting_price: 345,
   price_period: "year",
 
   platforms: [
@@ -647,8 +647,8 @@ export const c1Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.bricsys.com",
-  pricing_url: "https://www.bricsys.com/bricscad/pricing",
+  official_url: "https://bricscad.octave.com/",
+  pricing_url: "https://bricscad.octave.com/bricscad/lite",
   affiliate_url: null,
   score: 4.7,
 
@@ -671,7 +671,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does BricsCAD cost?",
-      a: "BricsCAD subscriptions start at $345 per year for Lite (sold in 5-seat minimums); single-user Pro is $780 per year and Ultimate about $1,500 per year."
+      a: "BricsCAD subscriptions start at $345 per year for Lite (sold in 5-seat minimums); single-user Pro is $780 per year and Ultimate about $1,300 per year. Perpetual licenses remain available.",
     },
     {
       q: "Is there a free version of BricsCAD?",
@@ -704,24 +704,24 @@ export const c1Tools: Tool[] = [
   },
 
   expert_verdict: "A powerful, modern DWG-native alternative combining fast 2D CAD, direct 3D modeling, and BIM in one package.",
-  version: "V26",
-  last_updated: "2026-09-17",
+  version: "V26.2",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   pricing_breakdown: [
     {
       tier: "Lite",
-      price: "$650/yr",
-      notes: "2D Drafting focus"
+      price: "$345/yr",
+      notes: "2D drafting focus; perpetual available"
     },
     {
       tier: "Pro",
-      price: "$1,300/yr",
-      notes: "Full 3D & Lisp"
+      price: "$780/yr",
+      notes: "Full 3D & LISP; perpetual available"
     },
     {
       tier: "Ultimate",
-      price: "$2,450/yr",
+      price: "$1,300/yr",
       notes: "All-in-one BIM & Mechanical"
     }
   ],
@@ -877,8 +877,8 @@ export const c1Tools: Tool[] = [
     "Government"
   ],
 
-  official_url: "https://www.bentley.com",
-  pricing_url: "https://www.bentley.com/software/microstation/how-to-buy/",
+  official_url: "https://www.bentley.com/products/microstation",
+  pricing_url: "https://www.bentley.com/products/microstation",
   affiliate_url: null,
   score: 4.8,
 
@@ -933,7 +933,7 @@ export const c1Tools: Tool[] = [
     ]
   },
   version: "2026",
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-20",
 
   expert_verdict: "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
 
@@ -1086,7 +1086,6 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.draftsight.com",
-  pricing_url: "https://www.draftsight.com/pricing",
   affiliate_url: null,
   score: 4.3,
 
@@ -1109,7 +1108,7 @@ export const c1Tools: Tool[] = [
     },
     {
       q: "How much does DraftSight cost?",
-      a: "DraftSight starts at $249 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "DraftSight starts at $299/year per seat for the Professional tier; Premium with 3D and the BIM module is $599/year. Network (Enterprise) licensing starts at $399/year."
     },
     {
       q: "Is there a free version of DraftSight?",
@@ -1140,6 +1139,7 @@ export const c1Tools: Tool[] = [
     ]
   },
   version: "2026",
+  last_updated: "2026-09-20",
 
   expert_verdict: "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
 
@@ -1301,18 +1301,18 @@ export const c1Tools: Tool[] = [
   pricing_breakdown: [
     {
       tier: "Standard",
-      price: "~$600",
-      notes: "Perpetual license"
+      price: "$499",
+      notes: "Perpetual 2D drafting & dynamic blocks"
     },
     {
       tier: "Professional",
-      price: "~$900",
-      notes: "Full 3D modeling support"
+      price: "$699",
+      notes: "Full 3D ACIS solid modeling & GRX API"
     },
     {
       tier: "Annual Update",
-      price: "~$200",
-      notes: "Optional upgrade fee"
+      price: "~$150",
+      notes: "Optional maintenance and version upgrades"
     }
   ],
 
@@ -1824,7 +1824,7 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://nanocad.com",
-  pricing_url: "https://nanocad.com/products/nanocad/pricing/",
+  pricing_url: "https://nanocad.com/products/",
   affiliate_url: null,
   score: 3.9,
 
@@ -2139,8 +2139,8 @@ export const c1Tools: Tool[] = [
     "Mid-Sized Company"
   ],
 
-  official_url: "https://www.progecad.com",
-  pricing_url: "https://www.progesoft.com/products/progecad-professional/pricing",
+  official_url: "https://www.progesoft.com/products/progecad-professional",
+  pricing_url: "https://www.progesoft.com/products/progecad-professional",
   affiliate_url: null,
   score: 3.6,
 
@@ -2202,7 +2202,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "A highly compatible DWG-native CAD software with perpetual licensing, ideal for small to mid-sized drafting teams.",
   version: "2024",
-  last_updated: "2025-05-20",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   languages: [
@@ -2633,8 +2633,8 @@ export const c1Tools: Tool[] = [
     "Mid-Market"
   ],
 
-  official_url: "https://www.turbocad.com",
-  pricing_url: "https://www.turbocad.com/pricing/",
+  official_url: "https://www.imsidesign.com/",
+  pricing_url: "https://www.imsidesign.com/",
   affiliate_url: null,
   score: 4.6,
 
@@ -2689,6 +2689,7 @@ export const c1Tools: Tool[] = [
   },
 
   version: "2025",
+  last_updated: "2026-09-20",
   expert_verdict: "The most versatile all-rounder in the mid-range CAD market.",
   file_formats_in: ["DWG", "DXF", "TCW", "DGN", "STEP", "IGES", "SAT", "SKP", "PDF"],
   file_formats_out: ["DWG", "DXF", "TCW", "DGN", "STEP", "IGES", "SAT", "STL", "PDF", "SVG"]
@@ -2849,8 +2850,8 @@ export const c1Tools: Tool[] = [
     "Mid-Sized Company"
   ],
 
-  official_url: "https://www.coreldraw.com/en/product/corelcad/",
-  pricing_url: "https://www.coreldraw.com/en/product/corelcad/",
+  official_url: "https://www.graebert.com/corelcad",
+  pricing_url: "https://www.graebert.com/corelcad",
   affiliate_url: null,
   score: 3.6,
 
@@ -2913,7 +2914,7 @@ export const c1Tools: Tool[] = [
 
   expert_verdict: "Corel's high-precision 2D drafting and 3D modeling tool, providing native DWG support and seamless graphic suite integration.",
   version: "2023 (Final)",
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-20",
   discontinued: true,
   discontinued_note: "CorelCAD was pulled from sale on January 9, 2024 and support ended December 31, 2025. Corel directs former users to Graebert ARES Commander.",
   free_trial_days: 30,

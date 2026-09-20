@@ -2465,32 +2465,21 @@ export const c5Tools: Tool[] = [
   name: "FeatureCAM",
   slug: "featurecam",
   logo_url: "/logos/featurecam.svg",
-  short_desc: "Autodesk CAM software for CNC milling, turning, and multi-axis machining.",
-  description: "FeatureCAM by Autodesk is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides automated feature recognition, intelligent toolpath generation, and seamless CAD integration. The software is widely used in manufacturing for its ease of use and automation capabilities.",
+  short_desc: "Automated CAM software for CNC milling, turning, and Swiss machining — offered as Autodesk Fusion with FeatureCAM.",
+  description: "FeatureCAM by Autodesk provides automated feature recognition and intelligent toolpath generation for CNC milling, turning, wire EDM, and multi-tasking machines. Standalone sales have transitioned to the 'Autodesk Fusion with FeatureCAM' subscription bundle (approx. $2,040/yr), uniting automated machining with modern cloud CAD capabilities.",
 
   pricing_tiers: [
     {
-      name: "Standard",
-      price: "Contact",
-      period: "subscription",
+      name: "Fusion with FeatureCAM",
+      price: "2,040",
+      period: "/yr",
       features: [
-        "Basic CAM tools",
-        "Milling automation",
-        "Turning automation"
+        "Full FeatureCAM Ultimate",
+        "Fusion 360 platform included",
+        "Automated feature recognition",
+        "Multi-axis & Swiss machining"
       ],
       is_popular: true
-    },
-    {
-      name: "Professional",
-      price: "Contact",
-      period: "subscription",
-      features: [
-        "All Standard features",
-        "Multi-axis machining",
-        "High-speed machining",
-        "Feature recognition"
-      ],
-      is_popular: false
     }
   ],
 
@@ -2572,7 +2561,7 @@ export const c5Tools: Tool[] = [
   country: "USA",
   category_id: "c5",
   pricing_type: "Subscription",
-  starting_price: 3000,
+  starting_price: 2040,
   price_period: "year",
   platforms: ["Windows"],
 
@@ -2596,8 +2585,8 @@ export const c5Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/featurecam",
-  pricing_url: "https://www.autodesk.com/products/featurecam",
+  official_url: "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
+  pricing_url: "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
   affiliate_url: null,
   score: 3.8,
 
@@ -2619,15 +2608,15 @@ export const c5Tools: Tool[] = [
   faqs: [
     {
       q: "What is FeatureCAM used for?",
-      a: "FeatureCAM is Autodesk CAM software for CNC milling, turning, and multi-axis machining."
+      a: "FeatureCAM is Autodesk CAM software for automated CNC milling, turning, and multi-axis machining."
     },
     {
       q: "How much does FeatureCAM cost?",
-      a: "FeatureCAM is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count."
+      a: "FeatureCAM is sold as the Autodesk Fusion with FeatureCAM subscription bundle, starting at approximately $2,040 per year. Contact Autodesk or an authorized partner for enterprise quotes."
     },
     {
       q: "Is there a free version of FeatureCAM?",
-      a: "FeatureCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+      a: "FeatureCAM is a commercial product without a free permanent tier. Autodesk offers a 30-day evaluation trial on request."
     },
     {
       q: "What operating systems does FeatureCAM support?",
@@ -2639,7 +2628,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to FeatureCAM?",
-      a: "The closest alternatives within the CAE/CAM space are TopSolid, BeckerCAD, CADmeister. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
+      a: "The closest alternatives within the CAE/CAM space are TopSolid, Mastercam, GibbsCAM. The right fit depends on whether you prioritise file-format compatibility, geometry kernel, ecosystem of plugins, or pricing model — compare them side-by-side using the CADGuide comparison tool."
     }
   ],
 
@@ -2656,7 +2645,7 @@ export const c5Tools: Tool[] = [
   },
 
   expert_verdict: "Autodesk's feature-based CAM software, designed to automate CNC programming through built-in intelligence.",
-  last_updated: "2023-09-15",
+  last_updated: "2026-09-20",
   version: "2026",
   file_formats_in: ["STEP", "IGES", "Parasolid", "SAT", "SLDPRT", "IPT", "DWG", "DXF"],
   file_formats_out: ["NC (G-Code)", "FM", "STEP", "IGES", "STL"]
@@ -4227,8 +4216,8 @@ export const c5Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/moldflow",
-  pricing_url: "https://www.autodesk.com/products/moldflow",
+  official_url: "https://www.autodesk.com/products/moldflow/overview",
+  pricing_url: "https://www.autodesk.com/products/moldflow/overview",
   affiliate_url: null,
   score: 4,
 
@@ -9225,8 +9214,8 @@ export const c5Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/robot-structural-analysis",
-  pricing_url: "https://www.autodesk.com/products/robot-structural-analysis",
+  official_url: "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
+  pricing_url: "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
   affiliate_url: null,
   score: 4.2,
 
@@ -9739,18 +9728,18 @@ export const c5Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "midas Civil Professional",
-      price: "$10,000+",
-      period: "annual",
-      features: ["Full structural analysis", "Bridge design", "Seismic analysis", "Nonlinear analysis", "BIM integration"],
-      is_popular: true
-    },
-    {
       name: "midas Civil Standard",
       price: "$5,000+",
       period: "annual",
       features: ["Basic structural analysis", "Static analysis", "Dynamic analysis", "Design review"],
       is_popular: false
+    },
+    {
+      name: "midas Civil Professional",
+      price: "$10,000+",
+      period: "annual",
+      features: ["Full structural analysis", "Bridge design", "Seismic analysis", "Nonlinear analysis", "BIM integration"],
+      is_popular: true
     },
     {
       name: "Educational",
@@ -9899,14 +9888,14 @@ export const c5Tools: Tool[] = [
 
   pricing_breakdown: [
     {
-      tier: "midas Civil Professional",
-      price: "$10,000+/year",
-      notes: "Annual subscription with full structural analysis and bridge design capabilities"
-    },
-    {
       tier: "midas Civil Standard",
       price: "$5,000+/year",
       notes: "Annual subscription with basic structural analysis capabilities"
+    },
+    {
+      tier: "midas Civil Professional",
+      price: "$10,000+/year",
+      notes: "Annual subscription with full structural analysis and bridge design capabilities"
     },
     {
       tier: "Educational",
@@ -9924,7 +9913,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does midas Civil cost?",
-      a: "midas Civil Professional starts at approximately $10,000 per year for a subscription license. midas Civil Standard with basic capabilities starts at approximately $5,000 per year. Educational licenses are available at discounted rates for students and institutions."
+      a: "midas Civil Standard with basic capabilities starts at approximately $5,000 per year, while midas Civil Professional with full bridge and seismic capabilities starts at approximately $10,000 per year for a subscription license. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of midas Civil?",
@@ -9964,18 +9953,18 @@ export const c5Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "midas Gen Professional",
-      price: "$8,000+",
-      period: "annual",
-      features: ["Full structural analysis", "Seismic analysis", "Nonlinear analysis", "BIM integration", "Pushover analysis"],
-      is_popular: true
-    },
-    {
       name: "midas Gen Standard",
       price: "$4,000+",
       period: "annual",
       features: ["Basic structural analysis", "Static analysis", "Dynamic analysis", "Design review"],
       is_popular: false
+    },
+    {
+      name: "midas Gen Professional",
+      price: "$8,000+",
+      period: "annual",
+      features: ["Full structural analysis", "Seismic analysis", "Nonlinear analysis", "BIM integration", "Pushover analysis"],
+      is_popular: true
     },
     {
       name: "Educational",
@@ -10125,14 +10114,14 @@ export const c5Tools: Tool[] = [
 
   pricing_breakdown: [
     {
-      tier: "midas Gen Professional",
-      price: "$8,000+/year",
-      notes: "Annual subscription with full structural analysis and building design capabilities"
-    },
-    {
       tier: "midas Gen Standard",
       price: "$4,000+/year",
       notes: "Annual subscription with basic structural analysis capabilities"
+    },
+    {
+      tier: "midas Gen Professional",
+      price: "$8,000+/year",
+      notes: "Annual subscription with full structural analysis and building design capabilities"
     },
     {
       tier: "Educational",
@@ -10150,7 +10139,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does midas Gen cost?",
-      a: "midas Gen Professional starts at approximately $8,000 per year for a subscription license. midas Gen Standard with basic capabilities starts at approximately $4,000 per year. Educational licenses are available at discounted rates for students and institutions."
+      a: "midas Gen Standard with basic capabilities starts at approximately $4,000 per year, while midas Gen Professional with advanced building design and seismic analysis starts at approximately $8,000 per year for a subscription license. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of midas Gen?",
@@ -10527,8 +10516,8 @@ export const c5Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/powermill",
-  pricing_url: "https://www.autodesk.com/products/powermill",
+  official_url: "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
+  pricing_url: "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
   affiliate_url: null,
   score: 4.3,
 

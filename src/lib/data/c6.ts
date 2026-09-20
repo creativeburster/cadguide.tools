@@ -593,17 +593,17 @@ export const c6Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Perpetual License",
-      price: "Contact for pricing",
-      period: "initial",
+      name: "Electric P8 Subscription",
+      price: "3,000+",
+      period: "/yr",
       features: ["Schematic design", "Panel building", "Documentation generation", "EPLAN Data Portal access", "ERP/PDM integration", "Technical support"],
       is_popular: true
     },
     {
-      name: "Subscription",
-      price: "Contact for pricing",
-      period: "annual",
-      features: ["All perpetual features", "Regular updates", "Cloud collaboration"],
+      name: "Enterprise Solutions",
+      price: "Contact Sales",
+      period: "quote",
+      features: ["3D Cabinet Layout (Pro Panel)", "Fluid Power engineering", "Automated project generation", "Dedicated customer success"],
       is_popular: false
     }
   ],
@@ -734,8 +734,9 @@ export const c6Tools: Tool[] = [
 
   country: "Germany",
   category_id: "c6",
-  pricing_type: "Perpetual",
-  starting_price: 0,
+  pricing_type: "Subscription",
+  starting_price: 3000,
+  price_period: "year",
   quote_only: true,
 
   platforms: [
@@ -746,20 +747,20 @@ export const c6Tools: Tool[] = [
   core_features: ["Automated Schematic Design", "EPLAN Data Portal", "Auto-Generated Documentation", "ERP/PDM Integration", "Fluid Power Engineering", "3D Cabinet Layout", "PLC Integration"],
   user_scales: ["Small Business", "Mid-Market", "Enterprise"],
   official_url: "https://www.eplan-software.com/",
-  pricing_url: "https://www.eplan-software.com/services/how-to-buy/",
+  pricing_url: "https://www.eplan-software.com/services/eplan-subscription/",
   affiliate_url: null,
   score: 0,
   pros: ["Industry standard for electrical engineering", "Extensive device data portal with millions of components", "Automated documentation saves significant time", "Seamless ERP/PDM integration", "Template-based design for consistency", "Supports fluid power engineering", "Multi-language support", "Strong global support network"],
   cons: ["High cost compared to some alternatives", "Steep learning curve for advanced features", "Windows-only", "Pricing not publicly available", "Requires training for full utilization"],
   version: "2027",
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
   languages: ["English", "German", "French", "Spanish", "Italian", "Chinese", "Japanese", "Russian"],
   file_formats_in: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
   file_formats_out: ["DXF", "DWG", "PDF", "XML", "CSV", "Excel"],
   integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Teamcenter", "Windchill", "Autodesk Vault", "SolidWorks PDM"],
   deployment_options: ["Desktop", "On-Premise", "Cloud"],
-  license_types: ["Perpetual", "Subscription", "Educational"],
+  license_types: ["Subscription", "Educational"],
   support_channels: ["Email", "Phone", "Documentation", "Training", "Reseller Network"],
   security_compliance: [],
 
@@ -770,19 +771,19 @@ export const c6Tools: Tool[] = [
 
   pricing_breakdown: [
     {
-      tier: "Perpetual License",
-      price: "Contact for pricing",
-      notes: "One-time purchase with annual maintenance options available"
+      tier: "Electric P8 Subscription",
+      price: "~$3,000–$4,500/year",
+      notes: "Annual subscription with updates, support, and EPLAN Data Portal access"
     },
     {
-      tier: "Subscription",
-      price: "Contact for pricing",
-      notes: "Annual subscription with regular updates and cloud collaboration"
+      tier: "Enterprise & Pro Panel",
+      price: "Custom Quote",
+      notes: "Advanced 3D panel layout, fluid engineering, and ERP/PDM integration"
     },
     {
       tier: "Educational",
       price: "Free/Discounted",
-      notes: "Special pricing for educational institutions"
+      notes: "Special pricing for verified educational institutions"
     }
   ],
 
@@ -795,11 +796,11 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does EPLAN cost?",
-      a: "EPLAN is offered on both perpetual and subscription models. Pricing is not publicly available and must be requested from the vendor; pricing scales with module bundles, seat counts, and deployment options. Educational licenses are available at special rates for students and institutions."
+      a: "EPLAN transitioned to a pure subscription model globally in August 2021. Entry subscriptions for EPLAN Electric P8 typically start between $3,000 and $4,500 per year per seat, while specialized modules (Pro Panel, Fluid, Harness proD) are custom-quoted based on enterprise requirements."
     },
     {
       q: "Is there a free version of EPLAN?",
-      a: "EPLAN is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
+      a: "EPLAN is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request an evaluation trial."
     },
     {
       q: "What operating systems does EPLAN support?",
@@ -1258,17 +1259,17 @@ export const c6Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "PADS Professional",
+      name: "PADS Professional Base",
       price: "$8,000+",
       period: "annual",
       features: ["Schematic capture", "PCB layout", "Signal integrity", "Power integrity", "Thermal analysis", "Library management"],
       is_popular: true
     },
     {
-      name: "PADS Standard",
-      price: "$3,000+",
+      name: "PADS Professional Suite",
+      price: "$12,000+",
       period: "annual",
-      features: ["Basic schematic", "PCB layout", "Auto-routing", "Manufacturing output"],
+      features: ["Full Xpedition technology integration", "Advanced RF & High-Speed routing", "Enterprise library management", "Priority support"],
       is_popular: false
     },
     {
@@ -1438,19 +1439,19 @@ export const c6Tools: Tool[] = [
 
   pricing_breakdown: [
     {
-      tier: "PADS Professional",
+      tier: "PADS Professional Base",
       price: "$8,000+/year",
-      notes: "Annual subscription with advanced simulation and analysis"
+      notes: "Annual subscription with advanced PCB layout and basic simulation"
     },
     {
-      tier: "PADS Standard",
-      price: "$3,000+/year",
-      notes: "Annual subscription with basic PCB design capabilities"
+      tier: "PADS Professional Suite",
+      price: "$12,000+/year",
+      notes: "Comprehensive high-speed, signal/thermal analysis and RF capabilities"
     },
     {
       tier: "Educational",
       price: "Free/Discounted",
-      notes: "Special pricing for students and institutions"
+      notes: "Special academic licensing for students and universities"
     }
   ],
 
@@ -1463,7 +1464,7 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does PADS Professional cost?",
-      a: "PADS Professional starts at approximately $8,000 per year for a subscription license. PADS Standard with basic capabilities starts at approximately $3,000 per year. Educational licenses are available at discounted rates for students and institutions."
+      a: "PADS Professional starts at approximately $8,000 per year for a standard annual subscription. Advanced tiers with high-speed simulation and enterprise library tools range from $12,000+ per year. Educational licenses are available at discounted rates for students and institutions."
     },
     {
       q: "Is there a free version of PADS Professional?",
@@ -2103,7 +2104,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://diptrace.com",
-  pricing_url: "https://diptrace.com/buy/commercial-editions/",
+  pricing_url: "https://diptrace.com/buy/",
   affiliate_url: null,
   score: 4.4,
 

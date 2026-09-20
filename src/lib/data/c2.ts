@@ -16,15 +16,15 @@ export const c2Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "Term (Annual)",
-      price: "2,700",
+      name: "Standard (Annual)",
+      price: "2,820",
       period: "/yr",
 
       features: [
         "Full 3D Design",
         "Standard Library",
-        "Sustainability tools",
-        "Cloud Services",
+        "Cloud collaboration (3DEXPERIENCE)",
+        "NC programming & additive",
       ],
 
       is_popular: true,
@@ -34,7 +34,7 @@ export const c2Tools: Tool[] = [
       price: "3,995",
       period: "one-time",
       features: [
-        "Owned license",
+        "Owned license (reseller channel only)",
         "Add-on required for Cloud",
         "Maintenance extra",
       ],
@@ -93,7 +93,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription / Perpetual",
-  starting_price: 2700,
+  starting_price: 2820,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Mechanical", "Manufacturing", "Automotive"],
@@ -121,7 +121,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does SolidWorks cost?",
-      a: "SolidWorks starts at $1,295 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "SolidWorks starts at $2,820/year per user for the Standard 3DEXPERIENCE subscription (Professional $3,456/yr, Premium $4,716/yr). Perpetual licenses are only available through resellers and still require an annual service contract for upgrades.",
     },
     {
       q: "Does SolidWorks offer a free trial?",
@@ -150,7 +150,7 @@ export const c2Tools: Tool[] = [
 
   expert_verdict: "If you are in mechanical design, SolidWorks is the most reliable choice.",
   version: "2026",
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   languages: [
@@ -345,7 +345,7 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
   version: "2026",
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   pricing_breakdown: [
@@ -356,12 +356,12 @@ export const c2Tools: Tool[] = [
     },
     {
       tier: "Pro",
-      price: "$349/yr",
+      price: "$399/yr",
       notes: "Desktop + LayOut (Most popular)",
     },
     {
       tier: "Studio",
-      price: "$749/yr",
+      price: "$819/yr",
       notes: "Includes V-Ray & Scan Essentials",
     },
   ],
@@ -1071,7 +1071,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does CATIA cost?",
-      a: "CATIA starts at $4,500 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "CATIA on the 3DEXPERIENCE platform starts at about $2,700/year for entry roles; mainstream engineering roles typically run considerably higher and most enterprise deals are quoted by Dassault Systèmes or its partners.",
     },
     {
       q: "Does CATIA offer a free trial?",
@@ -1836,7 +1836,7 @@ export const c2Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "2435",
+      price: "2585",
       period: "/yr",
       features: ["Save 35%", "Priority Support", "Workflows Link"],
       is_popular: true,
@@ -1863,7 +1863,7 @@ export const c2Tools: Tool[] = [
   industries: ["Manufacturing"],
   core_features: ["iLogic Automation", "Shared Views"],
   user_scales: ["Enterprise", "Mid-Market"],
-  official_url: "https://www.autodesk.com/inventor",
+  official_url: "https://www.autodesk.com/products/inventor/overview",
   affiliate_url: null,
   score: 4.7,
   pros: ["iLogic design automation", "Eco-system integration"],
@@ -1875,7 +1875,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does Autodesk Inventor cost?",
-      a: "Autodesk Inventor starts at $315 per seat on a subscription and network license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Autodesk Inventor starts at $315/month (or $2,585/year) per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
     },
     {
       q: "Does Autodesk Inventor offer a free trial?",
@@ -1905,7 +1905,7 @@ export const c2Tools: Tool[] = [
   expert_verdict:
     "The superior choice for mechanical design within the Autodesk ecosystem.",
   version: "2027",
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
 
   languages: [
@@ -2687,7 +2687,7 @@ export const c2Tools: Tool[] = [
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 1875,
+  starting_price: 2010,
   price_period: "year",
   platforms: ["Windows", "macOS", "Linux"],
   industries: ["VFX", "Gaming", "Animation"],
@@ -2701,7 +2701,7 @@ export const c2Tools: Tool[] = [
   ],
 
   user_scales: ["Enterprise", "Agencies"],
-  official_url: "https://www.autodesk.com/maya",
+  official_url: "https://www.autodesk.com/products/maya/overview",
   affiliate_url: null,
   score: 4.9,
   pros: ["Industry VFX standard", "Node-based power", "Linux support"],
@@ -2714,7 +2714,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does Maya cost?",
-      a: "Maya starts at $1,875 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Maya costs $2,010/year or about $260/month per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
     },
     {
       q: "Is there a free version of Maya?",
@@ -2742,12 +2742,13 @@ export const c2Tools: Tool[] = [
   },
 
   version: "2027",
+  last_updated: "2026-09-20",
   expert_verdict: "The power user's choice for Hollywood effects.",
 
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "235",
+      price: "260",
       period: "/mo",
 
       features: [
@@ -2761,7 +2762,7 @@ export const c2Tools: Tool[] = [
     },
     {
       name: "Annual",
-      price: "1,875",
+      price: "2,010",
       period: "/yr",
 
       features: [
@@ -2822,7 +2823,6 @@ export const c2Tools: Tool[] = [
     },
   ],
 
-  last_updated: "2026-09-02",
   file_formats_in: ["MB", "MA", "FBX", "OBJ", "glTF", "ABC", "USD", "DAE", "3DS"],
   file_formats_out: ["MB", "MA", "FBX", "OBJ", "glTF", "ABC", "USD", "DAE", "STL"]
 },
@@ -3051,12 +3051,12 @@ export const c2Tools: Tool[] = [
   short_desc: "The world's most comprehensive reverse engineering software.",
 
   description:
-    "Geomagic Design X combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
+    "Geomagic Design X (owned by Hexagon since April 2025, acquired from 3D Systems) combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
 
   country: "USA",
   category_id: "c2",
   pricing_type: "Subscription",
-  starting_price: 5000,
+  starting_price: 1900,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Reverse Engineering", "Quality Control"],
@@ -3069,7 +3069,7 @@ export const c2Tools: Tool[] = [
   ],
 
   user_scales: ["Mid-Market", "Enterprise"],
-  official_url: "https://www.3dsystems.com/software/geomagic-design-x",
+  official_url: "https://hexagon.com/products/geomagic-design-x",
   affiliate_url: null,
   score: 4.9,
 
@@ -3092,7 +3092,7 @@ export const c2Tools: Tool[] = [
     },
     {
       q: "How much does Geomagic Design X cost?",
-      a: "Geomagic Design X starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
+      a: "Geomagic Design X is now sold by Hexagon from $1,900 (entry bundles); full commercial seats are quoted by Hexagon. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote.",
     },
     {
       q: "Is there a free version of Geomagic Design X?",
@@ -3120,6 +3120,7 @@ export const c2Tools: Tool[] = [
   },
 
   version: "2025",
+  last_updated: "2026-09-20",
 
   expert_verdict:
     "The professional standard for turning physical objects into digital CAD data.",
@@ -3184,7 +3185,7 @@ export const c2Tools: Tool[] = [
   ],
 
   user_scales: ["Enterprise", "Design Agencies"],
-  official_url: "https://www.autodesk.com/products/alias/overview",
+  official_url: "https://www.autodesk.com/products/alias-products/overview",
   affiliate_url: null,
   score: 4.9,
 
@@ -3235,6 +3236,7 @@ export const c2Tools: Tool[] = [
   },
 
   version: "2025",
+  last_updated: "2026-09-20",
 
   expert_verdict:
     "The software behind almost every beautiful car you see on the road.",

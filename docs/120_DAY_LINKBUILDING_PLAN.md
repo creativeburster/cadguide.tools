@@ -100,8 +100,9 @@
 
 ### 🟡 阶段三：精准社区渗透与狙击问答（Day 61 - Day 90）
 
-- [ ] **Day 61**：Reddit 搜索 `r/cad` 关于 "AutoCAD alternative" 提问，发布高赞科普回复
-- [ ] **Day 62**：Reddit 搜索 `r/architecture` 关于 "Cheap CAD for floor plans"，精准解答
+- [x] **Day 61 (🎉 自动化完成)**：Reddit 社区问答 1 — r/cad [Bricscad Lite vs ZWCad](https://www.reddit.com/r/cad/comments/1s3li7y/bricscad_lite_vs_zwcad/p9i3kqd/)
+- [x] **Day 62 (🎉 自动化完成)**：Reddit 社区问答 2 — r/cad [Alternative CAD to Fusion](https://www.reddit.com/r/cad/comments/1ues6ai/alternative_cad_programs_to_fusion/p9i4vi2/)
+- [x] **Day 63 (🎉 自动化完成)**：Reddit 创客首发 — r/SideProject [Showcase: Client-side DWG Inspector](https://www.reddit.com/r/SideProject/comments/1wf0wqj/i_built_a_clientside_dwg_binary_header_inspector/)
 - [x] **Day 63 (🎉 提前完成)**：Quora 回答《[What is the best free alternative to AutoCAD?](https://www.quora.com/What-is-the-best-free-alternative-to-AutoCAD/answer/Will-Sun-52)》— FreeCAD/LibreCAD/QCAD/Fusion 360/Onshape 免费方案科普 + GstarCAD/ZWCAD 付费替代 + /compare 链接（Will Sun 名下）
 - [x] **Day 64.8 (🎉 额外加餐)**：Quora 第四答《[自学 AutoCAD 的零成本路径](https://www.quora.com/Is-it-possible-to-learn-Autocad-from-online-sources-like-YouTube-because-I-dont-have-enough-money-to-learn-it-from-an-institute/answer/Will-Sun-52)》— YouTube 学习法 + Autodesk 教育版 + FreeCAD/LibreCAD 并行练习 + 导流
 - [x] **Day 41.5 (🎉 加餐)**：Dev.to 第四篇《[DWG vs DXF vs STEP vs IGES: Which CAD File Format Should You Actually Send?](https://dev.to/willsun/dwg-vs-dxf-vs-step-vs-iges-which-cad-file-format-should-you-actually-send-23fo)》— 文件格式选型指南，导流 /file-formats 页与 DWG Version Checker
@@ -136,12 +137,44 @@
 
 - [x] **Day 40.8 (🎉 已发布 9/10)**：Telegraph《[5 Free Ways to Check Which AutoCAD Version Created a DWG File](https://telegra.ph/5-Free-Ways-to-Check-Which-AutoCAD-Version-Created-a-DWG-File-09-10)》— 五种免费检查方法（与版本码速查页互补）
 
+- [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
+
+## 9/18 追加批次（5 条 / 3 个新根域）
+- [x] Telegraph《[CAD Standards](https://telegra.ph/CAD-Standards-The-Unglamorous-Discipline-That-Separates-Professionals-from-Chaos-09-18)》+《[PGP File Aliases](https://telegra.ph/Customizing-Your-AutoCAD-PGP-File-Command-Aliases-Explained-09-18)》
+- [x] write.as《[CAD Standards](https://write.as/q4786usqmn895)》+《[PGP File Aliases](https://write.as/f7kf4vz2z90ed)》
+
+## 9/16 批次（10 条 / 6 根域）
+- [x] Dev.to ×3：《[AutoCAD System Variables](https://dev.to/willsun/autocad-system-variables-that-silently-control-your-drawings-20bp)》+《[CTB vs STB](https://dev.to/willsun/ctb-vs-stb-plot-styles-ending-the-folklore-3ikl)》+《[30-Day Trial Field Guide](https://dev.to/willsun/the-30-day-cad-trial-field-guide-what-to-test-before-you-buy-ip2)》（45 秒间隔防 429 成功）
+- [x] Quora ×3：[Xref 详解](https://www.quora.com/What-is-the-Xref-in-AutoCAD/answer/Will-Sun-52) + [Creo/SW vs Fusion](https://www.quora.com/What-is-the-benefit-of-using-Creo-or-SolidWorks-vs-Autodesk-Fusion-360/answer/Will-Sun-52) + [3D 建模核心数](https://www.quora.com/How-many-CPU-cores-and-threads-do-I-need-for-3D-modeling/answer/Will-Sun-52)
+- [x] Medium《[CAD Standards](https://willsunagency.medium.com/cad-standards-the-unglamorous-discipline-that-separates-professionals-from-chaos-0931b15a2b2f)》
+- [x] Telegraph《[DWG Troubleshooting Flowchart](https://telegra.ph/DWG-Troubleshooting-Flowchart-File-Wont-Open-Save-or-Plot-Right-09-16)》
+- [x] write.as《[CAD Intern Survival Guide](https://write.as/40bxvarpu7213)》
+- [x] rentry《[Layer Naming Template](https://rentry.co/cad-layer-naming-template)》
+
+## 9/18 批次（7 条 / 5 根域）
+- [x] Dev.to ×3：《[FLEXlm Options File](https://dev.to/willsun/flexlm-license-server-the-options-file-every-cad-manager-should-master-4l6k)》+《[LISP Migration Decision Framework](https://dev.to/willsun/should-you-migrate-your-autolisp-library-a-decision-framework-for-cad-managers-fj1)》+《[AutoCAD on macOS](https://dev.to/willsun/the-realistic-cad-workstation-buyers-guide-2026-what-actually-matters-12bg)》
+- [x] Telegraph ×2：《[Shortcut Migration Cheat Sheet](https://telegra.ph/AutoCAD-to-GstarCADZWCAD-The-Shortcut-Migration-Cheat-Sheet-09-11)》+《[Workstation Priority](https://telegra.ph/CAD-Workstation-Priority-Cheat-Sheet-CPU-RAM-SSD-GPU-In-That-Order-09-11)》
+- [x] write.as《[CAD File Version Chaos](https://write.as/6ebgbyd3ax6gu)》
+- [x] Quora《[Why is AutoCAD so expensive?](https://www.quora.com/Why-is-AutoCAD-so-expensive/answer/Will-Sun-52)》
+
+## 9/13 批次（10 条 / 6 根域）
+- [x] rentry.co《[FLEXlm License Manager Cheat Sheet](https://rentry.co/flexlm-cheat-sheet)》★新域名（CodeMirror API + 浏览器表单过 CSRF）
+- [x] Dev.to ×3：《[Reading a CAD Vendor Pricing Page](https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-54cm)》+《[License Audit Checklist](https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-n41)》+《[DWG TrueView and TrueConvert](https://dev.to/willsun/dwg-trueview-and-trueconvert-batch-converting-drawings-without-an-autocad-license-34an)》（第三篇撞 429 限流，60 秒后重试成功）
+- [x] Medium《[The Real Cost of Switching CAD: Migration Budget Template](https://willsunagency.medium.com/the-real-cost-of-switching-cad-a-migration-budget-template-3f29e341b1aa)》
+- [x] Quora ×3：[LT vs Full](https://www.quora.com/What-are-the-differences-between-Autocad-LT-Autocad-and-AutoCAD/answer/Will-Sun-52) + [MicroStation vs AutoCAD](https://www.quora.com/Why-is-Microstation-considered-to-be-better-than-AutoCAD/answer/Will-Sun-52) + [PDF 质量](https://www.quora.com/How-can-we-get-better-quality-PDFs-from-AutoCAD/answer/Will-Sun-52)
+- [x] Telegraph《[DWG Save-Back Compatibility Matrix](https://telegra.ph/DWG-Save-Back-Compatibility-Matrix-AC1015AC1032-09-13)》
+- [x] write.as《[The Platform Gap: 25% macOS](https://write.as/siard6ho3l725)》
+- ❌ 渠道死亡记录：SaaSHub Questions 已官方下线；pastebin.com Cloudflare 墙；controlc.com 隐形验证码；notes.io 无提交路径
+
 ## 9/11 批次（11 条 / 5 根域）
 - [x] Medium《[BIM vs CAD](https://willsunagency.medium.com/bim-vs-cad-when-to-move-your-architecture-workflow-up-a-level-3a2034388d07)》+《[Large Assembly Slowdowns](https://willsunagency.medium.com/large-assembly-slowdowns-a-practical-optimization-checklist-for-cad-workstations-b44971cb7c06)》（2/2 限额打满）
 - [x] Dev.to《[Workstation Buyer Guide](https://dev.to/willsun/the-realistic-cad-workstation-buyers-guide-2026-what-actually-matters-12bg)》+《[LISP Migration Checklist](https://dev.to/willsun/migrating-your-autolisp-routines-to-a-new-cad-platform-a-field-checklist-177b)》+《[PDM Alternatives](https://dev.to/willsun/cad-file-version-chaos-managing-drawings-without-a-pdm-system-5607)》（3/3 打满）
 - [x] Quora 三答：[笔记本选型](https://www.quora.com/What-are-the-best-laptops-for-AutoCAD/answer/Will-Sun-52) + [K-factor 原理](https://www.quora.com/What-is-the-K-factor-in-sheet-metal-fabrication/answer/Will-Sun-52) + [大二学生路线](https://www.quora.com/I-am-a-2nd-year-civil-engineering-student-Is-learning-CAD-good-for-me-or-not-What-should-I-learn-in-CAD/answer/Will-Sun-52)（3/3 打满）
 - [x] Telegraph《[Shortcut Migration Cheat Sheet](https://telegra.ph/AutoCAD-to-GstarCADZWCAD-The-Shortcut-Migration-Cheat-Sheet-09-11)》+《[Workstation Priority](https://telegra.ph/CAD-Workstation-Priority-Cheat-Sheet-CPU-RAM-SSD-GPU-In-That-Order-09-11)》
 - [x] write.as《[LibreDWG 三十年](https://write.as/flfvi79xp8m8g)》
+
+- [x] **Day 64.7 (🎉 已发布 9/13)**：Telegraph《[The 2026 CAD Licensing Report](https://telegra.ph/The-2026-CAD-Licensing-Report-We-Analyzed-170-Tools-Heres-the-Market-Split-09-18)》— 170 工具授权模式数据研究（52% 订阅 vs 27% 永久 vs 中位数 $1,995）
+- [x] **Day 40.8 (🎉 已发布 9/13)**：write.as《[The Platform Gap: 25% macOS](https://write.as/siard6ho3l725)》+ Telegraph《[DWG Save-Back Compatibility Matrix](https://telegra.ph/DWG-Save-Back-Compatibility-Matrix-AC1015AC1032-09-13)》
 
 - [~] **Day 79.7 (⏳ Hashnode 浏览器流程彻底失败 ×2)**：免费 CAD 横评 + 三工具对比文两次经浏览器自动发布的稿子均静默丢失（/edit 可开但公开页 404、不进 sitemap/RSS）——**结论：放弃 Hashnode 浏览器自动化，改用 GraphQL API + PAT 重发**（需站长生成 PAT）。三工具对比文全文已存 docs/hashnode-article-3-draft.md 备用；：Medium 第三篇《AutoCAD on macOS: What Works, What's Missing, and What Mac Users Actually Run》— macOS 原生 CAD 工具盘点（BricsCAD/DraftSight/Rhino/Fusion/Shapr3D/FreeCAD），草稿已存（标题+副标题已校准）；触发 Medium **2 篇/24h 发布限额**，2026-09-09 限额重置后发布：打开草稿 → Publish → 加话题（建议 Technology/Engineering/Software/Design）→ 确认即可
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持

@@ -92,19 +92,29 @@ export const c7Tools: Tool[] = [
     ]
   },
 
-  expert_verdict: "If you are a professional jeweler, this is the only tool you will ever need.",
-
   pricing_tiers: [
     {
-      name: "Subscription",
-      price: "1,200",
-      period: "/yr",
+      name: "Perpetual License",
+      price: "7,900",
+      period: "one-time",
       features: [
         "Parametric Jewelry Design",
         "Render Studio",
-        "Gems library"
+        "Full Gems & Mountings library",
+        "Includes first-year maintenance"
       ],
       is_popular: true
+    },
+    {
+      name: "Annual Maintenance",
+      price: "1,200",
+      period: "/yr",
+      features: [
+        "Software updates & patches",
+        "Priority technical support",
+        "Cloud rendering credits"
+      ],
+      is_popular: false
     }
   ],
 
@@ -553,7 +563,7 @@ export const c7Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Monthly",
-      price: "235",
+      price: "260",
       period: "/mo",
       features: [
         "High-end Rendering",
@@ -644,7 +654,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/3ds-max/overview",
-  pricing_url: "https://www.autodesk.com/products/3ds-max/pricing",
+  pricing_url: "https://www.autodesk.com/products/3ds-max/overview",
   affiliate_url: null,
   score: 4.5,
 
@@ -667,7 +677,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does 3ds Max cost?",
-      a: "3ds Max is offered on a subscription model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+      a: "3ds Max costs $2,010 per year or $260 per month. A 3-year subscription is available for $6,030. Autodesk also provides free educational access for eligible students and educators."
     },
     {
       q: "Is there a free version of 3ds Max?",
@@ -2347,8 +2357,8 @@ export const c7Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.autodesk.com/products/netfabb",
-  pricing_url: "https://www.autodesk.com/products/netfabb",
+  official_url: "https://www.autodesk.com/products/netfabb/overview",
+  pricing_url: "https://www.autodesk.com/products/netfabb/overview",
   affiliate_url: null,
   score: 4.3,
 
@@ -2380,7 +2390,7 @@ export const c7Tools: Tool[] = [
   faqs: [
     {
       q: "What is Autodesk Netfabb used for?",
-      a: "Industrial additive manufacturing prep, lattice, and build-plate optimization. Autodesk Netfabb is a visualization and rendering solution widely adopted in Aerospace, Medical, Manufacturing."
+      a: "Industrial additive manufacturing prep, lattice, and build-plate optimization. Autodesk Netfabb is an advanced additive manufacturing and 3D printing solution widely adopted in Aerospace, Medical, and Automotive manufacturing."
     },
     {
       q: "How much does Autodesk Netfabb cost?",
@@ -2734,11 +2744,11 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does D5 Render cost?",
-      a: "D5 Render starts at $38 per seat on a freemium license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "D5 Render offers a permanent free Community Edition for both personal and commercial use. D5 Pro is priced at $360 per year ($30/month billed annually) or $38 per month on a monthly plan, unlocking the full 10,000+ asset library, sequencer video rendering, and advanced AI features."
     },
     {
       q: "Is there a free version of D5 Render?",
-      a: "D5 Render is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+      a: "Yes, D5 Render provides a completely free Community Edition with no commercial watermark, allowing architectural and design professionals to use real-time ray tracing indefinitely for commercial projects."
     },
     {
       q: "What operating systems does D5 Render support?",
@@ -2831,7 +2841,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2023-04-29",
+  last_updated: "2026-09-20",
   version: "2024",
 
   file_formats_in: [
@@ -2913,7 +2923,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.chaos.com/vray",
-  pricing_url: "https://www.chaos.com/vray/pricing",
+  pricing_url: "https://www.chaos.com/pricing",
   affiliate_url: null,
   score: 4.6,
 
@@ -2949,7 +2959,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does V-Ray cost?",
-      a: "V-Ray starts at $396 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "V-Ray Solo starts at $540 per year ($45/month billed annually) for a node-locked license on a single machine. V-Ray Premium is $778.80 per year ($64.90/month billed annually), providing floating licensing and full access to Chaos Vantage, Phoenix, Player, and 20 Chaos Cloud credits."
     },
     {
       q: "Is there a free version of V-Ray?",
@@ -3045,7 +3055,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-20",
   version: "7",
 
   file_formats_in: [
@@ -3076,7 +3086,7 @@ export const c7Tools: Tool[] = [
     is_popular: true
   }, {
     name: "Premium",
-    price: "890",
+    price: "778.80",
     period: "/yr",
 
     features: [
@@ -3125,7 +3135,7 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.chaos.com/corona",
-  pricing_url: "https://www.chaos.com/corona/pricing",
+  pricing_url: "https://www.chaos.com/pricing",
   affiliate_url: null,
   score: 4.5,
 
@@ -3160,7 +3170,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does Corona Renderer cost?",
-      a: "Corona is subscription-only under Chaos's current plans: Corona Solo runs about $59.90/month and Corona Premium about $72.90/month (Corona is bundled in the Maxon One/Chaos bundles as well). Educational licenses are available — check chaos.com for current figures."
+      a: "Corona Solo starts at $395 per year ($32.90/month billed annually) or $59.90 billed monthly for a single fixed-workstation license. Corona Premium is priced at $590 per year ($49.20/month billed annually) or $72.90 billed monthly, providing floating license sharing, Chaos Phoenix fluid dynamics, and Chaos Player access."
     },
     {
       q: "Is there a free version of Corona Renderer?",
@@ -3256,7 +3266,7 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  last_updated: "2026-08-03",
+  last_updated: "2026-09-20",
   version: "13",
   file_formats_in: ["3ds Max", "Cinema 4D", "OBJ", "FBX"],
   file_formats_out: ["EXR", "PNG", "TIFF", "JPG", "CXR (Corona EXR)"],
@@ -3816,17 +3826,17 @@ export const c7Tools: Tool[] = [
 
   pricing_tiers: [
     {
-      name: "E3D Design Enterprise",
-      price: "$15,000+",
-      period: "annual",
-      features: ["Full 3D plant design", "Piping design", "Equipment modeling", "Structural design", "Electrical design", "Clash detection"],
-      is_popular: true
-    },
-    {
       name: "E3D Design Standard",
       price: "$8,000+",
       period: "annual",
       features: ["Basic 3D modeling", "Piping design", "Equipment modeling", "Design review"],
+      is_popular: true
+    },
+    {
+      name: "E3D Design Enterprise",
+      price: "$15,000+",
+      period: "annual",
+      features: ["Full 3D plant design", "Piping design", "Equipment modeling", "Structural design", "Electrical design", "Clash detection"],
       is_popular: false
     },
     {
@@ -3958,7 +3968,7 @@ export const c7Tools: Tool[] = [
   score: 0,
   pros: ["Industry-standard plant design software", "Advanced 3D modeling capabilities", "Comprehensive clash detection", "Strong AVEVA ecosystem integration", "Rule-based design automation", "Real-time collaboration features", "Enterprise-grade solutions", "Extensive industry experience"],
   cons: ["Very high cost", "Steep learning curve", "Windows-only", "Requires significant training", "Complex implementation process", "Enterprise-focused pricing"],
-  last_updated: "2026-09-02",
+  last_updated: "2026-09-20",
   free_trial_days: 30,
   languages: ["English", "Chinese", "Japanese", "German", "French", "Spanish", "Russian"],
   file_formats_in: ["DWG", "DXF", "PDF", "STEP", "IGES", "IFC", "RVM"],
@@ -3976,14 +3986,14 @@ export const c7Tools: Tool[] = [
 
   pricing_breakdown: [
     {
-      tier: "E3D Design Enterprise",
-      price: "$15,000+/year",
-      notes: "Annual subscription with full plant design capabilities"
-    },
-    {
       tier: "E3D Design Standard",
       price: "$8,000+/year",
-      notes: "Annual subscription with basic 3D modeling capabilities"
+      notes: "Annual subscription with basic 3D modeling and piping capabilities"
+    },
+    {
+      tier: "E3D Design Enterprise",
+      price: "$15,000+/year",
+      notes: "Annual subscription with full 3D plant design, clash detection, and multi-discipline integration"
     },
     {
       tier: "Educational",
@@ -4001,7 +4011,7 @@ export const c7Tools: Tool[] = [
     },
     {
       q: "How much does AVEVA E3D Design cost?",
-      a: "AVEVA E3D Design Enterprise starts at approximately $15,000 per year for a subscription license. E3D Design Standard with basic capabilities starts at approximately $8,000 per year. Educational licenses are available at discounted rates for students and institutions."
+      a: "AVEVA E3D Design starts at approximately $8,000 per year for the Standard edition subscription. The full-scale E3D Design Enterprise edition starts at approximately $15,000+ per year. Educational licenses are available at discounted rates for accredited universities and institutions."
     },
     {
       q: "Is there a free version of AVEVA E3D Design?",
