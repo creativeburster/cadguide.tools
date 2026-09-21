@@ -11073,7 +11073,7 @@ export const c5Tools: Tool[] = [
   ],
   cons: [
     "2D nesting only — no tube or 3D cutting",
-    "Free tier capped at 10 parts per sheet",
+    "Free tier capped at 10 parts on one sheet",
     "No plugin integration with CAM suites"
   ],
   faqs: [
@@ -11083,11 +11083,11 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does NestForge cost?",
-      a: "NestForge is free for up to 10 parts on one sheet. The Pro upgrade is a €29 one-time payment for unlimited nesting — no subscription."
+      a: "NestForge is free for up to 10 parts on one sheet (counting copies). The Pro upgrade is a €49 one-time purchase (including applicable taxes) for a perpetual license covering major version 1 and all v1 updates — no subscription."
     },
     {
       q: "Is there a free version of NestForge?",
-      a: "Yes — the free tier covers nesting of up to 10 parts on a single sheet, with no account or installation required."
+      a: "Yes — the free tier covers nesting of up to 10 parts, counting copies, on one sheet, with nesting, validation, and export included. No account or installation required."
     },
     {
       q: "What operating systems does NestForge support?",
@@ -11095,7 +11095,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "Which file formats does NestForge support?",
-      a: "NestForge imports and exports SVG and DXF, the two formats most laser and plasma cutting workflows use."
+      a: "NestForge imports and exports SVG and DXF files, and can also export cut sheets to PDF."
     },
     {
       q: "What are the best alternatives to NestForge?",
@@ -11108,29 +11108,32 @@ export const c5Tools: Tool[] = [
       price: "€0",
       period: "forever",
       features: [
-        "Nest up to 10 parts per sheet",
-        "Spacing, rotation & grain rules",
-        "SVG & DXF import",
+        "10 parts on one sheet (counting copies)",
+        "Nesting and layout validation",
+        "SVG and text DXF import",
+        "DXF, SVG and PDF export",
         "Runs locally in the browser"
       ]
     },
     {
       name: "Pro (Lifetime)",
-      price: "€29",
+      price: "€49",
       period: "one-time",
       features: [
-        "Unlimited parts per sheet",
-        "Multi-sheet layouts",
-        "DXF & SVG export",
+        "Unlimited parts and sheets",
+        "Multi-sheet jobs and reports",
+        "Perpetual license for version 1",
+        "All v1 updates included",
+        "Offline license key",
         "No subscription"
       ],
       is_popular: true
     }
   ],
   alternatives: ["sigmanest"],
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-21",
   file_formats_in: ["SVG", "DXF"],
-  file_formats_out: ["SVG", "DXF"]
+  file_formats_out: ["SVG", "DXF", "PDF"]
 },
 {
   id: "t253",
