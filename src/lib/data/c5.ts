@@ -11100,6 +11100,10 @@ export const c5Tools: Tool[] = [
     {
       q: "What are the best alternatives to NestForge?",
       a: "SigmaNEST is the established commercial nesting suite for production-scale operations. For occasional sheet layouts, NestForge's free in-browser tier covers small jobs — compare options based on part volume and machine integration needs."
+    },
+    {
+      q: "Can NestForge reduce raw material scrap on actual cutting jobs?",
+      a: "Yes. In an open-design benchmark using eight acrylic arcade-case panels (Jasen's Customs), nesting the parts onto two 600 x 400 mm sheets instead of a single 900 x 600 mm sheet achieved an 11.1% reduction in total raw sheet area while strictly respecting spacing and rotation constraints."
     }
   ],
   pricing_tiers: [
