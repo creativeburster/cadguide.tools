@@ -1432,8 +1432,8 @@ export const c4Tools: Tool[] = [
   slug: "cadprops",
   logo_url: "/logos/cadprops.svg",
   short_desc: "Free browser-based multi-format CAD viewer and engineering measurement platform.",
-  description: "CADProps is a free web-based CAD viewer and inspection platform that lets mechanical engineers, machinists, and procurement teams open, inspect, and analyze 3D models directly in the browser without software installation or account creation. It supports native formats like SolidWorks (SLDPRT/SLDASM), Siemens NX (PRT), Autodesk Inventor (IPT/IAM), CATIA (CATPart/CATProduct), alongside standard exchange formats including STEP, IGES, Parasolid X_T, SAT, JT, STL, OBJ, 3MF, and GLB/glTF. Built-in engineering tools provide accurate dimension measurement, volume calculations, surface area evaluation, weight estimation, bounding box inspection, and link-based 3D sharing.",
-  country: "United States",
+  description: "CADProps is a free web-based CAD viewer and inspection platform based in Singapore that lets mechanical engineers, machinists, and manufacturing teams open, inspect, and analyze 3D models directly in the browser without account creation. It supports native formats including SolidWorks (SLDPRT/SLDASM), Siemens NX (PRT), Autodesk Inventor (IPT/IAM), and CATIA (CATPart/CATProduct), alongside standard CAD exchange formats (STEP, IGES, Parasolid X_T, SAT, JT) and mesh formats (STL, OBJ, 3MF, GLB/glTF). Processing is handled on CADProps servers in temporary guest workspaces with a default one-hour retention period, providing exact B-Rep measurements for solids, approximate values for meshes, and user-defined density weight calculations.",
+  country: "Singapore",
   category_id: "c4",
   pricing_type: "Free",
   starting_price: 0,
@@ -1441,11 +1441,11 @@ export const c4Tools: Tool[] = [
   industries: ["Mechanical Engineering", "CNC Machining", "Manufacturing", "Prototyping", "Quality Assurance", "Procurement"],
   core_features: [
     "Multi-format 3D CAD viewing (STEP, SLDPRT, NX, CATIA, IPT, IGES, STL)",
-    "In-browser dimension, distance and angle measurement",
-    "Precise volume, surface area and weight estimation",
-    "Bounding box inspection and CAD property analysis",
-    "Password-protected 3D link sharing and model embed",
-    "Zero installation, no registration required, privacy-safe local processing"
+    "In-browser dimension, bounding box, volume & surface area analysis",
+    "B-Rep solid geometry measurement for STEP/IGES and approximate mesh analysis",
+    "Weight estimation based on user-confirmed material density",
+    "Password-protected 3D link sharing and temporary workspace export",
+    "No account registration required, temporary guest workspace processing"
   ],
   user_scales: ["Individuals", "Small Business", "Engineering Teams"],
   official_url: "https://www.cadprops.com",
@@ -1454,25 +1454,25 @@ export const c4Tools: Tool[] = [
   pros: [
     "100% free with no account creation or desktop software installation required",
     "Broad native CAD format support including SolidWorks, NX, CATIA, Inventor, and STEP",
-    "Instant client-side engineering measurement, mass property estimation, and bounding box inspection",
+    "Exact B-Rep solid geometry calculations for STEP and IGES files",
     "Secure sharing links with optional password protection"
   ],
   cons: [
     "Read-only inspection and viewing utility — no parametric CAD modeling or editing",
-    "Mesh format measurements (STL/OBJ) are polygonal approximations rather than B-Rep solids",
-    "Extremely complex, multi-gigabyte assemblies may experience browser memory constraints"
+    "Mesh format measurements (STL/OBJ) are polygonal approximations rather than exact B-Rep solids",
+    "Server-side temporary guest workspace retains files for 1 hour by default (private failed-file diagnostics do not expire automatically)"
   ],
   tech_specs: {
-    engine: "WebAssembly / WebGL CAD Kernel",
-    multicore: "Browser-threaded",
-    gpu_optimization: "WebGL 2.0 Hardware Acceleration",
+    engine: "Server-side CAD engine with WebGL 3D visualization",
+    multicore: "Server-threaded",
+    gpu_optimization: "WebGL 2.0 Client Rendering",
     standards: ["STEP AP203/AP214/AP242", "Parasolid", "IGES", "B-Rep", "glTF 2.0"]
   },
   expert_verdict: "An agile, remarkably frictionless online CAD viewer that allows engineers, machinists, and procurement teams to inspect models and compute physical volume/mass properties without launching heavyweight desktop CAD packages.",
   faqs: [
     {
       q: "What is CADProps used for?",
-      a: "CADProps is a free browser-based CAD viewer and engineering measurement platform. It enables users to open, inspect, and analyze 3D CAD models directly in a web browser without installing desktop software or signing up for an account."
+      a: "CADProps is a free browser-based CAD viewer and engineering inspection platform based in Singapore. It enables users to open, inspect, and analyze 3D CAD models directly in a web browser without installing desktop software or signing up for an account."
     },
     {
       q: "Which CAD file formats does CADProps support?",
@@ -1480,11 +1480,11 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "How does CADProps calculate model weight and volume?",
-      a: "CADProps analyzes the underlying 3D solid geometry (B-Rep or tessellated mesh) to determine precise volume and surface area. By applying standard or custom material density values (such as Aluminum 6061, Steel 4140, Delrin, or Titanium), it computes instant weight estimates for manufacturing and shipping calculations."
+      a: "For CAD solids such as STEP, IGES, and native CAD files, CADProps calculates exact volume and surface measurements using B-Rep geometry. For mesh formats like STL and OBJ, measurements are polygonal approximations. Weight and mass estimates are calculated once the user confirms or provides a specific material density."
     },
     {
-      q: "Are my uploaded CAD files secure on CADProps?",
-      a: "CADProps processes files temporarily for visualization and measurement directly in the client browser environment without permanent cloud storage or training AI models on user data."
+      q: "How does CADProps handle uploaded CAD files and privacy?",
+      a: "Uploaded files are processed on CADProps servers in a temporary guest workspace without requiring an account login. Files have a default retention period of one hour before automatic deletion, while privately held failed-file diagnostic copies do not expire automatically."
     },
     {
       q: "How much does CADProps cost?",
@@ -1498,17 +1498,18 @@ export const c4Tools: Tool[] = [
       period: "forever",
       features: [
         "View SolidWorks, NX, Inventor, CATIA & STEP files",
-        "Interactive 3D dimension and angle measurement",
-        "Volume, surface area, and weight estimation",
-        "Bounding box inspection",
+        "3D dimension and bounding box inspection",
+        "Exact B-Rep volume & surface area for CAD solids",
+        "Approximate measurements for mesh formats",
+        "Weight estimation with user-confirmed density",
         "Share models by link with password protection",
-        "No installation or registration required"
+        "No account registration required"
       ],
       is_popular: true
     }
   ],
   alternatives: ["dwg-trueview", "cad-reader", "dxf-medic", "cad-exchanger"],
-  last_updated: "2026-09-20",
+  last_updated: "2026-09-22",
   file_formats_in: [
     "STEP", "STP", "SLDPRT", "SLDASM", "PRT", "CATPart", "CATProduct", "IPT", "IAM", "X_T", "SAT", "JT", "IGES", "IGS", "STL", "OBJ", "3MF", "GLB", "GLTF", "ZIP"
   ],
