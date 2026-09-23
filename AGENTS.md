@@ -16,6 +16,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
 > 必须在本地完成修改、本地通过 `npx tsc --noEmit` 和 `npm run build` 验证无误、提交 `git commit` 后，将状态呈报给用户。
 > **只有当用户在对话中明确下达“push”或“推送”指令时，智能体方可执行推送。** 屡教不改者将被直接熔断或终止运行。
 
+> [!NOTE]
+> **🐙 官方 GitHub 仓库与账号规范 (GitHub Repository Info)**
+> * 官方仓库地址：`https://github.com/creativeburster/cadguide.tools`
+> * 默认生产分支：`main`
+> * **迁移规范**：本项目已全量迁移至新 GitHub 账号 `creativeburster`。旧账号 `gstar-byte` 已废弃，严禁在任何脚本、配置、文档或外链中引用旧账号地址。
+
 ---
 
 ## 🇨🇳 1. 核心交互原则：必须使用中文回复用户 (Must Respond in Chinese)

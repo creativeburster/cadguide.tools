@@ -38,7 +38,7 @@
 - [x] **Day 16 (📋 转付费候选)**：BetaList 草稿 #182866 已 100% 就绪；平台已全面付费化（Lite $39 含 Dofollow DR76），按站长指示转入选购清单，见 docs/paid-listing-candidates.md
 - [x] **Day 17 (🎉 自动化完成)**：Launching Next 表单全自动填写并提交（站长手动点击确认），即时生效
 - [x] **Day 18 (🎉 已上线)**：StartupBase 草稿补完至 100%，站长完成社区任务（3 upvotes + 1 评论）并通过徽章验证，加入免费优先队列，产品页已公开：https://startupbase.io/products/cadguide-tools（footer 徽章已深链该页）；付费升级选项见 docs/paid-listing-candidates.md
-- [ ] **Day 19**：Crunchbase 机构与产品 Profile 创建 (DA 91)
+- [x] **Day 19 (🎉 成功创建上线)**：Crunchbase 机构与产品 Profile 创建 (DA 91 | 权威企业实体与知识图谱认证) — 已通过站长企业控制台成功提交上线，覆盖 CAD 行业选型与买断/永久授权定位，外链直达主站
 - [ ] **Day 20**：Wellfound (AngelList) 创业项目 Profile (DA 88)
 - [ ] **Day 21**：Behance UI/UX 设计展示页面与站点回链 (DA 92)
 - [ ] **Day 22**：X (Twitter) 官方品牌矩阵搭建与第一条置顶 (DA 94)
@@ -138,6 +138,27 @@
 - [x] **Day 40.8 (🎉 已发布 9/10)**：Telegraph《[5 Free Ways to Check Which AutoCAD Version Created a DWG File](https://telegra.ph/5-Free-Ways-to-Check-Which-AutoCAD-Version-Created-a-DWG-File-09-10)》— 五种免费检查方法（与版本码速查页互补）
 
 - [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
+
+## 9/23 批次（社区狙击，全部实机 Live 校验）
+- [x] **Quora (DA 89) 顶级大词问答 2（全自动上线，Will Sun 名下）**：
+  - 《[Why does my AutoCAD drawing file appear as "not valid"? How can I fix this?](https://www.quora.com/Why-does-y-AutoCAD-drawing-file-appear-as-not-valid-How-can-I-fix-this/answer/Will-Sun-52)》— 深度解析 AC1032/AC1027 版本代差魔数与图纸恢复四步法，精准导流至 /toolbox/dwg-version-checker 与主站。
+- [x] **Quora (DA 89) 顶级大词问答 1（全自动上线，Will Sun 名下）**：
+  - 《[Which is the best alternative software for AutoCAD?](https://www.quora.com/Which-is-the-best-alternative-software-for-AutoCAD/answer/Will-Sun-52)》— 深度横评 ZWCAD / GstarCAD / BricsCAD / FreeCAD 选型矩阵与永久授权，精准导流至 /compare 对比页与主站。
+- [x] **Reddit (DA 91+) 真实工业热帖狙击（1 篇 Live）**：
+  - 《[r/SolidWorks: DXF file size](https://www.reddit.com/r/SolidWorks/comments/1wncrkl/dxf_file_size/pbhj0tq/)》— 深度解决 SolidWorks 导出 DXF 达 20MB 痛点（Spline 离散爆炸 + Part 几何轮廓直接导出 + 文字矢量化规避），自然植入 CADGuide 校验工具与主站。
+
+## 9/22 批次（7 条 / 2 个超高权重根域，全部实机 200 OK 校验）
+- [x] **Substack (DA 92) 工业技术专刊矩阵（6 篇全部 Live，18 个高精度深链，秒开）**：
+  - 《[The Physics of CAD Geometry Kernels: ACIS vs Parasolid vs Open CASCADE](https://cadguidetools.substack.com/p/the-physics-of-cad-geometry-kernels)》（主站 + K-Factor + License计算器）
+  - 《[Reverse-Engineering the DWG AC1032 File Header: A Zero-Upload Guide](https://cadguidetools.substack.com/p/reverse-engineering-dwg-ac1032-file)》（主站 + Workstation + Guides）
+  - 《[BIM Interoperability & IFC 4.3 Spatial Hierarchy: Why Multi-Disciplinary Coordination Fails](https://cadguidetools.substack.com/p/bim-interoperability-and-ifc-43-spatial)》（主站 + Cloud Cost + Revit库）
+  - 《[STEP AP242 vs Parasolid XT: Diagnosing B-Rep Translation Errors](https://cadguidetools.substack.com/p/step-ap242-vs-parasolid-xt-diagnosing)》（主站 + License + SolidWorks库）
+  - 《[Sheet Metal K-Factor Physics: How the Neutral Axis Shifts Under Air Bending](https://cadguidetools.substack.com/p/sheet-metal-k-factor-physics-how)》（主站 + K-Factor + Fusion 360库）
+  - 《[CAD License Optimization: Calculating Floating Seat Concurrency and Token Ratios](https://cadguidetools.substack.com/p/cad-license-floating-seat-optimization-304)》（主站 + License + Workstation）
+- [x] **Devpost (DA 80+) 顶级黑客松与独立项目主页（1 篇 Live，5 个精准深链）**：
+  - 《[CADGuide.tools | Devpost](https://devpost.com/software/cadguide-tools)》— 永久项目展示页，无头实测公开可访问，绑定主站、K-Factor计算器、Workstation推荐与对比矩阵。
+- ❌ **渠道淘汰与止损记录**：
+  - Scoop.it (DA 88)：免费版将公网索引与未登录访客访问（`needAuth=1`）锁死在 Pro 付费弹窗内，已坚决废弃拉黑。
 
 ## 9/18 追加批次（5 条 / 3 个新根域）
 - [x] Telegraph《[CAD Standards](https://telegra.ph/CAD-Standards-The-Unglamorous-Discipline-That-Separates-Professionals-from-Chaos-09-18)》+《[PGP File Aliases](https://telegra.ph/Customizing-Your-AutoCAD-PGP-File-Command-Aliases-Explained-09-18)》
