@@ -1,22 +1,17 @@
-# 1. Redirect /guides/articles/* to /guides/* (route simplification)
-/guides/articles/* /guides/:splat 301
+# 1. Guides permanent 301 redirect to homepage
+/guides / 301
+/guides/* / 301
 
-# 2. Redirect standards-iso-128-* to standards-iso-*
-/guides/standards-iso-128-* /guides/standards-iso-:splat 301
-
-# 3. Redirect industry-high-frequency-pcb-design to industry-pcb-design
-/guides/industry-high-frequency-pcb-design /guides/industry-pcb-design 301
-
-# 4. Redirect haochen-cad to gstarcad (tool renaming)
+# 2. Redirect haochen-cad to gstarcad (tool renaming)
 /tools/haochen-cad /tools/gstarcad 301
 /alternatives/haochen-cad /alternatives/gstarcad 301
 
-# 5. Redirect root-level legacy pricing paths
+# 3. Redirect root-level legacy pricing paths
 /forever /pricing/perpetual 301
 /3yr /pricing/subscription 301
 /mo /pricing/subscription 301
 
-# 6. Removed ghost entries (audit 2026-08-03): SolveSpace Pro never existed
+# 4. Removed ghost entries (audit 2026-08-03): SolveSpace Pro never existed
 # (SolveSpace is free GPL software), CADvision is a services company not a
 # product, and "Chief Architect Pro" is not a real product name.
 /tools/solvespace-pro /tools/solvespace 301
@@ -27,31 +22,11 @@
 /alternatives/chief-architect-pro /alternatives/chief-architect 301
 /pricing/chief-architect-pro /pricing/chief-architect 301
 
-# 7. Pricing aliases → modern canonicals (migrated from the removed Next.js
-#    middleware, which never ran in production under output: 'export')
+# 5. Pricing aliases → modern canonicals
 /pricing/free /free 301
 /pricing/open-source /open-source 301
 
-# 8. Legacy /guides cheatsheet pages → /toolbox canonicals
-/guides/shortcuts /toolbox/shortcuts 301
-/guides/archicad-shortcuts-sheet /toolbox/archicad-shortcuts-sheet 301
-/guides/autocad-vs-gstarcad-shortcuts /toolbox/autocad-vs-gstarcad-shortcuts 301
-/guides/autocad-vs-zwcad-shortcuts /toolbox/autocad-vs-zwcad-shortcuts 301
-/guides/bricscad-shortcuts-sheet /toolbox/bricscad-shortcuts-sheet 301
-/guides/catia-shortcuts-sheet /toolbox/catia-shortcuts-sheet 301
-/guides/creo-shortcuts-sheet /toolbox/creo-shortcuts-sheet 301
-/guides/draftsight-shortcuts-sheet /toolbox/draftsight-shortcuts-sheet 301
-/guides/freecad-shortcuts-sheet /toolbox/freecad-shortcuts-sheet 301
-/guides/fusion360-shortcuts-sheet /toolbox/fusion360-shortcuts-sheet 301
-/guides/inventor-shortcuts-sheet /toolbox/inventor-shortcuts-sheet 301
-/guides/microstation-shortcuts-sheet /toolbox/microstation-shortcuts-sheet 301
-/guides/revit-shortcuts-sheet /toolbox/revit-shortcuts-sheet 301
-/guides/rhino-shortcuts-sheet /toolbox/rhino-shortcuts-sheet 301
-/guides/sketchup-shortcuts-sheet /toolbox/sketchup-shortcuts-sheet 301
-/guides/solidworks-shortcuts-sheet /toolbox/solidworks-shortcuts-sheet 301
-/guides/vectorworks-shortcuts-sheet /toolbox/vectorworks-shortcuts-sheet 301
-
-# 7. Removed long-tail tools (catalog trim 2026-09) — 301 the Google-indexed ones
+# 6. Removed long-tail tools (catalog trim 2026-09) — 301 the Google-indexed ones
 /tools/varicad /all-tools 301
 /alternatives/varicad /all-tools 301
 /pricing/varicad /all-tools 301

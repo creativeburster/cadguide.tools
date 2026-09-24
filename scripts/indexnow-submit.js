@@ -33,7 +33,6 @@ function collectUrls() {
     '/',
     '/tools',
     '/compare',
-    '/guides',
     '/pricing',
     '/free',
     '/open-source',
@@ -61,25 +60,7 @@ function collectUrls() {
     }
   }
 
-  // 3. Guide pages — read from content directory
-  const guidesDir = path.join(process.cwd(), 'src', 'content', 'guides');
-  if (fs.existsSync(guidesDir)) {
-    const tools = fs.readdirSync(guidesDir);
-    for (const tool of tools) {
-      const toolDir = path.join(guidesDir, tool);
-      if (!fs.statSync(toolDir).isDirectory()) continue;
-      const files = fs.readdirSync(toolDir).filter(f => f.endsWith('.md'));
-      for (const file of files) {
-        const raw = fs.readFileSync(path.join(toolDir, file), 'utf-8');
-        const slugMatch = raw.match(/^slug:\s*["']([^"']+)["']/m);
-        if (slugMatch) {
-          urls.add(`/guides/${slugMatch[1]}`);
-        }
-      }
-    }
-  }
-
-  // 4. Compare pair pages — read from seo-content
+  // 3. Compare pair pages — read from seo-content
   const seoContentPath = path.join(process.cwd(), 'src', 'lib', 'seo-content.ts');
   if (fs.existsSync(seoContentPath)) {
     const content = fs.readFileSync(seoContentPath, 'utf-8');

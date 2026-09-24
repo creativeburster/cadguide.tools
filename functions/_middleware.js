@@ -391,6 +391,11 @@ export async function onRequest(context) {
     });
   }
 
+  // Intercept all /guides and /guides/* paths and 301 permanently redirect to homepage
+  if (path === '/guides' || path.startsWith('/guides/')) {
+    return Response.redirect(`${url.origin}/`, 301);
+  }
+
   // Regex to detect legacy AI-generated guides patterns, e.g. /guides/allplan-troubleshooting-0
   // Categories: troubleshooting, performance, migration, standards, procurement, deployment, manufacturing, printing, workflow, comparison
   // Followed by a single digit suffix (0-9)
