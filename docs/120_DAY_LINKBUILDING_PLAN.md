@@ -73,7 +73,7 @@
 - [ ] **Day 36**：Dev.to 工具软文《How to Parse DWG File Versions in Browser with Zero Server Load》
 - [~] **Day 37 (📝 文案就绪，站长手动发布)**：LinkedIn Pulse《Top 5 AutoCAD Alternatives with Full AutoLISP Support》— 全文存于 docs/linkedin-article-1.md（5 款 LISP 兼容替代品 + 真实价格，均取自站点索引数据）；站长在自有浏览器发布（LinkedIn 会话在站长的常用浏览器里）
 - [ ] **Day 38**：Hashnode 技术剖析《Client-Side K-Factor Bending Calculations Explained》
-- [ ] **Day 39**：Medium 实操干货《Fixing CAD Fatal Errors: The Complete Diagnostic Blueprint》
+- [x] **Day 39 (🎉 Dev.to 自动发布)**：Dev.to《[Fixing CAD Fatal Errors: Complete Architectural Diagnostic Blueprint](https://dev.to/willsun/fixing-cad-fatal-errors-complete-architectural-diagnostic-blueprint-457c)》— 针对二进制字典损坏、DirectX 显卡上下文解绑与 AutoLISP 垃圾回收的系统性排错（挂载主站、DWG Version Checker 与 Guides）
 - [ ] **Day 40**：Telegraph / Write.as 纯净匿名技术文档分发
 - [ ] **Day 41**：Dev.to《Cross-Platform CAD Shortcuts: A Unified Cheat Sheet》
 - [ ] **Day 42**：Medium《BIM vs CAD: When to Upgrade Your Architectural Workflow》
@@ -87,7 +87,7 @@
 - [ ] **Day 50**：LinkedIn Pulse《How CAD Managers Save 40% on Yearly Software Licensing》
 - [ ] **Day 51**：向开源 CAD 社区（FreeCAD, LibreCAD 论坛/博客）提交生态推荐
 - [ ] **Day 52**：Substack Newsletter #3《Top 5 CAD Scripts That Save 10 Hours a Week》
-- [ ] **Day 53**：Medium《Troubleshooting DXF/DWG Export Scale Issues in 2D Drafting》
+- [x] **Day 53 (🎉 Dev.to 自动发布)**：Dev.to《[Troubleshooting DXF/DWG Export Scale Issues in 2D Drafting & CNC Fabrication](https://dev.to/willsun/troubleshooting-dxfdwg-export-scale-issues-in-2d-drafting-cnc-fabrication-ah2)》— 针对 INSUNITS 25.4x 缩放失真、图纸空间导出与钣金 K-Factor 中性层位移的技术指南（挂载 K-Factor Calculator 与 Compare）
 - [ ] **Day 54**：Dev.to《Building Lightweight Single-Page Engineering Calculators》
 - [ ] **Day 55**：SlideShare / SpeakerDeck 上传《2026 CAD Software Buying & Feature Guide》PPT
 - [ ] **Day 56**：Issuu 上传《CAD Managers Pocket Handbook》PDF（带嵌入链接）
@@ -138,6 +138,13 @@
 - [x] **Day 40.8 (🎉 已发布 9/10)**：Telegraph《[5 Free Ways to Check Which AutoCAD Version Created a DWG File](https://telegra.ph/5-Free-Ways-to-Check-Which-AutoCAD-Version-Created-a-DWG-File-09-10)》— 五种免费检查方法（与版本码速查页互补）
 
 - [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
+
+## 9/24 批次（社区狙击与高权重技术长文，全部实机 Live 校验）
+- [x] **Reddit (DA 91+) 真实工业热帖狙击（1 篇 Live）**：
+  - 《[r/SolidWorks: I'm looking for a SolidWorks license at a decent price](https://www.reddit.com/r/SolidWorks/comments/1wopszk/im_looking_for_a_solidworks_license_at_a_decent/pbppyir/)》— 深度拆解 SOLIDWORKS 正版分销防坑、Startup 一年免费孵化项目、Makers 数字水印限制与 Alibre/Solid Edge 买断替代选型矩阵，权威解答挂载 /compare 与主站。
+- [x] **Dev.to (DA 85) 技术长文（2 篇 Live）**：
+  - 《[Fixing CAD Fatal Errors: Complete Architectural Diagnostic Blueprint](https://dev.to/willsun/fixing-cad-fatal-errors-complete-architectural-diagnostic-blueprint-457c)》— 系统拆解二进制字典损坏、DirectX 显卡上下文解绑与 AutoLISP 垃圾回收，深度挂载主站、DWG Version Checker 与 Guides。
+  - 《[Troubleshooting DXF/DWG Export Scale Issues in 2D Drafting & CNC Fabrication](https://dev.to/willsun/troubleshooting-dxfdwg-export-scale-issues-in-2d-drafting-cnc-fabrication-ah2)》— 深入解析 INSUNITS 25.4x 缩放死穴、图纸空间导出与钣金 K-Factor 中性层位移，挂载 K-Factor Calculator 与 Compare。
 
 ## 9/23 批次（社区狙击，全部实机 Live 校验）
 - [x] **Quora (DA 89) 顶级大词问答 2（全自动上线，Will Sun 名下）**：
