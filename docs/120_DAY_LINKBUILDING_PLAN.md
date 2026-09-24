@@ -46,7 +46,7 @@
 - [ ] **Day 24**：Crozdesk 软件目录免费收录申请 (DA 74)
 - [ ] **Day 25**：SourceForge 开放目录收录申请 (DA 91 | Dofollow)
 - [ ] **Day 26**：Futurepedia / There's An AI For That 相关工具板块提交 (DA 78)
-- [ ] **Day 27**：Trustpilot / Sitejabber 品牌点评页创建 (DA 90+)
+- [x] **Day 27 (🎉 9/24 实机验证上线)**：Trustpilot 官方品牌主页创建 (DA 93 | 全球顶级商业信任背书) — 已成功激活官方公开品牌页（[Cadguide Reviews | Trustpilot](https://www.trustpilot.com/review/cadguide.tools)），免登即可见，并获得正中央 "[Visit website ↗]" 主按钮及 Contact info 官网直达双外链
 > ⚠️ **2026-09-10 更新：GitHub 账号 gstar-byte 被 flagged**——本节所有 PR 外链视为失效（对外隐藏）。站长可从 GitHub Settings → 联系 Support 申诉复审；解封前不做任何 GitHub 操作。
 
 - [x] **Day 23 (🎉 自动化完成)**：向 GitHub 顶级设计仓库 `goabstract/Awesome-Design-Tools` (⭐ 40.9k+ Stars) 提交收录 PR ([PR #587](https://github.com/goabstract/Awesome-Design-Tools/pull/587))
