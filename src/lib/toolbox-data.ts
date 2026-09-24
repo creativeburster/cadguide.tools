@@ -6566,4 +6566,260 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     releasedDate: '2026-08-28',
     keywords: ['slddrw to pdf', 'convert slddrw to pdf', 'slddrw-to-pdf', '3d cad converter', 'mesh converter']
   }
+,
+  {
+    slug: 'asme-b16-5-flange-dimensions-table',
+    title: 'ASME B16.5 Pipe Flange Dimensions & Bolt Specifications Reference Table',
+    description: 'Complete ASME B16.5 Class 150 pipe flange dimensions: outside diameter, bolt circle, bolt holes, and stud lengths (1/2" to 24").',
+    detailDesc: 'Official ASME B16.5 Class 150/300/600 pipe flange dimensional reference covering nominal pipe sizes NPS 1/2" through 24" with full bolt hole patterns, PCD, and stud bolt sizing.',
+    category: 'cheatsheet',
+    keywords: ["flange","asme b16.5","pipe flange","bolt circle","pcd","flange dimensions","class 150"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'as568-o-ring-size-chart',
+    title: 'AS568 Standard O-Ring Dimensions & Gland Design Reference Chart',
+    description: 'Aerospace standard AS568 O-ring size chart: inside diameter, cross-section, tolerances, and dynamic/static gland groove depths.',
+    detailDesc: 'Standard AS568 O-Ring specification table across series 000 to 400. Includes nominal and actual inside diameter, cross section, and gland design tolerances for fluid power seals.',
+    category: 'cheatsheet',
+    keywords: ["o-ring","as568","seal","o-ring dimensions","gland design","fluid power"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'din-7991-iso-10642-countersunk-screw-table',
+    title: 'DIN 7991 / ISO 10642 Countersunk Screw & Hole Specification Reference Table',
+    description: 'Standard 90° countersunk socket screw dimensions (M2 to M16): head diameter, head height, countersink hole diameter, and depth.',
+    detailDesc: 'Industrial metric countersunk screw reference compliant with DIN 7991 and ISO 10642. Provides engineers with head dimensions and 90-degree chamfer hole machining specs.',
+    category: 'cheatsheet',
+    keywords: ["din 7991","iso 10642","countersunk","flat head screw","countersink depth","chamfer"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'parallel-keys-din-6885-keyway-table',
+    title: 'DIN 6885 / ISO 773 Parallel Drive Keys & Keyway Tolerances Reference Table',
+    description: 'Standard metric parallel keyway dimensions for drive shafts: key section b x h, shaft depth t1, hub depth t2, and fit tolerances.',
+    detailDesc: 'DIN 6885 Form A and ISO 773 standard parallel drive keys and keyseat specifications for metric drive shafts from 6mm to 58mm diameter with h9, N9, and P9 tolerances.',
+    category: 'cheatsheet',
+    keywords: ["keyway","din 6885","parallel key","shaft key","keyseat","iso 773"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'circlips-retaining-rings-din-471-472-table',
+    title: 'DIN 471 / DIN 472 Retaining Rings (Circlips) & Groove Dimensions Table',
+    description: 'External shaft (DIN 471) and internal bore (DIN 472) snap ring groove dimensions, ring thickness, and allowable thrust loads.',
+    detailDesc: 'Metric circlip retaining ring standard table for shafts and bores. Details groove diameter d2, groove width m, and axial load ratings to prevent mechanical assembly failure.',
+    category: 'cheatsheet',
+    keywords: ["circlip","retaining ring","din 471","din 472","snap ring","shaft groove"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'iso-273-clearance-holes-table',
+    title: 'ISO 273 / ASME B18.2.8 Bolt Clearance Holes & Counterbore Reference Table',
+    description: 'Standard clearance hole diameters for metric bolts M2 to M20 across Fine, Medium, and Coarse fits, plus counterbore diameters.',
+    detailDesc: 'Standard clearance hole dimensions according to ISO 273 and ASME B18.2.8 for metric machine screws and hex bolts, preventing interference during bolted joint fabrication.',
+    category: 'cheatsheet',
+    keywords: ["clearance hole","iso 273","asme b18.2.8","bolt hole","counterbore","hole tolerance"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'sheet-metal-gauge-thickness-chart',
+    title: 'Standard Sheet Metal Gauge Thickness Chart (Steel, Stainless, Galvanized, Al)',
+    description: 'Gauge to millimeter and inch cross-reference chart (10 Ga to 24 Ga) for standard carbon steel, galvanized, stainless steel, and aluminum.',
+    detailDesc: 'Manufacturer standard gauge (MSG) sheet thickness table across common industrial metals with exact decimal inch and millimeter conversions for CAD drafting and laser cutting.',
+    category: 'cheatsheet',
+    keywords: ["gauge thickness","sheet metal gauge","gauge to mm","steel gauge","metal sheet"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'aluminum-alloy-properties-temper-chart',
+    title: 'Aluminum Alloy Mechanical Properties & Temper Designations Chart',
+    description: 'Comprehensive comparison of structural aluminum alloys (6061-T6, 7075-T6, 5052-H32, 2024-T3): yield strength, hardness, and weldability.',
+    detailDesc: 'ASTM B209 aluminum alloy properties reference covering yield strength, ultimate tensile strength, elongation, Brinell hardness, and corrosion resistance for aerospace and marine CAD designs.',
+    category: 'library',
+    keywords: ["aluminum alloy","6061-t6","7075-t6","5052-h32","temper","aluminum properties"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'stainless-steel-grades-comparison-chart',
+    title: 'Stainless Steel Grades Comparison Chart (304, 316L, 430, 17-4PH, 2205)',
+    description: 'Cross-reference austenitic, ferritic, martensitic, and duplex stainless steels: PREN pitting resistance, yield strength, and magnetic behavior.',
+    detailDesc: 'Engineering guide to stainless steel selection comparing AISI 304, 316L, 430, 17-4PH, and 2205 Duplex with PREN indices and chemical composition per ASTM A240 and EN 10088.',
+    category: 'library',
+    keywords: ["stainless steel","304 vs 316","17-4ph","duplex 2205","pren","corrosion resistance"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'structural-steel-grades-cross-reference-table',
+    title: 'Structural Steel Grades Global Cross-Reference Table (ASTM, EN, GB, JIS)',
+    description: 'International equivalency table for structural steel: ASTM A36 / A572, EN 10025 S235 / S355, GB Q235 / Q355, and JIS SS400 / SM490.',
+    detailDesc: 'Cross-national structural steel grade equivalent matrix mapping American (AISC/ASTM), European (Eurocode/EN), Chinese (GB), and Japanese (JIS) structural materials by minimum yield strength.',
+    category: 'library',
+    keywords: ["steel grades","a36 equivalent","s355jr","q355b","ss400","structural steel equivalent"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'nema-vs-iec-motor-frame-dimensions-table',
+    title: 'NEMA vs IEC Motor Frame Dimensions & Shaft Cross-Reference Table',
+    description: 'Electric motor frame cross-reference: NEMA 56 to 254T versus IEC 71 to 160M shaft height D/H, shaft diameter, and mounting bolt spacing.',
+    detailDesc: 'Motor interchangeability reference comparing NEMA MG 1 imperial motor frames with IEC 60072-1 metric frames to assist mechanical machine retrofits and coupling alignment.',
+    category: 'cheatsheet',
+    keywords: ["nema motor frame","iec motor frame","nema vs iec","motor shaft height","motor mounting"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'ip-rating-enclosure-chart',
+    title: 'IP Enclosure Protection Rating & NEMA Equivalency Reference Chart',
+    description: 'Ingress Protection (IP20 to IP69K) vs NEMA enclosure ratings: dust ingress, water jet, immersion testing, and industrial washdown compliance.',
+    detailDesc: 'IEC 60529 and ISO 20653 Ingress Protection reference chart explaining solid particle and liquid protection codes with NEMA 1, 3R, 4, 4X, and 12 equivalencies for panel designers.',
+    category: 'cheatsheet',
+    keywords: ["ip rating","ip65","ip67","ip68","nema 4x","enclosure rating","ingress protection"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'thermocouple-color-codes-limits-table',
+    title: 'Thermocouple Color Codes, Types & Temperature Limits Reference Table',
+    description: 'ANSI and IEC thermocouple wire color codes for Type K, J, T, E, N, R, S: positive/negative conductor alloys, temp ranges, and limits of error.',
+    detailDesc: 'Standard thermocouple reference per ASTM E230 and IEC 60584-3 detailing conductor metallurgy, jacket color conventions, and measurement accuracy from -270°C to +1450°C.',
+    category: 'cheatsheet',
+    keywords: ["thermocouple color code","type k","type j","thermocouple temp range","iec 60584"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'nec-copper-wire-ampacity-table',
+    title: 'NEC Copper Wire Ampacity Table (AWG & kcmil at 60°C, 75°C, 90°C)',
+    description: 'National Electrical Code (NFPA 70 Table 310.16) allowable ampacities for copper conductors in raceway: 14 AWG to 4/0 AWG with fuse sizing.',
+    detailDesc: 'NEC Table 310.16 copper conductor allowable ampacities for building electrical engineering. Covers THHN, THWN, and XHHW insulation temperature ratings and max circuit breaker ratings.',
+    category: 'cheatsheet',
+    keywords: ["nec ampacity","copper wire ampacity","thhn ampacity","table 310.16","wire gauge amps"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'copper-pipe-dimensions-type-k-l-m-table',
+    title: 'ASTM B88 Copper Water Tube Dimensions & Pressure Ratings Table (Type K, L, M)',
+    description: 'Dimensions, wall thickness, and working pressure ratings for plumbing copper pipe: Type K (underground), Type L (interior), and Type M (light).',
+    detailDesc: 'ASTM B88 seamless copper water tube engineering specification comparing Type K, Type L, and Type M wall thicknesses, burst pressures, and recommended plumbing application zones.',
+    category: 'cheatsheet',
+    keywords: ["copper pipe dimensions","type k copper","type l copper","type m copper","astm b88"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'pvc-pipe-schedule-40-80-dimensions-table',
+    title: 'PVC Pipe Schedule 40 & Schedule 80 Dimensions & Pressure Ratings Table',
+    description: 'ASTM D1785 rigid PVC pipe dimensions (1/2" to 8"): outside diameter, Sch 40 and Sch 80 wall thicknesses, and max operating PSI at 73°F.',
+    detailDesc: 'Comprehensive ASTM D1785 Schedule 40 and Schedule 80 PVC pipe dimensional standard, detailing pressure ratings, inside diameters, and wall thickness for industrial piping.',
+    category: 'cheatsheet',
+    keywords: ["pvc pipe dimensions","schedule 40 pvc","schedule 80 pvc","pvc wall thickness","astm d1785"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'astm-standard-rebar-sizes-table',
+    title: 'ASTM Standard Reinforcing Bar (Rebar) Sizes & Properties Reference Table',
+    description: 'Standard deformed concrete rebar sizes (#3 to #18): nominal diameter (in / mm), cross-sectional area, unit weight, and metric soft equivalent.',
+    detailDesc: 'ASTM A615 / A706 reinforcing bar specification matrix providing structural engineers with rebar diameters, sectional areas in square inches and mm², and nominal mass per unit length.',
+    category: 'cheatsheet',
+    keywords: ["rebar sizes","astm a615","rebar diameter","#4 rebar","#5 rebar","rebar weight per foot"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'concrete-slump-test-workability-table',
+    title: 'ACI Concrete Slump Test & Recommended Workability Ranges Reference Table',
+    description: 'Recommended concrete slump ranges (ACI 211.1) for footings, caissons, beams, slabs, and pavement with vibration and workability guidelines.',
+    detailDesc: 'Standard concrete slump reference based on ACI 211.1 recommendations, helping site and structural engineers verify mix workability and avoid segregation during structural pours.',
+    category: 'cheatsheet',
+    keywords: ["concrete slump","aci 211","slump test","concrete workability","slump range"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'soil-classification-uscs-properties-table',
+    title: 'USCS Soil Classification & Typical Geotechnical Properties Reference Table',
+    description: 'Unified Soil Classification System (USCS) soil groups (GW, SP, CL, CH): typical bearing capacities, internal friction angles, and permeability.',
+    detailDesc: 'ASTM D2487 Unified Soil Classification System engineering properties guide, providing baseline presumptive bearing capacities, cohesion values, and friction angles for geotechnical design.',
+    category: 'library',
+    keywords: ["uscs soil","soil classification","bearing capacity","friction angle","astm d2487"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'fdm-3d-printing-filament-properties-chart',
+    title: 'FDM 3D Printing Filament Mechanical Properties & Printing Profiles Chart',
+    description: 'Comprehensive guide to FDM filaments (PLA, PETG, ABS, ASA, TPU, PA-CF, PC): nozzle & bed temperatures, tensile yield, HDT, and warping tendencies.',
+    detailDesc: 'Thermoplastic 3D printing filament comparison matrix detailing mechanical tensile strength, heat deflection temperatures, layer adhesion, and enclosure requirements for rapid prototyping.',
+    category: 'cheatsheet',
+    keywords: ["3d print filament","pla vs petg","abs printing temp","pa-cf filament","filament properties"],
+    origin: 'native',
+    status: 'released'
+  },
+  {
+    slug: 'embodied-carbon-calculator',
+    title: 'Embodied Carbon Calculator (A1-A3 Cradle-to-Gate) — Building Materials LCA',
+    description: 'Calculate upfront embodied carbon (kgCO2e/m²) for structural concrete, steel, glass, and insulation per EN 15978 and RICS professional standards.',
+    detailDesc: 'Structural carbon accounting tool for AEC professionals. Evaluates upfront cradle-to-gate embodied carbon intensity (kgCO2e/m²) across structural materials with instant RIBA 2030 benchmark ratings.',
+    category: 'calculator',
+    keywords: ['embodied carbon', 'carbon footprint building', 'en 15978', 'riba 2030', 'lca concrete steel', 'building emissions'],
+    origin: 'native',
+    status: 'released',
+    releasedDate: '2026-09-24'
+  },
+  {
+    slug: 'glazing-wind-load-calculator',
+    title: 'Architectural Glazing Wind Load & Deflection Calculator (ASTM E1300)',
+    description: 'Calculate glass center deflection, surface bending stress, and maximum allowable design wind pressure for 4-side supported architectural glazing per ASTM E1300.',
+    detailDesc: 'Curtain wall and facade engineering tool for verifying monolithic and insulated glass unit (IGU) structural capacity against design wind pressure and ASTM L/60 or L/175 deflection limits.',
+    category: 'calculator',
+    keywords: ['glazing wind load', 'glass deflection calculator', 'astm e1300', 'curtain wall glass thickness', 'facade structural calculation'],
+    origin: 'native',
+    status: 'released',
+    releasedDate: '2026-09-24'
+  },
+  {
+    slug: 'oee-calculator',
+    title: 'Overall Equipment Effectiveness (OEE) Calculator & Six Big Losses Analyzer',
+    description: 'Calculate manufacturing Overall Equipment Effectiveness (OEE) with Availability, Performance, and Quality metrics. Analyze the Six Big Losses per TPM and SEMI E10 standards.',
+    detailDesc: 'Lean manufacturing and maintenance engineering tool for computing Availability, Performance, and Quality scores. Pinpoints downtime, speed losses, and scrap defects with World-Class 85% OEE benchmarking.',
+    category: 'calculator',
+    keywords: ['oee calculator', 'overall equipment effectiveness', 'tpm six big losses', 'lean manufacturing metrics', 'availability performance quality'],
+    origin: 'native',
+    status: 'released',
+    releasedDate: '2026-09-24'
+  },
+  {
+    slug: 'pv-inverter-sizing-calculator',
+    title: 'Solar PV Array-to-Inverter Sizing Ratio (DC/AC) & Yield Estimator',
+    description: 'Calculate solar PV array DC-to-AC sizing ratio (ILR), clipping losses, annual kWh yield, and inverter utilization per IEC 62548 and IEEE standards.',
+    detailDesc: 'Photovoltaic design calculator to optimize DC/AC inverter loading ratios (ILR), quantify peak midday inverter clipping losses, and estimate annual clean energy yield and CO2 offsets.',
+    category: 'calculator',
+    keywords: ['pv inverter sizing', 'solar dc ac ratio', 'inverter loading ratio', 'clipping loss calculator', 'iec 62548 solar yield'],
+    origin: 'native',
+    status: 'released',
+    releasedDate: '2026-09-24'
+  },
+  {
+    slug: 'deep-drawing-calculator',
+    title: 'Sheet Metal Deep Drawing Ratio, Force & Blank Holder Pressure Calculator',
+    description: 'Calculate drawing ratio (β), drawing force (kN), blank holder pressure, and press tonnage for cylindrical sheet metal cup drawing per DIN 8584 standards.',
+    detailDesc: 'Die stamping and sheet metal forming engineering calculator for evaluating cup drawing ratios, draw forces, and blank holder clamping forces to prevent wrinkling and tearing under DIN 8584.',
+    category: 'calculator',
+    keywords: ['deep drawing calculator', 'drawing ratio beta', 'drawing force sheet metal', 'blank holder force', 'din 8584 stamping press tonnage'],
+    origin: 'native',
+    status: 'released',
+    releasedDate: '2026-09-24'
+  }
 ];

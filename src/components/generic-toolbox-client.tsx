@@ -284,7 +284,290 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       safety: safety.toFixed(2),
       status: pass ? 'VERIFIED (PASS)' : 'ATTENTION (CHECK)',
       pass
-    };
+    ,
+'asme-b16-5-flange-dimensions-table': {
+    headers: ['NPS (Nominal Size)', 'Flange OD (mm / in)', 'Bolt Circle BC (mm / in)', 'Number of Bolts', 'Bolt Hole Dia (mm)', 'Bolt Stud Dia x Length'],
+    rows: [
+      ['1/2" (DN 15)', '88.9 mm (3.50")', '60.3 mm (2.38")', '4', '15.9 mm', '1/2" x 2.25"'],
+      ['3/4" (DN 20)', '98.4 mm (3.88")', '69.8 mm (2.75")', '4', '15.9 mm', '1/2" x 2.50"'],
+      ['1" (DN 25)', '108.0 mm (4.25")', '79.4 mm (3.12")', '4', '15.9 mm', '1/2" x 2.50"'],
+      ['1-1/2" (DN 40)', '127.0 mm (5.00")', '98.4 mm (3.88")', '4', '15.9 mm', '1/2" x 2.75"'],
+      ['2" (DN 50)', '152.4 mm (6.00")', '120.6 mm (4.75")', '4', '19.0 mm', '5/8" x 3.25"'],
+      ['3" (DN 80)', '190.5 mm (7.50")', '152.4 mm (6.00")', '4', '19.0 mm', '5/8" x 3.50"'],
+      ['4" (DN 100)', '228.6 mm (9.00")', '190.5 mm (7.50")', '8', '19.0 mm', '5/8" x 3.50"'],
+      ['6" (DN 150)', '279.4 mm (11.00")', '241.3 mm (9.50")', '8', '22.2 mm', '3/4" x 4.00"'],
+      ['8" (DN 200)', '342.9 mm (13.50")', '298.4 mm (11.75")', '8', '22.2 mm', '3/4" x 4.25"'],
+      ['10" (DN 250)', '406.4 mm (16.00")', '362.0 mm (14.25")', '12', '25.4 mm', '7/8" x 4.75"'],
+      ['12" (DN 300)', '482.6 mm (19.00")', '431.8 mm (17.00")', '12', '25.4 mm', '7/8" x 5.00"']
+    ],
+    note: 'Dimensions follow ASME B16.5 Class 150 Pipe Flanges and Flanged Fittings Standard.'
+  },
+  'as568-o-ring-size-chart': {
+    headers: ['AS568 Dash No.', 'Nominal Inside Dia (ID)', 'Nominal Cross Section (CS)', 'Actual ID (mm)', 'Actual CS (mm)', 'Dynamic Groove Depth (mm)'],
+    rows: [
+      ['010', '1/4"', '1/16"', '6.07 mm', '1.78 mm', '1.35 - 1.45 mm'],
+      ['014', '1/2"', '1/16"', '12.42 mm', '1.78 mm', '1.35 - 1.45 mm'],
+      ['110', '3/8"', '3/32"', '9.19 mm', '2.62 mm', '2.15 - 2.25 mm'],
+      ['114', '5/8"', '3/32"', '15.54 mm', '2.62 mm', '2.15 - 2.25 mm'],
+      ['118', '7/8"', '3/32"', '21.89 mm', '2.62 mm', '2.15 - 2.25 mm'],
+      ['210', '3/4"', '1/8"', '18.64 mm', '3.53 mm', '2.95 - 3.10 mm'],
+      ['214', '1"', '1/8"', '24.99 mm', '3.53 mm', '2.95 - 3.10 mm'],
+      ['222', '1-1/2"', '1/8"', '37.69 mm', '3.53 mm', '2.95 - 3.10 mm'],
+      ['325', '1-1/2"', '3/16"', '37.47 mm', '5.33 mm', '4.55 - 4.75 mm'],
+      ['425', '4-1/2"', '1/4"', '113.67 mm', '6.99 mm', '6.00 - 6.25 mm']
+    ],
+    note: 'Governed by Aerospace Standard AS568 Standard Size O-Rings for sealing and fluid power.'
+  },
+  'din-7991-iso-10642-countersunk-screw-table': {
+    headers: ['Thread Size', 'Head Dia dk (max mm)', 'Head Height k (max mm)', 'Hex Socket s (mm)', 'Countersink Dia (mm)', '90° Sink Depth (mm)'],
+    rows: [
+      ['M3', '6.00', '1.70', '2.0', '6.6', '1.9'],
+      ['M4', '8.00', '2.30', '2.5', '8.8', '2.5'],
+      ['M5', '10.00', '2.80', '3.0', '10.8', '3.0'],
+      ['M6', '12.00', '3.30', '4.0', '13.0', '3.5'],
+      ['M8', '16.00', '4.40', '5.0', '17.2', '4.6'],
+      ['M10', '20.00', '5.50', '6.0', '21.5', '5.8'],
+      ['M12', '24.00', '6.50', '8.0', '25.5', '6.8'],
+      ['M16', '30.00', '8.50', '10.0', '31.5', '8.8']
+    ],
+    note: 'Standards: DIN 7991 / ISO 10642 Hexagon Socket Countersunk Head Screws.'
+  },
+  'parallel-keys-din-6885-keyway-table': {
+    headers: ['Shaft Dia d Range (mm)', 'Key Width b (mm)', 'Key Height h (mm)', 'Shaft Depth t1 (mm)', 'Hub Depth t2 (mm)', 'Shaft Keyway Tolerance'],
+    rows: [
+      ['Over 6 to 8', '2', '2', '1.2', '1.0', 'h9 / N9 / P9'],
+      ['Over 8 to 10', '3', '3', '1.8', '1.4', 'h9 / N9 / P9'],
+      ['Over 10 to 12', '4', '4', '2.5', '1.8', 'h9 / N9 / P9'],
+      ['Over 12 to 17', '5', '5', '3.0', '2.3', 'h9 / N9 / P9'],
+      ['Over 17 to 22', '6', '6', '3.5', '2.8', 'h9 / N9 / P9'],
+      ['Over 22 to 30', '8', '7', '4.0', '3.3', 'h9 / N9 / P9'],
+      ['Over 30 to 38', '10', '8', '5.0', '3.3', 'h9 / N9 / P9'],
+      ['Over 38 to 44', '12', '8', '5.0', '3.3', 'h9 / N9 / P9'],
+      ['Over 44 to 50', '14', '9', '5.5', '3.8', 'h9 / N9 / P9'],
+      ['Over 50 to 58', '16', '10', '6.0', '4.3', 'h9 / N9 / P9']
+    ],
+    note: 'Conforms to DIN 6885-1 / ISO 773 Drive type fasteners — Parallel keys and keyways.'
+  },
+  'circlips-retaining-rings-din-471-472-table': {
+    headers: ['Nominal Shaft/Bore d1 (mm)', 'Type (Ext/Int)', 'Ring Thickness s (mm)', 'Groove Dia d2 (mm)', 'Groove Width m (mm)', 'Allowable Thrust Load (kN)'],
+    rows: [
+      ['10 mm', 'DIN 471 (Shaft)', '1.00', '9.60 (-0.09)', '1.10 (+0.14)', '3.2 kN'],
+      ['15 mm', 'DIN 471 (Shaft)', '1.00', '14.30 (-0.11)', '1.10 (+0.14)', '5.5 kN'],
+      ['20 mm', 'DIN 471 (Shaft)', '1.20', '19.00 (-0.13)', '1.30 (+0.14)', '12.8 kN'],
+      ['25 mm', 'DIN 471 (Shaft)', '1.20', '23.90 (-0.13)', '1.30 (+0.14)', '18.4 kN'],
+      ['30 mm', 'DIN 471 (Shaft)', '1.50', '28.60 (-0.21)', '1.60 (+0.14)', '28.0 kN'],
+      ['40 mm', 'DIN 471 (Shaft)', '1.75', '37.50 (-0.25)', '1.85 (+0.14)', '45.0 kN'],
+      ['20 mm', 'DIN 472 (Bore)', '1.00', '21.00 (+0.13)', '1.10 (+0.14)', '10.5 kN'],
+      ['30 mm', 'DIN 472 (Bore)', '1.20', '31.40 (+0.25)', '1.30 (+0.14)', '21.6 kN'],
+      ['40 mm', 'DIN 472 (Bore)', '1.75', '42.50 (+0.25)', '1.85 (+0.14)', '49.0 kN']
+    ],
+    note: 'Based on DIN 471 (Shaft retaining rings) and DIN 472 (Bore retaining rings) specifications.'
+  },
+  'iso-273-clearance-holes-table': {
+    headers: ['Fastener Size', 'Fine Series Hole (mm)', 'Medium Series Hole (mm)', 'Coarse Series Hole (mm)', 'Standard Counterbore Dia (mm)'],
+    rows: [
+      ['M2', '2.2 mm', '2.4 mm', '2.6 mm', '4.4 mm'],
+      ['M3', '3.2 mm', '3.4 mm', '3.6 mm', '6.0 mm'],
+      ['M4', '4.3 mm', '4.5 mm', '4.8 mm', '8.0 mm'],
+      ['M5', '5.3 mm', '5.5 mm', '5.8 mm', '10.0 mm'],
+      ['M6', '6.4 mm', '6.6 mm', '7.0 mm', '11.0 mm'],
+      ['M8', '8.4 mm', '9.0 mm', '10.0 mm', '15.0 mm'],
+      ['M10', '10.5 mm', '11.0 mm', '12.0 mm', '18.0 mm'],
+      ['M12', '13.0 mm', '13.5 mm', '14.5 mm', '20.0 mm'],
+      ['M16', '17.0 mm', '17.5 mm', '18.5 mm', '26.0 mm'],
+      ['M20', '21.0 mm', '22.0 mm', '24.0 mm', '33.0 mm']
+    ],
+    note: 'Compliant with ISO 273 and ASME B18.2.8 clearance holes for bolts and screws.'
+  },
+  'sheet-metal-gauge-thickness-chart': {
+    headers: ['Gauge No.', 'Carbon Steel (mm / in)', 'Galvanized Steel (mm / in)', 'Stainless Steel (mm / in)', 'Aluminum Sheet (mm / in)'],
+    rows: [
+      ['10 Ga', '3.416 mm (0.1345")', '3.505 mm (0.1382")', '3.571 mm (0.1406")', '2.588 mm (0.1019")'],
+      ['12 Ga', '2.657 mm (0.1046")', '2.746 mm (0.1084")', '2.779 mm (0.1094")', '2.052 mm (0.0808")'],
+      ['14 Ga', '1.897 mm (0.0747")', '1.994 mm (0.0785")', '1.984 mm (0.0781")', '1.628 mm (0.0641")'],
+      ['16 Ga', '1.519 mm (0.0598")', '1.613 mm (0.0635")', '1.588 mm (0.0625")', '1.290 mm (0.0508")'],
+      ['18 Ga', '1.214 mm (0.0478")', '1.311 mm (0.0516")', '1.270 mm (0.0500")', '1.024 mm (0.0403")'],
+      ['20 Ga', '0.912 mm (0.0359")', '1.006 mm (0.0396")', '0.953 mm (0.0375")', '0.813 mm (0.0320")'],
+      ['22 Ga', '0.759 mm (0.0299")', '0.853 mm (0.0336")', '0.792 mm (0.0312")', '0.643 mm (0.0253")'],
+      ['24 Ga', '0.607 mm (0.0239")', '0.701 mm (0.0276")', '0.635 mm (0.0250")', '0.511 mm (0.0201")']
+    ],
+    note: 'Manufacturer standard gauge (MSG) and ASTM A653 / ASTM A240 standard sheet tolerances.'
+  },
+  'aluminum-alloy-properties-temper-chart': {
+    headers: ['Alloy & Temper', 'Yield Strength (MPa)', 'Tensile Strength (MPa)', 'Elongation %', 'Brinell Hardness (HB)', 'Machinability & Weldability'],
+    rows: [
+      ['6061-T6', '276 MPa', '310 MPa', '12%', '95 HB', 'Excellent all-round structural alloy; highly weldable'],
+      ['6061-O (Annealed)', '55 MPa', '124 MPa', '25%', '30 HB', 'High ductility for severe bending and forming'],
+      ['7075-T6', '503 MPa', '572 MPa', '11%', '150 HB', 'Ultra-high strength aerospace grade; poor weldability'],
+      ['5052-H32', '193 MPa', '228 MPa', '12%', '60 HB', 'Exceptional marine corrosion resistance; excellent bending'],
+      ['2024-T3', '324 MPa', '469 MPa', '18%', '120 HB', 'High fatigue resistance; aircraft skin and tension members'],
+      ['6063-T5', '145 MPa', '186 MPa', '12%', '60 HB', 'Architectural extrusion standard; smooth anodized finish']
+    ],
+    note: 'Governed by ASTM B209 and Aluminum Association (AA) temper designation systems.'
+  },
+  'stainless-steel-grades-comparison-chart': {
+    headers: ['Grade (AISI)', 'Microstructure', 'Yield Strength (MPa)', 'PREN (Pitting Resistance)', 'Magnetic?', 'Typical Application'],
+    rows: [
+      ['304 (1.4301)', 'Austenitic', '205 MPa', '18 - 20', 'No (slight after cold work)', 'General architecture, kitchen equipment, food processing'],
+      ['316L (1.4404)', 'Austenitic (Low C)', '220 MPa', '23 - 25', 'No', 'Marine hardware, chemical process, pharmaceutical'],
+      ['430 (1.4016)', 'Ferritic', '260 MPa', '16 - 17', 'Yes', 'Appliance trim, automotive exhaust, cost-sensitive indoor'],
+      ['17-4PH (H900)', 'Martensitic Age-Hardened', '1170 MPa', '30 - 32', 'Yes', 'Aerospace shafts, turbine blades, high-strength valves'],
+      ['2205 Duplex', 'Austenitic-Ferritic', '450 MPa', '35 - 38', 'Yes', 'Oil & gas subsea, desalination piping, harsh marine offshore']
+    ],
+    note: 'Cross-referenced with ASTM A240 and EN 10088-2 European stainless steel specifications.'
+  },
+  'structural-steel-grades-cross-reference-table': {
+    headers: ['ASTM (USA)', 'EN 10025 (Europe)', 'GB (China)', 'JIS (Japan)', 'Min Yield Strength (MPa)', 'Typical Structural Applications'],
+    rows: [
+      ['A36', 'S235JR (1.0038)', 'Q235B', 'SS400', '250 MPa (36 ksi)', 'General bolted/welded buildings, baseplates, platforms'],
+      ['A572 Gr 50', 'S355JR (1.0045)', 'Q355B', 'SM490A', '345 MPa (50 ksi)', 'Bridge girders, high-rise structural frames, heavy cranes'],
+      ['A992', 'S355J2', 'Q355D', 'SN490B', '345 MPa (50 ksi)', 'Standard I-beam and H-section steel building columns'],
+      ['A514 (T-1)', 'S690QL', 'Q690D', 'SHY685', '690 MPa (100 ksi)', 'Quenched & tempered high-yield mining and chassis components'],
+      ['A500 Gr B', 'S275J2H', 'Q275', 'STKR400', '315 MPa (46 ksi)', 'Cold-formed hollow structural sections (HSS tubing)']
+    ],
+    note: 'Covers cross-equivalencies between AISC 360, Eurocode 3 (EN 1993), GB 50017, and JIS G3101.'
+  },
+  'nema-vs-iec-motor-frame-dimensions-table': {
+    headers: ['NEMA Frame', 'IEC Frame Equivalent', 'Shaft Center Height D/H (mm / in)', 'Shaft Diameter (mm / in)', 'Mounting Hole Pattern (mm)'],
+    rows: [
+      ['56', '71', '88.9 mm (3.50")', '15.875 mm (0.625")', '123.8 x 76.2 mm'],
+      ['143T', '90S', '88.9 mm (3.50")', '22.225 mm (0.875")', '139.7 x 101.6 mm'],
+      ['145T', '90L', '88.9 mm (3.50")', '22.225 mm (0.875")', '139.7 x 127.0 mm'],
+      ['182T', '112M', '114.3 mm (4.50")', '28.575 mm (1.125")', '190.5 x 114.3 mm'],
+      ['184T', '112M', '114.3 mm (4.50")', '28.575 mm (1.125")', '190.5 x 139.7 mm'],
+      ['213T', '132S', '133.4 mm (5.25")', '34.925 mm (1.375")', '215.9 x 139.7 mm'],
+      ['215T', '132M', '133.4 mm (5.25")', '34.925 mm (1.375")', '215.9 x 177.8 mm'],
+      ['254T', '160M', '158.8 mm (6.25")', '41.275 mm (1.625")', '254.0 x 209.6 mm']
+    ],
+    note: 'Comparison between NEMA MG 1 Motors and Generators and IEC 60072-1 metric mounting dimensions.'
+  },
+  'ip-rating-enclosure-chart': {
+    headers: ['IP Rating', 'Dust Protection (1st Digit)', 'Liquid Protection (2nd Digit)', 'Equivalent NEMA Rating', 'Operating Environment Suitability'],
+    rows: [
+      ['IP20', 'Solid objects > 12.5mm (fingers)', 'None', 'NEMA 1', 'Dry indoor industrial panels, controlled climate server rooms'],
+      ['IP54', 'Dust-protected (limited ingress)', 'Splashing water from any direction', 'NEMA 3 / 12', 'Standard workshop machinery, indoor light-industrial equipment'],
+      ['IP65', 'Dust-tight (zero ingress)', 'Low-pressure water jets (6.3mm nozzle)', 'NEMA 4 / 4X', 'Outdoor weather-exposed enclosures, washdown food areas'],
+      ['IP66', 'Dust-tight (zero ingress)', 'Heavy sea spray or powerful water jets', 'NEMA 4X', 'Marine deck equipment, offshore drilling, mining wash-stations'],
+      ['IP67', 'Dust-tight (zero ingress)', 'Temporary immersion up to 1m for 30 min', 'NEMA 6', 'Submersible sensors, automotive chassis electronics, heavy rain'],
+      ['IP68', 'Dust-tight (zero ingress)', 'Continuous submersion under pressure (>1m)', 'NEMA 6P', 'Subsea instrumentation, deep borehole pumps, underground vaults'],
+      ['IP69K', 'Dust-tight (zero ingress)', 'High-temp (80°C) high-pressure (100 bar) wash', 'NEMA 4X / Food Sanitization', 'Food & beverage processing, sterile pharmaceutical washdown']
+    ],
+    note: 'Defined by IEC 60529 and ISO 20653 degrees of protection provided by enclosures.'
+  },
+  'thermocouple-color-codes-limits-table': {
+    headers: ['Type', 'Conductors (+ / -)', 'ANSI Color (USA)', 'IEC 60584 Color (Europe)', 'Temperature Range (°C)', 'Standard Accuracy'],
+    rows: [
+      ['Type K', 'Chromel / Alumel', 'Yellow / Red', 'Green / White', '-200°C to +1260°C', '±2.2°C or ±0.75%'],
+      ['Type J', 'Iron / Constantan', 'White / Red', 'Black / White', '-40°C to +750°C', '±2.2°C or ±0.75%'],
+      ['Type T', 'Copper / Constantan', 'Blue / Red', 'Brown / White', '-200°C to +350°C', '±1.0°C or ±0.75%'],
+      ['Type E', 'Chromel / Constantan', 'Purple / Red', 'Purple / White', '-200°C to +900°C', '±1.7°C or ±0.50%'],
+      ['Type N', 'Nicrosil / Nisil', 'Orange / Red', 'Pink / White', '-270°C to +1300°C', '±2.2°C or ±0.75%'],
+      ['Type R / S', 'Pt-Rh / Platinum', 'Green / Red', 'Orange / White', '0°C to +1450°C', '±1.5°C or ±0.25%']
+    ],
+    note: 'Complies with ASTM E230 / ANSI MC96.1 and IEC 60584-3 thermocouple extension wire color standards.'
+  },
+  'nec-copper-wire-ampacity-table': {
+    headers: ['Size (AWG / kcmil)', '60°C (TW, UF) (Amps)', '75°C (THWN, XHHW) (Amps)', '90°C (THHN, XHHW-2) (Amps)', 'Max Overcurrent Fuse (Amps)'],
+    rows: [
+      ['14 AWG', '15 A', '20 A', '25 A', '15 A (NEC 240.4(D))'],
+      ['12 AWG', '20 A', '25 A', '30 A', '20 A (NEC 240.4(D))'],
+      ['10 AWG', '30 A', '35 A', '40 A', '30 A (NEC 240.4(D))'],
+      ['8 AWG', '40 A', '50 A', '55 A', '50 A'],
+      ['6 AWG', '55 A', '65 A', '75 A', '60 A / 70 A'],
+      ['4 AWG', '70 A', '85 A', '95 A', '80 A / 90 A'],
+      ['2 AWG', '95 A', '115 A', '130 A', '100 A / 125 A'],
+      ['1/0 AWG', '125 A', '150 A', '170 A', '150 A'],
+      ['2/0 AWG', '145 A', '175 A', '195 A', '175 A'],
+      ['4/0 AWG', '195 A', '230 A', '260 A', '225 A / 250 A']
+    ],
+    note: 'Based on National Electrical Code (NEC NFPA 70) Table 310.16 for not more than 3 current-carrying conductors in raceway at 30°C ambient.'
+  },
+  'copper-pipe-dimensions-type-k-l-m-table': {
+    headers: ['Nominal Size (inch)', 'Actual Outside Dia OD (in / mm)', 'Type K Wall (Heavy mm)', 'Type L Wall (Standard mm)', 'Type M Wall (Light mm)', 'Working Pressure (PSI)'],
+    rows: [
+      ['1/2"', '0.625" (15.875 mm)', '1.245 mm', '0.889 mm', '0.711 mm', '720 - 1050 PSI'],
+      ['3/4"', '0.875" (22.225 mm)', '1.651 mm', '1.143 mm', '0.813 mm', '600 - 900 PSI'],
+      ['1"', '1.125" (28.575 mm)', '1.651 mm', '1.270 mm', '0.889 mm', '500 - 750 PSI'],
+      ['1-1/4"', '1.375" (34.925 mm)', '1.651 mm', '1.397 mm', '1.067 mm', '450 - 680 PSI'],
+      ['1-1/2"', '1.625" (41.275 mm)', '1.829 mm', '1.524 mm', '1.245 mm', '420 - 620 PSI'],
+      ['2"', '2.125" (53.975 mm)', '2.108 mm', '1.778 mm', '1.473 mm', '380 - 550 PSI'],
+      ['3"', '3.125" (79.375 mm)', '2.769 mm', '2.286 mm', '1.829 mm', '340 - 500 PSI'],
+      ['4"', '4.125" (104.775 mm)', '3.404 mm', '2.794 mm', '2.413 mm', '320 - 470 PSI']
+    ],
+    note: 'Dimensions comply with ASTM B88 Seamless Copper Water Tube standards.'
+  },
+  'pvc-pipe-schedule-40-80-dimensions-table': {
+    headers: ['NPS Pipe Size', 'Outside Dia OD (mm / in)', 'Sch 40 Wall (mm)', 'Sch 40 Max PSI @ 73°F', 'Sch 80 Wall (mm)', 'Sch 80 Max PSI @ 73°F'],
+    rows: [
+      ['1/2"', '21.3 mm (0.840")', '2.77 mm', '600 PSI', '3.73 mm', '850 PSI'],
+      ['3/4"', '26.7 mm (1.050")', '2.87 mm', '480 PSI', '3.91 mm', '690 PSI'],
+      ['1"', '33.4 mm (1.315")', '3.38 mm', '450 PSI', '4.55 mm', '630 PSI'],
+      ['1-1/2"', '48.3 mm (1.900")', '3.68 mm', '330 PSI', '5.08 mm', '470 PSI'],
+      ['2"', '60.3 mm (2.375")', '3.91 mm', '280 PSI', '5.54 mm', '400 PSI'],
+      ['3"', '88.9 mm (3.500")', '5.49 mm', '260 PSI', '7.62 mm', '370 PSI'],
+      ['4"', '114.3 mm (4.500")', '6.02 mm', '220 PSI', '8.56 mm', '320 PSI'],
+      ['6"', '168.3 mm (6.625")', '7.11 mm', '180 PSI', '10.97 mm', '280 PSI'],
+      ['8"', '219.1 mm (8.625")', '8.18 mm', '160 PSI', '12.70 mm', '250 PSI']
+    ],
+    note: 'Standards: ASTM D1785 Rigid Poly(Vinyl Chloride) (PVC) Compounds and Chlorinated Poly(Vinyl Chloride) (CPVC).'
+  },
+  'astm-standard-rebar-sizes-table': {
+    headers: ['Rebar Designation', 'Nominal Diameter (mm / in)', 'Cross-Section Area (mm² / in²)', 'Nominal Mass (kg/m / lb/ft)', 'Metric Soft Equivalent'],
+    rows: [
+      ['#3', '9.525 mm (0.375")', '71 mm² (0.11 in²)', '0.560 kg/m (0.376 lb/ft)', '#10M'],
+      ['#4', '12.700 mm (0.500")', '129 mm² (0.20 in²)', '0.994 kg/m (0.668 lb/ft)', '#13M'],
+      ['#5', '15.875 mm (0.625")', '200 mm² (0.31 in²)', '1.552 kg/m (1.043 lb/ft)', '#16M'],
+      ['#6', '19.050 mm (0.750")', '284 mm² (0.44 in²)', '2.235 kg/m (1.502 lb/ft)', '#19M'],
+      ['#7', '22.225 mm (0.875")', '387 mm² (0.60 in²)', '3.042 kg/m (2.044 lb/ft)', '#22M'],
+      ['#8', '25.400 mm (1.000")', '510 mm² (0.79 in²)', '3.973 kg/m (2.670 lb/ft)', '#25M'],
+      ['#9', '28.650 mm (1.128")', '645 mm² (1.00 in²)', '5.060 kg/m (3.400 lb/ft)', '#29M'],
+      ['#10', '32.260 mm (1.270")', '819 mm² (1.27 in²)', '6.404 kg/m (4.303 lb/ft)', '#32M'],
+      ['#11', '35.810 mm (1.410")', '1006 mm² (1.56 in²)', '7.907 kg/m (5.313 lb/ft)', '#36M'],
+      ['#14', '43.000 mm (1.693")', '1452 mm² (2.25 in²)', '11.384 kg/m (7.650 lb/ft)', '#43M'],
+      ['#18', '57.330 mm (2.257")', '2581 mm² (4.00 in²)', '20.238 kg/m (13.600 lb/ft)', '#57M']
+    ],
+    note: 'Governed by ASTM A615 / A615M Deformed and Plain Carbon-Steel Bars for Concrete Reinforcement.'
+  },
+  'concrete-slump-test-workability-table': {
+    headers: ['Structural Element', 'Min Slump (mm / in)', 'Max Slump (mm / in)', 'Workability Degree', 'Compaction Method'],
+    rows: [
+      ['Reinforced Foundation Walls & Footings', '25 mm (1.0")', '75 mm (3.0")', 'Low to Medium', 'Internal poker vibration'],
+      ['Plain Footings, Caissons & Substructure', '25 mm (1.0")', '75 mm (3.0")', 'Low', 'Vibration or mechanical tamping'],
+      ['Beams & Reinforced Framing Columns', '25 mm (1.0")', '100 mm (4.0")', 'Medium', 'Internal high-frequency vibration'],
+      ['Building Slabs, Pavements & Sidewalks', '25 mm (1.0")', '75 mm (3.0")', 'Low to Medium', 'Screed vibration & power floating'],
+      ['Heavy Mass Concrete Construction', '25 mm (1.0")', '50 mm (2.0")', 'Very Low', 'Heavy immersion vibrators'],
+      ['Pumped Concrete / Complex Formwork', '75 mm (3.0")', '125 mm (5.0")', 'High', 'Internal vibration without segregation']
+    ],
+    note: 'Conforms to ACI 211.1 Standard Practice for Selecting Proportions for Normal, Heavyweight, and Mass Concrete.'
+  },
+  'soil-classification-uscs-properties-table': {
+    headers: ['USCS Group', 'Soil Description', 'Typical Bearing Capacity (kPa / ksf)', 'Friction Angle φ (deg)', 'Cohesion c (kPa)', 'Permeability k (cm/s)'],
+    rows: [
+      ['GW', 'Well-graded gravel, gravel-sand mixtures', '300 - 400 kPa (6 - 8 ksf)', '36° - 42°', '0 kPa', '> 10⁻² (Pervious)'],
+      ['GP', 'Poorly-graded gravel, gravel-sand', '250 - 350 kPa (5 - 7 ksf)', '34° - 38°', '0 kPa', '> 10⁻² (Pervious)'],
+      ['SW', 'Well-graded sands, gravelly sands', '200 - 300 kPa (4 - 6 ksf)', '34° - 40°', '0 kPa', '10⁻² - 10⁻³'],
+      ['SP', 'Poorly-graded sands, uniform sands', '150 - 250 kPa (3 - 5 ksf)', '30° - 35°', '0 kPa', '10⁻² - 10⁻⁴'],
+      ['SM', 'Silty sands, sand-silt mixtures', '100 - 200 kPa (2 - 4 ksf)', '28° - 34°', '5 - 15 kPa', '10⁻³ - 10⁻⁵'],
+      ['ML', 'Inorganic silts, very fine sands', '75 - 150 kPa (1.5 - 3 ksf)', '26° - 32°', '10 - 25 kPa', '10⁻⁴ - 10⁻⁶'],
+      ['CL', 'Inorganic clays of low-to-medium plasticity', '100 - 200 kPa (2 - 4 ksf)', '18° - 26°', '25 - 60 kPa', '10⁻⁶ - 10⁻⁸'],
+      ['CH', 'Inorganic clays of high plasticity (fat clay)', '50 - 150 kPa (1 - 3 ksf)', '12° - 20°', '50 - 120 kPa', '< 10⁻⁸ (Impervious)']
+    ],
+    note: 'Standard: ASTM D2487 Unified Soil Classification System (USCS) geotechnical baseline engineering properties.'
+  },
+  'fdm-3d-printing-filament-properties-chart': {
+    headers: ['Filament Material', 'Nozzle Temp (°C)', 'Bed Temp (°C)', 'Tensile Yield (MPa)', 'Heat Deflection HDT (°C)', 'Enclosure Required? / Warping'],
+    rows: [
+      ['PLA (Polylactic Acid)', '190°C - 220°C', '20°C - 60°C', '50 - 65 MPa', '55°C', 'No / Low warping; easy printing'],
+      ['PETG (Glycol-Modified)', '230°C - 250°C', '70°C - 85°C', '45 - 55 MPa', '70°C', 'No / Low-medium warping; chemical resistant'],
+      ['ABS (Acrylonitrile Butadiene)', '240°C - 260°C', '95°C - 110°C', '40 - 50 MPa', '95°C', 'Yes / High warping; requires fume exhaust'],
+      ['ASA (Acrylic Styrene Acrylonitrile)', '240°C - 260°C', '95°C - 110°C', '42 - 52 MPa', '98°C', 'Yes / High UV resistance outdoor grade'],
+      ['TPU 95A (Polyurethane)', '215°C - 235°C', '30°C - 60°C', '25 - 35 MPa (Flex)', '50°C', 'No / High wear & vibration damping flex'],
+      ['PA-CF (Carbon Fiber Nylon)', '260°C - 290°C', '80°C - 100°C', '75 - 110 MPa', '150°C', 'Recommended / Hardened nozzle required; stiff'],
+      ['PC (Polycarbonate)', '270°C - 310°C', '110°C - 120°C', '65 - 75 MPa', '135°C', 'Yes / Severe warping; structural toughness']
+    ],
+    note: 'Industry standard FDM / FFF thermoplastic filament processing profiles and mechanical properties.'
+  }
+};
   }, [paramA, paramB, paramC]);
 
   const isViewerOrValidator = tool.category === 'viewer' || tool.category === 'validator';
