@@ -219,7 +219,7 @@
 - [ ] **Day 76**：Quora 回答："How to fix AutoCAD crashing on startup / FATAL ERROR?"
 - [ ] **Day 77**：Reddit `r/graphic_design` 解答 DXF 导入 Illustrator 矢量变形问题
 - [ ] **Day 78**：StackExchange (Engineering) 专业力学/钣金折弯公式科普
-- [ ] **Day 79**：Quora 回答："Can LibreCAD completely replace AutoCAD for 2D work?"
+- [x] **Day 79 (🎉 9/24 实机验证上线)**：Quora 权威高赞问答《[What is the best free alternative to AutoCAD?](https://www.quora.com/What-is-the-best-free-alternative-to-AutoCAD/answer/Bill-Translator)》（回答者：Bill Translator）— 深入横评 FreeCAD (3D 参数化/CAM)、LibreCAD (2D 轻量)、QCAD (命令流) 及买断制选型，精准植入 /toolbox/dwg-version-checker 与 /compare 权威外链
 - [ ] **Day 80**：Discord CAD/3D 建模公会资源频道分享免费小工具
 - [ ] **Day 81**：Reddit `r/smallbusiness` 针对小型制造厂 CAD 许可省钱攻略
 - [ ] **Day 82**：Quora 回答："What are the best shortcuts to speed up CAD drafting?"
