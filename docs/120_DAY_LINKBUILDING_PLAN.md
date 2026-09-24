@@ -39,7 +39,7 @@
 - [x] **Day 17 (🎉 自动化完成)**：Launching Next 表单全自动填写并提交（站长手动点击确认），即时生效
 - [x] **Day 18 (🎉 已上线)**：StartupBase 草稿补完至 100%，站长完成社区任务（3 upvotes + 1 评论）并通过徽章验证，加入免费优先队列，产品页已公开：https://startupbase.io/products/cadguide-tools（footer 徽章已深链该页）；付费升级选项见 docs/paid-listing-candidates.md
 - [x] **Day 19 (🎉 成功创建上线)**：Crunchbase 机构与产品 Profile 创建 (DA 91 | 权威企业实体与知识图谱认证) — 已通过站长企业控制台成功提交上线，覆盖 CAD 行业选型与买断/永久授权定位，外链直达主站
-- [ ] **Day 20**：Wellfound (AngelList) 创业项目 Profile (DA 88)
+- [x] **Day 20 (🎉 9/24 实机验证上线)**：Wellfound (AngelList) 创始人与产品 Profile (DA 88 | 全球顶级科技初创网络) — 已成功建立公开 Profile（[Will Sun | Wellfound](https://wellfound.com/u/will-sun-5)），匿名与搜索引擎爬虫免登直访可见，完整植入创始人身份与 CADGuide.tools 官网锚文本外链
 - [ ] **Day 21**：Behance UI/UX 设计展示页面与站点回链 (DA 92)
 - [ ] **Day 22**：X (Twitter) 官方品牌矩阵搭建与第一条置顶 (DA 94)
 - [ ] **Day 23**：Alternative.me 软件评测与替代目录申请 (DA 75)
