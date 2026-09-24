@@ -12,6 +12,9 @@ import type { Tool } from '@/lib/data';
 import { categories } from '@/lib/data';
 import { ToolLogo } from '@/components/tool-logo';
 import { CompareWidget } from '@/components/compare-widget';
+import { CompareDecisionQuiz } from '@/components/compare-decision-quiz';
+import { RelatedTools } from '@/components/related-tools';
+import { ArrowRight } from 'lucide-react';
 
 export const dynamicParams = false;
 
@@ -702,6 +705,91 @@ export default async function ComparePairPage(
   const hasShieldA = process.env.NODE_ENV === 'development' && licensingTools.includes(a.slug);
   const hasShieldB = process.env.NODE_ENV === 'development' && licensingTools.includes(b.slug);
 
+  const quizBlock = (
+    <section key="decision-quiz" className="mt-12">
+      <CompareDecisionQuiz toolA={a} toolB={b} />
+    </section>
+  );
+
+  const allComparisonPairs = comparisonPairs();
+  const relatedPairs = allComparisonPairs
+    .filter(
+      p =>
+        p.pairSlug !== pair &&
+        (p.a.slug === a.slug ||
+          p.b.slug === a.slug ||
+          p.a.slug === b.slug ||
+          p.b.slug === b.slug ||
+          p.a.category_id === a.category_id)
+    )
+    .slice(0, 4);
+
+  const relatedComparisonsBlock = relatedPairs.length > 0 ? (
+    <section key="related-comparisons" className="mt-12 bg-white rounded-3xl border border-slate-100 p-6 sm:p-8 shadow-sm">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div>
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-black bg-blue-50 text-blue-600 border border-blue-100 mb-2 uppercase tracking-wider">
+            Related Matchups
+          </div>
+          <h3 className="text-xl font-black text-slate-900 tracking-tight">
+            Popular Comparisons Involving {a.name} & {b.name}
+          </h3>
+          <p className="text-xs text-slate-500 font-medium">
+            Explore how these platforms stack up against other direct competitors
+          </p>
+        </div>
+        <Link
+          href="/compare"
+          className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 shrink-0 group"
+        >
+          All Comparisons
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {relatedPairs.map(p => (
+          <Link
+            key={p.pairSlug}
+            href={`/compare/${p.pairSlug}`}
+            className="group relative bg-slate-50 hover:bg-blue-50/40 border border-slate-100 hover:border-blue-200 rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="flex -space-x-2 shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center p-1.5">
+                  <ToolLogo slug={p.a.slug} src={p.a.logo_url} name={p.a.name} className="w-6 h-6 object-contain" />
+                </div>
+                <div className="w-9 h-9 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center p-1.5">
+                  <ToolLogo slug={p.b.slug} src={p.b.logo_url} name={p.b.name} className="w-6 h-6 object-contain" />
+                </div>
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors truncate">
+                  {p.a.name} vs {p.b.name}
+                </div>
+                <div className="text-[11px] text-slate-400 font-medium truncate">
+                  {p.a.pricing_type} vs {p.b.pricing_type}
+                </div>
+              </div>
+            </div>
+            <span className="text-xs font-black text-blue-600 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+              Compare →
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  ) : null;
+
+  const bottomWorkflowBlock = (
+    <div key="bottom-workflow" className="mt-12">
+      <RelatedTools
+        headline={`Companion Tools for ${a.name} & ${b.name}`}
+        subheadline={`Essential calculators, format converters, and shortcut sheets for your drafting and modeling pipeline`}
+      />
+    </div>
+  );
+
   const exploreBlock = (
     <section key="explore-block" className="mt-10 pt-6 border-t border-slate-100">
       <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Keep Exploring</h3>
@@ -720,7 +808,7 @@ export default async function ComparePairPage(
             Best {categoryForA.name}
           </Link>
         )}
-                              </div>
+      </div>
     </section>
   );
 
@@ -736,6 +824,9 @@ export default async function ComparePairPage(
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {quizBlock}
+            {relatedComparisonsBlock}
+            {bottomWorkflowBlock}
             {exploreBlock}
           </>
         );
@@ -748,6 +839,9 @@ export default async function ComparePairPage(
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {quizBlock}
+            {relatedComparisonsBlock}
+            {bottomWorkflowBlock}
             {exploreBlock}
           </>
         );
@@ -760,6 +854,9 @@ export default async function ComparePairPage(
             <div className="mt-8">{tableBlock}</div>
             <div className="mt-8">{quickSpecsBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {quizBlock}
+            {relatedComparisonsBlock}
+            {bottomWorkflowBlock}
             {exploreBlock}
           </>
         );
@@ -772,6 +869,9 @@ export default async function ComparePairPage(
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{quickSpecsBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {quizBlock}
+            {relatedComparisonsBlock}
+            {bottomWorkflowBlock}
             {exploreBlock}
           </>
         );
@@ -784,6 +884,9 @@ export default async function ComparePairPage(
             {interactiveWidgetBlock}
             <div className="mt-8">{picksBlock}</div>
             <div className="mt-8">{shortlistCtaBlock}</div>
+            {quizBlock}
+            {relatedComparisonsBlock}
+            {bottomWorkflowBlock}
             {exploreBlock}
           </>
         );

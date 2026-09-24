@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToolLogo } from '@/components/tool-logo';
 import Link from 'next/link';
-import { X, Scale, Search as SearchIcon, ArrowRight } from 'lucide-react';
+import { X, Scale, Search as SearchIcon, ArrowRight, Sparkles } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 
 interface CompareContentProps {
@@ -227,6 +227,30 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
               ))}
             </div>
           )}
+        </div>
+
+        {/* 1-Click Popular Comparison Presets */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+          <span className="text-xs font-bold text-slate-400 mr-1 flex items-center gap-1">
+            <Sparkles className="w-3.5 h-3.5 text-blue-500" /> Instant Matchups:
+          </span>
+          {[
+            { label: 'Fusion 360 vs SolidWorks', href: '/compare/fusion-360-vs-solidworks' },
+            { label: 'AutoCAD vs BricsCAD', href: '/compare/autocad-vs-bricscad' },
+            { label: 'ArchiCAD vs Revit', href: '/compare/archicad-vs-revit' },
+            { label: 'Inventor vs SolidWorks', href: '/compare/autodesk-inventor-vs-solidworks' },
+            { label: 'Blender vs Maya', href: '/compare/blender-vs-maya' },
+            { label: 'Altium vs KiCad', href: '/compare/altium-designer-vs-kicad' },
+          ].map((preset) => (
+            <Link
+              key={preset.href}
+              href={preset.href}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-blue-50 border border-slate-200/80 hover:border-blue-300 text-xs font-bold text-slate-700 hover:text-blue-600 shadow-xs transition-all"
+            >
+              <span>{preset.label}</span>
+              <ArrowRight className="w-3 h-3 text-slate-400 group-hover:text-blue-600" />
+            </Link>
+          ))}
         </div>
       </div>
 
