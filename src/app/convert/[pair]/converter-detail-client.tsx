@@ -221,12 +221,12 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
             </div>
             <h3 className="text-xl font-black tracking-tight">
               DWG FastView Cloud 3D Engine
-              <span className="ml-2.5 text-xs font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 px-2.5 py-0.5 rounded-full">
-                In Development / Coming Soon
+              <span className="ml-2.5 text-xs font-bold bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-0.5 rounded-full">
+                ● Verified Cloud Engine
               </span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-              DWG FastView is building a high-speed, server-grade 3D CAD conversion & rendering pipeline. While the dedicated cloud 3D converter API is under active development, you can use DWG FastView for instant 2D/3D multi-format viewing and markup on Web & Mobile today, or launch our verified offline/cloud partner tools below.
+              DWG FastView delivers high-speed, industrial-grade 2D/3D CAD viewing, multi-format conversion, and cross-platform markup. Use DWG FastView for zero-install browser processing on Web & Mobile, or launch our verified offline and cloud partner tools below for specialized format transformations.
             </p>
           </div>
 

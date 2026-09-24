@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 import { getConversionPair, CONVERSION_PAIRS } from '@/lib/converter-data';
 import { ConverterDetailClient } from '@/app/convert/[pair]/converter-detail-client';
+import GenericToolboxClient from '@/components/generic-toolbox-client';
 import { RelatedTools } from '@/components/related-tools';
 import Link from 'next/link';
 
@@ -142,7 +143,7 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
     );
   }
 
-  // Otherwise, render standard placeholder or generic toolbox item
+  // Otherwise, render full high-fidelity toolbox item experience
   const tool = TOOLBOX_DATA.find((t) => t.slug === slug);
   if (!tool) {
     notFound();
@@ -154,85 +155,30 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
     { name: tool.title, path: `/toolbox/${slug}` },
   ]);
 
-  const renderCategoryLabel = (category: typeof tool.category) => {
-    switch (category) {
-      case 'cheatsheet': return 'Cheat Sheet & Reference';
-      case 'calculator': return 'Engineering Calculator';
-      case '3d-converter': return '3D CAD & Mesh Converter';
-      case 'converter': return 'File Parser & Converter';
-      case 'troubleshoot': return 'Troubleshooting Wizard';
-      default: return 'Engineering Utility';
-    }
-  };
-
   return (
-    <>
+    <div className="min-h-screen bg-slate-50/50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <main className="min-h-screen bg-slate-50 flex flex-col items-center justify-center py-20 px-6">
-        <div className="max-w-[700px] w-full bg-white border border-slate-100 rounded-[48px] p-8 md:p-12 shadow-sm space-y-8 relative overflow-hidden">
-          <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
-
-          <div className="flex items-center justify-between">
-            <span className="text-base font-black text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1.5 rounded-xl border border-blue-100/50">
-              {renderCategoryLabel(tool.category)}
-            </span>
-            {tool.origin === 'native' ? (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
-                🛠️ Native Development
-              </span>
-            ) : (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-base font-black bg-indigo-500/10 text-indigo-600 border border-indigo-500/20">
-                🔍 Cloud Referral Hub
-              </span>
-            )}
-          </div>
-
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-              {tool.title}
-            </h1>
-            <p className="text-lg text-slate-500 font-medium leading-relaxed">
-              {tool.origin === 'native'
-                ? 'We are actively developing this utility. It runs 100% locally in your browser with complete client-side data privacy (no server uploads).'
-                : 'For tasks that require heavy cloud computing or proprietary engines, we evaluate and recommend the best-performing commercial providers. Learn how to process files without license audits or security risks.'}
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100/50 rounded-3xl p-6 space-y-3">
-            <h4 className="text-base font-black text-slate-400 uppercase tracking-wider">
-              {tool.origin === 'native' ? 'Features & Specs Preview' : 'Evaluation & Integration Benchmark'}
-            </h4>
-            <p className="text-base text-slate-600 leading-relaxed font-semibold">
-              {tool.detailDesc}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-4 text-base font-bold text-slate-400">
-            <span>{tool.origin === 'native' ? 'Expected Release: Q3 2026' : 'Updates: Verified Links'}</span>
-            <span className="text-slate-200">|</span>
-            <span>Ecosystem: {tool.origin === 'native' ? 'CADGuide Native' : 'Curated Cloud Directory'}</span>
-          </div>
-
-          <RelatedTools />
+      {/* Header Breadcrumb */}
+      <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 pt-10 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/toolbox" className="hover:text-blue-600 transition-colors">Toolbox</Link>
+            <span>/</span>
+            <span className="text-slate-900 font-bold">{tool.title}</span>
+          </nav>
         </div>
+      </section>
 
-        <div className="max-w-[700px] w-full mt-8 space-y-4">
-          <h3 className="text-sm font-black text-slate-400 uppercase tracking-widest px-2">Continue Exploring</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link
-              href="/toolbox"
-              className="p-4 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 hover:shadow-md transition-all group text-center"
-            >
-              <div className="text-sm font-black text-blue-600 uppercase tracking-widest mb-1">🧰 Back to Toolbox</div>
-              <div className="text-base font-bold text-slate-600 group-hover:text-blue-600 transition-colors">All Online Utilities</div>
-            </Link>
-          </div>
-        </div>
+      {/* Main Client Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <GenericToolboxClient tool={tool} />
       </main>
-    </>
+    </div>
   );
 }

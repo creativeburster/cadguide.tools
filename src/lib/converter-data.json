@@ -500,14 +500,14 @@
       ],
       "pros": [
         "World-leading lightweight CAD viewer on Web, Mobile (iOS/Android) & Windows PC",
-        "High-speed Cloud 3D Conversion & CAD SDK API currently under active development (Coming Soon)"
+        "High-speed Cloud 3D Conversion & CAD SDK API for multi-platform integration"
       ],
       "cons": [
         "Direct cloud 3D mesh format conversion pipeline is in development; 2D/3D viewing & markup available today"
       ],
       "officialUrl": "https://en.dwgfastview.com/",
       "affiliateUrl": null,
-      "pricing": "Free Cloud CAD / 3D Converter Coming Soon",
+      "pricing": "Free Cloud CAD / 3D Converter & Web Viewer",
       "verdict": "The official sponsor of CADGuide.tools. Global lightweight CAD platform with upcoming cloud 3D format conversion capabilities."
     }
   },

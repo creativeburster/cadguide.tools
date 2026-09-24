@@ -116,7 +116,19 @@ export default function ToolboxClient() {
         </p>
       </div>
       <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between text-base font-bold text-slate-400 group-hover:text-blue-600 transition-colors">
-        <span>View Details</span>
+        <span>
+          {item.category === 'cheatsheet' || item.category === 'library'
+            ? 'Open Reference'
+            : item.category === 'calculator'
+            ? 'Open Calculator'
+            : item.category === '3d-converter' || item.category === 'converter'
+            ? 'Launch Converter'
+            : item.category === 'troubleshoot'
+            ? 'Start Wizard'
+            : item.category === 'viewer'
+            ? 'Launch Viewer'
+            : 'Open Utility'}
+        </span>
         <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
         </svg>
