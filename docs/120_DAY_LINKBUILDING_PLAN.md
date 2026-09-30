@@ -140,6 +140,15 @@
 
 - [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
 
+## 9/30 批次（高权重专业技术长文，全部实机 200 OK 校验）
+- [x] **Telegraph (DA 93) 工业工程速查手册（3 篇全部 Live，秒开极速收录）**：
+  - 《[Air Bending vs Bottoming: The Physics of Neutral Axis Shift and Sheet Metal K-Factor Selection](https://telegra.ph/Air-Bending-vs-Bottoming-The-Physics-of-Neutral-Axis-Shift-and-Sheet-Metal-K-Factor-Selection-09-30)》— 深度推导空弯力学、中性层内移方程与折弯扣除，精准深链挂载 /toolbox/k-factor-calculator、/toolbox/dwg-version-checker 与 /compare。
+  - 《[DWG Binary Header Reverse-Engineering: How to Inspect AC10xx Versions Without AutoCAD](https://telegra.ph/DWG-Binary-Header-Reverse-Engineering-How-to-Inspect-AC10xx-Versions-Without-AutoCAD-09-30)》— 深度解析 AC10xx 6 字节魔数、代码页与 Section Map 寻址掩码，精准挂载 /toolbox/dwg-version-checker 与 /guides。
+  - 《[The CAD Manager's 2026 Procurement Guide: Named vs Floating Seats and Perpetual Licensing](https://telegra.ph/The-CAD-Managers-2026-Procurement-Guide-Named-vs-Floating-Seats-and-Perpetual-Licensing-09-30)》— 系统拆解命名许可 vs 浮动并发网络池经济模型、FLEXlm options 文件配置与买断制替代选型，挂载 /compare、/toolbox 与主站。
+- [x] **Dev.to (DA 85 | Dofollow) 权威技术长文（2 篇全部 Live，实机通过）**：
+  - 《[Reading a CAD Vendor's Pricing Page Like a Procurement Professional](https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-27f6)》— 揭秘 CAD 官网起价套路、功能门槛与隐藏支持维护费，精准植入 /compare、/toolbox/dwg-version-checker 与主站。
+  - 《[The CAD Manager's Annual License Audit Checklist: 12 Field Checks That Pay for Themselves](https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-12-field-checks-that-pay-for-themselves-4c7f)》— 针对鬼魂授权、并发率计算与许可服务器防泄漏的 12 项高 ROI 审计实操清单，挂载 /compare、/toolbox 与主站。
+
 ## 9/24 批次（社区狙击与高权重技术长文，全部实机 Live 校验）
 - [x] **Reddit (DA 91+) 真实工业热帖狙击（1 篇 Live）**：
   - 《[r/SolidWorks: I'm looking for a SolidWorks license at a decent price](https://www.reddit.com/r/SolidWorks/comments/1wopszk/im_looking_for_a_solidworks_license_at_a_decent/pbppyir/)》— 深度拆解 SOLIDWORKS 正版分销防坑、Startup 一年免费孵化项目、Makers 数字水印限制与 Alibre/Solid Edge 买断替代选型矩阵，权威解答挂载 /compare 与主站。
