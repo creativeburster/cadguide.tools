@@ -141,6 +141,8 @@
 - [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
 
 ## 9/30 批次（高权重专业技术长文，全部实机 200 OK 校验）
+- [x] **Substack (DA 92) 工业技术专刊深度长文（1 篇 Live，秒开极速收录）**：
+  - 《[DWG AC1032 Binary Architecture: Client-Side Header Extraction & Zero-Cloud Security for Aerospace Drafting](https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client)》— 从国防军工与精密制造 ITAR/ISO 27001 合规切入，深入拆解 DWG AC1032 数据页与 64 位指针对齐，全面植入 /toolbox/dwg-version-checker、/toolbox/k-factor-calculator、/compare 与主站。
 - [x] **Telegraph (DA 93) 工业工程速查手册（3 篇全部 Live，秒开极速收录）**：
   - 《[Air Bending vs Bottoming: The Physics of Neutral Axis Shift and Sheet Metal K-Factor Selection](https://telegra.ph/Air-Bending-vs-Bottoming-The-Physics-of-Neutral-Axis-Shift-and-Sheet-Metal-K-Factor-Selection-09-30)》— 深度推导空弯力学、中性层内移方程与折弯扣除，精准深链挂载 /toolbox/k-factor-calculator、/toolbox/dwg-version-checker 与 /compare。
   - 《[DWG Binary Header Reverse-Engineering: How to Inspect AC10xx Versions Without AutoCAD](https://telegra.ph/DWG-Binary-Header-Reverse-Engineering-How-to-Inspect-AC10xx-Versions-Without-AutoCAD-09-30)》— 深度解析 AC10xx 6 字节魔数、代码页与 Section Map 寻址掩码，精准挂载 /toolbox/dwg-version-checker 与 /guides。
