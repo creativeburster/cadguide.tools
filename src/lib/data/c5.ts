@@ -11063,7 +11063,7 @@ export const c5Tools: Tool[] = [
   industries: ["Laser Cutting", "Metal Fabrication", "Woodworking", "Manufacturing"],
   core_features: ["SVG & DXF import", "Spacing & rotation control", "Grain-direction rules", "Local in-browser nesting"],
   user_scales: ["Individuals", "Small Business"],
-  official_url: "https://madegrain.com/nestforge/",
+  official_url: "https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide",
   affiliate_url: null,
   score: 4.4,
   pros: [
@@ -11073,7 +11073,7 @@ export const c5Tools: Tool[] = [
   ],
   cons: [
     "2D nesting only — no tube or 3D cutting",
-    "Free tier capped at 10 parts on one sheet",
+    "Free tier export capped at 10 parts on one sheet (full layout preview is unlimited for any job size)",
     "No plugin integration with CAM suites"
   ],
   faqs: [
@@ -11083,11 +11083,11 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does NestForge cost?",
-      a: "NestForge is free for up to 10 parts on one sheet (counting copies). The Pro upgrade is a €49 one-time purchase (including applicable taxes) for a perpetual license covering major version 1 and all v1 updates — no subscription."
+      a: "NestForge is free to nest and preview jobs of any size. A €49 one-time purchase (including applicable taxes) is only required to export jobs with more than 10 parts or across multiple sheets, providing a perpetual license for major version 1 and all v1 updates with no subscription."
     },
     {
       q: "Is there a free version of NestForge?",
-      a: "Yes — the free tier covers nesting of up to 10 parts, counting copies, on one sheet, with nesting, validation, and export included. No account or installation required."
+      a: "Yes. The free tier calculates and shows layouts, sheet counts, and utilization for jobs of any size (tested on real jobs up to 200+ parts across 22 sheets). A license is only needed to export layouts with more than 10 parts or across multiple sheets."
     },
     {
       q: "What operating systems does NestForge support?",
@@ -11099,7 +11099,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "What are the best alternatives to NestForge?",
-      a: "SigmaNEST is the established commercial nesting suite for production-scale operations. For occasional sheet layouts, NestForge's free in-browser tier covers small jobs — compare options based on part volume and machine integration needs."
+      a: "SigmaNEST is the established commercial nesting suite for production-scale operations. For occasional or browser-based sheet layouts, NestForge lets you calculate and preview any job size for free with paid export for larger runs — compare options based on part volume and machine integration needs."
     },
     {
       q: "Can NestForge reduce raw material scrap on actual cutting jobs?",
@@ -11112,10 +11112,10 @@ export const c5Tools: Tool[] = [
       price: "€0",
       period: "forever",
       features: [
-        "10 parts on one sheet (counting copies)",
-        "Nesting and layout validation",
+        "Nesting and preview for jobs of any size",
+        "See full layout, sheet count & utilization",
+        "DXF, SVG and PDF export up to 10 parts on one sheet",
         "SVG and text DXF import",
-        "DXF, SVG and PDF export",
         "Runs locally in the browser"
       ]
     },
@@ -11124,8 +11124,8 @@ export const c5Tools: Tool[] = [
       price: "€49",
       period: "one-time",
       features: [
-        "Unlimited parts and sheets",
-        "Multi-sheet jobs and reports",
+        "Export without a part or sheet limit",
+        "Multi-sheet DXF, SVG and PDF exports",
         "Perpetual license for version 1",
         "All v1 updates included",
         "Offline license key",
@@ -11135,7 +11135,7 @@ export const c5Tools: Tool[] = [
     }
   ],
   alternatives: ["sigmanest"],
-  last_updated: "2026-09-21",
+  last_updated: "2026-09-30",
   file_formats_in: ["SVG", "DXF"],
   file_formats_out: ["SVG", "DXF", "PDF"]
 },
