@@ -140,7 +140,9 @@
 
 - [x] **Reddit 接入完成（9/16）**：站长老号经有头登录接入（会话已固化 Edge profile，无头可复用）。首条评论发布于 r/cad《NX 教育版 STEP 导出》帖（纯技术解答零链接，保号策略）。
 
-## 9/30 批次（高权重专业技术长文，全部实机 200 OK 校验）
+## 9/30 批次（高权重专业技术长文与问答，全部实机 200 OK 校验）
+- [x] **Quora (DA 89~93) 热门工业实操问答（首答 Live，Will Sun 名下）**：
+  - 《[What are K-factors and bend allowances in a SolidWorks sheet metal assignment?](https://www.quora.com/What-are-K-factors-and-bend-allowances-in-a-SolidWorks-sheet-metal-assignment/answer/Will-Sun-52)》— 深度拆解 SolidWorks 钣金建模展开、中性层内移物理机制、DIN 6935 折弯扣除与空弯公式，精准植入 /toolbox/k-factor-calculator、/toolbox/dwg-version-checker 与主站。
 - [x] **Substack (DA 92) 工业技术专刊深度长文（1 篇 Live，秒开极速收录）**：
   - 《[DWG AC1032 Binary Architecture: Client-Side Header Extraction & Zero-Cloud Security for Aerospace Drafting](https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client)》— 从国防军工与精密制造 ITAR/ISO 27001 合规切入，深入拆解 DWG AC1032 数据页与 64 位指针对齐，全面植入 /toolbox/dwg-version-checker、/toolbox/k-factor-calculator、/compare 与主站。
 - [x] **Telegraph (DA 93) 工业工程速查手册（3 篇全部 Live，秒开极速收录）**：
