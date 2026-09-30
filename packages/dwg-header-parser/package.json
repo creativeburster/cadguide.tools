@@ -1,0 +1,29 @@
+{
+  "name": "@willsunagency/dwg-header-parser",
+  "version": "1.0.0",
+  "description": "Lightweight, zero-dependency parser for detecting AutoCAD DWG binary file versions and release year metadata from magic byte headers.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "dwg-header-parser": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "dwg",
+    "autocad",
+    "dwg-parser",
+    "dwg-version",
+    "cad",
+    "dxf",
+    "bim",
+    "engineering"
+  ],
+  "author": "CADGuide Engineering Team <contact@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools/toolbox/dwg-version-checker",
+  "publishConfig": {
+    "access": "public"
+  }
+}

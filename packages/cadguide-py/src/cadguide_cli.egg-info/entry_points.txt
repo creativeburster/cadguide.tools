@@ -1,0 +1,3 @@
+[console_scripts]
+cadguide = cadguide_cli.main:cli_entry
+dwg-check = cadguide_cli.main:dwg_check_entry

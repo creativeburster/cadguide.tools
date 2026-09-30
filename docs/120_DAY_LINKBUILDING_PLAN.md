@@ -2,6 +2,7 @@
 
 > **执行宗旨**：白帽高质量（White-Hat SEO）、极低封号风险、每天仅需 3~5 分钟。
 > **协作模式**：AI 负责提供 100% 准备就绪的英属本土化文案与直达链接；站长负责点击提交与勾选进度。
+> **最新战略升级**：全新发布 [《50条全球高权威差异化外链总操盘矩阵》](file:///f:/cadguide.tools/docs/50_HIGH_AUTHORITY_LINKBUILDING_MATRIX.md)——坚决杜绝低质垃圾外链，全量聚焦学术 DOI (Zenodo/OSF)、开源代码生态 (npm/PyPI/Docker)、企业评测目录 (Capterra/G2)、工业官方论坛 (Autodesk/GrabCAD)、设计系统 (Behance/Figma) 等 7 大高门槛差异化军团！
 
 ---
 
@@ -9,10 +10,10 @@
 
 | 阶段 | 周期 | 核心战略目标 | 核心平台 / 渠道 | 现状与预期 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Phase 1** | **第 1 - 30 天** | **基石信任与权威目录**<br>(Domain Trust & Profiles) | AlternativeTo, Product Hunt, SaaSHub, GitHub, LinkedIn, Crunchbase | 前期已完成核心头部 14 项冷启动，现正补充高权重未覆盖平台。 |
-| **Phase 2** | **第 31 - 60 天** | **技术博客与内容分发**<br>(Content Syndication & Dofollow) | Dev.to, Hashnode, HackerNoon, Medium, Substack, GitHub PR | 沉淀高质量 Dofollow 外部技术长文与痛点软文，捕获长尾搜索。 |
-| **Phase 3** | **第 61 - 90 天** | **精准社区渗透与狙击问答**<br>(Community Engagement) | Reddit (r/cad, r/architecture), Quora, StackExchange, CAD 社区 | 捕获高意向设计师/工程师真实搜索流量，树立品牌专业度。 |
-| **Phase 4** | **第 91 - 120 天** | **工具诱饵扩散与行业外联**<br>(Link Bait & Outreach) | 大学 CAD 资源页, 行业博主, 竞品失效链接替换, 论坛置顶合作 | 依靠 Toolbox 工具矩阵吸引自然被动外链，实现流量飞轮。 |
+| **Phase 1** | **第 1 - 30 天** | **基石信任与权威目录**<br>(Domain Trust & Profiles) | AlternativeTo, Product Hunt, SaaSHub, GitHub, LinkedIn, Crunchbase, Trustpilot, Wellfound | 前期已完成核心头部 16 项冷启动，信任背书已固化。 |
+| **Phase 2** | **第 31 - 60 天** | **技术博客与开源生态**<br>(Content Syndication & Dofollow) | npm 官方包, PyPI, Docker, Dev.to, Hashnode, HackerNoon, Medium, Substack | 沉淀高质量 Dofollow 外部技术长文与开发者生态依赖树反向链接。 |
+| **Phase 3** | **第 61 - 90 天** | **精准社区渗透与狙击问答**<br>(Community Engagement) | Reddit (r/cad, r/SolidWorks), Quora, StackExchange, Autodesk 社区, GrabCAD | 捕获高意向设计师/工程师真实搜索流量，树立品牌专业度。 |
+| **Phase 4** | **第 91 - 120 天** | **学术DOI、白皮书与行业外联**<br>(Link Bait & Outreach) | Zenodo, OSF, Instructables, Hackaday, SlideShare, 行业媒体与播客外联 | 依靠学术数据集与工业白皮书建立永不失效的超高权重外链。 |
 
 ---
 

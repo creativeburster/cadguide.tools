@@ -1,0 +1,37 @@
+{
+  "name": "cadguide-cli",
+  "version": "1.0.0",
+  "description": "Instant zero-upload AutoCAD DWG binary header inspector, sheet metal K-factor calculator, and engineering toolbox.",
+  "main": "index.js",
+  "bin": {
+    "cadguide": "bin/cadguide.js",
+    "dwg-check": "bin/cadguide.js"
+  },
+  "scripts": {
+    "test": "node bin/cadguide.js --help"
+  },
+  "keywords": [
+    "cad",
+    "autocad",
+    "dwg",
+    "dwg-parser",
+    "dwg-version",
+    "k-factor",
+    "sheet-metal",
+    "bim",
+    "engineering"
+  ],
+  "author": "CADGuide Engineering Team <contact@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativeburster/cadguide.tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/creativeburster/cadguide.tools/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

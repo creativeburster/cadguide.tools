@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/cadguide_cli/__init__.py
+src/cadguide_cli/main.py
+src/cadguide_cli.egg-info/PKG-INFO
+src/cadguide_cli.egg-info/SOURCES.txt
+src/cadguide_cli.egg-info/dependency_links.txt
+src/cadguide_cli.egg-info/entry_points.txt
+src/cadguide_cli.egg-info/top_level.txt

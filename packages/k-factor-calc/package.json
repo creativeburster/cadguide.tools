@@ -1,0 +1,30 @@
+{
+  "name": "@willsunagency/k-factor-calc",
+  "version": "1.0.0",
+  "description": "Precision sheet metal K-factor, Bend Allowance (BA), Bend Deduction (BD), and flat pattern development calculation engine.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "k-factor-calc": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "k-factor",
+    "sheet-metal",
+    "bend-allowance",
+    "bend-deduction",
+    "cad",
+    "solidworks",
+    "inventor",
+    "manufacturing",
+    "engineering"
+  ],
+  "author": "CADGuide Engineering Team <contact@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools/toolbox/k-factor-calculator",
+  "publishConfig": {
+    "access": "public"
+  }
+}

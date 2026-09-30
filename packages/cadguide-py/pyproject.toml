@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cadguide-cli"
+version = "1.0.0"
+authors = [
+  { name="CADGuide Engineering Team", email="contact@cadguide.tools" },
+]
+description = "Instant zero-upload AutoCAD DWG binary header inspector, sheet metal K-factor calculator, and CAD comparison CLI."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = ["cad", "autocad", "dwg", "dwg-parser", "k-factor", "sheet-metal", "bim", "engineering"]
+
+[project.urls]
+"Homepage" = "https://cadguide.tools"
+"Documentation" = "https://cadguide.tools/guides"
+"DWG Version Checker" = "https://cadguide.tools/toolbox/dwg-version-checker"
+"K-Factor Calculator" = "https://cadguide.tools/toolbox/k-factor-calculator"
+"Source Code" = "https://cadguide.tools"
+"Bug Tracker" = "https://cadguide.tools/about"
+
+[project.scripts]
+cadguide = "cadguide_cli.main:cli_entry"
+dwg-check = "cadguide_cli.main:dwg_check_entry"
