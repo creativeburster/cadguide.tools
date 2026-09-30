@@ -11149,8 +11149,7 @@ export const c5Tools: Tool[] = [
   country: "Romania",
   category_id: "c5",
   pricing_type: "Subscription / Perpetual",
-  quote_only: true,
-  starting_price: 0,
+  starting_price: 1500,
   price_period: "year",
   platforms: ["Windows"],
   industries: ["Manufacturing", "CNC Machining"],
@@ -11165,7 +11164,7 @@ export const c5Tools: Tool[] = [
     "Time estimates improve with the shop's own production history"
   ],
   cons: [
-    "Quote-only pricing, no self-serve trial",
+    "No self-serve online trial (requires demo setup)",
     "Windows desktop only",
     "Estimation accuracy depends on the shop's own historical data"
   ],
@@ -11176,7 +11175,7 @@ export const c5Tools: Tool[] = [
     },
     {
       q: "How much does QuantCAD-Hybrid cost?",
-      a: "DINAMIC PRO does not publish prices — licensing is quote-only. Three license forms exist: a 1-year industrial license, a 3-year industrial license, and a perpetual offline license that includes 12 months of updates. Installation, training, and on-site services are optional extras."
+      a: "QuantCAD-Hybrid pricing starts at €1,500/year (excl. VAT) per workstation for an Industrial 1-Year license. An Industrial 3-Year license is €4,000/workstation. A Perpetual Offline license is €4,500/workstation (with optional annual maintenance at €500/workstation/year). Permanent Multi-Seat licenses start at €4,000/workstation for a minimum of 3 workstations (€12,000 total excl. VAT)."
     },
     {
       q: "Is there a free version of QuantCAD-Hybrid?",
@@ -11198,38 +11197,52 @@ export const c5Tools: Tool[] = [
   pricing_tiers: [
     {
       name: "Industrial (1-Year)",
-      price: "Custom",
-      period: "quote",
+      price: "€1,500",
+      period: "year",
       features: [
-        "Full RFQ & costing modules",
-        "12 months of updates",
-        "Email support"
+        "1-year industrial license per workstation",
+        "Excl. VAT",
+        "Full RFQ ingestion & costing modules",
+        "12 months of updates and support included"
       ]
     },
     {
       name: "Industrial (3-Year)",
-      price: "Custom",
-      period: "quote",
+      price: "€4,000",
+      period: "3-year",
       features: [
-        "Everything in 1-Year",
-        "36 months of updates",
-        "Multi-seat options"
+        "3-year industrial license per workstation",
+        "Excl. VAT (save €500 vs annual renewals)",
+        "Full multi-part costing & Time Intelligence",
+        "36 months of updates and support included"
       ],
       is_popular: true
     },
     {
       name: "Perpetual Offline",
-      price: "Custom",
-      period: "quote",
+      price: "€4,500",
+      period: "one-time",
       features: [
-        "Permanent license",
-        "12 months of updates included",
-        "Device-locked .qlic licensing"
+        "Permanent buyout license per workstation",
+        "Device-locked .qlic offline licensing",
+        "Excl. VAT",
+        "Optional annual maintenance at €500/year"
+      ]
+    },
+    {
+      name: "Permanent Multi-Seat",
+      price: "€12,000",
+      period: "one-time (3 seats)",
+      features: [
+        "Permanent license for minimum 3 workstations",
+        "€4,000 per workstation excl. VAT",
+        "Local SQLite network deployment",
+        "Annual maintenance €500/workstation/year"
       ]
     }
   ],
   expert_verdict: "A niche quoting workhorse for CNC shops that want RFQ analysis and costing kept on-premise. Its time-estimation engine is only as good as the production history you feed it, so it rewards shops that already track real cycle times.",
-  last_updated: "2026-09-17",
+  last_updated: "2026-09-30",
   file_formats_in: ["STEP", "STP", "PDF", "XLSX", "CSV"]
 }
 ];
