@@ -1516,5 +1516,91 @@ export const c4Tools: Tool[] = [
   file_formats_out: [
     "STEP", "STL", "OBJ", "GLB", "3MF"
   ]
+},
+{
+  id: "t255",
+  name: "3D Studio Web Tools",
+  slug: "3dstudio-web-tools",
+  logo_url: "/logos/3dstudio.svg",
+  short_desc: "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
+  description: "3D Studio Web Tools is a suite of free, client-side 3D and CAD viewers and converters developed by architectural visualization studio 3D Studio (Tallinn, Estonia). Designed for zero-friction workflows, all core file processing runs locally inside the user's browser using WebAssembly engines (Online3DViewer, web-ifc, occt-import-js, LibreDWG) with no account registration or file uploads to external servers. It supports viewing and inspecting architectural IFC (2x3, 4, 4.3), mechanical STEP/IGES, 3D printing STL/3MF meshes, AutoCAD DWG/DXF drawings, and native Revit/SolidWorks files, alongside vector PDF and 3D format conversion (18 input formats to 8 output formats).",
+  country: "Estonia",
+  category_id: "c4",
+  pricing_type: "Free",
+  starting_price: 0,
+  platforms: ["Web"],
+  industries: ["Architecture", "BIM", "Mechanical Engineering", "3D Printing", "Construction", "Product Design"],
+  core_features: [
+    "Client-side WebAssembly rendering (files never leave the user's computer)",
+    "Multi-standard IFC viewer (IFC 2x3, IFC4, IFC4.3) with element property inspection",
+    "Mechanical STEP and IGES solid inspection with millimeter dimension measurement",
+    "STL and 3MF watertight mesh verification and PLA weight estimation",
+    "AutoCAD DWG to vector PDF conversion preserving 1:1 scale, line weights, and layers",
+    "Multi-format 3D converter converting 18 input formats to 8 output formats (GLB, OBJ, STL, STEP)"
+  ],
+  user_scales: ["Individuals", "Small Business", "Architects & Engineers"],
+  official_url: "https://3dstudio.co/tools/?utm_source=cadguide",
+  affiliate_url: null,
+  score: 4.6,
+  pros: [
+    "100% free with no account creation, sign-up, or watermark",
+    "Strict client-side privacy: drawings and models are processed locally and never uploaded",
+    "High-fidelity support across BIM (IFC), CAD (STEP/IGES/DWG), and 3D printing (STL/3MF)",
+    "Fast and lightweight: runs smoothly on Windows, Mac, Linux, and Chromebook browsers"
+  ],
+  cons: [
+    "Read-only viewing and conversion utility with no parametric modeling or sketch editing capabilities",
+    "Revit (.rvt) and SolidWorks (.sldprt) files utilize automated EU-based conversion service rather than pure in-browser parsing",
+    "DXF vector export does not yet support complex polyline hatches"
+  ],
+  tech_specs: {
+    engine: "Client-side WebAssembly & WebGL (Online3DViewer, web-ifc, occt-import-js, LibreDWG)",
+    multicore: "Browser Web Workers",
+    gpu_optimization: "Client WebGL 2.0 Hardware Acceleration",
+    standards: ["IFC 2x3 / IFC4 / IFC4.3", "STEP AP203/AP214", "IGES", "AutoCAD DWG R13-2018", "glTF 2.0", "STL / 3MF"]
+  },
+  expert_verdict: "A privacy-first, zero-signup web toolkit that solves the everyday frustration of opening proprietary CAD, BIM, and 3D printing files without having to launch multi-gigabyte desktop software.",
+  faqs: [
+    {
+      q: "What are 3D Studio Web Tools?",
+      a: "3D Studio Web Tools are a free collection of browser-based utilities developed by 3D Studio in Estonia. They allow users to open, inspect, measure, and convert IFC, STEP, STL, DWG, DXF, and 3D models directly in modern web browsers without installation or user registration."
+    },
+    {
+      q: "Are files uploaded to external servers?",
+      a: "No. For IFC, STEP, IGES, STL, 3MF, DWG, DXF, and general 3D formats, all parsing, rendering, and conversion take place directly inside the user's browser using client-side WebAssembly. Files never leave the computer. The only exceptions are Revit (.rvt) and SolidWorks (.sldprt) files, which use an EU-hosted conversion pipeline with files automatically deleted within 24 hours."
+    },
+    {
+      q: "Which file formats are supported for 3D conversion?",
+      a: "The 3D converter reads 18 formats including STEP, IFC, FBX, OBJ, STL, glTF/GLB, 3DS, and 3DM, and can export to 8 formats including GLB, OBJ with MTL materials, STL, STEP, 3MF, and PLY."
+    },
+    {
+      q: "Does 3D Studio Web Tools cost anything?",
+      a: "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free",
+      price: "$0",
+      period: "forever",
+      features: [
+        "Free IFC 2x3, IFC4, and IFC4.3 element & property viewer",
+        "Free STEP & IGES assembly inspection and volume measurement",
+        "Free STL/3MF watertight mesh checker & PLA weight calculator",
+        "Free DWG to 1:1 vector PDF layout plotter",
+        "18-to-8 format 3D model converter",
+        "Zero sign-up, local client-side processing"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["cadprops", "cad-reader", "dwg-trueview", "dxf-medic", "bimcollab-zoom"],
+  last_updated: "2026-10-02",
+  file_formats_in: [
+    "IFC", "STEP", "STP", "IGES", "IGS", "STL", "3MF", "OBJ", "DWG", "DXF", "GLTF", "GLB", "FBX", "3DS", "3DM", "RVT", "SLDPRT"
+  ],
+  file_formats_out: [
+    "PDF", "SVG", "STL", "STEP", "GLB", "OBJ", "3MF", "PLY", "DXF"
+  ]
 }
 ];

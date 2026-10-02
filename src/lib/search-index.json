@@ -3515,6 +3515,28 @@
     "country": "Singapore"
   },
   {
+    "id": "t255",
+    "name": "3D Studio Web Tools",
+    "slug": "3dstudio-web-tools",
+    "short_desc": "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
+    "score": 4.6,
+    "logo_url": "/logos/3dstudio.svg",
+    "official_url": "https://3dstudio.co/tools/?utm_source=cadguide",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "BIM",
+      "Mechanical Engineering",
+      "3D Printing",
+      "Construction",
+      "Product Design"
+    ],
+    "features": [],
+    "country": "Estonia"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
