@@ -1,0 +1,30 @@
+{
+  "name": "@willsunagency/cad-license-model",
+  "version": "1.0.0",
+  "description": "Mathematical queuing and concurrency modeling library for engineering CAD floating licenses and seat utilization optimization.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "cad-license-model": "bin/cli.js"
+  },
+  "keywords": [
+    "cad-licensing",
+    "floating-license",
+    "flexlm",
+    "flexnet",
+    "autocad",
+    "concurrency-modeling",
+    "seat-utilization",
+    "engineering-procurement"
+  ],
+  "author": "CADGuide Engineering Standards <contact@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools/compare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativeburster/cadguide.tools.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

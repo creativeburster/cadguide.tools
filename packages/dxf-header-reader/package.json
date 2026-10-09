@@ -1,0 +1,29 @@
+{
+  "name": "@willsunagency/dxf-header-reader",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight zero-dependency binary and ASCII DXF/DWG header inspector and codepage extractor.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "dxf-header-reader": "bin/cli.js"
+  },
+  "keywords": [
+    "dxf",
+    "dwg",
+    "autocad",
+    "header-parser",
+    "cad",
+    "binary-parser",
+    "drawing-converter"
+  ],
+  "author": "CADGuide Engineering Standards <contact@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools/toolbox/dwg-version-checker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativeburster/cadguide.tools.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

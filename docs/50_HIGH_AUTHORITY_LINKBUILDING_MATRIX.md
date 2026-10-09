@@ -369,23 +369,50 @@
 
 ---
 
-## 🏆 实时已攻克高权威资产台账 (Verified Live Assets)
+## 🏆 实时已攻克高权威资产台账 (Verified Live Assets - 30 条高权威多域名外链)
 
-### 1. 问答与社区高权重阵地 (DA 93)
-- **Quora 首答 1**：`https://www.quora.com/Which-is-the-best-alternative-software-for-Autodesk-Product-e-g-AutoCAD/answer/Will-Sun-52`（AutoCAD 2026 三大替代品全景横评）
-- **Quora 首答 2**：`https://www.quora.com/What-are-K-factors-and-bend-allowances-in-a-SolidWorks-sheet-metal-assignment/answer/Will-Sun-52`（钣金力学与 K-Factor 计算模型）
+### 1. 开发者生态与包供应链 (DA 92 - 93 | Dofollow)
+- **npm 1 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/cad-format-detector`（纯 JS CAD 格式魔数检测器，直链 `/toolbox/dwg-version-checker`）
+- **npm 2 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/cad-license-model`（并发排队论数学模型，直链 `/compare`）
+- **npm 3 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/dxf-header-reader`（二进制与 ASCII DXF/DWG 读取器，直链 `/toolbox/dwg-version-checker`）
+- **npm 4 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/cadguide-cli`（CADGuide 官方 CLI 工具，直链主站）
+- **npm 5 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/dwg-header-parser`（DWG 头部解析库，直链 `/toolbox/dwg-version-checker`）
+- **npm 6 (DA 92)**: `https://www.npmjs.com/package/@willsunagency/k-factor-calc`（钣金 K 因子数学计算包，直链 `/toolbox/k-factor-calculator`）
+- **PyPI 1 (DA 93)**: `https://pypi.org/project/cadguide-cli/`（Python 官方包索引，项目主页直链 `https://cadguide.tools`）
 
-### 2. 技术专刊与权威长文阵地 (DA 85 - 92)
-- **Substack 专刊 1**：`https://cadguidetools.substack.com/p/gstarcad-vs-zwcad-vs-bricscad-the`（AutoCAD 商业替代品采购决策指南）
-- **Substack 专刊 2**：`https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client`（DWG AC1032 客户端解析架构与航天军工合规）
-- **Devpost 核心项目展台**：`https://devpost.com/software/cadguide-tools`（项目 Story 全量重构，挂载公式推导与深链）
-- **Dev.to 社区长文 1**：`https://dev.to/willsun/gstarcad-vs-zwcad-vs-bricscad-choosing-the-right-autocad-alternative-in-2026-56m0`
-- **Dev.to 社区长文 2**：`https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-27f6`
-- **Dev.to 社区长文 3**：`https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-12-field-checks-that-pay-for-themselves-4c7f`
+### 2. 国际技术博客与开发者社区 (DA 85 | Dofollow)
+- **Dev.to 1 (DA 85)**: `https://dev.to/willsun/named-vs-floating-cad-licensing-the-queueing-theory-model-for-it-admins-5fhh`（许可排队论与采购决策）
+- **Dev.to 2 (DA 85)**: `https://dev.to/willsun/b-rep-topology-breakdown-diagnosing-step-ap242-and-parasolid-xt-translation-errors-400g`（B-Rep 拓扑与 STEP AP242 转换容差）
+- **Dev.to 3 (DA 85)**: `https://dev.to/willsun/the-physics-of-air-bending-an-engineers-calculation-guide-to-sheet-metal-k-factors-2a8d`（空气折弯物理学与 K 因子工程指南）
+- **Dev.to 4 (DA 85)**: `https://dev.to/willsun/inside-the-ac1032-binary-header-decoding-autocad-dwg-magic-bytes-in-pure-javascript-16k0`（纯 JS 解析 AC1032 二进制魔数）
+- **Dev.to 5 (DA 85)**: `https://dev.to/willsun/gstarcad-vs-zwcad-vs-bricscad-choosing-the-right-autocad-alternative-in-2026-56m0`（AutoCAD 2026 三大替代品选型指南）
+- **Dev.to 6 (DA 85)**: `https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-27f6`（CAD 厂商定价页面专业解读）
+- **Dev.to 7 (DA 85)**: `https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-12-field-checks-that-pay-for-themselves-4c7f`（CAD 管理员年度许可审计清单）
 
-### 3. 开源包与代码供应链 (DA 92 - 93 | Dofollow)
-- **npm**：`https://www.npmjs.com/package/@willsunagency/dwg-header-parser`
-- **npm**：`https://www.npmjs.com/package/@willsunagency/k-factor-calc`
-- **npm**：`https://www.npmjs.com/package/@willsunagency/cadguide-cli`
-- **PyPI**：`https://pypi.org/project/cadguide-cli/`
+### 3. 全球高权威专刊与工业速查白皮书 (DA 92 - 93)
+- **Telegraph 1 (DA 93)**: `https://telegra.ph/GstarCAD-vs-ZWCAD-vs-BricsCAD-2026-Procurement-Guide-to-AutoCAD-Alternatives-10-09`（工业采购白皮书）
+- **Telegraph 2 (DA 93)**: `https://telegra.ph/Sheet-Metal-K-Factor-Formula-Matrix-Engineering-Bend-Deduction-Mechanics-10-09`（钣金 K 因子公式矩阵与折弯扣除力学）
+- **Telegraph 3 (DA 93)**: `https://telegra.ph/AC1032-Binary-Header-Specification-Zero-Upload-AutoCAD-DWG-Decoding-10-09`（AC1032 二进制头部规范与零上传架构）
+- **Substack 1 (DA 92)**: `https://cadguidetools.substack.com/p/gstarcad-vs-zwcad-vs-bricscad-the`（AutoCAD 商业替代品采购决策专刊）
+- **Substack 2 (DA 92)**: `https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client`（DWG AC1032 客户端解析架构专刊）
+
+### 4. 工程师问答与顶级置顶首答 (DA 93 | Google 精选摘要高权重)
+- **Quora 1 (DA 93)**: `https://www.quora.com/Which-is-the-best-alternative-software-for-Autodesk-Product-e-g-AutoCAD/answer/Will-Sun-52`（AutoCAD 最佳替代品技术横评）
+- **Quora 2 (DA 93)**: `https://www.quora.com/What-is-the-best-alternative-to-AutoCAD-that-is-either-free-or-affordable/answer/Will-Sun-52`（平价与免费 AutoCAD 替代方案深度解答）
+- **Quora 3 (DA 93)**: `https://www.quora.com/What-are-K-factors-and-bend-allowances-in-a-SolidWorks-sheet-metal-assignment/answer/Will-Sun-52`（SolidWorks 钣金 K 因子与折弯余量经典问答）
+
+### 5. 全球开源代码与技术规范速查平台 (DA 71 - 78 | 全新开拓渠道)
+- **Rentry.co 1 (DA 78)**: `https://rentry.co/sheet-metal-kfactor-matrix-1791533608`（精密钣金 K-Factor 与展开料工程参考）
+- **Dpaste.org 1 (DA 71)**: `https://dpaste.org/jHSg1`（DWG AC1032 离线二进制头解析 Python 脚本与 IT 合规指南）
+- **Dpaste.org 2 (DA 71)**: `https://dpaste.org/2xMUR`（跨 CAD 通用钣金 K-Factor 与展开料 AutoLISP 宏代码库）
+
+### 6. 极简工程写作与知识库平台 (DA 67 | 全新开拓渠道)
+- **Write.as 1 (DA 67)**: `https://write.as/49qos5clnrr9q`（钣金 K-Factor 计算物理学与实践工作流）
+- **Write.as 2 (DA 67)**: `https://write.as/jbhzdiznyhesz`（零上传安全架构与涉密 DWG 图纸检查指南）
+- **Write.as 3 (DA 67)**: `https://write.as/wgfugc3c99o9v`（AutoCAD vs GstarCAD vs ZWCAD 工程团队采购决策手册）
+
+### 7. 全球顶级黑客松与永久权威数字存档 (DA 87 - 96)
+- **Devpost 1 (DA 87 | Dofollow)**: `https://devpost.com/software/cadguide-tools`（CADGuide.tools 全景工程系统）
+- **Internet Archive (Wayback Machine, DA 96)**: `https://web.archive.org/web/20261009083706/https://cadguide.tools/`（全球数字图书馆永久官方权威存根）
+
 

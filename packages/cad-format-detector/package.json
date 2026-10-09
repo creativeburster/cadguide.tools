@@ -1,0 +1,35 @@
+{
+  "name": "@willsunagency/cad-format-detector",
+  "version": "1.0.0",
+  "description": "Zero-dependency pure JavaScript detector for CAD formats (DWG, DXF, STEP, IGES, IFC) with binary magic byte recognition.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "cad",
+    "dwg",
+    "dxf",
+    "step",
+    "iges",
+    "ifc",
+    "file-type",
+    "magic-bytes",
+    "engineering",
+    "cadguide"
+  ],
+  "author": "Will Sun <will@cadguide.tools>",
+  "license": "MIT",
+  "homepage": "https://cadguide.tools/toolbox/dwg-version-checker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creativeburster/cadguide.tools"
+  },
+  "bugs": {
+    "url": "https://cadguide.tools"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
