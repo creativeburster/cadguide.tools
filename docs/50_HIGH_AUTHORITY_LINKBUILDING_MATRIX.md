@@ -366,3 +366,26 @@
    - 撰写 Instructables 与 Hackaday.io 完整图文项目工程。
 3. **第三梯队（学术与白皮书分发）**：
    - 生成《2026 CAD Software Architecture & Pricing Report》PDF 并分发至 SlideShare、Scribd 与 ResearchGate。
+
+---
+
+## 🏆 实时已攻克高权威资产台账 (Verified Live Assets)
+
+### 1. 问答与社区高权重阵地 (DA 93)
+- **Quora 首答 1**：`https://www.quora.com/Which-is-the-best-alternative-software-for-Autodesk-Product-e-g-AutoCAD/answer/Will-Sun-52`（AutoCAD 2026 三大替代品全景横评）
+- **Quora 首答 2**：`https://www.quora.com/What-are-K-factors-and-bend-allowances-in-a-SolidWorks-sheet-metal-assignment/answer/Will-Sun-52`（钣金力学与 K-Factor 计算模型）
+
+### 2. 技术专刊与权威长文阵地 (DA 85 - 92)
+- **Substack 专刊 1**：`https://cadguidetools.substack.com/p/gstarcad-vs-zwcad-vs-bricscad-the`（AutoCAD 商业替代品采购决策指南）
+- **Substack 专刊 2**：`https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client`（DWG AC1032 客户端解析架构与航天军工合规）
+- **Devpost 核心项目展台**：`https://devpost.com/software/cadguide-tools`（项目 Story 全量重构，挂载公式推导与深链）
+- **Dev.to 社区长文 1**：`https://dev.to/willsun/gstarcad-vs-zwcad-vs-bricscad-choosing-the-right-autocad-alternative-in-2026-56m0`
+- **Dev.to 社区长文 2**：`https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-27f6`
+- **Dev.to 社区长文 3**：`https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-12-field-checks-that-pay-for-themselves-4c7f`
+
+### 3. 开源包与代码供应链 (DA 92 - 93 | Dofollow)
+- **npm**：`https://www.npmjs.com/package/@willsunagency/dwg-header-parser`
+- **npm**：`https://www.npmjs.com/package/@willsunagency/k-factor-calc`
+- **npm**：`https://www.npmjs.com/package/@willsunagency/cadguide-cli`
+- **PyPI**：`https://pypi.org/project/cadguide-cli/`
+

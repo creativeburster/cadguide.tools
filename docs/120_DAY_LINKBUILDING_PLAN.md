@@ -222,11 +222,11 @@
 - [ ] **Day 65**：Reddit `r/civilengineering` 回答关于图纸协作与 LISP 插件支持
 - [ ] **Day 66**：Stack Overflow / SuperUser 回答关于 DWG 转换与版本兼容性问题
 - [ ] **Day 67**：Reddit `r/3Dprinting` 分享 3D 打印切片与 CAD 导出 STEP/IGES 教程
-- [ ] **Day 68**：Quora 回答："Is GstarCAD or ZWCAD better than AutoCAD for 2D drafting?"
+- [x] **Day 68 (🎉 10/09 实机验证上线)**：Quora 权威横评首答《[Which is the best alternative software for Autodesk Product (e.g. AutoCAD)?](https://www.quora.com/Which-is-the-best-alternative-software-for-Autodesk-Product-e-g-AutoCAD/answer/Will-Sun-52)》（回答者：Will Sun）— 深度拆解 2026 三大 AutoCAD 商业替代品（GstarCAD、ZWCAD、BricsCAD），从图形内核、AutoLISP/API 兼容性、买断 TCO、macOS 支持等全维度剖析，植入 /toolbox/dwg-version-checker、/toolbox/k-factor-calculator 与 /compare 权威外链
 - [ ] **Day 69**：Reddit `r/SolidWorks` 回答关于正版授权迁移与硬件选型
 - [ ] **Day 70**：Autodesk Community Forum 潜水提供图纸排错方案（自然引用技术手册）
 - [ ] **Day 71**：Reddit `r/AskEngineers` 参与关于工程设计软件选型预算讨论
-- [ ] **Day 72**：Quora 回答："What is K-Factor in sheet metal and how to calculate it?"
+- [x] **Day 72 (🎉 09/30 实机验证上线)**：Quora 钣金热门首答《[What are K-factors and bend allowances in a SolidWorks sheet metal assignment?](https://www.quora.com/What-are-K-factors-and-bend-allowances-in-a-SolidWorks-sheet-metal-assignment/answer/Will-Sun-52)》（回答者：Will Sun）— 深度推导中性层内移物理机制与 DIN 6935 折弯扣除公式，植入 /toolbox/k-factor-calculator 与主站
 - [ ] **Day 73**：Reddit `r/macsysadmin` 分享在 macOS 部署 CAD 的经验与轻量工具推荐
 - [ ] **Day 74**：CAD Tutor 论坛 / AUGI (Autodesk User Group) 社区互动回帖
 - [ ] **Day 75**：GrabCAD 社区问答与教程板块互动
