@@ -417,7 +417,7 @@
 
 ### 8. 全新六大垂直领域攻坚矩阵 (DA 72 - 95 | 行业权威突破)
 - **领域 1：全球创客与开源硬件工程项目平台 (DA 86)**:
-  - **Hackaday.io (DA 86)**: `contact@cadguide.tools` 账号已成功注册并配置，《Client-Side DWG Binary Inspector & Precision Sheet Metal Workbench》工程物料就绪。
+  - **Hackaday.io (DA 86)**: `https://hackaday.io/cadguidetools`（官方创客主页实机上线并验证通过，公开展示工程定位与多重反向链接）。
 - **领域 2：交互式工程与数据科学研究笔记本 (DA 90 - 95)**:
   - **Google Colab (DA 95)**: `https://colab.research.google.com/github/creativeburster/cadguide.tools/blob/main/docs/notebooks/cadguide_engineering_toolkit.ipynb`（可交互运行的真实 CAD 二进制解析与钣金中性层算法测试套件）
   - **Jupyter nbviewer (DA 90)**: `https://nbviewer.org/github/creativeburster/cadguide.tools/blob/main/docs/notebooks/cadguide_engineering_toolkit.ipynb`（全球学术界标准只读渲染镜像）
