@@ -590,13 +590,13 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
-                  {tool.pricing_url && (
+                  {(tool.pricing_url || tool.official_url) && (
                     <Button
                       asChild
                       className="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold h-11 px-5 shadow-md shadow-emerald-100"
                     >
-                      <a href={tool.pricing_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        Official Pricing Page <ExternalLink className="w-4 h-4" />
+                      <a href={tool.pricing_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        {tool.pricing_url ? "Official Pricing Page" : "Official Vendor Portal"} <ExternalLink className="w-4 h-4" />
                       </a>
                     </Button>
                   )}
