@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
@@ -11,12 +10,10 @@ import { SiteNotice } from "@/components/site-notice";
 import { BackToTop } from "@/components/back-to-top";
 import Script from "next/script";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  fallback: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
-});
+const inter = {
+  variable: "",
+  className: "",
+};
 
 export const metadata: Metadata = {
   title: "CADGuide.tools | Compare CAD & BIM Software (ASM vs Parasolid)",

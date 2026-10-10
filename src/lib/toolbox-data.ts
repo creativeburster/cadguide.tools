@@ -6821,5 +6821,71 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     status: 'released',
     releasedDate: '2026-09-24'
+  },
+  {
+    slug: 'sldasm-to-step',
+    title: 'SolidWorks SLDASM to STEP Assembly Converter',
+    description: 'Convert SolidWorks SLDASM multi-component assemblies to neutral STEP (AP214/AP242) format. Preserve assembly tree hierarchy, component colors, and mates.',
+    detailDesc: 'Machine designers and machine shops frequently receive complex SolidWorks assemblies without an active SolidWorks license. Converting SLDASM assemblies into self-contained STEP AP214 or AP242 models allows downstream CNC programming, clearance checks, and cross-CAD collaboration across Siemens NX, PTC Creo, and CATIA.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['sldasm to step', 'convert sldasm to step', 'solidworks assembly to step', 'sldasm-to-step', 'step ap242 assembly converter', 'pack and go to step']
+  },
+  {
+    slug: 'catproduct-to-step',
+    title: 'CATIA CATProduct to STEP Assembly Converter',
+    description: 'Convert Dassault CATIA V5/V6 CATProduct assemblies to universal STEP AP242/AP214 solid B-Rep models with carline vehicle coordinate alignments.',
+    detailDesc: 'Aerospace and automotive Tier-1 suppliers regularly receive vehicle and airframe product structures in CATIA V5 CATProduct format. Converting them to high-precision STEP AP242 guarantees accurate solid surface topology transfer into independent CAM, CMM inspection, and tooling design platforms without multi-thousand-dollar CATIA licensing.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['catproduct to step', 'convert catproduct to step', 'catia assembly to step', 'catproduct-to-step', 'catia v5 to step ap242', 'aerospace cad converter']
+  },
+  {
+    slug: 'iam-to-step',
+    title: 'Autodesk Inventor IAM to STEP Assembly Converter',
+    description: 'Convert Autodesk Inventor IAM assemblies to neutral ISO 10303 STEP format. Preserve assembly hierarchies, Content Center parts, and sheet metal bodies.',
+    detailDesc: 'Mechanical automation engineers draft complex tooling and conveyor lines in Autodesk Inventor (.iam). Downstream suppliers working in SolidWorks or Mastercam need neutral STEP models. Converting IAM to STEP AP214/AP242 resolves Content Center standard parts and spatial joint positioning without broken references.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['iam to step', 'convert iam to step', 'inventor assembly to step', 'iam-to-step', 'inventor to step converter', 'content center pack and go']
+  },
+  {
+    slug: 'dwf-to-dwg',
+    title: 'Autodesk DWF/DWFx to Editable AutoCAD DWG Converter',
+    description: 'Convert Autodesk DWF and DWFx publish-only electronic blueprints back to fully editable AutoCAD DWG/DXF drawings with restored layers and lineweights.',
+    detailDesc: 'Autodesk DWF and DWFx files are popular for secure, read-only drawing distribution. However, contractors and consultants frequently need to revise or annotate these sheets in AutoCAD. Converting DWF to DWG reconstructs vector polylines, arcs, dimensions, and functional CAD layers from locked plot files.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['dwf to dwg', 'convert dwf to dwg', 'dwfx to dwg', 'dwf-to-dwg', 'autodwg converter', 'editable cad from dwf', 'dwf vector recovery']
+  },
+  {
+    slug: 'rvt-to-dwg',
+    title: 'Autodesk Revit RVT to AutoCAD DWG Blueprint Converter',
+    description: 'Convert Autodesk Revit RVT BIM models into layered 2D AutoCAD DWG blueprints and 3D solid drawings compliant with AIA and ISO 13567 standards.',
+    detailDesc: 'While architectural designs originate in 3D BIM (Revit), field construction trades, MEP fabricators, and municipal plan reviewers require 2D AutoCAD DWG drawings. Converting RVT models into layered DWG floor plans, elevations, and sections bridges the coordination gap between BIM offices and jobsite drafting teams.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['rvt to dwg', 'convert rvt to dwg', 'revit to dwg converter', 'rvt-to-dwg', 'bim to cad floor plan', 'revit export dwg layers']
+  },
+  {
+    slug: 'image-to-dwg',
+    title: 'Raster Image (JPG/PNG) to AutoCAD DWG Vector Converter',
+    description: 'Convert scanned paper blueprints, construction site photos, and raster JPG/PNG sketches into editable AutoCAD DWG/DXF vector paths with center-line tracing.',
+    detailDesc: 'Digitize legacy hand-drawn architectural plans, scanned civil engineering blueprints, and schematic sketches into editable vector CAD drawings. Center-line optical tracing identifies line segments, arcs, and text, turning flat bitmap pixels into layered AutoCAD DWG entities ready for drafting.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['image to dwg', 'convert image to dwg', 'jpg to dwg', 'png to dwg', 'blueprint to dwg', 'image-to-dwg', 'raster to vector cad', 'autodwg vectorizer']
   }
 ];
