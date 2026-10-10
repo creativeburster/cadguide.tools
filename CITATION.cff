@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this CAD engineering toolkit or reference its formulas, please cite it as below."
+authors:
+  - name: "CADGuide.tools Engineering Team"
+    website: "https://cadguide.tools"
+title: "CADGuide Engineering Specifications & Algorithmic Toolset: Deterministic DWG Parsing, Sheet Metal Mechanics, and CAD Concurrency Models"
+version: 1.0.0
+date-released: 2026-10-10
+url: "https://cadguide.tools"
+repository-code: "https://github.com/creativeburster/cadguide.tools"
+keywords:
+  - "computer-aided design"
+  - "dwg"
+  - "sheet metal"
+  - "k-factor"
+  - "concurrent licensing"
+  - "engineering algorithms"
+abstract: "Open technical specifications, binary header parsing matrices, sheet metal neutral axis formulations (DIN 6935), and stochastic queueing models for enterprise network license optimization."
+license: "MIT"

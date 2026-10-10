@@ -1,0 +1,45 @@
+{
+  "title": "CADGuide Engineering Specifications & Algorithmic Toolset",
+  "description": "Comprehensive mathematical derivations, binary format specifications, and queueing models for modern CAD/CAM/BIM engineering. Includes zero-server client-side DWG header validation algorithms, DIN 6935 compliant sheet metal bend allowance formulas, and Poisson-distributed concurrent network license pooling models. Full interactive tools and live calculators available at https://cadguide.tools.",
+  "creators": [
+    {
+      "name": "CADGuide.tools Engineering Team",
+      "affiliation": "CADGuide.tools"
+    }
+  ],
+  "keywords": [
+    "CAD",
+    "DWG binary specification",
+    "sheet metal mechanics",
+    "K-factor",
+    "DIN 6935",
+    "Erlang-B",
+    "concurrent licensing",
+    "engineering optimization"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://cadguide.tools",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://cadguide.tools/toolbox",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://cadguide.tools/toolbox/k-factor-calculator",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://cadguide.tools/toolbox/dwg-version-checker",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+site_name: CADGuide Engineering Specifications & Developer Docs
+site_url: https://cadguide.tools
+site_description: Open engineering standards, DWG binary format specifications, sheet metal mechanics, and CAD concurrency algorithms.
+site_author: CADGuide.tools Engineering Team
+repo_url: https://github.com/creativeburster/cadguide.tools
+repo_name: creativeburster/cadguide.tools
+docs_dir: docs
+
+nav:
+  - Home: index.md
+  - Engineering Tool Specifications:
+      - DWG Version Magic Bytes: specs/dwg-version-matrix.md
+      - Sheet Metal K-Factor & Bending: specs/k-factor-equations.md
+      - Concurrent License Modeling: specs/network-license-poisson.md
+  - Web Calculators & Portal:
+      - CADGuide.tools Official Portal: https://cadguide.tools
+      - Online Toolbox Hub: https://cadguide.tools/toolbox
+      - DWG Version Checker: https://cadguide.tools/toolbox/dwg-version-checker
+      - Sheet Metal K-Factor Calculator: https://cadguide.tools/toolbox/k-factor-calculator
+      - Concurrent License Calculator: https://cadguide.tools/toolbox/concurrent-license-calculator
+
+not_in_nav: |
+  *.md
+  !index.md
+  !specs/*.md
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: teal
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
