@@ -1460,7 +1460,7 @@ export const c4Tools: Tool[] = [
   cons: [
     "Read-only inspection and viewing utility — no parametric CAD modeling or editing",
     "Mesh format measurements (STL/OBJ) are polygonal approximations rather than exact B-Rep solids",
-    "Server-side temporary guest workspace retains files for 1 hour by default (private failed-file diagnostics do not expire automatically)"
+    "Server-side temporary workspace processing deletes guest files, previews and results after about one hour by default"
   ],
   tech_specs: {
     engine: "Server-side CAD engine with WebGL 3D visualization",
@@ -1484,7 +1484,7 @@ export const c4Tools: Tool[] = [
     },
     {
       q: "How does CADProps handle uploaded CAD files and privacy?",
-      a: "Uploaded files are processed on CADProps servers in a temporary guest workspace without requiring an account login. Files have a default retention period of one hour before automatic deletion, while privately held failed-file diagnostic copies do not expire automatically."
+      a: "Uploaded files are processed on CADProps servers in a temporary guest workspace. Guest files, previews and calculated results are deleted after about one hour by default, or earlier when the workspace is cleared. Files saved to an account follow a separate 90-day inactivity policy."
     },
     {
       q: "How much does CADProps cost?",
@@ -1509,7 +1509,7 @@ export const c4Tools: Tool[] = [
     }
   ],
   alternatives: ["dwg-trueview", "cad-reader", "dxf-medic", "cad-exchanger"],
-  last_updated: "2026-09-22",
+  last_updated: "2026-10-10",
   file_formats_in: [
     "STEP", "STP", "SLDPRT", "SLDASM", "PRT", "CATPart", "CATProduct", "IPT", "IAM", "X_T", "SAT", "JT", "IGES", "IGS", "STL", "OBJ", "3MF", "GLB", "GLTF", "ZIP"
   ],
