@@ -654,7 +654,9 @@ export const c7Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/3ds-max/overview",
-  pricing_url: "https://www.autodesk.com/products/3ds-max/overview",
+  pricing_url: "https://www.autodesk.com/products/3ds-max/subscribe",
+  trial_url: "https://www.autodesk.com/products/3ds-max/free-trial",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.5,
 

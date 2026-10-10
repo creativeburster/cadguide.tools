@@ -131,8 +131,10 @@ export const c5Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://www.plm.automation.siemens.com",
-  pricing_url: "https://plm.sw.siemens.com/en-US/nx/how-to-buy/",
+  official_url: "https://plm.sw.siemens.com/en-US/nx/",
+  pricing_url: "https://www.dex.siemens.com/",
+  trial_url: "https://trials.sw.siemens.com/nx/",
+  price_tier: "high",
   affiliate_url: null,
   score: 4.8,
 
@@ -367,7 +369,7 @@ export const c5Tools: Tool[] = [
 
   country: "USA",
   category_id: "c5",
-  pricing_type: "Subscription",
+  pricing_type: "Subscription / Perpetual",
   starting_price: 3000,
   price_period: "year",
   platforms: ["Windows"],
@@ -391,6 +393,8 @@ export const c5Tools: Tool[] = [
 
   official_url: "https://www.mastercam.com",
   pricing_url: "https://www.mastercam.com/how-to-buy/",
+  trial_url: "https://my.mastercam.com",
+  price_tier: "quote",
   affiliate_url: null,
   score: 4.9,
 

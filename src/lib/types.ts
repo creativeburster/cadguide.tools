@@ -34,6 +34,8 @@ export interface Tool {
   official_url: string;
   affiliate_url: string | null;
   pricing_url?: string;
+  trial_url?: string;
+  price_tier?: "free" | "low" | "mid" | "high" | "quote";
   score: number;
   pros: string[];
   cons: string[];

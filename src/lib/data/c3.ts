@@ -64,6 +64,9 @@ export const c3Tools: Tool[] = [
   ],
   user_scales: ["Enterprise", "Mid-Market"],
   official_url: "https://www.autodesk.com/products/revit/overview",
+  pricing_url: "https://www.autodesk.com/products/revit/subscribe",
+  trial_url: "https://www.autodesk.com/products/revit/free-trial",
+  price_tier: "high",
   affiliate_url: null,
   score: 4.9,
   pros: [
@@ -187,7 +190,7 @@ export const c3Tools: Tool[] = [
     "FBX",
     "PDF",
     "gbXML",
-    "ODX",
+    "ODBC",
   ],
 
   integrations: [
@@ -347,7 +350,10 @@ export const c3Tools: Tool[] = [
   ],
 
   user_scales: ["Mid-Market", "Small Business"],
-  official_url: "https://graphisoft.com",
+  official_url: "https://graphisoft.com/solutions/archicad",
+  pricing_url: "https://graphisoft.com/buy",
+  trial_url: "https://graphisoft.com/try",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.8,
   pros: [
@@ -603,6 +609,9 @@ export const c3Tools: Tool[] = [
 
   user_scales: ["Enterprise"],
   official_url: "https://www.tekla.com",
+  pricing_url: "https://www.tekla.com/contact",
+  trial_url: "https://www.tekla.com/try",
+  price_tier: "high",
   affiliate_url: null,
   score: 4.9,
 
@@ -808,6 +817,9 @@ export const c3Tools: Tool[] = [
 
   user_scales: ["Small Business", "Agencies"],
   official_url: "https://www.vectorworks.net",
+  pricing_url: "https://www.vectorworks.net/en-US/purchasing",
+  trial_url: "https://customers.vectorworks.net/trial",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.6,
 

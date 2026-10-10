@@ -134,7 +134,9 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.autodesk.com/products/autocad/overview",
-  pricing_url: "https://www.autodesk.com/products/autocad/overview",
+  pricing_url: "https://www.autodesk.com/products/autocad/subscribe",
+  trial_url: "https://www.autodesk.com/products/autocad/free-trial",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.8,
 
@@ -381,7 +383,7 @@ export const c1Tools: Tool[] = [
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
   starting_price: 899,
-  price_period: "year",
+  price_period: "one-time",
 
   platforms: [
     "Windows",
@@ -428,6 +430,8 @@ export const c1Tools: Tool[] = [
 
   official_url: "https://www.zwsoft.com/product/zwcad",
   pricing_url: "https://www.zwsoft.com/product/zwcad",
+  trial_url: "https://www.zwsoft.com/product/zwcad/download",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.6,
 
@@ -647,8 +651,10 @@ export const c1Tools: Tool[] = [
     "Enterprise"
   ],
 
-  official_url: "https://bricscad.octave.com/",
+  official_url: "https://www.bricsys.com/",
   pricing_url: "https://bricscad.octave.com/bricscad/lite",
+  trial_url: "https://bricscad.octave.com/",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.7,
 
@@ -1086,6 +1092,9 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.draftsight.com",
+  pricing_url: "https://www.draftsight.com/how-to-buy",
+  trial_url: "https://www.draftsight.com/how-to-buy/freetrial-form",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.3,
 
@@ -1239,7 +1248,9 @@ export const c1Tools: Tool[] = [
   ],
 
   official_url: "https://www.gstarcad.net",
-  pricing_url: "https://www.gstarcad.net",
+  pricing_url: "https://www.gstarcad.net/buy/",
+  trial_url: "https://www.gstarcad.net/download/",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.8,
 

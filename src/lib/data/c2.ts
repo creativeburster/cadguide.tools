@@ -106,6 +106,9 @@ export const c2Tools: Tool[] = [
   ],
   user_scales: ["Enterprise", "Mid-Market"],
   official_url: "https://www.solidworks.com",
+  pricing_url: "https://www.solidworks.com/how-to-buy",
+  trial_url: "https://my.solidworks.com/try-solidworks",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.9,
   pros: [
@@ -300,6 +303,9 @@ export const c2Tools: Tool[] = [
   ],
   user_scales: ["Individuals", "Small Business"],
   official_url: "https://www.sketchup.com",
+  pricing_url: "https://www.sketchup.com/plans-and-pricing",
+  trial_url: "https://www.sketchup.com/try",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.7,
   pros: [
@@ -564,7 +570,10 @@ export const c2Tools: Tool[] = [
   ],
 
   user_scales: ["Small Business", "Startups", "Individuals"],
-  official_url: "https://www.autodesk.com/fusion-360",
+  official_url: "https://www.autodesk.com/products/fusion-360/overview",
+  pricing_url: "https://www.autodesk.com/products/fusion-360/subscribe",
+  trial_url: "https://www.autodesk.com/products/fusion-360/free-trial",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.8,
   pros: [
@@ -804,6 +813,9 @@ export const c2Tools: Tool[] = [
 
   user_scales: ["Mid-Market", "Individuals"],
   official_url: "https://www.rhino3d.com",
+  pricing_url: "https://www.rhino3d.com/sales/",
+  trial_url: "https://www.rhino3d.com/download/",
+  price_tier: "low",
   affiliate_url: null,
   score: 4.9,
   pros: [
@@ -1052,6 +1064,9 @@ export const c2Tools: Tool[] = [
 
   user_scales: ["Enterprise"],
   official_url: "https://www.3ds.com/products-services/catia/",
+  pricing_url: "https://www.3ds.com/products/catia",
+  trial_url: "https://www.3ds.com/products/catia/cloud",
+  price_tier: "quote",
   affiliate_url: null,
   score: 4.7,
   pros: [
@@ -1093,7 +1108,7 @@ export const c2Tools: Tool[] = [
 
   tech_specs: {
     engine: "CGM (Convergence Geometric Modeler)",
-    multicore: "High",
+    multicore: "Limited",
     gpu_optimization: "High",
     standards: ["CATPart", "STEP", "IGES", "VDA-FS"],
   },
@@ -1205,11 +1220,11 @@ export const c2Tools: Tool[] = [
         { name: "Extensible via Python API", status: true },
         { name: "Modular Workbench-based UI", status: true },
         {
-          name: "Support for many formats (STEP, IGES, STL, DXF)",
+          name: "Support for STEP, IGES, STL, DXF (DWG via ODA converter)",
           status: true,
         },
         { name: "Sketcher with constraint solver", status: true },
-        { name: "Path (CAM) module for CNC", status: true },
+        { name: "CAM (formerly Path) workbench for CNC", status: true },
       ],
     },
   ],
@@ -1217,7 +1232,7 @@ export const c2Tools: Tool[] = [
   alternatives: ["solidworks", "fusion-360", "solvespace"],
   country: "Community/International",
   category_id: "c2",
-  pricing_type: "Free",
+  pricing_type: "Open Source",
   starting_price: 0,
   platforms: ["Windows", "macOS", "Linux"],
   industries: ["Hobbyist", "Education", "Engineering"],
@@ -1228,34 +1243,37 @@ export const c2Tools: Tool[] = [
   ],
   user_scales: ["Individuals", "Education"],
   official_url: "https://www.freecad.org",
+  pricing_url: "https://www.freecad.org/sponsor.php",
+  trial_url: "https://www.freecad.org/downloads.php",
+  price_tier: "free",
   affiliate_url: null,
   score: 4.2,
-  pros: ["Completely free", "Python scriptable", "Excellent cross-platform"],
-  cons: ["Cluttered UI", "Stability issues", "Steep learning curve"],
+  pros: ["Completely free & open source", "Python scriptable", "Excellent cross-platform"],
+  cons: ["Steep learning curve", "Occasional topological naming issues", "DWG requires converter"],
   faqs: [
     {
       q: "What is FreeCAD used for?",
-      a: "The premier open-source 3D parametric modeler. FreeCAD is a 3D modeling solution widely adopted in Hobbyist, Education, Engineering.",
+      a: "FreeCAD is the leading open-source parametric 3D CAD modeler for mechanical engineering, product design, and 3D printing across Windows, macOS, and Linux.",
     },
     {
       q: "How much does FreeCAD cost?",
-      a: "FreeCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "FreeCAD is 100% free for both personal and commercial use under the LGPL license. There are no subscription fees, paid tiers, or seat licenses.",
     },
     {
       q: "Is FreeCAD really free?",
-      a: "Yes — FreeCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — FreeCAD is free and open-source software. You can download and deploy it anywhere with zero licensing costs, supported by donations and community sponsors.",
     },
     {
       q: "What operating systems does FreeCAD support?",
-      a: "FreeCAD runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      a: "FreeCAD runs natively on Windows, macOS, and Linux as a desktop application.",
     },
     {
       q: "Which file formats does FreeCAD support?",
-      a: "FreeCAD imports FCStd, STEP, IGES, BREP, OBJ, STL and more. Export covers FCStd, STEP, IGES, BREP, OBJ, STL and more.",
+      a: "FreeCAD natively supports STEP, IGES, BREP, OBJ, STL, DXF, and IFC. DWG read/write is supported via the free ODA File Converter or LibreDWG extension.",
     },
     {
       q: "Does FreeCAD have an API for automation and customization?",
-      a: "Yes. FreeCAD exposes Python API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      a: "Yes. FreeCAD exposes a deep Python API and C++ modular architecture. You can script geometry creation, build custom workbenches, and automate exports entirely via Python.",
     },
   ],
 
@@ -1266,7 +1284,7 @@ export const c2Tools: Tool[] = [
     standards: ["STEP", "IGES", "STL", "DXF"],
   },
 
-  expert_verdict: "The best free alternative to SolidWorks.",
+  expert_verdict: "The best free, fully open-source alternative to commercial parametric CAD like SolidWorks.",
 
   pricing_breakdown: [
     {
@@ -1277,7 +1295,7 @@ export const c2Tools: Tool[] = [
     {
       tier: "Contribution",
       price: "Donate",
-      notes: "Support developers",
+      notes: "Support community developers",
     },
   ],
 
@@ -1285,7 +1303,7 @@ export const c2Tools: Tool[] = [
     "Open-source Parametric 3D Modeling",
     "BIM/AEC Workbenches",
     "Finite Element Analysis (FEA)",
-    "Robot Simulation Module",
+    "Assembly & PartDesign Workbenches",
     "2D Technical Drawing (TechDraw)",
   ],
 
@@ -1477,6 +1495,9 @@ export const c2Tools: Tool[] = [
 
   user_scales: ["Small Business", "Startups"],
   official_url: "https://www.onshape.com",
+  pricing_url: "https://www.onshape.com/en/pricing",
+  trial_url: "https://www.onshape.com/en/sign-up",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.9,
   pros: [
@@ -1763,7 +1784,10 @@ export const c2Tools: Tool[] = [
   ],
 
   user_scales: ["Mid-Market", "Small Business"],
-  official_url: "https://solidedge.siemens.com",
+  official_url: "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
+  pricing_url: "https://dex.siemens.com",
+  trial_url: "https://resources.sw.siemens.com/en-US/trial-solid-edge/",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.7,
 
@@ -1864,6 +1888,9 @@ export const c2Tools: Tool[] = [
   core_features: ["iLogic Automation", "Shared Views"],
   user_scales: ["Enterprise", "Mid-Market"],
   official_url: "https://www.autodesk.com/products/inventor/overview",
+  pricing_url: "https://www.autodesk.com/products/inventor/subscribe",
+  trial_url: "https://www.autodesk.com/products/inventor/free-trial",
+  price_tier: "high",
   affiliate_url: null,
   score: 4.7,
   pros: ["iLogic design automation", "Eco-system integration"],
@@ -2055,7 +2082,10 @@ export const c2Tools: Tool[] = [
     "Real-time Simulation",
   ],
   user_scales: ["Enterprise", "Mid-Market"],
-  official_url: "https://www.ptc.com",
+  official_url: "https://www.ptc.com/en/products/creo",
+  pricing_url: "https://www.ptc.com/en/products/creo",
+  trial_url: "https://www.ptc.com/en/products/creo/trial",
+  price_tier: "high",
   affiliate_url: null,
   score: 4.8,
   pros: [
@@ -2836,7 +2866,7 @@ export const c2Tools: Tool[] = [
     "Blender is the free and open-source 3D creation suite, covering modeling, sculpting, animation, simulation, video editing, and rendering with the Cycles and EEVEE engines. It is maintained by a worldwide community under the GNU GPL and runs on Windows, macOS, and Linux.",
   country: "Netherlands",
   category_id: "c2",
-  pricing_type: "Free",
+  pricing_type: "Open Source",
   starting_price: 0,
   platforms: ["Windows", "macOS", "Linux"],
   industries: ["Indie Games", "VFX", "Hobbyist"],
@@ -2851,34 +2881,37 @@ export const c2Tools: Tool[] = [
 
   user_scales: ["Individuals", "Startups"],
   official_url: "https://www.blender.org",
+  pricing_url: "https://fund.blender.org/",
+  trial_url: "https://www.blender.org/download/",
+  price_tier: "free",
   affiliate_url: null,
   score: 4.8,
-  pros: ["100% Free", "Cycles production renderer", "Rapid development"],
-  cons: ["Non-standard UI", "Lacks NURBS precision", "Not for CAD/CAM"],
+  pros: ["100% Free & Open Source", "Cycles production renderer", "Rapid community development"],
+  cons: ["Non-standard CAD workflow", "Mesh-based, lacks NURBS precision", "Not designed for manufacturing CNC"],
   faqs: [
     {
       q: "What is Blender used for?",
-      a: "The free and open-source 3D creation suite. Blender is a 3D modeling solution widely adopted in Indie Games, VFX, Hobbyist.",
+      a: "Blender is the world's leading open-source 3D creation suite, covering 3D modeling, sculpting, animation, rigging, rendering, simulation, and video editing.",
     },
     {
       q: "How much does Blender cost?",
-      a: "Blender is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately.",
+      a: "Blender is 100% free for everyone, including commercial studios. There are no subscription fees, paid add-on tiers, or license checks.",
     },
     {
       q: "Is Blender really free?",
-      a: "Yes — Blender is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately.",
+      a: "Yes — Blender is licensed under the GNU General Public License (GPL). You own your work completely and can use it for commercial projects with zero fees or royalties.",
     },
     {
       q: "What operating systems does Blender support?",
-      a: "Blender runs on Windows, macOS, and Linux. Deployment options include desktop.",
+      a: "Blender runs natively on Windows, macOS (including Apple Silicon optimization), and Linux.",
     },
     {
       q: "Which file formats does Blender support?",
-      a: "Blender imports BLEND, OBJ, FBX, glTF, GLB, USD and more. Export covers BLEND, OBJ, FBX, glTF, GLB, USD and more.",
+      a: "Blender imports and exports BLEND, OBJ, FBX, glTF, GLB, USD, Alembic, STL, PLY, and more.",
     },
     {
       q: "Does Blender have an API for automation and customization?",
-      a: "Yes. Blender exposes Python API with SDK bindings for Python, C, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor.",
+      a: "Yes. Blender includes a full-featured Python API (bpy). You can create custom UI panels, write specialized tools and add-ons, or run batch rendering scripts from the command line.",
     },
   ],
 

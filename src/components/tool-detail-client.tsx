@@ -334,12 +334,25 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </span>
                         </div>
                       )}
-                      {typeof tool.free_trial_days === "number" &&
-                        tool.free_trial_days > 0 && (
-                          <Badge className="bg-green-600 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px]">
-                            {tool.free_trial_days}-day free trial
+                      {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                        <a
+                          href={tool.trial_url || tool.official_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block transition-transform hover:scale-105"
+                          title="Open official trial / download page"
+                        >
+                          <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px] cursor-pointer inline-flex items-center gap-1.5">
+                            Official Free Trial Available
+                            <ExternalLink className="w-3 h-3" />
                           </Badge>
-                        )}
+                        </a>
+                      )}
+                      {["Free", "Open Source"].includes(tool.pricing_type) && !tool.discontinued && (
+                        <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px]">
+                          {tool.pricing_type === "Open Source" ? "100% Open Source" : "Free Software"}
+                        </Badge>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -353,10 +366,10 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     })}
                   </p>
 
-                  <div className="flex flex-wrap items-center gap-4 mb-10">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10">
                     <Button
                       asChild
-                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-10 shadow-xl shadow-blue-200 text-sm sm:text-base md:text-lg"
+                      className="rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-blue-200 text-sm sm:text-base md:text-lg"
                     >
                       <a
                         href={tool.affiliate_url || tool.official_url}
@@ -365,9 +378,44 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         className="flex items-center gap-2 md:gap-3"
                         aria-label={`Visit official website of ${tool.name}`}
                       >
-                        Go to Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
+                        Official Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>
                     </Button>
+                    {tool.pricing_url && (
+                      <Button
+                        asChild
+                        className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-emerald-200 text-sm sm:text-base md:text-lg"
+                      >
+                        <a
+                          href={tool.pricing_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 md:gap-3"
+                          aria-label={`View official live pricing for ${tool.name}`}
+                        >
+                          <CreditCard className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
+                          Official Live Pricing <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                        </a>
+                      </Button>
+                    )}
+                    {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="rounded-2xl border-emerald-200 text-emerald-700 hover:bg-emerald-50 font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 text-sm sm:text-base md:text-lg"
+                      >
+                        <a
+                          href={tool.trial_url || tool.official_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 md:gap-3"
+                          aria-label={`Get official free trial for ${tool.name}`}
+                        >
+                          <Sparkles className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-emerald-600" />
+                          Official Free Trial <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                        </a>
+                      </Button>
+                    )}
                     <Button
                       asChild
                       variant="outline"
@@ -377,7 +425,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         href={`/compare?ids=${tool.id}`}
                         className="flex items-center gap-2 md:gap-3"
                       >
-                        <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare with another tool
+                        <Scale className="w-4 h-4 md:w-5 md:h-5 shrink-0" /> Compare
                       </Link>
                     </Button>
                     <Button
@@ -495,16 +543,12 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 },
                 {
                   icon: <CreditCard className="w-6 h-6" />,
-                  label: "Starting At",
+                  label: "Pricing Model",
                   value: tool.discontinued
                     ? "Discontinued"
-                    : tool.starting_price > 0
-                      ? `$${tool.starting_price.toLocaleString()}${priceSuffix(tool) === "one-time" ? " one-time" : " " + priceSuffix(tool)}`
-                      : tool.quote_only
-                        ? "Contact"
-                        : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type)
-                          ? "Free"
-                          : "Contact",
+                    : ["Free", "Open Source"].includes(tool.pricing_type)
+                      ? (tool.pricing_type === "Open Source" ? "Open Source" : "Free")
+                      : tool.pricing_type || (tool.quote_only ? "Quote Only" : "Commercial"),
                 },
               ].map((stat, i) => (
                 <div
@@ -533,6 +577,41 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
                   Full Pricing Breakdown
                 </h2>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-50/80 via-indigo-50/40 to-emerald-50/50 border border-blue-100 rounded-[28px] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div className="space-y-1.5 max-w-2xl">
+                  <div className="flex items-center gap-2 text-blue-900 font-bold text-base md:text-lg">
+                    <Globe className="w-5 h-5 text-blue-600 shrink-0" />
+                    <span>Regional & Multi-Currency Pricing Notice</span>
+                  </div>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Official software licensing terms, volume discounts, educational exemptions, and renewal fees vary significantly across countries, exchange rates, and regional authorized resellers. Click below to verify real-time terms directly on the vendor portal.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-3 shrink-0">
+                  {tool.pricing_url && (
+                    <Button
+                      asChild
+                      className="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold h-11 px-5 shadow-md shadow-emerald-100"
+                    >
+                      <a href={tool.pricing_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        Official Pricing Page <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  )}
+                  {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="rounded-xl border-emerald-300 text-emerald-800 hover:bg-emerald-50 font-bold h-11 px-5"
+                    >
+                      <a href={tool.trial_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        Official Free Trial <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
@@ -1164,35 +1243,29 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </div>
                 </div>
                 <CardContent className="p-6 md:p-10 flex-1 bg-white relative z-10">
-                  <div className="flex items-baseline gap-2 mb-6 md:mb-10">
+                  <div className="flex flex-col mb-6 md:mb-10">
                     {tool.discontinued ? (
                       <span className="text-3xl md:text-4xl font-black text-red-600">
                         Discontinued
                       </span>
-                    ) : tool.starting_price > 0 ? (
+                    ) : ["Free", "Open Source"].includes(tool.pricing_type) ? (
                       <>
-                        <span className="text-slate-400 text-base md:text-lg font-bold">
-                          From
-                        </span>
                         <span className="text-4xl md:text-5xl font-black text-slate-900">
-                          ${tool.starting_price.toLocaleString()}
+                          Free
                         </span>
-                        <span className="text-slate-400 font-bold text-sm">
-                          {priceSuffix(tool)}
+                        <span className="text-emerald-600 font-bold text-xs uppercase tracking-wider mt-1">
+                          {tool.pricing_type === "Open Source" ? "100% Open Source" : "Free Forever"}
                         </span>
                       </>
-                    ) : tool.quote_only ? (
-                      <span className="text-3xl md:text-4xl font-black text-slate-900">
-                        Contact for pricing
-                      </span>
-                    ) : ["Free", "Open Source", "Freemium"].includes(tool.pricing_type) ? (
-                      <span className="text-4xl md:text-5xl font-black text-slate-900">
-                        Free
-                      </span>
                     ) : (
-                      <span className="text-3xl md:text-4xl font-black text-slate-900">
-                        Contact for pricing
-                      </span>
+                      <>
+                        <span className="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+                          {tool.pricing_type || "Commercial License"}
+                        </span>
+                        <span className="text-slate-400 font-bold text-xs mt-1">
+                          Official Pricing Varies by Country
+                        </span>
+                      </>
                     )}
                   </div>
 
@@ -1201,28 +1274,51 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       <div className="w-7 h-7 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       </div>
-                      100% Genuine License
+                      100% Genuine Vendor License
                     </li>
                     <li className="flex items-center gap-4 text-sm font-black text-slate-600">
                       <div className="w-7 h-7 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       </div>
-                      Official Support & Updates
+                      Direct Official Support & Updates
                     </li>
                   </ul>
 
-                  <Button
-                    asChild
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-16 md:h-20 rounded-[24px] shadow-2xl shadow-blue-200 text-lg md:text-xl transition-all active:scale-95"
-                  >
-                    <a
-                      href={tool.pricing_url || tool.affiliate_url || tool.official_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <div className="space-y-3">
+                    <Button
+                      asChild
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-14 md:h-16 rounded-[20px] shadow-xl shadow-blue-200 text-base md:text-lg transition-all active:scale-95"
                     >
-                      Buy Now
-                    </a>
-                  </Button>
+                      <a
+                        href={tool.pricing_url || tool.affiliate_url || tool.official_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <CreditCard className="w-5 h-5 shrink-0" />
+                        <span>View Official Pricing</span>
+                        <ExternalLink className="w-4 h-4 opacity-70 shrink-0" />
+                      </a>
+                    </Button>
+                    {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="w-full border-2 border-emerald-200 text-emerald-700 hover:bg-emerald-50 font-black h-12 md:h-14 rounded-[18px] text-sm md:text-base transition-all"
+                      >
+                        <a
+                          href={tool.trial_url || tool.official_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Sparkles className="w-4 h-4 text-emerald-600 shrink-0" />
+                          <span>Official Free Trial</span>
+                          <ExternalLink className="w-3.5 h-3.5 opacity-70 shrink-0" />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
                   <p className="text-center text-[10px] text-slate-300 mt-8 font-black uppercase tracking-[0.2em]">
                     Verified Vendor Link
                   </p>

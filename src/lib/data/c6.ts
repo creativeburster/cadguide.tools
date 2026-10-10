@@ -96,7 +96,7 @@ export const c6Tools: Tool[] = [
   ],
 
   alternatives: [
-    "eagle",
+    "kicad",
     "orcad",
     "eplan-electric-p8"
   ],
@@ -131,7 +131,9 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.altium.com",
-  pricing_url: "https://www.altium.com",
+  pricing_url: "https://www.altium.com/pricing",
+  trial_url: "https://www.altium.com/free-trials",
+  price_tier: "mid",
   affiliate_url: null,
   score: 4.9,
 
@@ -154,30 +156,30 @@ export const c6Tools: Tool[] = [
     },
     {
       q: "How much does Altium Designer cost?",
-      a: "Altium Designer starts at $3,850 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+      a: "Altium Designer is sold through annual subscriptions, typically starting around $1,990 to $3,850/year per seat depending on tier (Standard, Pro, Enterprise). Contact Altium or an authorized partner for regional team pricing."
     },
     {
       q: "Does Altium Designer offer a free trial?",
-      a: "Yes — Altium Designer ships with a 15-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+      a: "Yes — Altium Designer offers a free trial directly from the vendor. The trial gives full access to test schematic capture and 3D PCB layout before subscribing."
     },
     {
       q: "What operating systems does Altium Designer support?",
-      a: "Altium Designer runs on Windows. Deployment options include desktop, cloud."
+      a: "Altium Designer runs natively on 64-bit Windows."
     },
     {
       q: "Which file formats does Altium Designer support?",
-      a: "Altium Designer imports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581 and more. Export covers SchDoc, PcbDoc, Gerber, ODB++, IPC-2581, STEP and more."
+      a: "Altium Designer imports and exports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581, DXF, and 3D STEP models."
     },
     {
       q: "Does Altium Designer have an API for automation and customization?",
-      a: "Yes. Altium Designer exposes Delphi-based API / Altium 365 REST with SDK bindings for Delphi, JavaScript, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+      a: "Yes. Altium Designer exposes a Delphi-based script API with JavaScript, VBScript, and DelphiScript bindings, as well as modern Altium 365 cloud REST APIs for component lifecycle integration."
     }
   ],
 
   tech_specs: {
-    engine: "Altium Unified Modeler",
+    engine: "Proprietary EDA Engine (Delphi-based)",
     multicore: "Moderate",
-    gpu_optimization: "High",
+    gpu_optimization: "High (DirectX)",
     standards: [
       "Gerber",
       "ODB++",
@@ -284,8 +286,8 @@ export const c6Tools: Tool[] = [
   name: "Eagle",
   slug: "eagle",
   logo_url: "/logos/eagle.svg",
-  short_desc: "Discontinued PCB design software — standalone EAGLE ended in 2021; its features now live in Fusion 360 Electronics.",
-  description: "Autodesk EAGLE was one of the most widely used EDA packages for schematic capture and PCB layout. Autodesk ended standalone EAGLE sales in June 2021 and merged its schematic and board technology into Fusion 360 Electronics. Legacy EAGLE projects open directly in Fusion 360, and new designs should start there instead of EAGLE.",
+  short_desc: "Discontinued PCB design software — Autodesk ended all standalone EAGLE licensing on June 7, 2026; its capabilities now live in Autodesk Fusion Electronics.",
+  description: "Autodesk EAGLE was a historically popular EDA tool for schematic capture and PCB layout. Autodesk ceased new standalone subscriptions in 2021 and officially decommissioned licensing servers on June 7, 2026. Standalone EAGLE no longer runs; legacy .sch and .brd files can be imported directly into Autodesk Fusion Electronics.",
 
   pricing_tiers: [
     {
@@ -413,7 +415,7 @@ export const c6Tools: Tool[] = [
   expert_verdict: "The standard for mid-level professional PCB design.",
   last_updated: "2026-09-02",
   discontinued: true,
-  discontinued_note: "Autodesk has fully integrated EAGLE into Autodesk Fusion 360 and ceased standalone sales and renewal in early 2026. EAGLE .sch and .brd files open seamlessly in Fusion Electronics.",
+  discontinued_note: "Autodesk officially sunset EAGLE on June 7, 2026. Standalone licensing servers have been decommissioned. All EAGLE design files (.sch, .brd, .lbr) open seamlessly in Autodesk Fusion Electronics.",
   version: "9.6 (final standalone release)",
   file_formats_in: ["BRD", "SCH", "LBR", "DXF", "Gerber"],
   file_formats_out: ["BRD", "SCH", "Gerber (RS-274X)", "Excellon", "PDF", "DXF"]
@@ -1749,6 +1751,8 @@ export const c6Tools: Tool[] = [
 
   official_url: "https://www.kicad.org",
   pricing_url: "https://www.kicad.org/donate/",
+  trial_url: "https://www.kicad.org/download/",
+  price_tier: "free",
   affiliate_url: null,
   score: 4.7,
 
