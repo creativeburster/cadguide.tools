@@ -425,8 +425,9 @@
   - **Zenodo (CERN 欧洲核子研究组织) / DataCite (DA 88)**: 配置原生 `CITATION.cff` 与 `.zenodo.json`，收录《CADGuide Engineering Specifications & Algorithmic Toolset》，官方 `related_identifiers` 直链 `https://cadguide.tools`。
 - **领域 4：全球工程技术文档与知识库发布体系 (DA 88)**:
   - **Read the Docs (DA 88) / MkDocs Material**: 开源工程标准规范文档体系（`cadguide-tools.readthedocs.io`），配备 `.readthedocs.yaml`、`mkdocs.yml` 与 `docs/specs/*`，全站各篇深度植入反向外链与交互计算器入口。
-- **领域 5：在线开发者即时沙盒与微应用托管 (DA 83)**:
+- **领域 5：在线开发者即时沙盒与微应用托管 (DA 83 - 89)**:
   - **StackBlitz (DA 83)**: `https://stackblitz.com/github/creativeburster/cadguide.tools`（基于 WebContainer 引擎零安装秒级在线运行 CADGuide.tools 全站应用，HTTP 200 验证畅通）。
+  - **JSFiddle (DA 89)**: `https://jsfiddle.net/byLdajup/`（可交互运行的《AutoCAD DWG Binary Magic Bytes Inspector》纯前端微应用沙盒，双重反向锚点直通主站与工具箱）。
 - **领域 6：设计系统与工业 CAD 资源社区 (DA 72 - 87)**:
   - **GrabCAD (DA 72) / Thingiverse (DA 87)**: 覆盖 1000 万+ 注册机械工程师、工业制造者与 CAD 极客，技术教程与 Q&A 问答物料就绪。
 
