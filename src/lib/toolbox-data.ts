@@ -6887,5 +6887,148 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     origin: 'native',
     releasedDate: '2026-10-10',
     keywords: ['image to dwg', 'convert image to dwg', 'jpg to dwg', 'png to dwg', 'blueprint to dwg', 'image-to-dwg', 'raster to vector cad', 'autodwg vectorizer']
+  },
+  {
+    slug: 'catpart-to-stl',
+    title: 'Dassault CATIA CATPart to STL 3D Printing Converter',
+    description: 'Convert CATIA CATPart solid models to clean watertight binary STL meshes for Bambu Lab, Cura, and Prusa 3D printing slicers.',
+    detailDesc: 'Aerospace and automotive engineers frequently need to rapid-prototype CATIA components on commercial 3D printers. Converting CATPart solids into manifold, watertight STL meshes with calibrated chordal deviation ensures accurate dimensional fit for functional prototypes.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['catpart to stl', 'convert catpart to stl', 'catia to stl', 'catpart-to-stl', 'catia 3d printing slicer']
+  },
+  {
+    slug: 'nx-prt-to-stl',
+    title: 'Siemens NX PRT to STL 3D Printing Converter',
+    description: 'Convert Siemens NX native PRT solid models to watertight binary STL meshes. Optimize surface facet tolerance for SLA, SLS, and FDM 3D printing.',
+    detailDesc: 'Siemens NX part files (.prt) contain rich Parasolid B-Rep geometry. Shop floor technicians and toolmakers need fast conversion to STL for 3D printed workholding fixtures and molds without tying up expensive NX CAD seats.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['nx prt to stl', 'convert nx prt to stl', 'nx to stl', 'nx-prt-to-stl', 'ug nx 3d print mesh']
+  },
+  {
+    slug: 'creo-prt-to-stl',
+    title: 'PTC Creo PRT to STL 3D Printing Converter',
+    description: 'Convert PTC Creo and Pro/ENGINEER PRT models to binary STL format. Optimize chord height and angle control for additive manufacturing.',
+    detailDesc: 'Consumer product designers drafting in PTC Creo need to export prototypes directly to 3D printers. Converting Creo PRT files to clean, watertight STL eliminates common slicing mesh repair warnings in PrusaSlicer and Bambu Studio.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['creo prt to stl', 'convert creo to stl', 'proe to stl', 'creo-prt-to-stl', 'creo 3d printing']
+  },
+  {
+    slug: 'catpart-to-3mf',
+    title: 'CATIA CATPart to 3MF Multi-Material Slicing Converter',
+    description: 'Convert CATIA CATPart files to modern 3D Manufacturing Format (3MF) containers. Retain component color coding, metadata, and watertight mesh topology.',
+    detailDesc: 'Modern 3D printing has transitioned from single-color STL to feature-rich 3MF format, popularized by Bambu Lab and Prusa. Industrial designers working in CATIA export complex parts directly to 3MF to preserve part colors, materials, and print orientation.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['catpart to 3mf', 'convert catpart to 3mf', 'catia to 3mf', 'catpart-to-3mf', 'bambu lab catia converter']
+  },
+  {
+    slug: 'fbx-to-stl',
+    title: 'Autodesk FBX to STL 3D Printing Converter',
+    description: 'Convert Autodesk FBX 3D models and character assets into watertight STL meshes for 3D printing. Bake skinning poses and eliminate non-manifold faces.',
+    detailDesc: 'Game environment artists, digital sculptors, and miniature enthusiasts regularly download FBX models designed for real-time rendering. Converting FBX to STL bakes the skeletal pose and solidifies mesh shells into printable watertight solids.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['fbx to stl', 'convert fbx to stl', 'fbx-to-stl', 'print fbx model', 'game model to 3d print']
+  },
+  {
+    slug: 'glb-to-stl',
+    title: 'Web3D GLB/glTF to STL 3D Printing Slicer Converter',
+    description: 'Convert Web3D GLB and glTF models to watertight binary STL meshes. Decompress Draco geometry and prepare browser assets for 3D printing.',
+    detailDesc: 'Online 3D repositories, mobile AR captures, and WebGL configurators store assets in binary GLB format. Converting GLB to STL rotates the model from WebGL Y-Up to 3D printer Z-Up and decodes compressed Draco mesh buffers.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['glb to stl', 'convert glb to stl', 'gltf to stl', 'glb-to-stl', 'print web3d model']
+  },
+  {
+    slug: 'obj-to-glb',
+    title: 'Wavefront OBJ to Web3D GLB Converter',
+    description: 'Convert Wavefront OBJ models and MTL textures to compact binary GLB files with Draco compression for Three.js, Shopify 3D, and mobile AR.',
+    detailDesc: 'Wavefront OBJ is an uncompressed ASCII format resulting in large file sizes with loose texture files. For e-commerce 3D product viewers (Shopify, Amazon) and Three.js web apps, converting OBJ to a single self-contained, Draco-compressed GLB file cuts bandwidth by up to 85%.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['obj to glb', 'convert obj to glb', 'obj-to-glb', 'obj to web3d', 'shopify 3d model converter']
+  },
+  {
+    slug: 'fbx-to-glb',
+    title: 'Autodesk FBX to Web3D GLB Converter',
+    description: 'Convert Autodesk FBX 3D models with animations and PBR materials to compact binary GLB files for Three.js, Babylon.js, and web-based AR.',
+    detailDesc: 'Game engines and digital content suites (Maya, 3ds Max) export complex scenes in FBX format. Converting FBX to GLB enables seamless real-time viewing in web applications with full animation and PBR material fidelity.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['fbx to glb', 'convert fbx to glb', 'fbx-to-glb', 'fbx to webgl', 'fbx to threejs']
+  },
+  {
+    slug: 'stl-to-glb',
+    title: '3D Printing STL to Web3D GLB Converter',
+    description: 'Convert 3D printing STL files to web-optimized GLB models. Apply Draco compression, compute smooth surface normals, and assign aesthetic materials.',
+    detailDesc: 'Manufacturers and 3D printing hubs want to display 3D models directly on their websites for online quoting and interactive portfolio reviews. Converting STL to GLB reduces file size by ~80% and applies smooth, attractive metallic or plastic PBR rendering.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['stl to glb', 'convert stl to glb', 'stl-to-glb', 'stl web viewer', 'stl to webgl']
+  },
+  {
+    slug: 'dwg-version-converter',
+    title: 'AutoCAD DWG Version Downgrader & Format Converter',
+    description: 'Convert and save down latest AutoCAD DWG drawings (AutoCAD 2026, 2024, 2021) to legacy formats (2018, 2013, 2010, 2004, R14) without AutoCAD.',
+    detailDesc: 'AutoCAD periodically updates its underlying DWG database schema (AC1032, AC1027). When project partners run older CAD releases, opening newer DWG files triggers the "Drawing file is not valid" error. A version downgrader saves files down to universal legacy formats without requiring AutoCAD.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['dwg version converter', 'downgrade dwg', 'save down autocad version', 'dwg-version-converter', 'autocad drawing file not valid fix']
+  },
+  {
+    slug: 'dwg-to-svg',
+    title: 'AutoCAD DWG to Scalable Vector Graphics (SVG) Web Converter',
+    description: 'Convert AutoCAD DWG blueprints to clean, scalable W3C SVG vector graphics. Retain functional CAD layers, true colors, and crisp zooming for web dashboards.',
+    detailDesc: 'Web developers and facility managers need to embed interactive architectural floor plans and mechanical schematics into modern web dashboards. Converting DWG to SVG delivers crisp, lossless, interactive vector geometry directly in the browser DOM with layer toggle support.',
+    category: 'converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['dwg to svg', 'convert dwg to svg', 'cad to svg', 'dwg-to-svg', 'web cad vector graphics']
+  },
+  {
+    slug: 'dgn-to-step',
+    title: 'Bentley MicroStation DGN to STEP Converter',
+    description: 'Convert Bentley MicroStation DGN 3D civil and structural models to neutral STEP format. Bridge infrastructure engineering with mechanical CAD.',
+    detailDesc: 'Civil infrastructure and bridge designs are created in Bentley MicroStation, but mechanical components (bearings, expansion joints, structural steel embeds) are manufactured in SolidWorks or Inventor. Converting DGN models to neutral STEP files bridges the data exchange between civil contractors and mechanical fabricators.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['dgn to step', 'convert dgn to step', 'microstation to step', 'dgn-to-step', 'civil cad to mcad']
+  },
+  {
+    slug: 'nwd-to-ifc',
+    title: 'Autodesk Navisworks NWD to openBIM IFC Converter',
+    description: 'Convert Autodesk Navisworks NWD federated coordination models to openBIM IFC2x3/IFC4 format for clash detection in Solibri, Archicad, and BIMcollab.',
+    detailDesc: 'General contractors frequently compile master coordination models into Autodesk Navisworks NWD files. However, public infrastructure projects and openBIM mandates require neutral IFC format for validation in Solibri or Archicad. Converting NWD cache files to IFC enables vendor-neutral compliance.',
+    category: '3d-converter',
+    status: 'released',
+    origin: 'native',
+    releasedDate: '2026-10-10',
+    keywords: ['nwd to ifc', 'convert nwd to ifc', 'navisworks to ifc', 'nwd-to-ifc', 'openbim clash detection']
   }
 ];
