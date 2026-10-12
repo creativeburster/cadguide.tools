@@ -1519,11 +1519,11 @@ export const c4Tools: Tool[] = [
 },
 {
   id: "t255",
-  name: "3D Studio Web Tools",
+  name: "3Dstudio.co Web Tools",
   slug: "3dstudio-web-tools",
   logo_url: "/logos/3dstudio.svg",
   short_desc: "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
-  description: "3D Studio Web Tools is a suite of free, client-side 3D and CAD viewers and converters developed by architectural visualization studio 3D Studio (Tallinn, Estonia). Designed for zero-friction workflows, all core file processing runs locally inside the user's browser using WebAssembly engines (Online3DViewer, web-ifc, occt-import-js, LibreDWG) with no account registration or file uploads to external servers. It supports viewing and inspecting architectural IFC (2x3, 4, 4.3), mechanical STEP/IGES, 3D printing STL/3MF meshes, AutoCAD DWG/DXF drawings, and native Revit/SolidWorks files, alongside vector PDF and 3D format conversion (18 input formats to 8 output formats).",
+  description: "3Dstudio.co Web Tools is a suite of free, client-side 3D and CAD viewers and converters developed by architectural visualization studio 3Dstudio.co (Tallinn, Estonia). Designed for zero-friction workflows, all core file processing runs locally inside the user's browser using WebAssembly engines (Online3DViewer, web-ifc, occt-import-js, LibreDWG) with no account registration or file uploads to external servers. It supports viewing and inspecting architectural IFC (2x3, 4, 4.3), mechanical STEP/IGES, 3D printing STL/3MF meshes, AutoCAD DWG/DXF drawings, and native Revit/SolidWorks files, alongside vector PDF and 3D format conversion (18 input formats to 8 output formats).",
   country: "Estonia",
   category_id: "c4",
   pricing_type: "Free",
@@ -1562,8 +1562,8 @@ export const c4Tools: Tool[] = [
   expert_verdict: "A privacy-first, zero-signup web toolkit that solves the everyday frustration of opening proprietary CAD, BIM, and 3D printing files without having to launch multi-gigabyte desktop software.",
   faqs: [
     {
-      q: "What are 3D Studio Web Tools?",
-      a: "3D Studio Web Tools are a free collection of browser-based utilities developed by 3D Studio in Estonia. They allow users to open, inspect, measure, and convert IFC, STEP, STL, DWG, DXF, and 3D models directly in modern web browsers without installation or user registration."
+      q: "What are 3Dstudio.co Web Tools?",
+      a: "3Dstudio.co Web Tools are a free collection of browser-based utilities developed by 3Dstudio.co in Estonia. They allow users to open, inspect, measure, and convert IFC, STEP, STL, DWG, DXF, and 3D models directly in modern web browsers without installation or user registration."
     },
     {
       q: "Are files uploaded to external servers?",
@@ -1574,7 +1574,7 @@ export const c4Tools: Tool[] = [
       a: "The 3D converter reads 18 formats including STEP, IFC, FBX, OBJ, STL, glTF/GLB, 3DS, and 3DM, and can export to 8 formats including GLB, OBJ with MTL materials, STL, STEP, 3MF, and PLY."
     },
     {
-      q: "Does 3D Studio Web Tools cost anything?",
+      q: "Does 3Dstudio.co Web Tools cost anything?",
       a: "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks."
     }
   ],
@@ -1595,7 +1595,7 @@ export const c4Tools: Tool[] = [
     }
   ],
   alternatives: ["cadprops", "cad-reader", "dwg-trueview", "dxf-medic", "bimcollab-zoom"],
-  last_updated: "2026-10-02",
+  last_updated: "2026-10-12",
   file_formats_in: [
     "IFC", "STEP", "STP", "IGES", "IGS", "STL", "3MF", "OBJ", "DWG", "DXF", "GLTF", "GLB", "FBX", "3DS", "3DM", "RVT", "SLDPRT"
   ],
