@@ -136,6 +136,8 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "mastercam": "mastercam.png",
   "matrixgold": "matrixgold.png",
   "maya": "maya.svg",
+  "mcad": "mcad.svg",
+  "mechcad": "mechcad.svg",
   "medusa4": "medusa4.png",
   "meshlab": "meshlab.png",
   "metacam": "metacam.png",

@@ -53,6 +53,8 @@ const FEATURE_MAP = {
   "gstarcad": ["drafting-detailing"],
   "qcad": ["drafting-detailing"],
   "librecad": ["drafting-detailing"],
+  "mcad": ["drafting-detailing", "sheet-metal"],
+  "mechcad": ["parametric-modeling", "integrated-cam", "simulation-fea", "sheet-metal"],
 };
 
 function parseTsFile(filePath, varName, regexToReplace) {

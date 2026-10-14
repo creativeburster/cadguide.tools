@@ -2928,7 +2928,7 @@ export const c1Tools: Tool[] = [
   last_updated: "2026-09-20",
   discontinued: true,
   discontinued_note: "CorelCAD was pulled from sale on January 9, 2024 and support ended December 31, 2025. Corel directs former users to Graebert ARES Commander.",
-  free_trial_days: 30,
+  free_trial_days: 0,
 
   languages: [
     "English",
@@ -3534,5 +3534,95 @@ export const c1Tools: Tool[] = [
   last_updated: "2026-09-17",
   file_formats_in: ["DWG", "DXF", "DWT", "DWF"],
   file_formats_out: ["DWG", "DXF", "DWT", "PDF", "PNG", "JPG"]
+},
+{
+  id: "t256",
+  name: "MCAD 2026",
+  slug: "mcad",
+  logo_url: "/logos/mcad.svg",
+  short_desc: "Professional Windows 2D CAD drafting and DWG/DXF editor with built-in sheet nesting and CNC laser toolpaths.",
+  description: "MCAD 2026 is a professional Windows 2D drafting and DWG editor developed by Mechatronics Designed Co., Ltd. (MET) in Thailand for mechanical machine drawings, factory layouts, and electrical schematics. Serving as a cost-effective, perpetual AutoCAD LT alternative, MCAD works natively with standard DWG and DXF formats while providing familiar layer management, command line execution, object snaps, and drafting dimensions. Uniquely tailored for manufacturing shop floors, it includes built-in true-shape sheet nesting and direct G-code generation for laser, plasma, and CNC cutting.",
+  country: "Thailand",
+  category_id: "c1",
+  pricing_type: "Subscription / Perpetual",
+  starting_price: 20,
+  platforms: ["Windows", "Web"],
+  industries: ["Mechanical Engineering", "Automation", "Sheet Metal", "Factory Layout", "CNC Machining", "Electrical Drafting"],
+  core_features: [
+    "Native DWG and DXF file read/write compatibility across AutoCAD releases",
+    "Familiar 2D drafting interface with command line, layers, snaps, and dimensioning",
+    "Built-in true-shape sheet nesting for hundreds of parts per sheet",
+    "Direct G-code generation and path optimization for CNC laser and plasma cutting",
+    "Factory floor layout planning and electrical schematic drafting modules",
+    "Perpetual buyout license with optional 30-day free trial"
+  ],
+  user_scales: ["Individuals", "Small Business", "Machine Shops", "Enterprise"],
+  official_url: "https://www.mechdesigned.com/en/software/mcad/?utm_source=cadguide",
+  affiliate_url: null,
+  score: 4.5,
+  pros: [
+    "Native DWG/DXF support allows frictionless transition from AutoCAD with standard commands",
+    "Built-in true-shape sheet nesting saves procurement costs without requiring third-party CAM plugins",
+    "Permanent buyout license with no forced recurring subscriptions",
+    "Includes free 30-day full-featured trial"
+  ],
+  cons: [
+    "2D drafting only — does not support 3D parametric solids (requires MECHCAD)",
+    "Windows 10/11 64-bit focused desktop installer (macOS requires web edition or VM)",
+    "Smaller global plugin ecosystem compared to legacy AutoCAD ObjectARX"
+  ],
+  tech_specs: {
+    engine: "Native 2D vector CAD kernel with integrated nesting engine",
+    multicore: "Multi-threaded nesting computation",
+    gpu_optimization: "DirectX 11 / OpenGL hardware-accelerated 2D drafting",
+    standards: ["DWG (AutoCAD R14-2026)", "DXF", "G-Code RS-274D", "ISO 128", "ISO 2768"]
+  },
+  expert_verdict: "A formidable, shop-floor-ready 2D CAD drafting package that delivers seamless DWG compatibility plus integrated nesting and CNC laser toolpaths that AutoCAD users usually have to buy separate plugins for.",
+  faqs: [
+    {
+      q: "What is MCAD 2026?",
+      a: "MCAD 2026 is a professional Windows 2D drafting and DWG editing software suite developed by Mechatronics Designed Co., Ltd. (MET) in Thailand, designed for mechanical drawings, factory layouts, and CNC cutting preparation."
+    },
+    {
+      q: "Can MCAD replace AutoCAD for 2D drafting?",
+      a: "Yes. MCAD opens and saves native DWG and DXF files, uses familiar drafting commands, layers, and snaps, and allows engineers to work without converting or losing drawing data."
+    },
+    {
+      q: "Does MCAD include sheet nesting?",
+      a: "Yes. Unlike general drafting CAD software, MCAD includes built-in true-shape sheet nesting capable of optimizing hundreds of parts directly back into the drawing layout."
+    },
+    {
+      q: "Is there a free trial for MCAD?",
+      a: "Yes, MET provides a 30-day fully functional free trial for Windows with no credit card required."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Monthly Subscription",
+      price: "$20",
+      period: "month",
+      features: [
+        "Full 2D DWG/DXF drafting",
+        "Command line & layers",
+        "Standard updates included"
+      ]
+    },
+    {
+      name: "Perpetual License",
+      price: "$420",
+      period: "one-time",
+      features: [
+        "Permanent commercial license",
+        "True-shape sheet nesting",
+        "G-code CNC laser export",
+        "12 months updates included"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["autocad", "draftsight", "zwcad", "brics-cad", "nano-cad"],
+  last_updated: "2026-10-14",
+  file_formats_in: ["DWG", "DXF", "SVG", "PDF"],
+  file_formats_out: ["DWG", "DXF", "SVG", "PDF", "GCODE"]
 }
 ];

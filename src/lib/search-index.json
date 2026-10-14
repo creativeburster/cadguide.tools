@@ -3537,6 +3537,58 @@
     "country": "Estonia"
   },
   {
+    "id": "t256",
+    "name": "MCAD 2026",
+    "slug": "mcad",
+    "short_desc": "Professional Windows 2D CAD drafting and DWG/DXF editor with built-in sheet nesting and CNC laser toolpaths.",
+    "score": 4.5,
+    "logo_url": "/logos/mcad.svg",
+    "official_url": "https://www.mechdesigned.com/en/software/mcad/?utm_source=cadguide",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Automation",
+      "Sheet Metal",
+      "Factory Layout",
+      "CNC Machining",
+      "Electrical Drafting"
+    ],
+    "features": [
+      "drafting-detailing",
+      "sheet-metal"
+    ],
+    "country": "Thailand"
+  },
+  {
+    "id": "t257",
+    "name": "MECHCAD 2026",
+    "slug": "mechcad",
+    "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
+    "score": 4.6,
+    "logo_url": "/logos/mechcad.svg",
+    "official_url": "https://www.mechdesigned.com/en/software/mechcad/?utm_source=cadguide",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Industrial Automation",
+      "Machinery Manufacturing",
+      "Tool & Die",
+      "Sheet Metal",
+      "CNC Machining"
+    ],
+    "features": [
+      "parametric-modeling",
+      "integrated-cam",
+      "simulation-fea",
+      "sheet-metal"
+    ],
+    "country": "Thailand"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",
