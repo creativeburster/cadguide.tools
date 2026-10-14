@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The repair rate for files with severely damaged headers is average"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/dwg-trueview/overview",
     "verdict": "The first line of defense when reporting errors when opening a map, completely executed offline, It is a native command that engineers must master. "
   },
   {
@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The commercial version requires payment"
     ],
-    "officialUrl": "https://anydwg.com/",
+    "officialUrl": "https://anydwg.com/dwg-repair.html",
     "verdict": "High-performance third-party independent drawing repair solution, when local CAD Excellent replacement when unable to run RECOVER due to severe error crashes. "
   },
   {

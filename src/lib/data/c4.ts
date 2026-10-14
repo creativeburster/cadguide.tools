@@ -1353,7 +1353,6 @@ export const c4Tools: Tool[] = [
   category_id: "c4",
   pricing_type: "Freemium",
   starting_price: 0,
-  price_period: "one-time",
   platforms: ["Web"],
   industries: ["Laser Cutting", "Metal Fabrication", "Manufacturing"],
   core_features: ["DXF & SVG diagnosis", "Geometry issue report", "Automatic repair", "Local in-browser processing"],

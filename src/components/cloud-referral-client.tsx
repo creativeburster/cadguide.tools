@@ -67,11 +67,14 @@ export default function CloudReferralClient({
           </p>
         </div>
         <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 space-y-3 print:border-slate-300">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-wider">
+            Directory & Benchmark
+          </div>
           <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-            Referral Evaluation Standard
+            Cloud Tool Directory & Security Benchmark
           </h4>
           <p className="text-[11px] text-slate-500 leading-relaxed font-bold">
-            We perform rigorous performance benchmarks on global CAD cloud services. All recommendations are based on real-world test results. Links go directly to official channels. 
+            We perform rigorous performance and telemetry benchmarks on external cloud CAD converters and utilities. All recommendations link directly to official vendor download portals or open-source repositories.
           </p>
         </div>
       </div>

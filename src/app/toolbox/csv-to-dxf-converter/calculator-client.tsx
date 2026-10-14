@@ -98,11 +98,15 @@ export default function CSVToDXFClient() {
 
     // Polyline
     if (outputMode === 'polyline' || outputMode === 'both') {
+      const is3D = rows.some((r) => r.z !== 0);
       dxf.push(
         '0', 'POLYLINE',
         '8', layerName,
         '66', '1',
-        '70', '0',
+        '10', '0.0',
+        '20', '0.0',
+        '30', '0.0',
+        '70', is3D ? '8' : '0',
       );
       for (const row of rows) {
         dxf.push(
@@ -111,9 +115,10 @@ export default function CSVToDXFClient() {
           '10', row.x.toFixed(6),
           '20', row.y.toFixed(6),
           '30', row.z.toFixed(6),
+          '70', is3D ? '32' : '0',
         );
       }
-      dxf.push('0', 'SEQEND');
+      dxf.push('0', 'SEQEND', '8', layerName);
     }
 
     dxf.push('0', 'ENDSEC');

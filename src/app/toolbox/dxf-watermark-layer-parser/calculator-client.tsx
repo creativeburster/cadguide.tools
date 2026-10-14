@@ -119,6 +119,12 @@ export default function DxfParserClient() {
           detectedSignatures.push('ACAD_ZOMBIE_REG (Educational Stamp Propagation Proxy)');
         }
 
+        // 3. Evaluation Plot Stamp Marker
+        if (text.includes('ACAD_EVALUATION_MARK')) {
+          isEducational = true;
+          detectedSignatures.push('ACAD_EVALUATION_MARK (Educational Plot Stamp Marker)');
+        }
+
         // 3. AutoCAD version header scan
         for (let i = 0; i < Math.min(lines.length, 500); i++) {
           if (lines[i].trim() === '$ACADVER') {
@@ -196,6 +202,8 @@ export default function DxfParserClient() {
                 currentIsFrozen = false;
                 currentIsLocked = false;
                 currentIsPlottable = true;
+              } else if (value === 'ENDTAB') {
+                break;
               } else {
                 state = 'in_layer_table';
               }
@@ -331,20 +339,17 @@ export default function DxfParserClient() {
         let count = 0;
 
         const evalRegex = /ACAD_EVALUATION_MARK/gi;
-        const draftingRegex = /AcDbDraftingFormat/gi;
         const zombieRegex = /ACAD_ZOMBIE_REG/gi;
 
         const evalMatches = fullText.match(evalRegex);
-        const draftingMatches = fullText.match(draftingRegex);
         const zombieMatches = fullText.match(zombieRegex);
 
         count += (evalMatches ? evalMatches.length : 0);
-        count += (draftingMatches ? draftingMatches.length : 0);
         count += (zombieMatches ? zombieMatches.length : 0);
 
-        cleanedText = cleanedText.replace(evalRegex, 'ACAD_NORMAL_MARK');
-        cleanedText = cleanedText.replace(draftingRegex, 'AcDbNormalFormat');
-        cleanedText = cleanedText.replace(zombieRegex, 'ACAD_ZOMBIE_CLN');
+        // Sanitize educational registration tokens without breaking ObjectARX C++ class hierarchies
+        cleanedText = cleanedText.replace(evalRegex, 'ACAD_USER_DATA');
+        cleanedText = cleanedText.replace(zombieRegex, 'ACAD_APP_CLEAN');
 
         const blob = new Blob([cleanedText], { type: 'text/plain;charset=utf-8' });
         const url = URL.createObjectURL(blob);

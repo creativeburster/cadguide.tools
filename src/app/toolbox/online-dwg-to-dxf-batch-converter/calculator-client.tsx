@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The client needs to be downloaded and the command line parameters need to be configured."
     ],
-    "officialUrl": "https://www.opendesign.com/",
+    "officialUrl": "https://www.opendesign.com/guestfiles/oda_file_converter",
     "verdict": "The industry's most rigorous drawing format interchange cornerstone, DWG / DXF The conversion result data of each major version is the purest, without any redundant junk dictionary. "
   },
   {

@@ -249,8 +249,8 @@ export const c7Tools: Tool[] = [
   country: "South Korea",
   category_id: "c7",
   pricing_type: "Subscription",
-  starting_price: 600,
-  price_period: "year",
+  starting_price: 50,
+  price_period: "month",
 
   platforms: [
     "Windows",
@@ -829,14 +829,15 @@ export const c7Tools: Tool[] = [
     }
   ],
 
-  country: "Germany",
+  country: "USA / Germany (Maxon)",
   category_id: "c7",
   pricing_type: "Subscription",
   starting_price: 399,
   price_period: "year",
 
   platforms: [
-    "Windows"
+    "Windows",
+    "macOS"
   ],
 
   industries: ["Game Development", "Film & VFX", "Character Art"],
@@ -3113,7 +3114,7 @@ export const c7Tools: Tool[] = [
   pricing_type: "Subscription",
   starting_price: 395,
   price_period: "year",
-  platforms: ["Windows"],
+  platforms: ["Windows", "macOS"],
 
   industries: [
     "AEC",
@@ -4400,7 +4401,6 @@ export const c7Tools: Tool[] = [
   starting_price: 0,
   quote_only: true,
   free_trial_days: 14,
-  price_period: "month",
 
   platforms: [
     "Web",
@@ -4559,10 +4559,10 @@ export const c7Tools: Tool[] = [
   logo_url: "/logos/pic2cad.png",
   short_desc: "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
   description: "pic2CAD turns pictures of people, objects, and furniture into clean line drawings and exports them as DXF, SVG, and PNG, ready to drop straight into a CAD file. Where ordinary vectorizers trace pixel edges and tangle curves around every shadow, pic2CAD reads what is actually in the picture and draws it as a line block. It targets architects and everyday CAD users building their own entourage and furniture blocks from real people and furniture, plus laser cutting and engraving workflows. Conversion modes cover Picture accurate, Subject only, and an Orthographic view (beta) that scales the drawing to a real-world height, and a shared library of 300+ community blocks ships with it.",
+  country: "USA",
   category_id: "c7",
   pricing_type: "Freemium",
   starting_price: 0,
-  price_period: "month",
   platforms: ["Web"],
   industries: ["Architecture", "Interior Design", "Laser Cutting"],
   core_features: ["Photo → line drawing conversion", "DXF / SVG / PNG export", "Orthographic entourage view (beta)", "300+ shared 2D block library"],

@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Rules need to be constantly adjusted based on software updates"
     ],
-    "officialUrl": "https://github.com/",
+    "officialUrl": "https://github.com/crazy-max/WindowsSpyBlocker",
     "verdict": "Enterprise firewall rule set for minimizing outbound CAD telemetry in line with corporate privacy and security policy (e.g. GDPR data minimization). "
   }
 ];

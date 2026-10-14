@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "You need to download the client, which is about a few hundred in size.MB"
     ],
-    "officialUrl": "https://www.solidworks.com/",
+    "officialUrl": "https://www.solidworks.com/product/edrawings",
     "verdict": "The most authoritative image viewing and distribution tool officially produced by Dassault Systèmes, 100% Restore surface mapping and dynamic motion pairs. "
   },
   {

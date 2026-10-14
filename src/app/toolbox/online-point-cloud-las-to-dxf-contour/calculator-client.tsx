@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Commercial full-featured version license price is high"
     ],
-    "officialUrl": "https://www.bluemarblegeo.com/",
+    "officialUrl": "https://www.bluemarblegeo.com/global-mapper/",
     "verdict": "Irreplaceable terrain and geographical data processing platform, reconstructing three-dimensional landforms from radar elevation data (Contours) The functionality is second to none. "
   },
   {
@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The hardware requirements for running are extremely high"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/recap-pro/overview",
     "verdict": "Autodesk's cornerstone in municipal and geographical engineering, directly constructing surfaces and fitting contours to point clouds (TIN Surface) The most professional. "
   },
   {
@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Pure command line interface, difficult for non-professionals to use"
     ],
-    "officialUrl": "https://rapidlasso.de/",
+    "officialUrl": "https://rapidlasso.de/lastools/",
     "verdict": "A well-known point cloud data stream batch processing artifact in the surveying and mapping industry. las2dem and las2shp can generate hundreds of millions of terrain contours in seconds. "
   }
 ];

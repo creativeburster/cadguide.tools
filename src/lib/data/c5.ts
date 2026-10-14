@@ -673,7 +673,7 @@ export const c5Tools: Tool[] = [
     "fusion-360"
   ],
 
-  country: "USA",
+  country: "Israel",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 4000,
@@ -825,7 +825,7 @@ export const c5Tools: Tool[] = [
     "mastercam"
   ],
 
-  country: "USA",
+  country: "Belgium",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 5000,
@@ -9000,7 +9000,7 @@ export const c5Tools: Tool[] = [
   logo_url: "/logos/tekla-tedds.ico",
   short_desc: "Trimble Tekla Tedds — calculation library and document generator for structural design.",
   description: "Tekla Tedds is Trimble's library-driven calculation and document-generation tool for structural engineers — pre-built code-compliant calc templates (AISC, ACI, Eurocode, BS) that produce signed, archived design reports.",
-  country: "USA",
+  country: "Finland",
   category_id: "c5",
   pricing_type: "Subscription",
   starting_price: 2400,
@@ -9861,8 +9861,7 @@ export const c5Tools: Tool[] = [
   price_period: "year",
 
   platforms: [
-    "Windows",
-    "macOS"
+    "Windows"
   ],
 
   industries: ["Civil Engineering", "Bridge Engineering", "Structural Engineering", "Infrastructure", "Construction", "Transportation", "Government"],
@@ -10087,8 +10086,7 @@ export const c5Tools: Tool[] = [
   price_period: "year",
 
   platforms: [
-    "Windows",
-    "macOS"
+    "Windows"
   ],
 
   industries: ["Building Design", "Architecture", "Structural Engineering", "Construction", "Industrial Engineering", "General Engineering"],
@@ -11062,7 +11060,6 @@ export const c5Tools: Tool[] = [
   category_id: "c5",
   pricing_type: "Freemium",
   starting_price: 0,
-  price_period: "one-time",
   platforms: ["Web"],
   industries: ["Laser Cutting", "Metal Fabrication", "Woodworking", "Manufacturing"],
   core_features: ["SVG & DXF import", "Spacing & rotation control", "Grain-direction rules", "Local in-browser nesting"],

@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Requires installation of additional Node.js compiler driver"
     ],
-    "officialUrl": "https://code.visualstudio.com/",
+    "officialUrl": "https://marketplace.visualstudio.com/items?itemName=Autodesk.autolispext",
     "verdict": "Microsoft and Autodesk jointly create a modern LISP development environment, It is the first choice to replace the old VLIDE command line compilation.. "
   },
   {

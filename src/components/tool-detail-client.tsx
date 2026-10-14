@@ -8,7 +8,7 @@ import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { RelatedTools } from '@/components/related-tools';
-import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Calendar, Tag, Languages, Cloud, Code2, Lock, Star } from "lucide-react";
+import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Calendar, Tag, Languages, Cloud, Code2, Lock, Star, Heart, Download } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { priceSuffix } from "@/lib/utils";
@@ -398,7 +398,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         Official Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>
                     </Button>
-                    {tool.pricing_url && (
+                    {!["Free", "Open Source"].includes(tool.pricing_type) && tool.pricing_url && (
                       <Button
                         asChild
                         className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-emerald-200 text-sm sm:text-base md:text-lg"
@@ -415,6 +415,23 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </a>
                       </Button>
                     )}
+                    {tool.donate_url && (
+                      <Button
+                        asChild
+                        className="rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-rose-200 text-sm sm:text-base md:text-lg"
+                      >
+                        <a
+                          href={tool.donate_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 md:gap-3"
+                          aria-label={`Sponsor official project of ${tool.name}`}
+                        >
+                          <Heart className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-white fill-white/20" />
+                          Sponsor Project <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                        </a>
+                      </Button>
+                    )}
                     {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
                       <Button
                         asChild
@@ -426,10 +443,19 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2 md:gap-3"
-                          aria-label={`Get official free trial for ${tool.name}`}
+                          aria-label={["Free", "Open Source"].includes(tool.pricing_type) ? `Download ${tool.name}` : `Get official free trial for ${tool.name}`}
                         >
-                          <Sparkles className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-emerald-600" />
-                          Official Free Trial <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                          {["Free", "Open Source"].includes(tool.pricing_type) ? (
+                            <>
+                              <Download className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-emerald-600" />
+                              Official Download <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                            </>
+                          ) : (
+                            <>
+                              <Sparkles className="w-4 h-4 md:w-5 md:h-5 shrink-0 text-emerald-600" />
+                              Official Free Trial <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                            </>
+                          )}
                         </a>
                       </Button>
                     )}
@@ -607,13 +633,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 shrink-0">
-                  {(tool.pricing_url || tool.official_url) && (
+                  {!["Free", "Open Source"].includes(tool.pricing_type) && (tool.pricing_url || tool.official_url) && (
                     <Button
                       asChild
                       className="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold h-11 px-5 shadow-md shadow-emerald-100"
                     >
                       <a href={tool.pricing_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         {tool.pricing_url ? "Official Pricing Page" : "Official Vendor Portal"} <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  )}
+                  {tool.donate_url && (
+                    <Button
+                      asChild
+                      className="rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold h-11 px-5 shadow-md shadow-rose-100"
+                    >
+                      <a href={tool.donate_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <Heart className="w-4 h-4 text-white fill-white/20" />
+                        Sponsor Project <ExternalLink className="w-4 h-4" />
                       </a>
                     </Button>
                   )}
@@ -624,7 +661,16 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       className="rounded-xl border-emerald-300 text-emerald-800 hover:bg-emerald-50 font-bold h-11 px-5"
                     >
                       <a href={tool.trial_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        Official Free Trial <ExternalLink className="w-4 h-4" />
+                        {["Free", "Open Source"].includes(tool.pricing_type) ? (
+                          <>
+                            <Download className="w-4 h-4 text-emerald-600" />
+                            Official Download <ExternalLink className="w-4 h-4" />
+                          </>
+                        ) : (
+                          <>
+                            Official Free Trial <ExternalLink className="w-4 h-4" />
+                          </>
+                        )}
                       </a>
                     </Button>
                   )}
@@ -1345,14 +1391,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-14 md:h-16 rounded-[20px] shadow-xl shadow-blue-200 text-base md:text-lg transition-all active:scale-95"
                     >
                       <a
-                        href={tool.pricing_url || tool.affiliate_url || tool.official_url}
+                        href={["Free", "Open Source"].includes(tool.pricing_type) ? (tool.trial_url || tool.official_url) : (tool.pricing_url || tool.affiliate_url || tool.official_url)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2"
                       >
                         {["Free", "Open Source"].includes(tool.pricing_type) ? (
                           <>
-                            <ExternalLink className="w-5 h-5 shrink-0" />
+                            <Download className="w-5 h-5 shrink-0" />
                             <span>Download Official Build</span>
                           </>
                         ) : (
@@ -1364,7 +1410,25 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         )}
                       </a>
                     </Button>
-                    {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                    {tool.donate_url && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="w-full border-2 border-rose-200 text-rose-700 hover:bg-rose-50 font-black h-12 md:h-14 rounded-[18px] text-sm md:text-base transition-all"
+                      >
+                        <a
+                          href={tool.donate_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <Heart className="w-4 h-4 text-rose-600 fill-rose-500/20 shrink-0" />
+                          <span>Sponsor Project</span>
+                          <ExternalLink className="w-3.5 h-3.5 opacity-70 shrink-0" />
+                        </a>
+                      </Button>
+                    )}
+                    {!["Free", "Open Source"].includes(tool.pricing_type) && (tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
                       <Button
                         asChild
                         variant="outline"

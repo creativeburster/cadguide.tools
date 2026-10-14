@@ -1750,7 +1750,7 @@ export const c6Tools: Tool[] = [
   ],
 
   official_url: "https://www.kicad.org",
-  pricing_url: "https://www.kicad.org/donate/",
+  donate_url: "https://www.kicad.org/donate/",
   trial_url: "https://www.kicad.org/download/",
   price_tier: "free",
   affiliate_url: null,

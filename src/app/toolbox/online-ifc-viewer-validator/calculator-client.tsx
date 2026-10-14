@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The default UI interface is simple, Need to beautify it yourself"
     ],
-    "officialUrl": "https://github.com/xBimTeam",
+    "officialUrl": "https://github.com/xBimTeam/XbimWindowsUI",
     "verdict": "Representative of open source BIM data parsing library, Very suitable for software developers to build their own web verification backend. "
   }
 ];

@@ -17,9 +17,9 @@ const SHORTCUTS_DATA: ShortcutItem[] = [
   { keys: 'AEC', command: 'Content Catalog', category: 'general', description: 'Open the Civil 3D content catalog.' },
   { keys: 'AUS', command: 'Survey', category: 'general', description: 'Open the Survey Toolspace tab.' },
   { keys: 'AUB', command: 'Toolbox', category: 'general', description: 'Open the Civil 3D Toolbox palette.' },
-  { keys: 'AUS', command: 'Settings', category: 'general', description: 'Open Settings tab in Toolspace.' },
+  { keys: 'AUE', command: 'Settings', category: 'general', description: 'Open Settings tab in Toolspace.' },
   { keys: 'AUP', command: 'Prospector', category: 'general', description: 'Open Prospector tab in Toolspace.' },
-  { keys: 'AUS', command: 'Survey Tab', category: 'general', description: 'Switch to Survey tab.' },
+  { keys: 'AUT', command: 'Toolspace Switch', category: 'general', description: 'Switch active Toolspace tab view.' },
   { keys: 'Ctrl + Shift + T', command: 'Toolspace Toggle', category: 'general', description: 'Toggle Toolspace visibility.' },
   { keys: 'Ctrl + Shift + P', command: 'Prospector Toggle', category: 'general', description: 'Toggle Prospector palette.' },
   { keys: 'Ctrl + Shift + I', command: 'Inquiry', category: 'general', description: 'Open the Inquiry tool for geometric queries.' },
@@ -53,7 +53,7 @@ const SHORTCUTS_DATA: ShortcutItem[] = [
   { keys: 'APRC', command: 'Profile Curve', category: 'profile', description: 'Add a vertical curve (parabolic, circular) to profile.' },
   { keys: 'APRS', command: 'Profile Station', category: 'profile', description: 'Edit profile station and elevation data.' },
   { keys: 'APRB', command: 'Profile Band', category: 'profile', description: 'Add profile view bands (station, elevation).' },
-  { keys: 'APRS', command: 'Superimpose', category: 'profile', description: 'Superimpose one profile onto another for comparison.' },
+  { keys: 'APRU', command: 'Superimpose', category: 'profile', description: 'Superimpose one profile onto another for comparison.' },
 
   // Corridor
   { keys: 'ACO', command: 'Create Corridor', category: 'corridor', description: 'Create a corridor from alignment, profile, and assembly.' },

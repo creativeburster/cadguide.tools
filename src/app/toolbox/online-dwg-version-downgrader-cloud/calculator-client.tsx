@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Only supports Windows and the installation package is large"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/dwg-trueview/overview",
     "verdict": "Autodesk officially provides free image viewing and drawing version converter, with the highest safety factor, Ensure that the CAD database nodes are intact. "
   },
   {
@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Commercial version requires license purchase"
     ],
-    "officialUrl": "https://anydwg.com/",
+    "officialUrl": "https://anydwg.com/dwg-converter.html",
     "verdict": "A very classic batch drawing version reconstruction program, the operation is pure and neat, Data compatibility is good after downgrading. "
   },
   {

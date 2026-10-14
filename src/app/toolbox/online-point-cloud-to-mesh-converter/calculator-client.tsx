@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Requires premium subscription package, average price/performance ratio"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/recap-pro/overview",
     "verdict": "The mapping point cloud processing tool under the Autodesk ecosystem supports batch conversion of photos and scanned point clouds and CAD Use it as a reference in the software. "
   }
 ];

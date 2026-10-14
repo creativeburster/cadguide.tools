@@ -1207,7 +1207,7 @@ export const c2Tools: Tool[] = [
     {
       name: "Community",
       price: "0",
-      period: "/yr",
+      period: "forever",
       features: ["Full feature set", "Community support", "Open source"],
       is_popular: true,
     },
@@ -1243,7 +1243,7 @@ export const c2Tools: Tool[] = [
   ],
   user_scales: ["Individuals", "Education"],
   official_url: "https://www.freecad.org",
-  pricing_url: "https://www.freecad.org/sponsor.php",
+  donate_url: "https://www.freecad.org/sponsor.php",
   trial_url: "https://www.freecad.org/downloads.php",
   price_tier: "free",
   affiliate_url: null,
@@ -2337,7 +2337,7 @@ export const c2Tools: Tool[] = [
     {
       name: "Free",
       price: "0",
-      period: "/yr",
+      period: "forever",
       features: ["2 Designs", "Low-res export", "Basic tools"],
     },
     {
@@ -2385,7 +2385,6 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 0,
-  price_period: "year",
   platforms: ["Windows", "macOS", "iOS"],
   industries: ["Industrial Design", "Prototyping", "AEC"],
 
@@ -2881,7 +2880,7 @@ export const c2Tools: Tool[] = [
 
   user_scales: ["Individuals", "Startups"],
   official_url: "https://www.blender.org",
-  pricing_url: "https://fund.blender.org/",
+  donate_url: "https://fund.blender.org/",
   trial_url: "https://www.blender.org/download/",
   price_tier: "free",
   affiliate_url: null,
@@ -3289,9 +3288,9 @@ export const c2Tools: Tool[] = [
 
   country: "China",
   category_id: "c2",
-  pricing_type: "Perpetual",
-  starting_price: 2995,
-  price_period: "one-time",
+  pricing_type: "Subscription / Perpetual",
+  starting_price: 2000,
+  price_period: "year",
   platforms: ["Windows"],
   industries: ["Manufacturing", "Mechanical", "Mold Design"],
 
@@ -3876,7 +3875,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 0,
-  platforms: ["Android", "iOS"],
+  platforms: ["Windows", "Web", "iOS", "Android"],
   industries: ["Engineering", "Manufacturing", "Automotive"],
   core_features: ["3D Viewing", "Measurement", "Format Support"],
   user_scales: ["Individuals", "Small Business"],
@@ -3985,7 +3984,7 @@ export const c2Tools: Tool[] = [
   category_id: "c2",
   pricing_type: "Freemium",
   starting_price: 0,
-  platforms: ["Android", "iOS"],
+  platforms: ["Windows", "macOS", "Linux", "Web", "iOS", "Android"],
   industries: ["Engineering", "Manufacturing", "Automotive"],
   core_features: ["3D Viewing", "Format Conversion", "Cross-platform"],
   user_scales: ["Individuals", "Small Business"],

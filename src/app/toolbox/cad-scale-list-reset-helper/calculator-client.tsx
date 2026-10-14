@@ -80,15 +80,31 @@ export default function CadScaleListResetClient() {
     code += `  ;; Step 3: Reactivate and create a clean scale list dictionary\n`;
     code += `  (command "-SCALELISTEDIT" "Reset" "Yes" "Exit")\n`;
     code += `  \n`;
-    code += `  ;; Step 4: According to your configuration, Automatic writing of preserved/reconstructed standard scales on demand\n`;
+    code += `  ;; Step 4: Define safe scale builder to prevent command lockup on existing scales\n`;
+    code += `  (defun _cadguide_add_scale (sName sRatio / sDict exists)\n`;
+    code += `    (vl-load-com)\n`;
+    code += `    (setq exists nil)\n`;
+    code += `    (setq sDict (dictsearch (namedobjdict) "ACAD_SCALELIST"))\n`;
+    code += `    (if sDict\n`;
+    code += `      (foreach item sDict\n`;
+    code += `        (if (= (car item) 350)\n`;
+    code += `          (if (= (strcase (cdr (assoc 300 (entget (cdr item))))) (strcase sName))\n`;
+    code += `            (setq exists T)\n`;
+    code += `          )\n`;
+    code += `        )\n`;
+    code += `      )\n`;
+    code += `    )\n`;
+    code += `    (if (not exists)\n`;
+    code += `      (command "-SCALELISTEDIT" "Add" sName sRatio "Exit")\n`;
+    code += `    )\n`;
+    code += `  )\n\n`;
 
     const selectedScales = scales.filter((s) => s.selected);
     if (selectedScales.length > 0) {
       code += `  (princ "\\n[CADGuide] Rebuilding the selected standard scale structure...")\n`;
       selectedScales.forEach((item) => {
-        // Syntax: (command "-SCALELISTEDIT" "Add" "Name" "Ratio" "Exit")
-        // Example: (command "-SCALELISTEDIT" "Add" "1:50" "1:50" "Exit")
-        code += `  (command "-SCALELISTEDIT" "Add" "${item.name}" "${item.ratio}" "Exit")\n`;
+        const escapedName = item.name.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+        code += `  (_cadguide_add_scale "${escapedName}" "${item.ratio}")\n`;
       });
     }
 

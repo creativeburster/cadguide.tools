@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "You need to learn certain configuration syntax"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/revit/overview",
     "verdict": "The unquestionable benchmark for BIM data quality assurance, Integrate directly into the Revit interface, Ability to conduct in-depth scans of dozens of indicators on RFA. "
   },
   {
@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The commercial version costs more"
     ],
-    "officialUrl": "https://www.solibri.com/",
+    "officialUrl": "https://www.solibri.com/solibri-office",
     "verdict": "An advanced quality inspection tool favored for large-scale project design coordination and cost accounting, with attribute dictionary auditing (Attribute Checker) Extremely hardcore. "
   },
   {

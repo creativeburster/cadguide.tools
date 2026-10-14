@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Requires installation of CAD local client"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://www.autodesk.com/products/autocad/features",
     "verdict": "The official bottom-level graphics comparison function has the strongest algorithm, Not only can it identify line movements of a few millimeters, but also changes in block attributes.. "
   },
   {
@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Limited deep change recognition for Nested Blocks"
     ],
-    "officialUrl": "https://www.draftsight.com/",
+    "officialUrl": "https://www.draftsight.com/features/drawing-compare",
     "verdict": "A local map version comparison suite with excellent performance and still has good support for large files.. "
   }
 ];

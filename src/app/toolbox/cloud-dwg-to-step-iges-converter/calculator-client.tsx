@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "A cloud account needs to be loaded and the speed is limited by network speed"
     ],
-    "officialUrl": "https://www.autodesk.com/",
+    "officialUrl": "https://viewer.autodesk.com/",
     "verdict": "Autodesk cloud modeling platform has its own processing DWG 3D The inherent advantages of databases. "
   },
   {

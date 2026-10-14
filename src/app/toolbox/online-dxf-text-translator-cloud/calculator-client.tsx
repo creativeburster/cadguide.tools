@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Need to mount the API key of the translation engine"
     ],
-    "officialUrl": "https://github.com/",
+    "officialUrl": "https://github.com/mozman/ezdxf",
     "verdict": "CAD-based native API The batch text export and in-situ replacement scripts written are the most secure and efficient solutions.. "
   },
   {

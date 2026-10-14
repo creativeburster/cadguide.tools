@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The domain name list requires regular manual maintenance"
     ],
-    "officialUrl": "https://github.com/",
+    "officialUrl": "https://github.com/crazy-max/WindowsSpyBlocker",
     "verdict": "By blocking known telemetry URLs for Autodesk/Dassault Systèmes, Static blocking of local network requests with zero impact, simple and pure. "
   },
   {

@@ -21,7 +21,7 @@ export default function RegistryCleanClient() {
   const [cleanHklm, setCleanHklm] = useState(false);
   const [cleanAppData, setCleanAppData] = useState(true);
   const [cleanFlexlm, setCleanFlexlm] = useState(false);
-  const [cleanTemp, setCleanTemp] = useState(true);
+  const [cleanTemp, setCleanTemp] = useState(false);
   
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
@@ -88,26 +88,34 @@ echo.
 `;
     }
 
-    // FLEXlm activation local files
+    // FLEXlm / Licensing activation local files
     if (cleanFlexlm) {
-      script += `:: 4. Clean FLEXlm authorization service local cache (Note: This step will clear the activation status, Need to re-register)
-echo Backing up and removing FLEXlm activation profile...
+      script += `:: 4. Reset licensing authorization local cache
+echo Checking AutoCAD licensing architecture...
+echo [NOTE] For AutoCAD 2020-2027 (AdskLicensing architecture):
+echo To reset single product licensing without affecting other Autodesk apps, run:
+echo "%CommonProgramFiles(x86)%\\Autodesk Shared\\AdskLicensing\\Current\\helper\\AdskLicensingInstHelper.exe" change -pk <ProductKey> -pv 2024.0.0.F -lm ""
+echo.
 set "FLEX_DIR=%ProgramData%\\FLEXnet"
 if exist "%FLEX_DIR%" (
-    copy "%FLEX_DIR%\\adskflex*" "%BACKUP_DIR%\\" > nul
-    del /f /q "%FLEX_DIR%\\adskflex*"
-    echo ✓ Safely removed from FLEXnet directory adsk Activate profile
+    echo Backing up legacy FLEXnet activation profile to %BACKUP_DIR%...
+    copy "%FLEX_DIR%\\adskflex*" "%BACKUP_DIR%\\" > nul 2>&1
+    del /f /q "%FLEX_DIR%\\adskflex*" > nul 2>&1
+    echo ✓ Legacy FLEXnet tokens backed up and cleaned. Note: Re-registration may be required.
 )
 echo.
 `;
     }
 
-    // Temp folder clean
+    // Temp folder clean (CAD-specific only)
     if (cleanTemp) {
-      script += `:: 5. Clean Windows temporary junk cache
-echo Clearing the system temporary Temp directory...
-del /s /f /q "%TEMP%\\*.*" > nul
-echo ✓ Temporary system garbage cleanup is completed. 
+      script += `:: 5. Safely clean CAD-specific temporary files (does not wipe entire system temp)
+echo Clearing AutoCAD temporary files (*.ac$, *.bak, *.sv$, *.tmp)...
+del /f /q "%TEMP%\\*.ac$" > nul 2>&1
+del /f /q "%TEMP%\\*.bak" > nul 2>&1
+del /f /q "%TEMP%\\*.sv$" > nul 2>&1
+del /f /q "%TEMP%\\*AutoCAD*.tmp" > nul 2>&1
+echo ✓ CAD temporary caches have been safely cleaned. 
 echo.
 `;
     }
@@ -293,8 +301,8 @@ pause`;
                   className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
                 />
                 <div className="text-base">
-                  <span className="font-bold text-slate-700 block">Windows System Temp temporary directory</span>
-                  <span className="text-slate-400">Clean up excess left over from the CAD run that was not automatically erased `.tmp` Temporary files. </span>
+                  <span className="font-bold text-slate-700 block">CAD Temporary Cache Files (*.ac$, *.bak, *.sv$)</span>
+                  <span className="text-slate-400">Safely clean AutoCAD autosave and temporary crash files without wiping unrelated system temp files.</span>
                 </div>
               </label>
             </div>

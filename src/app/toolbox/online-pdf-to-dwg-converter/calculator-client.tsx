@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "The gradient fill of large drawings is occasionally missing"
     ],
-    "officialUrl": "https://anydwg.com/",
+    "officialUrl": "https://anydwg.com/pdf-to-dwg.html",
     "verdict": "AnyDWG Decades of experience in basic CAD development, Its native engine is restoring CAD dotted lines, The algorithm is most stable when using center lines and labels. "
   },
   {

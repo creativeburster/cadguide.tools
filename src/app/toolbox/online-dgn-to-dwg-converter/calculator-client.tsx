@@ -27,7 +27,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Commercial version licensing is extremely expensive"
     ],
-    "officialUrl": "https://www.bentley.com/",
+    "officialUrl": "https://www.bentley.com/software/bentley-view/",
     "verdict": "Undoubtedly the most accurate conversion solution. Use its built-in conversion wizard to precisely define DGN levels Logic to DWG layers. "
   },
   {
@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "No visual GUI primitive parameter fine-tuning"
     ],
-    "officialUrl": "https://www.opendesign.com/",
+    "officialUrl": "https://www.opendesign.com/guestfiles/oda_file_converter",
     "verdict": "Professional low-level format converter maintained by the Open Design Alliance (ODA), For DGN V7/V8 and DWG The mapping mechanism between versions is perfect. "
   },
   {
@@ -81,7 +81,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Fitting Bentley-specific line styles requires manual configuration"
     ],
-    "officialUrl": "https://anydwg.com/",
+    "officialUrl": "https://anydwg.com/dgn-to-dwg.html",
     "verdict": "Professional third-party conversion gadget, runs independently, Suitable for rapid delivery during daily cross-software collaboration. "
   }
 ];

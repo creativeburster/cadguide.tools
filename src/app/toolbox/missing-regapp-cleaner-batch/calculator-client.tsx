@@ -71,11 +71,52 @@ export default function MissingRegappCleanerClient() {
     return code;
   }, [isStartupRun, isPurgeAll, isAutoSaveClose, logFileReport]);
 
-  // Compile BAT script payload
+  // Compile BAT script payload using official headless accoreconsole
   const batCode = useMemo(() => {
+    return `@echo off
+setlocal enabledelayedexpansion
+echo ===================================================
+echo   CADGuide Batch Drawing RegApp Optimizer
+echo   Powered by AutoCAD Headless Core Console (accoreconsole.exe)
+echo ===================================================
 
-    // Fix escaping issues for raw presentation to the web users
-    return `@echo off\n:: Windows Batch compiler\nset SCR_FILE=batch_clean.scr\necho ; CAD Batch Clean > %SCR_FILE%\n\nfor %%f in (*.dwg) do (\n    echo OPEN "%%f" >> %SCR_FILE%\n    echo (load "cleanup.lsp") >> %SCR_FILE%\n    echo CleanDwg >> %SCR_FILE%\n    echo QSAVE >> %SCR_FILE%\n    echo CLOSE >> %SCR_FILE%\n)\necho Script generation successful! In AutoCAD Type SCRIPT to run batch_clean.scr\npause`;
+:: 1. Prepare Single Drawing Cleaner Script
+echo (load "cleanup.lsp") > clean_run.scr
+echo CleanDwg >> clean_run.scr
+echo _qsave >> clean_run.scr
+echo _quit >> clean_run.scr
+
+:: 2. Locate accoreconsole.exe in standard AutoCAD install paths
+set "ACCORE="
+for %%Y in (2027 2026 2025 2024 2023 2022 2021 2020) do (
+    if exist "C:\\Program Files\\Autodesk\\AutoCAD %%Y\\accoreconsole.exe" (
+        set "ACCORE=C:\\Program Files\\Autodesk\\AutoCAD %%Y\\accoreconsole.exe"
+        goto :FOUND
+    )
+)
+:FOUND
+if "%ACCORE%"=="" (
+    echo [WARNING] accoreconsole.exe was not detected in default directories.
+    echo Please edit this .bat file and set your custom AutoCAD directory path.
+    pause
+    exit /b
+)
+
+echo Found AutoCAD Engine: %ACCORE%
+echo Processing all .dwg files in current folder in headless silent mode...
+echo.
+
+for %%F in (*.dwg) do (
+    echo Optimizing: %%F ...
+    "%ACCORE%" /i "%%F" /s clean_run.scr /l en-US > nul 2>&1
+    echo [OK] Done: %%F
+)
+
+if exist clean_run.scr del clean_run.scr > nul 2>&1
+echo ===================================================
+echo ✓ Batch optimization completed for all drawings!
+echo ===================================================
+pause`;
   }, []);
 
   // Compile SCR command sequences
@@ -261,12 +302,12 @@ export default function MissingRegappCleanerClient() {
               
               {cleanProgress === 'idle' && (
                 <div className="text-center py-4 flex flex-col items-center gap-2">
-                  <span className="text-3xl animate-bounce">🗑️</span>
+                  <span className="text-3xl animate-bounce">📊</span>
                   <button
                     onClick={triggerCleanSimulation}
                     className="px-4 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-black text-base transition-all cursor-pointer"
                   >
-                    Start simulating deep cleansing
+                    Simulate Expected Size Reduction
                   </button>
                 </div>
 )}
@@ -305,7 +346,7 @@ export default function MissingRegappCleanerClient() {
 
           <div className="text-sm text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
             <Info className="w-4 h-4 text-blue-400 flex-shrink-0" />
-            <span>Tip: real DWG Run this in AutoCAD LISP After scripting, the volume shrinkage is 70%-95% between, depending on Regapp Bloat ratio. </span>
+            <span>Benchmark Notice: This simulator provides size reduction estimates. To optimize and strip RegApps from your real DWG drawings, download the generated headless BAT or LISP script below.</span>
           </div>
 
         </div>

@@ -54,7 +54,7 @@ const RECOMMENDED_TOOLS = [
     "cons": [
       "Requires a little basic script configuration"
     ],
-    "officialUrl": "https://github.com/",
+    "officialUrl": "https://github.com/mozman/ezdxf",
     "verdict": "Written based on ODA library Python A drawing processing script that can quickly divide the hierarchical structure of hundreds of drawings on an offline computer.. "
   },
   {

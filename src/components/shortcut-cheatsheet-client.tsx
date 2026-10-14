@@ -30,6 +30,9 @@ interface ShortcutCheatsheetClientProps {
   tips: TipItem[];
   downloadAliasText?: string;
   downloadAliasFileName?: string;
+  mode?: 'shortcuts' | 'reference';
+  columnHeaders?: [string, string, string];
+  searchPlaceholder?: string;
 }
 
 // Cross-software discovery recommendations per CAD software
@@ -144,7 +147,10 @@ export default function ShortcutCheatsheetClient({
   shortcuts,
   tips,
   downloadAliasText,
-  downloadAliasFileName = 'aliases.txt'
+  downloadAliasFileName = 'aliases.txt',
+  mode,
+  columnHeaders,
+  searchPlaceholder
 }: ShortcutCheatsheetClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -152,13 +158,31 @@ export default function ShortcutCheatsheetClient({
   const [isNotesCopied, setIsNotesCopied] = useState(false);
   const [viewMode, setViewMode] = useState<'card' | 'table'>('card');
 
+  const isReference = mode === 'reference' || (
+    !title.toLowerCase().includes('shortcut') && 
+    !title.toLowerCase().includes('hotkey') && 
+    !title.toLowerCase().includes('alias')
+  );
+
+  const placeholderText = searchPlaceholder || (
+    isReference 
+      ? 'Search standards, sizes, specifications, or notes...' 
+      : 'Search keys or commands (e.g. Ctrl, Line, Extrude)...'
+  );
+
+  const tableHeaders = columnHeaders || (
+    isReference
+      ? ['Code / Size', 'Specification', 'Engineering Notes']
+      : ['Hotkeys', 'Command', 'Description']
+  );
+
   // Search and filter logic
   const filteredShortcuts = useMemo(() => {
     return shortcuts.filter((item) => {
       let matchCategory = true;
       if (activeCategory === 'top10') {
-        // Return first 10 essential items
-        return shortcuts.slice(0, 10).some(s => s.keys === item.keys && s.command === item.command);
+        const top10 = shortcuts.slice(0, 10);
+        return top10.includes(item);
       } else if (activeCategory !== 'all') {
         matchCategory = item.category === activeCategory;
       }
@@ -196,7 +220,7 @@ export default function ShortcutCheatsheetClient({
   const handleCopyAllQuickCard = () => {
     const topItems = shortcuts.slice(0, 15);
     const textLines = [
-      `=== ${title} Essential Shortcuts Reference ===`,
+      isReference ? `=== ${title} Engineering Reference Data ===` : `=== ${title} Essential Shortcuts Reference ===`,
       `Verified by CADGuide.tools • ${new Date().getFullYear()}`,
       '',
       ...topItems.map(item => `• ${item.keys.padEnd(10, ' ')} : ${item.command} — ${item.description}`),
@@ -246,7 +270,7 @@ export default function ShortcutCheatsheetClient({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search keys or commands (e.g. Ctrl, Line, Extrude)..."
+              placeholder={placeholderText}
               className="w-full h-12 pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-semibold text-slate-800 bg-slate-50/50"
             />
           </div>
@@ -284,7 +308,7 @@ export default function ShortcutCheatsheetClient({
                   ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
                   : 'border-slate-200 hover:bg-slate-50 text-slate-700 bg-white'
               }`}
-              title="Copy top 15 shortcuts formatted as clean text for your notepad"
+              title="Copy top items formatted as clean text for your notepad"
             >
               {isNotesCopied ? (
                 <>
@@ -294,7 +318,7 @@ export default function ShortcutCheatsheetClient({
               ) : (
                 <>
                   <Copy className="w-4 h-4 text-slate-500" />
-                  <span>Copy Cheat Sheet</span>
+                  <span>{isReference ? 'Copy Reference Data' : 'Copy Cheat Sheet'}</span>
                 </>
               )}
             </button>
@@ -328,7 +352,7 @@ export default function ShortcutCheatsheetClient({
                 : 'bg-slate-50/80 border-slate-100 text-slate-600 hover:bg-slate-100'
             }`}
           >
-            All Commands ({shortcuts.length})
+            {isReference ? `All Entries (${shortcuts.length})` : `All Commands (${shortcuts.length})`}
           </button>
           <button
             onClick={() => setActiveCategory('top10')}
@@ -424,7 +448,7 @@ export default function ShortcutCheatsheetClient({
             ))}
             {filteredShortcuts.length === 0 && (
               <div className="col-span-full py-8 text-center text-slate-400 font-medium bg-slate-50/50 rounded-2xl border border-slate-100">
-                No matching shortcuts found. Please try other terms.
+                {isReference ? 'No matching engineering reference items found. Please try other terms.' : 'No matching shortcuts found. Please try other terms.'}
               </div>
             )}
           </div>
@@ -439,9 +463,9 @@ export default function ShortcutCheatsheetClient({
           <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
               <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
-                <th className="py-3 px-4 w-[180px]">Hotkeys</th>
-                <th className="py-3 px-4 w-[200px]">Command</th>
-                <th className="py-3 px-4">Description</th>
+                <th className="py-3 px-4 w-[180px]">{tableHeaders[0]}</th>
+                <th className="py-3 px-4 w-[200px]">{tableHeaders[1]}</th>
+                <th className="py-3 px-4">{tableHeaders[2]}</th>
               </tr>
             </thead>
             <tbody>
