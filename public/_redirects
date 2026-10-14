@@ -45,3 +45,12 @@
 /tools/synopsys-fusion-compiler /all-tools 301
 /alternatives/synopsys-fusion-compiler /all-tools 301
 /pricing/synopsys-fusion-compiler /all-tools 301
+
+# 7. Legacy 3D converter routes → Modern canonical routes
+/toolbox/convert /convert 301
+/toolbox/convert/:pair /convert/:pair 301
+
+# 8. Tool slug updates (legacy alias → modern canonical)
+/tools/3dstudio /tools/3dstudio-web-tools 301
+/alternatives/3dstudio /alternatives/3dstudio-web-tools 301
+/pricing/3dstudio /pricing/3dstudio-web-tools 301

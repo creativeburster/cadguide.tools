@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'CAD & 3D Format Converters Directory — Free Local & Cloud Utilities | CADGuide Toolbox',
   description: 'Convert between STEP, STL, 3MF, SLDPRT, GLB, DWG, and IFC. Compare 100% offline open-source meshers with industrial cloud converters with zero data leakage.',
   alternates: {
-    canonical: 'https://cadguide.tools/toolbox/convert',
+    canonical: 'https://cadguide.tools/convert',
   },
   openGraph: {
     title: 'Free CAD & 3D Format Converter Directory — STEP, STL, SLDPRT, GLB, IFC',

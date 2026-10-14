@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       'offline 3d converter'
     ],
     alternates: {
-      canonical: `https://cadguide.tools/toolbox/convert/${pair.slug}`,
+      canonical: `https://cadguide.tools/convert/${pair.slug}`,
     },
     openGraph: {
       title: pair.metaTitle,
