@@ -334,7 +334,7 @@ Generated via CADGuide.tools`;
             </svg>
           </div>
 
-          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-650">
+          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-600">
             * Physical diagram: The load-bearing shear section of a fillet weld is its 45 The &quot;effective throat thickness surface at the angle bisector&quot;&quot; (That is the green/red dotted line in the picture) . When the external load is too high, this section will crack due to stress shear.. Use GB 50017 and AISC Ultimate load-bearing specifications accurately estimate safety redundancy. 
           </p>
         </div>

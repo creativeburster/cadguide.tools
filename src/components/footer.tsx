@@ -87,7 +87,7 @@ export function Footer() {
           <div>
             <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Ecosystem</h3>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/toolbox" className="hover:text-blue-400 transition-colors font-bold text-blue-400">3D Converters</Link></li>
+              <li><Link href="/convert" className="hover:text-blue-400 transition-colors font-bold text-blue-400">3D Converters</Link></li>
               <li><Link href="/matchmaker" className="hover:text-blue-400 transition-colors">Matchmaker</Link></li>
               <li><Link href="/compare" className="hover:text-blue-400 transition-colors">Comparisons</Link></li>
               <li><Link href="/tools" className="hover:text-blue-400 transition-colors">Directory</Link></li>
@@ -100,7 +100,7 @@ export function Footer() {
             <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
+              <li><Link href="/editorial-standards" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact & Support</Link></li>
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/affiliate-disclosure" className="hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>
@@ -143,9 +143,9 @@ export function Footer() {
             <span className="text-slate-400">Independent Analysis • No Paid Rankings</span>
           </div>
           <div className="flex gap-8 justify-center md:justify-end">
-            <Link href="#" aria-label="Follow CADGuide.tools on Twitter" className="hover:text-white transition-colors uppercase tracking-widest">Twitter</Link>
-            <Link href="#" aria-label="Follow CADGuide.tools on Facebook" className="hover:text-white transition-colors uppercase tracking-widest">Facebook</Link>
-            <Link href="#" aria-label="Join CADGuide.tools community on Reddit" className="hover:text-white transition-colors uppercase tracking-widest">Reddit</Link>
+            <a href="https://x.com/cadguidetools" target="_blank" rel="noopener noreferrer" aria-label="Follow CADGuide.tools on X / Twitter" className="hover:text-white transition-colors uppercase tracking-widest">X (Twitter)</a>
+            <a href="https://github.com/creativeburster/cadguide.tools" target="_blank" rel="noopener noreferrer" aria-label="CADGuide.tools on GitHub" className="hover:text-white transition-colors uppercase tracking-widest">GitHub</a>
+            <Link href="/contact" aria-label="Contact CADGuide.tools team" className="hover:text-white transition-colors uppercase tracking-widest">Feedback</Link>
           </div>
         </div>
       </div>

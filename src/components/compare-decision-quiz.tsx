@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/lib/data';
+import { annualizedPrice } from '@/lib/utils';
 import { Sparkles, CheckCircle2, ArrowRight, RotateCcw, HelpCircle, ShieldCheck } from 'lucide-react';
 import { ToolLogo } from '@/components/tool-logo';
 
@@ -29,10 +30,13 @@ export function CompareDecisionQuiz({ toolA, toolB }: CompareDecisionQuizProps) 
     const aIsCloud = toolA.platforms?.includes('Web') || toolA.slug.includes('fusion') || toolA.slug.includes('onshape');
     const bIsCloud = toolB.platforms?.includes('Web') || toolB.slug.includes('fusion') || toolB.slug.includes('onshape');
 
-    const aHasMac = toolA.platforms?.includes('Mac');
-    const bHasMac = toolB.platforms?.includes('Mac');
+    const aHasMac = toolA.platforms?.includes('macOS');
+    const bHasMac = toolB.platforms?.includes('macOS');
 
-    const aCheaper = toolA.starting_price < toolB.starting_price;
+    const aFree = toolA.pricing_type === 'Free' || toolA.pricing_type === 'Open Source';
+    const bFree = toolB.pricing_type === 'Free' || toolB.pricing_type === 'Open Source';
+    const aValidPrice = !aFree && !toolA.quote_only && toolA.starting_price > 0;
+    const bValidPrice = !bFree && !toolB.quote_only && toolB.starting_price > 0;
 
     // Q1: Project Scale
     if (q1 === 'heavy') {
@@ -55,16 +59,52 @@ export function CompareDecisionQuiz({ toolA, toolB }: CompareDecisionQuizProps) 
         scoreB += 1;
         reasons.push(`Flexible modeling pipeline adapted for fast design iterations`);
       }
+    } else if (q1 === 'standard') {
+      if (toolA.category_id === 'c1' && toolB.category_id !== 'c1') {
+        scoreA += 2;
+        reasons.push(`Streamlined 2D technical drafting workflow and deep DWG compatibility`);
+      } else if (toolB.category_id === 'c1' && toolA.category_id !== 'c1') {
+        scoreB += 2;
+        reasons.push(`Streamlined 2D technical drafting workflow and deep DWG compatibility`);
+      } else if (toolA.score >= toolB.score) {
+        scoreA += 1;
+        reasons.push(`Standardized technical documentation layouts and drafting precision`);
+      } else {
+        scoreB += 1;
+        reasons.push(`Standardized technical documentation layouts and drafting precision`);
+      }
     }
 
     // Q2: Budget & Licensing
     if (q2 === 'value' || q2 === 'student') {
-      if (aCheaper) {
+      if (aFree && !bFree) {
+        scoreA += 3;
+        reasons.push(`Zero-cost open-source / free tier availability`);
+      } else if (bFree && !aFree) {
+        scoreB += 3;
+        reasons.push(`Zero-cost open-source / free tier availability`);
+      } else if (aValidPrice && bValidPrice) {
+        const annualA = annualizedPrice(toolA);
+        const annualB = annualizedPrice(toolB);
+        if (annualA < annualB) {
+          scoreA += 2;
+          reasons.push(`Lower annualized operating cost ($${annualA}/yr vs $${annualB}/yr)`);
+        } else if (annualB < annualA) {
+          scoreB += 2;
+          reasons.push(`Lower annualized operating cost ($${annualB}/yr vs $${annualA}/yr)`);
+        } else {
+          scoreA += 1;
+          scoreB += 1;
+        }
+      } else if (aValidPrice && !bValidPrice) {
         scoreA += 2;
-        reasons.push(`Significantly lower entry cost ($${toolA.starting_price} vs $${toolB.starting_price})`);
-      } else {
+        reasons.push(`Transparent commercial pricing without mandatory enterprise quote cycles`);
+      } else if (bValidPrice && !aValidPrice) {
         scoreB += 2;
-        reasons.push(`More accessible pricing tier for agile teams and independent creators`);
+        reasons.push(`Transparent commercial pricing without mandatory enterprise quote cycles`);
+      } else {
+        if (toolA.score >= toolB.score) scoreA += 1;
+        else scoreB += 1;
       }
     } else if (q2 === 'enterprise') {
       if (toolA.score >= toolB.score) scoreA += 1;
@@ -73,13 +113,43 @@ export function CompareDecisionQuiz({ toolA, toolB }: CompareDecisionQuizProps) 
     }
 
     // Q3: OS Platform
-    if (q3 === 'mac' || q3 === 'browser') {
+    if (q3 === 'mac') {
       if (aHasMac && !bHasMac) {
         scoreA += 4;
-        reasons.push(`Official native macOS architecture support`);
+        reasons.push(`Official native macOS Apple Silicon architecture support`);
       } else if (bHasMac && !aHasMac) {
         scoreB += 4;
-        reasons.push(`Official native macOS architecture support`);
+        reasons.push(`Official native macOS Apple Silicon architecture support`);
+      } else {
+        if (toolA.score >= toolB.score) scoreA += 1;
+        else scoreB += 1;
+        reasons.push(`Cross-platform flexibility on macOS workstations`);
+      }
+    } else if (q3 === 'browser') {
+      if (aIsCloud && !bIsCloud) {
+        scoreA += 4;
+        reasons.push(`Zero-install browser cloud workspace running across any client OS`);
+      } else if (bIsCloud && !aIsCloud) {
+        scoreB += 4;
+        reasons.push(`Zero-install browser cloud workspace running across any client OS`);
+      } else {
+        scoreA += 1;
+        scoreB += 1;
+        reasons.push(`Browser-accessible project review and data exchange`);
+      }
+    } else if (q3 === 'windows') {
+      if (toolA.platforms?.includes('Windows') && !toolB.platforms?.includes('Windows')) {
+        scoreA += 3;
+        reasons.push(`Native Windows DirectX/OpenGL hardware acceleration support`);
+      } else if (toolB.platforms?.includes('Windows') && !toolA.platforms?.includes('Windows')) {
+        scoreB += 3;
+        reasons.push(`Native Windows DirectX/OpenGL hardware acceleration support`);
+      } else if (toolA.score >= toolB.score) {
+        scoreA += 1;
+        reasons.push(`Optimized for multi-threaded dedicated Windows engineering workstations`);
+      } else {
+        scoreB += 1;
+        reasons.push(`Optimized for multi-threaded dedicated Windows engineering workstations`);
       }
     }
 

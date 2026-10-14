@@ -54,7 +54,7 @@ export default async function Image() {
               fontWeight: '900',
             }}
           >
-            CT
+            CG
           </div>
           <div
             style={{

@@ -59,7 +59,7 @@ export default function ToolboxConvertHubPage() {
       {/* Hero Header */}
       <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 pt-16 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-600" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <Link href="/toolbox" className="hover:text-blue-600 transition-colors">Toolbox</Link>

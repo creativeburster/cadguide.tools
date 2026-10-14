@@ -8,6 +8,7 @@
 // routes and the sitemap can import a single source of truth.
 import { categories, tools, getToolBySlug } from "./data";
 import type { Tool, Category } from "./data";
+import { annualizedPrice } from "./utils";
 
 /** ---------- Best-of ranking --------------------------------------- */
 
@@ -26,7 +27,7 @@ export const BEST_OF_LIMIT = 12;
  */
 
 export function rankToolsForCategory(category: Category): Tool[] {
-  const inCat = tools.filter((t) => t.category_id === category.id);
+  const inCat = tools.filter((t) => !t.discontinued && t.category_id === category.id);
 
   function externalReviewWeight(t: Tool): number {
     if (!t.external_ratings || t.external_ratings.length === 0) return 0;
@@ -488,14 +489,15 @@ export function alternativesFor(tool: Tool): Tool[] {
   if (tool.alternatives && tool.alternatives.length > 0) {
     const resolved = tool.alternatives
       .map((slug) => getToolBySlug(slug))
-      .filter((t): t is Tool => Boolean(t));
+      .filter((t): t is Tool => Boolean(t))
+      .filter((t) => !t.discontinued);
     if (resolved.length >= 2) {
       return resolved.slice(0, ALTERNATIVES_LIMIT);
     }
   }
   // Fallback: same-category tools sorted by score, excluding self.
   return tools
-    .filter((t) => t.category_id === tool.category_id && t.slug !== tool.slug)
+    .filter((t) => !t.discontinued && t.category_id === tool.category_id && t.slug !== tool.slug)
     .sort((a, b) => b.score - a.score)
     .slice(0, ALTERNATIVES_LIMIT);
 }
@@ -643,13 +645,9 @@ export function getPlatformPage(slug: string): PlatformPage | undefined {
 }
 
 export function toolsForPlatform(p: PlatformPage): Tool[] {
-  const sorted = tools
-    .filter((t) => t.platforms.includes(p.platformValue))
+  return tools
+    .filter((t) => !t.discontinued && t.platforms.includes(p.platformValue))
     .sort((a, b) => b.score - a.score);
-  if (p.slug === "windows") {
-    return sorted.slice(0, 20);
-  }
-  return sorted;
 }
 
 /** ---------- File-format pages -------------------------------------
@@ -1395,7 +1393,7 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
     shortNoun: "electrical engineer",
     filter: (t) =>
       hasAny(t.industries, ["Electrical", "Electronics", "Power", "Energy"]) ||
-      t.category_id === "c4",
+      t.category_id === "c6",
     intro:
       "Electrical engineering CAD splits into two distinct toolchains: EDA (electronic design automation) for PCB and chip design, and electrical schematic CAD for control panels, wiring harnesses, and building electrical systems. KiCad and Altium dominate the EDA side; EPLAN and AutoCAD Electrical dominate the panel/schematic side. Below are every EDA and electrical-schematic tool in our catalog.",
     faqs: [
@@ -1457,7 +1455,7 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
       t.pricing_type === "Free" ||
       t.pricing_type === "Open Source" ||
       t.pricing_type === "Freemium" ||
-      (t.pricing_type === "Subscription" && t.starting_price <= 100),
+      (!t.quote_only && t.starting_price > 0 && annualizedPrice(t) <= 1200),
     intro:
       "Startups need CAD tools that scale with the team, run in the browser (no IT department), have flexible per-seat pricing, and integrate with modern dev workflows (version control, REST APIs, webhooks). The 2026 landscape rewards cloud-native CAD (Onshape, Fusion 360, Shapr3D) and free/open-source options that don't require capex approval. Below are every CAD tool in our catalog with founder-friendly pricing: free, freemium, open-source, or subscription under $100/month.",
     faqs: [
@@ -1475,7 +1473,7 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
       t.pricing_type === "Free" ||
       t.pricing_type === "Open Source" ||
       t.pricing_type === "Freemium" ||
-      (t.starting_price > 0 && t.starting_price <= 150) ||
+      (!t.quote_only && t.starting_price > 0 && annualizedPrice(t) <= 1800) ||
       (t.license_types ?? []).includes("Perpetual"),
     intro:
       "Freelancers face two CAD problems enterprise users don't: perpetual licensing (because clients move on and you don't always want to keep paying), and file compatibility with whatever the client uses. The 2026 winning move is a primary tool with strong file format support (BricsCAD, Vectorworks, Rhino) plus a free/freemium backup (Fusion 360 Personal, Onshape Free) for the occasional outlier client. Below are every CAD tool in our catalog with a credible freelancer-friendly licensing path: free, perpetual, or low-cost subscription.",
@@ -1621,9 +1619,9 @@ export const PERSONA_PAGES: Record<string, PersonaPage> = {
     displayName: "CAD & BIM Managers",
     shortNoun: "CAD manager",
     filter: (t) =>
-      t.category_id === "c1" ||
-      t.category_id === "c3" ||
-      hasAny(t.industries, ["AEC", "Mechanical", "Manufacturing"]) &&
+      (t.category_id === "c1" ||
+       t.category_id === "c3" ||
+       hasAny(t.industries, ["AEC", "Mechanical", "Manufacturing"])) &&
       /manager|enterprise|standard|admin|licensing|deployment/i.test(t.name + " " + t.short_desc + " " + t.description),
     intro:
       "CAD and BIM Managers oversee a firm's design technology stack, license compliance, network deployments, template standardization, and training protocols. Rather than modeling, they focus on inter-operability, cost ROI of software subscriptions (such as Autodesk enterprise plans versus perpetual alternative buyouts), and workflow integration across large drafting teams. Below are the major industry-standard platforms managed by design IT administrators globally.",
@@ -1723,7 +1721,7 @@ export function getPersonaPage(slug: string): PersonaPage | undefined {
 }
 
 export function toolsForPersona(p: PersonaPage): Tool[] {
-  return tools.filter(p.filter).sort((a, b) => b.score - a.score);
+  return tools.filter((t) => !t.discontinued && p.filter(t)).sort((a, b) => b.score - a.score);
 }
 
 /** ---------- Sector / Industry vertical pages ----------------------
@@ -2133,7 +2131,7 @@ export function getSectorPage(slug: string): SectorPage | undefined {
 }
 
 export function toolsForSector(s: SectorPage): Tool[] {
-  return tools.filter(s.filter).sort((a, b) => b.score - a.score);
+  return tools.filter((t) => !t.discontinued && s.filter(t)).sort((a, b) => b.score - a.score);
 }
 
 
@@ -2145,14 +2143,18 @@ export function toolsForSector(s: SectorPage): Tool[] {
 export function freeTools(): Tool[] {
   return tools
     .filter(
-      (t) => t.pricing_type === "Free" || t.pricing_type === "Freemium",
+      (t) =>
+        !t.discontinued &&
+        (t.pricing_type === "Free" ||
+          t.pricing_type === "Freemium" ||
+          t.pricing_type === "Open Source"),
     )
     .sort((a, b) => b.score - a.score);
 }
 
 export function openSourceTools(): Tool[] {
   return tools
-    .filter((t) => t.pricing_type === "Open Source")
+    .filter((t) => !t.discontinued && t.pricing_type === "Open Source")
     .sort((a, b) => b.score - a.score);
 }
 
@@ -2251,6 +2253,7 @@ export function freeToolsByCategory(categoryIds: string[]): Tool[] {
   return tools
     .filter(
       (t) =>
+        !t.discontinued &&
         (t.pricing_type === "Free" ||
           t.pricing_type === "Freemium" ||
           t.pricing_type === "Open Source") &&

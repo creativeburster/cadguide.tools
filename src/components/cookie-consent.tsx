@@ -73,21 +73,35 @@ export function CookieConsent() {
     }
   }, []);
 
+  const updateGtagConsent = (prefs: CookiePreferences) => {
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('consent', 'update', {
+        analytics_storage: prefs.analytics ? 'granted' : 'denied',
+        ad_storage: prefs.marketing ? 'granted' : 'denied',
+        ad_user_data: prefs.marketing ? 'granted' : 'denied',
+        ad_personalization: prefs.marketing ? 'granted' : 'denied',
+      });
+    }
+  };
+
   const handleDeclineAll = () => {
     const prefs = { essential: true, analytics: false, marketing: false };
     setCookieConsentWithExpiry('declined', prefs);
+    updateGtagConsent(prefs);
     setIsVisible(false);
   };
 
   const handleAcceptAll = () => {
     const prefs = { essential: true, analytics: true, marketing: true };
     setCookieConsentWithExpiry('accepted', prefs);
+    updateGtagConsent(prefs);
     setIsVisible(false);
   };
 
   const handleSavePreferences = () => {
     const prefs = { essential: true, analytics, marketing };
     setCookieConsentWithExpiry('custom', prefs);
+    updateGtagConsent(prefs);
     setIsVisible(false);
   };
 

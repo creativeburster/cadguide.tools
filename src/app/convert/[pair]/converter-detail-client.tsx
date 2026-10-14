@@ -145,14 +145,14 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
                   <Sliders className="w-4 h-4 text-blue-600" />
                   <span>Recommended Discretization Tolerances</span>
                 </span>
-                <span className="text-[11px] text-slate-650">ISO 10303 Compliant</span>
+                <span className="text-[11px] text-slate-600">ISO 10303 Compliant</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
                 {pair.keyParameters.map((kp, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs space-y-1">
-                    <div className="text-[10px] font-semibold text-slate-650 truncate">{kp.label}</div>
+                    <div className="text-[10px] font-semibold text-slate-600 truncate">{kp.label}</div>
                     <div className="text-xs font-black text-slate-900">{kp.value}</div>
-                    <div className="text-[9px] text-slate-650 line-clamp-1">{kp.hint}</div>
+                    <div className="text-[9px] text-slate-600 line-clamp-1">{kp.hint}</div>
                   </div>
                 ))}
               </div>
@@ -308,7 +308,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
                   <div className="space-y-2 pt-1">
                     {tool.metrics.map((m, mIdx) => (
                       <div key={mIdx} className="space-y-1">
-                        <div className="flex items-center justify-between text-[11px] font-semibold text-slate-650">
+                        <div className="flex items-center justify-between text-[11px] font-semibold text-slate-600">
                           <span>{m.name}</span>
                           <span className="text-slate-800 font-bold">{m.score} / 5</span>
                         </div>
@@ -331,7 +331,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
                       </div>
                     ))}
                     {tool.cons.map((con, cIdx) => (
-                      <div key={cIdx} className="flex items-start gap-2 text-slate-650">
+                      <div key={cIdx} className="flex items-start gap-2 text-slate-600">
                         <span className="text-red-400 font-black shrink-0">•</span>
                         <span className="leading-snug">{con}</span>
                       </div>
@@ -461,8 +461,8 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
               </tr>
               <tr>
                 <td className="py-3.5 px-4 font-bold text-slate-900 bg-slate-50/30">Primary Ecosystem</td>
-                <td className="py-3.5 px-4 text-slate-650">{pair.fromFormat.ecosystem}</td>
-                <td className="py-3.5 px-4 text-slate-650">{pair.toFormat.ecosystem}</td>
+                <td className="py-3.5 px-4 text-slate-600">{pair.fromFormat.ecosystem}</td>
+                <td className="py-3.5 px-4 text-slate-600">{pair.toFormat.ecosystem}</td>
               </tr>
             </tbody>
           </table>

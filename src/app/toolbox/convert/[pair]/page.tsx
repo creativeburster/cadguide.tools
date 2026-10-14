@@ -98,7 +98,7 @@ export default async function ConverterDetailPage({ params }: PageProps) {
       {/* Header Breadcrumb & H1 Intro */}
       <section className="bg-gradient-to-b from-white to-slate-50 border-b border-slate-200/80 pt-10 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-600" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <Link href="/toolbox" className="hover:text-blue-600 transition-colors">Toolbox</Link>
@@ -113,7 +113,7 @@ export default async function ConverterDetailPage({ params }: PageProps) {
               <span className="px-3 py-1 bg-blue-100 text-blue-800 text-[11px] font-extrabold rounded-full">
                 {pair.categoryLabel}
               </span>
-              <span className="text-xs font-bold text-slate-650">
+              <span className="text-xs font-bold text-slate-600">
                 Difficulty: {pair.difficulty}
               </span>
             </div>

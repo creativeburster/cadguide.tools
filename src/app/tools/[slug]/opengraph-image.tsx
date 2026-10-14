@@ -92,7 +92,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
                 color: 'white',
               }}
             >
-              CT
+              CG
             </div>
             <div style={{ fontSize: 32, fontWeight: 900, letterSpacing: '-1px' }}>
               CADGuide.tools

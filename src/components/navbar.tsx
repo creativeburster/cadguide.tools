@@ -41,18 +41,8 @@ export function Navbar() {
                     "transition-colors font-bold",
                     isActive 
                       ? "text-blue-600 font-extrabold" 
-                      : "text-slate-650 hover:text-blue-600"
+                      : "text-slate-600 hover:text-blue-600"
                   )}
-                  onClick={(e) => {
-                    if (
-                      link.href === '/matchmaker' &&
-                      typeof window !== 'undefined' &&
-                      window.location.pathname === '/matchmaker'
-                    ) {
-                      e.preventDefault();
-                      window.location.reload();
-                    }
-                  }}
                 >
                   {link.name}
                 </Link>
@@ -78,54 +68,44 @@ export function Navbar() {
             </svg>
           </button>
         </div>
-      </header>
 
-      {/* Mobile Menu Overlay - compact dropdown panel */}
-      <div className={cn(
-        "fixed inset-x-4 top-[106px] bg-white z-[250] md:hidden transition-all duration-300 ease-in-out border border-slate-100 rounded-2xl shadow-2xl overflow-hidden",
-        isMobileMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-4"
-      )}>
-        <nav className="flex flex-col p-4 bg-white">
-          <div className="flex flex-col">
-            {navLinks.map((link) => {
-              const isActive = link.href === '/' 
-                ? pathname === '/' 
-                : pathname === link.href || pathname.startsWith(link.href);
-              return (
-                <Link 
-                  key={link.href} 
-                  href={link.href} 
-                  onClick={(e) => {
-                    setIsMobileMenuOpen(false);
-                    if (
-                      link.href === '/matchmaker' &&
-                      typeof window !== 'undefined' &&
-                      window.location.pathname === '/matchmaker'
-                    ) {
-                      e.preventDefault();
-                      window.location.reload();
-                    }
-                  }}
-                  className={cn(
-                    "px-4 py-3 text-lg font-bold rounded-xl transition-all flex items-center justify-between",
-                    isActive
-                      ? "bg-blue-50 text-blue-600 font-extrabold"
-                      : "text-slate-900 hover:bg-slate-50 hover:text-blue-600"
-                  )}
-                >
-                  <span>{link.name}</span>
-                  {isActive && <span className="w-1.5 h-1.5 bg-blue-600 rounded-full" />}
-                </Link>
-              );
-            })}
-          </div>
-          <div className="mt-2 p-2">
-            <Button asChild size="lg" className="w-full rounded-xl bg-blue-600 text-white font-bold h-12 text-base">
-              <Link href="/sponsor" onClick={() => setIsMobileMenuOpen(false)}>Sponsor a Tool</Link>
-            </Button>
-          </div>
-        </nav>
-      </div>
+        {/* Mobile Menu Overlay - anchored directly below navbar */}
+        <div className={cn(
+          "absolute top-full left-4 right-4 mt-2 bg-white z-[250] md:hidden transition-all duration-300 ease-in-out border border-slate-100 rounded-2xl shadow-2xl overflow-hidden",
+          isMobileMenuOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible pointer-events-none -translate-y-4"
+        )}>
+          <nav className="flex flex-col p-4 bg-white">
+            <div className="flex flex-col">
+              {navLinks.map((link) => {
+                const isActive = link.href === '/' 
+                  ? pathname === '/' 
+                  : pathname === link.href || pathname.startsWith(link.href);
+                return (
+                  <Link 
+                    key={link.href} 
+                    href={link.href} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "px-4 py-3 text-lg font-bold rounded-xl transition-all flex items-center justify-between",
+                      isActive
+                        ? "bg-blue-50 text-blue-600 font-extrabold"
+                        : "text-slate-900 hover:bg-slate-50 hover:text-blue-600"
+                    )}
+                  >
+                    <span>{link.name}</span>
+                    {isActive && <span className="w-1.5 h-1.5 bg-blue-600 rounded-full" />}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="mt-2 p-2">
+              <Button asChild size="lg" className="w-full rounded-xl bg-blue-600 text-white font-bold h-12 text-base">
+                <Link href="/sponsor" onClick={() => setIsMobileMenuOpen(false)}>Sponsor a Tool</Link>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      </header>
       
       {/* Background overlay when menu is open */}
       {isMobileMenuOpen && (

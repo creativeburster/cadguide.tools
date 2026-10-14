@@ -139,9 +139,19 @@ publisher: {
   };
 }
 
+function effectiveAnnualPrice(t: Tool): number {
+  if (t.pricing_type === 'Free' || t.pricing_type === 'Open Source' || t.pricing_type === 'Freemium') {
+    return 0;
+  }
+  if (t.quote_only || t.starting_price <= 0) {
+    return Infinity;
+  }
+  return annualizedPrice(t);
+}
+
 function faqLd(tool: Tool, alts: Tool[]) {
   const top = alts[0];
-  const cheapest = [...alts].sort((a, b) => a.starting_price - b.starting_price)[0];
+  const cheapest = [...alts].sort((a, b) => effectiveAnnualPrice(a) - effectiveAnnualPrice(b))[0];
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -198,7 +208,7 @@ function getStyleForAlternatives(tool: Tool): AlternativeStyle {
   if (isFreeOrOS || cat === 'c6' || cat === 'c7') {
     return {
       archetype: 'open-specialized',
-      gradient: 'from-emerald-600 to-teal-850',
+      gradient: 'from-emerald-600 to-teal-900',
       badgeAccent: 'bg-emerald-50 text-emerald-700 border-emerald-100',
       accentText: 'text-emerald-700',
       badgeBg: 'bg-emerald-100 text-emerald-800 border-emerald-200',
@@ -353,7 +363,7 @@ function OpenStandardsWidget() {
 
 function renderAlternativesFAQs(tool: Tool, alts: Tool[], style: AlternativeStyle) {
   const top = alts[0];
-  const cheapest = [...alts].sort((a, b) => a.starting_price - b.starting_price)[0];
+  const cheapest = [...alts].sort((a, b) => effectiveAnnualPrice(a) - effectiveAnnualPrice(b))[0];
   const hasFree = cheapest && (cheapest.pricing_type === 'Free' || cheapest.pricing_type === 'Open Source' || cheapest.pricing_type === 'Freemium');
 
   return (

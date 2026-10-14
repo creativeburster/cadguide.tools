@@ -129,10 +129,6 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         return caches.match(request).then((cached) => {
           if (cached) return cached;
-          // Fallback to home page for navigation
-          if (request.destination === 'document') {
-            return caches.match('/');
-          }
           throw new Error('No cache available');
         });
       })

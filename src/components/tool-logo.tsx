@@ -44,7 +44,6 @@ function deriveCandidates(slug: string | undefined, src: string, websiteUrl?: st
       const host = new URL(websiteUrl).hostname.replace(/^www\./, '');
       candidates.push(`https://icon.horse/icon/${host}`);
       candidates.push(`https://www.google.com/s2/favicons?domain=${host}&sz=128`);
-      candidates.push(`https://logo.clearbit.com/${host}?size=200&format=png`);
     } catch {
       /* malformed URL — fall through to placeholder. */
     }

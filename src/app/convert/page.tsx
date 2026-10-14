@@ -73,7 +73,7 @@ export default function ConvertHubPage() {
       <section className="bg-gradient-to-b from-white via-slate-50 to-slate-50 border-b border-slate-200/80 pt-12 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-650" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-600" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-slate-900 font-bold">3D Converters</span>
@@ -102,7 +102,7 @@ export default function ConvertHubPage() {
               </div>
               <div>
                 <div className="text-xs font-black text-slate-900">3D Printing</div>
-                <div className="text-[11px] font-semibold text-slate-650">Watertight STL & 3MF</div>
+                <div className="text-[11px] font-semibold text-slate-600">Watertight STL & 3MF</div>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export default function ConvertHubPage() {
               </div>
               <div>
                 <div className="text-xs font-black text-slate-900">MCAD Interop</div>
-                <div className="text-[11px] font-semibold text-slate-650">B-Rep STEP & Parasolid</div>
+                <div className="text-[11px] font-semibold text-slate-600">B-Rep STEP & Parasolid</div>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function ConvertHubPage() {
               </div>
               <div>
                 <div className="text-xs font-black text-slate-900">Web3D & AR</div>
-                <div className="text-[11px] font-semibold text-slate-650">Draco GLB & glTF 2.0</div>
+                <div className="text-[11px] font-semibold text-slate-600">Draco GLB & glTF 2.0</div>
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export default function ConvertHubPage() {
               </div>
               <div>
                 <div className="text-xs font-black text-slate-900">BIM & 2D Blueprints</div>
-                <div className="text-[11px] font-semibold text-slate-650">openBIM IFC & 1:1 DWG</div>
+                <div className="text-[11px] font-semibold text-slate-600">openBIM IFC & 1:1 DWG</div>
               </div>
             </div>
           </div>

@@ -48,7 +48,12 @@ export function NewsletterSubscribe({
         body: JSON.stringify({ email: email.trim() }),
       });
 
-      const data = await response.json();
+      let data: any = {};
+      try {
+        data = await response.json();
+      } catch {
+        // Fall through to error
+      }
 
       if (response.ok && data.success) {
         setStatus('success');
@@ -56,7 +61,7 @@ export function NewsletterSubscribe({
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(data.error || 'Subscription failed. Please try again.');
+        setMessage(data.error || 'Subscription service currently unavailable. Please try again later.');
       }
     } catch {
       setStatus('error');

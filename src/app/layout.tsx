@@ -45,18 +45,35 @@ export default function RootLayout({
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt Index" />
         
-        {/* Google Analytics for Search Console Verification & Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        {/* Google Analytics with Consent Mode v2 */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
+
+              var storedConsent = null;
+              try {
+                var raw = localStorage.getItem('cookie-consent');
+                if (raw) storedConsent = JSON.parse(raw);
+              } catch(e) {}
+
+              var analyticsGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.analytics) ? 'granted' : 'denied';
+              var marketingGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.marketing) ? 'granted' : 'denied';
+
+              gtag('consent', 'default', {
+                'analytics_storage': analyticsGranted,
+                'ad_storage': marketingGranted,
+                'ad_user_data': marketingGranted,
+                'ad_personalization': marketingGranted
+              });
+
               gtag('js', new Date());
               gtag('config', 'G-2NC8HV27GC');
             `,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
 
         {/* Sync script to prevent layout shift for returning users who dismissed notice */}
         <script

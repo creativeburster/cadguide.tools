@@ -108,17 +108,19 @@ function getFilteredTools(slug: string) {
       return tLicenses.includes('educational') || tLicenses.includes('student');
     }
     return false;
-  }).sort((a, b) => b.score - a.score);
+  }).filter((t) => !t.discontinued).sort((a, b) => b.score - a.score);
 
-  return filtered.slice(0, 10);
+  return filtered;
 }
 
 function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) return `from $${t.starting_price}`;
-  return t.pricing_type;
+  if (t.quote_only || t.starting_price <= 0) return 'Custom Quote';
+  const period = t.price_period === 'month' ? '/mo' : t.price_period === 'year' ? '/yr' : (t.license_types ?? []).includes('Perpetual') ? ' one-time' : '/yr';
+  return `from $${t.starting_price}${period}`;
+
 }
 
 export async function generateMetadata(

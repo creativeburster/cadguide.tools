@@ -30,7 +30,7 @@ const BEGINNER_SLUGS = [
   'solvespace',
   'qcad',
   'openscad',
-  'nanoCAD-free',
+  'nanocad',
   'easyeda',
 ];
 
@@ -38,8 +38,10 @@ function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) return `from $${t.starting_price}`;
-  return t.pricing_type;
+  if (t.quote_only || t.starting_price <= 0) return 'Custom Quote';
+  const period = t.price_period === 'month' ? '/mo' : t.price_period === 'year' ? '/yr' : (t.license_types ?? []).includes('Perpetual') ? ' one-time' : '/yr';
+  return `from $${t.starting_price}${period}`;
+
 }
 
 const BEGINNER_TIERS = [

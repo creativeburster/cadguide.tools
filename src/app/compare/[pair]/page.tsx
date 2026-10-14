@@ -100,9 +100,17 @@ function getDynamicEditorialVerdict(a: Tool, b: Tool): string {
   const mcadTools = ["solidworks", "fusion-360", "onshape", "autodesk-inventor", "ptc-creo", "siemens-nx", "catia", "freecad", "shapr3d", "solid-edge"];
   const isMcad = mcadTools.includes(a.slug) || mcadTools.includes(b.slug) || a.category_id === 'c2' || b.category_id === 'c2';
 
-  // Helpers to prevent absurd claims
-  const checkLisp = (t: Tool) => !['sketchup', 'freecad', 'librecad', 'qcad', 'fusion-360', 'onshape', 'solidworks', 'shapr3d'].includes(t.slug.toLowerCase());
+  // Helpers to prevent absurd claims (whitelist DWG-compatible tools with real LISP engines)
+  const lispWhitelist = ['autocad', 'gstarcad', 'zwcad', 'bricscad', 'nanocad', 'progecad', 'draftsight', 'ares-commander', 'corelcad', 'caxa-cad'];
+  const checkLisp = (t: Tool) => lispWhitelist.includes(t.slug.toLowerCase());
   const checkFree = (t: Tool) => t.pricing_type === 'Free' || t.pricing_type === 'Open Source';
+
+  // 0. Cross-Discipline 2D Drafting vs BIM Coordination (isC1 && isBim)
+  if (isC1 && isBim) {
+    const bimTool = a.category_id === 'c3' ? a : b;
+    const cadTool = a.category_id === 'c1' ? a : b;
+    return `Comparing the 2D drafting precision of ${cadTool.name} with the full-lifecycle BIM model coordination of ${bimTool.name} represents the fundamental transition from traditional lines and layers to intelligent parametric building components. While ${cadTool.name} excels at rapid vector detailing, flexible block references, and low overhead layout printing, ${bimTool.name} delivers automated schedule generation, multi-disciplinary clash detection, and centralized database synchronization. Select ${cadTool.name} for standalone technical drawings and detailing speed; mandate ${bimTool.name} when coordinating complex architectural projects requiring IFC4 compliance and comprehensive building execution plans.`;
+  }
 
   // 1. 2D Drafting & Detailing Category (isC1)
   if (isC1) {
@@ -152,6 +160,19 @@ function getCompareLayoutStyle(a: Tool, b: Tool): {
   
   const mcadTools = ["solidworks", "fusion-360", "onshape", "autodesk-inventor", "ptc-creo", "siemens-nx", "catia", "freecad", "shapr3d", "solid-edge"];
   const isMcad = mcadTools.includes(a.slug) || mcadTools.includes(b.slug) || a.category_id === 'c2' || b.category_id === 'c2';
+  if (isC1 && isBim) {
+    return {
+      archetype: 'bim',
+      bodyBg: 'bg-indigo-50/50',
+      accentText: 'text-indigo-600',
+      borderHighlight: 'border-indigo-200 hover:border-indigo-400 focus:border-indigo-400',
+      badgeBg: 'bg-indigo-100 border-indigo-200 text-indigo-900',
+      badgeText: 'text-indigo-900',
+      gradientHeader: 'from-slate-900 via-indigo-950 to-blue-900',
+      ctaBg: 'bg-indigo-600 hover:bg-indigo-700',
+      ctaHoverBg: 'hover:bg-indigo-700'
+    };
+  }
 
   if (isC1) {
     return {
@@ -256,7 +277,7 @@ function decisionText(a: Tool, b: Tool): { pickA: string; pickB: string } {
   if (aFree && !bFree) pickAReasons.push('free / open-source');
   if (bFree && !aFree) pickBReasons.push('free / open-source');
 
-  if (!aFree && !bFree) {
+  if (!aFree && !bFree && a.starting_price > 0 && b.starting_price > 0 && !a.quote_only && !b.quote_only) {
     if (aPriceDelta < 0)
       pickAReasons.push(`lower annual cost ($${annualizedPrice(a)} vs $${annualizedPrice(b)} per year)`);
     else if (aPriceDelta > 0)

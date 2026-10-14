@@ -64,7 +64,7 @@ export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompar
     return tools
       .map((tool) => {
         let score = 0;
-        const maxScore = 100;
+        const maxScore = isDeepMatch ? 100 : 75;
 
         // 1. Industry Fit (30 points)
         if (!selections.industry) {
@@ -138,68 +138,93 @@ export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompar
             tool.pricing_type === 'Open Source'
           ) {
             score += 20; // free is low budget
-          } else if (tool.starting_price < 1000) {
+          } else if (!tool.quote_only && tool.starting_price > 0 && tool.starting_price < 1000) {
             score += 20; // meets criteria strictly
-          } else if (tool.starting_price < 2000) {
+          } else if (!tool.quote_only && tool.starting_price > 0 && tool.starting_price < 2000) {
             score += 12; // slightly higher budget but competitive
           } else {
             score += 0;
           }
         }
 
-        // 4. Core Workflow Matching (15 points)
-        if (!selections.workflow) {
-          score += 15;
-        } else {
-          const matchWF =
-            (selections.workflow === '2D' && tool.category_id === 'c1') ||
-            (selections.workflow === '3D' && tool.category_id === 'c2') ||
-            (selections.workflow === 'BIM' && tool.category_id === 'c3');
-          if (matchWF) {
-            score += 15;
+        // 4. Core Workflow Matching (15 points, only active in Deep Match)
+        if (isDeepMatch) {
+          if (!selections.workflow) {
+            score += 10;
           } else {
-            // General drafting tools c1 support 3D/BIM workflows partially
-            if (selections.workflow === 'BIM' && tool.category_id === 'c1') {
-              score += 8;
-            } else if (selections.workflow === '3D' && tool.category_id === 'c1') {
-              score += 10;
-            } else if (selections.workflow === '3D' && tool.category_id === 'c7') {
-              score += 10; // rendering is highly related to 3D modeling
+            const matchWF =
+              (selections.workflow === '2D' && tool.category_id === 'c1') ||
+              (selections.workflow === '3D' && tool.category_id === 'c2') ||
+              (selections.workflow === 'BIM' && tool.category_id === 'c3') ||
+              (selections.workflow === 'CAM/CAE' && tool.category_id === 'c5') ||
+              (selections.workflow === 'EDA' && tool.category_id === 'c6');
+            if (matchWF) {
+              score += 15;
             } else {
-              score += 4;
+              // Partial workflow crossovers
+              if (selections.workflow === 'BIM' && tool.category_id === 'c1') {
+                score += 8;
+              } else if (selections.workflow === '3D' && (tool.category_id === 'c1' || tool.category_id === 'c5' || tool.category_id === 'c7')) {
+                score += 10;
+              } else if (selections.workflow === 'CAM/CAE' && tool.category_id === 'c2') {
+                score += 10;
+              } else if (selections.workflow === 'EDA' && tool.category_id === 'c1') {
+                score += 8;
+              } else {
+                score += 4;
+              }
             }
           }
-        }
 
-        // 5. Team / Org Scale (5 points)
-        if (!selections.orgSize) {
-          score += 5;
-        } else {
-          if (tool.user_scales.includes(selections.orgSize)) {
-            score += 5;
+          // 5. Team / Org Scale (5 points)
+          if (!selections.orgSize) {
+            score += 3;
           } else {
-            score += 2;
-          }
-        }
-
-        // 6. Experience Level (5 points)
-        if (!selections.experience) {
-          score += 5;
-        } else {
-          const exp = selections.experience.toLowerCase();
-          if (exp === 'beginner') {
-            if (
-              tool.short_desc.toLowerCase().includes('easy') ||
-              tool.short_desc.toLowerCase().includes('simple') ||
-              tool.short_desc.toLowerCase().includes('intuitive') ||
-              tool.score > 4.5
-            ) {
+            if (tool.user_scales.includes(selections.orgSize)) {
               score += 5;
             } else {
-              score += 3;
+              score += 2;
             }
+          }
+
+          // 6. Experience Level (5 points)
+          if (!selections.experience) {
+            score += 3;
           } else {
-            score += 5; // Professionals can handle any tool in our database
+            const exp = selections.experience.toLowerCase();
+            if (exp === 'beginner') {
+              if (
+                tool.short_desc.toLowerCase().includes('easy') ||
+                tool.short_desc.toLowerCase().includes('simple') ||
+                tool.short_desc.toLowerCase().includes('intuitive') ||
+                tool.score > 4.5
+              ) {
+                score += 5;
+              } else {
+                score += 3;
+              }
+            } else {
+              score += 5; // Professionals can handle any tool in our database
+            }
+          }
+        }
+
+        // Disqualification & Heavy Penalties
+        if (selections.platform && selections.platform !== 'Windows') {
+          const hasPlatform = tool.platforms.includes(selections.platform);
+          const hasWeb = tool.platforms.includes('Web');
+          if (!hasPlatform && !hasWeb) {
+            score = Math.max(0, score - 25);
+          }
+        }
+
+        if (selections.budget === 'free') {
+          const isFree = (tool.starting_price === 0 && !tool.quote_only) ||
+            tool.pricing_type === 'Free' ||
+            tool.pricing_type === 'Open Source' ||
+            tool.pricing_type === 'Freemium';
+          if (!isFree) {
+            score = Math.max(0, score - 20);
           }
         }
 
@@ -325,9 +350,9 @@ export default function MatchmakerPage({ validCompareSlugs = [] }: { validCompar
             isDeepMatch={isDeepMatch}
             onPreviousStep={() => step > 1 && setStep(step - 1)}
           >
-            {['2D', '3D', 'BIM'].map(item => (
+            {['2D', '3D', 'BIM', 'CAM/CAE', 'EDA'].map(item => (
               <Button key={item} variant="outline" className="h-20 text-lg font-bold rounded-2xl border-slate-100 hover:border-blue-600 hover:bg-blue-50 transition-all" onClick={() => handleSelection('workflow', item)}>
-                {item === '2D' ? '2D Drafting' : item === '3D' ? '3D Modeling' : 'BIM Architecture'}
+                {item === '2D' ? '2D Drafting' : item === '3D' ? '3D Modeling' : item === 'BIM' ? 'BIM Architecture' : item === 'CAM/CAE' ? 'CAM & Simulation' : 'EDA & Schematics'}
               </Button>
             ))}
           </StepCard>
