@@ -48,8 +48,11 @@ export default function ManometerPressureCalculatorClient() {
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Manometer Type</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="u-tube"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="u-tube">Vertical U-Tube Manometer</option>
+              <option value="inclined">Inclined Manometer</option>
+            </select>
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Tube Angle (deg)</label>

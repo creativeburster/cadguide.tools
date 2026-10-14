@@ -14,7 +14,28 @@ export default function ConcreteSlabCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const q=parseFloat(inputs[0]),a=parseFloat(inputs[1]),fc=parseFloat(inputs[2]),fy=parseFloat(inputs[3]);const M=q*a*a/8;const t=Math.sqrt(6*M*1000/fc)*1000/Math.sqrt(1000);const As=M*1e6/(0.87*fy*0.9*t);return{M,t:Math.round(t),As:Math.round(As)};
+    const q = parseFloat(inputs[0]) || 0; // kN/m²
+    const a = parseFloat(inputs[1]) || 0; // m (span)
+    const fc = parseFloat(inputs[2]) || 25; // MPa
+    const fy = parseFloat(inputs[3]) || 400; // MPa
+
+    // Bending moment M = q * a^2 / 8 (kNm/m)
+    const M = (q * a * a) / 8;
+
+    // Minimum structural thickness by span-to-depth ratio (L/28 for simply supported slab, min 100mm)
+    const hSpan = Math.max(100, (a * 1000) / 28);
+
+    // Flexural depth: d = sqrt(M / (0.138 * fc * b)) for b = 1000 mm strip
+    const dFlex = fc > 0 ? Math.sqrt((M * 1e6) / (0.138 * fc * 1000)) : 50;
+    const hFlex = dFlex + 25; // add 25mm concrete cover
+
+    const t = Math.max(hSpan, hFlex); // nominal slab thickness in mm
+    const d = Math.max(40, t - 25); // effective depth in mm
+
+    // Required tensile reinforcement As = M / (0.87 * fy * 0.9 * d) mm²/m
+    const As = (fy > 0 && d > 0) ? (M * 1e6) / (0.87 * fy * 0.9 * d) : 0;
+
+    return { M, t: Math.round(t), As: Math.round(As) };
   }, [inputs]);
 
   const formatNum = (n: number) => {

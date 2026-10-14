@@ -43,13 +43,17 @@ export default function AreaUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="m2"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="m2">m2</option><option value="mm2">mm2</option><option value="cm2">cm2</option><option value="km2">km2</option><option value="in2">in2</option><option value="ft2">ft2</option><option value="yd2">yd2</option><option value="acre">acre</option><option value="ha">ha</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="ft2"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="m2">m2</option><option value="mm2">mm2</option><option value="cm2">cm2</option><option value="km2">km2</option><option value="in2">in2</option><option value="ft2">ft2</option><option value="yd2">yd2</option><option value="acre">acre</option><option value="ha">ha</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["1","m2","ft2"])}

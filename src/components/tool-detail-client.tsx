@@ -31,6 +31,15 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
+  const formatTierPrice = (price: string | number | undefined | null): string => {
+    if (price === undefined || price === null) return "";
+    const pStr = String(price).trim();
+    if (!pStr) return "";
+    if (/^[\$€£¥~]/.test(pStr) || /^[A-Za-z]/.test(pStr)) {
+      return pStr;
+    }
+    return `$${pStr}`;
+  };
 
   // Helper functions for dynamic tree capillaries
   const getPlatformSlug = (platName: string): string | null => {
@@ -109,16 +118,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
       label: "Pricing Plans",
       icon: <CreditCard className="w-3.5 h-3.5" />,
     },
-    {
-      id: "features",
-      label: "Key Features",
-      icon: <Zap className="w-3.5 h-3.5" />,
-    },
-    {
-      id: "specs",
-      label: "Tech Specs",
-      icon: <BarChart3 className="w-3.5 h-3.5" />,
-    },
+    ...(tool.detailed_features && tool.detailed_features.length > 0
+      ? [
+          {
+            id: "features",
+            label: "Key Features",
+            icon: <Zap className="w-3.5 h-3.5" />,
+          },
+        ]
+      : []),
+    ...(tool.tech_specs
+      ? [
+          {
+            id: "specs",
+            label: "Tech Specs",
+            icon: <BarChart3 className="w-3.5 h-3.5" />,
+          },
+        ]
+      : []),
     ...(hasCompatibility
       ? [
           {
@@ -614,163 +631,192 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                {tool.pricing_tiers?.map((tier, i) => (
-                  <Card
-                    key={i}
-                    className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
-                  >
-                    {tier.is_popular && (
-                      <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
-                        Recommended
+              {tool.pricing_tiers && tool.pricing_tiers.length > 0 ? (
+                <div className="grid md:grid-cols-3 gap-8">
+                  {tool.pricing_tiers.map((tier, i) => (
+                    <Card
+                      key={i}
+                      className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
+                    >
+                      {tier.is_popular && (
+                        <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
+                          Recommended
+                        </div>
+                      )}
+                      <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
+                        <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
+                          {tier.name}
+                        </div>
+                        <div className="flex items-baseline justify-center gap-1">
+                          <span className="text-4xl md:text-5xl font-black text-slate-900">
+                            {formatTierPrice(tier.price)}
+                          </span>
+                          <span className="text-slate-400 font-bold text-sm tracking-tight">
+                            {tier.period}
+                          </span>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="p-6 md:p-10 pt-4">
+                        <Separator className="mb-8 opacity-40" />
+                        <ul className="space-y-5 mb-10">
+                          {tier.features?.map((f, j) => (
+                            <li
+                              key={j}
+                              className="flex items-start gap-4 text-sm font-bold text-slate-600 leading-tight"
+                            >
+                              <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                              {f}
+                            </li>
+                          ))}
+                        </ul>
+                        <Button
+                          asChild
+                          className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
+                        >
+                          <a href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                            Choose {tier.name}
+                            <ExternalLink className="w-4 h-4 opacity-70" />
+                          </a>
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-white rounded-[32px] border border-slate-100 p-8 md:p-12 text-center shadow-sm">
+                  <div className="max-w-md mx-auto space-y-4">
+                    <div className="text-slate-400 font-bold text-sm">
+                      {tool.pricing_type ? `Licensing Model: ${tool.pricing_type}` : "Custom or Quote-based Enterprise Licensing"}
+                    </div>
+                    {tool.starting_price > 0 && (
+                      <div className="text-3xl font-black text-slate-900">
+                        Starting at ${tool.starting_price.toLocaleString()}{tool.price_period ? ` / ${tool.price_period}` : ""}
                       </div>
                     )}
-                    <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
-                      <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
-                        {tier.name}
-                      </div>
-                      <div className="flex items-baseline justify-center gap-1">
-                        <span className="text-4xl md:text-5xl font-black text-slate-900">
-                          ${tier.price}
-                        </span>
-                        <span className="text-slate-400 font-bold text-sm tracking-tight">
-                          {tier.period}
-                        </span>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-6 md:p-10 pt-4">
-                      <Separator className="mb-8 opacity-40" />
-                      <ul className="space-y-5 mb-10">
-                        {tier.features?.map((f, j) => (
-                          <li
-                            key={j}
-                            className="flex items-start gap-4 text-sm font-bold text-slate-600 leading-tight"
-                          >
-                            <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                      <Button
-                        asChild
-                        className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
-                      >
-                        <a href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                          Choose {tier.name}
-                          <ExternalLink className="w-4 h-4 opacity-70" />
+                    <p className="text-slate-500 text-sm">
+                      Official deployment options, concurrent multi-user licensing, and educational discounts are configured per enterprise seat.
+                    </p>
+                    {(tool.pricing_url || tool.official_url) && (
+                      <Button asChild className="rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold h-11 px-6 shadow-md shadow-blue-100">
+                        <a href={tool.pricing_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                          Inquire on Official Vendor Portal <ExternalLink className="w-4 h-4" />
                         </a>
                       </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </section>
 
             {/* Features Section */}
-            <section id="features" className="scroll-mt-36 space-y-6 md:space-y-10">
-              <div className="flex items-center gap-5">
-                <div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
-                  Key Capabilities
-                </h2>
-              </div>
-
-              <div className="bg-white rounded-[32px] border border-slate-100 overflow-hidden divide-y divide-slate-100 shadow-sm">
-                {tool.detailed_features?.map((cat, i) => (
-                  <div key={i} className="p-6 md:p-8">
-                    <h3 className="font-black text-slate-900 mb-4 uppercase text-[10px] tracking-[0.2em] text-slate-400 flex items-center gap-4">
-                      {cat.category}{" "}
-                      <div className="h-px bg-slate-100 flex-1"></div>
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-3">
-                      {cat.items?.map((item, j) => (
-                        <div key={j} className="flex items-center gap-2 group">
-                          {item.status ? (
-                            <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />
-                          ) : (
-                            <XCircle className="w-3.5 h-3.5 text-slate-200 shrink-0" />
-                          )}
-                          <span className="text-sm font-bold text-slate-600 group-hover:text-blue-600 transition-colors leading-tight">
-                            {item.name}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Tech Specs Section */}
-            <section id="specs" className="scroll-mt-36 space-y-6 md:space-y-10">
-              <div className="flex items-center justify-between flex-wrap gap-4">
+            {tool.detailed_features && tool.detailed_features.length > 0 && (
+              <section id="features" className="scroll-mt-36 space-y-6 md:space-y-10">
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
-                    <BarChart3 className="w-6 h-6" />
+                  <div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600">
+                    <Zap className="w-6 h-6" />
                   </div>
                   <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
-                    Technical Audit
+                    Key Capabilities
                   </h2>
                 </div>
-                <Link
-                  href={`/contact?subject=Data%20Correction%20for%20${encodeURIComponent(tool.name)}`}
-                  className="text-xs font-bold text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1.5 bg-slate-50 hover:bg-blue-50 px-3.5 py-2 rounded-xl border border-slate-100"
-                >
-                  <HelpCircle className="w-3.5 h-3.5" />
-                  <span>Spot an inaccuracy? Suggest an edit →</span>
-                </Link>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8">
-                <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                  <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
-                    Environment Support
-                  </h4>
-                  <div className="space-y-6">
-                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                      <span className="font-bold text-slate-500">
-                        Certified OS
-                      </span>
-                      <span className="font-black text-slate-900 text-right">
-                        {tool.platforms.join(", ")}
-                      </span>
+
+                <div className="bg-white rounded-[32px] border border-slate-100 overflow-hidden divide-y divide-slate-100 shadow-sm">
+                  {tool.detailed_features.map((cat, i) => (
+                    <div key={i} className="p-6 md:p-8">
+                      <h3 className="font-black text-slate-900 mb-4 uppercase text-[10px] tracking-[0.2em] text-slate-400 flex items-center gap-4">
+                        {cat.category}{" "}
+                        <div className="h-px bg-slate-100 flex-1"></div>
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-3">
+                        {cat.items?.map((item, j) => (
+                          <div key={j} className="flex items-center gap-2 group">
+                            {item.status ? (
+                              <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />
+                            ) : (
+                              <XCircle className="w-3.5 h-3.5 text-slate-200 shrink-0" />
+                            )}
+                            <span className="text-sm font-bold text-slate-600 group-hover:text-blue-600 transition-colors leading-tight">
+                              {item.name}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                      <span className="font-bold text-slate-500">
-                        Multi-threading
-                      </span>
-                      <span className="font-black text-slate-900 text-right">
-                        {tool.tech_specs?.multicore}
-                      </span>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Tech Specs Section */}
+            {tool.tech_specs && (
+              <section id="specs" className="scroll-mt-36 space-y-6 md:space-y-10">
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <div className="flex items-center gap-5">
+                    <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-orange-600">
+                      <BarChart3 className="w-6 h-6" />
                     </div>
-                    <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                      <span className="font-bold text-slate-500">
-                        GPU Optimization
-                      </span>
-                      <span className="font-black text-slate-900 text-right">
-                        {tool.tech_specs?.gpu_optimization}
-                      </span>
-                    </div>
+                    <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+                      Technical Audit
+                    </h2>
                   </div>
-                </Card>
-                <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                  <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
-                    Industry Standards
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {tool.tech_specs?.standards.map((s) => (
-                      <Badge
-                        key={s}
-                        className="bg-slate-50 text-slate-600 border-slate-100 font-black px-4 py-2 rounded-xl"
-                      >
-                        {s}
-                      </Badge>
-                    ))}
-                  </div>
-                </Card>
-              </div>
-            </section>
+                  <Link
+                    href={`/contact?subject=Data%20Correction%20for%20${encodeURIComponent(tool.name)}`}
+                    className="text-xs font-bold text-slate-400 hover:text-blue-600 transition-colors flex items-center gap-1.5 bg-slate-50 hover:bg-blue-50 px-3.5 py-2 rounded-xl border border-slate-100"
+                  >
+                    <HelpCircle className="w-3.5 h-3.5" />
+                    <span>Spot an inaccuracy? Suggest an edit →</span>
+                  </Link>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
+                    <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
+                      Environment Support
+                    </h4>
+                    <div className="space-y-6">
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
+                        <span className="font-bold text-slate-500">
+                          Certified OS
+                        </span>
+                        <span className="font-black text-slate-900 text-right">
+                          {tool.platforms.join(", ")}
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
+                        <span className="font-bold text-slate-500">
+                          Multi-threading
+                        </span>
+                        <span className="font-black text-slate-900 text-right">
+                          {tool.tech_specs.multicore || "Standard"}
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
+                        <span className="font-bold text-slate-500">
+                          GPU Optimization
+                        </span>
+                        <span className="font-black text-slate-900 text-right">
+                          {tool.tech_specs.gpu_optimization || "Standard"}
+                        </span>
+                      </div>
+                    </div>
+                  </Card>
+                  <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
+                    <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
+                      Industry Standards
+                    </h4>
+                    <div className="flex flex-wrap gap-3">
+                      {tool.tech_specs.standards?.map((s) => (
+                        <Badge
+                          key={s}
+                          className="bg-slate-50 text-slate-600 border-slate-100 font-black px-4 py-2 rounded-xl"
+                        >
+                          {s}
+                        </Badge>
+                      ))}
+                    </div>
+                  </Card>
+                </div>
+              </section>
+            )}
 
             {/* Compatibility Section (only when we have enrichment data) */}
             {hasCompatibility && (
@@ -1090,9 +1136,15 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       </p>
                     </div>
                   </div>
-                  <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
-                    &quot;{tool.expert_verdict}&quot;
-                  </p>
+                  {tool.expert_verdict ? (
+                    <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
+                      &quot;{tool.expert_verdict}&quot;
+                    </p>
+                  ) : (
+                    <p className="text-lg md:text-2xl text-blue-100/90 font-medium leading-relaxed mb-8 md:mb-12">
+                      {tool.description || tool.short_desc}
+                    </p>
+                  )}
                   <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-6 md:pt-12 gap-6 md:gap-8">
                     <div className="flex items-center gap-4">
                       <ToolLogo
@@ -1234,11 +1286,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-blue-600/20 transition-colors"></div>
                   <div className="relative z-10">
                     <div className="text-blue-400 font-black uppercase text-[10px] tracking-[0.3em] mb-4">
-                      Official Release
+                      {["Free", "Open Source"].includes(tool.pricing_type) ? "Open Source Portal" : "Official Release"}
                     </div>
                     <div className="text-2xl md:text-4xl font-black leading-tight">
-                      Get Licensed <br />
-                      {tool.name}
+                      {["Free", "Open Source"].includes(tool.pricing_type) ? (
+                        <>Download <br />{tool.name}</>
+                      ) : (
+                        <>Get Licensed <br />{tool.name}</>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -1274,13 +1329,13 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       <div className="w-7 h-7 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       </div>
-                      100% Genuine Vendor License
+                      {["Free", "Open Source"].includes(tool.pricing_type) ? "100% Free & Open Source" : "100% Genuine Vendor License"}
                     </li>
                     <li className="flex items-center gap-4 text-sm font-black text-slate-600">
                       <div className="w-7 h-7 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       </div>
-                      Direct Official Support & Updates
+                      {["Free", "Open Source"].includes(tool.pricing_type) ? "Official Community & Source Code" : "Direct Official Support & Updates"}
                     </li>
                   </ul>
 
@@ -1295,9 +1350,18 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-2"
                       >
-                        <CreditCard className="w-5 h-5 shrink-0" />
-                        <span>View Official Pricing</span>
-                        <ExternalLink className="w-4 h-4 opacity-70 shrink-0" />
+                        {["Free", "Open Source"].includes(tool.pricing_type) ? (
+                          <>
+                            <ExternalLink className="w-5 h-5 shrink-0" />
+                            <span>Download Official Build</span>
+                          </>
+                        ) : (
+                          <>
+                            <CreditCard className="w-5 h-5 shrink-0" />
+                            <span>View Official Pricing</span>
+                            <ExternalLink className="w-4 h-4 opacity-70 shrink-0" />
+                          </>
+                        )}
                       </a>
                     </Button>
                     {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
@@ -1391,7 +1455,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     href="/toolbox"
                     className="w-full flex items-center justify-center bg-white text-slate-950 hover:bg-blue-50 font-black rounded-2xl h-12 shadow-lg transition-all active:scale-95 text-xs"
                   >
-                    Open Toolbox (25+ Tools) →
+                    Open Engineering Toolbox (600+ Tools) →
                   </Link>
                 </div>
               </div>

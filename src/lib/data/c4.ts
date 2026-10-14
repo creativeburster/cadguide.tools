@@ -1594,7 +1594,7 @@ export const c4Tools: Tool[] = [
       is_popular: true
     }
   ],
-  alternatives: ["cadprops", "cad-reader", "dwg-trueview", "dxf-medic", "bimcollab-zoom"],
+  alternatives: ["cadprops", "cad-reader", "dwg-trueview", "dxf-medic", "bimcollab"],
   last_updated: "2026-10-12",
   file_formats_in: [
     "IFC", "STEP", "STP", "IGES", "IGS", "STL", "3MF", "OBJ", "DWG", "DXF", "GLTF", "GLB", "FBX", "3DS", "3DM", "RVT", "SLDPRT"

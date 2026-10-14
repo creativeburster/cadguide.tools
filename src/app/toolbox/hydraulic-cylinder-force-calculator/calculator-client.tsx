@@ -11,25 +11,44 @@ export default function HydraulicCylinderClient() {
   const [unit, setUnit] = useState<'metric' | 'imperial'>('metric');
 
   const result = useMemo(() => {
-    const D = unit === 'metric' ? bore / 1000 : bore / 12;
-    const d = unit === 'metric' ? rodDia / 1000 : rodDia / 12;
-    const P = unit === 'metric' ? pressure * 1e6 : pressure * 6894.76;
+    let fullArea = 0;
+    let rodArea = 0;
+    let annulusArea = 0;
+    let pushForce = 0;
+    let pullForce = 0;
 
-    const fullArea = Math.PI * D * D / 4;
-    const rodArea = Math.PI * d * d / 4;
-    const annulusArea = fullArea - rodArea;
+    if (unit === 'metric') {
+      // bore & rodDia in mm, pressure in bar
+      const fullAreaMm2 = Math.PI * bore * bore / 4;
+      const rodAreaMm2 = Math.PI * rodDia * rodDia / 4;
+      const annulusAreaMm2 = Math.max(0, fullAreaMm2 - rodAreaMm2);
 
-    const pushForce = P * fullArea;
-    const pullForce = P * annulusArea;
+      // 1 bar = 0.1 N/mm² -> Force in N
+      pushForce = pressure * 0.1 * fullAreaMm2;
+      pullForce = pressure * 0.1 * annulusAreaMm2;
+
+      fullArea = fullAreaMm2 / 100; // cm²
+      rodArea = rodAreaMm2 / 100; // cm²
+      annulusArea = annulusAreaMm2 / 100; // cm²
+    } else {
+      // bore & rodDia in inch, pressure in psi
+      fullArea = Math.PI * bore * bore / 4; // in²
+      rodArea = Math.PI * rodDia * rodDia / 4; // in²
+      annulusArea = Math.max(0, fullArea - rodArea); // in²
+
+      // F (lbf) = P (psi) * Area (in²)
+      pushForce = pressure * fullArea;
+      pullForce = pressure * annulusArea;
+    }
 
     const forceUnit = unit === 'metric' ? 'N' : 'lbf';
-    const areaUnit = unit === 'metric' ? 'm²' : 'in²';
+    const areaUnit = unit === 'metric' ? 'cm²' : 'in²';
 
     return {
       fullArea, rodArea, annulusArea,
       pushForce, pullForce,
       forceUnit, areaUnit,
-      pullReduction: ((1 - pullForce / pushForce) * 100).toFixed(1),
+      pullReduction: pushForce > 0 ? ((1 - pullForce / pushForce) * 100).toFixed(1) : '0',
     };
   }, [bore, rodDia, pressure, unit]);
 

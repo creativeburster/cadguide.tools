@@ -43,8 +43,12 @@ export default function PolishingTimeCalculatorClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Finish Grade</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="fine"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="medium">Commercial Satin Finish (1x)</option>
+              <option value="fine">Precision Fine Polish (1.5x)</option>
+              <option value="mirror">Optical Mirror Buffing (2x)</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Polishing Rate (cm2/min)</label>

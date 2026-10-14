@@ -29,27 +29,59 @@ export default function PavementThicknessCalculatorClient() {
     if (!W18 || !MR || !a1 || !a2 || !a3 || W18 <= 0 || MR <= 0) return null;
 
     const ZR = { 0.5: 0, 0.85: -1.036, 0.9: -1.282, 0.95: -1.645, 0.99: -2.327 }[R] ?? -1.282;
+    const logW18 = Math.log10(W18);
+    // Convert MR (MPa) to psi: 1 MPa ≈ 145.038 psi
+    const mrPsi = MR * 145.038;
+    const logMR = Math.log10(mrPsi);
+    const logPSI = Math.log10(Math.max(0.1, dPSI / (4.2 - 1.5)));
 
-    const logW = Math.log10(W18);
-    const term = ZR * S0 + 9.46 * Math.log10(MR) - 8.27 - 5.19 * Math.log10(dPSI);
+    // AASHTO 1993 implicit equation function g(SN) = RHS - log10(W18)
+    const evalAASHTO = (sn: number) => {
+      const term1 = ZR * S0;
+      const term2 = 9.36 * Math.log10(sn + 1) - 0.20;
+      const term3 = logPSI / (0.40 + 1094 / Math.pow(sn + 1, 5.19));
+      const term4 = 2.32 * logMR - 8.07;
+      return term1 + term2 + term3 + term4 - logW18;
+    };
 
-    let SN = 1.0;
-    for (let i = 0; i < 50; i++) {
-      const f = Math.log10(logW) - 9.46 * Math.log10(MR) + 8.27 + 5.19 * Math.log10(dPSI) - ZR * S0;
-      SN = Math.pow(10, f / 7.0);
+    // Bisection search for SN in [0.5, 10.0]
+    let low = 0.5;
+    let high = 10.0;
+    let SN = 3.5;
+    for (let iter = 0; iter < 30; iter++) {
+      const mid = (low + high) / 2;
+      const diff = evalAASHTO(mid);
+      if (Math.abs(diff) < 1e-4) {
+        SN = mid;
+        break;
+      }
+      if (diff < 0) {
+        low = mid;
+      } else {
+        high = mid;
+      }
+      SN = mid;
     }
 
-    const D1 = SN / (a1 * m);
-    const remainingSN1 = Math.max(0, SN - a1 * D1 * m);
-    const D2 = remainingSN1 / (a2 * m);
-    const remainingSN2 = Math.max(0, remainingSN1 - a2 * D2 * m);
-    const D3 = remainingSN2 / (a3 * m);
+    // Layer thicknesses allocation in inches, then converted to mm (1 in = 25.4 mm)
+    // 1. Surface layer D1 (carries ~40% of SN, min 2 inches = 50mm)
+    const D1_in = Math.max(2.0, (0.40 * SN) / a1);
+    const SN1 = a1 * D1_in;
+
+    // 2. Base layer D2 (carries remainder up to subgrade, min 4 inches = 100mm)
+    const remainingForBase = Math.max(0, SN - SN1);
+    const D2_in = Math.max(4.0, (0.65 * remainingForBase) / (a2 * m));
+    const SN2 = a2 * D2_in * m;
+
+    // 3. Subbase layer D3 (carries the final remaining SN, min 6 inches = 150mm)
+    const remainingForSubbase = Math.max(0, SN - SN1 - SN2);
+    const D3_in = Math.max(6.0, remainingForSubbase / (a3 * m));
 
     return {
       SN,
-      D1: Math.max(D1, 25),
-      D2: Math.max(D2, 100),
-      D3: Math.max(D3, 150),
+      D1: Math.round(D1_in * 25.4), // mm
+      D2: Math.round(D2_in * 25.4), // mm
+      D3: Math.round(D3_in * 25.4), // mm
     };
   }, [esals, reliability, standardDev, serviceabilityLoss, subgradeMR, surfaceCoeff, baseCoeff, subbaseCoeff, drainageCoeff]);
 

@@ -58,8 +58,11 @@ export default function VoltageDropCalculatorClient() {
           </div>
           <div key="4">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Phase</label>
-            <input type="text" value={inputs[4]} onChange={e => updateInput(4, e.target.value)} placeholder="single"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
+            <select value={inputs[4]} onChange={e => updateInput(4, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="single">Single Phase (2-wire, 2.0x)</option>
+              <option value="three">Three Phase (3/4-wire, √3=1.732x)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["15","30","5.21","230","single"])}

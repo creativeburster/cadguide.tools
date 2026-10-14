@@ -14,7 +14,33 @@ export default function EulerBernoulliBeamCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const P=parseFloat(inputs[0])*1000,a=parseFloat(inputs[1]),L=parseFloat(inputs[2]),E=parseFloat(inputs[3])*1e9,I=parseFloat(inputs[4])*1e-8,x=parseFloat(inputs[5]);const b=L-a;let y;if(x<a){y=P*b*x*(L*L-b*b-x*x)/(6*L*E*I)*1000;}else{y=P*a*(L-x)*(L*L-a*a-(L-x)*(L-x))/(6*L*E*I)*1000;}const ymax=P*a*b*(L*L-a*a-b*b)/(16*L*E*I)*1000;const theta=P*b*(L*L-b*b)/(6*L*E*I);return{y,ymax,theta};
+    const P = (parseFloat(inputs[0]) || 0) * 1000; // N
+    const a = parseFloat(inputs[1]) || 0; // m
+    const L = parseFloat(inputs[2]) || 1; // m
+    const E = (parseFloat(inputs[3]) || 200) * 1e9; // Pa
+    const I = (parseFloat(inputs[4]) || 5000) * 1e-8; // m^4 (from cm^4: 1 cm^4 = 1e-8 m^4)
+    const x = parseFloat(inputs[5]) || 0;
+
+    const b = Math.max(0, L - a);
+    let y = 0;
+    if (L > 0 && E > 0 && I > 0) {
+      if (x < a) {
+        y = (P * b * x * (L * L - b * b - x * x)) / (6 * L * E * I) * 1000; // mm
+      } else {
+        const xRev = L - x;
+        y = (P * a * xRev * (L * L - a * a - xRev * xRev)) / (6 * L * E * I) * 1000; // mm
+      }
+    }
+
+    // Exact theoretical max deflection for point load on simply supported beam
+    const lShort = Math.min(a, b);
+    let ymax = 0;
+    if (L > 0 && E > 0 && I > 0 && lShort > 0) {
+      ymax = (P * lShort * Math.pow(L * L - lShort * lShort, 1.5)) / (9 * Math.sqrt(3) * L * E * I) * 1000; // mm
+    }
+
+    const theta = (L > 0 && E > 0 && I > 0) ? (P * b * (L * L - b * b)) / (6 * L * E * I) : 0;
+    return { y, ymax, theta };
   }, [inputs]);
 
   const formatNum = (n: number) => {

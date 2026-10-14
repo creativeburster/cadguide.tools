@@ -48,8 +48,12 @@ export default function ReamingDimensionCalculatorClient() {
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="steel"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="steel">Carbon / Alloy Steel</option>
+              <option value="cast_iron">Cast Iron</option>
+              <option value="aluminum">Aluminum / Non-Ferrous</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["20","0.02","steel"])}

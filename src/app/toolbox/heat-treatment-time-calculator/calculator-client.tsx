@@ -43,13 +43,21 @@ export default function HeatTreatmentTimeCalculatorClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="carbon_steel"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="carbon_steel">Plain Carbon Steel</option>
+              <option value="alloy_steel">Low Alloy Steel</option>
+              <option value="aluminum">Aluminum Alloy</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Treatment</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="hardening"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="hardening">Austenitize & Quench (Hardening)</option>
+              <option value="tempering">Tempering (Air Cool)</option>
+              <option value="annealing">Full Annealing (Furnace Cool)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["50","carbon_steel","hardening"])}

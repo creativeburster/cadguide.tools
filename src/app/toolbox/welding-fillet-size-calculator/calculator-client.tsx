@@ -14,7 +14,24 @@ export default function WeldingFilletSizeCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const t1=parseFloat(inputs[0]),t2=parseFloat(inputs[1]),L=parseFloat(inputs[2]),F=parseFloat(inputs[3])*1000;const minS=Math.max(3,t1*0.125*25.4/25.4);const reqS=Math.sqrt(2)*F/(0.707*L*200);const Fw=0.707*minS*L*200/1000;return{minS,reqS:reqS,Fw};
+    const t1 = parseFloat(inputs[0]) || 0;
+    const t2 = parseFloat(inputs[1]) || 0;
+    const L = parseFloat(inputs[2]) || 0;
+    const F = (parseFloat(inputs[3]) || 0) * 1000; // N
+
+    // AWS D1.1 standard minimum fillet weld size based on thicker plate t2
+    const thickest = Math.max(t1, t2);
+    let minS = 3;
+    if (thickest > 20) minS = 8;
+    else if (thickest > 12) minS = 6;
+    else if (thickest > 6) minS = 5;
+
+    // Required fillet leg size: s = F / (0.707 * L * allowableStress)
+    // with allowable shear stress ≈ 200 MPa (for E70xx electrodes)
+    const reqS = L > 0 ? F / (0.707 * L * 200) : 0;
+    const Fw = (0.707 * minS * L * 200) / 1000; // Capacity in kN
+
+    return { minS, reqS, Fw };
   }, [inputs]);
 
   const formatNum = (n: number) => {

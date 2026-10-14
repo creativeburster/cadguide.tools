@@ -14,7 +14,7 @@ export default function PressureUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toPa={'pa':1,'kpa':1000,'mpa':1000000,'bar':100000,'psi':6895,'atm':101325,'mmhg':133.3,'kgcm2':98067} as Record<string, number>;const pa=val*(toPa[from]||1);const result=pa/(toPa[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=(inputs[1]||'').toLowerCase().trim(),to=(inputs[2]||'').toLowerCase().trim();const toPa={'pa':1,'kpa':1000,'mpa':1000000,'bar':100000,'psi':6895,'atm':101325,'mmhg':133.3,'kgcm2':98067} as Record<string, number>;const pa=val*(toPa[from]||1);const result=pa/(toPa[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -43,13 +43,17 @@ export default function PressureUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="bar"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="pa">pa</option><option value="kpa">kpa</option><option value="mpa">mpa</option><option value="bar">bar</option><option value="psi">psi</option><option value="atm">atm</option><option value="mmhg">mmhg</option><option value="kgcm2">kgcm2</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="psi"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="pa">pa</option><option value="kpa">kpa</option><option value="mpa">mpa</option><option value="bar">bar</option><option value="psi">psi</option><option value="atm">atm</option><option value="mmhg">mmhg</option><option value="kgcm2">kgcm2</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["1","bar","psi"])}

@@ -43,13 +43,17 @@ export default function TorqueUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="Nm"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="nm">nm</option><option value="knm">knm</option><option value="lbfft">lbfft</option><option value="lbfin">lbfin</option><option value="kgfm">kgfm</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="ft-lbf"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="nm">nm</option><option value="knm">knm</option><option value="lbfft">lbfft</option><option value="lbfin">lbfin</option><option value="kgfm">kgfm</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["100","Nm","ft-lbf"])}

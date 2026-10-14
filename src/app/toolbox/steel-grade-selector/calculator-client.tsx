@@ -38,8 +38,15 @@ export default function SteelGradeSelectorClient() {
 
           <div key="0">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Steel Grade</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="Q235"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+            <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="Q235">Q235 (fy=235 MPa, fu=375 MPa)</option>
+              <option value="Q345">Q345 (fy=345 MPa, fu=510 MPa)</option>
+              <option value="Q390">Q390 (fy=390 MPa, fu=530 MPa)</option>
+              <option value="Q420">Q420 (fy=420 MPa, fu=580 MPa)</option>
+              <option value="A36">ASTM A36 (fy=250 MPa, fu=400 MPa)</option>
+              <option value="A572">ASTM A572 Gr50 (fy=345 MPa, fu=450 MPa)</option>
+            </select>
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Thickness (mm)</label>

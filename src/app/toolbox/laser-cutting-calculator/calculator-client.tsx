@@ -14,7 +14,24 @@ export default function LaserCuttingCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const P=parseFloat(inputs[0]),t=parseFloat(inputs[1]),mat=inputs[2],abs=parseFloat(inputs[3]);const rho=mat==='steel'?7850:mat==='aluminum'?2700:8000;const cp=mat==='steel'?460:mat==='aluminum'?900:500;const dT=1500;const Hf=mat==='steel'?272000:mat==='aluminum'?397000:272000;const v=P*abs/(t/1000*rho*(cp*dT+Hf));const time=1000/v;return{v,t};
+    const P = parseFloat(inputs[0]) || 0;
+    const t = parseFloat(inputs[1]) || 0;
+    const mat = (inputs[2] || 'steel').toLowerCase();
+    const abs = parseFloat(inputs[3]) || 0.3;
+
+    const rho = mat === 'aluminum' ? 2700 : mat === 'stainless' ? 8000 : 7850; // kg/m³
+    const cp = mat === 'aluminum' ? 900 : mat === 'stainless' ? 500 : 460; // J/(kg·K)
+    const dT = mat === 'aluminum' ? 650 : 1500; // K
+    const Hf = mat === 'aluminum' ? 397000 : 272000; // J/kg
+    const kerf = 0.2; // mm typical fiber kerf width
+
+    const Ev = rho * (cp * dT + Hf); // J/m³
+    // v (m/s) = (P * abs) / ((t/1000) * (kerf/1000) * Ev)
+    const vMPerSec = (t > 0 && kerf > 0 && Ev > 0) ? (P * abs) / ((t / 1000) * (kerf / 1000) * Ev) : 0;
+    const vMmPerSec = vMPerSec * 1000;
+    const cutTime1m = vMPerSec > 0 ? 1 / vMPerSec : 0; // seconds for 1 meter
+
+    return { v: vMmPerSec, t: cutTime1m };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -48,8 +65,12 @@ export default function LaserCuttingCalculatorClient() {
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="steel"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="steel">Carbon Steel</option>
+              <option value="stainless">Stainless Steel</option>
+              <option value="aluminum">Aluminum</option>
+            </select>
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Absorption</label>

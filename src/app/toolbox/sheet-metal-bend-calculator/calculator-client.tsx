@@ -14,7 +14,27 @@ export default function SheetMetalBendCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const a=parseFloat(inputs[0])*Math.PI/180,R=parseFloat(inputs[1]),T=parseFloat(inputs[2]),K=parseFloat(inputs[3]),L1=parseFloat(inputs[4]),L2=parseFloat(inputs[5]);const BA=a/(2*Math.PI)*2*Math.PI*(R+K*T);const BD=2*(R+T)-BA;const FL=L1+L2+BA;return{BA,BD,FL};
+    const angleDeg = parseFloat(inputs[0]) || 0;
+    const a = (angleDeg * Math.PI) / 180;
+    const R = parseFloat(inputs[1]) || 0;
+    const T = parseFloat(inputs[2]) || 0;
+    const K = parseFloat(inputs[3]) || 0.33;
+    const L1 = parseFloat(inputs[4]) || 0;
+    const L2 = parseFloat(inputs[5]) || 0;
+
+    // Bend Allowance BA = (angle in rad) * (R + K * T)
+    const BA = a * (R + K * T);
+
+    // Outside Setback OSSB = (R + T) * tan(angle / 2)
+    const OSSB = (R + T) * Math.tan(a / 2);
+
+    // Bend Deduction BD = 2 * OSSB - BA
+    const BD = 2 * OSSB - BA;
+
+    // Flat length from external apex legs: FL = L1 + L2 - BD
+    const FL = Math.max(0, L1 + L2 - BD);
+
+    return { BA, BD, FL };
   }, [inputs]);
 
   const formatNum = (n: number) => {

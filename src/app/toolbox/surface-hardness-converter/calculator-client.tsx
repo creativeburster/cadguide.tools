@@ -43,8 +43,13 @@ export default function SurfaceHardnessConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Input Scale</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="HV"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-red-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="HV">Vickers Hardness (HV)</option>
+              <option value="HRC">Rockwell C (HRC)</option>
+              <option value="HB">Brinell Hardness (HB)</option>
+              <option value="HRB">Rockwell B (HRB)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["600","HV"])}

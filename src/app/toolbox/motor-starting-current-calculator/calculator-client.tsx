@@ -63,8 +63,11 @@ export default function MotorStartingCurrentCalculatorClient() {
           </div>
           <div key="5">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Phase</label>
-            <input type="text" value={inputs[5]} onChange={e => updateInput(5, e.target.value)} placeholder="three"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
+            <select value={inputs[5]} onChange={e => updateInput(5, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="three">3-Phase AC (√3 Factor)</option>
+              <option value="single">1-Phase AC (Single Phase)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["15","400","0.9","0.85","6.5","three"])}

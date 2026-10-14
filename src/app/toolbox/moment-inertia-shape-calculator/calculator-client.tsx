@@ -38,8 +38,12 @@ export default function MomentInertiaShapeCalculatorClient() {
 
           <div key="0">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Shape</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="rectangle"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="rectangle">Solid Rectangle (b x h)</option>
+              <option value="circle">Solid Circle (Ø D)</option>
+              <option value="hollow_circle">Hollow Pipe (D_outer / d_inner)</option>
+            </select>
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width b (mm)</label>

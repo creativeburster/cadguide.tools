@@ -44,10 +44,10 @@ export default function CNCFeedRateClient() {
     // MRR for slotting: Vf × D (mm³/min for metric)
     const mrr = feedRate * D;
 
-    // Power estimate: P = MRR × kc / (60 × 1000) [kW]
-    // Using approximate specific cutting force kc ≈ 2000 N/mm² for steel, 800 for aluminum
+    // Power estimate: P = (MRR × kc) / (60 × 1,000,000) [kW]
+    // kc ≈ 2000 N/mm² for steel, 800 for aluminum
     const kc = materialIdx === 2 ? 800 : materialIdx === 0 ? 2000 : 1500;
-    const power = (mrr * kc) / (60 * 1000);
+    const power = (mrr * kc) / (60 * 1_000_000);
 
     return {
       rpm: Math.round(rpm),

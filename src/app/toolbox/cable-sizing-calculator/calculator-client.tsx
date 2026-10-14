@@ -58,8 +58,11 @@ export default function CableSizingCalculatorClient() {
           </div>
           <div key="4">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Conductor</label>
-            <input type="text" value={inputs[4]} onChange={e => updateInput(4, e.target.value)} placeholder="copper"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
+            <select value={inputs[4]} onChange={e => updateInput(4, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="copper">Copper Conductor (Cu)</option>
+              <option value="aluminum">Aluminum Conductor (Al)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["30","20","230","3","copper"])}

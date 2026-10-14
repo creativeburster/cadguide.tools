@@ -14,7 +14,19 @@ export default function PileCapacityCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const d=parseFloat(inputs[0])/1000,L=parseFloat(inputs[1]),cu=parseFloat(inputs[2]),Nc=parseFloat(inputs[3]),alpha=parseFloat(inputs[4]);const Ap=Math.PI*d*d/4;const Qb=Ap*Nc*cu*1000;const As=Math.PI*d*L;const Qs=As*alpha*cu;const Qt=Qb+Qs;return{Qb,Qs,Qt};
+    const d = (parseFloat(inputs[0]) || 0) / 1000;
+    const L = parseFloat(inputs[1]) || 0;
+    const cu = parseFloat(inputs[2]) || 0;
+    const Nc = parseFloat(inputs[3]) || 9;
+    const alpha = parseFloat(inputs[4]) || 0.5;
+
+    const Ap = Math.PI * d * d / 4;
+    // cu is in kPa (kN/m²), so Ap * Nc * cu is directly in kN
+    const Qb = Ap * Nc * cu;
+    const As = Math.PI * d * L;
+    const Qs = As * alpha * cu; // kN
+    const Qt = Qb + Qs; // kN
+    return { Qb, Qs, Qt };
   }, [inputs]);
 
   const formatNum = (n: number) => {

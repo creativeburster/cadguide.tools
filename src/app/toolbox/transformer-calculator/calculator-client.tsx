@@ -53,8 +53,11 @@ export default function TransformerCalculatorClient() {
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Phase</label>
-            <input type="text" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} placeholder="three"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
+            <select value={inputs[3]} onChange={e => updateInput(3, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="three">3-Phase Transformer</option>
+              <option value="single">1-Phase Transformer</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["11000","400","250","three"])}

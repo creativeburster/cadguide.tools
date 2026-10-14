@@ -14,7 +14,7 @@ export default function ViscosityUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase(),to=inputs[2].toLowerCase();const toPas={'cp':0.001,'pas':1,'poise':0.1,'lbfts':1.488,'cst':0.001} as Record<string, number>;const pas=val*(toPas[from]||1);const result=pas/(toPas[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=(inputs[1]||'').toLowerCase().trim(),to=(inputs[2]||'').toLowerCase().trim();const toPas={'cp':0.001,'pas':1,'pa.s':1,'poise':0.1,'lbfts':1.488,'cst':0.001} as Record<string, number>;const pas=val*(toPas[from]||1);const result=pas/(toPas[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -43,13 +43,17 @@ export default function ViscosityUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="cP"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="cp">cp</option><option value="pas">pas</option><option value="pa.s">pa.s</option><option value="poise">poise</option><option value="lbfts">lbfts</option><option value="cst">cst</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="Pa.s"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="cp">cp</option><option value="pas">pas</option><option value="pa.s">pa.s</option><option value="poise">poise</option><option value="lbfts">lbfts</option><option value="cst">cst</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["1","cP","Pa.s"])}

@@ -38,8 +38,11 @@ export default function NaturalFrequencyCalculatorClient() {
 
           <div key="0">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">System Type</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="spring"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="spring">Linear Lumped Spring-Mass</option>
+              <option value="cantilever">Cantilever Beam System</option>
+            </select>
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Stiffness k (N/m)</label>

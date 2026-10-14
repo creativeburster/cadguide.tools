@@ -38,8 +38,13 @@ export default function MaterialDensityCalculatorClient() {
 
           <div key="0">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="steel"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+            <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="steel">Carbon Steel (7850 kg/m³)</option>
+              <option value="aluminum">Aluminum 6061 (2700 kg/m³)</option>
+              <option value="copper">Copper (8960 kg/m³)</option>
+              <option value="titanium">Titanium Grade 5 (4500 kg/m³)</option>
+            </select>
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width (mm)</label>

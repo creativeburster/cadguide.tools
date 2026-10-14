@@ -41,9 +41,10 @@ export default function ShaftTorsionClient() {
 
     const T = inputMode === 'torque' ? torque : (power * 60 * 1000) / (2 * Math.PI * rpm);
 
-    const shearStress = (T * (D / 2)) / J;
-    const twistAngle = (T * L) / (G * J * 1e6) * (180 / Math.PI);
-    const safetyFactor = shearStress > 0 ? yieldStrength / shearStress / 0.577 : 999;
+    const shearStress = ((T * (D / 2)) / J) / 1e6; // Convert Pa to MPa
+    const twistAngle = (T * L) / (G * 1e9 * J) * (180 / Math.PI);
+    const shearYield = yieldStrength * 0.577; // von Mises shear yield in MPa
+    const safetyFactor = shearStress > 0 ? shearYield / shearStress : 999;
 
     return { J, Zp, T, shearStress, twistAngle, safetyFactor, G };
   }, [shaftType, matIdx, outerDia, innerDia, length, torque, power, rpm, inputMode]);

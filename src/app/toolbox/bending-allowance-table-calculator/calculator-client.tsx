@@ -14,7 +14,18 @@ export default function BendingAllowanceTableCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const mat=inputs[0],T=parseFloat(inputs[1]),angle=parseFloat(inputs[2]),R=parseFloat(inputs[3]);const K=mat==='aluminum'?0.33:mat==='steel'?0.44:0.4;const BA=Math.PI/180*angle*(R+K*T);const BD=2*(R+T)-BA;return{K,BA,BD};
+    const mat = (inputs[0] || 'steel').toLowerCase();
+    const T = parseFloat(inputs[1]) || 0;
+    const angle = parseFloat(inputs[2]) || 0;
+    const R = parseFloat(inputs[3]) || 0;
+
+    const K = mat === 'aluminum' ? 0.33 : mat === 'steel' ? 0.44 : 0.4;
+    const aRad = (angle * Math.PI) / 180;
+    const BA = aRad * (R + K * T);
+    const OSSB = (R + T) * Math.tan(aRad / 2);
+    const BD = 2 * OSSB - BA;
+
+    return { K, BA, BD };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -38,8 +49,12 @@ export default function BendingAllowanceTableCalculatorClient() {
 
           <div key="0">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="steel"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="steel">Carbon Steel</option>
+              <option value="stainless">Stainless Steel</option>
+              <option value="aluminum">Aluminum</option>
+            </select>
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Thickness (mm)</label>

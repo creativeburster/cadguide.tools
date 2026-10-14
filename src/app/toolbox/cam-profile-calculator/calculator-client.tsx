@@ -53,8 +53,12 @@ export default function CamProfileCalculatorClient() {
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Motion Type</label>
-            <input type="text" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} placeholder="shm"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <select value={inputs[3]} onChange={e => updateInput(3, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="shm">Simple Harmonic Motion (SHM)</option>
+              <option value="uniform">Uniform Velocity</option>
+              <option value="cycloidal">Cycloidal Motion</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["20","90","45","shm"])}

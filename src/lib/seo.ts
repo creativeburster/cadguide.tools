@@ -120,7 +120,7 @@ export function toolKeywords(tool: Tool, category?: Category): string[] {
 
 /** Map our pricing_type strings to Schema.org price-spec values. */
 function offerForTool(tool: Tool) {
-  if (tool.pricing_type === "Free") {
+  if (tool.pricing_type === "Free" || tool.pricing_type === "Open Source") {
     return {
       "@type": "Offer",
       price: "0",
@@ -130,6 +130,16 @@ function offerForTool(tool: Tool) {
     };
   }
   if (tool.starting_price > 0) {
+    const isYear = tool.price_period === "year";
+    const isMonth = tool.price_period === "month";
+    const unitText = isYear
+      ? "ANNUAL"
+      : isMonth
+      ? "MONTH"
+      : tool.pricing_type === "Subscription"
+      ? "MONTH"
+      : "ANNUAL";
+
     return {
       "@type": "Offer",
       price: tool.starting_price.toString(),
@@ -138,11 +148,7 @@ function offerForTool(tool: Tool) {
         "@type": "UnitPriceSpecification",
         price: tool.starting_price.toString(),
         priceCurrency: "USD",
-        unitText:
-          tool.pricing_type === "Subscription" ||
-          tool.pricing_type === "Subscription / Perpetual"
-            ? "MONTH"
-            : "ANNUAL",
+        unitText,
       },
       availability: "https://schema.org/InStock",
       url: tool.official_url,
@@ -205,8 +211,7 @@ export const GSTARSOFT_PUBLISHER = {
   "url": "https://www.gstarcad.net/",
   "sameAs": [
     "https://en.wikipedia.org/wiki/Gstarsoft",
-    "https://twitter.com/gstarcad",
-    "https://github.com/gstar-byte"
+    "https://twitter.com/gstarcad"
   ]
 };
 
@@ -220,7 +225,7 @@ export const SITE_PUBLISHER = {
     "url": `${SITE_URL}/favicon.svg`
   },
   "sameAs": [
-    "https://github.com/gstar-byte/cadguide.tools",
+    "https://github.com/creativeburster/cadguide.tools",
     "https://x.com/cadguidetools"
   ]
 };
@@ -447,7 +452,7 @@ export function organizationLd() {
     sameAs: [
       'https://en.wikipedia.org/wiki/Gstarsoft',
       'https://twitter.com/gstarcad',
-      'https://github.com/gstar-byte/cadguide.tools',
+      'https://github.com/creativeburster/cadguide.tools',
       'https://x.com/cadguidetools',
     ],
   };

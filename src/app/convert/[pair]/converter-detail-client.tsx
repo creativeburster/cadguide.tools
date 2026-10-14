@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { 
   ArrowRight, 
@@ -33,8 +33,9 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [dragActive, setDragActive] = useState(false);
-  const [mockFile, setMockFile] = useState<string | null>(null);
+  const [fileInfo, setFileInfo] = useState<{ name: string; size: string } | null>(null);
   const [activeParamTab, setActiveParamTab] = useState<number>(0);
+  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleCopy = (url: string) => {
     navigator.clipboard.writeText(url);
@@ -42,11 +43,18 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
     setTimeout(() => setCopiedUrl(null), 2000);
   };
 
+  const processFile = (file: File) => {
+    const sizeStr = file.size > 1024 * 1024
+      ? `${(file.size / (1024 * 1024)).toFixed(2)} MB`
+      : `${(file.size / 1024).toFixed(1)} KB`;
+    setFileInfo({ name: file.name, size: sizeStr });
+  };
+
   const handleFileDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      setMockFile(e.dataTransfer.files[0].name);
+      processFile(e.dataTransfer.files[0]);
     }
   };
 
@@ -70,6 +78,18 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
               </p>
             </div>
 
+            {/* 隐藏的真实文件选择输入 */}
+            <input
+              type="file"
+              ref={fileInputRef}
+              className="hidden"
+              onChange={(e) => {
+                if (e.target.files && e.target.files[0]) {
+                  processFile(e.target.files[0]);
+                }
+              }}
+            />
+
             {/* Drag and Drop Zone */}
             <div
               onDragOver={(e) => { e.preventDefault(); setDragActive(true); }}
@@ -78,30 +98,28 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
               className={`border-2 border-dashed rounded-3xl p-8 sm:p-12 text-center transition-all cursor-pointer ${
                 dragActive 
                   ? 'border-blue-500 bg-blue-50/50' 
-                  : mockFile
+                  : fileInfo
                   ? 'border-emerald-400 bg-emerald-50/30'
                   : 'border-slate-200 bg-slate-50/50 hover:bg-slate-100/50 hover:border-slate-300'
               }`}
-              onClick={() => {
-                if (!mockFile) setMockFile(`model.${pair.fromFormat.ext.split(' ')[0].toLowerCase()}`);
-              }}
+              onClick={() => fileInputRef.current?.click()}
             >
               <div className="max-w-md mx-auto space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mx-auto text-blue-600">
-                  {mockFile ? <FileCheck2 className="w-8 h-8 text-emerald-600" /> : <UploadCloud className="w-8 h-8" />}
+                  {fileInfo ? <FileCheck2 className="w-8 h-8 text-emerald-600" /> : <UploadCloud className="w-8 h-8" />}
                 </div>
 
-                {mockFile ? (
+                {fileInfo ? (
                   <div className="space-y-1">
                     <p className="text-sm font-bold text-slate-900 flex items-center justify-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span>{mockFile} loaded</span>
+                      <span>{fileInfo.name} ({fileInfo.size})</span>
                     </p>
                     <p className="text-xs text-slate-500">
                       Target format: <strong className="text-blue-600">{pair.toFormat.ext}</strong> • Ready to dispatch
                     </p>
                     <button
-                      onClick={(e) => { e.stopPropagation(); setMockFile(null); }}
+                      onClick={(e) => { e.stopPropagation(); setFileInfo(null); }}
                       className="text-[11px] font-bold text-red-500 hover:underline pt-2 inline-block"
                     >
                       Remove File

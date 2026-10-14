@@ -14,7 +14,15 @@ export default function TapDrillSizeCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const D=parseFloat(inputs[0]),p=parseFloat(inputs[1]),pct=parseFloat(inputs[2])/100;const drill=D-p*1/pct;const tol=0.05*p;return{drill,tol};
+    const D = parseFloat(inputs[0]) || 0;
+    const p = parseFloat(inputs[1]) || 0;
+    const pct = (parseFloat(inputs[2]) || 75) / 100; // e.g. 0.75
+
+    // ISO metric 60° thread formula: Drill = D - (1.08253 × p × pct)
+    // Standard rule: 75% engagement gives Drill ≈ D - p * 0.974
+    const drill = D > 0 && p > 0 ? D - (1.08253 * p * pct) : 0;
+    const tol = 0.05 * p;
+    return { drill, tol };
   }, [inputs]);
 
   const formatNum = (n: number) => {

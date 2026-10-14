@@ -389,10 +389,11 @@
 - **Dev.to 6 (DA 85)**: `https://dev.to/willsun/reading-a-cad-vendors-pricing-page-like-a-procurement-professional-27f6`（CAD 厂商定价页面专业解读）
 - **Dev.to 7 (DA 85)**: `https://dev.to/willsun/the-cad-managers-annual-license-audit-checklist-12-field-checks-that-pay-for-themselves-4c7f`（CAD 管理员年度许可审计清单）
 
-### 3. 全球高权威专刊与工业速查白皮书 (DA 92 - 93)
+#### 3. 全球高权威专刊与工业速查白皮书 (DA 91 - 93)
 - **Telegraph 1 (DA 93)**: `https://telegra.ph/GstarCAD-vs-ZWCAD-vs-BricsCAD-2026-Procurement-Guide-to-AutoCAD-Alternatives-10-09`（工业采购白皮书）
 - **Telegraph 2 (DA 93)**: `https://telegra.ph/Sheet-Metal-K-Factor-Formula-Matrix-Engineering-Bend-Deduction-Mechanics-10-09`（钣金 K 因子公式矩阵与折弯扣除力学）
 - **Telegraph 3 (DA 93)**: `https://telegra.ph/AC1032-Binary-Header-Specification-Zero-Upload-AutoCAD-DWG-Decoding-10-09`（AC1032 二进制头部规范与零上传架构）
+- **Telegraph 4 (DA 91)**: `https://telegra.ph/CAD--BIM-Workstation-Hardware-Sizing-DWG-Binary-Signatures--Sheet-Metal-Reference-2026-10-12`（CAD/BIM 工作站硬件与显存扩展系数及 DWG 签名规范）
 - **Substack 1 (DA 92)**: `https://cadguidetools.substack.com/p/gstarcad-vs-zwcad-vs-bricscad-the`（AutoCAD 商业替代品采购决策专刊）
 - **Substack 2 (DA 92)**: `https://cadguidetools.substack.com/p/dwg-ac1032-binary-architecture-client`（DWG AC1032 客户端解析架构专刊）
 
@@ -403,6 +404,8 @@
 
 ### 5. 全球开源代码与技术规范速查平台 (DA 71 - 78 | 全新开拓渠道)
 - **Rentry.co 1 (DA 78)**: `https://rentry.co/sheet-metal-kfactor-matrix-1791533608`（精密钣金 K-Factor 与展开料工程参考）
+- **Rentry.co 2 (DA 78)**: `https://rentry.co/cadguide-tools`（官方品牌定制短链：参数化 CAD/BIM/PCB 工程速查中心与计算器矩阵）
+- **dpaste.com (DA 74)**: `https://dpaste.com/3AZWYFEBW`（CADGuide.tools 工程算法参考套件，365 天长效托管）
 - **Dpaste.org 1 (DA 71)**: `https://dpaste.org/jHSg1`（DWG AC1032 离线二进制头解析 Python 脚本与 IT 合规指南）
 - **Dpaste.org 2 (DA 71)**: `https://dpaste.org/2xMUR`（跨 CAD 通用钣金 K-Factor 与展开料 AutoLISP 宏代码库）
 
@@ -415,20 +418,49 @@
 - **Devpost 1 (DA 87 | Dofollow)**: `https://devpost.com/software/cadguide-tools`（CADGuide.tools 全景工程系统）
 - **Internet Archive (Wayback Machine, DA 96)**: `https://web.archive.org/web/20261009083706/https://cadguide.tools/`（全球数字图书馆永久官方权威存根）
 
-### 8. 全新六大垂直领域攻坚矩阵 (DA 72 - 95 | 行业权威突破)
+### 8. 全新六大垂直领域攻坚矩阵 (DA 74 - 95 | 行业权威突破)
 - **领域 1：全球创客与开源硬件工程项目平台 (DA 86)**:
   - **Hackaday.io (DA 86)**: `https://hackaday.io/cadguidetools`（官方创客主页实机上线并验证通过，公开展示工程定位与多重反向链接）。
 - **领域 2：交互式工程与数据科学研究笔记本 (DA 90 - 95)**:
   - **Google Colab (DA 95)**: `https://colab.research.google.com/github/creativeburster/cadguide.tools/blob/main/docs/notebooks/cadguide_engineering_toolkit.ipynb`（可交互运行的真实 CAD 二进制解析与钣金中性层算法测试套件）
   - **Jupyter nbviewer (DA 90)**: `https://nbviewer.org/github/creativeburster/cadguide.tools/blob/main/docs/notebooks/cadguide_engineering_toolkit.ipynb`（全球学术界标准只读渲染镜像）
 - **领域 3：全球开放科研与学术预印本框架 (DA 88)**:
-  - **Zenodo (CERN 欧洲核子研究组织) / DataCite (DA 88)**: 配置原生 `CITATION.cff` 与 `.zenodo.json`，收录《CADGuide Engineering Specifications & Algorithmic Toolset》，官方 `related_identifiers` 直链 `https://cadguide.tools`。
+  - **CERN Zenodo 1 (欧洲核子研究组织 | DA 88)**: `https://zenodo.org/records/23310877`（永久官方 DOI: `https://doi.org/10.5281/zenodo.23310877`，DWG 二进制签名与工作站配置规范数据集）。
+  - **CERN Zenodo 2 (欧洲核子研究组织 | DA 88)**: `https://zenodo.org/records/23329140`（永久官方 DOI: `https://doi.org/10.5281/zenodo.23329140`，钣金 K-Factor 与中性层折弯余量精密工程规范数据集，内嵌 `/toolbox/k-factor-calculator` 与 `/toolbox/sheet-metal-bend-calculator` 回链）。
 - **领域 4：全球工程技术文档与知识库发布体系 (DA 88)**:
-  - **Read the Docs (DA 88) / MkDocs Material**: 开源工程标准规范文档体系（`cadguide-tools.readthedocs.io`），配备 `.readthedocs.yaml`、`mkdocs.yml` 与 `docs/specs/*`，全站各篇深度植入反向外链与交互计算器入口。
+  - **Read the Docs 官方托管工程文档站 (DA 88)**: `https://cadguide-tools.readthedocs.io/en/latest/`（及项目主页 `https://app.readthedocs.org/projects/cadguide-tools/`，基于 MkDocs 实机在线构建上线，HTTP 200 验证通过）。
 - **领域 5：在线开发者即时沙盒与微应用托管 (DA 83 - 89)**:
   - **StackBlitz (DA 83)**: `https://stackblitz.com/github/creativeburster/cadguide.tools`（基于 WebContainer 引擎零安装秒级在线运行 CADGuide.tools 全站应用，HTTP 200 验证畅通）。
   - **JSFiddle (DA 89)**: `https://jsfiddle.net/byLdajup/`（可交互运行的《AutoCAD DWG Binary Magic Bytes Inspector》纯前端微应用沙盒，双重反向锚点直通主站与工具箱）。
-- **领域 6：设计系统与工业 CAD 资源社区 (DA 72 - 87)**:
-  - **GrabCAD (DA 72) / Thingiverse (DA 87)**: 覆盖 1000 万+ 注册机械工程师、工业制造者与 CAD 极客，技术教程与 Q&A 问答物料就绪。
+- **领域 6：开源系统、包管理与代码托管权威社区 (DA 76 - 90)**:
+  - **Ubuntu Canonical Launchpad (`launchpad.net` | DA 90)**: `https://launchpad.net/~cadguidetools`（官方开发者公开主页实机上线，HTTP 200 验证通过，内嵌主站与四大计算器超链接）。
+  - **RubyGems.org (`rubygems.org` | DA 87)**: `https://rubygems.org/profiles/cadguidetools`（官方包管理公开主页上线，HTTP 200 验证通过）。
+  - **Codeberg.org (`codeberg.org` | DA 76)**: `https://codeberg.org/cadguidetools` 与公开工程规范仓库 `https://codeberg.org/cadguidetools/cadguide-engineering-toolkit`（HTTP 200 验证通过，内嵌完整主站与工具箱回链）。
+
+### 9. 全球官方 3D CAD / EDA / 硬件与开发者官方社区矩阵 (DA 68 - 90 | 邮箱验证实机落地)
+- **Apple Swift Official Forums (`forums.swift.org` | DA 90)**:
+  - **公开技术专帖 (HTTP 200 匿名直通)**: `https://forums.swift.org/t/benchmarking-unified-memory-gpu-allocation-for-macos-3d-cad-and-metal-viewports/90012`（探讨 Apple Silicon Unified Memory 与 Metal 3D CAD 视口显存分配模型，正文直链 `https://cadguide.tools/calculator/hardware`）
+  - **官方社区账号**: `https://forums.swift.org/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与 5 条工具锚文本简介）
+- **Trimble SketchUp Official 3D CAD Community (`forums.sketchup.com` | DA 89)**:
+  - **官方社区账号**: `https://forums.sketchup.com/u/cadguidetools/summary`（已通过 API 与 UI 写入 Website `https://cadguide.tools` 与 700 字节富文本工程简介，并已提交 SketchUp + LayOut 硬件配置参考首帖 `pending_post #13415`）
+- **HashiCorp Official Discuss (`discuss.hashicorp.com` | DA 88)**:
+  - **官方社区账号**: `https://discuss.hashicorp.com/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与 5 条计算器锚文本简介，并已提交 Nomad GPU 3D/CAD 节点容量规划首帖 `pending_post #2987`）
+- **Matomo Official Forum (`forum.matomo.org` | DA 85)**:
+  - **官方社区账号**: `https://forum.matomo.org/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交纯前端工程计算器事件追踪技术帖 `pending_post #5632`）
+- **NixOS Official Discourse (`discourse.nixos.org` | DA 84)**:
+  - **官方社区账号**: `https://discourse.nixos.org/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交 Linux 下 FreeCAD/KiCad/Blender OpenGL/VRAM 硬件基准首帖 `pending_post #3766`）
+- **ownCloud Official Central (`central.owncloud.org` | DA 82)**:
+  - **官方社区账号**: `https://central.owncloud.org/u/cadguidetools/summary`（已完成邮箱激活验证，等待社区管理员批准新账号）
+- **ArduPilot Official Robotics & UAV Forum (`discuss.ardupilot.org` | DA 79)**:
+  - **官方社区账号**: `https://discuss.ardupilot.org/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交无人机飞控安装支架钣金折弯 K-Factor 计算参考首帖 `pending_post #7642`）
+- **KiCad Official PCB/EDA CAD Forum (`forum.kicad.info` | DA 78)**:
+  - **官方社区账号**: `https://forum.kicad.info/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交 KiCad STEP 导出与钣金外壳折弯余量匹配参考首帖 `pending_post #3672`）
+- **PlayCanvas Official 3D WebGL Engine Forum (`forum.playcanvas.com` | DA 78)**:
+  - **官方社区账号**: `https://forum.playcanvas.com/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交 3D CAD 转 WebGL 显存预算参考首帖 `pending_post #1400`）
+- **Ladybug Tools Rhino/Grasshopper CAD Forum (`discourse.ladybug.tools` | DA 68)**:
+  - **官方社区账号**: `https://discourse.ladybug.tools/u/cadguidetools/summary`（已写入 Website `https://cadguide.tools` 与富文本工程简介，并已提交大型 Rhino + Grasshopper 环境模拟工作站硬件配置参考首帖 `pending_post #3279`）
+
+
+
 
 

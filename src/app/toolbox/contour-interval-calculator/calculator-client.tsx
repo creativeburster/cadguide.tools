@@ -48,8 +48,12 @@ export default function ContourIntervalCalculatorClient() {
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Terrain Type</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="flat"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="flat">Flat Terrain (1x)</option>
+              <option value="rolling">Rolling Hills (1.5x)</option>
+              <option value="mountain">Mountainous Slope (2x)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["1000","50","flat"])}

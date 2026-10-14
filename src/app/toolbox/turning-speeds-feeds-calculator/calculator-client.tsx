@@ -33,8 +33,8 @@ export default function TurningSpeedsClient() {
     const D = diameter;
     const rpm = (Vc * 1000) / (Math.PI * D);
     const feedRate = rpm * fn;
-    const mrr = feedRate * doc * D;
-    const cuttingTime = length / feedRate * 60;
+    const mrr = Math.PI * D * doc * feedRate;
+    const cuttingTime = feedRate > 0 ? (length / feedRate) * 60 : 0;
 
     return { Vc, fn, rpm, feedRate, mrr, cuttingTime };
   }, [matIdx, toolType, diameter, doc, length, customVc, customFeed, useCustom]);

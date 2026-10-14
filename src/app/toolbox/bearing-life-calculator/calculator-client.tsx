@@ -53,8 +53,11 @@ export default function BearingLifeCalculatorClient() {
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Type</label>
-            <input type="text" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} placeholder="ball"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <select value={inputs[3]} onChange={e => updateInput(3, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="ball">Ball Bearing (p = 3)</option>
+              <option value="roller">Roller Bearing (p = 10/3)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["50","5","1500","ball"])}

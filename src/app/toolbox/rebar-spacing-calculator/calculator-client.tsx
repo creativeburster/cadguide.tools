@@ -58,8 +58,11 @@ export default function RebarSpacingCalculatorClient() {
           </div>
           <div key="4">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Direction</label>
-            <input type="text" value={inputs[4]} onChange={e => updateInput(4, e.target.value)} placeholder="both"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-red-600/5 focus:bg-white transition-all" />
+            <select value={inputs[4]} onChange={e => updateInput(4, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+              <option value="both">Bidirectional Mesh (X & Y)</option>
+              <option value="single">Unidirectional Bar Run</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["10","5","200","12","both"])}

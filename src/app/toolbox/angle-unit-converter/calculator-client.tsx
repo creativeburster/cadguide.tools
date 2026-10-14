@@ -14,7 +14,7 @@ export default function AngleUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];const toDeg={'deg':1,'rad':57.2958,'grad':0.9,'arcmin':1/60,'arcsec':1/3600} as Record<string, number>;const deg=val*(toDeg[from]||1);const result=deg/(toDeg[to]||1);return{result};
+    const val=parseFloat(inputs[0]),from=(inputs[1]||'').toLowerCase().trim(),to=(inputs[2]||'').toLowerCase().trim();const toDeg={'deg':1,'rad':57.2958,'grad':0.9,'arcmin':1/60,'arcsec':1/3600} as Record<string, number>;const deg=val*(toDeg[from]||1);const result=deg/(toDeg[to]||1);return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -43,13 +43,17 @@ export default function AngleUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="deg"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="deg">deg</option><option value="rad">rad</option><option value="grad">grad</option><option value="arcmin">arcmin</option><option value="arcsec">arcsec</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="rad"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="deg">deg</option><option value="rad">rad</option><option value="grad">grad</option><option value="arcmin">arcmin</option><option value="arcsec">arcsec</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["90","deg","rad"])}

@@ -14,7 +14,7 @@ export default function TemperatureUnitConverterClient() {
   };
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1],to=inputs[2];let c;if(from==='C')c=val;else if(from==='F')c=(val-32)*5/9;else if(from==='K')c=val-273.15;else c=(val-491.67)*5/9;let result;if(to==='C')result=c;else if(to==='F')result=c*9/5+32;else if(to==='K')result=c+273.15;else result=c*9/5+491.67;return{result};
+    const val=parseFloat(inputs[0]),from=(inputs[1]||'C').toUpperCase().trim(),to=(inputs[2]||'F').toUpperCase().trim();let c;if(from==='C')c=val;else if(from==='F')c=(val-32)*5/9;else if(from==='K')c=val-273.15;else c=(val-491.67)*5/9;let result;if(to==='C')result=c;else if(to==='F')result=c*9/5+32;else if(to==='K')result=c+273.15;else result=c*9/5+491.67;return{result};
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -43,13 +43,17 @@ export default function TemperatureUnitConverterClient() {
           </div>
           <div key="1">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="C"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="C">C</option><option value="F">F</option><option value="K">K</option><option value="R">R</option>
+            </select>
           </div>
           <div key="2">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="F"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
+              <option value="C">C</option><option value="F">F</option><option value="K">K</option><option value="R">R</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["25","C","F"])}
