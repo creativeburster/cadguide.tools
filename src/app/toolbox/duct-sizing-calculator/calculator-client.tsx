@@ -14,7 +14,36 @@ export default function DuctSizingCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const Q=parseFloat(inputs[0])/3600,v=parseFloat(inputs[1]),shape=inputs[2];const A=Q/v;const D=Math.sqrt(4*A/Math.PI)*1000;const fr=0.018*Math.pow(v,1.9)/Math.pow(D/1000,1.2);return{A,D,fr};
+    const Q = (parseFloat(inputs[0]) || 0) / 3600; // m³/h to m³/s
+    const v = parseFloat(inputs[1]) || 5; // m/s
+    const shape = inputs[2] || 'circular';
+
+    const A = v > 0 ? Q / v : 0; // m²
+
+    // Circular equivalent diameter (mm)
+    const DRound = Math.sqrt((4 * A) / Math.PI) * 1000;
+
+    let D = DRound;
+    let rectW = 0;
+    let rectH = 0;
+
+    if (shape === 'rectangular') {
+      // Standard aspect ratio 1.5:1 (W:H), rounded to standard 50mm increments
+      const rawH = Math.sqrt(A / 1.5) * 1000;
+      rectH = Math.max(100, Math.ceil(rawH / 50) * 50);
+      rectW = Math.max(100, Math.ceil((A * 1e6) / rectH / 50) * 50);
+
+      // Huebscher equivalent circular diameter De = 1.30 * (a * b)^0.625 / (a + b)^0.25 (mm)
+      const a = rectW;
+      const b = rectH;
+      D = (1.30 * Math.pow(a * b, 0.625)) / Math.pow(a + b, 0.25);
+    }
+
+    // Darcy-Weisbach duct friction rate (Pa/m) using ASHRAE air duct friction formula
+    const Dm = D / 1000;
+    const fr = Dm > 0 ? 0.018 * Math.pow(v, 1.9) / Math.pow(Dm, 1.2) : 0;
+
+    return { A, D, DRound, rectW, rectH, fr, shape };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -72,23 +101,31 @@ export default function DuctSizingCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Duct Area</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.A)}<span className="text-lg text-blue-400"> m2</span></div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Net Flow Area (A)</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(result.A)}<span className="text-lg text-blue-400"> m²</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Duct Diameter</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">
+                  {result.shape === 'rectangular' ? 'Equivalent Diameter (De)' : 'Internal Diameter (D)'}
+                </div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.D)}<span className="text-lg text-green-400"> mm</span></div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Friction Rate</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.fr)}<span className="text-lg text-orange-400"> Pa/m</span></div>
+              {result.shape === 'rectangular' && (
+                <div className="col-span-2 bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                  <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Recommended Rectangular Duct Size (Width × Height)</div>
+                  <div className="text-2xl font-black text-purple-700">{result.rectW} × {result.rectH}<span className="text-sm font-medium text-purple-500"> mm (Standard 50mm Module)</span></div>
+                </div>
+              )}
+              <div className="col-span-2 bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Specific Friction Loss Rate (Δp/L)</div>
+                <div className="text-xl font-black text-orange-700">{formatNum(result.fr)}<span className="text-sm font-medium text-orange-500"> Pa/m (ASHRAE Duct Friction Equation)</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                A = Q/v, D = sqrt(4*A/pi) for circular
+                A = Q / v • Huebscher Equivalent: De = 1.30·(a·b)^0.625 / (a + b)^0.25 • Δp/L = 0.018·v^1.9 / D^1.2
               </div>
             </div>
           </div>

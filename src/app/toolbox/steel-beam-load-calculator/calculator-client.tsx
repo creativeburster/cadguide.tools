@@ -14,7 +14,31 @@ export default function SteelBeamLoadCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const Z=parseFloat(inputs[0])*1e-6,fy=parseFloat(inputs[1])*1e6,L=parseFloat(inputs[2]);const M=0.66*fy*Z/1000;const W=8*M/(L*L);return{M,W};
+    const Z = (parseFloat(inputs[0]) || 0) * 1e-6; // cm³ to m³
+    const fy = (parseFloat(inputs[1]) || 0) * 1e6; // MPa to Pa
+    const L = parseFloat(inputs[2]) || 0;
+    const loadType = inputs[3] || 'udl';
+
+    // Allowable bending moment capacity M_allow = 0.66 * fy * Z (kNm)
+    const M = (0.66 * fy * Z) / 1000;
+
+    let allowableLoad = 0;
+    let loadUnit = 'kN/m';
+    let loadLabel = 'Allowable UDL (w)';
+
+    if (loadType === 'point') {
+      // Midspan point load for simply supported beam: M_max = P * L / 4  =>  P = 4 * M / L
+      allowableLoad = L > 0 ? (4 * M) / L : 0;
+      loadUnit = 'kN';
+      loadLabel = 'Allowable Midspan Point Load (P)';
+    } else {
+      // Uniformly distributed load: M_max = w * L² / 8  =>  w = 8 * M / L²
+      allowableLoad = L > 0 ? (8 * M) / (L * L) : 0;
+      loadUnit = 'kN/m';
+      loadLabel = 'Allowable Distributed Load (w)';
+    }
+
+    return { M, allowableLoad, loadUnit, loadLabel };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -53,8 +77,11 @@ export default function SteelBeamLoadCalculatorClient() {
           </div>
           <div key="3">
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Load Type</label>
-            <input type="text" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} placeholder="udl"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all" />
+            <select value={inputs[3]} onChange={e => updateInput(3, e.target.value)}
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all">
+              <option value="udl">Uniform Distributed Load (UDL, kN/m)</option>
+              <option value="point">Midspan Point Load (P, kN)</option>
+            </select>
           </div>
 
           <button onClick={() => setInputs(["200","250","5","udl"])}
@@ -78,15 +105,15 @@ export default function SteelBeamLoadCalculatorClient() {
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.M)}<span className="text-lg text-blue-400"> kNm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Allowable Load</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.W)}<span className="text-lg text-green-400"> kN/m</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">{result.loadLabel}</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.allowableLoad)}<span className="text-lg text-green-400"> {result.loadUnit}</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                M = sigma_z * Z, W = 8*M/L^2 for simply supported
+                M_cap = 0.66·fy·Z • UDL: w = 8·M / L² • Point Load: P = 4·M / L (AISC 360 ASD Allowable Stress)
               </div>
             </div>
           </div>

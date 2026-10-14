@@ -14,7 +14,28 @@ export default function GypsumBoardQuantityCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const A=parseFloat(inputs[0]),th=parseFloat(inputs[1]),waste=parseFloat(inputs[2])/100;const sa=1.2*2.4;const N=Math.ceil(A*(1+waste)/sa);const screws=N*30;const tape=N*5;return{N,screws,tape};
+    const A = parseFloat(inputs[0]) || 0; // Surface area in m²
+    const th = parseFloat(inputs[1]) || 12.5; // Board thickness in mm
+    const waste = (parseFloat(inputs[2]) || 10) / 100;
+
+    const sheetArea = 1.2 * 2.4; // 2.88 m² standard sheet
+    const N = Math.ceil((A * (1 + waste)) / sheetArea);
+
+    // Fastener density & screw sizing by board thickness (ASTM C840 / GA-216):
+    // Standard boards (<=12.5mm) use 25mm (1") screws at ~30 screws/sheet
+    // Fire/Thick boards (>12.5mm) require 32mm (1-1/4") screws with tighter spacing (~36 screws/sheet)
+    const screwsPerSheet = th > 13 ? 36 : 30;
+    const screwSpec = th > 13 ? '32mm (1-1/4") Bugle Head' : '25mm (1") Bugle Head';
+    const screws = N * screwsPerSheet;
+
+    // Joint tape per sheet perimeter perimeter contact (~5.5m per sheet)
+    const tape = Math.ceil(N * 5.2);
+
+    // Dead load weight estimation (density ~ 780 kg/m³ for gypsum core):
+    const areaDensityKgM2 = th * 0.78;
+    const totalWeightKg = Math.round(N * sheetArea * areaDensityKgM2);
+
+    return { N, screws, tape, totalWeightKg, screwSpec, th };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -69,23 +90,29 @@ export default function GypsumBoardQuantityCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Sheets 1.2x2.4</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.N)}</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Total Sheets (1.2×2.4m)</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(result.N)}<span className="text-lg text-blue-400"> sheets</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Screws</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.screws)}</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Drywall Screws</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.screws)}<span className="text-lg text-green-400"> pcs</span></div>
+                <div className="text-xs text-green-600 font-medium mt-1">{result.screwSpec}</div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Joint Tape</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Joint Compound Tape</div>
                 <div className="text-3xl font-black text-orange-700">{formatNum(result.tape)}<span className="text-lg text-orange-400"> m</span></div>
+              </div>
+              <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
+                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Estimated Dead Load</div>
+                <div className="text-3xl font-black text-purple-700">{formatNum(result.totalWeightKg)}<span className="text-lg text-purple-400"> kg</span></div>
+                <div className="text-xs text-purple-600 font-medium mt-1">For {result.th}mm thickness</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                sheets = ceil(A*(1+waste)/sheet_area)
+                N = ceil(A · (1 + waste) / 2.88m²) • Screws & dead weight calculated per ASTM C840 / GA-216 specifications
               </div>
             </div>
           </div>

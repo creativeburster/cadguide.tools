@@ -14,7 +14,23 @@ export default function PlasticShrinkageCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const L=parseFloat(inputs[0]),rate=parseFloat(inputs[1])/100;const S=L*rate;const M=L/(1-rate);return{S,M};
+    const L = parseFloat(inputs[0]) || 0;
+    const baseRate = (parseFloat(inputs[1]) || 0.5) / 100;
+    const moldT = parseFloat(inputs[2]) || 60;
+    const meltT = parseFloat(inputs[3]) || 220;
+
+    // Engineering thermal & crystallinity correction for injection molding:
+    // Higher mold temp increases crystallinity & post-mold shrinkage (~0.25% per 10°C delta)
+    // Higher melt temp increases volume contraction (~0.1% per 20°C delta)
+    const moldFactor = 1 + 0.0025 * (moldT - 60);
+    const meltFactor = 1 + 0.0005 * (meltT - 220);
+    const effRate = Math.max(0.0005, baseRate * moldFactor * meltFactor);
+
+    const S = L * effRate;
+    const M = effRate < 1 ? L / (1 - effRate) : L;
+    const effRatePct = effRate * 100;
+
+    return { S, M, effRatePct };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -74,19 +90,23 @@ export default function PlasticShrinkageCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Shrinkage</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Linear Shrinkage</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.S)}<span className="text-lg text-blue-400"> mm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Mold Dimension</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Required Mold Cavity</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.M)}<span className="text-lg text-green-400"> mm</span></div>
+              </div>
+              <div className="col-span-2 bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Effective Total Shrinkage Rate</div>
+                <div className="text-xl font-black text-purple-700">{formatNum(result.effRatePct)}<span className="text-sm font-medium text-purple-500"> % (adjusted for mold & melt temperatures)</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                Mold = Part / (1 - shrink_rate)
+                S = L · S_eff, where S_eff is corrected for crystalline cooling gradient & melt expansion
               </div>
             </div>
           </div>

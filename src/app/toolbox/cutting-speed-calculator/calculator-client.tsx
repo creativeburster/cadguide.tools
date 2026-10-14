@@ -64,11 +64,11 @@ export default function CuttingSpeedCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Surface Speed</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Metric Cutting Speed (Vc)</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.vc)}<span className="text-lg text-blue-400"> m/min</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Surface Speed</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Imperial Surface Speed (SFM)</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.vcf)}<span className="text-lg text-green-400"> ft/min</span></div>
               </div>
             </div>

@@ -34,9 +34,18 @@ export default function STLMeshCheckerClient() {
       const bytes = new Uint8Array(buffer);
 
       // Detect ASCII vs Binary
-      // ASCII STL starts with "solid"
-      const headerStr = new TextDecoder().decode(bytes.slice(0, 5));
-      const isASCII = headerStr.toLowerCase().startsWith('solid');
+      // Binary STL format: 80-byte header, 4-byte uint32 little-endian triangle count, then triCount * 50 bytes
+      let isBinary = false;
+      const view = new DataView(buffer);
+      if (bytes.length >= 84) {
+        const triCount = view.getUint32(80, true);
+        if (bytes.length === 84 + triCount * 50) {
+          isBinary = true;
+        }
+      }
+
+      const headerStr = new TextDecoder().decode(bytes.slice(0, 80));
+      const isASCII = !isBinary && headerStr.toLowerCase().includes('solid');
 
       let triangles: number[][] = [];
 

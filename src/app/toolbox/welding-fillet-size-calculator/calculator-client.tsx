@@ -14,24 +14,31 @@ export default function WeldingFilletSizeCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const t1 = parseFloat(inputs[0]) || 0;
-    const t2 = parseFloat(inputs[1]) || 0;
-    const L = parseFloat(inputs[2]) || 0;
+    const t1 = parseFloat(inputs[0]) || 0; // Thinner plate (mm)
+    const t2 = parseFloat(inputs[1]) || 0; // Thicker plate (mm)
+    const L = parseFloat(inputs[2]) || 0; // Weld length (mm)
     const F = (parseFloat(inputs[3]) || 0) * 1000; // N
 
-    // AWS D1.1 standard minimum fillet weld size based on thicker plate t2
+    // AWS D1.1 Table 2.4: Minimum fillet weld size based on the thicker part joined (t2):
     const thickest = Math.max(t1, t2);
     let minS = 3;
     if (thickest > 20) minS = 8;
     else if (thickest > 12) minS = 6;
     else if (thickest > 6) minS = 5;
 
-    // Required fillet leg size: s = F / (0.707 * L * allowableStress)
-    // with allowable shear stress ≈ 200 MPa (for E70xx electrodes)
-    const reqS = L > 0 ? F / (0.707 * L * 200) : 0;
-    const Fw = (0.707 * minS * L * 200) / 1000; // Capacity in kN
+    // AWS D1.1 Section 2.4.2.8: Maximum fillet weld along edges of thinner material (t1):
+    const thinnest = Math.min(t1, t2);
+    const maxS = thinnest < 6 ? thinnest : Math.max(1, thinnest - 1.5);
 
-    return { minS, reqS, Fw };
+    // Required fillet leg size based on allowable throat shear stress:
+    // s_req = F / (0.707 * L * allowableStress) with allowable shear stress ≈ 200 MPa (for E70xx electrodes)
+    const reqS = L > 0 ? F / (0.707 * L * 200) : 0;
+    const designS = Math.max(minS, reqS);
+    const Fw = (0.707 * designS * L * 200) / 1000; // Capacity at design size in kN
+
+    const isFeasible = designS <= maxS;
+
+    return { minS, maxS, reqS, designS, Fw, isFeasible, t1, t2 };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -91,23 +98,37 @@ export default function WeldingFilletSizeCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Min Fillet Size</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.minS)}<span className="text-lg text-blue-400"> mm</span></div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Recommended Design Leg (s)</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(result.designS)}<span className="text-lg text-blue-400"> mm</span></div>
+                <div className="text-xs text-blue-500 font-medium mt-1">Required: {formatNum(result.reqS)} mm</div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Required Size</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.reqS)}<span className="text-lg text-green-400"> mm</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Weld Load Capacity</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.Fw)}<span className="text-lg text-green-400"> kN</span></div>
+                <div className="text-xs text-green-500 font-medium mt-1">At recommended size</div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Weld Strength</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.Fw)}<span className="text-lg text-orange-400"> kN</span></div>
+              <div className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Min Leg (Thicker Plate {result.t2}mm)</div>
+                <div className="text-xl font-black text-purple-700">{formatNum(result.minS)}<span className="text-sm font-medium text-purple-500"> mm (AWS D1.1 Table 2.4)</span></div>
+              </div>
+              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Max Leg (Thinner Plate {result.t1}mm)</div>
+                <div className="text-xl font-black text-orange-700">{formatNum(result.maxS)}<span className="text-sm font-medium text-orange-500"> mm (Edge boundary)</span></div>
+              </div>
+              <div className={`col-span-2 rounded-2xl p-4 border ${result.isFeasible ? 'bg-emerald-50 border-emerald-100 text-emerald-800' : 'bg-amber-50 border-amber-100 text-amber-800'}`}>
+                <div className="text-xs font-black uppercase tracking-wider mb-1">AWS D1.1 Edge Feasibility Check</div>
+                <div className="text-sm font-bold">
+                  {result.isFeasible
+                    ? `✓ Feasible: Design leg size (${formatNum(result.designS)}mm) is within AWS maximum boundary (${formatNum(result.maxS)}mm)`
+                    : `⚠️ Oversized: Required weld (${formatNum(result.designS)}mm) exceeds max edge size (${formatNum(result.maxS)}mm). Increase weld length or use groove/PJP weld.`}
+                </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                Min leg size = 1/8 * thinner plate, max = 3/4 * thickness
+                AWS D1.1 Structural Welding Code: Throat t_e = 0.707·s • F_weld = 0.707·s·L·F_v • Min leg governed by thicker plate, max leg by thinner plate
               </div>
             </div>
           </div>

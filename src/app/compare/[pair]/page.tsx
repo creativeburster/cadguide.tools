@@ -135,7 +135,7 @@ function getDynamicEditorialVerdict(a: Tool, b: Tool): string {
 }
 
 function getCompareLayoutStyle(a: Tool, b: Tool): {
-  archetype: 'drafting' | 'mcad' | 'bim' | 'simulation' | 'creative';
+  archetype: 'drafting' | 'mcad' | 'bim' | 'cae' | 'eda' | 'simulation' | 'creative';
   bodyBg: string;
   accentText: string;
   borderHighlight: string;
@@ -147,7 +147,8 @@ function getCompareLayoutStyle(a: Tool, b: Tool): {
 } {
   const isC1 = a.category_id === 'c1' || b.category_id === 'c1';
   const isBim = a.category_id === 'c3' || b.category_id === 'c3';
-  const isCaeEda = a.category_id === 'c5' || b.category_id === 'c5' || a.category_id === 'c6' || b.category_id === 'c6';
+  const isEda = a.category_id === 'c6' || b.category_id === 'c6';
+  const isCae = a.category_id === 'c5' || b.category_id === 'c5';
   
   const mcadTools = ["solidworks", "fusion-360", "onshape", "autodesk-inventor", "ptc-creo", "siemens-nx", "catia", "freecad", "shapr3d", "solid-edge"];
   const isMcad = mcadTools.includes(a.slug) || mcadTools.includes(b.slug) || a.category_id === 'c2' || b.category_id === 'c2';
@@ -194,9 +195,23 @@ function getCompareLayoutStyle(a: Tool, b: Tool): {
     };
   }
 
-  if (isCaeEda) {
+  if (isEda) {
     return {
-      archetype: 'simulation',
+      archetype: 'eda',
+      bodyBg: 'bg-cyan-50/10',
+      accentText: 'text-cyan-800',
+      borderHighlight: 'border-cyan-200 hover:border-cyan-400 focus:border-cyan-400',
+      badgeBg: 'bg-cyan-100 border-cyan-200 text-cyan-950',
+      badgeText: 'text-cyan-900',
+      gradientHeader: 'from-cyan-800 via-teal-900 to-slate-900',
+      ctaBg: 'bg-cyan-700 hover:bg-cyan-800',
+      ctaHoverBg: 'hover:bg-cyan-800'
+    };
+  }
+
+  if (isCae) {
+    return {
+      archetype: 'cae',
       bodyBg: 'bg-indigo-50/10',
       accentText: 'text-indigo-700',
       borderHighlight: 'border-indigo-200 hover:border-indigo-400 focus:border-indigo-400',
@@ -861,6 +876,8 @@ export default async function ComparePairPage(
           </>
         );
       case 'simulation':
+      case 'cae':
+      case 'eda':
         return (
           <>
             {headerBlock}

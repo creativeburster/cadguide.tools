@@ -1,0 +1,96 @@
+﻿这是第二轮向纵深挖掘出的深层代码逻辑、文件解析器底层缺陷、跨页面张冠李戴以及 SEO/搜索架构隐患。你可以直接把这份清单同步给那边继续修改：
+1. 计算器“无效输入项（Dead Inputs）”与重复卡片标题
+通过对 214 个批量模板计算器进行 AST 变量追踪，发现 16 个计算器（共 19 个输入框）存在“假输入”——用户在界面上修改这些输入框的值，计算结果完全不会发生任何变化：
+问题类型
+	计算器目录 (src/app/toolbox/*)
+	失效的输入项名称
+	代码级根因
+	修复方案
+	根本未读取 inputs[i]
+	plastic-shrinkage-calculator
+	Mold Temp (C) (inputs[2])、Melt Temp (C) (inputs[3])
+	4 个输入框里有 2 个完全没在 useMemo 中读取，仅算了 L * rate。
+	引入模温与熔体温度对热收缩率的修正系数，或移除无效输入框。
+	根本未读取 inputs[i]
+	casting-shrinkage-calculator
+	Material (inputs[1], 默认 "cast_iron")
+	未读取材质字段，改变材质不会联动修改收缩率。
+	将 Material 改为下拉预设，切换材质时自动填入对应铸造收缩率（灰铸铁 1.0%、铸钢 2.0%、铝合金 1.3% 等）。
+	根本未读取 inputs[i]
+	planetary-gear-calculator
+	Planet Teeth (inputs[2])
+	完全未读取行星轮齿数 ，也未校核行星齿轮同心装配条件 。
+	读取 zp = parseFloat(inputs[2])，增加行星轮自转传动比及同心几何条件校验提示。
+	根本未读取 inputs[i]
+	steel-beam-load-calculator
+	Load Type (inputs[3], 默认 "udl")
+	无论用户输入 "udl"（均布）还是 "point"（集中荷载），代码永远只按均布荷载 W = 8*M/(L*L) 计算。
+	将 Load Type 改为下拉框，当选择集中荷载 point 时按  计算。
+	解析赋给变量但从未参与运算
+	concrete-mix-design-calculator
+	Target Strength (MPa) (fc)、Agg Size (mm) (aggSize)
+	4 个输入里有 2 个解析后未使用，且粗骨料被硬编码为 const coarse = 1050。
+	按 ACI 211 根据目标强度 fc 校验水灰比，并根据最大骨料粒径 aggSize 动态修正用水量与粗骨料体积。
+	解析赋给变量但从未参与运算
+	thread-milling-calculator
+	Thread Dia (mm) (D)、Cutter Dia (mm) (dc)
+	螺纹直径 D 和铣刀直径 dc 解析后均未使用；且循环时间误用主轴转速 n 除圈数（算出 0.06 秒）。
+	补齐内螺纹铣削的中心进给折算公式 ，并用圆周长  除以进给速度计算真实单圈加工时间。
+	解析赋给变量但从未参与运算
+	column-base-plate-calculator
+	Column Depth (mm) (cd)
+	解析了柱深 cd 却未使用，悬挑长度只算了 m = (B - cw) / 2（默认当成方柱）。
+	取两个方向悬挑长度的最大值：const m = Math.max((B - cw) / 2, (B - cd) / 2);。
+	解析赋给变量但从未参与运算
+	water-hammer-calculator
+	Valve Close Time (s) (tc)
+	读取了关阀时间 tc 但未参与水击压力计算，且返回 { dP, a, tc: tcrit } 直接用临界时间覆盖了 tc。
+	当 tc > tcrit（间接水击）时，将水击压力乘以折减系数 tcrit / tc。
+	解析赋给变量但从未参与运算
+	bolt-circle-calculator、duct-sizing-calculator、grinding-ratio-calculator、gypsum-board-quantity-calculator、pipe-flow-rate-calculator、reaming-dimension-calculator、spot-weld-calculator、welding-fillet-size-calculator
+	Start Angle、Duct Shape、Wheel Speed、Board Thickness、Roughness、Material、Electrode Force、Thicker Plate
+	以上 8 个计算器均把对应输入解析成了局部变量，但后续公式完全未引用该变量。
+	将对应变量接入工程公式（如矩形风管当量直径、板厚对应的自攻螺钉规格、粗糙度对管流摩擦的影响等）。
+	* 12 个计算器结果面板存在同名重复标签（用户无法区分哪张卡片对应哪个单位）：
+   * bending-force-calculator（两个结果框标题都叫 Bending Force）、chain-drive-length-calculator（两个都叫 Chain Length）、cutting-speed-calculator（两个都叫 Surface Speed）、gyroscope-precession-calculator（两个都叫 Precession）、hydrostatic-pressure-calculator（两个都叫 Pressure）、injection-molding-clamp-calculator（两个都叫 Clamp Force）、land-survey-area-calculator（两个都叫 Area）、manometer-pressure-calculator（两个都叫 Pressure Diff）、mrr-calculator（两个都叫 MRR）、pipe-flow-rate-calculator（两个都叫 Flow Rate）、punching-force-calculator（两个都叫 Punch Force）、welding-heat-input-calculator（两个都叫 Heat Input）。建议在标题中补上括号区分，如 Bending Force (kN) 与 Bending Force (Ton)。
+2. 定制版 CAD 文件解析器与清理工具的底层 Bug
+在 src/app/toolbox/ 的定制工具中，有 4 个涉及真实文件处理的工具存在严重的底层逻辑错误：
+* ctb-plot-style-pen-visualizer（上传 .ctb 文件实际是用字节取模伪造数据）：
+   * 位置：src/app/toolbox/ctb-plot-style-pen-visualizer/calculator-client.tsx 第 207–223 行。
+   * 问题：真实的 AutoCAD .ctb 文件是 PIAFILEVERSION_2.0,CTBVER1,compress\r\npmzlibcodec 文本头加上 zlib (deflate) 压缩流。当前代码发现二进制文件不是明文后，在 else 分支里写了 const hash = (uint8[0x200 + (i * 2) % uint8.length] || 0) % 8，直接拿文件字节对 8 取余数来随机编造 0.09 ~ 0.50 mm 的线宽并全部设为黑色，然后弹窗欺骗用户“成功导入 255 种 ACI 打印样式”。
+   * 修复方案：定位文件头中 pmzlibcodec 换行符之后的字节偏移量，直接调用浏览器原生 new DecompressionStream('deflate') 解压出真实的 CTB 字典明文，再解析每种颜色的真实 lineweight、color 和 screening。
+* drawing-lag-performance-cleaner（在线清理 DXF 会损坏文件导致 AutoCAD 报错拒开）：
+   * 位置：src/app/toolbox/drawing-lag-performance-cleaner/calculator-client.tsx 第 55–66 行。
+   * 问题：代码用正则 /ACAD_PSEUDO_DXF|AECTOOLS_.*|AEC_.*|.../gi 将 DXF 中所有匹配的注册应用名全部替换成同一个常量字符串 'ACAD_CLN_REG'。在 DXF 的 APPID 符号表中，表项名称必须唯一；一旦原图中有 2 个以上 AEC_* 或 ADSK_* 应用，替换后就会产生重名表项，AutoCAD 打开导出的 _purged.dxf 时会直接报错 Duplicate record name "ACAD_CLN_REG" in APPID table — drawing discarded。而且仅仅替换名字并不会减小文件体积。
+   * 修复方案：若做重命名脱敏，必须在替换回调中附带唯一递增序号（如 let idx = 0; cleanedText.replace(regappKeywords, () => 'ACAD_CLN_' + (++idx))）；若做瘦身清理，需按 DXF 组码状态机真正移除未被引用的 APPID 与 DICTIONARY 块。
+* stl-mesh-checker（二进制 STL 误判为 ASCII 导致解析失败）：
+   * 位置：src/app/toolbox/stl-mesh-checker/calculator-client.tsx 第 35–36 行。
+   * 问题：代码仅通过前 5 个字节是否为 'solid'（headerStr.toLowerCase().startsWith('solid')）来判断是否为 ASCII STL。实际上 SolidWorks、Rhino、Blender 等软件导出的大量 Binary STL 其 80 字节文件头同样以 "solid" 开头，导致这些二进制文件走入 ASCII 正则分支，匹配出 0 个三角形并直接报错 "No triangles found in STL file"。
+   * 修复方案：优先读取第 80–84 字节的三角形数量 triCount = view.getUint32(80, true)，只要满足 bytes.length >= 84 && bytes.length === 84 + triCount * 50，即 100% 走 Binary STL 解析分支。
+* steel-grade-selector（国标牌号过时且大小写敏感）：
+   * 位置：src/app/toolbox/steel-grade-selector/calculator-client.tsx 第 17 行。
+   * 问题：仅支持手敲大写 'Q235'、'Q345'、'Q390'、'Q420'、'A36'、'A572'。现行国标 GB/T 1591-2018 早已用 Q355 替代 Q345，若用户输入 'Q355' 或小写 'q345'，代码 props[grade] || {Sy:235, Su:375, el:26} 会静默回退成 Q235 的屈服强度（235 MPa），极易造成错误。应改为 <select> 下拉框并加入 Q355、S235JR、S355JR。
+3. 对比页（/compare 与 /compare/[pair]）的严重逻辑与内容穿帮
+* /compare 自选对比表把所有免费/开源软件的价格显示为 $TBA：
+   * 位置：src/app/compare/compare-client.tsx 第 285 行：{row.type === 'price' && <span>${(val as number) || 'TBA'}</span>}。
+   * 问题：当用户将 FreeCAD、Blender、KiCad、LibreCAD、OpenSCAD 等免费软件加入对比表时，它们的 starting_price 是数字 0。在 JS 中 0 || 'TBA' 为 'TBA'，再拼上前方的 $，导致所有免费/开源软件的起始价格全部显示为 $TBA。
+   * 修复方案：当 tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source' 时直接渲染 Free ($0)；当 val > 0 时渲染 $${val}；其余情况渲染 Custom / Quote。
+* /compare/[pair] 的 CompareWidget 组件（src/components/compare-widget.tsx）存在严重的“跨领域/跨软件硬编码穿帮”：
+   * 力学/流体仿真（CAE）与电子电路板（EDA）混在同一个列表里（严重违反 AGENTS.md 物理熔断红线）：在 compare-widget.tsx 的 case 'simulation'（第 200–254 行）中，第 1、2 项指标是 CFD/多物理场（Fluent vs COMSOL），第 3、4 项指标竟硬编码成了 PCB 原理图同步（Schematic & PCB Sync Integrity） 和 PCB 布线间距检查（Design Rule Check (DRC) Engine）。导致用户访问 /compare/ansys-fluent-vs-simscale 或 /compare/abaqus-vs-ansys-mechanical 时，页面下半部分在对比 Ansys 的“PCB 电路板原理图同步”并在结论里点评 Altium Designer vs KiCad；反之访问 /compare/altium-designer-vs-kicad 时，上半部分却在评估 KiCad 的“千核超算集群 CFD 流体求解器”并点评 Fluent vs COMSOL！
+   * 所有类别的指标结论（metric.comparison）全部写死了固定软件名：
+      * 在 mcad 类别下，哪怕用户看的是 /compare/catia-vs-siemens-nx 或 /compare/solidworks-vs-ptc-creo，展开后的 Verdict 依然硬编码写着 "Fusion 360 offers superior integrated... while Mastercam dominates..." 和 "Onshape leverages cloud parallelization..."；
+      * 在 bim 类别下，哪怕看的是 /compare/tekla-structures-vs-vectorworks，Verdict 依然硬编码写着 "ArchiCAD is designed with openBIM... whereas Revit relies on..."。
+   * 修复方案：将 archetype: 'simulation' 拆分为 'cae' 与 'eda' 两个独立分支；并将所有 metric.comparison 改为基于当前传入的 a.name 和 b.name 动态生成对比结论。
+4. 全站 SEO 路由重复、Sitemap 冲突与站内搜索盲区
+* 47 个 3D 转换页存在“一页三址 + 自指 Canonical 冲突”：
+   * 同一个 <ConverterDetailClient pair={pair} /> 同时在三个静态路由下生成了完全相同的 47 个页面，且每个路由都把 <link rel="canonical"> 指向了自己：
+      1. src/app/convert/[pair]/page.tsx → Canonical 为 [https://cadguide.tools/convert/){slug}
+      2. src/app/toolbox/convert/[pair]/page.tsx → Canonical 为 [https://cadguide.tools/toolbox/convert/){slug}
+      3. src/app/toolbox/[slug]/page.tsx → Canonical 为 [https://cadguide.tools/toolbox/){slug}
+   * 同时，src/app/sitemap-toolbox.xml/route.ts 和 src/app/sitemap-convert.xml/route.ts 重复输出了完全相同的 47 个 /toolbox/${slug} URL，且 sitemap-convert.xml 第 9 行使用了 new Date().toISOString() 动态时间戳（违反了其他 Sitemap 注释中严禁使用动态 new Date() 的规定）。
+   * 修复方案：确定唯一规范路径（如 /toolbox/{slug}（或直接重定向），在 sitemap-toolbox.xml 中过滤掉 category === '3d-converter' 的重复项，并将 sitemap-convert.xml 的 lastmod 改为固定日期字符串。
+      * 全站导航栏搜索框 SmartSearch 完全搜不到任何 /toolbox/* 工具：
+      * 位置：src/lib/search-engine.ts 与 src/lib/search-index.json。
+      * 问题：search-engine.ts 只检索 181 个 CAD 软件（search-index.json）和 seo-content.ts 中的对比/榜单页，完全没有接入 TOOLBOX_DATA 中的 621 个计算器、转换器和快捷键表。用户在顶部搜索栏输入 "k-factor"、"beam deflection"、"step to stl"、"dwg version" 时，找不到任何工具箱页面。
+      * 修复方案：在 search-engine.ts（或 scripts/generate-search-index.js）中合入 TOOLBOX_DATA 条目，使顶部搜索框能直接匹配并跳转到 /toolbox/[slug]。
+如果那边在修改过程中需要某几个复杂计算器（比如 AASHTO 路面厚度迭代、CTB 的 DecompressionStream 解压、或者那 50 个空壳计算器）的完整可运行代码实现，随时告诉我，我可以直接把验证好的代码片段发给你！

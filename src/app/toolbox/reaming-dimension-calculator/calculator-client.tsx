@@ -14,7 +14,35 @@ export default function ReamingDimensionCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const D=parseFloat(inputs[0]),tol=parseFloat(inputs[1]),mat=inputs[2];const stock=D<10?0.1:D<25?0.2:0.3;const drill=D-stock;const reamer=D+tol;return{drill,reamer,stock};
+    const D = parseFloat(inputs[0]) || 20; // Target diameter (mm)
+    const tol = parseFloat(inputs[1]) || 0.02; // Tolerance (mm)
+    const mat = inputs[2] || 'steel';
+
+    // Material-dependent reaming allowance factor & cutting speed (Machinery's Handbook)
+    // Cast iron: higher allowance to prevent glazing/work-hardening (0.25 - 0.40mm)
+    // Steel: standard allowance (0.15 - 0.25mm)
+    // Aluminum: lower allowance to avoid tearing/smearing (0.10 - 0.20mm)
+    let matFactor = 1.0;
+    let recSpeedVc = 12; // m/min
+    if (mat === 'cast_iron') {
+      matFactor = 1.25;
+      recSpeedVc = 14;
+    } else if (mat === 'aluminum') {
+      matFactor = 0.85;
+      recSpeedVc = 24;
+    }
+
+    const baseStock = D < 6 ? 0.10 : D < 12 ? 0.15 : D < 25 ? 0.22 : 0.32;
+    const stock = Math.round(baseStock * matFactor * 100) / 100;
+    const drill = Math.round((D - stock) * 100) / 100;
+
+    // Standard reamer nominal manufacturing size targeting middle-to-upper tolerance
+    const reamer = D + (tol * 0.4);
+
+    // Recommended reamer spindle speed n = 1000 * Vc / (π * D)
+    const recRPM = D > 0 ? Math.round((1000 * recSpeedVc) / (Math.PI * D)) : 0;
+
+    return { drill, reamer, stock, recSpeedVc, recRPM, mat };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -73,23 +101,27 @@ export default function ReamingDimensionCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Pre-ream Drill</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Pre-ream Drill Dia</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.drill)}<span className="text-lg text-blue-400"> mm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Reamer Size</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Finished Reamer Size</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.reamer)}<span className="text-lg text-green-400"> mm</span></div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Stock Allowance</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.stock)}<span className="text-lg text-orange-400"> mm</span></div>
+              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Material Allowance (2× stock)</div>
+                <div className="text-xl font-black text-orange-700">{formatNum(result.stock)}<span className="text-sm font-medium text-orange-500"> mm (on diameter)</span></div>
+              </div>
+              <div className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Recommended Reaming Speed</div>
+                <div className="text-xl font-black text-purple-700">{result.recRPM}<span className="text-sm font-medium text-purple-500"> RPM ({result.recSpeedVc} m/min)</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                Stock = 0.1-0.5mm depending on diameter
+                Pre-drill = Target D - Stock(D, Material) • Reaming allowance calibrated per Machinery&#39;s Handbook specifications
               </div>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import { searchArticles, determineSearchMode, ArticleSearchItem, SearchMode } from '@/lib/seo-content';
 import toolsData from '@/lib/search-index.json';
+import { TOOLBOX_DATA, ToolboxItem } from '@/lib/toolbox-data';
+import { getAllConversionSlugs } from '@/lib/converter-data';
 
 export interface SearchTool {
   id: string;
@@ -17,14 +19,24 @@ export interface SearchTool {
   country?: string;
 }
 
+export interface SearchToolboxItem {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  url: string;
+}
+
 export interface SearchResult {
   tools: SearchTool[];
   articles: ArticleSearchItem[];
-  mode: SearchMode;
+  toolbox: SearchToolboxItem[];
+  mode: SearchMode | 'toolbox';
 }
 
 const tools = toolsData as SearchTool[];
 const toolNames = tools.map((t) => t.name);
+const conversionSlugsSet = new Set(getAllConversionSlugs());
 
 // 1. Levenshtein Distance for Typo-Tolerant Fuzzy Matching
 function getLevenshteinDistance(a: string, b: string): number {
@@ -123,9 +135,52 @@ function fuzzyMatchTool(tool: SearchTool, query: string): boolean {
   return false;
 }
 
+function fuzzyMatchToolbox(item: ToolboxItem, query: string): boolean {
+  if (!query) return true;
+  const normalizedQuery = normalizeString(query);
+  if (!normalizedQuery) return true;
+
+  const titleNorm = normalizeString(item.title);
+  const slugNorm = normalizeString(item.slug);
+
+  if (titleNorm.includes(normalizedQuery) || isFuzzyMatch(normalizedQuery, titleNorm)) return true;
+  if (slugNorm.includes(normalizedQuery)) return true;
+
+  for (const kw of item.keywords || []) {
+    const kwNorm = normalizeString(kw);
+    if (kwNorm.includes(normalizedQuery) || isFuzzyMatch(normalizedQuery, kwNorm)) {
+      return true;
+    }
+  }
+
+  let tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  const filteredTokens = tokens.filter(t => !STOP_WORDS.has(t));
+  if (filteredTokens.length > 0) {
+    tokens = filteredTokens;
+  }
+
+  if (tokens.length > 0) {
+    const fieldsToMatch = [
+      titleNorm,
+      slugNorm,
+      normalizeString(item.description || ''),
+      normalizeString(item.category || ''),
+      ...(item.keywords || []).map(normalizeString)
+    ];
+
+    return tokens.every(token => {
+      const normToken = normalizeString(token);
+      if (!normToken) return true;
+      return fieldsToMatch.some(field => field.includes(normToken) || isFuzzyMatch(normToken, field));
+    });
+  }
+
+  return false;
+}
+
 export function performSearch(inputValue: string): SearchResult {
   if (!inputValue.trim()) {
-    return { tools: [], articles: [], mode: 'both' };
+    return { tools: [], articles: [], toolbox: [], mode: 'both' };
   }
 
   const mode = determineSearchMode(inputValue, toolNames);
@@ -149,5 +204,32 @@ export function performSearch(inputValue: string): SearchResult {
 
   const matchingArticles = searchArticles(inputValue, 5);
 
-  return { tools: matchingTools, articles: matchingArticles, mode };
+  const matchingToolbox = TOOLBOX_DATA
+    .filter((item) => item.status === 'released' && fuzzyMatchToolbox(item, inputValue))
+    .sort((a, b) => {
+      const aExact = normalizeString(a.title) === normalizeString(inputValue);
+      const bExact = normalizeString(b.title) === normalizeString(inputValue);
+      if (aExact && !bExact) return -1;
+      if (!aExact && bExact) return 1;
+
+      const aStarts = normalizeString(a.title).startsWith(normalizeString(inputValue));
+      const bStarts = normalizeString(b.title).startsWith(normalizeString(inputValue));
+      if (aStarts && !bStarts) return -1;
+      if (!aStarts && bStarts) return 1;
+
+      return 0;
+    })
+    .slice(0, 5)
+    .map((item) => {
+      const is3DConverter = item.category === '3d-converter' || conversionSlugsSet.has(item.slug);
+      return {
+        slug: item.slug,
+        title: item.title,
+        description: item.description,
+        category: item.category.replace('-', ' '),
+        url: is3DConverter ? `/convert/${item.slug}` : `/toolbox/${item.slug}`
+      };
+    });
+
+  return { tools: matchingTools, articles: matchingArticles, toolbox: matchingToolbox, mode };
 }

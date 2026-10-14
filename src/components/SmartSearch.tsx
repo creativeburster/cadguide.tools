@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ToolLogo } from '@/components/tool-logo';
-import { FileText, Sparkles, Loader2 } from 'lucide-react';
+import { FileText, Sparkles, Loader2, Wrench } from 'lucide-react';
 import type { SearchTool, SearchResult } from '@/lib/search-engine';
 import type { ArticleSearchItem } from '@/lib/seo-content';
 
@@ -29,6 +29,7 @@ export function SmartSearch() {
   const [searchSuggestions, setSearchSuggestions] = useState<SearchResult>({
     tools: [],
     articles: [],
+    toolbox: [],
     mode: 'both',
   });
   const [isLoadingEngine, setIsLoadingEngine] = useState(false);
@@ -82,7 +83,7 @@ export function SmartSearch() {
   // Perform search whenever inputValue changes
   useEffect(() => {
     if (!inputValue.trim()) {
-      setSearchSuggestions({ tools: [], articles: [], mode: 'both' });
+      setSearchSuggestions({ tools: [], articles: [], toolbox: [], mode: 'both' });
       return;
     }
 
@@ -106,6 +107,10 @@ export function SmartSearch() {
     if (inputValue.trim()) {
       if (searchSuggestions.articles.length > 0 && searchSuggestions.mode === 'articles') {
         router.push(searchSuggestions.articles[0].url);
+      } else if (searchSuggestions.tools.length > 0) {
+        router.push(`/tools/${searchSuggestions.tools[0].slug}`);
+      } else if (searchSuggestions.toolbox && searchSuggestions.toolbox.length > 0) {
+        router.push(searchSuggestions.toolbox[0].url);
       } else {
         router.push(`/tools?q=${encodeURIComponent(inputValue.trim())}`);
       }
@@ -184,6 +189,41 @@ export function SmartSearch() {
                   </div>
                 )}
                 
+                {/* Engineering Toolbox Section */}
+                {searchSuggestions.toolbox && searchSuggestions.toolbox.length > 0 && (
+                  <div className="p-2 border-b border-slate-100 bg-emerald-50/20">
+                    <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-emerald-700 flex items-center gap-1.5">
+                      <Wrench className="w-3.5 h-3.5" />
+                      Engineering Tools & Calculators
+                    </div>
+                    <div className="space-y-0.5 mt-1">
+                      {searchSuggestions.toolbox.map((item) => (
+                        <Link
+                          key={item.slug}
+                          href={item.url}
+                          className="block px-3 py-2.5 hover:bg-white hover:shadow-sm hover:border-slate-200 border border-transparent rounded-lg transition-all"
+                          onClick={() => {
+                            setShowSuggestions(false);
+                            setInputValue('');
+                          }}
+                        >
+                          <div className="flex items-center gap-2 mb-1">
+                            <Badge className="bg-emerald-50 border-emerald-200 text-emerald-800 text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded-sm capitalize">
+                              {item.category}
+                            </Badge>
+                          </div>
+                          <div className="text-sm font-semibold text-slate-900">
+                            {item.title}
+                          </div>
+                          <div className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+                            {item.description}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Tools Section */}
                 {searchSuggestions.tools.length > 0 && (
                   <div className="p-2">
@@ -275,6 +315,41 @@ export function SmartSearch() {
                   </div>
                 )}
                 
+                {/* Engineering Toolbox Section */}
+                {searchSuggestions.toolbox && searchSuggestions.toolbox.length > 0 && (
+                  <div className="p-2 border-b border-slate-100 bg-emerald-50/20">
+                    <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-emerald-700 flex items-center gap-1.5">
+                      <Wrench className="w-3.5 h-3.5" />
+                      Engineering Tools & Calculators
+                    </div>
+                    <div className="space-y-0.5 mt-1">
+                      {searchSuggestions.toolbox.map((item) => (
+                        <Link
+                          key={item.slug}
+                          href={item.url}
+                          className="block px-3 py-2.5 hover:bg-white hover:shadow-sm hover:border-slate-200 border border-transparent rounded-lg transition-all"
+                          onClick={() => {
+                            setShowSuggestions(false);
+                            setInputValue('');
+                          }}
+                        >
+                          <div className="flex items-center gap-2 mb-1">
+                            <Badge className="bg-emerald-50 border-emerald-200 text-emerald-800 text-[9px] uppercase tracking-widest font-black px-2 py-0.5 rounded-sm capitalize">
+                              {item.category}
+                            </Badge>
+                          </div>
+                          <div className="text-sm font-semibold text-slate-900">
+                            {item.title}
+                          </div>
+                          <div className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+                            {item.description}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Articles Section */}
                 {searchSuggestions.articles.length > 0 && (
                   <div className="p-2 bg-slate-50/50">
@@ -313,9 +388,9 @@ export function SmartSearch() {
             )}
 
             {/* No results found */}
-            {!isLoadingEngine && searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 && (
+            {!isLoadingEngine && searchSuggestions.tools.length === 0 && searchSuggestions.articles.length === 0 && (!searchSuggestions.toolbox || searchSuggestions.toolbox.length === 0) && (
               <div className="px-4 py-8 text-center bg-slate-50">
-                <div className="text-sm font-semibold text-slate-600">No matching tools or articles found</div>
+                <div className="text-sm font-semibold text-slate-600">No matching tools, calculators, or articles found</div>
                 <div className="text-xs text-slate-400 mt-1">Check spelling or try a broader engineering keyword</div>
               </div>
             )}

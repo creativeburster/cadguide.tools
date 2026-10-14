@@ -62,7 +62,8 @@ export default function DrawingLagCleanerClient() {
         const regappMatches = text.match(regappKeywords);
         if (regappMatches) {
           regappRemoved = regappMatches.length;
-          cleanedText = cleanedText.replace(regappKeywords, 'ACAD_CLN_REG');
+          let regAppIdx = 0;
+          cleanedText = cleanedText.replace(regappKeywords, () => `ACAD_CLN_REG_${++regAppIdx}`);
           setLogHistory(prev => [...prev, `[Purger] Found and bypassed redundant registered applications: ${regappRemoved} entries.`]);
         }
 

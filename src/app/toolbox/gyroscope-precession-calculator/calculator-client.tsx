@@ -69,11 +69,11 @@ export default function GyroscopePrecessionCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Precession</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Precession Rate (rad/s)</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.Op)}<span className="text-lg text-blue-400"> rad/s</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Precession</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Angular Velocity (deg/s)</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.Opd)}<span className="text-lg text-green-400"> deg/s</span></div>
               </div>
             </div>

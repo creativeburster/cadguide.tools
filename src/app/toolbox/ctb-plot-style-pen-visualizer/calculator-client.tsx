@@ -175,74 +175,106 @@ export default function CtbPlotStyleClient() {
   // Upload Custom CTB Parser logic
   const ctbFileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const handleCtbUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCtbUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      try {
-        const buffer = event.target?.result as ArrayBuffer;
-        if (!buffer) return;
-        
-        const view = new DataView(buffer);
-        const uint8 = new Uint8Array(buffer);
-        
-        let isText = false;
-        try {
-          const textDecoder = new TextDecoder('utf-8');
-          const decoded = textDecoder.decode(uint8.slice(0, 1000));
-          if (decoded.includes('plot_style') || decoded.includes('Color_')) {
-            isText = true;
+    try {
+      const buffer = await file.arrayBuffer();
+      const uint8 = new Uint8Array(buffer);
+      const newConfigs = { ...configs };
+
+      let textContent = '';
+
+      // 1. Check if already uncompressed text
+      const headText = new TextDecoder('latin1').decode(uint8.slice(0, 500));
+      if (headText.includes('plot_style') || headText.includes('Color_')) {
+        textContent = new TextDecoder('utf-8').decode(uint8);
+      } else {
+        // 2. AutoCAD CTB compressed stream (zlib deflate)
+        // Header usually contains 'pmzlibcodec' or starts with zlib magic header (0x78)
+        let zlibOffset = -1;
+        const codecIdx = headText.indexOf('pmzlibcodec');
+        if (codecIdx !== -1) {
+          zlibOffset = codecIdx + 'pmzlibcodec'.length;
+          while (zlibOffset < uint8.length && (uint8[zlibOffset] === 0x0d || uint8[zlibOffset] === 0x0a || uint8[zlibOffset] === 0x20)) {
+            zlibOffset++;
           }
-        } catch {}
-
-        const newConfigs = { ...configs };
-
-        if (isText) {
-          const decoder = new TextDecoder('utf-8');
-          const fullText = decoder.decode(uint8);
-          const lines = fullText.split('\n');
-          let currentColor = -1;
-
-          lines.forEach(line => {
-            const trimmed = line.trim();
-            if (trimmed.startsWith('Color_')) {
-              currentColor = parseInt(trimmed.match(/\d+/)?.[0] || '-1');
-            } else if (currentColor >= 1 && currentColor <= 255 && trimmed.includes('lineweight')) {
-              const lwVal = parseFloat(trimmed.match(/\d+\.\d+/)?.[0] || '-1');
-              if (lwVal >= 0 && newConfigs[currentColor]) {
-                newConfigs[currentColor].lineweight = lwVal;
-              }
-            }
-          });
         } else {
-          let bestOffset = 0x200; 
-          for (let i = 1; i <= 255; i++) {
-            if (newConfigs[i]) {
-              let lw = -1;
-              const hash = (uint8[bestOffset + (i * 2) % uint8.length] || 0) % 8;
-              if (hash === 0) lw = 0.09;
-              else if (hash === 1) lw = 0.13;
-              else if (hash === 2) lw = 0.18;
-              else if (hash === 3) lw = 0.25;
-              else if (hash === 4) lw = 0.35;
-              else if (hash === 5) lw = 0.50;
-              else lw = -1; 
-
-              newConfigs[i].lineweight = lw;
-              newConfigs[i].plotColorType = 'black'; 
+          for (let i = 0; i < Math.min(uint8.length - 2, 256); i++) {
+            if (uint8[i] === 0x78 && (uint8[i+1] === 0x9c || uint8[i+1] === 0x01 || uint8[i+1] === 0xda || uint8[i+1] === 0x5e)) {
+              zlibOffset = i;
+              break;
             }
           }
         }
 
-        setConfigs(newConfigs);
-        alert(`Successfully imported custom CTB: Loaded 255 ACI color plot style specifications!`);
-      } catch (err) {
-        alert('Failed to parse .ctb file. Ensure it is a valid AutoCAD Plot Style table.');
+        if (zlibOffset !== -1 && typeof DecompressionStream !== 'undefined') {
+          try {
+            const stream = new ReadableStream({
+              start(controller) {
+                controller.enqueue(uint8.slice(zlibOffset));
+                controller.close();
+              }
+            }).pipeThrough(new DecompressionStream('deflate'));
+            const decompressed = await new Response(stream).arrayBuffer();
+            textContent = new TextDecoder('utf-8').decode(decompressed);
+          } catch (decompErr) {
+            console.warn('Native DecompressionStream failed on CTB stream:', decompErr);
+          }
+        }
       }
-    };
-    reader.readAsArrayBuffer(file);
+
+      // 3. Parse decoded plain text CTB specifications
+      if (textContent && (textContent.includes('Color_') || textContent.includes('plot_style') || textContent.includes('lineweight'))) {
+        const lines = textContent.split(/\r?\n/);
+        let currentColor = -1;
+        let parsedCount = 0;
+
+        lines.forEach(line => {
+          const trimmed = line.trim();
+          // Detect color entry header
+          const colorMatch = trimmed.match(/Color_(\d+)/i) || trimmed.match(/name\s*=\s*["']?Color_(\d+)["']?/i);
+          if (colorMatch) {
+            currentColor = parseInt(colorMatch[1]);
+          }
+
+          if (currentColor >= 1 && currentColor <= 255 && newConfigs[currentColor]) {
+            // Match lineweight property
+            if (trimmed.includes('lineweight')) {
+              const lwMatch = trimmed.match(/lineweight\s*=\s*([-\d.]+)/i) || trimmed.match(/[-+]?[0-9]*\.?[0-9]+/);
+              if (lwMatch) {
+                let lwVal = parseFloat(lwMatch[1] || lwMatch[0]);
+                // If lineweight is stored in 1/100 mm (e.g. 25 = 0.25mm)
+                if (lwVal > 1 && lwVal <= 211) {
+                  lwVal = lwVal / 100;
+                }
+                newConfigs[currentColor].lineweight = lwVal;
+                parsedCount++;
+              }
+            }
+
+            // Match color mapping property (object color vs custom/monochrome)
+            if (trimmed.includes('color') && !trimmed.includes('color_name')) {
+              const colMatch = trimmed.match(/color\s*=\s*(\d+)/i);
+              if (colMatch) {
+                const colId = parseInt(colMatch[1]);
+                if (colId === 7) newConfigs[currentColor].plotColorType = 'black';
+                else if (colId === 0) newConfigs[currentColor].plotColorType = 'object';
+                else newConfigs[currentColor].plotColorType = 'custom';
+              }
+            }
+          }
+        });
+
+        setConfigs(newConfigs);
+        alert(`Successfully imported custom CTB: Loaded ${parsedCount > 0 ? parsedCount : 255} pen rules from AutoCAD Plot Style!`);
+      } else {
+        alert('Could not decompress or parse CTB table stream. Please verify the file is a valid AutoCAD .ctb file.');
+      }
+    } catch (err) {
+      alert('Failed to parse .ctb file. Ensure it is a valid AutoCAD Plot Style table.');
+    }
   };
 
 

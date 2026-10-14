@@ -14,7 +14,33 @@ export default function PipeFlowRateCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const D=parseFloat(inputs[0])/1000,v=parseFloat(inputs[1]),rough=parseFloat(inputs[2])/1000;const A=Math.PI*D*D/4;const Q=A*v*1000;const Qh=Q*3.6;return{Q,Qh,A:A*10000};
+    const D = (parseFloat(inputs[0]) || 100) / 1000; // Pipe inner diameter in m
+    const v = parseFloat(inputs[1]) || 0; // Velocity in m/s
+    const rough = (parseFloat(inputs[2]) || 0.15) / 1000; // Absolute roughness in m
+
+    const A = (Math.PI * D * D) / 4; // Area in m²
+    const Q = A * v * 1000; // Instantaneous flow in L/s
+    const Qh = Q * 3.6; // Volumetric hourly flow in m³/h
+
+    // Kinematic viscosity of water at 20°C: ν ≈ 1.004e-6 m²/s
+    const nu = 1.004e-6;
+    const Re = (v * D) / nu;
+
+    // Darcy friction factor f via Swamee-Jain equation for full turbulent pipe flow:
+    // f = 0.25 / [log10( (eps / (3.7 * D)) + (5.74 / Re^0.9) )]^2
+    let f = 0.02;
+    if (Re > 4000 && D > 0) {
+      const term = (rough / (3.7 * D)) + (5.74 / Math.pow(Re, 0.9));
+      f = 0.25 / Math.pow(Math.log10(term), 2);
+    } else if (Re > 0 && Re <= 2000) {
+      f = 64 / Re;
+    }
+
+    // Darcy-Weisbach head loss per 100m of pipe (m/100m): hf_100 = f * (100 / D) * (v² / 2g)
+    const g = 9.80665;
+    const hfPer100m = D > 0 ? f * (100 / D) * (v * v) / (2 * g) : 0;
+
+    return { Q, Qh, A: A * 10000, f, hfPer100m, Re };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -69,23 +95,27 @@ export default function PipeFlowRateCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Flow Rate</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Instantaneous Flow (Q)</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.Q)}<span className="text-lg text-blue-400"> L/s</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Flow Rate</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.Qh)}<span className="text-lg text-green-400"> m3/h</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Hourly Volume (Q_h)</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.Qh)}<span className="text-lg text-green-400"> m³/h</span></div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Cross Area</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.A)}<span className="text-lg text-orange-400"> cm2</span></div>
+              <div className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Friction Head Loss (per 100m)</div>
+                <div className="text-xl font-black text-purple-700">{formatNum(result.hfPer100m)}<span className="text-sm font-medium text-purple-500"> m / 100m (f={formatNum(result.f)})</span></div>
+              </div>
+              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Flow Internal Area</div>
+                <div className="text-xl font-black text-orange-700">{formatNum(result.A)}<span className="text-sm font-medium text-orange-500"> cm² (Re={Math.round(result.Re)})</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                Q = A*v, A = pi*D^2/4
+                Q = A·v • Darcy-Weisbach: h_f = f·(L/D)·(v²/2g) using Swamee-Jain Colebrook approximation
               </div>
             </div>
           </div>

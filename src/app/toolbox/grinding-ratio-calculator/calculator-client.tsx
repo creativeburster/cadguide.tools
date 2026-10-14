@@ -14,7 +14,23 @@ export default function GrindingRatioCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const Vm=parseFloat(inputs[0]),Vw=parseFloat(inputs[1]),doc=parseFloat(inputs[2]),vs=parseFloat(inputs[3]);const G=Vm/Vw;const u=30+50/doc;return{G,u};
+    const Vm = parseFloat(inputs[0]) || 0; // Volume of metal removed (mm³)
+    const Vw = parseFloat(inputs[1]) || 1; // Volume of wheel wear (mm³)
+    const doc = parseFloat(inputs[2]) || 0.01; // Depth of cut (mm)
+    const vs = parseFloat(inputs[3]) || 30; // Wheel peripheral speed (m/s)
+
+    // Volumetric grinding ratio G = V_metal / V_wheel
+    const G = Vw > 0 ? Vm / Vw : 0;
+
+    // Specific grinding energy u (J/mm³):
+    // Malkin & Guo model: u increases with shallower cut (size effect) and higher wheel speed vs
+    const speedCorrection = vs > 0 ? Math.pow(vs / 30, 0.15) : 1;
+    const u = (25 + 0.45 / Math.max(0.001, doc)) * speedCorrection;
+
+    // Grinding efficiency evaluation
+    const efficiencyGrade = G >= 60 ? 'High Efficiency (Superabrasive/Optimized)' : G >= 20 ? 'Standard Conventional (Corundum/SiC)' : 'High Wheel Wear (Check Grade/Dressing)';
+
+    return { G, u, efficiencyGrade, vs };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -74,19 +90,23 @@ export default function GrindingRatioCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">G Ratio</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Grinding G-Ratio (G)</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.G)}</div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Specific Energy</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.u)}<span className="text-lg text-green-400"> J/mm3</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Specific Energy (u)</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.u)}<span className="text-lg text-green-400"> J/mm³</span></div>
+              </div>
+              <div className="col-span-2 bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Abrasive Performance Evaluation</div>
+                <div className="text-sm font-bold text-purple-900">{result.efficiencyGrade}</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                G = Vmetal / Vwheel
+                G = V_metal / V_wheel • Specific Energy u = u_size(a_p) · (v_s / 30)^0.15 (Malkin & Guo Grinding Model)
               </div>
             </div>
           </div>

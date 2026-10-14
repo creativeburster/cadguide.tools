@@ -26,7 +26,7 @@ interface Tool {
 interface CompareWidgetProps {
   a: Tool;
   b: Tool;
-  archetype: 'drafting' | 'mcad' | 'bim' | 'simulation' | 'creative';
+  archetype: 'drafting' | 'mcad' | 'bim' | 'cae' | 'eda' | 'simulation' | 'creative';
 }
 
 interface MetricItem {
@@ -42,224 +42,276 @@ interface MetricItem {
 export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
+  // Normalize legacy 'simulation' archetype into either 'eda' or 'cae'
+  const resolvedArchetype: 'drafting' | 'mcad' | 'bim' | 'cae' | 'eda' | 'creative' = (() => {
+    if (archetype === 'simulation') {
+      return (a.category_id === 'c6' || b.category_id === 'c6') ? 'eda' : 'cae';
+    }
+    return archetype;
+  })();
+
   const getWidgetData = (): { title: string; subtitle: string; metrics: MetricItem[] } => {
-    switch (archetype) {
+    switch (resolvedArchetype) {
       case 'drafting':
         return {
           title: 'Drafting & 2D Compatibility Assessment',
-          subtitle: 'Evaluating legacy CAD commands, automation, and drafting file fidelity.',
+          subtitle: `Evaluating CAD commands, script automation, and drafting file fidelity between ${a.name} and ${b.name}.`,
           metrics: [
             {
               id: 'pgp-aliases',
-              name: 'AutoCAD Command Aliases (.PGP)',
+              name: 'Command Shortcuts & Alias Mapping (.PGP)',
               icon: LayoutGrid,
-              description: 'Compatibility of standard command shortcuts (e.g., L for Line, C for Circle) and legacy custom script triggers.',
-              aDetail: a.slug === 'autocad' ? 'Native industry standard.' : `${a.name} offers highly compatible shortcut mapping, supporting most default PGP commands.`,
-              bDetail: b.slug === 'autocad' ? 'Native industry standard.' : `${b.name} offers highly compatible shortcut mapping, supporting most default PGP commands.`,
-              comparison: 'Direct shortcut matching enables drafting velocity without operator retraining.'
+              description: 'Compatibility of standard command shortcuts (e.g., L for Line, C for Circle) and custom alias triggers.',
+              aDetail: a.slug === 'autocad' ? 'Native industry standard defining default PGP syntax.' : `${a.name} offers customizable shortcut mapping compatible with standard drafting command patterns.`,
+              bDetail: b.slug === 'autocad' ? 'Native industry standard defining default PGP syntax.' : `${b.name} offers customizable shortcut mapping compatible with standard drafting command patterns.`,
+              comparison: `Direct shortcut mapping between ${a.name} and ${b.name} enables drafting velocity without operator retraining.`
             },
             {
               id: 'lisp-api',
-              name: 'LISP & Automation APIs',
+              name: 'LISP & Automation Scripting APIs',
               icon: CodeIcon,
-              description: 'Support for Visual LISP, standard AutoLISP, DCL (Dialog Control Language), and ActiveX automation.',
-              aDetail: a.slug === 'bricscad' ? 'High-performance LISP engine with full support for Visual LISP, ActiveX, and LISP encryption.' : a.api_sdk?.has_api ? `Supported (${a.api_sdk.api_type || 'LISP/API'}).` : 'No native LISP solver.',
-              bDetail: b.slug === 'bricscad' ? 'High-performance LISP engine with full support for Visual LISP, ActiveX, and LISP encryption.' : b.api_sdk?.has_api ? `Supported (${b.api_sdk.api_type || 'LISP/API'}).` : 'No native LISP solver.',
-              comparison: 'BricsCAD and AutoCAD support advanced visual scripting, whereas lightweight drafting alternatives support only basic commands.'
+              description: 'Support for Visual LISP, standard AutoLISP, DCL dialogs, and external API automation bindings.',
+              aDetail: a.slug === 'bricscad' ? 'High-performance LISP engine with full support for Visual LISP, ActiveX, and encryption.' : a.api_sdk?.has_api ? `Supported (${a.api_sdk.api_type || 'Automation API'}).` : 'Standard menu-based macros without full LISP solver.',
+              bDetail: b.slug === 'bricscad' ? 'High-performance LISP engine with full support for Visual LISP, ActiveX, and encryption.' : b.api_sdk?.has_api ? `Supported (${b.api_sdk.api_type || 'Automation API'}).` : 'Standard menu-based macros without full LISP solver.',
+              comparison: `${a.name} and ${b.name} approach automation differently: verify whether your legacy routines rely on dedicated LISP engines or modern REST/C++ APIs.`
             },
             {
               id: 'dynamic-blocks',
-              name: 'Dynamic Blocks Manipulation',
+              name: 'Dynamic & Parametric Block Manipulation',
               icon: Layers,
-              description: 'Capacity to read, evaluate, and author dynamic parametric elements containing stretch, polar, and visibility states.',
-              aDetail: a.slug === 'autocad' ? 'Full dynamic blocks creation and editing.' : a.slug === 'bricscad' ? 'Native editing of AutoCAD dynamic blocks + robust Parametric Blocks creation.' : 'Displays dynamic blocks as static references.',
-              bDetail: b.slug === 'autocad' ? 'Full dynamic blocks creation and editing.' : b.slug === 'bricscad' ? 'Native editing of AutoCAD dynamic blocks + robust Parametric Blocks creation.' : 'Displays dynamic blocks as static references.',
-              comparison: 'AutoCAD and BricsCAD offer true dynamic block manipulation; other tools convert them to rigid blocks.'
+              description: 'Capacity to read, evaluate, and author dynamic parametric elements with stretch, flip, and visibility states.',
+              aDetail: a.slug === 'autocad' ? 'Full dynamic blocks authoring and multi-state editing.' : a.slug === 'bricscad' ? 'Native editing of dynamic blocks with parametric 2D/3D blocks.' : `${a.name} displays complex dynamic blocks with preserved visual fidelity.`,
+              bDetail: b.slug === 'autocad' ? 'Full dynamic blocks authoring and multi-state editing.' : b.slug === 'bricscad' ? 'Native editing of dynamic blocks with parametric 2D/3D blocks.' : `${b.name} displays complex dynamic blocks with preserved visual fidelity.`,
+              comparison: `Parametric and dynamic block handling determines how seamlessly ${a.name} and ${b.name} can exchange intelligent symbol libraries.`
             },
             {
               id: 'dwg-integrity',
-              name: 'DWG Read/Write Fidelity',
+              name: 'DWG / DXF Read-Write Fidelity',
               icon: FileText,
-              description: 'Native file compliance, layer style integrity, and metadata safety during drawing exchange.',
-              aDetail: a.slug === 'autocad' ? 'Autodesk TrustedDWG native format.' : 'Native DWG engine based on OpenDesign Alliance (ODA) libraries.',
-              bDetail: b.slug === 'autocad' ? 'Autodesk TrustedDWG native format.' : 'Native DWG engine based on OpenDesign Alliance (ODA) libraries.',
-              comparison: 'Both tools offer 100% layer fidelity, though Autodesk uses TrustedDWG verification warnings for non-Autodesk files.'
+              description: 'Drawing compliance, layer management, linetype scaling, and metadata safety during drawing exchange.',
+              aDetail: a.slug === 'autocad' ? 'Autodesk TrustedDWG native format reference engine.' : `${a.name} uses verified ODA (OpenDesign Alliance) libraries for DWG/DXF read-write compatibility.`,
+              bDetail: b.slug === 'autocad' ? 'Autodesk TrustedDWG native format reference engine.' : `${b.name} uses verified ODA (OpenDesign Alliance) libraries for DWG/DXF read-write compatibility.`,
+              comparison: `Both ${a.name} and ${b.name} maintain drawing layer hierarchies, lineweights, and text styles across modern DWG versions.`
             }
           ]
         };
 
       case 'mcad':
         return {
-          title: 'Mechanical CAD Assembly & Modeling Kernel Analysis',
-          subtitle: 'Direct breakdown of mathematical modeling kernels, assembly solvers, and G-code integration.',
+          title: 'Mechanical Assembly & Modeling Kernel Analysis',
+          subtitle: `Comparing geometric kernels, parametric mate solvers, and manufacturing handoffs between ${a.name} and ${b.name}.`,
           metrics: [
             {
               id: 'geometric-kernel',
-              name: 'Geometric Modeling Kernel',
+              name: 'Geometric Modeling Kernel Architecture',
               icon: Database,
-              description: 'The solid-modeling engine (e.g., Parasolid, ShapeManager, OpenCascade) handling B-Rep boundary math and fillets.',
-              aDetail: a.slug === 'solidworks' || a.slug === 'onshape' ? 'Siemens Parasolid kernel (outstanding stability, industry-standard precision).' : a.slug === 'fusion-360' ? 'Autodesk ShapeManager kernel (excellent for direct editing and modern surfaces).' : a.slug === 'freecad' ? 'OpenCascade open-source kernel (flexible boundary representation).' : 'Proprietary modeling engine.',
-              bDetail: b.slug === 'solidworks' || b.slug === 'onshape' ? 'Siemens Parasolid kernel (outstanding stability, industry-standard precision).' : b.slug === 'fusion-360' ? 'Autodesk ShapeManager kernel (excellent for direct editing and modern surfaces).' : b.slug === 'freecad' ? 'OpenCascade open-source kernel (flexible boundary representation).' : 'Proprietary modeling engine.',
-              comparison: 'Parasolid-based systems exchange native parts with zero translation errors. OpenCascade is highly capable but less standardized.'
+              description: 'The solid-modeling engine handling B-Rep boundary math, complex blend fillets, and surface continuity.',
+              aDetail: (a.slug === 'solidworks' || a.slug === 'onshape' || a.slug === 'solid-edge') ? 'Siemens Parasolid kernel (industry standard for mechanical precision and topology healing).' : a.slug === 'fusion-360' || a.slug === 'autodesk-inventor' ? 'Autodesk ShapeManager (optimized for direct modeling and rapid organic surfaces).' : a.slug === 'freecad' ? 'OpenCASCADE Technology (modular open-source boundary representation).' : `${a.name} geometric modeling engine.`,
+              bDetail: (b.slug === 'solidworks' || b.slug === 'onshape' || b.slug === 'solid-edge') ? 'Siemens Parasolid kernel (industry standard for mechanical precision and topology healing).' : b.slug === 'fusion-360' || b.slug === 'autodesk-inventor' ? 'Autodesk ShapeManager (optimized for direct modeling and rapid organic surfaces).' : b.slug === 'freecad' ? 'OpenCASCADE Technology (modular open-source boundary representation).' : `${b.name} geometric modeling engine.`,
+              comparison: `Kernel architecture determines how ${a.name} and ${b.name} resolve non-manifold topology, complex draft angles, and neutral STEP/IGES translation.`
             },
             {
               id: 'assembly-mates',
-              name: 'Parametric Assembly Constraints',
+              name: 'Parametric Assembly & Degree-of-Freedom Constraints',
               icon: Network,
-              description: 'Method for solving multi-component assembly relations, degree-of-freedom limits, and dynamic mates.',
-              aDetail: a.slug === 'solidworks' ? 'Feature-rich Mate solver with mechanical, magnetic, and coordinate constraints.' : a.slug === 'fusion-360' ? 'Joint-centric assembly (combines relative position and degrees of freedom directly).' : a.slug === 'onshape' ? 'Advanced cloud-based Mate Connectors (extremely fast assembly setups).' : 'Standard constraint solver.',
-              bDetail: b.slug === 'solidworks' ? 'Feature-rich Mate solver with mechanical, magnetic, and coordinate constraints.' : b.slug === 'fusion-360' ? 'Joint-centric assembly (combines relative position and degrees of freedom directly).' : b.slug === 'onshape' ? 'Advanced cloud-based Mate Connectors (extremely fast assembly setups).' : 'Standard constraint solver.',
-              comparison: 'Fusion 360 joint system requires fewer mates than SolidWorks, but SolidWorks handles massive complex mechanical linkages with traditional precision.'
+              description: 'Method for solving multi-part assembly relations, mechanical linkages, and kinematic motion limits.',
+              aDetail: `${a.name} provides parametric assembly solving with kinematic degree-of-freedom limits and collision detection.`,
+              bDetail: `${b.name} provides parametric assembly solving with kinematic degree-of-freedom limits and collision detection.`,
+              comparison: `${a.name} and ${b.name} organize part relations with different philosophies; evaluate whether you prefer relational joint constraints or multi-mate hierarchy.`
             },
             {
               id: 'cam-integration',
-              name: 'CAM & Post-Processor Engines',
+              name: 'CAM & CNC Toolpath Generation',
               icon: Zap,
-              description: 'Availability of integrated CNC machining toolpath solvers and customized G-code post-processor configurations.',
-              aDetail: a.slug === 'mastercam' ? 'World-class industry CAM standard (unrivaled toolpath control and machine simulation).' : a.slug === 'fusion-360' ? 'Built-in high-performance HSM CAM with a massive free, editable library of post-processors.' : 'Requires third-party CAM add-ons.',
-              bDetail: b.slug === 'mastercam' ? 'World-class industry CAM standard (unrivaled toolpath control and machine simulation).' : b.slug === 'fusion-360' ? 'Built-in high-performance HSM CAM with a massive free, editable library of post-processors.' : 'Requires third-party CAM add-ons.',
-              comparison: 'Fusion 360 offers superior integrated out-of-the-box multi-axis CAM for mid-range jobs, while Mastercam dominates high-end custom post machining.'
+              description: 'Integrated 2.5D to 5-axis CNC machining strategies and customizable post-processor support.',
+              aDetail: a.slug === 'fusion-360' ? 'Built-in multi-axis HSM CAM with extensive cloud post-processor library.' : a.slug === 'mastercam' ? 'Enterprise benchmark for multi-axis milling, turning, and machine simulation.' : `${a.name} supports CNC data export via STEP/IGES or integrated manufacturing add-ons.`,
+              bDetail: b.slug === 'fusion-360' ? 'Built-in multi-axis HSM CAM with extensive cloud post-processor library.' : b.slug === 'mastercam' ? 'Enterprise benchmark for multi-axis milling, turning, and machine simulation.' : `${b.name} supports CNC data export via STEP/IGES or integrated manufacturing add-ons.`,
+              comparison: `When taking designs from screen to shop floor, assess whether ${a.name}'s integrated workflow or ${b.name}'s tooling ecosystem fits your CNC pipeline.`
             },
             {
               id: 'large-assemblies',
-              name: 'Large Assembly Handling',
+              name: 'Large Assembly Graphics & Memory Optimization',
               icon: Cpu,
-              description: 'Engine performance when viewing, editing, and loading assemblies with thousands of components.',
-              aDetail: a.slug === 'solidworks' ? 'Highly mature local graphics optimization (Large Assembly Mode, lightweight states).' : a.slug === 'onshape' ? 'Cloud-native database structure (rendering workload shifted off local GPU).' : 'Performs best on small-to-medium sub-assemblies.',
-              bDetail: b.slug === 'solidworks' ? 'Highly mature local graphics optimization (Large Assembly Mode, lightweight states).' : b.slug === 'onshape' ? 'Cloud-native database structure (rendering workload shifted off local GPU).' : 'Performs best on small-to-medium sub-assemblies.',
-              comparison: 'Onshape leverages cloud parallelization, which keeps low-spec laptops responsive, while SolidWorks utilizes enterprise desktop GPUs.'
+              description: 'Viewport framerate and memory consumption when loading assemblies containing thousands of unique sub-components.',
+              aDetail: a.deployment_options?.includes('Cloud') ? `${a.name} offloads rendering compute to distributed servers, minimizing local memory strain.` : `${a.name} utilizes workstation GPU hardware acceleration and lightweight representation states.`,
+              bDetail: b.deployment_options?.includes('Cloud') ? `${b.name} offloads rendering compute to distributed servers, minimizing local memory strain.` : `${b.name} utilizes workstation GPU hardware acceleration and lightweight representation states.`,
+              comparison: `For assemblies with 5,000+ components, compare how ${a.name} and ${b.name} optimize GPU draw calls and background data streaming.`
             }
           ]
         };
 
       case 'bim':
         return {
-          title: 'BIM Interoperability & Coordination Matrix',
-          subtitle: 'Evaluating industry foundation class (IFC) standards, smart building entities, and team cloud collaboration.',
+          title: 'BIM Interoperability & Multi-Discipline Coordination',
+          subtitle: `Evaluating openBIM certifications, intelligent architectural entities, and project sync between ${a.name} and ${b.name}.`,
           metrics: [
             {
               id: 'ifc-compliance',
-              name: 'IFC Compliance & openBIM Certification',
+              name: 'openBIM & IFC Schema Compliance',
               icon: Shield,
-              description: 'Fidelity of IFC4 and IFC2x3 architectural model data transfer across different platforms.',
-              aDetail: a.slug === 'archicad' ? 'Gold-standard openBIM certified export/import (industry pioneer in IFC mapping).' : 'Certified IFC4 import/export with customizable mapping templates.',
-              bDetail: b.slug === 'archicad' ? 'Gold-standard openBIM certified export/import (industry pioneer in IFC mapping).' : 'Certified IFC4 import/export with customizable mapping templates.',
-              comparison: 'ArchiCAD is designed with openBIM at its core, offering cleaner IFC coordinate mappings, whereas Revit relies on dedicated translator plugins.'
+              description: 'Fidelity of IFC4 and IFC2x3 architectural/structural model data exchange without information loss.',
+              aDetail: a.slug === 'archicad' ? 'Gold-standard openBIM certification with native IFC mapping algorithms.' : `${a.name} certified for IFC export/import with customizable Property Set (Pset) configurations.`,
+              bDetail: b.slug === 'archicad' ? 'Gold-standard openBIM certification with native IFC mapping algorithms.' : `${b.name} certified for IFC export/import with customizable Property Set (Pset) configurations.`,
+              comparison: `Both ${a.name} and ${b.name} support openBIM collaboration; ensure required project IFC property sets map smoothly between platforms.`
             },
             {
               id: 'parametric-elements',
-              name: 'Smart Architectural Objects',
+              name: 'Smart Building Elements & Schedule Generation',
               icon: Layers,
-              description: 'Intelligence of building materials, wall assemblies, structural grids, and smart scheduling arrays.',
-              aDetail: a.slug === 'revit' ? 'Complex family-based (.RFA) parametric templates with deep database properties.' : a.slug === 'archicad' ? 'Intuitive GDL-based objects with beautiful default styling and instant parametric handles.' : 'Standard 3D solid blocks with manual attributes.',
-              bDetail: b.slug === 'revit' ? 'Complex family-based (.RFA) parametric templates with deep database properties.' : b.slug === 'archicad' ? 'Intuitive GDL-based objects with beautiful default styling and instant parametric handles.' : 'Standard 3D solid blocks with manual attributes.',
-              comparison: 'Revit families are deeply customizable but require steep training; ArchiCAD GDL library parts are highly elegant right out of the box.'
+              description: 'Parametric intelligence of structural walls, curtain facades, doors, and automatic quantity takeoff schedules.',
+              aDetail: a.slug === 'revit' ? 'Deep parametric family (.RFA) architecture linked to unified project databases.' : a.slug === 'archicad' ? 'GDL-powered architectural objects with instant interactive 2D/3D parametric handles.' : `${a.name} smart architectural component system with real-time schedule linking.`,
+              bDetail: b.slug === 'revit' ? 'Deep parametric family (.RFA) architecture linked to unified project databases.' : b.slug === 'archicad' ? 'GDL-powered architectural objects with instant interactive 2D/3D parametric handles.' : `${b.name} smart architectural component system with real-time schedule linking.`,
+              comparison: `${a.name} and ${b.name} structure building elements differently: consider whether your practice prioritizes flexible parametric families or fast out-of-the-box drafting objects.`
             },
             {
               id: 'cloud-collaboration',
-              name: 'Real-Time Sync & Collaboration',
+              name: 'Real-Time Team Sync & Worksharing',
               icon: Network,
-              description: 'Ability for multiple team members to draft simultaneously in the same model file without locking constraints.',
-              aDetail: a.slug === 'revit' ? 'Enterprise-focused Autodesk Construction Cloud (BIM 360) cloud sync.' : a.slug === 'archicad' ? 'High-performance BIMcloud delta sharing (runs smoothly on low bandwidths).' : 'File-based check-in / check-out syncing.',
-              bDetail: b.slug === 'revit' ? 'Enterprise-focused Autodesk Construction Cloud (BIM 360) cloud sync.' : b.slug === 'archicad' ? 'High-performance BIMcloud delta sharing (runs smoothly on low bandwidths).' : 'File-based check-in / check-out syncing.',
-              comparison: 'ArchiCAD BIMcloud is exceptionally fast over standard networks, while Autodesk Construction Cloud offers wider corporate toolsets.'
+              description: 'Capacity for multi-disciplinary teams to edit the central project model simultaneously without work locking.',
+              aDetail: `${a.name} supports multi-user worksharing and team project synchronization.`,
+              bDetail: `${b.name} supports multi-user worksharing and team project synchronization.`,
+              comparison: `Collaborative throughput between ${a.name} and ${b.name} depends on local network bandwidth and project worksharing permissions.`
             },
             {
               id: 'mep-coordination',
-              name: 'MEP & Structural Integration',
+              name: 'MEP & Structural Clash Detection',
               icon: Cpu,
-              description: 'Native capability to coordinate mechanical, electrical, plumbing, and structural engineering within the architectural layout.',
-              aDetail: a.slug === 'revit' ? 'Fully native MEP and structural suites sharing the same workspace.' : a.slug === 'archicad' ? 'Built-in MEP Modeler toolset + collaborative structural analytical model.' : 'Requires external file imports.',
-              bDetail: b.slug === 'revit' ? 'Fully native MEP and structural suites sharing the same workspace.' : b.slug === 'archicad' ? 'Built-in MEP Modeler toolset + collaborative structural analytical model.' : 'Requires external file imports.',
-              comparison: 'Revit remains the benchmark for multi-disciplinary HVAC/MEP coordination due to its unified suite format.'
+              description: 'Coordination between architectural spatial envelopes, HVAC/piping runs, and structural steel framing.',
+              aDetail: `${a.name} provides integrated coordination tools or export workflows for multi-disciplinary clearance checks.`,
+              bDetail: `${b.name} provides integrated coordination tools or export workflows for multi-disciplinary clearance checks.`,
+              comparison: `Interdisciplinary spatial coordination is streamlined when ${a.name} and ${b.name} exchange clean analytical models and MEP route geometry.`
             }
           ]
         };
 
-      case 'simulation':
+      case 'cae':
         return {
-          title: 'Simulation Power & High-Speed EDA Analysis',
-          subtitle: 'Comparing multi-core solver parallelization, schematic-to-PCB synchronizations, and physics coupling solvers.',
+          title: 'CAE Engineering Simulation & Physics Solver Analysis',
+          subtitle: `Evaluating finite element (FEA), computational fluid dynamics (CFD), and mesh convergence between ${a.name} and ${b.name}.`,
           metrics: [
             {
               id: 'solver-scaling',
-              name: 'Solver Parallelization & CPU/GPU Scaling',
+              name: 'Solver Parallelization & HPC Scaling',
               icon: Cpu,
-              description: 'Computational performance scaling across high-performance CPU cores, cluster systems, and double-precision FP64 hardware.',
-              aDetail: a.slug === 'ansys-fluent' ? 'Highly scalable HPC solver, offering near-linear acceleration across 1000+ cluster CPU nodes.' : 'Multi-core threaded local solver engine.',
-              bDetail: b.slug === 'ansys-fluent' ? 'Highly scalable HPC solver, offering near-linear acceleration across 1000+ cluster CPU nodes.' : 'Multi-core threaded local solver engine.',
-              comparison: 'Fluent excels in enterprise supercomputer simulation, whereas COMSOL is optimized for highly detailed workstation solves.'
+              description: 'Computational scaling across high-performance CPU cores, GPU accelerators, and distributed cluster nodes.',
+              aDetail: `${a.name} features multi-threaded mathematical solvers with support for parallelized matrix factorization.`,
+              bDetail: `${b.name} features multi-threaded mathematical solvers with support for parallelized matrix factorization.`,
+              comparison: `${a.name} and ${b.name} leverage compute hardware differently: evaluate whether your simulations benefit from local workstation acceleration or enterprise cluster scaling.`
             },
             {
-              id: 'multiphysics',
-              name: 'Multiphysics Interface Coupling',
+              id: 'adaptive-meshing',
+              name: 'Meshing Engine & Boundary Layer Control',
+              icon: Layers,
+              description: 'Automated mesh generation, inflation layers, polyhedral/tetrahedral elements, and adaptive mesh refinement (AMR).',
+              aDetail: `${a.name} incorporates robust meshing algorithms with local curvature refinement and quality metrics auditing.`,
+              bDetail: `${b.name} incorporates robust meshing algorithms with local curvature refinement and quality metrics auditing.`,
+              comparison: `Discretization accuracy in ${a.name} versus ${b.name} directly influences solution convergence and singularity prevention.`
+            },
+            {
+              id: 'multiphysics-coupling',
+              name: 'Multiphysics Field Coupling',
               icon: Network,
-              description: 'Capacity to solve simultaneous coupled equations (e.g., thermal stress, electromagnetics, fluid-structure interaction).',
-              aDetail: a.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving (users can couple any mathematical parameters).' : 'Segregated solver with Workbench integration coupling.',
-              bDetail: b.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving (users can couple any mathematical parameters).' : 'Segregated solver with Workbench integration coupling.',
-              comparison: 'COMSOL is the absolute leader in highly customizable coupled physics, while Ansys provides raw computational power for individual domains.'
+              description: 'Capability to solve simultaneous coupled equations (e.g., thermal-stress, fluid-structure interaction, conjugate heat transfer).',
+              aDetail: a.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving allowing arbitrary user PDE coupling.' : `${a.name} provides coupled or sequential multi-domain physics solving.`,
+              bDetail: b.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving allowing arbitrary user PDE coupling.' : `${b.name} provides coupled or sequential multi-domain physics solving.`,
+              comparison: `Decide whether your engineering problem requires the unified coupled formulation of ${a.name} or the specialized modular solvers of ${b.name}.`
             },
             {
-              id: 'schematic-sync',
-              name: 'Schematic & PCB Sync Integrity',
-              icon: Zap,
-              description: 'Bi-directional forward and backward annotation between schematic captures and PCB layout footprints.',
-              aDetail: a.slug === 'altium-designer' ? 'Seamless ECO (Engineering Change Order) bi-directional link with absolute integrity.' : a.slug === 'kicad' ? 'Highly robust netlist and footprint synchronization with customizable manual overrides.' : 'Varies depending on translator scripts.',
-              bDetail: b.slug === 'altium-designer' ? 'Seamless ECO (Engineering Change Order) bi-directional link with absolute integrity.' : b.slug === 'kicad' ? 'Highly robust netlist and footprint synchronization with customizable manual overrides.' : 'Varies depending on translator scripts.',
-              comparison: 'Altium is extremely streamlined for real-time trace updates, while KiCad offers highly robust manual mapping controls.'
-            },
-            {
-              id: 'drc-latency',
-              name: 'Design Rule Check (DRC) Engine',
-              icon: Shield,
-              description: 'Speed and detail of electrical clearance, thermal relief, and manufacturing tolerance validations.',
-              aDetail: a.slug === 'altium-designer' ? 'Real-time online 3D DRC running on custom GPU shaders.' : a.slug === 'kicad' ? 'Highly thorough offline DRC report system.' : 'Standard rule matrix.',
-              bDetail: b.slug === 'altium-designer' ? 'Real-time online 3D DRC running on custom GPU shaders.' : b.slug === 'kicad' ? 'Highly thorough offline DRC report system.' : 'Standard rule matrix.',
-              comparison: 'Altium Designer flags clearance violations instantly as you route, whereas KiCad requires compiling an offline analysis report.'
+              id: 'post-processing',
+              name: 'Post-Processing & Compliance Visualization',
+              icon: FileText,
+              description: 'Contour plots, vector flowlines, safety factor calculations, and automated engineering report generation.',
+              aDetail: `${a.name} generates detailed stress/flow contour plots and automated engineering validation summaries.`,
+              bDetail: `${b.name} generates detailed stress/flow contour plots and automated engineering validation summaries.`,
+              comparison: `Both ${a.name} and ${b.name} provide comprehensive visual post-processing for design verification and client presentations.`
             }
           ]
         };
 
-      default:
+      case 'eda':
         return {
-          title: 'Visual Rendering & Pipeline Performance',
-          subtitle: 'Auditing path-tracing engine physics, modeling structures, and 3D ecosystem workflows.',
+          title: 'EDA Schematic & PCB Layout Verification',
+          subtitle: `Comparing schematic synchronization, high-speed routing, design rule checks, and manufacturing outputs between ${a.name} and ${b.name}.`,
+          metrics: [
+            {
+              id: 'schematic-sync',
+              name: 'Schematic to PCB ECO Synchronization',
+              icon: Zap,
+              description: 'Bi-directional forward and backward annotation between schematic captures and PCB layout footprints.',
+              aDetail: a.slug === 'altium-designer' ? 'Seamless real-time ECO (Engineering Change Order) bi-directional link with absolute footprint integrity.' : `${a.name} provides structured netlist synchronization and pin-to-pad forward annotation.`,
+              bDetail: b.slug === 'altium-designer' ? 'Seamless real-time ECO (Engineering Change Order) bi-directional link with absolute footprint integrity.' : `${b.name} provides structured netlist synchronization and pin-to-pad forward annotation.`,
+              comparison: `${a.name} and ${b.name} maintain netlist integrity through ECO cycles, minimizing discrepancies between logic schematics and physical traces.`
+            },
+            {
+              id: 'high-speed-routing',
+              name: 'High-Speed Routing & Differential Pair Tuning',
+              icon: Network,
+              description: 'Interactive trace routing, length matching, impedance-controlled differential pairs, and return path grounding.',
+              aDetail: `${a.name} supports interactive push-and-shove routing with differential pair length tuning tools.`,
+              bDetail: `${b.name} supports interactive push-and-shove routing with differential pair length tuning tools.`,
+              comparison: `When routing high-frequency signals, compare how ${a.name} and ${b.name} handle trace impedance formulas and snake length tuning.`
+            },
+            {
+              id: 'drc-engine',
+              name: 'Real-Time Design Rule Check (DRC)',
+              icon: Shield,
+              description: 'Speed and granularity of clearance checking, trace width constraints, and manufacturing tolerance validation.',
+              aDetail: a.slug === 'altium-designer' ? 'Real-time online 3D DRC running on GPU hardware shaders.' : `${a.name} offers comprehensive rule auditing with detailed violation reports.`,
+              bDetail: b.slug === 'altium-designer' ? 'Real-time online 3D DRC running on GPU hardware shaders.' : `${b.name} offers comprehensive rule auditing with detailed violation reports.`,
+              comparison: `${a.name} and ${b.name} protect boards from fabrication respins by validating clearance and stackup rules before release.`
+            },
+            {
+              id: 'manufacturing-exports',
+              name: 'Fabrication Outputs (Gerber, ODB++, IPC-2581)',
+              icon: FileText,
+              description: 'Standardized CAM generation, drill charts, BOM spreadsheets, and pick-and-place centroid files.',
+              aDetail: `${a.name} exports industry-standard Gerber RS-274X, Excellon drill files, and BOM data.`,
+              bDetail: `${b.name} exports industry-standard Gerber RS-274X, Excellon drill files, and BOM data.`,
+              comparison: `Seamless handoff to PCB board houses is supported by both ${a.name} and ${b.name} across standard CAM packaging formats.`
+            }
+          ]
+        };
+
+      default: // creative
+        return {
+          title: '3D Visualization & Creative Pipeline Assessment',
+          subtitle: `Auditing rendering engines, modeling topology, asset ecosystems, and format interchange between ${a.name} and ${b.name}.`,
           metrics: [
             {
               id: 'render-engine',
-              name: 'Rendering & Ray-Tracing Engines',
+              name: 'Rendering & Ray-Tracing Pipeline',
               icon: Zap,
-              description: 'Physics architecture of the rendering pipeline (e.g., real-time rasterizing vs GPU path-tracing vs offline global illumination).',
-              aDetail: a.slug === 'blender' ? 'Cycles (high-end GPU ray-tracer) + Eevee (fast real-time graphics rasterizer).' : a.slug === 'twinmotion' ? 'Unreal Engine Lumen real-time global illumination and high-fidelity rendering.' : a.slug === 'lumion' ? 'Proprietary fast ray-tracing engine (immediate visualization).' : 'High-fidelity engine.',
-              bDetail: b.slug === 'blender' ? 'Cycles (high-end GPU ray-tracer) + Eevee (fast real-time graphics rasterizer).' : b.slug === 'twinmotion' ? 'Unreal Engine Lumen real-time global illumination and high-fidelity rendering.' : b.slug === 'lumion' ? 'Proprietary fast ray-tracing engine (immediate visualization).' : 'High-fidelity engine.',
-              comparison: 'Twinmotion harnesses gaming-engine speed for interactive walk-throughs; Blender Cycles is excellent for cinematic assets.'
+              description: 'Architecture of the rendering engine: real-time rasterization, interactive path-tracing, or unbiased ray-tracing.',
+              aDetail: a.slug === 'blender' ? 'Cycles (physically-based GPU path-tracer) + Eevee (real-time rasterization engine).' : `${a.name} high-fidelity rendering pipeline with physical material shaders.`,
+              bDetail: b.slug === 'blender' ? 'Cycles (physically-based GPU path-tracer) + Eevee (real-time rasterization engine).' : `${b.name} high-fidelity rendering pipeline with physical material shaders.`,
+              comparison: `Choosing between ${a.name} and ${b.name} depends on whether your project prioritizes instant real-time viewport feedback or cinematic path-tracing.`
             },
             {
               id: 'modeling-tech',
-              name: 'Mesh vs Mathematical NURBS Precision',
+              name: 'Polygonal SubD vs Mathematical Surface Modeling',
               icon: Layers,
-              description: 'Modeling technology used: organic polygon subdivision vs absolute mathematical NURBS curve control.',
-              aDetail: a.slug === 'rhino-3d' ? 'Unrivaled precision NURBS surfaces (essential for high-end automotive design and architecture).' : a.slug === 'blender' || a.slug === 'maya' ? 'Organic subdivision mesh modeling + powerful sculpting brushes.' : 'Standard modeling block format.',
-              bDetail: b.slug === 'rhino-3d' ? 'Unrivaled precision NURBS surfaces (essential for high-end automotive design and architecture).' : b.slug === 'blender' || b.slug === 'maya' ? 'Organic subdivision mesh modeling + powerful sculpting brushes.' : 'Standard modeling block format.',
-              comparison: 'Rhino is built for physical manufacturing accuracy (NURBS); Blender and Maya are optimized for visual and organic screen animation.'
+              description: 'Underlying modeling topology: organic subdivision polygons vs mathematically exact NURBS curves.',
+              aDetail: a.slug === 'rhino-3d' ? 'Unrivaled precision NURBS curve and surface modeling (standard for industrial and yacht design).' : `${a.name} geometric sculpting and polygonal modeling toolkit.`,
+              bDetail: b.slug === 'rhino-3d' ? 'Unrivaled precision NURBS curve and surface modeling (standard for industrial and yacht design).' : `${b.name} geometric sculpting and polygonal modeling toolkit.`,
+              comparison: `${a.name} and ${b.name} employ distinct modeling primitives; verify whether you need manufacturing-ready NURBS tolerances or organic artistic flexibility.`
             },
             {
               id: 'ecosystem',
-              name: 'Ecosystem & Plugin Library',
+              name: 'Asset Ecosystem & Plugin Extensibility',
               icon: LayoutGrid,
-              description: 'Availability of pre-built asset libraries, materials, community scripts, and pipeline tools.',
-              aDetail: a.slug === 'blender' ? 'Massive, unparalleled open-source add-on community (mostly free).' : a.slug === 'lumion' ? 'Huge, built-in, commercial-grade plant, car, and character asset libraries.' : 'Standard plugin store.',
-              bDetail: b.slug === 'blender' ? 'Massive, unparalleled open-source add-on community (mostly free).' : b.slug === 'lumion' ? 'Huge, built-in, commercial-grade plant, car, and character asset libraries.' : 'Standard plugin store.',
-              comparison: 'Lumion excels in ready-made landscaping assets, whereas Blender benefits from a limitless global developer community.'
+              description: 'Breadth of material presets, pre-rigged asset libraries, procedural shaders, and third-party script communities.',
+              aDetail: a.slug === 'blender' ? 'Vast global open-source community providing thousands of add-ons, scripts, and asset packs.' : `${a.name} curated commercial library of ready-to-render assets and materials.`,
+              bDetail: b.slug === 'blender' ? 'Vast global open-source community providing thousands of add-ons, scripts, and asset packs.' : `${b.name} curated commercial library of ready-to-render assets and materials.`,
+              comparison: `Scene composition velocity is directly boosted by the material libraries and plugin ecosystems available in ${a.name} and ${b.name}.`
             },
             {
               id: 'pipeline-interop',
-              name: 'Pipeline Interoperability (USD, FBX)',
+              name: 'Pipeline Interoperability (USD, FBX, glTF)',
               icon: FileText,
-              description: 'Data fidelity when exporting elements using Pixar USD, FBX, glTF, or OBJ formats.',
-              aDetail: a.slug === 'maya' || a.slug === 'blender' ? 'Industry-grade USD/FBX asset pipeline with character skeletons and animations.' : a.slug === 'prusaslicer' || a.slug === 'bambu-studio' ? 'Native STL/3MF slicer translation engines.' : 'Standard 3D exports.',
-              bDetail: b.slug === 'maya' || b.slug === 'blender' ? 'Industry-grade USD/FBX asset pipeline with character skeletons and animations.' : b.slug === 'prusaslicer' || b.slug === 'bambu-studio' ? 'Native STL/3MF slicer translation engines.' : 'Standard 3D exports.',
-              comparison: 'Slicers are specialized for geometric layer pathings; artistic modelers focus on skeleton transformations.'
+              description: 'Data fidelity when exchanging geometry, camera rigs, and PBR textures across DCC and game engine pipelines.',
+              aDetail: `${a.name} supports universal 3D asset interchange formats including USD, glTF, and FBX.`,
+              bDetail: `${b.name} supports universal 3D asset interchange formats including USD, glTF, and FBX.`,
+              comparison: `Multi-software workflows run smoothly when ${a.name} and ${b.name} export clean UV maps and scene hierarchy data.`
             }
           ]
         };
@@ -269,7 +321,7 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
   const widgetData = getWidgetData();
 
   const getArchetypeStyles = () => {
-    switch (archetype) {
+    switch (resolvedArchetype) {
       case 'drafting':
         return {
           border: 'border-slate-200 hover:border-slate-400',
@@ -297,7 +349,7 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
           gradientBg: 'from-emerald-600 to-zinc-900',
           cardBg: 'bg-zinc-50/50'
         };
-      case 'simulation':
+      case 'cae':
         return {
           border: 'border-indigo-200 hover:border-indigo-400',
           badgeBg: 'bg-indigo-100 text-indigo-900 border-indigo-200',
@@ -305,6 +357,15 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
           glowShadow: 'hover:shadow-[0_0_20px_rgba(79,70,229,0.08)]',
           gradientBg: 'from-indigo-600 to-violet-900',
           cardBg: 'bg-indigo-50/20'
+        };
+      case 'eda':
+        return {
+          border: 'border-cyan-200 hover:border-cyan-400',
+          badgeBg: 'bg-cyan-100 text-cyan-900 border-cyan-200',
+          badgeText: 'text-cyan-900',
+          glowShadow: 'hover:shadow-[0_0_20px_rgba(6,182,212,0.08)]',
+          gradientBg: 'from-cyan-700 to-teal-950',
+          cardBg: 'bg-cyan-50/20'
         };
       default:
         return {

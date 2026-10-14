@@ -14,7 +14,37 @@ export default function ColumnBasePlateCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const P=parseFloat(inputs[0])*1000,fc=parseFloat(inputs[1]),cw=parseFloat(inputs[2]),cd=parseFloat(inputs[3]),fy=parseFloat(inputs[4]);const fp=0.6*fc;const B=Math.ceil(Math.sqrt(P/fp)/10)*10;const m=(B-cw)/2;const t=Math.ceil(Math.sqrt(6*fp*m*m/fy)*10)/10;return{B,t,fp};
+    const P = (parseFloat(inputs[0]) || 0) * 1000; // kN to N
+    const fc = parseFloat(inputs[1]) || 25; // Concrete compressive strength (MPa)
+    const cw = parseFloat(inputs[2]) || 200; // Column width (mm)
+    const cd = parseFloat(inputs[3]) || 200; // Column depth (mm)
+    const fy = parseFloat(inputs[4]) || 250; // Steel yield strength (MPa)
+
+    // Allowable concrete bearing stress: fp_allow = 0.35 * fc (AISC ASD) or 0.6 * fc (full confinement)
+    const fpAllow = 0.6 * fc;
+
+    // Minimum required base plate area A1 = P / fpAllow (mm²)
+    const reqArea = fpAllow > 0 ? P / fpAllow : 0;
+
+    // Base plate square dimension B must provide adequate bearing area and house the column profile:
+    const minSideFromArea = Math.sqrt(reqArea);
+    const minSideFromColumn = Math.max(cw, cd) + 100; // At least 50mm clearance on each side
+    const B = Math.ceil(Math.max(minSideFromArea, minSideFromColumn) / 10) * 10;
+
+    // Actual bearing pressure under working load:
+    const actualArea = B * B;
+    const fp = actualArea > 0 ? P / actualArea : 0;
+
+    // Bidirectional cantilever overhang distances (m along flange, n along web):
+    // AISC Design Guide 1: m = (B - 0.95*cd)/2, n = (B - 0.8*cw)/2
+    const m = Math.max(0, (B - 0.95 * cd) / 2);
+    const n = Math.max(0, (B - 0.80 * cw) / 2);
+    const cantilever = Math.max(m, n);
+
+    // Required plate thickness: t = l * sqrt(2 * fp / (0.9 * fy)) (LRFD) or sqrt(3 * fp * l² / (0.75 * fy)) (ASD)
+    const t = fy > 0 ? Math.ceil(cantilever * Math.sqrt((3 * fp) / (0.75 * fy)) * 10) / 10 : 0;
+
+    return { B, t, fp, cantilever, m, n };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -79,23 +109,28 @@ export default function ColumnBasePlateCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Plate Size</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Base Plate Size (B × B)</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.B)}<span className="text-lg text-blue-400"> mm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Plate Thickness</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Minimum Thickness (t)</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.t)}<span className="text-lg text-green-400"> mm</span></div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Bearing Pressure</div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Concrete Bearing Stress</div>
                 <div className="text-3xl font-black text-orange-700">{formatNum(result.fp)}<span className="text-lg text-orange-400"> MPa</span></div>
+              </div>
+              <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
+                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Governing Cantilever (l)</div>
+                <div className="text-3xl font-black text-purple-700">{formatNum(result.cantilever)}<span className="text-lg text-purple-400"> mm</span></div>
+                <div className="text-xs text-purple-500 font-medium mt-1">m={formatNum(result.m)}mm, n={formatNum(result.n)}mm</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                t = sqrt(6*M/fy), m = max(plate cantilever)
+                AISC Design Guide 1: Cantilever l = max(m, n) where m = (B - 0.95·cd)/2, n = (B - 0.8·cw)/2 • t = l · √(3·fp / (0.75·fy))
               </div>
             </div>
           </div>

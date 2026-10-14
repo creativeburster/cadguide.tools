@@ -7,14 +7,30 @@ import { Settings, Zap, Info } from 'lucide-react';
 export default function CastingShrinkageCalculatorClient() {
   const [inputs, setInputs] = useState(["200","cast_iron","1"]);
 
+  const MATERIAL_DEFAULTS: Record<string, string> = {
+    cast_iron: '1.0',
+    steel: '2.0',
+    aluminum: '1.3',
+    brass: '1.5',
+    ductile_iron: '0.8'
+  };
+
   const updateInput = (idx: number, val: string) => {
     const next = [...inputs];
     next[idx] = val;
+    if (idx === 1 && MATERIAL_DEFAULTS[val]) {
+      next[2] = MATERIAL_DEFAULTS[val];
+    }
     setInputs(next);
   };
 
   const result = useMemo(() => {
-    const L=parseFloat(inputs[0]),rate=parseFloat(inputs[2])/100;const S=L*rate;const P=L+S;const M=L;return{S,P,M};
+    const L = parseFloat(inputs[0]) || 0;
+    const rate = (parseFloat(inputs[2]) || 1.0) / 100;
+    const S = L * rate;
+    const P = L * (1 + rate);
+    const shrinkagePct = rate * 100;
+    return { S, P, L, shrinkagePct };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -45,10 +61,11 @@ export default function CastingShrinkageCalculatorClient() {
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
             <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
-              <option value="cast_iron">Cast Iron (1.0%)</option>
-              <option value="steel">Cast Steel (2.0%)</option>
-              <option value="aluminum">Aluminum Alloy (1.3%)</option>
-              <option value="brass">Brass / Bronze (1.5%)</option>
+              <option value="cast_iron">Grey Cast Iron (1.0%)</option>
+              <option value="ductile_iron">Ductile Iron (0.8%)</option>
+              <option value="steel">Cast Carbon Steel (2.0%)</option>
+              <option value="aluminum">Cast Aluminum Alloy (1.3%)</option>
+              <option value="brass">Cast Brass / Bronze (1.5%)</option>
             </select>
           </div>
           <div key="2">
@@ -57,7 +74,7 @@ export default function CastingShrinkageCalculatorClient() {
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
           </div>
 
-          <button onClick={() => setInputs(["200","cast_iron","1"])}
+          <button onClick={() => setInputs(["200","cast_iron","1.0"])}
             className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
             Reset
           </button>
@@ -74,16 +91,16 @@ export default function CastingShrinkageCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Shrinkage</div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Shrinkage Allowance</div>
                 <div className="text-3xl font-black text-blue-700">{formatNum(result.S)}<span className="text-lg text-blue-400"> mm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Pattern Size</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Pattern / Cavity Size</div>
                 <div className="text-3xl font-black text-green-700">{formatNum(result.P)}<span className="text-lg text-green-400"> mm</span></div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Mold Cavity</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.M)}<span className="text-lg text-orange-400"> mm</span></div>
+              <div className="col-span-2 bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-black text-slate-400 uppercase tracking-wider mb-1">Cooled Casting Part Target</div>
+                <div className="text-xl font-black text-slate-800">{formatNum(result.L)}<span className="text-sm font-medium text-slate-500"> mm (at room temperature)</span></div>
               </div>
             </div>
 

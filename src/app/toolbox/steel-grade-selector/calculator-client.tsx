@@ -14,7 +14,30 @@ export default function SteelGradeSelectorClient() {
   };
 
   const result = useMemo(() => {
-    const props:{[key:string]:{Sy:number,Su:number,el:number}}={'Q235':{Sy:235,Su:375,el:26},'Q345':{Sy:345,Su:510,el:21},'Q390':{Sy:390,Su:530,el:20},'Q420':{Sy:420,Su:580,el:19},'A36':{Sy:250,Su:400,el:23},'A572':{Sy:345,Su:450,el:21}};const grade=inputs[0],t=parseFloat(inputs[1]);const p=props[grade]||{Sy:235,Su:375,el:26};const factor=t>16?0.95:1;return{Sy:p.Sy*factor,Su:p.Su,el:p.el};
+    const props: { [key: string]: { Sy: number; Su: number; el: number } } = {
+      'Q235': { Sy: 235, Su: 375, el: 26 },
+      'Q355': { Sy: 355, Su: 510, el: 22 }, // GB/T 1591-2018 current standard
+      'Q345': { Sy: 345, Su: 510, el: 21 }, // Legacy GB
+      'Q390': { Sy: 390, Su: 530, el: 20 },
+      'Q420': { Sy: 420, Su: 580, el: 19 },
+      'S235JR': { Sy: 235, Su: 360, el: 26 }, // EN 10025-2
+      'S355JR': { Sy: 355, Su: 510, el: 22 }, // EN 10025-2
+      'A36': { Sy: 250, Su: 400, el: 23 },
+      'A572': { Sy: 345, Su: 450, el: 21 },
+      'A992': { Sy: 345, Su: 450, el: 21 }, // Modern structural wide-flange
+      'SS400': { Sy: 245, Su: 400, el: 21 }, // JIS G3101
+    };
+    const grade = (inputs[0] || 'Q235').toUpperCase().trim();
+    const t = parseFloat(inputs[1]) || 16;
+    const p = props[grade] || props['Q235'];
+    
+    // Engineering thickness reduction factor per GB 50017 / Eurocode 3
+    let factor = 1.0;
+    if (t > 63) factor = 0.88;
+    else if (t > 40) factor = 0.91;
+    else if (t > 16) factor = 0.95;
+
+    return { Sy: p.Sy * factor, Su: p.Su, el: p.el };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -40,12 +63,17 @@ export default function SteelGradeSelectorClient() {
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Steel Grade</label>
             <select value={inputs[0]} onChange={e => updateInput(0, e.target.value)}
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
-              <option value="Q235">Q235 (fy=235 MPa, fu=375 MPa)</option>
-              <option value="Q345">Q345 (fy=345 MPa, fu=510 MPa)</option>
-              <option value="Q390">Q390 (fy=390 MPa, fu=530 MPa)</option>
-              <option value="Q420">Q420 (fy=420 MPa, fu=580 MPa)</option>
+              <option value="Q235">Q235 (GB/T 700 - fy=235 MPa, fu=375 MPa)</option>
+              <option value="Q355">Q355 (GB/T 1591-2018 - fy=355 MPa, fu=510 MPa)</option>
+              <option value="Q345">Q345 (Legacy GB - fy=345 MPa, fu=510 MPa)</option>
+              <option value="Q390">Q390 (GB/T 1591 - fy=390 MPa, fu=530 MPa)</option>
+              <option value="Q420">Q420 (GB/T 1591 - fy=420 MPa, fu=580 MPa)</option>
+              <option value="S235JR">EN 10025-2 S235JR (fy=235 MPa, fu=360 MPa)</option>
+              <option value="S355JR">EN 10025-2 S355JR (fy=355 MPa, fu=510 MPa)</option>
               <option value="A36">ASTM A36 (fy=250 MPa, fu=400 MPa)</option>
               <option value="A572">ASTM A572 Gr50 (fy=345 MPa, fu=450 MPa)</option>
+              <option value="A992">ASTM A992 (fy=345 MPa, fu=450 MPa)</option>
+              <option value="SS400">JIS G3101 SS400 (fy=245 MPa, fu=400 MPa)</option>
             </select>
           </div>
           <div key="1">

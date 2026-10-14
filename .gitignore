@@ -40,6 +40,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local archives & temp tools
+*.zip
+.workbuddy/
+run-auto-submit.bat
+
 # scratch
 scratch/
 

@@ -14,7 +14,21 @@ export default function BoltCircleCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const D=parseFloat(inputs[0]),n=parseFloat(inputs[1]),start=parseFloat(inputs[2])*Math.PI/180;const R=D/2;const spacing=Math.PI*D/n;const chord=2*R*Math.sin(Math.PI/n);return{spacing,chord};
+    const D = parseFloat(inputs[0]) || 0;
+    const n = Math.max(1, parseFloat(inputs[1]) || 1);
+    const startDeg = parseFloat(inputs[2]) || 0;
+    const startRad = (startDeg * Math.PI) / 180;
+    const R = D / 2;
+
+    const spacing = (Math.PI * D) / n; // Circular arc spacing
+    const chord = 2 * R * Math.sin(Math.PI / n); // Linear chord distance between centers
+    const angleStepDeg = 360 / n; // Angular pitch
+
+    // First hole Cartesian coordinates relative to center (0, 0):
+    const x1 = R * Math.cos(startRad);
+    const y1 = R * Math.sin(startRad);
+
+    return { spacing, chord, angleStepDeg, x1, y1, startDeg };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -69,19 +83,27 @@ export default function BoltCircleCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Bolt Spacing</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.spacing)}<span className="text-lg text-blue-400"> mm</span></div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Chord Distance (Hole-to-Hole)</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(result.chord)}<span className="text-lg text-blue-400"> mm</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Chord Length</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.chord)}<span className="text-lg text-green-400"> mm</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Arc Perimeter Spacing</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.spacing)}<span className="text-lg text-green-400"> mm</span></div>
+              </div>
+              <div className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
+                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">First Hole (X₁, Y₁) at {result.startDeg}°</div>
+                <div className="text-xl font-black text-purple-700">({formatNum(result.x1)}, {formatNum(result.y1)})<span className="text-sm font-medium text-purple-500"> mm</span></div>
+              </div>
+              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Angular Pitch (Δθ)</div>
+                <div className="text-xl font-black text-orange-700">{formatNum(result.angleStepDeg)}<span className="text-sm font-medium text-orange-500"> °</span></div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                x = R*cos(2pi*i/n), y = R*sin(2pi*i/n)
+                X_i = R·cos(θ_start + 2π·i/n) • Y_i = R·sin(θ_start + 2π·i/n) • Chord = 2·R·sin(π/n)
               </div>
             </div>
           </div>

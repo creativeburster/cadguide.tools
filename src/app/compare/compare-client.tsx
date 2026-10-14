@@ -313,7 +313,15 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
                           {tool ? (
                             <div className="flex flex-col items-center">
                               {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val as number}</span>}
-                              {row.type === 'price' && <span className="text-lg lg:text-xl font-black text-slate-900">${(val as number) || 'TBA'}</span>}
+                              {row.type === 'price' && (
+                                <span className="text-lg lg:text-xl font-black text-slate-900">
+                                  {val === 0 || tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
+                                    ? 'Free ($0)'
+                                    : typeof val === 'number' && val > 0
+                                      ? `$${val}/mo`
+                                      : 'Contact Sales'}
+                                </span>
+                              )}
                               {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val as string}</Badge>}
                               {row.type === 'list' && (
                                 <div className="flex flex-wrap justify-center gap-2 max-w-[180px] lg:max-w-[200px]">

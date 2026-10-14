@@ -14,7 +14,38 @@ export default function ConcreteMixDesignCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const fc=parseFloat(inputs[0]),wc=parseFloat(inputs[1]),slump=parseFloat(inputs[2]),aggSize=parseFloat(inputs[3]);const water=slump<50?180:slump<100?200:210;const cement=water/wc;const coarse=1050;const fine=2400-cement-water-coarse;return{cement,water,fine,coarse};
+    const fc = parseFloat(inputs[0]) || 30;
+    const wc = parseFloat(inputs[1]) || 0.45;
+    const slump = parseFloat(inputs[2]) || 75;
+    const aggSize = parseFloat(inputs[3]) || 20;
+
+    // ACI 211.1 water requirement based on slump and max aggregate nominal size
+    let baseWater = 195;
+    if (aggSize <= 10) baseWater = 210;
+    else if (aggSize <= 14) baseWater = 200;
+    else if (aggSize <= 20) baseWater = 190;
+    else baseWater = 175; // 40mm or larger
+
+    const water = slump < 50 ? baseWater - 15 : slump < 100 ? baseWater : baseWater + 15;
+
+    // ACI 211 maximum allowable W/C ratio for non-air-entrained target compressive strength fc:
+    // fc 20 MPa ~ 0.69, fc 30 MPa ~ 0.54, fc 40 MPa ~ 0.43, fc 50 MPa ~ 0.38
+    const maxRecommendedWC = Math.max(0.32, Math.min(0.75, 1.05 - 0.017 * fc));
+    const effectiveWC = Math.min(wc, maxRecommendedWC);
+    const wcSatisfiesFc = wc <= maxRecommendedWC + 0.02;
+
+    const cement = water / (effectiveWC > 0 ? effectiveWC : 0.45);
+
+    // Coarse aggregate dry rodded bulk volume factor (increases with max aggregate size)
+    const coarseVolumeFraction = aggSize <= 10 ? 0.50 : aggSize <= 14 ? 0.56 : aggSize <= 20 ? 0.64 : 0.72;
+    const dryRoddedUnitWeight = 1620; // kg/m³
+    const coarse = coarseVolumeFraction * dryRoddedUnitWeight;
+
+    // Fine aggregate determined by absolute volume / mass balance (~2400 kg/m³ fresh concrete)
+    const freshDensity = 2400;
+    const fine = Math.max(450, freshDensity - cement - water - coarse);
+
+    return { cement, water, fine, coarse, maxRecommendedWC, wcSatisfiesFc, effectiveWC };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -74,27 +105,35 @@ export default function ConcreteMixDesignCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Cement</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.cement)}<span className="text-lg text-blue-400"> kg/m3</span></div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Cement Content</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(result.cement)}<span className="text-lg text-blue-400"> kg/m³</span></div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Water</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.water)}<span className="text-lg text-green-400"> kg/m3</span></div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Net Mixing Water</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.water)}<span className="text-lg text-green-400"> kg/m³</span></div>
               </div>
               <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Fine Agg</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.fine)}<span className="text-lg text-orange-400"> kg/m3</span></div>
+                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">Fine Agg (Sand)</div>
+                <div className="text-3xl font-black text-orange-700">{formatNum(result.fine)}<span className="text-lg text-orange-400"> kg/m³</span></div>
               </div>
               <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
-                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Coarse Agg</div>
-                <div className="text-3xl font-black text-purple-700">{formatNum(result.coarse)}<span className="text-lg text-purple-400"> kg/m3</span></div>
+                <div className="text-base font-black text-purple-400 uppercase tracking-wider mb-2">Coarse Agg (Stone)</div>
+                <div className="text-3xl font-black text-purple-700">{formatNum(result.coarse)}<span className="text-lg text-purple-400"> kg/m³</span></div>
+              </div>
+              <div className={`col-span-2 rounded-2xl p-4 border ${result.wcSatisfiesFc ? 'bg-emerald-50 border-emerald-100 text-emerald-800' : 'bg-amber-50 border-amber-100 text-amber-800'}`}>
+                <div className="text-xs font-black uppercase tracking-wider mb-1">ACI 211 Target Strength vs W/C Check</div>
+                <div className="text-sm font-bold">
+                  {result.wcSatisfiesFc
+                    ? `✓ W/C (${inputs[1]}) satisfies required max ratio (${formatNum(result.maxRecommendedWC)}) for ${inputs[0]} MPa target strength`
+                    : `⚠️ W/C (${inputs[1]}) is too high for ${inputs[0]} MPa concrete (Max recommended W/C = ${formatNum(result.maxRecommendedWC)})`}
+                </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                Cement = water/(w/c), aggregates by absolute volume
+                ACI 211.1 Method: Water adjusted for slump & max aggregate size • Aggregates proportioned by dry-rodded bulk volume
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import { NextResponse } from 'next/server';
 import { TOOLBOX_DATA } from '@/lib/toolbox-data';
+import { getAllConversionSlugs } from '@/lib/converter-data';
 
 const BASE_URL = 'https://cadguide.tools';
 
@@ -18,8 +19,9 @@ export async function GET() {
     <priority>0.90</priority>
   </url>`;
 
-  // 2. All released toolbox utility pages (calculators, converters, troubleshooters, cheatsheets)
-  const activeTools = TOOLBOX_DATA.filter((t) => t.status === 'released');
+  // 2. All released toolbox utility pages (excluding dedicated 3D conversion pairs listed in sitemap-convert.xml)
+  const convertSlugs = new Set(getAllConversionSlugs());
+  const activeTools = TOOLBOX_DATA.filter((t) => t.status === 'released' && !convertSlugs.has(t.slug));
   const toolboxUrls = activeTools.map((tool) => {
     const priority = tool.category === 'cheatsheet' ? '0.85' : '0.80';
     return `  <url>

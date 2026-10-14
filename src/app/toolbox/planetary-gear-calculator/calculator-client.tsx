@@ -14,7 +14,39 @@ export default function PlanetaryGearCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const zs=parseFloat(inputs[0]),zr=parseFloat(inputs[1]),cfg=inputs[3];let ratio;if(cfg==='ring-fixed')ratio=(zs+zr)/zs;else if(cfg==='sun-fixed')ratio=(zs+zr)/zr;else ratio=zr/(zs+zr);return{ratio,sr:1/ratio};
+    const zs = parseFloat(inputs[0]) || 20;
+    const zr = parseFloat(inputs[1]) || 60;
+    const zp = parseFloat(inputs[2]) || 20;
+    const cfg = inputs[3];
+
+    let ratio = 1;
+    if (cfg === 'ring-fixed') {
+      ratio = (zs + zr) / zs; // Sun in, Carrier out
+    } else if (cfg === 'sun-fixed') {
+      ratio = (zs + zr) / zr; // Ring in, Carrier out
+    } else {
+      ratio = -zr / zs; // Carrier fixed, Sun in, Ring out (reverse direction)
+    }
+
+    // Engineering Concentricity Condition for standard 2K-H gearsets: zr = zs + 2 * zp
+    const reqZp = (zr - zs) / 2;
+    const isConcentric = Math.abs(zr - (zs + 2 * zp)) < 0.001;
+
+    // 3-Planet Assembly Condition: (zs + zr) % 3 === 0
+    const is3PlanetAssemblable = (Math.round(zs) + Math.round(zr)) % 3 === 0;
+
+    // Relative spin ratio of planet on carrier:
+    const planetSpinRatio = zp > 0 ? zs / zp : 0;
+
+    return {
+      ratio,
+      sr: ratio !== 0 ? 1 / ratio : 0,
+      reqZp,
+      zp,
+      isConcentric,
+      is3PlanetAssemblable,
+      planetSpinRatio
+    };
   }, [inputs]);
 
   const formatNum = (n: number) => {
@@ -78,19 +110,29 @@ export default function PlanetaryGearCalculatorClient() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Gear Ratio</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.ratio)}<span className="text-lg text-blue-400"> :1</span></div>
+                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Overall Gear Ratio</div>
+                <div className="text-3xl font-black text-blue-700">{formatNum(Math.abs(result.ratio))}<span className="text-lg text-blue-400"> :1</span></div>
+                <div className="text-xs text-blue-500 font-medium mt-1">{result.ratio < 0 ? 'Reverse rotation' : 'Forward rotation'}</div>
               </div>
               <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Speed Ratio</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.sr)}</div>
+                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Planet Spin Ratio</div>
+                <div className="text-3xl font-black text-green-700">{formatNum(result.planetSpinRatio)}<span className="text-lg text-green-400"> :1</span></div>
+                <div className="text-xs text-green-500 font-medium mt-1">Relative to carrier (zs / zp)</div>
+              </div>
+              <div className={`col-span-2 rounded-2xl p-4 border ${result.isConcentric ? 'bg-emerald-50 border-emerald-100 text-emerald-800' : 'bg-amber-50 border-amber-100 text-amber-800'}`}>
+                <div className="text-xs font-black uppercase tracking-wider mb-1">Concentricity Condition (zr = zs + 2·zp)</div>
+                <div className="text-sm font-bold">
+                  {result.isConcentric
+                    ? `✓ Concentric: Ring (${inputs[1]}) = Sun (${inputs[0]}) + 2 × Planet (${inputs[2]})`
+                    : `⚠️ Non-concentric: Required zp = ${result.reqZp} for standard gears (Current zp = ${result.zp})`}
+                </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
+              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
                 <Info className="w-4 h-4 text-slate-400" />
-                (ws-wc)/(wr-wc)=-zr/zs
+                Willis Equation: (ω_s - ω_c) / (ω_r - ω_c) = -z_r / z_s • Assembly condition: (z_s + z_r) / N_planets = integer
               </div>
             </div>
           </div>
