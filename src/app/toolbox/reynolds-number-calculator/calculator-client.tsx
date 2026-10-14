@@ -18,13 +18,13 @@ export default function ReynoldsClient() {
   const [customRho, setCustomRho] = useState(998);
   const [customMu, setCustomMu] = useState(0.001);
   const [velocity, setVelocity] = useState(2.0);
-  const [diameter, setDiameter] = useState(0.05);
+  const [diameterMm, setDiameterMm] = useState(50); // mm (default 50mm = 0.05m)
 
   const result = useMemo(() => {
     const rho = fluidIdx === 5 ? customRho : FLUIDS[fluidIdx].rho;
     const mu = fluidIdx === 5 ? customMu : FLUIDS[fluidIdx].mu;
-    const V = velocity;
-    const D = diameter;
+    const V = Math.max(0.001, velocity);
+    const D = Math.max(0.001, diameterMm) / 1000; // mm to m
 
     const Re = (rho * V * D) / mu;
     let regime = '';
@@ -33,10 +33,19 @@ export default function ReynoldsClient() {
     else if (Re < 4000) { regime = 'Transitional Flow'; color = 'orange'; }
     else { regime = 'Turbulent Flow'; color = 'red'; }
 
-    const frictionFactor = Re < 2300 ? 64 / Re : 0.316 / Math.pow(Re, 0.25);
+    let frictionFactor = 0;
+    if (Re <= 2300) {
+      frictionFactor = 64 / Math.max(1, Re);
+    } else if (Re <= 100000) {
+      // Blasius formula for smooth pipe (4000 < Re < 10^5)
+      frictionFactor = 0.316 / Math.pow(Re, 0.25);
+    } else {
+      // Haaland equation for smooth pipes (Re >= 10^5)
+      frictionFactor = Math.pow(-1.8 * Math.log10(6.9 / Re), -2);
+    }
 
-    return { Re, regime, color, frictionFactor, rho, mu };
-  }, [fluidIdx, customRho, customMu, velocity, diameter]);
+    return { Re, regime, color, frictionFactor, rho, mu, D_mm: diameterMm };
+  }, [fluidIdx, customRho, customMu, velocity, diameterMm]);
 
   return (
     <div className="space-y-8">
@@ -76,8 +85,9 @@ export default function ReynoldsClient() {
           </div>
 
           <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Diameter (m)</label>
-            <input type="number" step="0.001" value={diameter} onChange={e => setDiameter(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pipe Diameter D (mm)</label>
+            <input type="number" step="1" value={diameterMm} onChange={e => setDiameterMm(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
+            <span className="text-xs text-slate-400 mt-1 block">e.g. 50 mm = DN50 (0.05 m internal)</span>
           </div>
         </div>
 

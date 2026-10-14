@@ -6,7 +6,7 @@ import { RelatedTools } from '@/components/related-tools';
 interface FontMapping {
   name: string;
   source: string;
-  type: 'SHX Chinese large font' | 'SHX Western normal font' | 'SHX Symbols and Rebar Fonts' | 'TrueType Operating System Fonts';
+  type: 'SHX Big Font (CJK)' | 'SHX Regular Font (Western)' | 'SHX Symbols and Rebar Fonts' | 'TrueType Operating System Fonts';
   suggestedAlt: string;
   explanation: string;
   command: string; // FONTALT assignment command
@@ -17,142 +17,142 @@ const SHX_FAQS: { question: string; answer: string }[] = [
   {
     question: 'What is the difference between a question mark (?) and garbled text?',
     answer:
-      'A question mark (?) means the CAD engine cannot find the SHX font specified in your Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style (Style) declared inside the drawing conflicts during parsing — for example using a Western font to force-parse a double-byte Chinese big font.',
+      'A question mark (?) means the CAD engine cannot find the SHX font file in your Support Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style (Style) conflicts during parsing — for example using a Western single-byte font to parse a double-byte CJK Big Font.',
   },
   {
-    question: 'Can I download font packages online and import them?',
+    question: 'Can I download full font packages online and import them?',
     answer:
-      'It is strongly discouraged to download multi-gigabyte "full CAD font packages" from the internet. They contain many duplicate, damaged and redundant fonts that can crash CAD startup speed, break coordinate snapping, and may even bundle macro trojans. Configuring targeted FONTALT alternate mappings on demand is the standard enterprise IT practice.',
+      'It is strongly discouraged to download multi-gigabyte "full CAD font packages" from unverified websites. They contain duplicate, corrupted, and redundant fonts that slow down CAD startup, break snap points, and can bundle macro viruses. Configuring targeted FONTALT alternate mappings on demand is standard enterprise IT best practice.',
   },
   {
-    question: 'How do I configure Big Font and a Western regular font in CAD?',
+    question: 'How do I configure Big Font and a Western regular font together in AutoCAD?',
     answer:
-      'The AutoCAD text style (STYLE) allows a combined mount: the left "SHX font" box handles English letters and numbers (e.g. simplex.shx); after checking "Use Big Font", the right "Big Font" box handles CJK characters (e.g. gbcbig.shx). Drawings only restore correctly when both are configured.',
+      'In AutoCAD Text Style dialog (STYLE), configure combined fonts: the left "SHX Font" dropdown handles alphanumeric characters (e.g., simplex.shx); check "Use Big Font", then select your CJK double-byte font in the right "Big Font" dropdown (e.g., gbcbig.shx). Both must be set for drawings to display correctly.',
   },
   {
-    question: 'Why can Tianzheng or Structure Explorer auto-detect the fonts?',
+    question: 'Why do specialized architectural or structural add-ons auto-detect fonts?',
     answer:
-      'These customized CAD secondary-development kits add their dedicated Fonts folders to AutoCAD\'s Support File Search Path automatically. To view such drawings in vanilla CAD, copy and add their Fonts paths to your local CAD options search path.',
+      'These CAD add-ons automatically register their dedicated Fonts directory to AutoCAD Support File Search Path during installation. To view their drawings in vanilla AutoCAD, add their Fonts folder to your Support File Search Path in Options.',
   },
 ];
 
 const FONTS_REGISTRY: FontMapping[] = [
   {
     name: 'HZTXT',
-    source: 'The most classic single-line Chinese imitation Song font in China',
-    type: 'SHX Chinese large font',
+    source: 'Classic single-line CJK imitation Song font widely used in engineering',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'hztxt.shx or gbcbig.shx',
-    explanation: 'HZTXT It is a Chinese font widely circulated in major domestic design institutes in the early days. It is often used for filling in multi-line text and single-line forms.. If it is missing locally, without special symbols, Use the national standard large font that comes with AutoCAD by default (gbcbig.shx) Substitution can 100% avoid garbled characters. ',
+    explanation: 'HZTXT is a legacy Chinese big font commonly used in engineering drawings and tabular forms. If missing locally, mapping to AutoCAD default national standard font gbcbig.shx completely resolves missing character prompts.',
     command: '(setvar "FONTALT" "gbcbig.shx")',
     fmpEntry: 'hztxt;gbcbig.shx',
   },
   {
     name: 'TSSDENG',
-    source: 'Explorer Structural Design Software (TSSD) Spanish Symbol Font',
+    source: 'Structural Engineering (TSSD) Special Symbols & Rebar Font',
     type: 'SHX Symbols and Rebar Fonts',
-    suggestedAlt: 'tssdeng.shx (It is recommended to copy from an older version of Explorer or use the standard symbol library)',
-    explanation: 'The Explorer series fonts have built-in a large number of special symbols for steel bars (such as first-grade steel, Class II steel, Class III steel symbol, The corresponding characters are %%130 - %%133). If used directly simplex.shx Instead, the rebar symbol will become a blank or question mark. Must be replaced by tssdeng.shx that supports the corresponding encoding. ',
+    suggestedAlt: 'tssdeng.shx (or standard structural symbol font)',
+    explanation: 'Contains proprietary reinforcement symbols (e.g. Grade I, II, III rebar glyphs mapped to %%130-%%133). Replacing with vanilla simplex.shx will cause rebar symbols to appear blank or as question marks. Must be mapped to tssdeng.shx or a compatible rebar font.',
     command: '(setvar "FONTALT" "tssdeng.shx")',
-    fmpEntry: 'tssdeng;gbcbig.shx', // fall back if tssdeng is not installed
+    fmpEntry: 'tssdeng;gbcbig.shx',
   },
   {
     name: 'TSSDCHN',
-    source: 'Explorer Structural Design Software (TSSD) Chinese large font',
-    type: 'SHX Chinese large font',
+    source: 'Structural Engineering (TSSD) Chinese Big Font',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'gbcbig.shx or tssdchn.shx',
-    explanation: 'This is the structural typesetting Chinese font of Explorer software. If Explorer is not installed locally, You can directly point the backup large font to the national standard large font gbcbig.shx. The font width and height are very close., Typesetting overflow almost never occurs. ',
+    explanation: 'Structural typesetting font for civil engineering. If missing, map directly to gbcbig.shx; aspect ratios and line heights match closely, avoiding annotation overlap.',
     command: '(setvar "FONTALT" "gbcbig.shx")',
     fmpEntry: 'tssdchn;gbcbig.shx',
   },
   {
     name: 'TCH',
-    source: 'Tangent early Chinese font',
-    type: 'SHX Chinese large font',
+    source: 'Architectural CJK Big Font',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'gbcbig.shx or ttxt2.shx',
-    explanation: 'Old drawings exported by Tianzheng Construction often contain this large font. When running in Tianzheng software, it will be replaced normally., However, when opening the drawing in ordinary AutoCAD, it will report missing. Can be directly mapped to gbcbig.shx, with good character alignment accuracy. ',
+    explanation: 'Drawings exported by architectural suites often declare this font. When opened in vanilla AutoCAD without the plugin, it triggers missing font prompts. Maps cleanly to gbcbig.shx.',
     command: '(setvar "FONTALT" "gbcbig.shx")',
     fmpEntry: 'tch;gbcbig.shx',
   },
   {
     name: 'CHINA',
-    source: 'Early Architectural Design Institute customized version of Chinese imitation Song Dynasty large font',
-    type: 'SHX Chinese large font',
+    source: 'Legacy architectural institute CJK Big Font',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'gbcbig.shx',
-    explanation: 'This was from the 1990s to 2000 At the beginning of the year, many provinces established customized CAD fonts.. It has been basically merged by gbcbig.shx. Just point it to gbcbig.shx directly in the configuration file or alternative font options. ',
+    explanation: 'Legacy CJK Big Font widely used in 1990s and 2000s CAD drawings. Standardized and superseded by gbcbig.shx in modern workflows.',
     command: '(setvar "FONTALT" "gbcbig.shx")',
     fmpEntry: 'china;gbcbig.shx',
   },
   {
     name: 'CASS',
-    source: 'Southern Surveying and Mapping CASS terrain and feature symbols large font',
+    source: 'Civil Surveying CASS Terrain & Feature Symbol Font',
     type: 'SHX Symbols and Rebar Fonts',
     suggestedAlt: 'cass.shx or simplex.shx',
-    explanation: 'Used for geographical information and engineering survey terrain contour marking. Contains specific compasses, Depth point, control elevation symbol. If CASS is not installed locally, it can be directly mapped to an ordinary simplex.shx to view the main text, but some mapping element symbols may display abnormally. ',
+    explanation: 'Used for GIS and surveying contour mapping, elevation marks, and feature symbols. If CASS is not installed locally, mapping to simplex.shx allows reading alphanumeric labels, though custom topographic symbols may not render.',
     command: '(setvar "FONTALT" "simplex.shx")',
     fmpEntry: 'cass;simplex.shx',
   },
   {
     name: 'HZDX',
-    source: 'Early domestic pinyin initials in Chinese large font',
-    type: 'SHX Chinese large font',
+    source: 'Legacy single-line CJK Big Font',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'hztxt.shx or gbcbig.shx',
-    explanation: 'One of the earliest single-line Chinese character large fonts in China, with simple strokes, Renders quickly. Directly mapped to modern large fonts hztxt.shx You can recreate the perfect silhouette. ',
+    explanation: 'Lightweight single-line CJK big font designed for fast vector redraw. Maps cleanly to hztxt.shx or gbcbig.shx.',
     command: '(setvar "FONTALT" "hztxt.shx")',
     fmpEntry: 'hzdx;hztxt.shx',
   },
   {
     name: 'BIGFONT',
-    source: 'Universal Chinese font virtual large placeholder',
-    type: 'SHX Chinese large font',
+    source: 'Universal CJK Big Font placeholder',
+    type: 'SHX Big Font (CJK)',
     suggestedAlt: 'gbcbig.shx',
-    explanation: 'In some drawings of foreign companies or joint venture projects, due to differences in drawing specifications, Directly name the Chinese font category BIGFONT. Directly replace it with AutoCAD The default national standard font gbcbig.shx is enough. ',
+    explanation: 'Used as a generic Big Font style declaration in international drawings. Map directly to AutoCAD standard gbcbig.shx.',
     command: '(setvar "FONTALT" "gbcbig.shx")',
     fmpEntry: 'bigfont;gbcbig.shx',
   },
   {
     name: 'TXT',
-    source: 'AutoCAD Native and simplest line Western font',
-    type: 'SHX Western normal font',
+    source: 'AutoCAD native un-smoothed single-line Western font',
+    type: 'SHX Regular Font (Western)',
     suggestedAlt: 'txt.shx or gbenor.shx',
-    explanation: 'AutoCAD The Western single-line body that comes with it from the beginning. Due to the lack of arc fitting, All spliced by polylines (extremely fast rendering, but a little stiff). All CAD The platform comes with it by default, if the prompt is missing, Usually the current CAD installation path Fonts The directory has been cleaned, copy it back txt.shx That\'s it. ',
+    explanation: 'The original AutoCAD un-smoothed vector font composed of segmented polylines. Ships with all AutoCAD installations. If missing, copy txt.shx into your AutoCAD Fonts folder.',
     command: '(setvar "FONTALT" "txt.shx")',
     fmpEntry: 'txt;txt.shx',
   },
   {
     name: 'SIMPLEX',
-    source: 'AutoCAD Standard arc fitting single line Western font',
-    type: 'SHX Western normal font',
+    source: 'AutoCAD standard smooth single-line Western font',
+    type: 'SHX Regular Font (Western)',
     suggestedAlt: 'simplex.shx or gbenor.shx',
-    explanation: 'Compared with txt.shx, simplex optimizes arc rendering, The appearance is more sleek and beautiful, and it is currently the recommended Western and digital annotation font in domestic two-dimensional engineering drawings.. When it is missing locally, you can replace it with one click AutoCAD The default alternative is Spanish. ',
+    explanation: 'Industry standard single-line Western font with arc-smoothed glyphs. Recommended for all alphanumeric engineering dimensions and annotations.',
     command: '(setvar "FONTALT" "simplex.shx")',
     fmpEntry: 'simplex;simplex.shx',
   },
   {
     name: 'ROMANS',
-    source: 'Roman single line fine Spanish font',
-    type: 'SHX Western normal font',
+    source: 'Roman single-line precision Western font',
+    type: 'SHX Regular Font (Western)',
     suggestedAlt: 'romans.shx or simplex.shx',
-    explanation: 'It is mainly used for high-definition letter annotation on precision machinery manufacturing drawings and general floor plans. Compared with simplex The line width is more uniform and maps to simplex.shx It can ensure that the typesetting width remains unchanged. ',
+    explanation: 'High-clarity proportional Western font used in mechanical detailing and architectural floor plans. Character widths match simplex.shx.',
     command: '(setvar "FONTALT" "simplex.shx")',
     fmpEntry: 'romans;simplex.shx',
   },
   {
     name: 'COMPLEX',
-    source: 'AutoCAD Early two-line Western font',
-    type: 'SHX Western normal font',
+    source: 'AutoCAD multi-stroke Western display font',
+    type: 'SHX Regular Font (Western)',
     suggestedAlt: 'complex.shx or romans.shx',
-    explanation: 'A double-lined Western text with a certain stroke thickness. Used for the title of the drawing., Can be downgraded and replaced by a normal single-line body to improve the system scaling rendering frame rate. ',
+    explanation: 'Double-stroke Western font used for drawing title blocks. Can be mapped to romans.shx to speed up pan and zoom rendering.',
     command: '(setvar "FONTALT" "romans.shx")',
     fmpEntry: 'complex;romans.shx',
   },
   {
     name: 'FS',
-    source: 'Windows The operating system comes with TrueType imitation Song Dynasty',
-    type: 'SHX Chinese large font',
-    suggestedAlt: 'Imitation Song_GB2312 (Windows TTF)',
-    explanation: 'Some designers directly quoted the faux Song font that comes with the Windows system. (imitationsong.ttf) . This is available in a partially offline or lite version Windows On professional servers, an error will be reported due to the lack of the system font. It is recommended to copy back the corresponding imitation Song font in the control panel._GB2312 Font package. ',
-    command: 'N/A (It is recommended to copy the system fonts to C:\\Windows\\Fonts)',
-    fmpEntry: 'fs;Imitation Song_GB2312',
+    source: 'Windows Operating System TrueType Font (FangSong)',
+    type: 'TrueType Operating System Fonts',
+    suggestedAlt: 'FangSong / FangSong_GB2312 (Windows TTF)',
+    explanation: 'Referenced when CAD drawings call system TrueType fonts. If missing on headless or minimal Windows installations, install the standard TrueType font package into C:\\Windows\\Fonts.',
+    command: 'N/A (Copy TrueType font file to C:\\Windows\\Fonts)',
+    fmpEntry: 'fs;FangSong',
   }
 ];
 
@@ -181,8 +181,8 @@ export default function MissingFontResolverClient() {
 
     const matchesCategory =
       activeCategory === 'all' ||
-      (activeCategory === 'chinese' && font.type === 'SHX Chinese large font') ||
-      (activeCategory === 'western' && font.type === 'SHX Western normal font') ||
+      (activeCategory === 'chinese' && font.type === 'SHX Big Font (CJK)') ||
+      (activeCategory === 'western' && font.type === 'SHX Regular Font (Western)') ||
       (activeCategory === 'symbol' && font.type === 'SHX Symbols and Rebar Fonts');
 
     return matchesSearch && matchesCategory;
@@ -225,7 +225,7 @@ export default function MissingFontResolverClient() {
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
             }`}
           >
-            ✏️ Chinese large font ({FONTS_REGISTRY.filter(f => f.type === 'SHX Chinese large font').length})
+            ✏️ Big Font CJK ({FONTS_REGISTRY.filter(f => f.type === 'SHX Big Font (CJK)').length})
           </button>
           <button
             onClick={() => setActiveCategory('western')}
@@ -235,7 +235,7 @@ export default function MissingFontResolverClient() {
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
             }`}
           >
-            🔤 Western normal font ({FONTS_REGISTRY.filter(f => f.type === 'SHX Western normal font').length})
+            🔤 Regular Western ({FONTS_REGISTRY.filter(f => f.type === 'SHX Regular Font (Western)').length})
           </button>
           <button
             onClick={() => setActiveCategory('symbol')}
@@ -245,7 +245,7 @@ export default function MissingFontResolverClient() {
                 : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
             }`}
           >
-            🎯 symbol/reinforcement body ({FONTS_REGISTRY.filter(f => f.type === 'SHX Symbols and Rebar Fonts').length})
+            🎯 Symbols & Rebar ({FONTS_REGISTRY.filter(f => f.type === 'SHX Symbols and Rebar Fonts').length})
           </button>
         </div>
       </div>
@@ -379,7 +379,7 @@ export default function MissingFontResolverClient() {
                 <div>
                   <h5 className="font-bold text-slate-100 print:text-slate-800">Set alternate default font</h5>
                   <p className="text-slate-400 print:text-slate-500 mt-0.5">
-                    Copy the `(setvar &quot;FONTALT&quot; &quot;gbcbig.shx&quot;)` command on the left above. Paste directly into the CAD command line and press Enter key. This specifies the fallback for the default missing font to be GB large font. 
+                    Copy the `(setvar &quot;FONTALT&quot; &quot;gbcbig.shx&quot;)` command above. Paste directly into the AutoCAD command line and press Enter. This designates gbcbig.shx as the fallback font whenever a requested SHX file is not found.
                   </p>
                 </div>
               </li>
@@ -388,9 +388,9 @@ export default function MissingFontResolverClient() {
                   2
                 </span>
                 <div>
-                  <h5 className="font-bold text-slate-100 print:text-slate-800">Perform a rebuild to refresh the viewport</h5>
+                  <h5 className="font-bold text-slate-100 print:text-slate-800">Regenerate viewport to refresh text</h5>
                   <p className="text-slate-400 print:text-slate-500 mt-0.5">
-                    Enter at the CAD command line `REGEN` and press Enter. The system will recompile and render the full image text., At this time, all question marks (?) will be gbcbig Substitute and render normally. 
+                    Type `REGEN` and press Enter. AutoCAD will recompile and redraw all text entities, replacing question marks (?) with standard legible glyphs.
                   </p>
                 </div>
               </li>
@@ -399,9 +399,9 @@ export default function MissingFontResolverClient() {
                   3
                 </span>
                 <div>
-                  <h5 className="font-bold text-slate-100 print:text-slate-800">Permanent solution: Configuration acad.fmp</h5>
+                  <h5 className="font-bold text-slate-100 print:text-slate-800">Permanent solution: Configure acad.fmp</h5>
                   <p className="text-slate-400 print:text-slate-500 mt-0.5">
-                    If you want to fix the missing specific font once and for all (such as opening tssdchn Always automatically map without popping up every time), you can copy the above right acad.fmp Configuration items. Pass CAD `OP` Options ➔ File ➔ Text Editor ➔ Font Map File Find the corresponding path and edit it `.fmp` file and paste the mapping relationship into the bottom of it and save it. 
+                    To automate mapping permanently, add font entries to your `acad.fmp` file. In AutoCAD, open Options (`OP`) ➔ Files ➔ Text Editor, Dictionary, and Font File Names ➔ Font Mapping File, locate your `.fmp` file, and append the mapping lines to the bottom.
                   </p>
                 </div>
               </li>
@@ -413,7 +413,7 @@ export default function MissingFontResolverClient() {
               Standard Fonts Package
             </h4>
             <p className="text-base text-slate-500 leading-relaxed font-semibold">
-              AutoCAD The built-in default includes `gbcbig.shx` (Chinese large font), `hztxt.shx` (Classic Chinese fonts) and `simplex.shx` (Single-line Spanish fonts). These fonts have extremely high versatility and safety factor.. 
+              AutoCAD natively includes `gbcbig.shx` (CJK Big Font), `hztxt.shx` (Classic CJK font), and `simplex.shx` (Single-line Western font). These standard fonts offer universal compatibility across all workstations.
             </p>
           </div>
         </div>
@@ -439,28 +439,28 @@ export default function MissingFontResolverClient() {
         <h3 className="text-2xl font-black text-slate-900">Troubleshooting missing fonts and garbled characters (SHX Font FAQ)</h3>
         <div className="grid md:grid-cols-2 gap-6 print:grid-cols-1">
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-lg">What is the difference between a question mark (?) and garbled text?? </h4>
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">What is the difference between a question mark (?) and garbled text?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
-              * **Question mark (?)** represents CAD The engine cannot find the drawing specified in your Fonts folder. SHX The font, or its mapping rules cannot match special symbols; 
-              * **Scrambled Text** represents the code page specified inside the drawing (Codepage) or font style (Style) resolution conflict, For example, use Western fonts to force parsing of double-byte Chinese large fonts. 
+              * **Question mark (?)**: The CAD engine cannot locate the specified SHX font in your search paths, or the font lacks specific glyphs or symbols.<br />
+              * **Garbled text**: Indicates an encoding or code page conflict (e.g., attempting to parse double-byte CJK text using a single-byte Western font).
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-lg">Can I download font packages online and import them? </h4>
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">Can I download full font packs online and import them?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
-              It is highly not recommended to download batches of several gigabytes from the Internet in batches.&quot;CADFull font package&quot;. This type of package contains a large number of duplicate names, Damaged and redundant fonts, prone to triggering CAD Startup speed plummets, coordinate capture fails, Even bundled with macro Trojans. Targeted configuration on demand FONTALT Alternate mapping is the standard specification for enterprise IT operations. 
+              We strongly advise against downloading massive multi-gigabyte font packs from third-party sites. They often contain corrupted fonts, duplicate files that degrade AutoCAD startup speed, and potential security risks. Using targeted FONTALT or acad.fmp mappings is the recommended practice.
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-lg">Big Font and Spanish regular font in CAD How to configure it? </h4>
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">How to configure Big Font and Western fonts together?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
-              AutoCAD The text style (STYLE) allows combined mounting: &quot;SHX font on the left&quot;The box is responsible for English letters and numbers (such as simplex.shx) ; Check &quot;Use large fonts&quot;&quot;rear, right&quot;The large font &quot;box is responsible for Chinese, Japanese and Korean characters (Such as gbcbig.shx). Only if both are configured correctly, The drawings can be restored correctly. 
+              In AutoCAD's Text Style dialog (`STYLE`), configure paired fonts: select a regular Western font on the left (e.g., `simplex.shx`), check "Use Big Font", then choose your CJK Big Font on the right (e.g., `gbcbig.shx`).
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
-            <h4 className="font-bold text-slate-800 mb-2 text-lg">Why can Tianzheng Software or Structure Explorer automatically identify it? </h4>
+            <h4 className="font-bold text-slate-800 mb-2 text-lg">Why do vertical CAD add-ons find their fonts automatically?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
-              These customized CAD secondary development kits will be installed with their dedicated Fonts Folders are automatically added to AutoCAD&apos;s&quot;Support File Search Path &quot;Medium. To view in bare CAD, Just copy and add their Fonts paths to your local CAD within the options search path. 
+              Specialized civil, structural, and architectural suites automatically append their custom font directories to the AutoCAD Support File Search Path. To open their drawings in standard AutoCAD, simply add their Fonts folder to your Support Search Paths in Options.
             </p>
           </div>
         </div>

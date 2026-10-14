@@ -3448,7 +3448,7 @@ export const c3Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Allplan Engine",
+    engine: "Siemens Parasolid",
     multicore: "Yes",
     gpu_optimization: "DirectX/OpenGL",
     standards: [

@@ -1812,7 +1812,7 @@ export const c5Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "TopSolid Engine",
+    engine: "Siemens Parasolid",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -2237,7 +2237,7 @@ export const c5Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Edgecam Engine",
+    engine: "Siemens Parasolid / Spatial ACIS",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: [
@@ -2838,7 +2838,7 @@ export const c5Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "GibbsCAM Engine",
+    engine: "Siemens Parasolid",
     multicore: "Yes",
     gpu_optimization: "Yes",
     standards: [
@@ -7076,7 +7076,7 @@ export const c5Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Femap GUI + NX/MSC Nastran solver",
+    engine: "Siemens Parasolid (Geometry) + Simcenter Nastran",
     multicore: "Inherits from Nastran",
     gpu_optimization: "Limited",
     standards: [

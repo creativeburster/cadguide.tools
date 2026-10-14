@@ -56,8 +56,11 @@ export default function SectionModulusClient() {
       A = 2 * B * Tf + innerH * Tw;
     }
 
-    const Wx = Ix / (H / 2);
-    const Wy = Iy / (B / 2);
+    const isRound = section === 'circular' || section === 'tube';
+    const yMax = isRound ? (D / 2) : (H / 2);
+    const xMax = isRound ? (D / 2) : (B / 2);
+    const Wx = Ix / yMax;
+    const Wy = Iy / xMax;
     const rx = Math.sqrt(Ix / A);
     const ry = Math.sqrt(Iy / A);
 

@@ -526,7 +526,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Autodesk Infrastructure Model Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -700,7 +700,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Nitrous Viewport / Arnold",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -892,7 +892,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Pixol 2.5D / DynaMesh / ZRemesher Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -1047,7 +1047,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Luxion CPU/GPU Ray-Tracing Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -1223,7 +1223,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Lumion Proprietary Ray-Tracing Engine",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []
@@ -1548,7 +1548,7 @@ export const c7Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "N/A",
+    engine: "Unreal Engine 5 (Lumen / Nanite)",
     multicore: "N/A",
     gpu_optimization: "N/A",
     standards: []

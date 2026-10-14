@@ -928,7 +928,7 @@ export const c1Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Siemens Parasolid",
+    engine: "Bentley DGN Platform (Parasolid-based Solid Modeling)",
     multicore: "High",
     gpu_optimization: "High",
     standards: [

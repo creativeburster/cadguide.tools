@@ -481,7 +481,7 @@ export const accordionFaqs: AccordionFaq[] = [
   {
     category: 'standards',
     tools: ['solidworks'],
-    q: 'How to auto-generate structural weldment切割清单 (Cut Lists) in drawing sheets?',
+    q: 'How to auto-generate structural weldment Cut Lists in drawing sheets?',
     a: 'Insert a Weldment Cut List table: Go to Insert > Tables > Weldment Cut List in your drawing. Select the weldment view. SolidWorks will auto-extract members, lengths, angles, and custom properties. Ensure cut list folders in the part tree are updated before sheet generation.'
   },
   {

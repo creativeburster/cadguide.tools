@@ -2198,12 +2198,12 @@ export const FREE_SUBPAGES: Record<string, FreeSubPage> = {
     displayName: "BIM",
     categoryIds: ["c3"],
     title: "Best Free BIM Software in 2026",
-    description: "Free and open-source Building Information Modeling tools — BlenderBIM, FreeCAD BIM, and freemium BIM options for architects.",
-    intro: "Free BIM is the hardest category to fill in 2026. Native BIM authoring is still dominated by commercial tools (Revit, ArchiCAD, Vectorworks). However, BlenderBIM (IFC-native BIM inside Blender) and FreeCAD's BIM workbench are closing the gap rapidly, and several vendors offer free educational or community tiers. Below are all free and freemium BIM-capable tools in our catalog.",
+    description: "Free and open-source Building Information Modeling tools — Bonsai (BlenderBIM), FreeCAD BIM, and freemium BIM options for architects.",
+    intro: "Free BIM is the hardest category to fill in 2026. Native BIM authoring is still dominated by commercial tools (Revit, ArchiCAD, Vectorworks). However, Bonsai (BlenderBIM) (IFC-native BIM inside Blender) and FreeCAD's BIM workbench are closing the gap rapidly, and several vendors offer free educational or community tiers. Below are all free and freemium BIM-capable tools in our catalog.",
     faqs: [
-      { q: "Is BlenderBIM production-ready?", a: "BlenderBIM is the most mature open-source BIM authoring tool, with full IFC4 support and an active development community. It is usable for real projects, though it lacks the documentation automation and multi-discipline coordination features of Revit or ArchiCAD." },
-      { q: "Can I get Revit for free?", a: "Revit is available free for students and educators through the Autodesk Education plan (1-year renewable). There is no free commercial tier. For commercial work, consider BlenderBIM or FreeCAD BIM as open-source alternatives." },
-      { q: "What is the best free BIM software for small architecture firms?", a: "BlenderBIM for IFC-native modeling, FreeCAD BIM workbench for parametric architectural design, and SketchUp Free for concept massing. None of these match Revit's documentation output yet, but they cover modeling and coordination." },
+      { q: "Is Bonsai (BlenderBIM) production-ready?", a: "Bonsai (BlenderBIM) is the most mature open-source BIM authoring tool, with full IFC4 support and an active development community. It is usable for real projects, though it lacks the documentation automation and multi-discipline coordination features of Revit or ArchiCAD." },
+      { q: "Can I get Revit for free?", a: "Revit is available free for students and educators through the Autodesk Education plan (1-year renewable). There is no free commercial tier. For commercial work, consider Bonsai (BlenderBIM) or FreeCAD BIM as open-source alternatives." },
+      { q: "What is the best free BIM software for small architecture firms?", a: "Bonsai (BlenderBIM) for IFC-native modeling, FreeCAD BIM workbench for parametric architectural design, and SketchUp Free for concept massing. None of these match Revit's documentation output yet, but they cover modeling and coordination." },
     ],
   },
   pcb: {

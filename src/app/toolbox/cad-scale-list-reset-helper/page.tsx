@@ -5,7 +5,7 @@ import CadScaleListResetClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Plotting Scale List Reset LISP Automation Helper | CADGuide.tools',
   description:
-    'Online writing resets CAD drawing custom scale aliases are bloated (Scale List) The AutoLISP macro script. Clear the invalid viewport reference proportion dictionary to solve the problem of saving drawings., Unable to write external blocks and open the map to cause death problem. ',
+    'Generate automated AutoLISP scripts to purge bloated annotation scale lists (-SCALELISTEDIT) caused by nested Xrefs. Clean corrupt scale dictionaries to resolve slow DWG saving, copy-paste lag, and AutoCAD freezing or crashing on file open.',
   path: '/toolbox/cad-scale-list-reset-helper',
 });
 

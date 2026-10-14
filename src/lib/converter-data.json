@@ -421,7 +421,7 @@
       "verdict": "Great for engineers who want full cloud CAD editing alongside Parasolid export."
     },
     "blenderbim": {
-      "name": "BlenderBIM (openBIM Add-on)",
+      "name": "Bonsai BIM (formerly Bonsai (BlenderBIM))",
       "badge": "100% Offline & Private",
       "rating": 9.8,
       "metrics": [
@@ -445,7 +445,7 @@
       "cons": [
         "Requires intermediate export or IFC conversion module"
       ],
-      "officialUrl": "https://blenderbim.org/",
+      "officialUrl": "https://bonsaibim.org/",
       "affiliateUrl": null,
       "pricing": "100% Free & Open Source",
       "verdict": "The premier open-source tool for openBIM specialists and BIM managers."
@@ -740,7 +740,7 @@
       "colorMaterial": "IfcSurfaceStyle and IfcMaterialDefinitions",
       "pmi": "IfcPropertySet parameters (Pset_), classifications, spatial hierarchy",
       "typicalUse": "Multi-discipline model federation, clash detection (Solibri, Navisworks), government BIM compliance",
-      "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, BlenderBIM"
+      "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, Bonsai (BlenderBIM)"
     },
     "dwg": {
       "ext": "DWG",
@@ -5252,7 +5252,7 @@
         "colorMaterial": "IfcSurfaceStyle and IfcMaterialDefinitions",
         "pmi": "IfcPropertySet parameters (Pset_), classifications, spatial hierarchy",
         "typicalUse": "Multi-discipline model federation, clash detection (Solibri, Navisworks), government BIM compliance",
-        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, BlenderBIM"
+        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, Bonsai (BlenderBIM)"
       },
       "keyParameters": [
         {
@@ -5319,7 +5319,7 @@
           "verdict": "The safest, most accurate zero-cost preview and export platform for Autodesk files."
         },
         {
-          "name": "BlenderBIM (openBIM Add-on)",
+          "name": "Bonsai BIM (formerly Bonsai (BlenderBIM))",
           "badge": "100% Offline & Private",
           "rating": 9.8,
           "metrics": [
@@ -5343,7 +5343,7 @@
           "cons": [
             "Requires intermediate export or IFC conversion module"
           ],
-          "officialUrl": "https://blenderbim.org/",
+          "officialUrl": "https://bonsaibim.org/",
           "affiliateUrl": null,
           "pricing": "100% Free & Open Source",
           "verdict": "The premier open-source tool for openBIM specialists and BIM managers."
@@ -5390,7 +5390,7 @@
         },
         {
           "question": "Can I open and inspect an IFC file without buying expensive software?",
-          "answer": "Yes. Free tools like BIMcollab Zoom, open-source BlenderBIM, and Trimble Connect allow you to view 3D IFC models and inspect property sets with zero subscription fees."
+          "answer": "Yes. Free tools like BIMcollab Zoom, open-source Bonsai (BlenderBIM), and Trimble Connect allow you to view 3D IFC models and inspect property sets with zero subscription fees."
         }
       ],
       "relatedSlugs": [
@@ -5419,7 +5419,7 @@
         "colorMaterial": "IfcSurfaceStyle and IfcMaterialDefinitions",
         "pmi": "IfcPropertySet parameters (Pset_), classifications, spatial hierarchy",
         "typicalUse": "Multi-discipline model federation, clash detection (Solibri, Navisworks), government BIM compliance",
-        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, BlenderBIM"
+        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, Bonsai (BlenderBIM)"
       },
       "toFormat": {
         "ext": "DWG",
@@ -9371,7 +9371,7 @@
         "colorMaterial": "IfcSurfaceStyle and IfcMaterialDefinitions",
         "pmi": "IfcPropertySet parameters (Pset_), classifications, spatial hierarchy",
         "typicalUse": "Multi-discipline model federation, clash detection (Solibri, Navisworks), government BIM compliance",
-        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, BlenderBIM"
+        "ecosystem": "Solibri, Navisworks, Archicad, BIMx, Trimble Connect, FreeCAD, Bonsai (BlenderBIM)"
       },
       "keyParameters": [
         {

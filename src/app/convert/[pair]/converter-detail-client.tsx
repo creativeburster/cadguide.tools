@@ -116,7 +116,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
                       <span>{fileInfo.name} ({fileInfo.size})</span>
                     </p>
                     <p className="text-xs text-slate-500">
-                      Target format: <strong className="text-blue-600">{pair.toFormat.ext}</strong> • Ready to dispatch
+                      Target format: <strong className="text-blue-600">{pair.toFormat.ext}</strong> • Pre-flight analysis complete. Select a verified engine below.
                     </p>
                     <button
                       onClick={(e) => { e.stopPropagation(); setFileInfo(null); }}

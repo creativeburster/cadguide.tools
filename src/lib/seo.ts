@@ -126,40 +126,40 @@ function offerForTool(tool: Tool) {
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
-      url: tool.official_url,
+      url: tool.pricing_url || tool.official_url,
     };
   }
   if (tool.starting_price > 0) {
     const isYear = tool.price_period === "year";
     const isMonth = tool.price_period === "month";
-    const unitText = isYear
-      ? "ANNUAL"
-      : isMonth
-      ? "MONTH"
-      : tool.pricing_type === "Subscription"
-      ? "MONTH"
-      : "ANNUAL";
+    const unitText = isYear ? "ANNUAL" : isMonth ? "MONTH" : undefined;
 
-    return {
+    const offerObj: Record<string, unknown> = {
       "@type": "Offer",
       price: tool.starting_price.toString(),
       priceCurrency: "USD",
-      priceSpecification: {
+      availability: "https://schema.org/InStock",
+      url: tool.pricing_url || tool.official_url,
+    };
+
+    if (unitText) {
+      offerObj.priceSpecification = {
         "@type": "UnitPriceSpecification",
         price: tool.starting_price.toString(),
         priceCurrency: "USD",
         unitText,
-      },
-      availability: "https://schema.org/InStock",
-      url: tool.official_url,
-    };
+      };
+    }
+
+    return offerObj;
   }
   // Pricing is "Subscription" or "Perpetual" but the starting price is
   // not exposed — omit price so Google doesn't surface "0" rich-result.
   return {
     "@type": "Offer",
+    priceCurrency: "USD",
     availability: "https://schema.org/InStock",
-    url: tool.official_url,
+    url: tool.pricing_url || tool.official_url,
   };
 }
 
@@ -253,6 +253,17 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     dateModified: tool.last_updated || undefined,
     offers: offerForTool(tool),
     aggregateRating: aggregateRatingFor(tool),
+    review: tool.score ? {
+      "@type": "Review",
+      author: SITE_PUBLISHER,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: tool.score.toFixed(1),
+        bestRating: "5",
+        worstRating: "1",
+      },
+      reviewBody: tool.expert_verdict || tool.description || `${tool.name} editorial technical evaluation and benchmark review.`,
+    } : undefined,
     author: isGstarProduct ? GSTARSOFT_PUBLISHER : undefined,
     brand: isGstarProduct ? {
       "@type": "Brand",
@@ -450,8 +461,6 @@ export function organizationLd() {
       availableLanguage: "English",
     },
     sameAs: [
-      'https://en.wikipedia.org/wiki/Gstarsoft',
-      'https://twitter.com/gstarcad',
       'https://github.com/creativeburster/cadguide.tools',
       'https://x.com/cadguidetools',
     ],

@@ -57,10 +57,9 @@ export default function ColumnBucklingClient() {
     let method = '';
 
     if (slenderness >= Cc) {
-      Pcr = Math.PI * Math.PI * E * I / Math.pow(K * L, 2);
+      Pcr = (Math.PI * Math.PI * E * I) / Math.pow(K * L, 2);
       method = 'Euler (elastic buckling)';
     } else {
-      Pcr = A * (Sy - Math.pow(Sy * slenderness / (2 * Cc), 2) / (Math.PI * Math.PI * E / E));
       const sigmaCr = Sy * (1 - (slenderness * slenderness) / (4 * Cc * Cc));
       Pcr = A * sigmaCr;
       method = 'Johnson (inelastic buckling)';

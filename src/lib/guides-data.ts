@@ -332,7 +332,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
   {
     id: 'sec-mig',
     category: 'migration',
-    title: 'Migration &二次开发 API',
+    title: 'Migration & Custom API Development',
     desc: 'Import AutoLISP customizations, develop Visual LISP react utilities, and C# ObjectARX plugins.',
     countLabel: '44 Active Guides',
     gradient: 'from-violet-600 via-purple-700 to-fuchsia-500',
@@ -343,7 +343,7 @@ export const CATEGORY_SECTIONS: GuideCategorySection[] = [
       { title: 'Batch Purge LSP Scripting: Automatically Cleaning Thousands of DWG Database Headers', slug: 'batch-purge-lsp-folders', keyword: 'autocad tools' },
       { title: 'Compiling LSP into FAS and VLX: Securing AutoLISP Source Code from Editing', slug: 'compile-lsp-vlx-fas-protection', keyword: 'autocad tools' },
       { title: 'AutoLISP Reactors and Event Listeners: Automating Tasks on Save and Print Commands', slug: 'lisp-reactors-event-listeners', keyword: 'autocad tools' },
-      { title: 'ObjectARX and .NET API C#二次开发: Building Enterprise CAD Extensions and High-Speed Calculations', slug: 'objectarx-net-csharp-api', keyword: 'autocad tools' },
+      { title: 'ObjectARX and .NET API C# Custom Development: Building Enterprise CAD Extensions and High-Speed Calculations', slug: 'objectarx-net-csharp-api', keyword: 'autocad tools' },
       { title: 'AutoCAD JavaScript API: Automating Web Canvas Geometry Generation in Browser Sandboxes', slug: 'javascript-api-web-canvas-rendering', keyword: 'autocad tools' },
       { title: 'Customizing PGP Command Aliases: Scripting Custom Command Shortcuts for LISP Macros', slug: 'pgp-alias-commands-automation', keyword: 'autocad tools' },
       { title: 'AutoCAD DCL Dialog Design: Developing Graphical User Interfaces for AutoLISP Scripts', slug: 'autocad-dcl-dialog-design', keyword: 'autocad tools' },
@@ -1299,7 +1299,7 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
   {
     id: 'art-objectarx-net-csharp-api',
     category: 'migration',
-    title: 'ObjectARX and .NET API C#二次开发: Building Enterprise CAD Extensions and High-Speed Calculations',
+    title: 'ObjectARX and .NET API C# Custom Development: Building Enterprise CAD Extensions and High-Speed Calculations',
     excerpt: 'Learn how to setup Visual Studio, link ObjectARX SDK, and develop high-speed plugins.',
     keyword: 'autocad tools',
     slug: 'objectarx-net-csharp-api',

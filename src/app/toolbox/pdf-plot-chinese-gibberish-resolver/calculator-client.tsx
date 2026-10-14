@@ -13,15 +13,15 @@ const SYMPTOMS = [
   },
   {
     id: 'scrambled_gibberish',
-    name: 'The text becomes a strange gibberish with no logic',
-    desc: 'After printing the generated PDF, open it, The text becomes scrambled., And cannot be copied normally. ',
+    name: 'Text becomes scrambled or garbled characters',
+    desc: 'After exporting or plotting to PDF, text becomes scrambled symbols or gibberish and cannot be searched or copied.',
     badge: 'Encoding/PDFSHX variable conflict'
   },
   {
     id: 'outline_geometry',
-    name: 'The text displays normally, but becomes hollow lines and the file is very large',
-    desc: 'There is no problem with displaying Chinese fonts, but after zooming in, I found that the text turned into polylines., Unable to select, resulting in extremely stuck printing. ',
-    badge: 'Fonts not embedded/converted to geometry'
+    name: 'Text displays as hollow outlines and creates bloated PDF files',
+    desc: 'Fonts display without question marks, but zooming in reveals text converted into hollow vector geometry, causing sluggish plotting and unselectable text.',
+    badge: 'Fonts converted to geometry / TEXTFILL=0'
   }
 ];
 
@@ -41,14 +41,14 @@ export default function PdfFontGibberishClient() {
     let commands = '';
     if (symptomId === 'question_mark') {
       commands = `(setvar "FONTALT" "${fontAltVal}")
-(princ "\\n✓ The default replacement font is successfully set to ${fontAltVal}, and the Chinese characters can be eliminated by reopening the drawing. (?). \\n")`;
+(princ "\\n✓ FONTALT set to ${fontAltVal}. Reopen the drawing to replace missing fonts with this fallback.\\n")`;
     } else if (symptomId === 'scrambled_gibberish') {
       commands = `(setvar "PDFSHX" 0)
-(princ "\\n✓ Successfully set PDFSHX to 0. Now when printing PDF, SHX The text will not be output as text comments, eliminating garbled characters.. \\n")`;
+(princ "\\n✓ PDFSHX set to 0. SHX text will no longer be exported as PDF comment annotations, eliminating scrambled characters.\\n")`;
     } else {
       commands = `(setvar "PDFSHX" 0)
 (setvar "TEXTFILL" 1)
-(princ "\\n✓ Successfully set TEXTFILL to 1 and PDFSHX is 0. Please change the [TrueType Font] option is modified to [Embed TrueType] to solve the problem of hollow words. \\n")`;
+(princ "\\n✓ TEXTFILL set to 1 and PDFSHX set to 0. In PC3 properties, set TrueType Font to [As Text] to eliminate hollow outlined text.\\n")`;
     }
 
     return `; CADGuide.tools PDF One-click loading of garbled code repair instructions
@@ -96,14 +96,14 @@ export default function PdfFontGibberishClient() {
           <div>
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
-              <h2 className="text-white font-black text-lg tracking-tight">PDF Picture rendering and font embedding link detection</h2>
+              <h2 className="text-white font-black text-lg tracking-tight">PDF Plot Rendering & Font Embedding Pipeline Diagnostics</h2>
             </div>
             <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
               PDF Plotting & Font Integration Pipeline
             </p>
           </div>
           <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-base font-black">
-            interactive diagnostic status
+            Live Diagnostic Status
           </div>
         </div>
 

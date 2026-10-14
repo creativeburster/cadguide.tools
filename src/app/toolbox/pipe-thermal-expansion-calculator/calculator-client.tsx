@@ -46,8 +46,8 @@ export default function PipeExpansionClient() {
     // σ = E × α × ΔT (in MPa, since E is in MPa)
     const thermalStress = E * alpha * dT; // MPa
 
-    // Anchor force = σ × A
-    const anchorForce = thermalStress * area_m2 / 1000; // kN
+    // Anchor force = σ × A: thermalStress (MPa = N/mm²) × area_mm2 (mm²) = N; / 1000 = kN
+    const anchorForce = (thermalStress * area_mm2) / 1000; // kN
 
     // Allowable stress (simplified: 2/3 yield for expansion per B31.3)
     const allowableStress = (mat.yield * 2 / 3);

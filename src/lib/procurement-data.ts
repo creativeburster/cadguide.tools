@@ -1309,7 +1309,7 @@ echo [+] Completed. Re-establish model server connection.`,
   },
   {
     slug: 'packaging-sheetmetal',
-    title: 'Packaging 彩盒 & 3D Sheet Metal Manufacturing Matrix',
+    title: 'Packaging Folding Carton & 3D Sheet Metal Manufacturing Matrix',
     keyword: 'packaging sheet metal design software box folding',
     excerpt: 'Bend deduction calculations, progressive strip packaging layouts, and GPO deployment for ArtiosCAD, Impact, Kasemake, SolidWorks, and Solid Edge.',
     tagline: 'Flat pattern layout, DIN 6935 K-factor standard, and local license validation.',

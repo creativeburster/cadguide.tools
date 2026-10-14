@@ -852,7 +852,7 @@ export const c2Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "OpenNURBS",
+    engine: "McNeel Proprietary NURBS Kernel (openNURBS I/O)",
     multicore: "Low",
     gpu_optimization: "OpenGL",
     standards: ["3DM", "STEP", "IGES", "OBJ"],
@@ -2764,7 +2764,7 @@ export const c2Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Maya Nucleus",
+    engine: "Maya DG/DAG Evaluation Graph + Bifrost / Viewport 2.0",
     multicore: "High",
     gpu_optimization: "CUDA",
     standards: ["FBX", "USD", "OBJ"],
@@ -2915,7 +2915,7 @@ export const c2Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "Cycles / Eevee",
+    engine: "BMesh (Polygonal Mesh Kernel) + Cycles / EEVEE",
     multicore: "High",
     gpu_optimization: "OptiX",
     standards: ["BLEND", "FBX", "STL"],
@@ -4474,7 +4474,7 @@ export const c2Tools: Tool[] = [
   ],
 
   tech_specs: {
-    engine: "DesignSpark Platform",
+    engine: "Spatial ACIS (Ansys SpaceClaim Engine)",
     multicore: "Yes",
     gpu_optimization: "Basic",
     standards: ["STEP", "IGES"]
