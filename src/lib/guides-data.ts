@@ -3883,7 +3883,7 @@ export const ARTICLES_LIST: GuideArticleCard[] = [
     id: 'art-creo-perf-config',
     category: 'performance',
     title: 'Creo config.pro Performance Tweaks: Speeding Up Drawing Redraw Lag',
-    excerpt: 'Tune config.pro parameters (e.g., display, buffer settings) to eliminate viewport delays on high-count assemblies.',
+    excerpt: 'Tune config.pro parameters (e.g. display, buffer settings) to eliminate viewport delays on high-count assemblies.',
     keyword: 'creo config',
     slug: 'creo-config-pro-performance-viewport-lag',
     softwareSlug: 'creo'

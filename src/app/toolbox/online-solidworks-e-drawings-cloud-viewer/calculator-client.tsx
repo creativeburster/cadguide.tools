@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "Why does the model appear off-white after importing?'And the material is lost? ",
-    "answer": "This means that your sldprt did not include the texture library when saving it. (Texture Maps) It is solidified into the file, or the path of the referenced appearance image is lost.. When uploading the package, make sure the material resources are also selected. "
+    "answer": "This means that your sldprt did not include the texture library when saving it. (Texture Maps) It is solidified into the file, or the path of the referenced appearance image is lost. When uploading the package, make sure the material resources are also selected. "
   },
   {
     "id": "measure-guide",
@@ -123,7 +123,7 @@ export default function OnlineSolidworksEDrawingsCloudViewerClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
       painPointDesc="When you need to outsource SolidWorks parts to customers or factories (.sldprt) or assemblies (.sldasm), installing large commercial CAD software is inconvenient. Using the online eDrawings rendering layer, users can browse 3D entities directly in the browser WebGL, view Assembly Trees (Component Trees), hide/display components, and measure critical mating surface spacing. "
-      riskWarning="3D part drawings contain complete parameter feature trees and tolerance processes. Uploading to a public unknown drawing viewing platform may trigger commercial telemetry and leak core intellectual property rights.. For sensitive assemblies, please guide users to download the official free version of Dassault Systèmes eDrawings Viewer Local version, use of non-compliant cloud viewing websites is strictly prohibited. "
+      riskWarning="3D part drawings contain complete parameter feature trees and tolerance processes. Uploading to a public unknown drawing viewing platform may trigger commercial telemetry and leak core intellectual property rights. For sensitive assemblies, please guide users to download the official free version of Dassault Systèmes eDrawings Viewer Local version, use of non-compliant cloud viewing websites is strictly prohibited. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

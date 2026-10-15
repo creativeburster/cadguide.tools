@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "Occasionally custom entity conversion is lost in large files"
     ],
     "officialUrl": "https://cadsofttools.com/",
-    "verdict": "A professional cloud downgrade platform with excellent performance to meet the needs of rapid handover during daily engineering cooperation.. "
+    "verdict": "A professional cloud downgrade platform with excellent performance to meet the needs of rapid handover during daily engineering cooperation. "
   }
 ];
 const BEST_PRACTICES = [
@@ -96,13 +96,13 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Use isolated virtual machine conversion",
-    "desc": "For customer drawings of unknown origin, it is recommended to convert them in an isolated virtual machine environment., Protect against macro viruses and telemetry scraping. "
+    "desc": "For customer drawings of unknown origin, it is recommended to convert them in an isolated virtual machine environment. Protect against macro viruses and telemetry scraping. "
   }
 ];
 const FAQS = [
   {
     "question": "AC1032, AC1027, AC1024 What are the codes? ",
-    "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure., It will directly report that the file is damaged or the version is not supported. "
+    "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure. It will directly report that the file is damaged or the version is not supported. "
   },
   {
     "question": "What happened if Dynamic Blocks failed after downgrading?? ",
@@ -116,7 +116,7 @@ export default function OnlineDwgVersionDowngraderCloudClient() {
       title="Online DWG Format Version Downgrader"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="Encountered 'Graph file version not supported''When the error occurs, you may have obtained a higher version AutoCAD (As saved in 2018-2027 AC1032 coding) drawings, However, there are only old versions of CAD software available locally.. Use cloud-based format downgrade tools to quickly rewrite files to the broadly compatible AC1027 (2013) format) or AC1021 (2007 format) . "
+      painPointDesc="Encountered 'Graph file version not supported''When the error occurs, you may have obtained a higher version AutoCAD (As saved in 2018-2027 AC1032 coding) drawings, However, there are only old versions of CAD software available locally. Use cloud-based format downgrade tools to quickly rewrite files to the broadly compatible AC1027 (2013) format) or AC1021 (2007 format) . "
       riskWarning="Frequent format degradation may not only result in special parameterized 'dynamic blocks''and the constraint relationship is lost, it may even trigger an anti-piracy compliance review. Please ensure that the downgrade behavior is carried out within the security boundary of enterprise authorization. For core confidential design, It is recommended to download the official free desktop DWG TrueView software to complete local conversion. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

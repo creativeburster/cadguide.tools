@@ -21,7 +21,7 @@ const ITEMS_PER_PAGE = 24;
 /**
  * Normalizes a string by converting it to lowercase, stripping diacritics,
  * and removing all non-alphanumeric characters.
- * E.g., "V-NAS" -> "vnas", "vnas" -> "vnas", "3D CAD" -> "3dcad"
+ * E.g. "V-NAS" -> "vnas", "vnas" -> "vnas", "3D CAD" -> "3dcad"
  */
 function normalizeString(str: string): string {
   if (!str) return '';
@@ -71,7 +71,7 @@ const STOP_WORDS = new Set(['best', 'software', 'cad', 'tool', 'tools', 'top', '
 
 /**
  * Checks if a tool matches a search query using robust fuzzy logic.
- * E.g., searching "vnas" matches "V-NAS", and searching "v-nas" matches "vnas".
+ * E.g. searching "vnas" matches "V-NAS", and searching "v-nas" matches "vnas".
  * Supports multi-term space-separated AND matching with typo tolerance and stop-words filtering.
  */
 function fuzzyMatchTool(tool: Tool, query: string): boolean {
@@ -968,7 +968,7 @@ interface SmartSearchBoxProps {
 function SmartSearchBox({ searchQuery, onSearchChange, onSearchSubmit }: SmartSearchBoxProps) {
   const [inputValue, setInputValue] = useState(searchQuery);
 
-  // Sync state if searchQuery prop changes externally (e.g., when clicking active filter chips or resetting)
+  // Sync state if searchQuery prop changes externally (e.g. when clicking active filter chips or resetting)
   useEffect(() => {
     // External sync: mirror searchQuery prop into local input state.
     // eslint-disable-next-line react-hooks/set-state-in-effect

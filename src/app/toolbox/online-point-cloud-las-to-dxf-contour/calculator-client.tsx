@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "How to determine whether the coordinate system in a LAS file is correct? ",
-    "answer": "LAS The file header contains a projection space description in WKT format.. EPSG codes can be checked using global mapping tools (Such as CGCS2000 alignment WGS84) , Prevent coordinate drift of hundreds of kilometers after importing CAD. "
+    "answer": "LAS The file header contains a projection space description in WKT format. EPSG codes can be checked using global mapping tools (Such as CGCS2000 alignment WGS84) , Prevent coordinate drift of hundreds of kilometers after importing CAD. "
   }
 ];
 
@@ -116,8 +116,8 @@ export default function OnlinePointCloudLasToDxfContourClient() {
       title="Online Point Cloud LAS to DXF Terrain Contour Generator"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="A major pain point in surveying and mapping and road and bridge design is: from lidar point cloud (LAS) Manually fitting contour drawings or elevation texts is not only time-consuming, but also prone to local surface depressions.. Cloud Contours contour extractor quickly calculates digital elevation models (DEM) , and directly for Civil 3D or MicroStation Export smooth terrain DXF vector drawings. "
-      riskWarning="High-precision geospatial three-dimensional coordinates and surveying point cloud data are directly related to national physical information security. You need to be extra vigilant about compliance risks when uploading to non-certified overseas cloud service providers.. For conventional industrial and civil construction projects, offline software in the local area network can be used to extract, Avoid violating data compliance by leaving the country. "
+      painPointDesc="A major pain point in surveying and mapping and road and bridge design is: from lidar point cloud (LAS) Manually fitting contour drawings or elevation texts is not only time-consuming, but also prone to local surface depressions. Cloud Contours contour extractor quickly calculates digital elevation models (DEM) , and directly for Civil 3D or MicroStation Export smooth terrain DXF vector drawings. "
+      riskWarning="High-precision geospatial three-dimensional coordinates and surveying point cloud data are directly related to national physical information security. You need to be extra vigilant about compliance risks when uploading to non-certified overseas cloud service providers. For conventional industrial and civil construction projects, offline software in the local area network can be used to extract, Avoid violating data compliance by leaving the country. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

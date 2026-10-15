@@ -100,7 +100,7 @@ export function Footer() {
             <h3 className="text-white font-black mb-4 uppercase text-[10px] tracking-[0.2em]">Org</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Us</Link></li>
-              <li><Link href="/editorial-standards" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
+              <li><Link href="/about#methodology" className="hover:text-blue-400 transition-colors">Methodology</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact & Support</Link></li>
               <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/affiliate-disclosure" className="hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>

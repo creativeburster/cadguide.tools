@@ -48,7 +48,7 @@ export default function ViewportScaleCalculatorClient() {
   const activeRatio = useCustomRatio ? customRatio : presetRatio;
 
   // Factor to convert model units to paper units
-  // E.g., if model is 'm' and paper is 'mm', 1 model unit (1m) = 1000 paper units (1000mm).
+  // E.g. if model is 'm' and paper is 'mm', 1 model unit (1m) = 1000 paper units (1000mm).
   // So factor = 1000.
   const unitConversionFactor = useMemo(() => {
     // Model to mm

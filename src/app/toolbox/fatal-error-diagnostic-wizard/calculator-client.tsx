@@ -28,7 +28,7 @@ const ERROR_DATABASE: ErrorPreset[] = [
     address: 'c0000005',
     title: 'Access Violation Reading/Writing Location c0000005',
     source: 'Memory conflict/graphics hardware acceleration',
-    reason: 'Indicates that the CAD process is trying to read or write a system memory address that is not allocated to it. Usually due to the complexity of the DirectX hardware acceleration module in rendering 3D When the entity takes shape, display it with your core/There is a conflict in the underlying instructions of the independent graphics card driver; or it may be due to a minor hardware failure of the local memory module., Caused by bad disk and bad sectors. ',
+    reason: 'Indicates that the CAD process is trying to read or write a system memory address that is not allocated to it. Usually due to the complexity of the DirectX hardware acceleration module in rendering 3D When the entity takes shape, display it with your core/There is a conflict in the underlying instructions of the independent graphics card driver; or it may be due to a minor hardware failure of the local memory module. Caused by bad disk and bad sectors. ',
     solution: '1. **Disable graphics hardware acceleration**: in CAD Right-click the desktop shortcut and select Properties", In "Target"Add a space at the end of the input box and append the parameter `/nohardware` (see copy below) . This forces CAD to bypass the graphics card direct connection, Emergency boot completed!\n2. Upgrade your graphics card driver to the latest certified one Studio stable version, or switch to DX11 Run in compatibility mode. ',
     command: '"C:\\Program Files\\Autodesk\\AutoCAD 2024\\acad.exe" /product ACAD /language "zh-CN" /nohardware',
     commandDesc: 'With /nohardware no hardware acceleration emergency boot flag acad Shortcut parameter example'
@@ -37,7 +37,7 @@ const ERROR_DATABASE: ErrorPreset[] = [
     address: 'd3d11.dll',
     title: 'Crash module: d3d11.dll / d3d9.dll',
     source: 'Direct3D rendering graphics engine',
-    reason: 'CAD When calling Direct3D 11 or 9 Crash with graphics API. Often due to the conflict between dual graphics card switching between independent graphics and core graphics in laptops, Or the DirectX component used by the current system is damaged.. ',
+    reason: 'CAD When calling Direct3D 11 or 9 Crash with graphics API. Often due to the conflict between dual graphics card switching between independent graphics and core graphics in laptops, Or the DirectX component used by the current system is damaged. ',
     solution: '1. Force the acad.exe Set to "High Performance" (Independent graphics card mode) to avoid errors in intelligent switching of core graphics and integrated graphics. \n2. Download and install the DirectX End User Runtime Installer (DirectX End-User Runtime) Repair environment DLL. ',
     command: 'setx GSDEVICE "Dx9"',
     commandDesc: 'Paste this command in CMD to set environment variables, Can force CAD to be downgraded back to use D3D9 Classic Stable Engine Rendering'
@@ -47,7 +47,7 @@ const ERROR_DATABASE: ErrorPreset[] = [
     title: 'Unhandled Exception at 0x00000000',
     source: 'The registry null pointer or the drawing is damaged',
     reason: 'Null pointer crash. Usually due to AutoCAD Plug-ins (such as Tianzheng, 3D plug-in) calls a non-standard API, Or the current DWG drawing contains logical geometry errors (If node coordinates overflow, infinite tile association) , Trigger memory zero value reference. ',
-    solution: '1. **Drawing Fix**: On startup CAD After that, enter `RECOVER` The command selects abnormally crashed DWG drawings for database underlying reconstruction and automatic repair.. \n2. Temporarily uninstall any recently installed CAD third-party plug-ins and LSP Tool to confirm whether it is caused by a plug-in. '
+    solution: '1. **Drawing Fix**: On startup CAD After that, enter `RECOVER` The command selects abnormally crashed DWG drawings for database underlying reconstruction and automatic repair. \n2. Temporarily uninstall any recently installed CAD third-party plug-ins and LSP Tool to confirm whether it is caused by a plug-in. '
   }
 ];
 

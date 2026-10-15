@@ -33,7 +33,7 @@ const SHORTCUTS = [
     "keys": "Space",
     "command": "Magic Wand (Magic Wand)",
     "category": "tools",
-    "description": "Press and hold the space bar to activate the magic wand, which can automatically fit the existing line segment boundaries to generate a closed wall or plate.. "
+    "description": "Press and hold the space bar to activate the magic wand, which can automatically fit the existing line segment boundaries to generate a closed wall or plate. "
   },
   {
     "keys": "Ctrl + D",
@@ -75,7 +75,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     "title": "Use the magic wand (space bar) Quick Fit",
-    "content": "In ArchiCAD, If you have drawn a complex closed curve, just activate the wall or slab tool, Hold down `Spacebar` And click this curve, ArchiCAD will automatically draw the wall or plate along the curve outline with one click., Eliminate the need for manual tracing. "
+    "content": "In ArchiCAD, If you have drawn a complex closed curve, just activate the wall or slab tool, Hold down `Spacebar` And click this curve, ArchiCAD will automatically draw the wall or plate along the curve outline with one click. Eliminate the need for manual tracing. "
   }
 ];
 

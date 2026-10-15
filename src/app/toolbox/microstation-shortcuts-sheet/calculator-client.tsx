@@ -69,7 +69,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     "title": "AccuDraw with the carriage return locking mechanism",
-    "content": "When drawing a line, once the linetype snaps to the orthogonal alignment dash, Immediately press `Enter`) , At this time, your mouse can be clicked anywhere, and the direction of the line will be locked in the previous direction., Very useful. "
+    "content": "When drawing a line, once the linetype snaps to the orthogonal alignment dash, Immediately press `Enter`) , At this time, your mouse can be clicked anywhere, and the direction of the line will be locked in the previous direction. Very useful. "
   }
 ];
 

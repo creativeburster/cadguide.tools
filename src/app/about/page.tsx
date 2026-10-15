@@ -70,7 +70,7 @@ function AboutBody() {
             </div>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 mt-16">Our Scoring & Evaluation Methodology</h2>
+          <h2 id="methodology" className="text-3xl font-bold text-slate-900 mb-8 mt-16 scroll-mt-24">Our Scoring & Evaluation Methodology</h2>
           <p>
             To eliminate bias and avoid the pay-to-play rankings that plague many review platforms, CADGuide.tools utilizes a strict, multi-dimensional scoring rubric. Every software listed on our platform receives an <strong>Expert Score (from 1.0 to 5.0)</strong>, calculated based on the following weights:
           </p>

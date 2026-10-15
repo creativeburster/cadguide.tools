@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "The commercial desktop version is more expensive"
     ],
     "officialUrl": "https://cadexchanger.com/",
-    "verdict": "It is recognized in the industry as one of the base programs with the strongest analytical power for three-dimensional geometric formats, and its grid fitting algorithm is extremely smooth., The normal line is flawless. "
+    "verdict": "It is recognized in the industry as one of the base programs with the strongest analytical power for three-dimensional geometric formats, and its grid fitting algorithm is extremely smooth. The normal line is flawless. "
   },
   {
     "name": "CAD Assistant (Official free offline conversion program)",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Fine Tuning Chord Height Tolerance (Chordal Deviation)",
-    "desc": "When polygonizing, the chord height deviation limit determines the number of patches on the cylindrical surface.. Usually setting 0.05-0.1mm can balance rendering smoothness and file size.. "
+    "desc": "When polygonizing, the chord height deviation limit determines the number of patches on the cylindrical surface. Usually setting 0.05-0.1mm can balance rendering smoothness and file size. "
   },
   {
     "title": "Prefer compressed glTF (GLB) format",
@@ -116,7 +116,7 @@ export default function OnlineStepToObjGltfConverterClient() {
       title="Online STEP to glTF/OBJ Rendering Mesh Converter"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="The Industrial STEP (AP203/AP214) format is a boundary representation based on highly mathematical logic (B-Rep) stored, whose surface is in WebGL Web version (such as Three.js, Babylon.js) or a 3D renderer such as Unity, Blender) cannot be parsed directly in rendering. It must be polygonized (Polygonization) in triangular mesh format (e.g. OBJ, glTF) . During reorganization, common pain points are cracking of patch seams and excessive mesh density causing stuck web pages.. "
+      painPointDesc="The Industrial STEP (AP203/AP214) format is a boundary representation based on highly mathematical logic (B-Rep) stored, whose surface is in WebGL Web version (such as Three.js, Babylon.js) or a 3D renderer such as Unity, Blender) cannot be parsed directly in rendering. It must be polygonized (Polygonization) in triangular mesh format (e.g. OBJ, glTF) . During reorganization, common pain points are cracking of patch seams and excessive mesh density causing stuck web pages. "
       riskWarning="Industrial-grade STEP 3D models involve extremely strict product confidentiality design and geometric topology. When converting STEP to rendering format using an online website, It is extremely easy to be intercepted by the cloud backend and leak core secrets. Targeting top secret components, Please use CAD Assistant locally to run the offline conversion. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

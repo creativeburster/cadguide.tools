@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "It is easy to crash when processing extremely large point clouds of tens of G."
     ],
     "officialUrl": "https://www.meshlab.net/",
-    "verdict": "The classic open source 3D mesh processing center performs smooth processing on the converted triangular network., Surface reduction optimization is its core advantage. "
+    "verdict": "The classic open source 3D mesh processing center performs smooth processing on the converted triangular network. Surface reduction optimization is its core advantage. "
   },
   {
     "name": "Autodesk ReCap Pro Cloud Services",
@@ -92,11 +92,11 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Poisson Reconstruct",
-    "desc": "Octree Depth in reconstruction parameters) Determines the reconstruction accuracy. It is recommended to set 8-10 If the size is too large, it will easily consume all the video memory.. "
+    "desc": "Octree Depth in reconstruction parameters) Determines the reconstruction accuracy. It is recommended to set 8-10 If the size is too large, it will easily consume all the video memory. "
   },
   {
     "title": "Use isolated physical workstations",
-    "desc": "National-level geographic surveying and mapping data are strictly prohibited from accessing the Internet, and dedicated planes and dedicated lines must be used for local offline calculations.. "
+    "desc": "National-level geographic surveying and mapping data are strictly prohibited from accessing the Internet, and dedicated planes and dedicated lines must be used for local offline calculations. "
   }
 ];
 const FAQS = [
@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "LAS How is the data different from the PTS format?? ",
-    "answer": "LAS It is a binary mapping format developed by the American Society for Photogrammetry and Remote Sensing, which retains the laser reflection intensity., GPS Metadata such as time; PTS/XYZ is a plain text coordinate format, Reading is relatively slow. "
+    "answer": "LAS It is a binary mapping format developed by the American Society for Photogrammetry and Remote Sensing, which retains the laser reflection intensity. GPS Metadata such as time; PTS/XYZ is a plain text coordinate format, Reading is relatively slow. "
   }
 ];
 
@@ -117,7 +117,7 @@ export default function OnlinePointCloudToMeshConverterClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
       painPointDesc="Billions of point cloud coordinate data (LAS/PTS/XYZ) obtained by lidar scanning, if directly loaded into ordinary modeling software, It is easy to cause the running memory to burst directly. Therefore, We need to use cloud algorithms to reduce noise and streamline point clouds, And reconstructed into a closed geometric mesh (Watertight Mesh, such as OBJ, DXF, STL) . "
-      riskWarning="Surveying and 3D scanning data (such as topographic maps, Digital scanning of historical buildings, sensitive defense factories, etc.) It is highly restricted data. Please ensure that the cloud platform you upload complies with the national data export compliance standards., For high-density projects, please use the open source CloudCompare on the local LAN cluster for processing.. "
+      riskWarning="Surveying and 3D scanning data (such as topographic maps, Digital scanning of historical buildings, sensitive defense factories, etc.) It is highly restricted data. Please ensure that the cloud platform you upload complies with the national data export compliance standards. For high-density projects, please use the open source CloudCompare on the local LAN cluster for processing. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

@@ -155,7 +155,7 @@ ${internalCommands}
   (setvar "EXPERT" 0)
   (setvar "CMDECHO" 1)
   (princ "\\n==================================================")
-  (princ "\\n✓ Congratulations! The drawings have been optimized and cleaned up.. File size has been significantly reduced. ")
+  (princ "\\n✓ Congratulations! The drawings have been optimized and cleaned up. File size has been significantly reduced. ")
   (princ "\\n==================================================")
   (princ)
 )
@@ -296,7 +296,7 @@ ${internalCommands}
                     />
                     <div className="text-base">
                       <span className="font-bold text-slate-700 block">Reset Scale List</span>
-                      <span className="text-slate-400">Solve the problem of drawings getting stuck and unresponsive for several seconds when the viewport is zoomed or switched between layouts.. </span>
+                      <span className="text-slate-400">Solve the problem of drawings getting stuck and unresponsive for several seconds when the viewport is zoomed or switched between layouts. </span>
                     </div>
                   </label>
 

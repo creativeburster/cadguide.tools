@@ -268,7 +268,7 @@ Generated via CADGuide.tools`;
               <div>
                 <strong className="font-black">Critical Overload Warning (Overload Risk)</strong>
                 <p className="mt-0.5 text-amber-700">
-                  The preload is too high (already at the yield limit) {preloadRatio}% ). If the torque control accuracy is poor during assembly, Easy to yield locally, it is recommended to lower the assembly preload percentage.. 
+                  The preload is too high (already at the yield limit) {preloadRatio}% ). If the torque control accuracy is poor during assembly, Easy to yield locally, it is recommended to lower the assembly preload percentage. 
                 </p>
               </div>
             </div>
@@ -339,7 +339,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-600">
-            * Simulation description: The tension arrow represents the tension pre-tightening inside the bolt.. The blue/orange rod in the middle of the bolt changes with the slider to simulate real metal tensile elongation.. When entering the limit area of more than 90%, The member is drawn with a pronounced tapering (necking simulation) To warn of the risk of plastic damage. 
+            * Simulation description: The tension arrow represents the tension pre-tightening inside the bolt. The blue/orange rod in the middle of the bolt changes with the slider to simulate real metal tensile elongation. When entering the limit area of more than 90%, The member is drawn with a pronounced tapering (necking simulation) To warn of the risk of plastic damage. 
           </p>
         </div>
       </div>

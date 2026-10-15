@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Requires installation of additional Node.js compiler driver"
     ],
     "officialUrl": "https://marketplace.visualstudio.com/items?itemName=Autodesk.autolispext",
-    "verdict": "Microsoft and Autodesk jointly create a modern LISP development environment, It is the first choice to replace the old VLIDE command line compilation.. "
+    "verdict": "Microsoft and Autodesk jointly create a modern LISP development environment, It is the first choice to replace the old VLIDE command line compilation. "
   },
   {
     "name": "AnyConv LISP Compiler",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Local `(vlisp-compile)` fast compilation",
-    "desc": "Can be entered directly at the CAD command line: `(vlisp-compile 'rx \"C:/path/to/my.lsp\")` You can instantly output the encrypted `my.fas` file in the same directory., No need to open the IDE."
+    "desc": "Can be entered directly at the CAD command line: `(vlisp-compile 'rx \"C:/path/to/my.lsp\")` You can instantly output the encrypted `my.fas` file in the same directory. No need to open the IDE."
   },
   {
     "title": "Create a VLX standalone delivery package",
@@ -117,7 +117,7 @@ export default function OnlineLispScriptCompilerProtectorClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="Troubleshooting Wizard"
       painPointDesc="When you've worked hard to write a more efficient AutoLISP or Visual LISP Plug-in (.lsp), in order not to leak the plain source code during internal testing or package distribution, To prevent peers from maliciously stealing secondary packaging, it needs to be compiled into irreversible binary bytecode. (FAS) Or packaged as an application including a DCL interface (VLX) . "
-      riskWarning="AutoLISP The source code usually embodies the core efficiency improvement algorithm of the enterprise. Use third-party online'LISP Obfuscators' have a very high risk of source code being captured and retained in the cloud. We strongly recommend users to directly use the official built-in AutoCAD desktop client. Visual LISP The editor performs local lossless compilation and refuses to use unknown online compilation boxes.. "
+      riskWarning="AutoLISP The source code usually embodies the core efficiency improvement algorithm of the enterprise. Use third-party online'LISP Obfuscators' have a very high risk of source code being captured and retained in the cloud. We strongly recommend users to directly use the official built-in AutoCAD desktop client. Visual LISP The editor performs local lossless compilation and refuses to use unknown online compilation boxes. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

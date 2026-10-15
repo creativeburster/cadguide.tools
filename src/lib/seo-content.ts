@@ -1142,7 +1142,7 @@ export const FILE_FORMAT_PAGES: Record<string, FormatPage> = {
       "Creo PRT and ASM are the native formats of PTC Creo (historically Pro/ENGINEER), the platform that pioneered history-based parametric 3D CAD modeling. These files store precise double-precision boundary representation (B-Rep) solids, parametric relationships, equations, and assembly constraints. Known for its mathematically rigorous handling of complex mechanisms and sheet metal flat patterns, the Creo file format maintains active, bi-directional links between the 3D model, downstream structural simulations, and CNC manufacturing toolpaths.",
     faqs: [
       {
-        q: "Why do Creo files have numbers appended to their extensions (e.g., part.prt.1, part.prt.2)?",
+        q: "Why do Creo files have numbers appended to their extensions (e.g. part.prt.1, part.prt.2)?",
         a: "Creo uses a built-in version backup system. Instead of overwriting the file on disk during a save, it increments the number suffix. To open the latest version, the CAD system automatically selects the highest number. Older versions can be purged using Creo's cleanup utility.",
       },
       {

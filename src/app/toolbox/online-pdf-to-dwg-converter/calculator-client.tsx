@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "Limited parsing of highly customized fonts"
     ],
     "officialUrl": "https://cloudconvert.com/",
-    "verdict": "The most well-known universal file format conversion platform, suitable for rapid circulation of ordinary sketches that do not require high conversion details.. "
+    "verdict": "The most well-known universal file format conversion platform, suitable for rapid circulation of ordinary sketches that do not require high conversion details. "
   }
 ];
 const BEST_PRACTICES = [
@@ -96,17 +96,17 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Networkless local substitution strategy",
-    "desc": "Large enterprises may consider deploying a local version of PDFIMPORT, or setting policies for proxy servers for external access., Prevent data reporting. "
+    "desc": "Large enterprises may consider deploying a local version of PDFIMPORT, or setting policies for proxy servers for external access. Prevent data reporting. "
   }
 ];
 const FAQS = [
   {
-    "question": "Why are the converted lines all broken and scattered lines? ",
-    "answer": "This is due to the fact that arcs or splines are discretized into straight line segments when exporting PDF.. You can do this in CAD by PEDIT ➔ J (Connect) command to re-sew multiple broken lines.. "
+    "question": "Why are the converted lines all broken and scattered segments?",
+    "answer": "This occurs when arcs or splines are discretized into discrete line segments during PDF export. You can use the PEDIT -> Join command in CAD to rejoin coincident line segments."
   },
   {
-    "question": "What should I do if the converted Chinese characters become garbled characters? ",
-    "answer": "This is because your system is missing the original PDF map TrueType (TTF) Font or SHX double large font. It is recommended to set it in the CAD font manager substitution (Substitute) for gbcbig.shx or hztxt.shx."
+    "question": "What should I do if the converted characters display as question marks or garbled text?",
+    "answer": "This happens when your system is missing the embedded PDF TrueType (TTF) font or the corresponding SHX Big Font. We recommend configuring a font substitution in your CAD Text Style Manager to gbcbig.shx or bigfont.shx."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlinePdfToDwgConverterClient() {
   return (
     <CloudReferralClient
       title="Online Vector PDF to CAD DWG Converter Portal"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
+      subtitle="Direct navigation to objective in-depth evaluation and technical guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Restore vector or scanned PDF drawings to the CAD DWG/DXF geometric entities edited in, Often faced with technical problems such as curve fitting distortion, SHX/TTF fonts broken into fragmented lines, and default scale drift.. This review has selected three professional engines with the highest accuracy and best layer preservation in the industry.. "
-      riskWarning="PDF Drawings contain a large number of corporate core construction and mechanical assembly secrets. Commercial cloud converters may record and retain your drawings. In order to prevent copyright compliance audits and commercial privacy leaks, high-density drawings, Be sure to use native AutoCAD PDFIMPORT The command is used for local analysis without network. Do not upload to unknown source websites.. "
+      painPointDesc="Restore vector or scanned PDF drawings to the CAD DWG/DXF geometric entities edited in, Often faced with technical problems such as curve fitting distortion, SHX/TTF fonts broken into fragmented lines, and default scale drift. This review has selected three professional engines with the highest accuracy and best layer preservation in the industry. "
+      riskWarning="PDF Drawings contain a large number of corporate core construction and mechanical assembly secrets. Commercial cloud converters may record and retain your drawings. In order to prevent copyright compliance audits and commercial privacy leaks, high-density drawings, Be sure to use native AutoCAD PDFIMPORT The command is used for local analysis without network. Do not upload to unknown source websites. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

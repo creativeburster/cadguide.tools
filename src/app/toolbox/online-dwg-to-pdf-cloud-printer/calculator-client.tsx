@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "For large drawings, lines may be lost"
     ],
     "officialUrl": "https://allinpdf.com/",
-    "verdict": "An extremely fast viewing and conversion channel suitable for temporary use by individuals. It is not recommended for large enterprises to deploy sensitive services.. "
+    "verdict": "An extremely fast viewing and conversion channel suitable for temporary use by individuals. It is not recommended for large enterprises to deploy sensitive services. "
   }
 ];
 const BEST_PRACTICES = [

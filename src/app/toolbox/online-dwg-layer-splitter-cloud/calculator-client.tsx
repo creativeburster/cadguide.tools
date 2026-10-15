@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Requires a little basic script configuration"
     ],
     "officialUrl": "https://github.com/mozman/ezdxf",
-    "verdict": "Written based on ODA library Python A drawing processing script that can quickly divide the hierarchical structure of hundreds of drawings on an offline computer.. "
+    "verdict": "Written based on ODA library Python A drawing processing script that can quickly divide the hierarchical structure of hundreds of drawings on an offline computer. "
   },
   {
     "name": "Convertio Bulk Separator",
@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "The free version of large drawings may time out and report an error."
     ],
     "officialUrl": "https://convertio.co/",
-    "verdict": "Suitable for emergency drawing hierarchical inspection and output when you are on a business trip and do not have CAD software at hand.. "
+    "verdict": "Suitable for emergency drawing hierarchical inspection and output when you are on a business trip and do not have CAD software at hand. "
   }
 ];
 const BEST_PRACTICES = [
@@ -117,7 +117,7 @@ export default function OnlineDwgLayerSplitterCloudClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
       painPointDesc="Processing is extremely large and includes architectural, mechanical and electrical, In order to distribute the drawings of different disciplines to different contractors when creating a general drawing with dozens of layers such as pipelines, It needs to be manually split into independent single layer sub-DWGs. Cloud DWG Layer Splitter Can identify layer tables in batches and automatically separate them in the backend (WBLOCK Figure), and keep the datum origin completely coincident. "
-      riskWarning="The general map represents the overall geographical arrangement and all confidentiality of the project. Uploading the general map to a public cloud service provider is very easy to encounter global leaks and compliance audits.. Please first load a minimalist file in local AutoCAD AutoLISP Scripts are used to split local layers, and direct unpacking and processing on the public network are prohibited.. "
+      riskWarning="The general map represents the overall geographical arrangement and all confidentiality of the project. Uploading the general map to a public cloud service provider is very easy to encounter global leaks and compliance audits. Please first load a minimalist file in local AutoCAD AutoLISP Scripts are used to split local layers, and direct unpacking and processing on the public network are prohibited. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

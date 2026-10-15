@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "Why are the exported model tree component names all in pinyin or special garbled characters? ",
-    "answer": "FBX The format has limited support for Unicode Chinese characters in older versions of the driver.. It is recommended that before exporting, SketchUp 'component in (Components) 'and 'group (Groups) 'Replace all names with English or Pinyin. "
+    "answer": "FBX The format has limited support for Unicode Chinese characters in older versions of the driver. It is recommended that before exporting, SketchUp 'component in (Components) 'and 'group (Groups) 'Replace all names with English or Pinyin. "
   }
 ];
 
@@ -116,7 +116,7 @@ export default function OnlineSkpToFbxCloudConverterClient() {
       title="Online SketchUp SKP to FBX Render Mesh Converter"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="Import architectural or landscape models designed in SketchUp (SKP) into high-end renderers (Such as Twinmotion, Lumion, Unreal Engine), Directly importing SKP often results in UV The texture coordinates are seriously misaligned, the material refraction parameters are lost, and complex nested components are broken up and collapsed.. Converted with high-fidelity texture packs (Textures) FBX Grid is the industry standard solution. "
+      painPointDesc="Import architectural or landscape models designed in SketchUp (SKP) into high-end renderers (Such as Twinmotion, Lumion, Unreal Engine), Directly importing SKP often results in UV The texture coordinates are seriously misaligned, the material refraction parameters are lost, and complex nested components are broken up and collapsed. Converted with high-fidelity texture packs (Textures) FBX Grid is the industry standard solution. "
       riskWarning="Architectural Design and Rendering Scenarios (SKP) contain corporate design secrets and client layout information. Commercial cloud conversion tools may save and leak these design details. To prevent business risks, It is recommended to give priority to using the SketchUp Pro desktop version that comes with it.'Export 3D model'Function, completely exported locally and on a single machine. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

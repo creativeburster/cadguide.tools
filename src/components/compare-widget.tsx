@@ -61,7 +61,7 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
               id: 'pgp-aliases',
               name: 'Command Shortcuts & Alias Mapping (.PGP)',
               icon: LayoutGrid,
-              description: 'Compatibility of standard command shortcuts (e.g., L for Line, C for Circle) and custom alias triggers.',
+              description: 'Compatibility of standard command shortcuts (e.g. L for Line, C for Circle) and custom alias triggers.',
               aDetail: a.slug === 'autocad' ? 'Native industry standard defining default PGP syntax.' : `${a.name} offers customizable shortcut mapping compatible with standard drafting command patterns.`,
               bDetail: b.slug === 'autocad' ? 'Native industry standard defining default PGP syntax.' : `${b.name} offers customizable shortcut mapping compatible with standard drafting command patterns.`,
               comparison: `Direct shortcut mapping between ${a.name} and ${b.name} enables drafting velocity without operator retraining.`
@@ -211,7 +211,7 @@ export function CompareWidget({ a, b, archetype }: CompareWidgetProps) {
               id: 'multiphysics-coupling',
               name: 'Multiphysics Field Coupling',
               icon: Network,
-              description: 'Capability to solve simultaneous coupled equations (e.g., thermal-stress, fluid-structure interaction, conjugate heat transfer).',
+              description: 'Capability to solve simultaneous coupled equations (e.g. thermal-stress, fluid-structure interaction, conjugate heat transfer).',
               aDetail: a.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving allowing arbitrary user PDE coupling.' : `${a.name} provides coupled or sequential multi-domain physics solving.`,
               bDetail: b.slug === 'comsol-multiphysics' ? 'Monolithic fully-coupled multiphysics solving allowing arbitrary user PDE coupling.' : `${b.name} provides coupled or sequential multi-domain physics solving.`,
               comparison: `Decide whether your engineering problem requires the unified coupled formulation of ${a.name} or the specialized modular solvers of ${b.name}.`

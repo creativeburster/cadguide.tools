@@ -12,7 +12,7 @@ export interface ProcurementPlatform {
 }
 
 export interface ProcurementIndustry {
-  slug: string; // e.g., 'pcb-design'
+  slug: string; // e.g. 'pcb-design'
   title: string;
   keyword: string;
   excerpt: string;

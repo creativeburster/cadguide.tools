@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Need to mount the API key of the translation engine"
     ],
     "officialUrl": "https://github.com/mozman/ezdxf",
-    "verdict": "CAD-based native API The batch text export and in-situ replacement scripts written are the most secure and efficient solutions.. "
+    "verdict": "CAD-based native API The batch text export and in-situ replacement scripts written are the most secure and efficient solutions. "
   },
   {
     "name": "SDL Trados CAD Plugin (Professional Engineering Translation Suite)",
@@ -88,15 +88,15 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Extract plain text to TMX for translation",
-    "desc": "Use a script to extract all Text/MText/Attribute text in the drawing and output it to a standard text file, Translate in the translation software and then import it in place to ensure that the geometric structure of the drawing is never damaged.. "
+    "desc": "Use a script to extract Text, MText, and Attribute entities into a standard translation memory format, perform translation, and re-import in place to guarantee drawing geometry remains intact."
   },
   {
-    "title": "Using double-byte SHX large font",
-    "desc": "If the translated text is in multiple languages (such as Cyrillic or Japanese) , The corresponding mount support must be provided in the CAD style Unicode Encoded SHX large font (Such as gbcbig.shx) to prevent question marks from appearing. "
+    "title": "Use double-byte SHX Big Fonts",
+    "desc": "If translated text contains multi-byte Asian or Cyrillic characters, ensure the corresponding text style specifies an SHX Big Font (such as gbcbig.shx or bigfont.shx) to prevent question marks from rendering."
   },
   {
     "title": "Encrypted tunnel transmission isolation",
-    "desc": "Enterprises should fully establish agency secure network channels when translating collaborative drawings from multiple countries to prevent leaks.. "
+    "desc": "Enterprises should enforce secure, encrypted network channels when collaborating on cross-border technical drawings to protect intellectual property."
   }
 ];
 const FAQS = [

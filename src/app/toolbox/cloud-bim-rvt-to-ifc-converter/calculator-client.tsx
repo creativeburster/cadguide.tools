@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Configuration parameters are relatively complex"
     ],
     "officialUrl": "https://github.com/Autodesk/revit-ifc",
-    "verdict": "Official conversion toolkit maintained open source on GitHub, The output is the most rigorous and standard, and is most suitable for enterprises to cooperate with and accept.. "
+    "verdict": "Official conversion toolkit maintained open source on GitHub, The output is the most rigorous and standard, and is most suitable for enterprises to cooperate with and accept. "
   },
   {
     "name": "buildingSmart openBIM Exporter Kits",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Steep learning curve"
     ],
     "officialUrl": "https://www.buildingsmart.org/",
-    "verdict": "BIM A conversion tool recommended by standards-setting organizations with extremely high adaptability to international specifications.. "
+    "verdict": "BIM A conversion tool recommended by standards-setting organizations with extremely high adaptability to international specifications. "
   },
   {
     "name": "BIMcollab Exporter Suite",
@@ -92,17 +92,17 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Reduced family nesting depth",
-    "desc": "Eliminate unnecessary furniture families such as complex bolts before exporting to reduce the stacking of polyhedral triangle meshes., Prevent IFC volume breach G level. "
+    "desc": "Eliminate unnecessary furniture families such as complex bolts before exporting to reduce the stacking of polyhedral triangle meshes. Prevent IFC volume breach G level. "
   },
   {
     "title": "Perform IFC schema validity verification",
-    "desc": "After exporting, be sure to use an independent IFC verification tool to run a format audit., Confirm that major categories such as structural columns and walls are correctly mounted. "
+    "desc": "After exporting, be sure to use an independent IFC verification tool to run a format audit. Confirm that major categories such as structural columns and walls are correctly mounted. "
   }
 ];
 const FAQS = [
   {
     "question": "IFC2x3 How should I choose between IFC4 format and IFC4 format?? ",
-    "answer": "IFC2x3 It is currently the most mature and widely supported version in the industry; IFC4 is used in three-dimensional geometric fitting., The electromechanical pipeline routing and terrain expression are more advanced, but some old versions of collaboration software may read and report errors.. If there is no request, the output will be given priority. IFC2x3 To ensure compatibility. "
+    "answer": "IFC2x3 It is currently the most mature and widely supported version in the industry; IFC4 is used in three-dimensional geometric fitting. The electromechanical pipeline routing and terrain expression are more advanced, but some old versions of collaboration software may read and report errors. If there is no request, the output will be given priority. IFC2x3 To ensure compatibility. "
   },
   {
     "question": "Why are some walls incomplete or missing in IFC?? ",

@@ -207,7 +207,7 @@ function aggregateRatingFor(tool: Tool) {
 // Custom official association metadata for Gstarsoft/DWG FastView (EEAT booster)
 export const GSTARSOFT_PUBLISHER = {
   "@type": "Organization",
-  "name": "Gstarsoft Co., Ltd.",
+  "name": "Gstarsoft Co. Ltd.",
   "url": "https://www.gstarcad.net/",
   "sameAs": [
     "https://en.wikipedia.org/wiki/Gstarsoft",

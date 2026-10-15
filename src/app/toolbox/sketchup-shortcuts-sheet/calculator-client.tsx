@@ -69,7 +69,7 @@ const SHORTCUTS = [
     "keys": "O",
     "command": "Orbit (Surround)",
     "category": "camera",
-    "description": "Three-dimensional rotation of the viewport can also be triggered by holding down the middle mouse button.. "
+    "description": "Three-dimensional rotation of the viewport can also be triggered by holding down the middle mouse button. "
   },
   {
     "keys": "H",

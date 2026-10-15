@@ -18,7 +18,7 @@ const SHORTCUTS = [
   { keys: '⌐ (double)', command: 'Double-Bevel Groove', category: 'groove', description: 'Bevel on both sides. Used for thick plates where access from both sides is available. Less weld metal than double-V.' },
   { keys: 'U', command: 'U-Groove', category: 'groove', description: 'Single-U groove. Curved bevel with parallel sides. Used for thick sections (>25mm). Less weld metal than V-groove but more expensive to prepare.' },
   { keys: 'J', command: 'J-Groove', category: 'groove', description: 'Single-J groove. One edge curved (J-shape), other square. Used for thick T-joints and corner joints where only one member can be prepared.' },
-  { keys: '▽', command: 'Flare-V Groove', category: 'groove', description: 'Groove formed by two curved surfaces (e.g., two round bars or formed plates). No bevel preparation needed — the joint geometry creates the groove.' },
+  { keys: '▽', command: 'Flare-V Groove', category: 'groove', description: 'Groove formed by two curved surfaces (e.g. two round bars or formed plates). No bevel preparation needed — the joint geometry creates the groove.' },
   { keys: '⌒', command: 'Flare-Bevel Groove', category: 'groove', description: 'Groove between a curved surface and a flat surface. Common in sheet metal and structural tube-to-plate connections.' },
 
   // Basic weld types

@@ -338,7 +338,7 @@ All`;
           <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range., and enable AutoCAD&apos;s `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided&quot;Grid exceeds screen&quot; or&quot;&quot;The grid is too dense and does not display&quot; phenomenon. 
+              <strong>LIMITS Core tip: </strong>The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range. and enable AutoCAD&apos;s `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided&quot;Grid exceeds screen&quot; or&quot;&quot;The grid is too dense and does not display&quot; phenomenon. 
             </span>
           </div>
         </div>

@@ -357,7 +357,7 @@ Generated via CADGuide.tools`;
           <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Droplets className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>Flow Physics Tip: </strong>Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe.. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , The boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially.. 
+              <strong>Flow Physics Tip: </strong>Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , The boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially. 
             </span>
           </div>
         </div>

@@ -32,7 +32,7 @@ const DIFF_DATA = [
     "primaryCmd": "N/A",
     "secondaryCmd": "FILECOMPARE",
     "isSame": false,
-    "diffNote": "ZW's original drawing comparison command directly overlays the old and new drawings in the current viewport., Use different highlight colors to mark modified entities. Use the corresponding ones in AutoCAD COMPARE command. ",
+    "diffNote": "ZW's original drawing comparison command directly overlays the old and new drawings in the current viewport. Use different highlight colors to mark modified entities. Use the corresponding ones in AutoCAD COMPARE command. ",
     "useCase": "Quickly compare drawing changes between two versions. "
   },
   {
@@ -40,7 +40,7 @@ const DIFF_DATA = [
     "primaryCmd": "N/A",
     "secondaryCmd": "MESSENGER",
     "isSame": false,
-    "diffNote": "ZW's proprietary electromechanical and collaborative communication assistant alias can send and receive messages and collaborative notes within the drawing with other designers under the current local area network.. ",
+    "diffNote": "ZW's proprietary electromechanical and collaborative communication assistant alias can send and receive messages and collaborative notes within the drawing with other designers under the current local area network. ",
     "useCase": "Designers’ online instant communication notes. "
   },
   {

@@ -19,7 +19,7 @@ const SHORTCUTS_DATA: ShortcutItem[] = [
   { keys: 'Ctrl + Q', command: 'Force Rebuild', category: 'system', description: 'The most hard-core shortcut keys, Force a complete rebuild of all entities in the feature tree to resolve abnormal model display errors. ' },
   { keys: 'Ctrl + B', command: 'Rebuild', category: 'system', description: 'Rebuild the currently changed features and assemblies. ' },
   { keys: 'S', command: 'Quick pop-up menu', category: 'system', description: 'The essence of SolidWorks efficiency, Pop up a highly customizable shortcut bar at the mouse point (sketch, Features and assembly vary) . ' },
-  { keys: 'D', command: 'Confirmation Corner', category: 'system', description: 'Directly confirm/Cancel the check mark and move it to the mouse cursor to quickly exit the current sketch or feature editing.. ' },
+  { keys: 'D', command: 'Confirmation Corner', category: 'system', description: 'Directly confirm/Cancel the check mark and move it to the mouse cursor to quickly exit the current sketch or feature editing. ' },
   { keys: 'F', command: 'Full page display (Zoom to Fit)', category: 'system', description: 'Center and zoom all entities in the view to full screen display. ' },
   { keys: 'G', command: 'Partial magnifying glass (Magnifier)', category: 'system', description: 'Pop up the partial magnifying glass at the mouse position, Select fine faces and edges without scaling the viewport. ' },
   { keys: 'Space (Spacebar)', command: 'View orientation menu (Orientation)', category: 'system', description: 'Bring up the View Oriented Cube panel and double-click Quick Slice. ' },
@@ -595,7 +595,7 @@ export default function SolidWorksShortcutsClient() {
           <div>
             <h4 className="font-bold text-slate-800 text-lg mb-1.5">1. The perfect combination of mouse gestures and shortcut toolbar</h4>
             <p>
-              In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch., Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
+              In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch. Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
             </p>
           </div>
           <div>

@@ -8,7 +8,7 @@ const SYMPTOMS = [
   {
     id: 'question_mark',
     name: 'All Chinese characters are displayed as question marks (?)',
-    desc: 'Most commonly used when opening external drawings, Chinese fonts (Especially large fonts SHX) are missing on the local computer. ',
+    desc: 'Occurs when opening external drawings where Asian or custom fonts (especially SHX Big Fonts) are missing on the local workstation.',
     badge: 'SHX missing'
   },
   {
@@ -225,10 +225,10 @@ export default function PdfFontGibberishClient() {
             <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Info className="w-4 h-4 text-slate-500" />
-                <h3 className="text-slate-800 font-black text-lg uppercase tracking-wider">Default large font configuration</h3>
+                <h3 className="text-slate-800 font-black text-lg uppercase tracking-wider">Default Big Font Configuration</h3>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="fontAlt" className="text-base font-black text-slate-500 uppercase">Replace large font name (SHX)</label>
+                <label htmlFor="fontAlt" className="text-base font-black text-slate-500 uppercase">Alternate Big Font Name (SHX)</label>
                 <input
                   id="fontAlt"
                   type="text"
@@ -238,7 +238,7 @@ export default function PdfFontGibberishClient() {
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-lg font-semibold text-slate-800"
                 />
                 <p className="text-sm text-slate-400 mt-1 leading-normal">
-                  AutoCAD When opening a drawing, if the corresponding large font cannot be found (Chinese font), will use `FONTALT` The font specified by the variable is automatically replaced. Commonly used recommendations `gbcbig.shx` (National standard large font) or `hztxt.shx`. 
+                  When AutoCAD cannot locate a required multi-byte SHX font, it automatically substitutes the font specified by the <span className="font-mono font-bold text-slate-600">FONTALT</span> system variable. Common fallbacks include <span className="font-mono text-slate-600">gbcbig.shx</span> or <span className="font-mono text-slate-600">bigfont.shx</span>.
                 </p>
               </div>
             </div>
@@ -253,20 +253,20 @@ export default function PdfFontGibberishClient() {
             <div className="flex flex-col gap-5">
               <h3 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
                 <AlertTriangle className="w-5 h-5 text-amber-500" />
-                Repair guide and principle diagnosis
+                Repair Guide & Technical Diagnosis
               </h3>
               
               {/* Question Mark Fix */}
               {symptomId === 'question_mark' && (
                 <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
-                  <p className="font-bold text-slate-800">Cause of failure (Why is it displayed as a question mark?) : </p>
-                  <p>Chinese characters are represented by large fonts in CAD (Big Font) Form rendering. When loading external incoming drawings, If the special Chinese font used by the other party does not exist in your local `Fonts` folder (or the replacement is not registered globally), the CAD engine will render these missing characters as `?`. </p>
+                  <p className="font-bold text-slate-800">Root Cause (Why text renders as &apos;?&apos;):</p>
+                  <p>Multi-byte and Asian characters are rendered in CAD via SHX Big Fonts. When opening technical drawings from external sources, if the specified SHX font is absent from your local CAD Fonts folder, the graphics engine replaces all unmapped glyphs with question marks (?).</p>
                   
-                  <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
+                  <p className="font-bold text-slate-800 mt-2">Manual Resolution Steps:</p>
                   <ol className="list-decimal list-inside space-y-1.5">
-                    <li>Enter in the CAD command bar and press Enter to execute <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">FONTALT</span> System variables. </li>
-                    <li>Modify its input to specify the replacement large font: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">{fontAltVal}</span>. </li>
-                    <li>Save current drawing, close CAD The software reopens. Missing fonts will be automatically mapped to {fontAltVal}, Solve garbled characters. </li>
+                    <li>Type <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">FONTALT</span> in the CAD command line and press Enter.</li>
+                    <li>Set the value to your preferred fallback Big Font: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">{fontAltVal}</span>.</li>
+                    <li>Save and reopen the drawing. Missing fonts will automatically map to {fontAltVal}, eliminating question mark glyphs.</li>
                   </ol>
                 </div>
 )}
@@ -275,7 +275,7 @@ export default function PdfFontGibberishClient() {
               {symptomId === 'scrambled_gibberish' && (
                 <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why the characters become garbled characters)) : </p>
-                  <p>In newer versions of AutoCAD, The system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, Each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, This will cause messy English characters and large garbled characters to appear in many PDF browsers.. </p>
+                  <p>In newer versions of AutoCAD, The system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, Each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, This will cause messy English characters and large garbled characters to appear in many PDF browsers. </p>
                   
                   <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
@@ -290,7 +290,7 @@ export default function PdfFontGibberishClient() {
               {symptomId === 'outline_geometry' && (
                 <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why it becomes hollow and extremely stuck) : </p>
-                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow.. </p>
+                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow. </p>
                   
                   <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">

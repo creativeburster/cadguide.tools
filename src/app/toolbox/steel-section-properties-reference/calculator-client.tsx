@@ -88,7 +88,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     title: 'IPE vs HEA/HEB — when to use which',
-    content: 'IPE sections are optimized for bending (deep web, narrow flanges) — use them as beams. HEA/HEB sections have wide flanges and are optimized for compression — use them as columns. HEB is heavier than HEA for the same nominal size. For combined axial + bending (e.g., portal frame columns), HEB is often preferred because its wide flanges provide better lateral buckling resistance.'
+    content: 'IPE sections are optimized for bending (deep web, narrow flanges) — use them as beams. HEA/HEB sections have wide flanges and are optimized for compression — use them as columns. HEB is heavier than HEA for the same nominal size. For combined axial + bending (e.g. portal frame columns), HEB is often preferred because its wide flanges provide better lateral buckling resistance.'
   },
   {
     title: 'Cross-section properties for structural design',

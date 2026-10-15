@@ -79,7 +79,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     title: 'Two-letter shortcuts are Altium\'s signature',
-    content: 'Altium uses two-letter mnemonic shortcuts (e.g., P+P for Place Part, D+R for Design Rules). These are typed in sequence, not simultaneously. Watch the status bar — it shows available next letters after the first key.'
+    content: 'Altium uses two-letter mnemonic shortcuts (e.g. P+P for Place Part, D+R for Design Rules). These are typed in sequence, not simultaneously. Watch the status bar — it shows available next letters after the first key.'
   },
   {
     title: 'Shift+R cycles routing conflict modes',

@@ -27,7 +27,7 @@ const SHX_FAQS: { question: string; answer: string }[] = [
   {
     question: 'How do I configure Big Font and a Western regular font together in AutoCAD?',
     answer:
-      'In AutoCAD Text Style dialog (STYLE), configure combined fonts: the left "SHX Font" dropdown handles alphanumeric characters (e.g., simplex.shx); check "Use Big Font", then select your CJK double-byte font in the right "Big Font" dropdown (e.g., gbcbig.shx). Both must be set for drawings to display correctly.',
+      'In AutoCAD Text Style dialog (STYLE), configure combined fonts: the left "SHX Font" dropdown handles alphanumeric characters (e.g. simplex.shx); check "Use Big Font", then select your CJK double-byte font in the right "Big Font" dropdown (e.g. gbcbig.shx). Both must be set for drawings to display correctly.',
   },
   {
     question: 'Why do specialized architectural or structural add-ons auto-detect fonts?',
@@ -442,7 +442,7 @@ export default function MissingFontResolverClient() {
             <h4 className="font-bold text-slate-800 mb-2 text-lg">What is the difference between a question mark (?) and garbled text?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
               * **Question mark (?)**: The CAD engine cannot locate the specified SHX font in your search paths, or the font lacks specific glyphs or symbols.<br />
-              * **Garbled text**: Indicates an encoding or code page conflict (e.g., attempting to parse double-byte CJK text using a single-byte Western font).
+              * **Garbled text**: Indicates an encoding or code page conflict (e.g. attempting to parse double-byte CJK text using a single-byte Western font).
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
@@ -454,7 +454,7 @@ export default function MissingFontResolverClient() {
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">
             <h4 className="font-bold text-slate-800 mb-2 text-lg">How to configure Big Font and Western fonts together?</h4>
             <p className="text-base text-slate-500 leading-relaxed font-medium">
-              In AutoCAD's Text Style dialog (`STYLE`), configure paired fonts: select a regular Western font on the left (e.g., `simplex.shx`), check "Use Big Font", then choose your CJK Big Font on the right (e.g., `gbcbig.shx`).
+              In AutoCAD's Text Style dialog (`STYLE`), configure paired fonts: select a regular Western font on the left (e.g. `simplex.shx`), check "Use Big Font", then choose your CJK Big Font on the right (e.g. `gbcbig.shx`).
             </p>
           </div>
           <div className="bg-white border border-slate-100 rounded-2xl p-6 print:border-slate-300">

@@ -39,7 +39,7 @@ const SHORTCUTS = [
     "keys": "F",
     "command": "Fillet (rounded corners)",
     "category": "sketch",
-    "description": "Create a fillet between two intersecting lines in the sketch.. "
+    "description": "Create a fillet between two intersecting lines in the sketch. "
   },
   {
     "keys": "E",
@@ -81,7 +81,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     "title": "The magic of sketch annotation shortcut key D",
-    "content": "Type the D command to quickly start dimensioning. If it is an arc dimension, it will automatically default to a radius dimension.; If it is two circles, it will automatically default to the center distance dimension., Extremely intelligent. "
+    "content": "Type the D command to quickly start dimensioning. If it is an arc dimension, it will automatically default to a radius dimension.; If it is two circles, it will automatically default to the center distance dimension. Extremely intelligent. "
   }
 ];
 

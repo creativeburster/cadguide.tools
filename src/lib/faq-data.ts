@@ -368,7 +368,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['solidworks'],
     q: 'How to troubleshoot SolidWorks assembly mates showing yellow warning flags?',
-    a: 'Yellow flags indicate overdefined mates that are redundant but still solved. Open the Mate folder, right-click the warning, and select \'Mate Diagnostics\'. Delete redundant constraints (e.g., duplicate coincident mates) to speed up assembly rebuild times.'
+    a: 'Yellow flags indicate overdefined mates that are redundant but still solved. Open the Mate folder, right-click the warning, and select \'Mate Diagnostics\'. Delete redundant constraints (e.g. duplicate coincident mates) to speed up assembly rebuild times.'
   },
   {
     category: 'performance',
@@ -410,7 +410,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['solidworks'],
     q: 'How to configure 1:1 DXF/DWG sheet metal flat pattern exports for CNC laser cutting?',
-    a: 'Right-click the Flat-Pattern feature in the FeatureManager tree and select Export to DXF/DWG. Under Output, select \'Sheet Metal\' and choose \'Geometry\' and \'Bend lines\'. Make sure to set \'Export at 1:1 scale\'. Under drawing mapping, map bend lines and outer profiles to separate layers (e.g., BEND and CUT) to ensure correct CNC parsing.'
+    a: 'Right-click the Flat-Pattern feature in the FeatureManager tree and select Export to DXF/DWG. Under Output, select \'Sheet Metal\' and choose \'Geometry\' and \'Bend lines\'. Make sure to set \'Export at 1:1 scale\'. Under export mapping options, map bend lines and outer profiles to separate layers (e.g. BEND and CUT) to ensure correct CNC parsing.'
   },
   {
     category: 'standards',
@@ -422,7 +422,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['solidworks'],
     q: 'How to import CAD structural steel weldment profiles in SolidWorks?',
-    a: 'Create or download weldment library profiles in `.sldlfp` library feature part format. Navigate to Options > System Options > File Locations. Select \'Weldment Profiles\' from the dropdown, and add the path to your root weldment folder. The folder structure must be nested: `Weldment Profiles\\\\Standard (e.g., ISO)\\\\Type (e.g., C-Channel)\\\\size.sldlfp`.'
+    a: 'Create or download weldment library profiles in `.sldlfp` library feature part format. Navigate to Options > System Options > File Locations. Select \'Weldment Profiles\' from the dropdown, and add the path to your root weldment folder. The folder structure must be nested: `Weldment Profiles\\\\Standard (e.g. ISO)\\\\Type (e.g. C-Channel)\\\\size.sldlfp`.'
   },
   {
     category: 'standards',
@@ -512,7 +512,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['solidworks'],
     q: 'How to configure post-processors for SolidWorks CAM CNC milling?',
-    a: 'Go to SolidWorks CAM Options > Machine, select your CNC controller post-processor file (.ctl / .pbp). If G-Code outputs generate toolpath syntax errors (e.g., G02/G03 arc errors), run the \'Universal Post Generator\' utility to re-compile your controller configurations.'
+    a: 'Go to SolidWorks CAM Options > Machine, select your CNC controller post-processor file (.ctl / .pbp). If G-Code outputs generate toolpath syntax errors (e.g. G02/G03 arc errors), run the \'Universal Post Generator\' utility to re-compile your controller configurations.'
   },
   {
     category: 'standards',
@@ -524,7 +524,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['solidworks'],
     q: 'How to set boundary conditions for Flow Simulation CFD HVAC duct studies?',
-    a: 'In Flow Simulation, define the Fluid Domain first. Go to Boundary Conditions > Add. Specify Inlets (e.g., Volume Flow Rate = 0.5 m3/s) and Outlets (e.g., Environment Pressure = 101.325 kPa). Apply \'Laminar and Turbulent\' settings to solve duct pressure losses.'
+    a: 'In Flow Simulation, define the Fluid Domain first. Go to Boundary Conditions > Add. Specify Inlets (e.g. Volume Flow Rate = 0.5 m3/s) and Outlets (e.g. Environment Pressure = 101.325 kPa). Apply \'Laminar and Turbulent\' settings to solve duct pressure losses.'
   },
   {
     category: 'standards',
@@ -560,7 +560,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['solidworks'],
     q: 'How to map SolidWorks custom properties to PDM variables card variables?',
-    a: 'Open PDM Admin, go to Variables, locate your target variable (e.g., Description). Under Variable Mapping, add a block: Block Name = `CustomProperty`, Attribute Name = `Description`, File extensions = `prt,sldprt,asm,sldasm,drw,slddrw` to link variables.'
+    a: 'Open PDM Admin, go to Variables, locate your target variable (e.g. Description). Under Variable Mapping, add a block: Block Name = `CustomProperty`, Attribute Name = `Description`, File extensions = `prt,sldprt,asm,sldasm,drw,slddrw` to link variables.'
   },
   {
     category: 'standards',
@@ -734,7 +734,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['autocad'],
     q: 'How to resolve FLEXlm Error -5 (No such feature exists)?',
-    a: 'FLEXlm Error -5 occurs when the client requests a feature name not contained in the server\'s license file. Resolve this by: 1. Opening your license file in Notepad. 2. Confirm the AutoCAD product feature code (e.g., `87815ACD_2026_0F`) is present. 3. Update the client\'s software to match the license year.'
+    a: 'FLEXlm Error -5 occurs when the client requests a feature name not contained in the server\'s license file. Resolve this by: 1. Opening your license file in Notepad. 2. Confirm the AutoCAD product feature code (e.g. `87815ACD_2026_0F`) is present. 3. Update the client\'s software to match the license year.'
   },
   {
     category: 'licensing',
@@ -902,7 +902,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['autocad'],
     q: 'How to configure Windows pagefile settings to prevent AutoCAD memory allocation crashes?',
-    a: 'AutoCAD can crash when Windows virtual memory is depleted. Official configuration: 1. Go to Windows Advanced System Settings > Performance > Advanced > Virtual Memory. 2. Uncheck automatic management. 3. Set a custom pagefile size to 1.5x to 2x your physical RAM (e.g., Min 24576MB, Max 49152MB for a 16GB RAM system) on your fastest NVMe SSD.'
+    a: 'AutoCAD can crash when Windows virtual memory is depleted. Official configuration: 1. Go to Windows Advanced System Settings > Performance > Advanced > Virtual Memory. 2. Uncheck automatic management. 3. Set a custom pagefile size to 1.5x to 2x your physical RAM (e.g. Min 24576MB, Max 49152MB for a 16GB RAM system) on your fastest NVMe SSD.'
   },
   {
     category: 'performance',
@@ -1052,7 +1052,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['autocad'],
     q: 'How to configure the Font Mapping Table (FMP) to replace missing SHX fonts?',
-    a: 'To substitute missing fonts: 1. Locate `acad.fmp` in your AutoCAD Support directory. 2. Open `acad.fmp` in Notepad. 3. Define font replacements in the format `MissingFont;ReplacementFont.shx` (e.g., `chinesefont;simplex.shx`). 4. Save the file and restart AutoCAD.'
+    a: 'To substitute missing fonts: 1. Locate `acad.fmp` in your AutoCAD Support directory. 2. Open `acad.fmp` in Notepad. 3. Define font replacements in the format `MissingFont;ReplacementFont.shx` (e.g. `chinesefont;simplex.shx`). 4. Save the file and restart AutoCAD.'
   },
   {
     category: 'standards',
@@ -1124,13 +1124,13 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['autocad'],
     q: 'How do you configure the AutoCAD TRUSTEDDOMAINS variable for secure cloud scripting?',
-    a: 'When AutoCAD loads web or cloud resources via API, the `TRUSTEDDOMAINS` system variable restricts connections to trusted URLs. Set `TRUSTEDDOMAINS` to target URL patterns (e.g., `*.autodesk.com`, `*.yourcompany.com`) to prevent sandbox browser script blocks.'
+    a: 'When AutoCAD loads web or cloud resources via API, the `TRUSTEDDOMAINS` system variable restricts connections to trusted URLs. Set `TRUSTEDDOMAINS` to target URL patterns (e.g. `*.autodesk.com`, `*.yourcompany.com`) to prevent sandbox browser script blocks.'
   },
   {
     category: 'standards',
     tools: ['autocad'],
     q: 'How to configure AutoCAD default DWG save format to an older release?',
-    a: 'To save drawing files in a legacy format by default: 1. Go to Options > Open and Save tab. 2. Under \'File Save\', select the desired output format (e.g., AutoCAD 2018 Drawing *.dwg). 3. Click Apply. This ensures team members running older CAD engines can open the files directly.'
+    a: 'To save drawing files in a legacy format by default: 1. Go to Options > Open and Save tab. 2. Under \'File Save\', select the desired output format (e.g. AutoCAD 2018 Drawing *.dwg). 3. Click Apply. This ensures team members running older CAD engines can open the files directly.'
   },
   {
     category: 'standards',
@@ -1154,7 +1154,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['autocad'],
     q: 'How to configure AutoCAD Map 3D Feature Data Objects (FDO) connection options?',
-    a: ' FDO allows AutoCAD Map 3D to read GIS databases without conversion. To connect: 1. Click Data > Connect to Data. 2. Select the source provider (e.g., OSGeo FDO Provider for SHP or Raster). 3. Input path parameters and add features to layout.'
+    a: ' FDO allows AutoCAD Map 3D to read GIS databases without conversion. To connect: 1. Click Data > Connect to Data. 2. Select the source provider (e.g. OSGeo FDO Provider for SHP or Raster). 3. Input path parameters and add features to layout.'
   },
   {
     category: 'standards',
@@ -1190,7 +1190,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['autocad'],
     q: 'How to configure custom dynamic block attributes standardizations?',
-    a: 'To standardize dynamic block properties: 1. Open the Block Editor (BEDIT). 2. Add standardized parameters (e.g. Distance1, Angle1). 3. Name your block attributes consistently using capital letter definitions (e.g., PART_NUMBER, MATERIAL). 4. Enforce block locks.'
+    a: 'To standardize dynamic block properties: 1. Open the Block Editor (BEDIT). 2. Add standardized parameters (e.g. Distance1, Angle1). 3. Name your block attributes consistently using capital letter definitions (e.g. PART_NUMBER, MATERIAL). 4. Enforce block locks.'
   },
   {
     category: 'standards',
@@ -1292,7 +1292,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['revit'],
     q: 'How to verify active client connections on the Revit license server?',
-    a: 'On your license server, open Command Prompt in the lmgrd folder: Run `lmutil lmstat -a -c @YOUR_SERVER_IP`. The output displays active license pools, verified vendor daemons, and a list of active users, hostnames, and checkout times for the Revit feature code (e.g., `829R1_2026_0F`).'
+    a: 'On your license server, open Command Prompt in the lmgrd folder: Run `lmutil lmstat -a -c @YOUR_SERVER_IP`. The output displays active license pools, verified vendor daemons, and a list of active users, hostnames, and checkout times for the Revit feature code (e.g. `829R1_2026_0F`).'
   },
   {
     category: 'licensing',
@@ -1316,7 +1316,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['revit'],
     q: 'How to resolve FLEXlm Error -5 (No such feature exists) when launching Revit?',
-    a: 'FLEXlm Error -5 occurs when the client requests a feature name not contained in the server\'s license file. Resolve this by: 1. Opening your license file in Notepad. 2. Confirm the Revit product feature code (e.g., `829R1_2026_0F`) is present. 3. Update the client\'s software to match the license year.'
+    a: 'FLEXlm Error -5 occurs when the client requests a feature name not contained in the server\'s license file. Resolve this by: 1. Opening your license file in Notepad. 2. Confirm the Revit product feature code (e.g. `829R1_2026_0F`) is present. 3. Update the client\'s software to match the license year.'
   },
   {
     category: 'licensing',
@@ -1400,7 +1400,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['revit'],
     q: 'How to configure Windows Pagefile settings to support heavy Revit assembly rendering?',
-    a: 'Revit consumes significant RAM during model processing. Allocate a custom pagefile size equal to 1.5x to 2x your physical RAM (e.g., Initial: 49152MB, Max: 98304MB for a 64GB RAM workstation) on your fastest NVMe PCIe SSD. Retain a 1024MB paging file on the C: boot drive to ensure Windows kernel memory dump generations are preserved in the event of OS crashes.'
+    a: 'Revit consumes significant RAM during model processing. Allocate a custom pagefile size equal to 1.5x to 2x your physical RAM (e.g. Initial: 49152MB, Max: 98304MB for a 64GB RAM workstation) on your fastest NVMe PCIe SSD. Retain a 1024MB paging file on the C: boot drive to ensure Windows kernel memory dump generations are preserved in the event of OS crashes.'
   },
   {
     category: 'performance',
@@ -1610,7 +1610,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['revit'],
     q: 'How to configure Revit IFC4 export settings to prevent missing parameter sets and class mapping errors?',
-    a: 'Revit category parameters often drop during standard IFC exports. Go to File > Export > Options > IFC Options to check the class mapping table (e.g., ensure Columns map to IfcColumn and generic models map to IfcBuildingElementProxy). Choose IFC4 Design Transfer View or IFC2x3 Coordination View 2.0. In the export setup, check \'Export Revit property sets\' and \'Export base quantities\' to generate net volume and surface area.'
+    a: 'Revit category parameters often drop during standard IFC exports. Go to File > Export > Options > IFC Options to check the class mapping table (e.g. ensure Columns map to IfcColumn and generic models map to IfcBuildingElementProxy). Choose IFC4 Design Transfer View or IFC2x3 Coordination View 2.0. In the export setup, check \'Export Revit property sets\' and \'Export base quantities\' to generate net volume and surface area.'
   },
   {
     category: 'standards',
@@ -1670,7 +1670,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['revit'],
     q: 'How to optimize layer export mapping tables in Revit to align with ISO 13567 standards?',
-    a: 'To configure: Go to File > Export > Options > Export Setups DWG/DXF. Select the Layers tab. Load the ISO 13567 or AIA standard layer mapping template. This maps Revit categories (e.g., Walls, Doors) to corresponding standard CAD layer codes.'
+    a: 'To configure: Go to File > Export > Options > Export Setups DWG/DXF. Select the Layers tab. Load the ISO 13567 or AIA standard layer mapping template. This maps Revit categories (e.g. Walls, Doors) to corresponding standard CAD layer codes.'
   },
   {
     category: 'standards',
@@ -1718,7 +1718,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['revit'],
     q: 'How to batch downscale referenced CAD files for Revit compatibility using DWG TrueView?',
-    a: 'When users link newer CAD formats that crash legacy Revit engines: Open `DWG TrueView`, select `DWG Convert`, select all referenced CAD files, choose a legacy DWG format (e.g., AutoCAD 2018), and batch convert them to prevent loading failures.'
+    a: 'When users link newer CAD formats that crash legacy Revit engines: Open `DWG TrueView`, select `DWG Convert`, select all referenced CAD files, choose a legacy DWG format (e.g. AutoCAD 2018), and batch convert them to prevent loading failures.'
   },
   {
     category: 'standards',
@@ -1784,7 +1784,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['revit'],
     q: 'How to optimize layer export mapping tables in Revit to align with ISO 13567 standards?',
-    a: 'To configure: Go to File > Export > Options > Export Setups DWG/DXF. Select the Layers tab. Load the ISO 13567 or AIA standard layer mapping template. This maps Revit categories (e.g., Walls, Doors) to corresponding standard CAD layer codes.'
+    a: 'To configure: Go to File > Export > Options > Export Setups DWG/DXF. Select the Layers tab. Load the ISO 13567 or AIA standard layer mapping template. This maps Revit categories (e.g. Walls, Doors) to corresponding standard CAD layer codes.'
   },
   {
     category: 'standards',
@@ -1838,7 +1838,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['altium-designer'],
     q: 'How do we allocate specific Altium licenses to different engineering groups using the Altium Infrastructure Server (AIS)?',
-    a: 'Log in to your local AIS admin console. Navigate to the Users and Groups tab. Define groups (e.g., \'RF_Team\', \'Digital_Layout\'). Go to Licenses > Allocation, assign target license pools (e.g., Altium Designer SE or Subscription seats) to these groups, and configure \'Limit Usage\' parameters to restrict seats from being consumed by other departments.'
+    a: 'Log in to your local AIS admin console. Navigate to the Users and Groups tab. Define groups (e.g. \'RF_Team\', \'Digital_Layout\'). Go to Licenses > Allocation, assign target license pools (e.g. Altium Designer SE or Subscription seats) to these groups, and configure \'Limit Usage\' parameters to restrict seats from being consumed by other departments.'
   },
   {
     category: 'licensing',
@@ -1862,7 +1862,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['altium-designer'],
     q: 'How to optimize Online Design Rule Check (DRC) processing slowdowns on complex multi-layer boards?',
-    a: 'Online DRC runs geometry checks on every cursor movement, causing layout lag. Go to Tools > Design Rule Check > Rules to Check. Disable online checking for rules that require heavy computing (e.g., Clearance, Polygon-to-Split-Plane, and Silk-to-Solder-Mask). Keep these set to Batch DRC mode, allowing you to run audits only prior to exporting production files.'
+    a: 'Online DRC runs geometry checks on every cursor movement, causing layout lag. Go to Tools > Design Rule Check > Rules to Check. Disable online checking for rules that require heavy computing (e.g. Clearance, Polygon-to-Split-Plane, and Silk-to-Solder-Mask). Keep these set to Batch DRC mode, allowing you to run audits only prior to exporting production files.'
   },
   {
     category: 'performance',
@@ -1880,7 +1880,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['altium-designer'],
     q: 'How to speed up schematic compiler processing and resolve violation check hangs?',
-    a: 'Schematic compiler lag occurs when compiling massive multi-sheet designs. Go to Project > Project Options > Error Reporting. Change harmless warnings (e.g., \'Unconnected object\', \'Net with no driving source\') from \'Error\' or \'Warning\' to \'No Report\'. This reduces the compiler lookup table size and speeds up netlist generation.'
+    a: 'Schematic compiler lag occurs when compiling massive multi-sheet designs. Go to Project > Project Options > Error Reporting. Change harmless warnings (e.g. \'Unconnected object\', \'Net with no driving source\') from \'Error\' or \'Warning\' to \'No Report\'. This reduces the compiler lookup table size and speeds up netlist generation.'
   },
   {
     category: 'performance',
@@ -1892,7 +1892,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['altium-designer'],
     q: 'How do we configure a multi-layer PCB impedance profile using the Layer Stack Manager?',
-    a: 'Open the Layer Stack Manager (Design > Layer Stack Manager). Go to the Impedance tab, click Add Impedance Profile. Select target layers (e.g., Top, Bottom, or Mid-layers) and define target impedance (e.g. 50-ohm single-ended or 100-ohm differential). Input copper thickness and dielectric properties from your board house, and run the built-in Solver to calculate the exact trace width limits.'
+    a: 'Open the Layer Stack Manager (Design > Layer Stack Manager). Go to the Impedance tab, click Add Impedance Profile. Select target layers (e.g. Top, Bottom, or Mid-layers) and define target impedance (e.g. 50-ohm single-ended or 100-ohm differential). Input copper thickness and dielectric properties from your board house, and run the built-in Solver to calculate the exact trace width limits.'
   },
   {
     category: 'standards',
@@ -1904,19 +1904,19 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['altium-designer'],
     q: 'How to export Gerber X2 and IPC-2581 production output files with exact NC drill tolerances?',
-    a: 'Standard Gerber RS-274X lacks layer stack definitions, which can cause stackup errors. To export newer standards: Go to File > Assembly Outputs > IPC-2581. Set the unit type to Metric and grid to 2:4 format. In the OutJob file, configure NC Drill files, click Properties, and ensure drill coordinate formats match Gerber settings (e.g., 2:4 Metric, Suppress Leading Zeros).'
+    a: 'Standard Gerber RS-274X lacks layer stack definitions, which can cause stackup errors. To export newer standards: Go to File > Assembly Outputs > IPC-2581. Set the unit type to Metric and grid to 2:4 format. In the OutJob file, configure NC Drill files, click Properties, and ensure drill coordinate formats match Gerber settings (e.g. 2:4 Metric, Suppress Leading Zeros).'
   },
   {
     category: 'standards',
     tools: ['altium-designer'],
     q: 'How to resolve 3D STEP model alignment offsets and configure mechanical clearance rules?',
-    a: 'STEP offsets occur when the 3D model origin differs from the PCB footprint origin. Double-click the 3D body component, select \'Standoff Height\' and rotation angles to align it with PCB pads. Go to Design > Rules > Placement > Component Clearance, and create a rule specifying the minimum spacing (e.g., 0.25mm) between 3D shapes to prevent collision issues.'
+    a: 'STEP offsets occur when the 3D model origin differs from the PCB footprint origin. Double-click the 3D body component, select \'Standoff Height\' and rotation angles to align it with PCB pads. Go to Design > Rules > Placement > Component Clearance, and create a rule specifying the minimum spacing (e.g. 0.25mm) between 3D shapes to prevent collision issues.'
   },
   {
     category: 'standards',
     tools: ['altium-designer'],
     q: 'How to configure panelization arrays and V-Groove breakout routing guidelines in Altium Designer?',
-    a: 'Create a new PCB file representing the panel. Go to Place > Embedded Board Array. Link this array to your target board file, define the row/column count (e.g., 2x3), and specify panel margins (e.g., 5mm). Place a route guide line on the mechanical layer representing the V-Groove depth (typically 1/3 of board thickness from top and bottom) for routing.'
+    a: 'Create a new PCB file representing the panel. Go to Place > Embedded Board Array. Link this array to your target board file, define the row/column count (e.g. 2x3), and specify panel margins (e.g. 5mm). Place a route guide line on the mechanical layer representing the V-Groove depth (typically 1/3 of board thickness from top and bottom) for routing.'
   },
   {
     category: 'standards',
@@ -2416,7 +2416,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['siemens-nx'],
     q: 'How to configure Siemens NX uglmd licensing port whitelists?',
-    a: 'Open the licensing file (splm15.lic) on the host, locate the SERVER line and set the port (default 28000). Set a fixed port for the daemon, e.g., \'VENDOR uglmd port=28001\'. Whitelist both ports (28000 and 28001) in Windows Defender/hardware firewalls to ensure client communication.'
+    a: 'Open the licensing file (splm15.lic) on the host, locate the SERVER line and set the port (default 28000). Set a fixed port for the daemon, e.g. \'VENDOR uglmd port=28001\'. Whitelist both ports (28000 and 28001) in Windows Defender/hardware firewalls to ensure client communication.'
   },
   {
     category: 'licensing',
@@ -2428,7 +2428,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['siemens-nx'],
     q: 'How does Siemens NX Value-Based Token Licensing work?',
-    a: 'Token licensing allows users to check out premium add-on applications (e.g., advanced routing, routing cabling, sheet metal) using a pool of tokens. When the application starts, a predefined number of tokens is checked out; when closed, tokens are returned. It is managed by splm15.lic.'
+    a: 'Token licensing allows users to check out premium add-on applications (e.g. advanced routing, routing cabling, sheet metal) using a pool of tokens. When the application starts, a predefined number of tokens is checked out; when closed, tokens are returned. It is managed by splm15.lic.'
   },
   {
     category: 'licensing',
@@ -2440,7 +2440,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'licensing',
     tools: ['siemens-nx'],
     q: 'How to set up uglmd.opt to reserve license seats for specific CAD teams?',
-    a: 'Create a file named \'uglmd.opt\' in the license manager directory. Define groups using \'GROUP CAD_TEAM user1 user2\'. Add reservations, e.g., \'RESERVE 5 gateway GROUP CAD_TEAM\' to ensure the Gateway base seat is reserved for essential designers.'
+    a: 'Create a file named \'uglmd.opt\' in the license manager directory. Define groups using \'GROUP CAD_TEAM user1 user2\'. Add reservations, e.g. \'RESERVE 5 gateway GROUP CAD_TEAM\' to ensure the Gateway base seat is reserved for essential designers.'
   },
   {
     category: 'licensing',
@@ -2488,7 +2488,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['siemens-nx'],
     q: 'How to configure NX virtual memory parameters to handle massive products?',
-    a: 'Configure Windows pagefile size to be at least 1.5 times physical RAM (e.g., set to 64GB pagefile for 32GB RAM). Inside NX, adjust the Customer Defaults memory threshold options to release unused assembly representations.'
+    a: 'Configure Windows pagefile size to be at least 1.5 times physical RAM (e.g. set to 64GB pagefile for 32GB RAM). Inside NX, adjust the Customer Defaults memory threshold options to release unused assembly representations.'
   },
   {
     category: 'performance',
@@ -2512,7 +2512,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'performance',
     tools: ['siemens-nx'],
     q: 'How to optimize NX CAM toolpath generation speed?',
-    a: 'Enable \'Multi-Threading\' in CAM preferences. Set tolerance values matching the roughing requirements (e.g., 0.05mm instead of 0.01mm) to drastically reduce toolpath calculating delays.'
+    a: 'Enable \'Multi-Threading\' in CAM preferences. Set tolerance values matching the roughing requirements (e.g. 0.05mm instead of 0.01mm) to drastically reduce toolpath calculating delays.'
   },
   {
     category: 'performance',
@@ -2530,7 +2530,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['siemens-nx'],
     q: 'How to set up custom drafting border templates in Siemens NX?',
-    a: 'Design the drawing sheet outline in a template part (.prt) file. Register it inside the \'pax\' template configuration file (e.g., \'ugs_drawing_templates.pax\') located in the \'UGII/templates\' directory to make it selectable.'
+    a: 'Design the drawing sheet outline in a template part (.prt) file. Register it inside the \'pax\' template configuration file (e.g. \'ugs_drawing_templates.pax\') located in the \'UGII/templates\' directory to make it selectable.'
   },
   {
     category: 'standards',
@@ -2560,7 +2560,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['siemens-nx'],
     q: 'How to configure NX Layer Categories to standardize modeling visibility?',
-    a: 'Set up layer categories (e.g., \'SKETCH\' = 1-10, \'SOLID\' = 11-20, \'PMI\' = 21-30) inside your seed templates. Go to Layer Category manager, lock the category parameters, and save to enforce visibility rules.'
+    a: 'Set up layer categories (e.g. \'SKETCH\' = 1-10, \'SOLID\' = 11-20, \'PMI\' = 21-30) inside your seed templates. Go to Layer Category manager, lock the category parameters, and save to enforce visibility rules.'
   },
   {
     category: 'standards',
@@ -2578,13 +2578,13 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['siemens-nx'],
     q: 'How to configure sheet metal bend allowances in Siemens NX?',
-    a: 'Set custom K-Factor values (e.g., 0.33 for standard steel) or import bend allowance tables (.tbl) matching shop floor tooling specifications. Go to Customer Defaults > Sheet Metal to set default parameters.'
+    a: 'Set custom K-Factor values (e.g. 0.33 for standard steel) or import bend allowance tables (.tbl) matching shop floor tooling specifications. Go to Customer Defaults > Sheet Metal to set default parameters.'
   },
   {
     category: 'standards',
     tools: ['siemens-nx'],
     q: 'How to link NX drafting parts list tables directly to model properties?',
-    a: 'Edit the Parts List table properties, map table cells to system attributes (e.g., \'<W$=$DB_PART_NO>\'), and save. The parts list will automatically pull BOM properties directly from the assembly structure.'
+    a: 'Edit the Parts List table properties, map table cells to system attributes (e.g. \'<W$=$DB_PART_NO>\'), and save. The parts list will automatically pull BOM properties directly from the assembly structure.'
   },
   {
     category: 'standards',
@@ -2722,13 +2722,13 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['rhino'],
     q: 'How to configure Rhino laser cutting templates?',
-    a: 'Create separate layers for cut paths (e.g., \'CUT\' = red, \'ENGRAVE\' = blue) in standard templates. Clean curves using \'SelDup\' and \'Make2D\' to ensure G-code translators export clean toolpaths.'
+    a: 'Create separate layers for cut paths (e.g. \'CUT\' = red, \'ENGRAVE\' = blue) in standard templates. Clean curves using \'SelDup\' and \'Make2D\' to ensure G-code translators export clean toolpaths.'
   },
   {
     category: 'standards',
     tools: ['rhino'],
     q: 'How to link custom text values to Rhino layouts dynamically?',
-    a: 'Use Rhino\'s \'Text Fields\' feature (e.g., `%<DocumentText("Author")>%`). Any updates to the Document Text will automatically update layout title blocks.'
+    a: 'Use Rhino\'s \'Text Fields\' feature (e.g. `%<DocumentText("Author")>%`). Any updates to the Document Text will automatically update layout title blocks.'
   },
   {
     category: 'standards',
@@ -2836,7 +2836,7 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['openscad'],
     q: 'How to resolve \'Object not manifold\' errors in OpenSCAD CSG rendering?',
-    a: 'This occurs when boolean operations create infinitely thin walls or intersecting faces. Offset overlapping faces by a small value (e.g., 0.001mm) to ensure clean intersections inside CGAL solvers.'
+    a: 'This occurs when boolean operations create infinitely thin walls or intersecting faces. Offset overlapping faces by a small value (e.g. 0.001mm) to ensure clean intersections inside CGAL solvers.'
   },
   {
     category: 'standards',
@@ -2848,13 +2848,13 @@ export const accordionFaqs: AccordionFaq[] = [
     category: 'standards',
     tools: ['openscad'],
     q: 'How to resolve double-precision floating errors in OpenSCAD CGAL solvers?',
-    a: 'Avoid using values that are too close (e.g., subtraction of identical coordinates). Add alignment values or offset geometries to prevent floating-point calculation errors.'
+    a: 'Avoid using values that are too close (e.g. subtraction of identical coordinates). Add alignment values or offset geometries to prevent floating-point calculation errors.'
   },
   {
     category: 'performance',
     tools: ['openscad'],
     q: 'How to optimize OpenSCAD render times when setting $fn values?',
-    a: 'Avoid setting a large global `$fn` variable (e.g., `$fn=200`). Use local facet configurations (e.g., `cylinder(r=5, h=10, $fn=50)`) only where high facet detail is required to reduce memory load.'
+    a: 'Avoid setting a large global `$fn` variable (e.g. `$fn=200`). Use local facet configurations (e.g. `cylinder(r=5, h=10, $fn=50)`) only where high facet detail is required to reduce memory load.'
   },
   {
     category: 'performance',

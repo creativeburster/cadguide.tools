@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "Converted primitives show 'OLE container error'What is the reason? ",
-    "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, It is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting.. "
+    "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, It is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting. "
   },
   {
     "question": "DGN The V7 and V8 Does the format affect conversion? ",
@@ -117,7 +117,7 @@ export default function OnlineDgnToDwgConverterClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
       painPointDesc="Bentley MicroStation DGN When converting drawings to AutoCAD DWG drawings, Since the base principles of the two platforms are completely different, this usually results in MicroStation 's level (Levels) 'Unable to snap to CAD' layer (Layers) ', Proprietary cell libraries (Cells) degenerate into broken line segments, and the collapse of Bentley’s signature handwritten continuous line style. "
-      riskWarning="DGN The format is generally used in infrastructure design such as national large bridges, rail transit and municipal network management., Involves extremely strict physical security and project sensitivity. Please give priority to use MicroStation Local built-in 'Save as DWG'Function to perform high-precision matching and mount a regular layer comparison table (CSV) , Avoid using public conversion websites for high-volume conversions. "
+      riskWarning="DGN The format is generally used in infrastructure design such as national large bridges, rail transit and municipal network management. Involves extremely strict physical security and project sensitivity. Please give priority to use MicroStation Local built-in 'Save as DWG'Function to perform high-precision matching and mount a regular layer comparison table (CSV) , Avoid using public conversion websites for high-volume conversions. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

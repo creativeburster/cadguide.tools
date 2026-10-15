@@ -210,7 +210,7 @@ function MobileCapabilityWidget({ slug }: { slug: string }) {
     'android': {
       title: "Android Touch & Stylus CAD Capability Matrix",
       points: [
-        "Precise Active Stylus: Leverage high-precision active stylus support (e.g., Samsung S-Pen) for precise vector drafting and dimension edits instead of finger touch.",
+        "Precise Active Stylus: Leverage high-precision active stylus support (e.g. Samsung S-Pen) for precise vector drafting and dimension edits instead of finger touch.",
         "Field Collaboration: Use Android devices as active redlining spaces on site, modifying 2D DWGs and adding photo attachments directly to layers.",
         "Hardware Requirements: Prioritize devices with high color accuracy (100% sRGB/DCI-P3) and at least 8GB of RAM for fluid 3D model rotations."
       ]

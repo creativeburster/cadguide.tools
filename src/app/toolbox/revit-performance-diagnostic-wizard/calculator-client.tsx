@@ -70,7 +70,7 @@ const ISSUES: Issue[] = [
       },
       {
         step: 'Use Linked View filtering',
-        detail: 'When linking a Revit model, select "Linked View" instead of "All". Choose only the specific view needed (e.g., structural plan). This dramatically reduces the geometry Revit must process.',
+        detail: 'When linking a Revit model, select "Linked View" instead of "All". Choose only the specific view needed (e.g. structural plan). This dramatically reduces the geometry Revit must process.',
       },
     ],
   },

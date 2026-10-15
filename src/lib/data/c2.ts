@@ -4846,7 +4846,7 @@ export const c2Tools: Tool[] = [
   slug: "mechcad",
   logo_url: "/logos/mechcad.svg",
   short_desc: "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-  description: "MECHCAD 2026 is a robust parametric 3D mechanical CAD system developed by Mechatronics Designed Co., Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with collision analysis, kinematic motion simulation, and associative 2D drawing generation. With direct SolidWorks part/assembly import and integrated 2.5D/3D CAM toolpath generation, it provides an independent, perpetual-license engineering solution without forced cloud subscriptions.",
+  description: "MECHCAD 2026 is a robust parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with collision analysis, kinematic motion simulation, and associative 2D drawing generation. With direct SolidWorks part/assembly import and integrated 2.5D/3D CAM toolpath generation, it provides an independent, perpetual-license engineering solution without forced cloud subscriptions.",
   category_id: "c2",
   pricing_type: "Perpetual",
   starting_price: 950,
@@ -4893,7 +4893,7 @@ export const c2Tools: Tool[] = [
   faqs: [
     {
       q: "What is MECHCAD 2026?",
-      a: "MECHCAD 2026 is a professional Windows 3D parametric mechanical CAD suite developed by Mechatronics Designed Co., Ltd. (MET) in Thailand, featuring solid modeling, assembly design, kinematic motion simulation, and integrated CAM toolpath generation."
+      a: "MECHCAD 2026 is a professional Windows 3D parametric mechanical CAD suite developed by Mechatronics Designed Co. Ltd. (MET) in Thailand, featuring solid modeling, assembly design, kinematic motion simulation, and integrated CAM toolpath generation."
     },
     {
       q: "What are the differences between MECHCAD Standard, Expert, and Premium editions?",
@@ -4944,7 +4944,7 @@ export const c2Tools: Tool[] = [
       ]
     }
   ],
-  alternatives: ["solidworks", "inventor", "solid-edge", "onshape", "alibre-design", "ironcad"],
+  alternatives: ["solidworks", "autodesk-inventor", "solid-edge", "onshape", "alibre-design", "zw3d"],
   last_updated: "2026-10-14",
   file_formats_in: ["STEP", "STP", "IGES", "IGS", "SLDPRT", "SLDASM", "SAT", "DWG", "DXF", "STL", "OBJ"],
   file_formats_out: ["STEP", "STP", "IGES", "SAT", "STL", "OBJ", "DWG", "DXF", "PDF", "GCODE"]

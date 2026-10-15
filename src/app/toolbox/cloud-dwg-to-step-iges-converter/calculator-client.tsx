@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Prefer STEP format",
-    "desc": "STEP The format has more perfect solid assembly structure information than IGES., And it can accurately lock the color of the part and the topological sewing (Sewing) of the surface. "
+    "desc": "STEP The format has more perfect solid assembly structure information than IGES. And it can accurately lock the color of the part and the topological sewing (Sewing) of the surface. "
   },
   {
     "title": "Check for tolerance drift",

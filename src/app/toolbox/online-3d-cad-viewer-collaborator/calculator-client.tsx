@@ -116,7 +116,7 @@ export default function Online3dCadViewerCollaboratorClient() {
       title="Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="Share complex 3D CAD assemblies with clients or teams (such as CATIA, NX, SolidWorks, STEP) or Revit BIM When models are reviewed on-site, ordinary users often do not have professional modeling software on their computers.. Leveraging a cloud-based WebGL 3D browser, Large models can be loaded without installation and can be rotated online, Sectioning, red line marking and dimension measurement. "
+      painPointDesc="Share complex 3D CAD assemblies with clients or teams (such as CATIA, NX, SolidWorks, STEP) or Revit BIM When models are reviewed on-site, ordinary users often do not have professional modeling software on their computers. Leveraging a cloud-based WebGL 3D browser, Large models can be loaded without installation and can be rotated online, Sectioning, red line marking and dimension measurement. "
       riskWarning="3D CAD The assembly contains all machining dimensions of the components, internal topology and engineering assembly links. Uploading these files directly to unknown cloud photo viewing websites is easy to encounter'Data Dehydration Interception' and Commercial Theft. It is recommended to use a high-end collaboration platform with enterprise security permission control and dynamic watermark encryption. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "English interface, some settings are biased toward geeky customization"
     ],
     "officialUrl": "https://www.safer-networking.org/",
-    "verdict": "An anti-privacy spying tool produced by a well-established system optimization and security manufacturer, suitable for senior administrators to optimize the privacy defense of the entire machine.. "
+    "verdict": "An anti-privacy spying tool produced by a well-established system optimization and security manufacturer, suitable for senior administrators to optimize the privacy defense of the entire machine. "
   }
 ];
 const BEST_PRACTICES = [
@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "Why does CAD prompt after the ban?'Unable to verify your license status'? ",
-    "answer": "This means that you mistakenly entered Autodesk's official cloud license verification server (e.g. Named-User Single-user login authentication) is also blocked.. Please check the hosts list, Move identity-related domain names out. "
+    "answer": "This means that you mistakenly entered Autodesk's official cloud license verification server (e.g. Named-User Single-user login authentication) is also blocked. Please check the hosts list, Move identity-related domain names out. "
   }
 ];
 
@@ -116,8 +116,8 @@ export default function CloudCadTelemetryBlockerWizardClient() {
       title="Enterprise CAD Telemetry Privacy Configuration Portal"
       subtitle="Direct navigation to objective in-depth telemetry-privacy and network-isolation tooling. "
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="Commercial CAD software (Such as AutoCAD, SolidWorks, Revit) will silently collect user usage habits in the background, Computer MAC address and network IP node, and via a hidden telemetry service (Telemetry Services) Regularly upload to the official server. This not only often causes the system to freeze for unknown reasons., It also raises data-privacy concerns under corporate policies such as GDPR."
-      riskWarning="The Telemetry Blocking Wizard is only used as a technical reference for personal and enterprise IT to securely isolate networks and reduce bandwidth usage.. Please use within the authorization compliance boundaries of your enterprise IT department. The Windows Firewall blocking rules and hosts Documentation should not be used to counter legitimate genuine license compliance audits. "
+      painPointDesc="Commercial CAD software (Such as AutoCAD, SolidWorks, Revit) will silently collect user usage habits in the background, Computer MAC address and network IP node, and via a hidden telemetry service (Telemetry Services) Regularly upload to the official server. This not only often causes the system to freeze for unknown reasons. It also raises data-privacy concerns under corporate policies such as GDPR."
+      riskWarning="The Telemetry Blocking Wizard is only used as a technical reference for personal and enterprise IT to securely isolate networks and reduce bandwidth usage. Please use within the authorization compliance boundaries of your enterprise IT department. The Windows Firewall blocking rules and hosts Documentation should not be used to counter legitimate genuine license compliance audits. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

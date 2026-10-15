@@ -63,7 +63,7 @@ const TIPS = [
   },
   {
     title: 'F5 updates cells in Workbench',
-    content: 'In the ANSYS Workbench project schematic, press F5 to update a selected cell (e.g., re-mesh after geometry changes). Right-click a cell and select Update for the same action. This is the most frequently used shortcut in FEA workflows.'
+    content: 'In the ANSYS Workbench project schematic, press F5 to update a selected cell (e.g. re-mesh after geometry changes). Right-click a cell and select Update for the same action. This is the most frequently used shortcut in FEA workflows.'
   },
 ];
 

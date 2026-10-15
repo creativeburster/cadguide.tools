@@ -61,7 +61,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     title: 'Hole-basis vs Shaft-basis system',
-    content: 'The hole-basis system (H holes) is preferred because hole tolerances are harder to adjust — they require reamers or boring bars. The shaft-basis system (h shafts) is used when a standard shaft diameter must be maintained, e.g., with bought-in shafting or when multiple parts mount on one shaft.'
+    content: 'The hole-basis system (H holes) is preferred because hole tolerances are harder to adjust — they require reamers or boring bars. The shaft-basis system (h shafts) is used when a standard shaft diameter must be maintained, e.g. with bought-in shafting or when multiple parts mount on one shaft.'
   },
   {
     title: 'Reading a fit specification',

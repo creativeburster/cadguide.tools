@@ -4,7 +4,7 @@ import OnlineDwgVersionDowngraderCloudClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Best Online DWG Version Converter & Downgrader | CADGuide.tools',
-  description: 'Benchmark and compare tools to downgrade AutoCAD DWG version code (e.g., AC1032 to AC1027). Learn how to open unsupported drawings.',
+  description: 'Benchmark and compare tools to downgrade AutoCAD DWG version code (e.g. AC1032 to AC1027). Learn how to open unsupported drawings.',
   path: '/toolbox/online-dwg-version-downgrader-cloud',
 });
 

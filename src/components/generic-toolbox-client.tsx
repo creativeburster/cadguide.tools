@@ -865,7 +865,7 @@ const TROUBLESHOOT_DATASETS: Record<string, {
         title: 'Verify Licensing Daemon Status on Server & Client',
         cmd: 'lmutil lmstat -a -c @<server_ip>',
         desc: 'Inspect license manager daemon process and active feature checkout counts.',
-        detail: 'Run lmutil lmstat on the client or server. Verify whether the vendor daemon (e.g., adskflex, SW_D, ugslmd) is UP and serving licenses on the specified port.'
+        detail: 'Run lmutil lmstat on the client or server. Verify whether the vendor daemon (e.g. adskflex, SW_D, ugslmd) is UP and serving licenses on the specified port.'
       },
       {
         step: 2,

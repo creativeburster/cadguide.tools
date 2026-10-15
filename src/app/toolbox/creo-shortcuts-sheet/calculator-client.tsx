@@ -63,7 +63,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     "title": "Reset the default 3D perspective with one click (Ctrl+D)",
-    "content": "When you feel dizzy rotating inside the three-dimensional assembly, just press `Ctrl + D`, Creo The perspective will be aligned and returned to the standard three-dimensional axonometric view in one second, making it easy to reposition.. "
+    "content": "When you feel dizzy rotating inside the three-dimensional assembly, just press `Ctrl + D`, Creo The perspective will be aligned and returned to the standard three-dimensional axonometric view in one second, making it easy to reposition. "
   }
 ];
 

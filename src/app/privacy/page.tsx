@@ -39,7 +39,7 @@ function PrivacyBody() {
             <p>We may collect information in the following ways:</p>
             <ul>
               <li><strong>Direct Information:</strong> When you use our &quot;Contact Us&quot; form or subscribe to our newsletter, we collect your name and email address.</li>
-              <li><strong>Usage Data:</strong> We automatically collect information about your interactions with our site (e.g., pages visited, software clicked, search queries).</li>
+              <li><strong>Usage Data:</strong> We automatically collect information about your interactions with our site (e.g. pages visited, software clicked, search queries).</li>
               <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience and analyze site traffic.</li>
             </ul>
 

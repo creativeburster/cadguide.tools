@@ -48,7 +48,7 @@ const SHORTCUTS = [
   { keys: 'Class B (geo)', command: 'Geometrical — Medium', category: 'usage', description: 'ISO 2768-2 geometrical class B corresponds to medium tolerances. Default for general engineering. Equivalent to m class for linear.' },
   { keys: 'Class C (geo)', command: 'Geometrical — Coarse', category: 'usage', description: 'ISO 2768-2 geometrical class C corresponds to coarse tolerances. Used for structural and non-critical parts. Equivalent to c class for linear.' },
   { keys: 'Class D (geo)', command: 'Geometrical — Very Coarse', category: 'usage', description: 'ISO 2768-2 geometrical class D corresponds to very coarse tolerances. Used for castings, forgings, and rough fabrications. Equivalent to v class for linear.' },
-  { keys: 'When to specify', command: 'Individual > General', category: 'usage', description: 'General tolerances apply ONLY when no individual tolerance is indicated. If a dimension has its own tolerance (e.g., 50±0.01), the individual tolerance takes precedence. General tolerances cover the rest.' },
+  { keys: 'When to specify', command: 'Individual > General', category: 'usage', description: 'General tolerances apply ONLY when no individual tolerance is indicated. If a dimension has its own tolerance (e.g. 50±0.01), the individual tolerance takes precedence. General tolerances cover the rest.' },
   { keys: 'New vs old', command: 'ISO 2768 replaces DIN 7168', category: 'usage', description: 'ISO 2768 superseded DIN 7168. The old German standard used the same f/m/c/g classes (g = very coarse, now v in ISO). Many European drawings still reference DIN 7168 — values are identical.' },
 ];
 

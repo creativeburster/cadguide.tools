@@ -33,7 +33,7 @@ const SHORTCUTS = [
     "keys": "MB2 + Click MB1",
     "command": "Zoom (Zoom)",
     "category": "mouse",
-    "description": "Hold down the middle button and click the left button, Then drag the mouse up and down to achieve smooth zooming with infinite focal length.. "
+    "description": "Hold down the middle button and click the left button, Then drag the mouse up and down to achieve smooth zooming with infinite focal length. "
   },
   {
     "keys": "C",
@@ -63,7 +63,7 @@ const SHORTCUTS = [
 const TIPS = [
   {
     "title": "CATIA The magic zoom operation of the three-button mouse",
-    "content": "CATIA The viewing angle zoom is different from ordinary CAD wheel scrolling.: First press and hold the `middle button` without loosening, then press quickly `Left click, then move the mouse up and down, You can achieve extremely sensitive macro focus zooming, eliminating the lag caused by frequent scrolling.. "
+    "content": "CATIA The viewing angle zoom is different from ordinary CAD wheel scrolling.: First press and hold the `middle button` without loosening, then press quickly `Left click, then move the mouse up and down, You can achieve extremely sensitive macro focus zooming, eliminating the lag caused by frequent scrolling. "
   }
 ];
 

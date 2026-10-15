@@ -47,7 +47,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-indigo-600',
     badgeAccent: 'bg-indigo-100 text-indigo-700',
     bgMuted: 'bg-indigo-950/5 border-indigo-500/10',
-    expertAdvice: 'Solver Benchmarking & Parallelization: When validating CAE tools for finite element analysis (FEA) or computational fluid dynamics (CFD), the licensing model\'s approach to CPU core counts is critical. Standard licenses often cap solvers at 4 or 8 cores; scale-up to high-performance computing (HPC) clusters requires parallel solver packs. Ensure your workstation features high memory bandwidth (e.g., octa-channel DDR5) and ECC memory to avoid bit-flips during multi-day iterative non-linear solver runs. For GPU-accelerated solvers, check if double-precision (FP64) compute is required, as standard gaming cards are heavily throttled here.',
+    expertAdvice: 'Solver Benchmarking & Parallelization: When validating CAE tools for finite element analysis (FEA) or computational fluid dynamics (CFD), the licensing model\'s approach to CPU core counts is critical. Standard licenses often cap solvers at 4 or 8 cores; scale-up to high-performance computing (HPC) clusters requires parallel solver packs. Ensure your workstation features high memory bandwidth (e.g. octa-channel DDR5) and ECC memory to avoid bit-flips during multi-day iterative non-linear solver runs. For GPU-accelerated solvers, check if double-precision (FP64) compute is required, as standard gaming cards are heavily throttled here.',
   },
   cam: {
     archetype: 'precision-fabrication',
@@ -58,7 +58,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-amber-700',
     badgeAccent: 'bg-amber-100 text-amber-800',
     bgMuted: 'bg-amber-950/5 border-amber-500/10',
-    expertAdvice: 'CNC Post-Processor Verification Protocol: A CAM package is only as reliable as its post-processors. Never run auto-generated G-code directly on a multi-axis CNC machine without verifying the specific post-processor library. Professional shops should demand certified post-processors for standard controllers (e.g., Fanuc, Haas, Heidenhain, Sinumerik). Run initial programs in \'dry run\' mode with rapid speeds dialed down and Z-axis offsets applied above the stock. Ensure the tool path simulation supports native G-code backplotting (simulating the actual G-code output) rather than just the internal CL (cutter location) data.',
+    expertAdvice: 'CNC Post-Processor Verification Protocol: A CAM package is only as reliable as its post-processors. Never run auto-generated G-code directly on a multi-axis CNC machine without verifying the specific post-processor library. Professional shops should demand certified post-processors for standard controllers (e.g. Fanuc, Haas, Heidenhain, Sinumerik). Run initial programs in \'dry run\' mode with rapid speeds dialed down and Z-axis offsets applied above the stock. Ensure the tool path simulation supports native G-code backplotting (simulating the actual G-code output) rather than just the internal CL (cutter location) data.',
   },
   '3d-printing': {
     archetype: 'precision-fabrication',
@@ -91,7 +91,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-stone-700',
     badgeAccent: 'bg-stone-200 text-stone-800',
     bgMuted: 'bg-stone-900/5 border-stone-500/15',
-    expertAdvice: 'Subsurface Modeling & Geodetic Coordinate Systems: Geotechnical and hydraulic CAD workflows must handle structural interaction with highly non-linear materials (soil and rock). Before placing retaining walls, bridge abutments, or earth dams, establish a strict geodetic coordinate system (e.g., UTM or state plane grids). Always verify soil-structure interface parameters using finite element or limit equilibrium solvers (e.g., Plaxis, GeoStudio). Ensure borehole DICOM/CSV imports are dynamically linked to the 3D surface model to update excavation cut-and-fill volumes as new geological data arrives.',
+    expertAdvice: 'Subsurface Modeling & Geodetic Coordinate Systems: Geotechnical and hydraulic CAD workflows must handle structural interaction with highly non-linear materials (soil and rock). Before placing retaining walls, bridge abutments, or earth dams, establish a strict geodetic coordinate system (e.g. UTM or state plane grids). Always verify soil-structure interface parameters using finite element or limit equilibrium solvers (e.g. Plaxis, GeoStudio). Ensure borehole DICOM/CSV imports are dynamically linked to the 3D surface model to update excavation cut-and-fill volumes as new geological data arrives.',
   },
   aerospace: {
     archetype: 'scientific-high-computation',
@@ -157,7 +157,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-blue-600',
     badgeAccent: 'bg-blue-100 text-blue-700',
     bgMuted: 'bg-blue-950/5 border-blue-500/10',
-    expertAdvice: '5D BIM Quantities & 2D Vector PDF Processing: In pre-construction bidding, takeoff speed and precision make the difference between profit and loss. When processing 2D blueprints, utilize vector-based PDF tools that snap directly to drawing geometry rather than raster files which introduce measurement drift. For 3D BIM-based takeoffs, establish strict object naming standards (e.g., OmniClass or UniFormat). This allows QTO engines to automatically query material properties (such as concrete volumes or structural steel weight) and map them directly to line items in your estimation database.',
+    expertAdvice: '5D BIM Quantities & 2D Vector PDF Processing: In pre-construction bidding, takeoff speed and precision make the difference between profit and loss. When processing 2D blueprints, utilize vector-based PDF tools that snap directly to drawing geometry rather than raster files which introduce measurement drift. For 3D BIM-based takeoffs, establish strict object naming standards (e.g. OmniClass or UniFormat). This allows QTO engines to automatically query material properties (such as concrete volumes or structural steel weight) and map them directly to line items in your estimation database.',
   },
   'piping-pipeline': {
     archetype: 'scientific-high-computation',
@@ -168,7 +168,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-teal-700',
     badgeAccent: 'bg-teal-100 text-teal-800',
     bgMuted: 'bg-teal-950/5 border-teal-500/10',
-    expertAdvice: 'Smart P&ID Integration & Piping Stress Analysis: Piping design in process industries is not just about routing pipes—it is a database-driven process. Ensure your piping CAD tool maintains a bi-directional dynamic link with the process piping and instrumentation diagram (P&ID). If a valve size is changed on the schematic, the 3D model should flag a mismatch. For high-temperature or high-pressure piping networks, run thermal expansion stress analysis (e.g., Caesar II) using exported CAD geometries to prevent nozzle load failures on pumps and pressure vessels.',
+    expertAdvice: 'Smart P&ID Integration & Piping Stress Analysis: Piping design in process industries is not just about routing pipes—it is a database-driven process. Ensure your piping CAD tool maintains a bi-directional dynamic link with the process piping and instrumentation diagram (P&ID). If a valve size is changed on the schematic, the 3D model should flag a mismatch. For high-temperature or high-pressure piping networks, run thermal expansion stress analysis (e.g. Caesar II) using exported CAD geometries to prevent nozzle load failures on pumps and pressure vessels.',
   },
   'reverse-engineering': {
     archetype: 'precision-fabrication',
@@ -212,7 +212,7 @@ const SECTOR_STYLES: Record<string, SectorStyle> = {
     textAccent: 'text-fuchsia-700',
     badgeAccent: 'bg-fuchsia-100 text-fuchsia-800',
     bgMuted: 'bg-fuchsia-950/5 border-fuchsia-500/10',
-    expertAdvice: 'Database-Driven Plant Coordination & Clash Detection: Petrochemical megaprojects involve coordinating millions of objects across multiple engineering disciplines. The 3D model must run on a database-driven multi-user architecture to prevent data corruption. Establish a daily automated clash detection routine (e.g., in Navisworks or similar) that scans for physical interferences between piping, structural steel, electrical trays, and equipment maintenance clearances. Always reserve dedicated spatial envelopes for pipe removal, valve access, and pump maintenance.',
+    expertAdvice: 'Database-Driven Plant Coordination & Clash Detection: Petrochemical megaprojects involve coordinating millions of objects across multiple engineering disciplines. The 3D model must run on a database-driven multi-user architecture to prevent data corruption. Establish a daily automated clash detection routine (e.g. in Navisworks or similar) that scans for physical interferences between piping, structural steel, electrical trays, and equipment maintenance clearances. Always reserve dedicated spatial envelopes for pipe removal, valve access, and pump maintenance.',
   },
 };
 

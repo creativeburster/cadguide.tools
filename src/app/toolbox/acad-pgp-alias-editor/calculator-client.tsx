@@ -845,7 +845,7 @@ export default function AcadPgpEditorClient() {
           <div className="py-6 flex flex-col gap-6">
             <div>
               <h3 className="text-slate-800 font-bold text-lg">Select a basic development preset</h3>
-              <p className="text-base text-slate-400 mt-1">You can load the factory default alias libraries of major CAD platforms with one click here., Use this as a blueprint for secondary customization. </p>
+              <p className="text-base text-slate-400 mt-1">You can load the factory default alias libraries of major CAD platforms with one click here. Use this as a blueprint for secondary customization. </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between gap-4">
@@ -1014,7 +1014,7 @@ export default function AcadPgpEditorClient() {
               1. Directly overload the REINIT mechanism from the command line
             </h4>
             <p>
-              After modifying and replacing `acad.pgp`, You<b>don&apos;t need it at all</b>Close and restart the CAD software. Just use AutoCAD / Haochen CAD Enter <b>`REINIT`</b> on the command line, and in the pop-up&quot;Check &quot;Reinitialize&quot; in the small dialog box. <b>&quot;PGP File&quot;</b> option and OK, The software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately.. 
+              After modifying and replacing `acad.pgp`, You<b>don&apos;t need it at all</b>Close and restart the CAD software. Just use AutoCAD / Haochen CAD Enter <b>`REINIT`</b> on the command line, and in the pop-up&quot;Check &quot;Reinitialize&quot; in the small dialog box. <b>&quot;PGP File&quot;</b> option and OK, The software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately. 
             </p>
           </div>
           <div>
@@ -1023,7 +1023,7 @@ export default function AcadPgpEditorClient() {
               2. Alias conflicts and priority override rules
             </h4>
             <p>
-              If the same alias is defined multiple times in a PGP file (For example, the previous line defines `C, *CIRCLE`, and the next line defines `C, *COPY`) , CAD and will not crash. Its internal read logic follows <b>&quot;Post-override-precede&quot;</b> rule. In order to ensure that your drawing cleaning and command line experience is refreshing enough and free of garbage, it is recommended to use conflict checking to eliminate duplicate and redundant items.. 
+              If the same alias is defined multiple times in a PGP file (For example, the previous line defines `C, *CIRCLE`, and the next line defines `C, *COPY`) , CAD and will not crash. Its internal read logic follows <b>&quot;Post-override-precede&quot;</b> rule. In order to ensure that your drawing cleaning and command line experience is refreshing enough and free of garbage, it is recommended to use conflict checking to eliminate duplicate and redundant items. 
             </p>
           </div>
           <div>
@@ -1032,7 +1032,7 @@ export default function AcadPgpEditorClient() {
               3. External command extension fields
             </h4>
             <p>
-              PGP In addition to defining keyboard shortcut aliases, the file can also define external systems Shell command (such as calling Windows Notepad, running calculator, etc.) , The syntax format is `[command], [System Shell execution path], [Flag/Flag]`. This editor is dedicated to the core Command Purified and filtered, only the most critical graphics drawing commands are compiled and downloaded.. 
+              PGP In addition to defining keyboard shortcut aliases, the file can also define external systems Shell command (such as calling Windows Notepad, running calculator, etc.) , The syntax format is `[command], [System Shell execution path], [Flag/Flag]`. This editor is dedicated to the core Command Purified and filtered, only the most critical graphics drawing commands are compiled and downloaded. 
             </p>
           </div>
         </div>

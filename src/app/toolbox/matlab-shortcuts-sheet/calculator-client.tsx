@@ -79,7 +79,7 @@ const TIPS = [
   },
   {
     title: 'Up arrow recalls command history',
-    content: 'In the Command Window, press Up Arrow to scroll through previous commands. Type a few characters first, then press Up Arrow to filter by prefix — e.g., type "plot" then Up to find all previous plot commands. This is one of the fastest ways to re-run commands.'
+    content: 'In the Command Window, press Up Arrow to scroll through previous commands. Type a few characters first, then press Up Arrow to filter by prefix — e.g. type "plot" then Up to find all previous plot commands. This is one of the fastest ways to re-run commands.'
   },
 ];
 

@@ -189,7 +189,7 @@ pause`;
                 />
                 <div>
                   <span className="text-base font-bold text-slate-800">Deep comprehensive cleaning (Purge All)</span>
-                  <p className="text-sm text-slate-400 leading-normal mt-0.5">In addition to Regapp, also eliminate other redundant unused layers in the drawing., Block and text styles. </p>
+                  <p className="text-sm text-slate-400 leading-normal mt-0.5">In addition to Regapp, also eliminate other redundant unused layers in the drawing. Block and text styles. </p>
                 </div>
               </label>
 
@@ -420,7 +420,7 @@ pause`;
               1. What is Regapp spam? 
             </h4>
             <p>
-              `Regapp` (Registered Application) Is used by AutoCAD to identify external application extended entity data (Xdata) the underlying registry. When you use 3D BIM Software map, may contain complex Tianzheng, When drawing a 3D entity plug-in, a large number of registered application records will be written to the bottom layer of the drawing.. Even if the plug-in has been uninstalled, these dictionary data will still be**Inherited from generation to generation and split into each associated external reference (Xref) or copied geometry**, resulting in meaningless self-inflation of drawings. 
+              `Regapp` (Registered Application) Is used by AutoCAD to identify external application extended entity data (Xdata) the underlying registry. When you use 3D BIM Software map, may contain complex Tianzheng, When drawing a 3D entity plug-in, a large number of registered application records will be written to the bottom layer of the drawing. Even if the plug-in has been uninstalled, these dictionary data will still be**Inherited from generation to generation and split into each associated external reference (Xref) or copied geometry**, resulting in meaningless self-inflation of drawings. 
             </p>
           </div>
           <div>

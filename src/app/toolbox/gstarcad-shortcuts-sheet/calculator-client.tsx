@@ -71,7 +71,7 @@ const TIPS = [
   },
   {
     title: 'Classic workspace menu shortcuts',
-    content: 'In GstarCAD Classic workspace, menu items have underlined letters (e.g., New has N underlined). Press Alt + the underlined letter to quickly access menu commands without using the mouse.'
+    content: 'In GstarCAD Classic workspace, menu items have underlined letters (e.g. New has N underlined). Press Alt + the underlined letter to quickly access menu commands without using the mouse.'
   },
 ];
 

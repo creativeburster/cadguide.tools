@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "The software interface is old, and the commercial version requires payment"
     ],
     "officialUrl": "https://anydwg.com/",
-    "verdict": "A well-established conversion gadget that supports two-way one-click conversion, Speed and batch performance have been tested by engineering and are stable and efficient.. "
+    "verdict": "A well-established conversion gadget that supports two-way one-click conversion, Speed and batch performance have been tested by engineering and are stable and efficient. "
   },
   {
     "name": "Convertio (Universal Cloud Converter)",
@@ -116,8 +116,8 @@ export default function OnlineDwgToDxfBatchConverterClient() {
       title="Online Bulk DWG / DXF Format Mutual Converter"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
-      painPointDesc="For non-AutoCAD drawing systems that need to be imported, For users of laser cutting software or custom script reading, DWG, a closed-source binary database, is very difficult to extract directly.. Batch and secure conversion to the open ASCII/Binary DXF format is a universal bridge to solve industry interconnections. However, during conversion, text encoding damage and line style failure are very frequent.. "
-      riskWarning="Batch conversion represents the centralized processing of drawing assets, and it is very easy to be intercepted by external crawling tools in server logs when packaging and uploading.. For drawing clusters involving sensitive trade secrets, online public cloud conversion should be circumvented entirely, It is recommended to automatically call it locally by writing a local AutoLISP script command. ODA File converter."
+      painPointDesc="For non-AutoCAD drawing systems that need to be imported, For users of laser cutting software or custom script reading, DWG, a closed-source binary database, is very difficult to extract directly. Batch and secure conversion to the open ASCII/Binary DXF format is a universal bridge to solve industry interconnections. However, during conversion, text encoding damage and line style failure are very frequent. "
+      riskWarning="Batch conversion represents the centralized processing of drawing assets, and it is very easy to be intercepted by external crawling tools in server logs when packaging and uploading. For drawing clusters involving sensitive trade secrets, online public cloud conversion should be circumvented entirely, It is recommended to automatically call it locally by writing a local AutoLISP script command. ODA File converter."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

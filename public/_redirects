@@ -54,3 +54,7 @@
 /tools/3dstudio /tools/3dstudio-web-tools 301
 /alternatives/3dstudio /alternatives/3dstudio-web-tools 301
 /pricing/3dstudio /pricing/3dstudio-web-tools 301
+
+# 9. Methodology alias redirect
+/editorial-standards /about#methodology 301
+

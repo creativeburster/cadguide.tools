@@ -498,7 +498,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
               <div className="flex flex-col gap-6 flex-1">
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 1: Select your failure scenario</h3>
-                  <p className="text-lg text-slate-500 mt-1">Recommend corresponding troubleshooting entry points based on specific fault symptoms.. </p>
+                  <p className="text-lg text-slate-500 mt-1">Recommend corresponding troubleshooting entry points based on specific fault symptoms. </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-auto">
@@ -544,7 +544,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     </div>
                     <h4 className="text-slate-800 font-bold text-xl">Server port changes (IT administrator)</h4>
                     <p className="text-base text-slate-500 mt-2 leading-relaxed">
-                      The server-side lmgrd service can start and run normally.. But the client always reports errors occasionally and needs to restart the service repeatedly., And because the Vendor plug-in port changes randomly, the firewall rules frequently fail.. 
+                      The server-side lmgrd service can start and run normally. But the client always reports errors occasionally and needs to restart the service repeatedly. And because the Vendor plug-in port changes randomly, the firewall rules frequently fail. 
                     </p>
                     <div className="mt-4 flex items-center gap-1 text-base font-black text-violet-600">
                       Lock server port
@@ -885,7 +885,7 @@ ${psPortTestVendor}`}
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 5: Lock FLEXlm License Vendor Daemon Port</h3>
                   <p className="text-lg text-slate-500 mt-1">
-                    This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , Because the administrator did not open the random port in the firewall, the connection will fail again.. 
+                    This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , Because the administrator did not open the random port in the firewall, the connection will fail again. 
                   </p>
                 </div>
 
@@ -966,7 +966,7 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
             <div>
               <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why do both ports trigger -15 errors?? </h3>
               <p>
-                Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, The main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout., Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
+                Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, The main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout. Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
               </p>
             </div>
             <div>

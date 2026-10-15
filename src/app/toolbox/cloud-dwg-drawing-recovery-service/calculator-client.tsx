@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Use INSERT block placement method",
-    "desc": "If RECOVER fails, Try entering the `-INSERT` command in a blank drawing, Add damaged drawings as 'external blocks''Forcing it into a new image can often bypass header damage.. "
+    "desc": "If RECOVER fails, Try entering the `-INSERT` command in a blank drawing, Add damaged drawings as 'external blocks''Forcing it into a new image can often bypass header damage. "
   },
   {
     "title": "Running PURGE locally",
@@ -102,11 +102,11 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "'What are the common causes of invalid graphics file?? ",
-    "answer": "This is usually due to a power outage or CAD crashing abnormally., Binary truncation caused by incomplete save, or using a lower version CAD Forcefully read undowngraded high version drawings. "
+    "answer": "This is usually due to a power outage or CAD crashing abnormally. Binary truncation caused by incomplete save, or using a lower version CAD Forcefully read undowngraded high version drawings. "
   },
   {
     "question": "Why after repair, the color of all my drawing layers turned to white? ",
-    "answer": "This means that the layer table database (Layer Table) metadata in the drawing has completely collapsed.. In order to preserve the geometric line segments, the repair algorithm forcibly mounts them on 0 layer, you need to manually rearrange the layer. "
+    "answer": "This means that the layer table database (Layer Table) metadata in the drawing has completely collapsed. In order to preserve the geometric line segments, the repair algorithm forcibly mounts them on 0 layer, you need to manually rearrange the layer. "
   }
 ];
 
@@ -117,7 +117,7 @@ export default function CloudDwgDrawingRecoveryServiceClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="Troubleshooting Wizard"
       painPointDesc="When you open a drawing, you encounter 'The graphic file is invalid' (Drawing file is not valid)'error, or CAD A crash while loading a specific tile often means DWG The internal database node or file header is severely damaged. Local built-in RECOVER (Fix) Command often fails, This is a time to evaluate efficient cloud or on-premises reconstruction services. "
-      riskWarning="Damage drawings often belong to ongoing projects and contain a large amount of core business and design information.. Do not easily upload confidential drawings to public restoration websites whose security is unknown. For core data, It is recommended to use a local physically isolated computer to run security repairs, or try to restore a temporary automatically saved backup file (.sv$) . "
+      riskWarning="Damage drawings often belong to ongoing projects and contain a large amount of core business and design information. Do not easily upload confidential drawings to public restoration websites whose security is unknown. For core data, It is recommended to use a local physically isolated computer to run security repairs, or try to restore a temporary automatically saved backup file (.sv$) . "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

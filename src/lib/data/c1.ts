@@ -3541,7 +3541,7 @@ export const c1Tools: Tool[] = [
   slug: "mcad",
   logo_url: "/logos/mcad.svg",
   short_desc: "Professional Windows 2D CAD drafting and DWG/DXF editor with built-in sheet nesting and CNC laser toolpaths.",
-  description: "MCAD 2026 is a professional Windows 2D drafting and DWG editor developed by Mechatronics Designed Co., Ltd. (MET) in Thailand for mechanical machine drawings, factory layouts, and electrical schematics. Serving as a cost-effective, perpetual AutoCAD LT alternative, MCAD works natively with standard DWG and DXF formats while providing familiar layer management, command line execution, object snaps, and drafting dimensions. Uniquely tailored for manufacturing shop floors, it includes built-in true-shape sheet nesting and direct G-code generation for laser, plasma, and CNC cutting.",
+  description: "MCAD 2026 is a professional Windows 2D drafting and DWG editor developed by Mechatronics Designed Co. Ltd. (MET) in Thailand for mechanical machine drawings, factory layouts, and electrical schematics. Serving as a cost-effective, perpetual AutoCAD LT alternative, MCAD works natively with standard DWG and DXF formats while providing familiar layer management, command line execution, object snaps, and drafting dimensions. Uniquely tailored for manufacturing shop floors, it includes built-in true-shape sheet nesting and direct G-code generation for laser, plasma, and CNC cutting.",
   country: "Thailand",
   category_id: "c1",
   pricing_type: "Subscription / Perpetual",
@@ -3581,7 +3581,7 @@ export const c1Tools: Tool[] = [
   faqs: [
     {
       q: "What is MCAD 2026?",
-      a: "MCAD 2026 is a professional Windows 2D drafting and DWG editing software suite developed by Mechatronics Designed Co., Ltd. (MET) in Thailand, designed for mechanical drawings, factory layouts, and CNC cutting preparation."
+      a: "MCAD 2026 is a professional Windows 2D drafting and DWG editing software suite developed by Mechatronics Designed Co. Ltd. (MET) in Thailand, designed for mechanical drawings, factory layouts, and CNC cutting preparation."
     },
     {
       q: "Can MCAD replace AutoCAD for 2D drafting?",
@@ -3620,7 +3620,7 @@ export const c1Tools: Tool[] = [
       is_popular: true
     }
   ],
-  alternatives: ["autocad", "draftsight", "zwcad", "brics-cad", "nano-cad"],
+  alternatives: ["autocad", "draftsight", "zwcad", "bricscad", "nanocad"],
   last_updated: "2026-10-14",
   file_formats_in: ["DWG", "DXF", "SVG", "PDF"],
   file_formats_out: ["DWG", "DXF", "SVG", "PDF", "GCODE"]

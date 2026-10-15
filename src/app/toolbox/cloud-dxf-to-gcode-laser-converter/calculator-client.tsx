@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Only for simulation, not provided DXF Convert G-Code service"
     ],
     "officialUrl": "https://ncviewer.com/",
-    "verdict": "Currently the best and most secure online tool path verification platform, It is recommended to perform a dry run simulation here before sending G-Code to the machine tool.. "
+    "verdict": "Currently the best and most secure online tool path verification platform, It is recommended to perform a dry run simulation here before sending G-Code to the machine tool. "
   },
   {
     "name": "Carbide Create (Lightweight tool path designer)",
@@ -116,8 +116,8 @@ export default function CloudDxfToGcodeLaserConverterClient() {
       title="Online DXF to CNC G-Code Path Planner"
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="Engineering & Design Calculator"
-      painPointDesc="In digital manufacturing and laser cutting, the 2D Convert vector DXF drawings to engraving machine, Readable by waterjet, plasma or laser cutters G-Code (Gcode) is the core link. The quality of cloud converters on the market varies, and unreasonable tool path calculations often lead to empty runs., Material burnt, tool impact or arc interpolation (G02/G03) Parsing error. "
-      riskWarning="Converted DXF outlines often represent precision sheet metal, Commercial designs such as mechanical transmission parts. When uploaded to a free third-party online converter, The drawings will be parsed and stored by the cloud server, which may leak geometric intellectual property rights.. For high-confidential part drawings, it is highly recommended to use local offline CNC Programming software (such as Fusion 360, Vectric, Carbide Create) Or open source offline converter. "
+      painPointDesc="In digital manufacturing and laser cutting, the 2D Convert vector DXF drawings to engraving machine, Readable by waterjet, plasma or laser cutters G-Code (Gcode) is the core link. The quality of cloud converters on the market varies, and unreasonable tool path calculations often lead to empty runs. Material burnt, tool impact or arc interpolation (G02/G03) Parsing error. "
+      riskWarning="Converted DXF outlines often represent precision sheet metal, Commercial designs such as mechanical transmission parts. When uploaded to a free third-party online converter, The drawings will be parsed and stored by the cloud server, which may leak geometric intellectual property rights. For high-confidential part drawings, it is highly recommended to use local offline CNC Programming software (such as Fusion 360, Vectric, Carbide Create) Or open source offline converter. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

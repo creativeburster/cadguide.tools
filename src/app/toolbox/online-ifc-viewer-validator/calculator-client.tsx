@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "IFC Schema error reporting 'Unknown Entity' What is the reason? ",
-    "answer": "This means that the export engine that generated the model wrote a custom proprietary component name that does not comply with the official buildingSmart specification.. You can set attribute remapping in the validator for filtering. "
+    "answer": "This means that the export engine that generated the model wrote a custom proprietary component name that does not comply with the official buildingSmart specification. You can set attribute remapping in the validator for filtering. "
   },
   {
     "question": "How to determine if a mesh in an IFC model is Watertight (Watertight) ? ",
@@ -117,7 +117,7 @@ export default function OnlineIfcViewerValidatorClient() {
       subtitle="Direct navigation to objective in-depth evaluation and anti-audit. "
       categoryLabel="File Parser & Converter"
       painPointDesc="In order to ensure that the BIM collaborative model enters the downstream cost, 100% compliance when analyzing energy consumption or delivering it for government filing buildingSmart Standardization, development and operation and maintenance personnel urgently need to IFC Model metadata dictionary (Data Dict), polyhedral geometry closure (Watertightness) and parent-child topology nesting relationship for automatic verification. "
-      riskWarning="IFC It is an aggregation of big data of the whole life cycle of construction. Inadvertent uploading to public picture viewing sites with data monitoring may expose the physical structure of the project.. Please give priority to using the security verification client certified by the buildingSmart standards organization., It is strictly prohibited to directly upload drawings of government secrets or military projects. "
+      riskWarning="IFC It is an aggregation of big data of the whole life cycle of construction. Inadvertent uploading to public picture viewing sites with data monitoring may expose the physical structure of the project. Please give priority to using the security verification client certified by the buildingSmart standards organization. It is strictly prohibited to directly upload drawings of government secrets or military projects. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

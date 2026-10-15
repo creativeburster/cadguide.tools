@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Requires online submission for partial verification"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "The official compliance scanning diagnostic assistant can accurately display which machines in the corporate network are in violation activation status.. "
+    "verdict": "The official compliance scanning diagnostic assistant can accurately display which machines in the corporate network are in violation activation status. "
   },
   {
     "name": "Enterprise SAM Checklist (Enterprise Software Asset Audit Checklist)",
@@ -102,11 +102,11 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "Copyright verification letter sent by the agent'Is it legally binding? ",
-    "answer": "Most regular letters are commercial purchase letters (Sales Pitch) sent by distribution agents, with the purpose of urging you to purchase genuine products.; However, if you receive a formal lawyer's letter from a law firm'Or an official letter containing an intranet detailed illegal MAC address evidence collection form, It indicates that the evidence collection has been completed and needs to be taken seriously and an intranet self-examination must be carried out.. "
+    "answer": "Most regular letters are commercial purchase letters (Sales Pitch) sent by distribution agents, with the purpose of urging you to purchase genuine products.; However, if you receive a formal lawyer's letter from a law firm'Or an official letter containing an intranet detailed illegal MAC address evidence collection form, It indicates that the evidence collection has been completed and needs to be taken seriously and an intranet self-examination must be carried out. "
   },
   {
     "question": "How did the agent know that our company was using pirated CAD?? ",
-    "answer": "When a local pirated CAD or plug-in is launched while connected to the Internet, The built-in telemetry module automatically records your public IP and computer MAC address, and sent back to the official compliance database. Once the public IP is matched, it is not in the company's list of genuine purchases., The order will be automatically dispatched to the local agent for follow-up. "
+    "answer": "When a local pirated CAD or plug-in is launched while connected to the Internet, The built-in telemetry module automatically records your public IP and computer MAC address, and sent back to the official compliance database. Once the public IP is matched, it is not in the company's list of genuine purchases. The order will be automatically dispatched to the local agent for follow-up. "
   }
 ];
 
@@ -116,8 +116,8 @@ export default function OnlineCadLicenseAuditShieldClient() {
       title="Enterprise CAD Software Asset Management (SAM) Self-Check Guide"
       subtitle="Direct navigation to objective in-depth SAM and telemetry-privacy tooling evaluations. "
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="Many enterprise IT departments often face problems due to individual employees downloading and installing cracked versions of software without permission., and unexpectedly received an Autodesk or SolidWorks The problem of legal copyright compliance audit letters sent by agents. This usually leads to high repurchase fines and litigation disputes. SAM Administrators need to complete self-examination and remediation before any letter arrives. "
-      riskWarning="Enterprise anti-piracy compliance self-examination must comply with national intellectual property laws and company SAM management boundaries. This guide only provides IT compliance white paper technical solutions for asset self-examination and limiting the monitoring of irrelevant domain names., Should not be used to cover up any known violations. Corporate legalization is the only legal path to long-term development. "
+      painPointDesc="Many enterprise IT departments often face problems due to individual employees downloading and installing cracked versions of software without permission. and unexpectedly received an Autodesk or SolidWorks The problem of legal copyright compliance audit letters sent by agents. This usually leads to high repurchase fines and litigation disputes. SAM Administrators need to complete self-examination and remediation before any letter arrives. "
+      riskWarning="Enterprise anti-piracy compliance self-examination must comply with national intellectual property laws and company SAM management boundaries. This guide only provides IT compliance white paper technical solutions for asset self-examination and limiting the monitoring of irrelevant domain names. Should not be used to cover up any known violations. Corporate legalization is the only legal path to long-term development. "
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

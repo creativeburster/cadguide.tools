@@ -129,7 +129,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         return caches.match(request).then((cached) => {
           if (cached) return cached;
-          throw new Error('No cache available');
+          return Response.error();
         });
       })
     );

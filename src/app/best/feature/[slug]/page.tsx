@@ -144,7 +144,7 @@ const FEATURE_CONTENTS: Record<string, FeatureContent> = {
       },
       {
         tech: 'Global Equations & Variables',
-        app: 'Using mathematical formulas (e.g., width = height * 1.5) to drive multiple model dimensions.',
+        app: 'Using mathematical formulas (e.g. width = height * 1.5) to drive multiple model dimensions.',
         benefit: 'Enables rapid configuration scaling and automatic family-of-parts adjustments.'
       },
       {
@@ -169,7 +169,7 @@ const FEATURE_CONTENTS: Record<string, FeatureContent> = {
     faqs: [
       {
         q: 'What is the main difference between parametric and direct modeling?',
-        a: 'Parametric modeling relies on a structured history tree and strict geometric relationships, meaning edits cascade down to update the whole model. Direct modeling (e.g., in Rhino or SketchUp) allows you to push/pull faces directly without history, offering higher organic freedom but less dimensional control.'
+        a: 'Parametric modeling relies on a structured history tree and strict geometric relationships, meaning edits cascade down to update the whole model. Direct modeling (e.g. in Rhino or SketchUp) allows you to push/pull faces directly without history, offering higher organic freedom but less dimensional control.'
       },
       {
         q: 'Does parametric modeling require a steep learning curve?',
@@ -309,7 +309,7 @@ const FEATURE_CONTENTS: Record<string, FeatureContent> = {
     faqs: [
       {
         q: 'What is the difference between topology optimization and generative design?',
-        a: 'Topology optimization starts with an existing human-made 3D design and shaves away material to meet stress requirements. Generative design uses advanced algorithms to explore hundreds of alternative design concepts simultaneously from scratch based on high-level goals (e.g., cost, material, and manufacturing constraints).'
+        a: 'Topology optimization starts with an existing human-made 3D design and shaves away material to meet stress requirements. Generative design uses advanced algorithms to explore hundreds of alternative design concepts simultaneously from scratch based on high-level goals (e.g. cost, material, and manufacturing constraints).'
       },
       {
         q: 'Do generative design computations require powerful local hardware?',
