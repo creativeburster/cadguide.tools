@@ -5289,6 +5289,38 @@
       ],
       "recommendedTools": [
         {
+          "name": "RVT Convert (Revit Downgrade & Version Audit)",
+          "badge": "Revit Native Downgrade",
+          "rating": 9.9,
+          "metrics": [
+            {
+              "name": "Parametric Preservation",
+              "score": 5
+            },
+            {
+              "name": "Format Support (RVT/RFA)",
+              "score": 4.9
+            },
+            {
+              "name": "Ease of Use",
+              "score": 5
+            }
+          ],
+          "pros": [
+            "Downgrades Revit 2024–2027 files to 2023 without stripping parametric family parameters or dimensions",
+            "Target 2023 format natively opens and upgrades in every modern Revit release (2023 to 2027)",
+            "Includes free batch Revit Version Checker with single-file and folder-wide audit"
+          ],
+          "cons": [
+            "Web-based cloud processing requires temporary file upload",
+            "Schema elements exclusive to newer releases (like specialized Toposolid sub-types) adapt to 2023 equivalents"
+          ],
+          "officialUrl": "https://rvtconvert.com/?utm_source=cadguide",
+          "affiliateUrl": null,
+          "pricing": "100% Free Online Service",
+          "verdict": "The premier solution when you need to share newer Revit files with colleagues on older releases without suffering the parametric geometry loss of an intermediate IFC export."
+        },
+        {
           "name": "Autodesk Viewer & Cloud Platform",
           "badge": "Official Cloud Portal",
           "rating": 9.8,
@@ -5391,6 +5423,10 @@
         {
           "question": "Can I open and inspect an IFC file without buying expensive software?",
           "answer": "Yes. Free tools like BIMcollab Zoom, open-source Bonsai (BlenderBIM), and Trimble Connect allow you to view 3D IFC models and inspect property sets with zero subscription fees."
+        },
+        {
+          "question": "Should I convert Revit to IFC, or downgrade to an earlier Revit version?",
+          "answer": "If you are exchanging building models with non-Autodesk platforms (like ArchiCAD, Vectorworks, or Solibri), IFC is the openBIM standard. However, if your recipient is also using Autodesk Revit but on an older version (e.g. Revit 2023 or 2024), exporting to IFC turns your parametric families into uneditable direct shapes. In that scenario, using a native downgrade tool like RVT Convert preserves native Revit parameters, schedules, and dimensions."
         }
       ],
       "relatedSlugs": [

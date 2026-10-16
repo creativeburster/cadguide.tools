@@ -191,6 +191,7 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "rhinogold": "rhinogold.jpg",
   "risa-3d": "risa-3d.jpg",
   "rootpro-cad": "rootpro-cad.png",
+  "rvt-convert": "rvt-convert.svg",
   "sap2000": "sap2000.png",
   "scia-engineer": "scia-engineer.png",
   "shapr3d": "shapr3d.png",

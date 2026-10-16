@@ -3543,4 +3543,95 @@ export const c3Tools: Tool[] = [
   ],
 
 },
+{
+  id: "t258",
+  name: "RVT Convert",
+  slug: "rvt-convert",
+  logo_url: "/logos/rvt-convert.svg",
+  short_desc: "Free online Revit file downgrade converter to save Revit 2024–2027 projects, families, and templates back to Revit 2023.",
+  description: "RVT Convert is a specialized, free browser-based BIM utility that solves Autodesk Revit's lack of backward compatibility. It converts Revit 2024, 2025, 2026, and 2027 project files (.rvt), family components (.rfa), and templates (.rte, .rft) back to Revit 2023 format. Because a Revit 2023 file natively opens and auto-upgrades in any release from Revit 2023 to 2027, users can freely exchange native parametric models across mismatched team versions without resorting to lossy IFC geometry transfers. The platform requires no account registration, provides temporary cloud processing with strict file retention policies, and includes a free Revit Version Checker and build number database.",
+  category_id: "c3",
+  pricing_type: "Free",
+  starting_price: 0,
+  price_period: "one-time",
+  version: "2026",
+  country: "United Kingdom",
+  platforms: ["Web"],
+  deployment_options: ["Cloud", "Web"],
+  license_types: ["Free"],
+  languages: ["English"],
+  industries: ["Architecture", "BIM & AEC", "Structural Engineering", "MEP Engineering", "Construction Management"],
+  core_features: [
+    "Online Revit version downgrade converting 2024, 2025, 2026, and 2027 files to Revit 2023 format",
+    "Full support for Revit project files (.rvt), family components (.rfa), project templates (.rte), and family templates (.rft)",
+    "Preserves native Revit parametric families, dimensions, schedules, and model constraints without IFC export loss",
+    "Free Revit Version Checker supporting single-file or whole-folder inspection with CSV batch report export",
+    "Comprehensive Revit build number lookup and update mapping table (2022 to 2027)",
+    "Zero registration or software installation required — works directly in any standard web browser"
+  ],
+  user_scales: ["Individuals", "Small Business", "BIM Coordinators", "Architecture Firms", "Enterprise"],
+  official_url: "https://rvtconvert.com/?utm_source=cadguide",
+  affiliate_url: null,
+  score: 4.7,
+  pros: [
+    "Solves Revit's long-standing 'saved in a later version' barrier without losing native parametric family elements",
+    "Universal Revit 2023 target format opens seamlessly in every modern release from 2023 to 2027",
+    "100% free with no account creation, credit cards, or trial watermarks",
+    "Includes powerful batch Revit Version Checker with whole-folder drag-and-drop and CSV export"
+  ],
+  cons: [
+    "Cloud-based processing requires uploading proprietary RVT/RFA model files over internet",
+    "Features exclusive to Revit 2024+ (such as specialized Toposolid sub-division properties or brand-new schema parameters) may adapt to closest 2023 equivalents",
+    "File size limits apply on free tier based on server processing capacity"
+  ],
+  tech_specs: {
+    engine: "Cloud-based Autodesk Revit headless translation engine with binary schema downgrade filters",
+    multicore: "Server-side distributed conversion clusters",
+    gpu_optimization: "Headless rendering and geometric data extraction",
+    standards: ["Autodesk Revit RVT 2023-2027", "Revit RFA", "Revit RTE/RFT", "openBIM IFC Reference Workflows"]
+  },
+  expert_verdict: "RVT Convert delivers the exact missing feature the global BIM community has demanded from Autodesk for over a decade: an effective, native Save-As-Older-Version workflow. By targeting Revit 2023, it enables seamless multi-firm coordination across mismatched Revit releases without gutting parametric BIM intelligence into dumb IFC meshes.",
+  faqs: [
+    {
+      q: "What is RVT Convert?",
+      a: "RVT Convert is a free web-based utility designed to downgrade Autodesk Revit project (.rvt), family (.rfa), and template (.rte/.rft) files from versions 2024, 2025, 2026, and 2027 back to Revit 2023."
+    },
+    {
+      q: "Why does RVT Convert downgrade specifically to Revit 2023?",
+      a: "Because Revit files are forward-compatible. A Revit 2023 file can be opened directly in Revit 2023, 2024, 2025, 2026, and 2027 (and automatically upgraded by Revit upon opening), allowing one single converted file to satisfy any recipient on a supported release."
+    },
+    {
+      q: "Does RVT Convert work on Revit families (.rfa)?",
+      a: "Yes. Both family components (.rfa) and family templates (.rft) can be downgraded to Revit 2023, allowing older Revit projects to load newly created manufacturer families without upgrade lockouts."
+    },
+    {
+      q: "How is this different from exporting to IFC?",
+      a: "IFC exports convert Revit elements into generic boundary representations and direct shapes, stripping native family parameters, sketch profiles, dynamic constraints, and schedule formulas. RVT Convert maintains native Revit schema geometry so elements remain editable."
+    },
+    {
+      q: "Is RVT Convert free to use?",
+      a: "Yes, RVT Convert is free to use with no account registration required. Server hosting and conversion infrastructure are supported by user community donations."
+    }
+  ],
+  pricing_tiers: [
+    {
+      name: "Free Online Service",
+      price: "$0",
+      period: "one-time",
+      features: [
+        "RVT project downgrade (2024-2027 to 2023)",
+        "RFA family component downgrade",
+        "Online Revit Version Checker",
+        "Folder batch version audit & CSV export",
+        "No account or credit card required"
+      ],
+      is_popular: true
+    }
+  ],
+  alternatives: ["revit", "archicad", "vectorworks", "bonsai-bim", "autodesk-viewer"],
+  last_updated: "2026-10-16",
+  file_formats_in: ["RVT", "RFA", "RTE", "RFT"],
+  file_formats_out: ["RVT", "RFA", "RTE", "RFT"]
+}
 ];
+

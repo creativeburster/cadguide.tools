@@ -4,6 +4,34 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
+    "name": "RVT Convert (Revit Version Downgrade & Audit)",
+    "rating": 9.9,
+    "metrics": [
+      {
+        "name": "Parametric Preservation",
+        "score": 5
+      },
+      {
+        "name": "Native RVT/RFA Support",
+        "score": 5
+      },
+      {
+        "name": "Ease of Use",
+        "score": 5
+      }
+    ],
+    "pros": [
+      "Converts Revit 2024-2027 files back to 2023 format without losing parametric family parameters",
+      "Avoids stripping geometry into dumb direct shapes unlike traditional intermediate IFC exports",
+      "Free browser-based tool with built-in batch Revit version checker"
+    ],
+    "cons": [
+      "Web upload required for cloud conversion processing"
+    ],
+    "officialUrl": "https://rvtconvert.com/?utm_source=cadguide",
+    "verdict": "The best solution when exchanging Revit files with teams on older versions. Preserves editable parametric BIM elements instead of lossy IFC geometry conversion."
+  },
+  {
     "name": "Revit Native IFC Exporter (Official open source plug-in)",
     "rating": 9.9,
     "metrics": [

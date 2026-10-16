@@ -3589,6 +3589,30 @@
     "country": "Thailand"
   },
   {
+    "id": "t258",
+    "name": "RVT Convert",
+    "slug": "rvt-convert",
+    "short_desc": "Free online Revit file downgrade converter to save Revit 2024–2027 projects, families, and templates back to Revit 2023.",
+    "score": 4.7,
+    "logo_url": "/logos/rvt-convert.svg",
+    "official_url": "https://rvtconvert.com/?utm_source=cadguide",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "BIM & AEC",
+      "Structural Engineering",
+      "MEP Engineering",
+      "Construction Management"
+    ],
+    "features": [
+      "bim-integration",
+      "cloud-collaboration"
+    ],
+    "country": "United Kingdom"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",

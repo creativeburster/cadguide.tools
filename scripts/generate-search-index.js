@@ -55,6 +55,7 @@ const FEATURE_MAP = {
   "librecad": ["drafting-detailing"],
   "mcad": ["drafting-detailing", "sheet-metal"],
   "mechcad": ["parametric-modeling", "integrated-cam", "simulation-fea", "sheet-metal"],
+  "rvt-convert": ["bim-integration", "cloud-collaboration"],
 };
 
 function parseTsFile(filePath, varName, regexToReplace) {
