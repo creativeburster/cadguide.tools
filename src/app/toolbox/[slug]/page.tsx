@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
         'offline 3d converter'
       ],
       alternates: {
-        canonical: `https://cadguide.tools/toolbox/${pair.slug}`,
+        canonical: `https://cadguide.tools/convert/${pair.slug}`,
       },
       openGraph: {
         title: pair.metaTitle,
         description: pair.metaDescription,
-        url: `https://cadguide.tools/toolbox/${pair.slug}`,
+        url: `https://cadguide.tools/convert/${pair.slug}`,
         type: 'website',
       },
     };
@@ -70,9 +70,8 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cadguide.tools' },
-            { '@type': 'ListItem', position: 2, name: 'Toolbox', item: 'https://cadguide.tools/toolbox' },
-            { '@type': 'ListItem', position: 3, name: '3D Converters', item: 'https://cadguide.tools/toolbox/convert' },
-            { '@type': 'ListItem', position: 4, name: pair.title, item: `https://cadguide.tools/toolbox/${pair.slug}` }
+            { '@type': 'ListItem', position: 2, name: '3D Converters', item: 'https://cadguide.tools/convert' },
+            { '@type': 'ListItem', position: 3, name: pair.title, item: `https://cadguide.tools/convert/${pair.slug}` }
           ]
         },
         {
@@ -107,9 +106,7 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
             <nav className="flex items-center gap-2 text-xs font-semibold text-slate-600" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
               <span>/</span>
-              <Link href="/toolbox" className="hover:text-blue-600 transition-colors">Toolbox</Link>
-              <span>/</span>
-              <Link href="/toolbox/convert" className="hover:text-blue-600 transition-colors">3D Converters</Link>
+              <Link href="/convert" className="hover:text-blue-600 transition-colors">3D Converters</Link>
               <span>/</span>
               <span className="text-slate-900 font-bold">{pair.title}</span>
             </nav>

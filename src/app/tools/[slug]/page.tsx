@@ -1,7 +1,7 @@
 import { tools, categories } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import { ToolDetailClient } from '@/components/tool-detail-client';
-import { comparisonPairs } from '@/lib/seo-content';
+import { comparisonPairs, alternativesFor } from '@/lib/seo-content';
 import {
   toolTitle,
   toolDescription,
@@ -72,9 +72,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   const category = categories.find((c) => c.id === tool.category_id);
 
-  const alternativeTools = tool.alternatives
-    ? tool.alternatives.map((s) => tools.find((t) => t.slug === s)).filter(Boolean)
-    : tools.filter((t) => t.category_id === tool.category_id && t.id !== tool.id).slice(0, 3);
+  const alternativeTools = alternativesFor(tool).slice(0, 3);
 
   // Build all the JSON-LD payloads on the server so they SSR into the
   // initial HTML — crawlers don't run JS, so this must not be deferred to

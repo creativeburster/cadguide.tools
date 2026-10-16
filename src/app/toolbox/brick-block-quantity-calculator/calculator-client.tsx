@@ -6,11 +6,11 @@ import { Settings, Zap, Info } from 'lucide-react';
 
 type UnitType = 'modular' | 'king' | 'cmu' | 'custom';
 
-const PRESETS: Record<UnitType, { name: string; length: number; height: number }> = {
-  modular: { name: 'Modular Brick', length: 190, height: 57 },
-  king: { name: 'King Brick', length: 240, height: 70 },
-  cmu: { name: 'CMU Block', length: 390, height: 190 },
-  custom: { name: 'Custom', length: 200, height: 100 },
+const PRESETS: Record<UnitType, { name: string; length: number; height: number; width: number }> = {
+  modular: { name: 'Modular Brick', length: 190, height: 57, width: 90 },
+  king: { name: 'King Brick', length: 240, height: 70, width: 115 },
+  cmu: { name: 'CMU Block', length: 390, height: 190, width: 190 },
+  custom: { name: 'Custom', length: 200, height: 100, width: 100 },
 };
 
 export default function BrickBlockQuantityCalculatorClient() {
@@ -34,18 +34,23 @@ export default function BrickBlockQuantityCalculatorClient() {
     const oa = parseFloat(openingArea) || 0;
     const wf = parseFloat(wasteFactor) || 0;
 
-    if (!wl || !wh || !bl || !bh || wl <= 0 || wh <= 0 || bl <= 0 || bh <= 0) return null;
+    if (!wl || !wh || !bl || !bh || !wt || wl <= 0 || wh <= 0 || bl <= 0 || bh <= 0 || wt <= 0) return null;
 
-    const wallArea = (wl * wh) / 1_000_000 - oa / 1_000_000;
+    const wallArea = Math.max(0, (wl * wh) / 1_000_000 - oa / 1_000_000);
     const brickWithJoint = bl + jt;
     const heightWithJoint = bh + jt;
     const bricksPerM2 = (1000 / brickWithJoint) * (1000 / heightWithJoint);
-    const totalBricks = Math.ceil(wallArea * bricksPerM2 * wt * (1 + wf / 100));
+    const netBricks = wallArea * bricksPerM2 * wt;
+    const totalBricks = Math.ceil(netBricks * (1 + wf / 100));
 
-    const brickVolume = (bl * bh * (brickLength as unknown as number) * 0.001) / 1_000_000;
-    const wallVolumeM3 = wallArea * wt * 0.1;
-    const mortarVolumeM3 = Math.max(0, wallVolumeM3 - totalBricks * (bl * bh * 75 * 1e-9));
-    const cementBags = Math.ceil(mortarVolumeM3 * 5);
+    // Unit depth (wythe thickness) in mm from preset or proportional estimate
+    const unitWidthMm = PRESETS[unitType]?.width ?? 100;
+    const wytheThicknessM = (unitWidthMm + (wt > 1 ? jt : 0)) / 1000;
+    const wallVolumeM3 = wallArea * wt * wytheThicknessM;
+    const netBrickVolumeM3 = netBricks * (bl * bh * unitWidthMm * 1e-9);
+    const netMortarVolumeM3 = Math.max(0, wallVolumeM3 - netBrickVolumeM3);
+    const mortarVolumeM3 = netMortarVolumeM3 * (1 + wf / 100);
+    const cementBags = Math.ceil(mortarVolumeM3 * 6.5);
 
     return {
       wallArea,
@@ -54,7 +59,7 @@ export default function BrickBlockQuantityCalculatorClient() {
       mortarVolumeM3,
       cementBags,
     };
-  }, [wallLength, wallHeight, wallThickness, jointThickness, brickLength, brickHeight, openingArea, wasteFactor]);
+  }, [wallLength, wallHeight, wallThickness, jointThickness, unitType, brickLength, brickHeight, openingArea, wasteFactor]);
 
   const formatNum = (n: number) => {
     if (isNaN(n) || !isFinite(n)) return '—';

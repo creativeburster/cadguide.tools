@@ -490,15 +490,30 @@ export function alternativesFor(tool: Tool): Tool[] {
     const resolved = tool.alternatives
       .map((slug) => getToolBySlug(slug))
       .filter((t): t is Tool => Boolean(t))
-      .filter((t) => !t.discontinued);
+      .filter((t) => !t.discontinued && t.slug !== tool.slug);
     if (resolved.length >= 2) {
       return resolved.slice(0, ALTERNATIVES_LIMIT);
     }
   }
-  // Fallback: same-category tools sorted by score, excluding self.
+  // Fallback: same-category tools sorted by sub-discipline industry/feature overlap first, then score.
+  const targetTokens = new Set(
+    [...(tool.industries ?? []), ...(tool.core_features ?? [])].map((s) => s.toLowerCase())
+  );
+  function overlapCount(candidate: Tool): number {
+    if (targetTokens.size === 0) return 0;
+    const candTokens = [...(candidate.industries ?? []), ...(candidate.core_features ?? [])];
+    return candTokens.reduce(
+      (acc: number, token: string) => acc + (targetTokens.has(token.toLowerCase()) ? 1 : 0),
+      0
+    );
+  }
   return tools
     .filter((t) => !t.discontinued && t.category_id === tool.category_id && t.slug !== tool.slug)
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => {
+      const overlapDiff = overlapCount(b) - overlapCount(a);
+      if (overlapDiff !== 0) return overlapDiff;
+      return b.score - a.score;
+    })
     .slice(0, ALTERNATIVES_LIMIT);
 }
 
