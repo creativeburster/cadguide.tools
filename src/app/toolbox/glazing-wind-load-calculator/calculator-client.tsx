@@ -54,7 +54,7 @@ export default function GlazingWindLoadCalculatorClient() {
     const stressMpa = (beta * (q / 1e6) * Math.pow(a, 2)) / Math.pow(t, 2);
 
     // Allowable stress per ASTM E1300:
-    // Annealed = 19.3 MPa, Heat-Strengthened = 38.6 MPa, Fully Tempered = 68.9 MPa
+    // Annealed = 19.3 MPa, Heat-Strengthened = 38.6 MPa, fully Tempered = 68.9 MPa
     let allowableStress = 68.9;
     if (glassType === 'annealed') allowableStress = 19.3;
     if (glassType === 'heat-strengthened') allowableStress = 38.6;

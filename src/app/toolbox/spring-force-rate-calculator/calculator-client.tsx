@@ -335,8 +335,8 @@ Generated via CADGuide.tools`;
                 <strong className="font-black">Spring Index Warning</strong>
                 <p className="mt-0.5 text-amber-700">
                   The current spin ratio (D/d) is {spring.springIndex.toFixed(1)}. Mechanical engineering standards specify that the convolution ratio should be between 4 and 12 between. 
-                  {spring.springIndex < 4 && ' If the winding ratio is too small, it means that the spring coil is too tight and the bending stress of the steel wire is too large. Extremely difficult to roll and manufacture. '}
-                  {spring.springIndex > 12 && ' If the winding ratio is too large, it means that the ring diameter is too loose, and the spring will tend to tilt during operation. It is easy to cause instability and distortion when compressed. '}
+                  {spring.springIndex < 4 && ' If the winding ratio is too small, it means that the spring coil is too tight and the bending stress of the steel wire is too large. Extremely difficult to roll and manufacture.'}
+                  {spring.springIndex > 12 && ' If the winding ratio is too large, it means that the ring diameter is too loose, and the spring will tend to tilt during operation. It is easy to cause instability and distortion when compressed.'}
                 </p>
               </div>
             </div>
@@ -389,7 +389,7 @@ Generated via CADGuide.tools`;
           </div>
 
           <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-655">
-            * Physical simulation: The spring spiral is recalculated in real time based on the relationship between free height and actual displacement. The physical gathering of the circle distance vividly demonstrates the enrichment of stiffness reaction and stress. When the stress exceeds the limit, The wire spiral is red (safety hazard area) . 
+            * Physical simulation: The spring spiral is recalculated in real time based on the relationship between free height and actual displacement. The physical gathering of the circle distance vividly demonstrates the enrichment of stiffness reaction and stress. When the stress exceeds the limit, the wire spiral is red (safety hazard area) . 
           </p>
         </div>
       </div>

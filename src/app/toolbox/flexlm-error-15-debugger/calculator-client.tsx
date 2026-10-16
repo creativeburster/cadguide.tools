@@ -76,7 +76,7 @@ try {
     $IP = [System.Net.Dns]::GetHostAddresses($Server) | Select-Object -ExpandProperty IPAddressToString -First 1
     Write-Host "✓ Domain name resolution successful: $Server ➔ $IP" -ForegroundColor Green
 } catch {
-    Write-Warning "✗ Domain name resolution failed! Unable to resolve $Server Resolves to IP address. Please check DNS configuration or modify C:\\Windows\\System32\\drivers\\etc\\hosts File. "
+    Write-Warning "✗ Domain name resolution failed! Unable to resolve $Server Resolves to IP address. Please check DNS configuration or modify C:\\Windows\\System32\\drivers\\etc\\hosts File."
 }
 
 # 2. Check environment variables
@@ -114,13 +114,13 @@ function Test-Port {
     $wait = $connect.AsyncWaitHandle.WaitOne(2000, $false)
     if (-not $wait) {
         $tcp.Close()
-        Write-Warning "✗ Port $p ($name) cannot be connected! Timed out or blocked by firewall. "
+        Write-Warning "✗ Port $p ($name) cannot be connected! Timed out or blocked by firewall."
     } else {
         try {
             $tcp.EndConnect($connect) | Out-Null
-            Write-Host "✓ Port $p ($name) connected successfully! The path is clear. " -ForegroundColor Green
+            Write-Host "✓ Port $p ($name) connected successfully! The path is clear." -ForegroundColor Green
         } catch {
-            Write-Warning "✗ Connection refused for port $p ($name)! The service is not started. "
+            Write-Warning "✗ Connection refused for port $p ($name)! The service is not started."
         } finally {
             $tcp.Close()
         }
@@ -580,7 +580,7 @@ Write-Host "--- End of diagnosis ---" -ForegroundColor Cyan
                     {`# 1. Verify host is online and response delays
 ${psPingCommand}
 
-# 2. Verify whether DNS domain name resolution is normal, Is the correct server IP returned?
+# 2. Verify whether DNS domain name resolution is normal, is the correct server IP returned?
 ${psNslookupCommand}`}
                   </pre>
                 </div>
@@ -633,7 +633,7 @@ ${psNslookupCommand}`}
                       <p>The client cannot translate hostname <span className="font-mono bg-red-100/80 px-1 rounded font-black">{serverAddress}</span> to IP Address. This is a network basic error. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>Please check that the server name is spelled correctly. </li>
-                        <li><b>Temporary fix</b>: If you know the server IP, You can directly write the IP when configuring environment variables on the client, for example <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
+                        <li><b>Temporary fix</b>: If you know the server IP, you can directly write the IP when configuring environment variables on the client, for example <span className="font-mono bg-red-100/80 px-1 rounded font-black">27000@192.168.1.100</span>. </li>
                         <li><b>Permanent fix</b>: On the client side <span className="font-mono bg-red-100/80 px-1 rounded">C:\Windows\System32\drivers\etc\hosts</span> Append a line to the file: <br />
                           <span className="font-mono bg-slate-900 text-slate-200 px-2 py-0.5 rounded text-sm mt-1 inline-block select-all">192.168.1.100  {serverAddress}</span>
                         </li>
@@ -650,8 +650,8 @@ ${psNslookupCommand}`}
                       <p>It means there is a problem with the physical connection between the client and the server, or the other party has enabled ICMP Ban Ping Policy. </p>
                       <ul className="list-disc list-inside mt-2 space-y-1">
                         <li>If it is a wireless network, please check whether it is on the same intranet of the company/LAN segment. </li>
-                        <li>When accessing via VPN, Please verify that the VPN connection is not dropped, And whether the routing policy includes the server network segment. </li>
-                        <li>If it is determined that the physical path is not broken and is only disabled Ping, You can directly click on<b>&quot;Ping is smooth and IP Correct&quot;</b>forcibly jump to the next test TCP Port reachability. </li>
+                        <li>When accessing via VPN, please verify that the VPN connection is not dropped, and whether the routing policy includes the server network segment. </li>
+                        <li>If it is determined that the physical path is not broken and is only disabled Ping, you can directly click on <b>&quot;Ping is smooth and IP Correct&quot;</b> forcibly jump to the next test TCP Port reachability. </li>
                       </ul>
                     </div>
                   </div>
@@ -775,7 +775,7 @@ ${psPortTestVendor}`}
                         </li>
                         <li>
                           <b>Open ports on the server firewall (IT staff perform) </b>: <br />
-                          If the service is started but still unavailable, it means that Windows Defender Firewall inbound rule interception. Please set the PowerShell China as<b>administrator</b>Execute the following command to quickly release: 
+                          If the service is started but still unavailable, it means that Windows Defender Firewall inbound rule interception. Please set the PowerShell China as <b>administrator</b> Execute the following command to quickly release: 
                           <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-sm mt-2 relative select-all flex justify-between items-start gap-4">
                             <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{serverFirewallCmd}</pre>
                             <button
@@ -788,7 +788,7 @@ ${psPortTestVendor}`}
                         </li>
                         <li>
                           <b>Lock Vendor Port</b>: <br />
-                          If lmgrd port (27000) Passed, and Vendor The port is blocked, usually because there is no LIC The Vendor port is locked in the file, This causes the port to drift randomly every time the service is restarted. Please refer to this tool.<b>&quot;Step Five&quot;</b>Lock the Port. 
+                          If lmgrd port (27000) Passed, and Vendor The port is blocked, usually because there is no LIC The Vendor port is locked in the file, this causes the port to drift randomly every time the service is restarted. Please refer to this tool.<b>&quot;Step Five&quot;</b> Lock the Port. 
                         </li>
                       </ul>
                     </div>
@@ -844,7 +844,7 @@ ${psPortTestVendor}`}
                 {/* Write recommended environment variables */}
                 <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 text-blue-900">
                   <h4 className="font-bold text-base mb-2 flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-blue-600" /> Repair configuration: write environment variables with one click</h4>
-                  <p className="text-base leading-relaxed mb-3">If it is found that it is not configured or misconfigured, please use<b>As an administrator</b>run the following command to bind the current server to the system environment variable (No need to restart, effective immediately) : </p>
+                  <p className="text-base leading-relaxed mb-3">If it is found that it is not configured or misconfigured, please use <b>As an administrator</b> run the following command to bind the current server to the system environment variable (No need to restart, effective immediately) : </p>
                   
                   <div className="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-sm select-all flex justify-between items-start gap-4">
                     <pre className="overflow-x-auto whitespace-pre-wrap flex-1">{clientRepairCmd}</pre>
@@ -858,7 +858,7 @@ ${psPortTestVendor}`}
                   <ul className="list-disc list-inside text-sm text-blue-800/80 mt-3 space-y-1">
                     <li>For Autodesk/AutoCAD series: The environment variable is named <span className="font-mono bg-blue-100 px-1 rounded">ADSKFLEX_LICENSE_FILE</span></li>
                     <li>For SolidWorks: The environment variable name is usually <span className="font-mono bg-blue-100 px-1 rounded">SW_D_LICENSE_FILE</span> Or specify <span className="font-mono bg-blue-100 px-1 rounded">25734@server directly in the settings</span></li>
-                    <li>If you are using a non-standard main port, you need to bring the port prefix, For example: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> or <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
+                    <li>If you are using a non-standard main port, you need to bring the port prefix, for example: <span className="font-mono bg-blue-100 px-1 font-bold">@{serverAddress}</span> or <span className="font-mono bg-blue-100 px-1 font-bold">{lmgrdPort}@{serverAddress}</span>. </li>
                   </ul>
                 </div>
 
@@ -885,7 +885,7 @@ ${psPortTestVendor}`}
                 <div>
                   <h3 className="text-slate-800 font-black text-xl tracking-tight">Step 5: Lock FLEXlm License Vendor Daemon Port</h3>
                   <p className="text-lg text-slate-500 mt-1">
-                    This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , Because the administrator did not open the random port in the firewall, the connection will fail again. 
+                    This is the core method to cure Error -15. If you do not explicitly lock the port, every time the server restarts, Vendor The ports are all randomized (such as changing to 62890) , because the administrator did not open the random port in the firewall, the connection will fail again. 
                   </p>
                 </div>
 
@@ -966,13 +966,13 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
             <div>
               <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why do both ports trigger -15 errors?? </h3>
               <p>
-                Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, The main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout. Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
+                Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, the main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout. Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
               </p>
             </div>
             <div>
               <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why hostname/DNS resolution is the first step in troubleshooting? </h3>
               <p>
-                CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system&apos;s DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, Or the client cannot find the corresponding record in the host Hosts, The connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, Using IP directly is often the fastest temporary alternative. 
+                CAD The client starts up and queries environment variables such as `ADSKFLEX_LICENSE_FILE=@my-server`) When, first call the operating system&apos;s DNS Parse the module to obtain the intranet of `my-server` IP. If WINS/DNS services are not deployed on the network, or the client cannot find the corresponding record in the host Hosts, the connection will be interrupted directly during the domain name resolution stage. If such a failure occurs, using IP directly is often the fastest temporary alternative. 
               </p>
             </div>
           </div>

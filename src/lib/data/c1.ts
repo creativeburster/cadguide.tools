@@ -1181,7 +1181,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GstarCAD?",
-        "a": "The closest alternatives to GstarCAD are AutoCAD, MicroStation, BricsCAD. AutoCAD (starting at $260/mo) competes directly on core Manufacturing workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD. ZWCAD (starting at $899 one-time) competes directly on core Manufacturing workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1248,6 +1248,12 @@ export const c1Tools: Tool[] = [
           }
         ]
       }
+    ],
+    "alternatives": [
+      "zwcad",
+      "autocad",
+      "bricscad",
+      "progecad"
     ]
   },
   {
@@ -1441,7 +1447,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QCAD?",
-        "a": "The closest alternatives to QCAD are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to QCAD are LibreCAD, nanoCAD, DraftSight. LibreCAD (free and open-source) competes directly on core Architecture workflows, while nanoCAD (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1522,6 +1528,12 @@ export const c1Tools: Tool[] = [
       "Open Source",
       "Scripting",
       "DXF/DWG Support"
+    ],
+    "alternatives": [
+      "librecad",
+      "nanocad",
+      "draftsight",
+      "freecad"
     ]
   },
   {
@@ -1729,7 +1741,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nanoCAD?",
-        "a": "The closest alternatives to nanoCAD are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Mechanical Engineering workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, ZWCAD. DraftSight (starting at $299/yr) competes directly on core Mechanical Engineering workflows, while BricsCAD (starting at $345/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1826,6 +1838,12 @@ export const c1Tools: Tool[] = [
       "3D Modeling",
       "Multi-Language API",
       "Parametric Design"
+    ],
+    "alternatives": [
+      "draftsight",
+      "bricscad",
+      "zwcad",
+      "gstarcad"
     ]
   },
   {
@@ -2021,7 +2039,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to progeCAD Professional?",
-        "a": "The closest alternatives to progeCAD Professional are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD. GstarCAD (starting at $499 one-time) competes directly on core Architecture workflows, while ZWCAD (starting at $899 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2109,6 +2127,12 @@ export const c1Tools: Tool[] = [
       "2D Drafting",
       "3D Modeling",
       "Block Libraries"
+    ],
+    "alternatives": [
+      "gstarcad",
+      "zwcad",
+      "bricscad",
+      "draftsight"
     ]
   },
   {
@@ -2298,7 +2322,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LibreCAD?",
-        "a": "The closest alternatives to LibreCAD are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Education workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to LibreCAD are QCAD, FreeCAD, nanoCAD. QCAD (available with a free tier) competes directly on core Education workflows, while FreeCAD (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2392,6 +2416,12 @@ export const c1Tools: Tool[] = [
       "Cross-Platform",
       "Command-Line Input",
       "Lightweight"
+    ],
+    "alternatives": [
+      "qcad",
+      "freecad",
+      "nanocad",
+      "solvespace"
     ]
   },
   {
@@ -2462,7 +2492,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TurboCAD Platinum?",
-        "a": "The closest alternatives to TurboCAD Platinum are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to TurboCAD Platinum are CorelCAD, progeCAD Professional, DraftSight. CorelCAD (starting at $499 one-time) competes directly on core Architecture workflows, while progeCAD Professional (starting at $399 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2500,6 +2530,12 @@ export const c1Tools: Tool[] = [
       "STL",
       "PDF",
       "SVG"
+    ],
+    "alternatives": [
+      "corelcad",
+      "progecad",
+      "draftsight",
+      "bricscad"
     ]
   },
   {
@@ -2691,7 +2727,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CorelCAD?",
-        "a": "The closest alternatives to CorelCAD are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CorelCAD are DraftSight, TurboCAD Platinum, ARES Commander. DraftSight (starting at $299/yr) competes directly on core Architecture workflows, while TurboCAD Platinum (starting at $999 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2793,6 +2829,12 @@ export const c1Tools: Tool[] = [
       "3D Solid Modeling",
       "Cross-Platform",
       "Perpetual Licensing"
+    ],
+    "alternatives": [
+      "draftsight",
+      "turbocad",
+      "ares-commander",
+      "bricscad"
     ]
   },
   {
@@ -2985,7 +3027,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAXA CAD?",
-        "a": "The closest alternatives to CAXA CAD are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Mechanical Engineering workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD. ZWCAD (starting at $899 one-time) competes directly on core Mechanical Engineering workflows, while GstarCAD (starting at $499 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3057,6 +3099,12 @@ export const c1Tools: Tool[] = [
       "Mechanical Design",
       "Electrical Schematics",
       "BOM Generation"
+    ],
+    "alternatives": [
+      "zwcad",
+      "gstarcad",
+      "autocad",
+      "bricscad"
     ]
   },
   {
@@ -3130,7 +3178,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ARES Commander?",
-        "a": "The closest alternatives to ARES Commander are AutoCAD, MicroStation, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while MicroStation is favored for infrastructure cad. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ARES Commander are DraftSight, CorelCAD, BricsCAD. DraftSight (starting at $299/yr) competes directly on core Architecture workflows, while CorelCAD (starting at $499 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3186,12 +3234,30 @@ export const c1Tools: Tool[] = [
       "SVG",
       "PNG",
       "JPG"
+    ],
+    "alternatives": [
+      "draftsight",
+      "corelcad",
+      "bricscad",
+      "autocad"
     ]
   },
   {
     "id": "t252",
     "name": "AutoCAD LT",
     "slug": "autocad-lt",
+    "tech_specs": {
+      "engine": "AutoCAD 2D Drafting Engine (RealDWG)",
+      "multicore": "Single-Core Primary (Multi-thread 2D Regen & Pan/Zoom)",
+      "gpu_optimization": "DirectX 11 / DirectX 12 & Metal 2D Hardware Acceleration",
+      "standards": [
+        "DWG (AC1032)",
+        "DXF",
+        "DWT",
+        "DWF",
+        "PDF"
+      ]
+    },
     "logo_url": "/logos/autocad.svg",
     "short_desc": "Autodesk's 2D-only drafting subscription at a fraction of full AutoCAD pricing.",
     "description": "AutoCAD LT is Autodesk's 2D drafting and documentation product, built on the same DWG engine as full AutoCAD. It delivers the complete 2D drafting toolset — annotation, blocks, layers, plotting, and DWG/DXF compatibility — while dropping 3D modeling, visualization, and the specialized toolsets, which is what brings the subscription down to roughly a quarter of full AutoCAD pricing. The 2027 release adds Geometry Cleanup tools, Smart Blocks improvements, and the Autodesk Assistant AI, and every LT subscription includes the AutoCAD web and mobile apps.",

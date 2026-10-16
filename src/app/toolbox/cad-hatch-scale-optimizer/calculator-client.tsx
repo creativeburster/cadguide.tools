@@ -56,28 +56,28 @@ export default function HatchScaleClient() {
         level: 'danger',
         label: 'MAXHATCH Too Dense',
         color: 'text-red-500 border-red-500/20 bg-red-500/10',
-        desc: 'The density of line segments is extremely high! Easy to trigger AutoCAD MAXHATCH limits (default 100,000 lines), this will cause the drawing to be saved and stuck. Viewport crashes or casts to Solid fill. '
+        desc: 'The density of line segments is extremely high! Easy to trigger AutoCAD MAXHATCH limits (default 100,000 lines), this will cause the drawing to be saved and stuck. Viewport crashes or casts to Solid fill.'
       };
     } else if (ratio < 0.35) {
       return {
         level: 'warning',
         label: 'Relatively Dense',
         color: 'text-amber-500 border-amber-500/20 bg-amber-500/10',
-        desc: 'Dense padding can cause severe artifacts when printing or viewport zooming CPU Rendering is lagging and file size will expand. It is recommended to increase the proportion appropriately. '
+        desc: 'Dense padding can cause severe artifacts when printing or viewport zooming CPU Rendering is lagging and file size will expand. It is recommended to increase the proportion appropriately.'
       };
     } else if (ratio > 8.0) {
       return {
         level: 'empty',
         label: 'The pattern is too sparse or blank (Too Sparse)',
         color: 'text-sky-500 border-sky-500/20 bg-sky-500/10',
-        desc: 'The proportion of the fill pattern is too large and the spacing between fill lines is too wide. May appear blank in the viewport (no fill lines visible)) , Giving the impression that the padding is missing. '
+        desc: 'The proportion of the fill pattern is too large and the spacing between fill lines is too wide. May appear blank in the viewport (no fill lines visible)) , Giving the impression that the padding is missing.'
       };
     } else {
       return {
         level: 'safe',
         label: 'Perfect Match (Optimal Density)',
         color: 'text-emerald-500 border-emerald-500/20 bg-emerald-500/10',
-        desc: 'The current proportion conforms to the printing proportion of the drawing, and the line width and rendering performance of the drawing are optimal. '
+        desc: 'The current proportion conforms to the printing proportion of the drawing, and the line width and rendering performance of the drawing are optimal.'
       };
     }
   }, [hatchScale, recommendation]);
@@ -417,7 +417,7 @@ Generated via CADGuide.tools`;
           <div className="text-[9.5px] text-slate-400 leading-relaxed mt-4 flex items-start gap-2 print:text-slate-600">
             <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>Crash principle tips: </strong>In AutoCAD in if Hatch If the ratio is too small, the software will automatically trigger `HPMAXLINES` (Default 100000) Alerts. To prevent crashes, CAD will force the fill to render as solid (solid color), or cause a computational deadlock lasting several minutes. Be sure to use the safety bounds provided by the optimizer! 
+              <strong>Crash principle tips: </strong> In AutoCAD in if Hatch If the ratio is too small, the software will automatically trigger `HPMAXLINES` (Default 100000) Alerts. To prevent crashes, CAD will force the fill to render as solid (solid color), or cause a computational deadlock lasting several minutes. Be sure to use the safety bounds provided by the optimizer! 
             </span>
           </div>
         </div>

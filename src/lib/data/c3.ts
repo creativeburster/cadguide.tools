@@ -1177,7 +1177,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Civil 3D?",
-        "a": "The closest alternatives to Civil 3D are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Civil Engineering workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey. OpenRoads Designer (starting at $4,000/yr) competes directly on core Civil Engineering workflows, while Infraworks (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1288,6 +1288,12 @@ export const c3Tools: Tool[] = [
       "KMZ",
       "PDF",
       "NWC"
+    ],
+    "alternatives": [
+      "openroads-designer",
+      "infraworks",
+      "carlson-survey",
+      "microstation"
     ]
   },
   {
@@ -1382,7 +1388,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vectorworks Landmark?",
-        "a": "The closest alternatives to Vectorworks Landmark are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Landscape Architecture workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks. Vectorworks (starting at $1,530/yr) competes directly on core Landscape Architecture workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1417,6 +1423,12 @@ export const c3Tools: Tool[] = [
       "3D PDF",
       "KML",
       "SVG"
+    ],
+    "alternatives": [
+      "vectorworks",
+      "civil-3d",
+      "infraworks",
+      "sketchup"
     ]
   },
   {
@@ -1487,7 +1499,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allplan?",
-        "a": "The closest alternatives to Allplan are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Architecture workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures. Revit (starting at $380/mo) competes directly on core Architecture workflows, while ArchiCAD (starting at $201/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1596,6 +1608,12 @@ export const c3Tools: Tool[] = [
       "3D PDF",
       "BVBS",
       "U3D"
+    ],
+    "alternatives": [
+      "revit",
+      "archicad",
+      "tekla-structures",
+      "planbar"
     ]
   },
   {
@@ -1664,7 +1682,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenRoads Designer?",
-        "a": "The closest alternatives to OpenRoads Designer are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Civil Engineering workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation. Civil 3D (starting at $2,870/yr) competes directly on core Civil Engineering workflows, while Infraworks (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1697,6 +1715,12 @@ export const c3Tools: Tool[] = [
       "IFC",
       "i-model",
       "3D PDF"
+    ],
+    "alternatives": [
+      "civil-3d",
+      "infraworks",
+      "microstation",
+      "carlson-survey"
     ]
   },
   {
@@ -1801,7 +1825,12 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "vertex-bd",
+      "tekla-structures",
+      "archicad",
+      "allplan"
+    ],
     "country": "Switzerland",
     "category_id": "c3",
     "pricing_type": "Perpetual",
@@ -1866,7 +1895,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to cadwork?",
-        "a": "The closest alternatives to cadwork are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Timber Construction workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to cadwork are Vertex BD, Tekla Structures, ArchiCAD. Vertex BD (available via custom enterprise quote) competes directly on core Timber Construction workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2001,7 +2030,12 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "dds-cad",
+      "revit",
+      "allplan",
+      "archicad"
+    ],
     "country": "Finland",
     "category_id": "c3",
     "pricing_type": "Perpetual",
@@ -2067,7 +2101,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MagiCAD?",
-        "a": "The closest alternatives to MagiCAD are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core MEP workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan. DDS-CAD (starting at $2,500 one-time) competes directly on core MEP workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2200,7 +2234,12 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "magicad",
+      "revit",
+      "allplan",
+      "archicad"
+    ],
     "country": "Norway",
     "category_id": "c3",
     "pricing_type": "Perpetual",
@@ -2266,7 +2305,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DDS-CAD?",
-        "a": "The closest alternatives to DDS-CAD are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core MEP workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan. MagiCAD (starting at $3,000 one-time) competes directly on core MEP workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2400,7 +2439,12 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "autodesk-construction-cloud",
+      "bimcollab",
+      "trimble-connect",
+      "solibri"
+    ],
     "country": "Norway",
     "category_id": "c3",
     "pricing_type": "Subscription",
@@ -2465,7 +2509,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to dRofus?",
-        "a": "The closest alternatives to dRofus are Revit, Tekla Structures, ArchiCAD. Revit (starting at $380/mo) competes directly on core Architecture workflows, while Tekla Structures is favored for steel detailing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core Architecture workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2604,13 +2648,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoCAD Plant 3D?",
-        "a": "The closest alternatives to AutoCAD Plant 3D are Autodesk Construction Cloud, Allplan, BIMcollab. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core Energy workflows, while Allplan is favored for multi-disciplinary bim. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design. CADWorx Plant Professional (starting at $5,000/yr) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (starting at $18,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "autodesk-construction-cloud",
-      "allplan",
-      "bimcollab"
+      "cadworx",
+      "smartplant-3d",
+      "aveva-e3d-design",
+      "revit"
     ],
     "detailed_features": [
       {
@@ -2778,13 +2823,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Hexagon SmartPlant 3D?",
-        "a": "The closest alternatives to Hexagon SmartPlant 3D are Autodesk Construction Cloud, Allplan, BIMcollab. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core Oil & Gas workflows, while Allplan is favored for multi-disciplinary bim. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional. AVEVA E3D Design (starting at $8,000/yr) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (starting at $2,095/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "autodesk-construction-cloud",
-      "allplan",
-      "bimcollab"
+      "aveva-e3d-design",
+      "autocad-plant-3d",
+      "cadworx",
+      "microstation"
     ],
     "detailed_features": [
       {
@@ -2956,13 +3002,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CADWorx Plant Professional?",
-        "a": "The closest alternatives to CADWorx Plant Professional are Autodesk Construction Cloud, BIMcollab, AutoCAD Plant 3D. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core Oil & Gas workflows, while BIMcollab adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CADWorx Plant Professional are AutoCAD Plant 3D, Hexagon SmartPlant 3D, AVEVA E3D Design. AutoCAD Plant 3D (starting at $2,095/yr) competes directly on core Oil & Gas workflows, while Hexagon SmartPlant 3D (starting at $18,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "autodesk-construction-cloud",
-      "bimcollab",
-      "autocad-plant-3d"
+      "autocad-plant-3d",
+      "smartplant-3d",
+      "aveva-e3d-design",
+      "autocad"
     ],
     "detailed_features": [
       {
@@ -3135,13 +3182,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Construction Cloud?",
-        "a": "The closest alternatives to Autodesk Construction Cloud are BIMcollab, Allplan, AutoCAD Plant 3D. BIMcollab (starting at $590/yr) competes directly on core AEC workflows, while Allplan is favored for multi-disciplinary bim. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks. Trimble Connect (available with a free tier) competes directly on core AEC workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
+      "trimble-connect",
       "bimcollab",
-      "allplan",
-      "autocad-plant-3d"
+      "navisworks",
+      "solibri"
     ],
     "detailed_features": [
       {
@@ -3317,13 +3365,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Connect?",
-        "a": "The closest alternatives to Trimble Connect are Autodesk Dynamo, Autodesk Construction Cloud, BIMcollab. Autodesk Dynamo is the leading free/open-source alternative, while Autodesk Construction Cloud is favored for autodesk docs cde. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core AEC workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "autodesk-dynamo",
       "autodesk-construction-cloud",
-      "bimcollab"
+      "bimcollab",
+      "navisworks",
+      "solibri"
     ],
     "detailed_features": [
       {
@@ -3495,13 +3544,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BIMcollab?",
-        "a": "The closest alternatives to BIMcollab are Autodesk Construction Cloud, Allplan, Revit. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core AEC workflows, while Allplan is favored for multi-disciplinary bim. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud. Solibri (starting at $3,500/yr) competes directly on core AEC workflows, while Navisworks (starting at $1,145/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
+      "solibri",
+      "navisworks",
       "autodesk-construction-cloud",
-      "allplan",
-      "revit"
+      "trimble-connect"
     ],
     "detailed_features": [
       {
@@ -3667,13 +3717,14 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Dynamo?",
-        "a": "The closest alternatives to Autodesk Dynamo are Trimble Connect, BIMcollab, Autodesk Construction Cloud. Trimble Connect is an enterprise-grade rival for AEC teams, while BIMcollab adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D. Rhino 3D (starting at $995 one-time) competes directly on core AEC workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "trimble-connect",
-      "bimcollab",
-      "autodesk-construction-cloud"
+      "rhino-3d",
+      "revit",
+      "civil-3d",
+      "allplan"
     ],
     "detailed_features": [
       {
@@ -3851,7 +3902,9 @@ export const c3Tools: Tool[] = [
     ],
     "alternatives": [
       "etabs",
-      "autodesk-robot"
+      "autodesk-robot",
+      "scia-engineer",
+      "staad-pro"
     ],
     "country": "Spain",
     "category_id": "c3",
@@ -3911,7 +3964,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CYPECAD?",
-        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis. CSI ETABS (starting at $2,495/perpetual) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis is favored for linear and non-linear analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer. CSI ETABS (starting at $2,495 one-time) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (starting at $2,615/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4026,7 +4079,9 @@ export const c3Tools: Tool[] = [
     ],
     "alternatives": [
       "cadwork",
-      "scia-engineer"
+      "tekla-structures",
+      "revit",
+      "allplan"
     ],
     "country": "Finland",
     "category_id": "c3",
@@ -4086,7 +4141,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vertex BD?",
-        "a": "The closest alternatives to Vertex BD are cadwork, SCIA Engineer. cadwork (starting at $5,000/perpetual) competes directly on core Prefabrication workflows, while SCIA Engineer is favored for general fea. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit. cadwork (starting at $5,000 one-time) competes directly on core Prefabrication workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {

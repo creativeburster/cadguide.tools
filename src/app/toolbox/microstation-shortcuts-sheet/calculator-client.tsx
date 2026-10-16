@@ -21,37 +21,37 @@ const SHORTCUTS = [
     "keys": "Enter",
     "command": "SmartLock",
     "category": "accudraw",
-    "description": "AccuDraw The essence of extreme speed, lock the current cursor location X axis or Y-axis. "
+    "description": "AccuDraw The essence of extreme speed, lock the current cursor location X axis or Y-axis."
   },
   {
     "keys": "X",
     "command": "Lock X Axis",
     "category": "accudraw",
-    "description": "Single axis locking X-axis direction. "
+    "description": "Single axis locking X-axis direction."
   },
   {
     "keys": "Y",
     "command": "Lock Y Axis",
     "category": "accudraw",
-    "description": "Single axis locking Y axis direction. "
+    "description": "Single axis locking Y axis direction."
   },
   {
     "keys": "Space",
     "command": "Toggle Compass",
     "category": "accudraw",
-    "description": "Quickly switch between Cartesian and polar coordinate systems. "
+    "description": "Quickly switch between Cartesian and polar coordinate systems."
   },
   {
     "keys": "Q",
     "command": "Quit Command",
     "category": "draw",
-    "description": "Exit the currently active drawing tool and return to the default selection state. "
+    "description": "Exit the currently active drawing tool and return to the default selection state."
   },
   {
     "keys": "W",
     "command": "Toggle Element Selection",
     "category": "draw",
-    "description": "Activates or deactivates the element element selection tool. "
+    "description": "Activates or deactivates the element element selection tool."
   },
   {
     "keys": "Ctrl + B",
@@ -63,13 +63,13 @@ const SHORTCUTS = [
     "keys": "Ctrl + F",
     "command": "Save Settings",
     "category": "view",
-    "description": "Save all current viewport perspective attributes to prevent the viewport from being reset after closing the software. "
+    "description": "Save all current viewport perspective attributes to prevent the viewport from being reset after closing the software."
   }
 ];
 const TIPS = [
   {
     "title": "AccuDraw with the carriage return locking mechanism",
-    "content": "When drawing a line, once the linetype snaps to the orthogonal alignment dash, Immediately press `Enter`) , At this time, your mouse can be clicked anywhere, and the direction of the line will be locked in the previous direction. Very useful. "
+    "content": "When drawing a line, once the linetype snaps to the orthogonal alignment dash, Immediately press `Enter`) , at this time, your mouse can be clicked anywhere, and the direction of the line will be locked in the previous direction. Very useful."
   }
 ];
 

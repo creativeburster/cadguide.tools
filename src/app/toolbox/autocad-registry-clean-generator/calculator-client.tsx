@@ -353,8 +353,8 @@ pause`;
                 <div className="text-base leading-relaxed">
                   <p className="font-black text-slate-800 mb-1">Use safety guidelines: </p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-slate-600 font-medium">
-                    <li><b>Safe backup first</b>: This script before starting the cleanup, A folder named <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> will be generated on your desktop, Export the old registry keys for backup. If you need to restore the configuration, Just double-click the `.reg` file in the folder and re-write it. </li>
-                    <li>If you checked<b>&quot;System Global HKLM&quot;</b>or the <b>&quot;FLEXnet&quot;</b> option, When running, you must<b>right click {'->'} Run as administrator&quot;</b>the `.bat` file, otherwise Windows Firewall and registry defense mechanisms will reject deletion requests and cause failure. </li>
+                    <li><b>Safe backup first</b>: This script before starting the cleanup, A folder named <span className="font-mono bg-amber-100 px-1 rounded font-black">CAD_Registry_Backup</span> will be generated on your desktop, Export the old registry keys for backup. If you need to restore the configuration, just double-click the `.reg` file in the folder and re-write it. </li>
+                    <li>If you checked <b>&quot;System Global HKLM&quot;</b> or the <b>&quot;FLEXnet&quot;</b> option, when running, you must <b>right click {'->'} Run as administrator&quot;</b> the `.bat` file, otherwise Windows Firewall and registry defense mechanisms will reject deletion requests and cause failure. </li>
                     <li>Please make sure you have completely closed the AutoCAD software before running it. Otherwise, the registry key being occupied may be damaged. </li>
                   </ul>
                 </div>

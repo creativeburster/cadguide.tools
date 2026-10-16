@@ -76,8 +76,8 @@ export default function AcadPgpEditorClient() {
   const [terminalInput, setTerminalInput] = useState('');
   const [terminalHistory, setTerminalHistory] = useState<string[]>([
     'AutoCAD Command Terminal Simulator v1.0',
-    'Enter the shortcut alias and press Enter to simulate CAD Command line command execution mechanism. ',
-    'Type REINIT to simulate reloading PGP File procedure. '
+    'Enter the shortcut alias and press Enter to simulate CAD Command line command execution mechanism.',
+    'Type REINIT to simulate reloading PGP File procedure.'
   ]);
   const [activeTab, setActiveTab] = useState<'presets' | 'editor'>('editor');
   const [lastExecutedCommand, setLastExecutedCommand] = useState<string | null>(null);
@@ -377,7 +377,7 @@ export default function AcadPgpEditorClient() {
         ]);
         setActiveTab('editor');
       } else {
-        alert('No valid CAD alias definition resolved. Please make sure the file matches the "alias, *command" format. ');
+        alert('No valid CAD alias definition resolved. Please make sure the file matches the "alias, *command" format.');
       }
     };
     reader.readAsText(file);
@@ -477,7 +477,7 @@ export default function AcadPgpEditorClient() {
 
     let response = '';
     if (cmd === 'REINIT') {
-      response = 'Reloading PGP alias database... Reload successful! Currently loaded ' + aliases.length + ' Alias command. ';
+      response = 'Reloading PGP alias database... Reload successful! Currently loaded ' + aliases.length + ' Alias command.';
       setTerminalInput('');
       setTerminalHistory((prev) => [...prev, `COMMAND: ${cmd}`, response]);
       return;
@@ -508,10 +508,10 @@ export default function AcadPgpEditorClient() {
   const loadPreset = (presetName: 'autocad' | 'gstarcad') => {
     if (presetName === 'autocad') {
       setAliases(DEFAULT_AUTOCAD_ALIASES);
-      setTerminalHistory((prev) => [...prev, '>>> Default AutoCAD PGP configuration restored. ']);
+      setTerminalHistory((prev) => [...prev, '>>> Default AutoCAD PGP configuration restored.']);
     } else if (presetName === 'gstarcad') {
       setAliases(DEFAULT_GSTARCAD_ALIASES);
-      setTerminalHistory((prev) => [...prev, '>>> GstarCAD alias configuration preset loaded. ']);
+      setTerminalHistory((prev) => [...prev, '>>> GstarCAD alias configuration preset loaded.']);
     }
   };
 
@@ -865,14 +865,14 @@ export default function AcadPgpEditorClient() {
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100 flex flex-col justify-between gap-4">
                 <div>
                   <span className="text-base font-black bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md">GstarCAD Official</span>
-                  <h4 className="font-bold text-slate-800 text-lg mt-2">Haochen CAD official default shortcut key presets</h4>
-                  <p className="text-base text-slate-500 mt-1 leading-relaxed">Integrated Haochen&apos;s unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
+                  <h4 className="font-bold text-slate-800 text-lg mt-2">GstarCAD official default shortcut key presets</h4>
+                  <p className="text-base text-slate-500 mt-1 leading-relaxed">Integrated GstarCAD&apos;s unique instructions (such as workspace switching, shortcut alias for extended commands, etc.). </p>
                 </div>
                 <button
                   onClick={() => { loadPreset('gstarcad'); setActiveTab('editor'); }}
                   className="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base text-center cursor-pointer"
                 >
-                  Load Haochen CAD preset
+                  Load GstarCAD preset
                 </button>
               </div>
             </div>
@@ -1014,7 +1014,7 @@ export default function AcadPgpEditorClient() {
               1. Directly overload the REINIT mechanism from the command line
             </h4>
             <p>
-              After modifying and replacing `acad.pgp`, You<b>don&apos;t need it at all</b>Close and restart the CAD software. Just use AutoCAD / Haochen CAD Enter <b>`REINIT`</b> on the command line, and in the pop-up&quot;Check &quot;Reinitialize&quot; in the small dialog box. <b>&quot;PGP File&quot;</b> option and OK, The software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately. 
+              After modifying and replacing `acad.pgp`, you <b>don&apos;t need it at all</b> Close and restart the CAD software. Just use AutoCAD / GstarCAD Enter <b>`REINIT`</b> on the command line, and in the pop-up&quot;Check &quot;Reinitialize&quot; in the small dialog box. <b>&quot;PGP File&quot;</b> option and OK, the software will recompile the shortcut key index in the memory within milliseconds, making the modifications effective immediately. 
             </p>
           </div>
           <div>
@@ -1032,7 +1032,7 @@ export default function AcadPgpEditorClient() {
               3. External command extension fields
             </h4>
             <p>
-              PGP In addition to defining keyboard shortcut aliases, the file can also define external systems Shell command (such as calling Windows Notepad, running calculator, etc.) , The syntax format is `[command], [System Shell execution path], [Flag/Flag]`. This editor is dedicated to the core Command Purified and filtered, only the most critical graphics drawing commands are compiled and downloaded. 
+              PGP In addition to defining keyboard shortcut aliases, the file can also define external systems Shell command (such as calling Windows Notepad, running calculator, etc.) , the syntax format is `[command], [System Shell execution path], [Flag/Flag]`. This editor is dedicated to the core Command Purified and filtered, only the most critical graphics drawing commands are compiled and downloaded. 
             </p>
           </div>
         </div>

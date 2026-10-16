@@ -44,7 +44,7 @@ export default function BlenderShortcutsPage() {
         {/* Mode-aware explainer — unique to Blender */}
         <section className="bg-white border-b border-slate-100 py-8 print:hidden">
           <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-4">Same Key, Different Mode</h2>
+            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-4">Same Key, different Mode</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-orange-50 rounded-2xl border border-orange-100 p-5">
                 <div className="flex items-center gap-2 mb-3">

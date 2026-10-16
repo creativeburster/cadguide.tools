@@ -4,6 +4,7 @@
 // (generateMetadata) and `opengraph-image.tsx`.
 import type { Metadata } from "next";
 import type { Tool, Category } from "./data";
+import { TOOLBOX_DATA } from "./toolbox-data";
 import preservedIndexedSlugs from "./preserved-indexed-slugs.json";
 
 export const SITE_URL = "https://cadguide.tools";
@@ -412,11 +413,10 @@ export function collectionPageLd(opts: {
   };
 }
 
-/** Simple breadcrumb payload for non-tool pages. */
+/** Simple breadcrumb payload for non-tool pages, plus SoftwareApplication JSON-LD for toolbox utilities. */
 export function siteBreadcrumbLd(items: { name: string; path: string }[]) {
   const filtered = items.filter((it) => it.path !== "/" && it.path !== "");
-  return {
-    "@context": "https://schema.org",
+  const breadcrumbList = {
     "@type": "BreadcrumbList",
     itemListElement: filtered.map((it, i) => ({
       "@type": "ListItem",
@@ -424,6 +424,39 @@ export function siteBreadcrumbLd(items: { name: string; path: string }[]) {
       name: it.name,
       item: `${SITE_URL}${it.path}`,
     })),
+  };
+
+  const last = filtered[filtered.length - 1];
+  if (last && last.path.startsWith("/toolbox/") && last.path !== "/toolbox") {
+    const slug = last.path.replace(/^\/toolbox\//, "");
+    const tbItem = TOOLBOX_DATA.find((t) => t.slug === slug);
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        breadcrumbList,
+        {
+          "@type": "SoftwareApplication",
+          name: tbItem?.title || last.name,
+          description:
+            tbItem?.description ||
+            `${last.name} — Free online engineering calculator and CAD utility on CADGuide.tools.`,
+          url: `${SITE_URL}${last.path}`,
+          applicationCategory: "EngineeringApplication",
+          operatingSystem: "Any (Web Browser)",
+          isAccessibleForFree: true,
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        },
+      ],
+    };
+  }
+
+  return {
+    "@context": "https://schema.org",
+    ...breadcrumbList,
   };
 }
 
@@ -540,7 +573,6 @@ export function reviewLd(tool: Tool) {
       "@type": "Organization",
       name: rating.source,
     },
-    reviewCount: rating.count,
     publisher: {
       "@type": "Organization",
       name: rating.source,

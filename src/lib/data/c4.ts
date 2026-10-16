@@ -716,8 +716,9 @@ export const c4Tools: Tool[] = [
     ],
     "alternatives": [
       "meshlab",
-      "solibri",
-      "navisworks"
+      "geomagic-design-x",
+      "navisworks",
+      "trimble-business-center"
     ],
     "country": "USA",
     "category_id": "c4",
@@ -778,7 +779,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Recap Pro?",
-        "a": "The closest alternatives to Recap Pro are MeshLab, Solibri, Navisworks. MeshLab is the leading free/open-source alternative, while Solibri adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks. MeshLab (free and open-source) competes directly on core AEC workflows, while Geomagic Design X (starting at $1,900/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -878,7 +879,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solid Edge Viewer?",
-        "a": "The closest alternatives to Solid Edge Viewer are Bluebeam Revu, Navisworks, Solibri. Bluebeam Revu (starting at $260/yr) competes directly on core Manufacturing workflows, while Navisworks is favored for bim coordination. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger. DWG TrueView (free and open-source) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -923,6 +924,12 @@ export const c4Tools: Tool[] = [
         ],
         "is_popular": true
       }
+    ],
+    "alternatives": [
+      "dwg-trueview",
+      "glovius",
+      "cad-exchanger",
+      "cadprops"
     ]
   },
   {
@@ -989,7 +996,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DWG TrueView?",
-        "a": "The closest alternatives to DWG TrueView are Bluebeam Revu, Navisworks, Solibri. Bluebeam Revu (starting at $260/yr) competes directly on core Architecture workflows, while Navisworks is favored for bim coordination. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DWG TrueView are DWG FastView, CAD Reader, Solid Edge Viewer. DWG FastView (available with a free tier) competes directly on core Architecture workflows, while CAD Reader (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1028,6 +1035,12 @@ export const c4Tools: Tool[] = [
         ],
         "is_popular": true
       }
+    ],
+    "alternatives": [
+      "dwg-fastview",
+      "cad-reader",
+      "solid-edge-viewer",
+      "cadprops"
     ]
   },
   {
@@ -1100,7 +1113,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DWG FastView?",
-        "a": "The closest alternatives to DWG FastView are Bluebeam Revu, Navisworks, Solibri. Bluebeam Revu (starting at $260/yr) competes directly on core Construction workflows, while Navisworks is favored for bim coordination. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1210,6 +1223,12 @@ export const c4Tools: Tool[] = [
       "PNG",
       "BMP",
       "DWG"
+    ],
+    "alternatives": [
+      "cad-reader",
+      "dwg-trueview",
+      "glovius",
+      "cadprops"
     ]
   },
   {
@@ -1268,7 +1287,10 @@ export const c4Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "dwg-fastview"
+      "dwg-fastview",
+      "dwg-trueview",
+      "cadprops",
+      "dxf-medic"
     ],
     "country": "China",
     "category_id": "c4",
@@ -1354,6 +1376,16 @@ export const c4Tools: Tool[] = [
     "id": "t250",
     "name": "DXF Medic",
     "slug": "dxf-medic",
+    "tech_specs": {
+      "engine": "2D Vector Topology Healing & Polyline Stitching Engine",
+      "multicore": "Multi-Threaded Batch Geometry Validation",
+      "gpu_optimization": "WebGL / 2D Hardware-Accelerated Vector Viewport",
+      "standards": [
+        "DXF (R12–2024)",
+        "SVG",
+        "G-Code"
+      ]
+    },
     "logo_url": "/logos/dxf-medic.svg",
     "short_desc": "Browser-based DXF and SVG geometry checks and repair.",
     "description": "DXF Medic is a browser utility from Madegrain that diagnoses DXF and SVG cutting files for geometry problems before they reach a laser, plasma, or CNC table. Diagnosis is free and runs locally in the browser; repaired file downloads are free for results with up to five parts, with a one-time upgrade for unlimited repairs.",
@@ -1415,7 +1447,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DXF Medic?",
-        "a": "The closest alternatives to DXF Medic are DWG TrueView, CAD Reader. DWG TrueView is the leading free/open-source alternative, while CAD Reader is favored for dwg viewing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools. DWG TrueView (free and open-source) competes directly on core Laser Cutting workflows, while CADProps (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
@@ -1444,7 +1476,9 @@ export const c4Tools: Tool[] = [
     ],
     "alternatives": [
       "dwg-trueview",
-      "cad-reader"
+      "cadprops",
+      "3dstudio-web-tools",
+      "qcad"
     ],
     "last_updated": "2026-09-17",
     "file_formats_in": [

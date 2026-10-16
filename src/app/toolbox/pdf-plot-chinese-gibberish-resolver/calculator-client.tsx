@@ -275,13 +275,13 @@ export default function PdfFontGibberishClient() {
               {symptomId === 'scrambled_gibberish' && (
                 <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why the characters become garbled characters)) : </p>
-                  <p>In newer versions of AutoCAD, The system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, Each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, This will cause messy English characters and large garbled characters to appear in many PDF browsers. </p>
+                  <p>In newer versions of AutoCAD, the system introduces the `PDFSHX` variable (The default value is 1). After turning on this variable, Print inside the exported PDF, each SHX Chinese font will also be PDF Exported as comments so that they can be PDF Search in the software. However, due to encoding parsing conflicts, this will cause messy English characters and large garbled characters to appear in many PDF browsers. </p>
                   
                   <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
                     <li>Enter directly into the CAD command bar: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">PDFSHX</span> and press Enter. </li>
                     <li>Modify its properties to: <span className="font-mono bg-blue-100 text-blue-800 px-1 rounded font-bold">0</span> (turn off generation SHX Text annotation function). </li>
-                    <li>Use `PLOT` again to print out the plot, All extra garbled comment characters will disappear. </li>
+                    <li>Use `PLOT` again to print out the plot, all extra garbled comment characters will disappear. </li>
                   </ol>
                 </div>
 )}
@@ -290,13 +290,13 @@ export default function PdfFontGibberishClient() {
               {symptomId === 'outline_geometry' && (
                 <div className="text-base text-slate-600 leading-relaxed flex flex-col gap-3">
                   <p className="font-bold text-slate-800">Cause of failure (why it becomes hollow and extremely stuck) : </p>
-                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, Or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow. </p>
+                  <p>When the printer driver (such as `DWG to PDF.pc3`) Unable to recognize TrueType font in current drawing, or configure it to convert &quot;text&quot; into geometry (Geometries) &quot;, CAD will explode all font text into multiple broken lines. This not only causes the file size to be several times larger than normal text and becomes hollow after enlargement, but also makes movement and reading extremely slow. </p>
                   
                   <p className="font-bold text-slate-800 mt-2">Manual repair solution: </p>
                   <ol className="list-decimal list-inside space-y-1.5">
                     <li>Enter system variables in CAD: <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">TEXTFILL</span> and set it to <span className="font-mono bg-slate-100 text-slate-800 px-1 rounded font-bold">1</span> (enable text padding) . </li>
                     <li>Type `PLOT` to open the print panel, Select <span className="font-mono bg-slate-100 px-1 rounded font-bold">DWG to PDF.pc3</span> in the printer name, click on the right <b>[Properties]</b>. </li>
-                    <li>Expand<b>[Device and Document Settings]</b> ➔ Select <b>[Custom Properties]</b> ➔ Click <b>[Custom Properties] below]</b> button. </li>
+                    <li>Expand <b>[Device and Document Settings]</b> ➔ Select <b>[Custom Properties]</b> ➔ Click <b>[Custom Properties] below]</b> button. </li>
                     <li>In the Fonts tab, make sure that: <b>[Capture fonts used in drawing]</b>, and in TrueType Select <b>[TrueType Text] in the font options]</b> instead of [TrueType Geometry]. </li>
                   </ol>
                 </div>
@@ -318,7 +318,7 @@ export default function PdfFontGibberishClient() {
               <pre className="overflow-x-auto text-emerald-400 select-all p-1 bg-slate-950/40 rounded-lg max-h-[120px] text-sm">
                 {lispFixCommand}
               </pre>
-              <p className="text-sm text-slate-400 italic">Usage: Click to copy, From the CAD command line just press Ctrl+V Paste all the content and press Enter. The repair macro will be loaded silently, And directly call the command on the command line to perform one-click batch repair. </p>
+              <p className="text-sm text-slate-400 italic">Usage: Click to copy, from the CAD command line just press Ctrl+V Paste all the content and press Enter. The repair macro will be loaded silently, and directly call the command on the command line to perform one-click batch repair. </p>
             </div>
 
           </div>

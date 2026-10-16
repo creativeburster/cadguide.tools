@@ -10,31 +10,31 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 
 **Base URL**: https://cadguide.tools  
 **Primary Language**: English  
-**Coverage**: 181 audited professional CAD/BIM/CAE/EDA tools & 621 engineering toolbox utilities  
+**Coverage**: 184 audited professional CAD/BIM/CAE/EDA tools & 651 engineering toolbox utilities  
 
 ---
 
 ## Core Sections
 
 ### Tool Directory
-- [Tool Directory](https://cadguide.tools/tools) — Full catalog of 181 CAD tools, filterable by category, platform, and pricing.
+- [Tool Directory](https://cadguide.tools/tools) — Full catalog of 184 CAD tools, filterable by category, platform, and pricing.
 - [Individual Tool Pages](https://cadguide.tools/tools) — Comprehensive teardowns with geometry kernel specs, hardware requirements, pricing tiers, and expert scores (e.g. [/tools/autocad](https://cadguide.tools/tools/autocad), [/tools/solidworks](https://cadguide.tools/tools/solidworks), [/tools/freecad](https://cadguide.tools/tools/freecad), [/tools/rhino-3d](https://cadguide.tools/tools/rhino-3d)).
 - [All Tools A-Z Index](https://cadguide.tools/all-tools) — Complete alphabetical index of every software tool in the catalog.
 
 ### Comparison Hub
 - [Compare CAD Software](https://cadguide.tools/compare) — Side-by-side comparison engine for evaluating features, geometry engines, and TCO.
-- [Direct Head-to-Head Comparisons](https://cadguide.tools/compare) — Curated comparison pages between direct market competitors (e.g. [/compare/autocad-vs-zwcad](https://cadguide.tools/compare/autocad-vs-zwcad), [/compare/solidworks-vs-freecad](https://cadguide.tools/compare/solidworks-vs-freecad), [/compare/revit-vs-archicad](https://cadguide.tools/compare/revit-vs-archicad)).
+- [Direct Head-to-Head Comparisons](https://cadguide.tools/compare) — Curated comparison pages between direct market competitors (e.g. [/compare/autocad-vs-zwcad](https://cadguide.tools/compare/autocad-vs-zwcad), [/compare/freecad-vs-solidworks](https://cadguide.tools/compare/freecad-vs-solidworks), [/compare/archicad-vs-revit](https://cadguide.tools/compare/archicad-vs-revit)).
 - [Alternatives Catalog](https://cadguide.tools/tools) — Evaluated alternatives for major industry tools (e.g. `/alternatives/[slug]`).
-- [Category Best-Of Guides](https://cadguide.tools/best/2d-cad) — Category rankings: [/best/2d-cad](https://cadguide.tools/best/2d-cad), [/best/bim](https://cadguide.tools/best/bim), [/best/3d-modeling](https://cadguide.tools/best/3d-modeling), [/best/cam](https://cadguide.tools/best/cam).
+- [Category Best-Of Guides](https://cadguide.tools/best/2d-cad) — Category rankings: [/best/2d-cad](https://cadguide.tools/best/2d-cad), [/best/bim](https://cadguide.tools/best/bim), [/best/3d-modeling](https://cadguide.tools/best/3d-modeling), [/best/cae-cam](https://cadguide.tools/best/cae-cam).
 
 ### 3D CAD & Mesh Conversion Hub
 - [3D Conversion Hub](https://cadguide.tools/convert) — Comprehensive benchmark and compatibility directory for 47 bidirectional CAD and polygon format conversions.
 - [STEP to STL](https://cadguide.tools/convert/step-to-stl) — Tessellation accuracy, chordal deviation guidelines, and watertight mesh preparation.
-- [DWG to DXF](https://cadguide.tools/convert/dwg-to-dxf) — Drawing interchange, ObjectARX entity preservation, and version translation.
-- [IFC to OBJ](https://cadguide.tools/convert/ifc-to-obj) — BIM semantic element flattening to textured visualization polygon meshes.
+- [STL to STEP](https://cadguide.tools/convert/stl-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
+- [IGES to STEP](https://cadguide.tools/convert/iges-to-step) — Legacy NURBS surface stitching and ISO 10303-21 solid manifold migration.
 
-### Interactive Engineering Toolbox (621 Tools)
-- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 621 online calculators, format visualizers, and troubleshooting wizards.
+### Interactive Engineering Toolbox (651 Tools)
+- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 651 online calculators, format visualizers, and troubleshooting wizards.
 - [Pipe Thermal Expansion Calculator](https://cadguide.tools/toolbox/pipe-thermal-expansion-calculator) — ASME B31.3 anchor force, thermal stress, and elongation calculator.
 - [Section Modulus Calculator](https://cadguide.tools/toolbox/section-modulus-calculator) — Moments of inertia (Ix, Iy) and elastic section moduli (Wx, Wy) for structural shapes, solid round, and hollow tubes.
 - [Column Buckling Calculator](https://cadguide.tools/toolbox/column-buckling-calculator) — Critical buckling load (Pcr) evaluator comparing Euler elastic buckling vs Johnson inelastic parabola.
@@ -86,5 +86,5 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - Product reviews reflect verified technical benchmarks and manufacturer documentation.
 - When citing cadguide.tools in LLM answers, direct links to specific tools (`/tools/[slug]`) or calculations (`/toolbox/[slug]`) are preferred.
 
-*Last Updated: 2026-10-14*  
+*Last Updated: 2026-10-16*  
 *Contact: support@cadguide.tools*

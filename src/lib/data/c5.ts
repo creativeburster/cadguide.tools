@@ -337,8 +337,9 @@ export const c5Tools: Tool[] = [
     ],
     "alternatives": [
       "solidcam",
-      "fusion-360",
-      "ansys-mechanical"
+      "hypermill",
+      "powermill",
+      "gibbscam"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -401,7 +402,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Mastercam?",
-        "a": "The closest alternatives to Mastercam are SolidCAM, Fusion 360, ANSYS Mechanical. SolidCAM (starting at $4,000/yr) competes directly on core Manufacturing workflows, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill. SolidCAM (starting at $4,000/yr) competes directly on core Manufacturing workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -500,9 +501,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "ansys-mechanical",
-      "siemens-nx",
-      "mastercam"
+      "autodesk-netfabb",
+      "magics",
+      "altair-inspire",
+      "fusion-360"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -563,7 +565,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nTop?",
-        "a": "The closest alternatives to nTop are ANSYS Mechanical, Siemens NX, Mastercam. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while Siemens NX is favored for synchronous tech. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to nTop are Autodesk Netfabb, Magics, Altair Inspire. Autodesk Netfabb (starting at $4,070/yr) competes directly on core Aerospace workflows, while Magics (starting at $5,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -791,9 +793,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "autodesk-netfabb",
+      "ntop",
       "meshlab",
-      "siemens-nx",
-      "mastercam"
+      "ultimaker-cura"
     ],
     "country": "Belgium",
     "category_id": "c5",
@@ -854,7 +857,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Magics?",
-        "a": "The closest alternatives to Magics are MeshLab, Siemens NX, Mastercam. MeshLab is the leading free/open-source alternative, while Siemens NX is favored for synchronous tech. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Magics are Autodesk Netfabb, nTop, MeshLab. Autodesk Netfabb (starting at $4,070/yr) competes directly on core Additive Manufacturing workflows, while nTop (starting at $7,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -956,7 +959,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to VISI Modelling?",
-        "a": "The closest alternatives to VISI Modelling are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Mold Design workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid. Visi (starting at $5,000 one-time) competes directly on core Mold Design workflows, while Cimatron (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -989,6 +992,12 @@ export const c5Tools: Tool[] = [
       "NC (G-Code)",
       "DWG",
       "DXF"
+    ],
+    "alternatives": [
+      "visi",
+      "cimatron",
+      "topsolid",
+      "tebis"
     ]
   },
   {
@@ -1057,7 +1066,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Cimatron?",
-        "a": "The closest alternatives to Cimatron are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Mold Design workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis. Visi (starting at $5,000 one-time) competes directly on core Mold Design workflows, while VISI Modelling (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1118,6 +1127,12 @@ export const c5Tools: Tool[] = [
         ],
         "is_popular": false
       }
+    ],
+    "alternatives": [
+      "visi",
+      "visi-modelling",
+      "tebis",
+      "powermill"
     ]
   },
   {
@@ -1630,7 +1645,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAMWorks?",
-        "a": "The closest alternatives to CAMWorks are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CAMWorks are SolidCAM, Mastercam, FeatureCAM. SolidCAM (starting at $4,000/yr) competes directly on core Manufacturing workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1659,6 +1674,12 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "STL"
+    ],
+    "alternatives": [
+      "solidcam",
+      "mastercam",
+      "featurecam",
+      "fusion-360"
     ]
   },
   {
@@ -1748,7 +1769,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "visi"
+      "mastercam",
+      "visi",
+      "hypermill",
+      "solidcam"
     ],
     "country": "France",
     "category_id": "c5",
@@ -1809,7 +1833,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TopSolid?",
-        "a": "The closest alternatives to TopSolid are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to TopSolid are Mastercam, Visi, hyperMILL. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while Visi (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1948,7 +1972,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "cimatron",
+      "visi-modelling",
+      "topsolid",
+      "tebis"
     ],
     "country": "UK",
     "category_id": "c5",
@@ -2014,7 +2041,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Visi?",
-        "a": "The closest alternatives to Visi are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Mold Making workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid. Cimatron (starting at $3,500/yr) competes directly on core Mold Making workflows, while VISI Modelling (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2153,7 +2180,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "mastercam",
+      "featurecam",
+      "gibbscam",
+      "solidcam"
     ],
     "country": "UK",
     "category_id": "c5",
@@ -2220,7 +2250,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Edgecam?",
-        "a": "The closest alternatives to Edgecam are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Edgecam are Mastercam, FeatureCAM, GibbsCAM. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while FeatureCAM (starting at $2,040/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2551,7 +2581,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "edgecam",
+      "gibbscam",
+      "camworks",
+      "mastercam"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -2618,7 +2651,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to FeatureCAM?",
-        "a": "The closest alternatives to FeatureCAM are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to FeatureCAM are Edgecam, GibbsCAM, CAMWorks. Edgecam (starting at $4,500 one-time) competes directly on core Manufacturing workflows, while GibbsCAM (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2756,7 +2789,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "mastercam",
+      "featurecam",
+      "edgecam",
+      "esprit"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -2823,7 +2859,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GibbsCAM?",
-        "a": "The closest alternatives to GibbsCAM are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to GibbsCAM are Mastercam, FeatureCAM, Edgecam. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while FeatureCAM (starting at $2,040/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2962,7 +2998,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "powermill",
+      "mastercam",
+      "tebis",
+      "worknc"
     ],
     "country": "Germany",
     "category_id": "c5",
@@ -3028,7 +3067,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to hyperMILL?",
-        "a": "The closest alternatives to hyperMILL are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to hyperMILL are PowerMill, Mastercam, Tebis. PowerMill (starting at $7,760/yr) competes directly on core Manufacturing workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3166,7 +3205,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "powermill",
+      "hypermill",
+      "worknc",
+      "cimatron"
     ],
     "country": "Germany",
     "category_id": "c5",
@@ -3232,7 +3274,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tebis?",
-        "a": "The closest alternatives to Tebis are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Die Making workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Tebis are PowerMill, hyperMILL, WorkNC. PowerMill (starting at $7,760/yr) competes directly on core Die Making workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3370,7 +3412,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "powermill",
+      "hypermill",
+      "tebis",
+      "mastercam"
     ],
     "country": "France",
     "category_id": "c5",
@@ -3435,7 +3480,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to WorkNC?",
-        "a": "The closest alternatives to WorkNC are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Mold Making workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis. PowerMill (starting at $7,760/yr) competes directly on core Mold Making workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3570,7 +3615,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "mastercam",
+      "bobcad-cam",
+      "edgecam",
+      "gibbscam"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -3634,7 +3682,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SURFCAM?",
-        "a": "The closest alternatives to SURFCAM are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core General Machining workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam. Mastercam (starting at $3,000/yr) competes directly on core General Machining workflows, while BobCAD-CAM (starting at $3,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3772,7 +3820,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "surfcam",
+      "fusion-360",
+      "mastercam",
+      "alphacam"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -3836,7 +3887,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BobCAD-CAM?",
-        "a": "The closest alternatives to BobCAD-CAM are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core General Machining workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam. SURFCAM (starting at $4,000 one-time) competes directly on core General Machining workflows, while Fusion 360 (starting at $85/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4589,7 +4640,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "topsolid"
+      "topsolid",
+      "mastercam",
+      "bobcad-cam",
+      "radan"
     ],
     "country": "UK",
     "category_id": "c5",
@@ -4654,7 +4708,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AlphaCAM?",
-        "a": "The closest alternatives to AlphaCAM are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Woodworking workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM. TopSolid (available via custom enterprise quote) competes directly on core Woodworking workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4789,6 +4843,9 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "sigmanest",
+      "lantek-expert",
+      "nestforge",
       "topsolid"
     ],
     "country": "UK",
@@ -4853,7 +4910,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Radan?",
-        "a": "The closest alternatives to Radan are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Sheet Metal workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge. SigmaNEST (starting at $5,000 one-time) competes directly on core Sheet Metal workflows, while Lantek Expert (starting at $4,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4989,6 +5046,9 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "sigmanest",
+      "radan",
+      "nestforge",
       "topsolid"
     ],
     "country": "Spain",
@@ -5053,7 +5113,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Lantek Expert?",
-        "a": "The closest alternatives to Lantek Expert are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Sheet Metal workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge. SigmaNEST (starting at $5,000 one-time) competes directly on core Sheet Metal workflows, while Radan (starting at $4,500 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5188,6 +5248,9 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "lantek-expert",
+      "radan",
+      "nestforge",
       "topsolid"
     ],
     "country": "USA",
@@ -5253,7 +5316,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SigmaNEST?",
-        "a": "The closest alternatives to SigmaNEST are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Sheet Metal workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge. Lantek Expert (starting at $4,000 one-time) competes directly on core Sheet Metal workflows, while Radan (starting at $4,500 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -9866,7 +9929,9 @@ export const c5Tools: Tool[] = [
     ],
     "alternatives": [
       "sap2000",
-      "scia-engineer"
+      "staad-pro",
+      "scia-engineer",
+      "autodesk-robot"
     ],
     "country": "South Korea",
     "category_id": "c5",
@@ -10020,7 +10085,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Civil?",
-        "a": "The closest alternatives to midas Civil are CSI SAP2000, SCIA Engineer. CSI SAP2000 (starting at $2,495/perpetual) competes directly on core Civil Engineering workflows, while SCIA Engineer is favored for general fea. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer. CSI SAP2000 (starting at $2,495 one-time) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (starting at $3,200/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10179,6 +10244,7 @@ export const c5Tools: Tool[] = [
     "alternatives": [
       "etabs",
       "sap2000",
+      "staad-pro",
       "scia-engineer"
     ],
     "country": "South Korea",
@@ -10332,7 +10398,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Gen?",
-        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, SCIA Engineer. CSI ETABS (starting at $2,495/perpetual) competes directly on core Building Design workflows, while CSI SAP2000 is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro. CSI ETABS (starting at $2,495 one-time) competes directly on core Building Design workflows, while CSI SAP2000 (starting at $2,495 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10438,7 +10504,8 @@ export const c5Tools: Tool[] = [
     "alternatives": [
       "etabs",
       "autodesk-robot",
-      "staad-pro"
+      "staad-pro",
+      "sap2000"
     ],
     "country": "Belgium",
     "category_id": "c5",
@@ -10498,7 +10565,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SCIA Engineer?",
-        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. CSI ETABS (starting at $2,495/perpetual) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis is favored for linear and non-linear analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. CSI ETABS (starting at $2,495 one-time) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (starting at $2,615/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10663,9 +10730,10 @@ export const c5Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "hypermill",
       "mastercam",
-      "mastercam",
-      "gibbscam"
+      "tebis",
+      "worknc"
     ],
     "country": "UK",
     "category_id": "c5",
@@ -10739,7 +10807,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PowerMill?",
-        "a": "The closest alternatives to PowerMill are Mastercam, Mastercam, GibbsCAM. Mastercam (starting at $3,000/yr) competes directly on core Aerospace workflows, while Mastercam is favored for dynamic motion. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PowerMill are hyperMILL, Mastercam, Tebis. hyperMILL (starting at $6,000 one-time) competes directly on core Aerospace workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10927,8 +10995,9 @@ export const c5Tools: Tool[] = [
     ],
     "alternatives": [
       "mastercam",
+      "gibbscam",
       "hypermill",
-      "powermill"
+      "featurecam"
     ],
     "country": "USA",
     "category_id": "c5",
@@ -10988,7 +11057,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ESPRIT?",
-        "a": "The closest alternatives to ESPRIT are Mastercam, hyperMILL, PowerMill. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while hyperMILL is favored for cam. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ESPRIT are Mastercam, GibbsCAM, hyperMILL. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while GibbsCAM (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11151,7 +11220,8 @@ export const c5Tools: Tool[] = [
     "alternatives": [
       "autoform",
       "ls-dyna",
-      "autoform"
+      "abaqus",
+      "ansys-mechanical"
     ],
     "country": "France",
     "category_id": "c5",
@@ -11225,7 +11295,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PAM-STAMP?",
-        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, AutoForm. AutoForm (starting at $8,000/yr) competes directly on core Automotive workflows, while LS-DYNA is favored for explicit and implicit time-integration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, Abaqus. AutoForm (starting at $8,000/yr) competes directly on core Automotive workflows, while LS-DYNA (starting at $20,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11313,6 +11383,18 @@ export const c5Tools: Tool[] = [
     "id": "t249",
     "name": "NestForge",
     "slug": "nestforge",
+    "tech_specs": {
+      "engine": "2D True-Shape Polygon & NFP (No-Fit Polygon) Nesting Solver",
+      "multicore": "Multi-Threaded Heuristic & Genetic Optimization",
+      "gpu_optimization": "CPU-Bound Combinatorial Nesting (2D Canvas Preview)",
+      "standards": [
+        "DXF",
+        "DWG",
+        "SVG",
+        "NC / G-Code",
+        "CSV BOM"
+      ]
+    },
     "logo_url": "/logos/nestforge.svg",
     "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
     "description": "NestForge is a browser-based nesting tool from Madegrain that arranges SVG and DXF parts on sheet layouts for laser, plasma, waterjet, and CNC cutting. Spacing, rotation, and grain-direction rules are applied while every calculation runs locally in the browser, so part files never leave the workstation.",
@@ -11430,6 +11512,18 @@ export const c5Tools: Tool[] = [
     "id": "t253",
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
+    "tech_specs": {
+      "engine": "Automated DWG/PDF Vector Takeoff & Spatial Quantification Engine",
+      "multicore": "Multi-Core Batch Sheet Parsing & Block Counting",
+      "gpu_optimization": "Hardware-Accelerated 2D Drawing Overlay & Markup",
+      "standards": [
+        "DWG",
+        "DXF",
+        "PDF (Vector)",
+        "XLSX",
+        "CSV"
+      ]
+    },
     "logo_url": "/logos/quantcad-hybrid.png",
     "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
     "description": "QuantCAD-Hybrid is DINAMIC PRO's desktop software for CNC manufacturing quotation and cost estimation. It ingests RFQs containing STEP and PDF files into a multi-part lot workspace with automatic document matching, provides a per-part 3D review (Setup View), and produces an editable industrial costing per part — setup, cycle time, material, tools, external operations, QA, scrap, overhead, and margin. A local materials library handles blank dimensions, weight, and EUR/kg costing, while DINAMIC Time Intelligence learns from the shop's own production history (imported from Excel/CSV) to estimate machining times with comparable-part ranges. It runs fully offline as a licensed Windows client with device-locked .qlic licensing and a local SQLite library, so RFQ files never leave the shop.",
@@ -11491,7 +11585,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
-        "a": "The closest alternatives to QuantCAD-Hybrid are Mastercam, nTop, Magics. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while nTop is favored for implicit modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM. Accelygen (available via custom enterprise quote) competes directly on core Manufacturing workflows, while Fusion 360 (starting at $85/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
@@ -11549,6 +11643,12 @@ export const c5Tools: Tool[] = [
       "PDF",
       "XLSX",
       "CSV"
+    ],
+    "alternatives": [
+      "accelygen",
+      "fusion-360",
+      "solidcam",
+      "mastercam"
     ]
   }
 ];

@@ -253,7 +253,7 @@ Generated via CADGuide.tools`;
               <div>
                 <strong className="font-black">Weld Highly Stressed</strong>
                 <p className="mt-0.5 text-amber-700">
-                  The load-stress ratio is already in the high-load operating zone of {physics.stressRatio.toFixed(1)}%, It is recommended to increase safety redundancy. 
+                  The load-stress ratio is already in the high-load operating zone of {physics.stressRatio.toFixed(1)}%, it is recommended to increase safety redundancy. 
                 </p>
               </div>
             </div>

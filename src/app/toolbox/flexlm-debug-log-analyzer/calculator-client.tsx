@@ -249,7 +249,7 @@ export default function FlexlmLogAnalyzerClient() {
             <Shield className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
             <div className="text-base leading-relaxed">
               <p className="font-bold mb-1">100% Browser local analysis (zero data outflow)) </p>
-              <p>In order to ensure the enterprise network architecture and employee privacy security, this analyzer is completely based on HTML5 FileReader Technology. All text summarization and icon generation are in<b>Done in your local browser sandbox</b>, None of your log content will be uploaded to any server. </p>
+              <p>In order to ensure the enterprise network architecture and employee privacy security, this analyzer is completely based on HTML5 FileReader Technology. All text summarization and icon generation are in <b>Done in your local browser sandbox</b>, None of your log content will be uploaded to any server. </p>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ export default function FlexlmLogAnalyzerClient() {
               <HelpCircle className="w-12 h-12 text-slate-300 mb-4" />
               <h3 className="text-slate-800 font-black text-lg">Waiting for log data to be imported...</h3>
               <p className="text-lg text-slate-400 max-w-sm mt-2 leading-relaxed">
-                Please upload your FLEXlm (`lmgrd`) service debug log file on the left, Or directly click &apos;Load Demo Log&apos;&apos;Experience the offline statistics panel with one click. 
+                Please upload your FLEXlm (`lmgrd`) service debug log file on the left, or directly click &apos;Load Demo Log&apos;&apos;Experience the offline statistics panel with one click. 
               </p>
             </div>
 ) : (

@@ -13,44 +13,44 @@ interface ShortcutItem {
 
 const SHORTCUTS_DATA: ShortcutItem[] = [
   // System shortcuts
-  { keys: 'Ctrl + N', command: 'New file', category: 'system', description: 'New part, Assembly or drawing file. ' },
-  { keys: 'Ctrl + O', command: 'Open file', category: 'system', description: 'Browse and open existing models. ' },
-  { keys: 'Ctrl + S', command: 'Save file', category: 'system', description: 'Quickly save the current document. ' },
-  { keys: 'Ctrl + Q', command: 'Force Rebuild', category: 'system', description: 'The most hard-core shortcut keys, Force a complete rebuild of all entities in the feature tree to resolve abnormal model display errors. ' },
-  { keys: 'Ctrl + B', command: 'Rebuild', category: 'system', description: 'Rebuild the currently changed features and assemblies. ' },
-  { keys: 'S', command: 'Quick pop-up menu', category: 'system', description: 'The essence of SolidWorks efficiency, Pop up a highly customizable shortcut bar at the mouse point (sketch, Features and assembly vary) . ' },
-  { keys: 'D', command: 'Confirmation Corner', category: 'system', description: 'Directly confirm/Cancel the check mark and move it to the mouse cursor to quickly exit the current sketch or feature editing. ' },
-  { keys: 'F', command: 'Full page display (Zoom to Fit)', category: 'system', description: 'Center and zoom all entities in the view to full screen display. ' },
-  { keys: 'G', command: 'Partial magnifying glass (Magnifier)', category: 'system', description: 'Pop up the partial magnifying glass at the mouse position, Select fine faces and edges without scaling the viewport. ' },
-  { keys: 'Space (Spacebar)', command: 'View orientation menu (Orientation)', category: 'system', description: 'Bring up the View Oriented Cube panel and double-click Quick Slice. ' },
+  { keys: 'Ctrl + N', command: 'New file', category: 'system', description: 'New part, Assembly or drawing file.' },
+  { keys: 'Ctrl + O', command: 'Open file', category: 'system', description: 'Browse and open existing models.' },
+  { keys: 'Ctrl + S', command: 'Save file', category: 'system', description: 'Quickly save the current document.' },
+  { keys: 'Ctrl + Q', command: 'Force Rebuild', category: 'system', description: 'The most hard-core shortcut keys, Force a complete rebuild of all entities in the feature tree to resolve abnormal model display errors.' },
+  { keys: 'Ctrl + B', command: 'Rebuild', category: 'system', description: 'Rebuild the currently changed features and assemblies.' },
+  { keys: 'S', command: 'Quick pop-up menu', category: 'system', description: 'The essence of SolidWorks efficiency, Pop up a highly customizable shortcut bar at the mouse point (sketch, Features and assembly vary) .' },
+  { keys: 'D', command: 'Confirmation Corner', category: 'system', description: 'Directly confirm/Cancel the check mark and move it to the mouse cursor to quickly exit the current sketch or feature editing.' },
+  { keys: 'F', command: 'Full page display (Zoom to Fit)', category: 'system', description: 'Center and zoom all entities in the view to full screen display.' },
+  { keys: 'G', command: 'Partial magnifying glass (Magnifier)', category: 'system', description: 'Pop up the partial magnifying glass at the mouse position, Select fine faces and edges without scaling the viewport.' },
+  { keys: 'Space (Spacebar)', command: 'View orientation menu (Orientation)', category: 'system', description: 'Bring up the View Oriented Cube panel and double-click Quick Slice.' },
   
   // Views
-  { keys: 'Ctrl + 1', command: 'Front View', category: 'part', description: 'Switch to front projection direction. ' },
-  { keys: 'Ctrl + 2', command: 'Back View', category: 'part', description: 'Switch to forward rear projection direction. ' },
-  { keys: 'Ctrl + 3', command: 'Left View', category: 'part', description: 'Switch to left projection direction. ' },
+  { keys: 'Ctrl + 1', command: 'Front View', category: 'part', description: 'Switch to front projection direction.' },
+  { keys: 'Ctrl + 2', command: 'Back View', category: 'part', description: 'Switch to forward rear projection direction.' },
+  { keys: 'Ctrl + 3', command: 'Left View', category: 'part', description: 'Switch to left projection direction.' },
   { keys: 'Ctrl + 4', command: 'Right View', category: 'part', description: 'Switch to the right projection direction' },
-  { keys: 'Ctrl + 5', command: 'Top View', category: 'part', description: 'Switch to the top view direction. ' },
-  { keys: 'Ctrl + 6', command: 'Bottom View', category: 'part', description: 'Switch to bottom view direction. ' },
-  { keys: 'Ctrl + 7', command: 'Isometric View', category: 'part', description: 'Switch to standard isometric three-dimensional oblique projection. ' },
-  { keys: 'Ctrl + 8', command: 'Normal To', category: 'part', description: 'Align the currently selected sketch plane or solid plane to the screen. ' },
+  { keys: 'Ctrl + 5', command: 'Top View', category: 'part', description: 'Switch to the top view direction.' },
+  { keys: 'Ctrl + 6', command: 'Bottom View', category: 'part', description: 'Switch to bottom view direction.' },
+  { keys: 'Ctrl + 7', command: 'Isometric View', category: 'part', description: 'Switch to standard isometric three-dimensional oblique projection.' },
+  { keys: 'Ctrl + 8', command: 'Normal To', category: 'part', description: 'Align the currently selected sketch plane or solid plane to the screen.' },
   
   // Sketching shortcuts
-  { keys: 'Esc', command: 'Deselect/Exit tool', category: 'sketch', description: 'Exit the current drawing tool and return to the normal frame selection mouse. ' },
-  { keys: 'Enter', command: 'Repeat the last command', category: 'sketch', description: 'Reactivate the sketch or drawing command used in the previous round. ' },
-  { keys: 'L', command: 'Draw a straight line (Line)', category: 'sketch', description: 'Draw a line on the currently active sketch surface. ' },
-  { keys: 'Ctrl + Drag', command: 'Copy entities at equal intervals', category: 'sketch', description: 'Select the sketch object and hold down Ctrl Drag to clone the entity as is. ' },
+  { keys: 'Esc', command: 'Deselect/Exit tool', category: 'sketch', description: 'Exit the current drawing tool and return to the normal frame selection mouse.' },
+  { keys: 'Enter', command: 'Repeat the last command', category: 'sketch', description: 'Reactivate the sketch or drawing command used in the previous round.' },
+  { keys: 'L', command: 'Draw a straight line (Line)', category: 'sketch', description: 'Draw a line on the currently active sketch surface.' },
+  { keys: 'Ctrl + Drag', command: 'Copy entities at equal intervals', category: 'sketch', description: 'Select the sketch object and hold down Ctrl Drag to clone the entity as is.' },
   
   // Assembly shortcuts
-  { keys: 'Tab', command: 'Hide hover component (Hide)', category: 'assembly', description: 'Click when the mouse is hovering over any part of the assembly Tab, Can hide it silently in an instant, exposing internal parts. ' },
-  { keys: 'Shift + Tab', command: 'Show hidden components (Show)', category: 'assembly', description: 'Move the mouse to the blank space where the part is hidden, Hold down Shift+Tab to resurface. ' },
+  { keys: 'Tab', command: 'Hide hover component (Hide)', category: 'assembly', description: 'Click when the mouse is hovering over any part of the assembly Tab, can hide it silently in an instant, exposing internal parts.' },
+  { keys: 'Shift + Tab', command: 'Show hidden components (Show)', category: 'assembly', description: 'Move the mouse to the blank space where the part is hidden, Hold down Shift+Tab to resurface.' },
   { keys: 'Alt + Drag', command: 'Smart Mates', category: 'assembly', description: 'Hold Alt Use the key to drag the part axis hole to another part, and the coaxial center will be automatically created./Coinciding with each other, extremely efficient! ' },
-  { keys: 'Ctrl + Drag (Component)', command: 'Quickly copy parts', category: 'assembly', description: 'Drag parts within the assembly and hold down Ctrl to directly drag out the copy. ' },
+  { keys: 'Ctrl + Drag (Component)', command: 'Quickly copy parts', category: 'assembly', description: 'Drag parts within the assembly and hold down Ctrl to directly drag out the copy.' },
   
   // Drawing shortcuts
-  { keys: 'R', command: 'List of recent documents', category: 'system', description: 'Calling up the list of recently used historical project documents on the main interface. ' },
-  { keys: 'C', command: 'Collapse feature tree (Collapse)', category: 'system', description: 'One-click FeatureManager The complex assembly feature tree on the left is collapsed. ' },
-  { keys: 'Alt + Click', command: 'Unlock dimension alignment', category: 'drawing', description: 'When marking dimensions in drawings, Alt-Move to bypass automatic grid-aligned attachments. ' },
-  { keys: 'Shift + Click', command: 'Dimension tangent point lock', category: 'drawing', description: 'Press and hold when dimensioning arcs and circles Shift, The maximum/minimum tangent spacing of the dimension can be locked. ' }
+  { keys: 'R', command: 'List of recent documents', category: 'system', description: 'Calling up the list of recently used historical project documents on the main interface.' },
+  { keys: 'C', command: 'Collapse feature tree (Collapse)', category: 'system', description: 'One-click FeatureManager The complex assembly feature tree on the left is collapsed.' },
+  { keys: 'Alt + Click', command: 'Unlock dimension alignment', category: 'drawing', description: 'When marking dimensions in drawings, Alt-Move to bypass automatic grid-aligned attachments.' },
+  { keys: 'Shift + Click', command: 'Dimension tangent point lock', category: 'drawing', description: 'Press and hold when dimensioning arcs and circles Shift, the maximum/minimum tangent spacing of the dimension can be locked.' }
 ];
 
 // Mouse Gesture Definition (4-direction and 8-direction presets for SW)
@@ -233,7 +233,7 @@ export default function SolidWorksShortcutsClient() {
               <Compass className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-slate-300">What are mouse gestures? </p>
-                <p className="mt-1">In SolidWorks, Hold down the<b>right mouse button and drag in a specific direction</b>, You can quickly activate the corresponding command. Hover the mouse on the right SVG Explore configurations on the roulette wheel. </p>
+                <p className="mt-1">In SolidWorks, Hold down the <b>right mouse button and drag in a specific direction</b>, you can quickly activate the corresponding command. Hover the mouse on the right SVG Explore configurations on the roulette wheel. </p>
               </div>
             </div>
           </div>
@@ -595,13 +595,13 @@ export default function SolidWorksShortcutsClient() {
           <div>
             <h4 className="font-bold text-slate-800 text-lg mb-1.5">1. The perfect combination of mouse gestures and shortcut toolbar</h4>
             <p>
-              In SolidWorks, It is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch. Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
+              In SolidWorks, it is strongly recommended to configure mouse gestures to 8 directions, and put the most frequent &quot;draw straight line&quot;&quot;, &quot;Circle&quot;, &quot;Smart Size&quot;, &quot;Crop&quot; and&quot;face up to &quot;put it in&quot;. Incorporate less frequent but critical construction tools such as Stretch, cut off, stake out, datum) put in <b>`S Key Shortcut Panel`</b> Medium. In this way, when you are designing, you can right-drag with the right mouse to complete the sketch. Just press the S key with your left hand to generate a three-dimensional body with one click, Realize that &quot;both hands do not leave the center of gravity of the keyboard and mouse&quot;&quot;Extremely fast experience. 
             </p>
           </div>
           <div>
             <h4 className="font-bold text-slate-800 text-lg mb-1.5">2. Forced rebuild (Ctrl+Q) vs. normal rebuild (Ctrl+B) The difference</h4>
             <p>
-              Regular Rebuild (Ctrl+B) rebuilds the generated solid only on the currently modified sketch feature, Although the calculation speed is fast, when there are many assembly relationships,, It is easy to cause coordination errors or some sketch relationships cannot be updated. And<b>Forced rebuild (Ctrl+Q) </b>clears the memory cache directly, Starting from the topmost plane of the FeatureManager feature tree, Decompile and rebuild the chassis line by line for all assembly primitives and geometric constraints. Whenever the dimensions are changed but the entity remains unchanged, Or if the assembly drawing is missing, press Ctrl+Q It is the most direct and thorough self-healing command. 
+              Regular Rebuild (Ctrl+B) rebuilds the generated solid only on the currently modified sketch feature, although the calculation speed is fast, when there are many assembly relationships,, it is easy to cause coordination errors or some sketch relationships cannot be updated. And <b>Forced rebuild (Ctrl+Q) </b> clears the memory cache directly, Starting from the topmost plane of the FeatureManager feature tree, Decompile and rebuild the chassis line by line for all assembly primitives and geometric constraints. Whenever the dimensions are changed but the entity remains unchanged, or if the assembly drawing is missing, press Ctrl+Q It is the most direct and thorough self-healing command. 
             </p>
           </div>
         </div>

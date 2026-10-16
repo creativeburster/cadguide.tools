@@ -45,7 +45,7 @@ export default function MatlabShortcutsPage() {
         {/* Editor vs Command Window guide — unique to MATLAB */}
         <section className="bg-white border-b border-slate-100 py-8 print:hidden">
           <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-4">Two Workspaces, Different Shortcuts</h2>
+            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-4">Two Workspaces, different Shortcuts</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-green-50 rounded-2xl border border-green-100 p-5">
                 <h3 className="font-black text-green-900 mb-3 flex items-center gap-2">

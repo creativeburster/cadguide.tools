@@ -121,8 +121,8 @@ export default function DrawingLagCleanerClient() {
     if (cleanScalelist) {
       internalCommands += `  (princ "\\nResetting redundant annotation scale list (Scale List Edit)...")
   (if (dictremove (namedobjdict) "ACAD_SCALELIST")
-    (princ "\\n✓ The proportion list dictionary was reset successfully. ")
-    (princ "\\n- No redundant scale dictionary detected. ")
+    (princ "\\n✓ The proportion list dictionary was reset successfully.")
+    (princ "\\n- No redundant scale dictionary detected.")
 )\n`;
     }
 
@@ -155,7 +155,7 @@ ${internalCommands}
   (setvar "EXPERT" 0)
   (setvar "CMDECHO" 1)
   (princ "\\n==================================================")
-  (princ "\\n✓ Congratulations! The drawings have been optimized and cleaned up. File size has been significantly reduced. ")
+  (princ "\\n✓ Congratulations! The drawings have been optimized and cleaned up. File size has been significantly reduced.")
   (princ "\\n==================================================")
   (princ)
 )
@@ -384,7 +384,7 @@ ${internalCommands}
                         <li>Copy the code generated above to create a plain text file on the desktop, Rename to <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">cleandwg.lsp</span>. </li>
                         <li>Open the drawing that needs slimming and cleaning in AutoCAD, Drag the `cleandwg.lsp` file you just saved into the drawing viewport. </li>
                         <li>Enter in the CAD command bar: <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">CLEANDWG</span> and press Enter to silently purify and reorganize the drawing database. </li>
-                        <li><b>Lazy solution</b>: You can also directly copy the entire code, At the CAD command line press Ctrl+V Paste and run directly. </li>
+                        <li><b>Lazy solution</b>: You can also directly copy the entire code, at the CAD command line press Ctrl+V Paste and run directly. </li>
                       </ol>
                     </div>
                   </div>

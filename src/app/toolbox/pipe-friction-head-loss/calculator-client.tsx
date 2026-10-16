@@ -9,7 +9,7 @@ const PIPE_MATERIALS = [
   { name: 'Copper / Stainless Steel (Copper tube/stainless steel tube)', C: 140, desc: 'Very low fluid resistance, often used in hot and cold water pipes' },
   { name: 'Welded Steel (Ordinary welded steel pipe)', C: 120, desc: 'Industrial circulating water, Heating ready' },
   { name: 'New Cast Iron (New cast iron pipe)', C: 100, desc: 'Common in municipal water supply main pipes' },
-  { name: 'Old Corroded Cast Iron (Old rusted cast iron pipe)', C: 80, desc: 'Pipe scaling, The inner wall resistance is large'},
+  { name: 'Old Corroded Cast Iron (Old rusted cast iron pipe)', C: 80, desc: 'Pipe scaling, the inner wall resistance is large'},
 ];
 
 export default function PipeFrictionClient() {
@@ -357,7 +357,7 @@ Generated via CADGuide.tools`;
           <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
             <Droplets className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>Flow Physics Tip: </strong>Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , The boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially. 
+              <strong>Flow Physics Tip: </strong> Flow velocity animation shows the change in kinetic energy of the fluid through the movement of streamlines in the pipe. The C factor of the pipe material determines the pipe resistance coefficient; When the inner surface of the pipe is rusted or scaled (e.g. C sliding from 150 to 80) , the boundary resistance of the pipe wall increases significantly, and the unit friction head loss under the same flow rate will increase exponentially. 
             </span>
           </div>
         </div>

@@ -5,7 +5,7 @@ import AcadPgpEditorClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'AutoCAD PGP Command Alias Editor & Compiler Online | CADGuide.tools',
   description:
-    'Online editing, modification and compilation AutoCAD acad.pgp Or Haochen/Zhongwang CAD Alias file. Provides local resolution, Repeat shortcut key conflict verification and one-click package download. All data is run safely locally in the browser, Not uploading to server. ',
+    'Edit, validate, and compile AutoCAD acad.pgp or GstarCAD/ZWCAD command alias files online. Instant duplicate shortcut conflict detection and one-click PGP export — 100% client-side in your browser.',
   path: '/toolbox/acad-pgp-alias-editor',
 });
 
@@ -36,7 +36,7 @@ export default function AcadPgpEditorPage() {
               AutoCAD <span className="text-blue-400">PGP Shortcut Key Alias Editor</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Upload and parse local acad.pgp / gcad.pgp configuration files online. Real-time conflict red text warning, easy addition, deletion and modification, And compile and download pure PGP text with one click. 
+              Upload and parse local acad.pgp or gcad.pgp configuration files online. Detect duplicate alias conflicts in real time, customize command mappings, and export clean PGP files with one click.
             </p>
           </div>
         </section>

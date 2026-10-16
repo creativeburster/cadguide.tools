@@ -93,9 +93,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "kicad",
+      "allegro-pcb",
       "orcad",
-      "eplan-electric-p8"
+      "pads-professional",
+      "kicad"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -298,8 +299,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "altium-designer",
-      "eplan-electric-p8"
+      "kicad",
+      "easyeda",
+      "diptrace",
+      "altium-designer"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -362,7 +365,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Eagle?",
-        "a": "The closest alternatives to Eagle are Altium Designer, EPLAN Electric P8. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Eagle are KiCad, EasyEDA, DipTrace. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -463,7 +466,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN Electric P8?",
-        "a": "The closest alternatives to EPLAN Electric P8 are Altium Designer, LTspice, KiCad. Altium Designer (starting at $3,500/yr) competes directly on core Electrical Engineering workflows, while LTspice adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks. EPLAN (starting at $3,000/yr) competes directly on core Electrical Engineering workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -553,6 +556,12 @@ export const c6Tools: Tool[] = [
       "Excel",
       "XML",
       "STEP (Cabinet 3D)"
+    ],
+    "alternatives": [
+      "eplan",
+      "autocad",
+      "solidworks",
+      "altium-designer"
     ]
   },
   {
@@ -710,7 +719,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "allegro-pcb"
+      "eplan-electric-p8",
+      "autocad",
+      "solidworks",
+      "altium-designer"
     ],
     "country": "Germany",
     "category_id": "c6",
@@ -874,7 +886,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN?",
-        "a": "The closest alternatives to EPLAN are Altium Designer, EPLAN Electric P8, LTspice. Altium Designer (starting at $3,500/yr) competes directly on core Machine Building workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks. EPLAN Electric P8 (available via custom enterprise quote) competes directly on core Machine Building workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -977,7 +989,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "eplan"
+      "xpedition",
+      "altium-designer",
+      "pads-professional",
+      "orcad"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -1038,7 +1053,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allegro PCB?",
-        "a": "The closest alternatives to Allegro PCB are Altium Designer, EPLAN Electric P8, LTspice. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional. Xpedition (available via custom enterprise quote) competes directly on core Electronics workflows, while Altium Designer (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1240,7 +1255,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "eplan"
+      "altium-designer",
+      "pads-professional",
+      "allegro-pcb",
+      "kicad"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -1402,7 +1420,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OrCAD?",
-        "a": "The closest alternatives to OrCAD are Altium Designer, EPLAN Electric P8, LTspice. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while PADS Professional (starting at $8,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1579,7 +1597,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "eplan"
+      "altium-designer",
+      "orcad",
+      "allegro-pcb",
+      "xpedition"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -1739,7 +1760,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PADS Professional?",
-        "a": "The closest alternatives to PADS Professional are Altium Designer, EPLAN Electric P8, LTspice. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while OrCAD (starting at $2,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1841,7 +1862,10 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "eplan"
+      "allegro-pcb",
+      "altium-designer",
+      "pads-professional",
+      "orcad"
     ],
     "country": "USA",
     "category_id": "c6",
@@ -1902,7 +1926,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Xpedition?",
-        "a": "The closest alternatives to Xpedition are Altium Designer, EPLAN Electric P8, LTspice. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional. Allegro PCB (available via custom enterprise quote) competes directly on core Electronics workflows, while Altium Designer (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2061,13 +2085,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KiCad?",
-        "a": "The closest alternatives to KiCad are LTspice, EasyEDA, Proteus Design Suite. LTspice is the leading free/open-source alternative, while EasyEDA provides a browser-native cloud workflow. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "ltspice",
       "easyeda",
-      "proteus-design-suite"
+      "diptrace",
+      "altium-designer",
+      "orcad"
     ],
     "detailed_features": [
       {
@@ -2225,13 +2250,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EasyEDA?",
-        "a": "The closest alternatives to EasyEDA are Proteus Design Suite, NI Multisim, KiCad. Proteus Design Suite (starting at $248/perpetual) competes directly on core Electronics workflows, while NI Multisim is favored for interactive spice simulation with virtual instruments. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "proteus-design-suite",
-      "multisim",
-      "kicad"
+      "kicad",
+      "diptrace",
+      "circuitmaker",
+      "proteus-design-suite"
     ],
     "detailed_features": [
       {
@@ -2466,13 +2492,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DipTrace?",
-        "a": "The closest alternatives to DipTrace are Proteus Design Suite, EasyEDA, NI Multisim. Proteus Design Suite (starting at $248/perpetual) competes directly on core Electronics workflows, while EasyEDA provides a browser-native cloud workflow. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DipTrace are KiCad, EasyEDA, OrCAD. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "proteus-design-suite",
+      "kicad",
       "easyeda",
-      "multisim"
+      "orcad",
+      "proteus-design-suite"
     ],
     "detailed_features": [
       {
@@ -2645,13 +2672,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to NI Multisim?",
-        "a": "The closest alternatives to NI Multisim are Altium 365, Altium Designer. Altium 365 (starting at $295/yr) competes directly on core Electronics workflows, while Altium Designer is favored for unified pcb design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD. LTspice (free and open-source) competes directly on core Electronics workflows, while Proteus Design Suite (starting at $248 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "altium-365",
-      "eagle",
-      "altium-designer"
+      "ltspice",
+      "proteus-design-suite",
+      "orcad",
+      "kicad"
     ],
     "detailed_features": [
       {
@@ -2820,13 +2848,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LTspice?",
-        "a": "The closest alternatives to LTspice are CircuitMaker, KiCad, Altium Designer. CircuitMaker is the leading free/open-source alternative, while KiCad is favored for eeschema schematic editor. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD. NI Multisim (starting at $600/yr) competes directly on core Electronics workflows, while Proteus Design Suite (starting at $248 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "circuitmaker",
-      "kicad",
-      "altium-designer"
+      "multisim",
+      "proteus-design-suite",
+      "orcad",
+      "kicad"
     ],
     "detailed_features": [
       {
@@ -3011,13 +3040,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Proteus Design Suite?",
-        "a": "The closest alternatives to Proteus Design Suite are DipTrace, NI Multisim, EasyEDA. DipTrace (starting at $75/perpetual) competes directly on core Electronics workflows, while NI Multisim is favored for interactive spice simulation with virtual instruments. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA. NI Multisim (starting at $600/yr) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "diptrace",
       "multisim",
-      "easyeda"
+      "diptrace",
+      "easyeda",
+      "kicad"
     ],
     "detailed_features": [
       {
@@ -3191,13 +3221,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altium 365?",
-        "a": "The closest alternatives to Altium 365 are Altium Designer, EPLAN Electric P8, NI Multisim. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while EPLAN Electric P8 is favored for electrical cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while Allegro PCB (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
       "altium-designer",
-      "eplan-electric-p8",
-      "multisim"
+      "allegro-pcb",
+      "pads-professional",
+      "orcad"
     ],
     "detailed_features": [
       {
@@ -3364,13 +3395,14 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CircuitMaker?",
-        "a": "The closest alternatives to CircuitMaker are LTspice, NI Multisim, Proteus Design Suite. LTspice is the leading free/open-source alternative, while NI Multisim is favored for interactive spice simulation with virtual instruments. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CircuitMaker are EasyEDA, KiCad, DipTrace. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while KiCad (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "ltspice",
-      "multisim",
-      "proteus-design-suite"
+      "easyeda",
+      "kicad",
+      "diptrace",
+      "altium-designer"
     ],
     "detailed_features": [
       {

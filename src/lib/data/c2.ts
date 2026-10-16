@@ -2050,6 +2050,8 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "solidworks",
+      "solid-edge",
+      "ptc-creo",
       "fusion-360"
     ],
     "country": "USA",
@@ -2519,7 +2521,8 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "freecad",
-      "solvespace"
+      "solvespace",
+      "blender"
     ],
     "country": "Community/International",
     "category_id": "c2",
@@ -2579,7 +2582,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenSCAD?",
-        "a": "The closest alternatives to OpenSCAD are FreeCAD, SolveSpace. FreeCAD is the leading free/open-source alternative, while SolveSpace is favored for constraint solver. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenSCAD are FreeCAD, SolveSpace, Blender. FreeCAD (free and open-source) competes directly on core Hobbyist workflows, while SolveSpace (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3013,7 +3016,9 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "solidworks",
-      "zw3d"
+      "zw3d",
+      "solid-edge",
+      "freecad"
     ],
     "country": "USA",
     "category_id": "c2",
@@ -3073,7 +3078,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alibre Design?",
-        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D. SolidWorks (starting at $2,820/yr) competes directly on core Mechanical workflows, while ZW3D is favored for cad/cam/cae. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge. SolidWorks (starting at $2,820/yr) competes directly on core Mechanical workflows, while ZW3D (starting at $2,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3185,7 +3190,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maya?",
-        "a": "The closest alternatives to Maya are Blender, 3ds Max. Blender is the leading free/open-source alternative, while 3ds Max is favored for architectural visualization. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (starting at $2,010/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3295,7 +3300,9 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "blender",
-      "3ds-max"
+      "3ds-max",
+      "zbrush",
+      "rhino-3d"
     ]
   },
   {
@@ -3530,7 +3537,13 @@ export const c2Tools: Tool[] = [
         "C++"
       ],
       "docs_url": "https://docs.blender.org/api/current/"
-    }
+    },
+    "alternatives": [
+      "maya",
+      "3ds-max",
+      "zbrush",
+      "rhino-3d"
+    ]
   },
   {
     "id": "t79",
@@ -3597,7 +3610,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Geomagic Design X?",
-        "a": "The closest alternatives to Geomagic Design X are SolidWorks, Rhino 3D, Onshape. SolidWorks (starting at $2,820/yr) competes directly on core Reverse Engineering workflows, while Rhino 3D adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D. MeshLab (free and open-source) competes directly on core Reverse Engineering workflows, while Magics (starting at $5,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3650,6 +3663,12 @@ export const c2Tools: Tool[] = [
         ],
         "is_popular": true
       }
+    ],
+    "alternatives": [
+      "meshlab",
+      "magics",
+      "rhino-3d",
+      "siemens-nx"
     ]
   },
   {
@@ -3718,7 +3737,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alias AutoStudio?",
-        "a": "The closest alternatives to Alias AutoStudio are SolidWorks, Rhino 3D, Onshape. SolidWorks (starting at $2,820/yr) competes directly on core Automotive workflows, while Rhino 3D is favored for free-form nurbs. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX. Rhino 3D (starting at $995 one-time) competes directly on core Automotive workflows, while CATIA (starting at $2,700/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3754,6 +3773,12 @@ export const c2Tools: Tool[] = [
       "FBX",
       "OBJ",
       "STL"
+    ],
+    "alternatives": [
+      "rhino-3d",
+      "catia",
+      "siemens-nx",
+      "plasticity"
     ]
   },
   {
@@ -3823,7 +3848,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ZW3D?",
-        "a": "The closest alternatives to ZW3D are SolidWorks, Rhino 3D, Onshape. SolidWorks (starting at $2,820/yr) competes directly on core Manufacturing workflows, while Rhino 3D adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design. SolidWorks (starting at $2,820/yr) competes directly on core Manufacturing workflows, while Solid Edge (starting at $1,320/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3944,6 +3969,12 @@ export const c2Tools: Tool[] = [
       "NC (G-Code)",
       "DWG",
       "DXF"
+    ],
+    "alternatives": [
+      "solidworks",
+      "solid-edge",
+      "alibre-design",
+      "kompas-3d"
     ]
   },
   {
@@ -4946,7 +4977,9 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "zw3d",
-      "solidworks"
+      "solidworks",
+      "solid-edge",
+      "alibre-design"
     ],
     "country": "Russia",
     "category_id": "c2",
@@ -5098,7 +5131,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KOMPAS-3D?",
-        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks. ZW3D (starting at $2,000/yr) competes directly on core Aerospace workflows, while SolidWorks is favored for parametric 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge. ZW3D (starting at $2,000/yr) competes directly on core Aerospace workflows, while SolidWorks (starting at $2,820/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {

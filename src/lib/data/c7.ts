@@ -169,7 +169,12 @@ export const c7Tools: Tool[] = [
       "Enterprise",
       "Major Shipyards"
     ],
-    "alternatives": [],
+    "alternatives": [
+      "aveva-e3d-design",
+      "siemens-nx",
+      "catia",
+      "rhino-3d"
+    ],
     "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
     "pricing_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
     "affiliate_url": null,
@@ -207,7 +212,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AVEVA Marine?",
-        "a": "The closest alternatives to AVEVA Marine are MatrixGold, CLO 3D, PrusaSlicer. MatrixGold (starting at $7,900/perpetual) competes directly on core Shipbuilding workflows, while CLO 3D adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA. AVEVA E3D Design (starting at $8,000/yr) competes directly on core Shipbuilding workflows, while Siemens NX (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -308,7 +313,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CLO 3D?",
-        "a": "The closest alternatives to CLO 3D are MatrixGold, AVEVA Marine, PrusaSlicer. MatrixGold (starting at $7,900/perpetual) competes directly on core Fashion workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush. Marvelous Designer (starting at $480/yr) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -381,6 +386,12 @@ export const c7Tools: Tool[] = [
       "ZPrj",
       "DXF-AAMA",
       "PDF"
+    ],
+    "alternatives": [
+      "marvelous-designer",
+      "blender",
+      "zbrush",
+      "rhino-3d"
     ]
   },
   {
@@ -700,7 +711,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to 3ds Max?",
-        "a": "The closest alternatives to 3ds Max are Maya, Blender. Maya (starting at $2,010/yr) competes directly on core Architecture workflows, while Blender adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush. Maya (starting at $2,010/yr) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -743,7 +754,9 @@ export const c7Tools: Tool[] = [
     ],
     "alternatives": [
       "maya",
-      "blender"
+      "blender",
+      "zbrush",
+      "rhino-3d"
     ]
   },
   {
@@ -1707,13 +1720,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to UltiMaker Cura?",
-        "a": "The closest alternatives to UltiMaker Cura are Bambu Studio, PrusaSlicer, D5 Render. Bambu Studio is the leading free/open-source alternative, while PrusaSlicer is favored for organic / tree supports with industry-best quality. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to UltiMaker Cura are PrusaSlicer, Bambu Studio, Simplify3D. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while Bambu Studio (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "bambu-studio",
       "prusaslicer",
-      "d5-render"
+      "bambu-studio",
+      "simplify3d",
+      "autodesk-netfabb"
     ],
     "detailed_features": [
       {
@@ -1897,13 +1911,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PrusaSlicer?",
-        "a": "The closest alternatives to PrusaSlicer are Bambu Studio, UltiMaker Cura, D5 Render. Bambu Studio is the leading free/open-source alternative, while UltiMaker Cura is favored for 400+ printer profiles out of the box. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PrusaSlicer are Bambu Studio, UltiMaker Cura, Simplify3D. Bambu Studio (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
       "bambu-studio",
       "ultimaker-cura",
-      "d5-render"
+      "simplify3d",
+      "autodesk-netfabb"
     ],
     "detailed_features": [
       {
@@ -2089,13 +2104,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bambu Studio?",
-        "a": "The closest alternatives to Bambu Studio are UltiMaker Cura, PrusaSlicer, D5 Render. UltiMaker Cura is the leading free/open-source alternative, while PrusaSlicer is favored for organic / tree supports with industry-best quality. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Bambu Studio are PrusaSlicer, UltiMaker Cura, Simplify3D. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "ultimaker-cura",
       "prusaslicer",
-      "d5-render"
+      "ultimaker-cura",
+      "simplify3d",
+      "autodesk-netfabb"
     ],
     "detailed_features": [
       {
@@ -2278,11 +2294,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Simplify3D?",
-        "a": "The closest alternatives to Simplify3D are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Maker workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Simplify3D are PrusaSlicer, UltiMaker Cura, Bambu Studio. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "carlson-survey"
+      "prusaslicer",
+      "ultimaker-cura",
+      "bambu-studio",
+      "autodesk-netfabb"
     ],
     "detailed_features": [
       {
@@ -2448,10 +2467,15 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Netfabb?",
-        "a": "The closest alternatives to Autodesk Netfabb are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Aerospace workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura. Magics (starting at $5,000/yr) competes directly on core Aerospace workflows, while nTop (starting at $7,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "magics",
+      "ntop",
+      "ultimaker-cura",
+      "prusaslicer"
+    ],
     "detailed_features": [
       {
         "category": "AM Prep",
@@ -3429,12 +3453,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Adobe Substance 3D Painter?",
-        "a": "The closest alternatives to Adobe Substance 3D Painter are Marvelous Designer, V-Ray. Marvelous Designer (starting at $480/yr) competes directly on core Games workflows, while V-Ray is favored for hybrid cpu + gpu rendering (cuda / rtx). Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (starting at $399/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "marvelous-designer",
-      "v-ray"
+      "blender",
+      "zbrush",
+      "maya",
+      "3ds-max"
     ],
     "detailed_features": [
       {
@@ -3606,10 +3632,15 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Carlson Survey?",
-        "a": "The closest alternatives to Carlson Survey are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Civil Engineering workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer. Trimble Business Center (starting at $2,400/yr) competes directly on core Civil Engineering workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "trimble-business-center",
+      "civil-3d",
+      "openroads-designer",
+      "microstation"
+    ],
     "detailed_features": [
       {
         "category": "Surveying",
@@ -3784,12 +3815,14 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Business Center?",
-        "a": "The closest alternatives to Trimble Business Center are Marvelous Designer, V-Ray. Marvelous Designer (starting at $480/yr) competes directly on core Civil Engineering workflows, while V-Ray adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer. Carlson Survey (starting at $1,995 one-time) competes directly on core Civil Engineering workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
-      "marvelous-designer",
-      "v-ray"
+      "carlson-survey",
+      "civil-3d",
+      "openroads-designer",
+      "infraworks"
     ],
     "detailed_features": [
       {
@@ -4293,7 +4326,12 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "civil-3d",
+      "carlson-survey",
+      "trimble-business-center",
+      "infraworks"
+    ],
     "country": "Australia",
     "category_id": "c7",
     "pricing_type": "Perpetual",
@@ -4352,7 +4390,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maptek Vulcan?",
-        "a": "The closest alternatives to Maptek Vulcan are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Mining workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center. Civil 3D (starting at $2,870/yr) competes directly on core Mining workflows, while Carlson Survey (starting at $1,995 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4468,7 +4506,12 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "alternatives": [],
+    "alternatives": [
+      "chief-architect",
+      "sketchup",
+      "vectorworks",
+      "archicad"
+    ],
     "country": "Sweden",
     "category_id": "c7",
     "pricing_type": "Freemium",
@@ -4526,7 +4569,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CET Designer?",
-        "a": "The closest alternatives to CET Designer are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Interior Design workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks. Chief Architect (starting at $1,995/yr) competes directly on core Interior Design workflows, while SketchUp (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4722,6 +4765,18 @@ export const c7Tools: Tool[] = [
     "id": "t251",
     "name": "pic2CAD",
     "slug": "pic2cad",
+    "tech_specs": {
+      "engine": "Sub-Pixel Canny Edge Detection & Bezier/Arc Vectorization Engine",
+      "multicore": "Multi-Threaded Raster Pre-Processing & Curve Fitting",
+      "gpu_optimization": "WebGPU / WebGL Shader-Accelerated Image Thresholding",
+      "standards": [
+        "DXF",
+        "SVG",
+        "PNG",
+        "JPG",
+        "TIFF"
+      ]
+    },
     "logo_url": "/logos/pic2cad.png",
     "short_desc": "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
     "description": "pic2CAD turns pictures of people, objects, and furniture into clean line drawings and exports them as DXF, SVG, and PNG, ready to drop straight into a CAD file. Where ordinary vectorizers trace pixel edges and tangle curves around every shadow, pic2CAD reads what is actually in the picture and draws it as a line block. It targets architects and everyday CAD users building their own entourage and furniture blocks from real people and furniture, plus laser cutting and engraving workflows. Conversion modes cover Picture accurate, Subject only, and an Orthographic view (beta) that scales the drawing to a real-world height, and a shared library of 300+ community blocks ships with it.",
@@ -4783,7 +4838,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to pic2CAD?",
-        "a": "The closest alternatives to pic2CAD are MatrixGold, AVEVA Marine, CLO 3D. MatrixGold (starting at $7,900/perpetual) competes directly on core Architecture workflows, while AVEVA Marine is favored for hull design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to pic2CAD are DXF Medic, QCAD, LibreCAD. DXF Medic (available with a free tier) competes directly on core Architecture workflows, while QCAD (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
@@ -4827,6 +4882,12 @@ export const c7Tools: Tool[] = [
       "DXF",
       "SVG",
       "PNG"
+    ],
+    "alternatives": [
+      "dxf-medic",
+      "qcad",
+      "librecad",
+      "autocad-lt"
     ]
   }
 ];
