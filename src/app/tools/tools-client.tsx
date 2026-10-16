@@ -718,26 +718,20 @@ function ToolsList() {
                     </div>
                     
                     <div className="bg-slate-900 px-6 py-4 rounded-[24px] text-right shrink-0 w-full 2xl:w-auto shadow-xl shadow-slate-200 group-hover:bg-blue-600 transition-colors duration-500">
-                      <div className="text-[10px] text-blue-400 group-hover:text-blue-100 uppercase font-black tracking-widest mb-1 transition-colors">Starting at</div>
-                      <div className="text-2xl font-black text-white">
+                      <div className="text-[10px] text-blue-400 group-hover:text-blue-100 uppercase font-black tracking-widest mb-1 transition-colors">Licensing</div>
+                      <div className="text-xl font-black text-white">
                         {tool.discontinued
                           ? 'EOL'
-                          : tool.starting_price > 0
-                            ? `$${tool.starting_price.toLocaleString()}`
-                            : tool.quote_only
-                              ? 'Quote'
-                              : ['Free', 'Open Source', 'Freemium'].includes(tool.pricing_type)
-                                ? 'FREE'
-                                : 'Quote'}
+                          : ['Free', 'Open Source'].includes(tool.pricing_type)
+                            ? 'FREE'
+                            : tool.pricing_type || 'Commercial'}
                       </div>
                       <div className="text-[9px] text-slate-500 group-hover:text-blue-200 font-bold uppercase mt-1 transition-colors">
-                        {tool.starting_price > 0 && !tool.discontinued
-                          ? priceSuffix(tool) === 'month'
-                            ? 'Per Month / Seat'
-                            : priceSuffix(tool) === 'one-time'
-                              ? 'One-time / Seat'
-                              : 'Per Year / Seat'
-                          : 'Per Year / Seat'}
+                        {['Free', 'Open Source'].includes(tool.pricing_type)
+                          ? tool.pricing_type === 'Open Source'
+                            ? '100% Open Source'
+                            : 'Free Software'
+                          : 'Official Live Pricing'}
                       </div>
                     </div>
                   </div>

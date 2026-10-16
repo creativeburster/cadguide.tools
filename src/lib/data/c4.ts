@@ -142,7 +142,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Bluebeam Revu cost?",
-        "a": "Bluebeam Revu comes in Basics ($260 per user per year), Core ($330), and Complete ($440) subscription plans."
+        "a": "Bluebeam Revu is licensed on a Subscription model. Available editions include Basics, Core, Complete. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
@@ -158,7 +158,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bluebeam Revu?",
-        "a": "The closest alternatives to Bluebeam Revu are Navisworks, Solibri, Recap Pro. Navisworks (starting at $1,145/yr) competes directly on core AEC workflows, while Solibri adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Bluebeam Revu are Navisworks, Solibri, Recap Pro. Navisworks (offered on a Subscription license) competes directly on core AEC workflows, while Solibri (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -321,7 +321,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Navisworks cost?",
-        "a": "Navisworks Simulate costs $1,145 per year and Navisworks Manage costs $2,870 per year (or $360 monthly) on standard Autodesk subscriptions."
+        "a": "Navisworks is licensed on a Subscription model. Available editions include Simulate, Manage (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Navisworks?",
@@ -337,7 +337,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Navisworks?",
-        "a": "The closest alternatives to Navisworks are Solibri, Bluebeam Revu, Recap Pro. Solibri (starting at $3,500/yr) competes directly on core Construction workflows, while Bluebeam Revu is favored for aec collaboration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Navisworks are Solibri, Bluebeam Revu, Recap Pro. Solibri (offered on a Subscription license) competes directly on core Construction workflows, while Bluebeam Revu (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -482,7 +482,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solibri cost?",
-        "a": "Solibri starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Solibri is licensed on a Subscription model. Available editions include Office. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Solibri?",
@@ -498,7 +498,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solibri?",
-        "a": "The closest alternatives to Solibri are Navisworks, Recap Pro, Bluebeam Revu. Navisworks (starting at $1,145/yr) competes directly on core AEC workflows, while Recap Pro is favored for point cloud registration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Solibri are Navisworks, Recap Pro, Bluebeam Revu. Navisworks (offered on a Subscription license) competes directly on core AEC workflows, while Recap Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -621,7 +621,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does MeshLab cost?",
-        "a": "MeshLab is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "MeshLab is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is MeshLab really free?",
@@ -637,7 +637,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MeshLab?",
-        "a": "The closest alternatives to MeshLab are Magics, Blender, Solid Edge Viewer. Magics (starting at $5,000/yr) competes directly on core Research workflows, while Blender is favored for open source 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MeshLab are Magics, Blender, Solid Edge Viewer. Magics (offered on a Subscription license) competes directly on core Research workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -763,7 +763,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Recap Pro cost?",
-        "a": "Recap Pro starts at $360 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Recap Pro is licensed on a Subscription model. Available editions include Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Recap Pro?",
@@ -779,7 +779,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Recap Pro?",
-        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks. MeshLab (free and open-source) competes directly on core AEC workflows, while Geomagic Design X (starting at $1,900/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks. MeshLab (100% free) competes directly on core AEC workflows, while Geomagic Design X (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -863,7 +863,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solid Edge Viewer cost?",
-        "a": "Solid Edge Viewer is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "Solid Edge Viewer is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is Solid Edge Viewer really free?",
@@ -980,7 +980,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG TrueView cost?",
-        "a": "DWG TrueView is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "DWG TrueView is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is DWG TrueView really free?",
@@ -1097,7 +1097,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG FastView cost?",
-        "a": "DWG FastView is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "DWG FastView offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Premium Monthly, Premium Annual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official DWG FastView pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of DWG FastView?",
@@ -1334,7 +1334,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Reader cost?",
-        "a": "CAD Reader has a free tier with basic features. The Pro plan costs $9 per month for advanced measurement, cloud storage, and ad-free experience."
+        "a": "CAD Reader offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CAD Reader pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of CAD Reader?",
@@ -1431,7 +1431,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DXF Medic cost?",
-        "a": "Diagnosis is free. Repaired downloads are free for results with up to five parts; a €9 one-time upgrade unlocks unlimited repaired downloads."
+        "a": "DXF Medic offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official DXF Medic pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of DXF Medic?",
@@ -1571,7 +1571,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does CADProps cost?",
-        "a": "CADProps is completely free to use. All standard viewing, measurement, volume/weight calculation, and 3D link sharing features are available without subscriptions, credit cards, or paywalls."
+        "a": "CADProps is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       }
     ],
     "pricing_tiers": [

@@ -53,7 +53,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does MatrixGold cost?",
-        "a": "MatrixGold is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $7,900/seat (perpetual) depending on solver modules and token counts."
+        "a": "MatrixGold is licensed on a Perpetual model. Available editions include Perpetual License, Annual Maintenance. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MatrixGold?",
@@ -69,7 +69,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MatrixGold?",
-        "a": "The closest alternatives to MatrixGold are Rhino 3D, ZBrush, Blender. Rhino 3D (starting at $995/perpetual) competes directly on core Jewelry Design workflows, while ZBrush adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MatrixGold are Rhino 3D, ZBrush, Blender. Rhino 3D (offered on a Perpetual license) competes directly on core Jewelry Design workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -196,7 +196,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA Marine cost?",
-        "a": "AVEVA Marine is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $15,000/year depending on solver modules and token counts."
+        "a": "AVEVA Marine is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
@@ -212,7 +212,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AVEVA Marine?",
-        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA. AVEVA E3D Design (starting at $8,000/yr) competes directly on core Shipbuilding workflows, while Siemens NX (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA. AVEVA E3D Design (offered on a Subscription license) competes directly on core Shipbuilding workflows, while Siemens NX (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -297,7 +297,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CLO 3D cost?",
-        "a": "CLO 3D starts at $50 per month (Subscription). Available tiers include Individual ($50 /mo), Business (Custom quote)."
+        "a": "CLO 3D is licensed on a Subscription model. Available editions include Individual, Business. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CLO 3D?",
@@ -313,7 +313,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CLO 3D?",
-        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush. Marvelous Designer (starting at $480/yr) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush. Marvelous Designer (offered on a Subscription license) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -516,7 +516,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Infraworks cost?",
-        "a": "Infraworks starts at $260 per month (Subscription). Available tiers include Monthly ($260 /mo), Annual ($2,075 /yr)."
+        "a": "Infraworks is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Infraworks?",
@@ -532,7 +532,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Infraworks?",
-        "a": "The closest alternatives to Infraworks are Civil 3D, OpenRoads Designer, MicroStation. Civil 3D (starting at $2,870/yr) competes directly on core Civil Engineering workflows, while OpenRoads Designer is favored for corridor modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Infraworks are Civil 3D, OpenRoads Designer, MicroStation. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while OpenRoads Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -695,7 +695,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does 3ds Max cost?",
-        "a": "3ds Max costs $2,010 per year or $260 per month. A 3-year subscription is available for $6,030. Autodesk also provides free educational access for eligible students and educators."
+        "a": "3ds Max is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of 3ds Max?",
@@ -711,7 +711,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to 3ds Max?",
-        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush. Maya (starting at $2,010/yr) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush. Maya (offered on a Subscription license) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -882,7 +882,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does ZBrush cost?",
-        "a": "ZBrush starts at $399 per year (Subscription). Available tiers include Monthly ($49 /mo), Annual ($399 /yr)."
+        "a": "ZBrush is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ZBrush?",
@@ -1045,7 +1045,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does KeyShot cost?",
-        "a": "KeyShot starts at $1,299 per year (Subscription). Available tiers include Pro (Annual) ($1,299 /yr)."
+        "a": "KeyShot is licensed on a Subscription model. Available editions include Pro (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of KeyShot?",
@@ -1061,7 +1061,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KeyShot?",
-        "a": "The closest alternatives to KeyShot are V-Ray, Corona Renderer, Blender. V-Ray (starting at $540/yr) competes directly on core Product Design workflows, while Corona Renderer is favored for path-traced unbiased cpu renderer. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KeyShot are V-Ray, Corona Renderer, Blender. V-Ray (offered on a Subscription license) competes directly on core Product Design workflows, while Corona Renderer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1231,7 +1231,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Lumion cost?",
-        "a": "Lumion starts at $1,149 per year (Subscription). Available tiers include Pro ($1,149 /yr), Studio ($1,499 /yr)."
+        "a": "Lumion is licensed on a Subscription model. Available editions include Pro, Studio. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Lumion?",
@@ -1247,7 +1247,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Lumion?",
-        "a": "The closest alternatives to Lumion are Twinmotion, Enscape, D5 Render. Twinmotion (starting at $445/yr) competes directly on core Architecture workflows, while Enscape adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Lumion are Twinmotion, Enscape, D5 Render. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1408,7 +1408,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Enscape cost?",
-        "a": "Enscape starts at $575 per year (Subscription). Available tiers include Floating License ($922 /yr), Solo (Fixed Seat) ($575 /yr)."
+        "a": "Enscape is licensed on a Subscription model. Available editions include Floating License, Solo (Fixed Seat). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Enscape?",
@@ -1424,7 +1424,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Enscape?",
-        "a": "The closest alternatives to Enscape are Twinmotion, Lumion, D5 Render. Twinmotion (starting at $445/yr) competes directly on core Architecture workflows, while Lumion is favored for architectural rendering. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Enscape are Twinmotion, Lumion, D5 Render. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1582,7 +1582,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Twinmotion cost?",
-        "a": "Twinmotion starts at $445 per year (Subscription). Available tiers include Free (Low Revenue) ($0 /forever), Commercial Subscription ($445 /yr)."
+        "a": "Twinmotion is licensed on a Subscription model. Available editions include Free (Low Revenue), Commercial Subscription. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Twinmotion?",
@@ -1598,7 +1598,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Twinmotion?",
-        "a": "The closest alternatives to Twinmotion are Lumion, Enscape, D5 Render. Lumion (starting at $1,149/yr) competes directly on core Architecture workflows, while Enscape is favored for real-time walkthrough. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Twinmotion are Lumion, Enscape, D5 Render. Lumion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1704,7 +1704,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does UltiMaker Cura cost?",
-        "a": "UltiMaker Cura is open-source and free to use. Vendor support and commercial services may be offered separately."
+        "a": "UltiMaker Cura is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is UltiMaker Cura really free?",
@@ -1895,7 +1895,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does PrusaSlicer cost?",
-        "a": "PrusaSlicer is open-source and free to use. Vendor support and commercial services may be offered separately."
+        "a": "PrusaSlicer is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is PrusaSlicer really free?",
@@ -2088,7 +2088,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Bambu Studio cost?",
-        "a": "Bambu Studio is open-source and free to use. Vendor support and commercial services may be offered separately."
+        "a": "Bambu Studio is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is Bambu Studio really free?",
@@ -2278,7 +2278,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Simplify3D cost?",
-        "a": "Simplify3D starts at $199 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Simplify3D is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Simplify3D?",
@@ -2451,7 +2451,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Netfabb cost?",
-        "a": "Autodesk Netfabb starts at $4,070 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Autodesk Netfabb is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
@@ -2467,7 +2467,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Netfabb?",
-        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura. Magics (starting at $5,000/yr) competes directly on core Aerospace workflows, while nTop (starting at $7,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura. Magics (offered on a Subscription license) competes directly on core Aerospace workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2634,7 +2634,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Marvelous Designer cost?",
-        "a": "Marvelous Designer starts at $480 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Marvelous Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
@@ -2650,7 +2650,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Marvelous Designer?",
-        "a": "The closest alternatives to Marvelous Designer are CLO 3D, Blender, ZBrush. CLO 3D (starting at $50/mo) competes directly on core Games workflows, while Blender is favored for open source 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Marvelous Designer are CLO 3D, Blender, ZBrush. CLO 3D (offered on a Subscription license) competes directly on core Games workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2812,7 +2812,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does D5 Render cost?",
-        "a": "D5 Render offers a permanent free Community Edition for both personal and commercial use. D5 Pro is priced at $360 per year ($30/month billed annually) or $38 per month on a monthly plan, unlocking the full 10,000+ asset library, sequencer video rendering, and advanced AI features."
+        "a": "D5 Render offers a free tier alongside paid commercial plans (Freemium). Available plans include Community, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official D5 Render pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of D5 Render?",
@@ -2828,7 +2828,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to D5 Render?",
-        "a": "The closest alternatives to D5 Render are Twinmotion, Lumion, Enscape. Twinmotion (starting at $445/yr) competes directly on core AEC workflows, while Lumion is favored for architectural rendering. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to D5 Render are Twinmotion, Lumion, Enscape. Twinmotion (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3025,7 +3025,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does V-Ray cost?",
-        "a": "V-Ray Solo starts at $540 per year ($45/month billed annually) for a node-locked license on a single machine. V-Ray Premium is $778.80 per year ($64.90/month billed annually), providing floating licensing and full access to Chaos Vantage, Phoenix, Player, and 20 Chaos Cloud credits."
+        "a": "V-Ray is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of V-Ray?",
@@ -3041,7 +3041,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to V-Ray?",
-        "a": "The closest alternatives to V-Ray are Corona Renderer, Lumion, Enscape. Corona Renderer (starting at $395/yr) competes directly on core AEC workflows, while Lumion is favored for architectural rendering. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to V-Ray are Corona Renderer, Lumion, Enscape. Corona Renderer (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3232,7 +3232,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Corona Renderer cost?",
-        "a": "Corona Solo starts at $395 per year ($32.90/month billed annually) or $59.90 billed monthly for a single fixed-workstation license. Corona Premium is priced at $590 per year ($49.20/month billed annually) or $72.90 billed monthly, providing floating license sharing, Chaos Phoenix fluid dynamics, and Chaos Player access."
+        "a": "Corona Renderer is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Corona Renderer?",
@@ -3248,7 +3248,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Corona Renderer?",
-        "a": "The closest alternatives to Corona Renderer are V-Ray, Enscape, Lumion. V-Ray (starting at $540/yr) competes directly on core AEC workflows, while Enscape is favored for real-time walkthrough. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Corona Renderer are V-Ray, Enscape, Lumion. V-Ray (offered on a Subscription license) competes directly on core AEC workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3437,7 +3437,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Adobe Substance 3D Painter cost?",
-        "a": "Adobe Substance 3D Painter starts at $240 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Adobe Substance 3D Painter is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
@@ -3453,7 +3453,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Adobe Substance 3D Painter?",
-        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (starting at $399/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3616,7 +3616,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Carlson Survey cost?",
-        "a": "Carlson Survey starts at $1,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Carlson Survey is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Carlson Survey?",
@@ -3632,7 +3632,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Carlson Survey?",
-        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer. Trimble Business Center (starting at $2,400/yr) competes directly on core Civil Engineering workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer. Trimble Business Center (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3799,7 +3799,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Trimble Business Center cost?",
-        "a": "Trimble Business Center starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Trimble Business Center is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
@@ -3815,7 +3815,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Business Center?",
-        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer. Carlson Survey (starting at $1,995 one-time) competes directly on core Civil Engineering workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer. Carlson Survey (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4207,7 +4207,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA E3D Design cost?",
-        "a": "AVEVA E3D Design starts at approximately $8,000 per year for the Standard edition subscription. The full-scale E3D Design Enterprise edition starts at approximately $15,000+ per year. Educational licenses are available at discounted rates for accredited universities and institutions."
+        "a": "AVEVA E3D Design is licensed on a Subscription model. Available editions include E3D Design Standard, E3D Design Enterprise, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
@@ -4223,7 +4223,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AVEVA E3D Design?",
-        "a": "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. Hexagon SmartPlant 3D (starting at $18,000/yr) competes directly on core Oil and Gas workflows, while AutoCAD Plant 3D is favored for spec-driven 3d pipe routing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. Hexagon SmartPlant 3D (offered on a Subscription license) competes directly on core Oil and Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4374,7 +4374,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Maptek Vulcan cost?",
-        "a": "Maptek Vulcan is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "Maptek Vulcan is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
@@ -4390,7 +4390,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maptek Vulcan?",
-        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center. Civil 3D (starting at $2,870/yr) competes directly on core Mining workflows, while Carlson Survey (starting at $1,995 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center. Civil 3D (offered on a Subscription license) competes directly on core Mining workflows, while Carlson Survey (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4553,7 +4553,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CET Designer cost?",
-        "a": "CET Designer is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "CET Designer offers a free tier alongside paid commercial plans (Freemium). Available plans include Perpetual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CET Designer pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of CET Designer?",
@@ -4569,7 +4569,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CET Designer?",
-        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks. Chief Architect (starting at $1,995/yr) competes directly on core Interior Design workflows, while SketchUp (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks. Chief Architect (offered on a Subscription license) competes directly on core Interior Design workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4683,7 +4683,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Accelygen?",
-        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, Fusion 360. Onshape (starting at $1,500/yr) competes directly on core Hardware Startups workflows, while SolidWorks is favored for parametric 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, Fusion 360. Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4822,7 +4822,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does pic2CAD cost?",
-        "a": "The free plan covers 3 drawings per month. The Creator plan is €8 per month billed yearly (€96 per year, VAT included) with 30 drawings a month, the full block gallery, and beta tools. DXF, SVG, and PNG downloads are free on every plan."
+        "a": "pic2CAD offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Creator, Studios. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official pic2CAD pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of pic2CAD?",

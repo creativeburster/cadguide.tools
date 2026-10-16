@@ -12,17 +12,13 @@ export const SITE_NAME = "CADGuide.tools";
 
 const MAX_DESC = 160;
 
-/** Pricing summary suitable for titles ("Free", "from $235", "from $255/mo", "Quote"). */
+/** Pricing summary suitable for titles ("Free", "Open Source", "Freemium", "Subscription", "Perpetual", "Quote"). */
 export function pricingSummary(tool: Tool): string {
   if (tool.pricing_type === "Free") return "Free";
+  if (tool.pricing_type === "Open Source") return "Open Source";
   if (tool.pricing_type === "Freemium") return "Freemium";
   if (tool.quote_only) return "Quote";
-  if (tool.starting_price > 0) {
-    if (tool.price_period === "month") return `from $${tool.starting_price}/mo`;
-    if (tool.price_period === "one-time") return `from $${tool.starting_price}`;
-    return `from $${tool.starting_price}/yr`;
-  }
-  return tool.pricing_type;
+  return tool.pricing_type || "Commercial";
 }
 
 /** Compact description suitable for `<meta name="description">` (≤160 chars). */
@@ -71,7 +67,7 @@ export function toolTitle(tool: Tool, category?: Category): string {
   const price = pricingSummary(tool);
   const currentYear = new Date().getFullYear();
 
-  // If the tool is already indexed (in our whitelist), preserve its exact title pattern containing price to guarantee zero rank volatility
+  // If the tool is already indexed (in our whitelist), preserve its exact title pattern containing licensing model
   if (PRESERVED_INDEXED_SLUGS.includes(tool.slug)) {
     const full = `${tool.name} Review ${currentYear}: ${categoryName} Software (${price}) | ${SITE_NAME}`;
     if (full.length <= MAX_TITLE) return full;
@@ -130,32 +126,7 @@ function offerForTool(tool: Tool) {
       url: tool.pricing_url || tool.official_url,
     };
   }
-  if (tool.starting_price > 0) {
-    const isYear = tool.price_period === "year";
-    const isMonth = tool.price_period === "month";
-    const unitText = isYear ? "ANNUAL" : isMonth ? "MONTH" : undefined;
-
-    const offerObj: Record<string, unknown> = {
-      "@type": "Offer",
-      price: tool.starting_price.toString(),
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: tool.pricing_url || tool.official_url,
-    };
-
-    if (unitText) {
-      offerObj.priceSpecification = {
-        "@type": "UnitPriceSpecification",
-        price: tool.starting_price.toString(),
-        priceCurrency: "USD",
-        unitText,
-      };
-    }
-
-    return offerObj;
-  }
-  // Pricing is "Subscription" or "Perpetual" but the starting price is
-  // not exposed — omit price so Google doesn't surface "0" rich-result.
+  // Commercial tools link directly to the official vendor pricing portal
   return {
     "@type": "Offer",
     priceCurrency: "USD",

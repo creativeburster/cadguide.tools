@@ -145,7 +145,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Siemens NX cost?",
-        "a": "Siemens does not publish official NX pricing — subscriptions are quoted by role and configuration. Community sources put entry NX CAD/CAM around $3,000 per year; contact Siemens or a reseller for exact figures."
+        "a": "Siemens NX is licensed on a Subscription model. Available editions include Core CAD (NX X), Advanced Designer, Value-Based (Tokens). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Siemens NX offer a free trial?",
@@ -386,7 +386,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Mastercam cost?",
-        "a": "Mastercam starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Mastercam is licensed on a Subscription / Perpetual model. Available editions include Entry, Mill-Turn. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Mastercam?",
@@ -402,7 +402,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Mastercam?",
-        "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill. SolidCAM (starting at $4,000/yr) competes directly on core Manufacturing workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -549,7 +549,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does nTop cost?",
-        "a": "nTop is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $7,500/year depending on solver modules and token counts."
+        "a": "nTop is licensed on a Subscription model. Available editions include nTop Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of nTop?",
@@ -565,7 +565,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nTop?",
-        "a": "The closest alternatives to nTop are Autodesk Netfabb, Magics, Altair Inspire. Autodesk Netfabb (starting at $4,070/yr) competes directly on core Aerospace workflows, while Magics (starting at $5,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to nTop are Autodesk Netfabb, Magics, Altair Inspire. Autodesk Netfabb (offered on a Subscription license) competes directly on core Aerospace workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -688,7 +688,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SolidCAM cost?",
-        "a": "SolidCAM starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "SolidCAM is licensed on a Subscription model. Available editions include iMachining. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of SolidCAM?",
@@ -704,7 +704,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SolidCAM?",
-        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, Fusion 360. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while CAMWorks is favored for feature-based machining. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, Fusion 360. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while CAMWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -841,7 +841,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Magics cost?",
-        "a": "Magics is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $5,000/year depending on solver modules and token counts."
+        "a": "Magics is licensed on a Subscription model. Available editions include Essential. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Magics?",
@@ -857,7 +857,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Magics?",
-        "a": "The closest alternatives to Magics are Autodesk Netfabb, nTop, MeshLab. Autodesk Netfabb (starting at $4,070/yr) competes directly on core Additive Manufacturing workflows, while nTop (starting at $7,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Magics are Autodesk Netfabb, nTop, MeshLab. Autodesk Netfabb (offered on a Subscription license) competes directly on core Additive Manufacturing workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -943,7 +943,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does VISI Modelling cost?",
-        "a": "VISI Modelling starts at $3,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "VISI Modelling is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of VISI Modelling?",
@@ -959,7 +959,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to VISI Modelling?",
-        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid. Visi (starting at $5,000 one-time) competes directly on core Mold Design workflows, while Cimatron (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while Cimatron (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1050,7 +1050,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Cimatron cost?",
-        "a": "Cimatron starts at $3,500 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Cimatron is licensed on a Subscription model. Available editions include Mold & Die Design, NC Programming Bundle. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Cimatron?",
@@ -1066,7 +1066,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Cimatron?",
-        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis. Visi (starting at $5,000 one-time) competes directly on core Mold Design workflows, while VISI Modelling (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1190,7 +1190,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Mechanical cost?",
-        "a": "Ansys does not publish prices — Mechanical is sold quote-only through sales and resellers, priced per seat, module bundle, and HPC configuration. Contact Ansys or a partner for a quote."
+        "a": "ANSYS Mechanical is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
@@ -1206,7 +1206,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Mechanical?",
-        "a": "The closest alternatives to ANSYS Mechanical are Abaqus, COMSOL Multiphysics, Altair HyperWorks. Abaqus (starting at $25,000/yr) competes directly on core Aerospace workflows, while COMSOL Multiphysics adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Mechanical are Abaqus, COMSOL Multiphysics, Altair HyperWorks. Abaqus (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1362,7 +1362,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Nastran cost?",
-        "a": "Hexagon does not publish prices — MSC Nastran is quote-only via sales and resellers, priced by solver modules, seats, and HPC packs. Contact Hexagon or a distributor for a quote."
+        "a": "MSC Nastran is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MSC Nastran?",
@@ -1493,7 +1493,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Altair HyperWorks cost?",
-        "a": "Altair HyperWorks starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Altair HyperWorks is licensed on a Subscription model. Available editions include Units Based. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Altair HyperWorks?",
@@ -1509,7 +1509,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altair HyperWorks?",
-        "a": "The closest alternatives to Altair HyperWorks are ANSYS Workbench, Abaqus, MSC Nastran. ANSYS Workbench (starting at $30,000/yr) competes directly on core Automotive workflows, while Abaqus is favored for abaqus/standard implicit solver. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Altair HyperWorks are ANSYS Workbench, Abaqus, MSC Nastran. ANSYS Workbench (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1629,7 +1629,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAMWorks cost?",
-        "a": "CAMWorks starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "CAMWorks is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CAMWorks?",
@@ -1645,7 +1645,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAMWorks?",
-        "a": "The closest alternatives to CAMWorks are SolidCAM, Mastercam, FeatureCAM. SolidCAM (starting at $4,000/yr) competes directly on core Manufacturing workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CAMWorks are SolidCAM, Mastercam, FeatureCAM. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1817,7 +1817,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does TopSolid cost?",
-        "a": "TopSolid is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "TopSolid is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of TopSolid?",
@@ -1833,7 +1833,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TopSolid?",
-        "a": "The closest alternatives to TopSolid are Mastercam, Visi, hyperMILL. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while Visi (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to TopSolid are Mastercam, Visi, hyperMILL. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Visi (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2025,7 +2025,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Visi cost?",
-        "a": "Visi is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Visi is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Visi?",
@@ -2041,7 +2041,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Visi?",
-        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid. Cimatron (starting at $3,500/yr) competes directly on core Mold Making workflows, while VISI Modelling (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid. Cimatron (offered on a Subscription license) competes directly on core Mold Making workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2234,7 +2234,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Edgecam cost?",
-        "a": "Edgecam is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Edgecam is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Edgecam?",
@@ -2250,7 +2250,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Edgecam?",
-        "a": "The closest alternatives to Edgecam are Mastercam, FeatureCAM, GibbsCAM. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while FeatureCAM (starting at $2,040/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Edgecam are Mastercam, FeatureCAM, GibbsCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2439,7 +2439,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does KISSsoft cost?",
-        "a": "KISSsoft is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "KISSsoft is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of KISSsoft?",
@@ -2455,7 +2455,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KISSsoft?",
-        "a": "The closest alternatives to KISSsoft are MSC Adams, ANSYS Mechanical, SolidWorks. MSC Adams (starting at $18,000/yr) competes directly on core Automotive workflows, while ANSYS Mechanical is favored for fea simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KISSsoft are MSC Adams, ANSYS Mechanical, SolidWorks. MSC Adams (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2635,7 +2635,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does FeatureCAM cost?",
-        "a": "FeatureCAM is sold as the Autodesk Fusion with FeatureCAM subscription bundle, starting at approximately $2,040 per year. Contact Autodesk or an authorized partner for enterprise quotes."
+        "a": "FeatureCAM is licensed on a Subscription model. Available editions include Fusion with FeatureCAM. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of FeatureCAM?",
@@ -2651,7 +2651,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to FeatureCAM?",
-        "a": "The closest alternatives to FeatureCAM are Edgecam, GibbsCAM, CAMWorks. Edgecam (starting at $4,500 one-time) competes directly on core Manufacturing workflows, while GibbsCAM (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to FeatureCAM are Edgecam, GibbsCAM, CAMWorks. Edgecam (offered on a Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2843,7 +2843,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does GibbsCAM cost?",
-        "a": "GibbsCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "GibbsCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of GibbsCAM?",
@@ -2859,7 +2859,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GibbsCAM?",
-        "a": "The closest alternatives to GibbsCAM are Mastercam, FeatureCAM, Edgecam. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while FeatureCAM (starting at $2,040/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to GibbsCAM are Mastercam, FeatureCAM, Edgecam. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3051,7 +3051,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does hyperMILL cost?",
-        "a": "hyperMILL is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "hyperMILL is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of hyperMILL?",
@@ -3067,7 +3067,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to hyperMILL?",
-        "a": "The closest alternatives to hyperMILL are PowerMill, Mastercam, Tebis. PowerMill (starting at $7,760/yr) competes directly on core Manufacturing workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to hyperMILL are PowerMill, Mastercam, Tebis. PowerMill (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3258,7 +3258,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tebis cost?",
-        "a": "Tebis is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Tebis is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Tebis?",
@@ -3274,7 +3274,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tebis?",
-        "a": "The closest alternatives to Tebis are PowerMill, hyperMILL, WorkNC. PowerMill (starting at $7,760/yr) competes directly on core Die Making workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Tebis are PowerMill, hyperMILL, WorkNC. PowerMill (offered on a Subscription license) competes directly on core Die Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3464,7 +3464,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does WorkNC cost?",
-        "a": "WorkNC is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "WorkNC is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of WorkNC?",
@@ -3480,7 +3480,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to WorkNC?",
-        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis. PowerMill (starting at $7,760/yr) competes directly on core Mold Making workflows, while hyperMILL (starting at $6,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis. PowerMill (offered on a Subscription license) competes directly on core Mold Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3666,7 +3666,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SURFCAM cost?",
-        "a": "SURFCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "SURFCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of SURFCAM?",
@@ -3682,7 +3682,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SURFCAM?",
-        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam. Mastercam (starting at $3,000/yr) competes directly on core General Machining workflows, while BobCAD-CAM (starting at $3,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam. Mastercam (offered on a Subscription / Perpetual license) competes directly on core General Machining workflows, while BobCAD-CAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3871,7 +3871,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does BobCAD-CAM cost?",
-        "a": "BobCAD-CAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "BobCAD-CAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
@@ -3887,7 +3887,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BobCAD-CAM?",
-        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam. SURFCAM (starting at $4,000 one-time) competes directly on core General Machining workflows, while Fusion 360 (starting at $85/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4078,7 +4078,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AutoForm cost?",
-        "a": "AutoForm is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "AutoForm is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AutoForm?",
@@ -4094,7 +4094,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoForm?",
-        "a": "The closest alternatives to AutoForm are LS-DYNA, Abaqus, Altair Inspire. LS-DYNA (starting at $20,000/yr) competes directly on core Automotive workflows, while Abaqus is favored for abaqus/standard implicit solver. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoForm are LS-DYNA, Abaqus, Altair Inspire. LS-DYNA (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4282,7 +4282,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldflow cost?",
-        "a": "Moldflow is offered on a subscription model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Moldflow is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Moldflow?",
@@ -4298,7 +4298,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Moldflow?",
-        "a": "The closest alternatives to Moldflow are Moldex3D, ANSYS Workbench, COMSOL Multiphysics. Moldex3D (starting at $6,000/perpetual) competes directly on core Plastics workflows, while ANSYS Workbench is favored for project schematic with parametric workflows. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Moldflow are Moldex3D, ANSYS Workbench, COMSOL Multiphysics. Moldex3D (offered on a Perpetual license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4487,7 +4487,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldex3D cost?",
-        "a": "Moldex3D is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Moldex3D is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Moldex3D?",
@@ -4503,7 +4503,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Moldex3D?",
-        "a": "The closest alternatives to Moldex3D are Moldflow, ANSYS Workbench, COMSOL Multiphysics. Moldflow (starting at $5,000/yr) competes directly on core Plastics workflows, while ANSYS Workbench is favored for project schematic with parametric workflows. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Moldex3D are Moldflow, ANSYS Workbench, COMSOL Multiphysics. Moldflow (offered on a Subscription license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4692,7 +4692,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AlphaCAM cost?",
-        "a": "AlphaCAM is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "AlphaCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AlphaCAM?",
@@ -4708,7 +4708,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AlphaCAM?",
-        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM. TopSolid (available via custom enterprise quote) competes directly on core Woodworking workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM. TopSolid (offered on a Perpetual license) competes directly on core Woodworking workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4894,7 +4894,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Radan cost?",
-        "a": "Radan is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Radan is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Radan?",
@@ -4910,7 +4910,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Radan?",
-        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge. SigmaNEST (starting at $5,000 one-time) competes directly on core Sheet Metal workflows, while Lantek Expert (starting at $4,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5097,7 +5097,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Lantek Expert cost?",
-        "a": "Lantek Expert is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "Lantek Expert is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Lantek Expert?",
@@ -5113,7 +5113,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Lantek Expert?",
-        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge. SigmaNEST (starting at $5,000 one-time) competes directly on core Sheet Metal workflows, while Radan (starting at $4,500 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5300,7 +5300,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SigmaNEST cost?",
-        "a": "SigmaNEST is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "SigmaNEST is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of SigmaNEST?",
@@ -5316,7 +5316,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SigmaNEST?",
-        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge. Lantek Expert (starting at $4,000 one-time) competes directly on core Sheet Metal workflows, while Radan (starting at $4,500 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge. Lantek Expert (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5429,7 +5429,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Fluent cost?",
-        "a": "ANSYS Fluent starts at $30,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "ANSYS Fluent is licensed on a Subscription model. Available editions include Commercial Seat. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
@@ -5445,7 +5445,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Fluent?",
-        "a": "The closest alternatives to ANSYS Fluent are COMSOL Multiphysics, Simcenter STAR-CCM+, SimScale. COMSOL Multiphysics (starting at $3,995/perpetual) competes directly on core Aerospace workflows, while Simcenter STAR-CCM+ is favored for polyhedral and trimmed-cell automatic meshing. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Fluent are COMSOL Multiphysics, Simcenter STAR-CCM+, SimScale. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Simcenter STAR-CCM+ (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -5613,7 +5613,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Workbench cost?",
-        "a": "ANSYS Workbench starts at $30,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "ANSYS Workbench is licensed on a Subscription model. Available editions include Enterprise CAE Suite. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
@@ -5629,7 +5629,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Workbench?",
-        "a": "The closest alternatives to ANSYS Workbench are COMSOL Multiphysics, Altair HyperWorks, Abaqus. COMSOL Multiphysics (starting at $3,995/perpetual) competes directly on core Aerospace workflows, while Altair HyperWorks is favored for multi-physics simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Workbench are COMSOL Multiphysics, Altair HyperWorks, Abaqus. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -5808,7 +5808,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Discovery cost?",
-        "a": "ANSYS Discovery starts at $2,280 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "ANSYS Discovery is licensed on a Subscription model. Available editions include Standard Exploration, High-Fidelity Refinement. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
@@ -5824,7 +5824,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Discovery?",
-        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Fusion 360. Altair Inspire (starting at $6,000/yr) competes directly on core Manufacturing workflows, while SimScale provides a browser-native cloud workflow. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Fusion 360. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6017,7 +6017,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Abaqus cost?",
-        "a": "Abaqus starts at $25,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Abaqus is licensed on a Subscription model. Available editions include Abaqus/Standard & Explicit. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Abaqus?",
@@ -6215,7 +6215,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does COMSOL Multiphysics cost?",
-        "a": "COMSOL Multiphysics starts at $3,995 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "COMSOL Multiphysics is licensed on a Perpetual model. Available editions include Core Platform. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
@@ -6231,7 +6231,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to COMSOL Multiphysics?",
-        "a": "The closest alternatives to COMSOL Multiphysics are ANSYS Workbench, ANSYS Fluent, Abaqus. ANSYS Workbench (starting at $30,000/yr) competes directly on core Electronics workflows, while ANSYS Fluent is favored for pressure-based and density-based solvers. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to COMSOL Multiphysics are ANSYS Workbench, ANSYS Fluent, Abaqus. ANSYS Workbench (offered on a Subscription license) competes directly on core Electronics workflows, while ANSYS Fluent (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6415,7 +6415,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does LS-DYNA cost?",
-        "a": "LS-DYNA is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $20,000/year depending on solver modules and token counts."
+        "a": "LS-DYNA is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of LS-DYNA?",
@@ -6431,7 +6431,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LS-DYNA?",
-        "a": "The closest alternatives to LS-DYNA are Abaqus, ANSYS Mechanical, Altair HyperWorks. Abaqus (starting at $25,000/yr) competes directly on core Automotive workflows, while ANSYS Mechanical is favored for fea simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to LS-DYNA are Abaqus, ANSYS Mechanical, Altair HyperWorks. Abaqus (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6595,7 +6595,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Simcenter STAR-CCM+ cost?",
-        "a": "Simcenter STAR-CCM+ is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $25,000/year depending on solver modules and token counts."
+        "a": "Simcenter STAR-CCM+ is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
@@ -6611,7 +6611,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Simcenter STAR-CCM+?",
-        "a": "The closest alternatives to Simcenter STAR-CCM+ are ANSYS Fluent, COMSOL Multiphysics, OpenFOAM. ANSYS Fluent (starting at $30,000/yr) competes directly on core Aerospace workflows, while COMSOL Multiphysics adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Simcenter STAR-CCM+ are ANSYS Fluent, COMSOL Multiphysics, OpenFOAM. ANSYS Fluent (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6779,7 +6779,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does OpenFOAM cost?",
-        "a": "OpenFOAM is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "OpenFOAM is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is OpenFOAM really free?",
@@ -6795,7 +6795,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenFOAM?",
-        "a": "The closest alternatives to OpenFOAM are ANSYS Fluent, SimScale, Simcenter STAR-CCM+. ANSYS Fluent (starting at $30,000/yr) competes directly on core Research workflows, while SimScale provides a browser-native cloud workflow. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenFOAM are ANSYS Fluent, SimScale, Simcenter STAR-CCM+. ANSYS Fluent (offered on a Subscription license) competes directly on core Research workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6972,7 +6972,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SimScale cost?",
-        "a": "SimScale starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "SimScale is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of SimScale?",
@@ -6988,7 +6988,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SimScale?",
-        "a": "The closest alternatives to SimScale are ANSYS Discovery, COMSOL Multiphysics, ANSYS Fluent. ANSYS Discovery (starting at $2,280/yr) competes directly on core AEC workflows, while COMSOL Multiphysics adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SimScale are ANSYS Discovery, COMSOL Multiphysics, ANSYS Fluent. ANSYS Discovery (offered on a Subscription license) competes directly on core AEC workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7150,7 +7150,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Femap cost?",
-        "a": "Femap starts at $12,000 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Femap is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Femap?",
@@ -7166,7 +7166,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Femap?",
-        "a": "The closest alternatives to Femap are MSC Patran, Altair HyperWorks, ANSYS Mechanical. MSC Patran (starting at $14,000/yr) competes directly on core Aerospace workflows, while Altair HyperWorks is favored for multi-physics simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Femap are MSC Patran, Altair HyperWorks, ANSYS Mechanical. MSC Patran (offered on a Subscription license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7331,7 +7331,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Altair Inspire cost?",
-        "a": "Altair Inspire starts at $6,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Altair Inspire is licensed on a Subscription model. Available editions include Inspire Generative. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Altair Inspire?",
@@ -7347,7 +7347,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altair Inspire?",
-        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, Fusion 360, SolidWorks. ANSYS Discovery (starting at $2,280/yr) competes directly on core Aerospace workflows, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, Fusion 360, SolidWorks. ANSYS Discovery (offered on a Subscription license) competes directly on core Aerospace workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7524,7 +7524,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Patran cost?",
-        "a": "MSC Patran is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $14,000/year depending on solver modules and token counts."
+        "a": "MSC Patran is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MSC Patran?",
@@ -7540,7 +7540,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MSC Patran?",
-        "a": "The closest alternatives to MSC Patran are Femap, Altair HyperWorks, ANSYS Mechanical. Femap (starting at $12,000/perpetual) competes directly on core Aerospace workflows, while Altair HyperWorks is favored for multi-physics simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MSC Patran are Femap, Altair HyperWorks, ANSYS Mechanical. Femap (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7703,7 +7703,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Adams cost?",
-        "a": "MSC Adams is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $18,000/year depending on solver modules and token counts."
+        "a": "MSC Adams is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MSC Adams?",
@@ -7719,7 +7719,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MSC Adams?",
-        "a": "The closest alternatives to MSC Adams are Altair Inspire, ANSYS Mechanical, COMSOL Multiphysics. Altair Inspire (starting at $6,000/yr) competes directly on core Automotive workflows, while ANSYS Mechanical is favored for fea simulation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MSC Adams are Altair Inspire, ANSYS Mechanical, COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7880,7 +7880,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAESAR II cost?",
-        "a": "CAESAR II is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $8,000/year depending on solver modules and token counts."
+        "a": "CAESAR II is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CAESAR II?",
@@ -7896,7 +7896,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAESAR II?",
-        "a": "The closest alternatives to CAESAR II are Bentley AutoPIPE, PV Elite, ANSYS Mechanical. Bentley AutoPIPE (starting at $8,000/yr) competes directly on core Oil & Gas workflows, while PV Elite is favored for asme viii div 1 & div 2 code compliance. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CAESAR II are Bentley AutoPIPE, PV Elite, ANSYS Mechanical. Bentley AutoPIPE (offered on a Subscription license) competes directly on core Oil & Gas workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8058,7 +8058,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley AutoPIPE cost?",
-        "a": "Bentley AutoPIPE starts at $8,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Bentley AutoPIPE is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
@@ -8074,7 +8074,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bentley AutoPIPE?",
-        "a": "The closest alternatives to Bentley AutoPIPE are CAESAR II, PV Elite, Bentley STAAD.Pro. CAESAR II (starting at $8,000/yr) competes directly on core Power workflows, while PV Elite is favored for asme viii div 1 & div 2 code compliance. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Bentley AutoPIPE are CAESAR II, PV Elite, Bentley STAAD.Pro. CAESAR II (offered on a Subscription license) competes directly on core Power workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8237,7 +8237,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PV Elite cost?",
-        "a": "PV Elite is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $6,500/year depending on solver modules and token counts."
+        "a": "PV Elite is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of PV Elite?",
@@ -8253,7 +8253,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PV Elite?",
-        "a": "The closest alternatives to PV Elite are CAESAR II, Bentley AutoPIPE, ANSYS Mechanical. CAESAR II (starting at $8,000/yr) competes directly on core Oil & Gas workflows, while Bentley AutoPIPE is favored for asme b31, en 13480, kta, asme nb/nc/nd codes. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PV Elite are CAESAR II, Bentley AutoPIPE, ANSYS Mechanical. CAESAR II (offered on a Subscription license) competes directly on core Oil & Gas workflows, while Bentley AutoPIPE (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8412,7 +8412,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AspenTech Aspen HYSYS cost?",
-        "a": "AspenTech Aspen HYSYS is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $25,000/year depending on solver modules and token counts."
+        "a": "AspenTech Aspen HYSYS is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
@@ -8428,7 +8428,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AspenTech Aspen HYSYS?",
-        "a": "The closest alternatives to AspenTech Aspen HYSYS are COMSOL Multiphysics, ANSYS Fluent, AVEVA E3D Design. COMSOL Multiphysics (starting at $3,995/perpetual) competes directly on core Oil & Gas workflows, while ANSYS Fluent is favored for pressure-based and density-based solvers. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AspenTech Aspen HYSYS are COMSOL Multiphysics, ANSYS Fluent, AVEVA E3D Design. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Oil & Gas workflows, while ANSYS Fluent (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8590,7 +8590,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI SAP2000 cost?",
-        "a": "CSI SAP2000 starts at $2,495 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "CSI SAP2000 is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
@@ -8606,7 +8606,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CSI SAP2000?",
-        "a": "The closest alternatives to CSI SAP2000 are Bentley STAAD.Pro, CSI ETABS, RISA-3D. Bentley STAAD.Pro (starting at $3,200/yr) competes directly on core AEC workflows, while CSI ETABS is favored for slab, beam, column, shear-wall integrated design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CSI SAP2000 are Bentley STAAD.Pro, CSI ETABS, RISA-3D. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8771,7 +8771,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI ETABS cost?",
-        "a": "CSI ETABS starts at $2,495 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "CSI ETABS is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CSI ETABS?",
@@ -8787,7 +8787,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CSI ETABS?",
-        "a": "The closest alternatives to CSI ETABS are CSI SAP2000, Bentley STAAD.Pro, Autodesk Robot Structural Analysis. CSI SAP2000 (starting at $2,495/perpetual) competes directly on core AEC workflows, while Bentley STAAD.Pro is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CSI ETABS are CSI SAP2000, Bentley STAAD.Pro, Autodesk Robot Structural Analysis. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8952,7 +8952,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley STAAD.Pro cost?",
-        "a": "Bentley STAAD.Pro starts at $3,200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Bentley STAAD.Pro is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Bentley STAAD.Pro?",
@@ -8968,7 +8968,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bentley STAAD.Pro?",
-        "a": "The closest alternatives to Bentley STAAD.Pro are CSI SAP2000, CSI ETABS, RISA-3D. CSI SAP2000 (starting at $2,495/perpetual) competes directly on core AEC workflows, while CSI ETABS is favored for slab, beam, column, shear-wall integrated design. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Bentley STAAD.Pro are CSI SAP2000, CSI ETABS, RISA-3D. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9131,7 +9131,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Tedds cost?",
-        "a": "Tekla Tedds starts at $2,400 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Tekla Tedds is licensed on a Subscription model. Available editions include Tedds Standalone. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
@@ -9147,7 +9147,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tekla Tedds?",
-        "a": "The closest alternatives to Tekla Tedds are IDEA StatiCa, Bentley STAAD.Pro, CSI SAP2000. IDEA StatiCa (starting at $2,300/yr) competes directly on core AEC workflows, while Bentley STAAD.Pro is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Tekla Tedds are IDEA StatiCa, Bentley STAAD.Pro, CSI SAP2000. IDEA StatiCa (offered on a Subscription license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9320,7 +9320,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Robot Structural Analysis cost?",
-        "a": "Autodesk Robot Structural Analysis starts at $2,615 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Autodesk Robot Structural Analysis is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
@@ -9336,7 +9336,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Robot Structural Analysis?",
-        "a": "The closest alternatives to Autodesk Robot Structural Analysis are Bentley STAAD.Pro, CSI SAP2000, CSI ETABS. Bentley STAAD.Pro (starting at $3,200/yr) competes directly on core AEC workflows, while CSI SAP2000 is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Robot Structural Analysis are Bentley STAAD.Pro, CSI SAP2000, CSI ETABS. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9497,7 +9497,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does IDEA StatiCa cost?",
-        "a": "IDEA StatiCa starts at $2,300 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "IDEA StatiCa is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
@@ -9513,7 +9513,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to IDEA StatiCa?",
-        "a": "The closest alternatives to IDEA StatiCa are Tekla Tedds, CSI SAP2000, Bentley STAAD.Pro. Tekla Tedds (starting at $2,400/yr) competes directly on core AEC workflows, while CSI SAP2000 is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to IDEA StatiCa are Tekla Tedds, CSI SAP2000, Bentley STAAD.Pro. Tekla Tedds (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9676,7 +9676,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does RISA-3D cost?",
-        "a": "RISA-3D starts at $2,200 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "RISA-3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of RISA-3D?",
@@ -9692,7 +9692,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to RISA-3D?",
-        "a": "The closest alternatives to RISA-3D are Bentley STAAD.Pro, CSI SAP2000, Autodesk Robot Structural Analysis. Bentley STAAD.Pro (starting at $3,200/yr) competes directly on core AEC workflows, while CSI SAP2000 is favored for linear / non-linear static and dynamic analysis. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to RISA-3D are Bentley STAAD.Pro, CSI SAP2000, Autodesk Robot Structural Analysis. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -10069,7 +10069,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does midas Civil cost?",
-        "a": "midas Civil Standard with basic capabilities starts at approximately $5,000 per year, while midas Civil Professional with full bridge and seismic capabilities starts at approximately $10,000 per year for a subscription license. Educational licenses are available at discounted rates for students and institutions."
+        "a": "midas Civil is licensed on a Subscription model. Available editions include midas Civil Standard, midas Civil Professional, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of midas Civil?",
@@ -10085,7 +10085,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Civil?",
-        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer. CSI SAP2000 (starting at $2,495 one-time) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (starting at $3,200/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer. CSI SAP2000 (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10382,7 +10382,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does midas Gen cost?",
-        "a": "midas Gen Standard with basic capabilities starts at approximately $4,000 per year, while midas Gen Professional with advanced building design and seismic analysis starts at approximately $8,000 per year for a subscription license. Educational licenses are available at discounted rates for students and institutions."
+        "a": "midas Gen is licensed on a Subscription model. Available editions include midas Gen Standard, midas Gen Professional, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of midas Gen?",
@@ -10398,7 +10398,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Gen?",
-        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro. CSI ETABS (starting at $2,495 one-time) competes directly on core Building Design workflows, while CSI SAP2000 (starting at $2,495 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Building Design workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10549,7 +10549,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SCIA Engineer cost?",
-        "a": "SCIA Engineer is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "SCIA Engineer is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
@@ -10565,7 +10565,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SCIA Engineer?",
-        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. CSI ETABS (starting at $2,495 one-time) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (starting at $2,615/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10791,7 +10791,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PowerMill cost?",
-        "a": "PowerMill is offered on a subscription model (annual or monthly). Pricing varies by edition (Standard, Ultimate) and region. Contact Autodesk for current pricing."
+        "a": "PowerMill is licensed on a Subscription model. Available editions include PowerMill Standard, PowerMill Ultimate, Fusion 360 with PowerMill. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of PowerMill?",
@@ -10807,7 +10807,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PowerMill?",
-        "a": "The closest alternatives to PowerMill are hyperMILL, Mastercam, Tebis. hyperMILL (starting at $6,000 one-time) competes directly on core Aerospace workflows, while Mastercam (starting at $3,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PowerMill are hyperMILL, Mastercam, Tebis. hyperMILL (offered on a Perpetual license) competes directly on core Aerospace workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11041,7 +11041,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ESPRIT cost?",
-        "a": "ESPRIT is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "ESPRIT is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ESPRIT?",
@@ -11057,7 +11057,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ESPRIT?",
-        "a": "The closest alternatives to ESPRIT are Mastercam, GibbsCAM, hyperMILL. Mastercam (starting at $3,000/yr) competes directly on core Manufacturing workflows, while GibbsCAM (starting at $5,000 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ESPRIT are Mastercam, GibbsCAM, hyperMILL. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11279,7 +11279,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PAM-STAMP cost?",
-        "a": "PAM-STAMP is offered on a perpetual license model with different editions. The vendor does not publish a fixed list price; pricing scales with edition and seat counts. Contact ESI Group for a quotation."
+        "a": "PAM-STAMP is licensed on a Perpetual model. Available editions include PAM-STAMP Standard, PAM-STAMP Advanced. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of PAM-STAMP?",
@@ -11295,7 +11295,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PAM-STAMP?",
-        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, Abaqus. AutoForm (starting at $8,000/yr) competes directly on core Automotive workflows, while LS-DYNA (starting at $20,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, Abaqus. AutoForm (offered on a Subscription license) competes directly on core Automotive workflows, while LS-DYNA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11441,7 +11441,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does NestForge cost?",
-        "a": "NestForge is free to nest and preview jobs of any size. A €49 one-time purchase (including applicable taxes) is only required to export jobs with more than 10 parts or across multiple sheets, providing a perpetual license for major version 1 and all v1 updates with no subscription."
+        "a": "NestForge offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official NestForge pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of NestForge?",
@@ -11457,7 +11457,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to NestForge?",
-        "a": "The closest alternatives to NestForge are SigmaNEST, Lantek Expert, Radan. SigmaNEST (starting at $5,000/perpetual) competes directly on core Laser Cutting workflows, while Lantek Expert is favored for cam. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to NestForge are SigmaNEST, Lantek Expert, Radan. SigmaNEST (offered on a Perpetual license) competes directly on core Laser Cutting workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       },
       {
         "q": "Can NestForge reduce raw material scrap on actual cutting jobs?",
@@ -11569,7 +11569,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does QuantCAD-Hybrid cost?",
-        "a": "QuantCAD-Hybrid pricing starts at €1,500/year (excl. VAT) per workstation for an Industrial 1-Year license. An Industrial 3-Year license is €4,000/workstation. A Perpetual Offline license is €4,500/workstation (with optional annual maintenance at €500/workstation/year). Permanent Multi-Seat licenses start at €4,000/workstation for a minimum of 3 workstations (€12,000 total excl. VAT)."
+        "a": "QuantCAD-Hybrid is licensed on a Subscription / Perpetual model. Available editions include Industrial (1-Year), Industrial (3-Year), Perpetual Offline, Permanent Multi-Seat. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of QuantCAD-Hybrid?",
@@ -11585,7 +11585,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
-        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM. Accelygen (available via custom enterprise quote) competes directly on core Manufacturing workflows, while Fusion 360 (starting at $85/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [

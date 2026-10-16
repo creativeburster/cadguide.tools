@@ -679,54 +679,61 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
 
               {tool.pricing_tiers && tool.pricing_tiers.length > 0 ? (
                 <div className="grid md:grid-cols-3 gap-8">
-                  {tool.pricing_tiers.map((tier, i) => (
-                    <Card
-                      key={i}
-                      className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
-                    >
-                      {tier.is_popular && (
-                        <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
-                          Recommended
-                        </div>
-                      )}
-                      <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
-                        <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
-                          {tier.name}
-                        </div>
-                        <div className="flex items-baseline justify-center gap-1">
-                          <span className="text-4xl md:text-5xl font-black text-slate-900">
-                            {formatTierPrice(tier.price)}
-                          </span>
-                          <span className="text-slate-400 font-bold text-sm tracking-tight">
-                            {tier.period}
-                          </span>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="p-6 md:p-10 pt-4">
-                        <Separator className="mb-8 opacity-40" />
-                        <ul className="space-y-5 mb-10">
-                          {tier.features?.map((f, j) => (
-                            <li
-                              key={j}
-                              className="flex items-start gap-4 text-sm font-bold text-slate-600 leading-tight"
-                            >
-                              <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                              {f}
-                            </li>
-                          ))}
-                        </ul>
-                        <Button
-                          asChild
-                          className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
-                        >
-                          <a href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                            Choose {tier.name}
-                            <ExternalLink className="w-4 h-4 opacity-70" />
-                          </a>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
+                  {tool.pricing_tiers.map((tier, i) => {
+                    const isFreeTier =
+                      ["Free", "Open Source"].includes(tool.pricing_type) ||
+                      /^(free|\$?0(\.00)?)$/i.test(String(tier.price ?? "").trim());
+                    return (
+                      <Card
+                        key={i}
+                        className={`rounded-[24px] md:rounded-[44px] overflow-hidden border-2 transition-all hover:shadow-2xl ${tier.is_popular ? "border-blue-600 shadow-xl" : "border-slate-100"}`}
+                      >
+                        {tier.is_popular && (
+                          <div className="bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] text-center py-3">
+                            Recommended
+                          </div>
+                        )}
+                        <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
+                          <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
+                            {tier.name}
+                          </div>
+                          <div className="flex flex-col items-center justify-center gap-1">
+                            <span className="text-2xl md:text-3xl font-black text-slate-900">
+                              {isFreeTier ? "Free" : (tool.pricing_type || "Official Plan")}
+                            </span>
+                            <span className="text-slate-400 font-bold text-xs tracking-tight">
+                              {isFreeTier
+                                ? "No Commercial License Fee"
+                                : "Verify Live Regional Pricing on Vendor Portal"}
+                            </span>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="p-6 md:p-10 pt-4">
+                          <Separator className="mb-8 opacity-40" />
+                          <ul className="space-y-5 mb-10">
+                            {tier.features?.map((f, j) => (
+                              <li
+                                key={j}
+                                className="flex items-start gap-4 text-sm font-bold text-slate-600 leading-tight"
+                              >
+                                <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                                {f}
+                              </li>
+                            ))}
+                          </ul>
+                          <Button
+                            asChild
+                            className={`w-full rounded-[20px] font-black h-14 text-base transition-all active:scale-95 text-white ${tier.is_popular ? "bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-200" : "bg-slate-900 hover:bg-slate-800"}`}
+                          >
+                            <a href={tool.pricing_url || tool.affiliate_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                              {isFreeTier ? `Get ${tier.name}` : `View ${tier.name} Pricing`}
+                              <ExternalLink className="w-4 h-4 opacity-70" />
+                            </a>
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="bg-white rounded-[32px] border border-slate-100 p-8 md:p-12 text-center shadow-sm">
@@ -734,18 +741,18 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     <div className="text-slate-400 font-bold text-sm">
                       {tool.pricing_type ? `Licensing Model: ${tool.pricing_type}` : "Custom or Quote-based Enterprise Licensing"}
                     </div>
-                    {tool.starting_price > 0 && (
-                      <div className="text-3xl font-black text-slate-900">
-                        Starting at ${tool.starting_price.toLocaleString()}{tool.price_period ? ` / ${tool.price_period}` : ""}
-                      </div>
-                    )}
+                    <div className="text-2xl md:text-3xl font-black text-slate-900">
+                      {["Free", "Open Source"].includes(tool.pricing_type)
+                        ? "100% Free & Open Source"
+                        : "Official Live Vendor Pricing"}
+                    </div>
                     <p className="text-slate-500 text-sm">
-                      Official deployment options, concurrent multi-user licensing, and educational discounts are configured per enterprise seat.
+                      Official deployment options, concurrent multi-user licensing, and educational discounts are configured per enterprise seat on the vendor portal.
                     </p>
                     {(tool.pricing_url || tool.official_url) && (
                       <Button asChild className="rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold h-11 px-6 shadow-md shadow-blue-100">
                         <a href={tool.pricing_url || tool.official_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                          Inquire on Official Vendor Portal <ExternalLink className="w-4 h-4" />
+                          View Official Pricing Page <ExternalLink className="w-4 h-4" />
                         </a>
                       </Button>
                     )}

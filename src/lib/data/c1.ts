@@ -147,7 +147,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD cost?",
-        "a": "AutoCAD starts at $260/month or $2,095/year per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "AutoCAD is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does AutoCAD offer a free trial?",
@@ -416,7 +416,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does ZWCAD cost?",
-        "a": "ZWCAD starts at $899 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "ZWCAD is licensed on a Subscription / Perpetual model. Available editions include Standard, Professional, Network. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ZWCAD?",
@@ -432,7 +432,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ZWCAD?",
-        "a": "The closest alternatives to ZWCAD are AutoCAD, BricsCAD, GstarCAD. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while BricsCAD adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ZWCAD are AutoCAD, BricsCAD, GstarCAD. AutoCAD (offered on a Subscription license) competes directly on core Architecture workflows, while BricsCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -620,7 +620,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does BricsCAD cost?",
-        "a": "BricsCAD subscriptions start at $345 per year for Lite (sold in 5-seat minimums); single-user Pro is $780 per year and Ultimate about $1,300 per year. Perpetual licenses remain available."
+        "a": "BricsCAD is licensed on a Subscription / Perpetual model. Available editions include Lite (2D), Pro (3D), Ultimate. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of BricsCAD?",
@@ -636,7 +636,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BricsCAD?",
-        "a": "The closest alternatives to BricsCAD are AutoCAD, ZWCAD, Revit. AutoCAD (starting at $260/mo) competes directly on core AEC workflows, while ZWCAD is favored for smart mouse / smart voice. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to BricsCAD are AutoCAD, ZWCAD, Revit. AutoCAD (offered on a Subscription license) competes directly on core AEC workflows, while ZWCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -831,7 +831,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does MicroStation cost?",
-        "a": "A 12-month MicroStation Virtuoso subscription starts at $2,656 (one license plus training/service keys); enterprise licensing is quoted by Bentley."
+        "a": "MicroStation is licensed on a Subscription model. Available editions include Virtuosity Annual, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MicroStation?",
@@ -847,7 +847,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MicroStation?",
-        "a": "The closest alternatives to MicroStation are AutoCAD, Civil 3D, Revit. AutoCAD (starting at $260/mo) competes directly on core Infrastructure workflows, while Civil 3D is favored for civil infrastructure. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MicroStation are AutoCAD, Civil 3D, Revit. AutoCAD (offered on a Subscription license) competes directly on core Infrastructure workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1024,7 +1024,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does DraftSight cost?",
-        "a": "DraftSight starts at $299/year per seat for the Professional tier; Premium with 3D and the BIM module is $599/year. Network (Enterprise) licensing starts at $399/year."
+        "a": "DraftSight is licensed on a Subscription model. Available editions include Professional, Premium, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of DraftSight?",
@@ -1040,7 +1040,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DraftSight?",
-        "a": "The closest alternatives to DraftSight are AutoCAD, BricsCAD, nanoCAD. AutoCAD (starting at $260/mo) competes directly on core Manufacturing workflows, while BricsCAD is favored for ai-powered bimify. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DraftSight are AutoCAD, BricsCAD, nanoCAD. AutoCAD (offered on a Subscription license) competes directly on core Manufacturing workflows, while BricsCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1165,7 +1165,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does GstarCAD cost?",
-        "a": "GstarCAD starts at $499 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "GstarCAD is licensed on a Perpetual model. Available editions include Standard, Professional, Network Floating. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of GstarCAD?",
@@ -1181,7 +1181,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GstarCAD?",
-        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD. ZWCAD (starting at $899 one-time) competes directly on core Manufacturing workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD. ZWCAD (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1431,7 +1431,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does QCAD cost?",
-        "a": "QCAD Community Edition is free and open-source. The Professional version costs approximately $39–$49 for a perpetual license and adds DWG import/export, additional part libraries, and commercial use rights."
+        "a": "QCAD offers a free tier alongside paid commercial plans (Freemium). Available plans include Community (Free), Professional. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official QCAD pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of QCAD?",
@@ -1725,7 +1725,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does nanoCAD cost?",
-        "a": "nanoCAD offers a Free edition at no cost. The Pro version starts at approximately $200/year. Plus/Platform pricing is available on request for enterprise deployments with advanced 3D modules and volume licensing."
+        "a": "nanoCAD offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro, Plus/Platform. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official nanoCAD pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of nanoCAD?",
@@ -1741,7 +1741,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nanoCAD?",
-        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, ZWCAD. DraftSight (starting at $299/yr) competes directly on core Mechanical Engineering workflows, while BricsCAD (starting at $345/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, ZWCAD. DraftSight (offered on a Subscription license) competes directly on core Mechanical Engineering workflows, while BricsCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2023,7 +2023,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does progeCAD Professional cost?",
-        "a": "progeCAD Professional starts at $399 for a perpetual license. Enterprise volume licensing is available on request. Unlike AutoCAD, there is no ongoing subscription fee."
+        "a": "progeCAD Professional is licensed on a Perpetual model. Available editions include Professional, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of progeCAD Professional?",
@@ -2039,7 +2039,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to progeCAD Professional?",
-        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD. GstarCAD (starting at $499 one-time) competes directly on core Architecture workflows, while ZWCAD (starting at $899 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2306,7 +2306,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does LibreCAD cost?",
-        "a": "LibreCAD is completely free for both personal and commercial use under the GPLv2 license. There are no licensing fees, subscriptions, or hidden costs."
+        "a": "LibreCAD is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is LibreCAD really free?",
@@ -2476,7 +2476,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does TurboCAD Platinum cost?",
-        "a": "TurboCAD Platinum starts at $999 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "TurboCAD Platinum is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of TurboCAD Platinum?",
@@ -2492,7 +2492,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TurboCAD Platinum?",
-        "a": "The closest alternatives to TurboCAD Platinum are CorelCAD, progeCAD Professional, DraftSight. CorelCAD (starting at $499 one-time) competes directly on core Architecture workflows, while progeCAD Professional (starting at $399 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to TurboCAD Platinum are CorelCAD, progeCAD Professional, DraftSight. CorelCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while progeCAD Professional (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2711,7 +2711,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does CorelCAD cost?",
-        "a": "CorelCAD starts at $499 for a perpetual license. Volume discounts are available for multi-seat purchases. Educational pricing is also offered for students and institutions. Note that CorelCAD has been discontinued, so it may only be available through remaining stock or third-party resellers."
+        "a": "CorelCAD has been discontinued and is no longer sold as a standalone commercial license. Check the official vendor portal for migration and legacy support options."
       },
       {
         "q": "Is there a free version of CorelCAD?",
@@ -2727,7 +2727,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CorelCAD?",
-        "a": "The closest alternatives to CorelCAD are DraftSight, TurboCAD Platinum, ARES Commander. DraftSight (starting at $299/yr) competes directly on core Architecture workflows, while TurboCAD Platinum (starting at $999 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CorelCAD are DraftSight, TurboCAD Platinum, ARES Commander. DraftSight (offered on a Subscription license) competes directly on core Architecture workflows, while TurboCAD Platinum (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3011,7 +3011,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does CAXA CAD cost?",
-        "a": "CAXA CAD starts at approximately $800 for a perpetual license. Professional editions with advanced mechanical and electrical modules are priced around $1,200. Volume discounts and educational pricing are available. Contact CAXA or authorized resellers for current pricing."
+        "a": "CAXA CAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CAXA CAD?",
@@ -3027,7 +3027,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAXA CAD?",
-        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD. ZWCAD (starting at $899 one-time) competes directly on core Mechanical Engineering workflows, while GstarCAD (starting at $499 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD. ZWCAD (offered on a Subscription / Perpetual license) competes directly on core Mechanical Engineering workflows, while GstarCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3162,7 +3162,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does ARES Commander cost?",
-        "a": "ARES Commander is sold through Graebert and regional resellers; the Trinity subscription (desktop + mobile + cloud) runs around $310/yr equivalent (e.g. ¥46,200/yr on the Japanese price list), with perpetual licenses also offered in some markets. Confirm local pricing with your reseller."
+        "a": "ARES Commander is licensed on a Subscription model. Available editions include Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ARES Commander?",
@@ -3178,7 +3178,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ARES Commander?",
-        "a": "The closest alternatives to ARES Commander are DraftSight, CorelCAD, BricsCAD. DraftSight (starting at $299/yr) competes directly on core Architecture workflows, while CorelCAD (starting at $499 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ARES Commander are DraftSight, CorelCAD, BricsCAD. DraftSight (offered on a Subscription license) competes directly on core Architecture workflows, while CorelCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3308,7 +3308,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD LT cost?",
-        "a": "AutoCAD LT costs $70 per month or $540 per year for a single-user subscription; a 3-year subscription runs $1,620 (billed as three annual payments)."
+        "a": "AutoCAD LT is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AutoCAD LT?",
@@ -3324,7 +3324,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoCAD LT?",
-        "a": "The closest alternatives to AutoCAD LT are AutoCAD, BricsCAD, DraftSight. AutoCAD (starting at $260/mo) competes directly on core Architecture workflows, while BricsCAD is favored for ai-powered bimify. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoCAD LT are AutoCAD, BricsCAD, DraftSight. AutoCAD (offered on a Subscription license) competes directly on core Architecture workflows, while BricsCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [

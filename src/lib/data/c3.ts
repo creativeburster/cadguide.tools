@@ -120,7 +120,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Revit cost?",
-        "a": "Revit costs $380 per month or $3,005 per year per seat; a 3-year subscription runs $9,015. Free educational licenses are available for students and educators."
+        "a": "Revit is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Revit offer a free trial?",
@@ -409,7 +409,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "Archicad Studio costs $201 per month month-to-month, or $2,414 per year billed annually; Archicad Collaborate is $237 per month. Graphisoft now sells Archicad by subscription only."
+        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
@@ -673,7 +673,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Structures cost?",
-        "a": "Trimble does not publish Tekla Structures pricing. It is sold through local resellers as Carbon, Graphite, and Diamond subscription tiers — contact Trimble or a partner for a quote."
+        "a": "Tekla Structures is licensed on a Subscription model. Available editions include Carbon, Graphite, Diamond. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Tekla Structures?",
@@ -689,7 +689,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tekla Structures?",
-        "a": "The closest alternatives to Tekla Structures are Revit, Allplan, Civil 3D. Revit (starting at $380/mo) competes directly on core Structural Engineering workflows, while Allplan is favored for multi-disciplinary bim. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Tekla Structures are Revit, Allplan, Civil 3D. Revit (offered on a Subscription license) competes directly on core Structural Engineering workflows, while Allplan (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -895,7 +895,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks starts at $1,530 per seat on a subscription / perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Vectorworks?",
@@ -911,7 +911,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vectorworks?",
-        "a": "The closest alternatives to Vectorworks are ArchiCAD, Revit, SketchUp. ArchiCAD (starting at $201/mo) competes directly on core Architecture workflows, while Revit is favored for lifecycle bim management. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Vectorworks are ArchiCAD, Revit, SketchUp. ArchiCAD (offered on a Subscription license) competes directly on core Architecture workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1056,7 +1056,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Chief Architect cost?",
-        "a": "Chief Architect starts at $1,995 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Chief Architect is licensed on a Subscription model. Available editions include Premier Monthly, Premier Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Chief Architect?",
@@ -1072,7 +1072,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Chief Architect?",
-        "a": "The closest alternatives to Chief Architect are Revit, SketchUp, ArchiCAD. Revit (starting at $380/mo) competes directly on core Residential Architecture workflows, while SketchUp provides a browser-native cloud workflow. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Chief Architect are Revit, SketchUp, ArchiCAD. Revit (offered on a Subscription license) competes directly on core Residential Architecture workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1161,7 +1161,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Civil 3D cost?",
-        "a": "Civil 3D costs $2,870 per year or about $360 per month per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Civil 3D is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Civil 3D?",
@@ -1177,7 +1177,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Civil 3D?",
-        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey. OpenRoads Designer (starting at $4,000/yr) competes directly on core Civil Engineering workflows, while Infraworks (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey. OpenRoads Designer (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1372,7 +1372,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks Landmark cost?",
-        "a": "Vectorworks Landmark costs $1,530 per year when billed annually (the equivalent of $127.50 per month), or $170 per month on a monthly commitment."
+        "a": "Vectorworks Landmark is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
@@ -1388,7 +1388,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vectorworks Landmark?",
-        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks. Vectorworks (starting at $1,530/yr) competes directly on core Landscape Architecture workflows, while Civil 3D (starting at $2,870/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks. Vectorworks (offered on a Subscription / Perpetual license) competes directly on core Landscape Architecture workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1483,7 +1483,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Allplan cost?",
-        "a": "ALLPLAN lists US pricing at $3,480 per year for Professional and $4,704 per year for Ultimate; other packages and enterprise deals are quoted by sales."
+        "a": "Allplan is licensed on a Subscription model. Available editions include Professional, Ultimate. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Allplan?",
@@ -1499,7 +1499,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allplan?",
-        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures. Revit (starting at $380/mo) competes directly on core Architecture workflows, while ArchiCAD (starting at $201/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures. Revit (offered on a Subscription license) competes directly on core Architecture workflows, while ArchiCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1666,7 +1666,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does OpenRoads Designer cost?",
-        "a": "OpenRoads Designer starts at $4,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "OpenRoads Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
@@ -1682,7 +1682,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenRoads Designer?",
-        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation. Civil 3D (starting at $2,870/yr) competes directly on core Civil Engineering workflows, while Infraworks (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1879,7 +1879,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does cadwork cost?",
-        "a": "cadwork is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "cadwork is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of cadwork?",
@@ -2085,7 +2085,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does MagiCAD cost?",
-        "a": "MagiCAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "MagiCAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MagiCAD?",
@@ -2101,7 +2101,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MagiCAD?",
-        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan. DDS-CAD (starting at $2,500 one-time) competes directly on core MEP workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan. DDS-CAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2289,7 +2289,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does DDS-CAD cost?",
-        "a": "DDS-CAD is offered on a perpetual model. Contact the vendor for specific pricing based on modules and seat count."
+        "a": "DDS-CAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of DDS-CAD?",
@@ -2305,7 +2305,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DDS-CAD?",
-        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan. MagiCAD (starting at $3,000 one-time) competes directly on core MEP workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan. MagiCAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2493,7 +2493,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does dRofus cost?",
-        "a": "dRofus is offered on a subscription model. Contact the vendor for specific pricing based on user count and modules."
+        "a": "dRofus is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of dRofus?",
@@ -2509,7 +2509,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to dRofus?",
-        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core Architecture workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core Architecture workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2632,7 +2632,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD Plant 3D cost?",
-        "a": "AutoCAD Plant 3D is not sold as a standalone license; it is fully included with an AutoCAD subscription at $2,095 per year (or $260 per month), which gives you full AutoCAD access along with all 7 specialized toolsets."
+        "a": "AutoCAD Plant 3D is licensed on a Subscription model. Available editions include Included with AutoCAD (Annual), Included with AutoCAD (Monthly). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
@@ -2648,7 +2648,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoCAD Plant 3D?",
-        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design. CADWorx Plant Professional (starting at $5,000/yr) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (starting at $18,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design. CADWorx Plant Professional (offered on a Subscription license) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2807,7 +2807,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Hexagon SmartPlant 3D cost?",
-        "a": "Hexagon SmartPlant 3D is licensed via custom enterprise quote through the vendor and authorized channel partners. Estimated enterprise commercial seats typically average around $18,000/year depending on solver modules and token counts."
+        "a": "Hexagon SmartPlant 3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
@@ -2823,7 +2823,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Hexagon SmartPlant 3D?",
-        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional. AVEVA E3D Design (starting at $8,000/yr) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (starting at $2,095/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional. AVEVA E3D Design (offered on a Subscription license) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2986,7 +2986,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CADWorx Plant Professional cost?",
-        "a": "CADWorx Plant Professional starts at $5,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "CADWorx Plant Professional is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
@@ -3002,7 +3002,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CADWorx Plant Professional?",
-        "a": "The closest alternatives to CADWorx Plant Professional are AutoCAD Plant 3D, Hexagon SmartPlant 3D, AVEVA E3D Design. AutoCAD Plant 3D (starting at $2,095/yr) competes directly on core Oil & Gas workflows, while Hexagon SmartPlant 3D (starting at $18,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CADWorx Plant Professional are AutoCAD Plant 3D, Hexagon SmartPlant 3D, AVEVA E3D Design. AutoCAD Plant 3D (offered on a Subscription license) competes directly on core Oil & Gas workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3166,7 +3166,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Construction Cloud cost?",
-        "a": "Autodesk Construction Cloud starts at $1,080 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Autodesk Construction Cloud is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
@@ -3182,7 +3182,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Construction Cloud?",
-        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks. Trimble Connect (available with a free tier) competes directly on core AEC workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks. Trimble Connect (available on a freemium model) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3349,7 +3349,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Trimble Connect cost?",
-        "a": "Trimble Connect is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "Trimble Connect offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Trimble Connect pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of Trimble Connect?",
@@ -3365,7 +3365,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Connect?",
-        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks. Autodesk Construction Cloud (starting at $1,080/yr) competes directly on core AEC workflows, while BIMcollab (starting at $590/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3528,7 +3528,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab starts at $590 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of BIMcollab?",
@@ -3544,7 +3544,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BIMcollab?",
-        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud. Solibri (starting at $3,500/yr) competes directly on core AEC workflows, while Navisworks (starting at $1,145/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud. Solibri (offered on a Subscription license) competes directly on core AEC workflows, while Navisworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3701,7 +3701,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Dynamo cost?",
-        "a": "Autodesk Dynamo is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "Autodesk Dynamo is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is Autodesk Dynamo really free?",
@@ -3717,7 +3717,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Dynamo?",
-        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D. Rhino 3D (starting at $995 one-time) competes directly on core AEC workflows, while Revit (starting at $380/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D. Rhino 3D (offered on a Perpetual license) competes directly on core AEC workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3948,7 +3948,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CYPECAD cost?",
-        "a": "CYPECAD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "CYPECAD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of CYPECAD?",
@@ -3964,7 +3964,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CYPECAD?",
-        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer. CSI ETABS (starting at $2,495 one-time) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (starting at $2,615/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4125,7 +4125,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vertex BD cost?",
-        "a": "Vertex BD is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "Vertex BD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Vertex BD?",
@@ -4141,7 +4141,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vertex BD?",
-        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit. cadwork (starting at $5,000 one-time) competes directly on core Prefabrication workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit. cadwork (offered on a Perpetual license) competes directly on core Prefabrication workflows, while Tekla Structures (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4355,7 +4355,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Planbar cost?",
-        "a": "Planbar is offered on a perpetual license model with different editions. The vendor does not publish a fixed list price; pricing scales with edition and seat counts. Contact Allplan for a quotation."
+        "a": "Planbar is licensed on a Perpetual model. Available editions include Planbar Standard, Planbar Advanced. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Planbar?",

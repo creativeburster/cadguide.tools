@@ -145,7 +145,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium Designer cost?",
-        "a": "Altium Designer starts at $3,500 per year (Subscription). Available tiers include Standard ($3,500 /yr), Professional ($7,500 /yr), Enterprise (Custom quote)."
+        "a": "Altium Designer is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Altium Designer offer a free trial?",
@@ -349,7 +349,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Eagle cost?",
-        "a": "EAGLE is no longer sold. Autodesk ended standalone EAGLE subscriptions in June 2021; the former $680/year plan was replaced by Fusion 360, which now includes the former EAGLE electronics functionality."
+        "a": "Eagle has been discontinued and is no longer sold as a standalone commercial license. Check the official vendor portal for migration and legacy support options."
       },
       {
         "q": "Is there a free version of Eagle?",
@@ -450,7 +450,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN Electric P8 cost?",
-        "a": "EPLAN does not publish list prices — licensing is quoted per seat and module bundle through EPLAN and its reseller network. Subscription is the current licensing model; contact EPLAN for a quote."
+        "a": "EPLAN Electric P8 is licensed on a Subscription model. Available editions include Electric P8 Standard. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
@@ -466,7 +466,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN Electric P8?",
-        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks. EPLAN (starting at $3,000/yr) competes directly on core Electrical Engineering workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks. EPLAN (offered on a Subscription license) competes directly on core Electrical Engineering workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -870,7 +870,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN cost?",
-        "a": "EPLAN transitioned to a pure subscription model globally in August 2021. Entry subscriptions for EPLAN Electric P8 typically start between $3,000 and $4,500 per year per seat, while specialized modules (Pro Panel, Fluid, Harness proD) are custom-quoted based on enterprise requirements."
+        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of EPLAN?",
@@ -886,7 +886,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN?",
-        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks. EPLAN Electric P8 (available via custom enterprise quote) competes directly on core Machine Building workflows, while AutoCAD (starting at $260/mo) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks. EPLAN Electric P8 (offered on a Subscription license) competes directly on core Machine Building workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1037,7 +1037,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Allegro PCB cost?",
-        "a": "Allegro PCB is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "Allegro PCB is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Allegro PCB?",
@@ -1053,7 +1053,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allegro PCB?",
-        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional. Xpedition (available via custom enterprise quote) competes directly on core Electronics workflows, while Altium Designer (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional. Xpedition (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1404,7 +1404,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does OrCAD cost?",
-        "a": "OrCAD X Standard starts at approximately $2,500 per year for a subscription license. OrCAD X Premium with advanced simulation and analysis capabilities starts at approximately $5,000 per year. Educational licenses are available at discounted rates for students and institutions."
+        "a": "OrCAD is licensed on a Subscription model. Available editions include OrCAD X Standard, OrCAD X Premium, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of OrCAD?",
@@ -1420,7 +1420,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OrCAD?",
-        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while PADS Professional (starting at $8,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while PADS Professional (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1744,7 +1744,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does PADS Professional cost?",
-        "a": "PADS Professional starts at approximately $8,000 per year for a standard annual subscription. Advanced tiers with high-speed simulation and enterprise library tools range from $12,000+ per year. Educational licenses are available at discounted rates for students and institutions."
+        "a": "PADS Professional is licensed on a Subscription model. Available editions include PADS Professional Base, PADS Professional Suite, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of PADS Professional?",
@@ -1760,7 +1760,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PADS Professional?",
-        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB. Altium Designer (starting at $3,500/yr) competes directly on core Consumer Electronics workflows, while OrCAD (starting at $2,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while OrCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1910,7 +1910,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Xpedition cost?",
-        "a": "Xpedition is offered on a perpetual model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "Xpedition is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Xpedition?",
@@ -1926,7 +1926,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Xpedition?",
-        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional. Allegro PCB (available via custom enterprise quote) competes directly on core Electronics workflows, while Altium Designer (starting at $3,500/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional. Allegro PCB (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2069,7 +2069,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does KiCad cost?",
-        "a": "KiCad is open-source and free to use. Vendor support and commercial services may be offered separately."
+        "a": "KiCad is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is KiCad really free?",
@@ -2085,7 +2085,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KiCad?",
-        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer. EasyEDA (available on a freemium model) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2234,7 +2234,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EasyEDA cost?",
-        "a": "EasyEDA is offered on a freemium model. The vendor does not publish a fixed list price; pricing scales with module bundles and seat counts."
+        "a": "EasyEDA offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official EasyEDA pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of EasyEDA?",
@@ -2250,7 +2250,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EasyEDA?",
-        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2476,7 +2476,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does DipTrace cost?",
-        "a": "DipTrace starts at $75 for the Starter edition (300 pins / 2 signal layers) on a perpetual buyout license. Higher tiers scale to Lite ($145), Standard ($395), Extended ($695), and Full ($995 for unlimited pins). There are no mandatory monthly or annual subscription fees."
+        "a": "DipTrace is licensed on a Perpetual model. Available editions include Starter, Lite, Standard, Extended, Full. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of DipTrace?",
@@ -2656,7 +2656,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does NI Multisim cost?",
-        "a": "NI Multisim starts at $600 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "NI Multisim is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of NI Multisim?",
@@ -2672,7 +2672,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to NI Multisim?",
-        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD. LTspice (free and open-source) competes directly on core Electronics workflows, while Proteus Design Suite (starting at $248 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD. LTspice (100% free) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2832,7 +2832,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does LTspice cost?",
-        "a": "LTspice is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "LTspice is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is LTspice really free?",
@@ -2848,7 +2848,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LTspice?",
-        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD. NI Multisim (starting at $600/yr) competes directly on core Electronics workflows, while Proteus Design Suite (starting at $248 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3024,7 +3024,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Proteus Design Suite cost?",
-        "a": "Proteus Design Suite starts at $248 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Proteus Design Suite is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
@@ -3040,7 +3040,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Proteus Design Suite?",
-        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA. NI Multisim (starting at $600/yr) competes directly on core Electronics workflows, while DipTrace (starting at $75 one-time) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3205,7 +3205,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium 365 cost?",
-        "a": "Altium 365 starts at $295 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Altium 365 is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Altium 365?",
@@ -3221,7 +3221,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altium 365?",
-        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional. Altium Designer (starting at $3,500/yr) competes directly on core Electronics workflows, while Allegro PCB (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional. Altium Designer (offered on a Subscription license) competes directly on core Electronics workflows, while Allegro PCB (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3379,7 +3379,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does CircuitMaker cost?",
-        "a": "CircuitMaker is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "CircuitMaker is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is CircuitMaker really free?",

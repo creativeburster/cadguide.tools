@@ -131,7 +131,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SolidWorks starts at $2,820/year per user for the Standard 3DEXPERIENCE subscription (Professional $3,456/yr, Premium $4,716/yr). Perpetual licenses are only available through resellers and still require an annual service contract for upgrades."
+        "a": "SolidWorks is licensed on a Subscription / Perpetual model. Available editions include Standard (Annual), Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
@@ -380,7 +380,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SketchUp cost?",
-        "a": "SketchUp Go costs $129 per year, Pro $399 per year, and Studio $819 per year. A free web-based version is available for hobbyists, and Pro is heavily discounted for education."
+        "a": "SketchUp offers a free tier alongside paid commercial plans (Freemium). Available plans include Go, Pro, Studio. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official SketchUp pricing page for live regional pricing."
       },
       {
         "q": "Does SketchUp offer a free trial?",
@@ -663,7 +663,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Fusion 360 cost?",
-        "a": "Fusion 360 starts at $85 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Fusion 360 is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Fusion 360 offer a free trial?",
@@ -920,7 +920,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Rhino 3D cost?",
-        "a": "Rhino 3D starts at $995 per seat on a perpetual and educational license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Rhino 3D is licensed on a Perpetual model. Available editions include Commercial (V8), Upgrade from V7. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Rhino 3D offer a free trial?",
@@ -1182,7 +1182,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CATIA cost?",
-        "a": "CATIA on the 3DEXPERIENCE platform starts at about $2,700/year for entry roles; mainstream engineering roles typically run considerably higher and most enterprise deals are quoted by Dassault Systèmes or its partners."
+        "a": "CATIA is licensed on a Subscription model. Available editions include 3DEXPERIENCE Cloud, Mechanical Engineer, Systems Engineer. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does CATIA offer a free trial?",
@@ -1399,7 +1399,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does FreeCAD cost?",
-        "a": "FreeCAD is 100% free for both personal and commercial use under the LGPL license. There are no subscription fees, paid tiers, or seat licenses."
+        "a": "FreeCAD is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is FreeCAD really free?",
@@ -1668,7 +1668,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Onshape cost?",
-        "a": "Onshape starts at $1,500 per seat on a subscription and free license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Onshape is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Onshape offer a free trial?",
@@ -1969,7 +1969,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Solid Edge cost?",
-        "a": "Solid Edge starts at $1,320 per year (Subscription / Perpetual). Available tiers include Foundation ($1,320 /yr), Classic (Annual) ($2,500 /yr), Premium ($4,500 /yr)."
+        "a": "Solid Edge is licensed on a Subscription / Perpetual model. Available editions include Foundation, Classic (Annual), Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Solid Edge?",
@@ -1985,7 +1985,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solid Edge?",
-        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, Fusion 360. SolidWorks (starting at $2,820/yr) competes directly on core Mechanical workflows, while Autodesk Inventor is favored for ilogic automation. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, Fusion 360. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2094,7 +2094,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Inventor cost?",
-        "a": "Autodesk Inventor starts at $315/month (or $2,585/year) per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Autodesk Inventor is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does Autodesk Inventor offer a free trial?",
@@ -2341,7 +2341,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does PTC Creo cost?",
-        "a": "PTC Creo starts at $2,430 per seat on a subscription and perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "PTC Creo is licensed on a Subscription model. Available editions include Essentials, Advanced, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Does PTC Creo offer a free trial?",
@@ -2566,7 +2566,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does OpenSCAD cost?",
-        "a": "OpenSCAD is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "OpenSCAD is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is OpenSCAD really free?",
@@ -2754,7 +2754,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Shapr3D cost?",
-        "a": "Shapr3D has a free plan for occasional use; paid plans are Solo at $249.99 per year, Pro at $299 per year, and Studio at $450 per year for two seats."
+        "a": "Shapr3D offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Solo, Pro, Studio. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Shapr3D pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of Shapr3D?",
@@ -2770,7 +2770,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Shapr3D?",
-        "a": "The closest alternatives to Shapr3D are Fusion 360, SolidWorks, Onshape. Fusion 360 (starting at $85/mo) competes directly on core Industrial Design workflows, while SolidWorks is favored for parametric 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Shapr3D are Fusion 360, SolidWorks, Onshape. Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2901,7 +2901,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolveSpace cost?",
-        "a": "SolveSpace is completely free for both personal and commercial use. Vendor support and commercial services may be offered separately."
+        "a": "SolveSpace is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is SolveSpace really free?",
@@ -3062,7 +3062,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alibre Design cost?",
-        "a": "Alibre Design starts at $950 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Alibre Design is licensed on a Perpetual model. Available editions include Professional, Expert. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Alibre Design?",
@@ -3078,7 +3078,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alibre Design?",
-        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge. SolidWorks (starting at $2,820/yr) competes directly on core Mechanical workflows, while ZW3D (starting at $2,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while ZW3D (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3174,7 +3174,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Maya cost?",
-        "a": "Maya costs $2,010/year or about $260/month per user on subscription. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Maya is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Maya?",
@@ -3190,7 +3190,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maya?",
-        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (starting at $2,010/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3360,7 +3360,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Blender cost?",
-        "a": "Blender is 100% free for everyone, including commercial studios. There are no subscription fees, paid add-on tiers, or license checks."
+        "a": "Blender is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
       },
       {
         "q": "Is Blender really free?",
@@ -3594,7 +3594,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Geomagic Design X cost?",
-        "a": "Geomagic Design X is now sold by Hexagon from $1,900 (entry bundles); full commercial seats are quoted by Hexagon. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Geomagic Design X is licensed on a Subscription model. Available editions include Design X Commercial. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
@@ -3610,7 +3610,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Geomagic Design X?",
-        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D. MeshLab (free and open-source) competes directly on core Reverse Engineering workflows, while Magics (starting at $5,000/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D. MeshLab (100% free) competes directly on core Reverse Engineering workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3721,7 +3721,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alias AutoStudio cost?",
-        "a": "Alias AutoStudio starts at $12,000 per seat on a subscription license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Alias AutoStudio is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
@@ -3737,7 +3737,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alias AutoStudio?",
-        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX. Rhino 3D (starting at $995 one-time) competes directly on core Automotive workflows, while CATIA (starting at $2,700/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX. Rhino 3D (offered on a Perpetual license) competes directly on core Automotive workflows, while CATIA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3832,7 +3832,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does ZW3D cost?",
-        "a": "ZW3D starts at $2,000 per year (Subscription / Perpetual). Available tiers include Standard ($2,000 /yr), Professional ($3,500 /yr), Premium ($4,500 /yr)."
+        "a": "ZW3D is licensed on a Subscription / Perpetual model. Available editions include Standard, Professional, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of ZW3D?",
@@ -3848,7 +3848,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ZW3D?",
-        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design. SolidWorks (starting at $2,820/yr) competes directly on core Manufacturing workflows, while Solid Edge (starting at $1,320/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Solid Edge (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4045,7 +4045,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Plasticity cost?",
-        "a": "Plasticity starts at $149 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "Plasticity is licensed on a Perpetual model. Available editions include Indie License, Studio License. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of Plasticity?",
@@ -4061,7 +4061,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Plasticity?",
-        "a": "The closest alternatives to Plasticity are MoI3D, Alibre Design, ZW3D. MoI3D (starting at $295/perpetual) competes directly on core Product Design workflows, while Alibre Design is favored for parametric modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Plasticity are MoI3D, Alibre Design, ZW3D. MoI3D (offered on a Perpetual license) competes directly on core Product Design workflows, while Alibre Design (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4249,7 +4249,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does MoI3D cost?",
-        "a": "MoI3D starts at $295 per seat on a perpetual license. Volume, network, and educational tiers are typically available — contact the vendor for an enterprise quote."
+        "a": "MoI3D is licensed on a Perpetual model. Available editions include V4/V5 Commercial, Upgrade. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of MoI3D?",
@@ -4265,7 +4265,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MoI3D?",
-        "a": "The closest alternatives to MoI3D are Plasticity, Alibre Design, ZW3D. Plasticity (starting at $149/perpetual) competes directly on core Product Design workflows, while Alibre Design is favored for parametric modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MoI3D are Plasticity, Alibre Design, ZW3D. Plasticity (offered on a Perpetual license) competes directly on core Product Design workflows, while Alibre Design (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4481,7 +4481,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Tinkercad cost?",
-        "a": "Tinkercad is completely free for all users."
+        "a": "Tinkercad is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is there a free version of Tinkercad?",
@@ -4624,7 +4624,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Glovius cost?",
-        "a": "Glovius has a free tier for basic viewing. The Pro plan costs $15 per month for advanced analysis, export, and cloud storage."
+        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Glovius pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of Glovius?",
@@ -4784,7 +4784,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Exchanger cost?",
-        "a": "CAD Exchanger has a free tier for basic viewing and conversion. The Pro plan costs $12 per month for advanced conversion, batch processing, and export options."
+        "a": "CAD Exchanger offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CAD Exchanger pricing page for live regional pricing."
       },
       {
         "q": "Is there a free version of CAD Exchanger?",
@@ -5115,7 +5115,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D perpetual license starts at $3,150. Pricing varies based on modules, deployment type, and number of users. Educational licenses are available free for verified students and teachers."
+        "a": "KOMPAS-3D is licensed on a Perpetual model. Available editions include Perpetual License, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
@@ -5131,7 +5131,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KOMPAS-3D?",
-        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge. ZW3D (starting at $2,000/yr) competes directly on core Aerospace workflows, while SolidWorks (starting at $2,820/yr) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5395,7 +5395,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does DesignSpark Mechanical cost?",
-        "a": "DesignSpark Mechanical is completely free to use. There is also a Professional version available with advanced features and priority support, which requires contacting sales for pricing."
+        "a": "DesignSpark Mechanical is completely free to download and use with no paid license required. Visit the official website for download and license terms."
       },
       {
         "q": "Is there a free version of DesignSpark Mechanical?",
@@ -5619,7 +5619,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does 3DEXPERIENCE cost?",
-        "a": "3DEXPERIENCE is offered on a subscription basis. Pricing scales with the number of roles (users) and selected modules. Annual subscriptions typically start in the mid-thousands and can reach tens of thousands for enterprise configurations. Contact Dassault Systèmes for a custom quote."
+        "a": "3DEXPERIENCE is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
@@ -5635,7 +5635,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to 3DEXPERIENCE?",
-        "a": "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. CATIA (starting at $2,700/yr) competes directly on core Aerospace workflows, while SolidWorks is favored for parametric 3d. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. CATIA (offered on a Subscription license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
