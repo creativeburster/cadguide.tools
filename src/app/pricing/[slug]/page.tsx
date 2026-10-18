@@ -740,7 +740,13 @@ export default async function PricingDirectoryPage(
                             {t.name}
                           </Link>
                           <span className="text-xs font-semibold text-slate-500">
-                            {pricingLabel(t)} · {t.platforms.join(' / ')}
+                            {t.pricing_url ? (
+                              <a href={t.pricing_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline inline-flex items-center gap-0.5">
+                                Official Pricing Page ↗
+                              </a>
+                            ) : (
+                              pricingLabel(t)
+                            )} · {t.platforms.join(' / ')}
                           </span>
                         </div>
                         <div className="mt-1 flex items-center gap-2">
@@ -749,10 +755,15 @@ export default async function PricingDirectoryPage(
                         </div>
                         <p className="mt-3 text-slate-700 leading-relaxed text-sm sm:text-base">{t.short_desc}</p>
                         
-                        <div className="mt-4">
+                        <div className="mt-4 flex flex-wrap items-center gap-4">
                           <Link href={`/tools/${t.slug}`} className="text-xs font-bold text-blue-600 hover:underline">
                             View full benchmarks and deployment guides →
                           </Link>
+                          {t.pricing_url && (
+                            <a href={t.pricing_url} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-slate-600 hover:text-blue-600 hover:underline inline-flex items-center gap-1">
+                              Official Pricing Page ↗
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
