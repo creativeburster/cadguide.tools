@@ -129,11 +129,11 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "IFC2x3 How should I choose between IFC4 format and IFC4 format?? ",
+    "question": "IFC2x3 How should I choose between IFC4 format and IFC4 format? ",
     "answer": "IFC2x3 It is currently the most mature and widely supported version in the industry; IFC4 is used in three-dimensional geometric fitting. The electromechanical pipeline routing and terrain expression are more advanced, but some old versions of collaboration software may read and report errors. If there is no request, the output will be given priority. IFC2x3 To ensure compatibility."
   },
   {
-    "question": "Why are some walls incomplete or missing in IFC?? ",
+    "question": "Why are some walls incomplete or missing in IFC? ",
     "answer": "This may be because the Revit family class of these components is assigned'Generic Models', and it is not checked when exporting'Export regular model' option. Please check the component classification attributes."
   }
 ];

@@ -91,7 +91,7 @@ const BEST_PRACTICES = [
     "desc": "Before fitting contours, the ground point classification filtering algorithm must be run (CSF) , Cull vegetation, power lines and building points, Keep only bare earth points) Elevation."
   },
   {
-    "title": "Set a reasonable contour interval (Interval)",
+    "title": "Set a reasonable contour interval",
     "desc": "Flat terrain setting 0.5m or 1 meter spacing; in mountainous areas it can be relaxed to 5 meters, to prevent the generation of DXF Too many line segments cause CAD drawing to crash."
   },
   {

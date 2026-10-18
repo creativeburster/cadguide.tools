@@ -21,7 +21,7 @@ const RECOMMENDED_TOOLS = [
       }
     ],
     "pros": [
-      "Pure front-end parses G-Code and renders it 3D Knife line trajectory",
+      "Pure front-end parses G-Code and renders it 3D toolpath trajectory",
       "Provide real-time 3D simulation tool animation"
     ],
     "cons": [
@@ -96,12 +96,12 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Safe Height Verification",
-    "desc": "Be sure to set the safe height for rapid movement of G00 (Usually Z5-Z10) set larger than the fixture height, Eliminate the risk of lateral movement and knife collision."
+    "desc": "Be sure to set the safe height for rapid movement of G00 (Usually Z5-Z10) set larger than the fixture height, Eliminate the risk of lateral movement and tool collision."
   }
 ];
 const FAQS = [
   {
-    "question": "Why can’t the converted G-code file be run on my engraving machine?? ",
+    "question": "Why can’t the converted G-code file be run on my engraving machine? ",
     "answer": "This is usually due to the G-code format of the converter output (dialect) with your controller (Such as GRBL, Mach3, Syntec new generation) No match. Need to select the correct post-processor when converting (Post Processor)."
   },
   {

@@ -23,19 +23,19 @@ const CATEGORIES = [
 const SHORTCUTS = [
   {
     "keys": "WA",
-    "command": "Wall (wall)",
+    "command": "Wall",
     "category": "arch",
     "description": "Draw building walls in plan view."
   },
   {
     "keys": "DR",
-    "command": "Door (door)",
+    "command": "Door",
     "category": "arch",
     "description": "Place the door component on the wall."
   },
   {
     "keys": "WN",
-    "command": "Window (window)",
+    "command": "Window",
     "category": "arch",
     "description": "Quickly open windows on the wall."
   },

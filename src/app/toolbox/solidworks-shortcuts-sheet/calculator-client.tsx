@@ -37,7 +37,7 @@ const SHORTCUTS_DATA: ShortcutItem[] = [
   // Sketching shortcuts
   { keys: 'Esc', command: 'Deselect/Exit tool', category: 'sketch', description: 'Exit the current drawing tool and return to the normal frame selection mouse.' },
   { keys: 'Enter', command: 'Repeat the last command', category: 'sketch', description: 'Reactivate the sketch or drawing command used in the previous round.' },
-  { keys: 'L', command: 'Draw a straight line (Line)', category: 'sketch', description: 'Draw a line on the currently active sketch surface.' },
+  { keys: 'L', command: 'Draw a straight line', category: 'sketch', description: 'Draw a line on the currently active sketch surface.' },
   { keys: 'Ctrl + Drag', command: 'Copy entities at equal intervals', category: 'sketch', description: 'Select the sketch object and hold down Ctrl Drag to clone the entity as is.' },
   
   // Assembly shortcuts

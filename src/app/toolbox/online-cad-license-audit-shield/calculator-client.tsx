@@ -105,7 +105,7 @@ const FAQS = [
     "answer": "Most regular letters are commercial purchase letters (Sales Pitch) sent by distribution agents, with the purpose of urging you to purchase genuine products.; However, if you receive a formal lawyer's letter from a law firm'Or an official letter containing an intranet detailed illegal MAC address evidence collection form, it indicates that the evidence collection has been completed and needs to be taken seriously and an intranet self-examination must be carried out."
   },
   {
-    "question": "How did the agent know that our company was using pirated CAD?? ",
+    "question": "How did the agent know that our company was using pirated CAD? ",
     "answer": "When a local pirated CAD or plug-in is launched while connected to the Internet, the built-in telemetry module automatically records your public IP and computer MAC address, and sent back to the official compliance database. Once the public IP is matched, it is not in the company's list of genuine purchases. The order will be automatically dispatched to the local agent for follow-up."
   }
 ];

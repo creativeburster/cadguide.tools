@@ -234,7 +234,7 @@ function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) return `from $${t.starting_price}`;
+  if (t.quote_only) return 'Custom Quote';
   return t.pricing_type;
 }
 

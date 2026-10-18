@@ -43,13 +43,13 @@ const SHORTCUTS = [
   },
   {
     "keys": "Ctrl + E",
-    "command": "Rotate (Rotate)",
+    "command": "Rotate",
     "category": "edit",
     "description": "Align selected components by rotational degrees."
   },
   {
     "keys": "Ctrl + M",
-    "command": "Mirror (Mirror)",
+    "command": "Mirror",
     "category": "edit",
     "description": "Mirror flips the primitive structure."
   },

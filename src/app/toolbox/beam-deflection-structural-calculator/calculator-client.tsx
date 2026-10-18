@@ -11,7 +11,7 @@ const MATERIALS = [
   { name: 'Structural Steel (Structural steel)', E: 200, yield: 250 }, // E in GPa, yield in MPa
   { name: 'Aluminum 6061-T6 (Aluminum alloy)', E: 70, yield: 276 },
   { name: 'Timber / Softwood (wood)', E: 11, yield: 12 },
-  { name: 'Custom (Custom)', E: 200, yield: 250 },
+  { name: 'Custom', E: 200, yield: 250 },
 ];
 
 // Profile types

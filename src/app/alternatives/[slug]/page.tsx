@@ -22,11 +22,6 @@ function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) {
-    if (t.price_period === 'month') return `from $${t.starting_price}/mo`;
-    if (t.price_period === 'one-time') return `from $${t.starting_price}`;
-    return `from $${t.starting_price}/yr`;
-  }
   return t.pricing_type;
 }
 
@@ -56,28 +51,24 @@ export async function generateMetadata(
   });
 }
 
-/** Cheap, deterministic "why try X instead" — uses two real diffs. */
+/** Deterministic "why try X instead" — uses real licensing, platform, and capability diffs. */
 function whyTryInstead(target: Tool, alt: Tool): string {
   const bits: string[] = [];
-  // Pricing diff
+  // Licensing diff
   if (alt.pricing_type === 'Free' || alt.pricing_type === 'Open Source') {
     bits.push(`it's ${alt.pricing_type.toLowerCase()}`);
+  } else if (alt.pricing_type === 'Freemium' && target.pricing_type !== 'Freemium') {
+    bits.push('it offers a free entry tier alongside commercial plans');
+  } else if (alt.pricing_type === 'Perpetual' && target.pricing_type === 'Subscription') {
+    bits.push('it offers a perpetual licence option (no mandatory recurring subscription)');
   } else if (target.starting_price > 0 && alt.starting_price > 0) {
     const targetAnnual = annualizedPrice(target);
     const altAnnual = annualizedPrice(alt);
     if (altAnnual < targetAnnual * 0.6) {
-      bits.push(
-        `it's roughly ${Math.round(
-          ((targetAnnual - altAnnual) /
-            targetAnnual) *
-            100,
-        )}% cheaper on annual cost (${pricingLabel(alt)})`,
-      );
+      bits.push('it offers a more accessible commercial seat tier');
     } else if (altAnnual > targetAnnual * 1.4) {
-      bits.push('it sits one tier above on capability vs price');
+      bits.push('it sits one tier above on enterprise capability');
     }
-  } else if (alt.pricing_type === 'Perpetual' && target.pricing_type === 'Subscription') {
-    bits.push('it offers a perpetual licence (no ongoing subscription)');
   }
   // Platform diff
   const targetPlats = new Set(target.platforms ?? []);
@@ -474,7 +465,7 @@ function renderAlternativesList(tool: Tool, alts: Tool[], style: AlternativeStyl
                     {alt.pricing_type === 'Free' || alt.pricing_type === 'Open Source'
                       ? ` Available at no cost.`
                       : tool.starting_price > 0 && alt.starting_price > 0 && annualizedPrice(alt) < annualizedPrice(tool) * 0.7
-                      ? ` Starting at ${pricingLabel(alt)} — ${Math.round((1 - annualizedPrice(alt) / annualizedPrice(tool)) * 100)}% less than ${tool.name} on annual cost.`
+                      ? ` Offered under a ${alt.pricing_type} model as a cost-effective alternative to ${tool.name}.`
                       : ''}
                   </div>
                 )}

@@ -47,7 +47,7 @@ export default function TransformerCalculatorClient() {
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
           </div>
           <div key="2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Load kVA (kVA)</label>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Load kVA</label>
             <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="250"
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-yellow-600/5 focus:bg-white transition-all" />
           </div>

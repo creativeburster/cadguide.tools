@@ -17,7 +17,7 @@ const SHX_FAQS: { question: string; answer: string }[] = [
   {
     question: 'What is the difference between a question mark (?) and garbled text?',
     answer:
-      'A question mark (?) means the CAD engine cannot find the SHX font file in your Support Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style (Style) conflicts during parsing — for example using a Western single-byte font to parse a double-byte CJK Big Font.',
+      'A question mark (?) means the CAD engine cannot find the SHX font file in your Support Fonts folder, or its mapping rules cannot match special symbols. Garbled text means the code page (Codepage) or font style conflicts during parsing — for example using a Western single-byte font to parse a double-byte CJK Big Font.',
   },
   {
     question: 'Can I download full font packages online and import them?',

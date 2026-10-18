@@ -67,7 +67,7 @@ const SHORTCUTS = [
   },
   {
     "keys": "C",
-    "command": "Constraint (constraint)",
+    "command": "Constraint",
     "category": "assembly",
     "description": "Call up the surface fitting, coaxial center and other constraint panels in the assembly environment."
   },

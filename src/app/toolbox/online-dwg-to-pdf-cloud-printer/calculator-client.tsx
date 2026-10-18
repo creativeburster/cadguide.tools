@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Why do all the lines in the converted PDF have the same thickness?? ",
+    "question": "Why do all the lines in the converted PDF have the same thickness? ",
     "answer": "This is because your .ctb print style file was not mounted correctly when converting. You can look for the 'Plot styles' option in the cloud print settings, or solidify the print style into the drawing in Monochrome mode."
   },
   {

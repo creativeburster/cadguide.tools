@@ -7,7 +7,7 @@ import { RelatedTools } from '@/components/related-tools';
 export default function GlazingWindLoadCalculatorClient() {
   const [copied, setCopied] = useState(false);
 
-  // 输入参数
+  // Input Parameters
   const [width, setWidth] = useState<number>(1500); // mm
   const [height, setHeight] = useState<number>(2400); // mm
   const [windPressure, setWindPressure] = useState<number>(1.8); // kPa (design wind load)

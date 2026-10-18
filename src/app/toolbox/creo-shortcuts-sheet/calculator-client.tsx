@@ -25,13 +25,13 @@ const SHORTCUTS = [
   },
   {
     "keys": "C",
-    "command": "Circle (circle)",
+    "command": "Circle",
     "category": "sketch",
     "description": "Draws a circle centered at the specified location."
   },
   {
     "keys": "R",
-    "command": "Rectangle (rectangle)",
+    "command": "Rectangle",
     "category": "sketch",
     "description": "Specify a rectangle by its bounding diagonals."
   },

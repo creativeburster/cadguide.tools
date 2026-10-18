@@ -7,7 +7,7 @@ import { RelatedTools } from '@/components/related-tools';
 export default function EmbodiedCarbonCalculatorClient() {
   const [copied, setCopied] = useState(false);
 
-  // 输入参数
+  // Input Parameters
   const [grossFloorArea, setGrossFloorArea] = useState<number>(2500); // m²
   const [concreteVolume, setConcreteVolume] = useState<number>(850); // m³
   const [concreteEmissionFactor, setConcreteEmissionFactor] = useState<number>(320); // kgCO2e/m³ (e.g. C30/37 CEM I)

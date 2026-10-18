@@ -101,11 +101,11 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "IFC Schema error reporting 'Unknown Entity' What is the reason? ",
+    "question": "IFC Schema error reporting 'Unknown Entity' What causes this issue? ",
     "answer": "This means that the export engine that generated the model wrote a custom proprietary component name that does not comply with the official buildingSmart specification. You can set attribute remapping in the validator for filtering."
   },
   {
-    "question": "How to determine if a mesh in an IFC model is Watertight (Watertight) ? ",
+    "question": "How to determine if a mesh in an IFC model is Watertight ? ",
     "answer": "Geometric self-intersection and hole detection rules can be used using tools such as Solibri, Check whether the scan contains unnecessary triangle overlap or space leakage caused by missing faces."
   }
 ];

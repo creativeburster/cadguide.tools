@@ -964,7 +964,7 @@ VENDOR ${vendorName} port=${vendorPort || '2080'}`}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed text-slate-600">
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why do both ports trigger -15 errors?? </h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-1.5">Why do both ports trigger -15 errors? </h3>
               <p>
                 Many network administrators deploy CAD floating servers, I habitually only open the service port of `lmgrd.exe` in the firewall. (Usually 27000). When the client initiates a connection, the main process will respond to the client with a randomly selected Vendor supplier process. (For example, the port of `adskflex.exe`). Because the port is blocked by the server firewall, the client eventually generates a handshake timeout. Returns `Error -15: Cannot connect to license server`. Therefore, Locking the Vendor port is the first step to ensure stability. 
               </p>

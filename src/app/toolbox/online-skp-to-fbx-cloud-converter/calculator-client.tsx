@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Converted FBX import Unity Why is the overall image scale reduced by 100 times?? ",
+    "question": "Converted FBX import Unity Why is the overall image scale reduced by 100 times? ",
     "answer": "This is because SketchUp defaults to'Inches' as the underlying system unit. When exporting FBX, in Options the units must be forced to be'Meters' or'Millimeters'."
   },
   {

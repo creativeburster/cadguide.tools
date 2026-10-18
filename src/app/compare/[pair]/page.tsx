@@ -29,17 +29,10 @@ function pairTitle(a: Tool, b: Tool): string {
 }
 
 function pairDescription(a: Tool, b: Tool): string {
-  const label = (t: Tool) =>
-    t.starting_price > 0
-      ? t.price_period === 'month'
-        ? `from $${t.starting_price}/mo`
-        : t.price_period === 'one-time'
-          ? `from $${t.starting_price}`
-          : `from $${t.starting_price}/yr`
-      : t.pricing_type.toLowerCase();
+  const label = (t: Tool) => t.pricing_type;
   const aPrice = label(a);
   const bPrice = label(b);
-  return `${a.name} (${aPrice}) vs ${b.name} (${bPrice}). Side-by-side comparison of pricing, platforms, file formats, ratings, and use cases. Pick the right CAD tool for your team in ${YEAR}.`;
+  return `${a.name} (${aPrice}) vs ${b.name} (${bPrice}). Side-by-side comparison of licensing models, platforms, file formats, ratings, and use cases. Pick the right CAD tool for your team in ${YEAR}.`;
 }
 
 export async function generateMetadata(
@@ -60,12 +53,8 @@ export async function generateMetadata(
 function pricingCell(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
-  if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.starting_price > 0) {
-    const suffix = t.price_period === 'month' ? '/mo' : t.price_period === 'one-time' ? ' one-time' : '/yr';
-    return `$${t.starting_price}${suffix} (${t.pricing_type})`;
-  }
-  return t.pricing_type;
+  if (t.pricing_type === 'Freemium') return 'Freemium (Free Tier + Paid Plans)';
+  return `${t.pricing_type} (Official Live Pricing)`;
 }
 
 function externalReviewLine(t: Tool): string {

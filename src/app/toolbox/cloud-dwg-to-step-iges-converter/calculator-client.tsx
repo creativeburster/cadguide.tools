@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Prefer STEP format",
-    "desc": "STEP The format has more perfect solid assembly structure information than IGES. And it can accurately lock the color of the part and the topological sewing (Sewing) of the surface."
+    "desc": "STEP The format has more perfect solid assembly structure information than IGES. And it can accurately lock the color of the part and the topological sewing of the surface."
   },
   {
     "title": "Check for tolerance drift",
@@ -101,11 +101,11 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "What should I do if the converted 3D entity becomes a hollow shell?? ",
+    "question": "What should I do if the converted 3D entity becomes a hollow shell? ",
     "answer": "This is usually due to the surface mesh used in the original 3D DWG (Mesh/Surface) Instead of solid modeling. If it is a slice import, you need to run'Sew Surface 'command reconstructs hollow surfaces into closed solids."
   },
   {
-    "question": "STEP AP203 What is the difference between AP214 and AP214?? ",
+    "question": "STEP AP203 What is the difference between AP214 and AP214? ",
     "answer": "AP203 Only three-dimensional spatial geometric coordinates and structures are retained; AP214 additionally supports color on this basis, Layer definition and complex dimensioning (GD&T). Recommended AP214 Format."
   }
 ];

@@ -165,7 +165,7 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
     { label: 'Expert Score', key: 'score', type: 'rating' },
     { label: 'Origin Country', key: 'country', type: 'text' },
     { label: 'Pricing Model', key: 'pricing_type', type: 'badge' },
-    { label: 'Starting Price', key: 'starting_price', type: 'price' },
+    { label: 'Official Pricing', key: 'starting_price', type: 'price' },
     { label: 'Geometry Engine', key: 'tech_specs.engine', type: 'text' },
     { label: 'OS Compatibility', key: 'platforms', type: 'list' },
     { label: 'Core Industries', key: 'industries', type: 'list' },
@@ -317,9 +317,7 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
                                 <span className="text-lg lg:text-xl font-black text-slate-900">
                                   {val === 0 || tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
                                     ? 'Free ($0)'
-                                    : typeof val === 'number' && val > 0
-                                      ? `$${val}/mo`
-                                      : 'Contact Sales'}
+                                    : 'Official Live Pricing'}
                                 </span>
                               )}
                               {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val as string}</Badge>}

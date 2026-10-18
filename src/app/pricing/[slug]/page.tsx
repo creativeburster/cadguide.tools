@@ -117,10 +117,8 @@ function pricingLabel(t: Tool): string {
   if (t.pricing_type === 'Free') return 'Free';
   if (t.pricing_type === 'Open Source') return 'Open Source';
   if (t.pricing_type === 'Freemium') return 'Freemium';
-  if (t.quote_only || t.starting_price <= 0) return 'Custom Quote';
-  const period = t.price_period === 'month' ? '/mo' : t.price_period === 'year' ? '/yr' : (t.license_types ?? []).includes('Perpetual') ? ' one-time' : '/yr';
-  return `from $${t.starting_price}${period}`;
-
+  if (t.quote_only) return 'Custom Quote';
+  return t.pricing_type;
 }
 
 export async function generateMetadata(
@@ -534,17 +532,12 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return '5GB free cloud';
                 }
                 if (key === 'pro_upgrade_cost') {
-                  return t.starting_price > 0 ? `$${annualizedPrice(t)}/year` : 'Varies by seat';
+                  return 'See Official Pricing Page';
                 }
                 if (key === 'monthly_pricing') {
-                  if (t.starting_price > 0) {
-                    if (t.price_period === 'month') return `$${t.starting_price}/month`;
-                    if (t.price_period === 'one-time') return 'N/A (perpetual)';
-                    return `$${Math.round(t.starting_price / 12)}/month`;
-                  }
-                  return ['Free', 'Open Source', 'Freemium'].includes(t.pricing_type)
-                    ? 'Free'
-                    : 'Quote only';
+                  if (['Free', 'Open Source'].includes(t.pricing_type)) return 'Free';
+                  if (t.price_period === 'one-time') return 'N/A (Perpetual)';
+                  return 'Official Live Rate';
                 }
                 if (key === 'multi_year_disc') {
                   return 'Up to 10% on 3-Year';
@@ -556,13 +549,8 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return t.score > 4.5 ? 'SSO / SAML Hub' : 'Simple license pool';
                 }
                 if (key === 'buyout_price') {
-                  return t.starting_price > 0
-                    ? t.price_period === 'one-time'
-                      ? `$${t.starting_price} (One-time)`
-                      : 'N/A (subscription)'
-                    : ['Free', 'Open Source'].includes(t.pricing_type)
-                      ? 'Free'
-                      : 'Quote only';
+                  if (['Free', 'Open Source'].includes(t.pricing_type)) return 'Free';
+                  return t.price_period === 'one-time' || (t.license_types ?? []).includes('Perpetual') ? 'Perpetual One-Time License' : 'Subscription Only';
                 }
                 if (key === 'maintenance_cost') {
                   return 'Optional annual update';

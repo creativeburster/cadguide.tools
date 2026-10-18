@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Explode nested references locally",
-    "desc": "For complex drawings, you can perform the comparison first EXPLODE (explode) those custom blocks and nested xrefs (Xrefs) , to prevent the comparison algorithm from counting them directly as a single deletion action."
+    "desc": "For complex drawings, you can perform the comparison first EXPLODE those custom blocks and nested xrefs , to prevent the comparison algorithm from counting them directly as a single deletion action."
   },
   {
     "title": "Off-grid stand-alone verification guarantee",

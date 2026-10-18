@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Will blocking telemetry affect my network license (FLEXlm) usage?? ",
+    "question": "Will blocking telemetry affect my network license (FLEXlm) usage? ",
     "answer": "No. FLEXlm floating license uses the port of your LAN server (Such as 27000), and blocking telemetry is for blocking external Internet server domain names, Licensing and authentication within the LAN are not affected at all."
   },
   {

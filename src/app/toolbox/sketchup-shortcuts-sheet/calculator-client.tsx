@@ -19,7 +19,7 @@ const CATEGORIES = [
 const SHORTCUTS = [
   {
     "keys": "Space",
-    "command": "Select (Select)",
+    "command": "Select",
     "category": "tools",
     "description": "Activate the normal pointer selection tool and exit other editing commands."
   },
@@ -31,13 +31,13 @@ const SHORTCUTS = [
   },
   {
     "keys": "C",
-    "command": "Circle (circle)",
+    "command": "Circle",
     "category": "tools",
     "description": "Draw a circle approximated by a regular polygon."
   },
   {
     "keys": "R",
-    "command": "Rectangle (rectangle)",
+    "command": "Rectangle",
     "category": "tools",
     "description": "Draw a rectangle through two diagonal points."
   },
@@ -49,13 +49,13 @@ const SHORTCUTS = [
   },
   {
     "keys": "M",
-    "command": "Move (move)",
+    "command": "Move",
     "category": "tools",
     "description": "Move selected geometry to match Ctrl key to activate array copying."
   },
   {
     "keys": "Q",
-    "command": "Rotate (Rotate)",
+    "command": "Rotate",
     "category": "tools",
     "description": "Rotate the selected plane or solid."
   },
@@ -79,7 +79,7 @@ const SHORTCUTS = [
   },
   {
     "keys": "Z",
-    "command": "Zoom (Zoom)",
+    "command": "Zoom",
     "category": "camera",
     "description": "Drag the mouse back and forth in real time to zoom the viewport focus."
   },

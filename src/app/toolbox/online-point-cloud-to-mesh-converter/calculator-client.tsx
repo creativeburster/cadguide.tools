@@ -105,7 +105,7 @@ const FAQS = [
     "answer": "This means that there are shadow dead spots in the point cloud during scanning. It needs to be MeshLab Execute 'Closed Hole' in (Close Holes)'and 'Clean orphaned primitives' (Remove Isolated Pieces)'Wait for the mesh patch command."
   },
   {
-    "question": "LAS How is the data different from the PTS format?? ",
+    "question": "LAS How is the data different from the PTS format? ",
     "answer": "LAS It is a binary mapping format developed by the American Society for Photogrammetry and Remote Sensing, which retains the laser reflection intensity. GPS Metadata such as time; PTS/XYZ is a plain text coordinate format, Reading is relatively slow."
   }
 ];

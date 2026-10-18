@@ -76,7 +76,7 @@ const RECOMMENDED_TOOLS = [
     ],
     "pros": [
       "Optimized for engineering geology and scanning mechanical drawings",
-      "Supports one-click skeletonization (Skeletonization) "
+      "Supports one-click skeletonization "
     ],
     "cons": [
       "The interface is old, you need to download the desktop version"
@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Perform local noise reduction (De-speckle)",
-    "desc": "Remove tiny noise spots (spots) on scanned drawings) , otherwise, the tracing algorithm will generate tens of thousands of meaningless closed tiny polygons for these noise points."
+    "desc": "Remove tiny noise spots on scanned drawings) , otherwise, the tracing algorithm will generate tens of thousands of meaningless closed tiny polygons for these noise points."
   },
   {
     "title": "Local non-network dedicated machine running WinTopo",

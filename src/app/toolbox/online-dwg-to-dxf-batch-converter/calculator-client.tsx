@@ -105,7 +105,7 @@ const FAQS = [
     "answer": "ASCII The format is a plain text file, although it is large in size, however, Notepad can be used to read and modify data directly; the Binary format is compressed, Small file size, faster reading and loading speed, but it cannot be edited directly in text mode."
   },
   {
-    "question": "Why can’t dynamic blocks in drawings be edited after mutual conversion?? ",
+    "question": "Why can’t dynamic blocks in drawings be edited after mutual conversion? ",
     "answer": "Some dynamic block information belongs to AutoCAD-specific high-level classes (ArRx) . When converting to DXF, if the version is too low, the database will degrade them, As a result, the slider and other stretch handles will be lost after re-importing."
   }
 ];

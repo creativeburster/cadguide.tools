@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Converted primitives show 'OLE container error'What is the reason? ",
+    "question": "Converted primitives show 'OLE container error'What causes this issue? ",
     "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, it is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting."
   },
   {

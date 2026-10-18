@@ -2492,7 +2492,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TurboCAD Platinum?",
-        "a": "The closest alternatives to TurboCAD Platinum are CorelCAD, progeCAD Professional, DraftSight. CorelCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while progeCAD Professional (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to TurboCAD Platinum are ZWCAD, progeCAD Professional, DraftSight. ZWCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while progeCAD Professional (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2532,7 +2532,7 @@ export const c1Tools: Tool[] = [
       "SVG"
     ],
     "alternatives": [
-      "corelcad",
+      "zwcad",
       "progecad",
       "draftsight",
       "bricscad"
@@ -3178,7 +3178,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ARES Commander?",
-        "a": "The closest alternatives to ARES Commander are DraftSight, CorelCAD, BricsCAD. DraftSight (offered on a Subscription license) competes directly on core Architecture workflows, while CorelCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, BricsCAD. DraftSight (offered on a Subscription license) competes directly on core Architecture workflows, while ZWCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3237,7 +3237,7 @@ export const c1Tools: Tool[] = [
     ],
     "alternatives": [
       "draftsight",
-      "corelcad",
+      "zwcad",
       "bricscad",
       "autocad"
     ]
@@ -3395,7 +3395,9 @@ export const c1Tools: Tool[] = [
     "country": "Thailand",
     "category_id": "c1",
     "pricing_type": "Subscription / Perpetual",
-    "starting_price": 20,
+    "starting_price": 0,
+    "quote_only": true,
+    "pricing_url": "https://www.mechdesigned.com/en/software/mcad/pricing/",
     "platforms": [
       "Windows",
       "Web"
@@ -3465,30 +3467,46 @@ export const c1Tools: Tool[] = [
       {
         "q": "Is there a free trial for MCAD?",
         "a": "Yes, MET provides a 30-day fully functional free trial for Windows with no credit card required."
+      },
+      {
+        "q": "How much does MCAD 2026 cost?",
+        "a": "MCAD Web is available starting at THB 690 per month or THB 6,900 per year. Desktop perpetual licenses with integrated sheet nesting and CNC toolpaths are available via one-time buyout. Current pricing can be verified directly on the official MET pricing page."
       }
     ],
     "pricing_tiers": [
       {
-        "name": "Monthly Subscription",
-        "price": "$20",
+        "name": "MCAD Web Monthly",
+        "price": "THB 690",
         "period": "month",
         "features": [
-          "Full 2D DWG/DXF drafting",
-          "Command line & layers",
+          "Full 2D DWG/DXF drafting in browser",
+          "Command line & layer management",
+          "Object snaps and dimensioning",
           "Standard updates included"
         ]
       },
       {
-        "name": "Perpetual License",
-        "price": "$420",
-        "period": "one-time",
+        "name": "MCAD Web Annual",
+        "price": "THB 6,900",
+        "period": "year",
         "features": [
-          "Permanent commercial license",
-          "True-shape sheet nesting",
-          "G-code CNC laser export",
-          "12 months updates included"
+          "12 months cloud drafting access",
+          "Save 2 months vs monthly billing",
+          "Export DWG, DXF, PDF, SVG",
+          "Standard updates included"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Desktop Perpetual",
+        "price": "Official Vendor Pricing",
+        "period": "one-time",
+        "features": [
+          "Permanent commercial desktop license",
+          "True-shape sheet nesting",
+          "G-code CNC laser/plasma export",
+          "Includes free 30-day trial"
+        ]
       }
     ],
     "alternatives": [

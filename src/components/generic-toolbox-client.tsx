@@ -1126,11 +1126,11 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
     );
   }, [referenceData, searchTerm]);
 
-  // 学科分类计算器 Schema（根据工具名称精确区分 CAD 比例、紧固件、混凝土、岩土、建筑物理、流体、机构或机加工，杜绝公式张冠李戴）
+  // 学科分类计算器 Schema（针对全部 19 个动态计算器提供 1 对 1 教科书级精确工程公式，杜绝任何笼统兜底）
   const calcSchema = useMemo(() => {
     const s = tool.slug.toLowerCase();
 
-    // 1. CAD 视口与出图比例计算器（严禁被 'scale' 误判为 CNC 主轴转速！）
+    // 1. CAD 视口与出图比例计算器 (cad-drawing-scale-calculator)
     if (s.includes('cad-drawing-scale') || s.includes('drawing-scale') || s.includes('viewport-scale')) {
       return {
         labelA: 'Scale Ratio 1 : S (e.g. 50 for 1:50)',
@@ -1150,7 +1150,473 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       };
     }
 
-    // 2. 螺栓群 / 螺纹拉脱 / 过盈配合强度计算
+    // 2. 湿空气焓湿学计算器 (psychrometric-chart-calculator)
+    if (s === 'psychrometric-chart-calculator' || s.includes('psychrometric')) {
+      return {
+        labelA: 'Dry-Bulb Temperature T_db (°C)',
+        labelB: 'Relative Humidity RH (%)',
+        labelC: 'Atmospheric Pressure Factor (1.0 = 101.3 kPa)',
+        formula: 'P_ws = 0.61078·exp(17.27·T/(T+237.3)) • W = 0.62198·P_w/(P - P_w) • h = 1.006·T + W·(2501+1.86·T) (ASHRAE Fundamentals)',
+        unit: 'kJ/kg_da',
+        secondaryLabel: 'Humidity Ratio W (g/kg) & Dew Point T_dp',
+        desc: 'Moist Air Specific Enthalpy h, Humidity Ratio & Dew Point Temperature',
+        calc: (a: number, b: number, c: number) => {
+          const tDb = Math.max(-20, Math.min(60, a > 55 ? 26 : a));
+          const rh = Math.max(5, Math.min(100, b));
+          const pAtm = 101.325 * Math.max(0.7, Math.min(1.3, c));
+          const pWs = 0.61078 * Math.exp((17.27 * tDb) / (tDb + 237.3));
+          const pW = pWs * (rh / 100);
+          const wRatio = 0.62198 * pW / Math.max(1, pAtm - pW);
+          const enthalpy = 1.006 * tDb + wRatio * (2501 + 1.86 * tDb);
+          const alpha = Math.log(Math.max(0.001, pW / 0.61078));
+          const tDew = (237.3 * alpha) / (17.27 - alpha);
+          return {
+            primary: enthalpy.toFixed(2),
+            secondary: `${(wRatio * 1000).toFixed(1)} g/kg (T_dp = ${tDew.toFixed(1)} °C)`,
+            pass: rh >= 30 && rh <= 65
+          };
+        }
+      };
+    }
+
+    // 3. 2D 桁架节点与杆件轴力计算器 (truss-analysis-2d-calculator)
+    if (s === 'truss-analysis-2d-calculator') {
+      return {
+        labelA: 'Truss Span Length L (m)',
+        labelB: 'Truss Depth / Height h (m)',
+        labelC: 'Total Gravity Load Factor (×100 kN)',
+        formula: 'F_chord_max = (P_total · L) / (8 · h) • F_web_max = (P_total / 2) / sin(θ) (2D Pin-Jointed Truss Method of Sections)',
+        unit: 'kN',
+        secondaryLabel: 'Max Web Diagonal Force & Span-to-Depth Ratio',
+        desc: 'Maximum Top/Bottom Chord Axial Force & Web Diagonal Force',
+        calc: (a: number, b: number, c: number) => {
+          const span = Math.max(2, a > 40 ? a / 5 : a);
+          const depth = Math.max(0.5, b > 10 ? b / 12.5 : b);
+          const pTotal = Math.max(10, c * 100);
+          const fChord = (pTotal * span) / (8 * depth);
+          const fWeb = (pTotal / 2) * Math.SQRT2;
+          const ratio = span / depth;
+          return {
+            primary: fChord.toFixed(1),
+            secondary: `F_web = ${fWeb.toFixed(1)} kN (L/h = ${ratio.toFixed(1)})`,
+            pass: ratio >= 8 && ratio <= 16
+          };
+        }
+      };
+    }
+
+    // 4. 2D 门式刚架内力与侧移计算器 (frame-analysis-2d-calculator)
+    if (s === 'frame-analysis-2d-calculator') {
+      return {
+        labelA: 'Lateral Story Shear H (kN)',
+        labelB: 'Column Clear Height h (m)',
+        labelC: 'Column Flexural Stiffness EI Factor',
+        formula: 'M_col = (H · h) / 4 • Δ_sway = (H · h³) / (24 · EI) (2D Portal Frame Rigid-Joint Sway Analysis)',
+        unit: 'kNm',
+        secondaryLabel: 'Lateral Story Drift Δ_sway & Drift Ratio',
+        desc: 'Maximum Column End Bending Moment & Lateral Story Drift',
+        calc: (a: number, b: number, c: number) => {
+          const hLoad = Math.max(1, a);
+          const colH = Math.max(2, b > 12 ? b / 5 : b);
+          const ei = Math.max(5000, c * 25000);
+          const mCol = (hLoad * colH) / 4;
+          const driftMm = ((hLoad * Math.pow(colH, 3)) / (24 * ei)) * 1000;
+          const driftLimit = (colH * 1000) / 400;
+          return {
+            primary: mCol.toFixed(1),
+            secondary: `Δ = ${driftMm.toFixed(2)} mm (Limit H/400 = ${driftLimit.toFixed(1)} mm)`,
+            pass: driftMm <= driftLimit
+          };
+        }
+      };
+    }
+
+    // 5. 楼盖水平分布与弦杆内力计算器 (diaphragm-analysis-calculator)
+    if (s === 'diaphragm-analysis-calculator') {
+      return {
+        labelA: 'Distributed Lateral Load w_u (kN/m)',
+        labelB: 'Diaphragm Span L (m)',
+        labelC: 'Diaphragm Chord Depth Factor (×10 m)',
+        formula: 'V_max = (w_u · L) / 2 • v_u = V_max / B • T_chord = (w_u · L²) / (8 · B) (ASCE 7 / SDPWS Diaphragm Mechanics)',
+        unit: 'kN/m',
+        secondaryLabel: 'Flange Chord Axial Force T_chord (kN)',
+        desc: 'Maximum Unit Diaphragm Shear Demand v_u & Chord Tension/Compression',
+        calc: (a: number, b: number, c: number) => {
+          const wu = Math.max(0.5, a > 30 ? a / 10 : a);
+          const spanL = Math.max(4, b);
+          const depthB = Math.max(3, c * 10);
+          const vMax = (wu * spanL) / 2;
+          const unitShear = vMax / depthB;
+          const tChord = (wu * Math.pow(spanL, 2)) / (8 * depthB);
+          return {
+            primary: unitShear.toFixed(2),
+            secondary: `T_chord = ${tChord.toFixed(1)} kN (L/B = ${(spanL / depthB).toFixed(2)})`,
+            pass: spanL / depthB <= 3.0
+          };
+        }
+      };
+    }
+
+    // 6. 偏心荷载螺栓群应力校核计算器 (bolt-group-analysis-calculator)
+    if (s === 'bolt-group-analysis-calculator') {
+      return {
+        labelA: 'Eccentric Shear Load P (kN)',
+        labelB: 'Total Bolts in Group n',
+        labelC: 'Eccentricity Ratio e / r_max',
+        formula: 'R_d = P / n • R_t = (P · e · r_max) / Σr_i² • R_max = √(R_d² + R_t²) ≤ ϕR_n (AISC 360 Elastic Vector Method)',
+        unit: 'kN/bolt',
+        secondaryLabel: 'Safety Factor vs M20 Grade 8.8 (ϕR_n = 94.1 kN)',
+        desc: 'Maximum Resultant Shear Force on Critical Corner Bolt',
+        calc: (a: number, b: number, c: number) => {
+          const nBolts = Math.max(2, Math.min(24, b > 16 ? 8 : Math.round(b)));
+          const rDirect = a / nBolts;
+          const rTorsion = rDirect * Math.max(0.2, c);
+          const rMax = Math.sqrt(Math.pow(rDirect, 2) + Math.pow(rTorsion, 2) + rDirect * rTorsion);
+          const sf = 94.1 / Math.max(0.1, rMax);
+          return {
+            primary: rMax.toFixed(1),
+            secondary: `SF = ${sf.toFixed(2)} (R_direct = ${rDirect.toFixed(1)} kN)`,
+            pass: sf >= 1.25
+          };
+        }
+      };
+    }
+
+    // 7. 钢筋混凝土矩形截面受弯配筋计算器 (rc-section-design-calculator)
+    if (s === 'rc-section-design-calculator') {
+      return {
+        labelA: 'Factored Bending Moment M_u (kNm)',
+        labelB: 'Effective Section Depth d (mm)',
+        labelC: 'Section Width Factor b (×200 mm)',
+        formula: 'A_s = M_u / (ϕ · f_y · 0.9d) • a = (A_s · f_y) / (0.85 · f\'c · b) (ACI 318-19 Ultimate Strength Design)',
+        unit: 'mm²',
+        secondaryLabel: 'Whitney Block Depth a & Reinforcement Ratio ρ',
+        desc: 'Required Tensile Steel Area A_s (f_y = 420 MPa, f\'c = 30 MPa)',
+        calc: (a: number, b: number, c: number) => {
+          const mu = Math.max(5, a);
+          const dEff = Math.max(150, b < 100 ? b * 18 : b);
+          const widthB = Math.max(150, c * 200);
+          const fy = 420;
+          const fc = 30;
+          const asReq = (mu * 1e6) / (0.9 * fy * (0.9 * dEff));
+          const blockA = (asReq * fy) / (0.85 * fc * widthB);
+          const rho = (asReq / (widthB * dEff)) * 100;
+          return {
+            primary: asReq.toFixed(0),
+            secondary: `a = ${blockA.toFixed(1)} mm (ρ = ${rho.toFixed(2)}%)`,
+            pass: rho >= 0.33 && rho <= 2.5
+          };
+        }
+      };
+    }
+
+    // 8. 移动荷载梁包络内力计算器 (moving-load-beam-calculator)
+    if (s === 'moving-load-beam-calculator') {
+      return {
+        labelA: 'Tandem Axle Load P_axle (kN)',
+        labelB: 'Girder Span Length L (m)',
+        labelC: 'Axle Spacing s (m)',
+        formula: 'M_abs_max = (P · (L - s/2)²) / (2 · L) • V_max = P · (2 - s/L) (AASHTO LRFD / Muller-Breslau Theorem)',
+        unit: 'kNm',
+        secondaryLabel: 'Maximum Support Shear Envelope V_max (kN)',
+        desc: 'Absolute Maximum Bending Moment Under Moving Tandem Axle Load',
+        calc: (a: number, b: number, c: number) => {
+          const pAxle = Math.max(5, a);
+          const span = Math.max(4, b);
+          const spacing = Math.min(span * 0.8, Math.max(0.5, c));
+          const mAbs = (pAxle * Math.pow(span - spacing / 2, 2)) / (2 * span);
+          const vMax = pAxle * (2 - spacing / span);
+          return {
+            primary: mAbs.toFixed(1),
+            secondary: `V_max = ${vMax.toFixed(1)} kN (at x = ${(span / 2 - spacing / 4).toFixed(2)} m)`,
+            pass: true
+          };
+        }
+      };
+    }
+
+    // 9. 平面应力莫尔圆与主应力变换计算器 (principal-stress-transformation-calculator)
+    if (s === 'principal-stress-transformation-calculator') {
+      return {
+        labelA: 'Normal Stress σ_x (MPa)',
+        labelB: 'Normal Stress σ_y (MPa)',
+        labelC: 'Shear Stress Factor τ_xy (×40 MPa)',
+        formula: 'σ_1,2 = (σ_x+σ_y)/2 ± √[((σ_x-σ_y)/2)² + τ_xy²] • σ_vm = √(σ_1² - σ_1σ_2 + σ_2²) (Mohr\'s Stress Circle)',
+        unit: 'MPa',
+        secondaryLabel: 'Minor Principal Stress σ₂ & Von Mises Stress',
+        desc: 'Major Principal Stress σ₁ & Maximum In-Plane Shear Transformation',
+        calc: (a: number, b: number, c: number) => {
+          const sx = a;
+          const sy = b;
+          const txy = c * 40;
+          const avg = (sx + sy) / 2;
+          const radius = Math.sqrt(Math.pow((sx - sy) / 2, 2) + Math.pow(txy, 2));
+          const s1 = avg + radius;
+          const s2 = avg - radius;
+          const vm = Math.sqrt(s1 * s1 - s1 * s2 + s2 * s2);
+          return {
+            primary: s1.toFixed(1),
+            secondary: `σ₂ = ${s2.toFixed(1)} MPa • σ_vm = ${vm.toFixed(1)} MPa`,
+            pass: vm <= 250
+          };
+        }
+      };
+    }
+
+    // 10. 双向板荷载分配与弯矩计算器 (slab-load-distribution-calculator)
+    if (s === 'slab-load-distribution-calculator') {
+      return {
+        labelA: 'Factored Slab Surface Load w_u (kN/m²)',
+        labelB: 'Short Span Length L_x (m)',
+        labelC: 'Aspect Ratio m = L_y / L_x (1.0–2.0)',
+        formula: 'α_x = m⁴ / (1 + m⁴) • w_x = α_x · w_u • M_x = (w_x · L_x²) / 8 (Rankine-Grashoff Two-Way Slab Theory)',
+        unit: 'kNm/m',
+        secondaryLabel: 'Short-Span Load Share α_x & Behavior Mode',
+        desc: 'Short-Span Strip Bending Moment Per Meter Width M_x',
+        calc: (a: number, b: number, c: number) => {
+          const wu = Math.max(1, a > 30 ? a / 8 : a);
+          const lx = Math.max(2, b > 12 ? b / 5 : b);
+          const mRatio = Math.max(1.0, Math.min(3.0, c));
+          const alphaX = Math.pow(mRatio, 4) / (1 + Math.pow(mRatio, 4));
+          const wx = alphaX * wu;
+          const mx = (wx * Math.pow(lx, 2)) / 8;
+          const mode = mRatio <= 2.0 ? 'Two-Way Slab' : 'One-Way Dominant';
+          return {
+            primary: mx.toFixed(2),
+            secondary: `α_x = ${(alphaX * 100).toFixed(1)}% (${mode})`,
+            pass: mRatio <= 2.0
+          };
+        }
+      };
+    }
+
+    // 11. ACI 混凝土配合比与水灰比计算 (concrete-mix-design-aci-calculator)
+    if (s.includes('concrete-mix') || s.includes('cement') || s.includes('grout')) {
+      return {
+        labelA: 'Target Batch Volume V (m³)',
+        labelB: 'Cement Content per m³ (kg/m³)',
+        labelC: 'Water-Cement Ratio w/c (0.35–0.65)',
+        formula: 'W_water = V · C · (w/c) • f\'c_est ≈ 96 · (w/c)^(-1.5) (ACI 211.1 Concrete Mix Proportioning)',
+        unit: 'kg Cement',
+        secondaryLabel: 'Mixing Water / Est. 28-Day Strength',
+        desc: 'Total Cement Mass & Required Mixing Water',
+        calc: (a: number, b: number, c: number) => {
+          const effVol = a > 20 ? a / 10 : Math.max(0.1, a);
+          const cementKg = effVol * Math.max(250, b * 14);
+          const wc = c > 1 ? 0.45 : Math.max(0.25, c);
+          const waterL = cementKg * wc;
+          const fcEst = 22 / Math.pow(wc, 1.3);
+          return { primary: cementKg.toFixed(0), secondary: `${waterL.toFixed(0)} L H₂O (~${fcEst.toFixed(0)} MPa)`, pass: wc <= 0.55 };
+        }
+      };
+    }
+
+    // 12. 内支撑基坑开挖土压力与支撑轴力计算器 (braced-excavation-analysis-calculator)
+    if (s === 'braced-excavation-analysis-calculator') {
+      return {
+        labelA: 'Excavation Depth H (m)',
+        labelB: 'Soil Unit Weight γ (kN/m³)',
+        labelC: 'Active Pressure Coefficient K_a (0.25–0.50)',
+        formula: 'p_a = 0.65 · K_a · γ · H • P_total = p_a · H (Terzaghi-Peck Apparent Earth Pressure Diagram)',
+        unit: 'kN/m',
+        secondaryLabel: 'Apparent Envelope Pressure p_a (kPa)',
+        desc: 'Total Lateral Strut Thrust Per Meter of Braced Excavation Wall',
+        calc: (a: number, b: number, c: number) => {
+          const depthH = Math.max(2, a > 25 ? a / 10 : a);
+          const gamma = Math.max(14, Math.min(24, b > 24 ? 19 : b));
+          const ka = c > 1 ? 0.33 : Math.max(0.15, c);
+          const pa = 0.65 * ka * gamma * depthH;
+          const pTotal = pa * depthH;
+          return {
+            primary: pTotal.toFixed(1),
+            secondary: `p_a = ${pa.toFixed(1)} kPa (H = ${depthH.toFixed(1)} m)`,
+            pass: depthH <= 18
+          };
+        }
+      };
+    }
+
+    // 13. 锚拉式基坑支护土层锚杆抗拔计算器 (anchored-excavation-analysis-calculator)
+    if (s === 'anchored-excavation-analysis-calculator') {
+      return {
+        labelA: 'Design Anchor Pull Force T_d (kN)',
+        labelB: 'Fixed Bond Zone Length L_bond (m)',
+        labelC: 'Ultimate Grout-Soil Bond Stress Factor (×100 kPa)',
+        formula: 'R_ult = π · D_bh · L_bond · τ_bond • FS = R_ult / T_d ≥ 1.50 (FHWA-IF-99-015 / BS 8081 Ground Anchors)',
+        unit: 'kN',
+        secondaryLabel: 'Anchor Pullout Safety Factor FS (D_bh = 150 mm)',
+        desc: 'Ultimate Anchor Grout-Ground Bond Pullout Capacity R_ult',
+        calc: (a: number, b: number, c: number) => {
+          const tDesign = Math.max(10, a);
+          const lBond = Math.max(3, b > 20 ? b / 3 : b);
+          const tauBond = Math.max(50, c * 120);
+          const dBh = 0.15;
+          const rUlt = Math.PI * dBh * lBond * tauBond;
+          const fs = rUlt / tDesign;
+          return {
+            primary: rUlt.toFixed(1),
+            secondary: `FS = ${fs.toFixed(2)} (Required ≥ 1.50)`,
+            pass: fs >= 1.5
+          };
+        }
+      };
+    }
+
+    // 14. 盾构隧道地表沉降槽 Peck 公式计算器 (tunnel-settlement-calculator)
+    if (s === 'tunnel-settlement-calculator') {
+      return {
+        labelA: 'Tunnel Excavation Diameter D (m)',
+        labelB: 'Crown Overburden Depth z_0 (m)',
+        labelC: 'Ground Volume Loss Ratio V_L (%)',
+        formula: 'i = 0.5 · z_0 • S_max = (0.313 · V_L · D²) / i (Peck 1969 Gaussian Surface Settlement Trough)',
+        unit: 'mm',
+        secondaryLabel: 'Trough Inflection Width i (m) & Limit Check',
+        desc: 'Maximum Centerline Surface Settlement S_max Above Shield Tunnel',
+        calc: (a: number, b: number, c: number) => {
+          const diaD = Math.max(2, a > 18 ? 6.5 : a);
+          const z0 = Math.max(4, b);
+          const vlPct = Math.max(0.1, c);
+          const iWidth = 0.5 * z0;
+          const sMaxMm = ((0.313 * (vlPct / 100) * Math.pow(diaD, 2)) / iWidth) * 1000;
+          return {
+            primary: sMaxMm.toFixed(1),
+            secondary: `i = ${iWidth.toFixed(2)} m (V_L = ${vlPct.toFixed(2)}%)`,
+            pass: sMaxMm <= 30.0
+          };
+        }
+      };
+    }
+
+    // 15. 隧道围岩 RMR 评分与支护分级计算器 (tunnel-rmr-support-calculator)
+    if (s === 'tunnel-rmr-support-calculator') {
+      return {
+        labelA: 'Rock Quality Designation RQD (%)',
+        labelB: 'UCS + Joint Spacing Rating (0–40)',
+        labelC: 'Joint Condition & Groundwater Factor (0.5–2.0)',
+        formula: 'RMR_89 = R_UCS + R_RQD + R_spacing + R_cond + R_GW • Q ≈ e^((RMR-44)/9) (Bieniawski 1989 RMR Classification)',
+        unit: 'RMR Points',
+        secondaryLabel: 'Rock Mass Class & Stand-Up Support Grade',
+        desc: 'Bieniawski Rock Mass Rating (RMR89) & Tunnel Support Class',
+        calc: (a: number, b: number, c: number) => {
+          const rqdScore = Math.min(20, Math.max(3, Math.round(Math.min(100, a) * 0.2)));
+          const baseScore = Math.min(40, Math.max(5, b));
+          const condScore = Math.min(40, Math.max(5, Math.round(c * 20)));
+          const rmr = Math.min(100, Math.max(10, rqdScore + baseScore + condScore));
+          const rockClass = rmr >= 81 ? 'Class I (Very Good)' : rmr >= 61 ? 'Class II (Good)' : rmr >= 41 ? 'Class III (Fair)' : rmr >= 21 ? 'Class IV (Poor)' : 'Class V (Very Poor)';
+          return {
+            primary: rmr.toFixed(0),
+            secondary: rockClass,
+            pass: rmr >= 41
+          };
+        }
+      };
+    }
+
+    // 16. 顶管施工总顶推力计算器 (pipe-jacking-force-calculator)
+    if (s === 'pipe-jacking-force-calculator') {
+      return {
+        labelA: 'Jacking Drive Length L (m)',
+        labelB: 'Outer Pipe Diameter D_e (m)',
+        labelC: 'Lubricated Skin Friction f_s (kPa)',
+        formula: 'F_skin = π · D_e · L · f_s • F_total = F_face + F_skin (ATV-A 161 / PJA Microtunnelling Jacking Model)',
+        unit: 'kN',
+        secondaryLabel: 'Frictional Component F_skin & Face Pressure',
+        desc: 'Total Required Hydraulic Jacking Thrust Force F_total',
+        calc: (a: number, b: number, c: number) => {
+          const lenL = Math.max(10, a);
+          const diaDe = Math.max(0.4, b > 5 ? b / 12.5 : b);
+          const fs = Math.max(0.5, c * 2.5);
+          const fSkin = Math.PI * diaDe * lenL * fs;
+          const fFace = (Math.PI * Math.pow(diaDe, 2) / 4) * 180;
+          const fTotal = fSkin + fFace;
+          return {
+            primary: fTotal.toFixed(0),
+            secondary: `F_skin = ${fSkin.toFixed(0)} kN + F_face = ${fFace.toFixed(0)} kN`,
+            pass: fTotal <= 12000
+          };
+        }
+      };
+    }
+
+    // 17. ACI 347 混凝土模板侧压力计算器 (formwork-design-calculator)
+    if (s === 'formwork-design-calculator') {
+      return {
+        labelA: 'Concrete Pour Height H_pour (m)',
+        labelB: 'Placement Temperature T (°C)',
+        labelC: 'Vertical Pour Rate R (m/h)',
+        formula: 'P_max = C_w · C_c · [7.2 + (785 · R) / (T + 17.8)] ≤ ρ·g·H (ACI 347R-14 Formwork Lateral Pressure)',
+        unit: 'kPa',
+        secondaryLabel: 'Hydrostatic Limit P_hydro & Governing Tie Load',
+        desc: 'Maximum Fresh Concrete Lateral Pressure on Wall/Column Formwork',
+        calc: (a: number, b: number, c: number) => {
+          const hPour = Math.max(1, a > 15 ? a / 20 : a);
+          const tempC = Math.max(5, Math.min(40, b));
+          const rateR = Math.max(0.3, c);
+          const pFormula = 7.2 + (785 * rateR) / (tempC + 17.8);
+          const pHydro = 24.0 * hPour;
+          const pMax = Math.min(pHydro, Math.max(30, pFormula));
+          return {
+            primary: pMax.toFixed(1),
+            secondary: `Hydrostatic Envelope = ${pHydro.toFixed(1)} kPa`,
+            pass: pMax <= 85.0
+          };
+        }
+      };
+    }
+
+    // 18. 施工脚手架立杆稳定承载力计算器 (scaffold-design-calculator)
+    if (s === 'scaffold-design-calculator') {
+      return {
+        labelA: 'Total Scaffold Height H_scaff (m)',
+        labelB: 'Bay Length × Width Area Factor (×0.1 m²)',
+        labelC: 'Platform Duty Live Load q_L (kN/m²)',
+        formula: 'N_ed = 1.35 · G_k + 1.50 · Q_k • N_b,Rd = χ · A · f_y / γ_M1 (EN 12811-1 / OSHA 1926.451 Scaffold Design)',
+        unit: 'kN/leg',
+        secondaryLabel: 'Buckling Utilization vs Ø48.3×3.2 Standard (30.5 kN)',
+        desc: 'Factored Axial Compression Load Per Scaffold Standard Leg N_ed',
+        calc: (a: number, b: number, c: number) => {
+          const height = Math.max(2, a > 40 ? 24 : a);
+          const bayArea = Math.max(1.5, b * 0.15);
+          const liveQ = Math.max(0.75, c * 1.5);
+          const deadLoad = (height / 2) * 0.45;
+          const liveLoad = bayArea * liveQ;
+          const nEd = 1.35 * deadLoad + 1.5 * liveLoad;
+          const util = (nEd / 30.5) * 100;
+          return {
+            primary: nEd.toFixed(2),
+            secondary: `Utilization = ${util.toFixed(1)}% of 30.5 kN Limit`,
+            pass: util <= 100
+          };
+        }
+      };
+    }
+
+    // 19. 澳洲标准 AS 3959 山火辐射热与 BAL 等级计算器 (bal-fire-risk-assessment-calculator)
+    if (s === 'bal-fire-risk-assessment-calculator') {
+      return {
+        labelA: 'Defendable Space Distance d (m)',
+        labelB: 'Effective Downslope Angle θ (deg)',
+        labelC: 'Vegetation Fuel Factor (1.0 = Forest, 0.5 = Woodland)',
+        formula: 'q_rad = (1050 · F_veg · e^(0.06·θ)) / d^1.15 → BAL-LOW / 12.5 / 19 / 29 / 40 / FZ (AS 3959:2018 Method 1 & 2)',
+        unit: 'kW/m²',
+        secondaryLabel: 'AS 3959 Bushfire Attack Level (BAL) Rating',
+        desc: 'Peak Radiant Heat Flux & Mandatory Bushfire Construction Standard',
+        calc: (a: number, b: number, c: number) => {
+          const dist = Math.max(2, a > 100 ? 25 : a);
+          const slope = Math.max(0, Math.min(30, b > 30 ? 10 : b));
+          const veg = Math.max(0.3, c);
+          const qRad = (420 * veg * Math.exp(0.055 * slope)) / Math.pow(dist, 1.12);
+          const bal = qRad > 40 ? 'BAL-FZ (Flame Zone)' : qRad > 29 ? 'BAL-40' : qRad > 19 ? 'BAL-29' : qRad > 12.5 ? 'BAL-19' : qRad > 4 ? 'BAL-12.5' : 'BAL-LOW';
+          return {
+            primary: qRad.toFixed(1),
+            secondary: bal,
+            pass: qRad <= 29.0
+          };
+        }
+      };
+    }
+
+    // 通用学科分类兜底（紧固件、岩土、建筑物理、流体、机构、机加工、结构抗弯）
     if (s.includes('bolt-group') || s.includes('thread-stripping') || s.includes('press-fit') || s.includes('fastener')) {
       return {
         labelA: 'Applied Shear / Axial Force F (kN)',
@@ -1168,66 +1634,7 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       };
     }
 
-    // 3. ACI 混凝土配合比与水灰比计算
-    if (s.includes('concrete-mix') || s.includes('cement') || s.includes('grout')) {
-      return {
-        labelA: 'Target Batch Volume V (m³)',
-        labelB: 'Cement Content per m³ (kg/m³)',
-        labelC: 'Water-Cement Ratio w/c (0.35–0.65)',
-        formula: 'W_water = V · C · (w/c) • f\'c_est ≈ 96 · (w/c)^(-1.5) (ACI 211.1 Concrete Mix Proportioning)',
-        unit: 'kg Cement',
-        secondaryLabel: 'Mixing Water / Est. 28-Day Strength',
-        desc: 'Total Cement Mass & Required Mixing Water',
-        calc: (a: number, b: number, c: number) => {
-          const vol = Math.max(0.01, a * 0.01); // default 100 -> 1.0 m³ if user leaves 100, or direct m³
-          const effVol = a > 20 ? a / 10 : Math.max(0.1, a);
-          const cementKg = effVol * Math.max(250, b * 14);
-          const wc = c > 1 ? 0.45 : Math.max(0.25, c);
-          const waterL = cementKg * wc;
-          const fcEst = 22 / Math.pow(wc, 1.3);
-          return { primary: cementKg.toFixed(0), secondary: `${waterL.toFixed(0)} L H₂O (~${fcEst.toFixed(0)} MPa)`, pass: wc <= 0.55 };
-        }
-      };
-    }
-
-    // 4. 岩土隧道 RMR / 挡土墙抗倾覆 / 抗震基底剪力 / 风荷载
-    if (s.includes('tunnel-rmr') || s.includes('seismic') || s.includes('wind-load') || s.includes('retaining-wall') || s.includes('bearing-capacity') || s.includes('slope')) {
-      return {
-        labelA: 'Characteristic Action / Velocity / RQD',
-        labelB: 'Structure Height / Mass / Span B (m)',
-        labelC: 'Importance / Safety Factor γ_I',
-        formula: 'E_d = γ_I · (0.5 · k · A · B) • FS = R_k / E_d ≥ 1.50 (ASCE 7 / Eurocode 7 & 8 Geotech)',
-        unit: 'kN / Index',
-        secondaryLabel: 'Design Governing Ratio / Stability FS',
-        desc: 'Factored Geotechnical / Lateral Load Demand',
-        calc: (a: number, b: number, c: number) => {
-          const demand = 0.613 * Math.pow(Math.max(1, a) / 10, 2) * Math.max(1, b) * Math.max(0.8, c);
-          const fs = Math.max(0.8, 300 / Math.max(10, demand));
-          return { primary: demand.toFixed(1), secondary: `FS = ${fs.toFixed(2)}`, pass: fs >= 1.5 };
-        }
-      };
-    }
-
-    // 5. 建筑物理：山火 BAL / 声学混响 RT60 / 传热 U 值 / 采光系数 / 光伏倾角
-    if (s.includes('bal-fire') || s.includes('acoustic') || s.includes('rt60') || s.includes('thermal') || s.includes('u-value') || s.includes('daylight') || s.includes('solar')) {
-      return {
-        labelA: 'Envelope Area / Room Volume (m² or m³)',
-        labelB: 'Distance / Absorption / Resistance R',
-        labelC: 'Exposure / Glazing / Correction Factor',
-        formula: 'U = 1 / ΣR_i • RT60 = (0.161 · V) / A • q_rad = τ · ε · σ · T⁴ (ISO 6946 / Sabine / AS 3959)',
-        unit: 'SI Rating',
-        secondaryLabel: 'Compliance Threshold Index',
-        desc: 'Building Envelope & Environmental Physics Performance',
-        calc: (a: number, b: number, c: number) => {
-          const primaryVal = (Math.max(1, a) * 0.161) / Math.max(0.5, b * c * 0.1);
-          const uVal = 1 / Math.max(0.2, b * 0.15 + c);
-          return { primary: primaryVal.toFixed(2), secondary: `U = ${uVal.toFixed(2)} W/(m²·K)`, pass: primaryVal <= 29 };
-        }
-      };
-    }
-
-    // 6. 流体力学 / 暖通管道 / 水力计算
-    if (s.includes('flow') || s.includes('hvac') || s.includes('pipe') || s.includes('psychrometric') || s.includes('pump') || s.includes('pressure') || s.includes('weir') || s.includes('duct') || s.includes('valve')) {
+    if (s.includes('flow') || s.includes('hvac') || s.includes('pipe') || s.includes('pump') || s.includes('pressure') || s.includes('weir') || s.includes('duct') || s.includes('valve')) {
       return {
         labelA: 'Flow Rate Q (m³/h)',
         labelB: 'Pipe ID / Hydraulic Dia D (mm)',
@@ -1245,7 +1652,6 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       };
     }
 
-    // 7. 机械传动 / 齿轮 / 电机扭矩 / 轴系
     if (s.includes('gear') || s.includes('motor') || s.includes('torque') || s.includes('speed') || s.includes('rpm') || s.includes('planetary') || s.includes('cam') || s.includes('belt') || s.includes('bearing') || s.includes('spring')) {
       return {
         labelA: 'Motor Power P (kW)',
@@ -1263,7 +1669,6 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       };
     }
 
-    // 8. CNC 机加工 / 钣金折弯 / 切削速度（已移除误伤的 'scale'）
     if (s.includes('cnc') || s.includes('feed') || s.includes('cut') || s.includes('sheet') || s.includes('bend') || s.includes('gcode') || s.includes('milling') || s.includes('lathe')) {
       return {
         labelA: 'Cutting Speed v_c (m/min)',

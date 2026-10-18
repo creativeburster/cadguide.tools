@@ -19,25 +19,25 @@ const CATEGORIES = [
 const SHORTCUTS = [
   {
     "keys": "MB2 (middle mouse button)",
-    "command": "Pan (Pan)",
+    "command": "Pan",
     "category": "mouse",
     "description": "Hold down the middle mouse button and drag to pan the entire drawing model in the viewport."
   },
   {
     "keys": "MB2 + MB1 (or MB3)",
-    "command": "Rotate (Rotate)",
+    "command": "Rotate",
     "category": "mouse",
     "description": "While holding down the middle mouse button, hold down the left button (or right button) Drag to trigger the three-dimensional surround view."
   },
   {
     "keys": "MB2 + Click MB1",
-    "command": "Zoom (Zoom)",
+    "command": "Zoom",
     "category": "mouse",
     "description": "Hold down the middle button and click the left button, then drag the mouse up and down to achieve smooth zooming with infinite focal length."
   },
   {
     "keys": "C",
-    "command": "Constraint (constraint)",
+    "command": "Constraint",
     "category": "sketch",
     "description": "Activate the Geometric Constraint Dimension tool."
   },
@@ -49,7 +49,7 @@ const SHORTCUTS = [
   },
   {
     "keys": "Alt + Enter",
-    "command": "Properties (properties)",
+    "command": "Properties",
     "category": "system",
     "description": "View the physical properties of the currently selected solid feature or geometry segment."
   },

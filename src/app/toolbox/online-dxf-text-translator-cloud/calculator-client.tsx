@@ -105,8 +105,8 @@ const FAQS = [
     "answer": "This may be due to the large difference in character length between different languages (for example, Chinese 'The word \"valve\"', Translated into English is the five characters of 'Valve') . It is recommended to use LISP Scripts limit the width factor (Width Factor) or set multi-line text to adaptive wrapping."
   },
   {
-    "question": "Why can’t the words in Attribute Blocks be translated?? ",
-    "answer": "Ordinary text translation commands usually only recognize ordinary TEXT or MTEXT Primitives, defined in layer blocks (Blocks) Internal attribute literals (ATTRIB) require deep nesting parsing API. You must select a translation tool that supports recursive extraction of attribute blocks."
+    "question": "Why can’t the words in Attribute Blocks be translated? ",
+    "answer": "Ordinary text translation commands usually only recognize ordinary TEXT or MTEXT Primitives, defined in layer blocks Internal attribute literals (ATTRIB) require deep nesting parsing API. You must select a translation tool that supports recursive extraction of attribute blocks."
   }
 ];
 

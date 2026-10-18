@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "'What are the common causes of invalid graphics file?? ",
+    "question": "'What are the common causes of invalid graphics file? ",
     "answer": "This is usually due to a power outage or CAD crashing abnormally. Binary truncation caused by incomplete save, or using a lower version CAD Forcefully read undowngraded high version drawings."
   },
   {

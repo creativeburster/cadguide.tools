@@ -105,7 +105,7 @@ const FAQS = [
     "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure. It will directly report that the file is damaged or the version is not supported."
   },
   {
-    "question": "What happened if Dynamic Blocks failed after downgrading?? ",
+    "question": "What happened if Dynamic Blocks failed after downgrading? ",
     "answer": "Some dynamic blocks based on new constraint relationships are only supported in higher versions. After forced downgrade, CAD The database will convert this into a degenerate static plain anonymous block."
   }
 ];

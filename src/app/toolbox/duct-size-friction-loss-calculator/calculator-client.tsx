@@ -116,7 +116,7 @@ Generated via CADGuide.tools`;
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Sliders className="w-5 h-5 text-blue-400" />
-            <span>Input parameters (Parameters)</span>
+            <span>Input parameters</span>
           </h2>
           <span className="text-sm text-slate-400 font-bold bg-slate-800 px-2.5 py-1 rounded-full uppercase tracking-wider">
             MEP Configurator
@@ -255,7 +255,7 @@ Generated via CADGuide.tools`;
         {/* Roughness Presets */}
         <div className="border-t border-slate-800/80 pt-5 space-y-4">
           <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-            4. Material absolute roughness (Roughness)
+            4. Material absolute roughness
           </label>
           <select
             value={roughnessIdx}

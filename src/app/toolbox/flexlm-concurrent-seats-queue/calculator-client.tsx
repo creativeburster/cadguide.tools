@@ -10,7 +10,7 @@ const SOFTWARE_PRESETS = [
   { name: 'SolidWorks (Dassault)', cost: 4150, premiumFactor: 1.5 },
   { name: 'Revit (Autodesk)', cost: 2820, premiumFactor: 1.4 },
   { name: 'NX (Siemens)', cost: 7500, premiumFactor: 1.6 },
-  { name: 'Custom (Custom)', cost: 2000, premiumFactor: 1.3 },
+  { name: 'Custom', cost: 2000, premiumFactor: 1.3 },
 ];
 
 export default function FlexlmQueueClient() {

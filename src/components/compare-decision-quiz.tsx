@@ -88,10 +88,10 @@ export function CompareDecisionQuiz({ toolA, toolB }: CompareDecisionQuizProps) 
         const annualB = annualizedPrice(toolB);
         if (annualA < annualB) {
           scoreA += 2;
-          reasons.push(`Lower annualized operating cost ($${annualA}/yr vs $${annualB}/yr)`);
+          reasons.push(`More accessible commercial licensing model (${toolA.pricing_type} vs ${toolB.pricing_type})`);
         } else if (annualB < annualA) {
           scoreB += 2;
-          reasons.push(`Lower annualized operating cost ($${annualB}/yr vs $${annualA}/yr)`);
+          reasons.push(`More accessible commercial licensing model (${toolB.pricing_type} vs ${toolA.pricing_type})`);
         } else {
           scoreA += 1;
           scoreB += 1;

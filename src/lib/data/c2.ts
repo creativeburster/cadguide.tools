@@ -5276,7 +5276,7 @@ export const c2Tools: Tool[] = [
     ],
     "country": "UK",
     "category_id": "c2",
-    "pricing_type": "Free",
+    "pricing_type": "Freemium",
     "starting_price": 0,
     "platforms": [
       "Windows"
