@@ -268,9 +268,9 @@ function decisionText(a: Tool, b: Tool): { pickA: string; pickB: string } {
 
   if (!aFree && !bFree && a.starting_price > 0 && b.starting_price > 0 && !a.quote_only && !b.quote_only) {
     if (aPriceDelta < 0)
-      pickAReasons.push(`lower annual cost ($${annualizedPrice(a)} vs $${annualizedPrice(b)} per year)`);
+      pickAReasons.push(`more accessible commercial licensing model (${a.pricing_type})`);
     else if (aPriceDelta > 0)
-      pickBReasons.push(`lower annual cost ($${annualizedPrice(b)} vs $${annualizedPrice(a)} per year)`);
+      pickBReasons.push(`more accessible commercial licensing model (${b.pricing_type})`);
   }
 
   if (aIsCloud && !bIsCloud) pickAReasons.push('runs in the cloud');
@@ -358,28 +358,29 @@ function productCompareLd(a: Tool, b: Tool) {
   if (b.logo_url) images.push(b.logo_url);
   return {
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'ItemList',
     name: `${a.name} vs ${b.name} Comparison`,
-    image: images,
-    description: `Side-by-side comparison of ${a.name} and ${b.name} CAD/BIM software properties: pricing, platforms, features, and expert score ratings.`,
-    brand: {
-      '@type': 'Brand',
-      name: 'CADGuide.tools'
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      highPrice: Math.max(annualizedPrice(a), annualizedPrice(b)).toString(),
-      lowPrice: Math.min(annualizedPrice(a), annualizedPrice(b)).toString(),
-      offerCount: '2'
-    }
+    description: `Side-by-side comparison of ${a.name} and ${b.name} CAD/BIM software properties: licensing models, platforms, features, and expert score ratings.`,
+    numberOfItems: 2,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        url: `${SITE_URL}/tools/${a.slug}`,
+        name: a.name,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        url: `${SITE_URL}/tools/${b.slug}`,
+        name: b.name,
+      },
+    ],
   };
 }
 
 function faqCompareLd(a: Tool, b: Tool) {
   const decision = decisionText(a, b);
-  const aPrice = a.starting_price > 0 ? `from $${a.starting_price}` : a.pricing_type;
-  const bPrice = b.starting_price > 0 ? `from $${b.starting_price}` : b.pricing_type;
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -397,7 +398,7 @@ function faqCompareLd(a: Tool, b: Tool) {
         name: `How does the pricing of ${a.name} compare to ${b.name}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `${a.name} is available ${aPrice}, while ${b.name} is priced ${bPrice}.`
+          text: `${a.name} is offered under a ${a.pricing_type} model, while ${b.name} uses a ${b.pricing_type} model. Check each vendor's official pricing page for live regional rates.`
         }
       },
       {
