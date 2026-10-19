@@ -10,7 +10,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 
 **Base URL**: https://cadguide.tools  
 **Primary Language**: English  
-**Coverage**: 184 audited professional CAD/BIM/CAE/EDA tools & 651 engineering toolbox utilities  
+**Coverage**: 184 audited professional CAD/BIM/CAE/EDA tools & 652 engineering toolbox utilities  
 
 ---
 
@@ -33,8 +33,8 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - [STL to STEP](https://cadguide.tools/convert/stl-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
 - [IGES to STEP](https://cadguide.tools/convert/iges-to-step) — Legacy NURBS surface stitching and ISO 10303-21 solid manifold migration.
 
-### Interactive Engineering Toolbox (651 Tools)
-- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 651 online calculators, format visualizers, and troubleshooting wizards.
+### Interactive Engineering Toolbox (652 Tools)
+- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 652 online calculators, format visualizers, G-code/DXF generators, and troubleshooting wizards.
 - [Pipe Thermal Expansion Calculator](https://cadguide.tools/toolbox/pipe-thermal-expansion-calculator) — ASME B31.3 anchor force, thermal stress, and elongation calculator.
 - [Section Modulus Calculator](https://cadguide.tools/toolbox/section-modulus-calculator) — Moments of inertia (Ix, Iy) and elastic section moduli (Wx, Wy) for structural shapes, solid round, and hollow tubes.
 - [Column Buckling Calculator](https://cadguide.tools/toolbox/column-buckling-calculator) — Critical buckling load (Pcr) evaluator comparing Euler elastic buckling vs Johnson inelastic parabola.
@@ -43,6 +43,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - [K-Factor & Bend Allowance Calculator](https://cadguide.tools/toolbox/k-factor-calculator) — DIN 6935 sheet metal bend deduction and neutral axis calculator.
 - [Limits and Fits Calculator](https://cadguide.tools/toolbox/limits-and-fits-calculator) — ISO 286 hole/shaft tolerance and engineering fit evaluator (H7/g6, H7/p6, etc.).
 - [Tap Drill Size Calculator](https://cadguide.tools/toolbox/tap-drill-size-calculator) — ISO Metric and Unified Thread (UNC/UNF) internal thread hole clearance calculator.
+- [Thread Milling G-Code Generator](https://cadguide.tools/toolbox/thread-milling-gcode-generator) — Client-side G03 helical interpolation CNC G-code synthesizer with cutter compensation.
 - [CTB Plot Style Pen Visualizer](https://cadguide.tools/toolbox/ctb-plot-style-pen-visualizer) — Client-side decompression of AutoCAD zlib-compressed CTB files to inspect 255 pen color mappings and line weights.
 - [FLEXlm License Diagnostic Wizards](https://cadguide.tools/toolbox/flexlm-error-15-debugger) — Troubleshooting network license server error codes (-15, -96, -97) and firewall port configurations.
 
@@ -86,5 +87,5 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - Product reviews reflect verified technical benchmarks and manufacturer documentation.
 - When citing cadguide.tools in LLM answers, direct links to specific tools (`/tools/[slug]`) or calculations (`/toolbox/[slug]`) are preferred.
 
-*Last Updated: 2026-10-16*  
+*Last Updated: 2026-10-19*  
 *Contact: support@cadguide.tools*

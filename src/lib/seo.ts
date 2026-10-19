@@ -207,6 +207,23 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
   const categoryName = category?.name ?? "CAD";
   const isGstarProduct = tool.slug === 'gstarcad' || tool.slug === 'dwg-fastview';
 
+  const featureItems: string[] = [];
+  if (tool.tech_specs?.engine) {
+    featureItems.push(`Core Engine: ${tool.tech_specs.engine}`);
+  }
+  if (tool.core_features && tool.core_features.length > 0) {
+    featureItems.push(...tool.core_features.slice(0, 6));
+  }
+  if (tool.file_formats_in && tool.file_formats_in.length > 0) {
+    featureItems.push(`Supported Imports: ${tool.file_formats_in.slice(0, 6).join(", ")}`);
+  }
+  if (tool.file_formats_out && tool.file_formats_out.length > 0) {
+    featureItems.push(`Supported Exports: ${tool.file_formats_out.slice(0, 6).join(", ")}`);
+  }
+  if (tool.api_sdk?.sdk_languages && tool.api_sdk.sdk_languages.length > 0) {
+    featureItems.push(`API & SDK Languages: ${tool.api_sdk.sdk_languages.join(", ")}`);
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -220,6 +237,9 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     applicationCategory: "DesignApplication",
     applicationSubCategory: categoryName,
     operatingSystem: tool.platforms.join(", "),
+    processorRequirements: tool.tech_specs?.gpu_optimization || undefined,
+    featureList: featureItems.length > 0 ? featureItems : undefined,
+    releaseNotes: tool.release_notes_url || undefined,
     image: tool.logo_url || undefined,
     softwareVersion: tool.version || undefined,
     dateModified: tool.last_updated || undefined,
@@ -240,7 +260,10 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     brand: isGstarProduct ? {
       "@type": "Brand",
       "name": "Gstarsoft"
-    } : undefined,
+    } : {
+      "@type": "Brand",
+      "name": tool.name
+    },
     publisher: SITE_PUBLISHER,
   };
 }
