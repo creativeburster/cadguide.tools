@@ -237,7 +237,6 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     applicationCategory: "DesignApplication",
     applicationSubCategory: categoryName,
     operatingSystem: tool.platforms.join(", "),
-    processorRequirements: tool.tech_specs?.gpu_optimization || undefined,
     featureList: featureItems.length > 0 ? featureItems : undefined,
     releaseNotes: tool.release_notes_url || undefined,
     image: tool.logo_url || undefined,
@@ -260,10 +259,7 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     brand: isGstarProduct ? {
       "@type": "Brand",
       "name": "Gstarsoft"
-    } : {
-      "@type": "Brand",
-      "name": tool.name
-    },
+    } : undefined,
     publisher: SITE_PUBLISHER,
   };
 }

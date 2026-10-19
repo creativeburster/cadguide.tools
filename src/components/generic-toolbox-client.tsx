@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { ToolboxItem } from '@/lib/toolbox-data';
 import { RelatedTools } from '@/components/related-tools';
+import CadFileWorkbench, { workbenchSupports } from '@/components/cad-file-workbench';
 
 interface GenericToolboxClientProps {
   tool: ToolboxItem;
@@ -1136,6 +1137,12 @@ const TROUBLESHOOT_DATASETS: Record<string, {
   }
 };
 
+// Tool-specific starting inputs (real-unit defaults instead of the generic 100 / 25 / 1.5).
+const INITIAL_PARAMS: Record<string, [number, number, number]> = {
+  'thread-engagement-length-checker': [10, 1.5, 1.0],
+  'cam-profile-generator': [40, 15, 120],
+};
+
 export default function GenericToolboxClient({ tool }: GenericToolboxClientProps) {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -1152,9 +1159,10 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
   } | null>(null);
 
   // 纯前端计算器交互状态（供 Calculator / Generator 类使用）
-  const [paramA, setParamA] = useState<number>(100);
-  const [paramB, setParamB] = useState<number>(25);
-  const [paramC, setParamC] = useState<number>(1.5);
+  const initialParams = INITIAL_PARAMS[tool.slug] || [100, 25, 1.5];
+  const [paramA, setParamA] = useState<number>(initialParams[0]);
+  const [paramB, setParamB] = useState<number>(initialParams[1]);
+  const [paramC, setParamC] = useState<number>(initialParams[2]);
 
   const handleCopy = (text: string, key: string) => {
     navigator.clipboard.writeText(text);
@@ -1245,6 +1253,37 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
   // 学科分类计算器 Schema（针对全部 19 个动态计算器提供 1 对 1 教科书级精确工程公式，杜绝任何笼统兜底）
   const calcSchema = useMemo(() => {
     const s = tool.slug.toLowerCase();
+
+    // 0. 螺纹最小旋合长度校核 (thread-engagement-length-checker)
+    // Machinery's Handbook method: the engagement length at which the thread
+    // stripping area equals twice the tensile stress area, so the bolt breaks
+    // in tension before the threads strip. Basic ISO 68-1 profile geometry.
+    if (s === 'thread-engagement-length-checker') {
+      return {
+        labelA: 'Nominal Diameter d (mm)',
+        labelB: 'Thread Pitch P (mm)',
+        labelC: 'Strength Ratio J = UTS_bolt / UTS_nut-material',
+        formula: 'A_t = 0.7854·(d − 0.9382P)² • D₁ = d − 1.0825P • L_e = 2·A_t / [π·D₁·(0.5 + 0.57735·(d₂ − D₁)/P)] • L_e,req = L_e · max(1, J)',
+        unit: 'mm',
+        secondaryLabel: 'Engagement as multiple of d & tensile stress area',
+        desc: 'Minimum thread engagement length so the bolt yields in tension before the threads strip',
+        calc: (a: number, b: number, c: number) => {
+          const d = Math.max(1, a);
+          const p = Math.max(0.2, Math.min(b, d / 3));
+          const j = Math.max(0.1, c);
+          const at = 0.7854 * Math.pow(d - 0.9382 * p, 2);
+          const d1 = d - 1.0825 * p;
+          const d2 = d - 0.6495 * p;
+          const le = (2 * at) / (Math.PI * d1 * (0.5 + 0.57735 * ((d2 - d1) / p)));
+          const req = le * Math.max(1, j);
+          return {
+            primary: req.toFixed(2),
+            secondary: `${(req / d).toFixed(2)}·d • A_t = ${at.toFixed(1)} mm² • L_e (equal strength) = ${le.toFixed(2)} mm`,
+            pass: req / d <= 2.5,
+          };
+        },
+      };
+    }
 
     // 1. CAD 视口与出图比例计算器 (cad-drawing-scale-calculator)
     if (s.includes('cad-drawing-scale') || s.includes('drawing-scale') || s.includes('viewport-scale')) {
@@ -1997,6 +2036,44 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
   // 专属代码/脚本/DXF 生成器引擎（针对全部 13 个 generator 工具生成真实可用的工程脚本与 CAD 数据）
   const generatorOutput = useMemo(() => {
     const s = tool.slug.toLowerCase();
+
+    // 盘形凸轮轮廓生成器：摆线运动规律（升程-远休止-回程-近休止），径向从动件理论廓线
+    if (s === 'cam-profile-generator') {
+      const rb = Math.max(5, paramA);
+      const h = Math.max(0.5, paramB);
+      const beta = Math.max(30, Math.min(170, paramC));
+      const dwell = (360 - 2 * beta) / 2;
+      const disp = (thetaDeg: number) => {
+        const t = ((thetaDeg % 360) + 360) % 360;
+        const cyc = (u: number) => u - Math.sin(2 * Math.PI * u) / (2 * Math.PI);
+        if (t < beta) return h * cyc(t / beta);
+        if (t < beta + dwell) return h;
+        if (t < 2 * beta + dwell) return h * (1 - cyc((t - beta - dwell) / beta));
+        return 0;
+      };
+      const pts: string[] = [];
+      let maxPa = 0;
+      for (let t = 0; t < 360; t += 1) {
+        const sv = disp(t);
+        const ds = (disp(t + 0.01) - disp(t - 0.01)) / ((0.02 * Math.PI) / 180);
+        maxPa = Math.max(maxPa, (Math.atan(Math.abs(ds) / (rb + sv)) * 180) / Math.PI);
+        const r = rb + sv;
+        const a = (t * Math.PI) / 180;
+        pts.push(`0\nVERTEX\n8\nCAM_PITCH_CURVE\n10\n${(r * Math.cos(a)).toFixed(4)}\n20\n${(r * Math.sin(a)).toFixed(4)}\n30\n0.0`);
+      }
+      const ext = '.dxf';
+      const code = `999\nCADGuide cam profile: cycloidal motion, radial follower. Rb=${rb} mm, lift h=${h} mm, rise=${beta} deg, dwell=${dwell.toFixed(1)} deg, return=${beta} deg, dwell=${dwell.toFixed(1)} deg. Max pressure angle=${maxPa.toFixed(1)} deg${maxPa > 30 ? ' (EXCEEDS 30 deg - increase Rb)' : ''}\n0\nSECTION\n2\nHEADER\n9\n$INSUNITS\n70\n4\n0\nENDSEC\n0\nSECTION\n2\nENTITIES\n0\nCIRCLE\n8\nCAM_BASE_CIRCLE\n10\n0.0\n20\n0.0\n30\n0.0\n40\n${rb.toFixed(4)}\n0\nPOLYLINE\n8\nCAM_PITCH_CURVE\n66\n1\n10\n0.0\n20\n0.0\n30\n0.0\n70\n1\n${pts.join('\n')}\n0\nSEQEND\n8\nCAM_PITCH_CURVE\n0\nENDSEC\n0\nEOF`;
+      return {
+        labelA: 'Base Circle Radius R_b (mm)',
+        labelB: 'Follower Lift h (mm)',
+        labelC: 'Rise / Return Angle β (deg, 30–170)',
+        ext,
+        filename: `cam-rb${Math.round(rb)}-h${Math.round(h)}-b${Math.round(beta)}${ext}`,
+        lang: `Cam Pitch Curve DXF (max pressure angle ${maxPa.toFixed(1)}°${maxPa > 30 ? ' — exceeds 30°' : ''})`,
+        code,
+      };
+    }
+
     if (s.includes('lisp') || s.includes('purge')) {
       const ext = '.lsp';
       const code = `;; ============================================================================
@@ -2201,7 +2278,7 @@ M30
       };
     }
 
-    if (s.includes('naca') || s.includes('airfoil') || s.includes('cam-profile') || s.includes('voronoi') || s.includes('pcb-footprint')) {
+    if (s.includes('naca') || s.includes('airfoil')) {
       const chord = Math.max(10, paramA);
       const thicknessPct = Math.max(4, Math.min(30, paramB / 2));
       const ext = '.dat';
@@ -2403,13 +2480,17 @@ EOF`;
     URL.revokeObjectURL(url);
   };
 
-  const isViewerOrValidator = tool.category === 'viewer' || tool.category === 'validator';
-  const isConverter = tool.category === 'converter';
+  // Validators, viewers and the in-browser converters use the real file workbench.
+  const useWorkbench = workbenchSupports(tool.slug);
+  // Category says "validator", but the task is a calculation — render it as a calculator.
+  const isCalcOverride = tool.slug === 'thread-engagement-length-checker';
+  const isViewerOrValidator = !useWorkbench && !isCalcOverride && (tool.category === 'viewer' || tool.category === 'validator');
+  const isConverter = !useWorkbench && tool.category === 'converter';
   const isTroubleshoot = tool.category === 'troubleshoot';
   const isCheatsheetOrLib = tool.category === 'cheatsheet' || tool.category === 'library' || (tool.category === 'comparator' && (!!REFERENCE_DATASETS[tool.slug] || !!SLUG_TO_DATASET_MAP[tool.slug]));
   const isGenerator = tool.category === 'generator';
   const isDiffComparator = tool.category === 'comparator' && !isCheatsheetOrLib;
-  const isCalculatorOrGen = tool.category === 'calculator';
+  const isCalculatorOrGen = tool.category === 'calculator' || isCalcOverride;
 
   return (
     <div className="space-y-12">
@@ -2421,15 +2502,11 @@ EOF`;
           <div className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-blue-50 text-blue-700 border border-blue-100">
               <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>● Active Engineering Tool</span>
+              <span>Free Engineering Tool</span>
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>100% Client-Side Privacy</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-700">
-              <Zap className="w-3.5 h-3.5 text-amber-500" />
-              <span>Zero-Wait Processing</span>
+              <span>{isConverter ? 'Local file preflight only — conversion runs in the linked engines' : 'Runs in your browser — no upload'}</span>
             </span>
           </div>
 
@@ -2442,30 +2519,22 @@ EOF`;
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-bold text-slate-400">
-            <span>Ecosystem: Industrial CAD/BIM Standards</span>
-            <span className="text-slate-200">|</span>
-            <span>Compliance: ISO / ASME / AWS Standardized</span>
-            <span className="text-slate-200">|</span>
-            <span>Tier: 100% Free Public Utility</span>
+            <span>Results are engineering estimates — verify against the governing code or standard before use.</span>
           </div>
         </div>
       </section>
 
-      {/* 2. Official Sponsor & Cloud Referral Engine (DWG FastView / Cloud Partners) */}
+      {/* 2. Sponsored placement (clearly labelled; does not influence tool output or rankings) */}
       <section className="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 text-white rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-black border border-blue-400/30">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span>Official Sponsor • Zero-Install Web CAD Engine</span>
+            <span>Sponsored</span>
           </div>
           <h3 className="text-xl font-black tracking-tight">
-            DWG FastView Web Studio & Multi-Format Cloud Hub
-            <span className="ml-2.5 text-xs font-bold bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-0.5 rounded-full">
-              ● Online & Ready
-            </span>
+            DWG FastView — Online DWG/DXF Viewer
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-            Need heavy 2D/3D DWG/DXF rendering, precision dimensioning, cross-platform markup, or multi-user design review? Launch DWG FastView directly in your browser with zero installation, zero security risk, and zero license audit liability.
+            Need to open, measure or mark up a DWG without installing CAD? DWG FastView runs in the browser. This is a sponsored placement and has no effect on the results of the tool above.
           </p>
         </div>
 
@@ -2473,16 +2542,19 @@ EOF`;
           <a
             href="https://en.dwgfastview.com/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored noopener noreferrer"
             className="py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all text-center"
           >
-            <span>Launch Web CAD Studio</span>
+            <span>Open DWG FastView</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
       </section>
 
       {/* 3. Interactive Main Functional Experience */}
+
+      {/* 模式 W: 真实本地文件工作台（校验器 / 查看器 / 浏览器内转换） */}
+      {useWorkbench && <CadFileWorkbench slug={tool.slug} title={tool.title} />}
       
       {/* 模式 A: Viewer / 3D Mesh / Validator (带真实本地预检与云端推荐) */}
       {isViewerOrValidator && (
@@ -2498,7 +2570,7 @@ EOF`;
               </p>
             </div>
             <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full self-start sm:self-auto">
-              ✓ Local Sandbox Active
+              Local header read
             </span>
           </div>
 
@@ -2548,7 +2620,7 @@ EOF`;
                     )}
                     <div className="flex justify-between">
                       <span className="text-slate-400">Verification:</span>
-                      <span className="font-bold text-emerald-600">Passed • Local Header Analysis Complete</span>
+                      <span className="font-bold text-slate-600">Header read — format identified only (no geometry validation)</span>
                     </div>
                   </div>
                   <button
@@ -2579,9 +2651,9 @@ EOF`;
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { name: 'DWG FastView Web', type: 'Official Cloud Partner', desc: 'Instant zero-lag multi-format CAD viewer with layer isolation and measurement.', url: 'https://en.dwgfastview.com/' },
+                { name: 'DWG FastView Web', type: 'Sponsored', desc: 'Instant zero-lag multi-format CAD viewer with layer isolation and measurement.', url: 'https://en.dwgfastview.com/' },
                 { name: 'Autodesk Viewer', type: 'Enterprise Cloud Engine', desc: 'Free online viewing for 80+ file formats including Revit, Navisworks, and Inventor.', url: 'https://viewer.autodesk.com/' },
-                { name: 'FreeCAD WebAssembly', type: 'Open-Source Local Engine', desc: '100% offline open-source B-Rep geometry and mesh inspection toolkit.', url: 'https://www.freecad.org/' }
+                { name: 'FreeCAD', type: 'Open-Source Desktop App', desc: 'Free, offline desktop CAD for inspecting STEP, IGES, STL and DXF geometry.', url: 'https://www.freecad.org/' }
               ].map((bench, idx) => (
                 <div key={idx} className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between space-y-3">
                   <div>
@@ -2621,7 +2693,7 @@ EOF`;
               </p>
             </div>
             <span className="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full self-start sm:self-auto">
-              ✓ Conversion Pipeline Active
+              Local preflight only
             </span>
           </div>
 
@@ -2670,7 +2742,7 @@ EOF`;
                     )}
                     <div className="flex justify-between">
                       <span className="text-slate-400">Status:</span>
-                      <span className="font-bold text-emerald-600">Validated • Ready for Translation</span>
+                      <span className="font-bold text-slate-600">Format identified — use an engine below to convert</span>
                     </div>
                   </div>
                   <button
@@ -2693,40 +2765,16 @@ EOF`;
             </div>
           </div>
 
-          {/* Conversion Configuration Settings */}
-          <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 space-y-4">
+          {/* Settings checklist for the external conversion engine (informational — this page does not convert) */}
+          <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 space-y-3">
             <h4 className="text-xs font-black text-slate-400 uppercase tracking-widest">
-              Conversion Target Configuration & Precision Standards
+              Settings to confirm in your conversion engine
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-700">Target Schema / Version</label>
-                <select className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-800">
-                  <option>AutoCAD 2018+ (AC1032 Default)</option>
-                  <option>AutoCAD 2013 (AC1027 Legacy)</option>
-                  <option>STEP AP242 (Semantic GD&T)</option>
-                  <option>STEP AP214 (Automotive Classic)</option>
-                  <option>High-Res Vector PDF (300 DPI)</option>
-                </select>
-              </div>
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-700">Unit System Normalization</label>
-                <select className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-800">
-                  <option>Preserve Source Units</option>
-                  <option>Force Millimeters (mm)</option>
-                  <option>Force Decimal Inches (in)</option>
-                  <option>Force Meters (m)</option>
-                </select>
-              </div>
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-700">Geometric Tessellation</label>
-                <select className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-800">
-                  <option>High Precision (0.005mm Chordal)</option>
-                  <option>Balanced Production (0.02mm)</option>
-                  <option>Lightweight Web Mesh (0.1mm)</option>
-                </select>
-              </div>
-            </div>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-700 font-medium">
+              <li><span className="font-bold block">Target version / schema</span>DWG: AC1027 (2013) is the most widely readable. STEP: AP242 keeps PMI/GD&amp;T, AP214 keeps colours and layers.</li>
+              <li><span className="font-bold block">Units</span>Confirm source units before converting — unitless DXF/STL files are the most common cause of 25.4× and 1000× scale errors.</li>
+              <li><span className="font-bold block">Tessellation (mesh outputs)</span>Chordal deviation ≈ 0.01–0.02 mm for 3D printing; 0.1 mm is usually enough for web/visualisation.</li>
+            </ul>
           </div>
 
           {/* Curated Conversion Pipelines */}
@@ -2737,7 +2785,7 @@ EOF`;
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { name: 'DWG FastView Cloud Engine', badge: 'Fastest 2D/3D', desc: 'Direct browser batch conversion between DWG, DXF, DWF, and high-res vector PDF.', url: 'https://en.dwgfastview.com/' },
+                { name: 'DWG FastView Cloud Engine', badge: 'Sponsored', desc: 'Direct browser batch conversion between DWG, DXF, DWF, and high-res vector PDF.', url: 'https://en.dwgfastview.com/' },
                 { name: 'Autodesk Cloud Translation', badge: 'Official APS', desc: 'Convert 80+ mechanical & BIM formats into lightweight web SVF / glTF / STEP.', url: 'https://viewer.autodesk.com/' },
                 { name: 'FreeCAD Open Engine', badge: '100% Offline', desc: 'Local open-source B-Rep kernel stitching for STEP, IGES, STL, and DXF files.', url: 'https://www.freecad.org/' }
               ].map((engine, idx) => (

@@ -10,7 +10,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 
 **Base URL**: https://cadguide.tools  
 **Primary Language**: English  
-**Coverage**: 184 audited professional CAD/BIM/CAE/EDA tools & 652 engineering toolbox utilities  
+**Coverage**: 184 audited professional CAD/BIM/CAE/EDA tools & 651 engineering toolbox utilities  
 
 ---
 
@@ -33,8 +33,8 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - [STL to STEP](https://cadguide.tools/convert/stl-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
 - [IGES to STEP](https://cadguide.tools/convert/iges-to-step) — Legacy NURBS surface stitching and ISO 10303-21 solid manifold migration.
 
-### Interactive Engineering Toolbox (652 Tools)
-- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 652 online calculators, format visualizers, G-code/DXF generators, and troubleshooting wizards.
+### Interactive Engineering Toolbox (651 Tools)
+- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 651 online calculators, format visualizers, G-code/DXF generators, and troubleshooting wizards.
 - [Pipe Thermal Expansion Calculator](https://cadguide.tools/toolbox/pipe-thermal-expansion-calculator) — ASME B31.3 anchor force, thermal stress, and elongation calculator.
 - [Section Modulus Calculator](https://cadguide.tools/toolbox/section-modulus-calculator) — Moments of inertia (Ix, Iy) and elastic section moduli (Wx, Wy) for structural shapes, solid round, and hollow tubes.
 - [Column Buckling Calculator](https://cadguide.tools/toolbox/column-buckling-calculator) — Critical buckling load (Pcr) evaluator comparing Euler elastic buckling vs Johnson inelastic parabola.
@@ -83,7 +83,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 
 ## Editorial & Citation Guidelines
 
-- CADGuide.tools is 100% editorially independent. We do not accept sponsored placements to bias product rankings.
+- Rankings, scores and calculator results are editorial and are not for sale. Some toolbox pages show a clearly labelled "Sponsored" placement (DWG FastView); sponsorship does not change any ranking, score or tool output.
 - Product reviews reflect verified technical benchmarks and manufacturer documentation.
 - When citing cadguide.tools in LLM answers, direct links to specific tools (`/tools/[slug]`) or calculations (`/toolbox/[slug]`) are preferred.
 
