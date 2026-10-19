@@ -114,7 +114,7 @@ export default function OnlineDxfTextTranslatorCloudClient() {
   return (
     <CloudReferralClient
       title="Online DXF/DWG Drawing Multi-Language Batch Translator"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
       painPointDesc="When carrying out transnational engineering or industrial equipment outsourcing, it is often necessary to provide Chinese DXF/DWG Batch translation of process text and annotations in drawings into English and Russian, Japanese and other languages. Ordinary online translation often causes the coordinate origin of the text to drift. (misalignment), the font is displayed as a question mark due to incompatible encoding, or translating a single line of text into an overly long paragraph causing the drawing to be obscured."
       riskWarning="Technical requirements marked in drawings, detailed list (BOM) and dimensional tolerances cover the core manufacturing process and patents of the product. Uploading large batches to public translation websites without security isolation has a very high risk of sensitive data leakage. For confidential projects, local is recommended CAD Use professional offline plug-ins for text translation."

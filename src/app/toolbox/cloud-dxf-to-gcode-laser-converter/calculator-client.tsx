@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "How to solve the problem of converting arcs into polyline segments? ",
-    "answer": "This is because the arcs in the original DXF drawing were forcibly broken up by the converter. (Explode) For tiny segments of straight lines. Make sure the CAD Save as an arc object in the converter, or enable arc interpolation optimization in the converter."
+    "answer": "This occurs when splines or arcs in the source DXF are discretized into short linear G01 segments. Convert splines to true polyline arcs (PEDIT) in CAD before exporting, or enable G02/G03 arc fitting in your CAM post-processor."
   }
 ];
 
@@ -114,7 +114,7 @@ export default function CloudDxfToGcodeLaserConverterClient() {
   return (
     <CloudReferralClient
       title="Online DXF to CNC G-Code Path Planner"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Engineering & Design Calculator"
       painPointDesc="In digital manufacturing and laser cutting, the 2D Convert vector DXF drawings to engraving machine, Readable by waterjet, plasma or laser cutters G-Code (Gcode) is the core link. The quality of cloud converters on the market varies, and unreasonable tool path calculations often lead to empty runs. Material burnt, tool impact or arc interpolation (G02/G03) Parsing error."
       riskWarning="Converted DXF outlines often represent precision sheet metal, Commercial designs such as mechanical transmission parts. When uploaded to a free third-party online converter, the drawings will be parsed and stored by the cloud server, which may leak geometric intellectual property rights. For high-confidential part drawings, it is highly recommended to use local offline CNC Programming software (such as Fusion 360, Vectric, Carbide Create) Or open source offline converter."

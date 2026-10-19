@@ -25,7 +25,7 @@ const RECOMMENDED_TOOLS = [
       "Supports exporting self-extracting executable EXE files"
     ],
     "cons": [
-      "You need to download the client, which is about a few hundred in size.MB"
+      "Requires downloading the desktop client installer (~300 MB)"
     ],
     "officialUrl": "https://www.solidworks.com/product/edrawings",
     "verdict": "The most authoritative image viewing and distribution tool officially produced by Dassault Systèmes, 100% Restore surface mapping and dynamic motion pairs."
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Assembly package and compressed upload",
-    "desc": "SolidWorks Assembly (sldasm) contains no geometric data. Please use 'Package (Pack and Go)'function, combines the assembly and all its associated parts (sldprt) Included in a .zip package and uploaded."
+    "desc": "A SolidWorks assembly (`.sldasm`) only stores component references and mates, not part geometry. Always use 'File -> Pack and Go' to bundle the `.sldasm` and all referenced `.sldprt` files into a single `.zip` archive, or export a self-contained `.easm` file."
   },
   {
     "title": "Locally clear high-module features such as threads",
@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Why does the model appear off-white after importing?'And the material is lost? ",
+    "question": "Why does the imported 3D model appear plain gray with missing textures?",
     "answer": "This means that your sldprt did not include the texture library when saving it. (Texture Maps) It is solidified into the file, or the path of the referenced appearance image is lost. When uploading the package, make sure the material resources are also selected."
   },
   {
@@ -120,7 +120,7 @@ export default function OnlineSolidworksEDrawingsCloudViewerClient() {
   return (
     <CloudReferralClient
       title="Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="When you need to outsource SolidWorks parts to customers or factories (.sldprt) or assemblies (.sldasm), installing large commercial CAD software is inconvenient. Using the online eDrawings rendering layer, users can browse 3D entities directly in the browser WebGL, view Assembly Trees (Component Trees), hide/display components, and measure critical mating surface spacing."
       riskWarning="3D part drawings contain complete parameter feature trees and tolerance processes. Uploading to a public unknown drawing viewing platform may trigger commercial telemetry and leak core intellectual property rights. For sensitive assemblies, please guide users to download the official free version of Dassault Systèmes eDrawings Viewer Local version, use of non-compliant cloud viewing websites is strictly prohibited."

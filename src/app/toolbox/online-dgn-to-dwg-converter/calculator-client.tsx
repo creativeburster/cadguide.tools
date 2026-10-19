@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Handling Shared Cells",
-    "desc": "In the export options, change'Shared unit' expands to normal'Blocks', prevents the AutoCAD The drawing was destroyed into sporadic primitives."
+    "desc": "In the MicroStation DWG export options, map 'Shared Cells' to standard AutoCAD 'Block References' (INSERT) so compound symbols do not explode into loose primitive segments."
   },
   {
     "title": "Uniformly use True Color",
@@ -101,12 +101,12 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Converted primitives show 'OLE container error'What causes this issue? ",
+    "question": "What causes 'OLE container error' on converted DGN primitives?",
     "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, it is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting."
   },
   {
-    "question": "DGN The V7 and V8 Does the format affect conversion? ",
-    "answer": "Yes. V7 is an old historical version, There are upper limits on file size and number of layers; V8 is 2001 A common 64-bit three-dimensional database format in the future. Before conversion, you need to confirm whether the target DWG platform can recognize the corresponding ODA Drive."
+    "question": "Does the difference between DGN V7 and V8 formats affect conversion?",
+    "answer": "Yes. DGN V7 (ISFF) is a legacy 16-bit format limited to 63 levels and 32 MB file sizes, whereas DGN V8 (introduced in 2001) is a modern 64-bit database supporting unlimited levels. Ensure your converter uses an updated ODA Teigha/DGN library."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineDgnToDwgConverterClient() {
   return (
     <CloudReferralClient
       title="Online Bentley DGN to AutoCAD DWG Layer Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Bentley MicroStation DGN When converting drawings to AutoCAD DWG drawings, since the base principles of the two platforms are completely different, this usually results in MicroStation 's level (Levels) 'Unable to snap to CAD' layer (Layers) ', Proprietary cell libraries (Cells) degenerate into broken line segments, and the collapse of Bentley’s signature handwritten continuous line style."
-      riskWarning="DGN The format is generally used in infrastructure design such as national large bridges, rail transit and municipal network management. Involves extremely strict physical security and project sensitivity. Please give priority to use MicroStation Local built-in 'Save as DWG'Function to perform high-precision matching and mount a regular layer comparison table (CSV) , Avoid using public conversion websites for high-volume conversions."
+      painPointDesc="When translating Bentley MicroStation DGN files to AutoCAD DWG format, architectural differences between the two kernels often cause unmapped MicroStation Levels, exploded Cell libraries, and missing custom RSC line styles (.lin)."
+      riskWarning="DGN files are widely used in critical infrastructure projects including bridges, rail transit, and municipal utilities. Always prioritize local conversion via MicroStation's built-in 'Save As DWG' engine with a validated CSV level-mapping table rather than uploading sensitive drawings to public cloud converters."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

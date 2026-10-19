@@ -101,8 +101,8 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Copyright verification letter sent by the agent'Is it legally binding? ",
-    "answer": "Most regular letters are commercial purchase letters (Sales Pitch) sent by distribution agents, with the purpose of urging you to purchase genuine products.; However, if you receive a formal lawyer's letter from a law firm'Or an official letter containing an intranet detailed illegal MAC address evidence collection form, it indicates that the evidence collection has been completed and needs to be taken seriously and an intranet self-examination must be carried out."
+    "question": "How should IT administrators evaluate a software license compliance inquiry letter?",
+    "answer": "Standard outreach letters from regional resellers are often commercial sales inquiries, whereas formal audit notices issued by the software vendor's legal compliance team or BSA counsel require a structured internal Software Asset Management (SAM) reconciliation and legal review."
   },
   {
     "question": "How did the agent know that our company was using pirated CAD? ",

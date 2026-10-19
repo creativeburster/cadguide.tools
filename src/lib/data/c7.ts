@@ -4062,7 +4062,7 @@ export const c7Tools: Tool[] = [
     ],
     "country": "UK",
     "category_id": "c7",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 8000,
     "price_period": "year",
     "platforms": [

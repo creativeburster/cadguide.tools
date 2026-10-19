@@ -88,11 +88,11 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Local double purge",
-    "desc": "In the Revit Family Editor, Click Run at least twice in succession to clear unused items (Purge Unused)', can cull 90% of obsolete materials and subfamily caches."
+    "desc": "In the Revit Family Editor, run 'Purge Unused' at least two to three times consecutively to strip nested unused materials, line patterns, and orphaned sub-family definitions."
   },
   {
     "title": "Remove unnecessary three-dimensional details",
-    "desc": "Details such as bolts of components such as mechanical valve families should be set to only in 'Fine'displayed under the view, in'Rough' and'Use simple entities instead, Prevent the main image from loading lag."
+    "desc": "Assign high-polygon hardware details (such as valve flange bolts and 3D embossed text) to display only at 'Fine' Detail Level, and use simplified symbolic lines for 'Coarse' and 'Medium' views to keep project viewport navigation fast."
   },
   {
     "title": "Establish an enterprise-level unified shared parameter table",
@@ -101,12 +101,12 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Why are there only a few hundred RFA family files? KB, after importing the project, it becomes much larger? ",
-    "answer": "This is usually due to 'nesting' within the family'A large number of other subfamilies, and these subfamilies are not set to'Shared '. Revit will force a copy of this subfamily library when importing, this causes the main image to expand in size."
+    "question": "Why does a compact 500 KB RFA family file bloat the main Revit project by tens of megabytes?",
+    "answer": "This typically happens when the RFA contains deeply nested sub-families, imported 3D DWG/SAT meshes, or over-modeled parametric arrays that regenerate thousands of faces for every placed instance in the project."
   },
   {
-    "question": "Revit 'variable parameters' in'and 'type parameters'What's the difference? ",
-    "answer": "'Type Parameters 'When modified, the size of all similar families in the project will be changed at the same time; 'Instance Parameters 'Only change the currently selected one. It is recommended that non-size-critical properties be set as instance parameters to reduce definition redundancy."
+    "question": "What is the difference between Instance Parameters and Type Parameters in Revit?",
+    "answer": "Modifying a 'Type Parameter' updates every placed instance of that family type across the entire project simultaneously, whereas an 'Instance Parameter' only affects the individual selected element. Use Type Parameters for standardized catalog sizes to minimize memory overhead."
   }
 ];
 
@@ -114,7 +114,7 @@ export default function OnlineRevitFamilyCheckerAuditClient() {
   return (
     <CloudReferralClient
       title="BIM Revit Family File Integrity & Parameter Auditor"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
       painPointDesc="In BIM collaborative design, Family files (.rfa) downloaded from the Internet or provided by vendors may vary in quality. Overly nested families, too many uncleaned garbage entities (Unpurged Objects) And illegally named shared parameters (Shared Parameters) will cause Revit The size of the main model skyrocketed, causing project loading to be extremely slow and performance crashing."
       riskWarning="Revit The family file not only contains the three-dimensional fine mesh, but also contains the manufacturer's process specifications and specifications. Uploading graphic element libraries in large batches for cloud auditing involves copyright compliance risks of secondary collection of data. For enterprise core family libraries, it is recommended to use local Revit Install the official Model Checker plug-in for offline compliance auditing."

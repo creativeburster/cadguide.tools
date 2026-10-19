@@ -756,6 +756,111 @@ const REFERENCE_DATASETS: Record<string, {
       ['Normally Open (NO) Contact', 'IEC 60617 / NFPA 79', 'Electrical Schematic', 'Left Terminal Connection Node (Grid 5mm)', 'Attr: TAG_NAME (K1, S1), TERM_NO', 'Two parallel vertical bars (NFPA) or angled switch blade (IEC)']
     ],
     note: 'Standardized CAD symbol block conventions for ISO, ASME, AIA, and IEC technical documentation.'
+  },
+  'cad-file-format-guide': {
+    headers: ['Format Extension', 'Full Standard Name', 'Geometry Kernel / Type', 'Unit & Hierarchy Support', 'Primary Engineering Use Case'],
+    rows: [
+      ['.DWG', 'AutoCAD Drawing Database', '2D/3D Vector & ACIS Solid', 'Full Layers, Blocks, XREFs', 'Universal AEC, civil, and mechanical 2D drafting master archive'],
+      ['.DXF', 'Drawing Exchange Format (ASCII/Binary)', '2D/3D Vector Entities', 'Layer & Color Preserved', 'Laser cutting, plasma CNC nesting, and cross-platform 2D exchange'],
+      ['.STEP (.stp)', 'ISO 10303-21 (AP214 / AP242)', 'Exact NURBS B-Rep Solid', 'Full Assembly Tree + Semantic PMI', 'Gold-standard neutral 3D mechanical CAD & CNC CAM exchange'],
+      ['.IGES (.igs)', 'ANSI Y14.26M Legacy Surface', 'Trimmed NURBS Surfaces', 'Flat Surface Collection', 'Legacy mold/die surface transfer; prone to stitching gaps'],
+      ['.X_T / .X_B', 'Siemens Parasolid Transmit', 'Exact Parasolid B-Rep Topology', 'Zero-Translation Native Solids', 'Direct lossless exchange between SolidWorks, Siemens NX, and Solid Edge'],
+      ['.IFC', 'ISO 16739 openBIM (IFC2x3 / IFC4)', 'SweptSolid, B-Rep & Triangulated', 'Spatial Hierarchy + Property Sets', 'Vendor-neutral BIM coordination across Revit, ArchiCAD, and Tekla'],
+      ['.STL / .3MF', 'Tessellated Triangle Mesh', 'Faceted Polygonal Mesh', '3MF stores units, color & materials', 'Additive manufacturing slicing (FDM, SLA, SLS) and 3D printing']
+    ],
+    note: 'Comprehensive engineering CAD, BIM, and manufacturing file format interoperability matrix.'
+  },
+  'bim-lod-level-reference': {
+    headers: ['LOD Level', 'AIA / BIMForum Designation', 'Geometric Precision Requirement', 'Non-Graphic Attribute Data', 'Project Phase & Deliverable Use'],
+    rows: [
+      ['LOD 100', 'Conceptual Massing', 'Overall building mass, area, height, volume', 'Conceptual cost per m², gross energy load', 'Master planning, feasibility study, zoning approval'],
+      ['LOD 200', 'Approximate Geometry (Schematic)', 'Generic placeholders with approximate bounding sizes', 'System classification, approximate capacity', 'Schematic Design (SD) & early spatial coordination'],
+      ['LOD 300', 'Precise Geometry (Design Dev)', 'Specific assemblies with exact size, shape, and orientation', 'Thermal U-value, fire rating, structural grade', 'Construction Documents (CD) & code compliance'],
+      ['LOD 350', 'Construction Coordination', 'Includes hangers, supports, embeds, and connection interfaces', 'Clearance zones, clash detection tolerances', 'Multi-trade MEP/Structural 3D clash detection (Navisworks)'],
+      ['LOD 400', 'Fabrication & Assembly', 'Shop-drawing accuracy: welds, bolts, gussets, pipe spools', 'Manufacturer model #, CNC fabrication metadata', 'Direct off-site prefabrication and CNC spool production'],
+      ['LOD 500', 'As-Built Verified Field Twin', 'Field-verified geometry (via laser scan / total station)', 'Serial numbers, warranty dates, O&M manuals, COBie', 'Facility Management (FM) and Digital Twin operations']
+    ],
+    note: 'Governed by BIMForum Level of Development (LOD) Specification and ISO 19650 information requirements.'
+  },
+  'pid-symbols-reference': {
+    headers: ['ISA-5.1 Tag / Symbol', 'Component Designation', 'Graphic Convention', 'Signal / Line Type', 'Process Control Function'],
+    rows: [
+      ['Gate Valve (HV/XV)', 'Manual or Actuated Isolation Valve', 'Two opposing triangles meeting at center vertex', 'Solid Primary Process Line', 'On/off full-bore process fluid isolation with minimal pressure drop'],
+      ['Globe Control Valve (FCV/PCV)', 'Modulating Throttling Valve', 'Bowtie triangles with darkened center sphere + diaphragm dome', 'Pneumatic (dashed) or Electric (dotted)', 'Continuous proportional flow, pressure, or temperature regulation'],
+      ['Check Valve (NRV)', 'Non-Return Swing / Lift Check', 'Z-shaped diagonal line with directional arrow and stop dot', 'Inline Process Piping', 'Prevents backflow reversal to protect centrifugal pumps and compressors'],
+      ['Pressure Safety Valve (PSV)', 'Spring-Loaded Relief Valve', 'Angled bowtie meeting at 90° with vertical spring symbol', 'Relieves to Flare / Vent Header', 'Overpressure emergency protection per ASME Boiler & Pressure Vessel Code'],
+      ['Centrifugal Pump (P-101)', 'Rotodynamic Liquid Pump', 'Circle with tangential discharge nozzle and triangular base', 'Process Suction / Discharge', 'Imparts kinetic head to transport liquids through process piping'],
+      ['Shell & Tube Exchanger (E-101)', 'Thermal Heat Exchanger', 'Circle with internal S-curve tube pass symbol', 'Hot & Cold Fluid Streams', 'Transfers thermal energy between two isolated process fluid streams'],
+      ['Field Transmitter (PT / FT / TT)', 'Field-Mounted Sensor / Transmitter', 'Circle without horizontal line (ISA bubble) with tag letters', '4-20mA / HART / Fieldbus', 'Measures local pressure (PT), flow (FT), or temperature (TT) and transmits to PLC'],
+      ['DCS Shared Display (PIC / FIC)', 'Control Room Indicating Controller', 'Circle inside square with horizontal dividing line', 'Software / Internal Bus Link', 'Operator-accessible PID control loop on central Distributed Control System']
+    ],
+    note: 'Conforms to ANSI/ISA-5.1 Instrumentation Symbols and Identification & ISO 14617 P&ID standards.'
+  },
+  'electrical-drawing-symbols-reference': {
+    headers: ['Symbol Name', 'IEC 60617 Tag', 'NFPA 79 / IEEE Tag', 'Graphic Representation', 'Schematic Engineering Function'],
+    rows: [
+      ['Circuit Breaker (3-Pole)', 'QF (e.g. QF1)', 'CB', 'Three ganged switch blades with thermal (box) and magnetic (zig-zag) trip markers', 'Automatic overcurrent and short-circuit fault interruption'],
+      ['Normally Open Contact (NO)', 'KM / KA', 'CR / M', 'Two parallel bars (ANSI) or open angled blade (IEC)', 'Closes circuit path when parent contactor or relay coil is energized'],
+      ['Normally Closed Contact (NC)', 'KM / KA', 'CR / M', 'Parallel bars with diagonal slash (ANSI) or closed blade (IEC)', 'Opens circuit path when parent coil is energized (interlock / stop logic)'],
+      ['Contactor / Relay Coil', 'KM / KA (A1-A2)', 'M / CR', 'Rectangle (IEC) or Circle (ANSI) between control rails', 'Electromagnetic actuator driving associated power and auxiliary contacts'],
+      ['Thermal Overload Relay', 'FR', 'OL', 'Pulse square-wave heating element symbol inline with motor phases', 'Protects 3-phase induction motors against sustained phase overload'],
+      ['3-Phase Squirrel Cage Motor', 'M (3~)', 'MTR', 'Circle with "M" and "3~" sine wave symbol + U1/V1/W1 terminals', 'Converts 3-phase AC electrical power into mechanical shaft torque'],
+      ['Protective Earth (PE Ground)', 'PE', 'GND', 'Three descending horizontal lines inside circle (or bare triangle)', 'Safety chassis bonding path to prevent electric shock hazard']
+    ],
+    note: 'Cross-referenced between IEC 60617 (European/International) and NFPA 79 / IEEE Std 315 (North American) schematic standards.'
+  },
+  'hvac-drawing-symbols-reference': {
+    headers: ['MEP Symbol Name', 'Abbreviation', 'CAD Layer (AIA)', 'Graphic Convention', 'HVAC System Function'],
+    rows: [
+      ['Supply Air Duct (4-Way Diffuser)', 'SA / CD', 'M-HVAC-SUPP', 'Square box with four directional diagonal corner arrows + CFM callout', 'Delivers conditioned supply air evenly into occupied architectural zone'],
+      ['Return Air Grille', 'RA / RG', 'M-HVAC-RETN', 'Rectangle with single diagonal slash line from bottom-left to top-right', 'Draws room air back to Air Handling Unit (AHU) or plenum'],
+      ['Exhaust Air Register', 'EA / EG', 'M-HVAC-EXHS', 'Rectangle with full X cross-diagonals connecting all four corners', 'Extracts contaminated or humid air from restrooms, kitchens, and labs'],
+      ['Variable Air Volume Box', 'VAV', 'M-HVAC-EQPM', 'Rectangular inline box with damper blade and controller diamond + reheat coil', 'Modulates zone airflow volume based on space thermostat demand'],
+      ['Motorized Fire / Smoke Damper', 'FSD / FD', 'M-HVAC-DAMP', 'Inline butterfly blade inside fire-rated wall penetration with "FD" tag', 'Automatically seals duct penetration upon fire alarm or fusible link melt'],
+      ['Flexible Duct Connection', 'FLEX', 'M-HVAC-DUCT', 'Corrugated zig-zag or accordion line pattern connecting rigid branch to diffuser', 'Isolates mechanical vibration and accommodates ceiling grid alignment']
+    ],
+    note: 'Follows ASHRAE Handbook Fundamentals, SMACNA duct construction standards, and AIA National CAD Standard.'
+  },
+  'architectural-drawing-symbols-reference': {
+    headers: ['Architectural Symbol', 'AIA Layer Name', 'Paper Plot Size', 'Graphic Structure', 'Construction Document Meaning'],
+    rows: [
+      ['Building / Wall Section Callout', 'A-ANNO-SYMB', 'Ø 12.0 mm (1/2")', 'Circle split horizontally (top=Detail #, bottom=Sheet #) with solid directional arrow', 'Indicates exact cutting plane and viewing direction for vertical section view'],
+      ['Interior Elevation Marker', 'A-ANNO-SYMB', 'Ø 12.0 mm (1/2")', 'Central circle with up to 4 directional triangular pointers around perimeter', 'References N/S/E/W interior room wall elevations on detail sheets'],
+      ['Floor Level Elevation Datum', 'A-ANNO-DIMS', 'Ø 6.0 mm target', 'Circle with crosshairs and alternating blackened quadrants + "+0.000 F.F.L."', 'Establishes vertical Finished Floor Level (FFL) or Top of Steel (TOS) height'],
+      ['Door Number Tag', 'A-DOOR-IDEN', 'Oval / Circle 8mm', 'Stadium pill or circle centered in door swing opening (e.g. D-104)', 'Links floor plan door instance to architectural Door & Hardware Schedule'],
+      ['Window Type Tag', 'A-GLAZ-IDEN', 'Hexagon 8mm', 'Regular 6-sided polygon placed adjacent to exterior glazing (e.g. W-02)', 'References window size, glazing U-factor, and frame spec in Window Schedule'],
+      ['Revision Cloud & Delta Triangle', 'A-ANNO-REVS', 'Triangle 6mm', 'Scalloped arc polyline boundary with equilateral triangle containing Revision #', 'Highlights post-issuance design modifications linked to Title Block revision log']
+    ],
+    note: 'Compliant with ISO 128-30, ISO 7519, and United States National CAD Standard (NCS / AIA).'
+  },
+  'cnc-m-code-reference-table': {
+    headers: ['M-Code', 'Function Name', 'Execution Timing', 'Typical Fanuc / Haas Behavior', 'Shop-Floor Safety & Usage Note'],
+    rows: [
+      ['M00', 'Mandatory Program Stop', 'Immediate at block', 'Halts axis feed, spindle, and coolant unconditionally until Cycle Start pressed', 'Used for manual part flip, chip clearing, or in-process micrometer check'],
+      ['M01', 'Optional Program Stop', 'Conditional on panel key', 'Pauses machine only if "OPT STOP" button is illuminated on operator console', 'Place after every tool operation for first-article prove-out inspection'],
+      ['M03', 'Spindle On Clockwise (CW)', 'With S-word RPM', 'Starts spindle rotation in standard right-hand cutting direction (e.g. S6000 M03)', 'Verify tool hand before execution; always pair with explicit S speed'],
+      ['M04', 'Spindle On Counter-Clockwise', 'With S-word RPM', 'Starts spindle in reverse left-hand rotation (or rigid tapping retract)', 'Used for left-hand drills/taps or back-boring operations'],
+      ['M05', 'Spindle Stop', 'Before Z retract / ATC', 'Decelerates and stops main spindle motor completely', 'Automatically invoked by M06 or M30 on modern controls'],
+      ['M06', 'Automatic Tool Change (ATC)', 'With T-word', 'Indexes carousel/arm and swaps tool in spindle (e.g. T04 M06)', 'Ensure safe Z-axis clearance (G28 G91 Z0) prior to M06 on non-macro machines'],
+      ['M08 / M09', 'Flood Coolant On / Off', 'Modal Auxiliary', 'M08 activates main flood coolant pump; M09 shuts off all coolant valves', 'Use M88/M89 for high-pressure Through-Spindle Coolant (TSC)'],
+      ['M30', 'Program End & Rewind', 'End of main program', 'Stops spindle/coolant, resets modal states, and rewinds cursor to top of file', 'Standard final block of every standalone CNC G-code file']
+    ],
+    note: 'Standardized ISO 6983 / EIA RS-274-D Miscellaneous (M) functions for Fanuc, Haas, Mazak, and Okuma CNC controls.'
+  },
+  'sheet-metal-bend-deduction-chart': {
+    headers: ['Sheet Thickness T (mm)', 'Gauge Equiv (Steel)', 'Recommended V-Die (mm)', 'Inside Radius R (mm)', 'K-Factor (Air Bend)', '90° Bend Allowance BA (mm)', '90° Bend Deduction BD (mm)'],
+    rows: [
+      ['1.0 mm', '20 Ga (0.91mm)', 'V8', '1.0 mm', '0.42', '2.23 mm', '1.77 mm'],
+      ['1.2 mm', '18 Ga (1.21mm)', 'V10', '1.2 mm', '0.42', '2.68 mm', '2.12 mm'],
+      ['1.5 mm', '16 Ga (1.52mm)', 'V12', '1.5 mm', '0.43', '3.37 mm', '2.63 mm'],
+      ['2.0 mm', '14 Ga (1.90mm)', 'V16', '2.0 mm', '0.43', '4.49 mm', '3.51 mm'],
+      ['2.5 mm', '12 Ga (2.66mm)', 'V20', '2.5 mm', '0.44', '5.65 mm', '4.35 mm'],
+      ['3.0 mm', '11 Ga (3.04mm)', 'V24', '3.0 mm', '0.44', '6.79 mm', '5.21 mm'],
+      ['4.0 mm', '8 Ga (4.18mm)', 'V32', '4.0 mm', '0.45', '9.11 mm', '6.89 mm'],
+      ['5.0 mm', '6 Ga (4.94mm)', 'V40', '5.0 mm', '0.45', '11.39 mm', '8.61 mm'],
+      ['6.0 mm', '3 Ga (6.07mm)', 'V50', '6.0 mm', '0.46', '13.76 mm', '10.24 mm']
+    ],
+    note: 'Calculated for 90° air bending on cold-rolled mild steel (V = 8×T rule): BA = (π/2)·(R + K·T), BD = 2·(R + T) - BA.'
   }
 };
 
@@ -789,6 +894,7 @@ const SLUG_TO_DATASET_MAP: Record<string, string> = {
   'fdm-3d-printing-filament-comparison': 'fdm-3d-printing-filament-comparison',
   'fdm-filament-selector-comparator': 'fdm-3d-printing-filament-comparison',
   'fdm-3d-printing-filament-properties-chart': 'fdm-3d-printing-filament-properties-chart',
+  '3d-printing-parameters-reference-chart': 'fdm-3d-printing-filament-properties-chart',
   'iges-vs-step-data-loss-matrix': 'iges-vs-step-data-loss-matrix',
   'iges-vs-step-comparator': 'iges-vs-step-data-loss-matrix',
   'pvc-pipe-schedule-40-80-dimensions-table': 'pvc-pipe-schedule-40-80-dimensions-table',
@@ -799,9 +905,19 @@ const SLUG_TO_DATASET_MAP: Record<string, string> = {
   'welding-symbols-cheatsheet': 'welding-symbols-cheatsheet',
   'fastener-strength-grade-reference': 'fastener-strength-grade-reference',
   'cnc-tool-specifications-reference': 'cnc-tool-specifications-reference',
+  'cnc-feeds-speeds-starting-values-chart': 'cnc-tool-specifications-reference',
   'revit-family-formula-reference': 'revit-family-formula-reference',
   'material-properties-database': 'material-properties-database',
-  'cad-symbol-block-library': 'cad-symbol-block-library'
+  'cad-symbol-block-library': 'cad-symbol-block-library',
+  'steel-section-properties-table': 'aisc-steel-shapes-library',
+  'cad-file-format-guide': 'cad-file-format-guide',
+  'bim-lod-level-reference': 'bim-lod-level-reference',
+  'pid-symbols-reference': 'pid-symbols-reference',
+  'electrical-drawing-symbols-reference': 'electrical-drawing-symbols-reference',
+  'hvac-drawing-symbols-reference': 'hvac-drawing-symbols-reference',
+  'architectural-drawing-symbols-reference': 'architectural-drawing-symbols-reference',
+  'cnc-m-code-reference-table': 'cnc-m-code-reference-table',
+  'sheet-metal-bend-deduction-chart': 'sheet-metal-bend-deduction-chart'
 };
 
 // 权威排障向导数据字典（按软件生态物理隔离，杜绝跨软件穿帮）
@@ -1616,6 +1732,169 @@ export default function GenericToolboxClient({ tool }: GenericToolboxClientProps
       };
     }
 
+    // 20. BIM 构件混凝土方量与钢筋用量估算器 (online-bim-quantity-estimator)
+    if (s === 'online-bim-quantity-estimator') {
+      return {
+        labelA: 'Gross Floor / Slab Area A (m²)',
+        labelB: 'Equivalent Structural Thickness t (cm)',
+        labelC: 'Rebar Density Ratio ρ_s (×100 kg/m³)',
+        formula: 'V_conc = A · (t / 100) · (1 + f_waste) • M_rebar = V_conc · ρ_s (RICS NRM2 / CSI MasterFormat Div 03)',
+        unit: 'm³ Concrete',
+        secondaryLabel: 'Estimated Reinforcing Steel Tonnage M_rebar',
+        desc: 'Net Concrete Volume (incl. 3% waste) & Reinforcing Rebar Mass',
+        calc: (a: number, b: number, c: number) => {
+          const area = Math.max(10, a);
+          const thickM = Math.max(0.08, b / 100);
+          const rebarRate = Math.max(50, c * 95);
+          const vConc = area * thickM * 1.03;
+          const mRebarTons = (vConc * rebarRate) / 1000;
+          return {
+            primary: vConc.toFixed(1),
+            secondary: `${mRebarTons.toFixed(2)} metric tons Rebar (${rebarRate.toFixed(0)} kg/m³)`,
+            pass: thickM >= 0.12
+          };
+        }
+      };
+    }
+
+    // 21. CNC 激光/等离子板材套料排版利用率优化计算器 (online-cnc-nesting-optimizer)
+    if (s === 'online-cnc-nesting-optimizer') {
+      return {
+        labelA: 'Single Part Blank Area A_part (cm²)',
+        labelB: 'Nested Parts per Sheet N_parts',
+        labelC: 'Standard Sheet Size Factor (1.5 = 1500×3000 mm)',
+        formula: 'η_nest = (N_parts · A_part + A_kerf) / A_sheet × 100% • Scrap = 100% - η_nest (ISO 9013 Laser/Plasma Nesting)',
+        unit: '% Yield',
+        secondaryLabel: 'Sheet Scrap Ratio & Utilized Area (m²)',
+        desc: 'True Sheet Metal Nesting Material Utilization Efficiency η_nest',
+        calc: (a: number, b: number, c: number) => {
+          const partM2 = Math.max(0.001, a / 10000);
+          const count = Math.max(1, Math.round(b));
+          const sheetM2 = Math.max(1.0, c * 3.0);
+          const usedM2 = Math.min(sheetM2 * 0.96, partM2 * count);
+          const yieldPct = (usedM2 / sheetM2) * 100;
+          const scrapPct = 100 - yieldPct;
+          return {
+            primary: yieldPct.toFixed(1),
+            secondary: `Scrap = ${scrapPct.toFixed(1)}% (${usedM2.toFixed(2)} / ${sheetM2.toFixed(2)} m²)`,
+            pass: yieldPct >= 72.0
+          };
+        }
+      };
+    }
+
+    // 22. CFD 流体雷诺数与边界层第一层网格 Y+ 厚度计算器 (online-cfd-simulation-platform)
+    if (s === 'online-cfd-simulation-platform') {
+      return {
+        labelA: 'Freestream Flow Velocity U_∞ (m/s)',
+        labelB: 'Characteristic Chord / Pipe Length L (mm)',
+        labelC: 'Target Wall Mesh y⁺ Value (1.0 = k-ω SST)',
+        formula: 'Re = (ρ · U_∞ · L) / μ • C_f = 0.026 / Re^(1/7) • Δy₁ = (y⁺ · μ) / (ρ · u_τ) (Schlichting Boundary Layer Theory)',
+        unit: 'mm (Δy₁)',
+        secondaryLabel: 'Reynolds Number Re & Flow Regime',
+        desc: 'First Prism Layer Wall Mesh Height Δy₁ for Target y⁺',
+        calc: (a: number, b: number, c: number) => {
+          const vel = Math.max(0.1, a / 5);
+          const lenM = Math.max(0.01, b / 100);
+          const yPlus = Math.max(0.5, c);
+          const rho = 1.225;
+          const mu = 1.81e-5;
+          const re = (rho * vel * lenM) / mu;
+          const cf = 0.026 / Math.pow(re, 1 / 7);
+          const tauW = 0.5 * cf * rho * vel * vel;
+          const uTau = Math.sqrt(tauW / rho);
+          const dy1Mm = ((yPlus * mu) / (rho * uTau)) * 1000;
+          return {
+            primary: dy1Mm.toFixed(4),
+            secondary: `Re = ${(re / 1e5).toFixed(2)}×10⁵ (${re > 4000 ? 'Turbulent' : 'Laminar'})`,
+            pass: yPlus <= 5.0 || yPlus >= 30.0
+          };
+        }
+      };
+    }
+
+    // 23. FEA 有限元应力奇异与网格收敛安全系数校核器 (online-fea-simulation-platform)
+    if (s === 'online-fea-simulation-platform') {
+      return {
+        labelA: 'Peak Von Mises Stress σ_vm (MPa)',
+        labelB: 'Material Yield Strength R_p0.2 (×10 MPa)',
+        labelC: 'Stress Concentration / Mesh Factor K_t',
+        formula: 'σ_nom = σ_vm / K_t • FoS_yield = R_p0.2 / σ_vm • η_margin = FoS - 1 (ASME V&V 10 / NAFEMS FEA Standard)',
+        unit: 'FoS (Safety)',
+        secondaryLabel: 'Material Yield Utilization & Nominal Stress',
+        desc: 'Factor of Safety Against Von Mises Yield Criterion (Distortion Energy)',
+        calc: (a: number, b: number, c: number) => {
+          const svm = Math.max(1, a * 1.8);
+          const fy = Math.max(100, b * 14);
+          const kt = Math.max(1.0, c);
+          const fos = fy / svm;
+          const util = (svm / fy) * 100;
+          return {
+            primary: fos.toFixed(2),
+            secondary: `Utilization = ${util.toFixed(1)}% (σ_nom = ${(svm / kt).toFixed(1)} MPa)`,
+            pass: fos >= 1.5
+          };
+        }
+      };
+    }
+
+    // 24. 注塑模具模流锁模力与冷却时间计算器 (online-injection-mold-flow-analysis)
+    if (s === 'online-injection-mold-flow-analysis') {
+      return {
+        labelA: 'Total Projected Cavity Area A_proj (cm²)',
+        labelB: 'Mean Cavity Melt Pressure P_cav (MPa)',
+        labelC: 'Part Nominal Wall Thickness s (mm)',
+        formula: 'F_clamp = (A_proj · P_cav · 1.15) / 98.0665 [Tonnes] • t_cool ≈ (s² / (π² · α_eff)) · ln(4/π · ΔT) (Menges Mold Flow Eq)',
+        unit: 'Metric Tons',
+        secondaryLabel: 'Minimum Holding & Cooling Cycle Time t_cool (s)',
+        desc: 'Required Injection Molding Machine Clamping Tonnage (incl. 15% safety)',
+        calc: (a: number, b: number, c: number) => {
+          const areaCm2 = Math.max(5, a * 2.5);
+          const pCavMpa = Math.max(15, b * 1.6);
+          const wallMm = Math.max(0.8, c * 1.6);
+          // 1 cm² * 1 MPa = 100 N = 0.1 kN
+          const forceKn = areaCm2 * pCavMpa * 0.1 * 1.15;
+          const clampTons = forceKn / 9.80665;
+          const tCool = 2.15 * Math.pow(wallMm, 2);
+          return {
+            primary: clampTons.toFixed(1),
+            secondary: `F = ${forceKn.toFixed(0)} kN • Est. Cooling Time = ${tCool.toFixed(1)} s`,
+            pass: clampTons <= 850
+          };
+        }
+      };
+    }
+
+    // 25-27. 综合机械与多学科设计公式校核工作台 (mitcalc / ptc-mathcad / calculatoredge)
+    if (
+      s === 'mitcalc-mechanical-calculator-suite' ||
+      s === 'ptc-mathcad-engineering-calculator' ||
+      s === 'calculatoredge-multi-discipline-calculators'
+    ) {
+      return {
+        labelA: 'Transmitted Shaft Torque M_t (Nm)',
+        labelB: 'Simultaneous Bending Moment M_b (Nm)',
+        labelC: 'Shaft Diameter Factor (×20 mm)',
+        formula: 'M_eq = √(M_b² + 0.75 · M_t²) • σ_eq = (32 · M_eq) / (π · d³) ≤ σ_allow (ASME B106.1M / DIN 743 Shaft Design)',
+        unit: 'MPa',
+        secondaryLabel: 'Equivalent Moment M_eq & Fatigue Safety Factor',
+        desc: 'Combined Torsion-Bending Von Mises Equivalent Shaft Stress σ_eq',
+        calc: (a: number, b: number, c: number) => {
+          const mt = Math.max(5, a * 2.5);
+          const mb = Math.max(5, b * 6);
+          const diaMm = Math.max(12, c * 22);
+          const mEq = Math.sqrt(mb * mb + 0.75 * mt * mt);
+          const sigmaEq = (32 * mEq * 1000) / (Math.PI * Math.pow(diaMm, 3));
+          const sf = 240 / Math.max(1, sigmaEq);
+          return {
+            primary: sigmaEq.toFixed(1),
+            secondary: `M_eq = ${mEq.toFixed(1)} Nm • SF = ${sf.toFixed(2)} (d = ${diaMm.toFixed(0)} mm)`,
+            pass: sf >= 1.5
+          };
+        }
+      };
+    }
+
     // 通用学科分类兜底（紧固件、岩土、建筑物理、流体、机构、机加工、结构抗弯）
     if (s.includes('bolt-group') || s.includes('thread-stripping') || s.includes('press-fit') || s.includes('fastener')) {
       return {
@@ -1811,6 +2090,83 @@ ZOOM Extents
       };
     }
 
+    if (s.includes('thread-milling')) {
+      const majorDia = Math.max(6, paramB);
+      const cutterDia = Math.max(3, majorDia * 0.65);
+      const pitchP = Math.max(0.5, paramC);
+      const pathRadius = (majorDia - cutterDia) / 2;
+      const halfRadius = pathRadius / 2;
+      const zBottom = -Math.max(5, Math.round(majorDia * 1.5));
+      const feedF = Math.max(40, paramA * 1.8);
+      const ext = '.nc';
+      const code = `%
+O1002 (${tool.title.toUpperCase()} - G03 HELICAL THREAD MILLING)
+(THREAD MAJOR DIA: M${majorDia.toFixed(1)} X ${pitchP.toFixed(2)} MM | CUTTER DIA: ${cutterDia.toFixed(2)} MM)
+(CLIMB MILLING BOTTOM-UP SINGLE-PASS HELICAL INTERPOLATION)
+G21 G17 G40 G49 G80 G90
+T02 M06 (SOLID CARBIDE THREAD MILL)
+G00 G90 G54 X0.000 Y0.000 S${Math.round(paramA * 32)} M03
+G43 H02 Z15.000 M08
+G00 Z2.000
+G01 Z${zBottom.toFixed(3)} F${(feedF * 2).toFixed(1)}
+G91 G01 G41 D02 X${halfRadius.toFixed(3)} Y-${halfRadius.toFixed(3)} F${feedF.toFixed(1)}
+G03 X${halfRadius.toFixed(3)} Y${halfRadius.toFixed(3)} R${halfRadius.toFixed(3)} Z${(pitchP / 4).toFixed(3)}
+G03 X0.000 Y0.000 I-${pathRadius.toFixed(3)} J0.000 Z${pitchP.toFixed(3)} F${feedF.toFixed(1)}
+G03 X-${halfRadius.toFixed(3)} Y${halfRadius.toFixed(3)} R${halfRadius.toFixed(3)} Z${(pitchP / 4).toFixed(3)}
+G01 G40 X-${halfRadius.toFixed(3)} Y-${halfRadius.toFixed(3)}
+G90 G00 Z25.000 M09
+M05
+G28 G91 Z0.0
+M30
+%`;
+      return {
+        labelA: 'Surface Speed Factor (m/min)',
+        labelB: 'Nominal Thread Major Dia D (mm)',
+        labelC: 'Thread Pitch P (mm)',
+        ext,
+        filename: `${tool.slug}${ext}`,
+        lang: 'ISO Helical G-Code (.NC)',
+        code,
+      };
+    }
+
+    if (s.includes('cnc-2d-profile') || s.includes('cnc-facing-pocket')) {
+      const widthX = Math.max(20, paramA);
+      const lengthY = Math.max(20, paramB * 3);
+      const stepdownZ = -Math.max(0.5, paramC * 2);
+      const feedF = Math.max(150, paramA * 6);
+      const ext = '.nc';
+      const code = `%
+O1003 (${tool.title.toUpperCase()} - 2.5D MILLING TOOLPATH)
+(WORKPIECE ENVELOPE: ${widthX.toFixed(1)} X ${lengthY.toFixed(1)} MM | AXIAL DOC Z: ${stepdownZ.toFixed(2)} MM)
+G21 G17 G40 G49 G80 G90
+T03 M06 (FLAT END MILL Ø12.0 MM)
+G00 G90 G54 X-10.000 Y-10.000 S${Math.round(paramA * 45)} M03
+G43 H03 Z20.000 M08
+G00 Z2.000
+G01 Z${stepdownZ.toFixed(3)} F${(feedF * 0.35).toFixed(1)}
+G01 G41 D03 X0.000 Y0.000 F${feedF.toFixed(1)}
+G01 X${widthX.toFixed(3)} Y0.000
+G01 X${widthX.toFixed(3)} Y${lengthY.toFixed(3)}
+G01 X0.000 Y${lengthY.toFixed(3)}
+G01 X0.000 Y0.000
+G01 G40 X-10.000 Y-10.000
+G00 Z50.000 M09
+M05
+G28 G91 Z0.0
+M30
+%`;
+      return {
+        labelA: 'Profile Width X (mm)',
+        labelB: 'Profile Length Y Factor (×3 mm)',
+        labelC: 'Axial Depth of Cut Factor (×2 mm)',
+        ext,
+        filename: `${tool.slug}${ext}`,
+        lang: 'ISO Milling G-Code (.NC)',
+        code,
+      };
+    }
+
     if (s.includes('gcode') || s.includes('drilling') || s.includes('svg-to-gcode')) {
       const depthZ = -Math.abs(paramB);
       const peckQ = Math.max(0.5, paramC * 2);
@@ -1883,6 +2239,42 @@ ${pts.join('\n')}`;
         ext,
         filename: `${tool.slug}${ext}`,
         lang: 'Structured BOM Export (.CSV)',
+        code,
+      };
+    }
+
+    if (s.includes('fastener-profile')) {
+      const shankDia = Math.max(4, Math.round(paramB / 2));
+      const boltLen = Math.max(16, paramA / 2);
+      const headW = shankDia * 1.65;
+      const headH = shankDia * 0.65;
+      const ext = '.dxf';
+      const code = `0\nSECTION\n2\nHEADER\n9\n$INSUNITS\n70\n4\n0\nENDSEC\n0\nSECTION\n2\nENTITIES\n0\nLINE\n8\nISO_HEX_HEAD\n10\n-${(headW / 2).toFixed(3)}\n20\n0.0\n11\n${(headW / 2).toFixed(3)}\n21\n0.0\n0\nLINE\n8\nISO_HEX_HEAD\n10\n-${(headW / 2).toFixed(3)}\n20\n${headH.toFixed(3)}\n11\n${(headW / 2).toFixed(3)}\n21\n${headH.toFixed(3)}\n0\nLINE\n8\nISO_SHANK_M${shankDia}\n10\n-${(shankDia / 2).toFixed(3)}\n20\n0.0\n11\n-${(shankDia / 2).toFixed(3)}\n21\n-${boltLen.toFixed(3)}\n0\nLINE\n8\nISO_SHANK_M${shankDia}\n10\n${(shankDia / 2).toFixed(3)}\n20\n0.0\n11\n${(shankDia / 2).toFixed(3)}\n21\n-${boltLen.toFixed(3)}\n0\nENDSEC\n0\nEOF`;
+      return {
+        labelA: 'Nominal Bolt Length Factor (×0.5 mm)',
+        labelB: 'Nominal Thread Size Factor (×0.5 mm)',
+        labelC: 'Thread Pitch p (mm)',
+        ext,
+        filename: `iso-4017-m${shankDia}x${Math.round(boltLen)}${ext}`,
+        lang: 'ISO Fastener 2D Side-View (.DXF)',
+        code,
+      };
+    }
+
+    if (s.includes('spring-flat-pattern')) {
+      const meanDia = Math.max(10, paramA / 2);
+      const activeCoils = Math.max(3, Math.round(paramB / 3));
+      const wireDia = Math.max(1.0, paramC * 2);
+      const developedLen = Math.PI * meanDia * activeCoils;
+      const ext = '.dxf';
+      const code = `0\nSECTION\n2\nHEADER\n9\n$INSUNITS\n70\n4\n0\nENDSEC\n0\nSECTION\n2\nENTITIES\n0\nCIRCLE\n8\nSPRING_MEAN_COIL_DIA\n10\n0.0\n20\n0.0\n40\n${(meanDia / 2).toFixed(3)}\n0\nCIRCLE\n8\nSPRING_OUTER_DIA\n10\n0.0\n20\n0.0\n40\n${((meanDia + wireDia) / 2).toFixed(3)}\n0\nLINE\n8\nDEVELOPED_WIRE_LENGTH\n10\n0.0\n20\n-${(meanDia + 15).toFixed(3)}\n11\n${developedLen.toFixed(3)}\n21\n-${(meanDia + 15).toFixed(3)}\n0\nENDSEC\n0\nEOF`;
+      return {
+        labelA: 'Mean Coil Diameter Factor (×0.5 mm)',
+        labelB: 'Active Coils Factor (×3)',
+        labelC: 'Wire Diameter Factor (×2 mm)',
+        ext,
+        filename: `${tool.slug}${ext}`,
+        lang: 'Spring Coil & Unfolded Wire (.DXF)',
         code,
       };
     }

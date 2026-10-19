@@ -114,7 +114,7 @@ export default function OnlineDwgCompareDiffViewerClient() {
   return (
     <CloudReferralClient
       title="Cloud DWG Revision Difference & Compare Visualizer"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="When dealing with multiple revision changes for large construction or electrical and mechanical projects, find two revisions DWG Small physical changes in drawings are a big problem. It is easy to miss them simply by manual proofreading. Using the cloud-based DWG Revision Compare diff program, it can achieve high-precision overlay comparison and automatically use red, Green highlights add, delete and modify entities in new drawings."
       riskWarning="Changes to drawings often represent core changes to the project and business budget cards. Combine the two versions DWG It is very dangerous to centrally upload to unknown picture comparison websites. If conditions permit, please run AutoCAD locally first COMPARE (graph compare) command, it is strictly prohibited to use untrusted public cloud services to prevent the leakage of business secrets."

@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Turn off the internal collection switch of the software",
-    "desc": "Go to CAD ➔ Help ➔ Desktop Analytics Program, uncheck'Allows us to collect usage data', reducing telemetry events at their source."
+    "desc": "Navigate to Help -> Desktop Analytics Program inside your CAD application and uncheck 'Allow collection of usage data' to minimize background telemetry at the source."
   },
   {
     "title": "Configure telemetry isolation per privacy policy",
@@ -105,8 +105,8 @@ const FAQS = [
     "answer": "No. FLEXlm floating license uses the port of your LAN server (Such as 27000), and blocking telemetry is for blocking external Internet server domain names, Licensing and authentication within the LAN are not affected at all."
   },
   {
-    "question": "Why does CAD prompt after the ban?'Unable to verify your license status'? ",
-    "answer": "This means that you mistakenly entered Autodesk's official cloud license verification server (e.g. Named-User Single-user login authentication) is also blocked. Please check the hosts list, Move identity-related domain names out."
+    "question": "Why does CAD prompt 'Unable to verify your license status' after applying firewall rules?",
+    "answer": "This indicates that the firewall or hosts rule inadvertently blocked the vendor's identity and subscription licensing endpoints (required for Named-User OAuth authentication). Whitelist official authentication domains to restore sign-in verification."
   }
 ];
 

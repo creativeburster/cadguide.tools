@@ -571,7 +571,18 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
               {[
                 {
                   icon: <Cpu className="w-6 h-6" />,
-                  label: "Geometry Kernel",
+                  label:
+                    tool.category_id === "c1"
+                      ? "Drafting Kernel"
+                      : tool.category_id === "c2"
+                        ? "Geometry Kernel"
+                        : tool.category_id === "c3" || tool.category_id === "c4"
+                          ? "BIM / AEC Engine"
+                          : tool.category_id === "c5"
+                            ? "Solver / CAM Engine"
+                            : tool.category_id === "c6"
+                              ? "EDA / SPICE Engine"
+                              : "Core / Render Engine",
                   value: tool.tech_specs?.engine,
                 },
                 {
@@ -683,6 +694,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     const isFreeTier =
                       ["Free", "Open Source"].includes(tool.pricing_type) ||
                       /^(free|\$?0(\.00)?)$/i.test(String(tier.price ?? "").trim());
+                    const tierText = `${tier.name || ""} ${tier.period || ""} ${tier.price || ""}`.toLowerCase();
+                    const tierHeadline = isFreeTier
+                      ? (tool.pricing_type === "Open Source" ? "Open Source" : "Free Tier")
+                      : /educational|student|academic/.test(tierText)
+                        ? "Academic License"
+                        : /quote|custom|enterprise|contact/.test(tierText)
+                          ? "Custom Quote"
+                          : /3-year|3 year|triennial|multi-year/.test(tierText)
+                            ? "Multi-Year Term"
+                            : /one-time|perpetual|lifetime|buyout/.test(tierText)
+                              ? "Perpetual Seat"
+                              : /\/mo|month|monthly/.test(tierText)
+                                ? "Monthly Plan"
+                                : /\/yr|year|annual/.test(tierText)
+                                  ? "Annual Plan"
+                                  : /token|flex|consumption|per use/.test(tierText)
+                                    ? "Token / Flex Access"
+                                    : (tool.pricing_type || "Official Plan");
                     return (
                       <Card
                         key={i}
@@ -699,7 +728,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </div>
                           <div className="flex flex-col items-center justify-center gap-1">
                             <span className="text-2xl md:text-3xl font-black text-slate-900">
-                              {isFreeTier ? "Free" : (tool.pricing_type || "Official Plan")}
+                              {tierHeadline}
                             </span>
                             <span className="text-slate-400 font-bold text-xs tracking-tight">
                               {isFreeTier

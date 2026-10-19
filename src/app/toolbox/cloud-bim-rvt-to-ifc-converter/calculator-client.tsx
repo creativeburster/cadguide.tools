@@ -129,12 +129,12 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "IFC2x3 How should I choose between IFC4 format and IFC4 format? ",
-    "answer": "IFC2x3 It is currently the most mature and widely supported version in the industry; IFC4 is used in three-dimensional geometric fitting. The electromechanical pipeline routing and terrain expression are more advanced, but some old versions of collaboration software may read and report errors. If there is no request, the output will be given priority. IFC2x3 To ensure compatibility."
+    "question": "How should I choose between IFC2x3 and IFC4 formats?",
+    "answer": "IFC2x3 (Coordination View 2.0) is currently the most mature and widely supported schema across legacy BIM platforms. IFC4 offers superior NURBS/B-Rep geometry fitting, MEP routing, and terrain representation, though older coordination viewers may fail to parse it. Default to IFC2x3 unless IFC4 is explicitly required by the BIM Execution Plan (BEP)."
   },
   {
     "question": "Why are some walls incomplete or missing in IFC? ",
-    "answer": "This may be because the Revit family class of these components is assigned'Generic Models', and it is not checked when exporting'Export regular model' option. Please check the component classification attributes."
+    "answer": "This usually happens when the Revit family category of those components is assigned to 'Generic Models' (IfcBuildingElementProxy) and filtered out during export, or when custom in-place openings fail boolean subtraction. Verify the IFC Export As mapping parameter on the affected families."
   }
 ];
 
@@ -142,10 +142,10 @@ export default function CloudBimRvtToIfcConverterClient() {
   return (
     <CloudReferralClient
       title="Online Revit RVT to openBIM IFC Standard Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Convert Revit native RVT Format exchange for openBIM open standards IFC (Industry Foundation Classes) file, the most difficult problem is Revit Parameter dictionary mapping missing, space area (IFCSpace) Properties are missing, and 3D solids become corrupted polyhedrons (Polygon Soup) , leading to the complete scrapping of the downstream coordination system."
-      riskWarning="BIM The model includes building component details, pipeline routing, Structural steel bar configuration and total project cost and other extremely sensitive information. It is recommended to provide local Revit Use the official IFC plug-in in the client for export and debugging, Online cloud RVT parsing via unknown third-party public cloud servers is never recommended."
+      painPointDesc="When converting native Revit RVT models to openBIM IFC (Industry Foundation Classes) files, common engineering challenges include unmapped custom parameter dictionaries, missing spatial boundary (IfcSpace) properties, and curved 3D solids tessellating into faceted polygon soup."
+      riskWarning="BIM models contain detailed structural reinforcement, MEP routing, and project cost metadata. For confidential projects, always export IFC files locally using the official open-source Revit IFC Exporter add-in rather than uploading native RVT files to untrusted public servers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

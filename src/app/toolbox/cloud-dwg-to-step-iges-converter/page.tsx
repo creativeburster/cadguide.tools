@@ -35,8 +35,7 @@ export default function CloudDwgToStepIgesConverterPage() {
               Online 3D DWG to STEP/IGES CAD Translator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct navigation to objective in-depth evaluation and anti-audit. 
-            </p>
+              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
           </div>
         </section>
 

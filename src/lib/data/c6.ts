@@ -100,7 +100,7 @@ export const c6Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c6",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 3500,
     "price_period": "year",
     "platforms": [
@@ -1262,7 +1262,7 @@ export const c6Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c6",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 2500,
     "price_period": "year",
     "platforms": [
@@ -1604,7 +1604,7 @@ export const c6Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c6",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 8000,
     "price_period": "year",
     "platforms": [

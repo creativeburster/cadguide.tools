@@ -8,7 +8,7 @@ const RECOMMENDED_TOOLS = [
     "rating": 9.9,
     "metrics": [
       {
-        "name": "UVTexture mapping",
+        "name": "UV Texture Mapping",
         "score": 5
       },
       {
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Clean up redundant materials and components",
-    "desc": "Before exporting, in SketchUp Window ➔ Model Information ➔ Click 'Clear Unused Items' in Statistics (Purge Unused)', can reduce the size of FBX by more than 50%."
+    "desc": "Before exporting, open Window -> Model Info -> Statistics in SketchUp and click 'Purge Unused' to strip orphaned component definitions and unused texture maps, reducing FBX file size by up to 50%."
   },
   {
     "title": "Check the front and back material maps",
@@ -101,12 +101,12 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Converted FBX import Unity Why is the overall image scale reduced by 100 times? ",
-    "answer": "This is because SketchUp defaults to'Inches' as the underlying system unit. When exporting FBX, in Options the units must be forced to be'Meters' or'Millimeters'."
+    "question": "Why is my converted FBX model scaled incorrectly by 100x or 25.4x when imported into Unity or Unreal Engine?",
+    "answer": "SketchUp internally stores coordinates in inches regardless of display units. When exporting to FBX, open the Export Options dialog and explicitly set the export units to 'Centimeters' (for Unreal/Unity) or 'Meters' rather than 'Model Units'."
   },
   {
     "question": "Why are the exported model tree component names all in pinyin or special garbled characters? ",
-    "answer": "FBX The format has limited support for Unicode Chinese characters in older versions of the driver. It is recommended that before exporting, SketchUp 'component in (Components) 'and 'group (Groups) 'Replace all names with English or Pinyin."
+    "answer": "Legacy FBX SDK parsers have limited support for non-ASCII Unicode characters in node hierarchies. Rename SketchUp Components, Groups, and Material names to standard ASCII alphanumeric characters before exporting."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineSkpToFbxCloudConverterClient() {
   return (
     <CloudReferralClient
       title="Online SketchUp SKP to FBX Render Mesh Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="Import architectural or landscape models designed in SketchUp (SKP) into high-end renderers (Such as Twinmotion, Lumion, Unreal Engine), directly importing SKP often results in UV The texture coordinates are seriously misaligned, the material refraction parameters are lost, and complex nested components are broken up and collapsed. Converted with high-fidelity texture packs (Textures) FBX Grid is the industry standard solution."
-      riskWarning="Architectural Design and Rendering Scenarios (SKP) contain corporate design secrets and client layout information. Commercial cloud conversion tools may save and leak these design details. To prevent business risks, it is recommended to give priority to using the SketchUp Pro desktop version that comes with it.'Export 3D model'Function, completely exported locally and on a single machine."
+      riskWarning="Architectural SketchUp (SKP) models often contain confidential interior layouts and proprietary design assets. For commercial projects, always export FBX files locally using SketchUp Pro's built-in 'Export -> 3D Model' engine rather than uploading scenes to third-party web converters."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

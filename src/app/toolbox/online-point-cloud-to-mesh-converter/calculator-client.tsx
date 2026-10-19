@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "Why do the converted mesh models have a lot of holes and flying lines? ",
-    "answer": "This means that there are shadow dead spots in the point cloud during scanning. It needs to be MeshLab Execute 'Closed Hole' in (Close Holes)'and 'Clean orphaned primitives' (Remove Isolated Pieces)'Wait for the mesh patch command."
+    "answer": "This indicates occlusion gaps or noisy outlier points in the raw LiDAR scan. In MeshLab or CloudCompare, run 'Remove Isolated Pieces' to strip floating noise followed by 'Close Holes' or screened Poisson surface reconstruction to generate a watertight mesh."
   },
   {
     "question": "LAS How is the data different from the PTS format? ",
@@ -114,7 +114,7 @@ export default function OnlinePointCloudToMeshConverterClient() {
   return (
     <CloudReferralClient
       title="Online Point Cloud (LAS/PTS) to Watertight Mesh Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="Billions of point cloud coordinate data (LAS/PTS/XYZ) obtained by lidar scanning, if directly loaded into ordinary modeling software, it is easy to cause the running memory to burst directly. Therefore, we need to use cloud algorithms to reduce noise and streamline point clouds, and reconstructed into a closed geometric mesh (Watertight Mesh, such as OBJ, DXF, STL) ."
       riskWarning="Surveying and 3D scanning data (such as topographic maps, Digital scanning of historical buildings, sensitive defense factories, etc.) It is highly restricted data. Please ensure that the cloud platform you upload complies with the national data export compliance standards. For high-density projects, please use the open source CloudCompare on the local LAN cluster for processing."

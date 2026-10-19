@@ -364,7 +364,7 @@ export const c3Tools: Tool[] = [
     ],
     "country": "Hungary",
     "category_id": "c3",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 201,
     "price_period": "month",
     "platforms": [

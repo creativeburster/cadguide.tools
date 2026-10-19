@@ -99,7 +99,7 @@ export const c5Tools: Tool[] = [
     ],
     "country": "Germany",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "quote_only": true,
     "starting_price": 0,
     "price_period": "year",
@@ -9935,7 +9935,7 @@ export const c5Tools: Tool[] = [
     ],
     "country": "South Korea",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 5000,
     "price_period": "year",
     "platforms": [
@@ -10249,7 +10249,7 @@ export const c5Tools: Tool[] = [
     ],
     "country": "South Korea",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 4000,
     "price_period": "year",
     "platforms": [

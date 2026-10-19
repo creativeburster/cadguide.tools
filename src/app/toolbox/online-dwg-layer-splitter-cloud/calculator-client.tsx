@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Absolutely preserve coordinate system consistency",
-    "desc": "When writing out a new tile (WBLOCK), Be sure to use absolute zero (0,0,0) as the base point, otherwise, each sub-drawing will be XREF (external reference) When they overlap, they will completely drift out of position."
+    "desc": "When exporting separated layers to new drawing files (WBLOCK), always lock the insertion base point to world origin (0,0,0) so the split sub-drawings align accurately when re-attached as external references (XREFs)."
   },
   {
     "title": "Off-network stand-alone LISP script deployment",
@@ -114,9 +114,9 @@ export default function OnlineDwgLayerSplitterCloudClient() {
   return (
     <CloudReferralClient
       title="Online DWG Layer Splitter & Batch Drawing Separator"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Processing is extremely large and includes architectural, mechanical and electrical, in order to distribute the drawings of different disciplines to different contractors when creating a general drawing with dozens of layers such as pipelines, it needs to be manually split into independent single layer sub-DWGs. Cloud DWG Layer Splitter Can identify layer tables in batches and automatically separate them in the backend (WBLOCK Figure), and keep the datum origin completely coincident."
+      painPointDesc="When managing master site plans containing architectural, structural, and MEP layers in a single file, engineers often need to split discipline layers into standalone DWG files for subcontractors. Automated layer splitters batch-export layer groups via WBLOCK while preserving the shared (0,0,0) world coordinate origin."
       riskWarning="The general map represents the overall geographical arrangement and all confidentiality of the project. Uploading the general map to a public cloud service provider is very easy to encounter global leaks and compliance audits. Please first load a minimalist file in local AutoCAD AutoLISP Scripts are used to split local layers, and direct unpacking and processing on the public network are prohibited."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

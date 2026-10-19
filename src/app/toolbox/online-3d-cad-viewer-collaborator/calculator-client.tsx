@@ -88,11 +88,11 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Be sure to enable the sharing link expiration mechanism",
-    "desc": "When sharing WebGL perspective links to clients, Be sure to set an access validity period (e.g. 7 Queen of Heaven expires) and anti-download protection."
+    "desc": "When sharing WebGL review links with external clients, always enforce link expiration policies (e.g., 7-day auto-expiration), password protection, and geometry download restrictions."
   },
   {
     "title": "Lighten up and reduce the size before uploading",
-    "desc": "For extremely large mechanical parts, it is recommended to run them locally before uploading.'Noise Reduction (Simplify Mesh) 'Processing, Remove unnecessary threads, gear details to prevent webpage crashes."
+    "desc": "For large mechanical assemblies, run 'Simplify / Defeature' locally before uploading to suppress internal helical threads, gear teeth, and fastener fillets, preventing browser WebGL memory overflow."
   },
   {
     "title": "Unauthorized external indexing is prohibited",
@@ -102,11 +102,11 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "How to solve the problem of screen flickering and freezing when rotating a model on a web page? ",
-    "answer": "This may be because your browser does not have hardware acceleration turned on. WebGL In CPU soft rendering state. It is recommended to set it in Chrome ➔ Check 'Use hardware acceleration' in the system'."
+    "answer": "This occurs when browser GPU hardware acceleration is disabled, forcing WebGL into software rendering on the CPU. Enable 'Use graphics acceleration when available' in Chrome Settings -> System."
   },
   {
     "question": "Why do many parts appear missing after the assembly is imported? ",
-    "answer": "Like SolidWorks `.sldasm` The assembly file itself does not contain geometric entities, but refers to the `.sldprt` parts. You need to package the entire assembly and all referenced part files into `.zip` Upload the compressed package together for analysis."
+    "answer": "Native assembly files like SolidWorks `.sldasm` only store component transforms and file references rather than embedded part geometry. Use 'Pack and Go' to bundle the `.sldasm` and all referenced `.sldprt` files into a single `.zip` archive before uploading."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function Online3dCadViewerCollaboratorClient() {
   return (
     <CloudReferralClient
       title="Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="Share complex 3D CAD assemblies with clients or teams (such as CATIA, NX, SolidWorks, STEP) or Revit BIM When models are reviewed on-site, ordinary users often do not have professional modeling software on their computers. Leveraging a cloud-based WebGL 3D browser, Large models can be loaded without installation and can be rotated online, Sectioning, red line marking and dimension measurement."
-      riskWarning="3D CAD The assembly contains all machining dimensions of the components, internal topology and engineering assembly links. Uploading these files directly to unknown cloud photo viewing websites is easy to encounter'Data Dehydration Interception' and Commercial Theft. It is recommended to use a high-end collaboration platform with enterprise security permission control and dynamic watermark encryption."
+      riskWarning="3D CAD assemblies contain exact machining dimensions, internal topology, and kinematic mates. Avoid uploading proprietary assemblies to unverified public viewers; use enterprise collaboration portals with role-based access control, dynamic watermarking, and disabled B-Rep downloads."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

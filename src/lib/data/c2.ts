@@ -1138,7 +1138,7 @@ export const c2Tools: Tool[] = [
     ],
     "country": "France",
     "category_id": "c2",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 2700,
     "price_period": "year",
     "platforms": [
@@ -2432,7 +2432,6 @@ export const c2Tools: Tool[] = [
     ],
     "license_types": [
       "Subscription",
-      "Perpetual",
       "Network",
       "Floating"
     ],

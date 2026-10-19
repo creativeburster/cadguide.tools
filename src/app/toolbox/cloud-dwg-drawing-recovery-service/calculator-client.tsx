@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Use INSERT block placement method",
-    "desc": "If RECOVER fails, Try entering the `-INSERT` command in a blank drawing, Add damaged drawings as 'external blocks''Forcing it into a new image can often bypass header damage."
+    "desc": "If RECOVER fails, open a clean drawing and run the `-INSERT` command to insert the corrupted DWG as an external block reference, which often bypasses damaged header metadata."
   },
   {
     "title": "Running PURGE locally",
@@ -101,8 +101,8 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "'What are the common causes of invalid graphics file? ",
-    "answer": "This is usually due to a power outage or CAD crashing abnormally. Binary truncation caused by incomplete save, or using a lower version CAD Forcefully read undowngraded high version drawings."
+    "question": "What are the most common causes of the 'Drawing file is not valid' error?",
+    "answer": "This typically occurs due to binary truncation during an unexpected power outage or crash while saving, or when attempting to open a newer DWG schema (such as AC1032) in an older CAD release without downgrading."
   },
   {
     "question": "Why after repair, the color of all my drawing layers turned to white? ",
@@ -114,9 +114,9 @@ export default function CloudDwgDrawingRecoveryServiceClient() {
   return (
     <CloudReferralClient
       title="Online Damaged DWG Drawing Recovery & Repair Portal"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="When you open a drawing, you encounter 'The graphic file is invalid' (Drawing file is not valid)'error, or CAD A crash while loading a specific tile often means DWG The internal database node or file header is severely damaged. Local built-in RECOVER (Fix) Command often fails, this is a time to evaluate efficient cloud or on-premises reconstruction services."
+      painPointDesc="Encountering the 'Drawing file is not valid' error or experiencing a crash while loading specific block definitions usually indicates corrupted DWG header pointers or damaged AcDb object nodes. When the built-in RECOVER command fails, specialized binary recovery utilities can salvage model space geometry."
       riskWarning="Damage drawings often belong to ongoing projects and contain a large amount of core business and design information. Do not easily upload confidential drawings to public restoration websites whose security is unknown. For core data, it is recommended to use a local physically isolated computer to run security repairs, or try to restore a temporary automatically saved backup file (.sv$) ."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

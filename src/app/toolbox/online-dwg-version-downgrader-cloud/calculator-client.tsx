@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "AC1032, AC1027, AC1024 What are the codes? ",
+    "question": "What do DWG header version codes like AC1032, AC1027, and AC1024 mean?",
     "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure. It will directly report that the file is damaged or the version is not supported."
   },
   {
@@ -114,10 +114,10 @@ export default function OnlineDwgVersionDowngraderCloudClient() {
   return (
     <CloudReferralClient
       title="Online DWG Format Version Downgrader"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Encountered 'Graph file version not supported''When the error occurs, you may have obtained a higher version AutoCAD (As saved in 2018-2027 AC1032 coding) drawings, however, there are only old versions of CAD software available locally. Use cloud-based format downgrade tools to quickly rewrite files to the broadly compatible AC1027 (2013) format) or AC1021 (2007 format) ."
-      riskWarning="Frequent format degradation may not only result in special parameterized 'dynamic blocks''and the constraint relationship is lost, it may even trigger an anti-piracy compliance review. Please ensure that the downgrade behavior is carried out within the security boundary of enterprise authorization. For core confidential design, it is recommended to download the official free desktop DWG TrueView software to complete local conversion."
+      painPointDesc="Encountering the 'Drawing file was created by an incompatible version' error means the DWG uses a newer header schema (such as AutoCAD 2018-2026 AC1032) than your installed CAD software supports. Downgrading converts the binary database to widely compatible AC1027 (AutoCAD 2013) or AC1021 (AutoCAD 2007) schemas."
+      riskWarning="Downgrading to legacy DWG formats (such as R14 or 2000) can strip modern parametric constraints, dynamic block actions, and AEC custom proxy objects. For confidential engineering drawings, use Autodesk's free desktop DWG TrueView utility to batch-convert DWG versions locally offline."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

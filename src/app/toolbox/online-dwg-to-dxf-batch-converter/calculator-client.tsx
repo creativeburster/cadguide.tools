@@ -101,8 +101,8 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "DXF Binary and text (ASCII) What is the difference between formats? ",
-    "answer": "ASCII The format is a plain text file, although it is large in size, however, Notepad can be used to read and modify data directly; the Binary format is compressed, Small file size, faster reading and loading speed, but it cannot be edited directly in text mode."
+    "question": "What is the difference between ASCII DXF and Binary DXF formats?",
+    "answer": "ASCII DXF stores group codes and coordinates as human-readable plain text (ideal for Python/ezdxf scripting and CNC post-processors), whereas Binary DXF uses compact byte encoding that reduces file size by ~25% and loads faster but cannot be inspected in a text editor."
   },
   {
     "question": "Why can’t dynamic blocks in drawings be edited after mutual conversion? ",
@@ -114,7 +114,7 @@ export default function OnlineDwgToDxfBatchConverterClient() {
   return (
     <CloudReferralClient
       title="Online Bulk DWG / DXF Format Mutual Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="For non-AutoCAD drawing systems that need to be imported, for users of laser cutting software or custom script reading, DWG, a closed-source binary database, is very difficult to extract directly. Batch and secure conversion to the open ASCII/Binary DXF format is a universal bridge to solve industry interconnections. However, during conversion, text encoding damage and line style failure are very frequent."
       riskWarning="Batch conversion represents the centralized processing of drawing assets, and it is very easy to be intercepted by external crawling tools in server logs when packaging and uploading. For drawing clusters involving sensitive trade secrets, online public cloud conversion should be circumvented entirely, it is recommended to automatically call it locally by writing a local AutoLISP script command. ODA File converter."

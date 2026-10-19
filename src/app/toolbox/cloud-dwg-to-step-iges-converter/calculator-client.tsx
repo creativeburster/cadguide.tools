@@ -92,21 +92,21 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Prefer STEP format",
-    "desc": "STEP The format has more perfect solid assembly structure information than IGES. And it can accurately lock the color of the part and the topological sewing of the surface."
+    "desc": "The STEP format preserves solid assembly hierarchy, part colors (AP214), and closed B-Rep surface topology much more reliably than legacy IGES files."
   },
   {
     "title": "Check for tolerance drift",
-    "desc": "For mating surfaces, please import SolidWorks 'Geometry check'', Prevent tolerance drift (Tolerance Drift) during conversion."
+    "desc": "For precision mating surfaces, run 'Import Diagnostics' and 'Check Geometry' in SolidWorks after conversion to detect any boundary tolerance drift."
   }
 ];
 const FAQS = [
   {
     "question": "What should I do if the converted 3D entity becomes a hollow shell? ",
-    "answer": "This is usually due to the surface mesh used in the original 3D DWG (Mesh/Surface) Instead of solid modeling. If it is a slice import, you need to run'Sew Surface 'command reconstructs hollow surfaces into closed solids."
+    "answer": "This happens when the source 3D DWG contains open polygon meshes or unstitched surfaces (Mesh/Surface) rather than watertight 3DSOLID ACIS entities. Run the 'Knit / Stitch Surface' command in your MCAD system to heal open sheets into a solid body."
   },
   {
-    "question": "STEP AP203 What is the difference between AP214 and AP214? ",
-    "answer": "AP203 Only three-dimensional spatial geometric coordinates and structures are retained; AP214 additionally supports color on this basis, Layer definition and complex dimensioning (GD&T). Recommended AP214 Format."
+    "question": "What is the difference between STEP AP203 and STEP AP214?",
+    "answer": "STEP AP203 only stores 3D geometric topology and assembly structure; STEP AP214 additionally preserves face/body colors, layer assignments, and validation properties, making AP214 (or AP242) the recommended choice."
   }
 ];
 
@@ -114,9 +114,9 @@ export default function CloudDwgToStepIgesConverterClient() {
   return (
     <CloudReferralClient
       title="Online 3D DWG to STEP/IGES CAD Translator"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="will contain 3D solids DWG Drawings are imported into mechanical 3D CAD (e.g. SolidWorks, Creo) or for CNC manufacturing (such as Mastercam), it needs to be translated into common STEP (AP203/AP214) or IGES Geometric expression. Ordinary polygon transformations often turn surfaces into rough triangular meshes (Mesh) , making industrial processing accuracy obsolete."
+      painPointDesc="Importing 3D DWG solids into mechanical CAD platforms (such as SolidWorks or Creo) or CAM systems (such as Mastercam) requires translating ACIS 3DSOLID entities into parametric STEP (AP203/AP214) or IGES boundary representations (B-Rep) rather than faceted polygon meshes."
       riskWarning="Mechanical 3D model (such as core mold, machined parts) is the company’s top-secret intellectual property. Perform 3D B-Rep (Boundary Representation) before uploading to the cloud) When converting data, special precautions must be taken to prevent data leakage and loss of trade secrets. For high-precision parts, be sure to use local CAD Conversion plug-in."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

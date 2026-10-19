@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "Why do the converted lines have ghost images? ",
-    "answer": "This may be because the tracing algorithm uses the 'contour mode' (Outline Mode) 'Draw lines on both sides of the thick line. For engineering drawings, 'Centerline Mode' should be selected (Centerline/Skeleton Mode) 'Extract the central axis skeleton."
+    "answer": "This happens when the raster-to-vector tracer is set to 'Outline / Contour Mode', which traces both the inner and outer edges of thick lines. For CAD technical drawings, always select 'Centerline / Skeletonization Mode' to extract a single-stroke vector path."
   },
   {
     "question": "What should I do if the converted lines are not accurate enough? ",
@@ -114,7 +114,7 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
   return (
     <CloudReferralClient
       title="Online Image Raster (JPG/PNG) to Vector DXF Tracer"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="Convert hand-drawn sketches, scanned blueprints or JPG/PNG Losslessly convert pixel images into images that can be stretched and edited in CAD DXF Vector lines (segments and arcs) , it is the key to digitizing drawings. Ordinary automatic tracing tools often produce tens of thousands of fine jagged short polylines. As a result, the software freezes directly after importing CAD. This review has selected the top engines with Bezier curve fitting and edge sharpening algorithms."
       riskWarning="Some scanned drawings come from old government files or old factory expansions of confidential companies. Uploading such sensitive images to unknown online vectorization websites can easily lead to confidentiality leakage risks. Regular projects should use native Illustrator or Vectorization Independent stand-alone program for processing, eliminating hidden dangers in network transmission."

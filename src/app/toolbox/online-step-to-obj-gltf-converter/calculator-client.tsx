@@ -92,7 +92,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Prefer compressed glTF (GLB) format",
-    "desc": "glTF The format supports Physically Rendered Materials (PBR) and is much smaller than OBJ, is WebWebGL and VR The best choice for development."
+    "desc": "Binary glTF (.glb) natively supports Physically Based Rendering (PBR) materials, scene hierarchies, and Draco mesh compression, making it far more compact than legacy OBJ+MTL files for WebGL, Three.js, and AR/VR applications."
   },
   {
     "title": "Off-network stand-alone CAD Assistant is discontinued",
@@ -101,12 +101,12 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "The converted OBJ is in Blender What to do if there are a lot of broken seams inside? ",
-    "answer": "This may be due to the fact that the surface patch topology was not completely stitched when the original STEP was exported. (Sewing) . It is recommended to select all vertices in Blender, do 'merge by distance' (Merge by Distance) 'Command to stitch."
+    "question": "How do I fix split surface seams and detached faces after importing the converted OBJ into Blender?",
+    "answer": "This occurs when adjacent NURBS patches in the source STEP file were tessellated independently without shared boundary vertices. In Blender Edit Mode, select all vertices and run 'Mesh -> Merge -> By Distance' (coupled with recalculating weighted normals) to weld the seams."
   },
   {
-    "question": "STEP The AP203 and AP214 What impact does meshing have? ",
-    "answer": "AP203 No color information is included. After gridding, the entire image appears uniformly gray and white.; AP214 Part colors and structural levels are completely retained, and it is recommended to use it first. AP214 Make the conversion."
+    "question": "How does choosing between STEP AP203 and STEP AP214 affect glTF/OBJ mesh conversion?",
+    "answer": "STEP AP203 strips all surface color and layer appearance metadata, resulting in a uniform gray mesh. STEP AP214 (and AP242) preserves per-face RGB colors and assembly node names, which translate directly into glTF material slots."
   }
 ];
 
@@ -114,7 +114,7 @@ export default function OnlineStepToObjGltfConverterClient() {
   return (
     <CloudReferralClient
       title="Online STEP to glTF/OBJ Rendering Mesh Converter"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="The Industrial STEP (AP203/AP214) format is a boundary representation based on highly mathematical logic (B-Rep) stored, whose surface is in WebGL Web version (such as Three.js, Babylon.js) or a 3D renderer such as Unity, Blender) cannot be parsed directly in rendering. It must be polygonized (Polygonization) in triangular mesh format (e.g. OBJ, glTF) . During reorganization, common pain points are cracking of patch seams and excessive mesh density causing stuck web pages."
       riskWarning="Industrial-grade STEP 3D models involve extremely strict product confidentiality design and geometric topology. When converting STEP to rendering format using an online website, it is extremely easy to be intercepted by the cloud backend and leak core secrets. Targeting top secret components, please use CAD Assistant locally to run the offline conversion."

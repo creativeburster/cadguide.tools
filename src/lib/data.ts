@@ -100,6 +100,166 @@ const FEATURE_MAP: Record<string, string[]> = {
   "librecad": ["drafting-detailing"],
 };
 
+function enrichToolMetadata(t: Tool): Tool {
+  const isFreeOrOss = t.pricing_type === 'Free' || t.pricing_type === 'Open Source';
+  const engineStr = (t.tech_specs?.engine || '').toLowerCase();
+  const featureText = `${t.name} ${t.short_desc} ${(t.core_features || []).join(' ')} ${(t.industries || []).join(' ')}`.toLowerCase();
+
+  // 1. Domain-isolated file_formats_in & file_formats_out
+  let defaultIn: string[] = ['DWG', 'DXF', 'PDF'];
+  let defaultOut: string[] = ['DWG', 'DXF', 'PDF', 'SVG'];
+  let defaultIntegrations: string[] = ['AutoCAD DWG Ecosystem', 'PDF Vector Plotting', 'Enterprise PDM'];
+  let defaultApiType = 'C++ / .NET / Scripting API';
+  let defaultSdkLangs = ['C++', 'C#', 'Python'];
+
+  if (t.category_id === 'c1') {
+    // Pure 2D CAD — strictly no 3D B-Rep/BIM formats
+    defaultIn = ['DWG', 'DXF', 'DWT', 'DWF', 'PDF'];
+    defaultOut = ['DWG', 'DXF', 'PDF', 'SVG', 'DWF'];
+    defaultIntegrations = ['AutoCAD DWG Compatibility', 'Windows Plotter Drivers', 'Sheet Set Manager'];
+    defaultApiType = isFreeOrOss ? 'C++ Plugin / Python Scripting' : 'LISP / ObjectARX / .NET API';
+    defaultSdkLangs = isFreeOrOss ? ['C++', 'Python'] : ['AutoLISP', 'C#', 'VBA', 'C++'];
+  } else if (t.category_id === 'c2') {
+    // 3D MCAD
+    defaultIn = [
+      'STEP',
+      'IGES',
+      'STL',
+      'OBJ',
+      'DWG',
+      'DXF',
+      ...(engineStr.includes('parasolid') ? ['Parasolid (X_T)'] : []),
+      ...(engineStr.includes('acis') ? ['ACIS (SAT)'] : []),
+    ];
+    defaultOut = [
+      'STEP',
+      'IGES',
+      'STL',
+      '3MF',
+      'OBJ',
+      'DWG',
+      'DXF',
+      'PDF',
+      ...(engineStr.includes('parasolid') ? ['Parasolid (X_T)'] : []),
+    ];
+    defaultIntegrations = ['STEP AP214/AP242 Pipeline', 'Enterprise PLM / PDM', 'CNC CAM Post-Processors'];
+    defaultApiType = 'COM / .NET / Python Automation API';
+    defaultSdkLangs = ['Python', 'C#', 'C++', 'VBA'];
+  } else if (t.category_id === 'c3' || t.category_id === 'c4') {
+    // BIM, AEC & Civil
+    defaultIn = ['IFC', 'DWG', 'DXF', 'BCF', 'LandXML', 'PDF'];
+    defaultOut = ['IFC', 'BCF', 'DWG', 'DXF', 'PDF', 'CSV'];
+    defaultIntegrations = ['openBIM IFC2x3 / IFC4', 'BCF Issue Tracking', 'Common Data Environment (CDE)'];
+    defaultApiType = 'REST / .NET BIM Extension API';
+    defaultSdkLangs = ['C#', 'Python', 'REST'];
+  } else if (t.category_id === 'c5') {
+    // CAM & CAE Simulation
+    const isCam = /cam|cnc|toolpath|machining|gcode|g-code|nesting|lathe|milling/.test(featureText);
+    if (isCam) {
+      defaultIn = ['STEP', 'IGES', 'STL', 'DWG', 'DXF', 'Parasolid (X_T)'];
+      defaultOut = ['G-Code (NC)', 'STEP', 'STL', 'CL-Data', 'Setup Sheets (PDF)'];
+      defaultIntegrations = ['Fanuc / Siemens / Heidenhain Post-Processors', '3D MCAD Direct Associativity', 'CNC Machine Simulation'];
+      defaultApiType = 'Post-Processor Macro & CAM Automation API';
+      defaultSdkLangs = ['Python', 'VBScript', 'C#'];
+    } else {
+      defaultIn = ['STEP', 'IGES', 'STL', 'Parasolid (X_T)', 'NASTRAN', 'CSV'];
+      defaultOut = ['VTK', 'NASTRAN', 'CSV', 'PDF Report', 'STEP'];
+      defaultIntegrations = ['CAD Geometry Direct Interface', 'HPC Cluster Job Schedulers', 'Python Post-Processing'];
+      defaultApiType = 'Python / Batch Solver Scripting API';
+      defaultSdkLangs = ['Python', 'C++', 'MATLAB', 'Fortran'];
+    }
+  } else if (t.category_id === 'c6') {
+    // EDA & PCB
+    defaultIn = ['SPICE Netlist', 'Gerber', 'IPC-2581', 'ODB++', 'DXF', 'STEP'];
+    defaultOut = ['Gerber RS-274X / X2', 'ODB++', 'IPC-2581', 'NC Drill', 'STEP 3D', 'BOM (CSV)'];
+    defaultIntegrations = ['SPICE Circuit Simulation', 'MCAD-ECAD IDX / STEP Collaboration', 'Component Supply Chain BOM'];
+    defaultApiType = 'Scripting / ULP / Skill Extension API';
+    defaultSdkLangs = ['Python', 'Tcl', 'C++'];
+  } else if (t.category_id === 'c7') {
+    // Rendering, 3D Printing Slicers & Point Cloud
+    const isSlicer = /slicer|3d print|additive|fdm|sla|gcode|filament/.test(featureText);
+    const isScan = /point cloud|photogrammetry|scan|lidar|mesh repair/.test(featureText);
+    if (isSlicer) {
+      defaultIn = ['STL', '3MF', 'OBJ', 'STEP', 'AMF'];
+      defaultOut = ['G-Code', '3MF', 'STL'];
+      defaultIntegrations = ['OctoPrint / Klipper / Moonraker', 'Direct 3D CAD Send-to-Print', 'Multi-Material AMS Profiles'];
+      defaultApiType = 'CLI Slicing Engine & Post-Processing Scripts';
+      defaultSdkLangs = ['Python', 'C++', 'Shell'];
+    } else if (isScan) {
+      defaultIn = ['E57', 'LAS', 'LAZ', 'PLY', 'OBJ', 'STL', 'PTS'];
+      defaultOut = ['E57', 'LAS', 'PLY', 'OBJ', 'STL', 'STEP', 'DXF'];
+      defaultIntegrations = ['Terrestrial Laser Scanners (TLS)', 'UAV Photogrammetry Pipelines', 'BIM / MCAD Reverse Engineering'];
+      defaultApiType = 'Point Cloud Processing CLI & C++ / Python SDK';
+      defaultSdkLangs = ['Python', 'C++'];
+    } else {
+      defaultIn = ['FBX', 'OBJ', 'glTF', 'USD', 'DAE', 'STL'];
+      defaultOut = ['MP4', 'EXR', 'PNG', 'glTF', 'USD', 'FBX'];
+      defaultIntegrations = ['Live-Sync BIM / CAD Viewports', 'PBR Material Libraries', 'GPU Ray-Tracing Acceleration'];
+      defaultApiType = 'Scene Graph & Shader Scripting API';
+      defaultSdkLangs = ['Python', 'C++'];
+    }
+  }
+
+  // 2. Deployment options derived from platforms
+  const platforms = t.platforms || [];
+  const defaultDeployments: NonNullable<Tool['deployment_options']> = [];
+  if (platforms.some(p => ['Windows', 'macOS', 'Linux'].includes(p))) {
+    defaultDeployments.push('Desktop');
+    if (!isFreeOrOss) defaultDeployments.push('On-Premise');
+  }
+  if (platforms.some(p => ['Web', 'Cloud'].includes(p))) {
+    defaultDeployments.push('Cloud', 'Web');
+  }
+  if (platforms.some(p => ['iOS', 'Android', 'iPadOS'].includes(p))) {
+    defaultDeployments.push('Mobile');
+  }
+  if (defaultDeployments.length === 0) {
+    defaultDeployments.push('Desktop');
+  }
+
+  // 3. Strictly consistent license_types derived from pricing_type (Zero EULA/Commercial leak on Open Source)
+  let defaultLicenses: NonNullable<Tool['license_types']> = ['Subscription', 'Commercial'];
+  if (t.pricing_type === 'Open Source') {
+    defaultLicenses = ['Open-Source', 'Free'];
+  } else if (t.pricing_type === 'Free') {
+    defaultLicenses = ['Free'];
+  } else if (t.pricing_type === 'Freemium') {
+    defaultLicenses = ['Free', 'Subscription', 'Commercial', 'Educational'];
+  } else if (t.pricing_type === 'Perpetual') {
+    defaultLicenses = ['Perpetual', 'Commercial', 'Network', 'Educational'];
+  } else if (t.pricing_type === 'Subscription / Perpetual') {
+    defaultLicenses = ['Subscription', 'Perpetual', 'Commercial', 'Network', 'Educational'];
+  } else if (t.pricing_type === 'Subscription') {
+    defaultLicenses = t.user_scales?.includes('Enterprise')
+      ? ['Subscription', 'Commercial', 'Floating', 'Educational']
+      : ['Subscription', 'Commercial', 'Educational'];
+  }
+
+  // 4. Support channels
+  const defaultSupport: NonNullable<Tool['support_channels']> = isFreeOrOss
+    ? ['Community', 'Documentation', 'Knowledge Base']
+    : ['Email', 'Documentation', 'Knowledge Base', 'Community', 'Training'];
+
+  return {
+    ...t,
+    features: FEATURE_MAP[t.slug] || [],
+    file_formats_in: t.file_formats_in?.length ? t.file_formats_in : defaultIn,
+    file_formats_out: t.file_formats_out?.length ? t.file_formats_out : defaultOut,
+    integrations: t.integrations?.length ? t.integrations : defaultIntegrations,
+    deployment_options: t.deployment_options?.length ? t.deployment_options : defaultDeployments,
+    license_types: t.license_types?.length ? t.license_types : defaultLicenses,
+    support_channels: t.support_channels?.length ? t.support_channels : defaultSupport,
+    languages: t.languages?.length ? t.languages : ['English'],
+    api_sdk: t.api_sdk || {
+      has_api: true,
+      has_sdk: !isFreeOrOss || defaultSdkLangs.length > 0,
+      api_type: defaultApiType,
+      sdk_languages: defaultSdkLangs,
+      docs_url: t.official_url,
+    },
+  };
+}
+
 export const tools: Tool[] = [
   ...c1Tools,
   ...c2Tools,
@@ -108,10 +268,7 @@ export const tools: Tool[] = [
   ...c5Tools,
   ...c6Tools,
   ...c7Tools,
-].map(t => ({
-  ...t,
-  features: FEATURE_MAP[t.slug] || []
-})).sort((a, b) => orderKey(a.id) - orderKey(b.id));
+].map(enrichToolMetadata).sort((a, b) => orderKey(a.id) - orderKey(b.id));
 
 export function getToolBySlug(slug: string): Tool | undefined {
   return tools.find((tool) => tool.slug === slug);

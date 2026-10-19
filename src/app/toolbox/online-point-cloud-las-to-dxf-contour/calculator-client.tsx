@@ -101,8 +101,8 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "Why do the extracted contours appear in CAD?'jagged 'hard angle'? ",
-    "answer": "This is due to the resolution of the fitting grid being set too low. It is recommended to Civil 3D When exporting, check'Contour Smoothing ', choose to use Bezier curves for smooth interpolation."
+    "question": "Why do extracted contour lines appear jagged with sharp vertices in CAD?",
+    "answer": "This occurs when contours are extracted directly from a coarse TIN or DEM grid without spline smoothing. In Civil 3D or Global Mapper, enable 'Contour Smoothing' (Bezier or B-Spline vertex interpolation) prior to exporting the DXF."
   },
   {
     "question": "How to determine whether the coordinate system in a LAS file is correct? ",
@@ -114,7 +114,7 @@ export default function OnlinePointCloudLasToDxfContourClient() {
   return (
     <CloudReferralClient
       title="Online Point Cloud LAS to DXF Terrain Contour Generator"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="A major pain point in surveying and mapping and road and bridge design is: from lidar point cloud (LAS) Manually fitting contour drawings or elevation texts is not only time-consuming, but also prone to local surface depressions. Cloud Contours contour extractor quickly calculates digital elevation models (DEM) , and directly for Civil 3D or MicroStation Export smooth terrain DXF vector drawings."
       riskWarning="High-precision geospatial three-dimensional coordinates and surveying point cloud data are directly related to national physical information security. You need to be extra vigilant about compliance risks when uploading to non-certified overseas cloud service providers. For conventional industrial and civil construction projects, offline software in the local area network can be used to extract, Avoid violating data compliance by leaving the country."

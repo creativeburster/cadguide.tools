@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "Files that have been compiled into FAS will be reverse-restored to LSP Source code? ",
-    "answer": "FAS It is a highly translated compiled binary bytecode, and there is no perfect'Decompiler'. Generally can only extract plain text strings and some system variables, Your core geometric algorithm logic is absolutely safe."
+    "answer": "FAS is compiled binary bytecode optimized for the Visual LISP virtual machine, and cannot be cleanly decompiled back into commented LSP source code. For maximum IP protection, obfuscate symbol names prior to compiling into FAS or VLX packages."
   }
 ];
 
@@ -114,10 +114,10 @@ export default function OnlineLispScriptCompilerProtectorClient() {
   return (
     <CloudReferralClient
       title="AutoLISP LSP Script Encryption (FAS/VLX) Online Portal"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
       painPointDesc="When you've worked hard to write a more efficient AutoLISP or Visual LISP Plug-in (.lsp), in order not to leak the plain source code during internal testing or package distribution, to prevent peers from maliciously stealing secondary packaging, it needs to be compiled into irreversible binary bytecode. (FAS) Or packaged as an application including a DCL interface (VLX) ."
-      riskWarning="AutoLISP The source code usually embodies the core efficiency improvement algorithm of the enterprise. Use third-party online'LISP Obfuscators' have a very high risk of source code being captured and retained in the cloud. We strongly recommend users to directly use the official built-in AutoCAD desktop client. Visual LISP The editor performs local lossless compilation and refuses to use unknown online compilation boxes."
+      riskWarning="Proprietary AutoLISP (.lsp) source code often contains your organization's core automation algorithms. Avoid uploading raw LSP scripts to untrusted third-party web obfuscators; always compile FAS/VLX bytecode locally using AutoCAD's built-in Visual LISP IDE (VLIDE) or `(vlisp-compile)`."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

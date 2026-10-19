@@ -101,7 +101,7 @@ const BEST_PRACTICES = [
 ];
 const FAQS = [
   {
-    "question": "IFC Schema error reporting 'Unknown Entity' What causes this issue? ",
+    "question": "What causes 'Unknown Entity' schema validation errors in an IFC file?",
     "answer": "This means that the export engine that generated the model wrote a custom proprietary component name that does not comply with the official buildingSmart specification. You can set attribute remapping in the validator for filtering."
   },
   {
@@ -114,7 +114,7 @@ export default function OnlineIfcViewerValidatorClient() {
   return (
     <CloudReferralClient
       title="Online openBIM IFC Standard File Validator & Viewer"
-      subtitle="Direct navigation to objective in-depth evaluation and anti-audit."
+      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="In order to ensure that the BIM collaborative model enters the downstream cost, 100% compliance when analyzing energy consumption or delivering it for government filing buildingSmart Standardization, development and operation and maintenance personnel urgently need to IFC Model metadata dictionary (Data Dict), polyhedral geometry closure (Watertightness) and parent-child topology nesting relationship for automatic verification."
       riskWarning="IFC It is an aggregation of big data of the whole life cycle of construction. Inadvertent uploading to public picture viewing sites with data monitoring may expose the physical structure of the project. Please give priority to using the security verification client certified by the buildingSmart standards organization. It is strictly prohibited to directly upload drawings of government secrets or military projects."
