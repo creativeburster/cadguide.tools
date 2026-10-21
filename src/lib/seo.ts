@@ -461,7 +461,7 @@ export function faqLd(tool: Tool) {
       name: f.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: f.a,
+        text: f.a.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2">$1</a>'),
       },
     })),
   };

@@ -5762,11 +5762,12 @@ export const c2Tools: Tool[] = [
     "slug": "mechcad",
     "logo_url": "/logos/mechcad.svg",
     "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-    "description": "MECHCAD 2026 is a robust parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with collision analysis, kinematic motion simulation, and associative 2D drawing generation. With direct SolidWorks part/assembly import and integrated 2.5D/3D CAM toolpath generation, it provides an independent, perpetual-license engineering solution without forced cloud subscriptions.",
+    "description": "MECHCAD 2026 is a robust commercial parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with dynamic collision and interference analysis, kinematic motion simulation, and model-derived 2D drawing generation. With direct SolidWorks part and assembly import across all editions, automated BOM, HTML 3D model export, and integrated 2.5D/3D milling and turning CAM in Premium, it provides an independent commercial solution available via paid perpetual buyout or annual subscription.",
     "category_id": "c2",
-    "pricing_type": "Perpetual",
-    "starting_price": 950,
-    "price_period": "one-time",
+    "pricing_type": "Subscription / Perpetual",
+    "starting_price": 0,
+    "quote_only": true,
+    "pricing_url": "https://www.mechdesigned.com/en/software/",
     "version": "2026",
     "free_trial_days": 30,
     "country": "Thailand",
@@ -5777,8 +5778,9 @@ export const c2Tools: Tool[] = [
       "Desktop"
     ],
     "license_types": [
+      "Commercial",
       "Perpetual",
-      "Commercial"
+      "Subscription"
     ],
     "languages": [
       "English",
@@ -5793,13 +5795,13 @@ export const c2Tools: Tool[] = [
       "CNC Machining"
     ],
     "core_features": [
-      "Feature-based parametric 3D solid and surface modeling with full history tree control",
-      "Assembly design with kinematic mechanical mates and dynamic collision detection",
-      "Native import of SolidWorks (.sldprt, .sldasm), STEP, IGES, SAT, and DWG/DXF models",
-      "Kinematic and dynamic motion simulation for mechanism validation and stroke verification",
-      "Production-grade associative 2D drawing generation with automated BOM, balloons, and GD&T",
-      "Integrated 2.5D and 3D CAM toolpath creation with G-code post-processing",
-      "Perpetual buyout licensing across Standard, Expert, and Premium editions with offline licensing"
+      "Parametric 3D solid and assembly modeling with native SolidWorks (.sldprt/.sldasm) file import across all editions",
+      "Model-derived associative 2D drawing generation with automated view projection and dimensions",
+      "Advanced surface modeling and sheet metal design with flat-pattern DXF export (Expert & Premium)",
+      "Kinematic motion studies, dynamic interference, and clearance checks (Expert & Premium)",
+      "Automatic Bill of Materials (BOM) generation and interactive HTML 3D model web export (Expert & Premium)",
+      "Integrated 2.5D/3D CNC milling and turning CAM toolpath generation with post-processing (Premium)",
+      "Commercial licensing via paid perpetual buyout or annual subscription with 30-day Premium trial"
     ],
     "user_scales": [
       "Individuals",
@@ -5812,15 +5814,16 @@ export const c2Tools: Tool[] = [
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
-      "Cost-effective perpetual buyout license avoiding costly recurring SolidWorks and Inventor subscriptions",
-      "Native SolidWorks (.sldprt/.sldasm) file import ensures friction-free supply chain collaboration",
-      "Integrated kinematic motion simulation and CAM in Premium edition consolidates design and manufacturing",
-      "Includes generous 30-day full-featured free trial with local offline licensing options"
+      "Cost-effective commercial licensing via paid perpetual buyout or annual subscription avoiding forced cloud lock-in",
+      "Native SolidWorks (.sldprt/.sldasm) file import across all editions ensures friction-free supply chain collaboration",
+      "Surface modeling, sheet metal DXF, motion studies, and HTML 3D export included starting from Expert edition",
+      "Integrated 2.5D/3D milling and turning CAM in Premium edition consolidates design and manufacturing",
+      "Includes generous 30-day full-featured trial of MECHCAD Premium"
     ],
     "cons": [
       "Windows 10/11 64-bit exclusive (no native macOS or Linux versions)",
       "Smaller third-party FEA and photorealistic rendering ecosystem than Dassault or Autodesk platforms",
-      "Advanced automotive Class-A surfacing is less specialized than CATIA or Autodesk Alias"
+      "Surface modeling, sheet metal unfolding, and motion studies require upgrading from Standard to Expert edition"
     ],
     "tech_specs": {
       "engine": "ACIS / Parasolid compatible precision B-Rep geometric kernel",
@@ -5835,7 +5838,7 @@ export const c2Tools: Tool[] = [
         "ASME Y14.5"
       ]
     },
-    "expert_verdict": "MECHCAD 2026 delivers a complete, shop-floor-ready 3D parametric CAD package that punches well above its price class. With native SolidWorks assembly interoperability, motion simulation, and built-in CAM toolpath generation available as a perpetual buyout, it serves as an exceptional ROI powerhouse for machinery builders seeking independence from steep recurring CAD subscriptions.",
+    "expert_verdict": "MECHCAD 2026 delivers a complete, shop-floor-ready 3D parametric CAD package that punches well above its price class. With native SolidWorks assembly interoperability in Standard, advanced sheet metal, motion studies, and HTML 3D export in Expert, and integrated milling/turning CAM in Premium, it serves as an exceptional ROI powerhouse for machinery builders seeking commercial independence via paid perpetual or annual subscription licensing.",
     "faqs": [
       {
         "q": "What is MECHCAD 2026?",
@@ -5843,50 +5846,55 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the differences between MECHCAD Standard, Expert, and Premium editions?",
-        "a": "Standard edition ($950) provides complete 3D parametric part and assembly modeling, sheet metal design, and 2D drawings. Expert edition ($1,650) adds advanced surface modeling, sheet metal unfolding, and standard hardware libraries. Premium edition ($2,700) adds dynamic motion simulation, stress FEA verification, and integrated 2.5D/3D CAM toolpath creation."
+        "a": "MECHCAD offers three commercial editions: Standard includes 3D part and assembly modeling, model-derived drawings, and native SolidWorks file import. Expert adds surface modeling, sheet metal with flat-pattern DXF export, motion studies, dynamic interference and clearance checks, automatic BOM generation, and interactive HTML 3D export. Premium includes all Expert capabilities plus integrated 2.5D/3D milling and turning CNC CAM. Current official pricing in THB and detailed edition comparisons are available on MET's [current official editions and pricing](https://www.mechdesigned.com/en/software/) page."
       },
       {
         "q": "Can MECHCAD open SolidWorks and STEP files?",
-        "a": "Yes. MECHCAD directly opens native SolidWorks parts (.sldprt) and assemblies (.sldasm), as well as neutral industry formats including STEP, IGES, SAT, STL, and DWG/DXF without external data translators."
+        "a": "Yes. MECHCAD directly opens native SolidWorks parts (.sldprt) and assemblies (.sldasm) across all editions, as well as neutral industry formats including STEP, IGES, SAT, STL, and DWG/DXF without external data translators."
       },
       {
         "q": "Is MECHCAD a subscription or a perpetual license?",
-        "a": "MECHCAD is sold as a perpetual buyout license with permanent ownership and optional annual updates, eliminating mandatory recurring subscription costs. A 30-day fully functional trial is available."
+        "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional 30-day free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
       }
     ],
     "pricing_tiers": [
       {
         "name": "Standard Edition",
-        "price": "$950",
-        "period": "one-time",
+        "price": "Official Vendor Pricing",
+        "period": "Perpetual or Annual",
         "features": [
           "Parametric 3D part & assembly modeling",
-          "Associative 2D drawings with BOM & GD&T",
-          "STEP, IGES, DWG/DXF data exchange",
-          "12 months maintenance & technical support"
+          "Model-derived associative 2D drawings",
+          "Native SolidWorks (.sldprt/.sldasm) file import",
+          "Commercial perpetual license or annual subscription",
+          "Free 30-day Premium trial available"
         ]
       },
       {
         "name": "Expert Edition",
-        "price": "$1,650",
-        "period": "one-time",
+        "price": "Official Vendor Pricing",
+        "period": "Perpetual or Annual",
         "features": [
-          "All Standard features",
-          "Native SolidWorks (.sldprt/.sldasm) import",
-          "Advanced surface modeling & sheet metal",
-          "Standard fasteners & mechanical component library"
+          "All Standard features included",
+          "Surface modeling & hybrid solid design",
+          "Sheet metal with flat-pattern DXF export",
+          "Kinematic motion studies & stroke simulation",
+          "Dynamic interference & clearance checks",
+          "Automatic Bill of Materials (BOM)",
+          "Interactive HTML 3D model web export"
         ],
         "is_popular": true
       },
       {
         "name": "Premium Edition",
-        "price": "$2,700",
-        "period": "one-time",
+        "price": "Official Vendor Pricing",
+        "period": "Perpetual or Annual",
         "features": [
-          "All Expert features",
-          "Kinematic & dynamic motion simulation",
-          "Integrated 2.5D & 3D CAM milling toolpaths",
-          "Collision detection & interference analysis"
+          "All Expert features included",
+          "Integrated 2.5D & 3D CNC milling CAM",
+          "CNC turning (lathe) toolpath generation",
+          "Machine simulation & G-code post-processing",
+          "Commercial buyout or annual subscription"
         ]
       }
     ],

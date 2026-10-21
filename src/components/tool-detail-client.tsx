@@ -31,6 +31,51 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
+  const renderFaqAnswer = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g;
+    const parts: React.ReactNode[] = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = linkRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+      if (match[1] && match[2]) {
+        parts.push(
+          <a
+            key={match.index}
+            href={match[2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 font-semibold underline hover:text-blue-800 inline-flex items-center gap-0.5"
+          >
+            {match[1]}
+            <ExternalLink className="w-3.5 h-3.5 inline ml-0.5" />
+          </a>
+        );
+      } else if (match[3]) {
+        parts.push(
+          <a
+            key={match.index}
+            href={match[3]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 font-semibold underline hover:text-blue-800 inline-flex items-center gap-0.5"
+          >
+            {match[3]}
+            <ExternalLink className="w-3.5 h-3.5 inline ml-0.5" />
+          </a>
+        );
+      }
+      lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+    return parts.length > 0 ? parts : text;
+  };
+
   const formatTierPrice = (price: string | number | undefined | null): string => {
     if (price === undefined || price === null) return "";
     const pStr = String(price).trim();
@@ -697,6 +742,8 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     const tierText = `${tier.name || ""} ${tier.period || ""} ${tier.price || ""}`.toLowerCase();
                     const tierHeadline = isFreeTier
                       ? (tool.pricing_type === "Open Source" ? "Open Source" : "Free Tier")
+                      : /perpetual.*(annual|subscription)|subscription.*perpetual/.test(tierText)
+                        ? 'Perpetual / Subscription'
                       : /educational|student|academic/.test(tierText)
                         ? "Academic License"
                         : /quote|custom|enterprise|contact/.test(tierText)
@@ -1286,7 +1333,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       {faq.q}
                     </h4>
                     <p className="text-slate-600 text-base leading-relaxed font-medium pl-8">
-                      {faq.a}
+                      {renderFaqAnswer(faq.a)}
                     </p>
                   </div>
                 ))}
