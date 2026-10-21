@@ -34,13 +34,12 @@
 
 ---
 
-## 🚀 二、全新攻坚成功并真实触发激活邮件的 5 大高权重正规技术平台
+## 🚀 二、全新攻坚成功并真实触发激活邮件的 4 大高权重正规技术平台
 
-经过 5 轮严格的自动化表单与安全机制检测，排除了所有无需注册平台及所有 6 位短时效 OTP / 验证码干扰，成功落地以下 5 大高权重顶级平台：
+经过严格的自动化表单与安全机制检测，排除了所有无需注册平台及所有 6 位短时效 OTP / 验证码干扰，成功落地以下 4 大高权重顶级平台：
 
 | 平台名称 | 域名权重 (DA) | 垂直领域 | 注册状态与官方成功响应 | 存证截图 |
 | :--- | :---: | :---: | :--- | :--- |
-| **GitLab 官方技术论坛** | **DA 92+** | 全球顶级开发者与 DevOps 社区 | **提交成功！** 用户名 `cadguide_eng`<br>`Welcome to GitLab Forum! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/r4_gitlabforum_submitted.png`](file:///f:/cadguide.tools/scratch/r4_gitlabforum_submitted.png) |
 | **Elastic Community 官方社区** | **DA 88+** | 企业搜索与高维数据分析引擎 | **提交成功！**<br>`Welcome to Discuss the Elastic Stack! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/r2_elastic_submitted.png`](file:///f:/cadguide.tools/scratch/r2_elastic_submitted.png) |
 | **Logseq 官方技术社区** | **DA 84+** | 隐私优先开源知识图谱与笔记系统 | **提交成功！**<br>`Welcome to Logseq! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/r8_logseq_submitted.png`](file:///f:/cadguide.tools/scratch/r8_logseq_submitted.png) |
 | **ownCloud Central 官方社区** | **DA 82+** | 企业级开源云存储与文件协作 | **提交成功！**<br>`Welcome to ownCloud Central! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/w5_owncloud_submitted.png`](file:///f:/cadguide.tools/scratch/w5_owncloud_submitted.png) |
@@ -48,13 +47,12 @@
 
 ---
 
-## 📬 三、用户极简操作指引（仅需在邮箱点击 4 封激活邮件）
+## 📬 三、用户极简操作指引（仅需在邮箱点击 3 封激活邮件）
 
-请用户登录 `support@cadguide.tools` 企业邮箱，对以下 4 封最新收到的邮件点击一次激活链接：
-1. **GitLab 官方技术论坛** (`forum.gitlab.com` | DA 92+) 激活邮件 —— **【全新触发！】**
-2. **Elastic Community** (`discuss.elastic.co` | DA 88+) 激活邮件 —— **【全新触发！】**
-3. **Logseq 官方社区** (`discuss.logseq.com` | DA 84+) 激活邮件 —— **【全新触发！】**
-4. **Pixls.us 官方开源图形社区** (`discuss.pixls.us` | DA 80+) 激活邮件
+请用户登录 `support@cadguide.tools` 企业邮箱，对以下 3 封最新收到的邮件点击一次激活链接：
+1. **Elastic Community** (`discuss.elastic.co` | DA 88+) 激活邮件 —— **【全新触发！】**
+2. **Logseq 官方社区** (`discuss.logseq.com` | DA 84+) 激活邮件 —— **【全新触发！】**
+3. **Pixls.us 官方开源图形社区** (`discuss.pixls.us` | DA 80+) 激活邮件
 
 *注：ownCloud Central (DA 82) 与 OpenWrt (DA 88)、F-Droid (DA 86) 处于管理员批量审批队列。*
 
