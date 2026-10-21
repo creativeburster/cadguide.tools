@@ -8,7 +8,7 @@
   2. 坚决排除任何弹出 6-digit code（短时效数字 OTP）的云托管站点；
   3. 严格限定为正规自托管完整表单模式：直接填写 `Email + Username + Password + Name`；
   4. 点击提交后，页面明确反馈：**`We sent an activation mail to support@cadguide.tools. Please follow the instructions in the mail to activate your account.`**；
-  5. 零图形验证码、零第三方账号依赖（不碰 GitHub，不碰 GitLab 代码库）；
+  5. 零图形验证码、零第三方账号依赖（绝对不碰 GitHub，坚决不要 GitLab）；
   6. 严格遵守红线：禁止执行 `git push`。
 
 ---
@@ -34,12 +34,13 @@
 
 ---
 
-## 🚀 二、全新攻坚成功并真实触发激活邮件的 4 大高权重正规技术平台
+## 🚀 二、全新实战提交成功并真实触发激活邮件的 5 大高权重正规技术平台
 
-经过严格的自动化表单与安全机制检测，排除了所有无需注册平台及所有 6 位短时效 OTP / 验证码干扰，成功落地以下 4 大高权重顶级平台：
+经过严格的自动化表单与安全机制检测，排除了所有无需注册平台及所有 6 位短时效 OTP / 验证码干扰（并坚决贯彻零 GitLab / 零 GitHub 铁律），成功落地以下 5 大高权重顶级平台：
 
 | 平台名称 | 域名权重 (DA) | 垂直领域 | 注册状态与官方成功响应 | 存证截图 |
 | :--- | :---: | :---: | :--- | :--- |
+| **Godot Engine 官方技术社区** | **DA 86+** | 全球顶级开源游戏与图形引擎社区 | **提交成功！**<br>`An email with instructions to verify your email address has been sent to support@cadguide.tools...` | [`scratch/godot_submitted.png`](file:///f:/cadguide.tools/scratch/godot_submitted.png) |
 | **Elastic Community 官方社区** | **DA 88+** | 企业搜索与高维数据分析引擎 | **提交成功！**<br>`Welcome to Discuss the Elastic Stack! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/r2_elastic_submitted.png`](file:///f:/cadguide.tools/scratch/r2_elastic_submitted.png) |
 | **Logseq 官方技术社区** | **DA 84+** | 隐私优先开源知识图谱与笔记系统 | **提交成功！**<br>`Welcome to Logseq! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/r8_logseq_submitted.png`](file:///f:/cadguide.tools/scratch/r8_logseq_submitted.png) |
 | **ownCloud Central 官方社区** | **DA 82+** | 企业级开源云存储与文件协作 | **提交成功！**<br>`Welcome to ownCloud Central! You’re almost done! We sent an activation mail to support@cadguide.tools...` | [`scratch/w5_owncloud_submitted.png`](file:///f:/cadguide.tools/scratch/w5_owncloud_submitted.png) |
@@ -47,22 +48,24 @@
 
 ---
 
-## 📬 三、用户极简操作指引（仅需在邮箱点击 3 封激活邮件）
+## 📬 三、用户极简操作指引（仅需在邮箱点击 4 封激活邮件）
 
-请用户登录 `support@cadguide.tools` 企业邮箱，对以下 3 封最新收到的邮件点击一次激活链接：
-1. **Elastic Community** (`discuss.elastic.co` | DA 88+) 激活邮件 —— **【全新触发！】**
-2. **Logseq 官方社区** (`discuss.logseq.com` | DA 84+) 激活邮件 —— **【全新触发！】**
-3. **Pixls.us 官方开源图形社区** (`discuss.pixls.us` | DA 80+) 激活邮件
+请用户登录 `support@cadguide.tools` 企业邮箱，对以下 4 封最新收到的邮件点击一次激活链接：
+1. **Godot Engine 官方技术社区** (`forum.godotengine.org` | DA 86+) 激活邮件 —— **【全新突破触发！】**
+2. **Elastic Community** (`discuss.elastic.co` | DA 88+) 激活邮件 —— **【全新触发！】**
+3. **Logseq 官方技术社区** (`discuss.logseq.com` | DA 84+) 激活邮件 —— **【全新触发！】**
+4. **Pixls.us 官方开源图形社区** (`discuss.pixls.us` | DA 80+) 激活邮件
 
 *注：ownCloud Central (DA 82) 与 OpenWrt (DA 88)、F-Droid (DA 86) 处于管理员批量审批队列。*
 
 ---
 
-## 🛡️ 四、高权重社区机制实测熔断审计（捍卫零打码/零OTP铁律）
+## 🛡️ 四、高权重社区机制实测熔断审计（捍卫零打码/零OTP/零GitLab铁律）
 
 本次战役中，严格贯彻用户标准，对 20+ 个潜在候选进行了全量过滤：
+- **坚决不碰 GitHub 与 GitLab**：完全排除任何 GitLab/GitHub 账号系统，绝无违规；
 - **排除无需注册直接发布的平台**：完全不接触 Rentry、Telegra.ph 等低质无账号平台；
 - **主动熔断 CDCK 云托管 6 位数字 OTP 模式**：
-  Defold (DA 80)、Hugo (DA 88)、Obsidian (DA 88)、Zig (DA 82)、Crystal (DA 80)、Jenkins (DA 88)、OpenSearch (DA 86)、Ghost (DA 86)、EndeavourOS (DA 81)、Restic (DA 80)、DietPi (DA 80)、Julia (DA 86)、NixOS (DA 85)、Rust (DA 92) 等均因采用 6 位短时效数字 OTP 而主动排除；
+  Defold (DA 80)、Hugo (DA 88)、Obsidian (DA 88)、Zig (DA 82)、Crystal (DA 80)、Jenkins (DA 88)、OpenSearch (DA 86)、Ghost (DA 86)、EndeavourOS (DA 81)、Restic (DA 80)、DietPi (DA 80)、Julia (DA 86)、NixOS (DA 85)、Rust (DA 92)、Fedora (DA 91) 等均因采用 6 位短时效数字 OTP 而主动排除；
 - **主动熔断图形验证码模式**：
-  Nim (DA 81)、Caddy Server (DA 82)、Fairphone (DA 85)、Armbian (DA 82) 存在强制性 Google reCAPTCHA / hCaptcha，已严格排除。
+  Ardour (DA 81)、OpenStreetMap (DA 91)、Nim (DA 81)、Caddy Server (DA 82)、Fairphone (DA 85)、Armbian (DA 82) 存在强制性验证码，已严格排除。
