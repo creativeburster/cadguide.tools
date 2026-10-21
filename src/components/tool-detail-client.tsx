@@ -8,7 +8,7 @@ import { ToolLogo } from "@/components/tool-logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { RelatedTools } from '@/components/related-tools';
-import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Calendar, Tag, Languages, Cloud, Code2, Lock, Star, Heart, Download } from "lucide-react";
+import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Tag, Languages, Cloud, Code2, Lock, Star, Heart, Download } from "lucide-react";
 import { Tool, Category, tools as allTools } from "@/lib/data";
 import { linkifyToolNames } from "@/lib/linkify";
 import { priceSuffix } from "@/lib/utils";
@@ -374,28 +374,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           <span className="text-slate-900">{tool.country}</span>
                         </span>
                       </div>
-                      {tool.version && (
-                        <div className="flex items-center gap-3 text-slate-500 font-bold">
-                          <Tag className="w-5 h-5 text-indigo-500" />
-                          <span className="text-sm">
-                            Version:{" "}
-                            <span className="text-slate-900">
-                              {tool.version}
-                            </span>
-                          </span>
-                        </div>
-                      )}
-                      {tool.last_updated && (
-                        <div className="flex items-center gap-3 text-slate-500 font-bold">
-                          <Calendar className="w-5 h-5 text-emerald-500" />
-                          <span className="text-sm">
-                            Updated:{" "}
-                            <span className="text-slate-900">
-                              {tool.last_updated}
-                            </span>
-                          </span>
-                        </div>
-                      )}
+                      {/* Version and last_updated omitted by design */}
                       {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
                         <a
                           href={tool.trial_url || tool.official_url}
@@ -657,10 +636,10 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   <div className="w-10 h-10 md:w-14 md:h-14 bg-slate-50 rounded-xl md:rounded-2xl flex items-center justify-center text-slate-400 mb-3 md:mb-4">
                     {stat.icon}
                   </div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">
+                  <div className="text-xs font-black uppercase tracking-[0.15em] text-slate-500 mb-2">
                     {stat.label}
                   </div>
-                  <div className="font-black text-slate-900 text-base">
+                  <div className="font-black text-slate-900 text-base md:text-lg">
                     {stat.value || "N/A"}
                   </div>
                 </div>
@@ -684,7 +663,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     <Globe className="w-5 h-5 text-blue-600 shrink-0" />
                     <span>Regional & Multi-Currency Pricing Notice</span>
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
                     Official software licensing terms, volume discounts, educational exemptions, and renewal fees vary significantly across countries, exchange rates, and regional authorized resellers. Click below to verify real-time terms directly on the vendor portal.
                   </p>
                 </div>
@@ -770,14 +749,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </div>
                         )}
                         <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
-                          <div className="text-slate-400 font-black uppercase text-[10px] tracking-widest mb-4">
+                          <div className="text-slate-500 font-black uppercase text-xs tracking-widest mb-4">
                             {tier.name}
                           </div>
                           <div className="flex flex-col items-center justify-center gap-1">
                             <span className="text-2xl md:text-3xl font-black text-slate-900">
                               {tierHeadline}
                             </span>
-                            <span className="text-slate-400 font-bold text-xs tracking-tight">
+                            <span className="text-slate-500 font-bold text-sm tracking-tight">
                               {isFreeTier
                                 ? "No Commercial License Fee"
                                 : "Verify Live Regional Pricing on Vendor Portal"}
@@ -790,9 +769,9 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             {tier.features?.map((f, j) => (
                               <li
                                 key={j}
-                                className="flex items-start gap-4 text-sm font-bold text-slate-600 leading-tight"
+                                className="flex items-start gap-4 text-base font-bold text-slate-700 leading-snug"
                               >
-                                <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
+                                <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                                 {f}
                               </li>
                             ))}
@@ -852,19 +831,19 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 <div className="bg-white rounded-[32px] border border-slate-100 overflow-hidden divide-y divide-slate-100 shadow-sm">
                   {tool.detailed_features.map((cat, i) => (
                     <div key={i} className="p-6 md:p-8">
-                      <h3 className="font-black text-slate-900 mb-4 uppercase text-[10px] tracking-[0.2em] text-slate-400 flex items-center gap-4">
+                      <h3 className="font-black mb-5 uppercase text-xs md:text-sm tracking-[0.15em] text-slate-500 flex items-center gap-4">
                         {cat.category}{" "}
                         <div className="h-px bg-slate-100 flex-1"></div>
                       </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-4">
                         {cat.items?.map((item, j) => (
-                          <div key={j} className="flex items-center gap-2 group">
+                          <div key={j} className="flex items-center gap-2.5 group">
                             {item.status ? (
-                              <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" />
+                              <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
                             ) : (
-                              <XCircle className="w-3.5 h-3.5 text-slate-200 shrink-0" />
+                              <XCircle className="w-4 h-4 text-slate-200 shrink-0" />
                             )}
-                            <span className="text-sm font-bold text-slate-600 group-hover:text-blue-600 transition-colors leading-tight">
+                            <span className="text-base font-bold text-slate-700 group-hover:text-blue-600 transition-colors leading-snug">
                               {item.name}
                             </span>
                           </div>
@@ -898,28 +877,28 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                   <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                    <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
+                    <h4 className="font-black mb-8 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                       Environment Support
                     </h4>
                     <div className="space-y-6">
-                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                        <span className="font-bold text-slate-500">
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
+                        <span className="font-bold text-slate-600">
                           Certified OS
                         </span>
                         <span className="font-black text-slate-900 text-right">
                           {tool.platforms.join(", ")}
                         </span>
                       </div>
-                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                        <span className="font-bold text-slate-500">
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
+                        <span className="font-bold text-slate-600">
                           Multi-threading
                         </span>
                         <span className="font-black text-slate-900 text-right">
                           {tool.tech_specs.multicore || "Standard"}
                         </span>
                       </div>
-                      <div className="flex justify-between items-center flex-wrap gap-2 text-base">
-                        <span className="font-bold text-slate-500">
+                      <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
+                        <span className="font-bold text-slate-600">
                           GPU Optimization
                         </span>
                         <span className="font-black text-slate-900 text-right">
@@ -929,14 +908,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     </div>
                   </Card>
                   <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                    <h4 className="font-black text-slate-900 mb-8 uppercase text-[10px] tracking-widest text-slate-400">
+                    <h4 className="font-black mb-8 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                       Industry Standards
                     </h4>
                     <div className="flex flex-wrap gap-3">
                       {tool.tech_specs.standards?.map((s) => (
                         <Badge
                           key={s}
-                          className="bg-slate-50 text-slate-600 border-slate-100 font-black px-4 py-2 rounded-xl"
+                          className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-4 py-2 rounded-xl text-sm md:text-base"
                         >
                           {s}
                         </Badge>
@@ -962,20 +941,20 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {(tool.file_formats_in?.length ||
                     tool.file_formats_out?.length) && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                      <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                      <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                         <FileText className="w-4 h-4" /> File Format Support
                       </h4>
                       {tool.file_formats_in &&
                         tool.file_formats_in.length > 0 && (
                           <div className="mb-6">
-                            <div className="text-xs font-black text-slate-500 mb-3 uppercase tracking-wider">
+                            <div className="text-sm font-black text-slate-600 mb-3 uppercase tracking-wider">
                               Import
                             </div>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2.5">
                               {tool.file_formats_in.map((f) => (
                                 <Badge
                                   key={f}
-                                  className="bg-blue-50 text-blue-700 border-blue-100 font-black px-3 py-1 rounded-lg"
+                                  className="h-auto bg-blue-50 text-blue-700 border-blue-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                                 >
                                   {f}
                                 </Badge>
@@ -986,14 +965,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       {tool.file_formats_out &&
                         tool.file_formats_out.length > 0 && (
                           <div>
-                            <div className="text-xs font-black text-slate-500 mb-3 uppercase tracking-wider">
+                            <div className="text-sm font-black text-slate-600 mb-3 uppercase tracking-wider">
                               Export
                             </div>
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2.5">
                               {tool.file_formats_out.map((f) => (
                                 <Badge
                                   key={f}
-                                  className="bg-purple-50 text-purple-700 border-purple-100 font-black px-3 py-1 rounded-lg"
+                                  className="h-auto bg-purple-50 text-purple-700 border-purple-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                                 >
                                   {f}
                                 </Badge>
@@ -1005,14 +984,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   )}
                   {tool.integrations && tool.integrations.length > 0 && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                      <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                      <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                         <Plug className="w-4 h-4" /> Native Integrations
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {tool.integrations.map((int) => (
                           <Badge
                             key={int}
-                            className="bg-slate-50 text-slate-700 border-slate-100 font-black px-3 py-1.5 rounded-lg"
+                            className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                           >
                             {int}
                           </Badge>
@@ -1023,14 +1002,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.deployment_options &&
                     tool.deployment_options.length > 0 && (
                       <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                        <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                        <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                           <Cloud className="w-4 h-4" /> Deployment Options
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2.5">
                           {tool.deployment_options.map((d) => (
                             <Badge
                               key={d}
-                              className="bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3 py-1.5 rounded-lg"
+                              className="h-auto bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                             >
                               {d}
                             </Badge>
@@ -1040,14 +1019,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     )}
                   {tool.languages && tool.languages.length > 0 && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                      <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                      <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                         <Languages className="w-4 h-4" /> Interface Languages
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {tool.languages.map((l) => (
                           <Badge
                             key={l}
-                            className="bg-slate-50 text-slate-700 border-slate-100 font-black px-3 py-1.5 rounded-lg"
+                            className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                           >
                             {l}
                           </Badge>
@@ -1058,16 +1037,16 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.api_sdk &&
                     (tool.api_sdk.has_api || tool.api_sdk.has_sdk) && (
                       <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm md:col-span-2">
-                        <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                        <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                           <Code2 className="w-4 h-4" /> API & Developer Access
                         </h4>
                         <div className="grid sm:grid-cols-2 gap-8">
                           {tool.api_sdk.has_api && (
                             <div>
-                              <div className="text-xs font-black text-slate-500 mb-2 uppercase tracking-wider">
+                              <div className="text-sm font-black text-slate-600 mb-2 uppercase tracking-wider">
                                 API
                               </div>
-                              <div className="text-base font-black text-slate-900">
+                              <div className="text-base md:text-lg font-black text-slate-900">
                                 {tool.api_sdk.api_type || "Available"}
                               </div>
                             </div>
@@ -1075,14 +1054,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           {tool.api_sdk.has_sdk &&
                             tool.api_sdk.sdk_languages?.length && (
                               <div>
-                                <div className="text-xs font-black text-slate-500 mb-2 uppercase tracking-wider">
+                                <div className="text-sm font-black text-slate-600 mb-2 uppercase tracking-wider">
                                   SDK Languages
                                 </div>
-                                <div className="flex flex-wrap gap-2 mt-1">
+                                <div className="flex flex-wrap gap-2.5 mt-1">
                                   {tool.api_sdk.sdk_languages.map((l) => (
                                     <Badge
                                       key={l}
-                                      className="bg-slate-50 text-slate-700 border-slate-100 font-black px-3 py-1 rounded-lg text-xs"
+                                      className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                                     >
                                       {l}
                                     </Badge>
@@ -1095,7 +1074,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                               href={tool.api_sdk.docs_url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-700 font-black text-sm inline-flex items-center gap-2 sm:col-span-2"
+                              className="text-blue-600 hover:text-blue-700 font-black text-base inline-flex items-center gap-2 sm:col-span-2"
                             >
                               View API Documentation{" "}
                               <ExternalLink className="w-4 h-4" />
@@ -1157,14 +1136,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.support_channels &&
                     tool.support_channels.length > 0 && (
                       <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                        <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                        <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                           <MessageSquare className="w-4 h-4" /> Support Channels
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2.5">
                           {tool.support_channels.map((c) => (
                             <Badge
                               key={c}
-                              className="bg-blue-50 text-blue-700 border-blue-100 font-black px-3 py-1.5 rounded-lg"
+                              className="h-auto bg-blue-50 text-blue-700 border-blue-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                             >
                               {c}
                             </Badge>
@@ -1175,14 +1154,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.security_compliance &&
                     tool.security_compliance.length > 0 && (
                       <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
-                        <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                        <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                           <Lock className="w-4 h-4" /> Security & Compliance
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2.5">
                           {tool.security_compliance.map((c) => (
                             <Badge
                               key={c}
-                              className="bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3 py-1.5 rounded-lg"
+                              className="h-auto bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                             >
                               {c}
                             </Badge>
@@ -1192,14 +1171,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     )}
                   {tool.license_types && tool.license_types.length > 0 && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm md:col-span-2">
-                      <h4 className="font-black text-slate-900 mb-8 flex items-center gap-3 uppercase text-[10px] tracking-widest text-slate-400">
+                      <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
                         <Tag className="w-4 h-4" /> License Types
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {tool.license_types.map((l) => (
                           <Badge
                             key={l}
-                            className="bg-slate-50 text-slate-700 border-slate-100 font-black px-3 py-1.5 rounded-lg"
+                            className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
                           >
                             {l}
                           </Badge>

@@ -240,8 +240,8 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     featureList: featureItems.length > 0 ? featureItems : undefined,
     releaseNotes: tool.release_notes_url || undefined,
     image: tool.logo_url || undefined,
-    softwareVersion: tool.version || undefined,
-    dateModified: tool.last_updated || undefined,
+    softwareVersion: undefined,
+    dateModified: undefined,
     offers: offerForTool(tool),
     aggregateRating: aggregateRatingFor(tool),
     review: tool.score ? {

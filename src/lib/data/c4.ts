@@ -1077,7 +1077,7 @@ export const c4Tools: Tool[] = [
       "Small Business"
     ],
     "official_url": "https://en.dwgfastview.com",
-    "pricing_url": "https://en.dwgfastview.com",
+    "pricing_url": "https://en.dwgfastview.com/upgrade",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
