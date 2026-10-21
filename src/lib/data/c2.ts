@@ -5932,5 +5932,154 @@ export const c2Tools: Tool[] = [
       "PDF",
       "GCODE"
     ]
+  },
+  {
+    "id": "t259",
+    "name": "FabRapid 3D",
+    "slug": "fabrapid-3d",
+    "logo_url": "/logos/fabrapid-3d.svg",
+    "short_desc": "Free, browser-based WebAssembly 3D & CAD format converter with zero server uploads and 1,600+ conversion pairs.",
+    "description": "FabRapid 3D is a modern, privacy-focused 3D and CAD file converter that runs entirely in the browser using WebAssembly. Supporting over 70 input formats and 23 export targets—including STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD—it processes files locally on the client's machine with zero cloud uploads or data retention risks. Designed for mechanical engineers, 3D printing enthusiasts, and Web3D developers, FabRapid 3D requires no account registration, features zero file size ceilings on local memory, and delivers rapid, watertight conversions across more than 1,600 format pairs.",
+    "category_id": "c2",
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "version": "Web",
+    "free_trial_days": 0,
+    "country": "United Kingdom",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "deployment_options": [
+      "Cloud",
+      "Web"
+    ],
+    "license_types": [
+      "Free",
+      "Commercial",
+      "Educational"
+    ],
+    "languages": [
+      "English"
+    ],
+    "industries": [
+      "3D Printing",
+      "Mechanical Engineering",
+      "Product Design",
+      "Game Development",
+      "Web3D & AR/VR",
+      "Industrial Automation"
+    ],
+    "core_features": [
+      "100% client-side conversion via browser WebAssembly with zero file uploads or cloud data retention",
+      "Extensive format support across 70+ 3D/CAD inputs and 23 export targets",
+      "Over 1,600 conversion pairs covering STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD",
+      "Direct STEP-to-STL and IGES-to-STEP tessellation pipelines optimized for 3D printing slicers",
+      "Web3D and AR export pipelines with automated PBR materials and mesh optimization",
+      "Zero registration, no subscriptions, and completely free unlimited usage"
+    ],
+    "user_scales": [
+      "Individuals",
+      "Small Business",
+      "Mid Market",
+      "Enterprise"
+    ],
+    "official_url": "https://3d-tools.fabrapid.com/?utm_source=cadguide",
+    "affiliate_url": null,
+    "score": 4.8,
+    "pros": [
+      "Zero data leakage: WebAssembly execution processes files entirely in local browser RAM without cloud transit",
+      "No account registration or software installation required for instant drag-and-drop conversions",
+      "Vast format interoperability spanning mechanical B-Rep CAD solids, 3D printing meshes, and Web3D assets",
+      "Completely free with no hidden paywalls, conversion limits, or watermark injections"
+    ],
+    "cons": [
+      "Performance on massive multi-gigabyte industrial assemblies depends on local workstation browser RAM",
+      "Does not include native parametric CAD feature tree editing or sketch modification tools"
+    ],
+    "tech_specs": {
+      "engine": "WebAssembly (Wasm) client-side geometry discretization kernel",
+      "multicore": "Multi-threaded client browser Web Workers execution",
+      "gpu_optimization": "WebGL / WebGPU hardware-accelerated 3D preview viewport",
+      "standards": [
+        "ISO 10303 (STEP AP203/AP214/AP242)",
+        "ANSI US PRO/IPO-100 (IGES 5.3)",
+        "Khronos glTF / GLB 2.0",
+        "Pixar OpenUSD",
+        "Stereolithography (STL ASCII & Binary)"
+      ]
+    },
+    "expert_verdict": "FabRapid 3D sets a new benchmark for web-based 3D format conversion. By shifting the entire computational workload from remote cloud servers to local client WebAssembly, it solves the CAD industry's biggest objection to online converters: intellectual property security. For engineering teams seeking fast, watertight conversions between STEP, STL, OBJ, and Web3D formats without installing bulky desktop software, FabRapid 3D is an exceptional, zero-friction choice.",
+    "faqs": [
+      {
+        "q": "What is FabRapid 3D?",
+        "a": "FabRapid 3D is a free, browser-based 3D file converter that runs locally via WebAssembly, supporting over 70 input formats and 23 export targets with no file uploads to external servers."
+      },
+      {
+        "q": "Are my CAD files uploaded to a remote server when using FabRapid 3D?",
+        "a": "No. Conversions execute entirely on your local machine using WebAssembly. Your CAD models and intellectual property never leave your browser or device, eliminating security and compliance concerns."
+      },
+      {
+        "q": "Which 3D and CAD formats does FabRapid 3D support?",
+        "a": "FabRapid 3D supports 70+ inputs and 23 export formats, including STEP (.stp/.step), IGES (.igs), STL, OBJ, FBX, GLB/glTF, PLY, and USD across more than 1,600 conversion pairs."
+      },
+      {
+        "q": "Is FabRapid 3D completely free to use?",
+        "a": "Yes. FabRapid 3D is 100% free with no account registration, monthly conversion caps, or watermarks."
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Free Web App",
+        "price": "Free",
+        "period": "lifetime",
+        "features": [
+          "100% client-side WebAssembly conversion",
+          "70+ input formats & 23 export formats",
+          "1,600+ conversion pairs",
+          "Zero file uploads & absolute data privacy",
+          "No account registration required"
+        ],
+        "is_popular": true
+      }
+    ],
+    "alternatives": [
+      "freecad",
+      "blender",
+      "meshlab",
+      "cloudcompare"
+    ],
+    "last_updated": "2026-10-21",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
+      "STL",
+      "OBJ",
+      "FBX",
+      "GLB",
+      "GLTF",
+      "PLY",
+      "USD",
+      "USDZ",
+      "DAE",
+      "3DS",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "IGES",
+      "STL",
+      "OBJ",
+      "FBX",
+      "GLB",
+      "GLTF",
+      "PLY",
+      "USD",
+      "3MF"
+    ]
   }
 ];

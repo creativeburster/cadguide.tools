@@ -3613,6 +3613,28 @@
     "country": "United Kingdom"
   },
   {
+    "id": "t259",
+    "name": "FabRapid 3D",
+    "slug": "fabrapid-3d",
+    "short_desc": "Free, browser-based WebAssembly 3D & CAD format converter with zero server uploads and 1,600+ conversion pairs.",
+    "score": 4.8,
+    "logo_url": "/logos/fabrapid-3d.svg",
+    "official_url": "https://3d-tools.fabrapid.com/?utm_source=cadguide",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "3D Printing",
+      "Mechanical Engineering",
+      "Product Design",
+      "Game Development",
+      "Web3D & AR/VR",
+      "Industrial Automation"
+    ],
+    "features": [],
+    "country": "United Kingdom"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",

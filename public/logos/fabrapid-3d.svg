@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Dark background with rounded corners -->
+  <rect width="512" height="512" rx="96" fill="#0a0a0a"/>
+  <!-- Isometric 3D cube -->
+  <!-- Top face - FabRapid deep green -->
+  <polygon points="256,112 384,186 256,260 128,186" fill="#0F9D58"/>
+  <!-- Left face - medium shade -->
+  <polygon points="128,186 256,260 256,408 128,334" fill="#0B7844"/>
+  <!-- Right face - dark shade -->
+  <polygon points="256,260 384,186 384,334 256,408" fill="#075A32"/>
+</svg>

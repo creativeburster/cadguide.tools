@@ -94,6 +94,7 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "esprit": "esprit.png",
   "etabs": "etabs.png",
   "exocad": "exocad.png",
+  "fabrapid-3d": "fabrapid-3d.svg",
   "featurecam": "featurecam.svg",
   "femap": "femap.png",
   "foran": "foran.png",
