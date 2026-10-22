@@ -674,6 +674,73 @@ function renderFormatLinks(p: FormatPage) {
   );
 }
 
+function FormatQuickToolsHub({ slug, formatName }: { slug: string; formatName: string }) {
+  const s = slug.toLowerCase();
+  const links: { title: string; badge: string; href: string; desc: string }[] = [];
+
+  if (s === 'ifc' || s === 'rvt') {
+    links.push(
+      { title: 'Revit (.RVT) to IFC Converter', badge: 'Top BIM Converter', href: '/convert/revit-to-ifc', desc: 'Convert native Revit projects to ISO 16739 IFC2x3 & IFC4.' },
+      { title: 'BIM IFC Model Size Optimizer', badge: 'Size Reducer', href: '/toolbox/ifc-model-size-optimizer', desc: 'Reduce bloated IFC exports by up to 85% via LoD & IFCZIP.' },
+      { title: 'IFC2x3 vs IFC4 vs IFC4.3 Matrix', badge: 'Standard Diff', href: '/toolbox/ifc2x3-vs-ifc4-vs-ifc4x3-matrix', desc: 'Compare schema classes, geometry kernels & global BIM mandates.' }
+    );
+  } else if (s === '3mf' || s === 'stl' || s === 'obj') {
+    links.push(
+      { title: 'STL / 3MF Mesh Polygon Decimator', badge: 'Size Reducer', href: '/toolbox/stl-mesh-decimator-reducer', desc: 'Reduce multi-million triangle meshes without losing print accuracy.' },
+      { title: 'Inventor IPT to STL Converter', badge: '3D Print Ready', href: '/convert/ipt-to-stl', desc: 'Export parametric mechanical parts to watertight 3D print meshes.' },
+      { title: 'Non-Manifold Mesh Defect Checker', badge: 'Slicer QA', href: '/toolbox/non-manifold-mesh-checker', desc: 'Verify watertight closure & normal orientation before slicing.' }
+    );
+  } else if (s === 'step' || s === 'iges' || s === 'sldprt' || s === 'catpart' || s === 'nxprt' || s === 'ipt') {
+    links.push(
+      { title: 'SLDPRT / CATPart / NX to STEP', badge: 'B-Rep Exchange', href: s === 'catpart' ? '/convert/catpart-to-step' : s === 'nxprt' ? '/convert/nx-prt-to-step' : '/toolbox/sldprt-to-step', desc: 'Lossless neutral ISO 10303-21 B-Rep solid assembly conversion.' },
+      { title: 'STEP Assembly Defeature & Reducer', badge: 'Size Optimizer', href: '/toolbox/step-file-size-reducer', desc: 'Strip internal fasteners & threads to shrink 300MB+ STEP files.' },
+      { title: 'STEP AP214 vs AP242 Comparator', badge: 'PMI Standard', href: '/toolbox/step-ap214-vs-step-ap242-comparator', desc: 'Compare automotive AP214 vs Model-Based Definition AP242.' }
+    );
+  } else {
+    links.push(
+      { title: 'DWG Bloat & File Size Reducer', badge: 'Size Optimizer', href: '/toolbox/dwg-file-size-reducer', desc: 'Purge orphaned DGN linetypes, RegApps & scale lists in seconds.' },
+      { title: 'Online CAD File Compressor', badge: '#1 Popular Utility', href: '/toolbox/online-cad-file-compressor', desc: 'Universal CAD & 3D assembly compression and preflight studio.' },
+      { title: 'AutoCAD DWG Version Matrix', badge: 'AC1018–AC1032', href: '/toolbox/autocad-dwg-version-feature-matrix', desc: 'Verify header versions and down-saving compatibility risks.' }
+    );
+  }
+
+  return (
+    <section className="my-8 p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-indigo-950 text-white border border-indigo-500/30 shadow-md">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div>
+          <span className="text-[10px] font-black uppercase tracking-widest text-indigo-400">
+            Instant {formatName} Engineering Utilities
+          </span>
+          <h2 className="text-lg font-black text-white">
+            Convert, Compress & Inspect {formatName} Files Online
+          </h2>
+        </div>
+        <Link href="/toolbox/online-cad-file-compressor" className="text-xs font-bold text-indigo-300 hover:text-white underline">
+          Universal File Compressor →
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {links.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-indigo-400/50 transition-all flex flex-col justify-between space-y-2"
+          >
+            <div>
+              <span className="inline-block text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 mb-1.5">
+                {item.badge}
+              </span>
+              <h3 className="text-sm font-bold text-white">{item.title}</h3>
+              <p className="text-xs text-slate-300 mt-1 leading-relaxed">{item.desc}</p>
+            </div>
+            <span className="text-xs font-extrabold text-indigo-300 pt-1">Launch Tool →</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 // --- MAIN CONTROLLER PAGE ROUTE ---
 
 export default async function FileFormatPage(
@@ -733,6 +800,8 @@ export default async function FileFormatPage(
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">{p.intro}</p>
           </header>
+
+          <FormatQuickToolsHub slug={slug} formatName={p.formatName} />
 
           {/* --- ASYMMETRICAL ORDER FLOW ENGINE BY ARCHETYPE --- */}
 

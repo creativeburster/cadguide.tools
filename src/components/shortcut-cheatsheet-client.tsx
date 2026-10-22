@@ -137,6 +137,112 @@ const CROSS_DISCOVERY_MAP: Record<string, { label: string; href: string; badge: 
       href: '/toolbox/stl-mesh-checker',
       badge: 'Print Prep',
       desc: 'Detect non-manifold edges, normal flips, and manifold voids'
+    },
+    {
+      label: 'STL / OBJ Mesh Decimator Calc',
+      href: '/toolbox/stl-mesh-decimator-reducer',
+      badge: 'Size Reducer',
+      desc: 'Calculate polygon reduction and ASCII-to-Binary STL file savings'
+    }
+  ],
+  nx: [
+    {
+      label: 'NX STEP AP242 & PMI Export Troubleshooter',
+      href: '/toolbox/nx-step-ap242-pmi-export-troubleshooter',
+      badge: 'NX Diagnostic',
+      desc: 'Fix missing sub-assemblies, empty Reference Sets, and lost 3D PMI in NX STEP exports'
+    },
+    {
+      label: 'NX (.PRT) to STEP Converter Guide',
+      href: '/convert/nx-prt-to-step',
+      badge: 'B-Rep Exchange',
+      desc: 'Export Siemens NX Parasolid assemblies to ISO 10303-21 STEP AP214/AP242'
+    },
+    {
+      label: 'Cross-CAD Command & Feature Translator',
+      href: '/toolbox/cad-command-cross-translator',
+      badge: 'Cross-Platform',
+      desc: 'Translate commands between Siemens NX, SolidWorks, CATIA, Creo, and AutoCAD'
+    }
+  ],
+  civil: [
+    {
+      label: 'Civil 3D Corridor & Surface Lag Optimizer',
+      href: '/toolbox/civil3d-corridor-surface-lag-optimizer',
+      badge: 'Performance Fix',
+      desc: 'Eliminate TIN surface regen freezes, missing .mms errors, and slow corridor rebuilds'
+    },
+    {
+      label: 'DWG File Size & RegApp Bloat Reducer',
+      href: '/toolbox/dwg-file-size-reducer',
+      badge: 'DWG Cleaner',
+      desc: 'Purge orphaned DGN linetypes, RegApps, and proxy graphics from heavy site DWGs'
+    },
+    {
+      label: '2026 CAD Workstation Hardware Spec Builder',
+      href: '/toolbox/cad-hardware-workstation-spec-builder',
+      badge: 'Hardware Guide',
+      desc: 'Optimal single-core GHz CPU, RAM, and NVMe specs for Civil 3D LiDAR surfaces'
+    }
+  ],
+  kicad: [
+    {
+      label: 'PCB Trace Width & Current Calculator',
+      href: '/toolbox/pcb-trace-width-calculator',
+      badge: 'IPC-2221',
+      desc: 'Calculate internal and external copper trace width for target temperature rise'
+    },
+    {
+      label: 'Gerber & Drill File Pre-Flight Viewer',
+      href: '/toolbox/gerber-viewer',
+      badge: 'CAM Check',
+      desc: 'Inspect RS-274X Gerber layers, solder mask clearances, and Excellon drill hits'
+    },
+    {
+      label: 'Electrical Schematic Symbols Reference',
+      href: '/toolbox/electrical-drawing-symbols-reference',
+      badge: 'IEC / NFPA',
+      desc: 'Cross-reference IEC 60617 and IEEE/NFPA 79 schematic symbols and tags'
+    }
+  ],
+  catia: [
+    {
+      label: 'CATIA (.CATPart) to STEP Converter',
+      href: '/convert/catpart-to-step',
+      badge: 'Top Converter',
+      desc: 'Convert CATIA V5/3DEXPERIENCE parts and products to neutral STEP AP214/AP242'
+    },
+    {
+      label: 'STEP Assembly Defeature & Size Reducer',
+      href: '/toolbox/step-file-size-reducer',
+      badge: 'Size Optimizer',
+      desc: 'Shrink 300MB+ automotive & aerospace STEP assemblies for fast supplier exchange'
+    },
+    {
+      label: 'Cross-CAD Command & Feature Translator',
+      href: '/toolbox/cad-command-cross-translator',
+      badge: 'Migration',
+      desc: 'Map CATIA Part Design commands (Pad, Pocket, Shaft) to SolidWorks & Siemens NX'
+    }
+  ],
+  progecad: [
+    {
+      label: '2026 Perpetual CAD Migration Matrix',
+      href: '/toolbox/perpetual-cad-migration-compatibility-matrix',
+      badge: 'Perpetual Buyout',
+      desc: 'Compare progeCAD, ZWCAD, BricsCAD, and GStarCAD one-time buyout licensing & LISP support'
+    },
+    {
+      label: '5-Year Subscription vs. Perpetual TCO Calc',
+      href: '/toolbox/cad-subscription-vs-perpetual-roi-calculator',
+      badge: 'ROI Calculator',
+      desc: 'Calculate 5-year team license savings when switching from annual rental to perpetual CAD'
+    },
+    {
+      label: 'DWG Bloat & File Size Reducer',
+      href: '/toolbox/dwg-file-size-reducer',
+      badge: 'DWG Optimizer',
+      desc: 'Clean bloated DWG files for smooth panning and plotting in IntelliCAD / DWG engines'
     }
   ]
 };
@@ -245,6 +351,12 @@ export default function ShortcutCheatsheetClient({
         href: '/toolbox/online-cad-file-compressor',
         badge: 'Popular',
         desc: 'Reduce file sizes of 3D models and drawing databases'
+      },
+      {
+        label: 'Cross-CAD Command & Feature Translator',
+        href: '/toolbox/cad-command-cross-translator',
+        badge: 'Cross-Platform',
+        desc: 'Map equivalent 2D/3D commands across AutoCAD, SolidWorks, NX, Inventor, and Creo'
       },
       {
         label: 'Browse CAD Comparisons',

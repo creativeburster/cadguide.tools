@@ -193,6 +193,20 @@ function WorkstationOptimizationWidget({ slug }: { slug: string }) {
           </div>
         ))}
       </div>
+      <div className="mt-4 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+        <Link
+          href="/toolbox/cad-hardware-workstation-spec-builder"
+          className="inline-flex items-center gap-1.5 text-xs font-extrabold text-indigo-600 hover:text-indigo-800 bg-indigo-50 px-3.5 py-2 rounded-xl border border-indigo-100 transition-all"
+        >
+          <span>🖥️ Open 2026 CAD Workstation Hardware Spec Matrix →</span>
+        </Link>
+        <Link
+          href="/toolbox/cad-command-cross-translator"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-indigo-600 px-3 py-2 rounded-xl border border-slate-200 transition-all"
+        >
+          <span>🔄 Cross-CAD Command Translator →</span>
+        </Link>
+      </div>
     </div>
   );
 }
@@ -234,6 +248,20 @@ function MobileCapabilityWidget({ slug }: { slug: string }) {
             {p}
           </div>
         ))}
+      </div>
+      <div className="mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-900 text-white p-4 rounded-xl">
+        <div className="space-y-0.5">
+          <span className="text-[10px] font-black uppercase tracking-wider text-blue-400">Sponsored • Instant Mobile & Web CAD</span>
+          <p className="text-xs font-bold text-slate-200">Need to open, measure, and mark up DWG/3D files on Android, iOS, or Browser with zero lag?</p>
+        </div>
+        <a
+          href="https://en.dwgfastview.com/"
+          target="_blank"
+          rel="sponsored noopener noreferrer"
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-lg shrink-0 text-center transition-all"
+        >
+          Launch DWG FastView →
+        </a>
       </div>
     </div>
   );

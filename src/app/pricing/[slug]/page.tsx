@@ -398,10 +398,30 @@ function PerpetualBreakEvenWidget() {
           </table>
         </div>
 
-        <div className="p-4 rounded-xl bg-indigo-950/40 border border-indigo-900 text-xs leading-relaxed">
+        <div className="p-4 rounded-xl bg-indigo-950/40 border border-indigo-900 text-xs leading-relaxed space-y-4">
           <p className="text-slate-300">
             <strong className="text-white uppercase">AutoCAD Alternatives & LISP Compatibility:</strong> Modern perpetual competitors (including BricsCAD, ZWCAD, GstarCAD, nanoCAD) are designed as direct AutoCAD drop-in replacements. They support native DWG files, identical keyboard command aliases, and full LISP programming API integration, enabling design offices to scale down CAD costs by over 60% with zero drafting training downtime.
           </p>
+          <div className="pt-3 border-t border-indigo-800/60 flex flex-wrap items-center gap-3">
+            <Link
+              href="/toolbox/cad-subscription-vs-perpetual-roi-calculator"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-sm transition-all"
+            >
+              <span>🧮 5-Year Subscription vs. Perpetual TCO Calculator →</span>
+            </Link>
+            <Link
+              href="/toolbox/perpetual-cad-migration-compatibility-matrix"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-indigo-200 border border-indigo-400/30 font-bold text-xs transition-all"
+            >
+              <span>📊 2026 Perpetual CAD Migration Matrix →</span>
+            </Link>
+            <Link
+              href="/toolbox/cad-floating-license-seat-calculator"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/15 text-slate-300 border border-white/10 font-bold text-xs transition-all"
+            >
+              <span>🔑 Floating Network Seat Ratio Estimator →</span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

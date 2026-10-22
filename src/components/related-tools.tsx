@@ -31,6 +31,55 @@ export interface WorkflowToolItem {
 }
 
 const TOOL_POOL: WorkflowToolItem[] = [
+  {
+    name: 'DWG Bloat & File Size Reducer',
+    desc: 'Diagnose 50MB+ bloated AutoCAD DWG files and purge orphaned DGN linetypes & RegApps.',
+    link: '/toolbox/dwg-file-size-reducer',
+    icon: Zap,
+    tag: 'Size Reducer',
+    domain: 'aec',
+  },
+  {
+    name: 'STEP Assembly Defeature & Size Optimizer',
+    desc: 'Calculate 3D STEP/SLDASM file size reduction by stripping internal hardware and threads.',
+    link: '/toolbox/step-file-size-reducer',
+    icon: HardDrive,
+    tag: 'Size Optimizer',
+    domain: 'mcad',
+  },
+  {
+    name: '5-Year CAD Subscription vs. Perpetual TCO',
+    desc: 'Compare 5-year cumulative SaaS rental costs vs. one-time perpetual buyout CAD alternatives.',
+    link: '/toolbox/cad-subscription-vs-perpetual-roi-calculator',
+    icon: Scale,
+    tag: 'ROI & TCO',
+    domain: 'general',
+  },
+  {
+    name: '2026 CAD Workstation Hardware Spec Matrix',
+    desc: 'Match your CAD/BIM software and assembly size to optimal CPU single-core GHz, RAM & GPU.',
+    link: '/toolbox/cad-hardware-workstation-spec-builder',
+    icon: Cpu,
+    tag: 'Hardware Guide',
+    domain: 'mcad',
+  },
+  {
+    name: 'SmartPlant 3D (SP3D) Piping Cheat Sheet',
+    desc: 'Searchable PinPoint locks, piping routing hotkeys, and isometric check commands for SP3D.',
+    link: '/toolbox/smartplant-3d-shortcuts-sheet',
+    icon: LayoutGrid,
+    tag: 'Plant & Piping',
+    domain: 'bim',
+  },
+  {
+    name: 'STL / 3MF Mesh Polygon Decimator',
+    desc: 'Calculate optimal triangle decimation ratios and binary STL byte size for 3D printing.',
+    link: '/toolbox/stl-mesh-decimator-reducer',
+    icon: Printer,
+    tag: 'Mesh Reducer',
+    domain: '3dprint',
+  },
+
   // --- MCAD & Mechanical Engineering Tools ---
   {
     name: 'K-Factor & Bend Allowance Calc',
