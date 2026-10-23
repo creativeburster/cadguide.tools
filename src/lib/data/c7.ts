@@ -4610,7 +4610,7 @@ export const c7Tools: Tool[] = [
     "pricing_type": "Subscription",
     "starting_price": 0,
     "quote_only": true,
-    "free_trial_days": 14,
+    "free_trial_days": 30,
     "platforms": [
       "Web",
       "Cloud"
@@ -4625,8 +4625,8 @@ export const c7Tools: Tool[] = [
     "core_features": [
       "Single connected product record",
       "Multi-level BOM & assembly tree management",
-      "CAD-to-BOM import and part tracking",
-      "Supplier, RFQ & procurement workflows",
+      "Direct Onshape App Store integration & CAD metadata sync",
+      "Supplier, RFQ & purchase order procurement tracking",
       "Cost rollups and build-readiness checks",
       "Cloud collaboration without spreadsheet chaos"
     ],
@@ -4636,11 +4636,12 @@ export const c7Tools: Tool[] = [
       "Rapid Prototyping Teams"
     ],
     "official_url": "https://www.accelygen.com",
-    "pricing_url": "https://www.accelygen.com",
+    "pricing_url": "https://www.accelygen.com/Pricing",
     "affiliate_url": null,
-    "score": 4.3,
+    "score": 4.5,
     "pros": [
       "Eliminates spreadsheet BOM chaos with an intuitive, connected product record",
+      "Seamless Onshape App Store integration connects directly with Onshape cloud CAD assemblies",
       "Tailored specifically for agile hardware startups and rapid prototyping teams",
       "Unifies BOM structure, RFQs, suppliers, and procurement into one workspace"
     ],
@@ -4648,6 +4649,28 @@ export const c7Tools: Tool[] = [
       "Newer platform with an evolving third-party integration ecosystem",
       "Cloud-first focus may not fit air-gapped on-premise defense environments",
       "Custom enterprise quotes required for high-volume manufacturing deployments"
+    ],
+    "screenshots": [
+      {
+        "url": "/screenshots/accelygen/onshape-store-hero-image.png",
+        "alt": "Accelygen Cloud PLM & BOM Management for Onshape",
+        "caption": "Official Onshape App Store integration for agile hardware engineering"
+      },
+      {
+        "url": "/screenshots/accelygen/assemblies.png",
+        "alt": "Accelygen Multi-level CAD Assembly Tree & BOM Structure",
+        "caption": "Multi-level assembly management and live bill-of-materials"
+      },
+      {
+        "url": "/screenshots/accelygen/orders.png",
+        "alt": "Accelygen Purchase Orders & Procurement Tracking",
+        "caption": "Direct procurement workflows, RFQs, and supplier orders"
+      },
+      {
+        "url": "/screenshots/accelygen/build-releases.png",
+        "alt": "Accelygen Build Releases & Manufacturing Readiness",
+        "caption": "Engineering change orders and build release verification"
+      }
     ],
     "tech_specs": {
       "engine": "Cloud-native PLM",
@@ -4747,18 +4770,19 @@ export const c7Tools: Tool[] = [
     "version": "Cloud SaaS",
     "last_updated": "2026-09-11",
     "file_formats_in": [
-      "PDB",
-      "MOL",
-      "SDF",
       "CSV",
-      "XYZ"
+      "XLSX",
+      "STEP",
+      "SLDASM",
+      "SLDPRT",
+      "JSON"
     ],
     "file_formats_out": [
-      "PDB",
-      "MOL",
-      "SDF",
       "CSV",
-      "PDF Analysis"
+      "XLSX",
+      "PDF",
+      "STEP",
+      "JSON"
     ]
   },
   {
