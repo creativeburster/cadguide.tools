@@ -2780,17 +2780,6 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ["steel","materials","calculator"]
   },
   {
-    slug: 'gypsum-board-quantity-calculator',
-    title: 'Gypsum Board Quantity Calculator',
-    description: 'Calculate gypsum board sheets, screws, and joint tape for ceiling and wall installations.',
-    detailDesc: 'sheets = ceil(A*(1+waste)/sheet_area)',
-    category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
-    origin: 'native',
-    keywords: ["gypsum","bim","calculator"]
-  },
-  {
     slug: 'hvac-load-room-calculator',
     title: 'HVAC Room Load Calculator',
     description: 'Calculate heating and cooling load for a single room from envelope and internal gains.',
@@ -3562,17 +3551,6 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ["Calculate","weight","and","volume","of","engineering","materials","from","dimensions."]
   },
   {
-    slug: 'thermal-conductivity-calculator',
-    title: 'Thermal Conductivity Calculator',
-    description: 'Calculate heat transfer rate through materials using thermal conductivity.',
-    detailDesc: 'Q = k*A*dT/L',
-    category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
-    origin: 'native',
-    keywords: ["Calculate","heat","transfer","rate","through","materials","using","thermal","conductivity."]
-  },
-  {
     slug: 'thermal-expansion-calculator',
     title: 'Thermal Expansion Calculator',
     description: 'Calculate linear and volumetric thermal expansion for engineering materials.',
@@ -3760,17 +3738,6 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     keywords: ["Calculate","lift","force","from","velocity","wing","area","and","lift","coefficient."]
   },
   {
-    slug: 'manometer-calculator',
-    title: 'Manometer Pressure Calculator',
-    description: 'Calculate pressure difference from manometer fluid height. Free browser-based engineering calculator.',
-    detailDesc: 'dP = (rho_fluid - rho_air) * g * h',
-    category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
-    origin: 'native',
-    keywords: ["Calculate","pressure","difference","from","manometer","fluid","height."]
-  },
-  {
     slug: 'notch-stress-calculator',
     title: 'Notch Stress Concentration Calculator',
     description: 'Calculate stress concentration factor at notches and fillets. Free browser-based engineering calculator.',
@@ -3802,17 +3769,6 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     releasedDate: '2026-07-16',
     origin: 'native',
     keywords: ["Calculate","gasket","seating","pressure","and","bolt","torque","for","flanged","joints."]
-  },
-  {
-    slug: 'vibration-frequency-calculator',
-    title: 'Natural Frequency Calculator',
-    description: 'Calculate natural frequency of spring-mass and beam systems. Free browser-based engineering calculator.',
-    detailDesc: 'fn = 1/(2pi)*sqrt(k/m)',
-    category: 'calculator',
-    status: 'released',
-    releasedDate: '2026-07-16',
-    origin: 'native',
-    keywords: ["Calculate","natural","frequency","of","spring-mass","and","beam","systems."]
   },
   {
     slug: 'gyroscope-precession-calculator',

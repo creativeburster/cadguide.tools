@@ -30,3 +30,9 @@
 
 # 7. Methodology alias redirect
 /editorial-standards /about#methodology 301
+
+# 8. Duplicate calculators consolidated (same formula, same title) — 2026-10-26
+/toolbox/vibration-frequency-calculator /toolbox/natural-frequency-calculator 301
+/toolbox/manometer-calculator /toolbox/manometer-pressure-calculator 301
+/toolbox/gypsum-board-quantity-calculator /toolbox/drywall-quantity-calculator 301
+/toolbox/thermal-conductivity-calculator /toolbox/heat-transfer-conduction-calculator 301

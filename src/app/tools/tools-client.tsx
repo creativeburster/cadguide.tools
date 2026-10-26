@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useEffect, useCallback, useDeferredValue } from 'react';
+import { useState, useMemo, Suspense, useEffect, useCallback, useDeferredValue, type ReactNode } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { tools, categories, Tool } from '@/lib/data';
 import { Card } from '@/components/ui/card';
@@ -933,7 +933,7 @@ function ToolsList() {
   );
 }
 
-export default function ToolsDirectoryPage() {
+export default function ToolsDirectoryPage({ fallback }: { fallback?: ReactNode }) {
   return (
     <main className="max-w-[1360px] mx-auto px-4 py-12 min-h-screen">
       <div className="mb-10 text-center">
@@ -946,7 +946,7 @@ export default function ToolsDirectoryPage() {
         </p>
       </div>
 
-      <Suspense fallback={<div>Loading tools...</div>}>
+      <Suspense fallback={fallback ?? <div>Loading tools...</div>}>
         <ToolsList />
       </Suspense>
     </main>

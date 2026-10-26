@@ -30,7 +30,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 ### 3D CAD & Mesh Conversion Hub
 - [3D Conversion Hub](https://cadguide.tools/convert) — Comprehensive benchmark and compatibility directory for 47 bidirectional CAD and polygon format conversions.
 - [STEP to STL](https://cadguide.tools/convert/step-to-stl) — Tessellation accuracy, chordal deviation guidelines, and watertight mesh preparation.
-- [STL to STEP](https://cadguide.tools/convert/stl-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
+- [SLDPRT to STEP](https://cadguide.tools/convert/sldprt-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
 - [IGES to STEP](https://cadguide.tools/convert/iges-to-step) — Legacy NURBS surface stitching and ISO 10303-21 solid manifold migration.
 
 ### Interactive Engineering Toolbox (651 Tools)

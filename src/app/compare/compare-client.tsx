@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, Suspense, useRef } from 'react';
+import { useState, useMemo, Suspense, useRef, type ReactNode } from 'react';
 import { tools, Tool } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -597,9 +597,9 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
   );
 }
 
-export default function ComparePage({ initialEditorPicks = [], initialAllPairs = [] }: CompareContentProps) {
+export default function ComparePage({ initialEditorPicks = [], initialAllPairs = [], fallback }: CompareContentProps & { fallback?: ReactNode }) {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading comparison...</div>}>
+    <Suspense fallback={fallback ?? <div className="min-h-screen flex items-center justify-center">Loading comparison...</div>}>
       <CompareContent initialEditorPicks={initialEditorPicks} initialAllPairs={initialAllPairs} />
     </Suspense>
   );
