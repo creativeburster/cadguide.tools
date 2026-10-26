@@ -188,13 +188,13 @@ const CROSS_DISCOVERY_MAP: Record<string, { label: string; href: string; badge: 
   kicad: [
     {
       label: 'PCB Trace Width & Current Calculator',
-      href: '/toolbox/pcb-trace-width-calculator',
+      href: '/toolbox/ipc-2221-pcb-trace-width-calculator',
       badge: 'IPC-2221',
       desc: 'Calculate internal and external copper trace width for target temperature rise'
     },
     {
       label: 'Gerber & Drill File Pre-Flight Viewer',
-      href: '/toolbox/gerber-viewer',
+      href: '/toolbox/gerber-rs274x-drill-file-checker',
       badge: 'CAM Check',
       desc: 'Inspect RS-274X Gerber layers, solder mask clearances, and Excellon drill hits'
     },

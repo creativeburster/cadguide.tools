@@ -4,7 +4,7 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "AutoCAD WBLOCK Command (Native tile writing instructions)",
+    "name": "AutoCAD WBLOCK & LAYISO Workflow (Native Local Export)",
     "rating": 9.9,
     "metrics": [
       {
@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Multi-file drag queue is not supported"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "Run via CAD built-in commands WBLOCK Combined with Layer Isolation (LAYISO) it is the cleanest, the safest layer splitting rule."
+    "verdict": "Combining native `LAYISO` and `WBLOCK` (or an AutoLISP loop) exports clean per-discipline DWG files locally with zero coordinate drift."
   },
   {
     "name": "Any CAD Layer Splitter Script",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Requires a little basic script configuration"
     ],
     "officialUrl": "https://github.com/mozman/ezdxf",
-    "verdict": "Written based on ODA library Python A drawing processing script that can quickly divide the hierarchical structure of hundreds of drawings on an offline computer."
+    "verdict": "Open-source Python library (`ezdxf`) capable of batch-splitting DXF/DWG files by layer prefix on offline engineering workstations."
   },
   {
     "name": "Convertio Bulk Separator",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Perform local PURE purification",
-    "desc": "Run PURGE before splitting to clean up unreferenced empty layers, this prevents the split sub-drawings from still containing a bunch of meaningless empty layer lists."
+    "desc": "Run `-PURGE` before splitting so exported sub-drawings only contain active discipline layers rather than hundreds of empty template layers."
   },
   {
     "title": "Absolutely preserve coordinate system consistency",
@@ -96,7 +96,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Off-network stand-alone LISP script deployment",
-    "desc": "The processing of the enterprise's sensitive general picture requires the use of AutoLISP or in a completely disconnected environment. Python Offline script splits output with one click."
+    "desc": "For confidential master site plans, run automated AutoLISP or Python (`ezdxf`) layer-splitting scripts locally on your workstation."
   }
 ];
 const FAQS = [
@@ -117,7 +117,7 @@ export default function OnlineDwgLayerSplitterCloudClient() {
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="When managing master site plans containing architectural, structural, and MEP layers in a single file, engineers often need to split discipline layers into standalone DWG files for subcontractors. Automated layer splitters batch-export layer groups via WBLOCK while preserving the shared (0,0,0) world coordinate origin."
-      riskWarning="The general map represents the overall geographical arrangement and all confidentiality of the project. Uploading the general map to a public cloud service provider is very easy to encounter global leaks and compliance audits. Please first load a minimalist file in local AutoCAD AutoLISP Scripts are used to split local layers, and direct unpacking and processing on the public network are prohibited."
+      riskWarning="Master coordination drawings contain complete site layouts, coordinates, and multi-discipline designs. Avoid uploading confidential master DWGs to public cloud splitters; use local AutoLISP or `WBLOCK` automation instead."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

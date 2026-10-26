@@ -27,6 +27,7 @@ const MODE_BY_SLUG: Record<string, { mode: Mode; accept: string; hint: string }>
   'svg-to-jpg-png-converter': { mode: 'svg-raster', accept: '.svg', hint: 'SVG file' },
   'svg-to-pdf-converter': { mode: 'svg-pdf', accept: '.svg', hint: 'SVG file' },
   'dxf-info-extractor': { mode: 'dxf-info', accept: '.dxf', hint: 'ASCII DXF' },
+  'dxf-bom-extractor': { mode: 'dxf-info', accept: '.dxf', hint: 'ASCII DXF — extracts INSERT block references, layer counts & BOM CSV' },
 };
 
 export function workbenchSupports(slug: string): boolean {

@@ -116,8 +116,8 @@ export default function OnlinePointCloudToMeshConverterClient() {
       title="Online Point Cloud (LAS/PTS) to Watertight Mesh Converter"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Billions of point cloud coordinate data (LAS/PTS/XYZ) obtained by lidar scanning, if directly loaded into ordinary modeling software, it is easy to cause the running memory to burst directly. Therefore, we need to use cloud algorithms to reduce noise and streamline point clouds, and reconstructed into a closed geometric mesh (Watertight Mesh, such as OBJ, DXF, STL) ."
-      riskWarning="Surveying and 3D scanning data (such as topographic maps, Digital scanning of historical buildings, sensitive defense factories, etc.) It is highly restricted data. Please ensure that the cloud platform you upload complies with the national data export compliance standards. For high-density projects, please use the open source CloudCompare on the local LAN cluster for processing."
+      painPointDesc="Raw 3D laser scans (`.las`, `.pts`, `.e57`, `.xyz`) contain tens of millions of unstructured points that cannot be directly boolean-modeled in standard CAD packages. Converting point clouds into watertight polygon meshes (`.stl`, `.obj`, `.ply`) requires outlier removal, normal estimation, and Screened Poisson or Ball-Pivoting surface reconstruction."
+      riskWarning="3D scan datasets of industrial plants, reverse-engineered mechanical parts, and civil infrastructure are highly confidential. Process point cloud meshing locally using open-source tools like CloudCompare and MeshLab on dedicated workstations rather than public cloud uploaders."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

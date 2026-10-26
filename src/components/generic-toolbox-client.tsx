@@ -2745,8 +2745,67 @@ ${pts.join('\n')}`;
       };
     }
 
-    // Default generator: Involute Gear / Box Joint ASCII DXF Generator
-    const pitchR = Math.max(10, (paramA * Math.max(6, paramB)) / 200);
+    // Default generator: True Mathematical Involute Spur Gear ASCII DXF Generator (ISO 53 / DIN 867)
+    const z = Math.max(8, Math.min(120, Math.round(paramB)));
+    const m = Math.max(0.5, Number(paramC) || 2);
+    const alphaDeg = Math.max(14.5, Math.min(25, (paramA / 100) * 20 || 20));
+    const alpha = (alphaDeg * Math.PI) / 180;
+    const rp = (m * z) / 2;
+    const rb = rp * Math.cos(alpha);
+    const ra = rp + m;
+    const rf = Math.max(1, rp - 1.25 * m);
+    const boreR = Math.max(1.5, Math.min(rf * 0.55, m * 2.5));
+    const invAlpha = Math.tan(alpha) - alpha;
+    const halfToothAngle = Math.PI / (2 * z) + invAlpha;
+
+    const entityLines: string[] = [];
+    const addDxfLine = (x1: number, y1: number, x2: number, y2: number, layer = 'GEAR_PROFILE') => {
+      entityLines.push(
+        `0\nLINE\n8\n${layer}\n10\n${x1.toFixed(4)}\n20\n${y1.toFixed(4)}\n30\n0.0\n11\n${x2.toFixed(4)}\n21\n${y2.toFixed(4)}\n31\n0.0`
+      );
+    };
+
+    const rStart = Math.max(rb, rf);
+    const uMax = Math.sqrt(Math.max(0, (ra / rb) ** 2 - 1));
+    const uMin = Math.sqrt(Math.max(0, (rStart / rb) ** 2 - 1));
+    const steps = 6;
+    const perimeterPts: Array<[number, number]> = [];
+
+    for (let tIdx = 0; tIdx < z; tIdx++) {
+      const centerAng = (2 * Math.PI * tIdx) / z;
+      const leftFlank: Array<[number, number]> = [];
+      const rightFlank: Array<[number, number]> = [];
+
+      // Radial root segment if dedendum circle is smaller than base circle
+      if (rf < rb) {
+        const rootLeftAng = centerAng - halfToothAngle;
+        leftFlank.push([rf * Math.cos(rootLeftAng), rf * Math.sin(rootLeftAng)]);
+      }
+
+      for (let i = 0; i <= steps; i++) {
+        const u = uMin + ((uMax - uMin) * i) / steps;
+        const r = rb * Math.sqrt(1 + u * u);
+        const inv = u - Math.atan(u);
+        const angL = centerAng - (halfToothAngle - inv);
+        const angR = centerAng + (halfToothAngle - inv);
+        leftFlank.push([r * Math.cos(angL), r * Math.sin(angL)]);
+        rightFlank.unshift([r * Math.cos(angR), r * Math.sin(angR)]);
+      }
+
+      if (rf < rb) {
+        const rootRightAng = centerAng + halfToothAngle;
+        rightFlank.push([rf * Math.cos(rootRightAng), rf * Math.sin(rootRightAng)]);
+      }
+
+      perimeterPts.push(...leftFlank, ...rightFlank);
+    }
+
+    for (let i = 0; i < perimeterPts.length; i++) {
+      const [x1, y1] = perimeterPts[i];
+      const [x2, y2] = perimeterPts[(i + 1) % perimeterPts.length];
+      addDxfLine(x1, y1, x2, y2, 'GEAR_TEETH');
+    }
+
     const ext = '.dxf';
     const code = `0
 SECTION
@@ -2762,10 +2821,11 @@ ENDSEC
 SECTION
 2
 ENTITIES
+${entityLines.join('\n')}
 0
 CIRCLE
 8
-PITCH_CIRCLE
+PITCH_REFERENCE
 10
 0.0
 20
@@ -2773,11 +2833,11 @@ PITCH_CIRCLE
 30
 0.0
 40
-${pitchR.toFixed(4)}
+${rp.toFixed(4)}
 0
 CIRCLE
 8
-OUTER_ADDENDUM
+CENTER_BORE
 10
 0.0
 20
@@ -2785,30 +2845,18 @@ OUTER_ADDENDUM
 30
 0.0
 40
-${(pitchR + paramC * 2).toFixed(4)}
-0
-CIRCLE
-8
-ROOT_DEDENDUM
-10
-0.0
-20
-0.0
-30
-0.0
-40
-${Math.max(2, pitchR - paramC * 2.5).toFixed(4)}
+${boreR.toFixed(4)}
 0
 ENDSEC
 0
 EOF`;
     return {
-      labelA: 'Profile Scale / Pitch Factor',
-      labelB: 'Tooth / Tab Count (Z)',
-      labelC: 'Module m / Material Thickness (mm)',
+      labelA: `Pressure Angle Factor (${alphaDeg.toFixed(1)}° Standard)`,
+      labelB: 'Number of Teeth (Z)',
+      labelC: 'Gear Module m (mm)',
       ext,
-      filename: `${tool.slug}${ext}`,
-      lang: 'AutoCAD ASCII Drawing Exchange (.DXF)',
+      filename: `${tool.slug}-Z${z}-M${m}${ext}`,
+      lang: `ISO 53 Involute Spur Gear Profile (${z} Teeth, m=${m}mm, α=${alphaDeg.toFixed(1)}°) (.DXF)`,
       code,
     };
   }, [tool.slug, tool.title, paramA, paramB, paramC]);
@@ -2882,6 +2930,68 @@ EOF`;
     'stl-mesh-decimator-reducer',
     'ifc-model-size-optimizer'
   ].includes(tool.slug);
+
+  const primaryThirdPartyVendor = useMemo(() => {
+    const s = tool.slug.toLowerCase();
+    if (s.includes('scan2cad')) {
+      return { name: 'Scan2CAD Official Suite', badge: 'Official Vendor', desc: 'AI-powered raster-to-vector conversion for architectural PDFs, scanned blueprints, and CNC DXF/DWG profiles.', url: 'https://www.scan2cad.com/' };
+    }
+    if (s.includes('cloudconvert')) {
+      return { name: 'CloudConvert CAD Converter', badge: 'Official Cloud API', desc: 'ISO-27001 certified cloud conversion supporting DWG, DXF, EPS, WMF, CGM, SVG, and PDF vector formats.', url: 'https://cloudconvert.com/cad-converter' };
+    }
+    if (s.includes('autodwg')) {
+      return { name: 'AutoDWG Converter Suite', badge: 'Official Vendor', desc: 'Dedicated standalone batch DWG/DXF/DWF to vector PDF and raster image conversion engine (R14–2026).', url: 'https://www.autodwg.com/pdf/' };
+    }
+    if (s.includes('anydwg')) {
+      return { name: 'AnyDWG Software', badge: 'Official Vendor', desc: 'Standalone batch DWG/DXF translator for PDF, Word DOC, SVG, and raster image outputs without AutoCAD.', url: 'https://anydwg.com/' };
+    }
+    if (s.includes('zamzar')) {
+      return { name: 'Zamzar CAD Conversion Portal', badge: 'Official Cloud', desc: 'Browser-based multi-format CAD to TIFF, BMP, GIF, PNG, and PDF document converter.', url: 'https://www.zamzar.com/converters/cad/' };
+    }
+    if (s.includes('total-cad-converter') || s.includes('plt-hpgl')) {
+      return { name: 'CoolUtils Total CAD Converter', badge: 'Official Vendor', desc: 'Batch convert legacy plotter PLT, HPGL, CGM, DWG, and DXF files to PDF/A, TIFF, and JPEG.', url: 'https://www.coolutils.com/TotalCADConverter' };
+    }
+    if (s.includes('emachineshop')) {
+      return { name: 'eMachineShop CAD Converter', badge: 'Official Free Tool', desc: 'Free online mechanical CAD translator for DXF, IGES, STEP, and STL manufacturing files.', url: 'https://www.emachineshop.com/free-online-cad-file-converter/' };
+    }
+    if (s.includes('mygeodata') || s.includes('shapefile') || s.includes('kml-gis')) {
+      return { name: 'MyGeodata Cloud GIS/CAD', badge: 'Official GIS Engine', desc: 'Convert between AutoCAD DWG/DXF, ESRI Shapefile (SHP), GeoJSON, and KML/KMZ with EPSG CRS transformation.', url: 'https://mygeodata.cloud/converter/' };
+    }
+    if (s.includes('datakit') || s.includes('crossmanager')) {
+      return { name: 'DataKit CrossManager', badge: 'Official B-Rep Translator', desc: 'Industrial native CAD translator supporting CATIA V5/V6, NX, Creo, SolidWorks, Inventor, JT, and STEP AP242.', url: 'https://www.datakit.com/en/cross_manager.php' };
+    }
+    if (s.includes('omniverse') || s.includes('cad-to-usd')) {
+      return { name: 'NVIDIA Omniverse CAD Converter', badge: 'Official USD Pipeline', desc: 'Convert industrial B-Rep assemblies (STEP, IGES, SolidWorks, NX, Creo, CATIA) into OpenUSD (.usd/.usdz) scenes.', url: 'https://docs.omniverse.nvidia.com/extensions/latest/ext_cad-converter.html' };
+    }
+    if (s.includes('online-convert')) {
+      return { name: 'Online-Convert CAD Suite', badge: 'Official Cloud', desc: 'Browser-based conversion into AutoCAD DWG, DXF, and SVG vector curves.', url: 'https://cad.online-convert.com/' };
+    }
+    if (s.includes('mitcalc')) {
+      return { name: 'MITCalc Engineering Suite', badge: 'Official Vendor', desc: 'Multi-standard mechanical, gearing, beam, shaft, and bolted joint calculation tables with direct 2D/3D CAD integration.', url: 'https://www.mitcalc.com/' };
+    }
+    if (s.includes('mathcad')) {
+      return { name: 'PTC Mathcad Prime', badge: 'Official Vendor', desc: 'Live mathematical notation, unit-aware engineering worksheets, and parametric Creo CAD integration.', url: 'https://www.mathcad.com/' };
+    }
+    if (s.includes('calculatoredge')) {
+      return { name: 'CalculatorEdge Engineering Portal', badge: 'Official Directory', desc: 'Multi-discipline mechanical, civil, electrical, chemical, and plastics engineering formula calculators.', url: 'https://www.calculatoredge.com/' };
+    }
+    if (s.includes('cfd-simulation') || s.includes('fea-simulation')) {
+      return { name: 'SimScale Cloud CAE Platform', badge: 'Official Cloud CAE', desc: 'Browser-native GPU/CPU cloud simulation for CFD aerodynamics, thermal analysis, and structural FEA.', url: 'https://www.simscale.com/' };
+    }
+    if (s.includes('mold-flow')) {
+      return { name: 'Autodesk Moldflow', badge: 'Official Plastic CAE', desc: 'Industrial plastic injection molding fill, pack, warpage, and cooling channel simulation.', url: 'https://www.autodesk.com/products/moldflow/overview' };
+    }
+    if (s.includes('cnc-nesting')) {
+      return { name: 'Deepnest Open-Source Nesting', badge: 'Official Open Source', desc: 'True-shape vector DXF/SVG sheet metal, laser, and CNC router part nesting optimizer.', url: 'https://deepnest.io/' };
+    }
+    if (s.includes('las-to-laz')) {
+      return { name: 'LAStools (rapidlasso)', badge: 'Official LiDAR Engine', desc: 'Lossless LiDAR point cloud compression between ASCII/Binary LAS and compressed LAZ archives.', url: 'https://rapidlasso.de/lastools/' };
+    }
+    if (s.includes('catia-to-step') || s.includes('nx-to-step') || s.includes('creo-to-step') || s.includes('solid-edge-to-step') || s.includes('sldprt-to-step') || s.includes('inventor-ipt-to-step') || s.includes('rhino-3dm-to-step')) {
+      return { name: 'CAD Exchanger Lab & Cloud', badge: 'Official B-Rep Engine', desc: 'High-precision multi-CAD B-Rep and PMI translation for SolidWorks, CATIA, NX, Creo, Inventor, Rhino, and STEP.', url: 'https://cadexchanger.com/' };
+    }
+    return null;
+  }, [tool.slug]);
 
   const handleDownloadGenerated = () => {
     const blob = new Blob([generatorOutput.code], { type: 'text/plain;charset=utf-8' });
@@ -3199,11 +3309,18 @@ EOF`;
               <span>Recommended Industrial Conversion Engines for {tool.title}</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[
-                { name: 'DWG FastView Cloud Engine', badge: 'Sponsored', desc: 'Direct browser batch conversion between DWG, DXF, DWF, and high-res vector PDF.', url: 'https://en.dwgfastview.com/' },
-                { name: 'Autodesk Cloud Translation', badge: 'Official APS', desc: 'Convert 80+ mechanical & BIM formats into lightweight web SVF / glTF / STEP.', url: 'https://viewer.autodesk.com/' },
-                { name: 'FreeCAD Open Engine', badge: '100% Offline', desc: 'Local open-source B-Rep kernel stitching for STEP, IGES, STL, and DXF files.', url: 'https://www.freecad.org/' }
-              ].map((engine, idx) => (
+              {(primaryThirdPartyVendor
+                ? [
+                    primaryThirdPartyVendor,
+                    { name: 'DWG FastView Cloud Engine', badge: 'Sponsored', desc: 'Direct browser batch conversion between DWG, DXF, DWF, and high-res vector PDF.', url: 'https://en.dwgfastview.com/' },
+                    { name: 'FreeCAD Open Engine', badge: '100% Offline', desc: 'Local open-source B-Rep kernel stitching for STEP, IGES, STL, and DXF files.', url: 'https://www.freecad.org/' }
+                  ]
+                : [
+                    { name: 'DWG FastView Cloud Engine', badge: 'Sponsored', desc: 'Direct browser batch conversion between DWG, DXF, DWF, and high-res vector PDF.', url: 'https://en.dwgfastview.com/' },
+                    { name: 'Autodesk Cloud Translation', badge: 'Official APS', desc: 'Convert 80+ mechanical & BIM formats into lightweight web SVF / glTF / STEP.', url: 'https://viewer.autodesk.com/' },
+                    { name: 'FreeCAD Open Engine', badge: '100% Offline', desc: 'Local open-source B-Rep kernel stitching for STEP, IGES, STL, and DXF files.', url: 'https://www.freecad.org/' }
+                  ]
+              ).map((engine, idx) => (
                 <div key={idx} className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between space-y-3">
                   <div>
                     <div className="flex items-center justify-between mb-1">
@@ -3730,6 +3847,32 @@ EOF`;
               </Link>
             ))}
           </div>
+        </section>
+      )}
+
+      {/* Official Third-Party Vendor Access Card (when page evaluates a specific external platform) */}
+      {primaryThirdPartyVendor && !isConverter && (
+        <section className="bg-white border border-blue-200 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <span className="inline-block text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+              {primaryThirdPartyVendor.badge} • External Engineering Suite
+            </span>
+            <h3 className="text-lg sm:text-xl font-black text-slate-900">
+              {primaryThirdPartyVendor.name}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              {primaryThirdPartyVendor.desc}
+            </p>
+          </div>
+          <a
+            href={primaryThirdPartyVendor.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-3 px-6 bg-slate-900 hover:bg-blue-600 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 transition-all shrink-0"
+          >
+            <span>Visit {primaryThirdPartyVendor.name}</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </section>
       )}
 

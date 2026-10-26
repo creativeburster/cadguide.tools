@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 import {
   LayoutGrid,
   FileSearch,
@@ -373,23 +374,122 @@ export function RelatedTools({
     return 'general';
   }, [category, pathname]);
 
-  // Select tools matching the inferred domain, excluding the current tool URL
+  // Select tools matching the inferred domain + contextually matched sibling tools from TOOLBOX_DATA
   const tools = useMemo(() => {
-    // Collect domain matching tools
-    let selected = TOOL_POOL.filter(t => {
-      // Exclude self-links
-      if (t.link === pathname || pathname.endsWith(t.link)) return false;
+    const cleanPath = pathname.replace(/\/$/, '');
+    const rawSlug = cleanPath.split('/').pop() || 'home';
+    const stopTokens = new Set([
+      'toolbox', 'calculator', 'calc', 'cad', 'tools', 'tool', 'online',
+      'free', 'sheet', 'cheatsheet', 'shortcuts', 'shortcut', 'reference',
+      'chart', 'table', 'guide', 'wizard', 'checker', 'converter', 'to', 'vs', 'and', 'for'
+    ]);
+    const pathTokens = rawSlug
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((t) => t.length >= 3 && !stopTokens.has(t));
+
+    const hashStr = (s: string): number => {
+      let h = 2166136261;
+      for (let i = 0; i < s.length; i++) {
+        h ^= s.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return h >>> 0;
+    };
+
+    const iconForCat = (cat: string) => {
+      switch (cat) {
+        case 'calculator': return Ruler;
+        case 'cheatsheet':
+        case 'library': return LayoutGrid;
+        case '3d-converter':
+        case 'converter': return FileCode;
+        case 'troubleshoot': return AlertTriangle;
+        case 'viewer': return FileSearch;
+        case 'generator': return Cpu;
+        case 'validator': return ShieldCheck;
+        case 'comparator': return Scale;
+        default: return Zap;
+      }
+    };
+
+    const tagForCat = (cat: string) => {
+      switch (cat) {
+        case 'calculator': return 'Calculator';
+        case 'cheatsheet': return 'Shortcuts';
+        case 'library': return 'Standard Ref';
+        case '3d-converter': return '3D Convert';
+        case 'converter': return 'Converter';
+        case 'troubleshoot': return 'Diagnostic';
+        case 'viewer': return 'Inspector';
+        case 'generator': return 'Generator';
+        case 'validator': return 'Validator';
+        case 'comparator': return 'Comparison';
+        default: return 'Utility';
+      }
+    };
+
+    // 1. Score all TOOLBOX_DATA items by contextual keyword overlap + deterministic rotation
+    const contextualMatches: { item: WorkflowToolItem; score: number; tie: number }[] = [];
+    for (const tb of TOOLBOX_DATA) {
+      const link = `/toolbox/${tb.slug}`;
+      if (link === cleanPath || cleanPath.endsWith(`/${tb.slug}`)) continue;
+      const hay = `${tb.slug} ${tb.title} ${(tb.keywords || []).join(' ')}`.toLowerCase();
+      let overlap = 0;
+      for (const tok of pathTokens) {
+        if (hay.includes(tok)) overlap += 10;
+      }
+      const tie = hashStr(`${cleanPath}::${tb.slug}`);
+      contextualMatches.push({
+        item: {
+          name: tb.title,
+          desc: tb.description,
+          link,
+          icon: iconForCat(tb.category),
+          tag: tagForCat(tb.category),
+          domain: inferredDomain,
+        },
+        score: overlap,
+        tie,
+      });
+    }
+
+    contextualMatches.sort((a, b) => (b.score !== a.score ? b.score - a.score : a.tie - b.tie));
+
+    // 2. Collect domain-matching staple tools (rotated deterministically by pathname)
+    const domainPool = TOOL_POOL.filter((t) => {
+      if (t.link === cleanPath || cleanPath.endsWith(t.link)) return false;
       if (inferredDomain === 'general') return true;
       return t.domain === inferredDomain;
-    });
+    }).sort((a, b) => hashStr(`${cleanPath}::${a.link}`) - hashStr(`${cleanPath}::${b.link}`));
 
-    // If matching count is too low, backfill with high-retention cross-domain tools
-    if (selected.length < limit) {
-      const backfill = TOOL_POOL.filter(t => {
-        if (t.link === pathname || pathname.endsWith(t.link)) return false;
-        return !selected.some(s => s.link === t.link);
-      });
-      selected = [...selected, ...backfill];
+    // 3. Blend: up to half contextual sibling tools + half domain staple tools
+    const contextualQuota = Math.max(2, Math.ceil(limit * 0.67));
+    const selected: WorkflowToolItem[] = [];
+    const seenLinks = new Set<string>();
+
+    for (const cm of contextualMatches) {
+      if (selected.length >= contextualQuota) break;
+      if (!seenLinks.has(cm.item.link)) {
+        seenLinks.add(cm.item.link);
+        selected.push(cm.item);
+      }
+    }
+
+    for (const dp of domainPool) {
+      if (selected.length >= limit) break;
+      if (!seenLinks.has(dp.link)) {
+        seenLinks.add(dp.link);
+        selected.push(dp);
+      }
+    }
+
+    for (const cm of contextualMatches) {
+      if (selected.length >= limit) break;
+      if (!seenLinks.has(cm.item.link)) {
+        seenLinks.add(cm.item.link);
+        selected.push(cm.item);
+      }
     }
 
     return selected.slice(0, limit);

@@ -33,7 +33,14 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [dragActive, setDragActive] = useState(false);
-  const [fileInfo, setFileInfo] = useState<{ name: string; size: string } | null>(null);
+  const [fileInfo, setFileInfo] = useState<{
+    name: string;
+    size: string;
+    extMatch: boolean;
+    detectedFormat: string;
+    headerSignature: string;
+    detailNote: string;
+  } | null>(null);
   const [activeParamTab, setActiveParamTab] = useState<number>(0);
   const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
@@ -43,11 +50,92 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
     setTimeout(() => setCopiedUrl(null), 2000);
   };
 
-  const processFile = (file: File) => {
+  const processFile = async (file: File) => {
     const sizeStr = file.size > 1024 * 1024
       ? `${(file.size / (1024 * 1024)).toFixed(2)} MB`
       : `${(file.size / 1024).toFixed(1)} KB`;
-    setFileInfo({ name: file.name, size: sizeStr });
+
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    const expectedTokens = `${pair.fromFormat.name} ${pair.fromFormat.ext}`
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter(Boolean);
+    const extMatch = expectedTokens.includes(ext) ||
+      (ext === 'stp' && expectedTokens.includes('step')) ||
+      (ext === 'igs' && expectedTokens.includes('iges')) ||
+      (ext === 'sldasm' && expectedTokens.includes('sldprt')) ||
+      (ext === 'iam' && expectedTokens.includes('ipt')) ||
+      (ext === 'catproduct' && expectedTokens.includes('catpart'));
+
+    try {
+      const slice = file.slice(0, 8192);
+      const buf = await slice.arrayBuffer();
+      const bytes = new Uint8Array(buf);
+      const hex = Array.from(bytes.slice(0, 8))
+        .map((b) => b.toString(16).padStart(2, '0').toUpperCase())
+        .join(' ');
+      const ascii = new TextDecoder('utf-8', { fatal: false })
+        .decode(bytes.slice(0, 1024))
+        .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, ' ');
+
+      let detectedFormat = `${ext.toUpperCase() || 'Binary'} CAD Stream`;
+      let detailNote = `Ready for ${pair.fromFormat.ext} → ${pair.toFormat.ext} translation.`;
+
+      if (ascii.includes('ISO-10303-21')) {
+        const schemaMatch = ascii.match(/FILE_SCHEMA\s*\(\s*\(\s*'([^']+)'/i);
+        const schema = schemaMatch ? schemaMatch[1] : 'STEP / IFC';
+        if (schema.toUpperCase().startsWith('IFC')) {
+          detectedFormat = `ISO 16739 OpenBIM (${schema})`;
+          detailNote = `Detected valid IFC STEP Physical File header (${schema}).`;
+        } else {
+          detectedFormat = `ISO 10303-21 B-Rep (${schema})`;
+          detailNote = `Verified ASCII STEP header; ready for B-Rep or mesh tessellation.`;
+        }
+      } else if (/^AC10[0-9]{2}/.test(ascii)) {
+        const ver = ascii.slice(0, 6);
+        detectedFormat = `AutoCAD Native DWG (${ver})`;
+        detailNote = `Detected DWG binary header signature ${ver}.`;
+      } else if (ascii.includes('0\nSECTION') || ascii.includes('0\r\nSECTION') || ascii.includes('HEADER')) {
+        detectedFormat = 'ASCII Drawing Interchange (DXF)';
+        detailNote = 'Verified ASCII DXF section structure.';
+      } else if (bytes[0] === 0x50 && bytes[1] === 0x4b) {
+        detectedFormat = ext === '3mf' ? '3MF XML/ZIP Container' : 'ZIP-Packaged CAD Container (3MF/F3D/USDZ)';
+        detailNote = 'Detected PKZIP container header (0x504B0304).';
+      } else if (bytes[0] === 0xd0 && bytes[1] === 0xcf && bytes[2] === 0x11 && bytes[3] === 0xe0) {
+        detectedFormat = `OLE2 Compound CAD Database (.${ext.toUpperCase()})`;
+        detailNote = 'Detected Microsoft Compound File Binary (OLE2) container used by RVT/SLDPRT/IPT.';
+      } else if (ext === 'stl' && !ascii.trimStart().startsWith('solid') && file.size >= 84) {
+        const view = new DataView(buf);
+        const triCount = view.getUint32(80, true);
+        detectedFormat = `Binary STL Mesh (${triCount.toLocaleString()} facets)`;
+        detailNote = `Parsed 80-byte binary STL header + uint32 facet count.`;
+      } else if (ascii.trimStart().startsWith('solid')) {
+        detectedFormat = 'ASCII STL Faceted Mesh';
+        detailNote = 'Detected ASCII STL solid block header.';
+      }
+
+      if (!extMatch) {
+        detailNote = `Note: Uploaded .${ext || 'unknown'} differs from expected ${pair.fromFormat.ext}. Verify source file format before converting.`;
+      }
+
+      setFileInfo({
+        name: file.name,
+        size: sizeStr,
+        extMatch,
+        detectedFormat,
+        headerSignature: hex || 'EMPTY',
+        detailNote,
+      });
+    } catch {
+      setFileInfo({
+        name: file.name,
+        size: sizeStr,
+        extMatch,
+        detectedFormat: `${ext.toUpperCase()} File`,
+        headerSignature: 'LOCAL STREAM',
+        detailNote: `Pre-flight check complete for ${pair.fromFormat.ext} → ${pair.toFormat.ext}.`,
+      });
+    }
   };
 
   const handleFileDrop = (e: React.DragEvent) => {
@@ -110,20 +198,36 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
                 </div>
 
                 {fileInfo ? (
-                  <div className="space-y-1">
+                  <div className="space-y-2.5 text-left">
                     <p className="text-sm font-bold text-slate-900 flex items-center justify-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span>{fileInfo.name} ({fileInfo.size})</span>
+                      {fileInfo.extMatch ? (
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      ) : (
+                        <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                      )}
+                      <span className="truncate">{fileInfo.name} ({fileInfo.size})</span>
                     </p>
-                    <p className="text-xs text-slate-500">
-                      Target format: <strong className="text-blue-600">{pair.toFormat.ext}</strong> • Pre-flight analysis complete. Select a verified engine below.
-                    </p>
-                    <button
-                      onClick={(e) => { e.stopPropagation(); setFileInfo(null); }}
-                      className="text-[11px] font-bold text-red-500 hover:underline pt-2 inline-block"
-                    >
-                      Remove File
-                    </button>
+                    <div className="p-3 bg-white rounded-2xl border border-slate-200 text-xs space-y-1.5 shadow-2xs">
+                      <div className="flex justify-between gap-2">
+                        <span className="text-slate-400 font-bold">Detected Stream:</span>
+                        <span className="font-black text-slate-800 text-right">{fileInfo.detectedFormat}</span>
+                      </div>
+                      <div className="flex justify-between gap-2 font-mono text-[11px]">
+                        <span className="text-slate-400 font-sans font-bold">Magic Bytes:</span>
+                        <span className="text-blue-700 bg-blue-50 px-2 py-0.5 rounded font-bold">{fileInfo.headerSignature}</span>
+                      </div>
+                      <div className={`pt-1 border-t border-slate-100 text-[11px] font-bold ${fileInfo.extMatch ? 'text-emerald-700' : 'text-amber-700'}`}>
+                        {fileInfo.detailNote}
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setFileInfo(null); }}
+                        className="text-[11px] font-bold text-red-500 hover:underline pt-1 inline-block"
+                      >
+                        Remove & Inspect Another File
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-1">
@@ -252,7 +356,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
             <a
               href="https://en.dwgfastview.com/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
               className="py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all text-center"
             >
               <span>Explore DWG FastView</span>

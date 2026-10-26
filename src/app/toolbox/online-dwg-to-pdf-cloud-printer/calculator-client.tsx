@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Must be logged in and loading is relatively slow"
     ],
     "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "Official free online picture viewing and publishing platform, fully reserved CTB, Layer attributes and primitive associations are the safest and most reliable."
+    "verdict": "Autodesk's official cloud viewer and plotter—renders DWG layouts with accurate SHX/TTF fonts and layer hierarchy."
   },
   {
     "name": "CloudConvert DWG to PDF",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Clean up junk entities locally",
-    "desc": "Run in CAD before printing PURGE and -AUDIT command, Bind redundant scale lists and external references to reduce size."
+    "desc": "Before plotting to PDF, run `-PURGE` and `-SCALELISTEDIT` (Reset) to strip bloated annotation scale lists and keep vector PDF sizes compact."
   },
   {
     "title": "Using Microsoft Print to PDF",
@@ -116,8 +116,8 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
       title="Online DWG to Vector PDF Batch Cloud Printer"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Without AutoCAD installed, how to quickly convert DWG to high-fidelity PDF format for reporting? Universal conversion tools often result in CTB Printing line width is lost (the thickness of the entire image is the same) , Layout Tabs are not visible, and complex line style collapse."
-      riskWarning="DWG Files are the core carrier of enterprise digital assets. DWG When uploading to cloud printing, you must not only check the privacy agreement, also avoid activating anti-piracy detection networks of alliances such as Autodesk. Never upload any files that have not been saved by an officially authorized client for cloud printing."
+      painPointDesc="Converting DWG drawings to vector PDF without a local CAD seat often results in missing `.ctb` plot-style lineweights, unmapped SHX fonts, or clipped Paper Space viewports. Choosing an ODA- or Autodesk-backed plotting engine preserves crisp vector lineweights and searchable text."
+      riskWarning="Native DWG files contain complete model-space coordinates, blocks, and layer structures. For confidential projects, plot PDFs locally using Autodesk's free desktop DWG TrueView utility rather than uploading source DWG files to unverified third-party cloud printers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

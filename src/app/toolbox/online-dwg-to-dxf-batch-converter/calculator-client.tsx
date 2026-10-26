@@ -25,10 +25,10 @@ const RECOMMENDED_TOOLS = [
       "Completely open source, free and cross-platform"
     ],
     "cons": [
-      "The client needs to be downloaded and the command line parameters need to be configured."
+      "Requires desktop installation; GUI is utilitarian"
     ],
     "officialUrl": "https://www.opendesign.com/guestfiles/oda_file_converter",
-    "verdict": "The industry's most rigorous drawing format interchange cornerstone, DWG / DXF The conversion result data of each major version is the purest, without any redundant junk dictionary."
+    "verdict": "The industry standard offline batch converter maintained by the Open Design Alliance—translates folders of DWG and DXF files across R12 to 2018+ schemas with clean entity dictionaries."
   },
   {
     "name": "Any DWG DXF Converter",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "The software interface is old, and the commercial version requires payment"
     ],
     "officialUrl": "https://anydwg.com/",
-    "verdict": "A well-established conversion gadget that supports two-way one-click conversion, Speed and batch performance have been tested by engineering and are stable and efficient."
+    "verdict": "Proven standalone Windows batch converter capable of queuing thousands of DWG/DXF files without requiring an AutoCAD installation."
   },
   {
     "name": "Convertio (Universal Cloud Converter)",
@@ -96,7 +96,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Limit external network script postback",
-    "desc": "Use a corporate firewall with anti-telemetry configuration to block unnecessary ports, Prevent compliance detection."
+    "desc": "Validate exported DXF files in a local CNC/CAM backplotter before sending to production to verify polyline closure and unit scaling."
   }
 ];
 const FAQS = [
@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     "question": "Why can’t dynamic blocks in drawings be edited after mutual conversion? ",
-    "answer": "Some dynamic block information belongs to AutoCAD-specific high-level classes (ArRx) . When converting to DXF, if the version is too low, the database will degrade them, As a result, the slider and other stretch handles will be lost after re-importing."
+    "answer": "Dynamic Block actions and grips rely on proprietary AutoCAD ObjectARX evaluation graphs. Exporting to legacy DXF schemas (such as R12) converts dynamic blocks into static anonymous blocks (`*U`)."
   }
 ];
 
@@ -116,8 +116,8 @@ export default function OnlineDwgToDxfBatchConverterClient() {
       title="Online Bulk DWG / DXF Format Mutual Converter"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="For non-AutoCAD drawing systems that need to be imported, for users of laser cutting software or custom script reading, DWG, a closed-source binary database, is very difficult to extract directly. Batch and secure conversion to the open ASCII/Binary DXF format is a universal bridge to solve industry interconnections. However, during conversion, text encoding damage and line style failure are very frequent."
-      riskWarning="Batch conversion represents the centralized processing of drawing assets, and it is very easy to be intercepted by external crawling tools in server logs when packaging and uploading. For drawing clusters involving sensitive trade secrets, online public cloud conversion should be circumvented entirely, it is recommended to automatically call it locally by writing a local AutoLISP script command. ODA File converter."
+      painPointDesc="Because DWG is a closed binary database, CNC laser/plasma CAM software, GIS platforms, and Python scripts (`ezdxf`) require open ASCII or Binary DXF files. Batch converting DWG to DXF must preserve polyline closure, spline tessellation tolerances, and text encoding."
+      riskWarning="Batch converting entire project folders in the cloud exposes large volumes of proprietary drawings at once. For confidential production libraries, always run the free desktop ODA File Converter or an AutoCAD ScriptPro batch job locally."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

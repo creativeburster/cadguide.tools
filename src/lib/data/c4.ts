@@ -9,7 +9,7 @@ export const c4Tools: Tool[] = [
     "slug": "bluebeam-revu",
     "logo_url": "/logos/bluebeam-revu.png",
     "short_desc": "The AEC standard for PDF markup and collaboration.",
-    "description": "Bluebeam Revu is a project efficiency and collaboration solution that allows users to markup, takeoff, and organize PDF files.",
+    "description": "Bluebeam Revu is the AEC and civil construction industry standard for smart vector PDF markup, calibrated 2D quantity takeoff, drawing overlay comparison, and real-time cloud collaboration. Through Bluebeam Studio Sessions, up to hundreds of architects, engineers, and general contractors can simultaneously redline construction sets, track punch-list statuses, and export hyperlinked submittal logs.",
     "pricing_tiers": [
       {
         "name": "Basics",
@@ -122,7 +122,7 @@ export const c4Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.bluebeam.com",
-    "pricing_url": "https://www.bluebeam.com",
+    "pricing_url": "https://www.bluebeam.com/pricing/",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -200,7 +200,7 @@ export const c4Tools: Tool[] = [
     "slug": "navisworks",
     "logo_url": "/logos/navisworks.svg",
     "short_desc": "Project review software for clash detection.",
-    "description": "Navisworks allows architecture, engineering, and construction professionals to holistically review integrated models and data with stakeholders to better control project outcomes.",
+    "description": "Autodesk Navisworks Manage is the enterprise construction and plant engineering standard for whole-project 3D model aggregation, automated hard/clearance clash detection, and 4D/5D schedule simulation. It federates over 60 native CAD, BIM, and laser-scan formats (including RVT, IFC, DWG, DGN, STEP, and RVM) into lightweight NWD/NWF review models linked to Primavera P6 and Microsoft Project.",
     "pricing_tiers": [
       {
         "name": "Simulate",
@@ -301,7 +301,7 @@ export const c4Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.autodesk.com/products/navisworks/overview",
-    "pricing_url": "https://www.autodesk.com/products/navisworks/overview",
+    "pricing_url": "https://www.autodesk.com/products/navisworks/overview#buying-options",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -384,7 +384,7 @@ export const c4Tools: Tool[] = [
     "slug": "solibri",
     "logo_url": "/logos/solibri.png",
     "short_desc": "The BIM quality assurance and QC leader.",
-    "description": "Solibri is the market leader in BIM Quality Assurance and Quality Control. It provides tools for BIM managers to check for model integrity and coordination issues.",
+    "description": "Solibri Office (Nemetschek Group) is the global benchmark for rule-based openBIM Quality Assurance (QA), Quality Control (QC), and automated building code compliance auditing. Operating natively on IFC2x3 and IFC4 federated models, it executes customizable rulesets to validate life-safety egress paths, accessibility clearances, LOD attribute completeness, and multi-discipline clash severity before construction.",
     "pricing_tiers": [
       {
         "name": "Office",
@@ -538,7 +538,7 @@ export const c4Tools: Tool[] = [
     "slug": "meshlab",
     "logo_url": "/logos/meshlab.png",
     "short_desc": "Open-source system for processing 3D meshes.",
-    "description": "MeshLab is an open-source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.",
+    "description": "MeshLab is the leading free, open-source (GPL) cross-platform mesh processing workbench maintained by the Visual Computing Lab at ISTI-CNR. Built for cleaning, healing, and converting unstructured 3D triangular meshes and raw 3D laser scans, it provides Screened Poisson surface reconstruction, quadric edge-collapse decimation, non-manifold topological repair, vertex-to-texture baking, and watertight STL/OBJ/PLY/3DS export.",
     "pricing_tiers": [
       {
         "name": "Open Source",
@@ -681,7 +681,7 @@ export const c4Tools: Tool[] = [
     "slug": "recap-pro",
     "logo_url": "/logos/recap-pro.svg",
     "short_desc": "Reality capture and 3D scanning software.",
-    "description": "Autodesk ReCap Pro converts laser scans and photos into 3D models or point clouds. It is essential for scan-to-BIM workflows.",
+    "description": "Autodesk ReCap Pro is a professional reality-capture, LiDAR point-cloud registration, and photogrammetry processing suite for scan-to-BIM and civil infrastructure workflows. It automatically registers terrestrial laser scans (Faro, Leica, Trimble) and UAV drone imagery into indexed RCS/RCP point clouds and textured meshes that stream directly into AutoCAD, Revit, Civil 3D, and InfraWorks.",
     "pricing_tiers": [
       {
         "name": "Annual",
@@ -743,7 +743,7 @@ export const c4Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/recap",
-    "pricing_url": "https://www.autodesk.com/recap",
+    "pricing_url": "https://www.autodesk.com/products/recap/overview#buying-options",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -930,6 +930,71 @@ export const c4Tools: Tool[] = [
       "glovius",
       "cad-exchanger",
       "cadprops"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "3D Rotation",
+            "status": true
+          },
+          {
+            "name": "Measurement",
+            "status": true
+          },
+          {
+            "name": "Sectioning",
+            "status": true
+          },
+          {
+            "name": "Automated Output & Reporting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native PAR / ASM / DFT Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision Print / PDF / BMP Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1041,6 +1106,71 @@ export const c4Tools: Tool[] = [
       "cad-reader",
       "solid-edge-viewer",
       "cadprops"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Native DWG viewing",
+            "status": true
+          },
+          {
+            "name": "DWG conversion",
+            "status": true
+          },
+          {
+            "name": "Layer control",
+            "status": true
+          },
+          {
+            "name": "Automated Output & Reporting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DWG / DXF / DWT Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DWG (R14-2027 conversion) / PDF / DWF Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1049,7 +1179,7 @@ export const c4Tools: Tool[] = [
     "slug": "dwg-fastview",
     "logo_url": "/logos/dwg-fastview.ico",
     "short_desc": "Lightweight cross-platform CAD viewer & editor.",
-    "description": "DWG FastView allows you to view and edit CAD drawings on mobile, web, and desktop with extreme speed and cloud synchronization.",
+    "description": "DWG FastView by Gstarsoft is a lightweight, high-speed cross-platform 2D/3D CAD viewer and drafting editor available across Windows, iOS, Android, and web browsers. Requiring zero AutoCAD installation, it opens native DWG/DXF drawings from R14 to 2026 with accurate SHX font rendering, layer control, linear/area measurement, PDF export, and real-time mobile field redlining.",
     "country": "China",
     "category_id": "c4",
     "pricing_type": "Freemium",
@@ -1488,6 +1618,71 @@ export const c4Tools: Tool[] = [
     "file_formats_out": [
       "DXF",
       "SVG"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "DXF & SVG diagnosis",
+            "status": true
+          },
+          {
+            "name": "Geometry issue report",
+            "status": true
+          },
+          {
+            "name": "Automatic repair",
+            "status": true
+          },
+          {
+            "name": "Local in-browser processing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DXF / SVG Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DXF / SVG Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1626,6 +1821,71 @@ export const c4Tools: Tool[] = [
       "OBJ",
       "GLB",
       "3MF"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Multi-format 3D CAD viewing (STEP, SLDPRT, NX, CATIA, IPT, IGES, STL)",
+            "status": true
+          },
+          {
+            "name": "In-browser dimension, bounding box, volume & surface area analysis",
+            "status": true
+          },
+          {
+            "name": "B-Rep solid geometry measurement for STEP/IGES and approximate mesh analysis",
+            "status": true
+          },
+          {
+            "name": "Weight estimation based on user-confirmed material density",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / STP / SLDPRT Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision STEP / STL / OBJ Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Password-protected 3D link sharing and temporary workspace export",
+            "status": true
+          },
+          {
+            "name": "No account registration required, temporary guest workspace processing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1762,6 +2022,71 @@ export const c4Tools: Tool[] = [
       "3MF",
       "PLY",
       "DXF"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Client-side WebAssembly rendering (files never leave the user's computer)",
+            "status": true
+          },
+          {
+            "name": "Multi-standard IFC viewer (IFC 2x3, IFC4, IFC4.3) with element property inspection",
+            "status": true
+          },
+          {
+            "name": "Mechanical STEP and IGES solid inspection with millimeter dimension measurement",
+            "status": true
+          },
+          {
+            "name": "STL and 3MF watertight mesh verification and PLA weight estimation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native IFC / STEP / STP Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision PDF / SVG / STL Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "AutoCAD DWG to vector PDF conversion preserving 1:1 scale, line weights, and layers",
+            "status": true
+          },
+          {
+            "name": "Multi-format 3D converter converting 18 input formats to 8 output formats (GLB, OBJ, STL, STEP)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];

@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "The commercial desktop version is more expensive"
     ],
     "officialUrl": "https://cadexchanger.com/",
-    "verdict": "Professional engineering data exchange core engine, 3D solid core (Parasolid, ACIS) The conversion algorithm is extremely well tuned."
+    "verdict": "Industry-grade CAD translation engine with highly accurate ACIS-to-Parasolid and STEP B-Rep kernel healing."
   },
   {
     "name": "Autodesk Fusion (Official integrated channel)",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "A cloud account needs to be loaded and the speed is limited by network speed"
     ],
     "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "Autodesk cloud modeling platform has its own processing DWG 3D The inherent advantages of databases."
+    "verdict": "Uses Autodesk's native ACIS/ShapeManager kernel to read 3D DWG solids and export clean AP214 STEP assemblies."
   },
   {
     "name": "GrabCAD Workbench Translators",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Eliminate two-dimensional projection lines",
-    "desc": "Before exporting 3D DWG, Delete all 2D outline layouts, Dimension lines and text comments, only pure three-dimensional entities are retained (Solid) To reduce geometric redundancy."
+    "desc": "Before exporting a 3D DWG, strip 2D title blocks, dimensions, and annotation layers so only watertight 3DSOLID entities are translated into STEP."
   },
   {
     "title": "Prefer STEP format",
@@ -117,7 +117,7 @@ export default function CloudDwgToStepIgesConverterClient() {
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="Importing 3D DWG solids into mechanical CAD platforms (such as SolidWorks or Creo) or CAM systems (such as Mastercam) requires translating ACIS 3DSOLID entities into parametric STEP (AP203/AP214) or IGES boundary representations (B-Rep) rather than faceted polygon meshes."
-      riskWarning="Mechanical 3D model (such as core mold, machined parts) is the company’s top-secret intellectual property. Perform 3D B-Rep (Boundary Representation) before uploading to the cloud) When converting data, special precautions must be taken to prevent data leakage and loss of trade secrets. For high-precision parts, be sure to use local CAD Conversion plug-in."
+      riskWarning="3D mechanical models (such as injection molds and precision machined assemblies) represent core intellectual property. For confidential parts, perform B-Rep STEP/IGES translation locally inside your desktop CAD workstation rather than uploading to public cloud converters."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

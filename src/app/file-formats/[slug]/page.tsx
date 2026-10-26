@@ -682,7 +682,7 @@ function FormatQuickToolsHub({ slug, formatName }: { slug: string; formatName: s
     links.push(
       { title: 'Revit (.RVT) to IFC Converter', badge: 'Top BIM Converter', href: '/convert/revit-to-ifc', desc: 'Convert native Revit projects to ISO 16739 IFC2x3 & IFC4.' },
       { title: 'BIM IFC Model Size Optimizer', badge: 'Size Reducer', href: '/toolbox/ifc-model-size-optimizer', desc: 'Reduce bloated IFC exports by up to 85% via LoD & IFCZIP.' },
-      { title: 'IFC2x3 vs IFC4 vs IFC4.3 Matrix', badge: 'Standard Diff', href: '/toolbox/ifc2x3-vs-ifc4-vs-ifc4x3-matrix', desc: 'Compare schema classes, geometry kernels & global BIM mandates.' }
+      { title: 'IFC2x3 vs IFC4 Schema Analyzer', badge: 'Standard Diff', href: '/toolbox/ifc-schema-analyzer', desc: 'Inspect IFC2x3, IFC4 & IFC4.3 schema classes, MVD headers & entity counts.' }
     );
   } else if (s === '3mf' || s === 'stl' || s === 'obj') {
     links.push(
@@ -694,13 +694,13 @@ function FormatQuickToolsHub({ slug, formatName }: { slug: string; formatName: s
     links.push(
       { title: 'SLDPRT / CATPart / NX to STEP', badge: 'B-Rep Exchange', href: s === 'catpart' ? '/convert/catpart-to-step' : s === 'nxprt' ? '/convert/nx-prt-to-step' : '/toolbox/sldprt-to-step', desc: 'Lossless neutral ISO 10303-21 B-Rep solid assembly conversion.' },
       { title: 'STEP Assembly Defeature & Reducer', badge: 'Size Optimizer', href: '/toolbox/step-file-size-reducer', desc: 'Strip internal fasteners & threads to shrink 300MB+ STEP files.' },
-      { title: 'STEP AP214 vs AP242 Comparator', badge: 'PMI Standard', href: '/toolbox/step-ap214-vs-step-ap242-comparator', desc: 'Compare automotive AP214 vs Model-Based Definition AP242.' }
+      { title: 'STEP AP203 / AP214 / AP242 Parser', badge: 'PMI Standard', href: '/toolbox/step-file-header-parser', desc: 'Inspect STEP schemas, authoring CAD kernel origins, and units in-browser.' }
     );
   } else {
     links.push(
       { title: 'DWG Bloat & File Size Reducer', badge: 'Size Optimizer', href: '/toolbox/dwg-file-size-reducer', desc: 'Purge orphaned DGN linetypes, RegApps & scale lists in seconds.' },
       { title: 'Online CAD File Compressor', badge: '#1 Popular Utility', href: '/toolbox/online-cad-file-compressor', desc: 'Universal CAD & 3D assembly compression and preflight studio.' },
-      { title: 'AutoCAD DWG Version Matrix', badge: 'AC1018–AC1032', href: '/toolbox/autocad-dwg-version-feature-matrix', desc: 'Verify header versions and down-saving compatibility risks.' }
+      { title: 'AutoCAD DWG Version Checker', badge: 'AC1018–AC1032', href: '/toolbox/dwg-version-checker', desc: 'Verify DWG header versions and down-saving compatibility risks.' }
     );
   }
 

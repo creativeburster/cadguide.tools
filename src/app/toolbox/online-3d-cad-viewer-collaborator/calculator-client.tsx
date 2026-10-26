@@ -4,7 +4,7 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "Autodesk Viewer (Autodesk official cloud view picture)",
+    "name": "Autodesk Viewer (Official WebGL CAD/BIM Review Portal)",
     "rating": 9.9,
     "metrics": [
       {
@@ -12,7 +12,7 @@ const RECOMMENDED_TOOLS = [
         "score": 5
       },
       {
-        "name": "Cutting Measurement Force",
+        "name": "Sectioning & Measurement",
         "score": 5
       },
       {
@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Real-time two-way online annotation intercom is not supported"
     ],
     "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "Completely free and the most powerful online WebGL image viewing platform, its Forge/APS engine is suitable for all types of 3D The fit of the format drawings is unparalleled."
+    "verdict": "Industry-standard free WebGL review portal powered by Autodesk Platform Services (APS), supporting 80+ native CAD and BIM formats with sectioning and measurement."
   },
   {
     "name": "GrabCAD Viewer / Workbench",
@@ -39,7 +39,7 @@ const RECOMMENDED_TOOLS = [
         "score": 4
       },
       {
-        "name": "Cutting Measurement Force",
+        "name": "Sectioning & Measurement",
         "score": 4
       },
       {
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Requires login and requires high mobile performance"
     ],
     "officialUrl": "https://grabcad.com/",
-    "verdict": "Mechanical designers’ favorite free collaborative bulletin board, perfect for large-scale SLDASM or STEP structure has extremely smooth loading."
+    "verdict": "Widely used mechanical CAD collaboration portal with smooth browser rendering for SolidWorks assemblies and STEP files."
   },
   {
     "name": "SketchUp Viewer for Web",
@@ -66,7 +66,7 @@ const RECOMMENDED_TOOLS = [
         "score": 4
       },
       {
-        "name": "Cutting Measurement Force",
+        "name": "Sectioning & Measurement",
         "score": 3.5
       },
       {
@@ -82,7 +82,7 @@ const RECOMMENDED_TOOLS = [
       "General support for industrial assembly such as SolidWorks"
     ],
     "officialUrl": "https://www.sketchup.com/",
-    "verdict": "A cloud solution specially provided for landscape, home decoration and stage design designers, Perfect synchronization of layer visibility with scene page."
+    "verdict": "Official Trimble web viewer tailored for architectural and interior `.skp` scenes, preserving scene tabs, tags, and shadow studies."
   }
 ];
 const BEST_PRACTICES = [
@@ -96,7 +96,7 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Unauthorized external indexing is prohibited",
-    "desc": "The enterprise sharing platform needs to configure robots.txt and access permission policies, completely block search engine detection."
+    "desc": "Configure strict access tokens and `noindex` headers on self-hosted review portals so shared project links are never indexed by search engines."
   }
 ];
 const FAQS = [
@@ -116,7 +116,7 @@ export default function Online3dCadViewerCollaboratorClient() {
       title="Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Share complex 3D CAD assemblies with clients or teams (such as CATIA, NX, SolidWorks, STEP) or Revit BIM When models are reviewed on-site, ordinary users often do not have professional modeling software on their computers. Leveraging a cloud-based WebGL 3D browser, Large models can be loaded without installation and can be rotated online, Sectioning, red line marking and dimension measurement."
+      painPointDesc="Reviewing complex 3D mechanical assemblies (SolidWorks, CATIA, NX, STEP) or BIM models with external stakeholders requires zero-install WebGL viewers that support live section planes, redline markups, and point-to-point measurements in the browser."
       riskWarning="3D CAD assemblies contain exact machining dimensions, internal topology, and kinematic mates. Avoid uploading proprietary assemblies to unverified public viewers; use enterprise collaboration portals with role-based access control, dynamic watermarking, and disabled B-Rep downloads."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

@@ -116,8 +116,8 @@ export default function OnlineStepToObjGltfConverterClient() {
       title="Online STEP to glTF/OBJ Rendering Mesh Converter"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="The Industrial STEP (AP203/AP214) format is a boundary representation based on highly mathematical logic (B-Rep) stored, whose surface is in WebGL Web version (such as Three.js, Babylon.js) or a 3D renderer such as Unity, Blender) cannot be parsed directly in rendering. It must be polygonized (Polygonization) in triangular mesh format (e.g. OBJ, glTF) . During reorganization, common pain points are cracking of patch seams and excessive mesh density causing stuck web pages."
-      riskWarning="Industrial-grade STEP 3D models involve extremely strict product confidentiality design and geometric topology. When converting STEP to rendering format using an online website, it is extremely easy to be intercepted by the cloud backend and leak core secrets. Targeting top secret components, please use CAD Assistant locally to run the offline conversion."
+      painPointDesc="STEP (AP203/AP214/AP242) files store exact mathematical NURBS boundary representations (B-Rep) that cannot be rendered directly by WebGL engines (Three.js, Babylon.js) or DCC tools (Blender, Unity, Unreal). Converting STEP to glTF/GLB or OBJ requires controlled tessellation (chordal deflection and normal welding) to prevent cracked UV seams or excessive polygon counts."
+      riskWarning="STEP models contain exact 3D manufacturing geometry. For confidential mechanical designs, tessellate STEP files to glTF/OBJ locally using Open Cascade CAD Assistant, FreeCAD, or Blender rather than uploading B-Rep data to public web converters."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

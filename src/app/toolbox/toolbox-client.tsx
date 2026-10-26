@@ -9,7 +9,9 @@ const PAGE_SIZE = 12;
 export default function ToolboxClient() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set(['all']));
+  const [expandedCats, setExpandedCats] = useState<Set<string>>(
+    new Set(['calculator', 'cheatsheet', 'converter', '3d-converter'])
+  );
   const [visibleCounts, setVisibleCounts] = useState<Record<string, number>>({});
 
   // Search-only filter (used for category counts so numbers don't disappear when a tab is active)
@@ -262,6 +264,50 @@ export default function ToolboxClient() {
           )}
         </div>
       )}
+
+      {/* Statically Pre-Rendered Full Toolbox Index for 100% Crawlability & Quick A-Z Jump */}
+      <section className="pt-8 border-t border-slate-200/80">
+        <details className="group bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+          <summary className="flex items-center justify-between px-6 py-5 cursor-pointer select-none list-none hover:bg-slate-50/60 transition-colors">
+            <div>
+              <h2 className="text-lg font-black text-slate-900">
+                Complete Engineering Toolbox Index ({TOOLBOX_DATA.length} Utilities)
+              </h2>
+              <p className="text-xs font-bold text-slate-400 mt-0.5">
+                Full directory of all calculators, format converters, cheat sheets, validators, and CAD diagnostics
+              </p>
+            </div>
+            <span className="text-xs font-black text-blue-600 uppercase tracking-wider group-open:rotate-180 transition-transform">
+              ▼
+            </span>
+          </summary>
+          <div className="px-6 pb-8 pt-4 border-t border-slate-100 space-y-8">
+            {TOOLBOX_CATEGORIES.filter((c) => c.id !== 'all').map((cat) => {
+              const catItems = TOOLBOX_DATA.filter((t) => t.category === cat.id);
+              if (catItems.length === 0) return null;
+              return (
+                <div key={cat.id}>
+                  <h3 className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                    {cat.name} ({catItems.length})
+                  </h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2">
+                    {catItems.map((item) => (
+                      <li key={item.slug}>
+                        <Link
+                          href={`/toolbox/${item.slug}`}
+                          className="text-xs font-semibold text-slate-600 hover:text-blue-600 hover:underline block truncate py-0.5"
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </details>
+      </section>
     </div>
   );
 }

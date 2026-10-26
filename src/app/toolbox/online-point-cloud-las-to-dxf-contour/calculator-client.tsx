@@ -116,8 +116,8 @@ export default function OnlinePointCloudLasToDxfContourClient() {
       title="Online Point Cloud LAS to DXF Terrain Contour Generator"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="A major pain point in surveying and mapping and road and bridge design is: from lidar point cloud (LAS) Manually fitting contour drawings or elevation texts is not only time-consuming, but also prone to local surface depressions. Cloud Contours contour extractor quickly calculates digital elevation models (DEM) , and directly for Civil 3D or MicroStation Export smooth terrain DXF vector drawings."
-      riskWarning="High-precision geospatial three-dimensional coordinates and surveying point cloud data are directly related to national physical information security. You need to be extra vigilant about compliance risks when uploading to non-certified overseas cloud service providers. For conventional industrial and civil construction projects, offline software in the local area network can be used to extract, Avoid violating data compliance by leaving the country."
+      painPointDesc="Generating smooth topographic DXF contour polylines from raw LiDAR point clouds (`.las` / `.laz`) requires bare-earth ground classification (filtering out vegetation and buildings), TIN/DEM surface triangulation, and B-spline vertex smoothing so resulting CAD files do not overwhelm Civil 3D or AutoCAD."
+      riskWarning="Georeferenced LiDAR point clouds and topographic surveys are subject to strict geospatial data regulations and client confidentiality agreements. Always process sensitive survey data locally using desktop GIS/CAD workstations (such as Global Mapper, Civil 3D, QGIS, or LAStools)."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

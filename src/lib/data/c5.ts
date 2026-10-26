@@ -9,7 +9,7 @@ export const c5Tools: Tool[] = [
     "slug": "siemens-nx",
     "logo_url": "/logos/siemens-nx.png",
     "short_desc": "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing.",
-    "description": "Siemens NX provides integrated toolsets for design, simulation, and manufacturing, featuring Synchronous Technology.",
+    "description": "Siemens NX (formerly Unigraphics) is a premier enterprise CAD/CAM/CAE product engineering suite deployed across global automotive, aerospace, defense, and medical device OEMs. Powered by the Parasolid kernel and Synchronous Technology, it unifies parametric and convergent mesh modeling, Class-A styling, multi-axis CNC machining, additive manufacturing, and Simcenter multiphysics inside Teamcenter PLM.",
     "pricing_tiers": [
       {
         "name": "Core CAD (NX X)",
@@ -275,7 +275,7 @@ export const c5Tools: Tool[] = [
     "slug": "mastercam",
     "logo_url": "/logos/mastercam.png",
     "short_desc": "The global leader in CAM software for manufacturing.",
-    "description": "Mastercam is the world's most widely used CAM software. It provides solutions for all types of manufacturing, from 2- through 5-axis milling.",
+    "description": "Mastercam (by CNC Software / Sandvik) is the world’s most widely deployed CNC CAM programming suite, driving everything from job-shop 2.5D routers to aerospace 5-axis Impeller mills, Mill-Turn centers, and Swiss-type lathes. Its signature Dynamic Motion high-speed toolpaths maximize material removal rates while minimizing tool wear through constant chip-load engagement.",
     "pricing_tiers": [
       {
         "name": "Entry",
@@ -449,7 +449,7 @@ export const c5Tools: Tool[] = [
     "slug": "ntop",
     "logo_url": "/logos/ntop.png",
     "short_desc": "Engineering design software for additive manufacturing.",
-    "description": "nTop uses implicit modeling technology to enable the design of high-performance parts with complex lattices and topology optimization.",
+    "description": "nTop (formerly nTopology) is a computational engineering design platform built on an implicit distance-field geometric kernel rather than traditional boundary-representation (B-Rep) surfaces. Immune to boolean failures on millions of micro-features, it enables aerospace, medical, and thermal engineers to synthesize field-driven TPMS gyroid heat exchangers, conformal architected lattices, and automated FEA-driven topology optimization.",
     "pricing_tiers": [
       {
         "name": "nTop Enterprise",
@@ -607,7 +607,7 @@ export const c5Tools: Tool[] = [
     "slug": "solidcam",
     "logo_url": "/logos/solidcam.jpg",
     "short_desc": "The leading integrated CAM for SolidWorks.",
-    "description": "SolidCAM is a complete solution for CNC programming. Its iMachining technology can reduce machining times by up to 70%.",
+    "description": "SolidCAM is a premier gold-certified CAM suite that runs seamlessly inside the native SolidWorks and Autodesk Inventor assembly environments with full toolpath-to-model associativity. Renowned for its patented iMachining 2D/3D adaptive technology—which calculates optimal feeds, speeds, and morphing spiral engagement angles—it covers 2.5D–5-axis milling, multi-channel Mill-Turn, and Swiss-type CNC programming.",
     "pricing_tiers": [
       {
         "name": "iMachining",
@@ -742,7 +742,7 @@ export const c5Tools: Tool[] = [
     "slug": "magics",
     "logo_url": "/logos/magics.ico",
     "short_desc": "Data and build preparation for 3D printing.",
-    "description": "Materialise Magics is the most powerful STL editor for additive manufacturing. It allows users to fix file errors and generate support structures.",
+    "description": "Materialise Magics is the industrial additive manufacturing (AM) standard for data and build preparation across metal LPBF, polymer SLS, and stereolithography production floors. It equips AM engineers with automated STL/3MF mesh healing, CAD-native STEP/IGES import, lattice/perforation hollowing, low-distortion metal support generation, and high-density 3D build-chamber nesting.",
     "pricing_tiers": [
       {
         "name": "Essential",
@@ -899,7 +899,7 @@ export const c5Tools: Tool[] = [
     "slug": "visi-modelling",
     "logo_url": "/logos/visi-modelling.png",
     "short_desc": "Specialized CAD/CAM for the mold and die industry.",
-    "description": "VISI is acknowledged as the world's leading CAD CAM software solution for the Mould & Die industries, offering fully integrated wireframe, surface, and solid modeling.",
+    "description": "Hexagon VISI Modelling is a specialized hybrid solid and surface CAD/CAM suite purpose-built for progressive stamping die and plastic injection mold toolmakers. Powered by the Parasolid kernel combined with proprietary surface healing, it streamlines draft/undercut analysis, parting-line core/cavity splitting, progressive strip layout unfolding, electrode extraction, and 5-axis hard-milling toolpaths.",
     "country": "UK",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -998,6 +998,106 @@ export const c5Tools: Tool[] = [
       "cimatron",
       "topsolid",
       "tebis"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Analysis of Draft",
+            "status": true
+          },
+          {
+            "name": "Core & Cavity Separation",
+            "status": true
+          },
+          {
+            "name": "Electrode Design",
+            "status": true
+          },
+          {
+            "name": "Dynamic Wireframe",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / IGES / Parasolid Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision STEP / IGES / Parasolid Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$3,000",
+        "period": "per year",
+        "features": [
+          "Analysis of Draft",
+          "Core & Cavity Separation",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$4,350",
+        "period": "per year",
+        "features": [
+          "Analysis of Draft",
+          "Core & Cavity Separation",
+          "Electrode Design",
+          "Dynamic Wireframe",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -1006,7 +1106,7 @@ export const c5Tools: Tool[] = [
     "slug": "cimatron",
     "logo_url": "/logos/cimatron.png",
     "short_desc": "Integrated CAD/CAM for mold and die makers.",
-    "description": "Cimatron delivers a single, integrated solution for toolmakers, from quoting to design, to CNC programming.",
+    "description": "Cimatron is an end-to-end integrated CAD/CAM platform engineered specifically for complex plastic injection molds, progressive sheet-metal dies, and discrete CNC manufacturing. From rapid mold-base quoting and automated core/cavity parting to conformal cooling channel design,EDM electrode automation, and 5-axis high-speed roughing/finishing, it compresses tooling lead times on the shop floor.",
     "country": "Israel",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -1133,6 +1233,71 @@ export const c5Tools: Tool[] = [
       "visi-modelling",
       "tebis",
       "powermill"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Automated Tool Design",
+            "status": true
+          },
+          {
+            "name": "Conformal Cooling",
+            "status": true
+          },
+          {
+            "name": "NC Programming",
+            "status": true
+          },
+          {
+            "name": "Quick Split & Core",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / IGES / Parasolid Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision NC (G-Code) / ELT / STEP Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1141,7 +1306,7 @@ export const c5Tools: Tool[] = [
     "slug": "ansys-mechanical",
     "logo_url": "/logos/ansys-mechanical.png",
     "short_desc": "The gold standard for structural FEA simulation.",
-    "description": "ANSYS Mechanical is a finite element analysis (FEA) tool that enables engineers to simulate structural, thermal, and acoustic performance, helping to build better products faster.",
+    "description": "Ansys Mechanical is the enterprise finite element analysis (FEA) flagship for linear and non-linear structural, thermal, acoustic, and coupled multiphysics simulation. Integrated within the Ansys Workbench environment with bidirectional CAD associativity and HPC GPU solver acceleration, it validates fatigue life, hyperelastic contact, composite delamination, fracture mechanics, and explicit dynamics.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -1680,6 +1845,106 @@ export const c5Tools: Tool[] = [
       "mastercam",
       "featurecam",
       "fusion-360"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Feature-Based Machining",
+            "status": true
+          },
+          {
+            "name": "VoluMill High-Speed Machining",
+            "status": true
+          },
+          {
+            "name": "SolidWorks Integration",
+            "status": true
+          },
+          {
+            "name": "Tolerance-Based Machining",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native SLDPRT / SLDASM / STEP Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision NC (G-Code) / STEP / IGES Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$5,000",
+        "period": "per year",
+        "features": [
+          "Feature-Based Machining",
+          "VoluMill High-Speed Machining",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$7,250",
+        "period": "per year",
+        "features": [
+          "Feature-Based Machining",
+          "VoluMill High-Speed Machining",
+          "SolidWorks Integration",
+          "Tolerance-Based Machining",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -1688,7 +1953,7 @@ export const c5Tools: Tool[] = [
     "slug": "topsolid",
     "logo_url": "/logos/topsolid.ico",
     "short_desc": "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal ",
-    "description": "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal working/boiler making, and woodworking industries.",
+    "description": "TopSolid is a fully integrated, PDM-centric CAD/CAM/ERP software suite engineered for mechanical machining, sheet-metal fabrication, tooling, and custom millwork/woodworking. Built on the Siemens Parasolid kernel with a native TopSolid’PDM database vault, it links parametric 3D assembly design directly to 5-axis Mill-Turn G-code simulation, sheet nesting, and shop-floor BOM routing.",
     "pricing_tiers": [
       {
         "name": "Perpetual",
@@ -6526,6 +6791,41 @@ export const c5Tools: Tool[] = [
       "BINOUT",
       "CSV",
       "VTK"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$20,000",
+        "period": "per year",
+        "features": [
+          "Explicit and implicit time-integration",
+          "Crashworthiness and occupant safety",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$29,000",
+        "period": "per year",
+        "features": [
+          "Explicit and implicit time-integration",
+          "Crashworthiness and occupant safety",
+          "SPH, EFG, DEM, ALE, FSI",
+          "Sheet-metal forming (LS-FORM)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -6708,6 +7008,41 @@ export const c5Tools: Tool[] = [
       "EnSight",
       "CSV",
       "Images"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$25,000",
+        "period": "per year",
+        "features": [
+          "Polyhedral and trimmed-cell automatic meshing",
+          "Coupled implicit pressure-velocity solver",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$36,250",
+        "period": "per year",
+        "features": [
+          "Polyhedral and trimmed-cell automatic meshing",
+          "Coupled implicit pressure-velocity solver",
+          "Reacting flow, combustion, multi-phase",
+          "Overset / chimera mesh for moving bodies",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -6940,7 +7275,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.simscale.com",
-    "pricing_url": "https://www.simscale.com",
+    "pricing_url": "https://www.simscale.com/product/pricing/",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -7083,6 +7418,41 @@ export const c5Tools: Tool[] = [
       "CSV",
       "Cloud Interactive 3D",
       "PDF report"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,400",
+        "period": "per year",
+        "features": [
+          "CFD, FEA, thermal, particle dynamics in the browser",
+          "Unlimited cloud compute (per-hour metering)",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,480",
+        "period": "per year",
+        "features": [
+          "CFD, FEA, thermal, particle dynamics in the browser",
+          "Unlimited cloud compute (per-hour metering)",
+          "Real-time collaboration on projects",
+          "Public Community Plan for hobbyists",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -7263,6 +7633,41 @@ export const c5Tools: Tool[] = [
       "STEP",
       "JT",
       "CSV"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$12,000",
+        "period": "one-time perpetual",
+        "features": [
+          "Best-in-class structural FE preprocessing",
+          "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$17,400",
+        "period": "one-time perpetual",
+        "features": [
+          "Best-in-class structural FE preprocessing",
+          "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
+          "NX Nastran integration",
+          "API for Visual Basic / Python automation",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -7466,7 +7871,7 @@ export const c5Tools: Tool[] = [
     "slug": "msc-patran",
     "logo_url": "/logos/msc-patran.png",
     "short_desc": "Long-standing FEA preprocessor and post-processor from Hexagon/MSC, tightly paired with MSC Nastran.",
-    "description": "MSC Patran is Hexagon's mature, multi-discipline FE pre/post-processor — the canonical front-end for MSC Nastran since the 1980s and still used heavily in aerospace and defense.",
+    "description": "Hexagon MSC Patran is the aerospace and defense industry’s proven finite element pre- and post-processing workbench, serving as the primary modeling environment for MSC Nastran, Marc, Abaqus, and Ansys solvers. It provides direct CAD geometry cleanup, hex/tet solid meshing, composite laminate layup modeling, Patran Command Language (PCL) automation, and envelope stress post-processing.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -7636,6 +8041,41 @@ export const c5Tools: Tool[] = [
       "CDB",
       "STEP",
       "IGES"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$14,000",
+        "period": "per year",
+        "features": [
+          "Patran Command Language (PCL) automation",
+          "Native MSC Nastran integration",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$20,300",
+        "period": "per year",
+        "features": [
+          "Patran Command Language (PCL) automation",
+          "Native MSC Nastran integration",
+          "Multi-solver support (Marc, Abaqus, ANSYS)",
+          "Composites layup and failure plotting",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -7815,6 +8255,41 @@ export const c5Tools: Tool[] = [
       "RES",
       "CSV",
       "Animation MP4"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$18,000",
+        "period": "per year",
+        "features": [
+          "Adams/Car vehicle dynamics templates",
+          "Adams/Driveline and Adams/Tire",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$26,100",
+        "period": "per year",
+        "features": [
+          "Adams/Car vehicle dynamics templates",
+          "Adams/Driveline and Adams/Tire",
+          "Flexible body integration with Nastran",
+          "Co-simulation with Simulink and AMESim",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -7991,6 +8466,41 @@ export const c5Tools: Tool[] = [
       "Stress Reports (PDF/Excel)",
       "3D Deflection Visuals",
       "PCF"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$8,000",
+        "period": "per year",
+        "features": [
+          "ASME B31.1/B31.3/B31.4/B31.8 code checks",
+          "Dynamic analysis: harmonic, spectrum, time history",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$11,600",
+        "period": "per year",
+        "features": [
+          "ASME B31.1/B31.3/B31.4/B31.8 code checks",
+          "Dynamic analysis: harmonic, spectrum, time history",
+          "Hanger design and pipe support optimisation",
+          "Bidirectional with CADWorx, SmartPlant, Plant 3D",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -8170,6 +8680,41 @@ export const c5Tools: Tool[] = [
       "Excel",
       "PCF",
       "CAESAR Neutral"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$8,000",
+        "period": "per year",
+        "features": [
+          "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
+          "Buried pipe and PipePlus modules",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$11,600",
+        "period": "per year",
+        "features": [
+          "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
+          "Buried pipe and PipePlus modules",
+          "Bi-directional with OpenPlant, AutoCAD Plant 3D",
+          "Spectrum, harmonic, and SAM analyses",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -8348,6 +8893,41 @@ export const c5Tools: Tool[] = [
       "DXF",
       "Word",
       "Excel"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$6,500",
+        "period": "per year",
+        "features": [
+          "ASME VIII Div 1 & Div 2 code compliance",
+          "PD 5500, EN 13445, TEMA exchanger codes",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$9,425",
+        "period": "per year",
+        "features": [
+          "ASME VIII Div 1 & Div 2 code compliance",
+          "PD 5500, EN 13445, TEMA exchanger codes",
+          "Wind, seismic, and snow load calculations",
+          "Vessel nozzle FEA (WRC, FEA 107/297)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -8522,6 +9102,41 @@ export const c5Tools: Tool[] = [
       "PDF",
       "P&ID Process Data",
       "XML"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$25,000",
+        "period": "per year",
+        "features": [
+          "Steady-state and dynamic process simulation",
+          "Refining-focused thermodynamic packages",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$36,250",
+        "period": "per year",
+        "features": [
+          "Steady-state and dynamic process simulation",
+          "Refining-focused thermodynamic packages",
+          "HYSYS Upstream pipeline / wellbore modeling",
+          "Activated Energy Analyzer and Exchanger Design",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -8703,6 +9318,41 @@ export const c5Tools: Tool[] = [
       "IFC",
       "Excel",
       "PDF Analysis Reports"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,495",
+        "period": "one-time perpetual",
+        "features": [
+          "Linear / non-linear static and dynamic analysis",
+          "Response spectrum and time history",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,618",
+        "period": "one-time perpetual",
+        "features": [
+          "Linear / non-linear static and dynamic analysis",
+          "Response spectrum and time history",
+          "Pushover and IDA analyses",
+          "Bridge module (precast, segmental, cable-stayed)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -8883,6 +9533,41 @@ export const c5Tools: Tool[] = [
       "IFC",
       "Excel",
       "PDF Analysis Reports"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,495",
+        "period": "one-time perpetual",
+        "features": [
+          "Slab, beam, column, shear-wall integrated design",
+          "Linear and non-linear analysis",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,618",
+        "period": "one-time perpetual",
+        "features": [
+          "Slab, beam, column, shear-wall integrated design",
+          "Linear and non-linear analysis",
+          "Pushover, response spectrum, time history",
+          "Concrete, steel, composite design codes",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -9064,6 +9749,41 @@ export const c5Tools: Tool[] = [
       "DWG",
       "DXF",
       "PDF Reports"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$3,200",
+        "period": "per year",
+        "features": [
+          "Linear / non-linear static and dynamic analysis",
+          "Concrete, steel, aluminum, timber design codes",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$4,640",
+        "period": "per year",
+        "features": [
+          "Linear / non-linear static and dynamic analysis",
+          "Concrete, steel, aluminum, timber design codes",
+          "Connection design (STAAD Connection Design)",
+          "Foundation design (Footing, Mat, Pile)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -9288,7 +10008,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
-    "pricing_url": "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
+    "pricing_url": "https://www.autodesk.com/products/robot-structural-analysis-professional/overview#buying-options",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -9430,6 +10150,41 @@ export const c5Tools: Tool[] = [
       "DWG",
       "DXF",
       "PDF Calculation Notes"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,615",
+        "period": "per year",
+        "features": [
+          "Linear and non-linear analysis",
+          "Reinforced concrete and steel design",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,792",
+        "period": "per year",
+        "features": [
+          "Linear and non-linear analysis",
+          "Reinforced concrete and steel design",
+          "Bi-directional Revit link",
+          "Multi-region code coverage (Eurocode, AISC, ACI, BS)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -9464,7 +10219,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.ideastatica.com",
-    "pricing_url": "https://www.ideastatica.com",
+    "pricing_url": "https://www.ideastatica.com/pricing",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -9610,6 +10365,41 @@ export const c5Tools: Tool[] = [
       "DXF",
       "3D PDF",
       "Detailed Code Check Report"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,300",
+        "period": "per year",
+        "features": [
+          "CBFEM (Component-Based FEM) for connections",
+          "Steel, concrete, and composite member checks",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,335",
+        "period": "per year",
+        "features": [
+          "CBFEM (Component-Based FEM) for connections",
+          "Steel, concrete, and composite member checks",
+          "Detail (D-region) concrete analysis",
+          "Bidirectional links to Tekla, Revit, Advance Steel, ETABS, SAP2000",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -9644,7 +10434,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://risa.com/products/risa-3d",
-    "pricing_url": "https://risa.com/products/risa-3d",
+    "pricing_url": "https://risa.com/products/risa-3d#pricing",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -9786,6 +10576,41 @@ export const c5Tools: Tool[] = [
       "Revit",
       "SDNF",
       "PDF"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,200",
+        "period": "per year",
+        "features": [
+          "Linear and P-Delta analysis",
+          "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,190",
+        "period": "per year",
+        "features": [
+          "Linear and P-Delta analysis",
+          "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
+          "RISAFloor integration for gravity systems",
+          "Cold-formed steel and aluminum design",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -11506,6 +12331,71 @@ export const c5Tools: Tool[] = [
       "SVG",
       "DXF",
       "PDF"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "SVG & DXF import",
+            "status": true
+          },
+          {
+            "name": "Spacing & rotation control",
+            "status": true
+          },
+          {
+            "name": "Grain-direction rules",
+            "status": true
+          },
+          {
+            "name": "Local in-browser nesting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native SVG / DXF Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision SVG / DXF / PDF Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -11649,6 +12539,71 @@ export const c5Tools: Tool[] = [
       "fusion-360",
       "solidcam",
       "mastercam"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "STEP & PDF RFQ import",
+            "status": true
+          },
+          {
+            "name": "Multi-part lot workspace",
+            "status": true
+          },
+          {
+            "name": "Per-part 3D review (Setup View)",
+            "status": true
+          },
+          {
+            "name": "Production-history time estimation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / STP / PDF Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DWG / DXF / PDF Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];

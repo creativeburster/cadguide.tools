@@ -9,7 +9,7 @@ export const c6Tools: Tool[] = [
     "slug": "altium-designer",
     "logo_url": "/logos/altium-designer.png",
     "short_desc": "The professional standard for PCB and electronics design.",
-    "description": "Altium Designer offers a unified design environment including schematic capture and 3D PCB layout.",
+    "description": "Altium Designer is the electronics industry’s flagship unified PCB design and ECAD engineering environment. Combining hierarchical schematic capture, constraint-driven high-speed DDR/PCIe interactive routing, rigid-flex 3D stackup modeling, Situs topological autorouting, SPICE/signal-integrity analysis, and native MCAD CoDesigner links (SolidWorks, Creo, Inventor) via Altium 365, it bridges circuit concept and turnkey fabrication.",
     "pricing_tiers": [
       {
         "name": "Standard",
@@ -405,7 +405,7 @@ export const c6Tools: Tool[] = [
     "slug": "eplan-electric-p8",
     "logo_url": "/logos/eplan-electric-p8.ico",
     "short_desc": "The global standard for electrical engineering.",
-    "description": "EPLAN Electric P8 is a consistent, integrated and fast system for the planning and design of electrical engineering for machines and plant systems.",
+    "description": "EPLAN Electric P8 is the global industrial automation standard for CAE electrical schematic design, PLC control cabinet engineering, and fluid/pneumatic power documentation. Database-driven rather than drawing-centric, it automates IEC/NFPA wire numbering, terminal-strip diagrams, device tag cross-referencing, and 3D digital twin panel routing in direct synchronization with EPLAN Pro Panel.",
     "country": "Germany",
     "category_id": "c6",
     "pricing_type": "Subscription",
@@ -1781,7 +1781,7 @@ export const c6Tools: Tool[] = [
     "slug": "xpedition",
     "logo_url": "/logos/xpedition.svg",
     "short_desc": "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent",
-    "description": "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent engineers to global enterprises.",
+    "description": "Siemens Xpedition Enterprise is the premier constraint-driven PCB and electronic systems design platform for high-density interconnect (HDI), RF/microwave, rigid-flex, and multi-board aerospace/telecom hardware. Integrating HyperLynx signal/power/thermal integrity verification, Valor NPI Design-for-Manufacturing (DFM) checks, and Teamcenter PLM library governance, it scales to the world’s most complex electronic architectures.",
     "pricing_tiers": [
       {
         "name": "Perpetual",
@@ -2345,6 +2345,40 @@ export const c6Tools: Tool[] = [
       "PDF",
       "SVG",
       "STEP 3D"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Free / Starter Tier",
+        "price": "$0",
+        "period": "forever",
+        "features": [
+          "Browser-based schematic and PCB editor",
+          "Direct integration with LCSC parts catalog",
+          "Community support access"
+        ]
+      },
+      {
+        "name": "Professional Edition",
+        "price": "$29",
+        "period": "per month",
+        "features": [
+          "Browser-based schematic and PCB editor",
+          "Direct integration with LCSC parts catalog",
+          "One-click JLCPCB fabrication and assembly order",
+          "Unlimited project exports & commercial use"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Business / Enterprise",
+        "price": "Custom Quote",
+        "period": "annual volume billing",
+        "features": [
+          "Centralized team seat management & SSO",
+          "Priority technical support & SLA",
+          "Dedicated cloud storage & collaboration controls"
+        ]
+      }
     ]
   },
   {
@@ -2765,6 +2799,41 @@ export const c6Tools: Tool[] = [
       "Ultiboard (PCB)",
       "Excel",
       "PDF"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$600",
+        "period": "per year",
+        "features": [
+          "Interactive SPICE simulation with virtual instruments",
+          "Mixed-signal A/D simulation",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$870",
+        "period": "per year",
+        "features": [
+          "Interactive SPICE simulation with virtual instruments",
+          "Mixed-signal A/D simulation",
+          "Microcontroller co-simulation",
+          "Ultiboard PCB layout pairing",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -2993,7 +3062,7 @@ export const c6Tools: Tool[] = [
       "Education"
     ],
     "official_url": "https://www.labcenter.com",
-    "pricing_url": "https://www.labcenter.com",
+    "pricing_url": "https://www.labcenter.com/pricing/",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -3136,6 +3205,41 @@ export const c6Tools: Tool[] = [
       "PDF",
       "STEP",
       "BOM"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$248",
+        "period": "one-time perpetual",
+        "features": [
+          "Schematic + SPICE simulation",
+          "Microcontroller VSM co-simulation",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$360",
+        "period": "one-time perpetual",
+        "features": [
+          "Schematic + SPICE simulation",
+          "Microcontroller VSM co-simulation",
+          "Peripheral models (LCDs, sensors, motors)",
+          "ARES PCB layout with autorouter",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3315,6 +3419,41 @@ export const c6Tools: Tool[] = [
       "IPC-2581",
       "STEP",
       "PDF release packages"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$295",
+        "period": "per year",
+        "features": [
+          "Cloud workspace and version control",
+          "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$428",
+        "period": "per year",
+        "features": [
+          "Cloud workspace and version control",
+          "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
+          "Manufacturing release portal",
+          "Live BOM, part lifecycle, supplier links",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3488,6 +3627,40 @@ export const c6Tools: Tool[] = [
       "STEP",
       "PDF",
       "BOM"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Community / Standard Release",
+        "price": "$0",
+        "period": "forever",
+        "features": [
+          "Altium-engine schematic and PCB layout",
+          "Octopart-backed component library",
+          "Public cloud project hosting",
+          "Sandbox private repos (paid CircuitMaker Pro)"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Professional / Team Deployment",
+        "price": "$0",
+        "period": "free commercial use",
+        "features": [
+          "Unrestricted workstation or browser usage",
+          "Full format import & export capabilities",
+          "Zero watermarks or artificial feature locks"
+        ]
+      },
+      {
+        "name": "Enterprise & Custom Integration",
+        "price": "Free / Open",
+        "period": "self-hosted / IT deployment",
+        "features": [
+          "Centralized IT package deployment",
+          "API, script, or pipeline integration",
+          "Community forums & official documentation"
+        ]
+      }
     ]
   }
 ];

@@ -116,8 +116,8 @@ export default function OnlineRevitFamilyCheckerAuditClient() {
       title="BIM Revit Family File Integrity & Parameter Auditor"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="In BIM collaborative design, Family files (.rfa) downloaded from the Internet or provided by vendors may vary in quality. Overly nested families, too many uncleaned garbage entities (Unpurged Objects) And illegally named shared parameters (Shared Parameters) will cause Revit The size of the main model skyrocketed, causing project loading to be extremely slow and performance crashing."
-      riskWarning="Revit The family file not only contains the three-dimensional fine mesh, but also contains the manufacturer's process specifications and specifications. Uploading graphic element libraries in large batches for cloud auditing involves copyright compliance risks of secondary collection of data. For enterprise core family libraries, it is recommended to use local Revit Install the official Model Checker plug-in for offline compliance auditing."
+      painPointDesc="Unvetted Revit family files (`.rfa`) downloaded from manufacturer portals often contain imported 3D DWG/SAT geometry, excessive nesting depth, unpurged materials, and non-standard Shared Parameters that severely degrade central RVT model performance."
+      riskWarning="Proprietary enterprise Revit family libraries encode custom parametric formulas and BIM standards. Audit `.rfa` files locally using the free Autodesk Interoperability Tools Model Checker for Revit rather than uploading family libraries to unverified third-party servers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

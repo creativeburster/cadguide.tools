@@ -281,6 +281,52 @@ export default function CloudReferralClient({
               </select>
             </div>
           </div>
+
+          {/* Dynamic Pre-Flight Parameter Profile computed from selected dropdowns */}
+          {(() => {
+            const isLegacy = targetSchema.includes('Legacy');
+            const isMesh = targetSchema.includes('Mesh');
+            const isPdf = targetSchema.includes('PDF');
+            const schemaFlag = isLegacy
+              ? '--schema=AC1027_IFC2X3_AP214 --downsave-compat=true'
+              : isMesh
+              ? '--schema=GLTF2_3MF_STL --binary-facets=true'
+              : isPdf
+              ? '--schema=PDF_A_VECTOR --dpi=600 --embed-shx-ttf=true'
+              : '--schema=AC1032_IFC4_AP242 --preserve-pmi=true';
+
+            const unitFlag = unitSystem.includes('Millimeters')
+              ? '--unit-scale=1.0 --insunits=4 (mm)'
+              : unitSystem.includes('Meters')
+              ? '--unit-scale=0.001 --insunits=6 (m)'
+              : unitSystem.includes('Inches')
+              ? '--unit-scale=25.4 --insunits=1 (in)'
+              : '--unit-scale=native --preserve-ucs=true';
+
+            const tolFlag = toleranceMode.includes('0.005')
+              ? '--chordal-dev=0.005mm --angle-tol=5deg (Class-A / CNC)'
+              : toleranceMode.includes('0.10')
+              ? '--chordal-dev=0.10mm --angle-tol=20deg (BIM Clash / Fast)'
+              : '--chordal-dev=0.02mm --angle-tol=12deg (Standard Production)';
+
+            const cliLine = `cad-preflight ${fileReport ? `"${fileReport.name}"` : '"input_model.cad"'} ${schemaFlag} ${unitFlag} ${tolFlag}`;
+
+            return (
+              <div className="mt-3 pt-3 border-t border-slate-200/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px]">
+                <div className="font-mono text-slate-700 bg-white px-3 py-2 rounded-xl border border-slate-200 overflow-x-auto flex-1">
+                  <span className="text-blue-600 font-bold">Active Profile: </span>
+                  {cliLine}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleCopyLink(cliLine, 999)}
+                  className="px-3 py-2 rounded-xl bg-slate-900 hover:bg-blue-600 text-white font-black text-[11px] shrink-0 transition-colors"
+                >
+                  {copiedIndex === 999 ? '✓ Profile Copied' : 'Copy Export Flags'}
+                </button>
+              </div>
+            );
+          })()}
         </div>
       </section>
 

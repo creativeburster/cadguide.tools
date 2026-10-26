@@ -39,7 +39,11 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
 
     while ((match = linkRegex.exec(text)) !== null) {
       if (match.index > lastIndex) {
-        parts.push(text.slice(lastIndex, match.index));
+        parts.push(
+          ...linkifyToolNames(text.slice(lastIndex, match.index), allTools, {
+            currentSlug: tool.slug,
+          })
+        );
       }
       if (match[1] && match[2]) {
         parts.push(
@@ -71,7 +75,11 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
       lastIndex = match.index + match[0].length;
     }
     if (lastIndex < text.length) {
-      parts.push(text.slice(lastIndex));
+      parts.push(
+        ...linkifyToolNames(text.slice(lastIndex), allTools, {
+          currentSlug: tool.slug,
+        })
+      );
     }
     return parts.length > 0 ? parts : text;
   };
@@ -94,7 +102,36 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
     if (name.includes("linux")) return "linux";
     if (name.includes("ios") || name.includes("ipad")) return "ios";
     if (name.includes("android")) return "android";
-    if (name.includes("web") || name.includes("browser")) return "web";
+    if (name.includes("web") || name.includes("browser") || name.includes("cloud")) return "web";
+    return null;
+  };
+
+  const getFormatSlug = (fmt: string): string | null => {
+    const norm = fmt.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const known = new Set([
+      "dwg", "dxf", "step", "iges", "stl", "obj", "fbx", "ifc", "rvt",
+      "3dm", "sldprt", "ipt", "sat", "jt", "dgn", "pdf", "3mf", "usd",
+      "gcode", "cgr", "dwf", "exb", "slddrw", "idw", "vda", "catpart",
+      "nxprt", "creoprt", "f3d"
+    ]);
+    if (known.has(norm)) return norm;
+    if (norm === "stp" || norm.startsWith("stepap")) return "step";
+    if (norm === "igs") return "iges";
+    if (norm === "dwfx") return "dwf";
+    if (norm === "usdz" || norm === "usdc" || norm === "usda") return "usd";
+    if (norm === "ifc2x3" || norm === "ifc4") return "ifc";
+    return null;
+  };
+
+  const getLicenseHref = (label: string): string | null => {
+    const l = label.toLowerCase();
+    if (l.includes("open source") || l.includes("open-source") || l.includes("gpl") || l.includes("lgpl") || l.includes("mit")) return "/open-source";
+    if (l === "free") return "/free";
+    if (l.includes("freemium")) return "/pricing/freemium";
+    if (l.includes("perpetual") || l.includes("one-time") || l.includes("buyout")) return "/pricing/perpetual";
+    if (l.includes("subscription") || l.includes("annual") || l.includes("monthly") || l.includes("named user")) return "/pricing/subscription";
+    if (l.includes("network") || l.includes("floating") || l.includes("concurrent")) return "/pricing/network";
+    if (l.includes("education") || l.includes("academic") || l.includes("student")) return "/pricing/educational";
     return null;
   };
 
@@ -299,12 +336,18 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 uppercase tracking-[0.2em] text-[10px]">
                         {category?.name}
                       </Badge>
-                      <Badge
-                        variant="outline"
-                        className="bg-slate-50 text-slate-500 border-slate-100 font-bold px-4 py-1.5 text-[10px]"
-                      >
-                        {tool.pricing_type}
-                      </Badge>
+                      {(() => {
+                        const pHref = getLicenseHref(tool.pricing_type || "");
+                        const badgeEl = (
+                          <Badge
+                            variant="outline"
+                            className="bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200 font-bold px-4 py-1.5 text-[10px] transition-colors"
+                          >
+                            {tool.pricing_type}
+                          </Badge>
+                        );
+                        return pHref ? <Link href={pHref}>{badgeEl}</Link> : badgeEl;
+                      })()}
                       {tool.discontinued && (
                         <Badge
                           variant="outline"
@@ -325,18 +368,22 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       )}
 
                       {(() => {
-                        const platformBadge = tool.platforms
-                          ? tool.platforms
-                              .map(p => ({ name: p, slug: getPlatformSlug(p) }))
-                              .find(p => p.slug !== null)
-                          : null;
-                        return platformBadge ? (
-                          <Link href={`/platforms/${platformBadge.slug}`}>
+                        const seenPlats = new Set<string>();
+                        const platformBadges = (tool.platforms || [])
+                          .map(p => ({ name: p, slug: getPlatformSlug(p) }))
+                          .filter((p): p is { name: string; slug: string } => {
+                            if (!p.slug || seenPlats.has(p.slug)) return false;
+                            seenPlats.add(p.slug);
+                            return true;
+                          })
+                          .slice(0, 3);
+                        return platformBadges.map(pb => (
+                          <Link href={`/platforms/${pb.slug}`} key={pb.slug}>
                             <Badge className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
-                              <Cloud className="w-3 h-3 text-emerald-500" /> CAD for {platformBadge.name}
+                              <Cloud className="w-3 h-3 text-emerald-500" /> CAD for {pb.name}
                             </Badge>
                           </Link>
-                        ) : null;
+                        ));
                       })()}
 
                       {getSectorLinks(tool).map((sec, sIdx) => (
@@ -422,22 +469,33 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         Official Website <ExternalLink className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
                       </a>
                     </Button>
-                    {!["Free", "Open Source"].includes(tool.pricing_type) && tool.pricing_url && (
-                      <Button
-                        asChild
-                        className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-emerald-200 text-sm sm:text-base md:text-lg"
-                      >
-                        <a
-                          href={tool.pricing_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 md:gap-3"
-                          aria-label={`View official live pricing for ${tool.name}`}
+                    {!["Free", "Open Source"].includes(tool.pricing_type) && (
+                      tool.pricing_url && tool.pricing_url !== (tool.affiliate_url || tool.official_url) ? (
+                        <Button
+                          asChild
+                          className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-emerald-200 text-sm sm:text-base md:text-lg"
+                        >
+                          <a
+                            href={tool.pricing_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 md:gap-3"
+                            aria-label={`View official live pricing for ${tool.name}`}
+                          >
+                            <CreditCard className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
+                            Official Live Pricing <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button
+                          type="button"
+                          onClick={() => scrollTo("pricing")}
+                          className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black h-12 md:h-14 px-4 sm:px-6 md:px-8 shadow-xl shadow-emerald-200 text-sm sm:text-base md:text-lg flex items-center gap-2 md:gap-3"
                         >
                           <CreditCard className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
-                          Official Live Pricing <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
-                        </a>
-                      </Button>
+                          Pricing Breakdown
+                        </Button>
+                      )
                     )}
                     {tool.donate_url && (
                       <Button
@@ -788,15 +846,39 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           <div className="text-slate-500 font-black uppercase text-xs tracking-widest mb-4">
                             {tier.name}
                           </div>
-                          <div className="flex flex-col items-center justify-center gap-1">
-                            <span className="text-2xl md:text-3xl font-black text-slate-900">
-                              {tierHeadline}
-                            </span>
-                            <span className="text-slate-500 font-bold text-sm tracking-tight">
-                              {isFreeTier
-                                ? "No Commercial License Fee"
-                                : "Verify Live Regional Pricing on Vendor Portal"}
-                            </span>
+                          <div className="flex flex-col items-center justify-center gap-1.5">
+                            {(() => {
+                              const formattedPrice = formatTierPrice(tier.price);
+                              const hasSpecificPrice =
+                                formattedPrice &&
+                                !/^(custom|quote|contact|verify|official|perpetual|subscription|annual|monthly|free)/i.test(formattedPrice);
+                              return hasSpecificPrice ? (
+                                <>
+                                  <span className="text-2xl md:text-3xl font-black text-slate-900">
+                                    {formattedPrice}
+                                    {tier.period && !formattedPrice.includes("/") ? (
+                                      <span className="text-base md:text-lg font-bold text-slate-500 ml-1">
+                                        {tier.period.startsWith("/") ? tier.period : `(${tier.period})`}
+                                      </span>
+                                    ) : null}
+                                  </span>
+                                  <span className="text-slate-500 font-bold text-xs uppercase tracking-wider">
+                                    {tierHeadline} • Verify Regional Rate
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <span className="text-2xl md:text-3xl font-black text-slate-900">
+                                    {tierHeadline}
+                                  </span>
+                                  <span className="text-slate-500 font-bold text-sm tracking-tight">
+                                    {isFreeTier
+                                      ? "No Commercial License Fee"
+                                      : "Verify Live Regional Pricing on Vendor Portal"}
+                                  </span>
+                                </>
+                              );
+                            })()}
                           </div>
                         </CardHeader>
                         <CardContent className="p-6 md:p-10 pt-4">
@@ -921,8 +1003,22 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         <span className="font-bold text-slate-600">
                           Certified OS
                         </span>
-                        <span className="font-black text-slate-900 text-right">
-                          {tool.platforms.join(", ")}
+                        <span className="font-black text-slate-900 text-right flex flex-wrap justify-end gap-1.5">
+                          {tool.platforms.map((plat, idx) => {
+                            const pSlug = getPlatformSlug(plat);
+                            return (
+                              <span key={plat}>
+                                {pSlug ? (
+                                  <Link href={`/platforms/${pSlug}`} className="text-blue-600 hover:underline">
+                                    {plat}
+                                  </Link>
+                                ) : (
+                                  plat
+                                )}
+                                {idx < tool.platforms.length - 1 ? "," : ""}
+                              </span>
+                            );
+                          })}
                         </span>
                       </div>
                       <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
@@ -941,11 +1037,21 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           {tool.tech_specs.gpu_optimization || "Standard"}
                         </span>
                       </div>
+                      {tool.user_scales && tool.user_scales.length > 0 && (
+                        <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
+                          <span className="font-bold text-slate-600">
+                            Target Scale
+                          </span>
+                          <span className="font-black text-slate-900 text-right">
+                            {tool.user_scales.join(", ")}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </Card>
                   <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                     <h4 className="font-black mb-8 uppercase text-xs md:text-sm tracking-widest text-slate-500">
-                      Industry Standards
+                      Industry Standards & Sectors
                     </h4>
                     <div className="flex flex-wrap gap-3">
                       {tool.tech_specs.standards?.map((s) => (
@@ -957,6 +1063,23 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </Badge>
                       ))}
                     </div>
+                    {tool.industries && tool.industries.length > 0 && (
+                      <div className="mt-6 pt-6 border-t border-slate-100">
+                        <div className="text-xs font-black uppercase tracking-widest text-slate-400 mb-3">
+                          Primary Engineering Industries
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {tool.industries.map((ind) => (
+                            <Badge
+                              key={ind}
+                              className="h-auto bg-blue-50/60 text-blue-700 border-blue-100 font-bold px-3 py-1 rounded-lg text-xs md:text-sm"
+                            >
+                              {ind}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </Card>
                 </div>
               </section>
@@ -987,14 +1110,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                               Import
                             </div>
                             <div className="flex flex-wrap gap-2.5">
-                              {tool.file_formats_in.map((f) => (
-                                <Badge
-                                  key={f}
-                                  className="h-auto bg-blue-50 text-blue-700 border-blue-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
-                                >
-                                  {f}
-                                </Badge>
-                              ))}
+                              {tool.file_formats_in.map((f) => {
+                                const fmtSlug = getFormatSlug(f);
+                                const badgeEl = (
+                                  <Badge
+                                    key={f}
+                                    className={`h-auto bg-blue-50 text-blue-700 border-blue-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base ${fmtSlug ? "hover:bg-blue-100 transition-colors cursor-pointer" : ""}`}
+                                  >
+                                    {f}
+                                  </Badge>
+                                );
+                                return fmtSlug ? (
+                                  <Link key={f} href={`/file-formats/${fmtSlug}`}>
+                                    {badgeEl}
+                                  </Link>
+                                ) : (
+                                  badgeEl
+                                );
+                              })}
                             </div>
                           </div>
                         )}
@@ -1005,14 +1138,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                               Export
                             </div>
                             <div className="flex flex-wrap gap-2.5">
-                              {tool.file_formats_out.map((f) => (
-                                <Badge
-                                  key={f}
-                                  className="h-auto bg-purple-50 text-purple-700 border-purple-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
-                                >
-                                  {f}
-                                </Badge>
-                              ))}
+                              {tool.file_formats_out.map((f) => {
+                                const fmtSlug = getFormatSlug(f);
+                                const badgeEl = (
+                                  <Badge
+                                    key={f}
+                                    className={`h-auto bg-purple-50 text-purple-700 border-purple-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base ${fmtSlug ? "hover:bg-purple-100 transition-colors cursor-pointer" : ""}`}
+                                  >
+                                    {f}
+                                  </Badge>
+                                );
+                                return fmtSlug ? (
+                                  <Link key={f} href={`/file-formats/${fmtSlug}`}>
+                                    {badgeEl}
+                                  </Link>
+                                ) : (
+                                  badgeEl
+                                );
+                              })}
                             </div>
                           </div>
                         )}
@@ -1211,14 +1354,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         <Tag className="w-4 h-4" /> License Types
                       </h4>
                       <div className="flex flex-wrap gap-2.5">
-                        {tool.license_types.map((l) => (
-                          <Badge
-                            key={l}
-                            className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
-                          >
-                            {l}
-                          </Badge>
-                        ))}
+                        {tool.license_types.map((l) => {
+                          const lHref = getLicenseHref(l);
+                          const badgeEl = (
+                            <Badge
+                              key={l}
+                              className={`h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base ${lHref ? "hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-colors cursor-pointer" : ""}`}
+                            >
+                              {l}
+                            </Badge>
+                          );
+                          return lHref ? (
+                            <Link key={l} href={lHref}>
+                              {badgeEl}
+                            </Link>
+                          ) : (
+                            badgeEl
+                          );
+                        })}
                       </div>
                     </Card>
                   )}
@@ -1282,7 +1435,12 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </div>
                   {tool.expert_verdict ? (
                     <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
-                      &quot;{tool.expert_verdict}&quot;
+                      &quot;
+                      {linkifyToolNames(tool.expert_verdict, allTools, {
+                        currentSlug: tool.slug,
+                        className: "text-blue-300 hover:text-white underline decoration-blue-400/50 transition-colors",
+                      })}
+                      &quot;
                     </p>
                   ) : (
                     <p className="text-lg md:text-2xl text-blue-100/90 font-medium leading-relaxed mb-8 md:mb-12">

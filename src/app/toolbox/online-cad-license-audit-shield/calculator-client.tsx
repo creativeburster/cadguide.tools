@@ -4,7 +4,7 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "Autodesk Licensing Support Tool (Official copyright self-examination procedure)",
+    "name": "Autodesk Licensing Support Tool (Official Diagnostic Utility)",
     "rating": 9.9,
     "metrics": [
       {
@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Requires online submission for partial verification"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "The official compliance scanning diagnostic assistant can accurately display which machines in the corporate network are in violation activation status."
+    "verdict": "Official command-line and GUI diagnostic utility from Autodesk for inspecting local licensing services, login tokens, and flexnet configurations."
   },
   {
     "name": "Enterprise SAM Checklist (Enterprise Software Asset Audit Checklist)",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Manual census terminal is required"
     ],
     "officialUrl": "https://www.microsoft.com/",
-    "verdict": "The most reliable security solution at present. Through domain control (Group Policy) Script queries installed CAD registry keys on the intranet."
+    "verdict": "Uses internal Active Directory Group Policy (GPO) and PowerShell inventory scripts to audit installed CAD versions and license serials across the corporate LAN."
   },
   {
     "name": "CAD Telemetry Privacy Script",
@@ -87,16 +87,16 @@ const RECOMMENDED_TOOLS = [
 ];
 const BEST_PRACTICES = [
   {
-    "title": "Completely uninstall piracy in one click on the intranet",
-    "desc": "Crack patches for pirated software often contain Trojans and backdoors. Use official and exclusive ones. Uninstall Helper Completely clear registry remnants and licensing lock files."
+    "title": "Remove unauthorized installations and residual registry keys",
+    "desc": "Unauthorized CAD builds frequently bundle malware or tampered DLLs. Use official vendor uninstall utilities to cleanly remove unlicensed installations and reset licensing services."
   },
   {
-    "title": "Deploy FLEXlm authorization pool for unified quota",
-    "desc": "Replace Named-User with a formal authorization server, and `options.opt` In-file configuration retention (RESERVE) policy, Restrict installation by unauthorized departments."
+    "title": "Centralize floating licenses with FLEXlm options files",
+    "desc": "Where multi-user network licensing is supported, configure `adskflex.opt` / `solidworks.opt` with `INCLUDE` and `RESERVE` rules to allocate seats strictly to authorized engineering groups."
   },
   {
-    "title": "Unified use of alternative CAD to reduce compliance costs",
-    "desc": "For design positions that do not use CAD modeling frequently, unified purchase of highly cost-effective replacement software such as GstarCAD or ZWCAD, can directly reduce 80% of the financial pressure on genuine products."
+    "title": "Adopt cost-effective DWG-compatible CAD alternatives for 2D drafting",
+    "desc": "For reviewers and occasional 2D drafters, deploying perpetual-license DWG alternatives (such as BricsCAD, ZWCAD, or GstarCAD) or free viewers (DWG TrueView) reduces subscription overhead by up to 70%."
   }
 ];
 const FAQS = [
@@ -105,8 +105,8 @@ const FAQS = [
     "answer": "Standard outreach letters from regional resellers are often commercial sales inquiries, whereas formal audit notices issued by the software vendor's legal compliance team or BSA counsel require a structured internal Software Asset Management (SAM) reconciliation and legal review."
   },
   {
-    "question": "How did the agent know that our company was using pirated CAD? ",
-    "answer": "When a local pirated CAD or plug-in is launched while connected to the Internet, the built-in telemetry module automatically records your public IP and computer MAC address, and sent back to the official compliance database. Once the public IP is matched, it is not in the company's list of genuine purchases. The order will be automatically dispatched to the local agent for follow-up."
+    "question": "How do software vendors detect unlicensed CAD installations on corporate networks?",
+    "answer": "When an unlicensed or modified CAD executable connects to the internet, background crash-reporting and licensing services can log public IP addresses, domain suffixes, and machine identifiers that fail entitlement reconciliation."
   }
 ];
 
@@ -116,8 +116,8 @@ export default function OnlineCadLicenseAuditShieldClient() {
       title="Enterprise CAD Software Asset Management (SAM) Self-Check Guide"
       subtitle="Direct navigation to objective in-depth SAM and telemetry-privacy tooling evaluations."
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="Many enterprise IT departments often face problems due to individual employees downloading and installing cracked versions of software without permission. and unexpectedly received an Autodesk or SolidWorks The problem of legal copyright compliance audit letters sent by agents. This usually leads to high repurchase fines and litigation disputes. SAM Administrators need to complete self-examination and remediation before any letter arrives."
-      riskWarning="Enterprise anti-piracy compliance self-examination must comply with national intellectual property laws and company SAM management boundaries. This guide only provides IT compliance white paper technical solutions for asset self-examination and limiting the monitoring of irrelevant domain names. Should not be used to cover up any known violations. Corporate legalization is the only legal path to long-term development."
+      painPointDesc="Unscheduled software license compliance audits are often triggered when employees install unauthorized CAD copies on corporate laptops. Implementing proactive Software Asset Management (SAM), endpoint installation controls, and right-sized viewer/alternative licenses keeps engineering teams 100% compliant."
+      riskWarning="Software Asset Management (SAM) audits must adhere to applicable copyright laws and enterprise license agreements. This guide provides legitimate IT inventory and license optimization practices to help organizations achieve and maintain full licensing compliance."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

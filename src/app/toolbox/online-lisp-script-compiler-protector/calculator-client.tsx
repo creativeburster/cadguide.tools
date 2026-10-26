@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Requires a local installation of AutoCAD"
     ],
     "officialUrl": "https://www.autodesk.com/",
-    "verdict": "The most formal and secure encryption and compilation environment officially provided by Autodesk, Ensure bytecode is consistent between CAD versions 100% Stable operation."
+    "verdict": "Autodesk's official built-in Visual LISP compiler (`VLIDE`), generating native `.fas` fast-load bytecode and `.vlx` packaged applications offline."
   },
   {
     "name": "Visual Studio Code LISP Extension (Official new IDE)",
@@ -116,7 +116,7 @@ export default function OnlineLispScriptCompilerProtectorClient() {
       title="AutoLISP LSP Script Encryption (FAS/VLX) Online Portal"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="When you've worked hard to write a more efficient AutoLISP or Visual LISP Plug-in (.lsp), in order not to leak the plain source code during internal testing or package distribution, to prevent peers from maliciously stealing secondary packaging, it needs to be compiled into irreversible binary bytecode. (FAS) Or packaged as an application including a DCL interface (VLX) ."
+      painPointDesc="When distributing custom AutoLISP (`.lsp`) automation routines to external contractors or clients, compiling plain-text source code into binary Fast-Load AutoLISP (`.fas`) bytecode or self-contained `.vlx` modules (bundling LSP, DCL dialogs, and TXT resources) protects your engineering IP and speeds up load times."
       riskWarning="Proprietary AutoLISP (.lsp) source code often contains your organization's core automation algorithms. Avoid uploading raw LSP scripts to untrusted third-party web obfuscators; always compile FAS/VLX bytecode locally using AutoCAD's built-in Visual LISP IDE (VLIDE) or `(vlisp-compile)`."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}

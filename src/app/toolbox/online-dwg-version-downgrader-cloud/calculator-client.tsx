@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Only supports Windows and the installation package is large"
     ],
     "officialUrl": "https://www.autodesk.com/products/dwg-trueview/overview",
-    "verdict": "Autodesk officially provides free image viewing and drawing version converter, with the highest safety factor, Ensure that the CAD database nodes are intact."
+    "verdict": "Autodesk's official free desktop viewer and batch DWG TrueConvert utility—rewrites DWG versions locally with 100% AcDb database fidelity."
   },
   {
     "name": "Any DWG Version Converter",
@@ -102,7 +102,7 @@ const BEST_PRACTICES = [
 const FAQS = [
   {
     "question": "What do DWG header version codes like AC1032, AC1027, and AC1024 mean?",
-    "answer": "These are the first magic number marks of the DWG file (Magic Number) . For example AC1032 represents 2018-2027 version of the drawing database, because the old version of the software cannot recognize the head structure. It will directly report that the file is damaged or the version is not supported."
+    "answer": "These 6-byte ASCII signatures at the start of a DWG file identify its internal database schema—for example, `AC1032` (AutoCAD 2018–2026), `AC1027` (AutoCAD 2013–2017), and `AC1024` (AutoCAD 2010–2012). Older CAD releases cannot parse newer schema headers without downgrading."
   },
   {
     "question": "What happened if Dynamic Blocks failed after downgrading? ",

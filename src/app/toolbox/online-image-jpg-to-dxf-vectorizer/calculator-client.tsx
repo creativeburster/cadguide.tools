@@ -116,8 +116,8 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
       title="Online Image Raster (JPG/PNG) to Vector DXF Tracer"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Convert hand-drawn sketches, scanned blueprints or JPG/PNG Losslessly convert pixel images into images that can be stretched and edited in CAD DXF Vector lines (segments and arcs) , it is the key to digitizing drawings. Ordinary automatic tracing tools often produce tens of thousands of fine jagged short polylines. As a result, the software freezes directly after importing CAD. This review has selected the top engines with Bezier curve fitting and edge sharpening algorithms."
-      riskWarning="Some scanned drawings come from old government files or old factory expansions of confidential companies. Uploading such sensitive images to unknown online vectorization websites can easily lead to confidentiality leakage risks. Regular projects should use native Illustrator or Vectorization Independent stand-alone program for processing, eliminating hidden dangers in network transmission."
+      painPointDesc="Digitizing scanned paper blueprints, P&ID diagrams, or shop sketches into editable CAD geometry requires raster-to-vector (R2V) centerline tracing, orthogonal line snapping, and arc recognition rather than naive contour outlining that generates thousands of jagged polyline segments."
+      riskWarning="Scanned legacy blueprints often depict confidential facility layouts or proprietary mechanical assemblies. For sensitive drawings, perform raster-to-vector tracing locally using offline desktop software (such as WinTopo, Scan2CAD, or Inkscape) rather than uploading scans to public cloud servers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

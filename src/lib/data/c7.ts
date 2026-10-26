@@ -9,7 +9,7 @@ export const c7Tools: Tool[] = [
     "slug": "matrixgold",
     "logo_url": "/logos/matrixgold.png",
     "short_desc": "The world's most advanced jewelry design software.",
-    "description": "MatrixGold combines the top features of Matrix and RhinoGold with a simplified interface to provide a powerful 3D jewelry design experience.",
+    "description": "MatrixGold by Gemvision (Stuller) is the jewelry industry’s flagship parametric 3D CAD suite built atop the Rhino NURBS engine. By combining Rhino’s freeform modeling accuracy with a history-driven Dynamic Commands timeline, automated pavé/channel gem-setting builders, bezel/prong studios, and Chaos V-Ray photorealistic rendering, it lets jewelers resize rings and swap stone cuts on the fly before wax 3D printing.",
     "country": "USA",
     "category_id": "c7",
     "pricing_type": "Perpetual",
@@ -146,7 +146,7 @@ export const c7Tools: Tool[] = [
     "slug": "aveva-marine",
     "logo_url": "/logos/aveva-marine.ico",
     "short_desc": "Integrated engineering and design for shipbuilding.",
-    "description": "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms.",
+    "description": "AVEVA Marine (now evolving alongside AVEVA E3D Design) is an enterprise multi-discipline 3D shipbuilding and offshore naval architecture platform used by global shipyards for supertankers, LNG carriers, cruise vessels, and naval combatants. Its Dabacon database coordinates hull form fairing, planar/curved plate nesting, structural stiffener detailing, outfitting pipe/HVAC routing, and automated NC production drawings.",
     "country": "UK",
     "category_id": "c7",
     "pricing_type": "Subscription",
@@ -242,6 +242,106 @@ export const c7Tools: Tool[] = [
       "Production Drawings (DWG, PDF)",
       "CNC Plate Cutting Code",
       "BOM"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Hull Design",
+            "status": true
+          },
+          {
+            "name": "Outfitting",
+            "status": true
+          },
+          {
+            "name": "3D Collaborative Environment",
+            "status": true
+          },
+          {
+            "name": "Project Management",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / IGES / DWG Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision AVEVA RVM / Production Drawings (DWG, PDF) / CNC Plate Cutting Code Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$15,000",
+        "period": "per year",
+        "features": [
+          "Hull Design",
+          "Outfitting",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$21,750",
+        "period": "per year",
+        "features": [
+          "Hull Design",
+          "Outfitting",
+          "3D Collaborative Environment",
+          "Project Management",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -250,7 +350,7 @@ export const c7Tools: Tool[] = [
     "slug": "clo-3d",
     "logo_url": "/logos/clo-3d.png",
     "short_desc": "3D garment visualization and design.",
-    "description": "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies.",
+    "description": "CLO 3D is a physics-accurate 3D apparel and textile CAD platform that simulates real-world woven and knit fabric drape, stretch, shear, and seam tension on customizable 3D avatars in real time. Used by global fashion brands and technical soft-goods designers, it links 2D DXF-AAMA/ASTM pattern drafting directly with 3D virtual sample fitting, colorway grading, and BOM tech-pack generation.",
     "country": "South Korea",
     "category_id": "c7",
     "pricing_type": "Subscription",
@@ -2384,6 +2484,41 @@ export const c7Tools: Tool[] = [
       "G-Code",
       "B3D",
       "X3G"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$199",
+        "period": "one-time perpetual",
+        "features": [
+          "Per-process slicing with stop-points",
+          "Manual support placement",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$289",
+        "period": "one-time perpetual",
+        "features": [
+          "Per-process slicing with stop-points",
+          "Manual support placement",
+          "Multi-extrusion management",
+          "Pre-print simulation",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -2420,7 +2555,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/netfabb/overview",
-    "pricing_url": "https://www.autodesk.com/products/netfabb/overview",
+    "pricing_url": "https://www.autodesk.com/products/netfabb/overview#buying-options",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -2564,6 +2699,41 @@ export const c7Tools: Tool[] = [
       "STL",
       "3MF",
       "STEP"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$4,070",
+        "period": "per year",
+        "features": [
+          "Build-plate packing optimisation",
+          "Lattice generation",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$5,902",
+        "period": "per year",
+        "features": [
+          "Build-plate packing optimisation",
+          "Lattice generation",
+          "Support generation for metal AM",
+          "Distortion / residual stress simulation",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -2602,7 +2772,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://marvelousdesigner.com",
-    "pricing_url": "https://marvelousdesigner.com",
+    "pricing_url": "https://www.marvelousdesigner.com/pricings",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -2744,6 +2914,41 @@ export const c7Tools: Tool[] = [
       "USD",
       "ZPrj",
       "Animation cache"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$480",
+        "period": "per year",
+        "features": [
+          "Pattern-based 3D garment creation",
+          "Cloth physics simulation",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$696",
+        "period": "per year",
+        "features": [
+          "Pattern-based 3D garment creation",
+          "Cloth physics simulation",
+          "Avatars and animation",
+          "Texture and PBR material editor",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3405,7 +3610,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.adobe.com/products/substance3d-painter.html",
-    "pricing_url": "https://www.adobe.com/products/substance3d-painter.html",
+    "pricing_url": "https://www.adobe.com/creativecloud/3d-ar/plans.html",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -3550,6 +3755,41 @@ export const c7Tools: Tool[] = [
       "PSD",
       "glTF",
       "USD"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$240",
+        "period": "per year",
+        "features": [
+          "Non-destructive PBR layer stack",
+          "Smart materials and smart masks",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$348",
+        "period": "per year",
+        "features": [
+          "Non-destructive PBR layer stack",
+          "Smart materials and smart masks",
+          "Procedural generators",
+          "Bakers (AO, normal, curvature, world-space)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3730,6 +3970,41 @@ export const c7Tools: Tool[] = [
       "KML",
       "CSV",
       "PDF Stakeout Reports"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$1,995",
+        "period": "one-time perpetual",
+        "features": [
+          "AutoCAD or embedded IntelliCAD",
+          "Field-to-finish processing",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$2,893",
+        "period": "one-time perpetual",
+        "features": [
+          "AutoCAD or embedded IntelliCAD",
+          "Field-to-finish processing",
+          "GNSS and total-station support",
+          "Carlson SurvCE data collector integration",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3913,6 +4188,41 @@ export const c7Tools: Tool[] = [
       "KML",
       "CSV",
       "Machine Control files"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$2,400",
+        "period": "per year",
+        "features": [
+          "GNSS baseline processing",
+          "Total-station and level data reduction",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$3,480",
+        "period": "per year",
+        "features": [
+          "GNSS baseline processing",
+          "Total-station and level data reduction",
+          "Point-cloud (Trimble SX / scanner) processing",
+          "UAV photogrammetry",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -4246,7 +4556,7 @@ export const c7Tools: Tool[] = [
     "slug": "maptek-vulcan",
     "logo_url": "/logos/maptek-vulcan.png",
     "short_desc": "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
-    "description": "Maptek Vulcan is a 3D mining software suite for geological modeling, resource estimation, open-pit and underground mine design, and production scheduling.",
+    "description": "Maptek Vulcan is the mining industry’s premier 3D geological modeling, geostatistical resource estimation, and open-pit/underground mine planning software suite. Capable of rendering multi-million-cell block models, drillhole assay databases, geotechnical fault wireframes, and automated stope/pit-shell optimizations, it guides geologists and mine engineers from exploration to daily drill-and-blast scheduling.",
     "pricing_tiers": [
       {
         "name": "Perpetual",
@@ -4783,6 +5093,41 @@ export const c7Tools: Tool[] = [
       "PDF",
       "STEP",
       "JSON"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "Custom Quote",
+        "period": "contact vendor",
+        "features": [
+          "Single connected product record",
+          "Multi-level BOM & assembly tree management",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "Custom Quote",
+        "period": "contact vendor",
+        "features": [
+          "Single connected product record",
+          "Multi-level BOM & assembly tree management",
+          "Direct Onshape App Store integration & CAD metadata sync",
+          "Supplier, RFQ & purchase order procurement tracking",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -4912,6 +5257,71 @@ export const c7Tools: Tool[] = [
       "qcad",
       "librecad",
       "autocad-lt"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Photo → line drawing conversion",
+            "status": true
+          },
+          {
+            "name": "DXF / SVG / PNG export",
+            "status": true
+          },
+          {
+            "name": "Orthographic entourage view (beta)",
+            "status": true
+          },
+          {
+            "name": "300+ shared 2D block library",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DWG / DXF / STEP Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DXF / SVG / PNG Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];

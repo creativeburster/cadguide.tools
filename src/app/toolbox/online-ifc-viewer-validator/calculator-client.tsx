@@ -116,8 +116,8 @@ export default function OnlineIfcViewerValidatorClient() {
       title="Online openBIM IFC Standard File Validator & Viewer"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="In order to ensure that the BIM collaborative model enters the downstream cost, 100% compliance when analyzing energy consumption or delivering it for government filing buildingSmart Standardization, development and operation and maintenance personnel urgently need to IFC Model metadata dictionary (Data Dict), polyhedral geometry closure (Watertightness) and parent-child topology nesting relationship for automatic verification."
-      riskWarning="IFC It is an aggregation of big data of the whole life cycle of construction. Inadvertent uploading to public picture viewing sites with data monitoring may expose the physical structure of the project. Please give priority to using the security verification client certified by the buildingSmart standards organization. It is strictly prohibited to directly upload drawings of government secrets or military projects."
+      painPointDesc="Before submitting openBIM deliverables for clash detection, quantity takeoff, or COBie handover, BIM coordinators must validate IFC2x3/IFC4 files against buildingSMART schema rules, Model View Definitions (MVD), and IDS property requirements."
+      riskWarning="IFC models contain comprehensive architectural, structural, and MEP asset data for the entire facility. For sensitive infrastructure or commercial projects, run schema validation locally using desktop tools (such as BIMcollab Zoom, Solibri Anywhere, or BlenderBIM) rather than unverified public web viewers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

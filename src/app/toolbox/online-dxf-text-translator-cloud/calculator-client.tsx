@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Need to mount the API key of the translation engine"
     ],
     "officialUrl": "https://github.com/mozman/ezdxf",
-    "verdict": "CAD-based native API The batch text export and in-situ replacement scripts written are the most secure and efficient solutions."
+    "verdict": "Local Python (`ezdxf`) or AutoLISP scripts that extract `TEXT`, `MTEXT`, and `ATTRIB` strings for translation while keeping all geometry offline."
   },
   {
     "name": "SDL Trados CAD Plugin (Professional Engineering Translation Suite)",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Requires purchase of Trados commercial version software license"
     ],
     "officialUrl": "https://www.rws.com/",
-    "verdict": "Customized translation extensions for CAD formats from the global translation software giant, Supports direct reading and export of translation DWG, with extremely high degree of restoration."
+    "verdict": "Enterprise computer-assisted translation (CAT) workflow supporting bilingual terminology glossaries and Translation Memory (TM) reuse across DXF/DWG drawing sets."
   },
   {
     "name": "Allinpdf Translator Cloud (Cloud Viewing and Translation Platform)",
@@ -116,8 +116,8 @@ export default function OnlineDxfTextTranslatorCloudClient() {
       title="Online DXF/DWG Drawing Multi-Language Batch Translator"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Troubleshooting Wizard"
-      painPointDesc="When carrying out transnational engineering or industrial equipment outsourcing, it is often necessary to provide Chinese DXF/DWG Batch translation of process text and annotations in drawings into English and Russian, Japanese and other languages. Ordinary online translation often causes the coordinate origin of the text to drift. (misalignment), the font is displayed as a question mark due to incompatible encoding, or translating a single line of text into an overly long paragraph causing the drawing to be obscured."
-      riskWarning="Technical requirements marked in drawings, detailed list (BOM) and dimensional tolerances cover the core manufacturing process and patents of the product. Uploading large batches to public translation websites without security isolation has a very high risk of sensitive data leakage. For confidential projects, local is recommended CAD Use professional offline plug-ins for text translation."
+      painPointDesc="Cross-border EPC and manufacturing projects frequently require translating thousands of `TEXT`, `MTEXT`, and block attribute annotations across DWG/DXF drawing sets without shifting insertion coordinates, breaking dimension leaders, or causing SHX font encoding errors (`???`)."
+      riskWarning="Drawing notes, title blocks, and BOM tables contain proprietary manufacturing specifications. Instead of uploading entire DWG files to public translation websites, extract text strings locally via AutoLISP or `ezdxf` and translate only the de-contextualized text table."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

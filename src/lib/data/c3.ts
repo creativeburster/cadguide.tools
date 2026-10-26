@@ -9,7 +9,7 @@ export const c3Tools: Tool[] = [
     "slug": "revit",
     "logo_url": "/logos/revit.png",
     "short_desc": "The de-facto standard for Building Information Modeling (BIM).",
-    "description": "Revit is Autodesk's flagship software built specifically for BIM, allowing architects and engineers to collaborate in a unified model.",
+    "description": "Autodesk Revit is the global AEC industry standard for multidisciplinary Building Information Modeling (BIM), uniting architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
     "pricing_tiers": [
       {
         "name": "Monthly",
@@ -274,7 +274,7 @@ export const c3Tools: Tool[] = [
     "slug": "archicad",
     "logo_url": "/logos/archicad.png",
     "short_desc": "The BIM software of choice for design-oriented architects.",
-    "description": "ArchiCAD, developed by Graphisoft, was the first BIM software for personal computers.",
+    "description": "Archicad by Graphisoft (Nemetschek Group) is a pioneering architectural BIM platform celebrated for its design-first workflow, native macOS/Windows Apple Silicon performance, and BIMcloud real-time teamwork. It empowers architects to model complex parametric curtain walls, shells, and stair assemblies while automatically generating construction documentation, photorealistic visualizations, and certified IFC4 openBIM deliverables.",
     "pricing_tiers": [
       {
         "name": "Studio",
@@ -539,7 +539,7 @@ export const c3Tools: Tool[] = [
     "slug": "tekla-structures",
     "logo_url": "/logos/tekla-structures.png",
     "short_desc": "The world's most advanced structural BIM software.",
-    "description": "Tekla Structures is a BIM software for detailing steel, concrete, and timber structures.",
+    "description": "Tekla Structures by Trimble is the structural engineering and fabrication industry benchmark for constructible LOD 400–500 Building Information Modeling. Capable of modeling stadium-scale structural steel connections, rebar-congested cast-in-place concrete, and precast elements down to every bolt and weld, it drives automated DSTV/NC shop machines, rebar bending schedules, and Trimble Connect field workflows.",
     "pricing_tiers": [
       {
         "name": "Carbon",
@@ -738,7 +738,7 @@ export const c3Tools: Tool[] = [
     "slug": "vectorworks",
     "logo_url": "/logos/vectorworks.png",
     "short_desc": "The all-in-one BIM solution for landscape and entertainment design.",
-    "description": "Vectorworks is a versatile BIM and CAD software suite for architects and entertainment professionals.",
+    "description": "Vectorworks Design Suite (by Nemetschek Group) is a versatile cross-platform 2D/3D CAD and BIM authoring environment powered by the Siemens Parasolid geometric kernel. Combining precision 2D drafting, freeform NURBS/SubD modeling, data-rich BIM worksheets, Redshift GPU rendering, and native IFC4 certification, it serves architecture, interior, landscape, and live entertainment rigging professionals.",
     "pricing_tiers": [
       {
         "name": "Architect (Annual)",
@@ -936,7 +936,7 @@ export const c3Tools: Tool[] = [
     "slug": "chief-architect",
     "logo_url": "/logos/chief-architect.png",
     "short_desc": "Professional home design software for builders.",
-    "description": "Chief Architect is specialized for residential home design. It generates 3D models and construction documents with architectural automation.",
+    "description": "Chief Architect Premier is a specialized 3D architectural BIM and residential home design platform tailored for custom home builders, remodelers, and kitchen/bath designers. As walls, roofs, stairs, and framing are drawn, its automated building engine simultaneously generates 3D walkthrough views, timber/steel framing layouts, cabinet elevations, 2D permit construction drawings, and itemized material takeoffs.",
     "pricing_tiers": [
       {
         "name": "Premier Monthly",
@@ -1108,7 +1108,8 @@ export const c3Tools: Tool[] = [
       "DAE",
       "STL",
       "PDF"
-    ]
+    ],
+    "pricing_url": "https://www.chiefarchitect.com/products/home-design/premier/"
   },
   {
     "id": "t44",
@@ -1141,7 +1142,7 @@ export const c3Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.autodesk.com/products/civil-3d/overview",
-    "pricing_url": "https://www.autodesk.com/products/civil-3d/overview",
+    "pricing_url": "https://www.autodesk.com/products/civil-3d/overview#buying-options",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -1302,7 +1303,7 @@ export const c3Tools: Tool[] = [
     "slug": "vectorworks-landmark",
     "logo_url": "/logos/vectorworks.png",
     "short_desc": "The premier CAD software for landscape design.",
-    "description": "Vectorworks Landmark provides a specialized toolset for landscape architects and designers, integrating GIS, BIM, and advanced 2D/3D drafting in one package.",
+    "description": "Vectorworks Landmark is the landscape architecture industry’s premier BIM and site-modeling platform, uniting 2D presentation graphics with 3D parametric terrain, grading, and hydrozone irrigation engineering. It integrates Esri ArcGIS geospatial web services, customizable botanical plant databases, hardscape cut-and-fill volume calculations, and IFC4 openBIM coordination.",
     "pricing_tiers": [
       {
         "name": "Monthly",
@@ -1429,6 +1430,71 @@ export const c3Tools: Tool[] = [
       "civil-3d",
       "infraworks",
       "sketchup"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Irrigation Design",
+            "status": true
+          },
+          {
+            "name": "Plant Databases",
+            "status": true
+          },
+          {
+            "name": "Terrain Modeling",
+            "status": true
+          },
+          {
+            "name": "GIS Integration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native VWX / DWG / DXF Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision VWX / DWG / DXF Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows / macOS Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -1721,6 +1787,106 @@ export const c3Tools: Tool[] = [
       "infraworks",
       "microstation",
       "carlson-survey"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Corridor Modeling",
+            "status": true
+          },
+          {
+            "name": "Drainage Design",
+            "status": true
+          },
+          {
+            "name": "Terrain Modeling",
+            "status": true
+          },
+          {
+            "name": "InRoads Migration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DGN / DWG / DXF Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DGN / DWG / LandXML Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$4,000",
+        "period": "per year",
+        "features": [
+          "Corridor Modeling",
+          "Drainage Design",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$5,800",
+        "period": "per year",
+        "features": [
+          "Corridor Modeling",
+          "Drainage Design",
+          "Terrain Modeling",
+          "InRoads Migration",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -2920,6 +3086,41 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DGN",
       "SmartPlant Schema"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$18,000",
+        "period": "per year",
+        "features": [
+          "Rule-based pipe, structural, cable tray, HVAC design",
+          "Database-driven (Oracle / SQL Server)",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$26,100",
+        "period": "per year",
+        "features": [
+          "Rule-based pipe, structural, cable tray, HVAC design",
+          "Database-driven (Oracle / SQL Server)",
+          "Multi-discipline concurrent engineering",
+          "Tight link with SmartPlant Foundation",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3096,6 +3297,41 @@ export const c3Tools: Tool[] = [
       "CAESAR II",
       "PV Elite",
       "PDF"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$5,000",
+        "period": "per year",
+        "features": [
+          "AutoCAD-based 3D plant modeling",
+          "Spec-driven pipe routing",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$7,250",
+        "period": "per year",
+        "features": [
+          "AutoCAD-based 3D plant modeling",
+          "Spec-driven pipe routing",
+          "Bi-directional CAESAR II link",
+          "Auto-isometrics (ISOGEN)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3278,6 +3514,41 @@ export const c3Tools: Tool[] = [
       "RVT",
       "NWD",
       "CSV"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$1,080",
+        "period": "per year",
+        "features": [
+          "Autodesk Docs CDE",
+          "BIM Collaborate Pro (Revit Cloud Worksharing)",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$1,566",
+        "period": "per year",
+        "features": [
+          "Autodesk Docs CDE",
+          "BIM Collaborate Pro (Revit Cloud Worksharing)",
+          "Build (project management, field, RFI, submittals)",
+          "Takeoff (2D / 3D quantity takeoff)",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3461,7 +3732,42 @@ export const c3Tools: Tool[] = [
       "PDF",
       "STEP",
       "DWG"
-    ]
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Free / Starter Tier",
+        "price": "$0",
+        "period": "forever",
+        "features": [
+          "Free tier for unlimited collaborators",
+          "IFC viewer with clash detection",
+          "Community support access"
+        ]
+      },
+      {
+        "name": "Professional Edition",
+        "price": "$29",
+        "period": "per month",
+        "features": [
+          "Free tier for unlimited collaborators",
+          "IFC viewer with clash detection",
+          "Native links to Tekla Structures and SketchUp",
+          "Unlimited project exports & commercial use"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Business / Enterprise",
+        "price": "Custom Quote",
+        "period": "annual volume billing",
+        "features": [
+          "Centralized team seat management & SSO",
+          "Priority technical support & SLA",
+          "Dedicated cloud storage & collaboration controls"
+        ]
+      }
+    ],
+    "pricing_url": "https://connect.trimble.com/pricing"
   },
   {
     "id": "t231",
@@ -3635,7 +3941,43 @@ export const c3Tools: Tool[] = [
       "BCFZIP",
       "Excel",
       "PDF"
-    ]
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$590",
+        "period": "per year",
+        "features": [
+          "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
+          "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$856",
+        "period": "per year",
+        "features": [
+          "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
+          "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
+          "BIMcollab ZOOM federated IFC viewer",
+          "Smart Views and rules",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
+    ],
+    "pricing_url": "https://www.bimcollab.com/en/pricing/"
   },
   {
     "id": "t232",
@@ -3812,6 +4154,40 @@ export const c3Tools: Tool[] = [
       "Excel",
       "RVT elements",
       "DWG"
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Community / Standard Release",
+        "price": "$0",
+        "period": "forever",
+        "features": [
+          "Visual node-based scripting",
+          "Native Revit and Civil 3D APIs exposed",
+          "Python and Zero-Touch C# extension",
+          "Dynamo Player for non-programmer end-users"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Professional / Team Deployment",
+        "price": "$0",
+        "period": "free commercial use",
+        "features": [
+          "Unrestricted workstation or browser usage",
+          "Full format import & export capabilities",
+          "Zero watermarks or artificial feature locks"
+        ]
+      },
+      {
+        "name": "Enterprise & Custom Integration",
+        "price": "Free / Open",
+        "period": "self-hosted / IT deployment",
+        "features": [
+          "Centralized IT package deployment",
+          "API, script, or pipeline integration",
+          "Community forums & official documentation"
+        ]
+      }
     ]
   },
   {
@@ -4585,6 +4961,71 @@ export const c3Tools: Tool[] = [
       "RFA",
       "RTE",
       "RFT"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Online Revit version downgrade converting 2024, 2025, 2026, and 2027 files to Revit 2023 format",
+            "status": true
+          },
+          {
+            "name": "Full support for Revit project files (.rvt), family components (.rfa), project templates (.rte), and family templates (.rft)",
+            "status": true
+          },
+          {
+            "name": "Preserves native Revit parametric families, dimensions, schedules, and model constraints without IFC export loss",
+            "status": true
+          },
+          {
+            "name": "Free Revit Version Checker supporting single-file or whole-folder inspection with CSV batch report export",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native RVT / RFA / RTE Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision RVT / RFA / RTE Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Revit build number lookup and update mapping table (2022 to 2027)",
+            "status": true
+          },
+          {
+            "name": "Zero registration or software installation required — works directly in any standard web browser",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];

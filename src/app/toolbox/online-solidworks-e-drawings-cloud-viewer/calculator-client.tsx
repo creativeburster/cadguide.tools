@@ -95,8 +95,8 @@ const BEST_PRACTICES = [
     "desc": "Compress and remove threads locally before sharing or uploading, Detailed features of gears and tiny fasteners make the model lightweight, Prevent the web page from directly overflowing and crashing when viewing pictures."
   },
   {
-    "title": "Block external link data monitoring",
-    "desc": "Ensure that the detection environment does not leak IP and corporate domains, Prevent active remote positioning by copyright agents."
+    "title": "Protect Intellectual Property with eDrawings Export Controls",
+    "desc": "When exporting `.eprt` or `.easm` review files for external vendors, disable the 'Okay to measure this eDrawings file' and STL export flags in SolidWorks Options if you want to prevent reverse engineering of exact part dimensions."
   }
 ];
 const FAQS = [
@@ -123,7 +123,7 @@ export default function OnlineSolidworksEDrawingsCloudViewerClient() {
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
       painPointDesc="When you need to outsource SolidWorks parts to customers or factories (.sldprt) or assemblies (.sldasm), installing large commercial CAD software is inconvenient. Using the online eDrawings rendering layer, users can browse 3D entities directly in the browser WebGL, view Assembly Trees (Component Trees), hide/display components, and measure critical mating surface spacing."
-      riskWarning="3D part drawings contain complete parameter feature trees and tolerance processes. Uploading to a public unknown drawing viewing platform may trigger commercial telemetry and leak core intellectual property rights. For sensitive assemblies, please guide users to download the official free version of Dassault Systèmes eDrawings Viewer Local version, use of non-compliant cloud viewing websites is strictly prohibited."
+      riskWarning="Native SolidWorks `.sldprt` and `.sldasm` files contain complete parametric feature histories and sketches. Instead of sending native CAD files or uploading them to unverified web viewers, export lightweight, measurement-locked `.eprt`/`.easm` files and view them locally in the official free Dassault Systèmes eDrawings Viewer."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

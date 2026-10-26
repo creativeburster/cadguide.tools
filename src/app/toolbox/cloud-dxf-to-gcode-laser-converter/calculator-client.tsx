@@ -21,11 +21,11 @@ const RECOMMENDED_TOOLS = [
       }
     ],
     "pros": [
-      "Pure front-end parses G-Code and renders it 3D toolpath trajectory",
+      "Client-side browser G-Code parser with interactive 3D toolpath visualization",
       "Provide real-time 3D simulation tool animation"
     ],
     "cons": [
-      "Only for simulation, not provided DXF Convert G-Code service"
+      "Backplot simulator only; does not generate G-Code from DXF"
     ],
     "officialUrl": "https://ncviewer.com/",
     "verdict": "Currently the best and most secure online tool path verification platform, it is recommended to perform a dry run simulation here before sending G-Code to the machine tool."
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "Advanced 3D engraving requires purchasing the Pro version"
     ],
     "officialUrl": "https://carbide3d.com/carbidecreate/",
-    "verdict": "Great for makers and small DIY sculpting, Very safe to run locally, enabling fast changeovers for simple edge cuts."
+    "verdict": "Reliable desktop 2.5D CAM utility for CNC routers and laser cutters, running 100% locally with intuitive lead-in and tab controls."
   },
   {
     "name": "jscut (Open source web toolpath compiler)",
@@ -88,21 +88,21 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Set up reasonable lead-in/out",
-    "desc": "In order to prevent the laser from leaving burning pits at the starting point of the edge of the part, lead-in and lead-out arcs or diagonal lines should be configured, Position the starting point in the scrap area."
+    "desc": "To prevent laser pierce marks or plasma divots on finished part edges, configure tangential arc or linear lead-ins that initiate the pierce inside the scrap region."
   },
   {
     "title": "Arc converted to true G02/G03",
-    "desc": "Check if the converter supports fitting polyline arcs to G2/G3 arc interpolation commands, this can significantly reduce the G-Code file size, Avoid machine vibration."
+    "desc": "Ensure your CAM post-processor converts DXF arcs into native G02/G03 circular interpolation commands rather than thousands of tiny G01 segments that cause CNC chatter."
   },
   {
     "title": "Safe Height Verification",
-    "desc": "Be sure to set the safe height for rapid movement of G00 (Usually Z5-Z10) set larger than the fixture height, Eliminate the risk of lateral movement and tool collision."
+    "desc": "Always verify that the G00 rapid retract clearance plane (e.g., Z10–Z25 mm) clears all workholding clamps and hold-down tabs."
   }
 ];
 const FAQS = [
   {
     "question": "Why can’t the converted G-code file be run on my engraving machine? ",
-    "answer": "This is usually due to the G-code format of the converter output (dialect) with your controller (Such as GRBL, Mach3, Syntec new generation) No match. Need to select the correct post-processor when converting (Post Processor)."
+    "answer": "This happens when the generated G-Code dialect does not match your CNC motion controller (e.g., GRBL, Mach3, Fanuc, or Syntec). Select the matching post-processor profile so modal headers and arc center formats (I/J vs. R) align."
   },
   {
     "question": "How to solve the problem of converting arcs into polyline segments? ",
@@ -116,8 +116,8 @@ export default function CloudDxfToGcodeLaserConverterClient() {
       title="Online DXF to CNC G-Code Path Planner"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="Engineering & Design Calculator"
-      painPointDesc="In digital manufacturing and laser cutting, the 2D Convert vector DXF drawings to engraving machine, Readable by waterjet, plasma or laser cutters G-Code (Gcode) is the core link. The quality of cloud converters on the market varies, and unreasonable tool path calculations often lead to empty runs. Material burnt, tool impact or arc interpolation (G02/G03) Parsing error."
-      riskWarning="Converted DXF outlines often represent precision sheet metal, Commercial designs such as mechanical transmission parts. When uploaded to a free third-party online converter, the drawings will be parsed and stored by the cloud server, which may leak geometric intellectual property rights. For high-confidential part drawings, it is highly recommended to use local offline CNC Programming software (such as Fusion 360, Vectric, Carbide Create) Or open source offline converter."
+      painPointDesc="Converting 2D DXF profiles into CNC G-Code for laser, plasma, waterjet, or router cutting requires clean loop chaining, kerf/cutter compensation (G41/G42), and accurate G02/G03 arc fitting to prevent machine stutter and pierce burn marks."
+      riskWarning="Production DXF flat patterns contain exact sheet metal and machining dimensions. For proprietary parts, generate toolpaths locally using offline CAM software (such as Fusion, SheetCam, Vectric, or Carbide Create) rather than uploading geometry to public web servers."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

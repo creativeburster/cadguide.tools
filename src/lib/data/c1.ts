@@ -285,7 +285,7 @@ export const c1Tools: Tool[] = [
     "slug": "zwcad",
     "logo_url": "/logos/zwcad.ico",
     "short_desc": "The most cost-effective and compatible alternative to AutoCAD.",
-    "description": "ZWCAD is a powerful 2D CAD solution with high compatibility with the .DWG format.",
+    "description": "ZWCAD by ZWSOFT is a high-performance 2D and 3D DWG-native CAD platform engineered as a drop-in, perpetual-license alternative to AutoCAD. It delivers full command-alias compatibility, LISP/VBA/ZRX/ARX API extensibility, Smart Mouse gesture controls, Smart Voice annotations, and hardware-accelerated multi-core rendering for large architectural and mechanical drawing sets.",
     "pricing_tiers": [
       {
         "name": "Standard",
@@ -394,7 +394,7 @@ export const c1Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.zwsoft.com/product/zwcad",
-    "pricing_url": "https://www.zwsoft.com/product/zwcad",
+    "pricing_url": "https://www.zwsoft.com/product/zwcad/pricing",
     "trial_url": "https://www.zwsoft.com/product/zwcad/download",
     "price_tier": "low",
     "affiliate_url": null,
@@ -685,7 +685,7 @@ export const c1Tools: Tool[] = [
     "slug": "microstation",
     "logo_url": "/logos/microstation.png",
     "short_desc": "The infrastructure engineering standard for massive projects.",
-    "description": "MicroStation is the CAD platform of choice for the world's most demanding infrastructure projects. It handles massive datasets with ease, providing native DGN support.",
+    "description": "MicroStation by Bentley Systems is the global standard CAD platform for large-scale civil, transportation, utility, and plant infrastructure engineering. Built on a native 64-bit DGN database that effortlessly references multi-gigabyte point clouds, reality meshes, and hybrid DWG/IFC models, it ensures long-term data fidelity across multi-decade capital projects.",
     "pricing_tiers": [
       {
         "name": "Virtuosity Annual",
@@ -871,7 +871,7 @@ export const c1Tools: Tool[] = [
     "slug": "draftsight",
     "logo_url": "/logos/draftsight.png",
     "short_desc": "Professional-grade 2D CAD solution from Dassault Systèmes.",
-    "description": "DraftSight is the go-to AutoCAD alternative for firms using SolidWorks. It offers a familiar interface and full DWG compatibility.",
+    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic block editing, G-code generation, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
     "pricing_tiers": [
       {
         "name": "Professional",
@@ -1063,7 +1063,7 @@ export const c1Tools: Tool[] = [
     "slug": "gstarcad",
     "logo_url": "/logos/gstarcad.png",
     "short_desc": "High-performance AutoCAD alternative.",
-    "description": "GstarCAD is built on an independent core, offering 99% compatibility with AutoCAD and superior speed for large drawings.",
+    "description": "GstarCAD is a fast, lightweight 2D/3D DWG-compatible CAD platform built on an independent multi-core graphics kernel. Designed as a cost-effective perpetual replacement for AutoCAD, it supports native .dwg read/write from R12 to 2026, VLISP/VBA/GRX/’.NET APIs, dynamic blocks, PDF/DGN underlays, and collaborative drawing comparison.",
     "pricing_tiers": [
       {
         "name": "Standard",
@@ -2536,6 +2536,106 @@ export const c1Tools: Tool[] = [
       "progecad",
       "draftsight",
       "bricscad"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Hybrid Modeling",
+            "status": true
+          },
+          {
+            "name": "Photorealistic Rendering",
+            "status": true
+          },
+          {
+            "name": "Geometric Constraints",
+            "status": true
+          },
+          {
+            "name": "BIM Data Support",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DWG / DXF / TCW Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DWG / DXF / TCW Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows / macOS Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$999",
+        "period": "one-time perpetual",
+        "features": [
+          "Hybrid Modeling",
+          "Photorealistic Rendering",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$1,449",
+        "period": "one-time perpetual",
+        "features": [
+          "Hybrid Modeling",
+          "Photorealistic Rendering",
+          "Geometric Constraints",
+          "BIM Data Support",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3113,7 +3213,7 @@ export const c1Tools: Tool[] = [
     "slug": "ares-commander",
     "logo_url": "/logos/ares-commander.png",
     "short_desc": "Professional DWG CAD with cross-platform trinity.",
-    "description": "ARES Commander by Graebert is a professional CAD software with full DWG support, available on Desktop, Mobile (ARES Touch) and Cloud (ARES Kudo) — the only true CAD trinity.",
+    "description": "ARES Commander by Graebert is an enterprise DWG-native 2D/3D CAD suite powering the ARES Trinity ecosystem across Windows, macOS, Linux, mobile (ARES Touch), and web browsers (ARES Kudo). It combines full LISP/C#/C++ API compatibility with BIM-to-DWG drawing extraction, cloud synchronization, and flexible perpetual or network licensing.",
     "country": "Germany",
     "category_id": "c1",
     "pricing_type": "Subscription",
@@ -3142,7 +3242,7 @@ export const c1Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "pricing_url": "https://www.graebert.com/cad-software/ares-commander/",
+    "pricing_url": "https://www.graebert.com/cad-software/ares-commander/buy/",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -3383,7 +3483,73 @@ export const c1Tools: Tool[] = [
       "PDF",
       "PNG",
       "JPG"
-    ]
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "2D drafting & documentation",
+            "status": true
+          },
+          {
+            "name": "Native DWG compatibility",
+            "status": true
+          },
+          {
+            "name": "Blocks, layers & annotation",
+            "status": true
+          },
+          {
+            "name": "Web & mobile apps included",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DWG / DXF / DWT Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DWG / DXF / DWT Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows / macOS / Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_url": "https://www.autodesk.com/products/autocad-lt/overview#buying-options"
   },
   {
     "id": "t256",
@@ -3529,6 +3695,71 @@ export const c1Tools: Tool[] = [
       "SVG",
       "PDF",
       "GCODE"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Native DWG and DXF file read/write compatibility across AutoCAD releases",
+            "status": true
+          },
+          {
+            "name": "Familiar 2D drafting interface with command line, layers, snaps, and dimensioning",
+            "status": true
+          },
+          {
+            "name": "Built-in true-shape sheet nesting for hundreds of parts per sheet",
+            "status": true
+          },
+          {
+            "name": "Direct G-code generation and path optimization for CNC laser and plasma cutting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native DWG / DXF / SVG Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision DWG / DXF / SVG Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Factory floor layout planning and electrical schematic drafting modules",
+            "status": true
+          },
+          {
+            "name": "Perpetual buyout license with optional 30-day free trial",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows / Web Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];

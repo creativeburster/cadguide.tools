@@ -116,8 +116,8 @@ export default function OnlinePdfToDwgConverterClient() {
       title="Online Vector PDF to CAD DWG Converter Portal"
       subtitle="Direct navigation to objective in-depth evaluation and technical guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="Restore vector or scanned PDF drawings to the CAD DWG/DXF geometric entities edited in, often faced with technical problems such as curve fitting distortion, SHX/TTF fonts broken into fragmented lines, and default scale drift. This review has selected three professional engines with the highest accuracy and best layer preservation in the industry."
-      riskWarning="PDF Drawings contain a large number of corporate core construction and mechanical assembly secrets. Commercial cloud converters may record and retain your drawings. In order to prevent copyright compliance audits and commercial privacy leaks, high-density drawings, Be sure to use native AutoCAD PDFIMPORT The command is used for local analysis without network. Do not upload to unknown source websites."
+      painPointDesc="Converting vector PDF drawings back into editable DWG/DXF geometry requires reconstructing dashed linetypes, recognizing stroked SHX text (via `PDFSHXTEXT`), preserving PDF layers, and calibrating the paper-space viewport scale back to 1:1 model-space units."
+      riskWarning="Engineering PDFs contain complete construction and manufacturing layouts. For confidential drawings, always use the built-in `PDFIMPORT` command locally inside AutoCAD, BricsCAD, or ZWCAD rather than uploading documents to unverified third-party cloud converters."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

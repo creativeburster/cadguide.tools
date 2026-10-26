@@ -4,7 +4,7 @@ import CloudReferralClient from '@/components/cloud-referral-client';
 
 const RECOMMENDED_TOOLS = [
   {
-    "name": "AutoCAD DWG Compare (Official local built-in command)",
+    "name": "AutoCAD DWG Compare (Native COMPARE Command)",
     "rating": 9.9,
     "metrics": [
       {
@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Requires installation of CAD local client"
     ],
     "officialUrl": "https://www.autodesk.com/products/autocad/features",
-    "verdict": "The official bottom-level graphics comparison function has the strongest algorithm, not only can it identify line movements of a few millimeters, but also changes in block attributes."
+    "verdict": "AutoCAD's native AcDb database diff engine—accurately highlights sub-millimeter geometry shifts, text edits, and block attribute changes."
   },
   {
     "name": "Autodesk Viewer Compare Services",
@@ -88,15 +88,15 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Align origin and reference point",
-    "desc": "Before comparison, the origin of the model space of the two versions of the drawings must be ensured. (0,0,0) Perfectly aligned. If the origin is offset, the comparison result will falsely report that all the elements in the image are moving."
+    "desc": "Before running a diff, verify that both drawing revisions share the exact same WCS (0,0,0) base point and insertion units; an offset base point will flag the entire drawing as modified."
   },
   {
     "title": "Explode nested references locally",
-    "desc": "For complex drawings, you can perform the comparison first EXPLODE those custom blocks and nested xrefs , to prevent the comparison algorithm from counting them directly as a single deletion action."
+    "desc": "Bind external references (XREFs) and enable block comparison options before running the diff so modifications inside nested symbols are itemized accurately."
   },
   {
     "title": "Off-grid stand-alone verification guarantee",
-    "desc": "Sensitive bidding drawings should be compared with AutoCAD local drawings on a dedicated machine without network access."
+    "desc": "Compare confidential tender and construction drawings locally using desktop CAD diff commands (`COMPARE`) rather than uploading revisions to third-party servers."
   }
 ];
 const FAQS = [
@@ -116,8 +116,8 @@ export default function OnlineDwgCompareDiffViewerClient() {
       title="Cloud DWG Revision Difference & Compare Visualizer"
       subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
       categoryLabel="File Parser & Converter"
-      painPointDesc="When dealing with multiple revision changes for large construction or electrical and mechanical projects, find two revisions DWG Small physical changes in drawings are a big problem. It is easy to miss them simply by manual proofreading. Using the cloud-based DWG Revision Compare diff program, it can achieve high-precision overlay comparison and automatically use red, Green highlights add, delete and modify entities in new drawings."
-      riskWarning="Changes to drawings often represent core changes to the project and business budget cards. Combine the two versions DWG It is very dangerous to centrally upload to unknown picture comparison websites. If conditions permit, please run AutoCAD locally first COMPARE (graph compare) command, it is strictly prohibited to use untrusted public cloud services to prevent the leakage of business secrets."
+      painPointDesc="Spotting subtle dimensional changes, moved walls, or revised callouts between two DWG revisions by eye is error-prone. Automated DWG diff utilities overlay both drawing databases and color-code added (green), deleted (red), and unchanged (gray) entities with revision clouds."
+      riskWarning="Drawing revisions reflect critical engineering change orders (ECOs) and tender pricing adjustments. For confidential projects, always run the native `COMPARE` command locally in AutoCAD, BricsCAD, or DraftSight rather than uploading files to public web portals."
       recommendedTools={RECOMMENDED_TOOLS}
       bestPractices={BEST_PRACTICES}
       faqs={FAQS}

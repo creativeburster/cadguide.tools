@@ -28,7 +28,7 @@ const RECOMMENDED_TOOLS = [
       "Commercial version licensing is extremely expensive"
     ],
     "officialUrl": "https://www.bentley.com/software/bentley-view/",
-    "verdict": "Undoubtedly the most accurate conversion solution. Use its built-in conversion wizard to precisely define DGN levels Logic to DWG layers."
+    "verdict": "The gold standard for DGN-to-DWG conversion—supports full CSV remapping tables for Levels, Fonts, LineWeights, and Shared Cells."
   },
   {
     "name": "ODA File Converter (Official Data Alliance Converter)",
@@ -55,7 +55,7 @@ const RECOMMENDED_TOOLS = [
       "No visual GUI primitive parameter fine-tuning"
     ],
     "officialUrl": "https://www.opendesign.com/guestfiles/oda_file_converter",
-    "verdict": "Professional low-level format converter maintained by the Open Design Alliance (ODA), for DGN V7/V8 and DWG The mapping mechanism between versions is perfect."
+    "verdict": "Maintained by the Open Design Alliance (ODA), providing reliable local batch conversion between DGN V8 and DWG schemas."
   },
   {
     "name": "Any DGN to DWG Converter",
@@ -88,7 +88,7 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Mount the Remap CSV mapping file",
-    "desc": "When exporting from MicroStation, Configure .csv control table, Specify Levels, Colors, LineWeights one by one as the corresponding CAD Layers and Standard Color Index (ACI)."
+    "desc": "In MicroStation's Save As DWG Options, attach a CSV remapping table to map Bentley Levels, LineWeights, and Fonts directly to target AutoCAD Layers and ACI colors."
   },
   {
     "title": "Handling Shared Cells",
@@ -96,13 +96,13 @@ const BEST_PRACTICES = [
   },
   {
     "title": "Uniformly use True Color",
-    "desc": "Avoid using Bentley-specific color tables, Switch element color values to generic RGB true color before conversion, Prevent everything from turning black after importing CAD."
+    "desc": "Map custom Bentley color tables (.tbl) to standard AutoCAD Color Index (ACI) or RGB values during export so linework remains legible on dark model-space backgrounds."
   }
 ];
 const FAQS = [
   {
     "question": "What causes 'OLE container error' on converted DGN primitives?",
-    "answer": "This means that your DGN drawing has external Excel Datasheet or non-vector drawing. CAD is not compatible with this interface, it is recommended to solidify the screenshot into a normal pixel layer in Bentley before exporting."
+    "answer": "This occurs when the DGN file contains embedded Microsoft Office OLE objects or proprietary civil proxy data. Convert tables to native CAD table entities before exporting to DWG."
   },
   {
     "question": "Does the difference between DGN V7 and V8 formats affect conversion?",

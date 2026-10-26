@@ -56,7 +56,7 @@ const RECOMMENDED_TOOLS = [
       "Configuration parameters are relatively complex"
     ],
     "officialUrl": "https://github.com/Autodesk/revit-ifc",
-    "verdict": "Official conversion toolkit maintained open source on GitHub, the output is the most rigorous and standard, and is most suitable for enterprises to cooperate with and accept."
+    "verdict": "Officially maintained open-source exporter on GitHub producing standards-compliant IFC schemas ideal for enterprise BIM deliverables."
   },
   {
     "name": "buildingSmart openBIM Exporter Kits",
@@ -83,7 +83,7 @@ const RECOMMENDED_TOOLS = [
       "Steep learning curve"
     ],
     "officialUrl": "https://www.buildingsmart.org/",
-    "verdict": "BIM A conversion tool recommended by standards-setting organizations with extremely high adaptability to international specifications."
+    "verdict": "Recommended by international openBIM standards bodies for strict ISO 16739 schema compliance."
   },
   {
     "name": "BIMcollab Exporter Suite",
@@ -103,11 +103,11 @@ const RECOMMENDED_TOOLS = [
       }
     ],
     "pros": [
-      "In-depth parameter optimization has been done for coordination",
+      "Optimized property set mapping for multi-discipline coordination",
       "Comes with powerful free IFC viewer"
     ],
     "cons": [
-      "Bind to BIMcollab cloud"
+      "Requires BIMcollab ecosystem integration"
     ],
     "officialUrl": "https://www.bimcollab.com/",
     "verdict": "A professional collaborative conversion solution suitable for cross-team collision detection (Clash Detection) in medium and large projects."
@@ -116,15 +116,15 @@ const RECOMMENDED_TOOLS = [
 const BEST_PRACTICES = [
   {
     "title": "Load standard IFC mapping parameter table",
-    "desc": "Specified in Revit export configuration sharedparameters Mapping relationship, ensure RVT Properties are aligned exactly within the IFC PropertySet."
+    "desc": "Specify a Shared Parameters mapping table in the Revit IFC export setup so custom RVT parameters map accurately to target IFC PropertySets."
   },
   {
     "title": "Reduced family nesting depth",
-    "desc": "Eliminate unnecessary furniture families such as complex bolts before exporting to reduce the stacking of polyhedral triangle meshes. Prevent IFC volume breach G level."
+    "desc": "Suppress over-detailed hardware and furniture families before exporting to prevent dense polyhedral mesh tessellation and multi-gigabyte IFC file bloat."
   },
   {
     "title": "Perform IFC schema validity verification",
-    "desc": "After exporting, be sure to use an independent IFC verification tool to run a format audit. Confirm that major categories such as structural columns and walls are correctly mounted."
+    "desc": "Always audit exported files in an independent IFC viewer to verify that structural columns, walls, and MEP systems are assigned to the proper IFC entity classes."
   }
 ];
 const FAQS = [

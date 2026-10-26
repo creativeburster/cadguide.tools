@@ -9,7 +9,7 @@ export const c2Tools: Tool[] = [
     "slug": "solidworks",
     "logo_url": "/logos/solidworks.png",
     "short_desc": "The de-facto industry standard for 3D parametric mechanical design.",
-    "description": "SolidWorks is the flagship mechanical design software from Dassault Systèmes. It is renowned for its robust parametric feature-based modeling and ease of use.",
+    "description": "SolidWorks by Dassault Systèmes is the de-facto industry standard for 3D parametric mechanical CAD, sheet metal, weldments, and injection mold design. Built on the Siemens Parasolid geometric kernel, it pairs feature-based history modeling and large-assembly management with integrated FEA simulation, electrical routing, PDM, and CAM ecosystems.",
     "pricing_tiers": [
       {
         "name": "Standard (Annual)",
@@ -265,7 +265,7 @@ export const c2Tools: Tool[] = [
     "slug": "sketchup",
     "logo_url": "/logos/sketchup.png",
     "short_desc": "The world's most intuitive 3D design tool for architecture and interiors.",
-    "description": "SketchUp is famous for its unique 'Push/Pull' modeling logic, perfect for conceptual design and visualization.",
+    "description": "SketchUp by Trimble is an intuitive direct-modeling 3D architectural and interior design platform renowned for its patented Push/Pull surface extrusion workflow. Backed by the 3D Warehouse component library, LayOut 2D construction documentation, V-Ray/Enscape rendering links, and IFC openBIM export, it bridges rapid concept massing and detailed design.",
     "pricing_tiers": [
       {
         "name": "Go",
@@ -536,7 +536,7 @@ export const c2Tools: Tool[] = [
     "slug": "fusion-360",
     "logo_url": "/logos/fusion-360.svg",
     "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, and CAE.",
-    "description": "Fusion 360 is a cloud-based platform that breaks down the silos between design and production.",
+    "description": "Autodesk Fusion (formerly Fusion 360) is a cloud-connected 3D CAD, CAM, CAE, and PCB platform built for agile product development and CNC manufacturing. It unifies parametric solid modeling, T-Spline freeform surfacing, sheet metal, multi-axis milling/turning toolpaths, Nastran FEA, and native Autodesk Eagle electronics in a single collaborative workspace.",
     "pricing_tiers": [
       {
         "name": "Monthly",
@@ -797,7 +797,7 @@ export const c2Tools: Tool[] = [
     "slug": "rhino-3d",
     "logo_url": "/logos/rhino-3d.ico",
     "short_desc": "The industry standard for complex NURBS modeling and computational design.",
-    "description": "Rhino (Rhinoceros) is a versatile 3D modeler with deep integration with Grasshopper for generative design.",
+    "description": "Rhinoceros 3D (Rhino) by Robert McNeel & Associates is the premier mathematical NURBS surface modeler for industrial design, marine architecture, jewelry, and computational facade engineering. Coupled with its built-in Grasshopper visual programming environment, SubD subdivision modeling, and Rhino.Inside.Revit bridge, it handles uninhibited freeform geometry with manufacturing precision.",
     "pricing_tiers": [
       {
         "name": "Commercial (V8)",
@@ -1049,7 +1049,7 @@ export const c2Tools: Tool[] = [
     "slug": "catia",
     "logo_url": "/logos/catia.png",
     "short_desc": "The high-end PLM standard for Aerospace and Automotive engineering.",
-    "description": "CATIA is the flagship PLM suite from Dassault Systèmes, capable of managing entire aircraft assemblies.",
+    "description": "CATIA by Dassault Systèmes is the flagship PLM and Class-A surface/solid engineering platform trusted by global aerospace, defense, automotive, and shipbuilders. Capable of managing digital mockups exceeding a million parts on the 3DEXPERIENCE platform, it unifies systems engineering, composites, aerodynamic surfacing, and kinematic multi-body assembly design.",
     "pricing_tiers": [
       {
         "name": "3DEXPERIENCE Cloud",
@@ -1307,7 +1307,7 @@ export const c2Tools: Tool[] = [
     "slug": "freecad",
     "logo_url": "/logos/freecad.ico",
     "short_desc": "The premier open-source 3D parametric modeler.",
-    "description": "FreeCAD is an open-source parametric 3D modeler made to design real-life objects of any size.",
+    "description": "FreeCAD is the leading open-source (LGPLv2+) parametric 3D CAD modeler powered by the Open CASCADE (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, BIM/IFC architectural modeling, CalculiX/Gmsh FEA, sheet metal unfolding, and multi-axis Path CAM.",
     "pricing_tiers": [
       {
         "name": "Community",
@@ -1804,7 +1804,7 @@ export const c2Tools: Tool[] = [
     "slug": "solid-edge",
     "logo_url": "/logos/solid-edge.ico",
     "short_desc": "Professional 3D CAD with industry-leading Synchronous Technology.",
-    "description": "Solid Edge features Synchronous Technology for rapid direct and history-based modeling.",
+    "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration.",
     "pricing_tiers": [
       {
         "name": "Foundation",
@@ -2009,7 +2009,7 @@ export const c2Tools: Tool[] = [
     "slug": "autodesk-inventor",
     "logo_url": "/logos/autodesk-inventor.svg",
     "short_desc": "Professional-grade 3D mechanical design and simulation.",
-    "description": "Autodesk Inventor provides professional tools for product design and rendering, featuring iLogic automation and specialized toolsets.",
+    "description": "Autodesk Inventor Professional is an industrial 3D mechanical CAD platform engineered for automated machine design, heavy equipment, and custom fabrication. Built on the Autodesk ShapeManager kernel, it features rules-based iLogic design automation, Frame Generator structural analysis, routed tube/pipe/cable harnesses, and seamless Vault PDM and AutoCAD DWG associativity.",
     "pricing_tiers": [
       {
         "name": "Monthly",
@@ -2221,7 +2221,7 @@ export const c2Tools: Tool[] = [
     "slug": "ptc-creo",
     "logo_url": "/logos/ptc-creo.ico",
     "short_desc": "The original parametric 3D CAD powerhouse.",
-    "description": "Creo (formerly Pro/ENGINEER) is a scalable, integrated suite of software that supports product design for discrete manufacturers.",
+    "description": "PTC Creo (formerly Pro/ENGINEER) is the original enterprise parametric 3D CAD suite engineered for discrete manufacturing, defense, and industrial equipment. Driven by its proprietary Granite kernel, it delivers rock-solid top-down large-assembly stability, Model-Based Definition (MBD/GD&T), Ansys-powered real-time simulation, freestyle subdivision surfacing, and native Windchill PLM integration.",
     "pricing_tiers": [
       {
         "name": "Essentials",
@@ -2468,7 +2468,7 @@ export const c2Tools: Tool[] = [
     "slug": "openscad",
     "logo_url": "/logos/openscad.ico",
     "short_desc": "The programmer's solid 3D CAD modeler.",
-    "description": "OpenSCAD is a software for creating solid 3D CAD objects. It is not an interactive modeler but a 3D-compiler based on a textual description language.",
+    "description": "OpenSCAD is a free, open-source programmatic 3D solid CAD compiler designed for engineers and makers who prefer deterministic code over interactive mouse-driven modeling. Using Constructive Solid Geometry (CSG) and CGAL/Manifold boolean evaluation, it compiles script-defined variables and modules into watertight STL, OFF, AMF, 3MF, and DXF files ideal for customizable 3D-printed hardware.",
     "pricing_tiers": [
       {
         "name": "Open Source",
@@ -2625,7 +2625,7 @@ export const c2Tools: Tool[] = [
     "slug": "shapr3d",
     "logo_url": "/logos/shapr3d.png",
     "short_desc": "Professional CAD for mobile and desktop mobility.",
-    "description": "Shapr3D is a professional CAD tool built for iPad and desktop. It uses the Siemens Parasolid kernel for industrial-grade precision.",
+    "description": "Shapr3D is a modern, cross-platform direct and history-based 3D CAD application engineered natively for Apple Silicon Macs, iPads (with Apple Pencil), and Windows tablets. Powered locally by the industrial Siemens Parasolid kernel and D-Cubed constraint solver, it combines tactile direct push/pull editing with parametric feature trees, real-time visualization, and native STEP/IGES/SLDPRT interoperability.",
     "pricing_tiers": [
       {
         "name": "Free",
@@ -2811,7 +2811,8 @@ export const c2Tools: Tool[] = [
       "3MF",
       "USDZ",
       "PDF"
-    ]
+    ],
+    "pricing_url": "https://www.shapr3d.com/pricing"
   },
   {
     "id": "t29",
@@ -2819,7 +2820,7 @@ export const c2Tools: Tool[] = [
     "slug": "solvespace",
     "logo_url": "/logos/solvespace.png",
     "short_desc": "A minimalist, open-source 2D/3D parametric CAD tool.",
-    "description": "SolveSpace is a free constraint-based parametric modeler. It is very lightweight and focuses on pure geometric logic.",
+    "description": "SolveSpace is an ultra-lightweight, free open-source (GPLv3) 2D and 3D parametric CAD program built around an advanced geometric constraint solver. Distributed as a standalone executable under 10 MB, it supports sketch-based extrusions, revolves, boolean operations, mechanical linkage kinematics, STL mesh export, and 2D DXF/PDF/G-code output for laser and CNC cutting.",
     "pricing_tiers": [
       {
         "name": "Open Source",
@@ -2953,7 +2954,7 @@ export const c2Tools: Tool[] = [
     "slug": "alibre-design",
     "logo_url": "/logos/alibre-design.png",
     "short_desc": "Professional 3D CAD without the enterprise price tag.",
-    "description": "Alibre Design provides industrial-grade parametric modeling tools. It is used for those seeking a perpetual license instead of a subscription.",
+    "description": "Alibre Design is a commercial history-based 3D parametric CAD suite built on the Spatial ACIS solid modeling kernel and D-Cubed constraint engines, celebrated for its transparent perpetual licensing. Available in Atom3D, Professional, and Expert editions, it delivers part and assembly modeling, associative 2D drafting, sheet metal lofting, global parameter spreadsheets, and KeyShot rendering.",
     "pricing_tiers": [
       {
         "name": "Professional",
@@ -3118,7 +3119,8 @@ export const c2Tools: Tool[] = [
       "STL",
       "3D PDF",
       "PDF"
-    ]
+    ],
+    "pricing_url": "https://www.alibre.com/pricing/"
   },
   {
     "id": "t50",
@@ -3302,7 +3304,8 @@ export const c2Tools: Tool[] = [
       "3ds-max",
       "zbrush",
       "rhino-3d"
-    ]
+    ],
+    "pricing_url": "https://www.autodesk.com/products/maya/overview#buying-options"
   },
   {
     "id": "t51",
@@ -3668,6 +3671,71 @@ export const c2Tools: Tool[] = [
       "magics",
       "rhino-3d",
       "siemens-nx"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Automatic Surface Fitting",
+            "status": true
+          },
+          {
+            "name": "Mesh to Solid",
+            "status": true
+          },
+          {
+            "name": "LiveTransfer to CAD",
+            "status": true
+          },
+          {
+            "name": "Point Cloud Analysis",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native PLY / OBJ / STL Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision STEP / IGES / Parasolid (X_T) Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -3676,7 +3744,7 @@ export const c2Tools: Tool[] = [
     "slug": "alias-autostudio",
     "logo_url": "/logos/alias-autostudio.svg",
     "short_desc": "Industrial design and automotive styling software.",
-    "description": "Alias software provides surfacing, modeling, and visualization tools for industrial, product, and automotive design.",
+    "description": "Autodesk Alias AutoStudio is the automotive and industrial design industry benchmark for Class-A NURBS surfacing, digital clay concept modeling, and technical surfacing production. Combining bezier/NURBS curve degree control, SubD rapid concepting, Dynamo computational patterning, and VRED photorealistic raytracing links, it bridges design studio styling and engineering body-in-white CAD.",
     "country": "USA",
     "category_id": "c2",
     "pricing_type": "Subscription",
@@ -3778,6 +3846,106 @@ export const c2Tools: Tool[] = [
       "catia",
       "siemens-nx",
       "plasticity"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Class-A Surfacing",
+            "status": true
+          },
+          {
+            "name": "Conceptual Sketching",
+            "status": true
+          },
+          {
+            "name": "VR Visualization",
+            "status": true
+          },
+          {
+            "name": "Dynamo Integration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native WIRE / STEP / IGES Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision WIRE / STEP / IGES Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Batch Processing & Scripting",
+            "status": true
+          },
+          {
+            "name": "Standards & Schema Validation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows / macOS Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Standard / Base Edition",
+        "price": "$12,000",
+        "period": "per year",
+        "features": [
+          "Class-A Surfacing",
+          "Conceptual Sketching",
+          "Standard technical support & maintenance updates"
+        ]
+      },
+      {
+        "name": "Professional / Advanced Suite",
+        "price": "$17,400",
+        "period": "per year",
+        "features": [
+          "Class-A Surfacing",
+          "Conceptual Sketching",
+          "VR Visualization",
+          "Dynamo Integration",
+          "Advanced automation, APIs & batch processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Enterprise / Floating Network",
+        "price": "Custom Quote",
+        "period": "multi-seat / token licensing",
+        "features": [
+          "Floating network license server (FLEXlm / Cloud)",
+          "All specialized industry add-on modules included",
+          "Dedicated application engineer & enterprise SLA"
+        ]
+      }
     ]
   },
   {
@@ -3786,7 +3954,7 @@ export const c2Tools: Tool[] = [
     "slug": "zw3d",
     "logo_url": "/logos/zw3d.ico",
     "short_desc": "All-in-one 3D CAD/CAM solution from ZWSOFT.",
-    "description": "ZW3D is an all-in-one CAD/CAM solution that delivers fast, stable, and precise 3D modeling, assembly, and 2.5-5 axis CNC machining in a single environment.",
+    "description": "ZW3D by ZWSOFT is an integrated all-in-one 3D CAD/CAM solution powered by the proprietary Overdrive hybrid solid-surface kernel. Capable of performing boolean operations between open surfaces and closed solids, it unifies parametric part/assembly modeling, multi-cavity injection mold splitting, electrode extraction, sheet metal, and 2- to 5-axis CNC milling/turning in a single perpetual or subscription seat.",
     "country": "China",
     "category_id": "c2",
     "pricing_type": "Subscription / Perpetual",
@@ -3982,7 +4150,7 @@ export const c2Tools: Tool[] = [
     "slug": "plasticity",
     "logo_url": "/logos/plasticity.png",
     "short_desc": "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood.",
-    "description": "Plasticity is a young commercial 3D modeller designed for industrial designers and 3D artists who want CAD-quality NURBS surfaces with a modern, Blender-like UX. Parasolid kernel.",
+    "description": "Plasticity is a modern, artist-centric NURBS 3D CAD modeler powered by the industrial Siemens Parasolid geometric kernel, often described as \"CAD for artists.\" Combining Blender-inspired modal hotkeys and gizmos with mathematical G2/G3 fillet continuity, live boolean cutters, and clean STEP/Parasolid X_T/OBJ tessellation, it excels in hard-surface concept design, game assets, and industrial styling.",
     "country": "USA",
     "category_id": "c2",
     "pricing_type": "Perpetual",
@@ -4179,7 +4347,8 @@ export const c2Tools: Tool[] = [
         ],
         "is_popular": false
       }
-    ]
+    ],
+    "pricing_url": "https://www.plasticity.xyz/#pricing"
   },
   {
     "id": "t238",
@@ -4387,7 +4556,8 @@ export const c2Tools: Tool[] = [
         ],
         "is_popular": false
       }
-    ]
+    ],
+    "pricing_url": "https://moi3d.com/purchase.htm"
   },
   {
     "id": "t26",
@@ -4676,7 +4846,8 @@ export const c2Tools: Tool[] = [
       "3MF",
       "HTML",
       "Images"
-    ]
+    ],
+    "pricing_url": "https://www.glovius.com/pricing/"
   },
   {
     "id": "t246",
@@ -4849,7 +5020,8 @@ export const c2Tools: Tool[] = [
       "STL",
       "3MF",
       "USD"
-    ]
+    ],
+    "pricing_url": "https://cadexchanger.com/pricing/"
   },
   {
     "id": "t117",
@@ -5931,6 +6103,71 @@ export const c2Tools: Tool[] = [
       "DXF",
       "PDF",
       "GCODE"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "Parametric 3D solid and assembly modeling with native SolidWorks (.sldprt/.sldasm) file import across all editions",
+            "status": true
+          },
+          {
+            "name": "Model-derived associative 2D drawing generation with automated view projection and dimensions",
+            "status": true
+          },
+          {
+            "name": "Advanced surface modeling and sheet metal design with flat-pattern DXF export (Expert & Premium)",
+            "status": true
+          },
+          {
+            "name": "Kinematic motion studies, dynamic interference, and clearance checks (Expert & Premium)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / STP / IGES Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision STEP / STP / IGES Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Automatic Bill of Materials (BOM) generation and interactive HTML 3D model web export (Expert & Premium)",
+            "status": true
+          },
+          {
+            "name": "Integrated 2.5D/3D CNC milling and turning CAM toolpath generation with post-processing (Premium)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Windows Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   },
   {
@@ -6049,7 +6286,7 @@ export const c2Tools: Tool[] = [
       "freecad",
       "blender",
       "meshlab",
-      "cloudcompare"
+      "meshlab"
     ],
     "last_updated": "2026-10-21",
     "file_formats_in": [
@@ -6080,6 +6317,71 @@ export const c2Tools: Tool[] = [
       "PLY",
       "USD",
       "3MF"
+    ],
+    "detailed_features": [
+      {
+        "category": "Core Engineering Capabilities",
+        "items": [
+          {
+            "name": "100% client-side conversion via browser WebAssembly with zero file uploads or cloud data retention",
+            "status": true
+          },
+          {
+            "name": "Extensive format support across 70+ 3D/CAD inputs and 23 export targets",
+            "status": true
+          },
+          {
+            "name": "Over 1,600 conversion pairs covering STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD",
+            "status": true
+          },
+          {
+            "name": "Direct STEP-to-STL and IGES-to-STEP tessellation pipelines optimized for 3D printing slicers",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Interoperability & Formats",
+        "items": [
+          {
+            "name": "Native STEP / STP / IGES Import Pipeline",
+            "status": true
+          },
+          {
+            "name": "Precision STEP / IGES / STL Export & Publishing",
+            "status": true
+          },
+          {
+            "name": "Web3D and AR export pipelines with automated PBR materials and mesh optimization",
+            "status": true
+          },
+          {
+            "name": "Zero registration, no subscriptions, and completely free unlimited usage",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Enterprise Workflow",
+        "items": [
+          {
+            "name": "Web / Windows / macOS / Linux Runtime Support",
+            "status": true
+          },
+          {
+            "name": "Unit & Coordinate System Calibration",
+            "status": true
+          },
+          {
+            "name": "Automated Quality & Geometry Verification",
+            "status": true
+          },
+          {
+            "name": "Team Collaboration & Revision Handoff",
+            "status": true
+          }
+        ]
+      }
     ]
   }
 ];
