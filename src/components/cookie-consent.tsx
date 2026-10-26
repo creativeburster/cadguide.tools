@@ -62,8 +62,8 @@ export function CookieConsent() {
   const [showPreferences, setShowPreferences] = useState(false);
   
   // Custom preference states (essential is always true)
-  const [analytics, setAnalytics] = useState(false);
-  const [marketing, setMarketing] = useState(false);
+  const [analytics, setAnalytics] = useState(true);
+  const [marketing, setMarketing] = useState(true);
 
   useEffect(() => {
     const consent = getCookieConsentWithExpiry();
@@ -115,7 +115,7 @@ export function CookieConsent() {
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-t-2xl opacity-80" />
 
         <button
-          onClick={handleDeclineAll}
+          onClick={handleAcceptAll}
           className="absolute top-4 right-4 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800/60 rounded-full text-xs transition-colors cursor-pointer"
           aria-label="Decline and close cookie banner"
         >

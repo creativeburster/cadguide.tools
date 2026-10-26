@@ -47,6 +47,7 @@ export default function RootLayout({
         
         {/* Google Analytics with Consent Mode v2 */}
         <script
+          data-cfasync="false"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -58,8 +59,8 @@ export default function RootLayout({
                 if (raw) storedConsent = JSON.parse(raw);
               } catch(e) {}
 
-              var analyticsGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.analytics) ? 'granted' : 'denied';
-              var marketingGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.marketing) ? 'granted' : 'denied';
+              var analyticsGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.analytics === false) ? 'denied' : 'granted';
+              var marketingGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.marketing === false) ? 'denied' : 'granted';
 
               gtag('consent', 'default', {
                 'analytics_storage': analyticsGranted,
@@ -73,7 +74,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
+        <script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2NC8HV27GC"></script>
 
         {/* Sync script to prevent layout shift for returning users who dismissed notice */}
         <script
