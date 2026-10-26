@@ -1,60 +1,32 @@
-# 1. Guides permanent 301 redirect to homepage
-/guides / 301
-/guides/* / 301
-
-# 2. Redirect haochen-cad to gstarcad (tool renaming)
+# 1. Redirect haochen-cad to gstarcad (tool renaming)
 /tools/haochen-cad /tools/gstarcad 301
 /alternatives/haochen-cad /alternatives/gstarcad 301
 
-# 3. Redirect root-level legacy pricing paths
+# 2. Redirect root-level legacy pricing paths
 /forever /pricing/perpetual 301
 /3yr /pricing/subscription 301
 /mo /pricing/subscription 301
 
-# 4. Removed ghost entries (audit 2026-08-03): SolveSpace Pro never existed
-# (SolveSpace is free GPL software), CADvision is a services company not a
-# product, and "Chief Architect Pro" is not a real product name.
+# 3. Renamed product aliases → canonical tool slugs
 /tools/solvespace-pro /tools/solvespace 301
 /alternatives/solvespace-pro /alternatives/solvespace 301
 /pricing/solvespace-pro /pricing/solvespace 301
-/tools/cadvision /all-tools 301
 /tools/chief-architect-pro /tools/chief-architect 301
 /alternatives/chief-architect-pro /alternatives/chief-architect 301
 /pricing/chief-architect-pro /pricing/chief-architect 301
 
-# 5. Pricing aliases → modern canonicals
+# 4. Pricing aliases → modern canonicals
 /pricing/free /free 301
 /pricing/open-source /open-source 301
 
-# 6. Removed long-tail tools (catalog trim 2026-09) — 301 the Google-indexed ones
-/tools/varicad /all-tools 301
-/alternatives/varicad /all-tools 301
-/pricing/varicad /all-tools 301
-/tools/actcad /all-tools 301
-/alternatives/actcad /all-tools 301
-/pricing/actcad /all-tools 301
-/tools/woodwop /all-tools 301
-/alternatives/woodwop /all-tools 301
-/pricing/woodwop /all-tools 301
-/tools/jewelcad-pro /all-tools 301
-/alternatives/jewelcad-pro /all-tools 301
-/pricing/jewelcad-pro /all-tools 301
-/tools/icad3d-plus /all-tools 301
-/alternatives/icad3d-plus /all-tools 301
-/pricing/icad3d-plus /all-tools 301
-/tools/synopsys-fusion-compiler /all-tools 301
-/alternatives/synopsys-fusion-compiler /all-tools 301
-/pricing/synopsys-fusion-compiler /all-tools 301
-
-# 7. Legacy 3D converter routes → Modern canonical routes
+# 5. Legacy 3D converter routes → Modern canonical routes
 /toolbox/convert /convert 301
 /toolbox/convert/:pair /convert/:pair 301
 
-# 8. Tool slug updates (legacy alias → modern canonical)
+# 6. Tool slug updates (legacy alias → modern canonical)
 /tools/3dstudio /tools/3dstudio-web-tools 301
 /alternatives/3dstudio /alternatives/3dstudio-web-tools 301
 /pricing/3dstudio /pricing/3dstudio-web-tools 301
 
-# 9. Methodology alias redirect
+# 7. Methodology alias redirect
 /editorial-standards /about#methodology 301
-

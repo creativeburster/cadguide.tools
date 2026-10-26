@@ -6,7 +6,7 @@ export async function GET() {
   const baseUrl = 'https://cadguide.tools';
   const slugs = getAllConversionSlugs();
   // Fixed publication date to prevent invalid crawl budget churn
-  const fixedDate = '2026-08-28T00:00:00.000Z';
+  const fixedDate = '2026-10-26T00:00:00.000Z';
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n';

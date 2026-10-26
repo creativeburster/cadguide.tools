@@ -4,14 +4,14 @@ import { NextResponse } from 'next/server';
 const BASE_URL = 'https://cadguide.tools';
 
 export async function GET() {
+  const lastmod = '2026-10-26T00:00:00.000Z';
   const sitemaps = [
     `${BASE_URL}/sitemap-main.xml`,
     `${BASE_URL}/sitemap-tools.xml`,
     `${BASE_URL}/sitemap-toolbox.xml`,
     `${BASE_URL}/sitemap-compare.xml`,
     `${BASE_URL}/sitemap-alternatives.xml`,
-    // No sitemap-guides.xml: guides are a hidden noindex section (owner
-    // decision) and must stay out of the sitemap.
+    // No sitemap-guides.xml: guides have been permanently decommissioned (410 Gone)
     `${BASE_URL}/sitemap-convert.xml`,
   ];
 
@@ -22,6 +22,7 @@ export async function GET() {
     .map(
       (url) => `  <sitemap>
     <loc>${url}</loc>
+    <lastmod>${lastmod}</lastmod>
   </sitemap>`
     )
     .join('\n')}
