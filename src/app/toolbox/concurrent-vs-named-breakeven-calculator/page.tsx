@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import FlexlmConcurrentBreakevenClient from './calculator-client';
 import { EmbedSnippet } from '@/components/embed-snippet';
@@ -41,6 +42,7 @@ export default function FlexlmConcurrentBreakevenPage() {
           <div className="mt-8">
             <EmbedSnippet slug="concurrent-vs-named-breakeven-calculator" title="Concurrent vs Named-User Break-Even Calculator" />
           </div>
+          <ToolboxEngineeringGuide slug="concurrent-vs-named-breakeven-calculator" />
         </section>
       </main>
     </>

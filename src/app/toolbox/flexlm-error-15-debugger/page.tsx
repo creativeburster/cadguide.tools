@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import FlexlmDebuggerClient from './calculator-client';
 
@@ -43,6 +44,7 @@ export default function FlexlmDebuggerPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12">
           <FlexlmDebuggerClient />
+          <ToolboxEngineeringGuide slug="flexlm-error-15-debugger" />
         </section>
       </main>
     </>

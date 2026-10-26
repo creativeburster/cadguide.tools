@@ -24,7 +24,7 @@ export interface WizardData {
 
 /** Interactive decision-tree diagnostic wizard. All content is passed in (sourced data). */
 export function DecisionWizardClient({ data }: { data: WizardData }) {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(data.nodes[0]?.id ?? null);
   const node = data.nodes.find((n) => n.id === selected) ?? null;
 
   return (
@@ -93,6 +93,29 @@ export function DecisionWizardClient({ data }: { data: WizardData }) {
           ))}
         </div>
       )}
+
+      {/* Complete Diagnostic Reference Matrix for Quick Scanning & Indexing */}
+      <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <h3 className="text-base font-black text-slate-900 tracking-tight uppercase">
+          Complete Diagnostic Reference Matrix ({data.nodes.length} Scenarios)
+        </h3>
+        <div className="space-y-6 divide-y divide-slate-100">
+          {data.nodes.map((n, idx) => (
+            <div key={n.id} className={idx > 0 ? 'pt-6' : ''}>
+              <h4 className="text-sm font-black text-slate-800 mb-3">
+                Scenario {idx + 1}: {n.symptom}
+              </h4>
+              <ul className="space-y-2 pl-4 list-disc text-xs text-slate-600 font-medium leading-relaxed">
+                {n.causes.map((c, cIdx) => (
+                  <li key={cIdx}>
+                    <strong className="text-slate-800">{c.cause}:</strong> {c.fix.join(' ')}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {data.sourcesPolicy && (
         <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">

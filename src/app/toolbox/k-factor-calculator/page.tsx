@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import KFactorCalculatorClient from './calculator-client';
@@ -47,6 +48,7 @@ export default function KFactorCalculatorPage() {
         {/* Main Content Component */}
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <KFactorCalculatorClient />
+          <ToolboxEngineeringGuide slug="k-factor-calculator" />
         </section>
 
         {/* Related Expert Guides Section — dev-only; guides are noindex+302→404 in production */}

@@ -334,12 +334,12 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
 
       {/* 2. Official Sponsor & Curated Converter Tools Matrix */}
       <section className="space-y-6">
-        {/* DWG FastView Official Sponsor Banner */}
+        {/* DWG FastView Editor's Pick Banner */}
         <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-black border border-blue-400/30">
               <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span>Official Sponsor • 3D Cloud Converter Engine</span>
+              <span>Editor&apos;s Pick • 3D Cloud Viewer &amp; Converter</span>
             </div>
             <h3 className="text-xl font-black tracking-tight">
               DWG FastView Cloud 3D Engine
@@ -348,7 +348,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
               </span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-              DWG FastView delivers high-speed, industrial-grade 2D/3D CAD viewing, multi-format conversion, and cross-platform markup. Use DWG FastView for zero-install browser processing on Web & Mobile, or launch our verified offline and cloud partner tools below for specialized format transformations.
+              DWG FastView delivers high-speed, industrial-grade 2D/3D CAD viewing, multi-format conversion, and cross-platform markup. Use DWG FastView for zero-install browser processing on Web &amp; Mobile, or launch our verified offline and cloud tools below for specialized format transformations.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ export function ConverterDetailClient({ pair }: ConverterDetailClientProps) {
             <a
               href="https://en.dwgfastview.com/"
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="noopener noreferrer"
               className="py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all text-center"
             >
               <span>Explore DWG FastView</span>

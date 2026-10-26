@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import RetainingWallCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function RetainingWallCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <RetainingWallCalculatorClient />
+          <ToolboxEngineeringGuide slug="retaining-wall-calculator" />
         </section>
       </main>
     </>

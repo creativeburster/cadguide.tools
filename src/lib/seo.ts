@@ -176,18 +176,7 @@ function aggregateRatingFor(tool: Tool) {
   return undefined;
 }
 
-// Custom official association metadata for Gstarsoft/DWG FastView (EEAT booster)
-export const GSTARSOFT_PUBLISHER = {
-  "@type": "Organization",
-  "name": "Gstarsoft Co. Ltd.",
-  "url": "https://www.gstarcad.net/",
-  "sameAs": [
-    "https://en.wikipedia.org/wiki/Gstarsoft",
-    "https://twitter.com/gstarcad"
-  ]
-};
-
-// Independent platform publisher with implicit Gstarsoft developer background sameAs links
+// Independent platform publisher metadata
 export const SITE_PUBLISHER = {
   "@type": "Organization",
   "name": "CADGuide Tools Editorial Team",
@@ -205,7 +194,6 @@ export const SITE_PUBLISHER = {
 /** Schema.org SoftwareApplication payload. */
 export function softwareApplicationLd(tool: Tool, category?: Category) {
   const categoryName = category?.name ?? "CAD";
-  const isGstarProduct = tool.slug === 'gstarcad' || tool.slug === 'dwg-fastview';
 
   const featureItems: string[] = [];
   if (tool.tech_specs?.engine) {
@@ -254,11 +242,6 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
         worstRating: "1",
       },
       reviewBody: tool.expert_verdict || tool.description || `${tool.name} editorial technical evaluation and benchmark review.`,
-    } : undefined,
-    author: isGstarProduct ? GSTARSOFT_PUBLISHER : undefined,
-    brand: isGstarProduct ? {
-      "@type": "Brand",
-      "name": "Gstarsoft"
     } : undefined,
     publisher: SITE_PUBLISHER,
   };

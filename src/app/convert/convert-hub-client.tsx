@@ -187,7 +187,7 @@ export function ConvertHubClient({ initialPairs }: ConvertHubClientProps) {
             </span>
           </h2>
           <span className="text-xs font-semibold text-slate-400 hidden sm:inline-block">
-            Zero-Server Load • Curated Sponsor Benchmarks
+            Zero-Server Load • Curated Engineering Benchmarks
           </span>
         </div>
 

@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import FlywheelEnergyCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function FlywheelEnergyCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <FlywheelEnergyCalculatorClient />
+          <ToolboxEngineeringGuide slug="flywheel-energy-calculator" />
         </section>
       </main>
     </>

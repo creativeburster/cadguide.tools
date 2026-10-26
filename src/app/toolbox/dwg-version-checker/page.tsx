@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import DwgVersionCheckerClient from './checker-client';
@@ -47,6 +48,7 @@ export default function DwgVersionCheckerPage() {
         {/* Main Content Component */}
         <section className="py-16 max-w-[1000px] mx-auto px-6 md:px-12 space-y-12">
           <DwgVersionCheckerClient />
+          <ToolboxEngineeringGuide slug="dwg-version-checker" />
         </section>
       </main>
     </>

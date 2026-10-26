@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import { DecisionWizardClient, type WizardData } from '@/components/decision-wizard-client';
 import { revitWorksharingWizard } from '@/lib/wizard-data/revitWorksharingWizard';
@@ -42,6 +43,7 @@ export default function RevitWorksharingWizardPage() {
           <div className="mt-8">
             <EmbedSnippet slug="revit-worksharing-wizard" title="Revit Worksharing Diagnostic Wizard" />
           </div>
+          <ToolboxEngineeringGuide slug="revit-worksharing-wizard" />
         </section>
       </main>
     </>

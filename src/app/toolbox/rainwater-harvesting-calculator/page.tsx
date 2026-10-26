@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import RainwaterHarvestingCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function RainwaterHarvestingCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <RainwaterHarvestingCalculatorClient />
+          <ToolboxEngineeringGuide slug="rainwater-harvesting-calculator" />
         </section>
       </main>
     </>

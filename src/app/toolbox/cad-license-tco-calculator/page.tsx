@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import CadLicenseTcoCalculatorClient from './calculator-client';
 import { EmbedSnippet } from '@/components/embed-snippet';
@@ -41,6 +42,7 @@ export default function CadLicenseTcoCalculatorPage() {
           <div className="mt-8">
             <EmbedSnippet slug="cad-license-tco-calculator" title="CAD License TCO Calculator" />
           </div>
+          <ToolboxEngineeringGuide slug="cad-license-tco-calculator" />
         </section>
       </main>
     </>

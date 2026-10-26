@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import IfcElementQuantityCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function IfcElementQuantityCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <IfcElementQuantityCalculatorClient />
+          <ToolboxEngineeringGuide slug="ifc-element-quantity-calculator" />
         </section>
       </main>
     </>

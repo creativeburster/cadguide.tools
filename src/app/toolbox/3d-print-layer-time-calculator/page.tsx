@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import _3dPrintLayerTimeCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function _3dPrintLayerTimeCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <_3dPrintLayerTimeCalculatorClient />
+          <ToolboxEngineeringGuide slug="3d-print-layer-time-calculator" />
         </section>
       </main>
     </>

@@ -131,6 +131,14 @@ function AboutBody() {
             API features, and licensing options perfectly up to date.
           </p>
 
+          <h2 id="disclosure" className="text-3xl font-bold text-slate-900 mb-8 mt-16 scroll-mt-24">Editorial Independence &amp; Disclosure</h2>
+          <p>
+            <strong>CADGuide.tools</strong> is an independent personal project created and maintained by practicing professionals working in the CAD and engineering software industry. Although our contributors have hands-on professional experience across major CAD ecosystems (including DWG-based drafting platforms and cloud CAD viewers), this website operates entirely as an independent resource and has no corporate affiliation, ownership tie, or commercial sponsorship agreement with any software vendor or employer.
+          </p>
+          <p>
+            All software scores, benchmark comparisons, and tool recommendations reflect our independent technical evaluation and real-world engineering workflows. We do not sell rankings or accept payment to alter review outcomes.
+          </p>
+
           <h2 className="text-3xl font-bold text-slate-900 mb-8 mt-16">Our Philosophy</h2>
           <p>
             We believe that software should be a tool that empowers your creativity, not a barrier. Whether you are a student looking for a free alternative to AutoCAD or a large enterprise coordinating a multi-billion dollar BIM project, we are here to provide the insights you need.

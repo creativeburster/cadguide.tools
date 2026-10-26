@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import HatchScaleClient from './calculator-client';
 
@@ -43,6 +44,7 @@ export default function HatchScalePage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12">
           <HatchScaleClient />
+          <ToolboxEngineeringGuide slug="cad-hatch-scale-optimizer" />
         </section>
       </main>
     </>

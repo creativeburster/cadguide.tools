@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import ThreadDrillCalculatorClient from './calculator-client';
 
@@ -46,6 +47,7 @@ export default function ThreadDrillCalculatorPage() {
         {/* Main Content Component */}
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <ThreadDrillCalculatorClient />
+          <ToolboxEngineeringGuide slug="thread-drill-size-calculator" />
         </section>
       </main>
     </>

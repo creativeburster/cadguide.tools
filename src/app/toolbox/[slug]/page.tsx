@@ -5,6 +5,7 @@ import { TOOLBOX_DATA } from '@/lib/toolbox-data';
 import { getConversionPair, CONVERSION_PAIRS } from '@/lib/converter-data';
 import { ConverterDetailClient } from '@/app/convert/[pair]/converter-detail-client';
 import GenericToolboxClient from '@/components/generic-toolbox-client';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import { RelatedTools } from '@/components/related-tools';
 import Link from 'next/link';
 
@@ -175,6 +176,7 @@ export default async function ToolboxDetailPage({ params }: { params: Params }) 
       {/* Main Client Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <GenericToolboxClient tool={tool} />
+        <ToolboxEngineeringGuide slug={slug} />
       </main>
     </div>
   );

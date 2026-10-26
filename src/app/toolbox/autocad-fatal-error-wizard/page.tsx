@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import { DecisionWizardClient, type WizardData } from '@/components/decision-wizard-client';
 import { autocadFatalErrorWizard } from '@/lib/wizard-data/autocadFatalErrorWizard';
@@ -42,6 +43,7 @@ export default function AutoCadFatalErrorWizardPage() {
           <div className="mt-8">
             <EmbedSnippet slug="autocad-fatal-error-wizard" title="AutoCAD Fatal Error Diagnostic Wizard" />
           </div>
+          <ToolboxEngineeringGuide slug="autocad-fatal-error-wizard" />
         </section>
       </main>
     </>

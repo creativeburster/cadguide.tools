@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import ToleranceStackupClient from './calculator-client';
 
@@ -41,6 +42,7 @@ export default function ToleranceStackupPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <ToleranceStackupClient />
+          <ToolboxEngineeringGuide slug="tolerance-stackup-calculator" />
         </section>
       </main>
     </>

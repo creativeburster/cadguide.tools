@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import SketchUpProClient from './calculator-client';
 
@@ -42,6 +43,7 @@ export default function SketchUpProPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12 print:p-0">
           <SketchUpProClient />
+          <ToolboxEngineeringGuide slug="sketchup-shortcuts-sheet" />
         </section>
       </main>
     </>

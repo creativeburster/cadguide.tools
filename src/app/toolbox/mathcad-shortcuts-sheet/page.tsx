@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import MathcadShortcutsClient from './calculator-client';
 
@@ -66,6 +67,7 @@ export default function MathcadShortcutsPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12 print:p-0">
           <MathcadShortcutsClient />
+          <ToolboxEngineeringGuide slug="mathcad-shortcuts-sheet" />
         </section>
       </main>
     </>

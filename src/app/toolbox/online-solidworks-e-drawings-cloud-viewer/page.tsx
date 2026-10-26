@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import OnlineSolidworksEDrawingsCloudViewerClient from './calculator-client';
 
@@ -41,6 +42,7 @@ export default function OnlineSolidworksEDrawingsCloudViewerPage() {
 
         <section className="py-12 max-w-[1000px] mx-auto px-6 md:px-12 print:p-0">
           <OnlineSolidworksEDrawingsCloudViewerClient />
+          <ToolboxEngineeringGuide slug="online-solidworks-e-drawings-cloud-viewer" />
         </section>
       </main>
     </>

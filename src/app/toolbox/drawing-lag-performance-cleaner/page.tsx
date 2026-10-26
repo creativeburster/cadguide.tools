@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import DrawingLagCleanerClient from './calculator-client';
@@ -44,6 +45,7 @@ export default function DrawingLagCleanerPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12">
           <DrawingLagCleanerClient />
+          <ToolboxEngineeringGuide slug="drawing-lag-performance-cleaner" />
         </section>
 
         {/* Related Expert Guides Section — dev-only; guides are noindex+302→404 in production */}

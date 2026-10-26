@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import FilletWeldSizeCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function FilletWeldSizeCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <FilletWeldSizeCalculatorClient />
+          <ToolboxEngineeringGuide slug="fillet-weld-size-calculator" />
         </section>
       </main>
     </>

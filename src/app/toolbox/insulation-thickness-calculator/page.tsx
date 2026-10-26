@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import InsulationThicknessCalculatorClient from './calculator-client';
 
@@ -37,6 +38,7 @@ export default function InsulationThicknessCalculatorPage() {
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <InsulationThicknessCalculatorClient />
+          <ToolboxEngineeringGuide slug="insulation-thickness-calculator" />
         </section>
       </main>
     </>

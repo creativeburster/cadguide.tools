@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import ImperialThreadClient from './calculator-client';
 
@@ -62,6 +63,7 @@ export default function ImperialThreadPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12 print:p-0">
           <ImperialThreadClient />
+          <ToolboxEngineeringGuide slug="imperial-thread-reference" />
         </section>
       </main>
     </>

@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import CadFormatCompatibilityClient from './calculator-client';
 import { EmbedSnippet } from '@/components/embed-snippet';
@@ -41,6 +42,7 @@ export default function CadFormatCompatibilityMatrixPage() {
           <div className="mt-8">
             <EmbedSnippet slug="cad-format-compatibility-matrix" title="CAD Format Compatibility Matrix" />
           </div>
+          <ToolboxEngineeringGuide slug="cad-format-compatibility-matrix" />
         </section>
       </main>
     </>

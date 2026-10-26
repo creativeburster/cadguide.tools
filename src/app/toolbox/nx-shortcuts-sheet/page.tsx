@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import NXShortcutsClient from './calculator-client';
 
@@ -41,6 +42,7 @@ export default function NXShortcutsPage() {
         </section>
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12 print:p-0">
           <NXShortcutsClient />
+          <ToolboxEngineeringGuide slug="nx-shortcuts-sheet" />
         </section>
       </main>
     </>

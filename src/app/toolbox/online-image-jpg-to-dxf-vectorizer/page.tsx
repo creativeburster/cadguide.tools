@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import OnlineImageJpgToDxfVectorizerClient from './calculator-client';
 
@@ -41,6 +42,7 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
 
         <section className="py-12 max-w-[1000px] mx-auto px-6 md:px-12 print:p-0">
           <OnlineImageJpgToDxfVectorizerClient />
+          <ToolboxEngineeringGuide slug="online-image-jpg-to-dxf-vectorizer" />
         </section>
       </main>
     </>

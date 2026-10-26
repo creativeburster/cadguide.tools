@@ -1,4 +1,5 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import AcadPgpEditorClient from './calculator-client';
 
@@ -43,6 +44,7 @@ export default function AcadPgpEditorPage() {
 
         <section className="py-12 max-w-[1200px] mx-auto px-6 md:px-12 print:p-0">
           <AcadPgpEditorClient />
+          <ToolboxEngineeringGuide slug="acad-pgp-alias-editor" />
         </section>
       </main>
     </>
