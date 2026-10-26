@@ -232,6 +232,19 @@ export async function onRequest(context) {
     );
   }
 
-  // Pass through to static assets for all other requests
-  return context.next();
+  // Pass through to static assets and neutralize Cloudflare Rocket Loader on all <script> tags
+  const response = await context.next();
+  const contentType = response.headers.get("content-type") || "";
+  if (contentType.includes("text/html") && typeof HTMLRewriter !== "undefined") {
+    return new HTMLRewriter()
+      .on("script", {
+        element(el) {
+          if (!el.hasAttribute("data-cfasync")) {
+            el.setAttribute("data-cfasync", "false");
+          }
+        },
+      })
+      .transform(response);
+  }
+  return response;
 }
