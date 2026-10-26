@@ -22,6 +22,9 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Tool } from './data';
 
+/** Minimal shape needed for linking — lets callers pass a slim list. */
+export type LinkifyTool = Pick<Tool, 'name' | 'slug'>;
+
 interface LinkifyOptions {
   currentSlug?: string;
   className?: string;
@@ -35,9 +38,9 @@ function escapeRegex(s: string): string {
  * Build (and cache lazily) an ordered list of [name, slug] entries.
  * Memoised per-tools-array reference to avoid recomputing on every render.
  */
-const dictionaryCache = new WeakMap<Tool[], { regex: RegExp; bySlug: Map<string, string> }>();
+const dictionaryCache = new WeakMap<LinkifyTool[], { regex: RegExp; bySlug: Map<string, string> }>();
 
-function buildDictionary(tools: Tool[]) {
+function buildDictionary(tools: LinkifyTool[]) {
   const cached = dictionaryCache.get(tools);
   if (cached) return cached;
 
@@ -65,7 +68,7 @@ function buildDictionary(tools: Tool[]) {
 
 export function linkifyToolNames(
   text: string | undefined | null,
-  tools: Tool[],
+  tools: LinkifyTool[],
   options: LinkifyOptions = {},
 ): ReactNode[] {
   if (!text) return [];

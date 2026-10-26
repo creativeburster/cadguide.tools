@@ -9,8 +9,8 @@ import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { RelatedTools } from '@/components/related-tools';
 import { CheckCircle2, XCircle, ExternalLink, ChevronRight, Globe, Cpu, Layers, ShieldCheck, CreditCard, MessageSquare, Zap, HelpCircle, BarChart3, Search, Scale, Sparkles, TrendingUp, Plug, Award, FileText, Tag, Languages, Cloud, Code2, Lock, Star, Heart, Download } from "lucide-react";
-import { Tool, Category, tools as allTools } from "@/lib/data";
-import { linkifyToolNames } from "@/lib/linkify";
+import type { Tool, Category } from "@/lib/data";
+import { linkifyToolNames, type LinkifyTool } from "@/lib/linkify";
 import { priceSuffix } from "@/lib/utils";
 import { getBestDealForTool } from '@/lib/deals-data';
 
@@ -25,9 +25,13 @@ interface Props {
   category?: Category;
   alternativeTools: (Tool | undefined)[];
   toolComparisons?: ComparisonPairSummary[];
+  /** Slim {name, slug} list of every tool, used only for auto-linking mentions. */
+  linkTools: LinkifyTool[];
+  /** Top-rated tools in the same category, computed on the server. */
+  trendingTools: Tool[];
 }
 
-export function ToolDetailClient({ tool, category, alternativeTools, toolComparisons = [] }: Props) {
+export function ToolDetailClient({ tool, category, alternativeTools, toolComparisons = [], linkTools, trendingTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
   const bestDeal = getBestDealForTool(tool.id);
 
@@ -40,7 +44,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
     while ((match = linkRegex.exec(text)) !== null) {
       if (match.index > lastIndex) {
         parts.push(
-          ...linkifyToolNames(text.slice(lastIndex, match.index), allTools, {
+          ...linkifyToolNames(text.slice(lastIndex, match.index), linkTools, {
             currentSlug: tool.slug,
           })
         );
@@ -76,7 +80,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
     }
     if (lastIndex < text.length) {
       parts.push(
-        ...linkifyToolNames(text.slice(lastIndex), allTools, {
+        ...linkifyToolNames(text.slice(lastIndex), linkTools, {
           currentSlug: tool.slug,
         })
       );
@@ -281,11 +285,6 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
     ...alternativeTools.filter(Boolean).map((a) => a!.id),
   ].join(",");
 
-  // Get trending tools for the same category
-  const trendingTools = allTools
-    .filter((t) => t.category_id === tool.category_id && t.id !== tool.id)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
 
   return (
     <div className="bg-[#fcfdfe] min-h-screen pb-20 w-full overflow-x-hidden">
@@ -447,7 +446,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
 
                 <div className="prose prose-slate max-w-none">
                   <p className="text-base md:text-2xl text-slate-600 leading-relaxed font-medium mb-6 md:mb-10">
-                    {linkifyToolNames(tool.description, allTools, {
+                    {linkifyToolNames(tool.description, linkTools, {
                       currentSlug: tool.slug,
                       className:
                         "text-blue-600 hover:text-blue-700 underline decoration-blue-200 hover:decoration-blue-500 transition-colors",
@@ -1436,7 +1435,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.expert_verdict ? (
                     <p className="text-lg md:text-3xl lg:text-4xl text-blue-50 font-black leading-tight italic mb-8 md:mb-12">
                       &quot;
-                      {linkifyToolNames(tool.expert_verdict, allTools, {
+                      {linkifyToolNames(tool.expert_verdict, linkTools, {
                         currentSlug: tool.slug,
                         className: "text-blue-300 hover:text-white underline decoration-blue-400/50 transition-colors",
                       })}

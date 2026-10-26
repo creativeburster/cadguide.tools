@@ -3,7 +3,9 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { TOOLBOX_DATA } from '@/lib/toolbox-data';
+// Slim build-time index (scripts/generate-toolbox-slim.js) instead of the full
+// TOOLBOX_DATA, which would otherwise be bundled into almost every page.
+import TOOLBOX_INDEX from '@/lib/toolbox-slim.json';
 import {
   LayoutGrid,
   FileSearch,
@@ -431,10 +433,10 @@ export function RelatedTools({
 
     // 1. Score all TOOLBOX_DATA items by contextual keyword overlap + deterministic rotation
     const contextualMatches: { item: WorkflowToolItem; score: number; tie: number }[] = [];
-    for (const tb of TOOLBOX_DATA) {
+    for (const tb of TOOLBOX_INDEX) {
       const link = `/toolbox/${tb.slug}`;
       if (link === cleanPath || cleanPath.endsWith(`/${tb.slug}`)) continue;
-      const hay = `${tb.slug} ${tb.title} ${(tb.keywords || []).join(' ')}`.toLowerCase();
+      const hay = `${tb.slug} ${tb.title} ${tb.description}`.toLowerCase();
       let overlap = 0;
       for (const tok of pathTokens) {
         if (hay.includes(tok)) overlap += 10;

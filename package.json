@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-search-index.js && next build",
+    "build": "node scripts/generate-search-index.js && node scripts/generate-toolbox-slim.js && next build",
     "postbuild": "node scripts/indexnow-submit.js",
     "start": "next start",
     "lint": "eslint",

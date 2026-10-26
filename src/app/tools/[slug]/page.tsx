@@ -74,6 +74,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   const alternativeTools = alternativesFor(tool).slice(0, 3);
 
+  // Computed on the server and passed down as slim props so the client bundle
+  // does not have to ship the entire tool catalogue.
+  const linkTools = tools.map((t) => ({ name: t.name, slug: t.slug }));
+  const trendingTools = tools
+    .filter((t) => t.category_id === tool.category_id && t.id !== tool.id)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
   // Build all the JSON-LD payloads on the server so they SSR into the
   // initial HTML — crawlers don't run JS, so this must not be deferred to
   // a client component.
@@ -121,6 +129,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         category={category} 
         alternativeTools={alternativeTools} 
         toolComparisons={toolComparisons} 
+        linkTools={linkTools}
+        trendingTools={trendingTools}
       />
     </>
   );
