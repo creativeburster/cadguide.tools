@@ -9,71 +9,84 @@ export const c2Tools: Tool[] = [
     "slug": "solidworks",
     "logo_url": "/logos/solidworks.png",
     "short_desc": "The de-facto industry standard for 3D parametric mechanical design.",
-    "description": "SolidWorks by Dassault Systèmes is the de-facto industry standard for 3D parametric mechanical CAD, sheet metal, weldments, and injection mold design. Built on the Siemens Parasolid geometric kernel, it pairs feature-based history modeling and large-assembly management with integrated FEA simulation, electrical routing, PDM, and CAM ecosystems.",
+    "description": "SOLIDWORKS by Dassault Systèmes is the industry-standard 3D parametric mechanical CAD platform for part and assembly modeling, production 2D drawings, sheet metal, weldments, and mold design. Built on the Siemens Parasolid geometric kernel and installed locally on Windows (with 3DEXPERIENCE Cloud Services connectivity), it scales from SOLIDWORKS Standard to Professional, Premium, Simulation, PDM, and Electrical modules.",
     "pricing_tiers": [
       {
-        "name": "Standard (Annual)",
-        "price": "2,820",
+        "name": "SOLIDWORKS Standard",
+        "price": "Subscription / Perpetual",
         "period": "/yr",
         "features": [
-          "Full 3D Design",
-          "Standard Library",
-          "Cloud collaboration (3DEXPERIENCE)",
-          "NC programming & additive"
+          "3D Parametric Part & Assembly Modeling + 2D Drawings",
+          "Sheet Metal, Weldments, Surfacing & Mold Tools",
+          "3DEXPERIENCE Cloud Services (sharing, markup & storage)",
+          "Includes 3-Axis NC Programming & Additive Manufacturing in Term Plans"
         ],
         "is_popular": true
       },
       {
-        "name": "Perpetual",
-        "price": "3,995",
+        "name": "SOLIDWORKS Professional & Premium",
+        "price": "Subscription / Perpetual",
+        "period": "/yr",
+        "features": [
+          "Toolbox Standard Parts Library, Visualize & PDM Standard (Professional)",
+          "Linear Static FEA Stress Analysis & Motion Analysis (Premium)",
+          "Electrical Cable/Harness & Pipe/Tube Routing (Premium)",
+          "Advanced Surface Flattening & Costing Automation"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Perpetual License (via Reseller)",
+        "price": "Perpetual",
         "period": "one-time",
         "features": [
-          "Owned license (reseller channel only)",
-          "Add-on required for Cloud",
-          "Maintenance extra"
+          "Perpetual license purchased through authorized VAR channel",
+          "Cloud Services, version upgrades & support included with active Subscription Service",
+          "Perpetual core software continues to run if maintenance is not renewed",
+          "Standalone or SolidNetWork License (SNL) floating options"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Mechanical Design",
+        "category": "Core Mechanical Design (Standard)",
         "items": [
           {
-            "name": "Parametric 3D Modeling",
+            "name": "Parametric 3D Part & Assembly Modeling",
             "status": true
           },
           {
-            "name": "Advanced Assemblies",
+            "name": "Sheet Metal & Weldments",
             "status": true
           },
           {
-            "name": "Sheet Metal Design",
+            "name": "Production 2D Drawings & GD&T",
             "status": true
           },
           {
-            "name": "Mold Design Tools",
+            "name": "Mold & Tooling Design",
             "status": true
           }
         ]
       },
       {
-        "category": "Analysis & PLM",
+        "category": "Professional, Premium & Ecosystem Modules",
         "items": [
           {
-            "name": "Integrated Simulation (FEA)",
+            "name": "Toolbox Library & PDM Standard (Pro+)",
             "status": true
           },
           {
-            "name": "PDM Data Management",
+            "name": "Linear Static FEA & Pipe/Cable Routing (Premium+)",
             "status": true
           },
           {
-            "name": "Automatic BOM Generation",
+            "name": "Photorealistic Rendering (Visualize)",
             "status": true
           },
           {
-            "name": "3DEXPERIENCE Integration",
+            "name": "3DEXPERIENCE Cloud Services Integration",
             "status": true
           }
         ]
@@ -105,8 +118,9 @@ export const c2Tools: Tool[] = [
       "PDM Support"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "Small & Midsize Business",
+      "Enterprise Teams",
+      "Startups & Makers"
     ],
     "official_url": "https://www.solidworks.com",
     "pricing_url": "https://www.solidworks.com/how-to-buy",
@@ -115,56 +129,56 @@ export const c2Tools: Tool[] = [
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
-      "Intuitive workflow",
-      "Superior Parasolid stability",
-      "Unmatched ecosystem"
+      "Industry-standard parametric mechanical workflow",
+      "Proven Siemens Parasolid kernel reliability",
+      "Broad ecosystem of simulation, PDM, and CAM add-ons"
     ],
     "cons": [
-      "Windows-only",
-      "Hardware hungry",
-      "Legacy API"
+      "Native desktop client is Windows-only",
+      "Toolbox library, PDM, and FEA require Professional/Premium or add-on tiers",
+      "Complex multi-thousand-part assemblies require careful rebuild optimization"
     ],
     "faqs": [
       {
         "q": "What is SolidWorks used for?",
-        "a": "The de-facto industry standard for 3D parametric mechanical design. SolidWorks is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Automotive."
+        "a": "SOLIDWORKS is a 3D parametric mechanical CAD platform widely adopted across mechanical engineering, industrial equipment, automotive, medical devices, and consumer product manufacturing."
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SolidWorks is licensed on a Subscription / Perpetual model. Available editions include Standard (Annual), Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SOLIDWORKS is licensed via annual/quarterly Term Subscriptions as well as Perpetual licenses (with optional annual Subscription Service for upgrades, support, and Cloud Services) through Dassault Systèmes and authorized Value-Added Resellers (VARs). Available editions include Standard, Professional, and Premium, plus specialized Maker and Student plans. Click the Official Live Pricing button on this page to verify real-time regional pricing directly on the official SOLIDWORKS portal."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
-        "a": "Yes — SolidWorks ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Dassault Systèmes provides an instant browser-based SOLIDWORKS online product trial as well as a full 7-day evaluation license available on request through authorized resellers. Visit the Official Free Trial link on this page to start an evaluation directly on the vendor portal."
       },
       {
         "q": "What operating systems does SolidWorks support?",
-        "a": "SolidWorks runs on Windows. Deployment options include desktop, cloud."
+        "a": "SOLIDWORKS Design is installed and runs locally on 64-bit Windows (Windows 10 / Windows 11), with connected 3DEXPERIENCE Cloud Services for cloud storage, sharing, and markups. For browser-based cloud-native modeling on macOS or tablets, Dassault Systèmes offers separate 3DEXPERIENCE xDesign roles."
       },
       {
         "q": "Which file formats does SolidWorks support?",
-        "a": "SolidWorks imports SLDPRT, SLDASM, SLDDRW, STEP, IGES, Parasolid and more. Export covers SLDPRT, STEP, IGES, Parasolid, STL, 3DXML and more."
+        "a": "SOLIDWORKS natively uses SLDPRT (part), SLDASM (assembly), and SLDDRW (drawing) files, and imports STEP, IGES, Parasolid (.x_t/.x_b), ACIS (.sat), DWG, DXF, STL, IFC, and major MCAD formats via 3D Interconnect. Export covers STEP, IGES, Parasolid, STL, 3MF, eDrawings (.eprt/.easm/.edrw), 3D PDF, DWG, DXF, and more."
       },
       {
         "q": "Does SolidWorks have an API for automation and customization?",
-        "a": "Yes. SolidWorks exposes COM-based API with SDK bindings for C++, C#, VBA, .NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+        "a": "Yes. SOLIDWORKS exposes a COM-based API with bindings for C#, VB.NET, C++, and VBA macros, allowing engineering teams to automate parametric part generation, batch drawing export, custom property management, and PDM workflows."
       }
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "OpenGL 4.5+ (Workstation GPU Hardware Acceleration)",
+      "multicore": "Mostly Single-Threaded Feature Rebuild / Multi-Threaded Simulation, Rendering & Toolpaths",
+      "gpu_optimization": "OpenGL 4.5+ (Certified Workstation GPU Recommended)",
       "standards": [
         "SLDPRT",
         "STEP",
         "IGES",
-        "IFC"
+        "X_T"
       ]
     },
-    "expert_verdict": "If you are in mechanical design, SolidWorks is the most reliable choice.",
+    "expert_verdict": "A benchmark 3D parametric mechanical CAD platform backed by a deep manufacturing and PDM ecosystem.",
     "version": "2026",
     "last_updated": "2026-09-20",
-    "free_trial_days": 30,
+    "free_trial_days": 7,
     "languages": [
       "English",
       "French",
@@ -204,8 +218,9 @@ export const c2Tools: Tool[] = [
       "IGES",
       "Parasolid",
       "STL",
+      "3MF",
+      "EPRT / EASM / EDRW",
       "3DXML",
-      "eDrawings",
       "PDF",
       "DWG",
       "DXF",
@@ -225,7 +240,7 @@ export const c2Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -249,12 +264,12 @@ export const c2Tools: Tool[] = [
     "api_sdk": {
       "has_api": true,
       "has_sdk": true,
-      "api_type": "COM-based API",
+      "api_type": "COM / .NET API & VBA Macros",
       "sdk_languages": [
-        "C++",
         "C#",
-        "VBA",
-        ".NET"
+        "VB.NET",
+        "C++",
+        "VBA"
       ],
       "docs_url": "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm"
     }
@@ -383,7 +398,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does SketchUp offer a free trial?",
-        "a": "Yes — SketchUp ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — SketchUp offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SketchUp support?",
@@ -648,7 +663,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does Fusion 360 offer a free trial?",
-        "a": "Yes — Fusion 360 ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Fusion 360 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Fusion 360 support?",
@@ -911,7 +926,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does Rhino 3D offer a free trial?",
-        "a": "Yes — Rhino 3D ships with an unrestricted 90-day full-version evaluation available directly from McNeel without requiring a credit card. After 90 days, saving and plugins stop working unless a license key is purchased, though the software continues to function as a free 3DM file viewer."
+        "a": "Yes — McNeel provides a full-featured Rhino evaluation version (traditionally 90 days) directly from the official download portal without requiring a credit card. Click the Official Free Trial button on this page to verify current evaluation terms."
       },
       {
         "q": "What operating systems does Rhino 3D support?",
@@ -1265,7 +1280,7 @@ export const c2Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud",
+      "Hybrid",
       "On-Premise"
     ],
     "license_types": [
@@ -1306,7 +1321,7 @@ export const c2Tools: Tool[] = [
     "slug": "freecad",
     "logo_url": "/logos/freecad.ico",
     "short_desc": "The premier open-source 3D parametric modeler.",
-    "description": "FreeCAD is the leading open-source (LGPLv2+) parametric 3D CAD modeler powered by the Open CASCADE (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, BIM/IFC architectural modeling, CalculiX/Gmsh FEA, sheet metal unfolding, and multi-axis Path CAM.",
+    "description": "FreeCAD is the leading open-source (LGPLv2+) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and multi-axis CAM.",
     "pricing_tiers": [
       {
         "name": "Community",
@@ -1372,8 +1387,9 @@ export const c2Tools: Tool[] = [
       "Python Scripting"
     ],
     "user_scales": [
-      "Individuals",
-      "Education"
+      "Individuals & Makers",
+      "Small Engineering Studios",
+      "Education & Research"
     ],
     "official_url": "https://www.freecad.org",
     "donate_url": "https://www.freecad.org/sponsor.php",
@@ -1387,9 +1403,9 @@ export const c2Tools: Tool[] = [
       "Excellent cross-platform"
     ],
     "cons": [
-      "Steep learning curve",
-      "Occasional topological naming issues",
-      "DWG requires converter"
+      "UI workflow differs from mainstream commercial MCAD",
+      "Complex fillets and OCCT booleans can be sensitive on intricate geometry",
+      "Native DWG import/export requires external ODA File Converter or LibreDWG"
     ],
     "faqs": [
       {
@@ -1410,7 +1426,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does FreeCAD support?",
-        "a": "FreeCAD natively supports STEP, IGES, BREP, OBJ, STL, DXF, and IFC. DWG read/write is supported via the free ODA File Converter or LibreDWG extension."
+        "a": "FreeCAD natively saves in FCStd and imports/exports STEP, IGES, BREP, STL, OBJ, 3MF, PLY, DXF, SVG, and IFC (via IfcOpenShell). Native DWG support requires installing the external ODA File Converter or enabling the LibreDWG module."
       },
       {
         "q": "Does FreeCAD have an API for automation and customization?",
@@ -1418,14 +1434,14 @@ export const c2Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "OpenCASCADE",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "OpenGL",
+      "engine": "Open CASCADE Technology (OCCT)",
+      "multicore": "Mostly Single-Threaded OCCT Booleans / Multi-Threaded Meshing & CalculiX FEA",
+      "gpu_optimization": "OpenGL / Coin3D Scenegraph Viewport",
       "standards": [
+        "FCStd",
         "STEP",
         "IGES",
-        "STL",
-        "DXF"
+        "IFC"
       ]
     },
     "expert_verdict": "The best free, fully open-source alternative to commercial parametric CAD like SolidWorks.",
@@ -1469,29 +1485,31 @@ export const c2Tools: Tool[] = [
       "STEP",
       "IGES",
       "BREP",
-      "OBJ",
       "STL",
+      "OBJ",
+      "3MF",
       "PLY",
-      "DWG",
       "DXF",
       "SVG",
       "IFC",
-      "Collada"
+      "DAE (Collada)",
+      "DWG (via ODA/LibreDWG)"
     ],
     "file_formats_out": [
       "FCStd",
       "STEP",
       "IGES",
       "BREP",
-      "OBJ",
       "STL",
+      "OBJ",
+      "3MF",
       "PLY",
-      "DWG",
       "DXF",
       "SVG",
       "IFC",
       "AMF",
-      "PDF"
+      "PDF",
+      "WebGL / glTF"
     ],
     "integrations": [
       "OpenSCAD",
@@ -1533,28 +1551,40 @@ export const c2Tools: Tool[] = [
     "description": "Onshape is a cloud-native SaaS CAD platform developed by PTC. All modeling, simulation, and data management run entirely in a web browser, so teams collaborate on the same design from any device, with no installs and no PDM servers to maintain.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "1,500",
-        "period": "/yr",
+        "name": "Free (Public Documents)",
+        "price": "0",
+        "period": "forever",
         "features": [
-          "Core Modeling",
-          "Team Management",
-          "Standard Parts",
-          "Mobile apps"
+          "Core 3D Parametric CAD & Assembly Modeling",
+          "Public workspace storage for non-commercial makers & hobbyists",
+          "Browser-based access + native iOS & Android apps",
+          "Free Education & Startup programs also available"
         ],
         "is_popular": false
       },
       {
-        "name": "Professional",
-        "price": "2,500",
+        "name": "Standard & Professional",
+        "price": "Subscription",
         "period": "/yr",
         "features": [
-          "Cloud-native CAD",
-          "Built-in PDM",
-          "Real-time Collaboration",
-          "Advanced Surface"
+          "Private commercial workspaces & unlimited version history (Standard)",
+          "Built-in PDM, release management & approval workflows (Professional)",
+          "Integrated Linear Static FEA Simulation & Render Studio (Professional)",
+          "ECAD-MCAD PCB Studio & Arena PLM connection (Professional)"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom Quote",
+        "period": "custom",
+        "features": [
+          "SSO / SAML 2.0, role-based access control & audit logs",
+          "Custom company domain & analytics dashboards",
+          "Full Professional CAD, PDM, Simulation & Rendering capabilities",
+          "Dedicated customer success & onboarding support"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -1608,7 +1638,7 @@ export const c2Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c2",
-    "pricing_type": "Subscription",
+    "pricing_type": "Freemium",
     "starting_price": 1500,
     "price_period": "year",
     "platforms": [
@@ -1629,8 +1659,9 @@ export const c2Tools: Tool[] = [
       "Integrated Analysis"
     ],
     "user_scales": [
-      "Small Business",
-      "Startups"
+      "Startups & SMBs",
+      "Mid-Market",
+      "Enterprise Teams"
     ],
     "official_url": "https://www.onshape.com",
     "pricing_url": "https://www.onshape.com/en/pricing",
@@ -1655,15 +1686,15 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Onshape cost?",
-        "a": "Onshape is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Onshape offers a Freemium and Commercial Subscription licensing model. Commercial editions include Standard, Professional, and Enterprise, while a Free plan (with public document storage) is available for non-commercial hobbyists alongside free Education and Discovery/Startup programs. Because commercial seat rates and enterprise quotes vary by region and tier, click the Official Live Pricing button on this page to verify real-time pricing on the PTC Onshape portal."
       },
       {
         "q": "Does Onshape offer a free trial?",
-        "a": "Yes — Onshape ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Onshape provides a Free plan for non-commercial public projects as well as an official Onshape Professional Trial (including up to 6 months via the Onshape Discovery Program for qualified evaluators). Click the Official Free Trial button on this page to sign up directly on Onshape."
       },
       {
         "q": "What operating systems does Onshape support?",
-        "a": "Onshape runs on Web, iOS, and Android. Deployment options include cloud, web, mobile."
+        "a": "Onshape runs natively in any modern desktop web browser (Chrome, Safari, Edge, Firefox) across Windows, macOS, Linux, and ChromeOS with zero local installation, and provides full-featured native mobile CAD apps for iOS/iPadOS and Android."
       },
       {
         "q": "Which file formats does Onshape support?",
@@ -1671,18 +1702,18 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does Onshape have an API for automation and customization?",
-        "a": "Yes. Onshape exposes REST with SDK bindings for Python, JavaScript, Java, C#. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+        "a": "Yes. Onshape provides two customization layers: FeatureScript (a built-in language for authoring custom parametric CAD features that run directly inside Part Studios) and a comprehensive REST API with OAuth/API keys and SDK bindings for Python, JavaScript/TypeScript, Java, and C#."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid (Cloud)",
-      "multicore": "Unlimited",
-      "gpu_optimization": "WebGL 2.0",
+      "engine": "Siemens Parasolid (Cloud Server Cluster)",
+      "multicore": "Cloud-Hosted Server Regeneration / Parallel Cloud Simulation & Rendering",
+      "gpu_optimization": "WebGL 2.0 Browser Viewport & Server-Side GPU Raytracing",
       "standards": [
         "STEP",
         "IGES",
-        "Parasolid",
-        "DXF"
+        "X_T / X_B",
+        "DWG / DXF"
       ]
     },
     "expert_verdict": "Onshape is the 'Google Docs' of CAD.",
@@ -1703,37 +1734,40 @@ export const c2Tools: Tool[] = [
     "file_formats_in": [
       "STEP",
       "IGES",
-      "Parasolid",
+      "X_T",
+      "X_B",
+      "SAT",
       "STL",
+      "OBJ",
+      "3MF",
       "SLDPRT",
       "SLDASM",
       "IPT",
       "IAM",
       "PRT",
       "CATPart",
-      "DWG",
-      "DXF",
-      "X_T",
-      "X_B",
-      "ACIS",
       "JT",
-      "3MF"
+      "3DM",
+      "DWG",
+      "DXF"
     ],
     "file_formats_out": [
       "STEP",
       "IGES",
-      "Parasolid",
-      "STL",
-      "3MF",
-      "DWG",
-      "DXF",
-      "OBJ",
-      "JT",
       "X_T",
       "X_B",
+      "SAT",
+      "STL",
+      "OBJ",
+      "3MF",
+      "GLTF",
+      "SLDPRT",
+      "JT",
+      "3DM",
+      "DWG",
+      "DXF",
       "PDF",
-      "JPG",
-      "PNG"
+      "SVG"
     ],
     "integrations": [
       "Onshape PDM & Release Management",
@@ -1770,8 +1804,9 @@ export const c2Tools: Tool[] = [
     "api_sdk": {
       "has_api": true,
       "has_sdk": true,
-      "api_type": "REST",
+      "api_type": "Onshape REST API & FeatureScript",
       "sdk_languages": [
+        "FeatureScript",
         "Python",
         "JavaScript",
         "Java",
@@ -1955,7 +1990,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Solid Edge?",
-        "a": "Solid Edge is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Solid Edge offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Solid Edge support?",
@@ -2080,7 +2115,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does Autodesk Inventor offer a free trial?",
-        "a": "Yes — Autodesk Inventor ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Autodesk Inventor offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Autodesk Inventor support?",
@@ -2328,11 +2363,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does PTC Creo offer a free trial?",
-        "a": "Yes — PTC Creo ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — PTC Creo offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does PTC Creo support?",
-        "a": "PTC Creo runs on Windows. Deployment options include desktop, cloud."
+        "a": "PTC Creo runs on Windows. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
       },
       {
         "q": "Which file formats does PTC Creo support?",
@@ -2411,7 +2446,7 @@ export const c2Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -3049,7 +3084,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alibre Design?",
-        "a": "Alibre Design is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Alibre Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Alibre Design support?",
@@ -3162,7 +3197,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maya?",
-        "a": "Maya is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Maya offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Maya support?",
@@ -3580,7 +3615,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
-        "a": "Geomagic Design X is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Geomagic Design X offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Geomagic Design X support?",
@@ -3772,7 +3807,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
-        "a": "Alias AutoStudio is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Alias AutoStudio offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Alias AutoStudio support?",
@@ -3983,7 +4018,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZW3D?",
-        "a": "ZW3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ZW3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ZW3D support?",
@@ -4196,7 +4231,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Plasticity?",
-        "a": "Plasticity is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Plasticity offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Plasticity support?",
@@ -4401,7 +4436,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MoI3D?",
-        "a": "MoI3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — MoI3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MoI3D support?",
@@ -5258,7 +5293,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
-        "a": "KOMPAS-3D offers a free Light version with limited functionality. Educational licenses are free for students and teachers. Commercial users can request a 15-30 day evaluation period."
+        "a": "Yes — KOMPAS-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does KOMPAS-3D support?",
@@ -5750,7 +5785,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
-        "a": "3DEXPERIENCE is a commercial product without a free permanent tier. However, Dassault Systèmes offers a 30-day free trial for evaluation, and verified educational institutions can access free student licenses for academic use."
+        "a": "Yes — 3DEXPERIENCE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does 3DEXPERIENCE support?",

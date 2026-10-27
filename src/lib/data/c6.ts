@@ -226,7 +226,7 @@ export const c6Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -353,7 +353,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Eagle?",
-        "a": "Eagle is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Eagle offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Eagle support?",
@@ -454,7 +454,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
-        "a": "EPLAN Electric P8 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — EPLAN Electric P8 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does EPLAN Electric P8 support?",
@@ -820,7 +820,7 @@ export const c6Tools: Tool[] = [
     "deployment_options": [
       "Desktop",
       "On-Premise",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -1024,7 +1024,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allegro PCB?",
-        "a": "Allegro PCB is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Allegro PCB offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Allegro PCB support?",
@@ -1336,7 +1336,7 @@ export const c6Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -1374,7 +1374,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of OrCAD?",
-        "a": "OrCAD is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
+        "a": "Yes — OrCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does OrCAD support?",
@@ -1697,7 +1697,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of PADS Professional?",
-        "a": "PADS Professional is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
+        "a": "Yes — PADS Professional offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does PADS Professional support?",
@@ -1863,7 +1863,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Xpedition?",
-        "a": "Xpedition is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Xpedition offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Xpedition support?",
@@ -2463,7 +2463,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DipTrace?",
-        "a": "DipTrace is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — DipTrace offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does DipTrace support?",
@@ -2643,7 +2643,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of NI Multisim?",
-        "a": "NI Multisim is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — NI Multisim offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does NI Multisim support?",
@@ -3046,7 +3046,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
-        "a": "Proteus Design Suite is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Proteus Design Suite offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Proteus Design Suite support?",
@@ -3262,7 +3262,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altium 365?",
-        "a": "Altium 365 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Altium 365 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Altium 365 support?",

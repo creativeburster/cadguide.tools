@@ -149,7 +149,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Does Siemens NX offer a free trial?",
-        "a": "Yes — Siemens NX ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Siemens NX offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Siemens NX support?",
@@ -230,7 +230,7 @@ export const c5Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud",
+      "Hybrid",
       "On-Premise"
     ],
     "license_types": [
@@ -388,7 +388,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Mastercam?",
-        "a": "Mastercam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Mastercam offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Mastercam support?",
@@ -551,7 +551,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of nTop?",
-        "a": "nTop is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — nTop offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does nTop support?",
@@ -690,7 +690,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SolidCAM?",
-        "a": "SolidCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — SolidCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SolidCAM support?",
@@ -843,7 +843,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Magics?",
-        "a": "Magics is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Magics offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Magics support?",
@@ -945,7 +945,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of VISI Modelling?",
-        "a": "VISI Modelling is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — VISI Modelling offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does VISI Modelling support?",
@@ -1152,7 +1152,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Cimatron?",
-        "a": "Cimatron is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Cimatron offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Cimatron support?",
@@ -1357,7 +1357,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
-        "a": "ANSYS Mechanical is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ANSYS Mechanical offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ANSYS Mechanical support?",
@@ -1529,7 +1529,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Nastran?",
-        "a": "MSC Nastran is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — MSC Nastran offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MSC Nastran support?",
@@ -1660,7 +1660,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altair HyperWorks?",
-        "a": "Altair HyperWorks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Altair HyperWorks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Altair HyperWorks support?",
@@ -1796,7 +1796,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAMWorks?",
-        "a": "CAMWorks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CAMWorks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CAMWorks support?",
@@ -2084,7 +2084,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of TopSolid?",
-        "a": "TopSolid is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — TopSolid offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does TopSolid support?",
@@ -2292,7 +2292,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Visi?",
-        "a": "Visi is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Visi offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Visi support?",
@@ -2501,7 +2501,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Edgecam?",
-        "a": "Edgecam is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Edgecam offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Edgecam support?",
@@ -2706,7 +2706,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KISSsoft?",
-        "a": "KISSsoft is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — KISSsoft offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does KISSsoft support?",
@@ -2902,7 +2902,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of FeatureCAM?",
-        "a": "FeatureCAM is a commercial product without a free permanent tier. Autodesk offers a 30-day evaluation trial on request."
+        "a": "Yes — FeatureCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does FeatureCAM support?",
@@ -3110,7 +3110,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of GibbsCAM?",
-        "a": "GibbsCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — GibbsCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does GibbsCAM support?",
@@ -3318,7 +3318,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of hyperMILL?",
-        "a": "hyperMILL is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — hyperMILL offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does hyperMILL support?",
@@ -3525,7 +3525,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tebis?",
-        "a": "Tebis is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Tebis offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Tebis support?",
@@ -3731,7 +3731,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of WorkNC?",
-        "a": "WorkNC is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — WorkNC offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does WorkNC support?",
@@ -3933,7 +3933,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SURFCAM?",
-        "a": "SURFCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — SURFCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SURFCAM support?",
@@ -4138,7 +4138,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
-        "a": "BobCAD-CAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — BobCAD-CAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does BobCAD-CAM support?",
@@ -4345,7 +4345,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoForm?",
-        "a": "AutoForm is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — AutoForm offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AutoForm support?",
@@ -4549,7 +4549,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldflow?",
-        "a": "Moldflow is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Moldflow offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Moldflow support?",
@@ -4754,7 +4754,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldex3D?",
-        "a": "Moldex3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Moldex3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Moldex3D support?",
@@ -4959,7 +4959,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AlphaCAM?",
-        "a": "AlphaCAM is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — AlphaCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AlphaCAM support?",
@@ -5161,7 +5161,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Radan?",
-        "a": "Radan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Radan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Radan support?",
@@ -5364,7 +5364,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lantek Expert?",
-        "a": "Lantek Expert is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — Lantek Expert offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Lantek Expert support?",
@@ -5567,7 +5567,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SigmaNEST?",
-        "a": "SigmaNEST is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — SigmaNEST offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SigmaNEST support?",
@@ -5696,7 +5696,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
-        "a": "ANSYS Fluent is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ANSYS Fluent offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ANSYS Fluent support?",
@@ -5880,7 +5880,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
-        "a": "ANSYS Workbench is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ANSYS Workbench offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ANSYS Workbench support?",
@@ -6075,7 +6075,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
-        "a": "ANSYS Discovery is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ANSYS Discovery offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ANSYS Discovery support?",
@@ -6284,7 +6284,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Abaqus?",
-        "a": "Abaqus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Abaqus offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Abaqus support?",
@@ -6482,7 +6482,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
-        "a": "COMSOL Multiphysics is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — COMSOL Multiphysics offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does COMSOL Multiphysics support?",
@@ -6682,7 +6682,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of LS-DYNA?",
-        "a": "LS-DYNA is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — LS-DYNA offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does LS-DYNA support?",
@@ -6897,7 +6897,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
-        "a": "Simcenter STAR-CCM+ is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Simcenter STAR-CCM+ offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Simcenter STAR-CCM+ support?",
@@ -7309,7 +7309,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SimScale?",
-        "a": "SimScale is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — SimScale offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SimScale support?",
@@ -7522,7 +7522,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Femap?",
-        "a": "Femap is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Femap offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Femap support?",
@@ -7738,7 +7738,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altair Inspire?",
-        "a": "Altair Inspire is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Altair Inspire offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Altair Inspire support?",
@@ -7931,7 +7931,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Patran?",
-        "a": "MSC Patran is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — MSC Patran offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MSC Patran support?",
@@ -8145,7 +8145,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Adams?",
-        "a": "MSC Adams is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — MSC Adams offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MSC Adams support?",
@@ -8357,7 +8357,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAESAR II?",
-        "a": "CAESAR II is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CAESAR II offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CAESAR II support?",
@@ -8570,7 +8570,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
-        "a": "Bentley AutoPIPE is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Bentley AutoPIPE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Bentley AutoPIPE support?",
@@ -8784,7 +8784,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of PV Elite?",
-        "a": "PV Elite is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — PV Elite offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does PV Elite support?",
@@ -8994,7 +8994,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
-        "a": "AspenTech Aspen HYSYS is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — AspenTech Aspen HYSYS offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AspenTech Aspen HYSYS support?",
@@ -9207,7 +9207,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
-        "a": "CSI SAP2000 is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CSI SAP2000 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CSI SAP2000 support?",
@@ -9423,7 +9423,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI ETABS?",
-        "a": "CSI ETABS is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CSI ETABS offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CSI ETABS support?",
@@ -9639,7 +9639,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bentley STAAD.Pro?",
-        "a": "Bentley STAAD.Pro is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Bentley STAAD.Pro offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Bentley STAAD.Pro support?",
@@ -9853,7 +9853,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
-        "a": "Tekla Tedds is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Tekla Tedds offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Tekla Tedds support?",
@@ -10042,7 +10042,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
-        "a": "Autodesk Robot Structural Analysis is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Autodesk Robot Structural Analysis offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Autodesk Robot Structural Analysis support?",
@@ -10254,7 +10254,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
-        "a": "IDEA StatiCa is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — IDEA StatiCa offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does IDEA StatiCa support?",
@@ -10468,7 +10468,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of RISA-3D?",
-        "a": "RISA-3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — RISA-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does RISA-3D support?",
@@ -10879,7 +10879,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of midas Civil?",
-        "a": "midas Civil is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
+        "a": "Yes — midas Civil offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does midas Civil support?",
@@ -11175,7 +11175,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of midas Gen?",
-        "a": "midas Gen is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request a 30-day trial period."
+        "a": "Yes — midas Gen offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does midas Gen support?",
@@ -11342,7 +11342,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
-        "a": "SCIA Engineer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — SCIA Engineer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does SCIA Engineer support?",
@@ -11645,7 +11645,7 @@ export const c5Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -11817,7 +11817,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ESPRIT?",
-        "a": "ESPRIT is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ESPRIT offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ESPRIT support?",

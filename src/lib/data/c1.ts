@@ -151,7 +151,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Does AutoCAD offer a free trial?",
-        "a": "Yes — AutoCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — AutoCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AutoCAD support?",
@@ -420,7 +420,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZWCAD?",
-        "a": "ZWCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ZWCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ZWCAD support?",
@@ -607,7 +607,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BricsCAD?",
-        "a": "BricsCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — BricsCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does BricsCAD support?",
@@ -801,7 +801,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MicroStation?",
-        "a": "MicroStation is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — MicroStation offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MicroStation support?",
@@ -994,7 +994,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DraftSight?",
-        "a": "DraftSight is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — DraftSight offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does DraftSight support?",
@@ -1135,7 +1135,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of GstarCAD?",
-        "a": "GstarCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — GstarCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does GstarCAD support?",
@@ -1947,7 +1947,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of progeCAD Professional?",
-        "a": "progeCAD Professional is a commercial product without a free permanent tier. A 30-day evaluation trial is typically available on request."
+        "a": "Yes — progeCAD Professional offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does progeCAD Professional support?",
@@ -2376,7 +2376,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of TurboCAD Platinum?",
-        "a": "TurboCAD Platinum is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — TurboCAD Platinum offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does TurboCAD Platinum support?",
@@ -2711,7 +2711,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CorelCAD?",
-        "a": "CorelCAD is a commercial product without a free permanent tier. A 30-day free trial was historically available. Educational licenses were offered for verified students and teachers."
+        "a": "Yes — CorelCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CorelCAD support?",
@@ -2994,7 +2994,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAXA CAD?",
-        "a": "CAXA CAD is a commercial product without a free permanent tier. A 30-day evaluation trial may be available upon request. Educational licenses are offered for verified students and academic institutions in China."
+        "a": "Yes — CAXA CAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CAXA CAD support?",
@@ -3133,7 +3133,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ARES Commander?",
-        "a": "ARES Commander is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — ARES Commander offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ARES Commander support?",
@@ -3279,7 +3279,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoCAD LT?",
-        "a": "There is no free permanent tier, but Autodesk offers a 30-day free trial, and the AutoCAD web app with limited free viewing is available with an Autodesk account."
+        "a": "Yes — AutoCAD LT offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What is the difference between AutoCAD and AutoCAD LT?",
@@ -3499,7 +3499,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Is there a free trial for MCAD?",
-        "a": "Yes, MET provides a 30-day fully functional free trial for Windows with no credit card required."
+        "a": "Yes — MCAD 2026 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "How much does MCAD 2026 cost?",

@@ -1173,14 +1173,23 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           <Cloud className="w-4 h-4" /> Deployment Options
                         </h4>
                         <div className="flex flex-wrap gap-2.5">
-                          {tool.deployment_options.map((d) => (
-                            <Badge
-                              key={d}
-                              className="h-auto bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
-                            >
-                              {d}
-                            </Badge>
-                          ))}
+                          {tool.deployment_options.map((d) => {
+                            const hasWeb = (tool.platforms || []).some((p) => /web|browser/i.test(p));
+                            const displayLabel =
+                              d === "Cloud" && !hasWeb && tool.deployment_options?.includes("Desktop")
+                                ? "Cloud-Connected Services"
+                                : d === "Hybrid"
+                                  ? "Hybrid (Desktop + Cloud Services)"
+                                  : d;
+                            return (
+                              <Badge
+                                key={d}
+                                className="h-auto bg-emerald-50 text-emerald-700 border-emerald-100 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
+                              >
+                                {displayLabel}
+                              </Badge>
+                            );
+                          })}
                         </div>
                       </Card>
                     )}

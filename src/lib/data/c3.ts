@@ -124,11 +124,11 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Does Revit offer a free trial?",
-        "a": "Yes — Revit ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Revit offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Revit support?",
-        "a": "Revit runs on Windows. Deployment options include desktop, cloud."
+        "a": "Revit runs on Windows. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
       },
       {
         "q": "Which file formats does Revit support?",
@@ -215,7 +215,7 @@ export const c3Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -392,11 +392,11 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
-        "a": "Yes — ArchiCAD ships with a 30-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — ArchiCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ArchiCAD support?",
-        "a": "ArchiCAD runs on Windows and macOS. Deployment options include desktop, cloud."
+        "a": "ArchiCAD runs on Windows and macOS. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
       },
       {
         "q": "Which file formats does ArchiCAD support?",
@@ -481,7 +481,7 @@ export const c3Tools: Tool[] = [
     ],
     "deployment_options": [
       "Desktop",
-      "Cloud"
+      "Hybrid"
     ],
     "license_types": [
       "Subscription",
@@ -656,7 +656,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tekla Structures?",
-        "a": "Tekla Structures is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Tekla Structures offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Tekla Structures support?",
@@ -878,7 +878,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vectorworks?",
-        "a": "Vectorworks is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Vectorworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Vectorworks support?",
@@ -1039,7 +1039,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Chief Architect?",
-        "a": "Chief Architect is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Chief Architect offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Chief Architect support?",
@@ -1145,7 +1145,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Civil 3D?",
-        "a": "Civil 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Civil 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Civil 3D support?",
@@ -1356,7 +1356,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
-        "a": "Vectorworks Landmark is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Vectorworks Landmark offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Vectorworks Landmark support?",
@@ -1532,7 +1532,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allplan?",
-        "a": "Allplan is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Allplan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Allplan support?",
@@ -1715,7 +1715,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
-        "a": "OpenRoads Designer is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — OpenRoads Designer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does OpenRoads Designer support?",
@@ -2028,7 +2028,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of cadwork?",
-        "a": "cadwork is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — cadwork offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does cadwork support?",
@@ -2234,7 +2234,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MagiCAD?",
-        "a": "MagiCAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — MagiCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MagiCAD support?",
@@ -2438,7 +2438,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DDS-CAD?",
-        "a": "DDS-CAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — DDS-CAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does DDS-CAD support?",
@@ -2642,7 +2642,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of dRofus?",
-        "a": "dRofus is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request."
+        "a": "Yes — dRofus offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does dRofus support?",
@@ -2781,7 +2781,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
-        "a": "AutoCAD Plant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — AutoCAD Plant 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AutoCAD Plant 3D support?",
@@ -2956,7 +2956,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
-        "a": "Hexagon SmartPlant 3D is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Hexagon SmartPlant 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Hexagon SmartPlant 3D support?",
@@ -3170,7 +3170,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
-        "a": "CADWorx Plant Professional is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CADWorx Plant Professional offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CADWorx Plant Professional support?",
@@ -3385,7 +3385,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
-        "a": "Autodesk Construction Cloud is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Autodesk Construction Cloud offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Autodesk Construction Cloud support?",
@@ -3817,7 +3817,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BIMcollab?",
-        "a": "BIMcollab is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — BIMcollab offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does BIMcollab support?",
@@ -4307,7 +4307,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CYPECAD?",
-        "a": "CYPECAD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — CYPECAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CYPECAD support?",
@@ -4484,7 +4484,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vertex BD?",
-        "a": "Vertex BD is a commercial product without a free permanent tier. Most vendors offer a 15-30 day evaluation on request; verified educational seats are typically free for students."
+        "a": "Yes — Vertex BD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Vertex BD support?",
