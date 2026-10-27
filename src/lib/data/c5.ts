@@ -250,8 +250,8 @@ export const c5Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR",
-      "ITAR"
+      "GDPR Privacy Framework",
+      "ITAR / EAR Ready (Dedicated GovCloud / On-Premise Deployment)"
     ],
     "api_sdk": {
       "has_api": true,

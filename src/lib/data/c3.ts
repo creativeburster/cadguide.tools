@@ -234,7 +234,7 @@ export const c3Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR"
+      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
@@ -497,7 +497,7 @@ export const c3Tools: Tool[] = [
       "Reseller Network"
     ],
     "security_compliance": [
-      "GDPR",
+      "GDPR Privacy Framework",
       "ISO 27001"
     ],
     "api_sdk": {

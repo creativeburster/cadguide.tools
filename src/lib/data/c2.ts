@@ -13,7 +13,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "SOLIDWORKS Standard",
-        "price": "Subscription / Perpetual",
+        "price": "2,820",
         "period": "/yr",
         "features": [
           "3D Parametric Part & Assembly Modeling + 2D Drawings",
@@ -25,7 +25,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "SOLIDWORKS Professional & Premium",
-        "price": "Subscription / Perpetual",
+        "price": "Custom Quote",
         "period": "/yr",
         "features": [
           "Toolbox Standard Parts Library, Visualize & PDM Standard (Professional)",
@@ -37,7 +37,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Perpetual License (via Reseller)",
-        "price": "Perpetual",
+        "price": "Custom Quote",
         "period": "one-time",
         "features": [
           "Perpetual license purchased through authorized VAR channel",
@@ -259,7 +259,7 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR"
+      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
@@ -513,7 +513,7 @@ export const c2Tools: Tool[] = [
     ],
     "security_compliance": [
       "SOC 2 Type II",
-      "GDPR",
+      "GDPR Privacy Framework",
       "ISO 27001"
     ],
     "api_sdk": {
@@ -765,7 +765,7 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR"
+      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
@@ -788,7 +788,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Commercial Single-User License",
-        "price": "Perpetual",
+        "price": "995",
         "period": "one-time",
         "features": [
           "Perpetual Single Concurrent User License (Cloud Zoo / LAN Zoo floating supported)",
@@ -800,7 +800,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Upgrade from Any Previous Version",
-        "price": "Perpetual",
+        "price": "595",
         "period": "one-time",
         "features": [
           "Upgrade from any prior commercial Rhino version (V1–V7)",
@@ -812,7 +812,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Educational & Lab License",
-        "price": "Educational",
+        "price": "195",
         "period": "one-time",
         "features": [
           "For verified students, faculty & schools",
@@ -1042,7 +1042,7 @@ export const c2Tools: Tool[] = [
       "Reseller Network"
     ],
     "security_compliance": [
-      "GDPR"
+      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
@@ -1299,8 +1299,8 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR",
-      "ITAR"
+      "GDPR Privacy Framework",
+      "ITAR / EAR Ready (Dedicated GovCloud / On-Premise Deployment)"
     ],
     "api_sdk": {
       "has_api": true,
@@ -1321,7 +1321,7 @@ export const c2Tools: Tool[] = [
     "slug": "freecad",
     "logo_url": "/logos/freecad.ico",
     "short_desc": "The premier open-source 3D parametric modeler.",
-    "description": "FreeCAD is the leading open-source (LGPLv2+) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and multi-axis CAM.",
+    "description": "FreeCAD is the leading open-source (LGPL-2.0-or-later) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and 2.5D/3D/3+2 CAM toolpaths.",
     "pricing_tiers": [
       {
         "name": "Community",
@@ -1404,8 +1404,8 @@ export const c2Tools: Tool[] = [
     ],
     "cons": [
       "UI workflow differs from mainstream commercial MCAD",
-      "Complex fillets and OCCT booleans can be sensitive on intricate geometry",
-      "Native DWG import/export requires external ODA File Converter or LibreDWG"
+      "CAM workbench focuses on 2.5D, 3D surface & 3+2 indexed milling (not full simultaneous 5-axis)",
+      "DWG import/export is limited to 2D geometry and requires external LibreDWG or ODA converter"
     ],
     "faqs": [
       {
@@ -1426,7 +1426,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does FreeCAD support?",
-        "a": "FreeCAD natively saves in FCStd and imports/exports STEP, IGES, BREP, STL, OBJ, 3MF, PLY, DXF, SVG, and IFC (via IfcOpenShell). Native DWG support requires installing the external ODA File Converter or enabling the LibreDWG module."
+        "a": "FreeCAD natively saves in FCStd and imports/exports STEP, IGES, BREP, STL, OBJ, 3MF, PLY, DXF, SVG, and IFC (via IfcOpenShell). For DWG files, FreeCAD supports 2D geometry import/export only, requiring either the open-source LibreDWG library or the external freeware ODA File Converter (no native 3D DWG support)."
       },
       {
         "q": "Does FreeCAD have an API for automation and customization?",
@@ -1435,7 +1435,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Open CASCADE Technology (OCCT)",
-      "multicore": "Mostly Single-Threaded OCCT Booleans / Multi-Threaded Meshing & CalculiX FEA",
+      "multicore": "Parallel Booleans, Tessellation, Sketcher (Eigen3), Gmsh & CalculiX FEM / Single-Threaded Interactive Feature Tree",
       "gpu_optimization": "OpenGL / Coin3D Scenegraph Viewport",
       "standards": [
         "FCStd",
@@ -1464,14 +1464,15 @@ export const c2Tools: Tool[] = [
       "Japanese",
       "Korean",
       "Simplified Chinese",
+      "Traditional Chinese",
       "Russian",
       "Czech",
       "Polish",
       "Portuguese",
+      "Brazilian Portuguese",
       "Turkish",
       "Arabic",
       "Dutch",
-      "Greek",
       "Hungarian",
       "Indonesian",
       "Norwegian",
@@ -1489,11 +1490,11 @@ export const c2Tools: Tool[] = [
       "OBJ",
       "3MF",
       "PLY",
-      "DXF",
+      "DXF (2D)",
       "SVG",
       "IFC",
       "DAE (Collada)",
-      "DWG (via ODA/LibreDWG)"
+      "2D DWG (via LibreDWG / ODA)"
     ],
     "file_formats_out": [
       "FCStd",
@@ -1504,20 +1505,21 @@ export const c2Tools: Tool[] = [
       "OBJ",
       "3MF",
       "PLY",
-      "DXF",
+      "DXF (2D)",
       "SVG",
       "IFC",
       "AMF",
       "PDF",
-      "WebGL / glTF"
+      "WebGL / glTF",
+      "2D DWG (via LibreDWG / ODA)"
     ],
     "integrations": [
-      "OpenSCAD",
-      "Salome-Meca",
-      "CalculiX",
-      "OpenFOAM",
-      "KiCad",
-      "LibreCAD"
+      "CalculiX & Gmsh (Built-in FEM Workbench)",
+      "OpenSCAD (Built-in Workbench Interop)",
+      "IfcOpenShell (Built-in BIM/IFC Engine)",
+      "OpenFOAM (via CfdOF Add-on Workbench)",
+      "KiCad (via KiCadStepUp Add-on)",
+      "Blender (via STEP/glTF/sverchok Workflow)"
     ],
     "deployment_options": [
       "Desktop"
@@ -1548,7 +1550,7 @@ export const c2Tools: Tool[] = [
     "slug": "onshape",
     "logo_url": "/logos/onshape.png",
     "short_desc": "The professional CAD system built for agile cloud development.",
-    "description": "Onshape is a cloud-native SaaS CAD platform developed by PTC. All modeling, simulation, and data management run entirely in a web browser, so teams collaborate on the same design from any device, with no installs and no PDM servers to maintain.",
+    "description": "Onshape by PTC is a cloud-native SaaS product development platform that combines parametric 3D CAD, built-in PDM/version control, real-time team collaboration, FEA simulation, and rendering. Accessible via modern web browsers on any desktop OS or through native iOS/iPadOS and Android apps, it requires zero desktop CAD installation or local PDM server maintenance.",
     "pricing_tiers": [
       {
         "name": "Free (Public Documents)",
@@ -1556,8 +1558,8 @@ export const c2Tools: Tool[] = [
         "period": "forever",
         "features": [
           "Core 3D Parametric CAD & Assembly Modeling",
-          "Public workspace storage for non-commercial makers & hobbyists",
-          "Browser-based access + native iOS & Android apps",
+          "Unlimited storage in public workspace (non-commercial use only)",
+          "Desktop browser access + native iOS/iPadOS & Android apps",
           "Free Education & Startup programs also available"
         ],
         "is_popular": false
@@ -1567,22 +1569,22 @@ export const c2Tools: Tool[] = [
         "price": "Subscription",
         "period": "/yr",
         "features": [
-          "Private commercial workspaces & unlimited version history (Standard)",
-          "Built-in PDM, release management & approval workflows (Professional)",
-          "Integrated Linear Static FEA Simulation & Render Studio (Professional)",
-          "ECAD-MCAD PCB Studio & Arena PLM connection (Professional)"
+          "Standard: Commercial use, unlimited private storage & direct support",
+          "Professional: Built-in PDM, release management & company-wide libraries",
+          "Professional: Integrated Linear Static FEA Simulation & photorealistic Render Studio",
+          "Professional: ECAD-MCAD PCB Studio exchange & advanced admin controls"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise",
+        "name": "Enterprise & Onshape Government",
         "price": "Custom Quote",
         "period": "custom",
         "features": [
-          "SSO / SAML 2.0, role-based access control & audit logs",
-          "Custom company domain & analytics dashboards",
-          "Full Professional CAD, PDM, Simulation & Rendering capabilities",
-          "Dedicated customer success & onboarding support"
+          "Arena PLM Connection for automated BOM & ECO synchronization",
+          "SSO / SAML 2.0, role-based access control, guest licenses & activity analytics",
+          "Custom company domain & dedicated customer success onboarding",
+          "Onshape Government option (AWS GovCloud) for ITAR / EAR compliance"
         ],
         "is_popular": false
       }
@@ -1670,14 +1672,14 @@ export const c2Tools: Tool[] = [
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
-      "Zero IT footprint",
-      "Real-time collaboration",
-      "Superior version control"
+      "No desktop CAD installation or local PDM server required",
+      "Real-time multi-user collaboration & branch/merge version control",
+      "Full-featured native CAD apps on iOS/iPadOS and Android"
     ],
     "cons": [
-      "Internet dependency",
-      "Surfacing maturing",
-      "Expensive for occasional users"
+      "Requires continuous internet connectivity",
+      "Free tier stores all documents publicly (non-commercial only)",
+      "Arena PLM Connection & SSO require Enterprise tier"
     ],
     "faqs": [
       {
@@ -1686,11 +1688,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Onshape cost?",
-        "a": "Onshape offers a Freemium and Commercial Subscription licensing model. Commercial editions include Standard, Professional, and Enterprise, while a Free plan (with public document storage) is available for non-commercial hobbyists alongside free Education and Discovery/Startup programs. Because commercial seat rates and enterprise quotes vary by region and tier, click the Official Live Pricing button on this page to verify real-time pricing on the PTC Onshape portal."
+        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Because official seat rates, multi-currency pricing, and taxes vary by country, click the Official Live Pricing button on this page to verify real-time regional pricing directly on the PTC Onshape portal."
       },
       {
         "q": "Does Onshape offer a free trial?",
-        "a": "Yes — Onshape provides a Free plan for non-commercial public projects as well as an official Onshape Professional Trial (including up to 6 months via the Onshape Discovery Program for qualified evaluators). Click the Official Free Trial button on this page to sign up directly on Onshape."
+        "a": "Yes — Onshape provides a Free plan for non-commercial public projects as well as an official Onshape Professional Trial (via the Onshape Discovery Program for qualified evaluators). Because trial duration and eligibility terms are managed directly by PTC, click the Official Free Trial button on this page to verify current terms and sign up on the vendor portal."
       },
       {
         "q": "What operating systems does Onshape support?",
@@ -1698,7 +1700,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Onshape support?",
-        "a": "Onshape imports STEP, IGES, Parasolid, STL, SLDPRT, SLDASM and more. Export covers STEP, IGES, Parasolid, STL, 3MF, DWG and more."
+        "a": "Onshape imports STEP, IGES, Parasolid (.x_t/.x_b), ACIS (.sat), STL, OBJ, 3MF, Rhino (.3dm), JT, DWG, DXF, Inventor (.ipt/.iam), Creo, CATIA, and SOLIDWORKS parts (.sldprt) or assemblies (via SOLIDWORKS Pack and Go .zip). Export covers Parasolid (.x_t/.x_b), ACIS (.sat), STEP, IGES, STL, 3MF, OBJ, GLTF, JT, Rhino (.3dm), PVZ, DWG, DXF, PDF, and SVG."
       },
       {
         "q": "Does Onshape have an API for automation and customization?",
@@ -1706,8 +1708,8 @@ export const c2Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid (Cloud Server Cluster)",
-      "multicore": "Cloud-Hosted Server Regeneration / Parallel Cloud Simulation & Rendering",
+      "engine": "Siemens Parasolid",
+      "multicore": "Cloud Server Cluster Regeneration / Parallel Cloud Simulation & Rendering",
       "gpu_optimization": "WebGL 2.0 Browser Viewport & Server-Side GPU Raytracing",
       "standards": [
         "STEP",
@@ -1716,7 +1718,7 @@ export const c2Tools: Tool[] = [
         "DWG / DXF"
       ]
     },
-    "expert_verdict": "Onshape is the 'Google Docs' of CAD.",
+    "expert_verdict": "A cloud-native parametric CAD and built-in PDM platform engineered for distributed hardware teams.",
     "version": "Continuous (cloud)",
     "last_updated": "2026-09-17",
     "free_trial_days": 30,
@@ -1741,7 +1743,7 @@ export const c2Tools: Tool[] = [
       "OBJ",
       "3MF",
       "SLDPRT",
-      "SLDASM",
+      "SLDASM (Pack & Go ZIP)",
       "IPT",
       "IAM",
       "PRT",
@@ -1761,21 +1763,20 @@ export const c2Tools: Tool[] = [
       "OBJ",
       "3MF",
       "GLTF",
-      "SLDPRT",
       "JT",
       "3DM",
+      "PVZ",
       "DWG",
       "DXF",
       "PDF",
       "SVG"
     ],
     "integrations": [
-      "Onshape PDM & Release Management",
-      "Arena PLM",
-      "Onshape Simulation",
-      "PCB Studio (ECAD-MCAD)",
-      "Bambu Studio",
-      "Markforged"
+      "Onshape Built-in PDM (Pro+)",
+      "Onshape Simulation & Render Studio (Pro+)",
+      "PCB Studio ECAD-MCAD (Pro+)",
+      "Arena PLM Connection (Enterprise)",
+      "Onshape App Store Ecosystem"
     ],
     "deployment_options": [
       "Cloud",
@@ -1797,9 +1798,9 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR",
-      "CCPA",
-      "ITAR"
+      "GDPR Privacy Framework",
+      "CCPA Privacy Framework",
+      "ITAR / EAR (via Onshape Government on AWS GovCloud)"
     ],
     "api_sdk": {
       "has_api": true,
@@ -2218,7 +2219,7 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR"
+      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
@@ -2464,8 +2465,8 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR",
-      "ITAR"
+      "GDPR Privacy Framework",
+      "ITAR / EAR Ready (Dedicated GovCloud / On-Premise Deployment)"
     ],
     "api_sdk": {
       "has_api": true,
@@ -5517,8 +5518,7 @@ export const c2Tools: Tool[] = [
       "STL",
       "DWG",
       "DXF",
-      "SAT",
-      "SLDPRT"
+      "SAT"
     ],
     "integrations": [
       "SolidWorks",
@@ -5878,7 +5878,7 @@ export const c2Tools: Tool[] = [
     "security_compliance": [
       "ISO 27001",
       "SOC 2",
-      "GDPR",
+      "GDPR Privacy Framework",
       "FedRAMP (selected deployments)"
     ],
     "api_sdk": {

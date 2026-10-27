@@ -244,7 +244,7 @@ export const c6Tools: Tool[] = [
     ],
     "security_compliance": [
       "SOC 2 Type II",
-      "GDPR",
+      "GDPR Privacy Framework",
       "ISO 27001"
     ],
     "api_sdk": {

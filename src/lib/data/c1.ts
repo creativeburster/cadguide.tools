@@ -262,8 +262,8 @@ export const c1Tools: Tool[] = [
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR",
-      "CCPA"
+      "GDPR Privacy Framework",
+      "CCPA Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,

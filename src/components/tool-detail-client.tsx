@@ -1135,7 +1135,11 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </div>
                         )}
                       <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between flex-wrap gap-2 text-xs text-slate-500 font-medium">
-                        <span>Format availability may vary by OS, edition, or optional translator plugins.</span>
+                        <span>
+                          {tool.deployment_options?.includes("Desktop")
+                            ? "Format availability may vary by document type (part, assembly, drawing), edition, or optional translator add-ons."
+                            : "Format availability depends on workspace type (Part Studio, Assembly, or Drawing) and subscription tier."}
+                        </span>
                         {tool.official_url && (
                           <a
                             href={tool.official_url}
@@ -1152,7 +1156,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.integrations && tool.integrations.length > 0 && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                       <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
-                        <Plug className="w-4 h-4" /> Ecosystem &amp; Integrations
+                        <Plug className="w-4 h-4" /> Ecosystem &amp; External Workflows
                       </h4>
                       <div className="flex flex-wrap gap-2.5">
                         {tool.integrations.map((int) => (
@@ -1209,7 +1213,9 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         ))}
                       </div>
                       <p className="mt-5 text-xs text-slate-400 font-medium">
-                        Additional regional language packs or community localizations may be available via the official vendor portal.
+                        {tool.pricing_type === "Open Source"
+                          ? "Community-maintained localizations (via Crowdin/GitHub); translation coverage varies by locale."
+                          : "Additional regional language packs or localizations may be available via the official vendor portal."}
                       </p>
                     </Card>
                   )}
@@ -1334,7 +1340,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     tool.security_compliance.length > 0 && (
                       <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                         <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
-                          <Lock className="w-4 h-4" /> Security & Compliance
+                          <Lock className="w-4 h-4" /> Security &amp; Privacy Frameworks
                         </h4>
                         <div className="flex flex-wrap gap-2.5">
                           {tool.security_compliance.map((c) => (
