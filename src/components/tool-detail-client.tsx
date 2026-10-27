@@ -668,13 +668,13 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 },
                 {
                   icon: <Layers className="w-6 h-6" />,
-                  label: "Industry Standards",
-                  value: tool.tech_specs?.standards?.slice(0, 2).join(", "),
+                  label: "Core Formats & Standards",
+                  value: tool.tech_specs?.standards?.slice(0, 3).join(", "),
                 },
                 {
                   icon: <ShieldCheck className="w-6 h-6" />,
-                  label: "Market Seg.",
-                  value: tool.user_scales?.[0],
+                  label: "Target Users",
+                  value: tool.user_scales?.slice(0, 2).join(", "),
                 },
                 {
                   icon: <CreditCard className="w-6 h-6" />,
@@ -862,7 +862,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                                     ) : null}
                                   </span>
                                   <span className="text-slate-500 font-bold text-xs uppercase tracking-wider">
-                                    {tierHeadline} • Verify Regional Rate
+                                    {tierHeadline} • US List Price (Excl. Tax)
                                   </span>
                                 </>
                               ) : (
@@ -1000,7 +1000,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                     <div className="space-y-6">
                       <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
                         <span className="font-bold text-slate-600">
-                          Certified OS
+                          Supported Platforms
                         </span>
                         <span className="font-black text-slate-900 text-right flex flex-wrap justify-end gap-1.5">
                           {tool.platforms.map((plat, idx) => {
@@ -1022,10 +1022,10 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       </div>
                       <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
                         <span className="font-bold text-slate-600">
-                          Multi-threading
+                          CPU Threading
                         </span>
                         <span className="font-black text-slate-900 text-right">
-                          {tool.tech_specs.multicore || "Standard"}
+                          {tool.tech_specs.multicore || "Single-Core Modeling / Multi-Thread Regen"}
                         </span>
                       </div>
                       <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
@@ -1050,7 +1050,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </Card>
                   <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                     <h4 className="font-black mb-8 uppercase text-xs md:text-sm tracking-widest text-slate-500">
-                      Industry Standards & Sectors
+                      Supported Formats &amp; Standards
                     </h4>
                     <div className="flex flex-wrap gap-3">
                       {tool.tech_specs.standards?.map((s) => (
@@ -1163,7 +1163,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   {tool.integrations && tool.integrations.length > 0 && (
                     <Card className="rounded-[24px] md:rounded-[40px] p-6 md:p-10 border-slate-100 shadow-sm">
                       <h4 className="font-black mb-8 flex items-center gap-3 uppercase text-xs md:text-sm tracking-widest text-slate-500">
-                        <Plug className="w-4 h-4" /> Native Integrations
+                        <Plug className="w-4 h-4" /> Ecosystem &amp; Integrations
                       </h4>
                       <div className="flex flex-wrap gap-2.5">
                         {tool.integrations.map((int) => (

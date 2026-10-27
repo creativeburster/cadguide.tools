@@ -166,7 +166,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary EDA Engine (Delphi-based)",
-      "multicore": "Moderate",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "High (DirectX)",
       "standards": [
         "Gerber",
@@ -370,7 +370,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "EAGLE Core",
-      "multicore": "Low",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "Gerber",
@@ -471,8 +471,8 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary",
-      "multicore": "High",
-      "gpu_optimization": "Moderate",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IEC",
         "NFPA",
@@ -891,7 +891,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "EPLAN Platform",
-      "multicore": "Yes",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "IEC",
@@ -1425,7 +1425,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "OrCAD X Platform",
-      "multicore": "Yes",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "IPC",
@@ -1765,7 +1765,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PADS Platform",
-      "multicore": "Yes",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "IPC",
@@ -2052,7 +2052,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Custom KiCad engine",
-      "multicore": "Partial",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "OpenGL rendering",
       "standards": [
         "Gerber X2",
@@ -2494,7 +2494,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "DipTrace native",
-      "multicore": "Limited",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "Gerber X2",
@@ -2675,7 +2675,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Berkeley SPICE + XSPICE extensions",
-      "multicore": "Limited",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "No",
       "standards": [
         "SPICE3",
@@ -2887,7 +2887,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Custom SPICE solver (Mike Engelhardt)",
-      "multicore": "Yes",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "No",
       "standards": [
         "SPICE3"
@@ -3077,7 +3077,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proteus VSM",
-      "multicore": "Limited",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "No",
       "standards": [
         "SPICE",
@@ -3503,7 +3503,7 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Altium engine",
-      "multicore": "Limited",
+      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
       "gpu_optimization": "Basic",
       "standards": [
         "Gerber X2",

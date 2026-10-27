@@ -141,7 +141,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Medium",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX 11",
       "standards": [
         "RVT",
@@ -192,6 +192,7 @@ export const c3Tools: Tool[] = [
       "Japanese",
       "Korean",
       "Simplified Chinese",
+      "Traditional Chinese",
       "Russian",
       "Polish",
       "Czech",
@@ -430,8 +431,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Graphisoft Proprietary",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
         "DWG",
@@ -694,8 +695,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Trimble Structural Core",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "STEP",
@@ -916,7 +917,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Metal / DirectX",
       "standards": [
         "IFC",
@@ -1077,7 +1078,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Chief Custom AEC Engine",
-      "multicore": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX / Metal",
       "standards": [
         "DWG",
@@ -1183,7 +1184,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Low",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX",
       "standards": [
         "DWG",
@@ -1394,8 +1395,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "High",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
         "DWG",
@@ -1570,8 +1571,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "DWG",
@@ -1753,8 +1754,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MicroStation (Bentley)",
-      "multicore": "High",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "DGN",
@@ -2066,8 +2067,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "cadwork Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "DWG",
@@ -2272,8 +2273,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MagiCAD Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "DWG",
@@ -2476,8 +2477,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "DDS-CAD Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "IFC",
         "DWG",
@@ -2680,7 +2681,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "dRofus Engine",
-      "multicore": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "IFC",
@@ -2780,7 +2781,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD ObjectARX",
-      "multicore": "Limited",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "DWG",
@@ -2956,7 +2957,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SP3D (database-centric)",
-      "multicore": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "ISO 15926",
@@ -3170,7 +3171,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD ObjectARX",
-      "multicore": "Limited",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "DWG",
@@ -4026,7 +4027,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "DynamoCore",
-      "multicore": "Limited",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "N/A",
       "standards": [
         "RVT",
@@ -4752,7 +4753,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Yes",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX/OpenGL",
       "standards": [
         "DWG",

@@ -163,7 +163,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Bluebeam Rendering",
-      "multicore": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Hardware Acceleration",
       "standards": [
         "PDF",
@@ -342,8 +342,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk Navisworks",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "NWD",
         "NWC",
@@ -503,8 +503,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Solibri IFC Engine",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
         "BCF",
@@ -642,7 +642,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "VCG Library",
-      "multicore": "Low",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "OpenGL",
       "standards": [
         "OBJ",
@@ -784,8 +784,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk Reality",
-      "multicore": "Excellent",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "RCP",
         "RCS",
@@ -884,7 +884,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens JT",
-      "multicore": "Low",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "PAR",
@@ -1066,7 +1066,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD Core",
-      "multicore": "Low",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX",
       "standards": [
         "DWG",
@@ -1248,8 +1248,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "GstarCAD Core",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "DWG",
         "DXF"

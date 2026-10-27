@@ -152,7 +152,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Low",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OpenGL",
       "standards": [
         "SLDPRT",
@@ -340,7 +340,6 @@ export const c2Tools: Tool[] = [
       "Windows",
       "macOS",
       "Web",
-      "Android",
       "iOS"
     ],
     "industries": [
@@ -401,7 +400,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Trimble Proprietary",
-      "multicore": "Very Low",
+      "multicore": "Single-Core Direct Modeling / GPU Viewport Acceleration",
       "gpu_optimization": "OpenGL",
       "standards": [
         "SKP",
@@ -536,17 +535,17 @@ export const c2Tools: Tool[] = [
     "slug": "fusion-360",
     "logo_url": "/logos/fusion-360.svg",
     "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, and CAE.",
-    "description": "Autodesk Fusion (formerly Fusion 360) is a cloud-connected 3D CAD, CAM, CAE, and PCB platform built for agile product development and CNC manufacturing. It unifies parametric solid modeling, T-Spline freeform surfacing, sheet metal, multi-axis milling/turning toolpaths, Nastran FEA, and native Autodesk Eagle electronics in a single collaborative workspace.",
+    "description": "Autodesk Fusion (formerly Fusion 360) is a cloud-connected 3D CAD, CAM, CAE, and PCB platform built for agile product development and CNC manufacturing. It unifies parametric solid modeling, T-Spline freeform surfacing, sheet metal, multi-axis milling/turning toolpaths, Nastran FEA, and integrated electronics/PCB design (based on EAGLE technology) in a single collaborative workspace.",
     "pricing_tiers": [
       {
         "name": "Monthly",
         "price": "85",
         "period": "/mo",
         "features": [
-          "3D Design & Modeling",
-          "Basic CAM (2.5 & 3-axis)",
-          "PCB Design",
-          "Team Collaboration"
+          "3D Parametric, Direct, Surface & Mesh Modeling",
+          "Integrated CAM (2/2.5/3-axis, 3+2 positioning, turning & mill-turn)",
+          "Integrated Electronics & 16-Layer PCB Design",
+          "Cloud Data Management & Team Collaboration"
         ],
         "is_popular": false
       },
@@ -555,10 +554,10 @@ export const c2Tools: Tool[] = [
         "price": "680",
         "period": "/yr",
         "features": [
-          "All Monthly features",
-          "Cloud collaboration & data management",
-          "Extensions available à la carte",
-          "Generative Design credits option"
+          "All Commercial CAD, CAM, CAE & PCB capabilities",
+          "~$57/mo equivalent billed annually (US single-user list price)",
+          "4/5-Axis Simultaneous & Simulation Extensions available",
+          "Free Personal Use & Startup tiers available for eligible users"
         ],
         "is_popular": true
       }
@@ -620,8 +619,7 @@ export const c2Tools: Tool[] = [
     "platforms": [
       "Windows",
       "macOS",
-      "Android",
-      "iOS"
+      "Web"
     ],
     "industries": [
       "Industrial Design",
@@ -636,9 +634,9 @@ export const c2Tools: Tool[] = [
       "Collaboration"
     ],
     "user_scales": [
-      "Small Business",
-      "Startups",
-      "Individuals"
+      "Small & Midsize Business",
+      "Enterprise Teams",
+      "Startups & Makers"
     ],
     "official_url": "https://www.autodesk.com/products/fusion-360/overview",
     "pricing_url": "https://www.autodesk.com/products/fusion-360/subscribe",
@@ -652,9 +650,9 @@ export const c2Tools: Tool[] = [
       "Native Apple Silicon"
     ],
     "cons": [
-      "Cloud dependency",
-      "Subscription only",
-      "Learning curve"
+      "Cloud connectivity dependency",
+      "Commercial use is subscription-only (no perpetual license)",
+      "Advanced 4/5-axis simultaneous CAM requires paid Extension"
     ],
     "faqs": [
       {
@@ -663,7 +661,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Fusion 360 cost?",
-        "a": "Fusion 360 is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Autodesk Fusion commercial subscriptions are priced at $85/month or $680/year (US single-user list price, excluding taxes and regional adjustments). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use license for qualifying hobbyists, a Startup program, and free Educational access for students and educators."
       },
       {
         "q": "Does Fusion 360 offer a free trial?",
@@ -671,7 +669,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What operating systems does Fusion 360 support?",
-        "a": "Fusion 360 officially supports Windows, macOS, Android, and iOS / iPadOS."
+        "a": "The full Autodesk Fusion desktop modeling client is officially supported on Windows (64-bit) and macOS (Intel & Apple Silicon), with browser-based access available via Fusion on the Web. Companion mobile apps for iOS and Android are provided for 3D viewing, markups, and team comments rather than full parametric modeling."
       },
       {
         "q": "Which file formats does Fusion 360 support?",
@@ -684,7 +682,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "DirectX / Metal",
       "standards": [
         "F3D",
@@ -699,19 +697,13 @@ export const c2Tools: Tool[] = [
     "free_trial_days": 30,
     "languages": [
       "English",
-      "French",
       "German",
-      "Italian",
       "Spanish",
+      "French",
+      "Italian",
       "Japanese",
       "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Czech",
-      "Hungarian",
-      "Polish",
-      "Portuguese",
-      "Russian"
+      "Simplified Chinese"
     ],
     "file_formats_in": [
       "F3D",
@@ -742,25 +734,22 @@ export const c2Tools: Tool[] = [
       "OBJ",
       "FBX",
       "3MF",
-      "USD",
+      "USDZ",
       "IPT"
     ],
     "integrations": [
-      "Fusion Manage",
-      "Autodesk Drive",
+      "Autodesk Fusion Manage",
       "Autodesk Docs",
-      "Slack",
-      "Microsoft Teams",
-      "GitHub",
+      "Autodesk Drive",
+      "ANSYS / Nastran Simulation",
       "Markforged",
       "Formlabs",
-      "Carbide"
+      "Bambu Studio"
     ],
     "deployment_options": [
       "Desktop",
       "Cloud",
-      "Web",
-      "Mobile"
+      "Web"
     ],
     "license_types": [
       "Subscription",
@@ -941,7 +930,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "McNeel Proprietary NURBS Kernel (openNURBS I/O)",
-      "multicore": "Low",
+      "multicore": "Single-Core NURBS Modeling / Multi-Core Raytracing & Grasshopper",
       "gpu_optimization": "OpenGL",
       "standards": [
         "3DM",
@@ -1203,8 +1192,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CGM (Convergence Geometric Modeler)",
-      "multicore": "Limited",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "CATPart",
         "STEP",
@@ -1420,7 +1409,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "OpenCASCADE",
-      "multicore": "Low",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STEP",
@@ -1704,17 +1693,14 @@ export const c2Tools: Tool[] = [
     "free_trial_days": 30,
     "languages": [
       "English",
-      "French",
       "German",
-      "Italian",
       "Spanish",
+      "French",
+      "Italian",
       "Japanese",
       "Korean",
       "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Polish",
-      "Brazilian Portuguese"
+      "Traditional Chinese"
     ],
     "file_formats_in": [
       "STEP",
@@ -1752,12 +1738,10 @@ export const c2Tools: Tool[] = [
       "PNG"
     ],
     "integrations": [
-      "Onshape PDM",
-      "Slack",
-      "Jira",
-      "GitHub",
-      "Microsoft Teams",
-      "Drift",
+      "Onshape PDM & Release Management",
+      "Arena PLM",
+      "Onshape Simulation",
+      "PCB Studio (ECAD-MCAD)",
       "Bambu Studio",
       "Markforged"
     ],
@@ -1990,7 +1974,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OpenGL",
       "standards": [
         "PAR",
@@ -2115,7 +2099,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "Direct3D",
       "standards": [
         "IPT",
@@ -2135,6 +2119,7 @@ export const c2Tools: Tool[] = [
       "Japanese",
       "Korean",
       "Simplified Chinese",
+      "Traditional Chinese",
       "Russian",
       "Czech",
       "Polish",
@@ -2362,8 +2347,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Granite",
-      "multicore": "Excellent",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "PRT",
         "STEP",
@@ -2586,7 +2571,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CGAL / OpenCSG",
-      "multicore": "Low",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "None",
       "standards": [
         "STL",
@@ -2774,7 +2759,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "Metal / DirectX",
       "standards": [
         "STEP",
@@ -2922,7 +2907,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SolveSpace Custom Solver",
-      "multicore": "Low",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "None",
       "standards": [
         "STEP",
@@ -3083,7 +3068,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ACIS",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "DirectX",
       "standards": [
         "STEP",
@@ -3196,7 +3181,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Maya DG/DAG Evaluation Graph + Bifrost / Viewport 2.0",
-      "multicore": "High",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "CUDA",
       "standards": [
         "FBX",
@@ -3383,7 +3368,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "BMesh (Polygonal Mesh Kernel) + Cycles / EEVEE",
-      "multicore": "High",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OptiX",
       "standards": [
         "BLEND",
@@ -3506,15 +3491,12 @@ export const c2Tools: Tool[] = [
       "EXR"
     ],
     "integrations": [
-      "Cycles",
-      "Eevee",
+      "Cycles & EEVEE Renderers",
       "Geometry Nodes",
-      "GitHub",
-      "Unity",
-      "Unreal Engine",
-      "Adobe Substance",
-      "OpenColorIO",
-      "OpenSubdiv"
+      "Unity & Unreal Engine Pipeline",
+      "Adobe Substance 3D",
+      "OpenColorIO (OCIO)",
+      "OpenSubdiv & OpenVDB"
     ],
     "deployment_options": [
       "Desktop"
@@ -3617,8 +3599,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "High",
-      "gpu_optimization": "Ultra",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3809,8 +3791,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Alias Core",
-      "multicore": "High",
-      "gpu_optimization": "Ultra",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "STEP",
         "IGES",
@@ -4020,8 +4002,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Overdrive Kernel (Proprietary)",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -4194,7 +4176,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Yes",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STEP",
@@ -4399,7 +4381,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MoI / SMLib",
-      "multicore": "Limited",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STEP",
@@ -5307,7 +5289,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "C3D (ASCON)",
-      "multicore": "Yes",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "Basic",
       "standards": [
         "DIN",
@@ -5587,7 +5569,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Spatial ACIS (Ansys SpaceClaim Engine)",
-      "multicore": "Yes",
+      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",

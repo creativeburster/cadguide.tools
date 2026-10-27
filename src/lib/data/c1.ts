@@ -168,7 +168,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Limited",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "DirectX 11/12",
       "standards": [
         "DWG",
@@ -437,7 +437,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ZWSoft Custom",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "Hardware Acceleration",
       "standards": [
         "DWG",
@@ -641,7 +641,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ACIS",
-      "multicore": "High",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "Redway3d rendering",
       "standards": [
         "DWG",
@@ -852,8 +852,8 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Bentley DGN Platform (Parasolid-based Solid Modeling)",
-      "multicore": "High",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "DGN",
         "DWG",
@@ -1045,7 +1045,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ARES",
-      "multicore": "Low",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "Basic",
       "standards": [
         "DWG",
@@ -1186,8 +1186,8 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Independent Core",
-      "multicore": "High",
-      "gpu_optimization": "Ultra",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
         "DWG",
         "DXF",
@@ -1746,7 +1746,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "nanoCAD Core (DWG-native)",
-      "multicore": "High",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "DirectX/OpenGL",
       "standards": [
         "DWG",
@@ -2044,7 +2044,7 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "IntelliCAD (DWG-native)",
-      "multicore": "Moderate",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
       "gpu_optimization": "DirectX/OpenGL",
       "standards": [
         "DWG",
@@ -2497,8 +2497,8 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ACIS & D-Cube",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "DWG",
         "SKP",
@@ -3283,8 +3283,8 @@ export const c1Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ARES (IntelliCAD-derived)",
-      "multicore": "Moderate",
-      "gpu_optimization": "Moderate",
+      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
+      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "DWG",
         "DXF",

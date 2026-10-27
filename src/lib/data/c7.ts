@@ -74,8 +74,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Rhino 7 + Custom",
-      "multicore": "Moderate",
-      "gpu_optimization": "Ultra",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "STL",
         "OBJ",
@@ -217,8 +217,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AVEVA E3D",
-      "multicore": "Ultra",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "STEP",
         "IFC",
@@ -418,8 +418,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CLO Simulation Engine",
-      "multicore": "High",
-      "gpu_optimization": "Ultra",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "DXF-ASTM",
         "OBJ",
@@ -1787,7 +1787,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CuraEngine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "OpenGL preview",
       "standards": [
         "STL",
@@ -1978,7 +1978,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PrusaSlicer (Slic3r-derived)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STL",
@@ -2171,7 +2171,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Bambu Studio (PrusaSlicer fork)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STL",
@@ -2362,7 +2362,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Simplify3D engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STL",
@@ -2570,7 +2570,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Netfabb",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STL",
@@ -2787,7 +2787,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MD Cloth Simulator",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "Yes (CUDA)",
       "standards": [
         "FBX",
@@ -3214,7 +3214,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "V-Ray (CPU + GPU)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "CUDA, RTX, OptiX",
       "standards": [
         "FBX",
@@ -3422,7 +3422,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Corona path-tracer (CPU)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "Denoiser only",
       "standards": [
         "FBX",
@@ -3625,8 +3625,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Substance Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "USD",
         "glTF",
@@ -3840,7 +3840,7 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD or IntelliCAD",
-      "multicore": "Limited",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
       "gpu_optimization": "Basic",
       "standards": [
         "DWG",
@@ -4056,8 +4056,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Trimble Business Center",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "LandXML",
         "IFC",
@@ -4538,8 +4538,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AVEVA E3D Platform",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
+      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
       "standards": [
         "ISO",
         "ANSI",

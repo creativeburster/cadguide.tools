@@ -166,8 +166,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Excellent",
-      "gpu_optimization": "High",
+      "multicore": "Single-Core Feature Rebuild / Multi-Core Parasolid Booleans, CAM & CAE",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "PRT",
         "STEP",
@@ -189,9 +189,7 @@ export const c5Tools: Tool[] = [
       "Korean",
       "Simplified Chinese",
       "Traditional Chinese",
-      "Czech",
       "Russian",
-      "Polish",
       "Brazilian Portuguese"
     ],
     "file_formats_in": [
@@ -407,8 +405,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Mastercam Custom CAM",
-      "multicore": "Excellent",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -570,7 +568,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "nTop Implicit Engine",
-      "multicore": "Excellent",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "NVIDIA CUDA / Optix",
       "standards": [
         "STEP",
@@ -709,8 +707,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SolidCAM Machining",
-      "multicore": "Excellent",
-      "gpu_optimization": "Moderate",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "SolidWorks Native"
@@ -862,8 +860,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Materialise Geometric Engine",
-      "multicore": "High",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STL",
         "3MF",
@@ -964,8 +962,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -1171,8 +1169,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Moderate",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -1376,8 +1374,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary FEA",
-      "multicore": "Ultra",
-      "gpu_optimization": "Ultra",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -1548,8 +1546,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary FEA Solver",
-      "multicore": "Ultra",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -1679,8 +1677,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary CAE Suite",
-      "multicore": "Ultra",
-      "gpu_optimization": "High",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -1815,8 +1813,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid (via SolidWorks)",
-      "multicore": "High",
-      "gpu_optimization": "Moderate",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -2311,8 +2309,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Visi Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -2520,8 +2518,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid / Spatial ACIS",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -2725,7 +2723,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "KISSsoft Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -2921,8 +2919,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "FeatureCAM Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3129,8 +3127,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3337,8 +3335,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "hyperMILL Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3544,8 +3542,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Tebis Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3750,8 +3748,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "WorkNC Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -3952,7 +3950,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SURFCAM Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -4157,7 +4155,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "BobCAD-CAM Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -4364,8 +4362,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoForm Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -4568,8 +4566,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Moldflow Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -4773,8 +4771,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Moldex3D Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -4978,7 +4976,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AlphaCAM Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -5180,7 +5178,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Radan Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -5383,7 +5381,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Lantek Expert Engine",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -5586,8 +5584,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SigmaNEST Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -6056,7 +6054,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "GPU Lattice Boltzmann + finite element",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "CUDA / NVIDIA RTX",
       "standards": [
         "STEP",
@@ -6464,7 +6462,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Custom FEM with multi-physics coupling",
       "multicore": "Shared and distributed",
-      "gpu_optimization": "Limited",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -6879,7 +6877,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Coupled finite-volume CFD",
       "multicore": "MPI (HPC)",
-      "gpu_optimization": "Limited",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -7504,7 +7502,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Siemens Parasolid (Geometry) + Simcenter Nastran",
       "multicore": "Inherits from Nastran",
-      "gpu_optimization": "Limited",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "Nastran .bdf",
         "STEP",
@@ -7720,8 +7718,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "OptiStruct + MotionSolve",
-      "multicore": "Yes",
-      "gpu_optimization": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -7914,7 +7912,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Patran GUI + Nastran/Marc/Abaqus",
       "multicore": "Inherits from solver",
-      "gpu_optimization": "Limited",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "Nastran .bdf",
         "STEP",
@@ -8127,7 +8125,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Adams Solver (rigid + flexible MBD)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "Parasolid",
@@ -8340,7 +8338,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CAESAR II beam FEM",
-      "multicore": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "ASME B31",
@@ -8551,7 +8549,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoPIPE beam FEM",
-      "multicore": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "ASME B31",
@@ -8766,7 +8764,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PV Elite analytic + FEA",
-      "multicore": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "ASME VIII Div 1/2",
@@ -8978,7 +8976,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Aspen HYSYS solver",
-      "multicore": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "CAPE-OPEN"
@@ -9188,7 +9186,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SAP2000 (finite element + frame)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "AISC",
@@ -9403,7 +9401,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ETABS (finite element)",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "ACI",
@@ -9619,7 +9617,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "STAAD.Pro",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "AISC",
@@ -9833,7 +9831,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Tedds calculation engine",
-      "multicore": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "AISC",
@@ -10023,7 +10021,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Robot solver",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "Eurocode",
@@ -10234,7 +10232,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CBFEM",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "EN",
@@ -10449,7 +10447,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "RISA solver",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "No",
       "standards": [
         "AISC",
@@ -10915,7 +10913,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "midas Platform",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "ISO",
@@ -11228,7 +11226,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "midas Platform",
-      "multicore": "Yes",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "Basic",
       "standards": [
         "ISO",
@@ -11638,7 +11636,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "PowerMill Engine",
       "multicore": "Yes (64-bit multi-threading)",
-      "gpu_optimization": "Limited",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
@@ -12125,8 +12123,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PAM-STAMP FEA Engine",
-      "multicore": "Yes",
-      "gpu_optimization": "Limited",
+      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
+      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
