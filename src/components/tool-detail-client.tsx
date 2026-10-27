@@ -671,9 +671,9 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   label: "Core Formats & Standards",
                   value: tool.tech_specs?.standards?.slice(0, 3).join(", "),
                 },
-                {
+                 {
                   icon: <ShieldCheck className="w-6 h-6" />,
-                  label: "Target Users",
+                  label: "Typical Adoption",
                   value: tool.user_scales?.slice(0, 2).join(", "),
                 },
                 {
@@ -823,7 +823,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           : /3-year|3 year|triennial|multi-year/.test(tierText)
                             ? "Multi-Year Term"
                             : /one-time|perpetual|lifetime|buyout/.test(tierText)
-                              ? "Perpetual Seat"
+                              ? "Perpetual License"
                               : /\/mo|month|monthly/.test(tierText)
                                 ? "Monthly Plan"
                                 : /\/yr|year|annual/.test(tierText)
@@ -846,38 +846,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             {tier.name}
                           </div>
                           <div className="flex flex-col items-center justify-center gap-1.5">
-                            {(() => {
-                              const formattedPrice = formatTierPrice(tier.price);
-                              const hasSpecificPrice =
-                                formattedPrice &&
-                                !/^(custom|quote|contact|verify|official|perpetual|subscription|annual|monthly|free)/i.test(formattedPrice);
-                              return hasSpecificPrice ? (
-                                <>
-                                  <span className="text-2xl md:text-3xl font-black text-slate-900">
-                                    {formattedPrice}
-                                    {tier.period && !formattedPrice.includes("/") ? (
-                                      <span className="text-base md:text-lg font-bold text-slate-500 ml-1">
-                                        {tier.period.startsWith("/") ? tier.period : `(${tier.period})`}
-                                      </span>
-                                    ) : null}
-                                  </span>
-                                  <span className="text-slate-500 font-bold text-xs uppercase tracking-wider">
-                                    {tierHeadline} • US List Price (Excl. Tax)
-                                  </span>
-                                </>
-                              ) : (
-                                <>
-                                  <span className="text-2xl md:text-3xl font-black text-slate-900">
-                                    {tierHeadline}
-                                  </span>
-                                  <span className="text-slate-500 font-bold text-sm tracking-tight">
-                                    {isFreeTier
-                                      ? "No Commercial License Fee"
-                                      : "Verify Live Regional Pricing on Vendor Portal"}
-                                  </span>
-                                </>
-                              );
-                            })()}
+                            <span className="text-2xl md:text-3xl font-black text-slate-900">
+                              {tierHeadline}
+                            </span>
+                            <span className="text-slate-500 font-bold text-xs md:text-sm tracking-tight">
+                              {isFreeTier
+                                ? "No Commercial License Fee"
+                                : "Verify Live Regional Pricing on Vendor Portal"}
+                            </span>
                           </div>
                         </CardHeader>
                         <CardContent className="p-6 md:p-10 pt-4">
@@ -1039,7 +1015,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       {tool.user_scales && tool.user_scales.length > 0 && (
                         <div className="flex justify-between items-center flex-wrap gap-2 text-base md:text-lg">
                           <span className="font-bold text-slate-600">
-                            Target Scale
+                            Typical Team Scale
                           </span>
                           <span className="font-black text-slate-900 text-right">
                             {tool.user_scales.join(", ")}
@@ -1106,7 +1082,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         tool.file_formats_in.length > 0 && (
                           <div className="mb-6">
                             <div className="text-sm font-black text-slate-600 mb-3 uppercase tracking-wider">
-                              Import
+                              Key Import Formats
                             </div>
                             <div className="flex flex-wrap gap-2.5">
                               {tool.file_formats_in.map((f) => {
@@ -1134,7 +1110,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         tool.file_formats_out.length > 0 && (
                           <div>
                             <div className="text-sm font-black text-slate-600 mb-3 uppercase tracking-wider">
-                              Export
+                              Key Export Formats
                             </div>
                             <div className="flex flex-wrap gap-2.5">
                               {tool.file_formats_out.map((f) => {
@@ -1158,6 +1134,19 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             </div>
                           </div>
                         )}
+                      <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between flex-wrap gap-2 text-xs text-slate-500 font-medium">
+                        <span>Format availability may vary by OS, edition, or optional translator plugins.</span>
+                        {tool.official_url && (
+                          <a
+                            href={tool.official_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline font-bold inline-flex items-center gap-1"
+                          >
+                            Verify full I/O matrix on official docs <ExternalLink className="w-3 h-3" />
+                          </a>
+                        )}
+                      </div>
                     </Card>
                   )}
                   {tool.integrations && tool.integrations.length > 0 && (
@@ -1210,6 +1199,9 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </Badge>
                         ))}
                       </div>
+                      <p className="mt-5 text-xs text-slate-400 font-medium">
+                        Additional regional language packs or community localizations may be available via the official vendor portal.
+                      </p>
                     </Card>
                   )}
                   {tool.api_sdk &&

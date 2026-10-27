@@ -155,7 +155,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What operating systems does AutoCAD support?",
-        "a": "AutoCAD officially supports Windows, macOS, Web browsers (Windows, macOS, and Linux), Android, and iOS / iPadOS."
+        "a": "The full AutoCAD desktop application runs on Windows and macOS. AutoCAD on the Web runs in modern desktop browsers, and the AutoCAD mobile app provides DWG viewing, markup, and field drafting on iOS/iPadOS and Android."
       },
       {
         "q": "Which file formats does AutoCAD support?",
@@ -169,7 +169,7 @@ export const c1Tools: Tool[] = [
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
       "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
-      "gpu_optimization": "DirectX 11/12",
+      "gpu_optimization": "Windows: DirectX 11/12 / macOS: Metal Graphics Pipeline",
       "standards": [
         "DWG",
         "DXF",
@@ -450,23 +450,6 @@ export const c1Tools: Tool[] = [
     "version": "2026",
     "last_updated": "2026-09-20",
     "free_trial_days": 30,
-    "pricing_breakdown": [
-      {
-        "tier": "Standard",
-        "price": "~$899",
-        "notes": "Perpetual (2D drafting focus)"
-      },
-      {
-        "tier": "Professional",
-        "price": "~$1,199",
-        "notes": "Includes 3D & API support"
-      },
-      {
-        "tier": "Subscription",
-        "price": "~$399/yr",
-        "notes": "Annual maintenance option"
-      }
-    ],
     "key_capabilities": [
       "Native DWG/DXF Compatibility",
       "Familiar AutoCAD-like UI/UX",
@@ -654,23 +637,6 @@ export const c1Tools: Tool[] = [
     "version": "V26.2",
     "last_updated": "2026-09-20",
     "free_trial_days": 30,
-    "pricing_breakdown": [
-      {
-        "tier": "Lite",
-        "price": "$345/yr",
-        "notes": "2D drafting focus; perpetual available"
-      },
-      {
-        "tier": "Pro",
-        "price": "$780/yr",
-        "notes": "Full 3D & LISP; perpetual available"
-      },
-      {
-        "tier": "Ultimate",
-        "price": "$1,300/yr",
-        "notes": "All-in-one BIM & Mechanical"
-      }
-    ],
     "key_capabilities": [
       "Native DWG BIM & Mechanical Modeling",
       "AI-driven Design (BIMify, Propagate)",
@@ -1198,23 +1164,6 @@ export const c1Tools: Tool[] = [
     "version": "2026",
     "last_updated": "2026-04-10",
     "free_trial_days": 30,
-    "pricing_breakdown": [
-      {
-        "tier": "Standard",
-        "price": "$499",
-        "notes": "Perpetual 2D drafting & dynamic blocks"
-      },
-      {
-        "tier": "Professional",
-        "price": "$699",
-        "notes": "Full 3D ACIS solid modeling & GRX API"
-      },
-      {
-        "tier": "Annual Update",
-        "price": "~$150",
-        "notes": "Optional maintenance and version upgrades"
-      }
-    ],
     "key_capabilities": [
       "High-performance 2D/3D CAD",
       "Dynamic Block Support",
@@ -1510,18 +1459,6 @@ export const c1Tools: Tool[] = [
       ],
       "docs_url": "https://www.qcad.org/doc/qcad/latest/developer/index.html"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Community Edition",
-        "price": "Free",
-        "notes": "Open-source, DXF-only, for non-commercial use"
-      },
-      {
-        "tier": "Professional",
-        "price": "$39–$49",
-        "notes": "Perpetual license with DWG support and commercial use"
-      }
-    ],
     "key_capabilities": [
       "2D Drafting",
       "Cross-Platform",
@@ -1815,23 +1752,6 @@ export const c1Tools: Tool[] = [
       ],
       "docs_url": "https://nanocad.com/products/nanocad-developers-club/"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Free",
-        "price": "Free",
-        "notes": "Full 2D drafting, DWG-compatible, commercial use allowed"
-      },
-      {
-        "tier": "Pro",
-        "price": "~$200/year",
-        "notes": "3D modeling, parametric constraints, API access"
-      },
-      {
-        "tier": "Plus/Platform",
-        "price": "Custom",
-        "notes": "Enterprise with advanced 3D, IFC, volume licensing"
-      }
-    ],
     "key_capabilities": [
       "DWG Interoperability",
       "2D Drafting",
@@ -2104,23 +2024,6 @@ export const c1Tools: Tool[] = [
       ],
       "docs_url": "https://www.progecad.com/support/developers"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Professional (Perpetual)",
-        "price": "$399",
-        "notes": "Single user, perpetual license with 1 year of updates"
-      },
-      {
-        "tier": "Upgrade",
-        "price": "$199",
-        "notes": "From previous version to latest"
-      },
-      {
-        "tier": "Enterprise Volume",
-        "price": "Custom",
-        "notes": "Multi-seat with network licensing and priority support"
-      }
-    ],
     "key_capabilities": [
       "DWG Interoperability",
       "PDF-to-DWG",
@@ -2403,13 +2306,6 @@ export const c1Tools: Tool[] = [
       ],
       "docs_url": "https://dokuwiki.librecad.org/"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "LibreCAD",
-        "price": "Free",
-        "notes": "Open Source (GPLv2), full 2D CAD for all platforms"
-      }
-    ],
     "key_capabilities": [
       "Free 2D Drafting",
       "DXF Native Support",
@@ -2906,23 +2802,6 @@ export const c1Tools: Tool[] = [
       "has_api": false,
       "has_sdk": false
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Full License",
-        "price": "$499",
-        "notes": "Perpetual license for one user, includes Windows and macOS"
-      },
-      {
-        "tier": "Upgrade",
-        "price": "$199",
-        "notes": "For users with a previous version of CorelCAD"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free or discounted",
-        "notes": "For verified students and academic institutions"
-      }
-    ],
     "key_capabilities": [
       "DWG Interoperability",
       "2D Drafting",
@@ -3181,18 +3060,6 @@ export const c1Tools: Tool[] = [
       "has_api": false,
       "has_sdk": false
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Standard Edition",
-        "price": "~$800",
-        "notes": "Perpetual license for basic 2D drafting"
-      },
-      {
-        "tier": "Professional Edition",
-        "price": "~$1,200",
-        "notes": "Includes mechanical and electrical design modules"
-      }
-    ],
     "key_capabilities": [
       "DWG Interoperability",
       "2D Drafting",

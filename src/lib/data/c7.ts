@@ -387,7 +387,7 @@ export const c7Tools: Tool[] = [
     ],
     "cons": [
       "Requires strong GPU",
-      "Subscription only",
+      "Subscription-only licensing (no perpetual buyout)",
       "Learning curve for pattern making"
     ],
     "faqs": [
@@ -1574,7 +1574,7 @@ export const c7Tools: Tool[] = [
         "features": [
           "Full Engine Power",
           "Unlimited exports",
-          "Revenue < $1M only",
+          "Revenue < official regional rateM only",
           "Learning use"
         ],
         "is_popular": true
@@ -3418,12 +3418,12 @@ export const c7Tools: Tool[] = [
     "cons": [
       "CPU-only — no GPU acceleration",
       "Plugin support narrower than V-Ray (3ds Max + C4D only)",
-      "Subscription only"
+      "Subscription-only licensing (no perpetual buyout)"
     ],
     "tech_specs": {
       "engine": "Corona path-tracer (CPU)",
       "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "Denoiser only",
+      "gpu_optimization": "Unbiased CPU Path Tracing with NVIDIA / Intel GPU AI Denoising",
       "standards": [
         "FBX",
         "Alembic"
@@ -4485,23 +4485,6 @@ export const c7Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "E3D Design Standard",
-        "price": "$8,000+/year",
-        "notes": "Annual subscription with basic 3D modeling and piping capabilities"
-      },
-      {
-        "tier": "E3D Design Enterprise",
-        "price": "$15,000+/year",
-        "notes": "Annual subscription with full 3D plant design, clash detection, and multi-discipline integration"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special pricing for students and institutions"
-      }
-    ],
     "key_capabilities": [
       "3D Plant Design",
       "Piping Design",

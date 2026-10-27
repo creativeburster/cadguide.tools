@@ -7714,7 +7714,7 @@ export const c5Tools: Tool[] = [
     "cons": [
       "Not a full FEA replacement — go to HyperWorks for production analysis",
       "Windows-only",
-      "Subscription only"
+      "Subscription-only licensing (no perpetual buyout)"
     ],
     "tech_specs": {
       "engine": "OptiStruct + MotionSolve",
@@ -8765,7 +8765,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "PV Elite analytic + FEA",
       "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "No",
+      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
       "standards": [
         "ASME VIII Div 1/2",
         "PD 5500",
@@ -9826,13 +9826,13 @@ export const c5Tools: Tool[] = [
     ],
     "cons": [
       "Windows-only",
-      "Subscription only",
+      "Subscription-only licensing (no perpetual buyout)",
       "Not an analysis package — pair with ETABS / SAP2000 / Robot"
     ],
     "tech_specs": {
       "engine": "Tedds calculation engine",
       "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "No",
+      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
       "standards": [
         "AISC",
         "ACI",
@@ -10227,13 +10227,13 @@ export const c5Tools: Tool[] = [
     ],
     "cons": [
       "Windows-only",
-      "Subscription only",
+      "Subscription-only licensing (no perpetual buyout)",
       "Requires Tekla / Revit / FEA link for full productivity"
     ],
     "tech_specs": {
       "engine": "CBFEM",
       "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "No",
+      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
       "standards": [
         "EN",
         "AISC",
@@ -10860,23 +10860,6 @@ export const c5Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "midas Civil Standard",
-        "price": "$5,000+/year",
-        "notes": "Annual subscription with basic structural analysis capabilities"
-      },
-      {
-        "tier": "midas Civil Professional",
-        "price": "$10,000+/year",
-        "notes": "Annual subscription with full structural analysis and bridge design capabilities"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special pricing for students and institutions"
-      }
-    ],
     "key_capabilities": [
       "Structural Analysis",
       "Bridge Design",
@@ -11173,23 +11156,6 @@ export const c5Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "midas Gen Standard",
-        "price": "$4,000+/year",
-        "notes": "Annual subscription with basic structural analysis capabilities"
-      },
-      {
-        "tier": "midas Gen Professional",
-        "price": "$8,000+/year",
-        "notes": "Annual subscription with full structural analysis and building design capabilities"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special pricing for students and institutions"
-      }
-    ],
     "key_capabilities": [
       "Structural Analysis",
       "Building Design",
@@ -11705,23 +11671,6 @@ export const c5Tools: Tool[] = [
       ],
       "docs_url": "https://help.autodesk.com/view/POWERMILL/2025/ENU/"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "PowerMill Standard",
-        "price": "Subscription",
-        "notes": "Annual subscription for 3- and 5-axis machining"
-      },
-      {
-        "tier": "PowerMill Ultimate",
-        "price": "Subscription",
-        "notes": "Advanced features including simultaneous 5-axis and robot machining"
-      },
-      {
-        "tier": "Fusion 360 with PowerMill",
-        "price": "Subscription",
-        "notes": "Includes Fusion 360 CAD and cloud collaboration"
-      }
-    ],
     "key_capabilities": [
       "5-Axis Machining",
       "High-Speed Machining",
@@ -12182,18 +12131,6 @@ export const c5Tools: Tool[] = [
       ],
       "docs_url": "https://www.esi-group.com/support/"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "PAM-STAMP Standard",
-        "price": "Contact Sales",
-        "notes": "Perpetual license for sheet metal forming simulation"
-      },
-      {
-        "tier": "PAM-STAMP Advanced",
-        "price": "Contact Sales",
-        "notes": "Advanced multi-stage forming and process optimization"
-      }
-    ],
     "key_capabilities": [
       "Sheet Metal Forming",
       "Spring Back Compensation",

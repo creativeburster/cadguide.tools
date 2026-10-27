@@ -153,7 +153,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "Siemens Parasolid",
       "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "OpenGL",
+      "gpu_optimization": "OpenGL 4.5+ (Workstation GPU Hardware Acceleration)",
       "standards": [
         "SLDPRT",
         "STEP",
@@ -387,7 +387,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What operating systems does SketchUp support?",
-        "a": "SketchUp officially supports Windows, macOS, Web browsers (Windows, macOS, and Linux), Android, and iOS / iPadOS."
+        "a": "SketchUp Pro desktop runs natively on Windows and macOS, while SketchUp for Web runs in modern desktop browsers and SketchUp for iPad runs natively on iPadOS. Companion viewer apps are also available for iOS and Android."
       },
       {
         "q": "Which file formats does SketchUp support?",
@@ -401,7 +401,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "Trimble Proprietary",
       "multicore": "Single-Core Direct Modeling / GPU Viewport Acceleration",
-      "gpu_optimization": "OpenGL",
+      "gpu_optimization": "Windows: DirectX 12 / macOS: Metal (SketchUp 2024+ Graphics Engine)",
       "standards": [
         "SKP",
         "DWG",
@@ -413,23 +413,6 @@ export const c2Tools: Tool[] = [
     "version": "2026",
     "last_updated": "2026-09-20",
     "free_trial_days": 30,
-    "pricing_breakdown": [
-      {
-        "tier": "Go",
-        "price": "$129/yr",
-        "notes": "iPad & Web only"
-      },
-      {
-        "tier": "Pro",
-        "price": "$399/yr",
-        "notes": "Desktop + LayOut (Most popular)"
-      },
-      {
-        "tier": "Studio",
-        "price": "$819/yr",
-        "notes": "Includes V-Ray & Scan Essentials"
-      }
-    ],
     "key_capabilities": [
       "Intuitive 3D Concept Modeling",
       "2D Documentation with LayOut",
@@ -555,7 +538,7 @@ export const c2Tools: Tool[] = [
         "period": "/yr",
         "features": [
           "All Commercial CAD, CAM, CAE & PCB capabilities",
-          "~$57/mo equivalent billed annually (US single-user list price)",
+          "Annual billing cycle with discounted per-month rate (verify regional pricing on vendor portal)",
           "4/5-Axis Simultaneous & Simulation Extensions available",
           "Free Personal Use & Startup tiers available for eligible users"
         ],
@@ -661,7 +644,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Fusion 360 cost?",
-        "a": "Autodesk Fusion commercial subscriptions are priced at $85/month or $680/year (US single-user list price, excluding taxes and regional adjustments). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use license for qualifying hobbyists, a Startup program, and free Educational access for students and educators."
+        "a": "Autodesk Fusion is licensed on a commercial Subscription model (available in Monthly, Annual, and 3-Year terms). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use tier for qualifying hobbyists, a Startup program, and free Educational access for students and faculty. Because official seat rates, taxes, and promotions vary by country and currency, click the Official Live Pricing link on this page to verify real-time regional pricing directly on the Autodesk portal."
       },
       {
         "q": "Does Fusion 360 offer a free trial?",
@@ -786,35 +769,48 @@ export const c2Tools: Tool[] = [
     "slug": "rhino-3d",
     "logo_url": "/logos/rhino-3d.ico",
     "short_desc": "The industry standard for complex NURBS modeling and computational design.",
-    "description": "Rhinoceros 3D (Rhino) by Robert McNeel & Associates is the premier mathematical NURBS surface modeler for industrial design, marine architecture, jewelry, and computational facade engineering. Coupled with its built-in Grasshopper visual programming environment, SubD subdivision modeling, and Rhino.Inside.Revit bridge, it handles uninhibited freeform geometry with manufacturing precision.",
+    "description": "Rhinoceros 3D (Rhino) by Robert McNeel & Associates is a mathematical NURBS surface modeler widely adopted in industrial design, marine architecture, jewelry, and computational facade engineering. Coupled with its built-in Grasshopper visual programming environment, SubD subdivision modeling, and optional Rhino.Inside.Revit integration (Windows add-on), it handles complex freeform geometry with manufacturing precision.",
     "pricing_tiers": [
       {
-        "name": "Commercial (V8)",
-        "price": "995",
+        "name": "Commercial Single-User License",
+        "price": "Perpetual",
         "period": "one-time",
         "features": [
-          "Full NURBS Modeling",
-          "Grasshopper included",
-          "SubD Modeling",
-          "Permanent License"
+          "Perpetual Single Concurrent User License (Cloud Zoo / LAN Zoo floating supported)",
+          "Full NURBS, SubD & Mesh Modeling",
+          "Built-in Grasshopper visual programming",
+          "No mandatory subscription or annual maintenance fees"
         ],
         "is_popular": true
       },
       {
-        "name": "Upgrade from V7",
-        "price": "595",
+        "name": "Upgrade from Any Previous Version",
+        "price": "Perpetual",
         "period": "one-time",
         "features": [
-          "Update existing license",
-          "Latest V8 features",
-          "New render engine"
+          "Upgrade from any prior commercial Rhino version (V1–V7)",
+          "Full Rhino 8 feature set & ShrinkWrap",
+          "Metal display pipeline on macOS / OpenGL on Windows",
+          "Includes free service releases & official McNeel support"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Educational & Lab License",
+        "price": "Educational",
+        "period": "one-time",
+        "features": [
+          "For verified students, faculty & schools",
+          "Identical full functionality without watermarks",
+          "Upgradable to commercial status later",
+          "30-Seat Educational Lab kits available"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Surface Modeling",
+        "category": "Surface & Mesh Modeling",
         "items": [
           {
             "name": "Complex NURBS surfaces",
@@ -829,28 +825,28 @@ export const c2Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Mesh repair & editing",
+            "name": "ShrinkWrap & Mesh repair",
             "status": true
           }
         ]
       },
       {
-        "category": "Algorithm Design",
+        "category": "Computational Design & Rendering",
         "items": [
           {
-            "name": "Grasshopper Integration",
+            "name": "Built-in Grasshopper visual programming",
             "status": true
           },
           {
-            "name": "Kangaroo Physics engine",
+            "name": "Kangaroo Physics solver",
             "status": true
           },
           {
-            "name": "Python/C# Scripting",
+            "name": "Python 3 / C# Script Editor",
             "status": true
           },
           {
-            "name": "Cycles Rendering",
+            "name": "Cycles Raytraced Rendering",
             "status": true
           }
         ]
@@ -873,18 +869,20 @@ export const c2Tools: Tool[] = [
     "industries": [
       "Architecture",
       "Industrial Design",
-      "Jewelry"
+      "Jewelry",
+      "Marine"
     ],
     "core_features": [
       "Free-form NURBS",
       "Grasshopper Visual Coding",
       "SubD Surfaces",
-      "Render Integration",
-      "Rhino.Inside.Revit"
+      "Cycles Raytracing",
+      "Rhino.Inside (Windows Add-on)"
     ],
     "user_scales": [
-      "Mid-Market",
-      "Individuals"
+      "Individuals",
+      "Small & Midsize Studios",
+      "Enterprise Teams"
     ],
     "official_url": "https://www.rhino3d.com",
     "pricing_url": "https://www.rhino3d.com/sales/",
@@ -893,53 +891,53 @@ export const c2Tools: Tool[] = [
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
-      "Best-in-class surfacing",
-      "No subscription fees",
-      "Vibrant community"
+      "Versatile NURBS & SubD surfacing",
+      "Perpetual license (no mandatory subscription)",
+      "Extensive Grasshopper & Food4Rhino plugin ecosystem"
     ],
     "cons": [
-      "Lacks native parametric history",
-      "Basic 2D",
-      "High hardware reqs"
+      "No full feature-based parametric history tree (command-level Record History only)",
+      "2D drafting & sheet layout require more manual setup than dedicated BIM tools",
+      "Complex Grasshopper definitions require careful data-tree optimization"
     ],
     "faqs": [
       {
         "q": "What is Rhino 3D used for?",
-        "a": "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry."
+        "a": "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry, and Marine engineering."
       },
       {
         "q": "How much does Rhino 3D cost?",
-        "a": "Rhino 3D is licensed on a Perpetual model. Available editions include Commercial (V8), Upgrade from V7. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Rhino 3D is licensed on a Perpetual Single Concurrent User model with no mandatory subscription or annual maintenance fees. Available tiers include Commercial Single-User License, Upgrade from Any Previous Version (V1–V7), and Educational / Lab licenses. Because official pricing, regional currencies, taxes, and authorized reseller quotes vary by country, click the Official Live Pricing link on this page to verify real-time pricing directly on the McNeel regional sales portal."
       },
       {
         "q": "Does Rhino 3D offer a free trial?",
-        "a": "Yes — Rhino 3D ships with a 90-day free trial available directly from the vendor. The trial includes the full feature set so you can validate workflow compatibility before purchase."
+        "a": "Yes — Rhino 3D ships with an unrestricted 90-day full-version evaluation available directly from McNeel without requiring a credit card. After 90 days, saving and plugins stop working unless a license key is purchased, though the software continues to function as a free 3DM file viewer."
       },
       {
         "q": "What operating systems does Rhino 3D support?",
-        "a": "Rhino 3D runs on Windows and macOS. Deployment options include desktop."
+        "a": "The full Rhino 8 desktop application runs natively on Windows (64-bit) and macOS (Apple Silicon & Intel). Licenses can be floated across machines using McNeel's Cloud Zoo or LAN Zoo. Companion viewing on iOS/iPadOS is available via the separate iRhino 3D viewer app."
       },
       {
         "q": "Which file formats does Rhino 3D support?",
-        "a": "Rhino 3D imports 3DM, STEP, IGES, SAT, STL, DWG and more. Export covers 3DM, STEP, IGES, STL, DWG, DXF and more."
+        "a": "Rhino 3D natively reads and writes 3DM and imports STEP, IGES, DWG, DXF, STL, OBJ, FBX, 3DS, SKP, PDF, AI, PLY, and SolidWorks (.sldprt/.sldasm) files. Export covers 3DM, STEP, IGES, ACIS (.sat), Parasolid (.x_t), STL, OBJ, FBX, DWG, DXF, USD (.usd/.usdz), GLTF/GLB, 3MF, and more."
       },
       {
         "q": "Does Rhino 3D have an API for automation and customization?",
-        "a": "Yes. Rhino 3D exposes RhinoCommon / openNURBS with SDK bindings for C#, Python, C++, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+        "a": "Yes. Rhino 3D exposes RhinoCommon (.NET), Rhino.Python (Python 3), C/C++ SDK, and the open-source openNURBS toolkit (for reading/writing 3DM files externally). Rhino.Inside also allows embedding Rhino and Grasshopper inside host applications such as Autodesk Revit on Windows."
       }
     ],
     "tech_specs": {
       "engine": "McNeel Proprietary NURBS Kernel (openNURBS I/O)",
-      "multicore": "Single-Core NURBS Modeling / Multi-Core Raytracing & Grasshopper",
-      "gpu_optimization": "OpenGL",
+      "multicore": "Single-Threaded Core Modeling / Multi-Threaded Cycles & Select Grasshopper Components",
+      "gpu_optimization": "Windows: OpenGL / macOS: Metal Display Pipeline",
       "standards": [
         "3DM",
         "STEP",
         "IGES",
-        "OBJ"
+        "DWG/DXF"
       ]
     },
-    "expert_verdict": "If your designs involve complex curves or algorithmic logic, Rhino is the undisputed king.",
+    "expert_verdict": "A premier mathematical NURBS and computational design platform with fair perpetual licensing.",
     "version": "8.27",
     "last_updated": "2026-08-03",
     "free_trial_days": 90,
@@ -962,44 +960,52 @@ export const c2Tools: Tool[] = [
       "3DM",
       "STEP",
       "IGES",
-      "SAT",
-      "STL",
       "DWG",
       "DXF",
+      "STL",
       "OBJ",
       "FBX",
       "3DS",
+      "SKP",
+      "SLDPRT",
       "AI",
       "PDF",
-      "SKP",
-      "X_T",
-      "X_B"
+      "PLY",
+      "3MF",
+      "GLTF",
+      "GLB",
+      "E57"
     ],
     "file_formats_out": [
       "3DM",
       "STEP",
       "IGES",
+      "SAT",
+      "X_T",
       "STL",
       "DWG",
       "DXF",
       "OBJ",
       "FBX",
       "3DS",
+      "USD",
+      "USDZ",
+      "GLTF",
+      "GLB",
+      "3MF",
       "PDF",
       "AI",
       "KMZ",
-      "GLB",
-      "USDZ",
-      "X_T"
+      "PLY"
     ],
     "integrations": [
-      "Grasshopper",
+      "Grasshopper (Built-in)",
+      "Rhino.Inside.Revit (Windows Add-on)",
+      "Food4Rhino Plugin Ecosystem",
       "V-Ray",
       "Enscape",
       "KeyShot",
       "Twinmotion",
-      "Lumion",
-      "Revit (Rhino.Inside)",
       "Unreal Engine",
       "Unity"
     ],
@@ -1008,13 +1014,17 @@ export const c2Tools: Tool[] = [
     ],
     "license_types": [
       "Perpetual",
+      "Network",
       "Educational"
     ],
     "support_channels": [
       "Email",
+      "Chat",
+      "Phone",
       "Community",
       "Documentation",
-      "Training"
+      "Training",
+      "Reseller Network"
     ],
     "security_compliance": [
       "GDPR"
@@ -1022,7 +1032,7 @@ export const c2Tools: Tool[] = [
     "api_sdk": {
       "has_api": true,
       "has_sdk": true,
-      "api_type": "RhinoCommon / openNURBS",
+      "api_type": "RhinoCommon / Python 3 / C++ SDK / openNURBS",
       "sdk_languages": [
         "C#",
         "Python",
@@ -1419,18 +1429,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The best free, fully open-source alternative to commercial parametric CAD like SolidWorks.",
-    "pricing_breakdown": [
-      {
-        "tier": "Community",
-        "price": "$0",
-        "notes": "Open Source (LGPL)"
-      },
-      {
-        "tier": "Contribution",
-        "price": "Donate",
-        "notes": "Support community developers"
-      }
-    ],
     "key_capabilities": [
       "Open-source Parametric 3D Modeling",
       "BIM/AEC Workbenches",
@@ -2727,7 +2725,7 @@ export const c2Tools: Tool[] = [
       "Offline mobility"
     ],
     "cons": [
-      "Subscription only",
+      "Commercial tiers are subscription-only (no perpetual buyout)",
       "Assembly maturing",
       "Pencil req for iPad"
     ],
@@ -4314,7 +4312,7 @@ export const c2Tools: Tool[] = [
         "features": [
           "Full Parasolid NURBS toolset",
           "Perpetual license (1 yr updates)",
-          "Revenue under $100k"
+          "Revenue under official regional ratek"
         ],
         "is_popular": true
       },
@@ -4382,7 +4380,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "MoI / SMLib",
       "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "OpenGL",
+      "gpu_optimization": "Windows: Direct3D 11 / macOS: Metal & OpenGL Viewport",
       "standards": [
         "STEP",
         "IGES",
@@ -5241,18 +5239,6 @@ export const c2Tools: Tool[] = [
       "has_api": false,
       "has_sdk": false
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Perpetual License",
-        "price": "$3,150+",
-        "notes": "One-time purchase with annual maintenance options"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free",
-        "notes": "Free for verified students and teachers"
-      }
-    ],
     "key_capabilities": [
       "3D Parametric Modeling",
       "Solid/Surface/Sheet Metal Design",
@@ -5522,18 +5508,6 @@ export const c2Tools: Tool[] = [
       "has_api": false,
       "has_sdk": false
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Free",
-        "price": "$0",
-        "notes": "Free version with full 3D CAD capabilities"
-      },
-      {
-        "tier": "Professional",
-        "price": "Contact Sales",
-        "notes": "Professional version with advanced features and support"
-      }
-    ],
     "key_capabilities": [
       "3D Modeling",
       "Assembly Design",
@@ -5884,23 +5858,6 @@ export const c2Tools: Tool[] = [
       ],
       "docs_url": "https://www.3ds.com/developers"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Standard Role",
-        "price": "~$5,000/year",
-        "notes": "Entry-level 3D design and collaboration"
-      },
-      {
-        "tier": "Professional Role",
-        "price": "~$8,000–$12,000/year",
-        "notes": "Advanced simulation and manufacturing"
-      },
-      {
-        "tier": "Enterprise",
-        "price": "Custom",
-        "notes": "Full platform with dedicated cloud infrastructure"
-      }
-    ],
     "key_capabilities": [
       "Cloud-Native Design",
       "Virtual Twin Technology",

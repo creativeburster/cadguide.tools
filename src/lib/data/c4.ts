@@ -754,7 +754,7 @@ export const c4Tools: Tool[] = [
     "cons": [
       "Cloud credits dependency",
       "Limited manual editing",
-      "Subscription only"
+      "Subscription-only licensing (no perpetual buyout)"
     ],
     "faqs": [
       {

@@ -154,28 +154,6 @@ export const c3Tools: Tool[] = [
     "version": "2027",
     "last_updated": "2026-09-17",
     "free_trial_days": 30,
-    "pricing_breakdown": [
-      {
-        "tier": "Monthly",
-        "price": "$380/mo",
-        "notes": "Flexible monthly BIM access"
-      },
-      {
-        "tier": "Annual",
-        "price": "$3,005/yr",
-        "notes": "Professional BIM standard (most popular)"
-      },
-      {
-        "tier": "3-Year",
-        "price": "$9,015/3yr",
-        "notes": "Multi-year price lock ($3,005/yr)"
-      },
-      {
-        "tier": "AEC Collection",
-        "price": "$3,560/yr",
-        "notes": "Bundle with AutoCAD, Civil 3D, Navisworks, etc."
-      }
-    ],
     "key_capabilities": [
       "Parametric 3D BIM Modeling",
       "Automated Construction Documentation",
@@ -1324,7 +1302,7 @@ export const c3Tools: Tool[] = [
         "period": "/yr",
         "features": [
           "Everything in Monthly",
-          "Billed annually ($127.50/mo)",
+          "Billed annually (official regional rate)",
           "VW Partner products discounts",
           "Free updates during term"
         ],
@@ -4814,18 +4792,6 @@ export const c3Tools: Tool[] = [
       ],
       "docs_url": "https://www.allplan.com/support/"
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Planbar Standard",
-        "price": "Contact Sales",
-        "notes": "Perpetual license for precast concrete design"
-      },
-      {
-        "tier": "Planbar Advanced",
-        "price": "Contact Sales",
-        "notes": "Advanced automation and BIM integration"
-      }
-    ],
     "key_capabilities": [
       "Precast Design",
       "BIM Integration",

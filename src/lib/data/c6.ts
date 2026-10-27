@@ -338,7 +338,7 @@ export const c6Tools: Tool[] = [
       "Cross-platform"
     ],
     "cons": [
-      "Subscription only",
+      "Subscription-only licensing (no perpetual buyout)",
       "Interface quirky",
       "Replaced by Fusion Electronics"
     ],
@@ -371,7 +371,7 @@ export const c6Tools: Tool[] = [
     "tech_specs": {
       "engine": "EAGLE Core",
       "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
+      "gpu_optimization": "OpenGL 2D/3D PCB Canvas Acceleration",
       "standards": [
         "Gerber",
         "STEP",
@@ -838,23 +838,6 @@ export const c6Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "Electric P8 Subscription",
-        "price": "~$3,000–$4,500/year",
-        "notes": "Annual subscription with updates, support, and EPLAN Data Portal access"
-      },
-      {
-        "tier": "Enterprise & Pro Panel",
-        "price": "Custom Quote",
-        "notes": "Advanced 3D panel layout, fluid engineering, and ERP/PDM integration"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special pricing for verified educational institutions"
-      }
-    ],
     "key_capabilities": [
       "Automated Schematic Design",
       "EPLAN Data Portal",
@@ -1372,23 +1355,6 @@ export const c6Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "OrCAD X Standard",
-        "price": "$2,500+/year",
-        "notes": "Annual subscription with basic PCB design capabilities"
-      },
-      {
-        "tier": "OrCAD X Premium",
-        "price": "$5,000+/year",
-        "notes": "Annual subscription with advanced simulation and analysis"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special pricing for students and institutions"
-      }
-    ],
     "key_capabilities": [
       "PSpice Simulation",
       "Schematic Capture",
@@ -1712,23 +1678,6 @@ export const c6Tools: Tool[] = [
       "has_api": true,
       "has_sdk": true
     },
-    "pricing_breakdown": [
-      {
-        "tier": "PADS Professional Base",
-        "price": "$8,000+/year",
-        "notes": "Annual subscription with advanced PCB layout and basic simulation"
-      },
-      {
-        "tier": "PADS Professional Suite",
-        "price": "$12,000+/year",
-        "notes": "Comprehensive high-speed, signal/thermal analysis and RF capabilities"
-      },
-      {
-        "tier": "Educational",
-        "price": "Free/Discounted",
-        "notes": "Special academic licensing for students and universities"
-      }
-    ],
     "key_capabilities": [
       "Schematic Capture",
       "PCB Layout",
