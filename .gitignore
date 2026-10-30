@@ -51,3 +51,8 @@ scratch/
 # mkdocs build output
 /site/
 
+
+# never track one-off automation scripts at repo root (may contain credentials)
+/*.py
+/*.txt
+/register_*.png

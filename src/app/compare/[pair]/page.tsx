@@ -429,10 +429,10 @@ const ROWS: RowSpec[] = [
   {
     label: 'Free trial',
     render: (t) =>
-      t.free_trial_days && t.free_trial_days > 0
-        ? `${t.free_trial_days} days`
-        : t.pricing_type === 'Free' || t.pricing_type === 'Open Source'
-          ? 'Always free'
+      t.pricing_type === 'Free' || t.pricing_type === 'Open Source'
+        ? 'Always free'
+        : t.trial_url
+          ? 'Yes — see official site'
           : '—',
   },
   {

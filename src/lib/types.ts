@@ -76,8 +76,13 @@ export interface Tool {
   // sections (Compatibility, Trust & Support) and richer sidebar badges.
   // Tools without them fall back gracefully to the original layout.
 
-  /** Latest stable version / release name (e.g. "2026", "v9.5"). */
-  version?: string;
+  /**
+   * DO NOT RE-ADD: `version` and `free_trial_days` were removed on purpose.
+   * Volatile vendor-controlled facts (version numbers, prices, trial lengths,
+   * regional availability) must never be hard-coded into tool data — the site
+   * links to the vendor's official pricing / trial / download page instead so
+   * the information never goes stale.
+   */
   /** ISO yyyy-mm-dd date when this listing was last hand-verified. */
   last_updated?: string;
   /** True when the vendor has end-of-lifed / stopped selling the product. */
@@ -86,8 +91,6 @@ export interface Tool {
   discontinued_note?: string;
   /** True when the product is commercial but has no public list price (contact vendor for a quote). */
   quote_only?: boolean;
-  /** Free trial duration in days, or 0 for "no trial". */
-  free_trial_days?: number;
 
   /** Interface / documentation languages supported. */
   languages?: string[];

@@ -563,7 +563,7 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return 'Up to 10% on 3-Year';
                 }
                 if (key === 'offline_grace') {
-                  return t.free_trial_days ? `${t.free_trial_days} Days` : '30 Days grace';
+                  return 'See official trial page';
                 }
                 if (key === 'admin_control') {
                   return t.score > 4.5 ? 'SSO / SAML Hub' : 'Simple license pool';

@@ -53,7 +53,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does MatrixGold cost?",
-        "a": "MatrixGold is licensed on a Perpetual model. Available editions include Perpetual License, Annual Maintenance. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MatrixGold is licensed on a Perpetual model. Available editions include Perpetual License, Annual Maintenance. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MatrixGold Pricing Page](https://www.gemvision.com/matrixgold) for live pricing."
       },
       {
         "q": "Is there a free version of MatrixGold?",
@@ -85,7 +85,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual License",
-        "price": "7,900",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Parametric Jewelry Design",
@@ -97,7 +97,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Annual Maintenance",
-        "price": "1,200",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Software updates & patches",
@@ -119,7 +119,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-01-19",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "3DM",
@@ -196,7 +195,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA Marine cost?",
-        "a": "AVEVA Marine is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AVEVA Marine is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AVEVA Marine Pricing Page](https://www.aveva.com/en/products/hull-and-outfitting/) for live pricing."
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
@@ -227,7 +226,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "The undisputed king of heavy-duty maritime engineering.",
     "last_updated": "2026-08-03",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -311,7 +309,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$15,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Hull Design",
@@ -321,7 +319,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$21,750",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Hull Design",
@@ -397,7 +395,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CLO 3D cost?",
-        "a": "CLO 3D is licensed on a Subscription model. Available editions include Individual, Business. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CLO 3D is licensed on a Subscription model. Available editions include Individual, Business. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CLO 3D Pricing Page](https://www.clo3d.com) for live pricing."
       },
       {
         "q": "Is there a free version of CLO 3D?",
@@ -430,7 +428,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Individual",
-        "price": "50",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Full 3D Design",
@@ -468,7 +466,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-08-03",
-    "version": "2024",
     "file_formats_in": [
       "DXF-AAMA",
       "DXF-ASTM",
@@ -504,7 +501,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "260",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Conceptual Design",
@@ -516,7 +513,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "2,075",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Advanced Bridge design",
@@ -616,7 +613,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Infraworks cost?",
-        "a": "Infraworks is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Infraworks is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Infraworks Pricing Page](https://www.autodesk.com/products/infraworks/overview) for live pricing."
       },
       {
         "q": "Is there a free version of Infraworks?",
@@ -643,7 +640,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
     "last_updated": "2026-09-02",
-    "version": "2027",
     "file_formats_in": [
       "IMX",
       "Civil 3D (DWG)",
@@ -681,7 +677,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "260",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "High-end Rendering",
@@ -693,7 +689,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "2,010",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Retopology tools",
@@ -795,7 +791,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does 3ds Max cost?",
-        "a": "3ds Max is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "3ds Max is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official 3ds Max Pricing Page](https://www.autodesk.com/products/3ds-max/subscribe) for live pricing."
       },
       {
         "q": "Is there a free version of 3ds Max?",
@@ -822,7 +818,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
     "last_updated": "2026-09-02",
-    "version": "2027",
     "file_formats_in": [
       "MAX",
       "FBX",
@@ -869,7 +864,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "49",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Industry Standard Sculpt",
@@ -881,7 +876,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "399",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full license access",
@@ -982,7 +977,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does ZBrush cost?",
-        "a": "ZBrush is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ZBrush is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ZBrush Pricing Page](https://www.maxon.net/en/buy) for live pricing."
       },
       {
         "q": "Is there a free version of ZBrush?",
@@ -1009,7 +1004,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
     "last_updated": "2026-09-17",
-    "version": "2024",
     "file_formats_in": [
       "ZTL",
       "ZPR",
@@ -1044,7 +1038,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Pro (Annual)",
-        "price": "1,299",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Real-time Ray Tracing",
@@ -1145,7 +1139,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does KeyShot cost?",
-        "a": "KeyShot is licensed on a Subscription model. Available editions include Pro (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "KeyShot is licensed on a Subscription model. Available editions include Pro (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official KeyShot Pricing Page](https://www.keyshot.com/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of KeyShot?",
@@ -1172,7 +1166,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
     "last_updated": "2026-09-02",
-    "version": "2026",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1219,7 +1212,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Pro",
-        "price": "1,149",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full Object Library",
@@ -1231,7 +1224,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Studio",
-        "price": "1,499",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "All Pro features",
@@ -1331,7 +1324,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Lumion cost?",
-        "a": "Lumion is licensed on a Subscription model. Available editions include Pro, Studio. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Lumion is licensed on a Subscription model. Available editions include Pro, Studio. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Lumion Pricing Page](https://lumion.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Lumion?",
@@ -1358,7 +1351,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
     "last_updated": "2026-09-02",
-    "version": "2026",
     "file_formats_in": [
       "DAE",
       "SKP",
@@ -1395,7 +1387,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Floating License",
-        "price": "922",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Multi-machine use",
@@ -1407,7 +1399,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Solo (Fixed Seat)",
-        "price": "575",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Single machine",
@@ -1508,7 +1500,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Enscape cost?",
-        "a": "Enscape is licensed on a Subscription model. Available editions include Floating License, Solo (Fixed Seat). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Enscape is licensed on a Subscription model. Available editions include Floating License, Solo (Fixed Seat). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Enscape Pricing Page](https://enscape3d.com/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of Enscape?",
@@ -1535,7 +1527,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
     "last_updated": "2026-09-02",
-    "version": "4.11",
     "file_formats_in": [
       "Revit",
       "SketchUp",
@@ -1569,7 +1560,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free (Low Revenue)",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Full Engine Power",
@@ -1581,7 +1572,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Commercial Subscription",
-        "price": "445",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Cloud sharing",
@@ -1682,7 +1673,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Twinmotion cost?",
-        "a": "Twinmotion is licensed on a Subscription model. Available editions include Free (Low Revenue), Commercial Subscription. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Twinmotion is licensed on a Subscription model. Available editions include Free (Low Revenue), Commercial Subscription. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Twinmotion Pricing Page](https://www.twinmotion.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Twinmotion?",
@@ -1709,7 +1700,6 @@ export const c7Tools: Tool[] = [
     },
     "expert_verdict": "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
     "last_updated": "2026-09-02",
-    "version": "2026",
     "file_formats_in": [
       "FBX",
       "SKP",
@@ -1900,7 +1890,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-08-03",
-    "version": "5.13",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -1915,7 +1904,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source Edition",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "400+ printer profiles",
@@ -2091,7 +2080,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2025-11-10",
-    "version": "2.9.0",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -2108,7 +2096,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Organic tree supports",
@@ -2284,7 +2272,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-03-18",
-    "version": "2024",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -2299,7 +2286,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source Community",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Multi-color AMS painting",
@@ -2378,7 +2365,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Simplify3D cost?",
-        "a": "Simplify3D is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Simplify3D is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Simplify3D Pricing Page](https://www.simplify3d.com/buy-now/) for live pricing."
       },
       {
         "q": "Is there a free version of Simplify3D?",
@@ -2474,7 +2461,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2025-09-30",
-    "version": "5.2",
     "file_formats_in": [
       "STL",
       "OBJ",
@@ -2488,7 +2474,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$199",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Per-process slicing with stop-points",
@@ -2498,7 +2484,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$289",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Per-process slicing with stop-points",
@@ -2586,7 +2572,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Netfabb cost?",
-        "a": "Autodesk Netfabb is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Autodesk Netfabb is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Autodesk Netfabb Pricing Page](https://www.autodesk.com/products/netfabb/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
@@ -2682,7 +2668,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2023-09-03",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2703,7 +2688,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$4,070",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Build-plate packing optimisation",
@@ -2713,7 +2698,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$5,902",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Build-plate packing optimisation",
@@ -2804,7 +2789,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Marvelous Designer cost?",
-        "a": "Marvelous Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Marvelous Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricings) for live pricing."
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
@@ -2899,7 +2884,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2023-04-02",
-    "version": "2024",
     "file_formats_in": [
       "OBJ",
       "FBX",
@@ -2918,7 +2902,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$480",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Pattern-based 3D garment creation",
@@ -2928,7 +2912,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$696",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Pattern-based 3D garment creation",
@@ -3017,7 +3001,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does D5 Render cost?",
-        "a": "D5 Render offers a free tier alongside paid commercial plans (Freemium). Available plans include Community, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official D5 Render pricing page for live regional pricing."
+        "a": "D5 Render offers a free tier alongside paid commercial plans (Freemium). Available plans include Community, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official D5 Render Pricing Page](https://www.d5render.com/pricing) for live regional pricing."
       },
       {
         "q": "Is there a free version of D5 Render?",
@@ -3113,7 +3097,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-20",
-    "version": "2024",
     "file_formats_in": [
       "SKP",
       "FBX",
@@ -3139,7 +3122,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Core real-time rendering",
@@ -3150,7 +3133,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Pro",
-        "price": "360",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full 10,000+ asset library",
@@ -3230,7 +3213,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does V-Ray cost?",
-        "a": "V-Ray is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "V-Ray is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official V-Ray Pricing Page](https://www.chaos.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of V-Ray?",
@@ -3326,7 +3309,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-20",
-    "version": "7",
     "file_formats_in": [
       "3ds Max",
       "Maya",
@@ -3349,7 +3331,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Solo",
-        "price": "540",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Node-locked license",
@@ -3360,7 +3342,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Premium",
-        "price": "778.80",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Floating license",
@@ -3437,7 +3419,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Corona Renderer cost?",
-        "a": "Corona Renderer is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Corona Renderer is licensed on a Subscription model. Available editions include Solo, Premium. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Corona Renderer Pricing Page](https://www.chaos.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Corona Renderer?",
@@ -3533,7 +3515,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-20",
-    "version": "13",
     "file_formats_in": [
       "3ds Max",
       "Cinema 4D",
@@ -3550,7 +3531,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Solo",
-        "price": "395",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "1 fixed workstation",
@@ -3561,7 +3542,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Premium",
-        "price": "590",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Floating license",
@@ -3642,7 +3623,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Adobe Substance 3D Painter cost?",
-        "a": "Adobe Substance 3D Painter is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Adobe Substance 3D Painter is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Adobe Substance 3D Painter Pricing Page](https://www.adobe.com/creativecloud/3d-ar/plans.html) for live pricing."
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
@@ -3738,7 +3719,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-02-22",
-    "version": "2024",
     "file_formats_in": [
       "FBX",
       "OBJ",
@@ -3759,7 +3739,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$240",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Non-destructive PBR layer stack",
@@ -3769,7 +3749,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$348",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Non-destructive PBR layer stack",
@@ -3856,7 +3836,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Carlson Survey cost?",
-        "a": "Carlson Survey is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Carlson Survey is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Carlson Survey Pricing Page](https://www.carlsonsw.com/products/survey/) for live pricing."
       },
       {
         "q": "Is there a free version of Carlson Survey?",
@@ -3952,7 +3932,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-08-02",
-    "version": "2024",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -3974,7 +3953,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$1,995",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "AutoCAD or embedded IntelliCAD",
@@ -3984,7 +3963,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$2,893",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "AutoCAD or embedded IntelliCAD",
@@ -4074,7 +4053,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Trimble Business Center cost?",
-        "a": "Trimble Business Center is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Trimble Business Center is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Trimble Business Center Pricing Page](https://geospatial.trimble.com/en/products/software/trimble-business-center) for live pricing."
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
@@ -4170,7 +4149,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-06-07",
-    "version": "2024",
     "file_formats_in": [
       "VCE",
       "DWG",
@@ -4192,7 +4170,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,400",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "GNSS baseline processing",
@@ -4202,7 +4180,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,480",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "GNSS baseline processing",
@@ -4235,7 +4213,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "E3D Design Standard",
-        "price": "$8,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Basic 3D modeling",
@@ -4247,7 +4225,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "E3D Design Enterprise",
-        "price": "$15,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Full 3D plant design",
@@ -4424,7 +4402,6 @@ export const c7Tools: Tool[] = [
       "Enterprise-focused pricing"
     ],
     "last_updated": "2026-09-20",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Chinese",
@@ -4500,7 +4477,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA E3D Design cost?",
-        "a": "AVEVA E3D Design is licensed on a Subscription model. Available editions include E3D Design Standard, E3D Design Enterprise, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AVEVA E3D Design is licensed on a Subscription model. Available editions include E3D Design Standard, E3D Design Enterprise, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AVEVA E3D Design Pricing Page](https://www.aveva.com/en/products/e3d-design/) for live pricing."
       },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
@@ -4530,8 +4507,7 @@ export const c7Tools: Tool[] = [
         "ASME"
       ]
     },
-    "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
-    "version": "3.1"
+    "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts."
   },
   {
     "id": "t133",
@@ -4543,7 +4519,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -4667,7 +4643,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Maptek Vulcan cost?",
-        "a": "Maptek Vulcan is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Maptek Vulcan is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Maptek Vulcan Pricing Page](https://www.maptek.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
@@ -4692,7 +4668,6 @@ export const c7Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -4723,7 +4698,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -4846,7 +4821,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CET Designer cost?",
-        "a": "CET Designer offers a free tier alongside paid commercial plans (Freemium). Available plans include Perpetual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CET Designer pricing page for live regional pricing."
+        "a": "CET Designer offers a free tier alongside paid commercial plans (Freemium). Available plans include Perpetual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official CET Designer Pricing Page](https://www.configura.com/) for live regional pricing."
       },
       {
         "q": "Is there a free version of CET Designer?",
@@ -4871,7 +4846,6 @@ export const c7Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
     "last_updated": "2026-09-02",
     "quote_only": true,
@@ -4903,7 +4877,6 @@ export const c7Tools: Tool[] = [
     "pricing_type": "Subscription",
     "starting_price": 0,
     "quote_only": true,
-    "free_trial_days": 30,
     "platforms": [
       "Web",
       "Cloud"
@@ -5060,7 +5033,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "version": "Cloud SaaS",
     "last_updated": "2026-09-11",
     "file_formats_in": [
       "CSV",
@@ -5174,7 +5146,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does pic2CAD cost?",
-        "a": "pic2CAD offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Creator, Studios. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official pic2CAD pricing page for live regional pricing."
+        "a": "pic2CAD offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Creator, Studios. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official pic2CAD Pricing Page](https://pic2cad.ai) for live regional pricing."
       },
       {
         "q": "Is there a free version of pic2CAD?",
@@ -5196,7 +5168,7 @@ export const c7Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "€0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "3 drawings per month",
@@ -5207,7 +5179,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "name": "Creator",
-        "price": "€8",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "30 drawings per month",

@@ -13,8 +13,8 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "SOLIDWORKS Standard",
-        "price": "2,820",
-        "period": "/yr",
+        "price": "Official Store",
+        "period": "Subscription / Perpetual",
         "features": [
           "3D Parametric Part & Assembly Modeling + 2D Drawings",
           "Sheet Metal, Weldments, Surfacing & Mold Tools",
@@ -25,8 +25,8 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "SOLIDWORKS Professional & Premium",
-        "price": "Custom Quote",
-        "period": "/yr",
+        "price": "Official Store",
+        "period": "Subscription / Perpetual",
         "features": [
           "Toolbox Standard Parts Library, Visualize & PDM Standard (Professional)",
           "Linear Static FEA Stress Analysis & Motion Analysis (Premium)",
@@ -36,14 +36,13 @@ export const c2Tools: Tool[] = [
         "is_popular": false
       },
       {
-        "name": "Perpetual License (via Reseller)",
-        "price": "Custom Quote",
-        "period": "one-time",
+        "name": "Maker / Student / Enterprise",
+        "price": "Official Store",
+        "period": "Subscription / SNL Floating",
         "features": [
-          "Perpetual license purchased through authorized VAR channel",
-          "Cloud Services, version upgrades & support included with active Subscription Service",
-          "Perpetual core software continues to run if maintenance is not renewed",
-          "Standalone or SolidNetWork License (SNL) floating options"
+          "3DEXPERIENCE SOLIDWORKS for Makers & Student Editions",
+          "SolidNetWork License (SNL) multi-user floating via authorized VARs",
+          "Cloud Services, version upgrades & support included with active Subscription Service"
         ],
         "is_popular": false
       }
@@ -123,7 +122,7 @@ export const c2Tools: Tool[] = [
       "Startups & Makers"
     ],
     "official_url": "https://www.solidworks.com",
-    "pricing_url": "https://www.solidworks.com/how-to-buy",
+    "pricing_url": "https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing",
     "trial_url": "https://my.solidworks.com/try-solidworks",
     "price_tier": "mid",
     "affiliate_url": null,
@@ -145,15 +144,15 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SOLIDWORKS is licensed via annual/quarterly Term Subscriptions as well as Perpetual licenses (with optional annual Subscription Service for upgrades, support, and Cloud Services) through Dassault Systèmes and authorized Value-Added Resellers (VARs). Available editions include Standard, Professional, and Premium, plus specialized Maker and Student plans. Click the Official Live Pricing button on this page to verify real-time regional pricing directly on the official SOLIDWORKS portal."
+        "a": "SOLIDWORKS is licensed via annual/quarterly Term Subscriptions as well as Perpetual licenses (with optional annual Subscription Service for upgrades, support, and Cloud Services) through Dassault Systèmes and authorized Value-Added Resellers (VARs). Available editions include Standard, Professional, and Premium, plus specialized Maker and Student plans. Because official seat rates, multi-currency pricing, and authorized reseller quotes vary by country, please visit the [Official SOLIDWORKS Plans & Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing) for live regional pricing."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
-        "a": "Yes — Dassault Systèmes provides an instant browser-based SOLIDWORKS online product trial as well as a full 7-day evaluation license available on request through authorized resellers. Visit the Official Free Trial link on this page to start an evaluation directly on the vendor portal."
+        "a": "Yes — Dassault Systèmes provides an official browser-based SOLIDWORKS online product trial as well as desktop evaluation access through authorized resellers. Because trial duration and eligibility rules vary by region, visit the [Official SOLIDWORKS Free Trial Portal](https://my.solidworks.com/try-solidworks) to start an evaluation directly on the vendor portal."
       },
       {
         "q": "What operating systems does SolidWorks support?",
-        "a": "SOLIDWORKS Design is installed and runs locally on 64-bit Windows (Windows 10 / Windows 11), with connected 3DEXPERIENCE Cloud Services for cloud storage, sharing, and markups. For browser-based cloud-native modeling on macOS or tablets, Dassault Systèmes offers separate 3DEXPERIENCE xDesign roles."
+        "a": "SOLIDWORKS Design is installed and runs locally on 64-bit Windows, with connected 3DEXPERIENCE Cloud Services for cloud storage, sharing, and markups. For browser-based cloud-native modeling on macOS or tablets, Dassault Systèmes offers separate 3DEXPERIENCE xDesign roles."
       },
       {
         "q": "Which file formats does SolidWorks support?",
@@ -176,9 +175,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A benchmark 3D parametric mechanical CAD platform backed by a deep manufacturing and PDM ecosystem.",
-    "version": "2026",
-    "last_updated": "2026-09-20",
-    "free_trial_days": 7,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -283,34 +280,34 @@ export const c2Tools: Tool[] = [
     "description": "SketchUp by Trimble is an intuitive direct-modeling 3D architectural and interior design platform renowned for its patented Push/Pull surface extrusion workflow. Backed by the 3D Warehouse component library, LayOut 2D construction documentation, V-Ray/Enscape rendering links, and IFC openBIM export, it bridges rapid concept massing and detailed design.",
     "pricing_tiers": [
       {
-        "name": "Go",
-        "price": "129",
-        "period": "/yr",
+        "name": "SketchUp Go",
+        "price": "Official Store",
+        "period": "Annual / Monthly Subscription",
         "features": [
-          "Web Modeler",
-          "iPad support",
-          "Unlimited cloud storage"
+          "SketchUp for iPad & SketchUp for Web modelers",
+          "Unlimited Trimble Connect cloud storage",
+          "Pre-built 3D Warehouse component library access"
         ]
       },
       {
-        "name": "Pro",
-        "price": "399",
-        "period": "/yr",
+        "name": "SketchUp Pro",
+        "price": "Official Store",
+        "period": "Annual Subscription",
         "features": [
-          "Desktop Modeler",
-          "LayOut 2D",
-          "Style Builder"
+          "Full Desktop 3D Modeler (Windows & macOS) + Go features",
+          "LayOut 2D construction documentation & Extension Warehouse",
+          "XR headset viewing & interoperability (DWG/DXF/IFC)"
         ],
         "is_popular": true
       },
       {
-        "name": "Studio",
-        "price": "819",
-        "period": "/yr",
+        "name": "SketchUp Studio (Windows-Only Add-ons)",
+        "price": "Official Store",
+        "period": "Annual Subscription",
         "features": [
-          "V-Ray Rendering",
-          "Scan Data import",
-          "Revit Importer"
+          "All SketchUp Pro capabilities",
+          "V-Ray for SketchUp photorealistic rendering (Windows)",
+          "Scan Essentials point-cloud modeling & native Revit Importer (Windows)"
         ]
       }
     ],
@@ -319,15 +316,15 @@ export const c2Tools: Tool[] = [
         "category": "Features",
         "items": [
           {
-            "name": "V-Ray Integration (Studio Tier)",
+            "name": "V-Ray Integration (Studio Tier, Windows)",
             "status": true
           },
           {
-            "name": "Point Cloud Modeling (Scan Essentials)",
+            "name": "Point Cloud Modeling (Scan Essentials, Windows)",
             "status": true
           },
           {
-            "name": "Direct Revit File Import",
+            "name": "Direct Revit File Import (Studio Tier, Windows)",
             "status": true
           },
           {
@@ -379,13 +376,13 @@ export const c2Tools: Tool[] = [
     "score": 4.7,
     "pros": [
       "Low learning curve",
-      "Millions of models",
-      "Great rendering support"
+      "Millions of models in 3D Warehouse",
+      "Great rendering & plugin ecosystem"
     ],
     "cons": [
       "Large scene slowdown",
-      "Weak curves",
-      "Sluggish documentation"
+      "Studio tier add-ons (V-Ray, Scan Essentials, Revit Importer) are Windows-only",
+      "LayOut 2D documentation can lag on heavy vector sheets"
     ],
     "faqs": [
       {
@@ -394,15 +391,15 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SketchUp cost?",
-        "a": "SketchUp offers a free tier alongside paid commercial plans (Freemium). Available plans include Go, Pro, Studio. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official SketchUp pricing page for live regional pricing."
+        "a": "SketchUp offers a free web tier alongside paid commercial subscriptions (SketchUp Go, SketchUp Pro, and SketchUp Studio) as well as Education and Higher-Ed plans. Because commercial licensing rates, regional currencies, taxes, and reseller quotes vary by country, please visit the [Official SketchUp Plans & Pricing Page](https://www.sketchup.com/plans-and-pricing) for live regional pricing."
       },
       {
         "q": "Does SketchUp offer a free trial?",
-        "a": "Yes — SketchUp offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Trimble provides an official SketchUp evaluation so designers can test desktop, web, and iPad modeling workflows before subscribing. Because trial duration and eligibility rules are updated periodically by the vendor, visit the [Official SketchUp Free Trial Page](https://www.sketchup.com/try) for current trial details."
       },
       {
         "q": "What operating systems does SketchUp support?",
-        "a": "SketchUp Pro desktop runs natively on Windows and macOS, while SketchUp for Web runs in modern desktop browsers and SketchUp for iPad runs natively on iPadOS. Companion viewer apps are also available for iOS and Android."
+        "a": "SketchUp Pro desktop runs natively on Windows and macOS, while SketchUp for Web runs in modern desktop browsers and SketchUp for iPad runs natively on iPadOS. Note that SketchUp Studio's bundled installers (Revit Importer, Scan Essentials, and V-Ray for SketchUp) are supported on Windows only."
       },
       {
         "q": "Which file formats does SketchUp support?",
@@ -416,7 +413,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "Trimble Proprietary",
       "multicore": "Single-Core Direct Modeling / GPU Viewport Acceleration",
-      "gpu_optimization": "Windows: DirectX 12 / macOS: Metal (SketchUp 2024+ Graphics Engine)",
+      "gpu_optimization": "Windows: DirectX 12 / macOS: Metal Graphics Engine",
       "standards": [
         "SKP",
         "DWG",
@@ -425,9 +422,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
-    "version": "2026",
-    "last_updated": "2026-09-20",
-    "free_trial_days": 30,
+    "last_updated": "2026-10-30",
     "key_capabilities": [
       "Intuitive 3D Concept Modeling",
       "2D Documentation with LayOut",
@@ -529,35 +524,45 @@ export const c2Tools: Tool[] = [
   },
   {
     "id": "t5",
-    "name": "Fusion 360",
+    "name": "Autodesk Fusion (Fusion 360)",
     "slug": "fusion-360",
     "logo_url": "/logos/fusion-360.svg",
-    "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, and CAE.",
+    "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, CAE, and PCB.",
     "description": "Autodesk Fusion (formerly Fusion 360) is a cloud-connected 3D CAD, CAM, CAE, and PCB platform built for agile product development and CNC manufacturing. It unifies parametric solid modeling, T-Spline freeform surfacing, sheet metal, multi-axis milling/turning toolpaths, Nastran FEA, and integrated electronics/PCB design (based on EAGLE technology) in a single collaborative workspace.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
-        "price": "85",
-        "period": "/mo",
+        "name": "Autodesk Fusion (Core Commercial)",
+        "price": "Official Store",
+        "period": "Monthly / Annual / 3-Year",
         "features": [
-          "3D Parametric, Direct, Surface & Mesh Modeling",
-          "Integrated CAM (2/2.5/3-axis, 3+2 positioning, turning & mill-turn)",
+          "3D Parametric, Direct, Freeform Surface & Mesh Modeling",
+          "Integrated CAM (2/2.5/3-axis, 3+2 positioning, turning & additive)",
           "Integrated Electronics & 16-Layer PCB Design",
           "Cloud Data Management & Team Collaboration"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Fusion for Manufacturing / Fusion for Design",
+        "price": "Official Store",
+        "period": "Industry Bundles & Extensions",
+        "features": [
+          "Advanced 4/5-Axis Simultaneous Machining, Toolpath Optimization & Part Inspection (Manufacturing)",
+          "Advanced Simulation, Generative Design & Manage Extension (Design)",
+          "Flexible Autodesk Flex token access available for occasional module use"
         ],
         "is_popular": false
       },
       {
-        "name": "Annual",
-        "price": "680",
-        "period": "/yr",
+        "name": "Personal Use / Startup / Education",
+        "price": "Official Store",
+        "period": "Eligibility-Based Programs",
         "features": [
-          "All Commercial CAD, CAM, CAE & PCB capabilities",
-          "Annual billing cycle with discounted per-month rate (verify regional pricing on vendor portal)",
-          "4/5-Axis Simultaneous & Simulation Extensions available",
-          "Free Personal Use & Startup tiers available for eligible users"
+          "Free Personal Use tier for qualifying non-commercial hobbyists",
+          "Startup program for eligible early-stage hardware companies",
+          "Free Educational access for verified students and educators"
         ],
-        "is_popular": true
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -659,11 +664,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Fusion 360 cost?",
-        "a": "Autodesk Fusion is licensed on a commercial Subscription model (available in Monthly, Annual, and 3-Year terms). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use tier for qualifying hobbyists, a Startup program, and free Educational access for students and faculty. Because official seat rates, taxes, and promotions vary by country and currency, click the Official Live Pricing link on this page to verify real-time regional pricing directly on the Autodesk portal."
+        "a": "Autodesk Fusion is licensed on a commercial Subscription model (available in Monthly, Annual, and 3-Year terms, plus Fusion for Manufacturing and Fusion for Design bundles). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use tier for qualifying hobbyists, a Startup program, and free Educational access for students and faculty. Because official seat rates, taxes, and promotions vary by country and currency, please visit the [Official Autodesk Fusion Subscribe Page](https://www.autodesk.com/products/fusion-360/subscribe) for live regional pricing."
       },
       {
         "q": "Does Fusion 360 offer a free trial?",
-        "a": "Yes — Fusion 360 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Autodesk provides an official evaluation program for commercial Autodesk Fusion, alongside free Personal Use and Educational editions. Because trial duration and eligibility rules are updated periodically by the vendor, visit the [Official Autodesk Fusion Free Trial Page](https://www.autodesk.com/products/fusion-360/free-trial) for current trial details."
       },
       {
         "q": "What operating systems does Fusion 360 support?",
@@ -690,9 +695,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Fusion 360 is the future of agile hardware design.",
-    "version": "Continuous (cloud)",
-    "last_updated": "2026-09-17",
-    "free_trial_days": 30,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "German",
@@ -788,8 +791,8 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Commercial Single-User License",
-        "price": "995",
-        "period": "one-time",
+        "price": "Official Store",
+        "period": "Perpetual Buyout",
         "features": [
           "Perpetual Single Concurrent User License (Cloud Zoo / LAN Zoo floating supported)",
           "Full NURBS, SubD & Mesh Modeling",
@@ -800,11 +803,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Upgrade from Any Previous Version",
-        "price": "595",
-        "period": "one-time",
+        "price": "Official Store",
+        "period": "Perpetual Upgrade",
         "features": [
           "Upgrade from any prior commercial Rhino version (V1–V7)",
-          "Full Rhino 8 feature set & ShrinkWrap",
+          "Full latest feature set, ShrinkWrap & multi-thread acceleration",
           "Metal display pipeline on macOS / OpenGL on Windows",
           "Includes free service releases & official McNeel support"
         ],
@@ -812,11 +815,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Educational & Lab License",
-        "price": "195",
-        "period": "one-time",
+        "price": "Official Store",
+        "period": "Perpetual (Verified Academic)",
         "features": [
           "For verified students, faculty & schools",
-          "Identical full functionality without watermarks",
+          "Identical full commercial functionality without watermarks",
           "Upgradable to commercial status later",
           "30-Seat Educational Lab kits available"
         ],
@@ -922,11 +925,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Rhino 3D cost?",
-        "a": "Rhino 3D is licensed on a Perpetual Single Concurrent User model with no mandatory subscription or annual maintenance fees. Available tiers include Commercial Single-User License, Upgrade from Any Previous Version (V1–V7), and Educational / Lab licenses. Because official pricing, regional currencies, taxes, and authorized reseller quotes vary by country, click the Official Live Pricing link on this page to verify real-time pricing directly on the McNeel regional sales portal."
+        "a": "Rhino 3D is licensed on a Perpetual Single Concurrent User model with no mandatory subscription or annual maintenance fees. Available tiers include Commercial Single-User License, Upgrade from Any Previous Version, and Educational / Lab licenses. Because official pricing, regional currencies, taxes, and authorized reseller quotes vary by country, please visit the [Official McNeel Sales & Pricing Portal](https://www.rhino3d.com/sales/) for live pricing."
       },
       {
         "q": "Does Rhino 3D offer a free trial?",
-        "a": "Yes — McNeel provides a full-featured Rhino evaluation version (traditionally 90 days) directly from the official download portal without requiring a credit card. Click the Official Free Trial button on this page to verify current evaluation terms."
+        "a": "Yes — McNeel provides a full-featured Rhino evaluation version directly from the official download portal without requiring a credit card. Visit the [Official Rhino Download Portal](https://www.rhino3d.com/download/) to verify current evaluation terms."
       },
       {
         "q": "What operating systems does Rhino 3D support?",
@@ -953,9 +956,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A premier mathematical NURBS and computational design platform with fair perpetual licensing.",
-    "version": "8.27",
-    "last_updated": "2026-08-03",
-    "free_trial_days": 90,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "Czech",
@@ -1066,23 +1067,23 @@ export const c2Tools: Tool[] = [
     "description": "CATIA by Dassault Systèmes is the flagship PLM and Class-A surface/solid engineering platform trusted by global aerospace, defense, automotive, and shipbuilders. Capable of managing digital mockups exceeding a million parts on the 3DEXPERIENCE platform, it unifies systems engineering, composites, aerodynamic surfacing, and kinematic multi-body assembly design.",
     "pricing_tiers": [
       {
-        "name": "3DEXPERIENCE Cloud",
-        "price": "2,700",
-        "period": "/yr",
+        "name": "3DEXPERIENCE Cloud (Role-Based)",
+        "price": "Official Store",
+        "period": "Annual / Quarterly Subscription",
         "features": [
-          "Social Collaboration",
-          "3D Dashboard",
+          "Social Collaboration & 3D Dashboard",
           "Base Part/Assembly Design",
-          "Version Control"
+          "Version Control & Cloud Data Management",
+          "Modular role pricing varies by country and reseller"
         ],
         "is_popular": true
       },
       {
-        "name": "Mechanical Engineer",
-        "price": "4,500",
-        "period": "/yr",
+        "name": "Mechanical Engineer / Industry Roles",
+        "price": "Official Store",
+        "period": "Annual Subscription",
         "features": [
-          "Advanced Surfacing",
+          "Advanced Surfacing (GSD)",
           "Sheet Metal Design",
           "Mechanism Simulation",
           "Standard Catalogs"
@@ -1090,13 +1091,14 @@ export const c2Tools: Tool[] = [
         "is_popular": false
       },
       {
-        "name": "Systems Engineer",
-        "price": "Custom",
-        "period": "quote",
+        "name": "Systems Engineer / Enterprise",
+        "price": "Official Store",
+        "period": "Quote via Reseller",
         "features": [
           "Model-based Systems (MBSE)",
           "Electric/Electronic Systems",
-          "Lifecycle Analysis"
+          "Lifecycle Analysis",
+          "On-premise & GovCloud deployment options"
         ],
         "is_popular": false
       }
@@ -1196,11 +1198,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CATIA cost?",
-        "a": "CATIA is licensed on a Subscription model. Available editions include 3DEXPERIENCE Cloud, Mechanical Engineer, Systems Engineer. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CATIA is licensed on a Subscription model (with legacy perpetual options for V5 via resellers). Available editions include 3DEXPERIENCE Cloud roles, Mechanical Engineer, Systems Engineer. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official 3DS CATIA Page](https://www.3ds.com/products/catia) for live regional pricing."
       },
       {
         "q": "Does CATIA offer a free trial?",
-        "a": "CATIA does not currently advertise a public time-boxed trial. The vendor typically arranges evaluation access on request through reseller partners."
+        "a": "Public trial access is limited and varies by program period — Dassault Systèmes periodically runs official trial programs (for example the CATIA for AEC trial) and student license programs, while standard evaluations are typically arranged through reseller partners. Check the [Official CATIA Portal](https://www.3ds.com/products/catia) for current trial availability."
       },
       {
         "q": "What operating systems does CATIA support?",
@@ -1227,9 +1229,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "CATIA isn't just software; it's an industrial ecosystem.",
-    "version": "3DEXPERIENCE R2026x",
-    "last_updated": "2026-09-02",
-    "free_trial_days": 0,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -1325,7 +1325,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Full feature set",
@@ -1452,9 +1452,7 @@ export const c2Tools: Tool[] = [
       "Assembly & PartDesign Workbenches",
       "2D Technical Drawing (TechDraw)"
     ],
-    "version": "1.1.3",
-    "last_updated": "2026-09-17",
-    "free_trial_days": 0,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -1554,7 +1552,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free (Public Documents)",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Core 3D Parametric CAD & Assembly Modeling",
@@ -1566,7 +1564,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Standard & Professional",
-        "price": "Subscription",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Standard: Commercial use, unlimited private storage & direct support",
@@ -1719,9 +1717,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A cloud-native parametric CAD and built-in PDM platform engineered for distributed hardware teams.",
-    "version": "Continuous (cloud)",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "German",
@@ -1825,38 +1821,36 @@ export const c2Tools: Tool[] = [
     "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration.",
     "pricing_tiers": [
       {
-        "name": "Foundation",
-        "price": "1,320",
-        "period": "/yr",
+        "name": "Design & Drafting (Entry)",
+        "price": "Official Store",
+        "period": "Monthly / Annual Subscription",
         "features": [
           "Part & Assembly Modeling",
           "Synchronous Technology",
           "Automated 2D Drawings",
-          "Sheet Metal Design"
+          "Cloud collaboration (Solid Edge X)"
         ],
         "is_popular": false
       },
       {
-        "name": "Classic (Annual)",
-        "price": "2,500",
-        "period": "/yr",
+        "name": "Solid Edge X Standard / Advanced",
+        "price": "Official Store",
+        "period": "Monthly / Annual Subscription",
         "features": [
-          "All Foundation features",
-          "Advanced Assembly Tools",
-          "Engineering Reference Lib",
-          "Basic FEA Simulation"
+          "Advanced sheet metal, frame generation & weldments",
+          "Standard parts library & generative design",
+          "Subdivision modeling, reverse engineering & rendering"
         ],
         "is_popular": true
       },
       {
-        "name": "Premium",
-        "price": "4,500",
-        "period": "/yr",
+        "name": "Solid Edge X Premium / Free 2D Drafting",
+        "price": "Official Store",
+        "period": "Subscription / Free Tier",
         "features": [
-          "Full Simulation",
-          "Generative Design",
-          "Electrical Routing",
-          "Additive Mfg"
+          "Advanced motion & stress simulation, electrical routing, point clouds",
+          "Free Solid Edge 2D Drafting & Community Edition (non-commercial)",
+          "Free Student Edition & Startup program (eligibility-based)"
         ],
         "is_popular": false
       }
@@ -1913,10 +1907,11 @@ export const c2Tools: Tool[] = [
     "country": "USA",
     "category_id": "c2",
     "pricing_type": "Subscription / Perpetual",
-    "starting_price": 1320,
-    "price_period": "year",
+    "starting_price": 95,
+    "price_period": "month",
     "platforms": [
-      "Windows"
+      "Windows",
+      "Web"
     ],
     "file_formats_in": [
       "PAR",
@@ -1987,11 +1982,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Solid Edge cost?",
-        "a": "Solid Edge is licensed on a Subscription / Perpetual model. Available editions include Foundation, Classic (Annual), Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Solid Edge is sold on a hybrid subscription model: Design & Drafting (entry-level) through Solid Edge X Standard, Advanced, and Premium tiers, plus value-based licensing and add-ons. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official Siemens Solid Edge Store](https://dex.siemens.com/plm/solid-edge) for live regional pricing."
       },
       {
         "q": "Is there a free version of Solid Edge?",
-        "a": "Yes — Solid Edge offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product 30-day trial is also available; check the [Official Solid Edge Trial Page](https://resources.sw.siemens.com/en-US/trial-solid-edge/) for current terms."
       },
       {
         "q": "What operating systems does Solid Edge support?",
@@ -2017,9 +2012,8 @@ export const c2Tools: Tool[] = [
         "JT"
       ]
     },
-    "version": "2026",
     "expert_verdict": "Solid Edge is the 'thinking man's' SolidWorks.",
-    "last_updated": "2026-09-02"
+    "last_updated": "2026-10-30"
   },
   {
     "id": "t20",
@@ -2031,24 +2025,37 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "315",
-        "period": "/mo",
+        "price": "Official Store",
+        "period": "Monthly Subscription",
         "features": [
           "Full 3D modeling",
           "Simulation",
-          "Rendering"
+          "Rendering",
+          "No long-term commitment"
         ]
       },
       {
-        "name": "Annual",
-        "price": "2585",
-        "period": "/yr",
+        "name": "Annual / 3-Year",
+        "price": "Official Store",
+        "period": "1-Year / 3-Year Term",
         "features": [
-          "Save 35%",
+          "Save vs monthly billing",
+          "Fixed price for the term (3-year locks in pricing)",
           "Priority Support",
           "Workflows Link"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Flex (Token-Based) / Collection",
+        "price": "Official Store",
+        "period": "Pay-As-You-Go / Bundle",
+        "features": [
+          "Flex: buy tokens and pay per day of use (Inventor consumes a fixed daily token rate)",
+          "Product Design & Manufacturing Collection: Inventor plus AutoCAD, Fusion, Nastran and more",
+          "Free educational access for eligible students and educators"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2112,11 +2119,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Inventor cost?",
-        "a": "Autodesk Inventor is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Autodesk Inventor is licensed on a Subscription model (Monthly, Annual, and 3-Year terms), on Autodesk Flex pay-as-you-go tokens, or as part of the Product Design & Manufacturing Collection. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official Inventor Subscribe Page](https://www.autodesk.com/products/inventor/subscribe) for live regional pricing."
       },
       {
         "q": "Does Autodesk Inventor offer a free trial?",
-        "a": "Yes — Autodesk Inventor offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Autodesk provides an official 30-day free trial of Inventor, plus free educational access for verified students and educators. Because trial terms are updated periodically by the vendor, visit the [Official Inventor Free Trial Page](https://www.autodesk.com/products/inventor/free-trial) for current details."
       },
       {
         "q": "What operating systems does Autodesk Inventor support?",
@@ -2141,9 +2148,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The superior choice for mechanical design within the Autodesk ecosystem.",
-    "version": "2027",
-    "last_updated": "2026-09-20",
-    "free_trial_days": 30,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -2243,35 +2248,38 @@ export const c2Tools: Tool[] = [
     "description": "PTC Creo (formerly Pro/ENGINEER) is the original enterprise parametric 3D CAD suite engineered for discrete manufacturing, defense, and industrial equipment. Driven by its proprietary Granite kernel, it delivers rock-solid top-down large-assembly stability, Model-Based Definition (MBD/GD&T), Ansys-powered real-time simulation, freestyle subdivision surfacing, and native Windchill PLM integration.",
     "pricing_tiers": [
       {
-        "name": "Essentials",
-        "price": "2430",
-        "period": "/yr",
+        "name": "Creo Design Essentials",
+        "price": "Official Store",
+        "period": "Annual Subscription (Required Base)",
         "features": [
           "Parametric Modeling",
           "Sheet Metal",
-          "Rendering"
+          "Rendering",
+          "Every Creo user must hold Design Essentials (or higher) as the base package"
         ]
       },
       {
-        "name": "Advanced",
-        "price": "5890",
-        "period": "/yr",
+        "name": "Creo Design Advanced / Advanced Professional",
+        "price": "Official Store",
+        "period": "Annual Subscription",
         "features": [
           "Mechanism Dynamics",
           "Tolerance Analysis",
-          "Simulation"
+          "Simulation",
+          "Add-on Extensions sold separately (AAX, ISDX, REX, etc.)"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise",
-        "price": "9500",
-        "period": "/yr",
+        "name": "Creo+ (SaaS) / Enterprise Premium",
+        "price": "Official Store",
+        "period": "Subscription / Floating Quote",
         "features": [
-          "Multi-CAD Collab",
-          "Advanced Surface",
-          "Additive Manuf."
-        ]
+          "Creo+ SaaS delivery with real-time collaboration & cloud data",
+          "Multi-CAD collaboration, advanced surfacing, additive manufacturing",
+          "Floating license tiers for enterprise deployments via PTC sales"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2360,11 +2368,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does PTC Creo cost?",
-        "a": "PTC Creo is licensed on a Subscription model. Available editions include Essentials, Advanced, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "PTC Creo is licensed on a Subscription model: every user starts with the Creo Design Essentials base package, then steps up through Design Advanced, Design Advanced Professional, and Design Premium tiers, with individual extensions and Creo+ (SaaS) sold separately. Published prices cover only a subset of packages — most configurations require a sales quote. Because official seat rates, multi-currency pricing, and reseller quotes vary by region, please visit the [Official PTC Creo Page](https://www.ptc.com/en/products/creo) for live regional pricing."
       },
       {
         "q": "Does PTC Creo offer a free trial?",
-        "a": "Yes — PTC Creo offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — PTC provides an official Try-and-Buy program with fully functional Creo and Creo+ trials (traditionally 30 days). Because trial terms are updated periodically by the vendor, visit the [Official PTC Creo Trial Page](https://www.ptc.com/en/products/creo/trial) for current details."
       },
       {
         "q": "What operating systems does PTC Creo support?",
@@ -2391,9 +2399,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Creo is for serious engineering at massive scales.",
-    "version": "11",
-    "last_updated": "2026-09-02",
-    "free_trial_days": 30,
+    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -2491,7 +2497,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/yr",
         "features": [
           "Full feature set",
@@ -2584,19 +2590,19 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does OpenSCAD cost?",
-        "a": "OpenSCAD is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "OpenSCAD is completely free to download and use with no paid license required. Visit the [Official OpenSCAD Website](https://openscad.org) for downloads and license terms."
       },
       {
         "q": "Is OpenSCAD really free?",
-        "a": "Yes — OpenSCAD is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "a": "Yes — OpenSCAD is free and open-source software (GPLv2+). You can download, use, modify, and redistribute it without any payment. Donations and community sponsors support ongoing development."
       },
       {
         "q": "What operating systems does OpenSCAD support?",
-        "a": "OpenSCAD runs on Windows, macOS, and Linux."
+        "a": "OpenSCAD runs on Windows, macOS, and Linux. A WebAssembly build also lets you run OpenSCAD directly in the browser (used by Thingiverse Customizer and OpenSCAD Playground)."
       },
       {
         "q": "Which file formats does OpenSCAD support?",
-        "a": "OpenSCAD works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "OpenSCAD imports .scad, DXF, SVG, STL, OFF, AMF, and 3MF files, and exports STL, OFF, AMF, 3MF, DXF, SVG, CSG, PNG, and PDF. It cannot import STEP or IGES directly (that requires an OpenCASCADE-based tool like FreeCAD) — convert via STL first. Check the official documentation for the complete list."
       },
       {
         "q": "What are the best alternatives to OpenSCAD?",
@@ -2604,9 +2610,9 @@ export const c2Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "CGAL / OpenCSG",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "None",
+      "engine": "CGAL / Manifold (default since 2025 nightlies) / OpenCSG Preview",
+      "multicore": "Single-Threaded Script Evaluation / GPU-Accelerated Preview & Fast Manifold Rendering",
+      "gpu_optimization": "OpenGL (OpenCSG preview pipeline)",
       "standards": [
         "STL",
         "OFF",
@@ -2614,9 +2620,8 @@ export const c2Tools: Tool[] = [
         "CSG"
       ]
     },
-    "version": "2025.05",
     "expert_verdict": "OpenSCAD is the ultimate tool for engineers who think in code.",
-    "last_updated": "2026-09-02",
+    "last_updated": "2026-10-30",
     "file_formats_in": [
       "SCAD",
       "DXF",
@@ -2647,45 +2652,39 @@ export const c2Tools: Tool[] = [
     "description": "Shapr3D is a modern, cross-platform direct and history-based 3D CAD application engineered natively for Apple Silicon Macs, iPads (with Apple Pencil), and Windows tablets. Powered locally by the industrial Siemens Parasolid kernel and D-Cubed constraint solver, it combines tactile direct push/pull editing with parametric feature trees, real-time visualization, and native STEP/IGES/SLDPRT interoperability.",
     "pricing_tiers": [
       {
-        "name": "Free",
-        "price": "0",
-        "period": "forever",
+        "name": "Basic",
+        "price": "Official Store",
+        "period": "Free Tier",
         "features": [
-          "2 Designs",
-          "Low-res export",
-          "Basic tools"
-        ]
-      },
-      {
-        "name": "Solo",
-        "price": "249.99",
-        "period": "/yr",
-        "features": [
-          "100 designs",
-          "High-res export",
-          "Parasolid engine"
+          "Up to 2 projects on macOS, iPadOS, Windows & visionOS",
+          "Import XT, STEP, IGES, DWG, STL",
+          "Basic-resolution 3MF/STL export",
+          "Basic technical support"
         ]
       },
       {
         "name": "Pro",
-        "price": "299",
-        "period": "/yr",
+        "price": "Official Store",
+        "period": "Monthly / Annual Subscription (per Editor seat)",
         "features": [
-          "Unlimited designs",
-          "Import/export CAD",
-          "All platforms"
+          "Unlimited projects, technical drawings & real-time renders",
+          "High-resolution export & SLDPRT/SLDASM import",
+          "Integrated AR on iPad & secure sharing links",
+          "Priority technical support"
         ],
         "is_popular": true
       },
       {
-        "name": "Studio",
-        "price": "450",
-        "period": "/yr",
+        "name": "Enterprise",
+        "price": "Official Store",
+        "period": "Custom Quote",
         "features": [
-          "2 seats",
-          "Team features",
-          "Priority support"
-        ]
+          "Unlimited teams, teamspaces & granular access control",
+          "Enterprise importers (NX, CATIA V5, Creo, Solid Edge, Rhino) & exporters",
+          "SSO, single-tenant/private-cloud/on-prem data options & PLM integration",
+          "Dedicated account manager & customized training"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2772,15 +2771,15 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Shapr3D cost?",
-        "a": "Shapr3D offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Solo, Pro, Studio. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Shapr3D pricing page for live regional pricing."
+        "a": "Shapr3D is a freemium app offering a free Basic tier plus paid subscriptions: Pro (per-Editor-seat annual or monthly billing) and Enterprise (custom quote), with a free Educational license for students and educators. Because seat rates, regional taxes, and billing options vary by country, please visit the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for live regional pricing."
       },
       {
         "q": "Is there a free version of Shapr3D?",
-        "a": "Yes, Shapr3D offers a permanent free tier (Freemium) which includes 2 Designs, Low-res export, Basic tools. Upgrading to a paid subscription unlocks full commercial rights, advanced CAD export formats, and team collaboration tools."
+        "a": "Yes — Shapr3D Basic is a permanent free tier that includes all modeling tools on macOS, iPadOS, Windows, and visionOS with limited projects and basic-quality exports. A free 14-day Pro trial (with credit card) is also available, and the license terms are updated periodically — check the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for current details."
       },
       {
         "q": "What operating systems does Shapr3D support?",
-        "a": "Shapr3D runs on Windows, macOS, and iOS."
+        "a": "Shapr3D runs natively on Windows (10 v2004+), macOS (Sonoma 14.0+), iPadOS (17+ with Apple Pencil recommended), and visionOS."
       },
       {
         "q": "Which file formats does Shapr3D support?",
@@ -2802,9 +2801,8 @@ export const c2Tools: Tool[] = [
         "STL"
       ]
     },
-    "version": "2025",
     "expert_verdict": "Shapr3D has done the impossible: made professional CAD fun.",
-    "last_updated": "2026-09-17",
+    "last_updated": "2026-10-30",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2843,7 +2841,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Parametric 2D/3D modeling",
@@ -2949,9 +2947,8 @@ export const c2Tools: Tool[] = [
         "DXF"
       ]
     },
-    "version": "3.1",
     "expert_verdict": "A masterclass in minimalist parametric design.",
-    "last_updated": "2026-09-02",
+    "last_updated": "2026-10-30",
     "file_formats_in": [
       "DXF",
       "DWG",
@@ -2977,7 +2974,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Professional",
-        "price": "950",
+        "price": "Official Store",
         "period": "initial",
         "features": [
           "3D Parametric",
@@ -2987,7 +2984,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Expert",
-        "price": "1850",
+        "price": "Official Store",
         "period": "initial",
         "features": [
           "Sheet Metal",
@@ -3081,7 +3078,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alibre Design cost?",
-        "a": "Alibre Design is licensed on a Perpetual model. Available editions include Professional, Expert. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Alibre Design is licensed on a Perpetual model. Available editions include Professional, Expert. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of Alibre Design?",
@@ -3111,7 +3108,6 @@ export const c2Tools: Tool[] = [
         "STL"
       ]
     },
-    "version": "2025",
     "expert_verdict": "No mandatory subscriptions, just solid parametric tools.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -3194,7 +3190,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Maya cost?",
-        "a": "Maya is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Maya is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Maya?",
@@ -3223,14 +3219,13 @@ export const c2Tools: Tool[] = [
         "OBJ"
       ]
     },
-    "version": "2027",
-    "last_updated": "2026-09-20",
+    "last_updated": "2026-10-30",
     "expert_verdict": "The power user's choice for Hollywood effects.",
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "260",
-        "period": "/mo",
+        "price": "Official Store",
+        "period": "Monthly Subscription",
         "features": [
           "Character Animation",
           "Bifrost for Maya",
@@ -3240,14 +3235,25 @@ export const c2Tools: Tool[] = [
         "is_popular": true
       },
       {
-        "name": "Annual",
-        "price": "2,010",
-        "period": "/yr",
+        "name": "Annual / 3-Year",
+        "price": "Official Store",
+        "period": "1-Year / 3-Year Term",
         "features": [
           "Full Motion Graphics",
           "USD integration",
           "Interactive Grooming",
-          "Technical Support"
+          "Technical Support",
+          "Fixed price for the term"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Flex / Education",
+        "price": "Official Store",
+        "period": "Pay-As-You-Go / Eligibility-Based",
+        "features": [
+          "Flex: token-based daily access for occasional users",
+          "Free educational access for verified students and educators"
         ],
         "is_popular": false
       }
@@ -3414,7 +3420,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free & Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Full 3D Suite",
@@ -3469,9 +3475,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "version": "5.2 LTS",
     "last_updated": "2026-08-03",
-    "free_trial_days": 0,
     "languages": [
       "English",
       "French",
@@ -3612,7 +3616,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Geomagic Design X cost?",
-        "a": "Geomagic Design X is licensed on a Subscription model. Available editions include Design X Commercial. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Geomagic Design X is licensed on a Subscription model. Available editions include Design X Commercial. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x) for live pricing."
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
@@ -3641,7 +3645,6 @@ export const c2Tools: Tool[] = [
         "STL"
       ]
     },
-    "version": "2025",
     "last_updated": "2026-09-20",
     "expert_verdict": "The professional standard for turning physical objects into digital CAD data.",
     "quote_only": true,
@@ -3804,7 +3807,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alias AutoStudio cost?",
-        "a": "Alias AutoStudio is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Alias AutoStudio is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview) for live pricing."
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
@@ -3833,7 +3836,6 @@ export const c2Tools: Tool[] = [
         "VDAFS"
       ]
     },
-    "version": "2025",
     "last_updated": "2026-09-20",
     "expert_verdict": "The software behind almost every beautiful car you see on the road.",
     "file_formats_in": [
@@ -3931,7 +3933,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$12,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Class-A Surfacing",
@@ -3941,7 +3943,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$17,400",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Class-A Surfacing",
@@ -4015,7 +4017,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does ZW3D cost?",
-        "a": "ZW3D is licensed on a Subscription / Perpetual model. Available editions include Standard, Professional, Premium. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ZW3D is licensed on a Subscription / Perpetual model. Available editions include Standard, Professional, Premium. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d) for live pricing."
       },
       {
         "q": "Is there a free version of ZW3D?",
@@ -4045,12 +4047,11 @@ export const c2Tools: Tool[] = [
         "STL"
       ]
     },
-    "version": "2025",
     "expert_verdict": "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
     "pricing_tiers": [
       {
         "name": "Standard",
-        "price": "2,000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "3D Modeling",
@@ -4062,7 +4063,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Professional",
-        "price": "3,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Mold Design",
@@ -4074,7 +4075,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Premium",
-        "price": "4,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "2-5 Axis CAM",
@@ -4219,7 +4220,6 @@ export const c2Tools: Tool[] = [
         "OBJ"
       ]
     },
-    "version": "2025",
     "expert_verdict": "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
     "faqs": [
       {
@@ -4228,7 +4228,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Plasticity cost?",
-        "a": "Plasticity is licensed on a Perpetual model. Available editions include Indie License, Studio License. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Plasticity is licensed on a Perpetual model. Available editions include Indie License, Studio License. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Plasticity?",
@@ -4343,7 +4343,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Indie License",
-        "price": "149",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Full Parasolid NURBS toolset",
@@ -4354,7 +4354,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Studio License",
-        "price": "299",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "All Indie features",
@@ -4424,7 +4424,6 @@ export const c2Tools: Tool[] = [
         "3DM"
       ]
     },
-    "version": "4.0",
     "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
     "faqs": [
       {
@@ -4433,7 +4432,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does MoI3D cost?",
-        "a": "MoI3D is licensed on a Perpetual model. Available editions include V4/V5 Commercial, Upgrade. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MoI3D is licensed on a Perpetual model. Available editions include V4/V5 Commercial, Upgrade. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm) for live pricing."
       },
       {
         "q": "Is there a free version of MoI3D?",
@@ -4553,7 +4552,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "V4/V5 Commercial",
-        "price": "295",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Full NURBS modeling suite",
@@ -4564,7 +4563,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Upgrade",
-        "price": "100",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Upgrade from any prior MoI version",
@@ -4585,7 +4584,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "3D Design",
@@ -4691,7 +4690,6 @@ export const c2Tools: Tool[] = [
         "SVG"
       ]
     },
-    "version": "2025",
     "expert_verdict": "Tinkercad is the best free starting point for learning 3D design and electronics.",
     "file_formats_in": [
       "STL",
@@ -4716,7 +4714,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "View 3D Files",
@@ -4727,7 +4725,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Pro",
-        "price": "15",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Advanced Analysis",
@@ -4809,7 +4807,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Glovius cost?",
-        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Glovius pricing page for live regional pricing."
+        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Glovius Pricing Page](https://www.glovius.com/pricing/) for live regional pricing."
       },
       {
         "q": "Is there a free version of Glovius?",
@@ -4836,7 +4834,6 @@ export const c2Tools: Tool[] = [
         "Inventor"
       ]
     },
-    "version": "2025",
     "expert_verdict": "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -4875,7 +4872,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "View 3D Files",
@@ -4886,7 +4883,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Pro",
-        "price": "12",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Advanced Conversion",
@@ -4970,7 +4967,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Exchanger cost?",
-        "a": "CAD Exchanger offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CAD Exchanger pricing page for live regional pricing."
+        "a": "CAD Exchanger offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official CAD Exchanger Pricing Page](https://cadexchanger.com/pricing/) for live regional pricing."
       },
       {
         "q": "Is there a free version of CAD Exchanger?",
@@ -4997,7 +4994,6 @@ export const c2Tools: Tool[] = [
         "Parasolid"
       ]
     },
-    "version": "3.25",
     "expert_verdict": "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -5049,7 +5045,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual License",
-        "price": "$3,150",
+        "price": "Official Store",
         "period": "initial",
         "features": [
           "3D modeling",
@@ -5225,9 +5221,7 @@ export const c2Tools: Tool[] = [
       "Learning curve for advanced features",
       "No subscription option (perpetual only)"
     ],
-    "version": "v24",
     "last_updated": "2025-05-21",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Russian"
@@ -5290,7 +5284,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D is licensed on a Perpetual model. Available editions include Perpetual License, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "KOMPAS-3D is licensed on a Perpetual model. Available editions include Perpetual License, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official KOMPAS-3D Pricing Page](https://ascon.net/) for live pricing."
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
@@ -5331,7 +5325,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "$0",
+        "price": "Free",
         "period": "perpetual",
         "features": [
           "Full 3D CAD capabilities",
@@ -5499,7 +5493,6 @@ export const c2Tools: Tool[] = [
       "Limited documentation"
     ],
     "last_updated": "2025-05-21",
-    "free_trial_days": 0,
     "languages": [
       "English"
     ],
@@ -5781,7 +5774,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does 3DEXPERIENCE cost?",
-        "a": "3DEXPERIENCE is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "3DEXPERIENCE is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official 3DEXPERIENCE Pricing Page](https://www.3ds.com/3dexperience) for live pricing."
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
@@ -5813,9 +5806,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Dassault's massive enterprise collaboration platform, integrating CAD, PLM, and multi-disciplinary data management.",
-    "version": "2025x",
     "last_updated": "2025-05-20",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "French",
@@ -5914,8 +5905,6 @@ export const c2Tools: Tool[] = [
     "starting_price": 0,
     "quote_only": true,
     "pricing_url": "https://www.mechdesigned.com/en/software/",
-    "version": "2026",
-    "free_trial_days": 30,
     "country": "Thailand",
     "platforms": [
       "Windows"
@@ -6154,8 +6143,6 @@ export const c2Tools: Tool[] = [
     "category_id": "c2",
     "pricing_type": "Free",
     "starting_price": 0,
-    "version": "Web",
-    "free_trial_days": 0,
     "country": "United Kingdom",
     "platforms": [
       "Web",

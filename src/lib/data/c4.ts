@@ -13,7 +13,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Basics",
-        "price": "260",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "PDF Markup Tools",
@@ -25,7 +25,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Core",
-        "price": "330",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Advanced Measurement",
@@ -37,7 +37,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Complete",
-        "price": "440",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full Automation",
@@ -142,7 +142,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Bluebeam Revu cost?",
-        "a": "Bluebeam Revu is licensed on a Subscription model. Available editions include Basics, Core, Complete. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Bluebeam Revu is licensed on a Subscription model. Available editions include Basics, Core, Complete. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
@@ -172,7 +172,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "You cannot run a modern construction project without Bluebeam.",
     "last_updated": "2026-09-17",
-    "version": "Revu 21.11",
     "file_formats_in": [
       "PDF",
       "DWG",
@@ -204,7 +203,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Simulate",
-        "price": "1,145",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Timeline simulation",
@@ -216,7 +215,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Manage (Annual)",
-        "price": "2,870",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full Clash Detection",
@@ -321,7 +320,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Navisworks cost?",
-        "a": "Navisworks is licensed on a Subscription model. Available editions include Simulate, Manage (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Navisworks is licensed on a Subscription model. Available editions include Simulate, Manage (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Navisworks?",
@@ -352,7 +351,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "Navisworks is where Virtual Design and Construction happens.",
     "last_updated": "2026-09-20",
-    "version": "2027",
     "file_formats_in": [
       "NWD",
       "NWC",
@@ -388,7 +386,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Office",
-        "price": "3500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full Rule Checking",
@@ -482,7 +480,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solibri cost?",
-        "a": "Solibri is licensed on a Subscription model. Available editions include Office. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Solibri is licensed on a Subscription model. Available editions include Office. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Solibri Pricing Page](https://www.solibri.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Solibri?",
@@ -513,7 +511,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
     "last_updated": "2026-08-03",
-    "version": "2024",
     "file_formats_in": [
       "IFC",
       "IFCZIP",
@@ -542,7 +539,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Mesh cleaning & filtering",
@@ -652,7 +649,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
     "last_updated": "2026-08-03",
-    "version": "2024.12",
     "file_formats_in": [
       "PLY",
       "STL",
@@ -685,7 +681,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Annual",
-        "price": "360",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Scan registration",
@@ -763,7 +759,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Recap Pro cost?",
-        "a": "Recap Pro is licensed on a Subscription model. Available editions include Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Recap Pro is licensed on a Subscription model. Available editions include Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Recap Pro?",
@@ -794,7 +790,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The gateway to reality capture in the BIM world.",
     "last_updated": "2026-09-02",
-    "version": "2027",
     "file_formats_in": [
       "E57",
       "LAS",
@@ -894,7 +889,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The standard for viewing Solid Edge data in production.",
     "last_updated": "2023-04-12",
-    "version": "2024",
     "file_formats_in": [
       "PAR",
       "ASM",
@@ -914,7 +908,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free Viewer",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "View Solid Edge 3D & 2D",
@@ -1075,7 +1069,6 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The essential utility for DWG version management.",
     "last_updated": "2024-11-27",
-    "version": "2024",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -1090,7 +1083,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free Utility",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "100% accurate DWG view",
@@ -1227,7 +1220,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG FastView cost?",
-        "a": "DWG FastView offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Premium Monthly, Premium Annual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official DWG FastView pricing page for live regional pricing."
+        "a": "DWG FastView offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Premium Monthly, Premium Annual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade) for live regional pricing."
       },
       {
         "q": "Is there a free version of DWG FastView?",
@@ -1256,9 +1249,7 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The definitive mobile CAD viewer for professionals on the move.",
-    "version": "10.1.0",
     "last_updated": "2026-05-14",
-    "free_trial_days": 0,
     "detailed_features": [
       {
         "category": "Viewing & Export",
@@ -1306,7 +1297,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Basic Viewing",
@@ -1318,7 +1309,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Premium Monthly",
-        "price": "4.99",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "All 3D Formats",
@@ -1330,7 +1321,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Premium Annual",
-        "price": "47",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Best Value",
@@ -1371,7 +1362,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "View DWG",
@@ -1382,7 +1373,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Pro",
-        "price": "9",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Advanced Measurement",
@@ -1464,7 +1455,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Reader cost?",
-        "a": "CAD Reader offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official CAD Reader pricing page for live regional pricing."
+        "a": "CAD Reader offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/) for live regional pricing."
       },
       {
         "q": "Is there a free version of CAD Reader?",
@@ -1488,7 +1479,6 @@ export const c4Tools: Tool[] = [
         "DXF"
       ]
     },
-    "version": "2025",
     "expert_verdict": "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
     "file_formats_in": [
       "DWG",
@@ -1561,7 +1551,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DXF Medic cost?",
-        "a": "DXF Medic offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official DXF Medic pricing page for live regional pricing."
+        "a": "DXF Medic offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/) for live regional pricing."
       },
       {
         "q": "Is there a free version of DXF Medic?",
@@ -1583,7 +1573,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "€0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Diagnose any DXF or SVG file",
@@ -1594,7 +1584,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "name": "Pro (Lifetime)",
-        "price": "€9",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Unlimited repaired downloads",
@@ -1772,7 +1762,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "View SolidWorks, NX, Inventor, CATIA & STEP files",
@@ -1972,7 +1962,7 @@ export const c4Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Free IFC 2x3, IFC4, and IFC4.3 element & property viewer",

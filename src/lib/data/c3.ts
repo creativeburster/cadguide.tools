@@ -13,7 +13,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "380",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Full BIM features",
@@ -23,7 +23,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "3,005",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Save vs monthly",
@@ -34,7 +34,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "3-Year",
-        "price": "9,015",
+        "price": "Official Store",
         "period": "/3yr",
         "features": [
           "Enterprise scale",
@@ -120,7 +120,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Revit cost?",
-        "a": "Revit is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Revit is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Revit Pricing Page](https://www.autodesk.com/products/revit/subscribe) for live pricing."
       },
       {
         "q": "Does Revit offer a free trial?",
@@ -151,9 +151,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
-    "version": "2027",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "key_capabilities": [
       "Parametric 3D BIM Modeling",
       "Automated Construction Documentation",
@@ -257,7 +255,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Studio",
-        "price": "201",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Architectural Design",
@@ -269,7 +267,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Collaborate",
-        "price": "237",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "MEP Design",
@@ -281,7 +279,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Studio (Annual)",
-        "price": "2,414",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Everything in Studio",
@@ -388,7 +386,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ArchiCAD Pricing Page](https://graphisoft.com/buy) for live pricing."
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
@@ -418,9 +416,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "ArchiCAD is built by architects, for architects.",
-    "version": "29",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "French",
@@ -652,7 +648,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Structures cost?",
-        "a": "Tekla Structures is licensed on a Subscription model. Available editions include Carbon, Graphite, Diamond. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Tekla Structures is licensed on a Subscription model. Available editions include Carbon, Graphite, Diamond. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Tekla Structures Pricing Page](https://www.tekla.com/contact) for live pricing."
       },
       {
         "q": "Is there a free version of Tekla Structures?",
@@ -683,9 +679,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The choice for massive steel stadiums and complex plants.",
-    "version": "2026",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -721,7 +715,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Architect (Annual)",
-        "price": "1,530",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "BIM Workflow",
@@ -733,7 +727,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Design Suite",
-        "price": "2,100",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Landscape design",
@@ -874,7 +868,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Pricing Page](https://www.vectorworks.net/en-US/purchasing) for live pricing."
       },
       {
         "q": "Is there a free version of Vectorworks?",
@@ -905,9 +899,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "If you work in landscape or lighting design, Vectorworks is the standard.",
-    "version": "2027",
-    "last_updated": "2026-09-17",
-    "free_trial_days": 30
+    "last_updated": "2026-09-17"
   },
   {
     "id": "t27",
@@ -919,7 +911,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Premier Monthly",
-        "price": "199",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Residential Design",
@@ -931,7 +923,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Premier Annual",
-        "price": "1,995",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full Architectural Tools",
@@ -1035,7 +1027,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Chief Architect cost?",
-        "a": "Chief Architect is licensed on a Subscription model. Available editions include Premier Monthly, Premier Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Chief Architect is licensed on a Subscription model. Available editions include Premier Monthly, Premier Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Chief Architect Pricing Page](https://www.chiefarchitect.com/products/home-design/premier/) for live pricing."
       },
       {
         "q": "Is there a free version of Chief Architect?",
@@ -1066,9 +1058,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "If you build houses, buy Chief Architect.",
-    "version": "X18",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "file_formats_in": [
       "PLAN",
       "DWG",
@@ -1141,7 +1131,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Civil 3D cost?",
-        "a": "Civil 3D is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Civil 3D is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Civil 3D Pricing Page](https://www.autodesk.com/products/civil-3d/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Civil 3D?",
@@ -1171,13 +1161,11 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The industry standard for civil engineering projects.",
-    "version": "2027",
     "last_updated": "2026-09-20",
-    "free_trial_days": 30,
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "360",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Road & Highway design",
@@ -1189,7 +1177,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "2,870",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full BIM integration",
@@ -1286,7 +1274,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Monthly",
-        "price": "170",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Full Landmark toolset",
@@ -1298,7 +1286,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Annual",
-        "price": "1,530",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Everything in Monthly",
@@ -1352,7 +1340,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks Landmark cost?",
-        "a": "Vectorworks Landmark is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Vectorworks Landmark is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark) for live pricing."
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
@@ -1381,7 +1369,6 @@ export const c3Tools: Tool[] = [
         "Shapefile"
       ]
     },
-    "version": "2027",
     "last_updated": "2026-09-17",
     "expert_verdict": "The undisputed gold standard for professional landscape architecture.",
     "file_formats_in": [
@@ -1528,7 +1515,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Allplan cost?",
-        "a": "Allplan is licensed on a Subscription model. Available editions include Professional, Ultimate. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Allplan is licensed on a Subscription model. Available editions include Professional, Ultimate. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Allplan Pricing Page](https://www.allplan.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Allplan?",
@@ -1558,13 +1545,12 @@ export const c3Tools: Tool[] = [
         "STEP"
       ]
     },
-    "version": "2026",
     "last_updated": "2026-09-17",
     "expert_verdict": "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
     "pricing_tiers": [
       {
         "name": "Professional",
-        "price": "3,480",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "AEC BIM modeling",
@@ -1576,7 +1562,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Ultimate",
-        "price": "4,704",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Everything in Professional",
@@ -1711,7 +1697,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does OpenRoads Designer cost?",
-        "a": "OpenRoads Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "OpenRoads Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/) for live pricing."
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
@@ -1741,7 +1727,6 @@ export const c3Tools: Tool[] = [
         "LandXML"
       ]
     },
-    "version": "2025",
     "expert_verdict": "The definitive platform for highway and infrastructure projects at enterprise scale.",
     "file_formats_in": [
       "DGN",
@@ -1835,7 +1820,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$4,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Corridor Modeling",
@@ -1845,7 +1830,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$5,800",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Corridor Modeling",
@@ -2024,7 +2009,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does cadwork cost?",
-        "a": "cadwork is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "cadwork is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official cadwork Pricing Page](https://www.cadwork.com/) for live pricing."
       },
       {
         "q": "Is there a free version of cadwork?",
@@ -2054,7 +2039,6 @@ export const c3Tools: Tool[] = [
         "STEP"
       ]
     },
-    "version": "2025",
     "expert_verdict": "cadwork is the premier CAD/CAM suite for wood engineering and timber frame design, offering seamless transitions from 3D modeling directly to CNC machinery output. Highly regarded for its Swiss precision and deep integration, it carries a premium price and steep learning curve, making it an essential investment for timber specialists but irrelevant for general contractors.",
     "file_formats_in": [
       "IFC",
@@ -2230,7 +2214,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does MagiCAD cost?",
-        "a": "MagiCAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MagiCAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MagiCAD Pricing Page](https://www.magicad.com/) for live pricing."
       },
       {
         "q": "Is there a free version of MagiCAD?",
@@ -2260,7 +2244,6 @@ export const c3Tools: Tool[] = [
         "RVT"
       ]
     },
-    "version": "2025",
     "expert_verdict": "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -2434,7 +2417,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does DDS-CAD cost?",
-        "a": "DDS-CAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "DDS-CAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/) for live pricing."
       },
       {
         "q": "Is there a free version of DDS-CAD?",
@@ -2464,7 +2447,6 @@ export const c3Tools: Tool[] = [
         "RVT"
       ]
     },
-    "version": "2025",
     "expert_verdict": "DDS-CAD is an established MEP BIM solution covering mechanical, electrical, and piping trades. With native energy calculations and solid Nordic market adoption, it is a highly reliable tool. It lacks versatile general architectural modeling, making it a dedicated engineering choice for building systems professionals.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -2638,7 +2620,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does dRofus cost?",
-        "a": "dRofus is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "dRofus is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official dRofus Pricing Page](https://www.drofus.com/) for live pricing."
       },
       {
         "q": "Is there a free version of dRofus?",
@@ -2668,7 +2650,6 @@ export const c3Tools: Tool[] = [
         "RVT"
       ]
     },
-    "version": "2025",
     "expert_verdict": "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -2691,11 +2672,11 @@ export const c3Tools: Tool[] = [
     "slug": "autocad-plant-3d",
     "logo_url": "/logos/autocad-plant-3d.png",
     "short_desc": "Autodesk's specialized plant-design toolkit for piping, equipment, and P&ID workflows — included with AutoCAD subscription.",
-    "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings. Rather than a standalone purchase, it is included as a specialized toolset within every full AutoCAD subscription ($2,095/year or $260/month).",
+    "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings. Rather than a standalone purchase, it is included as a specialized toolset within every full AutoCAD subscription — check the official Autodesk pricing page for current rates.",
     "pricing_tiers": [
       {
         "name": "Included with AutoCAD (Annual)",
-        "price": "2,095",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Plant 3D specialized toolset",
@@ -2707,7 +2688,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Included with AutoCAD (Monthly)",
-        "price": "260",
+        "price": "Official Store",
         "period": "/mo",
         "features": [
           "Monthly flexible access",
@@ -2767,7 +2748,6 @@ export const c3Tools: Tool[] = [
         "ISO 15926"
       ]
     },
-    "version": "2027",
     "last_updated": "2026-09-20",
     "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
     "faqs": [
@@ -2777,7 +2757,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD Plant 3D cost?",
-        "a": "AutoCAD Plant 3D is licensed on a Subscription model. Available editions include Included with AutoCAD (Annual), Included with AutoCAD (Monthly). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AutoCAD Plant 3D is licensed on a Subscription model. Available editions include Included with AutoCAD (Annual), Included with AutoCAD (Monthly). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview) for live pricing."
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
@@ -2943,7 +2923,6 @@ export const c3Tools: Tool[] = [
         "DGN"
       ]
     },
-    "version": "2024",
     "expert_verdict": "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
     "faqs": [
       {
@@ -2952,7 +2931,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Hexagon SmartPlant 3D cost?",
-        "a": "Hexagon SmartPlant 3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Hexagon SmartPlant 3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d) for live pricing."
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
@@ -3069,7 +3048,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$18,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Rule-based pipe, structural, cable tray, HVAC design",
@@ -3079,7 +3058,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$26,100",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Rule-based pipe, structural, cable tray, HVAC design",
@@ -3157,7 +3136,6 @@ export const c3Tools: Tool[] = [
         "ISO 15926"
       ]
     },
-    "version": "2025",
     "expert_verdict": "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
     "faqs": [
       {
@@ -3166,7 +3144,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CADWorx Plant Professional cost?",
-        "a": "CADWorx Plant Professional is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CADWorx Plant Professional is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional) for live pricing."
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
@@ -3280,7 +3258,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$5,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "AutoCAD-based 3D plant modeling",
@@ -3290,7 +3268,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$7,250",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "AutoCAD-based 3D plant modeling",
@@ -3372,7 +3350,6 @@ export const c3Tools: Tool[] = [
         "Navisworks NWD"
       ]
     },
-    "version": "2025",
     "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
     "faqs": [
       {
@@ -3381,7 +3358,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Construction Cloud cost?",
-        "a": "Autodesk Construction Cloud is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Autodesk Construction Cloud is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com) for live pricing."
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
@@ -3497,7 +3474,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$1,080",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Autodesk Docs CDE",
@@ -3507,7 +3484,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$1,566",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Autodesk Docs CDE",
@@ -3590,7 +3567,6 @@ export const c3Tools: Tool[] = [
         "SKP"
       ]
     },
-    "version": "2025",
     "expert_verdict": "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
     "faqs": [
       {
@@ -3599,7 +3575,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Trimble Connect cost?",
-        "a": "Trimble Connect offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official Trimble Connect pricing page for live regional pricing."
+        "a": "Trimble Connect offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Trimble Connect Pricing Page](https://connect.trimble.com/pricing) for live regional pricing."
       },
       {
         "q": "Is there a free version of Trimble Connect?",
@@ -3715,7 +3691,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free / Starter Tier",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Free tier for unlimited collaborators",
@@ -3725,7 +3701,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional Edition",
-        "price": "$29",
+        "price": "Official Store",
         "period": "per month",
         "features": [
           "Free tier for unlimited collaborators",
@@ -3804,7 +3780,6 @@ export const c3Tools: Tool[] = [
         "IFC"
       ]
     },
-    "version": "2025",
     "expert_verdict": "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
     "faqs": [
       {
@@ -3813,7 +3788,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official BIMcollab Pricing Page](https://www.bimcollab.com/en/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of BIMcollab?",
@@ -3924,7 +3899,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$590",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
@@ -3934,7 +3909,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$856",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
@@ -4013,7 +3988,6 @@ export const c3Tools: Tool[] = [
         "IFC"
       ]
     },
-    "version": "2025",
     "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
     "faqs": [
       {
@@ -4137,7 +4111,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community / Standard Release",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Visual node-based scripting",
@@ -4149,7 +4123,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "name": "Professional / Team Deployment",
-        "price": "$0",
+        "price": "Free",
         "period": "free commercial use",
         "features": [
           "Unrestricted workstation or browser usage",
@@ -4179,7 +4153,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -4303,7 +4277,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CYPECAD cost?",
-        "a": "CYPECAD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CYPECAD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CYPECAD Pricing Page](https://www.cype.com/) for live pricing."
       },
       {
         "q": "Is there a free version of CYPECAD?",
@@ -4328,7 +4302,6 @@ export const c3Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -4356,7 +4329,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -4480,7 +4453,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vertex BD cost?",
-        "a": "Vertex BD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Vertex BD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vertex BD Pricing Page](https://www.vertex.fi/) for live pricing."
       },
       {
         "q": "Is there a free version of Vertex BD?",
@@ -4505,7 +4478,6 @@ export const c3Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -4710,7 +4682,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Planbar cost?",
-        "a": "Planbar is licensed on a Perpetual model. Available editions include Planbar Standard, Planbar Advanced. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Planbar is licensed on a Perpetual model. Available editions include Planbar Standard, Planbar Advanced. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/) for live pricing."
       },
       {
         "q": "Is there a free version of Planbar?",
@@ -4741,9 +4713,7 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Allplan's specialized BIM precast concrete design and detailing tool, crucial for modern modular construction.",
-    "version": "2025",
     "last_updated": "2025-05-21",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "German",
@@ -4811,7 +4781,6 @@ export const c3Tools: Tool[] = [
     "pricing_type": "Free",
     "starting_price": 0,
     "price_period": "one-time",
-    "version": "2026",
     "country": "United Kingdom",
     "platforms": [
       "Web"
@@ -4899,7 +4868,7 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free Online Service",
-        "price": "$0",
+        "price": "Free",
         "period": "one-time",
         "features": [
           "RVT project downgrade (2024-2027 to 2023)",

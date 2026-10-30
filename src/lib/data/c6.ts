@@ -13,7 +13,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard",
-        "price": "3,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Unified PCB Design",
@@ -25,7 +25,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional",
-        "price": "7,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Advanced Simulation",
@@ -145,7 +145,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium Designer cost?",
-        "a": "Altium Designer is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Altium Designer is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altium Designer Pricing Page](https://www.altium.com/pricing) for live pricing."
       },
       {
         "q": "Does Altium Designer offer a free trial?",
@@ -176,9 +176,7 @@ export const c6Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
-    "version": "26",
     "last_updated": "2026-08-03",
-    "free_trial_days": 15,
     "languages": [
       "English",
       "French",
@@ -269,7 +267,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Discontinued",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "—",
         "features": [
           "Sales ended June 2021",
@@ -382,7 +380,6 @@ export const c6Tools: Tool[] = [
     "last_updated": "2026-09-02",
     "discontinued": true,
     "discontinued_note": "Autodesk officially sunset EAGLE on June 7, 2026. Standalone licensing servers have been decommissioned. All EAGLE design files (.sch, .brd, .lbr) open seamlessly in Autodesk Fusion Electronics.",
-    "version": "9.6 (final standalone release)",
     "file_formats_in": [
       "BRD",
       "SCH",
@@ -450,7 +447,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN Electric P8 cost?",
-        "a": "EPLAN Electric P8 is licensed on a Subscription model. Available editions include Electric P8 Standard. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "EPLAN Electric P8 is licensed on a Subscription model. Available editions include Electric P8 Standard. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Electric P8 Pricing Page](https://www.eplan.com) for live pricing."
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
@@ -539,7 +536,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-08-03",
-    "version": "2024",
     "file_formats_in": [
       "EPJ",
       "ZW1",
@@ -574,7 +570,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Electric P8 Subscription",
-        "price": "3,000+",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Schematic design",
@@ -779,9 +775,7 @@ export const c6Tools: Tool[] = [
       "Pricing not publicly available",
       "Requires training for full utilization"
     ],
-    "version": "2027",
     "last_updated": "2026-09-20",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "German",
@@ -853,7 +847,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN cost?",
-        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Pricing Page](https://www.eplan-software.com/services/eplan-subscription/) for live pricing."
       },
       {
         "q": "Is there a free version of EPLAN?",
@@ -1020,7 +1014,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Allegro PCB cost?",
-        "a": "Allegro PCB is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Allegro PCB is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Allegro PCB Pricing Page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html) for live pricing."
       },
       {
         "q": "Is there a free version of Allegro PCB?",
@@ -1047,7 +1041,6 @@ export const c6Tools: Tool[] = [
     },
     "expert_verdict": "Cadence's high-end enterprise PCB layout platform, built for complex high-speed design and system constraints.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "BRD",
       "DRA",
@@ -1078,7 +1071,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "OrCAD X Standard",
-        "price": "$2,500+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Schematic capture",
@@ -1091,7 +1084,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "OrCAD X Premium",
-        "price": "$5,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "All Standard features",
@@ -1296,9 +1289,7 @@ export const c6Tools: Tool[] = [
       "Subscription model may not suit all budgets",
       "Requires training for full utilization"
     ],
-    "version": "OrCAD X",
     "last_updated": "2023-08-28",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Chinese",
@@ -1370,7 +1361,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does OrCAD cost?",
-        "a": "OrCAD is licensed on a Subscription model. Available editions include OrCAD X Standard, OrCAD X Premium, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "OrCAD is licensed on a Subscription model. Available editions include OrCAD X Standard, OrCAD X Premium, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official OrCAD Pricing Page](https://www.orcad.com/) for live pricing."
       },
       {
         "q": "Is there a free version of OrCAD?",
@@ -1411,7 +1402,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "PADS Professional Base",
-        "price": "$8,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Schematic capture",
@@ -1425,7 +1416,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "PADS Professional Suite",
-        "price": "$12,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Full Xpedition technology integration",
@@ -1621,9 +1612,7 @@ export const c6Tools: Tool[] = [
       "Analysis computation can be slow",
       "Requires training for full utilization"
     ],
-    "version": "VX.4",
     "last_updated": "2023-11-08",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Chinese",
@@ -1693,7 +1682,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does PADS Professional cost?",
-        "a": "PADS Professional is licensed on a Subscription model. Available editions include PADS Professional Base, PADS Professional Suite, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "PADS Professional is licensed on a Subscription model. Available editions include PADS Professional Base, PADS Professional Suite, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official PADS Professional Pricing Page](https://www.siemens.com/en-us/products/pcb/pads/professional/) for live pricing."
       },
       {
         "q": "Is there a free version of PADS Professional?",
@@ -1734,7 +1723,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -1859,7 +1848,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Xpedition cost?",
-        "a": "Xpedition is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Xpedition is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Xpedition Pricing Page](https://eda.sw.siemens.com/en-US/pcb/xpedition/) for live pricing."
       },
       {
         "q": "Is there a free version of Xpedition?",
@@ -1886,7 +1875,6 @@ export const c6Tools: Tool[] = [
     },
     "expert_verdict": "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "PCB",
       "SCH",
@@ -1916,7 +1904,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community Edition",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Schematic Capture (Eeschema)",
@@ -2113,8 +2101,7 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
-    "version": "10.0"
+    "last_updated": "2026-09-02"
   },
   {
     "id": "t199",
@@ -2183,7 +2170,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EasyEDA cost?",
-        "a": "EasyEDA offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official EasyEDA pricing page for live regional pricing."
+        "a": "EasyEDA offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official EasyEDA Pricing Page](https://easyeda.com/pricing) for live regional pricing."
       },
       {
         "q": "Is there a free version of EasyEDA?",
@@ -2279,7 +2266,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "EasyEDA JSON",
       "Altium SchDoc/PcbDoc",
@@ -2298,7 +2284,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free / Starter Tier",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Browser-based schematic and PCB editor",
@@ -2308,7 +2294,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional Edition",
-        "price": "$29",
+        "price": "Official Store",
         "period": "per month",
         "features": [
           "Browser-based schematic and PCB editor",
@@ -2371,7 +2357,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Starter",
-        "price": "75",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Perpetual commercial license",
@@ -2383,7 +2369,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Lite",
-        "price": "145",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Perpetual commercial license",
@@ -2395,7 +2381,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Standard",
-        "price": "395",
+        "price": "Official Store",
         "period": "one-time",
         "is_popular": true,
         "features": [
@@ -2408,7 +2394,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Extended",
-        "price": "695",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Perpetual commercial license",
@@ -2420,7 +2406,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Full",
-        "price": "995",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Perpetual commercial license",
@@ -2459,7 +2445,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does DipTrace cost?",
-        "a": "DipTrace is licensed on a Perpetual model. Available editions include Starter, Lite, Standard, Extended, Full. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "DipTrace is licensed on a Perpetual model. Available editions include Starter, Lite, Standard, Extended, Full. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official DipTrace Pricing Page](https://diptrace.com/buy/) for live pricing."
       },
       {
         "q": "Is there a free version of DipTrace?",
@@ -2555,7 +2541,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-11",
-    "version": "5.1",
     "file_formats_in": [
       "DIP",
       "DXF",
@@ -2639,7 +2624,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does NI Multisim cost?",
-        "a": "NI Multisim is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "NI Multisim is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official NI Multisim Pricing Page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html) for live pricing."
       },
       {
         "q": "Is there a free version of NI Multisim?",
@@ -2735,7 +2720,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "MS14",
       "Ultiboard",
@@ -2752,7 +2736,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$600",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Interactive SPICE simulation with virtual instruments",
@@ -2762,7 +2746,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$870",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Interactive SPICE simulation with virtual instruments",
@@ -2946,7 +2930,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2023-09-02",
-    "version": "2024",
     "file_formats_in": [
       "ASC",
       "ASY",
@@ -2964,7 +2947,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Freeware",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "High-performance SPICE engine",
@@ -3042,7 +3025,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Proteus Design Suite cost?",
-        "a": "Proteus Design Suite is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Proteus Design Suite is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Proteus Design Suite Pricing Page](https://www.labcenter.com/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
@@ -3138,7 +3121,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2023-11-16",
-    "version": "8.18",
     "file_formats_in": [
       "DSN",
       "LYT",
@@ -3158,7 +3140,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$248",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Schematic + SPICE simulation",
@@ -3168,7 +3150,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$360",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Schematic + SPICE simulation",
@@ -3258,7 +3240,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium 365 cost?",
-        "a": "Altium 365 is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Altium 365 is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altium 365 Pricing Page](https://www.altium.com/altium-365) for live pricing."
       },
       {
         "q": "Is there a free version of Altium 365?",
@@ -3354,7 +3336,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "PrjPcb",
       "SchDoc",
@@ -3372,7 +3353,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$295",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Cloud workspace and version control",
@@ -3382,7 +3363,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$428",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Cloud workspace and version control",
@@ -3563,7 +3544,6 @@ export const c6Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "CMPcb",
       "CMSch",
@@ -3580,7 +3560,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community / Standard Release",
-        "price": "$0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Altium-engine schematic and PCB layout",
@@ -3592,7 +3572,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "name": "Professional / Team Deployment",
-        "price": "$0",
+        "price": "Free",
         "period": "free commercial use",
         "features": [
           "Unrestricted workstation or browser usage",

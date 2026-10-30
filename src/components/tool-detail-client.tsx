@@ -421,7 +421,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </span>
                       </div>
                       {/* Version and last_updated omitted by design */}
-                      {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
+                      {tool.trial_url && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
                         <a
                           href={tool.trial_url || tool.official_url}
                           target="_blank"
@@ -513,7 +513,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </a>
                       </Button>
                     )}
-                    {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                    {tool.trial_url && !tool.discontinued && (
                       <Button
                         asChild
                         variant="outline"
@@ -782,7 +782,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       </a>
                     </Button>
                   )}
-                  {(tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                  {tool.trial_url && !tool.discontinued && (
                     <Button
                       asChild
                       variant="outline"
@@ -1690,7 +1690,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </a>
                       </Button>
                     )}
-                    {!["Free", "Open Source"].includes(tool.pricing_type) && (tool.trial_url || (typeof tool.free_trial_days === "number" && tool.free_trial_days > 0)) && !tool.discontinued && (
+                    {!["Free", "Open Source"].includes(tool.pricing_type) && tool.trial_url && !tool.discontinued && (
                       <Button
                         asChild
                         variant="outline"

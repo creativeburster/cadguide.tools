@@ -145,7 +145,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Siemens NX cost?",
-        "a": "Siemens NX is licensed on a Subscription model. Available editions include Core CAD (NX X), Advanced Designer, Value-Based (Tokens). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Siemens NX is licensed on a Subscription model. Available editions include Core CAD (NX X), Advanced Designer, Value-Based (Tokens). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Siemens NX Pricing Page](https://www.dex.siemens.com/) for live pricing."
       },
       {
         "q": "Does Siemens NX offer a free trial?",
@@ -176,9 +176,7 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A high-end enterprise PLM and CAD suite, delivering unmatched power for aerospace and automotive engineering.",
-    "version": "NX 2606",
     "last_updated": "2026-09-17",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "French",
@@ -277,7 +275,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Entry",
-        "price": "3000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "2D Milling",
@@ -287,7 +285,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Mill-Turn",
-        "price": "8000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Multi-tasking",
@@ -384,7 +382,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Mastercam cost?",
-        "a": "Mastercam is licensed on a Subscription / Perpetual model. Available editions include Entry, Mill-Turn. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Mastercam is licensed on a Subscription / Perpetual model. Available editions include Entry, Mill-Turn. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Mastercam Pricing Page](https://www.mastercam.com/how-to-buy/) for live pricing."
       },
       {
         "q": "Is there a free version of Mastercam?",
@@ -416,7 +414,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "The 'gold standard' for the professional machine shop.",
     "last_updated": "2026-09-17",
-    "version": "2027",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -547,7 +544,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does nTop cost?",
-        "a": "nTop is licensed on a Subscription model. Available editions include nTop Enterprise. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "nTop is licensed on a Subscription model. Available editions include nTop Enterprise. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official nTop Pricing Page](https://www.ntop.com) for live pricing."
       },
       {
         "q": "Is there a free version of nTop?",
@@ -579,7 +576,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "The future of advanced manufacturing design.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -609,7 +605,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "iMachining",
-        "price": "4000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "2D/3D iMachining",
@@ -686,7 +682,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SolidCAM cost?",
-        "a": "SolidCAM is licensed on a Subscription model. Available editions include iMachining. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SolidCAM is licensed on a Subscription model. Available editions include iMachining. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SolidCAM Pricing Page](https://www.solidcam.com) for live pricing."
       },
       {
         "q": "Is there a free version of SolidCAM?",
@@ -716,7 +712,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "iMachining is literal magic for CNC shops.",
     "last_updated": "2026-09-02",
-    "version": "2026",
     "file_formats_in": [
       "SLDPRT",
       "SLDASM",
@@ -744,7 +739,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Essential",
-        "price": "5000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "STL Repair",
@@ -839,7 +834,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Magics cost?",
-        "a": "Magics is licensed on a Subscription model. Available editions include Essential. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Magics is licensed on a Subscription model. Available editions include Essential. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Magics Pricing Page](https://www.materialise.com) for live pricing."
       },
       {
         "q": "Is there a free version of Magics?",
@@ -870,7 +865,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Magics is the industrial benchmark for fixable unprintable meshes.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STL",
@@ -941,7 +935,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does VISI Modelling cost?",
-        "a": "VISI Modelling is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "VISI Modelling is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official VISI Modelling Pricing Page](https://www.visicadcam.com) for live pricing."
       },
       {
         "q": "Is there a free version of VISI Modelling?",
@@ -972,7 +966,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "If you are making plastic injection molds, VISI is your best friend.",
     "last_updated": "2026-08-03",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1065,7 +1058,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$3,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Analysis of Draft",
@@ -1075,7 +1068,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$4,350",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Analysis of Draft",
@@ -1148,7 +1141,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Cimatron cost?",
-        "a": "Cimatron is licensed on a Subscription model. Available editions include Mold & Die Design, NC Programming Bundle. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Cimatron is licensed on a Subscription model. Available editions include Mold & Die Design, NC Programming Bundle. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Cimatron Pricing Page](https://www.cimatron.com) for live pricing."
       },
       {
         "q": "Is there a free version of Cimatron?",
@@ -1179,7 +1172,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A robust, battle-tested workhorse for the precision tooling industry.",
     "last_updated": "2026-08-03",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1206,7 +1198,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Mold & Die Design",
-        "price": "3,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Core & Cavity separation",
@@ -1217,7 +1209,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "NC Programming Bundle",
-        "price": "6,200",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "2.5 to 5-axis milling",
@@ -1353,7 +1345,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Mechanical cost?",
-        "a": "ANSYS Mechanical is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ANSYS Mechanical is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ANSYS Mechanical Pricing Page](https://www.ansys.com/products/structures/ansys-mechanical) for live pricing."
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
@@ -1443,7 +1435,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-17",
-    "version": "2026 R1",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1525,7 +1516,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Nastran cost?",
-        "a": "MSC Nastran is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MSC Nastran is licensed on a Subscription model. Available editions include Subscription (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MSC Nastran Pricing Page](https://nexus.hexagon.com/home/product/msc-nastran/) for live pricing."
       },
       {
         "q": "Is there a free version of MSC Nastran?",
@@ -1581,7 +1572,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-17",
-    "version": "2024",
     "file_formats_in": [
       "BDF",
       "DAT",
@@ -1656,7 +1646,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Altair HyperWorks cost?",
-        "a": "Altair HyperWorks is licensed on a Subscription model. Available editions include Units Based. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Altair HyperWorks is licensed on a Subscription model. Available editions include Units Based. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altair HyperWorks Pricing Page](https://altair.com/hyperworks/) for live pricing."
       },
       {
         "q": "Is there a free version of Altair HyperWorks?",
@@ -1712,7 +1702,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-06-13",
-    "version": "2024",
     "file_formats_in": [
       "HM",
       "STEP",
@@ -1792,7 +1781,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAMWorks cost?",
-        "a": "CAMWorks is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CAMWorks is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CAMWorks Pricing Page](https://camworks.com/) for live pricing."
       },
       {
         "q": "Is there a free version of CAMWorks?",
@@ -1824,7 +1813,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
     "last_updated": "2026-09-02",
-    "version": "2026",
     "file_formats_in": [
       "SLDPRT",
       "SLDASM",
@@ -1912,7 +1900,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$5,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Feature-Based Machining",
@@ -1922,7 +1910,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$7,250",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Feature-Based Machining",
@@ -1955,7 +1943,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -2080,7 +2068,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does TopSolid cost?",
-        "a": "TopSolid is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "TopSolid is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official TopSolid Pricing Page](https://www.topsolid.com/) for live pricing."
       },
       {
         "q": "Is there a free version of TopSolid?",
@@ -2107,7 +2095,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "TOP",
       "STEP",
@@ -2288,7 +2275,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Visi cost?",
-        "a": "Visi is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Visi is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Visi Pricing Page](https://www.hexagonmi.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Visi?",
@@ -2320,7 +2307,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2497,7 +2483,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Edgecam cost?",
-        "a": "Edgecam is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Edgecam is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Edgecam Pricing Page](https://www.hexagonmi.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Edgecam?",
@@ -2529,7 +2515,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
     "last_updated": "2024-06-19",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2702,7 +2687,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does KISSsoft cost?",
-        "a": "KISSsoft is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "KISSsoft is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official KISSsoft Pricing Page](https://www.kisssoft.com/) for live pricing."
       },
       {
         "q": "Is there a free version of KISSsoft?",
@@ -2734,7 +2719,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -2758,11 +2742,11 @@ export const c5Tools: Tool[] = [
     "slug": "featurecam",
     "logo_url": "/logos/featurecam.svg",
     "short_desc": "Automated CAM software for CNC milling, turning, and Swiss machining — offered as Autodesk Fusion with FeatureCAM.",
-    "description": "FeatureCAM by Autodesk provides automated feature recognition and intelligent toolpath generation for CNC milling, turning, wire EDM, and multi-tasking machines. Standalone sales have transitioned to the 'Autodesk Fusion with FeatureCAM' subscription bundle (approx. $2,040/yr), uniting automated machining with modern cloud CAD capabilities.",
+    "description": "FeatureCAM by Autodesk provides automated feature recognition and intelligent toolpath generation for CNC milling, turning, wire EDM, and multi-tasking machines. Standalone sales have transitioned to the 'Autodesk Fusion with FeatureCAM' subscription bundle — check the official Autodesk pricing page for current regional rates.",
     "pricing_tiers": [
       {
         "name": "Fusion with FeatureCAM",
-        "price": "2,040",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Full FeatureCAM Ultimate",
@@ -2898,7 +2882,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does FeatureCAM cost?",
-        "a": "FeatureCAM is licensed on a Subscription model. Available editions include Fusion with FeatureCAM. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "FeatureCAM is licensed on a Subscription model. Available editions include Fusion with FeatureCAM. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official FeatureCAM Pricing Page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview) for live pricing."
       },
       {
         "q": "Is there a free version of FeatureCAM?",
@@ -2930,7 +2914,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Autodesk's feature-based CAM software, designed to automate CNC programming through built-in intelligence.",
     "last_updated": "2026-09-20",
-    "version": "2026",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3106,7 +3089,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does GibbsCAM cost?",
-        "a": "GibbsCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "GibbsCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official GibbsCAM Pricing Page](https://www.gibbscam.com/) for live pricing."
       },
       {
         "q": "Is there a free version of GibbsCAM?",
@@ -3138,7 +3121,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A highly visual, task-oriented CAM system, exceptionally efficient for programming multi-task machining centers.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3314,7 +3296,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does hyperMILL cost?",
-        "a": "hyperMILL is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "hyperMILL is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official hyperMILL Pricing Page](https://www.openmind-tech.com/) for live pricing."
       },
       {
         "q": "Is there a free version of hyperMILL?",
@@ -3346,7 +3328,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "OPEN MIND's premier 5-axis CAM suite, outstanding for high-precision machining and collision avoidance.",
     "last_updated": "2023-01-02",
-    "version": "2026.1",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3521,7 +3502,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tebis cost?",
-        "a": "Tebis is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Tebis is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Tebis Pricing Page](https://www.tebis.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Tebis?",
@@ -3553,7 +3534,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
     "last_updated": "2023-04-04",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "CATPart",
@@ -3727,7 +3707,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does WorkNC cost?",
-        "a": "WorkNC is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "WorkNC is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official WorkNC Pricing Page](https://www.worknc.com/) for live pricing."
       },
       {
         "q": "Is there a free version of WorkNC?",
@@ -3759,7 +3739,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3929,7 +3908,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SURFCAM cost?",
-        "a": "SURFCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SURFCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SURFCAM Pricing Page](https://www.surfcam.com/) for live pricing."
       },
       {
         "q": "Is there a free version of SURFCAM?",
@@ -3961,7 +3940,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -4134,7 +4112,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does BobCAD-CAM cost?",
-        "a": "BobCAD-CAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "BobCAD-CAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official BobCAD-CAM Pricing Page](https://bobcad.com/) for live pricing."
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
@@ -4166,7 +4144,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -4341,7 +4318,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AutoForm cost?",
-        "a": "AutoForm is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AutoForm is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AutoForm Pricing Page](https://www.autoform.com/) for live pricing."
       },
       {
         "q": "Is there a free version of AutoForm?",
@@ -4373,7 +4350,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -4545,7 +4521,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldflow cost?",
-        "a": "Moldflow is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Moldflow is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Moldflow Pricing Page](https://www.autodesk.com/products/moldflow/overview) for live pricing."
       },
       {
         "q": "Is there a free version of Moldflow?",
@@ -4577,7 +4553,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "UDM",
       "STEP",
@@ -4750,7 +4725,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldex3D cost?",
-        "a": "Moldex3D is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Moldex3D is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Moldex3D Pricing Page](https://www.moldex3d.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Moldex3D?",
@@ -4782,7 +4757,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
     "last_updated": "2024-05-30",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -4955,7 +4929,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AlphaCAM cost?",
-        "a": "AlphaCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AlphaCAM is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AlphaCAM Pricing Page](https://www.alphacam.com/) for live pricing."
       },
       {
         "q": "Is there a free version of AlphaCAM?",
@@ -4987,7 +4961,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -5157,7 +5130,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Radan cost?",
-        "a": "Radan is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Radan is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Radan Pricing Page](https://www.radan.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Radan?",
@@ -5189,7 +5162,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -5360,7 +5332,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Lantek Expert cost?",
-        "a": "Lantek Expert is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Lantek Expert is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Lantek Expert Pricing Page](https://www.lanteksms.com/en/software/expert-punch) for live pricing."
       },
       {
         "q": "Is there a free version of Lantek Expert?",
@@ -5392,7 +5364,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
     "last_updated": "2023-08-20",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
@@ -5563,7 +5534,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SigmaNEST cost?",
-        "a": "SigmaNEST is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SigmaNEST is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SigmaNEST Pricing Page](https://www.sigmanest.com/) for live pricing."
       },
       {
         "q": "Is there a free version of SigmaNEST?",
@@ -5595,7 +5566,6 @@ export const c5Tools: Tool[] = [
     },
     "expert_verdict": "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
     "last_updated": "2024-02-29",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
@@ -5692,7 +5662,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Fluent cost?",
-        "a": "ANSYS Fluent is licensed on a Subscription model. Available editions include Commercial Seat. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ANSYS Fluent is licensed on a Subscription model. Available editions include Commercial Seat. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ANSYS Fluent Pricing Page](https://www.ansys.com/products/fluids/ansys-fluent) for live pricing."
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
@@ -5788,7 +5758,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2026 R1",
     "file_formats_in": [
       "MSH",
       "CAS",
@@ -5876,7 +5845,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Workbench cost?",
-        "a": "ANSYS Workbench is licensed on a Subscription model. Available editions include Enterprise CAE Suite. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ANSYS Workbench is licensed on a Subscription model. Available editions include Enterprise CAE Suite. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ANSYS Workbench Pricing Page](https://www.ansys.com/products/ansys-workbench) for live pricing."
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
@@ -5972,7 +5941,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "WBPJ",
       "STEP",
@@ -5993,7 +5961,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Enterprise CAE Suite",
-        "price": "30,000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Multiphysics project tree",
@@ -6071,7 +6039,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Discovery cost?",
-        "a": "ANSYS Discovery is licensed on a Subscription model. Available editions include Standard Exploration, High-Fidelity Refinement. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ANSYS Discovery is licensed on a Subscription model. Available editions include Standard Exploration, High-Fidelity Refinement. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ANSYS Discovery Pricing Page](https://www.ansys.com/products/3d-design/ansys-discovery) for live pricing."
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
@@ -6167,7 +6135,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "SCDM",
       "STEP",
@@ -6192,7 +6159,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard Exploration",
-        "price": "2,280",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Real-time GPU physics simulation",
@@ -6203,7 +6170,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "High-Fidelity Refinement",
-        "price": "5,500",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Integrated Ansys Mechanical & Fluent solvers",
@@ -6280,7 +6247,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Abaqus cost?",
-        "a": "Abaqus is licensed on a Subscription model. Available editions include Abaqus/Standard & Explicit. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Abaqus is licensed on a Subscription model. Available editions include Abaqus/Standard & Explicit. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Abaqus Pricing Page](https://www.3ds.com/products/simulia/abaqus) for live pricing."
       },
       {
         "q": "Is there a free version of Abaqus?",
@@ -6376,7 +6343,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2025",
     "file_formats_in": [
       "INP",
       "STEP",
@@ -6398,7 +6364,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Abaqus/Standard & Explicit",
-        "price": "25,000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Non-linear structural analysis",
@@ -6478,7 +6444,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does COMSOL Multiphysics cost?",
-        "a": "COMSOL Multiphysics is licensed on a Perpetual model. Available editions include Core Platform. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "COMSOL Multiphysics is licensed on a Perpetual model. Available editions include Core Platform. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official COMSOL Multiphysics Pricing Page](https://www.comsol.com) for live pricing."
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
@@ -6574,7 +6540,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "6.3",
     "file_formats_in": [
       "MPH",
       "STEP",
@@ -6602,7 +6567,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Core Platform",
-        "price": "3,995",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Base Multiphysics environment",
@@ -6678,7 +6643,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does LS-DYNA cost?",
-        "a": "LS-DYNA is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "LS-DYNA is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official LS-DYNA Pricing Page](https://www.ansys.com/products/structures/ansys-ls-dyna) for live pricing."
       },
       {
         "q": "Is there a free version of LS-DYNA?",
@@ -6774,7 +6739,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "K",
@@ -6793,7 +6757,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$20,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Explicit and implicit time-integration",
@@ -6803,7 +6767,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$29,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Explicit and implicit time-integration",
@@ -6893,7 +6857,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Simcenter STAR-CCM+ cost?",
-        "a": "Simcenter STAR-CCM+ is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Simcenter STAR-CCM+ is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Simcenter STAR-CCM+ Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/) for live pricing."
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
@@ -6989,7 +6953,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2412",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -7010,7 +6973,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$25,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Polyhedral and trimmed-cell automatic meshing",
@@ -7020,7 +6983,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$36,250",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Polyhedral and trimmed-cell automatic meshing",
@@ -7208,7 +7171,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "blockMeshDict",
       "snappyHexMeshDict",
@@ -7228,7 +7190,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Community Open Source",
-        "price": "0",
+        "price": "Free",
         "period": "/forever",
         "features": [
           "Full OpenFOAM CFD solver suite",
@@ -7305,7 +7267,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SimScale cost?",
-        "a": "SimScale is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SimScale is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SimScale Pricing Page](https://www.simscale.com/product/pricing/) for live pricing."
       },
       {
         "q": "Is there a free version of SimScale?",
@@ -7401,7 +7363,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-06-30",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7420,7 +7381,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,400",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "CFD, FEA, thermal, particle dynamics in the browser",
@@ -7430,7 +7391,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,480",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "CFD, FEA, thermal, particle dynamics in the browser",
@@ -7518,7 +7479,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Femap cost?",
-        "a": "Femap is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Femap is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Femap Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/) for live pricing."
       },
       {
         "q": "Is there a free version of Femap?",
@@ -7614,7 +7575,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2023-05-28",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "Parasolid",
@@ -7635,7 +7595,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$12,000",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Best-in-class structural FE preprocessing",
@@ -7645,7 +7605,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$17,400",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Best-in-class structural FE preprocessing",
@@ -7734,7 +7694,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Altair Inspire cost?",
-        "a": "Altair Inspire is licensed on a Subscription model. Available editions include Inspire Generative. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Altair Inspire is licensed on a Subscription model. Available editions include Inspire Generative. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altair Inspire Pricing Page](https://altair.com/inspire) for live pricing."
       },
       {
         "q": "Is there a free version of Altair Inspire?",
@@ -7830,7 +7790,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7852,7 +7811,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Inspire Generative",
-        "price": "6,000",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Topology optimization with OptiStruct",
@@ -7927,7 +7886,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Patran cost?",
-        "a": "MSC Patran is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MSC Patran is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MSC Patran Pricing Page](https://hexagon.com/products/patran) for live pricing."
       },
       {
         "q": "Is there a free version of MSC Patran?",
@@ -8023,7 +7982,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "PAT",
@@ -8043,7 +8001,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$14,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Patran Command Language (PCL) automation",
@@ -8053,7 +8011,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$20,300",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Patran Command Language (PCL) automation",
@@ -8141,7 +8099,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Adams cost?",
-        "a": "MSC Adams is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "MSC Adams is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MSC Adams Pricing Page](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams) for live pricing."
       },
       {
         "q": "Is there a free version of MSC Adams?",
@@ -8237,7 +8195,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "ADM",
@@ -8257,7 +8214,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$18,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Adams/Car vehicle dynamics templates",
@@ -8267,7 +8224,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$26,100",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Adams/Car vehicle dynamics templates",
@@ -8353,7 +8310,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAESAR II cost?",
-        "a": "CAESAR II is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CAESAR II is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CAESAR II Pricing Page](https://hexagon.com/products/caesar-ii) for live pricing."
       },
       {
         "q": "Is there a free version of CAESAR II?",
@@ -8449,7 +8406,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2024-01-12",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "CII",
@@ -8468,7 +8424,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$8,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME B31.1/B31.3/B31.4/B31.8 code checks",
@@ -8478,7 +8434,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$11,600",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME B31.1/B31.3/B31.4/B31.8 code checks",
@@ -8566,7 +8522,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley AutoPIPE cost?",
-        "a": "Bentley AutoPIPE is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Bentley AutoPIPE is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Bentley AutoPIPE Pricing Page](https://www.bentley.com/software/autopipe/) for live pricing."
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
@@ -8662,7 +8618,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "DAT",
       "PCF",
@@ -8682,7 +8637,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$8,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
@@ -8692,7 +8647,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$11,600",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
@@ -8780,7 +8735,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PV Elite cost?",
-        "a": "PV Elite is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "PV Elite is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official PV Elite Pricing Page](https://hexagon.com/products/pv-elite) for live pricing."
       },
       {
         "q": "Is there a free version of PV Elite?",
@@ -8876,7 +8831,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "PVI",
@@ -8895,7 +8849,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$6,500",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME VIII Div 1 & Div 2 code compliance",
@@ -8905,7 +8859,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$9,425",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "ASME VIII Div 1 & Div 2 code compliance",
@@ -8990,7 +8944,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AspenTech Aspen HYSYS cost?",
-        "a": "AspenTech Aspen HYSYS is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "AspenTech Aspen HYSYS is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AspenTech Aspen HYSYS Pricing Page](https://www.aspentech.com/en/products/engineering/aspen-hysys) for live pricing."
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
@@ -9085,7 +9039,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "quote_only": true,
     "file_formats_in": [
       "HSC",
@@ -9104,7 +9057,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$25,000",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Steady-state and dynamic process simulation",
@@ -9114,7 +9067,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$36,250",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Steady-state and dynamic process simulation",
@@ -9203,7 +9156,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI SAP2000 cost?",
-        "a": "CSI SAP2000 is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CSI SAP2000 is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CSI SAP2000 Pricing Page](https://www.csiamerica.com/products/sap2000) for live pricing."
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
@@ -9299,7 +9252,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "SDB",
       "EDBS",
@@ -9320,7 +9272,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,495",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Linear / non-linear static and dynamic analysis",
@@ -9330,7 +9282,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,618",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Linear / non-linear static and dynamic analysis",
@@ -9419,7 +9371,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI ETABS cost?",
-        "a": "CSI ETABS is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "CSI ETABS is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CSI ETABS Pricing Page](https://www.csiamerica.com/products/etabs) for live pricing."
       },
       {
         "q": "Is there a free version of CSI ETABS?",
@@ -9515,7 +9467,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "EDB",
       "DWG",
@@ -9535,7 +9486,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,495",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Slab, beam, column, shear-wall integrated design",
@@ -9545,7 +9496,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,618",
+        "price": "Official Store",
         "period": "one-time perpetual",
         "features": [
           "Slab, beam, column, shear-wall integrated design",
@@ -9635,7 +9586,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley STAAD.Pro cost?",
-        "a": "Bentley STAAD.Pro is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Bentley STAAD.Pro is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Bentley STAAD.Pro Pricing Page](https://www.bentley.com/software/staad-pro/) for live pricing."
       },
       {
         "q": "Is there a free version of Bentley STAAD.Pro?",
@@ -9731,7 +9682,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "STD",
       "DWG",
@@ -9751,7 +9701,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$3,200",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear / non-linear static and dynamic analysis",
@@ -9761,7 +9711,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$4,640",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear / non-linear static and dynamic analysis",
@@ -9849,7 +9799,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Tedds cost?",
-        "a": "Tekla Tedds is licensed on a Subscription model. Available editions include Tedds Standalone. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Tekla Tedds is licensed on a Subscription model. Available editions include Tedds Standalone. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Tekla Tedds Pricing Page](https://www.tekla.com/products/tekla-tedds) for live pricing."
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
@@ -9945,7 +9895,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "TED",
       "RTF",
@@ -9962,7 +9911,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Tedds Standalone",
-        "price": "2,400",
+        "price": "Official Store",
         "period": "/yr",
         "features": [
           "Automated structural calculations",
@@ -10038,7 +9987,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Robot Structural Analysis cost?",
-        "a": "Autodesk Robot Structural Analysis is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "Autodesk Robot Structural Analysis is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Autodesk Robot Structural Analysis Pricing Page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview#buying-options) for live pricing."
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
@@ -10134,7 +10083,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "RTD",
       "RVT (Direct Link)",
@@ -10152,7 +10100,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,615",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear and non-linear analysis",
@@ -10162,7 +10110,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,792",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear and non-linear analysis",
@@ -10250,7 +10198,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does IDEA StatiCa cost?",
-        "a": "IDEA StatiCa is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "IDEA StatiCa is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official IDEA StatiCa Pricing Page](https://www.ideastatica.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
@@ -10346,7 +10294,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "Tekla (Direct link)",
       "Revit",
@@ -10367,7 +10314,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,300",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "CBFEM (Component-Based FEM) for connections",
@@ -10377,7 +10324,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,335",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "CBFEM (Component-Based FEM) for connections",
@@ -10464,7 +10411,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does RISA-3D cost?",
-        "a": "RISA-3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "RISA-3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official RISA-3D Pricing Page](https://risa.com/products/risa-3d#pricing) for live pricing."
       },
       {
         "q": "Is there a free version of RISA-3D?",
@@ -10560,7 +10507,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "last_updated": "2026-09-02",
-    "version": "2024",
     "file_formats_in": [
       "R3D",
       "DXF",
@@ -10578,7 +10524,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard / Base Edition",
-        "price": "$2,200",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear and P-Delta analysis",
@@ -10588,7 +10534,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Professional / Advanced Suite",
-        "price": "$3,190",
+        "price": "Official Store",
         "period": "per year",
         "features": [
           "Linear and P-Delta analysis",
@@ -10621,7 +10567,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "midas Civil Standard",
-        "price": "$5,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Basic structural analysis",
@@ -10633,7 +10579,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "midas Civil Professional",
-        "price": "$10,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Full structural analysis",
@@ -10809,7 +10755,6 @@ export const c5Tools: Tool[] = [
       "Enterprise-focused pricing"
     ],
     "last_updated": "2026-09-02",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Korean",
@@ -10875,7 +10820,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does midas Civil cost?",
-        "a": "midas Civil is licensed on a Subscription model. Available editions include midas Civil Standard, midas Civil Professional, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "midas Civil is licensed on a Subscription model. Available editions include midas Civil Standard, midas Civil Professional, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official midas Civil Pricing Page](https://www.midasoft.com/) for live pricing."
       },
       {
         "q": "Is there a free version of midas Civil?",
@@ -10905,8 +10850,7 @@ export const c5Tools: Tool[] = [
         "ACI"
       ]
     },
-    "expert_verdict": "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities.",
-    "version": "2026 NX (v2.2)"
+    "expert_verdict": "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities."
   },
   {
     "id": "t127",
@@ -10918,7 +10862,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "midas Gen Standard",
-        "price": "$4,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Basic structural analysis",
@@ -10930,7 +10874,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "midas Gen Professional",
-        "price": "$8,000+",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "Full structural analysis",
@@ -11105,7 +11049,6 @@ export const c5Tools: Tool[] = [
       "Enterprise-focused pricing"
     ],
     "last_updated": "2026-09-02",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "Korean",
@@ -11171,7 +11114,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does midas Gen cost?",
-        "a": "midas Gen is licensed on a Subscription model. Available editions include midas Gen Standard, midas Gen Professional, Educational. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "midas Gen is licensed on a Subscription model. Available editions include midas Gen Standard, midas Gen Professional, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official midas Gen Pricing Page](https://www.midasoft.com/) for live pricing."
       },
       {
         "q": "Is there a free version of midas Gen?",
@@ -11201,8 +11144,7 @@ export const c5Tools: Tool[] = [
         "ACI"
       ]
     },
-    "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
-    "version": "2026 NX (v2.1)"
+    "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation."
   },
   {
     "id": "t147",
@@ -11214,7 +11156,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -11338,7 +11280,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SCIA Engineer cost?",
-        "a": "SCIA Engineer is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "SCIA Engineer is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SCIA Engineer Pricing Page](https://www.scia.net/) for live pricing."
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
@@ -11363,7 +11305,6 @@ export const c5Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -11392,7 +11333,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "PowerMill Standard",
-        "price": "Subscription",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "3-axis and 5-axis machining",
@@ -11404,7 +11345,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "PowerMill Ultimate",
-        "price": "Subscription",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "All Standard features",
@@ -11417,7 +11358,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Fusion 360 with PowerMill",
-        "price": "Subscription",
+        "price": "Official Store",
         "period": "annual",
         "features": [
           "PowerMill CAM capabilities",
@@ -11580,7 +11521,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PowerMill cost?",
-        "a": "PowerMill is licensed on a Subscription model. Available editions include PowerMill Standard, PowerMill Ultimate, Fusion 360 with PowerMill. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "PowerMill is licensed on a Subscription model. Available editions include PowerMill Standard, PowerMill Ultimate, Fusion 360 with PowerMill. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official PowerMill Pricing Page](https://www.autodesk.com/products/fusion-360-with-powermill/overview) for live pricing."
       },
       {
         "q": "Is there a free version of PowerMill?",
@@ -11611,9 +11552,7 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
-    "version": "2025",
     "last_updated": "2026-08-03",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "German",
@@ -11689,7 +11628,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "N/A",
+        "price": "Official Store",
         "period": "initial",
         "features": [],
         "is_popular": false
@@ -11813,7 +11752,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ESPRIT cost?",
-        "a": "ESPRIT is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "ESPRIT is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ESPRIT Pricing Page](https://www.espritcam.com/) for live pricing."
       },
       {
         "q": "Is there a free version of ESPRIT?",
@@ -11838,7 +11777,6 @@ export const c5Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "version": "2025",
     "expert_verdict": "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
@@ -12051,7 +11989,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PAM-STAMP cost?",
-        "a": "PAM-STAMP is licensed on a Perpetual model. Available editions include PAM-STAMP Standard, PAM-STAMP Advanced. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "PAM-STAMP is licensed on a Perpetual model. Available editions include PAM-STAMP Standard, PAM-STAMP Advanced. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official PAM-STAMP Pricing Page](https://www.esi-group.com/products/pam-stamp) for live pricing."
       },
       {
         "q": "Is there a free version of PAM-STAMP?",
@@ -12081,9 +12019,7 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "ESI Group's high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
-    "version": "2025",
     "last_updated": "2025-05-21",
-    "free_trial_days": 30,
     "languages": [
       "English",
       "French",
@@ -12201,7 +12137,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does NestForge cost?",
-        "a": "NestForge offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the official NestForge pricing page for live regional pricing."
+        "a": "NestForge offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official NestForge Pricing Page](https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide) for live regional pricing."
       },
       {
         "q": "Is there a free version of NestForge?",
@@ -12227,7 +12163,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Free",
-        "price": "€0",
+        "price": "Free",
         "period": "forever",
         "features": [
           "Nesting and preview for jobs of any size",
@@ -12239,7 +12175,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Pro (Lifetime)",
-        "price": "€49",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Export without a part or sheet limit",
@@ -12394,7 +12330,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does QuantCAD-Hybrid cost?",
-        "a": "QuantCAD-Hybrid is licensed on a Subscription / Perpetual model. Available editions include Industrial (1-Year), Industrial (3-Year), Perpetual Offline, Permanent Multi-Seat. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, click the Official Live Pricing link on this page to verify real-time pricing directly on the vendor portal."
+        "a": "QuantCAD-Hybrid is licensed on a Subscription / Perpetual model. Available editions include Industrial (1-Year), Industrial (3-Year), Perpetual Offline, Permanent Multi-Seat. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official QuantCAD-Hybrid Pricing Page](https://dinamicpro.ro/quantcad-hybrid.html) for live pricing."
       },
       {
         "q": "Is there a free version of QuantCAD-Hybrid?",
@@ -12416,7 +12352,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Industrial (1-Year)",
-        "price": "€1,500",
+        "price": "Official Store",
         "period": "year",
         "features": [
           "1-year industrial license per workstation",
@@ -12427,7 +12363,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Industrial (3-Year)",
-        "price": "€4,000",
+        "price": "Official Store",
         "period": "3-year",
         "features": [
           "3-year industrial license per workstation",
@@ -12439,7 +12375,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Perpetual Offline",
-        "price": "€4,500",
+        "price": "Official Store",
         "period": "one-time",
         "features": [
           "Permanent buyout license per workstation",
@@ -12450,7 +12386,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "name": "Permanent Multi-Seat",
-        "price": "€12,000",
+        "price": "Official Store",
         "period": "one-time (3 seats)",
         "features": [
           "Permanent license for minimum 3 workstations",
