@@ -24,6 +24,19 @@ export interface Tool {
   description: string;
   category_id: string;
   pricing_type: PricingType;
+  /**
+   * INTERNAL BENCHMARK ONLY — NEVER RENDER THIS AS A PRICE.
+   *
+   * Vendor prices change constantly and differ by country, currency, tax and
+   * reseller, so the site never publishes a figure. This number exists purely
+   * as a relative magnitude anchor for machine logic: directory sorting,
+   * budget filtering, "cheaper than X" comparison verdicts, SEO collection
+   * thresholds and the TCO calculator.
+   *
+   * Any user-facing price must link to the vendor's official pricing page
+   * (`pricing_url`) instead. See `price_tier` for the coarse, stable
+   * low/mid/high/quote/free bucket that IS safe to display.
+   */
   starting_price: number;
   /** What starting_price denotes: monthly subscription, annual subscription, or one-time buyout. */
   price_period?: "month" | "year" | "one-time";
