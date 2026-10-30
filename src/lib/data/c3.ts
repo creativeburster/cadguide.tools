@@ -1078,7 +1078,8 @@ export const c3Tools: Tool[] = [
       "STL",
       "PDF"
     ],
-    "pricing_url": "https://www.chiefarchitect.com/products/home-design/premier/"
+    "pricing_url": "https://www.chiefarchitect.com/products/home-design/premier/",
+    "trial_url": "https://www.chiefarchitect.com/products/home-design/premier/"
   },
   {
     "id": "t44",
@@ -1262,7 +1263,8 @@ export const c3Tools: Tool[] = [
       "infraworks",
       "carlson-survey",
       "microstation"
-    ]
+    ],
+    "trial_url": "https://www.autodesk.com/products/civil-3d/overview#buying-options"
   },
   {
     "id": "t74",
@@ -4768,7 +4770,8 @@ export const c3Tools: Tool[] = [
       "Automated Shop Drawings",
       "Reinforcement Generation",
       "Workflow Automation"
-    ]
+    ],
+    "trial_url": "https://www.allplan.com/products/allplan-precast/"
   },
   {
     "id": "t258",

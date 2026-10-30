@@ -4507,7 +4507,8 @@ export const c7Tools: Tool[] = [
         "ASME"
       ]
     },
-    "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts."
+    "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
+    "trial_url": "https://www.aveva.com/en/products/e3d-design/"
   },
   {
     "id": "t133",
@@ -5083,7 +5084,8 @@ export const c7Tools: Tool[] = [
           "Dedicated application engineer & enterprise SLA"
         ]
       }
-    ]
+    ],
+    "trial_url": "https://www.accelygen.com/Pricing"
   },
   {
     "id": "t251",

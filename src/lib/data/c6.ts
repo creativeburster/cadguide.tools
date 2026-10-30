@@ -877,7 +877,8 @@ export const c6Tools: Tool[] = [
         "GOST"
       ]
     },
-    "expert_verdict": "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design."
+    "expert_verdict": "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design.",
+    "trial_url": "https://www.eplan-software.com/services/eplan-subscription/"
   },
   {
     "id": "t160",
@@ -1390,7 +1391,8 @@ export const c6Tools: Tool[] = [
         "JEDEC"
       ]
     },
-    "expert_verdict": "Cadence's industry-standard electronic design suite, renowned for fast schematic capture and PCB layout."
+    "expert_verdict": "Cadence's industry-standard electronic design suite, renowned for fast schematic capture and PCB layout.",
+    "trial_url": "https://www.orcad.com/"
   },
   {
     "id": "t162",
@@ -1711,7 +1713,8 @@ export const c6Tools: Tool[] = [
         "JEDEC"
       ]
     },
-    "expert_verdict": "Siemens' professional PCB design software, combining ease-of-use with advanced enterprise-grade routing."
+    "expert_verdict": "Siemens' professional PCB design software, combining ease-of-use with advanced enterprise-grade routing.",
+    "trial_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/"
   },
   {
     "id": "t163",

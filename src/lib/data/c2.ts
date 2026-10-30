@@ -5313,7 +5313,8 @@ export const c2Tools: Tool[] = [
         "GOST"
       ]
     },
-    "expert_verdict": "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities."
+    "expert_verdict": "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities.",
+    "trial_url": "https://ascon.net/"
   },
   {
     "id": "t122",
@@ -5891,7 +5892,8 @@ export const c2Tools: Tool[] = [
       "End-to-End PLM",
       "Advanced Simulation",
       "Manufacturing Planning"
-    ]
+    ],
+    "trial_url": "https://www.3ds.com/3dexperience"
   },
   {
     "id": "t257",
@@ -6131,7 +6133,8 @@ export const c2Tools: Tool[] = [
           }
         ]
       }
-    ]
+    ],
+    "trial_url": "https://www.mechdesigned.com/en/software/"
   },
   {
     "id": "t259",

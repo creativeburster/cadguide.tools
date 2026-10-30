@@ -10850,7 +10850,8 @@ export const c5Tools: Tool[] = [
         "ACI"
       ]
     },
-    "expert_verdict": "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities."
+    "expert_verdict": "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities.",
+    "trial_url": "https://www.midasoft.com/"
   },
   {
     "id": "t127",
@@ -11144,7 +11145,8 @@ export const c5Tools: Tool[] = [
         "ACI"
       ]
     },
-    "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation."
+    "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
+    "trial_url": "https://www.midasoft.com/"
   },
   {
     "id": "t147",
@@ -11616,7 +11618,8 @@ export const c5Tools: Tool[] = [
       "Collision Detection",
       "Automated Toolpath Generation",
       "Large Assembly Support"
-    ]
+    ],
+    "trial_url": "https://www.autodesk.com/products/fusion-360-with-powermill/overview"
   },
   {
     "id": "t151",
@@ -12073,7 +12076,8 @@ export const c5Tools: Tool[] = [
       "FEA Analysis",
       "Die Design",
       "Process Simulation"
-    ]
+    ],
+    "trial_url": "https://www.esi-group.com/products/pam-stamp"
   },
   {
     "id": "t249",
