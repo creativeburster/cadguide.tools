@@ -1918,7 +1918,7 @@ export const c1Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://www.progesoft.com/products/progecad-professional",
-    "pricing_url": "https://www.progesoft.com/buy",
+    "pricing_url": "https://www.progesoft.com/en/buy",
     "trial_url": "https://www.progesoft.com/products/progecad-professional/download",
     "affiliate_url": null,
     "score": 3.6,
@@ -1945,7 +1945,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does progeCAD Professional cost?",
-        "a": "progeCAD Professional is sold as a one-time Perpetual license (in Single, Single+ portable, NLM Network, and Corporate Site configurations) with optional iCARE maintenance. Because official prices, currencies (EUR/USD), taxes, and regional distributor rates vary by country, please visit the [Official progeCAD Store](https://www.progesoft.com/buy) for live regional pricing."
+        "a": "progeCAD Professional is sold as a one-time Perpetual license (in Single, Single+ portable, NLM Network, and Corporate Site configurations) with optional iCARE maintenance. Because official prices, currencies (EUR/USD), taxes, and regional distributor rates vary by country, please visit the [Official progeCAD Store](https://www.progesoft.com/en/buy) for live regional pricing."
       },
       {
         "q": "Does progeCAD Professional offer a free trial?",

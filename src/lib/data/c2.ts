@@ -370,7 +370,7 @@ export const c2Tools: Tool[] = [
     ],
     "official_url": "https://www.sketchup.com",
     "pricing_url": "https://www.sketchup.com/plans-and-pricing",
-    "trial_url": "https://www.sketchup.com/try",
+    "trial_url": "https://www.sketchup.com/try-sketchup",
     "price_tier": "low",
     "affiliate_url": null,
     "score": 4.7,
