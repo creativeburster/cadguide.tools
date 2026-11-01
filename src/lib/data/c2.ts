@@ -1986,7 +1986,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Solid Edge?",
-        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product 30-day trial is also available; check the [Official Solid Edge Trial Page](https://resources.sw.siemens.com/en-US/trial-solid-edge/) for current terms."
+        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product trial is also available; check the [Official Solid Edge Trial Page](https://resources.sw.siemens.com/en-US/trial-solid-edge/) for current terms."
       },
       {
         "q": "What operating systems does Solid Edge support?",
@@ -2123,7 +2123,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does Autodesk Inventor offer a free trial?",
-        "a": "Yes — Autodesk provides an official 30-day free trial of Inventor, plus free educational access for verified students and educators. Because trial terms are updated periodically by the vendor, visit the [Official Inventor Free Trial Page](https://www.autodesk.com/products/inventor/free-trial) for current details."
+        "a": "Yes — Autodesk provides an official free trial of Inventor, plus free educational access for verified students and educators. Because trial terms are updated periodically by the vendor, visit the [Official Inventor Free Trial Page](https://www.autodesk.com/products/inventor/free-trial) for current details."
       },
       {
         "q": "What operating systems does Autodesk Inventor support?",
@@ -2372,7 +2372,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Does PTC Creo offer a free trial?",
-        "a": "Yes — PTC provides an official Try-and-Buy program with fully functional Creo and Creo+ trials (traditionally 30 days). Because trial terms are updated periodically by the vendor, visit the [Official PTC Creo Trial Page](https://www.ptc.com/en/products/creo/trial) for current details."
+        "a": "Yes — PTC provides an official Try-and-Buy program with fully functional Creo and Creo+ trials. Because trial terms are updated periodically by the vendor, visit the [Official PTC Creo Trial Page](https://www.ptc.com/en/products/creo/trial) for current details."
       },
       {
         "q": "What operating systems does PTC Creo support?",
@@ -2775,7 +2775,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Shapr3D?",
-        "a": "Yes — Shapr3D Basic is a permanent free tier that includes all modeling tools on macOS, iPadOS, Windows, and visionOS with limited projects and basic-quality exports. A free 14-day Pro trial (with credit card) is also available, and the license terms are updated periodically — check the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for current details."
+        "a": "Yes — Shapr3D Basic is a permanent free tier that includes all modeling tools on macOS, iPadOS, Windows, and visionOS with limited projects and basic-quality exports. A free Pro trial (with credit card) is also available, and the license terms are updated periodically — check the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for current details."
       },
       {
         "q": "What operating systems does Shapr3D support?",
@@ -3082,7 +3082,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alibre Design?",
-        "a": "Yes — Alibre Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Alibre Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Alibre Design support?",
@@ -3194,7 +3194,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maya?",
-        "a": "Yes — Maya offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Maya offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Maya support?",
@@ -3620,7 +3620,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
-        "a": "Yes — Geomagic Design X offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Geomagic Design X offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Geomagic Design X support?",
@@ -3811,7 +3811,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
-        "a": "Yes — Alias AutoStudio offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Alias AutoStudio offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Alias AutoStudio support?",
@@ -4021,7 +4021,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZW3D?",
-        "a": "Yes — ZW3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — ZW3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ZW3D support?",
@@ -4232,7 +4232,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Plasticity?",
-        "a": "Yes — Plasticity offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Plasticity offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Plasticity support?",
@@ -4436,7 +4436,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MoI3D?",
-        "a": "Yes — MoI3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — MoI3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MoI3D support?",
@@ -5288,7 +5288,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
-        "a": "Yes — KOMPAS-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — KOMPAS-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does KOMPAS-3D support?",
@@ -5779,7 +5779,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
-        "a": "Yes — 3DEXPERIENCE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — 3DEXPERIENCE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does 3DEXPERIENCE support?",
@@ -5938,7 +5938,7 @@ export const c2Tools: Tool[] = [
       "Kinematic motion studies, dynamic interference, and clearance checks (Expert & Premium)",
       "Automatic Bill of Materials (BOM) generation and interactive HTML 3D model web export (Expert & Premium)",
       "Integrated 2.5D/3D CNC milling and turning CAM toolpath generation with post-processing (Premium)",
-      "Commercial licensing via paid perpetual buyout or annual subscription with 30-day Premium trial"
+      "Commercial licensing via paid perpetual buyout or annual subscription with a Premium trial"
     ],
     "user_scales": [
       "Individuals",
@@ -5955,7 +5955,7 @@ export const c2Tools: Tool[] = [
       "Native SolidWorks (.sldprt/.sldasm) file import across all editions ensures friction-free supply chain collaboration",
       "Surface modeling, sheet metal DXF, motion studies, and HTML 3D export included starting from Expert edition",
       "Integrated 2.5D/3D milling and turning CAM in Premium edition consolidates design and manufacturing",
-      "Includes generous 30-day full-featured trial of MECHCAD Premium"
+      "Includes a full-featured trial of MECHCAD Premium"
     ],
     "cons": [
       "Windows 10/11 64-bit exclusive (no native macOS or Linux versions)",
@@ -5991,7 +5991,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is MECHCAD a subscription or a perpetual license?",
-        "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional 30-day free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
+        "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
       }
     ],
     "pricing_tiers": [
@@ -6004,7 +6004,7 @@ export const c2Tools: Tool[] = [
           "Model-derived associative 2D drawings",
           "Native SolidWorks (.sldprt/.sldasm) file import",
           "Commercial perpetual license or annual subscription",
-          "Free 30-day Premium trial available"
+          "Free Premium trial available"
         ]
       },
       {

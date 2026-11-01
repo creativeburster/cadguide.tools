@@ -57,7 +57,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MatrixGold?",
-        "a": "Yes — MatrixGold offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — MatrixGold offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does MatrixGold support?",
@@ -199,7 +199,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
-        "a": "Yes — AVEVA Marine offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — AVEVA Marine offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AVEVA Marine support?",
@@ -399,7 +399,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CLO 3D?",
-        "a": "Yes — CLO 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — CLO 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does CLO 3D support?",
@@ -617,7 +617,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Infraworks?",
-        "a": "Yes — Infraworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Infraworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Infraworks support?",
@@ -795,7 +795,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of 3ds Max?",
-        "a": "Yes — 3ds Max offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — 3ds Max offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does 3ds Max support?",
@@ -981,7 +981,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZBrush?",
-        "a": "Yes — ZBrush offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — ZBrush offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does ZBrush support?",
@@ -1143,7 +1143,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KeyShot?",
-        "a": "Yes — KeyShot offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — KeyShot offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does KeyShot support?",
@@ -1328,7 +1328,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lumion?",
-        "a": "Yes — Lumion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Lumion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Lumion support?",
@@ -1504,7 +1504,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Enscape?",
-        "a": "Yes — Enscape offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Enscape offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Enscape support?",
@@ -1677,7 +1677,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Twinmotion?",
-        "a": "Yes — Twinmotion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Twinmotion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Twinmotion support?",
@@ -2369,7 +2369,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simplify3D?",
-        "a": "Yes — Simplify3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Simplify3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Simplify3D support?",
@@ -2576,7 +2576,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
-        "a": "Yes — Autodesk Netfabb offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Autodesk Netfabb offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Autodesk Netfabb support?",
@@ -2793,7 +2793,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
-        "a": "Yes — Marvelous Designer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Marvelous Designer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Marvelous Designer support?",
@@ -3217,7 +3217,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of V-Ray?",
-        "a": "Yes — V-Ray offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — V-Ray offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does V-Ray support?",
@@ -3423,7 +3423,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Corona Renderer?",
-        "a": "Yes — Corona Renderer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Corona Renderer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Corona Renderer support?",
@@ -3627,7 +3627,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
-        "a": "Yes — Adobe Substance 3D Painter offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Adobe Substance 3D Painter offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Adobe Substance 3D Painter support?",
@@ -3840,7 +3840,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Carlson Survey?",
-        "a": "Yes — Carlson Survey offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Carlson Survey offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Carlson Survey support?",
@@ -4057,7 +4057,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
-        "a": "Yes — Trimble Business Center offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Trimble Business Center offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Trimble Business Center support?",
@@ -4481,7 +4481,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
-        "a": "Yes — AVEVA E3D Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — AVEVA E3D Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does AVEVA E3D Design support?",
@@ -4648,7 +4648,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
-        "a": "Yes — Maptek Vulcan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration (e.g., 7, 14, or 30 days) and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Maptek Vulcan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
       },
       {
         "q": "What operating systems does Maptek Vulcan support?",
