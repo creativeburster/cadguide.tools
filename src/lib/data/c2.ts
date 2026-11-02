@@ -4856,29 +4856,45 @@ export const c2Tools: Tool[] = [
     "name": "CAD Exchanger",
     "slug": "cad-exchanger",
     "logo_url": "/logos/cad-exchanger.png",
-    "short_desc": "Mobile 3D CAD viewer and converter for multiple file formats.",
-    "description": "CAD Exchanger is a mobile application for viewing and converting 3D CAD files. It supports a wide range of formats including STEP, IGES, STL, and more, making it useful for engineers and designers who need to work with different CAD systems.",
+    "short_desc": "CAD data conversion suite — desktop workbench, C++ SDK, cloud API and mobile viewer — for translating STEP, JT, Parasolid, CATIA and other formats with B-Rep fidelity.",
+    "description": "CAD Exchanger is a CAD data exchange suite from CADEX, an Estonian software house, rather than a single application. The family has three faces: CAD Exchanger Lab, a desktop workbench for inspecting, comparing and converting parts and assemblies while preserving B-Rep geometry and assembly structure; CAD Exchanger SDK, a developer toolkit with C++, .NET and Java bindings that other software vendors embed to add import, export and tessellation for dozens of formats; and CAD Exchanger Cloud plus a mobile viewer for browsing models away from the desk. Coverage spans the proprietary end of the market — CATIA, NX, Creo, SolidWorks, Inventor, JT, Parasolid and ACIS — alongside neutral formats such as STEP, IGES and STL, with repair and healing tools for the translation damage that usually follows a format hop. Vendors use it to replace homegrown translators, manufacturers use it to consume customer data, and engineering teams use the workbench to check what actually survived a conversion. Commercial terms are quoted per seat or per SDK licence rather than published as a list price.",
     "pricing_tiers": [
       {
-        "name": "Free",
-        "price": "Free",
-        "period": "forever",
+        "name": "CAD Exchanger Lab",
+        "price": "Official Store",
+        "period": "perpetual",
         "features": [
-          "View 3D Files",
-          "Basic Conversion",
-          "File Sharing"
+          "Desktop workbench licences quoted per seat",
+          "B-Rep import, export and conversion",
+          "Assembly structure and metadata preservation",
+          "Model comparison and quality checks",
+          "Batch processing and scripting",
+          "Evaluation licence available on request"
         ],
         "is_popular": true
       },
       {
-        "name": "Pro",
-        "price": "Official Store",
-        "period": "/mo",
+        "name": "CAD Exchanger SDK",
+        "price": "Contact Sales",
+        "period": "annual",
         "features": [
-          "Advanced Conversion",
-          "Batch Processing",
-          "Export Options",
-          "No Watermark"
+          "Embeddable conversion engine for your own product",
+          "C++, .NET and Java bindings",
+          "Desktop, server and cloud deployment",
+          "Format add-ons licensed per module",
+          "Vendor support and updates"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Mobile and Cloud",
+        "price": "Official Store",
+        "period": "annual",
+        "features": [
+          "Free mobile viewer for iOS and Android",
+          "Paid in-app upgrade for conversion on the go",
+          "Browser-based cloud conversion service",
+          "Same translation core as the desktop workbench"
         ],
         "is_popular": false
       }
@@ -4902,6 +4918,60 @@ export const c2Tools: Tool[] = [
           {
             "name": "Metadata Preservation",
             "status": true
+          },
+          {
+            "name": "B-Rep and assembly structure retention",
+            "status": true
+          },
+          {
+            "name": "CAD data preparation and geometry tweaks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Inspection and QA",
+        "items": [
+          {
+            "name": "Model tree and property viewer",
+            "status": true
+          },
+          {
+            "name": "Distance, radius and edge-length measurement",
+            "status": true
+          },
+          {
+            "name": "Mass properties and dimension checks",
+            "status": true
+          },
+          {
+            "name": "Section and exploded views",
+            "status": true
+          },
+          {
+            "name": "PMI and annotation reading",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Developer Platform",
+        "items": [
+          {
+            "name": "Embeddable SDK",
+            "status": true
+          },
+          {
+            "name": "C++, .NET and Java bindings",
+            "status": true
+          },
+          {
+            "name": "Server-side and cloud deployment",
+            "status": true
+          },
+          {
+            "name": "Direct modelling of geometry",
+            "status": false
           }
         ]
       }
@@ -4911,7 +4981,7 @@ export const c2Tools: Tool[] = [
       "meshlab",
       "solid-edge-viewer"
     ],
-    "country": "USA",
+    "country": "Estonia",
     "category_id": "c2",
     "pricing_type": "Freemium",
     "starting_price": 0,
@@ -4931,49 +5001,55 @@ export const c2Tools: Tool[] = [
     "core_features": [
       "3D Viewing",
       "Format Conversion",
+      "Embeddable SDK",
+      "Model Inspection",
       "Cross-platform"
     ],
     "user_scales": [
       "Individuals",
-      "Small Business"
+      "Small Business",
+      "Enterprise"
     ],
     "official_url": "https://cadexchanger.com",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
-      "Wide format support",
-      "Good conversion quality",
-      "Free tier"
+      "Unusually broad coverage including CATIA, NX, Creo, JT and Parasolid",
+      "Keeps B-Rep geometry, assembly structure and PMI through conversion",
+      "Desktop workbench, embeddable SDK and cloud service share one engine",
+      "Model inspection with measurement, mass properties and sectional views",
+      "Free mobile viewer for quick look-ups"
     ],
     "cons": [
-      "Limited editing",
-      "Watermark in free version"
+      "No public price list — licences are quoted per seat or per SDK module",
+      "Not a CAD editor: geometry tweaks are limited",
+      "Heavy format coverage costs more than single-purpose converters"
     ],
     "faqs": [
       {
         "q": "What is CAD Exchanger used for?",
-        "a": "CAD Exchanger is a mobile 3D CAD viewer and converter for viewing and converting 3D CAD files across multiple formats."
+        "a": "CAD Exchanger converts, inspects and validates 3D CAD data. The desktop workbench (CAD Exchanger Lab) opens a file, lets you walk its assembly tree, measure geometry and re-export to another format; the SDK lets software vendors embed the same translation engine in their own products; the mobile and cloud editions handle quick viewing and conversion away from the workstation."
       },
       {
         "q": "How much does CAD Exchanger cost?",
-        "a": "CAD Exchanger offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official CAD Exchanger Pricing Page](https://cadexchanger.com/pricing/) for live regional pricing."
+        "a": "CADEX does not publish a price list. Lab seats and SDK modules are quoted individually, and the cost depends on which format add-ons you need and how many developers will use the SDK. Request a quote through the official licensing enquiry page — regional taxes and volume discounts are applied there."
       },
       {
         "q": "Is there a free version of CAD Exchanger?",
-        "a": "Yes — CAD Exchanger offers a free version with 3D file viewing, basic conversion, and file sharing features."
+        "a": "There is no free desktop edition — Lab is licensed commercially, though an evaluation licence is available. The mobile viewer is free to install and view files with, and conversion on mobile is a paid in-app upgrade."
       },
       {
         "q": "What operating systems does CAD Exchanger support?",
-        "a": "CAD Exchanger officially supports Windows, macOS, Linux, Web browsers (Windows, macOS, and Linux), iOS / iPadOS, and Android."
+        "a": "CAD Exchanger Lab runs on Windows, macOS and Linux; the cloud service works in a browser; and the mobile viewer covers iOS, iPadOS and Android."
       },
       {
         "q": "Which file formats does CAD Exchanger support?",
-        "a": "CAD Exchanger supports a wide range of 3D CAD formats including STEP, IGES, STL, JT, Parasolid, and more."
+        "a": "The suite reads and writes STEP, IGES, JT, Parasolid, ACIS, STL and OBJ, and reads native CATIA, NX, Creo, SolidWorks, Inventor, Solid Edge and IFC files, along with glTF and FBX for visualisation. The exact matrix varies by product and by add-on module, so check the supported formats list on the official site."
       }
     ],
     "tech_specs": {
       "engine": "CAD Exchanger SDK",
-      "multicore": "N/A",
+      "multicore": "Multi-threaded conversion in the SDK; single-threaded workbench UI",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
@@ -4983,7 +5059,7 @@ export const c2Tools: Tool[] = [
         "Parasolid"
       ]
     },
-    "expert_verdict": "CAD Exchanger is a reliable tool for cross-platform 3D CAD viewing and conversion.",
+    "expert_verdict": "A translation and inspection suite rather than a modeller: pick it when CAD data has to survive a hop between systems intact, or when you need the conversion engine inside your own product.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
@@ -5022,7 +5098,7 @@ export const c2Tools: Tool[] = [
       "3MF",
       "USD"
     ],
-    "pricing_url": "https://cadexchanger.com/pricing/"
+    "pricing_url": "https://cadexchanger.com/contact-us/licensing-inquiry/"
   },
   {
     "id": "t117",
@@ -5310,30 +5386,47 @@ export const c2Tools: Tool[] = [
     "name": "DesignSpark Mechanical",
     "slug": "designspark-mechanical",
     "logo_url": "/logos/designspark-mechanical.ico",
-    "short_desc": "Free 3D CAD software for mechanical design with access to extensive component libraries and manufacturer support.",
-    "description": "DesignSpark Mechanical is a free 3D CAD software developed by RS Components that provides professional-grade mechanical design capabilities at no cost. The software offers comprehensive 3D modeling, assembly design, and 2D drawing creation tools, along with access to extensive CAD-neutral component libraries from major manufacturers. DesignSpark Mechanical features direct integration with the RS Components ecosystem, allowing users to access millions of 3D models and component data. The platform supports standard CAD file formats for import and export, enabling seamless collaboration with other CAD systems. DesignSpark Mechanical is widely used by hobbyists, students, small businesses, and engineers for rapid prototyping, product design, and mechanical engineering projects. The software provides design automation tools, engineering support from manufacturers, and a vibrant community for sharing and collaboration.",
+    "short_desc": "Direct-modelling 3D CAD from RS Group with a free Explorer tier, paid Creator and Engineer tiers, and an integrated manufacturer component library.",
+    "description": "DesignSpark Mechanical is a 3D direct-modelling CAD application from RS Group, built in collaboration with Ansys on the SpaceClaim modelling approach rather than a history-based parametric engine. Models are edited by pushing, pulling, blending and combining faces, so geometry imported from other systems can be changed without rebuilding a feature tree. The application includes assembly tools, 2D drawing sheets with GD&T and model-based definition annotations, mass-property and deviation checks, and reverse engineering from scanned meshes. It is tightly coupled to the RS catalogue: designers can pull manufacturer-approved 3D models into a design, tag them to RS part numbers and generate a bill of materials with a production quote. Access is tiered — the free Explorer plan covers core modelling, the manufacturer library and unlimited projects, while the paid Creator and Engineer plans unlock full STEP/IGES/DWG/DXF exchange, the 3D Mirror tool, drawing-sheet detailing, MBD, assembly constraints and cosmetic threads. The software runs on Windows and is used by hobbyists, students, small businesses and engineers for rapid prototyping and product design.",
     "pricing_tiers": [
       {
-        "name": "Free",
+        "name": "Explorer",
         "price": "Free",
         "period": "perpetual",
         "features": [
-          "Full 3D CAD capabilities",
-          "Component library access",
-          "File import/export",
-          "Community support"
+          "Direct modelling with pull, blend, fill and combine tools",
+          "Unlimited projects and design size",
+          "Manufacturer-approved 3D model library",
+          "Bill of materials and RS quote generation",
+          "Measure and quality tools",
+          "Public forum and learning resources"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional",
-        "price": "Contact Sales",
+        "name": "Creator",
+        "price": "Official Store",
         "period": "annual",
         "features": [
-          "Advanced features",
-          "Priority support",
-          "Commercial use rights",
-          "Enterprise integration"
+          "Everything in Explorer",
+          "Import and export STEP, IGES, DWG and DXF",
+          "3D Mirror tool",
+          "Drawing-sheet detailing with full GD&T",
+          "Model-based definition (MBD)",
+          "Reverse engineering from 3D scan mesh"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Engineer",
+        "price": "Official Store",
+        "period": "annual",
+        "features": [
+          "Everything in Creator",
+          "Assembly tool with constraints and exploded views",
+          "Cosmetic threads",
+          "Edit 3D objects from drawing-sheet views",
+          "Advanced tips and tricks support content"
         ],
         "is_popular": false
       }
@@ -5352,7 +5445,7 @@ export const c2Tools: Tool[] = [
           },
           {
             "name": "Parametric design",
-            "status": true
+            "status": false
           },
           {
             "name": "Surface modeling",
@@ -5360,7 +5453,7 @@ export const c2Tools: Tool[] = [
           },
           {
             "name": "Sheet metal design",
-            "status": true
+            "status": false
           }
         ]
       },
@@ -5462,25 +5555,24 @@ export const c2Tools: Tool[] = [
       "Small Business",
       "Educational"
     ],
-    "official_url": "https://www.rs-online.com/designspark/",
-    "pricing_url": "https://www.rs-online.com/designspark/",
+    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "pricing_url": "https://www.rs-online.com/designspark/subscriptions-pricing-page",
     "affiliate_url": null,
     "score": 0,
     "pros": [
-      "Completely free",
-      "Professional-grade 3D CAD",
-      "Extensive component library",
-      "Manufacturer support",
-      "Good file format support",
-      "Easy to learn",
-      "Active community"
+      "Free Explorer tier with no hidden fees",
+      "Direct modelling is quick to learn",
+      "Manufacturer-approved component library tied to RS part numbers",
+      "Drawing sheets with GD&T and model-based definition",
+      "Good STEP, IGES, DWG and DXF exchange on paid tiers",
+      "Active community and tutorial library"
     ],
     "cons": [
       "Windows-only",
-      "Limited advanced features",
-      "No enterprise support",
-      "Less powerful than commercial CAD",
-      "Limited documentation"
+      "Full file exchange and drawing detailing are behind paid tiers",
+      "Direct modelling rather than history-based parametrics",
+      "No sheet-metal module",
+      "Smaller add-on ecosystem than mainstream CAD"
     ],
     "last_updated": "2025-05-21",
     "languages": [
@@ -5492,28 +5584,26 @@ export const c2Tools: Tool[] = [
       "STL",
       "DWG",
       "DXF",
-      "SAT",
-      "SLDPRT"
+      "IDF"
     ],
     "file_formats_out": [
       "STEP",
       "IGES",
       "STL",
       "DWG",
-      "DXF",
-      "SAT"
+      "DXF"
     ],
     "integrations": [
-      "SolidWorks",
-      "AutoCAD",
-      "Inventor",
-      "RS Components"
+      "RS Components catalogue",
+      "DesignSpark PCB",
+      "DesignSpark Circuit Simulator"
     ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
       "Free",
+      "Subscription",
       "Commercial"
     ],
     "support_channels": [
@@ -5536,23 +5626,23 @@ export const c2Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is DesignSpark Mechanical used for?",
-        "a": "DesignSpark Mechanical is a free 3D CAD software used for mechanical design, product design, rapid prototyping, and engineering projects. It's widely used by hobbyists, students, small businesses, and engineers for creating 3D models, assemblies, and 2D drawings with access to extensive component libraries."
+        "a": "DesignSpark Mechanical is a direct-modelling 3D CAD application used for mechanical design, product design, rapid prototyping and engineering projects. Designers use it to build and edit solid geometry, assemble parts from the manufacturer-approved model library, check mass properties and produce 2D drawing sheets."
       },
       {
         "q": "How much does DesignSpark Mechanical cost?",
-        "a": "DesignSpark Mechanical is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "The Explorer plan is free with no hidden fees. The Creator and Engineer plans are paid annual subscriptions, and RS Group also offers team licensing. Prices differ by region and currency and are revised by the vendor, so check the official subscriptions and pricing comparison page for current figures."
       },
       {
         "q": "Is there a free version of DesignSpark Mechanical?",
-        "a": "Yes, DesignSpark Mechanical is completely free to use with full 3D CAD capabilities including component library access, file import/export, and community support."
+        "a": "Yes — the Explorer plan is free and covers core direct modelling, unlimited projects and design size, the manufacturer 3D model library, bill of materials and quote generation, and measure and quality tools. Some capabilities, such as full STEP/IGES/DWG/DXF exchange and drawing-sheet detailing, are reserved for the paid Creator and Engineer plans."
       },
       {
         "q": "What operating systems does DesignSpark Mechanical support?",
-        "a": "DesignSpark Mechanical runs on Windows operating systems. It does not currently support Linux or macOS."
+        "a": "DesignSpark Mechanical is a Windows desktop application. It does not currently support Linux or macOS."
       },
       {
         "q": "Which file formats does DesignSpark Mechanical support?",
-        "a": "DesignSpark Mechanical supports standard CAD formats including STEP, IGES, STL, DWG, DXF, SAT, and SLDPRT for import and export."
+        "a": "The paid plans import and export STEP, IGES, AutoCAD DWG and DXF, and the software also works with STL meshes for 3D printing and reverse engineering. The free Explorer plan has more limited exchange — check the plan comparison on the official site before you commit to a format workflow."
       },
       {
         "q": "What are the best alternatives to DesignSpark Mechanical?",
@@ -5560,15 +5650,15 @@ export const c2Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Spatial ACIS (Ansys SpaceClaim Engine)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "engine": "SpaceClaim-style direct modelling on the Spatial ACIS kernel",
+      "multicore": "Single-threaded direct modelling; multi-core rendering",
       "gpu_optimization": "Basic",
       "standards": [
         "STEP",
         "IGES"
       ]
     },
-    "expert_verdict": "An accessible direct 3D modeling tool powered by SpaceClaim, perfect for rapid hardware prototyping."
+    "expert_verdict": "An accessible direct-modelling tool built on SpaceClaim's approach and wired into the RS catalogue — strongest for rapid hardware prototyping on the free tier, with paid plans for full drawing detailing and format exchange."
   },
   {
     "id": "t100",
@@ -5579,41 +5669,38 @@ export const c2Tools: Tool[] = [
     "description": "3DEXPERIENCE is Dassault Systèmes' comprehensive cloud-based platform that integrates 3D design, engineering, simulation, and manufacturing capabilities. Built on virtual twin technology, it enables real-time collaboration across teams, disciplines, and geographies. The platform connects people, data, and processes in a single environment, supporting everything from concept design to production. With native CATIA and SOLIDWORKS integration, it serves industries from aerospace and automotive to consumer goods and life sciences.",
     "pricing_tiers": [
       {
-        "name": "Standard",
+        "name": "3DEXPERIENCE Roles",
         "price": "Contact Sales",
         "period": "annual",
         "features": [
-          "Cloud-based 3D design",
-          "Real-time collaboration",
-          "Basic simulation",
-          "Data management",
-          "Community support"
+          "Buy individual platform roles (design, simulation, manufacturing, data management)",
+          "Roles can be combined per user and changed as projects shift",
+          "Cloud, on-premise or hybrid deployment",
+          "Shared virtual twin data model across disciplines"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional",
-        "price": "Contact Sales",
+        "name": "3DEXPERIENCE SOLIDWORKS",
+        "price": "Official Store",
         "period": "annual",
         "features": [
-          "Advanced simulation & analysis",
-          "Manufacturing planning",
-          "PLM integration",
-          "Custom workflows",
-          "Priority support"
+          "SOLIDWORKS connected to the platform",
+          "Standard, Professional and Premium role levels",
+          "Built-in data management and collaboration",
+          "Sold through authorised SOLIDWORKS resellers"
         ],
         "is_popular": false
       },
       {
-        "name": "Enterprise",
+        "name": "Industry Solution Experience",
         "price": "Contact Sales",
         "period": "annual",
         "features": [
-          "Full platform access",
-          "Dedicated cloud infrastructure",
-          "Advanced analytics",
-          "API access",
-          "Dedicated account manager"
+          "Company-wide deployment for a whole engineering organisation",
+          "Industry-specific bundles spanning design through manufacturing",
+          "Named-user and role-based licensing models",
+          "Dedicated cloud infrastructure and onboarding"
         ],
         "is_popular": false
       }
@@ -5716,6 +5803,7 @@ export const c2Tools: Tool[] = [
     "price_period": "year",
     "platforms": [
       "Windows",
+      "macOS",
       "Web"
     ],
     "industries": [
@@ -5739,8 +5827,8 @@ export const c2Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.3ds.com/3dexperience",
-    "pricing_url": "https://www.3ds.com/3dexperience",
+    "official_url": "https://www.3ds.com/products/3dexperience",
+    "pricing_url": "https://www.3ds.com/products/3dexperience",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -5764,7 +5852,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does 3DEXPERIENCE cost?",
-        "a": "3DEXPERIENCE is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official 3DEXPERIENCE Pricing Page](https://www.3ds.com/3dexperience) for live pricing."
+        "a": "3DEXPERIENCE is sold as named-user roles rather than a single boxed edition: you license the roles each person needs (for example a design role, a simulation role, a manufacturing role) on annual terms, and there are pre-configured bundles such as 3DEXPERIENCE SOLIDWORKS and the industry solution experiences. Dassault Systèmes quotes through resellers rather than publishing seat prices, so the official site and your local reseller are the only reliable sources."
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",

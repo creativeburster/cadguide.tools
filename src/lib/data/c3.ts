@@ -12,59 +12,104 @@ export const c3Tools: Tool[] = [
     "description": "Autodesk Revit is the global AEC industry standard for multidisciplinary Building Information Modeling (BIM), uniting architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "Monthly term",
         "price": "Official Store",
         "period": "/mo",
         "features": [
-          "Full BIM features",
-          "Worksharing",
-          "Cloud access"
+          "The full Revit toolset for architecture, structure and MEP",
+          "Local worksharing on a LAN with Revit Server",
+          "Subscription support entitlement included",
+          "Renews month to month — useful for short projects"
         ]
       },
       {
-        "name": "Annual",
+        "name": "Annual term",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "Save vs monthly",
-          "Multi-user collaboration",
-          "Priority Support"
+          "Same toolset as the monthly term",
+          "The most common term for studios",
+          "Access to the current release plus previous versions",
+          "Cloud document management and BIM Collaborate Pro licensed separately"
         ],
         "is_popular": true
       },
       {
-        "name": "3-Year",
+        "name": "3-Year term",
         "price": "Official Store",
         "period": "/3yr",
         "features": [
-          "Enterprise scale",
-          "Price protection",
-          "Flex licensing"
+          "Same toolset, committed for three years",
+          "Locks the subscription rate for the whole term",
+          "Preferred by procurement teams that budget per project cycle",
+          "Also sold as part of the AEC Collection"
         ]
       }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "Modelling",
         "items": [
           {
-            "name": "Toposolid: Advanced terrain modeling tools",
+            "name": "Parametric families and type-based components",
             "status": true
           },
           {
-            "name": "Accelerated Graphics (Tech Preview)",
+            "name": "Toposolid terrain and site modelling",
             "status": true
           },
           {
-            "name": "Automated Sheet Placement",
+            "name": "Conceptual massing and adaptive components",
             "status": true
           },
           {
-            "name": "MEP Fabrication Modeling enhancements",
+            "name": "Structural framing, rebar and analytical model",
             "status": true
           },
           {
-            "name": "Native IFC Support & Interoperability",
+            "name": "MEP systems and fabrication detailing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Documentation",
+        "items": [
+          {
+            "name": "Associative plans, sections, elevations and schedules",
+            "status": true
+          },
+          {
+            "name": "Sheet layout and automated sheet placement",
+            "status": true
+          },
+          {
+            "name": "Material takeoff and quantity schedules",
+            "status": true
+          },
+          {
+            "name": "Revision and issue tracking",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Collaboration",
+        "items": [
+          {
+            "name": "Worksharing across a team",
+            "status": true
+          },
+          {
+            "name": "Autodesk Docs and BIM Collaborate Pro cloud worksharing",
+            "status": true
+          },
+          {
+            "name": "IFC 4 import and export, COBie handover",
+            "status": true
+          },
+          {
+            "name": "Dynamo visual programming",
             "status": true
           }
         ]
@@ -115,11 +160,11 @@ export const c3Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Revit used for?",
-        "a": "The de-facto standard for Building Information Modeling (BIM). Revit is a BIM solution widely adopted in AEC, Construction, Structural Engineering."
+        "a": "Revit is Autodesk's BIM authoring application. One parametric model drives plans, sections, elevations, schedules and material takeoffs, and the same file can host architectural, structural and MEP disciplines so clashes and coordination issues surface before construction. It is used for design authoring, construction documentation, quantity takeoff and model-based coordination on building projects."
       },
       {
         "q": "How much does Revit cost?",
-        "a": "Revit is licensed on a Subscription model. Available editions include Monthly, Annual, 3-Year. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Revit Pricing Page](https://www.autodesk.com/products/revit/subscribe) for live pricing."
+        "a": "Revit is subscription-only — there is no perpetual licence any more. You choose a monthly, annual or three-year term per named user, and the price depends on your country, currency and reseller. Autodesk also sells Revit inside the Architecture, Engineering & Construction Collection, which is often better value if you also need AutoCAD, Civil 3D or Navisworks. See the official subscribe page for current regional pricing."
       },
       {
         "q": "Does Revit offer a free trial?",
@@ -135,7 +180,11 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Does Revit have an API for automation and customization?",
-        "a": "Yes. Revit exposes .NET API with SDK bindings for C#, VB.NET. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+        "a": "Yes. Revit exposes a .NET API with C# and VB.NET bindings, plus Dynamo and the Autodesk Platform Services cloud APIs. Common uses are batch parameter edits, custom commands and Dynamo-driven automation; reference docs are published through the Autodesk developer network."
+      },
+      {
+        "q": "Is there a cheaper Revit LT version?",
+        "a": "Yes. Revit LT is a reduced edition for smaller practices: it handles single-discipline BIM and documentation but drops worksharing, the API, in-product rendering and most analysis features. It shares the same file format, so an LT model opens in full Revit. Check the official comparison before choosing, because the feature split has shifted between releases."
       }
     ],
     "tech_specs": {
@@ -149,7 +198,7 @@ export const c3Tools: Tool[] = [
         "NWD"
       ]
     },
-    "expert_verdict": "Revit is the undisputed king of BIM in North America. Essential for modern architecture.",
+    "expert_verdict": "The reference BIM authoring tool: unrivalled for coordinated multi-discipline documentation, but Windows-only, licence-costly and heavy on hardware — and its file format locks a practice into Autodesk's ecosystem.",
     "last_updated": "2026-09-17",
     "key_capabilities": [
       "Parametric 3D BIM Modeling",
@@ -253,38 +302,40 @@ export const c3Tools: Tool[] = [
     "description": "Archicad by Graphisoft (Nemetschek Group) is a pioneering architectural BIM platform celebrated for its design-first workflow, native macOS/Windows Apple Silicon performance, and BIMcloud real-time teamwork. It empowers architects to model complex parametric curtain walls, shells, and stair assemblies while automatically generating construction documentation, photorealistic visualizations, and certified IFC4 openBIM deliverables.",
     "pricing_tiers": [
       {
-        "name": "Studio",
+        "name": "Archicad Studio",
         "price": "Official Store",
         "period": "/mo",
         "features": [
-          "Architectural Design",
-          "Local Collaboration",
-          "Standard BIM tools",
-          "Documentation"
+          "Full architectural BIM modelling",
+          "Automatic documentation and layouts",
+          "BIMx and CineRender visualisation",
+          "OPEN BIM / IFC exchange",
+          "Monthly, 1-year or 3-year subscription terms"
         ],
         "is_popular": true
       },
       {
-        "name": "Collaborate",
+        "name": "Archicad Collaborate",
         "price": "Official Store",
         "period": "/mo",
         "features": [
-          "MEP Design",
-          "Global Team Collaboration",
-          "Model Checker",
-          "Project Manager"
+          "Everything in Archicad Studio",
+          "Built-in MEP Designer for building services",
+          "BIMcloud-based Teamwork collaboration",
+          "Multi-office and multidisciplinary workflows",
+          "Same monthly, 1-year or 3-year terms"
         ],
         "is_popular": false
       },
       {
-        "name": "Studio (Annual)",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Archicad Max",
+        "price": "Contact Sales",
+        "period": "/mo",
         "features": [
-          "Everything in Studio",
-          "Billed annually (save vs monthly)",
-          "Standard BIM tools",
-          "Documentation"
+          "Positioned for high-complexity projects",
+          "Aimed at data-driven project delivery",
+          "Announced alongside the Studio and Collaborate plans",
+          "Availability and contents are set by Graphisoft per region — confirm before planning a purchase"
         ],
         "is_popular": false
       }
@@ -340,7 +391,7 @@ export const c3Tools: Tool[] = [
     ],
     "country": "Hungary",
     "category_id": "c3",
-    "pricing_type": "Subscription / Perpetual",
+    "pricing_type": "Subscription",
     "starting_price": 201,
     "price_period": "month",
     "platforms": [
@@ -362,9 +413,9 @@ export const c3Tools: Tool[] = [
       "Mid-Market",
       "Small Business"
     ],
-    "official_url": "https://graphisoft.com/solutions/archicad",
+    "official_url": "https://www.graphisoft.com/plans-and-products/archicad/",
     "pricing_url": "https://www.graphisoft.com/pricing",
-    "trial_url": "https://www.graphisoft.com/try-archicad",
+    "trial_url": "https://www.graphisoft.com/trial/archicad/",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -384,7 +435,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ArchiCAD Pricing Page](https://www.graphisoft.com/pricing) for live pricing."
+        "a": "Archicad is sold as a subscription in three plan families — Archicad Studio, Archicad Collaborate, and the newer Archicad Max — each available on a monthly, 1-year or 3-year term, with the longer terms locking the price. Graphisoft no longer sells new perpetual licences: the current shop lists subscription terms only. Seat rates differ by billing country and exclude tax, so check the official pricing page for your region."
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
@@ -479,8 +530,6 @@ export const c3Tools: Tool[] = [
     ],
     "license_types": [
       "Subscription",
-      "Perpetual",
-      "Network",
       "Educational"
     ],
     "support_channels": [
@@ -516,37 +565,38 @@ export const c3Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Carbon",
-        "price": "Custom",
-        "period": "",
+        "price": "Custom Quote",
+        "period": "annual",
         "features": [
-          "Viewing & Collaboration",
-          "Layout management",
-          "Planning tools",
-          "Open API access"
+          "Open and view models",
+          "Plan, track and manage design, detailing, production and erection activities",
+          "Trimble Connect collaboration included",
+          "No part modelling — viewing and coordination only"
         ],
         "is_popular": false
       },
       {
         "name": "Graphite",
-        "price": "Custom",
-        "period": "",
+        "price": "Custom Quote",
+        "period": "annual",
         "features": [
-          "Modeling & Documentation",
-          "Reinforced concrete",
-          "Standard connections",
-          "Reporting"
+          "Everything in Carbon",
+          "Multi-material 3D modelling for design",
+          "General arrangement drawings, schedules and reports",
+          "Reinforcement layout drawings and bar-bending data"
         ],
         "is_popular": true
       },
       {
         "name": "Diamond",
-        "price": "Custom",
-        "period": "",
+        "price": "Custom Quote",
+        "period": "annual",
         "features": [
-          "Full Automation",
-          "Custom Connections",
-          "CNC export",
-          "Complex Steel Details"
+          "Everything in Graphite",
+          "The full Tekla Structures toolset, concept through fabrication",
+          "Steel connection detailing with NC/DSTV output",
+          "Precast and cast-in-place concrete detailing",
+          "Production import and export for shop machinery"
         ],
         "is_popular": false
       }
@@ -624,8 +674,8 @@ export const c3Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.tekla.com",
-    "pricing_url": "https://www.tekla.com/contact",
-    "trial_url": "https://www.tekla.com/products/tekla-structures",
+    "pricing_url": "https://www.tekla.com/products/tekla-structures/subscription",
+    "trial_url": "https://www.tekla.com/products/tekla-structures/subscription",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -645,7 +695,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Structures cost?",
-        "a": "Tekla Structures is licensed on a Subscription model. Available editions include Carbon, Graphite, Diamond. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Tekla Structures Pricing Page](https://www.tekla.com/contact) for live pricing."
+        "a": "Tekla Structures is sold by subscription in three levels — Carbon for viewing, coordination and planning; Graphite for design modelling and documentation; and Diamond for the full detailing-to-fabrication toolset. Trimble quotes per seat rather than publishing a list price, and rates vary by country and reseller, so request a quote from the official subscription page."
       },
       {
         "q": "Is there a free version of Tekla Structures?",
@@ -665,7 +715,7 @@ export const c3Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Trimble Structural Core",
+      "engine": "Proprietary Tekla modelling engine",
       "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
       "standards": [
@@ -711,26 +761,38 @@ export const c3Tools: Tool[] = [
     "description": "Vectorworks Design Suite (by Nemetschek Group) is a versatile cross-platform 2D/3D CAD and BIM authoring environment powered by the Siemens Parasolid geometric kernel. Combining precision 2D drafting, freeform NURBS/SubD modeling, data-rich BIM worksheets, Redshift GPU rendering, and native IFC4 certification, it serves architecture, interior, landscape, and live entertainment rigging professionals.",
     "pricing_tiers": [
       {
-        "name": "Architect (Annual)",
+        "name": "Fundamentals",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "",
         "features": [
-          "BIM Workflow",
-          "3D Modeling",
-          "Resource Manager",
-          "Cloud Services"
+          "2D drafting and 3D modelling without discipline-specific tools",
+          "Parasolid-based solid modelling",
+          "Resource manager and worksheets",
+          "Available as a perpetual licence or a subscription"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Architect / Landmark / Spotlight",
+        "price": "Official Store",
+        "period": "",
+        "features": [
+          "Pick one discipline: Architect for buildings and interiors",
+          "Landmark for landscape and site design",
+          "Spotlight for entertainment and live event rigging",
+          "Each adds parametric objects, schedules and IFC4 exchange on top of Fundamentals"
         ],
         "is_popular": true
       },
       {
         "name": "Design Suite",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "",
         "features": [
-          "Landscape design",
-          "Spotlight (Stage)",
-          "Architect features",
-          "Rendering"
+          "Architect, Landmark and Spotlight in a single licence",
+          "For practices that work across building, landscape and stage",
+          "Add-on modules such as Vision, Braceworks and ConnectCAD sold separately",
+          "Perpetual or subscription, with Service Select support plans available"
         ],
         "is_popular": false
       }
@@ -864,7 +926,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Pricing Page](https://www.vectorworks.net/design-suite/buy) for live pricing."
+        "a": "Vectorworks sells the same product line as either a perpetual licence or a subscription, so you choose the model first and the discipline second: Fundamentals, one of Architect / Landmark / Spotlight, or Design Suite for all three. Perpetual buyers normally add a Service Select support plan to keep upgrades coming. Prices are quoted by region and by reseller, so check the official buy page for your country."
       },
       {
         "q": "Is there a free version of Vectorworks?",
@@ -885,12 +947,12 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Multi-threaded rendering; modelling is largely single-threaded",
       "gpu_optimization": "Metal / DirectX",
       "standards": [
         "IFC",
         "DWG",
-        "RVV",
+        "RVT",
         "OBJ"
       ]
     },
@@ -906,26 +968,26 @@ export const c3Tools: Tool[] = [
     "description": "Chief Architect Premier is a specialized 3D architectural BIM and residential home design platform tailored for custom home builders, remodelers, and kitchen/bath designers. As walls, roofs, stairs, and framing are drawn, its automated building engine simultaneously generates 3D walkthrough views, timber/steel framing layouts, cabinet elevations, 2D permit construction drawings, and itemized material takeoffs.",
     "pricing_tiers": [
       {
-        "name": "Premier Monthly",
+        "name": "Premier (perpetual)",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "",
         "features": [
-          "Residential Design",
-          "Auto Roofs & Stairs",
-          "3D Library",
-          "Support"
+          "Perpetual licence for the version you buy",
+          "Full residential BIM: walls, roofs, framing, cabinets",
+          "Construction documents and material lists",
+          "Optional SSA plan adds upgrades and support"
         ],
         "is_popular": true
       },
       {
-        "name": "Premier Annual",
+        "name": "Premier (subscription)",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "",
         "features": [
-          "Full Architectural Tools",
-          "Kitchen & Bath",
-          "Construction Docs",
-          "Priority support"
+          "Same Premier toolset on a subscription term",
+          "Lower upfront cost than a perpetual seat",
+          "Updates for as long as the subscription runs",
+          "Terms and availability differ by region"
         ],
         "is_popular": false
       }
@@ -981,7 +1043,7 @@ export const c3Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c3",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 1995,
     "price_period": "year",
     "platforms": [
@@ -1012,9 +1074,10 @@ export const c3Tools: Tool[] = [
       "Fast client renders"
     ],
     "cons": [
-      "Not for mechanical",
-      "Expensive",
-      "Windows version lead"
+      "Residential only — no commercial or infrastructure workflows",
+      "No native IFC authoring, so openBIM projects need workarounds",
+      "macOS releases trail the Windows version",
+      "Perpetual licence plus SSA adds up over several years"
     ],
     "faqs": [
       {
@@ -1023,11 +1086,15 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Chief Architect cost?",
-        "a": "Chief Architect is licensed on a Subscription model. Available editions include Premier Monthly, Premier Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Chief Architect Pricing Page](https://www.chiefarchitect.com/products/home-design/premier/) for live pricing."
+        "a": "Chief Architect Premier is offered both as a perpetual licence and, more recently, as a subscription — the perpetual route usually pairs with an annual SSA plan that supplies upgrades and support. Prices are set per region and change with each release, so check the official Premier page before budgeting."
       },
       {
         "q": "Is there a free version of Chief Architect?",
-        "a": "Yes — Chief Architect offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — Chief Architect offers an official evaluation or trial program so you can validate workflow and file compatibility before purchase. Trial length and eligibility are set by the vendor and changed periodically, so follow the official trial link on this page rather than relying on a quoted duration."
+      },
+      {
+        "q": "What is the difference between Chief Architect and Home Designer?",
+        "a": "Home Designer is the consumer line — a family of cheaper titles (Suite, Architectural, Professional) aimed at homeowners and small remodelers, with the same drawing logic but fewer construction-document and layout tools. Chief Architect Premier is the professional product: full framing, sections, detail drawings and material lists suitable for permit sets. Projects can be opened across the two lines, which makes Home Designer a common entry point before upgrading."
       },
       {
         "q": "What operating systems does Chief Architect support?",
@@ -1035,7 +1102,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Chief Architect support?",
-        "a": "Chief Architect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Chief Architect keeps its work in PLAN files and exchanges DWG, DXF, PDF, SKP, OBJ, 3DS and 3D PDF with other tools. It is not an IFC-based openBIM authoring tool, so if a project requires IFC deliverables you should plan on a converter or a different authoring platform."
       },
       {
         "q": "What are the best alternatives to Chief Architect?",
@@ -1043,7 +1110,7 @@ export const c3Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Chief Custom AEC Engine",
+      "engine": "Proprietary Chief Architect engine",
       "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
       "gpu_optimization": "DirectX / Metal",
       "standards": [
@@ -1117,18 +1184,19 @@ export const c3Tools: Tool[] = [
       "Infra BIM essential"
     ],
     "cons": [
-      "Prone to crashes",
-      "Steep learning curve",
-      "Expensive"
+      "Large corridor and pipe models are heavy on hardware and can destabilise a session",
+      "Steep learning curve for anyone who has not used AutoCAD",
+      "Subscription only — no perpetual option",
+      "Weak native IFC authoring for openBIM deliverables"
     ],
     "faqs": [
       {
         "q": "What is Civil 3D used for?",
-        "a": "Civil engineering design and documentation software. Civil 3D is a BIM solution widely adopted in Civil Engineering, Transportation."
+        "a": "Civil 3D is Autodesk's civil infrastructure design and documentation tool for roads, highways, land development, water and wastewater networks. It models alignments, profiles, corridors, gradings, parcels and pipe networks as dynamic objects, so a change to the design propagates into drawings, labels and quantity tables rather than having to be redrawn."
       },
       {
         "q": "How much does Civil 3D cost?",
-        "a": "Civil 3D is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Civil 3D Pricing Page](https://www.autodesk.com/products/civil-3d/overview#buying-options) for live pricing."
+        "a": "Civil 3D is subscription-only, licensed per named user on a monthly, annual or three-year term — the toolset is identical across terms. It is also included in the Architecture, Engineering & Construction Collection, which is usually the better value if you also need AutoCAD, Revit or Navisworks. Prices differ by country and reseller, so check the official buying options for your region."
       },
       {
         "q": "Is there a free version of Civil 3D?",
@@ -1140,7 +1208,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Civil 3D support?",
-        "a": "Civil 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Civil 3D is DWG-native and exchanges civil data through LandXML, the InfraWorks IMX format and various point-cloud and survey formats; IFC export is available through an Autodesk add-in rather than built into the core product. Check the official documentation for the current import and export matrix before you plan an exchange workflow."
       },
       {
         "q": "What are the best alternatives to Civil 3D?",
@@ -1161,28 +1229,40 @@ export const c3Tools: Tool[] = [
     "last_updated": "2026-09-20",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "Monthly term",
         "price": "Official Store",
         "period": "/mo",
         "features": [
-          "Road & Highway design",
-          "Parcel & Grading",
-          "Gravity & Pressure Pipe",
-          "Dynamic Alignment"
+          "The complete Civil 3D toolset — term length does not restrict features",
+          "Alignments, profiles, corridors, gradings and pipe networks",
+          "Project Explorer and Grading Optimization included",
+          "Useful for short project peaks"
         ],
         "is_popular": false
       },
       {
-        "name": "Annual",
+        "name": "Annual term",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "Full BIM integration",
-          "Project Explorer",
-          "Grading Optimization",
-          "Technical Support"
+          "Same complete toolset as the monthly term",
+          "The standard term for consultancies",
+          "Access to each new release while the subscription runs",
+          "Also sold inside the Architecture, Engineering & Construction Collection"
         ],
         "is_popular": true
+      },
+      {
+        "name": "3-Year term",
+        "price": "Official Store",
+        "period": "/3yr",
+        "features": [
+          "Same complete toolset, committed for three years",
+          "Fixes the rate for the whole term",
+          "Preferred where procurement runs on multi-year budgets",
+          "Multi-user and network licensing available"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
