@@ -4977,6 +4977,7 @@ export const c3Tools: Tool[] = [
     "description": "3D House Planner is an intuitive, free browser-based architectural design and floor planning application that runs entirely on client-side Web technologies without software installation or account signups. It provides dual-mode 2D drafting and synchronized real-time 3D visualization, enabling homeowners, architects, and interior designers to draw wall layouts, insert parametric doors and windows, furnish rooms, and generate realistic walkthroughs. Built with interoperability at its core, 3D House Planner supports openBIM IFC4 export alongside DXF, SVG, OBJ, GLB, and STL formats with zero watermarks and local IndexedDB project persistence.",
     "category_id": "c3",
     "pricing_type": "Free",
+    "price_tier": "free",
     "starting_price": 0,
     "country": "Brazil",
     "platforms": [

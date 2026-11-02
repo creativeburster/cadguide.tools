@@ -12491,6 +12491,7 @@ export const c5Tools: Tool[] = [
     "description": "Engineering on Web is an integrated browser-based mechanical engineering suite combining parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and industrial statistical process control (SPC). Running entirely client-side via WebAssembly solvers and WebGPU acceleration, it enables engineers to sketch with geometric constraints, model parts and assemblies, simulate structural, thermal, fluid, and electromagnetic fields, and evaluate manufacturing capability (control charts, Cpk, DOE) without software downloads or account creation. The platform features an AI modeling copilot and exports STEP, IGES, STL, and DXF files.",
     "category_id": "c5",
     "pricing_type": "Free",
+    "price_tier": "free",
     "starting_price": 0,
     "country": "Brazil",
     "platforms": [
