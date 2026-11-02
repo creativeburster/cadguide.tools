@@ -171,7 +171,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "You cannot run a modern construction project without Bluebeam.",
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "PDF",
       "DWG",
@@ -350,7 +349,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Navisworks is where Virtual Design and Construction happens.",
-    "last_updated": "2026-09-20",
     "file_formats_in": [
       "NWD",
       "NWC",
@@ -510,7 +508,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "IFC",
       "IFCZIP",
@@ -648,7 +645,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "PLY",
       "STL",
@@ -789,7 +785,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The gateway to reality capture in the BIM world.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "E57",
       "LAS",
@@ -888,7 +883,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The standard for viewing Solid Edge data in production.",
-    "last_updated": "2023-04-12",
     "file_formats_in": [
       "PAR",
       "ASM",
@@ -1068,7 +1062,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The essential utility for DWG version management.",
-    "last_updated": "2024-11-27",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -1249,7 +1242,6 @@ export const c4Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The definitive mobile CAD viewer for professionals on the move.",
-    "last_updated": "2026-05-14",
     "detailed_features": [
       {
         "category": "Viewing & Export",
@@ -1600,7 +1592,6 @@ export const c4Tools: Tool[] = [
       "3dstudio-web-tools",
       "qcad"
     ],
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "DXF",
       "SVG"
@@ -1782,7 +1773,6 @@ export const c4Tools: Tool[] = [
       "dxf-medic",
       "cad-exchanger"
     ],
-    "last_updated": "2026-10-10",
     "file_formats_in": [
       "STEP",
       "STP",
@@ -1982,7 +1972,6 @@ export const c4Tools: Tool[] = [
       "dxf-medic",
       "solibri"
     ],
-    "last_updated": "2026-10-12",
     "file_formats_in": [
       "IFC",
       "STEP",

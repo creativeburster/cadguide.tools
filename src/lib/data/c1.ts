@@ -272,8 +272,7 @@ export const c1Tools: Tool[] = [
         "JavaScript"
       ],
       "docs_url": "https://aps.autodesk.com/developer/overview/autocad"
-    },
-    "last_updated": "2026-10-30"
+    }
   },
   {
     "id": "t12",
@@ -457,8 +456,7 @@ export const c1Tools: Tool[] = [
       "LISP/VBA/.NET/ZRX API Support",
       "Smart Plotting & Annotations",
       "Windows & Linux Native Builds"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t13",
@@ -645,8 +643,7 @@ export const c1Tools: Tool[] = [
       "Direct 3D Modeling (Non-history based)",
       "Civil/Survey design tools",
       "Point Cloud viewing & modeling"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t21",
@@ -832,8 +829,7 @@ export const c1Tools: Tool[] = [
       ]
     },
     "release_notes_url": "https://www.bentley.com/software/microstation/",
-    "expert_verdict": "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering.",
-    "last_updated": "2026-10-30"
+    "expert_verdict": "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering."
   },
   {
     "id": "t22",
@@ -1029,8 +1025,7 @@ export const c1Tools: Tool[] = [
       ]
     },
     "release_notes_url": "https://www.draftsight.com",
-    "expert_verdict": "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans.",
-    "last_updated": "2026-10-30"
+    "expert_verdict": "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans."
   },
   {
     "id": "t54",
@@ -1214,8 +1209,7 @@ export const c1Tools: Tool[] = [
       "autocad",
       "bricscad",
       "progecad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t55",
@@ -1482,8 +1476,7 @@ export const c1Tools: Tool[] = [
       "nanocad",
       "draftsight",
       "freecad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t56",
@@ -1768,8 +1761,7 @@ export const c1Tools: Tool[] = [
       "bricscad",
       "zwcad",
       "gstarcad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t57",
@@ -2054,8 +2046,7 @@ export const c1Tools: Tool[] = [
       "zwcad",
       "bricscad",
       "draftsight"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t60",
@@ -2337,8 +2328,7 @@ export const c1Tools: Tool[] = [
       "freecad",
       "nanocad",
       "solvespace"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t62",
@@ -2553,8 +2543,7 @@ export const c1Tools: Tool[] = [
           "Optional AI Copilot Help & Copilot Professional add-ons"
         ]
       }
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t88",
@@ -2820,8 +2809,7 @@ export const c1Tools: Tool[] = [
       "turbocad",
       "ares-commander",
       "bricscad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t90",
@@ -2972,7 +2960,7 @@ export const c1Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://cad.caxa.com/",
-    "pricing_url": "https://cad.caxa.com/",
+    "pricing_url": "https://cad.caxa.com/en/pricing",
     "trial_url": "https://cad.caxa.com/pc/revisions",
     "release_notes_url": "https://cad.caxa.com/pc/revisions",
     "affiliate_url": null,
@@ -3090,8 +3078,7 @@ export const c1Tools: Tool[] = [
       "gstarcad",
       "autocad",
       "bricscad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t91",
@@ -3130,7 +3117,7 @@ export const c1Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "pricing_url": "https://www.graebert.com/cad-software/ares-commander/",
+    "pricing_url": "https://www.graebert.com/company/contact",
     "trial_url": "https://www.graebert.com/cad-software/ares-commander/",
     "release_notes_url": "https://www.graebert.com/cad-software/ares-commander/",
     "affiliate_url": null,
@@ -3270,8 +3257,7 @@ export const c1Tools: Tool[] = [
       "zwcad",
       "bricscad",
       "autocad"
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t252",
@@ -3482,8 +3468,7 @@ export const c1Tools: Tool[] = [
           }
         ]
       }
-    ],
-    "last_updated": "2026-10-30"
+    ]
   },
   {
     "id": "t256",
@@ -3684,7 +3669,6 @@ export const c1Tools: Tool[] = [
           }
         ]
       }
-    ],
-    "last_updated": "2026-10-30"
+    ]
   }
 ];

@@ -174,7 +174,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A benchmark 3D parametric mechanical CAD platform backed by a deep manufacturing and PDM ecosystem.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -431,7 +430,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
-    "last_updated": "2026-10-30",
     "key_capabilities": [
       "Intuitive 3D Concept Modeling",
       "2D Documentation with LayOut",
@@ -703,7 +701,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Fusion 360 is the future of agile hardware design.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "German",
@@ -963,7 +960,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A premier mathematical NURBS and computational design platform with fair perpetual licensing.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "Czech",
@@ -1235,7 +1231,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "CATIA isn't just software; it's an industrial ecosystem.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -1457,7 +1452,6 @@ export const c2Tools: Tool[] = [
       "Assembly & PartDesign Workbenches",
       "2D Technical Drawing (TechDraw)"
     ],
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -1582,7 +1576,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "Enterprise & Onshape Government",
         "price": "Custom Quote",
-        "period": "custom",
+        "period": "Custom Quote",
         "features": [
           "Arena PLM Connection for automated BOM & ECO synchronization",
           "SSO / SAML 2.0, role-based access control, guest licenses & activity analytics",
@@ -1721,7 +1715,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A cloud-native parametric CAD and built-in PDM platform engineered for distributed hardware teams.",
-    "last_updated": "2026-09-17",
     "languages": [
       "English",
       "German",
@@ -2015,8 +2008,7 @@ export const c2Tools: Tool[] = [
         "JT"
       ]
     },
-    "expert_verdict": "Solid Edge is the 'thinking man's' SolidWorks.",
-    "last_updated": "2026-10-30"
+    "expert_verdict": "Solid Edge is the 'thinking man's' SolidWorks."
   },
   {
     "id": "t20",
@@ -2150,7 +2142,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The superior choice for mechanical design within the Autodesk ecosystem.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -2348,7 +2339,7 @@ export const c2Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.ptc.com/en/products/creo",
-    "pricing_url": "https://www.ptc.com/en/products/creo",
+    "pricing_url": "https://www.ptc.com/en/store",
     "trial_url": "https://www.ptc.com/en/products/creo/trial",
     "affiliate_url": null,
     "score": 4.8,
@@ -2400,7 +2391,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Creo is for serious engineering at massive scales.",
-    "last_updated": "2026-10-30",
     "languages": [
       "English",
       "French",
@@ -2622,7 +2612,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "OpenSCAD is the ultimate tool for engineers who think in code.",
-    "last_updated": "2026-10-30",
     "file_formats_in": [
       "SCAD",
       "DXF",
@@ -2803,7 +2792,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Shapr3D has done the impossible: made professional CAD fun.",
-    "last_updated": "2026-10-30",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2949,7 +2937,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A masterclass in minimalist parametric design.",
-    "last_updated": "2026-10-30",
     "file_formats_in": [
       "DXF",
       "DWG",
@@ -2976,7 +2963,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "Professional",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [
           "3D Parametric",
           "2D Drafting",
@@ -2986,7 +2973,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "Expert",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [
           "Sheet Metal",
           "Motion Analysis",
@@ -3110,7 +3097,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "No mandatory subscriptions, just solid parametric tools.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "AD_PRT",
       "AD_ASM",
@@ -3220,7 +3206,6 @@ export const c2Tools: Tool[] = [
         "OBJ"
       ]
     },
-    "last_updated": "2026-10-30",
     "expert_verdict": "The power user's choice for Hollywood effects.",
     "pricing_tiers": [
       {
@@ -3475,7 +3460,6 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-08-03",
     "languages": [
       "English",
       "French",
@@ -3645,7 +3629,6 @@ export const c2Tools: Tool[] = [
         "STL"
       ]
     },
-    "last_updated": "2026-09-20",
     "expert_verdict": "The professional standard for turning physical objects into digital CAD data.",
     "quote_only": true,
     "file_formats_in": [
@@ -3836,7 +3819,6 @@ export const c2Tools: Tool[] = [
         "VDAFS"
       ]
     },
-    "last_updated": "2026-09-20",
     "expert_verdict": "The software behind almost every beautiful car you see on the road.",
     "file_formats_in": [
       "WIRE",
@@ -4322,7 +4304,6 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -4835,7 +4816,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "CATPart",
       "CATProduct",
@@ -5071,7 +5051,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A translation and inspection suite rather than a modeller: pick it when CAD data has to survive a hop between systems intact, or when you need the conversion engine inside your own product.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -5302,7 +5281,6 @@ export const c2Tools: Tool[] = [
       "Learning curve for advanced features",
       "No subscription option (perpetual only)"
     ],
-    "last_updated": "2025-05-21",
     "languages": [
       "English",
       "Russian"
@@ -5365,7 +5343,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KOMPAS-3D Pricing Page](https://ascon.net/)."
+        "a": "KOMPAS-3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so ASCON or a regional reseller is the only current source — ASCON sells through value-added resellers and publishes no list price: [KOMPAS-3D product page](https://ascon.net/kompas-3d/)."
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
@@ -5395,7 +5373,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities.",
-    "trial_url": "https://ascon.net/"
+    "trial_url": "https://ascon.net/kompas-3d/"
   },
   {
     "id": "t122",
@@ -5590,7 +5568,6 @@ export const c2Tools: Tool[] = [
       "No sheet-metal module",
       "Smaller add-on ecosystem than mainstream CAD"
     ],
-    "last_updated": "2025-05-21",
     "languages": [
       "English"
     ],
@@ -5844,7 +5821,7 @@ export const c2Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.3ds.com/products/3dexperience",
-    "pricing_url": "https://www.3ds.com/products/3dexperience",
+    "pricing_url": "https://www.3ds.com/how-to-buy",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -5900,7 +5877,6 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Dassault's massive enterprise collaboration platform, integrating CAD, PLM, and multi-disciplinary data management.",
-    "last_updated": "2025-05-20",
     "languages": [
       "English",
       "French",
@@ -6136,7 +6112,6 @@ export const c2Tools: Tool[] = [
       "alibre-design",
       "zw3d"
     ],
-    "last_updated": "2026-10-14",
     "file_formats_in": [
       "STEP",
       "STP",
@@ -6345,7 +6320,6 @@ export const c2Tools: Tool[] = [
       "meshlab",
       "meshlab"
     ],
-    "last_updated": "2026-10-21",
     "file_formats_in": [
       "STEP",
       "STP",

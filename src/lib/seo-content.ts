@@ -36,8 +36,7 @@ export function rankToolsForCategory(category: Category): Tool[] {
 
   function completenessScore(t: Tool): number {
     let n = 0;
-    // version and last_updated omitted from completeness tiebreaker
-    // last_updated omitted
+    // version omitted from the completeness tiebreaker
     if (t.languages && t.languages.length > 0) n++;
     if (t.file_formats_in && t.file_formats_in.length > 0) n++;
     if (t.integrations && t.integrations.length > 0) n++;
@@ -245,8 +244,7 @@ export function filterToolsByFeature(featureId: string): Tool[] {
   }
   function completenessScore(t: Tool): number {
     let n = 0;
-    // version and last_updated omitted from completeness tiebreaker
-    // last_updated omitted
+    // version omitted from the completeness tiebreaker
     if (t.languages && t.languages.length > 0) n++;
     if (t.file_formats_in && t.file_formats_in.length > 0) n++;
     if (t.integrations && t.integrations.length > 0) n++;

@@ -96,14 +96,14 @@ export interface Tool {
   // Tools without them fall back gracefully to the original layout.
 
   /**
-   * DO NOT RE-ADD: `version` and `free_trial_days` were removed on purpose.
-   * Volatile vendor-controlled facts (version numbers, prices, trial lengths,
-   * regional availability) must never be hard-coded into tool data — the site
-   * links to the vendor's official pricing / trial / download page instead so
-   * the information never goes stale.
+   * DO NOT RE-ADD: `version`, `free_trial_days` and `last_updated` were removed
+   * on purpose. Volatile vendor-controlled facts (version numbers, prices,
+   * trial lengths, regional availability) must never be hard-coded into tool
+   * data — the site links to the vendor's official pricing / trial / download
+   * page instead so the information never goes stale. A hand-maintained
+   * "last verified" date was also dropped: nobody visiting the page cares, and
+   * a date that is not actually re-checked is worse than no date at all.
    */
-  /** ISO yyyy-mm-dd date when this listing was last hand-verified. */
-  last_updated?: string;
   /** True when the vendor has end-of-lifed / stopped selling the product. */
   discontinued?: boolean;
   /** Short human-readable note explaining the discontinuation (shown on the detail page). */

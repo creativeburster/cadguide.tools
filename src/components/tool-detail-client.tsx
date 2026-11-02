@@ -420,7 +420,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           <span className="text-slate-900">{tool.country}</span>
                         </span>
                       </div>
-                      {/* Version and last_updated omitted by design */}
+                      {/* Version omitted by design: it changes with every release */}
                       {tool.trial_url && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
                         <a
                           href={tool.trial_url || tool.official_url}

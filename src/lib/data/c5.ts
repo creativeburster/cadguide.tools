@@ -175,7 +175,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A high-end enterprise PLM and CAD suite, delivering unmatched power for aerospace and automotive engineering.",
-    "last_updated": "2026-09-17",
     "languages": [
       "English",
       "French",
@@ -411,7 +410,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The 'gold standard' for the professional machine shop.",
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -522,7 +520,7 @@ export const c5Tools: Tool[] = [
       "Research"
     ],
     "official_url": "https://www.ntop.com",
-    "pricing_url": "https://www.ntop.com",
+    "pricing_url": "https://www.ntop.com/contact-us",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -573,7 +571,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The future of advanced manufacturing design.",
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -660,7 +657,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.solidcam.com",
-    "pricing_url": "https://www.solidcam.com",
+    "pricing_url": "https://solidcam.com/contact/get-a-quote",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -709,7 +706,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "iMachining is literal magic for CNC shops.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "SLDPRT",
       "SLDASM",
@@ -812,7 +808,7 @@ export const c5Tools: Tool[] = [
       "Service Bureaus"
     ],
     "official_url": "https://www.materialise.com",
-    "pricing_url": "https://www.materialise.com",
+    "pricing_url": "https://www.materialise.com/en/contact",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -862,7 +858,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Magics is the industrial benchmark for fixable unprintable meshes.",
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "STL",
@@ -913,7 +908,7 @@ export const c5Tools: Tool[] = [
       "Manufacturing Plants"
     ],
     "official_url": "https://www.visicadcam.com",
-    "pricing_url": "https://www.visicadcam.com",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -963,7 +958,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "If you are making plastic injection molds, VISI is your best friend.",
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1099,7 +1093,7 @@ export const c5Tools: Tool[] = [
       "Manufacturing Plants"
     ],
     "official_url": "https://www.cimatron.com",
-    "pricing_url": "https://www.cimatron.com",
+    "pricing_url": "https://www.cimatron.com/en/contact-us",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -1149,7 +1143,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A robust, battle-tested workhorse for the precision tooling industry.",
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1303,7 +1296,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.ansys.com/products/structures/ansys-mechanical",
-    "pricing_url": "https://www.ansys.com/products/structures/ansys-mechanical",
+    "pricing_url": "https://www.ansys.com/contact-us",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1412,7 +1405,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1474,7 +1466,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://nexus.hexagon.com/home/product/msc-nastran/",
-    "pricing_url": "https://nexus.hexagon.com/home/product/msc-nastran/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1549,7 +1541,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "BDF",
       "DAT",
@@ -1604,7 +1595,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://altair.com/hyperworks/",
-    "pricing_url": "https://altair.com/hyperworks/",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -1679,7 +1670,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-06-13",
     "file_formats_in": [
       "HM",
       "STEP",
@@ -1739,7 +1729,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://camworks.com/",
-    "pricing_url": "https://camworks.com/",
+    "pricing_url": "https://camworks.com/quote",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -1790,7 +1780,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The go-to CAM choice for SolidWorks shops seeking deep, native integration without leaving their CAD environment.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "SLDPRT",
       "SLDASM",
@@ -1933,7 +1922,7 @@ export const c5Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -2083,7 +2072,6 @@ export const c5Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "TOP",
       "STEP",
@@ -2241,7 +2229,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.hexagonmi.com/",
-    "pricing_url": "https://www.hexagonmi.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.7,
     "pros": [
@@ -2295,7 +2283,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2449,7 +2436,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.hexagonmi.com/",
-    "pricing_url": "https://www.hexagonmi.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.8,
     "pros": [
@@ -2503,7 +2490,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A market-leading CNC programming system, outstanding for high-efficiency production milling, turning, and wire EDM.",
-    "last_updated": "2024-06-19",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2653,7 +2639,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.kisssoft.com/",
-    "pricing_url": "https://www.kisssoft.com/",
+    "pricing_url": "https://www.kisssoft.com/en/contact/contact",
     "affiliate_url": null,
     "score": 3.6,
     "pros": [
@@ -2707,7 +2693,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -2848,7 +2833,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
-    "pricing_url": "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
+    "pricing_url": "https://www.autodesk.com/buying/plans",
     "affiliate_url": null,
     "score": 3.8,
     "pros": [
@@ -2902,7 +2887,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Autodesk's feature-based CAM software, designed to automate CNC programming through built-in intelligence.",
-    "last_updated": "2026-09-20",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3056,7 +3040,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.gibbscam.com/",
-    "pricing_url": "https://www.gibbscam.com/",
+    "pricing_url": "https://www.gibbscam.com/en/shop",
     "affiliate_url": null,
     "score": 3.9,
     "pros": [
@@ -3109,7 +3093,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A highly visual, task-oriented CAM system, exceptionally efficient for programming multi-task machining centers.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3263,7 +3246,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.openmind-tech.com/",
-    "pricing_url": "https://www.openmind-tech.com/",
+    "pricing_url": "https://www.openmind-tech.com/en/contact",
     "affiliate_url": null,
     "score": 4,
     "pros": [
@@ -3316,7 +3299,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "OPEN MIND's premier 5-axis CAM suite, outstanding for high-precision machining and collision avoidance.",
-    "last_updated": "2023-01-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3468,7 +3450,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.tebis.com/",
-    "pricing_url": "https://www.tebis.com/",
+    "pricing_url": "https://www.tebis.com/en/contact",
     "affiliate_url": null,
     "score": 3.9,
     "pros": [
@@ -3522,7 +3504,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A high-end CAD/CAM software for model, mold, and tool manufacturing, featuring exceptionally safe machine simulation.",
-    "last_updated": "2023-04-04",
     "quote_only": true,
     "file_formats_in": [
       "CATPart",
@@ -3674,7 +3655,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.worknc.com/",
-    "pricing_url": "https://www.worknc.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.8,
     "pros": [
@@ -3727,7 +3708,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -3875,7 +3855,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://www.surfcam.com/",
-    "pricing_url": "https://www.surfcam.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.5,
     "pros": [
@@ -3928,7 +3908,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -4079,7 +4058,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://bobcad.com/",
-    "pricing_url": "https://bobcad.com/",
+    "pricing_url": "https://www.bobcad.com/store/bobcad-cam",
     "affiliate_url": null,
     "score": 3.5,
     "pros": [
@@ -4132,7 +4111,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -4284,7 +4262,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autoform.com/",
-    "pricing_url": "https://www.autoform.com/",
+    "pricing_url": "https://www.autoform.com/en/contact/",
     "affiliate_url": null,
     "score": 4.1,
     "pros": [
@@ -4338,7 +4316,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -4487,7 +4464,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/moldflow/overview",
-    "pricing_url": "https://www.autodesk.com/products/moldflow/overview",
+    "pricing_url": "https://www.autodesk.com/buying/plans",
     "affiliate_url": null,
     "score": 4,
     "pros": [
@@ -4541,7 +4518,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "UDM",
       "STEP",
@@ -4692,7 +4668,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.moldex3d.com/",
-    "pricing_url": "https://www.moldex3d.com/",
+    "pricing_url": "https://www.moldex3d.com/contact/",
     "affiliate_url": null,
     "score": 3.9,
     "pros": [
@@ -4745,7 +4721,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
-    "last_updated": "2024-05-30",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -4896,7 +4871,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://www.alphacam.com/",
-    "pricing_url": "https://www.alphacam.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.6,
     "pros": [
@@ -4949,7 +4924,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -5097,7 +5071,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://www.radan.com/",
-    "pricing_url": "https://www.radan.com/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.6,
     "pros": [
@@ -5150,7 +5124,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -5299,7 +5272,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company"
     ],
     "official_url": "https://www.lantek.com/",
-    "pricing_url": "https://www.lantek.com/",
+    "pricing_url": "https://www.lantek.com/contact",
     "affiliate_url": null,
     "score": 3.5,
     "pros": [
@@ -5352,7 +5325,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
-    "last_updated": "2023-08-20",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
@@ -5500,7 +5472,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.sigmanest.com/",
-    "pricing_url": "https://www.sigmanest.com/",
+    "pricing_url": "https://www.sigmateksystems.com/en/contact-us",
     "affiliate_url": null,
     "score": 3.8,
     "pros": [
@@ -5554,7 +5526,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
-    "last_updated": "2024-02-29",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
@@ -5608,7 +5579,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.ansys.com/products/fluids/ansys-fluent",
-    "pricing_url": "https://www.ansys.com/products/fluids/ansys-fluent",
+    "pricing_url": "https://www.ansys.com/contact-us",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -5746,7 +5717,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "MSH",
       "CAS",
@@ -5802,7 +5772,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.ansys.com/products/ansys-workbench",
-    "pricing_url": "https://www.ansys.com/products/ansys-workbench",
+    "pricing_url": "https://www.ansys.com/contact-us",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -5929,7 +5899,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "WBPJ",
       "STEP",
@@ -5996,7 +5965,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
-    "pricing_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
+    "pricing_url": "https://www.ansys.com/contact-us",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -6123,7 +6092,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "SCDM",
       "STEP",
@@ -6204,7 +6172,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.3ds.com/products/simulia/abaqus",
-    "pricing_url": "https://www.3ds.com/products/simulia/abaqus",
+    "pricing_url": "https://www.3ds.com/how-to-buy",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -6331,7 +6299,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "INP",
       "STEP",
@@ -6401,7 +6368,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.comsol.com",
-    "pricing_url": "https://www.comsol.com",
+    "pricing_url": "https://www.comsol.com/contact",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -6528,7 +6495,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "MPH",
       "STEP",
@@ -6601,7 +6567,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
-    "pricing_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
+    "pricing_url": "https://www.ansys.com/contact-us",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -6727,7 +6693,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "K",
@@ -6794,7 +6759,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
-    "pricing_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -6921,7 +6886,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -7119,7 +7083,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "blockMeshDict",
       "snappyHexMeshDict",
@@ -7311,7 +7274,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7413,7 +7375,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
-    "pricing_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -7540,7 +7502,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "Parasolid",
@@ -7609,7 +7570,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://altair.com/inspire",
-    "pricing_url": "https://altair.com/inspire",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -7735,7 +7696,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7801,7 +7761,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://hexagon.com/products/patran",
-    "pricing_url": "https://hexagon.com/products/patran",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -7927,7 +7887,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "PAT",
@@ -7994,7 +7953,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams",
-    "pricing_url": "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -8120,7 +8079,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "ADM",
@@ -8186,7 +8144,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://hexagon.com/products/caesar-ii",
-    "pricing_url": "https://hexagon.com/products/caesar-ii",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -8311,7 +8269,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "quote_only": true,
     "file_formats_in": [
       "CII",
@@ -8376,7 +8333,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.bentley.com/software/autopipe/",
-    "pricing_url": "https://www.bentley.com/software/autopipe/",
+    "pricing_url": "https://www.bentley.com/contact/",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -8503,7 +8460,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DAT",
       "PCF",
@@ -8522,17 +8478,39 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Bentley AutoPIPE licence",
+        "name": "AutoPIPE",
+        "price": "Official Store",
+        "period": "12-month Virtuoso subscription",
+        "features": [
+          "Static pipe stress analysis with graphical results and reports",
+          "ASME B31.1, B31.3, B31.4, B31.8 and EN 13480 codes",
+          "Python Data API scripting and hot clash detection",
+          "Small distribution and district models, up to 100 pipes"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "AutoPIPE Advanced",
+        "price": "Official Store",
+        "period": "12-month Virtuoso subscription",
+        "features": [
+          "All design codes and code years except nuclear, including non-metallic",
+          "Advanced dynamics: time history, harmonic and response spectrum",
+          "Buried pipe soil modelling with upheaval and seismic wave loading",
+          "Offshore codes, fatigue analysis and flange checks"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "AutoPIPE Nuclear",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
-          "Buried pipe and PipePlus modules",
-          "Bi-directional with OpenPlant, AutoCAD Plant 3D",
-          "Spectrum, harmonic, and SAM analyses",
-          "Seats, modules and term are quoted by Bentley rather than published"
+          "Everything in AutoPIPE Advanced",
+          "Nuclear analysis and nuclear design codes",
+          "Thermal transient and fatigue analysis for nuclear work"
         ],
-        "is_popular": true
+        "is_popular": false
       }
     ]
   },
@@ -8570,7 +8548,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://hexagon.com/products/pv-elite",
-    "pricing_url": "https://hexagon.com/products/pv-elite",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -8696,7 +8674,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "PVI",
@@ -8761,7 +8738,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.aspentech.com/en/products/engineering/aspen-hysys",
-    "pricing_url": "https://www.aspentech.com/en/products/engineering/aspen-hysys",
+    "pricing_url": "https://www.aspentech.com/en/resources/other/contact-us",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -8884,7 +8861,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "HSC",
@@ -8950,7 +8926,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.csiamerica.com/products/sap2000",
-    "pricing_url": "https://www.csiamerica.com/products/sap2000",
+    "pricing_url": "https://www.csiamerica.com/sales",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -9077,7 +9053,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "SDB",
       "EDBS",
@@ -9175,7 +9150,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.csiamerica.com/products/etabs",
-    "pricing_url": "https://www.csiamerica.com/products/etabs",
+    "pricing_url": "https://www.csiamerica.com/sales",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -9303,7 +9278,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "EDB",
       "DWG",
@@ -9390,7 +9364,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.bentley.com/software/staad-pro/",
-    "pricing_url": "https://www.bentley.com/software/staad-pro/",
+    "pricing_url": "https://www.bentley.com/contact/",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -9518,7 +9492,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STD",
       "DWG",
@@ -9539,39 +9512,32 @@ export const c5Tools: Tool[] = [
       {
         "name": "STAAD.Pro",
         "price": "Official Store",
-        "period": "",
+        "period": "12-month Virtuoso subscription",
         "features": [
-          "3D structural analysis and design for steel, concrete and timber",
-          "Physical model to analytical model conversion",
-          "International design code checks",
-          "OpenSTAAD API for automation",
-          "Sold as a 12-month Virtuoso subscription"
-        ],
-        "is_popular": false
+          "Structural analysis and design across steel, concrete, timber and aluminium",
+          "90+ international design codes",
+          "Integrated STAAD.Pro physical modeller"
+        ]
       },
       {
         "name": "STAAD.Pro Advanced",
         "price": "Official Store",
-        "period": "",
+        "period": "12-month Virtuoso subscription",
         "features": [
           "Everything in STAAD.Pro",
-          "Nonlinear geometric and cable analysis",
-          "Floor spectrum analysis from time-history loading for seismic design",
-          "Automated reinforcing drawings, details and schedules"
-        ],
-        "is_popular": false
+          "Advanced analysis including nonlinear and dynamic options",
+          "Additional design codes and post-processing"
+        ]
       },
       {
         "name": "Structural WorkSuite",
-        "price": "Official Store",
-        "period": "",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Bundles STAAD.Pro Advanced with STAAD Foundation Advanced",
-          "Includes the RAM Structural System",
-          "The bundle most structural offices buy",
-          "Scalable licensing options quoted by Bentley"
-        ],
-        "is_popular": true
+          "STAAD.Pro plus the broader Bentley structural toolset",
+          "Multi-product seat for large engineering teams",
+          "Quoted per seat by Bentley"
+        ]
       }
     ]
   },
@@ -9607,7 +9573,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.tekla.com/products/tekla-tedds",
-    "pricing_url": "https://www.tekla.com/products/tekla-tedds",
+    "pricing_url": "https://www.tekla.com/contact",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -9735,7 +9701,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "TED",
       "RTF",
@@ -9923,7 +9888,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "RTD",
       "RVT (Direct Link)",
@@ -10134,7 +10098,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "Tekla (Direct link)",
       "Revit",
@@ -10369,7 +10332,6 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "R3D",
       "DXF",
@@ -10628,7 +10590,6 @@ export const c5Tools: Tool[] = [
       "Requires specialized training",
       "Enterprise-focused pricing"
     ],
-    "last_updated": "2026-09-02",
     "languages": [
       "English",
       "Korean",
@@ -10923,7 +10884,6 @@ export const c5Tools: Tool[] = [
       "Requires specialized training",
       "Enterprise-focused pricing"
     ],
-    "last_updated": "2026-09-02",
     "languages": [
       "English",
       "Korean",
@@ -11033,7 +10993,7 @@ export const c5Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -11136,7 +11096,7 @@ export const c5Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.scia.net/",
-    "pricing_url": "https://www.scia.net/",
+    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -11182,7 +11142,6 @@ export const c5Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -11370,7 +11329,7 @@ export const c5Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
-    "pricing_url": "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
+    "pricing_url": "https://www.autodesk.com/buying/plans",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -11428,7 +11387,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Autodesk's high-speed and multi-axis CAM software, engineered for manufacturing complex molds, dies, and aerospace parts.",
-    "last_updated": "2026-08-03",
     "languages": [
       "English",
       "German",
@@ -11506,7 +11464,7 @@ export const c5Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -11609,7 +11567,7 @@ export const c5Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.espritcam.com/",
-    "pricing_url": "https://www.espritcam.com/",
+    "pricing_url": "https://espritcam.hexagon.com/contact",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -11655,7 +11613,6 @@ export const c5Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -11682,7 +11639,7 @@ export const c5Tools: Tool[] = [
     "slug": "pam-stamp",
     "logo_url": "/logos/pam-stamp.png",
     "short_desc": "ESI Group's sheet metal forming simulation software using finite element analysis for stamping process optimization and spring back compensation.",
-    "description": "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software, providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
+    "description": "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software — ESI is now part of Keysight Technologies — providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
     "pricing_tiers": [
       {
         "name": "PAM-STAMP Standard",
@@ -11838,8 +11795,8 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.esi-group.com/products/pam-stamp",
-    "pricing_url": "https://www.esi-group.com/products/pam-stamp",
+    "official_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html",
+    "pricing_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software.html",
     "affiliate_url": null,
     "score": 3.9,
     "pros": [
@@ -11866,7 +11823,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PAM-STAMP cost?",
-        "a": "PAM-STAMP is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PAM-STAMP Pricing Page](https://www.esi-group.com/products/pam-stamp)."
+        "a": "PAM-STAMP is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so Keysight quotes each project instead of publishing a list price: [Official PAM-STAMP page](https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html)."
       },
       {
         "q": "Is there a free version of PAM-STAMP?",
@@ -11874,7 +11831,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What operating systems does PAM-STAMP support?",
-        "a": "PAM-STAMP runs on Windows. Specific version compatibility should be confirmed with ESI Group."
+        "a": "PAM-STAMP runs on Windows. Specific version compatibility should be confirmed with Keysight, which acquired ESI Group."
       },
       {
         "q": "Which file formats does PAM-STAMP support?",
@@ -11896,7 +11853,6 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "ESI Group's high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
-    "last_updated": "2025-05-21",
     "languages": [
       "English",
       "French",
@@ -11942,7 +11898,7 @@ export const c5Tools: Tool[] = [
         "C++",
         "Python"
       ],
-      "docs_url": "https://www.esi-group.com/support/"
+      "docs_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software.html"
     },
     "key_capabilities": [
       "Sheet Metal Forming",
@@ -11951,7 +11907,7 @@ export const c5Tools: Tool[] = [
       "Die Design",
       "Process Simulation"
     ],
-    "trial_url": "https://www.esi-group.com/products/pam-stamp"
+    "trial_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html"
   },
   {
     "id": "t249",
@@ -12071,7 +12027,6 @@ export const c5Tools: Tool[] = [
       "lantek-expert",
       "radan"
     ],
-    "last_updated": "2026-09-30",
     "file_formats_in": [
       "SVG",
       "DXF"
@@ -12231,7 +12186,7 @@ export const c5Tools: Tool[] = [
       {
         "name": "Industrial (1-Year)",
         "price": "Official Store",
-        "period": "year",
+        "period": "/yr",
         "features": [
           "1-year industrial license per workstation",
           "Excl. VAT",
@@ -12275,7 +12230,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "expert_verdict": "A niche quoting workhorse for CNC shops that want RFQ analysis and costing kept on-premise. Its time-estimation engine is only as good as the production history you feed it, so it rewards shops that already track real cycle times.",
-    "last_updated": "2026-09-30",
     "file_formats_in": [
       "STEP",
       "STP",
@@ -12495,7 +12449,6 @@ export const c5Tools: Tool[] = [
       "ansys-discovery",
       "fusion-360"
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "STP",

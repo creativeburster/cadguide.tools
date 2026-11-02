@@ -33,7 +33,7 @@ export const c7Tools: Tool[] = [
       "High-end Jewelers"
     ],
     "official_url": "https://www.gemvision.com/matrixgold",
-    "pricing_url": "https://www.gemvision.com/matrixgold",
+    "pricing_url": "https://www.stuller.com/services/custom-jewelry-design-services/3d-jewelry-design-software/matrixgold",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -118,7 +118,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "quote_only": true,
     "file_formats_in": [
       "3DM",
@@ -175,7 +174,7 @@ export const c7Tools: Tool[] = [
       "rhino-3d"
     ],
     "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
-    "pricing_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
+    "pricing_url": "https://www.aveva.com/en/contact",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -225,7 +224,6 @@ export const c7Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The undisputed king of heavy-duty maritime engineering.",
-    "last_updated": "2026-08-03",
     "quote_only": true,
     "file_formats_in": [
       "STEP",
@@ -355,7 +353,7 @@ export const c7Tools: Tool[] = [
       "Global Fashion Brands"
     ],
     "official_url": "https://www.clo3d.com",
-    "pricing_url": "https://www.clo3d.com",
+    "pricing_url": "https://www.clo3d.com/en/pricing",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -445,7 +443,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "DXF-AAMA",
       "DXF-ASTM",
@@ -573,7 +570,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/infraworks/overview",
-    "pricing_url": "https://www.autodesk.com/products/infraworks/overview",
+    "pricing_url": "https://www.autodesk.com/buying/plans",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -619,7 +616,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IMX",
       "Civil 3D (DWG)",
@@ -796,7 +792,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "MAX",
       "FBX",
@@ -982,7 +977,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A high-fidelity digital sculpting tool for organic character creation, widely used in games and film.",
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "ZTL",
       "ZPR",
@@ -1144,7 +1138,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -1329,7 +1322,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DAE",
       "SKP",
@@ -1505,7 +1497,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "Revit",
       "SketchUp",
@@ -1678,7 +1669,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "FBX",
       "SKP",
@@ -1868,7 +1858,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -2058,7 +2047,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2025-11-10",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -2250,7 +2238,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-03-18",
     "file_formats_in": [
       "STL",
       "3MF",
@@ -2439,7 +2426,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2025-09-30",
     "file_formats_in": [
       "STL",
       "OBJ",
@@ -2626,7 +2612,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2853,7 +2838,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "OBJ",
       "FBX",
@@ -3077,7 +3061,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-20",
     "file_formats_in": [
       "SKP",
       "FBX",
@@ -3289,7 +3272,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-20",
     "file_formats_in": [
       "3ds Max",
       "Maya",
@@ -3495,7 +3477,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-20",
     "file_formats_in": [
       "3ds Max",
       "Cinema 4D",
@@ -3699,7 +3680,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "FBX",
       "OBJ",
@@ -3786,7 +3766,7 @@ export const c7Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.carlsonsw.com/products/survey/",
-    "pricing_url": "https://www.carlsonsw.com/products/survey/",
+    "pricing_url": "https://www.carlsonsw.com/contact/",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -3912,7 +3892,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -3981,7 +3960,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
-    "pricing_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+    "pricing_url": "https://geospatial.trimble.com/en/contact-us",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -4109,7 +4088,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "VCE",
       "DWG",
@@ -4352,7 +4330,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.aveva.com/en/products/e3d-design/",
-    "pricing_url": "https://www.aveva.com/en/products/e3d-design/",
+    "pricing_url": "https://www.aveva.com/en/contact",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4373,7 +4351,6 @@ export const c7Tools: Tool[] = [
       "Complex implementation process",
       "Enterprise-focused pricing"
     ],
-    "last_updated": "2026-09-20",
     "languages": [
       "English",
       "Chinese",
@@ -4493,7 +4470,7 @@ export const c7Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -4596,7 +4573,7 @@ export const c7Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.maptek.com/",
-    "pricing_url": "https://www.maptek.com/",
+    "pricing_url": "https://www.maptek.com/contact",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4642,7 +4619,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A 3D mine planning and modeling package used for geological validation and resource estimation.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -4801,7 +4777,7 @@ export const c7Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.configura.com/",
-    "pricing_url": "https://www.configura.com/",
+    "pricing_url": "https://www.configura.com/contact",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4847,7 +4823,6 @@ export const c7Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
@@ -5036,7 +5011,6 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-11",
     "file_formats_in": [
       "CSV",
       "XLSX",
@@ -5185,7 +5159,6 @@ export const c7Tools: Tool[] = [
       }
     ],
     "expert_verdict": "A niche time-saver for architects and laser hobbyists: turn your own photos into usable entourage and template blocks without hand-tracing.",
-    "last_updated": "2026-09-17",
     "file_formats_out": [
       "DXF",
       "SVG",

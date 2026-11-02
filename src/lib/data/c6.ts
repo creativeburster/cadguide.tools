@@ -175,7 +175,6 @@ export const c6Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Professional PCB design software combining unified schematic capture, 3D routing, and layout.",
-    "last_updated": "2026-08-03",
     "languages": [
       "English",
       "French",
@@ -377,7 +376,6 @@ export const c6Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The standard for mid-level professional PCB design.",
-    "last_updated": "2026-09-02",
     "discontinued": true,
     "discontinued_note": "Autodesk officially sunset EAGLE on June 7, 2026. Standalone licensing servers have been decommissioned. All EAGLE design files (.sch, .brd, .lbr) open seamlessly in Autodesk Fusion Electronics.",
     "file_formats_in": [
@@ -427,7 +425,7 @@ export const c6Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.eplan.com",
-    "pricing_url": "https://www.eplan.com",
+    "pricing_url": "https://www.eplan.com/de-en/about-us/contact-us",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -535,7 +533,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-08-03",
     "file_formats_in": [
       "EPJ",
       "ZW1",
@@ -775,7 +772,6 @@ export const c6Tools: Tool[] = [
       "Pricing not publicly available",
       "Requires training for full utilization"
     ],
-    "last_updated": "2026-09-20",
     "languages": [
       "English",
       "German",
@@ -891,7 +887,7 @@ export const c6Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Contact",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -995,7 +991,7 @@ export const c6Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
-    "pricing_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -1041,7 +1037,6 @@ export const c6Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "Cadence's high-end enterprise PCB layout platform, built for complex high-speed design and system constraints.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "BRD",
       "DRA",
@@ -1270,7 +1265,7 @@ export const c6Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.orcad.com/",
-    "pricing_url": "https://www.orcad.com/",
+    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -1290,7 +1285,6 @@ export const c6Tools: Tool[] = [
       "Subscription model may not suit all budgets",
       "Requires training for full utilization"
     ],
-    "last_updated": "2026-11-02",
     "languages": [
       "English",
       "Chinese",
@@ -1594,7 +1588,7 @@ export const c6Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
-    "pricing_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -1614,7 +1608,6 @@ export const c6Tools: Tool[] = [
       "Analysis computation can be slow",
       "Requires training for full utilization"
     ],
-    "last_updated": "2023-11-08",
     "languages": [
       "English",
       "Chinese",
@@ -1727,7 +1720,7 @@ export const c6Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -1831,7 +1824,7 @@ export const c6Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
-    "pricing_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
+    "pricing_url": "https://www.siemens.com/en-us/contact/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -1877,7 +1870,6 @@ export const c6Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "PCB",
       "SCH",
@@ -2102,8 +2094,7 @@ export const c6Tools: Tool[] = [
           }
         ]
       }
-    ],
-    "last_updated": "2026-09-02"
+    ]
   },
   {
     "id": "t199",
@@ -2267,7 +2258,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "EasyEDA JSON",
       "Altium SchDoc/PcbDoc",
@@ -2542,7 +2532,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-11",
     "file_formats_in": [
       "DIP",
       "DXF",
@@ -2596,7 +2585,7 @@ export const c6Tools: Tool[] = [
       "Education"
     ],
     "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
-    "pricing_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+    "pricing_url": "https://www.ni.com/en/shop.html",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -2721,7 +2710,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "MS14",
       "Ultiboard",
@@ -2931,7 +2919,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "ASC",
       "ASY",
@@ -3122,7 +3109,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "DSN",
       "LYT",
@@ -3232,7 +3218,7 @@ export const c6Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.altium.com/altium-365",
-    "pricing_url": "https://www.altium.com/altium-365",
+    "pricing_url": "https://www.altium.com/develop/pricing",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -3359,7 +3345,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "PrjPcb",
       "SchDoc",
@@ -3571,7 +3556,6 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "CMPcb",
       "CMSch",

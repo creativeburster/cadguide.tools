@@ -199,7 +199,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The reference BIM authoring tool: very strong at coordinated multi-discipline documentation, but Windows-only, licence-costly and heavy on hardware — and its file format locks a practice into Autodesk's ecosystem.",
-    "last_updated": "2026-09-17",
     "key_capabilities": [
       "Parametric 3D BIM Modeling",
       "Automated Construction Documentation",
@@ -465,7 +464,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "ArchiCAD is built by architects, for architects.",
-    "last_updated": "2026-09-17",
     "languages": [
       "English",
       "French",
@@ -726,7 +724,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The choice for massive steel stadiums and complex plants.",
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -956,8 +953,7 @@ export const c3Tools: Tool[] = [
         "OBJ"
       ]
     },
-    "expert_verdict": "If you work in landscape or lighting design, Vectorworks is the standard.",
-    "last_updated": "2026-09-17"
+    "expert_verdict": "If you work in landscape or lighting design, Vectorworks is the standard."
   },
   {
     "id": "t27",
@@ -1121,7 +1117,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "If you build houses, buy Chief Architect.",
-    "last_updated": "2026-09-17",
     "file_formats_in": [
       "PLAN",
       "DWG",
@@ -1226,7 +1221,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A common baseline for civil engineering design and documentation.",
-    "last_updated": "2026-09-20",
     "pricing_tiers": [
       {
         "name": "Monthly term",
@@ -1447,7 +1441,6 @@ export const c3Tools: Tool[] = [
         "Shapefile"
       ]
     },
-    "last_updated": "2026-09-17",
     "expert_verdict": "The undisputed gold standard for professional landscape architecture.",
     "file_formats_in": [
       "VWX",
@@ -1623,7 +1616,6 @@ export const c3Tools: Tool[] = [
         "STEP"
       ]
     },
-    "last_updated": "2026-09-17",
     "expert_verdict": "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
     "pricing_tiers": [
       {
@@ -2303,7 +2295,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "RVT",
       "DWG",
@@ -2506,7 +2497,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "DDS-CAD is an established MEP BIM solution covering mechanical, electrical, and piping trades. With native energy calculations and solid Nordic market adoption, it is a highly reliable tool. It lacks versatile general architectural modeling, making it a dedicated engineering choice for building systems professionals.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -2709,7 +2699,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "Excel",
       "IFC",
@@ -2806,7 +2795,6 @@ export const c3Tools: Tool[] = [
         "ISO 15926"
       ]
     },
-    "last_updated": "2026-09-20",
     "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
     "faqs": [
       {
@@ -3084,7 +3072,6 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "quote_only": true,
     "file_formats_in": [
       "VUE",
@@ -3277,7 +3264,6 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -3699,7 +3685,6 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -3912,7 +3897,6 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "BCF",
       "BCFZIP",
@@ -4198,7 +4182,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -4301,7 +4285,7 @@ export const c3Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.cype.com/",
-    "pricing_url": "https://www.cype.com/",
+    "pricing_url": "https://shop.cype.com/en/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4347,7 +4331,6 @@ export const c3Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -4374,7 +4357,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Perpetual",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [],
         "is_popular": false
       }
@@ -4477,7 +4460,7 @@ export const c3Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.vertex.fi/",
-    "pricing_url": "https://www.vertex.fi/",
+    "pricing_url": "https://vertexcad.com/contacts/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4523,7 +4506,6 @@ export const c3Tools: Tool[] = [
       "standards": []
     },
     "expert_verdict": "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
-    "last_updated": "2026-09-02",
     "file_formats_in": [
       "IFC",
       "DWG",
@@ -4699,7 +4681,7 @@ export const c3Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.allplan.com/products/allplan-precast/",
-    "pricing_url": "https://www.allplan.com/products/allplan-precast/",
+    "pricing_url": "https://www.allplan.com/en-US/shop/products",
     "affiliate_url": null,
     "score": 3.6,
     "pros": [
@@ -4757,7 +4739,6 @@ export const c3Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Allplan's specialized BIM precast concrete design and detailing tool, crucial for modern modular construction.",
-    "last_updated": "2025-05-21",
     "languages": [
       "English",
       "German",
@@ -4930,7 +4911,6 @@ export const c3Tools: Tool[] = [
       "archicad",
       "vectorworks"
     ],
-    "last_updated": "2026-10-16",
     "file_formats_in": [
       "RVT",
       "RFA",
@@ -5148,7 +5128,6 @@ export const c3Tools: Tool[] = [
       "vectorworks",
       "archicad"
     ],
-    "last_updated": "2026-11-02",
     "file_formats_in": [
       "IFC",
       "DXF",

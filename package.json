@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next export",
-    "audit:prices": "node scripts/audit-stale-prices.js",
     "audit:links": "node scripts/audit-links.js"
   },
   "dependencies": {
