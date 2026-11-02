@@ -8,8 +8,8 @@ export const c3Tools: Tool[] = [
     "name": "Revit",
     "slug": "revit",
     "logo_url": "/logos/revit.png",
-    "short_desc": "The de-facto standard for Building Information Modeling (BIM).",
-    "description": "Autodesk Revit is the global AEC industry standard for multidisciplinary Building Information Modeling (BIM), uniting architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
+    "short_desc": "The most widely deployed BIM authoring platform.",
+    "description": "Autodesk Revit is a multidisciplinary Building Information Modeling (BIM) platform that unites architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
     "pricing_tiers": [
       {
         "name": "Monthly term",
@@ -198,7 +198,7 @@ export const c3Tools: Tool[] = [
         "NWD"
       ]
     },
-    "expert_verdict": "The reference BIM authoring tool: unrivalled for coordinated multi-discipline documentation, but Windows-only, licence-costly and heavy on hardware — and its file format locks a practice into Autodesk's ecosystem.",
+    "expert_verdict": "The reference BIM authoring tool: very strong at coordinated multi-discipline documentation, but Windows-only, licence-costly and heavy on hardware — and its file format locks a practice into Autodesk's ecosystem.",
     "last_updated": "2026-09-17",
     "key_capabilities": [
       "Parametric 3D BIM Modeling",
@@ -560,7 +560,7 @@ export const c3Tools: Tool[] = [
     "name": "Tekla Structures",
     "slug": "tekla-structures",
     "logo_url": "/logos/tekla-structures.png",
-    "short_desc": "The world's most advanced structural BIM software.",
+    "short_desc": "Detailed structural BIM software for steel, concrete, and precast construction.",
     "description": "Tekla Structures by Trimble is the structural engineering and fabrication industry benchmark for constructible LOD 400–500 Building Information Modeling. Capable of modeling stadium-scale structural steel connections, rebar-congested cast-in-place concrete, and precast elements down to every bolt and weld, it drives automated DSTV/NC shop machines, rebar bending schedules, and Trimble Connect field workflows.",
     "pricing_tiers": [
       {
@@ -1225,7 +1225,7 @@ export const c3Tools: Tool[] = [
         "LandXML"
       ]
     },
-    "expert_verdict": "The industry standard for civil engineering projects.",
+    "expert_verdict": "A common baseline for civil engineering design and documentation.",
     "last_updated": "2026-09-20",
     "pricing_tiers": [
       {
@@ -3368,7 +3368,7 @@ export const c3Tools: Tool[] = [
         "Navisworks NWD"
       ]
     },
-    "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm — and the de facto industry standard CDE.",
+    "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm, and one of the most widely used common data environments.",
     "faqs": [
       {
         "q": "What is Autodesk Construction Cloud used for?",

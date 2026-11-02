@@ -598,7 +598,7 @@ export const c5Tools: Tool[] = [
     "name": "SolidCAM",
     "slug": "solidcam",
     "logo_url": "/logos/solidcam.jpg",
-    "short_desc": "The leading integrated CAM for SolidWorks.",
+    "short_desc": "Integrated CAM inside SolidWorks, from 2.5-axis milling up to 5-axis simultaneous.",
     "description": "SolidCAM is a premier gold-certified CAM suite that runs seamlessly inside the native SolidWorks and Autodesk Inventor assembly environments with full toolpath-to-model associativity. Renowned for its patented iMachining 2D/3D adaptive technology—which calculates optimal feeds, speeds, and morphing spiral engagement angles—it covers 2.5D–5-axis milling, multi-channel Mill-Turn, and Swiss-type CNC programming.",
     "pricing_tiers": [
       {
@@ -6961,7 +6961,7 @@ export const c5Tools: Tool[] = [
     "slug": "openfoam",
     "logo_url": "/logos/openfoam.png",
     "short_desc": "Free open-source C++ CFD toolbox used widely in academia, research, and motorsport.",
-    "description": "OpenFOAM is a GPL-licensed C++ CFD library and solver suite providing dozens of pre-built solvers for incompressible, compressible, multi-phase, combustion, and DNS/LES simulations — the leading open-source choice in CFD.",
+    "description": "OpenFOAM is a GPL-licensed C++ CFD library and solver suite providing dozens of pre-built solvers for incompressible, compressible, multi-phase, combustion, and DNS/LES simulations and one of the most widely used open-source CFD toolchains.",
     "country": "UK",
     "category_id": "c5",
     "pricing_type": "Free",
@@ -7016,7 +7016,7 @@ export const c5Tools: Tool[] = [
         "EnSight"
       ]
     },
-    "expert_verdict": "The leading free, open-source CFD toolbox, highly flexible for researchers and custom engineering simulations.",
+    "expert_verdict": "A free, open-source CFD toolbox, highly flexible for researchers and custom engineering simulations.",
     "faqs": [
       {
         "q": "What is OpenFOAM used for?",
@@ -7208,7 +7208,7 @@ export const c5Tools: Tool[] = [
         "IGES"
       ]
     },
-    "expert_verdict": "Made cloud CFD/FEA actually work — Community Plan is the best free way to learn industrial-grade simulation.",
+    "expert_verdict": "Made cloud CFD/FEA actually work — the Community plan is a free way to learn industrial-grade simulation.",
     "faqs": [
       {
         "q": "What is SimScale used for?",
@@ -7311,7 +7311,7 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-06-30",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7540,7 +7540,7 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2023-05-28",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "Parasolid",
@@ -8158,7 +8158,7 @@ export const c5Tools: Tool[] = [
     "name": "CAESAR II",
     "slug": "caesar-ii",
     "logo_url": "/logos/caesar-ii.png",
-    "short_desc": "Industry-standard pipe stress analysis for static and dynamic load cases.",
+    "short_desc": "Pipe stress analysis for static and dynamic load cases.",
     "description": "Hexagon CAESAR II is the global benchmark pipe-stress analysis tool — used by oil & gas, petrochemical, and power EPCs for code-compliant ASME B31, EN 13480, and B31.3 stress analysis of piping systems.",
     "country": "USA",
     "category_id": "c5",
@@ -8311,7 +8311,7 @@ export const c5Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-01-12",
+    "last_updated": "2026-11-02",
     "quote_only": true,
     "file_formats_in": [
       "CII",
@@ -9980,7 +9980,7 @@ export const c5Tools: Tool[] = [
     "slug": "idea-statica",
     "logo_url": "/logos/idea-statica.png",
     "short_desc": "Steel and concrete connection design with the CBFEM method.",
-    "description": "IDEA StatiCa is the leading connection-design tool for steel and concrete — its CBFEM (Component-Based Finite Element Method) lets engineers analyse arbitrarily complex connections that would be infeasible with classical hand methods.",
+    "description": "IDEA StatiCa is a connection-design tool for steel and concrete — its CBFEM (Component-Based Finite Element Method) lets engineers analyse arbitrarily complex connections that would be infeasible with classical hand methods.",
     "country": "Czech Republic",
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
@@ -10724,7 +10724,7 @@ export const c5Tools: Tool[] = [
         "ACI"
       ]
     },
-    "expert_verdict": "The industry standard for bridge design and structural analysis, offering powerful detailing and loading utilities.",
+    "expert_verdict": "A widely used package for bridge design and structural analysis, with strong detailing and loading utilities.",
     "trial_url": "https://www.midasoft.com/"
   },
   {
@@ -11205,7 +11205,7 @@ export const c5Tools: Tool[] = [
     "slug": "powermill",
     "logo_url": "/logos/powermill.svg",
     "short_desc": "Autodesk's advanced CAM software for CNC programming, specializing in 3- and 5-axis manufacturing for complex parts in aerospace, automotive, and toolmaking industries.",
-    "description": "PowerMill is Autodesk's premier CAM software for CNC programming, providing expert strategies for complex 3- and 5-axis subtractive and additive manufacturing. Originally developed by Delcam and acquired by Autodesk, PowerMill is widely recognized as the leading specialist NC CAM software for manufacturing complex shapes in aerospace, automotive, medical device, and toolmaking industries. The software features 64-bit multi-threading technology for faster processing of large, complex parts, automated collision detection and avoidance, and specialized strategies for high-speed machining. PowerMill integrates with Autodesk's Fusion 360 ecosystem, offering access to collaborative features and advanced manufacturing capabilities. Its subscription-based pricing model provides access to the latest features and cloud-based collaboration tools. PowerMill is particularly valued for its ability to handle large assemblies, complex geometries, and simultaneous multi-axis machining operations with precision and efficiency.",
+    "description": "PowerMill is Autodesk's premier CAM software for CNC programming, providing expert strategies for complex 3- and 5-axis subtractive and additive manufacturing. Originally developed by Delcam and acquired by Autodesk, PowerMill is a specialist NC CAM package for manufacturing complex shapes in aerospace, automotive, medical device, and toolmaking industries. The software features 64-bit multi-threading technology for faster processing of large, complex parts, automated collision detection and avoidance, and specialized strategies for high-speed machining. PowerMill integrates with Autodesk's Fusion 360 ecosystem, offering access to collaborative features and advanced manufacturing capabilities. Its subscription-based pricing model provides access to the latest features and cloud-based collaboration tools. PowerMill is particularly valued for its ability to handle large assemblies, complex geometries, and simultaneous multi-axis machining operations with precision and efficiency.",
     "pricing_tiers": [
       {
         "name": "PowerMill Standard",

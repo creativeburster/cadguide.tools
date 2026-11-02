@@ -174,7 +174,7 @@ export const c6Tools: Tool[] = [
         "IPC"
       ]
     },
-    "expert_verdict": "The leading professional PCB design software, combining unified schematic capture, 3D routing, and layout.",
+    "expert_verdict": "Professional PCB design software combining unified schematic capture, 3D routing, and layout.",
     "last_updated": "2026-08-03",
     "languages": [
       "English",
@@ -1068,7 +1068,7 @@ export const c6Tools: Tool[] = [
     "slug": "orcad",
     "logo_url": "/logos/orcad.png",
     "short_desc": "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
-    "description": "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, industry-standard PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
+    "description": "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
     "pricing_tiers": [
       {
         "name": "OrCAD X Standard",
@@ -1290,7 +1290,7 @@ export const c6Tools: Tool[] = [
       "Subscription model may not suit all budgets",
       "Requires training for full utilization"
     ],
-    "last_updated": "2023-08-28",
+    "last_updated": "2026-11-02",
     "languages": [
       "English",
       "Chinese",
@@ -1391,7 +1391,7 @@ export const c6Tools: Tool[] = [
         "JEDEC"
       ]
     },
-    "expert_verdict": "Cadence's industry-standard electronic design suite, renowned for fast schematic capture and PCB layout.",
+    "expert_verdict": "Cadence's electronic design suite, known for fast schematic capture and PCB layout.",
     "trial_url": "https://www.orcad.com/"
   },
   {
@@ -2776,7 +2776,7 @@ export const c6Tools: Tool[] = [
     "name": "LTspice",
     "slug": "ltspice",
     "logo_url": "/logos/ltspice.png",
-    "short_desc": "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design.",
+    "short_desc": "Free SPICE simulator from Analog Devices, widely used for analog and power design.",
     "description": "LTspice is a free, high-performance SPICE simulator distributed by Analog Devices — the most widely used SPICE tool in industry for power-electronics, switching converters, and analog circuit design.",
     "country": "USA",
     "category_id": "c6",
@@ -2931,7 +2931,7 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2023-09-02",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "ASC",
       "ASY",
@@ -3019,7 +3019,7 @@ export const c6Tools: Tool[] = [
         "STEP"
       ]
     },
-    "expert_verdict": "Still the best way to debug firmware against a virtual LCD or motor without touching hardware.",
+    "expert_verdict": "Still an effective way to debug firmware against a virtual LCD or motor without touching hardware.",
     "faqs": [
       {
         "q": "What is Proteus Design Suite used for?",
@@ -3122,7 +3122,7 @@ export const c6Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2023-11-16",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "DSN",
       "LYT",

@@ -177,7 +177,7 @@ export const c1Tools: Tool[] = [
         "PDF"
       ]
     },
-    "expert_verdict": "The definitive global industry standard for 2D drafting and documentation, crucial for AEC standard compatibility.",
+    "expert_verdict": "The reference point for 2D drafting and documentation, and the format most AEC workflows still exchange drawings through.",
     "languages": [
       "English",
       "Spanish",
@@ -1491,7 +1491,7 @@ export const c1Tools: Tool[] = [
     "slug": "nanocad",
     "logo_url": "/logos/nanocad.png",
     "short_desc": "Professional-grade 2D/3D CAD with native DWG compatibility, powerful API for customization, and competitive pricing.",
-    "description": "nanoCAD is a professional-grade CAD platform developed by Nanosoft, offering native DWG compatibility for seamless interoperability with AutoCAD. It features a familiar interface that reduces the learning curve for AutoCAD users, powerful 2D drafting and 3D modeling tools, and an open API (C++, .NET, JavaScript) for deep customization. nanoCAD supports parametric 3D modeling, Excel integration for BOM management, and industry-standard file formats including DWG, DXF, and IFC. Its flexible licensing options include perpetual and subscription models, making it an attractive choice for engineering, construction, and manufacturing firms seeking a cost-effective alternative to AutoCAD without sacrificing functionality.",
+    "description": "nanoCAD is a professional-grade CAD platform developed by Nanosoft, offering native DWG compatibility for seamless interoperability with AutoCAD. It features a familiar interface that reduces the learning curve for AutoCAD users, powerful 2D drafting and 3D modeling tools, and an open API (C++, .NET, JavaScript) for deep customization. nanoCAD supports parametric 3D modeling, Excel integration for BOM management, and DWG, DXF, and IFC file formats. Its flexible licensing options include perpetual and subscription models, making it an attractive choice for engineering, construction, and manufacturing firms seeking a cost-effective alternative to AutoCAD without sacrificing functionality.",
     "pricing_tiers": [
       {
         "name": "nanoCAD Platform",
@@ -2258,7 +2258,7 @@ export const c1Tools: Tool[] = [
         "SVG"
       ]
     },
-    "expert_verdict": "The go-to completely free, open-source 2D CAD tool for students, makers, and basic layout projects.",
+    "expert_verdict": "A free, open-source (GPL) 2D CAD tool for students, makers, and basic layout projects.",
     "release_notes_url": "https://github.com/LibreCAD/LibreCAD/releases",
     "languages": [
       "English",
@@ -3028,7 +3028,7 @@ export const c1Tools: Tool[] = [
         "GB (Chinese National Standards)"
       ]
     },
-    "expert_verdict": "The leading 2D mechanical drafting solution in China, highly optimized for domestic manufacturing standards.",
+    "expert_verdict": "One of the most widely used 2D mechanical drafting packages in China, tuned to domestic manufacturing standards.",
     "languages": [
       "Chinese (Simplified)",
       "Chinese (Traditional)",

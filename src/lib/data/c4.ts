@@ -9,7 +9,7 @@ export const c4Tools: Tool[] = [
     "slug": "bluebeam-revu",
     "logo_url": "/logos/bluebeam-revu.png",
     "short_desc": "The AEC standard for PDF markup and collaboration.",
-    "description": "Bluebeam Revu is the AEC and civil construction industry standard for smart vector PDF markup, calibrated 2D quantity takeoff, drawing overlay comparison, and real-time cloud collaboration. Through Bluebeam Studio Sessions, up to hundreds of architects, engineers, and general contractors can simultaneously redline construction sets, track punch-list statuses, and export hyperlinked submittal logs.",
+    "description": "Bluebeam Revu is a widely used AEC and civil construction tool for smart vector PDF markup, calibrated 2D quantity takeoff, drawing overlay comparison, and real-time cloud collaboration. Through Bluebeam Studio Sessions, up to hundreds of architects, engineers, and general contractors can simultaneously redline construction sets, track punch-list statuses, and export hyperlinked submittal logs.",
     "pricing_tiers": [
       {
         "name": "Basics",
@@ -535,7 +535,7 @@ export const c4Tools: Tool[] = [
     "slug": "meshlab",
     "logo_url": "/logos/meshlab.png",
     "short_desc": "Open-source system for processing 3D meshes.",
-    "description": "MeshLab is the leading free, open-source (GPL) cross-platform mesh processing workbench maintained by the Visual Computing Lab at ISTI-CNR. Built for cleaning, healing, and converting unstructured 3D triangular meshes and raw 3D laser scans, it provides Screened Poisson surface reconstruction, quadric edge-collapse decimation, non-manifold topological repair, vertex-to-texture baking, and watertight STL/OBJ/PLY/3DS export.",
+    "description": "MeshLab is a free, open-source (GPL) cross-platform mesh processing workbench maintained by the Visual Computing Lab at ISTI-CNR. Built for cleaning, healing, and converting unstructured 3D triangular meshes and raw 3D laser scans, it provides Screened Poisson surface reconstruction, quadric edge-collapse decimation, non-manifold topological repair, vertex-to-texture baking, and watertight STL/OBJ/PLY/3DS export.",
     "pricing_tiers": [
       {
         "name": "Open Source",

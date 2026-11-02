@@ -8,8 +8,8 @@ export const c2Tools: Tool[] = [
     "name": "SolidWorks",
     "slug": "solidworks",
     "logo_url": "/logos/solidworks.png",
-    "short_desc": "The de-facto industry standard for 3D parametric mechanical design.",
-    "description": "SOLIDWORKS by Dassault Systèmes is the industry-standard 3D parametric mechanical CAD platform for part and assembly modeling, production 2D drawings, sheet metal, weldments, and mold design. Built on the Siemens Parasolid geometric kernel and installed locally on Windows (with 3DEXPERIENCE Cloud Services connectivity), it scales from SOLIDWORKS Standard to Professional, Premium, Simulation, PDM, and Electrical modules.",
+    "short_desc": "The most widely deployed 3D parametric mechanical design platform.",
+    "description": "SOLIDWORKS by Dassault Systèmes is a 3D parametric mechanical CAD platform for part and assembly modeling, production 2D drawings, sheet metal, weldments, and mold design. Built on the Siemens Parasolid geometric kernel and installed locally on Windows (with 3DEXPERIENCE Cloud Services connectivity), it scales from SOLIDWORKS Standard to Professional, Premium, Simulation, PDM, and Electrical modules.",
     "pricing_tiers": [
       {
         "name": "SOLIDWORKS Standard",
@@ -794,7 +794,7 @@ export const c2Tools: Tool[] = [
     "name": "Rhino 3D",
     "slug": "rhino-3d",
     "logo_url": "/logos/rhino-3d.ico",
-    "short_desc": "The industry standard for complex NURBS modeling and computational design.",
+    "short_desc": "A long-standing choice for complex NURBS modeling and computational design.",
     "description": "Rhinoceros 3D (Rhino) by Robert McNeel & Associates is a mathematical NURBS surface modeler widely adopted in industrial design, marine architecture, jewelry, and computational facade engineering. Coupled with its built-in Grasshopper visual programming environment, SubD subdivision modeling, and optional Rhino.Inside.Revit integration (Windows add-on), it handles complex freeform geometry with manufacturing precision.",
     "pricing_tiers": [
       {
@@ -1327,7 +1327,7 @@ export const c2Tools: Tool[] = [
     "slug": "freecad",
     "logo_url": "/logos/freecad.ico",
     "short_desc": "The premier open-source 3D parametric modeler.",
-    "description": "FreeCAD is the leading open-source (LGPL-2.0-or-later) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and 2.5D/3D/3+2 CAM toolpaths.",
+    "description": "FreeCAD is an open-source (LGPL-2.0-or-later) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and 2.5D/3D/3+2 CAM toolpaths.",
     "pricing_tiers": [
       {
         "name": "Community",
@@ -1449,7 +1449,7 @@ export const c2Tools: Tool[] = [
         "IFC"
       ]
     },
-    "expert_verdict": "The best free, fully open-source alternative to commercial parametric CAD like SolidWorks.",
+    "expert_verdict": "A free, fully open-source alternative to commercial parametric CAD like SolidWorks, with the widest add-on ecosystem of the free options.",
     "key_capabilities": [
       "Open-source Parametric 3D Modeling",
       "BIM/AEC Workbenches",
@@ -4166,7 +4166,7 @@ export const c2Tools: Tool[] = [
     "name": "Plasticity",
     "slug": "plasticity",
     "logo_url": "/logos/plasticity.png",
-    "short_desc": "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood.",
+    "short_desc": "New-generation 3D modeller borrowing from Rhino, Blender, and CAD workflows — Parasolid under the hood.",
     "description": "Plasticity is a modern, artist-centric NURBS 3D CAD modeler powered by the industrial Siemens Parasolid geometric kernel, often described as \"CAD for artists.\" Combining Blender-inspired modal hotkeys and gizmos with mathematical G2/G3 fillet continuity, live boolean cutters, and clean STEP/Parasolid X_T/OBJ tessellation, it excels in hard-surface concept design, game assets, and industrial styling.",
     "country": "USA",
     "category_id": "c2",
@@ -4690,7 +4690,7 @@ export const c2Tools: Tool[] = [
         "SVG"
       ]
     },
-    "expert_verdict": "Tinkercad is the best free starting point for learning 3D design and electronics.",
+    "expert_verdict": "Tinkercad is a free, browser-based starting point for learning 3D design and electronics.",
     "file_formats_in": [
       "STL",
       "OBJ",

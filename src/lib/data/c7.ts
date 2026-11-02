@@ -8,7 +8,7 @@ export const c7Tools: Tool[] = [
     "name": "MatrixGold",
     "slug": "matrixgold",
     "logo_url": "/logos/matrixgold.png",
-    "short_desc": "The world's most advanced jewelry design software.",
+    "short_desc": "Jewelry design and CAD software for custom ring and piece modelling.",
     "description": "MatrixGold by Gemvision (Stuller) is the jewelry industry’s flagship parametric 3D CAD suite built atop the Rhino NURBS engine. By combining Rhino’s freeform modeling accuracy with a history-driven Dynamic Commands timeline, automated pavé/channel gem-setting builders, bezel/prong studios, and Chaos V-Ray photorealistic rendering, it lets jewelers resize rings and swap stone cuts on the fly before wax 3D printing.",
     "country": "USA",
     "category_id": "c7",
@@ -118,7 +118,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-01-19",
+    "last_updated": "2026-11-02",
     "quote_only": true,
     "file_formats_in": [
       "3DM",
@@ -652,7 +652,7 @@ export const c7Tools: Tool[] = [
     "name": "3ds Max",
     "slug": "3ds-max",
     "logo_url": "/logos/3ds-max.svg",
-    "short_desc": "Industry-standard 3D modeling, animation, and rendering software for games, film, and visualization.",
+    "short_desc": "3D modeling, animation, and rendering software for games, film, and visualization.",
     "description": "Autodesk 3ds Max is a professional 3D modeling, animation, and rendering application widely used in games, film, visual effects, and architectural visualization. It offers advanced polygon modeling, character rigging, particle systems, and integration with Arnold and V-Ray renderers.",
     "pricing_tiers": [
       {
@@ -839,7 +839,7 @@ export const c7Tools: Tool[] = [
     "slug": "zbrush",
     "logo_url": "/logos/zbrush.ico",
     "short_desc": "Digital sculpting and painting software for high-resolution character and creature modeling.",
-    "description": "ZBrush, from Maxon, is the industry-standard digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel.",
+    "description": "ZBrush, from Maxon, is a digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel.",
     "pricing_tiers": [
       {
         "name": "Monthly",
@@ -981,7 +981,7 @@ export const c7Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "expert_verdict": "The industry standard for high-fidelity digital sculpting and organic character creation, preferred by artists globally.",
+    "expert_verdict": "A high-fidelity digital sculpting tool for organic character creation, widely used in games and film.",
     "last_updated": "2026-09-17",
     "file_formats_in": [
       "ZTL",
@@ -2626,7 +2626,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2023-09-03",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -2853,7 +2853,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2023-04-02",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "OBJ",
       "FBX",
@@ -3131,7 +3131,7 @@ export const c7Tools: Tool[] = [
     "name": "V-Ray",
     "slug": "v-ray",
     "logo_url": "/logos/v-ray.ico",
-    "short_desc": "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
+    "short_desc": "Chaos V-Ray — a long-standing production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
     "description": "V-Ray from Chaos is the world's most-used production renderer across architecture, automotive, and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
     "country": "Bulgaria",
     "category_id": "c7",
@@ -3699,7 +3699,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-02-22",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "FBX",
       "OBJ",
@@ -3912,7 +3912,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-08-02",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -4109,7 +4109,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "last_updated": "2024-06-07",
+    "last_updated": "2026-11-02",
     "file_formats_in": [
       "VCE",
       "DWG",
@@ -4641,7 +4641,7 @@ export const c7Tools: Tool[] = [
       "gpu_optimization": "N/A",
       "standards": []
     },
-    "expert_verdict": "The leading 3D mine planning and modeling software, crucial for geological validation and resource estimation.",
+    "expert_verdict": "A 3D mine planning and modeling package used for geological validation and resource estimation.",
     "last_updated": "2026-09-02",
     "file_formats_in": [
       "DWG",
