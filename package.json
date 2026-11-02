@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next export",
-    "audit:prices": "node scripts/audit-stale-prices.js"
+    "audit:prices": "node scripts/audit-stale-prices.js",
+    "audit:links": "node scripts/audit-links.js"
   },
   "dependencies": {
     "@babel/parser": "^7.29.2",
