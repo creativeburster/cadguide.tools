@@ -4191,7 +4191,7 @@ export const c2Tools: Tool[] = [
     "pros": [
       "Fast, modern, hotkey-heavy UX",
       "Real Parasolid for clean STEP/IGES output",
-      "Perpetual indie license under $200"
+      "Perpetual indie seat with no subscription"
     ],
     "cons": [
       "Young product — feature gaps vs Rhino/Fusion 360",
@@ -4394,7 +4394,7 @@ export const c2Tools: Tool[] = [
     "score": 4.3,
     "pros": [
       "Famously elegant, simple UI",
-      "Perpetual license at $295",
+      "Perpetual single-purchase license",
       "Best NURBS-to-quad-mesh export in the industry"
     ],
     "cons": [
@@ -4421,7 +4421,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does MoI3D cost?",
-        "a": "MoI3D is licensed on a Perpetual model. Available editions include V4/V5 Commercial, Upgrade. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm) for live pricing."
+        "a": "MoI3D is licensed on a Perpetual model. Available editions include a Commercial license and an Upgrade license. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm) for live pricing."
       },
       {
         "q": "Is there a free version of MoI3D?",
@@ -4540,7 +4540,7 @@ export const c2Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "V4/V5 Commercial",
+        "name": "Commercial License",
         "price": "Official Store",
         "period": "one-time",
         "features": [
@@ -4796,7 +4796,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Glovius cost?",
-        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Glovius Pricing Page](https://www.glovius.com/pricing/) for live regional pricing."
+        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Glovius Pricing Page](https://www.glovius.com/#pricing) for live regional pricing."
       },
       {
         "q": "Is there a free version of Glovius?",
@@ -4849,7 +4849,7 @@ export const c2Tools: Tool[] = [
       "HTML",
       "Images"
     ],
-    "pricing_url": "https://www.glovius.com/pricing/"
+    "pricing_url": "https://www.glovius.com/#pricing"
   },
   {
     "id": "t246",
