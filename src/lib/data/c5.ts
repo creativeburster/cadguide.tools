@@ -1055,37 +1055,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "VISI Modelling licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Analysis of Draft",
           "Core & Cavity Separation",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Electrode Design",
           "Dynamic Wireframe",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -1737,7 +1717,7 @@ export const c5Tools: Tool[] = [
     "description": "CAMWorks is an industry-leading CAM solution developed by HCL Technologies that works natively inside SolidWorks and Solid Edge, using feature-based machining to automate CNC programming.",
     "country": "India",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 5000,
     "price_period": "year",
     "platforms": [
@@ -1897,37 +1877,48 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "CAMWorks Standard",
+        "price": "Contact Sales",
+        "period": "Perpetual or Subscription via reseller",
         "features": [
-          "Feature-Based Machining",
-          "VoluMill High-Speed Machining",
-          "Seat count, term and regional pricing are set by the vendor"
+          "2.5-axis part and assembly milling",
+          "4 and 5-axis indexing plus rotary machining",
+          "Automatic Feature Recognition and TechDB knowledge capture"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
+        "name": "Milling Professional",
+        "price": "Contact Sales",
+        "period": "Perpetual or Subscription via reseller",
         "features": [
-          "SolidWorks Integration",
-          "Tolerance-Based Machining",
-          "Which modules ship in the bundle varies by region and release"
+          "Everything in Standard",
+          "Advanced 3-axis rough and finish milling",
+          "VoluMill high-speed toolpaths and rest machining"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Turning Professional",
+        "price": "Contact Sales",
+        "period": "Perpetual or Subscription via reseller",
+        "features": [
+          "Everything in Standard",
+          "Mill-turn, dual turret and sub-spindle support",
+          "Sync Manager and Virtual Machine Standard simulation"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "CAMWorks Premium",
+        "price": "Contact Sales",
+        "period": "Perpetual or Subscription via reseller",
+        "features": [
+          "Milling Professional and Turning Professional combined",
+          "4 and 5-axis simultaneous milling",
+          "Swiss machining on the Turning Premium and Ultimate products"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -6754,37 +6745,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "LS-DYNA licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Explicit and implicit time-integration",
           "Crashworthiness and occupant safety",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "SPH, EFG, DEM, ALE, FSI",
           "Sheet-metal forming (LS-FORM)",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Ansys rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -6970,37 +6941,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Simcenter STAR-CCM+ licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Polyhedral and trimmed-cell automatic meshing",
           "Coupled implicit pressure-velocity solver",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Reacting flow, combustion, multi-phase",
           "Overset / chimera mesh for moving bodies",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Siemens rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -7609,37 +7560,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Femap licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Best-in-class structural FE preprocessing",
           "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "NX Nastran integration",
           "API for Visual Basic / Python automation",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Siemens rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -8015,37 +7946,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "MSC Patran licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Patran Command Language (PCL) automation",
           "Native MSC Nastran integration",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Multi-solver support (Marc, Abaqus, ANSYS)",
           "Composites layup and failure plotting",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -8228,37 +8139,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "MSC Adams licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Adams/Car vehicle dynamics templates",
           "Adams/Driveline and Adams/Tire",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Flexible body integration with Nastran",
           "Co-simulation with Simulink and AMESim",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -8438,37 +8329,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "CAESAR II licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "ASME B31.1/B31.3/B31.4/B31.8 code checks",
           "Dynamic analysis: harmonic, spectrum, time history",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Hanger design and pipe support optimisation",
           "Bidirectional with CADWorx, SmartPlant, Plant 3D",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -8651,37 +8522,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Bentley AutoPIPE licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
           "Buried pipe and PipePlus modules",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Bi-directional with OpenPlant, AutoCAD Plant 3D",
           "Spectrum, harmonic, and SAM analyses",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Bentley rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -8863,37 +8714,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "PV Elite licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "ASME VIII Div 1 & Div 2 code compliance",
           "PD 5500, EN 13445, TEMA exchanger codes",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Wind, seismic, and snow load calculations",
           "Vessel nozzle FEA (WRC, FEA 107/297)",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -9071,37 +8902,17 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "AspenTech Aspen HYSYS licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Steady-state and dynamic process simulation",
           "Refining-focused thermodynamic packages",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "HYSYS Upstream pipeline / wellbore modeling",
           "Activated Energy Analyzer and Exchanger Design",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by AspenTech rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -9286,37 +9097,48 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Basic",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual",
         "features": [
-          "Linear / non-linear static and dynamic analysis",
-          "Response spectrum and time history",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Entry level of CSI's Basic / Plus / Advanced / Ultimate ladder",
+          "Linear and non-linear static and dynamic analysis",
+          "Response spectrum and time-history analysis"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Plus",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual",
         "features": [
-          "Pushover and IDA analyses",
-          "Bridge module (precast, segmental, cable-stayed)",
-          "Which modules ship in the bundle varies by region and release"
+          "Second step of the CSI licence ladder",
+          "Adds analysis and design capacity beyond Basic",
+          "Exact feature gating confirmed by CSI at quote"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Advanced",
+        "price": "Official Store",
+        "period": "Perpetual",
+        "features": [
+          "Third step of the CSI licence ladder",
+          "Adds capacity beyond Plus",
+          "Exact feature gating confirmed by CSI at quote"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Ultimate",
+        "price": "Official Store",
+        "period": "Perpetual",
+        "features": [
+          "Top of the CSI licence ladder",
+          "Full SAP2000 feature set, including bridge and staged-construction workflows",
+          "CSI also lists a short-term Ultimate lease"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -9500,37 +9322,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Plus",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual",
         "features": [
-          "Slab, beam, column, shear-wall integrated design",
-          "Linear and non-linear analysis",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Entry level of CSI's Plus / Nonlinear / Ultimate ladder",
+          "Slab, beam, column and shear-wall integrated design",
+          "Linear and non-linear analysis"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Nonlinear",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual",
         "features": [
-          "Pushover, response spectrum, time history",
-          "Concrete, steel, composite design codes",
-          "Which modules ship in the bundle varies by region and release"
+          "Middle step of the CSI licence ladder",
+          "Adds non-linear analysis capacity",
+          "Exact feature gating confirmed by CSI at quote"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Ultimate",
+        "price": "Official Store",
+        "period": "Perpetual",
+        "features": [
+          "Top of the CSI licence ladder",
+          "Full ETABS feature set",
+          "Pushover, response spectrum and time-history analysis"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -10118,35 +9940,35 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Robot Structural Analysis Professional",
         "price": "Official Store",
-        "period": "",
+        "period": "Monthly, Annual or 3-Year Subscription",
         "features": [
-          "Linear and non-linear analysis",
-          "Reinforced concrete and steel design",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Standalone structural analysis seat",
+          "Code-based steel, concrete and timber design",
+          "Windows desktop application"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "AEC Collection",
         "price": "Official Store",
-        "period": "",
+        "period": "Monthly, Annual or 3-Year Subscription",
         "features": [
-          "Bi-directional Revit link",
-          "Multi-region code coverage (Eurocode, AISC, ACI, BS)",
-          "Which modules ship in the bundle varies by region and release"
+          "Robot plus Revit, AutoCAD, Civil 3D and Navisworks",
+          "One collection subscription",
+          "Usually cheaper than buying three or four seats separately"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Autodesk Flex",
+        "price": "Official Store",
+        "period": "Pay-as-you-go tokens",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Token-based access with no annual commitment",
+          "Buy tokens, spend them on 24-hour product access",
+          "Covers Robot and 100+ other Autodesk products"
         ],
         "is_popular": false
       }
@@ -10161,7 +9983,7 @@ export const c5Tools: Tool[] = [
     "description": "IDEA StatiCa is the leading connection-design tool for steel and concrete — its CBFEM (Component-Based Finite Element Method) lets engineers analyse arbitrarily complex connections that would be infeasible with classical hand methods.",
     "country": "Czech Republic",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 2300,
     "price_period": "year",
     "platforms": [
@@ -10332,35 +10154,57 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Steel",
         "price": "Official Store",
-        "period": "",
+        "period": "12 or 36-Month Subscription, or Perpetual + Maintenance",
         "features": [
-          "CBFEM (Component-Based FEM) for connections",
-          "Steel, concrete, and composite member checks",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Detail (D-region) concrete analysis",
-          "Bidirectional links to Tekla, Revit, Advance Steel, ETABS, SAP2000",
-          "Which modules ship in the bundle varies by region and release"
+          "Steel connection and member design on the CBFEM method",
+          "Hundreds of predefined connection templates",
+          "EN, AISC, CISC, AU, SP, GB, IS and HKG code checks"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Concrete",
+        "price": "Official Store",
+        "period": "12 or 36-Month Subscription, or Perpetual + Maintenance",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Reinforced concrete walls, beams, columns and details",
+          "ULS and SLS checks with automatic reinforcement design",
+          "ACI 318 and EN 1992 code checks"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Prestressing",
+        "price": "Official Store",
+        "period": "12 or 36-Month Subscription, or Perpetual + Maintenance",
+        "features": [
+          "Everything in Concrete",
+          "Pre- and post-tensioned members with any tendon topology",
+          "Prestress losses, creep and construction-stage analysis"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Complete",
+        "price": "Official Store",
+        "period": "12 or 36-Month Subscription, or Perpetual + Maintenance",
+        "features": [
+          "Steel, Concrete and Prestressing in one licence",
+          "Shared project file, licence and reporting framework",
+          "Floating seats, up to 7 named users per seat"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Enterprise",
+        "price": "Official Store",
+        "period": "Multi-Year Subscription, or Perpetual + Maintenance",
+        "features": [
+          "Complete feature set with unlimited named users per seat",
+          "Multinational use, including authorised affiliates",
+          "SSO, priority support and campus certification"
         ],
         "is_popular": false
       }
@@ -10375,7 +10219,7 @@ export const c5Tools: Tool[] = [
     "description": "RISA-3D is RISA Tech's general 3D structural analysis tool — popular with North American consulting offices for everyday building, industrial, and component analyses, with strong concrete, steel, masonry, wood, and cold-formed checks.",
     "country": "USA",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 2200,
     "price_period": "year",
     "platforms": [
@@ -10542,35 +10386,46 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "RISA-3D",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual Subscription or Perpetual + Maintenance",
         "features": [
-          "Linear and P-Delta analysis",
-          "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "RISAFloor integration for gravity systems",
-          "Cold-formed steel and aluminum design",
-          "Which modules ship in the bundle varies by region and release"
+          "3D frame and finite element analysis",
+          "Steel, concrete, timber, cold-formed and masonry design",
+          "Windows desktop application"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "RISAFloor",
+        "price": "Official Store",
+        "period": "Annual Subscription or Perpetual + Maintenance",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Gravity and lateral floor system design",
+          "Composite steel beam and joist design",
+          "Runs on models shared with RISA-3D"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "RISAFoundation",
+        "price": "Official Store",
+        "period": "Annual Subscription or Perpetual + Maintenance",
+        "features": [
+          "Mat, spread footing and grade beam design",
+          "Pile and pile-cap checks",
+          "Runs on models shared with RISA-3D"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "RISAConnection",
+        "price": "Official Store",
+        "period": "Annual Subscription or Perpetual + Maintenance",
+        "features": [
+          "Steel connection design and code checks",
+          "Bolted and welded connection templates",
+          "Standalone, or fed from a RISA-3D model"
         ],
         "is_popular": false
       }
@@ -10847,7 +10702,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What operating systems does midas Civil support?",
-        "a": "midas Civil runs on Windows and macOS operating systems."
+        "a": "midas Civil runs on Windows only. MIDAS IT's official system requirements list Microsoft Windows 10 and 11; Mac users have to run it through Boot Camp or a virtual machine."
       },
       {
         "q": "Which file formats does midas Civil support?",
@@ -11142,7 +10997,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What operating systems does midas Gen support?",
-        "a": "midas Gen runs on Windows and macOS operating systems."
+        "a": "midas Gen runs on Windows only. MIDAS IT's official system requirements list Microsoft Windows 10 and 11; Mac users have to run it through Boot Camp or a virtual machine."
       },
       {
         "q": "Which file formats does midas Gen support?",

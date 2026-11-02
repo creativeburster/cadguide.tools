@@ -279,6 +279,17 @@ export const c2Tools: Tool[] = [
     "description": "SketchUp by Trimble is an intuitive direct-modeling 3D architectural and interior design platform renowned for its patented Push/Pull surface extrusion workflow. Backed by the 3D Warehouse component library, LayOut 2D construction documentation, V-Ray/Enscape rendering links, and IFC openBIM export, it bridges rapid concept massing and detailed design.",
     "pricing_tiers": [
       {
+        "name": "SketchUp Free",
+        "price": "Free",
+        "period": "Free Tier",
+        "features": [
+          "Browser-based 3D modeler with no desktop applications",
+          "Trimble Connect cloud storage for personal projects",
+          "3D Warehouse component library access"
+        ],
+        "is_popular": false
+      },
+      {
         "name": "SketchUp Go",
         "price": "Official Store",
         "period": "Annual / Monthly Subscription",
@@ -2643,7 +2654,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Basic",
-        "price": "Official Store",
+        "price": "Free",
         "period": "Free Tier",
         "features": [
           "Up to 2 projects on macOS, iPadOS, Windows & visionOS",
@@ -3921,35 +3932,35 @@ export const c2Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Contact Sales",
-        "period": "",
+        "name": "Alias AutoStudio",
+        "price": "Official Store",
+        "period": "Monthly, Annual or 3-Year Subscription",
         "features": [
-          "Class-A Surfacing",
-          "Conceptual Sketching",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
-          "VR Visualization",
-          "Dynamo Integration",
-          "Which modules ship in the bundle varies by region and release"
+          "Full industrial design and Class-A surfacing toolset",
+          "Concept modelling, sculpting and visualisation",
+          "Standalone subscription, priced well above Alias Concept"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Alias Concept",
+        "price": "Official Store",
+        "period": "Monthly, Annual or 3-Year Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Lower-cost subset for sketching and concept modelling",
+          "Surface modelling and visualisation",
+          "Not the full Class-A production toolset"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Product Design & Manufacturing Collection",
+        "price": "Official Store",
+        "period": "Monthly, Annual or 3-Year Subscription",
+        "features": [
+          "Alias AutoStudio plus Inventor, AutoCAD, Fusion and more",
+          "One collection price for the whole toolchain",
+          "Cheaper than an AutoStudio seat on its own for most teams"
         ],
         "is_popular": false
       }
@@ -4862,9 +4873,9 @@ export const c2Tools: Tool[] = [
       {
         "name": "CAD Exchanger Lab",
         "price": "Official Store",
-        "period": "perpetual",
+        "period": "Perpetual or Annual Subscription",
         "features": [
-          "Desktop workbench licences quoted per seat",
+          "Desktop workbench quoted per seat, node-locked or floating",
           "B-Rep import, export and conversion",
           "Assembly structure and metadata preservation",
           "Model comparison and quality checks",
@@ -4876,7 +4887,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "CAD Exchanger SDK",
         "price": "Contact Sales",
-        "period": "annual",
+        "period": "Annual Subscription",
         "features": [
           "Embeddable conversion engine for your own product",
           "C++, .NET and Java bindings",
@@ -4889,7 +4900,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "Mobile and Cloud",
         "price": "Official Store",
-        "period": "annual",
+        "period": "Annual Subscription",
         "features": [
           "Free mobile viewer for iOS and Android",
           "Paid in-app upgrade for conversion on the go",
@@ -4983,7 +4994,7 @@ export const c2Tools: Tool[] = [
     ],
     "country": "Estonia",
     "category_id": "c2",
-    "pricing_type": "Freemium",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 0,
     "platforms": [
       "Windows",
@@ -5098,7 +5109,12 @@ export const c2Tools: Tool[] = [
       "3MF",
       "USD"
     ],
-    "pricing_url": "https://cadexchanger.com/contact-us/licensing-inquiry/"
+    "pricing_url": "https://cadexchanger.com/contact-us/licensing-inquiry/",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Floating"
+    ]
   },
   {
     "id": "t117",
@@ -5111,7 +5127,7 @@ export const c2Tools: Tool[] = [
       {
         "name": "Perpetual License",
         "price": "Official Store",
-        "period": "initial",
+        "period": "Perpetual",
         "features": [
           "3D modeling",
           "Parametric design",
@@ -5124,11 +5140,11 @@ export const c2Tools: Tool[] = [
       {
         "name": "Educational",
         "price": "Free",
-        "period": "annual",
+        "period": "",
         "features": [
-          "Full functionality",
-          "Student/Teacher license",
-          "Academic support"
+          "Full parametric modelling toolset, non-commercial use",
+          "Issued to students and educators via ASCON's education programme",
+          "Not valid for commercial or production work"
         ],
         "is_popular": false
       }

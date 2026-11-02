@@ -1897,37 +1897,17 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "OpenRoads Designer licence",
         "price": "Contact Sales",
-        "period": "",
+        "period": "Custom Quote",
         "features": [
           "Corridor Modeling",
           "Drainage Design",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
           "Terrain Modeling",
           "InRoads Migration",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Bentley rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -3125,37 +3105,17 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Hexagon SmartPlant 3D licence",
         "price": "Contact Sales",
-        "period": "",
+        "period": "Custom Quote",
         "features": [
           "Rule-based pipe, structural, cable tray, HVAC design",
           "Database-driven (Oracle / SQL Server)",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
           "Multi-discipline concurrent engineering",
           "Tight link with SmartPlant Foundation",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -3335,37 +3295,17 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "CADWorx Plant Professional licence",
         "price": "Contact Sales",
-        "period": "",
+        "period": "Custom Quote",
         "features": [
           "AutoCAD-based 3D plant modeling",
           "Spec-driven pipe routing",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
           "Bi-directional CAESAR II link",
           "Auto-isometrics (ISOGEN)",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -3551,35 +3491,46 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Contact Sales",
-        "period": "",
+        "name": "Autodesk Docs",
+        "price": "Official Store",
+        "period": "Annual or 3-Year Subscription",
         "features": [
-          "Autodesk Docs CDE",
-          "BIM Collaborate Pro (Revit Cloud Worksharing)",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Common data environment for AEC documents",
+          "Document management, reviews and approvals",
+          "Included in the AEC Collection"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
-        "price": "Contact Sales",
-        "period": "",
+        "name": "BIM Collaborate",
+        "price": "Official Store",
+        "period": "Annual or 3-Year Subscription",
         "features": [
-          "Build (project management, field, RFI, submittals)",
-          "Takeoff (2D / 3D quantity takeoff)",
-          "Which modules ship in the bundle varies by region and release"
+          "Design collaboration and model coordination",
+          "Clash detection across federated models",
+          "Includes an Autodesk Docs entitlement"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "BIM Collaborate Pro",
+        "price": "Official Store",
+        "period": "Annual or 3-Year Subscription",
+        "features": [
+          "Everything in BIM Collaborate",
+          "Cloud worksharing for Revit, Civil 3D and Plant 3D",
+          "No local server needed to co-author models"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Autodesk Takeoff",
+        "price": "Official Store",
+        "period": "Annual or 3-Year Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "2D and 3D quantity takeoff",
+          "Model-based and drawing-based quantification",
+          "Includes an Autodesk Docs entitlement"
         ],
         "is_popular": false
       }
@@ -3811,7 +3762,7 @@ export const c3Tools: Tool[] = [
     "description": "BIMcollab is a leading issue-management and openBIM clash-review platform — vendor-neutral, BCF 2.1 / 3.0 native, with deep plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri, and IFC viewers.",
     "country": "Netherlands",
     "category_id": "c3",
-    "pricing_type": "Subscription",
+    "pricing_type": "Freemium",
     "starting_price": 590,
     "price_period": "year",
     "platforms": [
@@ -3976,40 +3927,55 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Free",
+        "price": "Free",
+        "period": "Free Tier",
         "features": [
-          "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
-          "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Free BIMcollab account for basic issue management",
+          "BIMcollab Zoom free mode for IFC viewing and validation",
+          "Checkbot free version for bulk connection import"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Basic",
         "price": "Official Store",
-        "period": "",
+        "period": "Monthly or Annual Subscription",
         "features": [
-          "BIMcollab ZOOM federated IFC viewer",
-          "Smart Views and rules",
-          "Which modules ship in the bundle varies by region and release"
+          "BCF issue management with unlimited projects",
+          "10 GB storage per user",
+          "Email and live chat support"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Advanced",
+        "price": "Official Store",
+        "period": "Monthly or Annual Subscription",
+        "features": [
+          "Everything in Basic plus unlimited storage",
+          "Automated approval workflows and confidential issues",
+          "Power BI, Autodesk Docs and Trimble Connect integrations"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Enterprise",
+        "price": "Official Store",
+        "period": "Monthly or Annual Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything in Advanced plus custom roles and permissions",
+          "Split projects into phases",
+          "On-premise option for large seat counts"
         ],
         "is_popular": false
       }
     ],
-    "pricing_url": "https://bimcollab.com/zoom/"
+    "pricing_url": "https://bimcollab.com/zoom/",
+    "license_types": [
+      "Free",
+      "Subscription"
+    ]
   },
   {
     "id": "t232",
@@ -5177,11 +5143,10 @@ export const c3Tools: Tool[] = [
       }
     ],
     "alternatives": [
-      "planner-5d",
-      "floorplanner",
-      "sweet-home-3d",
       "sketchup",
-      "homestyler"
+      "chief-architect",
+      "vectorworks",
+      "archicad"
     ],
     "last_updated": "2026-11-02",
     "file_formats_in": [

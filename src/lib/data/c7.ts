@@ -308,37 +308,17 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "AVEVA Marine licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Hull Design",
           "Outfitting",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "3D Collaborative Environment",
           "Project Management",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by AVEVA rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -2666,35 +2646,46 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Netfabb Standard",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual or 3-Year Subscription",
         "features": [
-          "Build-plate packing optimisation",
-          "Lattice generation",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Import, repair and modify meshes for additive manufacturing",
+          "Orientation analysis and manual packing",
+          "Part and platform statistics with report generation"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Netfabb Premium",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual or 3-Year Subscription",
         "features": [
-          "Support generation for metal AM",
-          "Distortion / residual stress simulation",
-          "Which modules ship in the bundle varies by region and release"
+          "Everything in Standard",
+          "Advanced build supports and automatic 3D packing",
+          "Complex lattice generation and post-processing preparation"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Netfabb Ultimate",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything in Premium",
+          "Lua scripting and Netfabb Application Server automation",
+          "Advanced toolpathing and lattice optimisation"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Netfabb Local Simulation",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Metal additive process simulation for DED and powder bed fusion",
+          "Distortion prediction and compensated shape export",
+          "Support-failure and recoater-interference checks"
         ],
         "is_popular": false
       }
@@ -2880,35 +2871,46 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Individual",
         "price": "Official Store",
-        "period": "",
+        "period": "Monthly or Annual Subscription",
         "features": [
-          "Pattern-based 3D garment creation",
-          "Cloth physics simulation",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Avatars and animation",
-          "Texture and PBR material editor",
-          "Which modules ship in the bundle varies by region and release"
+          "Full design feature set for individuals, freelancers and sole proprietors",
+          "CONNECT Library and CLO-SET access",
+          "Automatic updates and technical support"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Student",
+        "price": "Official Store",
+        "period": "Monthly Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Discounted subscription after student verification",
+          "Same feature set as Individual",
+          "Purchasable a limited number of times per student"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Indie Studio",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "For small studios with up to 5 concurrent users",
+          "Floating licences",
+          "Online connection required"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Enterprise Team",
+        "price": "Contact Sales",
+        "period": "Monthly or Annual Subscription",
+        "features": [
+          "Per-seat licensing with flexible seat assignment",
+          "Usage analytics, audit logs and centralised billing",
+          "AI, CONNECT Library and CLO-SET access controls"
         ],
         "is_popular": false
       }
@@ -3717,35 +3719,35 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Substance 3D Texturing",
         "price": "Official Store",
-        "period": "",
+        "period": "Monthly or Annual Subscription",
         "features": [
-          "Non-destructive PBR layer stack",
-          "Smart materials and smart masks",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Procedural generators",
-          "Bakers (AO, normal, curvature, world-space)",
-          "Which modules ship in the bundle varies by region and release"
+          "Substance 3D Painter, Sampler and Designer",
+          "Full Substance 3D asset library access",
+          "Annual, billed monthly or prepaid annually"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Substance 3D Collection",
+        "price": "Official Store",
+        "period": "Monthly or Annual Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything in Texturing",
+          "Adds Substance 3D Stager for scene staging and rendering",
+          "100 GB cloud storage"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Collection for teams",
+        "price": "Official Store",
+        "period": "Annual Subscription, billed monthly",
+        "features": [
+          "Everything in Collection, per licence",
+          "Business administration and licence management",
+          "1 TB cloud storage"
         ],
         "is_popular": false
       }
@@ -3931,37 +3933,17 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Carlson Survey licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "AutoCAD or embedded IntelliCAD",
           "Field-to-finish processing",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "GNSS and total-station support",
           "Carlson SurvCE data collector integration",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Carlson Software rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -4148,35 +4130,46 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "TBC Starter",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual Subscription",
         "features": [
-          "GNSS baseline processing",
-          "Total-station and level data reduction",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Survey adjustments, CAD and basic model preparation",
+          "Surface and alignment tools",
+          "Trimble Connect Business seat included"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "TBC Site + Field",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual Subscription",
         "features": [
-          "Point-cloud (Trimble SX / scanner) processing",
-          "UAV photogrammetry",
-          "Which modules ship in the bundle varies by region and release"
+          "Everything in Starter",
+          "Full CAD drafting",
+          "Corridors for field-to-finish survey deliverables"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "TBC Surveying + mapping",
+        "price": "Official Store",
+        "period": "Annual Subscription",
+        "features": [
+          "Everything in Site + Field",
+          "Point cloud and scanning workflows",
+          "GIS and monitoring connections"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "TBC Enterprise",
+        "price": "Contact Sales",
+        "period": "Annual Subscription",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything in Surveying + mapping",
+          "UAV data processing and utility modelling",
+          "Tunnelling and mining workflows"
         ],
         "is_popular": false
       }
@@ -4677,10 +4670,37 @@ export const c7Tools: Tool[] = [
     "description": "CET Designer, from Configura, is a space planning and specification platform for commercial interiors. It combines drag-and-drop layout, live rendering, quoting, and order documentation driven by real manufacturer catalogs.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
+        "name": "CET Designer core licence",
         "price": "Official Store",
-        "period": "initial",
-        "features": [],
+        "period": "Annual Subscription",
+        "features": [
+          "Base space-planning application, licensed per named seat",
+          "2D/3D layout, photorealistic rendering and fly-through videos",
+          "Installation drawings, quotes and specification output",
+          "Live Design sessions with clients"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Manufacturer extensions",
+        "price": "Official Store",
+        "period": "Annual Subscription",
+        "features": [
+          "Product catalogues and configurable rules from each manufacturer",
+          "Licensed and priced by the manufacturer, not by Configura",
+          "Needed to specify any given brand's products"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Volume agreement",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Seat discounts at defined volume tiers",
+          "Central licence administration for multi-site dealer groups",
+          "Onboarding and training packages"
+        ],
         "is_popular": false
       }
     ],
@@ -4762,7 +4782,7 @@ export const c7Tools: Tool[] = [
     ],
     "country": "Sweden",
     "category_id": "c7",
-    "pricing_type": "Freemium",
+    "pricing_type": "Subscription",
     "starting_price": 0,
     "platforms": [
       "Windows"
@@ -4843,6 +4863,9 @@ export const c7Tools: Tool[] = [
       "PDF",
       "3D Photo Renders",
       "Bill of Materials (Excel)"
+    ],
+    "license_types": [
+      "Subscription"
     ]
   },
   {
@@ -5031,37 +5054,17 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
-        "period": "",
+        "name": "Accelygen licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
           "Single connected product record",
           "Multi-level BOM & assembly tree management",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
           "Direct Onshape App Store integration & CAD metadata sync",
           "Supplier, RFQ & purchase order procurement tracking",
-          "Which modules ship in the bundle varies by region and release"
+          "Seats, modules and term are quoted by Accelygen rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ],
     "trial_url": "https://www.accelygen.com/Pricing"

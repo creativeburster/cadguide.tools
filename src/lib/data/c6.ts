@@ -266,12 +266,13 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Discontinued",
-        "price": "Official Store",
-        "period": "—",
+        "price": "Discontinued",
+        "period": "",
         "features": [
-          "Sales ended June 2021",
-          "Merged into Fusion 360 Electronics",
-          "Legacy projects open in Fusion 360"
+          "Standalone subscriptions stopped being sold in 2021",
+          "Autodesk switched EAGLE users to Fusion 360 Electronics",
+          "Legacy EAGLE projects still open in Fusion 360 Electronics",
+          "No current plan to buy — contact Autodesk about migration"
         ],
         "is_popular": true
       }
@@ -2569,7 +2570,7 @@ export const c6Tools: Tool[] = [
     "description": "NI Multisim is the long-standing educational and engineering SPICE simulator (formerly Electronics Workbench) — used in thousands of universities for analog and mixed-signal circuit instruction and prototyping.",
     "country": "USA",
     "category_id": "c6",
-    "pricing_type": "Subscription",
+    "pricing_type": "Subscription / Perpetual",
     "starting_price": 600,
     "price_period": "year",
     "platforms": [
@@ -2736,37 +2737,37 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Multisim Base",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual Subscription or Perpetual",
         "features": [
-          "Interactive SPICE simulation with virtual instruments",
-          "Mixed-signal A/D simulation",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Interactive SPICE simulation with four virtual instruments",
+          "Around 47,000 manufacturer-verified components and models",
+          "Formal analysis functions are not included at this level"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Multisim Full",
         "price": "Official Store",
-        "period": "",
+        "period": "Annual Subscription or Perpetual",
         "features": [
-          "Microcontroller co-simulation",
-          "Ultiboard PCB layout pairing",
-          "Which modules ship in the bundle varies by region and release"
+          "17 analysis functions and 23 virtual instruments",
+          "Around 49,000 components and models",
+          "LabVIEW instruments and Ultiboard PCB layout integration"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Multisim Professional",
+        "price": "Official Store",
+        "period": "Annual Subscription or Perpetual",
+        "features": [
+          "20 analysis functions and 30 virtual instruments",
+          "Around 55,000 components and models",
+          "Microcontroller co-simulation"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
@@ -3140,35 +3141,57 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "PCB Design Starter Kit",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual licence",
         "features": [
-          "Schematic + SPICE simulation",
-          "Microcontroller VSM co-simulation",
-          "Seat count, term and regional pricing are set by the vendor"
+          "500-pin netlist ceiling",
+          "Schematic capture plus PCB layout",
+          "Simulation sold as a separate VSM module"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "PCB Design Level 1",
         "price": "Official Store",
-        "period": "",
+        "period": "Perpetual licence",
         "features": [
-          "Peripheral models (LCDs, sensors, motors)",
-          "ARES PCB layout with autorouter",
-          "Which modules ship in the bundle varies by region and release"
+          "1,000-pin netlist (the 1+ variant raises it to 2,000)",
+          "Full manufacturing outputs including Gerber and STEP",
+          "Professional schematic and layout feature set"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "PCB Design Level 2",
+        "price": "Official Store",
+        "period": "Perpetual licence",
+        "features": [
+          "Adds differential-pair routing and length matching",
+          "3D viewer and MCAD export",
+          "Same 1,000 / 2,000-pin netlist options"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "PCB Design Level 3",
+        "price": "Official Store",
+        "period": "Perpetual licence",
+        "features": [
+          "Unlimited netlist capacity",
+          "High-density boards plus design auditing tools",
+          "Top of the PCB Design ladder"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
+        "name": "Platinum",
+        "price": "Official Store",
+        "period": "Perpetual licence",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything Labcenter sells in one package",
+          "All PCB Design features and all VSM simulation families",
+          "IoT Builder and Visual Designer included"
         ],
         "is_popular": false
       }
