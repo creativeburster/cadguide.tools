@@ -1165,7 +1165,7 @@ export const c4Tools: Tool[] = [
     "slug": "dwg-fastview",
     "logo_url": "/logos/dwg-fastview.ico",
     "short_desc": "Lightweight cross-platform CAD viewer & editor.",
-    "description": "DWG FastView by Gstarsoft is a lightweight, high-speed cross-platform 2D/3D CAD viewer and drafting editor available across Windows, iOS, Android, and web browsers. Requiring zero AutoCAD installation, it opens native DWG/DXF drawings from R14 to 2026 with accurate SHX font rendering, layer control, linear/area measurement, PDF export, and real-time mobile field redlining.",
+    "description": "DWG FastView by Gstarsoft is a lightweight, high-speed cross-platform 2D/3D CAD viewer and drafting editor available across Windows, iOS, Android, and web browsers. Requiring zero AutoCAD installation, it opens native DWG/DXF drawings from R14 through the current DWG release with accurate SHX font rendering, layer control, linear/area measurement, PDF export, and real-time mobile field redlining.",
     "country": "China",
     "category_id": "c4",
     "pricing_type": "Freemium",

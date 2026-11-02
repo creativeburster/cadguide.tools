@@ -479,10 +479,15 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 md:gap-3"
-                            aria-label={`View official live pricing for ${tool.name}`}
+                            aria-label={
+                            tool.quote_only
+                              ? `Request a quote for ${tool.name} from the vendor`
+                              : `View official live pricing for ${tool.name}`
+                          }
                           >
                             <CreditCard className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
-                            Official Live Pricing <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
+                            {tool.quote_only ? "Request a Quote" : "Official Live Pricing"}{" "}
+                            <ExternalLink className="w-4 h-4 shrink-0 opacity-80" />
                           </a>
                         </Button>
                       ) : (

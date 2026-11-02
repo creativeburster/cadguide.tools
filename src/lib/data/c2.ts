@@ -5971,7 +5971,7 @@ export const c2Tools: Tool[] = [
     "slug": "mechcad",
     "logo_url": "/logos/mechcad.svg",
     "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-    "description": "MECHCAD 2026 is a robust commercial parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with dynamic collision and interference analysis, kinematic motion simulation, and model-derived 2D drawing generation. With direct SolidWorks part and assembly import across all editions, automated BOM, HTML 3D model export, and integrated 2.5D/3D milling and turning CAM in Premium, it provides an independent commercial solution available via paid perpetual buyout or annual subscription.",
+    "description": "MECHCAD is a robust commercial parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with dynamic collision and interference analysis, kinematic motion simulation, and model-derived 2D drawing generation. With direct SolidWorks part and assembly import across all editions, automated BOM, HTML 3D model export, and integrated 2.5D/3D milling and turning CAM in Premium, it provides an independent commercial solution available via paid perpetual buyout or annual subscription.",
     "category_id": "c2",
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 0,
@@ -6045,11 +6045,11 @@ export const c2Tools: Tool[] = [
         "ASME Y14.5"
       ]
     },
-    "expert_verdict": "MECHCAD 2026 delivers a complete, shop-floor-ready 3D parametric CAD package that punches well above its price class. With native SolidWorks assembly interoperability in Standard, advanced sheet metal, motion studies, and HTML 3D export in Expert, and integrated milling/turning CAM in Premium, it serves as an exceptional ROI powerhouse for machinery builders seeking commercial independence via paid perpetual or annual subscription licensing.",
+    "expert_verdict": "MECHCAD delivers a complete, shop-floor-ready 3D parametric CAD package that punches well above its price class. With native SolidWorks assembly interoperability in Standard, advanced sheet metal, motion studies, and HTML 3D export in Expert, and integrated milling/turning CAM in Premium, it serves as an exceptional ROI powerhouse for machinery builders seeking commercial independence via paid perpetual or annual subscription licensing.",
     "faqs": [
       {
-        "q": "What is MECHCAD 2026?",
-        "a": "MECHCAD 2026 is a professional Windows 3D parametric mechanical CAD suite developed by Mechatronics Designed Co. Ltd. (MET) in Thailand, featuring solid modeling, assembly design, kinematic motion simulation, and integrated CAM toolpath generation."
+        "q": "What is MECHCAD?",
+        "a": "MECHCAD is a professional Windows 3D parametric mechanical CAD suite developed by Mechatronics Designed Co. Ltd. (MET) in Thailand, featuring solid modeling, assembly design, kinematic motion simulation, and integrated CAM toolpath generation."
       },
       {
         "q": "What are the differences between MECHCAD Standard, Expert, and Premium editions?",

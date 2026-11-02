@@ -1728,6 +1728,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Subscription",
     "starting_price": 4000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -1912,27 +1913,17 @@ export const c3Tools: Tool[] = [
     "description": "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "cadwork licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic timber design",
-          "3D modeling",
-          "CNC output export"
+          "3D timber modelling and wood-frame design",
+          "Connection design with structural analysis and Eurocode checks",
+          "CNC machine preparation and NC code generation",
+          "IFC coordination and quantity takeoff",
+          "Editions, modules and seats are quoted by Cadwork rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Advanced structural analysis",
-          "BIM collaboration",
-          "Automation features"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2015,6 +2006,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Perpetual",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -2116,27 +2108,17 @@ export const c3Tools: Tool[] = [
     "description": "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "MagiCAD licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic MEP design",
-          "HVAC modeling",
-          "Electrical systems design"
+          "HVAC, electrical and piping design",
+          "IFC and Revit integration with clash detection",
+          "Manufacturer product library and content database",
+          "Load calculation, sizing and simulation tools",
+          "Editions, modules and seats are quoted by MagiCAD rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Piping design",
-          "BIM integration",
-          "Manufacturer content library"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2219,6 +2201,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Perpetual",
     "starting_price": 3000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -2318,27 +2301,17 @@ export const c3Tools: Tool[] = [
     "description": "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "DDScad licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic MEP design",
-          "HVAC modeling",
-          "Electrical design"
+          "Open-BIM MEP design for HVAC, electrical and plumbing",
+          "Certified IFC exchange with clash detection",
+          "Integrated load, energy and sizing calculations",
+          "Automatic drawing production, bill of quantities and scheduling",
+          "Editions, modules and seats are quoted by Graphisoft rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Piping design",
-          "BIM collaboration",
-          "Engineering calculation tools"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2421,6 +2394,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Perpetual",
     "starting_price": 2500,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -2521,27 +2495,17 @@ export const c3Tools: Tool[] = [
     "description": "dRofus is a leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence. It provides a database-driven approach to managing building requirements, room data, and equipment specifications integrated with BIM workflows.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "subscription",
+        "name": "dRofus licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic data management",
-          "Room data template management",
-          "BIM model sync"
+          "Room and equipment data management",
+          "Requirements tracking and programmatic brief definition",
+          "Revit and IFC model synchronisation",
+          "Automated validation, reporting and change control",
+          "Editions, modules and seats are quoted by dRofus rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "subscription",
-        "features": [
-          "All Standard features",
-          "Programmatic requirements definition",
-          "Automated validation",
-          "API integrations"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2624,6 +2588,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Subscription",
     "starting_price": 2000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows",
@@ -3117,6 +3082,7 @@ export const c3Tools: Tool[] = [
     "category_id": "c3",
     "pricing_type": "Subscription",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -4801,8 +4767,8 @@ export const c3Tools: Tool[] = [
     "name": "RVT Convert",
     "slug": "rvt-convert",
     "logo_url": "/logos/rvt-convert.svg",
-    "short_desc": "Free online Revit file downgrade converter to save Revit 2024–2027 projects, families, and templates back to Revit 2023.",
-    "description": "RVT Convert is a specialized, free browser-based BIM utility that solves Autodesk Revit's lack of backward compatibility. It converts Revit 2024, 2025, 2026, and 2027 project files (.rvt), family components (.rfa), and templates (.rte, .rft) back to Revit 2023 format. Because a Revit 2023 file natively opens and auto-upgrades in any release from Revit 2023 to 2027, users can freely exchange native parametric models across mismatched team versions without resorting to lossy IFC geometry transfers. The platform requires no account registration, provides temporary cloud processing with strict file retention policies, and includes a free Revit Version Checker and build number database.",
+    "short_desc": "Free browser-based converter that saves Revit projects, families and templates from recent releases back to an older Revit format.",
+    "description": "RVT Convert is a specialized, free browser-based BIM utility that solves Autodesk Revit's lack of backward compatibility. It rewrites .rvt project files, .rfa family components and .rte/.rft templates produced by recent Revit releases into one fixed older format that every later release opens and upgrades on load, so teams on mismatched versions can exchange native parametric models without resorting to lossy IFC geometry transfers. The exact source and target releases supported today are listed on the official site. The platform requires no account registration, provides temporary cloud processing with strict file retention policies, and includes a free Revit Version Checker and build number database.",
     "category_id": "c3",
     "pricing_type": "Free",
     "starting_price": 0,
@@ -4829,11 +4795,11 @@ export const c3Tools: Tool[] = [
       "Construction Management"
     ],
     "core_features": [
-      "Online Revit version downgrade converting 2024, 2025, 2026, and 2027 files to Revit 2023 format",
+      "Online Revit version downgrade from recent releases to one fixed older format",
       "Full support for Revit project files (.rvt), family components (.rfa), project templates (.rte), and family templates (.rft)",
       "Preserves native Revit parametric families, dimensions, schedules, and model constraints without IFC export loss",
       "Free Revit Version Checker supporting single-file or whole-folder inspection with CSV batch report export",
-      "Comprehensive Revit build number lookup and update mapping table (2022 to 2027)",
+      "Comprehensive Revit build number lookup and update mapping table",
       "Zero registration or software installation required — works directly in any standard web browser"
     ],
     "user_scales": [
@@ -4848,13 +4814,13 @@ export const c3Tools: Tool[] = [
     "score": 4.7,
     "pros": [
       "Solves Revit's long-standing 'saved in a later version' barrier without losing native parametric family elements",
-      "Universal Revit 2023 target format opens seamlessly in every modern release from 2023 to 2027",
+      "One fixed target format opens seamlessly in every later Revit release",
       "100% free with no account creation, credit cards, or trial watermarks",
       "Includes powerful batch Revit Version Checker with whole-folder drag-and-drop and CSV export"
     ],
     "cons": [
       "Cloud-based processing requires uploading proprietary RVT/RFA model files over internet",
-      "Features exclusive to Revit 2024+ (such as specialized Toposolid sub-division properties or brand-new schema parameters) may adapt to closest 2023 equivalents",
+      "Features introduced in newer Revit releases (such as specialised Toposolid sub-division properties or newer schema parameters) may adapt to the closest supported equivalents",
       "File size limits apply on free tier based on server processing capacity"
     ],
     "tech_specs": {
@@ -4868,19 +4834,19 @@ export const c3Tools: Tool[] = [
         "openBIM IFC Reference Workflows"
       ]
     },
-    "expert_verdict": "RVT Convert delivers the exact missing feature the global BIM community has demanded from Autodesk for over a decade: an effective, native Save-As-Older-Version workflow. By targeting Revit 2023, it enables seamless multi-firm coordination across mismatched Revit releases without gutting parametric BIM intelligence into dumb IFC meshes.",
+    "expert_verdict": "RVT Convert delivers the exact missing feature the global BIM community has demanded from Autodesk for over a decade: an effective, native Save-As-Older-Version workflow. By aiming everything at one fixed older release, it enables seamless multi-firm coordination across mismatched Revit releases without gutting parametric BIM intelligence into dumb IFC meshes.",
     "faqs": [
       {
         "q": "What is RVT Convert?",
-        "a": "RVT Convert is a free web-based utility designed to downgrade Autodesk Revit project (.rvt), family (.rfa), and template (.rte/.rft) files from versions 2024, 2025, 2026, and 2027 back to Revit 2023."
+        "a": "RVT Convert is a free web-based utility that downgrades Autodesk Revit project (.rvt), family (.rfa) and template (.rte/.rft) files from recent releases to one older, fixed Revit format. The source and target versions supported today are listed on the official site."
       },
       {
-        "q": "Why does RVT Convert downgrade specifically to Revit 2023?",
-        "a": "Because Revit files are forward-compatible. A Revit 2023 file can be opened directly in Revit 2023, 2024, 2025, 2026, and 2027 (and automatically upgraded by Revit upon opening), allowing one single converted file to satisfy any recipient on a supported release."
+        "q": "Why does RVT Convert downgrade to one fixed older release?",
+        "a": "Because Revit files are forward-compatible: a file saved in an older format opens directly in that release and in every later one, with Revit upgrading it on load. Converting everything to a single fixed target therefore lets one file satisfy any recipient on a current release, and the target does not have to chase each new Revit release."
       },
       {
         "q": "Does RVT Convert work on Revit families (.rfa)?",
-        "a": "Yes. Both family components (.rfa) and family templates (.rft) can be downgraded to Revit 2023, allowing older Revit projects to load newly created manufacturer families without upgrade lockouts."
+        "a": "Yes. Both family components (.rfa) and family templates (.rft) can be downgraded to the same older target format, allowing older Revit projects to load newly created manufacturer families without upgrade lockouts."
       },
       {
         "q": "How is this different from exporting to IFC?",
@@ -4928,7 +4894,7 @@ export const c3Tools: Tool[] = [
         "category": "Core Engineering Capabilities",
         "items": [
           {
-            "name": "Online Revit version downgrade converting 2024, 2025, 2026, and 2027 files to Revit 2023 format",
+            "name": "Online Revit version downgrade from recent releases to one fixed older format",
             "status": true
           },
           {
@@ -4957,7 +4923,7 @@ export const c3Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Comprehensive Revit build number lookup and update mapping table (2022 to 2027)",
+            "name": "Comprehensive Revit build number lookup and update mapping table",
             "status": true
           },
           {

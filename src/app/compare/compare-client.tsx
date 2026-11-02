@@ -316,16 +316,18 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
                               {row.type === 'price' && (
                                 <span className="text-lg lg:text-xl font-black text-slate-900">
                                   {/* `starting_price` is an internal benchmark, never a
-                                      price. A quote-only product carries 0 there and
-                                      used to be printed as "Free ($0)" — Tekla
-                                      Structures and Ansys Mechanical read as free.
-                                      Only the pricing_type may claim "Free". */}
+                                      price. A quote-only product carries 0 or a rough
+                                      benchmark there and used to be printed as
+                                      "Free ($0)" — Tekla Structures and Ansys
+                                      Mechanical read as free. Only pricing_type may
+                                      claim "Free"; everything else either names the
+                                      quote or defers to the vendor's own page. */}
                                   {tool.discontinued
                                     ? 'Discontinued'
                                     : tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
                                       ? 'Free ($0)'
                                       : tool.quote_only
-                                        ? 'Quoted per Project'
+                                        ? 'Custom Quote'
                                         : 'Official Live Pricing'}
                                 </span>
                               )}

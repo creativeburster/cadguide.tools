@@ -3744,6 +3744,7 @@ export const c7Tools: Tool[] = [
     "category_id": "c7",
     "pricing_type": "Perpetual",
     "starting_price": 1995,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"

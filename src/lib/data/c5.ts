@@ -889,6 +889,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription",
     "starting_price": 3000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -1574,6 +1575,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription",
     "starting_price": 12000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows",
@@ -1709,6 +1711,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -2105,27 +2108,17 @@ export const c5Tools: Tool[] = [
     "description": "Visi by Hexagon is a comprehensive CAD/CAM software solution designed for mold, die, and progressive die design. It provides integrated tools for 2D/3D design, mold design, electrode design, and CNC machining. The software is widely used in the tooling industry for its specialized capabilities.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "VISI licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAD/CAM tools",
-          "Mold design",
-          "3D modeling"
+          "2D/3D CAD with surface and solid modelling",
+          "Mould, die and progressive-die design",
+          "2.5D to 5-axis milling, wire EDM and NC generation",
+          "Electrode design and burn-area calculation",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Progressive die tools",
-          "Advanced CAM features",
-          "Automation tools"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2208,6 +2201,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -2228,7 +2222,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.hexagonmi.com/",
+    "official_url": "https://hexagon.com/products/visi",
     "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.7,
@@ -2252,11 +2246,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Visi cost?",
-        "a": "Visi is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Visi Pricing Page](https://www.hexagonmi.com/)."
+        "a": "Visi is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Visi?",
-        "a": "Visi is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Visi page](https://www.hexagonmi.com/)."
+        "a": "Visi is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Visi page](https://hexagon.com/products/visi)."
       },
       {
         "q": "What operating systems does Visi support?",
@@ -2311,27 +2305,17 @@ export const c5Tools: Tool[] = [
     "description": "Edgecam by Hexagon is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides intelligent toolpath generation, seamless CAD integration, and advanced machining strategies for complex parts. The software is widely used in manufacturing for its robust capabilities.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Edgecam licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAM tools",
-          "CNC milling",
-          "CNC turning"
+          "2.5D to 5-axis milling and high-speed machining",
+          "2-axis turning, C-axis milling and multi-turret work",
+          "Swiss-type and 4/5-axis simultaneous machining",
+          "CAD integration, machine simulation and NC generation",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-axis machining",
-          "High-speed machining",
-          "Automation tools"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -2414,6 +2398,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 4500,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -2435,7 +2420,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.hexagonmi.com/",
+    "official_url": "https://hexagon.com/products/edgecam",
     "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.8,
@@ -2459,11 +2444,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Edgecam cost?",
-        "a": "Edgecam is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Edgecam Pricing Page](https://www.hexagonmi.com/)."
+        "a": "Edgecam is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Edgecam?",
-        "a": "Edgecam is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Edgecam page](https://www.hexagonmi.com/)."
+        "a": "Edgecam is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Edgecam page](https://hexagon.com/products/edgecam)."
       },
       {
         "q": "What operating systems does Edgecam support?",
@@ -2914,27 +2899,17 @@ export const c5Tools: Tool[] = [
     "description": "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "GibbsCAM licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAM features",
-          "CNC milling",
-          "CNC turning"
+          "2.5D to 5-axis milling with adaptive and high-speed toolpaths",
+          "Turning, mill-turn, Swiss-type and wire EDM in one application",
+          "Machine simulation and NC code generation",
+          "Module-by-module licensing — only the capabilities you need",
+          "Editions, modules and seats are quoted by Sandvik rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-axis machining",
-          "Wire EDM",
-          "Advanced MTM automation"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3017,6 +2992,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -3121,27 +3097,17 @@ export const c5Tools: Tool[] = [
     "description": "hyperMILL by OPEN MIND is a German CAD/CAM software solution that generates optimized NC milling and turning programs for machine tools. It provides innovative strategies for 2.5D to 5-axis machining, high-speed machining, and special applications. The software is widely used in high-precision manufacturing.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "hyperMILL licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAM features",
-          "Milling tools",
-          "Turning tools"
+          "2.5D to 5-axis simultaneous milling",
+          "5-axis roughing with collision avoidance",
+          "Turbine-blade and impeller machining",
+          "Toolpath and NC optimisation with machine simulation",
+          "Editions, modules and seats are quoted by OPEN MIND rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "5-axis simultaneous milling",
-          "High-speed machining",
-          "Specialized turbine/blade packages"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3224,6 +3190,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 6000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -3531,27 +3498,17 @@ export const c5Tools: Tool[] = [
     "description": "WorkNC is a French CAM software solution for 2-5 axis milling with automatic feature recognition and intelligent toolpath generation. It provides comprehensive tools for mold making, die manufacturing, and general machining with a focus on automation and productivity.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "WorkNC licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAM tools",
-          "CNC milling",
-          "Feature recognition"
+          "2.5D to 5-axis milling with automatic feature recognition",
+          "Mould, die and electrode machining",
+          "Automated programming and toolpath optimisation",
+          "Machine simulation, collision detection and verification",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "5-axis milling",
-          "High-speed machining",
-          "Machining templates"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3634,6 +3591,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 5500,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -3732,27 +3690,17 @@ export const c5Tools: Tool[] = [
     "description": "SURFCAM is a US-based CAM software solution for 2-5 axis milling, turning, and wire EDM machining. It provides comprehensive tools for general machining, mold making, and production manufacturing with a focus on ease of use and affordability.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "SURFCAM licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAM tools",
-          "CNC milling",
-          "CNC turning"
+          "2.5D to 5-axis milling and surface machining",
+          "2-axis turning, C-axis milling and multi-turret work",
+          "Wire EDM and NC code generation",
+          "CAD integration, post processing and machine simulation",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-axis machining",
-          "Wire EDM",
-          "Advanced toolpath generators"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3835,6 +3783,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 4000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -3935,27 +3884,35 @@ export const c5Tools: Tool[] = [
     "description": "BobCAD-CAM is a US-based affordable CAD/CAM software solution for CNC machining with 2-5 axis capabilities. It provides integrated tools for CAD design and CAM programming with a focus on affordability and ease of use for small to medium-sized businesses.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Essentials",
+        "price": "Official Store",
+        "period": "/yr",
         "features": [
-          "Basic CAD/CAM tools",
-          "2.5D milling",
-          "CNC turning"
+          "2D cutting and engraving for mill, router, plasma, laser and waterjet",
+          "Built-in CAD drafting tools",
+          "BobART raster-to-vector artwork"
+        ]
+      },
+      {
+        "name": "Advanced",
+        "price": "Official Store",
+        "period": "/yr",
+        "features": [
+          "Everything in Essentials",
+          "3-axis milling for surface and solid machining",
+          "NC Editor Pro simulation and verification"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Ultimate",
+        "price": "Official Store",
+        "period": "/yr",
         "features": [
-          "All Standard features",
-          "Multi-axis milling",
-          "Advanced modeling tools",
-          "Design automation"
-        ],
-        "is_popular": false
+          "Everything in Advanced",
+          "Lathe 2X turning",
+          "3+1 indexing and rotary wrapping for multi-sided work"
+        ]
       }
     ],
     "detailed_features": [
@@ -4036,9 +3993,9 @@ export const c5Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 3000,
-    "price_period": "one-time",
+    "pricing_type": "Subscription",
+    "starting_price": 500,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
@@ -4341,27 +4298,17 @@ export const c5Tools: Tool[] = [
     "description": "Moldflow by Autodesk is injection molding simulation software for plastic part and mold design. It provides comprehensive tools for mold filling, cooling, and warpage analysis to optimize plastic part manufacturing and reduce production costs.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "subscription",
+        "name": "Moldflow licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic injection molding analysis",
-          "Part filling simulation",
-          "Cooling optimization"
+          "Fill, packing, cooling and warpage analysis",
+          "Gate and runner optimisation",
+          "Fibre orientation and shrinkage prediction",
+          "CAD import, Autodesk ecosystem integration and reporting",
+          "Sold through Autodesk sales and Flex tokens rather than a published list price"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "subscription",
-        "features": [
-          "All Standard features",
-          "Warpage analysis",
-          "Fiber orientation analysis",
-          "Autodesk ecosystem integration"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -4444,6 +4391,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -4747,27 +4695,17 @@ export const c5Tools: Tool[] = [
     "description": "AlphaCAM is a UK-based CAM software solution for woodworking, stone, and metal cutting. It provides comprehensive tools for CNC programming of various machining applications including routing, milling, and cutting with a focus on versatility and ease of use.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "AlphaCAM licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic routing and milling",
-          "2.5D machining",
-          "Standard nesting"
+          "Routing, nesting and cabinet making for woodworking",
+          "Stone cutting, engraving and 3D machining",
+          "Metal milling, turning and wire EDM",
+          "CNC programming with machine simulation",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-axis machining",
-          "Specialized stone cutting modules",
-          "Advanced nesting optimization"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -4850,6 +4788,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 4000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -4948,27 +4887,17 @@ export const c5Tools: Tool[] = [
     "description": "Radan is a UK-based CAD/CAM software solution for sheet metal fabrication and CNC punching. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and material optimization for fabrication workshops.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Radan licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic sheet metal design",
-          "Standard nesting tools",
-          "Bending calculation"
+          "Sheet-metal design, unfolding and bending calculation",
+          "Automatic nesting and material optimisation",
+          "CNC punch programming and laser profiling",
+          "Machine simulation and production management",
+          "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "CNC punch programming",
-          "Laser profiling",
-          "Granular inventory integration"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -5051,6 +4980,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 4500,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -5555,6 +5485,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription",
     "starting_price": 30000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows",
@@ -7353,6 +7284,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Perpetual",
     "starting_price": 12000,
+    "quote_only": true,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -10569,8 +10501,8 @@ export const c5Tools: Tool[] = [
       "Enterprise",
       "Educational"
     ],
-    "official_url": "https://www.midasoft.com/",
-    "pricing_url": "https://www.midasoft.com/",
+    "official_url": "https://www.midasuser.com/en/product/civil",
+    "pricing_url": "https://www.midasuser.com/en/product/civil",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -10686,7 +10618,7 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A widely used package for bridge design and structural analysis, with strong detailing and loading utilities.",
-    "trial_url": "https://www.midasoft.com/"
+    "trial_url": "https://www.midasuser.com/en/product/civil"
   },
   {
     "id": "t127",
@@ -10863,8 +10795,8 @@ export const c5Tools: Tool[] = [
       "Enterprise",
       "Educational"
     ],
-    "official_url": "https://www.midasoft.com/",
-    "pricing_url": "https://www.midasoft.com/",
+    "official_url": "https://www.midasuser.com/en/product/gen",
+    "pricing_url": "https://www.midasuser.com/en/product/gen",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -10980,7 +10912,7 @@ export const c5Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
-    "trial_url": "https://www.midasoft.com/"
+    "trial_url": "https://www.midasuser.com/en/product/gen"
   },
   {
     "id": "t147",
