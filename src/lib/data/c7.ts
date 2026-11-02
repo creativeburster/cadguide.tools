@@ -2364,7 +2364,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Simplify3D cost?",
-        "a": "Simplify3D is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Simplify3D Pricing Page](https://www.simplify3d.com/buy-now/) for live pricing."
+        "a": "Simplify3D is sold as a one-time perpetual licence rather than a subscription. The seat count and what upgrades are included are set by the vendor and change with each major release, so check the official store for current regional pricing."
       },
       {
         "q": "Is there a free version of Simplify3D?",
@@ -2472,37 +2472,17 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Simplify3D (perpetual licence)",
         "price": "Official Store",
         "period": "",
         "features": [
-          "Per-process slicing with stop-points",
-          "Manual support placement",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Multi-extrusion management",
-          "Pre-print simulation",
-          "Which modules ship in the bundle varies by region and release"
+          "Build preparation and slicing for a large library of printer profiles",
+          "Advanced support generation and infill control",
+          "Multi-material and sequential printing",
+          "One-time licence rather than a subscription",
+          "Seat count and upgrade terms set by the vendor"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },

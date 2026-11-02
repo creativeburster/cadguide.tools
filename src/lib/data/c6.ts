@@ -3241,7 +3241,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium 365 cost?",
-        "a": "Altium 365 is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altium 365 Pricing Page](https://www.altium.com/altium-365) for live pricing."
+        "a": "Altium 365 is the cloud platform rather than a separately priced seat: it ships inside Altium Develop, Altium Agile Teams and Altium Agile Enterprise, which differ in collaboration scope, governance and compliance features. Altium quotes by region and reseller, so use the official platform page or a local reseller for a number."
       },
       {
         "q": "Is there a free version of Altium 365?",
@@ -3353,35 +3353,39 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "Altium Develop",
         "price": "Official Store",
         "period": "",
         "features": [
-          "Cloud workspace and version control",
-          "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
-          "Seat count, term and regional pricing are set by the vendor"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Commercial licence with the full module set",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Manufacturing release portal",
-          "Live BOM, part lifecycle, supplier links",
-          "Which modules ship in the bundle varies by region and release"
+          "The Altium 365 cloud platform with PCB design",
+          "Requirements and systems engineering",
+          "Supply-chain part data inside the design workflow",
+          "Version control and release packages",
+          "Browser-based design review"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
+        "name": "Altium Agile Teams",
+        "price": "Official Store",
         "period": "",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Altium 365 for team co-creation",
+          "Shared requirements and design review",
+          "Manufacturing release packages with traceability",
+          "Collaboration across distributed teams"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Altium Agile Enterprise",
+        "price": "Contact Sales",
+        "period": "",
+        "features": [
+          "Everything in Agile Teams",
+          "Enterprise governance, role permissions and audit logs",
+          "Advanced security and compliance options",
+          "Dedicated support"
         ],
         "is_popular": false
       }

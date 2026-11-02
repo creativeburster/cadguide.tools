@@ -7208,7 +7208,7 @@ export const c5Tools: Tool[] = [
     "description": "SimScale runs OpenFOAM, Code_Aster, and CalculiX in the browser on AWS — letting engineers do production-grade CFD and FEA without local solvers, local hardware, or licensing servers.",
     "country": "Germany",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Freemium",
     "starting_price": 2400,
     "price_period": "year",
     "platforms": [
@@ -7265,11 +7265,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SimScale cost?",
-        "a": "SimScale is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official SimScale Pricing Page](https://www.simscale.com/product/pricing/) for live pricing."
+        "a": "SimScale is freemium. The Community plan is free and covers selected analysis types with public projects, while Mechanical, Professional and Enterprise are paid subscriptions that add private projects, fluid dynamics, larger computing quotas and AI features. Quotas and seat pricing are quoted per region, so check the official pricing page."
       },
       {
         "q": "Is there a free version of SimScale?",
-        "a": "Yes — SimScale offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Yes — the Community plan is genuinely free, not a time-limited trial. It restricts you to selected analysis types and public projects and carries a computing-quota cap, which is enough to learn the platform and validate a workflow before buying a paid plan."
       },
       {
         "q": "What operating systems does SimScale support?",
@@ -7378,35 +7378,52 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
-        "price": "Official Store",
+        "name": "Community",
+        "price": "Free",
         "period": "",
         "features": [
-          "CFD, FEA, thermal, particle dynamics in the browser",
-          "Unlimited cloud compute (per-hour metering)",
-          "Seat count, term and regional pricing are set by the vendor"
+          "Free plan for testing and learning",
+          "Selected analysis types",
+          "Public projects only",
+          "Community support"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "Mechanical",
         "price": "Official Store",
         "period": "",
         "features": [
-          "Real-time collaboration on projects",
-          "Public Community Plan for hobbyists",
-          "Which modules ship in the bundle varies by region and release"
+          "Everything in Community",
+          "Private projects",
+          "All standard structural and thermal analysis types",
+          "Live support from simulation experts",
+          "Larger computing quota"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Professional",
+        "price": "Official Store",
+        "period": "",
+        "features": [
+          "Everything in Mechanical",
+          "Adds fluid dynamics (CFD) analysis types",
+          "Custom computing quota",
+          "Live support from simulation experts"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
+        "name": "Enterprise",
+        "price": "Contact Sales",
         "period": "",
         "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
+          "Everything in Professional",
+          "Engineering AI and Physics AI",
+          "Dedicated API support and custom integrations",
+          "Custom user count and quotas",
+          "Dedicated technical account manager"
         ],
         "is_popular": false
       }
@@ -9584,11 +9601,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley STAAD.Pro cost?",
-        "a": "Bentley STAAD.Pro is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Bentley STAAD.Pro Pricing Page](https://www.bentley.com/software/staad-pro/) for live pricing."
+        "a": "Bentley sells STAAD.Pro as a 12-month Virtuoso subscription in three bundles: STAAD.Pro, STAAD.Pro Advanced (nonlinear and cable analysis, floor spectrum analysis for seismic design, automated reinforcing drawings) and Structural WorkSuite, which bundles Advanced with STAAD Foundation Advanced and the RAM Structural System. Prices depend on region and reseller."
       },
       {
         "q": "Is there a free version of Bentley STAAD.Pro?",
-        "a": "Yes — Bentley STAAD.Pro offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "There is no free commercial tier, but Bentley provides free academic access to its software, training and resources for students and educational institutions. Commercial teams should use the official trial to evaluate it."
       },
       {
         "q": "What operating systems does Bentley STAAD.Pro support?",
@@ -9698,37 +9715,41 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Commercial licence",
+        "name": "STAAD.Pro",
         "price": "Official Store",
         "period": "",
         "features": [
-          "Linear / non-linear static and dynamic analysis",
-          "Concrete, steel, aluminum, timber design codes",
-          "Seat count, term and regional pricing are set by the vendor"
+          "3D structural analysis and design for steel, concrete and timber",
+          "Physical model to analytical model conversion",
+          "International design code checks",
+          "OpenSTAAD API for automation",
+          "Sold as a 12-month Virtuoso subscription"
         ],
         "is_popular": false
       },
       {
-        "name": "Commercial licence with the full module set",
+        "name": "STAAD.Pro Advanced",
         "price": "Official Store",
         "period": "",
         "features": [
-          "Connection design (STAAD Connection Design)",
-          "Foundation design (Footing, Mat, Pile)",
-          "Which modules ship in the bundle varies by region and release"
+          "Everything in STAAD.Pro",
+          "Nonlinear geometric and cable analysis",
+          "Floor spectrum analysis from time-history loading for seismic design",
+          "Automated reinforcing drawings, details and schedules"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Structural WorkSuite",
+        "price": "Official Store",
+        "period": "",
+        "features": [
+          "Bundles STAAD.Pro Advanced with STAAD Foundation Advanced",
+          "Includes the RAM Structural System",
+          "The bundle most structural offices buy",
+          "Scalable licensing options quoted by Bentley"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Enterprise / floating network licence",
-        "price": "Custom Quote",
-        "period": "",
-        "features": [
-          "Floating or network licensing for teams",
-          "Multi-seat and token options quoted by the vendor",
-          "Add-on modules and enterprise support priced separately"
-        ],
-        "is_popular": false
       }
     ]
   },
