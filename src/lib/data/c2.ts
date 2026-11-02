@@ -3921,37 +3921,37 @@ export const c2Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
           "Class-A Surfacing",
           "Conceptual Sketching",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence with the full module set",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
-          "Class-A Surfacing",
-          "Conceptual Sketching",
           "VR Visualization",
           "Dynamo Integration",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },

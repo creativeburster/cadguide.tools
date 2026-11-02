@@ -2736,37 +2736,37 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Interactive SPICE simulation with virtual instruments",
           "Mixed-signal A/D simulation",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Interactive SPICE simulation with virtual instruments",
-          "Mixed-signal A/D simulation",
           "Microcontroller co-simulation",
           "Ultiboard PCB layout pairing",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3140,37 +3140,37 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "Schematic + SPICE simulation",
           "Microcontroller VSM co-simulation",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "Schematic + SPICE simulation",
-          "Microcontroller VSM co-simulation",
           "Peripheral models (LCDs, sensors, motors)",
           "ARES PCB layout with autorouter",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3353,37 +3353,37 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Cloud workspace and version control",
           "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Cloud workspace and version control",
-          "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
           "Manufacturing release portal",
           "Live BOM, part lifecycle, supplier links",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },

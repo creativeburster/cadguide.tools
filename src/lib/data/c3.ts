@@ -1897,37 +1897,37 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
           "Corridor Modeling",
           "Drainage Design",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence with the full module set",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
-          "Corridor Modeling",
-          "Drainage Design",
           "Terrain Modeling",
           "InRoads Migration",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3125,37 +3125,37 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
           "Rule-based pipe, structural, cable tray, HVAC design",
           "Database-driven (Oracle / SQL Server)",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence with the full module set",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
-          "Rule-based pipe, structural, cable tray, HVAC design",
-          "Database-driven (Oracle / SQL Server)",
           "Multi-discipline concurrent engineering",
           "Tight link with SmartPlant Foundation",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3335,37 +3335,37 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
           "AutoCAD-based 3D plant modeling",
           "Spec-driven pipe routing",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence with the full module set",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
-          "AutoCAD-based 3D plant modeling",
-          "Spec-driven pipe routing",
           "Bi-directional CAESAR II link",
           "Auto-isometrics (ISOGEN)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3551,37 +3551,37 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
           "Autodesk Docs CDE",
           "BIM Collaborate Pro (Revit Cloud Worksharing)",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Official Store",
-        "period": "per year",
+        "name": "Commercial licence with the full module set",
+        "price": "Contact Sales",
+        "period": "",
         "features": [
-          "Autodesk Docs CDE",
-          "BIM Collaborate Pro (Revit Cloud Worksharing)",
           "Build (project management, field, RFI, submittals)",
           "Takeoff (2D / 3D quantity takeoff)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3976,37 +3976,37 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
           "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
-          "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
           "BIMcollab ZOOM federated IFC viewer",
           "Smart Views and rules",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ],
     "pricing_url": "https://bimcollab.com/zoom/"
@@ -5042,8 +5042,7 @@ export const c3Tools: Tool[] = [
         ]
       }
     ]
-  }
-,
+  },
   {
     "id": "t261",
     "name": "3D House Planner",

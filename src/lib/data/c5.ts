@@ -1055,37 +1055,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Analysis of Draft",
           "Core & Cavity Separation",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Analysis of Draft",
-          "Core & Cavity Separation",
           "Electrode Design",
           "Dynamic Wireframe",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -1897,37 +1897,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Feature-Based Machining",
           "VoluMill High-Speed Machining",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Feature-Based Machining",
-          "VoluMill High-Speed Machining",
           "SolidWorks Integration",
           "Tolerance-Based Machining",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -6754,37 +6754,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Explicit and implicit time-integration",
           "Crashworthiness and occupant safety",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Explicit and implicit time-integration",
-          "Crashworthiness and occupant safety",
           "SPH, EFG, DEM, ALE, FSI",
           "Sheet-metal forming (LS-FORM)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -6970,37 +6970,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Polyhedral and trimmed-cell automatic meshing",
           "Coupled implicit pressure-velocity solver",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Polyhedral and trimmed-cell automatic meshing",
-          "Coupled implicit pressure-velocity solver",
           "Reacting flow, combustion, multi-phase",
           "Overset / chimera mesh for moving bodies",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -7378,37 +7378,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "CFD, FEA, thermal, particle dynamics in the browser",
           "Unlimited cloud compute (per-hour metering)",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "CFD, FEA, thermal, particle dynamics in the browser",
-          "Unlimited cloud compute (per-hour metering)",
           "Real-time collaboration on projects",
           "Public Community Plan for hobbyists",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -7592,37 +7592,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "Best-in-class structural FE preprocessing",
           "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "Best-in-class structural FE preprocessing",
-          "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
           "NX Nastran integration",
           "API for Visual Basic / Python automation",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -7998,37 +7998,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Patran Command Language (PCL) automation",
           "Native MSC Nastran integration",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Patran Command Language (PCL) automation",
-          "Native MSC Nastran integration",
           "Multi-solver support (Marc, Abaqus, ANSYS)",
           "Composites layup and failure plotting",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -8211,37 +8211,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Adams/Car vehicle dynamics templates",
           "Adams/Driveline and Adams/Tire",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Adams/Car vehicle dynamics templates",
-          "Adams/Driveline and Adams/Tire",
           "Flexible body integration with Nastran",
           "Co-simulation with Simulink and AMESim",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -8421,37 +8421,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "ASME B31.1/B31.3/B31.4/B31.8 code checks",
           "Dynamic analysis: harmonic, spectrum, time history",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "ASME B31.1/B31.3/B31.4/B31.8 code checks",
-          "Dynamic analysis: harmonic, spectrum, time history",
           "Hanger design and pipe support optimisation",
           "Bidirectional with CADWorx, SmartPlant, Plant 3D",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -8634,37 +8634,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
           "Buried pipe and PipePlus modules",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "ASME B31, EN 13480, KTA, ASME NB/NC/ND codes",
-          "Buried pipe and PipePlus modules",
           "Bi-directional with OpenPlant, AutoCAD Plant 3D",
           "Spectrum, harmonic, and SAM analyses",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -8846,37 +8846,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "ASME VIII Div 1 & Div 2 code compliance",
           "PD 5500, EN 13445, TEMA exchanger codes",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "ASME VIII Div 1 & Div 2 code compliance",
-          "PD 5500, EN 13445, TEMA exchanger codes",
           "Wind, seismic, and snow load calculations",
           "Vessel nozzle FEA (WRC, FEA 107/297)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -9054,37 +9054,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Steady-state and dynamic process simulation",
           "Refining-focused thermodynamic packages",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Steady-state and dynamic process simulation",
-          "Refining-focused thermodynamic packages",
           "HYSYS Upstream pipeline / wellbore modeling",
           "Activated Energy Analyzer and Exchanger Design",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -9269,37 +9269,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "Linear / non-linear static and dynamic analysis",
           "Response spectrum and time history",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "Linear / non-linear static and dynamic analysis",
-          "Response spectrum and time history",
           "Pushover and IDA analyses",
           "Bridge module (precast, segmental, cable-stayed)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -9483,37 +9483,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "Slab, beam, column, shear-wall integrated design",
           "Linear and non-linear analysis",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "Slab, beam, column, shear-wall integrated design",
-          "Linear and non-linear analysis",
           "Pushover, response spectrum, time history",
           "Concrete, steel, composite design codes",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -9698,37 +9698,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Linear / non-linear static and dynamic analysis",
           "Concrete, steel, aluminum, timber design codes",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Linear / non-linear static and dynamic analysis",
-          "Concrete, steel, aluminum, timber design codes",
           "Connection design (STAAD Connection Design)",
           "Foundation design (Footing, Mat, Pile)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -10097,37 +10097,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Linear and non-linear analysis",
           "Reinforced concrete and steel design",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Linear and non-linear analysis",
-          "Reinforced concrete and steel design",
           "Bi-directional Revit link",
           "Multi-region code coverage (Eurocode, AISC, ACI, BS)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -10311,37 +10311,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "CBFEM (Component-Based FEM) for connections",
           "Steel, concrete, and composite member checks",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "CBFEM (Component-Based FEM) for connections",
-          "Steel, concrete, and composite member checks",
           "Detail (D-region) concrete analysis",
           "Bidirectional links to Tekla, Revit, Advance Steel, ETABS, SAP2000",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -10521,37 +10521,37 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Linear and P-Delta analysis",
           "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Linear and P-Delta analysis",
-          "Concrete (ACI), steel (AISC), wood (NDS), masonry (TMS) checks",
           "RISAFloor integration for gravity systems",
           "Cold-formed steel and aluminum design",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -12478,8 +12478,7 @@ export const c5Tools: Tool[] = [
         ]
       }
     ]
-  }
-,
+  },
   {
     "id": "t260",
     "name": "Engineering on Web",

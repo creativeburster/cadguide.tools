@@ -308,37 +308,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Hull Design",
           "Outfitting",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Hull Design",
-          "Outfitting",
           "3D Collaborative Environment",
           "Project Management",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -2472,37 +2472,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "Per-process slicing with stop-points",
           "Manual support placement",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "Per-process slicing with stop-points",
-          "Manual support placement",
           "Multi-extrusion management",
           "Pre-print simulation",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -2686,37 +2686,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Build-plate packing optimisation",
           "Lattice generation",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Build-plate packing optimisation",
-          "Lattice generation",
           "Support generation for metal AM",
           "Distortion / residual stress simulation",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -2900,37 +2900,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Pattern-based 3D garment creation",
           "Cloth physics simulation",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Pattern-based 3D garment creation",
-          "Cloth physics simulation",
           "Avatars and animation",
           "Texture and PBR material editor",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3737,37 +3737,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "Non-destructive PBR layer stack",
           "Smart materials and smart masks",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "Non-destructive PBR layer stack",
-          "Smart materials and smart masks",
           "Procedural generators",
           "Bakers (AO, normal, curvature, world-space)",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -3951,37 +3951,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
           "AutoCAD or embedded IntelliCAD",
           "Field-to-finish processing",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "one-time perpetual",
+        "period": "",
         "features": [
-          "AutoCAD or embedded IntelliCAD",
-          "Field-to-finish processing",
           "GNSS and total-station support",
           "Carlson SurvCE data collector integration",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -4168,37 +4168,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
+        "name": "Commercial licence",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
           "GNSS baseline processing",
           "Total-station and level data reduction",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
+        "name": "Commercial licence with the full module set",
         "price": "Official Store",
-        "period": "per year",
+        "period": "",
         "features": [
-          "GNSS baseline processing",
-          "Total-station and level data reduction",
           "Point-cloud (Trimble SX / scanner) processing",
           "UAV photogrammetry",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ]
   },
@@ -5051,37 +5051,37 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Standard / Base Edition",
-        "price": "Custom Quote",
-        "period": "contact vendor",
+        "name": "Commercial licence",
+        "price": "Official Store",
+        "period": "",
         "features": [
           "Single connected product record",
           "Multi-level BOM & assembly tree management",
-          "Standard technical support & maintenance updates"
-        ]
+          "Seat count, term and regional pricing are set by the vendor"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Professional / Advanced Suite",
-        "price": "Custom Quote",
-        "period": "contact vendor",
+        "name": "Commercial licence with the full module set",
+        "price": "Official Store",
+        "period": "",
         "features": [
-          "Single connected product record",
-          "Multi-level BOM & assembly tree management",
           "Direct Onshape App Store integration & CAD metadata sync",
           "Supplier, RFQ & purchase order procurement tracking",
-          "Advanced automation, APIs & batch processing"
+          "Which modules ship in the bundle varies by region and release"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise / Floating Network",
+        "name": "Enterprise / floating network licence",
         "price": "Custom Quote",
-        "period": "multi-seat / token licensing",
+        "period": "",
         "features": [
-          "Floating network license server (FLEXlm / Cloud)",
-          "All specialized industry add-on modules included",
-          "Dedicated application engineer & enterprise SLA"
-        ]
+          "Floating or network licensing for teams",
+          "Multi-seat and token options quoted by the vendor",
+          "Add-on modules and enterprise support priced separately"
+        ],
+        "is_popular": false
       }
     ],
     "trial_url": "https://www.accelygen.com/Pricing"
