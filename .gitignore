@@ -17,6 +17,12 @@
 /.next/
 /out/
 
+# renamed build-artifact leftovers (kept instead of deleting so they never
+# confuse a build that needs an empty .next / out)
+/.next_stale*/
+/out_old*/
+/out_prev*/
+
 # production
 /build
 
