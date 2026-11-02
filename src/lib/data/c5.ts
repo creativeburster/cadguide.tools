@@ -877,7 +877,8 @@ export const c5Tools: Tool[] = [
       "SLI",
       "Machine build files"
     ]
-  },  {
+  },
+  {
     "id": "t81",
     "name": "Cimatron",
     "slug": "cimatron",
@@ -2336,26 +2337,16 @@ export const c5Tools: Tool[] = [
     "description": "KISSsoft is a Swiss gear calculation and design software solution for mechanical engineering. It provides comprehensive tools for gear design, shaft calculation, and transmission analysis. The software is widely used in the automotive and machinery industries for its precise calculation capabilities.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "KISSsoft licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic gear calculation",
-          "Shaft calculation",
-          "Transmission design"
+          "Cylindrical, bevel, worm, planetary, and hypoid gear sizing and strength rating (ISO/AGMA/DIN)",
+          "Shaft, bearing, bolted joint, and coaxial rotor deflection and fatigue analysis",
+          "Full gearbox and powertrain system kinematics and efficiency modelling",
+          "Modular licensing — base package and calculation modules quoted by KISSsoft / Gleason"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Advanced analysis",
-          "CAD integration plugins"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3128,27 +3119,16 @@ export const c5Tools: Tool[] = [
     "description": "Tebis is a German software solution that provides CAD/CAM, CAQ, and MES components to support design and production in die, model, and machine manufacturing. It offers integrated tools for mold design, electrode design, and CNC machining with a focus on process optimization and quality management.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Tebis licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic CAD/CAM tools",
-          "Mold and die design",
-          "Quality control (CAQ)"
+          "2.5D to 5-axis simultaneous milling, trimming, and laser cutting for die, mould, and aerospace",
+          "Active surface preparation, die-face morphing, and electrode design",
+          "Virtual machine digital twin with full collision avoidance and NC verification",
+          "Configured by workstation role and add-on modules — quoted directly by Tebis"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "MES manufacturing integration",
-          "Advanced CAM automation",
-          "Process optimization"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3931,27 +3911,16 @@ export const c5Tools: Tool[] = [
     "description": "AutoForm's software solutions form a comprehensive platform for the engineering, evaluation, and improvement of sheet metal forming and BiW assembly processes. The platform enables full digitalization, seamless information flow, and Industry 4.0 integration for automotive manufacturing.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "subscription",
+        "name": "AutoForm Forming Suite",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic forming analysis",
-          "Forming simulation",
-          "Die process design"
+          "Rapid die-face design, blank development, and multi-stage stamping feasibility",
+          "Incremental sheet metal forming, springback compensation, and trim-line optimisation",
+          "Hot forming, hydroforming, and Body-in-White (BiW) assembly simulation",
+          "Modular enterprise licensing quoted directly by AutoForm Engineering"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "subscription",
-        "features": [
-          "All Standard features",
-          "BiW assembly analysis",
-          "Advanced materials analysis",
-          "Industry 4.0 integration"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -4328,27 +4297,16 @@ export const c5Tools: Tool[] = [
     "description": "Moldex3D is a Taiwanese plastic injection molding simulation software solution for advanced analysis. It provides comprehensive tools for filling, cooling, warpage, and fiber orientation analysis to optimize plastic part manufacturing and improve product quality.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Moldex3D Suite",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic 3D molding simulation",
-          "Part filling and packing",
-          "Cooling channel design"
+          "True 3D BLM mesh generation with filling, packing, cooling, and warpage analysis",
+          "Fibre orientation, multi-component moulding, IC encapsulation, and compression moulding",
+          "Conformal cooling channel analysis and runner balance optimisation",
+          "Solution packages and parallel solver cores quoted by CoreTech System (Moldex3D)"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Advanced warpage analysis",
-          "Fiber orientation simulation",
-          "Optical/specialized molding"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -4914,27 +4872,16 @@ export const c5Tools: Tool[] = [
     "description": "Lantek Expert is a Spanish CAD/CAM software solution for sheet metal punching and cutting. It provides comprehensive tools for CNC programming of punching machines with automatic nesting and material optimization for fabrication workshops.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "Lantek Expert licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic cut programming",
-          "CNC punching",
-          "Standard nesting"
+          "Automatic and manual 2D nesting for sheet metal laser, plasma, oxy-fuel, and waterjet",
+          "CNC turret punch programming with tool management, micro-joints, and common-line cutting",
+          "Remnant tracking, cycle-time calculation, and true-cost quoting",
+          "Configured per machine technology (Cut / Punch / Quattro) and quoted by Lantek"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Laser profiling",
-          "Waterjet cutting",
-          "ERP cost estimation integration"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -5114,27 +5061,16 @@ export const c5Tools: Tool[] = [
     "description": "SigmaNEST is a US-based CAD/CAM nesting software solution that runs all major brands of laser, plasma, punch, router, waterjet, tube, and press brake machines. It provides higher yield, high quality, faster NC programming, and automation of importing, quoting, work orders, and inventory management.",
     "pricing_tiers": [
       {
-        "name": "Standard",
-        "price": "Contact",
-        "period": "perpetual",
+        "name": "SigmaNEST licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic nesting and profiling",
-          "Laser cutting programming",
-          "Plasma/punch programming"
+          "True-shape automatic nesting and remnant inventory optimisation",
+          "Laser, plasma, waterjet, oxy-fuel, router, punch, and combination machine NC programming",
+          "3D CAD import with automatic sheet-metal unfolding and bevel cutting support",
+          "Modular licensing scaled by cutting technology and ERP/MES integration — quoted by Sandvik"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional",
-        "price": "Contact",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-process nesting",
-          "Warehouse inventory integration",
-          "Shop floor production tracking"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -10447,7 +10383,7 @@ export const c5Tools: Tool[] = [
         "CSA S6"
       ]
     },
-    "expert_verdict": "The bridge engineer’s default in Korea, Japan and much of Asia, and now common on European and North American infrastructure work. Construction-stage, moving-load and tendon-prestress handling are the reasons to buy it; the NX generation adds the API and Excel-driven design automation the classic build never had. Budgets are the weak point — there is no list price, so plan on a regional quote and a real training ramp before staged analysis pays off.",
+    "expert_verdict": "The bridge engineer’s default in Korea, Japan and much of Asia, and now common on European and North American infrastructure work. Construction-stage, moving-load and tendon-prestress handling are the reasons to buy it; the NX generation adds the API and Excel-driven design automation the classic build never had. Budgets are the weak point — there is no list price, so plan on a regional quote and a real training ramp before staged analysis pays off."
   },
   {
     "id": "t127",
@@ -10717,7 +10653,7 @@ export const c5Tools: Tool[] = [
         "KBC"
       ]
     },
-    "expert_verdict": "A strong second tool for engineers whose practice is buildings rather than bridges: construction-stage analysis with creep and shrinkage, pushover and fiber hinges, and code checks across several national standards in one model. It is priced and sold like enterprise software, though, so it earns its place on high-rise, long-span and seismic-assessment work — not on routine low-rise frames.",
+    "expert_verdict": "A strong second tool for engineers whose practice is buildings rather than bridges: construction-stage analysis with creep and shrinkage, pushover and fiber hinges, and code checks across several national standards in one model. It is priced and sold like enterprise software, though, so it earns its place on high-rise, long-span and seismic-assessment work — not on routine low-rise frames."
   },
   {
     "id": "t147",
@@ -11379,29 +11315,16 @@ export const c5Tools: Tool[] = [
     "description": "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software — ESI is now part of Keysight Technologies — providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
     "pricing_tiers": [
       {
-        "name": "PAM-STAMP Standard",
+        "name": "Keysight PAM-STAMP licence",
         "price": "Contact Sales",
-        "period": "perpetual",
+        "period": "Custom Quote",
         "features": [
-          "Sheet metal forming simulation",
-          "Spring back compensation",
-          "Die face design",
-          "Standard support"
+          "End-to-end sheet metal forming, cold/hot stamping, and tube bending FEA simulation",
+          "Die-face design, drawbead modelling, and kinematic tool check",
+          "High-accuracy springback prediction and automated geometry compensation",
+          "Solver tokens and seats quoted directly by Keysight CAE (formerly ESI Group)"
         ],
         "is_popular": true
-      },
-      {
-        "name": "PAM-STAMP Advanced",
-        "price": "Contact Sales",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Multi-stage forming",
-          "Process optimization",
-          "Advanced material models",
-          "Priority support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [

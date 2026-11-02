@@ -1066,41 +1066,16 @@ export const c6Tools: Tool[] = [
     "description": "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
     "pricing_tiers": [
       {
-        "name": "OrCAD X Standard",
+        "name": "OrCAD X Professional",
         "price": "Official Store",
-        "period": "annual",
+        "period": "/yr",
         "features": [
-          "Schematic capture",
-          "PCB layout",
-          "PSpice simulation",
-          "Signal integrity analysis",
-          "Library management"
+          "OrCAD X Capture CIS schematic entry with integrated component and part data management",
+          "OrCAD X Presto PCB layout with real-time constraint-driven routing and 3D canvas",
+          "PSpice analog/mixed-signal simulation and live BOM supply-chain risk analysis",
+          "Cloud workspace collaboration and native design compatibility with Cadence Allegro X"
         ],
         "is_popular": true
-      },
-      {
-        "name": "OrCAD X Premium",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "All Standard features",
-          "Advanced simulation",
-          "Thermal analysis",
-          "Constraint management",
-          "Allegro integration"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Educational",
-        "price": "Free/Discounted",
-        "period": "annual",
-        "features": [
-          "Full functionality",
-          "Student license",
-          "Academic support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -1397,41 +1372,16 @@ export const c6Tools: Tool[] = [
     "description": "PADS Professional is a comprehensive PCB design platform from Siemens EDA (formerly Mentor Graphics) that provides advanced tools for schematic capture, PCB layout, simulation, and manufacturing output. Built on the modern Xpedition ecosystem, PADS Professional offers constraint-driven design, high-speed design capabilities, signal integrity analysis, power integrity analysis, and thermal analysis. The software features advanced routing including differential pair routing, auto-routing, and design for manufacturability checks. PADS Professional integrates seamlessly with the broader Siemens EDA ecosystem including Xpedition for high-end design requirements. The platform supports both perpetual and subscription licensing models, with educational options available. PADS Professional is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity.",
     "pricing_tiers": [
       {
-        "name": "PADS Professional Base",
+        "name": "PADS Professional",
         "price": "Official Store",
-        "period": "annual",
+        "period": "/yr",
         "features": [
-          "Schematic capture",
-          "PCB layout",
-          "Signal integrity",
-          "Power integrity",
-          "Thermal analysis",
-          "Library management"
+          "Xpedition-powered schematic capture and constraint-driven PCB layout",
+          "HyperLynx pre- and post-layout signal integrity, crosstalk, and DDRx timing analysis",
+          "Rigid-flex 3D bend modelling, RF layout, and FPGA I/O co-design",
+          "Available in tier bundles (Standard / Professional / Premium) via Siemens EDA"
         ],
         "is_popular": true
-      },
-      {
-        "name": "PADS Professional Suite",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Full Xpedition technology integration",
-          "Advanced RF & High-Speed routing",
-          "Enterprise library management",
-          "Priority support"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Educational",
-        "price": "Free/Discounted",
-        "period": "annual",
-        "features": [
-          "Full functionality",
-          "Student license",
-          "Academic support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -3571,36 +3521,16 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Community / Standard Release",
+        "name": "CircuitMaker Community",
         "price": "Free",
         "period": "forever",
         "features": [
-          "Altium-engine schematic and PCB layout",
-          "Octopart-backed component library",
-          "Public cloud project hosting",
-          "Sandbox private repos (paid CircuitMaker Pro)"
+          "Altium-engine schematic capture and up to 16-layer PCB layout",
+          "Octopart-backed community component vault with 3D STEP models",
+          "Cloud project workspace with version control for open-hardware projects",
+          "Gerber, NC Drill, BOM, and native STEP 3D export without artificial limits"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional / Team Deployment",
-        "price": "Free",
-        "period": "free commercial use",
-        "features": [
-          "Unrestricted workstation or browser usage",
-          "Full format import & export capabilities",
-          "Zero watermarks or artificial feature locks"
-        ]
-      },
-      {
-        "name": "Enterprise & Custom Integration",
-        "price": "Free / Open",
-        "period": "self-hosted / IT deployment",
-        "features": [
-          "Centralized IT package deployment",
-          "API, script, or pipeline integration",
-          "Community forums & official documentation"
-        ]
       }
     ]
   }

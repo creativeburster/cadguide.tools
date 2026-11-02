@@ -4163,41 +4163,16 @@ export const c7Tools: Tool[] = [
     "description": "AVEVA E3D Design is a leading 3D plant design and engineering software solution that provides intelligent modeling capabilities for process, power, and marine industries. The software offers comprehensive tools for 3D plant design, piping design, equipment modeling, structural design, and electrical design. E3D Design features rule-based design automation, clash detection, and real-time collaboration capabilities that streamline engineering workflows. The platform integrates seamlessly with the broader AVEVA ecosystem including engineering data management, project management, and operations solutions. E3D Design supports both perpetual and subscription licensing models, with enterprise-focused deployment options. The software is widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants.",
     "pricing_tiers": [
       {
-        "name": "E3D Design Standard",
-        "price": "Official Store",
-        "period": "annual",
+        "name": "AVEVA E3D Design licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic 3D modeling",
-          "Piping design",
-          "Equipment modeling",
-          "Design review"
+          "Multi-discipline 3D plant layout for piping, equipment, HVAC, cable trays, and steelwork",
+          "Integrated laser scan point-cloud (LFM) brownfield clash detection",
+          "Rule-based automated isometric and orthographic general arrangement drawing generation",
+          "Available via AVEVA Flex subscription credits or named/concurrent seats — quoted by AVEVA"
         ],
         "is_popular": true
-      },
-      {
-        "name": "E3D Design Enterprise",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Full 3D plant design",
-          "Piping design",
-          "Equipment modeling",
-          "Structural design",
-          "Electrical design",
-          "Clash detection"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Educational",
-        "price": "Free/Discounted",
-        "period": "annual",
-        "features": [
-          "Full functionality",
-          "Student license",
-          "Academic support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -4458,7 +4433,8 @@ export const c7Tools: Tool[] = [
       ]
     },
     "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
-    "trial_url": "https://www.aveva.com/en/products/e3d-design/"
+    "trial_url": "https://www.aveva.com/en/products/e3d-design/",
+    "quote_only": true
   },
   {
     "id": "t133",

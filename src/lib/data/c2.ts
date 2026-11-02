@@ -4032,40 +4032,35 @@ export const c2Tools: Tool[] = [
     "expert_verdict": "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
     "pricing_tiers": [
       {
-        "name": "Standard",
+        "name": "ZW3D Lite / Standard",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "perpetual / yr",
         "features": [
-          "3D Modeling",
-          "Assembly",
-          "Drafting",
-          "Data Exchange"
+          "Solid-surface hybrid 3D modelling on the Overdrive kernel",
+          "Multi-CAD direct translator (SOLIDWORKS, CATIA, NX, Creo, Inventor, STEP, DWG)",
+          "3D assembly design, sheet metal unfolding, weldments, and 2D production drafting"
+        ]
+      },
+      {
+        "name": "ZW3D Professional",
+        "price": "Official Store",
+        "period": "perpetual / yr",
+        "features": [
+          "Everything in ZW3D Standard",
+          "Full plastic injection mould design: core/cavity splitting, cooling channels, and standard mould bases",
+          "Automated electrode extraction and point-cloud reverse engineering"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional",
+        "name": "ZW3D Premium (CAD + CAM)",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "perpetual / yr",
         "features": [
-          "Mold Design",
-          "Electrode design",
-          "Reverse Engineering",
-          "Full Standard"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Premium",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "2-5 Axis CAM",
-          "Full Professional",
-          "Post-processing",
-          "Simulation"
-        ],
-        "is_popular": false
+          "Everything in ZW3D Professional",
+          "Integrated 2-axis turning and 2.5D to 5-axis simultaneous CNC milling",
+          "QuickMill high-speed roughing, toolpath verification, and post-processor library"
+        ]
       }
     ],
     "detailed_features": [

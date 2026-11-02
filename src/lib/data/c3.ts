@@ -4104,36 +4104,16 @@ export const c3Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Community / Standard Release",
+        "name": "Dynamo Open Source / Bundled",
         "price": "Free",
         "period": "forever",
         "features": [
-          "Visual node-based scripting",
-          "Native Revit and Civil 3D APIs exposed",
-          "Python and Zero-Touch C# extension",
-          "Dynamo Player for non-programmer end-users"
+          "Visual node-based computational design and geometry scripting",
+          "Bundled with Autodesk Revit, Civil 3D, FormIt, and Alias",
+          "Standalone Dynamo Sandbox available as a free open-source download",
+          "Python scripting, Zero-Touch C# nodes, and community package manager"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Professional / Team Deployment",
-        "price": "Free",
-        "period": "free commercial use",
-        "features": [
-          "Unrestricted workstation or browser usage",
-          "Full format import & export capabilities",
-          "Zero watermarks or artificial feature locks"
-        ]
-      },
-      {
-        "name": "Enterprise & Custom Integration",
-        "price": "Free / Open",
-        "period": "self-hosted / IT deployment",
-        "features": [
-          "Centralized IT package deployment",
-          "API, script, or pipeline integration",
-          "Community forums & official documentation"
-        ]
       }
     ]
   },
@@ -4495,29 +4475,16 @@ export const c3Tools: Tool[] = [
     "description": "Planbar is Allplan's specialized CAD solution for precast concrete design and planning, enabling fast, high-quality design of precast elements through highly automated workflows and intelligent assistants. The software supports the entire precast concrete workflow from 3D tendering models to detailed shop drawings, including automatic generation of reinforcement, fixtures, and connections. Planbar is specifically designed for precast concrete plants and design offices, optimizing all project phases with BIM integration and automation capabilities. It handles concrete panels, precast concrete slabs, walls, and other precast elements with minimum effort. The software's extensive development resources in the precast concrete construction industry ensure continuous improvement and competitive advantage. Planbar integrates with the Allplan ecosystem and supports standard CAD formats for seamless collaboration with other project stakeholders.",
     "pricing_tiers": [
       {
-        "name": "Planbar Standard",
+        "name": "Planbar licence",
         "price": "Contact Sales",
-        "period": "perpetual",
+        "period": "Custom Quote",
         "features": [
-          "Precast concrete design",
-          "3D modeling",
-          "Automated shop drawings",
-          "Standard support"
+          "3D BIM modelling for precast concrete walls, slabs, stairs, and structural elements",
+          "Automated reinforcement generation, fixture placement, and shop drawing creation",
+          "Direct NC/MES data output for precast production plants (Unitechnik, BVBS, PXML)",
+          "IFC4 and BIMplus coordination — modules and seats quoted by ALLPLAN"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Planbar Advanced",
-        "price": "Contact Sales",
-        "period": "perpetual",
-        "features": [
-          "All Standard features",
-          "Advanced automation",
-          "BIM integration",
-          "Custom workflows",
-          "Priority support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
