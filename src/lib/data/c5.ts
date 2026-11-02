@@ -125,7 +125,6 @@ export const c5Tools: Tool[] = [
     "official_url": "https://plm.sw.siemens.com/en-US/nx/",
     "pricing_url": "https://www.dex.siemens.com/",
     "trial_url": "https://trials.sw.siemens.com/nx/",
-    "price_tier": "high",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -362,7 +361,6 @@ export const c5Tools: Tool[] = [
     "official_url": "https://www.mastercam.com",
     "pricing_url": "https://www.mastercam.com/how-to-buy/",
     "trial_url": "https://my.mastercam.com",
-    "price_tier": "quote",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -12491,7 +12489,6 @@ export const c5Tools: Tool[] = [
     "description": "Engineering on Web is an integrated browser-based mechanical engineering suite combining parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and industrial statistical process control (SPC). Running entirely client-side via WebAssembly solvers and WebGPU acceleration, it enables engineers to sketch with geometric constraints, model parts and assemblies, simulate structural, thermal, fluid, and electromagnetic fields, and evaluate manufacturing capability (control charts, Cpk, DOE) without software downloads or account creation. The platform features an AI modeling copilot and exports STEP, IGES, STL, and DXF files.",
     "category_id": "c5",
     "pricing_type": "Free",
-    "price_tier": "free",
     "starting_price": 0,
     "country": "Brazil",
     "platforms": [

@@ -125,7 +125,6 @@ export const c6Tools: Tool[] = [
     "official_url": "https://www.altium.com",
     "pricing_url": "https://www.altium.com/pricing",
     "trial_url": "https://www.altium.com/free-trials",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1977,7 +1976,6 @@ export const c6Tools: Tool[] = [
     "official_url": "https://www.kicad.org",
     "donate_url": "https://www.kicad.org/donate/",
     "trial_url": "https://www.kicad.org/download/",
-    "price_tier": "free",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [

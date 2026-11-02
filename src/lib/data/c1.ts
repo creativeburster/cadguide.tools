@@ -127,7 +127,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://www.autodesk.com/products/autocad/overview",
     "pricing_url": "https://www.autodesk.com/products/autocad/subscribe",
     "trial_url": "https://www.autodesk.com/products/autocad/free-trial",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -401,7 +400,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://www.zwsoft.com/product/zwcad",
     "pricing_url": "https://www.zwsoft.com/store/index/index",
     "trial_url": "https://www.zwsoft.com/product/zwcad/download",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -591,7 +589,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://bricscad.octave.com/bricscad",
     "pricing_url": "https://bricscad.octave.com/store/bricscad",
     "trial_url": "https://bricscad.octave.com/cad-software/cad-download",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -982,7 +979,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://www.draftsight.com",
     "pricing_url": "https://www.draftsight.com/how-to-buy",
     "trial_url": "https://www.draftsight.com/how-to-buy/freetrial-form",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.3,
     "pros": [
@@ -1130,7 +1126,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://www.gstarcad.net",
     "pricing_url": "https://www.gstarcad.net/Eshop",
     "trial_url": "https://www.gstarcad.net/download/",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [

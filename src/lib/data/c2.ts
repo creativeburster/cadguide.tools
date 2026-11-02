@@ -124,7 +124,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.solidworks.com",
     "pricing_url": "https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing",
     "trial_url": "https://my.solidworks.com/try-solidworks",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -371,7 +370,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.sketchup.com",
     "pricing_url": "https://www.sketchup.com/plans-and-pricing",
     "trial_url": "https://www.sketchup.com/try-sketchup",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -644,7 +642,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.autodesk.com/products/fusion-360/overview",
     "pricing_url": "https://www.autodesk.com/products/fusion-360/subscribe",
     "trial_url": "https://www.autodesk.com/products/fusion-360/free-trial",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -905,7 +902,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.rhino3d.com",
     "pricing_url": "https://www.rhino3d.com/sales/",
     "trial_url": "https://www.rhino3d.com/download/",
-    "price_tier": "low",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1178,7 +1174,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.3ds.com/products-services/catia/",
     "pricing_url": "https://www.3ds.com/products/catia",
     "trial_url": "https://www.3ds.com/products/catia/cloud",
-    "price_tier": "quote",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -1394,7 +1389,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.freecad.org",
     "donate_url": "https://www.freecad.org/sponsor.php",
     "trial_url": "https://www.freecad.org/downloads.php",
-    "price_tier": "free",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -1666,7 +1660,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.onshape.com",
     "pricing_url": "https://www.onshape.com/en/pricing",
     "trial_url": "https://www.onshape.com/en/sign-up",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1962,7 +1955,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
     "pricing_url": "https://dex.siemens.com",
     "trial_url": "https://resources.sw.siemens.com/en-US/trial-solid-edge/",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -2101,7 +2093,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.autodesk.com/products/inventor/overview",
     "pricing_url": "https://www.autodesk.com/products/inventor/subscribe",
     "trial_url": "https://www.autodesk.com/products/inventor/free-trial",
-    "price_tier": "high",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -2348,7 +2339,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.ptc.com/en/products/creo",
     "pricing_url": "https://www.ptc.com/en/products/creo",
     "trial_url": "https://www.ptc.com/en/products/creo/trial",
-    "price_tier": "high",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -3367,7 +3357,6 @@ export const c2Tools: Tool[] = [
     "official_url": "https://www.blender.org",
     "donate_url": "https://fund.blender.org/",
     "trial_url": "https://www.blender.org/download/",
-    "price_tier": "free",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [

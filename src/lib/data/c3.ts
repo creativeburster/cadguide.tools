@@ -100,7 +100,6 @@ export const c3Tools: Tool[] = [
     "official_url": "https://www.autodesk.com/products/revit/overview",
     "pricing_url": "https://www.autodesk.com/products/revit/subscribe",
     "trial_url": "https://www.autodesk.com/products/revit/free-trial",
-    "price_tier": "high",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -366,7 +365,6 @@ export const c3Tools: Tool[] = [
     "official_url": "https://graphisoft.com/solutions/archicad",
     "pricing_url": "https://graphisoft.com/buy",
     "trial_url": "https://graphisoft.com/try",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -628,7 +626,6 @@ export const c3Tools: Tool[] = [
     "official_url": "https://www.tekla.com",
     "pricing_url": "https://www.tekla.com/contact",
     "trial_url": "https://www.tekla.com/try",
-    "price_tier": "high",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -848,7 +845,6 @@ export const c3Tools: Tool[] = [
     "official_url": "https://www.vectorworks.net",
     "pricing_url": "https://www.vectorworks.net/en-US/purchasing",
     "trial_url": "https://customers.vectorworks.net/trial",
-    "price_tier": "mid",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -4977,7 +4973,6 @@ export const c3Tools: Tool[] = [
     "description": "3D House Planner is an intuitive, free browser-based architectural design and floor planning application that runs entirely on client-side Web technologies without software installation or account signups. It provides dual-mode 2D drafting and synchronized real-time 3D visualization, enabling homeowners, architects, and interior designers to draw wall layouts, insert parametric doors and windows, furnish rooms, and generate realistic walkthroughs. Built with interoperability at its core, 3D House Planner supports openBIM IFC4 export alongside DXF, SVG, OBJ, GLB, and STL formats with zero watermarks and local IndexedDB project persistence.",
     "category_id": "c3",
     "pricing_type": "Free",
-    "price_tier": "free",
     "starting_price": 0,
     "country": "Brazil",
     "platforms": [

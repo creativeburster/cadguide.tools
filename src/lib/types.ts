@@ -34,8 +34,8 @@ export interface Tool {
    * thresholds and the TCO calculator.
    *
    * Any user-facing price must link to the vendor's official pricing page
-   * (`pricing_url`) instead. See `price_tier` for the coarse, stable
-   * low/mid/high/quote/free bucket that IS safe to display.
+   * (`pricing_url`) instead. `pricing_type` is the only coarse bucket that is
+   * safe to display ("Free" / "Subscription" / "Perpetual" / ...).
    */
   starting_price: number;
   /** What starting_price denotes: monthly subscription, annual subscription, or one-time buyout. */
@@ -51,7 +51,13 @@ export interface Tool {
   donate_url?: string;
   release_notes_url?: string;
   system_reqs_url?: string;
-  price_tier?: "free" | "low" | "mid" | "high" | "quote";
+  /**
+   * DO NOT RE-ADD: `price_tier` ("free" | "low" | "mid" | "high" | "quote")
+   * was removed on purpose. It had no consumer anywhere in the app, was
+   * populated on only 27 of 187 tools, and kept triggering false "we forgot
+   * one" investigations. The real granularity anchor is `starting_price`
+   * (internal only) and the displayable bucket is `pricing_type`.
+   */
   score: number;
   pros: string[];
   cons: string[];
