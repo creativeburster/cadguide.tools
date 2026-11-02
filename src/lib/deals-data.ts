@@ -168,7 +168,7 @@ export const activeDeals: Deal[] = [
     description: 'Students and educators can access the full SketchUp Studio package (including V-Ray, Revit importer, and Sefaira) at the current education rate (check the official education page for live pricing).',
     discount: 'Student / Education Plan',
     type: 'FreeStudent',
-    link: 'https://www.sketchup.com/plans-and-pricing/higher-education',
+    link: 'https://www.sketchup.com/plans-and-pricing',
   },
   {
     id: 'd-rhino-student-buyout',
@@ -195,7 +195,7 @@ export const activeDeals: Deal[] = [
     description: 'Graphisoft provides verified architectural students, teachers, and schools with free renewable academic licenses of ArchiCAD.',
     discount: '100% FREE for Students',
     type: 'FreeStudent',
-    link: 'https://graphisoft.com/solutions/education',
+    link: 'https://graphisoft.com/education',
   },
   {
     id: 'd-inventor-student',
@@ -240,7 +240,7 @@ export const activeDeals: Deal[] = [
     description: 'Register at Tekla Campus to download a free student license of Tekla Structures and Trimble Connect for self-learning.',
     discount: '100% FREE Learning License',
     type: 'FreeStudent',
-    link: 'https://campus.tekla.com/',
+    link: 'https://www.tekla.com/solutions/campus',
   },
   {
     id: 'd-microstation-student',
@@ -587,7 +587,7 @@ export const activeDeals: Deal[] = [
     id: 'd-tekla-tedds-student', toolId: 't236', title: 'Tekla Tedds Student License',
     description: 'Students can access Tekla Tedds for free through Trimble academic program for structural calculations.',
     discount: '100% FREE for Students', type: 'FreeStudent',
-    link: 'https://campus.tekla.com/',
+    link: 'https://www.tekla.com/solutions/campus',
   },
 
   // BATCH 4: Free & Open Source Tools
@@ -849,7 +849,7 @@ export const activeDeals: Deal[] = [
     id: 'd-ares-trial', toolId: 't91', title: 'ARES Commander Free Trial',
     description: 'Try ARES Commander with the official trial — professional DWG-compatible 2D/3D CAD by Graebert.',
     discount: 'Official Free Trial', type: 'Evergreen',
-    link: 'https://www.graebert.com/free-trial',
+    link: 'https://www.graebert.com/try',
   },
   {
     id: 'd-kompas-trial', toolId: 't117', title: 'KOMPAS-3D Free Trial',
