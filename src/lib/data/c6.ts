@@ -144,7 +144,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium Designer cost?",
-        "a": "Altium Designer is licensed on a Subscription model. Available editions include Standard, Professional, Enterprise. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Altium Designer Pricing Page](https://www.altium.com/pricing) for live pricing."
+        "a": "Altium Designer is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Altium Designer Pricing Page](https://www.altium.com/pricing)."
       },
       {
         "q": "Does Altium Designer offer a free trial?",
@@ -346,7 +346,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Eagle cost?",
-        "a": "Eagle has been discontinued and is no longer sold as a standalone commercial license. Check the official vendor portal for migration and legacy support options."
+        "a": "Eagle has been discontinued and is no longer sold as a standalone commercial license. Check the official vendor portal for migration and legacy support options. Current plans and regional pricing: [Official Eagle Pricing Page](https://www.autodesk.com/products/fusion-360/overview)."
       },
       {
         "q": "Is there a free version of Eagle?",
@@ -446,7 +446,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN Electric P8 cost?",
-        "a": "EPLAN Electric P8 is licensed on a Subscription model. Available editions include Electric P8 Standard. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Electric P8 Pricing Page](https://www.eplan.com) for live pricing."
+        "a": "EPLAN Electric P8 is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official EPLAN Electric P8 Pricing Page](https://www.eplan.com)."
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
@@ -846,7 +846,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN cost?",
-        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Pricing Page](https://www.eplan.com/) for live pricing."
+        "a": "EPLAN is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official EPLAN Pricing Page](https://www.eplan.com/)."
       },
       {
         "q": "Is there a free version of EPLAN?",
@@ -1014,7 +1014,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Allegro PCB cost?",
-        "a": "Allegro PCB is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Allegro PCB Pricing Page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html) for live pricing."
+        "a": "Allegro PCB is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allegro PCB Pricing Page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
       },
       {
         "q": "Is there a free version of Allegro PCB?",
@@ -1361,7 +1361,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does OrCAD cost?",
-        "a": "OrCAD is licensed on a Subscription model. Available editions include OrCAD X Standard, OrCAD X Premium, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official OrCAD Pricing Page](https://www.orcad.com/) for live pricing."
+        "a": "OrCAD is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OrCAD Pricing Page](https://www.orcad.com/)."
       },
       {
         "q": "Is there a free version of OrCAD?",
@@ -1683,7 +1683,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does PADS Professional cost?",
-        "a": "PADS Professional is licensed on a Subscription model. Available editions include PADS Professional Base, PADS Professional Suite, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official PADS Professional Pricing Page](https://www.siemens.com/en-us/products/pcb/pads/professional/) for live pricing."
+        "a": "PADS Professional is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PADS Professional Pricing Page](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
       },
       {
         "q": "Is there a free version of PADS Professional?",
@@ -1850,7 +1850,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Xpedition cost?",
-        "a": "Xpedition is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Xpedition Pricing Page](https://eda.sw.siemens.com/en-US/pcb/xpedition/) for live pricing."
+        "a": "Xpedition is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Xpedition Pricing Page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
       },
       {
         "q": "Is there a free version of Xpedition?",
@@ -2007,7 +2007,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does KiCad cost?",
-        "a": "KiCad is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
+        "a": "KiCad is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official KiCad Page](https://www.kicad.org)."
       },
       {
         "q": "Is KiCad really free?",
@@ -2419,7 +2419,7 @@ export const c6Tools: Tool[] = [
       }
     ],
     "pros": [
-      "True perpetual license starting at just $75 with no subscriptions",
+      "True perpetual license with no subscriptions",
       "Friendly learning curve and intuitive modern interface",
       "Non-profit & academic discounts available for students and makers"
     ],
@@ -2446,7 +2446,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does DipTrace cost?",
-        "a": "DipTrace is licensed on a Perpetual model. Available editions include Starter, Lite, Standard, Extended, Full. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official DipTrace Pricing Page](https://diptrace.com/buy/) for live pricing."
+        "a": "DipTrace is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DipTrace Pricing Page](https://diptrace.com/buy/)."
       },
       {
         "q": "Is there a free version of DipTrace?",
@@ -2625,7 +2625,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does NI Multisim cost?",
-        "a": "NI Multisim is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official NI Multisim Pricing Page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html) for live pricing."
+        "a": "NI Multisim is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official NI Multisim Pricing Page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
       },
       {
         "q": "Is there a free version of NI Multisim?",
@@ -2835,7 +2835,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does LTspice cost?",
-        "a": "LTspice is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "LTspice is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official LTspice Page](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)."
       },
       {
         "q": "Is LTspice really free?",
@@ -3026,7 +3026,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Proteus Design Suite cost?",
-        "a": "Proteus Design Suite is licensed on a Perpetual model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Proteus Design Suite Pricing Page](https://www.labcenter.com/pricing/) for live pricing."
+        "a": "Proteus Design Suite is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Proteus Design Suite Pricing Page](https://www.labcenter.com/pricing/)."
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
@@ -3241,7 +3241,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does Altium 365 cost?",
-        "a": "Altium 365 is the cloud platform rather than a separately priced seat: it ships inside Altium Develop, Altium Agile Teams and Altium Agile Enterprise, which differ in collaboration scope, governance and compliance features. Altium quotes by region and reseller, so use the official platform page or a local reseller for a number."
+        "a": "Altium 365 is the cloud platform rather than a separately priced seat: it ships inside Altium Develop, Altium Agile Teams and Altium Agile Enterprise, which differ in collaboration scope, governance and compliance features. Altium quotes by region and reseller, so use the official platform page or a local reseller for a number. Current plans and regional pricing: [Official Altium 365 Pricing Page](https://www.altium.com/altium-365)."
       },
       {
         "q": "Is there a free version of Altium 365?",
@@ -3453,7 +3453,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does CircuitMaker cost?",
-        "a": "CircuitMaker is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "CircuitMaker is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CircuitMaker Page](https://www.altium.com/circuitmaker)."
       },
       {
         "q": "Is CircuitMaker really free?",

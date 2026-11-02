@@ -164,7 +164,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Revit cost?",
-        "a": "Revit is subscription-only — there is no perpetual licence any more. You choose a monthly, annual or three-year term per named user, and the price depends on your country, currency and reseller. Autodesk also sells Revit inside the Architecture, Engineering & Construction Collection, which is often better value if you also need AutoCAD, Civil 3D or Navisworks. See the official subscribe page for current regional pricing."
+        "a": "Revit is subscription-only — there is no perpetual licence any more. You choose a monthly, annual or three-year term per named user, and the price depends on your country, currency and reseller. Autodesk also sells Revit inside the Architecture, Engineering & Construction Collection, which is often better value if you also need AutoCAD, Civil 3D or Navisworks. See the official subscribe page for current regional pricing. Current plans and regional pricing: [Official Revit Pricing Page](https://www.autodesk.com/products/revit/subscribe)."
       },
       {
         "q": "Does Revit offer a free trial?",
@@ -435,7 +435,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "Archicad is sold as a subscription in three plan families — Archicad Studio, Archicad Collaborate, and the newer Archicad Max — each available on a monthly, 1-year or 3-year term, with the longer terms locking the price. Graphisoft no longer sells new perpetual licences: the current shop lists subscription terms only. Seat rates differ by billing country and exclude tax, so check the official pricing page for your region."
+        "a": "Archicad is sold as a subscription in three plan families — Archicad Studio, Archicad Collaborate, and the newer Archicad Max — each available on a monthly, 1-year or 3-year term, with the longer terms locking the price. Graphisoft no longer sells new perpetual licences: the current shop lists subscription terms only. Seat rates differ by billing country and exclude tax, so check the official pricing page for your region. Current plans and regional pricing: [Official ArchiCAD Pricing Page](https://www.graphisoft.com/pricing)."
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
@@ -695,7 +695,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Structures cost?",
-        "a": "Tekla Structures is sold by subscription in three levels — Carbon for viewing, coordination and planning; Graphite for design modelling and documentation; and Diamond for the full detailing-to-fabrication toolset. Trimble quotes per seat rather than publishing a list price, and rates vary by country and reseller, so request a quote from the official subscription page."
+        "a": "Tekla Structures is sold by subscription in three levels — Carbon for viewing, coordination and planning; Graphite for design modelling and documentation; and Diamond for the full detailing-to-fabrication toolset. Trimble quotes per seat rather than publishing a list price, and rates vary by country and reseller, so request a quote from the official subscription page. Current plans and regional pricing: [Official Tekla Structures Pricing Page](https://www.tekla.com/products/tekla-structures/subscription)."
       },
       {
         "q": "Is there a free version of Tekla Structures?",
@@ -926,7 +926,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks sells the same product line as either a perpetual licence or a subscription, so you choose the model first and the discipline second: Fundamentals, one of Architect / Landmark / Spotlight, or Design Suite for all three. Perpetual buyers normally add a Service Select support plan to keep upgrades coming. Prices are quoted by region and by reseller, so check the official buy page for your country."
+        "a": "Vectorworks sells the same product line as either a perpetual licence or a subscription, so you choose the model first and the discipline second: Fundamentals, one of Architect / Landmark / Spotlight, or Design Suite for all three. Perpetual buyers normally add a Service Select support plan to keep upgrades coming. Prices are quoted by region and by reseller, so check the official buy page for your country. Current plans and regional pricing: [Official Vectorworks Pricing Page](https://www.vectorworks.net/design-suite/buy)."
       },
       {
         "q": "Is there a free version of Vectorworks?",
@@ -1086,7 +1086,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Chief Architect cost?",
-        "a": "Chief Architect Premier is offered both as a perpetual licence and, more recently, as a subscription — the perpetual route usually pairs with an annual SSA plan that supplies upgrades and support. Prices are set per region and change with each release, so check the official Premier page before budgeting."
+        "a": "Chief Architect Premier is offered both as a perpetual licence and, more recently, as a subscription — the perpetual route usually pairs with an annual SSA plan that supplies upgrades and support. Prices are set per region and change with each release, so check the official Premier page before budgeting. Current plans and regional pricing: [Official Chief Architect Pricing Page](https://www.chiefarchitect.com/products/home-design/premier/)."
       },
       {
         "q": "Is there a free version of Chief Architect?",
@@ -1196,7 +1196,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Civil 3D cost?",
-        "a": "Civil 3D is subscription-only, licensed per named user on a monthly, annual or three-year term — the toolset is identical across terms. It is also included in the Architecture, Engineering & Construction Collection, which is usually the better value if you also need AutoCAD, Revit or Navisworks. Prices differ by country and reseller, so check the official buying options for your region."
+        "a": "Civil 3D is subscription-only, licensed per named user on a monthly, annual or three-year term — the toolset is identical across terms. It is also included in the Architecture, Engineering & Construction Collection, which is usually the better value if you also need AutoCAD, Revit or Navisworks. Prices differ by country and reseller, so check the official buying options for your region. Current plans and regional pricing: [Official Civil 3D Pricing Page](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Civil 3D?",
@@ -1418,7 +1418,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks Landmark cost?",
-        "a": "Vectorworks Landmark is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark) for live pricing."
+        "a": "Vectorworks Landmark is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark)."
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
@@ -1593,7 +1593,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Allplan cost?",
-        "a": "Allplan is licensed on a Subscription model. Available editions include Professional, Ultimate. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Allplan Pricing Page](https://www.allplan.com/) for live pricing."
+        "a": "Allplan is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allplan Pricing Page](https://www.allplan.com/)."
       },
       {
         "q": "Is there a free version of Allplan?",
@@ -1775,7 +1775,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does OpenRoads Designer cost?",
-        "a": "OpenRoads Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/) for live pricing."
+        "a": "OpenRoads Designer is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/)."
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
@@ -2087,7 +2087,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does cadwork cost?",
-        "a": "cadwork is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official cadwork Pricing Page](https://www.cadwork.com/) for live pricing."
+        "a": "cadwork is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official cadwork Pricing Page](https://www.cadwork.com/)."
       },
       {
         "q": "Is there a free version of cadwork?",
@@ -2292,7 +2292,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does MagiCAD cost?",
-        "a": "MagiCAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MagiCAD Pricing Page](https://www.magicad.com/) for live pricing."
+        "a": "MagiCAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MagiCAD Pricing Page](https://www.magicad.com/)."
       },
       {
         "q": "Is there a free version of MagiCAD?",
@@ -2495,7 +2495,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does DDS-CAD cost?",
-        "a": "DDS-CAD is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/) for live pricing."
+        "a": "DDS-CAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/)."
       },
       {
         "q": "Is there a free version of DDS-CAD?",
@@ -2698,7 +2698,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does dRofus cost?",
-        "a": "dRofus is licensed on a Subscription model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official dRofus Pricing Page](https://www.drofus.com/) for live pricing."
+        "a": "dRofus is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official dRofus Pricing Page](https://www.drofus.com/)."
       },
       {
         "q": "Is there a free version of dRofus?",
@@ -2835,7 +2835,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD Plant 3D cost?",
-        "a": "AutoCAD Plant 3D is licensed on a Subscription model. Available editions include Included with AutoCAD (Annual), Included with AutoCAD (Monthly). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview) for live pricing."
+        "a": "AutoCAD Plant 3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview)."
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
@@ -3009,7 +3009,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Hexagon SmartPlant 3D cost?",
-        "a": "Hexagon SmartPlant 3D is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d) for live pricing."
+        "a": "Hexagon SmartPlant 3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d)."
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
@@ -3222,7 +3222,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CADWorx Plant Professional cost?",
-        "a": "CADWorx Plant Professional is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional) for live pricing."
+        "a": "CADWorx Plant Professional is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional)."
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
@@ -3436,7 +3436,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Construction Cloud cost?",
-        "a": "Autodesk Construction Cloud is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com) for live pricing."
+        "a": "Autodesk Construction Cloud is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com)."
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
@@ -3866,7 +3866,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/) for live pricing."
+        "a": "BIMcollab is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/)."
       },
       {
         "q": "Is there a free version of BIMcollab?",
@@ -4074,7 +4074,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Dynamo cost?",
-        "a": "Autodesk Dynamo is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "Autodesk Dynamo is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Autodesk Dynamo Page](https://dynamobim.org)."
       },
       {
         "q": "Is Autodesk Dynamo really free?",
@@ -4355,7 +4355,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CYPECAD cost?",
-        "a": "CYPECAD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official CYPECAD Pricing Page](https://www.cype.com/) for live pricing."
+        "a": "CYPECAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CYPECAD Pricing Page](https://www.cype.com/)."
       },
       {
         "q": "Is there a free version of CYPECAD?",
@@ -4531,7 +4531,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vertex BD cost?",
-        "a": "Vertex BD is licensed on a Perpetual model. Available editions include Perpetual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vertex BD Pricing Page](https://www.vertex.fi/) for live pricing."
+        "a": "Vertex BD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vertex BD Pricing Page](https://www.vertex.fi/)."
       },
       {
         "q": "Is there a free version of Vertex BD?",
@@ -4760,7 +4760,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Planbar cost?",
-        "a": "Planbar is licensed on a Perpetual model. Available editions include Planbar Standard, Planbar Advanced. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/) for live pricing."
+        "a": "Planbar is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/)."
       },
       {
         "q": "Is there a free version of Planbar?",

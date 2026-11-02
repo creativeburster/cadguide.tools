@@ -142,7 +142,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Bluebeam Revu cost?",
-        "a": "Bluebeam Revu is licensed on a Subscription model. Available editions include Basics, Core, Complete. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/) for live pricing."
+        "a": "Bluebeam Revu is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/)."
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
@@ -320,7 +320,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Navisworks cost?",
-        "a": "Navisworks is licensed on a Subscription model. Available editions include Simulate, Manage (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options) for live pricing."
+        "a": "Navisworks is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Navisworks?",
@@ -480,7 +480,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solibri cost?",
-        "a": "Solibri is licensed on a Subscription model. Available editions include Office. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Solibri Pricing Page](https://www.solibri.com/pricing) for live pricing."
+        "a": "Solibri is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Solibri Pricing Page](https://www.solibri.com/pricing)."
       },
       {
         "q": "Is there a free version of Solibri?",
@@ -618,7 +618,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does MeshLab cost?",
-        "a": "MeshLab is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "MeshLab is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official MeshLab Page](https://www.meshlab.net)."
       },
       {
         "q": "Is MeshLab really free?",
@@ -759,7 +759,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Recap Pro cost?",
-        "a": "Recap Pro is licensed on a Subscription model. Available editions include Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options) for live pricing."
+        "a": "Recap Pro is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Recap Pro?",
@@ -858,7 +858,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solid Edge Viewer cost?",
-        "a": "Solid Edge Viewer is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "Solid Edge Viewer is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Solid Edge Viewer Page](https://solidedge.siemens.com/en/solutions/users/free-viewers/)."
       },
       {
         "q": "Is Solid Edge Viewer really free?",
@@ -1039,7 +1039,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG TrueView cost?",
-        "a": "DWG TrueView is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "DWG TrueView is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official DWG TrueView Page](https://www.autodesk.com/products/dwg-trueview/overview)."
       },
       {
         "q": "Is DWG TrueView really free?",
@@ -1220,7 +1220,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG FastView cost?",
-        "a": "DWG FastView offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Premium Monthly, Premium Annual. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade) for live regional pricing."
+        "a": "DWG FastView has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade)."
       },
       {
         "q": "Is there a free version of DWG FastView?",
@@ -1455,7 +1455,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Reader cost?",
-        "a": "CAD Reader offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/) for live regional pricing."
+        "a": "CAD Reader has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/)."
       },
       {
         "q": "Is there a free version of CAD Reader?",
@@ -1537,7 +1537,7 @@ export const c4Tools: Tool[] = [
     "pros": [
       "Free diagnosis with no install or account",
       "Runs locally — drawing files never leave the browser",
-      "One-time €9 upgrade instead of a subscription"
+      "One-time upgrade purchase instead of a subscription"
     ],
     "cons": [
       "Repairs capped at five parts per result on the free tier",
@@ -1551,7 +1551,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DXF Medic cost?",
-        "a": "DXF Medic offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro (Lifetime). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/) for live regional pricing."
+        "a": "DXF Medic has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/)."
       },
       {
         "q": "Is there a free version of DXF Medic?",
@@ -1752,11 +1752,11 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How does CADProps handle uploaded CAD files and privacy?",
-        "a": "Uploaded files are processed on CADProps servers in a temporary guest workspace. Guest files, previews and calculated results are deleted after about one hour by default, or earlier when the workspace is cleared. Files saved to an account follow a separate 90-day inactivity policy."
+        "a": "Uploaded files are processed on CADProps servers in a temporary guest workspace. Guest files, previews and calculated results are deleted after about one hour by default, or earlier when the workspace is cleared. Files saved to an account follow the vendor’s account retention policy."
       },
       {
         "q": "How much does CADProps cost?",
-        "a": "CADProps is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "CADProps is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CADProps Page](https://www.cadprops.com)."
       }
     ],
     "pricing_tiers": [
@@ -1956,7 +1956,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Does 3Dstudio.co Web Tools cost anything?",
-        "a": "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks."
+        "a": "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks. Licence terms, permitted uses and any paid add-ons: [Official 3Dstudio.co Web Tools Page](https://3dstudio.co/tools/?utm_source=cadguide)."
       }
     ],
     "pricing_tiers": [

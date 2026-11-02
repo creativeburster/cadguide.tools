@@ -143,7 +143,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SOLIDWORKS is licensed via annual/quarterly Term Subscriptions as well as Perpetual licenses (with optional annual Subscription Service for upgrades, support, and Cloud Services) through Dassault Systèmes and authorized Value-Added Resellers (VARs). Available editions include Standard, Professional, and Premium, plus specialized Maker and Student plans. Because official seat rates, multi-currency pricing, and authorized reseller quotes vary by country, please visit the [Official SOLIDWORKS Plans & Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing) for live regional pricing."
+        "a": "SolidWorks is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SolidWorks Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing)."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
@@ -1193,7 +1193,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CATIA cost?",
-        "a": "CATIA is licensed on a Subscription model (with legacy perpetual options for V5 via resellers). Available editions include 3DEXPERIENCE Cloud roles, Mechanical Engineer, Systems Engineer. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official 3DS CATIA Page](https://www.3ds.com/products/catia) for live regional pricing."
+        "a": "CATIA is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CATIA Pricing Page](https://www.3ds.com/products/catia)."
       },
       {
         "q": "Does CATIA offer a free trial?",
@@ -1408,7 +1408,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does FreeCAD cost?",
-        "a": "FreeCAD is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
+        "a": "FreeCAD is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official FreeCAD Page](https://www.freecad.org)."
       },
       {
         "q": "Is FreeCAD really free?",
@@ -1679,7 +1679,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Onshape cost?",
-        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Because official seat rates, multi-currency pricing, and taxes vary by country, click the Official Live Pricing button on this page to verify real-time regional pricing directly on the PTC Onshape portal."
+        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Because official seat rates, multi-currency pricing, and taxes vary by country, click the Official Live Pricing button on this page to verify real-time regional pricing directly on the PTC Onshape portal. Current plans and regional pricing: [Official Onshape Pricing Page](https://www.onshape.com/en/pricing)."
       },
       {
         "q": "Does Onshape offer a free trial?",
@@ -2580,7 +2580,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does OpenSCAD cost?",
-        "a": "OpenSCAD is completely free to download and use with no paid license required. Visit the [Official OpenSCAD Website](https://openscad.org) for downloads and license terms."
+        "a": "OpenSCAD is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official OpenSCAD Page](https://openscad.org)."
       },
       {
         "q": "Is OpenSCAD really free?",
@@ -2908,7 +2908,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolveSpace cost?",
-        "a": "SolveSpace is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "SolveSpace is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official SolveSpace Page](https://solvespace.com)."
       },
       {
         "q": "Is SolveSpace really free?",
@@ -3068,7 +3068,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alibre Design cost?",
-        "a": "Alibre Design is licensed on a Perpetual model. Available editions include Professional, Expert. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/) for live pricing."
+        "a": "Alibre Design is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/)."
       },
       {
         "q": "Is there a free version of Alibre Design?",
@@ -3180,7 +3180,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Maya cost?",
-        "a": "Maya is licensed on a Subscription model. Available editions include Monthly, Annual. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options) for live pricing."
+        "a": "Maya is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Maya?",
@@ -3376,7 +3376,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Blender cost?",
-        "a": "Blender is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges."
+        "a": "Blender is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official Blender Page](https://www.blender.org)."
       },
       {
         "q": "Is Blender really free?",
@@ -3605,7 +3605,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Geomagic Design X cost?",
-        "a": "Geomagic Design X is licensed on a Subscription model. Available editions include Design X Commercial. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x) for live pricing."
+        "a": "Geomagic Design X is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x)."
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
@@ -3796,7 +3796,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alias AutoStudio cost?",
-        "a": "Alias AutoStudio is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview) for live pricing."
+        "a": "Alias AutoStudio is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview)."
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
@@ -4006,7 +4006,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does ZW3D cost?",
-        "a": "ZW3D is licensed on a Subscription / Perpetual model. Available editions include Standard, Professional, Premium. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d) for live pricing."
+        "a": "ZW3D is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d)."
       },
       {
         "q": "Is there a free version of ZW3D?",
@@ -4217,7 +4217,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Plasticity cost?",
-        "a": "Plasticity is licensed on a Perpetual model. Available editions include Indie License, Studio License. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing) for live pricing."
+        "a": "Plasticity is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing)."
       },
       {
         "q": "Is there a free version of Plasticity?",
@@ -4421,7 +4421,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does MoI3D cost?",
-        "a": "MoI3D is licensed on a Perpetual model. Available editions include a Commercial license and an Upgrade license. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm) for live pricing."
+        "a": "MoI3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm)."
       },
       {
         "q": "Is there a free version of MoI3D?",
@@ -4654,7 +4654,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Tinkercad cost?",
-        "a": "Tinkercad is completely free to download and use with no paid license required. Visit the official website for download and license terms."
+        "a": "Tinkercad is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Tinkercad Page](https://www.tinkercad.com)."
       },
       {
         "q": "Is there a free version of Tinkercad?",
@@ -4796,7 +4796,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Glovius cost?",
-        "a": "Glovius offers a free tier alongside paid commercial plans (Freemium). Available plans include Free, Pro. Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Glovius Pricing Page](https://www.glovius.com/#pricing) for live regional pricing."
+        "a": "Glovius has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Glovius Pricing Page](https://www.glovius.com/#pricing)."
       },
       {
         "q": "Is there a free version of Glovius?",
@@ -5032,7 +5032,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Exchanger cost?",
-        "a": "CADEX does not publish a price list. Lab seats and SDK modules are quoted individually, and the cost depends on which format add-ons you need and how many developers will use the SDK. Request a quote through the official licensing enquiry page — regional taxes and volume discounts are applied there."
+        "a": "CADEX does not publish a price list. Lab seats and SDK modules are quoted individually, and the cost depends on which format add-ons you need and how many developers will use the SDK. Request a quote through the official licensing enquiry page — regional taxes and volume discounts are applied there. Current plans and regional pricing: [Official CAD Exchanger Pricing Page](https://cadexchanger.com/contact-us/licensing-inquiry/)."
       },
       {
         "q": "Is there a free version of CAD Exchanger?",
@@ -5349,7 +5349,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D is licensed on a Perpetual model. Available editions include Perpetual License, Educational. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official KOMPAS-3D Pricing Page](https://ascon.net/) for live pricing."
+        "a": "KOMPAS-3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KOMPAS-3D Pricing Page](https://ascon.net/)."
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
@@ -5630,7 +5630,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does DesignSpark Mechanical cost?",
-        "a": "The Explorer plan is free with no hidden fees. The Creator and Engineer plans are paid annual subscriptions, and RS Group also offers team licensing. Prices differ by region and currency and are revised by the vendor, so check the official subscriptions and pricing comparison page for current figures."
+        "a": "The Explorer plan is free with no hidden fees. The Creator and Engineer plans are paid annual subscriptions, and RS Group also offers team licensing. Prices differ by region and currency and are revised by the vendor, so check the official subscriptions and pricing comparison page for current figures. Current plans and regional pricing: [Official DesignSpark Mechanical Pricing Page](https://www.rs-online.com/designspark/subscriptions-pricing-page)."
       },
       {
         "q": "Is there a free version of DesignSpark Mechanical?",
@@ -5852,7 +5852,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does 3DEXPERIENCE cost?",
-        "a": "3DEXPERIENCE is sold as named-user roles rather than a single boxed edition: you license the roles each person needs (for example a design role, a simulation role, a manufacturing role) on annual terms, and there are pre-configured bundles such as 3DEXPERIENCE SOLIDWORKS and the industry solution experiences. Dassault Systèmes quotes through resellers rather than publishing seat prices, so the official site and your local reseller are the only reliable sources."
+        "a": "3DEXPERIENCE is sold as named-user roles rather than a single boxed edition: you license the roles each person needs (for example a design role, a simulation role, a manufacturing role) on annual terms, and there are pre-configured bundles such as 3DEXPERIENCE SOLIDWORKS and the industry solution experiences. Dassault Systèmes quotes through resellers rather than publishing seat prices, so the official site and your local reseller are the only reliable sources. Current plans and regional pricing: [Official 3DEXPERIENCE Pricing Page](https://www.3ds.com/products/3dexperience)."
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
