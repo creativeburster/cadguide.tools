@@ -363,8 +363,8 @@ export const c3Tools: Tool[] = [
       "Small Business"
     ],
     "official_url": "https://graphisoft.com/solutions/archicad",
-    "pricing_url": "https://graphisoft.com/buy",
-    "trial_url": "https://graphisoft.com/try",
+    "pricing_url": "https://www.graphisoft.com/pricing",
+    "trial_url": "https://www.graphisoft.com/try-archicad",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -384,7 +384,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ArchiCAD Pricing Page](https://graphisoft.com/buy) for live pricing."
+        "a": "ArchiCAD is licensed on a Subscription model. Available editions include Studio, Collaborate, Studio (Annual). Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official ArchiCAD Pricing Page](https://www.graphisoft.com/pricing) for live pricing."
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
@@ -625,7 +625,7 @@ export const c3Tools: Tool[] = [
     ],
     "official_url": "https://www.tekla.com",
     "pricing_url": "https://www.tekla.com/contact",
-    "trial_url": "https://www.tekla.com/try",
+    "trial_url": "https://www.tekla.com/products/tekla-structures",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -843,7 +843,7 @@ export const c3Tools: Tool[] = [
       "Agencies"
     ],
     "official_url": "https://www.vectorworks.net",
-    "pricing_url": "https://www.vectorworks.net/en-US/purchasing",
+    "pricing_url": "https://www.vectorworks.net/design-suite/buy",
     "trial_url": "https://customers.vectorworks.net/trial",
     "affiliate_url": null,
     "score": 4.6,
@@ -864,7 +864,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Pricing Page](https://www.vectorworks.net/en-US/purchasing) for live pricing."
+        "a": "Vectorworks is licensed on a Subscription / Perpetual model. Available editions include Architect (Annual), Design Suite. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Vectorworks Pricing Page](https://www.vectorworks.net/design-suite/buy) for live pricing."
       },
       {
         "q": "Is there a free version of Vectorworks?",
@@ -3786,7 +3786,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official BIMcollab Pricing Page](https://www.bimcollab.com/en/pricing/) for live pricing."
+        "a": "BIMcollab is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/) for live pricing."
       },
       {
         "q": "Is there a free version of BIMcollab?",
@@ -3929,7 +3929,7 @@ export const c3Tools: Tool[] = [
         ]
       }
     ],
-    "pricing_url": "https://www.bimcollab.com/en/pricing/"
+    "pricing_url": "https://bimcollab.com/zoom/"
   },
   {
     "id": "t232",

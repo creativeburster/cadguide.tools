@@ -754,7 +754,7 @@ export const c6Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.eplan-software.com/",
-    "pricing_url": "https://www.eplan-software.com/services/eplan-subscription/",
+    "pricing_url": "https://www.eplan.com/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -846,7 +846,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "How much does EPLAN cost?",
-        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Pricing Page](https://www.eplan-software.com/services/eplan-subscription/) for live pricing."
+        "a": "EPLAN is licensed on a Subscription model. Available editions include Electric P8 Subscription, Enterprise Solutions. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official EPLAN Pricing Page](https://www.eplan.com/) for live pricing."
       },
       {
         "q": "Is there a free version of EPLAN?",
@@ -877,7 +877,7 @@ export const c6Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design.",
-    "trial_url": "https://www.eplan-software.com/services/eplan-subscription/"
+    "trial_url": "https://www.eplan.com/"
   },
   {
     "id": "t160",
@@ -3418,8 +3418,8 @@ export const c6Tools: Tool[] = [
       "Hobbyist",
       "Education"
     ],
-    "official_url": "https://circuitmaker.com",
-    "pricing_url": "https://circuitmaker.com",
+    "official_url": "https://www.altium.com/circuitmaker",
+    "pricing_url": "https://www.altium.com/circuitmaker",
     "affiliate_url": null,
     "score": 4.1,
     "pros": [

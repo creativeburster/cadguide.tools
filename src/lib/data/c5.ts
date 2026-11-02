@@ -5307,8 +5307,8 @@ export const c5Tools: Tool[] = [
       "Small Business",
       "Mid-Sized Company"
     ],
-    "official_url": "https://www.lanteksms.com/en/software/expert-punch",
-    "pricing_url": "https://www.lanteksms.com/en/software/expert-punch",
+    "official_url": "https://www.lantek.com/",
+    "pricing_url": "https://www.lantek.com/",
     "affiliate_url": null,
     "score": 3.5,
     "pros": [
@@ -5330,7 +5330,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Lantek Expert cost?",
-        "a": "Lantek Expert is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Lantek Expert Pricing Page](https://www.lanteksms.com/en/software/expert-punch) for live pricing."
+        "a": "Lantek Expert is licensed on a Perpetual model. Available editions include Standard, Professional. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Lantek Expert Pricing Page](https://www.lantek.com/) for live pricing."
       },
       {
         "q": "Is there a free version of Lantek Expert?",

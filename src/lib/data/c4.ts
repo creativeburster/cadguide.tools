@@ -837,8 +837,8 @@ export const c4Tools: Tool[] = [
       "Individuals",
       "Mid-Market"
     ],
-    "official_url": "https://plm.sw.siemens.com/en-US/solid-edge/free-software/solid-edge-viewer/",
-    "pricing_url": "https://plm.sw.siemens.com/en-US/solid-edge/free-software/solid-edge-viewer/",
+    "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
+    "pricing_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [

@@ -1173,7 +1173,7 @@ export const c2Tools: Tool[] = [
     ],
     "official_url": "https://www.3ds.com/products-services/catia/",
     "pricing_url": "https://www.3ds.com/products/catia",
-    "trial_url": "https://www.3ds.com/products/catia/cloud",
+    "trial_url": "https://www.3ds.com/products/catia",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -1953,8 +1953,8 @@ export const c2Tools: Tool[] = [
       "Small Business"
     ],
     "official_url": "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
-    "pricing_url": "https://dex.siemens.com",
-    "trial_url": "https://resources.sw.siemens.com/en-US/trial-solid-edge/",
+    "pricing_url": "https://www.dex.siemens.com",
+    "trial_url": "https://solidedge.siemens.com/en/solutions/users/free-trials/",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -1978,7 +1978,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Solid Edge?",
-        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product trial is also available; check the [Official Solid Edge Trial Page](https://resources.sw.siemens.com/en-US/trial-solid-edge/) for current terms."
+        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product trial is also available; check the [Official Solid Edge Trial Page](https://solidedge.siemens.com/en/solutions/users/free-trials/) for current terms."
       },
       {
         "q": "What operating systems does Solid Edge support?",

@@ -178,7 +178,6 @@ export const c1Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The definitive global industry standard for 2D drafting and documentation, crucial for AEC standard compatibility.",
-    "release_notes_url": "https://help.autodesk.com/view/ACD/ENU/",
     "languages": [
       "English",
       "Spanish",
@@ -3131,7 +3130,7 @@ export const c1Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "pricing_url": "https://www.graebert.com/cad-software/ares-commander/buy/",
+    "pricing_url": "https://www.graebert.com/cad-software/ares-commander/",
     "trial_url": "https://www.graebert.com/cad-software/ares-commander/",
     "release_notes_url": "https://www.graebert.com/cad-software/ares-commander/",
     "affiliate_url": null,
@@ -3153,7 +3152,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does ARES Commander cost?",
-        "a": "ARES Commander is offered as ARES Commander with Trinity (available in Annual, 3-Year, or Perpetual plans), ARES Commander Standalone (Perpetual), and Flex / Cloud Network floating licenses. Because official rates, currencies (EUR/USD/JPY), and taxes vary by country, please visit the [Official Graebert Store](https://www.graebert.com/cad-software/ares-commander/buy/) for live regional pricing."
+        "a": "ARES Commander is offered as ARES Commander with Trinity (available in Annual, 3-Year, or Perpetual plans), ARES Commander Standalone (Perpetual), and Flex / Cloud Network floating licenses. Because official rates, currencies (EUR/USD/JPY), and taxes vary by country, please visit the [Official Graebert Store](https://www.graebert.com/cad-software/ares-commander/) for live regional pricing."
       },
       {
         "q": "Does ARES Commander offer a free trial?",
@@ -3325,7 +3324,6 @@ export const c1Tools: Tool[] = [
     "official_url": "https://www.autodesk.com/products/autocad-lt/overview",
     "pricing_url": "https://www.autodesk.com/products/autocad-lt/overview?tab=subscription",
     "trial_url": "https://www.autodesk.com/products/autocad-lt/free-trial",
-    "release_notes_url": "https://help.autodesk.com/view/ACDLT/ENU/",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [

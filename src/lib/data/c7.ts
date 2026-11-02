@@ -2756,7 +2756,7 @@ export const c7Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://marvelousdesigner.com",
-    "pricing_url": "https://www.marvelousdesigner.com/pricings",
+    "pricing_url": "https://www.marvelousdesigner.com/pricing",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -2788,7 +2788,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Marvelous Designer cost?",
-        "a": "Marvelous Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricings) for live pricing."
+        "a": "Marvelous Designer is licensed on a Subscription model. Because official seat rates, multi-currency pricing, and regional taxes vary by country, please visit the [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricing) for live pricing."
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
