@@ -1994,7 +1994,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solid Edge?",
-        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, Fusion 360. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, Fusion 360, and Autodesk Fusion (Fusion 360). SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2777,7 +2777,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Shapr3D?",
-        "a": "The closest alternatives to Shapr3D are Fusion 360, SolidWorks, Onshape. Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Shapr3D are Fusion 360, SolidWorks, Onshape, and Autodesk Fusion (Fusion 360). Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3070,7 +3070,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alibre Design?",
-        "a": "Yes — Alibre Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Alibre Design is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Alibre Design page](https://www.alibre.com)."
       },
       {
         "q": "What operating systems does Alibre Design support?",
@@ -3082,7 +3082,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alibre Design?",
-        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while ZW3D (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge, and FreeCAD. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while ZW3D (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3181,7 +3181,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maya?",
-        "a": "Yes — Maya offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Maya is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Maya page](https://www.autodesk.com/products/maya/overview)."
       },
       {
         "q": "What operating systems does Maya support?",
@@ -3193,7 +3193,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maya?",
-        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush, and Rhino 3D. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3604,7 +3604,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
-        "a": "Yes — Geomagic Design X offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Geomagic Design X is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Geomagic Design X page](https://hexagon.com/products/geomagic-design-x)."
       },
       {
         "q": "What operating systems does Geomagic Design X support?",
@@ -3616,7 +3616,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Geomagic Design X?",
-        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D. MeshLab (100% free) competes directly on core Reverse Engineering workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D, and Siemens NX. MeshLab (100% free) competes directly on core Reverse Engineering workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3794,7 +3794,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
-        "a": "Yes — Alias AutoStudio offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Alias AutoStudio is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Alias AutoStudio page](https://www.autodesk.com/products/alias-products/overview)."
       },
       {
         "q": "What operating systems does Alias AutoStudio support?",
@@ -3806,7 +3806,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Alias AutoStudio?",
-        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX. Rhino 3D (offered on a Perpetual license) competes directly on core Automotive workflows, while CATIA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX, and Plasticity. Rhino 3D (offered on a Perpetual license) competes directly on core Automotive workflows, while CATIA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4003,7 +4003,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZW3D?",
-        "a": "Yes — ZW3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ZW3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ZW3D page](https://www.zwsoft.com/zw3d)."
       },
       {
         "q": "What operating systems does ZW3D support?",
@@ -4015,7 +4015,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ZW3D?",
-        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Solid Edge (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design, and KOMPAS-3D. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Solid Edge (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4214,7 +4214,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Plasticity?",
-        "a": "Yes — Plasticity offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Plasticity is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Plasticity page](https://www.plasticity.xyz)."
       },
       {
         "q": "What operating systems does Plasticity support?",
@@ -4417,7 +4417,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MoI3D?",
-        "a": "Yes — MoI3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MoI3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MoI3D page](https://moi3d.com)."
       },
       {
         "q": "What operating systems does MoI3D support?",
@@ -5093,7 +5093,8 @@ export const c2Tools: Tool[] = [
       "Subscription",
       "Perpetual",
       "Floating"
-    ]
+    ],
+    "quote_only": true
   },
   {
     "id": "t117",
@@ -5359,7 +5360,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KOMPAS-3D?",
-        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge, and Alibre Design. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5639,7 +5640,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DesignSpark Mechanical?",
-        "a": "The closest alternatives to DesignSpark Mechanical are FreeCAD, Fusion 360, SolveSpace. FreeCAD is the leading free/open-source alternative, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DesignSpark Mechanical are FreeCAD, Fusion 360, SolveSpace, and Autodesk Fusion (Fusion 360). FreeCAD is the leading free/open-source alternative, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {

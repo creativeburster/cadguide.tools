@@ -315,9 +315,18 @@ function CompareContent({ initialEditorPicks = [], initialAllPairs = [] }: Compa
                               {row.type === 'rating' && <span className="text-xl lg:text-2xl font-black text-slate-900">★ {val as number}</span>}
                               {row.type === 'price' && (
                                 <span className="text-lg lg:text-xl font-black text-slate-900">
-                                  {val === 0 || tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
-                                    ? 'Free ($0)'
-                                    : 'Official Live Pricing'}
+                                  {/* `starting_price` is an internal benchmark, never a
+                                      price. A quote-only product carries 0 there and
+                                      used to be printed as "Free ($0)" — Tekla
+                                      Structures and Ansys Mechanical read as free.
+                                      Only the pricing_type may claim "Free". */}
+                                  {tool.discontinued
+                                    ? 'Discontinued'
+                                    : tool.pricing_type === 'Free' || tool.pricing_type === 'Open Source'
+                                      ? 'Free ($0)'
+                                      : tool.quote_only
+                                        ? 'Quoted per Project'
+                                        : 'Official Live Pricing'}
                                 </span>
                               )}
                               {row.type === 'badge' && <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-100 font-bold">{val as string}</Badge>}

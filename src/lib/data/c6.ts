@@ -261,14 +261,14 @@ export const c6Tools: Tool[] = [
     "slug": "eagle",
     "logo_url": "/logos/eagle.svg",
     "short_desc": "Discontinued PCB design software — Autodesk ended all standalone EAGLE licensing on June 7, 2026; its capabilities now live in Autodesk Fusion Electronics.",
-    "description": "Autodesk EAGLE was a historically popular EDA tool for schematic capture and PCB layout. Autodesk ceased new standalone subscriptions in 2021 and officially decommissioned licensing servers on June 7, 2026. Standalone EAGLE no longer runs; legacy .sch and .brd files can be imported directly into Autodesk Fusion Electronics.",
+    "description": "Autodesk EAGLE was a historically popular EDA tool for schematic capture and PCB layout. Autodesk stopped selling EAGLE as a standalone product on January 7, 2020, folding it into Fusion 360 subscriptions, and shut the EAGLE licensing servers down on June 7, 2026. Standalone EAGLE no longer runs; legacy .sch and .brd files can be imported directly into Autodesk Fusion Electronics.",
     "pricing_tiers": [
       {
         "name": "Discontinued",
         "price": "Discontinued",
         "period": "",
         "features": [
-          "Standalone subscriptions stopped being sold in 2021",
+          "Standalone EAGLE stopped being sold on January 7, 2020",
           "Autodesk switched EAGLE users to Fusion 360 Electronics",
           "Legacy EAGLE projects still open in Fusion 360 Electronics",
           "No current plan to buy — contact Autodesk about migration"
@@ -350,7 +350,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Eagle?",
-        "a": "Yes — Eagle offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "No. EAGLE is retired and there is nothing left to trial: Autodesk stopped selling it as a standalone product in January 2020 and shut the EAGLE licensing servers down on June 7, 2026. Legacy EAGLE projects open in Autodesk Fusion Electronics, which is bundled with a Fusion subscription and has a free personal-use tier."
       },
       {
         "q": "What operating systems does Eagle support?",
@@ -362,7 +362,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Eagle?",
-        "a": "The closest alternatives to Eagle are KiCad, EasyEDA, DipTrace. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Eagle are KiCad, EasyEDA, DipTrace, and Altium Designer. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -375,7 +375,7 @@ export const c6Tools: Tool[] = [
         "IPC"
       ]
     },
-    "expert_verdict": "The standard for mid-level professional PCB design.",
+    "expert_verdict": "A long-time reference point for mid-level PCB design, now retired: standalone EAGLE is gone and its workflows continue inside Autodesk Fusion Electronics.",
     "discontinued": true,
     "discontinued_note": "Autodesk officially sunset EAGLE on June 7, 2026. Standalone licensing servers have been decommissioned. All EAGLE design files (.sch, .brd, .lbr) open seamlessly in Autodesk Fusion Electronics.",
     "file_formats_in": [
@@ -449,7 +449,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
-        "a": "Yes — EPLAN Electric P8 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "EPLAN Electric P8 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official EPLAN Electric P8 page](https://www.eplan.com)."
       },
       {
         "q": "What operating systems does EPLAN Electric P8 support?",
@@ -461,7 +461,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN Electric P8?",
-        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks. EPLAN (offered on a Subscription license) competes directly on core Electrical Engineering workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks, and Altium Designer. EPLAN (offered on a Subscription license) competes directly on core Electrical Engineering workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -859,7 +859,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EPLAN?",
-        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks. EPLAN Electric P8 (offered on a Subscription license) competes directly on core Machine Building workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks, and Altium Designer. EPLAN Electric P8 (offered on a Subscription license) competes directly on core Machine Building workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1015,7 +1015,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allegro PCB?",
-        "a": "Yes — Allegro PCB offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Allegro PCB is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Allegro PCB page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
       },
       {
         "q": "What operating systems does Allegro PCB support?",
@@ -1027,7 +1027,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allegro PCB?",
-        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional. Xpedition (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional, and OrCAD. Xpedition (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1372,7 +1372,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OrCAD?",
-        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while PADS Professional (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB, and KiCad. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while PADS Professional (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1693,7 +1693,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PADS Professional?",
-        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while OrCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB, and Xpedition. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while OrCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1848,7 +1848,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Xpedition?",
-        "a": "Yes — Xpedition offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Xpedition is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Xpedition page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
       },
       {
         "q": "What operating systems does Xpedition support?",
@@ -1860,7 +1860,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Xpedition?",
-        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional. Allegro PCB (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional, and OrCAD. Allegro PCB (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2016,7 +2016,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KiCad?",
-        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer. EasyEDA (available on a freemium model) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer, and OrCAD. EasyEDA (available on a freemium model) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2179,7 +2179,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to EasyEDA?",
-        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker, and Proteus Design Suite. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2441,7 +2441,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DipTrace?",
-        "a": "Yes — DipTrace offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "DipTrace is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official DipTrace page](https://diptrace.com)."
       },
       {
         "q": "What operating systems does DipTrace support?",
@@ -2453,7 +2453,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DipTrace?",
-        "a": "The closest alternatives to DipTrace are KiCad, EasyEDA, OrCAD. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DipTrace are KiCad, EasyEDA, OrCAD, and Proteus Design Suite. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2619,7 +2619,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of NI Multisim?",
-        "a": "Yes — NI Multisim offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "NI Multisim is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official NI Multisim page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
       },
       {
         "q": "What operating systems does NI Multisim support?",
@@ -2631,7 +2631,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to NI Multisim?",
-        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD. LTspice (100% free) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD, and KiCad. LTspice (100% free) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2840,7 +2840,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LTspice?",
-        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD, and KiCad. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3018,7 +3018,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
-        "a": "Yes — Proteus Design Suite offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Proteus Design Suite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Proteus Design Suite page](https://www.labcenter.com)."
       },
       {
         "q": "What operating systems does Proteus Design Suite support?",
@@ -3030,7 +3030,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Proteus Design Suite?",
-        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA, and KiCad. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3254,7 +3254,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altium 365?",
-        "a": "Yes — Altium 365 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Altium 365 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altium 365 page](https://www.altium.com/altium-365)."
       },
       {
         "q": "What operating systems does Altium 365 support?",
@@ -3266,7 +3266,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altium 365?",
-        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional. Altium Designer (offered on a Subscription license) competes directly on core Electronics workflows, while Allegro PCB (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional, and OrCAD. Altium Designer (offered on a Subscription license) competes directly on core Electronics workflows, while Allegro PCB (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3477,7 +3477,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CircuitMaker?",
-        "a": "The closest alternatives to CircuitMaker are EasyEDA, KiCad, DipTrace. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while KiCad (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to CircuitMaker are EasyEDA, KiCad, DipTrace, and Altium Designer. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while KiCad (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [

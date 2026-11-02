@@ -57,7 +57,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MatrixGold?",
-        "a": "Yes — MatrixGold offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MatrixGold is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MatrixGold page](https://www.gemvision.com/matrixgold)."
       },
       {
         "q": "What operating systems does MatrixGold support?",
@@ -198,7 +198,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
-        "a": "Yes — AVEVA Marine offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AVEVA Marine is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AVEVA Marine page](https://www.aveva.com/en/products/hull-and-outfitting/)."
       },
       {
         "q": "What operating systems does AVEVA Marine support?",
@@ -210,7 +210,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AVEVA Marine?",
-        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA. AVEVA E3D Design (offered on a Subscription license) competes directly on core Shipbuilding workflows, while Siemens NX (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA, and Rhino 3D. AVEVA E3D Design (offered on a Subscription license) competes directly on core Shipbuilding workflows, while Siemens NX (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -377,7 +377,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CLO 3D?",
-        "a": "Yes — CLO 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CLO 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CLO 3D page](https://www.clo3d.com)."
       },
       {
         "q": "What operating systems does CLO 3D support?",
@@ -389,7 +389,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CLO 3D?",
-        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush. Marvelous Designer (offered on a Subscription license) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush, and Rhino 3D. Marvelous Designer (offered on a Subscription license) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -594,7 +594,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Infraworks?",
-        "a": "Yes — Infraworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Infraworks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Infraworks page](https://www.autodesk.com/products/infraworks/overview)."
       },
       {
         "q": "What operating systems does Infraworks support?",
@@ -606,7 +606,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Infraworks?",
-        "a": "The closest alternatives to Infraworks are Civil 3D, OpenRoads Designer, MicroStation. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while OpenRoads Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Infraworks are Civil 3D, OpenRoads Designer, MicroStation, and Revit. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while OpenRoads Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -782,7 +782,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to 3ds Max?",
-        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush. Maya (offered on a Subscription license) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush, and Rhino 3D. Maya (offered on a Subscription license) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -955,7 +955,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZBrush?",
-        "a": "Yes — ZBrush offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ZBrush is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ZBrush page](https://www.maxon.net/en/zbrush)."
       },
       {
         "q": "What operating systems does ZBrush support?",
@@ -1116,7 +1116,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KeyShot?",
-        "a": "Yes — KeyShot offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "KeyShot is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official KeyShot page](https://www.keyshot.com)."
       },
       {
         "q": "What operating systems does KeyShot support?",
@@ -1128,7 +1128,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KeyShot?",
-        "a": "The closest alternatives to KeyShot are V-Ray, Corona Renderer, Blender. V-Ray (offered on a Subscription license) competes directly on core Product Design workflows, while Corona Renderer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to KeyShot are V-Ray, Corona Renderer, Blender, and Twinmotion. V-Ray (offered on a Subscription license) competes directly on core Product Design workflows, while Corona Renderer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1300,7 +1300,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lumion?",
-        "a": "Yes — Lumion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Lumion is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Lumion page](https://lumion.com)."
       },
       {
         "q": "What operating systems does Lumion support?",
@@ -1312,7 +1312,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Lumion?",
-        "a": "The closest alternatives to Lumion are Twinmotion, Enscape, D5 Render. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Lumion are Twinmotion, Enscape, D5 Render, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1475,7 +1475,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Enscape?",
-        "a": "Yes — Enscape offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Enscape is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Enscape page](https://enscape3d.com)."
       },
       {
         "q": "What operating systems does Enscape support?",
@@ -1487,7 +1487,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Enscape?",
-        "a": "The closest alternatives to Enscape are Twinmotion, Lumion, D5 Render. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Enscape are Twinmotion, Lumion, D5 Render, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1647,7 +1647,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Twinmotion?",
-        "a": "Yes — Twinmotion offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Twinmotion is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Twinmotion page](https://www.twinmotion.com)."
       },
       {
         "q": "What operating systems does Twinmotion support?",
@@ -1659,7 +1659,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Twinmotion?",
-        "a": "The closest alternatives to Twinmotion are Lumion, Enscape, D5 Render. Lumion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Twinmotion are Lumion, Enscape, D5 Render, and V-Ray. Lumion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1779,7 +1779,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to UltiMaker Cura?",
-        "a": "The closest alternatives to UltiMaker Cura are PrusaSlicer, Bambu Studio, Simplify3D. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while Bambu Studio (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to UltiMaker Cura are PrusaSlicer, Bambu Studio, Simplify3D, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while Bambu Studio (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -1968,7 +1968,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PrusaSlicer?",
-        "a": "The closest alternatives to PrusaSlicer are Bambu Studio, UltiMaker Cura, Simplify3D. Bambu Studio (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to PrusaSlicer are Bambu Studio, UltiMaker Cura, Simplify3D, and Autodesk Netfabb. Bambu Studio (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2159,7 +2159,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bambu Studio?",
-        "a": "The closest alternatives to Bambu Studio are PrusaSlicer, UltiMaker Cura, Simplify3D. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Bambu Studio are PrusaSlicer, UltiMaker Cura, Simplify3D, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2335,7 +2335,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simplify3D?",
-        "a": "Yes — Simplify3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Simplify3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Simplify3D page](https://www.simplify3d.com)."
       },
       {
         "q": "What operating systems does Simplify3D support?",
@@ -2347,7 +2347,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Simplify3D?",
-        "a": "The closest alternatives to Simplify3D are PrusaSlicer, UltiMaker Cura, Bambu Studio. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Simplify3D are PrusaSlicer, UltiMaker Cura, Bambu Studio, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2521,7 +2521,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
-        "a": "Yes — Autodesk Netfabb offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Autodesk Netfabb is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Netfabb page](https://www.autodesk.com/products/netfabb/overview)."
       },
       {
         "q": "What operating systems does Autodesk Netfabb support?",
@@ -2533,7 +2533,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Netfabb?",
-        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura. Magics (offered on a Subscription license) competes directly on core Aerospace workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura, and PrusaSlicer. Magics (offered on a Subscription license) competes directly on core Aerospace workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2748,7 +2748,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
-        "a": "Yes — Marvelous Designer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Marvelous Designer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Marvelous Designer page](https://marvelousdesigner.com)."
       },
       {
         "q": "What operating systems does Marvelous Designer support?",
@@ -2982,7 +2982,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to D5 Render?",
-        "a": "The closest alternatives to D5 Render are Twinmotion, Lumion, Enscape. Twinmotion (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to D5 Render are Twinmotion, Lumion, Enscape, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3181,7 +3181,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of V-Ray?",
-        "a": "Yes — V-Ray offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "V-Ray is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official V-Ray page](https://www.chaos.com/vray)."
       },
       {
         "q": "What operating systems does V-Ray support?",
@@ -3193,7 +3193,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to V-Ray?",
-        "a": "The closest alternatives to V-Ray are Corona Renderer, Lumion, Enscape. Corona Renderer (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to V-Ray are Corona Renderer, Lumion, Enscape, and Twinmotion. Corona Renderer (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3386,7 +3386,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Corona Renderer?",
-        "a": "Yes — Corona Renderer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Corona Renderer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Corona Renderer page](https://www.chaos.com/corona)."
       },
       {
         "q": "What operating systems does Corona Renderer support?",
@@ -3398,7 +3398,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Corona Renderer?",
-        "a": "The closest alternatives to Corona Renderer are V-Ray, Enscape, Lumion. V-Ray (offered on a Subscription license) competes directly on core AEC workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Corona Renderer are V-Ray, Enscape, Lumion, and Twinmotion. V-Ray (offered on a Subscription license) competes directly on core AEC workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3589,7 +3589,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
-        "a": "Yes — Adobe Substance 3D Painter offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Adobe Substance 3D Painter is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Adobe Substance 3D Painter page](https://www.adobe.com/products/substance3d-painter.html)."
       },
       {
         "q": "What operating systems does Adobe Substance 3D Painter support?",
@@ -3601,7 +3601,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Adobe Substance 3D Painter?",
-        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya, and 3ds Max. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3801,7 +3801,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Carlson Survey?",
-        "a": "Yes — Carlson Survey offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Carlson Survey is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Carlson Survey page](https://www.carlsonsw.com/products/survey/)."
       },
       {
         "q": "What operating systems does Carlson Survey support?",
@@ -3813,7 +3813,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Carlson Survey?",
-        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer. Trimble Business Center (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer, and MicroStation. Trimble Business Center (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3997,7 +3997,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
-        "a": "Yes — Trimble Business Center offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Trimble Business Center is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Trimble Business Center page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
       },
       {
         "q": "What operating systems does Trimble Business Center support?",
@@ -4009,7 +4009,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Business Center?",
-        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer. Carlson Survey (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer, and Infraworks. Carlson Survey (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4597,7 +4597,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
-        "a": "Yes — Maptek Vulcan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Maptek Vulcan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Maptek Vulcan page](https://www.maptek.com/)."
       },
       {
         "q": "What operating systems does Maptek Vulcan support?",
@@ -4609,7 +4609,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Maptek Vulcan?",
-        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center. Civil 3D (offered on a Subscription license) competes directly on core Mining workflows, while Carlson Survey (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center, and Infraworks. Civil 3D (offered on a Subscription license) competes directly on core Mining workflows, while Carlson Survey (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4797,11 +4797,11 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CET Designer cost?",
-        "a": "CET Designer has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CET Designer Pricing Page](https://www.configura.com/)."
+        "a": "CET Designer is licensed per user, per year, and manufacturer extensions are priced separately (some are free, most are not). Seat rates, extension bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CET Designer Pricing Page](https://www.configura.com/)."
       },
       {
         "q": "Is there a free version of CET Designer?",
-        "a": "Yes, CET Designer offers a permanent free tier (Freemium) for core viewing, basic modeling, or personal non-commercial projects. Upgrading to a paid subscription unlocks full commercial rights, advanced CAD export formats, and team collaboration tools."
+        "a": "No. The core application is a paid annual subscription per user; only some manufacturer extensions are free. Configura and its manufacturing partners arrange trials, and the terms are set by them rather than published."
       },
       {
         "q": "What operating systems does CET Designer support?",
@@ -4813,7 +4813,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CET Designer?",
-        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks. Chief Architect (offered on a Subscription license) competes directly on core Interior Design workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks, and ArchiCAD. Chief Architect (offered on a Subscription license) competes directly on core Interior Design workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4950,7 +4950,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Accelygen?",
-        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, Fusion 360. Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, Fusion 360, and Autodesk Fusion (Fusion 360). Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -5120,7 +5120,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to pic2CAD?",
-        "a": "The closest alternatives to pic2CAD are DXF Medic, QCAD, LibreCAD. DXF Medic (available with a free tier) competes directly on core Architecture workflows, while QCAD (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to pic2CAD are DXF Medic, QCAD, LibreCAD, and AutoCAD LT. DXF Medic (available with a free tier) competes directly on core Architecture workflows, while QCAD (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [

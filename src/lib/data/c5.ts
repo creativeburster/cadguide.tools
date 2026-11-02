@@ -395,7 +395,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Mastercam?",
-        "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill, and GibbsCAM. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -544,7 +544,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of nTop?",
-        "a": "Yes — nTop offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "nTop is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official nTop page](https://www.ntop.com)."
       },
       {
         "q": "What operating systems does nTop support?",
@@ -556,7 +556,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nTop?",
-        "a": "The closest alternatives to nTop are Autodesk Netfabb, Magics, Altair Inspire. Autodesk Netfabb (offered on a Subscription license) competes directly on core Aerospace workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to nTop are Autodesk Netfabb, Magics, Altair Inspire, and Autodesk Fusion (Fusion 360). Autodesk Netfabb (offered on a Subscription license) competes directly on core Aerospace workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -681,7 +681,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SolidCAM?",
-        "a": "Yes — SolidCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "SolidCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SolidCAM page](https://www.solidcam.com)."
       },
       {
         "q": "What operating systems does SolidCAM support?",
@@ -693,7 +693,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SolidCAM?",
-        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, Fusion 360. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while CAMWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, Fusion 360, and Autodesk Fusion (Fusion 360). Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while CAMWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -832,7 +832,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Magics?",
-        "a": "Yes — Magics offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Magics is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Magics page](https://www.materialise.com)."
       },
       {
         "q": "What operating systems does Magics support?",
@@ -844,7 +844,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Magics?",
-        "a": "The closest alternatives to Magics are Autodesk Netfabb, nTop, MeshLab. Autodesk Netfabb (offered on a Subscription license) competes directly on core Additive Manufacturing workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Magics are Autodesk Netfabb, nTop, MeshLab, and UltiMaker Cura. Autodesk Netfabb (offered on a Subscription license) competes directly on core Additive Manufacturing workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -932,7 +932,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of VISI Modelling?",
-        "a": "Yes — VISI Modelling offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "VISI Modelling is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official VISI Modelling page](https://www.visicadcam.com)."
       },
       {
         "q": "What operating systems does VISI Modelling support?",
@@ -944,7 +944,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to VISI Modelling?",
-        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while Cimatron (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid, and Tebis. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while Cimatron (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1117,7 +1117,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Cimatron?",
-        "a": "Yes — Cimatron offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Cimatron is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Cimatron page](https://www.cimatron.com)."
       },
       {
         "q": "What operating systems does Cimatron support?",
@@ -1129,7 +1129,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Cimatron?",
-        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis, and PowerMill. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1320,7 +1320,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
-        "a": "Yes — ANSYS Mechanical offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ANSYS Mechanical is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Mechanical page](https://www.ansys.com/products/structures/ansys-mechanical)."
       },
       {
         "q": "What operating systems does ANSYS Mechanical support?",
@@ -1332,7 +1332,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Mechanical?",
-        "a": "The closest alternatives to ANSYS Mechanical are Abaqus, COMSOL Multiphysics, Altair HyperWorks. Abaqus (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Mechanical are Abaqus, COMSOL Multiphysics, Altair HyperWorks, and MSC Nastran. Abaqus (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1490,7 +1490,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Nastran?",
-        "a": "Yes — MSC Nastran offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MSC Nastran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Nastran page](https://nexus.hexagon.com/home/product/msc-nastran/)."
       },
       {
         "q": "What operating systems does MSC Nastran support?",
@@ -1502,7 +1502,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MSC Nastran?",
-        "a": "The closest alternatives to MSC Nastran are ANSYS Mechanical, Abaqus, Altair HyperWorks. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while Abaqus is favored for abaqus/standard implicit solver. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to MSC Nastran are ANSYS Mechanical, Abaqus, Altair HyperWorks, and Femap. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while Abaqus is favored for abaqus/standard implicit solver. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1619,7 +1619,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altair HyperWorks?",
-        "a": "Yes — Altair HyperWorks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Altair HyperWorks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altair HyperWorks page](https://altair.com/hyperworks/)."
       },
       {
         "q": "What operating systems does Altair HyperWorks support?",
@@ -1631,7 +1631,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altair HyperWorks?",
-        "a": "The closest alternatives to Altair HyperWorks are ANSYS Workbench, Abaqus, MSC Nastran. ANSYS Workbench (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Altair HyperWorks are ANSYS Workbench, Abaqus, MSC Nastran, and Femap. ANSYS Workbench (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1753,7 +1753,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAMWorks?",
-        "a": "Yes — CAMWorks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CAMWorks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CAMWorks page](https://camworks.com/)."
       },
       {
         "q": "What operating systems does CAMWorks support?",
@@ -1765,7 +1765,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAMWorks?",
-        "a": "The closest alternatives to CAMWorks are SolidCAM, Mastercam, FeatureCAM. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CAMWorks are SolidCAM, Mastercam, FeatureCAM, and Autodesk Fusion (Fusion 360). SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2050,7 +2050,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of TopSolid?",
-        "a": "Yes — TopSolid offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "TopSolid is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official TopSolid page](https://www.topsolid.com/)."
       },
       {
         "q": "What operating systems does TopSolid support?",
@@ -2062,7 +2062,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TopSolid?",
-        "a": "The closest alternatives to TopSolid are Mastercam, Visi, hyperMILL. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Visi (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to TopSolid are Mastercam, Visi, hyperMILL, and SolidCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Visi (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2256,7 +2256,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Visi?",
-        "a": "Yes — Visi offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Visi is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Visi page](https://www.hexagonmi.com/)."
       },
       {
         "q": "What operating systems does Visi support?",
@@ -2268,7 +2268,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Visi?",
-        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid. Cimatron (offered on a Subscription license) competes directly on core Mold Making workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid, and Tebis. Cimatron (offered on a Subscription license) competes directly on core Mold Making workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2463,7 +2463,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Edgecam?",
-        "a": "Yes — Edgecam offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Edgecam is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Edgecam page](https://www.hexagonmi.com/)."
       },
       {
         "q": "What operating systems does Edgecam support?",
@@ -2475,7 +2475,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Edgecam?",
-        "a": "The closest alternatives to Edgecam are Mastercam, FeatureCAM, GibbsCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Edgecam are Mastercam, FeatureCAM, GibbsCAM, and SolidCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2666,7 +2666,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KISSsoft?",
-        "a": "Yes — KISSsoft offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "KISSsoft is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official KISSsoft page](https://www.kisssoft.com/)."
       },
       {
         "q": "What operating systems does KISSsoft support?",
@@ -2678,7 +2678,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to KISSsoft?",
-        "a": "The closest alternatives to KISSsoft are MSC Adams, ANSYS Mechanical, SolidWorks. MSC Adams (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to KISSsoft are MSC Adams, ANSYS Mechanical, SolidWorks, and Autodesk Inventor. MSC Adams (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2860,7 +2860,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of FeatureCAM?",
-        "a": "Yes — FeatureCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "FeatureCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official FeatureCAM page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview)."
       },
       {
         "q": "What operating systems does FeatureCAM support?",
@@ -2872,7 +2872,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to FeatureCAM?",
-        "a": "The closest alternatives to FeatureCAM are Edgecam, GibbsCAM, CAMWorks. Edgecam (offered on a Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to FeatureCAM are Edgecam, GibbsCAM, CAMWorks, and Mastercam. Edgecam (offered on a Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3066,7 +3066,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of GibbsCAM?",
-        "a": "Yes — GibbsCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "GibbsCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official GibbsCAM page](https://www.gibbscam.com/)."
       },
       {
         "q": "What operating systems does GibbsCAM support?",
@@ -3078,7 +3078,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GibbsCAM?",
-        "a": "The closest alternatives to GibbsCAM are Mastercam, FeatureCAM, Edgecam. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to GibbsCAM are Mastercam, FeatureCAM, Edgecam, and ESPRIT. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while FeatureCAM (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3272,7 +3272,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of hyperMILL?",
-        "a": "Yes — hyperMILL offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "hyperMILL is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official hyperMILL page](https://www.openmind-tech.com/)."
       },
       {
         "q": "What operating systems does hyperMILL support?",
@@ -3284,7 +3284,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to hyperMILL?",
-        "a": "The closest alternatives to hyperMILL are PowerMill, Mastercam, Tebis. PowerMill (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to hyperMILL are PowerMill, Mastercam, Tebis, and WorkNC. PowerMill (offered on a Subscription license) competes directly on core Manufacturing workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3477,7 +3477,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tebis?",
-        "a": "Yes — Tebis offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Tebis is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Tebis page](https://www.tebis.com/)."
       },
       {
         "q": "What operating systems does Tebis support?",
@@ -3489,7 +3489,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tebis?",
-        "a": "The closest alternatives to Tebis are PowerMill, hyperMILL, WorkNC. PowerMill (offered on a Subscription license) competes directly on core Die Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Tebis are PowerMill, hyperMILL, WorkNC, and Cimatron. PowerMill (offered on a Subscription license) competes directly on core Die Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3681,7 +3681,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of WorkNC?",
-        "a": "Yes — WorkNC offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "WorkNC is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official WorkNC page](https://www.worknc.com/)."
       },
       {
         "q": "What operating systems does WorkNC support?",
@@ -3693,7 +3693,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to WorkNC?",
-        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis. PowerMill (offered on a Subscription license) competes directly on core Mold Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis, and Mastercam. PowerMill (offered on a Subscription license) competes directly on core Mold Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3881,7 +3881,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SURFCAM?",
-        "a": "Yes — SURFCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "SURFCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SURFCAM page](https://www.surfcam.com/)."
       },
       {
         "q": "What operating systems does SURFCAM support?",
@@ -3893,7 +3893,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SURFCAM?",
-        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam. Mastercam (offered on a Subscription / Perpetual license) competes directly on core General Machining workflows, while BobCAD-CAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam, and GibbsCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core General Machining workflows, while BobCAD-CAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4084,7 +4084,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
-        "a": "Yes — BobCAD-CAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "BobCAD-CAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official BobCAD-CAM page](https://bobcad.com/)."
       },
       {
         "q": "What operating systems does BobCAD-CAM support?",
@@ -4096,7 +4096,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BobCAD-CAM?",
-        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam, Autodesk Fusion (Fusion 360), and AlphaCAM. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4289,7 +4289,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoForm?",
-        "a": "Yes — AutoForm offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AutoForm is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AutoForm page](https://www.autoform.com/)."
       },
       {
         "q": "What operating systems does AutoForm support?",
@@ -4301,7 +4301,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoForm?",
-        "a": "The closest alternatives to AutoForm are LS-DYNA, Abaqus, Altair Inspire. LS-DYNA (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoForm are LS-DYNA, Abaqus, Altair Inspire, and ANSYS Mechanical. LS-DYNA (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4491,7 +4491,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldflow?",
-        "a": "Yes — Moldflow offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Moldflow is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Moldflow page](https://www.autodesk.com/products/moldflow/overview)."
       },
       {
         "q": "What operating systems does Moldflow support?",
@@ -4503,7 +4503,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Moldflow?",
-        "a": "The closest alternatives to Moldflow are Moldex3D, ANSYS Workbench, COMSOL Multiphysics. Moldex3D (offered on a Perpetual license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Moldflow are Moldex3D, ANSYS Workbench, COMSOL Multiphysics, and Altair Inspire. Moldex3D (offered on a Perpetual license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4694,7 +4694,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldex3D?",
-        "a": "Yes — Moldex3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Moldex3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Moldex3D page](https://www.moldex3d.com/)."
       },
       {
         "q": "What operating systems does Moldex3D support?",
@@ -4706,7 +4706,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Moldex3D?",
-        "a": "The closest alternatives to Moldex3D are Moldflow, ANSYS Workbench, COMSOL Multiphysics. Moldflow (offered on a Subscription license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Moldex3D are Moldflow, ANSYS Workbench, COMSOL Multiphysics, and Altair Inspire. Moldflow (offered on a Subscription license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4897,7 +4897,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AlphaCAM?",
-        "a": "Yes — AlphaCAM offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AlphaCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AlphaCAM page](https://www.alphacam.com/)."
       },
       {
         "q": "What operating systems does AlphaCAM support?",
@@ -4909,7 +4909,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AlphaCAM?",
-        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM. TopSolid (offered on a Perpetual license) competes directly on core Woodworking workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM, and Radan. TopSolid (offered on a Perpetual license) competes directly on core Woodworking workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5097,7 +5097,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Radan?",
-        "a": "Yes — Radan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Radan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Radan page](https://www.radan.com/)."
       },
       {
         "q": "What operating systems does Radan support?",
@@ -5109,7 +5109,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Radan?",
-        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge, and TopSolid. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5298,7 +5298,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lantek Expert?",
-        "a": "Yes — Lantek Expert offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Lantek Expert is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Lantek Expert page](https://www.lantek.com/)."
       },
       {
         "q": "What operating systems does Lantek Expert support?",
@@ -5310,7 +5310,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Lantek Expert?",
-        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge, and TopSolid. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5499,7 +5499,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SigmaNEST?",
-        "a": "Yes — SigmaNEST offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "SigmaNEST is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SigmaNEST page](https://www.sigmanest.com/)."
       },
       {
         "q": "What operating systems does SigmaNEST support?",
@@ -5511,7 +5511,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SigmaNEST?",
-        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge. Lantek Expert (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge, and TopSolid. Lantek Expert (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5626,7 +5626,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
-        "a": "Yes — ANSYS Fluent offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ANSYS Fluent is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Fluent page](https://www.ansys.com/products/fluids/ansys-fluent)."
       },
       {
         "q": "What operating systems does ANSYS Fluent support?",
@@ -5638,7 +5638,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Fluent?",
-        "a": "The closest alternatives to ANSYS Fluent are COMSOL Multiphysics, Simcenter STAR-CCM+, SimScale. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Simcenter STAR-CCM+ (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Fluent are COMSOL Multiphysics, Simcenter STAR-CCM+, SimScale, and OpenFOAM. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Simcenter STAR-CCM+ (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -5808,7 +5808,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
-        "a": "Yes — ANSYS Workbench offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ANSYS Workbench is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Workbench page](https://www.ansys.com/products/ansys-workbench)."
       },
       {
         "q": "What operating systems does ANSYS Workbench support?",
@@ -5820,7 +5820,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Workbench?",
-        "a": "The closest alternatives to ANSYS Workbench are COMSOL Multiphysics, Altair HyperWorks, Abaqus. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Workbench are COMSOL Multiphysics, Altair HyperWorks, Abaqus, and Siemens NX. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6001,7 +6001,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
-        "a": "Yes — ANSYS Discovery offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ANSYS Discovery is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Discovery page](https://www.ansys.com/products/3d-design/ansys-discovery)."
       },
       {
         "q": "What operating systems does ANSYS Discovery support?",
@@ -6013,7 +6013,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Discovery?",
-        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Fusion 360. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Fusion 360, Autodesk Fusion (Fusion 360), and COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6208,7 +6208,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Abaqus?",
-        "a": "Yes — Abaqus offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Abaqus is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Abaqus page](https://www.3ds.com/products/simulia/abaqus)."
       },
       {
         "q": "What operating systems does Abaqus support?",
@@ -6220,7 +6220,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Abaqus?",
-        "a": "The closest alternatives to Abaqus are ANSYS Mechanical, LS-DYNA, MSC Nastran. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while LS-DYNA is favored for explicit and implicit time-integration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Abaqus are ANSYS Mechanical, LS-DYNA, MSC Nastran, and COMSOL Multiphysics. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while LS-DYNA is favored for explicit and implicit time-integration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6404,7 +6404,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
-        "a": "Yes — COMSOL Multiphysics offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "COMSOL Multiphysics is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official COMSOL Multiphysics page](https://www.comsol.com)."
       },
       {
         "q": "What operating systems does COMSOL Multiphysics support?",
@@ -6416,7 +6416,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to COMSOL Multiphysics?",
-        "a": "The closest alternatives to COMSOL Multiphysics are ANSYS Workbench, ANSYS Fluent, Abaqus. ANSYS Workbench (offered on a Subscription license) competes directly on core Electronics workflows, while ANSYS Fluent (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to COMSOL Multiphysics are ANSYS Workbench, ANSYS Fluent, Abaqus, and SimScale. ANSYS Workbench (offered on a Subscription license) competes directly on core Electronics workflows, while ANSYS Fluent (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6602,7 +6602,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of LS-DYNA?",
-        "a": "Yes — LS-DYNA offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "LS-DYNA is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official LS-DYNA page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
       },
       {
         "q": "What operating systems does LS-DYNA support?",
@@ -6614,7 +6614,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LS-DYNA?",
-        "a": "The closest alternatives to LS-DYNA are Abaqus, ANSYS Mechanical, Altair HyperWorks. Abaqus (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to LS-DYNA are Abaqus, ANSYS Mechanical, Altair HyperWorks, and MSC Nastran. Abaqus (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -6795,7 +6795,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
-        "a": "Yes — Simcenter STAR-CCM+ offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Simcenter STAR-CCM+ is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Simcenter STAR-CCM+ page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
       },
       {
         "q": "What operating systems does Simcenter STAR-CCM+ support?",
@@ -6807,7 +6807,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Simcenter STAR-CCM+?",
-        "a": "The closest alternatives to Simcenter STAR-CCM+ are ANSYS Fluent, COMSOL Multiphysics, OpenFOAM. ANSYS Fluent (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Simcenter STAR-CCM+ are ANSYS Fluent, COMSOL Multiphysics, OpenFOAM, and SimScale. ANSYS Fluent (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7004,7 +7004,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenFOAM?",
-        "a": "The closest alternatives to OpenFOAM are ANSYS Fluent, SimScale, Simcenter STAR-CCM+. ANSYS Fluent (offered on a Subscription license) competes directly on core Research workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenFOAM are ANSYS Fluent, SimScale, Simcenter STAR-CCM+, and COMSOL Multiphysics. ANSYS Fluent (offered on a Subscription license) competes directly on core Research workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7195,7 +7195,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SimScale?",
-        "a": "The closest alternatives to SimScale are ANSYS Discovery, COMSOL Multiphysics, ANSYS Fluent. ANSYS Discovery (offered on a Subscription license) competes directly on core AEC workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SimScale are ANSYS Discovery, COMSOL Multiphysics, ANSYS Fluent, and OpenFOAM. ANSYS Discovery (offered on a Subscription license) competes directly on core AEC workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7411,7 +7411,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Femap?",
-        "a": "Yes — Femap offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Femap is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Femap page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
       },
       {
         "q": "What operating systems does Femap support?",
@@ -7423,7 +7423,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Femap?",
-        "a": "The closest alternatives to Femap are MSC Patran, Altair HyperWorks, ANSYS Mechanical. MSC Patran (offered on a Subscription license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Femap are MSC Patran, Altair HyperWorks, ANSYS Mechanical, and MSC Nastran. MSC Patran (offered on a Subscription license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7605,7 +7605,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altair Inspire?",
-        "a": "Yes — Altair Inspire offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Altair Inspire is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altair Inspire page](https://altair.com/inspire)."
       },
       {
         "q": "What operating systems does Altair Inspire support?",
@@ -7617,7 +7617,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altair Inspire?",
-        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, Fusion 360, SolidWorks. ANSYS Discovery (offered on a Subscription license) competes directly on core Aerospace workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, Fusion 360, SolidWorks, Autodesk Fusion (Fusion 360), and SimScale. ANSYS Discovery (offered on a Subscription license) competes directly on core Aerospace workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7796,7 +7796,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Patran?",
-        "a": "Yes — MSC Patran offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MSC Patran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Patran page](https://hexagon.com/products/patran)."
       },
       {
         "q": "What operating systems does MSC Patran support?",
@@ -7808,7 +7808,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MSC Patran?",
-        "a": "The closest alternatives to MSC Patran are Femap, Altair HyperWorks, ANSYS Mechanical. Femap (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to MSC Patran are Femap, Altair HyperWorks, ANSYS Mechanical, and MSC Nastran. Femap (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7988,7 +7988,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Adams?",
-        "a": "Yes — MSC Adams offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MSC Adams is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Adams page](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams)."
       },
       {
         "q": "What operating systems does MSC Adams support?",
@@ -8000,7 +8000,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MSC Adams?",
-        "a": "The closest alternatives to MSC Adams are Altair Inspire, ANSYS Mechanical, COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to MSC Adams are Altair Inspire, ANSYS Mechanical, COMSOL Multiphysics, and Siemens NX. Altair Inspire (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8178,7 +8178,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAESAR II?",
-        "a": "Yes — CAESAR II offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CAESAR II is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CAESAR II page](https://hexagon.com/products/caesar-ii)."
       },
       {
         "q": "What operating systems does CAESAR II support?",
@@ -8190,7 +8190,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAESAR II?",
-        "a": "The closest alternatives to CAESAR II are Bentley AutoPIPE, PV Elite, ANSYS Mechanical. Bentley AutoPIPE (offered on a Subscription license) competes directly on core Oil & Gas workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CAESAR II are Bentley AutoPIPE, PV Elite, ANSYS Mechanical, and Bentley STAAD.Pro. Bentley AutoPIPE (offered on a Subscription license) competes directly on core Oil & Gas workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8369,7 +8369,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
-        "a": "Yes — Bentley AutoPIPE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Bentley AutoPIPE is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Bentley AutoPIPE page](https://www.bentley.com/software/autopipe/)."
       },
       {
         "q": "What operating systems does Bentley AutoPIPE support?",
@@ -8381,7 +8381,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bentley AutoPIPE?",
-        "a": "The closest alternatives to Bentley AutoPIPE are CAESAR II, PV Elite, Bentley STAAD.Pro. CAESAR II (offered on a Subscription license) competes directly on core Power workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Bentley AutoPIPE are CAESAR II, PV Elite, Bentley STAAD.Pro, and ANSYS Mechanical. CAESAR II (offered on a Subscription license) competes directly on core Power workflows, while PV Elite (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8583,7 +8583,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of PV Elite?",
-        "a": "Yes — PV Elite offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "PV Elite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official PV Elite page](https://hexagon.com/products/pv-elite)."
       },
       {
         "q": "What operating systems does PV Elite support?",
@@ -8595,7 +8595,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PV Elite?",
-        "a": "The closest alternatives to PV Elite are CAESAR II, Bentley AutoPIPE, ANSYS Mechanical. CAESAR II (offered on a Subscription license) competes directly on core Oil & Gas workflows, while Bentley AutoPIPE (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to PV Elite are CAESAR II, Bentley AutoPIPE, ANSYS Mechanical, and SolidWorks. CAESAR II (offered on a Subscription license) competes directly on core Oil & Gas workflows, while Bentley AutoPIPE (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -8771,7 +8771,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
-        "a": "Yes — AspenTech Aspen HYSYS offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AspenTech Aspen HYSYS is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AspenTech Aspen HYSYS page](https://www.aspentech.com/en/products/engineering/aspen-hysys)."
       },
       {
         "q": "What operating systems does AspenTech Aspen HYSYS support?",
@@ -8962,7 +8962,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
-        "a": "Yes — CSI SAP2000 offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CSI SAP2000 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CSI SAP2000 page](https://www.csiamerica.com/products/sap2000)."
       },
       {
         "q": "What operating systems does CSI SAP2000 support?",
@@ -8974,7 +8974,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CSI SAP2000?",
-        "a": "The closest alternatives to CSI SAP2000 are Bentley STAAD.Pro, CSI ETABS, RISA-3D. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CSI SAP2000 are Bentley STAAD.Pro, CSI ETABS, RISA-3D, and Autodesk Robot Structural Analysis. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9187,7 +9187,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI ETABS?",
-        "a": "Yes — CSI ETABS offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CSI ETABS is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CSI ETABS page](https://www.csiamerica.com/products/etabs)."
       },
       {
         "q": "What operating systems does CSI ETABS support?",
@@ -9199,7 +9199,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CSI ETABS?",
-        "a": "The closest alternatives to CSI ETABS are CSI SAP2000, Bentley STAAD.Pro, Autodesk Robot Structural Analysis. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CSI ETABS are CSI SAP2000, Bentley STAAD.Pro, Autodesk Robot Structural Analysis, and RISA-3D. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9413,7 +9413,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Bentley STAAD.Pro?",
-        "a": "The closest alternatives to Bentley STAAD.Pro are CSI SAP2000, CSI ETABS, RISA-3D. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Bentley STAAD.Pro are CSI SAP2000, CSI ETABS, RISA-3D, and Autodesk Robot Structural Analysis. CSI SAP2000 (offered on a Perpetual license) competes directly on core AEC workflows, while CSI ETABS (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9610,7 +9610,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
-        "a": "Yes — Tekla Tedds offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Tekla Tedds is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Tekla Tedds page](https://www.tekla.com/products/tekla-tedds)."
       },
       {
         "q": "What operating systems does Tekla Tedds support?",
@@ -9622,7 +9622,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Tekla Tedds?",
-        "a": "The closest alternatives to Tekla Tedds are IDEA StatiCa, Bentley STAAD.Pro, CSI SAP2000. IDEA StatiCa (offered on a Subscription license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Tekla Tedds are IDEA StatiCa, Bentley STAAD.Pro, CSI SAP2000, and Autodesk Robot Structural Analysis. IDEA StatiCa (offered on a Subscription license) competes directly on core AEC workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -9797,7 +9797,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
-        "a": "Yes — Autodesk Robot Structural Analysis offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Autodesk Robot Structural Analysis is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Robot Structural Analysis page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview)."
       },
       {
         "q": "What operating systems does Autodesk Robot Structural Analysis support?",
@@ -9809,7 +9809,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Robot Structural Analysis?",
-        "a": "The closest alternatives to Autodesk Robot Structural Analysis are Bentley STAAD.Pro, CSI SAP2000, CSI ETABS. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Robot Structural Analysis are Bentley STAAD.Pro, CSI SAP2000, CSI ETABS, and RISA-3D. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -10007,7 +10007,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
-        "a": "Yes — IDEA StatiCa offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "IDEA StatiCa is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official IDEA StatiCa page](https://www.ideastatica.com)."
       },
       {
         "q": "What operating systems does IDEA StatiCa support?",
@@ -10019,7 +10019,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to IDEA StatiCa?",
-        "a": "The closest alternatives to IDEA StatiCa are Tekla Tedds, CSI SAP2000, Bentley STAAD.Pro. Tekla Tedds (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to IDEA StatiCa are Tekla Tedds, CSI SAP2000, Bentley STAAD.Pro, and Autodesk Robot Structural Analysis. Tekla Tedds (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -10241,7 +10241,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of RISA-3D?",
-        "a": "Yes — RISA-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "RISA-3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official RISA-3D page](https://risa.com/products/risa-3d)."
       },
       {
         "q": "What operating systems does RISA-3D support?",
@@ -10253,7 +10253,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to RISA-3D?",
-        "a": "The closest alternatives to RISA-3D are Bentley STAAD.Pro, CSI SAP2000, Autodesk Robot Structural Analysis. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to RISA-3D are Bentley STAAD.Pro, CSI SAP2000, Autodesk Robot Structural Analysis, and CSI ETABS. Bentley STAAD.Pro (offered on a Subscription license) competes directly on core AEC workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -10671,7 +10671,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Civil?",
-        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer. CSI SAP2000 (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer, and Autodesk Robot Structural Analysis. CSI SAP2000 (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -10965,7 +10965,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to midas Gen?",
-        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Building Design workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro, and SCIA Engineer. CSI ETABS (offered on a Perpetual license) competes directly on core Building Design workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11120,7 +11120,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
-        "a": "Yes — SCIA Engineer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "SCIA Engineer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SCIA Engineer page](https://www.scia.net/)."
       },
       {
         "q": "What operating systems does SCIA Engineer support?",
@@ -11132,7 +11132,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SCIA Engineer?",
-        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SCIA Engineer are CSI ETABS, Autodesk Robot Structural Analysis, Bentley STAAD.Pro, and CSI SAP2000. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11372,7 +11372,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PowerMill?",
-        "a": "The closest alternatives to PowerMill are hyperMILL, Mastercam, Tebis. hyperMILL (offered on a Perpetual license) competes directly on core Aerospace workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to PowerMill are hyperMILL, Mastercam, Tebis, and WorkNC. hyperMILL (offered on a Perpetual license) competes directly on core Aerospace workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11591,7 +11591,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ESPRIT?",
-        "a": "Yes — ESPRIT offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ESPRIT is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ESPRIT page](https://www.espritcam.com/)."
       },
       {
         "q": "What operating systems does ESPRIT support?",
@@ -11603,7 +11603,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ESPRIT?",
-        "a": "The closest alternatives to ESPRIT are Mastercam, GibbsCAM, hyperMILL. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ESPRIT are Mastercam, GibbsCAM, hyperMILL, and FeatureCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while GibbsCAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -11839,7 +11839,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to PAM-STAMP?",
-        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, Abaqus. AutoForm (offered on a Subscription license) competes directly on core Automotive workflows, while LS-DYNA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to PAM-STAMP are AutoForm, LS-DYNA, Abaqus, and ANSYS Mechanical. AutoForm (offered on a Subscription license) competes directly on core Automotive workflows, while LS-DYNA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -12179,7 +12179,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
-        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM, Autodesk Fusion (Fusion 360), and Mastercam. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [

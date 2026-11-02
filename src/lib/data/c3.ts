@@ -1207,7 +1207,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Civil 3D?",
-        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey. OpenRoads Designer (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey, and MicroStation. OpenRoads Designer (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1416,7 +1416,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
-        "a": "Yes — Vectorworks Landmark offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Vectorworks Landmark is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Vectorworks Landmark page](https://www.vectorworks.net/landmark)."
       },
       {
         "q": "What operating systems does Vectorworks Landmark support?",
@@ -1428,7 +1428,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vectorworks Landmark?",
-        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks. Vectorworks (offered on a Subscription / Perpetual license) competes directly on core Landscape Architecture workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks, and SketchUp. Vectorworks (offered on a Subscription / Perpetual license) competes directly on core Landscape Architecture workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1590,7 +1590,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allplan?",
-        "a": "Yes — Allplan offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Allplan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Allplan page](https://www.allplan.com/)."
       },
       {
         "q": "What operating systems does Allplan support?",
@@ -1602,7 +1602,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Allplan?",
-        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures. Revit (offered on a Subscription license) competes directly on core Architecture workflows, while ArchiCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures, and Planbar. Revit (offered on a Subscription license) competes directly on core Architecture workflows, while ArchiCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1771,7 +1771,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
-        "a": "Yes — OpenRoads Designer offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "OpenRoads Designer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official OpenRoads Designer page](https://www.bentley.com/software/openroads-designer/)."
       },
       {
         "q": "What operating systems does OpenRoads Designer support?",
@@ -1783,7 +1783,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to OpenRoads Designer?",
-        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation, and Carlson Survey. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2063,7 +2063,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of cadwork?",
-        "a": "Yes — cadwork offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "cadwork is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official cadwork page](https://www.cadwork.com/)."
       },
       {
         "q": "What operating systems does cadwork support?",
@@ -2075,7 +2075,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to cadwork?",
-        "a": "The closest alternatives to cadwork are Vertex BD, Tekla Structures, ArchiCAD. Vertex BD (available via custom enterprise quote) competes directly on core Timber Construction workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to cadwork are Vertex BD, Tekla Structures, ArchiCAD, and Allplan. Vertex BD (available via custom enterprise quote) competes directly on core Timber Construction workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2268,7 +2268,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MagiCAD?",
-        "a": "Yes — MagiCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "MagiCAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MagiCAD page](https://www.magicad.com/)."
       },
       {
         "q": "What operating systems does MagiCAD support?",
@@ -2280,7 +2280,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to MagiCAD?",
-        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan. DDS-CAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan, and ArchiCAD. DDS-CAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2470,7 +2470,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DDS-CAD?",
-        "a": "Yes — DDS-CAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "DDS-CAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official DDS-CAD page](https://graphisoft.com/plans-and-products/ddscad/)."
       },
       {
         "q": "What operating systems does DDS-CAD support?",
@@ -2482,7 +2482,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DDS-CAD?",
-        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan. MagiCAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan, and ArchiCAD. MagiCAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2672,7 +2672,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of dRofus?",
-        "a": "Yes — dRofus offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "dRofus is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official dRofus page](https://www.drofus.com/)."
       },
       {
         "q": "What operating systems does dRofus support?",
@@ -2684,7 +2684,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to dRofus?",
-        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core Architecture workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect, and Solibri. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core Architecture workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2807,7 +2807,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
-        "a": "Yes — AutoCAD Plant 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AutoCAD Plant 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AutoCAD Plant 3D page](https://www.autodesk.com/products/autocad/included-toolsets/plant-3d)."
       },
       {
         "q": "What operating systems does AutoCAD Plant 3D support?",
@@ -2819,7 +2819,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoCAD Plant 3D?",
-        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design. CADWorx Plant Professional (offered on a Subscription license) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design, and Revit. CADWorx Plant Professional (offered on a Subscription license) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -2981,7 +2981,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
-        "a": "Yes — Hexagon SmartPlant 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Hexagon SmartPlant 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Hexagon SmartPlant 3D page](https://hexagon.com/products/smartplant-3d)."
       },
       {
         "q": "What operating systems does Hexagon SmartPlant 3D support?",
@@ -2993,7 +2993,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Hexagon SmartPlant 3D?",
-        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional. AVEVA E3D Design (offered on a Subscription license) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional, and MicroStation. AVEVA E3D Design (offered on a Subscription license) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3173,7 +3173,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
-        "a": "Yes — CADWorx Plant Professional offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CADWorx Plant Professional is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CADWorx Plant Professional page](https://hexagon.com/products/cadworx-plant-professional)."
       },
       {
         "q": "What operating systems does CADWorx Plant Professional support?",
@@ -3366,7 +3366,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
-        "a": "Yes — Autodesk Construction Cloud offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Autodesk Construction Cloud is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Construction Cloud page](https://construction.autodesk.com)."
       },
       {
         "q": "What operating systems does Autodesk Construction Cloud support?",
@@ -3378,7 +3378,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Construction Cloud?",
-        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks. Trimble Connect (available on a freemium model) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks, and Solibri. Trimble Connect (available on a freemium model) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3606,7 +3606,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Trimble Connect?",
-        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks, and Solibri. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -3806,7 +3806,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BIMcollab?",
-        "a": "Yes — BIMcollab offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "BIMcollab is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official BIMcollab page](https://www.bimcollab.com)."
       },
       {
         "q": "What operating systems does BIMcollab support?",
@@ -3818,7 +3818,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BIMcollab?",
-        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud. Solibri (offered on a Subscription license) competes directly on core AEC workflows, while Navisworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud, and Trimble Connect. Solibri (offered on a Subscription license) competes directly on core AEC workflows, while Navisworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4040,7 +4040,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Autodesk Dynamo?",
-        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D. Rhino 3D (offered on a Perpetual license) competes directly on core AEC workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D, and Allplan. Rhino 3D (offered on a Perpetual license) competes directly on core AEC workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -4309,7 +4309,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CYPECAD?",
-        "a": "Yes — CYPECAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "CYPECAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CYPECAD page](https://www.cype.com/)."
       },
       {
         "q": "What operating systems does CYPECAD support?",
@@ -4321,7 +4321,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CYPECAD?",
-        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer, and Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4484,7 +4484,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vertex BD?",
-        "a": "Yes — Vertex BD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Vertex BD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Vertex BD page](https://www.vertex.fi/)."
       },
       {
         "q": "What operating systems does Vertex BD support?",
@@ -4496,7 +4496,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Vertex BD?",
-        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit. cadwork (offered on a Perpetual license) competes directly on core Prefabrication workflows, while Tekla Structures (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit, and Allplan. cadwork (offered on a Perpetual license) competes directly on core Prefabrication workflows, while Tekla Structures (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {

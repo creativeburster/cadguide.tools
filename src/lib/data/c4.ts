@@ -146,7 +146,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
-        "a": "Yes — Bluebeam Revu offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Bluebeam Revu is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Bluebeam Revu page](https://www.bluebeam.com)."
       },
       {
         "q": "What operating systems does Bluebeam Revu support?",
@@ -323,7 +323,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Navisworks?",
-        "a": "Yes — Navisworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Navisworks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Navisworks page](https://www.autodesk.com/products/navisworks/overview)."
       },
       {
         "q": "What operating systems does Navisworks support?",
@@ -482,7 +482,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Solibri?",
-        "a": "Yes — Solibri offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Solibri is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Solibri page](https://www.solibri.com)."
       },
       {
         "q": "What operating systems does Solibri support?",
@@ -759,7 +759,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Recap Pro?",
-        "a": "Yes — Recap Pro offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Recap Pro is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Recap Pro page](https://www.autodesk.com/recap)."
       },
       {
         "q": "What operating systems does Recap Pro support?",
@@ -771,7 +771,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Recap Pro?",
-        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks. MeshLab (100% free) competes directly on core AEC workflows, while Geomagic Design X (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks, and Trimble Business Center. MeshLab (100% free) competes directly on core AEC workflows, while Geomagic Design X (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -869,7 +869,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solid Edge Viewer?",
-        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger. DWG TrueView (free and open-source) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger, and CADProps. DWG TrueView (free and open-source) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1049,7 +1049,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DWG TrueView?",
-        "a": "The closest alternatives to DWG TrueView are DWG FastView, CAD Reader, Solid Edge Viewer. DWG FastView (available with a free tier) competes directly on core Architecture workflows, while CAD Reader (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DWG TrueView are DWG FastView, CAD Reader, Solid Edge Viewer, and CADProps. DWG FastView (available with a free tier) competes directly on core Architecture workflows, while CAD Reader (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1229,7 +1229,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DWG FastView?",
-        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius, and CADProps. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1559,7 +1559,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DXF Medic?",
-        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools. DWG TrueView (free and open-source) competes directly on core Laser Cutting workflows, while CADProps (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools, and QCAD. DWG TrueView (free and open-source) competes directly on core Laser Cutting workflows, while CADProps (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [

@@ -1155,7 +1155,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to GstarCAD?",
-        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD, and progeCAD Professional. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1403,7 +1403,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QCAD?",
-        "a": "The closest alternatives to QCAD are LibreCAD, nanoCAD, and DraftSight. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to QCAD are LibreCAD, nanoCAD, DraftSight, and FreeCAD. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1677,7 +1677,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to nanoCAD?",
-        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, and ZWCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, ZWCAD, and GstarCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1955,7 +1955,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to progeCAD Professional?",
-        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD, and DraftSight. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2236,7 +2236,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to LibreCAD?",
-        "a": "The closest alternatives to LibreCAD are QCAD, FreeCAD, and nanoCAD. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to LibreCAD are QCAD, FreeCAD, nanoCAD, and SolveSpace. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2400,7 +2400,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to TurboCAD Platinum?",
-        "a": "The closest alternatives to TurboCAD Platinum are ZWCAD, progeCAD Professional, and DraftSight. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to TurboCAD Platinum are ZWCAD, progeCAD Professional, DraftSight, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2654,7 +2654,7 @@ export const c1Tools: Tool[] = [
     "country": "Canada",
     "category_id": "c1",
     "pricing_type": "Perpetual",
-    "starting_price": 499,
+    "starting_price": 0,
     "price_period": "one-time",
     "platforms": [
       "Windows",
@@ -2721,7 +2721,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CorelCAD?",
-        "a": "The closest actively maintained alternatives to CorelCAD are ARES Commander (built by Graebert on the exact same CAD engine), DraftSight, and BricsCAD. Compare their full technical specifications and official licensing options side-by-side on CADGuide."
+        "a": "The closest actively maintained alternatives to CorelCAD are ARES Commander (built by Graebert on the exact same CAD engine), DraftSight, BricsCAD, and TurboCAD Platinum. Compare their full technical specifications and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2737,7 +2737,7 @@ export const c1Tools: Tool[] = [
         "3DM"
       ]
     },
-    "expert_verdict": "Corel's high-precision 2D drafting and 3D modeling tool, providing native DWG support and seamless graphic suite integration.",
+    "expert_verdict": "Corel's 2D drafting and 3D modeling tool, discontinued in 2024 — it paired native DWG support with CorelDRAW integration, and Corel now directs owners to Graebert's ARES Commander.",
     "discontinued": true,
     "discontinued_note": "CorelCAD has been pulled from sale and reached end-of-support. Corel directs former users to Graebert ARES Commander.",
     "languages": [
@@ -3002,7 +3002,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to CAXA CAD?",
-        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3155,7 +3155,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ARES Commander?",
-        "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, BricsCAD, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -3345,7 +3345,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to AutoCAD LT?",
-        "a": "The closest alternatives to AutoCAD LT are BricsCAD Lite, DraftSight Professional, and ZWCAD Standard. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to AutoCAD LT are BricsCAD Lite, DraftSight Professional, ZWCAD Standard, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
