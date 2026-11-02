@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/generate-search-index.js && node scripts/generate-toolbox-slim.js && next build",
+    "build:local": "node scripts/build-local.js",
+    "purge:build-dirs": "node scripts/purge-build-dirs.js",
     "postbuild": "node scripts/indexnow-submit.js",
     "start": "next start",
     "lint": "eslint",

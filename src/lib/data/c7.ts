@@ -1535,7 +1535,7 @@ export const c7Tools: Tool[] = [
         "features": [
           "Full Engine Power",
           "Unlimited exports",
-          "Revenue < official regional rateM only",
+          "Free for companies under the vendor’s revenue threshold",
           "Learning use"
         ],
         "is_popular": true
@@ -1606,7 +1606,7 @@ export const c7Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c7",
-    "pricing_type": "Subscription",
+    "pricing_type": "Freemium",
     "starting_price": 445,
     "price_period": "year",
     "platforms": [

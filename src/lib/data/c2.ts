@@ -4324,7 +4324,7 @@ export const c2Tools: Tool[] = [
         "features": [
           "Full Parasolid NURBS toolset",
           "Perpetual license (1 yr updates)",
-          "Revenue under official regional ratek"
+          "Indie terms are company-size limited — threshold set by the vendor"
         ],
         "is_popular": true
       },

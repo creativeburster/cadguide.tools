@@ -1362,7 +1362,7 @@ export const c3Tools: Tool[] = [
         "period": "/yr",
         "features": [
           "Everything in Monthly",
-          "Billed annually (official regional rate)",
+          "Billed annually in a single payment",
           "VW Partner products discounts",
           "Free updates during term"
         ],
