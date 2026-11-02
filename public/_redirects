@@ -36,3 +36,10 @@
 /toolbox/manometer-calculator /toolbox/manometer-pressure-calculator 301
 /toolbox/gypsum-board-quantity-calculator /toolbox/drywall-quantity-calculator 301
 /toolbox/thermal-conductivity-calculator /toolbox/heat-transfer-conduction-calculator 301
+
+# 9. Duplicate tool merged into its canonical brand page — 2026-11-02
+#    VISI Modelling and VISI are one product: hexagon.com/products/visi-modelling
+#    redirects to hexagon.com/products/visi, as does the legacy visicadcam.com.
+/tools/visi-modelling /tools/visi 301
+/alternatives/visi-modelling /alternatives/visi 301
+/pricing/visi-modelling /pricing/visi 301

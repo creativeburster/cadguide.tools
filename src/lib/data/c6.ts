@@ -260,8 +260,8 @@ export const c6Tools: Tool[] = [
     "name": "Eagle",
     "slug": "eagle",
     "logo_url": "/logos/eagle.svg",
-    "short_desc": "Discontinued PCB design software — Autodesk ended all standalone EAGLE licensing on June 7, 2026; its capabilities now live in Autodesk Fusion Electronics.",
-    "description": "Autodesk EAGLE was a historically popular EDA tool for schematic capture and PCB layout. Autodesk stopped selling EAGLE as a standalone product on January 7, 2020, folding it into Fusion 360 subscriptions, and shut the EAGLE licensing servers down on June 7, 2026. Standalone EAGLE no longer runs; legacy .sch and .brd files can be imported directly into Autodesk Fusion Electronics.",
+    "short_desc": "Discontinued PCB design software — Autodesk ended EAGLE sales and support on 7 June 2026; perpetual licences still run, and the workflow now lives in Autodesk Fusion Electronics.",
+    "description": "Autodesk EAGLE was the reference mid-level EDA tool for schematic capture and PCB layout for two decades. Autodesk stopped selling it as a standalone product on 7 January 2020, folding it into Fusion 360 subscriptions, and ended sales and support outright on 7 June 2026, free tier included. Perpetual EAGLE licences are explicitly unaffected by that sunset and keep running on the machine they were activated on; subscriptions simply stopped renewing. Legacy .sch, .brd and .lbr files open in Autodesk Fusion Electronics, which is where new electronics work now happens.",
     "pricing_tiers": [
       {
         "name": "Discontinued",
@@ -296,9 +296,9 @@ export const c6Tools: Tool[] = [
       }
     ],
     "alternatives": [
+      "fusion-360",
       "kicad",
       "easyeda",
-      "diptrace",
       "altium-designer"
     ],
     "country": "USA",
@@ -341,28 +341,28 @@ export const c6Tools: Tool[] = [
     ],
     "faqs": [
       {
-        "q": "What is Eagle used for?",
-        "a": "PCB design software integrated with Fusion 360. Eagle is an EDA solution widely adopted in Electronics, IoT, Education."
+        "q": "What is EAGLE used for?",
+        "a": "EAGLE was Autodesk’s EDA package for schematic capture and PCB layout: drawing schematics, placing and routing boards, managing libraries, running design-rule checks and exporting Gerber and NC drill files for fabrication. It was widely used in electronics, IoT hardware, education and small-product development, and its workflows now continue inside Autodesk Fusion Electronics."
       },
       {
-        "q": "How much does Eagle cost?",
-        "a": "Eagle has been discontinued and is no longer sold as a standalone commercial license. Check the official vendor portal for migration and legacy support options. Current plans and regional pricing: [Official Eagle Pricing Page](https://www.autodesk.com/products/fusion-360/overview)."
+        "q": "How much does EAGLE cost?",
+        "a": "Nothing new can be bought: Autodesk ended EAGLE sales on 7 June 2026. Existing perpetual licences keep working, and subscriptions are not renewable. Successful electronics design now runs on an Autodesk Fusion subscription, whose current plans and regional rates are published by Autodesk: [Official Autodesk Fusion pricing](https://www.autodesk.com/products/fusion-360/overview)."
       },
       {
-        "q": "Is there a free version of Eagle?",
-        "a": "No. EAGLE is retired and there is nothing left to trial: Autodesk stopped selling it as a standalone product in January 2020 and shut the EAGLE licensing servers down on June 7, 2026. Legacy EAGLE projects open in Autodesk Fusion Electronics, which is bundled with a Fusion subscription and has a free personal-use tier."
+        "q": "Is there a free version of EAGLE?",
+        "a": "No. The free edition was withdrawn before the product itself was retired, and Autodesk ended EAGLE sales and support entirely on 7 June 2026. The replacement path is Fusion for personal use, which Autodesk offers free for non-commercial work with limits on schematic sheets, signal layers and board area."
       },
       {
-        "q": "What operating systems does Eagle support?",
-        "a": "Eagle runs on Windows, macOS, and Linux."
+        "q": "What operating systems does EAGLE support?",
+        "a": "EAGLE shipped for Windows, macOS and Linux throughout its life, and the final standalone release was 9.6.2. That support is frozen — there are no further builds for any platform, so treat the OS requirements as whatever that last release needed."
       },
       {
-        "q": "Which file formats does Eagle support?",
-        "a": "Eagle works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "q": "Which file formats does EAGLE support?",
+        "a": "EAGLE stored designs as .sch (schematic), .brd (board) and .lbr (library) files, and exported Gerber RS-274X, Excellon drill data, IPC-2581, DXF and images for fabrication and documentation. Those files still open in Autodesk Fusion Electronics."
       },
       {
-        "q": "What are the best alternatives to Eagle?",
-        "a": "The closest alternatives to Eagle are KiCad, EasyEDA, DipTrace, and Altium Designer. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "q": "What are the best alternatives to EAGLE?",
+        "a": "The closest alternatives to EAGLE are KiCad, Autodesk Fusion 360, EasyEDA and Altium Designer. KiCad is free and open source and is where most EAGLE users migrated; Fusion Electronics, the electronics workspace inside Fusion 360, is the direct successor and reads EAGLE files natively; EasyEDA is the browser-based option; and Altium Designer covers professional multi-layer work. Compare their specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -377,7 +377,7 @@ export const c6Tools: Tool[] = [
     },
     "expert_verdict": "A long-time reference point for mid-level PCB design, now retired: standalone EAGLE is gone and its workflows continue inside Autodesk Fusion Electronics.",
     "discontinued": true,
-    "discontinued_note": "Autodesk officially sunset EAGLE on June 7, 2026. Standalone licensing servers have been decommissioned. All EAGLE design files (.sch, .brd, .lbr) open seamlessly in Autodesk Fusion Electronics.",
+    "discontinued_note": "Autodesk ended EAGLE sales and support on 7 June 2026; it can no longer be bought, downloaded or activated through Autodesk Account. Perpetual licences bought earlier keep working. .sch, .brd and .lbr files open in Autodesk Fusion Electronics.",
     "file_formats_in": [
       "BRD",
       "SCH",

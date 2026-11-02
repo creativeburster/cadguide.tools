@@ -877,194 +877,7 @@ export const c5Tools: Tool[] = [
       "SLI",
       "Machine build files"
     ]
-  },
-  {
-    "id": "t76",
-    "name": "VISI Modelling",
-    "slug": "visi-modelling",
-    "logo_url": "/logos/visi-modelling.png",
-    "short_desc": "Specialized CAD/CAM for the mold and die industry.",
-    "description": "Hexagon VISI Modelling is a specialized hybrid solid and surface CAD/CAM suite purpose-built for progressive stamping die and plastic injection mold toolmakers. Powered by the Parasolid kernel combined with proprietary surface healing, it streamlines draft/undercut analysis, parting-line core/cavity splitting, progressive strip layout unfolding, electrode extraction, and 5-axis hard-milling toolpaths.",
-    "country": "UK",
-    "category_id": "c5",
-    "pricing_type": "Subscription",
-    "starting_price": 3000,
-    "quote_only": true,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Mold Design",
-      "Tooling"
-    ],
-    "core_features": [
-      "Analysis of Draft",
-      "Core & Cavity Separation",
-      "Electrode Design",
-      "Dynamic Wireframe"
-    ],
-    "user_scales": [
-      "Tool Shops",
-      "Manufacturing Plants"
-    ],
-    "official_url": "https://www.visicadcam.com",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Incredibly robust for molds",
-      "Fast processing",
-      "Integrated CAM"
-    ],
-    "cons": [
-      "Expensive",
-      "Requires specialized knowledge",
-      "Complex interface"
-    ],
-    "faqs": [
-      {
-        "q": "What is VISI Modelling used for?",
-        "a": "Specialized CAD/CAM for the mold and die industry. VISI Modelling is a CAE / CAM solution widely adopted in Mold Design, Tooling."
-      },
-      {
-        "q": "How much does VISI Modelling cost?",
-        "a": "VISI Modelling is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official VISI Modelling Pricing Page](https://www.visicadcam.com)."
-      },
-      {
-        "q": "Is there a free version of VISI Modelling?",
-        "a": "VISI Modelling is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official VISI Modelling page](https://www.visicadcam.com)."
-      },
-      {
-        "q": "What operating systems does VISI Modelling support?",
-        "a": "VISI Modelling runs on Windows."
-      },
-      {
-        "q": "Which file formats does VISI Modelling support?",
-        "a": "VISI Modelling imports STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, DWG, DXF and exports STEP, IGES, Parasolid, NC (G-Code), DWG, DXF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
-      },
-      {
-        "q": "What are the best alternatives to VISI Modelling?",
-        "a": "The closest alternatives to VISI Modelling are Visi, Cimatron, TopSolid, and Tebis. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while Cimatron (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Parasolid",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
-      "standards": [
-        "STEP",
-        "IGES",
-        "X_T"
-      ]
-    },
-    "expert_verdict": "If you are making plastic injection molds, VISI is your best friend.",
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "CATPart",
-      "PRT",
-      "SLDPRT",
-      "DWG",
-      "DXF"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "NC (G-Code)",
-      "DWG",
-      "DXF"
-    ],
-    "alternatives": [
-      "visi",
-      "cimatron",
-      "topsolid",
-      "tebis"
-    ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Analysis of Draft",
-            "status": true
-          },
-          {
-            "name": "Core & Cavity Separation",
-            "status": true
-          },
-          {
-            "name": "Electrode Design",
-            "status": true
-          },
-          {
-            "name": "Dynamic Wireframe",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native STEP / IGES / Parasolid Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision STEP / IGES / Parasolid Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "VISI Modelling licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Analysis of Draft",
-          "Core & Cavity Separation",
-          "Electrode Design",
-          "Dynamic Wireframe",
-          "Seats, modules and term are quoted by Hexagon rather than published"
-        ],
-        "is_popular": true
-      }
-    ]
-  },
-  {
+  },  {
     "id": "t81",
     "name": "Cimatron",
     "slug": "cimatron",
@@ -1130,7 +943,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Cimatron?",
-        "a": "The closest alternatives to Cimatron are Visi, VISI Modelling, Tebis, and PowerMill. Visi (offered on a Perpetual license) competes directly on core Mold Design workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Cimatron are VISI, Tebis, and PowerMill. VISI (offered on a Perpetual license) competes directly on core Mold Design workflows, while Tebis (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1192,7 +1005,6 @@ export const c5Tools: Tool[] = [
     ],
     "alternatives": [
       "visi",
-      "visi-modelling",
       "tebis",
       "powermill"
     ],
@@ -1569,8 +1381,8 @@ export const c5Tools: Tool[] = [
     "name": "Altair HyperWorks",
     "slug": "altair-hyperworks",
     "logo_url": "/logos/altair-hyperworks.png",
-    "short_desc": "Comprehensive simulation-driven design platform.",
-    "description": "Altair HyperWorks is an open-architecture simulation platform providing best-in-class technologies to design and optimize high-performance, weight-efficient and innovative products.",
+    "short_desc": "Altair's open-architecture simulation suite — HyperMesh, OptiStruct, Radioss and AcuSolve on one unit-based licence.",
+    "description": "Altair HyperWorks is an open-architecture CAE platform: HyperMesh for meshing, OptiStruct for structural optimization and linear solving, Radioss and AcuSolve for explicit and CFD work, all sharing one model and one licensing pool. Siemens' acquisition of Altair moved the software inside the HyperWorks platform into the Simcenter simulation and test portfolio, while licensing continues through Altair Units, the all-in unit system that lets a seat move between solvers instead of being tied to one product.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -1596,8 +1408,8 @@ export const c5Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://altair.com/hyperworks/",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
+    "official_url": "https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/",
+    "pricing_url": "https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/altair-units/",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -1613,23 +1425,27 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Altair HyperWorks used for?",
-        "a": "Comprehensive simulation-driven design platform. Altair HyperWorks is a CAE / CAM solution widely adopted in Automotive, Aerospace, Manufacturing."
+        "a": "HyperWorks is a CAE platform rather than a single program: HyperMesh for pre-processing and meshing, OptiStruct for topology optimization and linear structural analysis, Radioss for explicit crash and impact work, and AcuSolve for CFD, all sharing one model and one licence pool."
+      },
+      {
+        "q": "What happened to HyperWorks now that Altair is part of Siemens?",
+        "a": "Siemens kept the HyperWorks name for the platform but moved the software inside it into the Simcenter simulation and test portfolio; Altair Units remain the licensing currency. The practical effect is that HyperWorks seats now sit alongside Simcenter products rather than beside them: [Official Altair at Siemens page](https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/)."
       },
       {
         "q": "How much does Altair HyperWorks cost?",
-        "a": "Altair HyperWorks is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Altair HyperWorks Pricing Page](https://altair.com/hyperworks/)."
+        "a": "HyperWorks is licensed in Altair Units, not per product — a pool of units is drawn down by whichever solver a seat uses. Unit rates, bundles, taxes and eligibility differ by country and are revised by the vendor, so the official licensing page is the only current source: [Official Altair Units page](https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/altair-units/)."
       },
       {
         "q": "Is there a free version of Altair HyperWorks?",
-        "a": "Altair HyperWorks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altair HyperWorks page](https://altair.com/hyperworks/)."
+        "a": "No free tier is listed for HyperWorks here. Siemens and its resellers offer evaluations at their discretion, and the terms change over time, so the official product page is the only current source: [Official Altair at Siemens page](https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/)."
       },
       {
         "q": "What operating systems does Altair HyperWorks support?",
-        "a": "Altair HyperWorks runs on Windows and Linux."
+        "a": "HyperWorks runs on Windows and Linux. There is no macOS build; Mac users typically drive a Linux or Windows workstation remotely."
       },
       {
         "q": "Which file formats does Altair HyperWorks support?",
-        "a": "Altair HyperWorks imports HM, STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, NASTRAN, INP, CDB and exports HM, FEM, INP, CDB, STEP, IGES, H3D. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "HyperWorks imports HM, STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, NASTRAN, INP and CDB, and exports HM, FEM, INP, CDB, STEP, IGES and H3D. Direct CAD associative interfaces and neutral solver formats are available depending on your licensed modules."
       },
       {
         "q": "What are the best alternatives to Altair HyperWorks?",
@@ -2101,21 +1917,22 @@ export const c5Tools: Tool[] = [
   },
   {
     "id": "t124",
-    "name": "Visi",
+    "name": "VISI",
     "slug": "visi",
     "logo_url": "/logos/visi.png",
-    "short_desc": "CAD/CAM software by Hexagon for mold, die, and progressive die design.",
-    "description": "Visi by Hexagon is a comprehensive CAD/CAM software solution designed for mold, die, and progressive die design. It provides integrated tools for 2D/3D design, mold design, electrode design, and CNC machining. The software is widely used in the tooling industry for its specialized capabilities.",
+    "short_desc": "Hexagon's integrated CAD/CAE/CAM suite for injection molds, progressive dies, electrodes and 5-axis toolpaths.",
+    "description": "VISI by Hexagon is an integrated CAD/CAE/CAM environment for plastic injection mold and progressive stamping die toolmaking. It runs on the Parasolid kernel with proprietary surface healing, so imported customer geometry can be analysed, repaired and split into core and cavity without leaving the application. Draft and undercut analysis, parting-line work, progressive strip layout and unfolding, electrode extraction with burn-area calculation, mold-flow and thermal simulation, and 3- to 5-axis hard-milling toolpaths all share one model, which removes the STEP round-trips that break associative tooling design. Hexagon sells VISI through regional resellers and quotes seats and modules rather than publishing a price list.",
     "pricing_tiers": [
       {
         "name": "VISI licence",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "2D/3D CAD with surface and solid modelling",
-          "Mould, die and progressive-die design",
+          "2D/3D CAD with surface and solid modeling",
+          "Mold, die and progressive-die design",
           "2.5D to 5-axis milling, wire EDM and NC generation",
           "Electrode design and burn-area calculation",
+          "Mold-flow, thermal and kinematic simulation",
           "Editions, modules and seats are quoted by Hexagon rather than published"
         ],
         "is_popular": true
@@ -2189,11 +2006,27 @@ export const c5Tools: Tool[] = [
             "status": true
           }
         ]
+      },
+      {
+        "category": "Simulation",
+        "items": [
+          {
+            "name": "Injection molding simulation",
+            "status": true
+          },
+          {
+            "name": "Thermal and cooling analysis",
+            "status": true
+          },
+          {
+            "name": "Kinematic and collision checks",
+            "status": true
+          }
+        ]
       }
     ],
     "alternatives": [
       "cimatron",
-      "visi-modelling",
       "topsolid",
       "tebis"
     ],
@@ -2228,10 +2061,11 @@ export const c5Tools: Tool[] = [
     "score": 3.7,
     "pros": [
       "Outstanding progressive die and mold design",
-      "Advanced CAD/CAM integration",
-      "Backed by Hexagon's metrology and industrial standard",
-      "Highly automated electrode design",
-      "Robust machining simulation"
+      "Parasolid modelling with proprietary surface healing on imported geometry",
+      "Draft, undercut and parting-line analysis on the same model as the CAM",
+      "Highly automated electrode design with burn-area calculation",
+      "Mold-flow, thermal and kinematic simulation built in",
+      "Backed by Hexagon's metrology and manufacturing portfolio"
     ],
     "cons": [
       "Premium pricing model",
@@ -2241,42 +2075,43 @@ export const c5Tools: Tool[] = [
     ],
     "faqs": [
       {
-        "q": "What is Visi used for?",
-        "a": "Visi is CAD/CAM software by Hexagon for mold, die, and progressive die design."
+        "q": "What is VISI used for?",
+        "a": "VISI is Hexagon's integrated CAD/CAE/CAM suite for plastic injection mold and progressive stamping die toolmaking: draft and undercut analysis, core/cavity splitting, strip layout, electrode extraction, molding simulation and 3- to 5-axis toolpaths, all on one Parasolid model."
       },
       {
-        "q": "How much does Visi cost?",
-        "a": "Visi is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "q": "How much does VISI cost?",
+        "a": "VISI is sold as a perpetual licence through Hexagon's regional resellers, and seats and modules are quoted rather than listed. Rates, currency, taxes and eligibility differ by country and are revised by the vendor, so the official sales channel is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
-        "q": "Is there a free version of Visi?",
-        "a": "Visi is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Visi page](https://hexagon.com/products/visi)."
+        "q": "Is there a free version of VISI?",
+        "a": "VISI is commercial software and no free tier is listed for it here. Resellers arrange evaluations at their discretion, and the terms change over time, so the official site is the only current source: [Official VISI page](https://hexagon.com/products/visi)."
       },
       {
-        "q": "What operating systems does Visi support?",
-        "a": "Visi runs on Windows."
+        "q": "What operating systems does VISI support?",
+        "a": "VISI runs on Windows."
       },
       {
-        "q": "Which file formats does Visi support?",
-        "a": "Visi imports STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, DWG, DXF and exports STEP, IGES, Parasolid, NC (G-Code), DWG, DXF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "q": "Which file formats does VISI support?",
+        "a": "VISI imports STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, DWG, DXF and exports STEP, IGES, Parasolid, NC (G-Code), DWG, DXF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
       },
       {
-        "q": "What are the best alternatives to Visi?",
-        "a": "The closest alternatives to Visi are Cimatron, VISI Modelling, TopSolid, and Tebis. Cimatron (offered on a Subscription license) competes directly on core Mold Making workflows, while VISI Modelling (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What are the best alternatives to VISI?",
+        "a": "The closest alternatives to VISI are Cimatron, TopSolid, and Tebis. Cimatron (offered on a Subscription license) competes directly on core Mold Making workflows, while TopSolid (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Visi Engine",
+      "engine": "Parasolid",
       "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
       "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
       "standards": [
         "STEP",
         "IGES",
+        "Parasolid",
         "DWG",
         "DXF"
       ]
     },
-    "expert_verdict": "Hexagon's premier CAD/CAM software for the mold and die industries, offering exceptional progressive die design tools.",
+    "expert_verdict": "Hexagon's mold-and-die specialist: one Parasolid model carries draft analysis, progressive strip layout, electrode extraction, molding simulation and 5-axis toolpaths, which is why toolrooms stay with it despite the price and the learning curve.",
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -7472,8 +7307,8 @@ export const c5Tools: Tool[] = [
     "name": "Altair Inspire",
     "slug": "altair-inspire",
     "logo_url": "/logos/altair-inspire.png",
-    "short_desc": "Generative design and rapid FEA platform from Altair, with topology optimization at its core.",
-    "description": "Altair Inspire is a designer-friendly generative design and simulation environment that gives engineers fast access to topology, lattice, and PolyNURBS optimization — early-concept design with real Altair OptiStruct physics underneath.",
+    "short_desc": "Altair's designer-friendly generative design and FEA tool, published since the Siemens acquisition as Simcenter Inspire.",
+    "description": "Altair Inspire is a designer-friendly generative design and simulation environment built on Altair's OptiStruct solver, giving engineers topology, lattice and PolyNURBS optimization without an analyst in the loop. Following Siemens' acquisition of Altair, the product is published in the Simcenter portfolio as Simcenter Inspire, with the same hybrid BRep and PolyNURBS modelling, embedded structural, motion and fluid solvers, GPU rendering and the Inspire Cast molding-simulation add-on. Models and workflows carry over; what changed is the brand and the product page, not the file formats.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -7501,8 +7336,8 @@ export const c5Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://altair.com/inspire",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
+    "official_url": "https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/inspire/",
+    "pricing_url": "https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/altair-units/",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -7529,23 +7364,27 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Altair Inspire used for?",
-        "a": "Generative design and rapid FEA platform from Altair, with topology optimization at its core. Altair Inspire is a CAE / CAM solution widely adopted in Aerospace, Automotive, Manufacturing."
+        "a": "Altair Inspire is a generative design and rapid-FEA environment for designers rather than analysts: topology, lattice and PolyNURBS optimization on the OptiStruct solver, with structural, motion and fluid simulation embedded so a concept can be validated before it reaches a specialist."
+      },
+      {
+        "q": "Is Altair Inspire now called Simcenter Inspire?",
+        "a": "Yes. Siemens acquired Altair and moved Inspire into the Simcenter portfolio, where it is published as Simcenter Inspire — Siemens describes the former Altair products as joining the Simcenter family. This page keeps the Altair Inspire name because that is what existing projects, tutorials and job listings still use, and it is the name most people search for: [Official Simcenter Inspire page](https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/inspire/)."
       },
       {
         "q": "How much does Altair Inspire cost?",
-        "a": "Altair Inspire is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Altair Inspire Pricing Page](https://altair.com/inspire)."
+        "a": "Inspire is licensed per seat through Altair Units, Siemens' unit-based system that lets one licence pool move between Inspire, HyperWorks and the rest of the portfolio. Rates, bundles, taxes and eligibility differ by country and are revised by the vendor, so the official licensing page is the only current source: [Official Altair Units page](https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/altair-units/)."
       },
       {
         "q": "Is there a free version of Altair Inspire?",
-        "a": "Altair Inspire is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altair Inspire page](https://altair.com/inspire)."
+        "a": "No free tier is listed for Inspire here. Siemens and its resellers offer evaluations at their discretion, and the terms change over time, so the official product page is the only current source: [Official Simcenter Inspire page](https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/inspire/)."
       },
       {
         "q": "What operating systems does Altair Inspire support?",
-        "a": "Altair Inspire runs on Windows."
+        "a": "Inspire runs on Windows. There is no macOS or Linux build."
       },
       {
         "q": "Which file formats does Altair Inspire support?",
-        "a": "Altair Inspire imports STEP, IGES, Parasolid, SAT, SLDPRT, IPT, CATPart, STL and exports STEP, IGES, Parasolid, STL, 3MF, FEM. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Inspire imports STEP, IGES, Parasolid, SAT, SLDPRT, IPT, CATPart and STL, and exports STEP, IGES, Parasolid, STL, 3MF and FEM. Direct CAD associative interfaces and neutral solver/exchange formats are available depending on your licensed modules."
       },
       {
         "q": "What are the best alternatives to Altair Inspire?",
@@ -10327,47 +10166,24 @@ export const c5Tools: Tool[] = [
   },
   {
     "id": "t126",
-    "name": "midas Civil",
+    "name": "MIDAS Civil NX",
     "slug": "midas-civil",
     "logo_url": "/logos/midas-civil.png",
-    "short_desc": "Advanced structural analysis and FEM software for civil engineering, bridge design, and infrastructure projects.",
-    "description": "midas Civil is a comprehensive structural analysis and finite element method (FEM) software specialized for civil engineering applications. The software provides advanced tools for bridge design, structural analysis, seismic analysis, soil-structure interaction, and nonlinear analysis. midas Civil features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and construction stage analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Civil supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by civil engineers, bridge designers, and structural engineers for complex infrastructure projects including bridges, buildings, tunnels, and offshore structures. Its specialized focus on civil engineering applications makes it particularly valuable for projects requiring advanced structural analysis capabilities.",
+    "short_desc": "MIDAS IT's bridge and civil-structure analysis and design program on the NX platform, with Excel- and API-driven design automation.",
+    "description": "MIDAS Civil NX is MIDAS IT's analysis and design program for bridges and civil structures, and the successor to the long-running MIDAS Civil rather than a rename of the same build: NX brought a new graphics engine and rebuilt interface, post-processing the vendor measures as more than 20 times faster, APIs the classic version never had, and the MCBZ file container. An older MCB model opens in CIVIL NX, but CIVIL NX files do not open back in MIDAS Civil. Analysis coverage runs from linear static and construction-stage work with creep and shrinkage through moving-load, seismic and pushover analysis to tendon prestress loss and hydration heat, with automatic meshing. Because the API is exposed, Excel sheets and plug-ins can drive sections, materials, loads and boundaries, and push result tables and force diagrams back into calculation reports. MIDAS IT quotes seats through its regional offices rather than publishing a price list.",
     "pricing_tiers": [
       {
-        "name": "midas Civil Standard",
-        "price": "Official Store",
-        "period": "annual",
+        "name": "MIDAS Civil NX licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic structural analysis",
-          "Static analysis",
-          "Dynamic analysis",
-          "Design review"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "midas Civil Professional",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Full structural analysis",
-          "Bridge design",
-          "Seismic analysis",
-          "Nonlinear analysis",
-          "BIM integration"
+          "Bridge and civil-structure analysis and design",
+          "Construction-stage analysis with creep and shrinkage",
+          "Moving-load, seismic and pushover analysis",
+          "Excel and API design automation",
+          "Seats and term are quoted by MIDAS IT rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Educational",
-        "price": "Free/Discounted",
-        "period": "annual",
-        "features": [
-          "Full functionality",
-          "Student license",
-          "Academic support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -10375,90 +10191,106 @@ export const c5Tools: Tool[] = [
         "category": "Structural Analysis",
         "items": [
           {
-            "name": "Advanced structural analysis",
-            "status": true
-          },
-          {
             "name": "Linear static analysis",
             "status": true
           },
           {
-            "name": "Nonlinear analysis",
+            "name": "Geometric nonlinear analysis",
             "status": true
           },
           {
-            "name": "Dynamic analysis",
+            "name": "Material nonlinear analysis",
             "status": true
           },
           {
-            "name": "Time-history analysis",
+            "name": "Dynamic boundary nonlinear analysis",
+            "status": true
+          },
+          {
+            "name": "Nonlinear time-history analysis",
+            "status": true
+          },
+          {
+            "name": "Large displacement analysis",
             "status": true
           }
         ]
       },
       {
-        "category": "Bridge Design",
+        "category": "Bridge Engineering",
         "items": [
-          {
-            "name": "Bridge design",
-            "status": true
-          },
-          {
-            "name": "Seismic analysis",
-            "status": true
-          },
-          {
-            "name": "Buckling analysis",
-            "status": true
-          },
           {
             "name": "Construction stage analysis",
             "status": true
           },
           {
-            "name": "Cable analysis",
+            "name": "Moving load analysis",
+            "status": true
+          },
+          {
+            "name": "Tendon prestress loss",
+            "status": true
+          },
+          {
+            "name": "Pushover analysis",
+            "status": true
+          },
+          {
+            "name": "Cable and suspension bridge analysis",
+            "status": true
+          },
+          {
+            "name": "Hydration heat analysis",
             "status": true
           }
         ]
       },
       {
-        "category": "Civil Engineering",
+        "category": "Civil Structures",
         "items": [
+          {
+            "name": "Box-girder and PSC bridge modelling",
+            "status": true
+          },
+          {
+            "name": "Underground and tunnel structures",
+            "status": true
+          },
           {
             "name": "Soil-structure interaction",
             "status": true
           },
           {
-            "name": "Ground analysis",
+            "name": "Automatic mesh generation",
             "status": true
           },
           {
-            "name": "Foundation design",
-            "status": true
-          },
-          {
-            "name": "Tunnel analysis",
+            "name": "Bridge and PSC wizard models",
             "status": true
           }
         ]
       },
       {
-        "category": "Integration",
+        "category": "Automation & Integration",
         "items": [
           {
-            "name": "BIM integration",
+            "name": "API for external control",
             "status": true
           },
           {
-            "name": "FEA NX integration",
+            "name": "Excel-driven design automation",
             "status": true
           },
           {
-            "name": "CIVIL NX integration",
+            "name": "Calculation report generation",
             "status": true
           },
           {
-            "name": "CAD import/export",
+            "name": "MIDAS Civil Designer integration",
+            "status": true
+          },
+          {
+            "name": "DWG / DXF geometry reference",
             "status": true
           }
         ]
@@ -10474,6 +10306,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 5000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -10506,21 +10339,20 @@ export const c5Tools: Tool[] = [
     "affiliate_url": null,
     "score": 0,
     "pros": [
-      "Specialized for civil engineering",
-      "Advanced structural analysis",
-      "Comprehensive bridge design tools",
-      "BIM integration",
-      "Seismic analysis capabilities",
-      "Nonlinear analysis",
-      "Construction stage analysis"
+      "Specialized for bridge and civil-structure work",
+      "Construction-stage analysis with creep and shrinkage",
+      "Moving-load, seismic, pushover and nonlinear time-history analysis",
+      "Excel- and API-driven design automation",
+      "Tendon prestress-loss and hydration-heat analysis",
+      "Dense international design-code coverage"
     ],
     "cons": [
-      "High cost",
-      "Steep learning curve",
-      "Windows/macOS only",
-      "Complex interface",
-      "Requires specialized training",
-      "Enterprise-focused pricing"
+      "No published price list — seats are quoted by MIDAS IT regional offices",
+      "Windows only",
+      "Construction-stage and tendon modelling carry a steep learning curve",
+      "CIVIL NX cannot write models the classic MIDAS Civil can open",
+      "The API and design-automation layer assume Excel or scripting skills",
+      "Module-by-module licensing makes the total seat cost hard to predict"
     ],
     "languages": [
       "English",
@@ -10531,26 +10363,21 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "STL",
-      "IFC"
+      "MCT"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "STL",
-      "IFC"
+      "MCT",
+      "XLSX"
     ],
     "integrations": [
-      "FEA NX",
-      "CIVIL NX",
-      "iGEN",
-      "SOILWORKS",
+      "MIDAS Civil Designer",
+      "MIDAS FEA NX",
+      "MIDAS SoilWorks",
       "AutoCAD",
-      "Revit"
+      "Revit",
+      "Excel"
     ],
     "deployment_options": [
       "Desktop",
@@ -10573,96 +10400,75 @@ export const c5Tools: Tool[] = [
       "has_sdk": true
     },
     "key_capabilities": [
-      "Structural Analysis",
-      "Bridge Design",
-      "Seismic Analysis",
-      "Nonlinear Analysis",
-      "FEM Analysis",
-      "BIM Integration"
+      "Construction Stage Analysis",
+      "Moving Load Analysis",
+      "Tendon Prestress Loss",
+      "Seismic and Pushover Analysis",
+      "Hydration Heat Analysis",
+      "Excel / API Design Automation"
     ],
     "faqs": [
       {
-        "q": "What is midas Civil used for?",
-        "a": "midas Civil is a comprehensive structural analysis and FEM software specialized for civil engineering applications. It's widely used by civil engineers, bridge designers, and structural engineers for complex infrastructure projects including bridges, buildings, tunnels, and offshore structures, providing advanced tools for bridge design, structural analysis, seismic analysis, and soil-structure interaction."
+        "q": "What is MIDAS Civil NX used for?",
+        "a": "MIDAS Civil NX is MIDAS IT’s analysis and design program for bridges and civil structures — reinforced-concrete, prestressed-concrete and box-girder bridges, underground structures and general civil works. It covers linear and nonlinear static analysis, construction-stage analysis, moving-load, seismic and pushover analysis, tendon prestress loss and hydration heat, with automatic meshing and Excel/API design automation."
       },
       {
-        "q": "How much does midas Civil cost?",
-        "a": "midas Civil is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official midas Civil Pricing Page](https://www.midasoft.com/)."
+        "q": "Is MIDAS Civil NX the same as MIDAS Civil?",
+        "a": "No. MIDAS IT describes CIVIL NX as a new generation rather than a refresh: a new graphics engine and rebuilt interface, post-processing the vendor measures as more than 20 times faster, API access that MIDAS Civil does not offer, and the MCBZ file container. An MCB model from MIDAS Civil opens in CIVIL NX; the reverse is not supported."
       },
       {
-        "q": "Is there a free version of midas Civil?",
-        "a": "Yes — midas Civil offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "q": "How much does MIDAS Civil NX cost?",
+        "a": "MIDAS IT sells CIVIL NX through its regional offices and quotes seats instead of publishing a price list; buyers report both annual leases and perpetual licences with maintenance, depending on region. Rates, currency, taxes and eligibility differ by country and are revised by the vendor, so the official product page is the only current source: [Official MIDAS CIVIL NX page](https://www.midasuser.com/en/product/civil)."
       },
       {
-        "q": "What operating systems does midas Civil support?",
-        "a": "midas Civil runs on Windows only. MIDAS IT's official system requirements list Microsoft Windows 10 and 11; Mac users have to run it through Boot Camp or a virtual machine."
+        "q": "Is there a free version of MIDAS Civil NX?",
+        "a": "No free tier is published for CIVIL NX. Evaluation copies are arranged through MIDAS IT and its regional offices, and what is offered and for how long changes by region, so the official product page is the only current source: [Official MIDAS CIVIL NX page](https://www.midasuser.com/en/product/civil)."
       },
       {
-        "q": "Which file formats does midas Civil support?",
-        "a": "midas Civil supports standard CAD and engineering formats including DWG, DXF, STEP, IGES, STL, and IFC for import and export."
+        "q": "What operating systems does MIDAS Civil NX support?",
+        "a": "CIVIL NX is a Windows desktop application — there is no macOS or Linux build, so Mac users run it in a virtual machine or Windows environment. MIDAS IT publishes the current hardware and OS requirements on its support site, and they change between releases, so check there rather than relying on a quoted minimum."
       },
       {
-        "q": "What are the best alternatives to midas Civil?",
-        "a": "The closest alternatives to midas Civil are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer, and Autodesk Robot Structural Analysis. CSI SAP2000 (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Bentley STAAD.Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which file formats does MIDAS Civil NX support?",
+        "a": "Models are stored in the MCBZ container, and MCT command files remain the scriptable text format for building and exchanging them. DWG and DXF are read for geometry reference, and result tables and report figures export to Excel. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT."
+      },
+      {
+        "q": "What are the best alternatives to MIDAS Civil NX?",
+        "a": "The closest alternatives to MIDAS Civil NX are CSI SAP2000, Bentley STAAD.Pro, SCIA Engineer and Autodesk Robot Structural Analysis. SAP2000 competes on general-purpose nonlinear and staged analysis, STAAD.Pro on broad code coverage for plant and infrastructure work, and SCIA Engineer on European code design. Compare their technical specifications, file-format compatibility and official licensing options side by side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "midas Platform",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "engine": "MIDAS CIVIL NX in-house solver",
+      "multicore": "Multi-core parallel sparse solver",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
-        "ISO",
-        "AASHTO",
+        "AASHTO LRFD",
         "Eurocode",
-        "ACI"
+        "CSA S6"
       ]
     },
-    "expert_verdict": "A widely used package for bridge design and structural analysis, with strong detailing and loading utilities.",
-    "trial_url": "https://www.midasuser.com/en/product/civil"
+    "expert_verdict": "The bridge engineer’s default in Korea, Japan and much of Asia, and now common on European and North American infrastructure work. Construction-stage, moving-load and tendon-prestress handling are the reasons to buy it; the NX generation adds the API and Excel-driven design automation the classic build never had. Budgets are the weak point — there is no list price, so plan on a regional quote and a real training ramp before staged analysis pays off.",
   },
   {
     "id": "t127",
-    "name": "midas Gen",
+    "name": "MIDAS Gen",
     "slug": "midas-gen",
     "logo_url": "/logos/midas-gen.png",
-    "short_desc": "General-purpose structural analysis and FEM software for building design, architecture, and general engineering applications.",
-    "description": "midas Gen is a general-purpose structural analysis and finite element method (FEM) software designed for building design, architecture, and general engineering applications. The software provides comprehensive tools for structural analysis, seismic analysis, nonlinear analysis, and ground analysis across various engineering disciplines. midas Gen features a wide range of static and dynamic analysis capabilities, including linear and nonlinear analysis, time-history analysis, buckling analysis, and pushover analysis. The platform integrates with BIM systems through FEA NX, CIVIL NX, and iGEN, enabling seamless collaboration between design and analysis workflows. midas Gen supports both perpetual and subscription licensing models, with options for educational and commercial use. The software is widely used by structural engineers, architects, and general engineers for building projects, industrial structures, and general engineering applications requiring advanced structural analysis capabilities.",
+    "short_desc": "MIDAS IT's general-purpose structural analysis and design program for buildings, seismic assessment and plant structures.",
+    "description": "MIDAS Gen is MIDAS IT's general-purpose structural analysis and design program for buildings and general structures. Beyond conventional linear static and response-spectrum analysis it handles construction-stage analysis with time-dependent concrete properties — modulus of elasticity, creep and shrinkage — plus pushover, nonlinear time-history with hysteresis hinge models such as kinematic hardening, Takeda and slip, boundary nonlinear and fiber analysis, and design checks against a wide set of national codes. MIDAS IT positions it for high-rise and long-span buildings, seismic performance assessment of existing structures, and narrower work such as solar mounting structures, shoring and scaffolding, plant steelwork and curtain-wall systems. Seats are quoted through MIDAS IT and its regional offices rather than published.",
     "pricing_tiers": [
       {
-        "name": "midas Gen Standard",
-        "price": "Official Store",
-        "period": "annual",
+        "name": "MIDAS Gen licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Basic structural analysis",
-          "Static analysis",
-          "Dynamic analysis",
-          "Design review"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "midas Gen Professional",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Full structural analysis",
-          "Seismic analysis",
-          "Nonlinear analysis",
-          "BIM integration",
-          "Pushover analysis"
+          "Building and general-structure analysis and design",
+          "Construction-stage analysis with creep and shrinkage",
+          "Pushover and nonlinear time-history analysis",
+          "Design checks against a broad set of national codes",
+          "Seats and term are quoted by MIDAS IT rather than published"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Educational",
-        "price": "Free/Discounted",
-        "period": "annual",
-        "features": [
-          "Full functionality",
-          "Student license",
-          "Academic support"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -10670,36 +10476,11 @@ export const c5Tools: Tool[] = [
         "category": "Structural Analysis",
         "items": [
           {
-            "name": "Advanced structural analysis",
-            "status": true
-          },
-          {
             "name": "Linear static analysis",
             "status": true
           },
           {
-            "name": "Nonlinear analysis",
-            "status": true
-          },
-          {
-            "name": "Dynamic analysis",
-            "status": true
-          },
-          {
-            "name": "Time-history analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Building Design",
-        "items": [
-          {
-            "name": "Building design",
-            "status": true
-          },
-          {
-            "name": "Seismic analysis",
+            "name": "Response spectrum analysis",
             "status": true
           },
           {
@@ -10707,32 +10488,65 @@ export const c5Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Buckling analysis",
+            "name": "Nonlinear time-history analysis",
             "status": true
           },
           {
-            "name": "Response spectrum analysis",
+            "name": "Fiber model analysis",
+            "status": true
+          },
+          {
+            "name": "Boundary nonlinear analysis",
             "status": true
           }
         ]
       },
       {
-        "category": "General Engineering",
+        "category": "Building Engineering",
         "items": [
           {
-            "name": "Soil-structure interaction",
+            "name": "Construction stage analysis",
             "status": true
           },
           {
-            "name": "Ground analysis",
+            "name": "Creep and shrinkage",
             "status": true
           },
           {
-            "name": "Foundation design",
+            "name": "Seismic performance assessment",
             "status": true
           },
           {
-            "name": "Industrial structure analysis",
+            "name": "Hysteresis hinge models",
+            "status": true
+          },
+          {
+            "name": "National code design checks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Special Structures",
+        "items": [
+          {
+            "name": "High-rise and long-span buildings",
+            "status": true
+          },
+          {
+            "name": "Plant steelwork and pipe racks",
+            "status": true
+          },
+          {
+            "name": "Solar mounting structures",
+            "status": true
+          },
+          {
+            "name": "Shoring and scaffolding",
+            "status": true
+          },
+          {
+            "name": "Curtain-wall systems",
             "status": true
           }
         ]
@@ -10741,19 +10555,19 @@ export const c5Tools: Tool[] = [
         "category": "Integration",
         "items": [
           {
-            "name": "BIM integration",
+            "name": "MIDAS FEA NX integration",
             "status": true
           },
           {
-            "name": "FEA NX integration",
+            "name": "DWG / DXF geometry reference",
             "status": true
           },
           {
-            "name": "CIVIL NX integration",
+            "name": "Excel result export",
             "status": true
           },
           {
-            "name": "CAD import/export",
+            "name": "MGT text model files",
             "status": true
           }
         ]
@@ -10769,6 +10583,7 @@ export const c5Tools: Tool[] = [
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 4000,
+    "quote_only": true,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -10800,21 +10615,20 @@ export const c5Tools: Tool[] = [
     "affiliate_url": null,
     "score": 0,
     "pros": [
-      "General-purpose structural analysis",
-      "Building design capabilities",
-      "Advanced seismic analysis",
-      "BIM integration",
-      "Nonlinear analysis",
-      "Pushover analysis",
-      "Comprehensive analysis tools"
+      "General-purpose structural analysis for buildings and plants",
+      "Construction-stage analysis with creep and shrinkage",
+      "Pushover, nonlinear time-history and fiber analysis",
+      "Broad international design-code coverage",
+      "Applied to seismic assessment, shoring, plant and curtain-wall work",
+      "Strong high-rise and long-span modelling"
     ],
     "cons": [
-      "High cost",
-      "Steep learning curve",
-      "Windows/macOS only",
-      "Complex interface",
-      "Requires specialized training",
-      "Enterprise-focused pricing"
+      "No published price list — seats are quoted by MIDAS IT regional offices",
+      "Windows only",
+      "Interface density is heavy for engineers who only run occasional models",
+      "Overkill for the small frames a 2D beam package handles",
+      "Seismic-assessment modules and code checks need vendor training",
+      "Module-by-module licensing makes the total seat cost hard to predict"
     ],
     "languages": [
       "English",
@@ -10825,26 +10639,19 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "STL",
-      "IFC"
+      "MGT"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "STL",
-      "IFC"
+      "MGT",
+      "XLSX"
     ],
     "integrations": [
-      "FEA NX",
-      "CIVIL NX",
-      "iGEN",
-      "SOILWORKS",
+      "MIDAS FEA NX",
       "AutoCAD",
-      "Revit"
+      "Revit",
+      "Excel"
     ],
     "deployment_options": [
       "Desktop",
@@ -10876,43 +10683,41 @@ export const c5Tools: Tool[] = [
     ],
     "faqs": [
       {
-        "q": "What is midas Gen used for?",
-        "a": "midas Gen is a general-purpose structural analysis and FEM software designed for building design, architecture, and general engineering applications. It's widely used by structural engineers, architects, and general engineers for building projects, industrial structures, and general engineering applications requiring advanced structural analysis capabilities."
+        "q": "What is MIDAS Gen used for?",
+        "a": "MIDAS Gen is MIDAS IT’s general-purpose structural analysis and design program for buildings and general structures: construction-stage analysis with creep and shrinkage, pushover and nonlinear time-history analysis, fiber and boundary-nonlinear analysis, and design checks against a broad set of national codes. It is also used for seismic assessment of existing buildings, solar mounting structures, shoring and scaffolding, plant steelwork and curtain walls."
       },
       {
-        "q": "How much does midas Gen cost?",
-        "a": "midas Gen is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official midas Gen Pricing Page](https://www.midasoft.com/)."
+        "q": "How much does MIDAS Gen cost?",
+        "a": "MIDAS IT sells Gen through its regional offices and quotes seats rather than publishing a price list. Rates, currency, taxes and eligibility differ by country and are revised by the vendor, so the official product page is the only current source: [Official MIDAS Gen page](https://www.midasuser.com/en/product/gen)."
       },
       {
-        "q": "Is there a free version of midas Gen?",
-        "a": "Yes — midas Gen offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "q": "Is there a free version of MIDAS Gen?",
+        "a": "No free tier is published for MIDAS Gen. Evaluation copies are arranged through MIDAS IT and its regional offices, and what is offered and for how long changes by region, so the official product page is the only current source: [Official MIDAS Gen page](https://www.midasuser.com/en/product/gen)."
       },
       {
-        "q": "What operating systems does midas Gen support?",
-        "a": "midas Gen runs on Windows only. MIDAS IT's official system requirements list Microsoft Windows 10 and 11; Mac users have to run it through Boot Camp or a virtual machine."
+        "q": "What operating systems does MIDAS Gen support?",
+        "a": "Gen is a Windows desktop application — there is no macOS or Linux build, so Mac users run it in a virtual machine or Windows environment. MIDAS IT publishes the current hardware and OS requirements on its support site, and they change between releases, so check there rather than relying on a quoted minimum."
       },
       {
-        "q": "Which file formats does midas Gen support?",
-        "a": "midas Gen supports standard CAD and engineering formats including DWG, DXF, STEP, IGES, STL, and IFC for import and export."
+        "q": "Which file formats does MIDAS Gen support?",
+        "a": "Models are stored in MIDAS Gen’s own binary format with MGT text files as the scriptable equivalent, DWG and DXF are read for geometry reference, and result tables export to Excel. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT."
       },
       {
-        "q": "What are the best alternatives to midas Gen?",
-        "a": "The closest alternatives to midas Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro, and SCIA Engineer. CSI ETABS (offered on a Perpetual license) competes directly on core Building Design workflows, while CSI SAP2000 (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What are the best alternatives to MIDAS Gen?",
+        "a": "The closest alternatives to MIDAS Gen are CSI ETABS, CSI SAP2000, Bentley STAAD.Pro and SCIA Engineer. ETABS is the benchmark for tall-building modelling and design, SAP2000 covers general nonlinear and staged work, STAAD.Pro has the broadest code coverage for plant and steel structures, and SCIA Engineer is strong on European code design. Compare their technical specifications, file-format compatibility and official licensing options side by side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "midas Platform",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "engine": "MIDAS Gen in-house solver",
+      "multicore": "Multi-core parallel sparse solver",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
-        "ISO",
-        "AASHTO",
+        "AISC",
         "Eurocode",
-        "ACI"
+        "KBC"
       ]
     },
-    "expert_verdict": "A versatile building structure analysis and design system, optimized for high-rise seismic performance validation.",
-    "trial_url": "https://www.midasuser.com/en/product/gen"
+    "expert_verdict": "A strong second tool for engineers whose practice is buildings rather than bridges: construction-stage analysis with creep and shrinkage, pushover and fiber hinges, and code checks across several national standards in one model. It is priced and sold like enterprise software, though, so it earns its place on high-rise, long-span and seismic-assessment work — not on routine low-rise frames.",
   },
   {
     "id": "t147",

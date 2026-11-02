@@ -2550,8 +2550,8 @@ export const c1Tools: Tool[] = [
     "name": "CorelCAD",
     "slug": "corelcad",
     "logo_url": "/logos/corelcad.png",
-    "short_desc": "Affordable DWG-compatible CAD software offering 2D drafting and 3D design tools for professionals on Windows and macOS.",
-    "description": "CorelCAD is a professional CAD software built on the ARES/IntelliCAD engine, delivering powerful 2D drafting and 3D design tools at a fraction of AutoCAD's price. It offers native DWG file compatibility, ensuring seamless collaboration with AutoCAD users. CorelCAD features a familiar ribbon-style interface, comprehensive drawing and editing tools, 3D solid modeling, and support for custom SHX fonts. Available on both Windows and macOS, it is particularly popular among freelancers and small businesses seeking a perpetual-license alternative to subscription-based CAD solutions. The software includes productivity features like Quick Input, annotation scaling, and layer management to streamline design workflows.",
+    "short_desc": "Discontinued DWG-native 2D drafting and 3D design software — Corel ended sales on 9 January 2024 and support on 31 December 2025; perpetual installs still run and Graebert offers a migration path to ARES Commander.",
+    "description": "CorelCAD was Corel’s DWG-native 2D drafting and 3D design application, built on Graebert’s ARES engine. It paired a ribbon-style interface and full DWG compatibility with an unusually deep CorelDRAW integration — .cdr and .des import and export inside a CAD workspace — which is what kept it in sign shops and small manufacturing firms that already ran CorelDRAW Technical Suite. Corel put the product into end-of-sale on 9 January 2024 and CorelCAD 2023 was the final release; support for it ends on 31 December 2025. Existing perpetual licences keep working and are not revoked, but there are no further updates, and Corel and Graebert both point former buyers at ARES Commander, which is the same engine without the CorelDRAW bridge.",
     "pricing_tiers": [
       {
         "name": "Discontinued (End of Sale)",
@@ -2685,11 +2685,11 @@ export const c1Tools: Tool[] = [
     "affiliate_url": null,
     "score": 3.6,
     "pros": [
-      "Affordable perpetual license — no subscription required",
+      "Perpetual licence with no subscription — existing installs keep working",
       "Full DWG compatibility with AutoCAD users",
-      "Native macOS support (rare among CAD tools)",
-      "Familiar ribbon-style interface reduces learning curve",
-      "Lightweight and fast performance on modest hardware"
+      "Native macOS support, rare among CAD tools",
+      "Ribbon-style interface kept the AutoCAD learning curve short",
+      "Lightweight and fast on modest hardware"
     ],
     "cons": [
       "Limited plugin and extension ecosystem",

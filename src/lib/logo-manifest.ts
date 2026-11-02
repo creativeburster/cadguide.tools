@@ -241,7 +241,6 @@ export const LOGO_MANIFEST: Record<string, string> = {
   "vectorworks-landmark": "vectorworks-landmark.ico",
   "vertex-bd": "vertex-bd.png",
   "visi": "visi.png",
-  "visi-modelling": "visi-modelling.png",
   "woodwop": "woodwop.png",
   "worknc": "worknc.png",
   "wysiwyg": "wysiwyg.png",

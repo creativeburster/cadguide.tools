@@ -17,7 +17,7 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 ## Core Sections
 
 ### Tool Directory
-- [Tool Directory](https://cadguide.tools/tools) — Full catalog of 184 CAD tools, filterable by category, platform, and pricing.
+- [Tool Directory](https://cadguide.tools/tools) — Full catalog of 186 CAD tools, filterable by category, platform, and pricing.
 - [Individual Tool Pages](https://cadguide.tools/tools) — Comprehensive teardowns with geometry kernel specs, hardware requirements, pricing tiers, and expert scores (e.g. [/tools/autocad](https://cadguide.tools/tools/autocad), [/tools/solidworks](https://cadguide.tools/tools/solidworks), [/tools/freecad](https://cadguide.tools/tools/freecad), [/tools/rhino-3d](https://cadguide.tools/tools/rhino-3d)).
 - [All Tools A-Z Index](https://cadguide.tools/all-tools) — Complete alphabetical index of every software tool in the catalog.
 
@@ -33,8 +33,8 @@ CADGuide.tools is an independent comparison and benchmark platform for professio
 - [SLDPRT to STEP](https://cadguide.tools/convert/sldprt-to-step) — Reverse engineering mesh-to-B-Rep solid reconstruction workflows and tolerances.
 - [IGES to STEP](https://cadguide.tools/convert/iges-to-step) — Legacy NURBS surface stitching and ISO 10303-21 solid manifold migration.
 
-### Interactive Engineering Toolbox (651 Tools)
-- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 651 online calculators, format visualizers, G-code/DXF generators, and troubleshooting wizards.
+### Interactive Engineering Toolbox (664 Tools)
+- [Toolbox Directory](https://cadguide.tools/toolbox) — Directory of 664 online calculators, format visualizers, G-code/DXF generators, and troubleshooting wizards.
 - [Pipe Thermal Expansion Calculator](https://cadguide.tools/toolbox/pipe-thermal-expansion-calculator) — ASME B31.3 anchor force, thermal stress, and elongation calculator.
 - [Section Modulus Calculator](https://cadguide.tools/toolbox/section-modulus-calculator) — Moments of inertia (Ix, Iy) and elastic section moduli (Wx, Wy) for structural shapes, solid round, and hollow tubes.
 - [Column Buckling Calculator](https://cadguide.tools/toolbox/column-buckling-calculator) — Critical buckling load (Pcr) evaluator comparing Euler elastic buckling vs Johnson inelastic parabola.
