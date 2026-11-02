@@ -12481,4 +12481,163 @@ export const c5Tools: Tool[] = [
       }
     ]
   }
+,
+  {
+    "id": "t260",
+    "name": "Engineering on Web",
+    "slug": "engineering-on-web",
+    "logo_url": "/logos/engineering-on-web.svg",
+    "short_desc": "Free in-browser CAD, FEA simulation, and industrial SPC statistics powered by WebAssembly and WebGPU.",
+    "description": "Engineering on Web is an integrated browser-based mechanical engineering suite combining parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and industrial statistical process control (SPC). Running entirely client-side via WebAssembly solvers and WebGPU acceleration, it enables engineers to sketch with geometric constraints, model parts and assemblies, simulate structural, thermal, fluid, and electromagnetic fields, and evaluate manufacturing capability (control charts, Cpk, DOE) without software downloads or account creation. The platform features an AI modeling copilot and exports STEP, IGES, STL, and DXF files.",
+    "category_id": "c5",
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "country": "Brazil",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "deployment_options": [
+      "Cloud",
+      "Web"
+    ],
+    "license_types": [
+      "Free",
+      "Commercial",
+      "Educational"
+    ],
+    "languages": [
+      "English",
+      "Portuguese",
+      "Spanish",
+      "French",
+      "German",
+      "Japanese",
+      "Russian",
+      "Chinese",
+      "Hindi",
+      "Arabic"
+    ],
+    "industries": [
+      "Mechanical Engineering",
+      "CAE Simulation",
+      "Manufacturing",
+      "Quality Control",
+      "Product Design",
+      "Aerospace & Automotive"
+    ],
+    "core_features": [
+      "In-browser parametric 3D CAD with geometrically constrained 2D sketches, parts, and assembly trees",
+      "Multi-physics FEA simulation for structural stress, thermal transfer, fluid dynamics, and electromagnetic problems",
+      "High-performance client execution utilizing WebAssembly numerical solvers and WebGPU compute acceleration",
+      "Industrial Statistical Process Control (SPC) including control charts, process capability (Cp/Cpk), and DOE",
+      "Integrated AI design assistant capable of generating 3D parametric geometry from text or voice instructions",
+      "Zero software installation, zero account login required, and full CAD export to STEP, IGES, STL, and DXF"
+    ],
+    "user_scales": [
+      "Individuals",
+      "Engineering Students",
+      "Mechanical Engineers",
+      "Machine Shops",
+      "SMB Manufacturers"
+    ],
+    "official_url": "https://engineeringonweb.com/?utm_source=cadguide",
+    "affiliate_url": null,
+    "score": 4.8,
+    "pros": [
+      "100% free with no account signup, cloud credits, or software installation needed",
+      "Unified engineering stack combining parametric CAD, multi-physics FEA, and SPC quality statistics",
+      "Cutting-edge client execution with WebAssembly matrix solvers and WebGPU parallel compute shaders",
+      "Full interoperability with standard industrial CAD exchange formats (STEP, IGES, DXF, STL)"
+    ],
+    "cons": [
+      "Solving extremely large non-linear plasticity meshes with millions of elements depends on local browser RAM",
+      "Specialized automotive crash dynamics and complex explicit multi-body solvers are less suited than Abaqus or LS-DYNA"
+    ],
+    "screenshots": [
+      {
+        "url": "/screenshots/engineering-on-web/eow-product-1280x720.png",
+        "alt": "Engineering on Web In-Browser Parametric CAD & Multi-physics FEA",
+        "caption": "Parametric 3D mechanical modeling and WebAssembly/WebGPU FEA simulation"
+      },
+      {
+        "url": "/screenshots/engineering-on-web/eow-og-1200x630.png",
+        "alt": "Engineering on Web CAE Suite Overview",
+        "caption": "Integrated CAD, FEA, Analysis and PCB engineering in any browser"
+      }
+    ],
+    "tech_specs": {
+      "engine": "WebAssembly (Wasm) FEA solver & WebGPU compute shaders",
+      "multicore": "Client-side Web Workers multi-threaded finite element matrix solving",
+      "gpu_optimization": "Hardware-accelerated WebGPU / WebGL 3D field visualization and mesh contouring",
+      "standards": [
+        "ISO 10303 (STEP AP203/AP214)",
+        "ANSI IGES 5.3",
+        "DXF",
+        "STL Binary & ASCII",
+        "SVG"
+      ]
+    },
+    "expert_verdict": "Engineering on Web represents a groundbreaking evolution in browser-based engineering software. By pairing geometric constraint sketching and parametric assembly modeling with WebAssembly/WebGPU-accelerated FEA and SPC analytics, it gives engineers and students desktop-grade simulation power on any connected device without friction, licenses, or server queues.",
+    "faqs": [
+      {
+        "q": "What is Engineering on Web?",
+        "a": "Engineering on Web is a free, web-based engineering suite that integrates parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and statistical process control (SPC) directly in modern web browsers."
+      },
+      {
+        "q": "How does Engineering on Web run FEA simulations in a browser?",
+        "a": "It utilizes compiled WebAssembly (Wasm) numerical solvers for fast equation solving and WebGPU compute shaders for parallel mesh evaluation and stress contour rendering directly on your local graphics processor."
+      },
+      {
+        "q": "What simulation domains are supported?",
+        "a": "Engineering on Web supports structural analysis (Von Mises stress, displacement, factor of safety), thermal conduction and convection, fluid dynamics approximations, and electromagnetic field simulations."
+      },
+      {
+        "q": "Is Engineering on Web free and private?",
+        "a": "Yes. The platform is completely free to use with no account or subscription required. Calculations and CAD geometry are processed on your local device with zero cloud data retention."
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Free Engineering Suite",
+        "price": "Free",
+        "period": "lifetime",
+        "features": [
+          "In-browser parametric 3D CAD & assembly modeling",
+          "Multi-physics FEA (Structural, Thermal, Fluid, EM)",
+          "Industrial SPC quality control charts & DOE tools",
+          "STEP, IGES, STL, and DXF file export",
+          "AI text and voice parametric design copilot",
+          "100% free with no login or software download"
+        ],
+        "is_popular": true
+      }
+    ],
+    "alternatives": [
+      "simscale",
+      "freecad",
+      "onshape",
+      "ansys-discovery",
+      "fusion-360"
+    ],
+    "last_updated": "2026-11-02",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
+      "DXF",
+      "STL"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "IGES",
+      "STL",
+      "DXF",
+      "SVG",
+      "PDF"
+    ]
+  }
 ];

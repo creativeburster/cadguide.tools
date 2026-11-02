@@ -4967,4 +4967,168 @@ export const c3Tools: Tool[] = [
       }
     ]
   }
+,
+  {
+    "id": "t261",
+    "name": "3D House Planner",
+    "slug": "3d-house-planner",
+    "logo_url": "/logos/3d-house-planner.svg",
+    "short_desc": "Free browser-based 2D/3D home and floor planner with live 3D walkthroughs, openBIM IFC4 export, and zero watermarks.",
+    "description": "3D House Planner is an intuitive, free browser-based architectural design and floor planning application that runs entirely on client-side Web technologies without software installation or account signups. It provides dual-mode 2D drafting and synchronized real-time 3D visualization, enabling homeowners, architects, and interior designers to draw wall layouts, insert parametric doors and windows, furnish rooms, and generate realistic walkthroughs. Built with interoperability at its core, 3D House Planner supports openBIM IFC4 export alongside DXF, SVG, OBJ, GLB, and STL formats with zero watermarks and local IndexedDB project persistence.",
+    "category_id": "c3",
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "country": "Brazil",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "deployment_options": [
+      "Cloud",
+      "Web"
+    ],
+    "license_types": [
+      "Free",
+      "Commercial"
+    ],
+    "languages": [
+      "English",
+      "Portuguese",
+      "Spanish",
+      "French",
+      "German",
+      "Italian",
+      "Russian",
+      "Chinese",
+      "Japanese",
+      "Korean"
+    ],
+    "industries": [
+      "Architecture",
+      "Interior Design",
+      "BIM & AEC",
+      "Home Renovation",
+      "Real Estate",
+      "3D Printing"
+    ],
+    "core_features": [
+      "Synchronized 2D floor drafting and real-time interactive 3D architectural visualization in any browser",
+      "Native openBIM IFC4 export for seamless collaboration with Revit, ArchiCAD, and Solibri",
+      "Comprehensive multi-format export including DXF, SVG, OBJ, GLB/glTF, STL, and PNG with no watermarks",
+      "AI-assisted floor plan generation and automatic room, wall, door, and roof layout from prompt descriptions",
+      "Rich parametric furniture, appliance, and material texture library with custom PBR surface editing",
+      "Zero software installation, no account registration required, and 100% private local browser storage (IndexedDB)"
+    ],
+    "user_scales": [
+      "Individuals",
+      "Homeowners",
+      "Interior Designers",
+      "Architects",
+      "SMB Builders"
+    ],
+    "official_url": "https://www.3dhouseplanner.com/?utm_source=cadguide",
+    "affiliate_url": null,
+    "score": 4.8,
+    "pros": [
+      "100% free with no login required, no subscription limits, and zero watermark injections",
+      "Native openBIM IFC4 export preserves building element semantics for professional AEC handoff",
+      "AI design assistant turns text descriptions and sketches into editable walls, roofs, and furniture",
+      "Full client-side IndexedDB project persistence ensures complete architectural design privacy"
+    ],
+    "cons": [
+      "Lacks advanced structural reinforcement detailing and MEP hydraulic engineering calculations",
+      "Requires modern WebGL/WebGPU-capable hardware for high-fidelity real-time shadow and reflection modes"
+    ],
+    "screenshots": [
+      {
+        "url": "/screenshots/3d-house-planner/3dhp-product-1280x720.png",
+        "alt": "3D House Planner 2D Floor Plan and Real-time 3D Viewport",
+        "caption": "Synchronized 2D drafting with interactive 3D architectural visualization"
+      },
+      {
+        "url": "/screenshots/3d-house-planner/3dhp-ai-1280x720.png",
+        "alt": "3D House Planner AI Assistant and BIM IFC4 Workflow",
+        "caption": "AI-powered layout generation and openBIM IFC export"
+      }
+    ],
+    "tech_specs": {
+      "engine": "Three.js WebGL / WebGPU real-time rendering engine with IndexedDB persistence",
+      "multicore": "Web Worker background geometry and IFC parsing",
+      "gpu_optimization": "Hardware-accelerated WebGL with dynamic ambient occlusion, shadows, and reflection modes",
+      "standards": [
+        "IFC4 (buildingSMART openBIM)",
+        "DXF",
+        "glTF / GLB 2.0",
+        "Wavefront OBJ",
+        "STL",
+        "SVG"
+      ]
+    },
+    "expert_verdict": "3D House Planner provides a remarkably frictionless bridge between consumer-friendly interior styling and professional openBIM architectural documentation. By combining browser-based 2D/3D synchronization, zero-watermark IFC4 export, and an AI prompt layout assistant with absolute local privacy, it stands out as an indispensable, zero-cost web tool for architects, designers, and homebuilders alike.",
+    "faqs": [
+      {
+        "q": "What is 3D House Planner?",
+        "a": "3D House Planner is a free browser-based architectural design and floor planning application that allows users to draw in 2D, visualize synchronized 3D spaces, furnish rooms, and export openBIM files without installing desktop software."
+      },
+      {
+        "q": "Does 3D House Planner support openBIM and IFC export?",
+        "a": "Yes. 3D House Planner natively exports standard buildingSMART openBIM IFC4 files, enabling architects and engineers to transfer walls, floors, doors, and building geometry directly into software like Autodesk Revit, Graphisoft ArchiCAD, and Solibri."
+      },
+      {
+        "q": "Is 3D House Planner completely free without watermarks?",
+        "a": "Yes. 3D House Planner is 100% free for personal and commercial use. It does not require account creation and exports high-resolution images, DXF drawings, 3D meshes, and IFC files with no watermarks."
+      },
+      {
+        "q": "Where are my floor plans and 3D house projects saved?",
+        "a": "Projects are stored directly in your local browser using IndexedDB with automatic crash recovery. No design files or intellectual property are transmitted or uploaded to remote cloud servers."
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "Free Web Application",
+        "price": "Free",
+        "period": "lifetime",
+        "features": [
+          "Full 2D floor drafting & real-time 3D walkthroughs",
+          "Native openBIM IFC4, DXF, GLB, and STL export",
+          "AI architectural assistant for instant room layout",
+          "Comprehensive furniture and PBR materials catalog",
+          "Zero watermarks & no account registration needed",
+          "100% private local browser storage (IndexedDB)"
+        ],
+        "is_popular": true
+      }
+    ],
+    "alternatives": [
+      "planner-5d",
+      "floorplanner",
+      "sweet-home-3d",
+      "sketchup",
+      "homestyler"
+    ],
+    "last_updated": "2026-11-02",
+    "file_formats_in": [
+      "IFC",
+      "DXF",
+      "GLB",
+      "GLTF",
+      "OBJ",
+      "STL",
+      "PNG",
+      "JPG"
+    ],
+    "file_formats_out": [
+      "IFC",
+      "DXF",
+      "SVG",
+      "OBJ",
+      "GLB",
+      "GLTF",
+      "STL",
+      "PNG",
+      "CSV"
+    ]
+  }
 ];

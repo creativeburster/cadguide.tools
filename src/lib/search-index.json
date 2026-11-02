@@ -3637,6 +3637,50 @@
     "country": "United Kingdom"
   },
   {
+    "id": "t260",
+    "name": "Engineering on Web",
+    "slug": "engineering-on-web",
+    "short_desc": "Free in-browser CAD, FEA simulation, and industrial SPC statistics powered by WebAssembly and WebGPU.",
+    "score": 4.8,
+    "logo_url": "/logos/engineering-on-web.svg",
+    "official_url": "https://engineeringonweb.com/?utm_source=cadguide",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "CAE Simulation",
+      "Manufacturing",
+      "Quality Control",
+      "Product Design",
+      "Aerospace & Automotive"
+    ],
+    "features": [],
+    "country": "Brazil"
+  },
+  {
+    "id": "t261",
+    "name": "3D House Planner",
+    "slug": "3d-house-planner",
+    "short_desc": "Free browser-based 2D/3D home and floor planner with live 3D walkthroughs, openBIM IFC4 export, and zero watermarks.",
+    "score": 4.8,
+    "logo_url": "/logos/3d-house-planner.svg",
+    "official_url": "https://www.3dhouseplanner.com/?utm_source=cadguide",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Interior Design",
+      "BIM & AEC",
+      "Home Renovation",
+      "Real Estate",
+      "3D Printing"
+    ],
+    "features": [],
+    "country": "Brazil"
+  },
+  {
     "id": "ext-infraworks",
     "name": "Infraworks",
     "slug": "infraworks",

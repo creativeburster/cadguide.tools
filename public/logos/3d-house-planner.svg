@@ -1,0 +1,201 @@
+<svg width="100%" style="display: block; margin: 0 auto; max-width:350px;" version="1.1" viewBox="0 0 142.18 74.862" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1{fill:#004573;}.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8{fill:none;stroke-miterlimit:10;}.cls-2,.cls-3{stroke:#999;}.cls-2,.cls-5{stroke-width:10px;}.cls-3{stroke-width:3px;}.cls-4,.cls-5,.cls-6,.cls-7,.cls-8{stroke:#e6e6e6;}.cls-4{stroke-width:11.54px;}.cls-6{stroke-width:14.9px;}.cls-7{stroke-width:8.59px;}.cls-8{stroke-width:8.63px;}</style>
+  <clipPath id="c">
+   <rect x="102" y="68" width="587" height="573"/>
+  </clipPath>
+  <clipPath id="b">
+   <rect x="102" y="68" width="587" height="573"/>
+  </clipPath>
+  <clipPath id="s">
+   <rect x="102" y="68" width="587" height="573"/>
+  </clipPath>
+  <filter id="r" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="q" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="p" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="o" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="n" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="m" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="l" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="k" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="j" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="i" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="h" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="g" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="f" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="e" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="d" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+  <filter id="a" style="color-interpolation-filters:sRGB">
+   <feMorphology in="SourceAlpha" radius="4.3" result="result91"/>
+   <feComposite in="SourceGraphic" in2="result91" operator="out"/>
+   <feGaussianBlur result="result0" stdDeviation="1.2"/>
+   <feDiffuseLighting>
+    <feDistantLight azimuth="225" elevation="66"/>
+   </feDiffuseLighting>
+   <feBlend in2="SourceGraphic" mode="multiply"/>
+   <feComposite in2="SourceAlpha" operator="in"/>
+  </filter>
+ </defs>
+ <g transform="translate(151.12 -149.21)">
+  <g transform="translate(-48.381 15.115)">
+   <g transform="translate(5.8543,-408.62)">
+    <g transform="matrix(.35278 0 0 -.35278 -455.59 918.14)">
+     <g transform="matrix(1.013 0 0 -1.013 775.31 1282)" clip-path="url(#s)">
+      <path d="m435.68 270.8 84.893 85.199c6.678-0.572 13.158-1.343 19.426-2.302l-104.32-104.7-33.681 33.802 10.862 10.901z" style="fill-rule:evenodd;fill:#ff2994;filter:url(#a)"/>
+      <path d="m264.69 291.65-4.014-10.405-41.674 41.787c7.577-1.491 15.891-2.634 24.952-3.265l82.79-83.016 116.5 117.17c8.061 0.926 15.985 1.616 23.756 2.08l-140.26-141-50.236 50.372v-16.718l-12.347-6.169-11.289 11.319 11.818-3.183v26.599z" style="fill-rule:evenodd;fill:#78fe21;filter:url(#d)"/>
+      <path d="m532.92 278-28.922 28.678 10.887 10.795 18.035-17.883 50.839 50.41c5.382-1.969 10.47-4.131 15.239-6.477z" style="fill-rule:evenodd;fill:#29b8ff;filter:url(#e)"/>
+      <path d="m324 289h-11c0-6.074 4.926-11 11-11z" style="fill-rule:evenodd;fill:#78fe21;filter:url(#f)"/>
+      <path d="m341 289h-11v-11c6.076 0 11 4.926 11 11z" style="fill-rule:evenodd;fill:#78fe21;filter:url(#g)"/>
+      <path d="m324 306h-11v-11h11z" style="fill-rule:evenodd;fill:#78fe21;filter:url(#h)"/>
+      <path d="m341 306h-11v-11h11z" style="fill-rule:evenodd;fill:#78fe21;filter:url(#i)"/>
+      <path d="m434 296h-6c0-3.867 2.686-7 6-7z" style="fill-rule:evenodd;fill:#ff2994;filter:url(#j)"/>
+      <path d="m445 296h-7v-7c3.864 0 7 3.133 7 7" style="fill-rule:evenodd;fill:#ff2994;filter:url(#k)"/>
+      <path d="m434 306h-6v-7h6z" style="fill-rule:evenodd;fill:#ff2994;filter:url(#l)"/>
+      <path d="m445 306h-7v-7h7z" style="fill-rule:evenodd;fill:#ff2994;filter:url(#m)"/>
+      <path d="m531 318h-6c0-3.314 2.686-6 6-6z" style="fill-rule:evenodd;fill:#29b8ff;filter:url(#n)"/>
+      <path d="m541 318h-6v-6c3.314 0 6 2.686 6 6" style="fill-rule:evenodd;fill:#29b8ff;filter:url(#o)"/>
+      <path d="m531 327h-6v-6h6z" style="fill-rule:evenodd;fill:#29b8ff;filter:url(#p)"/>
+      <path d="m541 327h-6v-6h6z" style="fill-rule:evenodd;fill:#29b8ff;filter:url(#q)"/>
+      <text x="204.44794" y="410.97226" style="fill:#00ffc4;filter:url(#r);font-family:Algerian;font-size:55.281px;letter-spacing:0px;line-height:1.25;stroke-width:.74037;word-spacing:0px" xml:space="preserve"><tspan x="204.44794" y="410.97226" style="fill:#00ffc4;font-family:'Times New Roman';font-size:50px;font-weight:bold;">3D House Planner</tspan></text>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
+

@@ -5688,6 +5688,37 @@
           "verdict": "The best full-featured DWG drafting replacement for manufacturing workshops and AEC drafting teams."
         },
         {
+          "name": "3D House Planner (Free In-Browser openBIM)",
+          "badge": "100% Free & In-Browser",
+          "rating": 9.7,
+          "metrics": [
+            {
+              "name": "BIM Interop",
+              "score": 4.9
+            },
+            {
+              "name": "Ease of Use",
+              "score": 5
+            },
+            {
+              "name": "Zero Watermark",
+              "score": 5
+            }
+          ],
+          "pros": [
+            "Draw 2D floor plans and export synchronized openBIM IFC4 and DXF files directly in any web browser",
+            "Completely free for personal and commercial projects with zero registration, accounts, or watermarks",
+            "Export clean 2D vector plans and 3D architectural geometry without installing desktop suites"
+          ],
+          "cons": [
+            "Focused on residential and light commercial architecture rather than MEP civil engineering networks"
+          ],
+          "officialUrl": "https://www.3dhouseplanner.com/?utm_source=cadguide",
+          "affiliateUrl": null,
+          "pricing": "100% Free (No Account Needed)",
+          "verdict": "The premier browser-based floor planner with native openBIM IFC4 and DXF vector drawing exports."
+        },
+        {
           "name": "Autodesk Viewer & Cloud Platform",
           "badge": "Official Cloud Portal",
           "rating": 9.8,
