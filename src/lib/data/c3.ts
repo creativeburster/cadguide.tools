@@ -168,7 +168,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Does Revit offer a free trial?",
-        "a": "Yes — Revit offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Revit is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Revit trial page](https://www.autodesk.com/products/revit/free-trial)."
       },
       {
         "q": "What operating systems does Revit support?",
@@ -438,7 +438,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Does ArchiCAD offer a free trial?",
-        "a": "Yes — ArchiCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "ArchiCAD is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official ArchiCAD trial page](https://www.graphisoft.com/trial/archicad/)."
       },
       {
         "q": "What operating systems does ArchiCAD support?",
@@ -703,7 +703,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tekla Structures?",
-        "a": "Yes — Tekla Structures offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Tekla Structures is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Tekla Structures trial page](https://www.tekla.com/products/tekla-structures/subscription)."
       },
       {
         "q": "What operating systems does Tekla Structures support?",
@@ -951,7 +951,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vectorworks?",
-        "a": "Yes — Vectorworks offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Vectorworks is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Vectorworks trial page](https://customers.vectorworks.net/trial)."
       },
       {
         "q": "What operating systems does Vectorworks support?",
@@ -1110,7 +1110,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Chief Architect?",
-        "a": "Yes — Chief Architect offers an official evaluation or trial program so you can validate workflow and file compatibility before purchase. Trial length and eligibility are set by the vendor and changed periodically, so follow the official trial link on this page rather than relying on a quoted duration."
+        "a": "Yes — Chief Architect offers an official evaluation or trial program so you can validate workflow and file compatibility before purchase. Trial length and eligibility are set by the vendor and changed periodically, so the official page is the only current source: [Official Chief Architect page](https://www.chiefarchitect.com/products/home-design/premier/)."
       },
       {
         "q": "What is the difference between Chief Architect and Home Designer?",
@@ -1219,7 +1219,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Civil 3D?",
-        "a": "Yes — Civil 3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Civil 3D is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Civil 3D trial page](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
       },
       {
         "q": "What operating systems does Civil 3D support?",

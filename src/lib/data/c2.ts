@@ -1699,11 +1699,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Onshape cost?",
-        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Because official seat rates, multi-currency pricing, and taxes vary by country, click the Official Live Pricing button on this page to verify real-time regional pricing directly on the PTC Onshape portal. Current plans and regional pricing: [Official Onshape Pricing Page](https://www.onshape.com/en/pricing)."
+        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Official seat rates, multi-currency pricing and taxes vary by country, so the PTC pricing page is the only current source for regional pricing: [Official Onshape Pricing Page](https://www.onshape.com/en/pricing)."
       },
       {
         "q": "Does Onshape offer a free trial?",
-        "a": "Yes — Onshape provides a Free plan for non-commercial public projects as well as an official Onshape Professional Trial (via the Onshape Discovery Program for qualified evaluators). Because trial duration and eligibility terms are managed directly by PTC, click the Official Free Trial button on this page to verify current terms and sign up on the vendor portal."
+        "a": "Onshape is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Onshape trial page](https://www.onshape.com/en/sign-up)."
       },
       {
         "q": "What operating systems does Onshape support?",
@@ -5393,7 +5393,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
-        "a": "Yes — KOMPAS-3D offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "KOMPAS-3D is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official KOMPAS-3D trial page](https://ascon.net/kompas-3d/)."
       },
       {
         "q": "What operating systems does KOMPAS-3D support?",
@@ -5895,7 +5895,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
-        "a": "Yes — 3DEXPERIENCE offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "3DEXPERIENCE is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official 3DEXPERIENCE trial page](https://www.3ds.com/3dexperience)."
       },
       {
         "q": "What operating systems does 3DEXPERIENCE support?",

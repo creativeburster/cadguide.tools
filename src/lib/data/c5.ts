@@ -148,7 +148,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Does Siemens NX offer a free trial?",
-        "a": "Yes — Siemens NX offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Siemens NX is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Siemens NX trial page](https://trials.sw.siemens.com/nx/)."
       },
       {
         "q": "What operating systems does Siemens NX support?",
@@ -383,7 +383,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Mastercam?",
-        "a": "Yes — Mastercam offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "Mastercam is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Mastercam trial page](https://my.mastercam.com)."
       },
       {
         "q": "What operating systems does Mastercam support?",
@@ -1012,25 +1012,27 @@ export const c5Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Mold & Die Design",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Cimatron CAD",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Core & Cavity separation",
-          "ECO management",
-          "Runner & Cooling lines"
+          "Mold design and manufacturing, including parting, core and cavity separation and drawing generation",
+          "Die design and manufacturing for sheet-metal tooling",
+          "Electrode design and manufacturing with burn-area calculation",
+          "Includes Cimatron Viewer and the AI-assisted Cimatron CAD-AI toolset"
         ],
         "is_popular": true
       },
       {
-        "name": "NC Programming Bundle",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Cimatron NC Programming",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "2.5 to 5-axis milling",
-          "Micro-milling & EDM electrode automation"
-        ],
-        "is_popular": false
+          "2.5-axis milling and drilling through to complex 5-axis machining",
+          "4-axis machining and micro-milling",
+          "Automated electrode machining and EDM setup",
+          "Runs on the same model as the design side, so no data translation between them"
+        ]
       }
     ],
     "alternatives": [
@@ -4983,6 +4985,7 @@ export const c5Tools: Tool[] = [
           "Automatic and manual 2D nesting for sheet metal laser, plasma, oxy-fuel, and waterjet",
           "CNC turret punch programming with tool management, micro-joints, and common-line cutting",
           "Remnant tracking, cycle-time calculation, and true-cost quoting",
+          "3D tube and profile nesting is the separate Lantek Flex3d product, and offline bending is Lantek Bend — neither is part of Expert",
           "Configured per machine technology (Cut / Punch / Quattro) and quoted by Lantek"
         ],
         "is_popular": true
@@ -10930,11 +10933,15 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "SCIA Engineer",
-        "price": "Official Store",
-        "period": "Official Store",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "Sold as a subscription through the official SCIA webshop",
-          "Editions, regional prices and VAT differ by country — the vendor page is the only current source"
+          "CAD-like modelling, analysis and code-compliant design for concrete, steel and timber in one model",
+          "Eurocodes with 20+ national annexes, plus U.S. codes and other international standards such as NBR and SIA",
+          "Bi-directional BIM links over IFC and SAF, plus third-party plug-ins",
+          "Integrated Allplan Max assistance that interprets results in real time",
+          "Adaptive mesh generation, optimisation and template-based reporting",
+          "Licensed per seat as a subscription; regional prices and VAT differ, so SCIA quotes rather than publishing a list"
         ],
         "is_popular": true
       }
@@ -11412,10 +11419,14 @@ export const c5Tools: Tool[] = [
       {
         "name": "ESPRIT",
         "price": "Contact Sales",
-        "period": "Official Store",
+        "period": "Custom Quote",
         "features": [
-          "Quoted through the official Hexagon sales-enquiry form",
-          "No public price list or fixed tier pricing is published by the vendor"
+          "2- to 5-axis milling and 2- to 22-axis turning from one interface",
+          "2- to 5-axis wire EDM, plus Swiss-type, mill-turn and B-axis multi-tasking machines",
+          "High-speed simultaneous 3-, 4- and 5-axis toolpath",
+          "On-machine inspection (probing) and additive direct energy deposition",
+          "Digital machine packages with controller emulators and factory-developed post-processors",
+          "Modules and seats are quoted through Hexagon rather than published"
         ],
         "is_popular": true
       }

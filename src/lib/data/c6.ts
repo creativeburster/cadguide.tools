@@ -1360,7 +1360,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of OrCAD?",
-        "a": "Yes — OrCAD offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "OrCAD is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official OrCAD trial page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html)."
       },
       {
         "q": "What operating systems does OrCAD support?",
@@ -1659,7 +1659,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of PADS Professional?",
-        "a": "Yes — PADS Professional offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "PADS Professional is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official PADS Professional trial page](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
       },
       {
         "q": "What operating systems does PADS Professional support?",
@@ -2449,7 +2449,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DipTrace?",
-        "a": "Yes. DipTrace ships a 300-pin Freeware edition and a full-featured 30-day trial, both downloadable from the vendor; the paid editions are perpetual licences with updates included throughout the 5.x line. Check the official download page for the current limits."
+        "a": "Yes. DipTrace publishes a free Freeware edition alongside a trial of the full product, and both are downloadable from the vendor; the paid editions are perpetual licences. The free edition is capped on design size, and both that cap and the trial terms are set by the vendor and change over time, so the official buy page is the only current source: [Official DipTrace page](https://diptrace.com/buy/)."
       },
       {
         "q": "What operating systems does DipTrace support?",
