@@ -1710,11 +1710,18 @@ export const c5Tools: Tool[] = [
     "description": "TopSolid is a fully integrated, PDM-centric CAD/CAM/ERP software suite engineered for mechanical machining, sheet-metal fabrication, tooling, and custom millwork/woodworking. Built on the Siemens Parasolid kernel with a native TopSolid’PDM database vault, it links parametric 3D assembly design directly to 5-axis Mill-Turn G-code simulation, sheet nesting, and shop-floor BOM routing.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
+        "name": "TopSolid licence",
         "price": "Official Store",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "TopSolid'Design — mechanical design and digital engineering CAD",
+          "TopSolid'Cam — CAM programming for milling, turning and multi-axis machining",
+          "TopSolid'Wood — woodworking from furniture design through to machining",
+          "TopSolid'Steel — steel structure design and fabrication",
+          "TopSolid'Mold — mould and tooling design",
+          "TopSolid'Cut — industrial sheet metal cutting"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
@@ -5070,8 +5077,8 @@ export const c5Tools: Tool[] = [
     "name": "SigmaNEST",
     "slug": "sigmanest",
     "logo_url": "/logos/sigmanest.png",
-    "short_desc": "US-based CAD/CAM nesting software for laser, plasma, punch, router, waterjet, and tube cutting.",
-    "description": "SigmaNEST is a US-based CAD/CAM nesting software solution that runs all major brands of laser, plasma, punch, router, waterjet, tube, and press brake machines. It provides higher yield, high quality, faster NC programming, and automation of importing, quoting, work orders, and inventory management.",
+    "short_desc": "US-based CAD/CAM nesting software for laser, plasma, oxyfuel, punch, router and waterjet profile cutting.",
+    "description": "SigmaNEST is the flagship CAD/CAM nesting product of SigmaTEK Systems, part of Sandvik Group — the Mason, Ohio company that renamed itself from SigmaNEST to SigmaTEK while keeping the product name. It imports parts from major CAD systems, sorts them by material and machine, nests with the time-based HD SuperNest engine or the rectangular and Trueshape engines, optimises material yield and machine motion, and posts NC programs to laser, plasma, oxyfuel, waterjet, punch, router and knife machines. Sheet-metal unfolding comes from the SigmaUNFOLD module and quoting from SigmaQUOTE, while tube, beam, saw and press-brake programming are separate SigmaTEK products rather than parts of SigmaNEST.",
     "pricing_tiers": [
       {
         "name": "SigmaNEST licence",
@@ -5088,69 +5095,162 @@ export const c5Tools: Tool[] = [
     ],
     "detailed_features": [
       {
-        "category": "Nesting",
+        "category": "Nesting Engines",
         "items": [
           {
-            "name": "Automatic nesting",
+            "name": "Basic Nesting (HD Rectangular engine)",
             "status": true
           },
           {
-            "name": "Material optimization",
+            "name": "Trueshape Nesting",
             "status": true
           },
           {
-            "name": "Yield improvement",
+            "name": "Advanced Automatic Nesting",
+            "status": true
+          },
+          {
+            "name": "HD SuperNest",
+            "status": true
+          },
+          {
+            "name": "Shear Nesting",
+            "status": true
+          },
+          {
+            "name": "Continuous Nesting",
+            "status": true
+          },
+          {
+            "name": "AutoDynamic Punch Nesting",
             "status": true
           }
         ]
       },
       {
-        "category": "Cutting",
+        "category": "Toolpath & NC",
         "items": [
           {
-            "name": "Laser cutting",
+            "name": "Profile AutoNC",
             "status": true
           },
           {
-            "name": "Plasma cutting",
+            "name": "Advanced NC Profiling",
             "status": true
           },
           {
-            "name": "Waterjet cutting",
+            "name": "Common Line Cutting",
             "status": true
           }
         ]
       },
       {
-        "category": "Punching",
+        "category": "Machine Modules",
         "items": [
           {
-            "name": "CNC punching",
+            "name": "Knife Cutting Module",
             "status": true
           },
           {
-            "name": "Tool optimization",
+            "name": "Router Module",
             "status": true
           },
           {
-            "name": "Automatic tool selection",
+            "name": "Drilling Module",
+            "status": true
+          },
+          {
+            "name": "Waterjet Module",
+            "status": true
+          },
+          {
+            "name": "Bevel Module",
+            "status": true
+          },
+          {
+            "name": "Profile/Punch Combination Machine",
+            "status": true
+          },
+          {
+            "name": "Right Angle Shear NC",
+            "status": true
+          },
+          {
+            "name": "Profile Destruct",
+            "status": true
+          },
+          {
+            "name": "Punch Tooling",
+            "status": true
+          },
+          {
+            "name": "BHQ (Bolt Hole Quality)",
             "status": true
           }
         ]
       },
       {
-        "category": "Automation",
+        "category": "CAD Import",
         "items": [
           {
-            "name": "Import automation",
+            "name": "2D & 3D CAD Import (DXF / 3D DWG / IGES / DSTV / STEP)",
             "status": true
           },
           {
-            "name": "Quoting automation",
+            "name": "PDF and Image Import",
             "status": true
           },
           {
-            "name": "Inventory management",
+            "name": "SolidWorks CAD Import Direct",
+            "status": true
+          },
+          {
+            "name": "Autodesk Inventor Direct",
+            "status": true
+          },
+          {
+            "name": "Siemens NX / Solid Edge Direct",
+            "status": true
+          },
+          {
+            "name": "CAD Import Plus",
+            "status": true
+          },
+          {
+            "name": "SigmaUNFOLD",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Productivity & Integration",
+        "items": [
+          {
+            "name": "SigmaQUOTE",
+            "status": true
+          },
+          {
+            "name": "Work Order Tracking Module",
+            "status": true
+          },
+          {
+            "name": "Inventory Control Module",
+            "status": true
+          },
+          {
+            "name": "SigmaLINK Data Bridge",
+            "status": true
+          },
+          {
+            "name": "Advanced Batch Module",
+            "status": true
+          },
+          {
+            "name": "Software Development Kit (SDK)",
+            "status": true
+          },
+          {
+            "name": "SigmaTEK Copilot (AI programming assistant)",
             "status": true
           }
         ]
@@ -5185,7 +5285,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.sigmanest.com/",
+    "official_url": "https://www.sigmateksystems.com/en/sigmanest",
     "pricing_url": "https://www.sigmateksystems.com/en/contact-us",
     "affiliate_url": null,
     "score": 3.8,
@@ -5205,7 +5305,7 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is SigmaNEST used for?",
-        "a": "SigmaNEST is US-based CAD/CAM nesting software for laser, plasma, punch, router, waterjet, and tube cutting."
+        "a": "SigmaNEST is SigmaTEK's CAD/CAM nesting software for 2D and bevel profile cutting, routing and punching. It imports parts from major CAD systems, nests them by material and machine, optimises material and machine motion, and posts NC programs to laser, plasma, oxyfuel, waterjet, punch, router and knife machines. Tube, beam, saw and press-brake programming are separate SigmaTEK products, not part of SigmaNEST."
       },
       {
         "q": "How much does SigmaNEST cost?",
@@ -5213,7 +5313,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SigmaNEST?",
-        "a": "SigmaNEST is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SigmaNEST page](https://www.sigmanest.com/)."
+        "a": "SigmaNEST is commercial software and no free tier is listed. Any trial, demo or cut-down edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SigmaNEST page](https://www.sigmateksystems.com/en/sigmanest)."
       },
       {
         "q": "What operating systems does SigmaNEST support?",
@@ -5221,7 +5321,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SigmaNEST support?",
-        "a": "SigmaNEST natively reads DXF, DWG, DSTV and STEP part geometry, and also lists IGES, 3D DWG, CDL and G-code/ESSI inputs plus readers for SOLIDWORKS, Inventor and Creo files. Parasolid and ACIS/SAT readers come through the CAD Import Plus option rather than in every base configuration. On the output side the vendor documents NC/G-code, nest results, reports and DXF/DWG geometry — there is no vendor-published STEP or IGES model export. The company behind the product renamed to SigmaTEK and is part of the Sandvik group, but the product is still called SigmaNEST; the sigmanest.com address now points at sigmateksystems.com, which handles quotes."
+        "a": "SigmaNEST imports DXF, 3D DWG, IGES, DSTV and STEP parts through its standard 2D & 3D CAD import, and can convert PDF and raster images into parts or DXF/DWG geometry. Direct native readers are offered for SolidWorks, Inventor, Solid Edge, NX, Creo and Rhino, while the CAD Import Plus option adds SolidWorks, Inventor, Solid Edge, NX, Creo, Rhino, CATIA and Parasolid readers without needing the native CAD licence. Output is NC/G-code posts for the cutting machine, DXF flat patterns from the SigmaUNFOLD module and material utilisation reports; the vendor does not document a STEP or IGES model export. Tube, beam, saw and press-brake work is handled by separate SigmaTEK products rather than by SigmaNEST."
       },
       {
         "q": "What are the best alternatives to SigmaNEST?",
@@ -5229,7 +5329,7 @@ export const c5Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "SigmaNEST Engine",
+      "engine": "HD SuperNest (time-based nesting engine)",
       "multicore": "Not published by the vendor",
       "gpu_optimization": "Not published by the vendor",
       "standards": [
@@ -5244,20 +5344,23 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "DWG",
       "DXF",
-      "STEP",
       "IGES",
       "DSTV",
+      "STEP",
+      "PDF",
+      "Raster Image",
       "SolidWorks",
       "Inventor",
+      "Solid Edge",
+      "NX",
       "Creo",
-      "Parasolid",
-      "SAT"
+      "Rhino",
+      "CATIA",
+      "Parasolid"
     ],
     "file_formats_out": [
       "NC (CNC G-Code)",
       "DXF",
-      "DWG",
-      "CSV",
       "Reports"
     ]
   },

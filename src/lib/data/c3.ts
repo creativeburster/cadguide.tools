@@ -4188,11 +4188,29 @@ export const c3Tools: Tool[] = [
     "description": "CYPECAD is CYPE's structural analysis and design software for reinforced concrete and steel buildings. It combines 3D building modeling, FEM analysis, and code-based member design, and links to CYPE's MEP and construction management suite.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
+        "name": "CYPECAD ADVANCED",
         "price": "Official Store",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "Reinforced concrete design: columns, beams, flat slabs, waffle slabs, hollow core and joist floor slabs, staircases and ramps",
+          "Foundations: footings, pile caps, piles, mat foundations and foundation beams",
+          "Steel columns and beams, plus composite steel-deck slabs",
+          "Punching shear and fire resistance checks, designed to the applicable national codes",
+          "Structure generation wizard importing IFC, DXF or DWG files"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "CYPECAD EXPERT",
+        "price": "Official Store",
+        "period": "Perpetual",
+        "features": [
+          "Reinforced concrete, steel, timber and composite structures in one tool",
+          "Punching shear checks, soil-structure interaction and seismic design of reinforced concrete nodes",
+          "Fire resistance checks for steel elements",
+          "Ramps, staircases and every structural wall type",
+          "CAD/BIM import wizard"
+        ]
       }
     ],
     "detailed_features": [
@@ -4368,11 +4386,17 @@ export const c3Tools: Tool[] = [
     "description": "Vertex BD is a Finnish BIM solution for light-gauge steel and wood frame construction. It automates framing and panel design, generates fabrication drawings, and outputs directly to roll-forming machines and saws.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
+        "name": "Vertex BD licence",
         "price": "Official Store",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "Automated BIM for wood/timber and cold-formed steel framing",
+          "Architectural drawing sets, panel fabrication drawings and structural layouts generated from the BIM model",
+          "Truss design and engineering, cut lists and material reports",
+          "Manufacturing data output for framing machines",
+          "Vertex Sync cloud project storage and team collaboration"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
