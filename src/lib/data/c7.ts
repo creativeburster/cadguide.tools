@@ -787,7 +787,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of 3ds Max?",
-        "a": "Yes — 3ds Max offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "3ds Max is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official 3ds Max trial page](https://www.autodesk.com/products/3ds-max/free-trial)."
       },
       {
         "q": "What operating systems does 3ds Max support?",
@@ -4449,7 +4449,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
-        "a": "Yes — AVEVA E3D Design offers an official evaluation or trial program so engineering teams can validate workflow and file-format compatibility before purchase. Because trial duration and eligibility rules are updated periodically by the vendor, click the Official Free Trial button on this page to access the latest trial directly on the vendor portal."
+        "a": "AVEVA E3D Design is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official AVEVA E3D Design trial page](https://www.aveva.com/en/products/e3d-design/)."
       },
       {
         "q": "What operating systems does AVEVA E3D Design support?",
