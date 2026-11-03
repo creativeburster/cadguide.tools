@@ -5308,7 +5308,7 @@ export const c5Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Commercial Seat",
-        "price": "Quote",
+        "price": "Custom Quote",
         "period": "annual",
         "features": [
           "Full Fluent solver",

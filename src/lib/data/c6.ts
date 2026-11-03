@@ -265,7 +265,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Discontinued",
-        "price": "Discontinued",
+        "price": "Not for Sale",
         "period": "",
         "features": [
           "Standalone EAGLE stopped being sold on January 7, 2020",
@@ -886,7 +886,7 @@ export const c6Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Perpetual",
-        "price": "Contact",
+        "price": "Contact Sales",
         "period": "Perpetual",
         "features": [],
         "is_popular": false

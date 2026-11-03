@@ -189,7 +189,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX 11",
       "standards": [
         "RVT",
@@ -298,7 +298,7 @@ export const c3Tools: Tool[] = [
     "slug": "archicad",
     "logo_url": "/logos/archicad.png",
     "short_desc": "The BIM software of choice for design-oriented architects.",
-    "description": "Archicad by Graphisoft (Nemetschek Group) is a pioneering architectural BIM platform celebrated for its design-first workflow, native macOS/Windows Apple Silicon performance, and BIMcloud real-time teamwork. It empowers architects to model complex parametric curtain walls, shells, and stair assemblies while automatically generating construction documentation, photorealistic visualizations, and certified IFC4 openBIM deliverables.",
+    "description": "Archicad by Graphisoft (Nemetschek Group) is a pioneering architectural BIM platform celebrated for its design-first workflow, native macOS/Windows Apple Silicon performance, and BIMcloud real-time teamwork. It empowers architects to model complex parametric curtain walls, shells, and stair assemblies while automatically generating construction documentation, photorealistic visualizations, and certified IFC4 openBIM deliverables. Graphisoft has finished its move to subscription-only licensing: perpetual Archicad licences were sold to new customers only until 31 December 2024 and to existing customers until 31 December 2025, and from 2026 Archicad is available exclusively as a subscription — Archicad Studio, Archicad Collaborate, with Archicad Max announced for high-complexity project delivery.",
     "pricing_tiers": [
       {
         "name": "Archicad Studio",
@@ -327,9 +327,9 @@ export const c3Tools: Tool[] = [
         "is_popular": false
       },
       {
-        "name": "Archicad Max",
-        "price": "Contact Sales",
-        "period": "/mo",
+        "name": "Archicad Max (announced)",
+        "price": "Not for Sale",
+        "period": "coming soon",
         "features": [
           "Positioned for high-complexity projects",
           "Aimed at data-driven project delivery",
@@ -455,7 +455,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Graphisoft Proprietary",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
@@ -705,7 +705,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Tekla Structures support?",
-        "a": "Tekla Structures works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Tekla Structures reads IFC, DWG/DXF, DGN, STEP, IGES, SketchUp (.skp) and CIS/2 / SDNF steel-detailing files, and writes IFC, DWG/DXF, DGN, STEP, 3D PDF and NC (DSTV) / BVBS fabrication data. It has no native Revit (.rvt) importer — Revit models come across through IFC or Trimble's own links — so check the format before promising a direct RVT round-trip."
       },
       {
         "q": "What are the best alternatives to Tekla Structures?",
@@ -714,8 +714,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary Tekla modelling engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "STEP",
@@ -760,7 +760,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Fundamentals",
         "price": "Official Store",
-        "period": "",
+        "period": "perpetual / subscription",
         "features": [
           "2D drafting and 3D modelling without discipline-specific tools",
           "Parasolid-based solid modelling",
@@ -772,7 +772,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Architect / Landmark / Spotlight",
         "price": "Official Store",
-        "period": "",
+        "period": "perpetual / subscription",
         "features": [
           "Pick one discipline: Architect for buildings and interiors",
           "Landmark for landscape and site design",
@@ -784,7 +784,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Design Suite",
         "price": "Official Store",
-        "period": "",
+        "period": "perpetual / subscription",
         "features": [
           "Architect, Landmark and Spotlight in a single licence",
           "For practices that work across building, landscape and stage",
@@ -966,7 +966,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Premier (perpetual)",
         "price": "Official Store",
-        "period": "",
+        "period": "perpetual",
         "features": [
           "Perpetual licence for the version you buy",
           "Full residential BIM: walls, roofs, framing, cabinets",
@@ -978,7 +978,7 @@ export const c3Tools: Tool[] = [
       {
         "name": "Premier (subscription)",
         "price": "Official Store",
-        "period": "",
+        "period": "annual / monthly",
         "features": [
           "Same Premier toolset on a subscription term",
           "Lower upfront cost than a perpetual seat",
@@ -1107,7 +1107,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary Chief Architect engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX / Metal",
       "standards": [
         "DWG",
@@ -1212,7 +1212,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX",
       "standards": [
         "DWG",
@@ -1433,7 +1433,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
@@ -1607,8 +1607,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DWG",
@@ -1789,8 +1789,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MicroStation (Bentley)",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DGN",
@@ -2072,8 +2072,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "cadwork Engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DWG",
@@ -2268,8 +2268,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MagiCAD Engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DWG",
@@ -2461,8 +2461,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "DDS-CAD Engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DWG",
@@ -2654,8 +2654,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "dRofus Engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "IFC",
         "DWG",
@@ -2752,8 +2752,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD ObjectARX",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "DWG",
         "PCF",
@@ -2926,8 +2926,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SP3D (database-centric)",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "ISO 15926",
         "PCF",
@@ -3119,8 +3119,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD ObjectARX",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "DWG",
         "PCF",
@@ -3311,8 +3311,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk Forge / APS",
-      "multicore": "Cloud",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Browser-rendered; no local GPU acceleration to configure",
       "standards": [
         "IFC",
         "RVT",
@@ -3539,8 +3539,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Trimble Connect cloud + native viewers",
-      "multicore": "Cloud",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Browser-rendered; no local GPU acceleration to configure",
       "standards": [
         "IFC",
         "DWG",
@@ -3753,7 +3753,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "BIMcollab cloud + ZOOM viewer",
-      "multicore": "Cloud",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Yes (ZOOM)",
       "standards": [
         "BCF 2.1 / 3.0",
@@ -3974,8 +3974,8 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "DynamoCore",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Inherits the host Revit graphics pipeline",
       "standards": [
         "RVT",
         "DWG",
@@ -4273,7 +4273,7 @@ export const c3Tools: Tool[] = [
     "tech_specs": {
       "engine": "CYPECAD Engine",
       "multicore": "N/A",
-      "gpu_optimization": "N/A",
+      "gpu_optimization": "Not published by the vendor",
       "standards": []
     },
     "expert_verdict": "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
@@ -4448,7 +4448,7 @@ export const c3Tools: Tool[] = [
     "tech_specs": {
       "engine": "Vertex BD Engine",
       "multicore": "N/A",
-      "gpu_optimization": "N/A",
+      "gpu_optimization": "Not published by the vendor",
       "standards": []
     },
     "expert_verdict": "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
@@ -4662,7 +4662,7 @@ export const c3Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX/OpenGL",
       "standards": [
         "DWG",

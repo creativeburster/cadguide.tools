@@ -196,16 +196,22 @@ export const c2Tools: Tool[] = [
       "SLDDRW",
       "STEP",
       "IGES",
-      "Parasolid",
-      "ACIS",
+      "Parasolid (X_T / X_B)",
+      "SAT (ACIS)",
+      "IFC",
+      "IFCZIP",
+      "JT",
       "STL",
       "DWG",
       "DXF",
-      "CATIA",
-      "Pro/E",
-      "Inventor",
-      "NX",
-      "JT"
+      "CATPart",
+      "CATProduct",
+      "IPT",
+      "IAM",
+      "PRT",
+      "ASM",
+      "PAR",
+      "PSM"
     ],
     "file_formats_out": [
       "SLDPRT",
@@ -377,9 +383,9 @@ export const c2Tools: Tool[] = [
       "Individuals",
       "Small Business"
     ],
-    "official_url": "https://www.sketchup.com",
-    "pricing_url": "https://www.sketchup.com/plans-and-pricing",
-    "trial_url": "https://www.sketchup.com/try-sketchup",
+    "official_url": "https://sketchup.trimble.com/en",
+    "pricing_url": "https://sketchup.trimble.com/en/plans-and-pricing",
+    "trial_url": "https://sketchup.trimble.com/en/try-sketchup",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -399,7 +405,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SketchUp cost?",
-        "a": "SketchUp offers a free web tier alongside paid commercial subscriptions (SketchUp Go, SketchUp Pro, and SketchUp Studio) as well as Education and Higher-Ed plans. Because commercial licensing rates, regional currencies, taxes, and reseller quotes vary by country, please visit the [Official SketchUp Plans & Pricing Page](https://www.sketchup.com/plans-and-pricing) for live regional pricing."
+        "a": "SketchUp offers a free web tier alongside paid commercial subscriptions (SketchUp Go, SketchUp Pro, and SketchUp Studio) as well as Education and Higher-Ed plans. Because commercial licensing rates, regional currencies, taxes, and reseller quotes vary by country, please visit the [Official SketchUp Plans & Pricing Page](https://sketchup.trimble.com/en/plans-and-pricing) for live regional pricing."
       },
       {
         "q": "Does SketchUp offer a free trial?",
@@ -691,7 +697,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX / Metal",
       "standards": [
         "F3D",
@@ -1178,7 +1184,7 @@ export const c2Tools: Tool[] = [
     "user_scales": [
       "Enterprise"
     ],
-    "official_url": "https://www.3ds.com/products-services/catia/",
+    "official_url": "https://www.3ds.com/products/catia",
     "pricing_url": "https://www.3ds.com/products/catia",
     "trial_url": "https://www.3ds.com/products/catia",
     "affiliate_url": null,
@@ -1221,8 +1227,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CGM (Convergence Geometric Modeler)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "CATPart",
         "STEP",
@@ -1815,7 +1821,7 @@ export const c2Tools: Tool[] = [
     "slug": "solid-edge",
     "logo_url": "/logos/solid-edge.ico",
     "short_desc": "Professional 3D CAD with industry-leading Synchronous Technology.",
-    "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration.",
+    "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration. Siemens now sells it under the Designcenter umbrella as Designcenter Solid Edge, alongside a SaaS edition (Designcenter X Solid Edge) that runs on cloud-hosted named-user licences; perpetual licences are still available through Siemens solution partners even though Siemens' own online store sells subscription terms only.",
     "pricing_tiers": [
       {
         "name": "Design & Drafting (Entry)",
@@ -1999,7 +2005,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "OpenGL",
       "standards": [
         "PAR",
@@ -2134,7 +2140,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Direct3D",
       "standards": [
         "IPT",
@@ -2381,8 +2387,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Granite",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "PRT",
         "STEP",
@@ -2782,7 +2788,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Metal / DirectX",
       "standards": [
         "STEP",
@@ -2919,7 +2925,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SolveSpace support?",
-        "a": "SolveSpace works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "SolveSpace reads its native .slvs files, DXF drawings (as an import group) and IDF (.emn) PCB outlines, and exports STEP (always in millimetres), STL, OBJ, DXF, SVG, EPS, PDF, HPGL, PNG and simple G-code for 2D parts. It has no IGES or Parasolid support, and no native STEP import — a STEP file has to be converted before it can come back in."
       },
       {
         "q": "What are the best alternatives to SolveSpace?",
@@ -2928,7 +2934,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SolveSpace Custom Solver",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "None",
       "standards": [
         "STEP",
@@ -2937,10 +2943,9 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A masterclass in minimalist parametric design.",
-    "file_formats_in": [
+        "file_formats_in": [
       "DXF",
-      "DWG",
-      "SVG"
+      "IDF (EMN)"
     ],
     "file_formats_out": [
       "STEP",
@@ -2949,7 +2954,10 @@ export const c2Tools: Tool[] = [
       "DXF",
       "SVG",
       "PDF",
-      "EPS"
+      "EPS",
+      "HPGL",
+      "PNG",
+      "GCODE"
     ]
   },
   {
@@ -3087,7 +3095,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ACIS",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX",
       "standards": [
         "STEP",
@@ -3189,7 +3197,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Maya support?",
-        "a": "Maya works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Maya's native scene files are .ma (ASCII) and .mb (binary). It imports and exports FBX, OBJ, Alembic (.abc), USD (.usd/.usda/.usdc), COLLADA (.dae) and glTF, and can bring in STL meshes. It does not read STEP, IGES or Parasolid — CAD data has to be converted to a mesh format first, which is why Maya sits at the downstream end of a CAD pipeline rather than inside it."
       },
       {
         "q": "What are the best alternatives to Maya?",
@@ -3198,7 +3206,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Maya DG/DAG Evaluation Graph + Bifrost / Viewport 2.0",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "CUDA",
       "standards": [
         "FBX",
@@ -3288,7 +3296,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "file_formats_in": [
+        "file_formats_in": [
       "MB",
       "MA",
       "FBX",
@@ -3297,7 +3305,7 @@ export const c2Tools: Tool[] = [
       "ABC",
       "USD",
       "DAE",
-      "3DS"
+      "STL"
     ],
     "file_formats_out": [
       "MB",
@@ -3393,7 +3401,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "BMesh (Polygonal Mesh Kernel) + Cycles / EEVEE",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "OptiX",
       "standards": [
         "BLEND",
@@ -3612,7 +3620,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Geomagic Design X support?",
-        "a": "Geomagic Design X works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Geomagic Design X is a scan-to-CAD tool, so the input side is point-cloud and mesh data — PLY, OBJ, STL, XYZ, PTX, E57 and LAS — alongside STEP, IGES and Parasolid solids for hybrid workflows. Output is feature-based CAD: STEP, IGES, SAT, Parasolid (.x_t) and direct live transfers into SOLIDWORKS, Inventor, Creo, NX and CATIA."
       },
       {
         "q": "What are the best alternatives to Geomagic Design X?",
@@ -3621,8 +3629,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3811,7 +3819,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Alias Core",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "STEP",
@@ -3979,7 +3987,7 @@ export const c2Tools: Tool[] = [
       "Small Business",
       "Mid-Market"
     ],
-    "official_url": "https://www.zwsoft.com/zw3d",
+    "official_url": "https://www.zwsoft.com/product/zw3d",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -4020,8 +4028,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Overdrive Kernel (Proprietary)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4188,7 +4196,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "OpenGL",
       "standards": [
         "STEP",
@@ -4391,7 +4399,7 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "MoI / SMLib",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Windows: Direct3D 11 / macOS: Metal & OpenGL Viewport",
       "standards": [
         "STEP",
@@ -4659,7 +4667,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "Autodesk Tinkercad Engine",
       "multicore": "N/A",
-      "gpu_optimization": "Basic",
+      "gpu_optimization": "WebGL in the browser — no local GPU driver or workstation card required",
       "standards": [
         "STL",
         "OBJ",
@@ -4764,7 +4772,7 @@ export const c2Tools: Tool[] = [
       "Individuals",
       "Small Business"
     ],
-    "official_url": "https://glovius.com",
+    "official_url": "https://www.glovius.com/",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -4801,7 +4809,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "HCL Glovius Engine",
       "multicore": "N/A",
-      "gpu_optimization": "Basic",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "CATIA",
         "NX",
@@ -5036,7 +5044,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "CAD Exchanger SDK",
       "multicore": "Multi-threaded conversion in the SDK; single-threaded workbench UI",
-      "gpu_optimization": "Basic",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -5256,7 +5264,7 @@ export const c2Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://ascon.net/",
+    "official_url": "https://ascon.net/kompas-3d/",
     "pricing_url": "https://ascon.net/",
     "affiliate_url": null,
     "score": 0,
@@ -5360,8 +5368,8 @@ export const c2Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "C3D (ASCON)",
-      "multicore": "Single-Core Parametric Modeling / Multi-Core Rendering & CAM",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "DIN",
         "ISO",
@@ -5641,7 +5649,7 @@ export const c2Tools: Tool[] = [
     "tech_specs": {
       "engine": "SpaceClaim-style direct modelling on the Spatial ACIS kernel",
       "multicore": "Single-threaded direct modelling; multi-core rendering",
-      "gpu_optimization": "Basic",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES"
@@ -5971,7 +5979,7 @@ export const c2Tools: Tool[] = [
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 0,
     "quote_only": true,
-    "pricing_url": "https://www.mechdesigned.com/en/software/",
+    "pricing_url": "https://www.mechdesigned.com/en/software/mechcad/pricing/",
     "country": "Thailand",
     "platforms": [
       "Windows"
@@ -6012,7 +6020,7 @@ export const c2Tools: Tool[] = [
       "Mid Market",
       "Enterprise"
     ],
-    "official_url": "https://www.mechdesigned.com/en/software/mechcad/?utm_source=cadguide",
+    "official_url": "https://www.mechdesigned.com/en/software/mechcad/",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -6062,7 +6070,7 @@ export const c2Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard Edition",
-        "price": "Official Vendor Pricing",
+        "price": "Official Store",
         "period": "Perpetual or Annual",
         "features": [
           "Parametric 3D part & assembly modeling",
@@ -6074,7 +6082,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Expert Edition",
-        "price": "Official Vendor Pricing",
+        "price": "Official Store",
         "period": "Perpetual or Annual",
         "features": [
           "All Standard features included",
@@ -6089,7 +6097,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "name": "Premium Edition",
-        "price": "Official Vendor Pricing",
+        "price": "Official Store",
         "period": "Perpetual or Annual",
         "features": [
           "All Expert features included",
@@ -6198,7 +6206,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "trial_url": "https://www.mechdesigned.com/en/software/"
+    "trial_url": "https://www.mechdesigned.com/en/software/mechcad/"
   },
   {
     "id": "t259",
@@ -6251,7 +6259,7 @@ export const c2Tools: Tool[] = [
       "Mid Market",
       "Enterprise"
     ],
-    "official_url": "https://3d-tools.fabrapid.com/?utm_source=cadguide",
+    "official_url": "https://3d-tools.fabrapid.com/",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
