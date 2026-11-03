@@ -1706,7 +1706,7 @@ export const c5Tools: Tool[] = [
     "name": "TopSolid",
     "slug": "topsolid",
     "logo_url": "/logos/topsolid.ico",
-    "short_desc": "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal ",
+    "short_desc": "Integrated CAD/CAM/ERP suite for mechanical machining, sheet metal and tooling, built on the Parasolid kernel.",
     "description": "TopSolid is a fully integrated, PDM-centric CAD/CAM/ERP software suite engineered for mechanical machining, sheet-metal fabrication, tooling, and custom millwork/woodworking. Built on the Siemens Parasolid kernel with a native TopSolid’PDM database vault, it links parametric 3D assembly design directly to 5-axis Mill-Turn G-code simulation, sheet nesting, and shop-floor BOM routing.",
     "pricing_tiers": [
       {
@@ -1832,7 +1832,7 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is TopSolid used for?",
-        "a": "TopSolid, a global leader in CAD/CAM/ERP software publishing, primarily targets the mechanical engineering, sheet metal  TopSolid is a CAE / CAM solution."
+        "a": "TopSolid is an integrated CAD/CAM/ERP suite for mechanical engineering: parametric 3D assembly design feeds directly into 5-axis mill-turn toolpath simulation, sheet-metal nesting, tooling and shop-floor BOM handling, all stored in a PDM-centric database. It fits job shops and manufacturers that want design and production data in one system rather than a CAD-to-CAM hand-off."
       },
       {
         "q": "How much does TopSolid cost?",

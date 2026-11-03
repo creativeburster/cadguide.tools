@@ -12,40 +12,38 @@ export const c6Tools: Tool[] = [
     "description": "Altium Designer is the electronics industry’s flagship unified PCB design and ECAD engineering environment. Combining hierarchical schematic capture, constraint-driven high-speed DDR/PCIe interactive routing, rigid-flex 3D stackup modeling, Situs topological autorouting, SPICE/signal-integrity analysis, and native MCAD CoDesigner links (SolidWorks, Creo, Inventor) via Altium 365, it bridges circuit concept and turnkey fabrication.",
     "pricing_tiers": [
       {
-        "name": "Standard",
+        "name": "Altium Develop",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "Unified PCB Design",
-          "Native 3D PCB",
-          "Standard Component Mgmt",
-          "Altium 365 Core"
+          "Unified schematic and PCB design",
+          "Native 3D PCB and rigid-flex",
+          "Managed component libraries",
+          "Altium 365 workspace"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional",
+        "name": "Altium Agile Teams",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "Advanced Simulation",
-          "Rigid-flex Design",
-          "Multi-board Assembly",
-          "Team Configuration"
-        ],
-        "is_popular": false
+          "Everything in Altium Develop",
+          "Multi-board assembly",
+          "Team configuration and release management",
+          "Shared requirements and review"
+        ]
       },
       {
-        "name": "Enterprise",
-        "price": "Custom",
+        "name": "Altium Agile Enterprise",
+        "price": "Contact Sales",
         "period": "quote",
         "features": [
-          "Lifecycle Management",
-          "Centralized Libraries",
-          "Global Team Workflow",
-          "Custom APIs"
-        ],
-        "is_popular": false
+          "Lifecycle and PLM integration",
+          "Centralised library governance",
+          "Custom APIs and workflow automation",
+          "Enterprise support"
+        ]
       }
     ],
     "detailed_features": [
@@ -100,7 +98,7 @@ export const c6Tools: Tool[] = [
     ],
     "country": "USA",
     "category_id": "c6",
-    "pricing_type": "Subscription / Perpetual",
+    "pricing_type": "Subscription",
     "starting_price": 3500,
     "price_period": "year",
     "platforms": [
@@ -123,7 +121,7 @@ export const c6Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://www.altium.com",
-    "pricing_url": "https://www.altium.com/pricing",
+    "pricing_url": "https://www.altium.com/develop/pricing",
     "trial_url": "https://www.altium.com/free-trials",
     "affiliate_url": null,
     "score": 4.9,
@@ -156,7 +154,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Altium Designer support?",
-        "a": "Altium Designer imports and exports SchDoc, PcbDoc, PrjPcb, Gerber, ODB++, IPC-2581, DXF, and 3D STEP models."
+        "a": "Altium Designer keeps its own work in SchDoc (schematic), PcbDoc (board) and PrjPcb (project) files. Foreign designs come in through the Import Wizard, which covers Protel, P-CAD, OrCAD, PADS, EAGLE, xDxDesigner, CircuitStudio and Allegro; STEP, IDF, DXF/DWG, Gerber, ODB++ and IPC-2581 come in as data. Outbound, it writes Gerber X2, NC drill, ODB++, IPC-2581 and IPC-D-356 for fabrication, STEP and IDF for mechanical hand-off, and PDF, 3D PDF, BOM and pick-and-place reports for documentation. Altium does not publish one consolidated matrix, so check the documentation for the release you run."
       },
       {
         "q": "Does Altium Designer have an API for automation and customization?",
@@ -164,14 +162,15 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Proprietary EDA Engine (Delphi-based)",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "High (DirectX)",
+      "engine": "Proprietary EDA engine (Delphi-based)",
+      "multicore": "Threaded DRC, shape-based autorouting and SPICE simulation",
+      "gpu_optimization": "DirectX-accelerated 3D PCB and layer stack views",
       "standards": [
-        "Gerber",
+        "Gerber X2",
         "ODB++",
-        "STEP",
-        "IPC"
+        "IPC-2581",
+        "IPC-D-356",
+        "STEP"
       ]
     },
     "expert_verdict": "Professional PCB design software combining unified schematic capture, 3D routing, and layout.",
@@ -192,7 +191,6 @@ export const c6Tools: Tool[] = [
       "ODB++",
       "IPC-2581",
       "STEP",
-      "IGES",
       "DXF",
       "DWG",
       "IDF"
@@ -200,16 +198,19 @@ export const c6Tools: Tool[] = [
     "file_formats_out": [
       "SchDoc",
       "PcbDoc",
-      "Gerber",
+      "PrjPcb",
+      "Gerber X2",
+      "NC Drill",
       "ODB++",
       "IPC-2581",
+      "IPC-D-356",
       "STEP",
-      "IGES",
+      "IDF",
       "DXF",
       "PDF",
-      "BOM",
       "3D PDF",
-      "IDF"
+      "BOM",
+      "Pick & Place"
     ],
     "integrations": [
       "Altium 365",
@@ -335,9 +336,9 @@ export const c6Tools: Tool[] = [
       "Cross-platform"
     ],
     "cons": [
-      "Subscription-only licensing (no perpetual buyout)",
-      "Interface quirky",
-      "Replaced by Fusion Electronics"
+      "Subscription-only licensing while it lasted — no perpetual buyout for new seats",
+      "Quirky, dated interface",
+      "Retired on 7 June 2026 — the workflow now lives in Fusion Electronics"
     ],
     "faqs": [
       {
@@ -350,7 +351,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of EAGLE?",
-        "a": "No. The free edition was withdrawn before the product itself was retired, and Autodesk ended EAGLE sales and support entirely on 7 June 2026. The replacement path is Fusion for personal use, which Autodesk offers free for non-commercial work with limits on schematic sheets, signal layers and board area."
+        "a": "EAGLE had a free tier until the very end: Autodesk kept EAGLE Free available through 6 June 2026, alongside paid Standard and Premium subscriptions, and it disappeared with the product itself on 7 June 2026. The successor free path is Autodesk Fusion for personal use, which limits schematics to two sheets, two signal layers and 80 cm² of board area."
       },
       {
         "q": "What operating systems does EAGLE support?",
@@ -358,7 +359,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does EAGLE support?",
-        "a": "EAGLE stored designs as .sch (schematic), .brd (board) and .lbr (library) files, and exported Gerber RS-274X, Excellon drill data, IPC-2581, DXF and images for fabrication and documentation. Those files still open in Autodesk Fusion Electronics."
+        "a": "EAGLE stores designs as .sch, .brd and .lbr files and writes Gerber RS-274X, Excellon drill data, DXF, PDF and bitmap images — with a user-editable CAM processor, so the exact output set follows the CAM job you run. STEP came via the 3D package, and IPC-2581 only through a community ULP rather than a built-in exporter. There is no Gerber import. All of these files still open natively in Autodesk Fusion Electronics."
       },
       {
         "q": "What are the best alternatives to EAGLE?",
@@ -366,32 +367,35 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "EAGLE Core",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "OpenGL 2D/3D PCB Canvas Acceleration",
+      "engine": "EAGLE core (Autodesk)",
+      "multicore": "Single-threaded",
+      "gpu_optimization": "OpenGL-accelerated 2D board canvas; 3D view via the 3D package",
       "standards": [
-        "Gerber",
-        "STEP",
-        "IPC"
+        "Gerber RS-274X",
+        "Excellon",
+        "IPC-7351"
       ]
     },
     "expert_verdict": "A long-time reference point for mid-level PCB design, now retired: standalone EAGLE is gone and its workflows continue inside Autodesk Fusion Electronics.",
     "discontinued": true,
     "discontinued_note": "Autodesk ended EAGLE sales and support on 7 June 2026; it can no longer be bought, downloaded or activated through Autodesk Account. Perpetual licences bought earlier keep working. .sch, .brd and .lbr files open in Autodesk Fusion Electronics.",
     "file_formats_in": [
-      "BRD",
       "SCH",
+      "BRD",
       "LBR",
-      "DXF",
-      "Gerber"
+      "EAGLE XML",
+      "DXF"
     ],
     "file_formats_out": [
-      "BRD",
       "SCH",
+      "BRD",
+      "LBR",
       "Gerber (RS-274X)",
-      "Excellon",
+      "Excellon NC Drill",
+      "DXF",
       "PDF",
-      "DXF"
+      "STEP",
+      "Image (PNG/BMP)"
     ]
   },
   {
@@ -424,8 +428,8 @@ export const c6Tools: Tool[] = [
       "Enterprise",
       "Mid-Market"
     ],
-    "official_url": "https://www.eplan.com",
-    "pricing_url": "https://www.eplan.com/de-en/about-us/contact-us",
+    "official_url": "https://www.eplan.com/us-en/",
+    "pricing_url": "https://www.eplan.com/us-en/",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -457,7 +461,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does EPLAN Electric P8 support?",
-        "a": "EPLAN Electric P8 exchanges DXF, DWG, and PDF for drawings, imports/exports XML and CSV/Excel for project data, and works to IEC, NFPA, and JIC drafting standards. Check EPLAN's documentation for the full list of supported interfaces."
+        "a": "Electric P8 works in its own EPJ project database, which is the working file rather than an exchange format. It reads DWG and DXF drawings, STEP models for device geometry, PLC XML in PLCopen and AutomationML dialects, and Excel or CSV for part and project data. It writes PDF (including EPLAN's jump-link navigation), DWG, DXF, XML, Excel and CSV, and image output; true 3D cabinet STEP export happens in EPLAN Pro Panel, which is a separate module. EPLAN does not publish a consolidated format matrix, so confirm against the version and module set you licence."
       },
       {
         "q": "What are the best alternatives to EPLAN Electric P8?",
@@ -465,12 +469,13 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Proprietary",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "engine": "EPLAN Platform (Electric P8 module)",
+      "multicore": "Not applicable",
+      "gpu_optimization": "DirectX 11/12 and OpenGL workstation GPU acceleration",
       "standards": [
-        "IEC",
-        "NFPA",
+        "IEC 81346",
+        "IEC 60617",
+        "NFPA 79",
         "JIC"
       ]
     },
@@ -535,20 +540,21 @@ export const c6Tools: Tool[] = [
     ],
     "file_formats_in": [
       "EPJ",
-      "ZW1",
       "DWG",
       "DXF",
-      "PDF",
       "STEP",
-      "PLC XML"
+      "PLC XML (PLCopen / AutomationML)",
+      "Excel / CSV"
     ],
     "file_formats_out": [
-      "PDF (Smart Jump Links)",
+      "EPJ",
+      "PDF",
       "DWG",
       "DXF",
-      "Excel",
       "XML",
-      "STEP (Cabinet 3D)"
+      "Excel / CSV",
+      "Image (PNG/TIFF)",
+      "STEP (via EPLAN Pro Panel)"
     ],
     "alternatives": [
       "eplan",
@@ -751,8 +757,8 @@ export const c6Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.eplan-software.com/",
-    "pricing_url": "https://www.eplan.com/",
+    "official_url": "https://www.eplan.com/us-en/",
+    "pricing_url": "https://www.eplan.com/us-en/",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -783,20 +789,22 @@ export const c6Tools: Tool[] = [
       "Russian"
     ],
     "file_formats_in": [
-      "DXF",
+      "EPJ",
       "DWG",
-      "PDF",
-      "XML",
-      "CSV",
-      "Excel"
+      "DXF",
+      "STEP",
+      "PLC XML",
+      "Excel / CSV"
     ],
     "file_formats_out": [
-      "DXF",
-      "DWG",
+      "EPJ",
       "PDF",
+      "DWG",
+      "DXF",
       "XML",
-      "CSV",
-      "Excel"
+      "Excel / CSV",
+      "Image (PNG/TIFF)",
+      "STEP (via EPLAN Pro Panel)"
     ],
     "integrations": [
       "SAP",
@@ -855,7 +863,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does EPLAN support?",
-        "a": "EPLAN supports standard CAD and engineering formats including DXF, DWG, PDF, XML, CSV, and Excel for import and export. It also integrates with various ERP and PDM systems through dedicated interfaces."
+        "a": "EPLAN is the platform, not a single product: Electric P8 is the schematic and documentation module, Pro Panel adds 3D cabinet engineering, Fluid handles hydraulics and pneumatics, and Preplanning covers plant and pipeline planning. Formats therefore depend on which modules are licensed — the common set is DWG, DXF, PDF, XML, Excel and CSV, with STEP appearing once Pro Panel is in the mix. Each module is documented separately, so check the module you actually run rather than a single platform-wide list."
       },
       {
         "q": "What are the best alternatives to EPLAN?",
@@ -864,17 +872,17 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "EPLAN Platform",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not applicable",
+      "gpu_optimization": "DirectX 11/12 and OpenGL workstation GPU acceleration",
       "standards": [
-        "IEC",
-        "NFPA",
-        "GB",
-        "GOST"
+        "IEC 81346",
+        "IEC 60617",
+        "NFPA 79",
+        "GB/T 5094"
       ]
     },
     "expert_verdict": "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design.",
-    "trial_url": "https://www.eplan.com/"
+    "trial_url": "https://www.eplan.com/us-en/"
   },
   {
     "id": "t160",
@@ -888,8 +896,13 @@ export const c6Tools: Tool[] = [
         "name": "Perpetual",
         "price": "Contact Sales",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "Allegro PCB Designer layout environment",
+          "Constraint Manager and shape-based interactive routing",
+          "Signal-integrity and DFM options licensed separately",
+          "Named-user licensing quoted by Cadence"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
@@ -1023,7 +1036,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Allegro PCB support?",
-        "a": "Allegro PCB works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Allegro keeps boards in BRD files with reusable DRA footprints and DSN netlists from the front-end flow. It imports STEP, IDF, DXF and DWG for mechanical context and reads ODB++ and IPC-2581 data; outbound it writes Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, STEP and DXF, plus PDF documentation. Translators for Altium, PADS, Xpedition and OrCAD designs are licensed separately. Cadence does not publish a consolidated public matrix, so confirm the exact set for your release and options."
       },
       {
         "q": "What are the best alternatives to Allegro PCB?",
@@ -1031,10 +1044,16 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Allegro PCB Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Allegro PCB Editor",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Not documented by Cadence",
+      "standards": [
+        "Gerber X2",
+        "ODB++",
+        "IPC-2581",
+        "IPC-D-356",
+        "STEP"
+      ]
     },
     "expert_verdict": "Cadence's high-end enterprise PCB layout platform, built for complex high-speed design and system constraints.",
     "file_formats_in": [
@@ -1043,17 +1062,21 @@ export const c6Tools: Tool[] = [
       "DSN",
       "STEP",
       "DXF",
+      "DWG",
       "IDF",
       "IPC-2581",
       "ODB++"
     ],
     "file_formats_out": [
       "BRD",
-      "Gerber",
+      "Gerber X2",
+      "NC Drill",
       "ODB++",
       "IPC-2581",
-      "STEP (3D)",
-      "NC Drill",
+      "IPC-D-356",
+      "STEP",
+      "DXF",
+      "DWG",
       "PDF"
     ]
   },
@@ -1239,7 +1262,7 @@ export const c6Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.orcad.com/",
+    "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
     "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 0,
@@ -1269,23 +1292,28 @@ export const c6Tools: Tool[] = [
       "French"
     ],
     "file_formats_in": [
-      "Gerber",
-      "IPC-2581",
-      "ODB++",
+      "DSN",
+      "BRD",
       "DXF",
       "DWG",
       "STEP",
-      "IGES",
+      "IDF",
+      "IPC-2581",
+      "ODB++",
       "SPICE"
     ],
     "file_formats_out": [
-      "Gerber",
-      "IPC-2581",
+      "DSN",
+      "BRD",
+      "Gerber X2",
+      "NC Drill",
       "ODB++",
+      "IPC-2581",
+      "IPC-D-356",
       "DXF",
-      "DWG",
       "PDF",
-      "STEP"
+      "BOM",
+      "SPICE netlist"
     ],
     "integrations": [
       "Allegro PCB Designer",
@@ -1343,7 +1371,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does OrCAD support?",
-        "a": "OrCAD supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
+        "a": "OrCAD X Capture stores schematics as DSN and Presto stores boards as BRD — the Allegro BRD container, which is why designs move to Allegro X without translation. It imports DXF, DWG, STEP, IDF and SPICE models, and reads ODB++ and IPC-2581. Output covers Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, DXF, PDF and BOM. Gerber and IGES are output-side or absent, not import formats, and OrCAD has no Gerber importer of its own."
       },
       {
         "q": "What are the best alternatives to OrCAD?",
@@ -1351,17 +1379,19 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "OrCAD X Platform",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
+      "engine": "OrCAD X platform (Allegro X engine)",
+      "multicore": "Threaded DRC and shape checks in OrCAD X Presto",
+      "gpu_optimization": "Not documented by Cadence",
       "standards": [
-        "IPC",
-        "IEEE",
-        "JEDEC"
+        "Gerber X2",
+        "ODB++",
+        "IPC-2581",
+        "IPC-D-356",
+        "IBIS"
       ]
     },
     "expert_verdict": "Cadence's electronic design suite, known for fast schematic capture and PCB layout.",
-    "trial_url": "https://www.orcad.com/"
+    "trial_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html"
   },
   {
     "id": "t162",
@@ -1566,23 +1596,25 @@ export const c6Tools: Tool[] = [
       "French"
     ],
     "file_formats_in": [
-      "Gerber",
-      "IPC-2581",
-      "ODB++",
+      "PCB",
+      "SCH",
       "DXF",
       "DWG",
+      "IDF",
       "STEP",
-      "IGES",
-      "SPICE"
+      "IPC-2581",
+      "ODB++"
     ],
     "file_formats_out": [
       "Gerber",
-      "IPC-2581",
+      "NC Drill",
       "ODB++",
+      "IPC-2581",
+      "IPC-D-356",
       "DXF",
-      "DWG",
       "PDF",
-      "STEP"
+      "STEP",
+      "BOM"
     ],
     "integrations": [
       "Xpedition",
@@ -1639,7 +1671,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PADS Professional support?",
-        "a": "PADS Professional supports standard EDA and CAD formats including Gerber, IPC-2581, ODB++, DXF, DWG, STEP, IGES, SPICE, and PDF for import and export."
+        "a": "PADS Professional works in PADS PCB and schematic files, with a shared library. It imports DXF, DWG, IDF, STEP, ODB++ and IPC-2581, and writes Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, DXF, PDF, STEP and BOM. HyperLynx handles the analysis side. Unlike PADS Standard, the Professional tier includes the Xpedition-derived constraint engine and rigid-flex support; Siemens documents the matrix per bundle, so confirm against the tier you buy."
       },
       {
         "q": "What are the best alternatives to PADS Professional?",
@@ -1647,13 +1679,14 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "PADS Platform",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
+      "engine": "Xpedition-derived engine (PADS Professional)",
+      "multicore": "Threaded shape-based autorouting and HyperLynx analysis",
+      "gpu_optimization": "Not documented by Siemens EDA",
       "standards": [
-        "IPC",
-        "IEEE",
-        "JEDEC"
+        "Gerber X2",
+        "ODB++",
+        "IPC-2581",
+        "IPC-D-356"
       ]
     },
     "expert_verdict": "Siemens' professional PCB design software, combining ease-of-use with advanced enterprise-grade routing.",
@@ -1664,15 +1697,20 @@ export const c6Tools: Tool[] = [
     "name": "Xpedition",
     "slug": "xpedition",
     "logo_url": "/logos/xpedition.svg",
-    "short_desc": "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent",
+    "short_desc": "Siemens EDA's high-end PCB flow — schematic, constraint management, layout, library tooling and manufacturing prep in one enterprise platform.",
     "description": "Siemens Xpedition Enterprise is the premier constraint-driven PCB and electronic systems design platform for high-density interconnect (HDI), RF/microwave, rigid-flex, and multi-board aerospace/telecom hardware. Integrating HyperLynx signal/power/thermal integrity verification, Valor NPI Design-for-Manufacturing (DFM) checks, and Teamcenter PLM library governance, it scales to the world’s most complex electronic architectures.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
-        "price": "Official Store",
+        "name": "Xpedition",
+        "price": "Contact Sales",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "Schematic, constraint management and layout in one flow",
+          "HyperLynx analysis available as an add-on",
+          "Valor NPI manufacturing prep available as an add-on",
+          "Named-user licensing quoted by Siemens EDA"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
@@ -1790,7 +1828,7 @@ export const c6Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Xpedition used for?",
-        "a": "The Xpedition product family offers industry leading, scalable PCB design solutions that grow with you, from independent Xpedition is an EDA solution."
+        "a": "Xpedition is Siemens EDA’s enterprise PCB platform: it carries a design from schematic capture and constraint definition through interactive layout, library management and fabrication release, with HyperLynx for analysis and Valor NPI for manufacturing prep. It is aimed at dense, high-speed, multi-board products where constraint discipline and team-scale data management matter more than speed of first layout."
       },
       {
         "q": "How much does Xpedition cost?",
@@ -1806,7 +1844,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Xpedition support?",
-        "a": "Xpedition works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Xpedition stores designs in its own PCB and schematic databases with a central library, and exchange happens through DXF, IDF, STEP, ODB++ and IPC-2581 on the way in — Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, STEP, PDF and BOM on the way out. Analysis (HyperLynx) and manufacturing prep (Valor NPI) are separately licensed parts of the flow rather than built into the layout seat, so the practical matrix depends on which of them you own."
       },
       {
         "q": "What are the best alternatives to Xpedition?",
@@ -1814,27 +1852,34 @@ export const c6Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Xpedition Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Xpedition layout engine",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Not documented by Siemens EDA",
+      "standards": [
+        "Gerber X2",
+        "ODB++",
+        "IPC-2581",
+        "IPC-D-356",
+        "STEP"
+      ]
     },
     "expert_verdict": "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
     "file_formats_in": [
       "PCB",
       "SCH",
-      "STEP",
       "DXF",
       "IDF",
+      "STEP",
       "ODB++",
       "IPC-2581"
     ],
     "file_formats_out": [
       "Gerber",
+      "NC Drill",
       "ODB++",
       "IPC-2581",
+      "IPC-D-356",
       "STEP",
-      "NC Drill",
       "PDF",
       "BOM"
     ]
@@ -1872,31 +1917,44 @@ export const c6Tools: Tool[] = [
       "Linux"
     ],
     "file_formats_in": [
-      "kicad_pcb",
-      "kicad_sch",
       "kicad_pro",
-      "SchDoc",
-      "PcbDoc",
-      "EAGLE (BRD/SCH)",
-      "EasyEDA",
-      "DXF",
-      "SVG",
-      "STEP",
-      "IGES"
+      "kicad_sch",
+      "kicad_pcb",
+      "Altium (PrjPcb / SchDoc / PcbDoc)",
+      "Altium CircuitStudio (CSPcbDoc)",
+      "Altium CircuitMaker (CMPcbDoc)",
+      "Cadence Allegro (BRD)",
+      "CADSTAR (CSA / CPA / CSAG)",
+      "EAGLE (SCH / BRD, XML)",
+      "EasyEDA Standard (JSON)",
+      "EasyEDA Pro (EPRO)",
+      "Fabmaster (FAB)",
+      "PADS ASCII (ASC)",
+      "P-CAD 200x (PCB)",
+      "gEDA / Lepton (SCH / PCB)",
+      "LTspice (ASC)",
+      "SolidWorks PCB (SWPcbDoc)"
     ],
     "file_formats_out": [
       "kicad_pcb",
       "kicad_sch",
-      "Gerber (RS-274X)",
-      "Excellon Drill",
-      "ODB++",
+      "Gerber (RS-274X / X2)",
+      "Excellon NC Drill",
       "IPC-2581",
+      "ODB++",
+      "GenCAD",
+      "IPC-D-356",
+      "PDF",
+      "PostScript",
+      "SVG",
+      "DXF",
       "STEP",
       "VRML",
-      "DXF",
-      "PDF",
-      "SVG",
-      "BOM (CSV)"
+      "STL",
+      "IDF",
+      "GLB",
+      "BOM (CSV)",
+      "Pick & Place (POS)"
     ],
     "industries": [
       "Electronics",
@@ -1932,13 +1990,14 @@ export const c6Tools: Tool[] = [
       "Variants and DRC for ultra-dense boards lag commercial tools"
     ],
     "tech_specs": {
-      "engine": "Custom KiCad engine",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "OpenGL rendering",
+      "engine": "KiCad native engine",
+      "multicore": "Threaded DRC and 3D viewer; routing is interactive — there is no autorouter",
+      "gpu_optimization": "OpenGL / ray-traced 3D viewer",
       "standards": [
         "Gerber X2",
         "IPC-2581",
         "ODB++",
+        "IPC-D-356",
         "STEP"
       ]
     },
@@ -1962,7 +2021,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does KiCad support?",
-        "a": "KiCad works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "KiCad 10 imports complete projects from Altium Designer (.PrjPcb), CADSTAR, EAGLE 6+, EasyEDA Standard and Pro, PADS ASCII and gEDA, and standalone boards from Allegro, CircuitStudio, CircuitMaker, Fabmaster, P-CAD 200x and SolidWorks PCB. For fabrication it writes Gerber RS-274X/X2, Excellon drill, IPC-2581, ODB++, GenCAD and IPC-D-356, plus PDF, PostScript, SVG and DXF plots; for mechanical hand-off, STEP, VRML, STL, IDF, GLB, BREP, XAO and PLY. There is no IGES support and no built-in autorouter — routing is interactive with push-and-shove."
       },
       {
         "q": "What are the best alternatives to KiCad?",
@@ -2091,9 +2150,9 @@ export const c6Tools: Tool[] = [
       "Free for most use cases"
     ],
     "cons": [
-      "Tied to JLCPCB / LCSC supply chain",
-      "Advanced features lag commercial tools",
-      "Cloud-only Standard Edition has project size limits"
+      "Tied to the JLCPCB / LCSC supply chain",
+      "Advanced high-speed features lag commercial tools",
+      "Standard edition projects live only in the cloud"
     ],
     "tech_specs": {
       "engine": "EasyEDA cloud + Pro desktop",
@@ -2125,7 +2184,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does EasyEDA support?",
-        "a": "EasyEDA works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "EasyEDA stores designs in its own JSON format (Standard) and the EPRO project format (Pro), and imports Altium SchDoc/PcbDoc, EAGLE, KiCad and LTSpice designs plus DXF for outlines. Output is aimed at JLCPCB fabrication: Gerber, NC drill, pick-and-place CSV, BOM, PDF and SVG documentation, and a STEP model of the assembled board. It has no IPC-2581 or ODB++ writer."
       },
       {
         "q": "What are the best alternatives to EasyEDA?",
@@ -2225,35 +2284,37 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Free / Starter Tier",
+        "name": "Individuals",
         "price": "Free",
         "period": "forever",
         "features": [
-          "Browser-based schematic and PCB editor",
-          "Direct integration with LCSC parts catalog",
-          "Community support access"
-        ]
-      },
-      {
-        "name": "Professional Edition",
-        "price": "Official Store",
-        "period": "per month",
-        "features": [
-          "Browser-based schematic and PCB editor",
-          "Direct integration with LCSC parts catalog",
-          "One-click JLCPCB fabrication and assembly order",
-          "Unlimited project exports & commercial use"
+          "Full editor in both Standard and Pro editions",
+          "Unlimited projects, libraries, team members",
+          "Commercial use permitted",
+          "0.5 GB cloud storage"
         ],
         "is_popular": true
       },
       {
-        "name": "Business / Enterprise",
-        "price": "Custom Quote",
-        "period": "annual volume billing",
+        "name": "Premium Commercial",
+        "price": "Official Store",
+        "period": "per month, annual billing",
         "features": [
-          "Centralized team seat management & SSO",
-          "Priority technical support & SLA",
-          "Dedicated cloud storage & collaboration controls"
+          "Private libraries",
+          "Advanced permission management and operation logs",
+          "10 GB storage with multi-node backup",
+          "Priority part building and email support"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Contact Sales",
+        "period": "per member, annual",
+        "features": [
+          "Everything in Premium Commercial",
+          "50 GB storage",
+          "On-premises deployment option",
+          "Exclusive technical support"
         ]
       }
     ]
@@ -2272,8 +2333,7 @@ export const c6Tools: Tool[] = [
     "price_period": "one-time",
     "platforms": [
       "Windows",
-      "macOS",
-      "Linux"
+      "macOS"
     ],
     "industries": [
       "Electronics",
@@ -2370,13 +2430,15 @@ export const c6Tools: Tool[] = [
       "Limited cloud team-collaboration features"
     ],
     "tech_specs": {
-      "engine": "DipTrace native",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
+      "engine": "DipTrace native engine",
+      "multicore": "Threaded shape-based autorouter",
+      "gpu_optimization": "Direct3D 3D PCB preview",
       "standards": [
         "Gerber X2",
-        "STEP",
-        "DXF"
+        "ODB++",
+        "IPC-2581C",
+        "IPC-D-356A",
+        "IPC-7351"
       ]
     },
     "expert_verdict": "A small-shop EDA workhorse — perpetual, affordable, and capable enough for 80% of real boards.",
@@ -2391,15 +2453,15 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DipTrace?",
-        "a": "DipTrace is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official DipTrace page](https://diptrace.com)."
+        "a": "Yes. DipTrace ships a 300-pin Freeware edition and a full-featured 30-day trial, both downloadable from the vendor; the paid editions are perpetual licences with updates included throughout the 5.x line. Check the official download page for the current limits."
       },
       {
         "q": "What operating systems does DipTrace support?",
-        "a": "DipTrace runs on Windows, macOS, and Linux."
+        "a": "DipTrace runs on Windows (32- and 64-bit installers) and macOS. There is no native Linux build — Linux users run it under Wine, which the vendor does not support as a first-class platform."
       },
       {
         "q": "Which file formats does DipTrace support?",
-        "a": "DipTrace works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "DipTrace 5.x saves projects as native XML — a text format that diffs cleanly in Git — and imports DXF, EAGLE, Altium and P-CAD designs plus STEP and VRML models. Manufacturing output is unusually complete for the price: Gerber RS-274X and X2, Excellon N/C drill, ODB++, IPC-2581C, IPC-D-356A netlist, pick-and-place, BOM, DXF, and STEP or VRML for mechanical hand-off."
       },
       {
         "q": "What are the best alternatives to DipTrace?",
@@ -2483,21 +2545,25 @@ export const c6Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "DIP",
+      "DipTrace XML",
       "DXF",
       "EAGLE",
       "Altium",
       "P-CAD",
-      "STEP"
+      "STEP",
+      "VRML"
     ],
     "file_formats_out": [
-      "Gerber",
-      "Excellon",
+      "Gerber (RS-274X / X2)",
+      "Excellon NC Drill",
       "ODB++",
-      "IPC-D-356",
-      "STEP",
+      "IPC-2581C",
+      "IPC-D-356A",
+      "Pick & Place",
+      "BOM",
       "DXF",
-      "PDF"
+      "STEP",
+      "VRML"
     ]
   },
   {
@@ -2535,7 +2601,7 @@ export const c6Tools: Tool[] = [
       "Education"
     ],
     "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
-    "pricing_url": "https://www.ni.com/en/shop.html",
+    "pricing_url": "https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -2545,15 +2611,16 @@ export const c6Tools: Tool[] = [
     ],
     "cons": [
       "Windows-only",
-      "PCB layout (Ultiboard) is the weak partner",
-      "Now under Emerson — future roadmap uncertain"
+      "Ultiboard lags dedicated PCB tools",
+      "Owned by Emerson since October 2023 — direction now follows its test-and-measurement strategy"
     ],
     "tech_specs": {
-      "engine": "Berkeley SPICE + XSPICE extensions",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "No",
+      "engine": "Berkeley SPICE 3 with XSPICE extensions",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Not applicable",
       "standards": [
         "SPICE3",
+        "XSPICE",
         "IBIS"
       ]
     },
@@ -2577,7 +2644,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does NI Multisim support?",
-        "a": "NI Multisim works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Multisim is a simulator, not a fabrication tool: it stores circuits as MS14 files and moves data as SPICE netlists, with Ultiboard handling board layout and manufacturing output. It reads SPICE netlists and model libraries, and exchanges live signals with LabVIEW for co-simulation. Export covers netlists, BOM, Excel/CSV, PDF and printed documentation; the fabrication outputs belong to Ultiboard, the companion layout tool, not to Multisim itself."
       },
       {
         "q": "What are the best alternatives to NI Multisim?",
@@ -2675,37 +2742,25 @@ export const c6Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Multisim Base",
+        "name": "Multisim Education",
         "price": "Official Store",
         "period": "Annual Subscription or Perpetual",
         "features": [
-          "Interactive SPICE simulation with four virtual instruments",
-          "Around 47,000 manufacturer-verified components and models",
-          "Formal analysis functions are not included at this level"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Multisim Full",
-        "price": "Official Store",
-        "period": "Annual Subscription or Perpetual",
-        "features": [
-          "17 analysis functions and 23 virtual instruments",
-          "Around 49,000 components and models",
-          "LabVIEW instruments and Ultiboard PCB layout integration"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Multisim Professional",
-        "price": "Official Store",
-        "period": "Annual Subscription or Perpetual",
-        "features": [
-          "20 analysis functions and 30 virtual instruments",
-          "Around 55,000 components and models",
-          "Microcontroller co-simulation"
+          "Teaching-focused SPICE simulation for analog, digital and power electronics courses",
+          "Circuit analysis and measurement instruments for lab work",
+          "Campus and site licensing through NI"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Multisim Designers",
+        "price": "Official Store",
+        "period": "Annual Subscription or Perpetual",
+        "features": [
+          "SPICE simulation with the full analysis suite",
+          "Ultiboard PCB layout integration",
+          "Single-user, volume and enterprise agreements"
+        ]
       }
     ]
   },
@@ -2759,11 +2814,12 @@ export const c6Tools: Tool[] = [
       "Documentation is sparse; learning is community-driven"
     ],
     "tech_specs": {
-      "engine": "Custom SPICE solver (Mike Engelhardt)",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "No",
+      "engine": "Analog Devices SPICE solver",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Not applicable",
       "standards": [
-        "SPICE3"
+        "SPICE3",
+        "BSIM"
       ]
     },
     "expert_verdict": "The free SPICE that every analog engineer has installed — the industry's quietest, most-used EDA tool.",
@@ -2786,7 +2842,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does LTspice support?",
-        "a": "LTspice works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "LTspice is a pure SPICE environment, so its formats are simulation formats: ASC schematics, ASY symbols, CIR/NET netlists and LIB/MOD model libraries in, with RAW binary waveforms, exported TXT data, LOG and MEAS files, FFT plots, BMP/WMF plot images and WAV audio out. There is no PCB layout, no Gerber, no ODB++ and no IPC-2581 — nothing in LTspice produces fabrication data."
       },
       {
         "q": "What are the best alternatives to LTspice?",
@@ -2870,18 +2926,21 @@ export const c6Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "ASC",
-      "ASY",
-      "NET",
-      "CIR",
-      "LIB"
+      "ASC (Schematic)",
+      "ASY (Symbol)",
+      "CIR / NET (Netlist)",
+      "LIB / MOD (Models)",
+      "RAW (Waveform)"
     ],
     "file_formats_out": [
-      "RAW (Waveforms)",
-      "NET",
-      "TXT",
-      "BMP",
-      "WMF"
+      "NET (Netlist)",
+      "RAW (Binary Waveform)",
+      "TXT (Exported Data)",
+      "LOG (Simulation Log)",
+      "MEAS (Measurements)",
+      "FFT",
+      "BMP / WMF (Plot Image)",
+      "WAV (Audio)"
     ],
     "pricing_tiers": [
       {
@@ -2948,12 +3007,12 @@ export const c6Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proteus VSM",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "No",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Direct3D 3D board viewer",
       "standards": [
-        "SPICE",
-        "Gerber",
-        "STEP"
+        "SPICE3",
+        "Gerber RS-274X",
+        "Excellon"
       ]
     },
     "expert_verdict": "Still an effective way to debug firmware against a virtual LCD or motor without touching hardware.",
@@ -2976,7 +3035,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Proteus Design Suite support?",
-        "a": "Proteus Design Suite works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Proteus keeps schematics in DSN, layouts in LYT and VSM debug state in COF, with HEX and ELF firmware loaded for co-simulation. It imports DXF for mechanical outlines and outputs Gerber RS-274X, Excellon drill, DXF, PDF, STEP and BOM — the manufacturing set comes out of the ARES layout module. It has no ODB++ or IPC-2581 writer, and labcenter publishes the exact bundle contents per package rather than a single format table."
       },
       {
         "q": "What are the best alternatives to Proteus Design Suite?",
@@ -3062,61 +3121,29 @@ export const c6Tools: Tool[] = [
     "file_formats_in": [
       "DSN",
       "LYT",
+      "COF",
       "HEX",
       "ELF",
-      "DXF",
-      "Gerber"
+      "DXF"
     ],
     "file_formats_out": [
-      "Gerber",
-      "Excellon",
-      "ODB++",
+      "Gerber (RS-274X)",
+      "Excellon NC Drill",
+      "DXF",
       "PDF",
       "STEP",
-      "BOM"
+      "BOM",
+      "Image (PNG/BMP)"
     ],
     "pricing_tiers": [
       {
-        "name": "PCB Design Starter Kit",
+        "name": "Enterprise",
         "price": "Official Store",
         "period": "Perpetual licence",
         "features": [
-          "500-pin netlist ceiling",
-          "Schematic capture plus PCB layout",
-          "Simulation sold as a separate VSM module"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "PCB Design Level 1",
-        "price": "Official Store",
-        "period": "Perpetual licence",
-        "features": [
-          "1,000-pin netlist (the 1+ variant raises it to 2,000)",
-          "Full manufacturing outputs including Gerber and STEP",
-          "Professional schematic and layout feature set"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "PCB Design Level 2",
-        "price": "Official Store",
-        "period": "Perpetual licence",
-        "features": [
-          "Adds differential-pair routing and length matching",
-          "3D viewer and MCAD export",
-          "Same 1,000 / 2,000-pin netlist options"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "PCB Design Level 3",
-        "price": "Official Store",
-        "period": "Perpetual licence",
-        "features": [
-          "Unlimited netlist capacity",
-          "High-density boards plus design auditing tools",
-          "Top of the PCB Design ladder"
+          "Top of the range PCB design bundle",
+          "Full suite of graph-based analysis",
+          "All MCU simulation families"
         ],
         "is_popular": true
       },
@@ -3126,10 +3153,19 @@ export const c6Tools: Tool[] = [
         "period": "Perpetual licence",
         "features": [
           "Everything Labcenter sells in one package",
-          "All PCB Design features and all VSM simulation families",
+          "All PCB design features and all VSM families",
           "IoT Builder and Visual Designer included"
-        ],
-        "is_popular": false
+        ]
+      },
+      {
+        "name": "Custom",
+        "price": "Contact Sales",
+        "period": "Perpetual licence",
+        "features": [
+          "Build the bundle module by module",
+          "Pay only for the modules you need",
+          "Upgrade path at a later date"
+        ]
       }
     ]
   },
@@ -3212,7 +3248,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Altium 365 support?",
-        "a": "Altium 365 works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Altium 365 does not define a format matrix of its own. Designs are authored in Altium Designer and stored as the same SchDoc, PcbDoc and PrjPcb files, which the browser viewer and the release pipeline read directly. A manufacturing release package can carry Gerber X2, NC drill, ODB++, IPC-2581, STEP, BOM, pick-and-place data and PDF documentation. Which of those a given workspace can produce depends on the Altium Designer licence attached to it."
       },
       {
         "q": "What are the best alternatives to Altium 365?",
@@ -3296,18 +3332,21 @@ export const c6Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "PrjPcb",
       "SchDoc",
       "PcbDoc",
+      "PrjPcb",
       "Gerber",
       "BOM"
     ],
     "file_formats_out": [
-      "Gerber",
+      "Gerber X2",
+      "NC Drill",
       "ODB++",
       "IPC-2581",
       "STEP",
-      "PDF release packages"
+      "BOM",
+      "Pick & Place",
+      "PDF release package"
     ],
     "pricing_tiers": [
       {
@@ -3390,9 +3429,10 @@ export const c6Tools: Tool[] = [
       "Open-source-style sharing community"
     ],
     "cons": [
-      "Free tier requires public projects (no commercial confidentiality)",
       "Windows-only",
-      "Pro tier exists for private projects — not really free for industry use"
+      "Designs live in Altium's cloud — no fully offline workflow",
+      "CircuitMaker 2.0 caps private projects at five",
+      "Ceiling of 16 signal plus 16 plane layers"
     ],
     "tech_specs": {
       "engine": "Altium engine",
@@ -3423,7 +3463,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CircuitMaker support?",
-        "a": "CircuitMaker works with standard EDA interchange formats including Gerber, IPC-2581, and ODB++. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "CircuitMaker stores schematics as SchDoc and boards as CMPcbDoc — the same Altium engine documents, which is why KiCad ships an importer for them — and accepts DXF and STEP for mechanical context. Output is manufacturing-focused: Gerber and NC drill, or ODB++, or both, plus IPC test-point reports, BOM and SmartPDF documentation. It has no IPC-2581 writer and no ODB++ import."
       },
       {
         "q": "What are the best alternatives to CircuitMaker?",
@@ -3507,17 +3547,19 @@ export const c6Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "CMPcb",
-      "CMSch",
+      "SchDoc",
+      "CMPcbDoc",
       "DXF",
       "STEP"
     ],
     "file_formats_out": [
       "Gerber",
       "NC Drill",
-      "STEP",
-      "PDF",
-      "BOM"
+      "ODB++",
+      "IPC-D-356",
+      "BOM",
+      "PDF (SmartPDF)",
+      "STEP"
     ],
     "pricing_tiers": [
       {
@@ -3525,10 +3567,11 @@ export const c6Tools: Tool[] = [
         "price": "Free",
         "period": "forever",
         "features": [
-          "Altium-engine schematic capture and up to 16-layer PCB layout",
-          "Octopart-backed community component vault with 3D STEP models",
-          "Cloud project workspace with version control for open-hardware projects",
-          "Gerber, NC Drill, BOM, and native STEP 3D export without artificial limits"
+          "Altium-engine schematic capture and PCB layout",
+          "Up to 16 signal + 16 plane layers with no board-size limit",
+          "Octopart-backed community component library",
+          "Commercial use allowed — no non-commercial clause",
+          "Up to five private projects on CircuitMaker 2.0"
         ],
         "is_popular": true
       }
