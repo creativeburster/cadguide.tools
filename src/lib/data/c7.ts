@@ -1688,7 +1688,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Twinmotion?",
-        "a": "Twinmotion is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Twinmotion page](https://www.twinmotion.com)."
+        "a": "Twinmotion is free for individuals, students, educators and companies whose annual gross revenue stays under the threshold Epic publishes, and that free edition is the same build as the paid one - no watermark, no resolution cap. Above the threshold, or if you need Twinmotion Cloud, a per-seat subscription is required. The threshold and the seat price are set by Epic and can change, so confirm on the official licensing page: [Twinmotion licensing](https://www.twinmotion.com/en-US/license)."
       },
       {
         "q": "What operating systems does Twinmotion support?",
@@ -3147,7 +3147,7 @@ export const c7Tools: Tool[] = [
     "slug": "v-ray",
     "logo_url": "/logos/v-ray.ico",
     "short_desc": "Chaos V-Ray — a long-standing production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
-    "description": "V-Ray from Chaos is the world's most-used production renderer across architecture, automotive, and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
+    "description": "V-Ray from Chaos is a production renderer used across architecture, automotive and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
     "country": "Bulgaria",
     "category_id": "c7",
     "pricing_type": "Subscription",

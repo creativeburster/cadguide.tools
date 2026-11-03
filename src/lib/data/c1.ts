@@ -9,7 +9,7 @@ export const c1Tools: Tool[] = [
     "slug": "autocad",
     "logo_url": "/logos/autocad.svg",
     "short_desc": "The global industrial standard for 2D drafting and 3D modeling.",
-    "description": "AutoCAD is the industry-leading computer-aided design software developed by Autodesk. As the pioneer of the CAD industry, it defined the .DWG format standard and remains an essential foundation tool for AEC and manufacturing.",
+    "description": "AutoCAD is Autodesk’s computer-aided design software. As the pioneer of the CAD industry, it defined the .DWG format standard and remains an essential foundation tool for AEC and manufacturing.",
     "pricing_tiers": [
       {
         "name": "Monthly",

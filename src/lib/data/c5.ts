@@ -1521,7 +1521,7 @@ export const c5Tools: Tool[] = [
     "slug": "camworks",
     "logo_url": "/logos/camworks.png",
     "short_desc": "Knowledge-based CAM solution by HCL Technologies.",
-    "description": "CAMWorks is an industry-leading CAM solution developed by HCL Technologies that works natively inside SolidWorks and Solid Edge, using feature-based machining to automate CNC programming.",
+    "description": "CAMWorks is a CAM solution developed by HCL Technologies that works natively inside SolidWorks and Solid Edge, using feature-based machining to automate CNC programming.",
     "country": "India",
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
@@ -2715,7 +2715,7 @@ export const c5Tools: Tool[] = [
     "slug": "gibbscam",
     "logo_url": "/logos/gibbscam.png",
     "short_desc": "Cutting-edge CAM software for programming CNC machine tools with power and flexibility.",
-    "description": "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
+    "description": "GibbsCAM is CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
     "pricing_tiers": [
       {
         "name": "GibbsCAM licence",
@@ -7833,7 +7833,7 @@ export const c5Tools: Tool[] = [
     "slug": "msc-adams",
     "logo_url": "/logos/msc-adams.png",
     "short_desc": "Multibody dynamics simulation for mechanisms, vehicles, and powertrains.",
-    "description": "MSC Adams (now part of Cadence) is the industry-leading multibody dynamics solver — used to predict and validate vehicle handling, suspension kinematics, gear meshes, and complex mechanism behavior before physical prototyping.",
+    "description": "MSC Adams (now part of Cadence) is a multibody dynamics solver — used to predict and validate vehicle handling, suspension kinematics, gear meshes, and complex mechanism behavior before physical prototyping.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -9033,7 +9033,7 @@ export const c5Tools: Tool[] = [
     "slug": "etabs",
     "logo_url": "/logos/etabs.png",
     "short_desc": "Building-focused integrated structural analysis and design.",
-    "description": "ETABS from CSI is the world's most-used integrated analysis and design tool for buildings — gravity, lateral, seismic, with floor / slab / beam / column design baked into one workflow.",
+    "description": "ETABS from CSI is an integrated analysis and design tool for buildings — gravity, lateral, seismic, with floor / slab / beam / column design baked into one workflow.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Perpetual",
@@ -12067,6 +12067,7 @@ export const c5Tools: Tool[] = [
       "PDF",
       "XLSX"
     ],
+    "file_formats_out": [],
     "alternatives": [
       "accelygen",
       "fusion-360",

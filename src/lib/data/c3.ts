@@ -3831,7 +3831,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BIMcollab?",
-        "a": "BIMcollab is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official BIMcollab page](https://www.bimcollab.com)."
+        "a": "BIMcollab ZOOM has a permanent free edition: model viewing, model checking and BCF issue handling, with no time limit and no watermark. The BIMcollab Nexus collaboration platform, and the paid ZOOM features such as rule-based clash detection and data extraction, are subscriptions. Eligibility and current plan limits are set by the vendor, so check the official licensing page: [BIMcollab ZOOM plans](https://www.bimcollab.com/en?p=43315)."
       },
       {
         "q": "What operating systems does BIMcollab support?",
