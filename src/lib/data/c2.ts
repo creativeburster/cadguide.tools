@@ -454,8 +454,8 @@ export const c2Tools: Tool[] = [
       "Simplified Chinese",
       "Traditional Chinese",
       "Russian",
-      "Dutch",
       "Polish",
+      "Swedish",
       "Brazilian Portuguese"
     ],
     "file_formats_in": [
@@ -975,7 +975,6 @@ export const c2Tools: Tool[] = [
       "Japanese",
       "Korean",
       "Polish",
-      "Portuguese",
       "Russian",
       "Spanish",
       "Simplified Chinese",
@@ -1245,9 +1244,7 @@ export const c2Tools: Tool[] = [
       "Japanese",
       "Korean",
       "Simplified Chinese",
-      "Russian",
-      "Spanish",
-      "Brazilian Portuguese"
+      "Russian"
     ],
     "file_formats_in": [
       "CATPart",
@@ -1460,28 +1457,40 @@ export const c2Tools: Tool[] = [
     ],
     "languages": [
       "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Czech",
-      "Polish",
-      "Portuguese",
-      "Brazilian Portuguese",
-      "Turkish",
+      "Afrikaans",
       "Arabic",
+      "Basque",
+      "Catalan",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)",
+      "Croatian",
+      "Czech",
       "Dutch",
+      "Filipino",
+      "Finnish",
+      "French",
+      "Galician",
+      "German",
       "Hungarian",
       "Indonesian",
+      "Italian",
+      "Japanese",
+      "Kabyle",
+      "Korean",
+      "Lithuanian",
       "Norwegian",
+      "Polish",
+      "Portuguese",
+      "Portuguese (Brazil)",
+      "Romanian",
+      "Russian",
       "Slovak",
+      "Slovenian",
+      "Spanish",
       "Swedish",
+      "Turkish",
       "Ukrainian",
+      "Valencian",
       "Vietnamese"
     ],
     "file_formats_in": [
@@ -1913,10 +1922,9 @@ export const c2Tools: Tool[] = [
     "starting_price": 95,
     "price_period": "month",
     "platforms": [
-      "Windows",
-      "Web"
+      "Windows"
     ],
-    "file_formats_in": [
+        "file_formats_in": [
       "PAR",
       "ASM",
       "DFT",
@@ -1925,12 +1933,14 @@ export const c2Tools: Tool[] = [
       "IGES",
       "Parasolid",
       "JT",
+      "STL",
+      "3MF",
+      "DWG",
+      "DXF",
       "CATPart",
       "SLDPRT",
       "IPT",
-      "DWG",
-      "DXF",
-      "STL"
+      "PRT"
     ],
     "file_formats_out": [
       "PAR",
@@ -1944,8 +1954,7 @@ export const c2Tools: Tool[] = [
       "3MF",
       "DWG",
       "DXF",
-      "PDF",
-      "OBJ"
+      "PDF"
     ],
     "industries": [
       "Mechanical",
@@ -1996,7 +2005,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Solid Edge support?",
-        "a": "Solid Edge works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Solid Edge stores parts, assemblies and drawings as .par, .asm and .dft, and reads and writes STEP, IGES, Parasolid (.x_t/.x_b), JT, STL, 3MF and DXF/DWG. Third-party native CAD formats — NX, SolidWorks, Inventor, Creo and CATIA V5 — are reached through Siemens CAD translation add-ons rather than being built into the base seat, so confirm which translators a licence actually includes before promising a direct read of a customer file. Output covers the native three plus STEP, IGES, Parasolid, JT, STL, 3MF, DXF/DWG and PDF."
       },
       {
         "q": "What are the best alternatives to Solid Edge?",
@@ -2407,9 +2416,7 @@ export const c2Tools: Tool[] = [
       "Korean",
       "Simplified Chinese",
       "Traditional Chinese",
-      "Czech",
       "Russian",
-      "Polish",
       "Brazilian Portuguese"
     ],
     "file_formats_in": [
@@ -2779,7 +2786,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Shapr3D support?",
-        "a": "Shapr3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Shapr3D imports X_T/X_B (Parasolid), STEP, IGES, the native SHAPR format and SOLIDWORKS parts and assemblies (.sldprt/.sldasm), plus DWG, DXF and SVG sketches and reference images; STL comes in for reference only. Export covers X_T/X_B, STEP, IGES, SHAPR, 3MF, OBJ, STL, GLB, USDZ and JT, with DWG, DXF, PDF, SVG, JPEG and PNG for 2D drawings. Native NX, CATIA, Creo, Solid Edge and JT import is an Enterprise feature, and the free Basic tier is capped at two projects with low-resolution 3MF/STL export."
       },
       {
         "q": "What are the best alternatives to Shapr3D?",
@@ -2798,31 +2805,39 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Shapr3D has done the impossible: made professional CAD fun.",
-    "file_formats_in": [
-      "STEP",
-      "IGES",
+        "file_formats_in": [
+      "SHAPR",
       "X_T",
       "X_B",
+      "STEP",
+      "IGES",
       "SLDPRT",
       "SLDASM",
-      "DWG",
-      "DXF",
       "STL",
       "OBJ",
-      "SHAPR"
+      "DWG",
+      "DXF",
+      "SVG",
+      "JT"
     ],
     "file_formats_out": [
-      "STEP",
-      "IGES",
+      "SHAPR",
       "X_T",
       "X_B",
+      "STEP",
+      "IGES",
+      "3MF",
+      "OBJ",
+      "STL",
+      "GLB",
+      "USDZ",
+      "JT",
       "DWG",
       "DXF",
-      "STL",
-      "OBJ",
-      "3MF",
-      "USDZ",
-      "PDF"
+      "SVG",
+      "PDF",
+      "PNG",
+      "JPG"
     ],
     "pricing_url": "https://www.shapr3d.com/pricing"
   },
@@ -3086,7 +3101,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Alibre Design support?",
-        "a": "Alibre Design works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Alibre Design reads its own .AD_PRT/.AD_ASM/.AD_DRW files and imports SolidWorks, Inventor, Creo, CATIA, Solid Edge and NX parts and assemblies alongside Rhino, STEP, SAT, IGES, Parasolid, DWG, DXF and SVG. Export is STEP, SAT, IGES, STL, OBJ, Parasolid, ZPR, JT, 2D DWG/DXF, SVG and PDF in both 2D and 3D flavours. Which importers are enabled depends on the edition and release, so check file compatibility against the exact build before exchanging production data."
       },
       {
         "q": "What are the best alternatives to Alibre Design?",
@@ -3105,30 +3120,41 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "No mandatory subscriptions, just solid parametric tools.",
-    "file_formats_in": [
+        "file_formats_in": [
       "AD_PRT",
       "AD_ASM",
       "AD_DRW",
       "STEP",
-      "IGES",
       "SAT",
+      "IGES",
+      "Parasolid",
+      "SLDPRT",
+      "IPT",
+      "PRT",
+      "CATPart",
+      "PAR",
+      "3DM",
       "DWG",
       "DXF",
-      "STL",
-      "SolidWorks"
+      "SVG"
     ],
     "file_formats_out": [
       "AD_PRT",
       "AD_ASM",
       "AD_DRW",
       "STEP",
-      "IGES",
       "SAT",
+      "IGES",
+      "STL",
+      "OBJ",
+      "Parasolid",
+      "ZPR",
+      "JT",
       "DWG",
       "DXF",
-      "STL",
-      "3D PDF",
-      "PDF"
+      "SVG",
+      "PDF",
+      "3D PDF"
     ],
     "pricing_url": "https://www.alibre.com/pricing/"
   },
@@ -3470,22 +3496,55 @@ export const c2Tools: Tool[] = [
     ],
     "languages": [
       "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
+      "Abkhazian",
       "Arabic",
+      "Belarusian",
+      "Bulgarian",
+      "Catalan",
       "Czech",
+      "Danish",
+      "German",
+      "Greek",
+      "English (UK)",
+      "Esperanto",
+      "Spanish",
+      "Basque",
+      "Persian",
+      "Finnish",
+      "French",
+      "Hebrew",
+      "Hindi",
+      "Croatian",
+      "Hungarian",
+      "Indonesian",
+      "Italian",
+      "Japanese",
+      "Georgian",
+      "Korean",
+      "Kyrgyz",
+      "Lithuanian",
+      "Malayalam",
+      "Norwegian",
       "Dutch",
       "Polish",
       "Portuguese",
+      "Portuguese (Brazil)",
+      "Romanian",
+      "Russian",
+      "Slovak",
+      "Slovenian",
+      "Serbian",
+      "Serbian (Latin)",
+      "Swedish",
+      "Swahili",
+      "Tamil",
+      "Thai",
       "Turkish",
-      "Ukrainian"
+      "Ukrainian",
+      "Urdu",
+      "Vietnamese",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)"
     ],
     "file_formats_in": [
       "BLEND",
@@ -3718,31 +3777,6 @@ export const c2Tools: Tool[] = [
           {
             "name": "Batch Processing & Scripting",
             "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
           }
         ]
       }
@@ -3810,7 +3844,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Alias AutoStudio support?",
-        "a": "Alias AutoStudio works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Alias works in IGES, STEP (AP203 / AP214 / AP242), SAT, JT, DXF/DWG, FBX, OBJ and STL, with direct translators for CATIA V5, NX and Creo and read-only access to CATIA V4 and SolidWorks. Export covers the same neutral set plus VDAIS / VDAFS, but Inventor and SolidWorks are import-only — there is no write path back to those formats, which matters when a studio hands Class-A surfaces downstream."
       },
       {
         "q": "What are the best alternatives to Alias AutoStudio?",
@@ -3828,26 +3862,36 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The software behind almost every beautiful car you see on the road.",
-    "file_formats_in": [
+        "file_formats_in": [
       "WIRE",
       "STEP",
       "IGES",
-      "CATPart",
-      "NX",
+      "SAT",
+      "JT",
       "DWG",
       "DXF",
       "FBX",
-      "OBJ"
+      "OBJ",
+      "STL",
+      "CATPart",
+      "NX",
+      "Inventor",
+      "SolidWorks"
     ],
     "file_formats_out": [
       "WIRE",
       "STEP",
       "IGES",
-      "CATPart",
-      "NX",
+      "SAT",
+      "JT",
+      "DWG",
+      "DXF",
       "FBX",
       "OBJ",
-      "STL"
+      "STL",
+      "CATPart",
+      "NX",
+      "VDAFS"
     ],
     "alternatives": [
       "rhino-3d",
@@ -3890,31 +3934,6 @@ export const c2Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows / macOS Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -4019,7 +4038,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ZW3D support?",
-        "a": "ZW3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "ZW3D reads and writes STEP, IGES, Parasolid, ACIS, STL, DXF/DWG and VDA, and opens native CATIA, NX, Creo, SOLIDWORKS, Solid Edge and Inventor parts and assemblies. Output adds 3D PDF, OBJ, VRML, JT and CGR/3DXML, plus NC G-code through the CAM modules. ZWSOFT notes that some third-party native translators are priced as extra options rather than bundled, so confirm the translator list for the tier being quoted."
       },
       {
         "q": "What are the best alternatives to ZW3D?",
@@ -4115,29 +4134,39 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "file_formats_in": [
+        "file_formats_in": [
       "Z3",
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
+      "STL",
+      "DWG",
+      "DXF",
+      "VDA",
       "CATPart",
       "PRT",
       "SLDPRT",
       "IPT",
-      "DWG",
-      "DXF",
-      "STL"
+      "JT",
+      "IFC"
     ],
     "file_formats_out": [
       "Z3",
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
       "STL",
       "3D PDF",
-      "NC (G-Code)",
+      "OBJ",
+      "VRML",
+      "JT",
+      "CGR / 3DXML",
       "DWG",
-      "DXF"
+      "DXF",
+      "NC (G-Code)",
+      "CATPart"
     ],
     "alternatives": [
       "solidworks",
@@ -4225,7 +4254,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Plasticity support?",
-        "a": "Plasticity works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Plasticity imports .plasticity, STEP, Parasolid (.x_t/.x_b), OBJ, STL, FBX, 3MF, SVG and reference images on both paid tiers; IGES, SAT, Rhino (.3dm) and Windows-only 2D DXF/DWG import are Studio-only. Export covers .plasticity, STEP, Parasolid, OBJ, STL, 3MF and SVG, with IGES and SAT again Studio-only. There is no DXF/DWG or FBX write path, so a model leaves for CAD through STEP or Parasolid rather than a drawing format."
       },
       {
         "q": "What are the best alternatives to Plasticity?",
@@ -4307,22 +4336,31 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "file_formats_in": [
+        "file_formats_in": [
+      "Plasticity",
       "STEP",
-      "IGES",
+      "Parasolid",
       "OBJ",
       "STL",
+      "FBX",
+      "3MF",
+      "SVG",
+      "IGES",
+      "SAT",
+      "3DM",
       "DXF",
-      "SVG"
+      "DWG"
     ],
     "file_formats_out": [
+      "Plasticity",
       "STEP",
-      "IGES",
+      "Parasolid",
       "OBJ",
-      "FBX",
       "STL",
-      "DXF",
-      "SVG"
+      "3MF",
+      "SVG",
+      "IGES",
+      "SAT"
     ],
     "pricing_tiers": [
       {
@@ -4428,7 +4466,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MoI3D support?",
-        "a": "MoI3D works with standard 3D modeling interchange formats including STEP, IGES, STL, and Parasolid. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "MoI opens 3DM, IGES, STEP and SAT for curves and surfaces, and brings in 2D curves from PDF, AI and DXF. It writes the same four CAD formats, PDF / AI / DXF for flattened 2D drawings, and OBJ, STL, 3DS, LWO, FBX and SKP for polygon meshes. There is no Parasolid and no native third-party CAD import — MoI sits on ACIS (SAT) and OpenNURBS (3DM), so anything from SolidWorks or Creo has to arrive as STEP first."
       },
       {
         "q": "What are the best alternatives to MoI3D?",
@@ -4510,7 +4548,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-    "file_formats_in": [
+        "file_formats_in": [
       "3DM",
       "STEP",
       "IGES",
@@ -4529,6 +4567,7 @@ export const c2Tools: Tool[] = [
       "3DS",
       "LWO",
       "FBX",
+      "SKP",
       "DXF",
       "PDF",
       "AI"
@@ -6183,27 +6222,6 @@ export const c2Tools: Tool[] = [
             "status": true
           }
         ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
-          }
-        ]
       }
     ],
     "trial_url": "https://www.mechdesigned.com/en/software/mechcad/"
@@ -6392,27 +6410,6 @@ export const c2Tools: Tool[] = [
           },
           {
             "name": "Zero registration, no subscriptions, and completely free unlimited usage",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web / Windows / macOS / Linux Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]

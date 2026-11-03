@@ -33,7 +33,17 @@ interface Props {
 
 export function ToolDetailClient({ tool, category, alternativeTools, toolComparisons = [], linkTools, trendingTools }: Props) {
   const [activeSection, setActiveSection] = useState("overview");
+  const [showAllLanguages, setShowAllLanguages] = useState(false);
   const bestDeal = getBestDealForTool(tool.id);
+
+  // Long localization lists (e.g. LibreCAD's 42 community catalogs) would otherwise
+  // flood the card, so the first few render and the rest sit behind a toggle.
+  const LANGUAGE_PREVIEW = 10;
+  const allLanguages = tool.languages || [];
+  const visibleLanguages = showAllLanguages
+    ? allLanguages
+    : allLanguages.slice(0, LANGUAGE_PREVIEW);
+  const hiddenLanguageCount = allLanguages.length - visibleLanguages.length;
 
   const renderFaqAnswer = (text: string) => {
     const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)/g;
@@ -1208,7 +1218,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         <Languages className="w-4 h-4" /> Interface Languages
                       </h4>
                       <div className="flex flex-wrap gap-2.5">
-                        {tool.languages.map((l) => (
+                        {visibleLanguages.map((l) => (
                           <Badge
                             key={l}
                             className="h-auto bg-slate-50 text-slate-700 border-slate-200 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base"
@@ -1216,6 +1226,24 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             {l}
                           </Badge>
                         ))}
+                        {hiddenLanguageCount > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setShowAllLanguages(true)}
+                            className="h-auto bg-white text-slate-500 border border-dashed border-slate-300 hover:border-slate-400 hover:text-slate-700 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base transition-colors"
+                          >
+                            +{hiddenLanguageCount} more
+                          </button>
+                        )}
+                        {showAllLanguages && allLanguages.length > LANGUAGE_PREVIEW && (
+                          <button
+                            type="button"
+                            onClick={() => setShowAllLanguages(false)}
+                            className="h-auto bg-white text-slate-500 border border-dashed border-slate-300 hover:border-slate-400 hover:text-slate-700 font-black px-3.5 py-1.5 rounded-xl text-sm md:text-base transition-colors"
+                          >
+                            Show less
+                          </button>
+                        )}
                       </div>
                       <p className="mt-5 text-xs text-slate-400 font-medium">
                         {tool.pricing_type === "Open Source"

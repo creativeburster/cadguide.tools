@@ -1426,14 +1426,39 @@ export const c1Tools: Tool[] = [
     "release_notes_url": "https://www.qcad.org/en/changelog",
     "languages": [
       "English",
+      "Dutch",
       "German",
+      "German (Swiss)",
+      "Bulgarian",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)",
+      "Croatian",
+      "Czech",
+      "Danish",
+      "Estonian",
+      "Finnish",
       "French",
-      "Spanish",
-      "Portuguese",
+      "Greek",
+      "Hungarian",
+      "Indonesian",
       "Italian",
+      "Japanese",
+      "Korean",
+      "Latvian",
+      "Lithuanian",
+      "Norwegian (Bokmål)",
+      "Polish",
+      "Portuguese",
+      "Romanian",
       "Russian",
-      "Chinese",
-      "Japanese"
+      "Slovak",
+      "Slovenian",
+      "Spanish",
+      "Swedish",
+      "Thai",
+      "Turkish",
+      "Ukrainian",
+      "Vietnamese"
     ],
     "file_formats_in": [
       "DXF",
@@ -1701,15 +1726,12 @@ export const c1Tools: Tool[] = [
     "release_notes_url": "https://nanocad.com/products/nanocad-platform/",
     "languages": [
       "English",
-      "Russian",
-      "German",
-      "French",
       "Spanish",
+      "French",
+      "German",
       "Portuguese",
-      "Italian",
-      "Chinese",
-      "Japanese",
-      "Korean"
+      "Korean",
+      "Chinese (Simplified)"
     ],
     "file_formats_in": [
       "DWG",
@@ -1984,10 +2006,12 @@ export const c1Tools: Tool[] = [
       "German",
       "French",
       "Spanish",
-      "Portuguese",
+      "Czech",
+      "Polish",
+      "Hungarian",
+      "Serbian",
       "Russian",
-      "Chinese",
-      "Japanese"
+      "Chinese (Simplified)"
     ],
     "file_formats_in": [
       "DWG",
@@ -2267,35 +2291,47 @@ export const c1Tools: Tool[] = [
     "release_notes_url": "https://github.com/LibreCAD/LibreCAD/releases",
     "languages": [
       "English",
-      "German",
-      "French",
-      "Spanish",
-      "Italian",
-      "Portuguese",
-      "Russian",
-      "Chinese",
-      "Japanese",
-      "Korean",
       "Arabic",
-      "Dutch",
-      "Polish",
-      "Turkish",
+      "Catalan",
       "Czech",
-      "Hungarian",
-      "Romanian",
-      "Swedish",
       "Danish",
-      "Norwegian",
-      "Finnish",
+      "German",
       "Greek",
+      "Estonian",
+      "Basque",
+      "Finnish",
+      "French",
+      "Galician",
       "Hebrew",
       "Hindi",
+      "Hungarian",
       "Indonesian",
-      "Malay",
+      "Italian",
+      "Japanese",
+      "Georgian",
+      "Korean",
+      "Lao",
+      "Latvian",
+      "Macedonian",
+      "Dutch",
+      "Norwegian",
+      "Punjabi",
+      "Polish",
+      "Portuguese",
+      "Portuguese (Brazil)",
+      "Romanian",
+      "Russian",
+      "Slovak",
+      "Slovenian",
+      "Albanian",
+      "Serbian",
+      "Swedish",
+      "Tamil",
       "Thai",
-      "Vietnamese",
+      "Turkish",
       "Ukrainian",
-      "Bulgarian"
+      "Chinese (Simplified)",
+      "Chinese (Traditional)"
     ],
     "file_formats_in": [
       "DXF",
@@ -2508,31 +2544,6 @@ export const c1Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting (SDK / Ruby)",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows / macOS Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -2770,14 +2781,18 @@ export const c1Tools: Tool[] = [
     "discontinued_note": "CorelCAD has been pulled from sale and reached end-of-support. Corel directs former users to Graebert ARES Commander.",
     "languages": [
       "English",
-      "French",
       "German",
       "Spanish",
+      "Czech",
+      "French",
       "Italian",
-      "Portuguese",
+      "Polish",
+      "Brazilian Portuguese",
       "Russian",
+      "Turkish",
       "Japanese",
-      "Chinese",
+      "Simplified Chinese",
+      "Traditional Chinese",
       "Korean"
     ],
     "file_formats_in": [
@@ -3469,31 +3484,6 @@ export const c1Tools: Tool[] = [
           {
             "name": "Batch Processing & Scripting",
             "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows / macOS / Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
           }
         ]
       }
@@ -3677,19 +3667,7 @@ export const c1Tools: Tool[] = [
         "category": "Deployment & Enterprise Workflow",
         "items": [
           {
-            "name": "Windows / Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
             "name": "Macro API for Automated Drafting",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
