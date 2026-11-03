@@ -33,7 +33,7 @@ export const c7Tools: Tool[] = [
       "High-end Jewelers"
     ],
     "official_url": "https://www.gemvision.com/matrixgold",
-    "pricing_url": "https://www.stuller.com/services/custom-jewelry-design-services/3d-jewelry-design-software/matrixgold",
+    "pricing_url": "https://www.gemvision.com/matrixgold",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -49,7 +49,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is MatrixGold used for?",
-        "a": "MatrixGold combines the top features of Matrix and RhinoGold with a simplified interface to provide a powerful 3D jewelry design experience. It is widely used across Jewelry Design, Manufacturing for Jewelry Design, Parametric Gem placement, Ring Builders."
+        "a": "MatrixGold is jewellery CAD: parametric ring and setting builders, a gem and mounting library, and render studio output, all on top of Rhino. It is built for custom jewellery workflows — size, stone and metal selection drive the model — rather than for general product design, which is why Stuller sells and supports it."
       },
       {
         "q": "How much does MatrixGold cost?",
@@ -65,7 +65,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MatrixGold support?",
-        "a": "MatrixGold imports 3DM, STEP, STL, OBJ and exports 3DM, STL, 3MF, Renderings (PNG, MP4), Job bag reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "MatrixGold is Rhino-based, so its native document is .3dm and it reads 3DM, STEP, STL and OBJ geometry. Output is what a jeweller needs to make the piece: STL and 3MF for printing or milling, 3DM and OBJ for further modelling, and PNG or MP4 for presentation. It writes no general CAD format beyond those, and the parametric tools are jewellery-specific rather than mechanical."
       },
       {
         "q": "What are the best alternatives to MatrixGold?",
@@ -73,13 +73,14 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Rhino 7 + Custom",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "engine": "Rhino 7 with MatrixGold jewellery tooling",
+      "multicore": "Multi-threaded Rhino display and mesh operations",
+      "gpu_optimization": "Rhino display pipeline; rendering accel depends on the renderer chosen",
       "standards": [
         "STL",
+        "3MF",
         "OBJ",
-        "3DM"
+        "STEP"
       ]
     },
     "pricing_tiers": [
@@ -129,8 +130,9 @@ export const c7Tools: Tool[] = [
       "3DM",
       "STL",
       "3MF",
-      "Renderings (PNG, MP4)",
-      "Job bag reports"
+      "OBJ",
+      "PNG",
+      "MP4"
     ],
     "alternatives": [
       "rhino-3d",
@@ -190,7 +192,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is AVEVA Marine used for?",
-        "a": "AVEVA Marine combines engineering and design for the world's most complex ships and offshore platforms. It is widely used across Shipbuilding, Oil & Gas for Hull Design, Outfitting, 3D Collaborative Environment."
+        "a": "AVEVA Marine is shipbuilding engineering: hull form and structure, outfitting across piping, HVAC and cable trays, and the production output a yard needs — drawings, nesting and cutting data. It is a discipline-specific plant/marine design system on the AVEVA E3D platform, so it assumes project-scale data management and specialised IT rather than desktop use."
       },
       {
         "q": "How much does AVEVA Marine cost?",
@@ -206,7 +208,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AVEVA Marine support?",
-        "a": "AVEVA Marine imports STEP, IGES, DWG, DGN, AVEVA RVM, Tribon and exports AVEVA RVM, Production Drawings (DWG, PDF), CNC Plate Cutting Code, BOM. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "AVEVA Marine exchanges geometry through STEP and IGES, drawings through DWG and DXF, and publishes the whole 3D model as AVEVA RVM for review and clash sessions. Legacy Tribon data is readable because the product line descends from it, and DGN covers older drawing archives. Output leans to production: general-arrangement and fabrication drawings, plate nesting, NC cutting data and a bill of materials rather than a single CAD deliverable."
       },
       {
         "q": "What are the best alternatives to AVEVA Marine?",
@@ -214,91 +216,100 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "AVEVA E3D",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "engine": "AVEVA E3D / Marine design platform",
+      "multicore": "Not applicable",
+      "gpu_optimization": "DirectX workstation graphics for the 3D model view",
       "standards": [
+        "ISO 15926",
         "STEP",
-        "IFC",
-        "SAT"
+        "IGES"
       ]
     },
     "expert_verdict": "The undisputed king of heavy-duty maritime engineering.",
     "quote_only": true,
     "file_formats_in": [
+      "AVEVA RVM",
       "STEP",
       "IGES",
       "DWG",
+      "DXF",
       "DGN",
-      "AVEVA RVM",
       "Tribon"
     ],
     "file_formats_out": [
       "AVEVA RVM",
-      "Production Drawings (DWG, PDF)",
-      "CNC Plate Cutting Code",
-      "BOM"
+      "DWG",
+      "DXF",
+      "PDF",
+      "STEP",
+      "IGES",
+      "BOM (CSV)"
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Hull & Structure",
         "items": [
           {
-            "name": "Hull Design",
+            "name": "Hull form design",
             "status": true
           },
           {
-            "name": "Outfitting",
+            "name": "Plate and stiffener modelling",
             "status": true
           },
           {
-            "name": "3D Collaborative Environment",
-            "status": true
-          },
-          {
-            "name": "Project Management",
+            "name": "Block subdivision and assembly",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Outfitting",
         "items": [
           {
-            "name": "Native STEP / IGES / DWG Import Pipeline",
+            "name": "Pipe routing",
             "status": true
           },
           {
-            "name": "Precision AVEVA RVM / Production Drawings (DWG, PDF) / CNC Plate Cutting Code Export & Publishing",
+            "name": "HVAC and cable tray routing",
             "status": true
           },
           {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
+            "name": "Equipment arrangement",
             "status": true
           }
         ]
       },
       {
-        "category": "Deployment & Enterprise Workflow",
+        "category": "Production Output",
         "items": [
           {
-            "name": "Windows Runtime Support",
+            "name": "Production drawings",
             "status": true
           },
           {
-            "name": "Unit & Coordinate System Calibration",
+            "name": "Plate nesting and NC cutting data",
             "status": true
           },
           {
-            "name": "Automated Quality & Geometry Verification",
+            "name": "Bill of materials",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability",
+        "items": [
+          {
+            "name": "STEP and IGES import",
             "status": true
           },
           {
-            "name": "Team Collaboration & Revision Handoff",
+            "name": "DWG and DXF exchange",
+            "status": true
+          },
+          {
+            "name": "AVEVA RVM export for review",
             "status": true
           }
         ]
@@ -369,7 +380,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is CLO 3D used for?",
-        "a": "CLO is a 3D fashion design software that creates virtual, true-to-life garment visualizations with cutting-edge simulation technologies. It is widely used across Fashion, Apparel, Gaming for 3D Garment Design, Fabric Simulation, Virtual Fitting."
+        "a": "CLO is 3D garment design built on real pattern cutting: you draft or import 2D patterns, sew them in 3D, simulate fabric and check fit before a sample is made. That combination of pattern data and cloth simulation is why it is used for apparel production rather than only for visualisation, and why it exports AAMA/ASTM pattern files as readily as meshes."
       },
       {
         "q": "How much does CLO 3D cost?",
@@ -385,7 +396,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CLO 3D support?",
-        "a": "CLO 3D imports DXF-AAMA, DXF-ASTM, OBJ, FBX, glTF, AI, PDF and exports OBJ, FBX, glTF, USD, ZPrj, DXF-AAMA, PDF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "CLO works from 2D patterns, so the important interchange is the pattern standard: DXF-AAMA and DXF-ASTM in and out, which is how it talks to grading and CAD pattern systems. Geometry and animation move through OBJ, FBX, glTF, USD and Alembic, and Illustrator (AI) or PDF files come in as reference artwork. The .zprj project file stays inside CLO — it is not an exchange format."
       },
       {
         "q": "What are the best alternatives to CLO 3D?",
@@ -393,13 +404,15 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "CLO Simulation Engine",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "engine": "CLO cloth simulation engine",
+      "multicore": "Multi-threaded cloth simulation",
+      "gpu_optimization": "GPU-accelerated simulation and real-time garment preview",
       "standards": [
         "DXF-ASTM",
+        "DXF-AAMA",
         "OBJ",
-        "FBX"
+        "FBX",
+        "USD"
       ]
     },
     "expert_verdict": "Transforming the fashion industry by digitizing the entire sampling process.",
@@ -450,16 +463,17 @@ export const c7Tools: Tool[] = [
       "FBX",
       "glTF",
       "AI",
-      "PDF"
+      "PDF",
+      "USD"
     ],
     "file_formats_out": [
       "OBJ",
       "FBX",
       "glTF",
       "USD",
-      "ZPrj",
+      "Alembic (ABC)",
       "DXF-AAMA",
-      "PDF"
+      "DXF-ASTM"
     ],
     "alternatives": [
       "marvelous-designer",
@@ -586,7 +600,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Infraworks used for?",
-        "a": "Autodesk InfraWorks is a conceptual design platform for civil infrastructure. It enables rapid 3D modeling of terrain, roads, bridges, and urban environments, supporting preliminary design and stakeholder communication for transportation and site planning. It is widely used across Civil Engineering, Infrastructure, Transportation for Conceptual Design, Infrastructure Planning, Context Modeling."
+        "a": "InfraWorks is conceptual infrastructure design: assemble a corridor, bridge or site model at city scale on real map and terrain context, then test alternatives quickly. It is deliberately not a detailed engineering tool — its job is to make options visible and comparable before the design moves into Civil 3D."
       },
       {
         "q": "How much does Infraworks cost?",
@@ -602,7 +616,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Infraworks support?",
-        "a": "Infraworks imports IMX, Civil 3D (DWG), Revit (RVT), SHP, SDF, CityGML, LAS, LAZ, FBX, OBJ, SKP and exports IMX, FBX, OBJ, DWG, LandXML. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "InfraWorks builds on IMX, its own model format, and pulls context in from DWG, RVT, SHP, SDF, CityGML, LAS/LAZ point clouds and FBX, OBJ or SKP models. Outbound it writes IMX plus FBX, OBJ and DAE for visualisation and downstream tools. It does not write DWG — detailed design belongs in Civil 3D, which reads the IMX model rather than receiving a drawing."
       },
       {
         "q": "What are the best alternatives to Infraworks?",
@@ -610,16 +624,20 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk Infrastructure Model Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Autodesk InfraWorks model engine",
+      "multicore": "Multi-threaded model generation and tile building",
+      "gpu_optimization": "DirectX 11 GPU required for 3D model display",
+      "standards": [
+        "IMX",
+        "LandXML",
+        "CityGML"
+      ]
     },
     "expert_verdict": "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
     "file_formats_in": [
       "IMX",
-      "Civil 3D (DWG)",
-      "Revit (RVT)",
+      "DWG",
+      "RVT",
       "SHP",
       "SDF",
       "CityGML",
@@ -633,8 +651,7 @@ export const c7Tools: Tool[] = [
       "IMX",
       "FBX",
       "OBJ",
-      "DWG",
-      "LandXML"
+      "DAE"
     ],
     "alternatives": [
       "civil-3d",
@@ -762,7 +779,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is 3ds Max used for?",
-        "a": "Autodesk 3ds Max is a professional 3D modeling, animation, and rendering application widely used in games, film, visual effects, and architectural visualization. It offers advanced polygon modeling, character rigging, particle systems, and integration with Arnold and V-Ray renderers. It is widely used across Architecture, Game Development, Film & VFX for Architectural Visualization, 3D Modeling, Texture Mapping."
+        "a": "3ds Max is a general-purpose modelling, animation and rendering package used for archviz, game assets, film and product shots. It is strongest where a scene has to be assembled and lit rather than engineered: modifier stacks, a large third-party plugin ecosystem, and Arnold bundled for rendering. It is not parametric — precise mechanical work belongs in CAD."
       },
       {
         "q": "How much does 3ds Max cost?",
@@ -778,7 +795,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does 3ds Max support?",
-        "a": "3ds Max imports MAX, FBX, OBJ, DWG, DXF, 3DS, STEP, IGES, SAT, SKP, glTF, ABC, USD and exports MAX, FBX, OBJ, DWG, DXF, 3DS, glTF, GLB, USD, USDZ, STL, ABC. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "3ds Max keeps scenes in .max and exchanges geometry through FBX, OBJ, USD, Alembic, glTF, 3DS and STL, with DWG, DXF and SKP for CAD and SketchUp input. It does not read STEP, IGES or SAT natively — those arrive only through a third-party translator, and the same is true of most CAD-native formats. Renders come out as EXR or other image formats via Arnold."
       },
       {
         "q": "What are the best alternatives to 3ds Max?",
@@ -786,10 +803,15 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Nitrous Viewport / Arnold",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Nitrous viewport with Arnold as the bundled renderer",
+      "multicore": "Multi-threaded modifiers, simulation and Arnold rendering",
+      "gpu_optimization": "DirectX Nitrous viewport; Arnold GPU via OptiX / CUDA",
+      "standards": [
+        "FBX",
+        "USD",
+        "Alembic",
+        "OpenEXR"
+      ]
     },
     "expert_verdict": "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
     "file_formats_in": [
@@ -799,12 +821,10 @@ export const c7Tools: Tool[] = [
       "DWG",
       "DXF",
       "3DS",
-      "STEP",
-      "IGES",
-      "SAT",
+      "STL",
       "SKP",
       "glTF",
-      "ABC",
+      "Alembic (ABC)",
       "USD"
     ],
     "file_formats_out": [
@@ -814,12 +834,11 @@ export const c7Tools: Tool[] = [
       "DWG",
       "DXF",
       "3DS",
+      "STL",
       "glTF",
-      "GLB",
       "USD",
       "USDZ",
-      "STL",
-      "ABC"
+      "Alembic (ABC)"
     ],
     "alternatives": [
       "maya",
@@ -912,7 +931,7 @@ export const c7Tools: Tool[] = [
         ]
       }
     ],
-    "country": "USA / Germany (Maxon)",
+    "country": "Germany",
     "category_id": "c7",
     "pricing_type": "Subscription",
     "starting_price": 399,
@@ -947,7 +966,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is ZBrush used for?",
-        "a": "ZBrush, from Maxon, is the industry-standard digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel. It is widely used across Game Development, Film & VFX, Character Art for Digital Sculpting, High-poly Modeling, Texturing."
+        "a": "ZBrush is a digital sculpting tool: it works on very dense meshes rather than parametric solids, which is why it dominates character, creature and organic asset work in games and film. DynaMesh and ZRemesher let a sculptor keep adding form without managing topology, and PolyPaint puts colour on the surface. Precise, dimension-driven parts belong in CAD."
       },
       {
         "q": "How much does ZBrush cost?",
@@ -963,7 +982,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ZBrush support?",
-        "a": "ZBrush imports ZTL, ZPR, OBJ, FBX, MA, STL, PLY and exports ZTL, ZPR, OBJ, FBX, STL, VRML, Displacement & Normal Maps (EXR, TIFF). Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "ZBrush stores sculpts as .ztl and sessions as .zpr, and moves geometry through OBJ, FBX, STL and PLY — OBJ being the usual bridge to and from other DCC tools, and GoZ automating the round trip with Maya, Max, Blender and Modo. It also writes displacement and normal maps as EXR or TIFF, and VRML for legacy pipelines. It reads no CAD format and produces no engineering geometry."
       },
       {
         "q": "What are the best alternatives to ZBrush?",
@@ -971,10 +990,15 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Pixol 2.5D / DynaMesh / ZRemesher Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Pixol with DynaMesh and ZRemesher",
+      "multicore": "Multi-threaded subdivision and decimation; brush strokes are largely single-threaded",
+      "gpu_optimization": "CPU sculpting; GPU used for some rendering and plugin paths",
+      "standards": [
+        "OBJ",
+        "FBX",
+        "STL",
+        "PLY"
+      ]
     },
     "expert_verdict": "A high-fidelity digital sculpting tool for organic character creation, widely used in games and film.",
     "file_formats_in": [
@@ -982,7 +1006,6 @@ export const c7Tools: Tool[] = [
       "ZPR",
       "OBJ",
       "FBX",
-      "MA",
       "STL",
       "PLY"
     ],
@@ -992,8 +1015,10 @@ export const c7Tools: Tool[] = [
       "OBJ",
       "FBX",
       "STL",
+      "PLY",
       "VRML",
-      "Displacement & Normal Maps (EXR, TIFF)"
+      "EXR",
+      "TIFF"
     ],
     "alternatives": [
       "blender",
@@ -1108,7 +1133,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is KeyShot used for?",
-        "a": "KeyShot, from Luxion, is a real-time ray-tracing renderer for product visualization and industrial design. It imports CAD geometry directly and provides physically accurate materials, lighting, and studio environments with drag-and-drop simplicity. It is widely used across Product Design, Manufacturing, Marketing for Real-time Rendering, Product Visualization, Scientific Accuracy."
+        "a": "KeyShot is a product-visualisation renderer: import a CAD model, apply materials and lighting, and get a photoreal still or animation without leaving the application. Real-time ray tracing is the point — the viewport is the render — and the material graph, HDRI editor and animation timeline cover most industrial design review work. Geometry stays as imported; modelling happens in CAD."
       },
       {
         "q": "How much does KeyShot cost?",
@@ -1124,7 +1149,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does KeyShot support?",
-        "a": "KeyShot imports STEP, IGES, Parasolid, OBJ, FBX, 3DM, SLDPRT, SLDASM, IPT, IAM, PRT, CATPart, SKP, GLTF, USD and exports PNG, JPG, EXR, TIFF, PSD, GLTF, GLB, USDZ, MP4, AVI. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "KeyShot reads CAD directly rather than asking for a mesh — STEP, IGES and Parasolid, plus native SolidWorks, Inventor, Creo, NX and CATIA parts, and polygon/scene formats such as 3DM, SKP, OBJ, FBX, glTF and USD. It writes images (PNG, JPG, TIFF, EXR, PSD), animations (MP4, AVI), and 3D output in USD, USDZ or glTF when you need to hand the shaded scene on. It is not a modelling tool, so nothing round-trips back into CAD."
       },
       {
         "q": "What are the best alternatives to KeyShot?",
@@ -1132,40 +1157,46 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Luxion CPU/GPU Ray-Tracing Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "KeyShot real-time ray tracer (CPU and GPU modes)",
+      "multicore": "CPU mode scales across all cores; GPU mode uses RT cores",
+      "gpu_optimization": "Hardware ray tracing via OptiX / DX12, plus a CPU fallback",
+      "standards": [
+        "STEP",
+        "IGES",
+        "Parasolid",
+        "USD",
+        "glTF"
+      ]
     },
     "expert_verdict": "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
     "file_formats_in": [
       "STEP",
       "IGES",
       "Parasolid",
-      "OBJ",
-      "FBX",
-      "3DM",
       "SLDPRT",
       "SLDASM",
       "IPT",
       "IAM",
-      "PRT",
       "CATPart",
+      "PRT (Creo / NX)",
+      "3DM",
       "SKP",
-      "GLTF",
+      "OBJ",
+      "FBX",
+      "glTF",
       "USD"
     ],
     "file_formats_out": [
       "PNG",
       "JPG",
-      "EXR",
       "TIFF",
+      "EXR",
       "PSD",
-      "GLTF",
-      "GLB",
-      "USDZ",
       "MP4",
-      "AVI"
+      "AVI",
+      "USD",
+      "USDZ",
+      "glTF"
     ],
     "alternatives": [
       "v-ray",
@@ -1292,7 +1323,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Lumion used for?",
-        "a": "Lumion, from Act-3D, is an architectural visualization tool that turns 3D CAD and BIM models into photorealistic images, videos, and 360 panoramas. It features a large asset library, weather effects, and real-time preview for fast iteration. It is widely used across Architecture, Landscape Design, Urban Planning for Architectural Rendering, Landscape Design, Cinematic Animation."
+        "a": "Lumion is architectural visualisation for people who are not renderers: drop in a building model, dress it with the built-in library of trees, people, cars and materials, and produce walkthrough video or stills quickly. It trades physical accuracy for speed and is built around a GPU-heavy real-time viewport."
       },
       {
         "q": "How much does Lumion cost?",
@@ -1308,7 +1339,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Lumion support?",
-        "a": "Lumion imports DAE, SKP, FBX, DWG, DXF, 3DS, OBJ, MAX, IFC and exports MP4, PNG, JPG, BMP, TGA, VR Panorama (360). Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Lumion imports scene geometry — FBX, OBJ, DAE, SKP, 3DS, STL — plus DWG and DXF for site context, and can pull a model live from Revit, SketchUp, Rhino or ArchiCAD through LiveSync instead of exporting at all. Output is visual: MP4 video, PNG/JPG/BMP/TGA stills and 360° panoramas. It has no CAD writer, so a Lumion scene never becomes a deliverable model."
       },
       {
         "q": "What are the best alternatives to Lumion?",
@@ -1316,22 +1347,27 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Lumion Proprietary Ray-Tracing Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Lumion real-time renderer",
+      "multicore": "Multi-threaded scene preparation; rendering is GPU-bound",
+      "gpu_optimization": "Discrete GPU required; hardware ray tracing in recent versions",
+      "standards": [
+        "FBX",
+        "OBJ",
+        "DAE",
+        "SKP"
+      ]
     },
     "expert_verdict": "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
     "file_formats_in": [
+      "FBX",
+      "OBJ",
       "DAE",
       "SKP",
-      "FBX",
+      "3DS",
       "DWG",
       "DXF",
-      "3DS",
-      "OBJ",
-      "MAX",
-      "IFC"
+      "STL",
+      "LiveSync (Revit / SketchUp / Rhino / ArchiCAD)"
     ],
     "file_formats_out": [
       "MP4",
@@ -1339,7 +1375,7 @@ export const c7Tools: Tool[] = [
       "JPG",
       "BMP",
       "TGA",
-      "VR Panorama (360)"
+      "360 panorama (image)"
     ],
     "alternatives": [
       "twinmotion",
@@ -1467,7 +1503,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Enscape used for?",
-        "a": "Enscape, from Chaos, is a real-time rendering and virtual reality plugin that integrates directly into Revit, SketchUp, Rhino, and Archicad. It provides instant visual feedback, asset libraries, and one-click VR export for architectural design review. It is widely used across Architecture, Interior Design, Construction for Real-time Walkthrough, VR Integration, Plugin Workflow."
+        "a": "Enscape is a real-time renderer that lives inside your CAD or BIM tool: the model you are editing is the model you see rendered, with no export step. That makes it a review and client-presentation tool rather than a production renderer — walkthroughs, VR sessions, panorama links and quick stills. Image quality trails offline path tracers, and performance follows the host model."
       },
       {
         "q": "How much does Enscape cost?",
@@ -1483,7 +1519,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Enscape support?",
-        "a": "Enscape imports Revit, SketchUp, Rhino, ArchiCAD, Vectorworks and exports Standalone EXE, Web Standalone, PNG, JPG, EXR, MP4, 360 Panorama. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Enscape has no importer of its own — it runs inside Revit, SketchUp, Rhino, ArchiCAD or Vectorworks and renders that application's live model, so the \"input\" is the host file (RVT, SKP, 3DM, PLN, VWX) rather than an exchange format. Output is images (PNG, JPG, EXR), MP4 video, 360° panoramas, and either a standalone EXE viewer or a web standalone for clients. Nothing it produces is a CAD file."
       },
       {
         "q": "What are the best alternatives to Enscape?",
@@ -1491,27 +1527,32 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "N/A",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Enscape real-time renderer (host-integrated)",
+      "multicore": "Rendering runs on the GPU; CPU handles host CAD work",
+      "gpu_optimization": "Real-time GPU rasterisation with hardware ray tracing",
+      "standards": [
+        "RVT",
+        "SKP",
+        "3DM",
+        "PLN"
+      ]
     },
     "expert_verdict": "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
     "file_formats_in": [
-      "Revit",
-      "SketchUp",
-      "Rhino",
-      "ArchiCAD",
-      "Vectorworks"
+      "RVT (Revit)",
+      "SKP (SketchUp)",
+      "3DM (Rhino)",
+      "PLN (ArchiCAD)",
+      "VWX (Vectorworks)"
     ],
     "file_formats_out": [
-      "Standalone EXE",
-      "Web Standalone",
       "PNG",
       "JPG",
       "EXR",
       "MP4",
-      "360 Panorama"
+      "360 panorama (image)",
+      "EXE (standalone viewer)",
+      "HTML (web standalone)"
     ],
     "alternatives": [
       "twinmotion",
@@ -1639,7 +1680,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Twinmotion used for?",
-        "a": "Twinmotion, from Epic Games, is a real-time visualization tool built on Unreal Engine. It enables architects and construction professionals to create high-quality renderings, panoramas, and VR experiences from CAD and BIM data with an intuitive interface. It is widely used across Architecture, Landscape Design, Real Estate for Real-time Visualization, Unreal Engine Core, Easy UI."
+        "a": "Twinmotion is Epic's real-time visualisation tool for architecture and construction, built on Unreal Engine 5 and aimed at people who are not 3D artists. Lumen lighting and Nanite geometry do the heavy lifting, and the value is speed: import a model, dress it, and produce presentation stills, video or a linked cloud walkthrough the same day."
       },
       {
         "q": "How much does Twinmotion cost?",
@@ -1655,7 +1696,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Twinmotion support?",
-        "a": "Twinmotion imports FBX, SKP, OBJ, DATASMITH, glTF, C4D, 3DS, DAE, IFC and exports MP4, PNG, EXR, Twinmotion Cloud, Panoramic 360, EXE. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Twinmotion takes scene geometry through FBX, OBJ, glTF, SKP, C4D, 3DS and DAE, and prefers Datasmith when the source is a CAD or BIM package because it carries hierarchy and metadata. It exports images and video — MP4, PNG, EXR, 360° panoramas — plus a standalone EXE viewer or a cloud presentation link. It does not write CAD formats; geometry flows one way, in."
       },
       {
         "q": "What are the best alternatives to Twinmotion?",
@@ -1663,30 +1704,34 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Unreal Engine 5 (Lumen / Nanite)",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Unreal Engine 5 (Lumen, Nanite)",
+      "multicore": "Scene prep is multi-threaded; rendering is GPU-bound",
+      "gpu_optimization": "DirectX 12 GPU required; Lumen software/hardware ray tracing",
+      "standards": [
+        "FBX",
+        "glTF",
+        "Datasmith",
+        "SKP"
+      ]
     },
     "expert_verdict": "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
     "file_formats_in": [
       "FBX",
-      "SKP",
       "OBJ",
-      "DATASMITH",
       "glTF",
+      "SKP",
       "C4D",
       "3DS",
       "DAE",
-      "IFC"
+      "Datasmith"
     ],
     "file_formats_out": [
       "MP4",
       "PNG",
       "EXR",
-      "Twinmotion Cloud",
-      "Panoramic 360",
-      "EXE"
+      "360 panorama (image)",
+      "EXE (standalone viewer)",
+      "Cloud presentation (link)"
     ],
     "alternatives": [
       "lumion",
@@ -1746,8 +1791,8 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CuraEngine",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "OpenGL preview",
+      "multicore": "CuraEngine slices across multiple CPU threads",
+      "gpu_optimization": "OpenGL for the 3D preview only — slicing is CPU-bound",
       "standards": [
         "STL",
         "3MF",
@@ -1759,7 +1804,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is UltiMaker Cura used for?",
-        "a": "UltiMaker Cura is the dominant free, open-source slicer for FDM/FFF 3D printing — supports 400+ printer profiles out of the box, scripting via post-processing plugins, and a marketplace of third-party material profiles. It is widely used across Maker, Education, Manufacturing for 400+ printer profiles out of the box, Tree, normal, and Cura Engine support generation, Marketplace for plugins and material profiles."
+        "a": "Cura is the slicing step of FDM printing: it takes a mesh, orients it, generates supports, slices it into toolpaths and writes the G-code a printer executes. CuraEngine is fast enough for full build plates, and 400+ bundled machine profiles plus a plugin marketplace are why it became the default first slicer for hobby, education and light production use. It is not a modelling tool — geometry still comes from CAD or a sculpting app."
       },
       {
         "q": "How much does UltiMaker Cura cost?",
@@ -1775,7 +1820,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does UltiMaker Cura support?",
-        "a": "UltiMaker Cura imports STL, 3MF, OBJ, AMF and exports G-Code, 3MF, UFP. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Cura opens STL, 3MF, OBJ and X3D meshes, and can also read a raster image as a height map. It writes G-code for the printer, a UFP package for UltiMaker machines, a 3MF project that carries settings alongside the geometry, and STL when you want the mesh back out. It does not read STEP, IGES or any native CAD format — CAD has to be exported to a mesh first. Nothing in Cura produces a CAD file, so treat it as the last step of the chain rather than a converter."
       },
       {
         "q": "What are the best alternatives to UltiMaker Cura?",
@@ -1862,12 +1907,13 @@ export const c7Tools: Tool[] = [
       "STL",
       "3MF",
       "OBJ",
-      "AMF"
+      "X3D"
     ],
     "file_formats_out": [
-      "G-Code",
-      "3MF",
-      "UFP"
+      "G-code",
+      "UFP",
+      "3MF (project)",
+      "STL"
     ],
     "pricing_tiers": [
       {
@@ -1934,13 +1980,14 @@ export const c7Tools: Tool[] = [
       "Cloud features tied to Prusa Connect"
     ],
     "tech_specs": {
-      "engine": "PrusaSlicer (Slic3r-derived)",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "OpenGL",
+      "engine": "PrusaSlicer (Slic3r-derived) slicing core",
+      "multicore": "Multi-threaded slicing core",
+      "gpu_optimization": "OpenGL preview only; slicing itself is CPU-bound",
       "standards": [
         "STL",
+        "STEP",
         "3MF",
-        "OBJ",
+        "AMF",
         "G-code"
       ]
     },
@@ -1948,7 +1995,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is PrusaSlicer used for?",
-        "a": "PrusaSlicer is Prusa Research's open-source slicer, originally a Slic3r fork, now the slicer with the fastest pace of innovation — Organic Supports, ironing, multi-material with Prusa MMU, and SLA support. It is widely used across Maker, Education, Manufacturing for Organic / tree supports with industry-best quality, FDM and SLA / DLP slicing in one app, Multi-material with MMU and toolchanger support."
+        "a": "PrusaSlicer is Prusa Research's open-source slicer for FDM and mSLA printers. It grew out of Slic3r and is where Organic Supports, paint-on multi-material and the STEP-import workflow appeared first, with a mature 2.9.x stable line and a 3.0 alpha that rebuilds the interface and architecture. It targets Prusa hardware first but ships profiles for a wide range of other machines."
       },
       {
         "q": "How much does PrusaSlicer cost?",
@@ -1964,7 +2011,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PrusaSlicer support?",
-        "a": "PrusaSlicer imports STL, 3MF, OBJ, STEP, AMF and exports G-Code, 3MF, SL1, Toolpath preview. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "PrusaSlicer imports STL, STEP, 3MF, OBJ and AMF — the vendor lists exactly those five — with STEP support added in 2.5.0 and a tessellation-precision dialog on import. It writes G-code in plain or binary .bgcode form, saves a whole plate as a 3MF project, re-exports STL, OBJ or AMF when you need the mesh back, and produces SL1 files for resin printers. There is no CAD export path: it slices geometry, it does not convert between CAD formats."
       },
       {
         "q": "What are the best alternatives to PrusaSlicer?",
@@ -2049,16 +2096,19 @@ export const c7Tools: Tool[] = [
     ],
     "file_formats_in": [
       "STL",
+      "STEP",
       "3MF",
       "OBJ",
-      "STEP",
       "AMF"
     ],
     "file_formats_out": [
-      "G-Code",
-      "3MF",
-      "SL1",
-      "Toolpath preview"
+      "G-code (.gcode)",
+      "G-code (.bgcode)",
+      "3MF (project)",
+      "STL",
+      "OBJ",
+      "AMF",
+      "SL1"
     ],
     "pricing_tiers": [
       {
@@ -2125,13 +2175,14 @@ export const c7Tools: Tool[] = [
       "Multi-material on non-Bambu printers needs manual setup"
     ],
     "tech_specs": {
-      "engine": "Bambu Studio (PrusaSlicer fork)",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "OpenGL",
+      "engine": "Bambu Studio (PrusaSlicer-derived core)",
+      "multicore": "Multi-threaded slicing core",
+      "gpu_optimization": "OpenGL preview and printer camera streams; slicing is CPU-bound",
       "standards": [
-        "STL",
         "3MF",
-        "OBJ",
+        "STL",
+        "STEP",
+        "AMF",
         "G-code"
       ]
     },
@@ -2139,7 +2190,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Bambu Studio used for?",
-        "a": "Bambu Studio is the slicer for Bambu Lab's high-speed CoreXY 3D printers — a PrusaSlicer fork tuned for very high accelerations, AMS multi-color, and cloud-connected workflows. Free and increasingly multi-vendor. It is widely used across Maker, Education, Manufacturing for High-speed printer profiles (X1, P1, A1 series), AMS multi-color and multi-material slicing, Input shaping and pressure advance calibration."
+        "a": "Bambu Studio is Bambu Lab's PrusaSlicer fork, tuned for its high-speed CoreXY printers: input shaping, flow calibration, AMS multi-colour and cloud job dispatch around a 3MF project workflow. It is open source and works with other vendors' machines, though the shipped defaults still assume Bambu hardware."
       },
       {
         "q": "How much does Bambu Studio cost?",
@@ -2155,7 +2206,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Bambu Studio support?",
-        "a": "Bambu Studio imports STL, 3MF, STEP, OBJ and exports Bambu 3MF, G-Code, Timelapse video. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Bambu Studio accepts 3MF, STL, STEP, AMF, OBJ and SVG — the vendor's quick-start lists .3mf .stl .stp .step .amf .obj, and the import dialog adds SVG for embossing. Out goes a sliced 3MF project or a G-code file for the SD card, plus STL when you want to hand the geometry on. STEP is the unusual capability for a slicer: it slices the CAD solid directly and can emit arcs instead of faceted line segments."
       },
       {
         "q": "What are the best alternatives to Bambu Studio?",
@@ -2239,15 +2290,17 @@ export const c7Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "STL",
       "3MF",
+      "STL",
       "STEP",
-      "OBJ"
+      "AMF",
+      "OBJ",
+      "SVG"
     ],
     "file_formats_out": [
-      "Bambu 3MF",
-      "G-Code",
-      "Timelapse video"
+      "3MF (project)",
+      "G-code",
+      "STL"
     ],
     "pricing_tiers": [
       {
@@ -2314,12 +2367,13 @@ export const c7Tools: Tool[] = [
       "Commercial price tag in a free-tool market"
     ],
     "tech_specs": {
-      "engine": "Simplify3D engine",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "OpenGL",
+      "engine": "Simplify3D slicing engine",
+      "multicore": "Multi-threaded slicing",
+      "gpu_optimization": "OpenGL preview only; no GPU-assisted slicing",
       "standards": [
         "STL",
         "OBJ",
+        "3MF",
         "G-code"
       ]
     },
@@ -2327,7 +2381,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Simplify3D used for?",
-        "a": "Simplify3D is a long-standing commercial FDM slicer that built its reputation on granular per-part settings, manual support placement, and stable output — now competing with rapid-evolving free slicers. It is widely used across Maker, Education, Manufacturing for Per-process slicing with stop-points, Manual support placement, Multi-extrusion management."
+        "a": "Simplify3D is the veteran paid slicer: per-part process settings, manual support placement and predictable output are its selling points, and it is still chosen where reproducibility matters more than feature velocity. It works on meshes only, with no CAD import and no cloud workflow."
       },
       {
         "q": "How much does Simplify3D cost?",
@@ -2343,7 +2397,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Simplify3D support?",
-        "a": "Simplify3D imports STL, OBJ, 3MF and exports G-Code, B3D, X3G. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Simplify3D imports STL, OBJ and 3MF meshes and writes G-code, with X3G output for MakerBot-class machines. It does not read STEP or any other CAD format, and it does not write meshes back out — the geometry you load is the geometry it slices."
       },
       {
         "q": "What are the best alternatives to Simplify3D?",
@@ -2432,8 +2486,7 @@ export const c7Tools: Tool[] = [
       "3MF"
     ],
     "file_formats_out": [
-      "G-Code",
-      "B3D",
+      "G-code",
       "X3G"
     ],
     "pricing_tiers": [
@@ -2457,7 +2510,7 @@ export const c7Tools: Tool[] = [
     "name": "Autodesk Netfabb",
     "slug": "autodesk-netfabb",
     "logo_url": "/logos/autodesk-netfabb.svg",
-    "short_desc": "Industrial additive manufacturing prep, lattice, and build-plate optimization.",
+    "short_desc": "Autodesk's additive-manufacturing build prep suite — mesh repair, packing, supports and build simulation — now sold only as Autodesk Fusion with Netfabb.",
     "description": "Autodesk Netfabb is the industrial-grade 3D-printing prep platform — used for metal AM, polymer SLS, and powder-bed fusion build-plate packing, support generation, lattice generation, and simulation of distortion.",
     "country": "USA",
     "category_id": "c7",
@@ -2495,16 +2548,18 @@ export const c7Tools: Tool[] = [
       "Distortion simulation reduces print failures"
     ],
     "cons": [
-      "Windows-only",
-      "Sold as subscription; pricey for occasional jobs",
-      "UI feels like a stack of acquired tools (legacy Materialise / Netfabb GmbH)"
+      "Netfabb Ultimate is retired — no 2026 release, no renewals, Ultimate seats frozen on 2025.1",
+      "Development ended on Selective Space Structures, Optimization Utility and Lattice Topology",
+      "Only sold bundled with Fusion, so non-Fusion shops pay for entitlements they do not use",
+      "Enterprise pricing far above slicer-class tools"
     ],
     "tech_specs": {
-      "engine": "Netfabb",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "OpenGL",
+      "engine": "Netfabb mesh engine",
+      "multicore": "Multi-threaded repair, packing and support generation",
+      "gpu_optimization": "Not applicable",
       "standards": [
         "STL",
+        "OBJ",
         "3MF",
         "AMF"
       ]
@@ -2513,7 +2568,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Autodesk Netfabb used for?",
-        "a": "Industrial additive manufacturing prep, lattice, and build-plate optimization. Autodesk Netfabb is an advanced additive manufacturing and 3D printing solution widely adopted in Aerospace, Medical, and Automotive manufacturing."
+        "a": "Netfabb is industrial build preparation: repair and boolean mesh work, packing a plate efficiently, generating supports, and simulating distortion before a metal build. Autodesk retired Netfabb Ultimate, folded most of its features into what used to be Premium, and stopped development of the Selective Space Structures, Optimization Utility and Lattice Topology tools — so what you buy now is that reduced set, delivered inside a Fusion subscription."
       },
       {
         "q": "How much does Autodesk Netfabb cost?",
@@ -2529,7 +2584,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Autodesk Netfabb support?",
-        "a": "Autodesk Netfabb imports STEP, IGES, Parasolid, STL, 3MF, CLI, SLC and exports CLI, SLC, EOS/SLM Build Files, STL, 3MF, STEP. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Netfabb works on meshes — STL, OBJ, 3MF and AMF — repairing, orienting, nesting and supporting them before it writes machine build data, slice output or G-code. It is not a CAD system and does not read STEP, so conversion to a mesh happens upstream. Since the 2025/2026 repackaging it ships as Autodesk Fusion with Netfabb, with Netfabb Local Simulation sold separately for metal powder-bed work."
       },
       {
         "q": "What are the best alternatives to Autodesk Netfabb?",
@@ -2613,66 +2668,41 @@ export const c7Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
       "STL",
+      "OBJ",
       "3MF",
-      "CLI",
-      "SLC"
+      "AMF"
     ],
     "file_formats_out": [
-      "CLI",
-      "SLC",
-      "EOS/SLM Build Files",
       "STL",
+      "OBJ",
       "3MF",
-      "STEP"
+      "AMF",
+      "G-code",
+      "Slice data"
     ],
     "pricing_tiers": [
       {
-        "name": "Netfabb Standard",
+        "name": "Autodesk Fusion with Netfabb",
         "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
+        "period": "/yr",
         "features": [
-          "Import, repair and modify meshes for additive manufacturing",
-          "Orientation analysis and manual packing",
-          "Part and platform statistics with report generation"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Netfabb Premium",
-        "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
-        "features": [
-          "Everything in Standard",
-          "Advanced build supports and automatic 3D packing",
-          "Complex lattice generation and post-processing preparation"
+          "The former Netfabb Premium feature set",
+          "Repair, orient, pack and support generation for 200+ machines",
+          "Latticing and hollowing tools",
+          "Includes an Autodesk Fusion subscription"
         ],
         "is_popular": true
       },
       {
-        "name": "Netfabb Ultimate",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Everything in Premium",
-          "Lua scripting and Netfabb Application Server automation",
-          "Advanced toolpathing and lattice optimisation"
-        ],
-        "is_popular": false
-      },
-      {
         "name": "Netfabb Local Simulation",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "/yr",
         "features": [
-          "Metal additive process simulation for DED and powder bed fusion",
-          "Distortion prediction and compensated shape export",
-          "Support-failure and recoater-interference checks"
-        ],
-        "is_popular": false
+          "Metal powder bed fusion and DED simulation",
+          "Thermo-mechanical distortion and stress prediction",
+          "Quoted by Autodesk, no published list price"
+        ]
       }
     ]
   },
@@ -2726,9 +2756,9 @@ export const c7Tools: Tool[] = [
       "No native plotter / cutter integration"
     ],
     "tech_specs": {
-      "engine": "MD Cloth Simulator",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "Yes (CUDA)",
+      "engine": "Marvelous Designer cloth solver",
+      "multicore": "Multi-threaded cloth simulation",
+      "gpu_optimization": "GPU-accelerated simulation",
       "standards": [
         "FBX",
         "OBJ",
@@ -2740,7 +2770,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Marvelous Designer used for?",
-        "a": "Marvelous Designer is the dominant 3D garment design tool in the games, film, and animation industry — and an approachable entry point for apparel designers exploring 3D before moving to CLO or Browzwear. It is widely used across Games, Film & Animation, Fashion for Pattern-based 3D garment creation, Cloth physics simulation, Avatars and animation."
+        "a": "Marvelous Designer is the entertainment-side sibling of CLO: the same cloth simulation approach, pointed at game, film and animation work instead of garment manufacturing. Designers draft patterns, sew, simulate and hand an Alembic or FBX cache to the render or game pipeline. It is weaker than CLO on production pattern grading and plotter output."
       },
       {
         "q": "How much does Marvelous Designer cost?",
@@ -2756,7 +2786,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Marvelous Designer support?",
-        "a": "Marvelous Designer imports OBJ, FBX, glTF, AI, PDF and exports OBJ, FBX, glTF, USD, ZPrj, Animation cache. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Marvelous Designer takes OBJ, FBX and glTF meshes, DXF-AAMA and DXF-ASTM pattern files, and AI or PDF artwork, then exports the simulated garment as OBJ, FBX, glTF, USD or Alembic — Alembic being what carries an animated cloth cache into a render pipeline. It shares the pattern-standard path with CLO but aims at entertainment rather than apparel production."
       },
       {
         "q": "What are the best alternatives to Marvelous Designer?",
@@ -2842,6 +2872,8 @@ export const c7Tools: Tool[] = [
       "OBJ",
       "FBX",
       "glTF",
+      "DXF-AAMA",
+      "DXF-ASTM",
       "AI",
       "PDF"
     ],
@@ -2850,8 +2882,9 @@ export const c7Tools: Tool[] = [
       "FBX",
       "glTF",
       "USD",
-      "ZPrj",
-      "Animation cache"
+      "Alembic (ABC)",
+      "DXF-AAMA",
+      "DXF-ASTM"
     ],
     "pricing_tiers": [
       {
@@ -2949,20 +2982,21 @@ export const c7Tools: Tool[] = [
       "Less control than V-Ray / Corona for advanced users"
     ],
     "tech_specs": {
-      "engine": "D5 (RTX ray-traced)",
-      "multicore": "GPU-bound",
-      "gpu_optimization": "NVIDIA RTX, DLSS",
+      "engine": "D5 Render (DXR / RTX ray tracing)",
+      "multicore": "GPU-bound; CPU handles scene IO",
+      "gpu_optimization": "NVIDIA RTX required for full features, DLSS upscaling supported",
       "standards": [
         "FBX",
         "OBJ",
-        "glTF"
+        "glTF",
+        "Alembic"
       ]
     },
     "expert_verdict": "The fastest path to good-looking architectural visuals — free tier alone makes it worth installing.",
     "faqs": [
       {
         "q": "What is D5 Render used for?",
-        "a": "Real-time ray-traced renderer for architecture, interiors, and product visualization. D5 Render is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization."
+        "a": "D5 Render is a real-time ray tracer aimed at architecture, interior and product visualisation, with a large built-in asset library and an unusually low learning curve. It leans on NVIDIA RTX hardware for ray tracing and DLSS, so a recent RTX card is effectively a requirement, and it is Windows-only."
       },
       {
         "q": "How much does D5 Render cost?",
@@ -2978,7 +3012,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does D5 Render support?",
-        "a": "D5 Render imports SKP, FBX, 3DM, ABC, OBJ, Revit, 3ds Max, Archicad, Blender, Cinema 4D and exports PNG, EXR, TIF, JPG, MP4, AVI, VR 360, Virtual Tour. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "D5 Render imports SKP, FBX, OBJ, 3DM, Alembic, glTF, DAE and 3DS, and offers live-sync plugins for SketchUp, Rhino, Revit, 3ds Max and Blender so the host model updates in place instead of being re-exported. Output is images (PNG, EXR, TIF, JPG), MP4 or AVI video, 360° panoramas and hosted virtual tours. There is no CAD export."
       },
       {
         "q": "What are the best alternatives to D5 Render?",
@@ -3064,14 +3098,12 @@ export const c7Tools: Tool[] = [
     "file_formats_in": [
       "SKP",
       "FBX",
-      "3DM",
-      "ABC",
       "OBJ",
-      "Revit",
-      "3ds Max",
-      "Archicad",
-      "Blender",
-      "Cinema 4D"
+      "3DM",
+      "ABC (Alembic)",
+      "glTF",
+      "DAE",
+      "3DS"
     ],
     "file_formats_out": [
       "PNG",
@@ -3080,8 +3112,8 @@ export const c7Tools: Tool[] = [
       "JPG",
       "MP4",
       "AVI",
-      "VR 360",
-      "Virtual Tour"
+      "360 panorama (image)",
+      "Virtual tour (link)"
     ],
     "pricing_tiers": [
       {
@@ -3160,20 +3192,21 @@ export const c7Tools: Tool[] = [
       "GPU mode still trails CPU in feature parity"
     ],
     "tech_specs": {
-      "engine": "V-Ray (CPU + GPU)",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA, RTX, OptiX",
+      "engine": "V-Ray (CPU and GPU engines)",
+      "multicore": "CPU engine scales across all cores",
+      "gpu_optimization": "CUDA, RTX and OptiX GPU rendering alongside the CPU engine",
       "standards": [
-        "FBX",
+        "USD",
         "Alembic",
-        "USD"
+        "FBX",
+        "OpenEXR"
       ]
     },
     "expert_verdict": "A professional-grade ray-tracing renderer offering unmatched photorealism and seamless integration with major CAD platforms.",
     "faqs": [
       {
         "q": "What is V-Ray used for?",
-        "a": "Chaos V-Ray — the long-standing industry-standard production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp. V-Ray is a visualization and rendering solution widely adopted in AEC, Automotive, Film & Animation."
+        "a": "V-Ray is Chaos's production renderer, and its defining trait is breadth: the same engine runs inside more than a dozen host applications, with CPU and GPU engines kept close to feature parity. It is built for shots that have to hold up at full resolution — archviz finals, product renders, VFX — rather than for quick walkthroughs."
       },
       {
         "q": "How much does V-Ray cost?",
@@ -3189,7 +3222,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does V-Ray support?",
-        "a": "V-Ray imports 3ds Max, Maya, SketchUp, Rhino, Revit, Cinema 4D, VRSCENE, OBJ, FBX and exports EXR, PNG, TIFF, JPG, VRIMG, VRSCENE. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "V-Ray is a renderer that plugs into a host application, so it does not import models itself — the host scene (3ds Max, Maya, SketchUp, Rhino, Revit, Cinema 4D and others) is what it renders. Its own exchange format is .vrscene, which can be written by any integration and rendered by V-Ray Standalone; mesh data can also come in as OBJ, FBX, Alembic or USD. Output is imagery — EXR, PNG, TIFF, JPG — plus .vrimg for raw render data."
       },
       {
         "q": "What are the best alternatives to V-Ray?",
@@ -3273,15 +3306,11 @@ export const c7Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "3ds Max",
-      "Maya",
-      "SketchUp",
-      "Rhino",
-      "Revit",
-      "Cinema 4D",
       "VRSCENE",
       "OBJ",
-      "FBX"
+      "FBX",
+      "Alembic",
+      "USD"
     ],
     "file_formats_out": [
       "EXR",
@@ -3366,10 +3395,11 @@ export const c7Tools: Tool[] = [
       "Subscription-only licensing (no perpetual buyout)"
     ],
     "tech_specs": {
-      "engine": "Corona path-tracer (CPU)",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "Unbiased CPU Path Tracing with NVIDIA / Intel GPU AI Denoising",
+      "engine": "Corona path tracer (CPU)",
+      "multicore": "Scales across all CPU cores",
+      "gpu_optimization": "CPU-only rendering; GPU used only for AI denoising",
       "standards": [
+        "OpenEXR",
         "FBX",
         "Alembic"
       ]
@@ -3378,7 +3408,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Corona Renderer used for?",
-        "a": "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows. Corona Renderer is a visualization and rendering solution widely adopted in AEC, Interior Design, Product Visualization."
+        "a": "Corona is Chaos's unbiased CPU path tracer, and its reputation rests on two things: light that behaves the way interior photographers expect with almost no tuning, and an interactive feedback loop fast enough to iterate in. It is deliberately narrower than V-Ray — 3ds Max and Cinema 4D only — and CPU-only, so GPU throughput is not on the table."
       },
       {
         "q": "How much does Corona Renderer cost?",
@@ -3394,7 +3424,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Corona Renderer support?",
-        "a": "Corona Renderer imports 3ds Max, Cinema 4D, OBJ, FBX and exports EXR, PNG, TIFF, JPG, CXR (Corona EXR). Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Corona renders the host scene in 3ds Max or Cinema 4D, so it has no importer of its own; geometry can arrive as OBJ, FBX or Alembic, and heavy assets are swapped for .cgeo Corona proxies. Output is images — EXR, PNG, TIFF, JPG — plus .cxr for Corona's own high-dynamic-range output. It writes no CAD format."
       },
       {
         "q": "What are the best alternatives to Corona Renderer?",
@@ -3478,17 +3508,18 @@ export const c7Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "3ds Max",
-      "Cinema 4D",
       "OBJ",
-      "FBX"
+      "FBX",
+      "Alembic",
+      "CGeoProxy (.cgeo)"
     ],
     "file_formats_out": [
       "EXR",
       "PNG",
       "TIFF",
       "JPG",
-      "CXR (Corona EXR)"
+      "CXR (Corona EXR)",
+      "CGeoProxy (.cgeo)"
     ],
     "pricing_tiers": [
       {
@@ -3568,20 +3599,20 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Substance Engine",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "multicore": "Multi-threaded texture baking",
+      "gpu_optimization": "GPU-accelerated baking and viewport (CUDA on Windows, Metal on macOS)",
       "standards": [
         "USD",
         "glTF",
         "FBX",
-        "OBJ"
+        "OpenEXR"
       ]
     },
     "expert_verdict": "The default PBR texturing tool of the 3D industry. Adobe pricing aside, there is no real alternative at this maturity.",
     "faqs": [
       {
         "q": "What is Adobe Substance 3D Painter used for?",
-        "a": "Adobe Substance 3D Painter is the industry-default PBR texture-painting application — used to texture characters, vehicles, environments, and products with smart materials, generators, and a non-destructive layer stack. It is widely used across Games, Film & Animation, Product Visualization, Automotive for Non-destructive PBR layer stack, Smart materials and smart masks, Procedural generators."
+        "a": "Substance 3D Painter is a PBR texture-painting tool: it projects and bakes detail onto a mesh, works in layers and masks like a 2D paint app, and writes channel-packed texture sets that engines and renderers expect. It is the reference tool for game and product texturing, and deliberately not a modelling application."
       },
       {
         "q": "How much does Adobe Substance 3D Painter cost?",
@@ -3597,7 +3628,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Adobe Substance 3D Painter support?",
-        "a": "Adobe Substance 3D Painter imports FBX, OBJ, glTF, USD, DAE, SPP and exports PNG, TIFF, EXR, TGA, PSD, glTF, USD. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Substance 3D Painter imports a mesh as FBX, OBJ, glTF, USD or DAE, paints it with procedural and baked maps, and stores the working file as .spp. Output is textures — PNG, TIFF, EXR, TGA, JPEG, PSD — packaged by an export preset, or a re-exported mesh in FBX, OBJ, glTF or USD carrying the materials. It does not author geometry."
       },
       {
         "q": "What are the best alternatives to Adobe Substance 3D Painter?",
@@ -3693,7 +3724,10 @@ export const c7Tools: Tool[] = [
       "TIFF",
       "EXR",
       "TGA",
+      "JPEG",
       "PSD",
+      "FBX",
+      "OBJ",
       "glTF",
       "USD"
     ],
@@ -3781,20 +3815,20 @@ export const c7Tools: Tool[] = [
       "Niche outside North America"
     ],
     "tech_specs": {
-      "engine": "AutoCAD or IntelliCAD",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "Basic",
+      "engine": "AutoCAD or IntelliCAD host",
+      "multicore": "Not applicable",
+      "gpu_optimization": "Not applicable",
       "standards": [
         "DWG",
-        "LandXML",
-        "DXF"
+        "DXF",
+        "LandXML"
       ]
     },
     "expert_verdict": "If you do small-to-mid US land surveying, Carlson Survey + SurvCE is the workflow that just works.",
     "faqs": [
       {
         "q": "What is Carlson Survey used for?",
-        "a": "Carlson Survey is the field-to-finish surveying CAD popular with US land surveyors — runs on AutoCAD or the bundled IntelliCAD engine, with strong total-station, GNSS, and data-collector integration. It is widely used across Civil Engineering, Surveying, Land Development for AutoCAD or embedded IntelliCAD, Field-to-finish processing, GNSS and total-station support."
+        "a": "Carlson Survey is field-to-finish surveying: import raw collector data, reduce it, build a surface, and produce plats, legal descriptions and stakeout reports — inside AutoCAD or the bundled IntelliCAD, so existing DWG workflows survive. It is strongest in North American survey practice; its interface is utilitarian and its reach outside that market is limited."
       },
       {
         "q": "How much does Carlson Survey cost?",
@@ -3810,7 +3844,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Carlson Survey support?",
-        "a": "Carlson Survey imports DWG, DXF, LandXML, LAS, LAZ, CRD, CSV, SHP and exports DWG, DXF, LandXML, KML, CSV, PDF Stakeout Reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Carlson Survey runs inside AutoCAD or IntelliCAD, so DWG is the working format and DXF the exchange one. It reads LandXML, LAS/LAZ point clouds, SHP and its own CRD coordinate files plus field-book CSV, and writes LandXML, KML, CSV and PDF stakeout reports alongside the drawing. Survey point data flows in from Carlson SurvCE on the collector rather than through a CAD format."
       },
       {
         "q": "What are the best alternatives to Carlson Survey?",
@@ -3909,7 +3943,7 @@ export const c7Tools: Tool[] = [
       "LandXML",
       "KML",
       "CSV",
-      "PDF Stakeout Reports"
+      "PDF"
     ],
     "pricing_tiers": [
       {
@@ -3976,21 +4010,20 @@ export const c7Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Trimble Business Center",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "multicore": "Multi-threaded point-cloud and surface processing",
+      "gpu_optimization": "Not applicable",
       "standards": [
         "LandXML",
-        "IFC",
+        "RINEX",
         "DWG",
-        "DXF",
-        "LAS"
+        "DXF"
       ]
     },
     "expert_verdict": "The default office solution for surveyors who shoot with Trimble. Stays relevant as field tech keeps evolving.",
     "faqs": [
       {
         "q": "What is Trimble Business Center used for?",
-        "a": "Trimble Business Center (TBC) is the office-side companion to Trimble field instruments — processes GNSS, total-station, scanner, and UAV data into deliverables for survey, GIS, and construction-layout workflows. It is widely used across Civil Engineering, Surveying, Construction for GNSS baseline processing, Total-station and level data reduction, Point-cloud (Trimble SX / scanner) processing."
+        "a": "Trimble Business Center is the office half of a Trimble survey and construction workflow: process GNSS and total-station observations, adjust networks, build surfaces and alignments, then push them to the field or to machine control. It reads other vendors' data, but the value is highest when the field hardware is also Trimble."
       },
       {
         "q": "How much does Trimble Business Center cost?",
@@ -4006,7 +4039,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Trimble Business Center support?",
-        "a": "Trimble Business Center imports VCE, DWG, DXF, LandXML, RINEX, LAS, LAZ, JobXML and exports DWG, DXF, LandXML, KML, CSV, Machine Control files. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "TBC keeps projects in .vce and exchanges around it: DWG and DXF for drawings, LandXML and JobXML for alignments and survey data, RINEX for GNSS observations, LAS/LAZ for point clouds, and KML/KMZ, CSV or PDF for deliverables. Machine-control data is written through the same export paths rather than as a separate file format."
       },
       {
         "q": "What are the best alternatives to Trimble Business Center?",
@@ -4104,8 +4137,9 @@ export const c7Tools: Tool[] = [
       "DXF",
       "LandXML",
       "KML",
+      "KMZ",
       "CSV",
-      "Machine Control files"
+      "PDF"
     ],
     "pricing_tiers": [
       {
@@ -4337,22 +4371,22 @@ export const c7Tools: Tool[] = [
       "Russian"
     ],
     "file_formats_in": [
-      "DWG",
-      "DXF",
-      "PDF",
+      "AVEVA RVM",
       "STEP",
       "IGES",
       "IFC",
-      "RVM"
+      "DWG",
+      "DXF",
+      "PDF"
     ],
     "file_formats_out": [
-      "DWG",
-      "DXF",
-      "PDF",
+      "AVEVA RVM",
       "STEP",
       "IGES",
       "IFC",
-      "RVM"
+      "DWG",
+      "DXF",
+      "PDF"
     ],
     "integrations": [
       "AVEVA Engineering",
@@ -4398,7 +4432,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is AVEVA E3D Design used for?",
-        "a": "AVEVA E3D Design is a leading 3D plant design and engineering software used for process, power, and marine industries. It's widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants with intelligent 3D modeling capabilities."
+        "a": "AVEVA E3D Design is multi-discipline plant design for process, power and marine projects: piping, equipment, HVAC, cable trays and steelwork in one model, with laser-scan point clouds for brownfield work and clash detection across disciplines. It is an enterprise system — priced and deployed as such — not a desktop CAD seat."
       },
       {
         "q": "How much does AVEVA E3D Design cost?",
@@ -4414,7 +4448,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AVEVA E3D Design support?",
-        "a": "AVEVA E3D Design supports standard CAD and engineering formats including DWG, DXF, PDF, STEP, IGES, IFC, and RVM for import and export."
+        "a": "AVEVA E3D Design imports STEP, IGES, IFC, DWG and DXF geometry and publishes the model outward as AVEVA RVM for review, plus STEP, IGES, IFC, DWG, DXF and PDF for hand-off. PDF files also come in as reference underlays. Which direction is available depends on the module licensed, so check the data-exchange options for your configuration rather than assuming a symmetric matrix."
       },
       {
         "q": "What are the best alternatives to AVEVA E3D Design?",
@@ -4422,14 +4456,13 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "AVEVA E3D Platform",
-      "multicore": "Multi-Core & GPU-Accelerated Parallel Processing",
-      "gpu_optimization": "CUDA / OptiX / Metal Ray-Tracing Acceleration",
+      "engine": "AVEVA E3D Design platform",
+      "multicore": "Not applicable",
+      "gpu_optimization": "DirectX workstation graphics for the 3D model view",
       "standards": [
-        "ISO",
-        "ANSI",
-        "API",
-        "ASME"
+        "ISO 15926",
+        "STEP",
+        "IFC"
       ]
     },
     "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
@@ -4445,78 +4478,82 @@ export const c7Tools: Tool[] = [
     "description": "Maptek Vulcan is the mining industry’s premier 3D geological modeling, geostatistical resource estimation, and open-pit/underground mine planning software suite. Capable of rendering multi-million-cell block models, drillhole assay databases, geotechnical fault wireframes, and automated stope/pit-shell optimizations, it guides geologists and mine engineers from exploration to daily drill-and-blast scheduling.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
-        "price": "Official Store",
+        "name": "Vulcan licence",
+        "price": "Contact Sales",
         "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "features": [
+          "Geology, modelling, design and scheduling modules licensed per seat",
+          "Perpetual licences with annual maintenance",
+          "Module set and term quoted by Maptek rather than published"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Mining",
+        "category": "Geology",
         "items": [
           {
-            "name": "Mining software",
+            "name": "Drillhole database",
             "status": true
           },
           {
-            "name": "Mining solutions",
+            "name": "Stratigraphic and wireframe modelling",
             "status": true
           },
           {
-            "name": "Mining cycle",
+            "name": "Resource estimation",
             "status": true
           }
         ]
       },
       {
-        "category": "Exploration",
+        "category": "Mine Design",
         "items": [
           {
-            "name": "Exploration",
+            "name": "Open pit design",
             "status": true
           },
           {
-            "name": "Reclamation",
+            "name": "Underground stope design",
             "status": true
           },
           {
-            "name": "Mining operations",
+            "name": "Pit optimisation",
             "status": true
           }
         ]
       },
       {
-        "category": "Technology",
+        "category": "Scheduling",
         "items": [
           {
-            "name": "Innovative software",
+            "name": "Short-term planning",
             "status": true
           },
           {
-            "name": "Hardware",
+            "name": "Long-term scheduling",
             "status": true
           },
           {
-            "name": "Services",
+            "name": "Haulage simulation",
             "status": true
           }
         ]
       },
       {
-        "category": "Global",
+        "category": "Survey & Data",
         "items": [
           {
-            "name": "2500+ sites",
+            "name": "Point cloud and LAS import",
             "status": true
           },
           {
-            "name": "90 countries",
+            "name": "DXF and DWG exchange",
             "status": true
           },
           {
-            "name": "Global presence",
+            "name": "Block model export",
             "status": true
           }
         ]
@@ -4566,7 +4603,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Maptek Vulcan used for?",
-        "a": "Maptek Vulcan is a 3D mining and geology CAD solution."
+        "a": "Maptek Vulcan covers the mining cycle in one system: drillhole data and geological modelling, resource estimation, pit and stope design, and production scheduling. It is domain-specific by design — you would not use it to draw a mechanical part — and it is sold as a modular perpetual licence with maintenance."
       },
       {
         "q": "How much does Maptek Vulcan cost?",
@@ -4582,7 +4619,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Maptek Vulcan support?",
-        "a": "Maptek Vulcan works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Vulcan reads DWG and DXF drawings, CSV and LandXML data, LAS point clouds, and the Surpac (STR) and Datamine formats that mining groups exchange between software packages. It writes DWG, DXF, CSV block models and PDF documentation. It is not a general CAD converter — the drilling, geology and block-model data are Vulcan's own database objects, not files."
       },
       {
         "q": "What are the best alternatives to Maptek Vulcan?",
@@ -4590,10 +4627,14 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "Maptek Vulcan Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "Maptek Vulcan",
+      "multicore": "Not documented by Maptek",
+      "gpu_optimization": "Not documented by Maptek",
+      "standards": [
+        "DWG",
+        "DXF",
+        "LandXML"
+      ]
     },
     "expert_verdict": "A 3D mine planning and modeling package used for geological validation and resource estimation.",
     "file_formats_in": [
@@ -4601,17 +4642,15 @@ export const c7Tools: Tool[] = [
       "DXF",
       "CSV",
       "LandXML",
-      "Surpac",
-      "Micromine",
+      "STR (Surpac)",
       "Datamine",
       "LAS"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "3D Mine Solid",
-      "CSV Block Models",
-      "Reports"
+      "CSV",
+      "PDF"
     ]
   },
   {
@@ -4770,7 +4809,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is CET Designer used for?",
-        "a": "CET Designer is an interior space-planning CAD solution."
+        "a": "CET Designer is space planning and specification for commercial interiors: lay out furniture from manufacturer catalogues, render it, and get a priced bill of materials out of the same model. That coupling of drawing and specification is the point — it is used by dealers and interior designers, not by architects doing construction documentation."
       },
       {
         "q": "How much does CET Designer cost?",
@@ -4786,7 +4825,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CET Designer support?",
-        "a": "CET Designer works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "CET Designer works in its own .cmMaj drawing format and exchanges DWG and DXF with architectural drawings, RVT with Revit projects, SKP for SketchUp furniture models and IFC for BIM hand-off. Output is DWG, DXF, IFC, PDF installation drawings and XLSX bills of materials — the specification list is the deliverable as much as the drawing."
       },
       {
         "q": "What are the best alternatives to CET Designer?",
@@ -4794,27 +4833,30 @@ export const c7Tools: Tool[] = [
       }
     ],
     "tech_specs": {
-      "engine": "CET Designer Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
-      "standards": []
+      "engine": "CET Designer",
+      "multicore": "Not applicable",
+      "gpu_optimization": "DirectX real-time rendering for the 3D view",
+      "standards": [
+        "DWG",
+        "DXF",
+        "IFC"
+      ]
     },
     "expert_verdict": "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
     "quote_only": true,
     "file_formats_in": [
       "DWG",
       "DXF",
-      "Revit (RVT)",
-      "Sketchup",
+      "RVT",
+      "SKP",
       "IFC"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "Revit",
+      "IFC",
       "PDF",
-      "3D Photo Renders",
-      "Bill of Materials (Excel)"
+      "XLSX"
     ],
     "license_types": [
       "Subscription"
@@ -4907,7 +4949,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Accelygen used for?",
-        "a": "Accelygen is a cloud-based PLM and BOM management platform built for agile hardware startups and engineering teams. It organizes CAD assemblies, parts, suppliers, RFQs, and build-readiness workflows into a single connected product record."
+        "a": "Accelygen is cloud PLM and BOM management for hardware teams: one product record, multi-level BOMs, supplier and RFQ tracking, and change history, connected to the CAD systems a team already uses. It is a newer platform, so the integration catalogue is still filling out, and cloud-first delivery rules it out for air-gapped environments."
       },
       {
         "q": "How does Accelygen compare to traditional enterprise PLM systems?",
@@ -4923,7 +4965,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats and CAD integrations does Accelygen support?",
-        "a": "Accelygen supports standard BOM formats including CSV, Excel, and CAD assembly metadata structures, enabling smooth handoff from tools like Onshape, SolidWorks, and Fusion 360 to contract manufacturers."
+        "a": "Accelygen is a PLM layer rather than a CAD tool: it ingests bills of materials as CSV or XLSX, reads STEP and SolidWorks assembly/part files for structure, and syncs metadata from Onshape through the App Store integration. Output is CSV, XLSX, PDF and JSON through the REST API. It does not author or convert geometry, so the mesh and solid files it touches are references, not design data."
       },
       {
         "q": "What are the best alternatives to Accelygen?",
@@ -5025,15 +5067,13 @@ export const c7Tools: Tool[] = [
     "name": "pic2CAD",
     "slug": "pic2cad",
     "tech_specs": {
-      "engine": "Sub-Pixel Canny Edge Detection & Bezier/Arc Vectorization Engine",
-      "multicore": "Multi-Threaded Raster Pre-Processing & Curve Fitting",
-      "gpu_optimization": "WebGPU / WebGL Shader-Accelerated Image Thresholding",
+      "engine": "Edge detection plus Bezier / arc vectorisation",
+      "multicore": "Multi-threaded raster pre-processing and curve fitting",
+      "gpu_optimization": "WebGPU / WebGL shader-accelerated image thresholding",
       "standards": [
         "DXF",
         "SVG",
-        "PNG",
-        "JPG",
-        "TIFF"
+        "PNG"
       ]
     },
     "logo_url": "/logos/pic2cad.png",
@@ -5062,6 +5102,13 @@ export const c7Tools: Tool[] = [
       "Small Business"
     ],
     "official_url": "https://pic2cad.ai",
+    "pricing_url": "https://pic2cad.ai",
+    "file_formats_in": [
+      "PNG",
+      "JPG",
+      "TIFF",
+      "WEBP"
+    ],
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -5077,7 +5124,7 @@ export const c7Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is pic2CAD used for?",
-        "a": "pic2CAD converts a picture of a person, object, or piece of furniture into a clean line drawing and exports it as DXF, SVG, or PNG — typically for architect entourage, furniture blocks, or laser cutter and engraver templates."
+        "a": "pic2CAD converts photographs and scans into line drawings: a photo of a facade, a part or a sketch becomes traceable DXF or SVG geometry instead of something you redraw by hand. It is a convenience tool for template and entourage work; it does not reconstruct measured geometry, and the orthographic view is still marked beta."
       },
       {
         "q": "How much does pic2CAD cost?",
@@ -5093,7 +5140,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Which file formats does pic2CAD support?",
-        "a": "You feed it ordinary photos and export DXF, SVG, and PNG — the DXF drops straight into AutoCAD-style drafting files."
+        "a": "pic2CAD takes raster images — PNG, JPG, TIFF or WEBP — detects edges, traces them into lines and arcs, and writes DXF, SVG or PNG. It reads no CAD format at all: there is no DWG, DXF or STEP input, because the source is always a photograph or a scan. That also bounds the accuracy — output suits blocks and template work, not as-built capture."
       },
       {
         "q": "What are the best alternatives to pic2CAD?",
@@ -5149,64 +5196,69 @@ export const c7Tools: Tool[] = [
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Input",
         "items": [
           {
-            "name": "Photo → line drawing conversion",
+            "name": "Photo upload",
             "status": true
           },
           {
-            "name": "DXF / SVG / PNG export",
+            "name": "Perspective and orthographic photos",
             "status": true
           },
           {
-            "name": "Orthographic entourage view (beta)",
-            "status": true
-          },
-          {
-            "name": "300+ shared 2D block library",
+            "name": "Scanned sketches",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Conversion",
         "items": [
           {
-            "name": "Native DWG / DXF / STEP Import Pipeline",
+            "name": "Edge detection",
             "status": true
           },
           {
-            "name": "Precision DXF / SVG / PNG Export & Publishing",
+            "name": "Vector tracing to lines and arcs",
             "status": true
           },
           {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
+            "name": "Line cleanup and simplification",
             "status": true
           }
         ]
       },
       {
-        "category": "Deployment & Enterprise Workflow",
+        "category": "Output",
         "items": [
           {
-            "name": "Web Runtime Support",
+            "name": "DXF export",
             "status": true
           },
           {
-            "name": "Unit & Coordinate System Calibration",
+            "name": "SVG export",
             "status": true
           },
           {
-            "name": "Automated Quality & Geometry Verification",
+            "name": "PNG preview",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Workflow",
+        "items": [
+          {
+            "name": "Shared 2D block library",
             "status": true
           },
           {
-            "name": "Team Collaboration & Revision Handoff",
+            "name": "Batch conversion",
+            "status": true
+          },
+          {
+            "name": "Manual retouch",
             "status": true
           }
         ]
