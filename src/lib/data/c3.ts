@@ -470,16 +470,22 @@ export const c3Tools: Tool[] = [
       "German",
       "Italian",
       "Spanish",
+      "Portuguese",
+      "Polish",
+      "Norwegian",
       "Japanese",
       "Hungarian",
-      "Polish",
+      "Swedish",
+      "Finnish",
       "Czech",
+      "Turkish",
+      "Ukrainian",
       "Russian",
-      "Simplified Chinese",
-      "Brazilian Portuguese",
-      "Dutch",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)",
       "Greek",
-      "Turkish"
+      "Korean",
+      "Dutch"
     ],
     "file_formats_in": [
       "PLN",
@@ -857,33 +863,51 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DXF",
       "DWT",
+      "DWF",
       "IFC",
+      "IFCXML",
       "IFCZIP",
       "RVT",
       "RFA",
       "SKP",
-      "3DM",
+      "Rhino 3DM",
       "OBJ",
       "STEP",
       "IGES",
+      "SAT",
+      "STL",
+      "3DS",
+      "USD",
       "PDF",
-      "SHP"
+      "SHP",
+      "LAS",
+      "LAZ"
     ],
     "file_formats_out": [
       "VWX",
       "DWG",
       "DXF",
       "DWT",
+      "DWF",
       "IFC",
-      "3D PDF",
+      "RVT",
+      "Rhino 3DM",
       "OBJ",
       "STEP",
       "IGES",
+      "SAT",
       "STL",
-      "3DM",
+      "3DS",
+      "DAE",
+      "FBX",
+      "USD",
+      "C4D",
       "KML",
       "PDF",
-      "SVG"
+      "3D PDF",
+      "SVG",
+      "HDRI",
+      "VGX"
     ],
     "industries": [
       "Architecture",
@@ -935,7 +959,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Vectorworks support?",
-        "a": "Vectorworks works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Vectorworks reads and writes DXF/DWG natively, imports and exports IFC (including ifcXML and ifcZIP) for openBIM exchange, and uses its own Import Revit / Export Revit commands for .rvt and .rfa files without a plugin. Alongside those it handles SketchUp, Rhino 3DM, STEP, IGES, Parasolid, SAT, STL, OBJ, 3DS and USD, plus point clouds in LAS/LAZ. Export adds Cinema 4D, COLLADA, FBX, KML and 3D PDF. IFC and Revit interchange are Architect/Landmark features — the Fundamentals tier does not include them, so check which tier you are comparing before assuming interoperability."
       },
       {
         "q": "What are the best alternatives to Vectorworks?",
@@ -1424,7 +1448,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Vectorworks Landmark support?",
-        "a": "Vectorworks Landmark works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Vectorworks Landmark reads and writes DXF/DWG natively, imports and exports IFC (including ifcXML and ifcZIP) for openBIM exchange, and uses its own Import Revit / Export Revit commands to work with .rvt and .rfa files without a plugin. It also imports SketchUp, Rhino 3DM, STEP, IGES, Parasolid, STL, OBJ, 3DS and USD, plus point clouds in LAS/LAZ, E57, PLY and XYZ. Export covers the same CAD and BIM formats along with Cinema 4D, COLLADA, FBX, KML and 3D PDF. Note that IFC and Revit interchange start at the Architect/Landmark tier — Vectorworks Fundamentals does not include them."
       },
       {
         "q": "What are the best alternatives to Vectorworks Landmark?",
@@ -1446,21 +1470,54 @@ export const c3Tools: Tool[] = [
       "VWX",
       "DWG",
       "DXF",
-      "SHP",
+      "DWF",
       "IFC",
-      "SketchUp",
+      "IFCXML",
+      "IFCZIP",
+      "RVT",
+      "RFA",
+      "SKP",
       "Rhino 3DM",
-      "PDF"
+      "STEP",
+      "IGES",
+      "SAT",
+      "STL",
+      "OBJ",
+      "3DS",
+      "USD",
+      "SHP",
+      "PDF",
+      "LAS",
+      "LAZ",
+      "E57",
+      "PLY",
+      "XYZ"
     ],
     "file_formats_out": [
       "VWX",
       "DWG",
       "DXF",
+      "DWF",
       "IFC",
-      "SHP",
-      "3D PDF",
+      "RVT",
+      "Rhino 3DM",
+      "STEP",
+      "IGES",
+      "SAT",
+      "STL",
+      "OBJ",
+      "3DS",
+      "DAE",
+      "FBX",
+      "USD",
+      "C4D",
       "KML",
-      "SVG"
+      "SHP",
+      "PDF",
+      "3D PDF",
+      "SVG",
+      "HDRI",
+      "VGX"
     ],
     "alternatives": [
       "vectorworks",
@@ -1503,31 +1560,6 @@ export const c3Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows / macOS Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -1598,7 +1630,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Allplan support?",
-        "a": "Allplan works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Allplan imports and exports IFC 2x3 and IFC 4 (including ifcXML and ifcZIP) in both directions. DWG/DXF is native in both directions, with ACIS solids carried through; DGN, SketchUp, Rhino 3DM, Cinema 4D, STL, OBJ and LandXML are also supported. Revit is one-way only: the built-in Import Revit tool reads .rvt files, but it is capped at Revit 2020 projects and there is no Revit export — Allplan itself recommends IFC for round-tripping with Revit users."
       },
       {
         "q": "What are the best alternatives to Allplan?",
@@ -1688,27 +1720,43 @@ export const c3Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "IFC",
       "DWG",
       "DXF",
+      "DWT",
       "DGN",
+      "IFC",
+      "IFCXML",
+      "IFCZIP",
+      "RVT",
       "SKP",
       "Rhino 3DM",
-      "Cinema 4D",
-      "PDF",
-      "STEP"
-    ],
-    "file_formats_out": [
-      "IFC",
-      "DWG",
-      "DXF",
-      "DGN",
-      "SKP",
-      "Cinema 4D",
+      "C4D",
       "PDF",
       "3D PDF",
-      "BVBS",
-      "U3D"
+      "STL",
+      "OBJ",
+      "LandXML"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "IFC",
+      "IFCXML",
+      "SKP",
+      "Rhino 3DM",
+      "C4D",
+      "PDF",
+      "3D PDF",
+      "STL",
+      "OBJ",
+      "DAE",
+      "KMZ",
+      "SVG",
+      "3DS",
+      "XLSX",
+      "DOCX"
     ],
     "alternatives": [
       "revit",
@@ -1780,7 +1828,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does OpenRoads Designer support?",
-        "a": "OpenRoads Designer works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "OpenRoads Designer natively reads and writes both DGN and DWG, imports and exports IFC, and exchanges terrain and alignment data as LandXML, the format Bentley and Autodesk civil tools both use for that purpose. It also reads DXF, PDF/U3D, Rhino 3DM, STL, VRML, SketchUp SKP and point clouds in LAS/LAZ, and exports to DWG, DXF, LandXML and IFC. It does not read or write Revit files directly — Bentley's documented route for Revit content is to federate it through iModelHub/iTwin or convert it to IFC first."
       },
       {
         "q": "What are the best alternatives to OpenRoads Designer?",
@@ -1803,18 +1851,24 @@ export const c3Tools: Tool[] = [
       "DGN",
       "DWG",
       "DXF",
-      "LandXML",
       "IFC",
-      "SHP",
+      "Rhino 3DM",
+      "STL",
+      "VRML",
+      "SKP",
+      "PDF",
+      "LandXML",
       "LAS",
-      "LAZ"
+      "LAZ",
+      "DEM"
     ],
     "file_formats_out": [
       "DGN",
       "DWG",
+      "DXF",
       "LandXML",
       "IFC",
-      "i-model",
+      "PDF",
       "3D PDF"
     ],
     "alternatives": [
@@ -1858,31 +1912,6 @@ export const c3Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -2063,7 +2092,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does cadwork support?",
-        "a": "cadwork works with standard BIM interchange formats including IFC, DWG, and DXF. Check the vendor's official documentation for the complete list."
+        "a": "cadwork imports and exports IFC 2x3 and IFC 4 — note that IFC is a chargeable option, not part of the base licence — plus DXF/DWG (native 2D), Rhino 3DM, STEP, ACIS/SAT, STL, OBJ, and the timber-industry BTL/BTLx and BVX/BXF formats. Revit is import-only and indirect: .rvt and .rfa files from Revit 2014 onwards can be brought in, but the conversion runs through an external tool rather than a native reader, and there is no Revit export. SketchUp SKP can be exchanged as an object but is not listed as a supported import or export format in cadwork's own matrix."
       },
       {
         "q": "What are the best alternatives to cadwork?",
@@ -2086,16 +2115,31 @@ export const c3Tools: Tool[] = [
       "IFC",
       "DWG",
       "DXF",
+      "Rhino 3DM",
       "STEP",
       "SAT",
+      "STL",
+      "OBJ",
+      "BTL",
+      "BTLx",
+      "BVX",
+      "RVT",
+      "RFA",
+      "SKP",
       "PDF"
     ],
     "file_formats_out": [
       "IFC",
-      "BTL",
-      "BTLx",
       "DWG",
       "DXF",
+      "Rhino 3DM",
+      "STEP",
+      "SAT",
+      "STL",
+      "OBJ",
+      "BTL",
+      "BTLx",
+      "BXF",
       "PDF"
     ]
   },
@@ -2259,7 +2303,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MagiCAD support?",
-        "a": "MagiCAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
+        "a": "MagiCAD is a plugin, not a standalone CAD engine — it runs inside Revit, AutoCAD or BricsCAD, so the native DWG and RVT capability belongs to the host application rather than to MagiCAD itself. What MagiCAD handles on its own is IFC and spreadsheets: it exports IFC 2x3 and IFC 4 for the MEP disciplines (IFC 4x3 for electrical systems), imports IFC through the MagiCAD Room module for space and storey data, and reads/writes XLSX for calculated data. It also exchanges BCF for issue tracking."
       },
       {
         "q": "What are the best alternatives to MagiCAD?",
@@ -2279,17 +2323,17 @@ export const c3Tools: Tool[] = [
     },
     "expert_verdict": "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
     "file_formats_in": [
-      "RVT",
+      "IFC",
       "DWG",
       "DXF",
-      "IFC"
+      "RVT",
+      "XLSX"
     ],
     "file_formats_out": [
-      "RVT",
-      "DWG",
-      "DXF",
       "IFC",
-      "BCF"
+      "BCF",
+      "XLSX",
+      "PDF"
     ]
   },
   {
@@ -2452,7 +2496,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does DDS-CAD support?",
-        "a": "DDS-CAD works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
+        "a": "DDS-CAD exchanges IFC bi-directionally (IFC 2x3 is buildingSMART certified) alongside native DXF/DWG editing, so it does not need AutoCAD or Revit underneath. It also imports and exports PDF, 3DS, JPG and PNG, and exports gbXML for energy analysis and BCF for issue exchange. It does not read or write Revit files: DDS-CAD's documented path for Revit content is to export IFC from Revit and import that instead."
       },
       {
         "q": "What are the best alternatives to DDS-CAD?",
@@ -2476,13 +2520,19 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DXF",
       "PDF",
-      "gbXML"
+      "3DS",
+      "JPG",
+      "PNG"
     ],
     "file_formats_out": [
       "IFC",
       "DWG",
       "DXF",
       "PDF",
+      "3DS",
+      "JPG",
+      "PNG",
+      "gbXML",
       "BCF"
     ]
   },
@@ -2645,7 +2695,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does dRofus support?",
-        "a": "dRofus works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list."
+        "a": "dRofus is a data platform for room, space and equipment requirements rather than a modelling tool, so its exchange formats are data formats. It imports and exports IFC — supported through IFC 4x3 — and Excel, and exports PDF, XML and COBie for handover. Revit and ArchiCAD connection happens through dedicated bi-directional add-ins that sync rooms, zones and equipment against the live model, not through .rvt or .pln file import. There is no DWG support."
       },
       {
         "q": "What are the best alternatives to dRofus?",
@@ -2665,17 +2715,15 @@ export const c3Tools: Tool[] = [
     },
     "expert_verdict": "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
     "file_formats_in": [
-      "Excel",
       "IFC",
-      "RVT",
-      "PLN"
+      "Excel"
     ],
     "file_formats_out": [
-      "PDF",
+      "IFC",
       "Excel",
+      "PDF",
       "XML",
-      "COBie",
-      "IFC"
+      "COBie"
     ]
   },
   {
@@ -2780,7 +2828,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AutoCAD Plant 3D support?",
-        "a": "AutoCAD Plant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "AutoCAD Plant 3D works in DWG natively, imports and exports piping component files (PCF) for hand-off to stress analysis and isometrics, and uses CSV/XLSX for data-manager round-trips. DEXPI XML import and export is available through Autodesk's free DEXPI Data Bridge plugin, and NWC export requires the separate Navisworks exporter. It does not support IFC: Autodesk lists Plant 3D among the toolsets that cannot write IFC, and there is no built-in import either — the documented workaround is EXPORTTOAUTOCAD to flatten the model and then export from another toolset, which loses the Plant 3D object data."
       },
       {
         "q": "What are the best alternatives to AutoCAD Plant 3D?",
@@ -2867,16 +2915,18 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DXF",
       "PCF",
-      "STEP",
-      "IGES",
-      "DGN"
+      "CSV",
+      "XLSX",
+      "DEXPI XML"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "PCF (Isogen)",
+      "PCF",
+      "CSV",
+      "XLSX",
       "NWC",
-      "PDF"
+      "DEXPI XML"
     ]
   },
   {
@@ -2954,7 +3004,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Hexagon SmartPlant 3D support?",
-        "a": "Hexagon SmartPlant 3D works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Smart 3D imports CIS/2, ACIS, IGES and PCF, reads DWG/DGN/RVM reference models through ConvertToZVF, and publishes VUE/ZVF models for review. IFC export exists but is deliberately narrow: the Export Structure command writes only concrete slabs, walls, structural systems, openings, footings, equipment foundations and design equipment — steel members must go out as CIS/2 instead, and a whole-plant IFC conversion requires the separate Smart Interop Publisher. There is no native IFC import, and Revit content is expected to arrive as IFC rather than as .rvt."
       },
       {
         "q": "What are the best alternatives to Hexagon SmartPlant 3D?",
@@ -3040,20 +3090,21 @@ export const c3Tools: Tool[] = [
     "quote_only": true,
     "file_formats_in": [
       "VUE",
-      "STEP",
+      "CIS/2",
+      "ACIS",
       "IGES",
       "DWG",
       "DGN",
-      "MicroStation",
-      "SAT"
+      "PCF"
     ],
     "file_formats_out": [
       "VUE",
-      "STEP",
-      "PCF",
+      "IFC",
+      "CIS/2",
+      "ACIS",
+      "IGES",
       "DWG",
-      "DGN",
-      "SmartPlant Schema"
+      "DXF"
     ],
     "pricing_tiers": [
       {
@@ -3147,7 +3198,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CADWorx Plant Professional support?",
-        "a": "CADWorx Plant Professional works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "CADWorx Plant runs on top of AutoCAD or BricsCAD, so DWG is its native format and the only input it can convert from. It imports and exports PCF for piping hand-off, exchanges component data through Access and Excel, and publishes IFC from the Design Review tab — the IFC writer handles pipe, equipment and structure with properties, supports IFC4, and produces a file Revit and ArchiCAD can open. That path is export-only: CADWorx does not read IFC, and it neither reads nor writes Revit files."
       },
       {
         "q": "What are the best alternatives to CADWorx Plant Professional?",
@@ -3234,16 +3285,18 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DXF",
       "PCF",
-      "STEP",
-      "CAESAR II"
+      "XLSX",
+      "Access"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "PCF",
-      "CAESAR II",
-      "PV Elite",
-      "PDF"
+      "IFC",
+      "VUE",
+      "3D PDF",
+      "XLSX",
+      "HTML"
     ],
     "pricing_tiers": [
       {
@@ -3340,7 +3393,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Autodesk Construction Cloud support?",
-        "a": "Autodesk Construction Cloud works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Autodesk Construction Cloud is a common data environment, not a modelling application, so it does not import in the authoring sense — files are uploaded and hosted at their original fidelity. Autodesk Docs can display and review roughly ninety formats, including RVT (current release plus the previous four), DWG, DXF, IFC, NWD/NWC, DGN, STEP, SAT, SKP, JT and Rhino 3DM. Model Coordination consumes 3D RVT, DWG, NWC and IFC for clash detection. There is no conversion export: downloading returns the original file, and reports are the only thing the platform generates as PDF."
       },
       {
         "q": "What are the best alternatives to Autodesk Construction Cloud?",
@@ -3426,20 +3479,20 @@ export const c3Tools: Tool[] = [
     "file_formats_in": [
       "RVT",
       "DWG",
+      "DXF",
       "NWD",
-      "PDF",
+      "NWC",
       "IFC",
-      "BCF",
-      "DOCX",
-      "XLSX"
+      "PDF",
+      "DGN",
+      "STEP",
+      "SAT",
+      "SKP",
+      "JT",
+      "Rhino 3DM"
     ],
     "file_formats_out": [
-      "PDF",
-      "BCF",
-      "DWG",
-      "RVT",
-      "NWD",
-      "CSV"
+      "PDF"
     ],
     "pricing_tiers": [
       {
@@ -3568,7 +3621,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Trimble Connect support?",
-        "a": "Trimble Connect works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Trimble Connect is a collaboration platform and common data environment rather than a modeller, so it views and hosts models instead of authoring them. Its 3D viewer opens IFC (2x3 and 4), IFCZIP, RVT, DWG, DXF, DGN, SketchUp SKP, STEP AP203/AP214, NWD/NWC, IGES, LandXML, point clouds in E57/LAS/LAZ and more. Revit upload requires the Connect for Revit add-on. Export is limited: models can be saved as TrimBIM (.trb) or downloaded as the original file, and there is no IFC export. BCF Topics are supported bi-directionally for issue exchange."
       },
       {
         "q": "What are the best alternatives to Trimble Connect?",
@@ -3653,20 +3706,26 @@ export const c3Tools: Tool[] = [
     ],
     "file_formats_in": [
       "IFC",
+      "IFCZIP",
+      "RVT",
       "DWG",
       "DXF",
-      "RVT",
+      "DGN",
       "SKP",
       "STEP",
+      "NWD",
+      "NWC",
+      "IGES",
+      "LAS",
+      "LAZ",
+      "E57",
       "PDF",
+      "LandXML",
       "BCF"
     ],
     "file_formats_out": [
-      "IFC",
-      "BCF",
-      "PDF",
-      "STEP",
-      "DWG"
+      "TRB",
+      "BCF"
     ],
     "pricing_tiers": [
       {
@@ -3780,7 +3839,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does BIMcollab support?",
-        "a": "BIMcollab works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "BIMcollab works with IFC as its model format — .ifc and .ifczip are opened read-only for checking, clash detection and issue creation, with no IFC write-back — plus point clouds in E57, XYZ, PTS and TXT. Revit models can be viewed when loaded through the WebViewer or Autodesk Forma, but a local BIMcollab Zoom install only opens IFC. Issues travel as BCF: the platform reads and writes BCF 1.0, 2.0 and 2.1, while BCF 3.0 is import-only. DWG is not a supported model format — a DWG can be stored as a document but will not open in the viewer."
       },
       {
         "q": "What are the best alternatives to BIMcollab?",
@@ -3864,16 +3923,20 @@ export const c3Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
+      "IFC",
+      "IFCZIP",
       "BCF",
       "BCFZIP",
-      "IFC",
-      "PDF"
+      "E57",
+      "XYZ",
+      "PTS",
+      "RVT"
     ],
     "file_formats_out": [
       "BCF",
       "BCFZIP",
       "Excel",
-      "PDF"
+      "CSV"
     ],
     "pricing_tiers": [
       {
@@ -4002,7 +4065,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Autodesk Dynamo support?",
-        "a": "Autodesk Dynamo works with standard BIM interchange formats including IFC, RVT, and DWG. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Dynamo is a visual programming environment, not a CAD application, so it has no CAD interchange formats of its own. Its native files are .dyn graphs and .dyf custom nodes; the rest of its input and output is data and geometry — XLSX, CSV and JSON for tabular data, and ACIS/SAT for solid geometry via Geometry.ImportFromSAT and ExportToSAT. Everything else flows through the host application's API: inside Revit, Dynamo manipulates the open document directly, so IFC, RVT and DWG handling is Revit's job rather than Dynamo's."
       },
       {
         "q": "What are the best alternatives to Autodesk Dynamo?",
@@ -4088,19 +4151,18 @@ export const c3Tools: Tool[] = [
     "file_formats_in": [
       "DYN",
       "DYF",
+      "XLSX",
+      "CSV",
       "JSON",
-      "SAT",
-      "Excel",
-      "DWG",
-      "RVT"
+      "SAT"
     ],
     "file_formats_out": [
       "DYN",
+      "DYF",
+      "XLSX",
+      "CSV",
       "JSON",
-      "SAT",
-      "Excel",
-      "RVT elements",
-      "DWG"
+      "SAT"
     ],
     "pricing_tiers": [
       {
@@ -4263,7 +4325,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CYPECAD support?",
-        "a": "CYPECAD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "CYPECAD exchanges IFC in both directions: IFC import builds floors, columns, beams and loads automatically but requires the Automatic Entry (AUT) module, whereas IFC export needs no extra module. DXF and DWG are native — drawings can be brought in as underlays that CYPECAD reads columns, beams and slab outlines from, and results are exported back to DXF/DWG and PDF. It also exports CIS/2 and Tekla for steel detailing, glTF for BIMserver.center, and HTML, DOCX and CSV reports. Revit is reached through CYPE's Open BIM add-in rather than native .rvt support."
       },
       {
         "q": "What are the best alternatives to CYPECAD?",
@@ -4281,15 +4343,20 @@ export const c3Tools: Tool[] = [
       "IFC",
       "DWG",
       "DXF",
-      "PDF"
+      "PDF",
+      "DWF"
     ],
     "file_formats_out": [
       "IFC",
       "DWG",
       "DXF",
       "PDF",
-      "BVBS",
-      "CIS/2"
+      "HTML",
+      "DOCX",
+      "CIS/2",
+      "Tekla",
+      "glTF",
+      "CSV"
     ]
   },
   {
@@ -4405,8 +4472,8 @@ export const c3Tools: Tool[] = [
       "Manufacturing Export"
     ],
     "user_scales": [],
-    "official_url": "https://www.vertex.fi/",
-    "pricing_url": "https://vertexcad.com/contacts/",
+    "official_url": "https://vertexcad.com/bd/",
+    "pricing_url": "https://vertexcad.com/bd/buy",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -4438,7 +4505,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Vertex BD support?",
-        "a": "Vertex BD works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Vertex BD reads and writes DWG and DXF natively as 2D vector drawings, and exports 3D DWG directly — importing 3D DWG requires the separate 3D DWG Importer add-on. IFC is the BIM channel in both directions, but only with the IFC Link add-on, which is a paid option rather than part of the base product. It also handles DXB, DWF, IGES, ACIS/SAT, 3DS, STL, DAE, VRML and PDF/3D PDF, and exports framing data in STD for Bentley STAAD Pro and ATIR STRAP. There is no Revit file support."
       },
       {
         "q": "What are the best alternatives to Vertex BD?",
@@ -4456,14 +4523,31 @@ export const c3Tools: Tool[] = [
       "IFC",
       "DWG",
       "DXF",
+      "DXB",
+      "DWF",
+      "IGES",
+      "SAT",
+      "3DS",
+      "STL",
       "PDF"
     ],
     "file_formats_out": [
       "IFC",
-      "NC (Light Steel)",
+      "IFCZIP",
       "DWG",
       "DXF",
-      "PDF"
+      "DXB",
+      "DWF",
+      "IGES",
+      "SAT",
+      "3DS",
+      "DAE",
+      "STL",
+      "VRML",
+      "3D PDF",
+      "PDF",
+      "SVG",
+      "U3D"
     ]
   },
   {
@@ -4898,27 +4982,6 @@ export const c3Tools: Tool[] = [
             "status": true
           }
         ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
-          }
-        ]
       }
     ]
   },
@@ -5060,6 +5123,92 @@ export const c3Tools: Tool[] = [
       "chief-architect",
       "vectorworks",
       "archicad"
+    ],
+    "detailed_features": [
+      {
+        "category": "Modeling & Drafting",
+        "items": [
+          {
+            "name": "Live 2D / 3D sync — draw on the plan, move a wall in 3D, both views follow",
+            "status": true
+          },
+          {
+            "name": "Wall builder with chain, single, rectangle and arc modes; wall thickness and height",
+            "status": true
+          },
+          {
+            "name": "Floors, roofs, openings, roads, and terrain sculpting with contour lines",
+            "status": true
+          },
+          {
+            "name": "Up to 50 floors per project",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "BIM & Quantities",
+        "items": [
+          {
+            "name": "IFC4 import and export including property sets",
+            "status": true
+          },
+          {
+            "name": "Every wall, slab, opening and object carries IFC classes",
+            "status": true
+          },
+          {
+            "name": "Model check for overlaps, missing hosts and empty levels",
+            "status": true
+          },
+          {
+            "name": "Areas, volumes, schedules and budget exported to CSV",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Rendering & Presentation",
+        "items": [
+          {
+            "name": "Draft, Balanced, High and Ultra render modes",
+            "status": true
+          },
+          {
+            "name": "PBR materials and a texture library",
+            "status": true
+          },
+          {
+            "name": "Walkthrough, snapshots and video recording",
+            "status": true
+          },
+          {
+            "name": "AI photo rendering of the current view",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Privacy & Storage",
+        "items": [
+          {
+            "name": "Runs entirely client-side in the browser; no account required",
+            "status": true
+          },
+          {
+            "name": "Projects stored in browser IndexedDB with autosave and crash recovery",
+            "status": true
+          },
+          {
+            "name": "No cloud storage and no upload — designs stay local",
+            "status": true
+          },
+          {
+            "name": "Export the project to a file and re-import it later",
+            "status": true
+          }
+        ]
+      }
     ],
     "file_formats_in": [
       "IFC",
