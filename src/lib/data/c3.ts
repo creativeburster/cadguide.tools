@@ -452,6 +452,11 @@ export const c3Tools: Tool[] = [
         "q": "Does ArchiCAD have an API for automation and customization?",
         "a": "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
       }
+    ,
+      {
+        "q": "Is there a free version of ArchiCAD?",
+        "a": "ArchiCAD is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ArchiCAD plans and trial](https://www.graphisoft.com/trial/archicad/)."
+      }
     ],
     "tech_specs": {
       "engine": "Graphisoft Proprietary",
@@ -717,6 +722,11 @@ export const c3Tools: Tool[] = [
         "q": "What are the best alternatives to Tekla Structures?",
         "a": "The closest alternatives to Tekla Structures are Revit, Allplan, Civil 3D. Revit (offered on a Subscription license) competes directly on core Structural Engineering workflows, while Allplan (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of Tekla Structures?",
+        "a": "Tekla Structures is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Tekla Structures plans and trial](https://www.tekla.com/products/tekla-structures/subscription)."
+      }
     ],
     "tech_specs": {
       "engine": "Proprietary Tekla modelling engine",
@@ -965,6 +975,11 @@ export const c3Tools: Tool[] = [
         "q": "What are the best alternatives to Vectorworks?",
         "a": "The closest alternatives to Vectorworks are ArchiCAD, Revit, SketchUp. ArchiCAD (offered on a Subscription license) competes directly on core Architecture workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of Vectorworks?",
+        "a": "Vectorworks is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Vectorworks plans and trial](https://customers.vectorworks.net/trial)."
+      }
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
@@ -1128,6 +1143,11 @@ export const c3Tools: Tool[] = [
         "q": "What are the best alternatives to Chief Architect?",
         "a": "The closest alternatives to Chief Architect are Revit, SketchUp, ArchiCAD. Revit (offered on a Subscription license) competes directly on core Residential Architecture workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of Chief Architect?",
+        "a": "Chief Architect is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Chief Architect plans and trial](https://www.chiefarchitect.com/products/home-design/premier/)."
+      }
     ],
     "tech_specs": {
       "engine": "Proprietary Chief Architect engine",
@@ -1232,6 +1252,11 @@ export const c3Tools: Tool[] = [
       {
         "q": "What are the best alternatives to Civil 3D?",
         "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey, and MicroStation. OpenRoads Designer (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+      }
+    ,
+      {
+        "q": "Is there a free version of Civil 3D?",
+        "a": "Civil 3D is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Civil 3D plans and trial](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
       }
     ],
     "tech_specs": {
@@ -1440,7 +1465,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
-        "a": "Vectorworks Landmark is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Vectorworks Landmark page](https://www.vectorworks.net/landmark)."
+        "a": "Vectorworks Landmark is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Vectorworks Landmark page](https://www.vectorworks.net/landmark)."
       },
       {
         "q": "What operating systems does Vectorworks Landmark support?",
@@ -1622,7 +1647,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allplan?",
-        "a": "Allplan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Allplan page](https://www.allplan.com/)."
+        "a": "Allplan is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Allplan page](https://www.allplan.com/)."
       },
       {
         "q": "What operating systems does Allplan support?",
@@ -1820,7 +1845,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
-        "a": "OpenRoads Designer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official OpenRoads Designer page](https://www.bentley.com/software/openroads-designer/)."
+        "a": "OpenRoads Designer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official OpenRoads Designer page](https://www.bentley.com/software/openroads-designer/)."
       },
       {
         "q": "What operating systems does OpenRoads Designer support?",
@@ -2084,7 +2109,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of cadwork?",
-        "a": "cadwork is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official cadwork page](https://www.cadwork.com/)."
+        "a": "cadwork is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official cadwork page](https://www.cadwork.com/)."
       },
       {
         "q": "What operating systems does cadwork support?",
@@ -2295,7 +2320,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MagiCAD?",
-        "a": "MagiCAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MagiCAD page](https://www.magicad.com/)."
+        "a": "MagiCAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MagiCAD page](https://www.magicad.com/)."
       },
       {
         "q": "What operating systems does MagiCAD support?",
@@ -2488,7 +2513,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of DDS-CAD?",
-        "a": "DDS-CAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official DDS-CAD page](https://graphisoft.com/plans-and-products/ddscad/)."
+        "a": "DDS-CAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official DDS-CAD page](https://graphisoft.com/plans-and-products/ddscad/)."
       },
       {
         "q": "What operating systems does DDS-CAD support?",
@@ -2687,7 +2712,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of dRofus?",
-        "a": "dRofus is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official dRofus page](https://www.drofus.com/)."
+        "a": "dRofus is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official dRofus page](https://www.drofus.com/)."
       },
       {
         "q": "What operating systems does dRofus support?",
@@ -2820,7 +2845,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
-        "a": "AutoCAD Plant 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AutoCAD Plant 3D page](https://www.autodesk.com/products/autocad/included-toolsets/plant-3d)."
+        "a": "AutoCAD Plant 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AutoCAD Plant 3D page](https://www.autodesk.com/products/autocad/included-toolsets/plant-3d)."
       },
       {
         "q": "What operating systems does AutoCAD Plant 3D support?",
@@ -2996,7 +3021,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
-        "a": "Hexagon SmartPlant 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Hexagon SmartPlant 3D page](https://hexagon.com/products/smartplant-3d)."
+        "a": "Hexagon SmartPlant 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Hexagon SmartPlant 3D page](https://hexagon.com/products/smartplant-3d)."
       },
       {
         "q": "What operating systems does Hexagon SmartPlant 3D support?",
@@ -3190,7 +3215,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
-        "a": "CADWorx Plant Professional is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CADWorx Plant Professional page](https://hexagon.com/products/cadworx-plant-professional)."
+        "a": "CADWorx Plant Professional is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CADWorx Plant Professional page](https://hexagon.com/products/cadworx-plant-professional)."
       },
       {
         "q": "What operating systems does CADWorx Plant Professional support?",
@@ -3385,7 +3410,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
-        "a": "Autodesk Construction Cloud is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Construction Cloud page](https://construction.autodesk.com)."
+        "a": "Autodesk Construction Cloud is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Autodesk Construction Cloud page](https://construction.autodesk.com)."
       },
       {
         "q": "What operating systems does Autodesk Construction Cloud support?",
@@ -4335,7 +4360,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CYPECAD?",
-        "a": "CYPECAD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CYPECAD page](https://www.cype.com/)."
+        "a": "CYPECAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CYPECAD page](https://www.cype.com/)."
       },
       {
         "q": "What operating systems does CYPECAD support?",
@@ -4521,7 +4546,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Vertex BD?",
-        "a": "Vertex BD is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Vertex BD page](https://www.vertex.fi/)."
+        "a": "Vertex BD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Vertex BD page](https://vertexcad.com/bd/)."
       },
       {
         "q": "What operating systems does Vertex BD support?",

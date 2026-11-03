@@ -146,7 +146,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
-        "a": "Bluebeam Revu is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Bluebeam Revu page](https://www.bluebeam.com)."
+        "a": "Bluebeam Revu is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Bluebeam Revu page](https://www.bluebeam.com)."
       },
       {
         "q": "What operating systems does Bluebeam Revu support?",
@@ -323,7 +323,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Navisworks?",
-        "a": "Navisworks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Navisworks page](https://www.autodesk.com/products/navisworks/overview)."
+        "a": "Navisworks is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Navisworks page](https://www.autodesk.com/products/navisworks/overview)."
       },
       {
         "q": "What operating systems does Navisworks support?",
@@ -490,7 +490,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Solibri?",
-        "a": "Solibri is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Solibri page](https://www.solibri.com)."
+        "a": "Solibri is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Solibri page](https://www.solibri.com)."
       },
       {
         "q": "What operating systems does Solibri support?",
@@ -785,7 +785,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Recap Pro?",
-        "a": "Recap Pro is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Recap Pro page](https://www.autodesk.com/recap)."
+        "a": "Recap Pro is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Recap Pro page](https://www.autodesk.com/recap)."
       },
       {
         "q": "What operating systems does Recap Pro support?",
@@ -1447,6 +1447,11 @@ export const c4Tools: Tool[] = [
         "q": "Which file formats does CAD Reader support?",
         "a": "CAD Reader supports DWG and DXF formats for viewing and measurement."
       }
+    ,
+      {
+        "q": "What are the best alternatives to CAD Reader?",
+        "a": "The closest alternatives to CAD Reader are DWG FastView, DWG TrueView, CADProps, and DXF Medic — priced on a freemium model, free of charge, free of charge, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "tech_specs": {
       "engine": "Glodon Mobile Engine",
@@ -1710,6 +1715,11 @@ export const c4Tools: Tool[] = [
         "q": "How much does CADProps cost?",
         "a": "CADProps is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CADProps Page](https://www.cadprops.com)."
       }
+    ,
+      {
+        "q": "What are the best alternatives to CADProps?",
+        "a": "The closest alternatives to CADProps are DWG TrueView, CAD Reader, and DXF Medic — priced on free of charge, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "pricing_tiers": [
       {
@@ -1887,6 +1897,11 @@ export const c4Tools: Tool[] = [
       {
         "q": "Does 3Dstudio.co Web Tools cost anything?",
         "a": "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks. Licence terms, permitted uses and any paid add-ons: [Official 3Dstudio.co Web Tools Page](https://3dstudio.co/tools/?utm_source=cadguide)."
+      }
+    ,
+      {
+        "q": "What are the best alternatives to 3Dstudio.co Web Tools?",
+        "a": "The closest alternatives to 3Dstudio.co Web Tools are CADProps, CAD Reader, DWG TrueView, DXF Medic, and Solibri — priced on free of charge, a freemium model, free of charge, a freemium model, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "pricing_tiers": [

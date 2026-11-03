@@ -440,6 +440,11 @@ export const c1Tools: Tool[] = [
         "q": "What are the best alternatives to ZWCAD?",
         "a": "The closest alternatives to ZWCAD are AutoCAD, BricsCAD, and GstarCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of ZWCAD?",
+        "a": "ZWCAD is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ZWCAD plans and trial](https://www.zwsoft.com/product/zwcad/download)."
+      }
     ],
     "tech_specs": {
       "engine": "ZWSOFT Overdrive Kernel & ACIS (3D)",
@@ -1161,6 +1166,11 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to GstarCAD?",
         "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD, and progeCAD Professional. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+      }
+    ,
+      {
+        "q": "Is there a free version of GstarCAD?",
+        "a": "GstarCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official GstarCAD plans and trial](https://www.gstarcad.net/download/)."
       }
     ],
     "tech_specs": {
@@ -1987,6 +1997,11 @@ export const c1Tools: Tool[] = [
         "q": "What are the best alternatives to progeCAD Professional?",
         "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD, and DraftSight. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of progeCAD Professional?",
+        "a": "progeCAD Professional is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official progeCAD Professional plans and trial](https://www.progesoft.com/products/progecad-professional/download)."
+      }
     ],
     "tech_specs": {
       "engine": "IntelliCAD (DWG-native)",
@@ -2762,6 +2777,11 @@ export const c1Tools: Tool[] = [
         "q": "What are the best alternatives to CorelCAD?",
         "a": "The closest actively maintained alternatives to CorelCAD are ARES Commander (built by Graebert on the exact same CAD engine), DraftSight, BricsCAD, and TurboCAD Platinum. Compare their full technical specifications and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of CorelCAD?",
+        "a": "CorelCAD is no longer sold: the vendor lists it as end of sale, so no new licence can be bought. Existing perpetual licences keep working, and any trial or upgrade path the vendor still publishes is on its own page: [Official CorelCAD page](https://www.graebert.com/corelcad/)."
+      }
     ],
     "tech_specs": {
       "engine": "Graebert ARES",
@@ -3049,6 +3069,11 @@ export const c1Tools: Tool[] = [
         "q": "What are the best alternatives to CAXA CAD?",
         "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of CAXA CAD?",
+        "a": "CAXA CAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CAXA CAD plans and trial](https://cad.caxa.com/pc/revisions)."
+      }
     ],
     "tech_specs": {
       "engine": "CAXA EXB & DWG Dual-Kernel",
@@ -3200,6 +3225,11 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to ARES Commander?",
         "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, BricsCAD, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+      }
+    ,
+      {
+        "q": "Is there a free version of ARES Commander?",
+        "a": "ARES Commander is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ARES Commander plans and trial](https://www.graebert.com/cad-software/ares-commander/)."
       }
     ],
     "tech_specs": {
@@ -3587,6 +3617,11 @@ export const c1Tools: Tool[] = [
       {
         "q": "Which file formats does MCAD support?",
         "a": "MCAD opens, edits and saves DWG and DXF natively, without needing a converter, and the browser edition opens DWG as well. Drawings leave in the same two formats. On top of that it exports G-code straight from the drawing for CNC, laser and plasma cutting, with cut simulation, holes-before-outline ordering and lead-ins — the built-in nesting and G-code path is the main thing general 2D drafting software does not have."
+      }
+    ,
+      {
+        "q": "Is there a free version of MCAD?",
+        "a": "MCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official MCAD plans and trial](https://www.mechdesigned.com/en/software/mcad/)."
       }
     ],
     "pricing_tiers": [

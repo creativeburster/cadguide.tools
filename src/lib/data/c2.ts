@@ -161,6 +161,11 @@ export const c2Tools: Tool[] = [
         "q": "Does SolidWorks have an API for automation and customization?",
         "a": "Yes. SOLIDWORKS exposes a COM-based API with bindings for C#, VB.NET, C++, and VBA macros, allowing engineering teams to automate parametric part generation, batch drawing export, custom property management, and PDM workflows."
       }
+    ,
+      {
+        "q": "What are the best alternatives to SolidWorks?",
+        "a": "The closest alternatives to SolidWorks are Autodesk Inventor, Onshape, and PTC Creo — priced on a subscription, a freemium model, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
@@ -694,6 +699,11 @@ export const c2Tools: Tool[] = [
         "q": "Does Fusion 360 have an API for automation and customization?",
         "a": "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
       }
+    ,
+      {
+        "q": "What are the best alternatives to Autodesk Fusion (Fusion 360)?",
+        "a": "The closest alternatives to Autodesk Fusion (Fusion 360) are SolidWorks, Onshape, and Shapr3D — priced on a subscription or a perpetual licence, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
@@ -952,6 +962,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does Rhino 3D have an API for automation and customization?",
         "a": "Yes. Rhino 3D exposes RhinoCommon (.NET), Rhino.Python (Python 3), C/C++ SDK, and the open-source openNURBS toolkit (for reading/writing 3DM files externally). Rhino.Inside also allows embedding Rhino and Grasshopper inside host applications such as Autodesk Revit on Windows."
+      }
+    ,
+      {
+        "q": "What are the best alternatives to Rhino 3D?",
+        "a": "The closest alternatives to Rhino 3D are SketchUp, Maya, and Blender — priced on a freemium model, a subscription, and open source respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -1223,6 +1238,11 @@ export const c2Tools: Tool[] = [
         "q": "Does CATIA have an API for automation and customization?",
         "a": "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
       }
+    ,
+      {
+        "q": "Is there a free version of CATIA?",
+        "a": "CATIA is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CATIA plans and trial](https://www.3ds.com/products/catia)."
+      }
     ],
     "tech_specs": {
       "engine": "CGM (Convergence Geometric Modeler)",
@@ -1434,6 +1454,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does FreeCAD have an API for automation and customization?",
         "a": "Yes. FreeCAD exposes a deep Python API and C++ modular architecture. You can script geometry creation, build custom workbenches, and automate exports entirely via Python."
+      }
+    ,
+      {
+        "q": "What are the best alternatives to FreeCAD?",
+        "a": "The closest alternatives to FreeCAD are SolidWorks, Autodesk Fusion (Fusion 360), and SolveSpace — priced on a subscription or a perpetual licence, a subscription, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2146,6 +2171,11 @@ export const c2Tools: Tool[] = [
         "q": "Does Autodesk Inventor have an API for automation and customization?",
         "a": "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
       }
+    ,
+      {
+        "q": "What are the best alternatives to Autodesk Inventor?",
+        "a": "The closest alternatives to Autodesk Inventor are SolidWorks, Solid Edge, PTC Creo, and Autodesk Fusion (Fusion 360) — priced on a subscription or a perpetual licence, a subscription or a perpetual licence, a subscription, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "tech_specs": {
       "engine": "Autodesk ShapeManager (ASM)",
@@ -2392,6 +2422,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does PTC Creo have an API for automation and customization?",
         "a": "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+      }
+    ,
+      {
+        "q": "Is there a free version of PTC Creo?",
+        "a": "PTC Creo is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official PTC Creo plans and trial](https://www.ptc.com/en/products/creo/trial)."
       }
     ],
     "tech_specs": {
@@ -3093,7 +3128,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alibre Design?",
-        "a": "Alibre Design is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Alibre Design page](https://www.alibre.com)."
+        "a": "Alibre Design is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Alibre Design page](https://www.alibre.com)."
       },
       {
         "q": "What operating systems does Alibre Design support?",
@@ -3215,7 +3250,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maya?",
-        "a": "Maya is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Maya page](https://www.autodesk.com/products/maya/overview)."
+        "a": "Maya is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Maya page](https://www.autodesk.com/products/maya/overview)."
       },
       {
         "q": "What operating systems does Maya support?",
@@ -3671,7 +3706,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
-        "a": "Geomagic Design X is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Geomagic Design X page](https://hexagon.com/products/geomagic-design-x)."
+        "a": "Geomagic Design X is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Geomagic Design X page](https://hexagon.com/products/geomagic-design-x)."
       },
       {
         "q": "What operating systems does Geomagic Design X support?",
@@ -3836,7 +3871,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
-        "a": "Alias AutoStudio is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Alias AutoStudio page](https://www.autodesk.com/products/alias-products/overview)."
+        "a": "Alias AutoStudio is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Alias AutoStudio page](https://www.autodesk.com/products/alias-products/overview)."
       },
       {
         "q": "What operating systems does Alias AutoStudio support?",
@@ -4030,7 +4065,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZW3D?",
-        "a": "ZW3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ZW3D page](https://www.zwsoft.com/zw3d)."
+        "a": "ZW3D is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ZW3D page](https://www.zwsoft.com/product/zw3d)."
       },
       {
         "q": "What operating systems does ZW3D support?",
@@ -4246,7 +4281,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Plasticity?",
-        "a": "Plasticity is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Plasticity page](https://www.plasticity.xyz)."
+        "a": "Plasticity is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Plasticity page](https://www.plasticity.xyz)."
       },
       {
         "q": "What operating systems does Plasticity support?",
@@ -4458,7 +4493,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MoI3D?",
-        "a": "MoI3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MoI3D page](https://moi3d.com)."
+        "a": "MoI3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MoI3D page](https://moi3d.com)."
       },
       {
         "q": "What operating systems does MoI3D support?",
@@ -4701,6 +4736,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "Which file formats does Tinkercad support?",
         "a": "Tinkercad supports export to STL, OBJ, and SVG for 3D printing and manufacturing."
+      }
+    ,
+      {
+        "q": "What are the best alternatives to Tinkercad?",
+        "a": "The closest alternatives to Tinkercad are Autodesk Fusion (Fusion 360), SketchUp, and Onshape — priced on a subscription, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5082,6 +5122,11 @@ export const c2Tools: Tool[] = [
         "q": "Which file formats does CAD Exchanger support?",
         "a": "The suite reads and writes STEP, IGES, JT, Parasolid, ACIS, STL and OBJ, and reads native CATIA, NX, Creo, SolidWorks, Inventor, Solid Edge and IFC files, along with glTF and FBX for visualisation. The exact matrix varies by product and by add-on module, so check the supported formats list on the official site."
       }
+    ,
+      {
+        "q": "What are the best alternatives to CAD Exchanger?",
+        "a": "The closest alternatives to CAD Exchanger are Glovius, MeshLab, and Solid Edge Viewer — priced on a freemium model, free of charge, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+      }
     ],
     "tech_specs": {
       "engine": "CAD Exchanger SDK",
@@ -5406,6 +5451,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "What are the best alternatives to KOMPAS-3D?",
         "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge, and Alibre Design. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+      }
+    ,
+      {
+        "q": "Is there a free version of KOMPAS-3D?",
+        "a": "KOMPAS-3D is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official KOMPAS-3D plans and trial](https://ascon.net/kompas-3d/)."
       }
     ],
     "tech_specs": {
@@ -5908,6 +5958,11 @@ export const c2Tools: Tool[] = [
       {
         "q": "What are the best alternatives to 3DEXPERIENCE?",
         "a": "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. CATIA (offered on a Subscription license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+      }
+    ,
+      {
+        "q": "Is there a free version of 3DEXPERIENCE?",
+        "a": "3DEXPERIENCE is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official 3DEXPERIENCE plans and trial](https://www.3ds.com/3dexperience)."
       }
     ],
     "tech_specs": {

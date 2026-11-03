@@ -162,6 +162,11 @@ export const c5Tools: Tool[] = [
         "q": "Does Siemens NX have an API for automation and customization?",
         "a": "Yes. Siemens NX exposes NX Open / Open C / Open C++ with SDK bindings for C++, C#, Java, Python. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
       }
+    ,
+      {
+        "q": "Is there a free version of Siemens NX?",
+        "a": "Siemens NX is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Siemens NX plans and trial](https://trials.sw.siemens.com/nx/)."
+      }
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
@@ -397,6 +402,11 @@ export const c5Tools: Tool[] = [
         "q": "What are the best alternatives to Mastercam?",
         "a": "The closest alternatives to Mastercam are SolidCAM, hyperMILL, PowerMill, and GibbsCAM. SolidCAM (offered on a Subscription license) competes directly on core Manufacturing workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of Mastercam?",
+        "a": "Mastercam is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Mastercam plans and trial](https://my.mastercam.com)."
+      }
     ],
     "tech_specs": {
       "engine": "Mastercam Custom CAM",
@@ -544,7 +554,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of nTop?",
-        "a": "nTop is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official nTop page](https://www.ntop.com)."
+        "a": "nTop is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official nTop page](https://www.ntop.com)."
       },
       {
         "q": "What operating systems does nTop support?",
@@ -853,7 +863,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Magics?",
-        "a": "Magics is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Magics page](https://www.materialise.com)."
+        "a": "Magics is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Magics page](https://www.materialise.com)."
       },
       {
         "q": "What operating systems does Magics support?",
@@ -961,7 +971,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Cimatron?",
-        "a": "Cimatron is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Cimatron page](https://www.cimatron.com)."
+        "a": "Cimatron is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Cimatron page](https://www.cimatron.com)."
       },
       {
         "q": "What operating systems does Cimatron support?",
@@ -1140,7 +1150,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
-        "a": "ANSYS Mechanical is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Mechanical page](https://www.ansys.com/products/structures/ansys-mechanical)."
+        "a": "ANSYS Mechanical is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Mechanical page](https://www.ansys.com/products/structures/ansys-mechanical)."
       },
       {
         "q": "What operating systems does ANSYS Mechanical support?",
@@ -1310,7 +1320,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Nastran?",
-        "a": "MSC Nastran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Nastran page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
+        "a": "MSC Nastran is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MSC Nastran page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
       },
       {
         "q": "What operating systems does MSC Nastran support?",
@@ -1585,7 +1595,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAMWorks?",
-        "a": "CAMWorks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CAMWorks page](https://camworks.com/)."
+        "a": "CAMWorks is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CAMWorks page](https://camworks.com/)."
       },
       {
         "q": "What operating systems does CAMWorks support?",
@@ -1861,7 +1871,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of TopSolid?",
-        "a": "TopSolid is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official TopSolid page](https://www.topsolid.com/)."
+        "a": "TopSolid is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official TopSolid page](https://www.topsolid.com/)."
       },
       {
         "q": "What operating systems does TopSolid support?",
@@ -2088,7 +2098,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of VISI?",
-        "a": "VISI is commercial software and no free tier is listed for it here. Resellers arrange evaluations at their discretion, and the terms change over time, so the official site is the only current source: [Official VISI page](https://hexagon.com/products/visi)."
+        "a": "VISI is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official VISI page](https://hexagon.com/products/visi)."
       },
       {
         "q": "What operating systems does VISI support?",
@@ -2314,7 +2324,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Edgecam?",
-        "a": "Edgecam is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Edgecam page](https://hexagon.com/products/edgecam)."
+        "a": "Edgecam is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Edgecam page](https://hexagon.com/products/edgecam)."
       },
       {
         "q": "What operating systems does Edgecam support?",
@@ -2504,7 +2514,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KISSsoft?",
-        "a": "KISSsoft is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official KISSsoft page](https://www.kisssoft.com/)."
+        "a": "KISSsoft is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official KISSsoft page](https://www.kisssoft.com/)."
       },
       {
         "q": "What operating systems does KISSsoft support?",
@@ -2695,7 +2705,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of FeatureCAM?",
-        "a": "FeatureCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official FeatureCAM page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview)."
+        "a": "FeatureCAM is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official FeatureCAM page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview)."
       },
       {
         "q": "What operating systems does FeatureCAM support?",
@@ -2893,7 +2903,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of GibbsCAM?",
-        "a": "GibbsCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official GibbsCAM page](https://www.gibbscam.com/)."
+        "a": "GibbsCAM is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official GibbsCAM page](https://www.gibbscam.com/)."
       },
       {
         "q": "What operating systems does GibbsCAM support?",
@@ -3087,7 +3097,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of hyperMILL?",
-        "a": "hyperMILL is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official hyperMILL page](https://www.openmind-tech.com/)."
+        "a": "hyperMILL is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official hyperMILL page](https://www.openmind-tech.com/en/cam/product-overview/)."
       },
       {
         "q": "What operating systems does hyperMILL support?",
@@ -3286,7 +3296,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tebis?",
-        "a": "Tebis is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Tebis page](https://www.tebis.com/)."
+        "a": "Tebis is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Tebis page](https://www.tebis.com/)."
       },
       {
         "q": "What operating systems does Tebis support?",
@@ -3498,7 +3508,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of WorkNC?",
-        "a": "WorkNC is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official WorkNC page](https://hexagon.com/products/worknc)."
+        "a": "WorkNC is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official WorkNC page](https://hexagon.com/products/worknc)."
       },
       {
         "q": "What operating systems does WorkNC support?",
@@ -3690,7 +3700,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SURFCAM?",
-        "a": "SURFCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SURFCAM page](https://www.surfcam.com/)."
+        "a": "SURFCAM is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official SURFCAM page](https://www.surfcam.com/)."
       },
       {
         "q": "What operating systems does SURFCAM support?",
@@ -3903,7 +3913,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
-        "a": "BobCAD-CAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official BobCAD-CAM page](https://bobcad.com/)."
+        "a": "BobCAD-CAM is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official BobCAD-CAM page](https://bobcad.com/)."
       },
       {
         "q": "What operating systems does BobCAD-CAM support?",
@@ -4098,7 +4108,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AutoForm?",
-        "a": "AutoForm is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AutoForm page](https://www.autoform.com/)."
+        "a": "AutoForm is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AutoForm page](https://www.autoform.com/)."
       },
       {
         "q": "What operating systems does AutoForm support?",
@@ -4290,7 +4300,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldflow?",
-        "a": "Moldflow is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Moldflow page](https://www.autodesk.com/products/moldflow/overview)."
+        "a": "Moldflow is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Moldflow page](https://www.autodesk.com/products/moldflow/overview)."
       },
       {
         "q": "What operating systems does Moldflow support?",
@@ -4497,7 +4507,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Moldex3D?",
-        "a": "Moldex3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Moldex3D page](https://www.moldex3d.com/)."
+        "a": "Moldex3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Moldex3D page](https://www.moldex3d.com/)."
       },
       {
         "q": "What operating systems does Moldex3D support?",
@@ -4722,7 +4732,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AlphaCAM?",
-        "a": "AlphaCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AlphaCAM page](https://hexagon.com/products/alphacam)."
+        "a": "AlphaCAM is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AlphaCAM page](https://hexagon.com/products/alphacam)."
       },
       {
         "q": "What operating systems does AlphaCAM support?",
@@ -4930,7 +4940,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Radan?",
-        "a": "Radan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Radan page](https://hexagon.com/products/radan)."
+        "a": "Radan is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Radan page](https://hexagon.com/products/radan)."
       },
       {
         "q": "What operating systems does Radan support?",
@@ -5117,7 +5127,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lantek Expert?",
-        "a": "Lantek Expert is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Lantek Expert page](https://www.lantek.com/)."
+        "a": "Lantek Expert is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Lantek Expert page](https://www.lantek.com/)."
       },
       {
         "q": "What operating systems does Lantek Expert support?",
@@ -5401,7 +5411,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SigmaNEST?",
-        "a": "SigmaNEST is commercial software and no free tier is listed. Any trial, demo or cut-down edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SigmaNEST page](https://www.sigmateksystems.com/en/sigmanest)."
+        "a": "SigmaNEST is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official SigmaNEST page](https://www.sigmateksystems.com/en/sigmanest)."
       },
       {
         "q": "What operating systems does SigmaNEST support?",
@@ -5535,7 +5545,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
-        "a": "ANSYS Fluent is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Fluent page](https://www.ansys.com/products/fluids/ansys-fluent)."
+        "a": "ANSYS Fluent is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Fluent page](https://www.ansys.com/products/fluids/ansys-fluent)."
       },
       {
         "q": "What operating systems does ANSYS Fluent support?",
@@ -5725,7 +5735,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
-        "a": "ANSYS Workbench is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Workbench page](https://www.ansys.com/products/ansys-workbench)."
+        "a": "ANSYS Workbench is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Workbench page](https://www.ansys.com/products/ansys-workbench)."
       },
       {
         "q": "What operating systems does ANSYS Workbench support?",
@@ -5922,7 +5932,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
-        "a": "ANSYS Discovery is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ANSYS Discovery page](https://www.ansys.com/products/3d-design/ansys-discovery)."
+        "a": "ANSYS Discovery is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Discovery page](https://www.ansys.com/products/3d-design/ansys-discovery)."
       },
       {
         "q": "What operating systems does ANSYS Discovery support?",
@@ -6144,7 +6154,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Abaqus?",
-        "a": "Abaqus is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Abaqus page](https://www.3ds.com/products/simulia/abaqus)."
+        "a": "Abaqus is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Abaqus page](https://www.3ds.com/products/simulia/abaqus)."
       },
       {
         "q": "What operating systems does Abaqus support?",
@@ -6351,7 +6361,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
-        "a": "COMSOL Multiphysics is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official COMSOL Multiphysics page](https://www.comsol.com)."
+        "a": "COMSOL Multiphysics is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official COMSOL Multiphysics page](https://www.comsol.com)."
       },
       {
         "q": "What operating systems does COMSOL Multiphysics support?",
@@ -6553,7 +6563,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of LS-DYNA?",
-        "a": "LS-DYNA is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official LS-DYNA page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
+        "a": "LS-DYNA is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official LS-DYNA page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
       },
       {
         "q": "What operating systems does LS-DYNA support?",
@@ -6747,7 +6757,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
-        "a": "Simcenter STAR-CCM+ is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Simcenter STAR-CCM+ page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
+        "a": "Simcenter STAR-CCM+ is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Simcenter STAR-CCM+ page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
       },
       {
         "q": "What operating systems does Simcenter STAR-CCM+ support?",
@@ -7378,7 +7388,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Femap?",
-        "a": "Femap is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Femap page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
+        "a": "Femap is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Femap page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
       },
       {
         "q": "What operating systems does Femap support?",
@@ -7783,7 +7793,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Patran?",
-        "a": "MSC Patran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Patran page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
+        "a": "MSC Patran is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MSC Patran page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
       },
       {
         "q": "What operating systems does MSC Patran support?",
@@ -7984,7 +7994,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MSC Adams?",
-        "a": "MSC Adams is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Adams page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
+        "a": "MSC Adams is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MSC Adams page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
       },
       {
         "q": "What operating systems does MSC Adams support?",
@@ -8180,7 +8190,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CAESAR II?",
-        "a": "CAESAR II is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Octave Aspect Pipe Stress page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
+        "a": "CAESAR II is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CAESAR II page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
       },
       {
         "q": "What operating systems does CAESAR II support?",
@@ -8370,7 +8380,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
-        "a": "Bentley AutoPIPE is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Bentley AutoPIPE page](https://www.bentley.com/software/autopipe/)."
+        "a": "Bentley AutoPIPE is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Bentley AutoPIPE page](https://www.bentley.com/software/autopipe/)."
       },
       {
         "q": "What operating systems does Bentley AutoPIPE support?",
@@ -8590,7 +8600,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of PV Elite?",
-        "a": "PV Elite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Octave Aspect Pressure Vessel page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
+        "a": "PV Elite is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official PV Elite page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
       },
       {
         "q": "What operating systems does PV Elite support?",
@@ -8772,7 +8782,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
-        "a": "AspenTech Aspen HYSYS is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AspenTech Aspen HYSYS page](https://www.aspentech.com/en/products/engineering/aspen-hysys)."
+        "a": "AspenTech Aspen HYSYS is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AspenTech Aspen HYSYS page](https://www.aspentech.com/en/products/engineering/aspen-hysys)."
       },
       {
         "q": "What operating systems does AspenTech Aspen HYSYS support?",
@@ -8961,7 +8971,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
-        "a": "CSI SAP2000 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CSI SAP2000 page](https://www.csiamerica.com/products/sap2000)."
+        "a": "CSI SAP2000 is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CSI SAP2000 page](https://www.csiamerica.com/products/sap2000)."
       },
       {
         "q": "What operating systems does CSI SAP2000 support?",
@@ -9185,7 +9195,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CSI ETABS?",
-        "a": "CSI ETABS is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CSI ETABS page](https://www.csiamerica.com/products/etabs)."
+        "a": "CSI ETABS is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CSI ETABS page](https://www.csiamerica.com/products/etabs)."
       },
       {
         "q": "What operating systems does CSI ETABS support?",
@@ -9604,7 +9614,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
-        "a": "Tekla Tedds is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Tekla Tedds page](https://www.tekla.com/products/tekla-tedds)."
+        "a": "Tekla Tedds is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Tekla Tedds page](https://www.tekla.com/products/tekla-tedds)."
       },
       {
         "q": "What operating systems does Tekla Tedds support?",
@@ -9787,7 +9797,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
-        "a": "Autodesk Robot Structural Analysis is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Robot Structural Analysis page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview)."
+        "a": "Autodesk Robot Structural Analysis is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Autodesk Robot Structural Analysis page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview)."
       },
       {
         "q": "What operating systems does Autodesk Robot Structural Analysis support?",
@@ -9996,7 +10006,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
-        "a": "IDEA StatiCa is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official IDEA StatiCa page](https://www.ideastatica.com)."
+        "a": "IDEA StatiCa is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official IDEA StatiCa page](https://www.ideastatica.com)."
       },
       {
         "q": "What operating systems does IDEA StatiCa support?",
@@ -10223,7 +10233,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of RISA-3D?",
-        "a": "RISA-3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official RISA-3D page](https://risa.com/products/risa-3d)."
+        "a": "RISA-3D is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official RISA-3D page](https://risa.com/products/risa-3d)."
       },
       {
         "q": "What operating systems does RISA-3D support?",
@@ -11068,7 +11078,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
-        "a": "SCIA Engineer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SCIA Engineer page](https://www.scia.net/)."
+        "a": "SCIA Engineer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official SCIA Engineer page](https://www.scia.net/)."
       },
       {
         "q": "What operating systems does SCIA Engineer support?",
@@ -11553,7 +11563,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ESPRIT?",
-        "a": "ESPRIT is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ESPRIT page](https://www.espritcam.com/)."
+        "a": "ESPRIT is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ESPRIT page](https://espritcam.hexagon.com/)."
       },
       {
         "q": "What operating systems does ESPRIT support?",
@@ -12108,6 +12118,11 @@ export const c5Tools: Tool[] = [
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
         "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, SolidCAM, Autodesk Fusion (Fusion 360), and Mastercam. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of QuantCAD-Hybrid?",
+        "a": "QuantCAD-Hybrid is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official QuantCAD-Hybrid page](https://dinamicpro.ro/quantcad-hybrid.html)."
+      }
     ],
     "pricing_tiers": [
       {
@@ -12332,6 +12347,11 @@ export const c5Tools: Tool[] = [
       {
         "q": "Which file formats can Engineering on Web import and export?",
         "a": "The CAD tool imports and exports STEP, IGES, BREP and DXF, and exports STL, JSON complete-project files and technical drawings as SVG or PDF (print). STL is export-only in CAD — the official format guide states there is no STL import — although the FEA tool can read STL and DXF geometry. PDF export is a print-style output from CAD drawings; the statistics and FEA modules do not publish a PDF export. Check the official format guide for the current per-tool matrix."
+      }
+    ,
+      {
+        "q": "What are the best alternatives to Engineering on Web?",
+        "a": "The closest alternatives to Engineering on Web are SimScale and ANSYS Discovery — priced on a freemium model and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
       }
     ],
     "detailed_features": [

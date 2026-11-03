@@ -457,7 +457,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of EPLAN Electric P8?",
-        "a": "EPLAN Electric P8 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official EPLAN Electric P8 page](https://www.eplan.com)."
+        "a": "EPLAN Electric P8 is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official EPLAN Electric P8 page](https://www.eplan.com/us-en/)."
       },
       {
         "q": "What operating systems does EPLAN Electric P8 support?",
@@ -1032,7 +1032,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Allegro PCB?",
-        "a": "Allegro PCB is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Allegro PCB page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
+        "a": "Allegro PCB is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Allegro PCB page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
       },
       {
         "q": "What operating systems does Allegro PCB support?",
@@ -1374,6 +1374,11 @@ export const c6Tools: Tool[] = [
         "q": "What are the best alternatives to OrCAD?",
         "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB, and KiCad. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while PADS Professional (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of OrCAD?",
+        "a": "OrCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official OrCAD plans and trial](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html)."
+      }
     ],
     "tech_specs": {
       "engine": "OrCAD X platform (Allegro X engine)",
@@ -1673,6 +1678,11 @@ export const c6Tools: Tool[] = [
         "q": "What are the best alternatives to PADS Professional?",
         "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB, and Xpedition. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while OrCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of PADS Professional?",
+        "a": "PADS Professional is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official PADS Professional plans and trial](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
+      }
     ],
     "tech_specs": {
       "engine": "Xpedition-derived engine (PADS Professional)",
@@ -1832,7 +1842,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Xpedition?",
-        "a": "Xpedition is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Xpedition page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
+        "a": "Xpedition is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Xpedition page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
       },
       {
         "q": "What operating systems does Xpedition support?",
@@ -2632,7 +2642,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of NI Multisim?",
-        "a": "NI Multisim is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official NI Multisim page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
+        "a": "NI Multisim is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official NI Multisim page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
       },
       {
         "q": "What operating systems does NI Multisim support?",
@@ -3023,7 +3033,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Proteus Design Suite?",
-        "a": "Proteus Design Suite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Proteus Design Suite page](https://www.labcenter.com)."
+        "a": "Proteus Design Suite is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Proteus Design Suite page](https://www.labcenter.com)."
       },
       {
         "q": "What operating systems does Proteus Design Suite support?",
@@ -3236,7 +3246,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Altium 365?",
-        "a": "Altium 365 is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Altium 365 page](https://www.altium.com/altium-365)."
+        "a": "Altium 365 is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Altium 365 page](https://www.altium.com/altium-365)."
       },
       {
         "q": "What operating systems does Altium 365 support?",

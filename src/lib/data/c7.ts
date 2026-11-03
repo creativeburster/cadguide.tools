@@ -57,7 +57,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of MatrixGold?",
-        "a": "MatrixGold is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MatrixGold page](https://www.gemvision.com/matrixgold)."
+        "a": "MatrixGold is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MatrixGold page](https://www.gemvision.com/matrixgold)."
       },
       {
         "q": "What operating systems does MatrixGold support?",
@@ -200,7 +200,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
-        "a": "AVEVA Marine is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AVEVA Marine page](https://www.aveva.com/en/products/hull-and-outfitting/)."
+        "a": "AVEVA Marine is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AVEVA Marine page](https://www.aveva.com/en/products/hull-and-outfitting/)."
       },
       {
         "q": "What operating systems does AVEVA Marine support?",
@@ -388,7 +388,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of CLO 3D?",
-        "a": "CLO 3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CLO 3D page](https://www.clo3d.com)."
+        "a": "CLO 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CLO 3D page](https://www.clo3d.com)."
       },
       {
         "q": "What operating systems does CLO 3D support?",
@@ -608,7 +608,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Infraworks?",
-        "a": "Infraworks is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Infraworks page](https://www.autodesk.com/products/infraworks/overview)."
+        "a": "Infraworks is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Infraworks page](https://www.autodesk.com/products/infraworks/overview)."
       },
       {
         "q": "What operating systems does Infraworks support?",
@@ -974,7 +974,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of ZBrush?",
-        "a": "ZBrush is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official ZBrush page](https://www.maxon.net/en/zbrush)."
+        "a": "ZBrush is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ZBrush page](https://www.maxon.net/en/zbrush)."
       },
       {
         "q": "What operating systems does ZBrush support?",
@@ -1141,7 +1141,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of KeyShot?",
-        "a": "KeyShot is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official KeyShot page](https://www.keyshot.com)."
+        "a": "KeyShot is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official KeyShot page](https://www.keyshot.com)."
       },
       {
         "q": "What operating systems does KeyShot support?",
@@ -1331,7 +1331,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Lumion?",
-        "a": "Lumion is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Lumion page](https://lumion.com)."
+        "a": "Lumion is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Lumion page](https://lumion.com)."
       },
       {
         "q": "What operating systems does Lumion support?",
@@ -1511,7 +1511,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Enscape?",
-        "a": "Enscape is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Enscape page](https://enscape3d.com)."
+        "a": "Enscape is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Enscape page](https://enscape3d.com)."
       },
       {
         "q": "What operating systems does Enscape support?",
@@ -2389,7 +2389,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Simplify3D?",
-        "a": "Simplify3D is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Simplify3D page](https://www.simplify3d.com)."
+        "a": "Simplify3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Simplify3D page](https://www.simplify3d.com)."
       },
       {
         "q": "What operating systems does Simplify3D support?",
@@ -2576,7 +2576,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
-        "a": "Autodesk Netfabb is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Autodesk Netfabb page](https://www.autodesk.com/products/netfabb/overview)."
+        "a": "Autodesk Netfabb is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Autodesk Netfabb page](https://www.autodesk.com/products/netfabb/overview)."
       },
       {
         "q": "What operating systems does Autodesk Netfabb support?",
@@ -2778,7 +2778,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
-        "a": "Marvelous Designer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Marvelous Designer page](https://marvelousdesigner.com)."
+        "a": "Marvelous Designer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Marvelous Designer page](https://marvelousdesigner.com)."
       },
       {
         "q": "What operating systems does Marvelous Designer support?",
@@ -3214,7 +3214,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of V-Ray?",
-        "a": "V-Ray is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official V-Ray page](https://www.chaos.com/vray)."
+        "a": "V-Ray is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official V-Ray page](https://www.chaos.com/vray)."
       },
       {
         "q": "What operating systems does V-Ray support?",
@@ -3416,7 +3416,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Corona Renderer?",
-        "a": "Corona Renderer is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Corona Renderer page](https://www.chaos.com/corona)."
+        "a": "Corona Renderer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Corona Renderer page](https://www.chaos.com/corona)."
       },
       {
         "q": "What operating systems does Corona Renderer support?",
@@ -3629,7 +3629,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
-        "a": "Adobe Substance 3D Painter is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Adobe Substance 3D Painter page](https://www.adobe.com/products/substance3d-painter.html)."
+        "a": "Adobe Substance 3D Painter is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Adobe Substance 3D Painter page](https://www.adobe.com/products/substance3d-painter.html)."
       },
       {
         "q": "What operating systems does Adobe Substance 3D Painter support?",
@@ -3845,7 +3845,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Carlson Survey?",
-        "a": "Carlson Survey is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Carlson Survey page](https://www.carlsonsw.com/products/survey/)."
+        "a": "Carlson Survey is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Carlson Survey page](https://www.carlsonsw.com/products/survey/)."
       },
       {
         "q": "What operating systems does Carlson Survey support?",
@@ -4040,7 +4040,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
-        "a": "Trimble Business Center is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Trimble Business Center page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
+        "a": "Trimble Business Center is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Trimble Business Center page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
       },
       {
         "q": "What operating systems does Trimble Business Center support?",
@@ -4463,6 +4463,11 @@ export const c7Tools: Tool[] = [
         "q": "What are the best alternatives to AVEVA E3D Design?",
         "a": "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. Hexagon SmartPlant 3D (offered on a Subscription license) competes directly on core Oil and Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Is there a free version of AVEVA E3D Design?",
+        "a": "AVEVA E3D Design is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official AVEVA E3D Design plans and trial](https://www.aveva.com/en/products/e3d-design/)."
+      }
     ],
     "tech_specs": {
       "engine": "AVEVA E3D Design platform",
@@ -4620,7 +4625,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
-        "a": "Maptek Vulcan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Maptek Vulcan page](https://www.maptek.com/)."
+        "a": "Maptek Vulcan is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Maptek Vulcan page](https://www.maptek.com/)."
       },
       {
         "q": "What operating systems does Maptek Vulcan support?",
