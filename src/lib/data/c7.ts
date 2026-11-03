@@ -53,7 +53,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does MatrixGold cost?",
-        "a": "MatrixGold is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MatrixGold Pricing Page](https://www.gemvision.com/matrixgold)."
+        "a": "MatrixGold is sold as a perpetual licence; the plans shown on this page are Perpetual License and Annual Maintenance. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MatrixGold Pricing Page](https://www.gemvision.com/matrixgold)."
       },
       {
         "q": "Is there a free version of MatrixGold?",
@@ -196,7 +196,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA Marine cost?",
-        "a": "AVEVA Marine is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA Marine Pricing Page](https://www.aveva.com/en/products/hull-and-outfitting/)."
+        "a": "AVEVA Marine is sold by subscription; the plans shown on this page are AVEVA Marine licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA Marine Pricing Page](https://www.aveva.com/en/products/hull-and-outfitting/)."
       },
       {
         "q": "Is there a free version of AVEVA Marine?",
@@ -384,7 +384,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does CLO 3D cost?",
-        "a": "CLO 3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CLO 3D Pricing Page](https://www.clo3d.com)."
+        "a": "CLO 3D is sold by subscription; the plans shown on this page are Individual and Business. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CLO 3D Pricing Page](https://www.clo3d.com)."
       },
       {
         "q": "Is there a free version of CLO 3D?",
@@ -604,7 +604,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Infraworks cost?",
-        "a": "Infraworks is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Infraworks Pricing Page](https://www.autodesk.com/products/infraworks/overview)."
+        "a": "Infraworks is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Infraworks Pricing Page](https://www.autodesk.com/products/infraworks/overview)."
       },
       {
         "q": "Is there a free version of Infraworks?",
@@ -783,7 +783,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does 3ds Max cost?",
-        "a": "3ds Max is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official 3ds Max Pricing Page](https://www.autodesk.com/products/3ds-max/subscribe)."
+        "a": "3ds Max is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official 3ds Max Pricing Page](https://www.autodesk.com/products/3ds-max/subscribe)."
       },
       {
         "q": "Is there a free version of 3ds Max?",
@@ -970,7 +970,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does ZBrush cost?",
-        "a": "ZBrush is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZBrush Pricing Page](https://www.maxon.net/en/buy)."
+        "a": "ZBrush is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZBrush Pricing Page](https://www.maxon.net/en/buy)."
       },
       {
         "q": "Is there a free version of ZBrush?",
@@ -1137,7 +1137,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does KeyShot cost?",
-        "a": "KeyShot is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KeyShot Pricing Page](https://www.keyshot.com/pricing/)."
+        "a": "KeyShot is sold by subscription; the plans shown on this page are Pro (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KeyShot Pricing Page](https://www.keyshot.com/pricing/)."
       },
       {
         "q": "Is there a free version of KeyShot?",
@@ -1327,7 +1327,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Lumion cost?",
-        "a": "Lumion is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lumion Pricing Page](https://lumion.com/pricing)."
+        "a": "Lumion is sold by subscription; the plans shown on this page are Pro and Studio. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lumion Pricing Page](https://lumion.com/pricing)."
       },
       {
         "q": "Is there a free version of Lumion?",
@@ -1507,7 +1507,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Enscape cost?",
-        "a": "Enscape is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Enscape Pricing Page](https://enscape3d.com/pricing/)."
+        "a": "Enscape is sold by subscription; the plans shown on this page are Floating License and Solo (Fixed Seat). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Enscape Pricing Page](https://enscape3d.com/pricing/)."
       },
       {
         "q": "Is there a free version of Enscape?",
@@ -1684,7 +1684,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Twinmotion cost?",
-        "a": "Twinmotion is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Twinmotion Pricing Page](https://www.twinmotion.com/pricing)."
+        "a": "Twinmotion is sold on a freemium basis; the plans shown on this page are Free (Low Revenue) and Commercial Subscription. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Twinmotion Pricing Page](https://www.twinmotion.com/pricing)."
       },
       {
         "q": "Is there a free version of Twinmotion?",
@@ -2572,7 +2572,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Netfabb cost?",
-        "a": "Autodesk Netfabb is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Netfabb Pricing Page](https://www.autodesk.com/products/netfabb/overview#buying-options)."
+        "a": "Autodesk Netfabb is sold by subscription; the plans shown on this page are Autodesk Fusion with Netfabb and Netfabb Local Simulation. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Netfabb Pricing Page](https://www.autodesk.com/products/netfabb/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Autodesk Netfabb?",
@@ -2774,7 +2774,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Marvelous Designer cost?",
-        "a": "Marvelous Designer is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricing)."
+        "a": "Marvelous Designer is sold by subscription; the plans shown on this page are Individual, Student, Indie Studio, and Enterprise Team. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricing)."
       },
       {
         "q": "Is there a free version of Marvelous Designer?",
@@ -3000,7 +3000,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does D5 Render cost?",
-        "a": "D5 Render has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official D5 Render Pricing Page](https://www.d5render.com/pricing)."
+        "a": "D5 Render is sold on a freemium basis; the plans shown on this page are Community and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official D5 Render Pricing Page](https://www.d5render.com/pricing)."
       },
       {
         "q": "Is there a free version of D5 Render?",
@@ -3210,7 +3210,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does V-Ray cost?",
-        "a": "V-Ray is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official V-Ray Pricing Page](https://www.chaos.com/pricing)."
+        "a": "V-Ray is sold by subscription; the plans shown on this page are Solo and Premium. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official V-Ray Pricing Page](https://www.chaos.com/pricing)."
       },
       {
         "q": "Is there a free version of V-Ray?",
@@ -3412,7 +3412,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Corona Renderer cost?",
-        "a": "Corona Renderer is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Corona Renderer Pricing Page](https://www.chaos.com/pricing)."
+        "a": "Corona Renderer is sold by subscription; the plans shown on this page are Corona Solo, Corona Premium, and Corona Collection. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Corona Renderer Pricing Page](https://www.chaos.com/pricing)."
       },
       {
         "q": "Is there a free version of Corona Renderer?",
@@ -3625,7 +3625,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Adobe Substance 3D Painter cost?",
-        "a": "Adobe Substance 3D Painter is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Adobe Substance 3D Painter Pricing Page](https://www.adobe.com/creativecloud/3d-ar/plans.html)."
+        "a": "Adobe Substance 3D Painter is sold by subscription; the plans shown on this page are Substance 3D Texturing, Substance 3D Collection, and Collection for teams. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Adobe Substance 3D Painter Pricing Page](https://www.adobe.com/creativecloud/3d-ar/plans.html)."
       },
       {
         "q": "Is there a free version of Adobe Substance 3D Painter?",
@@ -3841,7 +3841,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Carlson Survey cost?",
-        "a": "Carlson Survey is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Carlson Survey Pricing Page](https://www.carlsonsw.com/products/survey/)."
+        "a": "Carlson Survey is sold as a perpetual licence; the plans shown on this page are Carlson Survey licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Carlson Survey Pricing Page](https://www.carlsonsw.com/products/survey/)."
       },
       {
         "q": "Is there a free version of Carlson Survey?",
@@ -4036,7 +4036,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Trimble Business Center cost?",
-        "a": "Trimble Business Center is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Trimble Business Center Pricing Page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
+        "a": "Trimble Business Center is sold by subscription; the plans shown on this page are TBC Starter, TBC Site + Field, TBC Surveying + mapping, and TBC Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Trimble Business Center Pricing Page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
       },
       {
         "q": "Is there a free version of Trimble Business Center?",
@@ -4445,7 +4445,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does AVEVA E3D Design cost?",
-        "a": "AVEVA E3D Design is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA E3D Design Pricing Page](https://www.aveva.com/en/products/e3d-design/)."
+        "a": "AVEVA E3D Design is sold either by subscription or as a perpetual licence; the plans shown on this page are AVEVA E3D Design licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA E3D Design Pricing Page](https://www.aveva.com/en/products/e3d-design/)."
       },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
@@ -4621,7 +4621,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does Maptek Vulcan cost?",
-        "a": "Maptek Vulcan is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maptek Vulcan Pricing Page](https://www.maptek.com/)."
+        "a": "Maptek Vulcan is sold as a perpetual licence; the plans shown on this page are Vulcan licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maptek Vulcan Pricing Page](https://www.maptek.com/)."
       },
       {
         "q": "Is there a free version of Maptek Vulcan?",
@@ -5142,7 +5142,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "How much does pic2CAD cost?",
-        "a": "pic2CAD has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official pic2CAD Pricing Page](https://pic2cad.ai)."
+        "a": "pic2CAD is sold on a freemium basis; the plans shown on this page are Free, Creator, and Studios. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official pic2CAD Pricing Page](https://pic2cad.ai)."
       },
       {
         "q": "Is there a free version of pic2CAD?",

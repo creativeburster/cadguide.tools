@@ -144,7 +144,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Siemens NX cost?",
-        "a": "Siemens NX is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Siemens NX Pricing Page](https://www.dex.siemens.com/)."
+        "a": "Siemens NX is sold either by subscription or as a perpetual licence; the plans shown on this page are Core CAD (NX X), Advanced Designer, and Value-Based (Tokens). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Siemens NX Pricing Page](https://www.dex.siemens.com/)."
       },
       {
         "q": "Does Siemens NX offer a free trial?",
@@ -384,7 +384,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Mastercam cost?",
-        "a": "Mastercam is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Mastercam Pricing Page](https://www.mastercam.com/how-to-buy/)."
+        "a": "Mastercam is sold either by subscription or as a perpetual licence; the plans shown on this page are Entry and Mill-Turn. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Mastercam Pricing Page](https://www.mastercam.com/how-to-buy/)."
       },
       {
         "q": "Is there a free version of Mastercam?",
@@ -550,7 +550,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does nTop cost?",
-        "a": "nTop is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official nTop Pricing Page](https://www.ntop.com)."
+        "a": "nTop is sold by subscription; the plans shown on this page are nTop Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official nTop Pricing Page](https://www.ntop.com)."
       },
       {
         "q": "Is there a free version of nTop?",
@@ -859,7 +859,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Magics cost?",
-        "a": "Magics is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Magics Pricing Page](https://www.materialise.com)."
+        "a": "Magics is sold by subscription; the plans shown on this page are Essential. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Magics Pricing Page](https://www.materialise.com)."
       },
       {
         "q": "Is there a free version of Magics?",
@@ -967,7 +967,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Cimatron cost?",
-        "a": "Cimatron is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Cimatron Pricing Page](https://www.cimatron.com)."
+        "a": "Cimatron is sold by subscription; the plans shown on this page are Cimatron CAD and Cimatron NC Programming. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Cimatron Pricing Page](https://www.cimatron.com)."
       },
       {
         "q": "Is there a free version of Cimatron?",
@@ -1146,7 +1146,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Mechanical cost?",
-        "a": "ANSYS Mechanical is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Mechanical Pricing Page](https://www.ansys.com/products/structures/ansys-mechanical)."
+        "a": "ANSYS Mechanical is sold by subscription; the plans shown on this page are Subscription (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Mechanical Pricing Page](https://www.ansys.com/products/structures/ansys-mechanical)."
       },
       {
         "q": "Is there a free version of ANSYS Mechanical?",
@@ -1316,7 +1316,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Nastran cost?",
-        "a": "MSC Nastran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Nastran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
+        "a": "MSC Nastran is sold by subscription; the plans shown on this page are Subscription (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Nastran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
       },
       {
         "q": "Is there a free version of MSC Nastran?",
@@ -1591,7 +1591,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAMWorks cost?",
-        "a": "CAMWorks is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAMWorks Pricing Page](https://camworks.com/)."
+        "a": "CAMWorks is sold either by subscription or as a perpetual licence; the plans shown on this page are CAMWorks Standard, Milling Professional, Turning Professional, and CAMWorks Premium. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAMWorks Pricing Page](https://camworks.com/)."
       },
       {
         "q": "Is there a free version of CAMWorks?",
@@ -1867,7 +1867,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does TopSolid cost?",
-        "a": "TopSolid is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official TopSolid Pricing Page](https://www.topsolid.com/)."
+        "a": "TopSolid is sold as a perpetual licence; the plans shown on this page are TopSolid licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official TopSolid Pricing Page](https://www.topsolid.com/)."
       },
       {
         "q": "Is there a free version of TopSolid?",
@@ -2320,7 +2320,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Edgecam cost?",
-        "a": "Edgecam is licensed as named modules — Edgecam Milling, Edgecam Turning and Edgecam Mill/Turn — with add-ons such as Waveform, Inspect, Wire EDM and Intelligent Manufacturing, plus the seats themselves. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "Edgecam is sold as a perpetual licence; the plans shown on this page are Edgecam Milling, Edgecam Turning, and Edgecam Mill/Turn. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Edgecam?",
@@ -2510,7 +2510,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does KISSsoft cost?",
-        "a": "KISSsoft is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KISSsoft Pricing Page](https://www.kisssoft.com/)."
+        "a": "KISSsoft is sold as a perpetual licence; the plans shown on this page are KISSsoft licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KISSsoft Pricing Page](https://www.kisssoft.com/)."
       },
       {
         "q": "Is there a free version of KISSsoft?",
@@ -2701,7 +2701,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does FeatureCAM cost?",
-        "a": "FeatureCAM is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official FeatureCAM Pricing Page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview)."
+        "a": "FeatureCAM is sold by subscription; the plans shown on this page are Fusion with FeatureCAM. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official FeatureCAM Pricing Page](https://www.autodesk.com/products/fusion-360-with-featurecam/overview)."
       },
       {
         "q": "Is there a free version of FeatureCAM?",
@@ -2756,7 +2756,7 @@ export const c5Tools: Tool[] = [
     "name": "GibbsCAM",
     "slug": "gibbscam",
     "logo_url": "/logos/gibbscam.png",
-    "short_desc": "Cutting-edge CAM software for programming CNC machine tools with power and flexibility.",
+    "short_desc": "CAM software for programming CNC machine tools, covering milling, turning and mill-turn.",
     "description": "GibbsCAM is CAM software for programming CNC machine tools with the power and flexibility to make parts the way you want. It provides comprehensive tools for milling, turning, multi-axis machining, and wire EDM with a focus on ease of use and productivity.",
     "pricing_tiers": [
       {
@@ -2895,11 +2895,11 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is GibbsCAM used for?",
-        "a": "GibbsCAM is cutting-edge CAM software for programming CNC machine tools with power and flexibility."
+        "a": "GibbsCAM is CAM software for programming CNC machine tools, covering milling, turning and mill-turn."
       },
       {
         "q": "How much does GibbsCAM cost?",
-        "a": "GibbsCAM is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official GibbsCAM Pricing Page](https://www.gibbscam.com/)."
+        "a": "GibbsCAM is sold as a perpetual licence; the plans shown on this page are GibbsCAM licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official GibbsCAM Pricing Page](https://www.gibbscam.com/)."
       },
       {
         "q": "Is there a free version of GibbsCAM?",
@@ -3093,7 +3093,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does hyperMILL cost?",
-        "a": "hyperMILL is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official hyperMILL Pricing Page](https://www.openmind-tech.com/)."
+        "a": "hyperMILL is sold as a perpetual licence; the plans shown on this page are hyperMILL licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official hyperMILL Pricing Page](https://www.openmind-tech.com/)."
       },
       {
         "q": "Is there a free version of hyperMILL?",
@@ -3292,7 +3292,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tebis cost?",
-        "a": "Tebis is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Tebis Pricing Page](https://www.tebis.com/)."
+        "a": "Tebis is sold as a perpetual licence; the plans shown on this page are Tebis licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Tebis Pricing Page](https://www.tebis.com/)."
       },
       {
         "q": "Is there a free version of Tebis?",
@@ -3696,7 +3696,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SURFCAM cost?",
-        "a": "SURFCAM is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "SURFCAM is sold as a perpetual licence; the plans shown on this page are SURFCAM licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of SURFCAM?",
@@ -3909,7 +3909,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does BobCAD-CAM cost?",
-        "a": "BobCAD-CAM is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BobCAD-CAM Pricing Page](https://bobcad.com/)."
+        "a": "BobCAD-CAM is sold by subscription; the plans shown on this page are Essentials, Advanced, and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BobCAD-CAM Pricing Page](https://bobcad.com/)."
       },
       {
         "q": "Is there a free version of BobCAD-CAM?",
@@ -4104,7 +4104,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AutoForm cost?",
-        "a": "AutoForm is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoForm Pricing Page](https://www.autoform.com/)."
+        "a": "AutoForm is sold by subscription; the plans shown on this page are AutoForm Forming Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoForm Pricing Page](https://www.autoform.com/)."
       },
       {
         "q": "Is there a free version of AutoForm?",
@@ -4296,7 +4296,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldflow cost?",
-        "a": "Moldflow is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldflow Pricing Page](https://www.autodesk.com/products/moldflow/overview)."
+        "a": "Moldflow is sold by subscription; the plans shown on this page are Moldflow licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldflow Pricing Page](https://www.autodesk.com/products/moldflow/overview)."
       },
       {
         "q": "Is there a free version of Moldflow?",
@@ -4503,7 +4503,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Moldex3D cost?",
-        "a": "Moldex3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldex3D Pricing Page](https://www.moldex3d.com/)."
+        "a": "Moldex3D is sold as a perpetual licence; the plans shown on this page are Moldex3D Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldex3D Pricing Page](https://www.moldex3d.com/)."
       },
       {
         "q": "Is there a free version of Moldex3D?",
@@ -5123,7 +5123,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Lantek Expert cost?",
-        "a": "Lantek Expert is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lantek Expert Pricing Page](https://www.lantek.com/)."
+        "a": "Lantek Expert is sold as a perpetual licence; the plans shown on this page are Lantek Expert licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lantek Expert Pricing Page](https://www.lantek.com/)."
       },
       {
         "q": "Is there a free version of Lantek Expert?",
@@ -5467,7 +5467,7 @@ export const c5Tools: Tool[] = [
     "name": "ANSYS Fluent",
     "slug": "ansys-fluent",
     "logo_url": "/logos/ansys-fluent.png",
-    "short_desc": "Industry-leading CFD solver for fluid dynamics, heat transfer, and reaction simulations.",
+    "short_desc": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations.",
     "description": "ANSYS Fluent is the global standard general-purpose CFD code used across aerospace, automotive, energy, and consumer-products R&D for steady-state, transient, multi-phase, reacting, and turbulent flow analysis.",
     "country": "USA",
     "category_id": "c5",
@@ -5537,11 +5537,11 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is ANSYS Fluent used for?",
-        "a": "Industry-leading CFD solver for fluid dynamics, heat transfer, and reaction simulations. ANSYS Fluent is a CAE / CAM solution widely adopted in Aerospace, Automotive, Energy."
+        "a": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations. ANSYS Fluent is a CAE / CAM solution widely adopted in Aerospace, Automotive, Energy."
       },
       {
         "q": "How much does ANSYS Fluent cost?",
-        "a": "ANSYS Fluent is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Fluent Pricing Page](https://www.ansys.com/products/fluids/ansys-fluent)."
+        "a": "ANSYS Fluent is sold by subscription; the plans shown on this page are Commercial Seat. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Fluent Pricing Page](https://www.ansys.com/products/fluids/ansys-fluent)."
       },
       {
         "q": "Is there a free version of ANSYS Fluent?",
@@ -5731,7 +5731,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Workbench cost?",
-        "a": "ANSYS Workbench is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Workbench Pricing Page](https://www.ansys.com/products/ansys-workbench)."
+        "a": "ANSYS Workbench is sold by subscription; the plans shown on this page are Enterprise CAE Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Workbench Pricing Page](https://www.ansys.com/products/ansys-workbench)."
       },
       {
         "q": "Is there a free version of ANSYS Workbench?",
@@ -5928,7 +5928,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ANSYS Discovery cost?",
-        "a": "ANSYS Discovery is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Discovery Pricing Page](https://www.ansys.com/products/3d-design/ansys-discovery)."
+        "a": "ANSYS Discovery is sold by subscription; the plans shown on this page are Standard Exploration and High-Fidelity Refinement. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Discovery Pricing Page](https://www.ansys.com/products/3d-design/ansys-discovery)."
       },
       {
         "q": "Is there a free version of ANSYS Discovery?",
@@ -6150,7 +6150,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Abaqus cost?",
-        "a": "Abaqus is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Abaqus Pricing Page](https://www.3ds.com/products/simulia/abaqus)."
+        "a": "Abaqus is sold by subscription; the plans shown on this page are Abaqus/Standard & Explicit. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Abaqus Pricing Page](https://www.3ds.com/products/simulia/abaqus)."
       },
       {
         "q": "Is there a free version of Abaqus?",
@@ -6357,7 +6357,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does COMSOL Multiphysics cost?",
-        "a": "COMSOL Multiphysics is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official COMSOL Multiphysics Pricing Page](https://www.comsol.com)."
+        "a": "COMSOL Multiphysics is sold as a perpetual licence; the plans shown on this page are Core Platform. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official COMSOL Multiphysics Pricing Page](https://www.comsol.com)."
       },
       {
         "q": "Is there a free version of COMSOL Multiphysics?",
@@ -6559,7 +6559,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does LS-DYNA cost?",
-        "a": "LS-DYNA is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official LS-DYNA Pricing Page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
+        "a": "LS-DYNA is sold by subscription; the plans shown on this page are LS-DYNA licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official LS-DYNA Pricing Page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
       },
       {
         "q": "Is there a free version of LS-DYNA?",
@@ -6753,7 +6753,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Simcenter STAR-CCM+ cost?",
-        "a": "Simcenter STAR-CCM+ is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Simcenter STAR-CCM+ Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
+        "a": "Simcenter STAR-CCM+ is sold by subscription; the plans shown on this page are Simcenter STAR-CCM+ licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Simcenter STAR-CCM+ Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
       },
       {
         "q": "Is there a free version of Simcenter STAR-CCM+?",
@@ -7384,7 +7384,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Femap cost?",
-        "a": "Femap is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Femap Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
+        "a": "Femap is sold as a perpetual licence; the plans shown on this page are Femap licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Femap Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
       },
       {
         "q": "Is there a free version of Femap?",
@@ -7789,7 +7789,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Patran cost?",
-        "a": "MSC Patran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Patran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
+        "a": "MSC Patran is sold by subscription; the plans shown on this page are MSC Patran licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Patran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
       },
       {
         "q": "Is there a free version of MSC Patran?",
@@ -7990,7 +7990,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Adams cost?",
-        "a": "MSC Adams is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Adams Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
+        "a": "MSC Adams is sold by subscription; the plans shown on this page are MSC Adams licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Adams Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
       },
       {
         "q": "Is there a free version of MSC Adams?",
@@ -8186,7 +8186,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAESAR II cost?",
-        "a": "CAESAR II is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pipe Stress page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
+        "a": "CAESAR II is sold by subscription; the plans shown on this page are CAESAR II licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pipe Stress page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
       },
       {
         "q": "Is there a free version of CAESAR II?",
@@ -8376,7 +8376,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Bentley AutoPIPE cost?",
-        "a": "Bentley AutoPIPE is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bentley AutoPIPE Pricing Page](https://www.bentley.com/software/autopipe/)."
+        "a": "Bentley AutoPIPE is sold by subscription; the plans shown on this page are AutoPIPE, AutoPIPE Advanced, and AutoPIPE Nuclear. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bentley AutoPIPE Pricing Page](https://www.bentley.com/software/autopipe/)."
       },
       {
         "q": "Is there a free version of Bentley AutoPIPE?",
@@ -8596,7 +8596,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PV Elite cost?",
-        "a": "PV Elite is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pressure Vessel page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
+        "a": "PV Elite is sold by subscription; the plans shown on this page are PV Elite licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pressure Vessel page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
       },
       {
         "q": "Is there a free version of PV Elite?",
@@ -8778,7 +8778,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AspenTech Aspen HYSYS cost?",
-        "a": "AspenTech Aspen HYSYS is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AspenTech Aspen HYSYS Pricing Page](https://www.aspentech.com/en/products/engineering/aspen-hysys)."
+        "a": "AspenTech Aspen HYSYS is sold by subscription; the plans shown on this page are AspenTech Aspen HYSYS licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AspenTech Aspen HYSYS Pricing Page](https://www.aspentech.com/en/products/engineering/aspen-hysys)."
       },
       {
         "q": "Is there a free version of AspenTech Aspen HYSYS?",
@@ -8967,7 +8967,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI SAP2000 cost?",
-        "a": "CSI SAP2000 is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CSI SAP2000 Pricing Page](https://www.csiamerica.com/products/sap2000)."
+        "a": "CSI SAP2000 is sold as a perpetual licence; the plans shown on this page are Basic, Plus, Advanced, and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CSI SAP2000 Pricing Page](https://www.csiamerica.com/products/sap2000)."
       },
       {
         "q": "Is there a free version of CSI SAP2000?",
@@ -9191,7 +9191,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CSI ETABS cost?",
-        "a": "CSI ETABS is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CSI ETABS Pricing Page](https://www.csiamerica.com/products/etabs)."
+        "a": "CSI ETABS is sold as a perpetual licence; the plans shown on this page are Plus, Nonlinear, and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CSI ETABS Pricing Page](https://www.csiamerica.com/products/etabs)."
       },
       {
         "q": "Is there a free version of CSI ETABS?",
@@ -9610,7 +9610,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Tekla Tedds cost?",
-        "a": "Tekla Tedds is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Tekla Tedds Pricing Page](https://www.tekla.com/products/tekla-tedds)."
+        "a": "Tekla Tedds is sold by subscription; the plans shown on this page are Tedds Standalone. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Tekla Tedds Pricing Page](https://www.tekla.com/products/tekla-tedds)."
       },
       {
         "q": "Is there a free version of Tekla Tedds?",
@@ -9793,7 +9793,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Robot Structural Analysis cost?",
-        "a": "Autodesk Robot Structural Analysis is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Robot Structural Analysis Pricing Page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview#buying-options)."
+        "a": "Autodesk Robot Structural Analysis is sold by subscription; the plans shown on this page are Robot Structural Analysis Professional, AEC Collection, and Autodesk Flex. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Robot Structural Analysis Pricing Page](https://www.autodesk.com/products/robot-structural-analysis-professional/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Autodesk Robot Structural Analysis?",
@@ -10002,7 +10002,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does IDEA StatiCa cost?",
-        "a": "IDEA StatiCa is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official IDEA StatiCa Pricing Page](https://www.ideastatica.com/pricing)."
+        "a": "IDEA StatiCa is sold either by subscription or as a perpetual licence; the plans shown on this page are Steel, Concrete, Prestressing, Complete, and Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official IDEA StatiCa Pricing Page](https://www.ideastatica.com/pricing)."
       },
       {
         "q": "Is there a free version of IDEA StatiCa?",
@@ -10229,7 +10229,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does RISA-3D cost?",
-        "a": "RISA-3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official RISA-3D Pricing Page](https://risa.com/products/risa-3d#pricing)."
+        "a": "RISA-3D is sold either by subscription or as a perpetual licence; the plans shown on this page are RISA-3D, RISAFloor, RISAFoundation, and RISAConnection. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official RISA-3D Pricing Page](https://risa.com/products/risa-3d#pricing)."
       },
       {
         "q": "Is there a free version of RISA-3D?",
@@ -11320,7 +11320,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PowerMill cost?",
-        "a": "PowerMill is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PowerMill Pricing Page](https://www.autodesk.com/products/fusion-360-with-powermill/overview)."
+        "a": "PowerMill is sold by subscription; the plans shown on this page are PowerMill Standard, PowerMill Ultimate, and Fusion 360 with PowerMill. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PowerMill Pricing Page](https://www.autodesk.com/products/fusion-360-with-powermill/overview)."
       },
       {
         "q": "Is there a free version of PowerMill?",
@@ -11788,7 +11788,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PAM-STAMP cost?",
-        "a": "PAM-STAMP is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so Keysight quotes each project instead of publishing a list price: [Official PAM-STAMP page](https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html)."
+        "a": "PAM-STAMP is sold as a perpetual licence; the plans shown on this page are Keysight PAM-STAMP licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PAM-STAMP page](https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html)."
       },
       {
         "q": "Is there a free version of PAM-STAMP?",
@@ -11933,7 +11933,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does NestForge cost?",
-        "a": "NestForge has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official NestForge Pricing Page](https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide)."
+        "a": "NestForge is sold on a freemium basis; the plans shown on this page are Free and Pro (Lifetime). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official NestForge Pricing Page](https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide)."
       },
       {
         "q": "Is there a free version of NestForge?",
@@ -12100,7 +12100,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does QuantCAD-Hybrid cost?",
-        "a": "QuantCAD-Hybrid is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official QuantCAD-Hybrid Pricing Page](https://dinamicpro.ro/quantcad-hybrid.html)."
+        "a": "QuantCAD-Hybrid is sold either by subscription or as a perpetual licence; the plans shown on this page are Industrial (1-Year), Industrial (3-Year), Perpetual Offline, and Permanent Multi-Seat. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official QuantCAD-Hybrid Pricing Page](https://dinamicpro.ro/quantcad-hybrid.html)."
       },
       {
         "q": "Is there a free version of QuantCAD-Hybrid?",

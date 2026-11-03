@@ -8,7 +8,7 @@ export const c3Tools: Tool[] = [
     "name": "Revit",
     "slug": "revit",
     "logo_url": "/logos/revit.png",
-    "short_desc": "The most widely deployed BIM authoring platform.",
+    "short_desc": "BIM authoring platform for architectural, structural and MEP design.",
     "description": "Autodesk Revit is a multidisciplinary Building Information Modeling (BIM) platform that unites architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
     "pricing_tiers": [
       {
@@ -700,7 +700,7 @@ export const c3Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Tekla Structures used for?",
-        "a": "The world's most advanced structural BIM software. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction."
+        "a": "Tekla Structures is structural BIM software for steel, concrete and precast detailing. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction."
       },
       {
         "q": "How much does Tekla Structures cost?",
@@ -1461,7 +1461,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vectorworks Landmark cost?",
-        "a": "Vectorworks Landmark is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark)."
+        "a": "Vectorworks Landmark is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark)."
       },
       {
         "q": "Is there a free version of Vectorworks Landmark?",
@@ -1643,7 +1643,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Allplan cost?",
-        "a": "Allplan is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allplan Pricing Page](https://www.allplan.com/)."
+        "a": "Allplan is sold by subscription; the plans shown on this page are Professional and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allplan Pricing Page](https://www.allplan.com/)."
       },
       {
         "q": "Is there a free version of Allplan?",
@@ -1655,7 +1655,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Allplan support?",
-        "a": "Allplan imports and exports IFC 2x3 and IFC 4 (including ifcXML and ifcZIP) in both directions. DWG/DXF is native in both directions, with ACIS solids carried through; DGN, SketchUp, Rhino 3DM, Cinema 4D, STL, OBJ and LandXML are also supported. Revit is one-way only: the built-in Import Revit tool reads .rvt files, but it is capped at Revit 2020 projects and there is no Revit export — Allplan itself recommends IFC for round-tripping with Revit users."
+        "a": "Allplan imports and exports IFC 2x3 and IFC 4 (including ifcXML and ifcZIP) in both directions. DWG/DXF is native in both directions, with ACIS solids carried through; DGN, SketchUp, Rhino 3DM, Cinema 4D, STL, OBJ and LandXML are also supported. Revit is one-way only: the built-in Import Revit tool reads .rvt files, but it is capped at the release its importer currently supports — Allplan raises that cap over time, so check the official interoperability page for the current one — and there is no Revit export — Allplan itself recommends IFC for round-tripping with Revit users."
       },
       {
         "q": "What are the best alternatives to Allplan?",
@@ -1841,7 +1841,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does OpenRoads Designer cost?",
-        "a": "OpenRoads Designer is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/)."
+        "a": "OpenRoads Designer is sold by subscription; the plans shown on this page are OpenRoads Designer licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/)."
       },
       {
         "q": "Is there a free version of OpenRoads Designer?",
@@ -2105,7 +2105,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does cadwork cost?",
-        "a": "cadwork is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official cadwork Pricing Page](https://www.cadwork.com/)."
+        "a": "cadwork is sold as a perpetual licence; the plans shown on this page are cadwork licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official cadwork Pricing Page](https://www.cadwork.com/)."
       },
       {
         "q": "Is there a free version of cadwork?",
@@ -2316,7 +2316,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does MagiCAD cost?",
-        "a": "MagiCAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MagiCAD Pricing Page](https://www.magicad.com/)."
+        "a": "MagiCAD is sold as a perpetual licence; the plans shown on this page are MagiCAD licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MagiCAD Pricing Page](https://www.magicad.com/)."
       },
       {
         "q": "Is there a free version of MagiCAD?",
@@ -2509,7 +2509,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does DDS-CAD cost?",
-        "a": "DDS-CAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/)."
+        "a": "DDS-CAD is sold as a perpetual licence; the plans shown on this page are DDScad licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/)."
       },
       {
         "q": "Is there a free version of DDS-CAD?",
@@ -2708,7 +2708,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does dRofus cost?",
-        "a": "dRofus is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official dRofus Pricing Page](https://www.drofus.com/)."
+        "a": "dRofus is sold by subscription; the plans shown on this page are dRofus licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official dRofus Pricing Page](https://www.drofus.com/)."
       },
       {
         "q": "Is there a free version of dRofus?",
@@ -2841,7 +2841,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does AutoCAD Plant 3D cost?",
-        "a": "AutoCAD Plant 3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview)."
+        "a": "AutoCAD Plant 3D is sold by subscription; the plans shown on this page are Included with AutoCAD (Annual) and Included with AutoCAD (Monthly). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview)."
       },
       {
         "q": "Is there a free version of AutoCAD Plant 3D?",
@@ -3017,7 +3017,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Hexagon SmartPlant 3D cost?",
-        "a": "Hexagon SmartPlant 3D is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d)."
+        "a": "Hexagon SmartPlant 3D is sold by subscription; the plans shown on this page are Hexagon SmartPlant 3D licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d)."
       },
       {
         "q": "Is there a free version of Hexagon SmartPlant 3D?",
@@ -3211,7 +3211,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CADWorx Plant Professional cost?",
-        "a": "CADWorx Plant Professional is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional)."
+        "a": "CADWorx Plant Professional is sold by subscription; the plans shown on this page are CADWorx Plant Professional licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional)."
       },
       {
         "q": "Is there a free version of CADWorx Plant Professional?",
@@ -3406,7 +3406,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Autodesk Construction Cloud cost?",
-        "a": "Autodesk Construction Cloud is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com)."
+        "a": "Autodesk Construction Cloud is sold by subscription; the plans shown on this page are Autodesk Docs, BIM Collaborate, BIM Collaborate Pro, and Autodesk Takeoff. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com)."
       },
       {
         "q": "Is there a free version of Autodesk Construction Cloud?",
@@ -3852,7 +3852,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/)."
+        "a": "BIMcollab is sold on a freemium basis; the plans shown on this page are Free, Basic, Advanced, and Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/)."
       },
       {
         "q": "Is there a free version of BIMcollab?",
@@ -4356,7 +4356,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does CYPECAD cost?",
-        "a": "CYPECAD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CYPECAD Pricing Page](https://www.cype.com/)."
+        "a": "CYPECAD is sold as a perpetual licence; the plans shown on this page are CYPECAD ADVANCED and CYPECAD EXPERT. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CYPECAD Pricing Page](https://www.cype.com/)."
       },
       {
         "q": "Is there a free version of CYPECAD?",
@@ -4542,7 +4542,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Vertex BD cost?",
-        "a": "Vertex BD is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vertex BD Pricing Page](https://www.vertex.fi/)."
+        "a": "Vertex BD is sold as a perpetual licence; the plans shown on this page are Vertex BD licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vertex BD Pricing Page](https://www.vertex.fi/)."
       },
       {
         "q": "Is there a free version of Vertex BD?",
@@ -4774,7 +4774,7 @@ export const c3Tools: Tool[] = [
       },
       {
         "q": "How much does Planbar cost?",
-        "a": "Planbar is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/)."
+        "a": "Planbar is sold as a perpetual licence; the plans shown on this page are Planbar licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/)."
       },
       {
         "q": "Is there a free version of Planbar?",
@@ -4968,7 +4968,7 @@ export const c3Tools: Tool[] = [
         "price": "Free",
         "period": "one-time",
         "features": [
-          "RVT project downgrade (2024-2027 to 2023)",
+          "RVT project downgrade — bring a current-format project back to an older release the service currently targets",
           "RFA family component downgrade",
           "Online Revit Version Checker",
           "Folder batch version audit & CSV export",

@@ -142,7 +142,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Bluebeam Revu cost?",
-        "a": "Bluebeam Revu is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/)."
+        "a": "Bluebeam Revu is sold by subscription; the plans shown on this page are Basics, Core, and Complete. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/)."
       },
       {
         "q": "Is there a free version of Bluebeam Revu?",
@@ -319,7 +319,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Navisworks cost?",
-        "a": "Navisworks is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options)."
+        "a": "Navisworks is sold by subscription; the plans shown on this page are Simulate and Manage (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Navisworks?",
@@ -486,7 +486,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Solibri cost?",
-        "a": "Solibri is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Solibri Pricing Page](https://www.solibri.com/pricing)."
+        "a": "Solibri is sold by subscription; the plans shown on this page are Office. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Solibri Pricing Page](https://www.solibri.com/pricing)."
       },
       {
         "q": "Is there a free version of Solibri?",
@@ -781,7 +781,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does Recap Pro cost?",
-        "a": "Recap Pro is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options)."
+        "a": "Recap Pro is sold by subscription; the plans shown on this page are Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Recap Pro?",
@@ -1197,7 +1197,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DWG FastView cost?",
-        "a": "DWG FastView has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade)."
+        "a": "DWG FastView is sold on a freemium basis; the plans shown on this page are Free, Premium Monthly, and Premium Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade)."
       },
       {
         "q": "Is there a free version of DWG FastView?",
@@ -1433,7 +1433,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does CAD Reader cost?",
-        "a": "CAD Reader has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/)."
+        "a": "CAD Reader is sold on a freemium basis; the plans shown on this page are Free and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/)."
       },
       {
         "q": "Is there a free version of CAD Reader?",
@@ -1534,7 +1534,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "How much does DXF Medic cost?",
-        "a": "DXF Medic has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/)."
+        "a": "DXF Medic is sold on a freemium basis; the plans shown on this page are Free and Pro (Lifetime). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/)."
       },
       {
         "q": "Is there a free version of DXF Medic?",

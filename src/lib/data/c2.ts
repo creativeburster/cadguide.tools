@@ -8,7 +8,7 @@ export const c2Tools: Tool[] = [
     "name": "SolidWorks",
     "slug": "solidworks",
     "logo_url": "/logos/solidworks.png",
-    "short_desc": "The most widely deployed 3D parametric mechanical design platform.",
+    "short_desc": "A 3D parametric mechanical design platform with associative drawings and a broad partner add-in ecosystem.",
     "description": "SOLIDWORKS by Dassault Systèmes is a 3D parametric mechanical CAD platform for part and assembly modeling, production 2D drawings, sheet metal, weldments, and mold design. Built on the Siemens Parasolid geometric kernel and installed locally on Windows (with 3DEXPERIENCE Cloud Services connectivity), it scales from SOLIDWORKS Standard to Professional, Premium, Simulation, PDM, and Electrical modules.",
     "pricing_tiers": [
       {
@@ -143,7 +143,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SolidWorks is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SolidWorks Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing)."
+        "a": "SolidWorks is sold either by subscription or as a perpetual licence; the plans shown on this page are SOLIDWORKS Standard, SOLIDWORKS Professional & Premium, and Maker / Student / Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SolidWorks Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing)."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
@@ -285,7 +285,7 @@ export const c2Tools: Tool[] = [
     "name": "SketchUp",
     "slug": "sketchup",
     "logo_url": "/logos/sketchup.png",
-    "short_desc": "The world's most intuitive 3D design tool for architecture and interiors.",
+    "short_desc": "A 3D modelling tool for architecture, interiors and concept design, built around direct manipulation.",
     "description": "SketchUp by Trimble is an intuitive direct-modeling 3D architectural and interior design platform renowned for its patented Push/Pull surface extrusion workflow. Backed by the 3D Warehouse component library, LayOut 2D construction documentation, V-Ray/Enscape rendering links, and IFC openBIM export, it bridges rapid concept massing and detailed design.",
     "pricing_tiers": [
       {
@@ -406,7 +406,7 @@ export const c2Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is SketchUp used for?",
-        "a": "The world's most intuitive 3D design tool for architecture and interiors. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape."
+        "a": "A 3D modelling tool for architecture, interiors and concept design, built around direct manipulation. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape."
       },
       {
         "q": "How much does SketchUp cost?",
@@ -1220,7 +1220,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does CATIA cost?",
-        "a": "CATIA is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CATIA Pricing Page](https://www.3ds.com/products/catia)."
+        "a": "CATIA is sold either by subscription or as a perpetual licence; the plans shown on this page are 3DEXPERIENCE Cloud (Role-Based), Mechanical Engineer / Industry Roles, and Systems Engineer / Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CATIA Pricing Page](https://www.3ds.com/products/catia)."
       },
       {
         "q": "Does CATIA offer a free trial?",
@@ -1854,7 +1854,7 @@ export const c2Tools: Tool[] = [
     "name": "Solid Edge",
     "slug": "solid-edge",
     "logo_url": "/logos/solid-edge.ico",
-    "short_desc": "Professional 3D CAD with industry-leading Synchronous Technology.",
+    "short_desc": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach.",
     "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration. Siemens now sells it under the Designcenter umbrella as Designcenter Solid Edge, alongside a SaaS edition (Designcenter X Solid Edge) that runs on cloud-hosted named-user licences; perpetual licences are still available through Siemens solution partners even though Siemens' own online store sells subscription terms only.",
     "pricing_tiers": [
       {
@@ -2014,7 +2014,7 @@ export const c2Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Solid Edge used for?",
-        "a": "Professional 3D CAD with industry-leading Synchronous Technology. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design."
+        "a": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design."
       },
       {
         "q": "How much does Solid Edge cost?",
@@ -3124,7 +3124,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alibre Design cost?",
-        "a": "Alibre Design is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/)."
+        "a": "Alibre Design is sold as a perpetual licence; the plans shown on this page are Professional and Expert. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/)."
       },
       {
         "q": "Is there a free version of Alibre Design?",
@@ -3246,7 +3246,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Maya cost?",
-        "a": "Maya is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options)."
+        "a": "Maya is sold by subscription; the plans shown on this page are Monthly, Annual / 3-Year, and Flex / Education. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options)."
       },
       {
         "q": "Is there a free version of Maya?",
@@ -3437,7 +3437,7 @@ export const c2Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Blender used for?",
-        "a": "Blender is the world's leading open-source 3D creation suite, covering 3D modeling, sculpting, animation, rigging, rendering, simulation, and video editing."
+        "a": "Blender is an open-source 3D creation suite, covering 3D modeling, sculpting, animation, rigging, rendering, simulation, and video editing."
       },
       {
         "q": "How much does Blender cost?",
@@ -3658,7 +3658,7 @@ export const c2Tools: Tool[] = [
     "name": "Geomagic Design X",
     "slug": "geomagic-design-x",
     "logo_url": "/logos/geomagic-design-x.png",
-    "short_desc": "The world's most comprehensive reverse engineering software.",
+    "short_desc": "Reverse engineering software that turns scan data into parametric CAD models.",
     "description": "Geomagic Design X (owned by Hexagon since April 2025, acquired from 3D Systems) combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
     "country": "USA",
     "category_id": "c2",
@@ -3698,11 +3698,11 @@ export const c2Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is Geomagic Design X used for?",
-        "a": "The world's most comprehensive reverse engineering software. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control."
+        "a": "Reverse engineering software that turns scan data into parametric CAD models. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control."
       },
       {
         "q": "How much does Geomagic Design X cost?",
-        "a": "Geomagic Design X is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x)."
+        "a": "Geomagic Design X is sold by subscription; the plans shown on this page are Design X Commercial. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x)."
       },
       {
         "q": "Is there a free version of Geomagic Design X?",
@@ -3867,7 +3867,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Alias AutoStudio cost?",
-        "a": "Alias AutoStudio is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview)."
+        "a": "Alias AutoStudio is sold by subscription; the plans shown on this page are Alias AutoStudio, Alias Concept, and Product Design & Manufacturing Collection. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview)."
       },
       {
         "q": "Is there a free version of Alias AutoStudio?",
@@ -4061,7 +4061,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does ZW3D cost?",
-        "a": "ZW3D is available either as a subscription or as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d)."
+        "a": "ZW3D is sold either by subscription or as a perpetual licence; the plans shown on this page are ZW3D Lite / Standard, ZW3D Professional, and ZW3D Premium (CAD + CAM). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d)."
       },
       {
         "q": "Is there a free version of ZW3D?",
@@ -4277,7 +4277,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Plasticity cost?",
-        "a": "Plasticity is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing)."
+        "a": "Plasticity is sold as a perpetual licence; the plans shown on this page are Indie License and Studio License. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing)."
       },
       {
         "q": "Is there a free version of Plasticity?",
@@ -4489,7 +4489,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does MoI3D cost?",
-        "a": "MoI3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm)."
+        "a": "MoI3D is sold as a perpetual licence; the plans shown on this page are Commercial License and Upgrade. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm)."
       },
       {
         "q": "Is there a free version of MoI3D?",
@@ -4870,7 +4870,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does Glovius cost?",
-        "a": "Glovius has a free tier alongside paid plans. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Glovius Pricing Page](https://www.glovius.com/#pricing)."
+        "a": "Glovius is sold on a freemium basis; the plans shown on this page are Free and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Glovius Pricing Page](https://www.glovius.com/#pricing)."
       },
       {
         "q": "Is there a free version of Glovius?",
@@ -5434,7 +5434,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so ASCON or a regional reseller is the only current source — ASCON sells through value-added resellers and publishes no list price: [KOMPAS-3D product page](https://ascon.net/kompas-3d/)."
+        "a": "KOMPAS-3D is sold as a perpetual licence; the plans shown on this page are Perpetual License and Educational. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [KOMPAS-3D product page](https://ascon.net/kompas-3d/)."
       },
       {
         "q": "Is there a free version of KOMPAS-3D?",
