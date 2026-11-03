@@ -6105,6 +6105,11 @@ export const c2Tools: Tool[] = [
         "q": "Is MECHCAD a subscription or a perpetual license?",
         "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
       }
+    ,
+      {
+        "q": "Which file formats does MECHCAD support?",
+        "a": "MECHCAD reads neutral STEP, IGES and SAT solids alongside DWG and DXF drawings and STL/OBJ meshes. It also has direct readers for SolidWorks parts and assemblies (SLDPRT / SLDASM), Alibre parts (AD_PRT) and Siemens NX parts (.prt); the SolidWorks and Alibre imports keep editable sketches and the feature tree, so an imported part can still be driven by its parameters. Export covers STEP, IGES, SAT, STL, OBJ, DWG, DXF and PDF, plus G-code from the CAM module and a Flat DXF of unfolded sheet metal."
+      }
     ],
     "pricing_tiers": [
       {
@@ -6162,6 +6167,8 @@ export const c2Tools: Tool[] = [
       "IGS",
       "SLDPRT",
       "SLDASM",
+      "AD_PRT",
+      "Siemens NX (.prt)",
       "SAT",
       "DWG",
       "DXF",

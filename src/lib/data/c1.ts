@@ -3391,6 +3391,11 @@ export const c1Tools: Tool[] = [
         "q": "What are the best alternatives to AutoCAD LT?",
         "a": "The closest alternatives to AutoCAD LT are BricsCAD Lite, DraftSight Professional, ZWCAD Standard, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
+    ,
+      {
+        "q": "Which file formats does AutoCAD LT support?",
+        "a": "AutoCAD LT works natively in DWG and reads DXF drawings plus DWT templates, and it can attach PDF and DWF/DWFx files as underlays. It saves back to DWG, DXF and DWT templates, and publishes to PDF or to raster PNG/JPG images. It does not read or write STEP, IGES or any other 3D solid exchange format — that is full AutoCAD with its 3D toolsets, not LT."
+      }
     ],
     "pricing_tiers": [
       {
@@ -3577,6 +3582,11 @@ export const c1Tools: Tool[] = [
       {
         "q": "How much does MCAD cost?",
         "a": "MCAD is offered as a one-time Desktop Perpetual license as well as monthly or annual subscriptions for MCAD Web. Because official pricing, currencies, and local taxes are updated on the vendor portal, please check the [Official MET MCAD Pricing Page](https://www.mechdesigned.com/en/software/mcad/pricing/) for live rates."
+      }
+    ,
+      {
+        "q": "Which file formats does MCAD support?",
+        "a": "MCAD opens, edits and saves DWG and DXF natively, without needing a converter, and the browser edition opens DWG as well. Drawings leave in the same two formats. On top of that it exports G-code straight from the drawing for CNC, laser and plasma cutting, with cut simulation, holes-before-outline ordering and lead-ins — the built-in nesting and G-code path is the main thing general 2D drafting software does not have."
       }
     ],
     "pricing_tiers": [

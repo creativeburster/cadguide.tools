@@ -4931,6 +4931,11 @@ export const c3Tools: Tool[] = [
         "q": "Is RVT Convert free to use?",
         "a": "Yes, RVT Convert is free to use with no account registration required. Server hosting and conversion infrastructure are supported by user community donations."
       }
+    ,
+      {
+        "q": "Which file formats does RVT Convert support?",
+        "a": "RVT Convert takes Revit project, family, template and family-template files (.rvt, .rfa, .rte, .rft) up to 2 GB and gives back the same file type saved for one fixed older release - the one the service currently targets, not whichever version you pick. It is a version downgrade rather than a format conversion: it cannot open IFC, DWG or STEP, and it does not write any of them."
+      }
     ],
     "pricing_tiers": [
       {
@@ -5125,6 +5130,11 @@ export const c3Tools: Tool[] = [
         "q": "Where are my floor plans and 3D house projects saved?",
         "a": "Projects are stored directly in your local browser using IndexedDB with automatic crash recovery. No design files or intellectual property are transmitted or uploaded to remote cloud servers."
       }
+    ,
+      {
+        "q": "Which file formats does 3D House Planner support?",
+        "a": "3D House Planner exchanges IFC4 with property sets in both directions, so a model can round-trip with a BIM authoring tool. It imports DXF plans, GLB/glTF, OBJ and STL models, plan images (PNG/JPG) and its own JSON project files, and exports DXF, SVG, GLB/glTF, OBJ, STL, PNG snapshots, CSV schedules and JSON. Areas, volumes, cost schedules and model checks come out of the IFC data, and schedules download as CSV. It does not export STEP, IGES or any solid-modelling exchange format."
+      }
     ],
     "pricing_tiers": [
       {
@@ -5242,7 +5252,8 @@ export const c3Tools: Tool[] = [
       "OBJ",
       "STL",
       "PNG",
-      "JPG"
+      "JPG",
+      "JSON"
     ],
     "file_formats_out": [
       "IFC",
@@ -5253,7 +5264,8 @@ export const c3Tools: Tool[] = [
       "GLTF",
       "STL",
       "PNG",
-      "CSV"
+      "CSV",
+      "JSON"
     ]
   }
 ];
