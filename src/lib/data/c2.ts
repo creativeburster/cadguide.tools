@@ -2009,7 +2009,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Solid Edge?",
-        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, Fusion 360, and Autodesk Fusion (Fusion 360). SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, and Autodesk Fusion (Fusion 360). SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2790,7 +2790,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Shapr3D?",
-        "a": "The closest alternatives to Shapr3D are Fusion 360, SolidWorks, Onshape, and Autodesk Fusion (Fusion 360). Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Shapr3D are SolidWorks, Onshape, and Autodesk Fusion (Fusion 360). Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -5685,7 +5685,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DesignSpark Mechanical?",
-        "a": "The closest alternatives to DesignSpark Mechanical are FreeCAD, Fusion 360, SolveSpace, and Autodesk Fusion (Fusion 360). FreeCAD is the leading free/open-source alternative, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DesignSpark Mechanical are FreeCAD, SolveSpace, and Autodesk Fusion (Fusion 360). FreeCAD is the leading free/open-source alternative, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -6349,7 +6349,6 @@ export const c2Tools: Tool[] = [
     "alternatives": [
       "freecad",
       "blender",
-      "meshlab",
       "meshlab"
     ],
     "file_formats_in": [

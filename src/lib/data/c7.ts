@@ -4978,7 +4978,7 @@ export const c7Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Accelygen?",
-        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, Fusion 360, and Autodesk Fusion (Fusion 360). Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, and Autodesk Fusion (Fusion 360). Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [

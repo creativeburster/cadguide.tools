@@ -612,15 +612,27 @@ export const c5Tools: Tool[] = [
     "description": "SolidCAM is a premier gold-certified CAM suite that runs seamlessly inside the native SolidWorks and Autodesk Inventor assembly environments with full toolpath-to-model associativity. Renowned for its patented iMachining 2D/3D adaptive technology—which calculates optimal feeds, speeds, and morphing spiral engagement angles—it covers 2.5D–5-axis milling, multi-channel Mill-Turn, and Swiss-type CNC programming.",
     "pricing_tiers": [
       {
-        "name": "iMachining",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "SolidCAM",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
         "features": [
-          "2D/3D iMachining",
-          "SolidWorks native",
-          "Post support"
+          "iMachining 2D and 3D with the Technology Wizard for feeds, speeds and step-downs",
+          "Mill-Turn, Advanced Multi-Turn and Swiss-type programming with full machine simulation",
+          "Runs as a single-window add-in inside SOLIDWORKS, Solid Edge or Autodesk Inventor",
+          "Modules such as HSM, 5-axis, turning and wire EDM, plus SolidShop for the shop floor"
         ],
         "is_popular": true
+      },
+      {
+        "name": "SolidCAM Maker Version",
+        "price": "Free",
+        "period": "Non-commercial",
+        "features": [
+          "Full SolidCAM and iMachining functionality as a free add-in for makers, hobbyists and students",
+          "Limited to three built-in post-processors: ISO 3D Milling, Mach4 Milling and ISO 2D Turning",
+          "Non-commercial use only, and no custom or additional post-processors can be added",
+          "Requires a valid SOLIDWORKS or Inventor install; Maker CAM parts do not open in the Educational or Industrial editions"
+        ]
       }
     ],
     "detailed_features": [
@@ -649,7 +661,7 @@ export const c5Tools: Tool[] = [
     ],
     "country": "Israel",
     "category_id": "c5",
-    "pricing_type": "Subscription",
+    "pricing_type": "Freemium",
     "starting_price": 4000,
     "price_period": "year",
     "platforms": [
@@ -686,15 +698,15 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is SolidCAM used for?",
-        "a": "The leading integrated CAM for SolidWorks. SolidCAM is a CAE / CAM solution widely adopted in Manufacturing, Medical, Aerospace."
+        "a": "SolidCAM is CAM software that runs inside SOLIDWORKS, Solid Edge or Autodesk Inventor, covering iMachining, 2.5D to 5-axis milling, turning, Mill-Turn and Swiss-type machining."
       },
       {
         "q": "How much does SolidCAM cost?",
-        "a": "SolidCAM is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SolidCAM Pricing Page](https://www.solidcam.com)."
+        "a": "SolidCAM is licensed by module — iMachining 2D and 3D, HSM, 5-axis, Mill-Turn, Swiss-type and turning — with SolidShop and CAM Assist alongside, and the commercial edition is quoted per module and seat rather than sold from a price list. The free Maker Version is a separate non-commercial edition, not a trial of the full product. Plan names, bundles, taxes and eligibility differ by country and currency: [Official SolidCAM quote page](https://solidcam.com/contact/get-a-quote)."
       },
       {
         "q": "Is there a free version of SolidCAM?",
-        "a": "SolidCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official SolidCAM page](https://www.solidcam.com)."
+        "a": "Yes — SolidCAM publishes a free Maker Version for makers, hobbyists and students. It carries the full SolidCAM and iMachining functionality as an add-in to SOLIDWORKS, Inventor or Solid Edge, but it is limited to three built-in post-processors (ISO 3D Milling, Mach4 Milling and ISO 2D Turning), is licensed for non-commercial use only, and its CAM parts cannot be opened in the Educational or Industrial editions. Eligibility and terms are set by the vendor, so confirm them on the official page: [SolidCAM Maker Version](https://solidcam.com/maker-registration/)."
       },
       {
         "q": "What operating systems does SolidCAM support?",
@@ -706,7 +718,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to SolidCAM?",
-        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, Fusion 360, and Autodesk Fusion (Fusion 360). Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while CAMWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to SolidCAM are Mastercam, CAMWorks, and Autodesk Fusion (Fusion 360). Mastercam (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while CAMWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -2139,17 +2151,35 @@ export const c5Tools: Tool[] = [
     "description": "Edgecam by Hexagon is a comprehensive CAM software solution designed for CNC milling, turning, and multi-axis machining. It provides intelligent toolpath generation, seamless CAD integration, and advanced machining strategies for complex parts. The software is widely used in manufacturing for its robust capabilities.",
     "pricing_tiers": [
       {
-        "name": "Edgecam licence",
+        "name": "Edgecam Milling",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "2.5D to 5-axis milling and high-speed machining",
-          "2-axis turning, C-axis milling and multi-turret work",
-          "Swiss-type and 4/5-axis simultaneous machining",
-          "CAD integration, machine simulation and NC generation",
-          "Editions, modules and seats are quoted by Hexagon rather than published"
+          "2.5-axis through 5-axis milling in one programming environment",
+          "Automatic Feature Recognition and Strategy Manager for automated programming",
+          "Waveform roughing, race line finishing and full machine simulation"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Edgecam Turning",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Multi-turret, sub-spindle and synchronised turning",
+          "Cuts cycle times and raises machine utilisation",
+          "Same environment and post-processor workflow as the milling module"
+        ]
+      },
+      {
+        "name": "Edgecam Mill/Turn",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Programs multi-task machines with turning and milling in a single environment",
+          "Full simulation for safe, collision-free multi-task machining",
+          "Supports complex 6-axis configurations such as a 5-axis machine with a turning table"
+        ]
       }
     ],
     "detailed_features": [
@@ -2278,7 +2308,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Edgecam cost?",
-        "a": "Edgecam is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "Edgecam is licensed as named modules — Edgecam Milling, Edgecam Turning and Edgecam Mill/Turn — with add-ons such as Waveform, Inspect, Wire EDM and Intelligent Manufacturing, plus the seats themselves. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Edgecam?",
@@ -2917,11 +2947,11 @@ export const c5Tools: Tool[] = [
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "2.5D to 5-axis simultaneous milling",
-          "5-axis roughing with collision avoidance",
-          "Turbine-blade and impeller machining",
-          "Toolpath and NC optimisation with machine simulation",
-          "Editions, modules and seats are quoted by OPEN MIND rather than published"
+          "2.5D milling, 3D milling and drilling as separately licensed CAM modules",
+          "5-axis milling with collision avoidance, plus Deburring and High Precision Machining",
+          "hyperMILL MAXX Machining for high-performance roughing, finishing and drilling",
+          "TURNING Solutions / Mill Turn: milling and turning in one CAM system",
+          "Modules and seats are quoted by OPEN MIND rather than published"
         ],
         "is_popular": true
       }
@@ -3028,7 +3058,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.openmind-tech.com/",
+    "official_url": "https://www.openmind-tech.com/en/cam/product-overview/",
     "pricing_url": "https://www.openmind-tech.com/en/contact",
     "affiliate_url": null,
     "score": 4,
@@ -3117,10 +3147,11 @@ export const c5Tools: Tool[] = [
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "2.5D to 5-axis simultaneous milling, trimming, and laser cutting for die, mould, and aerospace",
-          "Active surface preparation, die-face morphing, and electrode design",
-          "Virtual machine digital twin with full collision avoidance and NC verification",
-          "Configured by workstation role and add-on modules — quoted directly by Tebis"
+          "Tebis CAD software — manufacturing-oriented design, active surfaces, springback, electrode design, reverse engineering",
+          "Tebis CAM software — SmartOps, CNC programming and simulation, robotic machining, 2.5D to 5-axis milling",
+          "Tebis CAQ software — in-process measurement with automatic process correction",
+          "Tebis MES software (ProLeiS) — pre-planning, manufacturing control, quality management and internal logistics",
+          "Modules are licensed individually or combined, per workstation role; Tebis quotes rather than publishes prices"
         ],
         "is_popular": true
       }
@@ -3307,17 +3338,35 @@ export const c5Tools: Tool[] = [
     "description": "WorkNC is a French CAM software solution for 2-5 axis milling with automatic feature recognition and intelligent toolpath generation. It provides comprehensive tools for mold making, die manufacturing, and general machining with a focus on automation and productivity.",
     "pricing_tiers": [
       {
-        "name": "WorkNC licence",
+        "name": "WorkNC 2D licence",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "2.5D to 5-axis milling with automatic feature recognition",
-          "Mould, die and electrode machining",
-          "Automated programming and toolpath optimisation",
-          "Machine simulation, collision detection and verification",
-          "Editions, modules and seats are quoted by Hexagon rather than published"
+          "Simple, fast 2D toolpaths for prismatic parts",
+          "Hole-making operations programmed without 3D geometry",
+          "Entry point of the WorkNC licence ladder"
         ],
         "is_popular": true
+      },
+      {
+        "name": "WorkNC 3X licence (basic)",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Automated 3-axis milling from roughing through to finishing",
+          "Reliable, collision-checked toolpaths",
+          "Adds full 3D machining on top of the 2D licence"
+        ]
+      },
+      {
+        "name": "WorkNC full licence",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Full 3-axis plus 3+2 positional capability",
+          "Maximum flexibility, automation and performance of the three licences",
+          "5-axis and Auto5 remain separate modules above this level"
+        ]
       }
     ],
     "detailed_features": [
@@ -3421,7 +3470,7 @@ export const c5Tools: Tool[] = [
       "Mid-Sized Company",
       "Enterprise"
     ],
-    "official_url": "https://www.worknc.com/",
+    "official_url": "https://hexagon.com/products/worknc",
     "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.8,
@@ -3443,11 +3492,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does WorkNC cost?",
-        "a": "WorkNC does not have a published price list. Hexagon quotes editions, modules and seats through its sales-enquiry form, and plan names, bundles, taxes and eligibility differ by country and currency: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "WorkNC does not have a published price list. It is licensed at three levels — WorkNC 2D, WorkNC 3X (basic) and WorkNC full — with modules such as Auto5, the 5-axis module, Robot Machining, Translators and parallel processing sold on top, and Hexagon quotes editions, modules and seats through its sales-enquiry form. Plan names, bundles, taxes and eligibility differ by country and currency: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of WorkNC?",
-        "a": "WorkNC is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official WorkNC page](https://www.worknc.com/)."
+        "a": "WorkNC is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official WorkNC page](https://hexagon.com/products/worknc)."
       },
       {
         "q": "What operating systems does WorkNC support?",
@@ -3864,7 +3913,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to BobCAD-CAM?",
-        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Fusion 360, Mastercam, Autodesk Fusion (Fusion 360), and AlphaCAM. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Mastercam, Autodesk Fusion (Fusion 360), and AlphaCAM. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
@@ -4512,17 +4561,35 @@ export const c5Tools: Tool[] = [
     "description": "AlphaCAM is a UK-based CAM software solution for woodworking, stone, and metal cutting. It provides comprehensive tools for CNC programming of various machining applications including routing, milling, and cutting with a focus on versatility and ease of use.",
     "pricing_tiers": [
       {
-        "name": "AlphaCAM licence",
+        "name": "Alphacam 3 Axis",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "Routing, nesting and cabinet making for woodworking",
-          "Stone cutting, engraving and 3D machining",
-          "Metal milling, turning and wire EDM",
-          "CNC programming with machine simulation",
-          "Editions, modules and seats are quoted by Hexagon rather than published"
+          "Foundation CAM package for 3-axis routing, milling, turning and cutting",
+          "Ships with the shared post-processor and CAD translator set",
+          "Upgrade path to positional and simultaneous multi-axis"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Alphacam Positional Axis",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Adds 3+2 positional multi-axis capability to the 3-axis core",
+          "Keeps the same interface, post-processors and upgrade path",
+          "Aimed at complex parts that still index between setups"
+        ]
+      },
+      {
+        "name": "Alphacam 5 Axis",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Full simultaneous 5-axis machining for advanced geometries and surfaces",
+          "Runs on the proven post-processors shared across the range",
+          "Top of the core-and-multiplier ladder — modules stack on any level"
+        ]
       }
     ],
     "detailed_features": [
@@ -4626,7 +4693,7 @@ export const c5Tools: Tool[] = [
       "Small Business",
       "Mid-Sized Company"
     ],
-    "official_url": "https://www.alphacam.com/",
+    "official_url": "https://hexagon.com/products/alphacam",
     "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.6,
@@ -4649,11 +4716,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AlphaCAM cost?",
-        "a": "AlphaCAM is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "AlphaCAM is a Hexagon (Vero) product licensed as a core machining level — Alphacam 3 Axis, Alphacam Positional Axis or Alphacam 5 Axis — with add-on modules such as xNesting, xAutomation, xSolids, xRobotics and xAPI stacked on top. Prices, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of AlphaCAM?",
-        "a": "AlphaCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AlphaCAM page](https://www.alphacam.com/)."
+        "a": "AlphaCAM is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official AlphaCAM page](https://hexagon.com/products/alphacam)."
       },
       {
         "q": "What operating systems does AlphaCAM support?",
@@ -4703,17 +4770,35 @@ export const c5Tools: Tool[] = [
     "description": "Radan is a UK-based CAD/CAM software solution for sheet metal fabrication and CNC punching. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and material optimization for fabrication workshops.",
     "pricing_tiers": [
       {
-        "name": "Radan licence",
+        "name": "Radan Radpunch",
         "price": "Contact Sales",
         "period": "Custom Quote",
         "features": [
-          "Sheet-metal design, unfolding and bending calculation",
-          "Automatic nesting and material optimisation",
-          "CNC punch programming and laser profiling",
-          "Machine simulation and production management",
-          "Editions, modules and seats are quoted by Hexagon rather than published"
+          "Punch press programming, licensed as its own module",
+          "Advanced punch tooling and toolpath control",
+          "Shares the Radan part and nest model with the other modules"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Radan Radnest",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "True shape nesting to maximise sheet utilisation",
+          "Adapts automatically to punching and cutting machines",
+          "Licensed separately from the programming modules"
+        ]
+      },
+      {
+        "name": "Radan Bending",
+        "price": "Contact Sales",
+        "period": "Custom Quote",
+        "features": [
+          "Offline programming for press brakes",
+          "Full 3D simulation of the bending process",
+          "Licensed separately from punching and profiling"
+        ]
       }
     ],
     "detailed_features": [
@@ -4816,7 +4901,7 @@ export const c5Tools: Tool[] = [
       "Small Business",
       "Mid-Sized Company"
     ],
-    "official_url": "https://www.radan.com/",
+    "official_url": "https://hexagon.com/products/radan",
     "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
     "affiliate_url": null,
     "score": 3.6,
@@ -4839,11 +4924,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Radan cost?",
-        "a": "RADAN is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "a": "RADAN is a Hexagon (Vero) product licensed module by module: Radpunch for punch presses, Radnest for true-shape nesting and Radan Bending for press brakes are the flagship three, with Radquote, Radtube, Radprofile and DESIGNER Sheet Metal available alongside. Prices, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Radan?",
-        "a": "Radan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Radan page](https://www.radan.com/)."
+        "a": "Radan is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Radan page](https://hexagon.com/products/radan)."
       },
       {
         "q": "What operating systems does Radan support?",
@@ -5846,7 +5931,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to ANSYS Discovery?",
-        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Fusion 360, Autodesk Fusion (Fusion 360), and COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Autodesk Fusion (Fusion 360), and COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -7511,7 +7596,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to Altair Inspire?",
-        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, Fusion 360, SolidWorks, Autodesk Fusion (Fusion 360), and SimScale. ANSYS Discovery (offered on a Subscription license) competes directly on core Aerospace workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to Altair Inspire are ANSYS Discovery, SolidWorks, Autodesk Fusion (Fusion 360), and SimScale. ANSYS Discovery (offered on a Subscription license) competes directly on core Aerospace workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "alternatives": [
@@ -12010,7 +12095,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
-        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, Fusion 360, SolidCAM, Autodesk Fusion (Fusion 360), and Mastercam. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, SolidCAM, Autodesk Fusion (Fusion 360), and Mastercam. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
