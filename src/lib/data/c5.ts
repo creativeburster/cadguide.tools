@@ -166,7 +166,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Siemens Parasolid",
       "multicore": "Single-Core Feature Rebuild / Multi-Core Parasolid Booleans, CAM & CAE",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "PRT",
         "STEP",
@@ -391,7 +391,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Mastercam support?",
-        "a": "Mastercam works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Mastercam is a standalone CAD/CAM package, not a plugin, and publishes a per-version file-conversion table that marks each CAD translator as read, write or both. It reads neutral solids (STEP, IGES, Parasolid, ACIS/SAT), native SOLIDWORKS SLDPRT, Inventor IPT, CATIA CATPart and Creo PRT files, plus 2D DWG/DXF and STL mesh data. Its primary output is post-processed NC G-code and its native NCI toolpath file; the conversion table also lists STEP, IGES, Parasolid, STL, DWG and DXF writers. Which translators ship in a given seat depends on the Mastercam version and the licensed add-ons, so the current conversion table and how-to-buy page from the vendor are the authoritative sources."
       },
       {
         "q": "What are the best alternatives to Mastercam?",
@@ -400,8 +400,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Mastercam Custom CAM",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -561,7 +561,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "nTop Implicit Engine",
-      "multicore": "Multi-Core Parallel Solver",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "NVIDIA CUDA / Optix",
       "standards": [
         "STEP",
@@ -689,7 +689,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SolidCAM support?",
-        "a": "SolidCAM works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "SolidCAM is an integrated CAM plugin that runs inside SOLIDWORKS, Solid Edge and Autodesk Inventor rather than as a standalone CAD engine, so native part files are opened by the host application rather than by a SolidCAM file reader. The vendor does not publish a standalone import/export matrix, and the only output SolidCAM documents in its own right is the post-processed NC program sent to the machine. Any STEP, IGES, DWG or DXF round-trip belongs to the host CAD system and depends on the modules licensed there — check the official SolidCAM site for the current host compatibility list rather than treating those formats as SolidCAM readers."
       },
       {
         "q": "What are the best alternatives to SolidCAM?",
@@ -698,8 +698,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SolidCAM Machining",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "SolidWorks Native"
@@ -716,11 +716,7 @@ export const c5Tools: Tool[] = [
       "DXF"
     ],
     "file_formats_out": [
-      "NC (G-Code)",
-      "APT",
-      "CLDATA",
-      "STEP",
-      "STL"
+      "NC (G-Code)"
     ]
   },
   {
@@ -849,8 +845,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Materialise Geometric Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STL",
         "3MF",
@@ -940,7 +936,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Cimatron support?",
-        "a": "Cimatron works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Cimatron publishes an Import/Export Capabilities table that marks each translator as import, export or both. STEP, IGES, Parasolid, ACIS/SAT, DWG and DXF are documented in both directions, alongside native readers for CATIA CATPart, Creo PRT, SOLIDWORKS SLDPRT, Inventor IPT and STL meshes. Its manufacturing output is NC G-code, with ELT as the electrode and tooling file format Cimatron uses. Cimatron does not list IFC or Revit RVT support: it is a mold, die and discrete-parts CAD/CAM platform, not a BIM tool. The exact translator set depends on the licensed bundle, so the capability table from the vendor is authoritative; Cimatron (part of Sandvik) does not publish a price list and quotes through its contact page."
       },
       {
         "q": "What are the best alternatives to Cimatron?",
@@ -949,8 +945,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -1045,31 +1041,6 @@ export const c5Tools: Tool[] = [
           {
             "name": "Batch Processing & Scripting",
             "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
           }
         ]
       }
@@ -1151,8 +1122,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary FEA",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -1321,8 +1292,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary FEA Solver",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -1455,8 +1426,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Proprietary CAE Suite",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -1581,7 +1552,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CAMWorks support?",
-        "a": "CAMWorks works with standard CAE / CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "CAMWorks is sold by HCLSoftware and ships either integrated into SOLIDWORKS or as a standalone CAM product. The vendor does not publish a standalone import/export format matrix; the format lists that exist are tied to the host CAD application and its certified CAD platform, so STEP, IGES, Parasolid and SLDPRT/SLDASM capability follows the host rather than being a CAMWorks reader. The output CAMWorks documents in its own right is the post-processed NC program. For current bundles and eligibility use the official CAMWorks quote page — time-limited promotional pages are not a reliable source for plan names or pricing."
       },
       {
         "q": "What are the best alternatives to CAMWorks?",
@@ -1590,8 +1561,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid (via SolidWorks)",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -1608,10 +1579,7 @@ export const c5Tools: Tool[] = [
       "Parasolid"
     ],
     "file_formats_out": [
-      "NC (G-Code)",
-      "STEP",
-      "IGES",
-      "STL"
+      "NC (G-Code)"
     ],
     "alternatives": [
       "solidcam",
@@ -1654,31 +1622,6 @@ export const c5Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -1887,8 +1830,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": []
     },
     "expert_verdict": "A comprehensive, high-end CAD/CAM/PDM suite, renowned for wood manufacturing and sheet metal fabrication modeling.",
@@ -2102,8 +2045,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Parasolid",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -2292,7 +2235,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Edgecam support?",
-        "a": "Edgecam works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The official Edgecam data-exchange table lists the CAD formats it can load — STEP, IGES, Parasolid, ACIS/SAT, native SOLIDWORKS and Inventor parts, and 2D DWG/DXF — but it does not document a matching CAD model writer. The output Edgecam is built to produce is NC part programs through its post-processors; there is no vendor-published STEP, IGES or Parasolid model export. Edgecam is now part of Hexagon, and the legacy edgecam.com address redirects to the Hexagon product page, which quotes through its sales-enquiry form rather than publishing prices."
       },
       {
         "q": "What are the best alternatives to Edgecam?",
@@ -2301,8 +2244,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid / Spatial ACIS",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -2322,10 +2265,7 @@ export const c5Tools: Tool[] = [
       "DXF"
     ],
     "file_formats_out": [
-      "NC (G-Code)",
-      "APT",
-      "PPF",
-      "DXF"
+      "NC (G-Code)"
     ]
   },
   {
@@ -2494,8 +2434,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "KISSsoft Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -2688,8 +2628,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "FeatureCAM Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -2876,7 +2816,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does GibbsCAM support?",
-        "a": "GibbsCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The CAD readers documented by GibbsCAM cover ACIS/SAT, Parasolid, STEP, VDA-FS, IGES, DXF, DWG and STL. On the output side the vendor explicitly lists only IGES and DXF as geometry writers, and the manufacturing output is the post-processed NC program. GibbsCAM does not publish a STEP or Parasolid model export, so its import and export matrices are not symmetric. GibbsCAM sits in the Sandvik group via Cambrio and sells through its official shop; current editions and regional pricing are on the vendor site."
       },
       {
         "q": "What are the best alternatives to GibbsCAM?",
@@ -2885,8 +2825,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Siemens Parasolid",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -2900,18 +2840,15 @@ export const c5Tools: Tool[] = [
       "IGES",
       "Parasolid",
       "SAT",
-      "SLDPRT",
-      "IPT",
+      "VDA-FS",
       "DWG",
       "DXF",
-      "VDA-FS"
+      "STL"
     ],
     "file_formats_out": [
       "NC (G-Code)",
-      "APT",
-      "STEP",
       "IGES",
-      "STL"
+      "DXF"
     ]
   },
   {
@@ -3073,7 +3010,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does hyperMILL support?",
-        "a": "hyperMILL works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "OPEN MIND publishes separate import and export interface lists for hyperMILL. STEP, IGES, DXF and DWG are documented in both directions, alongside readers for Parasolid, CATIA CATPart, native SOLIDWORKS, Siemens NX and Inventor data, and STL meshes. The manufacturing output is post-processed NC code, with POF as the hyperMILL project format. hyperMILL ships both as a standalone CAM system and as a SOLIDWORKS/Inventor add-in, so the exact CAD reader set depends on the edition and licensed interfaces. OPEN MIND does not publish a price list — configurations are quoted through its contact and demo form."
       },
       {
         "q": "What are the best alternatives to hyperMILL?",
@@ -3082,8 +3019,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "hyperMILL Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3100,14 +3037,18 @@ export const c5Tools: Tool[] = [
       "SolidWorks",
       "NX",
       "Inventor",
-      "STL"
+      "STL",
+      "DWG",
+      "DXF"
     ],
     "file_formats_out": [
       "NC (G-Code)",
       "POF",
       "STEP",
       "IGES",
-      "STL"
+      "STL",
+      "DWG",
+      "DXF"
     ]
   },
   {
@@ -3267,7 +3208,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Tebis support?",
-        "a": "Tebis works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "Tebis documents STEP in both directions — it is the neutral solid format the vendor names explicitly for CAD data exchange. IGES and DXF interchange is described as dependent on the configured package rather than as a fixed matrix for every edition, so confirm the exact list for your configuration on the official Tebis site. Tebis also reads native CATIA, Siemens NX and Creo data plus Parasolid and STL, and its manufacturing output is post-processed NC code. The vendor does not publish DWG support. Tebis is an independent family-owned company and quotes through its contact form."
       },
       {
         "q": "What are the best alternatives to Tebis?",
@@ -3276,8 +3217,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Tebis Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3294,14 +3235,14 @@ export const c5Tools: Tool[] = [
       "Parasolid",
       "NX",
       "Creo",
-      "STL"
+      "STL",
+      "DXF"
     ],
     "file_formats_out": [
       "NC (G-Code)",
       "STEP",
       "IGES",
-      "Parasolid",
-      "STL"
+      "DXF"
     ]
   },
   {
@@ -3435,8 +3376,7 @@ export const c5Tools: Tool[] = [
       "Advanced automatic feature recognition and toolpaths",
       "Highly specialized for large mold and die fabrication",
       "High toolpath safety and collision check",
-      "Excellent multi-axis milling options",
-      "Reliable German and French engineering backing"
+      "Excellent multi-axis milling options"
     ],
     "cons": [
       "Premium software acquisition cost",
@@ -3450,7 +3390,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does WorkNC cost?",
-        "a": "WorkNC is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official WorkNC Pricing Page](https://www.worknc.com/)."
+        "a": "WorkNC does not have a published price list. Hexagon quotes editions, modules and seats through its sales-enquiry form, and plan names, bundles, taxes and eligibility differ by country and currency: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of WorkNC?",
@@ -3462,7 +3402,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does WorkNC support?",
-        "a": "WorkNC works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The official WorkNC Nexus documentation gives a long list of CAD readers — STEP, IGES, Parasolid, CATIA CATPart, Siemens NX, DWG and DXF among them — but the writer side is much shorter: IGES, DWG and DXF are the geometry exports the vendor documents, on top of the post-processed NC program that is the real output of WorkNC. There is no vendor-published STEP, Parasolid or ACIS model export. WorkNC is now a Hexagon product and the legacy worknc.com address redirects to Hexagon, which does not publish a price list or a fixed licence fee: editions, modules and seats are quoted through its sales-enquiry form, so any single one-time price figure should be treated as obsolete."
       },
       {
         "q": "What are the best alternatives to WorkNC?",
@@ -3471,8 +3411,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "WorkNC Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3492,8 +3432,9 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_out": [
       "NC (G-Code)",
-      "ISO",
-      "WorkNC WP"
+      "IGES",
+      "DWG",
+      "DXF"
     ]
   },
   {
@@ -3641,7 +3582,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SURFCAM cost?",
-        "a": "SURFCAM is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SURFCAM Pricing Page](https://www.surfcam.com/)."
+        "a": "SURFCAM is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of SURFCAM?",
@@ -3653,7 +3594,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SURFCAM support?",
-        "a": "SURFCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The official SURFCAM Open and Save As lists are not identical. It opens STEP, IGES, Parasolid, ACIS/SAT, DWG, DXF, native SOLIDWORKS and Inventor parts and STL meshes — but STEP appears only in the Open list, with no STEP writer in the documented Save As formats. IGES, Parasolid, ACIS/SAT, DWG and DXF are available in both directions, and the manufacturing output is post-processed NC code. SURFCAM is a Hexagon (Vero) product; the legacy surfcam.com address redirects to Hexagon, which quotes through its sales-enquiry form rather than publishing prices."
       },
       {
         "q": "What are the best alternatives to SURFCAM?",
@@ -3662,8 +3603,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SURFCAM Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3685,8 +3626,10 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_out": [
       "NC (G-Code)",
-      "STEP",
       "IGES",
+      "Parasolid",
+      "SAT",
+      "DWG",
       "DXF"
     ]
   },
@@ -3864,7 +3807,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does BobCAD-CAM support?",
-        "a": "BobCAD-CAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The V30/V32 documentation for BobCAD-CAM lists STEP, IGES, ACIS/SAT, DWG and DXF in both directions, while Parasolid X_T/X_B files are read-only. STL and Rhino 3DM are listed among the readers, not the writers. The manufacturing output is post-processed NC G-code, with BBCD as the native BobCAD project file. BobCAD sells through its official store as an annual subscription with tiered bundles, not as a one-time perpetual licence; plan names, current prices and tier contents change between releases, so the store page is the only current source. Some older BobCAD documentation URLs have been retired, so rely on the live store page."
       },
       {
         "q": "What are the best alternatives to BobCAD-CAM?",
@@ -3873,8 +3816,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "BobCAD-CAM Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -3890,7 +3833,6 @@ export const c5Tools: Tool[] = [
       "SAT",
       "DWG",
       "DXF",
-      "SLDPRT",
       "STL",
       "3DM"
     ],
@@ -3899,6 +3841,8 @@ export const c5Tools: Tool[] = [
       "BBCD",
       "STEP",
       "IGES",
+      "SAT",
+      "DWG",
       "DXF"
     ]
   },
@@ -4067,8 +4011,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoForm Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4260,8 +4204,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Moldflow Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4452,8 +4396,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Moldex3D Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4625,7 +4569,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does AlphaCAM cost?",
-        "a": "AlphaCAM is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AlphaCAM Pricing Page](https://www.alphacam.com/)."
+        "a": "AlphaCAM is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of AlphaCAM?",
@@ -4637,7 +4581,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AlphaCAM support?",
-        "a": "AlphaCAM works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "The Hexagon Nexus user guide for AlphaCAM separates what it can Open from what it can Save As. STEP and DWG are import-only; DXF and IGES go both ways; Parasolid is listed among the readers. The documented output formats do not include a STEP writer or a DWG writer, so a STEP model brought into AlphaCAM does not round-trip back out as STEP. The manufacturing output is post-processed NC code, with ANC as the native AlphaCAM file. AlphaCAM is a Hexagon (Vero) product; the legacy alphacam.com address redirects to Hexagon, which quotes through its sales-enquiry form."
       },
       {
         "q": "What are the best alternatives to AlphaCAM?",
@@ -4646,8 +4590,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AlphaCAM Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4661,14 +4605,13 @@ export const c5Tools: Tool[] = [
       "DXF",
       "STEP",
       "IGES",
-      "Parasolid",
-      "Rhino 3DM",
-      "SketchUp"
+      "Parasolid"
     ],
     "file_formats_out": [
       "NC (G-Code)",
       "ANC",
-      "DXF"
+      "DXF",
+      "IGES"
     ]
   },
   {
@@ -4816,7 +4759,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does Radan cost?",
-        "a": "Radan is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Radan Pricing Page](https://www.radan.com/)."
+        "a": "RADAN is a Hexagon (Vero) product and the vendor does not publish a price list. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
       },
       {
         "q": "Is there a free version of Radan?",
@@ -4828,7 +4771,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Radan support?",
-        "a": "Radan works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "RADAN is a sheet-metal nesting and punching CAM system, so its exchange surface is mostly 2D. The vendor documents DXF and DWG part geometry plus CSV data as inputs, and outputs clean DXF, RADAN part and nest project files, NC part programs and CSV nest reports. Neutral 3D solid formats such as STEP, IGES, Parasolid and ACIS/SAT are unsupported in the documentation for RADAN itself — capability tables for the separate DESIGNER or REcreate modules must not be attributed to RADAN. RADAN is a Hexagon (Vero) product; the legacy radan.com address redirects to Hexagon, which quotes through its sales-enquiry form."
       },
       {
         "q": "What are the best alternatives to Radan?",
@@ -4837,8 +4780,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Radan Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -4850,17 +4793,13 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "SAT",
-      "SolidWorks",
-      "Inventor"
+      "CSV"
     ],
     "file_formats_out": [
       "NC (G-Code)",
-      "RAD",
+      "DXF",
       "CSV",
-      "PDF"
+      "RAD"
     ]
   },
   {
@@ -5018,7 +4957,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Lantek Expert support?",
-        "a": "Lantek Expert works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "Lantek Expert documents DXF, DWG and DSTV in both directions for sheet-metal part geometry, and its Intelligent Import/Export material also mentions IGES. STEP is described in the Lantek FAQ as depending on the configuration rather than as a fixed, documented import/export pair, so it should not be assumed for every installation. Outputs are NC cut code, MEC machine files, 2D geometry and nest/production reports. Lantek does not publish a price list; quotes go through its contact form."
       },
       {
         "q": "What are the best alternatives to Lantek Expert?",
@@ -5027,8 +4966,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Lantek Expert Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "Basic",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -5041,14 +4980,15 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "DWG",
       "DXF",
-      "STEP",
-      "IGES",
-      "SAT"
+      "DSTV",
+      "IGES"
     ],
     "file_formats_out": [
       "NC (CNC Cut code)",
       "MEC",
       "DXF",
+      "DWG",
+      "DSTV",
       "Reports"
     ]
   },
@@ -5196,7 +5136,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SigmaNEST cost?",
-        "a": "SigmaNEST is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SigmaNEST Pricing Page](https://www.sigmanest.com/)."
+        "a": "SigmaNEST does not publish a price list. The company behind the product (now SigmaTEK, part of the Sandvik group) quotes through its contact form; plan names, bundles, seat rates, taxes and eligibility differ by country and currency: [Official SigmaTEK contact page](https://www.sigmateksystems.com/en/contact-us)."
       },
       {
         "q": "Is there a free version of SigmaNEST?",
@@ -5208,7 +5148,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SigmaNEST support?",
-        "a": "SigmaNEST works with standard CAE/CAM interchange formats including STEP, IGES, and native NC formats. Check the vendor's official documentation for the complete list."
+        "a": "SigmaNEST natively reads DXF, DWG, DSTV and STEP part geometry, and also lists IGES, 3D DWG, CDL and G-code/ESSI inputs plus readers for SOLIDWORKS, Inventor and Creo files. Parasolid and ACIS/SAT readers come through the CAD Import Plus option rather than in every base configuration. On the output side the vendor documents NC/G-code, nest results, reports and DXF/DWG geometry — there is no vendor-published STEP or IGES model export. The company behind the product renamed to SigmaTEK and is part of the Sandvik group, but the product is still called SigmaNEST; the sigmanest.com address now points at sigmateksystems.com, which handles quotes."
       },
       {
         "q": "What are the best alternatives to SigmaNEST?",
@@ -5217,8 +5157,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SigmaNEST Engine",
-      "multicore": "Multi-Core Parallel Solver & Toolpath Calculation",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -5233,16 +5173,19 @@ export const c5Tools: Tool[] = [
       "DXF",
       "STEP",
       "IGES",
+      "DSTV",
       "SolidWorks",
       "Inventor",
       "Creo",
-      "DSTV"
+      "Parasolid",
+      "SAT"
     ],
     "file_formats_out": [
       "NC (CNC G-Code)",
       "DXF",
+      "DWG",
       "CSV",
-      "PDF nesting layouts"
+      "Reports"
     ]
   },
   {
@@ -5297,7 +5240,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Custom finite-volume CFD solver",
       "multicore": "Distributed (MPI/HPC)",
-      "gpu_optimization": "GPU offload for select solvers (2024 R1+)",
+      "gpu_optimization": "GPU offload for select solvers",
       "standards": [
         "CGNS",
         "HDF5",
@@ -5682,7 +5625,7 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "GPU Lattice Boltzmann + finite element",
-      "multicore": "Multi-Core Parallel Solver",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "CUDA / NVIDIA RTX",
       "standards": [
         "STEP",
@@ -6086,7 +6029,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Custom FEM with multi-physics coupling",
       "multicore": "Shared and distributed",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -6477,7 +6420,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Coupled finite-volume CFD",
       "multicore": "MPI (HPC)",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -6865,7 +6808,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "OpenFOAM + Code_Aster + CalculiX in AWS",
       "multicore": "Cloud HPC (unlimited cores)",
-      "gpu_optimization": "N/A (CPU)",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "Parasolid",
@@ -7094,7 +7037,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Siemens Parasolid (Geometry) + Simcenter Nastran",
       "multicore": "Inherits from Nastran",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "Nastran .bdf",
         "STEP",
@@ -7288,8 +7231,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "OptiStruct + MotionSolve",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -7484,7 +7427,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "Patran GUI + Nastran/Marc/Abaqus",
       "multicore": "Inherits from solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "Nastran .bdf",
         "STEP",
@@ -7675,8 +7618,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Adams Solver (rigid + flexible MBD)",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "Parasolid",
         "STEP",
@@ -7866,8 +7809,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CAESAR II beam FEM",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "ASME B31",
         "EN 13480"
@@ -8055,8 +7998,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoPIPE beam FEM",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "ASME B31",
         "EN 13480",
@@ -8270,8 +8213,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PV Elite analytic + FEA",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "ASME VIII Div 1/2",
         "PD 5500",
@@ -8460,8 +8403,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Aspen HYSYS solver",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "CAPE-OPEN"
       ]
@@ -8648,8 +8591,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SAP2000 (finite element + frame)",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "AISC",
         "ACI",
@@ -8872,8 +8815,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ETABS (finite element)",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "ACI",
         "AISC",
@@ -9086,8 +9029,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "STAAD.Pro",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "AISC",
         "ACI",
@@ -9295,8 +9238,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Tedds calculation engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "AISC",
         "ACI",
@@ -9483,8 +9426,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Robot solver",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "Eurocode",
         "AISC",
@@ -9692,8 +9635,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "CBFEM",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "Standard DirectX / OpenGL 3D Structural Viewport",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "EN",
         "AISC",
@@ -9927,8 +9870,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "RISA solver",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "No",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "AISC",
         "ACI",
@@ -10664,11 +10607,14 @@ export const c5Tools: Tool[] = [
     "description": "SCIA Engineer, from the Nemetschek Group, is a structural analysis and design package for buildings and civil structures. It offers multi-material code design, advanced FEM analysis, and Open BIM workflows.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
+        "name": "SCIA Engineer",
         "price": "Official Store",
-        "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "period": "Official Store",
+        "features": [
+          "Sold as a subscription through the official SCIA webshop",
+          "Editions, regional prices and VAT differ by country — the vendor page is the only current source"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
@@ -10749,7 +10695,7 @@ export const c5Tools: Tool[] = [
     ],
     "country": "Belgium",
     "category_id": "c5",
-    "pricing_type": "Perpetual",
+    "pricing_type": "Subscription",
     "starting_price": 0,
     "quote_only": true,
     "platforms": [
@@ -10769,7 +10715,7 @@ export const c5Tools: Tool[] = [
     ],
     "user_scales": [],
     "official_url": "https://www.scia.net/",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "pricing_url": "https://www.scia.net/en/software",
     "affiliate_url": null,
     "score": 0,
     "pros": [
@@ -10789,7 +10735,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does SCIA Engineer cost?",
-        "a": "SCIA Engineer is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SCIA Engineer Pricing Page](https://www.scia.net/)."
+        "a": "SCIA Engineer is sold by subscription through the official SCIA webshop. Edition names, regional prices, VAT and eligibility differ by country and are revised by the vendor, so the official page is the only current source: [Official SCIA Engineer Pricing Page](https://www.scia.net/en/software)."
       },
       {
         "q": "Is there a free version of SCIA Engineer?",
@@ -10801,7 +10747,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SCIA Engineer support?",
-        "a": "SCIA Engineer works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "SCIA Engineer publishes an Import/Export manual with separate Import, Export and Update columns. IFC 2x3 and IFC 4, DWG/DXF, SDNF, ESA XML and steel-exchange formats such as DSTV and SAF are documented in both directions, alongside BIM links to Revit, Tekla and ETABS. Calculation reports export to PDF, RTF, HTML, TXT and Excel/XLSX, and 3D PDF output is supported. SCIA does not support ISO 10303 STEP import or export; the similarly named StepSteel reader in its manual is a structural steel ASCII exchange format instead. SCIA belongs to the Nemetschek Group under the ALLPLAN umbrella, not Hexagon, and its own webshop and sales team handle pricing — published prices are regional and change, so use the official SCIA software page."
       },
       {
         "q": "What are the best alternatives to SCIA Engineer?",
@@ -10810,8 +10756,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "SCIA Engineer Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": []
     },
     "expert_verdict": "A premier multi-material structural design and analysis suite, highly optimized for Eurocode calculations.",
@@ -10820,15 +10766,21 @@ export const c5Tools: Tool[] = [
       "DWG",
       "DXF",
       "SDNF",
-      "STEP",
       "XML"
     ],
     "file_formats_out": [
       "IFC",
       "DWG",
       "DXF",
-      "PDF reports",
-      "Excel"
+      "XML",
+      "SDNF",
+      "DSTV",
+      "SAF",
+      "PDF",
+      "RTF",
+      "HTML",
+      "TXT",
+      "XLSX"
     ]
   },
   {
@@ -11051,7 +11003,7 @@ export const c5Tools: Tool[] = [
     "tech_specs": {
       "engine": "PowerMill Engine",
       "multicore": "Yes (64-bit multi-threading)",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -11135,11 +11087,14 @@ export const c5Tools: Tool[] = [
     "description": "ESPRIT, from Hexagon, is a CAM system for CNC machine programming. It supports 2-5 axis milling, turning, mill-turn, and Swiss-type machines, producing machine-optimized G-code with full machine simulation.",
     "pricing_tiers": [
       {
-        "name": "Perpetual",
-        "price": "Official Store",
-        "period": "Perpetual",
-        "features": [],
-        "is_popular": false
+        "name": "ESPRIT",
+        "price": "Contact Sales",
+        "period": "Official Store",
+        "features": [
+          "Quoted through the official Hexagon sales-enquiry form",
+          "No public price list or fixed tier pricing is published by the vendor"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
@@ -11239,7 +11194,7 @@ export const c5Tools: Tool[] = [
       "Machine Simulation"
     ],
     "user_scales": [],
-    "official_url": "https://www.espritcam.com/",
+    "official_url": "https://espritcam.hexagon.com/",
     "pricing_url": "https://espritcam.hexagon.com/contact",
     "affiliate_url": null,
     "score": 0,
@@ -11260,7 +11215,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does ESPRIT cost?",
-        "a": "ESPRIT is sold as a perpetual licence. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ESPRIT Pricing Page](https://www.espritcam.com/)."
+        "a": "ESPRIT is a Hexagon product and the vendor does not publish a price list or public price tiers. Configurations are quoted through the official contact form; plan names, bundles, taxes and eligibility differ by country and currency: [Official ESPRIT sales enquiry](https://espritcam.hexagon.com/contact)."
       },
       {
         "q": "Is there a free version of ESPRIT?",
@@ -11272,7 +11227,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ESPRIT support?",
-        "a": "ESPRIT works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "ESPRIT EDGE publishes CAD reader and writer options per format. It reads STEP, IGES, Parasolid, ACIS/SAT, DWG/DXF, STL, JT, CGR and Rhino 3DM, plus native readers for CATIA, SOLIDWORKS, Inventor, Siemens NX, Creo and Solid Edge — the complete reader list lives behind the ESPRITWeb login (vendor portal). On the writer side IGES, STL, Parasolid, ACIS/SAT, DWG and DXF have documented Export Options, and the vendor documents GDML machine/fixture files plus BMP/PNG images; the main output is post-processed NC G-code. STEP export has no official basis: the STEP help page contains only Import Options, and this is a documentation trap, because the same importing-and-exporting boilerplate appears on CATIA, SOLIDWORKS and Inventor pages that also have no export section. ESPRIT is a Hexagon product (originally DP Technology); there is no public price list, so use the official contact and sales-enquiry form."
       },
       {
         "q": "What are the best alternatives to ESPRIT?",
@@ -11281,8 +11236,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "ESPRIT Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "N/A",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": []
     },
     "expert_verdict": "A high-performance full-spectrum CAM system, unmatched for multi-tasking mill-turn and Swiss-type machining.",
@@ -11291,19 +11246,25 @@ export const c5Tools: Tool[] = [
       "IGES",
       "Parasolid",
       "SAT",
-      "CATPart",
-      "SLDPRT",
-      "IPT",
       "DWG",
       "DXF",
-      "STL"
+      "STL",
+      "JT",
+      "CGR",
+      "Rhino 3DM"
     ],
     "file_formats_out": [
       "NC (G-Code)",
       "ESP",
-      "STEP",
       "IGES",
-      "STL"
+      "STL",
+      "Parasolid",
+      "SAT",
+      "DWG",
+      "DXF",
+      "GDML",
+      "BMP",
+      "PNG"
     ]
   },
   {
@@ -11504,8 +11465,8 @@ export const c5Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "PAM-STAMP FEA Engine",
-      "multicore": "Multi-Core Parallel Solver",
-      "gpu_optimization": "OpenGL Viewport & GPU Compute Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "STEP",
         "IGES",
@@ -11732,31 +11693,6 @@ export const c5Tools: Tool[] = [
           {
             "name": "Batch Processing & Scripting",
             "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
           }
         ]
       }
@@ -11860,7 +11796,7 @@ export const c5Tools: Tool[] = [
         "period": "3-year",
         "features": [
           "3-year industrial license per workstation",
-          "Excl. VAT (save €500 vs annual renewals)",
+          "Excl. VAT; multi-year terms are quoted by the vendor",
           "Full multi-part costing & Time Intelligence",
           "36 months of updates and support included"
         ],
@@ -11874,7 +11810,7 @@ export const c5Tools: Tool[] = [
           "Permanent buyout license per workstation",
           "Device-locked .qlic offline licensing",
           "Excl. VAT",
-          "Optional annual maintenance at €500/year"
+          "Optional annual maintenance (quoted separately)"
         ]
       },
       {
@@ -11883,9 +11819,9 @@ export const c5Tools: Tool[] = [
         "period": "one-time (3 seats)",
         "features": [
           "Permanent license for minimum 3 workstations",
-          "€4,000 per workstation excl. VAT",
+          "Per-workstation pricing quoted by the vendor (excl. VAT)",
           "Local SQLite network deployment",
-          "Annual maintenance €500/workstation/year"
+          "Annual maintenance quoted per workstation"
         ]
       }
     ],
@@ -11939,31 +11875,6 @@ export const c5Tools: Tool[] = [
           {
             "name": "Batch Processing & Scripting",
             "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
           }
         ]
       }
@@ -11974,8 +11885,8 @@ export const c5Tools: Tool[] = [
     "name": "Engineering on Web",
     "slug": "engineering-on-web",
     "logo_url": "/logos/engineering-on-web.svg",
-    "short_desc": "Free in-browser CAD, FEA simulation, and industrial SPC statistics powered by WebAssembly and WebGPU.",
-    "description": "Engineering on Web is an integrated browser-based mechanical engineering suite combining parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and industrial statistical process control (SPC). Running entirely client-side via WebAssembly solvers and WebGPU acceleration, it enables engineers to sketch with geometric constraints, model parts and assemblies, simulate structural, thermal, fluid, and electromagnetic fields, and evaluate manufacturing capability (control charts, Cpk, DOE) without software downloads or account creation. The platform features an AI modeling copilot and exports STEP, IGES, STL, and DXF files.",
+    "short_desc": "Free in-browser CAD, FEA, industrial statistics/SCADA and PCB design tools, powered by WebAssembly and WebGPU.",
+    "description": "Engineering on Web is a free browser-based suite of four engineering tools: a parametric 3D CAD modeler with constrained sketches, parts, assemblies and technical drawings; a multi-physics FEA simulator covering structures, heat, fluids and electromagnetics; an industrial statistics platform with Six Sigma control charts, capability indices, DOE and a SCADA generator; and a schematic and PCB design tool. The CAD geometry kernel is compiled to WebAssembly and FEA solves use WebGPU with an automatic CPU fallback, but execution is not entirely local: statistical analyses are computed on the vendor server, large meshes and STEP files can use an optional server-side worker, and the optional AI copilot routes commands through a cloud AI provider. No installer, account or login is required, and the first CAD session caches a geometry engine download. Plan and file-format details are maintained on the official site.",
     "category_id": "c5",
     "pricing_type": "Free",
     "starting_price": 0,
@@ -12018,10 +11929,10 @@ export const c5Tools: Tool[] = [
     "core_features": [
       "In-browser parametric 3D CAD with geometrically constrained 2D sketches, parts, and assembly trees",
       "Multi-physics FEA simulation for structural stress, thermal transfer, fluid dynamics, and electromagnetic problems",
-      "High-performance client execution utilizing WebAssembly numerical solvers and WebGPU compute acceleration",
+      "WebAssembly geometry kernel with WebGPU-accelerated FEA solvers and automatic CPU fallback",
       "Industrial Statistical Process Control (SPC) including control charts, process capability (Cp/Cpk), and DOE",
-      "Integrated AI design assistant capable of generating 3D parametric geometry from text or voice instructions",
-      "Zero software installation, zero account login required, and full CAD export to STEP, IGES, STL, and DXF"
+      "Optional text/voice AI design assistant that routes commands through a cloud AI provider",
+      "No installer and no account required; CAD exports to STEP, IGES, STL, DXF, BREP and SVG"
     ],
     "user_scales": [
       "Individuals",
@@ -12034,14 +11945,15 @@ export const c5Tools: Tool[] = [
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
-      "100% free with no account signup, cloud credits, or software installation needed",
-      "Unified engineering stack combining parametric CAD, multi-physics FEA, and SPC quality statistics",
-      "Cutting-edge client execution with WebAssembly matrix solvers and WebGPU parallel compute shaders",
-      "Full interoperability with standard industrial CAD exchange formats (STEP, IGES, DXF, STL)"
+      "Free to use with no account signup and no installer",
+      "Four browser tools in one suite: parametric CAD, multi-physics FEA, industrial statistics/SCADA and PCB design",
+      "WebAssembly geometry kernel with WebGPU-accelerated FEA solvers and automatic CPU fallback",
+      "STEP, IGES, BREP and DXF import/export; STL export; CAD drawings export as SVG or PDF (print)"
     ],
     "cons": [
       "Solving extremely large non-linear plasticity meshes with millions of elements depends on local browser RAM",
-      "Specialized automotive crash dynamics and complex explicit multi-body solvers are less suited than Abaqus or LS-DYNA"
+      "Specialized automotive crash dynamics and complex explicit multi-body solvers are less suited than Abaqus or LS-DYNA",
+      "Statistical analyses run on the vendor server, and the optional AI assistant sends prompts to a cloud AI provider"
     ],
     "screenshots": [
       {
@@ -12060,30 +11972,109 @@ export const c5Tools: Tool[] = [
       "multicore": "Client-side Web Workers multi-threaded finite element matrix solving",
       "gpu_optimization": "Hardware-accelerated WebGPU / WebGL 3D field visualization and mesh contouring",
       "standards": [
-        "ISO 10303 (STEP AP203/AP214)",
-        "ANSI IGES 5.3",
+        "STEP",
+        "IGES",
         "DXF",
-        "STL Binary & ASCII",
+        "STL",
+        "BREP",
         "SVG"
       ]
     },
-    "expert_verdict": "Engineering on Web represents a groundbreaking evolution in browser-based engineering software. By pairing geometric constraint sketching and parametric assembly modeling with WebAssembly/WebGPU-accelerated FEA and SPC analytics, it gives engineers and students desktop-grade simulation power on any connected device without friction, licenses, or server queues.",
+    "expert_verdict": "Engineering on Web is unusual in shipping four browser-native engineering tools — parametric CAD, multi-physics FEA, industrial statistics/SCADA and PCB design — with no installer and no account. The WebAssembly kernel and WebGPU FEA solver make it a genuinely capable zero-cost option for students and light professional work, but it is not fully local: statistical analyses run on the vendor server, the optional AI assistant sends data to a cloud provider, and the vendor own disclaimer says safety-related results must be verified by a qualified engineer.",
     "faqs": [
       {
         "q": "What is Engineering on Web?",
-        "a": "Engineering on Web is a free, web-based engineering suite that integrates parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and statistical process control (SPC) directly in modern web browsers."
+        "a": "Engineering on Web is a free browser-based engineering suite with four tools under one name: parametric 3D CAD, finite element simulation (FEA), an industrial statistics platform with a SCADA generator, and an electronic design tool for schematics and printed circuit boards. The tools run in a modern browser with no installer and no account; the content pages are ad-supported while the apps themselves are not."
       },
       {
         "q": "How does Engineering on Web run FEA simulations in a browser?",
-        "a": "It utilizes compiled WebAssembly (Wasm) numerical solvers for fast equation solving and WebGPU compute shaders for parallel mesh evaluation and stress contour rendering directly on your local graphics processor."
+        "a": "The CAD tool uses the OpenCascade geometry kernel compiled to WebAssembly, and FEA meshing, assembly and solving run in Web Workers with a WebGPU conjugate-gradient solver and an automatic CPU fallback when WebGPU is unavailable or the tolerance is not reached. Not everything is local, though: the statistics module computes analyses on the vendor server, and large tetrahedral meshes and STEP files can optionally be handled by a server-side worker. The first CAD session also caches a geometry engine download instead of installing software."
       },
       {
         "q": "What simulation domains are supported?",
-        "a": "Engineering on Web supports structural analysis (Von Mises stress, displacement, factor of safety), thermal conduction and convection, fluid dynamics approximations, and electromagnetic field simulations."
+        "a": "The FEA module covers structural mechanics (including modal, buckling, plasticity and contact), heat transfer (conduction, convection, radiation and transient), fluid dynamics (laminar, Stokes, turbulent k-epsilon/k-omega/SST, two-phase and non-isothermal) and electromagnetics (electrostatics, currents, magnetic fields, Joule and induction heating), plus coupled physics such as thermal-structural and fluid-structure interaction. The vendor verifies each physics against analytical benchmarks and notes that safety-related designs must be checked by a qualified professional."
       },
       {
         "q": "Is Engineering on Web free and private?",
-        "a": "Yes. The platform is completely free to use with no account or subscription required. Calculations and CAD geometry are processed on your local device with zero cloud data retention."
+        "a": "The tools are free, there is no registration or account, and no installer is needed. Privacy is more nuanced than pure local execution: CAD and FEA solving happen on your machine, but statistical analyses are computed on the vendor server (the data is processed and not stored there), a copy of your documents is synchronised to the server linked to an anonymous workspace identifier, and the optional AI assistant sends your text and model context to a cloud AI provider. The vendor explicitly warns against sending personal or confidential data to the assistant."
+      },
+      {
+        "q": "Which file formats can Engineering on Web import and export?",
+        "a": "The CAD tool imports and exports STEP, IGES, BREP and DXF, and exports STL, JSON complete-project files and technical drawings as SVG or PDF (print). STL is export-only in CAD — the official format guide states there is no STL import — although the FEA tool can read STL and DXF geometry. PDF export is a print-style output from CAD drawings; the statistics and FEA modules do not publish a PDF export. Check the official format guide for the current per-tool matrix."
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Parametric 3D CAD",
+        "items": [
+          {
+            "name": "Sketches with dimensions and constraints",
+            "status": true
+          },
+          {
+            "name": "Parts, assemblies and technical drawings",
+            "status": true
+          },
+          {
+            "name": "Export STL, STEP, IGES and DXF",
+            "status": true
+          },
+          {
+            "name": "Optional text/voice AI modeling assistant",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Finite element simulation",
+        "items": [
+          {
+            "name": "Structures, heat, fluids and electromagnetics",
+            "status": true
+          },
+          {
+            "name": "Coupled physics, 2D and 3D",
+            "status": true
+          },
+          {
+            "name": "WebGPU acceleration with CPU fallback",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Industrial statistics and SCADA",
+        "items": [
+          {
+            "name": "Control charts, capability and design of experiments",
+            "status": true
+          },
+          {
+            "name": "Matrix console and publication graphs",
+            "status": true
+          },
+          {
+            "name": "SCADA exported for Windows, macOS and Linux",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Schematics and PCB layout",
+        "items": [
+          {
+            "name": "Multi-sheet schematic with electrical rule check",
+            "status": true
+          },
+          {
+            "name": "Interactive and automatic routing, copper zones and DRC",
+            "status": true
+          },
+          {
+            "name": "3D view, Gerber, drill, BOM and pick and place",
+            "status": true
+          }
+        ]
       }
     ],
     "pricing_tiers": [
@@ -12095,9 +12086,9 @@ export const c5Tools: Tool[] = [
           "In-browser parametric 3D CAD & assembly modeling",
           "Multi-physics FEA (Structural, Thermal, Fluid, EM)",
           "Industrial SPC quality control charts & DOE tools",
-          "STEP, IGES, STL, and DXF file export",
-          "AI text and voice parametric design copilot",
-          "100% free with no login or software download"
+          "STEP, IGES, BREP and DXF import/export; STL export; SVG and PDF (print) drawing output",
+          "Optional text/voice AI copilot (commands are processed by a cloud AI provider)",
+          "Free to use with no account signup and no installer"
         ],
         "is_popular": true
       }
@@ -12111,17 +12102,17 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "STEP",
-      "STP",
       "IGES",
-      "IGS",
-      "DXF",
-      "STL"
+      "BREP",
+      "DXF"
     ],
     "file_formats_out": [
       "STEP",
       "IGES",
       "STL",
       "DXF",
+      "BREP",
+      "JSON",
       "SVG",
       "PDF"
     ]

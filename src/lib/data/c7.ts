@@ -5120,7 +5120,7 @@ export const c7Tools: Tool[] = [
           "30 drawings per month",
           "Full 300+ block gallery",
           "Beta tools (Orthographic view)",
-          "Billed yearly (€96/yr, VAT incl.)"
+          "Billed yearly; the current price is on the official pricing page"
         ],
         "is_popular": true
       },
