@@ -552,7 +552,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does nTop support?",
-        "a": "nTop imports STEP, Parasolid, IGES, STL, OBJ, CDB, INP and exports STEP, Parasolid, STL, 3MF, FE Mesh, CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "nTop is an implicit-modelling and design-exploration platform, and its support site publishes a single import/export format table. It reads neutral and native CAD (STEP, Parasolid, ACIS, CATIA, SOLIDWORKS, Inventor, Creo, NX), mesh formats (STL, OBJ, PLY, 3MF) and FE mesh and result files (INP, CDB, BDF, CGNS, UNV, PAT, MSH). IGES appears only in the export column - there is no vendor-documented IGES import. On export it writes STEP AP242, Parasolid and IGES geometry, mesh formats, FE mesh decks, CSV point/tabular data and slice formats such as CLI. \"FE Mesh\" is a content label rather than a format; the actual files are INP, CDB, BDF and similar. The official support article is the current source."
       },
       {
         "q": "What are the best alternatives to nTop?",
@@ -575,19 +575,32 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "STEP",
       "Parasolid",
-      "IGES",
+      "ACIS (SAT)",
+      "CATPart",
+      "SLDPRT",
+      "IPT",
       "STL",
       "OBJ",
+      "PLY",
+      "3MF",
+      "INP",
       "CDB",
-      "INP"
+      "BDF",
+      "CSV"
     ],
     "file_formats_out": [
       "STEP",
       "Parasolid",
+      "IGES",
       "STL",
+      "OBJ",
+      "PLY",
       "3MF",
-      "FE Mesh",
-      "CSV"
+      "INP",
+      "CDB",
+      "BDF",
+      "CSV",
+      "CLI"
     ]
   },
   {
@@ -836,7 +849,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Magics support?",
-        "a": "Magics imports STL, 3MF, STEP, IGES, Parasolid, CATPart, SLDPRT, OBJ and exports STL, 3MF, CLI, SLC, SLI, Machine build files. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Materialise Magics is additive-manufacturing data and build-preparation software. Its base licence imports mesh and neutral formats (STL, 3MF, STEP, OBJ, AMF, PLY, DXF); native CAD formats such as IGES, Parasolid, CATPart, SLDPRT and JT need the optional Import module or MatConvert and are import-only. The base licence exports mesh formats, MatConvert adds STEP export, and the Slice module writes CLI, SLC and SLL slice files. \"Machine build files\" is a content label for printer-specific job files rather than a single format, and SLI is not the documented slice extension. The official Materialise import page is the current source."
       },
       {
         "q": "What are the best alternatives to Magics?",
@@ -859,19 +872,27 @@ export const c5Tools: Tool[] = [
       "STL",
       "3MF",
       "STEP",
+      "OBJ",
+      "AMF",
+      "PLY",
+      "DXF",
       "IGES",
       "Parasolid",
       "CATPart",
       "SLDPRT",
-      "OBJ"
+      "JT"
     ],
     "file_formats_out": [
       "STL",
       "3MF",
+      "STEP",
+      "AMF",
+      "OBJ",
+      "PLY",
+      "DXF",
       "CLI",
       "SLC",
-      "SLI",
-      "Machine build files"
+      "SLL"
     ]
   },
   {
@@ -1113,7 +1134,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ANSYS Mechanical support?",
-        "a": "ANSYS Mechanical imports STEP, IGES, Parasolid, SAT, CATPart, SLDPRT, IPT, PRT, SCDM, DWG, DXF and exports CDB, RST, STEP, IGES, STL, 3D PDF, VTK. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Ansys Mechanical is an FEA solver and pre/post-processor attached to Workbench geometry, not a geometry writer. Its CAD Integration documentation lists STEP, IGES, Parasolid, ACIS, CATIA, Creo, NX, SOLIDWORKS, Inventor, JT, Rhino, SpaceClaim (SCDOC), DWG and DXF as readers through licensed CAD interfaces; SCDM is a product abbreviation, not a file extension. The Data Export options are text/delimited files, STL, Ansys Viewer (AVZ), Part Manager (PMDB) and NASTRAN bulk data. The vendor does not document STEP, IGES, 3D PDF, VTK or CDB export from Mechanical - 3D PDF comes from a third-party plug-in, CDB is a MAPDL CDWRITE file, and geometry writers belong to SpaceClaim or DesignModeler. RST is a solver result file rather than an export format."
       },
       {
         "q": "What are the best alternatives to ANSYS Mechanical?",
@@ -1194,23 +1215,23 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
-      "SAT",
+      "ACIS (SAT)",
       "CATPart",
       "SLDPRT",
       "IPT",
-      "PRT",
-      "SCDM",
       "DWG",
-      "DXF"
+      "DXF",
+      "JT",
+      "Rhino 3DM",
+      "SCDOC"
     ],
     "file_formats_out": [
-      "CDB",
-      "RST",
-      "STEP",
-      "IGES",
       "STL",
-      "3D PDF",
-      "VTK"
+      "AVZ",
+      "PMDB",
+      "NASTRAN BDF",
+      "CSV",
+      "TXT"
     ],
     "alternatives": [
       "abaqus",
@@ -1224,7 +1245,7 @@ export const c5Tools: Tool[] = [
     "name": "MSC Nastran",
     "slug": "msc-nastran",
     "logo_url": "/logos/msc-nastran.png",
-    "short_desc": "NASA-born structural analysis solver, now by Hexagon.",
+    "short_desc": "NASA-born structural analysis solver, now part of Cadence.",
     "description": "MSC Nastran is a multidisciplinary structural analysis application used by engineers to perform static, dynamic, and thermal analysis across the aerospace, automotive and manufacturing industries.",
     "country": "USA",
     "category_id": "c5",
@@ -1250,8 +1271,8 @@ export const c5Tools: Tool[] = [
     "user_scales": [
       "Enterprise"
     ],
-    "official_url": "https://nexus.hexagon.com/home/product/msc-nastran/",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 4.9,
     "pros": [
@@ -1267,15 +1288,15 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is MSC Nastran used for?",
-        "a": "NASA-born structural analysis solver, now by Hexagon. MSC Nastran is a CAE / CAM solution widely adopted in Aerospace, Automotive, Defense."
+        "a": "NASA-born structural analysis solver, now part of Cadence. MSC Nastran is a CAE / CAM solution widely adopted in Aerospace, Automotive, Defense."
       },
       {
         "q": "How much does MSC Nastran cost?",
-        "a": "MSC Nastran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Nastran Pricing Page](https://nexus.hexagon.com/home/product/msc-nastran/)."
+        "a": "MSC Nastran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Nastran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
       },
       {
         "q": "Is there a free version of MSC Nastran?",
-        "a": "MSC Nastran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Nastran page](https://nexus.hexagon.com/home/product/msc-nastran/)."
+        "a": "MSC Nastran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Nastran page](https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html)."
       },
       {
         "q": "What operating systems does MSC Nastran support?",
@@ -1283,7 +1304,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MSC Nastran support?",
-        "a": "MSC Nastran imports BDF, DAT, STEP, IGES, Parasolid, CATPart and exports OP2, H5, PCH, F06, CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "MSC Nastran is a structural FEA solver, now part of Cadence following its acquisition of Hexagon's Design & Engineering business. It has no CAD geometry importer: the solver reads a Nastran input deck (.dat, .bdf or .nas), with OP2 usable as restart input. The solver does not import STEP, IGES, Parasolid or CATPart - those belong to pre-processors such as Patran or MSC Apex. Its documented outputs are F06, F04, OP2, PCH, XDB, H5 and PLT. The vendor does not publish a native CSV export, and CAD geometry exchange belongs to the pre-processor. The official Cadence product page is the current source."
       },
       {
         "q": "What are the best alternatives to MSC Nastran?",
@@ -1295,9 +1316,10 @@ export const c5Tools: Tool[] = [
       "multicore": "Not published by the vendor",
       "gpu_optimization": "Not published by the vendor",
       "standards": [
-        "STEP",
-        "IGES",
-        "BDF"
+        "BDF",
+        "DAT",
+        "OP2",
+        "F06"
       ]
     },
     "expert_verdict": "Born at NASA, Nastran is the simulation benchmark for aerospace certifications worldwide.",
@@ -1327,19 +1349,19 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "BDF",
       "DAT",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "CATPart"
+      "BDF",
+      "NAS",
+      "OP2"
     ],
     "file_formats_out": [
-      "OP2",
-      "H5",
-      "PCH",
       "F06",
-      "CSV"
+      "F04",
+      "OP2",
+      "PCH",
+      "XDB",
+      "H5",
+      "PLT"
     ],
     "alternatives": [
       "ansys-mechanical",
@@ -1417,7 +1439,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Altair HyperWorks support?",
-        "a": "HyperWorks imports HM, STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, NASTRAN, INP and CDB, and exports HM, FEM, INP, CDB, STEP, IGES and H3D. Direct CAD associative interfaces and neutral solver formats are available depending on your licensed modules."
+        "a": "Altair HyperWorks, with HyperMesh as its solver-neutral FE pre-processor, reads a wide CAD reader list covering STEP, IGES, Parasolid, ACIS, JT, CATIA, Creo/NX, SOLIDWORKS, VDA, DXF and Rhino, plus FE decks such as NASTRAN, Abaqus INP and Ansys CDB. Its CAD writers are documented through the *geomexport command and support IGES, JT, Parasolid and STEP; HM is the native database. H3D is a HyperView result file rather than a geometry export, and FEM/INP/CDB are solver decks rather than CAD formats. Altair does not publish one unified I/O matrix - the reader and writer lists live in separate help pages, and an older page saying IGES-only is out of date. The official help is the current source."
       },
       {
         "q": "What are the best alternatives to Altair HyperWorks?",
@@ -1465,21 +1487,26 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
-      "CATPart",
-      "PRT",
-      "SLDPRT",
-      "NASTRAN",
-      "INP",
-      "CDB"
+      "JT",
+      "ACIS (SAT)",
+      "CATIA (CATPart)",
+      "Creo / NX (PRT)",
+      "SolidWorks (SLDPRT)",
+      "VDA",
+      "DXF",
+      "NASTRAN (BDF)",
+      "Abaqus (INP)",
+      "Ansys (CDB)"
     ],
     "file_formats_out": [
       "HM",
-      "FEM",
-      "INP",
-      "CDB",
       "STEP",
       "IGES",
-      "H3D"
+      "Parasolid",
+      "JT",
+      "OptiStruct (FEM)",
+      "Abaqus (INP)",
+      "Ansys (CDB)"
     ],
     "alternatives": [
       "ansys-workbench",
@@ -1821,7 +1848,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does TopSolid support?",
-        "a": "TopSolid imports TOP, STEP, IGES, Parasolid, SAT, CATPart, SLDPRT, IPT, DWG, DXF and exports TOP, STEP, IGES, Parasolid, NC (G-Code), PDF, DWG, DXF, STL. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "TopSolid is an integrated CAD/CAM system, and its official Data Exchange page lists Reader and Writer columns separately. ACIS, DWG/DXF, CATIA, JT, Parasolid, VDA, IGES, STEP, STL, 3MF, AMF and IFC are readable and writable; PDF (2D and 3D), DSTV and glTF are write-only; native SOLIDWORKS, Inventor, NX, Creo, Rhino, Revit and OBJ are read-only. TOP is the native document. \"NC (G-Code)\" is a CAM post-processor output rather than an exchange format and does not appear in the vendor matrix. The official Data Exchange page is the current source."
       },
       {
         "q": "What are the best alternatives to TopSolid?",
@@ -1840,23 +1867,35 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
-      "SAT",
+      "ACIS (SAT)",
       "CATPart",
+      "Creo (PRT)",
+      "NX (PRT)",
       "SLDPRT",
       "IPT",
+      "JT",
+      "VDA",
       "DWG",
-      "DXF"
+      "DXF",
+      "OBJ"
     ],
     "file_formats_out": [
       "TOP",
       "STEP",
       "IGES",
       "Parasolid",
-      "NC (G-Code)",
-      "PDF",
+      "ACIS (SAT)",
+      "CATPart",
+      "JT",
+      "VDA",
       "DWG",
       "DXF",
-      "STL"
+      "STL",
+      "3MF",
+      "AMF",
+      "IFC",
+      "PDF",
+      "DSTV"
     ]
   },
   {
@@ -2036,7 +2075,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does VISI support?",
-        "a": "VISI imports STEP, IGES, Parasolid, CATPart, PRT, SLDPRT, DWG, DXF and exports STEP, IGES, Parasolid, NC (G-Code), DWG, DXF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Hexagon VISI is a Parasolid-based mould, die and electrode CAD/CAM system. Its brochure lists STEP, IGES, VDA-FS, Parasolid, DWG/DXF, STL, SolidWorks, Solid Edge, Inventor, CATIA, NX, Creo, JT Open and SAT for import and export, and the online help documents export writers for ACIS, CATIA V5, IGES, NX, Parasolid, STEP, VDA and JT Open, plus 3D PDF. Native SOLIDWORKS, Solid Edge, Inventor and Creo are read-only. \"NC (G-Code)\" is a CAM post-processor output, not an exchange format. The official Hexagon VISI documentation is the current source."
       },
       {
         "q": "What are the best alternatives to VISI?",
@@ -2060,19 +2099,28 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
+      "ACIS (SAT)",
       "CATPart",
-      "PRT",
+      "NX (PRT)",
       "SLDPRT",
+      "VDA",
+      "JT",
       "DWG",
-      "DXF"
+      "DXF",
+      "STL"
     ],
     "file_formats_out": [
       "STEP",
       "IGES",
       "Parasolid",
-      "NC (G-Code)",
+      "ACIS (SAT)",
+      "CATIA V5",
+      "NX",
+      "JT",
+      "VDA",
       "DWG",
-      "DXF"
+      "DXF",
+      "3D PDF"
     ]
   },
   {
@@ -2425,7 +2473,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does KISSsoft support?",
-        "a": "KISSsoft imports STEP, Parasolid, IGES, KISSsys, Excel, DXF and exports STEP, Parasolid, 3D Tooth Profiles, G-Code (Gear grinding), PDF reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "KISSsoft is gear and drive-train calculation software, not a general CAD system. Its official Exchange Formats page documents exports only: STEP and Parasolid for 3D gear models, DXF and IGES for 2D graphics, and GDE, GAMA and REXS data exchange. STEP, Parasolid, IGES and DXF are not documented as KISSsoft imports. KISSsys / KISSdesign is the native system-level model, not a file format; Excel is a COM automation channel rather than a document import, and load spectra come from text files. \"3D Tooth Profiles\" is output content (tooth-form X/Y coordinates) rather than a format, and the vendor does not publish a G-code gear-grinding export. The official KISSsoft exchange-formats page is the current source."
       },
       {
         "q": "What are the best alternatives to KISSsoft?",
@@ -2446,19 +2494,16 @@ export const c5Tools: Tool[] = [
     "expert_verdict": "A specialized mechanical design program for sizing, optimizing, and calculating gears and drive systems.",
     "quote_only": true,
     "file_formats_in": [
-      "STEP",
-      "Parasolid",
-      "IGES",
-      "KISSsys",
-      "Excel",
-      "DXF"
+      "KISSsys / KISSdesign (native)"
     ],
     "file_formats_out": [
       "STEP",
       "Parasolid",
-      "3D Tooth Profiles",
-      "G-Code (Gear grinding)",
-      "PDF reports"
+      "DXF (2D)",
+      "IGES (2D)",
+      "GDE",
+      "GAMA",
+      "REXS"
     ]
   },
   {
@@ -2619,7 +2664,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does FeatureCAM support?",
-        "a": "FeatureCAM imports STEP, IGES, Parasolid, SAT, SLDPRT, IPT, DWG, DXF and exports NC (G-Code), FM, STEP, IGES, STL. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Autodesk FeatureCAM is CAM programming software, not a CAD modeller. Its import help lists STEP, IGES, Parasolid, ACIS, SOLIDWORKS, Inventor, CATIA, Creo, NX, DWG/DXF, STL and F3D files. The export help documents only DXF, DWG, IGES and STL - the vendor does not list a STEP export. FM is FeatureCAM's native part file rather than an exchange format, and NC programs are written as text files whose extension depends on the post-processor, so \"NC (G-Code)\" is output content rather than a format. The official FeatureCAM help is the current source."
       },
       {
         "q": "What are the best alternatives to FeatureCAM?",
@@ -2642,16 +2687,17 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
-      "SAT",
+      "ACIS (SAT)",
       "SLDPRT",
       "IPT",
       "DWG",
-      "DXF"
+      "DXF",
+      "STL",
+      "F3D"
     ],
     "file_formats_out": [
-      "NC (G-Code)",
-      "FM",
-      "STEP",
+      "DXF",
+      "DWG",
       "IGES",
       "STL"
     ]
@@ -4002,7 +4048,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AutoForm support?",
-        "a": "AutoForm imports STEP, IGES, CATPart, Parasolid, AF and exports STEP, IGES, AF results, Compensated CAD, Reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "AutoForm is sheet-metal forming simulation software and does not publish a single import/export format matrix. Its own literature names IGES, VDA and STL as directly handled inputs and documents QuickLink plug-ins for CATIA and NX; STEP, CATPart and Parasolid appear in the import dialog but have no official format-table page, so they are only partially confirmed. AF is the native project file. On the output side IGES and VDAFS geometry return to CAD are documented, while STEP export, \"AF results\", \"Compensated CAD\" and \"Reports\" are not - the latter three are output content descriptions rather than file formats. The official AutoForm product literature is the current source."
       },
       {
         "q": "What are the best alternatives to AutoForm?",
@@ -4025,16 +4071,15 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "STEP",
       "IGES",
+      "VDA (VDAFS)",
       "CATPart",
       "Parasolid",
-      "AF"
+      "STL",
+      "AF (native)"
     ],
     "file_formats_out": [
-      "STEP",
       "IGES",
-      "AF results",
-      "Compensated CAD",
-      "Reports"
+      "VDA (VDAFS)"
     ]
   },
   {
@@ -4195,7 +4240,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Moldflow support?",
-        "a": "Moldflow imports UDM, STEP, IGES, Parasolid, SAT, SLDPRT, IPT, STL and exports MFR, STEP (Warpage), Patran (PAT), CSV, HTML reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Autodesk Moldflow is injection-moulding simulation software with separate official import and export tables. It imports UDM, STEP, IGES, Parasolid, ACIS, SOLIDWORKS, Inventor, STL, CATIA, JT, SDY, UNV, BDF and PAT files. Its export table includes MFR results, STEP, STL, UDM, IGES, SAT, Patran (.pat/.nod), H3D, SMT, MFL and ASCII/XML curve data, and the report wizard generates HTML reports. STEP is a general geometry export rather than a \"warpage STEP\" - warped meshes are exported as STL or UDM. Native SLDPRT, IPT, SAT and Parasolid are import-only, and CSV is not an official format-table entry (curves export as TXT or XML). The official Moldflow help is the current source."
       },
       {
         "q": "What are the best alternatives to Moldflow?",
@@ -4219,17 +4264,32 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
-      "SAT",
+      "ACIS (SAT)",
       "SLDPRT",
       "IPT",
-      "STL"
+      "STL",
+      "CATPart",
+      "JT",
+      "SDY",
+      "UNV",
+      "BDF",
+      "PAT"
     ],
     "file_formats_out": [
       "MFR",
-      "STEP (Warpage)",
-      "Patran (PAT)",
-      "CSV",
-      "HTML reports"
+      "STEP",
+      "STL",
+      "UDM",
+      "IGES",
+      "ACIS (SAT)",
+      "PAT",
+      "NOD",
+      "H3D",
+      "SMT",
+      "MFL",
+      "TXT",
+      "XML",
+      "HTML"
     ]
   },
   {
@@ -4387,7 +4447,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Moldex3D support?",
-        "a": "Moldex3D imports STEP, IGES, Parasolid, STL, MFE, NASTRAN and exports STEP (Deformed), CSV, PDF, VRML, LS-DYNA. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Moldex3D is true 3D injection-moulding simulation software with a published mesh I/O table alongside its product-page geometry list. It reads STEP, IGES, Parasolid, STL and JT geometry and FE meshes in MFE, Nastran DAT, Ansys ANS, Patran PAT, I-DEAS UNV and Abaqus INP. It writes STEP (including deformed or compensated geometry), the same mesh formats, STL, CSV result data, an LS-DYNA FEA interface deck and PPT/Excel reports. \"STEP (Deformed)\" is a content qualifier rather than a separate format, VRML is not documented on current official pages, and PDF is not listed as a current report format. The official Moldex3D product pages are the current source."
       },
       {
         "q": "What are the best alternatives to Moldex3D?",
@@ -4412,15 +4472,28 @@ export const c5Tools: Tool[] = [
       "IGES",
       "Parasolid",
       "STL",
+      "JT",
       "MFE",
-      "NASTRAN"
+      "MSC.Nastran (DAT)",
+      "Ansys (ANS)",
+      "Patran (PAT)",
+      "I-DEAS (UNV)",
+      "Abaqus (INP)"
     ],
     "file_formats_out": [
-      "STEP (Deformed)",
+      "STEP",
+      "MFE",
+      "MSH",
+      "PAT",
+      "UNV",
+      "ANS",
+      "DAT",
+      "FEM",
+      "STL",
       "CSV",
-      "PDF",
-      "VRML",
-      "LS-DYNA"
+      "LS-DYNA (deck)",
+      "PPT",
+      "XLSX"
     ]
   },
   {
@@ -5279,7 +5352,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ANSYS Fluent support?",
-        "a": "ANSYS Fluent imports MSH, CAS, STEP, IGES, Parasolid, CGNS, STL and exports DAT, CAS, CGNS, EnSight, FieldView, Tecplot, VTK, CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Ansys Fluent is a CFD solver, not a CAD pre-processor. Its native files are mesh (MSH), case (CAS) and data (DAT), with CFF/HDF5 variants; it imports third-party mesh and solution data such as CGNS, NASTRAN, PATRAN, I-deas and ABAQUS files, and surface meshes in STL. CAD geometry in STEP, IGES or Parasolid form is not read by the solver directly — it enters through Fluent Meshing via a CAD reader (SpaceClaim, Discovery or Workbench), which requires Ansys Geometry Interfaces to be installed. On the output side Fluent writes its native case/data/mesh files and, through File > Export > Solution Data, exports to third-party visualisation and solver formats including CGNS, EnSight, FieldView, Tecplot, VTK, NASTRAN, PATRAN, I-deas, ABAQUS and ASCII. These are write-only post-processing formats rather than a way to rebuild a Fluent case, and there is no vendor-published CSV or STEP/IGES/Parasolid model export."
       },
       {
         "q": "What are the best alternatives to ANSYS Fluent?",
@@ -5365,21 +5438,29 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "MSH",
       "CAS",
+      "CGNS",
+      "STL",
       "STEP",
       "IGES",
       "Parasolid",
-      "CGNS",
-      "STL"
+      "NASTRAN",
+      "PATRAN",
+      "ABAQUS"
     ],
     "file_formats_out": [
-      "DAT",
       "CAS",
+      "DAT",
+      "MSH",
       "CGNS",
       "EnSight",
       "FieldView",
       "Tecplot",
       "VTK",
-      "CSV"
+      "NASTRAN",
+      "PATRAN",
+      "I-deas",
+      "ABAQUS",
+      "ASCII"
     ]
   },
   {
@@ -5461,7 +5542,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ANSYS Workbench support?",
-        "a": "ANSYS Workbench imports WBPJ, STEP, IGES, Parasolid, CATPart, SLDPRT, IPT and exports WBPZ, STEP, IGES, Parasolid, STL, PDF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Ansys Workbench is a simulation project and data-management platform, not a solver and not a geometry engine. WBPJ is the project file and WBPZ is a zip-format archive produced by File > Archive; neither is a CAD exchange format. The platform imports solver and mesh inputs (Fluent MSH/CAS, Mechanical APDL CDB, NASTRAN BDF, Abaqus INP) and attaches CAD geometry through a licensed CAD reader — STEP, IGES, Parasolid, ACIS/SAT, CATPart, SLDPRT, IPT and JT are all in the official CAD File Format Support list, but Workbench attaches them rather than converting them. Geometry writers (STEP, IGES, Parasolid) belong to DesignModeler or SpaceClaim, not to the Workbench platform layer, and the vendor does not document a PDF export. Which CAD interfaces are available depends on the Ansys Geometry Interfaces installed at your site."
       },
       {
         "q": "What are the best alternatives to ANSYS Workbench?",
@@ -5546,20 +5627,24 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "WBPJ",
+      "WBPZ",
+      "MSH",
+      "CAS",
+      "CDB",
+      "BDF",
+      "INP",
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
       "CATPart",
       "SLDPRT",
-      "IPT"
+      "IPT",
+      "JT"
     ],
     "file_formats_out": [
-      "WBPZ",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "STL",
-      "PDF"
+      "WBPJ",
+      "WBPZ"
     ],
     "pricing_tiers": [
       {
@@ -5654,7 +5739,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ANSYS Discovery support?",
-        "a": "ANSYS Discovery imports SCDM, STEP, IGES, Parasolid, SAT, SLDPRT, IPT, CATPart, STL, OBJ and exports SCDM, STEP, IGES, Parasolid, STL, 3MF, WBPJ. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Ansys Discovery is a direct-modelling and live-simulation front end whose geometry kernel comes from SpaceClaim, and its format tables are still published on the SpaceClaim help site. The native document formats are SCDOC (SpaceClaim) and DSCO (Discovery) — SCDM is a product abbreviation, not a file extension. Its official Import and Export tables both list STEP, IGES, Parasolid, ACIS/SAT, STL, OBJ (Wavefront), DWG/DXF, VRML, AMF, PLY and 3D PDF, alongside native CATIA, SOLIDWORKS, Inventor, NX, Creo, Rhino and SketchUp readers. The vendor does not list 3MF in either table. Discovery does not export a WBPJ file: the documented route is Transfer Geometry / Export to Workbench, Mechanical, Fluent or AEDT, plus Export PMDB. Which formats are available depends on the licence type."
       },
       {
         "q": "What are the best alternatives to ANSYS Discovery?",
@@ -5738,7 +5823,8 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "SCDM",
+      "SCDOC",
+      "DSCO",
       "STEP",
       "IGES",
       "Parasolid",
@@ -5747,16 +5833,30 @@ export const c5Tools: Tool[] = [
       "IPT",
       "CATPart",
       "STL",
-      "OBJ"
+      "OBJ",
+      "DWG",
+      "DXF",
+      "AMF",
+      "VRML",
+      "Rhino 3DM",
+      "JT"
     ],
     "file_formats_out": [
-      "SCDM",
+      "SCDOC",
+      "DSCO",
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
       "STL",
-      "3MF",
-      "WBPJ"
+      "OBJ",
+      "DWG",
+      "DXF",
+      "VRML",
+      "AMF",
+      "PLY",
+      "3D PDF",
+      "PMDB"
     ],
     "pricing_tiers": [
       {
@@ -5861,7 +5961,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Abaqus support?",
-        "a": "Abaqus imports INP, STEP, IGES, Parasolid, SAT, CATPart, STL and exports ODB, INP, FIL, STEP, IGES, STL, CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Abaqus is an FEA solver suite, and Abaqus/CAE is its pre/post-processing environment. Native files are the model database (CAE), analysis input (INP), output database (ODB) and results file (FIL). Abaqus/CAE imports neutral geometry — STEP, IGES, ACIS/SAT, Parasolid, VDA-FS — plus CATPart, SOLIDWORKS, Nastran/CDB model data and 2D DXF sketches; associative links to CATIA, NX and SOLIDWORKS need a separate add-on. On export, the vendor documents File > Export > Part / Assembly to STEP, IGES, ACIS (SAT) and VDA-FS, and viewport data to OBJ, VRML and 3D XML, which are write-only. The vendor explicitly states that parts and assemblies cannot be exported in Parasolid, CATIA V5, SOLIDWORKS, NX or Elysium Neutral format, and there is no documented STL or CSV support."
       },
       {
         "q": "What are the best alternatives to Abaqus?",
@@ -5945,22 +6045,33 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
+      "CAE",
       "INP",
+      "ODB",
       "STEP",
       "IGES",
       "Parasolid",
       "SAT",
       "CATPart",
-      "STL"
+      "SLDPRT",
+      "VDA-FS",
+      "DXF",
+      "CDB",
+      "NASTRAN"
     ],
     "file_formats_out": [
-      "ODB",
+      "CAE",
       "INP",
+      "ODB",
       "FIL",
       "STEP",
       "IGES",
-      "STL",
-      "CSV"
+      "SAT",
+      "VDA-FS",
+      "OBJ",
+      "VRML",
+      "3D XML",
+      "NASTRAN"
     ],
     "pricing_tiers": [
       {
@@ -6057,7 +6168,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does COMSOL Multiphysics support?",
-        "a": "COMSOL Multiphysics imports MPH, STEP, IGES, Parasolid, SAT, DXF, DWG, STL, PLY, NASTRAN and exports MPH, STEP, IGES, Parasolid, STL, PLY, VTK, CSV, TXT, MP4. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "COMSOL Multiphysics is a multiphysics simulation platform with built-in geometry, meshing, solving and post-processing. Its CAD Specification Chart lists STEP, IGES, Parasolid, ACIS/SAT, DXF, DWG, STL, PLY, 3MF and VRML for import, and STEP (AP203), IGES, Parasolid, ACIS, DXF (2D only), STL, PLY and 3MF for export. NASTRAN belongs to the mesh-file table rather than the CAD geometry table. STEP, IGES, Parasolid, ACIS and DWG import need the CAD Import Module / Design Module / LiveLink add-ons, while STL, PLY and 3MF are supported by the core product. Result data exports as Text (TXT/CSV/XLSX) or Unstructured VTK (.vtu); animation export is GIF, AVI or WebM — the vendor does not publish an MP4 animation export, and MPH is the native model file rather than an exchange format."
       },
       {
         "q": "What are the best alternatives to COMSOL Multiphysics?",
@@ -6141,7 +6252,6 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "MPH",
       "STEP",
       "IGES",
       "Parasolid",
@@ -6150,19 +6260,24 @@ export const c5Tools: Tool[] = [
       "DWG",
       "STL",
       "PLY",
+      "3MF",
+      "VRML",
       "NASTRAN"
     ],
     "file_formats_out": [
-      "MPH",
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
+      "DXF",
       "STL",
       "PLY",
-      "VTK",
+      "3MF",
+      "NASTRAN",
+      "VTU",
       "CSV",
       "TXT",
-      "MP4"
+      "XLSX"
     ],
     "pricing_tiers": [
       {
@@ -6255,7 +6370,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does LS-DYNA support?",
-        "a": "LS-DYNA imports K, KEY, INP, NASTRAN (BDF), IGES, STEP and exports D3PLOT, BINOUT, CSV, VTK. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "LS-DYNA is a solver, and the solver itself reads only keyword input decks (.k, .key, .dyn) — it does not ingest CAD or mesh files. Geometry exchange happens in the separate LS-PrePost pre/post-processor, whose File > Import menu lists LS-DYNA keyword, IGES, STEP, STL, OBJ and Nastran (.nas/.dat) files, with native CAD formats handled by the separate LSPP_translator component. On the output side the solver writes binary result databases d3plot, time-history d3thdt and binout (LSTC Data Archival Format), while LS-PrePost saves keyword decks and can write XY curves to CSV. The vendor does not document VTK, EnSight or Abaqus INP support, and there is no single official import/export format matrix — the evidence lives in the keyword manual and the PrePost menu reference."
       },
       {
         "q": "What are the best alternatives to LS-DYNA?",
@@ -6340,18 +6455,19 @@ export const c5Tools: Tool[] = [
     ],
     "quote_only": true,
     "file_formats_in": [
-      "K",
-      "KEY",
-      "INP",
-      "NASTRAN (BDF)",
+      "K (Keyword)",
+      "DYN",
       "IGES",
-      "STEP"
+      "STEP",
+      "STL",
+      "OBJ",
+      "NASTRAN"
     ],
     "file_formats_out": [
       "D3PLOT",
       "BINOUT",
-      "CSV",
-      "VTK"
+      "D3THDT",
+      "K (Keyword)"
     ],
     "pricing_tiers": [
       {
@@ -6448,7 +6564,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Simcenter STAR-CCM+ support?",
-        "a": "Simcenter STAR-CCM+ imports STEP, IGES, Parasolid, CATPart, STL, CGNS, NASTRAN and exports Star-CCM+ sim, VTK, EnSight, CSV, Images. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Simcenter STAR-CCM+ is an end-to-end CFD platform with an embedded 3D-CAD modeller (Parasolid kernel), surface repair, meshing, solving and post-processing; SIM is its native simulation file, not an export format. Its 3D-CAD import list covers neutral STEP, IGES, Parasolid, IFC and JT, native CATIA CATPart, NX, Creo, SOLIDWORKS, Inventor, Solid Edge and Rhino files, triangulated STL, and Nastran/Patran shell files; CGNS is documented in both directions for mesh and solution data. Documented outputs are CGNS, Nastran meshes, tabular CSV data, MP4 animation, hardcopy images (PNG/BMP/JPG/PDF/PS) and the SCD5 Simcenter Data File for exchange with Simcenter 3D. The vendor does not publish VTK or EnSight export, and Images is a category of output rather than a file format."
       },
       {
         "q": "What are the best alternatives to Simcenter STAR-CCM+?",
@@ -6539,14 +6655,18 @@ export const c5Tools: Tool[] = [
       "CATPart",
       "STL",
       "CGNS",
-      "NASTRAN"
+      "NASTRAN",
+      "IFC",
+      "JT"
     ],
     "file_formats_out": [
-      "Star-CCM+ sim",
-      "VTK",
-      "EnSight",
+      "CGNS",
+      "NASTRAN",
       "CSV",
-      "Images"
+      "MP4",
+      "PNG",
+      "PDF",
+      "SCD5"
     ],
     "pricing_tiers": [
       {
@@ -6645,7 +6765,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does OpenFOAM support?",
-        "a": "OpenFOAM imports blockMeshDict, snappyHexMeshDict, STL, OBJ, MSH, UNV, CGNS and exports VTK, OpenFOAM time dirs, EnSight, ParaView (.foam), CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "OpenFOAM is a C++ toolbox of command-line solvers and utilities, not a GUI platform, and it has no single official import/export format table — capability is documented per utility. snappyHexMesh takes triangulated surfaces in STL or OBJ format, while mesh conversion utilities read Fluent MSH (fluentMeshToFoam), Gmsh MSH (gmshToFoam), I-DEAS UNV (ideasUnvToFoam), STAR-CCM+ CCM, legacy VTK (vtkUnstructuredToFoam) and Plot3D. blockMeshDict and snappyHexMeshDict are OpenFOAM own dictionaries for mesh generation, not imported file formats. On the output side foamToVTK and foamToEnsight are post-processing converters, with foamMeshToFluent, foamToStarMesh and writeMeshObj writing Fluent, pro-STAR and OBJ meshes. The vendor ParaView integration uses a native reader plus a .foam placeholder file that contains no data, and time directories are the case structure itself — neither is an export format. CGNS is not part of either official distribution, as it exists only in community extensions, and CSV is not a documented general result format."
       },
       {
         "q": "What are the best alternatives to OpenFOAM?",
@@ -6729,20 +6849,23 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "blockMeshDict",
-      "snappyHexMeshDict",
       "STL",
       "OBJ",
-      "MSH",
+      "Fluent MSH",
+      "Gmsh MSH",
       "UNV",
-      "CGNS"
+      "CCM",
+      "VTK (legacy)",
+      "I-DEAS",
+      "Plot3D"
     ],
     "file_formats_out": [
-      "VTK",
-      "OpenFOAM time dirs",
+      "VTK (legacy)",
       "EnSight",
-      "ParaView (.foam)",
-      "CSV"
+      "Fluent MSH",
+      "pro-STAR",
+      "GMV",
+      "OBJ"
     ],
     "pricing_tiers": [
       {
@@ -6836,7 +6959,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does SimScale support?",
-        "a": "SimScale imports STEP, IGES, Parasolid (X_T), STL, SolidWorks, Inventor, Rhino and exports VTK, CSV, Cloud Interactive 3D, PDF report. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "SimScale is a cloud CAE platform with browser-based pre-processing, built-in OpenFOAM / Code_Aster / Marc solvers and cloud post-processing. Its official CAD import list is split into native formats (Parasolid, SOLIDWORKS, Inventor, Rhino 3DM, CATIA CATPart, Creo PRT, Solid Edge PAR, Revit RVT and nTop) and neutral formats (STEP, IGES, ACIS/SAT, STL). Downloads return the originally uploaded geometry — the vendor does not document STEP or IGES export from modified CAD mode geometry. Results download as a .foam folder, a VTM folder (VTK format) or an Ensight Gold .case file depending on analysis type; charts and tables download as CSV, and reports/animations as PDF or MP4. There is no vendor term called Cloud Interactive 3D."
       },
       {
         "q": "What are the best alternatives to SimScale?",
@@ -6922,17 +7045,24 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "STEP",
       "IGES",
-      "Parasolid (X_T)",
+      "Parasolid",
+      "SAT",
       "STL",
-      "SolidWorks",
-      "Inventor",
-      "Rhino"
+      "SLDPRT",
+      "IPT",
+      "Rhino 3DM",
+      "CATPart",
+      "PRT",
+      "PAR",
+      "RVT"
     ],
     "file_formats_out": [
-      "VTK",
+      "VTM",
+      "Ensight Gold",
+      "FOAM",
       "CSV",
-      "Cloud Interactive 3D",
-      "PDF report"
+      "PDF",
+      "MP4"
     ],
     "pricing_tiers": [
       {
@@ -7065,7 +7195,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Femap support?",
-        "a": "Femap imports STEP, Parasolid, IGES, SAT, NASTRAN (BDF), Ansys (CDB), Abaqus (INP) and exports NASTRAN, Ansys, Abaqus, STEP, JT, CSV. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Simcenter Femap (Siemens) is a CAD-independent FEA pre/post-processor that must be paired with an external solver. Its Geometry Interfaces fact sheet documents STEP (AP203/AP214), IGES, Parasolid, ACIS/SAT, STL, DXF, CATIA, Inventor and Rhino 3DM import, and STEP, IGES, Parasolid, ACIS, STL, VRML and JT export — JT is a Teamcenter Visualization export that carries mesh and results data, and the vendor does not document a JT import. Analysis Program Interfaces are read/write for Nastran BDF, Ansys CDB, Abaqus INP, LS-DYNA, Marc and CSV result tables, so those solver decks are analysis-model interfaces rather than geometry formats."
       },
       {
         "q": "What are the best alternatives to Femap?",
@@ -7153,16 +7283,27 @@ export const c5Tools: Tool[] = [
       "Parasolid",
       "IGES",
       "SAT",
-      "NASTRAN (BDF)",
+      "NASTRAN",
       "Ansys (CDB)",
-      "Abaqus (INP)"
+      "Abaqus (INP)",
+      "DXF",
+      "CATPart",
+      "SLDPRT",
+      "3DXML",
+      "Rhino 3DM",
+      "STL"
     ],
     "file_formats_out": [
       "NASTRAN",
       "Ansys",
       "Abaqus",
       "STEP",
+      "IGES",
+      "Parasolid",
+      "SAT",
       "JT",
+      "STL",
+      "VRML",
       "CSV"
     ],
     "pricing_tiers": [
@@ -7263,7 +7404,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Altair Inspire support?",
-        "a": "Inspire imports STEP, IGES, Parasolid, SAT, SLDPRT, IPT, CATPart and STL, and exports STEP, IGES, Parasolid, STL, 3MF and FEM. Direct CAD associative interfaces and neutral solver/exchange formats are available depending on your licensed modules."
+        "a": "Altair Inspire is a structural simulation and topology-optimization platform with an embedded OptiStruct solver. Its official Supported File Formats page gives four tables: geometry import (STEP, IGES, Parasolid, ACIS/SAT, 3MF, CATIA, Inventor, JT, Creo, NX, SOLIDWORKS, STL and OBJ), mesh import (STL and OptiStruct .fem/.dat/.nas), geometry export (STEP AP214, IGES, Parasolid and ACIS) and mesh export (STL, VRML and OBJ). 3MF appears only in the import table and the vendor does not document a 3MF export; OptiStruct FEM files are import-only solver decks, not an Inspire geometry export. Native CAD reads are not documented as requiring an extra licence."
       },
       {
         "q": "What are the best alternatives to Altair Inspire?",
@@ -7354,15 +7495,20 @@ export const c5Tools: Tool[] = [
       "SLDPRT",
       "IPT",
       "CATPart",
-      "STL"
+      "STL",
+      "3MF",
+      "VRML",
+      "JT",
+      "OBJ"
     ],
     "file_formats_out": [
       "STEP",
       "IGES",
       "Parasolid",
+      "SAT",
       "STL",
-      "3MF",
-      "FEM"
+      "VRML",
+      "OBJ"
     ],
     "pricing_tiers": [
       {
@@ -7383,8 +7529,8 @@ export const c5Tools: Tool[] = [
     "name": "MSC Patran",
     "slug": "msc-patran",
     "logo_url": "/logos/msc-patran.png",
-    "short_desc": "Long-standing FEA preprocessor and post-processor from Hexagon/MSC, tightly paired with MSC Nastran.",
-    "description": "Hexagon MSC Patran is the aerospace and defense industry’s proven finite element pre- and post-processing workbench, serving as the primary modeling environment for MSC Nastran, Marc, Abaqus, and Ansys solvers. It provides direct CAD geometry cleanup, hex/tet solid meshing, composite laminate layup modeling, Patran Command Language (PCL) automation, and envelope stress post-processing.",
+    "short_desc": "Long-standing FEA pre/post-processor, now part of Cadence, tightly paired with MSC Nastran.",
+    "description": "MSC Patran, now part of Cadence, is the aerospace and defense industry’s proven finite element pre- and post-processing workbench, serving as the primary modeling environment for MSC Nastran, Marc, Abaqus, and Ansys solvers. It provides direct CAD geometry cleanup, hex/tet solid meshing, composite laminate layup modeling, Patran Command Language (PCL) automation, and envelope stress post-processing.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -7410,8 +7556,8 @@ export const c5Tools: Tool[] = [
     "user_scales": [
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/patran",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/patran.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -7421,7 +7567,7 @@ export const c5Tools: Tool[] = [
     ],
     "cons": [
       "GUI shows its age",
-      "Hexagon licensing complexity since the MSC acquisition",
+      "Licensing complexity across the MSC product line",
       "Modern alternatives like HyperMesh outpace it in usability"
     ],
     "tech_specs": {
@@ -7438,15 +7584,15 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is MSC Patran used for?",
-        "a": "Long-standing FEA preprocessor and post-processor from Hexagon/MSC, tightly paired with MSC Nastran. MSC Patran is a CAE / CAM solution widely adopted in Aerospace, Defense, Automotive."
+        "a": "Long-standing FEA pre/post-processor, now part of Cadence, tightly paired with MSC Nastran. MSC Patran is a CAE / CAM solution widely adopted in Aerospace, Defense, Automotive."
       },
       {
         "q": "How much does MSC Patran cost?",
-        "a": "MSC Patran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Patran Pricing Page](https://hexagon.com/products/patran)."
+        "a": "MSC Patran is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Patran Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
       },
       {
         "q": "Is there a free version of MSC Patran?",
-        "a": "MSC Patran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Patran page](https://hexagon.com/products/patran)."
+        "a": "MSC Patran is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Patran page](https://www.cadence.com/en_US/home/tools/msc-software/patran.html)."
       },
       {
         "q": "What operating systems does MSC Patran support?",
@@ -7454,7 +7600,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MSC Patran support?",
-        "a": "MSC Patran imports PAT, STEP, IGES, Parasolid, CATPart, BDF and exports BDF, INP, CDB, STEP, IGES. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "MSC Patran is an FEA pre/post-processor, not a solver; its native database is a .db file, while PAT / .out is the PATRAN 2.5 Neutral File that can be both imported and exported. The official Supported CAD Access list covers STEP, IGES, Parasolid, ACIS, CATIA V4/V5/V6, Creo, SOLIDWORKS, NX, STL, JT, PLMXML and Nastran BDF decks. File > Export writes Patran neutral, ACIS, Parasolid xmt, IGES and STEP (AP203/AP209/AP214); solver decks such as Nastran BDF, Abaqus INP and Ansys CDB are generated by Analysis > Analyze > Analysis Deck rather than by the geometry exporter. The vendor does not list JT export or STEP AP242 export. Following the acquisition of Hexagon Design & Engineering business (including MSC Software and PATRAN) by Cadence, Patran is now a Cadence product even though its documentation is still hosted on the Hexagon Nexus site."
       },
       {
         "q": "What are the best alternatives to MSC Patran?",
@@ -7539,19 +7685,28 @@ export const c5Tools: Tool[] = [
     ],
     "quote_only": true,
     "file_formats_in": [
+      "DB",
       "PAT",
       "STEP",
       "IGES",
       "Parasolid",
       "CATPart",
-      "BDF"
+      "SLDPRT",
+      "BDF",
+      "STL",
+      "JT",
+      "PLMXML",
+      "ACIS"
     ],
     "file_formats_out": [
+      "PAT",
+      "STEP",
+      "IGES",
+      "Parasolid",
+      "ACIS",
       "BDF",
       "INP",
-      "CDB",
-      "STEP",
-      "IGES"
+      "CDB"
     ],
     "pricing_tiers": [
       {
@@ -7563,7 +7718,7 @@ export const c5Tools: Tool[] = [
           "Native MSC Nastran integration",
           "Multi-solver support (Marc, Abaqus, ANSYS)",
           "Composites layup and failure plotting",
-          "Seats, modules and term are quoted by Hexagon rather than published"
+          "Seats, modules and term are quoted by Cadence rather than published"
         ],
         "is_popular": true
       }
@@ -7575,7 +7730,7 @@ export const c5Tools: Tool[] = [
     "slug": "msc-adams",
     "logo_url": "/logos/msc-adams.png",
     "short_desc": "Multibody dynamics simulation for mechanisms, vehicles, and powertrains.",
-    "description": "MSC Adams (now Hexagon) is the industry-leading multibody dynamics solver — used to predict and validate vehicle handling, suspension kinematics, gear meshes, and complex mechanism behavior before physical prototyping.",
+    "description": "MSC Adams (now part of Cadence) is the industry-leading multibody dynamics solver — used to predict and validate vehicle handling, suspension kinematics, gear meshes, and complex mechanism behavior before physical prototyping.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -7602,8 +7757,8 @@ export const c5Tools: Tool[] = [
     "user_scales": [
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/adams.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -7634,11 +7789,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does MSC Adams cost?",
-        "a": "MSC Adams is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Adams Pricing Page](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams)."
+        "a": "MSC Adams is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MSC Adams Pricing Page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
       },
       {
         "q": "Is there a free version of MSC Adams?",
-        "a": "MSC Adams is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Adams page](https://hexagon.com/products/product-groups/computer-aided-engineering-software/adams)."
+        "a": "MSC Adams is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official MSC Adams page](https://www.cadence.com/en_US/home/tools/msc-software/adams.html)."
       },
       {
         "q": "What operating systems does MSC Adams support?",
@@ -7646,7 +7801,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MSC Adams support?",
-        "a": "MSC Adams imports ADM, CMD, STEP, IGES, Parasolid, CATPart, SLDPRT and exports GRA, RES, CSV, Animation MP4. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "MSC Adams is a multibody dynamics solver, now part of Cadence following its acquisition of Hexagon's Design & Engineering business. ADM and CMD are its native text-based model and command files, not CAD exchange formats. STEP and IGES geometry import needs no additional licence; native CAD formats such as Parasolid, CATIA, SOLIDWORKS, Inventor, NX, JT and ACIS (SAT) require the separate Adams Geometry Translators licence. Adams geometry export is documented only to IGES and STEP. Animation export is to AVI and MPG movies or JPG and PNG image sequences - the vendor does not publish an MP4 animation export. CSV appears as solver OUTPUT and post-processor numeric data rather than a CAD format, and GRA and RES are solver result files rather than exchange formats."
       },
       {
         "q": "What are the best alternatives to MSC Adams?",
@@ -7736,14 +7891,20 @@ export const c5Tools: Tool[] = [
       "STEP",
       "IGES",
       "Parasolid",
+      "ACIS (SAT)",
       "CATPart",
-      "SLDPRT"
+      "SLDPRT",
+      "IPT",
+      "JT"
     ],
     "file_formats_out": [
-      "GRA",
-      "RES",
-      "CSV",
-      "Animation MP4"
+      "STEP",
+      "IGES",
+      "AVI",
+      "MPG",
+      "JPG",
+      "PNG",
+      "CSV"
     ],
     "pricing_tiers": [
       {
@@ -7755,7 +7916,7 @@ export const c5Tools: Tool[] = [
           "Adams/Driveline and Adams/Tire",
           "Flexible body integration with Nastran",
           "Co-simulation with Simulink and AMESim",
-          "Seats, modules and term are quoted by Hexagon rather than published"
+          "Seats, modules and term are quoted by Cadence rather than published"
         ],
         "is_popular": true
       }
@@ -7767,7 +7928,7 @@ export const c5Tools: Tool[] = [
     "slug": "caesar-ii",
     "logo_url": "/logos/caesar-ii.png",
     "short_desc": "Pipe stress analysis for static and dynamic load cases.",
-    "description": "Hexagon CAESAR II is the global benchmark pipe-stress analysis tool — used by oil & gas, petrochemical, and power EPCs for code-compliant ASME B31, EN 13480, and B31.3 stress analysis of piping systems.",
+    "description": "CAESAR II, now Octave Aspect Pipe Stress (formerly CAESAR II), is the global benchmark pipe-stress analysis tool — used by oil & gas, petrochemical, and power EPCs for code-compliant ASME B31, EN 13480, and B31.3 stress analysis of piping systems.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -7793,8 +7954,8 @@ export const c5Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/caesar-ii",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pipe-stress",
+    "pricing_url": "https://www.octave.com/products/engineering-analysis/aspect/pipe-stress",
     "affiliate_url": null,
     "score": 4.6,
     "pros": [
@@ -7824,11 +7985,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does CAESAR II cost?",
-        "a": "CAESAR II is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAESAR II Pricing Page](https://hexagon.com/products/caesar-ii)."
+        "a": "CAESAR II is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pipe Stress page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
       },
       {
         "q": "Is there a free version of CAESAR II?",
-        "a": "CAESAR II is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official CAESAR II page](https://hexagon.com/products/caesar-ii)."
+        "a": "CAESAR II is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Octave Aspect Pipe Stress page](https://www.octave.com/products/engineering-analysis/aspect/pipe-stress)."
       },
       {
         "q": "What operating systems does CAESAR II support?",
@@ -7836,7 +7997,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CAESAR II support?",
-        "a": "CAESAR II imports CII, PCF, CAESAR Neutral, CADWorx, SmartPlant, AutoPIPE and exports CII, Stress Reports (PDF/Excel), 3D Deflection Visuals, PCF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "CAESAR II is now Octave Aspect Pipe Stress (formerly CAESAR II) following Hexagon's separation of its Asset Lifecycle Intelligence business into Octave. Its native job file is CII, and the documented exchange paths with Bentley AutoPIPE are the CII neutral file in both directions and the C2 and Caesar II XML files written by AutoPIPE for CAESAR II. PCF is an Isogen piping interchange file but a direct CAESAR II-to-AutoPIPE PCF round trip is not confirmed by the vendor. Stress reports, deflection visuals and code reports are output content rather than file formats, and Octave does not publish a single import/export format matrix. The official product page is the current source for supported I/O."
       },
       {
         "q": "What are the best alternatives to CAESAR II?",
@@ -7922,16 +8083,15 @@ export const c5Tools: Tool[] = [
     "quote_only": true,
     "file_formats_in": [
       "CII",
+      "C2",
+      "XML",
       "PCF",
-      "CAESAR Neutral",
-      "CADWorx",
-      "SmartPlant",
-      "AutoPIPE"
+      "CAESAR Neutral"
     ],
     "file_formats_out": [
       "CII",
-      "Stress Reports (PDF/Excel)",
-      "3D Deflection Visuals",
+      "C2",
+      "XML",
       "PCF"
     ],
     "pricing_tiers": [
@@ -7944,7 +8104,7 @@ export const c5Tools: Tool[] = [
           "Dynamic analysis: harmonic, spectrum, time history",
           "Hanger design and pipe support optimisation",
           "Bidirectional with CADWorx, SmartPlant, Plant 3D",
-          "Seats, modules and term are quoted by Hexagon rather than published"
+          "Seats, modules and term are quoted by Octave rather than published"
         ],
         "is_popular": true
       }
@@ -8027,7 +8187,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Bentley AutoPIPE support?",
-        "a": "Bentley AutoPIPE imports DAT, PCF, AutoPIPE Neutral, PDS, OpenPlant, CAESAR II and exports DAT, PDF, Word, Excel, PCF, CAESAR Neutral. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Bentley AutoPIPE is a pipe-stress analysis application whose native model file is DAT; AutoPIPE Neutral is its own neutral file. Its documented export list covers the input and results databases (MDB and SQLite), plot files (PLT), DXF and DGN drawings, and the CAESAR II exchange files CII (both directions), C2 and Caesar II XML (AutoPIPE to CAESAR II only). Word and Excel appear as customisable report output rather than model export, and the vendor does not document a native PDF export - printing goes to a printer, plotter or PLT file. PCF is supported as an Isogen piping interchange file, but AutoPIPE's help lists the CAESAR II exchange in terms of CII, C2 and XML rather than a PCF round trip. Official product documentation is the current source."
       },
       {
         "q": "What are the best alternatives to Bentley AutoPIPE?",
@@ -8114,17 +8274,23 @@ export const c5Tools: Tool[] = [
       "DAT",
       "PCF",
       "AutoPIPE Neutral",
+      "CII",
       "PDS",
-      "OpenPlant",
-      "CAESAR II"
+      "OpenPlant"
     ],
     "file_formats_out": [
       "DAT",
-      "PDF",
-      "Word",
-      "Excel",
       "PCF",
-      "CAESAR Neutral"
+      "CII",
+      "C2",
+      "XML",
+      "MDB",
+      "SQLite",
+      "PLT",
+      "DXF",
+      "DGN",
+      "Word",
+      "Excel"
     ],
     "pricing_tiers": [
       {
@@ -8170,7 +8336,7 @@ export const c5Tools: Tool[] = [
     "slug": "pv-elite",
     "logo_url": "/logos/pv-elite.png",
     "short_desc": "Pressure vessel and heat exchanger design and code-compliance checking.",
-    "description": "Hexagon PV Elite is the most-used software for pressure vessel and heat exchanger design and code compliance — ASME VIII Div 1/2, PD 5500, EN 13445, and many others — with integrated wind/seismic load handling.",
+    "description": "PV Elite, now Octave Aspect Pressure Vessel (formerly PV Elite), is the most-used software for pressure vessel and heat exchanger design and code compliance — ASME VIII Div 1/2, PD 5500, EN 13445, and many others — with integrated wind/seismic load handling.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -8197,8 +8363,8 @@ export const c5Tools: Tool[] = [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/pv-elite",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
+    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel",
+    "pricing_url": "https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel",
     "affiliate_url": null,
     "score": 4.5,
     "pros": [
@@ -8229,11 +8395,11 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "How much does PV Elite cost?",
-        "a": "PV Elite is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PV Elite Pricing Page](https://hexagon.com/products/pv-elite)."
+        "a": "PV Elite is sold by subscription. Plan names, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Octave Aspect Pressure Vessel page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
       },
       {
         "q": "Is there a free version of PV Elite?",
-        "a": "PV Elite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official PV Elite page](https://hexagon.com/products/pv-elite)."
+        "a": "PV Elite is commercial software and no free tier is listed for it here. Any trial, demo or cut-down free edition is offered at the vendor's discretion, and its length and eligibility change over time, so the official site is the only current source: [Official Octave Aspect Pressure Vessel page](https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel)."
       },
       {
         "q": "What operating systems does PV Elite support?",
@@ -8241,7 +8407,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PV Elite support?",
-        "a": "PV Elite imports PVI, CADWorx, AutoCAD (DXF), SolidWorks and exports PVI, ASME Code Calculation Reports, 3D PDF, DXF, Word, Excel. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "PV Elite is now Octave Aspect Pressure Vessel (formerly PV Elite) after Hexagon's Asset Lifecycle Intelligence business was separated into Octave. PVI is its native vessel file and DXF is the documented 2D geometry exchange. ASME code calculation reports, 3D PDF and Word/Excel output are report content rather than exchange formats, and the vendor does not publish a single import/export format matrix. The official product page is the current source."
       },
       {
         "q": "What are the best alternatives to PV Elite?",
@@ -8327,17 +8493,11 @@ export const c5Tools: Tool[] = [
     "quote_only": true,
     "file_formats_in": [
       "PVI",
-      "CADWorx",
-      "AutoCAD (DXF)",
-      "SolidWorks"
+      "DXF"
     ],
     "file_formats_out": [
       "PVI",
-      "ASME Code Calculation Reports",
-      "3D PDF",
-      "DXF",
-      "Word",
-      "Excel"
+      "DXF"
     ],
     "pricing_tiers": [
       {
@@ -8349,7 +8509,7 @@ export const c5Tools: Tool[] = [
           "PD 5500, EN 13445, TEMA exchanger codes",
           "Wind, seismic, and snow load calculations",
           "Vessel nozzle FEA (WRC, FEA 107/297)",
-          "Seats, modules and term are quoted by Hexagon rather than published"
+          "Seats, modules and term are quoted by Octave rather than published"
         ],
         "is_popular": true
       }
@@ -8361,7 +8521,7 @@ export const c5Tools: Tool[] = [
     "slug": "aspen-hysys",
     "logo_url": "/logos/aspen-hysys.png",
     "short_desc": "Process simulation for oil & gas, refining, and gas processing — the upstream standard.",
-    "description": "Aspen HYSYS is the global standard process simulator for upstream oil & gas, refining, and gas processing — steady-state and dynamic simulation, pipeline networks, equipment sizing, and operations analytics.",
+    "description": "Aspen HYSYS is the global standard process simulator for upstream oil & gas, refining, and gas processing — steady-state and dynamic simulation, pipeline networks, equipment sizing, and operations analytics. AspenTech is an Emerson company, while the AspenTech brand and product naming are retained.",
     "country": "USA",
     "category_id": "c5",
     "pricing_type": "Subscription",
@@ -8429,7 +8589,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AspenTech Aspen HYSYS support?",
-        "a": "AspenTech Aspen HYSYS imports HSC, HYSYS xml, Excel, DEX, DWG and exports HSC, Excel, PDF, P&ID Process Data, XML. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Aspen HYSYS is AspenTech's process simulator; AspenTech is now a wholly owned subsidiary of Emerson while the AspenTech brand is retained. HSC is the commonly used HYSYS case file, HYSYS XML is the File > Save As XML case format, and HFL is the flowsheet object export/import file. Excel integration runs through the Aspen Simulation Workbook add-in as well as built-in spreadsheet objects, copy/paste and COM automation, so Excel is a linked data channel rather than a document import. There is no official basis for DEX, DWG or PDF as HYSYS file formats, and P&ID process data is output content rather than a file format. The official AspenTech product page is the current source."
       },
       {
         "q": "What are the best alternatives to AspenTech Aspen HYSYS?",
@@ -8514,17 +8674,15 @@ export const c5Tools: Tool[] = [
     "quote_only": true,
     "file_formats_in": [
       "HSC",
-      "HYSYS xml",
-      "Excel",
-      "DEX",
-      "DWG"
+      "HYSYS XML",
+      "HFL",
+      "Excel"
     ],
     "file_formats_out": [
       "HSC",
-      "Excel",
-      "PDF",
-      "P&ID Process Data",
-      "XML"
+      "HYSYS XML",
+      "HFL",
+      "Excel"
     ],
     "pricing_tiers": [
       {
@@ -8620,7 +8778,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CSI SAP2000 support?",
-        "a": "CSI SAP2000 imports SDB, EDBS, DWG, DXF, IFC, CSiXRevit, CIS/2 and exports SDB, DWG, DXF, IFC, Excel, PDF Analysis Reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "CSI SAP2000 is a general-purpose structural analysis and design program. SDB is its native model database and EDB is the related CSI database format; neither is a neutral exchange format. DWG, DXF, IFC and CIS/2 are the documented CAD and BIM exchange paths, but the direction of each depends on the operation and version - the vendor documents import and export separately rather than a symmetric round trip. CSiXRevit is a Revit link plug-in, not a file format. Excel tables and PDF analysis reports are output content rather than exchange formats. CSI does not publish a single I/O matrix, so the official documentation is the current source."
       },
       {
         "q": "What are the best alternatives to CSI SAP2000?",
@@ -8705,20 +8863,19 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "SDB",
-      "EDBS",
+      "EDB",
       "DWG",
       "DXF",
       "IFC",
-      "CSiXRevit",
       "CIS/2"
     ],
     "file_formats_out": [
       "SDB",
+      "EDB",
       "DWG",
       "DXF",
       "IFC",
-      "Excel",
-      "PDF Analysis Reports"
+      "CIS/2"
     ],
     "pricing_tiers": [
       {
@@ -8845,7 +9002,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does CSI ETABS support?",
-        "a": "CSI ETABS imports EDB, DWG, DXF, IFC, CSiXRevit, CIS/2 and exports EDB, DWG, DXF, IFC, Excel, PDF Analysis Reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "CSI ETABS is a building-focused structural analysis and design program. EDB is its native model database and SDB is the related CSI database format; neither is a neutral exchange format. DWG, DXF, IFC and CIS/2 are the documented CAD and BIM exchange paths, but the direction of each depends on the operation and version - the vendor documents import and export separately rather than a symmetric round trip. CSiXRevit is a Revit link plug-in, not a file format. Excel tables and PDF analysis reports are output content rather than exchange formats. CSI does not publish a single I/O matrix, so the official documentation is the current source."
       },
       {
         "q": "What are the best alternatives to CSI ETABS?",
@@ -8930,19 +9087,19 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "EDB",
+      "SDB",
       "DWG",
       "DXF",
       "IFC",
-      "CSiXRevit",
       "CIS/2"
     ],
     "file_formats_out": [
       "EDB",
+      "SDB",
       "DWG",
       "DXF",
       "IFC",
-      "Excel",
-      "PDF Analysis Reports"
+      "CIS/2"
     ],
     "pricing_tiers": [
       {
@@ -9059,7 +9216,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Bentley STAAD.Pro support?",
-        "a": "Bentley STAAD.Pro imports STD, DWG, DXF, CIS/2, ISM, IFC and exports STD, CIS/2, ISM, DWG, DXF, PDF Reports. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Bentley STAAD.Pro stores models in its native STD file. DXF, CIS/2 and ISM (Integrated Structural Modeling) are the documented exchange paths, with ISM also linking to Autodesk and Bentley BIM tools. STAAD.Pro does not import or export DWG as a model file, and IFC is only reached indirectly through ISM and iTwin workflows rather than as a direct file export. PDF reports are generated output content rather than an exchange format. Bentley's product documentation is the current source."
       },
       {
         "q": "What are the best alternatives to Bentley STAAD.Pro?",
@@ -9144,19 +9301,15 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "STD",
-      "DWG",
       "DXF",
       "CIS/2",
-      "ISM",
-      "IFC"
+      "ISM"
     ],
     "file_formats_out": [
       "STD",
-      "CIS/2",
-      "ISM",
-      "DWG",
       "DXF",
-      "PDF Reports"
+      "CIS/2",
+      "ISM"
     ],
     "pricing_tiers": [
       {
@@ -9268,7 +9421,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Tekla Tedds support?",
-        "a": "Tekla Tedds imports TED, RTF, PDF, Excel and exports TED, PDF, RTF, Word, Excel. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Trimble Tekla Tedds is a calculation-document tool, not a CAD system. TED is its native calculation document source file. PDF, RTF and Word are the generated calculation-document outputs. Excel is used as a variable/data link inside a calculation rather than as a document import or export format, so it is not a Tedds file format. The vendor does not publish a single I/O matrix; the official product page is the current source."
       },
       {
         "q": "What are the best alternatives to Tekla Tedds?",
@@ -9352,17 +9505,13 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "TED",
-      "RTF",
-      "PDF",
-      "Excel"
+      "TED"
     ],
     "file_formats_out": [
       "TED",
       "PDF",
       "RTF",
-      "Word",
-      "Excel"
+      "Word"
     ],
     "pricing_tiers": [
       {
@@ -9455,7 +9604,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Autodesk Robot Structural Analysis support?",
-        "a": "Autodesk Robot Structural Analysis imports RTD, RVT (Direct Link), IFC, DWG, DXF and exports RTD, RVT, DWG, DXF, PDF Calculation Notes. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "Autodesk Robot Structural Analysis stores models in RTD and does not read or write RVT files directly - the Revit link is a plug-in that exchanges through SMXX. IFC is documented for import only, and there is no vendor-documented IFC export. DWG and DXF are the 2D drawing exchange paths. PDF calculation notes are generated report content rather than a file format. Autodesk's product documentation is the current source."
       },
       {
         "q": "What are the best alternatives to Autodesk Robot Structural Analysis?",
@@ -9540,17 +9689,16 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "RTD",
-      "RVT (Direct Link)",
       "IFC",
       "DWG",
-      "DXF"
+      "DXF",
+      "SMXX"
     ],
     "file_formats_out": [
       "RTD",
-      "RVT",
       "DWG",
       "DXF",
-      "PDF Calculation Notes"
+      "SMXX"
     ],
     "pricing_tiers": [
       {
@@ -9665,7 +9813,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does IDEA StatiCa support?",
-        "a": "IDEA StatiCa imports Tekla (Direct link), Revit, Advance Steel, STAAD, SAP2000, Robot, IFC, SAF and exports IDEA project, DWG, DXF, 3D PDF, Detailed Code Check Report. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "IDEA StatiCa is an independent, family-owned structural connection design company, not part of Hexagon or Nemetschek. ideaCon is its native project file. The documented BIM exchange is asymmetric: SAF is imported, IFC is exported, and DWG and DXF are drawing outputs; the vendor does not document the reverse directions. The BIM links to Tekla, Revit, Advance Steel, STAAD, SAP2000 and Robot are plug-in connections rather than file formats. 3D PDF and detailed code-check reports are output content rather than exchange formats. The official product page is the current source."
       },
       {
         "q": "What are the best alternatives to IDEA StatiCa?",
@@ -9749,21 +9897,14 @@ export const c5Tools: Tool[] = [
       }
     ],
     "file_formats_in": [
-      "Tekla (Direct link)",
-      "Revit",
-      "Advance Steel",
-      "STAAD",
-      "SAP2000",
-      "Robot",
-      "IFC",
+      "ideaCon",
       "SAF"
     ],
     "file_formats_out": [
-      "IDEA project",
+      "ideaCon",
+      "IFC",
       "DWG",
-      "DXF",
-      "3D PDF",
-      "Detailed Code Check Report"
+      "DXF"
     ],
     "pricing_tiers": [
       {
@@ -9899,7 +10040,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does RISA-3D support?",
-        "a": "RISA-3D imports R3D, DXF, Revit, SDNF, CIS/2 and exports R3D, DXF, Revit, SDNF, PDF. Direct CAD associative interfaces and neutral solver/exchange formats are supported depending on your licensed modules."
+        "a": "RISA-3D (from RISA Tech, part of the Nemetschek Group) stores models in its native R3D file. DXF is the documented 2D drawing exchange. SDNF is an export-only steel exchange format, and CIS/2 export requires the separate RISA CIS/2 Translator rather than being a built-in round trip. The Revit connection is a two-way link plug-in, not a file import. PDF is generated reporting output rather than an official export format. The official RISA product page is the current source."
       },
       {
         "q": "What are the best alternatives to RISA-3D?",
@@ -9984,17 +10125,13 @@ export const c5Tools: Tool[] = [
     ],
     "file_formats_in": [
       "R3D",
-      "DXF",
-      "Revit",
-      "SDNF",
-      "CIS/2"
+      "DXF"
     ],
     "file_formats_out": [
       "R3D",
       "DXF",
-      "Revit",
       "SDNF",
-      "PDF"
+      "CIS/2"
     ],
     "pricing_tiers": [
       {
@@ -10240,15 +10377,15 @@ export const c5Tools: Tool[] = [
       "Japanese"
     ],
     "file_formats_in": [
-      "DWG",
-      "DXF",
-      "MCT"
+      "MCB",
+      "MCBZ",
+      "MCT",
+      "DXF"
     ],
     "file_formats_out": [
-      "DWG",
-      "DXF",
+      "MCBZ",
       "MCT",
-      "XLSX"
+      "DXF"
     ],
     "integrations": [
       "MIDAS Civil Designer",
@@ -10309,7 +10446,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MIDAS Civil NX support?",
-        "a": "Models are stored in the MCBZ container, and MCT command files remain the scriptable text format for building and exchanging them. DWG and DXF are read for geometry reference, and result tables and report figures export to Excel. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT."
+        "a": "Models are stored in the MCB / MCBZ container, and MCT is the scriptable text command format for building and exchanging them. DXF is the documented 2D geometry reference import; there is no vendor-documented DWG import. Result tables export to Excel through the reporting tools rather than as a File > Export model format. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT. CIVIL NX and MIDAS Gen use separate model formats and do not interoperate directly."
       },
       {
         "q": "What are the best alternatives to MIDAS Civil NX?",
@@ -10516,15 +10653,12 @@ export const c5Tools: Tool[] = [
       "Japanese"
     ],
     "file_formats_in": [
-      "DWG",
-      "DXF",
-      "MGT"
+      "MGT",
+      "DXF"
     ],
     "file_formats_out": [
-      "DWG",
-      "DXF",
       "MGT",
-      "XLSX"
+      "DXF"
     ],
     "integrations": [
       "MIDAS FEA NX",
@@ -10579,7 +10713,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MIDAS Gen support?",
-        "a": "Models are stored in MIDAS Gen’s own binary format with MGT text files as the scriptable equivalent, DWG and DXF are read for geometry reference, and result tables export to Excel. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT."
+        "a": "Models are stored in MIDAS Gen's own binary format with MGT text files as the scriptable equivalent. DXF is the documented 2D geometry reference import; there is no vendor-documented DWG import. Result tables export to Excel through the reporting tools rather than as a File > Export model format. Translator modules beyond that depend on the licensed configuration, so confirm the I/O matrix for your modules with MIDAS IT. MIDAS Gen and CIVIL NX use separate model formats and do not interoperate directly."
       },
       {
         "q": "What are the best alternatives to MIDAS Gen?",
@@ -10993,7 +11127,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PowerMill support?",
-        "a": "PowerMill supports standard CAD formats including DWG, DXF, STEP, IGES, and various proprietary formats. It integrates with Fusion 360 and other Autodesk products."
+        "a": "Autodesk PowerMill (now sold as Autodesk Fusion with PowerMill) is a CAM toolpath-programming product, not a CAD modeller. It reads neutral CAD geometry such as STEP, IGES, Parasolid and ACIS/SAT, 2D DWG and DXF drawings, and STL and DGK meshes. Its documented outputs are NC programs, cutter-location (CL) data, DGK and STL. The vendor does not document STEP, IGES, DWG or DXF geometry export from PowerMill. F3D is an Autodesk Fusion / FeatureCAM file type rather than a PowerMill format. The official Autodesk product page is the current source."
       },
       {
         "q": "What are the best alternatives to PowerMill?",
@@ -11021,19 +11155,20 @@ export const c5Tools: Tool[] = [
       "Chinese"
     ],
     "file_formats_in": [
-      "DWG",
-      "DXF",
       "STEP",
       "IGES",
-      "F3D"
+      "Parasolid",
+      "ACIS (SAT)",
+      "DWG",
+      "DXF",
+      "STL",
+      "DGK"
     ],
     "file_formats_out": [
-      "DWG",
-      "DXF",
-      "STEP",
-      "IGES",
       "NC",
-      "CL"
+      "CL",
+      "DGK",
+      "STL"
     ],
     "integrations": [
       "Fusion 360",
@@ -11272,8 +11407,8 @@ export const c5Tools: Tool[] = [
     "name": "PAM-STAMP",
     "slug": "pam-stamp",
     "logo_url": "/logos/pam-stamp.png",
-    "short_desc": "ESI Group's sheet metal forming simulation software using finite element analysis for stamping process optimization and spring back compensation.",
-    "description": "PAM-STAMP is ESI Group's specialized sheet metal forming simulation software — ESI is now part of Keysight Technologies — providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
+    "short_desc": "Keysight CAE's sheet metal forming simulation (formerly ESI Group) for stamping process optimization and spring back compensation.",
+    "description": "PAM-STAMP (Sheet Metal Forming) is Keysight CAE's sheet metal forming simulation software, formerly from ESI Group, providing comprehensive capabilities for sheet metal stamp simulation from style to design and from part to die production. Using finite element analysis techniques, PAM-STAMP simulates the stamping process by dividing parts into smaller elements and calculating individual element behavior to create an overall picture of part behavior during forming. The software minimizes simulation times for large components by utilizing full hardware capacity, enabling R&D innovation through detailed modeling capabilities and integrated flexibility. PAM-STAMP is widely used in the automotive, aerospace, and manufacturing industries for spring back compensation, die design optimization, and process validation. Its ability to achieve excellent correlation between simulated parts (after spring back compensation) and produced parts makes it a preferred choice for manufacturers seeking to reduce trial-and-error in die development and improve first-time-right production rates.",
     "pricing_tiers": [
       {
         "name": "Keysight PAM-STAMP licence",
@@ -11440,7 +11575,7 @@ export const c5Tools: Tool[] = [
     "faqs": [
       {
         "q": "What is PAM-STAMP used for?",
-        "a": "PAM-STAMP is ESI Group's sheet metal forming simulation software used for stamping process simulation, spring back compensation, die design optimization, and process validation in automotive, aerospace, and manufacturing industries."
+        "a": "PAM-STAMP (Sheet Metal Forming) is Keysight CAE's sheet metal forming simulation software, formerly from ESI Group, used for stamping process simulation, spring back compensation, die design optimization, and process validation in automotive, aerospace, and manufacturing industries."
       },
       {
         "q": "How much does PAM-STAMP cost?",
@@ -11456,7 +11591,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PAM-STAMP support?",
-        "a": "PAM-STAMP supports standard CAD formats for integration with design systems. Check the vendor's documentation for the complete list."
+        "a": "PAM-STAMP (Sheet Metal Forming) is Keysight CAE's sheet-metal forming simulation software, formerly from ESI Group. Its public product pages do not publish a file import/export format matrix, so STEP, IGES, VDA and STL are listed as commonly used CAD and mesh inputs rather than a vendor-confirmed format table. Keysight does not document STEP, IGES or VDA geometry export on those pages, so file_formats_out is intentionally left empty. The official Keysight CAE product page and technical documentation are the current source."
       },
       {
         "q": "What are the best alternatives to PAM-STAMP?",
@@ -11470,10 +11605,11 @@ export const c5Tools: Tool[] = [
       "standards": [
         "STEP",
         "IGES",
-        "VDA"
+        "VDA",
+        "STL"
       ]
     },
-    "expert_verdict": "ESI Group's high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
+    "expert_verdict": "Keysight CAE's (formerly ESI Group) high-fidelity sheet metal forming simulation suite, essential for automotive stamping processes.",
     "languages": [
       "English",
       "French",
@@ -11484,12 +11620,10 @@ export const c5Tools: Tool[] = [
     "file_formats_in": [
       "STEP",
       "IGES",
-      "VDA"
+      "VDA",
+      "STL"
     ],
     "file_formats_out": [
-      "STEP",
-      "IGES",
-      "VDA"
     ],
     "integrations": [
       "CAD Systems",
@@ -11539,17 +11673,14 @@ export const c5Tools: Tool[] = [
       "multicore": "Multi-Threaded Heuristic & Genetic Optimization",
       "gpu_optimization": "CPU-Bound Combinatorial Nesting (2D Canvas Preview)",
       "standards": [
-        "DXF",
-        "DWG",
         "SVG",
-        "NC / G-Code",
-        "CSV BOM"
+        "DXF",
+        "PDF"
       ]
     },
     "logo_url": "/logos/nestforge.svg",
     "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
     "description": "NestForge is a browser-based nesting tool from Madegrain that arranges SVG and DXF parts on sheet layouts for laser, plasma, waterjet, and CNC cutting. Spacing, rotation, and grain-direction rules are applied while every calculation runs locally in the browser, so part files never leave the workstation.",
-    "country": "Germany",
     "category_id": "c5",
     "pricing_type": "Freemium",
     "starting_price": 0,
@@ -11573,6 +11704,7 @@ export const c5Tools: Tool[] = [
       "Small Business"
     ],
     "official_url": "https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide",
+    "pricing_url": "https://madegrain.com/nestforge/#pricing",
     "affiliate_url": null,
     "score": 4.4,
     "pros": [
@@ -11703,20 +11835,19 @@ export const c5Tools: Tool[] = [
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
     "tech_specs": {
-      "engine": "Automated DWG/PDF Vector Takeoff & Spatial Quantification Engine",
+      "engine": "Automated STEP/PDF Vector Takeoff & Spatial Quantification Engine",
       "multicore": "Multi-Core Batch Sheet Parsing & Block Counting",
       "gpu_optimization": "Hardware-Accelerated 2D Drawing Overlay & Markup",
       "standards": [
-        "DWG",
-        "DXF",
-        "PDF (Vector)",
-        "XLSX",
-        "CSV"
+        "STEP",
+        "STP",
+        "PDF",
+        "XLSX"
       ]
     },
     "logo_url": "/logos/quantcad-hybrid.png",
     "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
-    "description": "QuantCAD-Hybrid is DINAMIC PRO's desktop software for CNC manufacturing quotation and cost estimation. It ingests RFQs containing STEP and PDF files into a multi-part lot workspace with automatic document matching, provides a per-part 3D review (Setup View), and produces an editable industrial costing per part — setup, cycle time, material, tools, external operations, QA, scrap, overhead, and margin. A local materials library handles blank dimensions, weight, and EUR/kg costing, while DINAMIC Time Intelligence learns from the shop's own production history (imported from Excel/CSV) to estimate machining times with comparable-part ranges. It runs fully offline as a licensed Windows client with device-locked .qlic licensing and a local SQLite library, so RFQ files never leave the shop.",
+    "description": "QuantCAD-Hybrid is DINAMIC PRO's desktop software for CNC manufacturing quotation and cost estimation. It ingests RFQs containing STEP and PDF files into a multi-part lot workspace with automatic document matching, provides a per-part 3D review (Setup View), and produces an editable industrial costing per part — setup, cycle time, material, tools, external operations, QA, scrap, overhead, and margin. A local materials library handles blank dimensions, weight, and EUR/kg costing, while DINAMIC Time Intelligence learns from the shop's own production history (imported from Excel) to estimate machining times with comparable-part ranges. It runs fully offline as a licensed Windows client with device-locked .qlic licensing and a local SQLite library, so RFQ files never leave the shop.",
     "country": "Romania",
     "category_id": "c5",
     "pricing_type": "Subscription / Perpetual",
@@ -11740,6 +11871,7 @@ export const c5Tools: Tool[] = [
       "Mid-Market"
     ],
     "official_url": "https://dinamicpro.ro/quantcad-hybrid.html",
+    "pricing_url": "https://dinamicpro.ro/quantcad-hybrid.html",
     "affiliate_url": null,
     "score": 4.2,
     "pros": [
@@ -11771,7 +11903,7 @@ export const c5Tools: Tool[] = [
       },
       {
         "q": "Which file formats does QuantCAD-Hybrid support?",
-        "a": "It imports STEP/STP models and PDF documents from RFQs, and imports production-history data from Excel/CSV. Quotation documents are produced inside the application."
+        "a": "It imports STEP / STP models and PDF documents from RFQs, and imports production-history data from Excel. Quotation documents are produced inside the application; the vendor does not name a standard export file format, so no output format list is published here. The official DINAMIC PRO product page is the current source."
       },
       {
         "q": "What are the best alternatives to QuantCAD-Hybrid?",
@@ -11830,8 +11962,7 @@ export const c5Tools: Tool[] = [
       "STEP",
       "STP",
       "PDF",
-      "XLSX",
-      "CSV"
+      "XLSX"
     ],
     "alternatives": [
       "accelygen",

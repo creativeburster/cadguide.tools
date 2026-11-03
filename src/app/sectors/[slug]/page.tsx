@@ -547,20 +547,29 @@ function renderRankings(list: Tool[], style: SectorStyle) {
                   {/* 2. Precision Fabrication Layout Details */}
                   {style.archetype === 'precision-fabrication' && (
                     <div className="mt-5 space-y-4">
-                      {/* File format badges */}
+                      {/* File format badges — 空数组表示厂商未公布格式矩阵，不要凭空补默认值 */}
                       <div className="flex flex-wrap gap-2 items-center text-xs">
-                        <span className="font-bold text-slate-700 mr-1">Machine Formats:</span>
-                        {(t.file_formats_in || ['STEP', 'STL', 'DXF']).slice(0, 4).map(f => (
-                          <span key={f} className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-100 font-mono">
-                            {f}
-                          </span>
-                        ))}
-                        <span>→</span>
-                        {(t.file_formats_out || ['STEP', 'STL', 'G-Code']).slice(0, 4).map(f => (
-                          <span key={f} className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono">
-                            {f}
-                          </span>
-                        ))}
+                        {!(t.file_formats_in?.length) && !(t.file_formats_out?.length) ? (
+                          <>
+                            <span className="font-bold text-slate-700 mr-1">Machine Formats:</span>
+                            <span className="text-slate-500 italic">Not published by the vendor</span>
+                          </>
+                        ) : (
+                          <>
+                            <span className="font-bold text-slate-700 mr-1">Machine Formats:</span>
+                            {t.file_formats_in?.length ? t.file_formats_in.slice(0, 4).map(f => (
+                              <span key={f} className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-100 font-mono">
+                                {f}
+                              </span>
+                            )) : <span className="text-slate-500 italic">Inbound not published</span>}
+                            <span>→</span>
+                            {t.file_formats_out?.length ? t.file_formats_out.slice(0, 4).map(f => (
+                              <span key={f} className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono">
+                                {f}
+                              </span>
+                            )) : <span className="text-slate-500 italic">Outbound not published</span>}
+                          </>
+                        )}
                       </div>
                       
                       {/* Pros and cons summary */}

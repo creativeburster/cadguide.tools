@@ -522,7 +522,9 @@ function DynamicPricingMatrix({ pageContent, list }: { pageContent: PricingPageC
                   return t.pricing_type === 'Free' ? 'No (Personal Only)' : 'Yes (Full Rights)';
                 }
                 if (key === 'export_limits') {
-                  return t.file_formats_out && t.file_formats_out.length > 5 ? 'None (Full Export)' : 'Gated formats';
+                  // 空 out = 厂商未公布导出格式矩阵（如 PAM-STAMP），不是「受限」。
+                  if (!t.file_formats_out || t.file_formats_out.length === 0) return 'Not published';
+                  return t.file_formats_out.length > 5 ? 'None (Full Export)' : 'Gated formats';
                 }
                 if (key === 'watermarks') {
                   return t.pricing_type === 'Free' ? 'Watermark on print' : 'No watermarks';
