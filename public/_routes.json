@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "include": [
+    "/api/*",
+    "/guides",
+    "/guides/*",
+    "/licensing",
+    "/sitemap-guides.xml",
+    "/opengraph-image*",
+    "/compare/*",
+    "/tools/*",
+    "/alternatives/*",
+    "/pricing/*"
+  ],
+  "exclude": [
+    "/_next/*",
+    "/badges/*",
+    "/logos/*",
+    "/screenshots/*",
+    "/favicon.png",
+    "/favicon.svg",
+    "/icon-192.png",
+    "/icon-512.png",
+    "/llms.txt",
+    "/sitemap*.xml",
+    "/sitemap.xsl",
+    "/sw.js",
+    "/*.svg",
+    "/*.png",
+    "/*.txt"
+  ]
+}
