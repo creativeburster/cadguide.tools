@@ -8,7 +8,7 @@ export const c6Tools: Tool[] = [
     "name": "Altium Designer",
     "slug": "altium-designer",
     "logo_url": "/logos/altium-designer.png",
-    "short_desc": "The professional standard for PCB and electronics design.",
+    "short_desc": "Professional PCB and electronics design environment covering schematic, layout, 3D MCAD co-design and fabrication output.",
     "description": "Altium Designer is the electronics industry’s flagship unified PCB design and ECAD engineering environment. Combining hierarchical schematic capture, constraint-driven high-speed DDR/PCIe interactive routing, rigid-flex 3D stackup modeling, Situs topological autorouting, SPICE/signal-integrity analysis, and native MCAD CoDesigner links (SolidWorks, Creo, Inventor) via Altium 365, it bridges circuit concept and turnkey fabrication.",
     "pricing_tiers": [
       {
@@ -154,7 +154,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Altium Designer support?",
-        "a": "Altium Designer keeps its own work in SchDoc (schematic), PcbDoc (board) and PrjPcb (project) files. Foreign designs come in through the Import Wizard, which covers Protel, P-CAD, OrCAD, PADS, EAGLE, xDxDesigner, CircuitStudio and Allegro; STEP, IDF, DXF/DWG, Gerber, ODB++ and IPC-2581 come in as data. Outbound, it writes Gerber X2, NC drill, ODB++, IPC-2581 and IPC-D-356 for fabrication, STEP and IDF for mechanical hand-off, and PDF, 3D PDF, BOM and pick-and-place reports for documentation. Altium does not publish one consolidated matrix, so check the documentation for the release you run."
+        "a": "Altium Designer keeps its own work in SchDoc (schematic), PcbDoc (board) and PrjPcb (project) files, and pulls foreign designs in through the Import Wizard — Protel 99SE, P-CAD, OrCAD, PADS, EAGLE, CircuitStudio and xDxDesigner — plus STEP, DXF, DWG and IDF for mechanical data. Output is the strong direction: Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356, STEP, IDF, PDF, 3D PDF, BOM and pick-and-place. Note that IPC-2581 is export-only — it comes from File » Fabrication Outputs » IPC-2581 and needs the IPC2581 extension, which installs by default; there is no IPC-2581 import."
       },
       {
         "q": "Does Altium Designer have an API for automation and customization?",
@@ -187,9 +187,13 @@ export const c6Tools: Tool[] = [
       "SchDoc",
       "PcbDoc",
       "PrjPcb",
-      "Gerber",
-      "ODB++",
-      "IPC-2581",
+      "Protel 99SE (DDB)",
+      "P-CAD (PCB / SCH)",
+      "OrCAD (DSN / MAX)",
+      "PADS (PCB / SCH)",
+      "EAGLE (SCH / BRD)",
+      "CircuitStudio (CSPcbDoc)",
+      "xDxDesigner",
       "STEP",
       "DXF",
       "DWG",
@@ -889,8 +893,8 @@ export const c6Tools: Tool[] = [
     "name": "Allegro PCB",
     "slug": "allegro-pcb",
     "logo_url": "/logos/allegro-pcb.ico",
-    "short_desc": "Cadence's industry-leading enterprise PCB design and analysis platform for high-speed systems.",
-    "description": "Allegro PCB Designer is Cadence's premium, enterprise-level electronic design automation (EDA) system. It delivers a robust, scalable layout solution featuring industry-leading constraint-driven design, real-time routing, signal and power integrity analysis, and seamless integration with the Cadence system design ecosystem.",
+    "short_desc": "Cadence's enterprise PCB layout platform for constraint-driven, high-speed board design.",
+    "description": "Allegro PCB Designer is Cadence's enterprise layout environment for complex boards. It centres on a constraint manager that drives interactive and shape-based routing, with rigid-flex support, 3D inspection, and a data flow that connects to OrCAD Capture at the front end and to Sigrity, Celsius and Clarity tools for analysis. Those analysis engines are licensed separately rather than bundled with the layout seat.",
     "pricing_tiers": [
       {
         "name": "Perpetual",
@@ -910,15 +914,15 @@ export const c6Tools: Tool[] = [
         "category": "PCB Design",
         "items": [
           {
-            "name": "PCB layout",
+            "name": "Constraint-driven PCB layout",
             "status": true
           },
           {
-            "name": "Schematic capture",
+            "name": "Interactive and shape-based routing",
             "status": true
           },
           {
-            "name": "Circuit simulation",
+            "name": "Rigid-flex design",
             "status": true
           }
         ]
@@ -931,11 +935,11 @@ export const c6Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Signal integrity",
+            "name": "Signal integrity (Sigrity option)",
             "status": true
           },
           {
-            "name": "Power integrity",
+            "name": "Power integrity (Sigrity option)",
             "status": true
           }
         ]
@@ -944,15 +948,15 @@ export const c6Tools: Tool[] = [
         "category": "Analysis",
         "items": [
           {
-            "name": "Thermal analysis",
+            "name": "Thermal analysis (Celsius option)",
             "status": true
           },
           {
-            "name": "EMI/EMC analysis",
+            "name": "EMI/EMC checks (licensed option)",
             "status": true
           },
           {
-            "name": "Design verification",
+            "name": "DFM and DFA checks",
             "status": true
           }
         ]
@@ -961,11 +965,11 @@ export const c6Tools: Tool[] = [
         "category": "Integration",
         "items": [
           {
-            "name": "OrCAD integration",
+            "name": "OrCAD Capture front end",
             "status": true
           },
           {
-            "name": "Cadence ecosystem",
+            "name": "Cadence ecosystem (Sigrity, Celsius, Clarity)",
             "status": true
           },
           {
@@ -1036,7 +1040,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Allegro PCB support?",
-        "a": "Allegro keeps boards in BRD files with reusable DRA footprints and DSN netlists from the front-end flow. It imports STEP, IDF, DXF and DWG for mechanical context and reads ODB++ and IPC-2581 data; outbound it writes Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, STEP and DXF, plus PDF documentation. Translators for Altium, PADS, Xpedition and OrCAD designs are licensed separately. Cadence does not publish a consolidated public matrix, so confirm the exact set for your release and options."
+        "a": "Allegro keeps boards in BRD files with reusable DRA footprints and DSN netlists from the front-end flow. It imports STEP, IDF and DXF for mechanical context and reads ODB++ and IPC-2581 data; outbound it writes Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, STEP and DXF, plus PDF documentation. DWG is not an Allegro import format — DXF is the board-outline path. Translators for Altium, PADS, Xpedition and OrCAD designs are licensed separately, and Cadence publishes no single consolidated public matrix."
       },
       {
         "q": "What are the best alternatives to Allegro PCB?",
@@ -1062,7 +1066,6 @@ export const c6Tools: Tool[] = [
       "DSN",
       "STEP",
       "DXF",
-      "DWG",
       "IDF",
       "IPC-2581",
       "ODB++"
@@ -1076,7 +1079,6 @@ export const c6Tools: Tool[] = [
       "IPC-D-356",
       "STEP",
       "DXF",
-      "DWG",
       "PDF"
     ]
   },
@@ -1181,23 +1183,19 @@ export const c6Tools: Tool[] = [
         "category": "Analysis",
         "items": [
           {
-            "name": "Signal integrity analysis",
+            "name": "Signal integrity (Sigrity option)",
             "status": true
           },
           {
-            "name": "Thermal analysis",
+            "name": "Smoke and stress analysis (PSpice Advanced Analysis)",
             "status": true
           },
           {
-            "name": "EMI/EMC analysis",
+            "name": "Monte Carlo and worst-case analysis",
             "status": true
           },
           {
-            "name": "Power integrity",
-            "status": true
-          },
-          {
-            "name": "Timing analysis",
+            "name": "Power integrity (Sigrity option)",
             "status": true
           }
         ]
@@ -1295,7 +1293,6 @@ export const c6Tools: Tool[] = [
       "DSN",
       "BRD",
       "DXF",
-      "DWG",
       "STEP",
       "IDF",
       "IPC-2581",
@@ -1371,7 +1368,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does OrCAD support?",
-        "a": "OrCAD X Capture stores schematics as DSN and Presto stores boards as BRD — the Allegro BRD container, which is why designs move to Allegro X without translation. It imports DXF, DWG, STEP, IDF and SPICE models, and reads ODB++ and IPC-2581. Output covers Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, DXF, PDF and BOM. Gerber and IGES are output-side or absent, not import formats, and OrCAD has no Gerber importer of its own."
+        "a": "OrCAD X Capture stores schematics as DSN and Presto stores boards as BRD — the Allegro BRD container, which is why designs move to Allegro X without translation. It imports DXF, STEP, IDF and SPICE models, and reads ODB++ and IPC-2581. Output covers Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, DXF, PDF and BOM. Gerber and IGES are not import formats here, DWG needs converting to DXF first, and OrCAD has no Gerber importer of its own."
       },
       {
         "q": "What are the best alternatives to OrCAD?",
@@ -1469,23 +1466,23 @@ export const c6Tools: Tool[] = [
         "category": "Simulation & Analysis",
         "items": [
           {
-            "name": "Signal integrity analysis",
+            "name": "Signal integrity (HyperLynx)",
             "status": true
           },
           {
-            "name": "Power integrity analysis",
+            "name": "Power integrity (HyperLynx)",
             "status": true
           },
           {
-            "name": "Thermal analysis",
+            "name": "Thermal analysis (HyperLynx Thermal)",
             "status": true
           },
           {
-            "name": "EMI/EMC analysis",
+            "name": "EMI/EMC analysis (HyperLynx)",
             "status": true
           },
           {
-            "name": "Circuit simulation",
+            "name": "Analog/mixed-signal simulation (PADS AMS)",
             "status": true
           }
         ]
@@ -1599,7 +1596,6 @@ export const c6Tools: Tool[] = [
       "PCB",
       "SCH",
       "DXF",
-      "DWG",
       "IDF",
       "STEP",
       "IPC-2581",
@@ -1671,7 +1667,7 @@ export const c6Tools: Tool[] = [
       },
       {
         "q": "Which file formats does PADS Professional support?",
-        "a": "PADS Professional works in PADS PCB and schematic files, with a shared library. It imports DXF, DWG, IDF, STEP, ODB++ and IPC-2581, and writes Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, DXF, PDF, STEP and BOM. HyperLynx handles the analysis side. Unlike PADS Standard, the Professional tier includes the Xpedition-derived constraint engine and rigid-flex support; Siemens documents the matrix per bundle, so confirm against the tier you buy."
+        "a": "PADS Professional works in PADS PCB and schematic files with a shared library. It imports DXF, IDF, STEP, ODB++ and IPC-2581, and writes Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, DXF, PDF, STEP and BOM. AutoCAD drawings have to be converted to DXF before import. The HyperLynx engines behind signal integrity, power integrity, thermal and EMI/EMC checks are separately licensed, so the analysis you actually get depends on the bundle; Siemens documents that matrix per tier rather than platform-wide."
       },
       {
         "q": "What are the best alternatives to PADS Professional?",
@@ -1722,11 +1718,11 @@ export const c6Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Enterprise solutions",
+            "name": "Constraint management",
             "status": true
           },
           {
-            "name": "Team collaboration",
+            "name": "Rigid-flex and HDI support",
             "status": true
           }
         ]
@@ -1739,11 +1735,11 @@ export const c6Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Signal integrity",
+            "name": "Signal integrity (HyperLynx)",
             "status": true
           },
           {
-            "name": "Power integrity",
+            "name": "Power integrity (HyperLynx)",
             "status": true
           }
         ]
@@ -1752,15 +1748,15 @@ export const c6Tools: Tool[] = [
         "category": "Analysis",
         "items": [
           {
-            "name": "Thermal analysis",
+            "name": "Thermal analysis (HyperLynx Thermal)",
             "status": true
           },
           {
-            "name": "EMI/EMC analysis",
+            "name": "EMI/EMC analysis (HyperLynx)",
             "status": true
           },
           {
-            "name": "Design verification",
+            "name": "DFM checks (Valor NPI)",
             "status": true
           }
         ]
@@ -1769,11 +1765,11 @@ export const c6Tools: Tool[] = [
         "category": "Integration",
         "items": [
           {
-            "name": "Mentor Graphics",
+            "name": "Siemens EDA ecosystem",
             "status": true
           },
           {
-            "name": "Siemens ecosystem",
+            "name": "Teamcenter library governance",
             "status": true
           },
           {
