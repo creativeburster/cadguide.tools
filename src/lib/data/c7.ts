@@ -3523,26 +3523,35 @@ export const c7Tools: Tool[] = [
     ],
     "pricing_tiers": [
       {
-        "name": "Solo",
+        "name": "Corona Solo",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "1 fixed workstation",
-          "All host app plugins",
-          "Chaos Cosmos assets"
+          "Named licence tied to a Chaos login, usable on any device",
+          "Corona rendering engine plus Chaos Cosmos asset library",
+          "Veras AI ideation and cloud collaboration"
         ],
         "is_popular": true
       },
       {
-        "name": "Premium",
+        "name": "Corona Premium",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "Floating license",
-          "Chaos Phoenix",
-          "Chaos Player access"
-        ],
-        "is_popular": false
+          "Floating licence that can be shared across a team",
+          "Everything in Solo, with a larger asset and material library",
+          "Additional Chaos AI credits each month"
+        ]
+      },
+      {
+        "name": "Corona Collection",
+        "price": "Official Store",
+        "period": "/yr",
+        "features": [
+          "Floating licence; everything in Premium",
+          "Real-time ray-traced exploration through Chaos Vantage",
+          "Anima characters, crowds and traffic for lifelike scenes"
+        ]
       }
     ]
   },
