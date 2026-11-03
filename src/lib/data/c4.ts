@@ -154,7 +154,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Bluebeam Revu support?",
-        "a": "Bluebeam Revu works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Bluebeam Revu opens and edits PDF only. Everything else requires a converter: Bluebeam Stapler, the bundled tool, turns DWG, DXF, DGN, RVT, Word, Excel and image files into PDF before Revu can display them, and the Revit, AutoCAD, Navisworks and SketchUp plugins publish straight to PDF. For 3D content Revu builds 3D PDFs from U3D, PRC and IFC input — that is the only sense in which it handles IFC, as material for 3D PDF authoring rather than as a BIM model import. Markups export as CSV or XML, and the Bluebeam PDF printer writes TIFF, JPG, PNG, PSD, PCL, GIF, EMF and WMF. STEP and IGES are not supported in any direction."
       },
       {
         "q": "What are the best alternatives to Bluebeam Revu?",
@@ -163,7 +163,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Bluebeam Rendering",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Hardware Acceleration",
       "standards": [
         "PDF",
@@ -173,23 +173,23 @@ export const c4Tools: Tool[] = [
     "expert_verdict": "You cannot run a modern construction project without Bluebeam.",
     "file_formats_in": [
       "PDF",
-      "DWG",
-      "DXF",
-      "DGN",
       "IFC",
-      "TIFF",
-      "JPG",
-      "PNG"
+      "U3D",
+      "PRC"
     ],
     "file_formats_out": [
       "PDF",
+      "CSV",
+      "XML",
+      "XLSX",
       "TIFF",
       "JPG",
       "PNG",
-      "CSV",
-      "XML",
-      "HTML",
-      "TXT"
+      "PSD",
+      "PCL",
+      "GIF",
+      "EMF",
+      "WMF"
     ]
   },
   {
@@ -331,7 +331,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Navisworks support?",
-        "a": "Navisworks works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Navisworks opens a very wide range of formats natively — NWD, NWF, NWC, Revit (RVT and RFA), DWG, DXF, DGN, IFC, SketchUp, FBX, 3DS, JT, SAT, 3DM, OBJ, STL, STEP and IGES among them — but it is a review tool, so what it writes is deliberately narrow. Save As produces NWD or NWF; Export produces DWF, DWFx, FBX and KML, plus CSV from TimeLiner. It has no PDF export and no built-in 3D PDF maker: PDF is a format Navisworks can read, not one it can write, and the documented workaround is to print the current view through a system PDF printer."
       },
       {
         "q": "What are the best alternatives to Navisworks?",
@@ -340,8 +340,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk Navisworks",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "NWD",
         "NWC",
@@ -351,9 +351,10 @@ export const c4Tools: Tool[] = [
     "expert_verdict": "Navisworks is where Virtual Design and Construction happens.",
     "file_formats_in": [
       "NWD",
-      "NWC",
       "NWF",
+      "NWC",
       "RVT",
+      "RFA",
       "DWG",
       "DXF",
       "DGN",
@@ -361,17 +362,24 @@ export const c4Tools: Tool[] = [
       "SKP",
       "FBX",
       "3DS",
+      "JT",
+      "SAT",
+      "3DM",
+      "OBJ",
+      "STL",
       "STEP",
       "IGES",
-      "JT"
+      "DWF",
+      "PDF"
     ],
     "file_formats_out": [
       "NWD",
       "NWF",
+      "DWF",
+      "DWFx",
       "FBX",
       "KML",
-      "DWF",
-      "DWFx"
+      "CSV"
     ]
   },
   {
@@ -490,7 +498,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Solibri support?",
-        "a": "Solibri works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "Solibri reads models rather than authoring them: it opens IFC (IFC 2x3 and IFC 4), DWG as 3D geometry only, PDF drawings as 2D overlays, point clouds in E57, LAS and LAZ, and spreadsheets for classification data, and it saves its own work as SMC. Output is reports and issues — BCF, BCFZIP, PDF, RTF and Excel — not model files. Solibri has no documented RVT support, so Revit content arrives as IFC. Whether Solibri can write IFC back out is genuinely unclear: its own file-format reference lists only the formats that can be opened or imported, while a separate IFC article uses the word export. Treat IFC export as unconfirmed rather than as a capability."
       },
       {
         "q": "What are the best alternatives to Solibri?",
@@ -499,7 +507,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Solibri IFC Engine",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
       "standards": [
         "IFC",
@@ -514,16 +522,21 @@ export const c4Tools: Tool[] = [
       "DWG",
       "DXF",
       "PDF",
+      "SMC",
       "BCF",
-      "BCFZIP"
+      "BCFZIP",
+      "XLSX",
+      "E57",
+      "LAS",
+      "LAZ"
     ],
     "file_formats_out": [
       "SMC",
       "BCF",
       "BCFZIP",
       "PDF",
-      "Excel",
-      "XML"
+      "RTF",
+      "XLSX"
     ]
   },
   {
@@ -627,7 +640,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does MeshLab support?",
-        "a": "MeshLab works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "MeshLab is a triangle-mesh processor, so its formats are mesh and point-cloud formats rather than CAD interchange ones. It loads PLY, STL, OBJ, OFF, 3DS, DAE, FBX, GLB/glTF, 3MF, VRML, X3D, E57 and point clouds such as PTX, XYZ and PTS, and saves PLY, STL, OBJ, OFF, 3DS, DAE, DXF, U3D, JSON, WRL, X3D, IDTF, CTM and XYZ. It does not support STEP, IGES, PDF, DWG or RVT in either direction — there is no B-rep kernel, and DXF is write-only."
       },
       {
         "q": "What are the best alternatives to MeshLab?",
@@ -636,7 +649,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "VCG Library",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "OpenGL",
       "standards": [
         "OBJ",
@@ -649,22 +662,35 @@ export const c4Tools: Tool[] = [
       "PLY",
       "STL",
       "OBJ",
-      "3DS",
       "OFF",
+      "3DS",
+      "DAE",
+      "FBX",
+      "GLB",
+      "GLTF",
+      "3MF",
+      "VRML",
+      "X3D",
+      "E57",
       "PTX",
       "XYZ",
-      "PTS",
-      "GLTF"
+      "PTS"
     ],
     "file_formats_out": [
       "PLY",
       "STL",
       "OBJ",
-      "3DS",
       "OFF",
+      "3DS",
+      "DAE",
+      "DXF",
       "U3D",
-      "VRML",
-      "DXF"
+      "JSON",
+      "WRL",
+      "X3D",
+      "IDTF",
+      "CTM",
+      "XYZ"
     ]
   },
   {
@@ -767,7 +793,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Recap Pro support?",
-        "a": "Recap Pro works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "ReCap Pro is a point-cloud tool, so it indexes scans rather than CAD models. It imports E57, LAS, PTX, PTS, FLS, ZFS, RCS/RCP, TXT, XYZ, CL3, CLR, RDS and PTG, and writes RCP/RCS, E57 and PTS; photogrammetry projects can also export FBX, OBJ, RCM, NWC and GeoTIFF. Recent releases added IFC4 mesh export from the Mesh Editor, which is the only IFC path ReCap has. It does not support DWG, DXF, STEP, IGES or PDF, and there is no LAZ import documented either, so treat LAZ as unsupported unless Autodesk publishes otherwise."
       },
       {
         "q": "What are the best alternatives to Recap Pro?",
@@ -776,8 +802,8 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "Autodesk Reality",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "RCP",
         "RCS",
@@ -788,21 +814,31 @@ export const c4Tools: Tool[] = [
     "file_formats_in": [
       "E57",
       "LAS",
-      "LAZ",
       "PTX",
       "PTS",
-      "ZFS",
       "FLS",
-      "Faro",
-      "Leica"
+      "ZFS",
+      "RCS",
+      "RCP",
+      "TXT",
+      "XYZ",
+      "CL3",
+      "CLR",
+      "RDS",
+      "PTG",
+      "JPEG"
     ],
     "file_formats_out": [
       "RCP",
       "RCS",
       "E57",
       "PTS",
-      "PCG",
-      "FBX (Mesh)"
+      "FBX",
+      "OBJ",
+      "RCM",
+      "NWC",
+      "GeoTIFF",
+      "IFC"
     ]
   },
   {
@@ -865,16 +901,16 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does Solid Edge Viewer support?",
-        "a": "Solid Edge Viewer works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "The free Solid Edge Viewer is deliberately narrow: it opens Solid Edge assembly (ASM), part (PAR), sheet metal (PSM), weldment (PWD) and draft (DFT) files, plus AutoCAD DXF and DWG, and displays them read-only. Saving is limited to image snapshots for sharing — there is no PDF export and no CAD export, so it cannot write STEP, IGES or JT. IFC is not mentioned anywhere in Siemens documentation for this viewer and should not be listed as supported. Do not confuse it with the paid Solid Edge modeller, which has a full import and export matrix, or with the free 2D Drafting mode inside the Solid Edge installer."
       },
       {
         "q": "What are the best alternatives to Solid Edge Viewer?",
-        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger, and CADProps. DWG TrueView (free and open-source) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger, and CADProps. DWG TrueView (free, proprietary) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
       "engine": "Siemens JT",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "Basic",
       "standards": [
         "PAR",
@@ -884,20 +920,16 @@ export const c4Tools: Tool[] = [
     },
     "expert_verdict": "The standard for viewing Solid Edge data in production.",
     "file_formats_in": [
-      "PAR",
       "ASM",
+      "PAR",
+      "PSM",
+      "PWD",
       "DFT",
-      "STEP",
-      "IGES",
-      "JT",
-      "DWG",
-      "DXF"
+      "DXF",
+      "DWG"
     ],
     "file_formats_out": [
-      "Print",
-      "PDF",
-      "BMP",
-      "JPG"
+      "Image"
     ],
     "pricing_tiers": [
       {
@@ -954,31 +986,6 @@ export const c4Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -1045,7 +1052,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does DWG TrueView support?",
-        "a": "DWG TrueView works with standard CAD viewer interchange formats including STEP, IGES, JT, and 3D PDF for viewing. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "DWG TrueView opens DWG, DXF and DWT and does exactly two things beyond viewing: it converts drawings between DWG versions all the way back to AutoCAD Release 14, and it publishes to DWF, DWFx, PDF, JPG and PNG. It cannot edit drawing geometry — Autodesk describes it as limited to viewing, publishing and converting. It does not support IFC, RVT, STEP or IGES, which is worth stating plainly because \"free Autodesk product\" often gets assumed to mean broader format coverage than it actually has."
       },
       {
         "q": "What are the best alternatives to DWG TrueView?",
@@ -1054,7 +1061,7 @@ export const c4Tools: Tool[] = [
     ],
     "tech_specs": {
       "engine": "AutoCAD Core",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
+      "multicore": "Not published by the vendor",
       "gpu_optimization": "DirectX",
       "standards": [
         "DWG",
@@ -1068,10 +1075,12 @@ export const c4Tools: Tool[] = [
       "DWT"
     ],
     "file_formats_out": [
-      "DWG (R14-2027 conversion)",
-      "PDF",
+      "DWG",
       "DWF",
-      "DWFx"
+      "DWFx",
+      "PDF",
+      "JPG",
+      "PNG"
     ],
     "pricing_tiers": [
       {
@@ -1128,31 +1137,6 @@ export const c4Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Windows Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -1225,17 +1209,17 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "Which file formats does DWG FastView support?",
-        "a": "DWG FastView works with standard 2D CAD interchange formats including DWG, DXF, and PDF. Check the vendor's official documentation for the complete list of supported import and export options."
+        "a": "DWG FastView opens DWG, DXF and DWT for 2D viewing and editing, including switching a drawing between DWG versions, and it also views 3D files — RVT, STEP and IFC — though those are view-only rather than editable. Output covers the 2D side: export a drawing to PDF, JPG, PNG or BMP, convert PDF back to DWG, and save to a different DWG version. Measurement, annotation, layers and layouts all apply to the 2D drawings; the 3D formats are there for inspection, not authoring."
       },
       {
         "q": "What are the best alternatives to DWG FastView?",
-        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius, and CADProps. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius, and CADProps. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free, proprietary) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
       "engine": "GstarCAD Core",
-      "multicore": "Single-Core Model Rebuild / Multi-Core View & Clash Processing",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "multicore": "Not published by the vendor",
+      "gpu_optimization": "Not published by the vendor",
       "standards": [
         "DWG",
         "DXF"
@@ -1328,7 +1312,9 @@ export const c4Tools: Tool[] = [
       "DWG",
       "DXF",
       "DWT",
-      "DWF"
+      "RVT",
+      "STEP",
+      "IFC"
     ],
     "file_formats_out": [
       "PDF",
@@ -1559,7 +1545,7 @@ export const c4Tools: Tool[] = [
       },
       {
         "q": "What are the best alternatives to DXF Medic?",
-        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools, and QCAD. DWG TrueView (free and open-source) competes directly on core Laser Cutting workflows, while CADProps (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools, and QCAD. DWG TrueView (free, proprietary) competes directly on core Laser Cutting workflows, while CADProps (free) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "pricing_tiers": [
@@ -1635,31 +1621,6 @@ export const c4Tools: Tool[] = [
           },
           {
             "name": "Batch Processing & Scripting",
-            "status": true
-          },
-          {
-            "name": "Standards & Schema Validation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
@@ -1844,27 +1805,6 @@ export const c4Tools: Tool[] = [
             "status": true
           }
         ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
-            "status": true
-          }
-        ]
       }
     ]
   },
@@ -2041,27 +1981,6 @@ export const c4Tools: Tool[] = [
           },
           {
             "name": "Multi-format 3D converter converting 18 input formats to 8 output formats (GLB, OBJ, STL, STEP)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Web Runtime Support",
-            "status": true
-          },
-          {
-            "name": "Unit & Coordinate System Calibration",
-            "status": true
-          },
-          {
-            "name": "Automated Quality & Geometry Verification",
-            "status": true
-          },
-          {
-            "name": "Team Collaboration & Revision Handoff",
             "status": true
           }
         ]
