@@ -1280,24 +1280,6 @@
     "country": "Germany"
   },
   {
-    "id": "t44",
-    "name": "Civil 3D",
-    "slug": "civil-3d",
-    "short_desc": "Civil engineering design and documentation software.",
-    "score": 4.8,
-    "logo_url": "/logos/civil-3d.png",
-    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Civil Engineering",
-      "Transportation"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t45",
     "name": "FabRapid 3D",
     "slug": "fabrapid-3d",
@@ -1471,6 +1453,69 @@
     "country": "United States"
   },
   {
+    "id": "t51",
+    "name": "Civil 3D",
+    "slug": "civil-3d",
+    "short_desc": "Autodesk’s civil infrastructure design and documentation software for roads, highways, land development, and gravity pipe networks.",
+    "score": 4.5,
+    "logo_url": "/logos/civil-3d.svg",
+    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Civil Infrastructure & Highways",
+      "Land Development & Subdivisions",
+      "Municipal Water & Stormwater Management",
+      "Rail Transportation Engineering",
+      "Earthwork & Site Grading Contracting"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t52",
+    "name": "Vectorworks Landmark",
+    "slug": "vectorworks-landmark",
+    "short_desc": "Premier landscape architecture, site design, and terrain BIM software featuring GIS integration, site grading, and smart planting tools.",
+    "score": 4.5,
+    "logo_url": "/logos/vectorworks-landmark.svg",
+    "official_url": "https://www.vectorworks.net/en-US/landmark",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Landscape Architecture Studios",
+      "Urban Design & Master Planning",
+      "Parks & Recreation Planning",
+      "Campus & Commercial Site Design",
+      "Environmental & Ecological Planning"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t53",
+    "name": "Allplan",
+    "slug": "allplan",
+    "short_desc": "Nemetschek’s integrated BIM design-to-build software for architects, structural engineers, and precast concrete fabricators.",
+    "score": 4.5,
+    "logo_url": "/logos/allplan.svg",
+    "official_url": "https://www.allplan.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Structural Engineering Consultancies",
+      "Commercial & Residential Architecture",
+      "Precast Concrete Manufacturing",
+      "Bridge & Civil Infrastructure",
+      "General Contracting & Construction"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
     "id": "t53",
     "name": "DWG FastView",
     "slug": "dwg-fastview",
@@ -1488,6 +1533,153 @@
     ],
     "features": [],
     "country": "China"
+  },
+  {
+    "id": "t54",
+    "name": "OpenRoads Designer",
+    "slug": "openroads-designer",
+    "short_desc": "Bentley’s comprehensive civil transportation software for road, highway, drainage, and subsurface utility modeling (MicroStation-based).",
+    "score": 4.4,
+    "logo_url": "/logos/openroads-designer.svg",
+    "official_url": "https://www.bentley.com/software/openroads-designer/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Highway & Transportation Departments (DOT)",
+      "Civil Engineering Consultancies",
+      "Bridge & Corridor Infrastructure",
+      "Municipal Stormwater & Sewer Networks",
+      "Heavy Earthwork Contracting"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t55",
+    "name": "cadwork",
+    "slug": "cadwork",
+    "short_desc": "The leading 3D CAD/CAM software for timber construction, mass timber (CLT), carpentry, and direct CNC joinery fabrication.",
+    "score": 4.6,
+    "logo_url": "/logos/cadwork.svg",
+    "official_url": "https://www.cadwork.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Mass Timber & CLT Construction",
+      "Heavy Timber Framing & Carpentry",
+      "Prefabricated Wood Housing Factories",
+      "Roof Truss & Facade Engineering",
+      "Architectural Woodwork & Joinery"
+    ],
+    "features": [],
+    "country": "Switzerland"
+  },
+  {
+    "id": "t56",
+    "name": "MagiCAD",
+    "slug": "magicad",
+    "short_desc": "Leading European MEP (mechanical, electrical, plumbing) BIM software with verified manufacturer BIM objects for Revit and AutoCAD.",
+    "score": 4.5,
+    "logo_url": "/logos/magicad.svg",
+    "official_url": "https://www.magicad.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Building Services Engineering (MEP)",
+      "HVAC & Mechanical Contracting",
+      "Electrical Systems Engineering",
+      "Plumbing & Fire Protection Contractors",
+      "Commercial Building Facilities"
+    ],
+    "features": [],
+    "country": "Finland"
+  },
+  {
+    "id": "t57",
+    "name": "DDS-CAD",
+    "slug": "dds-cad",
+    "short_desc": "Standalone OpenBIM MEP design software by Graphisoft for electrical, heating, sanitary, and ventilation engineering.",
+    "score": 4.4,
+    "logo_url": "/logos/dds-cad.svg",
+    "official_url": "https://www.dds-cad.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Mechanical & Electrical Contractors (MEP)",
+      "Building Services Engineering",
+      "Heating & Sanitary Installers",
+      "Ventilation & Air Conditioning Firms",
+      "Prefabricated Building Services"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
+    "id": "t58",
+    "name": "dRofus",
+    "slug": "drofus",
+    "short_desc": "Integrated cloud planning, room data sheet (RDS), and medical equipment management software for complex hospital and institutional BIM projects.",
+    "score": 4.6,
+    "logo_url": "/logos/drofus.svg",
+    "official_url": "https://www.drofus.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Healthcare & Hospital Design",
+      "Airport & Aviation Infrastructure",
+      "Universities & Higher Education",
+      "Government Institutional Projects",
+      "Large-Scale Commercial Facilities"
+    ],
+    "features": [],
+    "country": "Norway"
+  },
+  {
+    "id": "t59",
+    "name": "AutoCAD Plant 3D",
+    "slug": "autocad-plant-3d",
+    "short_desc": "Autodesk’s specialized 3D plant design software for process piping, P&ID creation, equipment modeling, and isometric drafting.",
+    "score": 4.4,
+    "logo_url": "/logos/autocad-plant-3d.svg",
+    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Oil & Gas Refining",
+      "Chemical & Petrochemical Processing",
+      "Water & Wastewater Treatment",
+      "Food, Beverage & Pharmaceutical Processing",
+      "Power Generation & Industrial Facilities"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t60",
+    "name": "Hexagon SmartPlant 3D",
+    "slug": "smartplant-3d",
+    "short_desc": "Hexagon’s enterprise mega-project 3D plant design software for oil, gas, offshore, marine, and nuclear facilities.",
+    "score": 4.4,
+    "logo_url": "/logos/smartplant-3d.svg",
+    "official_url": "https://hexagon.com/products/smart-3d",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Oil & Gas Super-Majors & EPCs",
+      "Offshore Marine & Floating Production (FPSO)",
+      "Petrochemical & Refining Plants",
+      "Nuclear & Thermal Power Generation",
+      "Heavy Industrial Mining & Metals"
+    ],
+    "features": [],
+    "country": "Sweden"
   },
   {
     "id": "t63",
@@ -1561,24 +1753,6 @@
     ],
     "features": [],
     "country": "South Korea"
-  },
-  {
-    "id": "t74",
-    "name": "Vectorworks Landmark",
-    "slug": "vectorworks-landmark",
-    "short_desc": "The premier CAD software for landscape design.",
-    "score": 4.8,
-    "logo_url": "/logos/vectorworks.png",
-    "official_url": "https://www.vectorworks.net/landmark",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Landscape Architecture",
-      "Urban Planning"
-    ],
-    "features": [],
-    "country": "USA"
   },
   {
     "id": "t81",
@@ -1678,44 +1852,6 @@
     ],
     "features": [],
     "country": "China"
-  },
-  {
-    "id": "t94",
-    "name": "Allplan",
-    "slug": "allplan",
-    "short_desc": "Professional BIM platform by Nemetschek for AEC.",
-    "score": 4.5,
-    "logo_url": "/logos/allplan.png",
-    "official_url": "https://www.allplan.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Structural Engineering",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t95",
-    "name": "OpenRoads Designer",
-    "slug": "openroads-designer",
-    "short_desc": "Comprehensive civil road design platform by Bentley.",
-    "score": 4.7,
-    "logo_url": "/logos/openroads-designer.png",
-    "official_url": "https://www.bentley.com/software/openroads-designer/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Civil Engineering",
-      "Transportation",
-      "Infrastructure"
-    ],
-    "features": [],
-    "country": "USA"
   },
   {
     "id": "t101",
@@ -1926,45 +2062,6 @@
     ],
     "features": [],
     "country": "Switzerland"
-  },
-  {
-    "id": "t139",
-    "name": "cadwork",
-    "slug": "cadwork",
-    "short_desc": "CAD/CAM software specialized for timber construction and wood building design.",
-    "score": 3.7,
-    "logo_url": "/logos/cadwork.png",
-    "official_url": "https://www.cadwork.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Timber Construction",
-      "Wood Engineering",
-      "Architecture"
-    ],
-    "features": [],
-    "country": "Switzerland"
-  },
-  {
-    "id": "t140",
-    "name": "MagiCAD",
-    "slug": "magicad",
-    "short_desc": "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
-    "score": 3.8,
-    "logo_url": "/logos/magicad.png",
-    "official_url": "https://www.magicad.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Finland"
   },
   {
     "id": "t141",
@@ -2203,26 +2300,6 @@
     "country": "USA"
   },
   {
-    "id": "t157",
-    "name": "DDS-CAD",
-    "slug": "dds-cad",
-    "short_desc": "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
-    "score": 3.6,
-    "logo_url": "/logos/dds-cad.png",
-    "official_url": "https://graphisoft.com/plans-and-products/ddscad/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Norway"
-  },
-  {
     "id": "t158",
     "name": "Planbar",
     "slug": "planbar",
@@ -2242,26 +2319,6 @@
     ],
     "features": [],
     "country": "Germany"
-  },
-  {
-    "id": "t159",
-    "name": "dRofus",
-    "slug": "drofus",
-    "short_desc": "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
-    "score": 3.7,
-    "logo_url": "/logos/drofus.png",
-    "official_url": "https://www.drofus.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Construction",
-      "Engineering",
-      "Healthcare"
-    ],
-    "features": [],
-    "country": "Norway"
   },
   {
     "id": "t160",
@@ -2929,46 +2986,6 @@
       "Electronics",
       "Hobbyist",
       "Education"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t206",
-    "name": "AutoCAD Plant 3D",
-    "slug": "autocad-plant-3d",
-    "short_desc": "Autodesk's specialized plant-design toolkit for piping, equipment, and P&ID workflows — included with AutoCAD subscription.",
-    "score": 4.3,
-    "logo_url": "/logos/autocad-plant-3d.png",
-    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/plant-3d",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Energy",
-      "Chemical",
-      "Oil & Gas",
-      "Power"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t207",
-    "name": "Hexagon SmartPlant 3D",
-    "slug": "smartplant-3d",
-    "short_desc": "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions).",
-    "score": 4.4,
-    "logo_url": "/logos/smartplant-3d.png",
-    "official_url": "https://hexagon.com/products/smartplant-3d",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power",
-      "Marine"
     ],
     "features": [],
     "country": "USA"
