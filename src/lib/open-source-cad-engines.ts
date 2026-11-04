@@ -1197,3 +1197,318 @@ export function runSheetMetalNesting(
 
   return { placed, unplacedCount, utilizationPct, usedAreaMm2, dxfText: dxfLines.join('\n'), svgText };
 }
+
+// ============================================================================
+// 11. PCB GERBER RS-274X & EXCELLON DRILL PARSER, VIEWER & DXF EXPORTER
+// ============================================================================
+
+export interface GerberAperture {
+  code: number;
+  shape: 'C' | 'R' | 'O' | 'P';
+  width: number;
+  height: number;
+}
+
+export interface GerberPrimitive {
+  kind: 'trace' | 'flash' | 'drill';
+  layerType: 'top-copper' | 'bottom-copper' | 'silkscreen' | 'board-outline' | 'drill';
+  x1: number;
+  y1: number;
+  x2?: number;
+  y2?: number;
+  width: number;
+  height?: number;
+  shape?: 'C' | 'R' | 'O';
+  toolCode?: string;
+}
+
+export function getSampleGerberTopCopper(): string {
+  return [
+    'G04 CADGuide.tools Sample STM32 Sensor Breakout Board - Top Copper (GTL)*',
+    '%FSLAX24Y24*%',
+    '%MOMM*%',
+    '%ADD10C,0.2500*%',
+    '%ADD11C,1.6000*%',
+    '%ADD12R,1.4000X0.8000*%',
+    '%ADD13C,0.8000*%',
+    'G04 --- Board Outline 60x40mm ---*',
+    'D10*',
+    'X0Y0D02*',
+    'X600000Y0D01*',
+    'X600000Y400000D01*',
+    'X0Y400000D01*',
+    'X0Y0D01*',
+    'G04 --- 4 Corner M3 Mounting Pads ---*',
+    'D11*',
+    'X40000Y40000D03*',
+    'X560000Y40000D03*',
+    'X560000Y360000D03*',
+    'X40000Y360000D03*',
+    'G04 --- Central IC SMD Pads (SOIC-8 Footprint) ---*',
+    'D12*',
+    'X260000Y160000D03*',
+    'X260000Y185000D03*',
+    'X260000Y210000D03*',
+    'X260000Y235000D03*',
+    'X340000Y160000D03*',
+    'X340000Y185000D03*',
+    'X340000Y210000D03*',
+    'X340000Y235000D03*',
+    'G04 --- 4-Pin Header Through-Hole Pads ---*',
+    'D13*',
+    'X120000Y140000D03*',
+    'X120000Y180000D03*',
+    'X120000Y220000D03*',
+    'X120000Y260000D03*',
+    'X480000Y140000D03*',
+    'X480000Y180000D03*',
+    'X480000Y220000D03*',
+    'X480000Y260000D03*',
+    'G04 --- Copper Signal Traces ---*',
+    'D10*',
+    'X120000Y140000D02*',
+    'X200000Y140000D01*',
+    'X220000Y160000D01*',
+    'X260000Y160000D01*',
+    'X120000Y180000D02*',
+    'X210000Y180000D01*',
+    'X215000Y185000D01*',
+    'X260000Y185000D01*',
+    'X120000Y220000D02*',
+    'X210000Y220000D01*',
+    'X220000Y210000D01*',
+    'X260000Y210000D01*',
+    'X120000Y260000D02*',
+    'X215000Y260000D01*',
+    'X240000Y235000D01*',
+    'X260000Y235000D01*',
+    'X340000Y160000D02*',
+    'X400000Y160000D01*',
+    'X420000Y140000D01*',
+    'X480000Y140000D01*',
+    'X340000Y185000D02*',
+    'X415000Y185000D01*',
+    'X420000Y180000D01*',
+    'X480000Y180000D01*',
+    'X340000Y210000D02*',
+    'X410000Y210000D01*',
+    'X420000Y220000D01*',
+    'X480000Y220000D01*',
+    'X340000Y235000D02*',
+    'X395000Y235000D01*',
+    'X420000Y260000D01*',
+    'X480000Y260000D01*',
+    'M02*',
+  ].join('\n');
+}
+
+export function getSampleExcellonDrill(): string {
+  return [
+    'M48',
+    '; CADGuide.tools Sample NC Drill File (Excellon)',
+    'METRIC,TZ',
+    'T01C0.900',
+    'T02C3.200',
+    '%',
+    'G90',
+    'T01',
+    'X12.000Y14.000',
+    'X12.000Y18.000',
+    'X12.000Y22.000',
+    'X12.000Y26.000',
+    'X48.000Y14.000',
+    'X48.000Y18.000',
+    'X48.000Y22.000',
+    'X48.000Y26.000',
+    'T02',
+    'X4.000Y4.000',
+    'X56.000Y4.000',
+    'X56.000Y36.000',
+    'X4.000Y36.000',
+    'M30',
+  ].join('\n');
+}
+
+export function parseGerberAndDrill(
+  gerberText: string,
+  drillText = ''
+): {
+  primitives: GerberPrimitive[];
+  apertures: GerberAperture[];
+  drillTools: { code: string; diaMm: number; count: number }[];
+  bbox: { minX: number; minY: number; maxX: number; maxY: number };
+  traceCount: number;
+  padCount: number;
+  drillHoleCount: number;
+  dxfText: string;
+} {
+  const apertures = new Map<number, GerberAperture>();
+  const primitives: GerberPrimitive[] = [];
+  let decDigits = 4;
+  let unitScale = 1.0; // 1 = mm, 25.4 = inch
+
+  // Parse format specification %FSLAX24Y24*%
+  const fsMatch = gerberText.match(/%FS[LT][AI]X(\d)(\d)Y\d\d\*%/i);
+  if (fsMatch) decDigits = Number(fsMatch[2]) || 4;
+  if (/%MOIN\*%/i.test(gerberText)) unitScale = 25.4;
+
+  // Parse aperture definitions %ADD10C,0.2500*%
+  const adRe = /%ADD(\d+)([CROP]),([0-9.]+)(?:X([0-9.]+))?\*%/gi;
+  let m: RegExpExecArray | null;
+  while ((m = adRe.exec(gerberText)) !== null) {
+    const code = Number(m[1]);
+    const shape = m[2].toUpperCase() as GerberAperture['shape'];
+    const w = Number(m[3]) * unitScale;
+    const h = m[4] !== undefined ? Number(m[4]) * unitScale : w;
+    apertures.set(code, { code, shape, width: w, height: h });
+  }
+
+  const parseCoord = (raw: string): number => {
+    if (raw.includes('.')) return Number(raw) * unitScale;
+    return (Number(raw) / Math.pow(10, decDigits)) * unitScale;
+  };
+
+  let curX = 0, curY = 0;
+  let curAperture: GerberAperture = { code: 10, shape: 'C', width: 0.25, height: 0.25 };
+  let traceCount = 0, padCount = 0;
+
+  for (const rawLine of gerberText.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('G04') || line.startsWith('%')) continue;
+
+    const apSelect = line.match(/^(?:G54)?D([1-9]\d+)\*/i);
+    if (apSelect) {
+      const code = Number(apSelect[1]);
+      if (apertures.has(code)) curAperture = apertures.get(code)!;
+      continue;
+    }
+
+    const xm = line.match(/X(-?\d+(?:\.\d+)?)/i);
+    const ym = line.match(/Y(-?\d+(?:\.\d+)?)/i);
+    const dm = line.match(/D0?([123])\*/i);
+    if (!xm && !ym && !dm) continue;
+
+    const nx = xm ? parseCoord(xm[1]) : curX;
+    const ny = ym ? parseCoord(ym[1]) : curY;
+    const op = dm ? Number(dm[1]) : 1;
+
+    if (op === 1) {
+      primitives.push({
+        kind: 'trace',
+        layerType: 'top-copper',
+        x1: curX,
+        y1: curY,
+        x2: nx,
+        y2: ny,
+        width: curAperture.width,
+      });
+      traceCount++;
+    } else if (op === 3) {
+      primitives.push({
+        kind: 'flash',
+        layerType: 'top-copper',
+        x1: nx,
+        y1: ny,
+        width: curAperture.width,
+        height: curAperture.height,
+        shape: curAperture.shape === 'R' ? 'R' : 'C',
+      });
+      padCount++;
+    }
+    curX = nx;
+    curY = ny;
+  }
+
+  // Parse Excellon NC Drill file
+  const drillToolsMap = new Map<string, { code: string; diaMm: number; count: number }>();
+  let activeDrillTool = 'T01';
+  let drillScale = 1.0;
+  if (/INCH/i.test(drillText)) drillScale = 25.4;
+
+  for (const rawLine of drillText.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith(';')) continue;
+    const toolDef = line.match(/^(T\d+)C([0-9.]+)/i);
+    if (toolDef) {
+      const code = toolDef[1].toUpperCase();
+      drillToolsMap.set(code, { code, diaMm: Number(toolDef[2]) * drillScale, count: 0 });
+      continue;
+    }
+    const toolSel = line.match(/^(T\d+)$/i);
+    if (toolSel) {
+      activeDrillTool = toolSel[1].toUpperCase();
+      continue;
+    }
+    const xy = line.match(/^X(-?\d+(?:\.\d+)?)Y(-?\d+(?:\.\d+)?)/i);
+    if (xy) {
+      const x = (xy[1].includes('.') ? Number(xy[1]) : Number(xy[1]) / 1000) * drillScale;
+      const y = (xy[2].includes('.') ? Number(xy[2]) : Number(xy[2]) / 1000) * drillScale;
+      const tool = drillToolsMap.get(activeDrillTool) || { code: activeDrillTool, diaMm: 0.9, count: 0 };
+      tool.count++;
+      drillToolsMap.set(activeDrillTool, tool);
+      primitives.push({
+        kind: 'drill',
+        layerType: 'drill',
+        x1: x,
+        y1: y,
+        width: tool.diaMm,
+        toolCode: activeDrillTool,
+      });
+    }
+  }
+
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  const expand = (x: number, y: number, r = 0) => {
+    minX = Math.min(minX, x - r);
+    minY = Math.min(minY, y - r);
+    maxX = Math.max(maxX, x + r);
+    maxY = Math.max(maxY, y + r);
+  };
+  for (const p of primitives) {
+    expand(p.x1, p.y1, p.width / 2);
+    if (p.x2 !== undefined && p.y2 !== undefined) expand(p.x2, p.y2, p.width / 2);
+  }
+  if (!Number.isFinite(minX)) {
+    minX = 0; minY = 0; maxX = 60; maxY = 40;
+  }
+
+  // Build DXF export of PCB traces, pads & drill hits
+  const dxfLines = [
+    '0', 'SECTION', '2', 'HEADER', '9', '$ACADVER', '1', 'AC1027', '9', '$INSUNITS', '70', '4', '0', 'ENDSEC',
+    '0', 'SECTION', '2', 'ENTITIES',
+  ];
+  for (const p of primitives) {
+    if (p.kind === 'trace' && p.x2 !== undefined && p.y2 !== undefined) {
+      dxfLines.push(
+        '0', 'LINE', '8', 'PCB_TRACES',
+        '10', p.x1.toFixed(4), '20', p.y1.toFixed(4),
+        '11', p.x2.toFixed(4), '21', p.y2.toFixed(4)
+      );
+    } else if (p.kind === 'flash') {
+      dxfLines.push(
+        '0', 'CIRCLE', '8', 'PCB_PADS',
+        '10', p.x1.toFixed(4), '20', p.y1.toFixed(4), '40', (p.width / 2).toFixed(4)
+      );
+    } else if (p.kind === 'drill') {
+      dxfLines.push(
+        '0', 'CIRCLE', '8', `NC_DRILL_${p.toolCode || 'T01'}`,
+        '10', p.x1.toFixed(4), '20', p.y1.toFixed(4), '40', (p.width / 2).toFixed(4)
+      );
+    }
+  }
+  dxfLines.push('0', 'ENDSEC', '0', 'EOF');
+
+  const drillTools = Array.from(drillToolsMap.values());
+  const drillHoleCount = drillTools.reduce((a, b) => a + b.count, 0);
+
+  return {
+    primitives,
+    apertures: Array.from(apertures.values()),
+    drillTools,
+    bbox: { minX, minY, maxX, maxY },
+    traceCount,
+    padCount,
+    drillHoleCount,
+    dxfText: dxfLines.join('\n'),
+  };
+}

@@ -7819,5 +7819,22 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
       "g0 g1 g2 g3 visualizer",
       "free gcode analyzer"
     ]
+  },
+  {
+    "slug": "online-gerber-pcb-viewer",
+    "title": "Online PCB Gerber RS-274X & Excellon Drill Viewer & DXF Exporter",
+    "description": "Inspect PCB Gerber fabrication layers and Excellon NC drill files locally in your browser. Verify D-code apertures, drill tool tables, and export PCB outlines/pads to DXF.",
+    "detailDesc": "A 100% browser-local PCB CAM viewer and Gerber-to-DXF converter for electronics engineers using KiCad, Altium Designer, LibrePCB, or Eagle. Parses RS-274X / Gerber X2 copper traces (D01), SMD/THT flashed pads (D03), and Excellon NC drill hits, offering solder-mask theme switching and mechanical DXF export for enclosure alignment.",
+    "category": "viewer",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-04",
+    "keywords": [
+      "online gerber viewer",
+      "pcb gerber to dxf converter",
+      "excellon drill file viewer online",
+      "rs-274x cam viewer browser",
+      "kicad gerber inspector"
+    ]
   }
 ];
