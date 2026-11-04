@@ -166,6 +166,14 @@ export interface Tool {
     max: number;
     count: number;
     url?: string;
+    /** Month/year when this rating was captured or verified, e.g. 'Nov 2026'. */
+    verified_date?: string;
+  }[];
+
+  /** Optional curated internal links to related guides, toolbox pages, or role pages shown in the top badge bar. */
+  related_links?: {
+    label: string;
+    href: string;
   }[];
 
   /** Support channels the vendor offers. */

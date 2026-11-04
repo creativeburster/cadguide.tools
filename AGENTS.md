@@ -128,3 +128,23 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **杜撰虚构的个人经历** — 禁止编造"我在三台工作站上验证过"、"上周客户打电话说…"等无法核实的第一人称叙事。可以基于真实来源的内容用第一人称改写，但不得编造具体场景、数字和事件
 - **预设分类再填内容** — 禁止先确定分类模板再据此生成 guide。分类必须由搜索调研中发现的真实话题决定
 - **编造具体技术参数** — 如加工转速、进给速度、注册表路径等，除非来自可验证的来源。不确定时应标注"请参考厂商推荐参数"
+
+
+---
+
+## 📐 7. Directory 软件详情页 (`/tools/[slug]`) 唯一标准规范 (Single Source of Truth)
+
+> **🚨 核心定性原则（每个 Agent、每个会话必须知悉）**：
+> `cadguide.tools` 的 Directory 目录本质上是一个**纯聚合目录（Directory Aggregator）**。每个 Tool 的信息**都不是自己写的，没有任何自撰内容或本站打分**，100% 全部来自**软件官网**和**权威第三方**（包括测评站点、G2/Capterra/TrustRadius/Gartner 等评分站点、Google 搜索排名靠前的目录站点及其他排名靠前的搜索结果）。
+> - **静态信息直接写死**（官网简介、核心特征、套餐大概内容、技术规格、官网 FAQ、权威第三方优缺点与带日期的评分快照）。
+> - **隔一段时间会变的信息或不同国家不一样的价格，一律直链官方**（具体价格直链软件官网定价页，评分直链各大评分网站，本站绝不自己打分、绝不自己编造内容）。
+
+所有 AI 智能体在创建或修改 `/tools/[slug]` 软件详情页（涉及 `src/components/tool-detail-client.tsx`、`src/lib/data/c1.ts` ~ `c7.ts`、`src/lib/seo.ts`）时，**必须以 [`DIRECTORY_TOOL_STANDARD.md`](file:///F:/cadguide.tools/DIRECTORY_TOOL_STANDARD.md) 及样板页 [`/tools/autocad`](https://cadguide.tools/tools/autocad) 为唯一标准**，严禁自创评分体系或批量改写模板套话：
+
+1. **最顶部内链标签行 (Top Internal Link Badges)**：必须尽可能多地链接本站真实存在的文章与聚合页（主分类目录 `/tools?category=...`、分类榜单 `/best/...`、授权模式 `/pricing/...`、全部支持的操作系统 `/platforms/...`、适用工程师角色 `/for/...`、行业 `/sectors/...`、核心格式 `/file-formats/...`、替代品页 `/alternatives/[slug]` 以及 `related_links` 中配置的本站专属 `/toolbox/...` 速查表与工具页）。
+2. **严禁本站自评打分 (No Self-Assigned Score)**：全站取消 `★ 4.8 Expert Score` / `Editor Score` 本站自评。顶部标题下方与底部 `CADGuide Verdict` 区域统一展示主流第三方评分网站（G2、Capterra、TrustRadius、Gartner Peer Insights、GetApp 等）的真实分值、评论数、**分值核验日期 (`verified_date`，如 `Nov 2026`)** 并直链到对应评分网站（有 5 个显示 5 个，有 3 个显示 3 个）。
+3. **产品文字描述 (`description`)**：直接从目标软件官网提取最权威、最醒目的官方介绍，禁止自行编造吹捧修辞。
+4. **井号核心特征 (`#core_features`)**：选取该产品最核心、最主要、最广为人知的 5~7 个标志性特征，支持关联站内特性/格式专题链接。
+5. **价格与套餐 (`pricing_tiers`)**：每个套餐显示官方真实套餐名称与包含的大概内容（权益列表），具体价格一律不写死金额数字，全部直链官方网站定价页 (`pricing_url`)。
+6. **核心功能、规格与优缺点 (`detailed_features`, `tech_specs`, `pros`, `cons`)**：功能与技术参数严格核对官方文档力求准确完善；`pros` 与 `cons` 结合主流评测平台与 AI 综合调研写出 5~6 条具体、客观的完整说明，禁止只写两三个词的短语。
+7. **常见问题 (`faqs`)**：优先直接采用目标软件官方网站上的官方 FAQ 问答，并附带官网对应链接，禁止凭空自造问答套话。

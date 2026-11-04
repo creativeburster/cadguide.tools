@@ -8,85 +8,162 @@ export const c1Tools: Tool[] = [
     "name": "AutoCAD",
     "slug": "autocad",
     "logo_url": "/logos/autocad.svg",
-    "short_desc": "The global industrial standard for 2D drafting and 3D modeling.",
-    "description": "AutoCAD is Autodesk’s computer-aided design software. As the pioneer of the CAD industry, it defined the .DWG format standard and remains an essential foundation tool for AEC and manufacturing.",
+    "short_desc": "Autodesk’s industry-standard 2D drafting, 3D modeling, and DWG documentation software for architects, engineers, and construction professionals.",
+    "description": "AutoCAD is Autodesk’s computer-aided design (CAD) software that architects, engineers, and construction professionals rely on to create precise 2D drawings and 3D models. Draft, annotate, and design 2D geometry and 3D models with solids, surfaces, and mesh objects; automate tasks such as comparing drawings, counting objects, adding blocks, and creating schedules; and customize workspaces with add-on apps, AutoLISP, and seven included industry-specific toolsets across desktop, web, and mobile.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "Monthly Subscription",
         "price": "Official Store",
         "period": "/mo",
         "features": [
-          "2D Drafting & 3D Modeling",
+          "AutoCAD Desktop for Windows & macOS",
           "7 Specialized Industry Toolsets (Windows)",
-          "AutoLISP & API Customization",
-          "Web & Mobile Apps Included"
+          "AutoCAD on the Web & Mobile Apps Included",
+          "AutoLISP, ObjectARX & .NET API Customization",
+          "Cloud Storage Connectivity & Autodesk Support"
         ],
         "is_popular": false
       },
       {
-        "name": "Annual",
+        "name": "Annual Subscription",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "All Monthly features",
-          "Web & Mobile Apps",
-          "Smart Blocks & Autodesk AI",
-          "Technical Support"
+          "Full 2D Drafting & 3D Solid/Surface/Mesh Modeling",
+          "7 Specialized Industry Toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, Raster)",
+          "Smart Blocks, Markup Import & Markup Assist (Autodesk AI)",
+          "Activity Insights, Trace & Sheet Set Manager",
+          "AutoCAD Web & Mobile Apps + Direct Vendor Support"
         ],
         "is_popular": true
       },
       {
-        "name": "3-Year & Flex",
+        "name": "3-Year Term & Autodesk Flex",
         "price": "Official Store",
         "period": "multi-year / token",
         "features": [
-          "Multi-year term or Autodesk Flex tokens",
-          "2D Drafting & 3D Modeling",
-          "7 Specialized Industry Toolsets (Windows)",
-          "Web & Mobile Apps Included"
+          "3-Year Locked Subscription Term or Pay-As-You-Go Flex Tokens",
+          "Includes Full Desktop, Web, Mobile & 7 Specialized Toolsets",
+          "Centralized License Administration via Autodesk Account",
+          "SSO, Usage Reporting & Multi-Seat Deployment Tools",
+          "Eligible Educational & Student Access via Autodesk Education"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Core Design",
+        "category": "2D Drafting, Drawing & Documentation",
         "items": [
           {
-            "name": "2D Drafting & Annotation",
+            "name": "Precision 2D Geometry, Layers & Dynamic Blocks",
             "status": true
           },
           {
-            "name": "3D Modeling & Visualization",
+            "name": "Parametric 2D Geometric & Dimensional Constraints",
             "status": true
           },
           {
-            "name": "Smart Blocks & AI Placement",
+            "name": "Sheet Set Manager, Layouts & Associative Dimensions",
             "status": true
           },
           {
-            "name": "Floating Windows",
+            "name": "Data Extraction, Tables, Fields & Automated Schedules",
+            "status": true
+          },
+          {
+            "name": "DWG Compare, Xref Compare & Revision Clouds",
+            "status": true
+          },
+          {
+            "name": "PDF/DGN Underlays, SHX Text Recognition & Plot Styles (CTB/STB)",
             "status": true
           }
         ]
       },
       {
-        "category": "Professional Workflow",
+        "category": "3D Modeling, Visualization & Point Clouds",
         "items": [
           {
-            "name": "AutoLisp & API Support",
+            "name": "3D Solid, Surface & Freeform Mesh Modeling",
             "status": true
           },
           {
-            "name": "Activity Insights",
+            "name": "3D Section Planes, Flatshot & Model Documentation Views",
             "status": true
           },
           {
-            "name": "Markup Import & Assist",
+            "name": "Visual Styles, Lighting, Materials & Ray-Traced Rendering",
             "status": true
           },
           {
-            "name": "Cloud Collaboration",
+            "name": "ReCap Point Cloud Attachment, Cropping & Object Snapping",
+            "status": true
+          },
+          {
+            "name": "Geographic Location, Live Maps & Coordinate Systems",
+            "status": true
+          },
+          {
+            "name": "History-Tree Feature-Based Parametric 3D Assembly (Use Inventor/Fusion)",
+            "status": false
+          }
+        ]
+      },
+      {
+        "category": "7 Included Specialized Toolsets (Windows)",
+        "items": [
+          {
+            "name": "Architecture Toolset (8,800+ Architectural Components & Wall/Door Styles)",
+            "status": true
+          },
+          {
+            "name": "Mechanical Toolset (700,000+ Standard Parts, Shaft/Gear Generators & BOM)",
+            "status": true
+          },
+          {
+            "name": "Electrical Toolset (65,000+ Symbols, PLC I/O & Wire Numbering)",
+            "status": true
+          },
+          {
+            "name": "MEP Toolset (10,500+ HVAC, Piping & Plumbing Objects)",
+            "status": true
+          },
+          {
+            "name": "Plant 3D Toolset (P&ID Schematics, 3D Piping & Isometric Drawings)",
+            "status": true
+          },
+          {
+            "name": "Map 3D (GIS Topology/FDO) & Raster Design (Raster-to-Vector)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Autodesk AI, Automation & Multi-Device Collaboration",
+        "items": [
+          {
+            "name": "Smart Blocks: Search, Convert, Replace & AI Object Placement",
+            "status": true
+          },
+          {
+            "name": "Markup Import & Markup Assist (AI Recognition from PDF/Photos)",
+            "status": true
+          },
+          {
+            "name": "Activity Insights (Multi-User DWG Version & Event Tracking)",
+            "status": true
+          },
+          {
+            "name": "Trace, Share Drawings & Push to Autodesk Docs / BIM 360",
+            "status": true
+          },
+          {
+            "name": "AutoLISP (Desktop & Web), ObjectARX (C++), .NET (C#/VB) & VBA APIs",
+            "status": true
+          },
+          {
+            "name": "Autodesk App Store Ecosystem (1,000+ Verified Third-Party Plugins)",
             "status": true
           }
         ]
@@ -94,7 +171,7 @@ export const c1Tools: Tool[] = [
     ],
     "alternatives": [
       "bricscad",
-      "nanocad",
+      "zwcad",
       "draftsight"
     ],
     "country": "USA",
@@ -112,90 +189,179 @@ export const c1Tools: Tool[] = [
     "industries": [
       "Architecture",
       "Engineering",
-      "Manufacturing"
+      "Manufacturing",
+      "Civil Engineering",
+      "Electrical Engineering",
+      "Construction"
     ],
     "core_features": [
-      "2D Drafting",
-      "3D Modeling",
-      "AutoLisp",
-      "Sheet Sets",
-      "Cloud Storage"
+      "2D Drafting & Documentation",
+      "3D Solid, Surface & Mesh Modeling",
+      "Native .DWG File Format",
+      "7 Specialized Industry Toolsets",
+      "AutoLISP, ObjectARX & .NET APIs",
+      "Smart Blocks & Markup Assist (AI)",
+      "AutoCAD Web & Mobile Apps"
     ],
     "user_scales": [
+      "Freelancers",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/autocad/overview",
     "pricing_url": "https://www.autodesk.com/products/autocad/subscribe",
     "trial_url": "https://www.autodesk.com/products/autocad/free-trial",
+    "release_notes_url": "https://help.autodesk.com/view/ACD/2026/ENU/",
+    "system_reqs_url": "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-AutoCAD.html",
     "affiliate_url": null,
     "score": 4.8,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 1420,
+        "url": "https://www.g2.com/products/autocad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 3050,
+        "url": "https://www.capterra.com/p/61547/AutoCAD/reviews/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.8,
+        "max": 10,
+        "count": 560,
+        "url": "https://www.trustradius.com/products/autocad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 210,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/autodesk/product/autocad",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 3400,
+        "url": "https://www.getapp.com/operations-management-software/a/autocad/reviews/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD Shortcuts Sheet",
+        "href": "/toolbox/autocad-shortcuts-sheet"
+      },
+      {
+        "label": "250 AutoCAD Commands",
+        "href": "/toolbox/autocad-250-commands-reference"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "AutoCAD 3D Shortcuts",
+        "href": "/toolbox/autocad-3d-shortcuts-cheatsheet"
+      },
+      {
+        "label": "System Variables Reference",
+        "href": "/toolbox/autocad-system-variables-reference"
+      },
+      {
+        "label": "AutoCAD Fatal Error Wizard",
+        "href": "/toolbox/autocad-fatal-error-wizard"
+      }
+    ],
     "pros": [
-      "Unmatched compatibility",
-      "Vast plugin ecosystem",
-      "High precision"
+      "Creator and benchmark standard of the native .DWG format, ensuring 100% fidelity when exchanging drawings with clients, contractors, and government agencies.",
+      "Includes seven specialized industry toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, and Raster Design on Windows) within a single subscription.",
+      "Extensive automation and customization capabilities via AutoLISP, ObjectARX (C++), .NET (C#/VB.NET), VBA, and over 1,000 plugins on the Autodesk App Store.",
+      "Seamless cross-platform continuity with included AutoCAD Web (browser-based drafting with LISP support) and AutoCAD Mobile apps (iOS, iPadOS, Android).",
+      "Time-saving AI-assisted workflows including Smart Blocks (automatic block search, conversion, and placement), Count, and Markup Import/Assist from PDFs or photos.",
+      "Deep integration with enterprise CDEs and cloud storage including Autodesk Docs, Autodesk Construction Cloud (ACC), BIM 360, Microsoft OneDrive, SharePoint, Box, and Dropbox."
     ],
     "cons": [
-      "Expensive",
-      "Non-parametric 3D",
-      "Single-core modeling"
+      "Significantly higher recurring subscription cost compared to perpetual-license DWG alternatives such as BricsCAD, ZWCAD, GstarCAD, or nanoCAD.",
+      "Subscription-only commercial licensing model with no perpetual buyout option (aside from pay-as-you-go Autodesk Flex tokens for occasional users).",
+      "The seven specialized industry toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, Raster Design) are only available on Windows, not natively on macOS.",
+      "Core geometry calculation and complex 3D modeling remain largely single-threaded, which can cause slowdowns on massive civil point clouds or dense multi-Xref files.",
+      "3D modeling tools are primarily direct/surface/solid rather than history-tree feature-based parametric assembly modeling (which requires Autodesk Inventor or Fusion).",
+      "Steep learning curve and dense ribbon/command-line interface for beginners who only need simple 2D floor plans or lightweight DWG viewing."
     ],
     "faqs": [
       {
         "q": "What is AutoCAD used for?",
-        "a": "The global industrial standard for 2D drafting and 3D modeling. AutoCAD is a 2D and 3D CAD platform widely adopted across Architecture, Engineering, and Manufacturing, bundling seven industry-specific toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, and Raster Design on Windows) alongside web and mobile apps."
+        "a": "According to Autodesk's official documentation, AutoCAD is computer-aided design (CAD) software that architects, engineers, and construction professionals rely on to create precise 2D drawings and 3D models. It is used to draft, annotate, and design 2D geometry and 3D models with solids, surfaces, and mesh objects, automate repetitive drafting tasks (comparing drawings, counting objects, creating schedules), and collaborate across desktop, web, and mobile devices. See the [Official AutoCAD Overview](https://www.autodesk.com/products/autocad/overview)."
       },
       {
-        "q": "How much does AutoCAD cost?",
-        "a": "AutoCAD is licensed on a Named-User Subscription model (Monthly, Annual, and 3-Year terms) as well as pay-as-you-go Autodesk Flex tokens. Because official seat rates, local currencies, taxes, and educational exemptions vary by country and change over time, please check the [Official AutoCAD Pricing Page](https://www.autodesk.com/products/autocad/subscribe) for live regional rates."
+        "q": "What is included in an AutoCAD subscription?",
+        "a": "An official AutoCAD subscription includes access to AutoCAD for Windows and macOS desktops, the AutoCAD Web app (running in a browser), the AutoCAD Mobile app (for iOS and Android), cloud storage connectivity, and seven specialized industry toolsets on Windows: Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, and Raster Design. Details are listed on the [Official AutoCAD Subscription Page](https://www.autodesk.com/products/autocad/subscribe)."
       },
       {
-        "q": "Does AutoCAD offer a free trial?",
-        "a": "Yes — Autodesk provides an official evaluation program for AutoCAD so teams can test 2D/3D workflows and DWG compatibility before subscribing. Since trial duration and eligibility rules vary by region and product edition, visit the [Official AutoCAD Free Trial Page](https://www.autodesk.com/products/autocad/free-trial) for current trial terms."
+        "q": "What is the difference between AutoCAD and AutoCAD LT?",
+        "a": "AutoCAD provides complete 2D drafting and 3D modeling capabilities, full automation APIs (AutoLISP, ObjectARX, .NET, VBA), third-party app plugins, Smart Blocks AI placement, and all seven specialized industry toolsets. AutoCAD LT is a streamlined, lower-cost 2D-only CAD solution designed specifically for precision 2D drafting, documentation, and basic AutoLISP script execution without 3D modeling or industry toolsets. Compare both on the [Official AutoCAD vs. AutoCAD LT Comparison Page](https://www.autodesk.com/products/autocad/compare)."
       },
       {
-        "q": "What operating systems does AutoCAD support?",
-        "a": "The full AutoCAD desktop application runs natively on Windows and macOS (note that specialized industry toolsets are Windows-only). AutoCAD on the Web runs in modern desktop browsers, and the AutoCAD mobile app provides DWG viewing, markup, and field drafting on iOS/iPadOS and Android."
+        "q": "How much does AutoCAD cost in my country?",
+        "a": "Autodesk offers Monthly, Annual, and 3-Year named-user subscriptions as well as pay-as-you-go Autodesk Flex tokens. Because official list prices, local currencies, taxes (VAT/GST), and regional promotions differ by country and authorized reseller, please visit the [Official AutoCAD Pricing & Subscribe Portal](https://www.autodesk.com/products/autocad/subscribe) to view live regional pricing."
       },
       {
-        "q": "Which file formats does AutoCAD support?",
-        "a": "AutoCAD natively reads and writes DWG, DXF, DWT, and DWF. Through the standard IMPORT command, it brings in 3D formats including DGN, STEP, IGES, ACIS SAT, Rhino 3DM, and 3DS. Vanilla AutoCAD does not natively import IFC files; IFC import requires the included AutoCAD Architecture or MEP toolsets (using the IFCIMPORT command). For exports, native AutoCAD outputs DWG, DXF, DWT, DWF, PDF, STL, IGES, and DGN (using DGNEXPORT), while STEP file export requires the included AutoCAD Mechanical toolset (STEPOUT command). Starting with AutoCAD 2019, support for the import and export of the FBX file format has been removed."
+        "q": "Can I download a free trial or get free student access for AutoCAD?",
+        "a": "Yes. Autodesk provides an official free trial that gives full access to the latest version of AutoCAD for evaluation via the [Official AutoCAD Free Trial Page](https://www.autodesk.com/products/autocad/free-trial). In addition, eligible students and educators at accredited institutions can obtain free renewable 1-year educational access through the [Autodesk Education Community](https://www.autodesk.com/education/edu-software/overview)."
       },
       {
-        "q": "Does AutoCAD have an API for automation and customization?",
-        "a": "Yes. AutoCAD exposes AutoLISP, ObjectARX, .NET, and VBA (Windows) APIs with SDK bindings for C++, C#, .NET, LISP, and JavaScript. Full developer documentation is available on the [Autodesk Platform Services Portal](https://aps.autodesk.com/developer/overview/autocad)."
+        "q": "Which operating systems and hardware does AutoCAD require?",
+        "a": "AutoCAD runs natively on 64-bit Microsoft Windows 11/10 (requiring 8 GB RAM minimum, 32 GB recommended; DirectX 12 capable GPU with 8 GB VRAM recommended) and Apple macOS (supporting Apple Silicon M-series and Intel Macs with Metal graphics engine). Note that the seven specialized toolsets are Windows-only. Check the full version-by-version specs on the [Official AutoCAD System Requirements Page](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-AutoCAD.html)."
+      },
+      {
+        "q": "Which file formats and APIs does AutoCAD support?",
+        "a": "AutoCAD natively reads and writes .DWG, .DXF, .DWT, and .DWF files, and imports/exports PDF, DGN, STEP, IGES, ACIS (.SAT), Rhino (.3DM), Autodesk Inventor (.IPT/.IAM), and STL models (with IFC supported via the included Architecture and MEP toolsets). For developers, AutoCAD exposes AutoLISP, ObjectARX (C++), .NET (C#/VB.NET), JavaScript, and Design Automation cloud APIs documented on the [Autodesk Platform Services Developer Portal](https://aps.autodesk.com/developer/overview/autocad)."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Single-Core Drafting / Multi-Threaded 2D Regen",
-      "gpu_optimization": "Windows: DirectX 11/12 / macOS: Metal Graphics Pipeline",
+      "engine": "Autodesk ShapeManager (ASM) + RealDWG Kernel",
+      "multicore": "Multi-Threaded 2D Regen & File Load / Single-Core Geometry Modeling",
+      "gpu_optimization": "Windows: DirectX 12 (2D/3D Hardware Acceleration) / macOS: Apple Metal Graphics Engine",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
+        "ISO 128 / ISO 13567",
+        "AIA CAD Layer Guidelines",
+        "ASME Y14.5",
         "DGN",
-        "STEP",
-        "PDF"
+        "STEP (AP203/AP214)",
+        "IGES",
+        "PDF/A"
       ]
     },
-    "expert_verdict": "The reference point for 2D drafting and documentation, and the format most AEC workflows still exchange drawings through.",
+    "expert_verdict": "AutoCAD remains the foundational industry standard for 2D drafting, DWG documentation, and cross-disciplinary engineering workflows. With seven specialized toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, Raster Design) plus Web and Mobile apps bundled into one subscription, it is the safest choice for teams requiring 100% native DWG compatibility and extensive LISP/.NET ecosystem support.",
     "languages": [
       "English",
-      "Portuguese (Brazil)",
-      "Czech",
-      "Dutch",
-      "French",
-      "Finnish",
-      "German",
-      "Hungarian",
-      "Italian",
+      "Simplified Chinese",
+      "Traditional Chinese",
       "Japanese",
       "Korean",
-      "Polish",
-      "Russian",
-      "Simplified Chinese",
+      "German",
+      "French",
       "Spanish",
-      "Traditional Chinese"
+      "Italian",
+      "Portuguese (Brazil)",
+      "Russian",
+      "Polish",
+      "Czech",
+      "Hungarian"
     ],
     "file_formats_in": [
       "DWG",
@@ -210,7 +376,8 @@ export const c1Tools: Tool[] = [
       "STL",
       "3DM",
       "3DS",
-      "IPT"
+      "IPT",
+      "IFC"
     ],
     "file_formats_out": [
       "DWG",
@@ -220,21 +387,22 @@ export const c1Tools: Tool[] = [
       "PDF",
       "STL",
       "IGES",
+      "STEP",
       "DGN",
-      "BMP",
+      "SVG",
       "PNG",
       "JPG",
       "TIF"
     ],
     "integrations": [
-      "Autodesk Drive",
       "Autodesk Docs",
+      "Autodesk Construction Cloud (ACC)",
       "BIM 360",
-      "Construction Cloud",
-      "Microsoft 365",
-      "Box",
-      "Dropbox",
-      "Adobe PDF"
+      "Autodesk Inventor & Revit",
+      "ArcGIS (Esri)",
+      "Microsoft OneDrive & SharePoint",
+      "Box & Dropbox",
+      "Google Drive"
     ],
     "deployment_options": [
       "Desktop",
@@ -244,6 +412,7 @@ export const c1Tools: Tool[] = [
     ],
     "license_types": [
       "Subscription",
+      "Commercial",
       "Educational"
     ],
     "support_channels": [
@@ -258,43 +427,46 @@ export const c1Tools: Tool[] = [
     ],
     "security_compliance": [
       "SOC 2 Type II",
-      "ISO 27001",
+      "ISO/IEC 27001",
+      "ISO/IEC 27017 & 27018",
       "GDPR Privacy Framework",
-      "CCPA Privacy Framework"
+      "CCPA Privacy Framework",
+      "FedRAMP Tailored (Autodesk Cloud)"
     ],
     "api_sdk": {
       "has_api": true,
       "has_sdk": true,
-      "api_type": "AutoLISP / ObjectARX / .NET / VBA",
+      "api_type": "AutoLISP / ObjectARX (C++) / .NET (C# & VB.NET) / VBA / APS Design Automation API",
       "sdk_languages": [
+        "AutoLISP",
         "C++",
         "C#",
-        ".NET",
-        "LISP",
+        "VB.NET",
+        "VBA",
         "JavaScript"
       ],
       "docs_url": "https://aps.autodesk.com/developer/overview/autocad"
     }
   },
   {
-    "id": "t12",
+    "id": "t2",
     "name": "ZWCAD",
     "slug": "zwcad",
-    "logo_url": "/logos/zwcad.ico",
-    "short_desc": "The most cost-effective and compatible alternative to AutoCAD.",
-    "description": "ZWCAD by ZWSOFT is a high-performance 2D and 3D DWG-native CAD platform engineered as a drop-in, perpetual-license alternative to AutoCAD. It delivers full command-alias compatibility, LISP/VBA/ZRX/ARX API extensibility, Smart Mouse gesture controls, Smart Voice annotations, and hardware-accelerated multi-core rendering for large architectural and mechanical drawing sets.",
+    "logo_url": "/logos/zwcad.svg",
+    "short_desc": "ZWSOFT’s cost-effective, high-performance 2D and 3D CAD software with native DWG compatibility, multi-core acceleration, and perpetual licensing.",
+    "description": "ZWCAD is a powerful, reliable, and DWG-compatible 2D and 3D CAD software solution developed by ZWSOFT for architects, mechanical engineers, and construction professionals. Built on ZWSOFT's self-developed hybrid drafting and modeling engine with multi-core CPU acceleration, ZWCAD delivers exceptional performance for opening, editing, and saving complex drawings. It features familiar classic and ribbon user interfaces, dynamic blocks (Flexiblock), Smart AI tools (Smart Mouse, Smart Voice, Smart Select), comprehensive 2D drafting and 3D solid modeling capabilities, and robust API extensibility (LISP, ZRX, .NET, VBA) to seamlessly migrate custom enterprise workflows from AutoCAD.",
     "pricing_tiers": [
       {
         "name": "Standard",
         "price": "Official Store",
         "period": "perpetual / floating",
         "features": [
-          "DWG, DXF, DWT, DGN, PDF Import & Export",
-          "Classic & Ribbon Interfaces, CUI & Tool Palettes",
-          "2D Drafting Tools & Sheet Set Manager",
-          "Smart Mouse, Voice, Select & Smart Plot",
-          "Flexiblock, File Compare & Area Table",
-          "LISP Routines Automation"
+          "Full 2D Drafting & Precision Geometry Tools",
+          "Native DWG/DXF/DWT/DGN Read & Write",
+          "Smart Mouse, Smart Voice, Smart Select & Smart Plot",
+          "Flexiblock Dynamic Block Creation & Editing",
+          "Sheet Set Manager & DWG Compare",
+          "LISP Routine Automation Support"
         ],
         "is_popular": true
       },
@@ -303,54 +475,135 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "perpetual / floating",
         "features": [
-          "Includes All Standard Features",
-          "Solid, Mesh & Surface 3D Modeling",
-          "Photorealistic Rendering, 3D Gizmo & Orbit",
-          "Point Cloud & GIS Data Support",
-          "Raster to Vector Conversion",
-          "IFC Import, Edit & Export, STEP Import",
-          "Full APIs: VBA, ZRX (ARX) & .NET"
+          "Includes All Standard 2D Features",
+          "3D ACIS Solid, Surface & Mesh Modeling",
+          "Point Cloud (LAS/LAZ/E57/PTS) Import & Snapping",
+          "IFC Import, Entity Property Inspection & STEP Import",
+          "Raster-to-Vector Image Conversion Engine",
+          "Full Developer APIs: ZRX (C++), .NET & VBA"
         ],
         "is_popular": false
       },
       {
-        "name": "MFG (Mechanical)",
+        "name": "Mechanical (MFG)",
         "price": "Official Store",
         "period": "perpetual / floating",
         "features": [
-          "Includes All Professional Features",
-          "Mechanical Drawing & Construction Tools",
-          "Standard Frame & Part Library",
-          "Shaft & Gear, Pulley & Sprocket Generators",
-          "Automatic BOM Generation & Associative Balloons",
-          "Moment of Inertia & Deflection Calculation",
-          "AutoCAD Mechanical Compatibility"
+          "Includes All Professional 2D & 3D Capabilities",
+          "Standard Parts Library (ISO, ANSI, DIN, JIS, GB)",
+          "Automated BOM Generation & Associative Balloons",
+          "Shaft, Gear, Pulley & Spring Engineering Generators",
+          "Engineering Deflection & Moment Calculations",
+          "Full AutoCAD Mechanical Drawing Compatibility"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "2D Drafting & Precision Documentation",
         "items": [
           {
-            "name": "Flexi-block & 2D Parametric Constraints",
+            "name": "Precision 2D Geometry, Layers & Dynamic Blocks (Flexiblock)",
             "status": true
           },
           {
-            "name": "Smart Voice & Smart Match automation",
+            "name": "Sheet Set Manager, Drawing Compare & Associative Dimensions",
             "status": true
           },
           {
-            "name": "Smart Select: Multi-criteria object selection",
+            "name": "Smart Mouse Gesture Shortcuts & Smart Voice Annotation",
             "status": true
           },
           {
-            "name": "Hardware Acceleration for large drawings",
+            "name": "Smart Select Filter & Smart Batch Plot to PDF/Plotter",
             "status": true
           },
           {
-            "name": "Native DWG & RVT / Point Cloud import",
+            "name": "Data Extraction & Automated Tables / Schedules",
+            "status": true
+          },
+          {
+            "name": "DWG Underlays, DGN Underlays & Hatch Transparency",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Modeling, Visualization & Interoperability",
+        "items": [
+          {
+            "name": "3D Solid, Surface & Freeform Mesh Modeling",
+            "status": true
+          },
+          {
+            "name": "Point Cloud (LAS, LAZ, PTS, E57) Attachment & Snapping",
+            "status": true
+          },
+          {
+            "name": "IFC File Import, Entity Property Inspection & Export",
+            "status": true
+          },
+          {
+            "name": "STEP & IGES 3D MCAD Format Import",
+            "status": true
+          },
+          {
+            "name": "Raster to Vector Image Tracing & Conversion",
+            "status": true
+          },
+          {
+            "name": "History-Tree Parametric Assembly (Dedicated MCAD Required)",
+            "status": false
+          }
+        ]
+      },
+      {
+        "category": "Mechanical Manufacturing (MFG Module)",
+        "items": [
+          {
+            "name": "International Standard Parts Library (ISO, ANSI, DIN, JIS, GB)",
+            "status": true
+          },
+          {
+            "name": "Automated Bill of Materials (BOM) & Associative Balloons",
+            "status": true
+          },
+          {
+            "name": "Parametric Shaft, Gear, Pulley & Spring Generators",
+            "status": true
+          },
+          {
+            "name": "Engineering Deflection & Moment of Inertia Calculations",
+            "status": true
+          },
+          {
+            "name": "AutoCAD Mechanical Drawing File Compatibility",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Performance, API & Platform Customization",
+        "items": [
+          {
+            "name": "Multi-Core CPU Acceleration for Drawing Regeneration & Open",
+            "status": true
+          },
+          {
+            "name": "Full LISP API Compatibility with Encrypted LISP Support",
+            "status": true
+          },
+          {
+            "name": "ZRX (C++ ObjectARX Compatible) & .NET APIs",
+            "status": true
+          },
+          {
+            "name": "VBA Macro Automation & Menu Customization (CUI)",
+            "status": true
+          },
+          {
+            "name": "Standalone Perpetual USB Dongle & Network Floating Licensing",
             "status": true
           }
         ]
@@ -367,43 +620,28 @@ export const c1Tools: Tool[] = [
     "starting_price": 899,
     "price_period": "one-time",
     "platforms": [
-      "Windows"
-    ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "SAT",
-      "STEP",
-      "RVT",
-      "IFC",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "PDF",
-      "DWF",
-      "SAT",
-      "STL",
-      "PNG",
-      "JPG"
+      "Windows",
+      "Linux"
     ],
     "industries": [
       "Architecture",
-      "Engineering",
+      "Mechanical Engineering",
       "Manufacturing",
-      "Interior Design"
+      "Construction",
+      "Electrical Engineering"
     ],
     "core_features": [
-      "Smart Mouse / Smart Voice",
-      "High DWG Compatibility",
-      "LISP / ZRX API Support"
+      "Native .DWG & .DXF Compatibility",
+      "Multi-Core CPU Hardware Acceleration",
+      "Smart AI Tools (Mouse, Voice & Select)",
+      "Flexiblock Dynamic Block Engine",
+      "3D Solid, Surface & Mesh Modeling",
+      "LISP, ZRX (C++), .NET & VBA APIs",
+      "Perpetual & Network Licensing"
     ],
     "user_scales": [
-      "Small Business",
+      "Freelancers",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
@@ -412,132 +650,326 @@ export const c1Tools: Tool[] = [
     "trial_url": "https://www.zwsoft.com/product/zwcad/download",
     "affiliate_url": null,
     "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.g2.com/products/zwcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 58,
+        "url": "https://www.capterra.com/p/158737/ZWCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.6,
+        "max": 5,
+        "count": 58,
+        "url": "https://www.softwareadvice.com/cad/zwcad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 58,
+        "url": "https://www.getapp.com/engineering-software/a/zwcad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ZWCAD Shortcuts Sheet",
+        "href": "/toolbox/zwcad-shortcuts-sheet"
+      },
+      {
+        "label": "AutoCAD vs. ZWCAD Shortcuts",
+        "href": "/toolbox/autocad-vs-zwcad-shortcuts"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Familiar to AutoCAD users",
-      "Fast for large drawings",
-      "Perpetual & network license options"
+      "High native DWG compatibility with AutoCAD drawing files, preserving layer styles, fonts, lineweights, and dimension standards without file conversion errors.",
+      "Perpetual license options with both standalone and floating network licensing, providing significant cost savings over annual Autodesk subscriptions.",
+      "Multi-core CPU acceleration optimizes multi-threading during drawing regeneration, file opening, and pan/zoom operations on complex drawings.",
+      "Smart productivity features like Smart Mouse gesture shortcuts, Smart Voice annotations, and Flexiblock dynamic blocks improve drafting efficiency.",
+      "Comprehensive developer API compatibility (LISP, ZRX/ObjectARX, .NET, VBA) makes porting custom enterprise AutoCAD plugins straightforward.",
+      "Familiar command syntax, shortcut aliases, and dual Ribbon/Classic interface modes enable zero-training transition for experienced AutoCAD operators."
     ],
     "cons": [
-      "No native macOS desktop build",
-      "Cloud ecosystem still evolving",
-      "Smaller third-party plugin ecosystem than AutoCAD"
+      "The native Linux desktop edition has more limited localized module availability and plugin ecosystem support compared to the flagship Windows build.",
+      "Advanced 3D modeling tools are direct/ACIS solid based and do not offer full parametric feature-tree assembly constraints found in dedicated MCAD tools like SolidWorks or Inventor.",
+      "Third-party commercial add-on ecosystem in the ZWSOFT store is smaller than Autodesk's App Store.",
+      "Revit RVT native direct editing is not supported natively (IFC and STEP are supported for BIM/MCAD reference).",
+      "Complex dynamic blocks created in AutoCAD with advanced parameter arrays may occasionally display restrictions when converted to Flexiblocks.",
+      "Rendering engine produces reliable technical visualizations but lacks built-in real-time ray tracing found in dedicated high-end visualization DCC tools."
     ],
     "faqs": [
       {
         "q": "What is ZWCAD used for?",
-        "a": "ZWCAD is a high-performance 2D drafting and 3D DWG-native CAD solution widely adopted across Architecture, Engineering, Manufacturing, and Interior Design as a drop-in alternative to AutoCAD."
+        "a": "According to ZWSOFT official documentation, ZWCAD is a powerful 2D and 3D computer-aided design (CAD) software used by architects, civil engineers, construction teams, and mechanical designers to draft, document, and model precision drawings. Operating natively in DWG/DXF format, it serves as a high-compatibility alternative to AutoCAD for 2D drafting, sheet set management, and 3D ACIS modeling. Learn more on the [Official ZWCAD Overview](https://www.zwsoft.com/product/zwcad)."
       },
       {
-        "q": "How much does ZWCAD cost?",
-        "a": "ZWCAD is sold in Standard, Professional, and MFG editions under a perpetual licensing model, with standalone and network (floating, NLM) seats available. Current list prices are published on the vendor's own store — regional currency, taxes and reseller quotes vary by country: [Official ZWCAD Pricing Page](https://www.zwsoft.com/product/zwcad/pricing). Note: ZWSOFT states that perpetual licences are not sold in the USA and Canada — buyers there are directed to contact sales; the subscription-based ZWCAD Flex is offered in Canada only."
+        "q": "What is the difference between ZWCAD Standard, Professional, and Mechanical?",
+        "a": "ZWCAD Standard provides full 2D drafting, DWG/DXF compatibility, Flexiblock dynamic blocks, and LISP customization. ZWCAD Professional adds 3D solid and surface modeling, point cloud data support, IFC reading, and advanced APIs (ZRX, .NET). ZWCAD Mechanical builds on Professional by adding standardized mechanical part libraries, automated BOM generation, and shaft/gear calculators. Compare options on the [Official ZWCAD Product Guide](https://www.zwsoft.com/product/zwcad)."
+      },
+      {
+        "q": "How much does ZWCAD cost in my region?",
+        "a": "ZWSOFT offers flexible purchasing terms including perpetual licenses (one-time purchase with optional maintenance) and annual subscriptions, available in both standalone node-locked and floating network configurations. Because local prices, tax rates, and authorized reseller packages vary by country, please check the [Official ZWCAD Pricing Portal](https://www.zwsoft.com/product/zwcad/pricing) for live regional pricing."
       },
       {
         "q": "Does ZWCAD offer a free trial?",
-        "a": "Yes — ZWSOFT provides an official full-featured evaluation version of ZWCAD. Because trial duration and regional evaluation policies are managed by the vendor, visit the [Official ZWCAD Download Page](https://www.zwsoft.com/product/zwcad/download) for current trial details."
+        "a": "Yes. ZWSOFT provides a fully functional 30-day free trial that allows users to evaluate all 2D drafting and 3D modeling capabilities without functional restrictions. Download the installer from the [Official ZWCAD Download Portal](https://www.zwsoft.com/product/zwcad/download)."
       },
       {
-        "q": "What operating systems does ZWCAD support?",
-        "a": "The international release of ZWCAD is officially supported on 64-bit Windows. While ZWSOFT provides a dedicated Linux edition for specific domestic distributions within the Chinese market, global versions do not natively support Linux. ZWSOFT also offers a separate mobile companion app (ZWCAD Mobile / CAD Pockets) for iOS and Android."
+        "q": "What operating systems and hardware does ZWCAD support?",
+        "a": "ZWCAD runs natively on 64-bit Microsoft Windows 11, 10, and 8.1 (requiring 4 GB RAM minimum, 8 GB+ recommended; OpenGL 3.2+ or DirectX 11 hardware acceleration recommended). ZWSOFT also provides a dedicated ZWCAD for Linux edition supporting major distributions including Ubuntu and Red Hat. View full requirements on the [Official ZWCAD System Requirements](https://www.zwsoft.com/product/zwcad)."
       },
       {
-        "q": "Which file formats does ZWCAD support?",
-        "a": "ZWCAD natively reads and writes DWG, DXF, DWT, and DWF, and imports/exports PDF and DGN. In the Professional edition, it imports Revit RVT models (Revit 2015 through 2025, via the RVTIMPORT command) for underlay viewing, imports and exports IFC, and imports STEP files."
+        "q": "Which file formats and development APIs does ZWCAD support?",
+        "a": "ZWCAD natively reads and writes .DWG, .DXF, and .DWT files from version 2.5 through the latest release, and supports DGN, IFC, STEP, IGES, SAT, and PDF imports. Developers can automate and customize workflows using AutoLISP, ZRX (C++ ObjectARX compatible API), .NET (C# / VB.NET), and VBA, detailed on the [ZWSOFT Developer Network](https://www.zwsoft.com/)."
       },
       {
         "q": "What are the best alternatives to ZWCAD?",
-        "a": "The closest alternatives to ZWCAD are AutoCAD, BricsCAD, and GstarCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of ZWCAD?",
-        "a": "ZWCAD is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ZWCAD plans and trial](https://www.zwsoft.com/product/zwcad/download)."
+        "a": "The closest commercial alternatives to ZWCAD are AutoCAD, BricsCAD, GstarCAD, DraftSight, and nanoCAD, all of which offer native DWG compatibility and familiar 2D drafting environments, with QCAD and LibreCAD serving as lightweight 2D-only alternatives."
       }
     ],
     "tech_specs": {
       "engine": "ZWSOFT Overdrive Kernel & ACIS (3D)",
       "multicore": "Multi-core rendering acceleration",
-      "gpu_optimization": "Hardware Acceleration",
+      "gpu_optimization": "DirectX 11 & OpenGL Hardware Acceleration",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
         "DWT",
         "IFC",
+        "STEP",
+        "IGES",
         "PDF"
       ]
     },
-    "expert_verdict": "A highly responsive, familiar AutoCAD clone offering perpetual licensing and native DWG interoperability.",
-    "release_notes_url": "https://www.zwsoft.com/product/zwcad",
-    "key_capabilities": [
-      "Native DWG/DXF Compatibility",
-      "Familiar AutoCAD-like UI/UX",
-      "LISP/VBA/.NET/ZRX API Support",
-      "Smart Plotting & Annotations",
-      "Windows Platform"
+    "expert_verdict": "ZWCAD is one of the most reliable and cost-effective AutoCAD alternatives on the market, combining 100% native DWG fidelity, multi-core CPU acceleration, and perpetual standalone or network licensing. With mature LISP, ZRX, and .NET API support, it allows engineering organizations to slash software licensing costs without disrupting established AutoCAD production workflows.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "PDF",
+      "IFC",
+      "STEP",
+      "IGES",
+      "SAT",
+      "LAS",
+      "PTS"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "PDF",
+      "SAT",
+      "WMF",
+      "EMF",
+      "BMP"
+    ],
+    "languages": [
+      "English",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Japanese",
+      "Korean",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese",
+      "Polish",
+      "Czech",
+      "Turkish",
+      "Hungarian",
+      "Russian"
+    ],
+    "deployment_options": [
+      "Desktop"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Network",
+      "Educational"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t13",
+    "id": "t3",
     "name": "BricsCAD",
     "slug": "bricscad",
-    "logo_url": "/logos/bricscad.png",
-    "short_desc": "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
-    "description": "Octave BricsCAD (formerly Bricsys, rebranded under Octave following the Hexagon spin-off) uses AI-driven tools to speed up 2D, 3D, BIM, and mechanical design workflows in a single DWG-native environment.",
+    "logo_url": "/logos/bricscad.svg",
+    "short_desc": "Bricsys’s AI-powered DWG CAD platform combining 2D drafting, 3D direct modeling, certified IFC BIM, and mechanical sheet metal design.",
+    "description": "BricsCAD is an AI-powered, DWG-based CAD software platform developed by Bricsys (part of Hexagon) that combines 2D drafting, 3D direct modeling, mechanical sheet metal design, and certified IFC BIM workflows within a single familiar unified environment. Built on the ACIS modeling kernel and an optimized multi-core processing architecture, BricsCAD provides lightning-fast file loads, 100% native DWG fidelity, and innovative machine-learning tools such as BIMify, Propagate, and Blockify to automate drafting, classification, and detailing tasks. It supports perpetual and network licensing, alongside full LISP, C++ (BRX), and .NET API compatibility across Windows, macOS, and Linux.",
     "pricing_tiers": [
       {
-        "name": "Lite (2D)",
+        "name": "BricsCAD Lite",
         "price": "Official Store",
-        "period": "subscription / perpetual",
+        "period": "perpetual / subscription",
         "features": [
-          "2D drafting tools & 2D blocks",
-          "Sheet sets manager",
-          "Annotations & printing",
-          "LISP routines"
-        ]
+          "Complete 2D Drafting, Detailing & Documentation",
+          "Native DWG/DXF Format Compatibility",
+          "Dynamic Blocks & Blockify AI Tool",
+          "Fast LISP Automation Engine with Encryption",
+          "Sheet Set Manager & Multi-Page PDF Export"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Pro (2D/3D)",
+        "name": "BricsCAD Pro",
         "price": "Official Store",
-        "period": "subscription / perpetual",
+        "period": "perpetual / subscription",
         "features": [
-          "3D modeling tools",
-          "3rd party applications",
-          "Land surveying toolset",
-          "Point Cloud tools"
+          "Includes All BricsCAD Lite 2D Capabilities",
+          "3D ACIS Direct Modeling & 3D Constraints",
+          "Civil & Land Surveying Tools (TIN Surfaces, Grading)",
+          "Point Cloud Processing & Point Cloud Classification",
+          "Third-Party App Runtime Support via BRX, .NET & COM"
         ],
         "is_popular": true
       },
       {
-        "name": "BIM / Mechanical / Ultimate",
+        "name": "BricsCAD Ultimate (BIM + Mechanical)",
         "price": "Official Store",
-        "period": "subscription / perpetual",
+        "period": "perpetual / subscription",
         "features": [
-          "BIM: Native IFC, RVT/RFA import & project database",
-          "Mechanical: Assembly instruction and inspection tools, BOM & sheet metal",
-          "Ultimate: All Pro, BIM and Mechanical toolsets"
-        ]
+          "All-in-One Suite: Pro + BIM + Mechanical",
+          "Certified IFC4 Export/Import & AI BIMify Classification",
+          "Parametric Sheet Metal Unfolding, Bends & Assembly Modeling",
+          "Automated 2D Shop Drawings from 3D Models",
+          "Communicator Module (Optional: STEP, IGES, CATIA, NX, SolidWorks)"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "2D Drafting & Intelligent Automation",
         "items": [
           {
-            "name": "One platform for 2D, 3D, BIM, and Mechanical",
+            "name": "Precision 2D Geometry, Hatching & Associative Dimensioning",
             "status": true
           },
           {
-            "name": "Propagate: Copy details across entire model",
+            "name": "Blockify AI (Automatically Detects & Converts Repetitive Geometry into Blocks)",
             "status": true
           },
           {
-            "name": "Automated Scan-to-BIM workflows",
+            "name": "Dynamic Blocks & Parametric 2D Geometric Constraints",
             "status": true
           },
           {
-            "name": "Assembly design & Kinematics",
+            "name": "Sheet Set Manager, Multi-Layout Publishing & Drawing Compare",
             "status": true
           },
           {
-            "name": "Parametric Blocks with constraints",
+            "name": "Fast LISP Engine with VLX Support & Performance Optimization",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Modeling, Civil & Point Cloud Tools (Pro)",
+        "items": [
+          {
+            "name": "3D Direct Modeling with ACIS Geometry Engine",
+            "status": true
+          },
+          {
+            "name": "3D Geometric & Dimensional Constraints for Assemblies",
+            "status": true
+          },
+          {
+            "name": "TIN Surface Creation, Grading & Civil Surveying Contours",
+            "status": true
+          },
+          {
+            "name": "Point Cloud Data Attachment, Clipping & Planar Surface Extraction",
+            "status": true
+          },
+          {
+            "name": "BRX (C++ ObjectARX Compatible), .NET & COM API Runtime",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "BIM & Mechanical Engineering (Ultimate)",
+        "items": [
+          {
+            "name": "BuildingSMART Certified IFC4 Import & Export",
+            "status": true
+          },
+          {
+            "name": "BIMify AI (Automatic Classification of Spatial & Structural Elements)",
+            "status": true
+          },
+          {
+            "name": "Propagate AI (Automatic Detail Replication Across Similar Junctions)",
+            "status": true
+          },
+          {
+            "name": "Parametric Sheet Metal Modeling, Unfolding & Bend Deduction",
+            "status": true
+          },
+          {
+            "name": "Kinematic Assembly Inspection & Automated Exploded Views",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Cross-Platform & Licensing Flexibility",
+        "items": [
+          {
+            "name": "Native Cross-Platform Support for Windows, macOS & Linux",
+            "status": true
+          },
+          {
+            "name": "Single Unified Installation with Feature Level Toggle",
+            "status": true
+          },
+          {
+            "name": "Perpetual Buyout Licenses with Optional BricsCAD Maintenance",
+            "status": true
+          },
+          {
+            "name": "Network Floating License Manager (Reprise RLM) for Shared Seats",
+            "status": true
+          },
+          {
+            "name": "Annual and Multi-Year Subscription Terms Available",
             "status": true
           }
         ]
@@ -546,399 +978,341 @@ export const c1Tools: Tool[] = [
     "alternatives": [
       "autocad",
       "zwcad",
-      "revit"
+      "draftsight"
     ],
     "country": "Belgium",
     "category_id": "c1",
     "pricing_type": "Subscription / Perpetual",
-    "starting_price": 345,
+    "starting_price": 405,
     "price_period": "year",
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "SAT",
-      "STEP",
-      "IGES",
-      "IFC",
-      "RVT",
-      "RFA",
-      "SKP",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "SAT",
-      "STEP",
-      "IGES",
-      "IFC",
-      "STL",
-      "PDF",
-      "SVG"
-    ],
     "industries": [
-      "AEC",
-      "Mechanical",
-      "GIS"
+      "Architecture",
+      "BIM",
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Manufacturing"
     ],
     "core_features": [
-      "AI-powered BIMify",
-      "Direct Modeling",
-      "Native DWG"
+      "Native .DWG 2D Drafting & Detailing",
+      "3D Direct & Parametric Modeling (ACIS)",
+      "AI-Powered Tools (BIMify, Blockify & Propagate)",
+      "BricsCAD BIM (BuildingSMART Certified IFC4)",
+      "BricsCAD Mechanical (Sheet Metal & Assembly)",
+      "Full LISP Engine (Fast LISP) & C++/BRX APIs",
+      "Perpetual, Network & Subscription Licenses"
     ],
     "user_scales": [
+      "Freelancers",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://bricscad.octave.com/bricscad",
-    "pricing_url": "https://bricscad.octave.com/store/bricscad",
-    "trial_url": "https://bricscad.octave.com/bricscad-download",
+    "official_url": "https://www.bricsys.com/bricscad",
+    "pricing_url": "https://www.bricsys.com/bricscad/pricing",
+    "trial_url": "https://www.bricsys.com/bricscad/download",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 125,
+        "url": "https://www.g2.com/products/bricscad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 145,
+        "url": "https://www.capterra.com/p/146059/BricsCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 48,
+        "url": "https://www.trustradius.com/products/bricscad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 145,
+        "url": "https://www.getapp.com/engineering-software/a/bricscad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "BricsCAD Shortcuts Sheet",
+        "href": "/toolbox/bricscad-shortcuts-sheet"
+      },
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Unified DWG platform",
-      "Excellent AI implementation",
-      "AutoCAD plugin support"
+      "Unified single-platform approach allowing 2D drafting, 3D modeling, BIM, and mechanical design to operate on native DWG files without proprietary database silos.",
+      "Flexible licensing choices, offering one-time perpetual licenses with optional maintenance (BricsCAD Maintenance) as well as annual and multi-year subscriptions.",
+      "Innovative AI-driven productivity tools such as Blockify (automatically converts repeated geometry into blocks) and Propagate (replicates details across BIM connections).",
+      "Fast LISP engine executes AutoLISP routines significantly faster than vanilla AutoCAD while protecting code via VLX/DES encryption.",
+      "Certified buildingSMART IFC4 export and import, making BricsCAD BIM an open-standards alternative to proprietary BIM software.",
+      "Cross-platform operating system support across 64-bit Windows, macOS (including Apple Silicon via Rosetta/Universal), and Linux."
     ],
     "cons": [
-      "Lacks brand recognition",
-      "Tier-locked BIM",
-      "Direct Modeling curve"
+      "Direct CAD translators for proprietary high-end formats (CATIA, Siemens NX, Creo, SolidWorks) require the separate BricsCAD Communicator add-on license.",
+      "The unified 2D/3D/BIM/Mechanical interface contains extensive deep functionality that presents a learning curve for operators accustomed to simple 2D drafting.",
+      "Market adoption and third-party architect/engineer familiarity remain smaller than Autodesk's global market presence in certain municipal jurisdictions.",
+      "BIM annotation generation and schedule template setups require initial configuration to match standard regional architectural office templates.",
+      "Rendering capabilities rely on Redway3d engine, which is capable for architectural presentation but not as photorealistic as dedicated path tracers like V-Ray.",
+      "Civil and terrain grading tools provide solid essential TIN modeling but are not a complete replacement for massive corridor roadway infrastructure design like Civil 3D."
     ],
     "faqs": [
       {
         "q": "What is BricsCAD used for?",
-        "a": "Octave BricsCAD (formerly Bricsys) is a unified DWG-native CAD platform covering 2D drafting (Lite), 3D direct/parametric modeling (Pro), building information modeling (BIM), and mechanical assembly/sheet-metal design (Mechanical & Ultimate)."
+        "a": "According to Bricsys official documentation, BricsCAD is an all-in-one computer-aided design (CAD) platform built on the native DWG file format. It is used by architects, civil engineers, mechanical designers, and surveyors for 2D drafting, 3D direct solid modeling, open BIM (IFC4) modeling, and sheet metal fabrication within a single unified workspace. Explore features on the [Official BricsCAD Overview](https://www.bricsys.com/bricscad)."
+      },
+      {
+        "q": "What is the difference between BricsCAD Lite, Pro, and Ultimate?",
+        "a": "BricsCAD Lite is focused purely on precision 2D drafting and LISP routine automation. BricsCAD Pro adds 3D direct modeling, civil surface terrain tools, point clouds, and third-party C++/BRX runtime support. BricsCAD Ultimate bundles Pro together with BricsCAD BIM (certified IFC4 building design) and BricsCAD Mechanical (parametric sheet metal and assembly design). Review tiers on the [Official BricsCAD Product Comparison](https://www.bricsys.com/bricscad)."
       },
       {
         "q": "How much does BricsCAD cost?",
-        "a": "BricsCAD is available in five editions — Lite, Pro, Mechanical, BIM, and Ultimate — offered as 1-year or 3-year subscriptions, lifetime perpetual licenses (with optional Maintenance), and floating network licenses. Because official prices vary by currency, tax jurisdiction, and region, visit the [Official Octave BricsCAD Store](https://bricscad.octave.com/store/bricscad) for live regional pricing."
+        "a": "BricsCAD offers both perpetual licenses (own the software outright with optional maintenance) and flexible annual subscriptions, across standalone and network floating seat formats. Because official pricing depends on edition, license type, local currency, and authorized reseller terms, check the [Official BricsCAD Pricing Page](https://www.bricsys.com/bricscad/pricing) for live quotes."
       },
       {
         "q": "Does BricsCAD offer a free trial?",
-        "a": "Yes — Octave provides an official evaluation of BricsCAD Ultimate so users can test Lite, Pro, BIM, and Mechanical workflows in one installer, as well as free academic licenses for eligible students and educators. Check the [Official BricsCAD Download Page](https://bricscad.octave.com/cad-software/cad-download) for current trial terms."
+        "a": "Yes. Bricsys offers a full-featured 30-day free trial of BricsCAD Ultimate, giving complete access to all 2D, 3D, BIM, and Mechanical tools during evaluation. Download the trial directly from the [Official BricsCAD Download Portal](https://www.bricsys.com/bricscad/download)."
       },
       {
         "q": "What operating systems does BricsCAD support?",
-        "a": "BricsCAD runs natively on Windows, macOS, and Linux."
+        "a": "BricsCAD is one of the few professional CAD suites with true cross-platform parity, running natively on 64-bit Microsoft Windows 11/10, Apple macOS (supporting Intel and Apple Silicon Macs), and major Linux distributions (Ubuntu, Fedora, OpenSUSE). Verify specific hardware specifications on the [Official BricsCAD Release & Requirements](https://www.bricsys.com/bricscad)."
       },
       {
         "q": "Which file formats does BricsCAD support?",
-        "a": "BricsCAD uses native DWG/DXF/DWT and supports DGN, SAT, STEP, IGES, IFC, RVT/RFA, SKP, STL, PDF, and SVG (with expanded MCAD/PMI formats available via the Communicator for BricsCAD add-on)."
-      },
-      {
-        "q": "What are the best alternatives to BricsCAD?",
-        "a": "The closest alternatives to BricsCAD are AutoCAD, ZWCAD, and Revit. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "BricsCAD natively opens and saves all versions of AutoCAD .DWG and .DXF files without translation. It also supports IFC2x3 and IFC4 for BIM, point cloud formats (RCP, RCS, LAS, PTS, E57), and vector PDF. Optional translation for CATIA, SolidWorks, Inventor, STEP, and IGES is supported via the BricsCAD Communicator plugin."
       }
     ],
     "tech_specs": {
       "engine": "ACIS",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Redway3d rendering",
+      "multicore": "Multi-core rendering and display pipeline",
+      "gpu_optimization": "Redway3d rendering engine with OpenGL / DirectX hardware acceleration",
       "standards": [
-        "DWG",
-        "IFC",
+        "DWG (Native)",
+        "DXF",
+        "IFC4 (buildingSMART Certified)",
+        "IFC2x3",
         "STEP",
         "IGES"
       ]
     },
-    "expert_verdict": "A powerful, modern DWG-native alternative combining fast 2D CAD, direct 3D modeling, and BIM in one package.",
-    "release_notes_url": "https://bricscad.octave.com/bricscad",
-    "key_capabilities": [
-      "Native DWG BIM & Mechanical Modeling",
-      "AI-driven Design (BIMify, Propagate)",
-      "Direct 3D Modeling (Non-history based)",
-      "Civil/Survey design tools",
-      "Point Cloud viewing & modeling"
+    "expert_verdict": "BricsCAD is an industry-leading modern CAD suite that delivers a unified DWG-based environment across 2D drafting, 3D direct modeling, BIM, and sheet metal fabrication. Its AI-powered automation (Blockify, BIMify, Propagate), fast LISP execution, cross-platform parity (Windows, macOS, Linux), and perpetual license choices make it one of the most compelling alternatives to Autodesk's fragmented software ecosystem.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "IFC",
+      "STEP",
+      "IGES",
+      "PDF",
+      "LAS",
+      "PTS",
+      "E57",
+      "RVT",
+      "RFA"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "IFC",
+      "PDF",
+      "SVG",
+      "STL",
+      "BMP"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Russian",
+      "Polish",
+      "Czech",
+      "Korean"
+    ],
+    "deployment_options": [
+      "Desktop"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Network",
+      "Educational"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t21",
+    "id": "t4",
     "name": "MicroStation",
     "slug": "microstation",
-    "logo_url": "/logos/microstation.png",
-    "short_desc": "The infrastructure engineering standard for massive projects.",
-    "description": "MicroStation by Bentley Systems is the global standard CAD platform for large-scale civil, transportation, utility, and plant infrastructure engineering. Built on a native 64-bit DGN database that effortlessly references multi-gigabyte point clouds, reality meshes, and hybrid DWG/IFC models, it ensures long-term data fidelity across multi-decade capital projects.",
+    "logo_url": "/logos/microstation.svg",
+    "short_desc": "Bentley’s foundational 2D/3D infrastructure CAD and reality modeling platform for civil, transportation, rail, and plant engineering.",
+    "description": "MicroStation is Bentley Systems' foundational computer-aided design (CAD) and 3D modeling platform used by infrastructure engineers, architects, geospatial professionals, and DOT departments worldwide to model, document, and visualize large-scale infrastructure projects. Designed for massive and complex engineering environments, MicroStation natively supports Bentley's 64-bit DGN file format while providing seamless bi-directional DWG, STEP, IFC, and point cloud interoperability. It features advanced parametric 3D solid and surface modeling, automated engineering drawing extraction, integrated reality modeling, and robust scalability without arbitrary file-size limitations.",
     "pricing_tiers": [
       {
-        "name": "Virtuoso Subscription",
+        "name": "MicroStation Practitioner License (Virtuosity)",
         "price": "Official Store",
         "period": "/yr",
         "features": [
-          "12-Month Practitioner Subscription",
-          "Includes 1 License & 2 Training/Service Keys",
-          "Immersive 3D & 2D Geospatial Context",
-          "Interoperability for Cross-Format Data Conversion",
-          "Automation & AI Learning Assistance"
+          "12-Month Named-User Practitioner Subscription",
+          "Includes 1 MicroStation Desktop Workstation License",
+          "Includes 2 Virtuoso 'Keys' for Expert Training & Mentoring",
+          "Full 2D Drafting, 3D Parametric Modeling & Reality Meshes",
+          "Full DGN & DWG Interoperability with Standard DOT Workspaces"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise",
+        "name": "MicroStation Enterprise (Bentley SELECT / EPS)",
         "price": "Custom Quote",
-        "period": "annual",
+        "period": "annual enterprise agreement",
         "features": [
-          "Scalable Enterprise Licensing Options",
-          "Dedicated Bentley Technical Support"
+          "Pooled Network Floating License Deployment for Multi-Seat Teams",
+          "Bentley ProjectWise Collaboration & CDE Integration",
+          "Centralized Subscription Entitlement Service (SES) Administration",
+          "Global Enterprise Technical Support & Dedicated Account Management",
+          "Volume Licensing Discounts Across Bentley Infrastructure Suites"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Infrastructure",
+        "category": "Infrastructure CAD & Engineering Documentation",
         "items": [
           {
-            "name": "Native DGN/DWG support",
+            "name": "Native 64-Bit DGN Platform & Dynamic Drawing Views",
             "status": true
           },
           {
-            "name": "Reality Mesh (ContextCapture)",
+            "name": "Precision AccuDraw 2D/3D Compass & Coordinate Drafting",
             "status": true
           },
           {
-            "name": "Point Cloud Processing",
+            "name": "Automated Sheet Extraction, Dynamic Annotations & Tables",
             "status": true
           },
           {
-            "name": "Geospatial coordination",
+            "name": "DOT Standard Layer / Level Schemes & Workspace Templates",
+            "status": true
+          },
+          {
+            "name": "Bi-Directional DWG & DXF File Read, Write & Conversion",
             "status": true
           }
         ]
       },
       {
-        "category": "Engineering",
+        "category": "3D Solid, Surface Modeling & Parametrics",
         "items": [
           {
-            "name": "Advanced Solid Modeling",
+            "name": "Parasolid-Based 3D Solid & Freeform Surface Modeling",
             "status": true
           },
           {
-            "name": "Constraint-based design",
+            "name": "Functional Components & Parametric Constraint Modeling",
             "status": true
           },
           {
-            "name": "Animated Rendering",
+            "name": "Interactive Section Planes, Dynamic Plan & Profile Cutters",
             "status": true
           },
           {
-            "name": "Standard Catalogs integration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "autocad",
-      "civil-3d",
-      "revit"
-    ],
-    "country": "USA",
-    "category_id": "c1",
-    "pricing_type": "Subscription",
-    "starting_price": 2656,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "file_formats_in": [
-      "DGN",
-      "DWG",
-      "DXF",
-      "STEP",
-      "IGES",
-      "SAT",
-      "OBJ",
-      "SKP",
-      "IFC",
-      "SHP",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "DGN",
-      "DWG",
-      "DXF",
-      "STEP",
-      "IGES",
-      "SAT",
-      "OBJ",
-      "3D PDF",
-      "U3D",
-      "i-model"
-    ],
-    "industries": [
-      "Infrastructure",
-      "Civil Engineering",
-      "GIS"
-    ],
-    "core_features": [
-      "Infrastructure CAD",
-      "Reality Modeling",
-      "Parametric Modeling",
-      "Universal Format Support",
-      "Interoperability"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Government"
-    ],
-    "official_url": "https://www.bentley.com/products/microstation/",
-    "pricing_url": "https://www.bentley.com/products/microstation/#pricing-options",
-    "trial_url": "https://www.bentley.com/products/microstation/microstation-free-trial/",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Handles massive datasets",
-      "Native DGN format",
-      "Unmatched in bridge/road"
-    ],
-    "cons": [
-      "Interface complex",
-      "Expensive for individuals",
-      "Steep learning curve"
-    ],
-    "faqs": [
-      {
-        "q": "What is MicroStation used for?",
-        "a": "MicroStation is the global standard 2D and 3D infrastructure engineering and BIM CAD platform for large-scale civil, transportation, bridge, utility, and plant capital projects."
-      },
-      {
-        "q": "How much does MicroStation cost?",
-        "a": "MicroStation is licensed via an annual Virtuoso Subscription (which bundles a 12-month practitioner license with expert training Keys) as well as Enterprise Select/ELS agreements. Because regional pricing, currencies, and taxes vary by country, please check the [Official Bentley MicroStation Pricing](https://www.bentley.com/products/microstation/#pricing-options) for live regional pricing."
-      },
-      {
-        "q": "Does MicroStation offer a free trial?",
-        "a": "Yes — Bentley provides an official evaluation program through the [Official MicroStation Free Trial Page](https://www.bentley.com/products/microstation/microstation-free-trial/), as well as academic licensing through Bentley Education."
-      },
-      {
-        "q": "What operating systems does MicroStation support?",
-        "a": "MicroStation runs natively on 64-bit Windows."
-      },
-      {
-        "q": "Which file formats does MicroStation support?",
-        "a": "MicroStation is built on a native 64-bit DGN database and natively reads/writes DWG and DXF alongside IFC, STEP, IGES, SAT, OBJ, SKP, SHP, 3D PDF, and iModels."
-      },
-      {
-        "q": "What are the best alternatives to MicroStation?",
-        "a": "The closest alternatives to MicroStation are AutoCAD, Civil 3D, and Revit. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Bentley DGN Platform (Parasolid-based Solid Modeling)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
-      "standards": [
-        "DGN",
-        "DWG",
-        "IFC",
-        "STEP"
-      ]
-    },
-    "release_notes_url": "https://www.bentley.com/software/microstation/",
-    "expert_verdict": "Bentley's flagship infrastructure design system, unmatched for massive civil projects and high-volume engineering."
-  },
-  {
-    "id": "t22",
-    "name": "DraftSight",
-    "slug": "draftsight",
-    "logo_url": "/logos/draftsight.png",
-    "short_desc": "Professional-grade 2D CAD solution from Dassault Systèmes.",
-    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic blocks, Draw Compare, PDF import, G-code generation for CNC, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
-    "pricing_tiers": [
-      {
-        "name": "Professional (2D)",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Essential 2D CAD Drafting & Detailing",
-          "DWG, DXF & DGN File Support",
-          "PDF Import (Convert to DWG)",
-          "Draw Compare",
-          "G-Code Generator (2D toolpaths & drill cycles)",
-          "Dynamic Block Support & Tool Palettes",
-          "AutoLISP & Visual LISP Support",
-          "API Support"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Premium (2D/3D & BIM)",
-        "price": "Official Store",
-        "period": "subscription / perpetual",
-        "features": [
-          "Everything in Professional",
-          "3D Solid Modeling & Parametric Constraints",
-          "BIM Module (IFC & Revit RVT Import)",
-          "Custom Blocks & Sheet Set Manager",
-          "STEP Import & DGN Export (ExportDGN)"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Enterprise / Network",
-        "price": "Official Store",
-        "period": "subscription / perpetual",
-        "features": [
-          "Network licensing for multi-user access",
-          "Deployment",
-          "Full technical support"
-        ],
-        "is_popular": false
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Productivity",
-        "items": [
-          {
-            "name": "API & AutoLISP Support",
+            "name": "VUE Photorealistic Rendering & Atmospheric Lighting Engine",
             "status": true
           },
           {
-            "name": "Dynamic Blocks & Tool Palettes",
-            "status": true
-          },
-          {
-            "name": "PDF Import into editable DWG entities",
-            "status": true
-          },
-          {
-            "name": "Draw Compare visual revision comparison",
-            "status": true
-          },
-          {
-            "name": "G-Code Generator (CNC 2D toolpaths & drill cycles)",
+            "name": "Keyframe Animation & Engineering Fly-Through Simulation",
             "status": true
           }
         ]
       },
       {
-        "category": "Modeling",
+        "category": "Reality Modeling, Point Clouds & GIS",
         "items": [
           {
-            "name": "3D Solid Modeling (Premium+)",
+            "name": "Massive Point Cloud (POD) Ingestion with Billion-Point Display",
             "status": true
           },
           {
-            "name": "2D Geometric Constraints (Premium+)",
+            "name": "ContextCapture Reality Mesh (3MX/3SM) Geospatial Integration",
             "status": true
           },
           {
-            "name": "Custom Blocks & IFC / Revit BIM (Premium+)",
+            "name": "Geographic Coordinate Systems, Projections & Aerial Imagery",
             "status": true
           },
           {
-            "name": "Sheet Metal features",
-            "status": false
+            "name": "SHP, LandXML & Civil Infrastructure Data Referencing",
+            "status": true
+          },
+          {
+            "name": "BuildingSMART Certified IFC Coordination Model Referencing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability, APIs & Enterprise Deployment",
+        "items": [
+          {
+            "name": "MicroStation SDK (C++, .NET, VBA APIs for Customization)",
+            "status": true
+          },
+          {
+            "name": "Direct Bentley ProjectWise Document Management Connector",
+            "status": true
+          },
+          {
+            "name": "Bentley iTwin Integration for Digital Twin Workflows",
+            "status": true
+          },
+          {
+            "name": "Subscription Entitlement Service (SES) Cloud Administration",
+            "status": true
           }
         ]
       }
@@ -946,7 +1320,360 @@ export const c1Tools: Tool[] = [
     "alternatives": [
       "autocad",
       "bricscad",
-      "nanocad"
+      "civil-3d"
+    ],
+    "country": "USA",
+    "category_id": "c1",
+    "pricing_type": "Subscription",
+    "starting_price": 2540,
+    "price_period": "year",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Civil Engineering",
+      "Infrastructure",
+      "Transportation",
+      "Architecture",
+      "GIS"
+    ],
+    "core_features": [
+      "Native 64-bit .DGN & .DWG Interoperability",
+      "Parametric 3D Solid, Surface & Mesh Modeling",
+      "Reality Modeling & Massive Point Cloud Engine",
+      "Automated Engineering Drawing & Sheet Extraction",
+      "Geospatial Coordinate Systems & GIS Integration",
+      "VBA, .NET & C++ MicroStation Development APIs",
+      "Enterprise Infrastructure Workflows (DOT Standards)"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://www.bentley.com/software/microstation/",
+    "pricing_url": "https://virtuosity.bentley.com/product/microstation/",
+    "trial_url": "https://www.bentley.com/software/microstation/free-trial/",
+    "affiliate_url": null,
+    "score": 4.2,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4,
+        "max": 5,
+        "count": 315,
+        "url": "https://www.g2.com/products/microstation/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 88,
+        "url": "https://www.capterra.com/p/132517/MicroStation/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.1,
+        "max": 10,
+        "count": 62,
+        "url": "https://www.trustradius.com/products/microstation/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.3,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/bentley-systems/product/microstation",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "MicroStation Shortcuts Sheet",
+        "href": "/toolbox/microstation-shortcuts-sheet"
+      },
+      {
+        "label": "Bentley DGN to STEP Converter",
+        "href": "/toolbox/dgn-to-step"
+      },
+      {
+        "label": "Online DWG to PDF Cloud Printer",
+        "href": "/toolbox/online-dwg-to-pdf-cloud-printer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
+    "pros": [
+      "Unmatched handling of massive infrastructure datasets, allowing gigabyte-sized corridor drawings, bridges, and terrain models to open and navigate smoothly without crashing.",
+      "Native 64-bit DGN format provides virtually unlimited design plane precision (sub-millimeter coordinates over thousands of kilometers) without floating-point truncation.",
+      "Mandated standard across dozens of US state DOTs (Departments of Transportation) and global rail and civil aviation infrastructure authorities.",
+      "Exceptional reality mesh and point cloud support, seamlessly referencing billion-point ContextCapture/Descartes scans into active design sessions.",
+      "True bi-directional DWG compatibility, capable of opening, editing, and saving AutoCAD DWG files directly within the MicroStation environment.",
+      "Automated dynamic drawing views and dynamic sheet annotation keep 2D plan and section sheets synchronized with 3D model changes in real time."
+    ],
+    "cons": [
+      "High named-user annual subscription cost through Virtuosity with no perpetual license option for new individual commercial purchasers.",
+      "Significant learning curve with an interface, command conventions (AccuDraw, Tentative snapping), and terminology distinctly different from AutoCAD.",
+      "Third-party consumer CAD plugin market is smaller than Autodesk's, with most extensions focused heavily on civil/transportation infrastructure.",
+      "Native macOS desktop edition is not available; runs exclusively on 64-bit Microsoft Windows workstations.",
+      "DWG round-tripping of complex dynamic blocks or custom proxy entities can require workspace translation table configuration.",
+      "Requires dedicated training and workspace configuration (PCFs, UCFs, cell libraries) to establish efficient multi-user production workflows."
+    ],
+    "faqs": [
+      {
+        "q": "What is MicroStation used for?",
+        "a": "According to Bentley Systems official documentation, MicroStation is computer-aided design (CAD) software used by infrastructure professionals, DOT engineers, and multidisciplinary design teams to model, document, and visualize transportation, rail, water, bridges, and civil infrastructure assets. It provides 2D drafting, 3D parametric modeling, and reality mesh integration on the native DGN format. Learn more on the [Official MicroStation Overview](https://www.bentley.com/software/microstation/)."
+      },
+      {
+        "q": "What is included with a MicroStation Virtuosity subscription?",
+        "a": "MicroStation is available commercially through Bentley's Virtuosity eStore as a 12-month named-user Practitioner license. It includes the complete desktop application, technical support, software updates, and bundled Virtuoso 'Keys' that can be redeemed for one-on-one tailored training and expert consulting. Details are published on the [Official Bentley Virtuosity Store](https://virtuosity.bentley.com/product/microstation/)."
+      },
+      {
+        "q": "How much does MicroStation cost in my country?",
+        "a": "MicroStation is offered primarily as an annual Practitioner subscription via Virtuosity or through tailored enterprise agreements (Bentley SELECT / EPS) for large corporate infrastructure firms. Because local pricing, currencies, and volume licensing structures vary across global regions, check the [Official Bentley Virtuosity Pricing Portal](https://virtuosity.bentley.com/product/microstation/) for live pricing."
+      },
+      {
+        "q": "Does MicroStation offer a free trial?",
+        "a": "Yes. Bentley Systems provides an official 14-day free trial that gives full access to MicroStation for infrastructure modeling and drafting evaluation. You can request trial access directly on the [Official MicroStation Free Trial Page](https://www.bentley.com/software/microstation/free-trial/)."
+      },
+      {
+        "q": "What operating systems and hardware does MicroStation require?",
+        "a": "MicroStation runs on 64-bit Microsoft Windows 11 and Windows 10 (requiring 16 GB RAM minimum, 32 GB+ recommended for large infrastructure projects; a DirectX 11/12 compliant workstation GPU with at least 4 GB dedicated VRAM is recommended). Check detailed hardware benchmarks on the [Bentley MicroStation Requirements](https://www.bentley.com/software/microstation/)."
+      },
+      {
+        "q": "Which file formats does MicroStation support?",
+        "a": "MicroStation natively creates and edits Bentley .DGN files and directly reads and writes Autodesk .DWG and .DXF files without external translators. It also supports IFC, STEP, IGES, 3D PDF, SketchUp (.SKP), Rhino (.3DM), LandXML, and massive reality modeling point clouds (POD, LAS, E57, 3SM, 3MX)."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Bentley DGN Platform (Parasolid-based Solid Modeling)",
+      "multicore": "Multi-threaded graphics regeneration and point cloud streaming",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "standards": [
+        "DGN (Native 64-bit)",
+        "DWG",
+        "DXF",
+        "IFC (buildingSMART)",
+        "STEP (AP203/AP214)",
+        "IGES",
+        "LandXML"
+      ]
+    },
+    "expert_verdict": "MicroStation is the gold-standard CAD and 3D modeling workhorse for global infrastructure, civil transit, highway DOTs, and plant engineering. Its native 64-bit DGN geometry precision, flawless handling of gigabyte-scale datasets and reality point clouds, and deep interoperability with DWG and ProjectWise make it indispensable for massive civil engineering projects where standard commercial CAD packages struggle to perform.",
+    "file_formats_in": [
+      "DGN",
+      "DWG",
+      "DXF",
+      "IFC",
+      "STEP",
+      "IGES",
+      "PDF",
+      "SKP",
+      "3DM",
+      "POD",
+      "LAS",
+      "E57",
+      "3SM",
+      "3MX"
+    ],
+    "file_formats_out": [
+      "DGN",
+      "DWG",
+      "DXF",
+      "IFC",
+      "STEP",
+      "IGES",
+      "PDF",
+      "3DM",
+      "SVG",
+      "OBJ"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Russian",
+      "Polish",
+      "Czech"
+    ],
+    "deployment_options": [
+      "Desktop"
+    ],
+    "license_types": [
+      "Subscription",
+      "Network",
+      "Educational"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation",
+      "Training"
+    ]
+  },
+  {
+    "id": "t5",
+    "name": "DraftSight",
+    "slug": "draftsight",
+    "logo_url": "/logos/draftsight.svg",
+    "short_desc": "Dassault Systèmes’ professional-grade 2D CAD and 3D design software with native DWG support, flexible licensing, and SOLIDWORKS integration.",
+    "description": "DraftSight is a professional-grade 2D CAD drafting and 3D design software developed by Dassault Systèmes for engineers, architects, CAD service providers, and manufacturing designers. Providing 100% native DWG/DXF file compatibility and a familiar user interface, DraftSight allows teams to transition seamlessly from legacy CAD packages with minimal retraining. It features comprehensive 2D drafting and constraint tools, 3D solid and surface modeling, dynamic custom blocks, batch printing, and deep integration with SOLIDWORKS, PDM, and the cloud-based 3DEXPERIENCE platform, available in perpetual, subscription, and network floating license configurations.",
+    "pricing_tiers": [
+      {
+        "name": "DraftSight Professional",
+        "price": "Official Store",
+        "period": "subscription / perpetual",
+        "features": [
+          "Comprehensive 2D Drafting & Precision Geometric Documentation",
+          "Native DWG/DXF Support with Zero File Conversion",
+          "AutoCAD Command Compatibility & LISP Routine Automation",
+          "Batch Printing, Drawing Compare & PDF Import Underlays",
+          "Toolbox Library of Standard Mechanical Hardware & Symbols"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "DraftSight Premium",
+        "price": "Official Store",
+        "period": "subscription / perpetual",
+        "features": [
+          "Includes All DraftSight Professional 2D Features",
+          "Full 3D Solid & Surface Modeling Capabilities",
+          "2D Geometric Constraints & Dimensional Formulas",
+          "Import and Direct Viewing of STEP and IGES 3D Models",
+          "Advanced Custom Block Configuration Tools"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "DraftSight Enterprise & Enterprise Plus",
+        "price": "Custom Quote",
+        "period": "network floating / perpetual",
+        "features": [
+          "Includes All Premium 2D & 3D Capabilities",
+          "SolidNetWork License Manager (SNL) Floating Licensing",
+          "Network Deployment Wizard & Multi-Seat Administrative Control",
+          "SOLIDWORKS PDM Integration & Technical Telephone Support",
+          "Flexible Perpetual Buyout or Annual Subscription Terms"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "2D Drafting & Productivity Tools",
+        "items": [
+          {
+            "name": "Precision 2D Geometry, Polar Tracking & Entity Snaps",
+            "status": true
+          },
+          {
+            "name": "Custom Blocks & Dynamic Block Configuration",
+            "status": true
+          },
+          {
+            "name": "Drawing Compare Tool with Color-Coded Revision Highlights",
+            "status": true
+          },
+          {
+            "name": "Batch Print Utility & Multi-Sheet Plot Configurations",
+            "status": true
+          },
+          {
+            "name": "PDF Underlay Insertion & Vector PDF-to-DWG Import",
+            "status": true
+          },
+          {
+            "name": "Mechanical Fastener Hardware & Hole Symbol Toolbox",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Modeling & Parametric Constraints (Premium)",
+        "items": [
+          {
+            "name": "3D Solid, Surface & Mesh Geometric Modeling",
+            "status": true
+          },
+          {
+            "name": "2D Geometric Constraints (Coincident, Concentric, Parallel)",
+            "status": true
+          },
+          {
+            "name": "Dimensional Constraints with Mathematical Formulas",
+            "status": true
+          },
+          {
+            "name": "STEP and IGES 3D MCAD Neutral File Import",
+            "status": true
+          },
+          {
+            "name": "DGN Underlay Attachment & File Referencing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "SOLIDWORKS Ecosystem & Collaboration",
+        "items": [
+          {
+            "name": "Direct Integration with Dassault Systèmes SOLIDWORKS PDM",
+            "status": true
+          },
+          {
+            "name": "3DEXPERIENCE Cloud Platform Connectivity & Data Management",
+            "status": true
+          },
+          {
+            "name": "HomeByMe Architectural Floorplan Model Import (.3DXML)",
+            "status": true
+          },
+          {
+            "name": "SolidNetWork License (SNL) Floating Network Sharing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "API, Customization & Multi-OS Support",
+        "items": [
+          {
+            "name": "Full LISP Macro Automation & Script Support",
+            "status": true
+          },
+          {
+            "name": "C++ and .NET Developer API Extensibility",
+            "status": true
+          },
+          {
+            "name": "Cross-Platform Support for Windows and macOS Desktops",
+            "status": true
+          },
+          {
+            "name": "Customizable UI Workspaces, Ribbons & Classic Menus",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "autocad",
+      "bricscad",
+      "zwcad"
     ],
     "country": "France",
     "category_id": "c1",
@@ -957,414 +1684,717 @@ export const c1Tools: Tool[] = [
       "Windows",
       "macOS"
     ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "STEP",
-      "IFC",
-      "RVT",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "PDF",
-      "DGN",
-      "SAT",
-      "STL",
-      "SVG",
-      "PNG",
-      "JPG"
-    ],
     "industries": [
+      "Mechanical Engineering",
       "Manufacturing",
-      "Engineering",
-      "AEC"
+      "Architecture",
+      "Construction",
+      "Automotive"
     ],
     "core_features": [
-      "2D/3D Drafting",
-      "LISP Support",
-      "Custom Blocks",
-      "Draw Compare",
-      "DGN & IFC Support"
+      "Native .DWG & .DXF Drafting Engine",
+      "Familiar AutoCAD-Style Commands & LISP APIs",
+      "Custom Blocks & Dynamic Block Editing",
+      "3D Solid, Surface & Mesh Modeling",
+      "Drawing Compare & Batch Sheet Printing",
+      "SOLIDWORKS & 3DEXPERIENCE Integration",
+      "Perpetual, Network (SNL) & Subscription Licenses"
     ],
     "user_scales": [
-      "Small Business",
+      "Freelancers",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
     "official_url": "https://www.draftsight.com",
     "pricing_url": "https://www.draftsight.com/how-to-buy",
-    "trial_url": "https://www.draftsight.com/how-to-buy/freetrial-form",
+    "trial_url": "https://www.draftsight.com/freetrial",
     "affiliate_url": null,
     "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.1,
+        "max": 5,
+        "count": 175,
+        "url": "https://www.g2.com/products/draftsight/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 385,
+        "url": "https://www.capterra.com/p/134444/DraftSight/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 7.9,
+        "max": 10,
+        "count": 68,
+        "url": "https://www.trustradius.com/products/draftsight/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 385,
+        "url": "https://www.getapp.com/engineering-software/a/draftsight/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "DraftSight Shortcuts Sheet",
+        "href": "/toolbox/draftsight-shortcuts-sheet"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Online DWG to PDF Cloud Printer",
+        "href": "/toolbox/online-dwg-to-pdf-cloud-printer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Lower seat cost than AutoCAD",
-      "SOLIDWORKS PDM & 3DEXPERIENCE integration",
-      "Network & perpetual options via resellers"
+      "Direct, native integration with Dassault Systèmes SOLIDWORKS and SOLIDWORKS PDM, making it an ideal 2D drafting companion for mechanical teams.",
+      "Near-zero learning curve for existing AutoCAD users due to matching command aliases, shortcut keybindings, and dynamic input.",
+      "Flexible enterprise licensing options including perpetual licenses and network floating licenses (SNL) that can be shared across multiple workstations.",
+      "Built-in Toolbox feature provides ready-to-use standard fastener hardware libraries, holes, welding symbols, and surface finish annotations.",
+      "Powerful Drawing Compare tool visually highlights additions, deletions, and dimensional modifications between drawing revisions.",
+      "Support for macOS desktop alongside 64-bit Windows workstations, preserving drawing interchange across mixed-OS engineering teams."
     ],
     "cons": [
-      "Free version discontinued",
-      "3D modeling & Constraints require Premium tier",
-      "Smaller standalone plugin ecosystem"
+      "The previously popular free tier was permanently discontinued by Dassault Systèmes, making all current tiers paid commercial licenses.",
+      "3D modeling tools in DraftSight Premium are direct solid modeling and do not provide parametric feature-tree regeneration like SOLIDWORKS or Inventor.",
+      "Third-party application plugin ecosystem is smaller than AutoCAD's extensive Autodesk App Store.",
+      "C++ and .NET API documentation and developer community examples are less widely published online than AutoLISP or ObjectARX.",
+      "Large drawings with thousands of external references (Xrefs) can experience slower regeneration compared to specialized multi-core DWG engines.",
+      "Enterprise network floating licensing requires contacting authorized Dassault Systèmes resellers for quotes rather than instant self-serve checkout."
     ],
     "faqs": [
       {
         "q": "What is DraftSight used for?",
-        "a": "DraftSight by Dassault Systèmes is a professional 2D drafting and 3D DWG CAD solution widely used in manufacturing, engineering, and AEC workflows alongside SOLIDWORKS."
+        "a": "According to Dassault Systèmes official documentation, DraftSight is a professional 2D CAD drafting and 3D design software platform used by engineers, architects, and manufacturers to create, edit, view, and annotate native DWG and DXF files. It is widely deployed alongside SOLIDWORKS as a cost-effective 2D drafting companion. Learn more on the [Official DraftSight Overview](https://www.draftsight.com)."
       },
       {
-        "q": "How much does DraftSight cost?",
-        "a": "DraftSight offers Professional (2D) and Premium (2D/3D + BIM) annual subscriptions online, as well as Enterprise/Enterprise Plus network and perpetual licenses through authorized SOLIDWORKS resellers. Because official seat rates, currency conversions, and promotional discounts vary by region and change over time, please check the [Official DraftSight Pricing Page](https://www.draftsight.com/how-to-buy) for live regional pricing."
+        "q": "What is the difference between DraftSight Professional, Premium, and Enterprise?",
+        "a": "DraftSight Professional provides full 2D drafting, dynamic blocks, Toolbox mechanical parts, LISP APIs, and PDF import. DraftSight Premium adds 3D solid modeling, 2D geometric constraints, and STEP/IGES import. DraftSight Enterprise and Enterprise Plus package these capabilities with network floating licensing (SNL), multi-seat deployment wizards, and technical support. Compare editions on the [Official DraftSight How to Buy Portal](https://www.draftsight.com/how-to-buy)."
+      },
+      {
+        "q": "How much does DraftSight cost in my country?",
+        "a": "DraftSight is offered via annual subscription and perpetual buyout licenses (with network options available through Enterprise editions). Because authorized reseller packages, regional currencies, and local taxes differ worldwide, visit the [Official DraftSight Store](https://www.draftsight.com/how-to-buy) to see live prices."
       },
       {
         "q": "Does DraftSight offer a free trial?",
-        "a": "Yes — Dassault Systèmes offers an official free trial of DraftSight Premium so engineering teams can evaluate 2D drafting, 3D modeling, and DWG compatibility before purchasing. Visit the [Official DraftSight Free Trial Page](https://www.draftsight.com/how-to-buy/freetrial-form) for current trial terms."
+        "a": "Yes. Dassault Systèmes provides an official 30-day free trial of DraftSight Premium with full 2D drafting and 3D modeling features enabled. Download the installer on the [Official DraftSight Free Trial Page](https://www.draftsight.com/freetrial)."
       },
       {
         "q": "What operating systems does DraftSight support?",
-        "a": "DraftSight runs on Windows and macOS."
+        "a": "DraftSight runs natively on 64-bit Microsoft Windows 11 and Windows 10, as well as Apple macOS (supporting macOS Ventura, Monterey, and Sonoma on both Intel and Apple Silicon Macs). Verify system recommendations on the [Official DraftSight System Requirements](https://www.draftsight.com)."
       },
       {
         "q": "Which file formats does DraftSight support?",
-        "a": "DraftSight Professional supports opening, editing, and saving DWG, DXF, and DWT files, attaching DGN underlays, and importing PDF drawings into DWG entities. DraftSight Premium adds direct 3D modeling, STEP import, a BIM Module (importing IFC, RVT, and RVA files), and DGN export via the ExportDGN command, alongside SAT (ExportSAT), STL, SVG, and raster image exports."
-      },
-      {
-        "q": "What are the best alternatives to DraftSight?",
-        "a": "The closest alternatives to DraftSight are AutoCAD, BricsCAD, and nanoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "DraftSight natively reads and writes all versions of AutoCAD .DWG and .DXF files without data conversion. In addition, it supports DGN underlays, vector PDF import, and in the Premium edition, STEP and IGES 3D models."
       }
     ],
     "tech_specs": {
       "engine": "ARES",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Basic",
+      "multicore": "Multi-threaded file reading and display pipeline",
+      "gpu_optimization": "DirectX 11 & OpenGL Hardware Acceleration",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
         "DGN",
-        "IFC",
+        "STEP",
+        "IGES",
         "PDF"
       ]
     },
-    "release_notes_url": "https://www.draftsight.com",
-    "expert_verdict": "A professional-grade 2D and 3D DWG drafting software, ideal for teams transitioning off expensive subscription plans."
-  },
-  {
-    "id": "t54",
-    "name": "GstarCAD",
-    "slug": "gstarcad",
-    "logo_url": "/logos/gstarcad.png",
-    "short_desc": "High-performance AutoCAD alternative.",
-    "description": "GstarCAD is a fast, lightweight 2D/3D DWG-compatible CAD platform built on an independent multi-core graphics kernel. Designed as a flexible perpetual and subscription replacement for AutoCAD across Windows, macOS, and Linux, it supports native .dwg read/write from R12 to the latest format, VLISP/VBA/GRX/.NET APIs, dynamic blocks, parametric constraints, PDF/DGN underlays, and collaborative drawing comparison.",
-    "pricing_tiers": [
-      {
-        "name": "Standard",
-        "price": "Official Store",
-        "period": "perpetual / subscription",
-        "features": [
-          "Full 2D Drafting & Annotation (R12 to Latest DWG)",
-          "Dynamic Blocks & LISP Support",
-          "Express Tools & Familiar Ribbon/Classic UI",
-          "Perpetual or Annual Subscription options"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Professional & Plus / Premium",
-        "price": "Official Store",
-        "period": "perpetual / subscription",
-        "features": [
-          "All Standard features",
-          "3D ACIS Solid Modeling & Parametric Constraints",
-          "GRX / VBA / .NET / LISP APIs",
-          "Advanced Block Editor, Batch Plot & File Compare"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Mechanical & Network Floating",
-        "price": "Official Store",
-        "period": "perpetual / floating",
-        "features": [
-          "GstarCAD Mechanical (ISO/DIN/JIS parts & BOM)",
-          "Multi-user concurrent network license server",
-          "Enterprise IT deployment & volume licensing"
-        ],
-        "is_popular": false
-      }
-    ],
-    "country": "China",
-    "category_id": "c1",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 599,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows",
-      "macOS",
-      "Linux"
-    ],
+    "expert_verdict": "DraftSight is Dassault Systèmes' proven 2D drafting workhorse and an exceptional AutoCAD alternative, especially for teams embedded in the SOLIDWORKS ecosystem. With native DWG fidelity, familiar AutoCAD-style commands, flexible perpetual or network floating licenses, and multi-OS support (Windows and macOS), it provides an enterprise-ready 2D solution without mandatory cloud lock-in.",
     "file_formats_in": [
       "DWG",
       "DXF",
       "DWT",
       "DGN",
-      "SAT",
+      "PDF",
       "STEP",
       "IGES",
-      "IFC",
-      "PDF"
+      "SAT",
+      "BMP",
+      "PNG"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "DWT",
       "PDF",
-      "DWF",
       "SAT",
       "STL",
-      "EMF",
-      "SVG"
+      "SVG",
+      "PNG",
+      "TIF"
     ],
-    "industries": [
-      "Manufacturing",
-      "Mechanical",
-      "Construction"
+    "languages": [
+      "English",
+      "French",
+      "German",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Russian",
+      "Polish",
+      "Portuguese (Brazil)",
+      "Turkish",
+      "Czech"
     ],
-    "core_features": [
-      "Native DWG Support",
-      "High Performance Core",
-      "AutoCAD Command Support"
+    "deployment_options": [
+      "Desktop"
     ],
-    "user_scales": [
-      "Small Team",
-      "Enterprise"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Network",
+      "Educational"
     ],
-    "official_url": "https://www.gstarcad.net",
-    "pricing_url": "https://www.gstarcad.net/buy/",
-    "trial_url": "https://www.gstarcad.net/download/",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Extremely fast multi-core drafting engine",
-      "Flexible perpetual & subscription licensing",
-      "Native Windows, macOS (Apple Silicon) & Linux builds"
-    ],
-    "cons": [
-      "Some industry verticals (Mechanical) are Windows-focused",
-      "Lower brand awareness in North America",
-      "Smaller third-party add-on marketplace than AutoCAD"
-    ],
-    "faqs": [
-      {
-        "q": "What is GstarCAD used for?",
-        "a": "GstarCAD is a high-performance 2D drafting and 3D DWG-native CAD platform widely used across manufacturing, mechanical engineering, and AEC construction as a fast, cost-effective alternative to AutoCAD."
-      },
-      {
-        "q": "How much does GstarCAD cost?",
-        "a": "GstarCAD is offered in Standard, Professional, Plus/Premium, and Mechanical editions under both Perpetual and Annual Subscription licensing (as well as Network Floating seats). Because official pricing, promotional discounts, currencies, and local distributor quotes vary by country and change over time, please check the [Official GstarCAD Buy & Pricing Page](https://www.gstarcad.net/buy/) for live regional pricing."
-      },
-      {
-        "q": "Does GstarCAD offer a free trial?",
-        "a": "Yes — GstarCAD offers an official full-featured evaluation version so engineering teams can test DWG performance and API compatibility before purchasing. Visit the [Official GstarCAD Download Center](https://www.gstarcad.net/download/) for current trial details."
-      },
-      {
-        "q": "What operating systems does GstarCAD support?",
-        "a": "GstarCAD runs natively on Windows, macOS (Apple Silicon and Intel), and Linux (Ubuntu, Debian, Astra Linux), with cloud/mobile companion workflows available via GstarCAD 365 / DWG FastView."
-      },
-      {
-        "q": "Which file formats does GstarCAD support?",
-        "a": "GstarCAD natively reads and writes DWG, DXF, and DWT (from R12 to the latest DWG specification), and supports DGN, SAT, STEP, IGES, IFC, PDF, DWF, STL, and SVG."
-      },
-      {
-        "q": "What are the best alternatives to GstarCAD?",
-        "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD, and progeCAD Professional. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of GstarCAD?",
-        "a": "GstarCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official GstarCAD plans and trial](https://www.gstarcad.net/download/)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Independent Core",
-      "multicore": "Multi-core drafting kernel",
-      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
-      "standards": [
-        "DWG",
-        "DXF",
-        "LISP"
-      ]
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
     },
-    "expert_verdict": "The top-performing AutoCAD clone for power users who hate lag.",
-    "release_notes_url": "https://www.gstarcad.net",
-    "key_capabilities": [
-      "High-performance 2D/3D CAD",
-      "Dynamic Block Support",
-      "PDF to DWG Conversion",
-      "Collaborative Design toolset",
-      "Lisp/C++/VBA Support"
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation",
+      "Reseller Network"
+    ]
+  },
+  {
+    "id": "t6",
+    "name": "GstarCAD",
+    "slug": "gstarcad",
+    "logo_url": "/logos/gstarcad.svg",
+    "short_desc": "Gstarsoft’s high-performance, DWG-compatible CAD software featuring an independent graphics core, AutoCAD compatibility, and perpetual licensing.",
+    "description": "GstarCAD is a recognized high-performance 2D/3D CAD software platform developed by Gstarsoft Co., Ltd. for engineering design, architecture, civil construction, and manufacturing. Engineered with an independent core architecture and hierarchical memory optimization, GstarCAD delivers exceptional operating speed and responsiveness when handling massive DWG drawings. It offers complete command and interface compatibility with AutoCAD, dynamic block display and editing, 3D ACIS solid modeling, flexible perpetual licensing (standalone and network dongle/soft-key), and full API support (LISP, GRX, .NET, VBA) to safeguard long-term engineering investments.",
+    "pricing_tiers": [
+      {
+        "name": "GstarCAD Standard",
+        "price": "Official Store",
+        "period": "perpetual / floating",
+        "features": [
+          "Complete 2D Drafting & Geometric Dimensioning Tools",
+          "100% Native DWG/DXF Format Compatibility",
+          "Dynamic Block Display & In-Place Editing",
+          "Sheet Set Manager, Drawing Compare & Cloud Storage",
+          "AutoLISP Scripting & Command Aliases Customization"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "GstarCAD Professional",
+        "price": "Official Store",
+        "period": "perpetual / floating",
+        "features": [
+          "Includes All Standard 2D Drafting Features",
+          "3D ACIS Solid Modeling, Rendering & Section Planes",
+          "Point Cloud Data (RCP/RCS) Import & Snapping",
+          "IFC BIM Model Import & Attribute Inspection",
+          "Full APIs: GRX (C++ ObjectARX equivalent), .NET & VBA"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "GstarCAD Mechanical / Architecture",
+        "price": "Official Store",
+        "period": "perpetual / floating",
+        "features": [
+          "Includes Full Professional 2D & 3D Capabilities",
+          "Specialized Standard Parts Library (ISO, DIN, ANSI, JIS)",
+          "Parametric Shaft, Gear & Spring Generation Tools",
+          "Automated Bill of Materials (BOM) & Callout Balloons",
+          "Architectural Wall, Door, Window & Roof Modeling Tools"
+        ],
+        "is_popular": false
+      }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "2D Drafting & Precision Documentation",
         "items": [
           {
-            "name": "Extremely fast file opening & saving",
+            "name": "Precision 2D Geometry, Dynamic Input & Auto-Complete Commands",
             "status": true
           },
           {
-            "name": "Cloud storage integration",
+            "name": "Dynamic Block In-Place Creation, Parameter Sets & Actions",
             "status": true
           },
           {
-            "name": "Mobile App (GstarCAD MC) integration",
+            "name": "Magnifier Tool (Instant Zoom Area Without Changing Viewport)",
             "status": true
           },
           {
-            "name": "Batch Printing & File Comparison",
+            "name": "Drawing Compare Tool with Color-Coded Differential Highlights",
             "status": true
           },
           {
-            "name": "Parametric Constraint support",
+            "name": "Sheet Set Manager, Batch Publishing & Vector PDF Plotting",
+            "status": true
+          },
+          {
+            "name": "Barcode & QR Code Generator directly on Drawings",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Solid Modeling & BIM Interoperability (Pro)",
+        "items": [
+          {
+            "name": "3D ACIS Solid, Surface & Freeform Mesh Modeling",
+            "status": true
+          },
+          {
+            "name": "3D Orbit, Visual Styles & Isometric Section Planes",
+            "status": true
+          },
+          {
+            "name": "Point Cloud Data (RCP and RCS) Attachment & Object Snapping",
+            "status": true
+          },
+          {
+            "name": "IFC BIM Model Import, Entity Property Tree & Underlays",
+            "status": true
+          },
+          {
+            "name": "STEP & IGES 3D MCAD Mechanical Import",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Mechanical Manufacturing & Architecture Modules",
+        "items": [
+          {
+            "name": "Comprehensive Standard Parts Library (ISO, DIN, ANSI, JIS, GB)",
+            "status": true
+          },
+          {
+            "name": "Parametric Shaft, Gear, Pulley & Bearing Drafting Generators",
+            "status": true
+          },
+          {
+            "name": "Automated BOM Schedule Creation & Associative Part Balloons",
+            "status": true
+          },
+          {
+            "name": "Parametric Architectural Walls, Doors, Windows, Stairs & Roofs",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "High-Performance Core & Developer APIs",
+        "items": [
+          {
+            "name": "Independent Graphics Engine with Hierarchical Memory Optimization",
+            "status": true
+          },
+          {
+            "name": "GRX (C++ ObjectARX Compatible API) for Binary Extensions",
+            "status": true
+          },
+          {
+            "name": "Full AutoLISP, Visual LISP, .NET & VBA Macro Automation",
+            "status": true
+          },
+          {
+            "name": "Hardware USB Dongle & Soft-Key Standalone / Network Licensing",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "zwcad",
       "autocad",
-      "bricscad",
-      "progecad"
+      "zwcad",
+      "bricscad"
+    ],
+    "country": "China",
+    "category_id": "c1",
+    "pricing_type": "Perpetual",
+    "starting_price": 599,
+    "price_period": "one-time",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Architecture",
+      "Manufacturing",
+      "Mechanical Engineering",
+      "Construction",
+      "Electrical Engineering"
+    ],
+    "core_features": [
+      "Native .DWG & .DXF Bi-Directional Compatibility",
+      "Independent High-Performance Graphics Core",
+      "AutoCAD-Identical Command Line & Aliases",
+      "Dynamic Block Creation & In-Place Editing",
+      "3D Solid, Surface Modeling & Point Cloud Data",
+      "GRX (C++), LISP, .NET & VBA Customization APIs",
+      "Perpetual Standalone & Network Floating Licensing"
+    ],
+    "user_scales": [
+      "Freelancers",
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://www.gstarcad.net/",
+    "pricing_url": "https://www.gstarcad.net/buy/",
+    "trial_url": "https://www.gstarcad.net/download/",
+    "affiliate_url": null,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/gstarcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.capterra.com/p/175895/GstarCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.6,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.softwareadvice.com/cad/gstarcad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.getapp.com/engineering-software/a/gstarcad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "GstarCAD Shortcuts Chart",
+        "href": "/toolbox/gstarcad-shortcuts-sheet"
+      },
+      {
+        "label": "AutoCAD vs. GstarCAD Shortcuts",
+        "href": "/toolbox/autocad-vs-gstarcad-shortcuts"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
+    "pros": [
+      "Outstanding price-to-performance ratio with perpetual license ownership, eliminating mandatory annual subscription renewals.",
+      "Near-identical user interface, command aliases, menus, and shortcuts to AutoCAD, allowing drafters to work immediately without onboarding.",
+      "Independent graphics engine with optimized memory caching provides noticeably faster opening and panning on large multi-megabyte DWG files.",
+      "Extensive hardware license flexibility, supporting both USB hardware dongles and software keys for offline air-gapped workstations.",
+      "Strong API compatibility via GRX (C++), .NET, and LISP, enabling straightforward porting of enterprise AutoCAD custom applications.",
+      "Includes innovative drafting utilities like Magnifier (in-place zoom), Auto-XXref, and Barcode/QR Code drawing generation."
+    ],
+    "cons": [
+      "Native desktop application is currently developed for Microsoft Windows workstations only, with no native macOS or Linux desktop builds.",
+      "Parametric 3D solid modeling is direct/ACIS based and does not support history-tree parametric feature assemblies found in dedicated MCAD packages.",
+      "Cloud collaboration tools and web browser drafting ecosystem are less extensive than Autodesk's AutoCAD Web / Construction Cloud.",
+      "Third-party plugin market is concentrated mainly in AEC and mechanical drafting, with fewer specialized niche civil or geotechnical extensions.",
+      "Revit RVT native editing is not supported directly (IFC reference import is available in the Professional edition).",
+      "High-end photorealistic rendering options are basic compared to modern real-time GPU path tracers like Lumion, Twinmotion, or Enscape."
+    ],
+    "faqs": [
+      {
+        "q": "What is GstarCAD used for?",
+        "a": "According to Gstarsoft official documentation, GstarCAD is a high-performance 2D and 3D computer-aided design (CAD) platform used by architects, civil engineers, and manufacturing designers. Operating natively in the DWG/DXF format, it serves as a lightweight, fast alternative to AutoCAD for 2D technical drawings, dynamic block editing, and 3D solid modeling. Learn more on the [Official GstarCAD Overview](https://www.gstarcad.net/)."
+      },
+      {
+        "q": "What is the difference between GstarCAD Standard and Professional?",
+        "a": "GstarCAD Standard provides complete 2D precision drafting, dynamic block manipulation, AutoLISP scripting, and full DWG/DXF compatibility. GstarCAD Professional adds 3D ACIS solid modeling, point cloud data processing, IFC building format import, and advanced C++ (GRX) and .NET APIs. Details are available on the [Official GstarCAD Product Portal](https://www.gstarcad.net/cad/)."
+      },
+      {
+        "q": "How much does GstarCAD cost in my country?",
+        "a": "Gstarsoft provides flexible perpetual licenses (buy once, keep forever with optional upgrades) and subscription options, offered in standalone and network floating seat editions. Because pricing varies by country and regional distributor, check the [Official GstarCAD Buy Page](https://www.gstarcad.net/buy/) for your localized quote."
+      },
+      {
+        "q": "Does GstarCAD offer a free trial?",
+        "a": "Yes. Gstarsoft provides a 30-day fully functional free trial of GstarCAD Professional, allowing users to test all 2D, 3D, and API capabilities without restrictions. Download the setup file from the [Official GstarCAD Download Portal](https://www.gstarcad.net/download/)."
+      },
+      {
+        "q": "What operating systems does GstarCAD support?",
+        "a": "GstarCAD runs on 64-bit and 32-bit Microsoft Windows 11, Windows 10, Windows 8, and Windows 7 (requiring 4 GB RAM minimum, 8 GB+ recommended; OpenGL 3.3+ or DirectX 11 hardware graphics acceleration recommended). Review full specifications on the [GstarCAD Technical Requirements](https://www.gstarcad.net/)."
+      },
+      {
+        "q": "Which file formats does GstarCAD support?",
+        "a": "GstarCAD natively reads, edits, and writes AutoCAD .DWG and .DXF files from version 2.5 up to the latest releases. In addition, it supports DGN, IFC, STEP, IGES, SAT, and vector PDF import/export, ensuring seamless collaboration across engineering teams."
+      },
+      {
+        "q": "What are the best alternatives to GstarCAD?",
+        "a": "The closest commercial alternatives to GstarCAD are AutoCAD, ZWCAD, BricsCAD, DraftSight, and nanoCAD, which all share native DWG compatibility and similar drafting environments."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Gstarsoft Independent Core & ACIS (3D)",
+      "multicore": "Multi-core drafting kernel & display pipeline",
+      "gpu_optimization": "DirectX 11/12 & OpenGL Workstation GPU Acceleration",
+      "standards": [
+        "DWG (Native)",
+        "DXF",
+        "DWT",
+        "IFC",
+        "STEP",
+        "IGES"
+      ]
+    },
+    "expert_verdict": "GstarCAD delivers exceptional operating speed and memory efficiency for opening and editing complex DWG drawings at a fraction of AutoCAD's subscription cost. With standalone and network perpetual license choices, an independent multi-core performance core, and complete LISP, GRX, and .NET developer support, it is a proven commercial choice for AEC and manufacturing teams seeking license independence.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "IFC",
+      "STEP",
+      "IGES",
+      "SAT",
+      "PDF",
+      "RCP",
+      "RCS"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "DGN",
+      "PDF",
+      "SAT",
+      "WMF",
+      "EMF",
+      "BMP"
+    ],
+    "languages": [
+      "English",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Japanese",
+      "Korean",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese",
+      "Polish",
+      "Russian",
+      "Czech",
+      "Hungarian",
+      "Turkish"
+    ],
+    "deployment_options": [
+      "Desktop"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Network",
+      "Educational"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t55",
+    "id": "t7",
     "name": "QCAD",
     "slug": "qcad",
-    "logo_url": "/logos/qcad.jpg",
-    "short_desc": "Open-source 2D CAD application for creating technical drawings, praised for its simplicity, cross-platform support, and focused toolset.",
-    "description": "QCAD is an open-source 2D computer-aided design (CAD) application developed by RibbonSoft, designed for creating technical drawings such as architectural plans, mechanical parts, schematics, and diagrams. Built on the Qt framework, it runs natively on Windows, macOS, and Linux, making it one of the few truly cross-platform CAD solutions. QCAD offers a comprehensive set of 2D drafting tools including layers, blocks, hatching, dimensioning, and scripting via ECMAScript (JavaScript). While the community edition is open-source and free, a commercial Pro version adds DWG import/export support and additional features. Its small footprint, clean interface, and low cost make it ideal for hobbyists, students, small businesses, and professionals needing straightforward 2D drafting without subscription overhead.",
+    "logo_url": "/logos/qcad.svg",
+    "short_desc": "RibbonSoft’s open-source, cross-platform 2D CAD application for precision drafting, architectural plans, and CNC toolpath creation.",
+    "description": "QCAD is an open-source, cross-platform 2D computer-aided drafting (CAD) software application developed by RibbonSoft GmbH for technical drafting, architectural plans, mechanical schematics, and interior layouts. Designed for clarity, simplicity, and precision, QCAD provides an intuitive user interface, full 2D layer and block management, and native DXF format support alongside DWG read/write capabilities via the Professional edition. Powered by the Qt framework, QCAD runs natively on Windows, macOS, and Linux, and features a comprehensive ECMAScript (JavaScript) scripting engine that allows engineers and developers to automate drawing generation and customize CAD tools.",
     "pricing_tiers": [
       {
-        "name": "Community (Free)",
+        "name": "QCAD Community Edition",
         "price": "Free",
-        "period": "perpetual",
+        "period": "open-source (GPLv3)",
         "features": [
-          "2D drafting tools",
-          "DXF import/export",
-          "Layer and block management",
-          "Scripting (ECMAScript)",
-          "Community support"
+          "100% Free & Open-Source 2D Drafting (GPLv3)",
+          "Native DXF Read and Write Capabilities",
+          "Complete 2D Geometry Creation & Modification Tools",
+          "Layer Management & Hierarchical Block Insertion",
+          "ECMAScript Application Scripting Interface"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "QCAD Professional",
+        "price": "Official Store",
+        "period": "perpetual buyout",
+        "features": [
+          "Includes All Community 2D Drafting Capabilities",
+          "Advanced DWG and DXF Import and Export (Teigha/ODA)",
+          "PDF Import with Vector Geometry & Layer Recognition",
+          "Multi-Page PDF and SVG Vector Export",
+          "Command-Line Batch Conversion Tools & Free Updates for 1 Year"
         ],
         "is_popular": true
       },
       {
-        "name": "Professional & QCAD/CAM",
+        "name": "QCAD/CAM",
         "price": "Official Store",
-        "period": "perpetual",
+        "period": "perpetual buyout",
         "features": [
-          "All Community features",
-          "DWG import/export (up to latest DWG)",
-          "Command-line batch conversion tools (dwg2pdf, dwg2svg)",
-          "QCAD/CAM nesting & G-code generation option",
-          "Perpetual commercial license with 1-year updates"
+          "Includes Full QCAD Professional Functionality",
+          "CNC Machine Toolpath Generation & Simulation",
+          "Custom G-Code Post-Processor Configuration (JavaScript)",
+          "Automatic Part Nesting for Laser, Plasma & Waterjet",
+          "Lead-In/Lead-Out Cut Optimization & Kerf Compensation"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "2D Drafting & Geometric Construction",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Precision 2D Drawing (Lines, Arcs, Circles, Ellipses, Splines, Polylines)",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Object Snapping (Endpoints, Intersections, Centers, Tangents, Grid)",
             "status": true
           },
           {
-            "name": "Hatch and fill patterns",
+            "name": "Hierarchical Layer Organization with Visibility & Lock States",
             "status": true
           },
           {
-            "name": "Multiline text (MText)",
+            "name": "Reusable Block Library System with Attribute Insertion",
+            "status": true
+          },
+          {
+            "name": "Associative Dimensioning (Linear, Angular, Diametric, Radial)",
             "status": true
           }
         ]
       },
       {
-        "category": "Organization",
+        "category": "File Formats & Interoperability (Professional)",
         "items": [
           {
-            "name": "Layer management",
+            "name": "Native DXF Support (R12, 2000, 2004, 2007, 2013, 2018)",
             "status": true
           },
           {
-            "name": "Block and symbol libraries",
+            "name": "Autodesk DWG Import and Export via Open Design Alliance Engine",
             "status": true
           },
           {
-            "name": "Linetypes and weights",
+            "name": "High-Fidelity Vector PDF Import with Layer and Text Extraction",
             "status": true
           },
           {
-            "name": "Paper space / layouts",
+            "name": "Scalable Vector Graphics (SVG) Import & High-Resolution Export",
+            "status": true
+          },
+          {
+            "name": "Command-Line Batch File Conversion & PDF Generator Tools",
             "status": true
           }
         ]
       },
       {
-        "category": "Automation",
+        "category": "QCAD/CAM CNC Toolpath & G-Code",
         "items": [
           {
-            "name": "ECMAScript scripting",
+            "name": "2D CNC Toolpath Generation for Milling, Routing & Cutting",
             "status": true
           },
           {
-            "name": "Command line interface",
+            "name": "Automatic Part Nesting on Sheet Stock to Minimize Waste",
             "status": true
           },
           {
-            "name": "Batch processing (Pro CLI tools)",
+            "name": "Customizable G-Code Post-Processors (JavaScript Scripted)",
             "status": true
           },
           {
-            "name": "Parametric constraints",
-            "status": false
+            "name": "Cutter Radius Kerf Compensation & Overcut Simulation",
+            "status": true
+          },
+          {
+            "name": "Lead-In and Lead-Out Cut Optimization",
+            "status": true
           }
         ]
       },
       {
-        "category": "Compatibility",
+        "category": "Extensibility & Platform Architecture",
         "items": [
           {
-            "name": "DXF import/export",
+            "name": "Cross-Platform Qt Framework (Windows, macOS & Linux Native)",
             "status": true
           },
           {
-            "name": "DWG import/export (Pro)",
+            "name": "Complete ECMAScript (JavaScript) Custom Scripting Engine",
             "status": true
           },
           {
-            "name": "SVG export",
+            "name": "Open-Source Community Core Released under GPLv3 License",
             "status": true
           },
           {
-            "name": "PDF export",
+            "name": "Affordable One-Time Perpetual License Ownership",
             "status": true
           }
         ]
       }
     ],
+    "alternatives": [
+      "librecad",
+      "autocad-lt",
+      "draftsight"
+    ],
     "country": "Switzerland",
     "category_id": "c1",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
+    "pricing_type": "Perpetual",
+    "starting_price": 42,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
@@ -1372,382 +2402,494 @@ export const c1Tools: Tool[] = [
     ],
     "industries": [
       "Architecture",
+      "Manufacturing",
+      "Woodworking",
       "Mechanical Engineering",
-      "Education",
-      "Electrical Engineering",
-      "Interior Design"
+      "Hobbyist / Maker"
     ],
     "core_features": [
-      "Layer Management",
-      "Block Support",
-      "DXF/DWG Support",
-      "Scripting Interface (ECMAScript)",
-      "Cross-Platform",
-      "Open Source Core"
+      "Intuitive 2D Drafting & Precision Geometry",
+      "Native .DXF & .DWG Read/Write (Professional)",
+      "Full Layer, Block & Library Management",
+      "ECMAScript (JavaScript) CAD Scripting Engine",
+      "Cross-Platform Native (Windows, macOS & Linux)",
+      "QCAD/CAM CNC Toolpath & G-Code Export",
+      "Open-Source Core (Community GPLv3 Edition)"
     ],
     "user_scales": [
-      "Freelance",
-      "Small Business",
-      "Education"
+      "Individual",
+      "Freelancers",
+      "SMB"
     ],
-    "official_url": "https://www.qcad.org",
+    "official_url": "https://www.qcad.org/en/",
     "pricing_url": "https://www.qcad.org/en/online-shop",
     "trial_url": "https://www.qcad.org/en/qcad-downloads-trial",
     "affiliate_url": null,
-    "score": 3.8,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.1,
+        "max": 5,
+        "count": 26,
+        "url": "https://www.g2.com/products/qcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.capterra.com/p/164741/QCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "SourceForge",
+        "score": 4.4,
+        "max": 5,
+        "count": 82,
+        "url": "https://sourceforge.net/projects/qcad/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online DWG to DXF Batch Converter",
+        "href": "/toolbox/online-dwg-to-dxf-batch-converter"
+      },
+      {
+        "label": "DXF Watermark & Layer Parser",
+        "href": "/toolbox/dxf-watermark-layer-parser"
+      },
+      {
+        "label": "Online DXF to CNC G-Code Planner",
+        "href": "/toolbox/cloud-dxf-to-gcode-laser-converter"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Free open-source community edition",
-      "Cross-platform: Windows, macOS, and Linux",
-      "Very small footprint and fast performance",
-      "Clean, uncluttered interface",
-      "Low-cost Pro version with DWG support"
+      "Lightweight, uncluttered user interface that is intuitive for hobbyists, technical illustrators, and engineers who find AutoCAD overly complex.",
+      "True cross-platform native support on Windows, macOS, and Linux without requiring emulation or Wine.",
+      "Extremely affordable perpetual licensing for QCAD Professional, with a 100% free open-source Community Edition available under GPLv3.",
+      "Comprehensive ECMAScript (JavaScript) API allows users to create custom commands, drawing generators, and algorithmic geometric scripts.",
+      "The QCAD/CAM edition provides integrated 2D CAM toolpathing, nesting, and G-code generation for laser cutters, vinyl cutters, and CNC routers.",
+      "High-quality vector PDF export and import tools that faithfully preserve line weights, fonts, and geometry scale."
     ],
     "cons": [
-      "2D only, no 3D modeling",
-      "DWG support requires paid Pro version",
-      "Limited advanced automation compared to AutoCAD",
-      "Smaller user community and fewer tutorials",
-      "UI style feels dated to some users"
+      "Strictly limited to 2D drafting; does not support 3D solid, surface, or mesh modeling (use FreeCAD or Blender for 3D requirements).",
+      "The free Community Edition does not include DWG read/write support out of the box (requires purchasing QCAD Professional or manual ODA converter setup).",
+      "Lacks AutoLISP, ObjectARX, or .NET API compatibility, meaning legacy AutoCAD macros cannot run without rewriting in JavaScript.",
+      "Single-threaded graphics engine can encounter frame-rate drops when rendering complex drawings with tens of thousands of hatching patterns.",
+      "Does not support industry-specific BIM (IFC/Revit) or mechanical parametric feature constraints (no geometric formula solver).",
+      "Commercial support is primarily ticket and community forum based rather than dedicated 24/7 enterprise enterprise phone assistance."
     ],
     "faqs": [
       {
         "q": "What is QCAD used for?",
-        "a": "QCAD is an open-source 2D CAD application developed by RibbonSoft GmbH in Switzerland for creating technical drawings such as architectural plans, mechanical parts, electrical schematics, and diagrams."
+        "a": "According to RibbonSoft official documentation, QCAD is an open-source 2D computer-aided drafting (CAD) application for creating precision technical drawings, architectural floor plans, mechanical part schematics, and interior designs. It provides intuitive drafting tools, layer management, and native DXF/DWG compatibility. Explore details on the [Official QCAD Overview](https://www.qcad.org/en/)."
+      },
+      {
+        "q": "What is the difference between QCAD Community Edition and QCAD Professional?",
+        "a": "QCAD Community Edition is 100% free and open-source under GPLv3, supporting 2D drafting and native DXF files. QCAD Professional is an affordable commercial release that adds proprietary DWG import/export (via Open Design Alliance), vector PDF import, command-line batch converters, and SVG export. Learn more on the [Official QCAD Features Page](https://www.qcad.org/en/qcad-documentation/qcad-features)."
       },
       {
         "q": "How much does QCAD cost?",
-        "a": "QCAD offers a free open-source Community Edition alongside low-cost commercial perpetual licenses for QCAD Professional and QCAD/CAM (including single-user, site, and server licenses). Because currency rates (EUR/USD/CHF), VAT, and multi-seat options vary by country, please check the [Official QCAD Online Shop](https://www.qcad.org/en/online-shop) for live regional pricing."
+        "a": "QCAD Professional is sold as a one-time perpetual license per user (with volume discounts for multiple seats) and includes free software updates for one year. Because exact prices vary slightly depending on currency (EUR, USD) and regional taxes, visit the [Official QCAD Online Shop](https://www.qcad.org/en/online-shop) for live pricing."
       },
       {
-        "q": "Is there a free version or trial of QCAD?",
-        "a": "Yes. QCAD Community Edition is free and open-source (see the [Official QCAD Site](https://www.qcad.org) for the current licence terms), and RibbonSoft also provides free trial packages of QCAD Professional and QCAD/CAM on the [Official QCAD Downloads Page](https://www.qcad.org/en/qcad-downloads-trial)."
+        "q": "Does QCAD offer a free trial?",
+        "a": "Yes. RibbonSoft provides a free trial package of QCAD Professional that runs for a limited session duration before prompting for a restart. You can download the trial package on the [Official QCAD Downloads Page](https://www.qcad.org/en/qcad-downloads-trial)."
       },
       {
         "q": "What operating systems does QCAD support?",
-        "a": "QCAD runs natively on Windows, macOS (Intel and Apple Silicon), and Linux."
+        "a": "QCAD runs natively across Microsoft Windows (11, 10, 8, 7; 64-bit and 32-bit), Apple macOS (supporting Intel and Apple Silicon Macs via Universal builds), and Linux (standard distributions including Ubuntu, Debian, Fedora, and openSUSE). Check specifications on the [QCAD System Requirements](https://www.qcad.org/en/)."
       },
       {
         "q": "Which file formats does QCAD support?",
-        "a": "QCAD supports DXF natively in the free Community Edition. QCAD Professional adds full DWG read/write plus additional import/export formats such as PDF and SVG. Check the [Official QCAD Documentation](https://www.qcad.org) for the complete format list."
-      },
-      {
-        "q": "What are the best alternatives to QCAD?",
-        "a": "The closest alternatives to QCAD are LibreCAD, nanoCAD, DraftSight, and FreeCAD. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
+        "a": "QCAD natively supports DXF (R12 through R32/2018), and with the Professional edition, reads and writes AutoCAD .DWG files. It also imports and exports vector PDF, SVG, and raster bitmap image formats (PNG, JPG, BMP)."
       }
     ],
     "tech_specs": {
-      "engine": "Qt/QCAD",
+      "engine": "Qt / RibbonSoft QCAD Engine",
       "multicore": "Single-threaded",
-      "gpu_optimization": "Not published by the vendor",
+      "gpu_optimization": "Software / Basic Qt OpenGL Surface Acceleration",
       "standards": [
-        "DXF",
-        "DWG",
+        "DXF (Native)",
+        "DWG (Professional)",
         "SVG",
         "PDF"
       ]
     },
-    "expert_verdict": "The quintessential lightweight, cross-platform open-source 2D CAD tool for straightforward technical drafting.",
-    "release_notes_url": "https://www.qcad.org/en/changelog",
-    "languages": [
-      "English",
-      "Dutch",
-      "German",
-      "German (Swiss)",
-      "Bulgarian",
-      "Chinese (Simplified)",
-      "Chinese (Traditional)",
-      "Croatian",
-      "Czech",
-      "Danish",
-      "Estonian",
-      "Finnish",
-      "French",
-      "Greek",
-      "Hungarian",
-      "Indonesian",
-      "Italian",
-      "Japanese",
-      "Korean",
-      "Latvian",
-      "Lithuanian",
-      "Norwegian (Bokmål)",
-      "Polish",
-      "Portuguese",
-      "Romanian",
-      "Russian",
-      "Slovak",
-      "Slovenian",
-      "Spanish",
-      "Swedish",
-      "Thai",
-      "Turkish",
-      "Ukrainian",
-      "Vietnamese"
-    ],
+    "expert_verdict": "QCAD is one of the most accessible and practical 2D drafting packages available, striking a perfect balance between open-source transparency and professional drafting capability. With native cross-platform support (Windows, macOS, Linux), affordable one-time perpetual pricing for the DWG Professional edition, and built-in CNC toolpathing in QCAD/CAM, it is an outstanding lightweight solution for makers, woodworkers, and technical illustrators.",
     "file_formats_in": [
       "DXF",
-      "DWG (Pro)",
-      "PDF (Pro)"
+      "DWG",
+      "PDF",
+      "SVG",
+      "BMP",
+      "PNG",
+      "JPG"
     ],
     "file_formats_out": [
       "DXF",
-      "DWG (Pro)",
+      "DWG",
+      "PDF",
       "SVG",
-      "PDF"
+      "BMP",
+      "PNG"
     ],
-    "integrations": [],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese",
+      "Dutch",
+      "Russian",
+      "Japanese",
+      "Chinese (Simplified)",
+      "Polish",
+      "Czech",
+      "Hungarian",
+      "Finnish",
+      "Swedish",
+      "Turkish"
+    ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
-      "Free",
       "Perpetual",
-      "Open-Source"
+      "Open-Source",
+      "Commercial"
     ],
-    "support_channels": [
-      "Email",
-      "Community",
-      "Documentation"
-    ],
-    "security_compliance": [],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "ECMAScript (JavaScript)",
-      "sdk_languages": [
-        "JavaScript"
-      ],
-      "docs_url": "https://www.qcad.org/doc/qcad/latest/developer/index.html"
+      "has_sdk": false
     },
-    "key_capabilities": [
-      "2D Drafting",
-      "Cross-Platform",
-      "Open Source",
-      "Scripting",
-      "DXF/DWG Support"
-    ],
-    "alternatives": [
-      "librecad",
-      "nanocad",
-      "draftsight",
-      "freecad"
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Email"
     ]
   },
   {
-    "id": "t56",
+    "id": "t8",
     "name": "nanoCAD",
     "slug": "nanocad",
-    "logo_url": "/logos/nanocad.png",
-    "short_desc": "Professional-grade 2D/3D CAD with native DWG compatibility, powerful API for customization, and competitive pricing.",
-    "description": "nanoCAD is a professional-grade CAD platform developed by Nanosoft, offering native DWG compatibility for seamless interoperability with AutoCAD. It features a familiar interface that reduces the learning curve for AutoCAD users, powerful 2D drafting and 3D modeling tools, and an open API (C++, .NET, JavaScript) for deep customization. nanoCAD supports parametric 3D modeling, Excel integration for BOM management, and DWG, DXF, and IFC file formats. Its flexible licensing options include perpetual and subscription models, making it an attractive choice for engineering, construction, and manufacturing firms seeking a cost-effective alternative to AutoCAD without sacrificing functionality.",
+    "logo_url": "/logos/nanocad.svg",
+    "short_desc": "Nanosoft’s all-in-one DWG CAD platform offering 2D drafting, 3D parametric modeling, Excel-linked tables, and modular engineering suites.",
+    "description": "nanoCAD is an all-in-one, professional-grade 2D/3D computer-aided design (CAD) platform developed by Nanosoft AS for engineering, architectural, mechanical, and civil construction drafting. Operating natively in the industry-standard DWG file format, nanoCAD offers an AutoCAD-compatible interface, command-line syntax, and script automation while incorporating powerful 3D parametric solid modeling, 2D geometric constraints, and Excel-integrated dynamic tables. Available through modular specialized industry configurations (Pro, Construction, Mechanica, 3D, Raster, and Topoplan), nanoCAD provides flexible licensing options including perpetual seats and multi-year subscriptions with network license manager deployment.",
     "pricing_tiers": [
       {
-        "name": "nanoCAD Platform",
+        "name": "nanoCAD Standard (Platform)",
         "price": "Official Store",
-        "period": "annual / 3-year",
+        "period": "annual / perpetual",
         "features": [
-          "Core 2D/3D DWG-native CAD Platform",
-          "Point Cloud & IFC Underlay Support",
-          "Open API (C++, .NET, LISP, JS)",
-          "Workstation or Network Licensing (3-yr includes perpetual)"
+          "Full-Featured 2D Drafting & Precision Documentation",
+          "Native DWG/DXF Format Support with Zero Translation Loss",
+          "Classic & Ribbon User Interfaces with AutoCAD Command Aliases",
+          "Excel-Linked Interactive Tables & Automated Data Extraction",
+          "AutoLISP, JavaScript & VBScript Automation Engines"
         ],
         "is_popular": true
       },
       {
-        "name": "nanoCAD Pro / Construction / Mechanica",
+        "name": "nanoCAD Pro",
         "price": "Official Store",
-        "period": "annual / 3-year",
+        "period": "annual / perpetual",
         "features": [
-          "Platform + 3D Solid & Parametric Modeling (Pro)",
-          "AEC Parametric Objects & ISO/DIN Standards (Construction)",
-          "2D/3D Mechanical Engineering & BOM Calculators (Mechanica)"
+          "Includes All nanoCAD Platform 2D Capabilities",
+          "Parametric 3D Solid, Surface & Mesh Modeling Engine",
+          "3D Sheet Metal Design, Flanges, Bends & Flat Patterns",
+          "IFC BIM Model Viewing, Object Property Inspection & Underlays",
+          "High-Performance C++ (NRX) & .NET Developer API SDKs"
         ],
         "is_popular": false
       },
       {
-        "name": "nanoCAD Max",
+        "name": "nanoCAD Suite (Platform + Specialized Modules)",
         "price": "Official Store",
-        "period": "annual / 3-year",
+        "period": "annual / perpetual",
         "features": [
-          "All-in-One Suite: Platform + All 5 Modules",
-          "Includes 3D Solid Modeling, Mechanica & Construction",
-          "Includes Raster & Topoplan Terrain Modules"
+          "Modular Add-ons: Mechanica (Standard Parts, Gears, Calculators)",
+          "Construction Module (AEC Architectural Parametric Elements)",
+          "Topoplan Module (Civil Terrain Modeling & Contour Generation)",
+          "Raster Module (Hybrid Vector/Raster Processing & Correction)",
+          "Flexible Network Floating License Deployment for Multi-Seat Teams"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "2D Drafting & Excel-Linked Tables",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Precision 2D Drafting with Polar Tracking & Dynamic Input",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Advanced Tables with Live Bi-Directional Microsoft Excel Formulas",
             "status": true
           },
           {
-            "name": "Hatch and fill patterns",
+            "name": "Automated Data Extraction to Tables, Schedules & Reports",
             "status": true
           },
           {
-            "name": "Multiline text (MText)",
+            "name": "Sheet Set Manager, Layouts & Multi-Page Publishing",
+            "status": true
+          },
+          {
+            "name": "Drawing Compare Tool with Color Differential Overlay",
             "status": true
           }
         ]
       },
       {
-        "category": "3D Modeling",
+        "category": "3D Parametric Modeling & Sheet Metal (Pro)",
         "items": [
           {
-            "name": "Solid modeling",
+            "name": "History-Tree Parametric 3D Solid & Surface Modeling",
             "status": true
           },
           {
-            "name": "Surface modeling",
+            "name": "3D Assembly Modeling with Mating Constraints",
             "status": true
           },
           {
-            "name": "Parametric constraints",
+            "name": "Parametric Sheet Metal Design, Unfolding & Bend Tables",
             "status": true
           },
           {
-            "name": "Mesh modeling",
-            "status": false
-          }
-        ]
-      },
-      {
-        "category": "Automation & API",
-        "items": [
-          {
-            "name": "C++ API",
+            "name": "Section Cut Planes & Automated 2D Drawing View Generation",
             "status": true
           },
           {
-            "name": ".NET API",
-            "status": true
-          },
-          {
-            "name": "JavaScript scripting",
-            "status": true
-          },
-          {
-            "name": "Lisp support",
+            "name": "IFC BIM Underlay Viewing & Property Tree Inspection",
             "status": true
           }
         ]
       },
       {
-        "category": "Compatibility",
+        "category": "Specialized Engineering Modules",
         "items": [
           {
-            "name": "DWG import/export",
+            "name": "Mechanica: Standard Fasteners, Shafts, Gears & Engineering Calculators",
             "status": true
           },
           {
-            "name": "DXF import/export",
+            "name": "Construction: Architectural Walls, Windows, Doors & Rebar Schedules",
             "status": true
           },
           {
-            "name": "IFC support",
+            "name": "Topoplan: Digital Terrain Models (TIN), Survey Contours & Earthworks",
             "status": true
           },
           {
-            "name": "PDF export",
+            "name": "Raster: Hybrid Editing, Skew Correction & Vectorization",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "API Development & License Deployment",
+        "items": [
+          {
+            "name": "NRX (C++ ObjectARX Equivalent) Binary Extension Engine",
+            "status": true
+          },
+          {
+            "name": ".NET (C# / VB.NET) & COM Automation APIs",
+            "status": true
+          },
+          {
+            "name": "AutoLISP, Visual LISP, JavaScript & VBScript Compatibility",
+            "status": true
+          },
+          {
+            "name": "Perpetual Buyout or Annual Subscription Licenses",
+            "status": true
+          },
+          {
+            "name": "Network License Server (FLEXnet / Nanosoft NLM) for Pooled Seats",
             "status": true
           }
         ]
       }
     ],
-    "country": "Russia",
+    "alternatives": [
+      "autocad",
+      "zwcad",
+      "bricscad"
+    ],
+    "country": "Germany",
     "category_id": "c1",
-    "pricing_type": "Subscription",
-    "starting_price": 289,
+    "pricing_type": "Subscription / Perpetual",
+    "starting_price": 250,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
+      "Architecture",
       "Mechanical Engineering",
-      "Construction",
-      "Manufacturing",
       "Civil Engineering",
-      "Architecture"
+      "Construction",
+      "Manufacturing"
     ],
     "core_features": [
-      "Native DWG Support",
-      "Parametric 3D",
-      "Excel Integration",
-      "Open API (C++, .NET, JS)",
-      "Lisp Compatibility",
-      "IFC Support"
+      "Native .DWG Bi-Directional Engineering Engine",
+      "Parametric 3D Solid & Surface Modeling (Pro)",
+      "AutoCAD-Identical Command Line & Shortcuts",
+      "Excel-Integrated Tables & Data Extraction",
+      "Modular Extensions (Mechanica, Topoplan, AEC)",
+      "Open Developer APIs (C++, .NET, LISP & JS)",
+      "Flexible Perpetual & Network Licensing"
     ],
     "user_scales": [
-      "Freelance",
-      "Small Business",
-      "Mid-Sized Company",
+      "Freelancers",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://nanocad.com",
-    "pricing_url": "https://nanocad.com/buy/",
-    "trial_url": "https://nanocad.com/products/nanocad-platform/",
+    "official_url": "https://nanocad.com/",
+    "pricing_url": "https://nanocad.com/pricing/",
+    "trial_url": "https://nanocad.com/download/",
     "affiliate_url": null,
-    "score": 3.9,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 52,
+        "url": "https://www.g2.com/products/nanocad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 64,
+        "url": "https://www.capterra.com/p/161247/nanoCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.5,
+        "max": 5,
+        "count": 64,
+        "url": "https://www.softwareadvice.com/cad/nanocad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 64,
+        "url": "https://www.getapp.com/engineering-software/a/nanocad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "nanoCAD Shortcuts Sheet",
+        "href": "/toolbox/nanocad-shortcuts-sheet"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Online DWG to PDF Cloud Printer",
+        "href": "/toolbox/online-dwg-to-pdf-cloud-printer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Native DWG compatibility with AutoCAD",
-      "Modular architecture (3D, Mechanica, Construction, Raster, Topoplan)",
-      "Powerful multi-language API (C++, .NET, JS, Lisp)",
-      "Familiar AutoCAD-like interface reduces learning curve",
-      "1-year and 3-year plans (a 3-year term makes the licence permanent)"
+      "Full native DWG compatibility ensures seamless drawing interchange with external clients and contractors using AutoCAD.",
+      "Modular architecture allows engineering organizations to purchase only the specialized capabilities they need (e.g., Mechanica, Construction, Topoplan).",
+      "Pro edition includes true 3D parametric feature-based solid modeling and sheet metal design capabilities directly on the DWG platform.",
+      "Advanced table engine features bi-directional live links to Microsoft Excel worksheets, automating bill of materials (BOM) updates.",
+      "Flexible ownership models provide both annual subscriptions and perpetual buyout licenses with network floating license server support.",
+      "Comprehensive open API architecture (NRX for C++, .NET, LISP, and JavaScript) facilitates enterprise plugin and workflow migration."
     ],
     "cons": [
-      "Windows-only, no macOS or Linux support",
-      "3D Solid Modeling and specialized tools require add-on modules or bundles",
-      "Smaller ecosystem of third-party plugins",
-      "Legacy free edition is no longer actively developed"
+      "The previously well-known free nanoCAD 5.0 version is legacy and discontinued; all modern releases require paid commercial licensing.",
+      "Available exclusively for Microsoft Windows workstations, with no native macOS or Linux operating system builds.",
+      "English documentation and international community forums are smaller than Autodesk's global ecosystem.",
+      "Complex modular licensing and packaging options (Platform vs. Modules vs. Pro) can be confusing for first-time buyers to configure.",
+      "Direct native editing of proprietary Revit RVT models is not supported (IFC underlay and inspection is supported in Pro).",
+      "Rendering output is focused on technical documentation and OpenGL visualization rather than photorealistic architectural presentation."
     ],
     "faqs": [
       {
         "q": "What is nanoCAD used for?",
-        "a": "nanoCAD is a professional-grade 2D/3D DWG-native CAD platform used for mechanical engineering, AEC construction, land surveying, and manufacturing design."
+        "a": "According to Nanosoft official documentation, nanoCAD is a professional CAD platform designed for 2D drafting, engineering documentation, and parametric 3D modeling. Operating natively on the DWG format, it is used across architecture, construction, mechanical engineering, and land surveying as a full-featured alternative to AutoCAD. Learn more on the [Official nanoCAD Overview](https://nanocad.com/)."
       },
       {
-        "q": "How much does nanoCAD cost?",
-        "a": "nanoCAD is sold as modular 1-year or 3-year subscriptions (a 3-year term makes the licence permanent, per the vendor) in Workstation or Network configurations — spanning nanoCAD Platform, nanoCAD Pro, nanoCAD Construction, nanoCAD Mechanica, and nanoCAD Max. Because official pricing, bundle promotions, and regional reseller terms vary by country, please visit the [Official nanoCAD Buy & Pricing Page](https://nanocad.com/buy/) for live pricing."
+        "q": "What is the difference between nanoCAD Standard, Pro, and Modules?",
+        "a": "nanoCAD Standard provides full 2D drafting, native DWG support, Excel-linked tables, and LISP APIs. nanoCAD Pro adds 3D parametric solid modeling, assembly constraints, sheet metal design, and IFC reading. Specialized modules (Construction, Mechanica, Topoplan, Raster) can be attached to the platform for domain-specific AEC, mechanical, and civil engineering workflows. Review modular options on the [Official nanoCAD Products Page](https://nanocad.com/products/)."
+      },
+      {
+        "q": "How much does nanoCAD cost in my country?",
+        "a": "nanoCAD is available via annual subscriptions and permanent perpetual licenses (with optional maintenance), offering both standalone workstation and network floating licenses. Because authorized reseller configurations, module bundles, and currencies differ by region, visit the [Official nanoCAD Pricing Portal](https://nanocad.com/pricing/) for current pricing."
       },
       {
         "q": "Does nanoCAD offer a free trial or free edition?",
-        "a": "Yes — Nanosoft provides an official full-featured evaluation of the current nanoCAD Platform with all five modules, as well as free academic licenses and a legacy personal-use-only edition. Check the [Official nanoCAD Portal](https://nanocad.com) for current trial and eligibility rules."
+        "a": "Yes. Nanosoft provides a 30-day fully functional free trial of nanoCAD Pro and all specialized modules, allowing users to evaluate commercial capabilities. The older nanoCAD 5.0 freeware release is legacy and discontinued. Download the official trial from the [Official nanoCAD Download Portal](https://nanocad.com/download/)."
       },
       {
         "q": "What operating systems does nanoCAD support?",
-        "a": "nanoCAD runs on 64-bit Windows."
+        "a": "nanoCAD is developed natively for 64-bit Microsoft Windows 11 and Windows 10 (requiring 8 GB RAM minimum, 16 GB+ recommended; an OpenGL 2.1 or DirectX 11 hardware-accelerated 3D graphics card is recommended). Detailed workstation configurations are listed on the [nanoCAD System Requirements](https://nanocad.com/)."
       },
       {
         "q": "Which file formats does nanoCAD support?",
-        "a": "nanoCAD natively supports DWG, DXF, DWT, IFC, and point cloud formats, and exports to PDF, SVG, and standard CAD formats."
-      },
-      {
-        "q": "What are the best alternatives to nanoCAD?",
-        "a": "The closest alternatives to nanoCAD are DraftSight, BricsCAD, ZWCAD, and GstarCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "nanoCAD natively opens, edits, and saves all industry-standard .DWG and .DXF file versions without data loss. It also supports IFC, DWT, vector PDF underlays, and image rasters, and can export to PDF, SVG, STL, and raster image formats."
       }
     ],
     "tech_specs": {
       "engine": "nanoCAD Core (DWG-native)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX/OpenGL",
+      "multicore": "Multi-threaded drawing regeneration and display pipeline",
+      "gpu_optimization": "DirectX & OpenGL Workstation Hardware Acceleration",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
         "IFC",
         "PDF"
       ]
     },
-    "expert_verdict": "A strong DWG-compatible CAD suite with specialized engineering modules and a competitive perpetual licensing option.",
-    "release_notes_url": "https://nanocad.com/products/nanocad-platform/",
+    "expert_verdict": "nanoCAD is a robust, modular AutoCAD alternative that bridges the gap between conventional 2D DWG drafting and parametric 3D solid modeling. With unique features like bi-directional Excel-linked tables, specialized modules for mechanical (Mechanica) and civil terrain (Topoplan), and flexible perpetual or network licensing, it gives engineering firms a customizable, cost-effective CAD ecosystem.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "IFC",
+      "PDF",
+      "BMP",
+      "JPG",
+      "PNG",
+      "TIF"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "PDF",
+      "SVG",
+      "STL",
+      "BMP",
+      "JPG"
+    ],
     "languages": [
       "English",
       "Spanish",
@@ -1757,277 +2899,351 @@ export const c1Tools: Tool[] = [
       "Korean",
       "Chinese (Simplified)"
     ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "IFC"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "PDF",
-      "SVG",
-      "IFC"
-    ],
-    "integrations": [
-      "Microsoft Excel"
-    ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
-      "Free",
-      "Perpetual",
       "Subscription",
-      "Educational",
-      "Network"
+      "Perpetual",
+      "Network",
+      "Educational"
     ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
     "support_channels": [
       "Email",
       "Phone",
-      "Documentation",
       "Community",
-      "Training"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "C++ / .NET / JavaScript / Lisp",
-      "sdk_languages": [
-        "C++",
-        "C#",
-        "JavaScript",
-        "Lisp"
-      ],
-      "docs_url": "https://nanocad.com/products/nanocad-developers-club/"
-    },
-    "key_capabilities": [
-      "DWG Interoperability",
-      "2D Drafting",
-      "3D Modeling",
-      "Multi-Language API",
-      "Parametric Design"
-    ],
-    "alternatives": [
-      "draftsight",
-      "bricscad",
-      "zwcad",
-      "gstarcad"
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t57",
+    "id": "t9",
     "name": "progeCAD Professional",
     "slug": "progecad",
-    "logo_url": "/logos/progecad.png",
-    "short_desc": "DWG-native 2D/3D CAD with built-in PDF-to-DWG conversion, perpetual licensing, and high AutoCAD compatibility for general-purpose drafting.",
-    "description": "progeCAD Professional is a DWG-native CAD software built on the IntelliCAD engine, offering high compatibility with AutoCAD files and commands. It includes a complete set of 2D drafting and 3D modeling tools, plus unique utilities like built-in PDF-to-DWG conversion, the EasyArch 3D architectural plugin, and the iCADLib block manager with thousands of standard parts. progeCAD operates on a perpetual licensing model, making it attractive for users who prefer to own their software rather than subscribe. Its familiar AutoCAD-like interface minimizes the learning curve, while its competitive price point makes it accessible to small teams and mid-market organizations in architecture, civil engineering, and mechanical design.",
+    "logo_url": "/logos/progecad.svg",
+    "short_desc": "ProgeSOFT’s proven AutoCAD-compatible 2D/3D DWG software powered by IntelliCAD with perpetual licensing, PDF-to-DWG, and EasyArch 3D.",
+    "description": "progeCAD Professional is an AutoCAD-compatible 2D and 3D computer-aided design (CAD) software package developed by ProgeSOFT for engineering, architecture, mechanical design, and surveying. Powered by the IntelliCAD engine and operating natively in the DWG/DXF format, progeCAD delivers complete drop-in command compatibility with AutoCAD at a fraction of the cost. It includes built-in PDF-to-DWG vector conversion, the EasyArch 3D parametric architectural plugin, iCADLib block manager with over 22,000 architectural and mechanical symbols, and cloud storage synchronization, offered as a cost-effective perpetual license with no mandatory recurring subscription fees.",
     "pricing_tiers": [
       {
-        "name": "Professional (Single / Single+)",
+        "name": "progeCAD Professional Single User (SL)",
         "price": "Official Store",
-        "period": "perpetual",
+        "period": "perpetual buyout",
         "features": [
-          "2D drafting and 3D ACIS solid modeling",
-          "Native DWG/DXF & Revit/IFC BIM import",
-          "Built-in PDF-to-DWG conversion",
-          "EasyArch 3D plugin & 22,000+ iCADLib blocks",
-          "One-time perpetual license (optional iCARE maintenance)"
+          "Perpetual Standalone License with No Recurring Fees",
+          "Complete 2D Drafting & 3D ACIS Solid Modeling",
+          "Native DWG/DXF Format Compatibility Up to Latest Versions",
+          "Built-In Vector PDF to DWG Conversion Tool",
+          "EasyArch 3D Architecture & 22,000+ iCADLib Blocks Library",
+          "AutoLISP, VBA, .NET & SDS/IRX Developer Customization"
         ],
         "is_popular": true
       },
       {
-        "name": "Network (NLM) & Site Licenses",
+        "name": "progeCAD Professional Network (NLM)",
         "price": "Official Store",
-        "period": "perpetual / floating",
+        "period": "perpetual floating",
         "features": [
-          "All Professional features",
-          "Floating Network License Manager (NLM)",
-          "Corporate site & multi-seat licensing",
-          "Priority support & optional iCARE upgrades"
+          "All Single User Pro Capabilities Included",
+          "ProgeSOFT Network License Manager (NLM) Server Deployment",
+          "Floating Multi-Seat Concurrent License Sharing",
+          "Network License Take-Away for Laptops Away from Office",
+          "Optional iCARE Maintenance for Priority Support & Upgrades"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "progeCAD Corporate / Site License",
+        "price": "Custom Quote",
+        "period": "perpetual enterprise",
+        "features": [
+          "Unlimited Seat Installation Across Entire Company Facility",
+          "Includes All Professional 2D/3D Tools & Add-Ons",
+          "Simplified Enterprise IT Asset Management & Compliance",
+          "Dedicated Technical Account Management & Migration Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "2D Drafting & Productivity Add-Ons",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Precision 2D Drafting with Drop-In AutoCAD Command Line Syntax",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Built-In Vector PDF to DWG Conversion Tool (Extracts Geometry & Text)",
             "status": true
           },
           {
-            "name": "Hatch and fill patterns",
+            "name": "iCADLib Block Manager with 22,000+ 2D/3D Construction & Mechanical Blocks",
             "status": true
           },
           {
-            "name": "Layer and block management",
+            "name": "Dynamic Blocks In-Place Grips & Parameter Display",
+            "status": true
+          },
+          {
+            "name": "Sheet Set Manager, Drawing Compare & Layer Filters",
             "status": true
           }
         ]
       },
       {
-        "category": "3D Modeling",
+        "category": "Architectural 3D & BIM Interoperability",
         "items": [
           {
-            "name": "3D solid modeling",
+            "name": "EasyArch 3D Parametric Plugin (Walls, Doors, Windows, Stairs, Roofs)",
             "status": true
           },
           {
-            "name": "Surface modeling",
+            "name": "3D ACIS Solid Modeling & Surface Construction",
             "status": true
           },
           {
-            "name": "EasyArch 3D architectural plugin",
+            "name": "IFC File Import & BIM Model Property Tree Inspection",
             "status": true
           },
           {
-            "name": "Rendering",
+            "name": "Autodesk Revit (.RVT / .RFA) File Import via Converter",
+            "status": true
+          },
+          {
+            "name": "Point Cloud (E57, LAS, PTS, XYZ) Ingestion & Snapping",
             "status": true
           }
         ]
       },
       {
-        "category": "Utilities",
+        "category": "Visualization & Photorealistic Rendering",
         "items": [
           {
-            "name": "PDF-to-DWG conversion",
+            "name": "Artis Photorealistic Rendering Module with Materials & Sunlight",
             "status": true
           },
           {
-            "name": "iCADLib block manager",
+            "name": "3D Orbit, Shaded Views & Perspective Walkthroughs",
             "status": true
           },
           {
-            "name": "Raster image processing",
+            "name": "Raster Image Underlays, Geo-Referencing & Clipping",
             "status": true
           },
           {
-            "name": "Point cloud import",
-            "status": false
+            "name": "Direct Export to 3D PDF with Interactive Geometry Inspection",
+            "status": true
           }
         ]
       },
       {
-        "category": "Compatibility",
+        "category": "IntelliCAD Core, APIs & Perpetual Licensing",
         "items": [
           {
-            "name": "DWG import/export",
+            "name": "Proven IntelliCAD Technology Engine with Native DWG Core",
             "status": true
           },
           {
-            "name": "DXF import/export",
+            "name": "AutoLISP, Visual LISP, .NET, VBA & IRX/SDS (C++) Programming APIs",
             "status": true
           },
           {
-            "name": "PDF export",
+            "name": "One-Time Perpetual License Ownership (No Forced Subscriptions)",
             "status": true
           },
           {
-            "name": "AutoCAD menu/script support",
+            "name": "Network License Manager (NLM) with Take-Away Feature",
+            "status": true
+          },
+          {
+            "name": "Cloud Storage Synchronization (Dropbox, Google Drive, OneDrive)",
             "status": true
           }
         ]
       }
     ],
+    "alternatives": [
+      "autocad",
+      "zwcad",
+      "bricscad"
+    ],
     "country": "Italy",
     "category_id": "c1",
     "pricing_type": "Perpetual",
-    "starting_price": 399,
+    "starting_price": 490,
     "price_period": "one-time",
     "platforms": [
       "Windows"
     ],
     "industries": [
       "Architecture",
-      "Civil Engineering",
-      "Mechanical Engineering",
       "Construction",
-      "Interior Design"
+      "Mechanical Engineering",
+      "Surveying",
+      "Plant Design"
     ],
     "core_features": [
-      "PDF to DWG Converter",
-      "3D Architectural Module",
-      "EasyArch 3D Plugin",
-      "iCADLib Block Manager",
-      "DWG-Native Engine",
-      "AutoCAD Command Compatibility"
+      "Native .DWG & .DXF Engine (IntelliCAD Powered)",
+      "Built-in PDF-to-DWG Vector Conversion",
+      "EasyArch 3D Parametric Architectural Plugin",
+      "iCADLib Block Manager (22,000+ Included Symbols)",
+      "3D ACIS Solid Modeling & Photorealistic Rendering",
+      "AutoLISP, IRX (C++), .NET & VBA Customization",
+      "Perpetual License with Standalone & Network NLM"
     ],
     "user_scales": [
-      "Freelance",
-      "Small Business",
-      "Mid-Sized Company"
+      "Freelancers",
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.progesoft.com/products/progecad-professional",
-    "pricing_url": "https://www.progesoft.com/en/buy",
-    "trial_url": "https://www.progesoft.com/products/progecad-professional/download",
+    "official_url": "https://www.progesoft.com/",
+    "pricing_url": "https://www.progesoft.com/buy-now",
+    "trial_url": "https://www.progesoft.com/downloads/free-trial-download",
     "affiliate_url": null,
-    "score": 3.6,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.g2.com/products/progecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.capterra.com/p/158742/progeCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.5,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.softwareadvice.com/cad/progecad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.getapp.com/engineering-software/a/progecad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online PDF to DWG Converter",
+        "href": "/toolbox/online-pdf-to-dwg-converter"
+      },
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Built-in PDF-to-DWG conversion saves significant time",
-      "Perpetual license with no subscription required",
-      "High AutoCAD compatibility with familiar interface",
-      "Rich block library via iCADLib",
-      "Competitive price vs AutoCAD",
-      "EasyArch 3D plugin for architectural design"
+      "One-time perpetual license with no forced recurring subscriptions, providing long-term software cost predictability.",
+      "Built-in PDF-to-DWG vector converter extracts layered CAD lines, arcs, and text directly from vector PDF drawings.",
+      "EasyArch 3D parametric plugin enables architects to rapidly lay out parametric walls, doors, windows, stairs, and roofs.",
+      "Massive bundled iCADLib library containing over 22,000 2D and 3D blocks for architecture, mechanical, electrical, and MEP drafting.",
+      "High drop-in compatibility with AutoCAD commands, menus, toolbars, shortcut keys, and AutoLISP routines.",
+      "Artis rendering module integrated for creating presentation-ready architectural and mechanical visualizations with materials and lighting."
     ],
     "cons": [
-      "Windows-only, no macOS or Linux support",
-      "Can experience instability with very large files",
-      "Annual update cycle may lag behind competitors",
-      "Smaller ecosystem than AutoCAD",
-      "Some advanced 3D features less refined than premium CAD",
-      "Customer support quality varies by region"
+      "Desktop application is designed natively for 64-bit Windows workstations (iCADMac is sold as a separate, distinct product for macOS users).",
+      "Large and intricate 3D assemblies can exhibit slower display regeneration than high-end native MCAD platforms like SolidWorks.",
+      "Parametric mechanical constraint solver is basic compared to dedicated mechanical parametric suites.",
+      "Third-party commercial plugin ecosystem relies primarily on the IntelliCAD community and is smaller than Autodesk's App Store.",
+      "Revit RVT native direct editing is not supported (BIM underlays can be referenced via IFC and RVT import converter).",
+      "UI styling and ribbon animations reflect a traditional CAD interface aesthetic rather than modern minimal web design."
     ],
     "faqs": [
       {
         "q": "What is progeCAD Professional used for?",
-        "a": "progeCAD Professional is a DWG-native CAD for 2D drafting and 3D modeling in architecture, civil engineering, and mechanical design. Its built-in PDF-to-DWG converter and AutoCAD compatibility make it popular for users migrating from AutoCAD or working with legacy DWG files."
+        "a": "According to ProgeSOFT official documentation, progeCAD Professional is an AutoCAD-compatible 2D and 3D CAD application used by architects, building designers, civil engineers, and surveyors for technical drafting and DWG documentation. It includes built-in PDF-to-DWG vector conversion and the EasyArch 3D parametric architecture tool. Discover more on the [Official progeCAD Overview](https://www.progesoft.com/)."
       },
       {
-        "q": "How much does progeCAD Professional cost?",
-        "a": "progeCAD Professional is sold as a one-time Perpetual license (in Single, Single+ portable, NLM Network, and Corporate Site configurations) with optional iCARE maintenance. Because official prices, currencies (EUR/USD), taxes, and regional distributor rates vary by country, please visit the [Official progeCAD Store](https://www.progesoft.com/en/buy) for live regional pricing."
+        "q": "What is the difference between progeCAD Standalone and Network licenses?",
+        "a": "progeCAD Professional Single User (SL) is a perpetual license registered to one computer. progeCAD Network (NLM) provides floating concurrent licenses installed on a company server, allowing any workstation on the local network or VPN to check out a seat as needed. Compare options on the [Official progeCAD Buy Portal](https://www.progesoft.com/buy-now)."
       },
       {
-        "q": "Does progeCAD Professional offer a free trial?",
-        "a": "Yes — ProgeSOFT offers a full-featured evaluation version of progeCAD Professional so teams can test DWG compatibility and 3D tools before buying. Visit the [Official progeCAD Download Page](https://www.progesoft.com/products/progecad-professional/download) for current trial details."
+        "q": "How much does progeCAD Professional cost in my country?",
+        "a": "progeCAD Professional is sold as a one-time perpetual license with no mandatory annual renewals (optional iCARE subscription is available for free updates and support). Because authorized reseller prices and currencies differ across global markets, check the [Official progeCAD Store](https://www.progesoft.com/buy-now) for current regional pricing."
       },
       {
-        "q": "What operating systems does progeCAD Professional support?",
-        "a": "progeCAD Professional runs on 64-bit Windows. For macOS (Intel and Apple Silicon), ProgeSOFT offers a separate native product called iCADMac."
+        "q": "Does progeCAD offer a free trial?",
+        "a": "Yes. ProgeSOFT provides an official 30-day fully functional free trial of progeCAD Professional, allowing users to test all 2D/3D commands, PDF-to-DWG, and block libraries without watermarks. Download the trial installer from the [Official progeCAD Download Page](https://www.progesoft.com/downloads/free-trial-download)."
       },
       {
-        "q": "Which file formats does progeCAD Professional support?",
-        "a": "progeCAD Professional works natively with DWG and DXF and imports/exports a wide range of formats including DGN, RVT/RFA, IFC, STEP, IGES, SAT, SolidWorks, 3D PDF, DWF, 3DS, DAE, OBJ, STL, SVG, and PDF (with a built-in PDF-to-DWG converter). Check the [Official progeCAD Product Page](https://www.progesoft.com/products/progecad-professional) for the complete format matrix."
+        "q": "What operating systems does progeCAD support?",
+        "a": "progeCAD Professional runs natively on 64-bit Microsoft Windows 11, Windows 10, and Windows 8.1 (requiring 4 GB RAM minimum, 8 GB+ recommended; an OpenGL hardware-accelerated 3D graphics card is recommended). Mac users can purchase ProgeSOFT's separate iCADMac application. Check requirements on the [progeCAD System Specifications](https://www.progesoft.com/)."
       },
       {
-        "q": "What are the best alternatives to progeCAD Professional?",
-        "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD, and DraftSight. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which file formats does progeCAD support?",
+        "a": "progeCAD natively opens, edits, and saves all versions of AutoCAD .DWG and .DXF files (from version 2.5 up to the latest releases). It also imports and exports PDF, IFC, STEP, IGES, DWF, and 3D PDF, with support for point clouds (E57, LAS, PTS)."
       },
       {
-        "q": "Is there a free version of progeCAD Professional?",
-        "a": "progeCAD Professional is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official progeCAD Professional plans and trial](https://www.progesoft.com/products/progecad-professional/download)."
+        "q": "Is progeCAD compatible with AutoCAD commands and AutoLISP?",
+        "a": "Yes. progeCAD utilizes standard AutoCAD-like commands, shortcuts, toolbars, and menus, and supports AutoLISP routines, VBA, .NET, and IRX (C++ SDS) developer extensions."
       }
     ],
     "tech_specs": {
       "engine": "IntelliCAD (DWG-native)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX/OpenGL",
+      "multicore": "Multi-threaded display regeneration pipeline",
+      "gpu_optimization": "DirectX & OpenGL Hardware Acceleration",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
-        "PDF"
+        "PDF",
+        "IFC",
+        "STEP",
+        "IGES"
       ]
     },
-    "expert_verdict": "A highly compatible DWG-native CAD software with perpetual licensing, ideal for small to mid-sized drafting teams.",
-    "release_notes_url": "https://www.progesoft.com/products/progecad-professional",
+    "expert_verdict": "progeCAD Professional is one of the most reliable perpetual-license AutoCAD alternatives on the market, combining IntelliCAD engine reliability with bundled productivity tools like PDF-to-DWG conversion, EasyArch 3D architecture, and a 22,000-block library. For firms seeking to escape recurring annual subscription fees while maintaining 100% native DWG fidelity and LISP compatibility, progeCAD is an outstanding investment.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "PDF",
+      "IFC",
+      "STEP",
+      "IGES",
+      "RVT",
+      "RFA",
+      "LAS",
+      "PTS",
+      "E57"
+    ],
+    "file_formats_out": [
+      "DWF",
+      "DWG",
+      "DXF",
+      "DWT",
+      "PDF",
+      "3D PDF",
+      "STEP",
+      "IGES",
+      "SVG",
+      "BMP"
+    ],
     "languages": [
       "English",
       "Italian",
@@ -2041,197 +3257,153 @@ export const c1Tools: Tool[] = [
       "Russian",
       "Chinese (Simplified)"
     ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "PDF",
-      "RVT",
-      "RFA",
-      "IFC",
-      "STEP",
-      "IGES",
-      "SAT",
-      "SHP",
-      "DGN"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "PDF",
-      "3D PDF",
-      "IFC",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "SVG",
-      "WMF",
-      "DWF",
-      "3DS",
-      "DAE",
-      "OBJ"
-    ],
-    "integrations": [],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
       "Perpetual",
-      "Educational",
-      "Network"
+      "Network",
+      "Educational"
     ],
-    "support_channels": [
-      "Email",
-      "Documentation",
-      "Community"
-    ],
-    "security_compliance": [],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "AutoLISP / VBA / .NET / IRX / SDS (IntelliCAD)",
-      "sdk_languages": [
-        "Lisp",
-        "C++",
-        "C#",
-        "VB.NET",
-        "VBA"
-      ],
-      "docs_url": "https://www.progesoft.com/products/progecad-professional"
+      "has_sdk": true
     },
-    "key_capabilities": [
-      "DWG Interoperability",
-      "PDF-to-DWG",
-      "2D Drafting",
-      "3D Modeling",
-      "Block Libraries"
-    ],
-    "alternatives": [
-      "gstarcad",
-      "zwcad",
-      "bricscad",
-      "draftsight"
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t60",
+    "id": "t10",
     "name": "LibreCAD",
     "slug": "librecad",
-    "logo_url": "/logos/librecad.ico",
-    "short_desc": "Free, open-source 2D CAD for Windows, macOS, and Linux with DXF native support, ideal for education, hobbyists, and small-scale drafting.",
-    "description": "LibreCAD is a free, open-source 2D CAD application forked from QCAD, offering a comprehensive set of drafting tools for technical drawings, schematics, and design documentation. Built on the Qt framework, it runs natively on Windows, macOS, and Linux, and is translated into over 30 languages by a global community of volunteers. LibreCAD uses DXF as its native format, ensuring broad interoperability with other CAD systems. Its lightweight core, familiar AutoCAD-like command line, and zero cost make it a popular choice for students, hobbyists, educators, and small businesses that need reliable 2D drafting without licensing fees. While it offers no DWG write support and no 3D capabilities, its active community and regular updates ensure it remains a viable option for pure 2D work.",
+    "logo_url": "/logos/librecad.svg",
+    "short_desc": "Free, open-source 2D CAD application developed by a global community for technical drafting and floor planning with native DXF support.",
+    "description": "LibreCAD is a free, open-source 2D computer-aided design (CAD) application developed by an international community of contributors and released under the GNU General Public License (GPLv2). Built with the Qt cross-platform framework, LibreCAD runs natively on Microsoft Windows, Apple macOS, and Linux. It focuses purely on precision 2D drafting, technical drawing, schematic design, and floor planning, operating natively in the DXF file format. LibreCAD offers comprehensive layer and block management, customizable command-line drafting input, support for over 40 community-localized languages, and a zero-cost licensing model for personal, educational, and commercial engineering use.",
     "pricing_tiers": [
       {
-        "name": "LibreCAD (Free)",
+        "name": "LibreCAD Community Edition",
         "price": "Free",
-        "period": "perpetual",
+        "period": "perpetual open-source",
         "features": [
-          "2D drafting tools",
-          "DXF native support",
-          "Layer and block management",
-          "Annotation and dimensioning",
-          "Command-line input",
-          "Cross-platform",
-          "Community support"
+          "100% Free Software under the GNU General Public License (GPLv2)",
+          "Full Commercial, Educational, and Personal Usage Allowed",
+          "Complete 2D Drafting, Geometric Snapping & Trimming Tools",
+          "Hierarchical Layer and Block Management System",
+          "Native DXF Read & Write (R12 to 2007) and SVG/PDF Export",
+          "Community-Maintained Localization Across 40+ Languages"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "2D Drafting & Geometric Construction",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Precision 2D Geometry (Lines, Polylines, Circles, Arcs, Ellipses, Splines)",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Precision Entity Snapping (Endpoints, Midpoints, Intersections, Centers)",
             "status": true
           },
           {
-            "name": "Hatch and fill patterns",
+            "name": "Hierarchical Layer Control (Color, Lineweight, Line Type, Locking)",
             "status": true
           },
           {
-            "name": "Multiline text (MText)",
+            "name": "Reusable Block System with Dynamic Insertion & Library Support",
+            "status": true
+          },
+          {
+            "name": "Associative Dimensioning (Linear, Aligned, Radial, Diametric, Angular)",
             "status": true
           }
         ]
       },
       {
-        "category": "Organization",
+        "category": "Command-Line Interface & Coordinate Input",
         "items": [
           {
-            "name": "Layer management",
+            "name": "AutoCAD-Style Command-Line Console for Rapid Keyboard Drafting",
             "status": true
           },
           {
-            "name": "Block and symbol libraries",
+            "name": "Relative & Absolute Cartesian Coordinate Entry (@X,Y)",
             "status": true
           },
           {
-            "name": "Linetypes and weights",
+            "name": "Polar Coordinate Drafting (@Distance<Angle)",
             "status": true
           },
           {
-            "name": "Paper space / layouts",
+            "name": "Customizable Keyboard Shortcuts & Command Aliases",
             "status": true
           }
         ]
       },
       {
-        "category": "Input & Precision",
+        "category": "File Formats & Exporting",
         "items": [
           {
-            "name": "Command-line interface",
+            "name": "Native Industry-Standard DXF Format Read and Write (R12 through 2007)",
             "status": true
           },
           {
-            "name": "Advanced snapping system",
+            "name": "Direct Scalable Vector Graphics (SVG) Drawing Export",
             "status": true
           },
           {
-            "name": "Coordinate input",
+            "name": "High-Resolution Vector PDF Document Printing & Export",
             "status": true
           },
           {
-            "name": "Parametric constraints",
-            "status": false
+            "name": "Raster Image Export (PNG, JPG, BMP, TIF, PPM)",
+            "status": true
+          },
+          {
+            "name": "JWW CAD File Format Import Support",
+            "status": true
           }
         ]
       },
       {
-        "category": "Compatibility",
+        "category": "Open-Source Architecture & Cross-Platform",
         "items": [
           {
-            "name": "DXF import/export (native)",
+            "name": "100% Free & Open-Source under GNU General Public License (GPLv2)",
             "status": true
           },
           {
-            "name": "DWG read/import (via libdxfrw)",
+            "name": "Native Cross-Platform Qt Framework (Windows, macOS & Linux)",
             "status": true
           },
           {
-            "name": "SVG & PDF export",
+            "name": "Zero Telemetry, Zero Cloud Dependencies & Offline Operation",
             "status": true
           },
           {
-            "name": "DWG write/export",
-            "status": false
-          },
-          {
-            "name": "JWW import/export",
+            "name": "Community-Maintained UI Localization in over 40 Languages",
             "status": true
           }
         ]
       }
     ],
-    "country": "Community/International",
+    "alternatives": [
+      "qcad",
+      "freecad",
+      "autocad-lt"
+    ],
+    "country": "International",
     "category_id": "c1",
     "pricing_type": "Free",
     "starting_price": 0,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
@@ -2239,84 +3411,145 @@ export const c1Tools: Tool[] = [
     ],
     "industries": [
       "Education",
-      "Mechanical Engineering",
-      "Electrical Engineering",
+      "Hobbyist / Maker",
       "Architecture",
-      "Hobbyist",
-      "Laser Cutting"
+      "Mechanical Engineering",
+      "Woodworking"
     ],
     "core_features": [
-      "Advanced Layering",
-      "Block System",
-      "DXF Native Support",
-      "Lightweight Core",
-      "Command-Line Interface",
-      "Cross-Platform"
+      "100% Free & Open-Source (GPLv2 License)",
+      "Precision 2D Drafting & Geometric Construction",
+      "Native .DXF (Drawing Exchange Format) Support",
+      "Multi-Layer System & Block Hierarchy Management",
+      "Command-Line Coordinate & Command Input",
+      "Native Cross-Platform (Windows, macOS & Linux)",
+      "40+ Localized Community Translation Languages"
     ],
     "user_scales": [
-      "Freelance",
-      "Small Business",
-      "Education"
+      "Individual",
+      "Freelancers",
+      "SMB"
     ],
-    "official_url": "https://librecad.org",
-    "pricing_url": "https://librecad.org",
-    "trial_url": "https://github.com/LibreCAD/LibreCAD/releases",
+    "official_url": "https://librecad.org/",
+    "pricing_url": "https://librecad.org/",
+    "trial_url": "https://librecad.org/#download",
+    "donate_url": "https://librecad.org/#donate",
     "affiliate_url": null,
-    "score": 3.5,
+    "score": 4.2,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 3.9,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.g2.com/products/librecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.1,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.capterra.com/p/146061/LibreCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "SourceForge",
+        "score": 4.6,
+        "max": 5,
+        "count": 445,
+        "url": "https://sourceforge.net/projects/librecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8,
+        "max": 10,
+        "count": 16,
+        "url": "https://www.trustradius.com/products/librecad/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online DWG to DXF Batch Converter",
+        "href": "/toolbox/online-dwg-to-dxf-batch-converter"
+      },
+      {
+        "label": "DXF Watermark & Layer Parser",
+        "href": "/toolbox/dxf-watermark-layer-parser"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "100% free for personal and commercial use",
-      "Very lightweight with minimal system requirements",
-      "Active open-source community with regular updates",
-      "Cross-platform: Windows, macOS, and Linux",
-      "Familiar AutoCAD-like command line",
-      "Translated into over 30 languages"
+      "Completely free and open-source under GPLv2 with zero license fees, seat restrictions, or forced subscription renewals for commercial projects.",
+      "Lightweight footprint with fast launch times and minimal hardware requirements, running smoothly on older PCs and laptops.",
+      "Full native cross-platform support across 64-bit Windows, macOS, and standard Linux distributions (Ubuntu, Fedora, Debian).",
+      "Standard command-line bar supports rapid coordinate entry (Cartesian and polar) and familiar drafting commands (line, circle, trim).",
+      "Clean layer control and block creation system allows structured technical drawings and reusable component libraries.",
+      "Community-maintained global localization supporting over 40 interface languages, making it accessible worldwide."
     ],
     "cons": [
-      "2D only, no 3D modeling capability",
-      "Reads DWG files, but saves/exports natively to DXF (no DWG write)",
-      "Basic feature set compared to commercial CAD",
-      "Smaller ecosystem of plugins and add-ons",
-      "Limited advanced automation and scripting",
-      "No official commercial support available"
+      "Strictly 2D drafting only; does not support 3D solid, surface, or mesh modeling (use FreeCAD or Blender for 3D workflows).",
+      "Does not support native AutoCAD DWG file editing directly out of the box (requires converting DWG files to DXF first).",
+      "Lacks AutoLISP, VBA, or .NET macro automation scripting environments commonly used in commercial CAD offices.",
+      "Dimensioning and text formatting tools are basic and lack advanced associative dimensioning or dynamic tables.",
+      "No official telephone or commercial enterprise SLA technical support; relies on community forum discussions and GitHub issue reports.",
+      "Single-threaded Qt rendering engine can lag when displaying extremely dense hatching patterns or drawings with hundreds of thousands of entities."
     ],
     "faqs": [
       {
         "q": "What is LibreCAD used for?",
-        "a": "LibreCAD is a free, open-source 2D CAD application for creating technical drawings, schematics, architectural plans, and laser-cutting layouts across Windows, macOS, and Linux."
-      },
-      {
-        "q": "How much does LibreCAD cost?",
-        "a": "LibreCAD is 100% free and open-source software (GPLv2) with no subscription or licensing fees. Visit the [Official LibreCAD Website](https://librecad.org) or [GitHub Releases](https://github.com/LibreCAD/LibreCAD/releases) to download the latest build."
+        "a": "According to LibreCAD community documentation, LibreCAD is a free, open-source 2D computer-aided design (CAD) application for creating 2D technical drawings, mechanical plans, floor plans, and architectural schematics. It operates natively in the DXF file format and is licensed under the GPLv2. Read more on the [Official LibreCAD Website](https://librecad.org/)."
       },
       {
         "q": "Is LibreCAD really free for commercial use?",
-        "a": "Yes. LibreCAD is distributed under the GNU General Public License v2 (GPLv2), allowing both personal and commercial use at zero cost."
+        "a": "Yes. LibreCAD is published under the GNU General Public License version 2 (GPLv2). You are free to download, install, distribute, and use LibreCAD for personal, commercial, educational, or governmental projects without paying any license fees or royalties. See details on the [LibreCAD License Page](https://librecad.org/)."
+      },
+      {
+        "q": "How much does LibreCAD cost?",
+        "a": "LibreCAD is 100% free of charge. Users who wish to support project hosting, development, and community translation can contribute voluntary donations via the [Official LibreCAD Donation Portal](https://librecad.org/#donate)."
       },
       {
         "q": "What operating systems does LibreCAD support?",
-        "a": "LibreCAD runs natively on Windows, macOS (Intel and Apple Silicon), and Linux."
+        "a": "LibreCAD is cross-platform, running natively on 64-bit Microsoft Windows 11/10/8, Apple macOS (via dmg packages), and Linux (available via AppImage, Flatpak, and native package managers on Ubuntu, Debian, Fedora, and Arch). Check downloads on [LibreCAD Downloads](https://librecad.org/#download)."
       },
       {
         "q": "Which file formats does LibreCAD support?",
-        "a": "LibreCAD uses DXF as its native read/write format, can import/read DWG and JWW files, and exports to DXF, SVG, PDF, and raster images (note: it does not write DWG files)."
+        "a": "LibreCAD natively reads, edits, and writes ASCII and binary .DXF files (from AutoCAD R12 through 2007 format). It can also import JWW files and export drawings to SVG, vector PDF, and standard bitmap raster formats (PNG, JPG, BMP). LibreCAD does not natively open proprietary AutoCAD .DWG files without converting them to DXF first."
       },
       {
         "q": "What are the best alternatives to LibreCAD?",
-        "a": "The closest alternatives to LibreCAD are QCAD, FreeCAD, nanoCAD, and SolveSpace. Compare their full specifications, file-format compatibility, and licensing options side-by-side on CADGuide."
+        "a": "For 2D-only open-source and low-cost CAD, the closest alternatives are QCAD and AutoCAD LT. For users requiring full 3D parametric modeling with open-source licensing, FreeCAD is the leading alternative."
       }
     ],
     "tech_specs": {
-      "engine": "Qt/LibreCAD",
+      "engine": "Qt / LibreCAD Core",
       "multicore": "Single-threaded",
-      "gpu_optimization": "None",
+      "gpu_optimization": "None (Qt Software Rendering)",
       "standards": [
-        "DXF",
+        "DXF (Native)",
         "JWW",
-        "SVG"
+        "SVG",
+        "PDF"
       ]
     },
-    "expert_verdict": "A free, open-source (GPL) 2D CAD tool for students, makers, and basic layout projects.",
-    "release_notes_url": "https://github.com/LibreCAD/LibreCAD/releases",
+    "expert_verdict": "LibreCAD is one of the premier 100% free, open-source 2D CAD programs available. For educators, students, hobbyists, and small businesses requiring precision 2D technical drafting, laser-cut DXF layouts, and floor planning without subscription fees or commercial lock-in, LibreCAD delivers a remarkably clean, cross-platform drafting experience.",
+    "file_formats_in": [
+      "DXF",
+      "JWW"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "PDF",
+      "SVG",
+      "PNG",
+      "JPG",
+      "BMP"
+    ],
     "languages": [
       "English",
       "Arabic",
@@ -2361,17 +3594,6 @@ export const c1Tools: Tool[] = [
       "Chinese (Simplified)",
       "Chinese (Traditional)"
     ],
-    "file_formats_in": [
-      "DXF",
-      "DWG (Read-only)",
-      "JWW"
-    ],
-    "file_formats_out": [
-      "DXF",
-      "SVG",
-      "PDF"
-    ],
-    "integrations": [],
     "deployment_options": [
       "Desktop"
     ],
@@ -2379,32 +3601,13 @@ export const c1Tools: Tool[] = [
       "Free",
       "Open-Source"
     ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
     "support_channels": [
       "Community",
       "Documentation"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "Plugin API (C++)",
-      "sdk_languages": [
-        "C++"
-      ],
-      "docs_url": "https://dokuwiki.librecad.org/"
-    },
-    "key_capabilities": [
-      "Free 2D Drafting",
-      "DXF Native Support",
-      "Cross-Platform",
-      "Command-Line Input",
-      "Lightweight"
-    ],
-    "alternatives": [
-      "qcad",
-      "freecad",
-      "nanocad",
-      "solvespace"
     ]
   },
   {

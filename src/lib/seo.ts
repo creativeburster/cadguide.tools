@@ -27,8 +27,7 @@ export function toolDescription(tool: Tool, category?: Category): string {
   const base = (tool.short_desc || tool.description || "").trim();
   const platforms = tool.platforms.join("/");
   const price = pricingSummary(tool);
-  const score = tool.score?.toFixed(1);
-  const suffix = ` Expert review (${score}/5), ${price}, ${platforms}.`;
+  const suffix = ` Official specs, ${price} pricing & ${platforms} support.`;
   const budget = MAX_DESC - suffix.length;
 
   // Prefer the curated short_desc / description, trimmed to fit, with the
@@ -232,17 +231,6 @@ export function softwareApplicationLd(tool: Tool, category?: Category) {
     dateModified: undefined,
     offers: offerForTool(tool),
     aggregateRating: aggregateRatingFor(tool),
-    review: tool.score ? {
-      "@type": "Review",
-      author: SITE_PUBLISHER,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: tool.score.toFixed(1),
-        bestRating: "5",
-        worstRating: "1",
-      },
-      reviewBody: tool.expert_verdict || tool.description || `${tool.name} editorial technical evaluation and benchmark review.`,
-    } : undefined,
     publisher: SITE_PUBLISHER,
   };
 }

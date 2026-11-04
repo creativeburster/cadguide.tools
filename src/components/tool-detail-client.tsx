@@ -184,7 +184,59 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
       links.push({ name: "3D Printing & Additive", href: "/sectors/3d-printing" });
     }
     
-    return links.slice(0, 2);
+    return links.slice(0, 3);
+  };
+
+  const getRoleLinks = (t: Tool) => {
+    const links: { name: string; href: string }[] = [];
+    const inds = (t.industries ?? []).map((x) => x.toLowerCase());
+    const text = `${t.name} ${t.short_desc} ${inds.join(" ")}`.toLowerCase();
+
+    if (inds.some((i) => i.includes("architect")) || /architect|aec|bim|floor plan/i.test(text)) {
+      links.push({ name: "For Architects", href: "/for/architects" });
+    }
+    if (inds.some((i) => i.includes("mechanical") || i.includes("manufacturing")) || /mechanical|mcad|machining|sheet metal/i.test(text)) {
+      links.push({ name: "For Mechanical Engineers", href: "/for/mechanical-engineers" });
+    }
+    if (inds.some((i) => i.includes("electrical") || i.includes("electronics")) || /electrical|pcb|eda|schematic/i.test(text)) {
+      links.push({ name: "For Electrical Engineers", href: "/for/electrical-engineers" });
+    }
+    if (inds.some((i) => i.includes("civil") || i.includes("infrastructure")) || /civil|infrastructure|landxml|grading/i.test(text)) {
+      links.push({ name: "For Civil Engineers", href: "/for/civil-engineers" });
+    }
+    if (inds.some((i) => i.includes("structural")) || /structural|steel|rebar|concrete/i.test(text)) {
+      links.push({ name: "For Structural Engineers", href: "/for/structural-engineers" });
+    }
+    if (inds.some((i) => i.includes("construction")) || /construction|contractor|clash/i.test(text)) {
+      links.push({ name: "For Construction Managers", href: "/for/construction-managers" });
+    }
+    if ((t.user_scales ?? []).some((u) => /enterprise/i.test(u)) && t.category_id === "c1") {
+      links.push({ name: "For CAD Managers", href: "/for/cad-managers" });
+    }
+    return links.slice(0, 4);
+  };
+
+  const getCoreFeatureHref = (feat: string): string | null => {
+    const f = feat.toLowerCase();
+    if (f.includes("dwg")) return "/file-formats/dwg";
+    if (f.includes("dxf")) return "/file-formats/dxf";
+    if (f.includes("ifc")) return "/file-formats/ifc";
+    if (f.includes("step")) return "/file-formats/step";
+    if (f.includes("2d drafting") || f.includes("documentation") || f.includes("detailing")) return "/best/feature/drafting-detailing";
+    if (f.includes("parametric")) return "/best/feature/parametric-modeling";
+    if (f.includes("3d solid") || f.includes("direct modeling")) return "/best/feature/direct-modeling";
+    if (f.includes("surface")) return "/best/feature/surface-modeling";
+    if (f.includes("mesh") || f.includes("subdivision")) return "/best/feature/mesh-modeling";
+    if (f.includes("smart blocks") || f.includes("ai") || f.includes("generative")) return "/best/feature/ai-assisted";
+    if (f.includes("web") || f.includes("cloud") || f.includes("collaboration")) return "/best/feature/cloud-collaboration";
+    if (f.includes("bim") || f.includes("toolsets")) return "/best/feature/bim-integration";
+    if (f.includes("cam") || f.includes("toolpath") || f.includes("cnc")) return "/best/feature/integrated-cam";
+    if (f.includes("simulation") || f.includes("fea") || f.includes("cfd")) return "/best/feature/simulation-fea";
+    if (f.includes("render") || f.includes("visualization")) return "/best/feature/rendering";
+    if (f.includes("sheet metal")) return "/best/feature/sheet-metal";
+    if (f.includes("piping") || f.includes("routing")) return "/best/feature/piping-routing";
+    if (f.includes("autolisp") && tool.slug === "autocad") return "/toolbox/autocad-250-commands-reference";
+    return null;
   };
 
 
@@ -342,15 +394,19 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   />
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 mb-6">
-                      <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 uppercase tracking-[0.2em] text-[10px]">
-                        {category?.name}
-                      </Badge>
+                      {category && (
+                        <Link href={`/tools?category=${category.id}`}>
+                          <Badge className="bg-blue-600 hover:bg-blue-700 text-white border-none font-black px-4 py-1.5 uppercase tracking-[0.2em] text-[10px] cursor-pointer transition-colors">
+                            {category.name}
+                          </Badge>
+                        </Link>
+                      )}
                       {(() => {
                         const pHref = getLicenseHref(tool.pricing_type || "");
                         const badgeEl = (
                           <Badge
                             variant="outline"
-                            className="bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200 font-bold px-4 py-1.5 text-[10px] transition-colors"
+                            className="bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200 font-bold px-4 py-1.5 text-[10px] transition-colors cursor-pointer"
                           >
                             {tool.pricing_type}
                           </Badge>
@@ -367,7 +423,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         </Badge>
                       )}
                       
-                      {/* Dynamic Tree Arteries (Upward SEO Badges) */}
+                      {/* Dynamic Tree Arteries (Upward & Cross-Site Internal SEO Badges) */}
                       {category && (
                         <Link href={`/best/${category.slug}`}>
                           <Badge className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
@@ -384,8 +440,7 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                             if (!p.slug || seenPlats.has(p.slug)) return false;
                             seenPlats.add(p.slug);
                             return true;
-                          })
-                          .slice(0, 3);
+                          });
                         return platformBadges.map(pb => (
                           <Link href={`/platforms/${pb.slug}`} key={pb.slug}>
                             <Badge className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
@@ -395,61 +450,118 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                         ));
                       })()}
 
+                      {getRoleLinks(tool).map((role, rIdx) => (
+                        <Link href={role.href} key={`role-${rIdx}`}>
+                          <Badge className="bg-sky-50 hover:bg-sky-100 text-sky-700 border-sky-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                            <Layers className="w-3 h-3 text-sky-500" /> {role.name}
+                          </Badge>
+                        </Link>
+                      ))}
+
                       {getSectorLinks(tool).map((sec, sIdx) => (
-                        <Link href={sec.href} key={sIdx}>
+                        <Link href={sec.href} key={`sec-${sIdx}`}>
                           <Badge className="bg-amber-50 hover:bg-amber-100 text-amber-700 border-amber-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
                             <Cpu className="w-3 h-3 text-amber-500" /> {sec.name}
                           </Badge>
                         </Link>
                       ))}
 
-                      {((tool.file_formats_in ?? []).some(f => f.toLowerCase() === 'dwg') || (tool.file_formats_out ?? []).some(f => f.toLowerCase() === 'dwg')) && (
-                        <Link href="/file-formats/dwg">
-                          <Badge className="bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
-                            <FileText className="w-3 h-3 text-rose-500" /> DWG Native
+                      {(() => {
+                        const seenFmts = new Set<string>();
+                        const allFmts = [...(tool.file_formats_in ?? []), ...(tool.file_formats_out ?? [])];
+                        const fmtBadges: { label: string; slug: string }[] = [];
+                        for (const f of allFmts) {
+                          const s = getFormatSlug(f);
+                          if (s && !seenFmts.has(s)) {
+                            seenFmts.add(s);
+                            fmtBadges.push({ label: s.toUpperCase(), slug: s });
+                          }
+                          if (fmtBadges.length >= 3) break;
+                        }
+                        return fmtBadges.map((fb) => (
+                          <Link href={`/file-formats/${fb.slug}`} key={`fmt-${fb.slug}`}>
+                            <Badge className="bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                              <FileText className="w-3 h-3 text-rose-500" /> {fb.label === "DWG" ? "DWG Native" : `${fb.label} Format`}
+                            </Badge>
+                          </Link>
+                        ));
+                      })()}
+
+                      <Link href={`/alternatives/${tool.slug}`}>
+                        <Badge className="bg-purple-50 hover:bg-purple-100 text-purple-700 border-purple-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                          <Search className="w-3 h-3 text-purple-500" /> {tool.name} Alternatives
+                        </Badge>
+                      </Link>
+
+                      {(tool.related_links ?? []).map((rl, rlIdx) => (
+                        <Link href={rl.href} key={`rl-${rlIdx}`}>
+                          <Badge className="bg-teal-50 hover:bg-teal-100 text-teal-700 border-teal-100/50 border font-bold px-3 py-1 text-[10px] rounded-xl transition-all flex items-center gap-1 cursor-pointer shrink-0">
+                            <Zap className="w-3 h-3 text-teal-500" /> {rl.label}
                           </Badge>
                         </Link>
-                      )}
+                      ))}
                     </div>
                     <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 mb-4 md:mb-6 tracking-tight leading-tight break-words">
                       {tool.name}
                     </h1>
-                    <div className="flex flex-wrap items-center gap-4 md:gap-8">
-                      <div className="flex items-center gap-2 bg-yellow-50 px-5 py-2 rounded-2xl border border-yellow-100">
-                        <span className="text-yellow-600 font-black text-2xl">
-                          ★ {tool.score}
-                        </span>
-                        <span className="text-yellow-700/50 text-[10px] font-black tracking-widest uppercase">
-                          Expert Score
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3 text-slate-500 font-bold">
-                        <Globe className="w-5 h-5 text-blue-500" />
-                        <span className="text-sm">
-                          Origin:{" "}
-                          <span className="text-slate-900">{tool.country}</span>
-                        </span>
-                      </div>
-                      {/* Version omitted by design: it changes with every release */}
-                      {tool.trial_url && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
-                        <a
-                          href={tool.trial_url || tool.official_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block transition-transform hover:scale-105"
-                          title="Open official trial / download page"
-                        >
-                          <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px] cursor-pointer inline-flex items-center gap-1.5">
-                            Official Free Trial Available
-                            <ExternalLink className="w-3 h-3" />
+                    <div className="space-y-4">
+                      {tool.external_ratings && tool.external_ratings.length > 0 && (
+                        <div className="flex flex-wrap items-center gap-2.5">
+                          {tool.external_ratings.map((r, rIdx) => {
+                            const targetUrl = r.url || tool.official_url;
+                            return (
+                              <a
+                                key={rIdx}
+                                href={targetUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-flex items-center gap-2 bg-amber-50/80 hover:bg-amber-100/80 px-3.5 py-2 rounded-2xl border border-amber-200/70 transition-all"
+                                title={`View ${tool.name} ratings on ${r.source} (Verified ${r.verified_date || "Nov 2026"})`}
+                              >
+                                <span className="text-amber-600 font-black text-base md:text-lg flex items-center gap-1">
+                                  ★ {r.score.toFixed(1)}
+                                  <span className="text-amber-700/60 text-xs font-bold">/{r.max}</span>
+                                </span>
+                                <span className="text-slate-800 font-black text-xs uppercase tracking-wider">
+                                  {r.source}
+                                </span>
+                                <span className="text-slate-500 text-[10px] font-bold">
+                                  ({r.count.toLocaleString()} · {r.verified_date || "Nov 2026"})
+                                </span>
+                                <ExternalLink className="w-3 h-3 text-amber-700/50 group-hover:text-amber-800 shrink-0" />
+                              </a>
+                            );
+                          })}
+                        </div>
+                      )}
+                      <div className="flex flex-wrap items-center gap-4 md:gap-8">
+                        <div className="flex items-center gap-3 text-slate-500 font-bold">
+                          <Globe className="w-5 h-5 text-blue-500" />
+                          <span className="text-sm">
+                            Origin:{" "}
+                            <span className="text-slate-900">{tool.country}</span>
+                          </span>
+                        </div>
+                        {tool.trial_url && !tool.discontinued && !["Free", "Open Source"].includes(tool.pricing_type) && (
+                          <a
+                            href={tool.trial_url || tool.official_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block transition-transform hover:scale-105"
+                            title="Open official trial / download page"
+                          >
+                            <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px] cursor-pointer inline-flex items-center gap-1.5">
+                              Official Free Trial Available
+                              <ExternalLink className="w-3 h-3" />
+                            </Badge>
+                          </a>
+                        )}
+                        {["Free", "Open Source"].includes(tool.pricing_type) && !tool.discontinued && (
+                          <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px]">
+                            {tool.pricing_type === "Open Source" ? "100% Open Source" : "Free Software"}
                           </Badge>
-                        </a>
-                      )}
-                      {["Free", "Open Source"].includes(tool.pricing_type) && !tool.discontinued && (
-                        <Badge className="bg-blue-600 text-white border-none font-black px-4 py-1.5 rounded-2xl uppercase tracking-widest text-[10px]">
-                          {tool.pricing_type === "Open Source" ? "100% Open Source" : "Free Software"}
-                        </Badge>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -584,14 +696,25 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                   </div>
 
                   <div className="flex flex-wrap gap-3">
-                    {tool.core_features?.map((feat, i) => (
-                      <span
-                        key={i}
-                        className="bg-slate-50 text-slate-600 px-4 py-2 rounded-xl text-sm font-black border border-slate-100"
-                      >
-                        #{feat}
-                      </span>
-                    ))}
+                    {tool.core_features?.map((feat, i) => {
+                      const fHref = getCoreFeatureHref(feat);
+                      const pill = (
+                        <span
+                          className={`bg-slate-50 text-slate-700 px-4 py-2 rounded-xl text-sm font-black border border-slate-200/80 inline-flex items-center gap-1 ${
+                            fHref ? "hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-colors cursor-pointer" : ""
+                          }`}
+                        >
+                          #{feat}
+                        </span>
+                      );
+                      return fHref ? (
+                        <Link key={i} href={fHref}>
+                          {pill}
+                        </Link>
+                      ) : (
+                        <span key={i}>{pill}</span>
+                      );
+                    })}
                   </div>
 
                   {/* Horizontal Competitor PK Battles */}
@@ -857,17 +980,29 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </div>
                         )}
                         <CardHeader className="text-center p-6 md:p-10 pb-4 md:pb-6">
-                          <div className="text-slate-500 font-black uppercase text-xs tracking-widest mb-4">
+                          <div className="text-slate-500 font-black uppercase text-xs tracking-widest mb-3">
                             {tier.name}
                           </div>
-                          <div className="flex flex-col items-center justify-center gap-1.5">
-                            <span className="text-2xl md:text-3xl font-black text-slate-900">
-                              {tierHeadline}
-                            </span>
-                            <span className="text-slate-500 font-bold text-xs md:text-sm tracking-tight">
+                          <div className="flex flex-col items-center justify-center gap-2">
+                            {isFreeTier ? (
+                              <span className="text-2xl md:text-3xl font-black text-slate-900">
+                                {tierHeadline}
+                              </span>
+                            ) : (
+                              <a
+                                href={tool.pricing_url || tool.affiliate_url || tool.official_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-xl md:text-2xl font-black text-blue-600 hover:text-blue-700 underline decoration-blue-200 hover:decoration-blue-600 transition-colors"
+                              >
+                                <span>Official Regional Price</span>
+                                <ExternalLink className="w-4 h-4 shrink-0" />
+                              </a>
+                            )}
+                            <span className="text-slate-500 font-bold text-xs tracking-tight">
                               {isFreeTier
                                 ? "No Commercial License Fee"
-                                : "Verify Live Regional Pricing on Vendor Portal"}
+                                : `Term: ${tier.period || tierHeadline} · Varies by Country`}
                             </span>
                           </div>
                         </CardHeader>
@@ -1336,15 +1471,17 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           </span>
                         </div>
                         <div className="text-sm font-bold text-slate-500">
-                          Based on {r.count.toLocaleString()} reviews
+                          Based on {r.count.toLocaleString()} reviews ({r.verified_date || "Nov 2026"})
                         </div>
                         {r.url && (
-                          <Link
-                            href={`/go?url=${encodeURIComponent(r.url)}`}
+                          <a
+                            href={r.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 mt-4 text-xs font-black text-blue-600 hover:text-blue-700 uppercase tracking-wider"
                           >
-                            Read reviews <ExternalLink className="w-3 h-3" />
-                          </Link>
+                            Read reviews on {r.source} <ExternalLink className="w-3 h-3" />
+                          </a>
                         )}
                       </Card>
                     ))}
@@ -1486,36 +1623,64 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                       {tool.description || tool.short_desc}
                     </p>
                   )}
-                  <div className="flex flex-col md:flex-row md:items-center justify-between border-t border-white/5 pt-6 md:pt-12 gap-6 md:gap-8">
-                    <div className="flex items-center gap-4">
-                      <ToolLogo
-                        slug={tool.slug} src={tool.logo_url}
-                        websiteUrl={tool.official_url}
-                        name={tool.name}
-                        className="w-14 h-14 rounded-2xl bg-white p-1"
-                      />
-                      <div>
-                        <div className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
-                          Editor Score
-                        </div>
-                        <div className="text-3xl font-black">
-                          {tool.score}{" "}
-                          <span className="text-blue-400">/ 5.0</span>
-                        </div>
+                  <div className="border-t border-white/10 pt-6 md:pt-10 space-y-5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div className="text-xs font-black text-blue-400 uppercase tracking-[0.25em]">
+                        Third-Party Aggregator Ratings (No Self-Scoring by CADGuide)
+                      </div>
+                      <div className="text-xs text-slate-400 font-bold">
+                        Click any rating platform below to verify live user reviews
                       </div>
                     </div>
-                    {tool.score >= 4.0 ? (
-                      <Badge className="bg-blue-600 text-white font-black px-6 py-2 rounded-xl text-sm">
-                        Highly Recommended
-                      </Badge>
-                    ) : tool.score >= 3.5 ? (
-                      <Badge className="bg-slate-600 text-white font-black px-6 py-2 rounded-xl text-sm">
-                        Recommended
-                      </Badge>
+                    {tool.external_ratings && tool.external_ratings.length > 0 ? (
+                      <div
+                        className={`grid grid-cols-1 sm:grid-cols-2 ${
+                          tool.external_ratings.length >= 5
+                            ? "lg:grid-cols-5"
+                            : tool.external_ratings.length === 4
+                              ? "lg:grid-cols-4"
+                              : "lg:grid-cols-3"
+                        } gap-4`}
+                      >
+                        {tool.external_ratings.map((r, rIdx) => (
+                          <a
+                            key={rIdx}
+                            href={r.url || tool.official_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 rounded-2xl p-4 transition-all flex flex-col justify-between"
+                          >
+                            <div className="flex items-center justify-between gap-2 mb-2">
+                              <span className="text-xs font-black uppercase tracking-wider text-blue-200 group-hover:text-white truncate">
+                                {r.source}
+                              </span>
+                              <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-300 shrink-0" />
+                            </div>
+                            <div className="flex items-baseline gap-1.5 my-1">
+                              <span className="text-amber-400 font-black text-2xl">
+                                ★ {r.score.toFixed(1)}
+                              </span>
+                              <span className="text-slate-400 font-bold text-xs">
+                                / {r.max}
+                              </span>
+                            </div>
+                            <div className="text-[11px] font-bold text-slate-400 mt-1">
+                              {r.count.toLocaleString()} reviews · {r.verified_date || "Nov 2026"}
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     ) : (
-                      <Badge className="bg-slate-400 text-white font-black px-6 py-2 rounded-xl text-sm">
-                        Good Option
-                      </Badge>
+                      <div className="flex flex-wrap items-center gap-4">
+                        <a
+                          href={tool.official_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors"
+                        >
+                          Verify on Official Website <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -1528,9 +1693,14 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                 <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600">
                   <HelpCircle className="w-6 h-6" />
                 </div>
-                <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
-                  Expert Q&A
-                </h2>
+                <div>
+                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight">
+                    Official &amp; Product FAQ
+                  </h2>
+                  <p className="text-xs md:text-sm text-slate-500 font-bold mt-1">
+                    Sourced from official vendor documentation, licensing terms, and product specifications
+                  </p>
+                </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {tool.faqs.map((faq, i) => (
@@ -1592,9 +1762,8 @@ export function ToolDetailClient({ tool, category, alternativeTools, toolCompari
                           className="w-20 h-20 mx-auto mb-8 rounded-3xl shadow-sm border border-slate-50 group-hover:scale-110 transition-all duration-500"
                         />
                         <h5 className="font-black text-xl mb-2">{alt.name}</h5>
-                        <div className="text-amber-800 font-black text-sm mb-8">
-                          ★ {alt.score}{" "}
-                          <span className="text-slate-300">/ 5.0</span>
+                        <div className="text-slate-500 font-bold text-xs uppercase tracking-wider mb-8">
+                          {alt.pricing_type} · {alt.platforms.slice(0, 2).join(" / ")}
                         </div>
                         <Button
                           asChild
