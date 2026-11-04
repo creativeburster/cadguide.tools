@@ -8,136 +8,196 @@ export const c7Tools: Tool[] = [
     "name": "MatrixGold",
     "slug": "matrixgold",
     "logo_url": "/logos/matrixgold.png",
-    "short_desc": "Jewelry design and CAD software for custom ring and piece modelling.",
-    "description": "MatrixGold by Gemvision (Stuller) is the jewelry industry’s flagship parametric 3D CAD suite built atop the Rhino NURBS engine. By combining Rhino’s freeform modeling accuracy with a history-driven Dynamic Commands timeline, automated pavé/channel gem-setting builders, bezel/prong studios, and Chaos V-Ray photorealistic rendering, it lets jewelers resize rings and swap stone cuts on the fly before wax 3D printing.",
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Perpetual",
-    "starting_price": 7900,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Jewelry Design",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Jewelry Design",
-      "Parametric Gem placement",
-      "Ring Builders",
-      "High-end Rendering"
-    ],
-    "user_scales": [
-      "Individual Artists",
-      "High-end Jewelers"
-    ],
-    "official_url": "https://www.gemvision.com/matrixgold",
-    "pricing_url": "https://www.gemvision.com/matrixgold",
-    "affiliate_url": null,
-    "score": 4.9,
-    "pros": [
-      "Ultimate precision",
-      "Dynamic parametric history",
-      "Photorealistic rendering"
-    ],
-    "cons": [
-      "Extremely expensive",
-      "Niche hardware requirements",
-      "Steep learning curve"
-    ],
-    "faqs": [
-      {
-        "q": "What is MatrixGold used for?",
-        "a": "MatrixGold is jewellery CAD: parametric ring and setting builders, a gem and mounting library, and render studio output, all on top of Rhino. It is built for custom jewellery workflows — size, stone and metal selection drive the model — rather than for general product design, which is why Stuller sells and supports it."
-      },
-      {
-        "q": "How much does MatrixGold cost?",
-        "a": "MatrixGold is sold as a perpetual licence; the plans shown on this page are Perpetual License and Annual Maintenance. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MatrixGold Pricing Page](https://www.gemvision.com/matrixgold)."
-      },
-      {
-        "q": "Is there a free version of MatrixGold?",
-        "a": "MatrixGold is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MatrixGold page](https://www.gemvision.com/matrixgold)."
-      },
-      {
-        "q": "What operating systems does MatrixGold support?",
-        "a": "MatrixGold runs on Windows."
-      },
-      {
-        "q": "Which file formats does MatrixGold support?",
-        "a": "MatrixGold is Rhino-based, so its native document is .3dm and it reads 3DM, STEP, STL and OBJ geometry. Output is what a jeweller needs to make the piece: STL and 3MF for printing or milling, 3DM and OBJ for further modelling, and PNG or MP4 for presentation. It writes no general CAD format beyond those, and the parametric tools are jewellery-specific rather than mechanical."
-      },
-      {
-        "q": "What are the best alternatives to MatrixGold?",
-        "a": "The closest alternatives to MatrixGold are Rhino 3D, ZBrush, Blender. Rhino 3D (offered on a Perpetual license) competes directly on core Jewelry Design workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Rhino 7 with MatrixGold jewellery tooling",
-      "multicore": "Multi-threaded Rhino display and mesh operations",
-      "gpu_optimization": "Rhino display pipeline; rendering accel depends on the renderer chosen",
-      "standards": [
-        "STL",
-        "3MF",
-        "OBJ",
-        "STEP"
-      ]
-    },
+    "short_desc": "Gemvision’s industry-standard 3D CAD software specialized for professional jewelry design, gemstone pavé, and photorealistic rendering.",
+    "description": "MatrixGold (developed by Gemvision, a Stuller company) is the worldwide standard Computer-Aided Design (CAD) software engineered specifically for custom jewelry manufacturing. Built on the powerful McNeel Rhinoceros 3D NURBS modeling kernel, MatrixGold equips jewelry designers, bench jewelers, and luxury ateliers with specialized jewelry builders—including automated gemstone pavé placement, signet ring builders, parametric prongs, and channel cutters. Featuring real-time parametric history, instant precious metal weight calculation, and integrated Cycles ray-traced rendering, MatrixGold accelerates custom jewelry creation from showroom presentation to wax 3D printing.",
     "pricing_tiers": [
       {
-        "name": "Perpetual License",
+        "name": "MatrixGold Workstation Perpetual",
         "price": "Official Store",
-        "period": "one-time",
+        "period": "perpetual license with Gemvision maintenance",
         "features": [
-          "Parametric Jewelry Design",
-          "Render Studio",
-          "Full Gems & Mountings library",
-          "Includes first-year maintenance"
+          "Complete Parametric Jewelry Builders (Rings, Pavé, Prongs)",
+          "Dynamic History Tracking for Non-Destructive Dimension Edits",
+          "Automated Precious Metal Weight & Diamond Carat Estimator",
+          "Direct High-Resolution STL & OBJ Export for Wax 3D Printers"
         ],
         "is_popular": true
       },
       {
-        "name": "Annual Maintenance",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "MatrixGold Studio Suite",
+        "price": "Contact Sales",
+        "period": "commercial network licensing",
         "features": [
-          "Software updates & patches",
-          "Priority technical support",
-          "Cloud rendering credits"
+          "Integrated GPU-Accelerated Photorealistic Cycles Rendering",
+          "Multi-Seat Concurrent Network Floating License Pool",
+          "Stuller Catalog Direct Casting & Finding Ordering Integration",
+          "Comprehensive Gemvision University Training & Technical Support"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Perpetual",
+    "starting_price": 7900,
+    "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://www.gemvision.com/matrixgold",
+    "trial_url": "https://www.gemvision.com/matrixgold",
+    "pricing_url": "https://www.gemvision.com/matrixgold",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Rhino-Powered Parametric Jewelry Modeling Kernel",
+      "Automated Gemstone Pavé, Prong & Bezel Builders",
+      "Real-Time Interactive History & Dynamic Edits",
+      "Integrated Cycles Photorealistic Jewelry Rendering",
+      "Accurate Precious Metal Weight & Carat Estimator",
+      "Direct STL Export for High-Resolution Wax 3D Printers"
+    ],
     "detailed_features": [
       {
-        "category": "Jewelry",
+        "category": "Parametric Jewelry Builders & Dynamic History",
         "items": [
           {
-            "name": "Dynamic Rhino integration",
+            "name": "Parametric Gemstone Builders placing round, oval, princess, and custom cuts with automatic prong, channel, and bezel generation",
+            "status": true
+          },
+          {
+            "name": "Dynamic History Engine allowing designers to alter ring shank thickness or finger size while stones and prongs adjust automatically",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Photorealistic Rendering & Wax 3D Printing",
+        "items": [
+          {
+            "name": "Integrated Cycles Rendering producing true-to-life refraction, dispersion, and caustic highlights on diamonds and metals",
+            "status": true
+          },
+          {
+            "name": "Watertight Mesh Export generating verified STL files optimized for resin and wax 3D printers without naked edges",
             "status": true
           }
         ]
       }
     ],
-    "quote_only": true,
+    "tech_specs": {
+      "engine": "McNeel Rhinoceros 3D NURBS & Gemvision Parametric Architecture",
+      "multicore": "Multi-threaded parametric geometry recalculation and ray-traced rendering pipelines across CPU cores",
+      "gpu_optimization": "NVIDIA RTX hardware-accelerated ray tracing and real-time gemstone viewport rendering",
+      "standards": [
+        "3DM",
+        "STL",
+        "OBJ",
+        "STEP",
+        "IGES"
+      ]
+    },
     "file_formats_in": [
       "3DM",
       "STEP",
+      "IGES",
       "STL",
       "OBJ"
     ],
     "file_formats_out": [
       "3DM",
       "STL",
-      "3MF",
       "OBJ",
-      "PNG",
-      "MP4"
+      "STEP",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.g2.com/products/matrixgold/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 14,
+        "url": "https://www.capterra.com/p/214580/MatrixGold/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Custom Fine Jewelry Manufacturing",
+      "Bridal & Engagement Ring Design",
+      "Luxury High-Jewelry Maisons",
+      "Gemstone Wholesalers & Cutters",
+      "Lost-Wax Casting Toolrooms"
+    ],
+    "user_scales": [
+      "Independent Jewelers",
+      "Commercial Jewelry Studios"
+    ],
+    "score": 4.8,
+    "expert_verdict": "MatrixGold is the undisputed monarch of jewelry CAD, combining Rhino's freeform NURBS power with specialized parametric gem builders and photorealistic rendering.",
+    "pros": [
+      "Built specifically for the jewelry trade, featuring automated builders for shanks, bezels, prongs, cutters, and pavé stone layouts.",
+      "Dynamic parametric history allows designers to resize finger rings or tweak gem sizes without manually repositioning dozens of prongs.",
+      "Integrated GPU ray-tracing rendering creates breathtaking, client-ready jewelry animations with realistic diamond dispersion.",
+      "Instant cost estimation computes gold and platinum weights along with diamond total carat weight automatically.",
+      "Flawless watertight STL export ensures clean, reliable printing on high-resolution wax and resin 3D printers."
+    ],
+    "cons": [
+      "Substantial software acquisition and maintenance cost designed for established commercial jewelry businesses.",
+      "Demands high-performance workstation hardware with dedicated NVIDIA RTX graphics for smooth interactive rendering.",
+      "Requires learning jewelry fabrication constraints (shrinkage, sprue placement, prong setting) alongside CAD commands.",
+      "Operates natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is the relationship between MatrixGold and Rhinoceros 3D?",
+        "a": "MatrixGold is built on top of the McNeel Rhinoceros 3D CAD kernel, adding a specialized jewelry-specific interface, parametric gemstone builders, and jewelry tools to Rhino's core NURBS modeling power."
+      },
+      {
+        "q": "Can MatrixGold calculate metal weights and diamond carat weights?",
+        "a": "Yes. MatrixGold includes automatic weight estimation tools that calculate gold (10k, 14k, 18k), platinum, and silver casting weights along with total diamond carat weight for immediate customer quoting."
+      },
+      {
+        "q": "How does MatrixGold prepare models for 3D printing?",
+        "a": "MatrixGold includes automated mesh diagnostic tools that convert NURBS surfaces into watertight, manifold STL and OBJ files ready for high-resolution DLP and SLA wax 3D printers."
+      },
+      {
+        "q": "What operating systems are supported by MatrixGold?",
+        "a": "MatrixGold runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Jewelry & Specialty CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "rhino-3d",
       "zbrush",
-      "blender"
+      "blender",
+      "3design"
     ]
   },
   {
@@ -4462,8 +4522,7 @@ export const c7Tools: Tool[] = [
       {
         "q": "What are the best alternatives to AVEVA E3D Design?",
         "a": "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. Hexagon SmartPlant 3D (offered on a Subscription license) competes directly on core Oil and Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of AVEVA E3D Design?",
         "a": "AVEVA E3D Design is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official AVEVA E3D Design plans and trial](https://www.aveva.com/en/products/e3d-design/)."

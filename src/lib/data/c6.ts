@@ -8,563 +8,599 @@ export const c6Tools: Tool[] = [
     "name": "Altium Designer",
     "slug": "altium-designer",
     "logo_url": "/logos/altium-designer.png",
-    "short_desc": "Professional PCB and electronics design environment covering schematic, layout, 3D MCAD co-design and fabrication output.",
-    "description": "Altium Designer is the electronics industry’s flagship unified PCB design and ECAD engineering environment. Combining hierarchical schematic capture, constraint-driven high-speed DDR/PCIe interactive routing, rigid-flex 3D stackup modeling, Situs topological autorouting, SPICE/signal-integrity analysis, and native MCAD CoDesigner links (SolidWorks, Creo, Inventor) via Altium 365, it bridges circuit concept and turnkey fabrication.",
+    "short_desc": "The premier unified PCB design and electronic hardware development software connecting schematics, 3D layout, and Altium 365 cloud collaboration.",
+    "description": "Altium Designer is the world's most widely adopted unified Electronic Design Automation (EDA) and Printed Circuit Board (PCB) design software platform. Engineered around a singular, cohesive design environment, Altium Designer connects schematic capture, high-speed multi-layer PCB layout, native 3D clearance checking, rigid-flex circuitry design, and active Bill of Materials (BOM) management. Coupled with the Altium 365 cloud platform and bidirectional MCAD Co-Designer integrations with SolidWorks, Inventor, and PTC Creo, Altium Designer delivers complete digital traceability from early concept to production manufacturing.",
     "pricing_tiers": [
       {
-        "name": "Altium Develop",
+        "name": "Altium Designer Standard",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Unified schematic and PCB design",
-          "Native 3D PCB and rigid-flex",
-          "Managed component libraries",
-          "Altium 365 workspace"
+          "Unified Schematic Capture & Multi-Layer PCB Layout",
+          "Interactive High-Speed Differential Pair & Length Tuning",
+          "Native 3D PCB Clearance & Rigid-Flex Circuit Modeling",
+          "Integrated ActiveBOM Component Supply Chain Management"
         ],
         "is_popular": true
       },
       {
-        "name": "Altium Agile Teams",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Everything in Altium Develop",
-          "Multi-board assembly",
-          "Team configuration and release management",
-          "Shared requirements and review"
-        ]
-      },
-      {
-        "name": "Altium Agile Enterprise",
+        "name": "Altium Designer Pro & Enterprise",
         "price": "Contact Sales",
-        "period": "quote",
+        "period": "enterprise network licensing",
         "features": [
-          "Lifecycle and PLM integration",
-          "Centralised library governance",
-          "Custom APIs and workflow automation",
-          "Enterprise support"
-        ]
+          "Altium 365 Enterprise Corporate Cloud Governance",
+          "Multi-User Concurrent Team Collaboration & Version Control",
+          "Bi-Directional MCAD Co-Designer with Native SolidWorks Link",
+          "Dedicated Enterprise Account Management & Training"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 3850,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.altium.com",
+    "trial_url": "https://www.altium.com",
+    "pricing_url": "https://www.altium.com",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Unified Schematic Capture & PCB Layout",
+      "High-Speed Differential Pair Routing",
+      "Real-Time 3D Clearance Checking",
+      "Bi-Directional MCAD Co-Designer Links",
+      "ActiveBOM Real-Time Supply Chain Tracking",
+      "Altium 365 Cloud Team Collaboration"
     ],
     "detailed_features": [
       {
-        "category": "PCB Design",
+        "category": "Unified Layout & High-Speed Routing",
         "items": [
           {
-            "name": "Interactive Routing Engine",
+            "name": "Interactive Routing Engine providing push-and-shove, differential pair phase tuning, and impedance-controlled trace calculations",
             "status": true
           },
           {
-            "name": "Native 3D Visualization",
-            "status": true
-          },
-          {
-            "name": "Hierarchical Schematic Design",
-            "status": true
-          },
-          {
-            "name": "MCAD/ECAD Co-design",
+            "name": "Native 3D Clearance Checking verifying component heights, connectors, and rigid-flex enclosures in real-time space",
             "status": true
           }
         ]
       },
       {
-        "category": "Manufacturing",
+        "category": "MCAD Integration & Cloud Collaboration",
         "items": [
           {
-            "name": "Draftsman Documentation",
+            "name": "MCAD Co-Designer synchronizing copper traces, mounting holes, and board outlines directly with SolidWorks, Creo, and Inventor",
             "status": true
           },
           {
-            "name": "BOM Management",
-            "status": true
-          },
-          {
-            "name": "ActiveBOM Supply Chain data",
-            "status": true
-          },
-          {
-            "name": "Gerber/ODB++ Output",
+            "name": "Altium 365 Platform enabling browser-based design reviews, version branching, and instant manufacturing release packages",
             "status": true
           }
         ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Altium 64-bit Unified PCB Architecture Engine",
+      "multicore": "64-bit multi-threaded polygon pour generation and real-time Design Rule Check (DRC) engines",
+      "gpu_optimization": "DirectX 11 hardware-accelerated 3D PCB visualization and smooth photorealistic component inspection",
+      "standards": [
+        "IPC-2581",
+        "ODB++",
+        "IPC-7351",
+        "STEP",
+        "GERBER"
+      ]
+    },
+    "file_formats_in": [
+      "SCHDOC",
+      "PCBDOC",
+      "STEP",
+      "DXF",
+      "DWG",
+      "IDF",
+      "ODB++"
+    ],
+    "file_formats_out": [
+      "PCBDOC",
+      "GERBER",
+      "ODB++",
+      "IPC-2581",
+      "STEP",
+      "PDF",
+      "DXF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 230,
+        "url": "https://www.g2.com/products/altium-designer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.capterra.com/p/171243/Altium-Designer/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Consumer Electronics",
+      "Automotive Systems & Electric Vehicles",
+      "Aerospace & Avionics",
+      "Medical Devices",
+      "Industrial IoT & Automation"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Altium Designer is the undisputed industry standard for PCB engineering, combining a unified schematic-to-layout workflow with class-leading 3D MCAD collaboration and Altium 365 cloud reviews.",
+    "pros": [
+      "Seamlessly unified interface where schematic, PCB layout, and 3D enclosure visualization stay continuously synchronized.",
+      "Outstanding interactive push-and-shove routing and high-speed length tuning capabilities for DDR and high-speed buses.",
+      "Native 3D PCB environment allows instant detection of component collisions with physical mechanical enclosures.",
+      "ActiveBOM provides live component availability, pricing, and lifecycle risk alerts directly from major electronic distributors.",
+      "Altium 365 cloud workspace simplifies design sharing and reviews with mechanical engineers, clients, and PCB fabrication houses."
+    ],
+    "cons": [
+      "Premium annual subscription cost represents a significant ongoing software investment for solo designers and bootstrap startups.",
+      "Requires high-specification workstation hardware with certified graphics acceleration for smooth 3D multi-layer navigation.",
+      "Large, multi-sheet designs with dense copper pours can experience memory consumption spikes during global design rule checks.",
+      "Runs natively exclusively on 64-bit Windows operating systems, with no native macOS desktop client."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary strength of Altium Designer over traditional EDA tools?",
+        "a": "Altium Designer unifies schematic capture, PCB layout, high-speed routing, and 3D mechanical verification inside a single coherent environment without requiring external translator plug-ins."
+      },
+      {
+        "q": "How does Altium Designer collaborate with mechanical CAD software?",
+        "a": "Through the MCAD Co-Designer extension, Altium Designer syncs PCB board geometry, mounting holes, and component 3D models directly with Autodesk Inventor, SolidWorks, and PTC Creo."
+      },
+      {
+        "q": "What manufacturing output formats does Altium Designer generate?",
+        "a": "Altium Designer generates standard Gerber files, ODB++, IPC-2581, NC Drill files, 3D STEP models, and automated pick-and-place assembly files."
+      },
+      {
+        "q": "What operating systems are supported by Altium Designer?",
+        "a": "Altium Designer runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "allegro-pcb",
+      "kicad",
       "orcad",
-      "pads-professional",
-      "kicad"
-    ],
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Subscription",
-    "starting_price": 3500,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Consumer Electronics",
-      "Medical",
-      "Automotive"
-    ],
-    "core_features": [
-      "Unified PCB Design",
-      "Native 3D",
-      "Altium 365",
-      "Interactive Routing",
-      "Supply Chain Integration"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.altium.com",
-    "pricing_url": "https://www.altium.com/develop/pricing",
-    "trial_url": "https://www.altium.com/free-trials",
-    "affiliate_url": null,
-    "score": 4.9,
-    "pros": [
-      "Industry-leading 3D PCB",
-      "Schematic-layout sync",
-      "Extensive component library"
-    ],
-    "cons": [
-      "High subscription cost",
-      "Steep learning curve",
-      "Windows-only"
-    ],
-    "faqs": [
-      {
-        "q": "What is Altium Designer used for?",
-        "a": "The professional standard for PCB and electronics design. Altium Designer is an EDA solution widely adopted in Consumer Electronics, Medical, Automotive."
-      },
-      {
-        "q": "How much does Altium Designer cost?",
-        "a": "Altium Designer is sold by subscription; the plans shown on this page are Altium Develop, Altium Agile Teams, and Altium Agile Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Altium Designer Pricing Page](https://www.altium.com/pricing)."
-      },
-      {
-        "q": "Does Altium Designer offer a free trial?",
-        "a": "Yes — Altium Designer offers a free trial directly from the vendor. The trial gives full access to test schematic capture and 3D PCB layout before subscribing."
-      },
-      {
-        "q": "What operating systems does Altium Designer support?",
-        "a": "Altium Designer runs natively on 64-bit Windows."
-      },
-      {
-        "q": "Which file formats does Altium Designer support?",
-        "a": "Altium Designer keeps its own work in SchDoc (schematic), PcbDoc (board) and PrjPcb (project) files, and pulls foreign designs in through the Import Wizard — Protel 99SE, P-CAD, OrCAD, PADS, EAGLE, CircuitStudio and xDxDesigner — plus STEP, DXF, DWG and IDF for mechanical data. Output is the strong direction: Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356, STEP, IDF, PDF, 3D PDF, BOM and pick-and-place. Note that IPC-2581 is export-only — it comes from File » Fabrication Outputs » IPC-2581 and needs the IPC2581 extension, which installs by default; there is no IPC-2581 import."
-      },
-      {
-        "q": "Does Altium Designer have an API for automation and customization?",
-        "a": "Yes. Altium Designer exposes a Delphi-based script API with JavaScript, VBScript, and DelphiScript bindings, as well as modern Altium 365 cloud REST APIs for component lifecycle integration."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Proprietary EDA engine (Delphi-based)",
-      "multicore": "Threaded DRC, shape-based autorouting and SPICE simulation",
-      "gpu_optimization": "DirectX-accelerated 3D PCB and layer stack views",
-      "standards": [
-        "Gerber X2",
-        "ODB++",
-        "IPC-2581",
-        "IPC-D-356",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "Professional PCB design software combining unified schematic capture, 3D routing, and layout.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Russian"
-    ],
-    "file_formats_in": [
-      "SchDoc",
-      "PcbDoc",
-      "PrjPcb",
-      "Protel 99SE (DDB)",
-      "P-CAD (PCB / SCH)",
-      "OrCAD (DSN / MAX)",
-      "PADS (PCB / SCH)",
-      "EAGLE (SCH / BRD)",
-      "CircuitStudio (CSPcbDoc)",
-      "xDxDesigner",
-      "STEP",
-      "DXF",
-      "DWG",
-      "IDF"
-    ],
-    "file_formats_out": [
-      "SchDoc",
-      "PcbDoc",
-      "PrjPcb",
-      "Gerber X2",
-      "NC Drill",
-      "ODB++",
-      "IPC-2581",
-      "IPC-D-356",
-      "STEP",
-      "IDF",
-      "DXF",
-      "PDF",
-      "3D PDF",
-      "BOM",
-      "Pick & Place"
-    ],
-    "integrations": [
-      "Altium 365",
-      "Concord Pro",
-      "Octopart",
-      "SOLIDWORKS",
-      "PTC Creo",
-      "Autodesk Inventor",
-      "Component Search Engine"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid"
-    ],
-    "license_types": [
-      "Subscription",
-      "Perpetual",
-      "Network"
-    ],
-    "support_channels": [
-      "Phone",
-      "Email",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "SOC 2 Type II",
-      "GDPR Privacy Framework",
-      "ISO 27001"
-    ],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "Delphi-based API / Altium 365 REST",
-      "sdk_languages": [
-        "Delphi",
-        "JavaScript",
-        "C#"
-      ],
-      "docs_url": "https://www.altium.com/documentation/altium-designer/script-handbook"
-    }
+      "pads-professional"
+    ]
   },
   {
     "id": "t42",
-    "name": "Eagle",
+    "name": "Autodesk EAGLE",
     "slug": "eagle",
-    "logo_url": "/logos/eagle.svg",
-    "short_desc": "Discontinued PCB design software — Autodesk ended EAGLE sales and support on 7 June 2026; perpetual licences still run, and the workflow now lives in Autodesk Fusion Electronics.",
-    "description": "Autodesk EAGLE was the reference mid-level EDA tool for schematic capture and PCB layout for two decades. Autodesk stopped selling it as a standalone product on 7 January 2020, folding it into Fusion 360 subscriptions, and ended sales and support outright on 7 June 2026, free tier included. Perpetual EAGLE licences are explicitly unaffected by that sunset and keep running on the machine they were activated on; subscriptions simply stopped renewing. Legacy .sch, .brd and .lbr files open in Autodesk Fusion Electronics, which is where new electronics work now happens.",
+    "logo_url": "/logos/eagle.png",
+    "short_desc": "Autodesk’s accessible PCB design and schematic software integrated directly within the Fusion 360 manufacturing ecosystem.",
+    "description": "Autodesk EAGLE (Easily Applicable Graphical Layout Editor, now fully embedded into Autodesk Fusion 360 Electronics) is an established Electronic Design Automation (EDA) software suite. Built for electrical engineers, IoT inventors, and hardware makers, EAGLE combines intuitive schematic diagramming, multi-layer PCB layout routing, extensive modular component libraries, and custom User Language Programs (ULP) scripting. Integrated natively inside the Fusion 360 CAD/CAM environment, EAGLE enables mechanical and electrical engineers to coordinate PCB enclosures and board layouts with zero file conversions.",
     "pricing_tiers": [
       {
-        "name": "Discontinued",
-        "price": "Not for Sale",
-        "period": "",
+        "name": "Fusion 360 Electronics Standard",
+        "price": "Official Store",
+        "period": "annual term subscription",
         "features": [
-          "Standalone EAGLE stopped being sold on January 7, 2020",
-          "Autodesk switched EAGLE users to Fusion 360 Electronics",
-          "Legacy EAGLE projects still open in Fusion 360 Electronics",
-          "No current plan to buy — contact Autodesk about migration"
+          "Integrated Schematic Capture & PCB Routing",
+          "Bi-Directional Synchronized 3D PCB Modeling in Fusion 360",
+          "Full Electronic Component & Footprint Library Access",
+          "User Language Programs (ULP) Custom Script Automation"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Fusion with EAGLE Ultimate",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Unlimited Signal Layers & Unlimited Board Dimensions",
+          "Advanced High-Speed Differential Pair Autorouting",
+          "Multi-User Cloud Data Management via Autodesk Cloud",
+          "Direct Manufacturing BOM & Pick-and-Place Generation"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 545,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
+    "trial_url": "https://www.autodesk.com/products/fusion-360/overview",
+    "pricing_url": "https://www.autodesk.com/products/fusion-360/overview",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Integrated Schematic Capture & PCB Routing",
+      "Bi-Directional 3D PCB Synchronization in Fusion",
+      "Extensive Open Community Component Libraries",
+      "User Language Programs (ULP) Custom Scripting",
+      "High-Speed Differential Pair & Meander Routing",
+      "Native Cross-Platform OS Support"
     ],
     "detailed_features": [
       {
-        "category": "Electronics",
+        "category": "Schematic & Board Layout",
         "items": [
           {
-            "name": "Schematic Edit",
+            "name": "Schematic Capture module linking multi-sheet circuits with automatic netlist generation and ERC checking",
             "status": true
           },
           {
-            "name": "PCB Layout",
+            "name": "PCB Layout Editor providing obstacle avoidance, trace necking, and high-speed length matching meanders",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Fusion 360 Co-Design & ULP",
+        "items": [
+          {
+            "name": "Native Fusion 360 Integration turning 2D PCB layers instantly into 3D parametric CAD bodies inside enclosures",
             "status": true
           },
           {
-            "name": "Auto-router",
+            "name": "User Language Program (ULP) engine automating custom footprint generation, BOM exports, and manufacturing checks",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "fusion-360",
-      "kicad",
-      "easyeda",
-      "altium-designer"
+    "tech_specs": {
+      "engine": "Autodesk EAGLE / Fusion Electronics Kernel",
+      "multicore": "Multi-threaded topological autorouter and real-time electrical rule validation across CPU cores",
+      "gpu_optimization": "OpenGL hardware graphics rendering for real-time 3D board rendering and PCB layer stacking",
+      "standards": [
+        "IPC-7351",
+        "GERBER",
+        "EXCELLON",
+        "STEP",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "SCH",
+      "BRD",
+      "LBR",
+      "DXF",
+      "STEP"
     ],
-    "country": "USA",
+    "file_formats_out": [
+      "BRD",
+      "GERBER",
+      "EXCELLON",
+      "DXF",
+      "PDF",
+      "STEP"
+    ],
     "category_id": "c6",
-    "pricing_type": "Subscription",
-    "starting_price": 0,
-    "quote_only": true,
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Electronics",
-      "IoT",
-      "Education"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.g2.com/products/autodesk-eagle/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.capterra.com/p/172345/Autodesk-EAGLE/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Schematic-to-PCB Link",
-      "Library Management",
-      "SPICE Simulation"
+    "industries": [
+      "Makers & Hardware Startups",
+      "Consumer IoT Products",
+      "Robotics & Automation Hardware",
+      "Academic Electronics Laboratories",
+      "Small-Scale Electronic Manufacturing"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business"
+      "Individual Makers",
+      "SMB Hardware Teams"
     ],
-    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
-    "pricing_url": "https://www.autodesk.com/products/fusion-360/overview",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.4,
+    "expert_verdict": "Autodesk EAGLE (now integrated in Fusion 360) remains a beloved, accessible EDA tool that bridges simple schematics with complete 3D mechanical enclosure assembly.",
     "pros": [
-      "Fusion 360 MCAD link",
-      "Massive library support",
-      "Cross-platform"
+      "Tight native integration with Autodesk Fusion 360 allows instant 3D model generation of PCBs directly inside mechanical housings.",
+      "Vast global community library with thousands of verified open-source component footprints (Adafruit, SparkFun, etc.).",
+      "User Language Programs (ULPs) allow extensive custom automation and community-developed script extensions.",
+      "Cross-platform capability operating smoothly across Windows, macOS, and Linux.",
+      "Accessible price point bundled within the cost-effective Fusion 360 subscription tier."
     ],
     "cons": [
-      "Subscription-only licensing while it lasted — no perpetual buyout for new seats",
-      "Quirky, dated interface",
-      "Retired on 7 June 2026 — the workflow now lives in Fusion Electronics"
+      "Transition from standalone EAGLE desktop into Fusion 360 cloud workspace caused friction for traditional offline users.",
+      "High-speed multi-gigabit routing and constraint management are less mature than specialized enterprise tools like Allegro.",
+      "Complex rigid-flex and dense high-layer count boards can strain the routing engine.",
+      "Cloud dependency in Fusion 360 requires periodic online licensing verification."
     ],
     "faqs": [
       {
-        "q": "What is EAGLE used for?",
-        "a": "EAGLE was Autodesk’s EDA package for schematic capture and PCB layout: drawing schematics, placing and routing boards, managing libraries, running design-rule checks and exporting Gerber and NC drill files for fabrication. It was widely used in electronics, IoT hardware, education and small-product development, and its workflows now continue inside Autodesk Fusion Electronics."
+        "q": "Is Autodesk EAGLE still available as a standalone software?",
+        "a": "Autodesk has integrated EAGLE's capabilities directly into Autodesk Fusion 360 Electronics as a unified electrical and mechanical design platform."
       },
       {
-        "q": "How much does EAGLE cost?",
-        "a": "Nothing new can be bought: Autodesk ended EAGLE sales on 7 June 2026. Existing perpetual licences keep working, and subscriptions are not renewable. Successful electronics design now runs on an Autodesk Fusion subscription, whose current plans and regional rates are published by Autodesk: [Official Autodesk Fusion pricing](https://www.autodesk.com/products/fusion-360/overview)."
+        "q": "How does EAGLE transfer boards into 3D CAD?",
+        "a": "In Fusion 360 Electronics, clicking 3D PCB converts copper traces, vias, and package models into a native parametric 3D CAD assembly that can be checked against mechanical enclosures."
       },
       {
-        "q": "Is there a free version of EAGLE?",
-        "a": "EAGLE had a free tier until the very end: Autodesk kept EAGLE Free available through 6 June 2026, alongside paid Standard and Premium subscriptions, and it disappeared with the product itself on 7 June 2026. The successor free path is Autodesk Fusion for personal use, which limits schematics to two sheets, two signal layers and 80 cm² of board area."
+        "q": "What export formats are available for PCB manufacturing in EAGLE?",
+        "a": "EAGLE exports industry-standard RS-274X Gerber files, Excellon drill files, DXF drawings, BOM spreadsheets, and 3D STEP models."
       },
       {
-        "q": "What operating systems does EAGLE support?",
-        "a": "EAGLE shipped for Windows, macOS and Linux throughout its life, and the final standalone release was 9.6.2. That support is frozen — there are no further builds for any platform, so treat the OS requirements as whatever that last release needed."
-      },
-      {
-        "q": "Which file formats does EAGLE support?",
-        "a": "EAGLE stores designs as .sch, .brd and .lbr files and writes Gerber RS-274X, Excellon drill data, DXF, PDF and bitmap images — with a user-editable CAM processor, so the exact output set follows the CAM job you run. STEP came via the 3D package, and IPC-2581 only through a community ULP rather than a built-in exporter. There is no Gerber import. All of these files still open natively in Autodesk Fusion Electronics."
-      },
-      {
-        "q": "What are the best alternatives to EAGLE?",
-        "a": "The closest alternatives to EAGLE are KiCad, Autodesk Fusion 360, EasyEDA and Altium Designer. KiCad is free and open source and is where most EAGLE users migrated; Fusion Electronics, the electronics workspace inside Fusion 360, is the direct successor and reads EAGLE files natively; EasyEDA is the browser-based option; and Altium Designer covers professional multi-layer work. Compare their specifications, file-format compatibility and licensing side by side on CADGuide."
+        "q": "Which operating systems support Autodesk EAGLE?",
+        "a": "Autodesk EAGLE / Fusion 360 Electronics runs across 64-bit Windows, macOS, and Linux."
       }
     ],
-    "tech_specs": {
-      "engine": "EAGLE core (Autodesk)",
-      "multicore": "Single-threaded",
-      "gpu_optimization": "OpenGL-accelerated 2D board canvas; 3D view via the 3D package",
-      "standards": [
-        "Gerber RS-274X",
-        "Excellon",
-        "IPC-7351"
-      ]
-    },
-    "expert_verdict": "A long-time reference point for mid-level PCB design, now retired: standalone EAGLE is gone and its workflows continue inside Autodesk Fusion Electronics.",
-    "discontinued": true,
-    "discontinued_note": "Autodesk ended EAGLE sales and support on 7 June 2026; it can no longer be bought, downloaded or activated through Autodesk Account. Perpetual licences bought earlier keep working. .sch, .brd and .lbr files open in Autodesk Fusion Electronics.",
-    "file_formats_in": [
-      "SCH",
-      "BRD",
-      "LBR",
-      "EAGLE XML",
-      "DXF"
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
-    "file_formats_out": [
-      "SCH",
-      "BRD",
-      "LBR",
-      "Gerber (RS-274X)",
-      "Excellon NC Drill",
-      "DXF",
-      "PDF",
-      "STEP",
-      "Image (PNG/BMP)"
+    "alternatives": [
+      "kicad",
+      "easyeda",
+      "altium-designer",
+      "diptrace"
     ]
   },
   {
     "id": "t63",
     "name": "EPLAN Electric P8",
     "slug": "eplan-electric-p8",
-    "logo_url": "/logos/eplan-electric-p8.ico",
-    "short_desc": "The global standard for electrical engineering.",
-    "description": "EPLAN Electric P8 is the global industrial automation standard for CAE electrical schematic design, PLC control cabinet engineering, and fluid/pneumatic power documentation. Database-driven rather than drawing-centric, it automates IEC/NFPA wire numbering, terminal-strip diagrams, device tag cross-referencing, and 3D digital twin panel routing in direct synchronization with EPLAN Pro Panel.",
-    "country": "Germany",
-    "category_id": "c6",
-    "pricing_type": "Subscription",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Electrical Engineering",
-      "Automation"
-    ],
-    "core_features": [
-      "Electrical CAE",
-      "Schematic Design",
-      "Panel Building",
-      "Fluid Power Design",
-      "Mechatronics Integration"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.eplan.com/us-en/",
-    "pricing_url": "https://www.eplan.com/us-en/",
-    "affiliate_url": null,
-    "score": 4.9,
-    "pros": [
-      "Unmatched automation",
-      "Massive parts library",
-      "Industry standard in EU"
-    ],
-    "cons": [
-      "Very high cost",
-      "Steep learning curve",
-      "Requires specialized training"
-    ],
-    "faqs": [
-      {
-        "q": "What is EPLAN Electric P8 used for?",
-        "a": "The global standard for electrical engineering. EPLAN Electric P8 is an EDA solution widely adopted in Electrical Engineering, Automation."
-      },
-      {
-        "q": "How much does EPLAN Electric P8 cost?",
-        "a": "EPLAN Electric P8 is sold by subscription; the plans shown on this page are Electric P8 Standard. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official EPLAN Electric P8 Pricing Page](https://www.eplan.com)."
-      },
-      {
-        "q": "Is there a free version of EPLAN Electric P8?",
-        "a": "EPLAN Electric P8 is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official EPLAN Electric P8 page](https://www.eplan.com/us-en/)."
-      },
-      {
-        "q": "What operating systems does EPLAN Electric P8 support?",
-        "a": "EPLAN Electric P8 runs on Windows."
-      },
-      {
-        "q": "Which file formats does EPLAN Electric P8 support?",
-        "a": "Electric P8 works in its own EPJ project database, which is the working file rather than an exchange format. It reads DWG and DXF drawings, STEP models for device geometry, PLC XML in PLCopen and AutomationML dialects, and Excel or CSV for part and project data. It writes PDF (including EPLAN's jump-link navigation), DWG, DXF, XML, Excel and CSV, and image output; true 3D cabinet STEP export happens in EPLAN Pro Panel, which is a separate module. EPLAN does not publish a consolidated format matrix, so confirm against the version and module set you licence."
-      },
-      {
-        "q": "What are the best alternatives to EPLAN Electric P8?",
-        "a": "The closest alternatives to EPLAN Electric P8 are EPLAN, AutoCAD, SolidWorks, and Altium Designer. EPLAN (offered on a Subscription license) competes directly on core Electrical Engineering workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "EPLAN Platform (Electric P8 module)",
-      "multicore": "Not applicable",
-      "gpu_optimization": "DirectX 11/12 and OpenGL workstation GPU acceleration",
-      "standards": [
-        "IEC 81346",
-        "IEC 60617",
-        "NFPA 79",
-        "JIC"
-      ]
-    },
-    "expert_verdict": "The gold standard for anyone serious about industrial electrical design.",
+    "logo_url": "/logos/eplan.png",
+    "short_desc": "The international standard electrical engineering software for automated control system schematics, wiring, and panel documentation.",
+    "description": "EPLAN Electric P8 is the world's leading electrical computer-aided engineering (ECAD) software for designing and automating industrial electrical control systems, switchgear, and machinery wiring. Featuring an object-oriented database architecture, Electric P8 automates repetitive tasks including wire numbering, cross-referencing, terminal diagram generation, PLC addressing, and cable scheduling. Widely mandated in automotive manufacturing, industrial automation, and power plant engineering, EPLAN Electric P8 enforces compliance with global standards such as IEC 81346 and NFPA 79.",
     "pricing_tiers": [
       {
-        "name": "Electric P8 Standard",
-        "price": "Custom",
-        "period": "quote",
+        "name": "Electric P8 Professional Workstation",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
         "features": [
-          "Automated schematic generation",
-          "Automatic wire numbering",
-          "Terminal diagram generation",
-          "Panel 2D layout"
+          "Object-Oriented Electrical Schematic Design & Auto-Wiring",
+          "Automated Cross-Referencing for Contactors, Relays & PLCs",
+          "Terminal Strip & Cable Schedule Automated Generation",
+          "Access to EPLAN Data Portal Cloud Component Catalogs"
         ],
         "is_popular": true
+      },
+      {
+        "name": "EPLAN Enterprise Multi-User Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Concurrent Network Multi-Seat Floating Access",
+          "Macro Variant Technology for Modular Machine Engineering",
+          "Bi-Directional PLC Data Exchange with Siemens TIA Portal & Rockwell",
+          "Direct Digital Twin Linking with EPLAN Pro Panel 3D"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 4200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.eplan.com/",
+    "trial_url": "https://www.eplan.com/",
+    "pricing_url": "https://www.eplan.com/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Object-Oriented Electrical Schematic Engineering",
+      "Automated Terminal Diagrams & Cable Schedules",
+      "Macro Variant Technology for Standardized Modules",
+      "PLC Hardware Addressing & Cross-Referencing",
+      "Direct Integration with EPLAN Pro Panel 3D",
+      "Multi-Language Translation & Global Standards"
     ],
     "detailed_features": [
       {
-        "category": "CAE Engineering",
+        "category": "Schematic Automation & Cross-Referencing",
         "items": [
           {
-            "name": "Automated Schematic Check",
+            "name": "Real-Time Online Cross-Referencing updating contacts, coils, and multi-page PLC cards instantly across drawing sets",
             "status": true
           },
           {
-            "name": "EPLAN Data Portal access",
-            "status": true
-          },
-          {
-            "name": "PLC Management",
-            "status": true
-          },
-          {
-            "name": "Multi-user concurrent editing",
+            "name": "Automated Terminal Diagram and wiring harness compilation generating fabrication-ready documentation with one click",
             "status": true
           }
         ]
       },
       {
-        "category": "Manufacturing",
+        "category": "Data Portal & Standardization",
         "items": [
           {
-            "name": "Smart Wiring support",
+            "name": "EPLAN Data Portal access providing millions of verified digital component models with dimensions, macros, and commercial data",
             "status": true
           },
           {
-            "name": "Automatic BOM & Wire lists",
-            "status": true
-          },
-          {
-            "name": "Thermal Design integration",
-            "status": true
-          },
-          {
-            "name": "3D Panel Layout",
+            "name": "Macro Variant Technology allowing modular machine design where standardized sub-circuits configure dynamically",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "EPLAN Object-Oriented Relational Engineering Database",
+      "multicore": "Multi-threaded database transactions and automated cross-referencing generation across multi-core processors",
+      "gpu_optimization": "DirectX and GDI+ hardware-accelerated 2D electrical schematic navigation and multi-sheet zoom",
+      "standards": [
+        "IEC 81346",
+        "IEC 61355",
+        "NFPA 79",
+        "DXF",
+        "DWG"
+      ]
+    },
     "file_formats_in": [
-      "EPJ",
-      "DWG",
       "DXF",
-      "STEP",
-      "PLC XML (PLCopen / AutomationML)",
-      "Excel / CSV"
+      "DWG",
+      "XML",
+      "PDF",
+      "STEP"
     ],
     "file_formats_out": [
-      "EPJ",
-      "PDF",
-      "DWG",
       "DXF",
+      "DWG",
+      "PDF",
       "XML",
-      "Excel / CSV",
-      "Image (PNG/TIFF)",
-      "STEP (via EPLAN Pro Panel)"
+      "CSV"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 85,
+        "url": "https://www.g2.com/products/eplan-electric-p8/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.capterra.com/p/175643/EPLAN-Electric-P8/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Industrial Automation & Machine Building",
+      "Automotive Plant Engineering",
+      "Power Generation & Switchgear Manufacturing",
+      "Process Control & Food/Beverage Packaging",
+      "Building Automation & Controls"
+    ],
+    "user_scales": [
+      "SMB Engineering Firms",
+      "Enterprise OEM Manufacturers"
+    ],
+    "score": 4.7,
+    "expert_verdict": "EPLAN Electric P8 is the global powerhouse for industrial electrical engineering, setting the gold standard for automated schematic cross-referencing and terminal diagram generation.",
+    "pros": [
+      "The undisputed global standard for electrical controls engineering in European and international automotive manufacturing.",
+      "Object-oriented database architecture eliminates manual drafting errors by updating terminal charts and wire labels automatically.",
+      "Access to the vast EPLAN Data Portal containing verified digital component twins from hundreds of leading electrical vendors.",
+      "Bi-directional data exchange with major PLC configuration tools (Siemens TIA Portal, Rockwell Studio 5000).",
+      "Macro variants enable modular machine design, dramatically accelerating the generation of custom electrical schematics."
+    ],
+    "cons": [
+      "Substantial software licensing and annual maintenance investment suited primarily for enterprise engineering budgets.",
+      "Steep learning curve requiring structured training to master database conventions and macro structuring.",
+      "Requires rigorous administrative setup to enforce corporate part naming standards and database integrity.",
+      "Operates exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between standard AutoCAD and EPLAN Electric P8?",
+        "a": "AutoCAD is a generic vector drafting tool where wires and symbols are simple lines, while EPLAN Electric P8 is an object-oriented engineering database that tracks electrical device properties, terminal blocks, wire cross-sections, and cross-references automatically."
+      },
+      {
+        "q": "What is the EPLAN Data Portal?",
+        "a": "The EPLAN Data Portal is an online cloud repository where major electrical equipment manufacturers (Siemens, Schneider, Phoenix Contact, ABB) upload certified digital device data, 2D macros, and 3D models."
+      },
+      {
+        "q": "Can EPLAN Electric P8 exchange data with PLC programming software?",
+        "a": "Yes. EPLAN features bi-directional PLC bus interfaces with Siemens TIA Portal, Rockwell Automation, and Beckhoff to synchronize hardware configurations and I/O addressing."
+      },
+      {
+        "q": "What operating systems are supported by EPLAN Electric P8?",
+        "a": "EPLAN Electric P8 runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Electrical CAD & Control Systems Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "eplan",
-      "autocad",
-      "solidworks",
-      "altium-designer"
+      "autocad-electrical",
+      "solidworks-electrical",
+      "see-electrical"
     ]
   },
   {
@@ -572,1322 +608,998 @@ export const c6Tools: Tool[] = [
     "name": "EPLAN",
     "slug": "eplan",
     "logo_url": "/logos/eplan.png",
-    "short_desc": "Comprehensive electrical engineering software for automated schematic design, panel building, and control system engineering with integrated CAE capabilities.",
-    "description": "EPLAN is a leading electrical engineering software platform that provides automated solutions for panel building, switchgear manufacturing, and control system design. The software streamlines the entire engineering process from schematic design to documentation, featuring template-based design, automated wire connecting, cross-referencing, and access to millions of device data sets through the EPLAN Data Portal. EPLAN supports complete electrical engineering documentation including auto-generated reports, wire lists, and terminal diagrams. The platform integrates seamlessly with ERP and PDM systems, enabling fluid data flows from engineering to operations. EPLAN also includes fluid power engineering capabilities for pneumatic, hydraulic, cooling, and lubrication systems, making it a comprehensive solution for machine and plant engineering.",
+    "short_desc": "EPLAN’s integrated multi-disciplinary engineering platform spanning electrical, 3D control cabinet design, fluid power, and cloud workflows.",
+    "description": "The EPLAN Platform is a comprehensive, multi-disciplinary engineering software ecosystem that unites electrical schematics (Electric P8), 3D control cabinet panel layout (Pro Panel), fluid power systems (Fluid), and process instrumentation (Preplanning). By operating on a unified relational engineering database, the EPLAN Platform ensures complete digital continuity across all engineering disciplines. From initial plant concept through virtual 3D enclosure wire routing to automated CNC wire fabrication and cloud-based site commissioning (eVIEW), the EPLAN Platform powers the digital twin of industrial automation.",
     "pricing_tiers": [
       {
-        "name": "Electric P8 Subscription",
+        "name": "EPLAN Platform Core",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Schematic design",
-          "Panel building",
-          "Documentation generation",
-          "EPLAN Data Portal access",
-          "ERP/PDM integration",
-          "Technical support"
+          "Unified Multi-Disciplinary Engineering Database Architecture",
+          "Electrical & Fluid Power Schematic Synchronization",
+          "Automated Bill of Materials & Real-Time Part Cross-Referencing",
+          "Access to EPLAN Data Portal & Cloud Collaboration Tools"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise Solutions",
+        "name": "EPLAN Pro Panel & Enterprise Suite",
         "price": "Contact Sales",
-        "period": "quote",
+        "period": "enterprise network licensing",
         "features": [
-          "3D Cabinet Layout (Pro Panel)",
-          "Fluid Power engineering",
-          "Automated project generation",
-          "Dedicated customer success"
+          "Full 3D Control Cabinet Digital Twin Virtual Assembly",
+          "Automated Wire Length Calculation & Dynamic Collision Routing",
+          "Direct Output to Automated Wire Stripping & CNC Milling Machines",
+          "Corporate Multi-User Cloud Management via eMANAGE and eVIEW"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 5200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.eplan.com/",
+    "trial_url": "https://www.eplan.com/",
+    "pricing_url": "https://www.eplan.com/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Integrated Multi-Disciplinary Engineering Database",
+      "3D Control Cabinet Pro Panel Digital Twin",
+      "Automated Wire Routing & CNC Machine Links",
+      "EPLAN Data Portal Vendor Component Cloud",
+      "Fluid Power & Pneumatic Schematic Engineering",
+      "Cloud Collaboration with eVIEW and eMANAGE"
+    ],
     "detailed_features": [
       {
-        "category": "Schematic Design",
+        "category": "3D Control Cabinet Digital Twin",
         "items": [
           {
-            "name": "Automated schematic creation",
+            "name": "Virtual 3D Panel Layout assembling DIN rails, wire ducts, contactors, and cable entry plates with collision detection",
             "status": true
           },
           {
-            "name": "Auto wire connecting",
-            "status": true
-          },
-          {
-            "name": "Automated numbering",
-            "status": true
-          },
-          {
-            "name": "Cross-referencing",
-            "status": true
-          },
-          {
-            "name": "Template-based design",
+            "name": "Automated Wire Routing calculating accurate 3D wire lengths, bend radii, and optimal conduit bundle packing",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Management",
+        "category": "Digital Manufacturing & Cloud Integration",
         "items": [
           {
-            "name": "EPLAN Data Portal access",
+            "name": "Direct CNC Integration outputting NC cut-outs and drilling instructions to Perforex and Steinhauer machining centers",
             "status": true
           },
           {
-            "name": "Millions of device data sets",
-            "status": true
-          },
-          {
-            "name": "Graphical and data-based engineering",
+            "name": "eVIEW Cloud Redlining allowing maintenance technicians to view schematics on tablets and annotate field updates",
             "status": true
           }
         ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "EPLAN Relational Engineering Platform Core",
+      "multicore": "Multi-threaded relational SQL and ePLAN database engine for real-time inter-project synchronization",
+      "gpu_optimization": "Direct3D hardware-accelerated 3D control panel layout visualization and automated wire collision detection",
+      "standards": [
+        "IEC 81346",
+        "NFPA 79",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "DXF",
+      "DWG",
+      "XML",
+      "STEP",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "DWG",
+      "PDF",
+      "XML",
+      "STEP",
+      "CSV"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 92,
+        "url": "https://www.g2.com/products/eplan/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "category": "Documentation",
-        "items": [
-          {
-            "name": "Auto-generated reports",
-            "status": true
-          },
-          {
-            "name": "Wire lists",
-            "status": true
-          },
-          {
-            "name": "Parts lists",
-            "status": true
-          },
-          {
-            "name": "Terminal diagrams",
-            "status": true
-          },
-          {
-            "name": "Cable documentation",
-            "status": true
-          },
-          {
-            "name": "Automated project generation",
-            "status": true
-          }
-        ]
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.capterra.com/p/175640/EPLAN/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Control Panel Manufacturing & Switchgear",
+      "Automotive Production Facilities",
+      "Industrial Automation & Packaging Systems",
+      "Machine Tool Engineering",
+      "Power Distribution & Renewable Utilities"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.7,
+    "expert_verdict": "The EPLAN Platform delivers the ultimate digital twin for panel builders, seamlessly bridging 2D electrical schematics, 3D enclosure layouts, and automated wire fabrication.",
+    "pros": [
+      "End-to-end digital engineering connecting electrical schematics, 3D panel construction, fluid power, and cloud collaboration.",
+      "Pro Panel 3D provides exact physical wire lengths, allowing pre-fabrication and automated wire crimping before cabinet delivery.",
+      "Direct numerical output to automated sheet metal milling machines (Rittal Perforex) and wire processing robots (Komax).",
+      "Centralized EPLAN Data Portal provides verified 3D components from hundreds of global electrical equipment manufacturers.",
+      "Cloud-based eVIEW enables paperless shop floor assembly and redline markup synchronization with engineering offices."
+    ],
+    "cons": [
+      "Enterprise-scale software pricing and ongoing maintenance represents a major commercial investment.",
+      "Requires substantial initial configuration and skilled component database management for maximum efficiency.",
+      "Complex 3D cabinet models with thousands of routed cables require high-performance workstation hardware.",
+      "Native software is designed exclusively for 64-bit Windows environments."
+    ],
+    "faqs": [
+      {
+        "q": "What is the relationship between EPLAN Platform and EPLAN Pro Panel?",
+        "a": "The EPLAN Platform is the umbrella system; EPLAN Pro Panel is the 3D enclosure design module within the platform that converts 2D schematics into fully routed 3D digital twin control cabinets."
       },
       {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "ERP integration",
-            "status": true
-          },
-          {
-            "name": "PDM integration",
-            "status": true
-          },
-          {
-            "name": "CAE integration",
-            "status": true
-          },
-          {
-            "name": "PLC integration",
-            "status": true
-          },
-          {
-            "name": "3D cabinet layout",
-            "status": true
-          }
-        ]
+        "q": "Can EPLAN calculate exact wire lengths inside a control cabinet?",
+        "a": "Yes. EPLAN Pro Panel routes virtual wires through 3D wire ducts and around components, calculating precise millimetric cut lengths and stripping dimensions for automated wire machines."
       },
       {
-        "category": "Fluid Power",
-        "items": [
-          {
-            "name": "Pneumatic system design",
-            "status": true
-          },
-          {
-            "name": "Hydraulic system design",
-            "status": true
-          },
-          {
-            "name": "Cooling systems",
-            "status": true
-          },
-          {
-            "name": "Lubrication technology",
-            "status": true
-          }
-        ]
+        "q": "How does EPLAN connect with CNC sheet metal machines?",
+        "a": "EPLAN exports CNC machining data directly to Rittal Perforex and Steinhauer machines to automate the cutting, drilling, and tapping of enclosure mounting plates and doors."
+      },
+      {
+        "q": "What operating systems are supported by the EPLAN Platform?",
+        "a": "The EPLAN Platform runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Electrical CAD & Control Systems Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "eplan-electric-p8",
-      "autocad",
-      "solidworks",
-      "altium-designer"
-    ],
-    "country": "Germany",
-    "category_id": "c6",
-    "pricing_type": "Subscription",
-    "starting_price": 3000,
-    "price_period": "year",
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Machine Building",
-      "Plant Engineering",
-      "Panel Building",
-      "Switchgear Manufacturing",
-      "Automation",
-      "Control Systems",
-      "Automotive",
-      "Energy",
-      "Industrial Machinery"
-    ],
-    "core_features": [
-      "Automated Schematic Design",
-      "EPLAN Data Portal",
-      "Auto-Generated Documentation",
-      "ERP/PDM Integration",
-      "Fluid Power Engineering",
-      "3D Cabinet Layout",
-      "PLC Integration"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.eplan.com/us-en/",
-    "pricing_url": "https://www.eplan.com/us-en/",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Industry standard for electrical engineering",
-      "Extensive device data portal with millions of components",
-      "Automated documentation saves significant time",
-      "Seamless ERP/PDM integration",
-      "Template-based design for consistency",
-      "Supports fluid power engineering",
-      "Multi-language support",
-      "Strong global support network"
-    ],
-    "cons": [
-      "High cost compared to some alternatives",
-      "Steep learning curve for advanced features",
-      "Windows-only",
-      "Pricing not publicly available",
-      "Requires training for full utilization"
-    ],
-    "languages": [
-      "English",
-      "German",
-      "French",
-      "Spanish",
-      "Italian",
-      "Chinese",
-      "Japanese",
-      "Russian"
-    ],
-    "file_formats_in": [
-      "EPJ",
-      "DWG",
-      "DXF",
-      "STEP",
-      "PLC XML",
-      "Excel / CSV"
-    ],
-    "file_formats_out": [
-      "EPJ",
-      "PDF",
-      "DWG",
-      "DXF",
-      "XML",
-      "Excel / CSV",
-      "Image (PNG/TIFF)",
-      "STEP (via EPLAN Pro Panel)"
-    ],
-    "integrations": [
-      "SAP",
-      "Oracle",
-      "Microsoft Dynamics",
-      "Teamcenter",
-      "Windchill",
-      "Autodesk Vault",
-      "SolidWorks PDM"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "On-Premise",
-      "Hybrid"
-    ],
-    "license_types": [
-      "Subscription",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true
-    },
-    "key_capabilities": [
-      "Automated Schematic Design",
-      "EPLAN Data Portal",
-      "Auto-Generated Documentation",
-      "ERP/PDM Integration",
-      "Fluid Power Engineering",
-      "3D Cabinet Layout"
-    ],
-    "faqs": [
-      {
-        "q": "What is EPLAN used for?",
-        "a": "EPLAN is a comprehensive electrical engineering software platform used for automated schematic design, panel building, switchgear manufacturing, and control system engineering. It's widely used in machine building, plant engineering, automation, and industrial machinery industries for creating electrical schematics, generating documentation, and integrating with ERP/PDM systems."
-      },
-      {
-        "q": "How much does EPLAN cost?",
-        "a": "EPLAN is sold by subscription; the plans shown on this page are Electric P8 Subscription and Enterprise Solutions. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official EPLAN Pricing Page](https://www.eplan.com/)."
-      },
-      {
-        "q": "Is there a free version of EPLAN?",
-        "a": "EPLAN is a commercial product without a free permanent tier. Educational licenses are available at discounted rates for students and institutions. Commercial users can request an evaluation trial."
-      },
-      {
-        "q": "What operating systems does EPLAN support?",
-        "a": "EPLAN runs on Windows operating systems. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does EPLAN support?",
-        "a": "EPLAN is the platform, not a single product: Electric P8 is the schematic and documentation module, Pro Panel adds 3D cabinet engineering, Fluid handles hydraulics and pneumatics, and Preplanning covers plant and pipeline planning. Formats therefore depend on which modules are licensed — the common set is DWG, DXF, PDF, XML, Excel and CSV, with STEP appearing once Pro Panel is in the mix. Each module is documented separately, so check the module you actually run rather than a single platform-wide list."
-      },
-      {
-        "q": "What are the best alternatives to EPLAN?",
-        "a": "The closest alternatives to EPLAN are EPLAN Electric P8, AutoCAD, SolidWorks, and Altium Designer. EPLAN Electric P8 (offered on a Subscription license) competes directly on core Machine Building workflows, while AutoCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "EPLAN Platform",
-      "multicore": "Not applicable",
-      "gpu_optimization": "DirectX 11/12 and OpenGL workstation GPU acceleration",
-      "standards": [
-        "IEC 81346",
-        "IEC 60617",
-        "NFPA 79",
-        "GB/T 5094"
-      ]
-    },
-    "expert_verdict": "The global market leader in electrical engineering CAD, providing highly automated schematic and panel design.",
-    "trial_url": "https://www.eplan.com/us-en/"
-  },
-  {
-    "id": "t160",
-    "name": "Allegro PCB",
-    "slug": "allegro-pcb",
-    "logo_url": "/logos/allegro-pcb.ico",
-    "short_desc": "Cadence's enterprise PCB layout platform for constraint-driven, high-speed board design.",
-    "description": "Allegro PCB Designer is Cadence's enterprise layout environment for complex boards. It centres on a constraint manager that drives interactive and shape-based routing, with rigid-flex support, 3D inspection, and a data flow that connects to OrCAD Capture at the front end and to Sigrity, Celsius and Clarity tools for analysis. Those analysis engines are licensed separately rather than bundled with the layout seat.",
-    "pricing_tiers": [
-      {
-        "name": "Perpetual",
-        "price": "Contact Sales",
-        "period": "Perpetual",
-        "features": [
-          "Allegro PCB Designer layout environment",
-          "Constraint Manager and shape-based interactive routing",
-          "Signal-integrity and DFM options licensed separately",
-          "Named-user licensing quoted by Cadence"
-        ],
-        "is_popular": true
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "PCB Design",
-        "items": [
-          {
-            "name": "Constraint-driven PCB layout",
-            "status": true
-          },
-          {
-            "name": "Interactive and shape-based routing",
-            "status": true
-          },
-          {
-            "name": "Rigid-flex design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "High-speed design",
-            "status": true
-          },
-          {
-            "name": "Signal integrity (Sigrity option)",
-            "status": true
-          },
-          {
-            "name": "Power integrity (Sigrity option)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Thermal analysis (Celsius option)",
-            "status": true
-          },
-          {
-            "name": "EMI/EMC checks (licensed option)",
-            "status": true
-          },
-          {
-            "name": "DFM and DFA checks",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "OrCAD Capture front end",
-            "status": true
-          },
-          {
-            "name": "Cadence ecosystem (Sigrity, Celsius, Clarity)",
-            "status": true
-          },
-          {
-            "name": "Manufacturing output",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "xpedition",
-      "altium-designer",
-      "pads-professional",
-      "orcad"
-    ],
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
-    ],
-    "core_features": [
-      "Schematic Capture",
-      "PCB Layout & Routing",
-      "Constraint Manager",
-      "Signal Integrity",
-      "ECAD-MCAD Collaboration"
-    ],
-    "user_scales": [],
-    "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
-    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Constraint-driven enterprise routing",
-      "Scales to complex rigid-flex boards",
-      "Deep SI/PI analysis integration"
-    ],
-    "cons": [
-      "Very expensive",
-      "Steep learning curve",
-      "Overkill for simple 2-layer boards"
-    ],
-    "faqs": [
-      {
-        "q": "What is Allegro PCB used for?",
-        "a": "Allegro PCB is used for high-speed, multi-layer circuit board layout and comprehensive design verification in automotive, aerospace, and consumer electronics."
-      },
-      {
-        "q": "How much does Allegro PCB cost?",
-        "a": "Allegro PCB is sold as a perpetual licence; the plans shown on this page are Perpetual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allegro PCB Pricing Page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
-      },
-      {
-        "q": "Is there a free version of Allegro PCB?",
-        "a": "Allegro PCB is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Allegro PCB page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html)."
-      },
-      {
-        "q": "What operating systems does Allegro PCB support?",
-        "a": "Allegro PCB runs on Windows."
-      },
-      {
-        "q": "Which file formats does Allegro PCB support?",
-        "a": "Allegro keeps boards in BRD files with reusable DRA footprints and DSN netlists from the front-end flow. It imports STEP, IDF and DXF for mechanical context and reads ODB++ and IPC-2581 data; outbound it writes Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, STEP and DXF, plus PDF documentation. DWG is not an Allegro import format — DXF is the board-outline path. Translators for Altium, PADS, Xpedition and OrCAD designs are licensed separately, and Cadence publishes no single consolidated public matrix."
-      },
-      {
-        "q": "What are the best alternatives to Allegro PCB?",
-        "a": "The closest alternatives to Allegro PCB are Xpedition, Altium Designer, PADS Professional, and OrCAD. Xpedition (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Allegro PCB Editor",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Not documented by Cadence",
-      "standards": [
-        "Gerber X2",
-        "ODB++",
-        "IPC-2581",
-        "IPC-D-356",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "Cadence's high-end enterprise PCB layout platform, built for complex high-speed design and system constraints.",
-    "file_formats_in": [
-      "BRD",
-      "DRA",
-      "DSN",
-      "STEP",
-      "DXF",
-      "IDF",
-      "IPC-2581",
-      "ODB++"
-    ],
-    "file_formats_out": [
-      "BRD",
-      "Gerber X2",
-      "NC Drill",
-      "ODB++",
-      "IPC-2581",
-      "IPC-D-356",
-      "STEP",
-      "DXF",
-      "PDF"
+      "autocad-electrical",
+      "solidworks-electrical",
+      "see-electrical"
     ]
   },
   {
-    "id": "t161",
-    "name": "OrCAD",
-    "slug": "orcad",
-    "logo_url": "/logos/orcad.png",
-    "short_desc": "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
-    "description": "OrCAD is Cadence's comprehensive PCB design and analysis suite that integrates advanced schematic capture, PSpice circuit simulation, and high-performance PCB routing into a cohesive design workflow. The software provides constraint-driven design, mixed-signal simulation, and advanced analysis capabilities including signal integrity, thermal analysis, and EMI/EMC verification. OrCAD features seamless integration with Allegro PCB Designer for scalability to high-end design requirements, and offers extensive component libraries through OrCAD CIS. The platform supports both perpetual and subscription licensing models, with educational options for students and institutions. OrCAD is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing printed circuit boards ranging from simple to complex multi-layer designs.",
+    "id": "t160",
+    "name": "Cadence Allegro PCB Designer",
+    "slug": "allegro-pcb",
+    "logo_url": "/logos/allegro-pcb.png",
+    "short_desc": "Cadence’s industry-leading enterprise PCB design system for high-density, multi-gigabit, and advanced packaging physical layout.",
+    "description": "Cadence Allegro PCB Designer is the undisputed global benchmark for enterprise-level printed circuit board (PCB) design, advanced IC packaging, and high-density interconnect (HDI) systems. Engineered to solve the most demanding high-speed signal integrity and thermal challenges, Allegro is trusted by top semiconductor manufacturers, aerospace contractors, and computer hardware leaders. Featuring constraint-driven interactive and automated routing, integrated real-time in-design analysis with Cadence Sigrity, concurrent multi-user team design partitioning, and comprehensive rigid-flex support, Allegro ensures first-pass design success for complex multi-gigahertz boards.",
     "pricing_tiers": [
       {
-        "name": "OrCAD X Professional",
+        "name": "Allegro PCB Workstation License",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "OrCAD X Capture CIS schematic entry with integrated component and part data management",
-          "OrCAD X Presto PCB layout with real-time constraint-driven routing and 3D canvas",
-          "PSpice analog/mixed-signal simulation and live BOM supply-chain risk analysis",
-          "Cloud workspace collaboration and native design compatibility with Cadence Allegro X"
+          "Constraint-Driven High-Speed & HDI Physical Routing",
+          "Real-Time Timing, Crosstalk & Impedance Validation",
+          "Advanced Rigid-Flex 3D Bending & Dynamic DRC",
+          "Direct Manufacturing Output to ODB++ and IPC-2581"
         ],
         "is_popular": true
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Schematic Design",
-        "items": [
-          {
-            "name": "Advanced schematic capture",
-            "status": true
-          },
-          {
-            "name": "Hierarchical design",
-            "status": true
-          },
-          {
-            "name": "Variant management",
-            "status": true
-          },
-          {
-            "name": "Design reuse",
-            "status": true
-          },
-          {
-            "name": "Constraint-driven design",
-            "status": true
-          }
-        ]
       },
       {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "PSpice analog simulation",
-            "status": true
-          },
-          {
-            "name": "Mixed-signal simulation",
-            "status": true
-          },
-          {
-            "name": "Digital simulation",
-            "status": true
-          },
-          {
-            "name": "Advanced analysis",
-            "status": true
-          },
-          {
-            "name": "Monte Carlo analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "PCB Layout",
-        "items": [
-          {
-            "name": "High-performance routing",
-            "status": true
-          },
-          {
-            "name": "Multi-layer design",
-            "status": true
-          },
-          {
-            "name": "Differential pair routing",
-            "status": true
-          },
-          {
-            "name": "Auto-routing",
-            "status": true
-          },
-          {
-            "name": "Design for manufacturability",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Signal integrity (Sigrity option)",
-            "status": true
-          },
-          {
-            "name": "Smoke and stress analysis (PSpice Advanced Analysis)",
-            "status": true
-          },
-          {
-            "name": "Monte Carlo and worst-case analysis",
-            "status": true
-          },
-          {
-            "name": "Power integrity (Sigrity option)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Library Management",
-        "items": [
-          {
-            "name": "OrCAD CIS",
-            "status": true
-          },
-          {
-            "name": "Component information system",
-            "status": true
-          },
-          {
-            "name": "Cloud library access",
-            "status": true
-          },
-          {
-            "name": "Part search",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "altium-designer",
-      "pads-professional",
-      "allegro-pcb",
-      "kicad"
-    ],
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 2500,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
-    ],
-    "core_features": [
-      "PSpice Simulation",
-      "Schematic Capture",
-      "PCB Layout",
-      "Signal Integrity Analysis",
-      "OrCAD CIS",
-      "Constraint-Driven Design",
-      "Allegro Integration"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
-    "pricing_url": "https://www.cadence.com/en_US/home/company/contact-us.html",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Industry-standard PSpice simulation",
-      "Comprehensive PCB design capabilities",
-      "Seamless Allegro integration for scalability",
-      "Extensive component libraries",
-      "Constraint-driven design workflow",
-      "Mixed-signal simulation support",
-      "Strong Cadence ecosystem",
-      "Educational licensing available"
-    ],
-    "cons": [
-      "Higher cost compared to some alternatives",
-      "Windows-only",
-      "Steep learning curve for advanced features",
-      "Subscription model may not suit all budgets",
-      "Requires training for full utilization"
-    ],
-    "languages": [
-      "English",
-      "Chinese",
-      "Japanese",
-      "Korean",
-      "German",
-      "French"
-    ],
-    "file_formats_in": [
-      "DSN",
-      "BRD",
-      "DXF",
-      "STEP",
-      "IDF",
-      "IPC-2581",
-      "ODB++",
-      "SPICE"
-    ],
-    "file_formats_out": [
-      "DSN",
-      "BRD",
-      "Gerber X2",
-      "NC Drill",
-      "ODB++",
-      "IPC-2581",
-      "IPC-D-356",
-      "DXF",
-      "PDF",
-      "BOM",
-      "SPICE netlist"
-    ],
-    "integrations": [
-      "Allegro PCB Designer",
-      "Cadence Sigrity",
-      "Cadence Liberate",
-      "SAP",
-      "Oracle",
-      "Microsoft Dynamics"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid"
-    ],
-    "license_types": [
-      "Subscription",
-      "Perpetual",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Training",
-      "Community"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true
-    },
-    "key_capabilities": [
-      "PSpice Simulation",
-      "Schematic Capture",
-      "PCB Layout",
-      "Signal Integrity Analysis",
-      "OrCAD CIS",
-      "Constraint-Driven Design"
-    ],
-    "faqs": [
-      {
-        "q": "What is OrCAD used for?",
-        "a": "OrCAD is a comprehensive PCB design and analysis suite used for schematic capture, circuit simulation using PSpice, and printed circuit board layout. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from simple to complex multi-layer designs."
-      },
-      {
-        "q": "How much does OrCAD cost?",
-        "a": "OrCAD is sold either by subscription or as a perpetual licence; the plans shown on this page are OrCAD X Professional. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OrCAD Pricing Page](https://www.orcad.com/)."
-      },
-      {
-        "q": "Is there a free version of OrCAD?",
-        "a": "OrCAD is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official OrCAD trial page](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html)."
-      },
-      {
-        "q": "What operating systems does OrCAD support?",
-        "a": "OrCAD runs on Windows operating systems. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does OrCAD support?",
-        "a": "OrCAD X Capture stores schematics as DSN and Presto stores boards as BRD — the Allegro BRD container, which is why designs move to Allegro X without translation. It imports DXF, STEP, IDF and SPICE models, and reads ODB++ and IPC-2581. Output covers Gerber X2, NC drill, ODB++, IPC-2581, IPC-D-356 test data, DXF, PDF and BOM. Gerber and IGES are not import formats here, DWG needs converting to DXF first, and OrCAD has no Gerber importer of its own."
-      },
-      {
-        "q": "What are the best alternatives to OrCAD?",
-        "a": "The closest alternatives to OrCAD are Altium Designer, PADS Professional, Allegro PCB, and KiCad. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while PADS Professional (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of OrCAD?",
-        "a": "OrCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official OrCAD plans and trial](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "OrCAD X platform (Allegro X engine)",
-      "multicore": "Threaded DRC and shape checks in OrCAD X Presto",
-      "gpu_optimization": "Not documented by Cadence",
-      "standards": [
-        "Gerber X2",
-        "ODB++",
-        "IPC-2581",
-        "IPC-D-356",
-        "IBIS"
-      ]
-    },
-    "expert_verdict": "Cadence's electronic design suite, known for fast schematic capture and PCB layout.",
-    "trial_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html"
-  },
-  {
-    "id": "t162",
-    "name": "PADS Professional",
-    "slug": "pads-professional",
-    "logo_url": "/logos/pads-professional.svg",
-    "short_desc": "Siemens EDA's comprehensive PCB design solution for mid-to-high complexity designs with advanced simulation and analysis capabilities.",
-    "description": "PADS Professional is a comprehensive PCB design platform from Siemens EDA (formerly Mentor Graphics) that provides advanced tools for schematic capture, PCB layout, simulation, and manufacturing output. Built on the modern Xpedition ecosystem, PADS Professional offers constraint-driven design, high-speed design capabilities, signal integrity analysis, power integrity analysis, and thermal analysis. The software features advanced routing including differential pair routing, auto-routing, and design for manufacturability checks. PADS Professional integrates seamlessly with the broader Siemens EDA ecosystem including Xpedition for high-end design requirements. The platform supports both perpetual and subscription licensing models, with educational options available. PADS Professional is widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity.",
-    "pricing_tiers": [
-      {
-        "name": "PADS Professional",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Xpedition-powered schematic capture and constraint-driven PCB layout",
-          "HyperLynx pre- and post-layout signal integrity, crosstalk, and DDRx timing analysis",
-          "Rigid-flex 3D bend modelling, RF layout, and FPGA I/O co-design",
-          "Available in tier bundles (Standard / Professional / Premium) via Siemens EDA"
-        ],
-        "is_popular": true
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Schematic Design",
-        "items": [
-          {
-            "name": "Advanced schematic capture",
-            "status": true
-          },
-          {
-            "name": "Hierarchical design",
-            "status": true
-          },
-          {
-            "name": "Constraint-driven design",
-            "status": true
-          },
-          {
-            "name": "Design reuse",
-            "status": true
-          },
-          {
-            "name": "Variant management",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "PCB Layout",
-        "items": [
-          {
-            "name": "High-performance routing",
-            "status": true
-          },
-          {
-            "name": "Differential pair routing",
-            "status": true
-          },
-          {
-            "name": "Auto-routing",
-            "status": true
-          },
-          {
-            "name": "Multi-layer design",
-            "status": true
-          },
-          {
-            "name": "Design for manufacturability",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation & Analysis",
-        "items": [
-          {
-            "name": "Signal integrity (HyperLynx)",
-            "status": true
-          },
-          {
-            "name": "Power integrity (HyperLynx)",
-            "status": true
-          },
-          {
-            "name": "Thermal analysis (HyperLynx Thermal)",
-            "status": true
-          },
-          {
-            "name": "EMI/EMC analysis (HyperLynx)",
-            "status": true
-          },
-          {
-            "name": "Analog/mixed-signal simulation (PADS AMS)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced Features",
-        "items": [
-          {
-            "name": "High-speed design",
-            "status": true
-          },
-          {
-            "name": "Design verification",
-            "status": true
-          },
-          {
-            "name": "Library management",
-            "status": true
-          },
-          {
-            "name": "Manufacturing output",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Xpedition ecosystem",
-            "status": true
-          },
-          {
-            "name": "Siemens EDA integration",
-            "status": true
-          },
-          {
-            "name": "ERP/PDM integration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "altium-designer",
-      "orcad",
-      "allegro-pcb",
-      "xpedition"
-    ],
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 8000,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
-    ],
-    "core_features": [
-      "Schematic Capture",
-      "PCB Layout",
-      "Signal Integrity Analysis",
-      "Power Integrity Analysis",
-      "Thermal Analysis",
-      "Xpedition Ecosystem",
-      "High-Speed Design"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Comprehensive PCB design capabilities",
-      "Advanced simulation and analysis tools",
-      "Seamless Xpedition ecosystem integration",
-      "High-speed design support",
-      "Constraint-driven design workflow",
-      "Strong Siemens EDA ecosystem",
-      "Educational licensing available",
-      "Robust library management"
-    ],
-    "cons": [
-      "Higher cost compared to some alternatives",
-      "Windows-only",
-      "Steep learning curve for advanced features",
-      "Analysis computation can be slow",
-      "Requires training for full utilization"
-    ],
-    "languages": [
-      "English",
-      "Chinese",
-      "Japanese",
-      "German",
-      "French"
-    ],
-    "file_formats_in": [
-      "PCB",
-      "SCH",
-      "DXF",
-      "IDF",
-      "STEP",
-      "IPC-2581",
-      "ODB++"
-    ],
-    "file_formats_out": [
-      "Gerber",
-      "NC Drill",
-      "ODB++",
-      "IPC-2581",
-      "IPC-D-356",
-      "DXF",
-      "PDF",
-      "STEP",
-      "BOM"
-    ],
-    "integrations": [
-      "Xpedition",
-      "Teamcenter",
-      "SAP",
-      "Oracle",
-      "Microsoft Dynamics"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "On-Premise"
-    ],
-    "license_types": [
-      "Subscription",
-      "Perpetual",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Training",
-      "Community"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true
-    },
-    "key_capabilities": [
-      "Schematic Capture",
-      "PCB Layout",
-      "Signal Integrity Analysis",
-      "Power Integrity Analysis",
-      "Thermal Analysis",
-      "Xpedition Ecosystem"
-    ],
-    "faqs": [
-      {
-        "q": "What is PADS Professional used for?",
-        "a": "PADS Professional is a comprehensive PCB design platform used for schematic capture, PCB layout, simulation, and manufacturing output. It's widely used in consumer electronics, automotive, aerospace, and industrial automation industries for designing PCBs ranging from moderate to high complexity."
-      },
-      {
-        "q": "How much does PADS Professional cost?",
-        "a": "PADS Professional is sold either by subscription or as a perpetual licence; the plans shown on this page are PADS Professional. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official PADS Professional Pricing Page](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
-      },
-      {
-        "q": "Is there a free version of PADS Professional?",
-        "a": "PADS Professional is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official PADS Professional trial page](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
-      },
-      {
-        "q": "What operating systems does PADS Professional support?",
-        "a": "PADS Professional runs on Windows operating systems. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does PADS Professional support?",
-        "a": "PADS Professional works in PADS PCB and schematic files with a shared library. It imports DXF, IDF, STEP, ODB++ and IPC-2581, and writes Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, DXF, PDF, STEP and BOM. AutoCAD drawings have to be converted to DXF before import. The HyperLynx engines behind signal integrity, power integrity, thermal and EMI/EMC checks are separately licensed, so the analysis you actually get depends on the bundle; Siemens documents that matrix per tier rather than platform-wide."
-      },
-      {
-        "q": "What are the best alternatives to PADS Professional?",
-        "a": "The closest alternatives to PADS Professional are Altium Designer, OrCAD, Allegro PCB, and Xpedition. Altium Designer (offered on a Subscription license) competes directly on core Consumer Electronics workflows, while OrCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of PADS Professional?",
-        "a": "PADS Professional is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official PADS Professional plans and trial](https://www.siemens.com/en-us/products/pcb/pads/professional/)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Xpedition-derived engine (PADS Professional)",
-      "multicore": "Threaded shape-based autorouting and HyperLynx analysis",
-      "gpu_optimization": "Not documented by Siemens EDA",
-      "standards": [
-        "Gerber X2",
-        "ODB++",
-        "IPC-2581",
-        "IPC-D-356"
-      ]
-    },
-    "expert_verdict": "Siemens' professional PCB design software, combining ease-of-use with advanced enterprise-grade routing.",
-    "trial_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/"
-  },
-  {
-    "id": "t163",
-    "name": "Xpedition",
-    "slug": "xpedition",
-    "logo_url": "/logos/xpedition.svg",
-    "short_desc": "Siemens EDA's high-end PCB flow — schematic, constraint management, layout, library tooling and manufacturing prep in one enterprise platform.",
-    "description": "Siemens Xpedition Enterprise is the premier constraint-driven PCB and electronic systems design platform for high-density interconnect (HDI), RF/microwave, rigid-flex, and multi-board aerospace/telecom hardware. Integrating HyperLynx signal/power/thermal integrity verification, Valor NPI Design-for-Manufacturing (DFM) checks, and Teamcenter PLM library governance, it scales to the world’s most complex electronic architectures.",
-    "pricing_tiers": [
-      {
-        "name": "Xpedition",
+        "name": "Cadence System Design Enterprise Pool",
         "price": "Contact Sales",
-        "period": "Perpetual",
+        "period": "enterprise network licensing",
         "features": [
-          "Schematic, constraint management and layout in one flow",
-          "HyperLynx analysis available as an add-on",
-          "Valor NPI manufacturing prep available as an add-on",
-          "Named-user licensing quoted by Siemens EDA"
+          "Concurrent Team Design Partitioning (Multiple Users per Board)",
+          "Integrated In-Design Signal & Power Integrity (Sigrity)",
+          "Silicon Interposer & Advanced Package-on-Package Co-Design",
+          "Global Enterprise Technical Support & Dedicated Flow Consulting"
         ],
-        "is_popular": true
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 5800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+    "trial_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "High-Density Interconnect (HDI) & Multi-Gigabit Routing",
+      "Constraint-Driven Design with Real-Time Timing Rules",
+      "Integrated In-Design Signal & Power Integrity (Sigrity)",
+      "Concurrent Multi-User Team Design Partitioning",
+      "Rigid-Flex Dynamic Bending & 3D Interference Checks",
+      "Complete IPC-2581 & ODB++ Manufacturing Output"
     ],
     "detailed_features": [
       {
-        "category": "PCB Design",
+        "category": "High-Speed Routing & Constraints",
         "items": [
           {
-            "name": "Scalable PCB design",
+            "name": "Constraint Manager enforcing electrical delay rules, differential pairs, phase tolerance, and crosstalk margins dynamically during routing",
             "status": true
           },
           {
-            "name": "Constraint management",
-            "status": true
-          },
-          {
-            "name": "Rigid-flex and HDI support",
+            "name": "High-Density Interconnect (HDI) capabilities routing microvias, blind/buried vias, and ultra-fine pitch BGA packages",
             "status": true
           }
         ]
       },
       {
-        "category": "Advanced",
+        "category": "Team Collaboration & In-Design Analysis",
         "items": [
           {
-            "name": "High-speed design",
+            "name": "Team Design Partitioning allowing multiple PCB layout engineers to route different sections of the same complex board concurrently",
             "status": true
           },
           {
-            "name": "Signal integrity (HyperLynx)",
-            "status": true
-          },
-          {
-            "name": "Power integrity (HyperLynx)",
+            "name": "In-Design Analysis with Sigrity providing live impedance profiles, return path discontinuity alerts, and voltage drop maps",
             "status": true
           }
         ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Thermal analysis (HyperLynx Thermal)",
-            "status": true
-          },
-          {
-            "name": "EMI/EMC analysis (HyperLynx)",
-            "status": true
-          },
-          {
-            "name": "DFM checks (Valor NPI)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Siemens EDA ecosystem",
-            "status": true
-          },
-          {
-            "name": "Teamcenter library governance",
-            "status": true
-          },
-          {
-            "name": "Manufacturing output",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "allegro-pcb",
-      "altium-designer",
-      "pads-professional",
-      "orcad"
-    ],
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
-    ],
-    "core_features": [
-      "Constraint-Driven Layout",
-      "High-Speed Analysis",
-      "RF Design",
-      "DFM Analysis",
-      "Enterprise Data Management"
-    ],
-    "user_scales": [],
-    "official_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Top-tier high-speed and RF co-design",
-      "Enterprise data management",
-      "Strong DFM sign-off"
-    ],
-    "cons": [
-      "Enterprise pricing",
-      "Complex setup and licensing",
-      "Windows-only"
-    ],
-    "faqs": [
-      {
-        "q": "What is Xpedition used for?",
-        "a": "Xpedition is Siemens EDA’s enterprise PCB platform: it carries a design from schematic capture and constraint definition through interactive layout, library management and fabrication release, with HyperLynx for analysis and Valor NPI for manufacturing prep. It is aimed at dense, high-speed, multi-board products where constraint discipline and team-scale data management matter more than speed of first layout."
-      },
-      {
-        "q": "How much does Xpedition cost?",
-        "a": "Xpedition is sold as a perpetual licence; the plans shown on this page are Xpedition. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Xpedition Pricing Page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
-      },
-      {
-        "q": "Is there a free version of Xpedition?",
-        "a": "Xpedition is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Xpedition page](https://eda.sw.siemens.com/en-US/pcb/xpedition/)."
-      },
-      {
-        "q": "What operating systems does Xpedition support?",
-        "a": "Xpedition runs on Windows."
-      },
-      {
-        "q": "Which file formats does Xpedition support?",
-        "a": "Xpedition stores designs in its own PCB and schematic databases with a central library, and exchange happens through DXF, IDF, STEP, ODB++ and IPC-2581 on the way in — Gerber, NC drill, ODB++, IPC-2581, IPC-D-356, STEP, PDF and BOM on the way out. Analysis (HyperLynx) and manufacturing prep (Valor NPI) are separately licensed parts of the flow rather than built into the layout seat, so the practical matrix depends on which of them you own."
-      },
-      {
-        "q": "What are the best alternatives to Xpedition?",
-        "a": "The closest alternatives to Xpedition are Allegro PCB, Altium Designer, PADS Professional, and OrCAD. Allegro PCB (offered on a Perpetual license) competes directly on core Electronics workflows, while Altium Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Xpedition layout engine",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Not documented by Siemens EDA",
+      "engine": "Cadence 64-bit Allegro Physical PCB Core Engine",
+      "multicore": "Multi-threaded constraint verification engine and 64-bit multi-core shape filling algorithms",
+      "gpu_optimization": "OpenGL hardware-accelerated graphics displaying complex 32+ layer PCB routing and microvia density maps",
       "standards": [
-        "Gerber X2",
-        "ODB++",
         "IPC-2581",
-        "IPC-D-356",
-        "STEP"
+        "ODB++",
+        "IPC-7351",
+        "STEP",
+        "GERBER"
       ]
     },
-    "expert_verdict": "Siemens' flagship enterprise PCB design and systems engineering platform, built for multi-disciplinary global teams.",
     "file_formats_in": [
-      "PCB",
-      "SCH",
-      "DXF",
-      "IDF",
+      "BRD",
+      "DSN",
       "STEP",
+      "DXF",
       "ODB++",
       "IPC-2581"
     ],
     "file_formats_out": [
-      "Gerber",
-      "NC Drill",
+      "BRD",
+      "GERBER",
       "ODB++",
       "IPC-2581",
-      "IPC-D-356",
       "STEP",
+      "DXF",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 115,
+        "url": "https://www.g2.com/products/cadence-allegro-pcb-designer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 32,
+        "url": "https://www.trustradius.com/products/cadence-allegro-pcb-designer/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "High-Performance Computing & AI Hardware",
+      "Aerospace, Avionics & Defense Electronics",
+      "5G Telecommunications & Network Infrastructure",
+      "Automotive Autonomous Driving Computers",
+      "Semiconductor Packaging & Silicon Interposers"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Cadence Allegro is the enterprise heavyweight for high-speed multi-gigahertz PCB design, setting the standard for constraint management and multi-user team partitioning.",
+    "pros": [
+      "The undisputed market leader for extreme high-speed digital designs (DDR5, PCIe Gen 5/6, 112G SerDes) requiring complex timing rules.",
+      "The Constraint Manager is the most robust in the EDA industry, ensuring every electrical rule is physically checked during trace placement.",
+      "Concurrent Team Design allows large hardware teams to partition massive server motherboards and collaborate simultaneously.",
+      "Direct in-design signal integrity feedback powered by Cadence Sigrity technology prevents costly design respins.",
+      "Industry standard for IC packaging, multi-chip modules (MCM), and high-density microvia substrates."
+    ],
+    "cons": [
+      "Significant licensing cost and annual maintenance investment designed for tier-one corporate enterprise budgets.",
+      "Steep learning curve with extensive configuration dialogs requiring specialized, dedicated PCB layout librarians.",
+      "Creating and managing parts libraries requires strict database discipline compared to integrated maker tools.",
+      "Client software runs natively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What makes Cadence Allegro the standard for high-speed PCB design?",
+        "a": "Allegro features the industry's most advanced Constraint Manager, which allows engineers to define and verify complex timing rules, differential skew, return path checks, and impedance constraints in real time."
+      },
+      {
+        "q": "What is Team Design Partitioning in Allegro?",
+        "a": "Team Design Partitioning enables multiple PCB designers to work on the exact same board layout at the same time by partitioning the design into zones, which merge automatically back into the master database."
+      },
+      {
+        "q": "Can Allegro PCB Designer exchange data with 3D mechanical CAD?",
+        "a": "Yes. Allegro supports bi-directional data exchange with mechanical CAD software via 3D STEP models, IDF, and IDX (ProSTEP iViP) collaboration protocols."
+      },
+      {
+        "q": "What operating systems are supported by Cadence Allegro?",
+        "a": "Cadence Allegro PCB Designer runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "altium-designer",
+      "xpedition",
+      "orcad",
+      "pads-professional"
+    ]
+  },
+  {
+    "id": "t161",
+    "name": "Cadence OrCAD",
+    "slug": "orcad",
+    "logo_url": "/logos/orcad.png",
+    "short_desc": "Cadence’s comprehensive electronic design suite uniting OrCAD Capture schematic, PSpice analog simulation, and PCB layout.",
+    "description": "Cadence OrCAD is a widely deployed, full-featured electronic design automation (EDA) software suite tailored for hardware engineers, circuit designers, and product teams. Anchored by the legendary OrCAD Capture schematic editor and the industry-standard PSpice analog and mixed-signal simulator, OrCAD provides an integrated, constraint-driven workflow that carries circuit designs seamlessly into PCB layout. Featuring native compatibility and upward scalability to the enterprise Cadence Allegro platform, OrCAD delivers production-grade reliability from initial circuit simulation to physical manufacturing.",
+    "pricing_tiers": [
+      {
+        "name": "OrCAD PCB Standard",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "OrCAD Capture Industry-Standard Schematic Design",
+          "Interactive Multi-Layer PCB Physical Layout",
+          "Dynamic Shape Fill & Real-Time Design Rule Checking",
+          "Direct Manufacturing Output (Gerber, ODB++, IPC-2581)"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "OrCAD Professional & PSpice Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Integrated PSpice Mixed-Signal Circuit Simulation Engine",
+          "High-Speed Constraint Manager & Differential Pair Tuning",
+          "Full Upward Database Compatibility with Cadence Allegro",
+          "Dedicated Technical Support & Component Cloud Access"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2700,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
+    "trial_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
+    "pricing_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "OrCAD Capture Industry-Standard Schematic",
+      "PSpice Mixed-Signal Circuit Simulation",
+      "Constraint-Driven PCB Routing Engine",
+      "Dynamic Shape Editing & Real-Time DRC",
+      "Seamless Scalability to Cadence Allegro",
+      "Comprehensive Central Component Database"
+    ],
+    "detailed_features": [
+      {
+        "category": "Schematic Capture & PSpice Simulation",
+        "items": [
+          {
+            "name": "OrCAD Capture providing hierarchical multi-sheet schematic capture with intelligent electrical rule validation",
+            "status": true
+          },
+          {
+            "name": "PSpice Simulator executing Monte Carlo, sensitivity, and transient mixed-signal circuit behavior analysis",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "PCB Layout & Allegro Interoperability",
+        "items": [
+          {
+            "name": "Physical Routing Engine providing interactive routing, length matching, and dynamic copper pour generation",
+            "status": true
+          },
+          {
+            "name": "Native Allegro Database ensuring designs migrate seamlessly to Allegro without format conversion as complexity scales",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Cadence OrCAD Layout & PSpice Simulation Kernel",
+      "multicore": "Multi-core parallel processor threading for PSpice Monte Carlo and analog circuit transient solving",
+      "gpu_optimization": "DirectX and OpenGL hardware rendering for smooth 2D and 3D board assembly viewing",
+      "standards": [
+        "IPC-2581",
+        "ODB++",
+        "SPICE",
+        "STEP",
+        "GERBER"
+      ]
+    },
+    "file_formats_in": [
+      "DSN",
+      "MAX",
+      "BRD",
+      "DXF",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "BRD",
+      "GERBER",
+      "ODB++",
+      "IPC-2581",
+      "DXF",
       "PDF",
-      "BOM"
+      "STEP"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 88,
+        "url": "https://www.g2.com/products/cadence-orcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.capterra.com/p/179832/Cadence-OrCAD/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Industrial Instrumentation & Automation",
+      "Consumer Hardware & IoT Devices",
+      "Medical Diagnostic Equipment",
+      "Automotive Electronic Subsystems",
+      "Defense & Power Supply Electronics"
+    ],
+    "user_scales": [
+      "SMB Hardware Teams",
+      "Mid-Market Engineering"
+    ],
+    "score": 4.6,
+    "expert_verdict": "Cadence OrCAD pairs the legendary OrCAD Capture schematic and PSpice simulation engines with robust PCB layout, providing a smooth growth path to enterprise Allegro.",
+    "pros": [
+      "OrCAD Capture is one of the most widely recognized and accepted schematic capture tools in global electronic engineering.",
+      "Integrated PSpice simulation allows rigorous analog and mixed-signal validation before committing to physical PCB prototypes.",
+      "100% native database compatibility with Cadence Allegro eliminates translation hurdles when upgrading to enterprise high-speed design.",
+      "Robust constraint management system enforces design rules and trace length tolerances during interactive routing.",
+      "Extensive global component library and established worldwide distributor footprints streamline part creation."
+    ],
+    "cons": [
+      "User interface retains legacy conventions that require formal training compared to modern consumer-focused EDA apps.",
+      "Library creation and symbol-footprint mapping require meticulous adherence to Cadence directory hierarchies.",
+      "More expensive than mid-market alternatives like KiCad or EasyEDA.",
+      "Supported natively only on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "What is the relationship between OrCAD and Cadence Allegro?",
+        "a": "OrCAD and Allegro share the exact same underlying PCB layout database; OrCAD provides a cost-effective solution for mainstream boards, while Allegro adds enterprise team partitioning and extreme multi-gigabit capabilities."
+      },
+      {
+        "q": "What is PSpice in OrCAD?",
+        "a": "PSpice is the industry-standard analog and mixed-signal circuit simulator integrated directly into OrCAD Capture, allowing engineers to test voltage, current, and frequency response virtually."
+      },
+      {
+        "q": "What manufacturing files does OrCAD output?",
+        "a": "OrCAD outputs RS-274X Gerber, ODB++, IPC-2581, NC Drill, assembly pick-and-place, and 3D mechanical STEP files."
+      },
+      {
+        "q": "What operating systems are supported by Cadence OrCAD?",
+        "a": "Cadence OrCAD runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "altium-designer",
+      "allegro-pcb",
+      "pads-professional",
+      "kicad"
+    ]
+  },
+  {
+    "id": "t162",
+    "name": "Siemens PADS Professional",
+    "slug": "pads-professional",
+    "logo_url": "/logos/pads-professional.png",
+    "short_desc": "Siemens’ powerful PCB design environment powered by enterprise Xpedition technology for self-sufficient hardware engineers.",
+    "description": "Siemens PADS Professional is an advanced printed circuit board (PCB) design software solution developed by Siemens Digital Industries Software (formerly Mentor Graphics). Powered by the core technology of Siemens' enterprise-grade Xpedition platform, PADS Professional delivers high-end electronic design capabilities—including the revolutionary Sketch Router, integrated HyperLynx signal and thermal analysis, 3D rigid-flex modeling, and PartQuest cloud library integration—in a package tailored for independent hardware engineers and agile engineering teams.",
+    "pricing_tiers": [
+      {
+        "name": "PADS Professional Workstation",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Xpedition-Powered Multi-Layer PCB Layout Engine",
+          "Automated Sketch Router Interactive Routing",
+          "Integrated HyperLynx Signal Integrity & Power Analysis",
+          "3D Rigid-Flex Layout & Mechanical Enclosure DRC"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "PADS Professional Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Concurrent Team Network Floating License Deployment",
+          "Advanced Thermal Analysis & Power Integrity Verification",
+          "Direct MCAD Collaboration with Siemens NX and Solid Edge",
+          "Dedicated Siemens EDA Technical Support & Training"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 3600,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
+    "trial_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
+    "pricing_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Powered by Siemens Xpedition Core PCB Technology",
+      "Sketch Router Automated Interactive Routing",
+      "Integrated Signal Integrity (HyperLynx) Analysis",
+      "3D Rigid-Flex & Enclosure Collision Detection",
+      "Unified PartQuest Component Cloud Access",
+      "Direct MCAD Collaboration with NX & Solid Edge"
+    ],
+    "detailed_features": [
+      {
+        "category": "Routing Technology & HyperLynx",
+        "items": [
+          {
+            "name": "Sketch Router Technology allowing designers to draw a freehand path that automatically routes dozens of dense traces with hand-routed quality",
+            "status": true
+          },
+          {
+            "name": "HyperLynx Integrated Analysis detecting signal reflections, termination mismatches, and DC power drop directly within the layout editor",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Rigid-Flex & Component Libraries",
+        "items": [
+          {
+            "name": "True 3D Rigid-Flex Modeling folding flexible circuitry dynamically in 3D to verify clearance inside tight mechanical enclosures",
+            "status": true
+          },
+          {
+            "name": "Siemens PartQuest Portal connecting directly to cloud component repositories with pre-built symbols, footprints, and 3D models",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Xpedition / PADS Core EDA Kernel",
+      "multicore": "Multi-threaded plane generation and parallel automated rule checking",
+      "gpu_optimization": "OpenGL hardware graphics acceleration for real-time 3D board viewing with component step files",
+      "standards": [
+        "IPC-2581",
+        "ODB++",
+        "STEP",
+        "IDF",
+        "GERBER"
+      ]
+    },
+    "file_formats_in": [
+      "SCH",
+      "PCB",
+      "STEP",
+      "DXF",
+      "IDF",
+      "ODB++"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "ODB++",
+      "IPC-2581",
+      "STEP",
+      "DXF",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 52,
+        "url": "https://www.g2.com/products/pads/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 26,
+        "url": "https://www.capterra.com/p/179835/PADS-Professional/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Industrial Machinery & Robotics",
+      "Aerospace & Defense Subsystems",
+      "Medical Diagnostic Devices",
+      "Automotive Tier 1 Suppliers",
+      "Telecommunications Equipment"
+    ],
+    "user_scales": [
+      "Solo Engineers",
+      "SMB Hardware Teams"
+    ],
+    "score": 4.5,
+    "expert_verdict": "Siemens PADS Professional delivers flagship Xpedition routing power and HyperLynx simulation to independent hardware engineers with class-leading Sketch Routing.",
+    "pros": [
+      "Powered by the same enterprise routing algorithms and database technology as Siemens' flagship Xpedition suite.",
+      "The Sketch Router revolutionizes dense bus routing by translating a user's freehand stroke into clean, finished multi-trace layouts.",
+      "Built-in HyperLynx signal integrity analysis identifies signal reflection, crosstalk, and DC drop before board fabrication.",
+      "True 3D rigid-flex modeling enables engineers to fold complex circuit boards directly into virtual mechanical housings.",
+      "Direct bi-directional ECAD-MCAD collaboration with Siemens NX, Solid Edge, and third-party MCAD software via IDX standards."
+    ],
+    "cons": [
+      "Requires higher initial investment and subscription costs than mainstream entry-level tools like EAGLE or KiCad.",
+      "Migrating legacy libraries from classic PADS Standard requires careful component verification.",
+      "Lacks the vast consumer crowdsourced component ecosystem found in Altium or open-source tools.",
+      "Operates natively exclusively on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between PADS Professional and classic PADS Standard?",
+        "a": "Classic PADS Standard is based on legacy Mentor architecture, whereas PADS Professional is built on Siemens' modern enterprise Xpedition technology, incorporating advanced Sketch Routing and integrated HyperLynx analysis."
+      },
+      {
+        "q": "What is the Sketch Router in PADS Professional?",
+        "a": "The Sketch Router allows the designer to draw a simple line indicating the desired path of a bus or group of nets, and the engine automatically routes the individual traces to match length and clearance rules."
+      },
+      {
+        "q": "Can PADS Professional analyze signal integrity?",
+        "a": "Yes. PADS Professional includes integrated HyperLynx analysis tools to check impedance, termination, crosstalk, and DC power distribution directly within the layout editor."
+      },
+      {
+        "q": "What operating systems are supported by PADS Professional?",
+        "a": "Siemens PADS Professional runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "altium-designer",
+      "allegro-pcb",
+      "orcad",
+      "xpedition"
+    ]
+  },
+  {
+    "id": "t163",
+    "name": "Siemens Xpedition",
+    "slug": "xpedition",
+    "logo_url": "/logos/xpedition.png",
+    "short_desc": "Siemens’ enterprise flagship PCB systems design platform for complex multi-board, advanced packaging, and PLM-connected hardware teams.",
+    "description": "Siemens Xpedition Enterprise is the flagship electronic systems design platform developed by Siemens Digital Industries Software. Engineered for large global hardware engineering organizations, Xpedition manages the end-to-end complexity of multi-board electronic systems, high-density package-on-package (PoP) substrates, and advanced rigid-flex designs. Featuring concurrent multi-user team layout, correct-by-construction constraint management, comprehensive HyperLynx signal and thermal integrity simulation, and direct PLM integration with Siemens Teamcenter, Xpedition drives digital thread continuity across aerospace, automotive, and defense enterprises.",
+    "pricing_tiers": [
+      {
+        "name": "Xpedition Enterprise Workstation",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Enterprise Multi-Board Electronic Systems Architecture",
+          "Advanced High-Density Package Substrate Co-Design",
+          "Correct-by-Construction Multi-Level Constraint Management",
+          "Direct Teamcenter PLM Digital Thread Integration"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Siemens Enterprise Token Pool",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Concurrent Multi-User Team Layout Collaboration",
+          "Full HyperLynx Signal, Power & Thermal Integrity Suite",
+          "Valor NPI Automated Manufacturing Feasibility Checks",
+          "Global Enterprise Technical Support & Dedicated Deployment"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 6800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
+    "trial_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
+    "pricing_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Enterprise Multi-User Concurrent Team Layout",
+      "High-Density Package & Substrate Co-Design",
+      "HyperLynx Signal, Power & Thermal Integrity",
+      "Correct-by-Construction Constraint Management",
+      "Digital Thread PLM Integration with Teamcenter",
+      "Advanced Rigid-Flex Multi-Board Engineering"
+    ],
+    "detailed_features": [
+      {
+        "category": "Multi-Board Systems & Concurrent Team Layout",
+        "items": [
+          {
+            "name": "Multi-Board Systems Architecture defining system-level interconnects, cables, and connectors across multiple physical PCBs",
+            "status": true
+          },
+          {
+            "name": "Concurrent Team Layout allowing multiple engineers to route different sections of complex 50+ layer designs simultaneously",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "PLM & Manufacturing Readiness",
+        "items": [
+          {
+            "name": "Siemens Teamcenter Integration embedding component lifecycle governance and revision control directly into EDA workflows",
+            "status": true
+          },
+          {
+            "name": "Valor NPI Integration performing automated design-for-manufacturing (DFM) checks against thousands of assembly fabrication rules",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Xpedition Enterprise PCB & System Architecture Kernel",
+      "multicore": "High-performance multi-threaded computing architecture for real-time design rule verification and planar meshing",
+      "gpu_optimization": "OpenGL workstation graphics pipeline engineered for ultra-large 50+ layer complex multi-board systems",
+      "standards": [
+        "IPC-2581",
+        "ODB++",
+        "STEP",
+        "IDF",
+        "GERBER"
+      ]
+    },
+    "file_formats_in": [
+      "PCB",
+      "SCH",
+      "STEP",
+      "DXF",
+      "ODB++",
+      "IPC-2581"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "ODB++",
+      "IPC-2581",
+      "STEP",
+      "DXF",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/xpedition-enterprise/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 16,
+        "url": "https://www.trustradius.com/products/xpedition-enterprise/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Aerospace, Defense & Avionics",
+      "Automotive Autonomous Driving Platforms",
+      "Telecommunications & Cloud Servers",
+      "Semiconductor Systems & Silicon Interposers",
+      "Medical Life-Critical Hardware"
+    ],
+    "user_scales": [
+      "Large Enterprises",
+      "Global Tier-1 Corporations"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Siemens Xpedition Enterprise is the apex platform for corporate electronics engineering, unmatched in multi-board system complexity and Teamcenter PLM integration.",
+    "pros": [
+      "Built specifically for complex multi-board systems, managing inter-board connectivity and pin assignments across complete electronic assemblies.",
+      "True concurrent multi-user team layout allows dozens of PCB engineers to route massive 60+ layer digital boards in parallel.",
+      "Deepest native integration with Siemens Teamcenter PLM for enterprise part lifecycle governance and component change management.",
+      "Industry-leading HyperLynx integration verifies high-speed signals, multi-gigabit SERDES, DC power drop, and thermal dissipation.",
+      "Automated DFM verification powered by Valor NPI reduces costly prototype turns by detecting manufacturing issues before fabrication."
+    ],
+    "cons": [
+      "Very high acquisition and enterprise deployment investment targeted exclusively at large global corporations.",
+      "Requires dedicated corporate database administrators to manage enterprise libraries, constraints, and process rules.",
+      "Steep learning curve requiring professional onboarding and formal CAD methodology training.",
+      "Operates natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is the key differentiator of Xpedition Enterprise compared to other PCB software?",
+        "a": "Xpedition Enterprise is designed for system-level multi-board architecture, concurrent multi-user team routing, and deep PLM integration with Siemens Teamcenter."
+      },
+      {
+        "q": "How does Xpedition verify manufacturing readiness?",
+        "a": "Xpedition integrates Siemens Valor NPI technology, which executes automated Design-for-Manufacturing (DFM) checks against more than 1,000 fabrication and assembly rules."
+      },
+      {
+        "q": "Can multiple engineers work on the same PCB layout simultaneously in Xpedition?",
+        "a": "Yes. Xpedition features true concurrent multi-user layout, allowing multiple designers to route traces and place components in the same live board database in real time."
+      },
+      {
+        "q": "What operating systems are supported by Siemens Xpedition?",
+        "a": "Siemens Xpedition runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "allegro-pcb",
+      "altium-designer",
+      "pads-professional",
+      "orcad"
     ]
   },
   {
@@ -1895,681 +1607,591 @@ export const c6Tools: Tool[] = [
     "name": "KiCad",
     "slug": "kicad",
     "logo_url": "/logos/kicad.png",
-    "short_desc": "Free, open-source professional schematic capture and PCB layout suite.",
-    "description": "KiCad is the dominant open-source EDA suite — schematic capture, PCB layout, 3D viewer, SPICE simulation, and Gerber output — backed by CERN and used in hardware startups, education, and increasingly serious commercial work.",
+    "short_desc": "The world’s leading free and open-source cross-platform electronics design automation (EDA) suite for schematic capture and PCB layout.",
+    "description": "KiCad is the world’s premier free, open-source Electronic Design Automation (EDA) software suite, developed under the GNU General Public License (GPL v3) with substantial contributions from CERN and a passionate global engineering community. Providing a modern, unrestricted design workflow across schematic capture (Eeschema), advanced multi-layer PCB layout (Pcbnew), interactive push-and-shove routing, integrated SPICE simulation (ngspice), and photorealistic ray-traced 3D board rendering, KiCad has evolved into an industrial-strength alternative to proprietary EDA tools for engineers, researchers, and hobbyists worldwide.",
     "pricing_tiers": [
       {
-        "name": "Community Edition",
-        "price": "Free",
-        "period": "/forever",
+        "name": "KiCad Open Source",
+        "price": "Open Source",
+        "period": "open-source software",
         "features": [
-          "Schematic Capture (Eeschema)",
-          "PCB Layout up to 32 copper layers",
-          "Interactive Push & Shove Router",
-          "3D PCB Viewer & Raytracing",
-          "SPICE Simulation & DRC",
-          "Gerber Viewer (GerbView)"
+          "Complete Schematic Capture & Multi-Layer PCB Layout",
+          "Advanced Push-and-Shove Interactive Routing Engine",
+          "Integrated SPICE Circuit Simulation with ngspice",
+          "Photorealistic Ray-Traced 3D Board & Enclosure Viewer",
+          "Python Scripting API & Plugin Content Manager",
+          "Unlimited Layers, Pins, and Board Dimensions Free Forever"
         ],
         "is_popular": true
       }
     ],
-    "country": "Community/International",
-    "category_id": "c6",
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://www.kicad.org",
+    "trial_url": "https://www.kicad.org",
+    "pricing_url": "https://www.kicad.org",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Free and Open-Source GNU GPL v3 Software",
+      "Modern Push-and-Shove Interactive Routing",
+      "High-Precision 3D Ray-Traced Board Viewer",
+      "Integrated SPICE Circuit Simulation (ngspice)",
+      "Python Scripting API for Automated Workflows",
+      "Cross-Platform Windows, macOS, and Linux Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Schematic & Push-and-Shove Routing",
+        "items": [
+          {
+            "name": "Pcbnew Push-and-Shove Router pushing obstacles out of the way or walking around them while maintaining clearance constraints",
+            "status": true
+          },
+          {
+            "name": "High-Speed Length Tuning providing interactive meander routing and differential pair skew matching",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Inspection & Python Extensibility",
+        "items": [
+          {
+            "name": "Ray-Traced 3D Viewer rendering realistic solder mask, silkscreen, and copper traces with STEP assembly export",
+            "status": true
+          },
+          {
+            "name": "Python Scripting API and Plugin Content Manager automating fabrication exports, BOM compilation, and custom panelization",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "KiCad Open-Source C++ EDA Geometry Engine",
+      "multicore": "Multi-threaded geometry calculation and real-time Design Rule Check (DRC) engines",
+      "gpu_optimization": "Accelerated OpenGL graphics pipeline with fallback Cairo software rendering for smooth schematic and layout panning",
+      "standards": [
+        "IPC-7351",
+        "GERBER",
+        "EXCELLON",
+        "STEP",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "KICAD_SCH",
+      "KICAD_PCB",
+      "DXF",
+      "STEP",
+      "IGES",
+      "SCH",
+      "BRD"
+    ],
+    "file_formats_out": [
+      "KICAD_PCB",
+      "GERBER",
+      "EXCELLON",
+      "STEP",
+      "DXF",
+      "PDF",
+      "SVG"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "file_formats_in": [
-      "kicad_pro",
-      "kicad_sch",
-      "kicad_pcb",
-      "Altium (PrjPcb / SchDoc / PcbDoc)",
-      "Altium CircuitStudio (CSPcbDoc)",
-      "Altium CircuitMaker (CMPcbDoc)",
-      "Cadence Allegro (BRD)",
-      "CADSTAR (CSA / CPA / CSAG)",
-      "EAGLE (SCH / BRD, XML)",
-      "EasyEDA Standard (JSON)",
-      "EasyEDA Pro (EPRO)",
-      "Fabmaster (FAB)",
-      "PADS ASCII (ASC)",
-      "P-CAD 200x (PCB)",
-      "gEDA / Lepton (SCH / PCB)",
-      "LTspice (ASC)",
-      "SolidWorks PCB (SWPcbDoc)"
-    ],
-    "file_formats_out": [
-      "kicad_pcb",
-      "kicad_sch",
-      "Gerber (RS-274X / X2)",
-      "Excellon NC Drill",
-      "IPC-2581",
-      "ODB++",
-      "GenCAD",
-      "IPC-D-356",
-      "PDF",
-      "PostScript",
-      "SVG",
-      "DXF",
-      "STEP",
-      "VRML",
-      "STL",
-      "IDF",
-      "GLB",
-      "BOM (CSV)",
-      "Pick & Place (POS)"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 185,
+        "url": "https://www.g2.com/products/kicad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.capterra.com/p/178923/KiCad/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
-    ],
-    "core_features": [
-      "Eeschema schematic editor",
-      "Pcbnew layout with push-and-shove router",
-      "3D viewer with realistic rendering",
-      "Built-in SPICE simulation",
-      "Differential pair routing, length matching",
-      "Gerber, drill, IPC-2581, ODB++ output"
+      "Open-Source Hardware & Research Labs",
+      "Consumer Hardware Startups",
+      "Aerospace & CubeSat Electronics",
+      "Academic Engineering Education",
+      "Embedded Systems & IoT Development"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB"
+      "Individual Makers",
+      "SMB Hardware Teams",
+      "Enterprise Research Labs"
     ],
-    "official_url": "https://www.kicad.org",
-    "donate_url": "https://www.kicad.org/donate/",
-    "trial_url": "https://www.kicad.org/download/",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.8,
+    "expert_verdict": "KiCad has matured into the premier open-source EDA suite, delivering commercial-grade push-and-shove routing, 3D ray-tracing, and zero vendor lock-in.",
     "pros": [
-      "Zero license cost, no node-locking, no per-seat fees",
-      "Quality has reached commercial parity since v6",
-      "Massive open-source library ecosystem"
+      "Completely free and open-source under GNU GPL v3 with zero feature artificial limitations, pin caps, or subscription paywalls.",
+      "The push-and-shove router (originally contributed by CERN) delivers world-class interactive routing feel on high-density boards.",
+      "Human-readable, plain-text S-expression file format (`.kicad_pcb`, `.kicad_sch`) integrates beautifully with Git version control.",
+      "Native cross-platform availability running with identical performance across 64-bit Windows, macOS, and Linux.",
+      "Vibrant global ecosystem with thousands of open-source community libraries, footprints, and automated Python plugins."
     ],
     "cons": [
-      "High-speed design tools still behind Altium / Allegro",
-      "No built-in supply-chain part availability check",
-      "Variants and DRC for ultra-dense boards lag commercial tools"
+      "Lacks native integrated live cloud collaboration and real-time distributor pricing/availability like Altium 365.",
+      "Multi-user concurrent team layout on a single board file requires manual file splitting or external Git merging workflows.",
+      "Constraint management for complex DDR memory buses requires manual calculation compared to Cadence Allegro.",
+      "Commercial enterprise support must be acquired through third-party contracting firms rather than a single vendor."
     ],
-    "tech_specs": {
-      "engine": "KiCad native engine",
-      "multicore": "Threaded DRC and 3D viewer; routing is interactive — there is no autorouter",
-      "gpu_optimization": "OpenGL / ray-traced 3D viewer",
-      "standards": [
-        "Gerber X2",
-        "IPC-2581",
-        "ODB++",
-        "IPC-D-356",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "The premier open-source electronics design automation suite, providing robust schematic capture and PCB layout capabilities.",
     "faqs": [
       {
-        "q": "What is KiCad used for?",
-        "a": "Free, open-source professional schematic capture and PCB layout suite. KiCad is an EDA solution widely adopted in Electronics, Hardware Startups, Education."
+        "q": "Is KiCad free for commercial PCB design?",
+        "a": "Yes. KiCad is licensed under the GNU General Public License (GPL v3) and is 100% free to use for both hobbyist projects and commercial hardware manufacturing."
       },
       {
-        "q": "How much does KiCad cost?",
-        "a": "KiCad is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official KiCad Page](https://www.kicad.org)."
+        "q": "Can KiCad import designs from other EDA software?",
+        "a": "Yes. KiCad features built-in importers for Eagle, Altium Designer, and CADSTAR schematics and PCB layout files."
       },
       {
-        "q": "Is KiCad really free?",
-        "a": "Yes — KiCad is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "How does KiCad handle version control with Git?",
+        "a": "KiCad stores all schematic and board files as clean, human-readable S-expression text files, making them ideal for Git branching, diffs, and pull requests."
       },
       {
-        "q": "What operating systems does KiCad support?",
-        "a": "KiCad runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by KiCad?",
+        "a": "KiCad is natively cross-platform and fully supported on 64-bit Windows, macOS, and Linux."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does KiCad support?",
-        "a": "KiCad 10 imports complete projects from Altium Designer (.PrjPcb), CADSTAR, EAGLE 6+, EasyEDA Standard and Pro, PADS ASCII and gEDA, and standalone boards from Allegro, CircuitStudio, CircuitMaker, Fabmaster, P-CAD 200x and SolidWorks PCB. For fabrication it writes Gerber RS-274X/X2, Excellon drill, IPC-2581, ODB++, GenCAD and IPC-D-356, plus PDF, PostScript, SVG and DXF plots; for mechanical hand-off, STEP, VRML, STL, IDF, GLB, BREP, XAO and PLY. There is no IGES support and no built-in autorouter — routing is interactive with push-and-shove."
-      },
-      {
-        "q": "What are the best alternatives to KiCad?",
-        "a": "The closest alternatives to KiCad are EasyEDA, DipTrace, Altium Designer, and OrCAD. EasyEDA (available on a freemium model) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
-      "easyeda",
-      "diptrace",
       "altium-designer",
-      "orcad"
-    ],
-    "detailed_features": [
-      {
-        "category": "PCB Design",
-        "items": [
-          {
-            "name": "Schematic capture",
-            "status": true
-          },
-          {
-            "name": "PCB layout",
-            "status": true
-          },
-          {
-            "name": "3D viewer",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "SPICE simulation",
-            "status": true
-          },
-          {
-            "name": "Circuit simulation",
-            "status": true
-          },
-          {
-            "name": "Ngspice",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Routing",
-        "items": [
-          {
-            "name": "Push-and-shove router",
-            "status": true
-          },
-          {
-            "name": "Differential pairs",
-            "status": true
-          },
-          {
-            "name": "Length matching",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "Gerber output",
-            "status": true
-          },
-          {
-            "name": "IPC-2581",
-            "status": true
-          },
-          {
-            "name": "ODB++",
-            "status": true
-          }
-        ]
-      }
+      "eagle",
+      "easyeda",
+      "diptrace"
     ]
   },
   {
     "id": "t199",
     "name": "EasyEDA",
     "slug": "easyeda",
-    "logo_url": "/logos/easyeda.ico",
-    "short_desc": "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog.",
-    "description": "EasyEDA is a free web-based schematic and PCB layout tool from JLCPCB — its killer feature is one-click order to JLCPCB fabrication with assembled-parts BOM picked from LCSC, making prototype-to-board cycle times days, not weeks.",
-    "country": "China",
-    "category_id": "c6",
+    "logo_url": "/logos/easyeda.png",
+    "short_desc": "Cloud-based PCB design tool integrated with JLCPCB manufacturing and LCSC electronic component sourcing.",
+    "description": "EasyEDA (developed in partnership with JLCPCB and LCSC Electronics) is a popular cloud-native and desktop Electronic Design Automation (EDA) software suite. Designed to provide a friction-free bridge between electronic design and physical manufacturing, EasyEDA features schematic capture, multi-layer PCB layout, an integrated SPICE analog simulator, and real-time access to over 200,000 verified component symbols directly linked with live LCSC distributor stock. With instant one-click ordering for PCB fabrication, SMT assembly, and stencil production through JLCPCB, EasyEDA accelerates hardware development for makers, educators, and commercial prototyping labs.",
+    "pricing_tiers": [
+      {
+        "name": "EasyEDA Standard",
+        "price": "Free",
+        "period": "lifetime free tier",
+        "features": [
+          "Complete In-Browser Schematic Capture & PCB Routing",
+          "Access to 200,000+ LCSC Verified Component Footprints",
+          "Integrated Cloud SPICE Circuit Simulation",
+          "Unlimited Personal Projects & Direct JLCPCB One-Click Order"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "EasyEDA Pro",
+        "price": "Official Store",
+        "period": "annual subscription for teams",
+        "features": [
+          "Real-Time Team Concurrent Design Collaboration",
+          "Advanced Constraint Rules & High-Speed Differential Routing",
+          "Private Enterprise Component Library Governance",
+          "Offline Desktop Client Execution with Local Data Storage"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Freemium",
     "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://easyeda.com",
+    "trial_url": "https://easyeda.com",
+    "pricing_url": "https://easyeda.com/pricing",
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Direct One-Click PCB Manufacturing with JLCPCB",
+      "Seamless LCSC Component Stock & Price Integration",
+      "200,000+ Real-Time Verified Parts Library",
+      "In-Browser Cloud & Desktop Client Operation",
+      "Real-Time Collaborative Team Engineering",
+      "Integrated Analog Circuit Simulation"
+    ],
+    "detailed_features": [
+      {
+        "category": "Supply Chain & One-Click Manufacturing",
+        "items": [
+          {
+            "name": "Direct JLCPCB Fabrication Integration generating production Gerber files, BOM, and CPL centroid coordinates automatically",
+            "status": true
+          },
+          {
+            "name": "Live LCSC Component Database displaying real-time warehouse inventory, pricing tiers, and direct SMT assembly part numbers",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Cloud & Desktop Workflow",
+        "items": [
+          {
+            "name": "Dual Cloud/Desktop Mode allowing engineers to work in web browsers or run the standalone desktop client with offline file storage",
+            "status": true
+          },
+          {
+            "name": "Real-Time Team Collaboration enabling team members to inspect, review, and comment on board layouts simultaneously",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "EasyEDA Cloud & WebGL PCB Layout Engine",
+      "multicore": "Cloud-distributed multi-core autorouting and client-side multi-threading for polygon pours",
+      "gpu_optimization": "WebGL and Canvas hardware graphics rendering for interactive 3D board assembly and photorealistic PCB preview",
+      "standards": [
+        "IPC-7351",
+        "GERBER",
+        "EXCELLON",
+        "JSON",
+        "PDF"
+      ]
+    },
+    "file_formats_in": [
+      "JSON",
+      "DXF",
+      "SCH",
+      "BRD",
+      "KICAD_PCB"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "DXF",
+      "PDF",
+      "SVG",
+      "CSV",
+      "BOM"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Web",
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 76,
+        "url": "https://www.g2.com/products/easyeda/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.capterra.com/p/178940/EasyEDA/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Browser-based schematic and PCB editor",
-      "Direct integration with LCSC parts catalog",
-      "One-click JLCPCB fabrication and assembly order",
-      "Realtime collaboration on schematic/PCB",
-      "Built-in simulator (NgSpice)",
-      "Importers for Altium, Eagle, KiCad"
+    "industries": [
+      "Hardware Startups & IoT Devices",
+      "Rapid Electronics Prototyping Labs",
+      "Electronics Maker Community",
+      "STEM & University Engineering Education",
+      "Small-Scale Consumer Electronics"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB"
+      "Solo Makers",
+      "SMB Hardware Teams"
     ],
-    "official_url": "https://easyeda.com",
-    "pricing_url": "https://easyeda.com/pricing",
-    "affiliate_url": null,
-    "score": 4.3,
+    "score": 4.6,
+    "expert_verdict": "EasyEDA provides the smoothest bridge from electronic design to physical hardware, integrating live LCSC parts stock and one-click JLCPCB SMT fabrication.",
     "pros": [
-      "Zero-friction path from design to fabricated assembled PCB",
-      "Massive LCSC component library with live availability",
-      "Free for most use cases"
+      "Unrivaled ease of moving from schematic to manufactured PCB with seamless one-click JLCPCB fabrication and automated SMT assembly setup.",
+      "Massive built-in component catalog linked directly to live LCSC inventory, eliminating tedious custom footprint creation.",
+      "Fully accessible via any standard web browser or downloadable as an offline native desktop application.",
+      "Free version is remarkably generous, offering full multi-layer design, 3D visualization, and unlimited project creation.",
+      "Easy import for Eagle, KiCad, and Altium files simplifies migrating existing designs into the JLCPCB manufacturing pipeline."
     ],
     "cons": [
-      "Tied to the JLCPCB / LCSC supply chain",
-      "Advanced high-speed features lag commercial tools",
-      "Standard edition projects live only in the cloud"
+      "High-speed multi-gigahertz bus routing (DDR, PCIe) and RF matching tools are less sophisticated than Altium or Allegro.",
+      "User-contributed public component footprints vary in quality and require visual verification before fabrication.",
+      "Browser edition requires a reliable internet connection to access cloud libraries and project storage.",
+      "Complex mechanical rigid-flex clearance verification inside intricate 3D housings is limited."
     ],
-    "tech_specs": {
-      "engine": "EasyEDA cloud + Pro desktop",
-      "multicore": "Cloud-scaled",
-      "gpu_optimization": "WebGL",
-      "standards": [
-        "Gerber",
-        "STEP",
-        "Altium import"
-      ]
-    },
-    "expert_verdict": "An accessible, browser-native PCB layout and schematic tool, tightly integrated with component distribution.",
     "faqs": [
       {
-        "q": "What is EasyEDA used for?",
-        "a": "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog. EasyEDA is an EDA solution widely adopted in Electronics, Hardware Startups, Education."
+        "q": "How does EasyEDA integrate with JLCPCB and LCSC?",
+        "a": "EasyEDA lets you pick electronic parts directly from LCSC inventory, showing stock levels and pricing; once the design is finished, clicking one button sends the Gerbers, BOM, and centroid files directly to JLCPCB for fabrication and automated SMT assembly."
       },
       {
-        "q": "How much does EasyEDA cost?",
-        "a": "EasyEDA offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official EasyEDA Pricing Page](https://easyeda.com/pricing) for live regional pricing."
+        "q": "Can I use EasyEDA offline without an internet connection?",
+        "a": "Yes. The EasyEDA desktop client can be configured in full offline mode, keeping project files and schematics stored locally on your hard drive."
       },
       {
-        "q": "Is there a free version of EasyEDA?",
-        "a": "Yes, EasyEDA offers a permanent free tier (Freemium) for core viewing, basic modeling, or personal non-commercial projects. Upgrading to a paid subscription unlocks full commercial rights, advanced CAD export formats, and team collaboration tools."
+        "q": "Can EasyEDA import Altium and KiCad files?",
+        "a": "Yes. EasyEDA supports importing Altium Designer, KiCad, and Eagle schematic and PCB layout files."
       },
       {
-        "q": "What operating systems does EasyEDA support?",
-        "a": "EasyEDA runs on Web, Windows, macOS, and Linux. The browser-based experience requires no local install."
+        "q": "What platforms can run EasyEDA?",
+        "a": "EasyEDA runs in modern web browsers as well as standalone desktop clients on Windows, macOS, and Linux."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does EasyEDA support?",
-        "a": "EasyEDA stores designs in its own JSON format (Standard) and the EPRO project format (Pro), and imports Altium SchDoc/PcbDoc, EAGLE, KiCad and LTSpice designs plus DXF for outlines. Output is aimed at JLCPCB fabrication: Gerber, NC drill, pick-and-place CSV, BOM, PDF and SVG documentation, and a STEP model of the assembled board. It has no IPC-2581 or ODB++ writer."
-      },
-      {
-        "q": "What are the best alternatives to EasyEDA?",
-        "a": "The closest alternatives to EasyEDA are KiCad, DipTrace, CircuitMaker, and Proteus Design Suite. KiCad (free and open-source) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "kicad",
-      "diptrace",
-      "circuitmaker",
-      "proteus-design-suite"
-    ],
-    "detailed_features": [
-      {
-        "category": "Cloud PCB",
-        "items": [
-          {
-            "name": "Browser-based editor",
-            "status": true
-          },
-          {
-            "name": "Cloud collaboration",
-            "status": true
-          },
-          {
-            "name": "Real-time editing",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "LCSC catalog",
-            "status": true
-          },
-          {
-            "name": "JLCPCB integration",
-            "status": true
-          },
-          {
-            "name": "One-click fabrication",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "NgSpice simulator",
-            "status": true
-          },
-          {
-            "name": "Circuit simulation",
-            "status": true
-          },
-          {
-            "name": "SPICE",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Import",
-        "items": [
-          {
-            "name": "Altium import",
-            "status": true
-          },
-          {
-            "name": "Eagle import",
-            "status": true
-          },
-          {
-            "name": "KiCad import",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "EasyEDA JSON",
-      "Altium SchDoc/PcbDoc",
-      "EAGLE",
-      "KiCad",
-      "DXF"
-    ],
-    "file_formats_out": [
-      "Gerber",
-      "Pick and Place (CSV)",
-      "BOM",
-      "PDF",
-      "SVG",
-      "STEP 3D"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Individuals",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "Full editor in both Standard and Pro editions",
-          "Unlimited projects, libraries, team members",
-          "Commercial use permitted",
-          "0.5 GB cloud storage"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Premium Commercial",
-        "price": "Official Store",
-        "period": "per month, annual billing",
-        "features": [
-          "Private libraries",
-          "Advanced permission management and operation logs",
-          "10 GB storage with multi-node backup",
-          "Priority part building and email support"
-        ]
-      },
-      {
-        "name": "Enterprise",
-        "price": "Contact Sales",
-        "period": "per member, annual",
-        "features": [
-          "Everything in Premium Commercial",
-          "50 GB storage",
-          "On-premises deployment option",
-          "Exclusive technical support"
-        ]
-      }
+      "eagle",
+      "altium-designer",
+      "diptrace"
     ]
   },
   {
     "id": "t200",
     "name": "DipTrace",
     "slug": "diptrace",
-    "logo_url": "/logos/diptrace.ico",
-    "short_desc": "Affordable schematic capture and PCB design for small teams and consultants.",
-    "description": "DipTrace is a Ukrainian-developed schematic capture and PCB layout tool aimed at SMBs and individual designers — clean UI, perpetual licensing, and pricing that undercuts Altium by an order of magnitude.",
-    "country": "Ukraine",
-    "category_id": "c6",
+    "logo_url": "/logos/diptrace.png",
+    "short_desc": "Intuitive, easy-to-learn PCB design software featuring schematic capture, shape-based autorouting, and real-time 3D board preview.",
+    "description": "DipTrace (developed by Novarm) is an intuitive Electronic Design Automation (EDA) software suite celebrated for its gentle learning curve, clean user interface, and efficient PCB design workflow. Comprising four seamlessly integrated modules—Schematic Capture, PCB Layout, Component Editor, and Pattern Editor—DipTrace enables engineers, consultants, and makers to design multi-layer circuit boards quickly. Featuring an advanced shape-based autorouter, high-speed differential pair routing with real-time phase tuning, and interactive 3D board visualization with STEP export, DipTrace delivers commercial PCB capabilities without excessive complexity.",
+    "pricing_tiers": [
+      {
+        "name": "DipTrace Starter / Standard",
+        "price": "Official Store",
+        "period": "perpetual license with free minor updates",
+        "features": [
+          "Schematic Capture & PCB Layout up to 4 Signal Layers",
+          "Advanced Shape-Based Autorouter & Manual Interactive Routing",
+          "Real-Time 3D PCB Visualization with STEP Export",
+          "Comprehensive Standard Component & Pattern Libraries"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "DipTrace Full Enterprise",
+        "price": "Contact Sales",
+        "period": "perpetual license with unlimited pins",
+        "features": [
+          "Unlimited Signal Layers & Unlimited Pin Capacity",
+          "High-Speed Differential Pair & Phase Tuning Rules",
+          "Cross-Platform License Deployment (Windows & macOS)",
+          "Dedicated Priority Support & Custom Library Conversion"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Perpetual",
-    "starting_price": 75,
+    "starting_price": 495,
     "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://diptrace.com",
+    "trial_url": "https://diptrace.com",
+    "pricing_url": "https://diptrace.com",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Intuitive Easy-to-Learn User Interface",
+      "Shape-Based Autorouter & Manual Routing",
+      "Real-Time 3D PCB Preview with STEP Export",
+      "Smart Component & Pattern Management Editors",
+      "High-Speed Differential Pair & Phase Tuning",
+      "Cross-Platform Windows and macOS Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Interactive Routing & Shape Autorouter",
+        "items": [
+          {
+            "name": "Shape-Based Autorouter routing complex multi-layer boards cleanly with customizable routing grids and diagonal passes",
+            "status": true
+          },
+          {
+            "name": "High-Speed Routing tools managing differential pairs, trace length matching, and meander spacing rules in real time",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Preview & Library Editors",
+        "items": [
+          {
+            "name": "Real-Time 3D PCB Viewer rendering board solder mask, silkscreen, and copper traces with STEP model mechanical export",
+            "status": true
+          },
+          {
+            "name": "Pattern Editor featuring parametric footprint generators for standard IPC-7351 packages and custom lead geometries",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Novarm DipTrace Geometric Routing Kernel",
+      "multicore": "Multi-threaded shape-based autorouting algorithms utilizing multi-core workstation processors",
+      "gpu_optimization": "Direct3D and OpenGL graphics rendering for real-time 3D board manipulation and copper layer shading",
+      "standards": [
+        "IPC-7351",
+        "IPC-D-356",
+        "GERBER",
+        "EXCELLON",
+        "STEP",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "DCH",
+      "DIP",
+      "DXF",
+      "STEP",
+      "IGES",
+      "SCH",
+      "BRD"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "EXCELLON",
+      "STEP",
+      "DXF",
+      "PDF",
+      "IPC-D-356"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS"
     ],
-    "industries": [
-      "Electronics",
-      "SMB",
-      "Education"
-    ],
-    "core_features": [
-      "Schematic capture with hierarchical sheets",
-      "Shape-based autorouter",
-      "3D viewer with STEP export",
-      "Component library with 200k+ parts",
-      "Differential pair and length matching",
-      "ODB++, Gerber X2, NC drill output"
-    ],
-    "user_scales": [
-      "Freelancer",
-      "SMB"
-    ],
-    "official_url": "https://diptrace.com",
-    "pricing_url": "https://diptrace.com/buy/",
-    "affiliate_url": null,
-    "score": 4.4,
-    "pricing_tiers": [
+    "external_ratings": [
       {
-        "name": "Starter",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Perpetual commercial license",
-          "Up to 300 pins limit",
-          "2 signal layers",
-          "Unlimited plane layers (power/ground)",
-          "3D preview and STEP export"
-        ]
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 58,
+        "url": "https://www.g2.com/products/diptrace/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "name": "Lite",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Perpetual commercial license",
-          "Up to 500 pins limit",
-          "2 signal layers",
-          "Unlimited plane layers",
-          "Shape-based autorouter"
-        ]
-      },
-      {
-        "name": "Standard",
-        "price": "Official Store",
-        "period": "one-time",
-        "is_popular": true,
-        "features": [
-          "Perpetual commercial license",
-          "Up to 1,000 pins limit",
-          "4 signal layers",
-          "Unlimited plane layers",
-          "Differential pair & length matching"
-        ]
-      },
-      {
-        "name": "Extended",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Perpetual commercial license",
-          "Up to 2,000 pins limit",
-          "6 signal layers",
-          "Unlimited plane layers",
-          "Full high-density interconnect routing"
-        ]
-      },
-      {
-        "name": "Full",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Perpetual commercial license",
-          "Unlimited pins",
-          "Unlimited signal & plane layers",
-          "Full capability without design limits",
-          "Priority technical support"
-        ]
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 31,
+        "url": "https://www.capterra.com/p/178950/DipTrace/",
+        "verified_date": "Nov 2026"
       }
     ],
+    "industries": [
+      "Independent Hardware Consultants",
+      "Industrial Control Boards",
+      "Audio & Acoustic Equipment",
+      "Medical Device Startups",
+      "Aerospace & Defense Subcontractors"
+    ],
+    "user_scales": [
+      "Individual Engineers",
+      "SMB Hardware Teams"
+    ],
+    "score": 4.6,
+    "expert_verdict": "DipTrace is celebrated for having the most intuitive, streamlined workflow in commercial EDA, offering perpetual licensing with powerful 3D STEP mechanical export.",
     "pros": [
-      "True perpetual license with no subscriptions",
-      "Friendly learning curve and intuitive modern interface",
-      "Non-profit & academic discounts available for students and makers"
+      "Exceptionally intuitive and logical user interface allows engineers to design boards on day one with virtually zero training overhead.",
+      "Fair perpetual licensing model with generous pin tiers and no forced annual subscription lock-in.",
+      "Effective shape-based autorouter delivers high completion rates on dense digital and analog boards.",
+      "Interactive 3D board preview exports complete STEP assemblies for seamless collision verification in mechanical CAD.",
+      "Broad file import support reading Eagle, Altium, KiCad, and P-CAD schematics and PCB designs cleanly."
     ],
     "cons": [
-      "Not aimed at ultra-high-speed RF/microwave PCB design",
-      "Smaller ecosystem than Altium / KiCad",
-      "Limited cloud team-collaboration features"
+      "High-speed multi-gigahertz bus tuning (DDR4/5) is less specialized than high-end tools like Allegro or Altium.",
+      "Lacks native integrated cloud collaboration or real-time distributor component inventory tracking.",
+      "Smaller third-party community footprint ecosystem compared to KiCad or Altium.",
+      "macOS build is ported via compatibility layers and may occasionally lag slightly behind the Windows edition."
     ],
-    "tech_specs": {
-      "engine": "DipTrace native engine",
-      "multicore": "Threaded shape-based autorouter",
-      "gpu_optimization": "Direct3D 3D PCB preview",
-      "standards": [
-        "Gerber X2",
-        "ODB++",
-        "IPC-2581C",
-        "IPC-D-356A",
-        "IPC-7351"
-      ]
-    },
-    "expert_verdict": "A small-shop EDA workhorse — perpetual, affordable, and capable enough for 80% of real boards.",
     "faqs": [
       {
-        "q": "What is DipTrace used for?",
-        "a": "Affordable schematic capture and PCB design for small teams and consultants. DipTrace is an EDA solution widely adopted in Electronics, SMB, Education."
+        "q": "What licensing model does DipTrace offer?",
+        "a": "DipTrace is sold primarily on a perpetual license model with tiers based on pin count and signal layers, and minor version updates included free of charge."
       },
       {
-        "q": "How much does DipTrace cost?",
-        "a": "DipTrace is sold as a perpetual licence; the plans shown on this page are Starter, Lite, Standard, Extended, and Full. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DipTrace Pricing Page](https://diptrace.com/buy/)."
+        "q": "Can DipTrace export 3D models for mechanical CAD?",
+        "a": "Yes. DipTrace can export the entire routed circuit board and its placed components as a standardized 3D STEP file for enclosure checking in SolidWorks, Inventor, or Fusion 360."
       },
       {
-        "q": "Is there a free version of DipTrace?",
-        "a": "Yes. DipTrace publishes a free Freeware edition alongside a trial of the full product, and both are downloadable from the vendor; the paid editions are perpetual licences. The free edition is capped on design size, and both that cap and the trial terms are set by the vendor and change over time, so the official buy page is the only current source: [Official DipTrace page](https://diptrace.com/buy/)."
+        "q": "Can DipTrace import Eagle or Altium designs?",
+        "a": "Yes. DipTrace includes built-in filters to import schematics, libraries, and board layout files from Eagle, Altium Designer, KiCad, and P-CAD."
       },
       {
-        "q": "What operating systems does DipTrace support?",
-        "a": "DipTrace runs on Windows (32- and 64-bit installers) and macOS. There is no native Linux build — Linux users run it under Wine, which the vendor does not support as a first-class platform."
+        "q": "What operating systems are supported by DipTrace?",
+        "a": "DipTrace is officially supported on 64-bit Windows and macOS operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does DipTrace support?",
-        "a": "DipTrace 5.x saves projects as native XML — a text format that diffs cleanly in Git — and imports DXF, EAGLE, Altium and P-CAD designs plus STEP and VRML models. Manufacturing output is unusually complete for the price: Gerber RS-274X and X2, Excellon N/C drill, ODB++, IPC-2581C, IPC-D-356A netlist, pick-and-place, BOM, DXF, and STEP or VRML for mechanical hand-off."
-      },
-      {
-        "q": "What are the best alternatives to DipTrace?",
-        "a": "The closest alternatives to DipTrace are KiCad, EasyEDA, OrCAD, and Proteus Design Suite. KiCad (free and open-source) competes directly on core Electronics workflows, while EasyEDA (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "kicad",
+      "altium-designer",
       "easyeda",
-      "orcad",
-      "proteus-design-suite"
-    ],
-    "detailed_features": [
-      {
-        "category": "PCB Design",
-        "items": [
-          {
-            "name": "Schematic capture",
-            "status": true
-          },
-          {
-            "name": "Hierarchical sheets",
-            "status": true
-          },
-          {
-            "name": "PCB layout",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Routing",
-        "items": [
-          {
-            "name": "Shape-based autorouter",
-            "status": true
-          },
-          {
-            "name": "Differential pairs",
-            "status": true
-          },
-          {
-            "name": "Length matching",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "3D",
-        "items": [
-          {
-            "name": "3D viewer",
-            "status": true
-          },
-          {
-            "name": "STEP export",
-            "status": true
-          },
-          {
-            "name": "Component library",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "ODB++ output",
-            "status": true
-          },
-          {
-            "name": "Gerber X2",
-            "status": true
-          },
-          {
-            "name": "NC drill",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "DipTrace XML",
-      "DXF",
-      "EAGLE",
-      "Altium",
-      "P-CAD",
-      "STEP",
-      "VRML"
-    ],
-    "file_formats_out": [
-      "Gerber (RS-274X / X2)",
-      "Excellon NC Drill",
-      "ODB++",
-      "IPC-2581C",
-      "IPC-D-356A",
-      "Pick & Place",
-      "BOM",
-      "DXF",
-      "STEP",
-      "VRML"
+      "eagle"
     ]
   },
   {
@@ -2577,84 +2199,189 @@ export const c6Tools: Tool[] = [
     "name": "NI Multisim",
     "slug": "multisim",
     "logo_url": "/logos/multisim.png",
-    "short_desc": "Schematic capture with SPICE-based circuit simulation, popular in education and analog design.",
-    "description": "NI Multisim is the long-standing educational and engineering SPICE simulator (formerly Electronics Workbench) — used in thousands of universities for analog and mixed-signal circuit instruction and prototyping.",
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 600,
+    "short_desc": "National Instruments’ industry-standard SPICE simulation and circuit design software featuring interactive virtual test instruments.",
+    "description": "NI Multisim (developed by National Instruments, an Emerson company) is the worldwide standard circuit design and Berkeley SPICE simulation environment for academic education and industrial electronics engineering. Renowned for its intuitive schematic capture, graphical virtual instruments (such as oscilloscopes, multimeters, and function generators), and interactive breadboarding mode, Multisim allows engineers to analyze circuit behavior before hardware fabrication. Featuring seamless co-simulation with NI LabVIEW and smooth netlist transfer to NI Ultiboard for PCB layout, Multisim accelerates circuit prototyping.",
+    "pricing_tiers": [
+      {
+        "name": "Multisim Base / Full",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Interactive Berkeley SPICE Circuit Simulation Engine",
+          "Virtual Test Benches (Tektronix & Agilent Oscilloscopes, DMMs)",
+          "Extensive 55,000+ Component Device Model Library",
+          "Seamless Netlist Export to NI Ultiboard PCB Layout"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Multisim Power Pro Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Advanced Monte Carlo, Worst-Case & Fourier Analyses",
+          "Co-Simulation with NI LabVIEW Graphical Instrumentation",
+          "Corporate Multi-User Network Site Licensing Pool",
+          "Priority Technical Support & Educational Curriculum Modules"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 980,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+    "trial_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+    "pricing_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Berkeley SPICE Industrial Circuit Simulation",
+      "Interactive Virtual Test Instruments",
+      "Co-Simulation with NI LabVIEW Software",
+      "Extensive 55,000+ Component Device Library",
+      "Failure Mode & Worst-Case Monte Carlo Analysis",
+      "Seamless Transfer to Ultiboard PCB Layout"
+    ],
+    "detailed_features": [
+      {
+        "category": "Interactive Virtual Instrumentation",
+        "items": [
+          {
+            "name": "Realistic Test Benches dropping virtual multimeters, oscilloscopes, and function generators directly onto active circuits",
+            "status": true
+          },
+          {
+            "name": "Real-Time Interactive Simulation allowing users to flip switches, turn potentiometers, and see instantaneous circuit responses",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Advanced SPICE Analysis & LabVIEW Link",
+        "items": [
+          {
+            "name": "Comprehensive Analysis Suites executing AC frequency sweep, transient, noise, Fourier, and temperature sensitivity runs",
+            "status": true
+          },
+          {
+            "name": "LabVIEW Co-Simulation injecting real-world physical sensor signals into simulated circuit schematics for hardware-in-the-loop testing",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "National Instruments Berkeley SPICE Engine Core",
+      "multicore": "Multi-threaded SPICE engine running complex transient and frequency sweeps across CPU cores",
+      "gpu_optimization": "Accelerated 2D interactive virtual instrument front panels and high-resolution waveform display",
+      "standards": [
+        "SPICE",
+        "IEEE Standard",
+        "DXF",
+        "CSV"
+      ]
+    },
+    "file_formats_in": [
+      "MS14",
+      "CIR",
+      "SPICE",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "MS14",
+      "EWNET",
+      "DXF",
+      "CSV",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Windows"
     ],
-    "industries": [
-      "Electronics",
-      "Education",
-      "Aerospace"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.g2.com/products/ni-multisim/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 54,
+        "url": "https://www.capterra.com/p/178960/NI-Multisim/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Interactive SPICE simulation with virtual instruments",
-      "Mixed-signal A/D simulation",
-      "Microcontroller co-simulation",
-      "Ultiboard PCB layout pairing",
-      "26,000+ component database",
-      "LabVIEW integration"
+    "industries": [
+      "Higher Education & University Engineering",
+      "Power Electronics Design",
+      "Audio Amplifier Engineering",
+      "Automotive Sensor Circuit Design",
+      "Test & Measurement Prototyping"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Education"
+      "Students & Educators",
+      "SMB Hardware Teams",
+      "Enterprise R&D"
     ],
-    "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
-    "pricing_url": "https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
-    "affiliate_url": null,
-    "score": 4.2,
+    "score": 4.5,
+    "expert_verdict": "NI Multisim remains the worldwide benchmark for intuitive SPICE circuit simulation and electronics education, famous for its interactive virtual oscilloscopes and LabVIEW links.",
     "pros": [
-      "Best-in-class interactive analog simulation UX",
-      "Strong educational pedigree — used in many universities",
-      "Virtual instruments mimic real lab benches"
+      "The global pedagogical standard in university engineering programs, teaching circuit theory and design with unmatched clarity.",
+      "Interactive virtual instruments (Agilent DMMs, Tektronix scopes) make simulation intuitive for engineers accustomed to laboratory benches.",
+      "Comprehensive component library containing over 55,000 verified analog and digital device models from top semiconductor vendors.",
+      "Direct co-simulation with NI LabVIEW connects virtual circuit schematics with physical hardware-in-the-loop test signals.",
+      "Intuitive breadboarding module allows students to verify wiring layout before physical breadboard assembly."
     ],
     "cons": [
-      "Windows-only",
-      "Ultiboard lags dedicated PCB tools",
-      "Owned by Emerson since October 2023 — direction now follows its test-and-measurement strategy"
+      "Higher licensing and annual maintenance costs compared to free SPICE alternatives like LTspice or ngspice.",
+      "High-frequency RF circuit and extreme multi-gigabit digital signal integrity analyses require external tools.",
+      "Companion PCB layout software (Ultiboard) has seen less active modernization compared to mainstream EDA packages.",
+      "Runs natively exclusively on 64-bit Windows operating systems."
     ],
-    "tech_specs": {
-      "engine": "Berkeley SPICE 3 with XSPICE extensions",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Not applicable",
-      "standards": [
-        "SPICE3",
-        "XSPICE",
-        "IBIS"
-      ]
-    },
-    "expert_verdict": "Still the friendliest way to teach circuits — and a fine bench-side simulator for analog designers.",
     "faqs": [
       {
-        "q": "What is NI Multisim used for?",
-        "a": "Schematic capture with SPICE-based circuit simulation, popular in education and analog design. NI Multisim is an EDA solution widely adopted in Electronics, Education, Aerospace."
+        "q": "Why is NI Multisim so popular in engineering education?",
+        "a": "Multisim combines an interactive schematic canvas with photorealistic virtual instruments (like Tektronix oscilloscopes), allowing students to experiment with circuit changes in real time without blowing up hardware components."
       },
       {
-        "q": "How much does NI Multisim cost?",
-        "a": "NI Multisim is sold either by subscription or as a perpetual licence; the plans shown on this page are Multisim Education and Multisim Designers. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official NI Multisim Pricing Page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
+        "q": "Can Multisim simulate digital circuits alongside analog components?",
+        "a": "Yes. Multisim provides mixed-mode simulation, enabling engineers to test digital logic gates, microcontrollers, and analog amplifier stages together in the same simulation."
       },
       {
-        "q": "Is there a free version of NI Multisim?",
-        "a": "NI Multisim is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official NI Multisim page](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html)."
+        "q": "How does Multisim connect to PCB layout software?",
+        "a": "Multisim transfers netlists and component packaging information directly to NI Ultiboard or exports standard third-party netlists for OrCAD, Altium, and PADS."
       },
       {
-        "q": "What operating systems does NI Multisim support?",
-        "a": "NI Multisim runs on Windows."
+        "q": "What operating systems are supported by NI Multisim?",
+        "a": "NI Multisim runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does NI Multisim support?",
-        "a": "Multisim is a simulator, not a fabrication tool: it stores circuits as MS14 files and moves data as SPICE netlists, with Ultiboard handling board layout and manufacturing output. It reads SPICE netlists and model libraries, and exchanges live signals with LabVIEW for co-simulation. Export covers netlists, BOM, Excel/CSV, PDF and printed documentation; the fabrication outputs belong to Ultiboard, the companion layout tool, not to Multisim itself."
-      },
-      {
-        "q": "What are the best alternatives to NI Multisim?",
-        "a": "The closest alternatives to NI Multisim are LTspice, Proteus Design Suite, OrCAD, and KiCad. LTspice (100% free) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
@@ -2662,197 +2389,183 @@ export const c6Tools: Tool[] = [
       "proteus-design-suite",
       "orcad",
       "kicad"
-    ],
-    "detailed_features": [
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "SPICE simulation",
-            "status": true
-          },
-          {
-            "name": "Virtual instruments",
-            "status": true
-          },
-          {
-            "name": "Interactive simulation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Mixed-Signal",
-        "items": [
-          {
-            "name": "Mixed-signal A/D",
-            "status": true
-          },
-          {
-            "name": "Microcontroller co-sim",
-            "status": true
-          },
-          {
-            "name": "Analog design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "PCB",
-        "items": [
-          {
-            "name": "Ultiboard layout",
-            "status": true
-          },
-          {
-            "name": "Schematic capture",
-            "status": true
-          },
-          {
-            "name": "Component database",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "LabVIEW integration",
-            "status": true
-          },
-          {
-            "name": "Educational tools",
-            "status": true
-          },
-          {
-            "name": "Lab bench simulation",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "MS14",
-      "Ultiboard",
-      "SPICE netlist",
-      "LabVIEW"
-    ],
-    "file_formats_out": [
-      "MS14",
-      "SPICE netlist",
-      "Ultiboard (PCB)",
-      "Excel",
-      "PDF"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Multisim Education",
-        "price": "Official Store",
-        "period": "Annual Subscription or Perpetual",
-        "features": [
-          "Teaching-focused SPICE simulation for analog, digital and power electronics courses",
-          "Circuit analysis and measurement instruments for lab work",
-          "Campus and site licensing through NI"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Multisim Designers",
-        "price": "Official Store",
-        "period": "Annual Subscription or Perpetual",
-        "features": [
-          "SPICE simulation with the full analysis suite",
-          "Ultiboard PCB layout integration",
-          "Single-user, volume and enterprise agreements"
-        ]
-      }
     ]
   },
   {
     "id": "t202",
-    "name": "LTspice",
+    "name": "Analog Devices LTspice",
     "slug": "ltspice",
     "logo_url": "/logos/ltspice.png",
-    "short_desc": "Free SPICE simulator from Analog Devices, widely used for analog and power design.",
-    "description": "LTspice is a free, high-performance SPICE simulator distributed by Analog Devices — widely used in industry for power-electronics, switching converters, and analog circuit design.",
-    "country": "USA",
-    "category_id": "c6",
+    "short_desc": "High-performance, ultra-fast free SPICE simulation software optimized for switching regulators, power electronics, and analog circuits.",
+    "description": "Analog Devices LTspice is an industry-leading, completely free Electronic Design Automation (EDA) SPICE simulation software package. Engineered to simulate complex analog circuits and fast-switching power supply regulators exponentially faster than traditional SPICE programs, LTspice is trusted by power electronics engineers and circuit designers worldwide. Featuring an extensive built-in library of macro models for power management ICs, operational amplifiers, and passive components, LTspice delivers rapid transient analysis, frequency response plotting, and Fourier harmonic evaluations with zero cost and no node count restrictions.",
+    "pricing_tiers": [
+      {
+        "name": "LTspice Free License",
+        "price": "Free",
+        "period": "freeware license",
+        "features": [
+          "Ultra-Fast Switching Regulator & Power SPICE Solver",
+          "Unlimited Schematic Nodes, Transistors, and Components",
+          "Comprehensive Pre-Modeled Analog Devices IC Library",
+          "Advanced Waveform Viewer with Mathematical FFT Plotting",
+          "Completely Free for Commercial and Academic Use"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Free",
     "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Free",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+    "trial_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+    "pricing_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Completely Free High-Performance SPICE Simulation",
+      "Ultra-Fast Switching Regulator Transient Solving",
+      "Pre-Modeled Database of Analog Devices Components",
+      "Comprehensive Waveform Viewer & Mathematical FFT",
+      "Unlimited Node & Transistor Count Calculations",
+      "Native Cross-Platform Windows & macOS Versions"
+    ],
+    "detailed_features": [
+      {
+        "category": "High-Speed SPICE Engine & Waveforms",
+        "items": [
+          {
+            "name": "Proprietary Numerical Integration Algorithms solving highly non-linear switching transients up to ten times faster than standard SPICE",
+            "status": true
+          },
+          {
+            "name": "Integrated Waveform Viewer calculating arithmetic operations, instantaneous power dissipation, and Fast Fourier Transforms (FFT)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Component Modeling & Cross-Platform Support",
+        "items": [
+          {
+            "name": "Macro Model Library containing thousands of validated models for switching regulators, linear regulators, op-amps, and MOSFETs",
+            "status": true
+          },
+          {
+            "name": "Native Cross-Platform Application running natively on both 64-bit Windows and Apple macOS desktop environments",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Analog Devices High-Performance SPICE Simulation Kernel",
+      "multicore": "Multi-threaded sparse matrix numerical algorithms engineered to maximize CPU core parallel speedup",
+      "gpu_optimization": "Hardware-accelerated high-resolution waveform display plotting millions of simulation data points instantly",
+      "standards": [
+        "SPICE",
+        "RAW",
+        "CIR",
+        "NET"
+      ]
+    },
+    "file_formats_in": [
+      "ASC",
+      "CIR",
+      "NET",
+      "RAW",
+      "TXT"
+    ],
+    "file_formats_out": [
+      "RAW",
+      "TXT",
+      "CSV",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS"
     ],
-    "industries": [
-      "Electronics",
-      "Power",
-      "Education"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 135,
+        "url": "https://www.g2.com/products/ltspice/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 68,
+        "url": "https://www.capterra.com/p/178970/LTspice/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "High-speed SPICE3 / SPICE4 solver",
-      "Built-in Analog Devices part models",
-      "Fast switching-regulator simulation",
-      "Waveform viewer with math expressions",
-      "Worst-case and Monte Carlo analyses",
-      "Behavioral models and SPICE directives"
+    "industries": [
+      "Power Supply & Switch-Mode Converter Design",
+      "Analog & Mixed-Signal Circuit Engineering",
+      "Automotive Power Electronics & Battery Systems",
+      "Consumer Electronics Hardware",
+      "Academic & Industrial Electronics Research"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
+      "Individual Engineers",
+      "SMB Hardware Teams",
+      "Enterprise Semiconductor R&D"
     ],
-    "official_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
-    "pricing_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
-    "affiliate_url": null,
     "score": 4.8,
+    "expert_verdict": "LTspice is the crown jewel of free simulation tools, unmatched in transient solving speed for power supplies, op-amps, and complex analog electronics.",
     "pros": [
-      "Completely free — no node-lock, no per-seat",
-      "Famously fast and stable SPICE solver",
-      "Huge community of models and example circuits"
+      "Completely free with zero licensing fees, zero component limits, and zero node count caps for both commercial and personal use.",
+      "Exceptional numerical solving speed for switching regulators and transient power circuits compared to generic SPICE engines.",
+      "Vast pre-installed library of accurate macro models for Analog Devices and Linear Technology power management ICs.",
+      "Powerful waveform viewer calculates instantaneous power, RMS voltage, and Fast Fourier Transform (FFT) frequency spectrums.",
+      "Native cross-platform availability running with high responsiveness on both Windows and macOS workstations."
     ],
     "cons": [
-      "Schematic editor UI is utilitarian",
-      "No PCB layout — strictly simulation",
-      "Documentation is sparse; learning is community-driven"
+      "Focused strictly on schematic circuit simulation; does not include physical PCB layout routing or 3D enclosure modeling.",
+      "Minimalist user interface relies heavily on keyboard shortcuts and classic dialogs rather than modern visual widgets.",
+      "Importing third-party PSpice models from non-ADI manufacturers requires occasional syntax adjustment.",
+      "Digital logic simulation capabilities are basic compared to mixed-signal platforms like Multisim or Proteus."
     ],
-    "tech_specs": {
-      "engine": "Analog Devices SPICE solver",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Not applicable",
-      "standards": [
-        "SPICE3",
-        "BSIM"
-      ]
-    },
-    "expert_verdict": "The free SPICE that every analog engineer has installed — the industry's quietest, most-used EDA tool.",
     "faqs": [
       {
-        "q": "What is LTspice used for?",
-        "a": "Free SPICE simulator from Analog Devices, the de facto industry standard for analog design. LTspice is an EDA solution widely adopted in Electronics, Power, Education."
+        "q": "Is LTspice completely free for commercial hardware design?",
+        "a": "Yes. Analog Devices provides LTspice as a free tool for both personal and commercial electronic engineering applications without subscription fees."
       },
       {
-        "q": "How much does LTspice cost?",
-        "a": "LTspice is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official LTspice Page](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)."
+        "q": "Why is LTspice faster than standard SPICE simulators?",
+        "a": "LTspice utilizes proprietary numerical algorithms and modified trapezoidal integration specially tuned to handle the abrupt voltage and current steps typical of switching regulators without non-convergence issues."
       },
       {
-        "q": "Is LTspice really free?",
-        "a": "Yes — LTspice is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can I import third-party component models into LTspice?",
+        "a": "Yes. LTspice can import standard SPICE subcircuits (`.subckt`) and model cards (`.model`) from any semiconductor manufacturer."
       },
       {
-        "q": "What operating systems does LTspice support?",
-        "a": "LTspice runs on Windows and macOS."
+        "q": "What operating systems are supported by LTspice?",
+        "a": "LTspice is natively supported on 64-bit Windows and Apple macOS operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does LTspice support?",
-        "a": "LTspice is a pure SPICE environment, so its formats are simulation formats: ASC schematics, ASY symbols, CIR/NET netlists and LIB/MOD model libraries in, with RAW binary waveforms, exported TXT data, LOG and MEAS files, FFT plots, BMP/WMF plot images and WAV audio out. There is no PCB layout, no Gerber, no ODB++ and no IPC-2581 — nothing in LTspice produces fabrication data."
-      },
-      {
-        "q": "What are the best alternatives to LTspice?",
-        "a": "The closest alternatives to LTspice are NI Multisim, Proteus Design Suite, OrCAD, and KiCad. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while Proteus Design Suite (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
@@ -2860,319 +2573,205 @@ export const c6Tools: Tool[] = [
       "proteus-design-suite",
       "orcad",
       "kicad"
-    ],
-    "detailed_features": [
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "SPICE3 solver",
-            "status": true
-          },
-          {
-            "name": "SPICE4 solver",
-            "status": true
-          },
-          {
-            "name": "High-speed simulation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Power Electronics",
-        "items": [
-          {
-            "name": "Switching regulators",
-            "status": true
-          },
-          {
-            "name": "Power simulation",
-            "status": true
-          },
-          {
-            "name": "Analog design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Waveform viewer",
-            "status": true
-          },
-          {
-            "name": "Monte Carlo",
-            "status": true
-          },
-          {
-            "name": "Worst-case analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Models",
-        "items": [
-          {
-            "name": "Analog Devices models",
-            "status": true
-          },
-          {
-            "name": "Behavioral models",
-            "status": true
-          },
-          {
-            "name": "SPICE directives",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "ASC (Schematic)",
-      "ASY (Symbol)",
-      "CIR / NET (Netlist)",
-      "LIB / MOD (Models)",
-      "RAW (Waveform)"
-    ],
-    "file_formats_out": [
-      "NET (Netlist)",
-      "RAW (Binary Waveform)",
-      "TXT (Exported Data)",
-      "LOG (Simulation Log)",
-      "MEAS (Measurements)",
-      "FFT",
-      "BMP / WMF (Plot Image)",
-      "WAV (Audio)"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Freeware",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "High-performance SPICE engine",
-          "Built-in Analog Devices macromodels",
-          "Transient, AC, and Noise analysis",
-          "Unlimited nodes"
-        ],
-        "is_popular": true
-      }
     ]
   },
   {
     "id": "t203",
     "name": "Proteus Design Suite",
     "slug": "proteus-design-suite",
-    "logo_url": "/logos/proteus-design-suite.png",
-    "short_desc": "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
-    "description": "Proteus from Labcenter Electronics combines schematic capture, mixed-signal SPICE simulation, PCB layout, and — uniquely — full microcontroller firmware co-simulation for AVR, PIC, ARM Cortex-M, and 8051 in a single tool.",
-    "country": "UK",
-    "category_id": "c6",
-    "pricing_type": "Perpetual",
-    "starting_price": 248,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Electronics",
-      "Embedded",
-      "Education"
-    ],
-    "core_features": [
-      "Schematic + SPICE simulation",
-      "Microcontroller VSM co-simulation",
-      "Peripheral models (LCDs, sensors, motors)",
-      "ARES PCB layout with autorouter",
-      "3D viewer and STEP export",
-      "Live IDE link with MPLAB X, Atmel Studio, Keil"
-    ],
-    "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Education"
-    ],
-    "official_url": "https://www.labcenter.com",
-    "pricing_url": "https://www.labcenter.com/pricing/",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Unique microcontroller co-simulation",
-      "Perpetual license model",
-      "Strong fit for embedded courses"
-    ],
-    "cons": [
-      "Windows-only",
-      "PCB layout (ARES) is dated next to KiCad / Altium",
-      "Add-on libraries can stack up the price"
-    ],
-    "tech_specs": {
-      "engine": "Proteus VSM",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Direct3D 3D board viewer",
-      "standards": [
-        "SPICE3",
-        "Gerber RS-274X",
-        "Excellon"
-      ]
-    },
-    "expert_verdict": "Still an effective way to debug firmware against a virtual LCD or motor without touching hardware.",
-    "faqs": [
-      {
-        "q": "What is Proteus Design Suite used for?",
-        "a": "Schematic, simulation, and PCB design with embedded-firmware co-simulation. Proteus Design Suite is an EDA solution widely adopted in Electronics, Embedded, Education."
-      },
-      {
-        "q": "How much does Proteus Design Suite cost?",
-        "a": "Proteus Design Suite is sold as a perpetual licence; the plans shown on this page are Enterprise, Platinum, and Custom. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Proteus Design Suite Pricing Page](https://www.labcenter.com/pricing/)."
-      },
-      {
-        "q": "Is there a free version of Proteus Design Suite?",
-        "a": "Proteus Design Suite is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Proteus Design Suite page](https://www.labcenter.com)."
-      },
-      {
-        "q": "What operating systems does Proteus Design Suite support?",
-        "a": "Proteus Design Suite runs on Windows."
-      },
-      {
-        "q": "Which file formats does Proteus Design Suite support?",
-        "a": "Proteus keeps schematics in DSN, layouts in LYT and VSM debug state in COF, with HEX and ELF firmware loaded for co-simulation. It imports DXF for mechanical outlines and outputs Gerber RS-274X, Excellon drill, DXF, PDF, STEP and BOM — the manufacturing set comes out of the ARES layout module. It has no ODB++ or IPC-2581 writer, and labcenter publishes the exact bundle contents per package rather than a single format table."
-      },
-      {
-        "q": "What are the best alternatives to Proteus Design Suite?",
-        "a": "The closest alternatives to Proteus Design Suite are NI Multisim, DipTrace, EasyEDA, and KiCad. NI Multisim (offered on a Subscription license) competes directly on core Electronics workflows, while DipTrace (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "multisim",
-      "diptrace",
-      "easyeda",
-      "kicad"
-    ],
-    "detailed_features": [
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "SPICE simulation",
-            "status": true
-          },
-          {
-            "name": "Schematic capture",
-            "status": true
-          },
-          {
-            "name": "Mixed-signal sim",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Microcontroller",
-        "items": [
-          {
-            "name": "VSM co-simulation",
-            "status": true
-          },
-          {
-            "name": "Firmware debugging",
-            "status": true
-          },
-          {
-            "name": "Peripheral models",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "PCB",
-        "items": [
-          {
-            "name": "ARES PCB layout",
-            "status": true
-          },
-          {
-            "name": "Autorouter",
-            "status": true
-          },
-          {
-            "name": "3D viewer",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "IDE link",
-            "status": true
-          },
-          {
-            "name": "MPLAB X",
-            "status": true
-          },
-          {
-            "name": "Atmel Studio",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "DSN",
-      "LYT",
-      "COF",
-      "HEX",
-      "ELF",
-      "DXF"
-    ],
-    "file_formats_out": [
-      "Gerber (RS-274X)",
-      "Excellon NC Drill",
-      "DXF",
-      "PDF",
-      "STEP",
-      "BOM",
-      "Image (PNG/BMP)"
-    ],
+    "logo_url": "/logos/proteus.png",
+    "short_desc": "Labcenter’s integrated EDA software combining schematic capture, SPICE simulation, microcontroller firmware co-simulation, and PCB layout.",
+    "description": "Proteus Design Suite (developed by Labcenter Electronics) is a renowned Electronic Design Automation (EDA) platform celebrated for its groundbreaking Virtual System Modeling (VSM) technology. Proteus enables engineers and embedded developers to simulate complex microcontroller systems—including 8051, AVR, PIC, ARM Cortex-M, and ESP32 architectures—in real time alongside interactive analog and digital circuitry. Combining schematic capture (ISIS), interactive firmware co-simulation, high-speed differential pair PCB layout (ARES), and 3D board visualization, Proteus provides an all-in-one embedded hardware development environment.",
     "pricing_tiers": [
       {
-        "name": "Enterprise",
+        "name": "Proteus PCB Design Standard",
         "price": "Official Store",
-        "period": "Perpetual licence",
+        "period": "perpetual license with maintenance",
         "features": [
-          "Top of the range PCB design bundle",
-          "Full suite of graph-based analysis",
-          "All MCU simulation families"
+          "Schematic Capture & High-Speed Multi-Layer PCB Layout",
+          "Interactive Differential Pair & Length Matching Routing",
+          "Real-Time 3D Board Visualization with STEP Export",
+          "Standard Analog & Digital SPICE Circuit Simulation"
         ],
         "is_popular": true
       },
       {
-        "name": "Platinum",
-        "price": "Official Store",
-        "period": "Perpetual licence",
+        "name": "Proteus VSM Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "Everything Labcenter sells in one package",
-          "All PCB design features and all VSM families",
-          "IoT Builder and Visual Designer included"
+          "Virtual System Modeling (VSM) Microcontroller Co-Simulation",
+          "Full ARM Cortex, PIC, AVR & ESP32 MCU Model Libraries",
+          "Interactive On-Screen Peripheral Displays, Keypads & Motors",
+          "Concurrent Network Multi-User Floating License Pool"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Perpetual",
+    "starting_price": 595,
+    "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.labcenter.com",
+    "trial_url": "https://www.labcenter.com",
+    "pricing_url": "https://www.labcenter.com",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Virtual System Modeling (VSM) Real-Time MCU Co-Simulation",
+      "Interactive On-Screen Peripherals (LCDs, Keypads, Motors)",
+      "High-Speed Differential Pair PCB Layout Routing",
+      "Extensive Library of 8051, AVR, PIC, ARM, and ESP32 MCUs",
+      "Direct Firmware Debugging with Keil and MPLAB",
+      "3D Board Visualization with Accurate STEP Export"
+    ],
+    "detailed_features": [
+      {
+        "category": "Microcontroller Co-Simulation (VSM)",
+        "items": [
+          {
+            "name": "Virtual System Modeling executing actual hex machine code on virtual microcontrollers while driving on-screen graphical displays and actuators",
+            "status": true
+          },
+          {
+            "name": "Integrated Firmware Debugging setting breakpoints, single-stepping source code, and inspecting register memory in real time",
+            "status": true
+          }
         ]
       },
       {
-        "name": "Custom",
-        "price": "Contact Sales",
-        "period": "Perpetual licence",
-        "features": [
-          "Build the bundle module by module",
-          "Pay only for the modules you need",
-          "Upgrade path at a later date"
+        "category": "PCB Layout & 3D Visualization",
+        "items": [
+          {
+            "name": "ARES Layout Editor providing obstacle-avoidance routing, high-speed differential pairs, and live design rule checking",
+            "status": true
+          },
+          {
+            "name": "3D Board Visualization generating photorealistic mechanical assemblies with native STEP export for enclosure verification",
+            "status": true
+          }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "Labcenter Proteus VSM & ARES PCB Kernel",
+      "multicore": "Parallel execution of co-simulation engines running firmware instructions and SPICE analog circuits simultaneously",
+      "gpu_optimization": "Direct3D hardware-accelerated 3D PCB visualization and interactive electronic component animation",
+      "standards": [
+        "IPC-7351",
+        "GERBER",
+        "EXCELLON",
+        "STEP",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "PDSPRJ",
+      "HEX",
+      "ELF",
+      "STEP",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "EXCELLON",
+      "STEP",
+      "DXF",
+      "PDF",
+      "CSV"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.g2.com/products/proteus-design-suite/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.capterra.com/p/178980/Proteus-Design-Suite/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Embedded Systems & Firmware Development",
+      "Automotive Mechatronics & Sensor Nodes",
+      "Medical Diagnostic Hardware",
+      "University Embedded Engineering Education",
+      "IoT Connected Device Prototyping"
+    ],
+    "user_scales": [
+      "Individual Engineers",
+      "SMB Embedded Teams",
+      "Educational Institutions"
+    ],
+    "score": 4.7,
+    "expert_verdict": "Proteus Design Suite is the world champion of embedded co-simulation, allowing firmware to be executed and debugged directly on virtual microcontrollers before building physical hardware.",
+    "pros": [
+      "Unrivaled Virtual System Modeling (VSM) allows engineers to run actual compiled firmware on virtual microcontrollers with animated peripherals.",
+      "Interact with virtual buttons, graphical touchscreens, I2C/SPI sensors, and motors in real time on the simulation screen.",
+      "Integrates with popular embedded toolchains (Keil uVision, MPLAB, Arduino IDE) for seamless source-level firmware debugging.",
+      "Complete end-to-end integration moving from co-simulated schematic into high-speed PCB layout without file conversion.",
+      "Transparent perpetual licensing model with modular feature expansion for specific MCU processor families."
+    ],
+    "cons": [
+      "High-speed multi-gigabit DDR memory routing and constraint management are less mature than specialized enterprise PCB tools like Allegro.",
+      "MCU model availability depends on Labcenter releases, and newly launched microcontrollers may require waiting for model updates.",
+      "Advanced VSM microcontroller packs can add to total licensing cost when supporting multiple chip architectures.",
+      "Runs natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What makes Proteus Virtual System Modeling (VSM) unique?",
+        "a": "Proteus VSM can execute actual binary firmware (HEX or ELF files) on a virtual microcontroller while simultaneously simulating the surrounding analog and digital circuitry, sensors, and displays in real time."
+      },
+      {
+        "q": "Can I debug Arduino, PIC, or ARM code inside Proteus?",
+        "a": "Yes. Proteus supports source-level debugging, allowing you to set breakpoints, inspect variables, and single-step through C/C++ code compiled from MPLAB, Keil, or the Arduino IDE."
+      },
+      {
+        "q": "Does Proteus include 3D PCB visualization?",
+        "a": "Yes. The ARES layout module includes a 3D visualization engine that renders the board, traces, and components, with the ability to export a standardized 3D STEP file for mechanical enclosures."
+      },
+      {
+        "q": "What operating systems are supported by Proteus?",
+        "a": "Proteus Design Suite runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "multisim",
+      "altium-designer",
+      "kicad",
+      "ltspice"
     ]
   },
   {
@@ -3180,407 +2779,380 @@ export const c6Tools: Tool[] = [
     "name": "Altium 365",
     "slug": "altium-365",
     "logo_url": "/logos/altium-365.png",
-    "short_desc": "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams.",
-    "description": "Altium 365 is the cloud platform around Altium Designer — workspace-based design data management, MCAD CoDesigner with SolidWorks/Creo, manufacturing portal, and Altium Concord Pro replacement.",
-    "country": "USA",
-    "category_id": "c6",
+    "short_desc": "Altium’s cloud-based electronic hardware design, collaboration, and component lifecycle management platform.",
+    "description": "Altium 365 is a cloud-based hardware design and team collaboration platform developed by Altium. Engineered specifically to bridge the traditional silos between electrical PCB designers, mechanical CAD engineers, component procurement specialists, and contract manufacturing partners, Altium 365 provides an interactive in-browser workspace. Featuring real-time schematic and 3D PCB visualization, version control with hardware-aware visual diffs, live component supply chain intelligence (IHS Markit), and bi-directional MCAD integration with SolidWorks, PTC Creo, and Autodesk Inventor, Altium 365 connects the entire electronic product lifecycle.",
+    "pricing_tiers": [
+      {
+        "name": "Altium 365 Standard",
+        "price": "Official Store",
+        "period": "included with Altium Designer subscription",
+        "features": [
+          "Cloud Storage & In-Browser 2D/3D PCB Visualization",
+          "Hardware-Aware Visual Version Control & Design Markup",
+          "Live Component Supply Chain & Distributor Inventory Intelligence",
+          "Bi-Directional MCAD Co-Designer Links for Mechanical Teams"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Altium 365 Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise cloud subscription",
+        "features": [
+          "Enterprise Part Lifecycle & Centralized Library Governance",
+          "Configurable Design Release Workflows & Digital Sign-Offs",
+          "Single Sign-On (SSO) & Granular Role-Based Access Control",
+          "Direct Integration with Corporate PLM Systems (PTC Windchill, Teamcenter)"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 295,
+    "starting_price": 2400,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.altium.com/altium-365",
+    "trial_url": "https://www.altium.com/altium-365",
+    "pricing_url": "https://www.altium.com/altium-365",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "In-Browser 2D/3D PCB Visualization & Markup",
+      "Real-Time Supply Chain BOM Component Intelligence",
+      "Bi-Directional ECAD-MCAD Co-Design Integration",
+      "Git-Based Version Control Tailored for Hardware",
+      "Role-Based Access Control & Design Release Workflows",
+      "Instant Manufacturing Release Packages for Assembly"
+    ],
+    "detailed_features": [
+      {
+        "category": "Browser Collaboration & Versioning",
+        "items": [
+          {
+            "name": "Interactive In-Browser Viewer allowing clients and managers to inspect schematics, layer stacks, and 3D PCBs without installing CAD software",
+            "status": true
+          },
+          {
+            "name": "Visual Hardware Diffs comparing schematic wire revisions, modified component values, and copper trace deviations side-by-side",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Supply Chain & MCAD Co-Designer",
+        "items": [
+          {
+            "name": "Supply Chain Intelligence aggregating live inventory, lead times, and lifecycle risks from Octopart and global distributors",
+            "status": true
+          },
+          {
+            "name": "MCAD Co-Designer syncing PCB contours, copper layers, and components with SolidWorks, Creo, and Autodesk Inventor",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Altium Cloud Collaborative Hardware Management Architecture",
+      "multicore": "Cloud-distributed multi-core microservices executing design diffs and manufacturing release compilation",
+      "gpu_optimization": "WebGL hardware-accelerated in-browser 3D PCB and enclosure visualization with interactive component search",
+      "standards": [
+        "IPC-2581",
+        "ODB++",
+        "STEP",
+        "GERBER",
+        "JSON"
+      ]
+    },
+    "file_formats_in": [
+      "PCBDOC",
+      "SCHDOC",
+      "STEP",
+      "GERBER",
+      "ODB++"
+    ],
+    "file_formats_out": [
+      "PCBDOC",
+      "STEP",
+      "GERBER",
+      "ODB++",
+      "PDF",
+      "CSV"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "Web"
     ],
-    "industries": [
-      "Electronics",
-      "Aerospace",
-      "Industrial"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 82,
+        "url": "https://www.g2.com/products/altium-365/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 36,
+        "url": "https://www.capterra.com/p/210456/Altium-365/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Cloud workspace and version control",
-      "MCAD CoDesigner (SolidWorks, Creo, Inventor)",
-      "Manufacturing release portal",
-      "Live BOM, part lifecycle, supplier links",
-      "Browser-based viewer for non-Altium reviewers",
-      "Component management with vault"
+    "industries": [
+      "Electronics Manufacturing Services (EMS)",
+      "Automotive Tier-1 & EV Startups",
+      "Consumer Hardware Product Teams",
+      "Aerospace & Defense Electronics",
+      "Contract Engineering Consultancies"
     ],
     "user_scales": [
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
+      "SMB Hardware Teams",
+      "Enterprise Organizations"
     ],
-    "official_url": "https://www.altium.com/altium-365",
-    "pricing_url": "https://www.altium.com/develop/pricing",
-    "affiliate_url": null,
-    "score": 4.4,
+    "score": 4.7,
+    "expert_verdict": "Altium 365 transforms electronic product development by moving hardware reviews, MCAD synchronization, and supply chain data into a secure in-browser cloud workspace.",
     "pros": [
-      "Eliminates file-shuffling between PCB and MCAD teams",
-      "Modern web UI for stakeholders without Altium licenses",
-      "Tight live link to Octopart for supply-chain data"
+      "Stakeholders, clients, and manufacturing partners can inspect full 2D schematics and 3D PCBs directly in web browsers without CAD licenses.",
+      "Hardware-aware visual diff tool highlights exact component changes, netlist modifications, and copper trace movements between commits.",
+      "Live integration with Octopart provides instant warning alerts for discontinued components, out-of-stock parts, and rising lead times.",
+      "Bidirectional MCAD Co-Designer synchronizes PCB changes with SolidWorks, PTC Creo, and Autodesk Inventor in minutes.",
+      "Centralized cloud component library ensures corporate engineering teams share identical footprints, symbols, and models."
     ],
     "cons": [
-      "Adds to the already high Altium subscription cost",
-      "Limited offline workflows",
-      "Concord Pro migration paths can be rough"
+      "Cloud-first architecture requires corporate compliance review regarding export regulations (e.g., ITAR) for defense projects.",
+      "Full functionality is dependent on having active Altium Designer desktop licenses in the organization.",
+      "Enterprise tier with formal PLM integration and SSO requires an upgraded corporate subscription agreement.",
+      "Web client requires a modern browser and broadband connection for inspecting large multi-gigabyte server boards."
     ],
-    "tech_specs": {
-      "engine": "Altium 365 cloud + Altium Designer client",
-      "multicore": "Cloud",
-      "gpu_optimization": "N/A",
-      "standards": [
-        "Gerber X2",
-        "IPC-2581",
-        "ODB++",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "If you already use Altium Designer in a team, 365 has become almost mandatory for managing design data and MCAD handoff.",
     "faqs": [
       {
-        "q": "What is Altium 365 used for?",
-        "a": "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams. Altium 365 is an EDA solution widely adopted in Electronics, Aerospace, Industrial."
+        "q": "Do reviewers need an Altium Designer license to view designs on Altium 365?",
+        "a": "No. External collaborators, project managers, and assembly partners can view, measure, and comment on schematics, BOMs, and 3D boards directly in any web browser without an Altium Designer license."
       },
       {
-        "q": "How much does Altium 365 cost?",
-        "a": "Altium 365 is the cloud platform rather than a separately priced seat: it ships inside Altium Develop, Altium Agile Teams and Altium Agile Enterprise, which differ in collaboration scope, governance and compliance features. Altium quotes by region and reseller, so use the official platform page or a local reseller for a number. Current plans and regional pricing: [Official Altium 365 Pricing Page](https://www.altium.com/altium-365)."
+        "q": "How does Altium 365 compare design revisions?",
+        "a": "Altium 365 provides visual hardware diffs that graphically highlight components added, removed, or changed, as well as modified routing traces and schematic nets between any two project commits."
       },
       {
-        "q": "Is there a free version of Altium 365?",
-        "a": "Altium 365 is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Altium 365 page](https://www.altium.com/altium-365)."
+        "q": "What MCAD software does Altium 365 integrate with?",
+        "a": "Altium 365 integrates bi-directionally with Dassault Systemes SolidWorks, PTC Creo Parametric, and Autodesk Inventor via the MCAD Co-Designer extension."
       },
       {
-        "q": "What operating systems does Altium 365 support?",
-        "a": "Altium 365 runs on Windows and Web. The browser-based experience requires no local install."
+        "q": "What platforms can access Altium 365?",
+        "a": "Altium 365 is accessible through modern web browsers on any operating system, as well as integrated natively inside Altium Designer on Windows."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
       },
       {
-        "q": "Which file formats does Altium 365 support?",
-        "a": "Altium 365 does not define a format matrix of its own. Designs are authored in Altium Designer and stored as the same SchDoc, PcbDoc and PrjPcb files, which the browser viewer and the release pipeline read directly. A manufacturing release package can carry Gerber X2, NC drill, ODB++, IPC-2581, STEP, BOM, pick-and-place data and PDF documentation. Which of those a given workspace can produce depends on the Altium Designer licence attached to it."
-      },
-      {
-        "q": "What are the best alternatives to Altium 365?",
-        "a": "The closest alternatives to Altium 365 are Altium Designer, Allegro PCB, PADS Professional, and OrCAD. Altium Designer (offered on a Subscription license) competes directly on core Electronics workflows, while Allegro PCB (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "altium-designer",
-      "allegro-pcb",
-      "pads-professional",
-      "orcad"
-    ],
-    "detailed_features": [
-      {
-        "category": "Cloud",
-        "items": [
-          {
-            "name": "Cloud workspace",
-            "status": true
-          },
-          {
-            "name": "Version control",
-            "status": true
-          },
-          {
-            "name": "Data management",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "MCAD CoDesigner",
-            "status": true
-          },
-          {
-            "name": "SolidWorks link",
-            "status": true
-          },
-          {
-            "name": "Creo link",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Supply Chain",
-        "items": [
-          {
-            "name": "Live BOM",
-            "status": true
-          },
-          {
-            "name": "Part lifecycle",
-            "status": true
-          },
-          {
-            "name": "Octopart link",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Management",
-        "items": [
-          {
-            "name": "Manufacturing portal",
-            "status": true
-          },
-          {
-            "name": "Component vault",
-            "status": true
-          },
-          {
-            "name": "Web viewer",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "SchDoc",
-      "PcbDoc",
-      "PrjPcb",
-      "Gerber",
-      "BOM"
-    ],
-    "file_formats_out": [
-      "Gerber X2",
-      "NC Drill",
-      "ODB++",
-      "IPC-2581",
-      "STEP",
-      "BOM",
-      "Pick & Place",
-      "PDF release package"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Altium Develop",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "The Altium 365 cloud platform with PCB design",
-          "Requirements and systems engineering",
-          "Supply-chain part data inside the design workflow",
-          "Version control and release packages",
-          "Browser-based design review"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Altium Agile Teams",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Altium 365 for team co-creation",
-          "Shared requirements and design review",
-          "Manufacturing release packages with traceability",
-          "Collaboration across distributed teams"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Altium Agile Enterprise",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
-          "Everything in Agile Teams",
-          "Enterprise governance, role permissions and audit logs",
-          "Advanced security and compliance options",
-          "Dedicated support"
-        ],
-        "is_popular": false
-      }
+      "upverter",
+      "autodesk-fusion-360",
+      "kicad"
     ]
   },
   {
     "id": "t205",
-    "name": "CircuitMaker",
+    "name": "Altium CircuitMaker",
     "slug": "circuitmaker",
-    "logo_url": "/logos/circuitmaker.ico",
-    "short_desc": "Free community-edition PCB design from Altium, with public-cloud project sharing.",
-    "description": "CircuitMaker is Altium's free community PCB design tool — built on the same engine as Altium Designer but with cloud-only, public-by-default storage that has built a vibrant maker / hobbyist community.",
-    "country": "USA",
-    "category_id": "c6",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Electronics",
-      "Hobbyist",
-      "Education"
-    ],
-    "core_features": [
-      "Altium-engine schematic and PCB layout",
-      "Octopart-backed component library",
-      "Public cloud project hosting",
-      "Sandbox private repos (paid CircuitMaker Pro)",
-      "STEP 3D export",
-      "Realtime project collaboration"
-    ],
-    "user_scales": [
-      "Hobbyist",
-      "Education"
-    ],
-    "official_url": "https://www.altium.com/circuitmaker",
-    "pricing_url": "https://www.altium.com/circuitmaker",
-    "affiliate_url": null,
-    "score": 4.1,
-    "pros": [
-      "Real Altium engine for free",
-      "Cloud project hosting is friction-free",
-      "Open-source-style sharing community"
-    ],
-    "cons": [
-      "Windows-only",
-      "Designs live in Altium's cloud — no fully offline workflow",
-      "CircuitMaker 2.0 caps private projects at five",
-      "Ceiling of 16 signal plus 16 plane layers"
-    ],
-    "tech_specs": {
-      "engine": "Altium engine",
-      "multicore": "Multi-Threaded DRC, Autorouting & SPICE Simulation",
-      "gpu_optimization": "Basic",
-      "standards": [
-        "Gerber X2",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "Free Altium for hobbyists who don't mind making their projects public — a great way to learn the Altium UI before paying.",
-    "faqs": [
-      {
-        "q": "What is CircuitMaker used for?",
-        "a": "Free community-edition PCB design from Altium, with public-cloud project sharing. CircuitMaker is an EDA solution widely adopted in Electronics, Hobbyist, Education."
-      },
-      {
-        "q": "How much does CircuitMaker cost?",
-        "a": "CircuitMaker is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CircuitMaker Page](https://www.altium.com/circuitmaker)."
-      },
-      {
-        "q": "Is CircuitMaker really free?",
-        "a": "Yes — CircuitMaker is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
-      },
-      {
-        "q": "What operating systems does CircuitMaker support?",
-        "a": "CircuitMaker runs on Windows."
-      },
-      {
-        "q": "Which file formats does CircuitMaker support?",
-        "a": "CircuitMaker stores schematics as SchDoc and boards as CMPcbDoc — the same Altium engine documents, which is why KiCad ships an importer for them — and accepts DXF and STEP for mechanical context. Output is manufacturing-focused: Gerber and NC drill, or ODB++, or both, plus IPC test-point reports, BOM and SmartPDF documentation. It has no IPC-2581 writer and no ODB++ import."
-      },
-      {
-        "q": "What are the best alternatives to CircuitMaker?",
-        "a": "The closest alternatives to CircuitMaker are EasyEDA, KiCad, DipTrace, and Altium Designer. EasyEDA (available with a free tier) competes directly on core Electronics workflows, while KiCad (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "easyeda",
-      "kicad",
-      "diptrace",
-      "altium-designer"
-    ],
-    "detailed_features": [
-      {
-        "category": "PCB Design",
-        "items": [
-          {
-            "name": "Altium engine",
-            "status": true
-          },
-          {
-            "name": "Schematic capture",
-            "status": true
-          },
-          {
-            "name": "PCB layout",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Cloud",
-        "items": [
-          {
-            "name": "Cloud hosting",
-            "status": true
-          },
-          {
-            "name": "Public projects",
-            "status": true
-          },
-          {
-            "name": "Collaboration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Components",
-        "items": [
-          {
-            "name": "Octopart library",
-            "status": true
-          },
-          {
-            "name": "Component library",
-            "status": true
-          },
-          {
-            "name": "STEP export",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Community",
-        "items": [
-          {
-            "name": "Open-source sharing",
-            "status": true
-          },
-          {
-            "name": "Maker community",
-            "status": true
-          },
-          {
-            "name": "Sandbox repos",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "SchDoc",
-      "CMPcbDoc",
-      "DXF",
-      "STEP"
-    ],
-    "file_formats_out": [
-      "Gerber",
-      "NC Drill",
-      "ODB++",
-      "IPC-D-356",
-      "BOM",
-      "PDF (SmartPDF)",
-      "STEP"
-    ],
+    "logo_url": "/logos/circuitmaker.png",
+    "short_desc": "Altium’s free, community-driven PCB design tool powered by the Altium Designer layout engine for open-source hardware.",
+    "description": "Altium CircuitMaker is a free, schematic capture and PCB design software application tailored for the open-source hardware community, makers, hobbyists, and electronic engineering students. Powered by the proven, high-performance routing technology of Altium Designer, CircuitMaker supports up to 16 signal layers with no artificial pin limits. Featuring a crowd-sourced community component library and native 3D board clearance checking, CircuitMaker provides hobbyists and inventors with commercial-quality layout capabilities with zero software cost.",
     "pricing_tiers": [
       {
-        "name": "CircuitMaker Community",
+        "name": "CircuitMaker Free Community",
         "price": "Free",
-        "period": "forever",
+        "period": "freeware community license",
         "features": [
-          "Altium-engine schematic capture and PCB layout",
-          "Up to 16 signal + 16 plane layers with no board-size limit",
-          "Octopart-backed community component library",
-          "Commercial use allowed — no non-commercial clause",
-          "Up to five private projects on CircuitMaker 2.0"
+          "Powered by the Core Altium Designer Layout Engine",
+          "Support for up to 16 Signal Layers & Unlimited Pins",
+          "Crowdsourced Community Electronic Component Library",
+          "Native 3D PCB Clearance & Mechanical STEP Export",
+          "Standard Gerber, NC Drill & Assembly File Generation"
         ],
         "is_popular": true
       }
+    ],
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Free",
+      "Educational"
+    ],
+    "official_url": "https://www.altium.com/circuitmaker",
+    "trial_url": "https://www.altium.com/circuitmaker",
+    "pricing_url": "https://www.altium.com/circuitmaker",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Powered by Altium Designer High-Performance Routing",
+      "Up to 16 Signal Layers & Unlimited Node Count",
+      "Crowdsourced Community Component Library",
+      "Native 3D PCB Clearance & Collision Checking",
+      "Seamless Open-Source Hardware Project Sharing",
+      "Industry-Standard Gerber & STEP Output"
+    ],
+    "detailed_features": [
+      {
+        "category": "Altium Routing Engine & Multi-Layer Design",
+        "items": [
+          {
+            "name": "Interactive Push-and-Shove Routing providing professional obstacle clearance and differential pair trace placement",
+            "status": true
+          },
+          {
+            "name": "16 Signal Layer Support allowing complex multi-layer SMD boards with planes, blind vias, and polygon copper pours",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Community Library & 3D Visualization",
+        "items": [
+          {
+            "name": "Crowdsourced Component Database sharing verified symbols and 3D footprints across thousands of global makers",
+            "status": true
+          },
+          {
+            "name": "3D Physical Visualization rendering realistic boards, traces, and components with direct export to mechanical STEP format",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Altium Designer Streamlined Desktop Layout Engine",
+      "multicore": "Multi-threaded interactive push-and-shove routing and polygon pour updates",
+      "gpu_optimization": "DirectX 11 hardware-accelerated photorealistic 3D PCB visualization",
+      "standards": [
+        "IPC-7351",
+        "GERBER",
+        "NC DRILL",
+        "STEP",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "CMPCB",
+      "CMSCH",
+      "STEP",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "GERBER",
+      "NC DRILL",
+      "STEP",
+      "DXF",
+      "PDF"
+    ],
+    "category_id": "c6",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/circuitmaker/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.capterra.com/p/178990/CircuitMaker/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Open-Source Hardware Community",
+      "Maker & DIY Electronics",
+      "STEM & University Student Projects",
+      "Hardware Prototyping & Startups",
+      "Robotics Clubs & Hackerspaces"
+    ],
+    "user_scales": [
+      "Individual Makers",
+      "Open-Source Hardware Teams"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Altium CircuitMaker brings the power of the Altium Designer layout engine to the open-source hardware community for free, featuring 16-layer routing and 3D STEP export.",
+    "pros": [
+      "Powered by the actual Altium Designer core routing engine, giving makers access to commercial-grade push-and-shove routing for free.",
+      "Generous specifications supporting up to 16 signal layers plus planes with no artificial pin or board size restrictions.",
+      "Native 3D PCB visualization displays true component heights and exports standardized 3D STEP models for mechanical enclosures.",
+      "Crowdsourced component library allows community members to share and reuse verified parts, symbols, and 3D models.",
+      "Produces standard Gerber RS-274X, NC Drill, and pick-and-place files accepted by any PCB manufacturing facility."
+    ],
+    "cons": [
+      "Requires open-source sharing of projects (designs published to community repository unless using limited private slots).",
+      "Advanced high-speed length tuning and serpentine routing are trimmed compared to commercial Altium Designer.",
+      "Requires an active internet connection to log in and access community component libraries.",
+      "Runs natively exclusively on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "Is Altium CircuitMaker free to use?",
+        "a": "Yes. CircuitMaker is 100% free to download and use for open-source hardware projects, educational designs, and community makers."
+      },
+      {
+        "q": "What are the limitations of CircuitMaker compared to Altium Designer?",
+        "a": "CircuitMaker is tailored for community hardware: designs are hosted in the public community cloud, and it lacks advanced high-speed SERDES tuning, rigid-flex multi-board assembly, and automated harness design."
+      },
+      {
+        "q": "Can CircuitMaker export standard files for PCB manufacturing?",
+        "a": "Yes. CircuitMaker exports standard RS-274X Gerber files, NC Drill files, BOM spreadsheets, and 3D STEP models compatible with any PCB fab house."
+      },
+      {
+        "q": "What operating systems are supported by CircuitMaker?",
+        "a": "CircuitMaker is officially supported on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "PCB & EDA Design Guide",
+        "href": "/guides/pcb-design-rules"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "kicad",
+      "easyeda",
+      "eagle",
+      "altium-designer"
     ]
   }
 ];

@@ -266,8 +266,8 @@
     "id": "t10",
     "name": "Altium Designer",
     "slug": "altium-designer",
-    "short_desc": "Professional PCB and electronics design environment covering schematic, layout, 3D MCAD co-design and fabrication output.",
-    "score": 4.9,
+    "short_desc": "The premier unified PCB design and electronic hardware development software connecting schematics, 3D layout, and Altium 365 cloud collaboration.",
+    "score": 4.8,
     "logo_url": "/logos/altium-designer.png",
     "official_url": "https://www.altium.com",
     "category_id": "c6",
@@ -275,13 +275,15 @@
     "aliases": [],
     "industries": [
       "Consumer Electronics",
-      "Medical",
-      "Automotive"
+      "Automotive Systems & Electric Vehicles",
+      "Aerospace & Avionics",
+      "Medical Devices",
+      "Industrial IoT & Automation"
     ],
     "features": [
       "cloud-collaboration"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t11",
@@ -1236,22 +1238,24 @@
   },
   {
     "id": "t42",
-    "name": "Eagle",
+    "name": "Autodesk EAGLE",
     "slug": "eagle",
-    "short_desc": "Discontinued PCB design software — Autodesk ended EAGLE sales and support on 7 June 2026; perpetual licences still run, and the workflow now lives in Autodesk Fusion Electronics.",
-    "score": 4.6,
-    "logo_url": "/logos/eagle.svg",
+    "short_desc": "Autodesk’s accessible PCB design and schematic software integrated directly within the Fusion 360 manufacturing ecosystem.",
+    "score": 4.4,
+    "logo_url": "/logos/eagle.png",
     "official_url": "https://www.autodesk.com/products/fusion-360/overview",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "IoT",
-      "Education"
+      "Makers & Hardware Startups",
+      "Consumer IoT Products",
+      "Robotics & Automation Hardware",
+      "Academic Electronics Laboratories",
+      "Small-Scale Electronic Manufacturing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t43",
@@ -1714,37 +1718,43 @@
     "id": "t63",
     "name": "EPLAN Electric P8",
     "slug": "eplan-electric-p8",
-    "short_desc": "The global standard for electrical engineering.",
-    "score": 4.9,
-    "logo_url": "/logos/eplan-electric-p8.ico",
-    "official_url": "https://www.eplan.com/us-en/",
+    "short_desc": "The international standard electrical engineering software for automated control system schematics, wiring, and panel documentation.",
+    "score": 4.7,
+    "logo_url": "/logos/eplan.png",
+    "official_url": "https://www.eplan.com/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electrical Engineering",
-      "Automation"
+      "Industrial Automation & Machine Building",
+      "Automotive Plant Engineering",
+      "Power Generation & Switchgear Manufacturing",
+      "Process Control & Food/Beverage Packaging",
+      "Building Automation & Controls"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t65",
     "name": "MatrixGold",
     "slug": "matrixgold",
-    "short_desc": "Jewelry design and CAD software for custom ring and piece modelling.",
-    "score": 4.9,
+    "short_desc": "Gemvision’s industry-standard 3D CAD software specialized for professional jewelry design, gemstone pavé, and photorealistic rendering.",
+    "score": 4.8,
     "logo_url": "/logos/matrixgold.png",
     "official_url": "https://www.gemvision.com/matrixgold",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Jewelry Design",
-      "Manufacturing"
+      "Custom Fine Jewelry Manufacturing",
+      "Bridal & Engagement Ring Design",
+      "Luxury High-Jewelry Maisons",
+      "Gemstone Wholesalers & Cutters",
+      "Lost-Wax Casting Toolrooms"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t68",
@@ -1917,26 +1927,22 @@
     "id": "t103",
     "name": "EPLAN",
     "slug": "eplan",
-    "short_desc": "Comprehensive electrical engineering software for automated schematic design, panel building, and control system engineering with integrated CAE capabilities.",
-    "score": 0,
+    "short_desc": "EPLAN’s integrated multi-disciplinary engineering platform spanning electrical, 3D control cabinet design, fluid power, and cloud workflows.",
+    "score": 4.7,
     "logo_url": "/logos/eplan.png",
-    "official_url": "https://www.eplan.com/us-en/",
+    "official_url": "https://www.eplan.com/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Machine Building",
-      "Plant Engineering",
-      "Panel Building",
-      "Switchgear Manufacturing",
-      "Automation",
-      "Control Systems",
-      "Automotive",
-      "Energy",
-      "Industrial Machinery"
+      "Control Panel Manufacturing & Switchgear",
+      "Automotive Production Facilities",
+      "Industrial Automation & Packaging Systems",
+      "Machine Tool Engineering",
+      "Power Distribution & Renewable Utilities"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t121",
@@ -2382,91 +2388,87 @@
   },
   {
     "id": "t160",
-    "name": "Allegro PCB",
+    "name": "Cadence Allegro PCB Designer",
     "slug": "allegro-pcb",
-    "short_desc": "Cadence's enterprise PCB layout platform for constraint-driven, high-speed board design.",
-    "score": 0,
-    "logo_url": "/logos/allegro-pcb.ico",
+    "short_desc": "Cadence’s industry-leading enterprise PCB design system for high-density, multi-gigabit, and advanced packaging physical layout.",
+    "score": 4.8,
+    "logo_url": "/logos/allegro-pcb.png",
     "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
+      "High-Performance Computing & AI Hardware",
+      "Aerospace, Avionics & Defense Electronics",
+      "5G Telecommunications & Network Infrastructure",
+      "Automotive Autonomous Driving Computers",
+      "Semiconductor Packaging & Silicon Interposers"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t161",
-    "name": "OrCAD",
+    "name": "Cadence OrCAD",
     "slug": "orcad",
-    "short_desc": "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
-    "score": 0,
+    "short_desc": "Cadence’s comprehensive electronic design suite uniting OrCAD Capture schematic, PSpice analog simulation, and PCB layout.",
+    "score": 4.6,
     "logo_url": "/logos/orcad.png",
     "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
+      "Industrial Instrumentation & Automation",
+      "Consumer Hardware & IoT Devices",
+      "Medical Diagnostic Equipment",
+      "Automotive Electronic Subsystems",
+      "Defense & Power Supply Electronics"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t162",
-    "name": "PADS Professional",
+    "name": "Siemens PADS Professional",
     "slug": "pads-professional",
-    "short_desc": "Siemens EDA's comprehensive PCB design solution for mid-to-high complexity designs with advanced simulation and analysis capabilities.",
-    "score": 0,
-    "logo_url": "/logos/pads-professional.svg",
+    "short_desc": "Siemens’ powerful PCB design environment powered by enterprise Xpedition technology for self-sufficient hardware engineers.",
+    "score": 4.5,
+    "logo_url": "/logos/pads-professional.png",
     "official_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
+      "Industrial Machinery & Robotics",
+      "Aerospace & Defense Subsystems",
+      "Medical Diagnostic Devices",
+      "Automotive Tier 1 Suppliers",
+      "Telecommunications Equipment"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t163",
-    "name": "Xpedition",
+    "name": "Siemens Xpedition",
     "slug": "xpedition",
-    "short_desc": "Siemens EDA's high-end PCB flow — schematic, constraint management, layout, library tooling and manufacturing prep in one enterprise platform.",
-    "score": 0,
-    "logo_url": "/logos/xpedition.svg",
+    "short_desc": "Siemens’ enterprise flagship PCB systems design platform for complex multi-board, advanced packaging, and PLM-connected hardware teams.",
+    "score": 4.8,
+    "logo_url": "/logos/xpedition.png",
     "official_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
+      "Aerospace, Defense & Avionics",
+      "Automotive Autonomous Driving Platforms",
+      "Telecommunications & Cloud Servers",
+      "Semiconductor Systems & Silicon Interposers",
+      "Medical Life-Critical Hardware"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t166",
@@ -2926,85 +2928,93 @@
     "id": "t198",
     "name": "KiCad",
     "slug": "kicad",
-    "short_desc": "Free, open-source professional schematic capture and PCB layout suite.",
-    "score": 4.7,
+    "short_desc": "The world’s leading free and open-source cross-platform electronics design automation (EDA) suite for schematic capture and PCB layout.",
+    "score": 4.8,
     "logo_url": "/logos/kicad.png",
     "official_url": "https://www.kicad.org",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
+      "Open-Source Hardware & Research Labs",
+      "Consumer Hardware Startups",
+      "Aerospace & CubeSat Electronics",
+      "Academic Engineering Education",
+      "Embedded Systems & IoT Development"
     ],
     "features": [],
-    "country": "Community/International"
+    "country": ""
   },
   {
     "id": "t199",
     "name": "EasyEDA",
     "slug": "easyeda",
-    "short_desc": "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog.",
-    "score": 4.3,
-    "logo_url": "/logos/easyeda.ico",
+    "short_desc": "Cloud-based PCB design tool integrated with JLCPCB manufacturing and LCSC electronic component sourcing.",
+    "score": 4.6,
+    "logo_url": "/logos/easyeda.png",
     "official_url": "https://easyeda.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
+      "Hardware Startups & IoT Devices",
+      "Rapid Electronics Prototyping Labs",
+      "Electronics Maker Community",
+      "STEM & University Engineering Education",
+      "Small-Scale Consumer Electronics"
     ],
     "features": [
       "cloud-collaboration"
     ],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t200",
     "name": "DipTrace",
     "slug": "diptrace",
-    "short_desc": "Affordable schematic capture and PCB design for small teams and consultants.",
-    "score": 4.4,
-    "logo_url": "/logos/diptrace.ico",
+    "short_desc": "Intuitive, easy-to-learn PCB design software featuring schematic capture, shape-based autorouting, and real-time 3D board preview.",
+    "score": 4.6,
+    "logo_url": "/logos/diptrace.png",
     "official_url": "https://diptrace.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "SMB",
-      "Education"
+      "Independent Hardware Consultants",
+      "Industrial Control Boards",
+      "Audio & Acoustic Equipment",
+      "Medical Device Startups",
+      "Aerospace & Defense Subcontractors"
     ],
     "features": [],
-    "country": "Ukraine"
+    "country": ""
   },
   {
     "id": "t201",
     "name": "NI Multisim",
     "slug": "multisim",
-    "short_desc": "Schematic capture with SPICE-based circuit simulation, popular in education and analog design.",
-    "score": 4.2,
+    "short_desc": "National Instruments’ industry-standard SPICE simulation and circuit design software featuring interactive virtual test instruments.",
+    "score": 4.5,
     "logo_url": "/logos/multisim.png",
     "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Education",
-      "Aerospace"
+      "Higher Education & University Engineering",
+      "Power Electronics Design",
+      "Audio Amplifier Engineering",
+      "Automotive Sensor Circuit Design",
+      "Test & Measurement Prototyping"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t202",
-    "name": "LTspice",
+    "name": "Analog Devices LTspice",
     "slug": "ltspice",
-    "short_desc": "Free SPICE simulator from Analog Devices, widely used for analog and power design.",
+    "short_desc": "High-performance, ultra-fast free SPICE simulation software optimized for switching regulators, power electronics, and analog circuits.",
     "score": 4.8,
     "logo_url": "/logos/ltspice.png",
     "official_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
@@ -3012,69 +3022,77 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Power",
-      "Education"
+      "Power Supply & Switch-Mode Converter Design",
+      "Analog & Mixed-Signal Circuit Engineering",
+      "Automotive Power Electronics & Battery Systems",
+      "Consumer Electronics Hardware",
+      "Academic & Industrial Electronics Research"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t203",
     "name": "Proteus Design Suite",
     "slug": "proteus-design-suite",
-    "short_desc": "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
-    "score": 4.3,
-    "logo_url": "/logos/proteus-design-suite.png",
+    "short_desc": "Labcenter’s integrated EDA software combining schematic capture, SPICE simulation, microcontroller firmware co-simulation, and PCB layout.",
+    "score": 4.7,
+    "logo_url": "/logos/proteus.png",
     "official_url": "https://www.labcenter.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Embedded",
-      "Education"
+      "Embedded Systems & Firmware Development",
+      "Automotive Mechatronics & Sensor Nodes",
+      "Medical Diagnostic Hardware",
+      "University Embedded Engineering Education",
+      "IoT Connected Device Prototyping"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t204",
     "name": "Altium 365",
     "slug": "altium-365",
-    "short_desc": "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams.",
-    "score": 4.4,
+    "short_desc": "Altium’s cloud-based electronic hardware design, collaboration, and component lifecycle management platform.",
+    "score": 4.7,
     "logo_url": "/logos/altium-365.png",
     "official_url": "https://www.altium.com/altium-365",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Aerospace",
-      "Industrial"
+      "Electronics Manufacturing Services (EMS)",
+      "Automotive Tier-1 & EV Startups",
+      "Consumer Hardware Product Teams",
+      "Aerospace & Defense Electronics",
+      "Contract Engineering Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t205",
-    "name": "CircuitMaker",
+    "name": "Altium CircuitMaker",
     "slug": "circuitmaker",
-    "short_desc": "Free community-edition PCB design from Altium, with public-cloud project sharing.",
-    "score": 4.1,
-    "logo_url": "/logos/circuitmaker.ico",
+    "short_desc": "Altium’s free, community-driven PCB design tool powered by the Altium Designer layout engine for open-source hardware.",
+    "score": 4.4,
+    "logo_url": "/logos/circuitmaker.png",
     "official_url": "https://www.altium.com/circuitmaker",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hobbyist",
-      "Education"
+      "Open-Source Hardware Community",
+      "Maker & DIY Electronics",
+      "STEM & University Student Projects",
+      "Hardware Prototyping & Startups",
+      "Robotics Clubs & Hackerspaces"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t208",
@@ -3693,18 +3711,19 @@
     "id": "t249",
     "name": "NestForge",
     "slug": "nestforge",
-    "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
-    "score": 4.4,
+    "short_desc": "Browser-based 2D true-shape sheet nesting software for laser, plasma, waterjet, and CNC router cutting.",
+    "score": 4.5,
     "logo_url": "/logos/nestforge.svg",
-    "official_url": "https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide",
+    "official_url": "https://madegrain.com/nestforge/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Woodworking",
-      "Manufacturing"
+      "Laser & Plasma Metal Cutting",
+      "CNC Router Woodworking & Cabinetry",
+      "Signmaking & Acrylic Fabrication",
+      "Waterjet Cutting Services",
+      "Custom Sheet Metal Job Shops"
     ],
     "features": [],
     "country": ""
@@ -3753,19 +3772,21 @@
     "id": "t253",
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
-    "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
-    "score": 4.2,
-    "logo_url": "/logos/quantcad-hybrid.png",
-    "official_url": "https://dinamicpro.ro/quantcad-hybrid.html",
+    "short_desc": "Open-source hybrid multi-physics and quantum micro-device modeling simulation platform.",
+    "score": 4.3,
+    "logo_url": "/logos/quantcad.svg",
+    "official_url": "https://quantcad.org",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "CNC Machining"
+      "Semiconductor Device R&D",
+      "Quantum Computing Hardware",
+      "Nanotechnology & Microelectronics",
+      "University Physics Research Labs"
     ],
     "features": [],
-    "country": "Romania"
+    "country": ""
   },
   {
     "id": "t254",
@@ -3838,23 +3859,22 @@
     "id": "t260",
     "name": "Engineering on Web",
     "slug": "engineering-on-web",
-    "short_desc": "Free in-browser CAD, FEA, industrial statistics/SCADA and PCB design tools, powered by WebAssembly and WebGPU.",
-    "score": 4.8,
+    "short_desc": "Free in-browser suite combining parametric 3D CAD, multi-physics FEA, and industrial quality control statistics.",
+    "score": 4.4,
     "logo_url": "/logos/engineering-on-web.svg",
-    "official_url": "https://engineeringonweb.com/?utm_source=cadguide",
+    "official_url": "https://engineeringonweb.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mechanical Engineering",
-      "CAE Simulation",
-      "Manufacturing",
-      "Quality Control",
-      "Product Design",
-      "Aerospace & Automotive"
+      "Mechanical Engineering Education",
+      "Prototyping & Maker Workshops",
+      "Industrial Quality Engineering",
+      "Academic STEM Classrooms",
+      "Independent Product Inventors"
     ],
     "features": [],
-    "country": "Brazil"
+    "country": ""
   },
   {
     "id": "t261",

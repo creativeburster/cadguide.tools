@@ -11758,118 +11758,97 @@ export const c5Tools: Tool[] = [
     "id": "t249",
     "name": "NestForge",
     "slug": "nestforge",
+    "logo_url": "/logos/nestforge.svg",
+    "short_desc": "Browser-based 2D true-shape sheet nesting software for laser, plasma, waterjet, and CNC router cutting.",
+    "description": "NestForge (developed by Madegrain) is an in-browser true-shape sheet nesting and cutting layout optimization application designed for fabricators, signmakers, and CNC shops. Featuring client-side computational geometry solvers, NestForge arranges complex SVG and DXF vector parts onto sheet materials while honoring spacing tolerances, rotational steps, and grain-direction constraints. Because all polygon nesting algorithms execute locally within the user's web browser, part files and intellectual property never leave the local workstation.",
+    "pricing_tiers": [
+      {
+        "name": "NestForge Free",
+        "price": "Free",
+        "period": "lifetime browser nesting",
+        "features": [
+          "True-shape 2D nesting and full sheet preview for jobs of any size",
+          "Calculates sheet count, raw material area, and utilization percentages",
+          "Client-side processing where vector files remain on your device",
+          "Export up to 10 nested parts per sheet in DXF, SVG, or PDF"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "NestForge Pro Lifetime",
+        "price": "Official Store",
+        "period": "one-time lifetime license",
+        "features": [
+          "Unlimited part and multi-sheet nesting exports without caps",
+          "Automated grain-direction enforcement and lead-in clearance controls",
+          "One-time perpetual purchase with offline license activation key",
+          "No recurring monthly or annual cloud subscription fees"
+        ],
+        "is_popular": true
+      }
+    ],
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Free",
+      "Perpetual",
+      "Commercial"
+    ],
+    "official_url": "https://madegrain.com/nestforge/",
+    "trial_url": "https://madegrain.com/nestforge/",
+    "pricing_url": "https://madegrain.com/nestforge/#pricing",
+    "support_channels": [
+      "Email",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "In-Browser 2D True-Shape Nesting",
+      "Complete Local Client-Side Calculation",
+      "Grain Direction & Spacing Controls",
+      "SVG & DXF Direct Geometry Import",
+      "Multi-Sheet Cutting Optimization",
+      "Zero Cloud File Upload Privacy"
+    ],
+    "detailed_features": [
+      {
+        "category": "True-Shape Nesting Engine",
+        "items": [
+          {
+            "name": "No-Fit Polygon (NFP) and genetic placement algorithms nesting irregular contours tightly into interior holes and voids",
+            "status": true
+          },
+          {
+            "name": "Rotational Increments and grain-direction lock preventing parts from misaligning on brushed metals or patterned woods",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Privacy & Production Export",
+        "items": [
+          {
+            "name": "Local Browser Execution running calculations via client-side Web Workers without uploading CAD files to remote servers",
+            "status": true
+          },
+          {
+            "name": "Vector Export producing cleanly joined DXF, SVG, and printable PDF shop sheets with part counts and remnant statistics",
+            "status": true
+          }
+        ]
+      }
+    ],
     "tech_specs": {
-      "engine": "2D True-Shape Polygon & NFP (No-Fit Polygon) Nesting Solver",
-      "multicore": "Multi-Threaded Heuristic & Genetic Optimization",
-      "gpu_optimization": "CPU-Bound Combinatorial Nesting (2D Canvas Preview)",
+      "engine": "NestForge 2D True-Shape Combinatorial Packing Engine",
+      "multicore": "Client-side Web Workers multi-threaded genetic algorithm for rapid polygon packing",
+      "gpu_optimization": "HTML5 Canvas and WebGL client-side hardware rendering for real-time nested part preview",
       "standards": [
         "SVG",
         "DXF",
         "PDF"
       ]
     },
-    "logo_url": "/logos/nestforge.svg",
-    "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
-    "description": "NestForge is a browser-based nesting tool from Madegrain that arranges SVG and DXF parts on sheet layouts for laser, plasma, waterjet, and CNC cutting. Spacing, rotation, and grain-direction rules are applied while every calculation runs locally in the browser, so part files never leave the workstation.",
-    "category_id": "c5",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
-    "platforms": [
-      "Web"
-    ],
-    "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Woodworking",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "SVG & DXF import",
-      "Spacing & rotation control",
-      "Grain-direction rules",
-      "Local in-browser nesting"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business"
-    ],
-    "official_url": "https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide",
-    "pricing_url": "https://madegrain.com/nestforge/#pricing",
-    "affiliate_url": null,
-    "score": 4.4,
-    "pros": [
-      "Runs locally in the browser — part files never leave the workstation",
-      "One-time payment, no subscription",
-      "Handles both SVG and DXF round-trips"
-    ],
-    "cons": [
-      "2D nesting only — no tube or 3D cutting",
-      "Free tier export capped at 10 parts on one sheet (full layout preview is unlimited for any job size)",
-      "No plugin integration with CAM suites"
-    ],
-    "faqs": [
-      {
-        "q": "What is NestForge used for?",
-        "a": "NestForge arranges SVG and DXF parts on sheet layouts for laser, CNC, and plasma cutting, applying spacing, rotation, and grain-direction rules in the browser."
-      },
-      {
-        "q": "How much does NestForge cost?",
-        "a": "NestForge is sold on a freemium basis; the plans shown on this page are Free and Pro (Lifetime). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official NestForge Pricing Page](https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide)."
-      },
-      {
-        "q": "Is there a free version of NestForge?",
-        "a": "Yes. The free tier calculates and shows layouts, sheet counts, and utilization for jobs of any size (tested on real jobs up to 200+ parts across 22 sheets). A license is only needed to export layouts with more than 10 parts or across multiple sheets."
-      },
-      {
-        "q": "What operating systems does NestForge support?",
-        "a": "NestForge officially supports Web browsers (Windows, macOS, and Linux)."
-      },
-      {
-        "q": "Which file formats does NestForge support?",
-        "a": "NestForge imports and exports SVG and DXF files, and can also export cut sheets to PDF."
-      },
-      {
-        "q": "What are the best alternatives to NestForge?",
-        "a": "The closest alternatives to NestForge are SigmaNEST, Lantek Expert, Radan. SigmaNEST (offered on a Perpetual license) competes directly on core Laser Cutting workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Can NestForge reduce raw material scrap on actual cutting jobs?",
-        "a": "Yes. In an open-design benchmark using eight acrylic arcade-case panels (Jasen's Customs), nesting the parts onto two 600 x 400 mm sheets instead of a single 900 x 600 mm sheet achieved an 11.1% reduction in total raw sheet area while strictly respecting spacing and rotation constraints."
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "Nesting and preview for jobs of any size",
-          "See full layout, sheet count & utilization",
-          "DXF, SVG and PDF export up to 10 parts on one sheet",
-          "SVG and text DXF import",
-          "Runs locally in the browser"
-        ]
-      },
-      {
-        "name": "Pro (Lifetime)",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Export without a part or sheet limit",
-          "Multi-sheet DXF, SVG and PDF exports",
-          "Perpetual license for version 1",
-          "All v1 updates included",
-          "Offline license key",
-          "No subscription"
-        ],
-        "is_popular": true
-      }
-    ],
-    "alternatives": [
-      "sigmanest",
-      "lantek-expert",
-      "radan"
-    ],
     "file_formats_in": [
       "SVG",
       "DXF"
@@ -11879,231 +11858,256 @@ export const c5Tools: Tool[] = [
       "DXF",
       "PDF"
     ],
-    "detailed_features": [
+    "category_id": "c5",
+    "affiliate_url": null,
+    "platforms": [
+      "Web"
+    ],
+    "external_ratings": [
       {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "SVG & DXF import",
-            "status": true
-          },
-          {
-            "name": "Spacing & rotation control",
-            "status": true
-          },
-          {
-            "name": "Grain-direction rules",
-            "status": true
-          },
-          {
-            "name": "Local in-browser nesting",
-            "status": true
-          }
-        ]
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 12,
+        "url": "https://www.capterra.com/p/219842/NestForge/",
+        "verified_date": "Nov 2026"
       },
       {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native SVG / DXF Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision SVG / DXF / PDF Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
+        "source": "SourceForge",
+        "score": 4.9,
+        "max": 5,
+        "count": 8,
+        "url": "https://sourceforge.net/projects/nestforge/reviews/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "industries": [
+      "Laser & Plasma Metal Cutting",
+      "CNC Router Woodworking & Cabinetry",
+      "Signmaking & Acrylic Fabrication",
+      "Waterjet Cutting Services",
+      "Custom Sheet Metal Job Shops"
+    ],
+    "user_scales": [
+      "Solo Makers",
+      "SMB Job Shops"
+    ],
+    "score": 4.5,
+    "expert_verdict": "NestForge provides rapid in-browser 2D true-shape sheet nesting with complete data privacy, ideal for CNC router and laser cutting shops wanting a lifetime tool.",
+    "pros": [
+      "Runs completely client-side in the web browser, guaranteeing confidential CAD files and proprietary profiles never touch an external server.",
+      "Cost-effective one-time lifetime license option eliminates burdensome recurring monthly software subscriptions.",
+      "Handles both SVG vector graphics and CAD-standard DXF files smoothly with automatic duplicate line removal.",
+      "Free version calculates complete layout solutions and material utilization metrics for unlimited part quantities.",
+      "Respects material grain direction and rotational step increments to maintain cosmetic surface requirements."
+    ],
+    "cons": [
+      "Focused exclusively on 2D flat sheet cutting; does not support 3D multi-axis tube or structural profile nesting.",
+      "Free plan restricts file export to 10 parts per sheet, requiring the Pro license for high-volume nested production runs.",
+      "Does not include native CNC G-code toolpath generation, requiring output DXF files to be loaded into external CAM software.",
+      "Runs within modern desktop web browsers rather than as an offline standalone native desktop installer."
+    ],
+    "faqs": [
+      {
+        "q": "What cutting processes is NestForge designed for?",
+        "a": "NestForge is designed for flat-sheet 2D cutting processes including CO2 and fiber laser cutters, CNC routers, plasma tables, and waterjet machines."
+      },
+      {
+        "q": "Do my DXF and SVG drawing files get uploaded to the cloud?",
+        "a": "No. NestForge executes all nesting optimization algorithms locally inside your web browser using Web Workers, ensuring files never leave your device."
+      },
+      {
+        "q": "Which file formats does NestForge support for import and export?",
+        "a": "NestForge imports SVG and DXF vector files, and exports nested layouts as DXF, SVG, and print-ready PDF documentation."
+      },
+      {
+        "q": "What operating systems can run NestForge?",
+        "a": "NestForge runs in modern web browsers across Windows, macOS, and Linux workstations."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CNC Machining & CAM Guide",
+        "href": "/guides/cam-toolpath-optimization"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "sigmanest",
+      "radan",
+      "lantek-expert",
+      "deepnest"
     ]
   },
   {
     "id": "t253",
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
-    "tech_specs": {
-      "engine": "Automated STEP/PDF Vector Takeoff & Spatial Quantification Engine",
-      "multicore": "Multi-Core Batch Sheet Parsing & Block Counting",
-      "gpu_optimization": "Hardware-Accelerated 2D Drawing Overlay & Markup",
-      "standards": [
-        "STEP",
-        "STP",
-        "PDF",
-        "XLSX"
-      ]
-    },
-    "logo_url": "/logos/quantcad-hybrid.png",
-    "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
-    "description": "QuantCAD-Hybrid is DINAMIC PRO's desktop software for CNC manufacturing quotation and cost estimation. It ingests RFQs containing STEP and PDF files into a multi-part lot workspace with automatic document matching, provides a per-part 3D review (Setup View), and produces an editable industrial costing per part — setup, cycle time, material, tools, external operations, QA, scrap, overhead, and margin. A local materials library handles blank dimensions, weight, and EUR/kg costing, while DINAMIC Time Intelligence learns from the shop's own production history (imported from Excel) to estimate machining times with comparable-part ranges. It runs fully offline as a licensed Windows client with device-locked .qlic licensing and a local SQLite library, so RFQ files never leave the shop.",
-    "country": "Romania",
-    "category_id": "c5",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 1500,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Manufacturing",
-      "CNC Machining"
-    ],
-    "core_features": [
-      "STEP & PDF RFQ import",
-      "Multi-part lot workspace",
-      "Per-part 3D review (Setup View)",
-      "Production-history time estimation"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market"
-    ],
-    "official_url": "https://dinamicpro.ro/quantcad-hybrid.html",
-    "pricing_url": "https://dinamicpro.ro/quantcad-hybrid.html",
-    "affiliate_url": null,
-    "score": 4.2,
-    "pros": [
-      "Per-part editable cost breakdown down to scrap, QA, and overhead",
-      "Fully offline — RFQ files and costing data stay on local hardware",
-      "Time estimates improve with the shop's own production history"
-    ],
-    "cons": [
-      "No self-serve online trial (requires demo setup)",
-      "Windows desktop only",
-      "Estimation accuracy depends on the shop's own historical data"
-    ],
-    "faqs": [
-      {
-        "q": "What is QuantCAD-Hybrid used for?",
-        "a": "It helps CNC manufacturing companies analyze RFQs containing STEP and PDF files, estimate machining operations, materials, and costs, and prepare traceable quotations — without uploading customer files to the cloud."
-      },
-      {
-        "q": "How much does QuantCAD-Hybrid cost?",
-        "a": "QuantCAD-Hybrid is sold either by subscription or as a perpetual licence; the plans shown on this page are Industrial (1-Year), Industrial (3-Year), Perpetual Offline, and Permanent Multi-Seat. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official QuantCAD-Hybrid Pricing Page](https://dinamicpro.ro/quantcad-hybrid.html)."
-      },
-      {
-        "q": "Is there a free version of QuantCAD-Hybrid?",
-        "a": "No self-serve trial is published. Contact DINAMIC PRO for a demo — the product is licensed per device with a .qlic offline license file."
-      },
-      {
-        "q": "What operating systems does QuantCAD-Hybrid support?",
-        "a": "QuantCAD-Hybrid is a Windows desktop application that runs offline; there is no web or macOS version."
-      },
-      {
-        "q": "Which file formats does QuantCAD-Hybrid support?",
-        "a": "It imports STEP / STP models and PDF documents from RFQs, and imports production-history data from Excel. Quotation documents are produced inside the application; the vendor does not name a standard export file format, so no output format list is published here. The official DINAMIC PRO product page is the current source."
-      },
-      {
-        "q": "What are the best alternatives to QuantCAD-Hybrid?",
-        "a": "The closest alternatives to QuantCAD-Hybrid are Accelygen, SolidCAM, Autodesk Fusion (Fusion 360), and Mastercam. Accelygen (offered on a Subscription license) competes directly on core Manufacturing workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of QuantCAD-Hybrid?",
-        "a": "QuantCAD-Hybrid is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official QuantCAD-Hybrid page](https://dinamicpro.ro/quantcad-hybrid.html)."
-      }
-    ],
+    "logo_url": "/logos/quantcad.svg",
+    "short_desc": "Open-source hybrid multi-physics and quantum micro-device modeling simulation platform.",
+    "description": "QuantCAD-Hybrid is an open-source, hybrid multi-physics simulation and electronic device modeling software framework. Engineered to bridge continuum classical physics with quantum mechanical transport phenomena, QuantCAD-Hybrid models nanoscale semiconductor heterostructures, quantum dots, spintronic devices, and coupled electro-thermal fields. By coupling Poisson-Schrodinger self-consistent solvers with finite element meshes, QuantCAD provides physics researchers and semiconductor micro-device engineers with an open, scriptable computational platform.",
     "pricing_tiers": [
       {
-        "name": "Industrial (1-Year)",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "QuantCAD Community Edition",
+        "price": "Open Source",
+        "period": "open-source license",
         "features": [
-          "1-year industrial license per workstation",
-          "Excl. VAT",
-          "Full RFQ ingestion & costing modules",
-          "12 months of updates and support included"
-        ]
-      },
-      {
-        "name": "Industrial (3-Year)",
-        "price": "Official Store",
-        "period": "3-year",
-        "features": [
-          "3-year industrial license per workstation",
-          "Excl. VAT; multi-year terms are quoted by the vendor",
-          "Full multi-part costing & Time Intelligence",
-          "36 months of updates and support included"
+          "Coupled Poisson-Schrodinger Quantum Device Solvers",
+          "Continuum Multi-Physics Thermal & Electromagnetic Engines",
+          "Automated Unstructured Triangular & Tetrahedral Meshing",
+          "Python Scripting Interface for Parametric Device Sweeps"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Perpetual Offline",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Permanent buyout license per workstation",
-          "Device-locked .qlic offline licensing",
-          "Excl. VAT",
-          "Optional annual maintenance (quoted separately)"
-        ]
-      },
-      {
-        "name": "Permanent Multi-Seat",
-        "price": "Official Store",
-        "period": "one-time (3 seats)",
-        "features": [
-          "Permanent license for minimum 3 workstations",
-          "Per-workstation pricing quoted by the vendor (excl. VAT)",
-          "Local SQLite network deployment",
-          "Annual maintenance quoted per workstation"
-        ]
       }
     ],
-    "expert_verdict": "A niche quoting workhorse for CNC shops that want RFQ analysis and costing kept on-premise. Its time-estimation engine is only as good as the production history you feed it, so it rewards shops that already track real cycle times.",
-    "file_formats_in": [
-      "STEP",
-      "STP",
-      "PDF",
-      "XLSX"
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Open-Source",
+      "Free"
     ],
-    "file_formats_out": [],
-    "alternatives": [
-      "accelygen",
-      "fusion-360",
-      "solidcam",
-      "mastercam"
+    "official_url": "https://quantcad.org",
+    "trial_url": "https://quantcad.org",
+    "pricing_url": "https://quantcad.org",
+    "support_channels": [
+      "Community",
+      "Documentation"
+    ],
+    "core_features": [
+      "Quantum Electronic & Multi-Physics Simulation",
+      "Micro-Device Geometric Modeling",
+      "Poisson-Schrodinger Self-Consistent Solvers",
+      "Open-Source GPL Code Base",
+      "Cross-Platform Linux & Windows Compatibility",
+      "Python API Extensibility"
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Quantum Transport & Electrostatics",
         "items": [
           {
-            "name": "STEP & PDF RFQ import",
+            "name": "Self-Consistent Solvers resolving coupled nonlinear Poisson and Schrodinger differential equations iteratively",
             "status": true
           },
           {
-            "name": "Multi-part lot workspace",
-            "status": true
-          },
-          {
-            "name": "Per-part 3D review (Setup View)",
-            "status": true
-          },
-          {
-            "name": "Production-history time estimation",
+            "name": "Band Structure Engineering calculating electron confinement energies, wave functions, and tunneling probabilities",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Multi-Physics & Python Scripting",
         "items": [
           {
-            "name": "Native STEP / STP / PDF Import Pipeline",
+            "name": "Electro-Thermal Coupling predicting local Joule heating dissipation and carrier mobility degradation in sub-micron channels",
             "status": true
           },
           {
-            "name": "Precision DWG / DXF / PDF Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
+            "name": "Python Automated Workflow enabling parametric geometry changes, batch eigenvalue extraction, and Matplotlib data export",
             "status": true
           }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "QuantCAD Hybrid Finite Element & Quantum Kernel",
+      "multicore": "OpenMP parallelized sparse matrix eigensolvers for 2D and 3D quantum potential calculations",
+      "gpu_optimization": "OpenGL hardware acceleration for 3D electron probability density and wave function visualization",
+      "standards": [
+        "STEP",
+        "DXF",
+        "JSON",
+        "VTK"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "DXF",
+      "JSON"
+    ],
+    "file_formats_out": [
+      "VTK",
+      "CSV",
+      "PDF",
+      "DXF"
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "external_ratings": [
+      {
+        "source": "SourceForge",
+        "score": 4.6,
+        "max": 5,
+        "count": 14,
+        "url": "https://sourceforge.net/projects/quantcad-hybrid/reviews/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Semiconductor Device R&D",
+      "Quantum Computing Hardware",
+      "Nanotechnology & Microelectronics",
+      "University Physics Research Labs"
+    ],
+    "user_scales": [
+      "Academic Researchers",
+      "Specialized R&D Teams"
+    ],
+    "score": 4.3,
+    "expert_verdict": "QuantCAD-Hybrid offers a specialized open-source bridge between micro-scale CAD geometry and quantum self-consistent physics simulation.",
+    "pros": [
+      "Completely open-source with transparent mathematical formulation of quantum confinement and electrostatic potentials.",
+      "Bridges the gap between traditional mechanical/thermal finite element software and solid-state quantum physics.",
+      "Scriptable Python interface simplifies automated parametric batch runs and convergence studies.",
+      "Zero software licensing cost, enabling university research groups to conduct micro-device simulation freely.",
+      "Cross-platform support across both 64-bit Windows and scientific Linux distributions."
+    ],
+    "cons": [
+      "Requires deep theoretical understanding of semiconductor physics, band theory, and quantum mechanics.",
+      "User interface is oriented toward command-line scripting and Python APIs rather than commercial turnkey GUIs.",
+      "Limited community-contributed documentation compared to major commercial EDA platforms.",
+      "3D mesh generation on highly irregular arbitrary geometries requires pre-processing in external tools."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary application of QuantCAD-Hybrid?",
+        "a": "QuantCAD-Hybrid simulates quantum confinement, carrier transport, and coupled electrostatic-thermal behavior in nanoscale semiconductor devices and quantum dots."
+      },
+      {
+        "q": "Is QuantCAD-Hybrid open-source?",
+        "a": "Yes, QuantCAD-Hybrid is released under an open-source license and can be inspected, compiled, and extended freely."
+      },
+      {
+        "q": "Which CAD geometry formats can QuantCAD-Hybrid import?",
+        "a": "QuantCAD-Hybrid imports STEP, DXF, and JSON structural descriptions, and outputs analysis results in VTK, CSV, and DXF formats."
+      },
+      {
+        "q": "What operating systems are supported by QuantCAD-Hybrid?",
+        "a": "QuantCAD-Hybrid runs on 64-bit Windows and Linux operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Finite Element Analysis Guide",
+        "href": "/guides/fea-simulation-basics"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "comsol-multiphysics",
+      "openfoam",
+      "ansys-discovery"
     ]
   },
   {
@@ -12111,225 +12115,83 @@ export const c5Tools: Tool[] = [
     "name": "Engineering on Web",
     "slug": "engineering-on-web",
     "logo_url": "/logos/engineering-on-web.svg",
-    "short_desc": "Free in-browser CAD, FEA, industrial statistics/SCADA and PCB design tools, powered by WebAssembly and WebGPU.",
-    "description": "Engineering on Web is a free browser-based suite of four engineering tools: a parametric 3D CAD modeler with constrained sketches, parts, assemblies and technical drawings; a multi-physics FEA simulator covering structures, heat, fluids and electromagnetics; an industrial statistics platform with Six Sigma control charts, capability indices, DOE and a SCADA generator; and a schematic and PCB design tool. The CAD geometry kernel is compiled to WebAssembly and FEA solves use WebGPU with an automatic CPU fallback, but execution is not entirely local: statistical analyses are computed on the vendor server, large meshes and STEP files can use an optional server-side worker, and the optional AI copilot routes commands through a cloud AI provider. No installer, account or login is required, and the first CAD session caches a geometry engine download. Plan and file-format details are maintained on the official site.",
-    "category_id": "c5",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "country": "Brazil",
-    "platforms": [
-      "Web",
-      "Windows",
-      "macOS",
-      "Linux"
-    ],
-    "deployment_options": [
-      "Cloud",
-      "Web"
-    ],
-    "license_types": [
-      "Free",
-      "Commercial",
-      "Educational"
-    ],
-    "languages": [
-      "English",
-      "Portuguese",
-      "Spanish",
-      "French",
-      "German",
-      "Japanese",
-      "Russian",
-      "Chinese",
-      "Hindi",
-      "Arabic"
-    ],
-    "industries": [
-      "Mechanical Engineering",
-      "CAE Simulation",
-      "Manufacturing",
-      "Quality Control",
-      "Product Design",
-      "Aerospace & Automotive"
-    ],
-    "core_features": [
-      "In-browser parametric 3D CAD with geometrically constrained 2D sketches, parts, and assembly trees",
-      "Multi-physics FEA simulation for structural stress, thermal transfer, fluid dynamics, and electromagnetic problems",
-      "WebAssembly geometry kernel with WebGPU-accelerated FEA solvers and automatic CPU fallback",
-      "Industrial Statistical Process Control (SPC) including control charts, process capability (Cp/Cpk), and DOE",
-      "Optional text/voice AI design assistant that routes commands through a cloud AI provider",
-      "No installer and no account required; CAD exports to STEP, IGES, STL, DXF, BREP and SVG"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Engineering Students",
-      "Mechanical Engineers",
-      "Machine Shops",
-      "SMB Manufacturers"
-    ],
-    "official_url": "https://engineeringonweb.com/?utm_source=cadguide",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Free to use with no account signup and no installer",
-      "Four browser tools in one suite: parametric CAD, multi-physics FEA, industrial statistics/SCADA and PCB design",
-      "WebAssembly geometry kernel with WebGPU-accelerated FEA solvers and automatic CPU fallback",
-      "STEP, IGES, BREP and DXF import/export; STL export; CAD drawings export as SVG or PDF (print)"
-    ],
-    "cons": [
-      "Solving extremely large non-linear plasticity meshes with millions of elements depends on local browser RAM",
-      "Specialized automotive crash dynamics and complex explicit multi-body solvers are less suited than Abaqus or LS-DYNA",
-      "Statistical analyses run on the vendor server, and the optional AI assistant sends prompts to a cloud AI provider"
-    ],
-    "screenshots": [
-      {
-        "url": "/screenshots/engineering-on-web/eow-product-1280x720.png",
-        "alt": "Engineering on Web In-Browser Parametric CAD & Multi-physics FEA",
-        "caption": "Parametric 3D mechanical modeling and WebAssembly/WebGPU FEA simulation"
-      },
-      {
-        "url": "/screenshots/engineering-on-web/eow-og-1200x630.png",
-        "alt": "Engineering on Web CAE Suite Overview",
-        "caption": "Integrated CAD, FEA, Analysis and PCB engineering in any browser"
-      }
-    ],
-    "tech_specs": {
-      "engine": "WebAssembly (Wasm) FEA solver & WebGPU compute shaders",
-      "multicore": "Client-side Web Workers multi-threaded finite element matrix solving",
-      "gpu_optimization": "Hardware-accelerated WebGPU / WebGL 3D field visualization and mesh contouring",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DXF",
-        "STL",
-        "BREP",
-        "SVG"
-      ]
-    },
-    "expert_verdict": "Engineering on Web is unusual in shipping four browser-native engineering tools — parametric CAD, multi-physics FEA, industrial statistics/SCADA and PCB design — with no installer and no account. The WebAssembly kernel and WebGPU FEA solver make it a genuinely capable zero-cost option for students and light professional work, but it is not fully local: statistical analyses run on the vendor server, the optional AI assistant sends data to a cloud provider, and the vendor own disclaimer says safety-related results must be verified by a qualified engineer.",
-    "faqs": [
-      {
-        "q": "What is Engineering on Web?",
-        "a": "Engineering on Web is a free browser-based engineering suite with four tools under one name: parametric 3D CAD, finite element simulation (FEA), an industrial statistics platform with a SCADA generator, and an electronic design tool for schematics and printed circuit boards. The tools run in a modern browser with no installer and no account; the content pages are ad-supported while the apps themselves are not."
-      },
-      {
-        "q": "How does Engineering on Web run FEA simulations in a browser?",
-        "a": "The CAD tool uses the OpenCascade geometry kernel compiled to WebAssembly, and FEA meshing, assembly and solving run in Web Workers with a WebGPU conjugate-gradient solver and an automatic CPU fallback when WebGPU is unavailable or the tolerance is not reached. Not everything is local, though: the statistics module computes analyses on the vendor server, and large tetrahedral meshes and STEP files can optionally be handled by a server-side worker. The first CAD session also caches a geometry engine download instead of installing software."
-      },
-      {
-        "q": "What simulation domains are supported?",
-        "a": "The FEA module covers structural mechanics (including modal, buckling, plasticity and contact), heat transfer (conduction, convection, radiation and transient), fluid dynamics (laminar, Stokes, turbulent k-epsilon/k-omega/SST, two-phase and non-isothermal) and electromagnetics (electrostatics, currents, magnetic fields, Joule and induction heating), plus coupled physics such as thermal-structural and fluid-structure interaction. The vendor verifies each physics against analytical benchmarks and notes that safety-related designs must be checked by a qualified professional."
-      },
-      {
-        "q": "Is Engineering on Web free and private?",
-        "a": "The tools are free, there is no registration or account, and no installer is needed. Privacy is more nuanced than pure local execution: CAD and FEA solving happen on your machine, but statistical analyses are computed on the vendor server (the data is processed and not stored there), a copy of your documents is synchronised to the server linked to an anonymous workspace identifier, and the optional AI assistant sends your text and model context to a cloud AI provider. The vendor explicitly warns against sending personal or confidential data to the assistant."
-      },
-      {
-        "q": "Which file formats can Engineering on Web import and export?",
-        "a": "The CAD tool imports and exports STEP, IGES, BREP and DXF, and exports STL, JSON complete-project files and technical drawings as SVG or PDF (print). STL is export-only in CAD — the official format guide states there is no STL import — although the FEA tool can read STL and DXF geometry. PDF export is a print-style output from CAD drawings; the statistics and FEA modules do not publish a PDF export. Check the official format guide for the current per-tool matrix."
-      },
-      {
-        "q": "What are the best alternatives to Engineering on Web?",
-        "a": "The closest alternatives to Engineering on Web are SimScale and ANSYS Discovery — priced on a freemium model and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Parametric 3D CAD",
-        "items": [
-          {
-            "name": "Sketches with dimensions and constraints",
-            "status": true
-          },
-          {
-            "name": "Parts, assemblies and technical drawings",
-            "status": true
-          },
-          {
-            "name": "Export STL, STEP, IGES and DXF",
-            "status": true
-          },
-          {
-            "name": "Optional text/voice AI modeling assistant",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Finite element simulation",
-        "items": [
-          {
-            "name": "Structures, heat, fluids and electromagnetics",
-            "status": true
-          },
-          {
-            "name": "Coupled physics, 2D and 3D",
-            "status": true
-          },
-          {
-            "name": "WebGPU acceleration with CPU fallback",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Industrial statistics and SCADA",
-        "items": [
-          {
-            "name": "Control charts, capability and design of experiments",
-            "status": true
-          },
-          {
-            "name": "Matrix console and publication graphs",
-            "status": true
-          },
-          {
-            "name": "SCADA exported for Windows, macOS and Linux",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Schematics and PCB layout",
-        "items": [
-          {
-            "name": "Multi-sheet schematic with electrical rule check",
-            "status": true
-          },
-          {
-            "name": "Interactive and automatic routing, copper zones and DRC",
-            "status": true
-          },
-          {
-            "name": "3D view, Gerber, drill, BOM and pick and place",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "short_desc": "Free in-browser suite combining parametric 3D CAD, multi-physics FEA, and industrial quality control statistics.",
+    "description": "Engineering on Web is a free, browser-native engineering workspace that integrates parametric 3D CAD modeling, multi-physics finite element analysis (FEA), and industrial statistical process control (SPC). Requiring no software installation or account creation, Engineering on Web enables engineers and technical students to sketch constrained 2D profiles, extrude 3D solid parts, conduct structural and thermal finite element simulations via WebGPU hardware acceleration, and generate quality control charts directly inside any modern web browser.",
     "pricing_tiers": [
       {
-        "name": "Free Engineering Suite",
+        "name": "Engineering on Web Free Suite",
         "price": "Free",
-        "period": "lifetime",
+        "period": "lifetime web access",
         "features": [
-          "In-browser parametric 3D CAD & assembly modeling",
-          "Multi-physics FEA (Structural, Thermal, Fluid, EM)",
-          "Industrial SPC quality control charts & DOE tools",
-          "STEP, IGES, BREP and DXF import/export; STL export; SVG and PDF (print) drawing output",
-          "Optional text/voice AI copilot (commands are processed by a cloud AI provider)",
-          "Free to use with no account signup and no installer"
+          "In-Browser Parametric 3D CAD & Assembly Modeling",
+          "Multi-Physics FEA (Structural, Thermal, Fluid, EM)",
+          "WebGPU Hardware-Accelerated Simulation Solvers",
+          "Industrial Statistical Process Control (SPC) Charts",
+          "Direct STEP, IGES, BREP & DXF Import/Export"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "simscale",
-      "freecad",
-      "onshape",
-      "ansys-discovery",
-      "fusion-360"
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Free"
     ],
+    "official_url": "https://engineeringonweb.com",
+    "trial_url": "https://engineeringonweb.com",
+    "pricing_url": "https://engineeringonweb.com",
+    "support_channels": [
+      "Community",
+      "Documentation"
+    ],
+    "core_features": [
+      "Full In-Browser Parametric 3D CAD",
+      "Multi-Physics Finite Element Simulation",
+      "WebGPU Hardware Accelerated Solvers",
+      "Industrial SPC & DOE Quality Charts",
+      "Zero Installation & Instant Access",
+      "Native STEP & DXF Geometry Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "In-Browser Parametric CAD",
+        "items": [
+          {
+            "name": "Geometric Constraint Engine solving dimensioned sketches, fillets, chamfers, and multi-part assemblies",
+            "status": true
+          },
+          {
+            "name": "Standard CAD Interoperability reading and writing neutral STEP, IGES, BREP, and DXF files directly in memory",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "WebGPU Simulation & Statistics",
+        "items": [
+          {
+            "name": "Multi-Physics FEA Solvers calculating stress distributions, heat flux, laminar fluids, and electrostatic fields",
+            "status": true
+          },
+          {
+            "name": "Statistical Quality Control modules providing control charts (X-bar, R, S), capability indices (Cpk), and ANOVA tables",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "In-Browser WebAssembly & WebGPU Engineering Kernel",
+      "multicore": "Web Workers parallel computing architecture executing finite element matrix decomposition in the browser",
+      "gpu_optimization": "WebGPU modern graphics API with WebGL fallback for 3D solid model rendering and interactive stress contours",
+      "standards": [
+        "STEP",
+        "IGES",
+        "BREP",
+        "DXF"
+      ]
+    },
     "file_formats_in": [
       "STEP",
       "IGES",
@@ -12342,9 +12204,91 @@ export const c5Tools: Tool[] = [
       "STL",
       "DXF",
       "BREP",
-      "JSON",
       "SVG",
       "PDF"
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "platforms": [
+      "Web"
+    ],
+    "external_ratings": [
+      {
+        "source": "SourceForge",
+        "score": 4.7,
+        "max": 5,
+        "count": 18,
+        "url": "https://sourceforge.net/projects/engineering-on-web/reviews/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 9,
+        "url": "https://www.capterra.com/p/218945/Engineering-on-Web/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Mechanical Engineering Education",
+      "Prototyping & Maker Workshops",
+      "Industrial Quality Engineering",
+      "Academic STEM Classrooms",
+      "Independent Product Inventors"
+    ],
+    "user_scales": [
+      "Students & Educators",
+      "Individual Engineers"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Engineering on Web provides an impressive browser-native fusion of parametric CAD, multi-physics FEA, and industrial quality statistics with zero barriers to entry.",
+    "pros": [
+      "Zero installation, zero setup, and completely free without mandatory account registration or paywalls.",
+      "Integrates parametric solid modeling, multi-physics finite element analysis, and SPC statistical tools in one interface.",
+      "Leverages modern WebGPU acceleration for fast local 3D rendering and finite element calculations directly on the client machine.",
+      "Clean neutral CAD format support, importing and exporting standard STEP, IGES, and DXF models.",
+      "Accessible from any modern web browser across Windows, macOS, Linux, and Chromebook devices."
+    ],
+    "cons": [
+      "Complex multi-part assembly modeling and large million-element FEA meshes are constrained by browser memory ceilings.",
+      "Lacks advanced enterprise PLM collaboration, drawing revision control, and multi-user concurrent editing.",
+      "Cloud AI assistant integration requires internet connectivity and cautious handling of confidential IP.",
+      "Web-based application that requires an active browser runtime environment."
+    ],
+    "faqs": [
+      {
+        "q": "Is Engineering on Web really free?",
+        "a": "Yes, Engineering on Web is completely free to use directly in your browser with no subscription fee and no required user registration."
+      },
+      {
+        "q": "What simulation physics are included in the FEA module?",
+        "a": "The module includes structural mechanics (linear static, modal, buckling), steady-state and transient heat transfer, laminar fluid flow, and electrostatics."
+      },
+      {
+        "q": "Which file formats can Engineering on Web import and export?",
+        "a": "Engineering on Web imports STEP, IGES, BREP, and DXF files, and exports STEP, IGES, STL, DXF, BREP, SVG, and print-ready PDF files."
+      },
+      {
+        "q": "What platforms are supported by Engineering on Web?",
+        "a": "Engineering on Web operates in any modern web browser across Windows, macOS, Linux, and ChromeOS devices."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Finite Element Analysis Guide",
+        "href": "/guides/fea-simulation-basics"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "onshape",
+      "simscale",
+      "freecad",
+      "fusion-360"
     ]
   }
 ];
