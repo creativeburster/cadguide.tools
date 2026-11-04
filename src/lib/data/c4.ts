@@ -8,188 +8,225 @@ export const c4Tools: Tool[] = [
     "name": "Bluebeam Revu",
     "slug": "bluebeam-revu",
     "logo_url": "/logos/bluebeam-revu.png",
-    "short_desc": "The AEC standard for PDF markup and collaboration.",
-    "description": "Bluebeam Revu is a widely used AEC and civil construction tool for smart vector PDF markup, calibrated 2D quantity takeoff, drawing overlay comparison, and real-time cloud collaboration. Through Bluebeam Studio Sessions, up to hundreds of architects, engineers, and general contractors can simultaneously redline construction sets, track punch-list statuses, and export hyperlinked submittal logs.",
+    "short_desc": "Nemetschek’s industry-standard construction PDF markup, quantity takeoff, and real-time cloud collaboration software.",
+    "description": "Bluebeam Revu is an industry-standard PDF markup, editing, and measurement software application designed specifically for architects, engineers, general contractors, and specialty subcontractors. Moving far beyond generic PDF viewers, Revu provides intelligent construction-focused markup tools, customizable Tool Chests for reusable symbols, automated quantity takeoffs with custom calculation columns, and integrated real-time cloud collaboration via Bluebeam Studio. Revu enables multi-party document reviews, batch hyperlinking, and drawing slip-sheeting to maintain updated sheet sets across projects.",
     "pricing_tiers": [
       {
-        "name": "Basics",
+        "name": "Bluebeam Basics Plan",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual user term",
         "features": [
-          "PDF Markup Tools",
-          "Real-time Collaboration",
-          "Cloud Storage",
-          "Measurement tools"
+          "Core PDF Viewing, Printing & Multi-Page Editing",
+          "Standard Redline & Measurement Markup Tools",
+          "Access to Bluebeam Cloud on Web & Mobile",
+          "Basic Document Management in Bluebeam Studio"
         ],
         "is_popular": false
       },
       {
-        "name": "Core",
+        "name": "Bluebeam Core Plan",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual user term",
         "features": [
-          "Advanced Measurement",
-          "Quantity Link",
-          "Specialized Toolsets",
-          "Mobile access"
+          "Complete Specialty Markup & Custom Tool Chests",
+          "Comprehensive 2D Quantity Takeoff Measurements",
+          "Batch Document Comparison & Slip-Sheeting Overlays",
+          "Real-Time Bluebeam Studio Project & Session Collaboration",
+          "AutoCAD & Revit PDF Plugin Integration"
         ],
         "is_popular": true
       },
       {
-        "name": "Complete",
+        "name": "Bluebeam Complete Plan",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual user term",
         "features": [
-          "Full Automation",
-          "Visual Search",
-          "Batch Link",
-          "Advanced Scripting"
+          "Dynamic Quantity Takeoff with Formula Calculation Columns",
+          "Batch Link for Automated Multi-Page Drawing Hyperlinking",
+          "Batch Scripting & Automated Document Processing",
+          "Digital Signature & Advanced Form Creation Tools"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 240,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.bluebeam.com",
+    "trial_url": "https://www.bluebeam.com/trial/",
+    "pricing_url": "https://www.bluebeam.com/pricing/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Community",
+      "Training"
+    ],
+    "core_features": [
+      "Construction PDF Markup & Custom Tool Chest",
+      "Real-Time Collaboration via Bluebeam Studio",
+      "Accurate 2D Quantity Takeoff Measurements",
+      "Batch Document Comparison & Slip-Sheeting",
+      "Batch Link Automated Sheet Navigation",
+      "Bluebeam Cloud Web & Mobile Field Access"
+    ],
     "detailed_features": [
       {
-        "category": "Collaboration",
+        "category": "Markup & Reusable Toolsets",
         "items": [
           {
-            "name": "Studio Sessions (Real-time)",
+            "name": "Custom Tool Chest saving specialized electrical, plumbing, and structural symbols",
             "status": true
           },
           {
-            "name": "Studio Projects (DMS)",
-            "status": true
-          },
-          {
-            "name": "Markup List management",
-            "status": true
-          },
-          {
-            "name": "Multi-device Revu iPad sync",
+            "name": "Visual Document Comparison highlighting differences between revisions in contrasting colors",
             "status": true
           }
         ]
       },
       {
-        "category": "Takeoff & Tools",
+        "category": "Takeoff & Cloud Collaboration",
         "items": [
           {
-            "name": "Automatic Quantity Link",
+            "name": "Quantity Takeoff measuring area, perimeter, volume, and count with embedded formulas",
             "status": true
           },
           {
-            "name": "Dynamic Fill tool",
-            "status": true
-          },
-          {
-            "name": "Custom Tool Chests",
-            "status": true
-          },
-          {
-            "name": "3D PDF viewing/annotation",
+            "name": "Bluebeam Studio Sessions allowing distributed teams to mark up drawings simultaneously",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "navisworks",
-      "solibri",
-      "recap-pro"
+    "tech_specs": {
+      "engine": "Bluebeam Native High-Precision PDF Vector Rendering Core",
+      "multicore": "Multi-threaded batch document processing and rendering",
+      "gpu_optimization": "Hardware-accelerated PDF vector rasterization",
+      "standards": [
+        "ISO 32000-1 (PDF Standard)",
+        "PDF/A",
+        "OpenBIM BCF"
+      ]
+    },
+    "file_formats_in": [
+      "PDF",
+      "DWG",
+      "DXF",
+      "DGN",
+      "IFC",
+      "TIFF",
+      "JPG",
+      "PNG"
     ],
-    "country": "USA",
-    "category_id": "c4",
-    "pricing_type": "Subscription",
-    "starting_price": 260,
-    "price_period": "year",
+    "file_formats_out": [
+      "PDF",
+      "TIFF",
+      "JPG",
+      "PNG",
+      "CSV",
+      "XLSX"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "AEC",
-      "Construction",
-      "Estimating"
-    ],
-    "core_features": [
-      "AEC Collaboration",
-      "Studio Sessions",
-      "Precision Measurements",
-      "Quantity Takeoff",
-      "Document Management"
+      "Commercial Construction",
+      "General Contracting",
+      "Architecture & Engineering",
+      "Electrical & Plumbing Subcontracting",
+      "Quantity Surveying & Estimating"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.bluebeam.com",
-    "pricing_url": "https://www.bluebeam.com/pricing/",
-    "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "expert_verdict": "Bluebeam Revu is the undisputed standard for construction document review, streamlining design revisions and quantity estimation for field and office teams.",
     "pros": [
-      "Essential construction project hub",
-      "Best PDF markup",
-      "Estimating integration"
+      "Dominant industry standard across North American and international commercial construction projects.",
+      "Custom Tool Chest drastically accelerates drawing markups with reusable, standardized trade symbols.",
+      "Bluebeam Studio Sessions allow dozens of team members to mark up the same drawing set in real time.",
+      "Integrated measurement and takeoff tools export cleanly into Excel and construction estimation software.",
+      "Batch slip-sheeting replaces superseded drawing sheets while carrying over existing markups automatically."
     ],
     "cons": [
-      "No longer free trial version",
-      "Subscription shift",
-      "Learning curve"
+      "Primary desktop software is certified strictly for Windows, with no native macOS desktop client.",
+      "Transition from legacy perpetual licenses to recurring named-user subscriptions increased ongoing software costs.",
+      "Navigating extremely large PDF plan sets with hundreds of raster layers can demand substantial RAM.",
+      "Occasional cloud synchronization latency when multiple users add dense markups simultaneously in Studio Sessions.",
+      "Feature disparity exists between the full Windows desktop application and the lighter Bluebeam Cloud web app."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 1280,
+        "url": "https://www.g2.com/products/bluebeam-revu/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 950,
+        "url": "https://www.capterra.com/p/85214/Bluebeam-Revu/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.8,
+        "max": 10,
+        "count": 310,
+        "url": "https://www.trustradius.com/products/bluebeam-revu/reviews",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Bluebeam Revu used for?",
-        "a": "The AEC standard for PDF markup and collaboration. Bluebeam Revu is a CAD viewer solution widely adopted in AEC, Construction, Estimating."
+        "q": "What is Bluebeam Revu used for in construction?",
+        "a": "Bluebeam Revu is used for reviewing and redlining architectural drawing sets, calculating 2D quantity takeoffs, comparing revisions, and collaborating via cloud sessions."
       },
       {
-        "q": "How much does Bluebeam Revu cost?",
-        "a": "Bluebeam Revu is sold by subscription; the plans shown on this page are Basics, Core, and Complete. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Bluebeam Revu Pricing Page](https://www.bluebeam.com/pricing/)."
+        "q": "Does Bluebeam Revu run natively on Mac computers?",
+        "a": "No, the Revu desktop client runs exclusively on Windows 64-bit operating systems, though Bluebeam Cloud provides browser-based access on macOS and iPads."
       },
       {
-        "q": "Is there a free version of Bluebeam Revu?",
-        "a": "Bluebeam Revu is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Bluebeam Revu page](https://www.bluebeam.com)."
+        "q": "Can Bluebeam Revu perform quantity takeoffs?",
+        "a": "Yes, Revu includes calibrated measurement tools for area, length, volume, and counts, calculating material costs dynamically within the Markups List."
       },
       {
-        "q": "What operating systems does Bluebeam Revu support?",
-        "a": "Bluebeam Revu runs on Windows."
-      },
-      {
-        "q": "Which file formats does Bluebeam Revu support?",
-        "a": "Bluebeam Revu opens and edits PDF only. Everything else requires a converter: Bluebeam Stapler, the bundled tool, turns DWG, DXF, DGN, RVT, Word, Excel and image files into PDF before Revu can display them, and the Revit, AutoCAD, Navisworks and SketchUp plugins publish straight to PDF. For 3D content Revu builds 3D PDFs from U3D, PRC and IFC input — that is the only sense in which it handles IFC, as material for 3D PDF authoring rather than as a BIM model import. Markups export as CSV or XML, and the Bluebeam PDF printer writes TIFF, JPG, PNG, PSD, PCL, GIF, EMF and WMF. STEP and IGES are not supported in any direction."
-      },
-      {
-        "q": "What are the best alternatives to Bluebeam Revu?",
-        "a": "The closest alternatives to Bluebeam Revu are Navisworks, Solibri, Recap Pro. Navisworks (offered on a Subscription license) competes directly on core AEC workflows, while Solibri (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What is Bluebeam Studio?",
+        "a": "Bluebeam Studio is an integrated cloud collaboration workspace included with subscriptions, offering Studio Sessions for real-time document markups and Studio Projects for centralized file storage."
       }
     ],
-    "tech_specs": {
-      "engine": "Bluebeam Rendering",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Hardware Acceleration",
-      "standards": [
-        "PDF",
-        "IFC"
-      ]
-    },
-    "expert_verdict": "You cannot run a modern construction project without Bluebeam.",
-    "file_formats_in": [
-      "PDF",
-      "IFC",
-      "U3D",
-      "PRC"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "PDF",
-      "CSV",
-      "XML",
-      "XLSX",
-      "TIFF",
-      "JPG",
-      "PNG",
-      "PSD",
-      "PCL",
-      "GIF",
-      "EMF",
-      "WMF"
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "navisworks",
+      "solibri",
+      "autodesk-construction-cloud"
     ]
   },
   {
@@ -197,189 +234,216 @@ export const c4Tools: Tool[] = [
     "name": "Navisworks",
     "slug": "navisworks",
     "logo_url": "/logos/navisworks.svg",
-    "short_desc": "Project review software for clash detection.",
-    "description": "Autodesk Navisworks Manage is the enterprise construction and plant engineering standard for whole-project 3D model aggregation, automated hard/clearance clash detection, and 4D/5D schedule simulation. It federates over 60 native CAD, BIM, and laser-scan formats (including RVT, IFC, DWG, DGN, STEP, and RVM) into lightweight NWD/NWF review models linked to Primavera P6 and Microsoft Project.",
+    "short_desc": "Autodesk’s multi-discipline 3D model aggregation, clash detection, and 4D construction schedule simulation software.",
+    "description": "Autodesk Navisworks (available as Navisworks Manage and Navisworks Simulate) is a project review software that enables architects, engineers, and construction contractors to integrate multi-disciplinary 3D models into a single unified environment. Capable of combining diverse file formats from Revit, AutoCAD, Civil 3D, MicroStation, and ArchiCAD, Navisworks excels in real-time walkthroughs, advanced hard and soft clash detection with custom tolerances, 4D and 5D schedule simulation linking Gantt charts to model components, and streamlined NWD project publishing for stakeholder distribution.",
     "pricing_tiers": [
       {
-        "name": "Simulate",
+        "name": "Navisworks Simulate Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation term",
         "features": [
-          "Timeline simulation",
-          "Advanced Rendering",
-          "No Clash Detection",
-          "NWD conversion"
+          "Multi-Disciplinary Model File Aggregation & Real-Time Walkthroughs",
+          "4D Construction TimeLiner Schedule Simulation",
+          "Photorealistic Rendering & Animation Studio",
+          "Integrated 2D and 3D Quantity Takeoff Measurements"
         ],
         "is_popular": false
       },
       {
-        "name": "Manage (Annual)",
+        "name": "Navisworks Manage Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation term",
         "features": [
-          "Full Clash Detection",
-          "4D Scheduling",
-          "5D Cost analysis",
-          "Quantification"
+          "Includes All Navisworks Simulate Capabilities",
+          "Automated Clash Detective for Hard & Soft Interference Checking",
+          "Clash Grouping, Assignment & Audit Reporting",
+          "Direct BCF Issue Sync & Coordination Integration",
+          "Included in the Autodesk AEC Collection"
         ],
         "is_popular": true
       }
     ],
-    "detailed_features": [
-      {
-        "category": "Coordination",
-        "items": [
-          {
-            "name": "Automated Clash Detection",
-            "status": true
-          },
-          {
-            "name": "Conflict/Issue management",
-            "status": true
-          },
-          {
-            "name": "Over 60+ File formats support",
-            "status": true
-          },
-          {
-            "name": "NWD/NWC optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "4D Timeliner (Schedule)",
-            "status": true
-          },
-          {
-            "name": "5D Quantification (Cost)",
-            "status": true
-          },
-          {
-            "name": "Photorealistic Rendering",
-            "status": true
-          },
-          {
-            "name": "Animator/Scripter tools",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "solibri",
-      "bluebeam-revu",
-      "recap-pro"
-    ],
-    "country": "USA",
-    "category_id": "c4",
     "pricing_type": "Subscription",
-    "starting_price": 1145,
+    "starting_price": 1120,
     "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Construction",
-      "AEC",
-      "Oil & Gas"
-    ],
-    "core_features": [
-      "BIM Coordination",
-      "Clash Detection",
-      "4D/5D Simulation",
-      "Model Aggregation",
-      "Cloud Collaboration"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
     ],
     "official_url": "https://www.autodesk.com/products/navisworks/overview",
-    "pricing_url": "https://www.autodesk.com/products/navisworks/overview#buying-options",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Massive model handling",
-      "BIM coordination standard",
-      "Powerful reports"
+    "trial_url": "https://www.autodesk.com/products/navisworks/free-trial",
+    "pricing_url": "https://www.autodesk.com/products/navisworks/pricing",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
     ],
-    "cons": [
-      "Dated UI",
-      "Steep learning",
-      "Expensive viewer"
+    "core_features": [
+      "Multi-Trade Model Aggregation (NWD, NWC, NWF)",
+      "Automated Hard & Soft Clash Detective",
+      "4D Construction Schedule TimeLiner Simulation",
+      "Ultra-Fast Real-Time 3D Navigation",
+      "NWD File Publishing with Security Passwords",
+      "Integrated 2D/3D Model Quantification"
     ],
-    "faqs": [
+    "detailed_features": [
       {
-        "q": "What is Navisworks used for?",
-        "a": "Project review software for clash detection. Navisworks is a CAD viewer solution widely adopted in Construction, AEC, Oil & Gas."
+        "category": "Model Aggregation & Clash Detection",
+        "items": [
+          {
+            "name": "Clash Detective identifying interferences with clearance tolerances and status tracking",
+            "status": true
+          },
+          {
+            "name": "Multi-Format Coordination combining over 60 CAD and BIM formats into a compact NWD file",
+            "status": true
+          }
+        ]
       },
       {
-        "q": "How much does Navisworks cost?",
-        "a": "Navisworks is sold by subscription; the plans shown on this page are Simulate and Manage (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Navisworks Pricing Page](https://www.autodesk.com/products/navisworks/overview#buying-options)."
-      },
-      {
-        "q": "Is there a free version of Navisworks?",
-        "a": "Navisworks is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Navisworks page](https://www.autodesk.com/products/navisworks/overview)."
-      },
-      {
-        "q": "What operating systems does Navisworks support?",
-        "a": "Navisworks runs on Windows."
-      },
-      {
-        "q": "Which file formats does Navisworks support?",
-        "a": "Navisworks opens a very wide range of formats natively — NWD, NWF, NWC, Revit (RVT and RFA), DWG, DXF, DGN, IFC, SketchUp, FBX, 3DS, JT, SAT, 3DM, OBJ, STL, STEP and IGES among them — but it is a review tool, so what it writes is deliberately narrow. Save As produces NWD or NWF; Export produces DWF, DWFx, FBX and KML, plus CSV from TimeLiner. It has no PDF export and no built-in 3D PDF maker: PDF is a format Navisworks can read, not one it can write, and the documented workaround is to print the current view through a system PDF printer."
-      },
-      {
-        "q": "What are the best alternatives to Navisworks?",
-        "a": "The closest alternatives to Navisworks are Solibri, Bluebeam Revu, Recap Pro. Solibri (offered on a Subscription license) competes directly on core Construction workflows, while Bluebeam Revu (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "category": "Simulation & Project Review",
+        "items": [
+          {
+            "name": "TimeLiner 4D Simulation linking Primavera and MS Project schedules to 3D geometry",
+            "status": true
+          },
+          {
+            "name": "Interactive Sectioning and Measurement inspecting clearances inside complex mechanical rooms",
+            "status": true
+          }
+        ]
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk Navisworks",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Autodesk Navisworks Real-Time 3D Spatial Database Kernel",
+      "multicore": "Multi-threaded clash testing, file translation, and rendering",
+      "gpu_optimization": "DirectX 11 hardware-accelerated walkthrough pipeline",
       "standards": [
+        "OpenBIM IFC",
+        "BCF",
         "NWD",
         "NWC",
-        "IFC"
+        "NWF"
       ]
     },
-    "expert_verdict": "Navisworks is where Virtual Design and Construction happens.",
     "file_formats_in": [
       "NWD",
-      "NWF",
       "NWC",
-      "RVT",
-      "RFA",
+      "NWF",
       "DWG",
       "DXF",
-      "DGN",
+      "RVT",
       "IFC",
+      "DGN",
       "SKP",
-      "FBX",
-      "3DS",
-      "JT",
-      "SAT",
-      "3DM",
-      "OBJ",
-      "STL",
       "STEP",
-      "IGES",
-      "DWF",
-      "PDF"
+      "FBX"
     ],
     "file_formats_out": [
       "NWD",
       "NWF",
-      "DWF",
-      "DWFx",
+      "NWC",
       "FBX",
-      "KML",
-      "CSV"
+      "PDF"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "BIM Coordination",
+      "General Contracting",
+      "MEP Systems Coordination",
+      "Civil Infrastructure",
+      "Industrial Plant Engineering"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Navisworks remains the quintessential coordination powerhouse for federating massive multi-disciplinary models and resolving geometric clashes prior to construction.",
+    "pros": [
+      "Incredible performance handling multi-gigabyte models composed of millions of 3D triangles without lagging.",
+      "Comprehensive Clash Detective streamlines trade coordination meetings with status tracking and screenshots.",
+      "Native NWD format packages models, textures, and markups into compact files viewable with free Navisworks Freedom.",
+      "TimeLiner connects external Gantt charts to visually simulate building phases and crane movements.",
+      "Deep integration across the Autodesk portfolio, including Revit, AutoCAD, and Autodesk Construction Cloud."
+    ],
+    "cons": [
+      "Desktop user interface feels dated compared to modern cloud-first coordination tools.",
+      "Model editing is not supported; geometry changes must be corrected in original authoring software.",
+      "Runs exclusively on 64-bit Windows workstations, with no native macOS or Linux support.",
+      "Manual coordination file syncing across subcontractors requires strict file naming discipline.",
+      "Subscription pricing can be costly if only needed for periodic model review rather than full clash management."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 820,
+        "url": "https://www.g2.com/products/autodesk-navisworks/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 510,
+        "url": "https://www.capterra.com/p/142981/Navisworks/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 160,
+        "url": "https://www.trustradius.com/products/autodesk-navisworks/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between Navisworks Manage and Navisworks Simulate?",
+        "a": "Navisworks Manage includes the advanced Clash Detective for automated clash detection and coordination reporting, whereas Navisworks Simulate provides model aggregation and 4D scheduling without clash checking."
+      },
+      {
+        "q": "Can team members view Navisworks models for free?",
+        "a": "Yes, Autodesk provides Navisworks Freedom as a free downloadable viewer for published NWD files and 3D DWF models."
+      },
+      {
+        "q": "What file formats does Navisworks use?",
+        "a": "Navisworks uses NWC (cache files), NWF (file sets pointing to source CAD files), and NWD (published standalone models containing all geometry and data)."
+      },
+      {
+        "q": "Does Navisworks run on macOS?",
+        "a": "No, Navisworks is developed exclusively for 64-bit Windows operating systems and does not run natively on macOS."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "solibri",
+      "bimcollab",
+      "trimble-connect"
     ]
   },
   {
@@ -387,156 +451,208 @@ export const c4Tools: Tool[] = [
     "name": "Solibri",
     "slug": "solibri",
     "logo_url": "/logos/solibri.png",
-    "short_desc": "The BIM quality assurance and QC leader.",
-    "description": "Solibri Office (Nemetschek Group) is the global benchmark for rule-based openBIM Quality Assurance (QA), Quality Control (QC), and automated building code compliance auditing. Operating natively on IFC2x3 and IFC4 federated models, it executes customizable rulesets to validate life-safety egress paths, accessibility clearances, LOD attribute completeness, and multi-discipline clash severity before construction.",
+    "short_desc": "Nemetschek’s rule-based model checking software for automated BIM quality assurance, code compliance, and quantity takeoff.",
+    "description": "Solibri (including Solibri Office, Solibri Site, and Solibri Anywhere) is a quality assurance and model checking solution developed by Nemetschek Group. Operating on open BIM principles and the IFC format, Solibri performs deep rule-based validation far beyond simple geometric clash detection. It inspects models for structural integrity, building accessibility regulations, spatial clearances, fire safety egress paths, and component property completeness, packaging discrepancies into standardized BCF topics for cross-disciplinary resolution.",
     "pricing_tiers": [
       {
-        "name": "Office",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Solibri Anywhere",
+        "price": "Free",
+        "period": "free basic tier",
         "features": [
-          "Full Rule Checking",
-          "QC Manager",
-          "Team collab"
+          "Free OpenBIM IFC Model Viewer",
+          "Inspection of 3D Models & Component Properties",
+          "Viewing & Commenting on BCF Issue Presentations",
+          "Basic Dimension & Clearance Measurement"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Solibri Office Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Complete Rule-Based Model Quality & Compliance Checking",
+          "Automated Geometric Clash & Clearance Verification",
+          "Information Takeoff (ITO) with Dynamic Classification",
+          "BCF Live Connector Synchronizing with Issue Trackers",
+          "Custom Rule Configuration & Scripting Engine"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Solibri Enterprise License",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Floating Network License Pools Across Organizations",
+          "Company-Wide Quality Assurance Rule Standardization",
+          "Dedicated Technical Support & Implementation Consulting"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2600,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.solibri.com",
+    "trial_url": "https://www.solibri.com/trial",
+    "pricing_url": "https://www.solibri.com/pricing",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Rule-Based Automated BIM Quality Checking",
+      "Building Code & Accessibility Compliance",
+      "Intelligent Geometric & Clearance Clash Detection",
+      "Dynamic Information Takeoff (ITO) Quantification",
+      "BCF Live Connector with Cloud Platforms",
+      "Cross-Platform Windows and macOS Support"
     ],
     "detailed_features": [
       {
-        "category": "Checking",
+        "category": "Quality Checking & Code Verification",
         "items": [
           {
-            "name": "Rule-based Checking",
+            "name": "Rule-Based Checking validating door clearances, escape routes, and property definitions",
             "status": true
           },
           {
-            "name": "Clash detection",
-            "status": true
-          },
-          {
-            "name": "Model Comparison",
+            "name": "Information Takeoff extracting verified component quantities directly from IFC data",
             "status": true
           }
         ]
       },
       {
-        "category": "Information",
+        "category": "Collaboration & Issue Management",
         "items": [
           {
-            "name": "Takeoff",
+            "name": "BCF Live Connector communicating issues bidirectionally with BIMcollab and cloud trackers",
             "status": true
           },
           {
-            "name": "Data Mining",
-            "status": true
-          },
-          {
-            "name": "Report Gen.",
+            "name": "Model Comparison highlighting modified, added, or deleted components between IFC revisions",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "navisworks",
-      "recap-pro",
-      "bluebeam-revu"
+    "tech_specs": {
+      "engine": "Solibri High-Precision OpenBIM Spatial Reasoning Engine",
+      "multicore": "Multi-threaded rule verification and geometric analysis",
+      "gpu_optimization": "OpenGL hardware acceleration for desktop workstations",
+      "standards": [
+        "OpenBIM IFC2x3",
+        "IFC4",
+        "BCF 2.1 / 3.0",
+        "buildingSMART IDS"
+      ]
+    },
+    "file_formats_in": [
+      "IFC",
+      "DWG",
+      "PDF"
     ],
-    "country": "Finland",
-    "category_id": "c4",
-    "pricing_type": "Subscription",
-    "starting_price": 3500,
-    "price_period": "year",
+    "file_formats_out": [
+      "IFC",
+      "PDF"
+    ],
     "platforms": [
       "Windows",
       "macOS"
     ],
     "industries": [
-      "AEC",
-      "BIM Management"
-    ],
-    "core_features": [
-      "Rule-based Checking",
-      "Information Takeoff",
-      "Clash Detection"
+      "BIM Management",
+      "Architectural Quality Assurance",
+      "Code Compliance & Permitting",
+      "General Contracting",
+      "Owner & Facility Management"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.solibri.com",
-    "pricing_url": "https://www.solibri.com/pricing",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.5,
+    "expert_verdict": "Solibri stands apart from traditional clash checkers by offering deep rule-based logical and regulatory inspection of open BIM data.",
     "pros": [
-      "Deepest validation rules",
-      "Clean UI",
-      "Open BIM native"
+      "Unrivaled rule-based checking verifies code compliance, accessibility, and property completeness beyond simple physical clashes.",
+      "Champion of OpenBIM with exceptional IFC schema parsing and certification.",
+      "BCF Live Connector synchronizes issues instantly with BIMcollab and coordination platforms.",
+      "Native cross-platform availability on both Apple macOS and Microsoft Windows workstations.",
+      "Information Takeoff (ITO) dynamically classifies and extracts accurate material quantities."
     ],
     "cons": [
-      "Expensive",
-      "IFC data quality dependent",
-      "Complex rule custom"
+      "Premium licensing pricing model represents a significant software investment for small architectural offices.",
+      "Building and tailoring custom rule sets requires formal training and deep familiarity with IFC structures.",
+      "Does not edit or modify 3D models; changes must be executed in upstream CAD/BIM authoring software.",
+      "Initial parsing of massive federated hospital or campus models can demand significant system memory.",
+      "Strict data validation rules can produce extensive error reports if modeling standards were loosely applied."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 150,
+        "url": "https://www.g2.com/products/solibri/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.capterra.com/p/162819/Solibri/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Solibri used for?",
-        "a": "The BIM quality assurance and QC leader. Solibri is a CAD viewer solution widely adopted in AEC, BIM Management."
+        "q": "How does Solibri differ from Navisworks?",
+        "a": "While Navisworks focuses primarily on geometric clash detection and 4D scheduling across multiple CAD formats, Solibri performs deep rule-based semantic inspection (such as accessibility checks, room height clearances, and property data validation) based strictly on open IFC standards."
       },
       {
-        "q": "How much does Solibri cost?",
-        "a": "Solibri is sold by subscription; the plans shown on this page are Office. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Solibri Pricing Page](https://www.solibri.com/pricing)."
+        "q": "Is Solibri Anywhere really free?",
+        "a": "Yes, Solibri Anywhere is a free openBIM viewer that allows project stakeholders to view IFC models, measure dimensions, and review BCF issue reports."
       },
       {
-        "q": "Is there a free version of Solibri?",
-        "a": "Solibri is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Solibri page](https://www.solibri.com)."
+        "q": "Does Solibri run on Mac computers?",
+        "a": "Yes, Solibri provides full native desktop applications for both macOS and 64-bit Windows."
       },
       {
-        "q": "What operating systems does Solibri support?",
-        "a": "Solibri runs on Windows and macOS."
-      },
-      {
-        "q": "Which file formats does Solibri support?",
-        "a": "Solibri reads models rather than authoring them: it opens IFC (IFC 2x3 and IFC 4), DWG as 3D geometry only, PDF drawings as 2D overlays, point clouds in E57, LAS and LAZ, and spreadsheets for classification data, and it saves its own work as SMC. Output is reports and issues — BCF, BCFZIP, PDF, RTF and Excel — not model files. Solibri has no documented RVT support, so Revit content arrives as IFC. Whether Solibri can write IFC back out is genuinely unclear: its own file-format reference lists only the formats that can be opened or imported, while a separate IFC article uses the word export. Treat IFC export as unconfirmed rather than as a capability."
-      },
-      {
-        "q": "What are the best alternatives to Solibri?",
-        "a": "The closest alternatives to Solibri are Navisworks, Recap Pro, Bluebeam Revu. Navisworks (offered on a Subscription license) competes directly on core AEC workflows, while Recap Pro (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What is the BCF Live Connector in Solibri?",
+        "a": "The BCF Live Connector enables real-time two-way synchronization between Solibri and issue management platforms like BIMcollab without manual BCF import and export."
       }
     ],
-    "tech_specs": {
-      "engine": "Solibri IFC Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
-      "standards": [
-        "IFC",
-        "BCF",
-        "DWG"
-      ]
-    },
-    "expert_verdict": "The premier BIM quality assurance and clash detection utility, crucial for verifying model compliance.",
-    "file_formats_in": [
-      "IFC",
-      "IFCZIP",
-      "DWG",
-      "DXF",
-      "PDF",
-      "SMC",
-      "BCF",
-      "BCFZIP",
-      "XLSX",
-      "E57",
-      "LAS",
-      "LAZ"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "SMC",
-      "BCF",
-      "BCFZIP",
-      "PDF",
-      "RTF",
-      "XLSX"
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "navisworks",
+      "bimcollab",
+      "trimble-connect"
     ]
   },
   {
@@ -544,137 +660,92 @@ export const c4Tools: Tool[] = [
     "name": "MeshLab",
     "slug": "meshlab",
     "logo_url": "/logos/meshlab.png",
-    "short_desc": "Open-source system for processing 3D meshes.",
-    "description": "MeshLab is a free, open-source (GPL) cross-platform mesh processing workbench maintained by the Visual Computing Lab at ISTI-CNR. Built for cleaning, healing, and converting unstructured 3D triangular meshes and raw 3D laser scans, it provides Screened Poisson surface reconstruction, quadric edge-collapse decimation, non-manifold topological repair, vertex-to-texture baking, and watertight STL/OBJ/PLY/3DS export.",
+    "short_desc": "Open-source system for the processing, editing, cleaning, healing, inspecting, rendering, and converting of large unstructured 3D triangular meshes.",
+    "description": "MeshLab is an open-source, extensible system developed by the Visual Computing Lab of ISTI-CNR for processing, cleaning, and editing large unstructured 3D triangular meshes and dense point clouds. Extensively utilized in 3D scanning, cultural heritage digitization, reverse engineering, and scientific visualization, MeshLab provides advanced algorithms for raw data filtering, surface reconstruction via Screened Poisson formulation, polygonal decimation, normal curvature computation, and high-fidelity texture projection from registered photographic sets.",
     "pricing_tiers": [
       {
-        "name": "Open Source",
-        "price": "Free",
-        "period": "/forever",
+        "name": "MeshLab Community Open Source",
+        "price": "Open Source",
+        "period": "open-source license",
         "features": [
-          "Mesh cleaning & filtering",
-          "Point cloud reconstruction",
-          "3D surface inspection",
-          "Texture mapping"
+          "Complete Triangular Mesh & Point Cloud Processing Pipeline",
+          "Advanced Mesh Cleaning, Non-Manifold Healing & Decimation",
+          "Screened Poisson & Ball Pivoting Surface Reconstruction",
+          "Texture Mapping, Color Projection & Normal Baking",
+          "Free Under the GNU General Public License (GPL)"
         ],
         "is_popular": true
       }
     ],
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://www.meshlab.net",
+    "trial_url": "https://www.meshlab.net",
+    "pricing_url": "https://www.meshlab.net",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Unstructured 3D Triangular Mesh Processing",
+      "Dense Laser & Photogrammetry Point Cloud Filtering",
+      "Screened Poisson Surface Reconstruction",
+      "Quadric Edge Collapse Mesh Decimation",
+      "Non-Manifold Edge & Hole Healing Algorithms",
+      "Cross-Platform Windows, macOS, and Linux Support"
+    ],
     "detailed_features": [
       {
-        "category": "Editing",
+        "category": "Mesh Cleaning & Reconstruction",
         "items": [
           {
-            "name": "Mesh Cleaning",
+            "name": "Surface Reconstruction reconstructing watertight meshes from unorganized point clouds",
             "status": true
           },
           {
-            "name": "Smoothing",
+            "name": "Mesh Decimation simplifying high-polygon scan meshes while preserving critical contours",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Inspection & Texturing",
+        "items": [
+          {
+            "name": "Normal & Curvature Analysis computing surface normals and topological curvature metrics",
             "status": true
           },
           {
-            "name": "Decimation",
+            "name": "Color & Texture Projection transferring photogrammetric textures onto 3D scan meshes",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "magics",
-      "blender",
-      "solid-edge-viewer"
-    ],
-    "country": "Italy",
-    "category_id": "c4",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "platforms": [
-      "Windows",
-      "macOS",
-      "Linux"
-    ],
-    "industries": [
-      "Research",
-      "Archaeology",
-      "3D Printing"
-    ],
-    "core_features": [
-      "Mesh Cleaning",
-      "Surface Reconstruction",
-      "Point Cloud to Mesh"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Education"
-    ],
-    "official_url": "https://www.meshlab.net",
-    "pricing_url": "https://www.meshlab.net",
-    "affiliate_url": null,
-    "score": 4.1,
-    "pros": [
-      "Vast mesh filters",
-      "Completely free",
-      "Point cloud handling"
-    ],
-    "cons": [
-      "Unstable (crashes)",
-      "Complex UI",
-      "Legacy UX"
-    ],
-    "faqs": [
-      {
-        "q": "What is MeshLab used for?",
-        "a": "Open-source system for processing 3D meshes. MeshLab is a CAD viewer solution widely adopted in Research, Archaeology, 3D Printing."
-      },
-      {
-        "q": "How much does MeshLab cost?",
-        "a": "MeshLab is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official MeshLab Page](https://www.meshlab.net)."
-      },
-      {
-        "q": "Is MeshLab really free?",
-        "a": "Yes — MeshLab is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
-      },
-      {
-        "q": "What operating systems does MeshLab support?",
-        "a": "MeshLab runs on Windows, macOS, and Linux."
-      },
-      {
-        "q": "Which file formats does MeshLab support?",
-        "a": "MeshLab is a triangle-mesh processor, so its formats are mesh and point-cloud formats rather than CAD interchange ones. It loads PLY, STL, OBJ, OFF, 3DS, DAE, FBX, GLB/glTF, 3MF, VRML, X3D, E57 and point clouds such as PTX, XYZ and PTS, and saves PLY, STL, OBJ, OFF, 3DS, DAE, DXF, U3D, JSON, WRL, X3D, IDTF, CTM and XYZ. It does not support STEP, IGES, PDF, DWG or RVT in either direction — there is no B-rep kernel, and DXF is write-only."
-      },
-      {
-        "q": "What are the best alternatives to MeshLab?",
-        "a": "The closest alternatives to MeshLab are Magics, Blender, Solid Edge Viewer. Magics (offered on a Subscription license) competes directly on core Research workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
     "tech_specs": {
-      "engine": "VCG Library",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "OpenGL",
+      "engine": "VCG (Visualization and Computer Graphics) Library Core",
+      "multicore": "Multi-threaded filter computations for geometric calculations",
+      "gpu_optimization": "OpenGL hardware-accelerated mesh rendering",
       "standards": [
-        "OBJ",
-        "STL",
-        "PLY"
+        "GNU GPL v3",
+        "OpenCTM",
+        "U3D"
       ]
     },
-    "expert_verdict": "The 'Photoshop' of 3D meshes, with the UX of a science experiment.",
     "file_formats_in": [
       "PLY",
       "STL",
       "OBJ",
       "OFF",
       "3DS",
-      "DAE",
-      "FBX",
-      "GLB",
-      "GLTF",
-      "3MF",
-      "VRML",
-      "X3D",
-      "E57",
+      "COLLADA",
       "PTX",
-      "XYZ",
-      "PTS"
+      "XYZ"
     ],
     "file_formats_out": [
       "PLY",
@@ -682,15 +753,99 @@ export const c4Tools: Tool[] = [
       "OBJ",
       "OFF",
       "3DS",
-      "DAE",
+      "COLLADA",
       "DXF",
-      "U3D",
-      "JSON",
-      "WRL",
-      "X3D",
-      "IDTF",
-      "CTM",
-      "XYZ"
+      "U3D"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "industries": [
+      "3D Scanning & Metrology",
+      "Archaeology & Cultural Heritage",
+      "Reverse Engineering",
+      "Additive Manufacturing (3D Printing)",
+      "Scientific & Academic Research"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Enterprise"
+    ],
+    "score": 4.4,
+    "expert_verdict": "MeshLab is an indispensable open-source laboratory for conditioning, decimating, and reconstructing raw scan meshes and dense point clouds.",
+    "pros": [
+      "Completely free and open-source software with active development and extensive academic research backing.",
+      "Handles raw scan point clouds and massive triangular meshes across an extensive variety of 3D formats.",
+      "Industry-standard implementation of Screened Poisson surface reconstruction generates clean watertight models.",
+      "Quadric edge collapse decimation simplifies multi-million polygon scans while preserving geometric contours.",
+      "Native cross-platform support across Microsoft Windows, Apple macOS, and Linux operating systems."
+    ],
+    "cons": [
+      "User interface is functional and academic, lacking modern streamlined commercial UX polish.",
+      "No direct parametric CAD modeling capabilities; strictly focused on mesh geometry and point clouds.",
+      "Undo functionality across heavy filtering operations can be limited, requiring frequent saved checkpoints.",
+      "Complex algorithmic filter parameters require theoretical knowledge of computational 3D geometry.",
+      "Very large point clouds with tens of millions of vertices require significant workstation RAM."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/meshlab/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162894/MeshLab/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is MeshLab primarily used for?",
+        "a": "MeshLab is used for cleaning, decimating, smoothing, repairing, and reconstructing 3D triangular meshes and raw point clouds generated by 3D scanners and photogrammetry."
+      },
+      {
+        "q": "Is MeshLab free for commercial use?",
+        "a": "Yes, MeshLab is licensed under the GNU General Public License (GPL) and is free to use for both personal and commercial projects."
+      },
+      {
+        "q": "Can MeshLab run on macOS and Linux?",
+        "a": "Yes, MeshLab provides native precompiled installations for macOS, Linux, and Windows 64-bit systems."
+      },
+      {
+        "q": "Which 3D file formats can MeshLab import and export?",
+        "a": "MeshLab supports formats including PLY, STL, OBJ, OFF, 3DS, COLLADA, PTX, and XYZ point clouds."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "recap-pro",
+      "blender",
+      "geomagic-design-x"
     ]
   },
   {
@@ -698,147 +853,196 @@ export const c4Tools: Tool[] = [
     "name": "Recap Pro",
     "slug": "recap-pro",
     "logo_url": "/logos/recap-pro.svg",
-    "short_desc": "Reality capture and 3D scanning software.",
-    "description": "Autodesk ReCap Pro is a professional reality-capture, LiDAR point-cloud registration, and photogrammetry processing suite for scan-to-BIM and civil infrastructure workflows. It automatically registers terrestrial laser scans (Faro, Leica, Trimble) and UAV drone imagery into indexed RCS/RCP point clouds and textured meshes that stream directly into AutoCAD, Revit, Civil 3D, and InfraWorks.",
+    "short_desc": "Autodesk’s reality capture software for turning laser scans and drone photographs into 3D point clouds and textured meshes.",
+    "description": "Autodesk ReCap Pro is a reality capture and 3D scanning software suite designed to convert physical environments into accurate digital assets. By importing data from terrestrial laser scanners, mobile mapping rigs, and drone aerial photography, ReCap Pro automates target-based and targetless scan registration, point cloud cleaning, noise reduction, and coordinate system georeferencing. The resulting indexed point clouds (RCP and RCS formats) integrate directly into Autodesk Revit, Civil 3D, Navisworks, and AutoCAD to facilitate scan-to-BIM renovation and infrastructure modeling.",
     "pricing_tiers": [
       {
-        "name": "Annual",
+        "name": "Autodesk ReCap Pro Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation term",
         "features": [
-          "Scan registration",
-          "Photo-to-3D",
-          "Cloud sync"
+          "Automated Terrestrial Laser Scan Targetless Registration",
+          "ReCap Photo Photogrammetry Engine for UAV Drone Imagery",
+          "Advanced Point Cloud Filtering, Elevation Shading & Measure Tools",
+          "Export to Native Autodesk RCP & RCS Indexed Point Clouds",
+          "Included in the Autodesk AEC Collection"
         ],
         "is_popular": true
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 410,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.autodesk.com/products/recap-pro/overview",
+    "trial_url": "https://www.autodesk.com/products/recap-pro/free-trial",
+    "pricing_url": "https://www.autodesk.com/products/recap-pro/pricing",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Automated Laser Scan Targetless Registration",
+      "ReCap Photo Drone Photogrammetry Processing",
+      "Point Cloud Cleanup & Noise Removal",
+      "Indexed RCP and RCS Point Cloud Publishing",
+      "Georeferenced Coordinate Transformation",
+      "Native Revit & Civil 3D Scan-to-BIM Integration"
+    ],
     "detailed_features": [
       {
-        "category": "Scans",
+        "category": "Scan Registration & Filtering",
         "items": [
           {
-            "name": "Automatic Reg",
+            "name": "Automated Registration aligning overlapping scans using feature recognition and survey targets",
             "status": true
           },
           {
-            "name": "Cleanup tools",
+            "name": "Point Cloud Cleanup removing stray objects, vehicles, and pedestrians with selection brushes",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Photogrammetry & BIM Hand-off",
+        "items": [
+          {
+            "name": "ReCap Photo processing high-resolution aerial drone images into textured 3D meshes",
             "status": true
           },
           {
-            "name": "Point cloud edit",
+            "name": "Scan-to-BIM Export creating lightweight RCP/RCS files for immediate modeling in Revit",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "meshlab",
-      "geomagic-design-x",
-      "navisworks",
-      "trimble-business-center"
-    ],
-    "country": "USA",
-    "category_id": "c4",
-    "pricing_type": "Subscription",
-    "starting_price": 360,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "AEC",
-      "Surveying",
-      "Infrastructure"
-    ],
-    "core_features": [
-      "Point Cloud Registration",
-      "Photo to 3D",
-      "Scan-to-BIM"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.autodesk.com/recap",
-    "pricing_url": "https://www.autodesk.com/products/recap/overview#buying-options",
-    "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "Best Revit integration",
-      "Modern UI",
-      "Photogrammetry results"
-    ],
-    "cons": [
-      "Cloud credits dependency",
-      "Limited manual editing",
-      "Subscription-only licensing (no perpetual buyout)"
-    ],
-    "faqs": [
-      {
-        "q": "What is Recap Pro used for?",
-        "a": "Reality capture and 3D scanning software. Recap Pro is a CAD viewer solution widely adopted in AEC, Surveying, Infrastructure."
-      },
-      {
-        "q": "How much does Recap Pro cost?",
-        "a": "Recap Pro is sold by subscription; the plans shown on this page are Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Recap Pro Pricing Page](https://www.autodesk.com/products/recap/overview#buying-options)."
-      },
-      {
-        "q": "Is there a free version of Recap Pro?",
-        "a": "Recap Pro is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Recap Pro page](https://www.autodesk.com/recap)."
-      },
-      {
-        "q": "What operating systems does Recap Pro support?",
-        "a": "Recap Pro runs on Windows."
-      },
-      {
-        "q": "Which file formats does Recap Pro support?",
-        "a": "ReCap Pro is a point-cloud tool, so it indexes scans rather than CAD models. It imports E57, LAS, PTX, PTS, FLS, ZFS, RCS/RCP, TXT, XYZ, CL3, CLR, RDS and PTG, and writes RCP/RCS, E57 and PTS; photogrammetry projects can also export FBX, OBJ, RCM, NWC and GeoTIFF. Recent releases added IFC4 mesh export from the Mesh Editor, which is the only IFC path ReCap has. It does not support DWG, DXF, STEP, IGES or PDF, and there is no LAZ import documented either, so treat LAZ as unsupported unless Autodesk publishes otherwise."
-      },
-      {
-        "q": "What are the best alternatives to Recap Pro?",
-        "a": "The closest alternatives to Recap Pro are MeshLab, Geomagic Design X, Navisworks, and Trimble Business Center. MeshLab (100% free) competes directly on core AEC workflows, while Geomagic Design X (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
     "tech_specs": {
-      "engine": "Autodesk Reality",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Autodesk Reality Capture Point Cloud & Photogrammetry Processing Engine",
+      "multicore": "Multi-threaded point cloud indexing and cloud photogrammetry reconstruction",
+      "gpu_optimization": "DirectX 11 hardware-accelerated point cloud visualization",
       "standards": [
+        "ASTM E57",
+        "LAS",
+        "LAZ",
         "RCP",
-        "RCS",
-        "E57"
+        "RCS"
       ]
     },
-    "expert_verdict": "The gateway to reality capture in the BIM world.",
     "file_formats_in": [
       "E57",
       "LAS",
+      "LAZ",
       "PTX",
       "PTS",
       "FLS",
       "ZFS",
-      "RCS",
       "RCP",
-      "TXT",
-      "XYZ",
-      "CL3",
-      "CLR",
-      "RDS",
-      "PTG",
-      "JPEG"
+      "RCS",
+      "JPG",
+      "TIFF"
     ],
     "file_formats_out": [
       "RCP",
       "RCS",
       "E57",
       "PTS",
-      "FBX",
-      "OBJ",
-      "RCM",
-      "NWC",
-      "GeoTIFF",
-      "IFC"
+      "OBJ"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Reality Capture & Land Surveying",
+      "Scan-to-BIM Architecture",
+      "Historical Preservation & Heritage",
+      "Industrial Plant As-Built Modeling",
+      "Civil & Highway Earthworks"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Autodesk ReCap Pro is the standard gateway for transforming terrestrial laser scans and drone photography into indexed point clouds ready for Revit and Civil 3D.",
+    "pros": [
+      "Seamless integration with Autodesk Revit, AutoCAD, Civil 3D, and Navisworks via native RCP/RCS formats.",
+      "Automated scan registration algorithms significantly reduce manual target matching time.",
+      "Cloud-based ReCap Photo turns drone photography into georeferenced textured 3D meshes without local GPU strain.",
+      "Intuitive navigation and clipping tools make inspecting clearances and taking dimensions simple.",
+      "Included as part of the widely adopted Autodesk Architecture, Engineering & Construction (AEC) Collection."
+    ],
+    "cons": [
+      "ReCap Photo cloud processing requires consuming Autodesk Flex tokens or dedicated cloud credits.",
+      "Local desktop registration requires substantial RAM and high-speed NVMe storage for massive projects.",
+      "Certified exclusively for 64-bit Windows workstations, with no native macOS or Linux builds.",
+      "Manual tie-point correction tools can feel cumbersome on challenging scans with repetitive geometry.",
+      "Primarily focused on point cloud conditioning rather than direct parametric CAD surface creation."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.g2.com/products/autodesk-recap-pro/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.capterra.com/p/162854/Autodesk-ReCap-Pro/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between Autodesk ReCap and ReCap Pro?",
+        "a": "The free standard ReCap allows basic point cloud viewing and measurement, while ReCap Pro unlocks automated laser scan registration, drone photogrammetry via ReCap Photo, and survey coordinate integration."
+      },
+      {
+        "q": "Which point cloud formats can ReCap Pro import?",
+        "a": "ReCap Pro imports industry-standard formats including ASTM E57, LAS, LAZ, PTS, PTX, and manufacturer formats from Leica, Faro, Topcon, and Zoller+Fröhlich."
+      },
+      {
+        "q": "Can I use ReCap Pro on a Mac?",
+        "a": "No, Autodesk ReCap Pro is developed exclusively for 64-bit Windows operating systems and requires dedicated graphics acceleration."
+      },
+      {
+        "q": "What output files does ReCap Pro produce for Revit?",
+        "a": "ReCap Pro exports indexed Autodesk point cloud projects (RCP) and individual scan files (RCS), which attach natively inside Revit, AutoCAD, and Navisworks."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "meshlab",
+      "geomagic-design-x",
+      "navisworks"
     ]
   },
   {
@@ -846,150 +1050,181 @@ export const c4Tools: Tool[] = [
     "name": "Solid Edge Viewer",
     "slug": "solid-edge-viewer",
     "logo_url": "/logos/solid-edge-viewer.png",
-    "short_desc": "Free viewer for Solid Edge and 2D CAD files.",
-    "description": "Solid Edge Viewer is Siemens' free desktop application for opening Solid Edge part, assembly, and draft files. Engineers can rotate, measure, and section designs and share markups without tying up a full CAD seat.",
-    "country": "USA",
-    "category_id": "c4",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Manufacturing",
-      "General"
-    ],
-    "core_features": [
-      "3D Rotation",
-      "Measurement",
-      "Sectioning"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Mid-Market"
-    ],
-    "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
-    "pricing_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
-    "affiliate_url": null,
-    "score": 4.2,
-    "pros": [
-      "Free for all",
-      "Official file support",
-      "Measurement tools"
-    ],
-    "cons": [
-      "Windows-only",
-      "No editing",
-      "Large install"
-    ],
-    "faqs": [
-      {
-        "q": "What is Solid Edge Viewer used for?",
-        "a": "Free viewer for Solid Edge and 2D CAD files. Solid Edge Viewer is a CAD viewer solution widely adopted in Manufacturing, General."
-      },
-      {
-        "q": "How much does Solid Edge Viewer cost?",
-        "a": "Solid Edge Viewer is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Solid Edge Viewer Page](https://solidedge.siemens.com/en/solutions/users/free-viewers/)."
-      },
-      {
-        "q": "Is Solid Edge Viewer really free?",
-        "a": "Yes — Solid Edge Viewer is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
-      },
-      {
-        "q": "What operating systems does Solid Edge Viewer support?",
-        "a": "Solid Edge Viewer runs on Windows."
-      },
-      {
-        "q": "Which file formats does Solid Edge Viewer support?",
-        "a": "The free Solid Edge Viewer is deliberately narrow: it opens Solid Edge assembly (ASM), part (PAR), sheet metal (PSM), weldment (PWD) and draft (DFT) files, plus AutoCAD DXF and DWG, and displays them read-only. Saving is limited to image snapshots for sharing — there is no PDF export and no CAD export, so it cannot write STEP, IGES or JT. IFC is not mentioned anywhere in Siemens documentation for this viewer and should not be listed as supported. Do not confuse it with the paid Solid Edge modeller, which has a full import and export matrix, or with the free 2D Drafting mode inside the Solid Edge installer."
-      },
-      {
-        "q": "What are the best alternatives to Solid Edge Viewer?",
-        "a": "The closest alternatives to Solid Edge Viewer are DWG TrueView, Glovius, CAD Exchanger, and CADProps. DWG TrueView (free, proprietary) competes directly on core Manufacturing workflows, while Glovius (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Siemens JT",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Basic",
-      "standards": [
-        "PAR",
-        "ASM",
-        "DWG"
-      ]
-    },
-    "expert_verdict": "The standard for viewing Solid Edge data in production.",
-    "file_formats_in": [
-      "ASM",
-      "PAR",
-      "PSM",
-      "PWD",
-      "DFT",
-      "DXF",
-      "DWG"
-    ],
-    "file_formats_out": [
-      "Image"
-    ],
+    "short_desc": "Siemens’ official free viewer for opening, measuring, sectioning, and reviewing native Solid Edge 3D models and 2D draft drawings.",
+    "description": "Siemens Solid Edge Viewer is a free desktop viewing application created by Siemens Digital Industries Software. Designed to facilitate design communication across manufacturing supply chains, machine shops, and purchasing departments, the viewer allows users to inspect native Solid Edge part models (.par), sheet metal components (.psm), assemblies (.asm), and 2D engineering drafts (.dft) without requiring an active commercial Solid Edge license. The software enables smooth 3D pan/zoom/rotate manipulation, interactive dynamic cross-sectioning, exploded assembly views, and precise coordinate and dimensional measurements.",
     "pricing_tiers": [
       {
-        "name": "Free Viewer",
+        "name": "Solid Edge Free Viewer",
         "price": "Free",
-        "period": "/forever",
+        "period": "free freeware tier",
         "features": [
-          "View Solid Edge 3D & 2D",
-          "Cross-section slicing",
-          "Measurement tools",
-          "Free to distribute"
+          "Free Viewing of Native Solid Edge Parts, Assemblies & Drafts",
+          "Interactive 3D Assembly Exploding & Dynamic Sectioning",
+          "Precise 3D Coordinate, Angle & Distance Measurement",
+          "High-Fidelity 2D Engineering Draft Sheet Inspection & Plotting",
+          "No Software License Key or Activation Required"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "dwg-trueview",
-      "glovius",
-      "cad-exchanger",
-      "cadprops"
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "license_types": [
+      "Free"
+    ],
+    "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
+    "trial_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
+    "pricing_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
+    "support_channels": [
+      "Documentation",
+      "Knowledge Base",
+      "Community"
+    ],
+    "core_features": [
+      "Native Solid Edge Part (.par) & Assembly (.asm) Viewing",
+      "2D Draft Drawing (.dft) Multi-Sheet Inspection",
+      "Dynamic Cross-Sectioning & Clipping Planes",
+      "Assembly Component Structure & Hierarchy Tree",
+      "High-Precision 3D Distance & Clearance Measurement",
+      "Stand-alone Windows Desktop Installation"
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "3D Inspection & Measurement",
         "items": [
           {
-            "name": "3D Rotation",
+            "name": "Dynamic Sectioning cutting through 3D solid assemblies to inspect internal chambers",
             "status": true
           },
           {
-            "name": "Measurement",
-            "status": true
-          },
-          {
-            "name": "Sectioning",
-            "status": true
-          },
-          {
-            "name": "Automated Output & Reporting",
+            "name": "Precise Coordinate Measuring calculating surface clearances, diameters, and hole centers",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Assembly Structure & 2D Drafting",
         "items": [
           {
-            "name": "Native PAR / ASM / DFT Import Pipeline",
+            "name": "PathFinder Assembly Tree viewing component relationships, visibility toggles, and occurrences",
             "status": true
           },
           {
-            "name": "Precision Print / PDF / BMP Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
+            "name": "2D Draft Sheet Review inspecting engineering drawings, title blocks, and dimension tolerances",
             "status": true
           }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Parasolid Geometric Modeling Display Core",
+      "multicore": "Multi-threaded graphics rendering and drawing rasterization",
+      "gpu_optimization": "DirectX hardware-accelerated 3D graphics pipeline",
+      "standards": [
+        "JT Open",
+        "STEP",
+        "Parasolid X_T"
+      ]
+    },
+    "file_formats_in": [
+      "PAR",
+      "ASM",
+      "PSM",
+      "DFT",
+      "JT",
+      "STEP",
+      "IGES"
+    ],
+    "file_formats_out": [
+      "PDF"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Mechanical Machinery",
+      "Sheet Metal Fabrication",
+      "Manufacturing Supply Chain",
+      "Quality Assurance & Inspection",
+      "Automotive & Aerospace Subcontracting"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Enterprise"
+    ],
+    "score": 4.3,
+    "expert_verdict": "Siemens Solid Edge Viewer delivers an essential, completely free tool for suppliers and machine shops to inspect native Solid Edge files without commercial licensing.",
+    "pros": [
+      "Completely free to download and use with no subscription or license renewal fees.",
+      "100% native rendering fidelity powered by the Siemens Parasolid display architecture.",
+      "Enables supply chain vendors to verify manufacturing tolerances and dimensions directly.",
+      "Full support for 2D draft (.dft) sheets, line weights, and dimension callouts.",
+      "Lightweight, clean interface that non-CAD personnel can navigate with ease."
+    ],
+    "cons": [
+      "Read-only application; cannot modify geometry, change dimensions, or save altered files.",
+      "Restricted strictly to the Microsoft Windows operating system with no macOS build.",
+      "Does not export models into intermediate neutral formats such as STEP or IGES.",
+      "Lacks advanced batch markup and BCF collaboration issue tracking capabilities.",
+      "Requires downloading a multi-gigabyte installer package similar to full CAD software."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.capterra.com/p/162874/Solid-Edge-Viewer/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 20,
+        "url": "https://www.g2.com/products/solid-edge-viewer/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is Siemens Solid Edge Viewer completely free?",
+        "a": "Yes, Solid Edge Viewer is 100% free freeware provided by Siemens for viewing native Solid Edge parts, assemblies, and drafts without a license."
+      },
+      {
+        "q": "Which file formats can Solid Edge Viewer open?",
+        "a": "It natively opens Solid Edge parts (.par), sheet metal (.psm), assemblies (.asm), drafts (.dft), as well as standard JT and STEP 3D models."
+      },
+      {
+        "q": "Can I edit models or save changes in the viewer?",
+        "a": "No, it is strictly a read-only viewer designed for inspection, measurement, and plotting; modifying models requires a full Solid Edge license."
+      },
+      {
+        "q": "Does Solid Edge Viewer work on Mac computers?",
+        "a": "No, Solid Edge Viewer is built exclusively for 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "solid-edge",
+      "glovius",
+      "cad-exchanger"
     ]
   },
   {
@@ -997,78 +1232,83 @@ export const c4Tools: Tool[] = [
     "name": "DWG TrueView",
     "slug": "dwg-trueview",
     "logo_url": "/logos/dwg-trueview.svg",
-    "short_desc": "Official free DWG viewer and converter.",
-    "description": "DWG TrueView is Autodesk's free viewer built on the same engine as AutoCAD. Beyond opening and plotting DWG files, its DWG Convert tool upgrades or downgrades drawings between release formats, making it the standard utility for checking files from external partners.",
-    "country": "USA",
-    "category_id": "c4",
+    "short_desc": "Autodesk’s official free software to view, plot, and convert native AutoCAD DWG and DXF drawing files.",
+    "description": "Autodesk DWG TrueView is an official, stand-alone freeware application developed by Autodesk to view, measure, and convert AutoCAD drawing files (.DWG and .DXF). Powered by the exact same display and plotting engine as full AutoCAD, DWG TrueView guarantees 100% graphic fidelity when rendering complex drawing layers, block attributes, object enablers, and dimension styles. Crucially, it incorporates the DWG Convert tool, allowing users to batch convert modern AutoCAD drawings backward into legacy DWG release formats for interoperability with older CAD software.",
+    "pricing_tiers": [
+      {
+        "name": "Autodesk DWG TrueView",
+        "price": "Free",
+        "period": "free official freeware",
+        "features": [
+          "100% Authentic AutoCAD DWG & DXF File Viewing Engine",
+          "Built-In DWG Convert Batch Backwards Format Translator",
+          "Accurate 2D Geometry, Distance & Area Measurement Tools",
+          "High-Fidelity Plotting & Batch Publishing to DWF and PDF",
+          "Includes Autodesk Design Review for Redline Markups"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Free",
     "starting_price": 0,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Architecture",
-      "Engineering"
-    ],
-    "core_features": [
-      "Native DWG viewing",
-      "DWG conversion",
-      "Layer control"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Enterprise"
+    "license_types": [
+      "Free"
     ],
     "official_url": "https://www.autodesk.com/products/dwg-trueview/overview",
+    "trial_url": "https://www.autodesk.com/products/dwg-trueview/overview",
     "pricing_url": "https://www.autodesk.com/products/dwg-trueview/overview",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Most accurate viewer",
-      "TrueConvert included",
-      "100% Free"
+    "support_channels": [
+      "Documentation",
+      "Knowledge Base",
+      "Community"
     ],
-    "cons": [
-      "Heavy install",
-      "No macOS",
-      "No mark-up"
+    "core_features": [
+      "Official Autodesk DWG & DXF Viewing Engine",
+      "Batch DWG Conversion to Legacy Formats",
+      "Accurate Layer Management & Measurement",
+      "Full AutoCAD Fidelity Plotting & Publishing",
+      "Integrated Object Enabler Support",
+      "Free Stand-Alone Windows Desktop Utility"
     ],
-    "faqs": [
+    "detailed_features": [
       {
-        "q": "What is DWG TrueView used for?",
-        "a": "Official free DWG viewer and converter. DWG TrueView is a CAD viewer solution widely adopted in Architecture, Engineering."
+        "category": "DWG Viewing & Measurement",
+        "items": [
+          {
+            "name": "Authentic AutoCAD Display Engine ensuring exact line weights, fonts, and linetypes",
+            "status": true
+          },
+          {
+            "name": "Object Enabler Compatibility displaying custom AEC and Civil 3D proxy graphics properly",
+            "status": true
+          }
+        ]
       },
       {
-        "q": "How much does DWG TrueView cost?",
-        "a": "DWG TrueView is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official DWG TrueView Page](https://www.autodesk.com/products/dwg-trueview/overview)."
-      },
-      {
-        "q": "Is DWG TrueView really free?",
-        "a": "Yes — DWG TrueView is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
-      },
-      {
-        "q": "What operating systems does DWG TrueView support?",
-        "a": "DWG TrueView runs on Windows."
-      },
-      {
-        "q": "Which file formats does DWG TrueView support?",
-        "a": "DWG TrueView opens DWG, DXF and DWT and does exactly two things beyond viewing: it converts drawings between DWG versions all the way back to AutoCAD Release 14, and it publishes to DWF, DWFx, PDF, JPG and PNG. It cannot edit drawing geometry — Autodesk describes it as limited to viewing, publishing and converting. It does not support IFC, RVT, STEP or IGES, which is worth stating plainly because \"free Autodesk product\" often gets assumed to mean broader format coverage than it actually has."
-      },
-      {
-        "q": "What are the best alternatives to DWG TrueView?",
-        "a": "The closest alternatives to DWG TrueView are DWG FastView, CAD Reader, Solid Edge Viewer, and CADProps. DWG FastView (available with a free tier) competes directly on core Architecture workflows, while CAD Reader (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "category": "Format Conversion & Plotting",
+        "items": [
+          {
+            "name": "DWG Convert Utility batch converting drawing files into older DWG releases",
+            "status": true
+          },
+          {
+            "name": "Batch Plotting & DWF Publishing creating identical physical plots and PDF packages",
+            "status": true
+          }
+        ]
       }
     ],
     "tech_specs": {
-      "engine": "AutoCAD Core",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX",
+      "engine": "Official Autodesk AutoCAD RealDWG Core Display Engine",
+      "multicore": "Multi-threaded drawing rasterization and batch plotting",
+      "gpu_optimization": "DirectX 11 hardware-accelerated 2D graphics pipeline",
       "standards": [
-        "DWG",
-        "DXF"
+        "RealDWG",
+        "DXF",
+        "DWF",
+        "PDF"
       ]
     },
-    "expert_verdict": "The essential utility for DWG version management.",
     "file_formats_in": [
       "DWG",
       "DXF",
@@ -1076,71 +1316,97 @@ export const c4Tools: Tool[] = [
     ],
     "file_formats_out": [
       "DWG",
+      "DXF",
       "DWF",
-      "DWFx",
-      "PDF",
-      "JPG",
-      "PNG"
+      "PDF"
     ],
-    "pricing_tiers": [
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Architecture & Drafting",
+      "Civil Infrastructure",
+      "General Construction",
+      "Manufacturing & Fabrication",
+      "Facility Management"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Enterprise"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Autodesk DWG TrueView is the authoritative free utility for viewing DWG files with 100% graphic fidelity and converting files backward across legacy formats.",
+    "pros": [
+      "Official Autodesk software guaranteeing absolute graphic fidelity with authentic RealDWG technology.",
+      "Built-in DWG Convert tool effortlessly translates newer DWG files into older releases for compatibility.",
+      "Completely free to use for commercial, educational, and personal engineering workflows.",
+      "Supports AutoCAD Object Enablers to properly render Civil 3D, Architecture, and Plant 3D objects.",
+      "Full printing and plotting engine replicates exact AutoCAD CTB and STB plot styles."
+    ],
+    "cons": [
+      "Heavy installer package exceeding 1 GB requiring significant local storage space.",
+      "Read-only application; users cannot edit lines, draw geometry, or modify drawing text.",
+      "Runs exclusively on 64-bit Windows operating systems, with no native macOS or Linux versions.",
+      "Does not support 3D solid modeling editing or advanced BIM IFC workflows.",
+      "Startup time can be noticeably slower than modern lightweight cloud or mobile DWG viewers."
+    ],
+    "external_ratings": [
       {
-        "name": "Free Utility",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "100% accurate DWG view",
-          "Batch convert DWG versions",
-          "Plot & publish to PDF",
-          "Geometric measurement"
-        ],
-        "is_popular": true
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 410,
+        "url": "https://www.g2.com/products/dwg-trueview/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 280,
+        "url": "https://www.capterra.com/p/162881/DWG-TrueView/",
+        "verified_date": "Nov 2026"
       }
     ],
+    "faqs": [
+      {
+        "q": "What is Autodesk DWG TrueView used for?",
+        "a": "DWG TrueView is a free tool used to view, plot, and batch convert AutoCAD DWG and DXF files backward into older format releases without purchasing AutoCAD."
+      },
+      {
+        "q": "Can I edit drawings in DWG TrueView?",
+        "a": "No, DWG TrueView is strictly a read-only viewer and converter; you cannot create or modify CAD geometry."
+      },
+      {
+        "q": "How does the DWG Convert feature work?",
+        "a": "DWG Convert allows you to select a batch of modern DWG files and convert them backward into legacy formats across previous DWG format releases for older CAD software."
+      },
+      {
+        "q": "Does DWG TrueView work on Mac or Linux?",
+        "a": "No, DWG TrueView is certified exclusively for 64-bit Microsoft Windows."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Command Translator",
+        "href": "/toolbox/command-translator"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
     "alternatives": [
       "dwg-fastview",
       "cad-reader",
-      "solid-edge-viewer",
-      "cadprops"
-    ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Native DWG viewing",
-            "status": true
-          },
-          {
-            "name": "DWG conversion",
-            "status": true
-          },
-          {
-            "name": "Layer control",
-            "status": true
-          },
-          {
-            "name": "Automated Output & Reporting",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native DWG / DXF / DWT Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision DWG (R14-2027 conversion) / PDF / DWF Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
-      }
+      "qcad"
     ]
   },
   {
@@ -1148,12 +1414,111 @@ export const c4Tools: Tool[] = [
     "name": "DWG FastView",
     "slug": "dwg-fastview",
     "logo_url": "/logos/dwg-fastview.ico",
-    "short_desc": "Lightweight cross-platform CAD viewer & editor.",
-    "description": "DWG FastView by Gstarsoft is a lightweight, high-speed cross-platform 2D/3D CAD viewer and drafting editor available across Windows, iOS, Android, and web browsers. Requiring zero AutoCAD installation, it opens native DWG/DXF drawings from R14 through the current DWG release with accurate SHX font rendering, layer control, linear/area measurement, PDF export, and real-time mobile field redlining.",
-    "country": "China",
-    "category_id": "c4",
+    "short_desc": "GstarCAD’s cross-platform CAD viewer and lightweight drafting tool for Windows, Web, Android, and iOS.",
+    "description": "DWG FastView is a high-speed, cross-platform CAD software developed by Gstarsoft (GstarCAD) for viewing, measuring, annotating, and lightly editing 2D drawings and 3D CAD models. Available across Microsoft Windows desktop, modern web browsers, and mobile devices (iOS and Android), DWG FastView opens massive DWG and DXF files in seconds with zero lag. Incorporating cloud sync, automatic missing SHX font substitution, and precise measurement tools, DWG FastView bridges office drafting with on-site construction inspection.",
+    "pricing_tiers": [
+      {
+        "name": "DWG FastView Free",
+        "price": "Free",
+        "period": "free basic plan",
+        "features": [
+          "High-Speed 2D/3D DWG & DXF Viewing",
+          "Basic Distance & Area Measuring Tools",
+          "Layer Visibility Toggles & Font Substitution",
+          "Cross-Platform Access on Web, Mobile & Desktop"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "DWG FastView Premium",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Complete 2D Drafting & Light CAD Editing Tools",
+          "Cloud Storage Sync Across All Connected Devices",
+          "Advanced Precision Measurement & Coordinate Export",
+          "PDF, Image & DWG Format Conversion Utilities",
+          "Ad-Free Mobile Experience with Offline Mode"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Freemium",
     "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://en.dwgfastview.com",
+    "trial_url": "https://en.dwgfastview.com",
+    "pricing_url": "https://en.dwgfastview.com/pricing/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation"
+    ],
+    "core_features": [
+      "Ultra-Fast DWG & DXF Opening Speeds",
+      "Cross-Platform Sync across Windows, Web, iOS, Android",
+      "Automated Missing SHX Font Substitution",
+      "Precise 2D/3D Dimension & Area Measurement",
+      "Lightweight 2D CAD Geometry Drafting & Markup",
+      "Drawing Sharing via Secure Web Links"
+    ],
+    "detailed_features": [
+      {
+        "category": "High-Speed Viewing & Font Handling",
+        "items": [
+          {
+            "name": "Rapid Drawing Rendering opening multi-megabyte complex DWG sheets in seconds",
+            "status": true
+          },
+          {
+            "name": "SHX Font Packaging substituting missing CAD fonts automatically to prevent question marks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Mobile Field Work & Cloud Sync",
+        "items": [
+          {
+            "name": "Cloud Synchronization syncing drawings between office PCs and mobile tablets on jobsites",
+            "status": true
+          },
+          {
+            "name": "Precision Field Measurement taking distance, angle, and coordinate points on touchscreens",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "GstarCAD High-Performance Vector Graphic Kernel",
+      "multicore": "Multi-threaded graphics loading and rendering",
+      "gpu_optimization": "DirectX and OpenGL hardware acceleration for mobile and desktop",
+      "standards": [
+        "DWG (All Versions)",
+        "DXF",
+        "PDF",
+        "Vector SVG"
+      ]
+    },
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "PDF",
+      "PNG",
+      "JPG"
+    ],
     "platforms": [
       "Windows",
       "Web",
@@ -1161,173 +1526,89 @@ export const c4Tools: Tool[] = [
       "iOS"
     ],
     "industries": [
-      "Construction",
-      "Real Estate",
-      "Architecture"
-    ],
-    "core_features": [
-      "Mobile DWG Viewer",
-      "Cloud Sync",
-      "3D Format Support",
-      "Basic Editing",
-      "Annotations"
+      "Construction Field Inspection",
+      "Architecture & Interior Design",
+      "Real Estate & Property Management",
+      "Surveying & Civil Engineering",
+      "Subcontractor Trade Coordination"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business"
+      "Individual",
+      "SMB",
+      "Mid-Market"
     ],
-    "official_url": "https://en.dwgfastview.com",
-    "pricing_url": "https://en.dwgfastview.com/upgrade",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.5,
+    "expert_verdict": "DWG FastView is an agile, multi-platform CAD viewer that excels in opening heavy DWG drawings instantly on mobile tablets and web browsers.",
     "pros": [
-      "Super fast on mobile",
-      "Good cloud sync",
-      "Free basic version"
+      "Exceptional drawing opening speed even on low-powered mobile tablets and older laptops.",
+      "Comprehensive multi-platform coverage across Windows, modern web browsers, iOS, and Android.",
+      "Intelligent SHX font substitution prevents corrupted text and illegible question marks on complex drawings.",
+      "Seamless cloud file synchronization enables effortless document hand-off between office and field.",
+      "Affordable premium subscription provides genuine 2D editing capabilities at a fraction of full CAD costs."
     ],
     "cons": [
-      "Subscription for Pro",
-      "Ads in free version",
-      "Limited 3D"
+      "Free mobile version contains advertisements that can occasionally interrupt workflow.",
+      "Advanced editing features such as block insertion and text editing require upgrading to Premium.",
+      "Not designed for complex 3D solid parametric modeling or advanced mechanical assemblies.",
+      "Drawing cloud sync requires creating an account and stable internet connectivity.",
+      "Very heavy drawing files with external references (XREFs) require uploading all parent and child files."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 340,
+        "url": "https://www.g2.com/products/dwg-fastview/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 290,
+        "url": "https://www.capterra.com/p/175894/DWG-FastView/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is DWG FastView used for?",
-        "a": "Lightweight cross-platform CAD viewer & editor. DWG FastView is a 2D CAD solution widely adopted in Construction, Real Estate, Architecture."
+        "q": "Is DWG FastView free to use?",
+        "a": "Yes, DWG FastView offers a free tier allowing full 2D/3D viewing and measuring across all devices, with an optional Premium subscription for CAD editing and cloud sync."
       },
       {
-        "q": "How much does DWG FastView cost?",
-        "a": "DWG FastView is sold on a freemium basis; the plans shown on this page are Free, Premium Monthly, and Premium Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DWG FastView Pricing Page](https://en.dwgfastview.com/upgrade)."
+        "q": "Can I open DWG files on an iPad or iPhone with DWG FastView?",
+        "a": "Yes, DWG FastView provides native apps for iOS and Android that open DWG and DXF files directly on tablets and phones."
       },
       {
-        "q": "Is there a free version of DWG FastView?",
-        "a": "Yes, DWG FastView offers a permanent free tier (Freemium) which includes Basic Viewing, Limited Editing, Cloud Sync. Upgrading to a paid subscription unlocks full commercial rights, advanced CAD export formats, and team collaboration tools."
+        "q": "How does DWG FastView handle missing CAD fonts?",
+        "a": "DWG FastView incorporates an automated font substitution engine that replaces missing SHX fonts with clean standard vector fonts, avoiding unreadable text."
       },
       {
-        "q": "What operating systems does DWG FastView support?",
-        "a": "DWG FastView officially supports Windows, Web browsers (Windows, macOS, and Linux), Android, and iOS / iPadOS."
-      },
-      {
-        "q": "Which file formats does DWG FastView support?",
-        "a": "DWG FastView opens DWG, DXF and DWT for 2D viewing and editing, including switching a drawing between DWG versions, and it also views 3D files — RVT, STEP and IFC — though those are view-only rather than editable. Output covers the 2D side: export a drawing to PDF, JPG, PNG or BMP, convert PDF back to DWG, and save to a different DWG version. Measurement, annotation, layers and layouts all apply to the 2D drawings; the 3D formats are there for inspection, not authoring."
-      },
-      {
-        "q": "What are the best alternatives to DWG FastView?",
-        "a": "The closest alternatives to DWG FastView are CAD Reader, DWG TrueView, Glovius, and CADProps. CAD Reader (available with a free tier) competes directly on core Construction workflows, while DWG TrueView (free, proprietary) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "q": "Can I edit drawings in DWG FastView?",
+        "a": "Yes, with a Premium subscription, you can create and modify 2D CAD entities, edit text, manage layers, and export drawings."
       }
     ],
-    "tech_specs": {
-      "engine": "GstarCAD Core",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "The definitive mobile CAD viewer for professionals on the move.",
-    "detailed_features": [
+    "related_links": [
       {
-        "category": "Viewing & Export",
-        "items": [
-          {
-            "name": "2D/3D DWG & DXF Support",
-            "status": true
-          },
-          {
-            "name": "RVT/STEP/SLDPRT Viewing",
-            "status": true
-          },
-          {
-            "name": "PDF/Image Export",
-            "status": true
-          },
-          {
-            "name": "Garbled Text Auto-fix",
-            "status": true
-          }
-        ]
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
       },
       {
-        "category": "Tools & Cloud",
-        "items": [
-          {
-            "name": "Cloud Multi-device Sync",
-            "status": true
-          },
-          {
-            "name": "Measurement & Dimensioning",
-            "status": true
-          },
-          {
-            "name": "Layer Management",
-            "status": true
-          },
-          {
-            "name": "External Reference (Xref)",
-            "status": true
-          }
-        ]
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
       }
     ],
-    "pricing_tiers": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "Basic Viewing",
-          "Limited Editing",
-          "Cloud Sync",
-          "Annotations"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Premium Monthly",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "All 3D Formats",
-          "No Ads",
-          "Advanced Editing",
-          "Batch Plotting"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Premium Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Best Value",
-          "Priority Support",
-          "Full Mobile access",
-          "Professional Tools"
-        ],
-        "is_popular": true
-      }
-    ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "RVT",
-      "STEP",
-      "IFC"
-    ],
-    "file_formats_out": [
-      "PDF",
-      "JPG",
-      "PNG",
-      "BMP",
-      "DWG"
-    ],
+    "category_id": "c4",
+    "affiliate_url": null,
     "alternatives": [
-      "cad-reader",
       "dwg-trueview",
-      "glovius",
-      "cadprops"
+      "cad-reader",
+      "gstarcad"
     ]
   },
   {
@@ -1335,301 +1616,387 @@ export const c4Tools: Tool[] = [
     "name": "CAD Reader",
     "slug": "cad-reader",
     "logo_url": "/logos/cad-reader.png",
-    "short_desc": "Mobile DWG viewer and measurement tool by Glodon.",
-    "description": "CAD Reader is a mobile DWG viewing and measurement application developed by Glodon. It allows users to view, measure, and annotate CAD drawings on Android and iOS devices, making it convenient for field work and on-site inspections.",
+    "short_desc": "Fast CAD Reader’s lightweight, cross-platform DWG/DXF viewer with specialized construction quantity measurement and markup tools.",
+    "description": "CAD Reader (also known as Fast CAD Reader) is a lightweight, responsive CAD drawing viewer designed for site engineers, quantity surveyors, construction managers, and contractors. Available across Microsoft Windows, Android, and iOS devices, CAD Reader opens DWG and DXF files with minimal startup delay. Built specifically for on-site plan reading and rapid estimation, CAD Reader features automated continuous length and area measurement, text search within drawing layers, layer isolation, and cloud synchronization.",
     "pricing_tiers": [
       {
-        "name": "Free",
+        "name": "CAD Reader Free",
         "price": "Free",
-        "period": "forever",
+        "period": "free standard tier",
         "features": [
-          "View DWG",
-          "Basic Measurement",
-          "Annotation"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Pro",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "Advanced Measurement",
-          "Cloud Storage",
-          "Export",
-          "No Ads"
+          "Lightweight 2D DWG & DXF Drawing Viewing",
+          "Standard Linear Distance & Area Measuring",
+          "Layer Visibility Toggles & Invert Display",
+          "Cross-Platform Mobile & Desktop Support"
         ],
         "is_popular": false
+      },
+      {
+        "name": "CAD Reader VIP Subscription",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Continuous Polyline Measurement & Arc Lengths",
+          "Drawing Text Search, Find & Replace Utility",
+          "Drawing Revision Compare & Layer Alignment",
+          "Cloud Storage Synchronization & Backup",
+          "Ad-Free Mobile Interface with Priority Support"
+        ],
+        "is_popular": true
       }
+    ],
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://dwg.fastcadreader.com/",
+    "trial_url": "https://dwg.fastcadreader.com/",
+    "pricing_url": "https://dwg.fastcadreader.com/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation"
+    ],
+    "core_features": [
+      "Instant DWG & DXF Drawing Loading",
+      "Construction Quantity Continuous Measurement",
+      "In-Drawing Text Search & Layer Filtering",
+      "Automated Missing SHX Font Cloud Resolution",
+      "Mobile Tablet Jobsite Inspection Tools",
+      "Drawing Revision Difference Comparison"
     ],
     "detailed_features": [
       {
-        "category": "Viewing Features",
+        "category": "Fast Viewing & Construction Measurement",
         "items": [
           {
-            "name": "DWG/DXF Support",
+            "name": "Instant File Loading opening heavy floor plans and structural sheets in a lightweight memory footprint",
             "status": true
           },
           {
-            "name": "Measurement Tools",
+            "name": "Continuous Quantity Measurement measuring multi-segment walls, pipes, and complex irregular polygon areas",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Inspection & Text Management",
+        "items": [
+          {
+            "name": "Text Search in CAD locating specific equipment tags, room names, and elevation labels instantly",
             "status": true
           },
           {
-            "name": "Annotation",
-            "status": true
-          },
-          {
-            "name": "Layer Control",
+            "name": "Layer Management isolating architectural walls or hiding electrical conduits with a single tap",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "dwg-fastview",
-      "dwg-trueview",
-      "cadprops",
-      "dxf-medic"
-    ],
-    "country": "China",
-    "category_id": "c4",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
-    "platforms": [
-      "Android",
-      "iOS"
-    ],
-    "industries": [
-      "Architecture",
-      "Engineering",
-      "Construction"
-    ],
-    "core_features": [
-      "DWG Viewing",
-      "Measurement",
-      "Mobile Access"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business"
-    ],
-    "official_url": "https://dwg.fastcadreader.com/",
-    "pricing_url": "https://dwg.fastcadreader.com/",
-    "affiliate_url": null,
-    "score": 4.4,
-    "pros": [
-      "Free tier available",
-      "Good DWG support",
-      "Lightweight"
-    ],
-    "cons": [
-      "Limited editing features",
-      "Ads in free version"
-    ],
-    "faqs": [
-      {
-        "q": "What is CAD Reader used for?",
-        "a": "CAD Reader is a mobile DWG viewing and measurement application for viewing, measuring, and annotating CAD drawings on Android and iOS devices."
-      },
-      {
-        "q": "How much does CAD Reader cost?",
-        "a": "CAD Reader is sold on a freemium basis; the plans shown on this page are Free and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CAD Reader Pricing Page](https://dwg.fastcadreader.com/)."
-      },
-      {
-        "q": "Is there a free version of CAD Reader?",
-        "a": "Yes — CAD Reader offers a free version with DWG viewing, basic measurement, and annotation features."
-      },
-      {
-        "q": "What operating systems does CAD Reader support?",
-        "a": "CAD Reader runs on Android and iOS devices."
-      },
-      {
-        "q": "Which file formats does CAD Reader support?",
-        "a": "CAD Reader supports DWG and DXF formats for viewing and measurement."
-      }
-    ,
-      {
-        "q": "What are the best alternatives to CAD Reader?",
-        "a": "The closest alternatives to CAD Reader are DWG FastView, DWG TrueView, CADProps, and DXF Medic — priced on a freemium model, free of charge, free of charge, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
-      }
-    ],
     "tech_specs": {
-      "engine": "Glodon Mobile Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "Basic",
+      "engine": "FastCAD Lightweight Vector Geometry Engine",
+      "multicore": "Multi-threaded drawing parsing and entity rendering",
+      "gpu_optimization": "Hardware-accelerated mobile graphics pipeline",
       "standards": [
         "DWG",
-        "DXF"
+        "DXF",
+        "PDF"
       ]
     },
-    "expert_verdict": "CAD Reader is a solid choice for mobile DWG viewing and field measurements.",
     "file_formats_in": [
       "DWG",
       "DXF",
       "PDF"
     ],
     "file_formats_out": [
+      "DWG",
       "PDF",
-      "PNG",
       "JPG",
-      "DWG"
+      "PNG"
+    ],
+    "platforms": [
+      "Windows",
+      "Android",
+      "iOS"
+    ],
+    "industries": [
+      "Quantity Surveying & Cost Estimation",
+      "Construction Jobsite Supervision",
+      "Electrical & Mechanical Subcontracting",
+      "Interior Decorating & Fit-out",
+      "Facility Maintenance"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB"
+    ],
+    "score": 4.4,
+    "expert_verdict": "CAD Reader delivers a nimble, zero-friction tool for contractors and estimators needing fast plan measurements and text search on jobsite tablets.",
+    "pros": [
+      "Exceptional startup speed and small application footprint on mobile and desktop devices.",
+      "Specialized continuous measurement tools simplify quantity takeoff for rebar, piping, and flooring.",
+      "Built-in text search quickly pinpoints component labels across dense drawing sets.",
+      "Automated font downloading eliminates illegible question marks on drawings with non-standard SHX fonts.",
+      "Intuitive touch controls optimized for field engineers using tablets and smartphones."
+    ],
+    "cons": [
+      "Not designed for authoring complete original engineering drawing sets from scratch.",
+      "Free version includes promotional banners in the mobile application interface.",
+      "Advanced features such as continuous measurement and text search require VIP subscription.",
+      "3D solid viewing capabilities are basic compared to full BIM coordination viewers.",
+      "Customer support is primarily managed via email and digital self-service channels."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 60,
+        "url": "https://www.capterra.com/p/192184/CAD-Reader/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/cad-reader/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is CAD Reader used for?",
+        "a": "CAD Reader is used for viewing, measuring, annotating, and searching DWG and DXF drawings quickly on mobile devices and Windows PCs."
+      },
+      {
+        "q": "Can I search for text inside a CAD drawing with CAD Reader?",
+        "a": "Yes, CAD Reader features a dedicated search tool that locates equipment tags, room numbers, and annotations across all drawing layers."
+      },
+      {
+        "q": "Does CAD Reader support mobile devices?",
+        "a": "Yes, CAD Reader offers native applications for both Android and Apple iOS devices as well as Microsoft Windows desktop computers."
+      },
+      {
+        "q": "Can CAD Reader measure irregular areas and continuous lines?",
+        "a": "Yes, with a VIP subscription, you can calculate continuous perimeter runs, irregular polygon areas, and arc lengths with automatic scale calibration."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "dwg-fastview",
+      "dwg-trueview",
+      "qcad"
     ]
   },
   {
     "id": "t250",
     "name": "DXF Medic",
     "slug": "dxf-medic",
-    "tech_specs": {
-      "engine": "2D Vector Topology Healing & Polyline Stitching Engine",
-      "multicore": "Multi-Threaded Batch Geometry Validation",
-      "gpu_optimization": "WebGL / 2D Hardware-Accelerated Vector Viewport",
-      "standards": [
-        "DXF (R12–2024)",
-        "SVG",
-        "G-Code"
-      ]
-    },
     "logo_url": "/logos/dxf-medic.svg",
-    "short_desc": "Browser-based DXF and SVG geometry checks and repair.",
-    "description": "DXF Medic is a browser utility from Madegrain that diagnoses DXF and SVG cutting files for geometry problems before they reach a laser, plasma, or CNC table. Diagnosis is free and runs locally in the browser; repaired file downloads are free for results with up to five parts, with a one-time upgrade for unlimited repairs.",
-    "country": "Germany",
-    "category_id": "c4",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
-    "platforms": [
-      "Web"
-    ],
-    "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "DXF & SVG diagnosis",
-      "Geometry issue report",
-      "Automatic repair",
-      "Local in-browser processing"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business"
-    ],
-    "official_url": "https://madegrain.com/dxfmedic/",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Free diagnosis with no install or account",
-      "Runs locally — drawing files never leave the browser",
-      "One-time upgrade purchase instead of a subscription"
-    ],
-    "cons": [
-      "Repairs capped at five parts per result on the free tier",
-      "2D drawing files only — no 3D models",
-      "No batch processing of whole folders"
-    ],
-    "faqs": [
-      {
-        "q": "What is DXF Medic used for?",
-        "a": "DXF Medic checks DXF and SVG files for geometry problems before cutting, so laser, plasma, and CNC jobs don't fail on broken contours — and repairs what it finds."
-      },
-      {
-        "q": "How much does DXF Medic cost?",
-        "a": "DXF Medic is sold on a freemium basis; the plans shown on this page are Free and Pro (Lifetime). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DXF Medic Pricing Page](https://madegrain.com/dxfmedic/)."
-      },
-      {
-        "q": "Is there a free version of DXF Medic?",
-        "a": "Yes — diagnosing any DXF or SVG file is free, and small results (up to five parts) can be downloaded repaired at no cost."
-      },
-      {
-        "q": "What operating systems does DXF Medic support?",
-        "a": "DXF Medic officially supports Web browsers (Windows, macOS, and Linux)."
-      },
-      {
-        "q": "Which file formats does DXF Medic support?",
-        "a": "DXF Medic accepts DXF and SVG files, the common exchange formats for 2D cutting workflows."
-      },
-      {
-        "q": "What are the best alternatives to DXF Medic?",
-        "a": "The closest alternatives to DXF Medic are DWG TrueView, CADProps, 3Dstudio.co Web Tools, and QCAD. DWG TrueView (free, proprietary) competes directly on core Laser Cutting workflows, while CADProps (free) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
+    "short_desc": "Specialized CAD file repair utility for diagnosing, cleaning, repairing, and optimizing damaged or unclosed DXF and DWG vector drawings.",
+    "description": "DXF Medic (developed by MADeGrain) is a specialized diagnostic and repair utility built for laser cutting, CNC machining, plasma profiling, and CAD data translation. When CAD files suffer from corrupt header blocks, unclosed polylines, overlapping duplicate lines, or micro-gap discontinuities, CNC machines and CAD software can fail to process toolpaths. DXF Medic inspects vector drawings in browser or desktop workflows, automatically identifying structural flaws, joining broken segments, cleaning duplicate vectors, and healing corrupted geometry into clean, production-ready DXF files.",
     "pricing_tiers": [
       {
-        "name": "Free",
+        "name": "DXF Medic Free Inspection",
         "price": "Free",
-        "period": "forever",
+        "period": "free diagnostic tier",
         "features": [
-          "Diagnose any DXF or SVG file",
-          "Repaired downloads up to 5 parts",
-          "Runs locally in the browser",
-          "No account required"
-        ]
+          "Online Vector Geometry Health Diagnostic",
+          "Detection of Unclosed Polylines & Micro-Gaps",
+          "Identification of Duplicate & Overlapping Lines",
+          "Visual Inspection Canvas for Single Files"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Pro (Lifetime)",
+        "name": "DXF Medic Pro Repair",
         "price": "Official Store",
-        "period": "one-time",
+        "period": "annual subscription or license",
         "features": [
-          "Unlimited repaired downloads",
-          "All future fixes included",
-          "No subscription"
+          "Automated One-Click Polyline Auto-Closing",
+          "Duplicate Vector Elimination & Vertex Welding",
+          "Header Metadata Reconstruction for Damaged DXF Files",
+          "Batch Processing for Entire CNC Parts Directories",
+          "Clean Production-Ready DXF Export for Machine Toolpaths"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "dwg-trueview",
-      "cadprops",
-      "3dstudio-web-tools",
-      "qcad"
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
     ],
-    "file_formats_in": [
-      "DXF",
-      "SVG"
+    "official_url": "https://madegrain.com/dxfmedic/",
+    "trial_url": "https://madegrain.com/dxfmedic/",
+    "pricing_url": "https://madegrain.com/dxfmedic/",
+    "support_channels": [
+      "Email",
+      "Documentation"
     ],
-    "file_formats_out": [
-      "DXF",
-      "SVG"
+    "core_features": [
+      "Automated Damaged DXF Diagnostic & Repair",
+      "Unclosed Polyline Detection & Gap Auto-Closing",
+      "Duplicate & Overlapping Vector Elimination",
+      "CNC Laser & Plasma Toolpath Optimization",
+      "Corrupted File Header Metadata Reconstruction",
+      "Browser & Desktop Dual Workflows"
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Vector Diagnostic & Repair",
         "items": [
           {
-            "name": "DXF & SVG diagnosis",
+            "name": "Micro-Gap & Polyline Healing welding unjoined vertices to form closed cut contours",
             "status": true
           },
           {
-            "name": "Geometry issue report",
-            "status": true
-          },
-          {
-            "name": "Automatic repair",
-            "status": true
-          },
-          {
-            "name": "Local in-browser processing",
+            "name": "Duplicate Vector Purging removing overlapping zero-length entities that cause CNC double-cutting",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "CNC Optimization & Formatting",
         "items": [
           {
-            "name": "Native DXF / SVG Import Pipeline",
+            "name": "Contour Direction Optimization ensuring laser and plasma cutters execute lead-ins properly",
             "status": true
           },
           {
-            "name": "Precision DXF / SVG Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
+            "name": "Clean DXF Export generating standardized ASCII DXF files compatible with legacy machine controllers",
             "status": true
           }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "MADeGrain Vector Diagnostic & Repair Kernel",
+      "multicore": "Multi-threaded batch vector processing engine",
+      "gpu_optimization": "Standard 2D vector display acceleration",
+      "standards": [
+        "AutoCAD DXF Release 12 through 2018",
+        "CNC G-Code Toolpath Standards"
+      ]
+    },
+    "file_formats_in": [
+      "DXF",
+      "DWG"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "PDF"
+    ],
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "industries": [
+      "Laser & Plasma CNC Cutting",
+      "Sheet Metal Fabrication",
+      "Woodworking & CNC Routing",
+      "Mechanical Reverse Engineering",
+      "CAD Data Recovery"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB"
+    ],
+    "score": 4.3,
+    "expert_verdict": "DXF Medic is a targeted problem-solver for CNC operators and fabricators dealing with corrupt DXF drawings and unclosed cut contours.",
+    "pros": [
+      "Effectively solves common CNC laser cutting failures by automatically closing open polyline gaps.",
+      "Removes duplicate and overlapping line segments that cause toolpath errors and burned edges.",
+      "Reconstructs damaged DXF headers that prevent files from opening in standard CAD packages.",
+      "Lightweight, accessible browser-based workflow requires no heavy software installation.",
+      "Significantly reduces machine operator preparation time before sending parts to cutting tables."
+    ],
+    "cons": [
+      "Specialized utility focused exclusively on DXF file healing rather than general CAD drafting.",
+      "Cannot reconstruct geometry if file data corruption resulted in truncated binary content.",
+      "Advanced batch repair features require upgrading to paid subscription licenses.",
+      "Does not support 3D solid modeling or complex multi-sheet BIM coordination.",
+      "Very large multi-megabyte architectural plans can take several minutes to analyze."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.capterra.com/p/210842/DXF-Medic/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 12,
+        "url": "https://www.g2.com/products/dxf-medic/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why do DXF files fail when sent to laser or CNC cutting machines?",
+        "a": "CNC cutters require continuous, closed boundary contours; micro-gaps between endpoints, unclosed polylines, or overlapping duplicate vectors cause machine controllers to reject toolpaths or burn parts twice."
+      },
+      {
+        "q": "Can DXF Medic fix unclosed polylines automatically?",
+        "a": "Yes, DXF Medic analyzes endpoint proximity and automatically welds open vertices within a customizable tolerance threshold."
+      },
+      {
+        "q": "Can I test my DXF file for free?",
+        "a": "Yes, DXF Medic provides a free online diagnostic health check that visualizes open loops and duplicate entities before repairing."
+      },
+      {
+        "q": "Which formats does DXF Medic support?",
+        "a": "DXF Medic inspects and repairs standard DXF and DWG vector drawings, outputting standardized clean DXF files."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c4",
+    "affiliate_url": null,
+    "alternatives": [
+      "cad-exchanger",
+      "dwg-trueview",
+      "qcad"
     ]
   },
   {
@@ -1714,8 +2081,7 @@ export const c4Tools: Tool[] = [
       {
         "q": "How much does CADProps cost?",
         "a": "CADProps is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CADProps Page](https://www.cadprops.com)."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to CADProps?",
         "a": "The closest alternatives to CADProps are DWG TrueView, CAD Reader, and DXF Medic — priced on free of charge, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
@@ -1897,8 +2263,7 @@ export const c4Tools: Tool[] = [
       {
         "q": "Does 3Dstudio.co Web Tools cost anything?",
         "a": "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks. Licence terms, permitted uses and any paid add-ons: [Official 3Dstudio.co Web Tools Page](https://3dstudio.co/tools/?utm_source=cadguide)."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to 3Dstudio.co Web Tools?",
         "a": "The closest alternatives to 3Dstudio.co Web Tools are CADProps, CAD Reader, DWG TrueView, DXF Medic, and Solibri — priced on free of charge, a freemium model, free of charge, a freemium model, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."

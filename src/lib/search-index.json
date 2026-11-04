@@ -931,20 +931,22 @@
     "id": "t34",
     "name": "Bluebeam Revu",
     "slug": "bluebeam-revu",
-    "short_desc": "The AEC standard for PDF markup and collaboration.",
-    "score": 4.9,
+    "short_desc": "Nemetschek’s industry-standard construction PDF markup, quantity takeoff, and real-time cloud collaboration software.",
+    "score": 4.6,
     "logo_url": "/logos/bluebeam-revu.png",
     "official_url": "https://www.bluebeam.com",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction",
-      "Estimating"
+      "Commercial Construction",
+      "General Contracting",
+      "Architecture & Engineering",
+      "Electrical & Plumbing Subcontracting",
+      "Quantity Surveying & Estimating"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t35",
@@ -974,20 +976,22 @@
     "id": "t35",
     "name": "Navisworks",
     "slug": "navisworks",
-    "short_desc": "Project review software for clash detection.",
-    "score": 4.8,
+    "short_desc": "Autodesk’s multi-discipline 3D model aggregation, clash detection, and 4D construction schedule simulation software.",
+    "score": 4.4,
     "logo_url": "/logos/navisworks.svg",
     "official_url": "https://www.autodesk.com/products/navisworks/overview",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Construction",
-      "AEC",
-      "Oil & Gas"
+      "BIM Coordination",
+      "General Contracting",
+      "MEP Systems Coordination",
+      "Civil Infrastructure",
+      "Industrial Plant Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t36",
@@ -1014,19 +1018,22 @@
     "id": "t36",
     "name": "Solibri",
     "slug": "solibri",
-    "short_desc": "The BIM quality assurance and QC leader.",
-    "score": 4.7,
+    "short_desc": "Nemetschek’s rule-based model checking software for automated BIM quality assurance, code compliance, and quantity takeoff.",
+    "score": 4.5,
     "logo_url": "/logos/solibri.png",
     "official_url": "https://www.solibri.com",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "AEC",
-      "BIM Management"
+      "BIM Management",
+      "Architectural Quality Assurance",
+      "Code Compliance & Permitting",
+      "General Contracting",
+      "Owner & Facility Management"
     ],
     "features": [],
-    "country": "Finland"
+    "country": ""
   },
   {
     "id": "t37",
@@ -1053,22 +1060,24 @@
     "id": "t37",
     "name": "MeshLab",
     "slug": "meshlab",
-    "short_desc": "Open-source system for processing 3D meshes.",
-    "score": 4.1,
+    "short_desc": "Open-source system for the processing, editing, cleaning, healing, inspecting, rendering, and converting of large unstructured 3D triangular meshes.",
+    "score": 4.4,
     "logo_url": "/logos/meshlab.png",
     "official_url": "https://www.meshlab.net",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Research",
-      "Archaeology",
-      "3D Printing"
+      "3D Scanning & Metrology",
+      "Archaeology & Cultural Heritage",
+      "Reverse Engineering",
+      "Additive Manufacturing (3D Printing)",
+      "Scientific & Academic Research"
     ],
     "features": [
       "mesh-modeling"
     ],
-    "country": "Italy"
+    "country": ""
   },
   {
     "id": "t38",
@@ -1135,20 +1144,22 @@
     "id": "t39",
     "name": "Recap Pro",
     "slug": "recap-pro",
-    "short_desc": "Reality capture and 3D scanning software.",
-    "score": 4.6,
+    "short_desc": "Autodesk’s reality capture software for turning laser scans and drone photographs into 3D point clouds and textured meshes.",
+    "score": 4.4,
     "logo_url": "/logos/recap-pro.svg",
-    "official_url": "https://www.autodesk.com/recap",
+    "official_url": "https://www.autodesk.com/products/recap-pro/overview",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Surveying",
-      "Infrastructure"
+      "Reality Capture & Land Surveying",
+      "Scan-to-BIM Architecture",
+      "Historical Preservation & Heritage",
+      "Industrial Plant As-Built Modeling",
+      "Civil & Highway Earthworks"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t40",
@@ -1376,19 +1387,22 @@
     "id": "t48",
     "name": "Solid Edge Viewer",
     "slug": "solid-edge-viewer",
-    "short_desc": "Free viewer for Solid Edge and 2D CAD files.",
-    "score": 4.2,
+    "short_desc": "Siemens’ official free viewer for opening, measuring, sectioning, and reviewing native Solid Edge 3D models and 2D draft drawings.",
+    "score": 4.3,
     "logo_url": "/logos/solid-edge-viewer.png",
     "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "General"
+      "Mechanical Machinery",
+      "Sheet Metal Fabrication",
+      "Manufacturing Supply Chain",
+      "Quality Assurance & Inspection",
+      "Automotive & Aerospace Subcontracting"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t49",
@@ -1417,19 +1431,22 @@
     "id": "t49",
     "name": "DWG TrueView",
     "slug": "dwg-trueview",
-    "short_desc": "Official free DWG viewer and converter.",
-    "score": 4.3,
+    "short_desc": "Autodesk’s official free software to view, plot, and convert native AutoCAD DWG and DXF drawing files.",
+    "score": 4.4,
     "logo_url": "/logos/dwg-trueview.svg",
     "official_url": "https://www.autodesk.com/products/dwg-trueview/overview",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Engineering"
+      "Architecture & Drafting",
+      "Civil Infrastructure",
+      "General Construction",
+      "Manufacturing & Fabrication",
+      "Facility Management"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t50",
@@ -1519,20 +1536,22 @@
     "id": "t53",
     "name": "DWG FastView",
     "slug": "dwg-fastview",
-    "short_desc": "Lightweight cross-platform CAD viewer & editor.",
-    "score": 4.6,
+    "short_desc": "GstarCAD’s cross-platform CAD viewer and lightweight drafting tool for Windows, Web, Android, and iOS.",
+    "score": 4.5,
     "logo_url": "/logos/dwg-fastview.ico",
     "official_url": "https://en.dwgfastview.com",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Construction",
-      "Real Estate",
-      "Architecture"
+      "Construction Field Inspection",
+      "Architecture & Interior Design",
+      "Real Estate & Property Management",
+      "Surveying & Civil Engineering",
+      "Subcontractor Trade Coordination"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t54",
@@ -1838,7 +1857,7 @@
     "id": "t93",
     "name": "CAD Reader",
     "slug": "cad-reader",
-    "short_desc": "Mobile DWG viewer and measurement tool by Glodon.",
+    "short_desc": "Fast CAD Reader’s lightweight, cross-platform DWG/DXF viewer with specialized construction quantity measurement and markup tools.",
     "score": 4.4,
     "logo_url": "/logos/cad-reader.png",
     "official_url": "https://dwg.fastcadreader.com/",
@@ -1846,12 +1865,14 @@
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Engineering",
-      "Construction"
+      "Quantity Surveying & Cost Estimation",
+      "Construction Jobsite Supervision",
+      "Electrical & Mechanical Subcontracting",
+      "Interior Decorating & Fit-out",
+      "Facility Maintenance"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t101",
@@ -2029,20 +2050,22 @@
     "id": "t136",
     "name": "CYPECAD",
     "slug": "cypecad",
-    "short_desc": "Structural analysis and design software for concrete and steel buildings, integrated with MEP and construction management tools.",
-    "score": 0,
+    "short_desc": "CYPE’s structural engineering software for concrete, steel, and composite building design, finite element analysis, and code compliance.",
+    "score": 4.3,
     "logo_url": "/logos/cypecad.png",
-    "official_url": "https://www.cype.com/",
+    "official_url": "https://www.cype.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
       "Structural Engineering",
-      "Construction",
-      "Architecture"
+      "Civil Construction",
+      "Reinforced Concrete Building Design",
+      "Seismic Retrofitting",
+      "Foundation Engineering"
     ],
     "features": [],
-    "country": "Spain"
+    "country": ""
   },
   {
     "id": "t138",
@@ -2067,20 +2090,22 @@
     "id": "t141",
     "name": "Vertex BD",
     "slug": "vertex-bd",
-    "short_desc": "BIM software for cold-formed steel and timber framing, automating panel design, fabrication drawings, and CNC output.",
-    "score": 0,
+    "short_desc": "Vertex Systems’ specialized BIM software for light gauge steel (cold-formed) and timber frame prefabricated building design and CNC manufacturing.",
+    "score": 4.5,
     "logo_url": "/logos/vertex-bd.png",
-    "official_url": "https://vertexcad.com/bd/",
+    "official_url": "https://vertexcad.com/bd",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Prefabrication",
-      "Construction",
-      "Architecture"
+      "Off-Site Construction & Prefabrication",
+      "Cold-Formed Steel Framing",
+      "Modular Home Manufacturing",
+      "Commercial Timber Framing",
+      "Panelized Building Systems"
     ],
     "features": [],
-    "country": "Finland"
+    "country": ""
   },
   {
     "id": "t142",
@@ -2303,22 +2328,22 @@
     "id": "t158",
     "name": "Planbar",
     "slug": "planbar",
-    "short_desc": "Allplan's specialized BIM software for precast concrete design, detailing, and planning with automated workflows and intelligent assistants.",
-    "score": 3.6,
+    "short_desc": "ALLPLAN Precast’s comprehensive CAD/BIM solution for automated industrial design, detailing, and CNC production of precast concrete elements.",
+    "score": 4.4,
     "logo_url": "/logos/planbar.png",
-    "official_url": "https://www.allplan.com/products/allplan-precast/",
+    "official_url": "https://www.allplan.com/products/allplan-precast",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Precast Concrete",
-      "Construction",
-      "Civil Engineering",
+      "Precast Concrete Manufacturing",
+      "Off-Site Construction",
       "Structural Engineering",
-      "Architecture"
+      "Industrial Precast Facilities",
+      "Prefabricated Floor & Wall Production"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t160",
@@ -2992,9 +3017,9 @@
   },
   {
     "id": "t208",
-    "name": "CADWorx Plant Professional",
+    "name": "CADWorx",
     "slug": "cadworx",
-    "short_desc": "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II.",
+    "short_desc": "Hexagon’s AutoCAD and BricsCAD-based integrated plant design suite for intelligent 3D piping, structural framing, and equipment modeling.",
     "score": 4.3,
     "logo_url": "/logos/cadworx.png",
     "official_url": "https://hexagon.com/products/cadworx-plant-professional",
@@ -3003,11 +3028,13 @@
     "aliases": [],
     "industries": [
       "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Chemical Processing",
+      "Power Generation",
+      "Water Treatment",
+      "Pharmaceutical Plant Design"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t209",
@@ -3284,25 +3311,28 @@
     "id": "t229",
     "name": "Autodesk Construction Cloud",
     "slug": "autodesk-construction-cloud",
-    "short_desc": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
-    "score": 4.4,
+    "short_desc": "Autodesk’s unified construction management platform connecting project teams, 2D/3D BIM data, and field operations from design to handover.",
+    "score": 4.5,
     "logo_url": "/logos/autodesk-construction-cloud.png",
     "official_url": "https://construction.autodesk.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "General Contracting",
+      "Commercial Construction",
+      "Architecture & BIM",
+      "Civil & Heavy Infrastructure",
+      "Facility Management"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t230",
     "name": "Trimble Connect",
     "slug": "trimble-connect",
-    "short_desc": "Trimble's openBIM common data environment with strong Tekla and SketchUp integration.",
+    "short_desc": "Trimble’s open BIM collaboration environment and cloud platform for connecting multidisciplinary project data, models, and field workflows.",
     "score": 4.4,
     "logo_url": "/logos/trimble-connect.png",
     "official_url": "https://connect.trimble.com",
@@ -3310,17 +3340,20 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Structural Steel Fabrication",
+      "Precast Concrete",
+      "General Contracting",
+      "Architecture & Engineering",
+      "MEP Contracting"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t231",
     "name": "BIMcollab",
     "slug": "bimcollab",
-    "short_desc": "Issue management and IFC-based clash review across BIM authoring tools.",
+    "short_desc": "KUBUS’s issue management and model validation ecosystem designed around open BIM standards and the BCF communication protocol.",
     "score": 4.5,
     "logo_url": "/logos/bimcollab.png",
     "official_url": "https://www.bimcollab.com",
@@ -3328,17 +3361,20 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Architecture & Design",
+      "Structural Engineering",
+      "MEP Engineering",
+      "General Contracting",
+      "BIM Coordination Consulting"
     ],
     "features": [],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "t232",
     "name": "Autodesk Dynamo",
     "slug": "autodesk-dynamo",
-    "short_desc": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
+    "short_desc": "Open-source visual programming platform for computational design, Revit BIM workflow automation, and generative geometry exploration.",
     "score": 4.5,
     "logo_url": "/logos/autodesk-dynamo.png",
     "official_url": "https://dynamobim.org",
@@ -3346,11 +3382,14 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Computational Architecture",
+      "BIM Management & Automation",
+      "Structural Engineering",
+      "Civil Infrastructure",
+      "Facade Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t233",
@@ -3584,7 +3623,7 @@
     "id": "t250",
     "name": "DXF Medic",
     "slug": "dxf-medic",
-    "short_desc": "Browser-based DXF and SVG geometry checks and repair.",
+    "short_desc": "Specialized CAD file repair utility for diagnosing, cleaning, repairing, and optimizing damaged or unclosed DXF and DWG vector drawings.",
     "score": 4.3,
     "logo_url": "/logos/dxf-medic.svg",
     "official_url": "https://madegrain.com/dxfmedic/",
@@ -3592,12 +3631,14 @@
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Manufacturing"
+      "Laser & Plasma CNC Cutting",
+      "Sheet Metal Fabrication",
+      "Woodworking & CNC Routing",
+      "Mechanical Reverse Engineering",
+      "CAD Data Recovery"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t251",
@@ -3682,27 +3723,27 @@
   },
   {
     "id": "t258",
-    "name": "RVT Convert",
+    "name": "RVT Converter",
     "slug": "rvt-convert",
-    "short_desc": "Free browser-based converter that saves Revit projects, families and templates from recent releases back to an older Revit format.",
-    "score": 4.7,
+    "short_desc": "Specialized conversion utility for transforming Autodesk Revit RVT and RFA project files into open IFC, DWG, STEP, and web-ready 3D formats.",
+    "score": 4.3,
     "logo_url": "/logos/rvt-convert.svg",
-    "official_url": "https://rvtconvert.com/?utm_source=cadguide",
+    "official_url": "https://rvtconvert.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "BIM & AEC",
-      "Structural Engineering",
-      "MEP Engineering",
-      "Construction Management"
+      "BIM Data Management",
+      "Architectural Visualization",
+      "Construction Coordination",
+      "CAD Translation Services",
+      "Game Engine & Real-Time Simulation"
     ],
     "features": [
       "bim-integration",
       "cloud-collaboration"
     ],
-    "country": "United Kingdom"
+    "country": ""
   },
   {
     "id": "t260",
@@ -3730,23 +3771,22 @@
     "id": "t261",
     "name": "3D House Planner",
     "slug": "3d-house-planner",
-    "short_desc": "Free browser-based 2D/3D home and floor planner with live 3D walkthroughs, openBIM IFC4 export, and zero watermarks.",
-    "score": 4.8,
+    "short_desc": "Intuitive web and desktop interior planning and residential floor plan design software for homeowners, real estate agents, and remodeling pros.",
+    "score": 4.4,
     "logo_url": "/logos/3d-house-planner.svg",
-    "official_url": "https://www.3dhouseplanner.com/?utm_source=cadguide",
+    "official_url": "https://www.3dhouseplanner.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "BIM & AEC",
-      "Home Renovation",
-      "Real Estate",
-      "3D Printing"
+      "Residential Interior Design",
+      "Real Estate Marketing",
+      "Home Remodeling & Staging",
+      "DIY Home Planning",
+      "Property Management"
     ],
     "features": [],
-    "country": "Brazil"
+    "country": ""
   },
   {
     "id": "ext-infraworks",
