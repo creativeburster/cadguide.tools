@@ -2300,58 +2300,64 @@
     "id": "t154",
     "name": "WorkNC",
     "slug": "worknc",
-    "short_desc": "French CAM software for 2-5 axis milling with automatic feature recognition.",
-    "score": 3.8,
+    "short_desc": "Hexagon’s premier automated CAM software for 2D to 5-axis surface machining of complex molds, dies, and tooling.",
+    "score": 4.5,
     "logo_url": "/logos/worknc.png",
     "official_url": "https://hexagon.com/products/worknc",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mold Making",
-      "Die Manufacturing",
-      "General Machining"
+      "Automotive Stamping Tool & Die",
+      "Plastic Injection Mold Making",
+      "Aerospace Tooling & Prototyping",
+      "Heavy Forging & Casting Dies",
+      "Precision Mold Machining"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t155",
     "name": "SURFCAM",
     "slug": "surfcam",
-    "short_desc": "US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
-    "score": 3.5,
+    "short_desc": "Hexagon’s powerful 2D to 5-axis CNC programming system featuring patented TRUEMill high-speed roughing technology.",
+    "score": 4.4,
     "logo_url": "/logos/surfcam.png",
     "official_url": "https://www.surfcam.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "General Machining",
-      "Mold Making",
-      "Production"
+      "Precision Machine Job Shops",
+      "Aerospace Component Fabrication",
+      "Automotive Tool & Prototype Making",
+      "Medical Device Prototyping",
+      "Industrial Valve & Pump Manufacturing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t156",
     "name": "BobCAD-CAM",
     "slug": "bobcad-cam",
-    "short_desc": "US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
-    "score": 3.5,
-    "logo_url": "/logos/bobcad-cam.jpg",
+    "short_desc": "Accessible, modular CAD/CAM software for CNC milling, turning, mill-turn, router, plasma, laser, waterjet, and wire EDM.",
+    "score": 4.3,
+    "logo_url": "/logos/bobcad-cam.png",
     "official_url": "https://bobcad.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "General Machining",
-      "Small Manufacturing",
-      "Job Shops"
+      "Small-to-Midsize Machine Job Shops",
+      "Prototyping & Custom Fabrication",
+      "Sheet Metal Laser & Plasma Profiling",
+      "Woodworking & CNC Routing",
+      "Vocational & Technical Education"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t158",
@@ -2466,20 +2472,22 @@
     "id": "t166",
     "name": "AutoForm",
     "slug": "autoform",
-    "short_desc": "Swiss software platform for sheet metal forming and BiW assembly process engineering.",
-    "score": 4.1,
+    "short_desc": "Industry-standard sheet metal forming and die design simulation software for automotive body-in-white manufacturing.",
+    "score": 4.8,
     "logo_url": "/logos/autoform.png",
     "official_url": "https://www.autoform.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Sheet Metal",
-      "Manufacturing"
+      "Automotive OEM Body-in-White (BIW)",
+      "Automotive Stamping Tool & Die",
+      "Appliance Sheet Metal Enclosures",
+      "Aerospace Cold Forming",
+      "High-Volume Progressive Stamping"
     ],
     "features": [],
-    "country": "Switzerland"
+    "country": ""
   },
   {
     "id": "t167",
@@ -2507,144 +2515,156 @@
     "id": "t168",
     "name": "Moldflow",
     "slug": "moldflow",
-    "short_desc": "Autodesk injection molding simulation software for plastic part and mold design.",
-    "score": 4,
-    "logo_url": "/logos/moldflow.svg",
+    "short_desc": "Autodesk’s industry-leading injection molding simulation software for optimizing plastic part design, mold cooling, and warpage.",
+    "score": 4.7,
+    "logo_url": "/logos/moldflow.png",
     "official_url": "https://www.autodesk.com/products/moldflow/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
+      "Automotive Plastic Interior & Exterior Trim",
+      "Consumer Electronics & Appliance Enclosures",
+      "Medical Device Plastic Components",
+      "Packaging & Thin-Wall Containers",
+      "Precision Plastic Injection Toolrooms"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t169",
     "name": "Moldex3D",
     "slug": "moldex3d",
-    "short_desc": "Taiwanese plastic injection molding simulation software for advanced analysis.",
-    "score": 3.9,
+    "short_desc": "CoreTech System’s true 3D injection molding simulation software for advanced plastic molding processes and composites.",
+    "score": 4.6,
     "logo_url": "/logos/moldex3d.png",
     "official_url": "https://www.moldex3d.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
+      "Automotive Plastics & Under-the-Hood Parts",
+      "Precision Optical Lenses & Light Guides",
+      "Consumer Electronics & Connectors",
+      "Medical Diagnostic Devices",
+      "Aerospace Composite Structures"
     ],
     "features": [],
-    "country": "Taiwan"
+    "country": ""
   },
   {
     "id": "t179",
     "name": "AlphaCAM",
     "slug": "alphacam",
-    "short_desc": "UK-based CAM software for woodworking, stone, and metal cutting.",
-    "score": 3.6,
+    "short_desc": "Hexagon’s leading CAD/CAM software for woodworking, stone masonry, marble, and composite material CNC routing.",
+    "score": 4.5,
     "logo_url": "/logos/alphacam.png",
     "official_url": "https://hexagon.com/products/alphacam",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Woodworking",
-      "Stone",
-      "Metal",
-      "Manufacturing"
+      "Architectural Woodworking & Cabinetry",
+      "Stone Countertop & Marble Fabrication",
+      "Composite Aircraft & Marine Components",
+      "Sign Making & Exhibit Fabrication",
+      "Acoustic & Plastic Panel Processing"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t180",
     "name": "Radan",
     "slug": "radan",
-    "short_desc": "UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
-    "score": 3.6,
+    "short_desc": "Hexagon’s total CAD/CAM solution for sheet metal punching, laser cutting, profiling, nesting, and press brake bending.",
+    "score": 4.5,
     "logo_url": "/logos/radan.png",
     "official_url": "https://hexagon.com/products/radan",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Precision Sheet Metal Job Shops",
+      "HVAC Ductwork & Enclosures",
+      "Electrical Enclosure & Cabinet Manufacturing",
+      "Agricultural & Yellow Goods Machinery",
+      "Food Service Stainless Steel Equipment"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t182",
     "name": "Lantek Expert",
     "slug": "lantek-expert",
-    "short_desc": "Spanish CAD/CAM software for sheet metal punching and cutting.",
-    "score": 3.5,
+    "short_desc": "Lantek’s advanced CAD/CAM nesting software system for CNC sheet metal cutting machines, punch presses, and waterjets.",
+    "score": 4.5,
     "logo_url": "/logos/lantek-expert.png",
     "official_url": "https://www.lantek.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Heavy Machinery & Structural Steel",
+      "HVAC & Industrial Sheet Metal Fabrication",
+      "Agricultural Machinery & Vehicle Chassis",
+      "Sheet Metal Job Shops & Laser Subcontractors",
+      "Shipbuilding & Plate Steel Profiling"
     ],
     "features": [],
-    "country": "Spain"
+    "country": ""
   },
   {
     "id": "t183",
     "name": "SigmaNEST",
     "slug": "sigmanest",
-    "short_desc": "US-based CAD/CAM nesting software for laser, plasma, oxyfuel, punch, router and waterjet profile cutting.",
-    "score": 3.8,
+    "short_desc": "SigmaTEK Systems’ industry-leading CAD/CAM nesting software for sheet metal, plate steel, laser, plasma, punch, and waterjet machines.",
+    "score": 4.6,
     "logo_url": "/logos/sigmanest.png",
     "official_url": "https://www.sigmateksystems.com/en/sigmanest",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Heavy Industrial Equipment Manufacturing",
+      "Shipbuilding & Structural Steel Fabrication",
+      "Contract Sheet Metal Job Shops",
+      "Agricultural & Yellow Goods Machinery",
+      "Tank, Vessel & Boiler Plate Fabrication"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t185",
     "name": "ANSYS Fluent",
     "slug": "ansys-fluent",
-    "short_desc": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations.",
-    "score": 4.7,
+    "short_desc": "Ansys’ industry-leading computational fluid dynamics (CFD) software for fluid flow, heat transfer, turbulence, and multiphase reactions.",
+    "score": 4.8,
     "logo_url": "/logos/ansys-fluent.png",
     "official_url": "https://www.ansys.com/products/fluids/ansys-fluent",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Manufacturing"
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Thermal Management & Aerodynamics",
+      "Energy, Oil, Gas & Turbomachinery",
+      "Electronics Cooling & Thermal Dissipation",
+      "Chemical Processing & Combustion"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t186",
     "name": "ANSYS Workbench",
     "slug": "ansys-workbench",
-    "short_desc": "Unified Ansys simulation platform for project management, geometry prep, and multi-physics coupling.",
+    "short_desc": "Ansys’ unified project schematic and multiphysics integration platform linking CAD, meshing, FEA, and CFD simulations.",
     "score": 4.6,
     "logo_url": "/logos/ansys-workbench.png",
     "official_url": "https://www.ansys.com/products/ansys-workbench",
@@ -2652,19 +2672,20 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Electronics",
-      "Manufacturing"
+      "Multiphysics Engineering & Consulting",
+      "Automotive Powertrain & Chassis Systems",
+      "Aerospace Propulsion & Structures",
+      "Heavy Machinery & Industrial Equipment",
+      "Electronics Cooling & Thermal Packaging"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t187",
     "name": "ANSYS Discovery",
     "slug": "ansys-discovery",
-    "short_desc": "Real-time simulation-driven design with live solver feedback during modeling.",
+    "short_desc": "Ansys’ interactive real-time simulation and 3D direct modeling software for rapid early-stage concept exploration.",
     "score": 4.5,
     "logo_url": "/logos/ansys-discovery.png",
     "official_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
@@ -2672,161 +2693,169 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Product Design",
-      "Electronics",
-      "Automotive"
+      "Early-Stage Product Concept Design",
+      "Consumer Hardware & Electronics",
+      "Automotive Prototyping",
+      "Industrial Valve & Manifold Design",
+      "General Mechanical Engineering"
     ],
     "features": [
       "ai-assisted",
       "generative-design",
       "simulation-fea"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t188",
     "name": "Abaqus",
     "slug": "abaqus",
-    "short_desc": "High-fidelity non-linear finite element analysis from Dassault Systèmes Simulia.",
-    "score": 4.7,
+    "short_desc": "Dassault Systèmes’ premier non-linear finite element analysis (FEA) software for explicit dynamics, fracture, and complex materials.",
+    "score": 4.8,
     "logo_url": "/logos/abaqus.png",
     "official_url": "https://www.3ds.com/products/simulia/abaqus",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Defense",
-      "Electronics",
-      "Energy"
+      "Automotive Safety & Powertrain",
+      "Aerospace Airframe & Composite Structures",
+      "Consumer Electronics Drop Testing",
+      "Biomedical Stents & Orthopedics",
+      "Tire Manufacturing & Rubber Components"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t189",
     "name": "COMSOL Multiphysics",
     "slug": "comsol-multiphysics",
-    "short_desc": "Coupled multi-physics finite element simulation across electromagnetics, structures, fluids, and chemistry.",
-    "score": 4.6,
+    "short_desc": "COMSOL’s unified cross-disciplinary simulation software for fully coupled multiphysics, electromagnetics, fluid flow, and acoustics.",
+    "score": 4.7,
     "logo_url": "/logos/comsol-multiphysics.png",
     "official_url": "https://www.comsol.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Energy",
-      "Research",
-      "Manufacturing"
+      "Scientific & Academic Research",
+      "Semiconductor & MEMS Engineering",
+      "Battery & Fuel Cell Technology",
+      "Biomedical & Microfluidic Devices",
+      "Acoustics & Transducer Design"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "Sweden"
+    "country": ""
   },
   {
     "id": "t190",
     "name": "LS-DYNA",
     "slug": "ls-dyna",
-    "short_desc": "Explicit non-linear dynamics solver for crash, blast, drop, and metal forming.",
-    "score": 4.7,
+    "short_desc": "Ansys’ premier explicit dynamic simulation software for vehicle crashworthiness, occupant safety, ballistics, and high-energy impact.",
+    "score": 4.8,
     "logo_url": "/logos/ls-dyna.png",
     "official_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Defense",
-      "Manufacturing"
+      "Automotive Vehicle Safety & Crash",
+      "Aerospace Impact & Bird Strike",
+      "Defense & Ballistic Protection",
+      "Consumer Electronics Drop Testing",
+      "Industrial Heavy Equipment Rollover (ROPS)"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t191",
     "name": "Simcenter STAR-CCM+",
     "slug": "simcenter-star-ccm",
-    "short_desc": "Multi-physics CFD platform from Siemens Digital Industries, strong in marine, turbomachinery, and electronics cooling.",
-    "score": 4.6,
+    "short_desc": "Siemens’ comprehensive multiphysics computational fluid dynamics (CFD) software for multidisciplinary aerodynamics and thermal simulation.",
+    "score": 4.7,
     "logo_url": "/logos/simcenter-star-ccm.png",
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Marine"
+      "Automotive Aerodynamics & Underhood Thermal",
+      "Aerospace Propulsion & External Flow",
+      "Marine Hydrodynamics & Hull Resistance",
+      "Turbomachinery & Gas Turbines",
+      "Chemical Processing & Multiphase Mixing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t192",
     "name": "OpenFOAM",
     "slug": "openfoam",
-    "short_desc": "Free open-source C++ CFD toolbox used widely in academia, research, and motorsport.",
-    "score": 4.4,
+    "short_desc": "Open-source computational fluid dynamics (CFD) software package with extensive solver libraries for research and industry.",
+    "score": 4.5,
     "logo_url": "/logos/openfoam.png",
     "official_url": "https://www.openfoam.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Research",
-      "Aerospace",
-      "Automotive",
-      "Energy"
+      "Academic & Government Research",
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Motorsport & Vehicle Aerodynamics",
+      "Wind Energy & Atmospheric Boundary Layer Modeling",
+      "Chemical Engineering & Multiphase Mixing"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t193",
     "name": "SimScale",
     "slug": "simscale",
-    "short_desc": "Browser-based cloud CFD/FEA/thermal simulation platform with per-hour pricing.",
-    "score": 4.5,
+    "short_desc": "Cloud-native simulation platform for browser-based computational fluid dynamics (CFD), FEA, thermal, and acoustics.",
+    "score": 4.6,
     "logo_url": "/logos/simscale.png",
     "official_url": "https://www.simscale.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Electronics",
-      "Energy",
-      "Manufacturing"
+      "Architecture & Urban Wind Comfort",
+      "HVAC & Building Services Engineering",
+      "Electronics Thermal Packaging",
+      "Industrial Valves & Turbomachinery",
+      "Aerospace & Automotive Prototyping"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t194",
     "name": "Femap",
     "slug": "femap",
-    "short_desc": "Siemens Femap is a CAD-independent FEA pre/postprocessor primarily paired with NX Nastran.",
-    "score": 4.4,
+    "short_desc": "Siemens’ advanced engineering FEA pre- and post-processor with native Parasolid modeling and deep Simcenter Nastran integration.",
+    "score": 4.6,
     "logo_url": "/logos/femap.png",
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Defense",
-      "Marine"
+      "Aerospace Airframe & Spacecraft Structures",
+      "Defense & Naval Shipbuilding",
+      "Heavy Industrial Machinery",
+      "Pressure Vessels & Energy Equipment",
+      "Automotive Chassis Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t195",

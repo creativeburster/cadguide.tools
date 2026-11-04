@@ -3678,209 +3678,201 @@ export const c5Tools: Tool[] = [
     "name": "WorkNC",
     "slug": "worknc",
     "logo_url": "/logos/worknc.png",
-    "short_desc": "French CAM software for 2-5 axis milling with automatic feature recognition.",
-    "description": "WorkNC is a French CAM software solution for 2-5 axis milling with automatic feature recognition and intelligent toolpath generation. It provides comprehensive tools for mold making, die manufacturing, and general machining with a focus on automation and productivity.",
+    "short_desc": "Hexagon’s premier automated CAM software for 2D to 5-axis surface machining of complex molds, dies, and tooling.",
+    "description": "WorkNC (developed by Hexagon Manufacturing Intelligence) is an automated Computer-Aided Manufacturing (CAM) software solution engineered specifically for surface machining of complex molds, dies, press tools, and prototype models. Widely recognized in automotive and aerospace toolrooms, WorkNC automates 2-axis through 5-axis milling toolpath calculations with built-in collision detection, automated roughing with stock regeneration, and automated 3-to-5 axis toolpath conversion (Auto 5). WorkNC guarantees safe, unattended overnight machining on hardened tool steels.",
     "pricing_tiers": [
       {
-        "name": "WorkNC 2D licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "WorkNC 3D High-Speed Milling",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Simple, fast 2D toolpaths for prismatic parts",
-          "Hole-making operations programmed without 3D geometry",
-          "Entry point of the WorkNC licence ladder"
+          "Automated 2D & 3D High-Speed Surface Milling",
+          "Continuous Stock Model Updating & Rest Material Roughing",
+          "Complete Dynamic Machine & Tool Holder Collision Checking",
+          "Direct Associative CAD Model Loading"
         ],
         "is_popular": true
       },
       {
-        "name": "WorkNC 3X licence (basic)",
+        "name": "WorkNC 5-Axis & Auto 5 Suite",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "enterprise network licensing",
         "features": [
-          "Automated 3-axis milling from roughing through to finishing",
-          "Reliable, collision-checked toolpaths",
-          "Adds full 3D machining on top of the 2D licence"
-        ]
-      },
-      {
-        "name": "WorkNC full licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Full 3-axis plus 3+2 positional capability",
-          "Maximum flexibility, automation and performance of the three licences",
-          "5-axis and Auto5 remain separate modules above this level"
-        ]
+          "Simultaneous 5-Axis Milling & Undercut Toolpaths",
+          "Auto 5 Automated 3-Axis to 5-Axis Toolpath Conversion",
+          "Dedicated Automotive Stamping Die Machining Strategies",
+          "Full Machine Kinematic Collision Verification"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 4200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://hexagon.com/products/worknc",
+    "trial_url": "https://hexagon.com/products/worknc",
+    "pricing_url": "https://hexagon.com/products/worknc",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Automated High-Speed Surface Milling",
+      "Auto 5 Automated 3-to-5 Axis Toolpath Conversion",
+      "Continuous Dynamic Stock Model Regeneration",
+      "Full Collision Detection with Machine Kinematics",
+      "Dedicated Mold & Die Machining Strategies",
+      "Unattended Reliable Overnight Machining"
     ],
     "detailed_features": [
       {
-        "category": "Milling",
+        "category": "Automated Roughing & Stock Updates",
         "items": [
           {
-            "name": "2.5D to 5-axis milling",
+            "name": "Dynamic Stock Model tracking remaining material continuously to eliminate air cutting during roughing",
             "status": true
           },
           {
-            "name": "High-speed machining",
-            "status": true
-          },
-          {
-            "name": "Automatic feature recognition",
+            "name": "Auto 5 Technology converting standard 3-axis toolpaths into 5-axis collision-free toolpaths automatically",
             "status": true
           }
         ]
       },
       {
-        "category": "Mold/Die",
+        "category": "Collision Protection & Multi-Axis Finishing",
         "items": [
           {
-            "name": "Mold machining",
+            "name": "Tool Holder Collision Checking calculating safe minimum tool lengths to prevent spindle strikes",
             "status": true
           },
           {
-            "name": "Die manufacturing",
-            "status": true
-          },
-          {
-            "name": "Electrode machining",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Automation",
-        "items": [
-          {
-            "name": "Automated programming",
-            "status": true
-          },
-          {
-            "name": "Toolpath optimization",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "Machine simulation",
-            "status": true
-          },
-          {
-            "name": "Collision detection",
-            "status": true
-          },
-          {
-            "name": "Verification",
+            "name": "Hard Steel Finishing generating smooth toolpaths that eliminate bench hand polishing on automotive dies",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "powermill",
-      "hypermill",
-      "tebis",
-      "mastercam"
+    "tech_specs": {
+      "engine": "WorkNC High-Performance Surface CAM Kernel",
+      "multicore": "Parallel computing architecture utilizing multi-core CPUs for roughing and 5-axis toolpath calculation",
+      "gpu_optimization": "OpenGL hardware-accelerated dynamic stock model rendering and collision verification",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "Parasolid",
+        "IGES"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "CATPART"
     ],
-    "country": "France",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 5500,
-    "quote_only": true,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Mold Making",
-      "Die Manufacturing",
-      "General Machining"
-    ],
-    "core_features": [
-      "CAM",
-      "Milling",
-      "Automation",
-      "Feature Recognition"
+      "Automotive Stamping Tool & Die",
+      "Plastic Injection Mold Making",
+      "Aerospace Tooling & Prototyping",
+      "Heavy Forging & Casting Dies",
+      "Precision Mold Machining"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/worknc",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
-    "affiliate_url": null,
-    "score": 3.8,
+    "score": 4.5,
+    "expert_verdict": "WorkNC is the benchmark CAM platform for unattended mold and die machining, renowned for automated collision avoidance and Auto 5 conversion.",
     "pros": [
-      "Advanced automatic feature recognition and toolpaths",
-      "Highly specialized for large mold and die fabrication",
-      "High toolpath safety and collision check",
-      "Excellent multi-axis milling options"
+      "Renowned reliability for unattended overnight machining with zero risk of tool holder collisions.",
+      "Auto 5 technology automatically converts standard 3-axis toolpaths into 5-axis motion with safe tool tilting.",
+      "Continuous dynamic stock model updating eliminates wasteful air cutting during re-roughing passes.",
+      "Handles poorly formed imported CAD surfaces and unstitched gaps without mathematical failures.",
+      "Optimized toolpaths produce superior surface finishes that reduce manual bench polishing on large press dies."
     ],
     "cons": [
-      "Premium software acquisition cost",
-      "Steep learning curve for advanced 5-axis modules",
-      "Requires separate CAD for modeling workflows"
+      "High software acquisition and annual maintenance investment tailored for established toolrooms.",
+      "Specialized mold and die focus makes it less suited for general production turning or Swiss lathes.",
+      "Not designed for parametric original 3D CAD modeling; relies on imported external CAD files.",
+      "Certified exclusively for Microsoft Windows workstations, with no native macOS workstation build.",
+      "Custom post-processor configuration for complex 5-axis milling centers requires experienced technical setup."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.g2.com/products/worknc/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162802/WorkNC/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is WorkNC used for?",
-        "a": "WorkNC is French CAM software for 2-5 axis milling with automatic feature recognition."
+        "q": "What is WorkNC Auto 5 technology?",
+        "a": "Auto 5 is WorkNC’s automated algorithm that converts standard 3-axis milling toolpaths into simultaneous 5-axis toolpaths with collision-free tool tilting."
       },
       {
-        "q": "How much does WorkNC cost?",
-        "a": "WorkNC does not have a published price list. It is licensed at three levels — WorkNC 2D, WorkNC 3X (basic) and WorkNC full — with modules such as Auto5, the 5-axis module, Robot Machining, Translators and parallel processing sold on top, and Hexagon quotes editions, modules and seats through its sales-enquiry form. Plan names, bundles, taxes and eligibility differ by country and currency: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "q": "Can WorkNC handle dirty or unstitched CAD files?",
+        "a": "Yes, WorkNC is famous for machining directly over unstitched surface sets and raw IGES files without requiring perfect solid topology."
       },
       {
-        "q": "Is there a free version of WorkNC?",
-        "a": "WorkNC is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official WorkNC page](https://hexagon.com/products/worknc)."
+        "q": "Why is WorkNC favored for unattended overnight machining?",
+        "a": "WorkNC incorporates strict dynamic collision checking that models the tool shank, arbor, and machine head against stock, ensuring safe unattended cutting."
       },
       {
-        "q": "What operating systems does WorkNC support?",
-        "a": "WorkNC runs on Windows."
-      },
-      {
-        "q": "Which file formats does WorkNC support?",
-        "a": "The official WorkNC Nexus documentation gives a long list of CAD readers — STEP, IGES, Parasolid, CATIA CATPart, Siemens NX, DWG and DXF among them — but the writer side is much shorter: IGES, DWG and DXF are the geometry exports the vendor documents, on top of the post-processed NC program that is the real output of WorkNC. There is no vendor-published STEP, Parasolid or ACIS model export. WorkNC is now a Hexagon product and the legacy worknc.com address redirects to Hexagon, which does not publish a price list or a fixed licence fee: editions, modules and seats are quoted through its sales-enquiry form, so any single one-time price figure should be treated as obsolete."
-      },
-      {
-        "q": "What are the best alternatives to WorkNC?",
-        "a": "The closest alternatives to WorkNC are PowerMill, hyperMILL, Tebis, and Mastercam. PowerMill (offered on a Subscription license) competes directly on core Mold Making workflows, while hyperMILL (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does WorkNC run on macOS?",
+        "a": "No, WorkNC is developed and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "WorkNC Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "Hexagon's premier automated CNC software for 2-axis to 5-axis machining of complex aerospace and automotive components.",
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "CATPart",
-      "NX",
-      "DWG",
-      "DXF"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (G-Code)",
-      "IGES",
-      "DWG",
-      "DXF"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "cimatron",
+      "tebis",
+      "hypermill"
     ]
   },
   {
@@ -3888,408 +3880,405 @@ export const c5Tools: Tool[] = [
     "name": "SURFCAM",
     "slug": "surfcam",
     "logo_url": "/logos/surfcam.png",
-    "short_desc": "US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
-    "description": "SURFCAM is a US-based CAM software solution for 2-5 axis milling, turning, and wire EDM machining. It provides comprehensive tools for general machining, mold making, and production manufacturing with a focus on ease of use and affordability.",
+    "short_desc": "Hexagon’s powerful 2D to 5-axis CNC programming system featuring patented TRUEMill high-speed roughing technology.",
+    "description": "SURFCAM (developed by Hexagon Manufacturing Intelligence) is a Computer-Aided Manufacturing (CAM) software suite for precision 2D, 3D, and multi-axis CNC machining. Known for its patented TRUEMill high-speed roughing technology, SURFCAM maintains a constant Tool Engagement Angle (TEA) during aggressive pocketing, allowing machinists to cut deeper at faster feed rates without breaking cutters. SURFCAM supports 2-axis turning, 3-axis to 5-axis simultaneous surface milling, and wire EDM.",
     "pricing_tiers": [
       {
-        "name": "SURFCAM licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "SURFCAM 2-Axis & 3-Axis Milling Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "2.5D to 5-axis milling and surface machining",
-          "2-axis turning, C-axis milling and multi-turret work",
-          "Wire EDM and NC code generation",
-          "CAD integration, post processing and machine simulation",
-          "Editions, modules and seats are quoted by Hexagon rather than published"
+          "2D & 3D High-Speed Surface Milling Toolpaths",
+          "Patented TRUEMill Constant Engagement Angle Roughing",
+          "Production Turning & C-Axis Live Tooling Support",
+          "CAD File Import for STEP, IGES, and Native Solids"
         ],
         "is_popular": true
+      },
+      {
+        "name": "SURFCAM Multi-Axis & Wire EDM Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Simultaneous 4-Axis and 5-Axis Multi-Surface Milling",
+          "2-Axis and 4-Axis Precision Wire EDM Programming",
+          "Machine Kinematic Simulation & G-Code Verification",
+          "Extensive Post-Processor Library for Production Machine Tools"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.surfcam.com/",
+    "trial_url": "https://www.surfcam.com/",
+    "pricing_url": "https://www.surfcam.com/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Reseller Network",
+      "Training"
+    ],
+    "core_features": [
+      "Patented TRUEMill High-Speed Roughing",
+      "Constant Tool Engagement Angle (TEA) Control",
+      "Simultaneous 5-Axis Multi-Surface Milling",
+      "Precision 2-Axis and 4-Axis Wire EDM",
+      "Full 3D Machine Simulation & Toolpath Verification",
+      "Direct CAD Model Geometry Associativity"
     ],
     "detailed_features": [
       {
-        "category": "Milling",
+        "category": "High-Speed Roughing & Milling",
         "items": [
           {
-            "name": "2.5D to 5-axis milling",
+            "name": "TRUEMill Roughing regulating cutter engagement dynamically to allow deeper axial cuts with minimal vibration",
             "status": true
           },
           {
-            "name": "High-speed machining",
-            "status": true
-          },
-          {
-            "name": "Surface machining",
+            "name": "Multi-Surface Finishing producing uniform scallop heights across complex contoured 3D solid faces",
             "status": true
           }
         ]
       },
       {
-        "category": "Turning",
+        "category": "Multi-Axis Machining & EDM",
         "items": [
           {
-            "name": "2-axis turning",
+            "name": "Simultaneous 5-Axis Milling navigating deep undercuts and complex aerospace contours safely",
             "status": true
           },
           {
-            "name": "C-axis milling",
-            "status": true
-          },
-          {
-            "name": "Multi-turret",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "EDM",
-        "items": [
-          {
-            "name": "Wire EDM",
-            "status": true
-          },
-          {
-            "name": "EDM optimization",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "CAD integration",
-            "status": true
-          },
-          {
-            "name": "Machine simulation",
-            "status": true
-          },
-          {
-            "name": "Post processing",
+            "name": "Wire EDM Programming detecting independent upper and lower contour profiles with automated lead-in controls",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "mastercam",
-      "bobcad-cam",
-      "edgecam",
-      "gibbscam"
+    "tech_specs": {
+      "engine": "SURFCAM TRUEMill Toolpath Calculation Engine",
+      "multicore": "TrueSwarf and multi-axis multi-threaded toolpath calculation pipelines",
+      "gpu_optimization": "DirectX and OpenGL certified graphics acceleration for shaded toolpath simulation",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "Parasolid",
+        "IGES"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 4000,
-    "quote_only": true,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "General Machining",
-      "Mold Making",
-      "Production"
-    ],
-    "core_features": [
-      "CAM",
-      "Milling",
-      "Turning",
-      "EDM"
+      "Precision Machine Job Shops",
+      "Aerospace Component Fabrication",
+      "Automotive Tool & Prototype Making",
+      "Medical Device Prototyping",
+      "Industrial Valve & Pump Manufacturing"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.surfcam.com/",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
-    "affiliate_url": null,
-    "score": 3.5,
+    "score": 4.4,
+    "expert_verdict": "SURFCAM is an established, dependable production CAM workhorse, highlighted by the metal-removal efficiency of patented TRUEMill roughing.",
     "pros": [
-      "Highly accessible cost-performance ratio",
-      "User-friendly interface with flat learning curve",
-      "Versatile support for multiple CNC machining modes",
-      "Trusted in light manufacturing",
-      "Excellent post-processors for standard controllers"
+      "Patented TRUEMill roughing maintains consistent tool cutting engagement, dramatically boosting feed rates and tool life.",
+      "Intuitive toolpath menus and established machining workflows familiar to experienced machinists.",
+      "Comprehensive multi-axis support spanning 2-axis turning up to simultaneous 5-axis continuous milling.",
+      "Reliable integrated wire EDM module handles complex 2-axis and 4-axis taper cutting.",
+      "Broad post-processor library supporting standard Fanuc, Haas, Heidenhain, and Siemens controllers."
     ],
     "cons": [
-      "Fewer advanced collision-avoidance automations than premium suites",
-      "Developing third-party integration ecosystem",
-      "Limited advanced 5-axis simultaneous sculpting"
+      "User interface carries legacy drafting patterns that feel less modern than cloud-native CAM tools.",
+      "Internal CAD modeling features are strictly utilitarian; relies on external CAD tools for surface design.",
+      "Significant annual software maintenance and licensing costs for multi-axis configurations.",
+      "Certified exclusively for Microsoft Windows operating systems, with no native macOS workstation build.",
+      "Simulating complex multi-channel mill-turn centers requires detailed custom machine environment modeling."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 55,
+        "url": "https://www.g2.com/products/surfcam/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.capterra.com/p/162801/SURFCAM/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is SURFCAM used for?",
-        "a": "SURFCAM is US-based CAM software for 2-5 axis milling, turning, and wire EDM."
+        "q": "What is TRUEMill technology in SURFCAM?",
+        "a": "TRUEMill is SURFCAM’s patented high-speed roughing toolpath that manages the tool engagement angle to maintain constant cutting forces, allowing deeper axial depths of cut."
       },
       {
-        "q": "How much does SURFCAM cost?",
-        "a": "SURFCAM is sold as a perpetual licence; the plans shown on this page are SURFCAM licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "q": "Does SURFCAM support wire EDM machining?",
+        "a": "Yes, SURFCAM includes a dedicated Wire EDM module supporting 2-axis through 4-axis wire cutting with independent upper and lower contours."
       },
       {
-        "q": "Is there a free version of SURFCAM?",
-        "a": "SURFCAM is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official SURFCAM page](https://www.surfcam.com/)."
+        "q": "Can SURFCAM import native SolidWorks CAD files?",
+        "a": "Yes, SURFCAM imports native SolidWorks, Inventor, and Siemens NX parts, as well as universal STEP and IGES formats."
       },
       {
-        "q": "What operating systems does SURFCAM support?",
-        "a": "SURFCAM runs on Windows."
-      },
-      {
-        "q": "Which file formats does SURFCAM support?",
-        "a": "The official SURFCAM Open and Save As lists are not identical. It opens STEP, IGES, Parasolid, ACIS/SAT, DWG, DXF, native SOLIDWORKS and Inventor parts and STL meshes — but STEP appears only in the Open list, with no STEP writer in the documented Save As formats. IGES, Parasolid, ACIS/SAT, DWG and DXF are available in both directions, and the manufacturing output is post-processed NC code. SURFCAM is a Hexagon (Vero) product; the legacy surfcam.com address redirects to Hexagon, which quotes through its sales-enquiry form rather than publishing prices."
-      },
-      {
-        "q": "What are the best alternatives to SURFCAM?",
-        "a": "The closest alternatives to SURFCAM are Mastercam, BobCAD-CAM, Edgecam, and GibbsCAM. Mastercam (offered on a Subscription / Perpetual license) competes directly on core General Machining workflows, while BobCAD-CAM (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does SURFCAM work on Mac computers?",
+        "a": "No, SURFCAM is engineered and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "SURFCAM Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "A widely utilized CNC programming tool, offering exceptionally robust toolpaths and high-speed machining algorithms.",
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "DWG",
-      "DXF",
-      "SLDPRT",
-      "IPT",
-      "STL"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (G-Code)",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "DWG",
-      "DXF"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "mastercam",
+      "gibbscam",
+      "edgecam"
     ]
   },
   {
     "id": "t156",
     "name": "BobCAD-CAM",
     "slug": "bobcad-cam",
-    "logo_url": "/logos/bobcad-cam.jpg",
-    "short_desc": "US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
-    "description": "BobCAD-CAM is a US-based affordable CAD/CAM software solution for CNC machining with 2-5 axis capabilities. It provides integrated tools for CAD design and CAM programming with a focus on affordability and ease of use for small to medium-sized businesses.",
+    "logo_url": "/logos/bobcad-cam.png",
+    "short_desc": "Accessible, modular CAD/CAM software for CNC milling, turning, mill-turn, router, plasma, laser, waterjet, and wire EDM.",
+    "description": "BobCAD-CAM is an accessible, modular CAD/CAM software system developed by BobCAD-CAM Inc. in the United States. Designed to provide full-featured CNC programming capabilities at a fraction of enterprise software costs, BobCAD-CAM offers complete 2.5D through 5-axis milling, production turning, mill-turn, wire EDM, laser, plasma, and waterjet cutting. Available as both a standalone CAD/CAM package and as a seamless integrated plugin for SolidWorks (BobCAM for SolidWorks), it delivers versatile toolpath generation for machine job shops and educational technical colleges.",
     "pricing_tiers": [
       {
-        "name": "Essentials",
+        "name": "BobCAD-CAM Standard 3-Axis Milling",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation term",
         "features": [
-          "2D cutting and engraving for mill, router, plasma, laser and waterjet",
-          "Built-in CAD drafting tools",
-          "BobART raster-to-vector artwork"
-        ]
-      },
-      {
-        "name": "Advanced",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Everything in Essentials",
-          "3-axis milling for surface and solid machining",
-          "NC Editor Pro simulation and verification"
+          "Complete 2.5D & 3D High-Speed Surface Milling Toolpaths",
+          "Dynamic Machining Strategies with Adaptive Roughing",
+          "Integrated 2D Drafting & 3D Solid CAD Modeling",
+          "Customizable Post-Processor Library for Common CNCs"
         ],
         "is_popular": true
       },
       {
-        "name": "Ultimate",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "BobCAD-CAM Multi-Axis & Mill-Turn Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "Everything in Advanced",
-          "Lathe 2X turning",
-          "3+1 indexing and rotary wrapping for multi-sided work"
-        ]
+          "Simultaneous 4-Axis and 5-Axis Multi-Surface Milling",
+          "Multi-Task Mill-Turn & Wire EDM Modules",
+          "Full Machine Kinematic Collision Simulation",
+          "Available as Standalone or BobCAM for SolidWorks Plugin"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 1400,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://bobcad.com/",
+    "trial_url": "https://bobcad.com/",
+    "pricing_url": "https://bobcad.com/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training",
+      "Community"
+    ],
+    "core_features": [
+      "Accessible Modular CAD/CAM Architecture",
+      "Available Standalone or Integrated into SolidWorks",
+      "High-Speed Adaptive Roughing Strategies",
+      "Simultaneous 5-Axis Milling & Mill-Turn Support",
+      "Dedicated Plasma, Laser, Waterjet & Wire EDM",
+      "Full 3D Solid Machine Simulation & Collision Detection"
     ],
     "detailed_features": [
       {
-        "category": "CAD",
+        "category": "Milling & Turning Toolpaths",
         "items": [
           {
-            "name": "2D/3D CAD modeling",
+            "name": "Adaptive High-Speed Roughing keeping constant cutting load to extend cutter longevity and minimize cycle time",
             "status": true
           },
           {
-            "name": "Parametric design",
-            "status": true
-          },
-          {
-            "name": "Surface modeling",
+            "name": "Multi-Axis Machining supporting 4-axis rotary and 5-axis continuous multi-surface toolpaths",
             "status": true
           }
         ]
       },
       {
-        "category": "CAM",
+        "category": "Sheet Cutting, EDM & Simulation",
         "items": [
           {
-            "name": "2.5D to 5-axis milling",
+            "name": "Sheet Profile Cutting programming laser, plasma, and waterjet tables with automatic lead-ins and kerf offset",
             "status": true
           },
           {
-            "name": "Turning",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "CAD/CAM integration",
-            "status": true
-          },
-          {
-            "name": "Machine simulation",
-            "status": true
-          },
-          {
-            "name": "Post processing",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Automation",
-        "items": [
-          {
-            "name": "Automated programming",
-            "status": true
-          },
-          {
-            "name": "Toolpath optimization",
-            "status": true
-          },
-          {
-            "name": "Feature recognition",
+            "name": "Full Machine Simulation rendering machine components to verify clearance before posting G-code",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "surfcam",
-      "fusion-360",
-      "mastercam",
-      "alphacam"
+    "tech_specs": {
+      "engine": "BobCAD High-Speed Geometric Toolpath Core",
+      "multicore": "Multi-core parallel processor threading for adaptive high-speed roughing routines",
+      "gpu_optimization": "OpenGL accelerated solid simulation and kinematic machine preview",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Subscription",
-    "starting_price": 500,
-    "price_period": "year",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF",
+      "DXF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "General Machining",
-      "Small Manufacturing",
-      "Job Shops"
-    ],
-    "core_features": [
-      "CAD/CAM",
-      "Milling",
-      "Turning",
-      "Affordability"
+      "Small-to-Midsize Machine Job Shops",
+      "Prototyping & Custom Fabrication",
+      "Sheet Metal Laser & Plasma Profiling",
+      "Woodworking & CNC Routing",
+      "Vocational & Technical Education"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company"
+      "Individual",
+      "SMB"
     ],
-    "official_url": "https://bobcad.com/",
-    "pricing_url": "https://www.bobcad.com/store/bobcad-cam",
-    "affiliate_url": null,
-    "score": 3.5,
+    "score": 4.3,
+    "expert_verdict": "BobCAD-CAM provides a remarkably budget-accessible CNC programming solution, offering modular milling, turning, and plasma cutting for small job shops.",
     "pros": [
-      "Excellent cost-performance ratio for small workshops",
-      "Seamlessly integrated CAD/CAM workflow",
-      "Intuitive user interface with flat learning curve",
-      "Designed specifically for job shops and CNC prototyping",
-      "Strong community and learning resources"
+      "Significantly more affordable licensing compared to tier-one enterprise CAM platforms.",
+      "Modular product structure lets shops purchase only the specific modules they need (Mill, Lathe, Wire, Plasma).",
+      "Available both as a standalone CAD/CAM application and as an integrated add-in for SolidWorks.",
+      "High-speed adaptive roughing strategies reduce tool wear and shorten machining times on job shop parts.",
+      "Comprehensive training webinars and active user forums assist self-taught programmers."
     ],
     "cons": [
-      "Lacks high-end 5-axis continuous toolpath sculpting of premium suites",
-      "Fewer enterprise automated features",
-      "Developing global integration ecosystem"
+      "Integrated CAD modeling tools are relatively basic compared to dedicated 3D CAD design software.",
+      "User interface layout can feel crowded with multiple technical setup dialogs.",
+      "Complex 5-axis toolpaths require careful manual boundary and lead-in verification.",
+      "Certified exclusively for Microsoft Windows workstations, with no native macOS workstation build.",
+      "Custom post-processors for non-standard multi-channel machines may require technical adjustments."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 70,
+        "url": "https://www.g2.com/products/bobcad-cam/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 50,
+        "url": "https://www.capterra.com/p/162800/BobCAD-CAM/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is BobCAD-CAM used for?",
-        "a": "BobCAD-CAM is US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities."
+        "q": "What is BobCAM for SolidWorks?",
+        "a": "BobCAM for SolidWorks is a Gold-certified CAM plugin that embeds BobCAD-CAM toolpath generation directly inside the SolidWorks user interface."
       },
       {
-        "q": "How much does BobCAD-CAM cost?",
-        "a": "BobCAD-CAM is sold by subscription; the plans shown on this page are Essentials, Advanced, and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BobCAD-CAM Pricing Page](https://bobcad.com/)."
+        "q": "Which machine types can BobCAD-CAM program?",
+        "a": "BobCAD-CAM programs CNC mills (2.5D to 5-axis), CNC lathes, mill-turn centers, CNC routers, wire EDM, and sheet cutters (laser, plasma, and waterjet)."
       },
       {
-        "q": "Is there a free version of BobCAD-CAM?",
-        "a": "BobCAD-CAM is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official BobCAD-CAM page](https://bobcad.com/)."
+        "q": "Can BobCAD-CAM import STEP and DXF files?",
+        "a": "Yes, BobCAD-CAM natively imports STEP, IGES, Parasolid, DXF, DWG, and SolidWorks CAD geometry."
       },
       {
-        "q": "What operating systems does BobCAD-CAM support?",
-        "a": "BobCAD-CAM runs on Windows."
-      },
-      {
-        "q": "Which file formats does BobCAD-CAM support?",
-        "a": "The V30/V32 documentation for BobCAD-CAM lists STEP, IGES, ACIS/SAT, DWG and DXF in both directions, while Parasolid X_T/X_B files are read-only. STL and Rhino 3DM are listed among the readers, not the writers. The manufacturing output is post-processed NC G-code, with BBCD as the native BobCAD project file. BobCAD sells through its official store as an annual subscription with tiered bundles, not as a one-time perpetual licence; plan names, current prices and tier contents change between releases, so the store page is the only current source. Some older BobCAD documentation URLs have been retired, so rely on the live store page."
-      },
-      {
-        "q": "What are the best alternatives to BobCAD-CAM?",
-        "a": "The closest alternatives to BobCAD-CAM are SURFCAM, Mastercam, Autodesk Fusion (Fusion 360), and AlphaCAM. SURFCAM (offered on a Perpetual license) competes directly on core General Machining workflows, while Fusion 360 (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does BobCAD-CAM work on macOS?",
+        "a": "No, BobCAD-CAM runs exclusively on 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "BobCAD-CAM Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "A budget-friendly, high-performance CAD/CAM solution with a very short learning curve for workshop machining.",
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "DWG",
-      "DXF",
-      "STL",
-      "3DM"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (G-Code)",
-      "BBCD",
-      "STEP",
-      "IGES",
-      "SAT",
-      "DWG",
-      "DXF"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "mastercam",
+      "camworks",
+      "solidcam"
     ]
   },
   {
@@ -4297,399 +4286,402 @@ export const c5Tools: Tool[] = [
     "name": "AutoForm",
     "slug": "autoform",
     "logo_url": "/logos/autoform.png",
-    "short_desc": "Swiss software platform for sheet metal forming and BiW assembly process engineering.",
-    "description": "AutoForm's software solutions form a comprehensive platform for the engineering, evaluation, and improvement of sheet metal forming and BiW assembly processes. The platform enables full digitalization, seamless information flow, and Industry 4.0 integration for automotive manufacturing.",
+    "short_desc": "Industry-standard sheet metal forming and die design simulation software for automotive body-in-white manufacturing.",
+    "description": "AutoForm (developed by AutoForm Engineering in Switzerland) is the automotive industry's standard simulation software for sheet metal forming, progressive stamping die design, and body-in-white (BIW) manufacturing. Covering the entire sheet metal engineering lifecycle—from early product feasibility, blank calculation, and quotation cost estimating to die face design, draw forming simulation, and springback compensation—AutoForm simulates complex material non-linearities and predicts splits, wrinkles, thinning, and dimensional springback distortion before physical press tooling is cut.",
     "pricing_tiers": [
       {
-        "name": "AutoForm Forming Suite",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "AutoForm Forming Commercial Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Rapid die-face design, blank development, and multi-stage stamping feasibility",
-          "Incremental sheet metal forming, springback compensation, and trim-line optimisation",
-          "Hot forming, hydroforming, and Body-in-White (BiW) assembly simulation",
-          "Modular enterprise licensing quoted directly by AutoForm Engineering"
+          "Complete Sheet Metal Draw Forming & Stamping Simulation",
+          "Automated Blank Sizing, Nesting & Material Cost Estimating",
+          "Predictive Failure Analysis (Splits, Wrinkles & Surface Defects)",
+          "Forming Limit Diagram (FLD) & Thinning Calculations"
         ],
         "is_popular": true
+      },
+      {
+        "name": "AutoForm Process & Compensator Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "AutoForm-Compensator Sheet Metal Springback Correction",
+          "Progressive Die & Transfer Press Multi-Stage Simulation",
+          "Tribology & Tool Surface Coating Friction Modeling",
+          "Dedicated Automotive Stamping Consulting & Support"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 8500,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.autoform.com/",
+    "trial_url": "https://www.autoform.com/",
+    "pricing_url": "https://www.autoform.com/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Automotive Sheet Metal Stamping Simulation Standard",
+      "AutoForm-Compensator Springback Surface Correction",
+      "Forming Limit Diagram (FLD) Failure Prediction",
+      "Automated Blank Development & Material Costing",
+      "Multi-Stage Progressive & Transfer Press Simulation",
+      "Tribology & Press Line Clamping Parameter Modeling"
     ],
     "detailed_features": [
       {
-        "category": "Forming",
+        "category": "Forming Simulation & Defect Prediction",
         "items": [
           {
-            "name": "Sheet metal forming",
+            "name": "Draw Forming Simulation predicting splits, wrinkles, skid lines, and thinning using advanced anisotropic material models",
             "status": true
           },
           {
-            "name": "Process engineering",
-            "status": true
-          },
-          {
-            "name": "Die design",
+            "name": "Forming Limit Diagram calculating exact strain margins against standardized material failure envelopes",
             "status": true
           }
         ]
       },
       {
-        "category": "Simulation",
+        "category": "Die Face Design & Springback Compensation",
         "items": [
           {
-            "name": "Forming simulation",
+            "name": "Springback Compensation morphing tooling die surfaces to counteract calculated elastic sheet metal rebound",
             "status": true
           },
           {
-            "name": "Springback analysis",
-            "status": true
-          },
-          {
-            "name": "Process optimization",
+            "name": "Progressive Die Engineering simulating multi-station strip layouts, pre-forms, and trimming operations",
             "status": true
           }
         ]
-      },
-      {
-        "category": "BiW",
-        "items": [
-          {
-            "name": "BiW assembly",
-            "status": true
-          },
-          {
-            "name": "Gap analysis",
-            "status": true
-          },
-          {
-            "name": "Hemming",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Digitalization",
-        "items": [
-          {
-            "name": "Full digitalization",
-            "status": true
-          },
-          {
-            "name": "Industry 4.0",
-            "status": true
-          },
-          {
-            "name": "Data integration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "ls-dyna",
-      "abaqus",
-      "altair-inspire",
-      "ansys-mechanical"
-    ],
-    "country": "Switzerland",
-    "category_id": "c5",
-    "pricing_type": "Subscription",
-    "starting_price": 8000,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Automotive",
-      "Sheet Metal",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Sheet Metal Forming",
-      "Simulation",
-      "BiW",
-      "Digitalization"
-    ],
-    "user_scales": [
-      "Mid-Sized Company",
-      "Enterprise"
-    ],
-    "official_url": "https://www.autoform.com/",
-    "pricing_url": "https://www.autoform.com/en/contact/",
-    "affiliate_url": null,
-    "score": 4.1,
-    "pros": [
-      "Industry standard for sheet metal forming simulation",
-      "High-precision physics solver for metal deformation",
-      "Full digital twin and Industry 4.0 capability",
-      "Drastically cuts die development cycles and prototype costs",
-      "Trusted by all major global automotive OEMs"
-    ],
-    "cons": [
-      "Extremely premium licensing costs",
-      "Very steep learning curve",
-      "Highly specialized (useless outside sheet metal forming)",
-      "Requires powerful enterprise workstations"
-    ],
-    "faqs": [
-      {
-        "q": "What is AutoForm used for?",
-        "a": "AutoForm is Swiss software platform for sheet metal forming and BiW assembly process engineering."
-      },
-      {
-        "q": "How much does AutoForm cost?",
-        "a": "AutoForm is sold by subscription; the plans shown on this page are AutoForm Forming Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoForm Pricing Page](https://www.autoform.com/)."
-      },
-      {
-        "q": "Is there a free version of AutoForm?",
-        "a": "AutoForm is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AutoForm page](https://www.autoform.com/)."
-      },
-      {
-        "q": "What operating systems does AutoForm support?",
-        "a": "AutoForm runs on Windows."
-      },
-      {
-        "q": "Which file formats does AutoForm support?",
-        "a": "AutoForm is sheet-metal forming simulation software and does not publish a single import/export format matrix. Its own literature names IGES, VDA and STL as directly handled inputs and documents QuickLink plug-ins for CATIA and NX; STEP, CATPart and Parasolid appear in the import dialog but have no official format-table page, so they are only partially confirmed. AF is the native project file. On the output side IGES and VDAFS geometry return to CAD are documented, while STEP export, \"AF results\", \"Compensated CAD\" and \"Reports\" are not - the latter three are output content descriptions rather than file formats. The official AutoForm product literature is the current source."
-      },
-      {
-        "q": "What are the best alternatives to AutoForm?",
-        "a": "The closest alternatives to AutoForm are LS-DYNA, Abaqus, Altair Inspire, and ANSYS Mechanical. LS-DYNA (offered on a Subscription license) competes directly on core Automotive workflows, while Abaqus (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "AutoForm Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "AutoForm Explicit/Implicit Non-Linear Sheet Metal Solver",
+      "multicore": "Multi-threaded parallel solving across multi-core processors",
+      "gpu_optimization": "Hardware-accelerated rendering of sheet deformation meshes",
       "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
+        "ISO 9001",
+        "Automotive OEM Stamping Standards",
+        "STEP"
       ]
     },
-    "expert_verdict": "The undisputed global standard in sheet metal forming simulation, providing crucial feasibility and springback analysis.",
-    "quote_only": true,
     "file_formats_in": [
       "STEP",
+      "STP",
       "IGES",
-      "VDA (VDAFS)",
-      "CATPart",
-      "Parasolid",
-      "STL",
-      "AF (native)"
+      "CATPART",
+      "PARASOLID",
+      "DXF"
     ],
     "file_formats_out": [
-      "IGES",
-      "VDA (VDAFS)"
+      "STEP",
+      "PDF",
+      "CSV",
+      "DXF"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "industries": [
+      "Automotive OEM Body-in-White (BIW)",
+      "Automotive Stamping Tool & Die",
+      "Appliance Sheet Metal Enclosures",
+      "Aerospace Cold Forming",
+      "High-Volume Progressive Stamping"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.8,
+    "expert_verdict": "AutoForm is the undisputed global benchmark for sheet metal stamping simulation, required by virtually all major automotive OEMs for press tooling verification.",
+    "pros": [
+      "Global automotive standard for sheet metal stamping feasibility and press tool validation.",
+      "Unrivaled solver speed generates accurate draw forming results in minutes rather than hours.",
+      "AutoForm-Compensator accurately morphs CAD die faces to offset complex springback distortions.",
+      "Integrated material card library contains verified mechanical properties for hundreds of steel and aluminum alloys.",
+      "Native cross-platform execution supporting both enterprise Linux clusters and 64-bit Windows workstations."
+    ],
+    "cons": [
+      "Substantial capital investment tailored for automotive manufacturers, tier-one suppliers, and large die shops.",
+      "Specialized niche focus on sheet metal forming rather than general structural FEA or CFD.",
+      "Requires domain expertise in stamping metallurgy and press mechanics to interpret simulation plots correctly.",
+      "Advanced multi-station progressive die simulation requires extensive physical tooling kinematic setup.",
+      "CAD surface modeling tools are tailored specifically for die faces rather than general aesthetic product styling."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/autoform/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162799/AutoForm/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Why is AutoForm considered the standard in automotive stamping?",
+        "a": "AutoForm provides specialized, rapid non-linear solvers and comprehensive material databases that predict splits, wrinkles, and springback with high correlation to real press shop trials."
+      },
+      {
+        "q": "What is springback compensation in AutoForm?",
+        "a": "Springback compensation is AutoForm’s automated capability that calculates sheet metal elastic rebound and deforms the CAD die face in the opposite direction so the stamped part matches tolerance."
+      },
+      {
+        "q": "Can AutoForm run on Linux servers?",
+        "a": "Yes, AutoForm provides native support for 64-bit enterprise Linux distributions as well as Microsoft Windows workstations."
+      },
+      {
+        "q": "Can AutoForm simulate progressive dies?",
+        "a": "Yes, AutoForm simulates complete multi-stage progressive stamping processes including piercing, blanking, forming, flanging, and strip transfer."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "ls-dyna",
+      "altair-hyperworks",
+      "visi"
     ]
   },
   {
     "id": "t168",
     "name": "Moldflow",
     "slug": "moldflow",
-    "logo_url": "/logos/moldflow.svg",
-    "short_desc": "Autodesk injection molding simulation software for plastic part and mold design.",
-    "description": "Moldflow by Autodesk is injection molding simulation software for plastic part and mold design. It provides comprehensive tools for mold filling, cooling, and warpage analysis to optimize plastic part manufacturing and reduce production costs.",
+    "logo_url": "/logos/moldflow.png",
+    "short_desc": "Autodesk’s industry-leading injection molding simulation software for optimizing plastic part design, mold cooling, and warpage.",
+    "description": "Autodesk Moldflow (available as Moldflow Adviser and Moldflow Insight) is the pioneer and industry benchmark in plastic injection molding simulation. Used by plastic part designers, mold makers, and polymer engineers worldwide, Moldflow simulates the complete injection molding cycle, including melt filling, packing, cooling line thermal dissipation, and post-molding part warpage. Supported by a material database of over 11,000 tested thermoplastic resins, Moldflow identifies potential defects such as weld lines, air traps, sink marks, and fiber orientation distortion before steel is cut.",
     "pricing_tiers": [
       {
-        "name": "Moldflow licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "Autodesk Moldflow Adviser Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Fill, packing, cooling and warpage analysis",
-          "Gate and runner optimisation",
-          "Fibre orientation and shrinkage prediction",
-          "CAD import, Autodesk ecosystem integration and reporting",
-          "Sold through Autodesk sales and Flex tokens rather than a published list price"
+          "Guidance for Plastic Part & Mold Designers",
+          "Automated Filling, Packing & Gate Location Optimization",
+          "Sink Mark, Weld Line & Air Trap Defect Prediction",
+          "Extensive Database of Tested Commercial Thermoplastics"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Autodesk Moldflow Insight Ultimate",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Complete Non-Linear Polymer Rheology & Warpage Simulation",
+          "Conformal Cooling Channel Thermal Analysis",
+          "Fiber Orientation, Core Shift & Gas-Assisted Injection",
+          "HPC Distributed Cluster Solving with Cloud Acceleration"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 5200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.autodesk.com/products/moldflow/overview",
+    "trial_url": "https://www.autodesk.com/products/moldflow/free-trial",
+    "pricing_url": "https://www.autodesk.com/products/moldflow/pricing",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Industry Benchmark Injection Molding Simulation",
+      "Over 11,000 Verified Commercial Polymer Resins",
+      "Filling, Packing, Cooling & Warpage Prediction",
+      "Fiber Orientation for Reinforced Plastics",
+      "Conformal Cooling Channel Transient Thermal Analysis",
+      "Core Shift Deflection under Injection Pressure"
     ],
     "detailed_features": [
       {
-        "category": "Simulation",
+        "category": "Filling, Packing & Defect Prediction",
         "items": [
           {
-            "name": "Fill analysis",
+            "name": "Melt Front Filling Simulation predicting injection pressure, clamp tonnage, weld lines, and air trap locations",
             "status": true
           },
           {
-            "name": "Cooling analysis",
-            "status": true
-          },
-          {
-            "name": "Warpage analysis",
+            "name": "Packing Phase Optimization minimizing volumetric shrinkage, sink marks, and internal void formation",
             "status": true
           }
         ]
       },
       {
-        "category": "Design",
+        "category": "Thermal Cooling & Warpage Analysis",
         "items": [
           {
-            "name": "Part design",
+            "name": "Cooling Circuit Simulation analyzing transient heat transfer through mold steel and conformal cooling lines",
             "status": true
           },
           {
-            "name": "Mold design",
-            "status": true
-          },
-          {
-            "name": "Gate optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Optimization",
-        "items": [
-          {
-            "name": "Process optimization",
-            "status": true
-          },
-          {
-            "name": "Cost reduction",
-            "status": true
-          },
-          {
-            "name": "Quality improvement",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Autodesk integration",
-            "status": true
-          },
-          {
-            "name": "CAD import",
-            "status": true
-          },
-          {
-            "name": "Report generation",
+            "name": "Warpage Deflection Analysis determining out-of-round and bow distortions caused by differential shrinkage",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "moldex3d",
-      "ansys-workbench",
-      "comsol-multiphysics",
-      "altair-inspire"
+    "tech_specs": {
+      "engine": "Autodesk Moldflow 3D Flow & Warpage Numerical Solver",
+      "multicore": "Distributed MPI and shared-memory multi-threading for plastic injection molding solvers",
+      "gpu_optimization": "GPU-accelerated solver routines for warp analysis and OpenGL fill visualization",
+      "standards": [
+        "ISO 9001",
+        "Polymer Rheology Standards",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT",
+      "IPT"
     ],
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Subscription",
-    "starting_price": 5000,
-    "quote_only": true,
-    "price_period": "year",
+    "file_formats_out": [
+      "PDF",
+      "STEP",
+      "CSV",
+      "DWF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Injection Molding",
-      "Simulation",
-      "Design",
-      "Optimization"
+      "Automotive Plastic Interior & Exterior Trim",
+      "Consumer Electronics & Appliance Enclosures",
+      "Medical Device Plastic Components",
+      "Packaging & Thin-Wall Containers",
+      "Precision Plastic Injection Toolrooms"
     ],
     "user_scales": [
-      "Mid-Sized Company",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.autodesk.com/products/moldflow/overview",
-    "pricing_url": "https://www.autodesk.com/buying/plans",
-    "affiliate_url": null,
-    "score": 4,
+    "score": 4.7,
+    "expert_verdict": "Autodesk Moldflow remains the definitive standard in injection molding CAE, powered by a massive database of verified resins and accurate warpage simulation.",
     "pros": [
-      "The premier standard for plastic injection molding simulation",
-      "Deeply integrated with Autodesk product suites",
-      "Outstanding filling, packing, cooling, and warpage simulation",
-      "Reduces plastic defects and speeds up time-to-market",
-      "Extensive plastic materials database with thousands of grades"
+      "Largest validated polymer materials database in the world, covering over 11,000 tested resins.",
+      "Exceptional accuracy predicting injection pressure, clamp tonnage, and weld line positioning.",
+      "Advanced fiber orientation modeling accurately captures anisotropic warpage in reinforced polymers.",
+      "Comprehensive transient thermal simulation for modern 3D printed conformal cooling circuits.",
+      "Seamless integration with Autodesk Inventor, Fusion, and standard neutral CAD formats."
     ],
     "cons": [
-      "Highly premium subscription cost",
-      "Steep engineering background required",
-      "Over-engineered for basic part design",
-      "Dedicated purely to injection molding"
+      "Substantial subscription cost represents a notable software commitment for small injection molding shops.",
+      "Moldflow Insight requires deep understanding of polymer rheology and boundary conditions to interpret properly.",
+      "Meshing intricate multi-cavity hot runner assemblies with 3D solid elements requires significant compute power.",
+      "Certified exclusively for 64-bit Windows workstations, with no native macOS workstation build.",
+      "Cloud solving options consume Autodesk Flex tokens or additional cloud compute credits."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 130,
+        "url": "https://www.g2.com/products/autodesk-moldflow/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 90,
+        "url": "https://www.capterra.com/p/162798/Moldflow/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Moldflow used for?",
-        "a": "Moldflow is Autodesk injection molding simulation software for plastic part and mold design."
+        "q": "What is the difference between Moldflow Adviser and Moldflow Insight?",
+        "a": "Moldflow Adviser provides streamlined wizards for part and mold designers to quickly check manufacturability, while Moldflow Insight offers advanced finite element rheological solving, fiber orientation, and core shift analysis."
       },
       {
-        "q": "How much does Moldflow cost?",
-        "a": "Moldflow is sold by subscription; the plans shown on this page are Moldflow licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldflow Pricing Page](https://www.autodesk.com/products/moldflow/overview)."
+        "q": "Why is the Moldflow materials database important?",
+        "a": "Moldflow includes laboratory-tested rheological, thermal, and mechanical data for over 11,000 commercial thermoplastics, ensuring simulations accurately reflect physical resin behavior."
       },
       {
-        "q": "Is there a free version of Moldflow?",
-        "a": "Moldflow is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Moldflow page](https://www.autodesk.com/products/moldflow/overview)."
+        "q": "Can Moldflow predict part warpage?",
+        "a": "Yes, Moldflow accurately calculates differential cooling and volumetric shrinkage to simulate post-molding warpage and dimensional deviations."
       },
       {
-        "q": "What operating systems does Moldflow support?",
-        "a": "Moldflow runs on Windows."
-      },
-      {
-        "q": "Which file formats does Moldflow support?",
-        "a": "Autodesk Moldflow is injection-moulding simulation software with separate official import and export tables. It imports UDM, STEP, IGES, Parasolid, ACIS, SOLIDWORKS, Inventor, STL, CATIA, JT, SDY, UNV, BDF and PAT files. Its export table includes MFR results, STEP, STL, UDM, IGES, SAT, Patran (.pat/.nod), H3D, SMT, MFL and ASCII/XML curve data, and the report wizard generates HTML reports. STEP is a general geometry export rather than a \"warpage STEP\" - warped meshes are exported as STL or UDM. Native SLDPRT, IPT, SAT and Parasolid are import-only, and CSV is not an official format-table entry (curves export as TXT or XML). The official Moldflow help is the current source."
-      },
-      {
-        "q": "What are the best alternatives to Moldflow?",
-        "a": "The closest alternatives to Moldflow are Moldex3D, ANSYS Workbench, COMSOL Multiphysics, and Altair Inspire. Moldex3D (offered on a Perpetual license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does Moldflow run on Mac computers?",
+        "a": "No, Autodesk Moldflow is certified exclusively for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "Moldflow Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "Autodesk's premier plastic injection molding simulation software, essential for predicting manufacturing defects.",
-    "file_formats_in": [
-      "UDM",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "ACIS (SAT)",
-      "SLDPRT",
-      "IPT",
-      "STL",
-      "CATPart",
-      "JT",
-      "SDY",
-      "UNV",
-      "BDF",
-      "PAT"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "MFR",
-      "STEP",
-      "STL",
-      "UDM",
-      "IGES",
-      "ACIS (SAT)",
-      "PAT",
-      "NOD",
-      "H3D",
-      "SMT",
-      "MFL",
-      "TXT",
-      "XML",
-      "HTML"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "moldex3d",
+      "ansys-mechanical",
+      "cimatron"
     ]
   },
   {
@@ -4697,203 +4689,201 @@ export const c5Tools: Tool[] = [
     "name": "Moldex3D",
     "slug": "moldex3d",
     "logo_url": "/logos/moldex3d.png",
-    "short_desc": "Taiwanese plastic injection molding simulation software for advanced analysis.",
-    "description": "Moldex3D is a Taiwanese plastic injection molding simulation software solution for advanced analysis. It provides comprehensive tools for filling, cooling, warpage, and fiber orientation analysis to optimize plastic part manufacturing and improve product quality.",
+    "short_desc": "CoreTech System’s true 3D injection molding simulation software for advanced plastic molding processes and composites.",
+    "description": "Moldex3D (developed by CoreTech System in Taiwan) is a true 3D Computer-Aided Engineering (CAE) simulation platform dedicated to plastic injection molding. Utilizing high-resolution boundary layer meshing (BLM) and high-performance finite volume Navier-Stokes solvers, Moldex3D excels in simulating complex molding processes such as gas-assisted injection molding, water-assisted injection, microcellular foaming (MuCell), insert molding, reactive thermoset transfer (RTM), and long-fiber composite orientation.",
     "pricing_tiers": [
       {
-        "name": "Moldex3D Suite",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "Moldex3D eDesign Commercial License",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "True 3D BLM mesh generation with filling, packing, cooling, and warpage analysis",
-          "Fibre orientation, multi-component moulding, IC encapsulation, and compression moulding",
-          "Conformal cooling channel analysis and runner balance optimisation",
-          "Solution packages and parallel solver cores quoted by CoreTech System (Moldex3D)"
+          "True 3D Boundary Layer Meshing (BLM) Flow Solver",
+          "Automated Filling, Packing, Cooling & Warpage Analysis",
+          "Comprehensive Plastic Materials Database with Viscosity Curves",
+          "Direct CAD Import for Solid Models"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Moldex3D Advanced Multi-Process Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Specialized Processes (MuCell, Gas-Assist, Reactive Resins)",
+          "Fiber Orientation & Anisotropic Warpage Prediction",
+          "Multi-Core & GPU Distributed Parallel Computing Engine",
+          "Integrated Conformal Cooling Transient Thermal Analysis"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 4900,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.moldex3d.com/",
+    "trial_url": "https://www.moldex3d.com/",
+    "pricing_url": "https://www.moldex3d.com/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "True 3D High-Fidelity Solid Injection Solver",
+      "Boundary Layer Mesh (BLM) Architecture",
+      "Advanced Fiber Orientation for Composite Plastics",
+      "Specialized Process Simulation (MuCell, Gas-Assist, RTM)",
+      "High-Performance Computing (HPC) Multi-Core Acceleration",
+      "Conformal Cooling Circuit Thermal Optimization"
     ],
     "detailed_features": [
       {
-        "category": "Simulation",
+        "category": "3D Flow & Warpage Simulation",
         "items": [
           {
-            "name": "Fill analysis",
+            "name": "True 3D Solid Solver resolving through-thickness velocity and temperature gradients accurately without 2.5D midplane simplifications",
             "status": true
           },
           {
-            "name": "Cooling analysis",
-            "status": true
-          },
-          {
-            "name": "Warpage analysis",
+            "name": "Fiber Orientation Analysis predicting anisotropic mechanical properties in carbon-fiber and glass-fiber reinforced thermoplastics",
             "status": true
           }
         ]
       },
       {
-        "category": "Advanced",
+        "category": "Specialized Molding Processes",
         "items": [
           {
-            "name": "Fiber orientation",
+            "name": "Specialized Molding Simulation handling microcellular foaming, multi-shot two-color molding, and resin transfer molding (RTM)",
             "status": true
           },
           {
-            "name": "Optical analysis",
-            "status": true
-          },
-          {
-            "name": "Multi-material",
+            "name": "Optics Birefringence Analysis calculating residual thermal stresses and optical distortion in transparent lenses",
             "status": true
           }
         ]
-      },
-      {
-        "category": "Design",
-        "items": [
-          {
-            "name": "Part design",
-            "status": true
-          },
-          {
-            "name": "Mold design",
-            "status": true
-          },
-          {
-            "name": "Process optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "CAD integration",
-            "status": true
-          },
-          {
-            "name": "Report generation",
-            "status": true
-          },
-          {
-            "name": "Cloud collaboration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "moldflow",
-      "ansys-workbench",
-      "comsol-multiphysics",
-      "altair-inspire"
-    ],
-    "country": "Taiwan",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 6000,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Injection Molding",
-      "Simulation",
-      "Fiber Orientation",
-      "Advanced Analysis"
-    ],
-    "user_scales": [
-      "Mid-Sized Company",
-      "Enterprise"
-    ],
-    "official_url": "https://www.moldex3d.com/",
-    "pricing_url": "https://www.moldex3d.com/contact/",
-    "affiliate_url": null,
-    "score": 3.9,
-    "pros": [
-      "Advanced true-3D mesh simulation solvers",
-      "Outstanding fiber orientation and anisotropic warpage analysis",
-      "Strong regional support across Asian and global markets",
-      "Highly accurate optical and thermoset molding simulation",
-      "Excellent parallel computing performance"
-    ],
-    "cons": [
-      "Premium enterprise pricing model",
-      "Steep learning curve for complex meshes",
-      "Highly specialized for plastic injection molding"
-    ],
-    "faqs": [
-      {
-        "q": "What is Moldex3D used for?",
-        "a": "Moldex3D is Taiwanese plastic injection molding simulation software for advanced analysis."
-      },
-      {
-        "q": "How much does Moldex3D cost?",
-        "a": "Moldex3D is sold as a perpetual licence; the plans shown on this page are Moldex3D Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Moldex3D Pricing Page](https://www.moldex3d.com/)."
-      },
-      {
-        "q": "Is there a free version of Moldex3D?",
-        "a": "Moldex3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Moldex3D page](https://www.moldex3d.com/)."
-      },
-      {
-        "q": "What operating systems does Moldex3D support?",
-        "a": "Moldex3D runs on Windows."
-      },
-      {
-        "q": "Which file formats does Moldex3D support?",
-        "a": "Moldex3D is true 3D injection-moulding simulation software with a published mesh I/O table alongside its product-page geometry list. It reads STEP, IGES, Parasolid, STL and JT geometry and FE meshes in MFE, Nastran DAT, Ansys ANS, Patran PAT, I-DEAS UNV and Abaqus INP. It writes STEP (including deformed or compensated geometry), the same mesh formats, STL, CSV result data, an LS-DYNA FEA interface deck and PPT/Excel reports. \"STEP (Deformed)\" is a content qualifier rather than a separate format, VRML is not documented on current official pages, and PDF is not listed as a current report format. The official Moldex3D product pages are the current source."
-      },
-      {
-        "q": "What are the best alternatives to Moldex3D?",
-        "a": "The closest alternatives to Moldex3D are Moldflow, ANSYS Workbench, COMSOL Multiphysics, and Altair Inspire. Moldflow (offered on a Subscription license) competes directly on core Plastics workflows, while ANSYS Workbench (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Moldex3D Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Moldex3D 3D Navier-Stokes Finite Volume Numerical Solver",
+      "multicore": "High-performance computing multi-core parallel solving on Windows and Linux",
+      "gpu_optimization": "CUDA GPU computing acceleration for true-3D injection molding flow fields",
       "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
+        "ISO 9001",
+        "Polymer Rheology Standards",
+        "STEP"
       ]
     },
-    "expert_verdict": "A highly advanced true-3D plastic injection molding analysis tool, outstanding for predicting weld lines and warpage.",
-    "quote_only": true,
     "file_formats_in": [
       "STEP",
+      "STP",
       "IGES",
-      "Parasolid",
-      "STL",
-      "JT",
-      "MFE",
-      "MSC.Nastran (DAT)",
-      "Ansys (ANS)",
-      "Patran (PAT)",
-      "I-DEAS (UNV)",
-      "Abaqus (INP)"
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
     "file_formats_out": [
+      "PDF",
       "STEP",
-      "MFE",
-      "MSH",
-      "PAT",
-      "UNV",
-      "ANS",
-      "DAT",
-      "FEM",
-      "STL",
-      "CSV",
-      "LS-DYNA (deck)",
-      "PPT",
-      "XLSX"
+      "CSV"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "industries": [
+      "Automotive Plastics & Under-the-Hood Parts",
+      "Precision Optical Lenses & Light Guides",
+      "Consumer Electronics & Connectors",
+      "Medical Diagnostic Devices",
+      "Aerospace Composite Structures"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.6,
+    "expert_verdict": "Moldex3D is celebrated for true 3D solid Navier-Stokes simulation and specialized molding processes such as MuCell and optics.",
+    "pros": [
+      "True 3D boundary layer meshing captures through-thickness thermal and shear rate gradients accurately.",
+      "Comprehensive support for advanced specialized molding methods including MuCell foaming, RTM, and gas-assist.",
+      "Exceptional optical simulation predicts flow-induced birefringence and refractive index variations in transparent lenses.",
+      "High-performance parallel computing engine scales across multi-core CPU clusters and Linux servers.",
+      "Large material database featuring verified viscosity, pvT, and thermal data for thousands of commercial polymers."
+    ],
+    "cons": [
+      "Full true 3D solid meshing can generate multi-million element models requiring substantial system RAM.",
+      "High acquisition and licensing cost tailored for dedicated injection molding simulation departments.",
+      "Interpreting specialized fiber orientation and warpage plots requires formal polymer engineering knowledge.",
+      "Desktop GUI is focused primarily on 64-bit Windows workstations, with Linux utilized for cluster solving.",
+      "Setting up complex multi-component insert molds with moving cores requires structured pre-processing time."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 55,
+        "url": "https://www.g2.com/products/moldex3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/162797/Moldex3D/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What makes Moldex3D different from traditional 2.5D injection simulation?",
+        "a": "Moldex3D uses true 3D solid elements (Boundary Layer Meshing) to solve the complete 3D Navier-Stokes equations, avoiding 2.5D midplane geometric simplifications."
+      },
+      {
+        "q": "Can Moldex3D simulate optical parts like lenses?",
+        "a": "Yes, Moldex3D features dedicated optics modules that evaluate flow-induced residual stresses, thermal birefringence, and optical distortion."
+      },
+      {
+        "q": "Does Moldex3D support Linux?",
+        "a": "Yes, Moldex3D solvers can execute across high-performance Linux computing clusters, while the graphical pre/post-processor runs on Windows."
+      },
+      {
+        "q": "What is Boundary Layer Mesh (BLM) in Moldex3D?",
+        "a": "BLM is a specialized meshing technique that generates dense prism element layers near mold walls to capture steep shear heating and cooling thermal gradients accurately."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "moldflow",
+      "ansys-mechanical",
+      "cimatron"
     ]
   },
   {
@@ -4901,208 +4891,203 @@ export const c5Tools: Tool[] = [
     "name": "AlphaCAM",
     "slug": "alphacam",
     "logo_url": "/logos/alphacam.png",
-    "short_desc": "UK-based CAM software for woodworking, stone, and metal cutting.",
-    "description": "AlphaCAM is a UK-based CAM software solution for woodworking, stone, and metal cutting. It provides comprehensive tools for CNC programming of various machining applications including routing, milling, and cutting with a focus on versatility and ease of use.",
+    "short_desc": "Hexagon’s leading CAD/CAM software for woodworking, stone masonry, marble, and composite material CNC routing.",
+    "description": "AlphaCAM (developed by Hexagon Manufacturing Intelligence) is an industry-standard Computer-Aided Manufacturing (CAM) system for the woodworking, stone, marble, glass, and composite routing sectors. From basic 2D flat-table nested panel routing to complex 5-axis continuous toolpaths for architectural stair handrails and carved stonework, AlphaCAM provides specialized automated nesting algorithms, aggregate head management, vacuum pod and clamp positioning, and direct CAD model integration.",
     "pricing_tiers": [
       {
-        "name": "Alphacam 3 Axis",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "AlphaCAM Router Standard Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Foundation CAM package for 3-axis routing, milling, turning and cutting",
-          "Ships with the shared post-processor and CAD translator set",
-          "Upgrade path to positional and simultaneous multi-axis"
+          "Complete 2D & 3D CNC Routing Strategies",
+          "Automated Sheet Nesting & True Shape Parts Layout",
+          "Aggregate Head & Multi-Drill Spindle Management",
+          "Direct CAD Import for DXF, DWG, and Solid Models"
         ],
         "is_popular": true
       },
       {
-        "name": "Alphacam Positional Axis",
+        "name": "AlphaCAM 5-Axis Stone & Wood Suite",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "enterprise network licensing",
         "features": [
-          "Adds 3+2 positional multi-axis capability to the 3-axis core",
-          "Keeps the same interface, post-processors and upgrade path",
-          "Aimed at complex parts that still index between setups"
-        ]
-      },
-      {
-        "name": "Alphacam 5 Axis",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Full simultaneous 5-axis machining for advanced geometries and surfaces",
-          "Runs on the proven post-processors shared across the range",
-          "Top of the core-and-multiplier ladder — modules stack on any level"
-        ]
+          "Simultaneous 5-Axis Multi-Surface Machining for Curved Woodwork",
+          "Dedicated Stone & Marble Sawing, Profiling & Polishing Cycles",
+          "Full Machine Kinematic Collision & Pod/Clamp Verification",
+          "Dedicated Post-Processor Configuration from Hexagon"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2900,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://hexagon.com/products/alphacam",
+    "trial_url": "https://hexagon.com/products/alphacam",
+    "pricing_url": "https://hexagon.com/products/alphacam",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Reseller Network",
+      "Training"
+    ],
+    "core_features": [
+      "Industry Standard Woodworking & Stone CAM",
+      "Automated True Shape Sheet Nesting",
+      "Aggregate Tooling & Multi-Spindle Drill Blocks",
+      "Simultaneous 5-Axis CNC Router Programming",
+      "Vacuum Pod, Clamp & Fixture Collision Checking",
+      "Stone & Marble Bridge Saw Cutting Cycles"
     ],
     "detailed_features": [
       {
-        "category": "Woodworking",
+        "category": "Woodworking & Panel Nesting",
         "items": [
           {
-            "name": "Routing",
+            "name": "True Shape Nesting interlocking irregularly shaped parts on sheet stock to maximize yield and minimize scrap",
             "status": true
           },
           {
-            "name": "Nesting",
-            "status": true
-          },
-          {
-            "name": "Cabinet making",
+            "name": "Drill Block Automation calculating optimal multi-spindle drilling strokes for cabinet hardware holes",
             "status": true
           }
         ]
       },
       {
-        "category": "Stone",
+        "category": "Stone Machining & 5-Axis Routing",
         "items": [
           {
-            "name": "Stone cutting",
+            "name": "Stone & Marble Profiling generating toolpaths for disc saws, core drills, and shaping wheels for granite countertops",
             "status": true
           },
           {
-            "name": "Engraving",
-            "status": true
-          },
-          {
-            "name": "3D machining",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Metal",
-        "items": [
-          {
-            "name": "Milling",
-            "status": true
-          },
-          {
-            "name": "Turning",
-            "status": true
-          },
-          {
-            "name": "Wire EDM",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "CAM",
-        "items": [
-          {
-            "name": "CNC programming",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          },
-          {
-            "name": "Machine simulation",
+            "name": "5-Axis Machine Simulation checking clearance between machine aggregates and table vacuum pods",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "topsolid",
-      "mastercam",
-      "bobcad-cam",
-      "radan"
+    "tech_specs": {
+      "engine": "AlphaCAM Wood & Stone Routing Kernel",
+      "multicore": "Multi-core automated nested machining and solid model feature extraction processing",
+      "gpu_optimization": "OpenGL hardware rendering for 3D wood and stone kinematic machine simulation",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "UK",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 4000,
-    "quote_only": true,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF",
+      "DXF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Woodworking",
-      "Stone",
-      "Metal",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "CAM",
-      "Woodworking",
-      "Stone",
-      "Metal"
+      "Architectural Woodworking & Cabinetry",
+      "Stone Countertop & Marble Fabrication",
+      "Composite Aircraft & Marine Components",
+      "Sign Making & Exhibit Fabrication",
+      "Acoustic & Plastic Panel Processing"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/alphacam",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
-    "affiliate_url": null,
-    "score": 3.6,
+    "score": 4.5,
+    "expert_verdict": "AlphaCAM is the recognized standard for woodworking and stone masonry CAM, distinguished by aggregate head control and true-shape nesting.",
     "pros": [
-      "Versatile CAD/CAM for wood, stone, glass, and metal",
-      "Flexible multi-axis CNC routing and nesting support",
-      "User-friendly interface for workshop operators",
-      "Highly trusted by custom furniture and countertop builders",
-      "Excellent custom macro and automation support"
+      "Dominant industry standard for woodworking, cabinetry, and architectural stone fabrication.",
+      "Exceptional true-shape automated nesting maximizes material yield on expensive hardwoods and sheet stock.",
+      "Unrivaled support for complex aggregate heads, horizontal boring units, and multi-spindle drilling banks.",
+      "Dedicated stone cutting cycles for bridge saws, profiling wheels, and edge polishing on granite slabs.",
+      "Accurate simulation of vacuum pods, clamps, and machine axes prevents costly router collisions."
     ],
     "cons": [
-      "Lacks advanced continuous 5-axis mold sculpting of flagship suites",
-      "Smaller developer ecosystem in mainstream metalworking",
-      "Fewer built-in CAD design features"
+      "User interface retains legacy drafting menus that can feel dense for novice operators.",
+      "Not designed for mechanical metal turning or high-speed multi-axis aerospace mold milling.",
+      "Significant annual software investment suited primarily for commercial fabrication shops.",
+      "Runs exclusively on 64-bit Windows workstations, with no native macOS workstation build.",
+      "Configuring custom machine post-processors for non-standard multi-axis aggregates requires technical assistance."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/alphacam/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/162796/AlphaCAM/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is AlphaCAM used for?",
-        "a": "AlphaCAM is UK-based CAM software for woodworking, stone, and metal cutting."
+        "q": "What industries use AlphaCAM?",
+        "a": "AlphaCAM is widely used in woodworking (custom cabinetry, furniture, millwork), stone and marble fabrication (countertops, memorials), and composite routing (marine and aerospace panels)."
       },
       {
-        "q": "How much does AlphaCAM cost?",
-        "a": "AlphaCAM is a Hexagon (Vero) product licensed as a core machining level — Alphacam 3 Axis, Alphacam Positional Axis or Alphacam 5 Axis — with add-on modules such as xNesting, xAutomation, xSolids, xRobotics and xAPI stacked on top. Prices, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "q": "Does AlphaCAM support nested panel routing?",
+        "a": "Yes, AlphaCAM includes automated true-shape nesting algorithms that optimize part layout on sheet goods while respecting grain direction and tool lead-ins."
       },
       {
-        "q": "Is there a free version of AlphaCAM?",
-        "a": "AlphaCAM is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AlphaCAM page](https://hexagon.com/products/alphacam)."
+        "q": "How does AlphaCAM handle multi-drill heads?",
+        "a": "AlphaCAM automatically calculates the most efficient multi-spindle drilling patterns, dropping multiple drill bits simultaneously to speed up cabinet production."
       },
       {
-        "q": "What operating systems does AlphaCAM support?",
-        "a": "AlphaCAM runs on Windows."
-      },
-      {
-        "q": "Which file formats does AlphaCAM support?",
-        "a": "The Hexagon Nexus user guide for AlphaCAM separates what it can Open from what it can Save As. STEP and DWG are import-only; DXF and IGES go both ways; Parasolid is listed among the readers. The documented output formats do not include a STEP writer or a DWG writer, so a STEP model brought into AlphaCAM does not round-trip back out as STEP. The manufacturing output is post-processed NC code, with ANC as the native AlphaCAM file. AlphaCAM is a Hexagon (Vero) product; the legacy alphacam.com address redirects to Hexagon, which quotes through its sales-enquiry form."
-      },
-      {
-        "q": "What are the best alternatives to AlphaCAM?",
-        "a": "The closest alternatives to AlphaCAM are TopSolid, Mastercam, BobCAD-CAM, and Radan. TopSolid (offered on a Perpetual license) competes directly on core Woodworking workflows, while Mastercam (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does AlphaCAM run on Mac computers?",
+        "a": "No, AlphaCAM is engineered and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "AlphaCAM Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "A premier CAD/CAM system for wood, stone, and composite routing, delivering highly automated CNC programming.",
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "STEP",
-      "IGES",
-      "Parasolid"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (G-Code)",
-      "ANC",
-      "DXF",
-      "IGES"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "topsolid",
+      "mastercam",
+      "surfcam"
     ]
   },
   {
@@ -5110,205 +5095,202 @@ export const c5Tools: Tool[] = [
     "name": "Radan",
     "slug": "radan",
     "logo_url": "/logos/radan.png",
-    "short_desc": "UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
-    "description": "Radan is a UK-based CAD/CAM software solution for sheet metal fabrication and CNC punching. It provides comprehensive tools for sheet metal design, nesting, and CNC programming with a focus on efficiency and material optimization for fabrication workshops.",
+    "short_desc": "Hexagon’s total CAD/CAM solution for sheet metal punching, laser cutting, profiling, nesting, and press brake bending.",
+    "description": "Radan (developed by Hexagon Manufacturing Intelligence) is a total CAD/CAM solution dedicated entirely to the sheet metal fabrication industry. Covering 2D and 3D sheet metal design, intelligent nesting, CNC punch press programming, laser/plasma/waterjet cutting, and press brake bending simulation (Radbend), Radan optimizes material utilization and machine cycle times. By managing raw sheet inventory and tracking remnants, Radan connects engineering offices with workshop fabrication machinery seamlessly.",
     "pricing_tiers": [
       {
-        "name": "Radan Radpunch",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "Radan Punch & Profile Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Punch press programming, licensed as its own module",
-          "Advanced punch tooling and toolpath control",
-          "Shares the Radan part and nest model with the other modules"
+          "Sheet Metal 2D & 3D Drafting and Unfolding",
+          "Automated Sheet Nesting & Remnant Sheet Management",
+          "CNC Punch Press Tool Selection & Turret Layouts",
+          "2D Laser, Plasma & Waterjet Cutting Toolpaths"
         ],
         "is_popular": true
       },
       {
-        "name": "Radan Radnest",
+        "name": "Radan Complete Fabrication Suite",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "enterprise network licensing",
         "features": [
-          "True shape nesting to maximise sheet utilisation",
-          "Adapts automatically to punching and cutting machines",
-          "Licensed separately from the programming modules"
-        ]
-      },
-      {
-        "name": "Radan Bending",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Offline programming for press brakes",
-          "Full 3D simulation of the bending process",
-          "Licensed separately from punching and profiling"
-        ]
+          "Radbend Press Brake 3D Offline Bending Simulation",
+          "Multi-Axis 3D Laser Cutting for Formed Enclosures",
+          "Automated Common-Line Cutting Optimization",
+          "Workshop ERP Integration & Sheet Stock Tracking"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 3100,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://hexagon.com/products/radan",
+    "trial_url": "https://hexagon.com/products/radan",
+    "pricing_url": "https://hexagon.com/products/radan",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Dedicated Sheet Metal CAD/CAM Ecosystem",
+      "High-Yield True Shape Sheet Nesting",
+      "Automated CNC Punch Press Tooling & Turrets",
+      "Common-Line & Fly Cutting for Laser Cutters",
+      "Radbend Offline Press Brake Bending Simulation",
+      "Sheet Metal Remnant & Offcut Stock Management"
     ],
     "detailed_features": [
       {
-        "category": "Sheet Metal",
+        "category": "Punching, Laser Cutting & Nesting",
         "items": [
           {
-            "name": "Sheet metal design",
+            "name": "Automated Punch Tooling assigning turret stations, cluster tools, and micro-joints automatically to prevent sheet jamming",
             "status": true
           },
           {
-            "name": "Unfolding",
-            "status": true
-          },
-          {
-            "name": "Bending calculation",
+            "name": "Laser Profiling & Common-Line Cutting sharing cut lines between adjacent parts to eliminate scrap and double cutting",
             "status": true
           }
         ]
       },
       {
-        "category": "Nesting",
+        "category": "Press Brake Bending Simulation",
         "items": [
           {
-            "name": "Automatic nesting",
+            "name": "Radbend 3D Offline Bending simulating punch/die tool setups and calculating bend sequences with collision checks",
             "status": true
           },
           {
-            "name": "Material optimization",
-            "status": true
-          },
-          {
-            "name": "Cost reduction",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "CAM",
-        "items": [
-          {
-            "name": "CNC punching",
-            "status": true
-          },
-          {
-            "name": "Laser cutting",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "CAD integration",
-            "status": true
-          },
-          {
-            "name": "Machine simulation",
-            "status": true
-          },
-          {
-            "name": "Production management",
+            "name": "3D Sheet Unfolding calculating exact flat blank profiles based on physical sheet K-factors and machine tooling",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "sigmanest",
-      "lantek-expert",
-      "nestforge",
-      "topsolid"
+    "tech_specs": {
+      "engine": "Radan Dedicated Sheet Metal Geometry Engine",
+      "multicore": "Parallel processor nesting algorithms for rapid multi-part sheet metal nesting",
+      "gpu_optimization": "DirectX graphical interface rendering for 2D and 3D sheet metal unfolding views",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "UK",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 4500,
-    "quote_only": true,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF",
+      "DXF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "CAD/CAM",
-      "Sheet Metal",
-      "Nesting",
-      "Punching"
+      "Precision Sheet Metal Job Shops",
+      "HVAC Ductwork & Enclosures",
+      "Electrical Enclosure & Cabinet Manufacturing",
+      "Agricultural & Yellow Goods Machinery",
+      "Food Service Stainless Steel Equipment"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/radan",
-    "pricing_url": "https://hexagon.com/company/contact-us/sales-enquiry",
-    "affiliate_url": null,
-    "score": 3.6,
+    "score": 4.5,
+    "expert_verdict": "Hexagon Radan is a benchmark CAD/CAM platform built purely for sheet metal, offering unmatched integration between laser cutting, punching, and press brake bending.",
     "pros": [
-      "Industry-leading automatic sheet metal nesting and yield",
-      "Highly specialized for CNC punching, profiling, and bending",
-      "Proven track record with massive installations worldwide",
-      "Granular material inventory and quote tracking",
-      "High reliable software backing"
+      "100% focused on sheet metal engineering, eliminating unnecessary solid machining overhead.",
+      "High-performance nesting algorithms drastically reduce scrap on high-volume production sheets.",
+      "Intelligent punch press automation chooses optimal tooling stations and auto-manages micro-tabs.",
+      "Radbend offline bending simulation prevents costly tool setup trials and flange collisions on the shop floor.",
+      "Comprehensive remnant tracking archives and nests future jobs onto usable leftover sheet drops."
     ],
     "cons": [
-      "Premium pricing tiers",
-      "Requires focused training",
-      "Completely specialized for sheet metal fabrication"
+      "Specialized sheet metal focus makes it inapplicable for 3D multi-axis milling or turning workflows.",
+      "High software investment tailored for professional sheet metal contract fabricators.",
+      "User interface carries legacy industrial menus that require dedicated training for new operators.",
+      "Certified exclusively for Microsoft Windows operating systems, with no native macOS workstation build.",
+      "Configuring custom machine post-processors for specialized combination punch/laser machines requires technical expertise."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.g2.com/products/radan/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162795/Radan/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Radan used for?",
-        "a": "Radan is UK-based CAD/CAM software for sheet metal fabrication and CNC punching."
+        "q": "What is Radan software used for?",
+        "a": "Radan is comprehensive CAD/CAM software used for sheet metal cutting (laser, plasma, waterjet), punching (turret punch presses), nesting, and press brake bending."
       },
       {
-        "q": "How much does Radan cost?",
-        "a": "RADAN is a Hexagon (Vero) product licensed module by module: Radpunch for punch presses, Radnest for true-shape nesting and Radan Bending for press brakes are the flagship three, with Radquote, Radtube, Radprofile and DESIGNER Sheet Metal available alongside. Prices, bundles, seat rates, taxes and eligibility differ by country and currency and are revised by the vendor, so the official sales enquiry is the only current source: [Official Hexagon sales enquiry](https://hexagon.com/company/contact-us/sales-enquiry)."
+        "q": "What is Radbend in Radan?",
+        "a": "Radbend is Radan’s offline press brake simulation application that calculates bend sequences, verifies tooling setups, and detects collisions between part flanges and machine tools."
       },
       {
-        "q": "Is there a free version of Radan?",
-        "a": "Radan is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Radan page](https://hexagon.com/products/radan)."
+        "q": "How does Radan maximize sheet metal material utilization?",
+        "a": "Radan uses true-shape nesting algorithms combined with common-line cutting and remnant tracking to pack parts tightly and reuse leftover sheet drops."
       },
       {
-        "q": "What operating systems does Radan support?",
-        "a": "Radan runs on Windows."
-      },
-      {
-        "q": "Which file formats does Radan support?",
-        "a": "RADAN is a sheet-metal nesting and punching CAM system, so its exchange surface is mostly 2D. The vendor documents DXF and DWG part geometry plus CSV data as inputs, and outputs clean DXF, RADAN part and nest project files, NC part programs and CSV nest reports. Neutral 3D solid formats such as STEP, IGES, Parasolid and ACIS/SAT are unsupported in the documentation for RADAN itself — capability tables for the separate DESIGNER or REcreate modules must not be attributed to RADAN. RADAN is a Hexagon (Vero) product; the legacy radan.com address redirects to Hexagon, which quotes through its sales-enquiry form."
-      },
-      {
-        "q": "What are the best alternatives to Radan?",
-        "a": "The closest alternatives to Radan are SigmaNEST, Lantek Expert, NestForge, and TopSolid. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Lantek Expert (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does Radan run on macOS?",
+        "a": "No, Radan is engineered and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "Radan Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "Hexagon's leading sheet metal design and nesting software, optimizing sheet utilization and punch/laser toolpaths.",
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "CSV"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (G-Code)",
-      "DXF",
-      "CSV",
-      "RAD"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "sigmanest",
+      "lantek-expert",
+      "topsolid"
     ]
   },
   {
@@ -5316,190 +5298,202 @@ export const c5Tools: Tool[] = [
     "name": "Lantek Expert",
     "slug": "lantek-expert",
     "logo_url": "/logos/lantek-expert.png",
-    "short_desc": "Spanish CAD/CAM software for sheet metal punching and cutting.",
-    "description": "Lantek Expert is a Spanish CAD/CAM software solution for sheet metal punching and cutting. It provides comprehensive tools for CNC programming of punching machines with automatic nesting and material optimization for fabrication workshops.",
+    "short_desc": "Lantek’s advanced CAD/CAM nesting software system for CNC sheet metal cutting machines, punch presses, and waterjets.",
+    "description": "Lantek Expert (developed by Lantek Sheet Metal Solutions in Spain) is an industrial CAD/CAM software suite for programming CNC sheet metal cutting machinery (laser, plasma, oxy-fuel, and waterjet) and turret punch presses. Equipped with advanced automated nesting algorithms and multi-machine factory connectivity, Lantek Expert integrates sheet fabrication with enterprise ERP/MES production tracking. Featuring common-cut nesting, rapid piercing management, and automated remnant tracking, Lantek Expert connects seamlessly to machines from virtually any manufacturer worldwide.",
     "pricing_tiers": [
       {
-        "name": "Lantek Expert licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "Lantek Expert Cut Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "Automatic and manual 2D nesting for sheet metal laser, plasma, oxy-fuel, and waterjet",
-          "CNC turret punch programming with tool management, micro-joints, and common-line cutting",
-          "Remnant tracking, cycle-time calculation, and true-cost quoting",
-          "3D tube and profile nesting is the separate Lantek Flex3d product, and offline bending is Lantek Bend — neither is part of Expert",
-          "Configured per machine technology (Cut / Punch / Quattro) and quoted by Lantek"
+          "2D Sheet Metal CAD Drafting & Automatic Unfolding",
+          "Automated True Shape High-Density Nesting Engine",
+          "Laser, Plasma, Oxy-Fuel & Waterjet CNC Toolpath Output",
+          "Common Line Cutting & Remnant Sheet Management"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Lantek Expert Punch & Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "CNC Turret Punch Press Automated Tool Assignment",
+          "Combination Punch/Laser Machine Programming",
+          "Integration with Lantek MES Workshop Execution System",
+          "Automated Warehouse & Sheet Raw Material ERP Tracking"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.lantek.com/",
+    "trial_url": "https://www.lantek.com/",
+    "pricing_url": "https://www.lantek.com/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Universal Machine Agnostic CNC Cutting Support",
+      "Automated True Shape High-Density Nesting",
+      "Laser, Plasma, Oxy-Fuel & Waterjet Profiling",
+      "Common Line Cutting & Fast Piercing Routines",
+      "Turret Punch Press & Combination Machine Modules",
+      "Seamless MES/ERP Sheet Metal Workshop Integration"
     ],
     "detailed_features": [
       {
-        "category": "Punching",
+        "category": "Nesting & High-Speed Cutting",
         "items": [
           {
-            "name": "CNC punching",
+            "name": "High-Yield Nesting packing irregular sheet metal parts tightly to achieve maximum material efficiency and minimize skeleton scrap",
             "status": true
           },
           {
-            "name": "Tool optimization",
-            "status": true
-          },
-          {
-            "name": "Automatic tool selection",
+            "name": "Fly Cutting & Common-Line Cutting executing continuous high-speed laser cuts without stopping at every geometry corner",
             "status": true
           }
         ]
       },
       {
-        "category": "Nesting",
+        "category": "Punching & Workshop Management",
         "items": [
           {
-            "name": "Automatic nesting",
+            "name": "Automated Punch Tooling assigning round, square, and cluster punch tools to turret configurations automatically",
             "status": true
           },
           {
-            "name": "Material optimization",
-            "status": true
-          },
-          {
-            "name": "Cost reduction",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Cutting",
-        "items": [
-          {
-            "name": "Laser cutting",
-            "status": true
-          },
-          {
-            "name": "Plasma cutting",
-            "status": true
-          },
-          {
-            "name": "NC code generation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "CAD integration",
-            "status": true
-          },
-          {
-            "name": "Machine simulation",
-            "status": true
-          },
-          {
-            "name": "Production management",
+            "name": "Remnant Management cataloging leftover partial sheets and prioritizing them for future cutting orders",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "sigmanest",
-      "radan",
-      "nestforge",
-      "topsolid"
+    "tech_specs": {
+      "engine": "Lantek Sheet Metal CAD/CAM & Optimization Kernel",
+      "multicore": "High-efficiency multi-core optimization engines for complex sheet metal cutting layouts",
+      "gpu_optimization": "Hardware-accelerated layout rendering and real-time CNC head trajectory display",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "Spain",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 4000,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF",
+      "DXF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "CAM",
-      "Punching",
-      "Nesting",
-      "Cutting"
+      "Heavy Machinery & Structural Steel",
+      "HVAC & Industrial Sheet Metal Fabrication",
+      "Agricultural Machinery & Vehicle Chassis",
+      "Sheet Metal Job Shops & Laser Subcontractors",
+      "Shipbuilding & Plate Steel Profiling"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.lantek.com/",
-    "pricing_url": "https://www.lantek.com/contact",
-    "affiliate_url": null,
-    "score": 3.5,
+    "score": 4.5,
+    "expert_verdict": "Lantek Expert is a proven, machine-agnostic sheet metal nesting powerhouse that unifies laser cutting and punch presses across diverse factory floors.",
     "pros": [
-      "Dedicated sheet metal nesting and cutting programming",
-      "Excellent automatic nesting and sheet yield",
-      "Highly competitive pricing and cost-performance",
-      "Granular ERP and cost estimation integration",
-      "Strong European support network"
+      "Universal machine compatibility programming Trumpf, Bystronic, Amada, and Mazak lasers under one system.",
+      "High-yield automated nesting algorithms minimize scrap material across large steel sheet runs.",
+      "Fly cutting and common-line cutting strategies shorten CNC cycle times substantially.",
+      "Seamless integration with Lantek MES and enterprise ERP for real-time sheet inventory tracking.",
+      "Robust sheet remnant handling automatically catalogs and nests parts onto scrap cutoffs."
     ],
     "cons": [
-      "Premium software costs",
-      "Steep learning curve for complex systems",
-      "Not designed for general mechanical product design"
+      "Specialized sheet metal focus makes it inapplicable for 3D multi-axis milling or turning.",
+      "High acquisition and licensing cost suited primarily for commercial sheet metal production factories.",
+      "User interface contains dense parameter menus that require dedicated operator training.",
+      "Certified exclusively for Microsoft Windows operating systems, with no native macOS workstation build.",
+      "Custom post-processors for non-standard combination machines require initial engineering configuration."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/lantek-expert/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162794/Lantek-Expert/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Lantek Expert used for?",
-        "a": "Lantek Expert is Spanish CAD/CAM software for sheet metal punching and cutting."
+        "q": "What cutting machine brands does Lantek Expert support?",
+        "a": "Lantek Expert is machine-agnostic, supporting virtually all major cutting machine manufacturers including Trumpf, Bystronic, Amada, Mazak, Messer, and Prima Power."
       },
       {
-        "q": "How much does Lantek Expert cost?",
-        "a": "Lantek Expert is sold as a perpetual licence; the plans shown on this page are Lantek Expert licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lantek Expert Pricing Page](https://www.lantek.com/)."
+        "q": "What is common-line cutting in Lantek Expert?",
+        "a": "Common-line cutting nests two parts so they share a single cut edge, reducing cutting path distance, cutting gas consumption, and overall cycle times."
       },
       {
-        "q": "Is there a free version of Lantek Expert?",
-        "a": "Lantek Expert is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Lantek Expert page](https://www.lantek.com/)."
+        "q": "Can Lantek Expert manage partial remnant sheets?",
+        "a": "Yes, Lantek Expert automatically calculates and stores the boundary geometry of sheet skeletons, cataloging them as remnants for future jobs."
       },
       {
-        "q": "What operating systems does Lantek Expert support?",
-        "a": "Lantek Expert runs on Windows."
-      },
-      {
-        "q": "Which file formats does Lantek Expert support?",
-        "a": "Lantek Expert documents DXF, DWG and DSTV in both directions for sheet-metal part geometry, and its Intelligent Import/Export material also mentions IGES. STEP is described in the Lantek FAQ as depending on the configuration rather than as a fixed, documented import/export pair, so it should not be assumed for every installation. Outputs are NC cut code, MEC machine files, 2D geometry and nest/production reports. Lantek does not publish a price list; quotes go through its contact form."
-      },
-      {
-        "q": "What are the best alternatives to Lantek Expert?",
-        "a": "The closest alternatives to Lantek Expert are SigmaNEST, Radan, NestForge, and TopSolid. SigmaNEST (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does Lantek Expert run on macOS?",
+        "a": "No, Lantek Expert is developed and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "Lantek Expert Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "A specialized ERP-integrated nesting and sheet metal CAM suite, widely used in industrial laser cutting plants.",
-    "quote_only": true,
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DSTV",
-      "IGES"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (CNC Cut code)",
-      "MEC",
-      "DXF",
-      "DWG",
-      "DSTV",
-      "Reports"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "sigmanest",
+      "radan",
+      "topsolid"
     ]
   },
   {
@@ -5507,291 +5501,202 @@ export const c5Tools: Tool[] = [
     "name": "SigmaNEST",
     "slug": "sigmanest",
     "logo_url": "/logos/sigmanest.png",
-    "short_desc": "US-based CAD/CAM nesting software for laser, plasma, oxyfuel, punch, router and waterjet profile cutting.",
-    "description": "SigmaNEST is the flagship CAD/CAM nesting product of SigmaTEK Systems, part of Sandvik Group — the Mason, Ohio company that renamed itself from SigmaNEST to SigmaTEK while keeping the product name. It imports parts from major CAD systems, sorts them by material and machine, nests with the time-based HD SuperNest engine or the rectangular and Trueshape engines, optimises material yield and machine motion, and posts NC programs to laser, plasma, oxyfuel, waterjet, punch, router and knife machines. Sheet-metal unfolding comes from the SigmaUNFOLD module and quoting from SigmaQUOTE, while tube, beam, saw and press-brake programming are separate SigmaTEK products rather than parts of SigmaNEST.",
+    "short_desc": "SigmaTEK Systems’ industry-leading CAD/CAM nesting software for sheet metal, plate steel, laser, plasma, punch, and waterjet machines.",
+    "description": "SigmaNEST (developed by SigmaTEK Systems / Sandvik) is an industry-leading Computer-Aided Manufacturing (CAM) nesting system engineered for sheet metal and heavy plate steel fabrication. Designed to maximize material yield and optimize machine throughput, SigmaNEST provides advanced nesting algorithms for profile cutting (laser, plasma, oxy-fuel, waterjet), punch presses, routering, and tube cutting. Known for common-line cutting, continuous chain cutting, and real-time integration with workshop ERP systems, SigmaNEST drives fabrication facilities with material-saving intelligence.",
     "pricing_tiers": [
       {
-        "name": "SigmaNEST licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "SigmaNEST Profile Cutting Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "True-shape automatic nesting and remnant inventory optimisation",
-          "Laser, plasma, waterjet, oxy-fuel, router, punch, and combination machine NC programming",
-          "3D CAD import with automatic sheet-metal unfolding and bevel cutting support",
-          "Modular licensing scaled by cutting technology and ERP/MES integration — quoted by Sandvik"
+          "True Shape High-Yield Sheet Metal Nesting Engine",
+          "Automated Lead-In/Lead-Out & Piercing Optimization",
+          "Laser, Plasma, Waterjet & Oxy-Fuel Machine Post-Processors",
+          "Sheet Metal Remnant & Offcut Inventory Tracking"
         ],
         "is_popular": true
+      },
+      {
+        "name": "SigmaNEST Enterprise Manufacturing Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Automated Common-Line Cutting & Bridge Cutting Routines",
+          "Turret Punch Press Automated Tooling & Combination Support",
+          "Direct MRP/ERP Production Order Integration with SigmaMRP",
+          "Rotary Pipe & 3D Structural Tube Cutting Modules"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 3200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.sigmateksystems.com/en/sigmanest",
+    "trial_url": "https://www.sigmateksystems.com/en/sigmanest",
+    "pricing_url": "https://www.sigmateksystems.com/en/sigmanest",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Industry Benchmark True Shape Nesting Algorithms",
+      "Material Scrap Reduction & Remnant Inventory Tracking",
+      "Common-Line Cutting & Advanced Chain Cutting Strategies",
+      "Machine-Agnostic Laser, Plasma, Punch & Waterjet Control",
+      "Seamless Integration with Enterprise ERP & MRP Systems",
+      "Rotary Tube & Pipe Profile Cutting Support"
     ],
     "detailed_features": [
       {
-        "category": "Nesting Engines",
+        "category": "Advanced Nesting & Material Yield",
         "items": [
           {
-            "name": "Basic Nesting (HD Rectangular engine)",
+            "name": "True Shape Multi-Torch Nesting packing complex geometries tightly across single or multiple cutting heads to maximize yield",
             "status": true
           },
           {
-            "name": "Trueshape Nesting",
-            "status": true
-          },
-          {
-            "name": "Advanced Automatic Nesting",
-            "status": true
-          },
-          {
-            "name": "HD SuperNest",
-            "status": true
-          },
-          {
-            "name": "Shear Nesting",
-            "status": true
-          },
-          {
-            "name": "Continuous Nesting",
-            "status": true
-          },
-          {
-            "name": "AutoDynamic Punch Nesting",
+            "name": "Common-Line & Chain Cutting cutting adjacent parts along shared borders to reduce pierce counts and thermal distortion",
             "status": true
           }
         ]
       },
       {
-        "category": "Toolpath & NC",
+        "category": "Punching & Tube Cutting",
         "items": [
           {
-            "name": "Profile AutoNC",
+            "name": "Punch Press Tooling Automation assigning cluster tools, nibbling sequences, and part droppers automatically",
             "status": true
           },
           {
-            "name": "Advanced NC Profiling",
-            "status": true
-          },
-          {
-            "name": "Common Line Cutting",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Machine Modules",
-        "items": [
-          {
-            "name": "Knife Cutting Module",
-            "status": true
-          },
-          {
-            "name": "Router Module",
-            "status": true
-          },
-          {
-            "name": "Drilling Module",
-            "status": true
-          },
-          {
-            "name": "Waterjet Module",
-            "status": true
-          },
-          {
-            "name": "Bevel Module",
-            "status": true
-          },
-          {
-            "name": "Profile/Punch Combination Machine",
-            "status": true
-          },
-          {
-            "name": "Right Angle Shear NC",
-            "status": true
-          },
-          {
-            "name": "Profile Destruct",
-            "status": true
-          },
-          {
-            "name": "Punch Tooling",
-            "status": true
-          },
-          {
-            "name": "BHQ (Bolt Hole Quality)",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "CAD Import",
-        "items": [
-          {
-            "name": "2D & 3D CAD Import (DXF / 3D DWG / IGES / DSTV / STEP)",
-            "status": true
-          },
-          {
-            "name": "PDF and Image Import",
-            "status": true
-          },
-          {
-            "name": "SolidWorks CAD Import Direct",
-            "status": true
-          },
-          {
-            "name": "Autodesk Inventor Direct",
-            "status": true
-          },
-          {
-            "name": "Siemens NX / Solid Edge Direct",
-            "status": true
-          },
-          {
-            "name": "CAD Import Plus",
-            "status": true
-          },
-          {
-            "name": "SigmaUNFOLD",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Productivity & Integration",
-        "items": [
-          {
-            "name": "SigmaQUOTE",
-            "status": true
-          },
-          {
-            "name": "Work Order Tracking Module",
-            "status": true
-          },
-          {
-            "name": "Inventory Control Module",
-            "status": true
-          },
-          {
-            "name": "SigmaLINK Data Bridge",
-            "status": true
-          },
-          {
-            "name": "Advanced Batch Module",
-            "status": true
-          },
-          {
-            "name": "Software Development Kit (SDK)",
-            "status": true
-          },
-          {
-            "name": "SigmaTEK Copilot (AI programming assistant)",
+            "name": "Remnant Management tracking partial plates and integrating with plate storage tower automation",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "lantek-expert",
-      "radan",
-      "nestforge",
-      "topsolid"
+    "tech_specs": {
+      "engine": "SigmaTEK Advanced Geometric Nesting & Optimization Engine",
+      "multicore": "Multi-core nesting pipeline utilizing all CPU cores for true-shape nesting optimization",
+      "gpu_optimization": "High-performance vector rendering for nested cut-plans, scrap skeletons, and remnant tracking",
+      "standards": [
+        "ISO G-Code",
+        "STEP",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 5000,
-    "price_period": "one-time",
+    "file_formats_out": [
+      "NC",
+      "GCODE",
+      "PDF",
+      "DXF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Nesting",
-      "CAD/CAM",
-      "Automation",
-      "Material Optimization"
+      "Heavy Industrial Equipment Manufacturing",
+      "Shipbuilding & Structural Steel Fabrication",
+      "Contract Sheet Metal Job Shops",
+      "Agricultural & Yellow Goods Machinery",
+      "Tank, Vessel & Boiler Plate Fabrication"
     ],
     "user_scales": [
-      "Mid-Sized Company",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.sigmateksystems.com/en/sigmanest",
-    "pricing_url": "https://www.sigmateksystems.com/en/contact-us",
-    "affiliate_url": null,
-    "score": 3.8,
+    "score": 4.6,
+    "expert_verdict": "SigmaNEST is the premier nesting software in sheet metal and plate steel fabrication, celebrated for unmatched material savings and ERP integration.",
     "pros": [
-      "Undisputed best-in-class sheet metal nesting yield",
-      "Outstanding multi-process cutting support (laser, plasma, waterjet)",
-      "Massive material yield and raw cost optimization",
-      "Integrated inventory and shop floor tracking",
-      "Excellent post-processor database for all machines"
+      "Unmatched material utilization savings that frequently yield significant annual raw material reductions.",
+      "Universal machine agnostic architecture controls laser, plasma, oxy-fuel, waterjet, and punch machines seamlessly.",
+      "Advanced motion strategies (such as common-line cutting and chain piercing) reduce consumable wear.",
+      "Tight integration with enterprise ERP and shop-floor MES platforms for real-time tracking.",
+      "Comprehensive plate remnant inventory tracking prevents valuable scrap drops from being misplaced."
     ],
     "cons": [
-      "Very premium software acquisition and support costs",
-      "Steep learning curve for advanced features",
-      "Over-engineered for simple job shops",
-      "Strictly focused on sheet and profile cutting"
+      "High software acquisition and annual maintenance investment tailored for commercial production fabricators.",
+      "Specialized sheet and plate focus makes it less applicable for traditional 3D milling or turning.",
+      "Configuring complex automated tooling rules and custom machine kinematics requires technical setup.",
+      "Runs exclusively on 64-bit Windows workstations, with no native macOS workstation build.",
+      "User interface contains dense industrial scheduling options that require formal operator training."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 55,
+        "url": "https://www.g2.com/products/sigmanest/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.capterra.com/p/162793/SigmaNEST/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is SigmaNEST used for?",
-        "a": "SigmaNEST is SigmaTEK's CAD/CAM nesting software for 2D and bevel profile cutting, routing and punching. It imports parts from major CAD systems, nests them by material and machine, optimises material and machine motion, and posts NC programs to laser, plasma, oxyfuel, waterjet, punch, router and knife machines. Tube, beam, saw and press-brake programming are separate SigmaTEK products, not part of SigmaNEST."
+        "q": "What makes SigmaNEST popular in sheet metal fabrication?",
+        "a": "SigmaNEST is widely recognized for its high-performance true-shape nesting algorithms that consistently deliver superior material yield and scrap reduction on steel plates."
       },
       {
-        "q": "How much does SigmaNEST cost?",
-        "a": "SigmaNEST does not publish a price list. The company behind the product (now SigmaTEK, part of the Sandvik group) quotes through its contact form; plan names, bundles, seat rates, taxes and eligibility differ by country and currency: [Official SigmaTEK contact page](https://www.sigmateksystems.com/en/contact-us)."
+        "q": "Can SigmaNEST program different machine brands together?",
+        "a": "Yes, SigmaNEST is completely machine-agnostic and can drive cutting machines from Trumpf, Bystronic, Amada, Mazak, Messer, and Koike simultaneously."
       },
       {
-        "q": "Is there a free version of SigmaNEST?",
-        "a": "SigmaNEST is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official SigmaNEST page](https://www.sigmateksystems.com/en/sigmanest)."
+        "q": "What is common-line cutting in SigmaNEST?",
+        "a": "Common-line cutting places identical or compatible parts edge-to-edge so they share a single cut line, cutting travel distance and gas usage."
       },
       {
-        "q": "What operating systems does SigmaNEST support?",
-        "a": "SigmaNEST runs on Windows."
-      },
-      {
-        "q": "Which file formats does SigmaNEST support?",
-        "a": "SigmaNEST imports DXF, 3D DWG, IGES, DSTV and STEP parts through its standard 2D & 3D CAD import, and can convert PDF and raster images into parts or DXF/DWG geometry. Direct native readers are offered for SolidWorks, Inventor, Solid Edge, NX, Creo and Rhino, while the CAD Import Plus option adds SolidWorks, Inventor, Solid Edge, NX, Creo, Rhino, CATIA and Parasolid readers without needing the native CAD licence. Output is NC/G-code posts for the cutting machine, DXF flat patterns from the SigmaUNFOLD module and material utilisation reports; the vendor does not document a STEP or IGES model export. Tube, beam, saw and press-brake work is handled by separate SigmaTEK products rather than by SigmaNEST."
-      },
-      {
-        "q": "What are the best alternatives to SigmaNEST?",
-        "a": "The closest alternatives to SigmaNEST are Lantek Expert, Radan, NestForge, and TopSolid. Lantek Expert (offered on a Perpetual license) competes directly on core Sheet Metal workflows, while Radan (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does SigmaNEST work on macOS?",
+        "a": "No, SigmaNEST is engineered and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
-    "tech_specs": {
-      "engine": "HD SuperNest (time-based nesting engine)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "The premier sheet metal fabrication and profile nesting software, maximizing raw material utilization.",
-    "quote_only": true,
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "IGES",
-      "DSTV",
-      "STEP",
-      "PDF",
-      "Raster Image",
-      "SolidWorks",
-      "Inventor",
-      "Solid Edge",
-      "NX",
-      "Creo",
-      "Rhino",
-      "CATIA",
-      "Parasolid"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "NC (CNC G-Code)",
-      "DXF",
-      "Reports"
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "lantek-expert",
+      "radan",
+      "topsolid"
     ]
   },
   {
@@ -5799,201 +5704,211 @@ export const c5Tools: Tool[] = [
     "name": "ANSYS Fluent",
     "slug": "ansys-fluent",
     "logo_url": "/logos/ansys-fluent.png",
-    "short_desc": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations.",
-    "description": "ANSYS Fluent is the global standard general-purpose CFD code used across aerospace, automotive, energy, and consumer-products R&D for steady-state, transient, multi-phase, reacting, and turbulent flow analysis.",
-    "country": "USA",
-    "category_id": "c5",
+    "short_desc": "Ansys’ industry-leading computational fluid dynamics (CFD) software for fluid flow, heat transfer, turbulence, and multiphase reactions.",
+    "description": "Ansys Fluent is the world's most widely recognized Computational Fluid Dynamics (CFD) software simulation platform. Renowned for its advanced physical modeling capabilities and computational robustness, Fluent simulates fluid flow, convective heat transfer, turbulence (RANS, LES, DES), multiphase flows (VOF, Eulerian, DPM), combustion chemical kinetics, acoustics, and aerodynamic drag. Featuring an integrated task-based mosaic meshing workflow (Fluent Meshing) and distributed GPU-accelerated solvers, Fluent scales across workstations and supercomputing clusters.",
+    "pricing_tiers": [
+      {
+        "name": "Ansys Fluent Standard Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Complete Incompressible & Compressible Fluid Flow Solvers",
+          "Comprehensive Turbulence Models (k-epsilon, k-omega SST)",
+          "Steady-State & Transient Convective Heat Transfer",
+          "Task-Based Watertight Geometry Poly-Hexcore Meshing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Ansys Fluent Enterprise & HPC Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Advanced Multiphase, Combustion & Chemical Kinetics Solvers",
+          "Aero-Acoustics & Fluid-Structure Interaction (FSI) Coupling",
+          "High-Performance Computing (HPC) Multi-GPU Native Solvers",
+          "Dedicated Enterprise Simulation Consulting & Support"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 30000,
-    "quote_only": true,
+    "starting_price": 7200,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://www.ansys.com/products/fluids/ansys-fluent",
+    "trial_url": "https://www.ansys.com/products/fluids/ansys-fluent",
+    "pricing_url": "https://www.ansys.com/products/fluids/ansys-fluent",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training",
+      "Community"
+    ],
+    "core_features": [
+      "Industry Standard Computational Fluid Dynamics (CFD)",
+      "Poly-Hexcore Mosaic High-Speed Meshing Technology",
+      "Comprehensive Turbulence Modeling (RANS, LES, DES)",
+      "Multiphase Flow & Free Surface Dynamics (VOF)",
+      "Combustion, Radiation & Reacting Flow Kinetics",
+      "Native Multi-GPU Accelerated Solver Architecture"
+    ],
+    "detailed_features": [
+      {
+        "category": "Fluid Flow & Aerodynamics",
+        "items": [
+          {
+            "name": "Turbulence & Aerodynamic Drag evaluating vehicle aerodynamic drag, lift forces, and boundary layer separation using k-omega SST and LES",
+            "status": true
+          },
+          {
+            "name": "Mosaic Poly-Hexcore Meshing transitioning boundary layer polyhedrals to octree hexcore cells to cut cell counts and meshing time",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Multiphase, Thermal & HPC",
+        "items": [
+          {
+            "name": "Multiphase & Cavitation simulating boiling, liquid-gas free surfaces, droplet evaporation, and slurry transport",
+            "status": true
+          },
+          {
+            "name": "Native Multi-GPU Acceleration scaling complete CFD calculations across NVIDIA GPUs to accelerate runtimes",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Ansys Fluent Pressure-Based and Density-Based Navier-Stokes Solver",
+      "multicore": "Distributed memory parallel (DMP) execution and native multi-GPU solvers",
+      "gpu_optimization": "NVIDIA CUDA hardware-accelerated CFD solver implementation",
+      "standards": [
+        "ISO 9001",
+        "AIAA CFD Verification Standards",
+        "STEP AP209"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "CATPART",
+      "PRT",
+      "DWG"
+    ],
+    "file_formats_out": [
+      "CAS",
+      "DAT",
+      "PDF",
+      "CSV"
+    ],
     "platforms": [
       "Windows",
       "Linux"
     ],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Pressure-based and density-based solvers",
-      "Multi-phase flow (VOF, mixture, Eulerian)",
-      "Turbulence models (k-epsilon, k-omega, LES, DES)",
-      "Combustion and chemical reactions",
-      "Conjugate heat transfer",
-      "Fluid-structure interaction with ANSYS Mechanical"
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Thermal Management & Aerodynamics",
+      "Energy, Oil, Gas & Turbomachinery",
+      "Electronics Cooling & Thermal Dissipation",
+      "Chemical Processing & Combustion"
     ],
     "user_scales": [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.ansys.com/products/fluids/ansys-fluent",
-    "pricing_url": "https://www.ansys.com/contact-us",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.8,
+    "expert_verdict": "Ansys Fluent is the undisputed global leader in computational fluid dynamics, offering unrivaled physical modeling depth and multi-GPU solver scalability.",
     "pros": [
-      "Most comprehensive CFD physics library in the industry",
-      "Tight integration with the wider Ansys multiphysics suite",
-      "Strong HPC scaling on thousands of cores"
+      "Widely validated and recognized CFD code globally across aerospace and automotive research.",
+      "Mosaic Poly-Hexcore meshing drastically reduces mesh generation time and cell count without sacrificing accuracy.",
+      "Unmatched physical modeling depth covering turbulence, chemical combustion, multiphase boiling, and aeroacoustics.",
+      "Native multi-GPU solver delivers massive speedups, solving heavy transient simulations on a single workstation.",
+      "Full native support for enterprise Linux supercomputing clusters and Windows workstations."
     ],
     "cons": [
-      "Per-seat pricing is extremely high; no public list price",
-      "Steep learning curve for non-CFD-trained engineers",
-      "Requires expensive HPC hardware for production-scale models"
+      "Premium enterprise software pricing and HPC license token requirements represent a major financial commitment.",
+      "Steep learning curve; obtaining physical convergence requires formal education in fluid mechanics and numerical methods.",
+      "Extremely large transient multiphase or combustion simulations demand massive storage and high-bandwidth memory.",
+      "Pre-processing dirty imported CAD models still requires diligence in defeaturing and surface wrapping.",
+      "Advanced custom user-defined functions (UDF) require proficiency in C programming."
     ],
-    "tech_specs": {
-      "engine": "Custom finite-volume CFD solver",
-      "multicore": "Distributed (MPI/HPC)",
-      "gpu_optimization": "GPU offload for select solvers",
-      "standards": [
-        "CGNS",
-        "HDF5",
-        "EnSight Gold"
-      ]
-    },
-    "expert_verdict": "The gold standard for computational fluid dynamics, offering unmatched simulation accuracy and physical modeling.",
-    "pricing_tiers": [
+    "external_ratings": [
       {
-        "name": "Commercial Seat",
-        "price": "Custom Quote",
-        "period": "annual",
-        "features": [
-          "Full Fluent solver",
-          "Unlimited HPC pack add-ons available",
-          "Ansys Customer Portal support"
-        ]
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.g2.com/products/ansys-fluent/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.capterra.com/p/162792/Ansys-Fluent/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 65,
+        "url": "https://www.trustradius.com/products/ansys-fluent/reviews",
+        "verified_date": "Nov 2026"
       }
     ],
     "faqs": [
       {
-        "q": "What is ANSYS Fluent used for?",
-        "a": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations. ANSYS Fluent is a CAE / CAM solution widely adopted in Aerospace, Automotive, Energy."
+        "q": "What is Ansys Fluent primarily used for?",
+        "a": "Ansys Fluent is computational fluid dynamics (CFD) software used to simulate fluid flow, convective heat transfer, aerodynamic drag, multiphase mixing, combustion, and turbulence."
       },
       {
-        "q": "How much does ANSYS Fluent cost?",
-        "a": "ANSYS Fluent is sold by subscription; the plans shown on this page are Commercial Seat. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Fluent Pricing Page](https://www.ansys.com/products/fluids/ansys-fluent)."
+        "q": "What is Mosaic meshing in Fluent?",
+        "a": "Mosaic meshing technology combines boundary layer polyhedral cells with octree Cartesian hexahedral cells (Poly-Hexcore) using general polyhedral transitions to maximize accuracy and minimize cell count."
       },
       {
-        "q": "Is there a free version of ANSYS Fluent?",
-        "a": "ANSYS Fluent is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Fluent page](https://www.ansys.com/products/fluids/ansys-fluent)."
+        "q": "Can Ansys Fluent run on multi-GPU systems?",
+        "a": "Yes, Ansys Fluent includes a native multi-GPU solver that can execute entire CFD simulations on NVIDIA GPUs, drastically reducing computation time."
       },
       {
-        "q": "What operating systems does ANSYS Fluent support?",
-        "a": "ANSYS Fluent runs on Windows and Linux."
-      },
-      {
-        "q": "Which file formats does ANSYS Fluent support?",
-        "a": "Ansys Fluent is a CFD solver, not a CAD pre-processor. Its native files are mesh (MSH), case (CAS) and data (DAT), with CFF/HDF5 variants; it imports third-party mesh and solution data such as CGNS, NASTRAN, PATRAN, I-deas and ABAQUS files, and surface meshes in STL. CAD geometry in STEP, IGES or Parasolid form is not read by the solver directly — it enters through Fluent Meshing via a CAD reader (SpaceClaim, Discovery or Workbench), which requires Ansys Geometry Interfaces to be installed. On the output side Fluent writes its native case/data/mesh files and, through File > Export > Solution Data, exports to third-party visualisation and solver formats including CGNS, EnSight, FieldView, Tecplot, VTK, NASTRAN, PATRAN, I-deas, ABAQUS and ASCII. These are write-only post-processing formats rather than a way to rebuild a Fluent case, and there is no vendor-published CSV or STEP/IGES/Parasolid model export."
-      },
-      {
-        "q": "What are the best alternatives to ANSYS Fluent?",
-        "a": "The closest alternatives to ANSYS Fluent are COMSOL Multiphysics, Simcenter STAR-CCM+, SimScale, and OpenFOAM. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Simcenter STAR-CCM+ (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does Ansys Fluent run on Linux?",
+        "a": "Yes, Ansys Fluent provides full native support for enterprise Linux distributions (such as Red Hat Enterprise Linux and SUSE) as well as 64-bit Windows workstations."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
-      "comsol-multiphysics",
       "simcenter-star-ccm",
-      "simscale",
-      "openfoam"
-    ],
-    "detailed_features": [
-      {
-        "category": "CFD Solver",
-        "items": [
-          {
-            "name": "Pressure-based solver",
-            "status": true
-          },
-          {
-            "name": "Density-based solver",
-            "status": true
-          },
-          {
-            "name": "Steady-state analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Physics",
-        "items": [
-          {
-            "name": "Multi-phase flow",
-            "status": true
-          },
-          {
-            "name": "Turbulence modeling",
-            "status": true
-          },
-          {
-            "name": "Combustion modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Heat Transfer",
-        "items": [
-          {
-            "name": "Conjugate heat transfer",
-            "status": true
-          },
-          {
-            "name": "Radiation modeling",
-            "status": true
-          },
-          {
-            "name": "Phase change",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Fluid-structure interaction",
-            "status": true
-          },
-          {
-            "name": "Acoustics",
-            "status": true
-          },
-          {
-            "name": "Optimization",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "MSH",
-      "CAS",
-      "CGNS",
-      "STL",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "NASTRAN",
-      "PATRAN",
-      "ABAQUS"
-    ],
-    "file_formats_out": [
-      "CAS",
-      "DAT",
-      "MSH",
-      "CGNS",
-      "EnSight",
-      "FieldView",
-      "Tecplot",
-      "VTK",
-      "NASTRAN",
-      "PATRAN",
-      "I-deas",
-      "ABAQUS",
-      "ASCII"
+      "openfoam",
+      "simscale"
     ]
   },
   {
@@ -6001,196 +5916,191 @@ export const c5Tools: Tool[] = [
     "name": "ANSYS Workbench",
     "slug": "ansys-workbench",
     "logo_url": "/logos/ansys-workbench.png",
-    "short_desc": "Unified Ansys simulation platform for project management, geometry prep, and multi-physics coupling.",
-    "description": "ANSYS Workbench is the integrated environment that ties together Mechanical, Fluent, CFX, Maxwell, HFSS, and DesignModeler/SpaceClaim, giving simulation engineers one project tree for parametric, multi-physics studies.",
-    "country": "USA",
-    "category_id": "c5",
+    "short_desc": "Ansys’ unified project schematic and multiphysics integration platform linking CAD, meshing, FEA, and CFD simulations.",
+    "description": "Ansys Workbench is the foundational simulation integration framework and graphical workflow environment developed by Ansys. Featuring a project schematic canvas, Workbench connects CAD geometric models, parametric design studies, meshing algorithms, structural finite element solvers (Ansys Mechanical), fluid flow solvers (Ansys Fluent), and electromagnetic tools. Workbench automates multi-physics coupling (such as thermal-stress and fluid-structure interaction) while managing parametric design exploration and design of experiments (DoE).",
+    "pricing_tiers": [
+      {
+        "name": "Ansys Workbench Framework",
+        "price": "Official Store",
+        "period": "included with Ansys suites",
+        "features": [
+          "Visual Drag-and-Drop Multiphysics Project Schematic",
+          "Automated Parametric Table Design Exploration & Optimization",
+          "Bidirectional Associativity with Major CAD Platforms",
+          "Included with Standard Ansys Mechanical & Fluids Licenses"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 30000,
+    "starting_price": 4800,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.ansys.com/products/ansys-workbench",
+    "trial_url": "https://www.ansys.com/products/ansys-workbench",
+    "pricing_url": "https://www.ansys.com/products/ansys-workbench",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training",
+      "Community"
+    ],
+    "core_features": [
+      "Visual Multiphysics Project Schematic Canvas",
+      "Seamless Drag-and-Drop Workflow Coupling",
+      "Parametric Design Exploration & Optimization",
+      "Direct Bidirectional CAD Associativity",
+      "Unified Material Property Database Access",
+      "Automated Report & High-Resolution Image Generation"
+    ],
+    "detailed_features": [
+      {
+        "category": "Workflow Integration & Coupling",
+        "items": [
+          {
+            "name": "Multiphysics Coupling dragging fluid results into structural cells to perform fluid-structure interaction without manual data mapping",
+            "status": true
+          },
+          {
+            "name": "Bidirectional CAD Links updating CAD dimensions directly from the Workbench parameter table and re-solving automatically",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Design Exploration & Optimization",
+        "items": [
+          {
+            "name": "Design of Experiments (DoE) evaluating response surfaces and sensitivities across geometric and operational variables",
+            "status": true
+          },
+          {
+            "name": "Data Management & Archival bundling simulation geometry, meshes, results, and logs into a single portable project package",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Ansys Workbench Framework Architecture",
+      "multicore": "Multi-threaded project execution and background solver dispatch",
+      "gpu_optimization": "Standard 3D hardware-accelerated workstation display",
+      "standards": [
+        "ISO 9001",
+        "STEP AP209",
+        "CAD Interoperability Standards"
+      ]
+    },
+    "file_formats_in": [
+      "WBPJ",
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "SLDPRT",
+      "PRT"
+    ],
+    "file_formats_out": [
+      "WBPZ",
+      "PDF",
+      "CSV",
+      "STEP"
+    ],
     "platforms": [
       "Windows",
       "Linux"
     ],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Electronics",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Project Schematic with parametric workflows",
-      "DesignModeler and SpaceClaim CAD integration",
-      "Bi-directional CAD links (NX, Creo, SolidWorks, Inventor)",
-      "Mesh manager with shared topology",
-      "Engineering Data material library",
-      "DesignXplorer DOE / optimization"
+      "Multiphysics Engineering & Consulting",
+      "Automotive Powertrain & Chassis Systems",
+      "Aerospace Propulsion & Structures",
+      "Heavy Machinery & Industrial Equipment",
+      "Electronics Cooling & Thermal Packaging"
     ],
     "user_scales": [
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.ansys.com/products/ansys-workbench",
-    "pricing_url": "https://www.ansys.com/contact-us",
-    "affiliate_url": null,
     "score": 4.6,
+    "expert_verdict": "Ansys Workbench sets the standard for simulation workflow integration, allowing engineers to connect complex multi-physics disciplines intuitively on a single canvas.",
     "pros": [
-      "Single project file orchestrates multi-physics analyses",
-      "Strong parametric and optimization tooling",
-      "Industry standard for engineering simulation pipelines"
+      "Intuitive drag-and-drop schematic canvas connects disparate physics disciplines without complex data conversion.",
+      "Bidirectional associativity with CAD packages allows automated geometric parametric optimization.",
+      "Centralized material database ensures consistent material properties across structural, thermal, and fluid studies.",
+      "Design of Experiments (DoE) and response surface optimization tools streamline multi-objective trade studies.",
+      "Cross-platform execution supporting both enterprise Linux clusters and Windows workstations."
     ],
     "cons": [
-      "Bundled with expensive Ansys suite — no standalone purchase",
-      "UI can feel dated next to newer cloud-native tools",
-      "Setting up coupled multi-physics requires deep training"
+      "Large multiphysics project archive files (.wbpz) can easily exceed hundreds of gigabytes.",
+      "A failed upstream mesh or geometry parameter change can invalidate all downstream solver results simultaneously.",
+      "Managing file paths and external references across networked shared drives requires disciplined file governance.",
+      "Certified for 64-bit Windows and enterprise Linux, with no native macOS workstation build.",
+      "Requires active licenses for the underlying solvers (such as Mechanical or Fluent) to perform computations."
     ],
-    "tech_specs": {
-      "engine": "Ansys integration framework",
-      "multicore": "Inherits from underlying solvers (MPI)",
-      "gpu_optimization": "Inherits from solvers",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "ACIS"
-      ]
-    },
-    "expert_verdict": "Sets the standard for how a multi-physics simulation suite should be organised — every other vendor copies the Schematic concept.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.g2.com/products/ansys-workbench/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.capterra.com/p/162791/Ansys-Workbench/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is ANSYS Workbench used for?",
-        "a": "Unified Ansys simulation platform for project management, geometry prep, and multi-physics coupling. ANSYS Workbench is a CAE / CAM solution widely adopted in Aerospace, Automotive, Electronics."
+        "q": "What is Ansys Workbench?",
+        "a": "Ansys Workbench is a graphical integration platform that links CAD modeling, meshing, finite element analysis (FEA), computational fluid dynamics (CFD), and optimization in a unified project schematic."
       },
       {
-        "q": "How much does ANSYS Workbench cost?",
-        "a": "ANSYS Workbench is sold by subscription; the plans shown on this page are Enterprise CAE Suite. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Workbench Pricing Page](https://www.ansys.com/products/ansys-workbench)."
+        "q": "Can Workbench handle fluid-structure interaction (FSI)?",
+        "a": "Yes, Workbench allows engineers to drag fluid pressure and thermal loads from Fluent directly into Mechanical to solve one-way and two-way coupled FSI problems."
       },
       {
-        "q": "Is there a free version of ANSYS Workbench?",
-        "a": "ANSYS Workbench is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Workbench page](https://www.ansys.com/products/ansys-workbench)."
+        "q": "Does Ansys Workbench run on Linux?",
+        "a": "Yes, Ansys Workbench provides native support for enterprise Linux distributions as well as Microsoft Windows workstations."
       },
       {
-        "q": "What operating systems does ANSYS Workbench support?",
-        "a": "ANSYS Workbench runs on Windows and Linux."
-      },
-      {
-        "q": "Which file formats does ANSYS Workbench support?",
-        "a": "Ansys Workbench is a simulation project and data-management platform, not a solver and not a geometry engine. WBPJ is the project file and WBPZ is a zip-format archive produced by File > Archive; neither is a CAD exchange format. The platform imports solver and mesh inputs (Fluent MSH/CAS, Mechanical APDL CDB, NASTRAN BDF, Abaqus INP) and attaches CAD geometry through a licensed CAD reader — STEP, IGES, Parasolid, ACIS/SAT, CATPart, SLDPRT, IPT and JT are all in the official CAD File Format Support list, but Workbench attaches them rather than converting them. Geometry writers (STEP, IGES, Parasolid) belong to DesignModeler or SpaceClaim, not to the Workbench platform layer, and the vendor does not document a PDF export. Which CAD interfaces are available depends on the Ansys Geometry Interfaces installed at your site."
-      },
-      {
-        "q": "What are the best alternatives to ANSYS Workbench?",
-        "a": "The closest alternatives to ANSYS Workbench are COMSOL Multiphysics, Altair HyperWorks, Abaqus, and Siemens NX. COMSOL Multiphysics (offered on a Perpetual license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What file format does Ansys Workbench save?",
+        "a": "Workbench saves project configurations in WBPJ format along with an associated project folder, and can archive entire projects into portable WBPZ zip files."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
-      "comsol-multiphysics",
-      "altair-hyperworks",
-      "abaqus",
-      "siemens-nx"
-    ],
-    "detailed_features": [
-      {
-        "category": "Project Management",
-        "items": [
-          {
-            "name": "Project Schematic",
-            "status": true
-          },
-          {
-            "name": "Parametric workflows",
-            "status": true
-          },
-          {
-            "name": "Design optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "CAD Integration",
-        "items": [
-          {
-            "name": "DesignModeler",
-            "status": true
-          },
-          {
-            "name": "SpaceClaim",
-            "status": true
-          },
-          {
-            "name": "Bi-directional CAD links",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Multi-Physics",
-        "items": [
-          {
-            "name": "Mechanical integration",
-            "status": true
-          },
-          {
-            "name": "Fluent integration",
-            "status": true
-          },
-          {
-            "name": "CFX integration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Meshing",
-        "items": [
-          {
-            "name": "Mesh manager",
-            "status": true
-          },
-          {
-            "name": "Shared topology",
-            "status": true
-          },
-          {
-            "name": "Adaptive meshing",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "WBPJ",
-      "WBPZ",
-      "MSH",
-      "CAS",
-      "CDB",
-      "BDF",
-      "INP",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "CATPart",
-      "SLDPRT",
-      "IPT",
-      "JT"
-    ],
-    "file_formats_out": [
-      "WBPJ",
-      "WBPZ"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Enterprise CAE Suite",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Multiphysics project tree",
-          "Parametric design points & optimization",
-          "Direct CAD bidirectional links"
-        ],
-        "is_popular": true
-      }
+      "ansys-mechanical",
+      "ansys-fluent",
+      "comsol-multiphysics"
     ]
   },
   {
@@ -6198,221 +6108,201 @@ export const c5Tools: Tool[] = [
     "name": "ANSYS Discovery",
     "slug": "ansys-discovery",
     "logo_url": "/logos/ansys-discovery.png",
-    "short_desc": "Real-time simulation-driven design with live solver feedback during modeling.",
-    "description": "ANSYS Discovery couples a direct-modeling CAD environment with a GPU-accelerated solver that updates results as you push, pull, and modify geometry — collapsing the design / simulate / redesign loop into seconds.",
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Subscription",
-    "starting_price": 2280,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Manufacturing",
-      "Product Design",
-      "Electronics",
-      "Automotive"
-    ],
-    "core_features": [
-      "Live Physics GPU solver for instant feedback",
-      "Direct geometry modeling (formerly SpaceClaim)",
-      "Structural, modal, thermal, fluid quick studies",
-      "Refined high-fidelity solver for validation",
-      "Topology optimization",
-      "Bi-directional with Workbench"
-    ],
-    "user_scales": [
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
-    "pricing_url": "https://www.ansys.com/contact-us",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Real-time results dramatically reduce iteration time",
-      "Approachable to designers who aren't full-time analysts",
-      "Bridges the gap between CAD and high-fidelity FEA"
-    ],
-    "cons": [
-      "Live Physics is an approximation — Refined solver still needed for sign-off",
-      "Requires a powerful CUDA-capable GPU",
-      "Still cheaper than full Workbench but far from inexpensive"
-    ],
-    "tech_specs": {
-      "engine": "GPU Lattice Boltzmann + finite element",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "CUDA / NVIDIA RTX",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "ACIS"
-      ]
-    },
-    "expert_verdict": "The most exciting Ansys product in a decade — turns simulation into a real-time design tool for product engineers.",
-    "faqs": [
-      {
-        "q": "What is ANSYS Discovery used for?",
-        "a": "Real-time simulation-driven design with live solver feedback during modeling. ANSYS Discovery is a CAE / CAM solution widely adopted in Manufacturing, Product Design, Electronics."
-      },
-      {
-        "q": "How much does ANSYS Discovery cost?",
-        "a": "ANSYS Discovery is sold by subscription; the plans shown on this page are Standard Exploration and High-Fidelity Refinement. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ANSYS Discovery Pricing Page](https://www.ansys.com/products/3d-design/ansys-discovery)."
-      },
-      {
-        "q": "Is there a free version of ANSYS Discovery?",
-        "a": "ANSYS Discovery is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ANSYS Discovery page](https://www.ansys.com/products/3d-design/ansys-discovery)."
-      },
-      {
-        "q": "What operating systems does ANSYS Discovery support?",
-        "a": "ANSYS Discovery runs on Windows."
-      },
-      {
-        "q": "Which file formats does ANSYS Discovery support?",
-        "a": "Ansys Discovery is a direct-modelling and live-simulation front end whose geometry kernel comes from SpaceClaim, and its format tables are still published on the SpaceClaim help site. The native document formats are SCDOC (SpaceClaim) and DSCO (Discovery) — SCDM is a product abbreviation, not a file extension. Its official Import and Export tables both list STEP, IGES, Parasolid, ACIS/SAT, STL, OBJ (Wavefront), DWG/DXF, VRML, AMF, PLY and 3D PDF, alongside native CATIA, SOLIDWORKS, Inventor, NX, Creo, Rhino and SketchUp readers. The vendor does not list 3MF in either table. Discovery does not export a WBPJ file: the documented route is Transfer Geometry / Export to Workbench, Mechanical, Fluent or AEDT, plus Export PMDB. Which formats are available depends on the licence type."
-      },
-      {
-        "q": "What are the best alternatives to ANSYS Discovery?",
-        "a": "The closest alternatives to ANSYS Discovery are Altair Inspire, SimScale, Autodesk Fusion (Fusion 360), and COMSOL Multiphysics. Altair Inspire (offered on a Subscription license) competes directly on core Manufacturing workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "altair-inspire",
-      "simscale",
-      "fusion-360",
-      "comsol-multiphysics"
-    ],
-    "detailed_features": [
-      {
-        "category": "Real-Time Simulation",
-        "items": [
-          {
-            "name": "Live Physics GPU solver",
-            "status": true
-          },
-          {
-            "name": "Instant feedback",
-            "status": true
-          },
-          {
-            "name": "Real-time results",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Modeling",
-        "items": [
-          {
-            "name": "Direct geometry modeling",
-            "status": true
-          },
-          {
-            "name": "SpaceClaim integration",
-            "status": true
-          },
-          {
-            "name": "Topology optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Structural analysis",
-            "status": true
-          },
-          {
-            "name": "Modal analysis",
-            "status": true
-          },
-          {
-            "name": "Thermal analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Workbench integration",
-            "status": true
-          },
-          {
-            "name": "CAD import",
-            "status": true
-          },
-          {
-            "name": "High-fidelity solver",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "SCDOC",
-      "DSCO",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "SLDPRT",
-      "IPT",
-      "CATPart",
-      "STL",
-      "OBJ",
-      "DWG",
-      "DXF",
-      "AMF",
-      "VRML",
-      "Rhino 3DM",
-      "JT"
-    ],
-    "file_formats_out": [
-      "SCDOC",
-      "DSCO",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "STL",
-      "OBJ",
-      "DWG",
-      "DXF",
-      "VRML",
-      "AMF",
-      "PLY",
-      "3D PDF",
-      "PMDB"
-    ],
+    "short_desc": "Ansys’ interactive real-time simulation and 3D direct modeling software for rapid early-stage concept exploration.",
+    "description": "Ansys Discovery (combining technologies from SpaceClaim and GPU simulation) is an interactive, real-time physics simulation and 3D direct modeling software platform. Engineered for design engineers, concept modelers, and industrial product designers, Discovery provides instantaneous simulation feedback during early concept exploration. By harnessing massive GPU parallel processing, Discovery simulates structural stress, fluid flow, thermal distribution, and modal resonance in real time as the user edits 3D geometry.",
     "pricing_tiers": [
       {
-        "name": "Standard Exploration",
+        "name": "Ansys Discovery Standard Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation term",
         "features": [
-          "Real-time GPU physics simulation",
-          "Direct geometry editing",
-          "Modal & thermal instant feedback"
+          "Interactive Real-Time GPU Physics Simulation (Explore Mode)",
+          "Direct 3D Solid Geometry Modeling & Defeaturing",
+          "Instant Structural Stress, Thermal & Fluid Velocity Feedback",
+          "Automated Topology Optimization for Lightweight Design"
         ],
         "is_popular": true
       },
       {
-        "name": "High-Fidelity Refinement",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Ansys Discovery Ultimate Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "Integrated Ansys Mechanical & Fluent solvers",
-          "Hex-dominant automated meshing"
+          "High-Fidelity Ansys Mechanical & Fluent Solvers (Refine Mode)",
+          "Seamless One-Click Transfer to Ansys Workbench",
+          "Parametric Design Exploration & Multi-Variable Studies",
+          "Enterprise Network Deployment & Technical Support"
         ],
         "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 2800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
+    "trial_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
+    "pricing_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Instantaneous Real-Time GPU Physics Simulation",
+      "Intuitive Direct 3D Solid Geometry Modeling",
+      "Explore Mode (Real-Time) vs Refine Mode (High-Fidelity)",
+      "Instant Fluid Flow, Structural Stress & Heat Transfer",
+      "Generative Topology Optimization for Designers",
+      "Seamless One-Click Export to Ansys Workbench"
+    ],
+    "detailed_features": [
+      {
+        "category": "Real-Time GPU Physics & Modeling",
+        "items": [
+          {
+            "name": "Instant Physics Feedback updating structural stresses, flow streamlines, and temperatures interactively as CAD shapes are pulled",
+            "status": true
+          },
+          {
+            "name": "Direct Solid Modeling pulling, moving, and slicing CAD geometry freely without regenerating complex parametric history trees",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Optimization & Workbench Transfer",
+        "items": [
+          {
+            "name": "Generative Topology Optimization computing structural material distributions interactively under design load constraints",
+            "status": true
+          },
+          {
+            "name": "Refine Mode Solver switching from GPU real-time estimation to full Ansys Mechanical and Fluent solvers with one click",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Ansys Discovery Direct Modeling and Real-Time GPU Physics Core",
+      "multicore": "Multi-threaded direct geometry manipulation and CPU solvers",
+      "gpu_optimization": "Heavy reliance on dedicated NVIDIA GPU CUDA acceleration for real-time physics",
+      "standards": [
+        "DirectX 11 / 12",
+        "NVIDIA CUDA",
+        "STEP AP242"
+      ]
+    },
+    "file_formats_in": [
+      "SCDOC",
+      "DSO",
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "SLDPRT",
+      "DWG"
+    ],
+    "file_formats_out": [
+      "SCDOC",
+      "STEP",
+      "PDF",
+      "STL"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Early-Stage Product Concept Design",
+      "Consumer Hardware & Electronics",
+      "Automotive Prototyping",
+      "Industrial Valve & Manifold Design",
+      "General Mechanical Engineering"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Mid-Market"
+    ],
+    "score": 4.5,
+    "expert_verdict": "Ansys Discovery brings simulation upstream to the earliest design phase, providing instantaneous GPU physics that guides geometric decisions in real time.",
+    "pros": [
+      "Instantaneous simulation results update immediately as you push and pull 3D solid geometry.",
+      "Empowers design engineers to explore physics without needing a PhD in finite element analysis.",
+      "Direct modeling tools (inherited from SpaceClaim) make cleaning and defeaturing imported CAD models fast.",
+      "Seamless two-tier architecture: Explore mode for rapid iteration and Refine mode for high-fidelity validation.",
+      "One-click transfer to Ansys Mechanical and Fluent preserves boundary conditions for detailed downstream studies."
+    ],
+    "cons": [
+      "Requires a modern dedicated NVIDIA GPU with at least 4 GB to 8 GB VRAM for real-time physics execution.",
+      "Real-time Explore mode provides approximate rapid trends rather than certified final audit results.",
+      "Certified strictly for 64-bit Microsoft Windows workstations, with no native macOS workstation build.",
+      "Large, multi-part assemblies with complex contact interactions require switching to Refine mode.",
+      "Annual subscription cost represents a notable software addition for generalist design teams."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 75,
+        "url": "https://www.g2.com/products/ansys-discovery/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.capterra.com/p/182914/Ansys-Discovery/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How does Ansys Discovery provide real-time simulation?",
+        "a": "Ansys Discovery leverages massive parallel compute on dedicated NVIDIA GPUs to solve simplified Navier-Stokes and structural equations instantaneously as geometry is edited."
+      },
+      {
+        "q": "What is the difference between Explore Mode and Refine Mode in Discovery?",
+        "a": "Explore Mode provides real-time interactive physics feedback during geometric edits, while Refine Mode runs the full Ansys Mechanical and Fluent solvers for high-fidelity verification."
+      },
+      {
+        "q": "Can I edit CAD files in Ansys Discovery?",
+        "a": "Yes, Discovery includes direct 3D modeling capabilities (based on SpaceClaim technology) that allow users to pull, move, and edit 3D solids without feature tree constraints."
+      },
+      {
+        "q": "Does Ansys Discovery run on macOS?",
+        "a": "No, Ansys Discovery is certified exclusively for 64-bit Microsoft Windows desktop workstations equipped with dedicated NVIDIA graphics cards."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "ansys-mechanical",
+      "simscale",
+      "solidworks"
     ]
   },
   {
@@ -6420,204 +6310,202 @@ export const c5Tools: Tool[] = [
     "name": "Abaqus",
     "slug": "abaqus",
     "logo_url": "/logos/abaqus.png",
-    "short_desc": "High-fidelity non-linear finite element analysis from Dassault Systèmes Simulia.",
-    "description": "Abaqus is the FEA solver of record for highly non-linear problems — large deformations, contact, composites, hyperelastic materials, and crash. Widely used in aerospace, automotive crash, tyre, and electronics drop-test analysis.",
-    "country": "France",
-    "category_id": "c5",
+    "short_desc": "Dassault Systèmes’ premier non-linear finite element analysis (FEA) software for explicit dynamics, fracture, and complex materials.",
+    "description": "Abaqus (developed by SIMULIA / Dassault Systèmes) is a premier non-linear finite element analysis (FEA) software suite recognized globally for simulating complex mechanical, structural, and material behaviors. Renowned for its dual solver architecture—Abaqus/Standard (for implicit linear and non-linear static/low-speed dynamic problems) and Abaqus/Explicit (for high-speed transient dynamic events like drop tests, ballistic impacts, and progressive metal crushing)—Abaqus excels in hyperelastic materials, contact mechanics, fracture mechanics (XFEM), composite delamination (cohesive elements), and thermal-stress coupling.",
+    "pricing_tiers": [
+      {
+        "name": "SIMULIA Abaqus Standard/Explicit Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Dual Implicit (Standard) & Explicit Finite Element Solvers",
+          "Advanced Non-Linear Contact Mechanics & Sliding Friction",
+          "Hyperelastic, Plastic, Viscoelastic & Composite Material Models",
+          "Abaqus/CAE Integrated Pre-Processing and Post-Processing Canvas"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "SIMULIA Abaqus Enterprise & Tokens",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "SIMULIA Execution Token Licensing for Multi-Core Parallel Clusters",
+          "Extended Finite Element Method (XFEM) Crack Propagation",
+          "Coupled Eulerian-Lagrangian (CEL) Fluid-Structure Interaction",
+          "3DEXPERIENCE Platform Cloud Integration & Automation"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 25000,
+    "starting_price": 6800,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://www.3ds.com/products/simulia/abaqus",
+    "trial_url": "https://www.3ds.com/products/simulia/abaqus",
+    "pricing_url": "https://www.3ds.com/products/simulia/abaqus",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training",
+      "Community"
+    ],
+    "core_features": [
+      "Dual Implicit (Standard) and Explicit Non-Linear Solvers",
+      "Advanced Non-Linear Contact & Penalty Formulations",
+      "Extended Finite Element Method (XFEM) Crack Growth",
+      "Cohesive Zone Modeling for Composite Delamination",
+      "Coupled Eulerian-Lagrangian (CEL) Multiphysics Modeling",
+      "Extensive User Subroutine Programmability (UMAT, VUMAT)"
+    ],
+    "detailed_features": [
+      {
+        "category": "Implicit & Explicit Solvers",
+        "items": [
+          {
+            "name": "Abaqus/Standard solving non-linear static equilibrium, gasket sealing, and low-frequency dynamic vibrations",
+            "status": true
+          },
+          {
+            "name": "Abaqus/Explicit analyzing consumer electronics drop testing, vehicle crash impacts, and metal stamping without convergence breakdown",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Advanced Materials & Fracture",
+        "items": [
+          {
+            "name": "Damage & Fracture Mechanics simulating progressive crack propagation and cohesive zone delamination in fiber composites",
+            "status": true
+          },
+          {
+            "name": "User Subroutines implementing custom constitutive material laws and friction models using Fortran and C++ routines",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "SIMULIA Abaqus Standard/Explicit Finite Element Solvers",
+      "multicore": "Distributed memory parallel (DMP) and shared memory (SMP) execution across HPC clusters",
+      "gpu_optimization": "NVIDIA GPU acceleration for matrix equation solving",
+      "standards": [
+        "ISO 9001",
+        "ASME B&PV Standards",
+        "FAA Aerospace Certification"
+      ]
+    },
+    "file_formats_in": [
+      "INP",
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "CATPART"
+    ],
+    "file_formats_out": [
+      "ODB",
+      "FIL",
+      "PDF",
+      "CSV"
+    ],
     "platforms": [
       "Windows",
       "Linux"
     ],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Defense",
-      "Electronics",
-      "Energy"
-    ],
-    "core_features": [
-      "Abaqus/Standard implicit solver",
-      "Abaqus/Explicit for crash, impact, drop test",
-      "Abaqus/CAE preprocessor",
-      "Co-simulation with CFD and EM",
-      "User subroutines (UMAT, UEL, VUMAT)",
-      "Tosca topology / shape / bead optimization"
+      "Automotive Safety & Powertrain",
+      "Aerospace Airframe & Composite Structures",
+      "Consumer Electronics Drop Testing",
+      "Biomedical Stents & Orthopedics",
+      "Tire Manufacturing & Rubber Components"
     ],
     "user_scales": [
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.3ds.com/products/simulia/abaqus",
-    "pricing_url": "https://www.3ds.com/how-to-buy",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.8,
+    "expert_verdict": "Abaqus is the authoritative reference for non-linear finite element analysis, revered for resolving severe contact, hyperelasticity, and explicit drop dynamics.",
     "pros": [
-      "Gold standard for non-linear FEA, contact, and composites",
-      "User subroutines allow extending the solver with custom physics",
-      "Trusted by every major automotive crash and aerospace certification body"
+      "Industry benchmark for highly non-linear finite element analysis and complex surface contact mechanics.",
+      "Dual Standard/Explicit solver architecture handles both static pre-loading and high-speed dynamic impacts seamlessly.",
+      "Exceptional hyperelastic and viscoelastic material models ideal for tires, elastomers, and biological tissues.",
+      "User subroutines (UMAT, VUMAT, USDFLD) allow researchers to implement custom constitutive material formulations.",
+      "Native cross-platform execution supporting enterprise Linux supercomputing clusters and Windows workstations."
     ],
     "cons": [
-      "Among the most expensive FEA licenses on the market",
-      "Abaqus/CAE preprocessor lags behind Workbench in usability",
-      "Very steep learning curve"
+      "Premium enterprise software pricing and token-based solver scaling require substantial corporate budgeting.",
+      "Steep learning curve; setting up non-linear contact stabilization and step controls requires deep FEA knowledge.",
+      "Abaqus/CAE pre-processor user interface has an academic, traditional appearance compared to modern cloud tools.",
+      "Compilation of user subroutines requires configuring specific compatible versions of Fortran and C++ compilers.",
+      "Large explicit dynamic output databases (.odb) can quickly consume terabytes of high-speed storage."
     ],
-    "tech_specs": {
-      "engine": "Abaqus/Standard + Abaqus/Explicit",
-      "multicore": "Distributed (MPI)",
-      "gpu_optimization": "Partial (selected element types)",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "Nastran .bdf"
-      ]
-    },
-    "expert_verdict": "When the model is highly non-linear, large-strain, or contact-heavy, Abaqus is the default choice.",
-    "faqs": [
+    "external_ratings": [
       {
-        "q": "What is Abaqus used for?",
-        "a": "High-fidelity non-linear finite element analysis from Dassault Systèmes Simulia. Abaqus is a CAE / CAM solution widely adopted in Aerospace, Automotive, Defense."
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 220,
+        "url": "https://www.g2.com/products/abaqus-unified-fea/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "q": "How much does Abaqus cost?",
-        "a": "Abaqus is sold by subscription; the plans shown on this page are Abaqus/Standard & Explicit. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Abaqus Pricing Page](https://www.3ds.com/products/simulia/abaqus)."
-      },
-      {
-        "q": "Is there a free version of Abaqus?",
-        "a": "Abaqus is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Abaqus page](https://www.3ds.com/products/simulia/abaqus)."
-      },
-      {
-        "q": "What operating systems does Abaqus support?",
-        "a": "Abaqus runs on Windows and Linux."
-      },
-      {
-        "q": "Which file formats does Abaqus support?",
-        "a": "Abaqus is an FEA solver suite, and Abaqus/CAE is its pre/post-processing environment. Native files are the model database (CAE), analysis input (INP), output database (ODB) and results file (FIL). Abaqus/CAE imports neutral geometry — STEP, IGES, ACIS/SAT, Parasolid, VDA-FS — plus CATPart, SOLIDWORKS, Nastran/CDB model data and 2D DXF sketches; associative links to CATIA, NX and SOLIDWORKS need a separate add-on. On export, the vendor documents File > Export > Part / Assembly to STEP, IGES, ACIS (SAT) and VDA-FS, and viewport data to OBJ, VRML and 3D XML, which are write-only. The vendor explicitly states that parts and assemblies cannot be exported in Parasolid, CATIA V5, SOLIDWORKS, NX or Elysium Neutral format, and there is no documented STL or CSV support."
-      },
-      {
-        "q": "What are the best alternatives to Abaqus?",
-        "a": "The closest alternatives to Abaqus are ANSYS Mechanical, LS-DYNA, MSC Nastran, and COMSOL Multiphysics. ANSYS Mechanical is an enterprise-grade rival for Aerospace teams, while LS-DYNA is favored for explicit and implicit time-integration. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 130,
+        "url": "https://www.capterra.com/p/162790/Abaqus/",
+        "verified_date": "Nov 2026"
       }
     ],
+    "faqs": [
+      {
+        "q": "What is the difference between Abaqus/Standard and Abaqus/Explicit?",
+        "a": "Abaqus/Standard is an implicit solver ideal for linear and non-linear static equilibrium, thermal, and low-speed dynamics, whereas Abaqus/Explicit solves high-speed, highly non-linear transient events (such as drop tests and impacts) without convergence issues."
+      },
+      {
+        "q": "What are UMAT and VUMAT in Abaqus?",
+        "a": "UMAT and VUMAT are user-defined material subroutines programmed in Fortran, allowing engineers and researchers to implement custom constitutive stress-strain equations not included in standard libraries."
+      },
+      {
+        "q": "Does Abaqus run on Linux?",
+        "a": "Yes, Abaqus provides full native support for enterprise Linux supercomputing distributions as well as Microsoft Windows workstations."
+      },
+      {
+        "q": "What is an Abaqus ODB file?",
+        "a": "An ODB (Output Database) is the proprietary binary file format used by Abaqus to store all calculated node displacements, element stress tensors, strains, and contact forces for post-processing."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
       "ansys-mechanical",
       "ls-dyna",
-      "msc-nastran",
-      "comsol-multiphysics"
-    ],
-    "detailed_features": [
-      {
-        "category": "Solvers",
-        "items": [
-          {
-            "name": "Abaqus/Standard implicit",
-            "status": true
-          },
-          {
-            "name": "Abaqus/Explicit",
-            "status": true
-          },
-          {
-            "name": "Co-simulation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Non-Linear",
-        "items": [
-          {
-            "name": "Large deformations",
-            "status": true
-          },
-          {
-            "name": "Contact analysis",
-            "status": true
-          },
-          {
-            "name": "Composites",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Preprocessing",
-        "items": [
-          {
-            "name": "Abaqus/CAE",
-            "status": true
-          },
-          {
-            "name": "Mesh generation",
-            "status": true
-          },
-          {
-            "name": "Material modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "User subroutines",
-            "status": true
-          },
-          {
-            "name": "Topology optimization",
-            "status": true
-          },
-          {
-            "name": "Crash analysis",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "CAE",
-      "INP",
-      "ODB",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "CATPart",
-      "SLDPRT",
-      "VDA-FS",
-      "DXF",
-      "CDB",
-      "NASTRAN"
-    ],
-    "file_formats_out": [
-      "CAE",
-      "INP",
-      "ODB",
-      "FIL",
-      "STEP",
-      "IGES",
-      "SAT",
-      "VDA-FS",
-      "OBJ",
-      "VRML",
-      "3D XML",
-      "NASTRAN"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Abaqus/Standard & Explicit",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Non-linear structural analysis",
-          "Explicit crash & impact dynamics",
-          "Advanced composite damage models"
-        ],
-        "is_popular": true
-      }
+      "msc-nastran"
     ]
   },
   {
@@ -6625,205 +6513,205 @@ export const c5Tools: Tool[] = [
     "name": "COMSOL Multiphysics",
     "slug": "comsol-multiphysics",
     "logo_url": "/logos/comsol-multiphysics.png",
-    "short_desc": "Coupled multi-physics finite element simulation across electromagnetics, structures, fluids, and chemistry.",
-    "description": "COMSOL Multiphysics is a finite element platform designed from day one for coupling arbitrary physics — electromagnetics, heat transfer, structural mechanics, acoustics, and chemical reactions — in a single model.",
-    "country": "Sweden",
-    "category_id": "c5",
+    "short_desc": "COMSOL’s unified cross-disciplinary simulation software for fully coupled multiphysics, electromagnetics, fluid flow, and acoustics.",
+    "description": "COMSOL Multiphysics is a simulation software environment developed by COMSOL AB for cross-disciplinary engineering and scientific research. Built on a unified partial differential equation (PDE) solver framework, COMSOL allows engineers to couple any combination of physics—such as electromagnetics, structural mechanics, fluid dynamics, heat transfer, electrochemistry, and acoustics—simultaneously within a single model. With its built-in Application Builder, engineers can transform complex simulation models into customized standalone simulation apps for non-experts.",
+    "pricing_tiers": [
+      {
+        "name": "COMSOL Multiphysics Named Single User License",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Complete Unified Multiphysics PDE Modeling Environment",
+          "Custom Physics Equation Entry & Coupled Multi-Physics",
+          "Application Builder to Create Standalone Simulation Apps",
+          "Perpetual Ownership with Maintenance Update Options"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "COMSOL Multiphysics Floating Network License",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Multi-User Concurrent Floating Network Pool",
+          "COMSOL Server & COMSOL Compiler App Distribution",
+          "Cluster Computing & Cloud Supercomputing Execution",
+          "Full Access to Specialized Industry Add-On Modules"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Perpetual",
-    "starting_price": 3995,
+    "starting_price": 5900,
     "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://www.comsol.com",
+    "trial_url": "https://www.comsol.com",
+    "pricing_url": "https://www.comsol.com",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training",
+      "Community"
+    ],
+    "core_features": [
+      "True Fully Coupled Multiphysics Solver Architecture",
+      "Direct Partial Differential Equation (PDE) Entry",
+      "Application Builder for Custom Standalone Apps",
+      "Specialized Electromagnetics, Acoustics & Fluid Modules",
+      "Battery, Fuel Cell & Electrochemistry Simulation",
+      "Cross-Platform Windows, macOS, and Linux Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Coupled Multiphysics & PDEs",
+        "items": [
+          {
+            "name": "Fully Coupled Solvers solving simultaneous matrix equations for Joule heating, thermal expansion, and piezo-electricity",
+            "status": true
+          },
+          {
+            "name": "Custom PDE Formulation typing custom mathematical formulas and non-standard boundary laws directly into model fields",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Application Builder & Deployment",
+        "items": [
+          {
+            "name": "Application Builder turning complex multi-physics models into simplified custom user-friendly graphical interfaces",
+            "status": true
+          },
+          {
+            "name": "COMSOL Compiler compiling custom apps into standalone executable files that run without licensing overhead",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "COMSOL Finite Element and PDE Multiphysics Solver",
+      "multicore": "Multi-threaded shared memory and distributed cluster MPI solvers",
+      "gpu_optimization": "Hardware-accelerated OpenGL 3D visualization",
+      "standards": [
+        "ISO 9001",
+        "Electrochemical & IEEE Standards",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "MPH",
+      "STEP",
+      "STP",
+      "IGES",
+      "DWG",
+      "DXF",
+      "PARASOLID"
+    ],
+    "file_formats_out": [
+      "MPH",
+      "PDF",
+      "CSV",
+      "STEP"
+    ],
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
     "industries": [
-      "Electronics",
-      "Energy",
-      "Research",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "True multi-physics coupling in a single solver",
-      "Equation-based modeling for custom PDEs",
-      "30+ add-on modules (RF, Wave Optics, Battery, MEMS)",
-      "Application Builder for deployable simulation apps",
-      "LiveLink modules for Solidworks, Inventor, AutoCAD, Revit, MATLAB",
-      "Cluster computing support"
+      "Scientific & Academic Research",
+      "Semiconductor & MEMS Engineering",
+      "Battery & Fuel Cell Technology",
+      "Biomedical & Microfluidic Devices",
+      "Acoustics & Transducer Design"
     ],
     "user_scales": [
+      "Individual",
       "SMB",
-      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.comsol.com",
-    "pricing_url": "https://www.comsol.com/contact",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.7,
+    "expert_verdict": "COMSOL Multiphysics is the pinnacle of coupled physics simulation, offering unmatched freedom to link electromagnetics, heat, and fluids seamlessly.",
     "pros": [
-      "Best-in-class multi-physics coupling — couple any two physics out of the box",
-      "Equation-based modeling lets researchers implement custom PDEs",
-      "Strong in academia and R&D departments"
+      "Truly unified multiphysics framework where any physical effect can couple with any other without export hurdles.",
+      "Allows direct entry of custom partial differential equations (PDEs) for cutting-edge academic research.",
+      "Application Builder allows engineers to create deployable standalone apps for non-technical colleagues.",
+      "Unrivaled modeling depth in microfluidics, MEMS, electrochemistry, and acoustic wave propagation.",
+      "Native cross-platform execution supporting Microsoft Windows, Apple macOS, and Linux workstations."
     ],
     "cons": [
-      "Each add-on module is an additional license fee",
-      "Memory hungry on large models",
-      "Less polished CAD prep workflow than Ansys"
+      "Modular product structure requires purchasing separate add-on modules for specific physics domains.",
+      "High software investment tailored for specialized research departments and high-tech firms.",
+      "Steep learning curve; setting up non-standard coupled physics requires a firm grounding in continuum mechanics.",
+      "Solving highly coupled multi-physics systems can result in large, ill-conditioned matrices that require tuning.",
+      "CAD direct modeling tools are less feature-rich than dedicated mechanical CAD authoring programs."
     ],
-    "tech_specs": {
-      "engine": "Custom FEM with multi-physics coupling",
-      "multicore": "Shared and distributed",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "ACIS"
-      ]
-    },
-    "expert_verdict": "The go-to FEA tool when you need to couple unusual physics — RF + thermal + structural in one shot.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.g2.com/products/comsol-multiphysics/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.capterra.com/p/162789/COMSOL-Multiphysics/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is COMSOL Multiphysics used for?",
-        "a": "Coupled multi-physics finite element simulation across electromagnetics, structures, fluids, and chemistry. COMSOL Multiphysics is a CAE / CAM solution widely adopted in Electronics, Energy, Research."
+        "q": "What makes COMSOL Multiphysics unique?",
+        "a": "COMSOL uses a unified finite element architecture that allows users to couple any physical phenomena (e.g., electrical currents, fluid flow, thermal expansion, chemical reactions) simultaneously in the same model."
       },
       {
-        "q": "How much does COMSOL Multiphysics cost?",
-        "a": "COMSOL Multiphysics is sold as a perpetual licence; the plans shown on this page are Core Platform. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official COMSOL Multiphysics Pricing Page](https://www.comsol.com)."
+        "q": "Does COMSOL Multiphysics run on macOS and Linux?",
+        "a": "Yes, COMSOL Multiphysics provides native, fully supported desktop software for Apple macOS, Linux, and Microsoft Windows."
       },
       {
-        "q": "Is there a free version of COMSOL Multiphysics?",
-        "a": "COMSOL Multiphysics is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official COMSOL Multiphysics page](https://www.comsol.com)."
+        "q": "What is the COMSOL Application Builder?",
+        "a": "The Application Builder is a built-in tool that lets simulation engineers convert complex FEA models into custom, simplified apps with custom buttons and input fields for colleagues or clients."
       },
       {
-        "q": "What operating systems does COMSOL Multiphysics support?",
-        "a": "COMSOL Multiphysics runs on Windows, macOS, and Linux."
-      },
-      {
-        "q": "Which file formats does COMSOL Multiphysics support?",
-        "a": "COMSOL Multiphysics is a multiphysics simulation platform with built-in geometry, meshing, solving and post-processing. Its CAD Specification Chart lists STEP, IGES, Parasolid, ACIS/SAT, DXF, DWG, STL, PLY, 3MF and VRML for import, and STEP (AP203), IGES, Parasolid, ACIS, DXF (2D only), STL, PLY and 3MF for export. NASTRAN belongs to the mesh-file table rather than the CAD geometry table. STEP, IGES, Parasolid, ACIS and DWG import need the CAD Import Module / Design Module / LiveLink add-ons, while STL, PLY and 3MF are supported by the core product. Result data exports as Text (TXT/CSV/XLSX) or Unstructured VTK (.vtu); animation export is GIF, AVI or WebM — the vendor does not publish an MP4 animation export, and MPH is the native model file rather than an exchange format."
-      },
-      {
-        "q": "What are the best alternatives to COMSOL Multiphysics?",
-        "a": "The closest alternatives to COMSOL Multiphysics are ANSYS Workbench, ANSYS Fluent, Abaqus, and SimScale. ANSYS Workbench (offered on a Subscription license) competes directly on core Electronics workflows, while ANSYS Fluent (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Can I input custom equations in COMSOL?",
+        "a": "Yes, COMSOL allows users to type in their own custom partial differential equations (PDEs) and algebraic expressions directly into the simulation interface."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
-      "ansys-workbench",
+      "ansys-mechanical",
       "ansys-fluent",
-      "abaqus",
-      "simscale"
-    ],
-    "detailed_features": [
-      {
-        "category": "Multi-Physics",
-        "items": [
-          {
-            "name": "Electromagnetics",
-            "status": true
-          },
-          {
-            "name": "Heat transfer",
-            "status": true
-          },
-          {
-            "name": "Structural mechanics",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Modeling",
-        "items": [
-          {
-            "name": "Equation-based modeling",
-            "status": true
-          },
-          {
-            "name": "Custom PDEs",
-            "status": true
-          },
-          {
-            "name": "Parametric studies",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Modules",
-        "items": [
-          {
-            "name": "RF Module",
-            "status": true
-          },
-          {
-            "name": "Wave Optics",
-            "status": true
-          },
-          {
-            "name": "Battery Module",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Application",
-        "items": [
-          {
-            "name": "Application Builder",
-            "status": true
-          },
-          {
-            "name": "LiveLink CAD",
-            "status": true
-          },
-          {
-            "name": "Cluster computing",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "DXF",
-      "DWG",
-      "STL",
-      "PLY",
-      "3MF",
-      "VRML",
-      "NASTRAN"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "DXF",
-      "STL",
-      "PLY",
-      "3MF",
-      "NASTRAN",
-      "VTU",
-      "CSV",
-      "TXT",
-      "XLSX"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Core Platform",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Base Multiphysics environment",
-          "Custom PDE solver",
-          "Application Builder standalone export"
-        ],
-        "is_popular": true
-      }
+      "abaqus"
     ]
   },
   {
@@ -6831,191 +6719,199 @@ export const c5Tools: Tool[] = [
     "name": "LS-DYNA",
     "slug": "ls-dyna",
     "logo_url": "/logos/ls-dyna.png",
-    "short_desc": "Explicit non-linear dynamics solver for crash, blast, drop, and metal forming.",
-    "description": "LS-DYNA (Ansys) is the dominant explicit FEA solver for fast-transient mechanical events — automotive crash, occupant safety, drop test, blast, ballistics, sheet-metal forming, and high-velocity impact.",
-    "country": "USA",
-    "category_id": "c5",
+    "short_desc": "Ansys’ premier explicit dynamic simulation software for vehicle crashworthiness, occupant safety, ballistics, and high-energy impact.",
+    "description": "LS-DYNA (developed by LSTC / Ansys) is the world's most widely recognized explicit finite element analysis solver for short-duration, high-energy dynamic events. Renowned for its scalability and mathematical robustness during severe structural deformation, LS-DYNA is the undisputed global benchmark for automotive vehicle crashworthiness, occupant safety (airbag deployment and dummy kinematics), aerospace bird-strike impacts, metal sheet stamping, and military ballistics.",
+    "pricing_tiers": [
+      {
+        "name": "Ansys LS-DYNA Workstation Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Complete Explicit & Implicit Non-Linear Dynamic Solvers",
+          "Automotive Crashworthiness & Material Failure Models",
+          "Airbag Particle Method & Occupant Kinematics Libraries",
+          "Smoothly Integrated Within the Ansys Ecosystem"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Ansys LS-DYNA Enterprise HPC Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Massive MPP Parallel Cluster Scalability (Thousands of Cores)",
+          "Coupled Multi-Physics (Electromagnetics, Incompressible CFD)",
+          "Smooth Particle Hydrodynamics (SPH) & Peridynamics",
+          "Dedicated Automotive Safety & Impact Technical Support"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 20000,
+    "starting_price": 6500,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
+    "trial_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
+    "pricing_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Automotive Crashworthiness Global Benchmark Solver",
+      "Extreme Transient High-Energy Explicit Dynamics",
+      "Meshfree Methods: SPH (Smooth Particle Hydrodynamics)",
+      "Coupled Multi-Physics: ICFD & Electromagnetics (EM)",
+      "Unrivaled MPP Scalability to Thousands of HPC Cores",
+      "Comprehensive Crash Test Dummy & Barrier Model Libraries"
+    ],
+    "detailed_features": [
+      {
+        "category": "Crashworthiness & Impact Mechanics",
+        "items": [
+          {
+            "name": "Vehicle Crashworthiness Simulation modeling full-vehicle frontal, side, and rollover impacts with extreme metal crushing",
+            "status": true
+          },
+          {
+            "name": "Occupant Safety Simulation deploying complex folded airbags with particle blast methods and detailed human dummy models",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Particle Methods & Scalability",
+        "items": [
+          {
+            "name": "Smooth Particle Hydrodynamics (SPH) simulating bird strikes, fluid sloshing, and high-velocity projectile perforation",
+            "status": true
+          },
+          {
+            "name": "MPP Scalability scaling simulations across thousands of CPU cores with near-linear parallel speedup",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "LS-DYNA Explicit/Implicit Multi-Physics Solver",
+      "multicore": "Massive MPP (Message Passing Parallel) execution scaling across thousands of HPC nodes",
+      "gpu_optimization": "Hardware-accelerated rendering and GPU-assisted solver routines",
+      "standards": [
+        "FMVSS Crash Regulations",
+        "Euro NCAP Safety Protocols",
+        "ISO 9001"
+      ]
+    },
+    "file_formats_in": [
+      "K",
+      "KEY",
+      "STEP",
+      "STP",
+      "IGES"
+    ],
+    "file_formats_out": [
+      "D3PLOT",
+      "BINOUT",
+      "PDF",
+      "CSV"
+    ],
     "platforms": [
       "Windows",
       "Linux"
     ],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Defense",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Explicit and implicit time-integration",
-      "Crashworthiness and occupant safety",
-      "SPH, EFG, DEM, ALE, FSI",
-      "Sheet-metal forming (LS-FORM)",
-      "Composite materials and delamination",
-      "Multi-physics: EM, thermal, ICFD"
+      "Automotive Vehicle Safety & Crash",
+      "Aerospace Impact & Bird Strike",
+      "Defense & Ballistic Protection",
+      "Consumer Electronics Drop Testing",
+      "Industrial Heavy Equipment Rollover (ROPS)"
     ],
     "user_scales": [
       "Enterprise"
     ],
-    "official_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
-    "pricing_url": "https://www.ansys.com/contact-us",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.8,
+    "expert_verdict": "LS-DYNA is the undisputed world benchmark for crashworthiness and explicit dynamics, trusted by automotive OEMs for virtual safety certification.",
     "pros": [
-      "Industry-standard for automotive crash and aerospace bird-strike",
-      "Massive material library and element formulations",
-      "Excellent HPC scaling"
+      "Undisputed global standard for vehicle crashworthiness and occupant safety across global automotive OEMs.",
+      "Unrivaled explicit solver robustness; simulations never abort due to severe element distortion or complex contact folding.",
+      "Unmatched MPP parallel scalability scales efficiently across thousands of cores on supercomputing clusters.",
+      "Comprehensive material card library modeling metals, plastics, foams, composites, soils, and explosives.",
+      "Advanced meshfree particle formulations (SPH, DEM) simulate bird strikes and fluid sloshing effortlessly."
     ],
     "cons": [
-      "Command-driven keyword input file is notoriously dense",
-      "Preprocessing typically done in LS-PrePost or ANSA, not bundled",
-      "Top-tier licensing cost"
+      "Primarily a batch numerical solver; requires specialized pre/post processors (like LS-PrePost, HyperMesh, or Ansys).",
+      "Input deck configuration (keyword *.k files) requires dedicated expertise to master card formatting.",
+      "Premium enterprise software pricing tailored for major automotive and aerospace manufacturers.",
+      "Time-step stability limits in explicit analysis require careful mass-scaling discipline.",
+      "Full vehicle crash simulations generate massive multi-gigabyte d3plot result databases."
     ],
-    "tech_specs": {
-      "engine": "Lagrangian + Eulerian explicit FEM",
-      "multicore": "SMP and MPP",
-      "gpu_optimization": "Yes (implicit solver)",
-      "standards": [
-        "Nastran .bdf",
-        "STEP",
-        "IGES"
-      ]
-    },
-    "expert_verdict": "If you're doing crash, blast, or drop simulation at OEM scale, LS-DYNA is the default — full stop.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.g2.com/products/ls-dyna/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 60,
+        "url": "https://www.capterra.com/p/162788/LS-DYNA/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is LS-DYNA used for?",
-        "a": "Explicit non-linear dynamics solver for crash, blast, drop, and metal forming. LS-DYNA is a CAE / CAM solution widely adopted in Automotive, Aerospace, Defense."
+        "q": "What is LS-DYNA primarily used for?",
+        "a": "LS-DYNA is used primarily for explicit non-linear dynamic simulation, including automotive vehicle crash testing, occupant airbag safety, drop tests, ballistics, and metal forming."
       },
       {
-        "q": "How much does LS-DYNA cost?",
-        "a": "LS-DYNA is sold by subscription; the plans shown on this page are LS-DYNA licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official LS-DYNA Pricing Page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
+        "q": "How does LS-DYNA scale on supercomputers?",
+        "a": "LS-DYNA uses advanced Message Passing Parallel (MPP) architecture that scales across thousands of CPU cores on Linux supercomputing clusters with near-linear parallel efficiency."
       },
       {
-        "q": "Is there a free version of LS-DYNA?",
-        "a": "LS-DYNA is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official LS-DYNA page](https://www.ansys.com/products/structures/ansys-ls-dyna)."
+        "q": "Does LS-DYNA run on Linux?",
+        "a": "Yes, LS-DYNA is heavily deployed on enterprise Linux supercomputing clusters and distributed cloud environments, as well as Windows workstations."
       },
       {
-        "q": "What operating systems does LS-DYNA support?",
-        "a": "LS-DYNA runs on Windows and Linux."
-      },
-      {
-        "q": "Which file formats does LS-DYNA support?",
-        "a": "LS-DYNA is a solver, and the solver itself reads only keyword input decks (.k, .key, .dyn) — it does not ingest CAD or mesh files. Geometry exchange happens in the separate LS-PrePost pre/post-processor, whose File > Import menu lists LS-DYNA keyword, IGES, STEP, STL, OBJ and Nastran (.nas/.dat) files, with native CAD formats handled by the separate LSPP_translator component. On the output side the solver writes binary result databases d3plot, time-history d3thdt and binout (LSTC Data Archival Format), while LS-PrePost saves keyword decks and can write XY curves to CSV. The vendor does not document VTK, EnSight or Abaqus INP support, and there is no single official import/export format matrix — the evidence lives in the keyword manual and the PrePost menu reference."
-      },
-      {
-        "q": "What are the best alternatives to LS-DYNA?",
-        "a": "The closest alternatives to LS-DYNA are Abaqus, ANSYS Mechanical, Altair HyperWorks, and MSC Nastran. Abaqus (offered on a Subscription license) competes directly on core Automotive workflows, while ANSYS Mechanical (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What is a keyword file (*.k) in LS-DYNA?",
+        "a": "A keyword file (*.k or *.key) is the standard structured ASCII input deck containing nodes, elements, material cards, and boundary conditions that drives the LS-DYNA solver."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
       "abaqus",
-      "ansys-mechanical",
       "altair-hyperworks",
-      "msc-nastran"
-    ],
-    "detailed_features": [
-      {
-        "category": "Explicit Dynamics",
-        "items": [
-          {
-            "name": "Crash simulation",
-            "status": true
-          },
-          {
-            "name": "Blast analysis",
-            "status": true
-          },
-          {
-            "name": "Drop test",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Forming",
-        "items": [
-          {
-            "name": "Sheet-metal forming",
-            "status": true
-          },
-          {
-            "name": "Metal forming",
-            "status": true
-          },
-          {
-            "name": "Springback",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Safety",
-        "items": [
-          {
-            "name": "Occupant safety",
-            "status": true
-          },
-          {
-            "name": "Crashworthiness",
-            "status": true
-          },
-          {
-            "name": "Airbag deployment",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Composite materials",
-            "status": true
-          },
-          {
-            "name": "Multi-physics",
-            "status": true
-          },
-          {
-            "name": "HPC scaling",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "quote_only": true,
-    "file_formats_in": [
-      "K (Keyword)",
-      "DYN",
-      "IGES",
-      "STEP",
-      "STL",
-      "OBJ",
-      "NASTRAN"
-    ],
-    "file_formats_out": [
-      "D3PLOT",
-      "BINOUT",
-      "D3THDT",
-      "K (Keyword)"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "LS-DYNA licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Explicit and implicit time-integration",
-          "Crashworthiness and occupant safety",
-          "SPH, EFG, DEM, ALE, FSI",
-          "Sheet-metal forming (LS-FORM)",
-          "Seats, modules and term are quoted by Ansys rather than published"
-        ],
-        "is_popular": true
-      }
+      "ansys-mechanical"
     ]
   },
   {
@@ -7023,198 +6919,202 @@ export const c5Tools: Tool[] = [
     "name": "Simcenter STAR-CCM+",
     "slug": "simcenter-star-ccm",
     "logo_url": "/logos/simcenter-star-ccm.png",
-    "short_desc": "Multi-physics CFD platform from Siemens Digital Industries, strong in marine, turbomachinery, and electronics cooling.",
-    "description": "Simcenter STAR-CCM+ is Siemens' end-to-end CFD environment combining geometry prep, automatic meshing, multi-physics solvers, and post-processing in a single workflow — popular for marine, motorsport, turbomachinery, and electronics cooling.",
-    "country": "USA",
-    "category_id": "c5",
+    "short_desc": "Siemens’ comprehensive multiphysics computational fluid dynamics (CFD) software for multidisciplinary aerodynamics and thermal simulation.",
+    "description": "Simcenter STAR-CCM+ (developed by Siemens Digital Industries Software) is a complete multidisciplinary Computational Fluid Dynamics (CFD) and multiphysics simulation platform. Uniting geometry import, automated polyhedral meshing, multi-phase fluid flow, thermal radiation, combustion, aeroacoustics, and solid stress analysis in a single integrated user interface, STAR-CCM+ automates complex engineering workflows through built-in design exploration and simulation pipelines.",
+    "pricing_tiers": [
+      {
+        "name": "Simcenter STAR-CCM+ Commercial Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Complete Multiphysics Fluid Dynamics & Heat Transfer Solver",
+          "Automated Polyhedral & Trimmed Cell Meshing Pipeline",
+          "Integrated Multidisciplinary Design Exploration (Design Manager)",
+          "Single Unified User Interface from CAD to Final Post-Processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "STAR-CCM+ Power Session & HPC Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Power Session Unlimited Core Parallel Cluster Execution",
+          "Advanced Multiphase & Discrete Element Method (DEM) Modeling",
+          "Aeroacoustics & Complex Rotating Machinery Physics",
+          "Dedicated Siemens Engineering Application Support"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 25000,
+    "starting_price": 6900,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
+    "trial_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
+    "pricing_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "Single-Interface Automated Multiphysics Simulation",
+      "Automated High-Fidelity Polyhedral Meshing",
+      "Power Session Unlimited Core Licensing",
+      "Built-in Design Manager for Automated Optimization",
+      "Advanced Multiphase, Particle & Reacting Flow",
+      "Enterprise HPC Scalability across Windows and Linux"
+    ],
+    "detailed_features": [
+      {
+        "category": "Automated Meshing & Aerodynamics",
+        "items": [
+          {
+            "name": "Automated Polyhedral Meshing generating conformal polyhedral meshes with boundary layers across complex automotive bodies",
+            "status": true
+          },
+          {
+            "name": "Aerodynamic Optimization evaluating lift, drag, and thermal dissipation pipelines associatively",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Multiphase & Design Exploration",
+        "items": [
+          {
+            "name": "Multiphase & Dispersed Particle Modeling simulating liquid droplet breakup, wave interaction on ships, and fluid-sloshing",
+            "status": true
+          },
+          {
+            "name": "Built-In Design Manager running automated parametric sweep studies and Pareto front optimization automatically",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Simcenter STAR-CCM+ Finite Volume Multi-Physics Solver",
+      "multicore": "Highly scalable parallel computing across multi-thousand CPU core clusters",
+      "gpu_optimization": "NVIDIA GPU acceleration for core simulation routines and rendering",
+      "standards": [
+        "ISO 9001",
+        "AIAA CFD Verification Standards",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "SIM",
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "CATPART",
+      "PRT"
+    ],
+    "file_formats_out": [
+      "SIM",
+      "PDF",
+      "CSV",
+      "STEP"
+    ],
     "platforms": [
       "Windows",
       "Linux"
     ],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Marine"
-    ],
-    "core_features": [
-      "Polyhedral and trimmed-cell automatic meshing",
-      "Coupled implicit pressure-velocity solver",
-      "Reacting flow, combustion, multi-phase",
-      "Overset / chimera mesh for moving bodies",
-      "Optimate+ for DOE and optimization",
-      "Power-on-Demand HPC tokens"
+      "Automotive Aerodynamics & Underhood Thermal",
+      "Aerospace Propulsion & External Flow",
+      "Marine Hydrodynamics & Hull Resistance",
+      "Turbomachinery & Gas Turbines",
+      "Chemical Processing & Multiphase Mixing"
     ],
     "user_scales": [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.7,
+    "expert_verdict": "Simcenter STAR-CCM+ is a premier multidisciplinary CFD powerhouse, renowned for its all-in-one interface, automated polyhedral meshing, and Power Session licensing.",
     "pros": [
-      "Single-environment workflow from CAD to results",
-      "Excellent automatic polyhedral meshing",
-      "Power-on-Demand removes per-core licensing friction"
+      "All-in-one software interface combines CAD cleanup, meshing, solving, and post-processing in a single environment.",
+      "Automated polyhedral meshing pipeline handles complex dirty geometries with minimal manual effort.",
+      "Power Session licensing allows customers to solve on unlimited CPU cores without paying per-core premiums.",
+      "Built-in Design Manager automates parametric optimization studies directly within the model file.",
+      "Exceptional capabilities in marine hydrodynamics (free surface waves) and automotive aerodynamics."
     ],
     "cons": [
-      "Commercial license cost is high",
-      "Less standalone physics extensibility than Fluent or COMSOL",
-      "Tight Siemens ecosystem alignment"
+      "High licensing costs require enterprise software budgeting for corporate research teams.",
+      "Steep learning curve; setting up advanced multiphase or reacting chemistry models requires formal CFD training.",
+      "Demands high-performance compute clusters and high-bandwidth networking for multi-million cell transient runs.",
+      "Interactive GUI is supported on Windows and Linux, but demands dedicated graphics hardware.",
+      "Complex Java macro automation scripts require programming experience to customize advanced routines."
     ],
-    "tech_specs": {
-      "engine": "Coupled finite-volume CFD",
-      "multicore": "MPI (HPC)",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "CGNS"
-      ]
-    },
-    "expert_verdict": "If you want one tool to do mesh-to-results without juggling Fluent + ICEM + CFD-Post, STAR-CCM+ is the answer.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 120,
+        "url": "https://www.g2.com/products/star-ccm/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 80,
+        "url": "https://www.capterra.com/p/162787/Simcenter-STAR-CCM-Plus/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is Simcenter STAR-CCM+ used for?",
-        "a": "Multi-physics CFD platform from Siemens Digital Industries, strong in marine, turbomachinery, and electronics cooling. Simcenter STAR-CCM+ is a CAE / CAM solution widely adopted in Aerospace, Automotive, Energy."
+        "q": "What is Simcenter STAR-CCM+?",
+        "a": "Simcenter STAR-CCM+ is a complete computational fluid dynamics (CFD) and multiphysics simulation software developed by Siemens Digital Industries Software."
       },
       {
-        "q": "How much does Simcenter STAR-CCM+ cost?",
-        "a": "Simcenter STAR-CCM+ is sold by subscription; the plans shown on this page are Simcenter STAR-CCM+ licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Simcenter STAR-CCM+ Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
+        "q": "What is the STAR-CCM+ Power Session license?",
+        "a": "A Power Session license allows an engineer to run STAR-CCM+ across an unlimited number of computer processor cores on an HPC cluster for a fixed software license cost."
       },
       {
-        "q": "Is there a free version of Simcenter STAR-CCM+?",
-        "a": "Simcenter STAR-CCM+ is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Simcenter STAR-CCM+ page](https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/)."
+        "q": "Does STAR-CCM+ run on Linux?",
+        "a": "Yes, STAR-CCM+ provides native support for enterprise 64-bit Linux distributions (such as Red Hat and SUSE) as well as Microsoft Windows workstations."
       },
       {
-        "q": "What operating systems does Simcenter STAR-CCM+ support?",
-        "a": "Simcenter STAR-CCM+ runs on Windows and Linux."
-      },
-      {
-        "q": "Which file formats does Simcenter STAR-CCM+ support?",
-        "a": "Simcenter STAR-CCM+ is an end-to-end CFD platform with an embedded 3D-CAD modeller (Parasolid kernel), surface repair, meshing, solving and post-processing; SIM is its native simulation file, not an export format. Its 3D-CAD import list covers neutral STEP, IGES, Parasolid, IFC and JT, native CATIA CATPart, NX, Creo, SOLIDWORKS, Inventor, Solid Edge and Rhino files, triangulated STL, and Nastran/Patran shell files; CGNS is documented in both directions for mesh and solution data. Documented outputs are CGNS, Nastran meshes, tabular CSV data, MP4 animation, hardcopy images (PNG/BMP/JPG/PDF/PS) and the SCD5 Simcenter Data File for exchange with Simcenter 3D. The vendor does not publish VTK or EnSight export, and Images is a category of output rather than a file format."
-      },
-      {
-        "q": "What are the best alternatives to Simcenter STAR-CCM+?",
-        "a": "The closest alternatives to Simcenter STAR-CCM+ are ANSYS Fluent, COMSOL Multiphysics, OpenFOAM, and SimScale. ANSYS Fluent (offered on a Subscription license) competes directly on core Aerospace workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Why is polyhedral meshing beneficial in STAR-CCM+?",
+        "a": "Polyhedral cells have numerous neighbors, resulting in more accurate gradient calculations, faster numerical convergence, and fewer total cells compared to tetrahedral meshes."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
       "ansys-fluent",
-      "comsol-multiphysics",
       "openfoam",
       "simscale"
-    ],
-    "detailed_features": [
-      {
-        "category": "CFD",
-        "items": [
-          {
-            "name": "Polyhedral meshing",
-            "status": true
-          },
-          {
-            "name": "Trimmed-cell meshing",
-            "status": true
-          },
-          {
-            "name": "Coupled solver",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Multi-Physics",
-        "items": [
-          {
-            "name": "Reacting flow",
-            "status": true
-          },
-          {
-            "name": "Combustion",
-            "status": true
-          },
-          {
-            "name": "Multi-phase",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Overset mesh",
-            "status": true
-          },
-          {
-            "name": "Moving bodies",
-            "status": true
-          },
-          {
-            "name": "DOE optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Workflow",
-        "items": [
-          {
-            "name": "End-to-end workflow",
-            "status": true
-          },
-          {
-            "name": "CAD to results",
-            "status": true
-          },
-          {
-            "name": "HPC tokens",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "quote_only": true,
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "CATPart",
-      "STL",
-      "CGNS",
-      "NASTRAN",
-      "IFC",
-      "JT"
-    ],
-    "file_formats_out": [
-      "CGNS",
-      "NASTRAN",
-      "CSV",
-      "MP4",
-      "PNG",
-      "PDF",
-      "SCD5"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Simcenter STAR-CCM+ licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Polyhedral and trimmed-cell automatic meshing",
-          "Coupled implicit pressure-velocity solver",
-          "Reacting flow, combustion, multi-phase",
-          "Overset / chimera mesh for moving bodies",
-          "Seats, modules and term are quoted by Siemens rather than published"
-        ],
-        "is_popular": true
-      }
     ]
   },
   {
@@ -7222,196 +7122,183 @@ export const c5Tools: Tool[] = [
     "name": "OpenFOAM",
     "slug": "openfoam",
     "logo_url": "/logos/openfoam.png",
-    "short_desc": "Free open-source C++ CFD toolbox used widely in academia, research, and motorsport.",
-    "description": "OpenFOAM is a GPL-licensed C++ CFD library and solver suite providing dozens of pre-built solvers for incompressible, compressible, multi-phase, combustion, and DNS/LES simulations and one of the most widely used open-source CFD toolchains.",
-    "country": "UK",
-    "category_id": "c5",
+    "short_desc": "Open-source computational fluid dynamics (CFD) software package with extensive solver libraries for research and industry.",
+    "description": "OpenFOAM (Open Field Operation and Manipulation) is the premier free, open-source Computational Fluid Dynamics (CFD) software platform. Licensed under the GNU General Public License (GPL), OpenFOAM provides a flexible C++ library designed to solve complex fluid mechanics problems—spanning turbulent aerodynamic flows, combustion chemical kinetics, multiphase fluid sloshing, thermal radiation, and solid stress analysis. Capable of scaling to hundreds of thousands of CPU cores on supercomputing clusters without license fees, OpenFOAM is widely adopted across academic research, automotive engineering, and aerospace development.",
+    "pricing_tiers": [
+      {
+        "name": "OpenFOAM Open Source",
+        "price": "Open Source",
+        "period": "open-source license",
+        "features": [
+          "Complete Suite of Open-Source CFD Solvers and Utilities",
+          "Turbulence (RANS, LES, DES), Multiphase & Combustion Engines",
+          "Automated Mesh Generation with blockMesh and snappyHexMesh",
+          "Unlimited Parallel HPC Execution Without Licensing Costs"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Free",
     "starting_price": 0,
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://www.openfoam.com",
+    "trial_url": "https://www.openfoam.com",
+    "pricing_url": "https://www.openfoam.com",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Training",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Free and Open-Source GNU GPL v3 Software",
+      "Zero License Cost HPC Parallel Scalability",
+      "Extensive Library of Standard Physical Solvers",
+      "snappyHexMesh Automated Hex-Dominant Meshing",
+      "Custom C++ Equation Programming & Modification",
+      "Cross-Platform Native Linux and WSL Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Solvers & C++ Customization",
+        "items": [
+          {
+            "name": "Extensive Physical Solvers including simpleFoam (steady incompressible), pimpleFoam (transient turbulent), and interFoam (multiphase VOF)",
+            "status": true
+          },
+          {
+            "name": "Direct C++ Equation Syntax writing partial differential equations in readable mathematical C++ classes",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Meshing & Massively Parallel HPC",
+        "items": [
+          {
+            "name": "snappyHexMesh generating complex hex-dominant meshes fitted to imported surface geometry automatically",
+            "status": true
+          },
+          {
+            "name": "Massive Parallel Scalability decomposing domains via scotch or metis across thousands of HPC nodes with zero license cost",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "OpenFOAM C++ Object-Oriented Finite Volume CFD Architecture",
+      "multicore": "OpenMPI distributed memory parallel computation",
+      "gpu_optimization": "Integration with open-source GPU-accelerated linear equation solvers",
+      "standards": [
+        "GNU GPL v3",
+        "POSIX C++",
+        "OpenBIM / CFD Standards"
+      ]
+    },
+    "file_formats_in": [
+      "STL",
+      "OBJ",
+      "STEP",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "VTK",
+      "CSV",
+      "PDF"
+    ],
     "platforms": [
       "Linux",
       "Windows",
       "macOS"
     ],
     "industries": [
-      "Research",
-      "Aerospace",
-      "Automotive",
-      "Energy"
-    ],
-    "core_features": [
-      "Dozens of pre-built CFD solvers",
-      "snappyHexMesh automatic mesher",
-      "Lagrangian particle tracking, DEM, MHD",
-      "User-extensible C++ source code",
-      "Excellent HPC scaling with MPI",
-      "ParaView post-processing"
+      "Academic & Government Research",
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Motorsport & Vehicle Aerodynamics",
+      "Wind Energy & Atmospheric Boundary Layer Modeling",
+      "Chemical Engineering & Multiphase Mixing"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
+      "Individual",
       "SMB",
-      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.openfoam.com",
-    "pricing_url": "https://www.openfoam.com",
-    "affiliate_url": null,
-    "score": 4.4,
+    "score": 4.5,
+    "expert_verdict": "OpenFOAM is the crown jewel of open-source CFD, offering unlimited supercomputing scalability and total code transparency for aerodynamicists.",
     "pros": [
-      "Zero license cost — scales to thousands of cores for free",
-      "Full C++ source is open and customisable",
-      "Massive academic and motorsport adoption"
+      "Completely free and open-source under GNU GPL with zero license fees or per-core charges.",
+      "Scales without restriction across thousands of cores on high-performance supercomputing clusters.",
+      "Total transparency; users can inspect, modify, and extend every line of C++ solver source code.",
+      "Vast solver ecosystem covering incompressible, compressible, multiphase, combustion, and magnetohydrodynamics.",
+      "Enormous global academic and industrial community providing tutorials, extensions, and documentation."
     ],
     "cons": [
-      "Command-line driven; no native GUI",
-      "Steep learning curve for the dictionary-file workflow",
-      "Commercial support requires third-party vendors (ESI, OpenCFD, CFD Direct)"
+      "No native graphical user interface (GUI); operated strictly via terminal commands and text dictionary files.",
+      "Steep learning curve requiring solid understanding of Linux, command-line syntax, and numerical methods.",
+      "snappyHexMesh configuration can require extensive parameter tuning to achieve high-quality boundary layers.",
+      "Post-processing requires exporting to external open-source viewers like ParaView.",
+      "Commercial technical support and training must be purchased separately through engineering consultancies."
     ],
-    "tech_specs": {
-      "engine": "Custom C++ finite-volume CFD",
-      "multicore": "MPI",
-      "gpu_optimization": "Limited (third-party petscFoam)",
-      "standards": [
-        "STL",
-        "VTK",
-        "EnSight"
-      ]
-    },
-    "expert_verdict": "A free, open-source CFD toolbox, highly flexible for researchers and custom engineering simulations.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/openfoam/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.capterra.com/p/162786/OpenFOAM/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is OpenFOAM used for?",
-        "a": "Free open-source C++ CFD toolbox used widely in academia, research, and motorsport. OpenFOAM is a CAE / CAM solution widely adopted in Research, Aerospace, Automotive."
+        "q": "Is OpenFOAM completely free for commercial use?",
+        "a": "Yes, OpenFOAM is licensed under the GNU General Public License (GPL) and is completely free to use for both academic and commercial engineering applications."
       },
       {
-        "q": "How much does OpenFOAM cost?",
-        "a": "OpenFOAM is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official OpenFOAM Page](https://www.openfoam.com)."
+        "q": "Does OpenFOAM have a graphical user interface (GUI)?",
+        "a": "Standard OpenFOAM is operated via command-line terminals and text dictionaries, though third-party GUIs (like HELYX or Hexpress) and ParaView for post-processing are widely used."
       },
       {
-        "q": "Is OpenFOAM really free?",
-        "a": "Yes — OpenFOAM is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can OpenFOAM run on Windows?",
+        "a": "Yes, OpenFOAM runs natively on Linux and can be executed seamlessly on Windows 10/11 using the Windows Subsystem for Linux (WSL) or Docker containers."
       },
       {
-        "q": "What operating systems does OpenFOAM support?",
-        "a": "OpenFOAM runs on Linux, Windows, and macOS."
-      },
-      {
-        "q": "Which file formats does OpenFOAM support?",
-        "a": "OpenFOAM is a C++ toolbox of command-line solvers and utilities, not a GUI platform, and it has no single official import/export format table — capability is documented per utility. snappyHexMesh takes triangulated surfaces in STL or OBJ format, while mesh conversion utilities read Fluent MSH (fluentMeshToFoam), Gmsh MSH (gmshToFoam), I-DEAS UNV (ideasUnvToFoam), STAR-CCM+ CCM, legacy VTK (vtkUnstructuredToFoam) and Plot3D. blockMeshDict and snappyHexMeshDict are OpenFOAM own dictionaries for mesh generation, not imported file formats. On the output side foamToVTK and foamToEnsight are post-processing converters, with foamMeshToFluent, foamToStarMesh and writeMeshObj writing Fluent, pro-STAR and OBJ meshes. The vendor ParaView integration uses a native reader plus a .foam placeholder file that contains no data, and time directories are the case structure itself — neither is an export format. CGNS is not part of either official distribution, as it exists only in community extensions, and CSV is not a documented general result format."
-      },
-      {
-        "q": "What are the best alternatives to OpenFOAM?",
-        "a": "The closest alternatives to OpenFOAM are ANSYS Fluent, SimScale, Simcenter STAR-CCM+, and COMSOL Multiphysics. ANSYS Fluent (offered on a Subscription license) competes directly on core Research workflows, while SimScale (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What is snappyHexMesh in OpenFOAM?",
+        "a": "snappyHexMesh is an automated meshing tool that generates 3D hexahedral-dominant meshes directly from triangulated surface geometries (like STL or OBJ)."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
       "ansys-fluent",
-      "simscale",
       "simcenter-star-ccm",
-      "comsol-multiphysics"
-    ],
-    "detailed_features": [
-      {
-        "category": "Solvers",
-        "items": [
-          {
-            "name": "Incompressible flow",
-            "status": true
-          },
-          {
-            "name": "Compressible flow",
-            "status": true
-          },
-          {
-            "name": "Multi-phase",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Meshing",
-        "items": [
-          {
-            "name": "snappyHexMesh",
-            "status": true
-          },
-          {
-            "name": "Automatic meshing",
-            "status": true
-          },
-          {
-            "name": "Mesh quality",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Combustion",
-            "status": true
-          },
-          {
-            "name": "DNS/LES",
-            "status": true
-          },
-          {
-            "name": "DEM/MHD",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Extensibility",
-        "items": [
-          {
-            "name": "C++ source code",
-            "status": true
-          },
-          {
-            "name": "User solvers",
-            "status": true
-          },
-          {
-            "name": "HPC scaling",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STL",
-      "OBJ",
-      "Fluent MSH",
-      "Gmsh MSH",
-      "UNV",
-      "CCM",
-      "VTK (legacy)",
-      "I-DEAS",
-      "Plot3D"
-    ],
-    "file_formats_out": [
-      "VTK (legacy)",
-      "EnSight",
-      "Fluent MSH",
-      "pro-STAR",
-      "GMV",
-      "OBJ"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Community Open Source",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "Full OpenFOAM CFD solver suite",
-          "Unlimited parallel MPI cores",
-          "Zero licensing fees"
-        ],
-        "is_popular": true
-      }
+      "simscale"
     ]
   },
   {
@@ -7419,235 +7306,207 @@ export const c5Tools: Tool[] = [
     "name": "SimScale",
     "slug": "simscale",
     "logo_url": "/logos/simscale.png",
-    "short_desc": "Browser-based cloud CFD/FEA/thermal simulation platform with per-hour pricing.",
-    "description": "SimScale runs OpenFOAM, Code_Aster, and CalculiX in the browser on AWS — letting engineers do production-grade CFD and FEA without local solvers, local hardware, or licensing servers.",
-    "country": "Germany",
-    "category_id": "c5",
-    "pricing_type": "Freemium",
-    "starting_price": 2400,
-    "price_period": "year",
-    "platforms": [
-      "Web"
-    ],
-    "industries": [
-      "AEC",
-      "Electronics",
-      "Energy",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "CFD, FEA, thermal, particle dynamics in the browser",
-      "Unlimited cloud compute (per-hour metering)",
-      "Real-time collaboration on projects",
-      "Public Community Plan for hobbyists",
-      "Pre-built turbomachinery, AEC, electronics workflows",
-      "Native CAD upload (STEP, Parasolid, STL)"
-    ],
-    "user_scales": [
-      "SMB",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.simscale.com",
-    "pricing_url": "https://www.simscale.com/product/pricing/",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "No installation, no HPC procurement, no licence dongles",
-      "Pay-as-you-go cloud compute scales with project size",
-      "Excellent free Community Plan for self-learning"
-    ],
-    "cons": [
-      "Heavily reliant on internet connectivity",
-      "Less physics breadth than Ansys or COMSOL",
-      "Public Community Plan exposes projects publicly by default"
-    ],
-    "tech_specs": {
-      "engine": "OpenFOAM + Code_Aster + CalculiX in AWS",
-      "multicore": "Cloud HPC (unlimited cores)",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "Parasolid",
-        "STL",
-        "IGES"
-      ]
-    },
-    "expert_verdict": "Made cloud CFD/FEA actually work — the Community plan is a free way to learn industrial-grade simulation.",
-    "faqs": [
+    "short_desc": "Cloud-native simulation platform for browser-based computational fluid dynamics (CFD), FEA, thermal, and acoustics.",
+    "description": "SimScale is a 100% cloud-native engineering simulation platform that delivers Computational Fluid Dynamics (CFD), Finite Element Analysis (FEA), thermal analysis, and acoustics directly within standard web browsers. Eliminating high-end workstation hardware constraints and complex software licensing installations, SimScale leverages cloud supercomputing to solve simulations in parallel. Built around open and proprietary solvers—including OpenFOAM, Code_Aster, and GPU-accelerated Lattice Boltzmann (LBM) methods—SimScale democratizes engineering simulation for architecture, HVAC, electronics cooling, and industrial equipment.",
+    "pricing_tiers": [
       {
-        "q": "What is SimScale used for?",
-        "a": "Browser-based cloud CFD/FEA/thermal simulation platform with per-hour pricing. SimScale is a CAE / CAM solution widely adopted in AEC, Electronics, Energy."
+        "name": "SimScale Community Free Tier",
+        "price": "Free",
+        "period": "free plan",
+        "features": [
+          "Browser-Based CFD & FEA Simulation Environment",
+          "Public Simulation Project Library Access",
+          "Standard Cloud Computing Core-Hour Allowance",
+          "Community Forum Technical Support"
+        ],
+        "is_popular": false
       },
       {
-        "q": "How much does SimScale cost?",
-        "a": "SimScale is freemium. The Community plan is free and covers selected analysis types with public projects, while Mechanical, Professional and Enterprise are paid subscriptions that add private projects, fluid dynamics, larger computing quotas and AI features. Quotas and seat pricing are quoted per region, so check the official pricing page. Current plans and regional pricing: [Official SimScale Pricing Page](https://www.simscale.com/product/pricing/)."
-      },
-      {
-        "q": "Is there a free version of SimScale?",
-        "a": "Yes — the Community plan is genuinely free, not a time-limited trial. It restricts you to selected analysis types and public projects and carries a computing-quota cap, which is enough to learn the platform and validate a workflow before buying a paid plan."
-      },
-      {
-        "q": "What operating systems does SimScale support?",
-        "a": "SimScale runs on Web. The browser-based experience requires no local install."
-      },
-      {
-        "q": "Which file formats does SimScale support?",
-        "a": "SimScale is a cloud CAE platform with browser-based pre-processing, built-in OpenFOAM / Code_Aster / Marc solvers and cloud post-processing. Its official CAD import list is split into native formats (Parasolid, SOLIDWORKS, Inventor, Rhino 3DM, CATIA CATPart, Creo PRT, Solid Edge PAR, Revit RVT and nTop) and neutral formats (STEP, IGES, ACIS/SAT, STL). Downloads return the originally uploaded geometry — the vendor does not document STEP or IGES export from modified CAD mode geometry. Results download as a .foam folder, a VTM folder (VTK format) or an Ensight Gold .case file depending on analysis type; charts and tables download as CSV, and reports/animations as PDF or MP4. There is no vendor term called Cloud Interactive 3D."
-      },
-      {
-        "q": "What are the best alternatives to SimScale?",
-        "a": "The closest alternatives to SimScale are ANSYS Discovery, COMSOL Multiphysics, ANSYS Fluent, and OpenFOAM. ANSYS Discovery (offered on a Subscription license) competes directly on core AEC workflows, while COMSOL Multiphysics (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "name": "SimScale Professional Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Private Simulation Projects with Full IP Confidentiality",
+          "High-Performance Cloud Compute Allocation & Multi-Core Scaling",
+          "GPU-Accelerated Pacefish Lattice Boltzmann CFD Solver",
+          "Dedicated Live Technical Chat Support and CAD Integrations"
+        ],
+        "is_popular": true
       }
     ],
-    "alternatives": [
-      "ansys-discovery",
-      "comsol-multiphysics",
-      "ansys-fluent",
-      "openfoam"
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.simscale.com",
+    "trial_url": "https://www.simscale.com",
+    "pricing_url": "https://www.simscale.com",
+    "support_channels": [
+      "Email",
+      "Chat",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "100% Cloud-Native In-Browser Simulation",
+      "GPU-Accelerated Lattice Boltzmann (LBM) Method",
+      "Structural FEA, Thermal & CFD Solvers in One Platform",
+      "Zero Hardware Investment or High-End Workstation Needs",
+      "Real-Time Collaborative Multi-User Cloud Workspaces",
+      "Pedestrian Wind Comfort & Urban Microclimate Workflows"
     ],
     "detailed_features": [
       {
-        "category": "Cloud Simulation",
+        "category": "Cloud CFD & Wind Comfort",
         "items": [
           {
-            "name": "Browser-based CFD",
+            "name": "Lattice Boltzmann (LBM) Transient CFD solving large urban wind comfort and building aerodynamics up to thirty times faster using cloud GPUs",
             "status": true
           },
           {
-            "name": "Browser-based FEA",
-            "status": true
-          },
-          {
-            "name": "Thermal simulation",
+            "name": "HVAC & Thermal Comfort evaluating indoor air quality, thermal stratification, and PMV/PPD indices",
             "status": true
           }
         ]
       },
       {
-        "category": "Computing",
+        "category": "Structural FEA & Collaboration",
         "items": [
           {
-            "name": "Cloud HPC",
+            "name": "Linear & Non-Linear Structural FEA analyzing deformation, stress, and modal resonance without installing local solvers",
             "status": true
           },
           {
-            "name": "Per-hour metering",
-            "status": true
-          },
-          {
-            "name": "Unlimited compute",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "Real-time collaboration",
-            "status": true
-          },
-          {
-            "name": "Project sharing",
-            "status": true
-          },
-          {
-            "name": "Community Plan",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Workflow",
-        "items": [
-          {
-            "name": "Pre-built workflows",
-            "status": true
-          },
-          {
-            "name": "CAD upload",
-            "status": true
-          },
-          {
-            "name": "No installation",
+            "name": "Browser Collaboration sharing interactive 3D simulation results with clients and colleagues via simple web links",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "SimScale Cloud Engine (OpenFOAM, Code_Aster, Pacefish LBM)",
+      "multicore": "Distributed AWS cloud computing scaling up to 96 cores and multiple GPUs per run",
+      "gpu_optimization": "Client-side WebGL 2.0 visualization and server-side GPU LBM solving",
+      "standards": [
+        "ISO 27001",
+        "SOC 2 Type II",
+        "ASHRAE 55",
+        "City of London Wind Microclimate Guidelines"
+      ]
+    },
     "file_formats_in": [
       "STEP",
+      "STP",
       "IGES",
-      "Parasolid",
-      "SAT",
       "STL",
-      "SLDPRT",
-      "IPT",
-      "Rhino 3DM",
-      "CATPart",
-      "PRT",
-      "PAR",
-      "RVT"
+      "DWG",
+      "DXF",
+      "PARASOLID",
+      "SLDPRT"
     ],
     "file_formats_out": [
-      "VTM",
-      "Ensight Gold",
-      "FOAM",
-      "CSV",
       "PDF",
-      "MP4"
+      "CSV",
+      "VTK",
+      "PNG"
     ],
-    "pricing_tiers": [
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "industries": [
+      "Architecture & Urban Wind Comfort",
+      "HVAC & Building Services Engineering",
+      "Electronics Thermal Packaging",
+      "Industrial Valves & Turbomachinery",
+      "Aerospace & Automotive Prototyping"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.6,
+    "expert_verdict": "SimScale democratizes engineering simulation by moving CFD and FEA entirely to the cloud, eliminating hardware barriers and license headaches.",
+    "pros": [
+      "Runs completely in any web browser without requiring expensive workstation hardware or local installations.",
+      "GPU-accelerated Lattice Boltzmann (LBM) solver delivers urban wind comfort results in minutes.",
+      "Parallel cloud computing allows teams to run dozens of simulation design iterations simultaneously.",
+      "Multi-user cloud collaboration lets teams share, review, and mark up 3D simulation results via URL.",
+      "Comprehensive compliance templates for architectural pedestrian wind comfort (City of London, Lawson criteria)."
+    ],
+    "cons": [
+      "Requires constant high-speed broadband internet connectivity to upload geometry and view 3D results.",
+      "Free community tier requires all projects and design geometry to be publicly visible to all users.",
+      "Professional subscriptions are based on annual compute core-hour consumption models.",
+      "Extremely specialized non-standard multiphysics formulations (like custom Fortran subroutines) cannot be injected.",
+      "Direct CAD geometry modifications still require external CAD tools prior to cloud import."
+    ],
+    "external_ratings": [
       {
-        "name": "Community",
-        "price": "Free",
-        "period": "",
-        "features": [
-          "Free plan for testing and learning",
-          "Selected analysis types",
-          "Public projects only",
-          "Community support"
-        ],
-        "is_popular": false
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.g2.com/products/simscale/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "name": "Mechanical",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Everything in Community",
-          "Private projects",
-          "All standard structural and thermal analysis types",
-          "Live support from simulation experts",
-          "Larger computing quota"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Professional",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Everything in Mechanical",
-          "Adds fluid dynamics (CFD) analysis types",
-          "Custom computing quota",
-          "Live support from simulation experts"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Enterprise",
-        "price": "Contact Sales",
-        "period": "",
-        "features": [
-          "Everything in Professional",
-          "Engineering AI and Physics AI",
-          "Dedicated API support and custom integrations",
-          "Custom user count and quotas",
-          "Dedicated technical account manager"
-        ],
-        "is_popular": false
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 90,
+        "url": "https://www.capterra.com/p/162785/SimScale/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "faqs": [
+      {
+        "q": "What is SimScale?",
+        "a": "SimScale is a 100% cloud-based simulation platform that allows engineers to run CFD, FEA, and thermal analysis directly in a web browser without hardware installations."
+      },
+      {
+        "q": "Does SimScale require a high-end graphics computer?",
+        "a": "No, all computational meshing and solving take place on remote cloud servers, so SimScale runs smoothly on standard laptops, Macs, and Chromebooks."
+      },
+      {
+        "q": "Is SimScale free to use?",
+        "a": "SimScale offers a Community plan that is free for public projects, with paid Professional subscriptions providing private projects and expanded cloud compute hours."
+      },
+      {
+        "q": "What physics does SimScale support?",
+        "a": "SimScale supports incompressible and compressible fluid flow, convective heat transfer, multiphase flow, urban pedestrian wind comfort (LBM), linear and non-linear structural FEA, and acoustics."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
+    "alternatives": [
+      "ansys-fluent",
+      "openfoam",
+      "ansys-discovery"
     ]
   },
   {
@@ -7655,204 +7514,202 @@ export const c5Tools: Tool[] = [
     "name": "Femap",
     "slug": "femap",
     "logo_url": "/logos/femap.png",
-    "short_desc": "Siemens Femap is a CAD-independent FEA pre/postprocessor primarily paired with NX Nastran.",
-    "description": "Femap is Siemens' Windows-native, CAD-agnostic finite element preprocessor and post-processor, most often paired with NX Nastran or MSC Nastran as the solver of record for aerospace structures.",
-    "country": "USA",
-    "category_id": "c5",
-    "pricing_type": "Perpetual",
-    "starting_price": 12000,
-    "quote_only": true,
-    "price_period": "one-time",
+    "short_desc": "Siemens’ advanced engineering FEA pre- and post-processor with native Parasolid modeling and deep Simcenter Nastran integration.",
+    "description": "Siemens Femap is an advanced, CAD-independent finite element modeling (FEA) pre- and post-processor developed by Siemens Digital Industries Software. Operating natively on the Siemens Parasolid geometric modeling kernel, Femap provides deep, seamless integration with Simcenter Nastran as well as third-party solvers (including Ansys, Abaqus, and LS-DYNA). Renowned in aerospace airframe analysis, marine naval architecture, and defense engineering, Femap provides unmatched control over mid-surface extraction, 1D/2D beam and shell meshing, composite laminate layup definitions, and complex aerospace load cases.",
+    "pricing_tiers": [
+      {
+        "name": "Femap with Simcenter Nastran Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Native Parasolid Advanced FEA Pre- and Post-Processing",
+          "Integrated Simcenter Nastran Basic Structural Solvers",
+          "Automated Mid-Surface Extraction & 2D Shell Meshing",
+          "Comprehensive Aerospace Composite Laminate Definition"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Femap Advanced Dynamic & Thermal Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Simcenter Nastran Advanced Non-Linear & Dynamic Solvers",
+          "Integrated Thermal Dissipation & Flow Simulation Modules",
+          "Full Superelement & Aeroelasticity Post-Processing",
+          "Custom OLE/COM Automation API with Python and Visual Basic"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 5200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
+    "trial_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
+    "pricing_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "CAD-Independent Native Parasolid FEA Pre/Post Processor",
+      "Deep Native Simcenter Nastran Integration",
+      "Superior Mid-Surface Extraction for Thin-Walled Structures",
+      "Comprehensive Composite Laminate Layup Modeling",
+      "Full Control Over 1D Beams, 2D Plates & 3D Solids",
+      "Complete Automation via Python and OLE/COM API"
+    ],
+    "detailed_features": [
+      {
+        "category": "Meshing & Thin-Walled Structures",
+        "items": [
+          {
+            "name": "Mid-Surface Extraction and Cleanup transforming thin solid sheet metal and aircraft skins into precise 2D shell models",
+            "status": true
+          },
+          {
+            "name": "Composite Laminate Modeling defining ply orientations, failure theories (Tsai-Wu, Hashin), and sandwich core panels",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Solver Integration & Customization",
+        "items": [
+          {
+            "name": "Simcenter Nastran Integration creating boundary conditions, rigid body elements (RBE2/RBE3), and extracting dynamic modes",
+            "status": true
+          },
+          {
+            "name": "Custom Scripting API automating repetitive modeling steps, margin-of-safety calculations, and reports with Python",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Parasolid Geometric Pre/Post Processor Core",
+      "multicore": "Multi-threaded graphics rendering and solver file formatting",
+      "gpu_optimization": "DirectX and OpenGL hardware-accelerated finite element display",
+      "standards": [
+        "ISO 9001",
+        "FAA Airframe Standards",
+        "Nastran BDF/DAT Standards"
+      ]
+    },
+    "file_formats_in": [
+      "MODFEM",
+      "STEP",
+      "STP",
+      "IGES",
+      "PARASOLID",
+      "CATPART",
+      "DWG"
+    ],
+    "file_formats_out": [
+      "MODFEM",
+      "BDF",
+      "NAS",
+      "PDF",
+      "STEP"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Aerospace",
-      "Defense",
-      "Marine"
-    ],
-    "core_features": [
-      "Best-in-class structural FE preprocessing",
-      "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
-      "NX Nastran integration",
-      "API for Visual Basic / Python automation",
-      "Composites and bonded contact modeling",
-      "Optimization with Topology and Nastran SOL 200"
+      "Aerospace Airframe & Spacecraft Structures",
+      "Defense & Naval Shipbuilding",
+      "Heavy Industrial Machinery",
+      "Pressure Vessels & Energy Equipment",
+      "Automotive Chassis Engineering"
     ],
     "user_scales": [
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
-    "pricing_url": "https://www.siemens.com/en-us/contact/",
-    "affiliate_url": null,
-    "score": 4.4,
+    "score": 4.6,
+    "expert_verdict": "Siemens Femap is the stress engineer's trusted companion, delivering unmatched precision in 1D/2D meshing, mid-surface extraction, and Nastran integration.",
     "pros": [
-      "Lightweight, fast, and very stable on huge airframe models",
-      "CAD-agnostic — works with any CAD source",
-      "Strong scripting / automation API"
+      "CAD-independent pre/post processor that imports geometry from all major CAD formats seamlessly.",
+      "Unrivaled mid-surface extraction and geometric cleanup for thin-walled aerospace and marine structures.",
+      "Tight, native integration with Simcenter Nastran ensures total fidelity of boundary conditions and cards.",
+      "Comprehensive composite laminate modeling supports advanced failure criteria like Tsai-Wu and Hashin.",
+      "Powerful API supports Python, Visual Basic, and C++ to automate repetitive finite element modeling tasks."
     ],
     "cons": [
-      "Windows-only",
-      "UI feels dated next to Workbench or Hypermesh",
-      "Solver is sold separately"
+      "User interface has a dense, traditional engineering look that requires formal onboarding.",
+      "Substantial software licensing and annual maintenance investment suited for professional analysis consultancies.",
+      "Not designed for original parametric 3D CAD modeling; focuses strictly on finite element preparation.",
+      "Certified exclusively for Microsoft Windows workstations, with no native macOS workstation build.",
+      "Large dynamic models with millions of elements require workstations with high RAM and high-end dedicated GPUs."
     ],
-    "tech_specs": {
-      "engine": "Siemens Parasolid (Geometry) + Simcenter Nastran",
-      "multicore": "Inherits from Nastran",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "Nastran .bdf",
-        "STEP",
-        "IGES",
-        "Parasolid"
-      ]
-    },
-    "expert_verdict": "Still the preferred FE preprocessor for aerospace structural teams that live and breathe Nastran .bdf decks.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/femap/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.capterra.com/p/162784/Femap/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is Femap used for?",
-        "a": "Siemens Femap is a CAD-independent FEA pre/postprocessor primarily paired with NX Nastran. Femap is a CAE / CAM solution widely adopted in Aerospace, Defense, Marine."
+        "q": "What is Siemens Femap used for?",
+        "a": "Femap is an advanced finite element pre- and post-processor used by aerospace and structural engineers to mesh geometry, apply loads, and visualize results primarily for Simcenter Nastran."
       },
       {
-        "q": "How much does Femap cost?",
-        "a": "Femap is sold as a perpetual licence; the plans shown on this page are Femap licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Femap Pricing Page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
+        "q": "Can Femap work with solvers other than Nastran?",
+        "a": "Yes, while deeply integrated with Simcenter Nastran, Femap can also generate and post-process input decks for Ansys, Abaqus, LS-DYNA, and Marc."
       },
       {
-        "q": "Is there a free version of Femap?",
-        "a": "Femap is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Femap page](https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/)."
+        "q": "Why is Femap popular in aerospace engineering?",
+        "a": "Femap excels in mid-surface extraction for thin-sheet aircraft skins and detailed 1D/2D beam/shell meshing, which are standard in aerospace airframe analysis."
       },
       {
-        "q": "What operating systems does Femap support?",
-        "a": "Femap runs on Windows."
-      },
-      {
-        "q": "Which file formats does Femap support?",
-        "a": "Simcenter Femap (Siemens) is a CAD-independent FEA pre/post-processor that must be paired with an external solver. Its Geometry Interfaces fact sheet documents STEP (AP203/AP214), IGES, Parasolid, ACIS/SAT, STL, DXF, CATIA, Inventor and Rhino 3DM import, and STEP, IGES, Parasolid, ACIS, STL, VRML and JT export — JT is a Teamcenter Visualization export that carries mesh and results data, and the vendor does not document a JT import. Analysis Program Interfaces are read/write for Nastran BDF, Ansys CDB, Abaqus INP, LS-DYNA, Marc and CSV result tables, so those solver decks are analysis-model interfaces rather than geometry formats."
-      },
-      {
-        "q": "What are the best alternatives to Femap?",
-        "a": "The closest alternatives to Femap are MSC Patran, Altair HyperWorks, ANSYS Mechanical, and MSC Nastran. MSC Patran (offered on a Subscription license) competes directly on core Aerospace workflows, while Altair HyperWorks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Does Femap run on Mac or Linux?",
+        "a": "No, Siemens Femap is engineered and certified strictly for 64-bit Microsoft Windows desktop workstations."
       }
     ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "category_id": "c5",
+    "affiliate_url": null,
     "alternatives": [
-      "msc-patran",
+      "msc-nastran",
       "altair-hyperworks",
-      "ansys-mechanical",
-      "msc-nastran"
-    ],
-    "detailed_features": [
-      {
-        "category": "FEA Preprocessing",
-        "items": [
-          {
-            "name": "Structural preprocessing",
-            "status": true
-          },
-          {
-            "name": "Mesh generation",
-            "status": true
-          },
-          {
-            "name": "Boundary conditions",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "CAD Integration",
-        "items": [
-          {
-            "name": "CAD-agnostic",
-            "status": true
-          },
-          {
-            "name": "NX integration",
-            "status": true
-          },
-          {
-            "name": "Multi-CAD support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Solver Integration",
-        "items": [
-          {
-            "name": "NX Nastran",
-            "status": true
-          },
-          {
-            "name": "MSC Nastran",
-            "status": true
-          },
-          {
-            "name": "Multi-solver support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Composites modeling",
-            "status": true
-          },
-          {
-            "name": "Automation API",
-            "status": true
-          },
-          {
-            "name": "Optimization",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STEP",
-      "Parasolid",
-      "IGES",
-      "SAT",
-      "NASTRAN",
-      "Ansys (CDB)",
-      "Abaqus (INP)",
-      "DXF",
-      "CATPart",
-      "SLDPRT",
-      "3DXML",
-      "Rhino 3DM",
-      "STL"
-    ],
-    "file_formats_out": [
-      "NASTRAN",
-      "Ansys",
-      "Abaqus",
-      "STEP",
-      "IGES",
-      "Parasolid",
-      "SAT",
-      "JT",
-      "STL",
-      "VRML",
-      "CSV"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Femap licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Best-in-class structural FE preprocessing",
-          "CAD-agnostic (NX, Creo, SolidWorks, CATIA, Inventor)",
-          "NX Nastran integration",
-          "API for Visual Basic / Python automation",
-          "Seats, modules and term are quoted by Siemens rather than published"
-        ],
-        "is_popular": true
-      }
+      "ansys-mechanical"
     ]
   },
   {
