@@ -2006,48 +2006,45 @@
   },
   {
     "id": "t126",
-    "name": "MIDAS Civil NX",
+    "name": "midas Civil",
     "slug": "midas-civil",
-    "short_desc": "MIDAS IT's bridge and civil-structure analysis and design program on the NX platform, with Excel- and API-driven design automation.",
-    "score": 0,
+    "short_desc": "MIDAS IT’s premier structural engineering software specialized for bridge design, construction stage analysis, and civil infrastructure.",
+    "score": 4.7,
     "logo_url": "/logos/midas-civil.png",
     "official_url": "https://www.midasuser.com/en/product/civil",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Bridge Engineering",
-      "Structural Engineering",
-      "Infrastructure",
-      "Construction",
-      "Transportation",
-      "Government"
+      "Highway & Rail Bridges",
+      "Cable-Stayed & Suspension Bridges",
+      "Prestressed Concrete Girders",
+      "DOT & Ministry Transportation",
+      "Civil Infrastructure"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t127",
-    "name": "MIDAS Gen",
+    "name": "midas Gen",
     "slug": "midas-gen",
-    "short_desc": "MIDAS IT's general-purpose structural analysis and design program for buildings, seismic assessment and plant structures.",
-    "score": 0,
+    "short_desc": "MIDAS IT’s integrated finite element system for general building structures, spatial structures, and performance-based seismic design.",
+    "score": 4.6,
     "logo_url": "/logos/midas-gen.png",
     "official_url": "https://www.midasuser.com/en/product/gen",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Building Design",
-      "Architecture",
-      "Structural Engineering",
-      "Construction",
-      "Industrial Engineering",
-      "General Engineering"
+      "Complex Spatial Architecture",
+      "Airport Concourses & Domes",
+      "Performance-Based Seismic Design",
+      "Industrial Facilities",
+      "High-Rise Towers"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t133",
@@ -2154,42 +2151,43 @@
     "id": "t147",
     "name": "SCIA Engineer",
     "slug": "scia-engineer",
-    "short_desc": "Structural analysis and design software for buildings and civil structures, with multi-material code design and BIM workflows.",
-    "score": 0,
+    "short_desc": "Nemetschek’s integrated 3D multi-material structural analysis and design software built on OpenBIM principles and full Eurocode compliance.",
+    "score": 4.4,
     "logo_url": "/logos/scia-engineer.png",
     "official_url": "https://www.scia.net/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Structural Engineering",
-      "Civil Engineering",
-      "Construction"
+      "European Structural Engineering",
+      "OpenBIM Multi-Material Projects",
+      "Residential & Commercial Framing",
+      "Timber & Aluminum Structures",
+      "Industrial Plants"
     ],
     "features": [],
-    "country": "Belgium"
+    "country": ""
   },
   {
     "id": "t148",
     "name": "PowerMill",
     "slug": "powermill",
-    "short_desc": "Autodesk's advanced CAM software for CNC programming, specializing in 3- and 5-axis manufacturing for complex parts in aerospace, automotive, and toolmaking industries.",
-    "score": 4.3,
-    "logo_url": "/logos/powermill.svg",
+    "short_desc": "Autodesk’s expert CAM software for high-speed, 5-axis CNC machining, complex molds, dies, and industrial robot manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/powermill.png",
     "official_url": "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Medical Devices",
-      "Toolmaking",
-      "Mold Manufacturing",
-      "Precision Engineering"
+      "High-End Mold & Die Toolrooms",
+      "Aerospace Blade & Blisk Milling",
+      "Automotive Tooling",
+      "Industrial Robot Machining",
+      "Precision 5-Axis Centers"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t149",
@@ -2235,22 +2233,24 @@
   },
   {
     "id": "t151",
-    "name": "ESPRIT",
+    "name": "ESPRIT CAM",
     "slug": "esprit",
-    "short_desc": "High-performance CAM software for CNC programming, covering 2-5 axis milling, turning, mill-turn, and Swiss-type machining.",
-    "score": 0,
+    "short_desc": "Hexagon’s premier digital twin CAM software for multi-tasking mill-turn machines, Swiss-type CNCs, and 5-axis manufacturing.",
+    "score": 4.5,
     "logo_url": "/logos/esprit.png",
     "official_url": "https://espritcam.hexagon.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Machining",
-      "Tooling"
+      "Multi-Tasking Mill-Turn Centers",
+      "Swiss-Type CNC Turning",
+      "Aerospace & Medical Implants",
+      "Precision Wire EDM",
+      "Production Machine Shops"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t152",
@@ -2493,23 +2493,22 @@
     "id": "t167",
     "name": "PAM-STAMP",
     "slug": "pam-stamp",
-    "short_desc": "Keysight CAE's sheet metal forming simulation (formerly ESI Group) for stamping process optimization and spring back compensation.",
-    "score": 3.9,
+    "short_desc": "ESI Group’s premier sheet metal forming simulation software for automotive stamping, hot forming, and springback compensation.",
+    "score": 4.3,
     "logo_url": "/logos/pam-stamp.png",
-    "official_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html",
+    "official_url": "https://www.esi-group.com/products/pam-stamp",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Metal Forming",
-      "Manufacturing",
-      "Appliances",
-      "Consumer Goods"
+      "Automotive Body-in-White Stamping",
+      "Aerospace Sheet Metal Forming",
+      "Tool & Die Manufacturing",
+      "Hot Stamping Facilities",
+      "Tube Hydroforming"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t168",
@@ -2861,63 +2860,67 @@
     "id": "t195",
     "name": "Altair Inspire",
     "slug": "altair-inspire",
-    "short_desc": "Altair's designer-friendly generative design and FEA tool, published since the Siemens acquisition as Simcenter Inspire.",
+    "short_desc": "Altair’s powerful generative design and topology optimization environment for rapid structural simulation and manufacturing feasibility.",
     "score": 4.5,
     "logo_url": "/logos/altair-inspire.png",
-    "official_url": "https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/inspire/",
+    "official_url": "https://altair.com/inspire",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Manufacturing",
-      "Product Design"
+      "Automotive Engineering",
+      "Aerospace & Defense",
+      "Heavy Machinery",
+      "Consumer Products",
+      "Additive Manufacturing"
     ],
     "features": [
       "ai-assisted",
       "generative-design"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t196",
     "name": "MSC Patran",
     "slug": "msc-patran",
-    "short_desc": "Long-standing FEA pre/post-processor, now part of Cadence, tightly paired with MSC Nastran.",
+    "short_desc": "Hexagon’s premier finite element analysis pre- and post-processing environment supporting MSC Nastran, Marc, and multi-solver workflows.",
     "score": 4.2,
     "logo_url": "/logos/msc-patran.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/patran.html",
+    "official_url": "https://hexagon.com/products/patran",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Defense",
-      "Automotive"
+      "Aerospace & Defense",
+      "Automotive & Rail",
+      "Naval Architecture",
+      "Heavy Industry",
+      "Defense Contractors"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t197",
     "name": "MSC Adams",
     "slug": "msc-adams",
-    "short_desc": "Multibody dynamics simulation for mechanisms, vehicles, and powertrains.",
-    "score": 4.5,
+    "short_desc": "Hexagon’s world-leading multibody dynamics (MBD) software for mechanical system kinematics, dynamic loading, and virtual prototyping.",
+    "score": 4.4,
     "logo_url": "/logos/msc-adams.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/adams.html",
+    "official_url": "https://hexagon.com/products/adams",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Defense",
-      "Manufacturing"
+      "Automotive OEM & Tier 1",
+      "Aerospace Mechanisms",
+      "Railway Rolling Stock",
+      "Industrial Robotics",
+      "Heavy Equipment"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t198",
@@ -3098,26 +3101,28 @@
     "id": "t209",
     "name": "CAESAR II",
     "slug": "caesar-ii",
-    "short_desc": "Pipe stress analysis for static and dynamic load cases.",
+    "short_desc": "Hexagon’s global standard pipe stress analysis software for plant engineering, oil and gas, chemical facilities, and power generation.",
     "score": 4.6,
     "logo_url": "/logos/caesar-ii.png",
-    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pipe-stress",
+    "official_url": "https://hexagon.com/products/caesar-ii",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Oil & Gas Offshore/Onshore",
+      "Petrochemical Processing",
+      "Power Generation",
+      "EPC Plant Engineering",
+      "Chemical Facilities"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t210",
     "name": "Bentley AutoPIPE",
     "slug": "autopipe",
-    "short_desc": "Bentley's pipe stress analysis competing with CAESAR II — strong in nuclear and power.",
+    "short_desc": "Bentley’s comprehensive piping stress analysis software for calculating pipe stresses, loads, and deflections under static and dynamic conditions.",
     "score": 4.4,
     "logo_url": "/logos/autopipe.png",
     "official_url": "https://www.bentley.com/software/autopipe/",
@@ -3125,37 +3130,41 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Power",
-      "Nuclear",
-      "Oil & Gas"
+      "Nuclear Energy Facilities",
+      "Power Generation",
+      "Petrochemical Plants",
+      "Water & Wastewater Infrastructure",
+      "EPC Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t211",
     "name": "PV Elite",
     "slug": "pv-elite",
-    "short_desc": "Pressure vessel and heat exchanger design and code-compliance checking.",
+    "short_desc": "Hexagon’s complete solution for pressure vessel and heat exchanger design, analysis, and evaluation according to international codes.",
     "score": 4.5,
     "logo_url": "/logos/pv-elite.png",
-    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel",
+    "official_url": "https://hexagon.com/products/pv-elite",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Pressure Vessel Fabrication",
+      "Chemical Processing",
+      "Oil Refining & Gas Processing",
+      "Heat Exchanger Manufacturing",
+      "Power Plants"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t212",
     "name": "AspenTech Aspen HYSYS",
     "slug": "aspen-hysys",
-    "short_desc": "Process simulation for oil & gas, refining, and gas processing — the upstream standard.",
+    "short_desc": "AspenTech’s market-leading process simulation software for oil and gas, refining, and chemical plant optimization.",
     "score": 4.6,
     "logo_url": "/logos/aspen-hysys.png",
     "official_url": "https://www.aspentech.com/en/products/engineering/aspen-hysys",
@@ -3163,12 +3172,14 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Refining",
-      "Chemical"
+      "Oil & Gas Production",
+      "Refining & Petrochemicals",
+      "LNG Processing",
+      "Chemical Manufacturing",
+      "Clean Energy Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t213",
@@ -3453,75 +3464,85 @@
     "id": "t233",
     "name": "CSI SAP2000",
     "slug": "sap2000",
-    "short_desc": "General-purpose structural analysis for buildings, bridges, towers, and offshore.",
-    "score": 4.5,
+    "short_desc": "CSI’s general-purpose structural finite element analysis and design software for bridges, dams, industrial structures, and towers.",
+    "score": 4.6,
     "logo_url": "/logos/sap2000.png",
     "official_url": "https://www.csiamerica.com/products/sap2000",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering",
-      "Infrastructure"
+      "Civil Infrastructure",
+      "Bridge & Dam Engineering",
+      "Industrial Towers & Plants",
+      "Sports Stadiums",
+      "General Structural Design"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t234",
     "name": "CSI ETABS",
     "slug": "etabs",
-    "short_desc": "Building-focused integrated structural analysis and design.",
-    "score": 4.6,
+    "short_desc": "CSI’s premier integrated structural analysis and design software engineered specifically for multi-story residential and commercial buildings.",
+    "score": 4.7,
     "logo_url": "/logos/etabs.png",
     "official_url": "https://www.csiamerica.com/products/etabs",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "High-Rise Building Design",
+      "Commercial Real Estate",
+      "Residential Towers",
+      "Seismic Engineering",
+      "Structural Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t235",
     "name": "Bentley STAAD.Pro",
     "slug": "staad-pro",
-    "short_desc": "Long-running general structural analysis and design — strong in industrial and infrastructure.",
-    "score": 4.3,
+    "short_desc": "Bentley’s comprehensive 3D structural analysis and design software supporting over 90 international design codes for steel, concrete, and timber.",
+    "score": 4.4,
     "logo_url": "/logos/staad-pro.png",
     "official_url": "https://www.bentley.com/software/staad-pro/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering",
-      "Industrial"
+      "Industrial Plant Framing",
+      "Civil Infrastructure",
+      "Power Transmission Towers",
+      "Commercial Steel Structures",
+      "Offshore Platforms"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t236",
     "name": "Tekla Tedds",
     "slug": "tekla-tedds",
-    "short_desc": "Trimble Tekla Tedds — calculation library and document generator for structural design.",
-    "score": 4.4,
-    "logo_url": "/logos/tekla-tedds.ico",
+    "short_desc": "Trimble’s engineering software for automating everyday structural calculations and producing audit-ready calculation documents.",
+    "score": 4.5,
+    "logo_url": "/logos/tekla-tedds.png",
     "official_url": "https://www.tekla.com/products/tekla-tedds",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Consulting Structural Engineers",
+      "Building Component Design",
+      "Municipal Peer Review",
+      "Architectural Engineering",
+      "Residential Framing"
     ],
     "features": [],
-    "country": "Finland"
+    "country": ""
   },
   {
     "id": "t239",
@@ -3565,55 +3586,64 @@
     "id": "t242",
     "name": "Autodesk Robot Structural Analysis",
     "slug": "autodesk-robot",
-    "short_desc": "Autodesk's general structural analysis tool, tightly linked to Revit for BIM-driven workflows.",
-    "score": 4.2,
-    "logo_url": "/logos/autodesk-robot.svg",
+    "short_desc": "Autodesk’s advanced structural finite element analysis and code-checking software deeply integrated with Autodesk Revit and BIM workflows.",
+    "score": 4.3,
+    "logo_url": "/logos/autodesk-robot.png",
     "official_url": "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "BIM Structural Engineering",
+      "Commercial Architecture",
+      "Complex Stadium Shells",
+      "Infrastructure Framing",
+      "Multi-Disciplinary AEC"
     ],
     "features": [],
-    "country": "Poland"
+    "country": ""
   },
   {
     "id": "t243",
     "name": "IDEA StatiCa",
     "slug": "idea-statica",
-    "short_desc": "Steel and concrete connection design with the CBFEM method.",
-    "score": 4.6,
+    "short_desc": "The global standard for component-based finite element design and code compliance of structural steel connections, concrete details, and prestressed members.",
+    "score": 4.8,
     "logo_url": "/logos/idea-statica.png",
     "official_url": "https://www.ideastatica.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Structural Steel Fabrication",
+      "Connection Engineering",
+      "Precast & Prestressed Concrete",
+      "BIM Detailing",
+      "Consulting Engineering"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t244",
     "name": "RISA-3D",
     "slug": "risa-3d",
-    "short_desc": "Building-focused structural analysis from RISA Tech, popular with US consulting offices.",
-    "score": 4.4,
-    "logo_url": "/logos/risa-3d.jpg",
+    "short_desc": "Nemetschek’s popular general-purpose 3D structural analysis and design software engineered for fast modeling and multi-material engineering.",
+    "score": 4.5,
+    "logo_url": "/logos/risa-3d.png",
     "official_url": "https://risa.com/products/risa-3d",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Commercial Structural Engineering",
+      "Industrial Warehouses",
+      "Cold-Formed Framing",
+      "Timber & Masonry Design",
+      "North American Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t247",
