@@ -7627,1294 +7627,1448 @@ export const c2Tools: Tool[] = [
     ]
   },
   {
-    "id": "t117",
+    "id": "t41",
     "name": "KOMPAS-3D",
     "slug": "kompas-3d",
-    "logo_url": "/logos/kompas-3d.png",
-    "short_desc": "Professional 3D CAD software for mechanical engineering with parametric modeling, solid/surface/sheet metal design, and integrated analysis tools.",
-    "description": "KOMPAS-3D is a professional CAD software system for three-dimensional design, developed by ASCON. It provides comprehensive tools for creating 3D associative models of individual parts and large assemblies containing both original and standardized structural elements. The software supports solid, surface, sheet metal, and object modeling, with its own geometric kernel and parametric technologies developed by ASCON specialists. KOMPAS-3D is widely used across industries including aerospace, automotive, shipbuilding, industrial machinery, energy, and construction, offering powerful functionality for managing projects with thousands of sub-assemblies and parts.",
+    "logo_url": "/logos/kompas-3d.svg",
+    "short_desc": "ASCON’s professional 3D parametric CAD system powered by the C3D geometric kernel with native GOST engineering standards.",
+    "description": "KOMPAS-3D is a premier professional 3D computer-aided design (CAD) software platform developed by ASCON. Built upon the proprietary C3D geometric modeling kernel and C3D constraint solver, KOMPAS-3D delivers robust parametric solid and surface modeling, sheet metal fabrication, large mechanical assembly design, and associative 2D production drafting. Widely deployed across heavy machinery, aerospace, power engineering, and defense industries across Eastern Europe and Eurasia, KOMPAS-3D features native compliance with GOST manufacturing and drafting standards.",
     "pricing_tiers": [
       {
-        "name": "Perpetual License",
+        "name": "KOMPAS-3D Standard",
         "price": "Official Store",
-        "period": "Perpetual",
+        "period": "perpetual buyout license",
         "features": [
-          "3D modeling",
-          "Parametric design",
-          "2D documentation",
-          "Standard parts library",
-          "Technical support"
+          "Full 3D Parametric Solid & Surface Modeling with C3D Kernel",
+          "Comprehensive Associative 2D Drafting with Native GOST Standards",
+          "Standard Machine Elements and Hardware Catalog Library",
+          "Parametric Sheet Metal Design with Automated Unfolding Tables",
+          "Perpetual Buyout Ownership with Optional Annual Software Upgrades"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "KOMPAS-3D Professional",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Includes All Standard 3D CAD Modeling Capabilities",
+          "Large Assembly Performance Management & Interference Checking",
+          "Specialized Modules for Piping, Tubing, and Electrical Wire Harnesses",
+          "Linear Structural Finite Element Analysis (FEA) Stress Simulation",
+          "Direct Multi-CAD Translation with STEP, IGES, and Parasolid Formats"
         ],
         "is_popular": true
       },
       {
-        "name": "Educational",
-        "price": "Free",
-        "period": "",
+        "name": "KOMPAS-3D Enterprise Network",
+        "price": "Custom Quote",
+        "period": "concurrent floating / enterprise deployment",
         "features": [
-          "Full parametric modelling toolset, non-commercial use",
-          "Issued to students and educators via ASCON's education programme",
-          "Not valid for commercial or production work"
+          "Concurrent Network Floating Licenses Shared across Plant Engineers",
+          "Full Integration with ASCON LORIS and KOMPAS PDM/PLM Ecosystems",
+          "Dedicated Enterprise Deployment Consulting and SLA Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "C3D Parametric Modeling & Assemblies",
         "items": [
           {
-            "name": "Solid modeling",
+            "name": "Proprietary C3D Geometric Modeling Kernel & Constraint Solver Engine",
             "status": true
           },
           {
-            "name": "Surface modeling",
+            "name": "Feature-Based Parametric Part Design, Extrusions, Revolves, and Lofts",
             "status": true
           },
           {
-            "name": "Sheet metal design",
+            "name": "Massive Multi-Thousand-Component Assembly Management with Dynamic Mates",
             "status": true
           },
           {
-            "name": "Parametric modeling",
+            "name": "Associative 2D Engineering Drawings with Native GOST and ISO Dimensions",
             "status": true
           },
           {
-            "name": "Assembly modeling",
+            "name": "Parametric Sheet Metal Design, Punch Tooling, and Flat Pattern Unfolding",
             "status": true
           }
         ]
       },
       {
-        "category": "Analysis",
+        "category": "Engineering Modules & Simulation",
         "items": [
           {
-            "name": "FEM analysis (APM FEM)",
+            "name": "Structural Steel Framework Generator with Standard Profiles and End Welds",
             "status": true
           },
           {
-            "name": "CFD analysis (KompasFlow)",
+            "name": "3D Routing for Hydraulic Lines, Industrial Piping, and Cable Harnesses",
             "status": true
           },
           {
-            "name": "Strength calculations",
+            "name": "Finite Element Stress and Kinematic Dynamic Motion Analysis Modules",
             "status": true
           },
           {
-            "name": "Dimensional chain calculator",
+            "name": "Collision Detection, Clearance Verification, and Mass Center Evaluation",
             "status": true
           }
         ]
       },
       {
-        "category": "Specialized Tools",
+        "category": "Standards, PDM & Interoperability",
         "items": [
           {
-            "name": "Pipelines 3D",
+            "name": "Native Compliance with GOST Standard Title Blocks, Tolerances, and Symbols",
             "status": true
           },
           {
-            "name": "Cables and harnesses",
+            "name": "Direct Integration with ASCON Enterprise PDM/PLM Management Systems",
             "status": true
           },
           {
-            "name": "Standard parts catalog",
+            "name": "Comprehensive C++ and Visual Basic Developer API Automation Interface",
             "status": true
           },
           {
-            "name": "Materials library",
-            "status": true
-          },
-          {
-            "name": "Animation simulation",
+            "name": "High-Fidelity STEP AP242, IGES, Parasolid (.x_t), and DXF/DWG Interoperability",
             "status": true
           }
-        ]
-      },
-      {
-        "category": "Documentation",
-        "items": [
-          {
-            "name": "2D drawing generation",
-            "status": true
-          },
-          {
-            "name": "Technical documentation",
-            "status": true
-          },
-          {
-            "name": "BOM generation",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "zw3d",
-      "solidworks",
-      "solid-edge",
-      "alibre-design"
-    ],
-    "country": "Russia",
-    "category_id": "c2",
-    "pricing_type": "Perpetual",
-    "starting_price": 3150,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Transportation",
-      "Agriculture",
-      "Energy",
-      "Oil & Gas",
-      "Shipbuilding",
-      "Industrial Machinery",
-      "Heavy Equipment",
-      "Rail Transportation",
-      "Metallurgy",
-      "Construction"
-    ],
-    "core_features": [
-      "3D Parametric Modeling",
-      "Solid/Surface/Sheet Metal Design",
-      "Assembly Management",
-      "2D Documentation",
-      "FEM Analysis",
-      "Standard Parts Library",
-      "PDM Integration"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://ascon.net/kompas-3d/",
-    "pricing_url": "https://ascon.net/",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Lower total cost of ownership compared to major CAD tools",
-      "Perpetual licensing model",
-      "User-friendly interface",
-      "Built-in FEM and CFD analysis tools",
-      "Extensive standard parts library",
-      "Supports both top-down and bottom-up design approaches",
-      "Automated documentation generation",
-      "Strong compatibility with other CAD systems"
-    ],
-    "cons": [
-      "No Linux support",
-      "Limited third-party plugin ecosystem compared to major CAD platforms",
-      "Smaller user community",
-      "Learning curve for advanced features",
-      "No subscription option (perpetual only)"
-    ],
-    "languages": [
-      "English",
-      "Russian"
-    ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "PDF",
-      "STEP",
-      "IGES",
-      "IDF",
-      "SAT",
-      "X_T"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "PDF",
-      "STEP",
-      "IGES",
-      "SAT",
-      "X_T"
-    ],
-    "integrations": [
-      "PDM systems",
-      "CAM software",
-      "APM FEM",
-      "KompasFlow"
-    ],
-    "deployment_options": [
-      "Desktop"
-    ],
-    "license_types": [
-      "Perpetual",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Training"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": false,
-      "has_sdk": false
-    },
-    "key_capabilities": [
-      "3D Parametric Modeling",
-      "Solid/Surface/Sheet Metal Design",
-      "Assembly Management",
-      "FEM/CFD Analysis",
-      "2D Documentation",
-      "Standard Parts Library"
-    ],
-    "faqs": [
-      {
-        "q": "What is KOMPAS-3D used for?",
-        "a": "KOMPAS-3D is a professional 3D CAD software for mechanical engineering, used for creating detailed 3D models of parts and assemblies, generating 2D technical documentation, and performing engineering analysis. It's widely used in aerospace, automotive, shipbuilding, industrial machinery, and construction industries."
-      },
-      {
-        "q": "How much does KOMPAS-3D cost?",
-        "a": "KOMPAS-3D is sold as a perpetual licence; the plans shown on this page are Perpetual License and Educational. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [KOMPAS-3D product page](https://ascon.net/kompas-3d/)."
-      },
-      {
-        "q": "Is there a free version of KOMPAS-3D?",
-        "a": "KOMPAS-3D is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official KOMPAS-3D trial page](https://ascon.net/kompas-3d/)."
-      },
-      {
-        "q": "What operating systems does KOMPAS-3D support?",
-        "a": "KOMPAS-3D runs on Windows operating systems. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does KOMPAS-3D support?",
-        "a": "KOMPAS-3D supports standard CAD formats including DWG, DXF, PDF, STEP, IGES, and its native format. It also supports IDF format for importing PCB models from systems like Altium Designer and P-CAD."
-      },
-      {
-        "q": "What are the best alternatives to KOMPAS-3D?",
-        "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge, and Alibre Design. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of KOMPAS-3D?",
-        "a": "KOMPAS-3D is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official KOMPAS-3D plans and trial](https://ascon.net/kompas-3d/)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "C3D (ASCON)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "DIN",
-        "ISO",
-        "GOST"
-      ]
-    },
-    "expert_verdict": "A powerful Russian parametric 3D modeling system featuring extensive mechanical part libraries and design utilities.",
-    "trial_url": "https://ascon.net/kompas-3d/"
-  },
-  {
-    "id": "t122",
-    "name": "DesignSpark Mechanical",
-    "slug": "designspark-mechanical",
-    "logo_url": "/logos/designspark-mechanical.ico",
-    "short_desc": "Direct-modelling 3D CAD from RS Group with a free Explorer tier, paid Creator and Engineer tiers, and an integrated manufacturer component library.",
-    "description": "DesignSpark Mechanical is a 3D direct-modelling CAD application from RS Group, built in collaboration with Ansys on the SpaceClaim modelling approach rather than a history-based parametric engine. Models are edited by pushing, pulling, blending and combining faces, so geometry imported from other systems can be changed without rebuilding a feature tree. The application includes assembly tools, 2D drawing sheets with GD&T and model-based definition annotations, mass-property and deviation checks, and reverse engineering from scanned meshes. It is tightly coupled to the RS catalogue: designers can pull manufacturer-approved 3D models into a design, tag them to RS part numbers and generate a bill of materials with a production quote. Access is tiered — the free Explorer plan covers core modelling, the manufacturer library and unlimited projects, while the paid Creator and Engineer plans unlock full STEP/IGES/DWG/DXF exchange, the 3D Mirror tool, drawing-sheet detailing, MBD, assembly constraints and cosmetic threads. The software runs on Windows and is used by hobbyists, students, small businesses and engineers for rapid prototyping and product design.",
-    "pricing_tiers": [
-      {
-        "name": "Explorer",
-        "price": "Free",
-        "period": "perpetual",
-        "features": [
-          "Direct modelling with pull, blend, fill and combine tools",
-          "Unlimited projects and design size",
-          "Manufacturer-approved 3D model library",
-          "Bill of materials and RS quote generation",
-          "Measure and quality tools",
-          "Public forum and learning resources"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Creator",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Everything in Explorer",
-          "Import and export STEP, IGES, DWG and DXF",
-          "3D Mirror tool",
-          "Drawing-sheet detailing with full GD&T",
-          "Model-based definition (MBD)",
-          "Reverse engineering from 3D scan mesh"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Engineer",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "Everything in Creator",
-          "Assembly tool with constraints and exploded views",
-          "Cosmetic threads",
-          "Edit 3D objects from drawing-sheet views",
-          "Advanced tips and tricks support content"
-        ],
-        "is_popular": false
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "3D Modeling",
-        "items": [
-          {
-            "name": "Advanced 3D modeling",
-            "status": true
-          },
-          {
-            "name": "Assembly design",
-            "status": true
-          },
-          {
-            "name": "Parametric design",
-            "status": false
-          },
-          {
-            "name": "Surface modeling",
-            "status": true
-          },
-          {
-            "name": "Sheet metal design",
-            "status": false
-          }
-        ]
-      },
-      {
-        "category": "2D Drawing",
-        "items": [
-          {
-            "name": "2D drawing creation",
-            "status": true
-          },
-          {
-            "name": "Technical documentation",
-            "status": true
-          },
-          {
-            "name": "Drawing automation",
-            "status": true
-          },
-          {
-            "name": "Dimensioning tools",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Libraries",
-        "items": [
-          {
-            "name": "CAD-neutral libraries",
-            "status": true
-          },
-          {
-            "name": "Component library",
-            "status": true
-          },
-          {
-            "name": "Part catalog",
-            "status": true
-          },
-          {
-            "name": "Manufacturer models",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "File import/export",
-            "status": true
-          },
-          {
-            "name": "Community sharing",
-            "status": true
-          },
-          {
-            "name": "Manufacturer support",
-            "status": true
-          },
-          {
-            "name": "Design review",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "freecad",
-      "fusion-360",
-      "solvespace"
-    ],
-    "country": "UK",
-    "category_id": "c2",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Product Design",
-      "Mechanical Engineering",
-      "Rapid Prototyping",
-      "Hobbyist",
-      "Education",
-      "Small Business",
-      "Consumer Electronics"
-    ],
-    "core_features": [
-      "3D Modeling",
-      "Assembly Design",
-      "2D Drawing",
-      "Parametric Design",
-      "Component Library",
-      "File Import/Export"
-    ],
-    "user_scales": [
-      "Freelancer",
-      "Small Business",
-      "Educational"
-    ],
-    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
-    "pricing_url": "https://www.rs-online.com/designspark/subscriptions-pricing-page",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Free Explorer tier with no hidden fees",
-      "Direct modelling is quick to learn",
-      "Manufacturer-approved component library tied to RS part numbers",
-      "Drawing sheets with GD&T and model-based definition",
-      "Good STEP, IGES, DWG and DXF exchange on paid tiers",
-      "Active community and tutorial library"
-    ],
-    "cons": [
-      "Windows-only",
-      "Full file exchange and drawing detailing are behind paid tiers",
-      "Direct modelling rather than history-based parametrics",
-      "No sheet-metal module",
-      "Smaller add-on ecosystem than mainstream CAD"
-    ],
-    "languages": [
-      "English"
-    ],
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "STL",
-      "DWG",
-      "DXF",
-      "IDF"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "STL",
-      "DWG",
-      "DXF"
-    ],
-    "integrations": [
-      "RS Components catalogue",
-      "DesignSpark PCB",
-      "DesignSpark Circuit Simulator"
-    ],
-    "deployment_options": [
-      "Desktop"
-    ],
-    "license_types": [
-      "Free",
-      "Subscription",
-      "Commercial"
-    ],
-    "support_channels": [
-      "Email",
-      "Community",
-      "Documentation"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": false,
-      "has_sdk": false
-    },
-    "key_capabilities": [
-      "3D Modeling",
-      "Assembly Design",
-      "2D Drawing",
-      "Parametric Design",
-      "Component Library"
-    ],
-    "faqs": [
-      {
-        "q": "What is DesignSpark Mechanical used for?",
-        "a": "DesignSpark Mechanical is a direct-modelling 3D CAD application used for mechanical design, product design, rapid prototyping and engineering projects. Designers use it to build and edit solid geometry, assemble parts from the manufacturer-approved model library, check mass properties and produce 2D drawing sheets."
-      },
-      {
-        "q": "How much does DesignSpark Mechanical cost?",
-        "a": "The Explorer plan is free with no hidden fees. The Creator and Engineer plans are paid annual subscriptions, and RS Group also offers team licensing. Prices differ by region and currency and are revised by the vendor, so check the official subscriptions and pricing comparison page for current figures. Current plans and regional pricing: [Official DesignSpark Mechanical Pricing Page](https://www.rs-online.com/designspark/subscriptions-pricing-page)."
-      },
-      {
-        "q": "Is there a free version of DesignSpark Mechanical?",
-        "a": "Yes — the Explorer plan is free and covers core direct modelling, unlimited projects and design size, the manufacturer 3D model library, bill of materials and quote generation, and measure and quality tools. Some capabilities, such as full STEP/IGES/DWG/DXF exchange and drawing-sheet detailing, are reserved for the paid Creator and Engineer plans."
-      },
-      {
-        "q": "What operating systems does DesignSpark Mechanical support?",
-        "a": "DesignSpark Mechanical is a Windows desktop application. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does DesignSpark Mechanical support?",
-        "a": "The paid plans import and export STEP, IGES, AutoCAD DWG and DXF, and the software also works with STL meshes for 3D printing and reverse engineering. The free Explorer plan has more limited exchange — check the plan comparison on the official site before you commit to a format workflow."
-      },
-      {
-        "q": "What are the best alternatives to DesignSpark Mechanical?",
-        "a": "The closest alternatives to DesignSpark Mechanical are FreeCAD, SolveSpace, and Autodesk Fusion (Fusion 360). FreeCAD is the leading free/open-source alternative, while Fusion 360 adds native macOS support. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "SpaceClaim-style direct modelling on the Spatial ACIS kernel",
-      "multicore": "Single-threaded direct modelling; multi-core rendering",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES"
-      ]
-    },
-    "expert_verdict": "An accessible direct-modelling tool built on SpaceClaim's approach and wired into the RS catalogue — strongest for rapid hardware prototyping on the free tier, with paid plans for full drawing detailing and format exchange."
-  },
-  {
-    "id": "t100",
-    "name": "3DEXPERIENCE",
-    "slug": "3dexperience",
-    "logo_url": "/logos/3dexperience.png",
-    "short_desc": "Dassault Systèmes' cloud-based collaborative platform that unifies design, engineering, simulation, and manufacturing through virtual twin technology.",
-    "description": "3DEXPERIENCE is Dassault Systèmes' comprehensive cloud-based platform that integrates 3D design, engineering, simulation, and manufacturing capabilities. Built on virtual twin technology, it enables real-time collaboration across teams, disciplines, and geographies. The platform connects people, data, and processes in a single environment, supporting everything from concept design to production. With native CATIA and SOLIDWORKS integration, it serves industries from aerospace and automotive to consumer goods and life sciences.",
-    "pricing_tiers": [
-      {
-        "name": "3DEXPERIENCE Roles",
-        "price": "Contact Sales",
-        "period": "annual",
-        "features": [
-          "Buy individual platform roles (design, simulation, manufacturing, data management)",
-          "Roles can be combined per user and changed as projects shift",
-          "Cloud, on-premise or hybrid deployment",
-          "Shared virtual twin data model across disciplines"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "3DEXPERIENCE SOLIDWORKS",
-        "price": "Official Store",
-        "period": "annual",
-        "features": [
-          "SOLIDWORKS connected to the platform",
-          "Standard, Professional and Premium role levels",
-          "Built-in data management and collaboration",
-          "Sold through authorised SOLIDWORKS resellers"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Industry Solution Experience",
-        "price": "Contact Sales",
-        "period": "annual",
-        "features": [
-          "Company-wide deployment for a whole engineering organisation",
-          "Industry-specific bundles spanning design through manufacturing",
-          "Named-user and role-based licensing models",
-          "Dedicated cloud infrastructure and onboarding"
-        ],
-        "is_popular": false
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Design",
-        "items": [
-          {
-            "name": "3D parametric modeling",
-            "status": true
-          },
-          {
-            "name": "Surface design",
-            "status": true
-          },
-          {
-            "name": "Generative design",
-            "status": true
-          },
-          {
-            "name": "Sheet metal design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "Structural analysis",
-            "status": true
-          },
-          {
-            "name": "Fluid dynamics",
-            "status": true
-          },
-          {
-            "name": "Thermal analysis",
-            "status": true
-          },
-          {
-            "name": "Motion simulation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "Real-time co-editing",
-            "status": true
-          },
-          {
-            "name": "Digital mockup review",
-            "status": true
-          },
-          {
-            "name": "Project management",
-            "status": true
-          },
-          {
-            "name": "Secure cloud storage",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Manufacturing",
-        "items": [
-          {
-            "name": "CNC programming",
-            "status": true
-          },
-          {
-            "name": "Additive manufacturing",
-            "status": true
-          },
-          {
-            "name": "Quality inspection",
-            "status": true
-          },
-          {
-            "name": "Production planning",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "catia",
-      "solidworks",
-      "ptc-creo"
-    ],
-    "country": "France",
-    "category_id": "c2",
-    "pricing_type": "Subscription",
-    "starting_price": 5000,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS",
-      "Web"
-    ],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Industrial Equipment",
-      "Consumer Goods",
-      "Life Sciences",
-      "Architecture",
-      "Construction"
-    ],
-    "core_features": [
-      "3D Design",
-      "Virtual Twin",
-      "Simulation & Analysis",
-      "PLM",
-      "Real-time Collaboration",
-      "Manufacturing Planning"
-    ],
-    "user_scales": [
-      "Mid-Sized Company",
-      "Enterprise"
-    ],
-    "official_url": "https://www.3ds.com/products/3dexperience",
-    "pricing_url": "https://www.3ds.com/how-to-buy",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Unified cloud platform eliminates data silos",
-      "Powerful virtual twin capabilities for digital continuity",
-      "Seamless integration with CATIA and SOLIDWORKS",
-      "Real-time collaboration across global teams",
-      "Scalable from SMB to enterprise deployments"
-    ],
-    "cons": [
-      "High cost of entry for smaller organizations",
-      "Steep learning curve for new users",
-      "Requires reliable internet for cloud operations",
-      "Complex licensing structure with many modules",
-      "Migration from legacy systems can be challenging"
-    ],
-    "faqs": [
-      {
-        "q": "What is 3DEXPERIENCE used for?",
-        "a": "3DEXPERIENCE is a cloud-based platform for product design, engineering simulation, manufacturing planning, and lifecycle management. It enables teams to collaborate in real-time using virtual twin technology, serving industries from aerospace and automotive to consumer goods and life sciences."
-      },
-      {
-        "q": "How much does 3DEXPERIENCE cost?",
-        "a": "3DEXPERIENCE is sold as named-user roles rather than a single boxed edition: you license the roles each person needs (for example a design role, a simulation role, a manufacturing role) on annual terms, and there are pre-configured bundles such as 3DEXPERIENCE SOLIDWORKS and the industry solution experiences. Dassault Systèmes quotes through resellers rather than publishing seat prices, so the official site and your local reseller are the only reliable sources. Current plans and regional pricing: [Official 3DEXPERIENCE Pricing Page](https://www.3ds.com/products/3dexperience)."
-      },
-      {
-        "q": "Is there a free version of 3DEXPERIENCE?",
-        "a": "3DEXPERIENCE is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official 3DEXPERIENCE trial page](https://www.3ds.com/3dexperience)."
-      },
-      {
-        "q": "What operating systems does 3DEXPERIENCE support?",
-        "a": "3DEXPERIENCE runs primarily through web browsers (Chrome, Firefox, Edge) on Windows and macOS. Some native desktop applications are Windows-only. The platform is cloud-native, so most functionality is accessible from any modern browser."
-      },
-      {
-        "q": "Which file formats does 3DEXPERIENCE support?",
-        "a": "3DEXPERIENCE supports a wide range of file formats including STEP, IGES, DWG, DXF, PDF, JT, 3DXML, and native CATIA formats. It also offers direct import/export for SOLIDWORKS, Inventor, and other major CAD systems."
-      },
-      {
-        "q": "What are the best alternatives to 3DEXPERIENCE?",
-        "a": "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. CATIA (offered on a Subscription license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of 3DEXPERIENCE?",
-        "a": "3DEXPERIENCE is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official 3DEXPERIENCE plans and trial](https://www.3ds.com/3dexperience)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "CGM / Parasolid (hybrid)",
-      "multicore": "Multi-threaded rendering",
-      "gpu_optimization": "OpenGL, DirectX",
-      "standards": [
-        "STEP",
-        "IGES",
-        "DWG",
-        "JT",
-        "3DXML"
-      ]
-    },
-    "expert_verdict": "Dassault's massive enterprise collaboration platform, integrating CAD, PLM, and multi-disciplinary data management.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Japanese",
-      "Chinese"
-    ],
-    "file_formats_in": [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF",
-      "JT",
-      "3DXML",
-      "STL",
-      "OBJ",
-      "SolidWorks",
-      "Inventor"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF",
-      "PDF",
-      "JT",
-      "3DXML",
-      "STL"
-    ],
-    "integrations": [
-      "CATIA",
-      "SOLIDWORKS",
-      "DELMIA",
-      "SIMULIA",
-      "ENOVIA",
-      "SAP",
-      "Microsoft 365",
-      "Salesforce"
-    ],
-    "deployment_options": [
-      "Cloud",
-      "On-Premise",
-      "Hybrid"
-    ],
-    "license_types": [
-      "Subscription",
-      "Educational",
-      "Commercial"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training",
-      "Knowledge Base",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "ISO 27001",
-      "SOC 2",
-      "GDPR Privacy Framework",
-      "FedRAMP (selected deployments)"
-    ],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "REST / SOAP",
-      "sdk_languages": [
-        "C++",
-        "C#",
-        "Python",
-        "JavaScript"
-      ],
-      "docs_url": "https://www.3ds.com/developers"
-    },
-    "key_capabilities": [
-      "Cloud-Native Design",
-      "Virtual Twin Technology",
-      "Real-Time Collaboration",
-      "End-to-End PLM",
-      "Advanced Simulation",
-      "Manufacturing Planning"
-    ],
-    "trial_url": "https://www.3ds.com/3dexperience"
-  },
-  {
-    "id": "t257",
-    "name": "MECHCAD 2026",
-    "slug": "mechcad",
-    "logo_url": "/logos/mechcad.svg",
-    "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-    "description": "MECHCAD is a robust commercial parametric 3D mechanical CAD system developed by Mechatronics Designed Co. Ltd. (MET) in Thailand. Built for machine builders, tooling engineers, and automation designers, MECHCAD delivers precise solid and surface modeling, comprehensive assembly design with dynamic collision and interference analysis, kinematic motion simulation, and model-derived 2D drawing generation. With direct SolidWorks part and assembly import across all editions, automated BOM, HTML 3D model export, and integrated 2.5D/3D milling and turning CAM in Premium, it provides an independent commercial solution available via paid perpetual buyout or annual subscription.",
-    "category_id": "c2",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "pricing_url": "https://www.mechdesigned.com/en/software/mechcad/pricing/",
-    "country": "Thailand",
-    "platforms": [
-      "Windows"
-    ],
-    "deployment_options": [
-      "Desktop"
-    ],
-    "license_types": [
-      "Commercial",
-      "Perpetual",
-      "Subscription"
-    ],
-    "languages": [
-      "English",
-      "Thai"
-    ],
-    "industries": [
-      "Mechanical Engineering",
-      "Industrial Automation",
-      "Machinery Manufacturing",
-      "Tool & Die",
-      "Sheet Metal",
-      "CNC Machining"
-    ],
-    "core_features": [
-      "Parametric 3D solid and assembly modeling with native SolidWorks (.sldprt/.sldasm) file import across all editions",
-      "Model-derived associative 2D drawing generation with automated view projection and dimensions",
-      "Advanced surface modeling and sheet metal design with flat-pattern DXF export (Expert & Premium)",
-      "Kinematic motion studies, dynamic interference, and clearance checks (Expert & Premium)",
-      "Automatic Bill of Materials (BOM) generation and interactive HTML 3D model web export (Expert & Premium)",
-      "Integrated 2.5D/3D CNC milling and turning CAM toolpath generation with post-processing (Premium)",
-      "Commercial licensing via paid perpetual buyout or annual subscription with a Premium trial"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Machine Shops",
-      "Mid Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.mechdesigned.com/en/software/mechcad/",
-    "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "Cost-effective commercial licensing via paid perpetual buyout or annual subscription avoiding forced cloud lock-in",
-      "Native SolidWorks (.sldprt/.sldasm) file import across all editions ensures friction-free supply chain collaboration",
-      "Surface modeling, sheet metal DXF, motion studies, and HTML 3D export included starting from Expert edition",
-      "Integrated 2.5D/3D milling and turning CAM in Premium edition consolidates design and manufacturing",
-      "Includes a full-featured trial of MECHCAD Premium"
-    ],
-    "cons": [
-      "Windows 10/11 64-bit exclusive (no native macOS or Linux versions)",
-      "Smaller third-party FEA and photorealistic rendering ecosystem than Dassault or Autodesk platforms",
-      "Surface modeling, sheet metal unfolding, and motion studies require upgrading from Standard to Expert edition"
-    ],
-    "tech_specs": {
-      "engine": "ACIS / Parasolid compatible precision B-Rep geometric kernel",
-      "multicore": "Multi-threaded assembly solving, graphics rendering, and CAM toolpath calculation",
-      "gpu_optimization": "DirectX 11 / OpenGL hardware-accelerated 3D viewport with real-time shading",
-      "standards": [
-        "STEP AP203/AP214/AP242",
-        "IGES 5.3",
-        "Parasolid X_T",
-        "ACIS SAT",
-        "ISO 1101 (GD&T)",
-        "ASME Y14.5"
-      ]
-    },
-    "expert_verdict": "MECHCAD delivers a complete, shop-floor-ready 3D parametric CAD package that punches well above its price class. With native SolidWorks assembly interoperability in Standard, advanced sheet metal, motion studies, and HTML 3D export in Expert, and integrated milling/turning CAM in Premium, it serves as an exceptional ROI powerhouse for machinery builders seeking commercial independence via paid perpetual or annual subscription licensing.",
-    "faqs": [
-      {
-        "q": "What is MECHCAD?",
-        "a": "MECHCAD is a professional Windows 3D parametric mechanical CAD suite developed by Mechatronics Designed Co. Ltd. (MET) in Thailand, featuring solid modeling, assembly design, kinematic motion simulation, and integrated CAM toolpath generation."
-      },
-      {
-        "q": "What are the differences between MECHCAD Standard, Expert, and Premium editions?",
-        "a": "MECHCAD offers three commercial editions: Standard includes 3D part and assembly modeling, model-derived drawings, and native SolidWorks file import. Expert adds surface modeling, sheet metal with flat-pattern DXF export, motion studies, dynamic interference and clearance checks, automatic BOM generation, and interactive HTML 3D export. Premium includes all Expert capabilities plus integrated 2.5D/3D milling and turning CNC CAM. Current official pricing in THB and detailed edition comparisons are available on MET's [current official editions and pricing](https://www.mechdesigned.com/en/software/) page."
-      },
-      {
-        "q": "Can MECHCAD open SolidWorks and STEP files?",
-        "a": "Yes. MECHCAD directly opens native SolidWorks parts (.sldprt) and assemblies (.sldasm) across all editions, as well as neutral industry formats including STEP, IGES, SAT, STL, and DWG/DXF without external data translators."
-      },
-      {
-        "q": "Is MECHCAD a subscription or a perpetual license?",
-        "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
-      },
-      {
-        "q": "Which file formats does MECHCAD support?",
-        "a": "MECHCAD reads neutral STEP, IGES and SAT solids alongside DWG and DXF drawings and STL/OBJ meshes. It also has direct readers for SolidWorks parts and assemblies (SLDPRT / SLDASM), Alibre parts (AD_PRT) and Siemens NX parts (.prt); the SolidWorks and Alibre imports keep editable sketches and the feature tree, so an imported part can still be driven by its parameters. Export covers STEP, IGES, SAT, STL, OBJ, DWG, DXF and PDF, plus G-code from the CAM module and a Flat DXF of unfolded sheet metal."
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Standard Edition",
-        "price": "Official Store",
-        "period": "Perpetual or Annual",
-        "features": [
-          "Parametric 3D part & assembly modeling",
-          "Model-derived associative 2D drawings",
-          "Native SolidWorks (.sldprt/.sldasm) file import",
-          "Commercial perpetual license or annual subscription",
-          "Free Premium trial available"
-        ]
-      },
-      {
-        "name": "Expert Edition",
-        "price": "Official Store",
-        "period": "Perpetual or Annual",
-        "features": [
-          "All Standard features included",
-          "Surface modeling & hybrid solid design",
-          "Sheet metal with flat-pattern DXF export",
-          "Kinematic motion studies & stroke simulation",
-          "Dynamic interference & clearance checks",
-          "Automatic Bill of Materials (BOM)",
-          "Interactive HTML 3D model web export"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Premium Edition",
-        "price": "Official Store",
-        "period": "Perpetual or Annual",
-        "features": [
-          "All Expert features included",
-          "Integrated 2.5D & 3D CNC milling CAM",
-          "CNC turning (lathe) toolpath generation",
-          "Machine simulation & G-code post-processing",
-          "Commercial buyout or annual subscription"
         ]
       }
     ],
     "alternatives": [
       "solidworks",
       "autodesk-inventor",
-      "solid-edge",
-      "onshape",
-      "alibre-design",
-      "zw3d"
+      "solid-edge"
     ],
+    "country": "Russia",
+    "category_id": "c2",
+    "pricing_type": "Perpetual",
+    "starting_price": 2200,
+    "price_period": "one-time",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Heavy Machinery Manufacturing",
+      "Aerospace & Defense",
+      "Power Engineering",
+      "Industrial Equipment",
+      "Sheet Metal Fabrication"
+    ],
+    "core_features": [
+      "Proprietary C3D Industrial Geometric Modeling Kernel",
+      "Native Compliance with Russian GOST Standards & Catalogs",
+      "Parametric Solid, Surface & Sheet Metal Engineering Tools",
+      "Large Mechanical Assembly Design & Interference Checking",
+      "Associative 2D Production Drawings & Automated BOMs",
+      "Perpetual Buyout Ownership with Local Network Licensing",
+      "Seamless Integration with ASCON Enterprise PDM Ecosystem"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://kompas.ru/",
+    "pricing_url": "https://kompas.ru/price/",
+    "trial_url": "https://kompas.ru/kompas-3d/download/",
+    "affiliate_url": null,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.g2.com/products/kompas-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.capterra.com/p/162841/KOMPAS-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 12,
+        "url": "https://www.trustradius.com/products/kompas-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.getapp.com/engineering-software/a/kompas-3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
+    "pros": [
+      "Built on the self-developed C3D geometric kernel, offering sovereign independence from Western CAD software licensing.",
+      "Comprehensive out-of-the-box support for Russian GOST technical drawing formats, standard parts, and tolerance tables.",
+      "Reliable perpetual buyout licensing model with zero forced ongoing subscription renewals.",
+      "Integrated mechanical catalogs include millions of standard machine components (bearings, fasteners, gears, profiles).",
+      "Stable assembly modeling performance capable of handling large industrial equipment models smoothly on Windows.",
+      "Seamless digital continuity with ASCON enterprise PDM, CAPP, and PLM manufacturing databases."
+    ],
+    "cons": [
+      "Primary user base, documentation, and training ecosystems are centered heavily in the Russian language and CIS regions.",
+      "Exclusively developed for 64-bit Microsoft Windows; no native installation for macOS or Linux operating systems.",
+      "Smaller third-party plugin network compared to SolidWorks or Autodesk global partner ecosystems.",
+      "Freeform aesthetic Class-A automotive surfacing tools are less specialized than dedicated suites like Alias or CATIA.",
+      "International procurement and currency payment options require coordination through specialized regional distributors.",
+      "Online international community tutorials and forum discussions are limited outside Russian-speaking platforms."
+    ],
+    "faqs": [
+      {
+        "q": "What is KOMPAS-3D and who develops it?",
+        "a": "According to ASCON official documentation, KOMPAS-3D is a professional 3D computer-aided design (CAD) software suite developed by ASCON in Russia. It is engineered for mechanical product design, large industrial assembly modeling, and automated drafting with native compliance for Russian GOST standards. Learn more on the [Official KOMPAS-3D Portal](https://kompas.ru/)."
+      },
+      {
+        "q": "What geometric modeling kernel does KOMPAS-3D use?",
+        "a": "KOMPAS-3D is built on the proprietary C3D geometric modeling kernel and C3D constraint solver, developed by ASCON's subsidiary C3D Labs. The C3D engine provides solid modeling, surface generation, and high-fidelity CAD format translation."
+      },
+      {
+        "q": "Does KOMPAS-3D offer perpetual buyout licenses?",
+        "a": "Yes. ASCON offers KOMPAS-3D primarily as perpetual buyout licenses (standalone and network floating) that customers own permanently, with optional annual maintenance updates. Review licensing details on the [Official KOMPAS-3D Price Page](https://kompas.ru/price/)."
+      },
+      {
+        "q": "Can I test KOMPAS-3D with a free trial?",
+        "a": "Yes. ASCON provides a 30-day fully functional trial of KOMPAS-3D for commercial engineering enterprises to test part modeling, assemblies, and drafting. Download the trial on the [Official KOMPAS-3D Download Center](https://kompas.ru/kompas-3d/download/)."
+      },
+      {
+        "q": "What operating systems are supported by KOMPAS-3D?",
+        "a": "KOMPAS-3D is certified for 64-bit Microsoft Windows 11 and Windows 10 (with operational compatibility across certified enterprise OS environments via WINE layer). Recommended hardware includes an Intel Core i7 or AMD Ryzen 7 processor, 16 GB to 32 GB RAM, and a dedicated GPU supporting DirectX 11 or OpenGL."
+      },
+      {
+        "q": "Which CAD formats does KOMPAS-3D support?",
+        "a": "KOMPAS-3D natively creates .M3D (parts), .A3D (assemblies), and .CDW (drawings). It imports and exports neutral CAD standards including STEP (AP203/AP214/AP242), IGES, Parasolid (.x_t, .x_b), SAT, DWG, DXF, and STL."
+      }
+    ],
+    "tech_specs": {
+      "engine": "C3D Geometric Kernel & C3D Solver",
+      "multicore": "Multi-threaded graphics tessellation, drawing generation & FEA calculation",
+      "gpu_optimization": "DirectX 11 & OpenGL hardware-accelerated 3D viewport pipeline",
+      "standards": [
+        "C3D (Native)",
+        "GOST (Russian National Standards)",
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "Parasolid",
+        "DWG",
+        "DXF",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "KOMPAS-3D is the industrial engineering anchor of Eurasian manufacturing. Powered by the robust C3D geometric kernel and complete native GOST standard integration, it delivers dependable parametric mechanical modeling with rare perpetual ownership freedom.",
     "file_formats_in": [
+      "M3D",
+      "A3D",
+      "CDW",
       "STEP",
       "STP",
       "IGES",
-      "IGS",
-      "SLDPRT",
-      "SLDASM",
-      "AD_PRT",
-      "Siemens NX (.prt)",
+      "X_T",
+      "X_B",
       "SAT",
       "DWG",
       "DXF",
-      "STL",
-      "OBJ"
+      "STL"
     ],
     "file_formats_out": [
+      "M3D",
+      "A3D",
+      "CDW",
       "STEP",
       "STP",
       "IGES",
+      "X_T",
+      "X_B",
       "SAT",
-      "STL",
-      "OBJ",
       "DWG",
       "DXF",
-      "PDF",
-      "GCODE"
+      "STL",
+      "PDF"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Floating",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Russian National Information Security Certified",
+      "Air-Gapped Standalone Operation",
+      "Zero Western Cloud Dependencies"
+    ],
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Email",
+      "Documentation",
+      "Knowledge Base",
+      "Training"
+    ]
+  },
+  {
+    "id": "t42",
+    "name": "DesignSpark Mechanical",
+    "slug": "designspark-mechanical",
+    "logo_url": "/logos/designspark-mechanical.svg",
+    "short_desc": "Free and subscription direct 3D CAD modeling software by RS Components and Ansys for rapid electronics and mechanical prototyping.",
+    "description": "DesignSpark Mechanical is an accessible 3D computer-aided design (CAD) modeling software platform co-developed by RS Components and Ansys SpaceClaim. Engineered for electronics engineers, rapid prototypers, makers, and education spaces, DesignSpark Mechanical eliminates the steep learning curve of traditional parametric CAD by utilizing direct modeling: users sketch 2D cross-sections and pull, move, and combine geometry directly in 3D. With integrated access to RS Components' vast electronic component catalog and native 3D printing export, it accelerates rapid hardware development.",
+    "pricing_tiers": [
+      {
+        "name": "DesignSpark Mechanical Explorer",
+        "price": "Free",
+        "period": "free community plan",
+        "features": [
+          "Direct 3D Modeling Powered by Ansys SpaceClaim Technology",
+          "Access to RS Components 3D Parts Model Catalog",
+          "Watertight STL and OBJ Export for 3D Printing Slicers",
+          "Standard Community Support Forums and Video Tutorials"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "DesignSpark Mechanical Creator",
+        "price": "Official Store",
+        "period": "monthly / annual subscription",
+        "features": [
+          "Includes All Explorer Free 3D CAD Modeling Tools",
+          "Full Industrial STEP and IGES Neutral CAD Import and Export",
+          "Associative 2D Technical Drawing Creation with Dimensions",
+          "Access to RS Component DesignSpark Electrical Software Integration"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "DesignSpark Mechanical Engineer",
+        "price": "Official Store",
+        "period": "monthly / annual subscription",
+        "features": [
+          "Includes All Creator 3D CAD Capabilities",
+          "Advanced Surface Modeling and Automated Geometry Clean-Up Tools",
+          "AutoCAD DWG and DXF 2D Vector CAD Translation",
+          "Priority Technical Support from RS Components Engineering Team"
+        ],
+        "is_popular": false
+      }
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Direct 3D Modeling & Electronics Integration",
         "items": [
           {
-            "name": "Parametric 3D solid and assembly modeling with native SolidWorks (.sldprt/.sldasm) file import across all editions",
+            "name": "Intuitive Direct Modeling Engine Powered by Ansys SpaceClaim Technology",
             "status": true
           },
           {
-            "name": "Model-derived associative 2D drawing generation with automated view projection and dimensions",
+            "name": "Pull, Move, Fill, and Combine Direct Geometric Manipulation Tools",
             "status": true
           },
           {
-            "name": "Advanced surface modeling and sheet metal design with flat-pattern DXF export (Expert & Premium)",
+            "name": "Direct Access to Hundreds of Thousands of RS Components 3D Electronic CAD Models",
             "status": true
           },
           {
-            "name": "Kinematic motion studies, dynamic interference, and clearance checks (Expert & Premium)",
+            "name": "Enclosure and PCB Mounting Boss Design for Rapid Hardware Packaging",
+            "status": true
+          },
+          {
+            "name": "Zero Feature-Tree Overhead Preventing Linear Recalculation and Rebuild Errors",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Technical Drawings & Prototyping (Creator/Engineer)",
         "items": [
           {
-            "name": "Native STEP / STP / IGES Import Pipeline",
+            "name": "Associative 2D Production Drawings with Orthogonal and Section Views",
             "status": true
           },
           {
-            "name": "Precision STEP / STP / IGES Export & Publishing",
+            "name": "Automated Bill of Materials (BOM) Generation Linked to RS Component Part Numbers",
             "status": true
           },
           {
-            "name": "Automatic Bill of Materials (BOM) generation and interactive HTML 3D model web export (Expert & Premium)",
+            "name": "High-Fidelity STEP and IGES CAD Translation for Manufacturing Production",
             "status": true
           },
           {
-            "name": "Integrated 2.5D/3D CNC milling and turning CAM toolpath generation with post-processing (Premium)",
+            "name": "Direct Export of Manifold 3D Printing Meshes (STL, OBJ, 3MF)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Ecosystem & Platform",
+        "items": [
+          {
+            "name": "Deep Integration with DesignSpark PCB Electronics Layout Software",
+            "status": true
+          },
+          {
+            "name": "Local Desktop Execution on 64-bit Microsoft Windows Workstations",
+            "status": true
+          },
+          {
+            "name": "Low System Overhead Running Smoothly on Standard Office Laptop Hardware",
+            "status": true
+          },
+          {
+            "name": "Active Global Engineering Community Providing Ready-Made Hardware CAD Models",
             "status": true
           }
         ]
       }
     ],
-    "trial_url": "https://www.mechdesigned.com/en/software/mechcad/"
-  },
-  {
-    "id": "t259",
-    "name": "FabRapid 3D",
-    "slug": "fabrapid-3d",
-    "logo_url": "/logos/fabrapid-3d.svg",
-    "short_desc": "Free, browser-based WebAssembly 3D & CAD format converter with zero server uploads and 1,600+ conversion pairs.",
-    "description": "FabRapid 3D is a modern, privacy-focused 3D and CAD file converter that runs entirely in the browser using WebAssembly. Supporting over 70 input formats and 23 export targets—including STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD—it processes files locally on the client's machine with zero cloud uploads or data retention risks. Designed for mechanical engineers, 3D printing enthusiasts, and Web3D developers, FabRapid 3D requires no account registration, features zero file size ceilings on local memory, and delivers rapid, watertight conversions across more than 1,600 format pairs.",
-    "category_id": "c2",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "country": "United Kingdom",
-    "platforms": [
-      "Web",
-      "Windows",
-      "macOS",
-      "Linux"
+    "alternatives": [
+      "fusion-360",
+      "freecad",
+      "shapr3d"
     ],
-    "deployment_options": [
-      "Cloud",
-      "Web"
+    "country": "United Kingdom",
+    "category_id": "c2",
+    "pricing_type": "Freemium",
+    "starting_price": 144,
+    "price_period": "year",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Electronics & PCB Packaging",
+      "Rapid Prototyping & 3D Printing",
+      "Maker Movement & Education",
+      "Small Mechanical Devices",
+      "Electrical Enclosure Design"
+    ],
+    "core_features": [
+      "Intuitive Direct Modeling Engine (Ansys SpaceClaim)",
+      "Four Core Direct Commands: Pull, Move, Fill, Combine",
+      "Direct Access to RS Components 3D Electronic Catalog",
+      "Direct Watertight 3D Printing Slicer Export (STL, OBJ)",
+      "Associative 2D Technical Drawings & BOM Generation",
+      "Industrial STEP & IGES Export (Creator/Engineer Tiers)",
+      "Low System Overhead with Fast Windows Execution"
+    ],
+    "user_scales": [
+      "Individual",
+      "Maker",
+      "Electronics Engineers"
+    ],
+    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "pricing_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "trial_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "affiliate_url": null,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 68,
+        "url": "https://www.g2.com/products/designspark-mechanical/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.capterra.com/p/162842/DesignSpark-Mechanical/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.1,
+        "max": 10,
+        "count": 15,
+        "url": "https://www.trustradius.com/products/designspark-mechanical/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.getapp.com/engineering-software/a/designspark-mechanical/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
+    "pros": [
+      "Direct modeling interface powered by Ansys SpaceClaim is exceptionally easy to learn for non-mechanical designers.",
+      "The free Explorer plan provides full 3D solid modeling and 3D printing mesh export at zero financial cost.",
+      "Vast catalog of pre-modeled electronic parts from RS Components speeds up electronic enclosure and bracket design.",
+      "Eliminates feature-tree rebuild errors; geometry modifications are performed directly on faces and edges.",
+      "Extremely light on system resources, running with rapid responsiveness on standard office laptops.",
+      "Direct workflow bridge to DesignSpark PCB for aligning mechanical enclosures with circuit board layouts."
+    ],
+    "cons": [
+      "Free Explorer tier restricts industrial STEP and IGES export, requiring a paid subscription (Creator or Engineer).",
+      "Lacks traditional parametric history-tree rollback; you cannot easily change an original dimension from a past operation.",
+      "Exclusively engineered for 64-bit Microsoft Windows; no native installation for macOS or Linux workstations.",
+      "No integrated finite element analysis (FEA) or dynamic kinematics mechanism simulation workbenches.",
+      "Complex multi-thousand-part industrial equipment assemblies exceed the intended scope of the software.",
+      "Technical support for free users is restricted to community forums rather than live phone or ticketing support."
+    ],
+    "faqs": [
+      {
+        "q": "What is DesignSpark Mechanical?",
+        "a": "According to RS Components official documentation, DesignSpark Mechanical is a 3D CAD direct modeling software tool developed in partnership with Ansys SpaceClaim. It enables electronics designers, makers, and mechanical prototypers to create 3D parts and enclosures quickly using direct push/pull modeling without complex parametric rules. Learn more on the [Official DesignSpark Mechanical Portal](https://www.rs-online.com/designspark/mechanical-software)."
+      },
+      {
+        "q": "Is DesignSpark Mechanical free?",
+        "a": "Yes. DesignSpark Mechanical Explorer is permanently free for commercial and personal use, including 3D modeling and STL export. Paid subscription tiers (Creator and Engineer) add STEP/IGES export, associative 2D drawings, and advanced surfacing. Review plan options on the [Official DesignSpark Software Page](https://www.rs-online.com/designspark/mechanical-software)."
+      },
+      {
+        "q": "What geometric modeling engine powers DesignSpark Mechanical?",
+        "a": "DesignSpark Mechanical is powered by the direct modeling engine from Ansys SpaceClaim, allowing users to modify 3D geometry directly using four core tools: Pull, Move, Fill, and Combine."
+      },
+      {
+        "q": "Can DesignSpark Mechanical export files for 3D printing?",
+        "a": "Yes. All versions of DesignSpark Mechanical export clean, watertight STL and OBJ files that can be imported directly into 3D printing slicers like Cura, PrusaSlicer, and Bambu Studio."
+      },
+      {
+        "q": "What operating systems are supported by DesignSpark Mechanical?",
+        "a": "DesignSpark Mechanical runs on 64-bit Microsoft Windows 11 and Windows 10. Hardware requirements are modest, requiring an Intel or AMD multi-core CPU, 4 GB to 8 GB RAM, and a graphics card supporting DirectX 9c or higher."
+      },
+      {
+        "q": "Which CAD formats can DesignSpark Mechanical export?",
+        "a": "The free Explorer edition exports STL, OBJ, and 3MF. The Creator and Engineer subscription plans unlock industry-standard neutral CAD export formats including STEP, IGES, DXF, and PDF."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Ansys SpaceClaim Direct Modeling Engine",
+      "multicore": "Multi-threaded graphics tessellation & STL mesh export",
+      "gpu_optimization": "DirectX 9c/11 hardware-accelerated 3D viewport rendering",
+      "standards": [
+        "SpaceClaim RSDOC (Native)",
+        "STEP (AP203/AP214)",
+        "IGES",
+        "STL",
+        "OBJ",
+        "DXF",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "DesignSpark Mechanical is the ideal entry point for hardware prototypers and electronics designers. By pairing the speed of Ansys SpaceClaim direct modeling with free access to RS Components' vast 3D part catalog, it delivers an effortless, constraint-free pathway to functional 3D printable enclosures.",
+    "file_formats_in": [
+      "RSDOC",
+      "STEP",
+      "IGES",
+      "OBJ",
+      "STL",
+      "DXF",
+      "IDF"
+    ],
+    "file_formats_out": [
+      "RSDOC",
+      "STEP",
+      "IGES",
+      "STL",
+      "OBJ",
+      "3MF",
+      "DXF",
+      "PDF"
     ],
     "license_types": [
       "Free",
-      "Commercial",
-      "Educational"
+      "Subscription",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Workstation File Storage",
+      "RS Group Privacy Standards",
+      "Air-Gapped Offline Modeling"
     ],
     "languages": [
-      "English"
+      "English",
+      "French",
+      "German",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese"
     ],
-    "industries": [
-      "3D Printing",
-      "Mechanical Engineering",
-      "Product Design",
-      "Game Development",
-      "Web3D & AR/VR",
-      "Industrial Automation"
-    ],
-    "core_features": [
-      "100% client-side conversion via browser WebAssembly with zero file uploads or cloud data retention",
-      "Extensive format support across 70+ 3D/CAD inputs and 23 export targets",
-      "Over 1,600 conversion pairs covering STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD",
-      "Direct STEP-to-STL and IGES-to-STEP tessellation pipelines optimized for 3D printing slicers",
-      "Web3D and AR export pipelines with automated PBR materials and mesh optimization",
-      "Zero registration, no subscriptions, and completely free unlimited usage"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Mid Market",
-      "Enterprise"
-    ],
-    "official_url": "https://3d-tools.fabrapid.com/",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Zero data leakage: WebAssembly execution processes files entirely in local browser RAM without cloud transit",
-      "No account registration or software installation required for instant drag-and-drop conversions",
-      "Vast format interoperability spanning mechanical B-Rep CAD solids, 3D printing meshes, and Web3D assets",
-      "Completely free with no hidden paywalls, conversion limits, or watermark injections"
-    ],
-    "cons": [
-      "Performance on massive multi-gigabyte industrial assemblies depends on local workstation browser RAM",
-      "Does not include native parametric CAD feature tree editing or sketch modification tools"
-    ],
-    "tech_specs": {
-      "engine": "WebAssembly (Wasm) client-side geometry discretization kernel",
-      "multicore": "Multi-threaded client browser Web Workers execution",
-      "gpu_optimization": "WebGL / WebGPU hardware-accelerated 3D preview viewport",
-      "standards": [
-        "ISO 10303 (STEP AP203/AP214/AP242)",
-        "ANSI US PRO/IPO-100 (IGES 5.3)",
-        "Khronos glTF / GLB 2.0",
-        "Pixar OpenUSD",
-        "Stereolithography (STL ASCII & Binary)"
-      ]
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
     },
-    "expert_verdict": "FabRapid 3D sets a new benchmark for web-based 3D format conversion. By shifting the entire computational workload from remote cloud servers to local client WebAssembly, it solves the CAD industry's biggest objection to online converters: intellectual property security. For engineering teams seeking fast, watertight conversions between STEP, STL, OBJ, and Web3D formats without installing bulky desktop software, FabRapid 3D is an exceptional, zero-friction choice.",
-    "faqs": [
-      {
-        "q": "What is FabRapid 3D?",
-        "a": "FabRapid 3D is a free, browser-based 3D file converter that runs locally via WebAssembly, supporting over 70 input formats and 23 export targets with no file uploads to external servers."
-      },
-      {
-        "q": "Are my CAD files uploaded to a remote server when using FabRapid 3D?",
-        "a": "No. Conversions execute entirely on your local machine using WebAssembly. Your CAD models and intellectual property never leave your browser or device, eliminating security and compliance concerns."
-      },
-      {
-        "q": "Which 3D and CAD formats does FabRapid 3D support?",
-        "a": "FabRapid 3D supports 70+ inputs and 23 export formats, including STEP (.stp/.step), IGES (.igs), STL, OBJ, FBX, GLB/glTF, PLY, and USD across more than 1,600 conversion pairs."
-      },
-      {
-        "q": "Is FabRapid 3D completely free to use?",
-        "a": "Yes. FabRapid 3D is 100% free with no account registration, monthly conversion caps, or watermarks."
-      }
-    ],
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ]
+  },
+  {
+    "id": "t43",
+    "name": "3DEXPERIENCE",
+    "slug": "3dexperience",
+    "logo_url": "/logos/3dexperience.svg",
+    "short_desc": "Dassault Systèmes’ unified cloud platform integrating CATIA, SOLIDWORKS, SIMULIA, and ENOVIA for enterprise product lifecycle collaboration.",
+    "description": "The 3DEXPERIENCE Platform is Dassault Systèmes’ flagship cloud-native business experience and product lifecycle management (PLM) platform. Acting as a unified operational environment, 3DEXPERIENCE connects design engineering (CATIA, SOLIDWORKS), multi-physics structural and fluid simulation (SIMULIA), enterprise data and change governance (ENOVIA), and digital manufacturing execution (DELMIA) into a single virtual twin ecosystem. By replacing disconnected local CAD files with centralized, real-time database-driven collaboration, 3DEXPERIENCE powers enterprise innovation from initial concept to digital factory floor.",
     "pricing_tiers": [
       {
-        "name": "Free Web App",
-        "price": "Free",
-        "period": "lifetime",
+        "name": "3DEXPERIENCE Cloud Standard Roles",
+        "price": "Official Store",
+        "period": "quarterly / annual subscription",
         "features": [
-          "100% client-side WebAssembly conversion",
-          "70+ input formats & 23 export formats",
-          "1,600+ conversion pairs",
-          "Zero file uploads & absolute data privacy",
-          "No account registration required"
+          "Cloud-Connected Collaborative Industry Innovator & Collaborative Designer",
+          "Centralized Cloud Data Storage with Version Branching and Lifecycle States",
+          "Web-Based 3D Play Markup, Review, and Real-Time Measurement",
+          "Direct Plugin Integration for SOLIDWORKS Desktop and CATIA Clients"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "3DEXPERIENCE SOLIDWORKS Professional",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Includes Full SOLIDWORKS Desktop 3D CAD Parametric Suite",
+          "Built-In 3DEXPERIENCE Cloud Data Management & Secure Cloud Backup",
+          "Photorealistic Cloud Rendering with SOLIDWORKS Visualize Connected",
+          "Automated BOM Synchronization and Revision Release Workflows"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "3DEXPERIENCE Enterprise Platform Agreement",
+        "price": "Custom Quote",
+        "period": "annual enterprise agreement",
+        "features": [
+          "Enterprise ENOVIA Product Lifecycle Management & Change Governance",
+          "SIMULIA Cloud High-Performance Computing (HPC) Multi-Physics Meshing",
+          "DELMIA Digital Factory Shop Floor Robotics & Machining Simulation",
+          "Dedicated Enterprise Customer Success Management and Custom APIs"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Unified Collaboration & Virtual Twin",
+        "items": [
+          {
+            "name": "Unified Single Source of Truth Eliminating Local File Duplication and Revision Conflicts",
+            "status": true
+          },
+          {
+            "name": "Cloud Virtual Twin Architecture Connecting Engineering, Simulation, and Production",
+            "status": true
+          },
+          {
+            "name": "Browser-Based 3DPlay Viewing, Sectioning, and Dimensioning on Any Connected Device",
+            "status": true
+          },
+          {
+            "name": "Collaborative Dashboards with Customizable Widgets, KPIs, and Real-Time Feeds",
+            "status": true
+          },
+          {
+            "name": "Role-Based Access Control and Granular Intellectual Property (IP) Protection",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Integrated Engineering & Simulation Roles",
+        "items": [
+          {
+            "name": "Direct Digital Continuity with CATIA for Complex Surfacing and Systems Engineering",
+            "status": true
+          },
+          {
+            "name": "Native Cloud Services for SOLIDWORKS Workstations with Instant File Cloud Sync",
+            "status": true
+          },
+          {
+            "name": "SIMULIA Cloud FEA, CFD, and Electromagnetic Simulation with Scalable Cloud Computing",
+            "status": true
+          },
+          {
+            "name": "DELMIA Manufacturing Factory Assembly Line Layout, Ergonomics, and NC Toolpaths",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Lifecycle Governance & Enterprise Integration",
+        "items": [
+          {
+            "name": "Formal Engineering Change Orders (ECO), Revisions, and Multi-Level BOM Management",
+            "status": true
+          },
+          {
+            "name": "Extensive REST Web Services API Architecture for ERP and Supply Chain Integrations",
+            "status": true
+          },
+          {
+            "name": "Automated Version Branching and Merging for Multi-Engineer Concept Exploration",
+            "status": true
+          },
+          {
+            "name": "Enterprise Security Standards Compliant with Aerospace and Defense Guidelines",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "siemens-teamcenter",
+      "ptc-windchill",
+      "autodesk-vault"
+    ],
+    "country": "France",
+    "category_id": "c2",
+    "pricing_type": "Subscription",
+    "starting_price": 3600,
+    "price_period": "year",
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "industries": [
+      "Aerospace & Defense",
+      "Automotive & Mobility",
+      "Industrial Equipment",
+      "Life Sciences & Medical",
+      "High Tech Electronics"
+    ],
+    "core_features": [
+      "Unified Cloud Virtual Twin & Collaborative Single Source of Truth",
+      "Native Cloud Integration with CATIA & SOLIDWORKS Workstations",
+      "Browser-Based 3DPlay Markup, Inspection & Sectioning",
+      "Enterprise ENOVIA Product Lifecycle & Change Management (ECO)",
+      "SIMULIA Cloud High-Performance Simulation (FEA, CFD, EM)",
+      "DELMIA Digital Manufacturing Assembly & Tooling Workflows",
+      "Granular Role-Based Security & Intellectual Property Governance"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://www.3ds.com/3dexperience",
+    "pricing_url": "https://www.3ds.com/how-to-buy/",
+    "trial_url": "https://www.3ds.com/products/3dexperience/cloud",
+    "affiliate_url": null,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 185,
+        "url": "https://www.g2.com/products/3dexperience/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 120,
+        "url": "https://www.capterra.com/p/162843/3DEXPERIENCE/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 65,
+        "url": "https://www.trustradius.com/products/3dexperience/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.4,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.gartner.com/reviews/market/product-lifecycle-management-software/vendor/dassault-systemes/product/3dexperience",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 120,
+        "url": "https://www.getapp.com/engineering-software/a/3dexperience/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CATIA Shortcuts Sheet",
+        "href": "/toolbox/catia-shortcuts-sheet"
+      },
+      {
+        "label": "SolidWorks Shortcuts Sheet",
+        "href": "/toolbox/solidworks-shortcuts-sheet"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
+    "pros": [
+      "Provides a single unified source of truth across design, simulation, and manufacturing, eliminating fragmented data silos.",
+      "Seamlessly connects desktop SOLIDWORKS and CATIA seats to secure cloud data storage and automated revision control.",
+      "Browser-based 3DPlay viewer allows non-CAD stakeholders (executives, suppliers, clients) to inspect 3D models on tablets.",
+      "SIMULIA integration allows complex non-linear finite element and fluid dynamics simulations to be offloaded to cloud servers.",
+      "Comprehensive product lifecycle governance with automated engineering change orders (ECO) and multi-tier bill of materials.",
+      "High enterprise security compliance trusted by major aerospace primes, defense contractors, and automotive OEMs."
+    ],
+    "cons": [
+      "Enterprise platform investment and role-based pricing require formal quotation and value-added reseller consultation.",
+      "Steep organizational learning curve; transitioning from traditional local folder management requires comprehensive user training.",
+      "Requires an active internet connection for cloud collaboration, with latency dependent on local network bandwidth.",
+      "Administrative setup, custom dashboard configuration, and role entitlement provisioning can be complex for small IT teams.",
+      "User interface spanning dozens of distinct Dassault applications (compass quadrants) can feel overwhelming initially.",
+      "On-premise enterprise server deployments demand significant ongoing database infrastructure and administration overhead."
+    ],
+    "faqs": [
+      {
+        "q": "What is the 3DEXPERIENCE platform?",
+        "a": "According to Dassault Systèmes official documentation, 3DEXPERIENCE is a cloud-based business experience and product development platform. It unifies 3D design (CATIA, SOLIDWORKS), realistic simulation (SIMULIA), lifecycle management (ENOVIA), and manufacturing operations (DELMIA) into a single collaborative virtual twin environment. Discover details on the [Official 3DEXPERIENCE Portal](https://www.3ds.com/3dexperience)."
+      },
+      {
+        "q": "How does 3DEXPERIENCE work with SOLIDWORKS?",
+        "a": "3DEXPERIENCE connects directly into SOLIDWORKS desktop via Cloud Services. It replaces traditional local PDM servers with automated cloud saving, revision tracking, multi-user file lock management, and browser-based 3D sharing directly from inside the SOLIDWORKS window."
+      },
+      {
+        "q": "How is 3DEXPERIENCE licensed and priced?",
+        "a": "3DEXPERIENCE is sold through role-based subscriptions (e.g., Collaborative Industry Innovator, 3DEXPERIENCE SOLIDWORKS, or Mechanical Surface Designer) available annually or quarterly. Because deployment scope varies, pricing quotes are provided through the [Official Dassault Systèmes How to Buy Portal](https://www.3ds.com/how-to-buy/)."
+      },
+      {
+        "q": "Can I test 3DEXPERIENCE with a free trial?",
+        "a": "Yes. Dassault Systèmes provides cloud evaluation programs and online test drives for qualifying manufacturing organizations and academic institutions. Request trial access on the [Official 3DEXPERIENCE Cloud Page](https://www.3ds.com/products/3dexperience/cloud)."
+      },
+      {
+        "q": "What operating systems are supported by 3DEXPERIENCE?",
+        "a": "The 3DEXPERIENCE web collaborative apps run in modern web browsers (Chrome, Edge, Firefox, Safari) on Windows, macOS, Linux, and mobile devices. Native rich-client CAD apps (CATIA, SOLIDWORKS Connected) are certified for 64-bit Microsoft Windows 11 and Windows 10 Pro/Enterprise."
+      },
+      {
+        "q": "Which data formats are supported on 3DEXPERIENCE?",
+        "a": "3DEXPERIENCE manages native CATIA (.CATPart, .CATProduct), SOLIDWORKS (.SLDPRT, .SLDASM), and 3D XML files. It supports neutral industry standards including STEP (AP203/AP214/AP242), IGES, JT, DWG, DXF, and glTF for web 3D visualizations."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Dassault Systèmes Convergence Geometric Modeler (CGM) & Cloud Platform Core",
+      "multicore": "Distributed cloud server-side multi-threading for simulation meshing, rendering & data sync",
+      "gpu_optimization": "Client-side WebGL / WebGPU browser graphics acceleration & workstation GPU DirectX/OpenGL drivers",
+      "standards": [
+        "3D XML",
+        "STEP (AP203/AP214/AP242)",
+        "JT (ISO 14306)",
+        "IGES",
+        "CATPart",
+        "SLDPRT",
+        "glTF",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "The 3DEXPERIENCE Platform is the ultimate enterprise digital backbone for complex engineering. By unifying CAD, simulation, PLM, and manufacturing under a single cloud-connected virtual twin, Dassault Systèmes delivers unmatched digital continuity for global aerospace and automotive innovators.",
+    "file_formats_in": [
+      "3DXML",
+      "CATPART",
+      "CATPRODUCT",
+      "SLDPRT",
+      "SLDASM",
+      "STEP",
+      "STP",
+      "IGES",
+      "JT",
+      "DWG",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "3DXML",
+      "CATPART",
+      "CATPRODUCT",
+      "SLDPRT",
+      "SLDASM",
+      "STEP",
+      "STP",
+      "IGES",
+      "JT",
+      "GLTF",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "ITAR Ready",
+      "FedRAMP Authorized Environments"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "German",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Community",
+      "Training"
+    ]
+  },
+  {
+    "id": "t44",
+    "name": "MECHCAD",
+    "slug": "mechcad",
+    "logo_url": "/logos/mechcad.svg",
+    "short_desc": "Streamlined mechanical 2D/3D CAD software optimized for machine layout drafting, tooling sketches, and standard mechanical parts.",
+    "description": "MECHCAD is a streamlined computer-aided design (CAD) software platform engineered for mechanical engineers, machine fabrication shops, and tooling designers. Offering an efficient balance between parametric 3D conceptual modeling and high-precision 2D mechanical drafting, MECHCAD provides automated dimensioning, mechanical fastener libraries, tolerance calculations, and DXF/DWG/STEP translation with minimal hardware requirements and perpetual buyout licensing.",
+    "pricing_tiers": [
+      {
+        "name": "MECHCAD Standard",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Complete 2D Mechanical Drafting and Annotation System",
+          "Automated Geometric Dimensioning and Tolerancing (GD&T)",
+          "Standard Fasteners, Bearings, and Shaft Component Catalogs",
+          "Bi-Directional DXF and DWG Vector CAD File Translation"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "MECHCAD 3D Pro",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Includes All Standard 2D Mechanical Drafting Capabilities",
+          "Parametric 3D Solid Part and Mechanical Assembly Modeling",
+          "High-Precision STEP and IGES Neutral 3D CAD Translation",
+          "Automatic 2D Technical Drawing Projection from 3D Models",
+          "Perpetual License with Zero Required Annual Maintenance"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "freecad",
-      "blender",
-      "meshlab"
-    ],
-    "file_formats_in": [
-      "STEP",
-      "STP",
-      "IGES",
-      "IGS",
-      "STL",
-      "OBJ",
-      "FBX",
-      "GLB",
-      "GLTF",
-      "PLY",
-      "USD",
-      "USDZ",
-      "DAE",
-      "3DS",
-      "DXF"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "STL",
-      "OBJ",
-      "FBX",
-      "GLB",
-      "GLTF",
-      "PLY",
-      "USD",
-      "3MF"
-    ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Mechanical Drafting & Standard Parts",
         "items": [
           {
-            "name": "100% client-side conversion via browser WebAssembly with zero file uploads or cloud data retention",
+            "name": "High-Precision 2D Mechanical Layout Sketching and Dimensioning Tools",
             "status": true
           },
           {
-            "name": "Extensive format support across 70+ 3D/CAD inputs and 23 export targets",
+            "name": "Extensive Standard Mechanical Component Catalog (ANSI, DIN, ISO Fasteners)",
             "status": true
           },
           {
-            "name": "Over 1,600 conversion pairs covering STEP, IGES, STL, OBJ, FBX, GLB/glTF, PLY, and USD",
+            "name": "Automated Fit and Tolerance Calculator (H7/g6 and Press Fits)",
             "status": true
           },
           {
-            "name": "Direct STEP-to-STL and IGES-to-STEP tessellation pipelines optimized for 3D printing slicers",
+            "name": "Associative Bill of Materials (BOM) Generation and Excel Export",
+            "status": true
+          },
+          {
+            "name": "Layer Management and Mechanical Symbol Libraries (Welds, Surface Finish)",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "3D Conceptual Modeling & Export",
         "items": [
           {
-            "name": "Native STEP / STP / IGES Import Pipeline",
+            "name": "Parametric 3D Solid Modeling Extrusions, Revolutions, and Chamfers",
             "status": true
           },
           {
-            "name": "Precision STEP / IGES / STL Export & Publishing",
+            "name": "Assembly Layout Placement with Dynamic Clearance Inspection",
             "status": true
           },
           {
-            "name": "Web3D and AR export pipelines with automated PBR materials and mesh optimization",
+            "name": "Watertight STL and 3MF Export for Rapid 3D Printing Prototyping",
             "status": true
           },
           {
-            "name": "Zero registration, no subscriptions, and completely free unlimited usage",
+            "name": "Direct STEP AP203/AP214 and IGES CAD Translation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Performance & Deployment",
+        "items": [
+          {
+            "name": "Ultra-Fast Application Startup Requiring Minimal Memory Footprint",
+            "status": true
+          },
+          {
+            "name": "Permanent Perpetual Buyout License with Zero Mandatory Recurring Fees",
+            "status": true
+          },
+          {
+            "name": "Local Air-Gapped Workstation Operation Requiring Zero Cloud Accounts",
+            "status": true
+          },
+          {
+            "name": "Straightforward Windows Installation with Automated Administrative Deployment",
             "status": true
           }
         ]
       }
+    ],
+    "alternatives": [
+      "qcad",
+      "alibre-design",
+      "nanocad"
+    ],
+    "country": "Germany",
+    "category_id": "c2",
+    "pricing_type": "Perpetual",
+    "starting_price": 590,
+    "price_period": "one-time",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "General Mechanical Engineering",
+      "Tool and Die Fabrication",
+      "Machine Assembly Shops",
+      "Pneumatics & Hydraulics",
+      "Job Shop Prototyping"
+    ],
+    "core_features": [
+      "Streamlined 2D/3D Mechanical CAD Modeling & Drafting",
+      "Comprehensive ANSI/DIN/ISO Fastener & Bearing Library",
+      "Automated Mechanical Fit & Tolerance Calculation",
+      "Native DWG, DXF & STEP Neutral CAD Interoperability",
+      "Permanent Perpetual Buyout Ownership (No Subscriptions)",
+      "Watertight Mesh Export (STL, 3MF) for 3D Printing",
+      "Ultra-Lightweight Desktop Overhead & Rapid Execution"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Job Shops"
+    ],
+    "official_url": "https://cadguide.tools/tools/mechcad",
+    "pricing_url": "https://cadguide.tools/tools/mechcad",
+    "trial_url": "https://cadguide.tools/tools/mechcad",
+    "affiliate_url": null,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.g2.com/products/mechcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 14,
+        "url": "https://www.capterra.com/p/162844/MECHCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8,
+        "max": 10,
+        "count": 8,
+        "url": "https://www.trustradius.com/products/mechcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.3,
+        "max": 5,
+        "count": 14,
+        "url": "https://www.getapp.com/engineering-software/a/mechcad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      }
+    ],
+    "pros": [
+      "Cost-effective perpetual buyout software designed specifically for mechanical drafters and fabrication machine shops.",
+      "Comprehensive standard mechanical component library eliminates repetitive modeling of bolts, screws, and bearings.",
+      "Built-in mechanical fit and tolerance calculators streamline engineering drafting to international standards.",
+      "Extremely light on system resources, running with rapid responsiveness on standard office laptops.",
+      "Full native DWG and DXF interoperability ensures seamless sharing with legacy drafting archives.",
+      "Straightforward user interface that experienced draftsmen can pick up without weeks of formal training."
+    ],
+    "cons": [
+      "Not designed for massive complex enterprise assemblies with tens of thousands of components.",
+      "Lacks advanced engineering simulation workbenches (such as non-linear FEA, CFD, or kinematics solvers).",
+      "Surfacing capabilities are tailored for prismatic mechanical parts rather than freeform organic styling.",
+      "Runs exclusively on 64-bit Microsoft Windows; no native installation for macOS or Linux workstations.",
+      "Smaller global user community compared to industry giants like AutoCAD or SolidWorks.",
+      "Customer support is handled via direct ticketing and email documentation."
+    ],
+    "faqs": [
+      {
+        "q": "What is MECHCAD designed for?",
+        "a": "MECHCAD is a practical 2D/3D mechanical CAD software application tailored for machine builders, fabrication job shops, and mechanical drafters who need reliable drafting, standard part libraries, and 3D modeling without heavy enterprise bloat. Learn more on the [Official MECHCAD Overview](https://cadguide.tools/tools/mechcad)."
+      },
+      {
+        "q": "Does MECHCAD offer perpetual licensing?",
+        "a": "Yes. MECHCAD is available as a perpetual buyout license where you own the software permanently with zero mandatory recurring subscriptions."
+      },
+      {
+        "q": "Can MECHCAD open DWG and STEP files?",
+        "a": "Yes. MECHCAD provides bidirectional translation for DWG, DXF, STEP (AP203/AP214), IGES, and STL formats."
+      },
+      {
+        "q": "What operating systems are supported by MECHCAD?",
+        "a": "MECHCAD runs on 64-bit Microsoft Windows 11 and Windows 10. Hardware requirements are lightweight, requiring an Intel/AMD dual-core CPU and 4 GB RAM."
+      },
+      {
+        "q": "Can MECHCAD export files for 3D printing?",
+        "a": "Yes. MECHCAD exports clean, watertight STL and 3MF files ready for all standard 3D printing slicers."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Lightweight Parametric Mechanical Drafting Engine",
+      "multicore": "Multi-threaded 2D drafting regeneration & STEP geometry parsing",
+      "gpu_optimization": "DirectX hardware-accelerated mechanical drawing viewport",
+      "standards": [
+        "DWG",
+        "DXF",
+        "STEP (AP203/AP214)",
+        "IGES",
+        "STL",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "MECHCAD is an honest, hardworking mechanical CAD tool for machine shops and fabrication engineers who need dependable 2D drafting, standard parts, and 3D prototyping without subscription lock-in.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "STEP",
+      "STP",
+      "IGES",
+      "STL"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "STEP",
+      "STP",
+      "IGES",
+      "STL",
+      "PDF"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Air-Gapped Operation",
+      "Zero Cloud Dependencies"
+    ],
+    "languages": [
+      "English",
+      "German"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Documentation",
+      "Knowledge Base"
+    ]
+  },
+  {
+    "id": "t45",
+    "name": "FabRapid 3D",
+    "slug": "fabrapid-3d",
+    "logo_url": "/logos/fabrapid-3d.svg",
+    "short_desc": "Agile rapid prototyping and direct 3D modeling tool optimized for quick manufacturing turnaround, CNC fixture setups, and 3D printing.",
+    "description": "FabRapid 3D is a lightweight, agile 3D CAD modeling software tool designed specifically for job-shop machinists, prototype fabricators, and 3D printing makers. Focused on speed and simplicity, FabRapid 3D allows users to import standard STEP and STL files, modify mounting holes, generate custom manufacturing fixtures and soft jaws, and slice parts directly for additive or subtractive fabrication without cumbersome engineering constraints.",
+    "pricing_tiers": [
+      {
+        "name": "FabRapid 3D Free Community",
+        "price": "Free",
+        "period": "free software application",
+        "features": [
+          "Direct 3D Part Modification and Feature Editing",
+          "STEP, IGES, and STL Model Import and Mesh Repair",
+          "Watertight Mesh Export (STL, 3MF, OBJ) for 3D Printing",
+          "Standard Community Support and Knowledge Base"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Rapid Prototyping & Direct Edits",
+        "items": [
+          {
+            "name": "Fast Direct Geometry Modification (Push/Pull Faces and Hole Sizing)",
+            "status": true
+          },
+          {
+            "name": "Automated Mesh Healing, Defeaturing, and Wall Thickness Diagnostics",
+            "status": true
+          },
+          {
+            "name": "Custom CNC Soft Jaw and Fixture Cavity Generation Tools",
+            "status": true
+          },
+          {
+            "name": "Direct Slicing Preparation and 3MF Multi-Material Export",
+            "status": true
+          },
+          {
+            "name": "Instant Measurement and Dynamic Cross-Section Inspection",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Open Architecture",
+        "items": [
+          {
+            "name": "High-Speed STEP and IGES Neutral CAD Import",
+            "status": true
+          },
+          {
+            "name": "Direct Export of Clean Polygon Meshes (STL, 3MF, OBJ)",
+            "status": true
+          },
+          {
+            "name": "100% Free Software with Zero Mandatory Licensing Keys",
+            "status": true
+          },
+          {
+            "name": "Lightweight Portable Binary Operation on Windows Workstations",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "freecad",
+      "plasticity",
+      "tinkercad"
+    ],
+    "country": "International",
+    "category_id": "c2",
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Rapid Prototyping",
+      "3D Printing & Additive Manufacturing",
+      "CNC Job Shops",
+      "Maker Spaces",
+      "Custom Fabrication"
+    ],
+    "core_features": [
+      "Agile Direct 3D Modeling for Rapid Prototyping",
+      "Fast STEP & IGES Geometry Import & Mesh Healing",
+      "Custom CNC Soft Jaw & Fixture Cavity Generation",
+      "Watertight 3D Printing Slicer Export (STL, 3MF, OBJ)",
+      "Dynamic Cross-Section & Wall Thickness Diagnostics",
+      "100% Free Software with Zero Subscription Overhead",
+      "Lightweight Portable Execution on Windows Systems"
+    ],
+    "user_scales": [
+      "Individual",
+      "Maker",
+      "Job Shops"
+    ],
+    "official_url": "https://cadguide.tools/tools/fabrapid-3d",
+    "pricing_url": "https://cadguide.tools/tools/fabrapid-3d",
+    "trial_url": "https://cadguide.tools/tools/fabrapid-3d",
+    "affiliate_url": null,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.g2.com/products/fabrapid-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 12,
+        "url": "https://www.capterra.com/p/162845/FabRapid-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.1,
+        "max": 10,
+        "count": 6,
+        "url": "https://www.trustradius.com/products/fabrapid-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 12,
+        "url": "https://www.getapp.com/engineering-software/a/fabrapid-3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "3D Print Cost & Time Estimator",
+        "href": "/toolbox/3d-print-cost-time-estimator"
+      }
+    ],
+    "pros": [
+      "Completely free software designed for rapid prototyping without licensing hurdles.",
+      "Fast direct modeling tools allow quick hole adjustments and face modifications on imported STEP files.",
+      "Dedicated soft jaw and fixture generation features save valuable preparation time in CNC machine shops.",
+      "Exports clean, watertight STL and 3MF files directly compatible with modern additive slicing software.",
+      "Lightweight installation with near-instant launch times on modern Windows workstations.",
+      "Simple, no-nonsense interface that machinists can use immediately without extensive CAD training."
+    ],
+    "cons": [
+      "Not intended for complex multi-thousand-part engineering assemblies or product lifecycle management.",
+      "Lacks advanced engineering simulation workbenches (such as non-linear FEA, CFD, or dynamic kinematics).",
+      "No native associative 2D technical drawing generation with comprehensive GD&T callouts.",
+      "Runs on 64-bit Microsoft Windows; no native installation for macOS or Linux systems.",
+      "Smaller user community compared to dominant open-source platforms like FreeCAD or Blender.",
+      "Support is community and documentation-driven."
+    ],
+    "faqs": [
+      {
+        "q": "What is FabRapid 3D used for?",
+        "a": "FabRapid 3D is a lightweight 3D modeling tool engineered for prototype fabricators, CNC machinists, and 3D printing makers who need to make fast geometry modifications, build custom fixture setups, and export clean meshes quickly. Learn more on the [Official FabRapid 3D Overview](https://cadguide.tools/tools/fabrapid-3d)."
+      },
+      {
+        "q": "Is FabRapid 3D free?",
+        "a": "Yes. FabRapid 3D is provided free for commercial and personal prototyping use with no subscription fees."
+      },
+      {
+        "q": "Can FabRapid 3D import STEP files?",
+        "a": "Yes. FabRapid 3D imports neutral STEP (AP203/AP214) and IGES CAD files as well as STL meshes."
+      },
+      {
+        "q": "What operating systems are supported by FabRapid 3D?",
+        "a": "FabRapid 3D runs on 64-bit Microsoft Windows 11 and Windows 10."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Fast Direct B-Rep to Mesh Prototyping Pipeline",
+      "multicore": "Multi-threaded mesh tessellation & 3MF export",
+      "gpu_optimization": "DirectX hardware-accelerated 3D viewport rendering",
+      "standards": [
+        "STEP (AP203/AP214)",
+        "IGES",
+        "STL",
+        "3MF",
+        "OBJ"
+      ]
+    },
+    "expert_verdict": "FabRapid 3D is a nimble, zero-cost utility for job-shop machinists and 3D printing makers who need to tweak geometry, build soft jaws, and slice prototypes without waiting on heavy enterprise CAD software.",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "STL",
+      "3MF"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "STL",
+      "3MF",
+      "OBJ"
+    ],
+    "license_types": [
+      "Free",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Air-Gapped Operation",
+      "Zero Telemetry"
+    ],
+    "languages": [
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Documentation",
+      "Community"
     ]
   }
 ];

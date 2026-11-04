@@ -100,29 +100,6 @@
     "country": "USA"
   },
   {
-    "id": "t4",
-    "name": "Revit",
-    "slug": "revit",
-    "short_desc": "BIM authoring platform for architectural, structural and MEP design.",
-    "score": 4.9,
-    "logo_url": "/logos/revit.png",
-    "official_url": "https://www.autodesk.com/products/revit/overview",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "AEC",
-      "Construction",
-      "Structural Engineering"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "bim-integration",
-      "piping-routing"
-    ],
-    "country": "USA"
-  },
-  {
     "id": "t5",
     "name": "DraftSight",
     "slug": "draftsight",
@@ -259,27 +236,6 @@
     ],
     "features": [],
     "country": "Italy"
-  },
-  {
-    "id": "t9",
-    "name": "ArchiCAD",
-    "slug": "archicad",
-    "short_desc": "The BIM software of choice for design-oriented architects.",
-    "score": 4.8,
-    "logo_url": "/logos/archicad.png",
-    "official_url": "https://www.graphisoft.com/plans-and-products/archicad/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Interior Design"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "bim-integration"
-    ],
-    "country": "Hungary"
   },
   {
     "id": "t10",
@@ -430,26 +386,6 @@
     "country": "USA"
   },
   {
-    "id": "t15",
-    "name": "Tekla Structures",
-    "slug": "tekla-structures",
-    "short_desc": "Detailed structural BIM software for steel, concrete, and precast construction.",
-    "score": 4.9,
-    "logo_url": "/logos/tekla-structures.png",
-    "official_url": "https://www.tekla.com",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Structural Engineering",
-      "Construction"
-    ],
-    "features": [
-      "bim-integration"
-    ],
-    "country": "Finland"
-  },
-  {
     "id": "t16",
     "name": "MCAD",
     "slug": "mcad",
@@ -504,27 +440,6 @@
       "surface-modeling"
     ],
     "country": "France"
-  },
-  {
-    "id": "t17",
-    "name": "Vectorworks",
-    "slug": "vectorworks",
-    "short_desc": "The all-in-one BIM solution for landscape and entertainment design.",
-    "score": 4.6,
-    "logo_url": "/logos/vectorworks.png",
-    "official_url": "https://www.vectorworks.net",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Landscape",
-      "Entertainment"
-    ],
-    "features": [
-      "bim-integration"
-    ],
-    "country": "USA"
   },
   {
     "id": "t18",
@@ -785,24 +700,6 @@
     ],
     "features": [],
     "country": "International (Open Source)"
-  },
-  {
-    "id": "t27",
-    "name": "Chief Architect",
-    "slug": "chief-architect",
-    "short_desc": "Professional home design software for builders.",
-    "score": 4.8,
-    "logo_url": "/logos/chief-architect.png",
-    "official_url": "https://www.chiefarchitect.com",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Residential Architecture",
-      "Remodeling"
-    ],
-    "features": [],
-    "country": "USA"
   },
   {
     "id": "t28",
@@ -1275,6 +1172,48 @@
     "country": "Estonia"
   },
   {
+    "id": "t41",
+    "name": "KOMPAS-3D",
+    "slug": "kompas-3d",
+    "short_desc": "ASCON’s professional 3D parametric CAD system powered by the C3D geometric kernel with native GOST engineering standards.",
+    "score": 4.4,
+    "logo_url": "/logos/kompas-3d.svg",
+    "official_url": "https://kompas.ru/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Heavy Machinery Manufacturing",
+      "Aerospace & Defense",
+      "Power Engineering",
+      "Industrial Equipment",
+      "Sheet Metal Fabrication"
+    ],
+    "features": [],
+    "country": "Russia"
+  },
+  {
+    "id": "t42",
+    "name": "DesignSpark Mechanical",
+    "slug": "designspark-mechanical",
+    "short_desc": "Free and subscription direct 3D CAD modeling software by RS Components and Ansys for rapid electronics and mechanical prototyping.",
+    "score": 4.4,
+    "logo_url": "/logos/designspark-mechanical.svg",
+    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Electronics & PCB Packaging",
+      "Rapid Prototyping & 3D Printing",
+      "Maker Movement & Education",
+      "Small Mechanical Devices",
+      "Electrical Enclosure Design"
+    ],
+    "features": [],
+    "country": "United Kingdom"
+  },
+  {
     "id": "t42",
     "name": "Eagle",
     "slug": "eagle",
@@ -1294,6 +1233,53 @@
     "country": "USA"
   },
   {
+    "id": "t43",
+    "name": "3DEXPERIENCE",
+    "slug": "3dexperience",
+    "short_desc": "Dassault Systèmes’ unified cloud platform integrating CATIA, SOLIDWORKS, SIMULIA, and ENOVIA for enterprise product lifecycle collaboration.",
+    "score": 4.4,
+    "logo_url": "/logos/3dexperience.svg",
+    "official_url": "https://www.3ds.com/3dexperience",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Aerospace & Defense",
+      "Automotive & Mobility",
+      "Industrial Equipment",
+      "Life Sciences & Medical",
+      "High Tech Electronics"
+    ],
+    "features": [],
+    "country": "France"
+  },
+  {
+    "id": "t44",
+    "name": "MECHCAD",
+    "slug": "mechcad",
+    "short_desc": "Streamlined mechanical 2D/3D CAD software optimized for machine layout drafting, tooling sketches, and standard mechanical parts.",
+    "score": 4.3,
+    "logo_url": "/logos/mechcad.svg",
+    "official_url": "https://cadguide.tools/tools/mechcad",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "General Mechanical Engineering",
+      "Tool and Die Fabrication",
+      "Machine Assembly Shops",
+      "Pneumatics & Hydraulics",
+      "Job Shop Prototyping"
+    ],
+    "features": [
+      "parametric-modeling",
+      "integrated-cam",
+      "simulation-fea",
+      "sheet-metal"
+    ],
+    "country": "Germany"
+  },
+  {
     "id": "t44",
     "name": "Civil 3D",
     "slug": "civil-3d",
@@ -1310,6 +1296,99 @@
     ],
     "features": [],
     "country": "USA"
+  },
+  {
+    "id": "t45",
+    "name": "FabRapid 3D",
+    "slug": "fabrapid-3d",
+    "short_desc": "Agile rapid prototyping and direct 3D modeling tool optimized for quick manufacturing turnaround, CNC fixture setups, and 3D printing.",
+    "score": 4.3,
+    "logo_url": "/logos/fabrapid-3d.svg",
+    "official_url": "https://cadguide.tools/tools/fabrapid-3d",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Rapid Prototyping",
+      "3D Printing & Additive Manufacturing",
+      "CNC Job Shops",
+      "Maker Spaces",
+      "Custom Fabrication"
+    ],
+    "features": [],
+    "country": "International"
+  },
+  {
+    "id": "t46",
+    "name": "Revit",
+    "slug": "revit",
+    "short_desc": "Autodesk’s premier Building Information Modeling (BIM) software for architectural design, structural engineering, and MEP systems coordination.",
+    "score": 4.6,
+    "logo_url": "/logos/revit.svg",
+    "official_url": "https://www.autodesk.com/products/revit/overview",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Commercial Architecture",
+      "Structural Engineering",
+      "MEP Systems Contracting",
+      "Construction Management (BIM/VDC)",
+      "Infrastructure & Civil Facilities"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "bim-integration",
+      "piping-routing"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t47",
+    "name": "ArchiCAD",
+    "slug": "archicad",
+    "short_desc": "Graphisoft’s pioneer architectural BIM software designed by architects for architects, featuring BIMcloud collaboration and native OpenBIM.",
+    "score": 4.6,
+    "logo_url": "/logos/archicad.svg",
+    "official_url": "https://graphisoft.com/solutions/archicad",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architectural Design Studios",
+      "Residential & Commercial Architecture",
+      "Interior Architecture",
+      "Historic Building Preservation",
+      "Urban Design & Master Planning"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "bim-integration"
+    ],
+    "country": "Hungary"
+  },
+  {
+    "id": "t48",
+    "name": "Tekla Structures",
+    "slug": "tekla-structures",
+    "short_desc": "Trimble’s industry-standard structural BIM software for advanced steel detailing, precast and cast-in-place concrete fabrication (LOD 500).",
+    "score": 4.6,
+    "logo_url": "/logos/tekla-structures.svg",
+    "official_url": "https://www.tekla.com/products/tekla-structures",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Structural Steel Fabrication",
+      "Precast Concrete Manufacturing",
+      "Rebar Detailing & Placement",
+      "Bridges & Heavy Civil Infrastructure",
+      "Industrial Plant Construction"
+    ],
+    "features": [
+      "bim-integration"
+    ],
+    "country": "Finland"
   },
   {
     "id": "t48",
@@ -1331,6 +1410,29 @@
   },
   {
     "id": "t49",
+    "name": "Vectorworks",
+    "slug": "vectorworks",
+    "short_desc": "Versatile all-in-one BIM and CAD design software combining flexible 2D graphics, Parasolid 3D modeling, and IFC documentation.",
+    "score": 4.4,
+    "logo_url": "/logos/vectorworks.svg",
+    "official_url": "https://www.vectorworks.net/en-US/architect",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architectural Design Studios",
+      "Interior Architecture & Fit-Out",
+      "Landscape Architecture & Planning",
+      "Entertainment & Stage Production",
+      "Urban Design & Campus Planning"
+    ],
+    "features": [
+      "bim-integration"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t49",
     "name": "DWG TrueView",
     "slug": "dwg-trueview",
     "short_desc": "Official free DWG viewer and converter.",
@@ -1346,6 +1448,27 @@
     ],
     "features": [],
     "country": "USA"
+  },
+  {
+    "id": "t50",
+    "name": "Chief Architect",
+    "slug": "chief-architect",
+    "short_desc": "Professional 3D residential home design, interior remodeling, and timber framing software with automated building elements.",
+    "score": 4.5,
+    "logo_url": "/logos/chief-architect.svg",
+    "official_url": "https://www.chiefarchitect.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Residential Home Building",
+      "Remodeling & Renovation Contractors",
+      "Kitchen & Bath Design",
+      "Interior Architecture",
+      "Timber Frame Construction"
+    ],
+    "features": [],
+    "country": "United States"
   },
   {
     "id": "t53",
@@ -1595,29 +1718,6 @@
     "country": "USA"
   },
   {
-    "id": "t100",
-    "name": "3DEXPERIENCE",
-    "slug": "3dexperience",
-    "short_desc": "Dassault Systèmes' cloud-based collaborative platform that unifies design, engineering, simulation, and manufacturing through virtual twin technology.",
-    "score": 4.3,
-    "logo_url": "/logos/3dexperience.png",
-    "official_url": "https://www.3ds.com/products/3dexperience",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Industrial Equipment",
-      "Consumer Goods",
-      "Life Sciences",
-      "Architecture",
-      "Construction"
-    ],
-    "features": [],
-    "country": "France"
-  },
-  {
     "id": "t101",
     "name": "TopSolid",
     "slug": "topsolid",
@@ -1663,34 +1763,6 @@
     "country": "Germany"
   },
   {
-    "id": "t117",
-    "name": "KOMPAS-3D",
-    "slug": "kompas-3d",
-    "short_desc": "Professional 3D CAD software for mechanical engineering with parametric modeling, solid/surface/sheet metal design, and integrated analysis tools.",
-    "score": 0,
-    "logo_url": "/logos/kompas-3d.png",
-    "official_url": "https://ascon.net/kompas-3d/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Transportation",
-      "Agriculture",
-      "Energy",
-      "Oil & Gas",
-      "Shipbuilding",
-      "Industrial Machinery",
-      "Heavy Equipment",
-      "Rail Transportation",
-      "Metallurgy",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Russia"
-  },
-  {
     "id": "t121",
     "name": "AVEVA E3D Design",
     "slug": "aveva-e3d-design",
@@ -1710,29 +1782,6 @@
       "Petrochemical",
       "Pharmaceutical",
       "Mining"
-    ],
-    "features": [],
-    "country": "UK"
-  },
-  {
-    "id": "t122",
-    "name": "DesignSpark Mechanical",
-    "slug": "designspark-mechanical",
-    "short_desc": "Direct-modelling 3D CAD from RS Group with a free Explorer tier, paid Creator and Engineer tiers, and an integrated manufacturer component library.",
-    "score": 0,
-    "logo_url": "/logos/designspark-mechanical.ico",
-    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Mechanical Engineering",
-      "Rapid Prototyping",
-      "Hobbyist",
-      "Education",
-      "Small Business",
-      "Consumer Electronics"
     ],
     "features": [],
     "country": "UK"
@@ -3615,33 +3664,6 @@
     "country": "Estonia"
   },
   {
-    "id": "t257",
-    "name": "MECHCAD 2026",
-    "slug": "mechcad",
-    "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-    "score": 4.6,
-    "logo_url": "/logos/mechcad.svg",
-    "official_url": "https://www.mechdesigned.com/en/software/mechcad/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Industrial Automation",
-      "Machinery Manufacturing",
-      "Tool & Die",
-      "Sheet Metal",
-      "CNC Machining"
-    ],
-    "features": [
-      "parametric-modeling",
-      "integrated-cam",
-      "simulation-fea",
-      "sheet-metal"
-    ],
-    "country": "Thailand"
-  },
-  {
     "id": "t258",
     "name": "RVT Convert",
     "slug": "rvt-convert",
@@ -3663,28 +3685,6 @@
       "bim-integration",
       "cloud-collaboration"
     ],
-    "country": "United Kingdom"
-  },
-  {
-    "id": "t259",
-    "name": "FabRapid 3D",
-    "slug": "fabrapid-3d",
-    "short_desc": "Free, browser-based WebAssembly 3D & CAD format converter with zero server uploads and 1,600+ conversion pairs.",
-    "score": 4.8,
-    "logo_url": "/logos/fabrapid-3d.svg",
-    "official_url": "https://3d-tools.fabrapid.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "3D Printing",
-      "Mechanical Engineering",
-      "Product Design",
-      "Game Development",
-      "Web3D & AR/VR",
-      "Industrial Automation"
-    ],
-    "features": [],
     "country": "United Kingdom"
   },
   {
