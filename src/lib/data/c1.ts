@@ -209,7 +209,8 @@ export const c1Tools: Tool[] = [
       "PDF",
       "STL",
       "3DM",
-      "3DS"
+      "3DS",
+      "IPT"
     ],
     "file_formats_out": [
       "DWG",
@@ -285,8 +286,8 @@ export const c1Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard",
-        "price": "Contact Sales",
-        "period": "perpetual",
+        "price": "Official Store",
+        "period": "perpetual / floating",
         "features": [
           "DWG, DXF, DWT, DGN, PDF Import & Export",
           "Classic & Ribbon Interfaces, CUI & Tool Palettes",
@@ -299,8 +300,8 @@ export const c1Tools: Tool[] = [
       },
       {
         "name": "Professional",
-        "price": "Contact Sales",
-        "period": "perpetual",
+        "price": "Official Store",
+        "period": "perpetual / floating",
         "features": [
           "Includes All Standard Features",
           "Solid, Mesh & Surface 3D Modeling",
@@ -314,8 +315,8 @@ export const c1Tools: Tool[] = [
       },
       {
         "name": "MFG (Mechanical)",
-        "price": "Contact Sales",
-        "period": "perpetual",
+        "price": "Official Store",
+        "period": "perpetual / floating",
         "features": [
           "Includes All Professional Features",
           "Mechanical Drawing & Construction Tools",
@@ -363,7 +364,7 @@ export const c1Tools: Tool[] = [
     "country": "China",
     "category_id": "c1",
     "pricing_type": "Perpetual",
-    "starting_price": 0,
+    "starting_price": 899,
     "price_period": "one-time",
     "platforms": [
       "Windows"
@@ -407,7 +408,7 @@ export const c1Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.zwsoft.com/product/zwcad",
-    "pricing_url": "https://www.zwsoft.com/inquiry?product=ZWCAD",
+    "pricing_url": "https://www.zwsoft.com/product/zwcad/pricing",
     "trial_url": "https://www.zwsoft.com/product/zwcad/download",
     "affiliate_url": null,
     "score": 4.6,
@@ -428,7 +429,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does ZWCAD cost?",
-        "a": "ZWCAD is available in Standard, Professional, and MFG editions under a Perpetual licensing model. The official international website utilizes a quote-based inquiry system rather than an online retail storefront, with final pricing provided by ZWSOFT sales or local authorized resellers. Check the [Official ZWCAD Inquiry Page](https://www.zwsoft.com/inquiry?product=ZWCAD) for regional pricing. Note: According to ZWSOFT's official site notice, ZWCAD is currently not available in the USA."
+        "a": "ZWCAD is sold in Standard, Professional, and MFG editions under a perpetual licensing model, with standalone and network (floating, NLM) seats available. Current list prices are published on the vendor's own store — regional currency, taxes and reseller quotes vary by country: [Official ZWCAD Pricing Page](https://www.zwsoft.com/product/zwcad/pricing). Note: ZWSOFT states that perpetual licences are not sold in the USA and Canada — buyers there are directed to contact sales; the subscription-based ZWCAD Flex is offered in Canada only."
       },
       {
         "q": "Does ZWCAD offer a free trial?",
@@ -440,7 +441,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Which file formats does ZWCAD support?",
-        "a": "ZWCAD natively reads and writes DWG, DXF, DWT, and DWF. In the Professional edition, it supports importing Revit RVT models (from Revit 2015 through Revit 2025 via the RVTIMPORT command) for underlay viewing and layer management, as well as importing and exporting IFC and importing STEP files."
+        "a": "ZWCAD natively reads and writes DWG, DXF, DWT, and DWF, and imports/exports PDF and DGN. In the Professional edition, it imports Revit RVT models (Revit 2015 through 2025, via the RVTIMPORT command) for underlay viewing, imports and exports IFC, and imports STEP files."
       },
       {
         "q": "What are the best alternatives to ZWCAD?",
@@ -471,8 +472,7 @@ export const c1Tools: Tool[] = [
       "LISP/VBA/.NET/ZRX API Support",
       "Smart Plotting & Annotations",
       "Windows Platform"
-    ],
-    "quote_only": true
+    ]
   },
   {
     "id": "t13",
@@ -852,7 +852,7 @@ export const c1Tools: Tool[] = [
     "slug": "draftsight",
     "logo_url": "/logos/draftsight.png",
     "short_desc": "Professional-grade 2D CAD solution from Dassault Systèmes.",
-    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic blocks, Draw Compare, PDF import, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
+    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic blocks, Draw Compare, PDF import, G-code generation for CNC, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
     "pricing_tiers": [
       {
         "name": "Professional (2D)",
@@ -863,6 +863,7 @@ export const c1Tools: Tool[] = [
           "DWG, DXF & DGN File Support",
           "PDF Import (Convert to DWG)",
           "Draw Compare",
+          "G-Code Generator (2D toolpaths & drill cycles)",
           "Dynamic Block Support & Tool Palettes",
           "AutoLISP & Visual LISP Support",
           "API Support"
@@ -912,6 +913,10 @@ export const c1Tools: Tool[] = [
           },
           {
             "name": "Draw Compare visual revision comparison",
+            "status": true
+          },
+          {
+            "name": "G-Code Generator (CNC 2D toolpaths & drill cycles)",
             "status": true
           }
         ]
@@ -3222,7 +3227,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What operating systems does ARES Commander support?",
-        "a": "ARES Commander runs natively on Windows, macOS, and Linux desktops, while separate companion apps ARES Kudo run in modern web browsers and ARES Touch runs on Android and iOS/iPadOS."
+        "a": "ARES Commander runs natively on Windows, macOS, and Linux desktops, while its companion apps extend beyond the desktop: ARES Kudo runs in modern web browsers, and ARES Touch runs on Android and iOS/iPadOS."
       },
       {
         "q": "Which file formats does ARES Commander support?",
