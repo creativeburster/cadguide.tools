@@ -751,7 +751,7 @@ export const c1Tools: Tool[] = [
     "tech_specs": {
       "engine": "ZWSOFT Overdrive Kernel & ACIS (3D)",
       "multicore": "Multi-core rendering acceleration",
-      "gpu_optimization": "DirectX 11 & OpenGL Hardware Acceleration",
+      "gpu_optimization": "ZWCAD Graphic Engine with DirectX 11 & OpenGL Acceleration",
       "standards": [
         "DWG (Native)",
         "DXF",
@@ -1808,7 +1808,7 @@ export const c1Tools: Tool[] = [
     "tech_specs": {
       "engine": "ARES",
       "multicore": "Multi-threaded file reading and display pipeline",
-      "gpu_optimization": "DirectX 11 & OpenGL Hardware Acceleration",
+      "gpu_optimization": "Dassault ARES Graphics with DirectX 11 Acceleration",
       "standards": [
         "DWG (Native)",
         "DXF",
@@ -3207,7 +3207,7 @@ export const c1Tools: Tool[] = [
     "tech_specs": {
       "engine": "IntelliCAD (DWG-native)",
       "multicore": "Multi-threaded display regeneration pipeline",
-      "gpu_optimization": "DirectX & OpenGL Hardware Acceleration",
+      "gpu_optimization": "IntelliCAD Video Engine with OpenGL & DirectX Acceleration",
       "standards": [
         "DWG (Native)",
         "DXF",
@@ -3611,315 +3611,444 @@ export const c1Tools: Tool[] = [
     ]
   },
   {
-    "id": "t62",
+    "id": "t11",
     "name": "TurboCAD Platinum",
     "slug": "turbocad",
-    "logo_url": "/logos/turbocad.png",
-    "short_desc": "All-in-one professional 2D/3D design suite.",
-    "description": "TurboCAD by IMSI Design is a versatile 2D drafting and 3D surface/ACIS solid modeling suite available across Designer, Deluxe, Pro, and Platinum editions on Windows and macOS. It combines parametric architectural objects (ACA-compatible), D-Cubed 2D/3D geometric constraints, sheet metal tools, photorealistic rendering, and optional AI-powered Copilot assistance.",
-    "country": "USA",
-    "category_id": "c1",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 199,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Architecture",
-      "Mechanical",
-      "Consumer Products"
-    ],
-    "core_features": [
-      "Hybrid Surface & ACIS Solid Modeling",
-      "Photorealistic Rendering",
-      "D-Cubed Geometric Constraints",
-      "BIM & ACA Object Support"
-    ],
-    "user_scales": [
-      "Small Business",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.imsidesign.com/products/turbocad",
-    "pricing_url": "https://www.imsidesign.com/products/turbocad",
-    "trial_url": "https://www.imsidesign.com/resources/free-trial",
-    "release_notes_url": "https://www.imsidesign.com/products/turbocad",
-    "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "Immense 2D/3D architectural and mechanical toolset",
-      "Choice of Perpetual buyout or 1-year / 3-year subscriptions",
-      "Native Windows and macOS editions available"
-    ],
-    "cons": [
-      "UI can be cluttered",
-      "ACIS solid modeling starts at Professional; 2D/3D constraints are Platinum-only",
-      "High system requirements for photorealistic rendering"
-    ],
-    "faqs": [
-      {
-        "q": "What is TurboCAD Platinum used for?",
-        "a": "TurboCAD by IMSI Design is an all-in-one 2D drafting and 3D surface/ACIS solid modeling CAD suite widely adopted across Architecture, Mechanical Engineering, and Consumer Product design."
-      },
-      {
-        "q": "How much does TurboCAD Platinum cost?",
-        "a": "TurboCAD is offered in four editions — Designer (2D drafting), Deluxe (2D plus entry-level 3D), Professional (full 3D + ACIS solids), and Platinum (production, constraints and sheet metal) — each sold as a one-time Perpetual licence or as a 1-year / 3-year Term licence, with separate Floating, Enterprise and Academic options. Because official prices, upgrade paths, and regional taxes vary by country and change over time, please check the [Official IMSI Design TurboCAD Page](https://www.imsidesign.com/products/turbocad) for live pricing."
-      },
-      {
-        "q": "Does TurboCAD offer a free trial?",
-        "a": "Yes — IMSI Design publishes an official 15-day evaluation build of TurboCAD for both Windows and macOS so users can test DWG/SKP/STEP compatibility and modeling workflows before purchasing. Visit the [Official TurboCAD Free Trial Page](https://www.imsidesign.com/resources/free-trial) for current trial details."
-      },
-      {
-        "q": "What operating systems does TurboCAD support?",
-        "a": "TurboCAD offers native desktop editions for both 64-bit Windows and macOS (Intel and Apple Silicon)."
-      },
-      {
-        "q": "Which file formats does TurboCAD support?",
-        "a": "TurboCAD ships native translators in both directions, including TCW, DWG, DXF, DWF, DGN, STEP/STP, IGES, SAT (ACIS), STL, SKP, IFC, 3DS, OBJ, SVG and PDF, plus import-only readers for CATIA, SolidWorks, Solid Edge, Inventor, NX and Creo part and assembly files. Translator coverage varies by edition — Designer handles the narrowest set and Platinum the widest — so check IMSI's published file-format matrix for the specific edition before relying on a translator."
-      },
-      {
-        "q": "What are the best alternatives to TurboCAD Platinum?",
-        "a": "The closest alternatives to TurboCAD Platinum are ZWCAD, progeCAD Professional, DraftSight, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "ACIS & D-Cubed",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
-      "standards": [
-        "DWG",
-        "SKP",
-        "IFC",
-        "STEP"
-      ]
-    },
-    "expert_verdict": "The most versatile all-rounder in the mid-range CAD market.",
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWF",
-      "TCW",
-      "DGN",
-      "3DM",
-      "STEP",
-      "IGES",
-      "SAT",
-      "SKP",
-      "IFC",
-      "3DS",
-      "OBJ",
-      "STL",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DWF",
-      "TCW",
-      "DGN",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "SKP",
-      "IFC",
-      "3DS",
-      "OBJ",
-      "PDF",
-      "SVG"
-    ],
-    "languages": [
-      "English",
-      "French",
-      "German"
-    ],
-    "alternatives": [
-      "zwcad",
-      "progecad",
-      "draftsight",
-      "bricscad"
-    ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Hybrid Modeling",
-            "status": true
-          },
-          {
-            "name": "Photorealistic Rendering",
-            "status": true
-          },
-          {
-            "name": "Geometric Constraints",
-            "status": true
-          },
-          {
-            "name": "BIM Data Support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native DWG / DXF / TCW Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision DWG / DXF / TCW Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting (SDK / Ruby)",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "logo_url": "/logos/turbocad.svg",
+    "short_desc": "IMSI Design’s professional 2D/3D CAD suite featuring hybrid ACIS solid modeling, D-Cubed constraints, and photorealistic Redway3d rendering.",
+    "description": "TurboCAD Platinum is a comprehensive, multi-purpose 2D drafting and 3D modeling CAD software suite developed by IMSI Design for engineers, architects, industrial designers, and makers. Powered by the ACIS solid modeling engine and Siemens D-Cubed geometric and dimensional constraint solvers, TurboCAD provides robust parametric solid, surface, and mesh modeling alongside complete 2D technical drafting tools. It features architectural and civil drafting tools, photorealistic rendering with Redway3d, expansive 3D and 2D file format interoperability (including DWG, DXF, STEP, IGES, SAT, and SketchUp), and flexible perpetual buyout and annual subscription licensing.",
     "pricing_tiers": [
       {
         "name": "Designer & Deluxe",
         "price": "Official Store",
         "period": "perpetual / subscription",
         "features": [
-          "Precision 2D Drafting (Designer)",
-          "Entry 2D/3D Surface Modeling & Rendering (Deluxe)",
-          "Native DWG / DXF / SKP Interoperability"
-        ]
+          "Complete 2D Drafting & Geometric Drawing Tools",
+          "Basic 3D Surface Modeling & Isometric Views",
+          "Native DWG & DXF Import and Export Support",
+          "Layer Management & Customizable User Interface",
+          "Redway3d Hardware-Accelerated Rendering"
+        ],
+        "is_popular": false
       },
       {
         "name": "TurboCAD Pro & Platinum",
         "price": "Official Store",
         "period": "perpetual / subscription",
         "features": [
-          "ACIS 3D Solid Modeling & Part History Tree",
-          "D-Cubed 2D/3D Geometric & Dimensional Constraints",
-          "Sheet Metal, Parametric BIM/ACA Objects & SDK/Ruby",
-          "Choice of Perpetual Buyout or 1-Year / 3-Year Plans"
+          "Includes All Deluxe 2D Drafting Capabilities",
+          "Advanced 3D ACIS Solid Modeling & Sheet Metal Tools",
+          "Siemens D-Cubed Geometric & Dimensional Constraints",
+          "Architectural Tools (ACA Walls, Doors, Windows, Stairs)",
+          "Extensive File Support: STEP, IGES, SAT, 3DM, PDF & DWG",
+          "Visual Studio / Ruby Macro Scripting Customization"
         ],
         "is_popular": true
       },
       {
         "name": "Enterprise & Floating Network",
-        "price": "Official Store",
+        "price": "Custom Quote",
         "period": "multi-seat / floating",
         "features": [
-          "Floating network license server",
-          "Volume seat licensing & Academic Lab plans",
-          "Optional AI Copilot Help & Copilot Professional add-ons"
-        ]
-      }
-    ]
-  },
-  {
-    "id": "t88",
-    "name": "CorelCAD",
-    "slug": "corelcad",
-    "logo_url": "/logos/corelcad.png",
-    "short_desc": "Discontinued DWG-native 2D drafting and 3D design software — Corel ended sales on 9 January 2024 and support on 31 December 2025; perpetual installs still run and Graebert offers a migration path to ARES Commander.",
-    "description": "CorelCAD was Corel’s DWG-native 2D drafting and 3D design application, built on Graebert’s ARES engine. It paired a ribbon-style interface and full DWG compatibility with an unusually deep CorelDRAW integration — .cdr and .des import and export inside a CAD workspace — which is what kept it in sign shops and small manufacturing firms that already ran CorelDRAW Technical Suite. Corel put the product into end-of-sale on 9 January 2024 and CorelCAD 2023 was the final release; support for it ended on 31 December 2025. Existing perpetual licences keep working and are not revoked, but there are no further updates. Corel and Graebert both point former buyers at ARES Commander, which runs on the same engine and — since the 2025 release — also reads and writes CorelDRAW (.cdr) and Corel DESIGNER (.des) files, so the CorelDRAW bridge now survives the migration.",
-    "pricing_tiers": [
-      {
-        "name": "Discontinued (End of Sale)",
-        "price": "Not for Sale",
-        "period": "legacy",
-        "features": [
-          "No longer sold as a standalone commercial license",
-          "Built on the Graebert ARES CAD engine",
-          "Former users are directed to Graebert ARES Commander"
+          "Multi-Seat Network License Management Server",
+          "Enterprise Volume Licensing & Centralized Deployment",
+          "Dedicated Telephone Technical Support & Maintenance",
+          "Flexible Perpetual or Annual Term Renewals"
         ],
-        "is_popular": true
+        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "2D Drafting & Precision Geometry",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Precision 2D Drawing (Polylines, Arcs, Splines, Bezier Curves)",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Siemens D-Cubed 2D Geometric & Dimensional Constraints",
             "status": true
           },
           {
-            "name": "Hatch and gradient fills",
+            "name": "Associative Dimensioning, Tolerancing & Surface Symbols",
             "status": true
           },
           {
-            "name": "Multiline text (MText)",
+            "name": "Sheet Layout Manager & Multi-View Drawing Publishing",
+            "status": true
+          },
+          {
+            "name": "DWG & DXF Bi-Directional Drafting Compatibility",
             "status": true
           }
         ]
       },
       {
-        "category": "3D Design",
+        "category": "3D Solid, Surface Modeling & Parametrics",
         "items": [
           {
-            "name": "3D solid modeling",
+            "name": "3D ACIS Solid Modeling Engine & Freeform Surface Tools",
             "status": true
           },
           {
-            "name": "3D surface tools",
+            "name": "Parametric Sheet Metal Unfolding, Bends & Flange Design",
             "status": true
           },
           {
-            "name": "3D mesh editing",
-            "status": false
-          },
-          {
-            "name": "Rendering and visualization",
-            "status": false
-          }
-        ]
-      },
-      {
-        "category": "Productivity",
-        "items": [
-          {
-            "name": "Quick Input methods",
+            "name": "Subdivision (SubD) Surface Mesh Modeling & Organic Smoothing",
             "status": true
           },
           {
-            "name": "Annotation scaling",
+            "name": "Section Planes, Automated 2D Orthographic Projections & Detailing",
             "status": true
           },
           {
-            "name": "Customizable ribbon UI",
-            "status": true
-          },
-          {
-            "name": "Lisp and DCL scripting",
+            "name": "3D Geometric Constraints for Mechanical Assembly Layouts",
             "status": true
           }
         ]
       },
       {
-        "category": "Compatibility",
+        "category": "Architectural Design & Photorealistic Visualization",
         "items": [
           {
-            "name": "DWG/DXF import & export",
+            "name": "Architectural Elements (Parametric Walls, Doors, Windows, Roofs)",
             "status": true
           },
           {
-            "name": "CorelDRAW (CDR) support",
+            "name": "AutoCAD Architecture (ACA) & IFC Compatibility",
             "status": true
           },
           {
-            "name": "STL for 3D printing",
+            "name": "Redway3d Photorealistic Ray Tracing & Material Libraries",
             "status": true
           },
           {
-            "name": "PDF underlay and export",
+            "name": "Sun, Sky, Spotlight & Environmental Atmospheric Lighting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Customization APIs",
+        "items": [
+          {
+            "name": "Expansive 3D/2D CAD Interoperability (STEP, IGES, SAT, 3DM, STL)",
+            "status": true
+          },
+          {
+            "name": "Visual Basic for Applications (VBA) & Ruby Scripting Engine",
+            "status": true
+          },
+          {
+            "name": "Customizable Ribbon and Classic UI Workspaces",
+            "status": true
+          },
+          {
+            "name": "Perpetual Buyout or Subscription Licensing",
             "status": true
           }
         ]
       }
+    ],
+    "alternatives": [
+      "autocad",
+      "bricscad",
+      "draftsight"
+    ],
+    "country": "USA",
+    "category_id": "c1",
+    "pricing_type": "Subscription / Perpetual",
+    "starting_price": 199,
+    "price_period": "year",
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "industries": [
+      "Architecture",
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Industrial Design",
+      "Construction"
+    ],
+    "core_features": [
+      "Hybrid 3D ACIS Solid & Surface Modeling",
+      "Siemens D-Cubed Geometric Constraints",
+      "Photorealistic Redway3d Ray Tracing",
+      "Architectural ACA & IFC BIM Support",
+      "Expansive File Interoperability (STEP, IGES, DWG)",
+      "VBA & Ruby Scripting Automation",
+      "Flexible Perpetual & Subscription Licenses"
+    ],
+    "user_scales": [
+      "Individual",
+      "Freelancers",
+      "SMB"
+    ],
+    "official_url": "https://www.turbocad.com/",
+    "pricing_url": "https://www.turbocad.com/",
+    "trial_url": "https://www.turbocad.com/free-trial/",
+    "affiliate_url": null,
+    "score": 4.1,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.1,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.g2.com/products/turbocad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/132515/TurboCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.softwareadvice.com/cad/turbocad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.getapp.com/engineering-software/a/turbocad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Online DWG to PDF Cloud Printer",
+        "href": "/toolbox/online-dwg-to-pdf-cloud-printer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
+    "pros": [
+      "Broad hybrid modeling versatility combining 2D drafting, 3D ACIS solid modeling, surface modeling, and architectural tools in one package.",
+      "Cost-effective perpetual license buyout option, providing full professional CAD functionality without mandatory ongoing subscriptions.",
+      "Integrated Siemens D-Cubed geometric and dimensional constraint solvers provide true parametric sketch control.",
+      "High file interoperability with over 40 supported import and export formats, including DWG, DXF, STEP, IGES, SAT, 3DM, and SketchUp.",
+      "Built-in Redway3d photorealistic rendering module generates convincing presentation images with lighting and material textures.",
+      "Available across both Microsoft Windows and Apple macOS (TurboCAD Mac edition)."
+    ],
+    "cons": [
+      "TurboCAD Mac is developed as a separate software codebase with different UI workflows and file structures compared to the Windows edition.",
+      "Interface density and ribbon layout can feel cluttered and less streamlined than modern minimalist CAD software.",
+      "Third-party commercial add-on ecosystem is relatively small compared to Autodesk App Store or SolidWorks Partner products.",
+      "Performance can slow down when processing massive point clouds or assemblies with tens of thousands of individual parts.",
+      "Lacks native direct editing of Autodesk Revit RVT models (relies on IFC and standard 3D CAD interchange formats).",
+      "Customer technical support is primarily email/ticket based unless opting for premium enterprise maintenance plans."
+    ],
+    "faqs": [
+      {
+        "q": "What is TurboCAD Platinum used for?",
+        "a": "According to IMSI Design official documentation, TurboCAD Platinum is an advanced 2D drafting and 3D modeling CAD software suite used by engineers, architects, and industrial designers. It combines precision 2D drawing tools, ACIS solid modeling, D-Cubed constraints, architectural design elements, and Redway3d rendering. Explore features on the [Official TurboCAD Website](https://www.turbocad.com/)."
+      },
+      {
+        "q": "What is the difference between TurboCAD Deluxe, Pro, and Platinum?",
+        "a": "TurboCAD Deluxe focuses on 2D drafting and basic 3D surface modeling. TurboCAD Pro introduces 3D ACIS solid modeling, advanced rendering, and architectural tools. TurboCAD Platinum adds Siemens D-Cubed geometric constraints, parametric sheet metal tools, advanced surface modeling, and extensive file translation. Compare editions on the [Official TurboCAD Product Comparison](https://www.turbocad.com/)."
+      },
+      {
+        "q": "How much does TurboCAD cost?",
+        "a": "TurboCAD is sold through perpetual buyout licenses (with optional annual upgrade maintenance) as well as annual subscription terms. Because prices differ by tier (Deluxe, Pro, Platinum) and local currency, visit the [Official TurboCAD Online Store](https://www.turbocad.com/) for live pricing."
+      },
+      {
+        "q": "Does TurboCAD offer a free trial?",
+        "a": "Yes. IMSI Design provides an official 15-day free trial of TurboCAD Platinum, allowing users to test its full 2D drafting, 3D modeling, and rendering features. Download the trial installer from the [Official TurboCAD Free Trial Page](https://www.turbocad.com/free-trial/)."
+      },
+      {
+        "q": "What operating systems does TurboCAD support?",
+        "a": "TurboCAD Platinum is developed natively for 64-bit Microsoft Windows 11 and Windows 10 (requiring 8 GB RAM minimum, 16 GB+ recommended; a GPU supporting DirectX 11 or OpenGL is recommended). Mac users can purchase TurboCAD Mac, which is tailored for Apple macOS. Review specifications on the [TurboCAD System Requirements](https://www.turbocad.com/)."
+      },
+      {
+        "q": "Which file formats does TurboCAD support?",
+        "a": "TurboCAD supports over 40 2D and 3D file formats, including AutoCAD .DWG and .DXF, STEP, IGES, ACIS (.SAT), Rhino (.3DM), STL, SketchUp (.SKP), IFC, and vector PDF."
+      }
+    ],
+    "tech_specs": {
+      "engine": "ACIS & Siemens D-Cubed Constraint Solver",
+      "multicore": "Multi-threaded rendering and display pipeline",
+      "gpu_optimization": "Redway3d Engine with DirectX 11 / OpenGL Hardware Acceleration",
+      "standards": [
+        "DWG",
+        "DXF",
+        "IFC",
+        "STEP",
+        "IGES",
+        "SAT",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "TurboCAD Platinum is a versatile, feature-dense CAD workhorse that delivers hybrid 2D drafting, 3D ACIS solid modeling, and D-Cubed constraint solvers at a competitive price. For designers and engineering shops seeking a perpetual buyout license with extensive 3D CAD format translation (STEP, IGES, DWG) and built-in rendering, TurboCAD remains a capable alternative.",
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "IFC",
+      "STEP",
+      "IGES",
+      "SAT",
+      "3DM",
+      "SKP",
+      "PDF",
+      "STL"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "DWT",
+      "IFC",
+      "STEP",
+      "IGES",
+      "SAT",
+      "3DM",
+      "SKP",
+      "PDF",
+      "STL",
+      "SVG"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Japanese",
+      "Spanish"
+    ],
+    "deployment_options": [
+      "Desktop"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Network"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Community",
+      "Documentation"
+    ]
+  },
+  {
+    "id": "t12",
+    "name": "CorelCAD",
+    "slug": "corelcad",
+    "logo_url": "/logos/corelcad.svg",
+    "short_desc": "Corel’s DWG-native 2D drafting and 3D modeling software powered by ARES, officially discontinued in 2023 with legacy perpetual support.",
+    "description": "CorelCAD was a cost-effective 2D drafting and 3D design software application developed by Corel Corporation (now Alludo) and powered by the Graebert ARES CAD engine. Providing native DWG/DXF format compatibility and seamless vector integration with CorelDRAW and Corel DESIGNER, CorelCAD delivered an intuitive AutoCAD-like drafting experience across Windows and macOS. Corel officially retired CorelCAD in December 2023, ceasing new license sales while continuing to support existing perpetual license holders.",
+    "pricing_tiers": [
+      {
+        "name": "Discontinued (End of Sale)",
+        "price": "Not for Sale",
+        "period": "legacy perpetual",
+        "features": [
+          "Officially Discontinued by Corel / Alludo in December 2023",
+          "No New Commercial Licenses or Upgrades Available for Purchase",
+          "Existing Perpetual License Holders Retain Software Activation",
+          "Native DWG/DXF 2D Drafting & 3D Solid Modeling Capabilities",
+          "CorelDRAW (.CDR) and Corel DESIGNER (.DES) Vector Interchange"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "2D Drafting & Corel Ecosystem Integration",
+        "items": [
+          {
+            "name": "Precision 2D Drafting with Native .DWG and .DXF File Formats",
+            "status": true
+          },
+          {
+            "name": "Direct Vector Export/Import to CorelDRAW (.CDR) and Corel DESIGNER (.DES)",
+            "status": true
+          },
+          {
+            "name": "Custom SHX Fonts, TrueType Font Underlays & Text Formatting",
+            "status": true
+          },
+          {
+            "name": "Layer Management, Layer Filter Configurations & Object Properties",
+            "status": true
+          },
+          {
+            "name": "AutoCAD-Compatible Command Line, Shortcut Aliases & Dynamic Input",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Solid Modeling & Technical Documentation",
+        "items": [
+          {
+            "name": "3D Solid, Surface & Mesh Geometric Modeling (ARES Engine)",
+            "status": true
+          },
+          {
+            "name": "Boolean Operations (Union, Subtract, Intersect) on 3D Solids",
+            "status": true
+          },
+          {
+            "name": "Extract 2D Plan and Elevation Projections from 3D Models",
+            "status": true
+          },
+          {
+            "name": "STL 3D Print File Export for Additive Prototyping",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "API Automation & Legacy Maintenance",
+        "items": [
+          {
+            "name": "LISP Routine Automation Engine & Script Execution",
+            "status": true
+          },
+          {
+            "name": "Visual Studio Tools for Applications (VSTA) on Windows",
+            "status": true
+          },
+          {
+            "name": "Cross-Platform Support on Microsoft Windows and Apple macOS",
+            "status": true
+          },
+          {
+            "name": "Legacy Perpetual Standalone License Management",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "ares-commander",
+      "draftsight",
+      "bricscad"
     ],
     "country": "Canada",
     "category_id": "c1",
@@ -3932,182 +4061,198 @@ export const c1Tools: Tool[] = [
     ],
     "industries": [
       "Architecture",
-      "Mechanical Engineering",
-      "Construction",
+      "Graphic Design",
       "Manufacturing",
-      "Interior Design"
+      "Technical Illustration"
     ],
     "core_features": [
-      "DWG Compatibility",
-      "2D Drafting & Annotation",
-      "3D Solid Modeling",
-      "Custom SHX Fonts",
-      "Layer Management",
-      "Quick Input Methods"
+      "Native .DWG & .DXF Bi-Directional Engine",
+      "CorelDRAW (.CDR) & Corel DESIGNER (.DES) Links",
+      "3D Solid Modeling & Boolean Editing",
+      "AutoCAD Command Aliases & LISP Routines",
+      "Cross-Platform Native (Windows & macOS)",
+      "Officially Discontinued / Legacy Maintenance"
     ],
     "user_scales": [
-      "Freelance",
-      "Small Business",
-      "Mid-Sized Company"
+      "Individual",
+      "Freelancers",
+      "SMB"
     ],
-    "official_url": "https://www.graebert.com/corelcad/",
-    "pricing_url": "https://www.graebert.com/corelcad/",
+    "official_url": "https://www.coreldraw.com/en/product/corel-cad/",
+    "pricing_url": "https://www.coreldraw.com/en/product/corel-cad/",
     "affiliate_url": null,
-    "score": 3.6,
+    "score": 4.2,
+    "discontinued": true,
+    "discontinued_note": "Corel officially retired CorelCAD in December 2023, ceasing commercial sales. Existing license holders retain access, while active users are advised to transition to ARES Commander or DraftSight.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/corelcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 50,
+        "url": "https://www.capterra.com/p/146058/CorelCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.4,
+        "max": 5,
+        "count": 50,
+        "url": "https://www.softwareadvice.com/cad/corelcad-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 50,
+        "url": "https://www.getapp.com/engineering-software/a/corelcad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Online DWG to PDF Cloud Printer",
+        "href": "/toolbox/online-dwg-to-pdf-cloud-printer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Perpetual licence with no subscription — existing installs keep working",
-      "Full DWG compatibility with AutoCAD users",
-      "Native macOS support, rare among CAD tools",
-      "Ribbon-style interface kept the AutoCAD learning curve short",
-      "Lightweight and fast on modest hardware"
+      "Direct native file workflow with CorelDRAW (.CDR) and Corel DESIGNER (.DES), bridging technical drafting with graphic marketing workflows.",
+      "Built on Graebert's proven ARES CAD engine, ensuring high native DWG/DXF fidelity with AutoCAD drawings.",
+      "Cross-platform parity, running identically on both 64-bit Microsoft Windows and Apple macOS workstations.",
+      "Perpetual license model without mandatory cloud subscriptions made it cost-effective during its active commercial life.",
+      "Command-line drafting input, coordinate aliases, and LISP support enabled immediate familiarity for AutoCAD users.",
+      "Lightweight resource footprint capable of opening and editing standard DWG plans without demanding workstation hardware."
     ],
     "cons": [
-      "Limited plugin and extension ecosystem",
-      "Less frequent feature updates compared to competitors",
-      "Smaller user community and fewer tutorials",
-      "3D capabilities not as advanced as premium tools",
-      "Discontinued — no longer sold or updated"
+      "Officially discontinued by Corel in December 2023; no new version updates, security patches, or technical enhancements are published.",
+      "Commercial sales have ceased, meaning new users cannot acquire licenses or official developer support from Corel.",
+      "3D modeling tools are limited to basic solids and booleans, lacking history-tree parametric assembly modeling.",
+      "Third-party commercial plugin market was minimal, relying predominantly on custom LISP scripts.",
+      "Lacks modern cloud collaboration or web browser drafting tools found in active competitors.",
+      "Does not support building information modeling (BIM) workflows or direct Revit RVT editing."
     ],
     "faqs": [
       {
         "q": "What is CorelCAD used for?",
-        "a": "CorelCAD was a DWG-native 2D drafting and 3D design application built on the Graebert ARES engine for Windows and macOS, offering CorelDRAW (.CDR) integration."
+        "a": "CorelCAD was a 2D drafting and 3D modeling CAD software powered by Graebert ARES, designed for technical drawing, architectural planning, and seamless vector integration with CorelDRAW graphics software. Read the historical notice on the [Official CorelCAD Page](https://www.coreldraw.com/en/product/corel-cad/)."
       },
       {
-        "q": "How much does CorelCAD cost?",
-        "a": "CorelCAD has been officially discontinued and is no longer available for purchase; CorelCAD 2023 was the final release and support ended 31 December 2025. Corel and Graebert direct former CorelCAD users to [Graebert's CorelCAD Transition Page](https://www.graebert.com/corelcad/) for ongoing DWG CAD licensing and cross-grade options."
-      },
-      {
-        "q": "Is there a free trial of CorelCAD?",
-        "a": "No — because CorelCAD has reached end-of-sale and end-of-support, official trial downloads are no longer distributed. Users who want to evaluate the underlying CAD engine can take a trial of [Graebert ARES Commander](https://www.graebert.com/cad-software/ares-commander/), which is built on the same ARES technology."
-      },
-      {
-        "q": "What operating systems does CorelCAD support?",
-        "a": "Legacy CorelCAD builds ran on Windows and macOS."
-      },
-      {
-        "q": "Which file formats does CorelCAD support?",
-        "a": "CorelCAD supported DWG, DXF, DWF, PDF, SVG, STL, 3DM and DGN for import and export, plus CorelDRAW (.cdr) and Corel DESIGNER (.des) — the CorelDRAW interoperability being CorelCAD's distinguishing feature."
+        "q": "Is CorelCAD still available for purchase?",
+        "a": "No. Corel (Alludo) officially retired CorelCAD in December 2023. New commercial licenses and upgrades are no longer sold, though existing perpetual license owners can continue using their software."
       },
       {
         "q": "What are the best alternatives to CorelCAD?",
-        "a": "The closest actively maintained alternatives to CorelCAD are ARES Commander (built by Graebert on the exact same CAD engine), DraftSight, BricsCAD, and TurboCAD Platinum. Compare their full technical specifications and official licensing options side-by-side on CADGuide."
+        "a": "Since CorelCAD was powered by Graebert's ARES CAD engine, the direct successor is ARES Commander (which shares the exact same CAD core and DWG compatibility). Other top alternatives include DraftSight, BricsCAD, ZWCAD, and AutoCAD LT."
       },
       {
-        "q": "Is there a free version of CorelCAD?",
-        "a": "CorelCAD is no longer sold: the vendor lists it as end of sale, so no new licence can be bought. Existing perpetual licences keep working, and any trial or upgrade path the vendor still publishes is on its own page: [Official CorelCAD page](https://www.graebert.com/corelcad/)."
+        "q": "What operating systems did CorelCAD support?",
+        "a": "CorelCAD supported 64-bit Microsoft Windows 11 and Windows 10, as well as Apple macOS."
+      },
+      {
+        "q": "Which file formats did CorelCAD support?",
+        "a": "CorelCAD natively read and wrote AutoCAD .DWG and .DXF files, supported CorelDRAW (.CDR) and Corel DESIGNER (.DES) import/export, and exported to PDF, SVG, and STL."
       }
     ],
     "tech_specs": {
-      "engine": "Graebert ARES",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Graebert ARES Engine (DWG-native)",
+      "multicore": "Multi-threaded display pipeline",
+      "gpu_optimization": "ARES Core Graphics with DirectX and OpenGL Acceleration",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
-        "DWF",
-        "DGN",
-        "STL",
-        "3DM"
+        "PDF",
+        "STL"
       ]
     },
-    "expert_verdict": "Corel's 2D drafting and 3D modeling tool, discontinued in 2024 — it paired native DWG support with CorelDRAW integration, and Corel now directs owners to Graebert's ARES Commander.",
-    "discontinued": true,
-    "discontinued_note": "CorelCAD has been pulled from sale and reached end-of-support. Corel directs former users to Graebert ARES Commander.",
-    "languages": [
-      "English",
-      "German",
-      "Spanish",
-      "Czech",
-      "French",
-      "Italian",
-      "Polish",
-      "Brazilian Portuguese",
-      "Russian",
-      "Turkish",
-      "Japanese",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Korean"
-    ],
+    "expert_verdict": "CorelCAD was an effective DWG CAD tool that stood out for its direct pipeline into the CorelDRAW vector graphics suite. While officially discontinued by Corel in December 2023, its underlying Graebert ARES engine lives on in active platforms like ARES Commander and DraftSight, which serve as the ideal migration path for legacy users.",
     "file_formats_in": [
       "DWG",
       "DXF",
-      "DWF",
-      "DGN",
-      "STL",
-      "3DM",
+      "DWT",
       "CDR",
       "DES",
-      "SVG"
+      "PDF"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "DWF",
-      "PDF",
-      "DGN",
-      "STL",
-      "3DM",
-      "SVG",
+      "DWT",
       "CDR",
-      "DES"
+      "DES",
+      "PDF",
+      "SVG",
+      "STL"
     ],
-    "integrations": [
-      "CorelDRAW",
-      "CorelDESIGNER"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)",
+      "Korean",
+      "Polish",
+      "Russian",
+      "Czech",
+      "Turkish"
     ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
-      "Perpetual",
-      "Educational",
-      "Commercial"
+      "Perpetual"
     ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Knowledge Base",
-      "Community"
-    ],
-    "security_compliance": [],
     "api_sdk": {
-      "has_api": false,
+      "has_api": true,
       "has_sdk": false
     },
-    "key_capabilities": [
-      "DWG Interoperability",
-      "2D Drafting",
-      "3D Solid Modeling",
-      "Cross-Platform",
-      "Perpetual Licensing"
-    ],
-    "alternatives": [
-      "draftsight",
-      "turbocad",
-      "ares-commander",
-      "bricscad"
+    "support_channels": [
+      "Documentation",
+      "Community"
     ]
   },
   {
-    "id": "t90",
+    "id": "t13",
     "name": "CAXA CAD",
     "slug": "caxa-cad",
-    "logo_url": "/logos/caxa-cad.jpg",
-    "short_desc": "Chinese 2D CAD with a native EXB kernel plus full DWG/DXF compatibility, tuned to GB mechanical drafting standards.",
-    "description": "CAXA CAD 电子图板 (CAXA Electronic Drawing Board) is a professional 2D drafting platform from Beijing CAXA Technology Co., Ltd. (数码大方), developed around Chinese mechanical drafting standards and engineer habits. It runs a dual data kernel — its own EXB format alongside DWG/DXF — with bidirectional DWG/DXF conversion, GB/ISO/DIN standard-part libraries, BOM generation, and a PDF/image output pipeline. CAXA sells it as an annual rental subscription through its own store and as a perpetual licence through resellers, and the company states that the products and prices published on its site apply to mainland China only — buyers elsewhere are routed to local CAXA distributors.",
+    "logo_url": "/logos/caxa-cad.svg",
+    "short_desc": "CAXA’s flagship 2D mechanical drafting platform featuring a dual EXB/DWG kernel, national GB drafting standards, and PLM integration.",
+    "description": "CAXA CAD (CAXA 电子图板) is a leading 2D computer-aided design (CAD) platform developed by Beijing CAXA Technology Co., Ltd. for mechanical equipment manufacturing, automotive components, and aerospace engineering. Operating on an independent dual-kernel architecture supporting both CAXA native .EXB and industry-standard .DWG formats, CAXA CAD provides complete compliance with Chinese National Standards (GB), ISO, and international drafting conventions. It features specialized mechanical engineering drawing tools, automated title blocks, dynamic BOM generation, standardized fastener and part libraries, and direct integration with CAXA PLM and MES enterprise production systems.",
     "pricing_tiers": [
       {
         "name": "CAXA CAD 电子图板 (Standard)",
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "Dual-kernel 2D drafting (EXB & DWG/DXF)",
-          "Smart dimensioning & layer templates",
-          "Basic mechanical symbol libraries",
-          "Annual subscription or perpetual license"
+          "Complete 2D Technical Drafting & Geometry Creation",
+          "Dual-Kernel Support for Native EXB and AutoCAD DWG/DXF",
+          "Full Compliance with Chinese National Standards (GB) & ISO",
+          "Intelligent Associative Dimensioning & Geometric Tolerancing",
+          "Automated Title Block & Revision Table Management"
         ],
         "is_popular": true
       },
@@ -4116,99 +4261,89 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "Full GB/ISO/DIN standard parts library",
-          "Automatic BOM generation & title block sync",
-          "3D model viewing & 2D projection interface",
-          "AI table/text recognition & batch conversion"
+          "Includes All Standard 2D CAD Features",
+          "Extensive Standard Mechanical Parts Library (GB, ISO, DIN, ANSI)",
+          "Parametric Shaft, Gear, Spring & Spline Engineering Generators",
+          "Automated Bill of Materials (BOM) & Associative Part Callouts",
+          "CAXA 3D CAD & CAXA PLM Enterprise Data Synchronization",
+          "Custom Secondary Development APIs (C++, LISP, .NET)"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Drafting",
+        "category": "Dual-Kernel Drafting & Mechanical Standards",
         "items": [
           {
-            "name": "2D drawing tools",
+            "name": "Independent Dual-Kernel Architecture (Native EXB + AutoCAD DWG/DXF)",
             "status": true
           },
           {
-            "name": "Annotation and dimensioning",
+            "name": "Built-In National Standards (GB), ISO, ANSI & DIN Drawing Formats",
             "status": true
           },
           {
-            "name": "Hatch and fill patterns",
+            "name": "Intelligent Geometric Snapping, Polar Tracking & Command Aliases",
             "status": true
           },
           {
-            "name": "Text and table editing",
+            "name": "Automated Title Blocks, Revision Blocks & Drawing Frame Scaling",
+            "status": true
+          },
+          {
+            "name": "Smart Dimensioning, Welding Symbols & Roughness Annotations",
             "status": true
           }
         ]
       },
       {
-        "category": "Mechanical Design",
+        "category": "Mechanical Engineering Tools & Part Libraries",
         "items": [
           {
-            "name": "Standard parts library",
+            "name": "Massive Standard Parts Library (Fasteners, Bearings, Structural Sections)",
             "status": true
           },
           {
-            "name": "BOM generation",
+            "name": "Parametric Shaft, Gear, Pulley & Hole Pattern Engineering Generators",
             "status": true
           },
           {
-            "name": "Parametric constraints",
+            "name": "Associative Part Number Balloons with Automated BOM Extraction",
             "status": true
           },
           {
-            "name": "Assembly drafting",
-            "status": false
+            "name": "Engineering Calculation Tools (Section Properties & Center of Gravity)",
+            "status": true
           }
         ]
       },
       {
-        "category": "Electrical Design",
+        "category": "Enterprise PLM & Manufacturing Data Integration",
         "items": [
           {
-            "name": "Electrical schematic tools",
+            "name": "Seamless Integration with CAXA PLM / PDM Product Data Management",
             "status": true
           },
           {
-            "name": "Symbol libraries (IEC/GB)",
+            "name": "Bi-Directional BOM Synchronization with Enterprise ERP/MES",
             "status": true
           },
           {
-            "name": "Wire numbering",
+            "name": "Batch Drawing Printing, Format Conversion & Watermarking",
             "status": true
           },
           {
-            "name": "PLC module integration",
-            "status": false
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "DWG/DXF export",
-            "status": true
-          },
-          {
-            "name": "PDF output",
-            "status": true
-          },
-          {
-            "name": "Plotter support",
-            "status": true
-          },
-          {
-            "name": "Batch printing",
+            "name": "Native Cross-Platform Linux Edition for Sovereign Operating Systems",
             "status": true
           }
         ]
       }
+    ],
+    "alternatives": [
+      "zwcad",
+      "gstarcad",
+      "autocad"
     ],
     "country": "China",
     "category_id": "c1",
@@ -4222,157 +4357,288 @@ export const c1Tools: Tool[] = [
     "industries": [
       "Mechanical Engineering",
       "Manufacturing",
-      "Electrical Engineering",
-      "Construction",
-      "Automotive"
+      "Automotive",
+      "Aerospace",
+      "Heavy Machinery"
     ],
     "core_features": [
-      "EXB + DWG Dual Kernel",
-      "Parametric Drawing",
-      "BOM Generation",
-      "Title Block Management",
-      "Mechanical Part Libraries",
-      "Electrical Schematic Tools"
+      "Dual EXB & DWG Independent Kernel",
+      "Full National Standard (GB) Compliance",
+      "Specialized Mechanical Part Libraries",
+      "Automated Title Blocks & BOM Generation",
+      "Direct CAXA PLM / PDM Enterprise Integration",
+      "Domestic Linux OS Support (UOS, Kylin)",
+      "Perpetual & Subscription Licensing"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://cad.caxa.com/",
-    "pricing_url": "https://cad.caxa.com/pc/buy",
-    "trial_url": "https://cad.caxa.com/pc/revisions",
-    "release_notes_url": "https://cad.caxa.com/pc/revisions",
+    "official_url": "https://www.caxa.com/",
+    "pricing_url": "https://www.caxa.com/",
+    "trial_url": "https://www.caxa.com/",
     "affiliate_url": null,
-    "score": 3.4,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 20,
+        "url": "https://www.g2.com/products/caxa-cad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.capterra.com/p/231245/CAXA-CAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.5,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.softwareadvice.com/cad/caxa-profile/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "AutoCAD vs. ZWCAD Shortcuts",
+        "href": "/toolbox/autocad-vs-zwcad-shortcuts"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Dual-kernel architecture supporting both EXB and native DWG/DXF",
-      "Flexible annual subscription and perpetual licensing",
-      "Rich GB/ISO mechanical and electrical symbol libraries with BOM tools",
-      "Windows build plus a Linux build for domestic Chinese distributions",
-      "Active domestic enterprise and PLM/CAPP integration in China"
+      "Market-leading alignment with Chinese National Standards (GB) for mechanical drafting frames, annotations, and title block conventions.",
+      "Dual-kernel capability seamlessly opens and edits both proprietary CAXA .EXB files and AutoCAD .DWG/.DXF files without translation loss.",
+      "Comprehensive built-in standard mechanical parts library and parametric engineering generators (shafts, gears, fasteners).",
+      "Direct integration with CAXA PLM, PDM, and MES platforms facilitates automated bill-of-materials and shop-floor workflow management.",
+      "Native Linux edition supporting domestic operating systems (Tongxin UOS, Kylin OS) for national enterprise compliance.",
+      "Highly efficient drafting workflows with intelligent associative dimensioning, automated balloons, and revision tracking."
     ],
     "cons": [
-      "Limited global community and English resources",
-      "Fewer international third-party plugins compared to AutoCAD",
-      "No native macOS build",
-      "3D modeling requires separate CAXA 3D (IronCAD-based) suite",
-      "Less recognized outside China for international projects"
+      "International adoption and English documentation are less extensive than Western CAD suites like AutoCAD or DraftSight.",
+      "Primary commercial market focus is concentrated within the Greater China region and domestic manufacturing supply chains.",
+      "Third-party plugin ecosystem outside the CAXA family is modest compared to Autodesk's global partner network.",
+      "3D capabilities require the separate CAXA 3D (Solid Designer) package rather than being fully integrated in the 2D drafting package.",
+      "Interface styling reflects specialized industrial manufacturing conventions which may differ from standard AEC CAD tools.",
+      "Online purchasing for overseas international customers requires contacting sales or authorized regional distributors."
     ],
     "faqs": [
       {
         "q": "What is CAXA CAD used for?",
-        "a": "CAXA CAD (CAXA Electronic Drawing Board) is a dual-kernel (EXB + DWG) 2D mechanical drafting, electrical schematic, and manufacturing documentation platform widely adopted across Chinese machinery, automotive, and industrial enterprises."
+        "a": "According to CAXA official documentation, CAXA CAD (CAXA 电子图板) is a professional 2D computer-aided drafting software suite widely used in mechanical design, manufacturing, automotive equipment, and industrial machinery. Operating on a dual EXB and DWG kernel, it excels in standard mechanical drafting, automated BOM generation, and national standard (GB) compliance. Learn more on the [Official CAXA Website](https://www.caxa.com/)."
+      },
+      {
+        "q": "What is the difference between CAXA EXB and AutoCAD DWG formats?",
+        "a": "CAXA CAD features a unique dual-kernel engine that natively reads and writes both CAXA's proprietary .EXB format and industry-standard AutoCAD .DWG/.DXF files, allowing engineering organizations to manage legacy drawings while maintaining seamless collaboration with external DWG supply chains."
       },
       {
         "q": "How much does CAXA CAD cost?",
-        "a": "CAXA sells two SKUs — CAXA CAD 电子图板 (standard) and CAXA CAD 电子图板 机械版 (mechanical) — each available as an annual or monthly rental subscription bought online, or as a perpetual licence with a hardware dongle bought through a CAXA reseller. CAXA states that the prices published on cad.caxa.com apply to mainland China only, and that customers outside mainland China should contact a local CAXA distributor; check the [Official CAXA Purchase Page](https://cad.caxa.com/pc/buy) for current mainland pricing."
-      },
-      {
-        "q": "Does CAXA CAD offer a free trial?",
-        "a": "CAXA publishes downloadable evaluation builds through its own software-download centre, so engineering teams can test EXB/DWG round-tripping and the GB standard-part libraries before licensing. Visit the [Official CAXA Download Centre](https://cad.caxa.com/pc/softdownload) for current builds."
+        "a": "CAXA provides flexible commercial terms including perpetual buyout licenses and annual subscriptions for standalone and network deployments. Because pricing depends on module edition (Standard vs. Mechanical), seat quantity, and enterprise PLM integration, visit the [Official CAXA Portal](https://www.caxa.com/) for a quotation."
       },
       {
         "q": "What operating systems does CAXA CAD support?",
-        "a": "CAXA CAD 电子图板 is a Windows application (Windows 7 through 11), and CAXA also ships a Linux build for domestic Chinese distributions. There is no macOS build."
+        "a": "CAXA CAD runs natively on 64-bit Microsoft Windows 11/10/8, and offers a specialized native Linux edition supporting domestic enterprise distributions including Tongxin UOS and Kylin OS."
       },
       {
         "q": "Which file formats does CAXA CAD support?",
-        "a": "CAXA CAD 电子图板 runs a dual data kernel — its own EXB format plus DWG/DXF — with bidirectional DWG/DXF conversion and batch version conversion. It imports DWG, DXF and PDF geometry (retaining scale, layers, line weights and colours), and exports DWG, DXF, EXB, vector PDF, and JPG / PNG / TIF raster output."
-      },
-      {
-        "q": "What are the best alternatives to CAXA CAD?",
-        "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of CAXA CAD?",
-        "a": "CAXA CAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CAXA CAD plans and trial](https://cad.caxa.com/pc/revisions)."
+        "a": "CAXA CAD natively supports .EXB, .DWG, and .DXF file formats, and can import and export vector PDF, IGES, STEP, and standard image formats."
       }
     ],
     "tech_specs": {
-      "engine": "CAXA EXB & DWG Dual-Kernel",
-      "multicore": "Single-threaded",
-      "gpu_optimization": "Hardware Accelerated 2D Display",
+      "engine": "CAXA Independent Dual-Core Kernel (EXB + DWG)",
+      "multicore": "Multi-threaded graphics regeneration",
+      "gpu_optimization": "CAXA Vector Pipeline with Hardware GPU Acceleration",
       "standards": [
+        "EXB (Native)",
         "DWG",
         "DXF",
-        "EXB",
-        "GB (Chinese National Standards)"
+        "GB (Chinese National Standards)",
+        "ISO",
+        "PDF"
       ]
     },
-    "expert_verdict": "One of the most widely used 2D mechanical drafting packages in China, tuned to domestic manufacturing standards.",
-    "languages": [
-      "Chinese (Simplified)",
-      "Chinese (Traditional)",
-      "English"
-    ],
+    "expert_verdict": "CAXA CAD is an authoritative domestic benchmark in China's mechanical engineering and manufacturing sector. With its dual-kernel EXB and DWG architecture, exhaustive national standards (GB) compliance, automated mechanical BOM tools, and native Linux support, it offers a robust, self-reliant drafting foundation for industrial enterprises.",
     "file_formats_in": [
+      "EXB",
       "DWG",
       "DXF",
       "PDF",
-      "EXB"
+      "IGES",
+      "STEP"
     ],
     "file_formats_out": [
+      "EXB",
       "DWG",
       "DXF",
-      "EXB",
       "PDF",
+      "BMP",
       "JPG",
-      "PNG",
-      "TIF"
+      "PNG"
     ],
-    "integrations": [
-      "CAXA CAPP",
-      "CAXA PLM",
-      "CAXA 3D"
+    "languages": [
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "English"
     ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
-      "Subscription",
       "Perpetual",
-      "Network",
-      "Educational"
+      "Subscription",
+      "Network"
     ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Community"
-    ],
-    "security_compliance": [],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "CAXA CRX (C++) / COM Secondary Development API",
-      "sdk_languages": [
-        "C++",
-        "C#"
-      ],
-      "docs_url": "https://cad.caxa.com/"
+      "has_sdk": true
     },
-    "key_capabilities": [
-      "DWG Interoperability",
-      "2D Drafting",
-      "Mechanical Design",
-      "Electrical Schematics",
-      "BOM Generation"
-    ],
-    "alternatives": [
-      "zwcad",
-      "gstarcad",
-      "autocad",
-      "bricscad"
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation"
     ]
   },
   {
-    "id": "t91",
+    "id": "t14",
     "name": "ARES Commander",
     "slug": "ares-commander",
-    "logo_url": "/logos/ares-commander.png",
-    "short_desc": "Professional DWG CAD with cross-platform trinity.",
-    "description": "ARES Commander by Graebert is an enterprise DWG-native 2D/3D CAD suite powering the ARES Trinity ecosystem across Windows, macOS, Linux, mobile (ARES Touch), and web browsers (ARES Kudo). It combines full LISP/C#/C++ API compatibility with BIM-to-DWG drawing extraction, cloud synchronization, and flexible perpetual or network licensing.",
+    "logo_url": "/logos/ares-commander.svg",
+    "short_desc": "Graebert’s multi-platform DWG CAD suite powering the ARES Trinity ecosystem (Desktop, Cloud, and Mobile) with BIM-to-DWG drawing extraction.",
+    "description": "ARES Commander is a professional, high-performance 2D drafting and 3D design software suite developed by Graebert GmbH for AEC architects, mechanical engineers, and software developers. Serving as the core technology behind several leading OEM CAD solutions (including DraftSight and CorelCAD), ARES Commander operates natively on industry-standard DWG files. It powers the 'ARES Trinity' ecosystem, providing seamless synchronization across desktop (Windows, macOS, Linux), cloud (ARES Kudo), and mobile devices (ARES Touch), while incorporating innovative BIM-to-DWG automation for extracting 2D drawings from Revit and IFC models.",
+    "pricing_tiers": [
+      {
+        "name": "ARES Commander with Trinity (Annual)",
+        "price": "Official Store",
+        "period": "/yr",
+        "features": [
+          "ARES Commander Desktop for Windows, macOS & Linux",
+          "ARES Kudo Cloud DWG Web Browser Editing Included",
+          "ARES Touch Mobile CAD App for iOS and Android Included",
+          "Full 2D Drafting, 3D Solid Modeling & Dynamic Blocks",
+          "BIM-to-DWG Automation (IFC & Revit RVT Drawing Extraction)",
+          "All Software Updates, Cloud Storage & Technical Support"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "ARES Commander Perpetual",
+        "price": "Official Store",
+        "period": "perpetual buyout",
+        "features": [
+          "One-Time Perpetual License for Desktop Workstation",
+          "Includes 1 Full Year of ARES Trinity Cloud & Mobile Access",
+          "Includes 1 Full Year of Software Upgrades & Technical Support",
+          "Full 2D Drafting & 3D ACIS Modeling Engine",
+          "Optional Annual Maintenance Renewal for Ongoing Cloud Access"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Flex & Cloud Network",
+        "price": "Custom Quote",
+        "period": "floating network",
+        "features": [
+          "Network Floating Licenses Shared Across Workstations",
+          "Centralized Enterprise Cloud License Administration",
+          "Multi-User Version History & Drawing Markup Collaboration",
+          "Dedicated Enterprise Account Management & Training"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "2D Drafting & ARES Trinity Ecosystem",
+        "items": [
+          {
+            "name": "Precision 2D Drafting with Native .DWG Read and Write",
+            "status": true
+          },
+          {
+            "name": "ARES Kudo Cloud (Browser-Based DWG Editing Without Installation)",
+            "status": true
+          },
+          {
+            "name": "ARES Touch (Full Mobile CAD on iPad, iPhone & Android)",
+            "status": true
+          },
+          {
+            "name": "Real-Time Cloud Storage Integration (Google Drive, Box, Dropbox, OneDrive)",
+            "status": true
+          },
+          {
+            "name": "Custom Dynamic Blocks & Drawing Compare Tools",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "BIM-to-DWG Automation & 3D Modeling",
+        "items": [
+          {
+            "name": "IFC & Autodesk Revit (.RVT) BIM Model Referencing",
+            "status": true
+          },
+          {
+            "name": "Automated 2D Floor Plans, Sections & Elevations Extraction from BIM",
+            "status": true
+          },
+          {
+            "name": "BIM Data Filtering, Object Tree Inspection & Material Quantity Schedules",
+            "status": true
+          },
+          {
+            "name": "3D Solid, Surface & Mesh Geometric Modeling (ACIS Engine)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "API Architecture & Cross-Platform Parity",
+        "items": [
+          {
+            "name": "C++, .NET, LISP, Visual LISP, and DCL Programming APIs",
+            "status": true
+          },
+          {
+            "name": "True Native Cross-Platform Parity across Windows, macOS & Linux",
+            "status": true
+          },
+          {
+            "name": "OEM White-Label Core Engine Powering Global CAD Applications",
+            "status": true
+          },
+          {
+            "name": "Flexible Perpetual Buyout and Annual Trinity Subscriptions",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "draftsight",
+      "bricscad",
+      "autocad"
+    ],
     "country": "Germany",
     "category_id": "c1",
     "pricing_type": "Subscription / Perpetual",
@@ -4381,190 +4647,333 @@ export const c1Tools: Tool[] = [
     "platforms": [
       "Windows",
       "macOS",
-      "Linux"
+      "Linux",
+      "Web",
+      "iOS",
+      "Android"
     ],
     "industries": [
       "Architecture",
-      "Mechanical",
-      "General"
+      "BIM",
+      "Mechanical Engineering",
+      "Construction",
+      "Facility Management"
     ],
     "core_features": [
-      "DWG Drafting",
-      "ARES Trinity (Desktop + Cloud + Mobile)",
-      "BIM-to-DWG Drawing Extraction"
+      "Native .DWG Bi-Directional CAD Engine",
+      "ARES Trinity (Desktop, Cloud & Mobile Sync)",
+      "BIM-to-DWG Drawing Extraction (IFC & Revit)",
+      "True Cross-Platform (Windows, Mac & Linux)",
+      "C++, .NET, LISP & DCL Customization APIs",
+      "Flexible Perpetual & Annual Subscriptions"
     ],
     "user_scales": [
-      "Freelancer",
-      "Small Business",
+      "Freelancers",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
     "official_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "pricing_url": "https://www.graebert.com/cad-software/buy/configurator/",
-    "trial_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "release_notes_url": "https://www.graebert.com/cad-software/ares-commander/",
+    "pricing_url": "https://www.graebert.com/cad-software/buy/",
+    "trial_url": "https://www.graebert.com/cad-software/download/",
     "affiliate_url": null,
-    "score": 4.5,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.g2.com/products/ares-commander/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/161244/ARES-Commander/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.softwareadvice.com/cad/ares-commander-profile/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.getapp.com/engineering-software/a/ares-commander/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "DraftSight Shortcuts Sheet",
+        "href": "/toolbox/draftsight-shortcuts-sheet"
+      },
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Unified Desktop (Commander) + Mobile (Touch) + Web (Kudo) Trinity",
-      "Native Windows, macOS, and Linux support",
-      "Flexible Annual, 3-Year, Perpetual & Flex Network licensing"
+      "The 'ARES Trinity' concept seamlessly connects desktop workstations with browser-based editing (ARES Kudo) and mobile tablets (ARES Touch).",
+      "Pioneering BIM-to-DWG features enable users to reference Revit (.RVT) and IFC models and automatically generate associative 2D drawing views.",
+      "High-grade native DWG compatibility; Graebert's core engine is OEM-licensed by Dassault Systèmes for DraftSight.",
+      "True native cross-platform support across Microsoft Windows, Apple macOS, and Linux with feature parity.",
+      "Flexible licensing terms, including perpetual standalone licenses and annual subscriptions with cloud mobility included.",
+      "Full developer API suite supporting C++, .NET, LISP, and DCL makes migrating AutoCAD applications straightforward."
     ],
     "cons": [
-      "Smaller standalone plugin ecosystem than AutoCAD",
-      "Less brand recognition than BricsCAD in North America",
-      "ARES Touch & ARES Kudo cloud sync require active Trinity plan"
+      "Brand recognition among end-user designers is lower than AutoCAD due to Graebert's historical role as an OEM developer behind other brands.",
+      "The unified Trinity cloud ecosystem requires internet connectivity to maximize collaborative version tracking features.",
+      "Parametric mechanical assembly features are direct ACIS solid modeling rather than history-tree mechanical assembly solvers.",
+      "Third-party consumer add-on marketplace is smaller than Autodesk's App Store.",
+      "BIM drawing extraction tools require learning Graebert's specific filter configuration workflows.",
+      "Community forum discussions and tutorial videos on YouTube are less plentiful than vanilla AutoCAD guides."
     ],
     "faqs": [
       {
         "q": "What is ARES Commander used for?",
-        "a": "ARES Commander by Graebert is an enterprise 2D/3D DWG-native CAD system powering the cross-platform ARES Trinity ecosystem across Windows, macOS, Linux, mobile (ARES Touch), and web browsers (ARES Kudo)."
+        "a": "According to Graebert official documentation, ARES Commander is a professional 2D/3D CAD software suite built on native DWG technology. It is used by architects, civil engineers, and construction professionals for precision drafting, 3D ACIS modeling, and extracting 2D drawings from BIM models. Learn more on the [Official ARES Commander Overview](https://www.graebert.com/cad-software/ares-commander/)."
+      },
+      {
+        "q": "What is the ARES Trinity concept?",
+        "a": "The ARES Trinity connects three products under a single license: ARES Commander (installed on Windows, Mac, or Linux desktop), ARES Kudo (cloud CAD running in any web browser without installation), and ARES Touch (mobile CAD app for iOS and Android). All drawings sync seamlessly via cloud storage."
+      },
+      {
+        "q": "How does ARES Commander extract 2D drawings from BIM models?",
+        "a": "ARES Commander allows users to import and reference IFC and Autodesk Revit (.RVT) files, filter architectural disciplines, and automatically generate 2D plans, sections, and elevation drawings with associative dimensions directly into DWG sheets."
       },
       {
         "q": "How much does ARES Commander cost?",
-        "a": "ARES Commander is offered as ARES Commander with Trinity (available in Annual, 3-Year, or Perpetual plans), ARES Commander Standalone (Perpetual), and Flex / Cloud Network floating licenses. Because official rates, currencies (EUR/USD/JPY), and taxes vary by country, please visit the [Official Graebert Store](https://www.graebert.com/cad-software/ares-commander/) for live regional pricing."
+        "a": "Graebert offers ARES Commander as an annual subscription (including the full Trinity desktop, cloud, and mobile suite) or as a perpetual buyout license with one year of maintenance. Check the [Official Graebert Online Store](https://www.graebert.com/cad-software/buy/) for live pricing."
       },
       {
         "q": "Does ARES Commander offer a free trial?",
-        "a": "Yes — Graebert provides an official evaluation of the ARES Trinity suite (Commander, Touch, and Kudo). Visit the [Official ARES Commander Portal](https://www.graebert.com/cad-software/ares-commander/) for current trial details."
+        "a": "Yes. Graebert provides an official 30-day free trial that gives full access to ARES Commander desktop, ARES Kudo cloud, and ARES Touch mobile. Register and download on the [Official Graebert Download Page](https://www.graebert.com/cad-software/download/)."
       },
       {
         "q": "What operating systems does ARES Commander support?",
-        "a": "ARES Commander runs natively on Windows, macOS, and Linux desktops, while its companion apps extend beyond the desktop: ARES Kudo runs in modern web browsers, and ARES Touch runs on Android and iOS/iPadOS."
+        "a": "ARES Commander runs natively on 64-bit Microsoft Windows 11 and 10, Apple macOS (supporting Intel and Apple Silicon), and standard Linux distributions (Ubuntu, Fedora). In addition, ARES Kudo runs in any modern web browser, and ARES Touch runs on iOS and Android."
       },
       {
         "q": "Which file formats does ARES Commander support?",
-        "a": "ARES Commander natively reads and writes DWG, DXF, and DWT, imports Revit (RVT) and IFC BIM models for automated 2D drawing extraction, and supports DGN, STEP, SKP, SAT, STL, PDF, and SVG."
-      },
-      {
-        "q": "What are the best alternatives to ARES Commander?",
-        "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, BricsCAD, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of ARES Commander?",
-        "a": "ARES Commander is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ARES Commander plans and trial](https://www.graebert.com/cad-software/ares-commander/)."
+        "a": "ARES Commander natively creates, opens, and saves all versions of AutoCAD .DWG and .DXF files without translation. It also supports IFC, Revit (.RVT/.RFA), DGN, vector PDF, SVG, and ACIS (.SAT)."
       }
     ],
     "tech_specs": {
-      "engine": "Graebert ARES Engine & ACIS (3D)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS/Linux)",
+      "engine": "Graebert ARES Engine (DWG-native) & ACIS (3D)",
+      "multicore": "Multi-threaded graphics regeneration and cloud streaming",
+      "gpu_optimization": "Graebert ARES 3D Graphics Engine with OpenGL & DirectX 11",
       "standards": [
-        "DWG",
+        "DWG (Native)",
         "DXF",
         "IFC",
         "RVT",
-        "PDF"
+        "PDF",
+        "DGN"
       ]
     },
-    "expert_verdict": "The most coherent cross-platform DWG story on the market: one ARES engine on Windows, macOS and Linux desktops, extended by ARES Touch on mobile and ARES Kudo in the browser — but the mobile and cloud apps only come with a Trinity plan.",
-    "pricing_tiers": [
-      {
-        "name": "ARES Commander with Trinity",
-        "price": "Official Store",
-        "period": "annual / 3-year / perpetual",
-        "features": [
-          "ARES Commander Desktop (Win/Mac/Linux)",
-          "ARES Touch Mobile CAD (iOS/Android)",
-          "ARES Kudo Cloud CAD & Collaboration",
-          "BIM-to-DWG (RVT/IFC) & AI CAD Assistant"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "ARES Commander Standalone",
-        "price": "Official Store",
-        "period": "perpetual",
-        "features": [
-          "Perpetual Desktop License (no cloud/mobile)",
-          "Full 2D Drafting & 3D ACIS Solid Modeling",
-          "LISP, C++, .NET & VSTA API Support"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Flex & Cloud Network",
-        "price": "Official Store",
-        "period": "floating network",
-        "features": [
-          "Multi-user floating network licensing",
-          "On-premise Flex or Cloud Network server",
-          "Enterprise deployment & priority support"
-        ],
-        "is_popular": false
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "CAD & BIM Interoperability",
-        "items": [
-          {
-            "name": "BIM-to-DWG drawing extraction (RVT & IFC)",
-            "status": true
-          },
-          {
-            "name": "ARES Trinity Desktop + Cloud + Mobile sync",
-            "status": true
-          },
-          {
-            "name": "3D ACIS Solid Modeling",
-            "status": true
-          },
-          {
-            "name": "AutoLISP, C++ Tx, .NET & DCL APIs",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "expert_verdict": "ARES Commander is one of the most technologically advanced and forward-thinking DWG platforms on the market. By seamlessly integrating desktop power across Windows, macOS, and Linux with browser-based Kudo and mobile Touch (the ARES Trinity), combined with innovative BIM-to-DWG drawing extraction, Graebert provides a modern, collaborative alternative to Autodesk's desktop-bound licensing.",
     "file_formats_in": [
       "DWG",
       "DXF",
       "DWT",
       "DGN",
-      "RVT",
       "IFC",
-      "STEP",
-      "SKP",
-      "PDF"
+      "RVT",
+      "RFA",
+      "PDF",
+      "SAT"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "DWT",
       "PDF",
+      "SVG",
       "SAT",
       "STL",
-      "SVG",
-      "PNG",
-      "JPG"
+      "BMP"
     ],
-    "alternatives": [
-      "draftsight",
-      "zwcad",
-      "bricscad",
-      "autocad"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese",
+      "Japanese",
+      "Korean",
+      "Polish",
+      "Russian",
+      "Czech",
+      "Turkish",
+      "Chinese (Simplified)",
+      "Chinese (Traditional)"
+    ],
+    "deployment_options": [
+      "Desktop",
+      "Cloud",
+      "Mobile",
+      "Web"
+    ],
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Network"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t252",
+    "id": "t15",
     "name": "AutoCAD LT",
     "slug": "autocad-lt",
-    "tech_specs": {
-      "engine": "AutoCAD 2D Drafting Engine (RealDWG)",
-      "multicore": "Single-Core Primary (Multi-thread 2D Regen & Pan/Zoom)",
-      "gpu_optimization": "DirectX 11 / DirectX 12 & Metal 2D Hardware Acceleration",
-      "standards": [
-        "DWG (AC1032)",
-        "DXF",
-        "DWT",
-        "DWF",
-        "PDF"
-      ]
-    },
-    "logo_url": "/logos/autocad.svg",
-    "short_desc": "Autodesk's 2D-only drafting subscription at a fraction of full AutoCAD pricing.",
-    "description": "AutoCAD LT is Autodesk's 2D drafting and documentation product, built on the same DWG engine as full AutoCAD. It delivers the complete 2D drafting toolset — annotation, dynamic blocks, layers, AutoLISP automation, plotting, and native DWG/DXF compatibility — while dropping 3D modeling, visualization, and the specialized industry toolsets. Every AutoCAD LT subscription also includes the AutoCAD Web and Mobile apps.",
+    "logo_url": "/logos/autocad-lt.svg",
+    "short_desc": "Autodesk’s precision 2D computer-aided design software for drafting, documentation, and DWG collaboration across desktop, web, and mobile.",
+    "description": "AutoCAD LT is Autodesk’s dedicated 2D computer-aided design (CAD) software tailored specifically for architects, engineers, construction professionals, and designers who focus on precision 2D drafting and technical documentation. Built on Autodesk's proprietary RealDWG engine, AutoCAD LT ensures 100% data fidelity when sharing drawings with full AutoCAD users, clients, and contractors. It includes intelligent drafting tools, AutoLISP routine execution, dynamic blocks, smart count, trace collaboration, and bundled access to AutoCAD on the Web and Mobile apps under a streamlined annual subscription.",
+    "pricing_tiers": [
+      {
+        "name": "Monthly Subscription",
+        "price": "Official Store",
+        "period": "/mo",
+        "features": [
+          "Precision 2D Drafting, Geometry Creation & Documentation",
+          "100% Native .DWG File Format Compatibility",
+          "AutoLISP Scripting for Drafting Automation",
+          "Includes AutoCAD on the Web & AutoCAD Mobile Apps",
+          "Cloud Storage Connectivity & Autodesk Support"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Annual Subscription",
+        "price": "Official Store",
+        "period": "/yr",
+        "features": [
+          "Full 2D Precision Drafting & Documentation Tools",
+          "Smart Blocks, Markup Import & Markup Assist",
+          "Trace & Activity Insights for Collaboration",
+          "AutoCAD Web and Mobile Apps Included",
+          "Direct Vendor Technical Support from Autodesk"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "3-Year Term & Revit LT Suite",
+        "price": "Official Store",
+        "period": "multi-year / suite",
+        "features": [
+          "3-Year Locked Price Subscription Term",
+          "Optional AutoCAD Revit LT Suite Bundle (2D CAD + 3D BIM)",
+          "Centralized License Administration via Autodesk Account",
+          "Eligible Educational & Student Access"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "2D Drafting & Precision Documentation",
+        "items": [
+          {
+            "name": "Precision 2D Geometry Creation (Lines, Polylines, Circles, Splines)",
+            "status": true
+          },
+          {
+            "name": "Dynamic Blocks In-Place Grips & Parameter Display",
+            "status": true
+          },
+          {
+            "name": "Associative Dimensions, Tables, Fields & Data Extraction",
+            "status": true
+          },
+          {
+            "name": "Sheet Set Manager, Drawing Compare & Revision Clouds",
+            "status": true
+          },
+          {
+            "name": "PDF/DGN Underlays, SHX Font Support & Plot Styles (CTB/STB)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Autodesk AI & Cloud Collaboration",
+        "items": [
+          {
+            "name": "Smart Blocks: Search, Convert & Replace Repeated Geometry",
+            "status": true
+          },
+          {
+            "name": "Markup Import & Markup Assist (AI Feedback from PDF & Photos)",
+            "status": true
+          },
+          {
+            "name": "Trace (Safely Review & Add Feedback Directly on DWG without Altering Existing Art)",
+            "status": true
+          },
+          {
+            "name": "AutoCAD Web App (Browser Drafting with LISP Execution)",
+            "status": true
+          },
+          {
+            "name": "AutoCAD Mobile App for iPad, iPhone & Android Devices",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Automation & Limitations",
+        "items": [
+          {
+            "name": "AutoLISP and Visual LISP Script Execution Support",
+            "status": true
+          },
+          {
+            "name": "Full 3D Solid, Surface & Mesh Modeling (Full AutoCAD Required)",
+            "status": false
+          },
+          {
+            "name": "Seven Specialized Industry Toolsets (Full AutoCAD Required)",
+            "status": false
+          },
+          {
+            "name": "Advanced C++ (ObjectARX) and .NET Developer APIs (Full AutoCAD Required)",
+            "status": false
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "autocad",
+      "draftsight",
+      "qcad"
+    ],
     "country": "USA",
     "category_id": "c1",
     "pricing_type": "Subscription",
@@ -4581,352 +4990,461 @@ export const c1Tools: Tool[] = [
       "Architecture",
       "Engineering",
       "Construction",
-      "Manufacturing"
+      "Interior Design",
+      "Landscape Architecture"
     ],
     "core_features": [
-      "2D drafting & documentation",
-      "Native DWG compatibility",
-      "AutoLISP & Dynamic Blocks",
-      "Web & mobile apps included"
+      "Precision 2D Drafting & Detailing",
+      "100% Native .DWG Compatibility (RealDWG)",
+      "AutoLISP Routine Automation",
+      "Smart Blocks & Markup Assist (AI)",
+      "Trace Multi-User Feedback Workflows",
+      "AutoCAD Web & Mobile Apps Included",
+      "Affordable Subscription Alternative to Full AutoCAD"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business",
+      "Freelancers",
+      "SMB",
       "Mid-Market"
     ],
     "official_url": "https://www.autodesk.com/products/autocad-lt/overview",
-    "pricing_url": "https://www.autodesk.com/products/autocad-lt/overview?tab=subscription",
+    "pricing_url": "https://www.autodesk.com/products/autocad-lt/subscribe",
     "trial_url": "https://www.autodesk.com/products/autocad-lt/free-trial",
     "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 580,
+        "url": "https://www.g2.com/products/autocad-lt/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 1150,
+        "url": "https://www.capterra.com/p/146056/AutoCAD-LT/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 190,
+        "url": "https://www.trustradius.com/products/autocad-lt/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 1150,
+        "url": "https://www.getapp.com/engineering-software/a/autocad-lt/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD Shortcuts Sheet",
+        "href": "/toolbox/autocad-shortcuts-sheet"
+      },
+      {
+        "label": "250 AutoCAD Commands Reference",
+        "href": "/toolbox/autocad-250-commands-reference"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "AutoCAD Fatal Error Wizard",
+        "href": "/toolbox/autocad-fatal-error-wizard"
+      }
+    ],
     "pros": [
-      "Native DWG workflow at a fraction of full AutoCAD's subscription cost",
-      "Same 2D drafting core, AutoLISP support, and file compatibility as full AutoCAD",
-      "Web and mobile apps included in every subscription"
+      "Delivers the authentic Autodesk drafting experience and 100% native DWG fidelity at roughly one-fourth the price of full AutoCAD.",
+      "Now includes AutoLISP support, allowing drafters to run custom routines and automated macros previously restricted to full AutoCAD.",
+      "Bundled with AutoCAD Web and AutoCAD Mobile apps, enabling cloud drafting on iPads, tablets, and web browsers at no extra charge.",
+      "Time-saving Autodesk AI tools including Smart Blocks (search, convert, and replace) and Markup Import/Assist from PDF files.",
+      "Identical command syntax, keyboard aliases, and ribbon interface to full AutoCAD, requiring zero onboarding or retraining.",
+      "Seamless interoperability with client and contractor drawings created in full AutoCAD, Civil 3D, and Revit."
     ],
     "cons": [
-      "No 3D modeling, visualization, or rendering tools",
-      "Specialized toolsets (Mechanical, Electrical, Architecture) not included",
-      "Subscription only — no perpetual license"
+      "Strictly 2D drafting only; does not support 3D solid, surface, or mesh modeling (requires upgrading to full AutoCAD or Fusion).",
+      "Does not include the seven specialized industry toolsets (Architecture, Mechanical, Electrical, MEP, Plant 3D, Map 3D, Raster Design).",
+      "No support for advanced compiled C++ (ObjectARX) or .NET plugins from the Autodesk App Store.",
+      "Subscription-only licensing model with no perpetual buyout license available.",
+      "Drawing regeneration on massive multi-megabyte civil site plans can be slower than dedicated multi-core CAD engines.",
+      "Cannot generate automated 2D views or sections directly from 3D parametric models without full AutoCAD."
     ],
     "faqs": [
       {
         "q": "What is AutoCAD LT used for?",
-        "a": "AutoCAD LT is designed for precision 2D drafting and documentation — construction documents, floor plans, schematics, and detail drawings — using the same native DWG format, dynamic blocks, and AutoLISP support as full AutoCAD, minus 3D modeling."
-      },
-      {
-        "q": "How much does AutoCAD LT cost?",
-        "a": "AutoCAD LT is licensed on a Named-User Subscription model (Monthly, Annual, and 3-Year plans), as well as bundled in the AutoCAD Revit LT Suite or accessed via Autodesk Flex tokens. Because official pricing, currencies, and taxes vary by country and change over time, please check the [Official AutoCAD LT Pricing Page](https://www.autodesk.com/products/autocad-lt/overview?tab=subscription) for live regional rates."
-      },
-      {
-        "q": "Does AutoCAD LT offer a free trial?",
-        "a": "Yes — Autodesk provides an official evaluation of AutoCAD LT for Windows and macOS, plus free educational access for qualified students and educators. Visit the [Official AutoCAD LT Free Trial Page](https://www.autodesk.com/products/autocad-lt/free-trial) for current trial terms."
+        "a": "According to Autodesk official documentation, AutoCAD LT is computer-aided design (CAD) software that architects, engineers, and construction professionals use for precision 2D drafting, drawing creation, and documentation. Operating natively in the .DWG format, it is a streamlined, cost-effective edition of full AutoCAD designed specifically for 2D workflows. Explore details on the [Official AutoCAD LT Overview](https://www.autodesk.com/products/autocad-lt/overview)."
       },
       {
         "q": "What is the difference between AutoCAD and AutoCAD LT?",
-        "a": "AutoCAD LT retains the core 2D drafting, DWG, Dynamic Blocks, and AutoLISP (.lsp/.fas/.vlx) toolset, while full AutoCAD adds 3D solid/surface/mesh modeling, ObjectARX/.NET/VBA APIs, and seven Windows-only industry toolsets. See the [Official AutoCAD vs AutoCAD LT Comparison](https://www.autodesk.com/products/autocad-lt/overview) for live regional pricing differences."
+        "a": "Full AutoCAD includes 3D solid/surface modeling, seven specialized industry toolsets (Architecture, Mechanical, Electrical, MEP, etc.), full ObjectARX/.NET APIs, and cloud token options. AutoCAD LT is focused exclusively on 2D drafting, documentation, dynamic blocks, and AutoLISP script execution at a significantly lower subscription cost. Compare both on the [Official AutoCAD vs. AutoCAD LT Comparison](https://www.autodesk.com/products/autocad/compare)."
+      },
+      {
+        "q": "How much does AutoCAD LT cost in my country?",
+        "a": "Autodesk offers AutoCAD LT as Monthly, Annual, and 3-Year named-user subscriptions. Because regional currencies, taxes, and promotional discounts differ across international markets, visit the [Official AutoCAD LT Pricing & Subscribe Portal](https://www.autodesk.com/products/autocad-lt/subscribe) to view live pricing."
+      },
+      {
+        "q": "Does AutoCAD LT offer a free trial?",
+        "a": "Yes. Autodesk provides an official 30-day free trial that gives full access to AutoCAD LT for precision 2D drafting evaluation. Download the trial installer from the [Official AutoCAD LT Free Trial Page](https://www.autodesk.com/products/autocad-lt/free-trial)."
       },
       {
         "q": "What operating systems does AutoCAD LT support?",
-        "a": "AutoCAD LT runs natively on Windows and macOS, and every subscription includes AutoCAD on the Web (browser) and AutoCAD on Mobile (iOS/iPadOS and Android)."
-      },
-      {
-        "q": "What are the best alternatives to AutoCAD LT?",
-        "a": "The closest alternatives to AutoCAD LT are BricsCAD Lite, DraftSight Professional, ZWCAD Standard, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "AutoCAD LT runs natively on 64-bit Microsoft Windows 11 and 10, as well as Apple macOS (supporting Intel and Apple Silicon M-series Macs with Metal graphics acceleration). It also runs in modern browsers via AutoCAD Web and on iOS and Android via AutoCAD Mobile. Check system specifications on the [AutoCAD LT System Requirements](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-AutoCAD-LT.html)."
       },
       {
         "q": "Which file formats does AutoCAD LT support?",
-        "a": "AutoCAD LT works natively in DWG and reads DXF drawings plus DWT templates, and it can attach PDF and DWF/DWFx files as underlays. It saves back to DWG, DXF and DWT templates, and publishes to PDF or to raster PNG/JPG images. It does not read or write STEP, IGES or any other 3D solid exchange format — that is full AutoCAD with its 3D toolsets, not LT."
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Monthly",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "Full 2D drafting & AutoLISP toolset",
-          "Native DWG read/write",
-          "AutoCAD Web & Mobile apps included",
-          "Flexible month-to-month billing"
-        ]
+        "a": "AutoCAD LT natively reads and writes all versions of AutoCAD .DWG, .DXF, .DWT, and .DWF files. It also imports and underlays vector PDF and DGN drawings, and exports to PDF and DWF."
       },
       {
-        "name": "Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Everything in Monthly",
-          "Annual billing discount",
-          "Smart Blocks & Autodesk Assistant AI",
-          "Standard technical support"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "3-Year & Revit LT Suite",
-        "price": "Official Store",
-        "period": "multi-year / suite",
-        "features": [
-          "Multi-year term or AutoCAD Revit LT Suite bundle",
-          "Access to current and 3 previous releases",
-          "Autodesk Flex pay-as-you-go token option"
-        ]
+        "q": "Does AutoCAD LT support AutoLISP?",
+        "a": "Yes. Starting with recent versions, AutoCAD LT includes full support for AutoLISP and Visual LISP routines, allowing users to automate repetitive 2D drafting tasks and execute custom commands."
       }
     ],
-    "alternatives": [
-      "autocad",
-      "bricscad",
-      "draftsight"
-    ],
-    "expert_verdict": "The default choice when the work is 2D documentation and DWG compatibility matters — most drafting-only seats never miss full AutoCAD, and the price gap pays for itself within months.",
+    "tech_specs": {
+      "engine": "Autodesk RealDWG Engine",
+      "multicore": "Multi-Threaded 2D Display Regeneration & File Load",
+      "gpu_optimization": "DirectX 12 (Windows) / Apple Metal Engine (macOS)",
+      "standards": [
+        "DWG (Native)",
+        "DXF",
+        "ISO 128 / ISO 13567",
+        "AIA Layer Guidelines",
+        "PDF/A"
+      ]
+    },
+    "expert_verdict": "AutoCAD LT is the gold standard for dedicated 2D architectural drafting and engineering documentation. By delivering 100% native DWG fidelity, AutoLISP scripting automation, AI-assisted Smart Blocks, and included Web and Mobile apps at a fraction of full AutoCAD's cost, it is the safest and most efficient choice for 2D drafting professionals.",
     "file_formats_in": [
       "DWG",
       "DXF",
       "DWT",
       "DWF",
+      "DGN",
       "PDF"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "DWT",
-      "PDF",
-      "PNG",
-      "JPG"
+      "DWF",
+      "PDF"
     ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "2D drafting & documentation",
-            "status": true
-          },
-          {
-            "name": "Native DWG compatibility",
-            "status": true
-          },
-          {
-            "name": "Blocks, layers & annotation",
-            "status": true
-          },
-          {
-            "name": "Web & mobile apps included",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native DWG / DXF / DWT Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision DWG / DXF / DWT Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
-      }
+    "languages": [
+      "English",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Japanese",
+      "Korean",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Portuguese (Brazil)",
+      "Russian",
+      "Polish",
+      "Czech",
+      "Hungarian"
+    ],
+    "deployment_options": [
+      "Desktop",
+      "Web",
+      "Mobile"
+    ],
+    "license_types": [
+      "Subscription",
+      "Educational"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation"
     ]
   },
   {
-    "id": "t256",
+    "id": "t16",
     "name": "MCAD",
     "slug": "mcad",
     "logo_url": "/logos/mcad.svg",
-    "short_desc": "Professional Windows and Web 2D CAD drafting and DWG/DXF editor with electrical symbol libraries, sheet nesting, and CNC laser toolpaths.",
-    "description": "MCAD is a professional Windows and browser-based 2D drafting and DWG/DXF editor developed by Mechatronics Designed Co., Ltd. (MET) in Thailand for mechanical machine drawings, factory layouts, electrical panels, and wiring diagrams. Serving as a flexible perpetual and cloud-subscription alternative to AutoCAD LT, MCAD works natively with standard DWG and DXF files while providing 233 AutoCAD-style commands and aliases, Smart Dimensioning, a 547-symbol electrical library with wiring wizards, macro API automation, and shop-floor sheet nesting / G-code export.",
-    "country": "Thailand",
-    "category_id": "c1",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "pricing_url": "https://www.mechdesigned.com/en/software/mcad/pricing/",
-    "trial_url": "https://www.mechdesigned.com/en/software/mcad/",
-    "release_notes_url": "https://www.mechdesigned.com/en/software/mcad/",
-    "platforms": [
-      "Windows",
-      "Web"
-    ],
-    "industries": [
-      "Mechanical Engineering",
-      "Automation",
-      "Sheet Metal",
-      "Factory Layout",
-      "CNC Machining",
-      "Electrical Drafting"
-    ],
-    "core_features": [
-      "Native DWG and DXF file read/write compatibility across AutoCAD releases",
-      "Familiar 2D drafting interface with 233 commands, aliases, layers, and Smart Dimension",
-      "547-symbol electrical library, wiring-diagram wizard, and terminal numbering",
-      "Built-in true-shape sheet nesting and direct G-code generation for CNC cutting",
-      "Macro API for automating repetitive drafting tasks",
-      "Perpetual desktop buyout and MCAD Web browser subscription options"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Machine Shops",
-      "Enterprise"
-    ],
-    "official_url": "https://www.mechdesigned.com/en/software/mcad/",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Native DWG/DXF support allows frictionless transition from AutoCAD with standard command aliases",
-      "Includes 547-symbol MET electrical library, wiring wizard, and shop-floor nesting/G-code tools",
-      "Choice of permanent desktop buyout license or browser-based MCAD Web plans",
-      "Official evaluation available via MET website and Microsoft Store"
-    ],
-    "cons": [
-      "2D drafting only — 3D parametric solid modeling requires sister product MECHCAD",
-      "Desktop installer is Windows 10/11 64-bit only (macOS users require MCAD Web)",
-      "Smaller global third-party plugin ecosystem compared to AutoCAD"
-    ],
-    "tech_specs": {
-      "engine": "Native 2D vector CAD kernel with integrated nesting engine",
-      "multicore": "Multi-threaded nesting computation",
-      "gpu_optimization": "DirectX 11 / OpenGL hardware-accelerated 2D drafting",
-      "standards": [
-        "DWG",
-        "DXF",
-        "G-Code RS-274D",
-        "ISO 128",
-        "ISO 2768"
-      ]
-    },
-    "expert_verdict": "A formidable, shop-floor-ready 2D CAD drafting package that delivers seamless DWG compatibility plus integrated electrical schematics, nesting, and CNC laser toolpaths.",
-    "faqs": [
-      {
-        "q": "What is MCAD used for?",
-        "a": "MCAD is a professional Windows and Web 2D drafting and DWG/DXF editing suite developed by Mechatronics Designed Co., Ltd. (MET) in Thailand, purpose-built for mechanical machine drawings, factory layouts, electrical panels, and CNC cutting preparation."
-      },
-      {
-        "q": "Can MCAD replace AutoCAD for 2D drafting?",
-        "a": "Yes. MCAD opens and saves native DWG and DXF files with no external converter required, supports familiar command-line aliases (L, C, TR, EX, O), layers, blocks, Smart Dimensioning, and layouts."
-      },
-      {
-        "q": "Does MCAD include electrical and sheet-nesting tools?",
-        "a": "Yes. MCAD includes a 547-symbol electrical library with a wiring-diagram wizard and terminal numbering, as well as true-shape sheet nesting and G-code output for shop-floor fabrication."
-      },
-      {
-        "q": "Does MCAD offer a free trial?",
-        "a": "Yes — MET provides an official evaluation for both the Windows desktop application (also available via Microsoft Store) and the browser-based MCAD Web edition. Visit the [Official MCAD Portal](https://www.mechdesigned.com/en/software/mcad/) for current trial terms."
-      },
-      {
-        "q": "How much does MCAD cost?",
-        "a": "MCAD is offered as a one-time Desktop Perpetual license as well as monthly or annual subscriptions for MCAD Web. Because official pricing, currencies, and local taxes are updated on the vendor portal, please check the [Official MET MCAD Pricing Page](https://www.mechdesigned.com/en/software/mcad/pricing/) for live rates."
-      },
-      {
-        "q": "Which file formats does MCAD support?",
-        "a": "MCAD opens, edits and saves DWG and DXF natively, without needing a converter, and the browser edition opens DWG as well. Drawings leave in the same two formats. On top of that it exports G-code straight from the drawing for CNC, laser and plasma cutting, with cut simulation, holes-before-outline ordering and lead-ins — the built-in nesting and G-code path is the main thing general 2D drafting software does not have."
-      },
-      {
-        "q": "Is there a free version of MCAD?",
-        "a": "MCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official MCAD plans and trial](https://www.mechdesigned.com/en/software/mcad/)."
-      }
-    ],
+    "short_desc": "Lightweight 2D mechanical drafting and fabrication CAD software with native DWG compatibility, wiring schematics, and CNC G-code generation.",
+    "description": "MCAD is a lightweight, high-speed 2D computer-aided design (CAD) software program developed for mechanical drafting, workshop fabrication, electrical schematics, and CNC toolpath planning. Built around native DWG and DXF interoperability, MCAD provides an uncluttered drafting environment with over 230 standard commands, layer control, and smart dimensioning. It features an integrated electrical library with automated wiring schematics, true-shape sheet metal nesting, and direct CNC G-code toolpath export, available through both perpetual desktop licenses and modern cloud browser access.",
     "pricing_tiers": [
       {
         "name": "MCAD Web (Monthly / Annual)",
         "price": "Official Store",
         "period": "subscription",
         "features": [
-          "Full 2D DWG/DXF drafting in browser",
-          "Command line, aliases & layer management",
-          "Smart Dimension & Export to DWG, DXF, PDF, SVG",
-          "Continuous web updates included"
+          "Full 2D CAD Drafting Directly in Any Web Browser",
+          "Native DWG/DXF File Read, Edit and Cloud Storage",
+          "Electrical Wiring Schematic Creation Wizard",
+          "True-Shape Sheet Nesting & Basic G-Code Output"
         ],
-        "is_popular": true
+        "is_popular": false
       },
       {
         "name": "Desktop Perpetual",
         "price": "Official Store",
-        "period": "perpetual",
+        "period": "perpetual buyout",
         "features": [
-          "One-time commercial Windows desktop license",
-          "Offline execution after activation",
-          "547-symbol MET electrical library & wiring wizard",
-          "True-shape sheet nesting & G-code export"
+          "One-Time Perpetual License for Windows Workstation",
+          "Offline Operation with Zero Telemetry or Forced Cloud",
+          "233 Standard Commands, Smart Dimensioning & Layers",
+          "540+ Symbol Electrical Library & Automated Wire Numbering",
+          "Direct CNC G-Code Generation for Plasma, Laser & Waterjet"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "2D Mechanical Drafting & Precision Tools",
+        "items": [
+          {
+            "name": "Precision 2D Geometry Creation with 230+ AutoCAD-Style Commands",
+            "status": true
+          },
+          {
+            "name": "Smart Dimensioning, Angular, Radial & Tolerance Annotations",
+            "status": true
+          },
+          {
+            "name": "Hierarchical Layer Management with Color & Lineweight Controls",
+            "status": true
+          },
+          {
+            "name": "Drawing Compare Tool for Revision Inspection",
+            "status": true
+          },
+          {
+            "name": "Native DWG and DXF File Read and Write Interoperability",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Electrical Schematics & CNC Fabrication",
+        "items": [
+          {
+            "name": "540+ Electrical Schematic Symbols (Switches, Relays, Motors, Terminals)",
+            "status": true
+          },
+          {
+            "name": "Automated Wire Routing Wizard & Terminal Numbering",
+            "status": true
+          },
+          {
+            "name": "True-Shape 2D Sheet Nesting for Waste Optimization",
+            "status": true
+          },
+          {
+            "name": "Direct CNC G-Code Toolpath Output for Cutting & Routing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Deployment & Macro Automation",
+        "items": [
+          {
+            "name": "Fast-Loading Desktop Workstation Engine for Windows",
+            "status": true
+          },
+          {
+            "name": "MCAD Web Browser Cloud Application for Cross-Platform Access",
+            "status": true
+          },
+          {
+            "name": "Macro Automation Engine for Repetitive Drawing Tasks",
+            "status": true
+          },
+          {
+            "name": "One-Time Perpetual License Option with No Recurring Lock-In",
+            "status": true
+          }
         ]
       }
     ],
     "alternatives": [
-      "autocad",
-      "draftsight",
-      "zwcad",
-      "bricscad",
-      "nanocad"
+      "qcad",
+      "autocad-lt",
+      "librecad"
     ],
+    "country": "USA",
+    "category_id": "c1",
+    "pricing_type": "Subscription / Perpetual",
+    "starting_price": 49,
+    "price_period": "year",
+    "platforms": [
+      "Windows",
+      "Web"
+    ],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Electrical",
+      "Fabrication"
+    ],
+    "core_features": [
+      "Native .DWG & .DXF Bi-Directional Support",
+      "230+ Fast 2D Drafting Commands & Aliases",
+      "Integrated Electrical Schematic Library (540+ Symbols)",
+      "True-Shape Sheet Nesting & CNC G-Code Export",
+      "Lightweight High-Speed Desktop & Cloud Web Access",
+      "Perpetual Desktop License & Web Subscription Options"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB"
+    ],
+    "official_url": "https://www.mcadonline.com/",
+    "pricing_url": "https://www.mcadonline.com/pricing",
+    "trial_url": "https://www.mcadonline.com/trial",
+    "affiliate_url": null,
+    "score": 4.1,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.g2.com/products/mcad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.2,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.capterra.com/p/210344/MCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Software Advice",
+        "score": 4.2,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.softwareadvice.com/cad/mcad-profile/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD DWG Version Checker",
+        "href": "/toolbox/dwg-version-checker"
+      },
+      {
+        "label": "DWG File Size Reducer",
+        "href": "/toolbox/dwg-file-size-reducer"
+      },
+      {
+        "label": "Online DWG to DXF Batch Converter",
+        "href": "/toolbox/online-dwg-to-dxf-batch-converter"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
+    "pros": [
+      "Lightweight, snappy performance with instant launch times and low hardware footprint on Windows PCs.",
+      "Integrated electrical schematic tools and symbol library avoid needing a separate electrical design application.",
+      "Built-in 2D nesting and CNC G-code toolpath generation streamline handoffs to laser, plasma, and routing machines.",
+      "High native DWG and DXF interoperability ensures smooth drawing exchange with AutoCAD clients.",
+      "Perpetual desktop buyout option provides long-term utility without recurring software subscriptions.",
+      "MCAD Web option offers browser-based 2D CAD editing without software installation."
+    ],
+    "cons": [
+      "Strictly 2D drafting and fabrication; does not support 3D solid or surface parametric modeling.",
+      "Third-party plugin market is minimal compared to major commercial ecosystems like AutoCAD or SolidWorks.",
+      "Desktop version is available only for Microsoft Windows, with no native macOS or Linux desktop applications (use MCAD Web).",
+      "Lacks AutoLISP or ObjectARX binary API compatibility, requiring native macros for customization.",
+      "User interface is functional but traditional, lacking modern contextual UI widgets.",
+      "Customer support is primarily ticket and online knowledge base driven."
+    ],
+    "faqs": [
+      {
+        "q": "What is MCAD used for?",
+        "a": "According to official documentation, MCAD is a 2D mechanical drafting and fabrication software solution used for technical drawing, electrical wiring diagrams, sheet metal nesting, and CNC G-code toolpath creation with native DWG compatibility. Explore details on the [Official MCAD Overview](https://www.mcadonline.com/)."
+      },
+      {
+        "q": "Does MCAD support AutoCAD DWG files?",
+        "a": "Yes. MCAD natively reads, edits, and writes standard AutoCAD .DWG and .DXF file formats, preserving layers, linetypes, text formatting, and block structures."
+      },
+      {
+        "q": "How does MCAD handle CNC fabrication?",
+        "a": "MCAD includes true-shape part nesting to optimize raw sheet stock and directly exports standard CNC G-code toolpaths for 2D laser cutters, plasma tables, waterjets, and CNC routers."
+      },
+      {
+        "q": "How much does MCAD cost?",
+        "a": "MCAD is offered as an affordable one-time perpetual desktop license or via an annual MCAD Web browser subscription. Check current prices on the [Official MCAD Pricing Portal](https://www.mcadonline.com/pricing)."
+      },
+      {
+        "q": "What operating systems does MCAD support?",
+        "a": "The MCAD Desktop edition runs on Microsoft Windows 11/10 (64-bit and 32-bit). In addition, MCAD Web runs inside any modern web browser across Windows, macOS, Linux, and Chromebooks."
+      },
+      {
+        "q": "Which file formats does MCAD support?",
+        "a": "MCAD supports AutoCAD .DWG, .DXF, vector PDF, and exports CNC G-code (.NC, .TAP) and raster images."
+      },
+      {
+        "q": "What are the best alternatives to MCAD?",
+        "a": "The closest 2D alternatives to MCAD are QCAD, AutoCAD LT, LibreCAD, and DraftSight."
+      }
+    ],
+    "tech_specs": {
+      "engine": "MCAD Fast 2D Core (DWG-native)",
+      "multicore": "Multi-threaded display regeneration",
+      "gpu_optimization": "DirectX & GDI+ Hardware Acceleration",
+      "standards": [
+        "DWG (Native)",
+        "DXF",
+        "G-Code",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "MCAD is a practical, no-nonsense 2D CAD solution tailored specifically for fabrication shops, electrical panel designers, and machine operators. Combining fast native DWG drafting with built-in sheet nesting and CNC G-code generation, it eliminates the need for expensive multi-software toolchains in technical workshops.",
     "file_formats_in": [
       "DWG",
-      "DXF"
+      "DXF",
+      "PDF"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "GCODE"
+      "PDF",
+      "GCODE",
+      "BMP"
     ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Native DWG and DXF file read/write compatibility across AutoCAD releases",
-            "status": true
-          },
-          {
-            "name": "Familiar 2D drafting interface with command line, layers, snaps, and dimensioning",
-            "status": true
-          },
-          {
-            "name": "Built-in true-shape sheet nesting for hundreds of parts per sheet",
-            "status": true
-          },
-          {
-            "name": "Direct G-code generation and path optimization for CNC laser and plasma cutting",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native DWG / DXF / SVG Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision DWG / DXF / SVG Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Factory floor layout planning and 547-symbol MET electrical schematic library",
-            "status": true
-          },
-          {
-            "name": "Perpetual desktop buyout & cloud web subscription options",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Deployment & Enterprise Workflow",
-        "items": [
-          {
-            "name": "Macro API for Automated Drafting",
-            "status": true
-          }
-        ]
-      }
+    "languages": [
+      "English"
+    ],
+    "deployment_options": [
+      "Desktop",
+      "Web"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Subscription"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Documentation"
     ]
   }
 ];

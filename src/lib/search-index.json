@@ -3,7 +3,7 @@
     "id": "t1",
     "name": "AutoCAD",
     "slug": "autocad",
-    "short_desc": "The global industrial standard for 2D drafting and 3D modeling.",
+    "short_desc": "Autodesk’s industry-standard 2D drafting, 3D modeling, and DWG documentation software for architects, engineers, and construction professionals.",
     "score": 4.8,
     "logo_url": "/logos/autocad.svg",
     "official_url": "https://www.autodesk.com/products/autocad/overview",
@@ -13,7 +13,10 @@
     "industries": [
       "Architecture",
       "Engineering",
-      "Manufacturing"
+      "Manufacturing",
+      "Civil Engineering",
+      "Electrical Engineering",
+      "Construction"
     ],
     "features": [
       "ai-assisted",
@@ -24,53 +27,75 @@
   },
   {
     "id": "t2",
-    "name": "SolidWorks",
-    "slug": "solidworks",
-    "short_desc": "A 3D parametric mechanical design platform with associative drawings and a broad partner add-in ecosystem.",
-    "score": 4.9,
-    "logo_url": "/logos/solidworks.png",
-    "official_url": "https://www.solidworks.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [
-      "ai-assisted",
-      "parametric-modeling",
-      "rendering",
-      "sheet-metal",
-      "generative-design",
-      "reverse-engineering",
-      "integrated-cam",
-      "simulation-fea",
-      "piping-routing",
-      "surface-modeling"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t3",
-    "name": "SketchUp",
-    "slug": "sketchup",
-    "short_desc": "A 3D modelling tool for architecture, interiors and concept design, built around direct manipulation.",
-    "score": 4.7,
-    "logo_url": "/logos/sketchup.png",
-    "official_url": "https://sketchup.trimble.com/en",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
+    "name": "ZWCAD",
+    "slug": "zwcad",
+    "short_desc": "ZWSOFT’s cost-effective, high-performance 2D and 3D CAD software with native DWG compatibility, multi-core acceleration, and perpetual licensing.",
+    "score": 4.6,
+    "logo_url": "/logos/zwcad.svg",
+    "official_url": "https://www.zwsoft.com/product/zwcad",
+    "category_id": "c1",
+    "category_name": "2D CAD",
     "aliases": [],
     "industries": [
       "Architecture",
-      "Interior Design",
-      "Landscape"
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Construction",
+      "Electrical Engineering"
     ],
     "features": [
-      "rendering",
-      "direct-modeling"
+      "drafting-detailing"
+    ],
+    "country": "China"
+  },
+  {
+    "id": "t3",
+    "name": "BricsCAD",
+    "slug": "bricscad",
+    "short_desc": "Bricsys’s AI-powered DWG CAD platform combining 2D drafting, 3D direct modeling, certified IFC BIM, and mechanical sheet metal design.",
+    "score": 4.5,
+    "logo_url": "/logos/bricscad.svg",
+    "official_url": "https://www.bricsys.com/bricscad",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "BIM",
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Manufacturing"
+    ],
+    "features": [
+      "ai-assisted",
+      "sheet-metal",
+      "bim-integration",
+      "direct-modeling",
+      "drafting-detailing"
+    ],
+    "country": "Belgium"
+  },
+  {
+    "id": "t4",
+    "name": "MicroStation",
+    "slug": "microstation",
+    "short_desc": "Bentley’s foundational 2D/3D infrastructure CAD and reality modeling platform for civil, transportation, rail, and plant engineering.",
+    "score": 4.2,
+    "logo_url": "/logos/microstation.svg",
+    "official_url": "https://www.bentley.com/software/microstation/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Civil Engineering",
+      "Infrastructure",
+      "Transportation",
+      "Architecture",
+      "GIS"
+    ],
+    "features": [
+      "piping-routing",
+      "drafting-detailing"
     ],
     "country": "USA"
   },
@@ -99,62 +124,72 @@
   },
   {
     "id": "t5",
-    "name": "Autodesk Fusion (Fusion 360)",
-    "slug": "fusion-360",
-    "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, CAE, and PCB.",
-    "score": 4.8,
-    "logo_url": "/logos/fusion-360.svg",
-    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
+    "name": "DraftSight",
+    "slug": "draftsight",
+    "short_desc": "Dassault Systèmes’ professional-grade 2D CAD and 3D design software with native DWG support, flexible licensing, and SOLIDWORKS integration.",
+    "score": 4.3,
+    "logo_url": "/logos/draftsight.svg",
+    "official_url": "https://www.draftsight.com",
+    "category_id": "c1",
+    "category_name": "2D CAD",
     "aliases": [],
     "industries": [
-      "Industrial Design",
-      "Electronics",
-      "Prototyping"
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Architecture",
+      "Construction",
+      "Automotive"
     ],
     "features": [
-      "ai-assisted",
-      "cloud-collaboration",
-      "parametric-modeling",
-      "rendering",
-      "sheet-metal",
-      "generative-design",
-      "reverse-engineering",
-      "integrated-cam",
-      "simulation-fea",
-      "subdivision-modeling",
-      "direct-modeling",
-      "mesh-modeling",
-      "surface-modeling"
+      "drafting-detailing"
     ],
-    "country": "USA"
+    "country": "France"
   },
   {
     "id": "t6",
-    "name": "Rhino 3D",
-    "slug": "rhino-3d",
-    "short_desc": "A long-standing choice for complex NURBS modeling and computational design.",
-    "score": 4.9,
-    "logo_url": "/logos/rhino-3d.ico",
-    "official_url": "https://www.rhino3d.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
+    "name": "GstarCAD",
+    "slug": "gstarcad",
+    "short_desc": "Gstarsoft’s high-performance, DWG-compatible CAD software featuring an independent graphics core, AutoCAD compatibility, and perpetual licensing.",
+    "score": 4.5,
+    "logo_url": "/logos/gstarcad.svg",
+    "official_url": "https://www.gstarcad.net/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
     "aliases": [],
     "industries": [
       "Architecture",
-      "Industrial Design",
-      "Jewelry",
-      "Marine"
+      "Manufacturing",
+      "Mechanical Engineering",
+      "Construction",
+      "Electrical Engineering"
     ],
     "features": [
-      "reverse-engineering",
-      "subdivision-modeling",
-      "direct-modeling",
-      "mesh-modeling",
-      "surface-modeling"
+      "drafting-detailing"
     ],
-    "country": "USA"
+    "country": "China"
+  },
+  {
+    "id": "t7",
+    "name": "QCAD",
+    "slug": "qcad",
+    "short_desc": "RibbonSoft’s open-source, cross-platform 2D CAD application for precision drafting, architectural plans, and CNC toolpath creation.",
+    "score": 4.3,
+    "logo_url": "/logos/qcad.svg",
+    "official_url": "https://www.qcad.org/en/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Manufacturing",
+      "Woodworking",
+      "Mechanical Engineering",
+      "Hobbyist / Maker"
+    ],
+    "features": [
+      "drafting-detailing"
+    ],
+    "country": "Switzerland"
   },
   {
     "id": "t7",
@@ -176,6 +211,27 @@
       "surface-modeling"
     ],
     "country": "France"
+  },
+  {
+    "id": "t8",
+    "name": "nanoCAD",
+    "slug": "nanocad",
+    "short_desc": "Nanosoft’s all-in-one DWG CAD platform offering 2D drafting, 3D parametric modeling, Excel-linked tables, and modular engineering suites.",
+    "score": 4.4,
+    "logo_url": "/logos/nanocad.svg",
+    "official_url": "https://nanocad.com/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Mechanical Engineering",
+      "Civil Engineering",
+      "Construction",
+      "Manufacturing"
+    ],
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t8",
@@ -206,6 +262,27 @@
   },
   {
     "id": "t9",
+    "name": "progeCAD Professional",
+    "slug": "progecad",
+    "short_desc": "ProgeSOFT’s proven AutoCAD-compatible 2D/3D DWG software powered by IntelliCAD with perpetual licensing, PDF-to-DWG, and EasyArch 3D.",
+    "score": 4.4,
+    "logo_url": "/logos/progecad.svg",
+    "official_url": "https://www.progesoft.com/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Construction",
+      "Mechanical Engineering",
+      "Surveying",
+      "Plant Design"
+    ],
+    "features": [],
+    "country": "Italy"
+  },
+  {
+    "id": "t9",
     "name": "ArchiCAD",
     "slug": "archicad",
     "short_desc": "The BIM software of choice for design-oriented architects.",
@@ -227,6 +304,29 @@
   },
   {
     "id": "t10",
+    "name": "LibreCAD",
+    "slug": "librecad",
+    "short_desc": "Free, open-source 2D CAD application developed by a global community for technical drafting and floor planning with native DXF support.",
+    "score": 4.2,
+    "logo_url": "/logos/librecad.svg",
+    "official_url": "https://librecad.org/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Education",
+      "Hobbyist / Maker",
+      "Architecture",
+      "Mechanical Engineering",
+      "Woodworking"
+    ],
+    "features": [
+      "drafting-detailing"
+    ],
+    "country": "International"
+  },
+  {
+    "id": "t10",
     "name": "Altium Designer",
     "slug": "altium-designer",
     "short_desc": "Professional PCB and electronics design environment covering schematic, layout, 3D MCAD co-design and fabrication output.",
@@ -244,6 +344,27 @@
     "features": [
       "cloud-collaboration"
     ],
+    "country": "USA"
+  },
+  {
+    "id": "t11",
+    "name": "TurboCAD Platinum",
+    "slug": "turbocad",
+    "short_desc": "IMSI Design’s professional 2D/3D CAD suite featuring hybrid ACIS solid modeling, D-Cubed constraints, and photorealistic Redway3d rendering.",
+    "score": 4.1,
+    "logo_url": "/logos/turbocad.svg",
+    "official_url": "https://www.turbocad.com/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Industrial Design",
+      "Construction"
+    ],
+    "features": [],
     "country": "USA"
   },
   {
@@ -269,50 +390,65 @@
   },
   {
     "id": "t12",
-    "name": "ZWCAD",
-    "slug": "zwcad",
-    "short_desc": "The most cost-effective and compatible alternative to AutoCAD.",
-    "score": 4.6,
-    "logo_url": "/logos/zwcad.ico",
-    "official_url": "https://www.zwsoft.com/product/zwcad",
+    "name": "CorelCAD",
+    "slug": "corelcad",
+    "short_desc": "Corel’s DWG-native 2D drafting and 3D modeling software powered by ARES, officially discontinued in 2023 with legacy perpetual support.",
+    "score": 4.2,
+    "logo_url": "/logos/corelcad.svg",
+    "official_url": "https://www.coreldraw.com/en/product/corel-cad/",
     "category_id": "c1",
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [
       "Architecture",
-      "Engineering",
+      "Graphic Design",
       "Manufacturing",
-      "Interior Design"
+      "Technical Illustration"
     ],
-    "features": [
-      "drafting-detailing"
-    ],
-    "country": "China"
+    "features": [],
+    "country": "Canada"
   },
   {
     "id": "t13",
-    "name": "BricsCAD",
-    "slug": "bricscad",
-    "short_desc": "The modern CAD platform for 2D, 3D, BIM, and Mechanical.",
-    "score": 4.7,
-    "logo_url": "/logos/bricscad.png",
-    "official_url": "https://bricscad.octave.com/bricscad",
+    "name": "CAXA CAD",
+    "slug": "caxa-cad",
+    "short_desc": "CAXA’s flagship 2D mechanical drafting platform featuring a dual EXB/DWG kernel, national GB drafting standards, and PLM integration.",
+    "score": 4.3,
+    "logo_url": "/logos/caxa-cad.svg",
+    "official_url": "https://www.caxa.com/",
     "category_id": "c1",
     "category_name": "2D CAD",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Mechanical",
-      "GIS"
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Automotive",
+      "Aerospace",
+      "Heavy Machinery"
     ],
-    "features": [
-      "ai-assisted",
-      "sheet-metal",
-      "bim-integration",
-      "direct-modeling",
-      "drafting-detailing"
+    "features": [],
+    "country": "China"
+  },
+  {
+    "id": "t14",
+    "name": "ARES Commander",
+    "slug": "ares-commander",
+    "short_desc": "Graebert’s multi-platform DWG CAD suite powering the ARES Trinity ecosystem (Desktop, Cloud, and Mobile) with BIM-to-DWG drawing extraction.",
+    "score": 4.4,
+    "logo_url": "/logos/ares-commander.svg",
+    "official_url": "https://www.graebert.com/cad-software/ares-commander/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "BIM",
+      "Mechanical Engineering",
+      "Construction",
+      "Facility Management"
     ],
-    "country": "Belgium"
+    "features": [],
+    "country": "Germany"
   },
   {
     "id": "t14",
@@ -338,6 +474,27 @@
   },
   {
     "id": "t15",
+    "name": "AutoCAD LT",
+    "slug": "autocad-lt",
+    "short_desc": "Autodesk’s precision 2D computer-aided design software for drafting, documentation, and DWG collaboration across desktop, web, and mobile.",
+    "score": 4.5,
+    "logo_url": "/logos/autocad-lt.svg",
+    "official_url": "https://www.autodesk.com/products/autocad-lt/overview",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Engineering",
+      "Construction",
+      "Interior Design",
+      "Landscape Architecture"
+    ],
+    "features": [],
+    "country": "USA"
+  },
+  {
+    "id": "t15",
     "name": "Tekla Structures",
     "slug": "tekla-structures",
     "short_desc": "Detailed structural BIM software for steel, concrete, and precast construction.",
@@ -355,6 +512,29 @@
       "bim-integration"
     ],
     "country": "Finland"
+  },
+  {
+    "id": "t16",
+    "name": "MCAD",
+    "slug": "mcad",
+    "short_desc": "Lightweight 2D mechanical drafting and fabrication CAD software with native DWG compatibility, wiring schematics, and CNC G-code generation.",
+    "score": 4.1,
+    "logo_url": "/logos/mcad.svg",
+    "official_url": "https://www.mcadonline.com/",
+    "category_id": "c1",
+    "category_name": "2D CAD",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Electrical",
+      "Fabrication"
+    ],
+    "features": [
+      "drafting-detailing",
+      "sheet-metal"
+    ],
+    "country": "USA"
   },
   {
     "id": "t16",
@@ -381,6 +561,39 @@
   },
   {
     "id": "t17",
+    "name": "SolidWorks",
+    "slug": "solidworks",
+    "short_desc": "Dassault Systèmes’ premier 3D parametric CAD, simulation, and product data management software for mechanical engineering and manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/solidworks.svg",
+    "official_url": "https://www.solidworks.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Automotive",
+      "Aerospace",
+      "Consumer Electronics",
+      "Medical Devices"
+    ],
+    "features": [
+      "ai-assisted",
+      "parametric-modeling",
+      "rendering",
+      "sheet-metal",
+      "generative-design",
+      "reverse-engineering",
+      "integrated-cam",
+      "simulation-fea",
+      "piping-routing",
+      "surface-modeling"
+    ],
+    "country": "France"
+  },
+  {
+    "id": "t17",
     "name": "Vectorworks",
     "slug": "vectorworks",
     "short_desc": "The all-in-one BIM solution for landscape and entertainment design.",
@@ -397,6 +610,95 @@
     ],
     "features": [
       "bim-integration"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "t18",
+    "name": "SketchUp",
+    "slug": "sketchup",
+    "short_desc": "Trimble’s intuitive 3D modeling and architectural visualization software featuring push/pull modeling, the 3D Warehouse, and LayOut 2D documentation.",
+    "score": 4.5,
+    "logo_url": "/logos/sketchup.svg",
+    "official_url": "https://www.sketchup.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "Interior Design",
+      "Landscape Architecture",
+      "Construction",
+      "Woodworking",
+      "Urban Planning"
+    ],
+    "features": [
+      "rendering",
+      "direct-modeling"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "t19",
+    "name": "Autodesk Fusion",
+    "slug": "fusion-360",
+    "short_desc": "Autodesk’s unified cloud 3D CAD, CAM, CAE, and PCB software for integrated product development and multi-axis CNC manufacturing.",
+    "score": 4.5,
+    "logo_url": "/logos/fusion-360.svg",
+    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "Industrial Design",
+      "Electronics / PCB",
+      "Automotive",
+      "Consumer Hardware"
+    ],
+    "features": [
+      "ai-assisted",
+      "cloud-collaboration",
+      "parametric-modeling",
+      "rendering",
+      "sheet-metal",
+      "generative-design",
+      "reverse-engineering",
+      "integrated-cam",
+      "simulation-fea",
+      "subdivision-modeling",
+      "direct-modeling",
+      "mesh-modeling",
+      "surface-modeling"
+    ],
+    "country": "USA"
+  },
+  {
+    "id": "t20",
+    "name": "Rhino 3D",
+    "slug": "rhino-3d",
+    "short_desc": "Robert McNeel & Associates’ premier free-form 3D NURBS modeling software with Grasshopper visual scripting and perpetual licensing.",
+    "score": 4.6,
+    "logo_url": "/logos/rhino-3d.svg",
+    "official_url": "https://www.rhino3d.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Industrial Design",
+      "Architecture",
+      "Jewelry Design",
+      "Marine Engineering",
+      "Automotive",
+      "Computational Design"
+    ],
+    "features": [
+      "reverse-engineering",
+      "subdivision-modeling",
+      "direct-modeling",
+      "mesh-modeling",
+      "surface-modeling"
     ],
     "country": "USA"
   },
@@ -421,49 +723,6 @@
       "piping-routing"
     ],
     "country": "USA"
-  },
-  {
-    "id": "t21",
-    "name": "MicroStation",
-    "slug": "microstation",
-    "short_desc": "The infrastructure engineering standard for massive projects.",
-    "score": 4.8,
-    "logo_url": "/logos/microstation.png",
-    "official_url": "https://www.bentley.com/products/microstation/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Infrastructure",
-      "Civil Engineering",
-      "GIS"
-    ],
-    "features": [
-      "piping-routing",
-      "drafting-detailing"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t22",
-    "name": "DraftSight",
-    "slug": "draftsight",
-    "short_desc": "Professional-grade 2D CAD solution from Dassault Systèmes.",
-    "score": 4.3,
-    "logo_url": "/logos/draftsight.png",
-    "official_url": "https://www.draftsight.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Engineering",
-      "AEC"
-    ],
-    "features": [
-      "drafting-detailing"
-    ],
-    "country": "France"
   },
   {
     "id": "t23",
@@ -926,135 +1185,6 @@
     "country": "China"
   },
   {
-    "id": "t54",
-    "name": "GstarCAD",
-    "slug": "gstarcad",
-    "short_desc": "High-performance AutoCAD alternative.",
-    "score": 4.8,
-    "logo_url": "/logos/gstarcad.png",
-    "official_url": "https://www.gstarcad.net",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Mechanical",
-      "Construction"
-    ],
-    "features": [
-      "drafting-detailing"
-    ],
-    "country": "China"
-  },
-  {
-    "id": "t55",
-    "name": "QCAD",
-    "slug": "qcad",
-    "short_desc": "Open-source 2D CAD application for creating technical drawings, praised for its simplicity, cross-platform support, and focused toolset.",
-    "score": 3.8,
-    "logo_url": "/logos/qcad.jpg",
-    "official_url": "https://www.qcad.org",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Mechanical Engineering",
-      "Education",
-      "Electrical Engineering",
-      "Interior Design"
-    ],
-    "features": [
-      "drafting-detailing"
-    ],
-    "country": "Switzerland"
-  },
-  {
-    "id": "t56",
-    "name": "nanoCAD",
-    "slug": "nanocad",
-    "short_desc": "Professional-grade 2D/3D CAD with native DWG compatibility, powerful API for customization, and competitive pricing.",
-    "score": 3.9,
-    "logo_url": "/logos/nanocad.png",
-    "official_url": "https://nanocad.com",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Construction",
-      "Manufacturing",
-      "Civil Engineering",
-      "Architecture"
-    ],
-    "features": [],
-    "country": "Russia"
-  },
-  {
-    "id": "t57",
-    "name": "progeCAD Professional",
-    "slug": "progecad",
-    "short_desc": "DWG-native 2D/3D CAD with built-in PDF-to-DWG conversion, perpetual licensing, and high AutoCAD compatibility for general-purpose drafting.",
-    "score": 3.6,
-    "logo_url": "/logos/progecad.png",
-    "official_url": "https://www.progesoft.com/products/progecad-professional",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Civil Engineering",
-      "Mechanical Engineering",
-      "Construction",
-      "Interior Design"
-    ],
-    "features": [],
-    "country": "Italy"
-  },
-  {
-    "id": "t60",
-    "name": "LibreCAD",
-    "slug": "librecad",
-    "short_desc": "Free, open-source 2D CAD for Windows, macOS, and Linux with DXF native support, ideal for education, hobbyists, and small-scale drafting.",
-    "score": 3.5,
-    "logo_url": "/logos/librecad.ico",
-    "official_url": "https://librecad.org",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Education",
-      "Mechanical Engineering",
-      "Electrical Engineering",
-      "Architecture",
-      "Hobbyist",
-      "Laser Cutting"
-    ],
-    "features": [
-      "drafting-detailing"
-    ],
-    "country": "Community/International"
-  },
-  {
-    "id": "t62",
-    "name": "TurboCAD Platinum",
-    "slug": "turbocad",
-    "short_desc": "All-in-one professional 2D/3D design suite.",
-    "score": 4.6,
-    "logo_url": "/logos/turbocad.png",
-    "official_url": "https://www.imsidesign.com/products/turbocad",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Mechanical",
-      "Consumer Products"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t63",
     "name": "EPLAN Electric P8",
     "slug": "eplan-electric-p8",
@@ -1265,27 +1395,6 @@
     "country": "USA"
   },
   {
-    "id": "t88",
-    "name": "CorelCAD",
-    "slug": "corelcad",
-    "short_desc": "Discontinued DWG-native 2D drafting and 3D design software — Corel ended sales on 9 January 2024 and support on 31 December 2025; perpetual installs still run and Graebert offers a migration path to ARES Commander.",
-    "score": 3.6,
-    "logo_url": "/logos/corelcad.png",
-    "official_url": "https://www.graebert.com/corelcad/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Mechanical Engineering",
-      "Construction",
-      "Manufacturing",
-      "Interior Design"
-    ],
-    "features": [],
-    "country": "Canada"
-  },
-  {
     "id": "t89",
     "name": "ZW3D",
     "slug": "zw3d",
@@ -1306,46 +1415,6 @@
       "mesh-modeling"
     ],
     "country": "China"
-  },
-  {
-    "id": "t90",
-    "name": "CAXA CAD",
-    "slug": "caxa-cad",
-    "short_desc": "Chinese 2D CAD with a native EXB kernel plus full DWG/DXF compatibility, tuned to GB mechanical drafting standards.",
-    "score": 3.4,
-    "logo_url": "/logos/caxa-cad.jpg",
-    "official_url": "https://cad.caxa.com/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Manufacturing",
-      "Electrical Engineering",
-      "Construction",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t91",
-    "name": "ARES Commander",
-    "slug": "ares-commander",
-    "short_desc": "Professional DWG CAD with cross-platform trinity.",
-    "score": 4.5,
-    "logo_url": "/logos/ares-commander.png",
-    "official_url": "https://www.graebert.com/cad-software/ares-commander/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Mechanical",
-      "General"
-    ],
-    "features": [],
-    "country": "Germany"
   },
   {
     "id": "t93",
@@ -3439,26 +3508,6 @@
     "country": "USA"
   },
   {
-    "id": "t252",
-    "name": "AutoCAD LT",
-    "slug": "autocad-lt",
-    "short_desc": "Autodesk's 2D-only drafting subscription at a fraction of full AutoCAD pricing.",
-    "score": 4.6,
-    "logo_url": "/logos/autocad.svg",
-    "official_url": "https://www.autodesk.com/products/autocad-lt/overview",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Engineering",
-      "Construction",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t253",
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
@@ -3519,31 +3568,6 @@
     ],
     "features": [],
     "country": "Estonia"
-  },
-  {
-    "id": "t256",
-    "name": "MCAD",
-    "slug": "mcad",
-    "short_desc": "Professional Windows and Web 2D CAD drafting and DWG/DXF editor with electrical symbol libraries, sheet nesting, and CNC laser toolpaths.",
-    "score": 4.5,
-    "logo_url": "/logos/mcad.svg",
-    "official_url": "https://www.mechdesigned.com/en/software/mcad/",
-    "category_id": "c1",
-    "category_name": "2D CAD",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Automation",
-      "Sheet Metal",
-      "Factory Layout",
-      "CNC Machining",
-      "Electrical Drafting"
-    ],
-    "features": [
-      "drafting-detailing",
-      "sheet-metal"
-    ],
-    "country": "Thailand"
   },
   {
     "id": "t257",

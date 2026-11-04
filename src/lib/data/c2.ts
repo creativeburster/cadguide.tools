@@ -4,88 +4,117 @@ import type { Tool } from '../types';
 
 export const c2Tools: Tool[] = [
   {
-    "id": "t2",
+    "id": "t17",
     "name": "SolidWorks",
     "slug": "solidworks",
-    "logo_url": "/logos/solidworks.png",
-    "short_desc": "A 3D parametric mechanical design platform with associative drawings and a broad partner add-in ecosystem.",
-    "description": "SOLIDWORKS by Dassault Systèmes is a 3D parametric mechanical CAD platform for part and assembly modeling, production 2D drawings, sheet metal, weldments, and mold design. Built on the Siemens Parasolid geometric kernel and installed locally on Windows (with 3DEXPERIENCE Cloud Services connectivity), it scales from SOLIDWORKS Standard to Professional, Premium, Simulation, PDM, and Electrical modules.",
+    "logo_url": "/logos/solidworks.svg",
+    "short_desc": "Dassault Systèmes’ premier 3D parametric CAD, simulation, and product data management software for mechanical engineering and manufacturing.",
+    "description": "SolidWorks is an industry-leading 3D computer-aided design (CAD), simulation, and product data management (PDM) software application developed by Dassault Systèmes for mechanical engineers, product designers, and manufacturing teams worldwide. Built on the Parasolid geometric modeling kernel, SolidWorks offers feature-based parametric modeling, complex assembly design with motion analysis, sheet metal fabrication, welded structures, plastic mold design, and associative 2D production drawings. Available in perpetual, network floating, and subscription configurations connected to the cloud-based 3DEXPERIENCE platform, SolidWorks is the mechanical design standard across global equipment and consumer product manufacturing.",
     "pricing_tiers": [
       {
         "name": "SOLIDWORKS Standard",
         "price": "Official Store",
-        "period": "Subscription / Perpetual",
+        "period": "subscription / perpetual",
         "features": [
-          "3D Parametric Part & Assembly Modeling + 2D Drawings",
-          "Sheet Metal, Weldments, Surfacing & Mold Tools",
-          "3DEXPERIENCE Cloud Services (sharing, markup & storage)",
-          "Includes 3-Axis NC Programming & Additive Manufacturing in Term Plans"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "SOLIDWORKS Professional & Premium",
-        "price": "Official Store",
-        "period": "Subscription / Perpetual",
-        "features": [
-          "Toolbox Standard Parts Library, Visualize & PDM Standard (Professional)",
-          "Linear Static FEA Stress Analysis & Motion Analysis (Premium)",
-          "Electrical Cable/Harness & Pipe/Tube Routing (Premium)",
-          "Advanced Surface Flattening & Costing Automation"
+          "Parametric 3D Solid, Surface & Assembly Modeling",
+          "Sheet Metal, Weldments, Mold Design & Surfacing Tools",
+          "Automated Associative 2D Production Drawing Generation",
+          "Large Assembly Performance Mode & Interference Detection",
+          "eDrawings Viewer & Standard CAD Format Interoperability"
         ],
         "is_popular": false
       },
       {
-        "name": "Maker / Student / Enterprise",
+        "name": "SOLIDWORKS Professional & Premium",
         "price": "Official Store",
-        "period": "Subscription / SNL Floating",
+        "period": "subscription / perpetual",
         "features": [
-          "3DEXPERIENCE SOLIDWORKS for Makers & Student Editions",
-          "SolidNetWork License (SNL) multi-user floating via authorized VARs",
-          "Cloud Services, version upgrades & support included with active Subscription Service"
+          "Includes All Standard 3D CAD Modeling Features",
+          "Integrated SOLIDWORKS PDM Standard Data Management",
+          "Toolbox Hardware Library (Millions of Standard Components)",
+          "Photorealistic Rendering with PhotoView 360 / Visualize",
+          "Static Linear FEA Structural Simulation & Kinematic Motion",
+          "Routing for Electrical Wiring, Piping, and Tubing (Premium)"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "SOLIDWORKS Network (SNL) & Cloud-Connected",
+        "price": "Custom Quote",
+        "period": "floating / 3dexperience",
+        "features": [
+          "SolidNetWork License (SNL) Floating Pool Sharing Across Workstations",
+          "Cloud-Connected 3DEXPERIENCE SOLIDWORKS with Collaborative Sharing",
+          "Centralized IT Administrative Deployment Wizards",
+          "Dedicated Value-Added Reseller (VAR) Telephone Technical Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Core Mechanical Design (Standard)",
+        "category": "3D Parametric Modeling & Assemblies",
         "items": [
           {
-            "name": "Parametric 3D Part & Assembly Modeling",
+            "name": "Feature-Tree History-Based 3D Parametric Sketching & Extrusions",
             "status": true
           },
           {
-            "name": "Sheet Metal & Weldments",
+            "name": "Large Assembly Management (Sub-Assemblies, Mates, Clearance Verification)",
             "status": true
           },
           {
-            "name": "Production 2D Drawings & GD&T",
+            "name": "Parametric Sheet Metal Design, Gauge Tables, Bends & Flat Patterns",
             "status": true
           },
           {
-            "name": "Mold & Tooling Design",
+            "name": "Weldments, Structural Member Profiles & Automated Cut Lists",
+            "status": true
+          },
+          {
+            "name": "Associative 2D Engineering Drawings with Dynamic BOM Schedules",
             "status": true
           }
         ]
       },
       {
-        "category": "Professional, Premium & Ecosystem Modules",
+        "category": "Simulation & Routing Capabilities (Premium)",
         "items": [
           {
-            "name": "Toolbox Library & PDM Standard (Pro+)",
+            "name": "Linear Static Structural FEA Simulation (Stress, Displacement, Factor of Safety)",
             "status": true
           },
           {
-            "name": "Linear Static FEA & Pipe/Cable Routing (Premium+)",
+            "name": "Time-Based Kinematic Mechanism Motion & Dynamic Force Analysis",
             "status": true
           },
           {
-            "name": "Photorealistic Rendering (Visualize)",
+            "name": "3D Routing for Electrical Wire Harnesses, Rigid Piping & Flexible Hoses",
             "status": true
           },
           {
-            "name": "3DEXPERIENCE Cloud Services Integration",
+            "name": "Plastic Injection Mold Tooling Design (Parting Lines, Draft Analysis, Core/Cavity)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Data Management & Ecosystem Integration",
+        "items": [
+          {
+            "name": "SOLIDWORKS PDM (Check-In/Check-Out, File Versioning & Approval Workflows)",
+            "status": true
+          },
+          {
+            "name": "Toolbox Fastener Library (ANSI, ISO, DIN, JIS Standard Components)",
+            "status": true
+          },
+          {
+            "name": "Photorealistic Rendering via SOLIDWORKS Visualize Engine",
+            "status": true
+          },
+          {
+            "name": "Extensive API Automation using C#, VB.NET, C++, and VBA Macros",
             "status": true
           }
         ]
@@ -93,10 +122,10 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "autodesk-inventor",
-      "onshape",
-      "ptc-creo"
+      "ptc-creo",
+      "fusion-360"
     ],
-    "country": "USA",
+    "country": "France",
     "category_id": "c2",
     "pricing_type": "Subscription / Perpetual",
     "starting_price": 2820,
@@ -105,254 +134,337 @@ export const c2Tools: Tool[] = [
       "Windows"
     ],
     "industries": [
-      "Mechanical",
+      "Mechanical Engineering",
       "Manufacturing",
-      "Automotive"
+      "Automotive",
+      "Aerospace",
+      "Consumer Electronics",
+      "Medical Devices"
     ],
     "core_features": [
-      "Parametric 3D",
-      "Assemblies",
-      "Simulation",
-      "Sheet Metal",
-      "PDM Support"
+      "Feature-Based Parametric 3D Modeling (Parasolid)",
+      "Large Mechanical Assembly Design & Mating",
+      "Parametric Sheet Metal, Weldments & Mold Design",
+      "Linear Static FEA Simulation & Motion Analysis",
+      "Associative 2D Drawings & Automated BOMs",
+      "Integrated SOLIDWORKS PDM & 3DEXPERIENCE",
+      "Comprehensive C++, .NET & VBA Developer APIs"
     ],
     "user_scales": [
-      "Small & Midsize Business",
-      "Enterprise Teams",
-      "Startups & Makers"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.solidworks.com",
-    "pricing_url": "https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing",
+    "official_url": "https://www.solidworks.com/",
+    "pricing_url": "https://www.solidworks.com/how-to-buy",
     "trial_url": "https://my.solidworks.com/try-solidworks",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 2550,
+        "url": "https://www.g2.com/products/solidworks/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 3180,
+        "url": "https://www.capterra.com/p/132514/SolidWorks/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 890,
+        "url": "https://www.trustradius.com/products/solidworks/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 410,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/dassault-systemes/product/solidworks",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 3180,
+        "url": "https://www.getapp.com/engineering-software/a/solidworks/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "SolidWorks Shortcuts Sheet",
+        "href": "/toolbox/solidworks-shortcuts-sheet"
+      },
+      {
+        "label": "SolidWorks SLDPRT to STEP",
+        "href": "/toolbox/online-sldprt-to-step-converter"
+      },
+      {
+        "label": "SolidWorks Crash Diagnostic Wizard",
+        "href": "/toolbox/solidworks-crash-diagnostic-wizard"
+      },
+      {
+        "label": "eDrawings Online Cloud Viewer",
+        "href": "/toolbox/online-solidworks-e-drawings-cloud-viewer"
+      }
+    ],
     "pros": [
-      "Industry-standard parametric mechanical workflow",
-      "Proven Siemens Parasolid kernel reliability",
-      "Broad ecosystem of simulation, PDM, and CAM add-ons"
+      "Global benchmark standard for 3D mechanical CAD, ensuring immense hiring availability, extensive training resources, and ubiquitous vendor compatibility.",
+      "Intuitive, feature-rich parametric sketcher and 3D modeling workflow with robust sheet metal, weldment, and mold creation tools.",
+      "Vast certified third-party add-on partner network spanning CAM (SolidCAM, CAMWorks), FEA simulation, and rendering solutions.",
+      "Integrated product data management (PDM) effectively manages revision control, file references, and engineering change orders for teams.",
+      "High-precision Parasolid geometry kernel delivers dependable solid modeling fidelity across complex mechanical mechanisms.",
+      "Flexible licensing deployment options including standalone desktop seats, network floating (SNL) licenses, and 3DEXPERIENCE cloud connectivity."
     ],
     "cons": [
-      "Native desktop client is Windows-only",
-      "Toolbox library, PDM, and FEA require Professional/Premium or add-on tiers",
-      "Complex multi-thousand-part assemblies require careful rebuild optimization"
+      "Substantial upfront commercial license acquisition cost and recurring annual maintenance fees compared to mid-market CAD alternatives.",
+      "Massive multi-thousand-part assemblies can require powerful, certified workstation hardware (high clock-speed CPU, ECC RAM, workstation GPU) to maintain smooth frame rates.",
+      "Exclusively developed for 64-bit Microsoft Windows workstations; no native macOS or Linux desktop installation options.",
+      "Feature tree rebuild errors can cascade when upstream parent sketches are modified, requiring experienced troubleshooting.",
+      "Direct cloud collaboration features now push toward Dassault's 3DEXPERIENCE platform, which some on-premise IT departments find complex.",
+      "Pricing and quotes are handled through local authorized value-added resellers (VARs) rather than straightforward online checkout."
     ],
     "faqs": [
       {
         "q": "What is SolidWorks used for?",
-        "a": "SOLIDWORKS is a 3D parametric mechanical CAD platform widely adopted across mechanical engineering, industrial equipment, automotive, medical devices, and consumer product manufacturing."
+        "a": "According to Dassault Systèmes official documentation, SolidWorks is a 3D parametric computer-aided design (CAD) software package used by mechanical engineers, product designers, and manufacturing companies to create 3D parts, complex assemblies, 2D production drawings, and FEA simulation analyses. Explore details on the [Official SolidWorks Overview](https://www.solidworks.com/)."
+      },
+      {
+        "q": "What is the difference between SolidWorks Standard, Professional, and Premium?",
+        "a": "SolidWorks Standard provides full 3D parametric solid modeling, assemblies, sheet metal, and 2D drawings. SolidWorks Professional adds PDM data management, the Toolbox standard hardware library, photorealistic rendering (Visualize), and cost estimation. SolidWorks Premium incorporates linear static FEA structural simulation, motion analysis, and routing for electrical cabling, piping, and tubing. Compare tiers on the [Official SolidWorks Product Comparison](https://www.solidworks.com/how-to-buy)."
       },
       {
         "q": "How much does SolidWorks cost?",
-        "a": "SolidWorks is sold either by subscription or as a perpetual licence; the plans shown on this page are SOLIDWORKS Standard, SOLIDWORKS Professional & Premium, and Maker / Student / Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official SolidWorks Pricing Page](https://www.solidworks.com/how-to-buy/3dexperience-solidworks-plans-and-pricing)."
+        "a": "SolidWorks is sold primarily through authorized Value-Added Resellers (VARs) as perpetual buyout licenses (with optional annual maintenance) or annual subscriptions, as well as affordable maker and educational programs. Because configurations, licensing models, and regional reseller pricing vary, visit the [Official SolidWorks How to Buy Portal](https://www.solidworks.com/how-to-buy) for a local quote."
       },
       {
         "q": "Does SolidWorks offer a free trial?",
-        "a": "Yes — Dassault Systèmes provides an official browser-based SOLIDWORKS online product trial as well as desktop evaluation access through authorized resellers. Because trial duration and eligibility rules vary by region, visit the [Official SOLIDWORKS Free Trial Portal](https://my.solidworks.com/try-solidworks) to start an evaluation directly on the vendor portal."
+        "a": "Yes. Dassault Systèmes provides an online browser-based trial of SolidWorks via MySolidWorks that allows prospective users to test the full 3D CAD environment without local installation. Request trial access on the [Official SolidWorks Trial Page](https://my.solidworks.com/try-solidworks)."
       },
       {
         "q": "What operating systems does SolidWorks support?",
-        "a": "SOLIDWORKS Design is installed and runs locally on 64-bit Windows, with connected 3DEXPERIENCE Cloud Services for cloud storage, sharing, and markups. For browser-based cloud-native modeling on macOS or tablets, Dassault Systèmes offers separate 3DEXPERIENCE xDesign roles."
+        "a": "SolidWorks runs exclusively on 64-bit Microsoft Windows 11 and Windows 10 (requiring 16 GB RAM minimum, 32 GB+ recommended; an ISV-certified workstation GPU such as NVIDIA RTX or AMD Radeon Pro is strongly recommended). Non-Windows operating systems are not supported natively. Check detailed hardware certifications on the [SolidWorks System Requirements](https://www.solidworks.com/support/system-requirements)."
       },
       {
         "q": "Which file formats does SolidWorks support?",
-        "a": "SOLIDWORKS natively uses SLDPRT (part), SLDASM (assembly), and SLDDRW (drawing) files, and imports STEP, IGES, Parasolid (.x_t/.x_b), ACIS (.sat), DWG, DXF, STL, IFC, and major MCAD formats via 3D Interconnect. Export covers STEP, IGES, Parasolid, STL, 3MF, eDrawings (.eprt/.easm/.edrw), 3D PDF, DWG, DXF, and more."
-      },
-      {
-        "q": "Does SolidWorks have an API for automation and customization?",
-        "a": "Yes. SOLIDWORKS exposes a COM-based API with bindings for C#, VB.NET, C++, and VBA macros, allowing engineering teams to automate parametric part generation, batch drawing export, custom property management, and PDM workflows."
-      }
-    ,
-      {
-        "q": "What are the best alternatives to SolidWorks?",
-        "a": "The closest alternatives to SolidWorks are Autodesk Inventor, Onshape, and PTC Creo — priced on a subscription, a freemium model, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "a": "SolidWorks natively reads and writes .SLDPRT (parts), .SLDASM (assemblies), and .SLDDRW (drawings). It also supports broad neutral and proprietary CAD interoperability, including STEP (AP203/AP214/AP242), IGES, Parasolid (.X_T, .X_B), ACIS (.SAT), DXF/DWG, Autodesk Inventor (.IPT/.IAM), PTC Creo, and vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Mostly Single-Threaded Feature Rebuild / Multi-Threaded Simulation, Rendering & Toolpaths",
-      "gpu_optimization": "OpenGL 4.5+ (Certified Workstation GPU Recommended)",
+      "engine": "Siemens Parasolid Kernel",
+      "multicore": "Multi-threaded drawing generation, file open & simulation meshing / Single-threaded feature rebuilds",
+      "gpu_optimization": "DirectX & OpenGL ISV-Certified Workstation GPU Acceleration",
       "standards": [
-        "SLDPRT",
-        "STEP",
+        "Parasolid (Native)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "X_T"
+        "DWG",
+        "DXF",
+        "ASME Y14.5",
+        "ISO 1101",
+        "PDF"
       ]
     },
-    "expert_verdict": "A benchmark 3D parametric mechanical CAD platform backed by a deep manufacturing and PDM ecosystem.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Polish",
-      "Czech",
-      "Turkish",
-      "Brazilian Portuguese"
-    ],
+    "expert_verdict": "SolidWorks is the undisputed industry standard for 3D parametric mechanical design and product engineering. With an unmatched global talent pool, comprehensive sheet metal and weldment tools, robust PDM data management, and the proven precision of the Parasolid geometry engine, it remains the most dependable choice for manufacturing organizations developing physical products.",
     "file_formats_in": [
       "SLDPRT",
       "SLDASM",
       "SLDDRW",
       "STEP",
       "IGES",
-      "Parasolid (X_T / X_B)",
-      "SAT (ACIS)",
-      "IFC",
-      "IFCZIP",
-      "JT",
-      "STL",
+      "X_T",
+      "X_B",
+      "SAT",
       "DWG",
       "DXF",
-      "CATPart",
-      "CATProduct",
       "IPT",
       "IAM",
       "PRT",
       "ASM",
-      "PAR",
-      "PSM"
+      "STL"
     ],
     "file_formats_out": [
       "SLDPRT",
+      "SLDASM",
+      "SLDDRW",
       "STEP",
       "IGES",
-      "Parasolid",
-      "STL",
-      "3MF",
-      "EPRT / EASM / EDRW",
-      "3DXML",
-      "PDF",
+      "X_T",
+      "X_B",
+      "SAT",
       "DWG",
       "DXF",
-      "JT",
-      "OBJ",
-      "VRML"
+      "PDF",
+      "3D PDF",
+      "STL",
+      "3MF",
+      "OBJ"
     ],
-    "integrations": [
-      "3DEXPERIENCE",
-      "SolidWorks PDM",
-      "SolidWorks Composer",
-      "CAMWorks",
-      "eDrawings",
-      "Visualize",
-      "Excel",
-      "Microsoft 365"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Portuguese (Brazil)",
+      "Russian",
+      "Polish",
+      "Czech",
+      "Turkish"
     ],
     "deployment_options": [
       "Desktop",
+      "Cloud",
       "Hybrid"
     ],
     "license_types": [
-      "Subscription",
       "Perpetual",
+      "Subscription",
       "Network",
       "Educational"
     ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
     "support_channels": [
+      "Reseller Network",
       "Phone",
       "Email",
       "Community",
       "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "SOC 2 Type II",
-      "ISO 27001",
-      "GDPR Privacy Framework"
-    ],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "COM / .NET API & VBA Macros",
-      "sdk_languages": [
-        "C#",
-        "VB.NET",
-        "C++",
-        "VBA"
-      ],
-      "docs_url": "https://help.solidworks.com/2026/english/api/sldworksapiprogguide/welcome.htm"
-    }
+      "Training"
+    ]
   },
   {
-    "id": "t3",
+    "id": "t18",
     "name": "SketchUp",
     "slug": "sketchup",
-    "logo_url": "/logos/sketchup.png",
-    "short_desc": "A 3D modelling tool for architecture, interiors and concept design, built around direct manipulation.",
-    "description": "SketchUp by Trimble is an intuitive direct-modeling 3D architectural and interior design platform renowned for its patented Push/Pull surface extrusion workflow. Backed by the 3D Warehouse component library, LayOut 2D construction documentation, V-Ray/Enscape rendering links, and IFC openBIM export, it bridges rapid concept massing and detailed design.",
+    "logo_url": "/logos/sketchup.svg",
+    "short_desc": "Trimble’s intuitive 3D modeling and architectural visualization software featuring push/pull modeling, the 3D Warehouse, and LayOut 2D documentation.",
+    "description": "SketchUp is an intuitive, accessible 3D modeling and visualization software platform developed by Trimble Inc. for architects, interior designers, landscape planners, construction contractors, and woodworking professionals. Renowned for its patented 'Push/Pull' direct modeling interface, SketchUp allows designers to turn 2D sketches into complex 3D forms quickly without tedious parametric constraints. It features the massive Trimble 3D Warehouse (the world's largest repository of free 3D models), LayOut for generating associative 2D construction drawings, extensive Ruby extension APIs via the Extension Warehouse, and seamless multi-device continuity across Windows, macOS, iPad, and web browsers.",
     "pricing_tiers": [
       {
         "name": "SketchUp Free",
         "price": "Free",
-        "period": "Free Tier",
+        "period": "web-only free tier",
         "features": [
-          "Browser-based 3D modeler with no desktop applications",
-          "Trimble Connect cloud storage for personal projects",
-          "3D Warehouse component library access"
+          "Core 3D Modeling Directly in Modern Web Browsers",
+          "Includes 10 GB of Trimble Connect Cloud Storage",
+          "Access to Trimble 3D Warehouse for Component Downloads",
+          "Mobile Model Viewing on iOS and Android Devices",
+          "Personal Non-Commercial Project Usage"
         ],
         "is_popular": false
       },
       {
-        "name": "SketchUp Go",
-        "price": "Official Store",
-        "period": "Annual / Monthly Subscription",
-        "features": [
-          "SketchUp for iPad & SketchUp for Web modelers",
-          "Unlimited Trimble Connect cloud storage",
-          "Pre-built 3D Warehouse component library access"
-        ]
-      },
-      {
         "name": "SketchUp Pro",
         "price": "Official Store",
-        "period": "Annual Subscription",
+        "period": "/yr",
         "features": [
-          "Full Desktop 3D Modeler (Windows & macOS) + Go features",
-          "LayOut 2D construction documentation & Extension Warehouse",
-          "XR headset viewing & interoperability (DWG/DXF/IFC)"
+          "Full Desktop 3D Modeling for Windows and macOS",
+          "Includes LayOut for Professional 2D Construction Documents",
+          "SketchUp for iPad with Apple Pencil Support Included",
+          "Unlimited 3D Warehouse Downloads & Extension Warehouse Plugins",
+          "Ruby API Custom Scripting & Unlimited Cloud Storage",
+          "Direct Vendor Technical Support from Trimble"
         ],
         "is_popular": true
       },
       {
-        "name": "SketchUp Studio (Windows-Only Add-ons)",
+        "name": "SketchUp Studio",
         "price": "Official Store",
-        "period": "Annual Subscription",
+        "period": "/yr",
         "features": [
-          "All SketchUp Pro capabilities",
-          "V-Ray for SketchUp photorealistic rendering (Windows)",
-          "Scan Essentials point-cloud modeling & native Revit Importer (Windows)"
-        ]
+          "Includes All SketchUp Pro Desktop, iPad & Web Capabilities",
+          "V-Ray for SketchUp Photorealistic Ray-Traced Rendering",
+          "Scan Essentials for Point Cloud (RVT, E57, LAS) Ingestion",
+          "Advanced Climate & Energy Performance Analysis (Sefaira)",
+          "Revit Importer (Directly Convert Revit Models into SketchUp)"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "Intuitive 3D Direct Modeling",
         "items": [
           {
-            "name": "V-Ray Integration (Studio Tier, Windows)",
+            "name": "Patented Push/Pull Face Extrusion & Follow-Me Geometry",
             "status": true
           },
           {
-            "name": "Point Cloud Modeling (Scan Essentials, Windows)",
+            "name": "Dynamic Components with User-Defined Parametric Behaviors",
             "status": true
           },
           {
-            "name": "Direct Revit File Import (Studio Tier, Windows)",
+            "name": "Solid Tools (Union, Subtract, Intersect, Split, Trim)",
             "status": true
           },
           {
-            "name": "Sefaira for Energy & Carbon Analysis",
+            "name": "Live Section Planes, Active Cuts & Hatch Pattern Fills",
             "status": true
           },
           {
-            "name": "Advanced Solid Tools for 3D Printing",
+            "name": "Match Photo (Model Accurately Over Real Perspective Photos)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "2D Documentation & Visual Presentations",
+        "items": [
+          {
+            "name": "LayOut Application (Associative 2D Architectural Drawing Sets)",
+            "status": true
+          },
+          {
+            "name": "Dynamic Viewports Linked to 3D Models (Auto-Update on Change)",
+            "status": true
+          },
+          {
+            "name": "Architectural Scales, Dimensioning & Vector Linework",
+            "status": true
+          },
+          {
+            "name": "Custom Style Builder for Artistic Hand-Drawn Sketch Looks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Trimble Ecosystem & Extension Warehouse",
+        "items": [
+          {
+            "name": "Trimble 3D Warehouse (Millions of Free Manufacturer Models)",
+            "status": true
+          },
+          {
+            "name": "Extension Warehouse (Hundreds of Ruby Plugins for Architecture & CAM)",
+            "status": true
+          },
+          {
+            "name": "SketchUp for iPad with Apple Pencil Pressure Snapping",
+            "status": true
+          },
+          {
+            "name": "Trimble Connect Cloud Collaboration & CDE Coordination",
             "status": true
           }
         ]
@@ -361,7 +473,7 @@ export const c2Tools: Tool[] = [
     "alternatives": [
       "rhino-3d",
       "revit",
-      "archicad"
+      "autocad"
     ],
     "country": "USA",
     "category_id": "c2",
@@ -377,251 +489,339 @@ export const c2Tools: Tool[] = [
     "industries": [
       "Architecture",
       "Interior Design",
-      "Landscape"
+      "Landscape Architecture",
+      "Construction",
+      "Woodworking",
+      "Urban Planning"
     ],
     "core_features": [
-      "Push/Pull Modeling",
-      "3D Warehouse Library",
-      "LayOut Module"
+      "Patented Push/Pull Direct 3D Modeling",
+      "Trimble 3D Warehouse Component Repository",
+      "LayOut Associative 2D Construction Drawings",
+      "SketchUp for iPad with Apple Pencil Support",
+      "Ruby Extension Warehouse Plugin Ecosystem",
+      "V-Ray Rendering & Point Clouds (Studio Edition)",
+      "Cross-Platform Native (Windows, Mac, iPad, Web)"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business"
+      "Individual",
+      "Freelancers",
+      "SMB",
+      "Mid-Market"
     ],
-    "official_url": "https://sketchup.trimble.com/en",
-    "pricing_url": "https://sketchup.trimble.com/en/plans-and-pricing",
-    "trial_url": "https://sketchup.trimble.com/en/try-sketchup",
+    "official_url": "https://www.sketchup.com/",
+    "pricing_url": "https://www.sketchup.com/plans-and-pricing",
+    "trial_url": "https://www.sketchup.com/try-sketchup",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 1020,
+        "url": "https://www.g2.com/products/sketchup/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 1240,
+        "url": "https://www.capterra.com/p/132516/SketchUp/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 460,
+        "url": "https://www.trustradius.com/products/sketchup/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 1240,
+        "url": "https://www.getapp.com/engineering-software/a/sketchup/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "SketchUp Shortcuts Sheet",
+        "href": "/toolbox/sketchup-shortcuts-sheet"
+      },
+      {
+        "label": "Online SKP to FBX Converter",
+        "href": "/toolbox/online-skp-to-fbx-cloud-converter"
+      },
+      {
+        "label": "SketchUp SKP to GLB Converter",
+        "href": "/toolbox/skp-to-glb"
+      },
+      {
+        "label": "SketchUp SKP to OBJ Converter",
+        "href": "/toolbox/skp-to-obj"
+      }
+    ],
     "pros": [
-      "Low learning curve",
-      "Millions of models in 3D Warehouse",
-      "Great rendering & plugin ecosystem"
+      "The fastest and most intuitive learning curve in the 3D industry; new designers can build recognizable architectural concepts within hours.",
+      "The Trimble 3D Warehouse gives instant access to millions of pre-modeled building products, furniture, fixtures, and materials at zero cost.",
+      "LayOut module provides a direct bridge to professional 2D construction drawings with dynamic model-linked viewports.",
+      "Vibrant Ruby extension developer community with plugins available for parametric curves, complex organic geometry, and rendering.",
+      "Native cross-platform execution on macOS and Windows, plus an outstanding mobile drafting experience on the iPad with Apple Pencil.",
+      "Seamless export to mainstream rendering and BIM applications including Revit, Lumion, Enscape, Twinmotion, and Unreal Engine."
     ],
     "cons": [
-      "Large scene slowdown",
-      "Studio tier add-ons (V-Ray, Scan Essentials, Revit Importer) are Windows-only",
-      "LayOut 2D documentation can lag on heavy vector sheets"
+      "Trimble phased out perpetual desktop licenses, moving all commercial editions to annual recurring subscription plans.",
+      "Geometric engine is polygon-mesh based rather than true mathematical NURBS or solid Parasolid B-Rep, making high-precision organic tooling difficult.",
+      "Very large architectural models with high-polygon 3D Warehouse assets can cause significant viewport lag on single-core CPU threads.",
+      "LayOut drawing performance can feel sluggish when handling multi-sheet sets with complex hybrid vector rendering.",
+      "Studio edition's advanced add-ons (V-Ray, Scan Essentials point cloud tools) are available exclusively for Windows workstations.",
+      "Does not provide automated parametric constraint solving or engineering tolerance analyses out of the box."
     ],
     "faqs": [
       {
         "q": "What is SketchUp used for?",
-        "a": "A 3D modelling tool for architecture, interiors and concept design, built around direct manipulation. SketchUp is a 3D modeling solution widely adopted in Architecture, Interior Design, Landscape."
+        "a": "According to Trimble official documentation, SketchUp is an intuitive 3D modeling and architectural design application used worldwide for conceptual design, interior layouts, landscape architecture, construction documentation, and woodworking. It is famed for its Push/Pull modeling engine and the 3D Warehouse. Discover more on the [Official SketchUp Overview](https://www.sketchup.com/)."
+      },
+      {
+        "q": "What is the difference between SketchUp Free, Pro, and Studio?",
+        "a": "SketchUp Free is a browser-only 3D modeler for personal use. SketchUp Pro is the flagship commercial desktop edition for Windows and macOS, bundling LayOut for 2D construction drawings, SketchUp for iPad, and Ruby plugin extensions. SketchUp Studio adds V-Ray photorealistic rendering, Scan Essentials point cloud tools, and Revit model import. Compare plans on the [Official SketchUp Pricing Page](https://www.sketchup.com/plans-and-pricing)."
       },
       {
         "q": "How much does SketchUp cost?",
-        "a": "SketchUp offers a free web tier alongside paid commercial subscriptions (SketchUp Go, SketchUp Pro, and SketchUp Studio) as well as Education and Higher-Ed plans. Because commercial licensing rates, regional currencies, taxes, and reseller quotes vary by country, please visit the [Official SketchUp Plans & Pricing Page](https://sketchup.trimble.com/en/plans-and-pricing) for live regional pricing."
+        "a": "SketchUp is offered as an annual subscription across different tiers (Go, Pro, Studio), as well as discounted educational licenses for accredited students. Visit the [Official SketchUp Plans Portal](https://www.sketchup.com/plans-and-pricing) to view live regional pricing."
       },
       {
         "q": "Does SketchUp offer a free trial?",
-        "a": "Yes — Trimble provides an official SketchUp evaluation so designers can test desktop, web, and iPad modeling workflows before subscribing. Because trial duration and eligibility rules are updated periodically by the vendor, visit the [Official SketchUp Free Trial Page](https://www.sketchup.com/try) for current trial details."
+        "a": "Yes. Trimble provides an official 30-day free trial of SketchUp Studio that includes full desktop access to SketchUp Pro, LayOut, SketchUp for iPad, and V-Ray. Download the trial from the [Official SketchUp Free Trial Page](https://www.sketchup.com/try-sketchup)."
       },
       {
         "q": "What operating systems does SketchUp support?",
-        "a": "SketchUp Pro desktop runs natively on Windows and macOS, while SketchUp for Web runs in modern desktop browsers and SketchUp for iPad runs natively on iPadOS. Note that SketchUp Studio's bundled installers (Revit Importer, Scan Essentials, and V-Ray for SketchUp) are supported on Windows only."
+        "a": "SketchUp Pro runs natively on 64-bit Microsoft Windows 11/10 and Apple macOS (supporting Apple Silicon M-series and Intel Macs with Metal acceleration). SketchUp for iPad runs on iPadOS, and SketchUp Free/Go runs in any modern web browser. Check hardware benchmarks on the [SketchUp System Requirements](https://help.sketchup.com/en/sketchup/system-requirements)."
       },
       {
         "q": "Which file formats does SketchUp support?",
-        "a": "SketchUp imports SKP, DWG, DXF, 3DS, STL, KMZ and more. Export covers SKP, DWG, DXF, 3DS, STL, KMZ and more."
-      },
-      {
-        "q": "Does SketchUp have an API for automation and customization?",
-        "a": "Yes. SketchUp exposes Ruby API / SketchUp SDK with SDK bindings for Ruby, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
+        "a": "SketchUp natively saves in .SKP format and imports/exports AutoCAD .DWG, .DXF, IFC, 3DS, OBJ, FBX, DAE (COLLADA), KMZ, STL, and vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "Trimble Proprietary",
-      "multicore": "Single-Core Direct Modeling / GPU Viewport Acceleration",
-      "gpu_optimization": "Windows: DirectX 12 / macOS: Metal Graphics Engine",
+      "engine": "Trimble SketchUp Polygon/Surface Modeling Core",
+      "multicore": "Multi-threaded rendering and point cloud streaming / Single-threaded geometry computation",
+      "gpu_optimization": "OpenGL 3.1+ (Windows) / Apple Metal Engine (macOS)",
       "standards": [
-        "SKP",
+        "SKP (Native)",
         "DWG",
-        "IFC",
-        "STL"
+        "DXF",
+        "IFC (IFC2x3 & IFC4)",
+        "DAE (COLLADA)",
+        "OBJ",
+        "FBX",
+        "PDF"
       ]
     },
-    "expert_verdict": "SketchUp is the digital 'sketchpad' for design. Unmatched for speed and inspiration.",
-    "key_capabilities": [
-      "Intuitive 3D Concept Modeling",
-      "2D Documentation with LayOut",
-      "3D Warehouse (Millions of free models)",
-      "Extension Warehouse (1000+ plugins)",
-      "Cloud Collaboration via Trimble Connect"
-    ],
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Polish",
-      "Swedish",
-      "Brazilian Portuguese"
-    ],
+    "expert_verdict": "SketchUp is the undisputed leader in intuitive 3D conceptual modeling for architecture and spatial design. By eliminating the steep learning curve of mechanical CAD and coupling its patented Push/Pull toolset with the massive 3D Warehouse, LayOut documentation, and seamless iPad drafting, it remains the most expressive conceptual design tool in the built environment.",
     "file_formats_in": [
       "SKP",
       "DWG",
       "DXF",
-      "3DS",
-      "STL",
-      "KMZ",
-      "COLLADA",
       "IFC",
-      "IFCZIP",
+      "DAE",
+      "3DS",
       "OBJ",
-      "PNG",
-      "JPG"
+      "PDF",
+      "JPG",
+      "PNG"
     ],
     "file_formats_out": [
       "SKP",
       "DWG",
       "DXF",
-      "3DS",
-      "STL",
-      "KMZ",
-      "COLLADA",
       "IFC",
+      "DAE",
+      "3DS",
       "OBJ",
       "FBX",
-      "XSI",
-      "WRL",
       "PDF",
-      "PNG",
-      "JPG"
+      "STL",
+      "GLB"
     ],
-    "integrations": [
-      "Trimble Connect",
-      "3D Warehouse",
-      "Extension Warehouse",
-      "Sefaira",
-      "LayOut",
-      "V-Ray",
-      "Enscape",
-      "Twinmotion",
-      "Lumion"
+    "languages": [
+      "English",
+      "French",
+      "Italian",
+      "German",
+      "Spanish",
+      "Japanese",
+      "Korean",
+      "Portuguese (Brazil)",
+      "Russian",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Swedish"
     ],
     "deployment_options": [
       "Desktop",
       "Web",
-      "Cloud",
-      "Mobile"
+      "Mobile",
+      "Cloud"
     ],
     "license_types": [
       "Subscription",
       "Free",
       "Educational"
     ],
-    "support_channels": [
-      "Email",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "SOC 2 Type II",
-      "GDPR Privacy Framework",
-      "ISO 27001"
-    ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "Ruby API / SketchUp SDK",
-      "sdk_languages": [
-        "Ruby",
-        "C++"
-      ],
-      "docs_url": "https://ruby.sketchup.com/"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Email",
+      "Reseller Network"
+    ]
   },
   {
-    "id": "t5",
-    "name": "Autodesk Fusion (Fusion 360)",
+    "id": "t19",
+    "name": "Autodesk Fusion",
     "slug": "fusion-360",
     "logo_url": "/logos/fusion-360.svg",
-    "short_desc": "The cloud-native powerhouse for integrated CAD, CAM, CAE, and PCB.",
-    "description": "Autodesk Fusion (formerly Fusion 360) is a cloud-connected 3D CAD, CAM, CAE, and PCB platform built for agile product development and CNC manufacturing. It unifies parametric solid modeling, T-Spline freeform surfacing, sheet metal, multi-axis milling/turning toolpaths, Nastran FEA, and integrated electronics/PCB design (based on EAGLE technology) in a single collaborative workspace.",
+    "short_desc": "Autodesk’s unified cloud 3D CAD, CAM, CAE, and PCB software for integrated product development and multi-axis CNC manufacturing.",
+    "description": "Autodesk Fusion (formerly Fusion 360) is an all-in-one, cloud-connected 3D computer-aided design (CAD), manufacturing (CAM), engineering (CAE), and printed circuit board (PCB) software platform developed by Autodesk. Unifying the entire product development lifecycle from initial conceptual sketching to multi-axis CNC machining, Fusion combines parametric, direct, surface, freeform T-Spline, and generative design modeling. Built on cloud data architecture, Fusion provides real-time team collaboration, automated version control, cloud FEA simulation, ECAD/MCAD co-design, and additive manufacturing slicing across Windows, macOS, and web browsers.",
     "pricing_tiers": [
       {
-        "name": "Autodesk Fusion (Core Commercial)",
+        "name": "Autodesk Fusion (Commercial)",
         "price": "Official Store",
-        "period": "Monthly / Annual / 3-Year",
+        "period": "annual / monthly subscription",
         "features": [
-          "3D Parametric, Direct, Freeform Surface & Mesh Modeling",
-          "Integrated CAM (2/2.5/3-axis, 3+2 positioning, turning & additive)",
-          "Integrated Electronics & 16-Layer PCB Design",
-          "Cloud Data Management & Team Collaboration"
+          "Integrated 3D CAD, CAM, CAE & PCB Design on Desktop & Web",
+          "Parametric, Direct, Surface & Freeform T-Splines Modeling",
+          "2.5 & 3-Axis Milling, Turning, Waterjet, Laser & 3D Printing",
+          "Schematic Capture, 2-Layer PCB Layout & Component Libraries",
+          "Linear Static FEA Stress, Thermal & Modal Frequency Simulation",
+          "Cloud Data Storage, Version Control & Team Collaboration"
         ],
         "is_popular": true
       },
       {
-        "name": "Fusion for Manufacturing / Fusion for Design",
+        "name": "Fusion Extensions (Manufacturing / Design)",
         "price": "Official Store",
-        "period": "Industry Bundles & Extensions",
+        "period": "annual extension subscription",
         "features": [
-          "Advanced 4/5-Axis Simultaneous Machining, Toolpath Optimization & Part Inspection (Manufacturing)",
-          "Advanced Simulation, Generative Design & Manage Extension (Design)",
-          "Flexible Autodesk Flex token access available for occasional module use"
+          "Manufacturing Extension: 4 & 5-Axis Simultaneous CNC Machining",
+          "Automated Hole Recognition, Surface Inspection & Toolpath Trimming",
+          "Generative Design Extension: AI-Powered Structural Optimization",
+          "Additive Build Extension: Metal Powder Bed Fusion & Lattice Generation",
+          "Simulation Extension: Non-Linear FEA, Injection Molding & Event Simulation"
         ],
         "is_popular": false
       },
       {
-        "name": "Personal Use / Startup / Education",
-        "price": "Official Store",
-        "period": "Eligibility-Based Programs",
+        "name": "Personal & Educational Access",
+        "price": "Free",
+        "period": "eligibility-based",
         "features": [
-          "Free Personal Use tier for qualifying non-commercial hobbyists",
-          "Startup program for eligible early-stage hardware companies",
-          "Free Educational access for verified students and educators"
+          "Free 1-Year Renewable Educational Access for Students & Educators",
+          "Free Personal-Use Edition for Qualifying Hobbyists (10 Active Documents)",
+          "Startup Program for Early-Stage Qualifying Hardware Startups",
+          "Cloud Storage & Community Forum Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Unified Platform",
+        "category": "Integrated 3D CAD & Generative Design",
         "items": [
           {
-            "name": "Integrated CAD/CAM/CAE",
+            "name": "Parametric Feature-Based History Modeling & Direct Modeling",
             "status": true
           },
           {
-            "name": "Cloud-native Data Management",
+            "name": "Freeform Organic T-Spline Subdivision (SubD) Surface Modeling",
             "status": true
           },
           {
-            "name": "Direct & Parametric Modeling",
+            "name": "Generative Design AI (Cloud Structural & Material Weight Optimization)",
             "status": true
           },
           {
-            "name": "Unified Electronics Design",
+            "name": "Sheet Metal Design, Bend Rules, Flanges & Flat Pattern DXF Export",
+            "status": true
+          },
+          {
+            "name": "Assembly Modeling with Rigid, Revolute, Slider & Ball Joints",
             "status": true
           }
         ]
       },
       {
-        "category": "Advanced Tech",
+        "category": "Integrated CAM & Multi-Axis CNC",
         "items": [
           {
-            "name": "AI-powered Generative Design",
+            "name": "2.5-Axis, 3-Axis & Adaptive Clearing High-Speed Roughing Toolpaths",
             "status": true
           },
           {
-            "name": "Thermal & Stress Analysis",
+            "name": "Multi-Axis 4-Axis & 5-Axis Simultaneous CNC Milling (Extension)",
             "status": true
           },
           {
-            "name": "Additive Manufacturing support",
+            "name": "Turning, Mill-Turn, Waterjet, Plasma & Laser Cutting Toolpaths",
             "status": true
           },
           {
-            "name": "Photorealistic Rendering",
+            "name": "Additive Manufacturing Build Preparation & 3D Print Slicing",
+            "status": true
+          },
+          {
+            "name": "Extensive Certified Post-Processor Library (Haas, Fanuc, Heidenhain)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "ECAD PCB Design & CAE Simulation",
+        "items": [
+          {
+            "name": "Full Schematic Capture & Multi-Layer PCB Board Layout (EAGLE Powered)",
+            "status": true
+          },
+          {
+            "name": "True 3D ECAD/MCAD Co-Design with Real-Time Component Clearance",
+            "status": true
+          },
+          {
+            "name": "Finite Element Analysis (Static Stress, Modal, Thermal, Shape Optimization)",
+            "status": true
+          },
+          {
+            "name": "Cloud Photorealistic Ray-Traced Rendering Engine",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Cloud Collaboration & Extensibility",
+        "items": [
+          {
+            "name": "Cloud-Based Data Management with Automated Version History & Branching",
+            "status": true
+          },
+          {
+            "name": "Cross-Platform Native Parity across Windows and macOS",
+            "status": true
+          },
+          {
+            "name": "Fusion Web Client for 3D Model Inspection on Any Browser",
+            "status": true
+          },
+          {
+            "name": "Python & C++ Secondary Development APIs and Add-In Marketplace",
             "status": true
           }
         ]
@@ -630,7 +830,7 @@ export const c2Tools: Tool[] = [
     "alternatives": [
       "solidworks",
       "onshape",
-      "shapr3d"
+      "autodesk-inventor"
     ],
     "country": "USA",
     "category_id": "c2",
@@ -643,130 +843,182 @@ export const c2Tools: Tool[] = [
       "Web"
     ],
     "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
       "Industrial Design",
-      "Electronics",
-      "Prototyping"
+      "Electronics / PCB",
+      "Automotive",
+      "Consumer Hardware"
     ],
     "core_features": [
-      "Cloud CAD/CAM",
-      "Generative Design",
-      "Integrated PCB",
-      "Simulation",
-      "Collaboration"
+      "Unified 3D CAD, CAM, CAE & PCB Ecosystem",
+      "Freeform T-Spline Organic Surface Modeling",
+      "2.5 to 5-Axis CNC Milling & Machine Simulation",
+      "AI Generative Design & Topology Optimization",
+      "Full Schematic Capture & 3D PCB Co-Design",
+      "Cloud Version Control & Real-Time Collaboration",
+      "Native Cross-Platform (Windows & macOS)"
     ],
     "user_scales": [
-      "Small & Midsize Business",
-      "Enterprise Teams",
-      "Startups & Makers"
+      "Individual",
+      "Freelancers",
+      "SMB",
+      "Mid-Market"
     ],
     "official_url": "https://www.autodesk.com/products/fusion-360/overview",
     "pricing_url": "https://www.autodesk.com/products/fusion-360/subscribe",
     "trial_url": "https://www.autodesk.com/products/fusion-360/free-trial",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 490,
+        "url": "https://www.g2.com/products/fusion-360/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 260,
+        "url": "https://www.capterra.com/p/158739/Fusion-360/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 140,
+        "url": "https://www.trustradius.com/products/fusion-360/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 260,
+        "url": "https://www.getapp.com/engineering-software/a/fusion-360/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Fusion 360 Shortcuts Sheet",
+        "href": "/toolbox/fusion360-shortcuts-sheet"
+      },
+      {
+        "label": "Online STEP to STL Converter",
+        "href": "/toolbox/online-step-to-stl-cloud-converter"
+      },
+      {
+        "label": "STEP Assembly Size Reducer",
+        "href": "/toolbox/step-file-size-reducer"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Seamless cloud sync",
-      "Exceptional CAM value",
-      "Native Apple Silicon"
+      "Exceptional all-in-one value integrating parametric CAD, advanced CAM toolpaths, structural FEA, and electrical PCB layout into a single tool.",
+      "Industry-leading CAM module with adaptive clearing, comprehensive CNC machine post-processors, and direct machine simulation.",
+      "Intuitive T-Splines freeform modeling makes designing ergonomic, organic consumer hardware significantly easier than traditional NURBS CAD.",
+      "True native cross-platform support across 64-bit Windows and Apple macOS with complete feature parity.",
+      "Cloud data architecture automatically preserves version histories, enables non-destructive rollback, and supports remote multi-user teams.",
+      "Generative design capabilities use cloud AI to synthesize high-strength, lightweight geometric structures optimized for manufacturing."
     ],
     "cons": [
-      "Cloud connectivity dependency",
-      "Commercial use is subscription-only (no perpetual license)",
-      "Advanced 4/5-axis simultaneous CAM requires paid Extension"
+      "Requires an active internet connection periodically to sync cloud data and maintain full feature functionality.",
+      "Large and complex assemblies (thousands of components) can experience performance throttling compared to on-premise MCAD tools like Inventor or SolidWorks.",
+      "Advanced manufacturing features (5-axis simultaneous milling, automated nesting, advanced simulation) require purchasing expensive Extensions or cloud tokens.",
+      "No perpetual license option is available; software operates entirely on Autodesk's subscription model.",
+      "Cloud project permission controls can feel rigid for large enterprise IT departments accustomed to on-premise Windows network file shares.",
+      "2D mechanical drafting and detailing tools in the Drawing workspace are less mature than dedicated 2D packages like AutoCAD."
     ],
     "faqs": [
       {
-        "q": "What is Fusion 360 used for?",
-        "a": "The cloud-native powerhouse for integrated CAD, CAM, and CAE. Fusion 360 is a 3D modeling solution widely adopted in Industrial Design, Electronics, Prototyping."
+        "q": "What is Autodesk Fusion used for?",
+        "a": "According to Autodesk official documentation, Autodesk Fusion is a cloud-based 3D CAD, CAM, CAE, and PCB design software platform. It is used by mechanical engineers, machinists, product designers, and electronics developers for end-to-end product development, from concept modeling and PCB design to multi-axis CNC machining. Learn more on the [Official Autodesk Fusion Overview](https://www.autodesk.com/products/fusion-360/overview)."
       },
       {
-        "q": "How much does Fusion 360 cost?",
-        "a": "Autodesk Fusion is licensed on a commercial Subscription model (available in Monthly, Annual, and 3-Year terms, plus Fusion for Manufacturing and Fusion for Design bundles). In addition to commercial plans, Autodesk offers a feature-limited Free Personal Use tier for qualifying hobbyists, a Startup program, and free Educational access for students and faculty. Because official seat rates, taxes, and promotions vary by country and currency, please visit the [Official Autodesk Fusion Subscribe Page](https://www.autodesk.com/products/fusion-360/subscribe) for live regional pricing."
+        "q": "What is the difference between Fusion Core and Fusion Extensions?",
+        "a": "The core Autodesk Fusion subscription includes full parametric 3D CAD, 2.5 and 3-axis CAM, basic FEA simulation, and 2-layer PCB design. Fusion Extensions are optional modular add-ons that unlock advanced specialized tools such as 5-axis simultaneous CNC machining, generative design optimization, additive metal printing, and advanced nonlinear simulation. Explore options on the [Official Fusion Extensions Portal](https://www.autodesk.com/products/fusion-360/extensions)."
       },
       {
-        "q": "Does Fusion 360 offer a free trial?",
-        "a": "Yes — Autodesk provides an official evaluation program for commercial Autodesk Fusion, alongside free Personal Use and Educational editions. Because trial duration and eligibility rules are updated periodically by the vendor, visit the [Official Autodesk Fusion Free Trial Page](https://www.autodesk.com/products/fusion-360/free-trial) for current trial details."
+        "q": "How much does Autodesk Fusion cost in my country?",
+        "a": "Autodesk offers Fusion as Monthly, Annual, and 3-Year subscriptions, along with specialized educational and startup programs. Because regional currencies, taxes, and promotional campaigns differ worldwide, check the [Official Autodesk Fusion Subscribe Portal](https://www.autodesk.com/products/fusion-360/subscribe) for live local prices."
       },
       {
-        "q": "What operating systems does Fusion 360 support?",
-        "a": "The full Autodesk Fusion desktop modeling client is officially supported on Windows (64-bit) and macOS (Intel & Apple Silicon), with browser-based access available via Fusion on the Web. Companion mobile apps for iOS and Android are provided for 3D viewing, markups, and team comments rather than full parametric modeling."
+        "q": "Can I use Autodesk Fusion for free?",
+        "a": "Yes. Autodesk provides free renewable 1-year educational licenses for eligible students and educators at accredited institutions, as well as a limited Personal-Use edition for qualifying hobbyists working on non-commercial projects. In addition, an official 30-day commercial free trial is available via the [Official Fusion Free Trial Page](https://www.autodesk.com/products/fusion-360/free-trial)."
       },
       {
-        "q": "Which file formats does Fusion 360 support?",
-        "a": "Fusion 360 imports F3D, STEP, IGES, SAT, STL, DWG and more. Export covers F3D, STEP, IGES, SAT, STL, DWG and more."
+        "q": "What operating systems does Autodesk Fusion support?",
+        "a": "Fusion runs natively on 64-bit Microsoft Windows 11 and 10, as well as Apple macOS (supporting macOS Sonoma, Ventura, and Monterey natively on Apple Silicon and Intel). In addition, lightweight model inspection runs in any web browser via the Fusion Web Client. Review specifications on the [Autodesk Fusion System Requirements](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Fusion-360.html)."
       },
       {
-        "q": "Does Fusion 360 have an API for automation and customization?",
-        "a": "Yes. Fusion 360 exposes Fusion API with SDK bindings for Python, C++. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      }
-    ,
-      {
-        "q": "What are the best alternatives to Autodesk Fusion (Fusion 360)?",
-        "a": "The closest alternatives to Autodesk Fusion (Fusion 360) are SolidWorks, Onshape, and Shapr3D — priced on a subscription or a perpetual licence, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "q": "Which file formats does Autodesk Fusion support?",
+        "a": "Fusion provides extensive translation support, natively reading and exporting STEP, IGES, SAT, DXF/DWG, Autodesk Inventor (.IPT/.IAM), SolidWorks (.SLDPRT/.SLDASM), Rhino (.3DM), SketchUp (.SKP), STL, OBJ, and 3MF."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX / Metal",
+      "engine": "Autodesk ShapeManager (ASM) & T-Splines Engine",
+      "multicore": "Multi-threaded CAM toolpath generation and local rendering / Cloud-distributed simulation & generative solvers",
+      "gpu_optimization": "DirectX 11 (Windows) / Apple Metal Engine (macOS)",
       "standards": [
-        "F3D",
-        "STEP",
-        "STL",
-        "DXF"
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "DWG",
+        "DXF",
+        "IPC-2581",
+        "Gerber RS-274X",
+        "PDF"
       ]
     },
-    "expert_verdict": "Fusion 360 is the future of agile hardware design.",
-    "languages": [
-      "English",
-      "German",
-      "Spanish",
-      "French",
-      "Italian",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese"
-    ],
+    "expert_verdict": "Autodesk Fusion is a transformative modern engineering platform that bridges the historical gap between design (CAD) and manufacturing (CAM). With intuitive T-Spline surfacing, high-performance CAM toolpaths, integrated ECAD/MCAD co-design, and cloud versioning on Windows and Mac at an accessible price point, it is the premier software for modern hardware agile development.",
     "file_formats_in": [
       "F3D",
       "STEP",
       "IGES",
       "SAT",
-      "STL",
       "DWG",
       "DXF",
-      "OBJ",
-      "SLDPRT",
       "IPT",
       "IAM",
-      "CATPart",
-      "PRT",
+      "SLDPRT",
+      "SLDASM",
       "3DM",
-      "X_T",
-      "X_B"
+      "SKP",
+      "STL",
+      "OBJ",
+      "BRD"
     ],
     "file_formats_out": [
       "F3D",
       "STEP",
       "IGES",
       "SAT",
-      "STL",
       "DWG",
       "DXF",
+      "STL",
       "OBJ",
-      "FBX",
       "3MF",
-      "USDZ",
-      "IPT"
+      "PDF",
+      "GCODE"
     ],
-    "integrations": [
-      "Autodesk Fusion Manage",
-      "Autodesk Docs",
-      "Autodesk Drive",
-      "ANSYS / Nastran Simulation",
-      "Markforged",
-      "Formlabs",
-      "Bambu Studio"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Japanese",
+      "Korean",
+      "Simplified Chinese",
+      "Spanish",
+      "Italian",
+      "Portuguese"
     ],
     "deployment_options": [
       "Desktop",
@@ -775,117 +1027,131 @@ export const c2Tools: Tool[] = [
     ],
     "license_types": [
       "Subscription",
-      "Free",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training",
-      "Knowledge Base"
-    ],
-    "security_compliance": [
-      "SOC 2 Type II",
-      "ISO 27001",
-      "GDPR Privacy Framework"
+      "Educational",
+      "Free"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "Fusion API",
-      "sdk_languages": [
-        "Python",
-        "C++"
-      ],
-      "docs_url": "https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-A92A4B10-3781-4925-94C6-47DA85A4F65A"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Community",
+      "Email",
+      "Documentation",
+      "Training"
+    ]
   },
   {
-    "id": "t6",
+    "id": "t20",
     "name": "Rhino 3D",
     "slug": "rhino-3d",
-    "logo_url": "/logos/rhino-3d.ico",
-    "short_desc": "A long-standing choice for complex NURBS modeling and computational design.",
-    "description": "Rhinoceros 3D (Rhino) by Robert McNeel & Associates is a mathematical NURBS surface modeler widely adopted in industrial design, marine architecture, jewelry, and computational facade engineering. Coupled with its built-in Grasshopper visual programming environment, SubD subdivision modeling, and optional Rhino.Inside.Revit integration (Windows add-on), it handles complex freeform geometry with manufacturing precision.",
+    "logo_url": "/logos/rhino-3d.svg",
+    "short_desc": "Robert McNeel & Associates’ premier free-form 3D NURBS modeling software with Grasshopper visual scripting and perpetual licensing.",
+    "description": "Rhino 3D (Rhinoceros) is an industry-standard 3D computer-aided design (CAD) modeling software developed by Robert McNeel & Associates for industrial designers, architects, marine engineers, jewelry creators, and computational artists. Powered by mathematical Non-Uniform Rational B-Splines (NURBS), Rhino can accurately create, edit, analyze, and translate curves, surfaces, and solids of arbitrary complexity. It features Grasshopper, the world’s most renowned visual algorithmic node-based scripting environment, subdivision (SubD) organic surface modeling, integrated Cycles GPU ray tracing, and perpetual buyout licensing across Windows and macOS.",
     "pricing_tiers": [
       {
         "name": "Commercial Single-User License",
         "price": "Official Store",
-        "period": "Perpetual Buyout",
+        "period": "perpetual buyout",
         "features": [
-          "Perpetual Single Concurrent User License (Cloud Zoo / LAN Zoo floating supported)",
-          "Full NURBS, SubD & Mesh Modeling",
-          "Built-in Grasshopper visual programming",
-          "No mandatory subscription or annual maintenance fees"
+          "One-Time Perpetual License for Windows and macOS",
+          "Never Expires with No Mandatory Recurring Maintenance Fees",
+          "Includes Grasshopper Visual Algorithmic Programming Engine",
+          "SubD Organic Surface Modeling & QuadRemesh Tools",
+          "Integrated Cycles GPU Ray-Traced Real-Time Rendering",
+          "Zoo Cloud License Manager for Flexible Team Floating"
         ],
         "is_popular": true
       },
       {
         "name": "Upgrade from Any Previous Version",
         "price": "Official Store",
-        "period": "Perpetual Upgrade",
+        "period": "perpetual upgrade",
         "features": [
-          "Upgrade from any prior commercial Rhino version (V1–V7)",
-          "Full latest feature set, ShrinkWrap & multi-thread acceleration",
-          "Metal display pipeline on macOS / OpenGL on Windows",
-          "Includes free service releases & official McNeel support"
+          "Affordable Permanent Upgrade from Any Older Rhino Release",
+          "Includes All New Core Features, Performance Upgrades & APIs",
+          "Rhino.Inside Integration (Embed Rhino inside Revit & AutoCAD on Windows)",
+          "Free Service Releases and Minor Maintenance Updates"
         ],
         "is_popular": false
       },
       {
         "name": "Educational & Lab License",
         "price": "Official Store",
-        "period": "Perpetual (Verified Academic)",
+        "period": "perpetual (academic)",
         "features": [
-          "For verified students, faculty & schools",
-          "Identical full commercial functionality without watermarks",
-          "Upgradable to commercial status later",
-          "30-Seat Educational Lab kits available"
+          "Substantially Discounted Permanent License for Verified Students & Faculty",
+          "Full Commercial Usage Permitted Even After Graduation",
+          "Multi-Seat Educational Lab Licenses for University Studios",
+          "Complete Plugin Ecosystem Support (Food4Rhino)"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Surface & Mesh Modeling",
+        "category": "Free-Form 3D NURBS & SubD Modeling",
         "items": [
           {
-            "name": "Complex NURBS surfaces",
+            "name": "Precision Mathematical NURBS Curves, Surfaces & Solid Boolean Operations",
             "status": true
           },
           {
-            "name": "SubD (Subdivision) tools",
+            "name": "SubD (Subdivision Surface) Organic Freeform Push/Pull Geometry",
             "status": true
           },
           {
-            "name": "Point Cloud processing",
+            "name": "QuadRemesh (Automatic Clean Topology Quad Mesh Generation)",
             "status": true
           },
           {
-            "name": "ShrinkWrap & Mesh repair",
+            "name": "Surface Continuity & Curvature Analysis (Zebra, Curvature Graph, Draft Angle)",
+            "status": true
+          },
+          {
+            "name": "ShrinkWrap (Instantly Creates Watertight Meshes from Open Scans & Meshes)",
             "status": true
           }
         ]
       },
       {
-        "category": "Computational Design & Rendering",
+        "category": "Grasshopper Visual Algorithmic Scripting",
         "items": [
           {
-            "name": "Built-in Grasshopper visual programming",
+            "name": "Integrated Node-Based Visual Programming Architecture (Grasshopper)",
             "status": true
           },
           {
-            "name": "Kangaroo Physics solver",
+            "name": "Parametric Form-Finding, Computational Facades & Generative Algorithms",
             "status": true
           },
           {
-            "name": "Python 3 / C# Script Editor",
+            "name": "Kangaroo Physics Simulation & Evolutionary Optimization Solvers (Galapagos)",
             "status": true
           },
           {
-            "name": "Cycles Raytraced Rendering",
+            "name": "Food4Rhino Community Repository (Thousands of Grasshopper Add-Ons)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability, Rhino.Inside & Rendering",
+        "items": [
+          {
+            "name": "Rhino.Inside.Revit (Run Rhino & Grasshopper Directly Inside Autodesk Revit)",
+            "status": true
+          },
+          {
+            "name": "Rhino.Inside Framework for Embedding Rhino in Custom C++ / .NET Host Apps",
+            "status": true
+          },
+          {
+            "name": "Built-In Cycles Real-Time GPU Ray-Traced Viewport & Rendering",
+            "status": true
+          },
+          {
+            "name": "Native .3DM File Format with Over 40 Universal 2D/3D CAD Format Translators",
             "status": true
           }
         ]
@@ -893,7 +1159,7 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "sketchup",
-      "maya",
+      "fusion-360",
       "blender"
     ],
     "country": "USA",
@@ -906,180 +1172,210 @@ export const c2Tools: Tool[] = [
       "macOS"
     ],
     "industries": [
-      "Architecture",
       "Industrial Design",
-      "Jewelry",
-      "Marine"
+      "Architecture",
+      "Jewelry Design",
+      "Marine Engineering",
+      "Automotive",
+      "Computational Design"
     ],
     "core_features": [
-      "Free-form NURBS",
-      "Grasshopper Visual Coding",
-      "SubD Surfaces",
-      "Cycles Raytracing",
-      "Rhino.Inside (Windows Add-on)"
+      "Unconstrained 3D Mathematical NURBS Modeling",
+      "Grasshopper Node-Based Visual Scripting",
+      "SubD Subdivision Organic Surface Tools",
+      "Rhino.Inside (Embed Rhino inside Revit & AutoCAD)",
+      "Cycles GPU Real-Time Ray Tracing Engine",
+      "Perpetual Buyout License with Zero Subscription Lock-In",
+      "Native Parity on Windows & Apple Silicon macOS"
     ],
     "user_scales": [
-      "Individuals",
-      "Small & Midsize Studios",
-      "Enterprise Teams"
+      "Individual",
+      "Freelancers",
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "official_url": "https://www.rhino3d.com",
-    "pricing_url": "https://www.rhino3d.com/sales/",
+    "official_url": "https://www.rhino3d.com/",
+    "pricing_url": "https://www.rhino3d.com/buy/",
     "trial_url": "https://www.rhino3d.com/download/",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.g2.com/products/rhino-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 370,
+        "url": "https://www.capterra.com/p/146060/Rhino-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.9,
+        "max": 10,
+        "count": 110,
+        "url": "https://www.trustradius.com/products/rhino-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 370,
+        "url": "https://www.getapp.com/engineering-software/a/rhino-3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Rhino 3D Shortcuts Sheet",
+        "href": "/toolbox/rhino-shortcuts-sheet"
+      },
+      {
+        "label": "Rhino 3DM to STEP / IGES",
+        "href": "/toolbox/online-rhino-3dm-to-step-iges-converter"
+      },
+      {
+        "label": "Rhino 3DM to STL Mesh",
+        "href": "/toolbox/rhino-3dm-to-stl"
+      },
+      {
+        "label": "Cross-Platform CAD Shortcuts",
+        "href": "/toolbox/shortcuts"
+      }
+    ],
     "pros": [
-      "Versatile NURBS & SubD surfacing",
-      "Perpetual license (no mandatory subscription)",
-      "Extensive Grasshopper & Food4Rhino plugin ecosystem"
+      "Unmatched mathematical precision for complex double-curved free-form NURBS surfaces that traditional mechanical CAD cannot handle.",
+      "Grasshopper node-based visual programming environment is the global standard for computational architecture and algorithmic form generation.",
+      "True perpetual license ownership: buy once, own forever with zero mandatory recurring subscription or maintenance fees.",
+      "Rhino.Inside technology allows running Rhino and Grasshopper directly inside other software memory spaces like Autodesk Revit.",
+      "Vast community plugin ecosystem hosted on Food4Rhino spanning environmental simulation (Ladybug), structural analysis (Karamba), and rendering.",
+      "Robust cross-platform parity on Windows and macOS, with native Apple Silicon M-series acceleration."
     ],
     "cons": [
-      "No full feature-based parametric history tree (command-level Record History only)",
-      "2D drafting & sheet layout require more manual setup than dedicated BIM tools",
-      "Complex Grasshopper definitions require careful data-tree optimization"
+      "Non-parametric by default; standard modeling operations do not maintain a history feature tree unless scripted through Grasshopper.",
+      "2D drafting and technical construction documentation tools are less mature than dedicated drafting suites like AutoCAD or Vectorworks.",
+      "Managing complex mechanical assemblies with multi-part kinematic mating constraints is not Rhino's primary design focus.",
+      "Rhino.Inside.Revit requires Windows and is not supported in the native macOS build due to Revit's Windows-only architecture.",
+      "Steep learning curve when diving into advanced Grasshopper computational data trees and surface continuity (G0, G1, G2, G3).",
+      "No native built-in CAM toolpath generator out of the box (requires third-party plugins like RhinoCAM or MadCAM)."
     ],
     "faqs": [
       {
         "q": "What is Rhino 3D used for?",
-        "a": "The industry standard for complex NURBS modeling and computational design. Rhino 3D is a 3D modeling solution widely adopted in Architecture, Industrial Design, Jewelry, and Marine engineering."
+        "a": "According to Robert McNeel & Associates official documentation, Rhino 3D (Rhinoceros) is an unconstrained 3D modeling tool built on mathematical NURBS geometry. It is used across architecture, industrial design, yacht design, jewelry manufacturing, and automotive styling for free-form surface creation and algorithmic generative design. Learn more on the [Official Rhino 3D Overview](https://www.rhino3d.com/)."
+      },
+      {
+        "q": "What is Grasshopper in Rhino?",
+        "a": "Grasshopper is a visual algorithmic programming environment tightly integrated into Rhino. It allows designers to generate complex generative geometry, parametric facades, and automated form-finding by connecting functional nodes together without writing traditional code."
+      },
+      {
+        "q": "What is Rhino.Inside?",
+        "a": "Rhino.Inside is a technology that embeds the full Rhino and Grasshopper engine directly into the memory space of other host applications, notably Autodesk Revit (Rhino.Inside.Revit on Windows), enabling bi-directional parametric model exchange."
       },
       {
         "q": "How much does Rhino 3D cost?",
-        "a": "Rhino 3D is licensed on a Perpetual Single Concurrent User model with no mandatory subscription or annual maintenance fees. Available tiers include Commercial Single-User License, Upgrade from Any Previous Version, and Educational / Lab licenses. Because official pricing, regional currencies, taxes, and authorized reseller quotes vary by country, please visit the [Official McNeel Sales & Pricing Portal](https://www.rhino3d.com/sales/) for live pricing."
+        "a": "Rhino is sold as a permanent, one-time perpetual license with no recurring fees. Upgrades from any previous version are offered at a flat discounted rate, and educational licenses carry substantial discounts. Review live pricing on the [Official Rhino Buy Page](https://www.rhino3d.com/buy/)."
       },
       {
-        "q": "Does Rhino 3D offer a free trial?",
-        "a": "Yes — McNeel provides a full-featured Rhino evaluation version directly from the official download portal without requiring a credit card. Visit the [Official Rhino Download Portal](https://www.rhino3d.com/download/) to verify current evaluation terms."
+        "q": "Does Rhino offer a free trial?",
+        "a": "Yes. McNeel provides an official, fully functional 90-day free evaluation version that allows complete saving and plugin access. Download the trial on the [Official Rhino Download Portal](https://www.rhino3d.com/download/)."
       },
       {
-        "q": "What operating systems does Rhino 3D support?",
-        "a": "The full Rhino 8 desktop application runs natively on Windows (64-bit) and macOS (Apple Silicon & Intel). Licenses can be floated across machines using McNeel's Cloud Zoo or LAN Zoo. Companion viewing on iOS/iPadOS is available via the separate iRhino 3D viewer app."
+        "q": "What operating systems does Rhino support?",
+        "a": "Rhino runs natively on 64-bit Microsoft Windows 11 and 10, as well as Apple macOS (supporting Apple Silicon M-series and Intel Macs via Metal graphics). Check specifications on the [Rhino System Requirements](https://www.rhino3d.com/system-requirements/)."
       },
       {
-        "q": "Which file formats does Rhino 3D support?",
-        "a": "Rhino 3D natively reads and writes 3DM and imports STEP, IGES, DWG, DXF, STL, OBJ, FBX, 3DS, SKP, PDF, AI, PLY, and SolidWorks (.sldprt/.sldasm) files. Export covers 3DM, STEP, IGES, ACIS (.sat), Parasolid (.x_t), STL, OBJ, FBX, DWG, DXF, USD (.usd/.usdz), GLTF/GLB, 3MF, and more."
-      },
-      {
-        "q": "Does Rhino 3D have an API for automation and customization?",
-        "a": "Yes. Rhino 3D exposes RhinoCommon (.NET), Rhino.Python (Python 3), C/C++ SDK, and the open-source openNURBS toolkit (for reading/writing 3DM files externally). Rhino.Inside also allows embedding Rhino and Grasshopper inside host applications such as Autodesk Revit on Windows."
-      }
-    ,
-      {
-        "q": "What are the best alternatives to Rhino 3D?",
-        "a": "The closest alternatives to Rhino 3D are SketchUp, Maya, and Blender — priced on a freemium model, a subscription, and open source respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "q": "Which file formats does Rhino support?",
+        "a": "Rhino natively saves in .3DM format and supports over 40 formats including STEP, IGES, Parasolid (.X_T), ACIS (.SAT), DWG, DXF, SketchUp (.SKP), OBJ, STL, FBX, and vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "McNeel Proprietary NURBS Kernel (openNURBS I/O)",
-      "multicore": "Single-Threaded Core Modeling / Multi-Threaded Cycles & Select Grasshopper Components",
-      "gpu_optimization": "Windows: OpenGL / macOS: Metal Display Pipeline",
+      "engine": "openNURBS Mathematical Kernel & SubD Core",
+      "multicore": "Multi-threaded rendering, mesh processing & Grasshopper solvers",
+      "gpu_optimization": "DirectX 11 (Windows) / Apple Metal Engine (macOS)",
       "standards": [
-        "3DM",
-        "STEP",
+        "3DM (Native)",
+        "NURBS",
+        "STEP (AP203/AP214)",
         "IGES",
-        "DWG/DXF"
+        "Parasolid",
+        "DWG",
+        "DXF",
+        "PDF"
       ]
     },
-    "expert_verdict": "A premier mathematical NURBS and computational design platform with fair perpetual licensing.",
-    "languages": [
-      "English",
-      "Czech",
-      "French",
-      "German",
-      "Italian",
-      "Japanese",
-      "Korean",
-      "Polish",
-      "Russian",
-      "Spanish",
-      "Simplified Chinese",
-      "Traditional Chinese"
-    ],
+    "expert_verdict": "Rhino 3D is the gold standard for free-form NURBS modeling and computational design. With its unconstrained mathematical surfacing precision, the revolutionary Grasshopper visual scripting environment, Rhino.Inside workflow interoperability, and an admirable perpetual license policy, it is an indispensable creative engine for architects and industrial designers.",
     "file_formats_in": [
       "3DM",
       "STEP",
       "IGES",
+      "X_T",
+      "SAT",
       "DWG",
       "DXF",
-      "STL",
-      "OBJ",
-      "FBX",
-      "3DS",
       "SKP",
-      "SLDPRT",
-      "AI",
-      "PDF",
-      "PLY",
-      "3MF",
-      "GLTF",
-      "GLB",
-      "E57"
+      "OBJ",
+      "STL",
+      "FBX",
+      "DAE",
+      "PDF"
     ],
     "file_formats_out": [
       "3DM",
       "STEP",
       "IGES",
-      "SAT",
       "X_T",
-      "STL",
+      "SAT",
       "DWG",
       "DXF",
+      "SKP",
       "OBJ",
+      "STL",
       "FBX",
-      "3DS",
-      "USD",
-      "USDZ",
-      "GLTF",
-      "GLB",
-      "3MF",
+      "DAE",
       "PDF",
-      "AI",
-      "KMZ",
-      "PLY"
+      "SVG"
     ],
-    "integrations": [
-      "Grasshopper (Built-in)",
-      "Rhino.Inside.Revit (Windows Add-on)",
-      "Food4Rhino Plugin Ecosystem",
-      "V-Ray",
-      "Enscape",
-      "KeyShot",
-      "Twinmotion",
-      "Unreal Engine",
-      "Unity"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Korean",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Czech",
+      "Polish",
+      "Russian"
     ],
     "deployment_options": [
       "Desktop"
     ],
     "license_types": [
       "Perpetual",
-      "Network",
       "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Chat",
-      "Phone",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "GDPR Privacy Framework"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "RhinoCommon / Python 3 / C++ SDK / openNURBS",
-      "sdk_languages": [
-        "C#",
-        "Python",
-        "C++",
-        "VB.NET"
-      ],
-      "docs_url": "https://developer.rhino3d.com/"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Community",
+      "Email",
+      "Phone",
+      "Documentation"
+    ]
   },
   {
     "id": "t7",
@@ -1237,8 +1533,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does CATIA have an API for automation and customization?",
         "a": "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of CATIA?",
         "a": "CATIA is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CATIA plans and trial](https://www.3ds.com/products/catia)."
@@ -1454,8 +1749,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does FreeCAD have an API for automation and customization?",
         "a": "Yes. FreeCAD exposes a deep Python API and C++ modular architecture. You can script geometry creation, build custom workbenches, and automate exports entirely via Python."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to FreeCAD?",
         "a": "The closest alternatives to FreeCAD are SolidWorks, Autodesk Fusion (Fusion 360), and SolveSpace — priced on a subscription or a perpetual licence, a subscription, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
@@ -1949,7 +2243,7 @@ export const c2Tools: Tool[] = [
     "platforms": [
       "Windows"
     ],
-        "file_formats_in": [
+    "file_formats_in": [
       "PAR",
       "ASM",
       "DFT",
@@ -2170,8 +2464,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does Autodesk Inventor have an API for automation and customization?",
         "a": "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to Autodesk Inventor?",
         "a": "The closest alternatives to Autodesk Inventor are SolidWorks, Solid Edge, PTC Creo, and Autodesk Fusion (Fusion 360) — priced on a subscription or a perpetual licence, a subscription or a perpetual licence, a subscription, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
@@ -2422,8 +2715,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Does PTC Creo have an API for automation and customization?",
         "a": "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of PTC Creo?",
         "a": "PTC Creo is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official PTC Creo plans and trial](https://www.ptc.com/en/products/creo/trial)."
@@ -2840,7 +3132,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "Shapr3D has done the impossible: made professional CAD fun.",
-        "file_formats_in": [
+    "file_formats_in": [
       "SHAPR",
       "X_T",
       "X_B",
@@ -2993,7 +3285,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "A masterclass in minimalist parametric design.",
-        "file_formats_in": [
+    "file_formats_in": [
       "DXF",
       "IDF (EMN)"
     ],
@@ -3155,7 +3447,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "No mandatory subscriptions, just solid parametric tools.",
-        "file_formats_in": [
+    "file_formats_in": [
       "AD_PRT",
       "AD_ASM",
       "AD_DRW",
@@ -3357,7 +3649,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-        "file_formats_in": [
+    "file_formats_in": [
       "MB",
       "MA",
       "FBX",
@@ -3897,7 +4189,7 @@ export const c2Tools: Tool[] = [
       ]
     },
     "expert_verdict": "The software behind almost every beautiful car you see on the road.",
-        "file_formats_in": [
+    "file_formats_in": [
       "WIRE",
       "STEP",
       "IGES",
@@ -4169,7 +4461,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-        "file_formats_in": [
+    "file_formats_in": [
       "Z3",
       "STEP",
       "IGES",
@@ -4371,7 +4663,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-        "file_formats_in": [
+    "file_formats_in": [
       "Plasticity",
       "STEP",
       "Parasolid",
@@ -4583,7 +4875,7 @@ export const c2Tools: Tool[] = [
         ]
       }
     ],
-        "file_formats_in": [
+    "file_formats_in": [
       "3DM",
       "STEP",
       "IGES",
@@ -4736,8 +5028,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Which file formats does Tinkercad support?",
         "a": "Tinkercad supports export to STL, OBJ, and SVG for 3D printing and manufacturing."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to Tinkercad?",
         "a": "The closest alternatives to Tinkercad are Autodesk Fusion (Fusion 360), SketchUp, and Onshape — priced on a subscription, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
@@ -5121,8 +5412,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Which file formats does CAD Exchanger support?",
         "a": "The suite reads and writes STEP, IGES, JT, Parasolid, ACIS, STL and OBJ, and reads native CATIA, NX, Creo, SolidWorks, Inventor, Solid Edge and IFC files, along with glTF and FBX for visualisation. The exact matrix varies by product and by add-on module, so check the supported formats list on the official site."
-      }
-    ,
+      },
       {
         "q": "What are the best alternatives to CAD Exchanger?",
         "a": "The closest alternatives to CAD Exchanger are Glovius, MeshLab, and Solid Edge Viewer — priced on a freemium model, free of charge, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
@@ -5451,8 +5741,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "What are the best alternatives to KOMPAS-3D?",
         "a": "The closest alternatives to KOMPAS-3D are ZW3D, SolidWorks, Solid Edge, and Alibre Design. ZW3D (offered on a Subscription / Perpetual license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of KOMPAS-3D?",
         "a": "KOMPAS-3D is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official KOMPAS-3D plans and trial](https://ascon.net/kompas-3d/)."
@@ -5958,8 +6247,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "What are the best alternatives to 3DEXPERIENCE?",
         "a": "The closest alternatives to 3DEXPERIENCE are CATIA, SolidWorks, PTC Creo. CATIA (offered on a Subscription license) competes directly on core Aerospace workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of 3DEXPERIENCE?",
         "a": "3DEXPERIENCE is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official 3DEXPERIENCE plans and trial](https://www.3ds.com/3dexperience)."
@@ -6162,8 +6450,7 @@ export const c2Tools: Tool[] = [
       {
         "q": "Is MECHCAD a subscription or a perpetual license?",
         "a": "MECHCAD is commercial software available as either a paid perpetual buyout license or an annual subscription. It is not perpetual freeware. MET provides a fully functional free trial of MECHCAD Premium so engineers can test part modeling, motion studies, and CAM toolpaths before purchasing."
-      }
-    ,
+      },
       {
         "q": "Which file formats does MECHCAD support?",
         "a": "MECHCAD reads neutral STEP, IGES and SAT solids alongside DWG and DXF drawings and STL/OBJ meshes. It also has direct readers for SolidWorks parts and assemblies (SLDPRT / SLDASM), Alibre parts (AD_PRT) and Siemens NX parts (.prt); the SolidWorks and Alibre imports keep editable sketches and the feature tree, so an imported part can still be driven by its parameters. Export covers STEP, IGES, SAT, STL, OBJ, DWG, DXF and PDF, plus G-code from the CAM module and a Flat DXF of unfolded sheet metal."
