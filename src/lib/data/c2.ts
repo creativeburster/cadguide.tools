@@ -4532,16 +4532,133 @@ export const c2Tools: Tool[] = [
     ]
   },
   {
-    "id": "t50",
+    "id": "t31",
     "name": "Maya",
     "slug": "maya",
     "logo_url": "/logos/maya.svg",
-    "short_desc": "3D animation, modeling, and simulation software.",
-    "description": "Maya is Autodesk's professional 3D animation software, used across film, television, and game production. It covers modeling, character rigging, animation, dynamics, and rendering, and is scriptable through MEL and Python for studio pipeline integration.",
-    "country": "USA",
+    "short_desc": "Autodesk’s industry-standard 3D animation, modeling, simulation, and rendering software for film, television, and game development.",
+    "description": "Autodesk Maya is the premier 3D computer graphics software application used across the global motion picture, television broadcast, and AAA game development industries. Featuring an advanced node-based dependency graph architecture, Maya provides unmatched capabilities for character rigging, kinematic animation, polygonal and Subdivision (SubD) modeling, procedural visual effects simulation via Bifrost, and photorealistic ray-traced rendering with integrated Arnold. Seamlessly integrated with Universal Scene Description (USD) pipelines, Maya remains the core 3D digital content creation (DCC) standard for leading visual effects and animation studios worldwide.",
+    "pricing_tiers": [
+      {
+        "name": "Autodesk Maya Annual Subscription",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Complete 3D Polygonal, SubD, and NURBS Modeling Toolset",
+          "Advanced Character Rigging, Deformers, and Skinning Workflows",
+          "Procedural Simulation and Multiphysics Visual Effects with Bifrost",
+          "Integrated Arnold Photorealistic CPU and GPU Production Renderer",
+          "Native OpenUSD (Universal Scene Description) and MaterialX Pipelines"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Autodesk Maya Multi-Year",
+        "price": "Official Store",
+        "period": "3-year term subscription",
+        "features": [
+          "Includes All Maya 3D Animation, Simulation & Arnold Rendering Features",
+          "Guaranteed Price Lock for 36 Months of Uninterrupted Production",
+          "Autodesk Cloud Team Coordination and Administrative License Management",
+          "Dedicated Enterprise Technical Support and Deployment Tools"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Autodesk Media & Entertainment Collection",
+        "price": "Official Store",
+        "period": "annual subscription bundle",
+        "features": [
+          "Includes Autodesk Maya and Autodesk 3ds Max Full Licenses",
+          "Includes Arnold 5-Pack Batch Network Rendering Licenses",
+          "Includes Autodesk Mudbox Digital Sculpting and MotionBuilder Motion Capture",
+          "Cloud Storage and Cross-Software Studio Pipeline Integration"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Animation, Rigging & Dynamics",
+        "items": [
+          {
+            "name": "Node-Based Dependency Graph Architecture Connecting Transformation and Time Nodes",
+            "status": true
+          },
+          {
+            "name": "Advanced Character Rigging with Matrix Constrained Deformers and Delta Mush",
+            "status": true
+          },
+          {
+            "name": "Time Editor and Trax Editor for Non-Linear Animation Clips and Blending",
+            "status": true
+          },
+          {
+            "name": "Bifrost Multiphysics Engine for Volumetric Smoke, Fire, Fluids, and Cloth Simulation",
+            "status": true
+          },
+          {
+            "name": "Interactive Grooming Splines (XGen) for Hair, Fur, and Instanced Foliage Scattering",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Modeling & Pipeline Standards",
+        "items": [
+          {
+            "name": "Polygonal Mesh and OpenSubdiv Subdivision Surface Topology Sculpting",
+            "status": true
+          },
+          {
+            "name": "Deep Universal Scene Description (USD) Native Authoring and Viewport Display",
+            "status": true
+          },
+          {
+            "name": "Full MaterialX Open-Standard Shading and Look-Development Support",
+            "status": true
+          },
+          {
+            "name": "Retopology Tools for Clean Quad-Dominated Mesh Regeneration from High-Res Scans",
+            "status": true
+          },
+          {
+            "name": "Unfold3D Automated UV Unwrapping, Packing, and Texture Distortion Correction",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Rendering, Scripting & Extensibility",
+        "items": [
+          {
+            "name": "Integrated Arnold Production Renderer with Real-Time Viewport Preview",
+            "status": true
+          },
+          {
+            "name": "Extensive Python 3 (maya.cmds / PyMEL) and Maya Embedded Language (MEL) Scripting",
+            "status": true
+          },
+          {
+            "name": "Maya C++ Developer API for Custom Deformers, Shaders, and Pipeline Plugins",
+            "status": true
+          },
+          {
+            "name": "Color Management Architecture via OpenColorIO (OCIO) / ACES Standards",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "blender",
+      "3ds-max",
+      "cinema-4d"
+    ],
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Subscription",
-    "starting_price": 2010,
+    "starting_price": 1875,
     "price_period": "year",
     "platforms": [
       "Windows",
@@ -4549,161 +4666,144 @@ export const c2Tools: Tool[] = [
       "Linux"
     ],
     "industries": [
-      "VFX",
-      "Gaming",
-      "Animation"
+      "Feature Film & VFX",
+      "Video Game Development",
+      "Television & Commercials",
+      "Digital Architectural Animation",
+      "Virtual Production"
     ],
     "core_features": [
-      "Character Animation",
-      "3D Modeling",
-      "Dynamics & Effects",
-      "Rendering",
-      "Pipeline Integration"
+      "Node-Based Dependency Graph Architecture",
+      "Industry-Leading Character Rigging & Skinning Tools",
+      "Bifrost Procedural Multiphysics & Volumetric Effects",
+      "Integrated Arnold Photorealistic Production Renderer",
+      "Native OpenUSD & MaterialX Open-Standard Pipelines",
+      "Automated Mesh Retopology & Unfold3D UV Unwrapping",
+      "Comprehensive Python 3, MEL & C++ Developer APIs"
     ],
     "user_scales": [
-      "Enterprise",
-      "Agencies"
+      "Individual",
+      "SMB",
+      "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/maya/overview",
+    "pricing_url": "https://www.autodesk.com/products/maya/pricing",
+    "trial_url": "https://www.autodesk.com/products/maya/free-trial",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.g2.com/products/autodesk-maya/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 280,
+        "url": "https://www.capterra.com/p/132483/Autodesk-Maya/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 95,
+        "url": "https://www.trustradius.com/products/autodesk-maya/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 280,
+        "url": "https://www.getapp.com/creative-multimedia-software/a/autodesk-maya/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "3ds Max Shortcuts Sheet",
+        "href": "/toolbox/3dsmax-shortcuts-sheet"
+      }
+    ],
     "pros": [
-      "Industry VFX standard",
-      "Node-based power",
-      "Linux support"
+      "Global benchmark standard for character animation and visual effects pipelines across Hollywood and top game studios.",
+      "Unrivaled rigging and deformation toolset capable of handling complex organic skeletal systems and facial blends.",
+      "Deeply integrated Bifrost procedural graph enables sophisticated particle simulations, fluids, and atmospheric effects.",
+      "True multi-platform workstation performance running natively on 64-bit Windows, macOS (Apple Silicon), and enterprise Linux (RHEL/Rocky).",
+      "Native OpenUSD and MaterialX support streamlines collaborative multi-artist asset handoffs across large VFX production studios.",
+      "Huge global talent ecosystem with thousands of production-tested Python scripts, rig templates, and studio pipeline tools."
     ],
     "cons": [
-      "Steep learning",
-      "High cost",
-      "Not for engineering"
+      "Steep learning curve with an extensive node-based interface that requires dedicated study and technical proficiency.",
+      "Annual subscription licensing cost can be prohibitive for solo indie freelancers compared to free tools like Blender.",
+      "Lacks native mechanical engineering precision tools (such as parametric sketch constraints or associative 2D CAD drawings).",
+      "Complex simulation scenes demand heavy workstation hardware, multiple GPUs, and extensive RAM for fluid caching.",
+      "Frequent annual major updates can occasionally introduce compatibility deprecations for custom legacy Python 2 scripts.",
+      "Customer purchasing and enterprise licensing management is consolidated strictly through Autodesk Account portals."
     ],
     "faqs": [
       {
-        "q": "What is Maya used for?",
-        "a": "3D animation, modeling, and simulation software. Maya is a 3D modeling solution widely adopted in VFX, Gaming, Animation."
+        "q": "What is Autodesk Maya used for?",
+        "a": "According to Autodesk official documentation, Maya is a professional 3D computer animation, modeling, simulation, and rendering software suite used by visual effects (VFX) artists, 3D animators, game developers, and broadcast designers to build 3D characters, cinematic environments, and realistic visual effects. Read more on the [Official Maya Overview](https://www.autodesk.com/products/maya/overview)."
       },
       {
-        "q": "How much does Maya cost?",
-        "a": "Maya is sold by subscription; the plans shown on this page are Monthly, Annual / 3-Year, and Flex / Education. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maya Pricing Page](https://www.autodesk.com/products/maya/overview#buying-options)."
+        "q": "How is Autodesk Maya licensed and priced?",
+        "a": "Autodesk offers Maya through annual and 3-year term subscriptions, as well as pay-as-you-go Flex tokens and the Media & Entertainment Collection bundle. Autodesk also offers Maya Creative (a cost-effective token-based version for small studios) and free educational licenses for qualifying students. View pricing details on the [Official Autodesk Maya Pricing Page](https://www.autodesk.com/products/maya/pricing)."
       },
       {
-        "q": "Is there a free version of Maya?",
-        "a": "Maya is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Maya page](https://www.autodesk.com/products/maya/overview)."
+        "q": "Can I try Maya before purchasing a subscription?",
+        "a": "Yes. Autodesk provides a 30-day full-featured free trial of Maya for commercial creators and studios to test its animation, Bifrost simulation, and Arnold rendering tools. Request access on the [Official Maya Free Trial](https://www.autodesk.com/products/maya/free-trial)."
       },
       {
-        "q": "What operating systems does Maya support?",
-        "a": "Maya runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by Maya?",
+        "a": "Maya is certified for 64-bit Microsoft Windows 11 and Windows 10, Apple macOS (running natively on Apple Silicon M-series and Intel), and enterprise Linux (Red Hat Enterprise Linux and Rocky Linux). Hardware recommendations are published on the [Maya System Requirements](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Maya.html)."
       },
       {
-        "q": "Which file formats does Maya support?",
-        "a": "Maya's native scene files are .ma (ASCII) and .mb (binary). It imports and exports FBX, OBJ, Alembic (.abc), USD (.usd/.usda/.usdc), COLLADA (.dae) and glTF, and can bring in STL meshes. It does not read STEP, IGES or Parasolid — CAD data has to be converted to a mesh format first, which is why Maya sits at the downstream end of a CAD pipeline rather than inside it."
+        "q": "What is the difference between Maya and 3ds Max?",
+        "a": "Both are powerful Autodesk 3D DCC tools. Maya is the global industry standard for character rigging, organic animation, and film visual effects, running on Windows, Mac, and Linux. Autodesk 3ds Max is Windows-only, highly favored in architectural visualization, environmental art, and games with procedural modifier stacks."
       },
       {
-        "q": "What are the best alternatives to Maya?",
-        "a": "The closest alternatives to Maya are Blender, 3ds Max, ZBrush, and Rhino 3D. Blender (free and open-source) competes directly on core VFX workflows, while 3ds Max (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which 3D file formats can Maya import and export?",
+        "a": "Maya supports standard 3D digital content creation formats including USD (.usd, .usda, .usdc, .usdz), FBX, OBJ, Alembic (.abc), MaterialX, glTF, DXF, and native Maya Binary (.mb) and Maya ASCII (.ma) project files."
       }
     ],
     "tech_specs": {
-      "engine": "Maya DG/DAG Evaluation Graph + Bifrost / Viewport 2.0",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "CUDA",
+      "engine": "Autodesk Maya Dependency Graph Architecture",
+      "multicore": "Multi-threaded character evaluation (Parallel Rig Evaluation), Arnold rendering & Bifrost simulation",
+      "gpu_optimization": "Viewport 2.0 with DirectX 11/12 on Windows, Metal on macOS, and OpenGL 4.5 on Linux",
       "standards": [
+        "OpenUSD",
+        "MaterialX",
+        "Alembic",
         "FBX",
-        "USD",
-        "OBJ"
+        "OBJ",
+        "glTF",
+        "OpenColorIO",
+        "ACES"
       ]
     },
-    "expert_verdict": "The power user's choice for Hollywood effects.",
-    "pricing_tiers": [
-      {
-        "name": "Monthly",
-        "price": "Official Store",
-        "period": "Monthly Subscription",
-        "features": [
-          "Character Animation",
-          "Bifrost for Maya",
-          "Arnold Renderer",
-          "Advanced Rigging"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Annual / 3-Year",
-        "price": "Official Store",
-        "period": "1-Year / 3-Year Term",
-        "features": [
-          "Full Motion Graphics",
-          "USD integration",
-          "Interactive Grooming",
-          "Technical Support",
-          "Fixed price for the term"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Flex / Education",
-        "price": "Official Store",
-        "period": "Pay-As-You-Go / Eligibility-Based",
-        "features": [
-          "Flex: token-based daily access for occasional users",
-          "Free educational access for verified students and educators"
-        ],
-        "is_popular": false
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Animation & Rigging",
-        "items": [
-          {
-            "name": "Matrix-driven Rigging",
-            "status": true
-          },
-          {
-            "name": "Cached Playback",
-            "status": true
-          },
-          {
-            "name": "Automated Shape Authoring",
-            "status": true
-          },
-          {
-            "name": "Ghosting Editor",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Dynamics & Rendering",
-        "items": [
-          {
-            "name": "Bifrost Visual Programming",
-            "status": true
-          },
-          {
-            "name": "Integrated Arnold Renderer",
-            "status": true
-          },
-          {
-            "name": "MASH Procedural effects",
-            "status": true
-          },
-          {
-            "name": "XGen Interactive Grooming",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "expert_verdict": "Autodesk Maya remains the undisputed king of Hollywood animation and high-end visual effects pipelines. With its rock-solid dependency graph architecture, mature character rigging toolsets, and open integration with USD and Bifrost, Maya provides the ultimate creative engine for digital entertainment studios.",
     "file_formats_in": [
       "MB",
       "MA",
       "FBX",
       "OBJ",
-      "glTF",
-      "ABC",
       "USD",
+      "USDA",
+      "USDC",
+      "ABC",
       "DAE",
+      "DXF",
       "STL"
     ],
     "file_formats_out": [
@@ -4711,851 +4811,1405 @@ export const c2Tools: Tool[] = [
       "MA",
       "FBX",
       "OBJ",
-      "glTF",
-      "ABC",
       "USD",
-      "DAE",
+      "USDA",
+      "USDC",
+      "USDZ",
+      "ABC",
+      "GLTF",
+      "GLB",
       "STL"
     ],
-    "alternatives": [
-      "blender",
-      "3ds-max",
-      "zbrush",
-      "rhino-3d"
+    "license_types": [
+      "Subscription",
+      "Educational",
+      "Commercial"
     ],
-    "pricing_url": "https://www.autodesk.com/products/maya/overview#buying-options"
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2",
+      "Autodesk Trust Center"
+    ],
+    "languages": [
+      "English",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base",
+      "Reseller Network"
+    ]
   },
   {
-    "id": "t51",
+    "id": "t32",
     "name": "Blender",
     "slug": "blender",
-    "logo_url": "/logos/blender.png",
-    "short_desc": "The free and open-source 3D creation suite.",
-    "description": "Blender is the free and open-source 3D creation suite, covering modeling, sculpting, animation, simulation, video editing, and rendering with the Cycles and EEVEE engines. It is maintained by a worldwide community under the GNU GPL and runs on Windows, macOS, and Linux.",
+    "logo_url": "/logos/blender.svg",
+    "short_desc": "The free and open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and video editing.",
+    "description": "Blender is a universally celebrated, 100% free and open-source 3D computer graphics software suite licensed under the GNU General Public License (GPLv2+). Supported by the non-profit Blender Foundation and an immense global open-source community, Blender provides an end-to-end 3D pipeline: polygonal and subdivision surface modeling, procedural Geometry Nodes, sculpting, character rigging, 2D/3D grease pencil animation, physics simulation (fluids, cloth, smoke), real-time Eevee rendering, and photorealistic Cycles ray tracing. Running cross-platform on Windows, macOS, and Linux without activation keys or subscriptions, Blender empowers creators worldwide.",
+    "pricing_tiers": [
+      {
+        "name": "Blender Open Source Suite",
+        "price": "Free",
+        "period": "free forever (gplv2+)",
+        "features": [
+          "Complete 3D Polygonal, SubD, Curve, and High-Resolution Sculpting Pipeline",
+          "Procedural Algorithmic Modeling and Asset Generation via Geometry Nodes",
+          "Cycles Production Physically Based Path Tracer (CPU & GPU Accelerated)",
+          "Eevee Next Real-Time Physically Based Viewport Rendering Engine",
+          "Character Skeletal Rigging, Skinning, Motion Paths, and NLA Editor",
+          "Full Python 3 API Automation and Community Extension Addon Ecosystem"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "3D Modeling, Sculpting & Geometry Nodes",
+        "items": [
+          {
+            "name": "Polygon, Quad-Dominant Topology, and Subdivision Surface Modeling Tools",
+            "status": true
+          },
+          {
+            "name": "Digital Sculpting with Dynamic Topology (Dyntopo) and Multiresolution Meshes",
+            "status": true
+          },
+          {
+            "name": "Node-Based Procedural Geometry Nodes for Algorithmic Asset Generation",
+            "status": true
+          },
+          {
+            "name": "Precision Snap, Align, Measurement, and CAD-Style Curve Extension Workflows",
+            "status": true
+          },
+          {
+            "name": "Automated and Interactive UV Unwrapping, Seam Editing, and Texture Painting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Animation, Rigging & Visual Effects",
+        "items": [
+          {
+            "name": "Skeletal Armatures, Forward/Inverse Kinematics (FK/IK), and Pose Library",
+            "status": true
+          },
+          {
+            "name": "Non-Linear Animation (NLA) Editor for Blending Motion Clips and Walk Cycles",
+            "status": true
+          },
+          {
+            "name": "Mantaflow Fluid, Smoke, Fire, and Rigid/Soft Body Physics Simulations",
+            "status": true
+          },
+          {
+            "name": "Grease Pencil 2D and 3D Hybrid Hand-Drawn Animation and Storyboarding",
+            "status": true
+          },
+          {
+            "name": "Motion Tracking Camera Matchmoving and Integrated Node-Based Compositor",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Rendering, Pipeline & Cross-Platform",
+        "items": [
+          {
+            "name": "Cycles GPU Ray-Traced Path Tracer Supporting NVIDIA OptiX, AMD HIP, Apple Metal, and Intel OneAPI",
+            "status": true
+          },
+          {
+            "name": "Eevee Next Real-Time Physically Based Viewport Rendering Engine",
+            "status": true
+          },
+          {
+            "name": "Native OpenUSD (Universal Scene Description) and glTF 2.0 Web3D Pipeline Interoperability",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Python 3 Scripting Architecture Allowing Complete UI and Tool Customization",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "maya",
+      "3ds-max",
+      "cinema-4d"
+    ],
     "country": "Netherlands",
     "category_id": "c2",
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
     "industries": [
-      "Indie Games",
-      "VFX",
-      "Hobbyist"
+      "Independent Game Development",
+      "VFX & Commercial Animation",
+      "3D Printing & Rapid Prototyping",
+      "Architectural Visualization",
+      "Motion Graphics & Concept Art"
     ],
     "core_features": [
-      "Open Source 3D",
-      "Geometry Nodes",
-      "Sculpting",
-      "VFX/Compositing",
-      "2D Animation (Grease Pencil)"
+      "Full 3D Modeling, Retopology & High-Res Sculpting",
+      "Procedural Geometry Nodes Algorithmic Engine",
+      "Cycles GPU Ray Tracing (OptiX, Metal, HIP, OneAPI)",
+      "Eevee Next Real-Time Viewport Rendering Engine",
+      "Character Skeletal Rigging, Skinning & NLA Animation",
+      "Grease Pencil Hybrid 2D/3D Animation Tools",
+      "100% Free & Open-Source (GPLv2+) with Python 3 API"
     ],
     "user_scales": [
-      "Individuals",
-      "Startups"
+      "Individual",
+      "SMB",
+      "Studio"
     ],
-    "official_url": "https://www.blender.org",
-    "donate_url": "https://fund.blender.org/",
+    "official_url": "https://www.blender.org/",
+    "pricing_url": "https://www.blender.org/",
     "trial_url": "https://www.blender.org/download/",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.7,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 3100,
+        "url": "https://www.g2.com/products/blender/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 1050,
+        "url": "https://www.capterra.com/p/162816/Blender/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 9.1,
+        "max": 10,
+        "count": 380,
+        "url": "https://www.trustradius.com/products/blender/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 1050,
+        "url": "https://www.getapp.com/creative-multimedia-software/a/blender/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "3D Print Cost & Time Estimator",
+        "href": "/toolbox/3d-print-cost-time-estimator"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
     "pros": [
-      "100% Free & Open Source",
-      "Cycles production renderer",
-      "Rapid community development"
+      "100% free and open-source under GPLv2+, granting complete creative freedom with zero subscriptions, royalties, or license audits.",
+      "Comprehensive all-in-one suite covering modeling, sculpting, simulation, rigging, rendering, and video compositing in a single download.",
+      "Cycles ray tracer delivers production-grade photorealism accelerated by modern GPU backends (NVIDIA OptiX, Apple Metal, AMD HIP).",
+      "Geometry Nodes provide a bleeding-edge procedural framework rivaling dedicated procedural generation tools.",
+      "Vibrant global community providing millions of hours of free tutorials, open-source addon tools, and asset libraries.",
+      "Extremely lightweight installer (under 400MB) with fast launch times, portable zip options, and native cross-platform parity."
     ],
     "cons": [
-      "Non-standard CAD workflow",
-      "Mesh-based, lacks NURBS precision",
-      "Not designed for manufacturing CNC"
+      "Not designed for mechanical CAD tolerances; lacks native parametric B-Rep solid kernels (like Parasolid or ACIS) and STEP editing.",
+      "No native associative 2D technical drafting workbench for generating ISO/ANSI manufacturing drawings with GD&T callouts.",
+      "Fluid and high-resolution smoke physics simulations can be memory intensive and slower to bake than specialized standalone solvers.",
+      "No corporate telephone or enterprise SLA technical support; relies on community forums, Blender Artists, and documentation.",
+      "Frequent release cycles can require creators and pipeline TDs to regularly update third-party community Python addons.",
+      "Large enterprise studios with deeply embedded legacy Maya pipelines face migration resistance when integrating Blender."
     ],
     "faqs": [
       {
-        "q": "What is Blender used for?",
-        "a": "Blender is an open-source 3D creation suite, covering 3D modeling, sculpting, animation, rigging, rendering, simulation, and video editing."
+        "q": "What is Blender and is it really completely free?",
+        "a": "According to the Blender Foundation official documentation, Blender is a free and open-source 3D creation suite. It is licensed under the GNU General Public License (GPLv2+). You can use Blender for any purpose—including commercial projects, feature films, and video games—without paying license fees, royalties, or subscriptions. Learn more on the [Official Blender About Page](https://www.blender.org/)."
       },
       {
-        "q": "How much does Blender cost?",
-        "a": "Blender is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official Blender Page](https://www.blender.org)."
+        "q": "What is the difference between Cycles and Eevee in Blender?",
+        "a": "Cycles is Blender's physically based path tracer designed for ultimate photorealism, simulating realistic lighting bounces, global illumination, and caustics using your CPU and GPU. Eevee Next is a real-time rendering engine optimized for interactive viewport previews, motion graphics, and rapid rendering using modern GPU shaders."
       },
       {
-        "q": "Is Blender really free?",
-        "a": "Yes — Blender is licensed under the GNU General Public License (GPL). You own your work completely and can use it for commercial projects with zero fees or royalties."
+        "q": "Can Blender be used for 3D printing and CAD modeling?",
+        "a": "Yes. Blender is widely used for 3D printing, concept design, and organic modeling. It features built-in 3D Print Toolbox addons to check for non-manifold edges and overhangs, exporting directly to STL, 3MF, and OBJ. However, because it is polygon-based rather than a parametric B-Rep CAD modeler, it is best suited for visual and ergonomic designs rather than high-tolerance mechanical engineering."
       },
       {
-        "q": "What operating systems does Blender support?",
-        "a": "Blender runs natively on Windows, macOS (including Apple Silicon optimization), and Linux."
+        "q": "What operating systems are supported by Blender?",
+        "a": "Blender runs natively on 64-bit Microsoft Windows 11/10, Apple macOS (fully optimized for Apple Silicon M1/M2/M3/M4 and Intel x86_64), and modern Linux distributions (via direct tarballs, Snap, and Flatpak). Download the latest version on the [Official Blender Download Page](https://www.blender.org/download/)."
       },
       {
-        "q": "Which file formats does Blender support?",
-        "a": "Blender imports and exports BLEND, OBJ, FBX, glTF, GLB, USD, Alembic, STL, PLY, and more."
+        "q": "What are Geometry Nodes in Blender?",
+        "a": "Geometry Nodes is Blender's procedural modeling and asset generation system. It allows artists to build complex, non-destructive procedural meshes, instanced scattering landscapes, generative buildings, and dynamic arrays using an intuitive node-based graph."
       },
       {
-        "q": "Does Blender have an API for automation and customization?",
-        "a": "Yes. Blender includes a full-featured Python API (bpy). You can create custom UI panels, write specialized tools and add-ons, or run batch rendering scripts from the command line."
+        "q": "Which file formats can Blender import and export?",
+        "a": "Blender supports an extensive range of 3D, animation, and image formats, including USD/USDA/USDC/USDZ, glTF 2.0 (.gltf/.glb), FBX, OBJ, STL, 3MF, Alembic (.abc), PLY, SVG, DXF, and native .blend files."
       }
     ],
     "tech_specs": {
-      "engine": "BMesh (Polygonal Mesh Kernel) + Cycles / EEVEE",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "OptiX",
+      "engine": "Blender In-House Mesh & Subdivision Engine / Cycles & Eevee Next",
+      "multicore": "Multi-threaded CPU rendering, geometry node evaluation & physics baking",
+      "gpu_optimization": "NVIDIA OptiX & CUDA / Apple Metal / AMD HIP / Intel OneAPI GPU hardware acceleration",
       "standards": [
-        "BLEND",
+        "OpenUSD",
+        "glTF 2.0",
+        "Alembic",
         "FBX",
-        "STL"
+        "OBJ",
+        "STL",
+        "3MF",
+        "OpenColorIO",
+        "MaterialX"
       ]
     },
-    "expert_verdict": "Disrupting the professional 3D industry with open-source power.",
-    "pricing_tiers": [
-      {
-        "name": "Free & Open Source",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "Full 3D Suite",
-          "Cycles Renderer",
-          "Geometry Nodes",
-          "Community Support"
-        ],
-        "is_popular": true
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Creation Suite",
-        "items": [
-          {
-            "name": "Cycles Path Tracer",
-            "status": true
-          },
-          {
-            "name": "Geometry Nodes (Procedural)",
-            "status": true
-          },
-          {
-            "name": "Grease Pencil (2D in 3D)",
-            "status": true
-          },
-          {
-            "name": "Real-time Eevee Engine",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Sculpting & VFX",
-        "items": [
-          {
-            "name": "Dynamic Topology Sculpting",
-            "status": true
-          },
-          {
-            "name": "Integrated Compositor",
-            "status": true
-          },
-          {
-            "name": "Camera Tracking",
-            "status": true
-          },
-          {
-            "name": "Python API for addons",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "languages": [
-      "English",
-      "Abkhazian",
-      "Arabic",
-      "Belarusian",
-      "Bulgarian",
-      "Catalan",
-      "Czech",
-      "Danish",
-      "German",
-      "Greek",
-      "English (UK)",
-      "Esperanto",
-      "Spanish",
-      "Basque",
-      "Persian",
-      "Finnish",
-      "French",
-      "Hebrew",
-      "Hindi",
-      "Croatian",
-      "Hungarian",
-      "Indonesian",
-      "Italian",
-      "Japanese",
-      "Georgian",
-      "Korean",
-      "Kyrgyz",
-      "Lithuanian",
-      "Malayalam",
-      "Norwegian",
-      "Dutch",
-      "Polish",
-      "Portuguese",
-      "Portuguese (Brazil)",
-      "Romanian",
-      "Russian",
-      "Slovak",
-      "Slovenian",
-      "Serbian",
-      "Serbian (Latin)",
-      "Swedish",
-      "Swahili",
-      "Tamil",
-      "Thai",
-      "Turkish",
-      "Ukrainian",
-      "Urdu",
-      "Vietnamese",
-      "Chinese (Simplified)",
-      "Chinese (Traditional)"
-    ],
+    "expert_verdict": "Blender is an open-source triumph and one of the most powerful creative software tools on the planet. For 3D artists, game creators, concept designers, and additive fabrication enthusiasts seeking limitless creative capabilities with zero software licensing friction, Blender is an indispensable global asset.",
     "file_formats_in": [
       "BLEND",
-      "OBJ",
       "FBX",
-      "glTF",
+      "OBJ",
+      "GLTF",
       "GLB",
       "USD",
-      "USDZ",
-      "COLLADA",
-      "STL",
-      "PLY",
-      "X3D",
+      "USDA",
+      "USDC",
       "ABC",
-      "DAE",
+      "STL",
+      "3MF",
+      "PLY",
+      "DXF",
       "SVG"
     ],
     "file_formats_out": [
       "BLEND",
-      "OBJ",
       "FBX",
-      "glTF",
+      "OBJ",
+      "GLTF",
       "GLB",
       "USD",
+      "USDA",
+      "USDC",
       "USDZ",
-      "COLLADA",
-      "STL",
-      "PLY",
-      "X3D",
       "ABC",
-      "MP4",
-      "PNG",
-      "EXR"
-    ],
-    "integrations": [
-      "Cycles & EEVEE Renderers",
-      "Geometry Nodes",
-      "Unity & Unreal Engine Pipeline",
-      "Adobe Substance 3D",
-      "OpenColorIO (OCIO)",
-      "OpenSubdiv & OpenVDB"
-    ],
-    "deployment_options": [
-      "Desktop"
+      "STL",
+      "3MF",
+      "PLY",
+      "DXF",
+      "SVG"
     ],
     "license_types": [
       "Open-Source",
       "Free"
     ],
-    "support_channels": [
-      "Community",
-      "Documentation",
-      "Training"
+    "security_compliance": [
+      "Zero Telemetry",
+      "Air-Gapped Operation",
+      "Auditable Open-Source Code"
     ],
-    "security_compliance": [],
+    "languages": [
+      "English",
+      "Spanish",
+      "German",
+      "French",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Portuguese",
+      "Russian"
+    ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "Python API",
-      "sdk_languages": [
-        "Python",
-        "C",
-        "C++"
-      ],
-      "docs_url": "https://docs.blender.org/api/current/"
+      "has_sdk": true
     },
-    "alternatives": [
-      "maya",
-      "3ds-max",
-      "zbrush",
-      "rhino-3d"
+    "support_channels": [
+      "Community",
+      "Documentation"
     ]
   },
   {
-    "id": "t79",
+    "id": "t33",
     "name": "Geomagic Design X",
     "slug": "geomagic-design-x",
-    "logo_url": "/logos/geomagic-design-x.png",
-    "short_desc": "Reverse engineering software that turns scan data into parametric CAD models.",
-    "description": "Geomagic Design X (owned by Hexagon since April 2025, acquired from 3D Systems) combines history-based CAD with 3D scan data processing so you can create feature-based, editable solid models compatible with your existing CAD software.",
-    "country": "USA",
+    "logo_url": "/logos/geomagic-design-x.svg",
+    "short_desc": "The industry's leading reverse engineering software that converts 3D scan data into feature-based, editable parametric CAD models.",
+    "description": "Geomagic Design X (developed by Oqton and 3D Systems) is the premier reverse engineering software application in the global manufacturing industry. Purpose-built to bridge the gap between 3D scanning and CAD modeling, Design X combines scan data processing with history-based parametric solid and surface modeling. It allows engineers to import multi-million-point laser and optical scan meshes, extract sketches, auto-surface complex organic geometry, and transfer native, feature-complete parametric model trees directly into SolidWorks, Autodesk Inventor, Siemens NX, CATIA, and PTC Creo via LiveTransfer.",
+    "pricing_tiers": [
+      {
+        "name": "Geomagic Design X Commercial Seat",
+        "price": "Official Store",
+        "period": "subscription / commercial license",
+        "features": [
+          "Direct Point Cloud and Polygonal Mesh Scan Processing Engine",
+          "Automated and Interactive 2D/3D Cross-Section Sketch Extraction",
+          "LiveTransfer Technology Exporting Native Feature Trees to Major CAD Platforms",
+          "Automatic Surface (Autosurface) and Exact Curvature NURBS Fitting",
+          "Real-Time Accuracy Analyzer Comparing Scanned Meshes to CAD Models"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Geomagic Design X Network Floating",
+        "price": "Custom Quote",
+        "period": "annual term / network floating",
+        "features": [
+          "Includes All Design X Reverse Engineering Capabilities",
+          "Concurrent Network Floating License Shared across Engineering Teams",
+          "Enterprise Direct Scanner Hardware Hardware Plug-in Drivers",
+          "Dedicated Maintenance Updates and Value-Added Reseller (VAR) Support"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Scan Processing & Mesh Optimization",
+        "items": [
+          {
+            "name": "Direct Import and Alignment of Massive Multi-Gigabyte Point Clouds and STL Meshes",
+            "status": true
+          },
+          {
+            "name": "Automated Mesh Healing, Defeaturing, Hole Filling, and Decimation Algorithms",
+            "status": true
+          },
+          {
+            "name": "Curvature-Based Feature Curve Extraction and Polyline Cross-Section Slicing",
+            "status": true
+          },
+          {
+            "name": "Target-Based, Best-Fit, and Datum-Based Scan Registration and Global Alignment",
+            "status": true
+          },
+          {
+            "name": "Accuracy Analyzer Generating Real-Time Color-Coded Tolerance Deviation Maps",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Hybrid Parametric & Surface Modeling",
+        "items": [
+          {
+            "name": "Feature-Tree History-Based 3D Solid Modeling from Extracted Scan Sketches",
+            "status": true
+          },
+          {
+            "name": "Automatic Surfacing (AutoSurface) Laying Down Continuous NURBS Patches on Organic Geometry",
+            "status": true
+          },
+          {
+            "name": "Interactive Surface Fitting with Exact Curvature Tangency and Porcupine Diagnostics",
+            "status": true
+          },
+          {
+            "name": "Parametric Sheet Metal and Flange Recreation from Scanned Stamped Parts",
+            "status": true
+          },
+          {
+            "name": "Siemens Parasolid Geometric Modeling Engine Core Integration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "LiveTransfer & CAD Interoperability",
+        "items": [
+          {
+            "name": "LiveTransfer Exporting Complete Feature Trees Directly into Native SolidWorks Files",
+            "status": true
+          },
+          {
+            "name": "Direct Native Feature Tree Transfer into Autodesk Inventor, PTC Creo, and Siemens NX",
+            "status": true
+          },
+          {
+            "name": "Industry-Standard Neutral CAD Export (STEP AP242, IGES, Parasolid, SAT)",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Hardware Scanner Drivers Connecting Directly to Optical and Arm Scanners",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "solidworks",
+      "catia",
+      "rhino-3d"
+    ],
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Subscription",
-    "starting_price": 1900,
+    "starting_price": 4900,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Reverse Engineering",
-      "Quality Control"
+      "Automotive Aftermarket & Restomod",
+      "Aerospace MRO & Replacement Parts",
+      "Heavy Machinery & Legacy Tooling",
+      "Medical Implants & Prosthetics",
+      "Consumer Hardware Product Redesign"
     ],
     "core_features": [
-      "Automatic Surface Fitting",
-      "Mesh to Solid",
-      "LiveTransfer to CAD",
-      "Point Cloud Analysis"
+      "Direct 3D Scan Mesh & Point Cloud Processing",
+      "LiveTransfer Native Feature Tree Export to SolidWorks & NX",
+      "Real-Time Accuracy Analyzer Deviation Color Maps",
+      "Automatic & Interactive NURBS Surface Patch Fitting",
+      "Automated Sketch & Profile Extraction from 3D Meshes",
+      "Siemens Parasolid Hybrid Solid/Surface Modeling Engine",
+      "Seamless Scanner Hardware Plugin & Probe Integration"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://www.oqton.com/geomagic-design-x/",
+    "pricing_url": "https://www.oqton.com/contact-us/",
+    "trial_url": "https://www.oqton.com/geomagic-design-x/free-trial/",
+    "affiliate_url": null,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/geomagic-design-x/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/162832/Geomagic-Design-X/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 18,
+        "url": "https://www.trustradius.com/products/geomagic-design-x/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.getapp.com/engineering-software/a/geomagic-design-x/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
+    "pros": [
+      "Undisputed global gold standard for converting raw 3D scan meshes into native, editable parametric CAD models.",
+      "LiveTransfer technology uniquely rebuilds step-by-step feature trees inside SolidWorks, Inventor, and Siemens NX.",
+      "Accuracy Analyzer provides instant color-coded visual feedback showing deviations between scan data and modeled geometry.",
+      "Extracts geometric sketches and profile slices automatically from scan data with automatic arc and line fitting.",
+      "Handles monumental point clouds containing tens of millions of vertices with smooth decimation and healing tools.",
+      "Direct hardware plugin integration with Faro, Hexagon, Creaform, Artec, and GOM scanning systems."
+    ],
+    "cons": [
+      "Substantial enterprise software investment cost with pricing managed strictly via specialized metrology resellers.",
+      "Requires high-specification workstation hardware (certified NVIDIA RTX GPU and 32GB+ RAM) to process dense scan meshes.",
+      "Exclusively engineered for 64-bit Microsoft Windows; no native installation for macOS or Linux operating systems.",
+      "Requires experienced engineering operators who understand both metrology scan noise and CAD parametric modeling.",
+      "Annual software maintenance and upgrade subscriptions are necessary to maintain compatibility with new CAD versions.",
+      "Not intended as a standalone general-purpose assembly modeler; designed specifically for reverse engineering part recreation."
+    ],
+    "faqs": [
+      {
+        "q": "What is Geomagic Design X used for?",
+        "a": "According to Oqton official documentation, Geomagic Design X is professional reverse engineering software that converts 3D scan data into high-quality, feature-based CAD models. It bridges optical scanning and CAD by extracting sketches, fitting NURBS surfaces, and exporting native parametric models to programs like SolidWorks and NX. Read more on the [Official Geomagic Design X Page](https://www.oqton.com/geomagic-design-x/)."
+      },
+      {
+        "q": "What is LiveTransfer technology in Geomagic Design X?",
+        "a": "LiveTransfer is a proprietary technology in Design X that exports models into major CAD software (SolidWorks, Autodesk Inventor, Siemens NX, PTC Creo, and CATIA) not just as dumb solid bodies, but as native, step-by-step editable feature trees with intact sketches, extrusions, cuts, and fillets."
+      },
+      {
+        "q": "How does the Accuracy Analyzer work?",
+        "a": "The Accuracy Analyzer is a real-time inspection tool that measures the distance between the original scanned point cloud/mesh and the modeled CAD surface, overlaying an interactive color map that instantly alerts engineers to out-of-tolerance areas."
+      },
+      {
+        "q": "Can I test Geomagic Design X before purchasing?",
+        "a": "Yes. Oqton provides a 15-day free evaluation trial of Geomagic Design X for qualified manufacturing companies, automotive restomod teams, and metrology labs. Request access on the [Official Geomagic Trial Portal](https://www.oqton.com/geomagic-design-x/free-trial/)."
+      },
+      {
+        "q": "What hardware is required to run Geomagic Design X?",
+        "a": "Geomagic Design X runs on 64-bit Microsoft Windows 11 and Windows 10. Due to heavy point-cloud processing, recommended specifications include an Intel Core i7/i9 or AMD Ryzen 7/9 CPU, 32 GB to 64 GB RAM, and a dedicated professional GPU (NVIDIA RTX with 8 GB+ VRAM)."
+      },
+      {
+        "q": "Which scan and CAD file formats does Design X support?",
+        "a": "Design X imports all major 3D scan formats (STL, OBJ, PLY, XYZ, PTX, E57, PCD) and exports neutral CAD standards (STEP, IGES, Parasolid .x_t, ACIS .sat) as well as direct LiveTransfer native files to SolidWorks, Inventor, NX, and Creo."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Parasolid Geometric Kernel & Proprietary Mesh Pipeline",
+      "multicore": "Multi-threaded scan mesh decimation, point cloud registration & surface fitting",
+      "gpu_optimization": "DirectX 11 hardware-accelerated viewport rendering with workstation GPU certified drivers",
+      "standards": [
+        "Parasolid (Native)",
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "STL",
+        "PLY",
+        "OBJ",
+        "E57",
+        "PTX"
+      ]
+    },
+    "expert_verdict": "Geomagic Design X is the uncontested champion of reverse engineering. By turning massive, chaotic 3D scan data into clean, parametric, feature-tree CAD models with real-time deviation analysis and seamless LiveTransfer to SolidWorks and NX, it saves hundreds of design hours for aftermarket automotive and legacy equipment remanufacturers.",
+    "file_formats_in": [
+      "STL",
+      "OBJ",
+      "PLY",
+      "XYZ",
+      "PTX",
+      "E57",
+      "PCD",
+      "ASC",
+      "STEP",
+      "IGES",
+      "X_T",
+      "X_B"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "IGES",
+      "X_T",
+      "X_B",
+      "SAT",
+      "STL",
+      "OBJ",
+      "PLY",
+      "SLDPRT",
+      "IPT",
+      "PRT"
+    ],
+    "license_types": [
+      "Subscription",
+      "Floating",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 9001",
+      "ITAR Ready",
+      "Enterprise Metrology Security"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ]
+  },
+  {
+    "id": "t34",
+    "name": "Alias AutoStudio",
+    "slug": "alias-autostudio",
+    "logo_url": "/logos/alias-autostudio.svg",
+    "short_desc": "Autodesk’s premier automotive styling and Class-A surfacing software for exterior and interior vehicle concept design.",
+    "description": "Autodesk Alias AutoStudio is the flagship automotive concept design and Class-A surfacing software developed by Autodesk for premium vehicle design studios, exterior/interior stylists, and digital sculptors worldwide. Combining 2D sketching, interactive dynamic shape sculpting, fast concept modeling, and mathematically pristine Class-A NURBS surface modeling, Alias AutoStudio provides the seamless digital pipeline from an initial automotive design sketch through to engineering-ready production surfaces. Deeply connected to Autodesk VRED for high-end visualization and ShotGrid for production management, Alias defines aesthetic vehicle styling across leading automotive OEMs.",
+    "pricing_tiers": [
+      {
+        "name": "Autodesk Alias AutoStudio Annual",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Complete Concept Design, Dynamic Shape Sculpting, and Surface Modeling",
+          "Advanced Mathematical Class-A Surfacing with G2/G3 Continuity Controls",
+          "Automated Computational Modeling Powered by Embedded Dynamo Graph",
+          "Real-Time Virtual Reality (VR) Design Evaluation and Review Tools",
+          "Direct CAD Interoperability with Autodesk Inventor, Maya, and VRED"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Autodesk Alias AutoStudio Multi-Year",
+        "price": "Official Store",
+        "period": "3-year term subscription",
+        "features": [
+          "Includes All Flagship Alias AutoStudio Class-A Surfacing Capabilities",
+          "Guaranteed Price Lock for 36 Months of Continuous Automotive Studio Access",
+          "Autodesk Enterprise Cloud Team Coordination and Administrative Deployment",
+          "Priority Enterprise Technical Support and Dedicated Studio Consulting"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Autodesk Flex Token Access",
+        "price": "Official Store",
+        "period": "daily pay-as-you-go",
+        "features": [
+          "Pre-Purchased Token Model for Occasional Project Reviewers and Contractors",
+          "24-Hour Full-Featured Access to Alias AutoStudio Per Daily Launch",
+          "Centralized Consumption Tracking via Autodesk Administrative Account Portal"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Class-A Surfacing & Curvature Continuity",
+        "items": [
+          {
+            "name": "Precision Bezier and B-Spline NURBS Surface Modeling with High Mathematical Order",
+            "status": true
+          },
+          {
+            "name": "Curvature Continuity Controls Ensuring G0, G1 (Tangent), G2 (Curvature), and G3 (Torsion) Alignment",
+            "status": true
+          },
+          {
+            "name": "Dynamic Surface Evaluation Tools: Zebra Striping, Porcupine Plots, and Dynamic Isophotes",
+            "status": true
+          },
+          {
+            "name": "Surface Fillet and Flange Generation with Precise Tangency Lead-In and Form Factors",
+            "status": true
+          },
+          {
+            "name": "Direct Surface Control Point Manipulation (Hull and CV Sculpting) for Aesthetic Body Lines",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Concept Modeling & Computational Design",
+        "items": [
+          {
+            "name": "Integrated 2D Raster Sketching and Canvas Warping over 3D Digital Packages",
+            "status": true
+          },
+          {
+            "name": "Subdivision (SubD) Modeling for Rapid Exploration of Vehicle Proportion and Volume",
+            "status": true
+          },
+          {
+            "name": "Dynamo Computational Design Integration Generating Parametric Grilles and Textures",
+            "status": true
+          },
+          {
+            "name": "Interactive VR Headset Viewing for Immersive Full-Scale Automotive Interior Audits",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Engineering Continuity & Production Handoff",
+        "items": [
+          {
+            "name": "Direct Bi-Directional CAD Interoperability with CATIA, Siemens NX, and SolidWorks",
+            "status": true
+          },
+          {
+            "name": "Direct Live Connection into Autodesk VRED for Photorealistic Ray-Traced Showroom Reviews",
+            "status": true
+          },
+          {
+            "name": "Extensive Python Scripting API for Custom Studio Automation and Geometry Auditing",
+            "status": true
+          },
+          {
+            "name": "High-Fidelity STEP AP242, IGES, and Wire Format Neutral Geometry Exchange",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "catia",
+      "rhino-3d",
+      "siemens-nx"
+    ],
+    "country": "United States",
+    "category_id": "c2",
+    "pricing_type": "Subscription",
+    "starting_price": 8400,
+    "price_period": "year",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Automotive Exterior & Interior Design",
+      "Luxury Yacht & Marine Styling",
+      "Consumer Electronics Industrial Design",
+      "Aerospace Cabin Concept Styling",
+      "Commercial Transportation"
+    ],
+    "core_features": [
+      "Precision Class-A NURBS Automotive Surfacing Engine",
+      "G0, G1, G2 & G3 Curvature & Torsion Continuity Controls",
+      "Subdivision (SubD) Rapid Exterior Concept Sculpting",
+      "Dynamo Computational Parametric Patterning Engine",
+      "Dynamic Surface Quality Diagnostic Tools (Zebra, Isophotes)",
+      "Direct Live Integration with Autodesk VRED & Inventor",
+      "Immersive Virtual Reality (VR) Full-Scale Design Review"
     ],
     "user_scales": [
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://hexagon.com/products/geomagic-design-x",
-    "affiliate_url": null,
-    "score": 4.9,
-    "pros": [
-      "Best scan-to-CAD workflow",
-      "Feature-based modeling",
-      "Extremely accurate"
-    ],
-    "cons": [
-      "Very expensive",
-      "High hardware requirements",
-      "Steep learning curve"
-    ],
-    "faqs": [
-      {
-        "q": "What is Geomagic Design X used for?",
-        "a": "Reverse engineering software that turns scan data into parametric CAD models. Geomagic Design X is a 3D modeling solution widely adopted in Reverse Engineering, Quality Control."
-      },
-      {
-        "q": "How much does Geomagic Design X cost?",
-        "a": "Geomagic Design X is sold by subscription; the plans shown on this page are Design X Commercial. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Geomagic Design X Pricing Page](https://hexagon.com/products/geomagic-design-x)."
-      },
-      {
-        "q": "Is there a free version of Geomagic Design X?",
-        "a": "Geomagic Design X is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Geomagic Design X page](https://hexagon.com/products/geomagic-design-x)."
-      },
-      {
-        "q": "What operating systems does Geomagic Design X support?",
-        "a": "Geomagic Design X runs on Windows."
-      },
-      {
-        "q": "Which file formats does Geomagic Design X support?",
-        "a": "Geomagic Design X is a scan-to-CAD tool, so the input side is point-cloud and mesh data — PLY, OBJ, STL, XYZ, PTX, E57 and LAS — alongside STEP, IGES and Parasolid solids for hybrid workflows. Output is feature-based CAD: STEP, IGES, SAT, Parasolid (.x_t) and direct live transfers into SOLIDWORKS, Inventor, Creo, NX and CATIA."
-      },
-      {
-        "q": "What are the best alternatives to Geomagic Design X?",
-        "a": "The closest alternatives to Geomagic Design X are MeshLab, Magics, Rhino 3D, and Siemens NX. MeshLab (100% free) competes directly on core Reverse Engineering workflows, while Magics (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "STEP",
-        "IGES",
-        "STL"
-      ]
-    },
-    "expert_verdict": "The professional standard for turning physical objects into digital CAD data.",
-    "quote_only": true,
-    "file_formats_in": [
-      "PLY",
-      "OBJ",
-      "STL",
-      "XYZ",
-      "PTX",
-      "E57",
-      "LAS",
-      "STEP",
-      "IGES"
-    ],
-    "file_formats_out": [
-      "STEP",
-      "IGES",
-      "Parasolid (X_T)",
-      "SAT",
-      "SolidWorks LiveTransfer",
-      "Inventor",
-      "Creo",
-      "NX",
-      "CATIA",
-      "STL"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Design X Commercial",
-        "price": "Custom",
-        "period": "quote",
-        "features": [
-          "LiveTransfer to major CAD",
-          "Automated surface fitting",
-          "Point cloud mesh processing",
-          "Parametric hybrid modeling"
-        ],
-        "is_popular": true
-      }
-    ],
-    "alternatives": [
-      "meshlab",
-      "magics",
-      "rhino-3d",
-      "siemens-nx"
-    ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Automatic Surface Fitting",
-            "status": true
-          },
-          {
-            "name": "Mesh to Solid",
-            "status": true
-          },
-          {
-            "name": "LiveTransfer to CAD",
-            "status": true
-          },
-          {
-            "name": "Point Cloud Analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native PLY / OBJ / STL Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision STEP / IGES / Parasolid (X_T) Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "t80",
-    "name": "Alias AutoStudio",
-    "slug": "alias-autostudio",
-    "logo_url": "/logos/alias-autostudio.svg",
-    "short_desc": "Industrial design and automotive styling software.",
-    "description": "Autodesk Alias AutoStudio is the automotive and industrial design industry benchmark for Class-A NURBS surfacing, digital clay concept modeling, and technical surfacing production. Combining bezier/NURBS curve degree control, SubD rapid concepting, Dynamo computational patterning, and VRED photorealistic raytracing links, it bridges design studio styling and engineering body-in-white CAD.",
-    "country": "USA",
-    "category_id": "c2",
-    "pricing_type": "Subscription",
-    "starting_price": 12000,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Automotive",
-      "Industrial Design"
-    ],
-    "core_features": [
-      "Class-A Surfacing",
-      "Conceptual Sketching",
-      "VR Visualization",
-      "Dynamo Integration"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Design Agencies"
-    ],
     "official_url": "https://www.autodesk.com/products/alias-products/overview",
+    "pricing_url": "https://www.autodesk.com/products/alias-products/pricing",
+    "trial_url": "https://www.autodesk.com/products/alias-products/free-trial",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/autodesk-alias/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.capterra.com/p/162831/Autodesk-Alias/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 18,
+        "url": "https://www.trustradius.com/products/autodesk-alias/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.getapp.com/engineering-software/a/autodesk-alias/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "Gold standard for Class-A surfaces",
-      "Stunning visualization",
-      "Unified design workflow"
+      "Automotive industry benchmark for Class-A exterior body surfacing and interior luxury cabin aesthetic styling.",
+      "Unmatched mathematical precision for G2 and G3 curvature continuity, ensuring flawless surface highlights without ripple flaws.",
+      "SubD concept sculpting combined with Dynamo parametric scripting enables rapid exploration of complex parametric vehicle grilles.",
+      "Deep direct pipeline into Autodesk VRED allows instant real-time ray-traced styling presentations and design decision reviews.",
+      "Diagnostic evaluation tools (Zebra striping, dynamic isophotes, porcupine curvature plots) provide meticulous optical quality validation.",
+      "Embedded in major global OEM automotive styling studios (Audi, BMW, Ford, Hyundai, Mercedes-Benz)."
     ],
     "cons": [
-      "Extremely high cost",
-      "Steepest learning curve in CAD",
-      "Niche expertise needed"
+      "High software investment and recurring subscription pricing structured strictly for well-funded automotive studios.",
+      "Extremely steep learning curve requiring months of rigorous apprenticeship and dedicated Class-A surface theory study.",
+      "Exclusively certified for 64-bit Microsoft Windows workstations; no macOS or Linux desktop installation options.",
+      "Not intended for mechanical engineering details (e.g. dynamic mechanism simulations, FEA stress analysis, or bolt catalogs).",
+      "Demands high-performance workstation hardware with certified workstation graphics cards for smooth real-time viewport feedback.",
+      "Licensing and account administration requires enterprise Autodesk coordination."
     ],
     "faqs": [
       {
-        "q": "What is Alias AutoStudio used for?",
-        "a": "Industrial design and automotive styling software. Alias AutoStudio is a 3D modeling solution widely adopted in Automotive, Industrial Design."
+        "q": "What is Autodesk Alias AutoStudio used for?",
+        "a": "According to Autodesk official documentation, Alias AutoStudio is the premier automotive styling and Class-A surfacing software suite. It enables vehicle designers and digital sculptors to create sketches, sculpt concept volumes, build production-ready Class-A surfaces, and evaluate surface quality for luxury cars, aircraft, and consumer products. Read more on the [Official Alias AutoStudio Overview](https://www.autodesk.com/products/alias-products/overview)."
       },
       {
-        "q": "How much does Alias AutoStudio cost?",
-        "a": "Alias AutoStudio is sold by subscription; the plans shown on this page are Alias AutoStudio, Alias Concept, and Product Design & Manufacturing Collection. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alias AutoStudio Pricing Page](https://www.autodesk.com/products/alias-products/overview)."
+        "q": "What does Class-A surfacing mean in Alias?",
+        "a": "Class-A surfacing refers to the creation of exterior and interior visible automotive surfaces with the highest mathematical curvature continuity (G2 and G3). These surfaces guarantee that reflected light and highlights flow across body panels seamlessly without visual distortions, ripples, or tangent kinks."
       },
       {
-        "q": "Is there a free version of Alias AutoStudio?",
-        "a": "Alias AutoStudio is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Alias AutoStudio page](https://www.autodesk.com/products/alias-products/overview)."
+        "q": "What is the difference between Alias Concept, Surface, and AutoStudio?",
+        "a": "Alias Concept focuses on early 2D sketching, SubD exploration, and concept modeling. Alias Surface adds technical Class-A surface modeling and reverse engineering. Alias AutoStudio is the flagship tier that includes all concept and surfacing tools, plus advanced computational design (Dynamo) and automotive visualization handoffs."
       },
       {
-        "q": "What operating systems does Alias AutoStudio support?",
-        "a": "Alias AutoStudio runs on Windows and macOS."
+        "q": "Can I test Alias AutoStudio with a free trial?",
+        "a": "Yes. Autodesk offers a 30-day free trial of Alias products for automotive styling teams and commercial design firms. Educational licenses are also available for qualifying transport design students. Request a trial on the [Official Autodesk Alias Trial Page](https://www.autodesk.com/products/alias-products/free-trial)."
       },
       {
-        "q": "Which file formats does Alias AutoStudio support?",
-        "a": "Alias works in IGES, STEP (AP203 / AP214 / AP242), SAT, JT, DXF/DWG, FBX, OBJ and STL, with direct translators for CATIA V5, NX and Creo and read-only access to CATIA V4 and SolidWorks. Export covers the same neutral set plus VDAIS / VDAFS, but Inventor and SolidWorks are import-only — there is no write path back to those formats, which matters when a studio hands Class-A surfaces downstream."
+        "q": "What hardware is required to run Alias AutoStudio?",
+        "a": "Alias AutoStudio is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10. Autodesk recommends a high-frequency multi-core CPU (Intel Core i7/i9 or AMD Ryzen 7/9), 32 GB to 64 GB RAM, and a professional ISV-certified GPU (such as NVIDIA RTX with 8 GB+ VRAM)."
       },
       {
-        "q": "What are the best alternatives to Alias AutoStudio?",
-        "a": "The closest alternatives to Alias AutoStudio are Rhino 3D, CATIA, Siemens NX, and Plasticity. Rhino 3D (offered on a Perpetual license) competes directly on core Automotive workflows, while CATIA (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD formats does Alias AutoStudio support?",
+        "a": "Alias natively works with .WIRE files. It imports and exports STEP (AP214/AP242), IGES, DXF, DWG, OBJ, and provides direct bi-directional CAD translators for CATIA V5, Siemens NX, and Autodesk Inventor."
       }
     ],
     "tech_specs": {
-      "engine": "Alias Core",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
+      "engine": "Autodesk Alias High-Order NURBS Surfacing Engine",
+      "multicore": "Multi-threaded graphics tessellation, surface evaluation & diagnostic shader calculations",
+      "gpu_optimization": "DirectX 11 & OpenGL hardware-accelerated viewport rendering with ISV-certified GPU drivers",
       "standards": [
-        "STEP",
+        "WIRE (Native)",
+        "STEP (AP214/AP242)",
         "IGES",
-        "VDAFS"
+        "DWG",
+        "DXF",
+        "OBJ",
+        "CATPart",
+        "PRT"
       ]
     },
-    "expert_verdict": "The software behind almost every beautiful car you see on the road.",
+    "expert_verdict": "Autodesk Alias AutoStudio is the holy grail of automotive exterior styling. For vehicle design studios where aerodynamic light reflection, G3 surface continuity, and emotional body tension dictate brand identity, Alias AutoStudio delivers the ultimate Class-A sculpting precision.",
     "file_formats_in": [
       "WIRE",
       "STEP",
       "IGES",
-      "SAT",
-      "JT",
       "DWG",
       "DXF",
-      "FBX",
+      "CATPART",
+      "PRT",
       "OBJ",
-      "STL",
-      "CATPart",
-      "NX",
-      "Inventor",
-      "SolidWorks"
+      "FBX"
     ],
     "file_formats_out": [
       "WIRE",
       "STEP",
       "IGES",
-      "SAT",
-      "JT",
       "DWG",
       "DXF",
-      "FBX",
+      "CATPART",
+      "PRT",
       "OBJ",
-      "STL",
-      "CATPart",
-      "NX",
-      "VDAFS"
+      "FBX",
+      "PDF"
     ],
-    "alternatives": [
-      "rhino-3d",
-      "catia",
-      "siemens-nx",
-      "plasticity"
+    "license_types": [
+      "Subscription",
+      "Educational",
+      "Commercial"
     ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Class-A Surfacing",
-            "status": true
-          },
-          {
-            "name": "Conceptual Sketching",
-            "status": true
-          },
-          {
-            "name": "VR Visualization",
-            "status": true
-          },
-          {
-            "name": "Dynamo Integration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native WIRE / STEP / IGES Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision WIRE / STEP / IGES Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
-      }
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2",
+      "Autodesk Trust Center"
     ],
-    "pricing_tiers": [
-      {
-        "name": "Alias AutoStudio",
-        "price": "Official Store",
-        "period": "Monthly, Annual or 3-Year Subscription",
-        "features": [
-          "Full industrial design and Class-A surfacing toolset",
-          "Concept modelling, sculpting and visualisation",
-          "Standalone subscription, priced well above Alias Concept"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Alias Concept",
-        "price": "Official Store",
-        "period": "Monthly, Annual or 3-Year Subscription",
-        "features": [
-          "Lower-cost subset for sketching and concept modelling",
-          "Surface modelling and visualisation",
-          "Not the full Class-A production toolset"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Product Design & Manufacturing Collection",
-        "price": "Official Store",
-        "period": "Monthly, Annual or 3-Year Subscription",
-        "features": [
-          "Alias AutoStudio plus Inventor, AutoCAD, Fusion and more",
-          "One collection price for the whole toolchain",
-          "Cheaper than an AutoStudio seat on its own for most teams"
-        ],
-        "is_popular": false
-      }
+    "languages": [
+      "English",
+      "German",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t89",
+    "id": "t35",
     "name": "ZW3D",
     "slug": "zw3d",
-    "logo_url": "/logos/zw3d.ico",
-    "short_desc": "All-in-one 3D CAD/CAM solution from ZWSOFT.",
-    "description": "ZW3D by ZWSOFT is an integrated all-in-one 3D CAD/CAM solution powered by the proprietary Overdrive hybrid solid-surface kernel. Capable of performing boolean operations between open surfaces and closed solids, it unifies parametric part/assembly modeling, multi-cavity injection mold splitting, electrode extraction, sheet metal, and 2- to 5-axis CNC milling/turning in a single perpetual or subscription seat.",
+    "logo_url": "/logos/zw3d.svg",
+    "short_desc": "An all-in-one 3D CAD/CAE/CAM solution powered by the proprietary Overdrive geometric modeling engine for mold and machine design.",
+    "description": "ZW3D is an all-in-one 3D computer-aided design, engineering, and manufacturing (CAD/CAE/CAM) software suite developed by ZWSOFT. Powered by its proprietary Overdrive geometric modeling kernel, ZW3D features unique solid-surface hybrid modeling, allowing engineers to perform boolean cuts and unions directly on non-solid surface geometry without conversion errors. From parametric mechanical assemblies and mold tooling design to structural FEA simulation and 2-to-5-axis CNC machining, ZW3D offers perpetual buyout licensing and cost-effective subscriptions for manufacturers worldwide.",
+    "pricing_tiers": [
+      {
+        "name": "ZW3D Standard",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Overdrive Solid-Surface Hybrid 3D Parametric Modeling",
+          "Large Assembly Design with Interference and Clearance Checking",
+          "Automated Associative 2D Production Drawings and Bill of Materials",
+          "Direct Multi-CAD Translators (SolidWorks, CATIA, NX, Creo, STEP)",
+          "Sheet Metal Flange Design, Bends, and Automatic Unfolding"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "ZW3D Professional (Mold Edition)",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Includes All Standard 3D CAD Modeling Capabilities",
+          "Dedicated Plastic Injection Mold Tooling Design (Parting Lines & Core/Cavity)",
+          "Standard Mold Base Catalogs (DME, HASCO, LKM, FUTABA)",
+          "Electrode Design Wizard and Automated Spark Gap Drafting",
+          "Basic Structural Finite Element Analysis (FEA) Simulation"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "ZW3D Premium (All-in-One CAD/CAM)",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Includes All Professional 3D CAD & Mold Design Workbenches",
+          "Integrated 2-Axis to 5-Axis Multi-Axis CNC Milling Toolpaths",
+          "Turning, Drilling, and Wire EDM Toolpath Post-Processing",
+          "Full Machine Tool Simulation and G-Code Verification"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Overdrive Hybrid Modeling & Assemblies",
+        "items": [
+          {
+            "name": "Proprietary Overdrive Geometric Kernel Enabling Solid-Surface Hybrid Modeling",
+            "status": true
+          },
+          {
+            "name": "Boolean Operations Performed Directly on Open Surfaces without Solidification",
+            "status": true
+          },
+          {
+            "name": "Parametric Feature-Based Mechanical Part and Large Assembly Management",
+            "status": true
+          },
+          {
+            "name": "Direct Editing Technology for Rapid Geometry Modification without History Constraints",
+            "status": true
+          },
+          {
+            "name": "Associative 2D Drafting with Automated BOM Generation and Section Views",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Mold Design & Structural Simulation",
+        "items": [
+          {
+            "name": "Automated Parting Line and Parting Surface Extraction for Plastic Mold Tooling",
+            "status": true
+          },
+          {
+            "name": "Core and Cavity Splitting with Draft Angle and Thickness Analysis Tools",
+            "status": true
+          },
+          {
+            "name": "Electrode Extraction Wizard and Automated Spark Gap Technical Drawings",
+            "status": true
+          },
+          {
+            "name": "Linear Static Stress, Modal, and Thermal Finite Element Simulation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Integrated Multi-Axis CAM & Interoperability",
+        "items": [
+          {
+            "name": "Integrated 2.5-Axis, 3-Axis, and Multi-Axis CNC High-Speed Milling Strategies",
+            "status": true
+          },
+          {
+            "name": "VoluMill High-Speed Material Removal Toolpath Optimization",
+            "status": true
+          },
+          {
+            "name": "Direct Multi-CAD Translators Reading Native SolidWorks, CATIA, NX, and Creo Files",
+            "status": true
+          },
+          {
+            "name": "C++ and .NET Developer API for Custom Macro and ERP Integration",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "solidworks",
+      "fusion-360",
+      "autodesk-inventor"
+    ],
     "country": "China",
     "category_id": "c2",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 2000,
+    "pricing_type": "Subscription",
+    "starting_price": 2500,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Manufacturing",
-      "Mechanical",
-      "Mold Design"
+      "Mold & Die Tooling",
+      "Machinery Manufacturing",
+      "Consumer Electronics",
+      "Automotive Components",
+      "Precision CNC Machining"
     ],
     "core_features": [
-      "CAD/CAM/CAE",
-      "Overdrive Engine",
-      "Mold Design",
-      "Surface Modeling",
-      "Hybrid Modeling"
+      "Proprietary Overdrive Solid-Surface Hybrid Modeling Kernel",
+      "Integrated All-in-One CAD/CAE/CAM Digital Workflow",
+      "Specialized Plastic Mold Core/Cavity & Electrode Wizards",
+      "2-Axis to 5-Axis Multi-Spindle High-Speed Milling CAM",
+      "Direct Multi-CAD Translators (SolidWorks, CATIA, NX, Creo)",
+      "Parametric Sheet Metal Design & Accurate Bend Tables",
+      "Cost-Effective Commercial Perpetual & Subscription Licensing"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Market"
+      "SMB",
+      "Mid-Market",
+      "Machine Shops"
     ],
     "official_url": "https://www.zwsoft.com/product/zw3d",
+    "pricing_url": "https://www.zwsoft.com/product/zw3d/pricing",
+    "trial_url": "https://www.zwsoft.com/product/zw3d/download",
     "affiliate_url": null,
-    "score": 4.5,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.g2.com/products/zw3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 78,
+        "url": "https://www.capterra.com/p/162837/ZW3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.1,
+        "max": 10,
+        "count": 25,
+        "url": "https://www.trustradius.com/products/zw3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 78,
+        "url": "https://www.getapp.com/engineering-software/a/zw3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD vs ZWCAD Shortcuts",
+        "href": "/toolbox/autocad-vs-zwcad-shortcuts"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      }
+    ],
     "pros": [
-      "Integrated CAD+CAM",
-      "Perpetual license available",
-      "Competitive pricing"
+      "All-in-one integration covering CAD modeling, mold core/cavity separation, structural FEA, and multi-axis CAM in a single suite.",
+      "Overdrive kernel's solid-surface hybrid modeling allows boolean operations directly on open surfaces without tedious healing.",
+      "Dedicated mold and electrode design wizards significantly shorten tooling development times for mold makers.",
+      "High cost-effectiveness compared to Western CAD/CAM giants, offering perpetual licenses alongside subscription plans.",
+      "Built-in direct translators read native SolidWorks, CATIA, Siemens NX, and Creo files with high geometric fidelity.",
+      "Fast learning curve with familiar ribbon interface layout and responsive local technical support teams."
     ],
     "cons": [
-      "Less third-party integrations",
-      "Smaller user community",
-      "UI not as polished as NX"
+      "Global third-party add-on partner network is smaller than SolidWorks or Autodesk ecosystems.",
+      "Fewer specialized university training programs outside Asia, requiring internal workplace training for new designers.",
+      "High-end Class-A aesthetic automotive surfacing is less extensive than dedicated suites like Alias or CATIA.",
+      "Exclusively engineered for 64-bit Microsoft Windows; no native installation for macOS or Linux systems.",
+      "Cloud collaboration features are developing but less ubiquitous than cloud-native solutions like Onshape.",
+      "Occasional translation anomalies when dealing with obscure proprietary CAD file features from older legacy versions."
     ],
     "faqs": [
       {
-        "q": "What is ZW3D used for?",
-        "a": "All-in-one 3D CAD/CAM solution from ZWSOFT. ZW3D is a 3D modeling solution widely adopted in Manufacturing, Mechanical, Mold Design."
+        "q": "What is ZW3D and what makes it unique?",
+        "a": "According to ZWSOFT official documentation, ZW3D is an integrated 3D CAD/CAE/CAM software suite. Its key differentiator is the self-developed Overdrive geometric modeling engine, which enables solid-surface hybrid modeling—allowing engineers to freely perform boolean operations and cuts between solid bodies and open surfaces without geometry conversion hurdles. Explore product details on the [Official ZW3D Overview](https://www.zwsoft.com/product/zw3d)."
       },
       {
-        "q": "How much does ZW3D cost?",
-        "a": "ZW3D is sold either by subscription or as a perpetual licence; the plans shown on this page are ZW3D Lite / Standard, ZW3D Professional, and ZW3D Premium (CAD + CAM). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZW3D Pricing Page](https://www.zwsoft.com/zw3d)."
+        "q": "What modules are available in ZW3D?",
+        "a": "ZW3D is available in multiple configurations: ZW3D Standard (core 3D CAD modeling, assemblies, and sheet metal), ZW3D Professional (adds automated mold design, parting lines, and electrode extraction), and ZW3D Premium (adds integrated 2-axis to 5-axis CAM machining toolpath generation). Review features on the [Official ZW3D Product Comparison](https://www.zwsoft.com/product/zw3d/pricing)."
       },
       {
-        "q": "Is there a free version of ZW3D?",
-        "a": "ZW3D is licensed either by subscription or as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ZW3D page](https://www.zwsoft.com/product/zw3d)."
+        "q": "Does ZW3D offer perpetual buyout licenses?",
+        "a": "Yes. ZWSOFT offers both perpetual buyout licenses and flexible annual subscriptions for ZW3D, giving manufacturing businesses the freedom to choose their preferred software ownership model. View details on the [Official ZW3D Pricing Page](https://www.zwsoft.com/product/zw3d/pricing)."
       },
       {
-        "q": "What operating systems does ZW3D support?",
-        "a": "ZW3D runs on Windows."
+        "q": "Can I test ZW3D with a free trial?",
+        "a": "Yes. ZWSOFT provides a fully functional 30-day free trial of ZW3D Premium, allowing users to test its CAD, mold, and CAM machining capabilities. Request download access on the [Official ZW3D Download Center](https://www.zwsoft.com/product/zw3d/download)."
       },
       {
-        "q": "Which file formats does ZW3D support?",
-        "a": "ZW3D reads and writes STEP, IGES, Parasolid, ACIS, STL, DXF/DWG and VDA, and opens native CATIA, NX, Creo, SOLIDWORKS, Solid Edge and Inventor parts and assemblies. Output adds 3D PDF, OBJ, VRML, JT and CGR/3DXML, plus NC G-code through the CAM modules. ZWSOFT notes that some third-party native translators are priced as extra options rather than bundled, so confirm the translator list for the tier being quoted."
+        "q": "What operating systems are supported by ZW3D?",
+        "a": "ZW3D is certified for 64-bit Microsoft Windows 11, Windows 10, Windows 8.1, and Windows 7 SP1. Recommended hardware includes an Intel Core i7 or AMD Ryzen 7 CPU, 16 GB to 32 GB RAM, and a dedicated OpenGL-compatible graphics card (such as NVIDIA GeForce or RTX) with 4 GB+ VRAM."
       },
       {
-        "q": "What are the best alternatives to ZW3D?",
-        "a": "The closest alternatives to ZW3D are SolidWorks, Solid Edge, Alibre Design, and KOMPAS-3D. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Manufacturing workflows, while Solid Edge (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD formats can ZW3D open and export?",
+        "a": "ZW3D supports neutral CAD formats (STEP AP203/AP214/AP242, IGES, Parasolid .x_t/.x_b, SAT, DWG, DXF, STL) and directly imports native proprietary CAD files from SolidWorks, CATIA, Siemens NX, PTC Creo, and Autodesk Inventor."
       }
     ],
     "tech_specs": {
-      "engine": "Overdrive Kernel (Proprietary)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "ZWSOFT Overdrive Solid-Surface Hybrid Kernel",
+      "multicore": "Multi-threaded graphics tessellation, 2D drafting & CAM toolpath calculation",
+      "gpu_optimization": "Hardware-accelerated OpenGL 3.3+ Viewport Graphics Engine",
       "standards": [
-        "STEP",
+        "Overdrive (Native)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
+        "Parasolid (X_T/X_B)",
+        "DWG",
         "DXF",
-        "STL"
+        "SAT",
+        "STL",
+        "PDF"
       ]
     },
-    "expert_verdict": "Exceptional value for shops needing integrated CAD+CAM without the NX or CATIA price tag.",
-    "pricing_tiers": [
-      {
-        "name": "ZW3D Lite / Standard",
-        "price": "Official Store",
-        "period": "perpetual / yr",
-        "features": [
-          "Solid-surface hybrid 3D modelling on the Overdrive kernel",
-          "Multi-CAD direct translator (SOLIDWORKS, CATIA, NX, Creo, Inventor, STEP, DWG)",
-          "3D assembly design, sheet metal unfolding, weldments, and 2D production drafting"
-        ]
-      },
-      {
-        "name": "ZW3D Professional",
-        "price": "Official Store",
-        "period": "perpetual / yr",
-        "features": [
-          "Everything in ZW3D Standard",
-          "Full plastic injection mould design: core/cavity splitting, cooling channels, and standard mould bases",
-          "Automated electrode extraction and point-cloud reverse engineering"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "ZW3D Premium (CAD + CAM)",
-        "price": "Official Store",
-        "period": "perpetual / yr",
-        "features": [
-          "Everything in ZW3D Professional",
-          "Integrated 2-axis turning and 2.5D to 5-axis simultaneous CNC milling",
-          "QuickMill high-speed roughing, toolpath verification, and post-processor library"
-        ]
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Design Power",
-        "items": [
-          {
-            "name": "Hybrid Modeling (Solid/Surface)",
-            "status": true
-          },
-          {
-            "name": "Direct Editing Tools",
-            "status": true
-          },
-          {
-            "name": "PMI (Product Mfg Info)",
-            "status": true
-          },
-          {
-            "name": "Flexible Component Library",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Manufacturing",
-        "items": [
-          {
-            "name": "Automated Mold Design",
-            "status": true
-          },
-          {
-            "name": "2-5 Axis Milling CAM",
-            "status": true
-          },
-          {
-            "name": "Toolpath Optimization",
-            "status": true
-          },
-          {
-            "name": "Drilling & Turning",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "expert_verdict": "ZW3D is a formidable all-in-one manufacturing solution. By packaging solid-surface hybrid modeling, plastic mold tooling wizards, and multi-axis CNC machining into a single package with flexible perpetual ownership options, ZW3D provides outstanding commercial value for toolmakers and machine fabrication shops worldwide.",
     "file_formats_in": [
       "Z3",
       "STEP",
+      "STP",
       "IGES",
-      "Parasolid",
+      "X_T",
+      "X_B",
       "SAT",
-      "STL",
       "DWG",
       "DXF",
-      "VDA",
-      "CATPart",
-      "PRT",
       "SLDPRT",
+      "SLDASM",
+      "CATPART",
+      "PRT",
       "IPT",
-      "JT",
-      "IFC"
+      "STL"
     ],
     "file_formats_out": [
       "Z3",
       "STEP",
+      "STP",
       "IGES",
-      "Parasolid",
+      "X_T",
+      "X_B",
       "SAT",
-      "STL",
-      "3D PDF",
-      "OBJ",
-      "VRML",
-      "JT",
-      "CGR / 3DXML",
       "DWG",
       "DXF",
-      "NC (G-Code)",
-      "CATPart"
+      "STL",
+      "OBJ",
+      "PDF"
     ],
-    "alternatives": [
-      "solidworks",
-      "solid-edge",
-      "alibre-design",
-      "kompas-3d"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 9001",
+      "Enterprise IT Data Security",
+      "Air-Gapped Standalone Licensing"
+    ],
+    "languages": [
+      "English",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Portuguese",
+      "Polish"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Email",
+      "Documentation",
+      "Knowledge Base",
+      "Community",
+      "Training"
     ]
   },
   {
-    "id": "t237",
+    "id": "t36",
     "name": "Plasticity",
     "slug": "plasticity",
-    "logo_url": "/logos/plasticity.png",
-    "short_desc": "New-generation 3D modeller borrowing from Rhino, Blender, and CAD workflows — Parasolid under the hood.",
-    "description": "Plasticity is a modern, artist-centric NURBS 3D CAD modeler powered by the industrial Siemens Parasolid geometric kernel, often described as \"CAD for artists.\" Combining Blender-inspired modal hotkeys and gizmos with mathematical G2/G3 fillet continuity, live boolean cutters, and clean STEP/Parasolid X_T/OBJ tessellation, it excels in hard-surface concept design, game assets, and industrial styling.",
-    "country": "USA",
+    "logo_url": "/logos/plasticity.svg",
+    "short_desc": "The CAD software for artists—a fast, modern NURBS modeling tool powered by Siemens Parasolid for concept art, hard-surface design, and 3D printing.",
+    "description": "Plasticity is an innovative, artist-centric 3D computer-aided design (CAD) modeling software application developed by Plasticity Software Inc. Marketed as 'CAD for artists,' Plasticity runs directly on the industrial-standard Siemens Parasolid geometric modeling kernel, pairing the mathematical precision and dependable filleting of mechanical engineering CAD with the speed, fluid keybindings, and creative freedom of digital DCC tools like Blender. Available as a perpetual buyout license for Windows, macOS, and Linux, Plasticity is a favorite among concept designers, hard-surface artists, and industrial prototypers worldwide.",
+    "pricing_tiers": [
+      {
+        "name": "Plasticity Indie License",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Full Siemens Parasolid NURBS Solid and Surface Modeling",
+          "Includes 1 Full Year of Free Software Updates and Upgrades",
+          "High-Precision STEP, OBJ, and DXF Geometry Export",
+          "Advanced Quad and Tri Polygon Mesher with Density Controls",
+          "Perpetual Buyout Ownership for Freelancers and Small Teams"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Plasticity Studio License",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
+        "features": [
+          "Includes All Indie CAD Modeling and Filleting Features",
+          "Commercial Enterprise Multi-Seat Deployment Rights",
+          "Priority Technical Support and Direct Development Team Feedback",
+          "Direct CAD Translation with Rhino 3DM, Parasolid (.x_t), and STEP AP242",
+          "Floating Network License Management Options for Studios"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Artist-Centric NURBS Modeling",
+        "items": [
+          {
+            "name": "Siemens Parasolid Industrial Geometric Kernel Delivering Dependable Solids",
+            "status": true
+          },
+          {
+            "name": "Direct Surface Push/Pull, Curve Offset, and Rapid Boolean Geometry Operations",
+            "status": true
+          },
+          {
+            "name": "Instant Filleting and Chamfering with Robust Geometric Tolerance Handling",
+            "status": true
+          },
+          {
+            "name": "Fluid Keyboard-Driven Interface Inspired by Blender Shortcuts and Navigation",
+            "status": true
+          },
+          {
+            "name": "Zero Feature Tree Overhead Allowing Pure Creative Form Finding without Rebuild Failures",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Meshing & Polygon Topology Output",
+        "items": [
+          {
+            "name": "Industry-Leading Quad and Triangle Polygon Mesher for Clean Downstream UV and SubD Work",
+            "status": true
+          },
+          {
+            "name": "Interactive Real-Time Mesh Density and Edge Flow Curvature Tuning",
+            "status": true
+          },
+          {
+            "name": "Export of Manifold Watertight Meshes (STL, OBJ) for 3D Printing Slicers",
+            "status": true
+          },
+          {
+            "name": "Preserved Sharp Mechanical Edges and Smooth Weighted Normals in Game Engine Exports",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Cross-Platform",
+        "items": [
+          {
+            "name": "High-Fidelity STEP (AP203/AP214/AP242) and Parasolid (.x_t) Mechanical CAD Exchange",
+            "status": true
+          },
+          {
+            "name": "Direct Interoperability with Rhino (.3dm), DXF 2D Vector Curves, and SVG Profiles",
+            "status": true
+          },
+          {
+            "name": "True Native Cross-Platform Execution on Windows, macOS (Apple Silicon), and Linux",
+            "status": true
+          },
+          {
+            "name": "Perpetual Buyout Ownership Model with Zero Required Recurring Subscription Fees",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "moi3d",
+      "rhino-3d",
+      "blender"
+    ],
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Perpetual",
     "starting_price": 149,
@@ -5566,209 +6220,292 @@ export const c2Tools: Tool[] = [
       "Linux"
     ],
     "industries": [
-      "Product Design",
-      "Games",
-      "Industrial Design"
+      "Concept Art & Entertainment Design",
+      "Hard-Surface Game Asset Creation",
+      "Consumer Hardware Prototyping",
+      "3D Printing & Collectibles",
+      "Industrial Product Styling"
     ],
     "core_features": [
-      "Parasolid NURBS kernel",
-      "Blender-style hotkey-driven workflow",
-      "Solid / surface hybrid modeling",
-      "Boolean operations with auto-fillet",
-      "STEP, IGES, OBJ, X_T export",
-      "Indie license (≤$100k revenue)"
+      "Industrial Siemens Parasolid NURBS Modeling Engine",
+      "Artist-Centric Fluid Direct Modeling & Blender Keybindings",
+      "Dependable Parasolid Fillets, Chamfers & Booleans",
+      "Best-in-Class Quad & Tri Polygon Remeshing for DCC/Games",
+      "Native STEP, Parasolid (X_T) & Rhino 3DM Interoperability",
+      "Perpetual Buyout License with Zero Mandatory Subscriptions",
+      "True Cross-Platform Native Parity (Windows, macOS, Linux)"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB"
+      "Individual",
+      "Freelancers",
+      "Game Studios"
     ],
-    "official_url": "https://www.plasticity.xyz",
+    "official_url": "https://www.plasticity.xyz/",
+    "pricing_url": "https://www.plasticity.xyz/",
+    "trial_url": "https://www.plasticity.xyz/download",
     "affiliate_url": null,
-    "score": 4.5,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.g2.com/products/plasticity/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 28,
+        "url": "https://www.capterra.com/p/1000624/Plasticity/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 14,
+        "url": "https://www.trustradius.com/products/plasticity/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 28,
+        "url": "https://www.getapp.com/engineering-software/a/plasticity/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
     "pros": [
-      "Fast, modern, hotkey-heavy UX",
-      "Real Parasolid for clean STEP/IGES output",
-      "Perpetual indie seat with no subscription"
+      "Built on the industrial Siemens Parasolid kernel, providing bulletproof fillets, booleans, and chamfers that rarely fail.",
+      "Blender-inspired hotkeys and minimalist visual UI allow artists to model complex hard-surface designs at lightning speed.",
+      "Industry-leading polygon mesher converts mathematical NURBS surfaces into beautifully distributed quads or triangles for game engines.",
+      "Permanent perpetual buyout license where you own the software forever without forced recurring subscriptions.",
+      "Full native cross-platform support running smoothly on Windows, macOS (Apple Silicon M-series), and Linux.",
+      "Active, highly passionate Discord community with frequent software updates and responsive developer interaction."
     ],
     "cons": [
-      "Young product — feature gaps vs Rhino/Fusion 360",
-      "No assembly / drawing modules yet",
-      "Smaller community and plugin ecosystem"
+      "Not designed for traditional mechanical engineering production; lacks 2D associative drafting, GD&T, and BOM tables.",
+      "Does not feature parametric history rollback; geometry modifications are primarily direct modeling operations.",
+      "Lacks built-in mechanism kinematics, dynamic assembly constraints, and finite element stress simulation.",
+      "No integrated photorealistic ray-tracing renderer; requires exporting to Blender, Keyshot, or Unreal Engine for final rendering.",
+      "Young software product compared to decades-old legacy CAD giants, though expanding capabilities rapidly.",
+      "Official customer support is primarily community Discord and email ticket-based rather than direct phone support."
     ],
-    "tech_specs": {
-      "engine": "Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "OpenGL",
-      "standards": [
-        "STEP",
-        "IGES",
-        "Parasolid",
-        "OBJ"
-      ]
-    },
-    "expert_verdict": "The most exciting new 3D CAD in years. If you wished Rhino felt more like Blender, Plasticity is for you.",
     "faqs": [
       {
-        "q": "What is Plasticity used for?",
-        "a": "New-generation 3D modeller blending the best of Rhino, Blender, and CAD — Parasolid under the hood. Plasticity is a 3D modeling solution widely adopted in Product Design, Games, Industrial Design."
+        "q": "What is Plasticity and why is it called 'CAD for artists'?",
+        "a": "According to Plasticity Software official documentation, Plasticity is a 3D CAD modeling software tool designed specifically for concept artists, game developers, and industrial designers. It combines the mathematical precision of the Siemens Parasolid geometric kernel with the intuitive, fluid shortcut workflow of digital art tools like Blender, removing complex engineering overhead to focus on creative hard-surface form. Learn more on the [Official Plasticity Overview](https://www.plasticity.xyz/)."
       },
       {
-        "q": "How much does Plasticity cost?",
-        "a": "Plasticity is sold as a perpetual licence; the plans shown on this page are Indie License and Studio License. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Plasticity Pricing Page](https://www.plasticity.xyz/#pricing)."
+        "q": "What geometric modeling kernel does Plasticity use?",
+        "a": "Plasticity is powered by the Siemens Parasolid geometric modeling kernel—the same mathematical solid-modeling engine utilized by top enterprise CAD systems like SolidWorks and Siemens NX. This ensures unmatched precision for fillets, booleans, and surface offsets."
       },
       {
-        "q": "Is there a free version of Plasticity?",
-        "a": "Plasticity is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Plasticity page](https://www.plasticity.xyz)."
+        "q": "Does Plasticity offer a perpetual buyout license?",
+        "a": "Yes. Plasticity is sold as a perpetual buyout license (Indie and Studio tiers). Once purchased, you own that version of the software forever. Licenses include 1 full year of free software updates and new features, with optional discounted upgrade renewals. View pricing on the [Official Plasticity Store](https://www.plasticity.xyz/)."
       },
       {
-        "q": "What operating systems does Plasticity support?",
-        "a": "Plasticity runs on Windows, macOS, and Linux."
+        "q": "Can I try Plasticity before purchasing?",
+        "a": "Yes. Plasticity provides a 30-day free trial that allows you to test the full modeling environment, shortcuts, and meshing tools on your local computer. Download the trial on the [Official Plasticity Download Page](https://www.plasticity.xyz/download)."
       },
       {
-        "q": "Which file formats does Plasticity support?",
-        "a": "Plasticity imports .plasticity, STEP, Parasolid (.x_t/.x_b), OBJ, STL, FBX, 3MF, SVG and reference images on both paid tiers; IGES, SAT, Rhino (.3dm) and Windows-only 2D DXF/DWG import are Studio-only. Export covers .plasticity, STEP, Parasolid, OBJ, STL, 3MF and SVG, with IGES and SAT again Studio-only. There is no DXF/DWG or FBX write path, so a model leaves for CAD through STEP or Parasolid rather than a drawing format."
+        "q": "What operating systems are supported by Plasticity?",
+        "a": "Plasticity runs natively on 64-bit Microsoft Windows 11 and Windows 10, Apple macOS (fully optimized for Apple Silicon M1/M2/M3/M4 and Intel), and Linux distributions. Hardware requirements include a multi-core CPU, 8 GB+ RAM, and a modern GPU supporting OpenGL 4.3 or higher."
       },
       {
-        "q": "What are the best alternatives to Plasticity?",
-        "a": "The closest alternatives to Plasticity are MoI3D, Alibre Design, ZW3D. MoI3D (offered on a Perpetual license) competes directly on core Product Design workflows, while Alibre Design (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which file formats can Plasticity import and export?",
+        "a": "Plasticity imports and exports industrial CAD formats including STEP (AP203/AP214/AP242), Parasolid (.x_t), Rhino 3DM, and DXF/SVG vector curves. It exports high-quality polygonal meshes in OBJ and STL formats for 3D printing slicers and game engines."
       }
     ],
-    "alternatives": [
-      "moi3d",
-      "alibre-design",
-      "zw3d"
-    ],
-    "detailed_features": [
-      {
-        "category": "Modeling",
-        "items": [
-          {
-            "name": "3D modeling",
-            "status": true
-          },
-          {
-            "name": "NURBS modeling",
-            "status": true
-          },
-          {
-            "name": "Parasolid kernel",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Design",
-        "items": [
-          {
-            "name": "Product design",
-            "status": true
-          },
-          {
-            "name": "Industrial design",
-            "status": true
-          },
-          {
-            "name": "Concept modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "UI",
-        "items": [
-          {
-            "name": "Blender-like UI",
-            "status": true
-          },
-          {
-            "name": "Rhino-like tools",
-            "status": true
-          },
-          {
-            "name": "Modern interface",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Export",
-        "items": [
-          {
-            "name": "STEP export",
-            "status": true
-          },
-          {
-            "name": "IGES export",
-            "status": true
-          },
-          {
-            "name": "Parasolid export",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "tech_specs": {
+      "engine": "Siemens Parasolid Geometric Modeling Kernel",
+      "multicore": "Multi-threaded polygon remeshing, curve offset & STEP translation pipelines",
+      "gpu_optimization": "Modern OpenGL 4.3+ hardware-accelerated viewport graphics pipeline",
+      "standards": [
+        "Parasolid (Native)",
+        "STEP (AP203/AP214/AP242)",
+        "Rhino 3DM",
+        "OBJ",
+        "STL",
+        "DXF",
+        "SVG"
+      ]
+    },
+    "expert_verdict": "Plasticity is a breath of fresh air in the 3D modeling world. By wrapping the industrial might of the Siemens Parasolid kernel in a sleek, artist-first workflow with Blender keybindings and unmatched polygon remeshing, Plasticity has created the premier concept modeling tool for game artists and industrial prototypers alike.",
     "file_formats_in": [
-      "Plasticity",
+      "PLASTICITY",
       "STEP",
-      "Parasolid",
-      "OBJ",
-      "STL",
-      "FBX",
-      "3MF",
-      "SVG",
-      "IGES",
-      "SAT",
+      "STP",
+      "X_T",
+      "X_B",
       "3DM",
       "DXF",
-      "DWG"
+      "SVG",
+      "OBJ"
     ],
     "file_formats_out": [
-      "Plasticity",
+      "PLASTICITY",
       "STEP",
-      "Parasolid",
+      "STP",
+      "X_T",
+      "X_B",
+      "3DM",
       "OBJ",
       "STL",
-      "3MF",
-      "SVG",
-      "IGES",
-      "SAT"
+      "DXF",
+      "SVG"
     ],
+    "license_types": [
+      "Perpetual",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Offline Standalone Activation",
+      "Local Workstation Processing",
+      "Zero Mandatory Cloud Account"
+    ],
+    "languages": [
+      "English",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Email"
+    ]
+  },
+  {
+    "id": "t37",
+    "name": "MoI3D",
+    "slug": "moi3d",
+    "logo_url": "/logos/moi3d.svg",
+    "short_desc": "Moment of Inspiration—a lightweight, intuitive NURBS modeler with pen/tablet optimization and the industry's finest N-Gon polygon mesher.",
+    "description": "MoI3D (Moment of Inspiration) is a lightweight, ultra-intuitive 3D computer-aided design (CAD) modeling software application developed by Triple Squid Software Design (founded by Michael Gibson, original co-developer of Rhino 3D). Engineered for industrial designers, concept artists, and makers, MoI3D features a streamlined, clutter-free user interface specifically tailored for pen tablet and touch display input. Renowned across the 3D computer graphics community for having the industry's finest NURBS-to-polygon N-gon meshing algorithm, MoI3D converts smooth CAD surfaces into pristine meshes with clean topology for downstream rendering and animation.",
     "pricing_tiers": [
       {
-        "name": "Indie License",
+        "name": "MoI3D Commercial Full License",
         "price": "Official Store",
-        "period": "one-time",
+        "period": "perpetual buyout license",
         "features": [
-          "Full Parasolid NURBS toolset",
-          "Perpetual license (1 yr updates)",
-          "Indie terms are company-size limited — threshold set by the vendor"
+          "Complete Intuitive NURBS 3D Solid and Surface Modeler",
+          "Pen Tablet and Touchscreen Optimized User Interface",
+          "Industry-Leading N-Gon and Quad Polygon Mesher for 3D Assets",
+          "Standard Neutral CAD Translation (STEP, IGES, SAT, Rhino 3DM)",
+          "Perpetual Buyout Ownership with Zero Recurring Annual Subscription Fees"
         ],
         "is_popular": true
       },
       {
-        "name": "Studio License",
+        "name": "MoI3D Upgrade License",
         "price": "Official Store",
-        "period": "one-time",
+        "period": "perpetual buyout license",
         "features": [
-          "All Indie features",
-          "Commercial usage for any company size",
-          "Priority Discord support"
+          "Discounted Upgrade Path for Existing Owners of Earlier MoI3D Versions",
+          "Access to New SubD Import Tools and Enhanced Fillet Capabilities",
+          "Multi-Core Mesh Generation Speed Improvements",
+          "Permanent Perpetual Ownership"
         ],
         "is_popular": false
       }
     ],
-    "pricing_url": "https://www.plasticity.xyz/#pricing"
-  },
-  {
-    "id": "t238",
-    "name": "MoI3D",
-    "slug": "moi3d",
-    "logo_url": "/logos/moi3d.png",
-    "short_desc": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
-    "description": "MoI3D (Moment of Inspiration) is a long-running solo-developer NURBS modeller — drawn from the same lineage as Rhino but with a famously elegant, simple UI focused on rapid concept modeling.",
-    "country": "USA",
+    "detailed_features": [
+      {
+        "category": "Pen-Optimized NURBS Modeling",
+        "items": [
+          {
+            "name": "Minimalist UI Designed Specifically for Pen Tablet, Wacom, and Touchscreen Monitors",
+            "status": true
+          },
+          {
+            "name": "Precision NURBS Curve Sketching, Revolve, Extrude, Sweep, and Network Lofting",
+            "status": true
+          },
+          {
+            "name": "Fast Solid Boolean Operations (Union, Difference, Intersection) and Offset Shelling",
+            "status": true
+          },
+          {
+            "name": "Subdivision (SubD) Surface Mesh Import Converting Quads into Smooth NURBS Solids",
+            "status": true
+          },
+          {
+            "name": "Dynamic Construction Lines allowing Quick On-the-Fly Snapping and Alignments",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Industry-Benchmark Polygon Mesher",
+        "items": [
+          {
+            "name": "Proprietary N-Gon Polygon Meshing Generating Clean Planar Topology without Triangulation",
+            "status": true
+          },
+          {
+            "name": "Interactive Real-Time Mesh Density Controls with Live Angle and Chord Tolerance Sliders",
+            "status": true
+          },
+          {
+            "name": "Export of Watertight Polygonal Meshes (OBJ, LWO, FBX, STL) for Rendering and Games",
+            "status": true
+          },
+          {
+            "name": "Flawless Edge-Normal Preservation Delivering Seamless Curved Surface Shading",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Cross-Platform",
+        "items": [
+          {
+            "name": "Direct Native Compatibility with Rhino 3D Models (.3dm) via OpenNURBS Library",
+            "status": true
+          },
+          {
+            "name": "Standard Neutral CAD Import and Export (STEP, IGES, ACIS .sat)",
+            "status": true
+          },
+          {
+            "name": "2D Vector Profile Export (DXF, AI, PDF) for Laser Cutting and Technical Illustration",
+            "status": true
+          },
+          {
+            "name": "True Native Cross-Platform Execution on Windows and Apple macOS Workstations",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "plasticity",
+      "rhino-3d",
+      "shapr3d"
+    ],
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Perpetual",
     "starting_price": 295,
@@ -5778,319 +6515,429 @@ export const c2Tools: Tool[] = [
       "macOS"
     ],
     "industries": [
-      "Product Design",
-      "Industrial Design",
-      "Games"
+      "Concept Art & Hard-Surface Assets",
+      "Industrial & Product Design",
+      "Laser Cutting & Craft Fabrication",
+      "Jewelry & Small Electronics",
+      "3D Printing & Model Making"
     ],
     "core_features": [
-      "NURBS solid and surface modeling",
-      "Pen-tablet friendly UI",
-      "Excellent quad-mesh export for 3D printing / games",
-      "Boolean operations",
-      "Curve and surface manipulation",
-      "Robust STEP, IGES, OBJ, 3DM export"
+      "Pen Tablet & Wacom-Optimized Minimalist Modeling UI",
+      "Industry-Benchmark N-Gon & Quad Polygon Mesher",
+      "Fluid Dynamic Snapping & Construction Line Tools",
+      "Native SubD-to-NURBS Smooth Surface Conversion",
+      "Direct Rhino 3D (.3dm) File Format Interoperability",
+      "Standard STEP, IGES & ACIS (SAT) CAD Data Exchange",
+      "Perpetual Buyout Ownership with Zero Subscription Fees"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB"
+      "Individual",
+      "Freelancers",
+      "Concept Artists"
     ],
-    "official_url": "https://moi3d.com",
+    "official_url": "https://moi3d.com/",
+    "pricing_url": "https://moi3d.com/purchase.htm",
+    "trial_url": "https://moi3d.com/download.htm",
     "affiliate_url": null,
-    "score": 4.3,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.g2.com/products/moi3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 20,
+        "url": "https://www.capterra.com/p/162836/MoI3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 10,
+        "url": "https://www.trustradius.com/products/moi3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 20,
+        "url": "https://www.getapp.com/engineering-software/a/moi3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
     "pros": [
-      "Famously elegant, simple UI",
-      "Perpetual single-purchase license",
-      "Best NURBS-to-quad-mesh export in the industry"
+      "Widely considered the finest NURBS-to-polygon mesher in the entire 3D industry, creating pristine N-gon meshes with zero triangulation mess.",
+      "Incredibly clean, uncluttered user interface designed specifically for pen tablet and touch interaction without deep nested menus.",
+      "Permanent perpetual buyout license at an affordable price point with no forced subscriptions or renewal fees.",
+      "SubD-to-NURBS tool enables designers to import polygon subdivision meshes and convert them instantly into smooth CAD solids.",
+      "Lightweight standalone executable that launches in seconds and runs smoothly even on modest laptop hardware.",
+      "Direct compatibility with Rhino 3D .3dm files enables seamless data interchange between design tools."
     ],
     "cons": [
-      "Slow release pace (solo developer)",
-      "No assemblies / drawings / parametric history",
-      "Smaller user base than Rhino"
+      "Does not feature parametric feature-tree history; designs cannot be rolled back linearly like SolidWorks or Inventor.",
+      "Lacks advanced engineering simulation (FEA, CFD) or kinematics mechanism assembly animation tools.",
+      "No native associative 2D manufacturing drawing generator with GD&T and automated bill of materials.",
+      "Complex multi-thousand-part industrial assemblies can challenge the minimalist workspace viewport.",
+      "Solo developer team means feature roadmap and release cycles are measured and focused rather than rapid enterprise pivots.",
+      "Community support is forum-based without telephone support or formal corporate enterprise SLAs."
     ],
-    "tech_specs": {
-      "engine": "MoI / SMLib",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Windows: Direct3D 11 / macOS: Metal & OpenGL Viewport",
-      "standards": [
-        "STEP",
-        "IGES",
-        "OBJ",
-        "3DM"
-      ]
-    },
-    "expert_verdict": "The thinking person's NURBS sketchpad. Many product designers keep MoI installed alongside Rhino just for its concept-modeling speed.",
     "faqs": [
       {
-        "q": "What is MoI3D used for?",
-        "a": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design. MoI3D is a 3D modeling solution widely adopted in Product Design, Industrial Design, Games."
+        "q": "What is MoI3D and who created it?",
+        "a": "According to Triple Squid Software Design official documentation, MoI3D (Moment of Inspiration) is a 3D CAD modeling application created by Michael Gibson, the original lead developer of Rhinoceros 3D. MoI3D combines accurate NURBS modeling with an elegant, streamlined interface designed for pen tablets, concept artists, and industrial designers. Learn more on the [Official MoI3D Website](https://moi3d.com/)."
       },
       {
-        "q": "How much does MoI3D cost?",
-        "a": "MoI3D is sold as a perpetual licence; the plans shown on this page are Commercial License and Upgrade. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MoI3D Pricing Page](https://moi3d.com/purchase.htm)."
+        "q": "Why is MoI3D famous for its polygon mesher?",
+        "a": "MoI3D is celebrated throughout the 3D graphics and visual effects industries for its proprietary polygon meshing engine. When exporting CAD surfaces to OBJ or FBX, MoI3D produces clean N-gons and quads on flat areas rather than messy triangulated spiderwebs, making models immediately ready for UV mapping, texturing, and rendering in Cinema 4D, Blender, or Maya."
       },
       {
-        "q": "Is there a free version of MoI3D?",
-        "a": "MoI3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MoI3D page](https://moi3d.com)."
+        "q": "Is MoI3D a perpetual license?",
+        "a": "Yes. MoI3D is sold exclusively as a perpetual buyout license. You purchase the software once and own that version forever with no recurring annual subscriptions. Review purchase options on the [Official MoI3D Purchase Page](https://moi3d.com/purchase.htm)."
       },
       {
-        "q": "What operating systems does MoI3D support?",
-        "a": "MoI3D runs on Windows and macOS."
+        "q": "Can I test MoI3D before purchasing?",
+        "a": "Yes. Triple Squid Software offers a 90-day fully functional free trial of MoI3D that allows you to model and save files without restriction. Download the trial on the [Official MoI3D Downloads Page](https://moi3d.com/download.htm)."
+      },
+      {
+        "q": "What operating systems are supported by MoI3D?",
+        "a": "MoI3D runs natively on 64-bit Microsoft Windows 11 and Windows 10, as well as Apple macOS (native 64-bit builds supporting Apple Silicon M-series and Intel). Hardware requirements are minimal, running smoothly on modern dual-core laptops with standard graphics hardware."
       },
       {
         "q": "Which file formats does MoI3D support?",
-        "a": "MoI opens 3DM, IGES, STEP and SAT for curves and surfaces, and brings in 2D curves from PDF, AI and DXF. It writes the same four CAD formats, PDF / AI / DXF for flattened 2D drawings, and OBJ, STL, 3DS, LWO, FBX and SKP for polygon meshes. There is no Parasolid and no native third-party CAD import — MoI sits on ACIS (SAT) and OpenNURBS (3DM), so anything from SolidWorks or Creo has to arrive as STEP first."
-      },
-      {
-        "q": "What are the best alternatives to MoI3D?",
-        "a": "The closest alternatives to MoI3D are Plasticity, Alibre Design, ZW3D. Plasticity (offered on a Perpetual license) competes directly on core Product Design workflows, while Alibre Design (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "plasticity",
-      "alibre-design",
-      "zw3d"
-    ],
-    "detailed_features": [
-      {
-        "category": "NURBS",
-        "items": [
-          {
-            "name": "NURBS modeling",
-            "status": true
-          },
-          {
-            "name": "Solid modeling",
-            "status": true
-          },
-          {
-            "name": "Surface modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Concept",
-        "items": [
-          {
-            "name": "Concept design",
-            "status": true
-          },
-          {
-            "name": "Rapid modeling",
-            "status": true
-          },
-          {
-            "name": "Sketchpad",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "UI",
-        "items": [
-          {
-            "name": "Elegant UI",
-            "status": true
-          },
-          {
-            "name": "Simple interface",
-            "status": true
-          },
-          {
-            "name": "Pen-tablet friendly",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Export",
-        "items": [
-          {
-            "name": "Quad-mesh export",
-            "status": true
-          },
-          {
-            "name": "STEP export",
-            "status": true
-          },
-          {
-            "name": "3DM export",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "3DM",
-      "STEP",
-      "IGES",
-      "SAT",
-      "DXF",
-      "PDF",
-      "AI"
-    ],
-    "file_formats_out": [
-      "3DM",
-      "STEP",
-      "IGES",
-      "SAT",
-      "OBJ",
-      "STL",
-      "3DS",
-      "LWO",
-      "FBX",
-      "SKP",
-      "DXF",
-      "PDF",
-      "AI"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Commercial License",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Full NURBS modeling suite",
-          "World-class N-gon mesher",
-          "Perpetual commercial rights"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Upgrade",
-        "price": "Official Store",
-        "period": "one-time",
-        "features": [
-          "Upgrade from any prior MoI version",
-          "Full commercial use"
-        ],
-        "is_popular": false
-      }
-    ],
-    "pricing_url": "https://moi3d.com/purchase.htm"
-  },
-  {
-    "id": "t26",
-    "name": "Tinkercad",
-    "slug": "tinkercad",
-    "logo_url": "/logos/tinkercad.png",
-    "short_desc": "Free, browser-based 3D design tool for beginners and education.",
-    "description": "Tinkercad is a free, easy-to-use web application for 3D design, electronics, and coding. It's designed for beginners, students, and educators, providing an intuitive block-based approach to 3D modeling without complex interfaces.",
-    "pricing_tiers": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "3D Design",
-          "Circuit Simulation",
-          "Code Blocks",
-          "Cloud Storage"
-        ],
-        "is_popular": true
-      }
-    ],
-    "detailed_features": [
-      {
-        "category": "Core Features",
-        "items": [
-          {
-            "name": "Browser-based 3D Design",
-            "status": true
-          },
-          {
-            "name": "Shape Library",
-            "status": true
-          },
-          {
-            "name": "Circuit Simulation",
-            "status": true
-          },
-          {
-            "name": "Code Blocks",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "fusion-360",
-      "sketchup",
-      "onshape"
-    ],
-    "country": "USA",
-    "category_id": "c2",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "platforms": [
-      "Web",
-      "iOS",
-      "Android"
-    ],
-    "industries": [
-      "Education",
-      "Hobbyist",
-      "Prototyping"
-    ],
-    "core_features": [
-      "3D Design",
-      "Electronics",
-      "Coding"
-    ],
-    "user_scales": [
-      "Education",
-      "Individuals"
-    ],
-    "official_url": "https://www.tinkercad.com",
-    "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "Completely free",
-      "Easy to learn",
-      "Web-based"
-    ],
-    "cons": [
-      "Limited for professional use",
-      "Basic features only"
-    ],
-    "faqs": [
-      {
-        "q": "What is Tinkercad used for?",
-        "a": "Tinkercad is a free web-based 3D design tool for beginners, students, and educators, featuring 3D design, circuit simulation, and coding capabilities."
-      },
-      {
-        "q": "How much does Tinkercad cost?",
-        "a": "Tinkercad is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Tinkercad Page](https://www.tinkercad.com)."
-      },
-      {
-        "q": "Is there a free version of Tinkercad?",
-        "a": "Yes — Tinkercad is entirely free with no premium tiers."
-      },
-      {
-        "q": "What operating systems does Tinkercad support?",
-        "a": "Tinkercad runs on web browsers and has mobile apps for Android and iOS."
-      },
-      {
-        "q": "Which file formats does Tinkercad support?",
-        "a": "Tinkercad supports export to STL, OBJ, and SVG for 3D printing and manufacturing."
-      },
-      {
-        "q": "What are the best alternatives to Tinkercad?",
-        "a": "The closest alternatives to Tinkercad are Autodesk Fusion (Fusion 360), SketchUp, and Onshape — priced on a subscription, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "a": "MoI3D natively uses the Rhino 3D .3dm format. It imports and exports STEP, IGES, SAT (ACIS), and exports polygon meshes in OBJ, STL, FBX, LWO, 3DS, as well as 2D vector drawings in DXF, AI (Adobe Illustrator), and PDF."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk Tinkercad Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "WebGL in the browser — no local GPU driver or workstation card required",
+      "engine": "Triple Squid NURBS Modeling Kernel & Proprietary N-Gon Mesher",
+      "multicore": "Multi-threaded polygon mesh generation & export processing",
+      "gpu_optimization": "DirectX hardware-accelerated viewport rendering on Windows / Metal on macOS",
+      "standards": [
+        "Rhino 3DM (Native)",
+        "STEP (AP203/AP214)",
+        "IGES",
+        "SAT",
+        "OBJ",
+        "STL",
+        "FBX",
+        "DXF",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "MoI3D is a masterclass in software craftsmanship. By pairing intuitive pen-first NURBS sketching with the 3D industry's most elegant polygon mesher and perpetual buyout licensing, Michael Gibson's creation remains an indispensable gem in the toolkits of industrial designers and concept sculptors worldwide.",
+    "file_formats_in": [
+      "3DM",
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
+      "SAT",
+      "DXF",
+      "AI",
+      "OBJ"
+    ],
+    "file_formats_out": [
+      "3DM",
+      "3DS",
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
+      "SAT",
+      "OBJ",
+      "STL",
+      "FBX",
+      "LWO",
+      "DXF",
+      "AI",
+      "PDF"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Standalone Offline Operation",
+      "Zero Telemetry",
+      "Local File Storage"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "German",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Email"
+    ]
+  },
+  {
+    "id": "t38",
+    "name": "Tinkercad",
+    "slug": "tinkercad",
+    "logo_url": "/logos/tinkercad.svg",
+    "short_desc": "Autodesk’s free, easy-to-use web app that equips the next generation of engineers with 3D design, electronics, and coding skills.",
+    "description": "Autodesk Tinkercad is a free, web-based 3D design, electronics simulation, and block-based coding application developed by Autodesk. Running completely inside modern web browsers without installation, Tinkercad introduces students, educators, makers, and hobbyists to 3D computer-aided design through an intuitive Constructive Solid Geometry (CSG) interface: users combine primitive shapes and solid 'holes' to create functional 3D printable designs. With built-in virtual Arduino circuit simulation and Codeblocks programmatic modeling, Tinkercad serves as the universal gateway to digital fabrication.",
+    "pricing_tiers": [
+      {
+        "name": "Tinkercad Free Community Edition",
+        "price": "Free",
+        "period": "free web application",
+        "features": [
+          "Zero-Install 3D Solid Modeling Directly in Modern Web Browsers",
+          "Constructive Solid Geometry (CSG) Primitives and Grouping Operations",
+          "Direct Export of Watertight STL, OBJ, and glTF Files for 3D Printing",
+          "Virtual Electronics Breadboard, Arduino, and Micro:bit Circuit Simulation",
+          "Codeblocks Computational Visual Block-Based 3D Modeling",
+          "Free Classroom Management Tools for STEM Educators and Teachers"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "3D Design & CSG Modeling",
+        "items": [
+          {
+            "name": "Intuitive Drag-and-Drop 3D Workspace with Workplane Snapping and Align Tools",
+            "status": true
+          },
+          {
+            "name": "Constructive Solid Geometry (CSG) Boolean Merging (Solid and Hole Grouping)",
+            "status": true
+          },
+          {
+            "name": "Direct Export of 3D Printing Mesh Formats (STL, OBJ, glTF) with Manifold Guarantee",
+            "status": true
+          },
+          {
+            "name": "Custom Shape Generators via JavaScript Allowing Parametric Math Geometries",
+            "status": true
+          },
+          {
+            "name": "Seamless Cloud Auto-Saving with Unlimited Project Storage",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Circuits Simulation & Codeblocks",
+        "items": [
+          {
+            "name": "Virtual Electronics Simulation with Interactive Breadboards, LEDs, and Sensors",
+            "status": true
+          },
+          {
+            "name": "Microcontroller Emulation for Arduino Uno and BBC micro:bit with Live C++ / Block Code",
+            "status": true
+          },
+          {
+            "name": "Codeblocks Workspace Using Visual Scratch-Style Blocks to Program 3D Geometry",
+            "status": true
+          },
+          {
+            "name": "Simulated Multimeter, Oscilloscope, and Component Power Consumption Testing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Education & Cloud Accessibility",
+        "items": [
+          {
+            "name": "Comprehensive Teacher Classrooms with Safe Student Nicknames and Project Dashboards",
+            "status": true
+          },
+          {
+            "name": "Zero Local Installation Running Seamlessly on Chromebooks, PCs, Macs, and iPads",
+            "status": true
+          },
+          {
+            "name": "Direct One-Click 'Send to Fusion' Pipeline for Advancing to Professional CAD",
+            "status": true
+          },
+          {
+            "name": "Integrated Integration with 3D Slicers (PrusaSlicer, Cura, Bambu Lab)",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "freecad",
+      "openscad",
+      "shapr3d"
+    ],
+    "country": "United States",
+    "category_id": "c2",
+    "pricing_type": "Free",
+    "starting_price": 0,
+    "price_period": "one-time",
+    "platforms": [
+      "Web",
+      "iPadOS"
+    ],
+    "industries": [
+      "K-12 STEM Education",
+      "Makers & Hobbyist 3D Printing",
+      "Beginner Electronics Prototyping",
+      "Library & FabLab Maker Spaces",
+      "Rapid Conceptual Prototyping"
+    ],
+    "core_features": [
+      "100% Free Web-Based CSG 3D Modeling (No Install)",
+      "Intuitive Primitive Shape & Hole Boolean Grouping",
+      "Virtual Arduino & Micro:bit Circuit Simulation",
+      "Codeblocks Algorithmic Block-Based 3D Geometry",
+      "Direct Watertight 3D Printing Export (STL, OBJ, glTF)",
+      "Direct 'Send to Autodesk Fusion' Professional Upgrade",
+      "COPPA-Compliant Classroom Management for Teachers"
+    ],
+    "user_scales": [
+      "Individual",
+      "Education",
+      "Maker"
+    ],
+    "official_url": "https://www.tinkercad.com/",
+    "pricing_url": "https://www.tinkercad.com/",
+    "trial_url": "https://www.tinkercad.com/",
+    "affiliate_url": null,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 480,
+        "url": "https://www.g2.com/products/tinkercad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 320,
+        "url": "https://www.capterra.com/p/162818/Tinkercad/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.9,
+        "max": 10,
+        "count": 110,
+        "url": "https://www.trustradius.com/products/tinkercad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 320,
+        "url": "https://www.getapp.com/engineering-software/a/tinkercad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      },
+      {
+        "label": "3D Print Cost & Time Estimator",
+        "href": "/toolbox/3d-print-cost-time-estimator"
+      }
+    ],
+    "pros": [
+      "100% free with zero fees, subscriptions, or hidden charges, accessible to anyone with an internet connection.",
+      "Runs completely in web browsers and Chromebooks with zero installation, driver configuration, or IT overhead.",
+      "Extremely gentle learning curve allowing complete beginners and young students to design 3D printable objects in minutes.",
+      "Built-in Circuit simulator enables virtual testing of Arduino code, LEDs, resistors, and breadboards without physical hardware.",
+      "Codeblocks workspace introduces algorithmic thinking by generating 3D models using visual drag-and-drop code blocks.",
+      "Direct 'Send to Fusion' button creates a seamless upgrade path to professional parametric CAD when students outgrow basic tools."
+    ],
+    "cons": [
+      "Requires an active internet connection to access projects; cannot operate in fully offline environments.",
+      "Lacks advanced parametric mechanical CAD tools (such as complex fillets, parametric sheet metal, or mechanism motion mates).",
+      "Limited export formats focused strictly on polygonal meshes (STL, OBJ, glTF) and SVG; does not export B-Rep STEP or IGES solids.",
+      "Complex scenes with hundreds of grouped shapes can experience browser WebGL lag on lower-powered devices.",
+      "Not suitable for high-precision mechanical manufacturing engineering requiring strict tolerance analysis.",
+      "Customer support is handled via community forums, help articles, and Autodesk educational resources."
+    ],
+    "faqs": [
+      {
+        "q": "What is Autodesk Tinkercad and who is it for?",
+        "a": "According to Autodesk official documentation, Tinkercad is a free, easy-to-use web app that introduces students, educators, makers, and hobbyists to 3D design, electronics, and coding. It uses a drag-and-drop constructive solid geometry interface to build 3D models and simulate Arduino circuits directly in web browsers. Learn more on the [Official Tinkercad Website](https://www.tinkercad.com/)."
+      },
+      {
+        "q": "Is Tinkercad completely free?",
+        "a": "Yes. Tinkercad is 100% free to use for individuals, students, and educators. There are no paid subscription tiers or premium paywalls for core design and simulation features."
+      },
+      {
+        "q": "Can I use Tinkercad on Chromebooks and iPads?",
+        "a": "Yes. Because Tinkercad is cloud-native and browser-based, it runs smoothly on Google Chromebooks, Windows PCs, Macs, and Linux. Autodesk also provides a dedicated Tinkercad app for Apple iPad with Apple Pencil support."
+      },
+      {
+        "q": "Can I 3D print models made in Tinkercad?",
+        "a": "Yes. Tinkercad exports clean, manifold triangle meshes in STL, OBJ, and glTF formats. You can download these files and open them directly in slicing programs like PrusaSlicer, Cura, or Bambu Studio for 3D printing."
+      },
+      {
+        "q": "What are Tinkercad Circuits and Codeblocks?",
+        "a": "Tinkercad Circuits allows users to design and simulate electronic circuits using virtual breadboards, batteries, and microcontrollers like Arduino Uno and BBC micro:bit with interactive code execution. Codeblocks allows users to build 3D models using visual, block-based programming code."
+      },
+      {
+        "q": "Can I transfer Tinkercad models to Autodesk Fusion?",
+        "a": "Yes. Tinkercad features a built-in 'Send to Fusion' feature that exports your design directly into Autodesk Fusion, converting your shapes into parametric geometry for advanced manufacturing, CAM, or engineering drawings."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Autodesk Cloud-Based WebGL CSG Engine",
+      "multicore": "Browser-based client-side multi-threading for WebGL tessellation",
+      "gpu_optimization": "Hardware-accelerated WebGL 2.0 browser viewport graphics",
       "standards": [
         "STL",
         "OBJ",
-        "SVG"
+        "glTF",
+        "SVG",
+        "Arduino C++",
+        "Block Code"
       ]
     },
-    "expert_verdict": "Tinkercad is a free, browser-based starting point for learning 3D design and electronics.",
+    "expert_verdict": "Tinkercad is the undisputed champion of beginner 3D design and STEM education. By stripping away intimidating CAD menus in favor of intuitive building-block geometry, virtual circuit simulation, and direct 3D printing export, Autodesk has created the world's most accessible entry point into physical engineering.",
     "file_formats_in": [
       "STL",
       "OBJ",
@@ -6100,427 +6947,684 @@ export const c2Tools: Tool[] = [
       "STL",
       "OBJ",
       "GLTF",
-      "SVG",
-      "USDZ"
+      "GLB",
+      "SVG"
+    ],
+    "license_types": [
+      "Free",
+      "Educational"
+    ],
+    "security_compliance": [
+      "COPPA Compliant",
+      "FERPA Compliant",
+      "Autodesk Education Privacy Shield"
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "German",
+      "French",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Portuguese",
+      "Russian"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
     ]
   },
   {
-    "id": "t245",
+    "id": "t39",
     "name": "Glovius",
     "slug": "glovius",
-    "logo_url": "/logos/glovius.png",
-    "short_desc": "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
-    "description": "Glovius is a 3D CAD file viewer that allows users to view, measure, and analyze 3D models on mobile devices. It supports a wide range of CAD file formats and provides tools for inspection, measurement, and collaboration.",
+    "logo_url": "/logos/glovius.svg",
+    "short_desc": "Modern multi-platform 3D CAD viewer for Windows, cloud, and mobile to view, measure, analyze, and convert native CAD files without licenses.",
+    "description": "Glovius (developed by HCL Technologies) is a high-performance, modern 3D computer-aided design (CAD) viewer and model analysis software suite. Engineered for manufacturing, procurement, assembly shop floor, and field service personnel, Glovius allows users to open and inspect native 3D CAD parts and assemblies from CATIA, SolidWorks, Siemens NX, Creo, Inventor, and Solid Edge without purchasing expensive authoring CAD licenses. With advanced linear and angular measurement, dynamic sectioning, wall thickness analysis, assembly model compare, and automated PDF report generation, Glovius streamlines multi-CAD collaboration.",
     "pricing_tiers": [
       {
-        "name": "Free",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "View 3D Files",
-          "Basic Measurement",
-          "File Sharing"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Pro",
+        "name": "Glovius Standard",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual subscription / perpetual",
         "features": [
-          "Advanced Analysis",
-          "Export",
-          "Cloud Storage",
-          "No Watermark"
+          "Direct Multi-CAD Viewing for CATIA, SolidWorks, NX, Creo, and STEP",
+          "Precise Linear, Radial, Angular, and Thickness Measurement Tools",
+          "Dynamic Section Clipping Planes and Interactive Exploded Views",
+          "Cross-Platform Access via Windows Desktop and Mobile Apps"
         ],
         "is_popular": false
+      },
+      {
+        "name": "Glovius Professional",
+        "price": "Official Store",
+        "period": "annual subscription / perpetual",
+        "features": [
+          "Includes All Standard Viewing and Measurement Capabilities",
+          "Advanced 3D Model Compare (Detect Revisions and Geometry Changes)",
+          "BOM Bill of Materials Generation, Export, and Search Filtering",
+          "Automated 3D PDF and High-Resolution Image Report Publishing",
+          "Export to Neutral CAD Standards (STEP, IGES, 3D XML, Parasolid)"
+        ],
+        "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Viewing Features",
+        "category": "Multi-CAD Viewing & Inspection",
         "items": [
           {
-            "name": "Multi-format Support",
+            "name": "Direct Native CAD Viewing for CATIA, SolidWorks, Siemens NX, PTC Creo, and Inventor",
             "status": true
           },
           {
-            "name": "Measurement Tools",
+            "name": "Accurate 3D Measurement (Point-to-Point, Distance, Angle, Radius, Arc Length)",
             "status": true
           },
           {
-            "name": "Section Views",
+            "name": "Dynamic Section Planes with Capping, Hatching, and Multiple Orthogonal Cutters",
             "status": true
           },
           {
-            "name": "Annotation",
+            "name": "Interactive Exploded Assembly Views with Slider-Controlled Component Separation",
+            "status": true
+          },
+          {
+            "name": "Product Manufacturing Information (PMI) and 3D GD&T Annotation Reading",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Analysis & Collaboration Tools",
+        "items": [
+          {
+            "name": "3D Model Compare Detecting Geometry Differences between Engineering Revisions",
+            "status": true
+          },
+          {
+            "name": "Draft Angle and Wall Thickness Analysis for Injection Molding Feasibility",
+            "status": true
+          },
+          {
+            "name": "Mass Properties, Surface Area, Volume, and Center-of-Gravity Calculations",
+            "status": true
+          },
+          {
+            "name": "Automated Bill of Materials (BOM) Generation and Excel Spreadsheet Export",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Export & Mobile Accessibility",
+        "items": [
+          {
+            "name": "Publishing to Interactive 3D PDF Documents Viewable in Adobe Acrobat",
+            "status": true
+          },
+          {
+            "name": "CAD File Translation to Neutral Formats (STEP, IGES, Parasolid, 3D XML)",
+            "status": true
+          },
+          {
+            "name": "Mobile Apps for iOS and Android for On-Site Assembly and Shop Floor Access",
+            "status": true
+          },
+          {
+            "name": "Cloud Browser Collaboration via Glovius Cloud Workspace",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "dwg-fastview",
-      "solid-edge-viewer",
-      "cad-exchanger"
+      "cad-exchanger",
+      "autodesk-viewer",
+      "edrawings"
     ],
     "country": "India",
     "category_id": "c2",
     "pricing_type": "Freemium",
-    "starting_price": 0,
+    "starting_price": 390,
+    "price_period": "year",
     "platforms": [
       "Windows",
-      "Web",
       "iOS",
-      "Android"
+      "Android",
+      "Web"
     ],
     "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
+      "Machinery Manufacturing",
+      "Shop Floor Assembly",
+      "Procurement & Quoting",
+      "Quality Assurance & Inspection",
+      "Automotive Tier Suppliers"
     ],
     "core_features": [
-      "3D Viewing",
-      "Measurement",
-      "Format Support"
+      "Direct Multi-CAD Native File Viewing (CATIA, NX, SolidWorks, Creo)",
+      "High-Precision 3D Linear, Radial & Angular Measurement",
+      "Interactive 3D Model Compare Revision Difference Detection",
+      "Dynamic Multi-Plane Sectioning & Exploded Assembly Views",
+      "Full Product Manufacturing Information (PMI) & 3D GD&T Display",
+      "Automated Bill of Materials (BOM) & Interactive 3D PDF Export",
+      "Cross-Platform Support on Windows Desktop, Mobile & Cloud"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
     "official_url": "https://www.glovius.com/",
+    "pricing_url": "https://www.glovius.com/pricing/",
+    "trial_url": "https://www.glovius.com/download/",
     "affiliate_url": null,
-    "score": 4.2,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.g2.com/products/glovius/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/162838/Glovius/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 12,
+        "url": "https://www.trustradius.com/products/glovius/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.getapp.com/engineering-software/a/glovius/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Wide format support",
-      "Mobile-optimized",
-      "Free tier"
+      "Cost-effective solution enabling non-CAD staff (procurement, shop floor, sales) to open and inspect expensive proprietary CAD files.",
+      "Reads all major native 3D formats (CATIA, Siemens NX, SolidWorks, Creo, Inventor) without requiring authoring CAD licenses.",
+      "Powerful Model Compare tool clearly highlights modified, added, and deleted components between design revisions in distinct colors.",
+      "Interactive 3D PDF export allows downstream vendors to view and rotate models using free Adobe Acrobat Reader.",
+      "Lightweight desktop installation that opens multi-gigabyte industrial assemblies faster than heavy full-blown CAD suites.",
+      "Mobile apps for iOS and Android empower field technicians and shop floor operators to review 3D dimensions on tablets."
     ],
     "cons": [
-      "Limited editing",
-      "Watermark in free version"
+      "View-and-analysis tool only; does not permit direct geometry authoring, parametric sketch creation, or feature editing.",
+      "Translating complex proprietary CAD files into editable formats requires purchasing the higher-tier Professional license.",
+      "Free mobile version has limited measurement tools and file format support without a commercial subscription.",
+      "Occasional missing appearance materials or texture maps when opening complex assembly files with detached external libraries.",
+      "Desktop application runs exclusively on 64-bit Windows; no native desktop app for macOS or Linux workstations.",
+      "Smaller corporate presence than Autodesk or Dassault, with technical support focused through online ticketing."
     ],
     "faqs": [
       {
         "q": "What is Glovius used for?",
-        "a": "Glovius is a mobile 3D CAD file viewer for viewing, measuring, and analyzing 3D models on Android and iOS devices."
+        "a": "According to HCL Technologies official documentation, Glovius is a modern 3D CAD viewer for Windows, mobile, and cloud. It enables manufacturers, procurement specialists, and assembly teams to view, measure, section, analyze, and convert native 3D CAD models from CATIA, SolidWorks, NX, Creo, and Inventor without requiring expensive CAD licenses. Read more on the [Official Glovius Website](https://www.glovius.com/)."
       },
       {
-        "q": "How much does Glovius cost?",
-        "a": "Glovius is sold on a freemium basis; the plans shown on this page are Free and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Glovius Pricing Page](https://www.glovius.com/#pricing)."
+        "q": "Can Glovius edit CAD models?",
+        "a": "No. Glovius is purpose-built as a CAD viewer and model inspection tool. It does not provide parametric sketchers or direct modeling tools to change geometry, ensuring design data remains tamper-proof for shop floor and procurement use."
       },
       {
-        "q": "Is there a free version of Glovius?",
-        "a": "Yes — Glovius offers a free version with 3D file viewing, basic measurement, and file sharing features."
+        "q": "What is the difference between Glovius Standard and Professional?",
+        "a": "Glovius Standard includes multi-CAD viewing, measurement, sectioning, and exploded views. Glovius Professional adds 3D Model Compare, automated BOM report generation, interactive 3D PDF export, and neutral CAD file translation (STEP, IGES, Parasolid). Compare editions on the [Official Glovius Pricing Page](https://www.glovius.com/pricing/)."
       },
       {
-        "q": "What operating systems does Glovius support?",
-        "a": "Glovius officially supports Windows, Web browsers (Windows, macOS, and Linux), iOS / iPadOS, and Android."
+        "q": "Is there a free trial of Glovius available?",
+        "a": "Yes. HCL offers a 15-day full-featured free trial of Glovius Professional for Windows desktop, allowing users to test multi-CAD viewing and measurement. Download the trial on the [Official Glovius Download Page](https://www.glovius.com/download/)."
       },
       {
-        "q": "Which file formats does Glovius support?",
-        "a": "Glovius supports a wide range of 3D CAD formats including CATIA, NX, SolidWorks, Creo, Inventor, and more."
+        "q": "What operating systems are supported by Glovius?",
+        "a": "Glovius desktop is certified for 64-bit Microsoft Windows 11 and Windows 10. Glovius is also available as a native mobile app on Apple iOS and Google Android, and as a browser-based viewer on Glovius Cloud."
+      },
+      {
+        "q": "Which CAD formats can Glovius open?",
+        "a": "Glovius opens native parts and assemblies from CATIA V4/V5/V6, Siemens NX, SolidWorks, PTC Creo, Autodesk Inventor, Solid Edge, and neutral standards including STEP, IGES, Parasolid (.x_t, .x_b), JT, DXF, DWG, and STL."
       }
     ],
     "tech_specs": {
-      "engine": "HCL Glovius Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "HCL Proprietary 3D Direct Interoperability Pipeline",
+      "multicore": "Multi-threaded file decoding, 3D tessellation & model compare analysis",
+      "gpu_optimization": "DirectX 11 & OpenGL hardware-accelerated 3D viewport rendering",
       "standards": [
-        "CATIA",
-        "NX",
-        "SolidWorks",
-        "Creo",
-        "Inventor"
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "JT (ISO 14306)",
+        "Parasolid",
+        "CATPart",
+        "SLDPRT",
+        "PRT",
+        "3D PDF"
       ]
     },
-    "expert_verdict": "Glovius is excellent for mobile viewing of 3D CAD files across multiple formats.",
+    "expert_verdict": "Glovius is an indispensable utility for modern manufacturing organizations. By granting procurement, quality inspection, and shop floor personnel the power to view, measure, and compare native multi-CAD assemblies without expensive engineering seats, Glovius bridges the communication gap across the supply chain.",
     "file_formats_in": [
-      "CATPart",
-      "CATProduct",
-      "PRT",
+      "CATPART",
+      "CATPRODUCT",
       "SLDPRT",
       "SLDASM",
+      "PRT",
+      "ASM",
       "IPT",
       "IAM",
+      "PAR",
       "STEP",
       "IGES",
       "JT",
+      "X_T",
+      "X_B",
       "DWG",
       "DXF",
       "STL"
     ],
     "file_formats_out": [
-      "3D PDF",
       "STEP",
       "IGES",
-      "SAT (ACIS)",
-      "Parasolid",
-      "JT",
+      "X_T",
+      "X_B",
+      "3DPDF",
       "STL",
-      "3MF",
       "HTML",
-      "Images"
+      "PNG",
+      "BOM_CSV"
     ],
-    "pricing_url": "https://www.glovius.com/#pricing"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Floating",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Air-Gapped Operation",
+      "Enterprise IT Network Compliance",
+      "Read-Only Tamper Proofing"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Portuguese",
+      "Japanese",
+      "Simplified Chinese",
+      "Korean"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ]
   },
   {
-    "id": "t246",
+    "id": "t40",
     "name": "CAD Exchanger",
     "slug": "cad-exchanger",
-    "logo_url": "/logos/cad-exchanger.png",
-    "short_desc": "CAD data conversion suite — desktop workbench, C++ SDK, cloud API and mobile viewer — for translating STEP, JT, Parasolid, CATIA and other formats with B-Rep fidelity.",
-    "description": "CAD Exchanger is a CAD data exchange suite from CADEX, an Estonian software house, rather than a single application. The family has three faces: CAD Exchanger Lab, a desktop workbench for inspecting, comparing and converting parts and assemblies while preserving B-Rep geometry and assembly structure; CAD Exchanger SDK, a developer toolkit with C++, .NET and Java bindings that other software vendors embed to add import, export and tessellation for dozens of formats; and CAD Exchanger Cloud plus a mobile viewer for browsing models away from the desk. Coverage spans the proprietary end of the market — CATIA, NX, Creo, SolidWorks, Inventor, JT, Parasolid and ACIS — alongside neutral formats such as STEP, IGES and STL, with repair and healing tools for the translation damage that usually follows a format hop. Vendors use it to replace homegrown translators, manufacturers use it to consume customer data, and engineering teams use the workbench to check what actually survived a conversion. Commercial terms are quoted per seat or per SDK licence rather than published as a list price.",
+    "logo_url": "/logos/cad-exchanger.svg",
+    "short_desc": "High-speed 3D CAD data converter, viewer, and developer SDK supporting 30+ proprietary and neutral CAD/BIM/mesh formats.",
+    "description": "CAD Exchanger is an industrial-strength 3D computer-aided design (CAD) translation, viewing, and software development kit (SDK) platform developed by Roman Lygin and CAD Exchanger LLC. Engineered to overcome interoperability bottlenecks across product design and manufacturing pipelines, CAD Exchanger seamlessly converts models between 30+ 3D CAD, BIM, and mesh formats (including CATIA, SolidWorks, Siemens NX, Creo, JT, STEP, IFC, and glTF). Available as a standalone desktop GUI application, a high-throughput command-line interface (CLI), and a rich multi-language developer SDK (C++, C#, Java, Python, WebAssembly), CAD Exchanger powers automated multi-CAD pipelines worldwide.",
     "pricing_tiers": [
       {
-        "name": "CAD Exchanger Lab",
+        "name": "CAD Exchanger GUI Desktop",
         "price": "Official Store",
-        "period": "Perpetual or Annual Subscription",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Desktop workbench quoted per seat, node-locked or floating",
-          "B-Rep import, export and conversion",
-          "Assembly structure and metadata preservation",
-          "Model comparison and quality checks",
-          "Batch processing and scripting",
-          "Evaluation licence available on request"
+          "Interactive 3D Multi-CAD File Viewing and Conversion Application",
+          "Bi-Directional Translation across 30+ 3D CAD, BIM, and Mesh Formats",
+          "Linear and Angular Measurements, Cross-Sectioning, and Assembly Structure Trees",
+          "Includes 1 Full Year of Regular Format Version Updates and Support"
         ],
         "is_popular": true
       },
       {
-        "name": "CAD Exchanger SDK",
-        "price": "Contact Sales",
-        "period": "Annual Subscription",
+        "name": "CAD Exchanger CLI (Batch Processing)",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Embeddable conversion engine for your own product",
-          "C++, .NET and Java bindings",
-          "Desktop, server and cloud deployment",
-          "Format add-ons licensed per module",
-          "Vendor support and updates"
+          "Headless Command-Line Interface for Automated Batch Conversions",
+          "Server and Script Automation for High-Throughput Manufacturing Portals",
+          "Configurable Geometric Tolerances, Mesh Defeature, and Tessellation Settings",
+          "Direct Integration into Enterprise CI/CD and Web Cloud Backends"
         ],
         "is_popular": false
       },
       {
-        "name": "Mobile and Cloud",
-        "price": "Official Store",
-        "period": "Annual Subscription",
+        "name": "CAD Exchanger SDK (Software Development Kit)",
+        "price": "Custom Quote",
+        "period": "annual subscription / enterprise deployment",
         "features": [
-          "Free mobile viewer for iOS and Android",
-          "Paid in-app upgrade for conversion on the go",
-          "Browser-based cloud conversion service",
-          "Same translation core as the desktop workbench"
+          "Comprehensive Multi-Language Software Libraries (C++, C#, Java, Python, WebAssembly)",
+          "B-Rep Geometric Topology Graph Access and Mesh Generation",
+          "Native Reading and Writing of Product Manufacturing Information (PMI / GD&T)",
+          "OEM Commercial Application Embedding Rights and Dedicated Technical Engineering Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Conversion Features",
+        "category": "Multi-CAD Translation & Core Architecture",
         "items": [
           {
-            "name": "Multi-format Support",
+            "name": "Bi-Directional Translation across 30+ Formats (CATIA, NX, SolidWorks, Creo, STEP, JT, IFC)",
             "status": true
           },
           {
-            "name": "Batch Conversion",
+            "name": "B-Rep Boundary Representation Preservation with Exact Curved Surface Geometry",
             "status": true
           },
           {
-            "name": "Quality Control",
+            "name": "Product Manufacturing Information (PMI) and 3D Semantic GD&T Metadata Transfer",
             "status": true
           },
           {
-            "name": "Metadata Preservation",
+            "name": "Assembly Hierarchy, Color Attributes, Materials, and Custom Metadata Preservation",
             "status": true
           },
           {
-            "name": "B-Rep and assembly structure retention",
-            "status": true
-          },
-          {
-            "name": "CAD data preparation and geometry tweaks",
+            "name": "Automated Geometric Healing, Edge Stitching, and Tolerance Stitching Pipelines",
             "status": true
           }
         ]
       },
       {
-        "category": "Inspection and QA",
+        "category": "Viewing, Analysis & CLI Automation",
         "items": [
           {
-            "name": "Model tree and property viewer",
+            "name": "High-Performance 3D Viewer with Interactive Assembly Exploration and Hide/Show Filtering",
             "status": true
           },
           {
-            "name": "Distance, radius and edge-length measurement",
+            "name": "Precise Linear, Radial, and Angular Measurement Tools with Dynamic Cross-Section Planes",
             "status": true
           },
           {
-            "name": "Mass properties and dimension checks",
+            "name": "Headless Command-Line Interface (CLI) for High-Throughput Server-Side Batch Processing",
             "status": true
           },
           {
-            "name": "Section and exploded views",
-            "status": true
-          },
-          {
-            "name": "PMI and annotation reading",
+            "name": "Fast Polygonal Mesh Generation Tuning (Chordal Height, Angle Deflection, Max Edge Length)",
             "status": true
           }
         ]
       },
       {
-        "category": "Developer Platform",
+        "category": "Developer SDK & Web3D Pipelines",
         "items": [
           {
-            "name": "Embeddable SDK",
+            "name": "Comprehensive Multi-Language SDK for C++, C#, Java, Python, and WebAssembly / JavaScript",
             "status": true
           },
           {
-            "name": "C++, .NET and Java bindings",
+            "name": "Direct Web3D Conversions Generating Optimized glTF 2.0 and USDZ Models for Digital Twins",
             "status": true
           },
           {
-            "name": "Server-side and cloud deployment",
+            "name": "Cross-Platform Workstation Execution on Windows, macOS, and Linux Distributions",
             "status": true
           },
           {
-            "name": "Direct modelling of geometry",
-            "status": false
+            "name": "Air-Gapped Standalone Offline Operation Requiring Zero Telemetry or Cloud Exposure",
+            "status": true
           }
         ]
       }
     ],
     "alternatives": [
       "glovius",
-      "meshlab",
-      "solid-edge-viewer"
+      "freecad",
+      "rhino-3d"
     ],
     "country": "Estonia",
     "category_id": "c2",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 0,
+    "pricing_type": "Subscription",
+    "starting_price": 540,
+    "price_period": "year",
     "platforms": [
       "Windows",
       "macOS",
       "Linux",
-      "Web",
-      "iOS",
-      "Android"
+      "Web"
     ],
     "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
+      "CAD/CAM Software Development",
+      "Digital Twin & AR/VR Pipelines",
+      "Manufacturing Interoperability",
+      "Cloud CAD Web Portals",
+      "Automotive & Aerospace Tier Supply"
     ],
     "core_features": [
-      "3D Viewing",
-      "Format Conversion",
-      "Embeddable SDK",
-      "Model Inspection",
-      "Cross-platform"
+      "Bi-Directional Translation for 30+ 3D CAD/BIM/Mesh Formats",
+      "Exact B-Rep Boundary Representation Geometric Preservation",
+      "3D Product Manufacturing Information (PMI / GD&T) Reading",
+      "Multi-Language Developer SDK (C++, C#, Java, Python, WASM)",
+      "Headless Command-Line Interface (CLI) for Server Batch Processing",
+      "Web3D Conversion to Optimized glTF 2.0 & USDZ Digital Twins",
+      "Cross-Platform Desktop & Server Parity (Windows, macOS, Linux)"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Enterprise"
+      "SMB",
+      "Enterprise",
+      "Software Developers"
     ],
-    "official_url": "https://cadexchanger.com",
+    "official_url": "https://cadexchanger.com/",
+    "pricing_url": "https://cadexchanger.com/pricing/",
+    "trial_url": "https://cadexchanger.com/try-now/",
     "affiliate_url": null,
-    "score": 4.3,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/cad-exchanger/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/162839/CAD-Exchanger/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 16,
+        "url": "https://www.trustradius.com/products/cad-exchanger/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.getapp.com/engineering-software/a/cad-exchanger/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      },
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      }
+    ],
     "pros": [
-      "Unusually broad coverage including CATIA, NX, Creo, JT and Parasolid",
-      "Keeps B-Rep geometry, assembly structure and PMI through conversion",
-      "Desktop workbench, embeddable SDK and cloud service share one engine",
-      "Model inspection with measurement, mass properties and sectional views",
-      "Free mobile viewer for quick look-ups"
+      "Industry-leading CAD translation speed and B-Rep fidelity across more than 30 proprietary and neutral formats.",
+      "Supports semantic Product Manufacturing Information (PMI) and 3D GD&T annotations during conversions.",
+      "Headless CLI enables seamless automation of batch file conversions on on-premise servers and cloud backend systems.",
+      "Rich multi-language SDK allows software developers to embed robust CAD reading and writing directly into their own applications.",
+      "Converts heavy mechanical CAD assemblies into lightweight, optimized glTF and USDZ models for web viewers and AR/VR.",
+      "True cross-platform support running natively on 64-bit Windows, macOS (Intel and Apple Silicon), and Linux."
     ],
     "cons": [
-      "No public price list — licences are quoted per seat or per SDK module",
-      "Not a CAD editor: geometry tweaks are limited",
-      "Heavy format coverage costs more than single-purpose converters"
+      "Specialized translation and viewing tool; does not provide direct 3D geometric modeling or drafting capabilities.",
+      "SDK licensing and enterprise server deployment options require custom quotation and commercial negotiation.",
+      "Occasional conversion discrepancies when parsing highly obscure custom macro parameters from older legacy CAD versions.",
+      "GUI desktop application is license-locked to single workstations unless purchasing floating enterprise licenses.",
+      "Requires familiarity with geometric tolerance terms when configuring custom mesh tessellation parameters.",
+      "No direct telephone support; technical inquiries are resolved via web ticketing and developer documentation."
     ],
     "faqs": [
       {
-        "q": "What is CAD Exchanger used for?",
-        "a": "CAD Exchanger converts, inspects and validates 3D CAD data. The desktop workbench (CAD Exchanger Lab) opens a file, lets you walk its assembly tree, measure geometry and re-export to another format; the SDK lets software vendors embed the same translation engine in their own products; the mobile and cloud editions handle quick viewing and conversion away from the workstation."
+        "q": "What is CAD Exchanger and what formats does it support?",
+        "a": "According to CAD Exchanger official documentation, CAD Exchanger is an advanced 3D CAD data conversion, viewing, and SDK software platform. It supports bi-directional translation for over 30 3D CAD, BIM, and polygon formats, including CATIA, Siemens NX, SolidWorks, PTC Creo, Autodesk Inventor, JT, STEP, IGES, IFC, glTF, and OBJ. Discover full details on the [Official CAD Exchanger Website](https://cadexchanger.com/)."
       },
       {
-        "q": "How much does CAD Exchanger cost?",
-        "a": "CADEX does not publish a price list. Lab seats and SDK modules are quoted individually, and the cost depends on which format add-ons you need and how many developers will use the SDK. Request a quote through the official licensing enquiry page — regional taxes and volume discounts are applied there. Current plans and regional pricing: [Official CAD Exchanger Pricing Page](https://cadexchanger.com/contact-us/licensing-inquiry/)."
+        "q": "What products are in the CAD Exchanger portfolio?",
+        "a": "CAD Exchanger is offered in three primary editions: CAD Exchanger GUI (desktop application for manual viewing and conversion), CAD Exchanger CLI (command-line interface for automated batch processing on servers), and CAD Exchanger SDK (programming libraries for C++, C#, Java, Python, and WebAssembly). Compare editions on the [Official CAD Exchanger Pricing Page](https://cadexchanger.com/pricing/)."
       },
       {
-        "q": "Is there a free version of CAD Exchanger?",
-        "a": "There is no free desktop edition — Lab is licensed commercially, though an evaluation licence is available. The mobile viewer is free to install and view files with, and conversion on mobile is a paid in-app upgrade."
+        "q": "Does CAD Exchanger preserve exact B-Rep geometry and PMI?",
+        "a": "Yes. Unlike simple mesh converters that convert models into faceted triangles, CAD Exchanger preserves exact boundary representation (B-Rep) solid geometry, mathematical NURBS curves, assembly tree hierarchies, colors, and Product Manufacturing Information (PMI / 3D GD&T)."
       },
       {
-        "q": "What operating systems does CAD Exchanger support?",
-        "a": "CAD Exchanger Lab runs on Windows, macOS and Linux; the cloud service works in a browser; and the mobile viewer covers iOS, iPadOS and Android."
+        "q": "Can I test CAD Exchanger before purchasing?",
+        "a": "Yes. CAD Exchanger provides a free evaluation trial of both the GUI and CLI, as well as an evaluation SDK for software developers. Request trial access on the [Official CAD Exchanger Trial Page](https://cadexchanger.com/try-now/)."
       },
       {
-        "q": "Which file formats does CAD Exchanger support?",
-        "a": "The suite reads and writes STEP, IGES, JT, Parasolid, ACIS, STL and OBJ, and reads native CATIA, NX, Creo, SolidWorks, Inventor, Solid Edge and IFC files, along with glTF and FBX for visualisation. The exact matrix varies by product and by add-on module, so check the supported formats list on the official site."
+        "q": "What operating systems are supported by CAD Exchanger?",
+        "a": "CAD Exchanger runs natively on 64-bit Microsoft Windows 11/10, Apple macOS (Apple Silicon M-series and Intel), and Linux distributions (Ubuntu, CentOS, RHEL, Debian). It also provides WebAssembly libraries for web browser integration."
       },
       {
-        "q": "What are the best alternatives to CAD Exchanger?",
-        "a": "The closest alternatives to CAD Exchanger are Glovius, MeshLab, and Solid Edge Viewer — priced on a freemium model, free of charge, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "q": "Can CAD Exchanger convert CAD models for Web3D and AR/VR?",
+        "a": "Yes. CAD Exchanger is widely used in Digital Twin and Web3D pipelines to convert heavy B-Rep CAD files into lightweight, visually optimized glTF 2.0 (.gltf/.glb) and USDZ formats with high-fidelity PBR materials."
       }
     ],
     "tech_specs": {
-      "engine": "CAD Exchanger SDK",
-      "multicore": "Multi-threaded conversion in the SDK; single-threaded workbench UI",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "CAD Exchanger Proprietary Multi-CAD Interoperability Engine",
+      "multicore": "Multi-threaded parallel file parsing, B-Rep geometric conversion & mesh tessellation",
+      "gpu_optimization": "DirectX and OpenGL hardware-accelerated 3D viewport rendering",
       "standards": [
-        "STEP",
+        "STEP (AP203/AP214/AP242)",
+        "JT (ISO 14306)",
         "IGES",
-        "STL",
-        "JT",
-        "Parasolid"
+        "IFC (BIM)",
+        "Parasolid",
+        "glTF 2.0",
+        "USDZ",
+        "3D XML"
       ]
     },
-    "expert_verdict": "A translation and inspection suite rather than a modeller: pick it when CAD data has to survive a hop between systems intact, or when you need the conversion engine inside your own product.",
+    "expert_verdict": "CAD Exchanger is the Swiss Army knife of 3D CAD data interoperability. Whether you are an engineer converting supplier files, a manufacturing enterprise automating batch conversions on Linux servers, or a software developer building a Web3D application with its rich SDK, CAD Exchanger delivers blistering translation speed with uncompromised B-Rep precision.",
     "file_formats_in": [
+      "CATPART",
+      "CATPRODUCT",
+      "SLDPRT",
+      "SLDASM",
+      "PRT",
+      "ASM",
+      "IPT",
+      "IAM",
       "STEP",
+      "STP",
       "IGES",
+      "IGS",
       "JT",
-      "ACIS",
-      "Parasolid",
+      "X_T",
+      "X_B",
+      "IFC",
       "DWG",
       "DXF",
-      "SolidWorks",
-      "CATIA",
-      "CREO",
-      "Inventor",
-      "Rhino",
-      "IFC",
-      "FBX",
-      "glTF",
-      "OBJ",
       "STL",
-      "3MF"
+      "OBJ",
+      "GLTF",
+      "GLB"
     ],
     "file_formats_out": [
       "STEP",
+      "STP",
       "IGES",
+      "IGS",
       "JT",
-      "ACIS",
-      "Parasolid",
-      "DWG",
-      "DXF",
-      "Rhino",
+      "X_T",
+      "X_B",
       "IFC",
-      "FBX",
-      "glTF",
-      "OBJ",
       "STL",
-      "3MF",
-      "USD"
+      "OBJ",
+      "GLTF",
+      "GLB",
+      "USDZ",
+      "3DPDF",
+      "DXF"
     ],
-    "pricing_url": "https://cadexchanger.com/contact-us/licensing-inquiry/",
     "license_types": [
       "Subscription",
-      "Perpetual",
+      "Commercial",
       "Floating"
     ],
-    "quote_only": true
+    "security_compliance": [
+      "Air-Gapped Standalone Offline Operation",
+      "Zero Telemetry Data Sharing",
+      "Enterprise IT Network Compliance"
+    ],
+    "languages": [
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Documentation",
+      "Knowledge Base",
+      "Community"
+    ]
   },
   {
     "id": "t117",

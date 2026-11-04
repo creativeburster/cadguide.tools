@@ -766,25 +766,6 @@
     "country": "United States"
   },
   {
-    "id": "t26",
-    "name": "Tinkercad",
-    "slug": "tinkercad",
-    "short_desc": "Free, browser-based 3D design tool for beginners and education.",
-    "score": 4.6,
-    "logo_url": "/logos/tinkercad.png",
-    "official_url": "https://www.tinkercad.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Education",
-      "Hobbyist",
-      "Prototyping"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t27",
     "name": "OpenSCAD",
     "slug": "openscad",
@@ -915,6 +896,30 @@
   },
   {
     "id": "t31",
+    "name": "Maya",
+    "slug": "maya",
+    "short_desc": "Autodesk’s industry-standard 3D animation, modeling, simulation, and rendering software for film, television, and game development.",
+    "score": 4.4,
+    "logo_url": "/logos/maya.svg",
+    "official_url": "https://www.autodesk.com/products/maya/overview",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Feature Film & VFX",
+      "Video Game Development",
+      "Television & Commercials",
+      "Digital Architectural Animation",
+      "Virtual Production"
+    ],
+    "features": [
+      "subdivision-modeling",
+      "mesh-modeling"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t31",
     "name": "nTop",
     "slug": "ntop",
     "short_desc": "Engineering design software for additive manufacturing.",
@@ -933,6 +938,31 @@
       "generative-design"
     ],
     "country": "USA"
+  },
+  {
+    "id": "t32",
+    "name": "Blender",
+    "slug": "blender",
+    "short_desc": "The free and open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and video editing.",
+    "score": 4.7,
+    "logo_url": "/logos/blender.svg",
+    "official_url": "https://www.blender.org/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Independent Game Development",
+      "VFX & Commercial Animation",
+      "3D Printing & Rapid Prototyping",
+      "Architectural Visualization",
+      "Motion Graphics & Concept Art"
+    ],
+    "features": [
+      "rendering",
+      "subdivision-modeling",
+      "mesh-modeling"
+    ],
+    "country": "Netherlands"
   },
   {
     "id": "t32",
@@ -956,6 +986,51 @@
     "country": "Israel"
   },
   {
+    "id": "t33",
+    "name": "Geomagic Design X",
+    "slug": "geomagic-design-x",
+    "short_desc": "The industry's leading reverse engineering software that converts 3D scan data into feature-based, editable parametric CAD models.",
+    "score": 4.5,
+    "logo_url": "/logos/geomagic-design-x.svg",
+    "official_url": "https://www.oqton.com/geomagic-design-x/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Automotive Aftermarket & Restomod",
+      "Aerospace MRO & Replacement Parts",
+      "Heavy Machinery & Legacy Tooling",
+      "Medical Implants & Prosthetics",
+      "Consumer Hardware Product Redesign"
+    ],
+    "features": [
+      "reverse-engineering",
+      "mesh-modeling"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t34",
+    "name": "Alias AutoStudio",
+    "slug": "alias-autostudio",
+    "short_desc": "Autodesk’s premier automotive styling and Class-A surfacing software for exterior and interior vehicle concept design.",
+    "score": 4.3,
+    "logo_url": "/logos/alias-autostudio.svg",
+    "official_url": "https://www.autodesk.com/products/alias-products/overview",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Automotive Exterior & Interior Design",
+      "Luxury Yacht & Marine Styling",
+      "Consumer Electronics Industrial Design",
+      "Aerospace Cabin Concept Styling",
+      "Commercial Transportation"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
     "id": "t34",
     "name": "Bluebeam Revu",
     "slug": "bluebeam-revu",
@@ -973,6 +1048,30 @@
     ],
     "features": [],
     "country": "USA"
+  },
+  {
+    "id": "t35",
+    "name": "ZW3D",
+    "slug": "zw3d",
+    "short_desc": "An all-in-one 3D CAD/CAE/CAM solution powered by the proprietary Overdrive geometric modeling engine for mold and machine design.",
+    "score": 4.4,
+    "logo_url": "/logos/zw3d.svg",
+    "official_url": "https://www.zwsoft.com/product/zw3d",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Mold & Die Tooling",
+      "Machinery Manufacturing",
+      "Consumer Electronics",
+      "Automotive Components",
+      "Precision CNC Machining"
+    ],
+    "features": [
+      "integrated-cam",
+      "mesh-modeling"
+    ],
+    "country": "China"
   },
   {
     "id": "t35",
@@ -995,6 +1094,27 @@
   },
   {
     "id": "t36",
+    "name": "Plasticity",
+    "slug": "plasticity",
+    "short_desc": "The CAD software for artists—a fast, modern NURBS modeling tool powered by Siemens Parasolid for concept art, hard-surface design, and 3D printing.",
+    "score": 4.6,
+    "logo_url": "/logos/plasticity.svg",
+    "official_url": "https://www.plasticity.xyz/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Concept Art & Entertainment Design",
+      "Hard-Surface Game Asset Creation",
+      "Consumer Hardware Prototyping",
+      "3D Printing & Collectibles",
+      "Industrial Product Styling"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t36",
     "name": "Solibri",
     "slug": "solibri",
     "short_desc": "The BIM quality assurance and QC leader.",
@@ -1010,6 +1130,27 @@
     ],
     "features": [],
     "country": "Finland"
+  },
+  {
+    "id": "t37",
+    "name": "MoI3D",
+    "slug": "moi3d",
+    "short_desc": "Moment of Inspiration—a lightweight, intuitive NURBS modeler with pen/tablet optimization and the industry's finest N-Gon polygon mesher.",
+    "score": 4.5,
+    "logo_url": "/logos/moi3d.svg",
+    "official_url": "https://moi3d.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Concept Art & Hard-Surface Assets",
+      "Industrial & Product Design",
+      "Laser Cutting & Craft Fabrication",
+      "Jewelry & Small Electronics",
+      "3D Printing & Model Making"
+    ],
+    "features": [],
+    "country": "United States"
   },
   {
     "id": "t37",
@@ -1034,6 +1175,27 @@
   },
   {
     "id": "t38",
+    "name": "Tinkercad",
+    "slug": "tinkercad",
+    "short_desc": "Autodesk’s free, easy-to-use web app that equips the next generation of engineers with 3D design, electronics, and coding skills.",
+    "score": 4.6,
+    "logo_url": "/logos/tinkercad.svg",
+    "official_url": "https://www.tinkercad.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "K-12 STEM Education",
+      "Makers & Hobbyist 3D Printing",
+      "Beginner Electronics Prototyping",
+      "Library & FabLab Maker Spaces",
+      "Rapid Conceptual Prototyping"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t38",
     "name": "Magics",
     "slug": "magics",
     "short_desc": "Data and build preparation for 3D printing.",
@@ -1053,6 +1215,27 @@
   },
   {
     "id": "t39",
+    "name": "Glovius",
+    "slug": "glovius",
+    "short_desc": "Modern multi-platform 3D CAD viewer for Windows, cloud, and mobile to view, measure, analyze, and convert native CAD files without licenses.",
+    "score": 4.4,
+    "logo_url": "/logos/glovius.svg",
+    "official_url": "https://www.glovius.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Machinery Manufacturing",
+      "Shop Floor Assembly",
+      "Procurement & Quoting",
+      "Quality Assurance & Inspection",
+      "Automotive Tier Suppliers"
+    ],
+    "features": [],
+    "country": "India"
+  },
+  {
+    "id": "t39",
     "name": "Recap Pro",
     "slug": "recap-pro",
     "short_desc": "Reality capture and 3D scanning software.",
@@ -1069,6 +1252,27 @@
     ],
     "features": [],
     "country": "USA"
+  },
+  {
+    "id": "t40",
+    "name": "CAD Exchanger",
+    "slug": "cad-exchanger",
+    "short_desc": "High-speed 3D CAD data converter, viewer, and developer SDK supporting 30+ proprietary and neutral CAD/BIM/mesh formats.",
+    "score": 4.6,
+    "logo_url": "/logos/cad-exchanger.svg",
+    "official_url": "https://cadexchanger.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "CAD/CAM Software Development",
+      "Digital Twin & AR/VR Pipelines",
+      "Manufacturing Interoperability",
+      "Cloud CAD Web Portals",
+      "Automotive & Aerospace Tier Supply"
+    ],
+    "features": [],
+    "country": "Estonia"
   },
   {
     "id": "t42",
@@ -1142,51 +1346,6 @@
     ],
     "features": [],
     "country": "USA"
-  },
-  {
-    "id": "t50",
-    "name": "Maya",
-    "slug": "maya",
-    "short_desc": "3D animation, modeling, and simulation software.",
-    "score": 4.9,
-    "logo_url": "/logos/maya.svg",
-    "official_url": "https://www.autodesk.com/products/maya/overview",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "VFX",
-      "Gaming",
-      "Animation"
-    ],
-    "features": [
-      "subdivision-modeling",
-      "mesh-modeling"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t51",
-    "name": "Blender",
-    "slug": "blender",
-    "short_desc": "The free and open-source 3D creation suite.",
-    "score": 4.8,
-    "logo_url": "/logos/blender.png",
-    "official_url": "https://www.blender.org",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Indie Games",
-      "VFX",
-      "Hobbyist"
-    ],
-    "features": [
-      "rendering",
-      "subdivision-modeling",
-      "mesh-modeling"
-    ],
-    "country": "Netherlands"
   },
   {
     "id": "t53",
@@ -1299,45 +1458,6 @@
     "country": "USA"
   },
   {
-    "id": "t79",
-    "name": "Geomagic Design X",
-    "slug": "geomagic-design-x",
-    "short_desc": "Reverse engineering software that turns scan data into parametric CAD models.",
-    "score": 4.9,
-    "logo_url": "/logos/geomagic-design-x.png",
-    "official_url": "https://hexagon.com/products/geomagic-design-x",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Reverse Engineering",
-      "Quality Control"
-    ],
-    "features": [
-      "reverse-engineering",
-      "mesh-modeling"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t80",
-    "name": "Alias AutoStudio",
-    "slug": "alias-autostudio",
-    "short_desc": "Industrial design and automotive styling software.",
-    "score": 4.9,
-    "logo_url": "/logos/alias-autostudio.svg",
-    "official_url": "https://www.autodesk.com/products/alias-products/overview",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Automotive",
-      "Industrial Design"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t81",
     "name": "Cimatron",
     "slug": "cimatron",
@@ -1416,28 +1536,6 @@
     ],
     "features": [],
     "country": "USA"
-  },
-  {
-    "id": "t89",
-    "name": "ZW3D",
-    "slug": "zw3d",
-    "short_desc": "All-in-one 3D CAD/CAM solution from ZWSOFT.",
-    "score": 4.5,
-    "logo_url": "/logos/zw3d.ico",
-    "official_url": "https://www.zwsoft.com/product/zw3d",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Mechanical",
-      "Mold Design"
-    ],
-    "features": [
-      "integrated-cam",
-      "mesh-modeling"
-    ],
-    "country": "China"
   },
   {
     "id": "t93",
@@ -3263,44 +3361,6 @@
     "country": "Finland"
   },
   {
-    "id": "t237",
-    "name": "Plasticity",
-    "slug": "plasticity",
-    "short_desc": "New-generation 3D modeller borrowing from Rhino, Blender, and CAD workflows — Parasolid under the hood.",
-    "score": 4.5,
-    "logo_url": "/logos/plasticity.png",
-    "official_url": "https://www.plasticity.xyz",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Games",
-      "Industrial Design"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t238",
-    "name": "MoI3D",
-    "slug": "moi3d",
-    "short_desc": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
-    "score": 4.3,
-    "logo_url": "/logos/moi3d.png",
-    "official_url": "https://moi3d.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Industrial Design",
-      "Games"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t239",
     "name": "Carlson Survey",
     "slug": "carlson-survey",
@@ -3391,44 +3451,6 @@
     ],
     "features": [],
     "country": "USA"
-  },
-  {
-    "id": "t245",
-    "name": "Glovius",
-    "slug": "glovius",
-    "short_desc": "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
-    "score": 4.2,
-    "logo_url": "/logos/glovius.png",
-    "official_url": "https://www.glovius.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "India"
-  },
-  {
-    "id": "t246",
-    "name": "CAD Exchanger",
-    "slug": "cad-exchanger",
-    "short_desc": "CAD data conversion suite — desktop workbench, C++ SDK, cloud API and mobile viewer — for translating STEP, JT, Parasolid, CATIA and other formats with B-Rep fidelity.",
-    "score": 4.3,
-    "logo_url": "/logos/cad-exchanger.png",
-    "official_url": "https://cadexchanger.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "Estonia"
   },
   {
     "id": "t247",
