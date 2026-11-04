@@ -9070,5 +9070,195 @@ export const c2Tools: Tool[] = [
       "Documentation",
       "Community"
     ]
+  },
+  {
+    "id": "t_os_dune3d",
+    "name": "Dune 3D",
+    "slug": "dune-3d",
+    "logo_url": "/logos/freecad.ico",
+    "short_desc": "Modern open-source parametric 3D CAD application powered by Open CASCADE and the SolveSpace geometric constraint solver.",
+    "description": "Dune 3D is a parametric 3D CAD application developed by Lukas K. (creator of Horizon EDA) and licensed under GPLv3. According to official documentation at dune3d.org, it combines the Open CASCADE Technology (OCCT) solid B-Rep kernel for exact STEP/STL geometry, fillets, and chamfers with the proven SolveSpace 2D/3D geometric constraint solver and a clean, direct GTK4 hardware-accelerated viewport.",
+    "country": "Germany",
+    "category_id": "c2",
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "industries": [
+      "Mechanical Engineering",
+      "3D Printing",
+      "Product Design",
+      "Hardware Enclosures"
+    ],
+    "core_features": [
+      "Parametric 2D & 3D Sketch Constraint Solving",
+      "Open CASCADE (OCCT) Solid B-Rep Kernel",
+      "Exact Fillets, Chamfers & Boolean Operations",
+      "Extrude, Lathe / Revolve, Loft & Helix Modeling",
+      "STEP Import Reference & STEP/STL Export",
+      "Clean Radial Menu & Modal-Free GTK4 Interface"
+    ],
+    "user_scales": [
+      "Freelancers",
+      "Makers & Engineers",
+      "SMB"
+    ],
+    "official_url": "https://dune3d.org",
+    "pricing_url": "https://dune3d.org",
+    "trial_url": "https://github.com/dune3d/dune3d/releases",
+    "donate_url": "https://github.com/sponsors/lukasK",
+    "affiliate_url": null,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "GitHub",
+        "score": 4.8,
+        "max": 5,
+        "count": 1950,
+        "url": "https://github.com/dune3d/dune3d",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "AlternativeTo",
+        "score": 4.6,
+        "max": 5,
+        "count": 28,
+        "url": "https://alternativeto.net/software/dune-3d/about/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Parametric 3D Part Generator",
+        "href": "/toolbox/parametric-3d-part-generator"
+      },
+      {
+        "label": "Online STEP to STL Slicer Helper",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "GPLv3 Open-Source Release",
+        "price": "Free",
+        "period": "open-source forever",
+        "features": [
+          "Full parametric 3D solid modeling without seat or cloud restrictions",
+          "Native STEP AP214/AP203 and STL export",
+          "Cross-platform builds via Flatpak, Windows installer, and source",
+          "100% local JSON-based .d3ddoc project storage"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Parametric Sketching & Constraint Solver",
+        "items": [
+          {
+            "name": "SolveSpace-powered 2D & 3D geometric constraint solver",
+            "status": true
+          },
+          {
+            "name": "Coincident, parallel, perpendicular, tangent, and symmetric constraints",
+            "status": true
+          },
+          {
+            "name": "Reference STEP model import for snapping and enclosure fitting",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Solid B-Rep Operations (Open CASCADE)",
+        "items": [
+          {
+            "name": "Linear Extrusion, Revolve (Lathe), Sweep, Helix, and Loft",
+            "status": true
+          },
+          {
+            "name": "Exact analytical edge fillets and chamfers via OCCT",
+            "status": true
+          },
+          {
+            "name": "Linear and circular polar feature arrays",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "freecad",
+      "solvespace",
+      "openscad"
+    ],
+    "pros": [
+      "Combines SolveSpace's fast, intuitive sketch constraint workflow with Open CASCADE's ability to compute true analytical fillets and chamfers.",
+      "Modern, distraction-free GTK4 user interface with context-sensitive spacebar radial menus inherited from Horizon EDA.",
+      "Allows importing external STEP models (such as PCBs from KiCad or Horizon EDA) and constraining sketch geometry directly against their 3D edges.",
+      "Saves native projects in human-readable, Git-friendly JSON format (.d3ddoc) rather than opaque binary containers.",
+      "100% free and open-source under GPLv3 with zero cloud login, telemetry, or artificial export watermarks."
+    ],
+    "cons": [
+      "Focused on single-part and enclosure modeling rather than large multi-thousand-part kinematic assemblies.",
+      "Does not include built-in Finite Element Analysis (FEA) or integrated CAM G-code post-processing workbenches.",
+      "2D production engineering drawing generation with GD&T title blocks is minimal compared to FreeCAD TechDraw.",
+      "Smaller third-party plugin ecosystem than long-standing suites like FreeCAD or Blender.",
+      "macOS builds require manual compilation or Homebrew community taps compared to official Windows/Linux Flatpak binaries."
+    ],
+    "faqs": [
+      {
+        "q": "What is Dune 3D used for?",
+        "a": "According to official documentation at dune3d.org, Dune 3D is an open-source parametric 3D CAD software designed for sketching in 2D and 3D along workplanes to create mechanical parts, 3D-printed functional components, and electronic enclosures. See the [Official Dune 3D Website](https://dune3d.org)."
+      },
+      {
+        "q": "How does Dune 3D differ from SolveSpace and FreeCAD?",
+        "a": "SolveSpace uses a custom nursery B-Rep/mesh kernel that lacks native edge fillets and chamfers, whereas Dune 3D pairs the SolveSpace constraint solver with the Open CASCADE (OCCT) solid kernel so users get SolveSpace-style sketching with true STEP fillets and chamfers. Read the [Dune 3D Documentation](https://docs.dune3d.org)."
+      },
+      {
+        "q": "How much does Dune 3D cost?",
+        "a": "Dune 3D is 100% free and open-source software distributed under the GNU General Public License v3.0 (GPLv3). There are no paid tiers or subscriptions. Check the [Official GitHub Repository](https://github.com/dune3d/dune3d)."
+      },
+      {
+        "q": "What operating systems does Dune 3D support?",
+        "a": "Dune 3D runs natively on Linux (distributed via Flathub and native packages) and 64-bit Windows, and can also be compiled on macOS."
+      },
+      {
+        "q": "Which file formats does Dune 3D support?",
+        "a": "Dune 3D saves native parametric documents as .d3ddoc (JSON), imports STEP models for 3D reference snapping, and exports watertight STL, 3MF, STEP, and 2D DXF/SVG projections."
+      },
+      {
+        "q": "Who develops Dune 3D?",
+        "a": "Dune 3D is created and maintained by Lukas K., the developer behind the open-source Horizon EDA electronics design suite."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Open CASCADE Technology (OCCT) + SolveSpace Constraint Solver",
+      "multicore": "Multi-threaded OCCT mesh tessellation",
+      "gpu_optimization": "OpenGL 3.3+ GTK4 hardware-accelerated viewport",
+      "standards": [
+        "STEP (ISO 10303-21)",
+        "STL",
+        "3MF",
+        "DXF",
+        "SVG"
+      ]
+    },
+    "expert_verdict": "Dune 3D bridges the gap between SolveSpace's rapid sketch-solving ergonomics and Open CASCADE's true B-Rep fillets and STEP interoperability, making it one of the most refreshing open-source 3D CAD tools for makers and hardware engineers.",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "D3DDOC"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "STL",
+      "3MF",
+      "DXF",
+      "SVG"
+    ]
   }
 ];

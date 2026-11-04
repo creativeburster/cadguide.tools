@@ -6530,5 +6530,211 @@ export const c3Tools: Tool[] = [
     ],
     "category_id": "c3",
     "affiliate_url": null
+  },
+  {
+    "id": "t_os_bonsai",
+    "name": "Bonsai (BlenderBIM)",
+    "slug": "bonsai-bim",
+    "logo_url": "/logos/blender.ico",
+    "short_desc": "Open-source native IFC4 authoring, 4D/5D QTO, clash detection, and openBIM validation platform powered by IfcOpenShell.",
+    "description": "Bonsai (formerly BlenderBIM Add-on) is a free, open-source (GPLv3) native OpenBIM authoring and coordination platform built on IfcOpenShell and integrated into Blender. Unlike proprietary BIM suites that store data in closed formats and only export IFC as a secondary copy, Bonsai reads, edits, and authors ISO 16739-1 .ifc files directly as its native data structure, supporting architectural modeling, structural/MEP authoring, IDS validation, 4D construction scheduling, 5D quantity takeoff (QTO), and BCF issue management.",
+    "country": "International (OSArch Community)",
+    "category_id": "c3",
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "industries": [
+      "Architecture",
+      "BIM Coordination",
+      "Structural Engineering",
+      "Construction Management"
+    ],
+    "core_features": [
+      "Zero-Translation Native .IFC Authoring (IFC2x3, IFC4, IFC4.3)",
+      "buildingSMART IDS (Information Delivery Specification) Auditing",
+      "5D Costing & Automated Quantity Takeoff (QTO)",
+      "4D Construction Sequencing & Critical Path Animation",
+      "BCF (BIM Collaboration Format) Issue Tracking",
+      "Automated 2D SVG/CSS Architectural Construction Drawings"
+    ],
+    "user_scales": [
+      "BIM Coordinators",
+      "Architectural Studios",
+      "Enterprise VDC Teams"
+    ],
+    "official_url": "https://bonsaibim.org",
+    "pricing_url": "https://bonsaibim.org",
+    "trial_url": "https://bonsaibim.org/download.html",
+    "donate_url": "https://opencollective.com/opensourcebim",
+    "affiliate_url": null,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "GitHub",
+        "score": 4.9,
+        "max": 5,
+        "count": 4600,
+        "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "AlternativeTo",
+        "score": 4.7,
+        "max": 5,
+        "count": 42,
+        "url": "https://alternativeto.net/software/blenderbim/about/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online IFC Viewer & Validator",
+        "href": "/toolbox/online-ifc-viewer-validator"
+      },
+      {
+        "label": "IFC Entity Counter & QTO",
+        "href": "/toolbox/ifc-entity-counter"
+      },
+      {
+        "label": "BIM ISO 19650 Naming Checker",
+        "href": "/toolbox/bim-naming-convention-checker"
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "GPLv3 Open-Source Suite",
+        "price": "Free",
+        "period": "open-source forever",
+        "features": [
+          "Full native IFC2x3, IFC4, and IFC4.3 authoring & editing",
+          "Integrated IfcTester IDS validation, IfcClash, and IfcCSV",
+          "4D Gantt scheduling and 5D BOQ cost estimation",
+          "Full Python API via IfcOpenShell"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Native openBIM Authoring & Validation",
+        "items": [
+          {
+            "name": "Direct editing of .ifc files without import/export data loss",
+            "status": true
+          },
+          {
+            "name": "buildingSMART IDS automated compliance auditing (IfcTester)",
+            "status": true
+          },
+          {
+            "name": "IfcPatch recipes for bulk GUID, coordinate, and schema repairs",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "4D, 5D, Clash & Documentation",
+        "items": [
+          {
+            "name": "5D Quantity Takeoff (QTO) and bi-directional CSV/ODS schedules",
+            "status": true
+          },
+          {
+            "name": "4D Primavera P6 / MS Project construction timeline linking",
+            "status": true
+          },
+          {
+            "name": "Vector SVG construction drawings with CSS styling",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "autodesk-revit",
+      "archicad",
+      "bricscad",
+      "solibri-office"
+    ],
+    "pros": [
+      "Operates directly on native ISO 16739-1 .ifc files, eliminating destructive import/export translation cycles.",
+      "Recipient of the buildingSMART International Award for its contributions to openBIM standards.",
+      "Includes enterprise-grade IFC auditing, IDS validation, BCF management, and IfcCSV bulk property editing at zero cost.",
+      "Leverages Blender's world-class Cycles/EEVEE rendering and geometry nodes alongside strict IFC schema compliance.",
+      "Runs natively across Windows, macOS (Apple Silicon & Intel), and Linux without vendor lock-in."
+    ],
+    "cons": [
+      "Requires familiarity with both Blender's viewport navigation and the underlying IFC schema hierarchy.",
+      "2D sheet layout and dimensioning workflows use SVG/CSS conventions that differ from traditional Revit/AutoCAD drafting.",
+      "Cannot natively open proprietary closed .RVT files without prior IFC export.",
+      "Large hospital or airport IFC models with hundreds of thousands of elements require disciplined spatial filtering on load.",
+      "Smaller pool of pre-trained commercial drafting operators compared to Autodesk Revit."
+    ],
+    "faqs": [
+      {
+        "q": "What is Bonsai (BlenderBIM) used for?",
+        "a": "According to official documentation at bonsaibim.org, Bonsai (formerly the BlenderBIM Add-on) is a free and open-source OpenBIM authoring, auditing, 4D/5D coordination, and documentation platform built on IfcOpenShell. Visit the [Official Bonsai BIM Website](https://bonsaibim.org)."
+      },
+      {
+        "q": "Why is Bonsai called a 'native IFC' authoring tool?",
+        "a": "Traditional BIM tools maintain a proprietary internal database (like .rvt or .pln) and only translate to IFC on export. Bonsai uses the IFC file itself as its live internal database, ensuring every edit complies strictly with IFC2x3, IFC4, or IFC4.3."
+      },
+      {
+        "q": "How much does Bonsai cost?",
+        "a": "Bonsai is 100% free and open-source software licensed under the GNU General Public License v3.0 (GPLv3). Supporters can contribute via the [OpenSourceBIM Collective](https://opencollective.com/opensourcebim)."
+      },
+      {
+        "q": "What operating systems does Bonsai support?",
+        "a": "Bonsai runs wherever Blender runs: 64-bit Windows, macOS (Intel and Apple Silicon), and Linux. Download current builds from the [Official Bonsai Download Page](https://bonsaibim.org/download.html)."
+      },
+      {
+        "q": "Which file formats does Bonsai support?",
+        "a": "Bonsai natively reads and writes IFC (.ifc, .ifczip, .ifcxml), BCF (.bcf, .bcfzip), IDS (.ids), COBie spreadsheets, CSV/ODS schedules, DXF, SVG, and glTF/OBJ via Blender."
+      },
+      {
+        "q": "Does Bonsai have a Python API?",
+        "a": "Yes. Bonsai is powered by IfcOpenShell, the industry-standard open-source C++ and Python library for programmatic IFC manipulation, geometry extraction, and automated BIM quality assurance."
+      }
+    ],
+    "tech_specs": {
+      "engine": "IfcOpenShell + Open CASCADE (OCCT) + CGAL + Blender Viewport",
+      "multicore": "Multi-threaded C++ IfcGeom iterator and BVH clash trees",
+      "gpu_optimization": "Blender EEVEE / Cycles GPU viewport acceleration (Vulkan / Metal / OpenGL)",
+      "standards": [
+        "IFC4.3 (ISO 16739-1)",
+        "IFC4",
+        "IFC2x3",
+        "IDS 1.0",
+        "BCF 2.1/3.0",
+        "COBie"
+      ]
+    },
+    "expert_verdict": "Bonsai (BlenderBIM) is the undisputed flagship of the global openBIM movement. Even for firms tied to Revit or Archicad for primary drafting, Bonsai and IfcOpenShell are essential zero-cost tools for auditing IFC deliverables, running IDS checks, and fixing broken GUIDs or spatial trees.",
+    "file_formats_in": [
+      "IFC",
+      "IFCZIP",
+      "IFCXML",
+      "BCF",
+      "IDS",
+      "CSV",
+      "DXF",
+      "OBJ",
+      "STL"
+    ],
+    "file_formats_out": [
+      "IFC",
+      "IFCZIP",
+      "BCF",
+      "CSV",
+      "ODS",
+      "SVG",
+      "PDF",
+      "GLTF",
+      "OBJ"
+    ]
   }
 ];

@@ -7138,7 +7138,7 @@ export const c5Tools: Tool[] = [
         "is_popular": true
       }
     ],
-    "pricing_type": "Free",
+    "pricing_type": "Open Source",
     "starting_price": 0,
     "license_types": [
       "Open-Source",

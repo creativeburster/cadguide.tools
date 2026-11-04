@@ -161,7 +161,9 @@ export interface Tool {
       | "Gartner Peer Insights"
       | "Software Advice"
       | "GetApp"
-      | "SourceForge";
+      | "SourceForge"
+      | "GitHub"
+      | "AlternativeTo";
     score: number;
     max: number;
     count: number;

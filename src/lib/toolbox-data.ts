@@ -7768,5 +7768,73 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     "one time buyout cad lisp compatibility",
     "perpetual 3d cad software comparison"
   ]
-}
+},
+  {
+    "slug": "online-dxf-svg-nesting-tool",
+    "title": "2D DXF & SVG Sheet Metal Automatic Nesting Optimizer",
+    "description": "Browser-local 2D sheet metal and laser cutting nesting optimizer. Configure sheet dimensions, kerf spacing, part quantities, and export nested DXF/SVG cut layouts.",
+    "detailDesc": "An interactive, 100% client-side 2D bin-packing and nesting workbench for laser, plasma, waterjet, and CNC router fabrication. Import DXF part profiles or define part dimensions, optimize rotation and kerf spacing, calculate real-time material utilization percentage, and export ready-to-cut DXF and SVG sheets.",
+    "category": "generator",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-04",
+    "keywords": [
+      "online dxf nesting tool",
+      "free sheet metal nesting optimizer",
+      "laser cutting dxf nesting online",
+      "svg bin packing calculator",
+      "open source cad nesting"
+    ]
+  },
+  {
+    "slug": "parametric-3d-part-generator",
+    "title": "Interactive 3D Parametric Mechanical Part Generator",
+    "description": "Generate parametric involute spur gears, ASME/DIN bolted pipe flanges, and sheet metal brackets in 3D. Export STEP AP214, Binary STL, Wavefront OBJ, and 2D DXF.",
+    "detailDesc": "Real-time browser-based parametric 3D CAD solid and mesh generator. Customize gear module, teeth count, pressure angle, shaft bore, flange bolt circle diameter (BCD), or bracket dimensions, inspect in an interactive 3D viewport, and download STEP AP214, watertight Binary STL, OBJ, or 2D laser-cut DXF files.",
+    "category": "generator",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-04",
+    "keywords": [
+      "parametric spur gear generator dxf stl",
+      "online 3d cad part generator",
+      "involute gear step generator",
+      "pipe flange 3d model generator",
+      "browser parametric cad"
+    ]
+  },
+  {
+    "slug": "online-gcode-viewer-simulator",
+    "title": "Interactive 3D G-Code Toolpath Viewer & CNC Simulator",
+    "description": "Simulate CNC milling, laser cutting, and 3D printing G-code toolpaths locally in your browser with interactive motion scrubbing and cycle time estimation.",
+    "detailDesc": "Client-side 3D isometric and 2D XY G-code backplotter and toolpath simulator. Parses G0 rapid traverses, G1 linear feed moves, and G2/G3 circular arcs, providing an interactive step-by-step scrubber, toolhead coordinate readout, and feed/rapid distance breakdown.",
+    "category": "viewer",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-04",
+    "keywords": [
+      "online gcode viewer 3d",
+      "cnc gcode simulator browser",
+      "nc toolpath backplotter online",
+      "g0 g1 g2 g3 visualizer",
+      "free gcode analyzer"
+    ]
+  },
+  {
+    "slug": "online-gerber-pcb-viewer",
+    "title": "Online PCB Gerber RS-274X & Excellon Drill Viewer & DXF Exporter",
+    "description": "Inspect PCB Gerber fabrication layers and Excellon NC drill files locally in your browser. Verify D-code apertures, drill tool tables, and export PCB outlines/pads to DXF.",
+    "detailDesc": "A 100% browser-local PCB CAM viewer and Gerber-to-DXF converter for electronics engineers using KiCad, Altium Designer, LibrePCB, or Eagle. Parses RS-274X / Gerber X2 copper traces (D01), SMD/THT flashed pads (D03), and Excellon NC drill hits, offering solder-mask theme switching and mechanical DXF export for enclosure alignment.",
+    "category": "viewer",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-04",
+    "keywords": [
+      "online gerber viewer",
+      "pcb gerber to dxf converter",
+      "excellon drill file viewer online",
+      "rs-274x cam viewer browser",
+      "kicad gerber inspector"
+    ]
+  }
 ];

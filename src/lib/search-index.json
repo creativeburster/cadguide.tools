@@ -4081,5 +4081,105 @@
       "rendering"
     ],
     "country": ""
+  },
+  {
+    "id": "t_os_dune3d",
+    "name": "Dune 3D",
+    "slug": "dune-3d",
+    "short_desc": "Modern open-source parametric 3D CAD application powered by Open CASCADE and the SolveSpace geometric constraint solver.",
+    "score": 4.5,
+    "logo_url": "/logos/freecad.ico",
+    "official_url": "https://dune3d.org",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "3D Printing",
+      "Product Design",
+      "Hardware Enclosures"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
+    "id": "t_os_bonsai",
+    "name": "Bonsai (BlenderBIM)",
+    "slug": "bonsai-bim",
+    "short_desc": "Open-source native IFC4 authoring, 4D/5D QTO, clash detection, and openBIM validation platform powered by IfcOpenShell.",
+    "score": 4.6,
+    "logo_url": "/logos/blender.ico",
+    "official_url": "https://bonsaibim.org",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architecture",
+      "BIM Coordination",
+      "Structural Engineering",
+      "Construction Management"
+    ],
+    "features": [],
+    "country": "International (OSArch Community)"
+  },
+  {
+    "id": "t_os_mayo",
+    "name": "Mayo",
+    "slug": "mayo-cad-viewer",
+    "short_desc": "Open-source 3D CAD viewer and multi-format B-Rep / mesh converter powered by Open CASCADE and Qt.",
+    "score": 4.6,
+    "logo_url": "/logos/freecad.ico",
+    "official_url": "https://github.com/fougue/mayo",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "CNC Machining",
+      "3D Printing"
+    ],
+    "features": [],
+    "country": "France"
+  },
+  {
+    "id": "t_os_f3d",
+    "name": "F3D (Fast and Minimalist 3D Viewer)",
+    "slug": "f3d-viewer",
+    "short_desc": "Fast, minimalist open-source 3D viewer for CAD (STEP/IGES), scientific meshes (VTK), point clouds, and PBR glTF/USD assets.",
+    "score": 4.6,
+    "logo_url": "/logos/meshlab.png",
+    "official_url": "https://f3d.app",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Mechanical Engineering",
+      "Scientific Visualization",
+      "3D Printing",
+      "Game & Digital Twin"
+    ],
+    "features": [],
+    "country": "France / International"
+  },
+  {
+    "id": "t_os_librepcb",
+    "name": "LibrePCB",
+    "slug": "librepcb",
+    "short_desc": "Modern open-source schematic capture and PCB layout EDA suite with Git-friendly human-readable file formats and integrated 3D STEP viewing.",
+    "score": 4.5,
+    "logo_url": "/logos/kicad.ico",
+    "official_url": "https://librepcb.org",
+    "category_id": "c6",
+    "category_name": "EDA",
+    "aliases": [],
+    "industries": [
+      "Electronics",
+      "Embedded Systems",
+      "IoT Hardware",
+      "Education"
+    ],
+    "features": [],
+    "country": "Switzerland"
   }
 ]

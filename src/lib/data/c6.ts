@@ -3154,5 +3154,185 @@ export const c6Tools: Tool[] = [
       "eagle",
       "altium-designer"
     ]
+  },
+  {
+    "id": "t_os_librepcb",
+    "name": "LibrePCB",
+    "slug": "librepcb",
+    "logo_url": "/logos/kicad.ico",
+    "short_desc": "Modern open-source schematic capture and PCB layout EDA suite with Git-friendly human-readable file formats and integrated 3D STEP viewing.",
+    "description": "LibrePCB is a free, open-source (GPLv3) Electronic Design Automation (EDA) software suite developed in Switzerland for designing printed circuit boards across Windows, macOS, and Linux. According to official documentation at librepcb.org, it features an all-in-one project manager, library editor, schematic capture, and 2D/3D PCB layout editor with built-in Open CASCADE STEP 3D visualization, live Design Rule Checking (DRC), and canonical S-expression text files engineered specifically for clean Git version control diffs.",
+    "country": "Switzerland",
+    "category_id": "c6",
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "industries": [
+      "Electronics",
+      "Embedded Systems",
+      "IoT Hardware",
+      "Education"
+    ],
+    "core_features": [
+      "Unified Schematic Capture, PCB Layout & Library Management",
+      "Git-First Canonical S-Expression File Format (Minimal Diffs)",
+      "Integrated 3D Board Viewer & Mechanical STEP Export (OCCT)",
+      "Online Cloud Part Library Manager with Zero Local Setup",
+      "Real-Time Electrical Rule Check (ERC) & Design Rule Check (DRC)",
+      "One-Click Gerber X2, Excellon Drill, Pick & Place & BOM Export"
+    ],
+    "user_scales": [
+      "Hardware Engineers",
+      "Makers & Students",
+      "SMB Electronics Teams"
+    ],
+    "official_url": "https://librepcb.org",
+    "pricing_url": "https://librepcb.org",
+    "trial_url": "https://librepcb.org/download/",
+    "donate_url": "https://librepcb.org/donate/",
+    "affiliate_url": null,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "GitHub",
+        "score": 4.8,
+        "max": 5,
+        "count": 2150,
+        "url": "https://github.com/LibrePCB/LibrePCB",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "AlternativeTo",
+        "score": 4.6,
+        "max": 5,
+        "count": 31,
+        "url": "https://alternativeto.net/software/librepcb/about/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online 3D CAD & STEP Viewer",
+        "href": "/toolbox/online-3d-cad-viewer-collaborator"
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "GPLv3 Open-Source Suite",
+        "price": "Free",
+        "period": "open-source forever",
+        "features": [
+          "Unlimited schematic sheets, pins, and copper PCB layers",
+          "Self-contained project directories with embedded library symbols/footprints",
+          "Headless `librepcb-cli` for automated CI/CD Gerber, STEP, and PDF generation"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Library & Schematic Architecture",
+        "items": [
+          {
+            "name": "Strict separation of Symbol, Component, Device, and Package entities",
+            "status": true
+          },
+          {
+            "name": "Self-contained projects that never break when external libraries update",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "PCB Layout, 3D MCAD & CI/CD",
+        "items": [
+          {
+            "name": "Built-in Open CASCADE 3D viewer and STEP assembly export",
+            "status": true
+          },
+          {
+            "name": "librepcb-cli command-line tool for GitHub/GitLab CI fabrication builds",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "kicad",
+      "diptrace",
+      "easyeda",
+      "altium-designer"
+    ],
+    "pros": [
+      "Cleanest library architecture in open-source EDA: separates logical components from physical footprints so pin-swapping and package changes are effortless.",
+      "Self-contained project folders embed all used library elements locally, guaranteeing a project opens identically on any computer years later.",
+      "File format is specifically ordered and formatted to produce minimal, human-readable Git diffs.",
+      "Includes `librepcb-cli` for headless ERC/DRC verification and automated Gerber/STEP/PDF export inside Git CI/CD pipelines.",
+      "100% free and open-source (GPLv3) with no pin, board area, or commercial usage restrictions."
+    ],
+    "cons": [
+      "High-speed PCB routing features (such as length tuning meanders and impedance-controlled differential pairs) are less mature than KiCad 8/9.",
+      "Smaller pre-built component library catalog than KiCad or EasyEDA/LCSC.",
+      "No integrated SPICE analog/mixed-signal circuit simulator.",
+      "Does not natively import legacy Altium Designer or OrCAD binary project archives.",
+      "Fewer third-party Python action plugins compared to KiCad's ecosystem."
+    ],
+    "faqs": [
+      {
+        "q": "What is LibrePCB used for?",
+        "a": "According to official documentation at librepcb.org, LibrePCB is a free, cross-platform, open-source Electronic Design Automation (EDA) suite used to draw electronic schematics and design multi-layer printed circuit boards (PCBs). Visit the [Official LibrePCB Website](https://librepcb.org)."
+      },
+      {
+        "q": "How does LibrePCB differ from KiCad?",
+        "a": "LibrePCB was designed from scratch with a smart library concept (separating symbols, generic components, specific devices, and packages), self-contained project folders, and canonical Git-friendly files, making it faster to learn and easier to version-control than traditional EDA tools."
+      },
+      {
+        "q": "How much does LibrePCB cost?",
+        "a": "LibrePCB is 100% free and open-source software released under the GNU General Public License v3.0 (GPLv3). There are no paid tiers or commercial limits. Support development via the [LibrePCB Donate Page](https://librepcb.org/donate/)."
+      },
+      {
+        "q": "What operating systems does LibrePCB support?",
+        "a": "LibrePCB runs natively on Windows, macOS, and Linux (AppImage, Flatpak, and native packages). Download installers from [LibrePCB Downloads](https://librepcb.org/download/)."
+      },
+      {
+        "q": "Which file formats does LibrePCB support?",
+        "a": "LibrePCB imports STEP 3D component models and DXF board outlines, and exports Gerber RS-274X / X2, Excellon drill files, IPC-356 netlists, STEP 3D board assemblies, Pick & Place CSV, BOM CSV, and vector PDF/SVG documentation."
+      },
+      {
+        "q": "Can LibrePCB run in automated Git CI/CD pipelines?",
+        "a": "Yes. LibrePCB ships with `librepcb-cli` (and official Docker containers) to run headless ERC/DRC checks and export fabrication Gerbers, BOMs, and 3D STEP files automatically on every Git commit."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Custom C++/Qt5/Qt6 EDA Engine + Open CASCADE (OCCT) 3D Kernel",
+      "multicore": "Multi-threaded DRC verification and 3D STEP rendering",
+      "gpu_optimization": "OpenGL hardware-accelerated 2D/3D board canvas",
+      "standards": [
+        "Gerber X2 / RS-274X",
+        "Excellon",
+        "STEP (ISO 10303-21)",
+        "IPC-D-356A"
+      ]
+    },
+    "expert_verdict": "LibrePCB is the most thoughtfully engineered modern open-source EDA tool for small-to-medium complexity boards, boasting a Git-native file structure and headless CLI workflow that hardware DevOps teams love.",
+    "file_formats_in": [
+      "LPP",
+      "STEP",
+      "STP",
+      "DXF"
+    ],
+    "file_formats_out": [
+      "Gerber",
+      "Excellon",
+      "STEP",
+      "PDF",
+      "SVG",
+      "CSV",
+      "IPC-D-356A"
+    ]
   }
 ];

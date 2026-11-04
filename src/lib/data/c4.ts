@@ -2373,5 +2373,401 @@ export const c4Tools: Tool[] = [
       "cad-reader",
       "dwg-fastview"
     ]
+  },
+  {
+    "id": "t_os_mayo",
+    "name": "Mayo",
+    "slug": "mayo-cad-viewer",
+    "logo_url": "/logos/freecad.ico",
+    "short_desc": "Open-source 3D CAD viewer and multi-format B-Rep / mesh converter powered by Open CASCADE and Qt.",
+    "description": "Mayo is a fast, open-source (BSD-2-Clause) 3D CAD viewer and batch format converter built by Fougue on top of Open CASCADE Technology (OCCT) and Qt. It enables mechanical engineers and manufacturing teams to inspect STEP (AP203/AP214/AP242), IGES, BREP, DXF, STL, OBJ, glTF 2.0, VRML, and PLY assemblies with interactive XCAF product trees, real-time cross-section clipping planes, surface area/volume metrology, and command-line batch conversion.",
+    "country": "France",
+    "category_id": "c4",
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "industries": [
+      "Mechanical Engineering",
+      "Manufacturing",
+      "CNC Machining",
+      "3D Printing"
+    ],
+    "core_features": [
+      "STEP / IGES / BREP Assembly Tree Inspection (XCAF)",
+      "Multi-Format 3D CAD & Mesh Conversion (STEP, IGES, STL, OBJ, glTF)",
+      "Interactive 3D Cross-Section Clipping Planes (X/Y/Z)",
+      "Exact B-Rep Area, Volume & Bounding Box Metrology",
+      "Headless Command-Line (CLI) Batch File Conversion",
+      "Permissive BSD-2-Clause Commercial-Friendly License"
+    ],
+    "user_scales": [
+      "Individuals",
+      "SMB Machine Shops",
+      "Enterprise QA Teams"
+    ],
+    "official_url": "https://github.com/fougue/mayo",
+    "pricing_url": "https://github.com/fougue/mayo",
+    "trial_url": "https://github.com/fougue/mayo/releases",
+    "affiliate_url": null,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "GitHub",
+        "score": 4.9,
+        "max": 5,
+        "count": 2100,
+        "url": "https://github.com/fougue/mayo",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "AlternativeTo",
+        "score": 4.7,
+        "max": 5,
+        "count": 19,
+        "url": "https://alternativeto.net/software/mayo/about/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online 3D CAD Viewer & Converter",
+        "href": "/toolbox/online-3d-cad-viewer-collaborator"
+      },
+      {
+        "label": "Online STEP to OBJ / glTF Converter",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer Helper",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "BSD-2-Clause Open Source",
+        "price": "Free",
+        "period": "open-source forever",
+        "features": [
+          "Unlimited desktop viewing and multi-format CAD conversion",
+          "Headless CLI batch conversion for CI/CD pipelines",
+          "Permissive BSD-2-Clause license suitable for commercial enterprise use"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "3D B-Rep & Assembly Inspection",
+        "items": [
+          {
+            "name": "Full STEP assembly hierarchy and part color/material preservation",
+            "status": true
+          },
+          {
+            "name": "Real-time adjustable section planes with hatch capping",
+            "status": true
+          },
+          {
+            "name": "Exploded assembly view slider for multi-body STEP files",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Format Conversion & CLI",
+        "items": [
+          {
+            "name": "Convert between STEP, IGES, BREP, STL, OBJ, glTF/GLB, VRML, PLY",
+            "status": true
+          },
+          {
+            "name": "Configurable chordal deflection and angular tolerance for mesh export",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "cad-exchanger",
+      "glovius",
+      "edrawings",
+      "f3d-viewer"
+    ],
+    "pros": [
+      "Lightweight (~30 MB) native C++/Qt application that opens large STEP assemblies in seconds without launching a full CAD suite.",
+      "Includes a built-in exploded-view slider and interactive clipping planes for inspecting internal bores and mating clearances.",
+      "Converts bi-directionally between STEP/IGES and web/mesh formats (glTF, GLB, OBJ, STL) with user-controlled tessellation deflection.",
+      "Supports headless command-line execution (`mayo-conv`) for automated server or CI/CD CAD conversion pipelines.",
+      "Permissive BSD-2-Clause open-source license allows unrestricted commercial deployment inside corporate networks."
+    ],
+    "cons": [
+      "Read-only viewer and converter; cannot edit sketch geometry or modify parametric feature trees.",
+      "Does not natively open proprietary closed formats like SolidWorks (.SLDPRT) or Revit (.RVT).",
+      "2D DWG support is not included (supports DXF and 3D STEP/IGES/Mesh formats).",
+      "Point-to-point linear dimension markup tools are simpler than paid commercial viewers like Glovius.",
+      "macOS builds require manual compilation from source or community packaging compared to official Windows/Linux installers."
+    ],
+    "faqs": [
+      {
+        "q": "What is Mayo used for?",
+        "a": "According to official documentation on GitHub (fougue/mayo), Mayo is an open-source 3D CAD viewer and converter based on Open CASCADE and Qt, used to inspect and convert STEP, IGES, BREP, STL, OBJ, and glTF 3D files. See the [Official Mayo Repository](https://github.com/fougue/mayo)."
+      },
+      {
+        "q": "How much does Mayo cost?",
+        "a": "Mayo is 100% free and open-source software released under the permissive 2-Clause BSD License. It is free for both personal and commercial enterprise use."
+      },
+      {
+        "q": "Which file formats can Mayo import and export?",
+        "a": "Mayo imports STEP (AP203, AP214, AP242), IGES, Open CASCADE BREP, DXF, STL (ASCII/Binary), Wavefront OBJ, glTF 2.0 / GLB, VRML, PLY, and OFF, and exports to STEP, IGES, BREP, STL, OBJ, glTF/GLB, VRML, and PLY. Download installers from [Mayo Releases](https://github.com/fougue/mayo/releases)."
+      },
+      {
+        "q": "Can Mayo run from the command line for batch conversion?",
+        "a": "Yes. Mayo includes a dedicated command-line interface that converts 3D CAD files in batch mode without opening a graphical window."
+      },
+      {
+        "q": "What operating systems does Mayo support?",
+        "a": "Mayo provides pre-built binaries for 64-bit Windows and Linux (AppImage), and builds cleanly on macOS via CMake."
+      },
+      {
+        "q": "What are the best alternatives to Mayo?",
+        "a": "Top alternatives include F3D (open-source VTK viewer), FreeCAD, CAD Exchanger, and Glovius."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Open CASCADE Technology (OCCT) + Qt",
+      "multicore": "Multi-threaded STEP/IGES reading and mesh tessellation",
+      "gpu_optimization": "OpenGL hardware-accelerated Open CASCADE 3D viewer",
+      "standards": [
+        "STEP (ISO 10303-21)",
+        "IGES",
+        "glTF 2.0",
+        "STL",
+        "OBJ"
+      ]
+    },
+    "expert_verdict": "Mayo is the best free, open-source desktop alternative to commercial CAD translators like CAD Exchanger for STEP/IGES-to-glTF/STL conversion and fast shop-floor assembly inspection.",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
+      "BREP",
+      "DXF",
+      "STL",
+      "OBJ",
+      "GLTF",
+      "GLB",
+      "PLY",
+      "VRML"
+    ],
+    "file_formats_out": [
+      "STEP",
+      "IGES",
+      "BREP",
+      "STL",
+      "OBJ",
+      "GLTF",
+      "GLB",
+      "PLY",
+      "VRML",
+      "PNG"
+    ]
+  },
+  {
+    "id": "t_os_f3d",
+    "name": "F3D (Fast and Minimalist 3D Viewer)",
+    "slug": "f3d-viewer",
+    "logo_url": "/logos/meshlab.png",
+    "short_desc": "Fast, minimalist open-source 3D viewer for CAD (STEP/IGES), scientific meshes (VTK), point clouds, and PBR glTF/USD assets.",
+    "description": "F3D (Fast and Minimalist 3D Viewer) is a BSD-3-Clause open-source desktop 3D viewer powered by VTK (Visualization Toolkit) and Open CASCADE. Designed for instant startup, OS file-explorer thumbnail generation, and scriptable CLI rendering, F3D opens STEP, IGES, BREP, STL, OBJ, glTF/GLB, USD, FBX, Alembic, PLY, PTS, and VTK scientific datasets with real-time PBR lighting and raytracing.",
+    "country": "France / International",
+    "category_id": "c4",
+    "pricing_type": "Open Source",
+    "starting_price": 0,
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "industries": [
+      "Mechanical Engineering",
+      "Scientific Visualization",
+      "3D Printing",
+      "Game & Digital Twin"
+    ],
+    "core_features": [
+      "Instant Viewing of STEP, IGES, STL, OBJ, glTF, USD & VTK",
+      "OS File Explorer 3D Thumbnail Generator (Windows / Linux)",
+      "Real-Time PBR Rendering, HDRI Skyboxes & OSPRay Raytracing",
+      "Command-Line Headless Screenshot & Comparison Rendering",
+      "Point Cloud & Scientific Volume / Scalar Field Visualization",
+      "Libf3d C++ / Python / JavaScript SDK Bindings"
+    ],
+    "user_scales": [
+      "Individuals",
+      "Engineering Teams",
+      "Research Labs"
+    ],
+    "official_url": "https://f3d.app",
+    "pricing_url": "https://f3d.app",
+    "trial_url": "https://f3d.app/doc/user/INSTALLATION.html",
+    "affiliate_url": null,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "GitHub",
+        "score": 4.9,
+        "max": 5,
+        "count": 3500,
+        "url": "https://github.com/f3d-app/f3d",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "AlternativeTo",
+        "score": 4.8,
+        "max": 5,
+        "count": 24,
+        "url": "https://alternativeto.net/software/f3d/about/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online 3D CAD Viewer",
+        "href": "/toolbox/online-3d-cad-viewer-collaborator"
+      },
+      {
+        "label": "STL Mesh Quality Checker",
+        "href": "/toolbox/stl-mesh-quality-checker"
+      }
+    ],
+    "pricing_tiers": [
+      {
+        "name": "BSD-3-Clause Open Source",
+        "price": "Free",
+        "period": "open-source forever",
+        "features": [
+          "Full desktop viewer with Windows/macOS/Linux installers",
+          "Automatic 3D file thumbnail integration in Windows Explorer and Linux file managers",
+          "Python and C++ libf3d SDK for custom rendering pipelines"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Multi-Domain 3D Viewing",
+        "items": [
+          {
+            "name": "Mechanical CAD B-Rep support (STEP, IGES, BREP) via OCCT plugin",
+            "status": true
+          },
+          {
+            "name": "Scientific CFD/FEA VTK, VTKHDF, Exodus, and NetCDF visualization",
+            "status": true
+          },
+          {
+            "name": "Digital Twin & DCC formats (glTF 2.0, USD, FBX, Alembic, STL, OBJ)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Desktop & CLI Productivity",
+        "items": [
+          {
+            "name": "Native Windows Explorer and Freedesktop thumbnailer for 3D files",
+            "status": true
+          },
+          {
+            "name": "Minimalist hotkey-driven UI with zero clutter",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "mayo-cad-viewer",
+      "meshlab",
+      "edrawings",
+      "glovius"
+    ],
+    "pros": [
+      "Automatically generates 3D preview thumbnails for STEP, STL, OBJ, and glTF files directly inside Windows File Explorer and Linux file managers.",
+      "Bridges mechanical CAD (STEP/IGES), 3D printing (STL/3MF), scientific simulation (VTK), and Pixar USD in a single ultra-fast viewer.",
+      "Minimalist, zero-clutter interface that launches instantaneously and is fully controllable via keyboard shortcuts or CLI flags.",
+      "Includes Python and C++ `libf3d` bindings for automated visual regression testing and headless thumbnail generation.",
+      "100% free and open-source under the permissive BSD-3-Clause license across Windows, macOS, and Linux."
+    ],
+    "cons": [
+      "Intentionally minimalist: has no GUI ribbons, assembly tree sidebars, or CAD editing tools.",
+      "Does not export or convert between CAD formats (designed strictly for viewing and rendering to images).",
+      "Does not support 2D AutoCAD DWG drafting sheets.",
+      "Configuring advanced raytracing or volume shaders relies on command-line flags or JSON configuration files.",
+      "Does not include interactive point-to-point CAD dimensioning callouts."
+    ],
+    "faqs": [
+      {
+        "q": "What is F3D used for?",
+        "a": "According to official documentation at f3d.app, F3D is a fast and minimalist open-source 3D viewer supporting CAD models (STEP/IGES), meshes (STL/OBJ/glTF/USD), point clouds, and scientific datasets (VTK). Visit the [Official F3D Website](https://f3d.app)."
+      },
+      {
+        "q": "Can F3D show 3D thumbnails in Windows Explorer?",
+        "a": "Yes. One of F3D's most popular features is its built-in OS shell extension that renders live 3D thumbnails for STL, OBJ, STEP, glTF, and 3MF files right inside Windows Explorer and Linux file managers."
+      },
+      {
+        "q": "How much does F3D cost?",
+        "a": "F3D is 100% free and open-source software licensed under the 3-Clause BSD License. Download official binaries at [F3D Installation](https://f3d.app/doc/user/INSTALLATION.html)."
+      },
+      {
+        "q": "What operating systems does F3D support?",
+        "a": "F3D runs natively on Windows, macOS (Intel and Apple Silicon), Linux, and FreeBSD."
+      },
+      {
+        "q": "Which file formats does F3D support?",
+        "a": "F3D supports STEP, IGES, BREP, STL, OBJ, 3MF, glTF/GLB, USD, FBX, DAE, PLY, PTS, XGL, and VTK/VTU/VTP scientific formats."
+      },
+      {
+        "q": "How does F3D compare to Mayo?",
+        "a": "F3D excels at instant hotkey viewing, OS file explorer thumbnails, scientific VTK/USD rendering, and headless screenshots, whereas Mayo provides a traditional GUI assembly tree, interactive measurements, and CAD format conversion."
+      }
+    ],
+    "tech_specs": {
+      "engine": "VTK (Visualization Toolkit) + Open CASCADE (OCCT) + Assimp + USD",
+      "multicore": "Parallel VTK rendering pipeline and OSPRay raytracing",
+      "gpu_optimization": "OpenGL PBR shader pipeline with HDRI environment lighting",
+      "standards": [
+        "STEP",
+        "IGES",
+        "STL",
+        "glTF 2.0",
+        "USD",
+        "VTK"
+      ]
+    },
+    "expert_verdict": "F3D is a must-install utility for any engineer or 3D printing enthusiast—even if only for its ability to turn Windows Explorer and Linux file managers into visual 3D thumbnail galleries for STEP, STL, and glTF files.",
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "IGES",
+      "BREP",
+      "STL",
+      "OBJ",
+      "3MF",
+      "GLTF",
+      "GLB",
+      "USD",
+      "FBX",
+      "PLY",
+      "VTK"
+    ],
+    "file_formats_out": [
+      "PNG",
+      "JPG"
+    ]
   }
 ];

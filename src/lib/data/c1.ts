@@ -3401,7 +3401,7 @@ export const c1Tools: Tool[] = [
     ],
     "country": "International",
     "category_id": "c1",
-    "pricing_type": "Free",
+    "pricing_type": "Open Source",
     "starting_price": 0,
     "price_period": "one-time",
     "platforms": [
