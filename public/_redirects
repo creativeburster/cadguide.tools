@@ -43,3 +43,14 @@
 /tools/visi-modelling /tools/visi 301
 /alternatives/visi-modelling /alternatives/visi 301
 /pricing/visi-modelling /pricing/visi 301
+
+# 10. Legacy /calculators/* namespace → canonical /toolbox/* — 2026-11-04
+#     /calculators/ was never a route in this repo (verified across full git history),
+#     so these hits are inbound links from outside. GA4: 14 PV / 10 visitors in 10 days,
+#     page title was "Page Not Found (404)" — the traffic is real and worth keeping.
+#     Add rules one at a time as GA4 reports them. Do NOT add a /calculators/* splat:
+#     the legacy slugs are short forms (workstation-spec) that do not match the
+#     /toolbox/ slugs (cad-hardware-workstation-spec-builder), so a splat would
+#     chain a 301 into another 404.
+/calculators/workstation-spec /toolbox/cad-hardware-workstation-spec-builder 301
+/calculators/workstation-spec/ /toolbox/cad-hardware-workstation-spec-builder 301
