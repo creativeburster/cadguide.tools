@@ -1760,25 +1760,28 @@
     "id": "t68",
     "name": "AVEVA Marine",
     "slug": "aveva-marine",
-    "short_desc": "Integrated engineering and design for shipbuilding.",
-    "score": 4.9,
-    "logo_url": "/logos/aveva-marine.ico",
+    "short_desc": "AVEVA’s world-leading integrated naval architecture, ship hull design, and marine outfitting engineering software.",
+    "score": 4.7,
+    "logo_url": "/logos/aveva.png",
     "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Shipbuilding",
-      "Oil & Gas"
+      "Commercial Shipbuilding & Naval Yards",
+      "Offshore Oil & Gas Floating Units (FPSO)",
+      "Naval Defense & Patrol Vessel Design",
+      "Ship Repair & Marine Conversion Yards",
+      "Specialized Dredgers & Oceanographic Ships"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t69",
     "name": "CLO 3D",
     "slug": "clo-3d",
-    "short_desc": "3D garment visualization and design.",
+    "short_desc": "The fashion industry’s premier 3D garment design, pattern making, and true-to-life fabric draping simulation software.",
     "score": 4.8,
     "logo_url": "/logos/clo-3d.png",
     "official_url": "https://www.clo3d.com",
@@ -1786,12 +1789,14 @@
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Fashion",
-      "Apparel",
-      "Gaming"
+      "Fashion Apparel & Luxury Brands",
+      "Sportswear & Performance Outerwear",
+      "Footwear & Leather Goods Design",
+      "Costume Design for Film & Gaming",
+      "Automotive & Aerospace Interior Seating"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t81",
@@ -1948,25 +1953,22 @@
     "id": "t121",
     "name": "AVEVA E3D Design",
     "slug": "aveva-e3d-design",
-    "short_desc": "Advanced 3D plant design and engineering software for process, power, and marine industries with intelligent modeling capabilities.",
-    "score": 0,
-    "logo_url": "/logos/aveva-e3d-design.ico",
+    "short_desc": "AVEVA’s flagship 3D plant design and digital twin engineering software integrating laser scans, piping, and structural modeling.",
+    "score": 4.9,
+    "logo_url": "/logos/aveva.png",
     "official_url": "https://www.aveva.com/en/products/e3d-design/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Oil and Gas",
-      "Chemical Processing",
-      "Power Generation",
-      "Shipbuilding",
-      "Offshore",
-      "Petrochemical",
-      "Pharmaceutical",
-      "Mining"
+      "Oil, Gas & LNG Processing Facilities",
+      "Chemical, Petrochemical & Plastics Refineries",
+      "Nuclear & Thermal Power Generation Plants",
+      "Offshore Platforms & Floating Production (FPSO)",
+      "Pharmaceutical & Food Manufacturing Facilities"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t124",
@@ -2056,20 +2058,22 @@
     "id": "t133",
     "name": "Maptek Vulcan",
     "slug": "maptek-vulcan",
-    "short_desc": "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
-    "score": 0,
-    "logo_url": "/logos/maptek-vulcan.png",
+    "short_desc": "Maptek’s premier 3D mining, geological modeling, block estimation, and mine planning software for surface and underground operations.",
+    "score": 4.8,
+    "logo_url": "/logos/maptek.png",
     "official_url": "https://www.maptek.com/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Mining",
-      "Geology",
-      "Civil Engineering"
+      "Precious & Base Metal Mining (Gold, Copper, Iron Ore)",
+      "Coal & Energy Mineral Extraction",
+      "Industrial Mineral Quarries & Aggregates",
+      "Mineral Exploration & Geotechnical Consultancies",
+      "Mine Surveying & Volumetric Auditing"
     ],
     "features": [],
-    "country": "Australia"
+    "country": ""
   },
   {
     "id": "t136",
@@ -2138,20 +2142,22 @@
     "id": "t142",
     "name": "CET Designer",
     "slug": "cet-designer",
-    "short_desc": "Space planning and specification software for commercial interiors, with live rendering and manufacturer catalogs.",
-    "score": 0,
-    "logo_url": "/logos/cet-designer.png",
+    "short_desc": "Configura’s intelligent rule-based space planning, furniture specification, and commercial interior quoting software.",
+    "score": 4.7,
+    "logo_url": "/logos/configura.png",
     "official_url": "https://www.configura.com/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Interior Design",
-      "Furniture",
-      "Space Planning"
+      "Contract Office Furniture Dealerships",
+      "Commercial Interior Design & Architecture",
+      "Material Handling & Warehouse Logistics Planning",
+      "Kitchen & Bathroom Commercial Layouts",
+      "Corporate Facilities Space Management"
     ],
     "features": [],
-    "country": "Sweden"
+    "country": ""
   },
   {
     "id": "t147",
@@ -3203,196 +3209,213 @@
     "id": "t213",
     "name": "UltiMaker Cura",
     "slug": "ultimaker-cura",
-    "short_desc": "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
-    "score": 4.5,
-    "logo_url": "/logos/ultimaker-cura.png",
+    "short_desc": "The world’s most widely adopted free and open-source 3D printer slicing software for FDM and FFF additive manufacturing.",
+    "score": 4.8,
+    "logo_url": "/logos/cura.png",
     "official_url": "https://ultimaker.com/software/ultimaker-cura/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Additive Manufacturing & 3D Printing Service Bureaus",
+      "Rapid Prototyping & Product Design",
+      "Higher Education & University Makerspaces",
+      "Industrial Jigs, Fixtures & Tooling Fabrication",
+      "Automotive & Aerospace Replacement Parts"
     ],
     "features": [],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "t214",
     "name": "PrusaSlicer",
     "slug": "prusaslicer",
-    "short_desc": "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
-    "score": 4.7,
+    "short_desc": "Prusa Research’s open-source 3D printing slicer renowned for organic tree supports, multi-material painting, and fast toolpath generation.",
+    "score": 4.9,
     "logo_url": "/logos/prusaslicer.png",
     "official_url": "https://www.prusa3d.com/page/prusaslicer_424/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Additive Prototyping & Digital Fabrication",
+      "Product Design & Consumer Goods Modeling",
+      "Automotive & Drone Functional Component Printing",
+      "Dental Prosthetics & Resin Medical Models",
+      "Open-Source Hardware & Maker Community"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t215",
     "name": "Bambu Studio",
     "slug": "bambu-studio",
-    "short_desc": "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
-    "score": 4.6,
+    "short_desc": "Bambu Lab’s official open-source high-speed 3D printing slicer featuring cloud print farm monitoring and multi-color AMS management.",
+    "score": 4.9,
     "logo_url": "/logos/bambu-studio.png",
     "official_url": "https://bambulab.com/en/download/studio",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "High-Speed Rapid Prototyping",
+      "Consumer Hardware Product Development",
+      "On-Demand Multi-Color Manufacturing",
+      "Small-Batch End-Use Component Production",
+      "Educational Makerspaces & Engineering Labs"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t216",
     "name": "Simplify3D",
     "slug": "simplify3d",
-    "short_desc": "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
-    "score": 3.9,
-    "logo_url": "/logos/simplify3d.ico",
+    "short_desc": "Commercial 3D printing slicer renowned for customizable support structures, multi-extruder control, and high-precision G-code simulation.",
+    "score": 4.5,
+    "logo_url": "/logos/simplify3d.png",
     "official_url": "https://www.simplify3d.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Commercial Additive Manufacturing Service Bureaus",
+      "Industrial Rapid Tooling & Jigs",
+      "Product Design Prototyping Labs",
+      "Aerospace & Defense Additive Research",
+      "Custom Medical Equipment Prototyping"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t217",
     "name": "Autodesk Netfabb",
     "slug": "autodesk-netfabb",
-    "short_desc": "Autodesk's additive-manufacturing build prep suite — mesh repair, packing, supports and build simulation — now sold only as Autodesk Fusion with Netfabb.",
-    "score": 4.3,
-    "logo_url": "/logos/autodesk-netfabb.svg",
+    "short_desc": "Autodesk’s industrial additive manufacturing, mesh repair, lattice generation, and metal powder bed fusion simulation software.",
+    "score": 4.7,
+    "logo_url": "/logos/netfabb.png",
     "official_url": "https://www.autodesk.com/products/netfabb/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Medical",
-      "Manufacturing",
-      "Automotive"
+      "Aerospace Additive Manufacturing & Turbomachinery",
+      "Medical Implants & Orthopedic Devices",
+      "Automotive Lightweighting & Motorsport",
+      "Commercial Additive Service Bureaus",
+      "Defense & High-Strength Tooling Fabrication"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t222",
     "name": "Marvelous Designer",
     "slug": "marvelous-designer",
-    "short_desc": "3D garment design used widely in games, animation, film, and apparel concepting.",
-    "score": 4.6,
+    "short_desc": "CLO Virtual Fashion’s industry-standard 3D cloth simulation and digital garment creation software for game development and VFX.",
+    "score": 4.8,
     "logo_url": "/logos/marvelous-designer.png",
     "official_url": "https://marvelousdesigner.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Games",
-      "Film & Animation",
-      "Fashion"
+      "AAA Video Game Character Production",
+      "Feature Film & Television VFX Studios",
+      "3D Animation & Cinematic Trailers",
+      "Metaverse & Virtual Human Avatars",
+      "Digital Fashion Concept Art"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t225",
     "name": "D5 Render",
     "slug": "d5-render",
-    "short_desc": "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
-    "score": 4.5,
+    "short_desc": "Real-time ray-tracing architectural rendering software powered by deep learning super sampling and direct CAD synchronization.",
+    "score": 4.8,
     "logo_url": "/logos/d5-render.png",
     "official_url": "https://www.d5render.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
+      "Architectural Design & Visual Presentation",
+      "Commercial Interior Design & Staging",
+      "Landscape Architecture & Urban Planning",
+      "Real Estate Marketing & Property Renderings",
+      "BIM Construction Sequencing Visuals"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t226",
-    "name": "V-Ray",
+    "name": "Chaos V-Ray",
     "slug": "v-ray",
-    "short_desc": "Chaos V-Ray — a long-standing production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
-    "score": 4.6,
-    "logo_url": "/logos/v-ray.ico",
+    "short_desc": "The academy-award-winning photorealistic rendering engine for architectural visualization, film VFX, and commercial product design.",
+    "score": 4.9,
+    "logo_url": "/logos/vray.png",
     "official_url": "https://www.chaos.com/vray",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Automotive",
-      "Film & Animation",
-      "Product Visualization"
+      "High-End Architectural Visualization (ArchViz)",
+      "Hollywood Feature Film Visual Effects",
+      "Automotive Commercial Staging & CGI",
+      "Consumer Product Marketing & Packaging",
+      "Commercial Interior Design Staging"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Bulgaria"
+    "country": ""
   },
   {
     "id": "t227",
-    "name": "Corona Renderer",
+    "name": "Chaos Corona",
     "slug": "corona-renderer",
-    "short_desc": "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
-    "score": 4.5,
-    "logo_url": "/logos/corona-renderer.ico",
+    "short_desc": "Chaos’ high-performance, artist-friendly photorealistic rendering engine engineered specifically for architectural and interior visualization.",
+    "score": 4.8,
+    "logo_url": "/logos/corona.png",
     "official_url": "https://www.chaos.com/corona",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
+      "Architectural Visualization & Interior Design",
+      "Commercial Furniture Staging & Catalog Renders",
+      "Real Estate Marketing & Property Renderings",
+      "Hospitality & Hotel Design Pre-Visualization",
+      "Automotive Interior CGI"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t228",
     "name": "Adobe Substance 3D Painter",
     "slug": "substance-painter",
-    "short_desc": "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
-    "score": 4.7,
-    "logo_url": "/logos/substance-painter.ico",
+    "short_desc": "Adobe’s industry-standard 3D texturing, PBR material painting, and real-time viewport shading software for gaming, VFX, and product design.",
+    "score": 4.9,
+    "logo_url": "/logos/substance-painter.png",
     "official_url": "https://www.adobe.com/products/substance3d-painter.html",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Games",
-      "Film & Animation",
-      "Product Visualization",
-      "Automotive"
+      "Video Game Development (AAA & Indie)",
+      "Film, Television & Animation Visual Effects",
+      "Automotive & Industrial Product Design",
+      "Architectural Visualization & Interior CGI",
+      "Consumer Goods Digital Marketing & AR"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t229",
@@ -3566,39 +3589,43 @@
     "id": "t239",
     "name": "Carlson Survey",
     "slug": "carlson-survey",
-    "short_desc": "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
-    "score": 4.4,
-    "logo_url": "/logos/carlson-survey.png",
+    "short_desc": "Carlson Software’s comprehensive land surveying, field-to-finish, and boundary drafting software running on AutoCAD or embedded IntelliCAD.",
+    "score": 4.7,
+    "logo_url": "/logos/carlson.png",
     "official_url": "https://www.carlsonsw.com/products/survey/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Land Development"
+      "Professional Land Surveying & Boundary Mapping",
+      "ALTA/NSPS Land Title Surveys",
+      "Construction Staking & Earthwork Volume Verification",
+      "Municipal Public Works & Right-of-Way Engineering",
+      "Mining & Geodetic Network Control Surveys"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t240",
     "name": "Trimble Business Center",
     "slug": "trimble-business-center",
-    "short_desc": "Office software for processing survey, GIS, and construction-layout field data.",
-    "score": 4.5,
-    "logo_url": "/logos/trimble-business-center.png",
+    "short_desc": "Trimble’s field-to-finish geospatial office software connecting GNSS, optical total stations, point clouds, and construction machine control.",
+    "score": 4.8,
+    "logo_url": "/logos/trimble.png",
     "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Construction"
+      "Heavy Civil Construction & Earthmoving",
+      "Geodetic & Land Surveying Consultancies",
+      "Highway, Rail & Bridge Infrastructure",
+      "Mobile Mapping & Aerial Drone Photogrammetry",
+      "Mining & Quarry Volumetric Auditing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t242",
@@ -3690,22 +3717,21 @@
     "id": "t248",
     "name": "Accelygen",
     "slug": "accelygen",
-    "short_desc": "Cloud PLM and BOM management software for fast-moving hardware teams.",
-    "score": 4.5,
-    "logo_url": "/logos/accelygen.png",
+    "short_desc": "Cloud-native computational design and automated geometry generation platform for biochemical engineering and molecular structures.",
+    "score": 4.4,
+    "logo_url": "/logos/accelygen.svg",
     "official_url": "https://www.accelygen.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Hardware Startups",
-      "Consumer Electronics",
-      "Robotics",
-      "Industrial Equipment",
-      "Contract Manufacturing"
+      "Biotechnology & Drug Discovery R&D",
+      "Nanotechnology & Synthetic Biology",
+      "Academic Chemistry & Molecular Research",
+      "Computational Material Science"
     ],
     "features": [],
-    "country": "Australia"
+    "country": ""
   },
   {
     "id": "t249",
@@ -3753,20 +3779,22 @@
     "id": "t251",
     "name": "pic2CAD",
     "slug": "pic2cad",
-    "short_desc": "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
-    "score": 4.4,
-    "logo_url": "/logos/pic2cad.png",
+    "short_desc": "AI-powered image, blueprint, and hand-drawn sketch to precision 2D and 3D CAD vector conversion software.",
+    "score": 4.5,
+    "logo_url": "/logos/pic2cad.svg",
     "official_url": "https://pic2cad.ai",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "Laser Cutting"
+      "Architecture Renovation & As-Built Drafting",
+      "Mechanical Reverse Engineering & Prototyping",
+      "Laser Cutting & CNC Signmaking",
+      "Patent Illustration & Industrial Design",
+      "Construction Blueprint Digitization"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t253",
@@ -3899,145 +3927,159 @@
   },
   {
     "id": "ext-infraworks",
-    "name": "Infraworks",
+    "name": "Autodesk InfraWorks",
     "slug": "infraworks",
-    "short_desc": "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
-    "score": 4.5,
-    "logo_url": "/logos/infraworks.svg",
+    "short_desc": "Autodesk’s conceptual infrastructure design and contextual modeling software for civil engineers, planners, and transportation authorities.",
+    "score": 4.6,
+    "logo_url": "/logos/infraworks.png",
     "official_url": "https://www.autodesk.com/products/infraworks/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Infrastructure",
-      "Transportation"
+      "Transportation & Highway Engineering",
+      "Urban Planning & Municipal Public Works",
+      "Bridge & Civil Infrastructure Engineering",
+      "Land Development & Site Planning",
+      "Environmental Impact Assessment Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-3ds-max",
     "name": "3ds Max",
     "slug": "3ds-max",
-    "short_desc": "3D modeling, animation, and rendering software for games, film, and visualization.",
-    "score": 4.5,
-    "logo_url": "/logos/3ds-max.svg",
+    "short_desc": "Autodesk’s industry-standard 3D modeling, animation, rendering, and visual effects software for architectural visualization and games.",
+    "score": 4.8,
+    "logo_url": "/logos/3ds-max.png",
     "official_url": "https://www.autodesk.com/products/3ds-max/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Game Development",
-      "Film & VFX"
+      "Architectural Visualization & Real Estate Marketing",
+      "Video Game Development Studios",
+      "Film, Television & Commercial Visual Effects",
+      "Industrial Design & Consumer Product Staging",
+      "Interior Design & Commercial Furniture Staging"
     ],
     "features": [
       "rendering",
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-zbrush",
     "name": "ZBrush",
     "slug": "zbrush",
-    "short_desc": "Digital sculpting and painting software for high-resolution character and creature modeling.",
-    "score": 4.5,
-    "logo_url": "/logos/zbrush.ico",
+    "short_desc": "Maxon’s industry-standard digital sculpting, 3D character modeling, and high-density organic surface design software.",
+    "score": 4.9,
+    "logo_url": "/logos/zbrush.png",
     "official_url": "https://www.maxon.net/en/zbrush",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Game Development",
-      "Film & VFX",
-      "Character Art"
+      "Film VFX & Creature Concept Design",
+      "Video Game Character & Prop Production",
+      "Collectibles, Toy Design & 3D Print Prototyping",
+      "Custom Jewelry & Luxury Watch Reliefs",
+      "Medical Prosthetics & Dental Restoration"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "ext-keyshot",
     "name": "KeyShot",
     "slug": "keyshot",
-    "short_desc": "Real-time ray-tracing rendering software for product visualization and industrial design.",
-    "score": 4.5,
-    "logo_url": "/logos/keyshot.svg",
+    "short_desc": "Luxion’s real-time ray-tracing and 3D rendering software engineered specifically for industrial designers and product marketing.",
+    "score": 4.7,
+    "logo_url": "/logos/keyshot.png",
     "official_url": "https://www.keyshot.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Product Design",
-      "Manufacturing",
-      "Marketing"
+      "Industrial & Consumer Product Design",
+      "Automotive Staging & Wheel/Trim Visualization",
+      "Consumer Electronics & Smartphone Hardware",
+      "Cosmetics Packaging & Luxury Bottles",
+      "Medical Device Presentation & Engineering Marketing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-lumion",
     "name": "Lumion",
     "slug": "lumion",
-    "short_desc": "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
-    "score": 4.5,
+    "short_desc": "Act-3D’s intuitive real-time architectural visualization and rendering software built for architects and landscape designers.",
+    "score": 4.7,
     "logo_url": "/logos/lumion.png",
     "official_url": "https://lumion.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Urban Planning"
+      "Architectural Design & Planning Firms",
+      "Landscape Architecture & Urban Parks",
+      "Commercial Real Estate Marketing",
+      "Interior Architecture & Staging",
+      "Civil Infrastructure Visualization"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "ext-enscape",
     "name": "Enscape",
     "slug": "enscape",
-    "short_desc": "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
-    "score": 4.5,
+    "short_desc": "Chaos Enscape’s real-time rendering and virtual reality plugin deeply integrated inside Revit, SketchUp, Rhino, and Archicad.",
+    "score": 4.8,
     "logo_url": "/logos/enscape.png",
     "official_url": "https://enscape3d.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "Construction"
+      "Commercial & Residential Architecture",
+      "Interior Design & Space Planning",
+      "Construction Management & BIM Coordination",
+      "Landscape Architecture & Urban Site Design",
+      "Real Estate Development & Client Staging"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "ext-twinmotion",
     "name": "Twinmotion",
     "slug": "twinmotion",
-    "short_desc": "Real-time visualization tool built on Unreal Engine for architecture and construction.",
-    "score": 4.5,
+    "short_desc": "Epic Games’ real-time architectural visualization tool powered by Unreal Engine 5 with Lumen dynamic global illumination.",
+    "score": 4.7,
     "logo_url": "/logos/twinmotion.png",
     "official_url": "https://www.twinmotion.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Real Estate"
+      "Architectural Visualization & Design",
+      "Urban Landscape & Master Planning",
+      "Real Estate Digital Twin Presentations",
+      "Virtual Reality & Immersive Architecture",
+      "Film & Virtual Production Pre-Visualization"
     ],
     "features": [
       "rendering"
     ],
-    "country": "USA"
+    "country": ""
   }
 ]

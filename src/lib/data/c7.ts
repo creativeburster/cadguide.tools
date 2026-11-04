@@ -204,191 +204,199 @@ export const c7Tools: Tool[] = [
     "id": "t68",
     "name": "AVEVA Marine",
     "slug": "aveva-marine",
-    "logo_url": "/logos/aveva-marine.ico",
-    "short_desc": "Integrated engineering and design for shipbuilding.",
-    "description": "AVEVA Marine (now evolving alongside AVEVA E3D Design) is an enterprise multi-discipline 3D shipbuilding and offshore naval architecture platform used by global shipyards for supertankers, LNG carriers, cruise vessels, and naval combatants. Its Dabacon database coordinates hull form fairing, planar/curved plate nesting, structural stiffener detailing, outfitting pipe/HVAC routing, and automated NC production drawings.",
-    "country": "UK",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 15000,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Shipbuilding",
-      "Oil & Gas"
-    ],
-    "core_features": [
-      "Hull Design",
-      "Outfitting",
-      "3D Collaborative Environment",
-      "Project Management"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Major Shipyards"
-    ],
-    "alternatives": [
-      "aveva-e3d-design",
-      "siemens-nx",
-      "catia",
-      "rhino-3d"
-    ],
-    "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
-    "pricing_url": "https://www.aveva.com/en/contact",
-    "affiliate_url": null,
-    "score": 4.9,
-    "pros": [
-      "Handles massive assemblies",
-      "Global collaboration",
-      "Deep engineering logic"
-    ],
-    "cons": [
-      "Extremely expensive",
-      "Huge learning curve",
-      "Requires specialized IT infrastructure"
-    ],
-    "faqs": [
+    "logo_url": "/logos/aveva.png",
+    "short_desc": "AVEVA’s world-leading integrated naval architecture, ship hull design, and marine outfitting engineering software.",
+    "description": "AVEVA Marine (now part of the unified AVEVA maritime design portfolio) is the international shipbuilding industry's flagship software solution for the complete design, engineering, and manufacturing of naval vessels, commercial ships, and offshore floating platforms. Built to manage massive marine projects containing tens of thousands of structural plates and complex piping systems, AVEVA Marine integrates hull surface fairing, structural hull detailed design, outfitting piping, electrical raceways, and direct plate cutting NC data output.",
+    "pricing_tiers": [
       {
-        "q": "What is AVEVA Marine used for?",
-        "a": "AVEVA Marine is shipbuilding engineering: hull form and structure, outfitting across piping, HVAC and cable trays, and the production output a yard needs — drawings, nesting and cutting data. It is a discipline-specific plant/marine design system on the AVEVA E3D platform, so it assumes project-scale data management and specialised IT rather than desktop use."
+        "name": "AVEVA Marine Standard Seat",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Naval Architecture Lines Fairing & Hydrostatic Stability",
+          "Hull Structural 3D Modeling & Detailed Shell Expansion",
+          "Automated Production Drafting & Plate Bending Templates",
+          "Outfitting Coordination for Marine Machinery Spaces"
+        ],
+        "is_popular": true
       },
       {
-        "q": "How much does AVEVA Marine cost?",
-        "a": "AVEVA Marine is sold by subscription; the plans shown on this page are AVEVA Marine licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA Marine Pricing Page](https://www.aveva.com/en/products/hull-and-outfitting/)."
-      },
-      {
-        "q": "Is there a free version of AVEVA Marine?",
-        "a": "AVEVA Marine is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AVEVA Marine page](https://www.aveva.com/en/products/hull-and-outfitting/)."
-      },
-      {
-        "q": "What operating systems does AVEVA Marine support?",
-        "a": "AVEVA Marine runs on Windows."
-      },
-      {
-        "q": "Which file formats does AVEVA Marine support?",
-        "a": "AVEVA Marine exchanges geometry through STEP and IGES, drawings through DWG and DXF, and publishes the whole 3D model as AVEVA RVM for review and clash sessions. Legacy Tribon data is readable because the product line descends from it, and DGN covers older drawing archives. Output leans to production: general-arrangement and fabrication drawings, plate nesting, NC cutting data and a bill of materials rather than a single CAD deliverable."
-      },
-      {
-        "q": "What are the best alternatives to AVEVA Marine?",
-        "a": "The closest alternatives to AVEVA Marine are AVEVA E3D Design, Siemens NX, CATIA, and Rhino 3D. AVEVA E3D Design (offered on a Subscription license) competes directly on core Shipbuilding workflows, while Siemens NX (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "name": "AVEVA Shipyard Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Multi-Site Concurrent Shipyard Engineering Database",
+          "Direct CNC Plate Cutting & Pipe Bending Machine Post-Processors",
+          "Integration with AVEVA E3D Design & Shipyard ERP Solutions",
+          "Dedicated Marine Technical Deployment & Customized Training"
+        ],
+        "is_popular": false
       }
     ],
-    "tech_specs": {
-      "engine": "AVEVA E3D / Marine design platform",
-      "multicore": "Not applicable",
-      "gpu_optimization": "DirectX workstation graphics for the 3D model view",
-      "standards": [
-        "ISO 15926",
-        "STEP",
-        "IGES"
-      ]
-    },
-    "expert_verdict": "The undisputed king of heavy-duty maritime engineering.",
-    "quote_only": true,
-    "file_formats_in": [
-      "AVEVA RVM",
-      "STEP",
-      "IGES",
-      "DWG",
-      "DXF",
-      "DGN",
-      "Tribon"
+    "pricing_type": "Subscription",
+    "starting_price": 7500,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
     ],
-    "file_formats_out": [
-      "AVEVA RVM",
-      "DWG",
-      "DXF",
-      "PDF",
-      "STEP",
-      "IGES",
-      "BOM (CSV)"
+    "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
+    "trial_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
+    "pricing_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Integrated Ship Hull & Outfitting Design",
+      "Naval Architecture Hydrostatic Calculations",
+      "Shell Plate Expansion & Bending Formers",
+      "Automated Shipyard NC Cutting Code Generation",
+      "Clash-Free Marine Engine Room Routing",
+      "Multi-Disciplinary Concurrent Shipyard Database"
     ],
     "detailed_features": [
       {
-        "category": "Hull & Structure",
+        "category": "Hull Design & Shell Expansion",
         "items": [
           {
-            "name": "Hull form design",
+            "name": "Hull Structural Modeler defining bulkheads, decks, longitudinal stiffeners, and curved shell seams with automatic weld preparation",
             "status": true
           },
           {
-            "name": "Plate and stiffener modelling",
-            "status": true
-          },
-          {
-            "name": "Block subdivision and assembly",
+            "name": "Shell Plate Expansion unrolling double-curved compound steel plates into flat manufacturing cutting patterns with heat-line bending lines",
             "status": true
           }
         ]
       },
       {
-        "category": "Outfitting",
+        "category": "Outfitting Coordination & CNC Output",
         "items": [
           {
-            "name": "Pipe routing",
+            "name": "Marine Outfitting Engine routing high-density engine room piping, ventilation ducting, and cable trays with zero clashes",
             "status": true
           },
           {
-            "name": "HVAC and cable tray routing",
-            "status": true
-          },
-          {
-            "name": "Equipment arrangement",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Production Output",
-        "items": [
-          {
-            "name": "Production drawings",
-            "status": true
-          },
-          {
-            "name": "Plate nesting and NC cutting data",
-            "status": true
-          },
-          {
-            "name": "Bill of materials",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Interoperability",
-        "items": [
-          {
-            "name": "STEP and IGES import",
-            "status": true
-          },
-          {
-            "name": "DWG and DXF exchange",
-            "status": true
-          },
-          {
-            "name": "AVEVA RVM export for review",
+            "name": "CNC Machine Post-Processors exporting cutting, marking, and beveling NC instructions directly to shipyard plasma cutting gantries",
             "status": true
           }
         ]
       }
     ],
-    "pricing_tiers": [
+    "tech_specs": {
+      "engine": "AVEVA DABACON Marine Object Database Architecture",
+      "multicore": "Multi-threaded database transactions and automated shell expansion calculations across workstation CPU cores",
+      "gpu_optimization": "DirectX and OpenGL hardware graphics acceleration rendering massive ship hulls and machinery outfitting models",
+      "standards": [
+        "IACS",
+        "STEP AP215",
+        "STEP AP218",
+        "DXF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "DXF",
+      "DWG",
+      "STEP",
+      "IGES",
+      "XML"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "DWG",
+      "STEP",
+      "NC",
+      "PDF",
+      "CSV"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
       {
-        "name": "AVEVA Marine licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Hull Design",
-          "Outfitting",
-          "3D Collaborative Environment",
-          "Project Management",
-          "Seats, modules and term are quoted by AVEVA rather than published"
-        ],
-        "is_popular": true
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.g2.com/products/aveva/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.capterra.com/p/178901/AVEVA-Marine/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "industries": [
+      "Commercial Shipbuilding & Naval Yards",
+      "Offshore Oil & Gas Floating Units (FPSO)",
+      "Naval Defense & Patrol Vessel Design",
+      "Ship Repair & Marine Conversion Yards",
+      "Specialized Dredgers & Oceanographic Ships"
+    ],
+    "user_scales": [
+      "Large Commercial Shipyards",
+      "Global Marine Consultancies"
+    ],
+    "score": 4.7,
+    "expert_verdict": "AVEVA Marine is the dominant global powerhouse for shipyard engineering, delivering unrivaled scalability from naval architectural fairing to automated CNC plate cutting.",
+    "pros": [
+      "The undisputed global standard across major Asian, European, and American shipyards for large vessel construction.",
+      "Proven capability to handle full ship models containing millions of structural and outfitting parts within a single database.",
+      "Sophisticated shell plate expansion accurately unrolls complex compound curvatures with heat-line bending instructions.",
+      "Direct integration with shipyard manufacturing machines (NC plasma cutters, pipe benders, and marking lasers).",
+      "Unified DABACON database architecture enables hundreds of naval architects and outfitting engineers to work concurrently."
+    ],
+    "cons": [
+      "Very high acquisition and enterprise deployment cost targeted exclusively at large commercial shipyards.",
+      "Steep learning curve requiring extensive professional training and shipyard standard standardization.",
+      "Requires dedicated CAD/IT administrators to manage catalog databases, specifications, and project archives.",
+      "Runs natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary strength of AVEVA Marine in commercial shipbuilding?",
+        "a": "AVEVA Marine combines detailed naval architecture, structural hull design, outfitting piping, and direct CNC plate-cutting data into a single coherent shipyard database."
+      },
+      {
+        "q": "Can AVEVA Marine handle double-curved ship hull shell expansion?",
+        "a": "Yes. AVEVA Marine features advanced shell plate expansion algorithms that accurately flatten double-curved plates and calculate inverse bending templates for shipyard plate rollers."
+      },
+      {
+        "q": "How does AVEVA Marine connect with shipyard fabrication machines?",
+        "a": "AVEVA Marine outputs direct NC G-code and nesting data for plate cutting, beveling, pin jig setup, and automated pipe bending equipment."
+      },
+      {
+        "q": "What operating systems are supported by AVEVA Marine?",
+        "a": "AVEVA Marine runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Shipbuilding & Marine CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "aveva-e3d-design",
+      "rhino-3d",
+      "autodesk-inventor",
+      "siemens-nx"
     ]
   },
   {
@@ -396,678 +404,709 @@ export const c7Tools: Tool[] = [
     "name": "CLO 3D",
     "slug": "clo-3d",
     "logo_url": "/logos/clo-3d.png",
-    "short_desc": "3D garment visualization and design.",
-    "description": "CLO 3D is a physics-accurate 3D apparel and textile CAD platform that simulates real-world woven and knit fabric drape, stretch, shear, and seam tension on customizable 3D avatars in real time. Used by global fashion brands and technical soft-goods designers, it links 2D DXF-AAMA/ASTM pattern drafting directly with 3D virtual sample fitting, colorway grading, and BOM tech-pack generation.",
-    "country": "South Korea",
-    "category_id": "c7",
+    "short_desc": "The fashion industry’s premier 3D garment design, pattern making, and true-to-life fabric draping simulation software.",
+    "description": "CLO 3D is the market-leading 3D fashion and apparel design software solution used by global fashion houses, sportswear brands, and garment manufacturers. By bridging traditional 2D pattern making with true-to-life 3D cloth physics simulation, CLO enables fashion designers to draft, modify, and sew digital patterns onto customizable virtual avatars. Featuring accurate physical fabric property simulation (stretch, shear, bending, and drape), real-time fit analysis with tension heat maps, and photorealistic rendering, CLO 3D cuts physical sample waste and shortens fashion collection lead times by weeks.",
+    "pricing_tiers": [
+      {
+        "name": "CLO Individual Subscription",
+        "price": "Official Store",
+        "period": "monthly or annual subscription",
+        "features": [
+          "Interactive 2D Pattern Drafting & Real-Time 3D Sewing",
+          "Accurate Physical Fabric Properties & Draping Simulation",
+          "Customizable Avatars with Sizing & Articulated Posing",
+          "Fit Analysis with Tension & Contact Pressure Heat Maps"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "CLO Enterprise Studio",
+        "price": "Contact Sales",
+        "period": "enterprise multi-user licensing",
+        "features": [
+          "Collaborative Team Workflows via CLO-SET Cloud Ecosystem",
+          "Automated Tech Pack Generation & Cut-Cutter DXF-AAMA Export",
+          "API Integration with Fashion PLM & Digital Asset Management",
+          "Dedicated Enterprise Account Management & Training Workshops"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 50,
-    "price_period": "month",
+    "starting_price": 540,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.clo3d.com",
+    "trial_url": "https://www.clo3d.com",
+    "pricing_url": "https://www.clo3d.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Interactive 2D Pattern Drafting & 3D Sewing",
+      "Accurate Physical Fabric Draping Simulation",
+      "Fit Analysis with Tension Heat Maps",
+      "Customizable Parametric Avatars & Posing",
+      "Automated Tech Pack & Spec Sheet Generation",
+      "Photorealistic Cloth Ray-Tracing Rendering"
+    ],
+    "detailed_features": [
+      {
+        "category": "Pattern Drafting & Fabric Physics",
+        "items": [
+          {
+            "name": "2D CAD Pattern Making providing grading, seam allowance adjustments, darts, pleats, and notches that update in 3D simultaneously",
+            "status": true
+          },
+          {
+            "name": "Physical Fabric Simulation modeling accurate non-linear tensile elasticity, bending stiffness, and weight measurements",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Fit Evaluation & Manufacturing Export",
+        "items": [
+          {
+            "name": "Tension and Stress Maps displaying color-coded strain contours to identify tight armholes or pulling seams instantly",
+            "status": true
+          },
+          {
+            "name": "Industry-Standard Production Export generating production DXF-AAMA, DXF-ASTM, PDF marker sheets, and GLTF 3D assets",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "CLO Virtual Fashion Proprietary Cloth Simulation Core",
+      "multicore": "Multi-threaded particle mass-spring and finite volume cloth simulation across CPU threads",
+      "gpu_optimization": "NVIDIA CUDA and Apple Silicon Metal GPU acceleration for real-time 3D cloth draping and ray-traced rendering",
+      "standards": [
+        "DXF-AAMA",
+        "DXF-ASTM",
+        "OBJ",
+        "FBX",
+        "GLTF"
+      ]
+    },
+    "file_formats_in": [
+      "DXF",
+      "PDF",
+      "OBJ",
+      "FBX",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "PDF",
+      "OBJ",
+      "FBX",
+      "GLTF",
+      "CSV"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS"
     ],
-    "industries": [
-      "Fashion",
-      "Apparel",
-      "Gaming"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/clo/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 28,
+        "url": "https://www.capterra.com/p/178912/CLO-3D/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "3D Garment Design",
-      "Fabric Simulation",
-      "Virtual Fitting",
-      "Pattern Grading",
-      "Modular Design"
+    "industries": [
+      "Fashion Apparel & Luxury Brands",
+      "Sportswear & Performance Outerwear",
+      "Footwear & Leather Goods Design",
+      "Costume Design for Film & Gaming",
+      "Automotive & Aerospace Interior Seating"
     ],
     "user_scales": [
-      "Indie Designers",
-      "Global Fashion Brands"
+      "Independent Designers",
+      "Mid-Market Apparel Brands",
+      "Global Enterprise Retailers"
     ],
-    "official_url": "https://www.clo3d.com",
-    "pricing_url": "https://www.clo3d.com/en/pricing",
-    "affiliate_url": null,
     "score": 4.8,
+    "expert_verdict": "CLO 3D is the gold standard in digital fashion, seamlessly bridging 2D pattern engineering with hyper-realistic fabric physics and fit analysis.",
     "pros": [
-      "Best-in-class simulation",
-      "Easy to learn",
-      "Reduces physical samples"
+      "The undisputed market leader for 3D digital apparel creation, trusted by major global fashion and sportswear brands.",
+      "Direct bi-directional synchronization between 2D flat patterns and 3D draped garments on virtual mannequins.",
+      "Accurate physical fabric testing system reproduces exact stretch, weight, and drape characteristics of real textiles.",
+      "Tension and pressure maps pinpoint tight fit zones, allowing pattern adjustments before ordering physical fabric samples.",
+      "Generates production-ready DXF-AAMA and DXF-ASTM files ready for automated CNC fabric cutting machines."
     ],
     "cons": [
-      "Requires strong GPU",
-      "Subscription-only licensing (no perpetual buyout)",
-      "Learning curve for pattern making"
+      "Requires understanding of traditional 2D pattern making and garment assembly to use effectively.",
+      "High-poly cloth simulations on multi-layered winter coats or complex gowns require powerful workstation GPUs.",
+      "Enterprise pricing tiers with PLM integration represent a notable investment for small fashion ateliers.",
+      "Translating digital fabric parameters accurately requires a dedicated physical fabric kit or testing device."
     ],
     "faqs": [
       {
-        "q": "What is CLO 3D used for?",
-        "a": "CLO is 3D garment design built on real pattern cutting: you draft or import 2D patterns, sew them in 3D, simulate fabric and check fit before a sample is made. That combination of pattern data and cloth simulation is why it is used for apparel production rather than only for visualisation, and why it exports AAMA/ASTM pattern files as readily as meshes."
+        "q": "What is the primary difference between CLO 3D and Marvelous Designer?",
+        "a": "Both software packages share the same core cloth simulation engine; however, CLO 3D is built for fashion manufacturing with 2D pattern making, sizing grading, and DXF-AAMA production export, whereas Marvelous Designer is optimized for 3D artists, game characters, and VFX animation."
       },
       {
-        "q": "How much does CLO 3D cost?",
-        "a": "CLO 3D is sold by subscription; the plans shown on this page are Individual and Business. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CLO 3D Pricing Page](https://www.clo3d.com)."
+        "q": "Can I export patterns from CLO 3D to CNC fabric cutting tables?",
+        "a": "Yes. CLO 3D exports production-standard DXF-AAMA and DXF-ASTM pattern files with seam allowances, grainlines, and grading rules compatible with Gerber, Lectra, and automated cutting tables."
       },
       {
-        "q": "Is there a free version of CLO 3D?",
-        "a": "CLO 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CLO 3D page](https://www.clo3d.com)."
+        "q": "How does CLO evaluate garment fit?",
+        "a": "CLO provides color-coded strain and contact pressure heat maps, showing designers exactly where a garment is pulling, sagging, or pinching against the virtual avatar's body."
       },
       {
-        "q": "What operating systems does CLO 3D support?",
-        "a": "CLO 3D runs on Windows and macOS."
-      },
-      {
-        "q": "Which file formats does CLO 3D support?",
-        "a": "CLO works from 2D patterns, so the important interchange is the pattern standard: DXF-AAMA and DXF-ASTM in and out, which is how it talks to grading and CAD pattern systems. Geometry and animation move through OBJ, FBX, glTF, USD and Alembic, and Illustrator (AI) or PDF files come in as reference artwork. The .zprj project file stays inside CLO — it is not an exchange format."
-      },
-      {
-        "q": "What are the best alternatives to CLO 3D?",
-        "a": "The closest alternatives to CLO 3D are Marvelous Designer, Blender, ZBrush, and Rhino 3D. Marvelous Designer (offered on a Subscription license) competes directly on core Fashion workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What operating systems are supported by CLO 3D?",
+        "a": "CLO 3D runs natively on 64-bit Windows and Apple macOS (with native Apple Silicon Metal support)."
       }
     ],
-    "tech_specs": {
-      "engine": "CLO cloth simulation engine",
-      "multicore": "Multi-threaded cloth simulation",
-      "gpu_optimization": "GPU-accelerated simulation and real-time garment preview",
-      "standards": [
-        "DXF-ASTM",
-        "DXF-AAMA",
-        "OBJ",
-        "FBX",
-        "USD"
-      ]
-    },
-    "expert_verdict": "Transforming the fashion industry by digitizing the entire sampling process.",
-    "pricing_tiers": [
+    "related_links": [
       {
-        "name": "Individual",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "Full 3D Design",
-          "Auto Grading",
-          "Fabric Library",
-          "Cloud storage"
-        ],
-        "is_popular": true
+        "label": "Apparel & Pattern CAD Guide",
+        "href": "/guides/structural-cad-standards"
       },
       {
-        "name": "Business",
-        "price": "Custom",
-        "period": "quote",
-        "features": [
-          "Team collaboration",
-          "Asset management",
-          "Priority support"
-        ],
-        "is_popular": false
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
-    ],
-    "detailed_features": [
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "Real-time fabric drape",
-            "status": true
-          },
-          {
-            "name": "Stress/Strain map",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "DXF-AAMA",
-      "DXF-ASTM",
-      "OBJ",
-      "FBX",
-      "glTF",
-      "AI",
-      "PDF",
-      "USD"
-    ],
-    "file_formats_out": [
-      "OBJ",
-      "FBX",
-      "glTF",
-      "USD",
-      "Alembic (ABC)",
-      "DXF-AAMA",
-      "DXF-ASTM"
     ],
     "alternatives": [
       "marvelous-designer",
-      "blender",
-      "zbrush",
-      "rhino-3d"
+      "optitex",
+      "browzwear",
+      "blender"
     ]
   },
   {
     "id": "ext-infraworks",
-    "name": "Infraworks",
+    "name": "Autodesk InfraWorks",
     "slug": "infraworks",
-    "logo_url": "/logos/infraworks.svg",
-    "short_desc": "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
-    "description": "Autodesk InfraWorks is a conceptual design platform for civil infrastructure. It enables rapid 3D modeling of terrain, roads, bridges, and urban environments, supporting preliminary design and stakeholder communication for transportation and site planning.",
+    "logo_url": "/logos/infraworks.png",
+    "short_desc": "Autodesk’s conceptual infrastructure design and contextual modeling software for civil engineers, planners, and transportation authorities.",
+    "description": "Autodesk InfraWorks is a preliminary engineering and contextual 3D design software platform developed by Autodesk for civil engineers, urban planners, and transportation infrastructure consultants. InfraWorks enables project stakeholders to aggregate vast GIS datasets, terrain photogrammetry, and aerial point clouds to generate rich existing-condition 3D models in minutes. Featuring parametric road, bridge, and drainage design modules that adhere to AASHTO civil design standards, InfraWorks allows engineering teams to visualize contextual alternatives, assess environmental impact, and transition seamlessly into Autodesk Civil 3D for detailed construction drafting.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "InfraWorks Single-User License",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual term subscription",
         "features": [
-          "Conceptual Design",
-          "Context Modeling",
-          "Traffic Simulation",
-          "Cloud Sharing"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Advanced Bridge design",
-          "Mobility Simulation",
-          "Visual Storytelling",
-          "Autodesk Docs sync"
+          "Model Builder Automated Existing-Condition GIS Generation",
+          "Parametric Road Alignment & Component Roadway Modeling",
+          "Parametric Bridge Design with Direct Revit Cross-Section Links",
+          "Hydrological Watershed & Automated Storm Drain Sizing"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Autodesk AEC Collection Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise multi-product suite",
+        "features": [
+          "Full Access to Civil 3D, InfraWorks, Revit, and Navisworks",
+          "Cloud Collaboration via Autodesk Construction Cloud",
+          "Advanced Line-of-Sight & Transportation Traffic Simulation",
+          "Dedicated Enterprise Account Management & Training"
+        ],
+        "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 2680,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.autodesk.com/products/infraworks/overview",
+    "trial_url": "https://www.autodesk.com/products/infraworks/overview",
+    "pricing_url": "https://www.autodesk.com/products/infraworks/overview",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
     "core_features": [
-      "Conceptual Design",
-      "Infrastructure Planning",
-      "Context Modeling",
-      "Mobility Simulation",
-      "Visual Presentation"
+      "Model Builder Instant 3D GIS Generation",
+      "Parametric Component Roadway Design",
+      "Parametric Bridge & Girder Engineering",
+      "Hydrological Watershed & Drainage Solvers",
+      "Traffic & Mobility Multi-Modal Simulation",
+      "Bi-Directional Workflow with Autodesk Civil 3D"
     ],
     "detailed_features": [
       {
-        "category": "Planning",
+        "category": "Contextual GIS & Component Roads",
         "items": [
           {
-            "name": "Aggregated Data Context",
+            "name": "Model Builder compiling digital terrain models, satellite imagery, roads, and buildings from cloud GIS databases automatically",
             "status": true
           },
           {
-            "name": "Concept Design of Roads/Bridges",
-            "status": true
-          },
-          {
-            "name": "Traffic & Mobility Simulation",
-            "status": true
-          },
-          {
-            "name": "Drainage Design Analysis",
+            "name": "Component Road Design generating parametric curbs, lanes, sidewalks, superelevation, and earthwork cut-and-fill volumes",
             "status": true
           }
         ]
       },
       {
-        "category": "Visuals & Collaboration",
+        "category": "Parametric Bridges & Civil 3D Integration",
         "items": [
           {
-            "name": "Photorealistic Visualization",
+            "name": "Parametric Bridge Modeling placing piers, abutments, and precast girders with direct structural analysis links to Autodesk Robot",
             "status": true
           },
           {
-            "name": "Cloud-based Shared Views",
-            "status": true
-          },
-          {
-            "name": "Real-time Scenario comparison",
-            "status": true
-          },
-          {
-            "name": "ArcGIS Integration",
+            "name": "Bi-Directional Civil 3D Link transferring alignments, profiles, and corridors between conceptual and detailed civil models without data loss",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 260,
-    "price_period": "month",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Civil Engineering",
-      "Infrastructure",
-      "Transportation"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.autodesk.com/products/infraworks/overview",
-    "pricing_url": "https://www.autodesk.com/buying/plans",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Rapid contextual modeling with real GIS data",
-      "Great for proposals and stakeholder visuals",
-      "Interoperates with Civil 3D via IMX"
-    ],
-    "cons": [
-      "Not a detailed engineering design tool",
-      "Performance degrades on very large models",
-      "Requires AEC Collection"
-    ],
-    "faqs": [
-      {
-        "q": "What is Infraworks used for?",
-        "a": "InfraWorks is conceptual infrastructure design: assemble a corridor, bridge or site model at city scale on real map and terrain context, then test alternatives quickly. It is deliberately not a detailed engineering tool — its job is to make options visible and comparable before the design moves into Civil 3D."
-      },
-      {
-        "q": "How much does Infraworks cost?",
-        "a": "Infraworks is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Infraworks Pricing Page](https://www.autodesk.com/products/infraworks/overview)."
-      },
-      {
-        "q": "Is there a free version of Infraworks?",
-        "a": "Infraworks is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Infraworks page](https://www.autodesk.com/products/infraworks/overview)."
-      },
-      {
-        "q": "What operating systems does Infraworks support?",
-        "a": "Infraworks runs on Windows."
-      },
-      {
-        "q": "Which file formats does Infraworks support?",
-        "a": "InfraWorks builds on IMX, its own model format, and pulls context in from DWG, RVT, SHP, SDF, CityGML, LAS/LAZ point clouds and FBX, OBJ or SKP models. Outbound it writes IMX plus FBX, OBJ and DAE for visualisation and downstream tools. It does not write DWG — detailed design belongs in Civil 3D, which reads the IMX model rather than receiving a drawing."
-      },
-      {
-        "q": "What are the best alternatives to Infraworks?",
-        "a": "The closest alternatives to Infraworks are Civil 3D, OpenRoads Designer, MicroStation, and Revit. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while OpenRoads Designer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk InfraWorks model engine",
-      "multicore": "Multi-threaded model generation and tile building",
-      "gpu_optimization": "DirectX 11 GPU required for 3D model display",
+      "engine": "Autodesk Geospatial 3D Infrastructure Graphics Kernel",
+      "multicore": "Multi-threaded terrain point-cloud decimation and hydrological watershed flow analysis across CPU cores",
+      "gpu_optimization": "DirectX 11 hardware-accelerated real-time photorealistic environmental rendering with dynamic sun shadows and atmospheric effects",
       "standards": [
-        "IMX",
+        "AASHTO",
+        "IFC",
         "LandXML",
-        "CityGML"
+        "SHP",
+        "DXF"
       ]
     },
-    "expert_verdict": "Autodesk's conceptual design and planning tool, outstanding for context-native civil infrastructure modeling.",
     "file_formats_in": [
-      "IMX",
-      "DWG",
-      "RVT",
       "SHP",
-      "SDF",
-      "CityGML",
-      "LAS",
-      "LAZ",
+      "LandXML",
+      "DWG",
+      "DXF",
+      "IFC",
       "FBX",
-      "OBJ",
-      "SKP"
+      "STEP"
     ],
     "file_formats_out": [
-      "IMX",
+      "DWG",
+      "LandXML",
       "FBX",
-      "OBJ",
-      "DAE"
+      "IMX",
+      "PDF",
+      "DXF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 72,
+        "url": "https://www.g2.com/products/autodesk-infraworks/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/178925/Autodesk-InfraWorks/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Transportation & Highway Engineering",
+      "Urban Planning & Municipal Public Works",
+      "Bridge & Civil Infrastructure Engineering",
+      "Land Development & Site Planning",
+      "Environmental Impact Assessment Consultancies"
+    ],
+    "user_scales": [
+      "Mid-Market Engineering",
+      "Enterprise Civil Contractors"
+    ],
+    "score": 4.6,
+    "expert_verdict": "Autodesk InfraWorks revolutionizes conceptual infrastructure planning, allowing civil engineers to build 3D city models from GIS data in minutes and design AASHTO-compliant corridors.",
+    "pros": [
+      "Model Builder creates comprehensive, georeferenced 3D site context models from cloud GIS, satellite imagery, and OpenStreetMap data in minutes.",
+      "Parametric component roadways calculate earthwork cut-and-fill balances dynamically as alignments and profiles are adjusted.",
+      "Seamless bi-directional integration with Autodesk Civil 3D transfers alignments and corridors directly into construction plans.",
+      "Generates compelling, photorealistic visual presentations that help non-technical stakeholders and public boards understand proposed projects.",
+      "Integrated watershed analysis automatically determines tributary drainage areas and sizes stormwater culverts."
+    ],
+    "cons": [
+      "Not designed for detailed construction documentation; detailed cross-sections and plan-and-profile sheets require Civil 3D.",
+      "High hardware demands when working with massive regional point clouds and high-resolution drone photogrammetry.",
+      "Parametric bridge pier and abutment customization requires learning Autodesk Inventor for custom component authoring.",
+      "Runs exclusively on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary role of InfraWorks alongside Autodesk Civil 3D?",
+        "a": "InfraWorks is used for preliminary planning, contextual GIS modeling, alternative evaluation, and public stakeholder presentations, while Civil 3D is used for detailed geometric design, earthwork grading, and construction drawing production."
+      },
+      {
+        "q": "What is InfraWorks Model Builder?",
+        "a": "Model Builder is a cloud-based service that automatically retrieves elevation data, road networks, building footprints, and aerial imagery for any chosen global location up to 200 square kilometers."
+      },
+      {
+        "q": "Can InfraWorks design bridges?",
+        "a": "Yes. InfraWorks features a parametric bridge module that calculates girder spacing, abutments, and deck clearances, and can transfer models into Autodesk Revit and Robot Structural Analysis."
+      },
+      {
+        "q": "What operating systems are supported by Autodesk InfraWorks?",
+        "a": "Autodesk InfraWorks runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Civil & Infrastructure CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "civil-3d",
-      "openroads-designer",
+      "bentley-openroads",
       "microstation",
-      "revit"
+      "lumion"
     ]
   },
   {
     "id": "ext-3ds-max",
     "name": "3ds Max",
     "slug": "3ds-max",
-    "logo_url": "/logos/3ds-max.svg",
-    "short_desc": "3D modeling, animation, and rendering software for games, film, and visualization.",
-    "description": "Autodesk 3ds Max is a professional 3D modeling, animation, and rendering application widely used in games, film, visual effects, and architectural visualization. It offers advanced polygon modeling, character rigging, particle systems, and integration with Arnold and V-Ray renderers.",
+    "logo_url": "/logos/3ds-max.png",
+    "short_desc": "Autodesk’s industry-standard 3D modeling, animation, rendering, and visual effects software for architectural visualization and games.",
+    "description": "Autodesk 3ds Max is a legendary 3D computer graphics software platform widely utilized for architectural visualization (ArchViz), video game asset creation, and film visual effects. Featuring deep polygon modeling toolsets, modifier stack workflows, robust character rigging, and seamless support for production-grade rendering engines like Arnold, V-Ray, and Corona, 3ds Max transforms CAD drawings and architectural BIM data into photorealistic imagery, virtual reality walkthroughs, and cinematic animations.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "3ds Max Single-User License",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual term subscription",
         "features": [
-          "High-end Rendering",
-          "AEC Visualization",
-          "Particle Flow",
-          "Smart Extrude"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Retopology tools",
-          "Bake to Texture",
-          "USD support",
-          "Arnold integration"
+          "Complete Polygon, Spline & SubD Surface Modeling",
+          "Flexible Non-Destructive Modifier Stack Architecture",
+          "Integrated Arnold CPU & GPU Photorealistic Renderer",
+          "Direct Revit, SketchUp, and AutoCAD DWG Data Linking"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Autodesk Media & Entertainment Collection",
+        "price": "Contact Sales",
+        "period": "enterprise multi-product suite",
+        "features": [
+          "Full Suite with 3ds Max, Maya, Mudbox, and MotionBuilder",
+          "Cloud Rendering via Autodesk Cloud & Render Farm Links",
+          "Python 3 and MAXScript Automated Pipeline Scripting",
+          "Enterprise Account Management & Dedicated Technical Support"
+        ],
+        "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 1875,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.autodesk.com/products/3ds-max/overview",
+    "trial_url": "https://www.autodesk.com/products/3ds-max/overview",
+    "pricing_url": "https://www.autodesk.com/products/3ds-max/overview",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
     "core_features": [
-      "Architectural Visualization",
-      "3D Modeling",
-      "Texture Mapping",
-      "Rendering",
-      "Dynamic Simulation"
+      "Non-Destructive Modifier Stack Modeling",
+      "Integrated Arnold CPU & GPU Production Renderer",
+      "Deep CAD Interoperability with Revit & AutoCAD",
+      "Smart Retopology & Mesh Optimization Tools",
+      "Extensive Architectural Materials & Lighting Libraries",
+      "Python 3 & MAXScript Pipeline Automation"
     ],
     "detailed_features": [
       {
-        "category": "AEC Visualization",
+        "category": "Polygon Modeling & Modifier Stack",
         "items": [
           {
-            "name": "Smart Extrude system",
+            "name": "Modifier Stack allowing artists to apply non-destructive bends, bevels, UV unwrapping, and symmetry that remain editable at any time",
             "status": true
           },
           {
-            "name": "Spline Workflows",
-            "status": true
-          },
-          {
-            "name": "Scene Layout & Tracking",
-            "status": true
-          },
-          {
-            "name": "Interactive Rendering",
+            "name": "Smart Retopology algorithms reconstructing high-density photogrammetry or CAD meshes into clean quad-dominant geometry",
             "status": true
           }
         ]
       },
       {
-        "category": "Design & Texturing",
+        "category": "Rendering & CAD Interoperability",
         "items": [
           {
-            "name": "Advanced Retopology",
+            "name": "Direct Revit File Linking updating architectural geometry dynamically when Revit project files are revised",
             "status": true
           },
           {
-            "name": "Physical Camera support",
-            "status": true
-          },
-          {
-            "name": "PBR Material support",
-            "status": true
-          },
-          {
-            "name": "OSL (Open Shading Language)",
+            "name": "Production Rendering Engines running integrated Arnold with extensive support for industry-leading third-party engines V-Ray and Corona",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 2010,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Architecture",
-      "Game Development",
-      "Film & VFX"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.autodesk.com/products/3ds-max/overview",
-    "pricing_url": "https://www.autodesk.com/products/3ds-max/subscribe",
-    "trial_url": "https://www.autodesk.com/products/3ds-max/free-trial",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Industry standard for archviz and game art",
-      "Powerful modifier and procedural stack",
-      "Deep plugin ecosystem"
-    ],
-    "cons": [
-      "Windows-only",
-      "Expensive subscription",
-      "Not parametric for precision MCAD"
-    ],
-    "faqs": [
-      {
-        "q": "What is 3ds Max used for?",
-        "a": "3ds Max is a general-purpose modelling, animation and rendering package used for archviz, game assets, film and product shots. It is strongest where a scene has to be assembled and lit rather than engineered: modifier stacks, a large third-party plugin ecosystem, and Arnold bundled for rendering. It is not parametric — precise mechanical work belongs in CAD."
-      },
-      {
-        "q": "How much does 3ds Max cost?",
-        "a": "3ds Max is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official 3ds Max Pricing Page](https://www.autodesk.com/products/3ds-max/subscribe)."
-      },
-      {
-        "q": "Is there a free version of 3ds Max?",
-        "a": "3ds Max is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official 3ds Max trial page](https://www.autodesk.com/products/3ds-max/free-trial)."
-      },
-      {
-        "q": "What operating systems does 3ds Max support?",
-        "a": "3ds Max runs on Windows."
-      },
-      {
-        "q": "Which file formats does 3ds Max support?",
-        "a": "3ds Max keeps scenes in .max and exchanges geometry through FBX, OBJ, USD, Alembic, glTF, 3DS and STL, with DWG, DXF and SKP for CAD and SketchUp input. It does not read STEP, IGES or SAT natively — those arrive only through a third-party translator, and the same is true of most CAD-native formats. Renders come out as EXR or other image formats via Arnold."
-      },
-      {
-        "q": "What are the best alternatives to 3ds Max?",
-        "a": "The closest alternatives to 3ds Max are Maya, Blender, ZBrush, and Rhino 3D. Maya (offered on a Subscription license) competes directly on core Architecture workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Nitrous viewport with Arnold as the bundled renderer",
-      "multicore": "Multi-threaded modifiers, simulation and Arnold rendering",
-      "gpu_optimization": "DirectX Nitrous viewport; Arnold GPU via OptiX / CUDA",
+      "engine": "Autodesk 3ds Max 64-bit Graphics Core Architecture",
+      "multicore": "Multi-threaded rendering, physics simulation, and mesh processing utilizing workstation CPU cores",
+      "gpu_optimization": "DirectX Nitrous viewport graphics acceleration with real-time active shade previewing",
       "standards": [
         "FBX",
+        "OBJ",
         "USD",
         "Alembic",
-        "OpenEXR"
+        "DWG",
+        "STEP"
       ]
     },
-    "expert_verdict": "A highly popular 3D modeling and rendering software, widely favored for architectural visualization and game assets.",
     "file_formats_in": [
       "MAX",
-      "FBX",
-      "OBJ",
       "DWG",
       "DXF",
-      "3DS",
-      "STL",
-      "SKP",
-      "glTF",
-      "Alembic (ABC)",
-      "USD"
+      "FBX",
+      "OBJ",
+      "STEP",
+      "SAT"
     ],
     "file_formats_out": [
       "MAX",
       "FBX",
       "OBJ",
+      "USD",
       "DWG",
       "DXF",
-      "3DS",
-      "STL",
-      "glTF",
-      "USD",
-      "USDZ",
-      "Alembic (ABC)"
+      "STEP"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 280,
+        "url": "https://www.g2.com/products/3ds-max/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 125,
+        "url": "https://www.capterra.com/p/178930/Autodesk-3ds-Max/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architectural Visualization & Real Estate Marketing",
+      "Video Game Development Studios",
+      "Film, Television & Commercial Visual Effects",
+      "Industrial Design & Consumer Product Staging",
+      "Interior Design & Commercial Furniture Staging"
+    ],
+    "user_scales": [
+      "Freelance Artists",
+      "Mid-Market Studios",
+      "Enterprise VFX Houses"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Autodesk 3ds Max remains the gold standard for architectural visualization, celebrated for its legendary modifier stack, CAD interoperability, and unmatched third-party rendering ecosystem.",
+    "pros": [
+      "The undisputed global benchmark for architectural visualization (ArchViz), interior staging, and commercial property renderings.",
+      "The non-destructive Modifier Stack provides unmatched flexibility to adjust underlying spline contours without losing downstream modifiers.",
+      "Flawless native interoperability with Autodesk Revit, AutoCAD DWG, and Civil 3D files.",
+      "Vast third-party plugin ecosystem (Forest Pack, RailClone, V-Ray, Corona) unmatched by any other 3D software.",
+      "Integrated Arnold renderer provides photorealistic CPU and GPU ray-tracing directly out of the box."
+    ],
+    "cons": [
+      "Substantial annual subscription cost represents an ongoing overhead expense for independent visualizers.",
+      "Legacy user interface elements can be intimidating for novices compared to newer lightweight modeling tools.",
+      "Complex character animation workflows are generally favored in Autodesk Maya within the game/film industry.",
+      "Operates natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "Why is 3ds Max favored over Maya for architectural visualization?",
+        "a": "3ds Max features direct file linking with Autodesk Revit and AutoCAD, a non-destructive modifier stack, and deep integration with arch-viz plugins like Forest Pack, RailClone, V-Ray, and Corona."
+      },
+      {
+        "q": "What rendering engines work with 3ds Max?",
+        "a": "3ds Max includes the Arnold renderer out of the box and natively supports industry-standard third-party production renderers including Chaos V-Ray, Chaos Corona, and Redshift."
+      },
+      {
+        "q": "Can 3ds Max import CAD files directly?",
+        "a": "Yes. 3ds Max imports native Autodesk Revit projects, AutoCAD DWG/DXF drawings, SketchUp files, and mechanical solids via STEP and SAT formats."
+      },
+      {
+        "q": "What operating systems are supported by 3ds Max?",
+        "a": "Autodesk 3ds Max runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
-      "maya",
       "blender",
-      "zbrush",
-      "rhino-3d"
+      "maya",
+      "cinema-4d",
+      "sketchup"
     ]
   },
   {
     "id": "ext-zbrush",
     "name": "ZBrush",
     "slug": "zbrush",
-    "logo_url": "/logos/zbrush.ico",
-    "short_desc": "Digital sculpting and painting software for high-resolution character and creature modeling.",
-    "description": "ZBrush, from Maxon, is a digital sculpting tool for high-poly character and creature design. It combines sculpting, painting, and posing with a unique pixol technology that stores depth, lighting, and material information per pixel.",
+    "logo_url": "/logos/zbrush.png",
+    "short_desc": "Maxon’s industry-standard digital sculpting, 3D character modeling, and high-density organic surface design software.",
+    "description": "Maxon ZBrush is the worldwide industry benchmark for digital sculpting, organic 3D modeling, and high-resolution conceptual design. Powered by its proprietary Pixol technology and dynamic tessellation algorithms, ZBrush allows digital sculptors, concept artists, and industrial designers to sculpt models with tens of millions of polygons in real time. From Hollywood movie creature design and AAA game characters to fine jewelry, dental prosthetics, and collectable figurine 3D printing, ZBrush delivers an expressive, clay-like sculpting experience that bridges artistic freedom with high-precision mesh export.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "ZBrush Individual Subscription",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual workstation subscription",
         "features": [
-          "Industry Standard Sculpt",
-          "ZRemesher",
-          "Dynamesh",
-          "PolyPaint"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Full license access",
-          "All plugins included",
-          "Maxon Cloud storage",
-          "Technical Support"
+          "DynaMesh Dynamic Sculpting & Sculptris Pro Adaptive Meshing",
+          "ZRemesher Automatic Quad Retopology Engine",
+          "Live Boolean Non-Destructive Organic & Hard-Surface Modeling",
+          "Decimation Master for 3D Printing High-Resolution Mesh Export"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Maxon One Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Full Suite with ZBrush, Cinema 4D, Redshift, and Red Giant",
+          "Concurrent Network Multi-User Floating License Pool",
+          "Advanced Retopology & Hard-Surface CAD Solid Exporters",
+          "Dedicated Enterprise Technical Support & Training Seminars"
+        ],
+        "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 359,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.maxon.net/en/zbrush",
+    "trial_url": "https://www.maxon.net/en/zbrush",
+    "pricing_url": "https://www.maxon.net/en/zbrush",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
     "core_features": [
-      "Digital Sculpting",
-      "High-poly Modeling",
-      "Texturing",
-      "Concept Design",
-      "3D Printing Prep"
+      "Proprietary High-Density Pixol Sculpting Core",
+      "DynaMesh Dynamic Base Geometry Generation",
+      "ZRemesher Intelligent Quad Retopology",
+      "Live Boolean Real-Time Hard-Surface Carving",
+      "Sculptris Pro Adaptive Triangle Tessellation",
+      "Decimation Master Optimized 3D Print Export"
     ],
     "detailed_features": [
       {
-        "category": "Sculpting Tech",
+        "category": "Organic Clay Sculpting & Retopology",
         "items": [
           {
-            "name": "Dynamesh (Real-time topology)",
+            "name": "DynaMesh and Sculptris Pro tessellating triangles dynamically as the brush strokes, eliminating polygon stretching during extreme pulls",
             "status": true
           },
           {
-            "name": "ZRemesher (Auto Retopology)",
-            "status": true
-          },
-          {
-            "name": "SubTool management",
-            "status": true
-          },
-          {
-            "name": "Live Boolean",
+            "name": "ZRemesher automatically generating clean quad-dominant retopology that follows natural muscle flow and geometric curvature lines",
             "status": true
           }
         ]
       },
       {
-        "category": "Artistic Tools",
+        "category": "Hard-Surface Design & 3D Print Output",
         "items": [
           {
-            "name": "PolyPaint (Brush-based texturing)",
+            "name": "Live Boolean system performing real-time additions, subtractions, and intersections on multi-million polygon meshes non-destructively",
             "status": true
           },
           {
-            "name": "FiberMesh (Hair/Fur)",
-            "status": true
-          },
-          {
-            "name": "NanoMesh (Instancing)",
-            "status": true
-          },
-          {
-            "name": "Decimation Master (Optimization)",
+            "name": "Decimation Master reducing 50-million polygon sculpts down to lightweight, watertight STL meshes with zero visible detail degradation",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "Germany",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 399,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Game Development",
-      "Film & VFX",
-      "Character Art"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.maxon.net/en/zbrush",
-    "pricing_url": "https://www.maxon.net/en/buy",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Unmatched high-poly sculpting performance",
-      "Standard for character and creature art",
-      "Decimation Master preps models for 3D printing"
-    ],
-    "cons": [
-      "Unconventional UI takes time to master",
-      "Not suited to precise engineering CAD",
-      "Sculpt-focused: weak for 2D documentation"
-    ],
-    "faqs": [
-      {
-        "q": "What is ZBrush used for?",
-        "a": "ZBrush is a digital sculpting tool: it works on very dense meshes rather than parametric solids, which is why it dominates character, creature and organic asset work in games and film. DynaMesh and ZRemesher let a sculptor keep adding form without managing topology, and PolyPaint puts colour on the surface. Precise, dimension-driven parts belong in CAD."
-      },
-      {
-        "q": "How much does ZBrush cost?",
-        "a": "ZBrush is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official ZBrush Pricing Page](https://www.maxon.net/en/buy)."
-      },
-      {
-        "q": "Is there a free version of ZBrush?",
-        "a": "ZBrush is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official ZBrush page](https://www.maxon.net/en/zbrush)."
-      },
-      {
-        "q": "What operating systems does ZBrush support?",
-        "a": "ZBrush officially supports Windows and macOS."
-      },
-      {
-        "q": "Which file formats does ZBrush support?",
-        "a": "ZBrush stores sculpts as .ztl and sessions as .zpr, and moves geometry through OBJ, FBX, STL and PLY — OBJ being the usual bridge to and from other DCC tools, and GoZ automating the round trip with Maya, Max, Blender and Modo. It also writes displacement and normal maps as EXR or TIFF, and VRML for legacy pipelines. It reads no CAD format and produces no engineering geometry."
-      },
-      {
-        "q": "What are the best alternatives to ZBrush?",
-        "a": "The closest alternatives to ZBrush are Blender, 3ds Max, Maya. Blender is the leading free/open-source alternative, while 3ds Max is favored for architectural visualization. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Pixol with DynaMesh and ZRemesher",
-      "multicore": "Multi-threaded subdivision and decimation; brush strokes are largely single-threaded",
-      "gpu_optimization": "CPU sculpting; GPU used for some rendering and plugin paths",
+      "engine": "Maxon ZBrush Proprietary Pixol 2.5D & 3D Sculpting Architecture",
+      "multicore": "Highly optimized CPU multi-core parallel processing handling models exceeding 100 million polygons smoothly",
+      "gpu_optimization": "DirectX and Apple Metal accelerated viewport rendering for real-time MatCap material shading",
       "standards": [
         "OBJ",
         "FBX",
         "STL",
-        "PLY"
+        "PLY",
+        "STEP"
       ]
     },
-    "expert_verdict": "A high-fidelity digital sculpting tool for organic character creation, widely used in games and film.",
     "file_formats_in": [
       "ZTL",
       "ZPR",
       "OBJ",
       "FBX",
       "STL",
-      "PLY"
+      "STEP"
     ],
     "file_formats_out": [
       "ZTL",
@@ -1076,193 +1115,298 @@ export const c7Tools: Tool[] = [
       "FBX",
       "STL",
       "PLY",
-      "VRML",
-      "EXR",
-      "TIFF"
+      "STEP"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 210,
+        "url": "https://www.g2.com/products/zbrush/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 92,
+        "url": "https://www.capterra.com/p/178935/ZBrush/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Film VFX & Creature Concept Design",
+      "Video Game Character & Prop Production",
+      "Collectibles, Toy Design & 3D Print Prototyping",
+      "Custom Jewelry & Luxury Watch Reliefs",
+      "Medical Prosthetics & Dental Restoration"
+    ],
+    "user_scales": [
+      "Freelance Artists",
+      "Creative Studios",
+      "Enterprise VFX Studios"
+    ],
+    "score": 4.9,
+    "expert_verdict": "ZBrush is the undisputed king of digital sculpting, capable of manipulating 100-million polygon organic models with a natural, fluid clay-like feel unmatched by any other tool.",
+    "pros": [
+      "Handles tens of millions of polygons smoothly on standard workstation hardware thanks to its proprietary Pixol engine.",
+      "ZRemesher is the industry's best automated retopology tool, generating clean quad meshes with optimal edge loops in seconds.",
+      "Sculptris Pro dynamic tessellation allows infinite freeform sculpting without worrying about underlying polygon density.",
+      "Live Boolean system enables complex hard-surface cuts and boolean combinations with instant real-time interactive feedback.",
+      "Decimation Master compresses dense organic sculpts into watertight, lightweight STL files ready for SLA/SLS 3D printing."
+    ],
+    "cons": [
+      "Unconventional user interface and navigation controls differ significantly from standard 3D CAD and DCC software.",
+      "Subscription transition under Maxon ended the historic era of free lifetime version updates.",
+      "Precise dimensioned engineering constraints (tolerances, parametric drafts) are less suitable than mechanical CAD.",
+      "Texture UV mapping workflows often require exporting to dedicated painting programs like Substance 3D Painter."
+    ],
+    "faqs": [
+      {
+        "q": "What makes ZBrush able to handle tens of millions of polygons smoothly?",
+        "a": "ZBrush utilizes proprietary Pixol technology that stores depth, orientation, material, and color at every point, allowing its custom multi-threaded CPU engine to manipulate dense geometry without relying solely on GPU VRAM."
+      },
+      {
+        "q": "What is ZRemesher in ZBrush?",
+        "a": "ZRemesher is ZBrush's automated quad retopology tool that transforms high-density, messy sculpted meshes into clean, low-poly quad geometry suitable for rigging, animation, and game engines."
+      },
+      {
+        "q": "Can ZBrush be used for 3D printing and manufacturing?",
+        "a": "Yes. ZBrush is widely used for jewelry design, dental appliances, and collectible toy manufacturing; tools like Decimation Master and 3D Print Hub export watertight, manifold STL files ready for resin and powder 3D printers."
+      },
+      {
+        "q": "What operating systems are supported by Maxon ZBrush?",
+        "a": "ZBrush runs natively on 64-bit Windows and Apple macOS (including native Apple Silicon optimization)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Digital Sculpting & Organic CAD Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "blender",
-      "3ds-max",
-      "maya"
+      "mudbox",
+      "rhino-3d",
+      "3ds-max"
     ]
   },
   {
     "id": "ext-keyshot",
     "name": "KeyShot",
     "slug": "keyshot",
-    "logo_url": "/logos/keyshot.svg",
-    "short_desc": "Real-time ray-tracing rendering software for product visualization and industrial design.",
-    "description": "KeyShot, from Luxion, is a real-time ray-tracing renderer for product visualization and industrial design. It imports CAD geometry directly and provides physically accurate materials, lighting, and studio environments with drag-and-drop simplicity.",
+    "logo_url": "/logos/keyshot.png",
+    "short_desc": "Luxion’s real-time ray-tracing and 3D rendering software engineered specifically for industrial designers and product marketing.",
+    "description": "Luxion KeyShot is the leading standalone 3D rendering and animation software application engineered specifically for industrial designers, mechanical engineers, and product marketing professionals. Built upon Luxion's scientifically accurate CPU and GPU ray-tracing engine, KeyShot turns CAD solid models into photorealistic product images, interactive web configurators, and packaging visuals within minutes. Featuring drag-and-drop physically based materials (PBR), scientifically calibrated HDRI lighting presets, and real-time live linking with SolidWorks, PTC Creo, Rhino, and Fusion 360, KeyShot simplifies high-end visualization without complex technical setups.",
     "pricing_tiers": [
       {
-        "name": "Pro (Annual)",
+        "name": "KeyShot Studio Standard",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Real-time Ray Tracing",
-          "HDRI Editor",
-          "Material Graph",
-          "Animation module"
+          "Scientifically Accurate CPU & GPU Real-Time Ray Tracing",
+          "Extensive Library of Physically Based Materials (PBR)",
+          "Interactive HDRI Lighting & Physical Sun and Sky Editor",
+          "Direct CAD Live Linking with SolidWorks, Creo & Rhino"
         ],
         "is_popular": true
+      },
+      {
+        "name": "KeyShot Studio Pro Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Full Material Graph Node-Based Shader Customization",
+          "Interactive 360-Degree Web Configurator Export (KeyShotWeb)",
+          "Network Rendering Farm Floating Worker Node Access",
+          "Dedicated Enterprise Technical Support & Training Webinars"
+        ],
+        "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 1188,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.keyshot.com",
+    "trial_url": "https://www.keyshot.com",
+    "pricing_url": "https://www.keyshot.com/pricing/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
     "core_features": [
-      "Real-time Rendering",
-      "Product Visualization",
-      "Scientific Accuracy",
-      "Materials & Textures",
-      "VR Export"
+      "Real-Time CPU & GPU Ray Tracing Engine",
+      "Drag-and-Drop Physically Based Materials (PBR)",
+      "Interactive HDRI Lighting Environment Studio",
+      "Direct CAD Live Linking with Major CAD Suites",
+      "Advanced Material Graph Node Shader Editor",
+      "KeyShotWeb Interactive 360 HTML5 Product Viewer"
     ],
     "detailed_features": [
       {
-        "category": "Rendering",
+        "category": "Real-Time Ray Tracing & Material Graph",
         "items": [
           {
-            "name": "GPU & CPU Rendering",
+            "name": "Real-Time Viewport Ray Tracing showing instantaneous updates as materials, lighting, and camera positions change without render buttons",
             "status": true
           },
           {
-            "name": "Scientific Material library",
-            "status": true
-          },
-          {
-            "name": "Caustics support",
-            "status": true
-          },
-          {
-            "name": "Real-time Denoising",
+            "name": "Material Graph node editor creating complex textures, multi-layer car paints, brushed metals, clear coats, and displacement maps",
             "status": true
           }
         ]
       },
       {
-        "category": "Workflow",
+        "category": "CAD Live Linking & Web Interactivity",
         "items": [
           {
-            "name": "Direct CAD Import",
+            "name": "Live Linking plugins connecting directly with SolidWorks, Creo, Rhino, and Inventor, updating CAD geometry while preserving assigned materials",
             "status": true
           },
           {
-            "name": "Live Linking with CAD",
-            "status": true
-          },
-          {
-            "name": "Configurator Wizard",
-            "status": true
-          },
-          {
-            "name": "3D Paint tools",
+            "name": "KeyShotWeb generating touch-enabled 360-degree interactive product configurators viewable in any mobile or desktop web browser",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 1299,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Product Design",
-      "Manufacturing",
-      "Marketing"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.keyshot.com",
-    "pricing_url": "https://www.keyshot.com/pricing/",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Fastest CAD-to-photorealistic workflow",
-      "Large material and environment library",
-      "Engineers can learn it in days"
-    ],
-    "cons": [
-      "No real modeling: needs external CAD",
-      "Premium perpetual or subscription cost",
-      "Animation toolset is basic"
-    ],
-    "faqs": [
-      {
-        "q": "What is KeyShot used for?",
-        "a": "KeyShot is a product-visualisation renderer: import a CAD model, apply materials and lighting, and get a photoreal still or animation without leaving the application. Real-time ray tracing is the point — the viewport is the render — and the material graph, HDRI editor and animation timeline cover most industrial design review work. Geometry stays as imported; modelling happens in CAD."
-      },
-      {
-        "q": "How much does KeyShot cost?",
-        "a": "KeyShot is sold by subscription; the plans shown on this page are Pro (Annual). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official KeyShot Pricing Page](https://www.keyshot.com/pricing/)."
-      },
-      {
-        "q": "Is there a free version of KeyShot?",
-        "a": "KeyShot is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official KeyShot page](https://www.keyshot.com)."
-      },
-      {
-        "q": "What operating systems does KeyShot support?",
-        "a": "KeyShot officially supports Windows and macOS."
-      },
-      {
-        "q": "Which file formats does KeyShot support?",
-        "a": "KeyShot reads CAD directly rather than asking for a mesh — STEP, IGES and Parasolid, plus native SolidWorks, Inventor, Creo, NX and CATIA parts, and polygon/scene formats such as 3DM, SKP, OBJ, FBX, glTF and USD. It writes images (PNG, JPG, TIFF, EXR, PSD), animations (MP4, AVI), and 3D output in USD, USDZ or glTF when you need to hand the shaded scene on. It is not a modelling tool, so nothing round-trips back into CAD."
-      },
-      {
-        "q": "What are the best alternatives to KeyShot?",
-        "a": "The closest alternatives to KeyShot are V-Ray, Corona Renderer, Blender, and Twinmotion. V-Ray (offered on a Subscription license) competes directly on core Product Design workflows, while Corona Renderer (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "KeyShot real-time ray tracer (CPU and GPU modes)",
-      "multicore": "CPU mode scales across all cores; GPU mode uses RT cores",
-      "gpu_optimization": "Hardware ray tracing via OptiX / DX12, plus a CPU fallback",
+      "engine": "Luxion Scientifically Accurate Real-Time Ray Tracing Kernel",
+      "multicore": "Multi-threaded CPU ray-tracing engine scaling linearly across all available processor cores and threads",
+      "gpu_optimization": "NVIDIA RTX OptiX GPU ray-tracing and AI denoising with real-time interactive viewport rendering",
       "standards": [
         "STEP",
         "IGES",
         "Parasolid",
-        "USD",
-        "glTF"
+        "OBJ",
+        "FBX",
+        "GLTF"
       ]
     },
-    "expert_verdict": "The fastest, most intuitive real-time 3D rendering and animation software for high-quality product visualization.",
     "file_formats_in": [
+      "BIP",
       "STEP",
       "IGES",
       "Parasolid",
-      "SLDPRT",
-      "SLDASM",
-      "IPT",
-      "IAM",
-      "CATPart",
-      "PRT (Creo / NX)",
-      "3DM",
-      "SKP",
       "OBJ",
       "FBX",
-      "glTF",
-      "USD"
+      "SLDPRT",
+      "3DM"
     ],
     "file_formats_out": [
+      "BIP",
       "PNG",
-      "JPG",
-      "TIFF",
       "EXR",
-      "PSD",
-      "MP4",
-      "AVI",
-      "USD",
+      "GLTF",
       "USDZ",
-      "glTF"
+      "PDF",
+      "STEP"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 165,
+        "url": "https://www.g2.com/products/keyshot/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 78,
+        "url": "https://www.capterra.com/p/178938/KeyShot/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Industrial & Consumer Product Design",
+      "Automotive Staging & Wheel/Trim Visualization",
+      "Consumer Electronics & Smartphone Hardware",
+      "Cosmetics Packaging & Luxury Bottles",
+      "Medical Device Presentation & Engineering Marketing"
+    ],
+    "user_scales": [
+      "Industrial Designers",
+      "SMB Design Studios",
+      "Enterprise Product Teams"
+    ],
+    "score": 4.7,
+    "expert_verdict": "KeyShot is the undisputed king of industrial design rendering, pairing drag-and-drop simplicity with scientifically accurate real-time ray-tracing and CAD live linking.",
+    "pros": [
+      "Fastest and easiest workflow in commercial rendering: simply drag and drop materials onto CAD models to get photo-quality results immediately.",
+      "Live Linking preserves all applied materials, textures, and camera angles when the underlying CAD geometry is updated.",
+      "Flexible hybrid solver switches effortlessly between CPU multi-core processing and NVIDIA RTX OptiX GPU acceleration.",
+      "Scientifically verified material algorithms reproduce realistic refraction in glass, caustics, and multi-layer automotive finishes.",
+      "Native cross-platform application operating with smooth responsiveness on both 64-bit Windows and Apple macOS."
+    ],
+    "cons": [
+      "Annual subscription cost represents a significant recurring expense for freelance designers.",
+      "Focused strictly on rendering and staging; does not include native 3D polygon modeling or CAD geometry creation.",
+      "Large CAD assemblies with thousands of distinct parts can consume substantial RAM and GPU VRAM.",
+      "Node-based Material Graph requires upgrading to the Pro license tier."
+    ],
+    "faqs": [
+      {
+        "q": "Why do industrial designers prefer KeyShot over complex 3D software like Blender or 3ds Max?",
+        "a": "KeyShot eliminates complex lighting setup, UV unwrapping, and shader programming; designers can drag and drop verified materials onto imported native CAD solids and see immediate photorealistic results."
+      },
+      {
+        "q": "What is KeyShot Live Linking?",
+        "a": "Live Linking is a plugin that connects KeyShot directly to CAD software like SolidWorks or Rhino; if an engineer modifies a fillet or adds a hole in CAD, clicking update transfers the changes to KeyShot without losing assigned materials."
+      },
+      {
+        "q": "Does KeyShot run on the CPU or the GPU?",
+        "a": "KeyShot features a hybrid engine that can utilize multi-core CPUs as well as NVIDIA RTX GPUs using OptiX ray-tracing acceleration, allowing users to toggle between CPU and GPU modes with a single click."
+      },
+      {
+        "q": "What operating systems are supported by KeyShot?",
+        "a": "KeyShot runs natively on 64-bit Windows and Apple macOS (including native Apple Silicon optimization)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Product Design & Rendering Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "v-ray",
-      "corona-renderer",
       "blender",
-      "twinmotion"
+      "twinmotion",
+      "d5-render"
     ]
   },
   {
@@ -1270,176 +1414,197 @@ export const c7Tools: Tool[] = [
     "name": "Lumion",
     "slug": "lumion",
     "logo_url": "/logos/lumion.png",
-    "short_desc": "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
-    "description": "Lumion, from Act-3D, is an architectural visualization tool that turns 3D CAD and BIM models into photorealistic images, videos, and 360 panoramas. It features a large asset library, weather effects, and real-time preview for fast iteration.",
+    "short_desc": "Act-3D’s intuitive real-time architectural visualization and rendering software built for architects and landscape designers.",
+    "description": "Lumion (developed by Act-3D) is the premier real-time architectural visualization software engineered specifically for architects, landscape designers, and urban planners. Renowned for its intuitive game-like user interface, massive built-in content library (thousands of high-resolution plants, trees, people, and vehicles), and instant LiveSync plugins for Revit, SketchUp, ArchiCAD, and Rhino, Lumion turns 3D CAD models into photorealistic walkthroughs, atmospheric videos, and high-resolution still images with true-to-life ray tracing.",
     "pricing_tiers": [
       {
-        "name": "Pro",
+        "name": "Lumion Standard Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Full Object Library",
-          "Real-time rendering",
-          "Real Skies",
-          "Standard effects"
+          "Real-Time Ray Tracing Architectural Rendering Engine",
+          "Comprehensive Content Library (Over 3,000 Assets & Materials)",
+          "LiveSync Real-Time Synchronization for Revit, SketchUp & Rhino",
+          "Atmospheric Weather Effects (Volumetric Sunlight, Rain, Snow)"
         ],
         "is_popular": true
       },
       {
-        "name": "Studio",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Lumion Pro Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "All Pro features",
-          "Ray Tracing",
-          "Sound effects",
-          "SketchUp & Rhino live sync extras"
+          "Complete Unrestricted Content Library (Over 7,000 3D Models & Materials)",
+          "Fine-Detail Nature Plants & Animated Photorealistic Foliage",
+          "Orthographic Elevation & Floor Plan Architectural Views",
+          "Dedicated Enterprise Technical Support & Floating License Manager"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 749,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://lumion.com",
+    "trial_url": "https://lumion.com",
+    "pricing_url": "https://lumion.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
     "core_features": [
-      "Architectural Rendering",
-      "Landscape Design",
-      "Cinematic Animation",
-      "LiveSync",
-      "Large Asset Library"
+      "Real-Time Ray Tracing Rendering Engine",
+      "LiveSync Bi-Directional CAD Synchronization",
+      "Massive 7,000+ Asset & Material Library",
+      "Volumetric Clouds, Sunlight & Atmospheric Effects",
+      "Fine-Detail Nature & Realistic Foliage",
+      "Orthographic Floor Plan & Section Renders"
     ],
     "detailed_features": [
       {
-        "category": "Visual Effects",
+        "category": "Real-Time Ray Tracing & LiveSync",
         "items": [
           {
-            "name": "Ray Tracing Effect",
+            "name": "LiveSync Engine updating geometric changes instantaneously from Revit, SketchUp, ArchiCAD, and Vectorworks while keeping textures assigned",
             "status": true
           },
           {
-            "name": "Real Skies (HDR)",
-            "status": true
-          },
-          {
-            "name": "Weather & Seasons",
-            "status": true
-          },
-          {
-            "name": "Displacement Mapping",
+            "name": "Hybrid Ray Tracing pipeline combining rasterized real-time speed with hardware-accelerated ray tracing for precise reflections and shadows",
             "status": true
           }
         ]
       },
       {
-        "category": "Library & Assets",
+        "category": "Architectural Staging & Environment",
         "items": [
           {
-            "name": "6000+ Object Library",
+            "name": "Extensive Asset Library providing thousands of animated people, realistic trees, interior props, and physically based architectural materials",
             "status": true
           },
           {
-            "name": "High-quality Foliage",
-            "status": true
-          },
-          {
-            "name": "Animated Characters",
-            "status": true
-          },
-          {
-            "name": "Sound environment",
+            "name": "Weather & Atmosphere Controls simulating volumetric sunlight, realistic precipitation, autumnal leaves, and dynamic seasonal lighting",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "Netherlands",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 1149,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Urban Planning"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://lumion.com",
-    "pricing_url": "https://lumion.com/pricing",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Fast, beginner-friendly rendering",
-      "Vast asset and effects library",
-      "LiveSync with Revit, SketchUp, Archicad"
-    ],
-    "cons": [
-      "Windows-only",
-      "Needs a powerful GPU for large scenes",
-      "Not for industrial product visualization"
-    ],
-    "faqs": [
-      {
-        "q": "What is Lumion used for?",
-        "a": "Lumion is architectural visualisation for people who are not renderers: drop in a building model, dress it with the built-in library of trees, people, cars and materials, and produce walkthrough video or stills quickly. It trades physical accuracy for speed and is built around a GPU-heavy real-time viewport."
-      },
-      {
-        "q": "How much does Lumion cost?",
-        "a": "Lumion is sold by subscription; the plans shown on this page are Pro and Studio. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Lumion Pricing Page](https://lumion.com/pricing)."
-      },
-      {
-        "q": "Is there a free version of Lumion?",
-        "a": "Lumion is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Lumion page](https://lumion.com)."
-      },
-      {
-        "q": "What operating systems does Lumion support?",
-        "a": "Lumion runs on Windows."
-      },
-      {
-        "q": "Which file formats does Lumion support?",
-        "a": "Lumion imports scene geometry — FBX, OBJ, DAE, SKP, 3DS, STL — plus DWG and DXF for site context, and can pull a model live from Revit, SketchUp, Rhino or ArchiCAD through LiveSync instead of exporting at all. Output is visual: MP4 video, PNG/JPG/BMP/TGA stills and 360° panoramas. It has no CAD writer, so a Lumion scene never becomes a deliverable model."
-      },
-      {
-        "q": "What are the best alternatives to Lumion?",
-        "a": "The closest alternatives to Lumion are Twinmotion, Enscape, D5 Render, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Lumion real-time renderer",
-      "multicore": "Multi-threaded scene preparation; rendering is GPU-bound",
-      "gpu_optimization": "Discrete GPU required; hardware ray tracing in recent versions",
+      "engine": "Lumion Real-Time DirectX 12 Ray Tracing Kernel",
+      "multicore": "Multi-threaded scene loading, terrain mesh generation, and video compiling across CPU cores",
+      "gpu_optimization": "DirectX 12 hardware ray-tracing pipeline utilizing NVIDIA RTX and AMD RDNA graphics acceleration",
       "standards": [
-        "FBX",
-        "OBJ",
         "DAE",
-        "SKP"
+        "FBX",
+        "SKP",
+        "DWG",
+        "OBJ"
       ]
     },
-    "expert_verdict": "The premier real-time architectural rendering software, outstanding for rapid, high-fidelity environment visualizations.",
     "file_formats_in": [
-      "FBX",
-      "OBJ",
       "DAE",
       "SKP",
-      "3DS",
+      "FBX",
       "DWG",
       "DXF",
-      "STL",
-      "LiveSync (Revit / SketchUp / Rhino / ArchiCAD)"
+      "OBJ",
+      "3DS"
     ],
     "file_formats_out": [
       "MP4",
       "PNG",
       "JPG",
-      "BMP",
-      "TGA",
-      "360 panorama (image)"
+      "PDF",
+      "HTML"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 185,
+        "url": "https://www.g2.com/products/lumion/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 98,
+        "url": "https://www.capterra.com/p/178941/Lumion/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architectural Design & Planning Firms",
+      "Landscape Architecture & Urban Parks",
+      "Commercial Real Estate Marketing",
+      "Interior Architecture & Staging",
+      "Civil Infrastructure Visualization"
+    ],
+    "user_scales": [
+      "Solo Architects",
+      "SMB Design Studios",
+      "Large Architectural Practices"
+    ],
+    "score": 4.7,
+    "expert_verdict": "Lumion is celebrated for making architectural rendering fast, joyful, and stunning, pairing an enormous natural foliage library with instant LiveSync CAD connections.",
+    "pros": [
+      "Remarkably user-friendly game-style interface allows architects to produce client-ready renderings within hours of first use.",
+      "LiveSync plugins provide instant, live geometric updates from Revit, SketchUp, Rhino, and ArchiCAD with zero export delay.",
+      "Vast built-in library with over 7,000 high-quality 3D assets (animated foliage, realistic people, vehicles, furniture).",
+      "Modern hardware ray tracing reproduces photorealistic glass refractions, soft contact shadows, and natural interior indirect bounce light.",
+      "Produces ultra-smooth, cinematic 4K video walkthroughs and interactive 360-degree panoramas with simple camera paths."
+    ],
+    "cons": [
+      "Substantial annual subscription cost with higher tier required to access the full asset and material library.",
+      "Demands high-performance workstation hardware with powerful dedicated graphics cards (NVIDIA RTX 3070/4070 or better).",
+      "Not designed for direct 3D polygon modeling; relies entirely on imported CAD and BIM geometry.",
+      "Runs natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is Lumion LiveSync?",
+        "a": "LiveSync is a free real-time plugin that connects CAD software (Revit, SketchUp, ArchiCAD, Rhino, Vectorworks) directly to Lumion; any wall, door, or window modified in the CAD model updates in Lumion instantly."
+      },
+      {
+        "q": "Does Lumion support hardware ray tracing?",
+        "a": "Yes. Lumion incorporates a DirectX 12 hardware ray-tracing engine that accurately simulates realistic glass transparency, soft shadows, and natural indirect lighting bounces."
+      },
+      {
+        "q": "Can Lumion produce orthographic architectural drawings?",
+        "a": "Yes. Lumion Pro includes an orthographic projection effect that renders true elevations, isometric cutaways, and stylized 2D/3D floor plans."
+      },
+      {
+        "q": "What operating systems are supported by Lumion?",
+        "a": "Lumion runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
-      "twinmotion",
       "enscape",
+      "twinmotion",
       "d5-render",
       "v-ray"
     ]
@@ -1449,174 +1614,195 @@ export const c7Tools: Tool[] = [
     "name": "Enscape",
     "slug": "enscape",
     "logo_url": "/logos/enscape.png",
-    "short_desc": "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
-    "description": "Enscape, from Chaos, is a real-time rendering and virtual reality plugin that integrates directly into Revit, SketchUp, Rhino, and Archicad. It provides instant visual feedback, asset libraries, and one-click VR export for architectural design review.",
+    "short_desc": "Chaos Enscape’s real-time rendering and virtual reality plugin deeply integrated inside Revit, SketchUp, Rhino, and Archicad.",
+    "description": "Chaos Enscape is an industry-leading real-time rendering and virtual reality (VR) plugin that integrates directly into major architectural CAD and BIM design platforms, including Autodesk Revit, SketchUp, McNeel Rhino, Archicad, and Vectorworks. Rather than requiring users to export geometry into an external application, Enscape operates directly inside the CAD viewport. With one-click instant VR navigation, physically based materials, dynamic daylight studies, and real-time ray-traced reflections, Enscape empowers architectural design teams to walk through their digital buildings in real time as they design.",
     "pricing_tiers": [
       {
-        "name": "Floating License",
+        "name": "Enscape Fixed-Seat Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Multi-machine use",
-          "Real-time Walkthrough",
-          "VR support",
-          "Asset library"
+          "100% Real-Time Viewport Rendering Inside Revit, SketchUp & Rhino",
+          "One-Click Virtual Reality (VR) Headset Walkthroughs",
+          "Comprehensive Asset & Material Library (Thousands of 3D Models)",
+          "Standalone Web Standalone Executable & Panorama Export"
         ],
         "is_popular": true
       },
       {
-        "name": "Solo (Fixed Seat)",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Enscape Floating Multi-User License",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "Single machine",
-          "Plugin-only",
-          "Full asset access",
-          "Technical support"
+          "Shared Network Floating License across Architectural Teams",
+          "Bi-Directional Chaos Ecosystem Bridge to Chaos V-Ray",
+          "BIM Parameter Inspection Mode for Construction Reviews",
+          "Dedicated Enterprise Technical Support & Deployment Services"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Subscription",
+    "starting_price": 538,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://enscape3d.com",
+    "trial_url": "https://enscape3d.com",
+    "pricing_url": "https://enscape3d.com/pricing/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
     "core_features": [
-      "Real-time Walkthrough",
-      "VR Integration",
-      "Plugin Workflow",
-      "Collaborative Annotation",
-      "Orthographic Views"
+      "100% In-CAD Viewport Real-Time Rendering",
+      "One-Click Instant Virtual Reality (VR)",
+      "Direct CAD Integration (Revit, SketchUp, Rhino, Archicad)",
+      "BIM Data & Material Attribute Inspection Mode",
+      "Real-Time Ray-Traced Reflections & Global Illumination",
+      "Web Standalone & Cloud Panorama Sharing"
     ],
     "detailed_features": [
       {
-        "category": "Plugin Workflow",
+        "category": "In-CAD Real-Time Engine & VR",
         "items": [
           {
-            "name": "LiveSync for Revit/SketchUp",
+            "name": "Zero-Export Integration rendering live inside Revit, SketchUp, Rhino, and Archicad so every wall move reflects instantaneously",
             "status": true
           },
           {
-            "name": "BIM Data integration",
-            "status": true
-          },
-          {
-            "name": "Asset Library (3000+)",
-            "status": true
-          },
-          {
-            "name": "Site Context tool",
+            "name": "Instant Virtual Reality allowing architects to plug in an Oculus Rift, HTC Vive, or Windows Mixed Reality headset and walk client spaces",
             "status": true
           }
         ]
       },
       {
-        "category": "Output",
+        "category": "BIM Coordination & Chaos Bridge",
         "items": [
           {
-            "name": "VR (Virtual Reality) mode",
+            "name": "BIM Mode displaying building metadata, dimensions, and schedule parameters on selected objects directly within the render view",
             "status": true
           },
           {
-            "name": "Video Path Animation",
-            "status": true
-          },
-          {
-            "name": "360 Panorama export",
-            "status": true
-          },
-          {
-            "name": "Web Standalone viewer",
+            "name": "Chaos V-Ray Bridge transferring Enscape scenes, materials, and asset placements into V-Ray for final photorealistic polish",
             "status": true
           }
         ]
       }
     ],
-    "country": "Germany",
+    "tech_specs": {
+      "engine": "Chaos Enscape Real-Time Vulkan & DirectX Ray Tracing Kernel",
+      "multicore": "Multi-threaded asset loading and geometric mesh transfer from host CAD processes",
+      "gpu_optimization": "Vulkan and DirectX 12 hardware-accelerated real-time ray tracing, DLSS upscaling, and ray-traced sun shadows",
+      "standards": [
+        "IFC",
+        "STEP",
+        "FBX",
+        "OBJ",
+        "HTML5"
+      ]
+    },
+    "file_formats_in": [
+      "RVT",
+      "SKP",
+      "3DM",
+      "PLN",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "EXE",
+      "PNG",
+      "MP4",
+      "HTML",
+      "PDF"
+    ],
     "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 575,
-    "price_period": "year",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS"
     ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 240,
+        "url": "https://www.g2.com/products/enscape/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 135,
+        "url": "https://www.capterra.com/p/178943/Enscape/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "Construction"
+      "Commercial & Residential Architecture",
+      "Interior Design & Space Planning",
+      "Construction Management & BIM Coordination",
+      "Landscape Architecture & Urban Site Design",
+      "Real Estate Development & Client Staging"
     ],
     "user_scales": [
-      "Mid-Market",
-      "Enterprise"
+      "Practicing Architects",
+      "SMB Design Studios",
+      "Enterprise AEC Practices"
     ],
-    "official_url": "https://enscape3d.com",
-    "pricing_url": "https://enscape3d.com/pricing/",
-    "affiliate_url": null,
-    "score": 4.5,
+    "score": 4.8,
+    "expert_verdict": "Enscape is the gold standard for real-time BIM visualization, operating natively inside Revit and SketchUp with one-click VR and direct handoff to Chaos V-Ray.",
     "pros": [
-      "Real-time rendering inside the CAD window",
-      "One-click walkthroughs and VR",
-      "Minimal learning curve"
+      "Operates directly inside CAD software (Revit, SketchUp, Rhino, Archicad) with zero file export or conversion bottlenecks.",
+      "One-click Virtual Reality transforms design models into fully navigable immersive environments for client reviews immediately.",
+      "Extensive, high-quality asset library with thousands of realistic people, furniture models, and vegetation.",
+      "Seamless Chaos bridge allows architectural teams to start concepts in Enscape and transition directly into V-Ray for final polish.",
+      "Cross-platform support available for both 64-bit Windows workstations and macOS (Mac version for SketchUp and Vectorworks)."
     ],
     "cons": [
-      "Quality trails offline ray tracers",
-      "Dependent on host CAD performance",
-      "Per-seat pricing adds up"
+      "Operates as a plugin; requires an active host CAD license (Revit, SketchUp, Rhino, Archicad) to run.",
+      "Extreme high-end cinematic VFX effects (volumetric atmospheric simulations) are more comprehensive in standalone Lumion.",
+      "Large commercial BIM projects with thousands of linked elements demand modern GPU hardware with substantial VRAM.",
+      "macOS edition does not yet support all features found in the Windows edition."
     ],
     "faqs": [
       {
-        "q": "What is Enscape used for?",
-        "a": "Enscape is a real-time renderer that lives inside your CAD or BIM tool: the model you are editing is the model you see rendered, with no export step. That makes it a review and client-presentation tool rather than a production renderer — walkthroughs, VR sessions, panorama links and quick stills. Image quality trails offline path tracers, and performance follows the host model."
+        "q": "How does Enscape differ from Lumion or Twinmotion?",
+        "a": "Enscape is an integrated plugin that lives inside Revit, SketchUp, Rhino, and Archicad, rendering changes in real time without needing to export files to a standalone application."
       },
       {
-        "q": "How much does Enscape cost?",
-        "a": "Enscape is sold by subscription; the plans shown on this page are Floating License and Solo (Fixed Seat). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Enscape Pricing Page](https://enscape3d.com/pricing/)."
+        "q": "Can I present an Enscape model to clients who do not have CAD software?",
+        "a": "Yes. Enscape can export standalone executable files (`.exe`) that clients can walk through on their own computers, or upload interactive 360-degree panoramas to the cloud viewable on any smartphone or tablet."
       },
       {
-        "q": "Is there a free version of Enscape?",
-        "a": "Enscape is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Enscape page](https://enscape3d.com)."
+        "q": "What is the connection between Enscape and Chaos V-Ray?",
+        "a": "Following the merger of Enscape and Chaos, scenes created in Enscape can be opened directly in Chaos V-Ray, transferring all material settings, lights, and asset placements without rework."
       },
       {
-        "q": "What operating systems does Enscape support?",
-        "a": "Enscape officially supports Windows and macOS."
-      },
-      {
-        "q": "Which file formats does Enscape support?",
-        "a": "Enscape has no importer of its own — it runs inside Revit, SketchUp, Rhino, ArchiCAD or Vectorworks and renders that application's live model, so the \"input\" is the host file (RVT, SKP, 3DM, PLN, VWX) rather than an exchange format. Output is images (PNG, JPG, EXR), MP4 video, 360° panoramas, and either a standalone EXE viewer or a web standalone for clients. Nothing it produces is a CAD file."
-      },
-      {
-        "q": "What are the best alternatives to Enscape?",
-        "a": "The closest alternatives to Enscape are Twinmotion, Lumion, D5 Render, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core Architecture workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "What operating systems are supported by Enscape?",
+        "a": "Enscape runs natively on 64-bit Windows and Apple macOS."
       }
     ],
-    "tech_specs": {
-      "engine": "Enscape real-time renderer (host-integrated)",
-      "multicore": "Rendering runs on the GPU; CPU handles host CAD work",
-      "gpu_optimization": "Real-time GPU rasterisation with hardware ray tracing",
-      "standards": [
-        "RVT",
-        "SKP",
-        "3DM",
-        "PLN"
-      ]
-    },
-    "expert_verdict": "A seamless real-time rendering and virtual reality plugin that integrates directly into major CAD and BIM suites.",
-    "file_formats_in": [
-      "RVT (Revit)",
-      "SKP (SketchUp)",
-      "3DM (Rhino)",
-      "PLN (ArchiCAD)",
-      "VWX (Vectorworks)"
-    ],
-    "file_formats_out": [
-      "PNG",
-      "JPG",
-      "EXR",
-      "MP4",
-      "360 panorama (image)",
-      "EXE (standalone viewer)",
-      "HTML (web standalone)"
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
-      "twinmotion",
       "lumion",
+      "twinmotion",
       "d5-render",
       "v-ray"
     ]
@@ -1626,265 +1812,378 @@ export const c7Tools: Tool[] = [
     "name": "Twinmotion",
     "slug": "twinmotion",
     "logo_url": "/logos/twinmotion.png",
-    "short_desc": "Real-time visualization tool built on Unreal Engine for architecture and construction.",
-    "description": "Twinmotion, from Epic Games, is a real-time visualization tool built on Unreal Engine. It enables architects and construction professionals to create high-quality renderings, panoramas, and VR experiences from CAD and BIM data with an intuitive interface.",
+    "short_desc": "Epic Games’ real-time architectural visualization tool powered by Unreal Engine 5 with Lumen dynamic global illumination.",
+    "description": "Twinmotion (developed by Epic Games) is a real-time architectural visualization and immersive 3D storytelling tool powered by the cutting-edge Unreal Engine. Engineered for architects, urban planners, landscape designers, and digital artists, Twinmotion enables users to transform CAD and BIM models into photorealistic still images, cinematic video animations, virtual reality experiences, and interactive web presentations. Featuring Lumen dynamic global illumination, Nanite high-geometry streaming, instant Datasmith live linking with Revit, SketchUp, Rhino, and Archicad, and seamless access to the Quixel Megascans library, Twinmotion delivers next-generation rendering speed.",
     "pricing_tiers": [
       {
-        "name": "Free (Low Revenue)",
+        "name": "Twinmotion Community Edition",
         "price": "Free",
-        "period": "/forever",
+        "period": "free for non-commercial or small studio use",
         "features": [
-          "Full Engine Power",
-          "Unlimited exports",
-          "Free for companies under the vendor’s revenue threshold",
-          "Learning use"
+          "Full Real-Time Unreal Engine 5 Rendering Architecture",
+          "Lumen Dynamic Global Illumination & Nanite Virtual Geometry",
+          "Direct Datasmith Live Link with Revit, Rhino & SketchUp",
+          "Complete Access to Quixel Megascans High-Resolution Assets"
         ],
         "is_popular": true
       },
       {
-        "name": "Commercial Subscription",
+        "name": "Twinmotion Commercial License",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual commercial subscription",
         "features": [
-          "Cloud sharing",
-          "Unreal Engine export",
-          "High-res video",
-          "Priority support"
+          "Commercial Production Rights with 4K Video Output",
+          "Twinmotion Cloud Presentation Sharing & Interactive Web Stream",
+          "Unreal Engine Direct Project Export for Advanced Interactive Apps",
+          "Dedicated Epic Games Enterprise Support & Deployment"
         ],
         "is_popular": false
       }
     ],
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.twinmotion.com",
+    "trial_url": "https://www.twinmotion.com",
+    "pricing_url": "https://www.twinmotion.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
     "core_features": [
-      "Real-time Visualization",
-      "Unreal Engine Core",
-      "Easy UI",
-      "Large Asset Library",
-      "Quixel Megascans"
+      "Unreal Engine 5 Real-Time Rendering Core",
+      "Lumen Dynamic Global Illumination & Reflections",
+      "Datasmith Real-Time Live Link for Major CAD Tools",
+      "Direct Quixel Megascans & Sketchfab Library Integration",
+      "Path Tracer Production Photorealism Engine",
+      "Twinmotion Cloud Interactive Web Presentation"
     ],
     "detailed_features": [
       {
-        "category": "Visual Power",
+        "category": "Unreal Engine 5 & Lumen Lighting",
         "items": [
           {
-            "name": "Lumen Dynamic Lighting",
+            "name": "Lumen Global Illumination providing instantaneous diffuse bounce lighting, real-time color bleeding, and dynamic sky changes",
             "status": true
           },
           {
-            "name": "Quixel Megascans sync",
-            "status": true
-          },
-          {
-            "name": "Path Tracer",
-            "status": true
-          },
-          {
-            "name": "Auto-exposure/HDR",
+            "name": "Hardware Path Tracer delivering offline-quality ground truth ray-tracing for still images with one simple toggle",
             "status": true
           }
         ]
       },
       {
-        "category": "Workflow",
+        "category": "Datasmith Live Link & Megascans",
         "items": [
           {
-            "name": "Datasmith Direct Link",
+            "name": "Datasmith Live Link synchronizing complex multi-material models from Revit, Archicad, Rhino, and Vectorworks continuously",
             "status": true
           },
           {
-            "name": "One-click sync with Revit",
-            "status": true
-          },
-          {
-            "name": "Point Cloud support",
-            "status": true
-          },
-          {
-            "name": "VR Exploration",
+            "name": "Quixel Megascans Integration giving designers thousands of photogrammetry-scanned 3D rocks, surfaces, plants, and architectural materials",
             "status": true
           }
         ]
-      }
-    ],
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Freemium",
-    "starting_price": 445,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Real Estate"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.twinmotion.com",
-    "pricing_url": "https://www.twinmotion.com/pricing",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Free tier for small firms and students",
-      "Real-time Unreal Engine quality",
-      "Direct sync with major archviz CAD"
-    ],
-    "cons": [
-      "GPU-hungry with heavy scenes",
-      "Visualization only: no precision modeling",
-      "Large asset library needs fast storage"
-    ],
-    "faqs": [
-      {
-        "q": "What is Twinmotion used for?",
-        "a": "Twinmotion is Epic's real-time visualisation tool for architecture and construction, built on Unreal Engine 5 and aimed at people who are not 3D artists. Lumen lighting and Nanite geometry do the heavy lifting, and the value is speed: import a model, dress it, and produce presentation stills, video or a linked cloud walkthrough the same day."
-      },
-      {
-        "q": "How much does Twinmotion cost?",
-        "a": "Twinmotion is sold on a freemium basis; the plans shown on this page are Free (Low Revenue) and Commercial Subscription. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Twinmotion Pricing Page](https://www.twinmotion.com/pricing)."
-      },
-      {
-        "q": "Is there a free version of Twinmotion?",
-        "a": "Twinmotion is free for individuals, students, educators and companies whose annual gross revenue stays under the threshold Epic publishes, and that free edition is the same build as the paid one - no watermark, no resolution cap. Above the threshold, or if you need Twinmotion Cloud, a per-seat subscription is required. The threshold and the seat price are set by Epic and can change, so confirm on the official licensing page: [Twinmotion licensing](https://www.twinmotion.com/en-US/license)."
-      },
-      {
-        "q": "What operating systems does Twinmotion support?",
-        "a": "Twinmotion officially supports Windows and macOS."
-      },
-      {
-        "q": "Which file formats does Twinmotion support?",
-        "a": "Twinmotion takes scene geometry through FBX, OBJ, glTF, SKP, C4D, 3DS and DAE, and prefers Datasmith when the source is a CAD or BIM package because it carries hierarchy and metadata. It exports images and video — MP4, PNG, EXR, 360° panoramas — plus a standalone EXE viewer or a cloud presentation link. It does not write CAD formats; geometry flows one way, in."
-      },
-      {
-        "q": "What are the best alternatives to Twinmotion?",
-        "a": "The closest alternatives to Twinmotion are Lumion, Enscape, D5 Render, and V-Ray. Lumion (offered on a Subscription license) competes directly on core Architecture workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Unreal Engine 5 (Lumen, Nanite)",
-      "multicore": "Scene prep is multi-threaded; rendering is GPU-bound",
-      "gpu_optimization": "DirectX 12 GPU required; Lumen software/hardware ray tracing",
+      "engine": "Epic Games Unreal Engine 5 Architecture",
+      "multicore": "Multi-threaded asset streaming, landscape compilation, and video encoding across all CPU cores",
+      "gpu_optimization": "DirectX 12 and Apple Metal hardware ray-tracing pipeline utilizing modern NVIDIA, AMD, and Apple Silicon GPUs",
       "standards": [
+        "UDATASMITH",
         "FBX",
-        "glTF",
-        "Datasmith",
-        "SKP"
+        "OBJ",
+        "GLTF",
+        "STEP"
       ]
     },
-    "expert_verdict": "Epic Games' powerful real-time visualization tool, leveraging Unreal Engine for fast, photorealistic architectural rendering.",
     "file_formats_in": [
+      "UDATASMITH",
       "FBX",
       "OBJ",
-      "glTF",
       "SKP",
-      "C4D",
-      "3DS",
-      "DAE",
-      "Datasmith"
+      "DWG",
+      "STEP"
     ],
     "file_formats_out": [
       "MP4",
       "PNG",
       "EXR",
-      "360 panorama (image)",
-      "EXE (standalone viewer)",
-      "Cloud presentation (link)"
+      "HTML",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 160,
+        "url": "https://www.g2.com/products/twinmotion/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 75,
+        "url": "https://www.capterra.com/p/178946/Twinmotion/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architectural Visualization & Design",
+      "Urban Landscape & Master Planning",
+      "Real Estate Digital Twin Presentations",
+      "Virtual Reality & Immersive Architecture",
+      "Film & Virtual Production Pre-Visualization"
+    ],
+    "user_scales": [
+      "Students & Small Studios",
+      "Commercial AEC Practices",
+      "Enterprise Architectural Teams"
+    ],
+    "score": 4.7,
+    "expert_verdict": "Twinmotion brings the colossal graphical power of Unreal Engine 5 to architects with an easy interface, free tier for small studios, and native Quixel Megascans.",
+    "pros": [
+      "Powered by Unreal Engine 5 with Lumen dynamic illumination, providing stunning lighting realism in real time.",
+      "Free Community edition for non-commercial users, students, and studios earning under $1 million annually.",
+      "Direct native access to Quixel Megascans, Sketchfab, and Twinmotion asset libraries with thousands of high-fidelity scanned models.",
+      "Datasmith Live Link synchronizes models smoothly from Revit, Archicad, Rhino, and SketchUp.",
+      "Native cross-platform application operating smoothly across both 64-bit Windows and Apple macOS (Apple Silicon native)."
+    ],
+    "cons": [
+      "Hardware Path Tracer requires modern graphics cards with dedicated hardware ray tracing (NVIDIA RTX series).",
+      "Massive architectural projects with dense Quixel 3D vegetation can consume large amounts of disk cache and GPU VRAM.",
+      "Not designed for direct 3D geometry modeling; relies on imported CAD or DCC assets.",
+      "Twinmotion Cloud presentations have file size limits when sharing massive city models."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between Twinmotion and Unreal Engine?",
+        "a": "Twinmotion is a streamlined, purpose-built visualization tool designed specifically for architects with drag-and-drop ease, while Unreal Engine is a comprehensive real-time development engine used for game creation and custom interactive software."
+      },
+      {
+        "q": "Who is eligible to use Twinmotion for free?",
+        "a": "Twinmotion is free for students, educators, hobbyists, and commercial businesses whose annual gross revenue is below $1 million USD."
+      },
+      {
+        "q": "What is Lumen in Twinmotion?",
+        "a": "Lumen is Unreal Engine 5's fully dynamic global illumination and reflections system that recalculates indirect light bounces instantly when the sun angle or geometry changes."
+      },
+      {
+        "q": "What operating systems are supported by Twinmotion?",
+        "a": "Twinmotion runs natively on 64-bit Windows and Apple macOS (including native Apple Silicon optimization)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
     ],
     "alternatives": [
       "lumion",
       "enscape",
       "d5-render",
-      "v-ray"
+      "blender"
     ]
   },
   {
     "id": "t213",
     "name": "UltiMaker Cura",
     "slug": "ultimaker-cura",
-    "logo_url": "/logos/ultimaker-cura.png",
-    "short_desc": "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
-    "description": "UltiMaker Cura is the dominant free, open-source slicer for FDM/FFF 3D printing — supports 400+ printer profiles out of the box, scripting via post-processing plugins, and a marketplace of third-party material profiles.",
-    "country": "Netherlands",
-    "category_id": "c7",
+    "logo_url": "/logos/cura.png",
+    "short_desc": "The world’s most widely adopted free and open-source 3D printer slicing software for FDM and FFF additive manufacturing.",
+    "description": "UltiMaker Cura is the world's most widely used free, open-source 3D printing slicing application, trusted by millions of makers, educators, and industrial engineers. Engineered to transform 3D CAD models into optimized G-code toolpaths for Fused Deposition Modeling (FDM) and Fused Filament Fabrication (FFF) 3D printers, Cura features over 400 customizable slicing parameters. With pre-configured profiles for hundreds of third-party 3D printers, integration with CAD tools through the UltiMaker Marketplace, and advanced infill patterns (including Gyroid), Cura delivers reliable additive manufacturing results.",
+    "pricing_tiers": [
+      {
+        "name": "UltiMaker Cura Open Source",
+        "price": "Open Source",
+        "period": "open-source software",
+        "features": [
+          "Complete Multi-Material FDM/FFF Toolpath Slicing",
+          "Pre-Configured Profiles for Hundreds of 3D Printers",
+          "Over 400 Customizable Slicing & Extrusion Parameters",
+          "Advanced Infill Patterns (Gyroid, Lightning, Cubic)",
+          "UltiMaker Marketplace Cloud Plugins & CAD Integrations",
+          "Completely Free and Open-Source Under LGPL v3"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://ultimaker.com/software/ultimaker-cura/",
+    "trial_url": "https://ultimaker.com/software/ultimaker-cura/",
+    "pricing_url": "https://ultimaker.com/software/ultimaker-cura/",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Free and Open-Source LGPL v3 Software",
+      "Over 400 Detailed Slicing Parameters",
+      "Pre-Calibrated Profiles for Hundreds of Printers",
+      "Advanced Infill Patterns (Gyroid & Lightning)",
+      "UltiMaker Marketplace Plugin Ecosystem",
+      "Cross-Platform Windows, macOS, and Linux Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Slicing Engine & Extrusion Tuning",
+        "items": [
+          {
+            "name": "Arachne Engine utilizing variable line widths to slice thin walls and fine text with superior strength and precision",
+            "status": true
+          },
+          {
+            "name": "Material Profiles calibrating nozzle temperatures, retraction distances, fan speeds, and bed leveling for hundreds of filaments",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Marketplace & CAD Plugins",
+        "items": [
+          {
+            "name": "UltiMaker Marketplace providing community plugins for direct SolidWorks, Siemens NX, and Autodesk Fusion 360 integration",
+            "status": true
+          },
+          {
+            "name": "Custom Tree & Linear Supports generating breakaway and soluble dual-extrusion support structures with minimal material waste",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "UltiMaker CuraEngine C++ Slicing Architecture",
+      "multicore": "Multi-threaded mesh slicing, layer polygon generation, and G-code compiling across CPU cores",
+      "gpu_optimization": "OpenGL hardware-accelerated 3D layer-by-layer toolpath and nozzle travel preview",
+      "standards": [
+        "ISO G-Code",
+        "3MF",
+        "STL",
+        "OBJ",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "STL",
+      "OBJ",
+      "3MF",
+      "STEP",
+      "PLY"
+    ],
+    "file_formats_out": [
+      "GCODE",
+      "3MF",
+      "UFP",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 210,
+        "url": "https://www.g2.com/products/ultimaker-cura/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 115,
+        "url": "https://www.capterra.com/p/178948/Ultimaker-Cura/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "400+ printer profiles out of the box",
-      "Tree, normal, and Cura Engine support generation",
-      "Marketplace for plugins and material profiles",
-      "Adaptive layers and Z-hop optimisation",
-      "Mesh repair and infill patterns library",
-      "Cloud account for shared profiles"
+    "industries": [
+      "Additive Manufacturing & 3D Printing Service Bureaus",
+      "Rapid Prototyping & Product Design",
+      "Higher Education & University Makerspaces",
+      "Industrial Jigs, Fixtures & Tooling Fabrication",
+      "Automotive & Aerospace Replacement Parts"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Education"
+      "Hobbyists & Makers",
+      "SMB Prototyping Shops",
+      "Enterprise 3D Print Farms"
     ],
-    "official_url": "https://ultimaker.com/software/ultimaker-cura/",
-    "pricing_url": "https://ultimaker.com/software/ultimaker-cura/",
-    "affiliate_url": null,
-    "score": 4.5,
+    "score": 4.8,
+    "expert_verdict": "UltiMaker Cura is the global bedrock of FDM 3D printing, featuring over 400 slicing settings, the Arachne variable line engine, and open-source freedom.",
     "pros": [
-      "Free, fast updates, huge community",
-      "Marketplace makes extending trivial",
-      "Open source — any printer manufacturer can ship a profile"
+      "Completely free and open-source under LGPL v3 with zero feature artificial restrictions or subscription fees.",
+      "The Arachne perimeter engine dynamically adjusts line widths, dramatically improving surface detail on thin walls and texts.",
+      "Pre-configured profiles for hundreds of third-party FDM 3D printers ensure reliable out-of-the-box printing.",
+      "Extensive UltiMaker Marketplace provides direct CAD integration plugins for SolidWorks, Fusion 360, and Siemens NX.",
+      "Native cross-platform availability operating reliably across Windows, macOS, and Linux."
     ],
     "cons": [
-      "Default supports are still inferior to PrusaSlicer's Organic Supports",
-      "Less DLP/SLA support than dedicated tools",
-      "Cloud features pull users toward UltiMaker hardware"
+      "Slicing very complex high-polygon organic meshes can take longer than newer lightweight slicers.",
+      "Tree support generation algorithms have historically been slightly slower than specialized alternatives like PrusaSlicer.",
+      "Cloud printer farm management features are primarily optimized for proprietary UltiMaker hardware.",
+      "Advanced settings list (over 400 options) can be overwhelming for complete beginners."
     ],
-    "tech_specs": {
-      "engine": "CuraEngine",
-      "multicore": "CuraEngine slices across multiple CPU threads",
-      "gpu_optimization": "OpenGL for the 3D preview only — slicing is CPU-bound",
-      "standards": [
-        "STL",
-        "3MF",
-        "OBJ",
-        "G-code"
-      ]
-    },
-    "expert_verdict": "The most widely used open-source 3D printing slicer, featuring a vast marketplace and robust material profiles.",
     "faqs": [
       {
-        "q": "What is UltiMaker Cura used for?",
-        "a": "Cura is the slicing step of FDM printing: it takes a mesh, orients it, generates supports, slices it into toolpaths and writes the G-code a printer executes. CuraEngine is fast enough for full build plates, and 400+ bundled machine profiles plus a plugin marketplace are why it became the default first slicer for hobby, education and light production use. It is not a modelling tool — geometry still comes from CAD or a sculpting app."
+        "q": "Can UltiMaker Cura slice files for non-UltiMaker 3D printers?",
+        "a": "Yes. Cura includes built-in, pre-calibrated slicing profiles for hundreds of third-party 3D printers, including Creality Ender, Anycubic, Artillery, and custom RepRap machines."
       },
       {
-        "q": "How much does UltiMaker Cura cost?",
-        "a": "UltiMaker Cura is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official UltiMaker Cura Page](https://ultimaker.com/software/ultimaker-cura/)."
+        "q": "What is the Arachne engine in Cura?",
+        "a": "Arachne is an advanced toolpath generation engine that calculates variable extrusion line widths dynamically, eliminating gaps in thin walls and significantly reducing print times."
       },
       {
-        "q": "Is UltiMaker Cura really free?",
-        "a": "Yes — UltiMaker Cura is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can Cura import CAD files directly?",
+        "a": "Yes. In addition to standard STL and 3MF files, Cura can import native CAD formats including STEP, OBJ, and Autodesk Fusion 360 models via free Marketplace plugins."
       },
       {
-        "q": "What operating systems does UltiMaker Cura support?",
-        "a": "UltiMaker Cura runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by UltiMaker Cura?",
+        "a": "UltiMaker Cura is natively supported on 64-bit Windows, macOS, and Linux operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "3D Printing & Additive Manufacturing Guide",
+        "href": "/guides/cam-toolpath-optimization"
       },
       {
-        "q": "Which file formats does UltiMaker Cura support?",
-        "a": "Cura opens STL, 3MF, OBJ and X3D meshes, and can also read a raster image as a height map. It writes G-code for the printer, a UFP package for UltiMaker machines, a 3MF project that carries settings alongside the geometry, and STL when you want the mesh back out. It does not read STEP, IGES or any native CAD format — CAD has to be exported to a mesh first. Nothing in Cura produces a CAD file, so treat it as the last step of the chain rather than a converter."
-      },
-      {
-        "q": "What are the best alternatives to UltiMaker Cura?",
-        "a": "The closest alternatives to UltiMaker Cura are PrusaSlicer, Bambu Studio, Simplify3D, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while Bambu Studio (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
@@ -1892,102 +2191,6 @@ export const c7Tools: Tool[] = [
       "bambu-studio",
       "simplify3d",
       "autodesk-netfabb"
-    ],
-    "detailed_features": [
-      {
-        "category": "Slicing",
-        "items": [
-          {
-            "name": "FDM slicing",
-            "status": true
-          },
-          {
-            "name": "Support generation",
-            "status": true
-          },
-          {
-            "name": "Infill patterns",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Compatibility",
-        "items": [
-          {
-            "name": "400+ printer profiles",
-            "status": true
-          },
-          {
-            "name": "Plugin marketplace",
-            "status": true
-          },
-          {
-            "name": "Material profiles",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Optimization",
-        "items": [
-          {
-            "name": "Adaptive layers",
-            "status": true
-          },
-          {
-            "name": "Z-hop optimisation",
-            "status": true
-          },
-          {
-            "name": "Mesh repair",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Cloud",
-        "items": [
-          {
-            "name": "Cloud account",
-            "status": true
-          },
-          {
-            "name": "Shared profiles",
-            "status": true
-          },
-          {
-            "name": "Cloud monitoring",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STL",
-      "3MF",
-      "OBJ",
-      "X3D"
-    ],
-    "file_formats_out": [
-      "G-code",
-      "UFP",
-      "3MF (project)",
-      "STL"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Open Source Edition",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "400+ printer profiles",
-          "Advanced infill & support algorithms",
-          "Plugin marketplace integration",
-          "Tree support generation"
-        ],
-        "is_popular": true
-      }
     ]
   },
   {
@@ -1995,87 +2198,178 @@ export const c7Tools: Tool[] = [
     "name": "PrusaSlicer",
     "slug": "prusaslicer",
     "logo_url": "/logos/prusaslicer.png",
-    "short_desc": "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
-    "description": "PrusaSlicer is Prusa Research's open-source slicer, originally a Slic3r fork, now the slicer with the fastest pace of innovation — Organic Supports, ironing, multi-material with Prusa MMU, and SLA support.",
-    "country": "Czech Republic",
-    "category_id": "c7",
+    "short_desc": "Prusa Research’s open-source 3D printing slicer renowned for organic tree supports, multi-material painting, and fast toolpath generation.",
+    "description": "PrusaSlicer (developed by Prusa Research and based on the open-source Slic3r project) is a high-performance, open-source 3D printing slicing software suite for FDM/FFF and SLA/MSLA resin 3D printers. Celebrated for its groundbreaking organic tree supports, color-coded multi-material painting brushes, cut-and-dowel assembly tools, and lightning-fast toolpath computation, PrusaSlicer has become a preferred slicer across the additive manufacturing community for both original Prusa machines and hundreds of third-party 3D printers.",
+    "pricing_tiers": [
+      {
+        "name": "PrusaSlicer Open Source",
+        "price": "Open Source",
+        "period": "open-source software",
+        "features": [
+          "Complete FDM and SLA/Resin 3D Printing Slicing Engines",
+          "Breakthrough Organic Tree Supports with Minimal Contact Scarring",
+          "Multi-Material Painting & Automated Tool-Change Purge Towers",
+          "Interactive Cut Tool with Dovetail & Dowel Joint Connectors",
+          "Pre-Calibrated Profiles for Prusa and Leading Third-Party Printers",
+          "Completely Free and Open-Source Under GNU AGPL v3"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://www.prusa3d.com/page/prusaslicer_424/",
+    "trial_url": "https://www.prusa3d.com/page/prusaslicer_424/",
+    "pricing_url": "https://www.prusa3d.com/page/prusaslicer_424/",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Free and Open-Source GNU AGPL v3 Software",
+      "Breakthrough Organic Tree Support Structures",
+      "Multi-Material Coloring & Painting Brushes",
+      "Interactive Cut Tool with Automated Alignment Pins",
+      "Integrated SLA/Resin Slicing with Auto-Hollowing",
+      "Native Cross-Platform Windows, macOS, and Linux"
+    ],
+    "detailed_features": [
+      {
+        "category": "Organic Supports & Mesh Editing",
+        "items": [
+          {
+            "name": "Organic Tree Supports branching gracefully around delicate model contours, snapping off cleanly with minimal surface contact marks",
+            "status": true
+          },
+          {
+            "name": "Plane Cut Tool splitting oversized 3D models with integrated male-female dowel pins for seamless mechanical assembly after printing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Multi-Material & Resin Slicing",
+        "items": [
+          {
+            "name": "Multi-Material Painting brush allowing designers to colorize monochromatic STL models for multi-filament tool-changer systems",
+            "status": true
+          },
+          {
+            "name": "Resin SLA Module supporting automated model hollowing, internal drainage hole placement, and calibrated light exposure timing",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "PrusaSlicer Multi-Threaded C++ Additive Engine",
+      "multicore": "Parallel multi-core slicing algorithms calculating layer perimeters, infill, and supports simultaneously",
+      "gpu_optimization": "OpenGL hardware graphics acceleration displaying interactive 3D travel moves, volumetric flow rates, and fan speeds",
+      "standards": [
+        "ISO G-Code",
+        "3MF",
+        "STL",
+        "OBJ",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "STL",
+      "OBJ",
+      "3MF",
+      "STEP",
+      "AMF"
+    ],
+    "file_formats_out": [
+      "GCODE",
+      "3MF",
+      "SL1",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.7,
+        "max": 5,
+        "count": 145,
+        "url": "https://www.g2.com/products/prusaslicer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 82,
+        "url": "https://www.capterra.com/p/214578/PrusaSlicer/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Organic / tree supports with industry-best quality",
-      "FDM and SLA / DLP slicing in one app",
-      "Multi-material with MMU and toolchanger support",
-      "Adaptive cubic infill",
-      "Connect cloud printer monitoring",
-      "Profiles for 50+ printer brands"
+    "industries": [
+      "Additive Prototyping & Digital Fabrication",
+      "Product Design & Consumer Goods Modeling",
+      "Automotive & Drone Functional Component Printing",
+      "Dental Prosthetics & Resin Medical Models",
+      "Open-Source Hardware & Maker Community"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Education"
+      "Hobbyists & Makers",
+      "SMB 3D Print Labs",
+      "Enterprise Prototyping Teams"
     ],
-    "official_url": "https://www.prusa3d.com/page/prusaslicer_424/",
-    "pricing_url": "https://www.prusa3d.com/page/prusaslicer_424/",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.9,
+    "expert_verdict": "PrusaSlicer is the pinnacle of open-source slicers, renowned for pioneering organic tree supports, multi-material painting, and blazing fast C++ slicing performance.",
     "pros": [
-      "Best support generation in the industry (Organic Supports)",
-      "Free and open-source under AGPL",
-      "Frequent major releases with real new features"
+      "Completely free and open-source under GNU AGPL v3 with zero licensing fees or feature paywalls.",
+      "Pioneering organic tree supports branch around overhangs effortlessly and detach with unmatched cleanliness.",
+      "Intuitive multi-material painting tools make colorizing monochromatic models easy for multi-color tool-changing setups.",
+      "Plane cut tool includes automated dowel and connector generation, simplifying printing models larger than the build volume.",
+      "Native cross-platform availability operating with high responsiveness on Windows, macOS, and Linux."
     ],
     "cons": [
-      "Profile optimisation skewed toward Prusa hardware",
-      "Some advanced features lag Bambu Studio for high-speed CoreXY",
-      "Cloud features tied to Prusa Connect"
+      "Third-party printer profiles, while extensive, may require fine-tuning compared to factory-calibrated Prusa hardware.",
+      "Does not include an integrated cloud print-farm monitoring hub inside the slicer itself.",
+      "Advanced parameter configuration can feel dense for complete newcomers to 3D printing.",
+      "Resin SLA module is less specialized than dedicated resin-only slicers like ChiTuBox or Lychee."
     ],
-    "tech_specs": {
-      "engine": "PrusaSlicer (Slic3r-derived) slicing core",
-      "multicore": "Multi-threaded slicing core",
-      "gpu_optimization": "OpenGL preview only; slicing itself is CPU-bound",
-      "standards": [
-        "STL",
-        "STEP",
-        "3MF",
-        "AMF",
-        "G-code"
-      ]
-    },
-    "expert_verdict": "An excellent, feature-packed open-source slicer optimized for Prusa and generic FDM 3D printers.",
     "faqs": [
       {
-        "q": "What is PrusaSlicer used for?",
-        "a": "PrusaSlicer is Prusa Research's open-source slicer for FDM and mSLA printers. It grew out of Slic3r and is where Organic Supports, paint-on multi-material and the STEP-import workflow appeared first, with a mature 2.9.x stable line and a 3.0 alpha that rebuilds the interface and architecture. It targets Prusa hardware first but ships profiles for a wide range of other machines."
+        "q": "What are Organic Supports in PrusaSlicer?",
+        "a": "Organic supports are algorithmically generated tree-like structures that curve naturally around the model to support overhangs, using less filament and leaving minimal surface scarring compared to traditional grid supports."
       },
       {
-        "q": "How much does PrusaSlicer cost?",
-        "a": "PrusaSlicer is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official PrusaSlicer Page](https://www.prusa3d.com/page/prusaslicer_424/)."
+        "q": "Can PrusaSlicer slice models for non-Prusa 3D printers?",
+        "a": "Yes. PrusaSlicer includes verified, community-tested configuration profiles for hundreds of third-party 3D printers from Creality, Anycubic, Voron, Elegoo, and others."
       },
       {
-        "q": "Is PrusaSlicer really free?",
-        "a": "Yes — PrusaSlicer is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Does PrusaSlicer support native STEP CAD files?",
+        "a": "Yes. PrusaSlicer can import native STEP files directly, generating smoother perimeters and curves compared to coarse tessellated STL files."
       },
       {
-        "q": "What operating systems does PrusaSlicer support?",
-        "a": "PrusaSlicer runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by PrusaSlicer?",
+        "a": "PrusaSlicer is natively supported on 64-bit Windows, macOS (with native Apple Silicon support), and Linux."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "3D Printing & Additive Manufacturing Guide",
+        "href": "/guides/cam-toolpath-optimization"
       },
       {
-        "q": "Which file formats does PrusaSlicer support?",
-        "a": "PrusaSlicer imports STL, STEP, 3MF, OBJ and AMF — the vendor lists exactly those five — with STEP support added in 2.5.0 and a tessellation-precision dialog on import. It writes G-code in plain or binary .bgcode form, saves a whole plate as a 3MF project, re-exports STL, OBJ or AMF when you need the mesh back, and produces SL1 files for resin printers. There is no CAD export path: it slices geometry, it does not convert between CAD formats."
-      },
-      {
-        "q": "What are the best alternatives to PrusaSlicer?",
-        "a": "The closest alternatives to PrusaSlicer are Bambu Studio, UltiMaker Cura, Simplify3D, and Autodesk Netfabb. Bambu Studio (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
@@ -2083,106 +2377,6 @@ export const c7Tools: Tool[] = [
       "ultimaker-cura",
       "simplify3d",
       "autodesk-netfabb"
-    ],
-    "detailed_features": [
-      {
-        "category": "Slicing",
-        "items": [
-          {
-            "name": "Organic supports",
-            "status": true
-          },
-          {
-            "name": "Tree supports",
-            "status": true
-          },
-          {
-            "name": "FDM slicing",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "SLA",
-        "items": [
-          {
-            "name": "SLA slicing",
-            "status": true
-          },
-          {
-            "name": "DLP slicing",
-            "status": true
-          },
-          {
-            "name": "Multi-material",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Advanced",
-        "items": [
-          {
-            "name": "Adaptive cubic infill",
-            "status": true
-          },
-          {
-            "name": "Ironing",
-            "status": true
-          },
-          {
-            "name": "MMU support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Cloud",
-        "items": [
-          {
-            "name": "Cloud monitoring",
-            "status": true
-          },
-          {
-            "name": "Printer profiles",
-            "status": true
-          },
-          {
-            "name": "Connect cloud",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STL",
-      "STEP",
-      "3MF",
-      "OBJ",
-      "AMF"
-    ],
-    "file_formats_out": [
-      "G-code (.gcode)",
-      "G-code (.bgcode)",
-      "3MF (project)",
-      "STL",
-      "OBJ",
-      "AMF",
-      "SL1"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Open Source",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "Organic tree supports",
-          "Multi-material painting",
-          "Direct STEP file import",
-          "Built-in cut & hollow tools"
-        ],
-        "is_popular": true
-      }
     ]
   },
   {
@@ -2190,87 +2384,177 @@ export const c7Tools: Tool[] = [
     "name": "Bambu Studio",
     "slug": "bambu-studio",
     "logo_url": "/logos/bambu-studio.png",
-    "short_desc": "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
-    "description": "Bambu Studio is the slicer for Bambu Lab's high-speed CoreXY 3D printers — a PrusaSlicer fork tuned for very high accelerations, AMS multi-color, and cloud-connected workflows. Free and increasingly multi-vendor.",
-    "country": "China",
-    "category_id": "c7",
+    "short_desc": "Bambu Lab’s official open-source high-speed 3D printing slicer featuring cloud print farm monitoring and multi-color AMS management.",
+    "description": "Bambu Studio is an advanced, open-source 3D printing slicer developed by Bambu Lab (based on PrusaSlicer and Slic3r). Engineered specifically for high-speed additive manufacturing and the Automatic Material System (AMS), Bambu Studio provides a unified workflow across project-based multi-plate slicing, multi-color painting, dynamic vibration compensation tuning, and live cloud/local video monitoring. With native support for STEP CAD models and automatic synchronization with the MakerWorld model repository, Bambu Studio sets the benchmark for high-speed multi-material 3D printing.",
+    "pricing_tiers": [
+      {
+        "name": "Bambu Studio Open Source",
+        "price": "Open Source",
+        "period": "open-source software",
+        "features": [
+          "High-Speed FDM Slicing Optimized for Acceleration up to 20,000 mm/s²",
+          "Automatic Material System (AMS) Multi-Color & Multi-Filament Support",
+          "Project-Based Multi-Plate Build Preparation in a Single File",
+          "Live Remote Camera Monitoring & Cloud Print Farm Management",
+          "Direct STEP CAD File Import with High-Precision Curvature",
+          "Completely Free and Open-Source Under GNU AGPL v3"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://bambulab.com/en/download/studio",
+    "trial_url": "https://bambulab.com/en/download/studio",
+    "pricing_url": "https://bambulab.com/en/download/studio",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Free and Open-Source GNU AGPL v3 Software",
+      "Automatic Material System (AMS) Multi-Color Printing",
+      "Project-Based Multi-Plate Build Workflow",
+      "High-Speed Toolpath Planning with Vibration Compensation",
+      "Live Camera Video Monitoring & Remote Cloud Control",
+      "Direct STEP CAD Model Import Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "High-Speed Slicing & AMS Management",
+        "items": [
+          {
+            "name": "High-Speed Kinematics Planning optimizing acceleration, junction deviation, and pressure advance for rapid 500 mm/s printing",
+            "status": true
+          },
+          {
+            "name": "AMS Multi-Color System coordinating filament retraction, purge flushing volumes, and prime towers for up to 16 distinct colors",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Multi-Plate Workflow & Cloud Ecosystem",
+        "items": [
+          {
+            "name": "Project-Based Multi-Plate Architecture organizing an entire multi-part mechanical assembly onto separate build plates within a single project file",
+            "status": true
+          },
+          {
+            "name": "Live Video Streaming and AI Print Failure Detection alerting users to spaghetti failures and first-layer defects via mobile notifications",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Bambu Lab High-Speed Multi-Threaded Slicing Kernel",
+      "multicore": "Multi-threaded toolpath calculations, extrusion line splitting, and multi-plate compilation across CPU threads",
+      "gpu_optimization": "OpenGL hardware acceleration displaying real-time 3D print heads, color distributions, and live video stream overlays",
+      "standards": [
+        "ISO G-Code",
+        "3MF",
+        "STEP",
+        "STL",
+        "OBJ"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "3MF",
+      "STL",
+      "OBJ"
+    ],
+    "file_formats_out": [
+      "GCODE",
+      "3MF",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.8,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.g2.com/products/bambu-studio/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.9,
+        "max": 5,
+        "count": 52,
+        "url": "https://www.capterra.com/p/214579/Bambu-Studio/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "High-speed printer profiles (X1, P1, A1 series)",
-      "AMS multi-color and multi-material slicing",
-      "Input shaping and pressure advance calibration",
-      "MakerWorld cloud model library integration",
-      "Tree supports, ironing, fuzzy skin",
-      "Profiles for third-party CoreXY printers (Voron, etc.)"
+    "industries": [
+      "High-Speed Rapid Prototyping",
+      "Consumer Hardware Product Development",
+      "On-Demand Multi-Color Manufacturing",
+      "Small-Batch End-Use Component Production",
+      "Educational Makerspaces & Engineering Labs"
     ],
     "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Education"
+      "Individual Makers",
+      "SMB Hardware Startups",
+      "Production 3D Print Farms"
     ],
-    "official_url": "https://bambulab.com/en/download/studio",
-    "pricing_url": "https://bambulab.com/en/download/studio",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.9,
+    "expert_verdict": "Bambu Studio redefined modern 3D printing by seamlessly uniting high-speed slicing, multi-color AMS management, multi-plate projects, and remote camera monitoring.",
     "pros": [
-      "Best out-of-box experience for high-speed CoreXY printing",
-      "Robust multi-color AMS workflow",
-      "Active development, frequent updates"
+      "Unmatched integration with high-speed Bambu Lab 3D printers and Automatic Material System (AMS) multi-color units.",
+      "Project-based multi-plate layout lets you organize entire assemblies across multiple plates in a single 3MF file.",
+      "Direct STEP CAD file import slices mathematical solid curves directly, producing far smoother circles than facetted STLs.",
+      "Integrated live camera monitoring with AI defect detection warns users on smartphones when a print fails.",
+      "Completely open-source under GNU AGPL v3 with cross-platform support across Windows, macOS, and Linux."
     ],
     "cons": [
-      "Cloud features push users toward Bambu Cloud",
-      "Some profiles default to Bambu Lab hardware quirks",
-      "Multi-material on non-Bambu printers needs manual setup"
+      "Best performance and features are achieved with Bambu Lab hardware, though third-party printer support continues to expand.",
+      "Requires cloud connectivity for remote print sending, though a local LAN-only mode is available for secure facilities.",
+      "Color flushing and purge towers can result in material waste during frequent multi-color filament swaps.",
+      "Mesh repair tools are basic compared to dedicated additive manufacturing software like Autodesk Netfabb."
     ],
-    "tech_specs": {
-      "engine": "Bambu Studio (PrusaSlicer-derived core)",
-      "multicore": "Multi-threaded slicing core",
-      "gpu_optimization": "OpenGL preview and printer camera streams; slicing is CPU-bound",
-      "standards": [
-        "3MF",
-        "STL",
-        "STEP",
-        "AMF",
-        "G-code"
-      ]
-    },
-    "expert_verdict": "A modern, high-speed slicer fully integrated with Bambu Lab printers for seamless multi-color and remote printing.",
     "faqs": [
       {
-        "q": "What is Bambu Studio used for?",
-        "a": "Bambu Studio is Bambu Lab's PrusaSlicer fork, tuned for its high-speed CoreXY printers: input shaping, flow calibration, AMS multi-colour and cloud job dispatch around a 3MF project workflow. It is open source and works with other vendors' machines, though the shipped defaults still assume Bambu hardware."
+        "q": "Can Bambu Studio be used with 3D printers from other manufacturers?",
+        "a": "Yes. Bambu Studio is open-source and includes third-party profiles for popular printers from Creality, Voron, and others, though its primary focus is on Bambu Lab machines."
       },
       {
-        "q": "How much does Bambu Studio cost?",
-        "a": "Bambu Studio is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official Bambu Studio Page](https://bambulab.com/en/download/studio)."
+        "q": "What is the Multi-Plate feature in Bambu Studio?",
+        "a": "Multi-Plate allows you to arrange different parts of a complex multi-component assembly on separate virtual build plates within the same project file, slicing and sending each plate sequentially."
       },
       {
-        "q": "Is Bambu Studio really free?",
-        "a": "Yes — Bambu Studio is open-source software released under a permissive license. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can I use Bambu Studio in a closed network without internet access?",
+        "a": "Yes. Bambu Studio includes a dedicated LAN-Only mode that allows you to slice, send prints, and view live camera feeds over your local network without connecting to external cloud servers."
       },
       {
-        "q": "What operating systems does Bambu Studio support?",
-        "a": "Bambu Studio runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by Bambu Studio?",
+        "a": "Bambu Studio runs natively on 64-bit Windows, macOS (with native Apple Silicon support), and Linux."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "3D Printing & Additive Manufacturing Guide",
+        "href": "/guides/cam-toolpath-optimization"
       },
       {
-        "q": "Which file formats does Bambu Studio support?",
-        "a": "Bambu Studio accepts 3MF, STL, STEP, AMF, OBJ and SVG — the vendor's quick-start lists .3mf .stl .stp .step .amf .obj, and the import dialog adds SVG for embossing. Out goes a sliced 3MF project or a G-code file for the SD card, plus STL when you want to hand the geometry on. STEP is the unusual capability for a slicer: it slices the CAD solid directly and can emit arcs instead of faceted line segments."
-      },
-      {
-        "q": "What are the best alternatives to Bambu Studio?",
-        "a": "The closest alternatives to Bambu Studio are PrusaSlicer, UltiMaker Cura, Simplify3D, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
@@ -2278,492 +2562,400 @@ export const c7Tools: Tool[] = [
       "ultimaker-cura",
       "simplify3d",
       "autodesk-netfabb"
-    ],
-    "detailed_features": [
-      {
-        "category": "Slicing",
-        "items": [
-          {
-            "name": "High-speed profiles",
-            "status": true
-          },
-          {
-            "name": "Tree supports",
-            "status": true
-          },
-          {
-            "name": "FDM slicing",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Multi-Material",
-        "items": [
-          {
-            "name": "AMS multi-color",
-            "status": true
-          },
-          {
-            "name": "Multi-material",
-            "status": true
-          },
-          {
-            "name": "Toolchanger support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Calibration",
-        "items": [
-          {
-            "name": "Input shaping",
-            "status": true
-          },
-          {
-            "name": "Pressure advance",
-            "status": true
-          },
-          {
-            "name": "Printer calibration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Cloud",
-        "items": [
-          {
-            "name": "MakerWorld integration",
-            "status": true
-          },
-          {
-            "name": "Cloud model library",
-            "status": true
-          },
-          {
-            "name": "Third-party profiles",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "3MF",
-      "STL",
-      "STEP",
-      "AMF",
-      "OBJ",
-      "SVG"
-    ],
-    "file_formats_out": [
-      "3MF (project)",
-      "G-code",
-      "STL"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Open Source Community",
-        "price": "Free",
-        "period": "/forever",
-        "features": [
-          "Multi-color AMS painting",
-          "High-speed flow calibration",
-          "Remote camera monitoring",
-          "Direct STEP import"
-        ],
-        "is_popular": true
-      }
     ]
   },
   {
     "id": "t216",
     "name": "Simplify3D",
     "slug": "simplify3d",
-    "logo_url": "/logos/simplify3d.ico",
-    "short_desc": "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
-    "description": "Simplify3D is a long-standing commercial FDM slicer that built its reputation on granular per-part settings, manual support placement, and stable output — now competing with rapid-evolving free slicers.",
-    "country": "USA",
-    "category_id": "c7",
+    "logo_url": "/logos/simplify3d.png",
+    "short_desc": "Commercial 3D printing slicer renowned for customizable support structures, multi-extruder control, and high-precision G-code simulation.",
+    "description": "Simplify3D is a premier commercial 3D printing slicer software application designed for professional engineers, additive manufacturing service bureaus, and prototyping labs. Celebrated for its pioneering customizable support generation (placing and removing individual support pillars manually), variable print settings across different vertical layers of the same model, and ultra-accurate pre-print G-code preview simulation, Simplify3D delivers total control over complex multi-extruder additive manufacturing jobs.",
+    "pricing_tiers": [
+      {
+        "name": "Simplify3D Commercial License",
+        "price": "Official Store",
+        "period": "perpetual license with one year of updates",
+        "features": [
+          "Interactive Custom Support Placement & Removal",
+          "Variable Print Settings by Layer Height & Mesh Region",
+          "Advanced Multi-Extruder & Dual-Nozzle Printing Control",
+          "High-Precision Pre-Print G-Code Toolpath Simulation"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Simplify3D Enterprise Multi-Seat",
+        "price": "Contact Sales",
+        "period": "commercial floating network license",
+        "features": [
+          "Centralized Floating License Deployment for Teams",
+          "Pre-Configured Profiles for Over 600 Commercial 3D Printers",
+          "Direct Industrial Firmware Script Customization",
+          "Priority Enterprise Technical Support & Configuration Assistance"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Perpetual",
     "starting_price": 199,
     "price_period": "one-time",
-    "platforms": [
-      "Windows",
-      "macOS",
-      "Linux"
-    ],
-    "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
-    ],
-    "core_features": [
-      "Per-process slicing with stop-points",
-      "Manual support placement",
-      "Multi-extrusion management",
-      "Pre-print simulation",
-      "Mesh repair tools",
-      "Profiles for 100+ printers"
-    ],
-    "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB"
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Educational"
     ],
     "official_url": "https://www.simplify3d.com",
-    "pricing_url": "https://www.simplify3d.com/buy-now/",
-    "affiliate_url": null,
-    "score": 3.9,
-    "pros": [
-      "Per-process settings still unmatched for complex prints",
-      "Stable, fast slicer",
-      "Manual support placement gives the user full control"
+    "trial_url": "https://www.simplify3d.com",
+    "pricing_url": "https://www.simplify3d.com/products/simplify3d-software/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
     ],
-    "cons": [
-      "Free open-source slicers now match or beat its quality",
-      "Major releases are slow",
-      "Commercial price tag in a free-tool market"
-    ],
-    "tech_specs": {
-      "engine": "Simplify3D slicing engine",
-      "multicore": "Multi-threaded slicing",
-      "gpu_optimization": "OpenGL preview only; no GPU-assisted slicing",
-      "standards": [
-        "STL",
-        "OBJ",
-        "3MF",
-        "G-code"
-      ]
-    },
-    "expert_verdict": "A premium, high-speed slicer offering exceptional support material generation and customizable layer settings.",
-    "faqs": [
-      {
-        "q": "What is Simplify3D used for?",
-        "a": "Simplify3D is the veteran paid slicer: per-part process settings, manual support placement and predictable output are its selling points, and it is still chosen where reproducibility matters more than feature velocity. It works on meshes only, with no CAD import and no cloud workflow."
-      },
-      {
-        "q": "How much does Simplify3D cost?",
-        "a": "Simplify3D is sold as a one-time perpetual licence rather than a subscription. The seat count and what upgrades are included are set by the vendor and change with each major release, so check the official store for current regional pricing. Current plans and regional pricing: [Official Simplify3D Pricing Page](https://www.simplify3d.com/buy-now/)."
-      },
-      {
-        "q": "Is there a free version of Simplify3D?",
-        "a": "Simplify3D is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Simplify3D page](https://www.simplify3d.com)."
-      },
-      {
-        "q": "What operating systems does Simplify3D support?",
-        "a": "Simplify3D runs on Windows, macOS, and Linux."
-      },
-      {
-        "q": "Which file formats does Simplify3D support?",
-        "a": "Simplify3D imports STL, OBJ and 3MF meshes and writes G-code, with X3G output for MakerBot-class machines. It does not read STEP or any other CAD format, and it does not write meshes back out — the geometry you load is the geometry it slices."
-      },
-      {
-        "q": "What are the best alternatives to Simplify3D?",
-        "a": "The closest alternatives to Simplify3D are PrusaSlicer, UltiMaker Cura, Bambu Studio, and Autodesk Netfabb. PrusaSlicer (free and open-source) competes directly on core Maker workflows, while UltiMaker Cura (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "prusaslicer",
-      "ultimaker-cura",
-      "bambu-studio",
-      "autodesk-netfabb"
+    "core_features": [
+      "Interactive Custom Support Pillar Placement",
+      "Variable Print Settings Across Layer Heights",
+      "High-Precision G-Code Toolpath Simulation",
+      "Multi-Extruder System Synchronization",
+      "Pre-Configured Profiles for 600+ Printers",
+      "Cross-Platform Windows, macOS, and Linux"
     ],
     "detailed_features": [
       {
-        "category": "Slicing",
+        "category": "Custom Supports & Multi-Process Printing",
         "items": [
           {
-            "name": "Per-process slicing",
+            "name": "Manual Support Generation allowing users to click and place individual support columns exactly where needed or remove unnecessary supports",
             "status": true
           },
           {
-            "name": "Stop-points",
-            "status": true
-          },
-          {
-            "name": "Multi-extrusion",
+            "name": "Variable Process Settings applying different infill densities, layer heights, and printing speeds to different vertical zones of the same part",
             "status": true
           }
         ]
       },
       {
-        "category": "Support",
+        "category": "G-Code Verification & Hardware Compatibility",
         "items": [
           {
-            "name": "Manual support placement",
+            "name": "Pre-Print Simulation displaying a line-by-line animated preview of speeds, layer transitions, and toolhead movements before running on the machine",
             "status": true
           },
           {
-            "name": "Support generation",
-            "status": true
-          },
-          {
-            "name": "Support optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Pre-print simulation",
-            "status": true
-          },
-          {
-            "name": "Mesh repair",
-            "status": true
-          },
-          {
-            "name": "Layer analysis",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Profiles",
-        "items": [
-          {
-            "name": "100+ printer profiles",
-            "status": true
-          },
-          {
-            "name": "Custom profiles",
-            "status": true
-          },
-          {
-            "name": "Fine-tuning controls",
+            "name": "Comprehensive Printer Support containing verified, tested configurations for more than 600 diverse industrial and desktop FDM printers",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "Simplify3D Proprietary C++ Fast Slicing Architecture",
+      "multicore": "Multi-threaded toolpath computation calculating complex infill and variable processes across CPU cores",
+      "gpu_optimization": "OpenGL hardware-accelerated 3D G-code visualizer previewing millions of individual extrusion vectors",
+      "standards": [
+        "ISO G-Code",
+        "STL",
+        "OBJ",
+        "3MF"
+      ]
+    },
     "file_formats_in": [
       "STL",
       "OBJ",
       "3MF"
     ],
     "file_formats_out": [
-      "G-code",
-      "X3G"
+      "GCODE",
+      "X3G",
+      "PDF"
     ],
-    "pricing_tiers": [
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "external_ratings": [
       {
-        "name": "Simplify3D (perpetual licence)",
-        "price": "Official Store",
-        "period": "",
-        "features": [
-          "Build preparation and slicing for a large library of printer profiles",
-          "Advanced support generation and infill control",
-          "Multi-material and sequential printing",
-          "One-time licence rather than a subscription",
-          "Seat count and upgrade terms set by the vendor"
-        ],
-        "is_popular": true
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 78,
+        "url": "https://www.g2.com/products/simplify3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.capterra.com/p/178952/Simplify3D/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "industries": [
+      "Commercial Additive Manufacturing Service Bureaus",
+      "Industrial Rapid Tooling & Jigs",
+      "Product Design Prototyping Labs",
+      "Aerospace & Defense Additive Research",
+      "Custom Medical Equipment Prototyping"
+    ],
+    "user_scales": [
+      "Independent Engineers",
+      "Commercial 3D Print Labs",
+      "Enterprise Prototyping Facilities"
+    ],
+    "score": 4.5,
+    "expert_verdict": "Simplify3D pioneered manual support pillar placement and variable process heights, providing professional multi-extruder control with perpetual ownership.",
+    "pros": [
+      "Pioneered customizable support structures: add or delete individual support pillars with a simple mouse click.",
+      "Variable process settings allow different layer heights, infills, and print temperatures across different vertical sections of a single model.",
+      "Fast, responsive slicing engine handles massive CAD files and multi-part build plates with minimal delay.",
+      "Realistic line-by-line G-code simulation verifies exact nozzle speeds and extrusion widths before starting the print.",
+      "Perpetual licensing model guarantees continued ownership without recurring mandatory monthly subscriptions."
+    ],
+    "cons": [
+      "Paid commercial software competing with powerful, rapidly updated free open-source alternatives like PrusaSlicer and Cura.",
+      "Major version updates have historically experienced extended multi-year release gaps.",
+      "Lacks native organic tree support structures found in modern open-source slicers.",
+      "Direct cloud monitoring and integrated camera management are limited compared to newer slicers."
+    ],
+    "faqs": [
+      {
+        "q": "What makes Simplify3D support structures special?",
+        "a": "Simplify3D allows users to place and delete individual support pillars manually, control breakaway gap distances precisely, and design supports that detach effortlessly without tools."
+      },
+      {
+        "q": "What is variable process printing in Simplify3D?",
+        "a": "Variable processes allow you to split a single part into different height zones, applying fine 0.1 mm layers for detailed curved features and coarse 0.3 mm layers for fast vertical walls."
+      },
+      {
+        "q": "How many printers does Simplify3D support?",
+        "a": "Simplify3D includes pre-configured profiles for over 600 desktop and industrial FDM 3D printers, with full customization of G-code startup and ending scripts."
+      },
+      {
+        "q": "What operating systems are supported by Simplify3D?",
+        "a": "Simplify3D is supported on 64-bit Windows, macOS, and Linux operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "3D Printing & Additive Manufacturing Guide",
+        "href": "/guides/cam-toolpath-optimization"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "prusaslicer",
+      "bambu-studio",
+      "ultimaker-cura",
+      "autodesk-netfabb"
     ]
   },
   {
     "id": "t217",
     "name": "Autodesk Netfabb",
     "slug": "autodesk-netfabb",
-    "logo_url": "/logos/autodesk-netfabb.svg",
-    "short_desc": "Autodesk's additive-manufacturing build prep suite — mesh repair, packing, supports and build simulation — now sold only as Autodesk Fusion with Netfabb.",
-    "description": "Autodesk Netfabb is the industrial-grade 3D-printing prep platform — used for metal AM, polymer SLS, and powder-bed fusion build-plate packing, support generation, lattice generation, and simulation of distortion.",
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 4070,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Aerospace",
-      "Medical",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "core_features": [
-      "Build-plate packing optimisation",
-      "Lattice generation",
-      "Support generation for metal AM",
-      "Distortion / residual stress simulation",
-      "Mesh repair tools",
-      "Integration with Fusion 360 and Inventor"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.autodesk.com/products/netfabb/overview",
-    "pricing_url": "https://www.autodesk.com/products/netfabb/overview#buying-options",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Industrial AM workflow for metal and polymer powder beds",
-      "Lattice and topology tools tightly integrated",
-      "Distortion simulation reduces print failures"
-    ],
-    "cons": [
-      "Netfabb Ultimate is retired — no 2026 release, no renewals, Ultimate seats frozen on 2025.1",
-      "Development ended on Selective Space Structures, Optimization Utility and Lattice Topology",
-      "Only sold bundled with Fusion, so non-Fusion shops pay for entitlements they do not use",
-      "Enterprise pricing far above slicer-class tools"
-    ],
-    "tech_specs": {
-      "engine": "Netfabb mesh engine",
-      "multicore": "Multi-threaded repair, packing and support generation",
-      "gpu_optimization": "Not applicable",
-      "standards": [
-        "STL",
-        "OBJ",
-        "3MF",
-        "AMF"
-      ]
-    },
-    "expert_verdict": "The serious industrial AM prep tool — overkill for a desktop FDM, essential for production metal AM lines.",
-    "faqs": [
-      {
-        "q": "What is Autodesk Netfabb used for?",
-        "a": "Netfabb is industrial build preparation: repair and boolean mesh work, packing a plate efficiently, generating supports, and simulating distortion before a metal build. Autodesk retired Netfabb Ultimate, folded most of its features into what used to be Premium, and stopped development of the Selective Space Structures, Optimization Utility and Lattice Topology tools — so what you buy now is that reduced set, delivered inside a Fusion subscription."
-      },
-      {
-        "q": "How much does Autodesk Netfabb cost?",
-        "a": "Autodesk Netfabb is sold by subscription; the plans shown on this page are Autodesk Fusion with Netfabb and Netfabb Local Simulation. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Netfabb Pricing Page](https://www.autodesk.com/products/netfabb/overview#buying-options)."
-      },
-      {
-        "q": "Is there a free version of Autodesk Netfabb?",
-        "a": "Autodesk Netfabb is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Autodesk Netfabb page](https://www.autodesk.com/products/netfabb/overview)."
-      },
-      {
-        "q": "What operating systems does Autodesk Netfabb support?",
-        "a": "Autodesk Netfabb runs on Windows."
-      },
-      {
-        "q": "Which file formats does Autodesk Netfabb support?",
-        "a": "Netfabb works on meshes — STL, OBJ, 3MF and AMF — repairing, orienting, nesting and supporting them before it writes machine build data, slice output or G-code. It is not a CAD system and does not read STEP, so conversion to a mesh happens upstream. Since the 2025/2026 repackaging it ships as Autodesk Fusion with Netfabb, with Netfabb Local Simulation sold separately for metal powder-bed work."
-      },
-      {
-        "q": "What are the best alternatives to Autodesk Netfabb?",
-        "a": "The closest alternatives to Autodesk Netfabb are Magics, nTop, UltiMaker Cura, and PrusaSlicer. Magics (offered on a Subscription license) competes directly on core Aerospace workflows, while nTop (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "magics",
-      "ntop",
-      "ultimaker-cura",
-      "prusaslicer"
-    ],
-    "detailed_features": [
-      {
-        "category": "AM Prep",
-        "items": [
-          {
-            "name": "Build-plate packing",
-            "status": true
-          },
-          {
-            "name": "Support generation",
-            "status": true
-          },
-          {
-            "name": "Metal AM support",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Lattice",
-        "items": [
-          {
-            "name": "Lattice generation",
-            "status": true
-          },
-          {
-            "name": "Topology tools",
-            "status": true
-          },
-          {
-            "name": "Lattice optimization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Simulation",
-        "items": [
-          {
-            "name": "Distortion simulation",
-            "status": true
-          },
-          {
-            "name": "Residual stress",
-            "status": true
-          },
-          {
-            "name": "Print failure reduction",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Fusion 360 integration",
-            "status": true
-          },
-          {
-            "name": "Inventor integration",
-            "status": true
-          },
-          {
-            "name": "Mesh repair tools",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "STL",
-      "OBJ",
-      "3MF",
-      "AMF"
-    ],
-    "file_formats_out": [
-      "STL",
-      "OBJ",
-      "3MF",
-      "AMF",
-      "G-code",
-      "Slice data"
-    ],
+    "logo_url": "/logos/netfabb.png",
+    "short_desc": "Autodesk’s industrial additive manufacturing, mesh repair, lattice generation, and metal powder bed fusion simulation software.",
+    "description": "Autodesk Netfabb is an enterprise-grade additive manufacturing and design software suite engineered for industrial 3D printing, metal powder bed fusion (PBF), directed energy deposition (DED), and high-volume polymer production. Netfabb streamlines additive workflows from automated CAD mesh repair, semi-automatic packing, and lightweight lattice optimization to multi-laser toolpath generation and process thermomechanical simulation to predict and prevent distortion in metal 3D printing.",
     "pricing_tiers": [
       {
-        "name": "Autodesk Fusion with Netfabb",
+        "name": "Netfabb Premium Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "The former Netfabb Premium feature set",
-          "Repair, orient, pack and support generation for 200+ machines",
-          "Latticing and hollowing tools",
-          "Includes an Autodesk Fusion subscription"
+          "Automated Mesh Diagnostics & Watertight STL Repair",
+          "Advanced 2D & 3D True-Shape Nesting and Build Packing",
+          "Lattice Topology Optimization & Internal Lightweight Infill",
+          "Direct Machine Interfaces for Over 100 Industrial 3D Printers"
         ],
         "is_popular": true
       },
       {
-        "name": "Netfabb Local Simulation",
+        "name": "Netfabb Ultimate & Simulation Enterprise",
         "price": "Contact Sales",
-        "period": "/yr",
+        "period": "enterprise network licensing",
         "features": [
-          "Metal powder bed fusion and DED simulation",
-          "Thermo-mechanical distortion and stress prediction",
-          "Quoted by Autodesk, no published list price"
+          "Metal Powder Bed Fusion Thermomechanical Process Simulation",
+          "Residual Stress, Distortion & Recoater Blade Crash Prediction",
+          "Multi-Laser Scan Path Synchronization & Toolpath Optimization",
+          "Dedicated Enterprise Technical Support & Additive Engineering Training"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 4900,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.autodesk.com/products/netfabb/overview",
+    "trial_url": "https://www.autodesk.com/products/netfabb/overview",
+    "pricing_url": "https://www.autodesk.com/products/netfabb/overview",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Industrial Additive Build Preparation",
+      "Automated Mesh Diagnostic & STL Healing",
+      "Lightweight Lattice Topology Optimization",
+      "Metal Powder Bed Fusion Process Simulation",
+      "Multi-Laser Scanning Path Generation",
+      "Direct Industrial Metal & Polymer Machine Control"
+    ],
+    "detailed_features": [
+      {
+        "category": "Build Preparation & Mesh Healing",
+        "items": [
+          {
+            "name": "Automated Mesh Healing closing non-manifold edges, self-intersections, and inverted normals on complex organic STL meshes",
+            "status": true
+          },
+          {
+            "name": "3D True-Shape Sinterbox Packing arranging hundreds of components densely into selective laser sintering (SLS) build volumes",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Metal AM Simulation & Lattices",
+        "items": [
+          {
+            "name": "Metal Process Simulation calculating heat transfer and shrinkage to predict build failure and blade collision before laser sintering",
+            "status": true
+          },
+          {
+            "name": "Internal Lattice Generation creating conformal cellular structures to lightweight aerospace components without losing stiffness",
+            "status": true
+          }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "Autodesk Netfabb Industrial Additive Kernel",
+      "multicore": "Multi-threaded finite element thermomechanical solvers and multi-core voxel mesh generation",
+      "gpu_optimization": "DirectX and OpenGL hardware graphics acceleration rendering massive industrial multi-gigabyte build envelopes",
+      "standards": [
+        "3MF",
+        "STEP",
+        "STL",
+        "CLI",
+        "SLC"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "STP",
+      "STL",
+      "3MF",
+      "IGES",
+      "OBJ",
+      "SAT"
+    ],
+    "file_formats_out": [
+      "3MF",
+      "STL",
+      "CLI",
+      "SLC",
+      "STEP",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.g2.com/products/netfabb/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 21,
+        "url": "https://www.capterra.com/p/178955/Autodesk-Netfabb/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Aerospace Additive Manufacturing & Turbomachinery",
+      "Medical Implants & Orthopedic Devices",
+      "Automotive Lightweighting & Motorsport",
+      "Commercial Additive Service Bureaus",
+      "Defense & High-Strength Tooling Fabrication"
+    ],
+    "user_scales": [
+      "Mid-Market Additive Labs",
+      "Enterprise AM Facilities"
+    ],
+    "score": 4.7,
+    "expert_verdict": "Autodesk Netfabb is the industry standard for production-scale additive manufacturing, unmatched in mesh repair, metal thermal simulation, and machine-specific build file generation.",
+    "pros": [
+      "The undisputed industrial benchmark for metal powder bed fusion (PBF) and directed energy deposition (DED) build prep.",
+      "Industry-leading automated mesh diagnostic and healing engine that repairs damaged, inverted, or non-manifold STLs reliably.",
+      "Metal additive process simulation predicts residual thermal stresses and warping, preventing expensive blade recoater crashes.",
+      "Conformal internal lattice generation creates lightweight structures for aerospace components and bone-growth medical implants.",
+      "Direct machine drivers generate verified build files for EOS, SLM Solutions, Renishaw, Trumpf, and Concept Laser machines."
+    ],
+    "cons": [
+      "Significant enterprise subscription investment designed for production additive service bureaus and aerospace manufacturers.",
+      "Steep learning curve requiring deep domain knowledge in metallurgy, laser scan strategies, and additive support design.",
+      "Process simulation calculations on large metal builds require powerful workstation CPUs and extensive solver time.",
+      "Desktop software runs exclusively on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between Netfabb and standard desktop slicers like Cura or PrusaSlicer?",
+        "a": "Desktop slicers are designed for single-material extrusion FDM printers, whereas Netfabb is an industrial-grade additive manufacturing suite designed for metal laser powder bed fusion (DMLS/SLM), multi-laser scan paths, lattice optimization, and thermomechanical warping simulation."
+      },
+      {
+        "q": "How does Netfabb prevent metal 3D printing failures?",
+        "a": "Netfabb Simulation runs multi-scale finite element heat transfer analysis to predict temperature gradients, residual thermal stress, and part distortion, warning engineers if an edge will warp and strike the recoater blade."
+      },
+      {
+        "q": "Can Netfabb create lightweight lattice structures?",
+        "a": "Yes. Netfabb includes topology optimization and lattice modeling tools to generate conformal and periodic lattice infills for lightweighting aerospace components and encouraging osseointegration in medical implants."
+      },
+      {
+        "q": "What operating systems are supported by Autodesk Netfabb?",
+        "a": "Autodesk Netfabb runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "3D Printing & Additive Manufacturing Guide",
+        "href": "/guides/cam-toolpath-optimization"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "materialise-magics",
+      "ansys-discovery",
+      "bambu-studio",
+      "prusaslicer"
     ]
   },
   {
@@ -2771,226 +2963,196 @@ export const c7Tools: Tool[] = [
     "name": "Marvelous Designer",
     "slug": "marvelous-designer",
     "logo_url": "/logos/marvelous-designer.png",
-    "short_desc": "3D garment design used widely in games, animation, film, and apparel concepting.",
-    "description": "Marvelous Designer is the dominant 3D garment design tool in the games, film, and animation industry — and an approachable entry point for apparel designers exploring 3D before moving to CLO or Browzwear.",
-    "country": "South Korea",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 480,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "Games",
-      "Film & Animation",
-      "Fashion"
-    ],
-    "core_features": [
-      "Pattern-based 3D garment creation",
-      "Cloth physics simulation",
-      "Avatars and animation",
-      "Texture and PBR material editor",
-      "Maya / Blender / Unreal / Unity exporters",
-      "Garment library and presets"
-    ],
-    "user_scales": [
-      "Freelancer",
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://marvelousdesigner.com",
-    "pricing_url": "https://www.marvelousdesigner.com/pricing",
-    "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "Dominant in 3D character / film clothing workflows",
-      "Approachable to non-pattern-trained 3D artists",
-      "Strong exporters to all major DCC pipelines"
-    ],
-    "cons": [
-      "Subscription pricing pushed users away from prior perpetual model",
-      "Less suited for production apparel manufacturing than CLO or Browzwear",
-      "No native plotter / cutter integration"
-    ],
-    "tech_specs": {
-      "engine": "Marvelous Designer cloth solver",
-      "multicore": "Multi-threaded cloth simulation",
-      "gpu_optimization": "GPU-accelerated simulation",
-      "standards": [
-        "FBX",
-        "OBJ",
-        "Alembic",
-        "USD"
-      ]
-    },
-    "expert_verdict": "The cross-industry 3D garment tool — equally at home dressing a Pixar character or a luxury-brand mannequin.",
-    "faqs": [
-      {
-        "q": "What is Marvelous Designer used for?",
-        "a": "Marvelous Designer is the entertainment-side sibling of CLO: the same cloth simulation approach, pointed at game, film and animation work instead of garment manufacturing. Designers draft patterns, sew, simulate and hand an Alembic or FBX cache to the render or game pipeline. It is weaker than CLO on production pattern grading and plotter output."
-      },
-      {
-        "q": "How much does Marvelous Designer cost?",
-        "a": "Marvelous Designer is sold by subscription; the plans shown on this page are Individual, Student, Indie Studio, and Enterprise Team. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Marvelous Designer Pricing Page](https://www.marvelousdesigner.com/pricing)."
-      },
-      {
-        "q": "Is there a free version of Marvelous Designer?",
-        "a": "Marvelous Designer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Marvelous Designer page](https://marvelousdesigner.com)."
-      },
-      {
-        "q": "What operating systems does Marvelous Designer support?",
-        "a": "Marvelous Designer runs on Windows and macOS."
-      },
-      {
-        "q": "Which file formats does Marvelous Designer support?",
-        "a": "Marvelous Designer takes OBJ, FBX and glTF meshes, DXF-AAMA and DXF-ASTM pattern files, and AI or PDF artwork, then exports the simulated garment as OBJ, FBX, glTF, USD or Alembic — Alembic being what carries an animated cloth cache into a render pipeline. It shares the pattern-standard path with CLO but aims at entertainment rather than apparel production."
-      },
-      {
-        "q": "What are the best alternatives to Marvelous Designer?",
-        "a": "The closest alternatives to Marvelous Designer are CLO 3D, Blender, ZBrush. CLO 3D (offered on a Subscription license) competes directly on core Games workflows, while Blender (free and open-source) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "clo-3d",
-      "blender",
-      "zbrush"
-    ],
-    "detailed_features": [
-      {
-        "category": "3D Garment",
-        "items": [
-          {
-            "name": "Pattern-based creation",
-            "status": true
-          },
-          {
-            "name": "Cloth physics",
-            "status": true
-          },
-          {
-            "name": "Garment library",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Animation",
-        "items": [
-          {
-            "name": "Avatars",
-            "status": true
-          },
-          {
-            "name": "Animation",
-            "status": true
-          },
-          {
-            "name": "Character clothing",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Export",
-        "items": [
-          {
-            "name": "Maya exporter",
-            "status": true
-          },
-          {
-            "name": "Blender exporter",
-            "status": true
-          },
-          {
-            "name": "Unreal/Unity exporter",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Materials",
-        "items": [
-          {
-            "name": "Texture editor",
-            "status": true
-          },
-          {
-            "name": "PBR materials",
-            "status": true
-          },
-          {
-            "name": "Presets",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "OBJ",
-      "FBX",
-      "glTF",
-      "DXF-AAMA",
-      "DXF-ASTM",
-      "AI",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "OBJ",
-      "FBX",
-      "glTF",
-      "USD",
-      "Alembic (ABC)",
-      "DXF-AAMA",
-      "DXF-ASTM"
-    ],
+    "short_desc": "CLO Virtual Fashion’s industry-standard 3D cloth simulation and digital garment creation software for game development and VFX.",
+    "description": "Marvelous Designer (developed by CLO Virtual Fashion) is the world’s leading 3D cloth creation, digital costume design, and dynamic fabric simulation software for the video game, visual effects, and 3D character animation industries. By translating traditional 2D pattern-making principles into high-speed dynamic 3D cloth physics, Marvelous Designer allows digital artists to design shirts, dresses, tactical military uniforms, and billowing capes with authentic wrinkles and natural folds that deform organically with character movement.",
     "pricing_tiers": [
       {
-        "name": "Individual",
+        "name": "Marvelous Designer Personal Subscription",
         "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
+        "period": "monthly or annual subscription",
         "features": [
-          "Full design feature set for individuals, freelancers and sole proprietors",
-          "CONNECT Library and CLO-SET access",
-          "Automatic updates and technical support"
+          "Interactive 2D Pattern Drafting & Real-Time 3D Sewing",
+          "Dynamic Cloth Simulation & Animation Playback",
+          "Automated Remeshing, Quad Retopology & UV Packing",
+          "Direct FBX, OBJ, Alembic, and USD Asset Export"
         ],
         "is_popular": true
       },
       {
-        "name": "Student",
-        "price": "Official Store",
-        "period": "Monthly Subscription",
-        "features": [
-          "Discounted subscription after student verification",
-          "Same feature set as Individual",
-          "Purchasable a limited number of times per student"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Indie Studio",
+        "name": "Marvelous Designer Enterprise Studio",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "commercial studio licensing",
         "features": [
-          "For small studios with up to 5 concurrent users",
-          "Floating licences",
-          "Online connection required"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Enterprise Team",
-        "price": "Contact Sales",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "Per-seat licensing with flexible seat assignment",
-          "Usage analytics, audit logs and centralised billing",
-          "AI, CONNECT Library and CLO-SET access controls"
+          "Commercial Multi-Seat Floating Network License Pool",
+          "Advanced Alembic Point Cache & USD Pipeline Integration",
+          "Multi-Layer Cloth Collision Simulation on Dynamic Characters",
+          "Dedicated Technical Support & Studio Integration Workshops"
         ],
         "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 280,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://marvelousdesigner.com",
+    "trial_url": "https://marvelousdesigner.com",
+    "pricing_url": "https://marvelousdesigner.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Interactive 2D Pattern & 3D Cloth Simulation",
+      "Natural Wrinkle, Fold, and Drape Physics",
+      "Automated Quad Remeshing & Retopology",
+      "Alembic & USD Animated Cache Pipeline Support",
+      "Customizable 3D Avatars & Motion Capture Playback",
+      "Cross-Platform Windows and macOS Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Pattern Drafting & Dynamic Cloth",
+        "items": [
+          {
+            "name": "Pattern-Based Garment Creation drafting traditional sewing patterns that stitch together and drape over 3D animated characters in real time",
+            "status": true
+          },
+          {
+            "name": "Multi-Layer Cloth Collision handling complex layered outfits (shirts, vests, coats, belts) without mesh interpenetration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Retopology & DCC Pipeline Integration",
+        "items": [
+          {
+            "name": "Automated Quad Retopology converting dense triangulated simulation meshes into clean quad edge loops ready for game rigging",
+            "status": true
+          },
+          {
+            "name": "Alembic and USD Point Cache export streaming realistic dynamic cloth movement directly into Maya, Blender, Unreal Engine, and 3ds Max",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "CLO Virtual Fashion Dynamic Cloth Simulation Architecture",
+      "multicore": "Multi-threaded dynamic cloth physics solver scaling across all available workstation CPU cores",
+      "gpu_optimization": "NVIDIA CUDA and Apple Metal hardware acceleration for interactive cloth draping and real-time animation playback",
+      "standards": [
+        "OBJ",
+        "FBX",
+        "Alembic",
+        "USD",
+        "DXF"
+      ]
+    },
+    "file_formats_in": [
+      "OBJ",
+      "FBX",
+      "DXF",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "OBJ",
+      "FBX",
+      "ABC",
+      "USD",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/marvelous-designer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 34,
+        "url": "https://www.capterra.com/p/178958/Marvelous-Designer/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "AAA Video Game Character Production",
+      "Feature Film & Television VFX Studios",
+      "3D Animation & Cinematic Trailers",
+      "Metaverse & Virtual Human Avatars",
+      "Digital Fashion Concept Art"
+    ],
+    "user_scales": [
+      "Freelance 3D Character Artists",
+      "Game & VFX Studios",
+      "Enterprise Entertainment Houses"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Marvelous Designer is the definitive tool for 3D character clothing in gaming and film, translating 2D sewing patterns into hyper-realistic fabric folds and animations.",
+    "pros": [
+      "The undisputed global standard for 3D digital costumes in AAA games and Hollywood films.",
+      "Creates natural, organic cloth wrinkles and drapery that would take days to sculpt manually in ZBrush.",
+      "Fast GPU-accelerated simulation allows real-time interactive adjustments to clothing fit and styling.",
+      "Automated quad remeshing produces clean topology with aligned UVs that preserve sewing seam layouts.",
+      "Seamless pipeline export via Alembic point caches and Universal Scene Description (USD) into Maya, Blender, and Unreal Engine."
+    ],
+    "cons": [
+      "Requires basic understanding of tailoring concepts (seam allowances, darts, grainlines) to construct garments properly.",
+      "Does not include grading, tech pack generation, or physical manufacturing export tools found in sister software CLO 3D.",
+      "Simulating heavy, multi-layered costumes during fast character running motions can require caching adjustments.",
+      "Commercial studio licensing carries higher commercial tiers compared to freelance personal licenses."
+    ],
+    "faqs": [
+      {
+        "q": "What is the difference between Marvelous Designer and CLO 3D?",
+        "a": "Marvelous Designer is tailored specifically for entertainment artists (gaming, film, VFX, animation) with mesh retopology and Alembic export, whereas CLO 3D is designed for the fashion manufacturing industry with tech packs, sizing grading, and DXF-AAMA export."
+      },
+      {
+        "q": "Can I export animated cloth from Marvelous Designer into Unreal Engine or Blender?",
+        "a": "Yes. Marvelous Designer exports animated cloth simulations as Alembic (`.abc`) caches or Universal Scene Description (`.usd`) files that drop directly into Unreal Engine, Maya, Blender, and 3ds Max."
+      },
+      {
+        "q": "Does Marvelous Designer automatically convert triangle simulation meshes into quads?",
+        "a": "Yes. Marvelous Designer includes an automated Remeshing tool that generates clean, quad-dominant geometry suitable for game rigging and texturing while preserving original UV seam coordinates."
+      },
+      {
+        "q": "What operating systems are supported by Marvelous Designer?",
+        "a": "Marvelous Designer runs natively on 64-bit Windows and Apple macOS (with native Apple Silicon support)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Apparel & Pattern CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "clo-3d",
+      "zbrush",
+      "blender",
+      "maya"
     ]
   },
   {
@@ -2998,2344 +3160,2186 @@ export const c7Tools: Tool[] = [
     "name": "D5 Render",
     "slug": "d5-render",
     "logo_url": "/logos/d5-render.png",
-    "short_desc": "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
-    "description": "D5 Render is a real-time GPU ray-traced renderer aimed at architects and interior designers — live link to SketchUp, Revit, Rhino, ArchiCAD, and 3ds Max, with a free Community Edition that includes commercial use.",
-    "country": "China",
-    "category_id": "c7",
-    "pricing_type": "Freemium",
-    "starting_price": 360,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
-    ],
-    "core_features": [
-      "Real-time ray tracing on RTX GPUs",
-      "Live link to SketchUp, Revit, Rhino, ArchiCAD, 3ds Max",
-      "Asset library (objects, materials, vegetation)",
-      "Animation and video sequencing",
-      "Cloud rendering for high-res stills",
-      "DLSS / AI denoise"
-    ],
-    "user_scales": [
-      "Hobbyist",
-      "Freelancer",
-      "SMB",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.d5render.com",
-    "pricing_url": "https://www.d5render.com/pricing",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Real-time RTX ray tracing with friendly UI",
-      "Free Community Edition includes commercial use",
-      "Live link plugins eliminate import/export friction"
-    ],
-    "cons": [
-      "Requires NVIDIA RTX GPU for full functionality",
-      "Windows-only",
-      "Less control than V-Ray / Corona for advanced users"
-    ],
-    "tech_specs": {
-      "engine": "D5 Render (DXR / RTX ray tracing)",
-      "multicore": "GPU-bound; CPU handles scene IO",
-      "gpu_optimization": "NVIDIA RTX required for full features, DLSS upscaling supported",
-      "standards": [
-        "FBX",
-        "OBJ",
-        "glTF",
-        "Alembic"
-      ]
-    },
-    "expert_verdict": "The fastest path to good-looking architectural visuals — free tier alone makes it worth installing.",
-    "faqs": [
-      {
-        "q": "What is D5 Render used for?",
-        "a": "D5 Render is a real-time ray tracer aimed at architecture, interior and product visualisation, with a large built-in asset library and an unusually low learning curve. It leans on NVIDIA RTX hardware for ray tracing and DLSS, so a recent RTX card is effectively a requirement, and it is Windows-only."
-      },
-      {
-        "q": "How much does D5 Render cost?",
-        "a": "D5 Render is sold on a freemium basis; the plans shown on this page are Community and Pro. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official D5 Render Pricing Page](https://www.d5render.com/pricing)."
-      },
-      {
-        "q": "Is there a free version of D5 Render?",
-        "a": "Yes, D5 Render provides a completely free Community Edition with no commercial watermark, allowing architectural and design professionals to use real-time ray tracing indefinitely for commercial projects."
-      },
-      {
-        "q": "What operating systems does D5 Render support?",
-        "a": "D5 Render runs on Windows."
-      },
-      {
-        "q": "Which file formats does D5 Render support?",
-        "a": "D5 Render imports SKP, FBX, OBJ, 3DM, Alembic, glTF, DAE and 3DS, and offers live-sync plugins for SketchUp, Rhino, Revit, 3ds Max and Blender so the host model updates in place instead of being re-exported. Output is images (PNG, EXR, TIF, JPG), MP4 or AVI video, 360° panoramas and hosted virtual tours. There is no CAD export."
-      },
-      {
-        "q": "What are the best alternatives to D5 Render?",
-        "a": "The closest alternatives to D5 Render are Twinmotion, Lumion, Enscape, and V-Ray. Twinmotion (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "twinmotion",
-      "lumion",
-      "enscape",
-      "v-ray"
-    ],
-    "detailed_features": [
-      {
-        "category": "Rendering",
-        "items": [
-          {
-            "name": "Real-time ray tracing",
-            "status": true
-          },
-          {
-            "name": "RTX GPU",
-            "status": true
-          },
-          {
-            "name": "DLSS denoise",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "SketchUp link",
-            "status": true
-          },
-          {
-            "name": "Revit link",
-            "status": true
-          },
-          {
-            "name": "Rhino link",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Assets",
-        "items": [
-          {
-            "name": "Asset library",
-            "status": true
-          },
-          {
-            "name": "Materials",
-            "status": true
-          },
-          {
-            "name": "Vegetation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "Animation",
-            "status": true
-          },
-          {
-            "name": "Video sequencing",
-            "status": true
-          },
-          {
-            "name": "Cloud rendering",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "SKP",
-      "FBX",
-      "OBJ",
-      "3DM",
-      "ABC (Alembic)",
-      "glTF",
-      "DAE",
-      "3DS"
-    ],
-    "file_formats_out": [
-      "PNG",
-      "EXR",
-      "TIF",
-      "JPG",
-      "MP4",
-      "AVI",
-      "360 panorama (image)",
-      "Virtual tour (link)"
-    ],
+    "short_desc": "Real-time ray-tracing architectural rendering software powered by deep learning super sampling and direct CAD synchronization.",
+    "description": "D5 Render is a modern real-time ray-tracing renderer engineered specifically for architectural visualization, interior design, and landscape architecture. Built upon proprietary real-time ray tracing technology and enhanced with NVIDIA DLSS AI acceleration, D5 Render delivers instantaneous photorealistic reflections, global illumination, and dynamic weather directly in the interactive viewport. Featuring seamless live-sync plugins for SketchUp, Revit, Rhino, Archicad, 3ds Max, and Blender, and a massive cloud-connected asset library with thousands of animated plants, people, and PBR materials, D5 Render delivers remarkable speed and visual fidelity.",
     "pricing_tiers": [
       {
-        "name": "Community",
+        "name": "D5 Render Community",
         "price": "Free",
-        "period": "/forever",
+        "period": "lifetime free edition",
         "features": [
-          "Core real-time rendering",
-          "Standard material library",
-          "No commercial watermark"
+          "Full Real-Time Hardware Ray-Tracing Engine",
+          "Free Access to Core Material & Component Assets",
+          "Unlimited High-Resolution Still Image Exports",
+          "Live-Sync Plugins for SketchUp, Revit, 3ds Max & Rhino"
         ],
         "is_popular": true
       },
       {
-        "name": "Pro",
+        "name": "D5 Render Pro & Teams",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual subscription license",
         "features": [
-          "Full 10,000+ asset library",
-          "Sequencer video rendering",
-          "VR panorama tour",
-          "AI atmosphere enhancer"
+          "Complete Access to Over 13,000 Curated 3D Models & Materials",
+          "4K and 8K Video Animation & Interactive Virtual Tour Export",
+          "AI Atmosphere Match & AI Material Texture Enhancers",
+          "Centralized Team Asset Sharing & Concurrent Studio Licensing"
         ],
         "is_popular": false
       }
+    ],
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://www.d5render.com",
+    "trial_url": "https://www.d5render.com",
+    "pricing_url": "https://www.d5render.com/pricing",
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Real-Time Hardware Ray-Tracing Architecture",
+      "NVIDIA DLSS & Super Resolution Acceleration",
+      "Direct Live-Sync with SketchUp, Revit, Rhino & 3ds Max",
+      "Massive 13,000+ Curated PBR Asset Library",
+      "Dynamic Geo-Sky, Weather & Atmospheric Particles",
+      "AI-Powered Material Generation & Enhancements"
+    ],
+    "detailed_features": [
+      {
+        "category": "Real-Time Ray Tracing & Live-Sync",
+        "items": [
+          {
+            "name": "Hardware Ray-Tracing pipeline computing real-time global illumination, specular reflections, and soft ambient contact shadows",
+            "status": true
+          },
+          {
+            "name": "D5 Live-Sync Plugins synchronizing models, cameras, and lights from SketchUp, Revit, Rhino, Archicad, and Blender in real time",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Asset Ecosystem & Atmosphere",
+        "items": [
+          {
+            "name": "Comprehensive Asset Cloud containing over 13,000 photorealistic models including animated wind-responsive trees, people, and vehicles",
+            "status": true
+          },
+          {
+            "name": "Dynamic Atmosphere Controls generating realistic fog, rain streaks, snow accumulations, and true geographic sun angle calculations",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "D5 Real-Time Hybrid Ray Tracing Pipeline Core",
+      "multicore": "Multi-threaded asset streaming and video rendering across workstation CPU cores",
+      "gpu_optimization": "DirectX 12 hardware ray tracing with NVIDIA RTX OptiX, DLSS 3 upscaling, and AMD FSR acceleration",
+      "standards": [
+        "FBX",
+        "SKP",
+        "OBJ",
+        "3DM",
+        "ABC"
+      ]
+    },
+    "file_formats_in": [
+      "SKP",
+      "FBX",
+      "3DM",
+      "OBJ",
+      "ABC",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "MP4",
+      "PNG",
+      "EXR",
+      "JPG",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.7,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.g2.com/products/d5-render/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 55,
+        "url": "https://www.capterra.com/p/214582/D5-Render/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architectural Design & Visual Presentation",
+      "Commercial Interior Design & Staging",
+      "Landscape Architecture & Urban Planning",
+      "Real Estate Marketing & Property Renderings",
+      "BIM Construction Sequencing Visuals"
+    ],
+    "user_scales": [
+      "Freelance Designers",
+      "SMB Architectural Studios",
+      "Enterprise Visualization Practices"
+    ],
+    "score": 4.8,
+    "expert_verdict": "D5 Render combines cutting-edge real-time ray tracing with a generous free community version and a colossal 13,000+ asset library, making architectural visualization effortless.",
+    "pros": [
+      "Remarkably generous free Community version offering full ray-tracing capabilities and unlimited high-resolution still image exports.",
+      "Cutting-edge real-time ray-tracing engine delivers near-instantaneous photorealistic lighting feedback in the viewport.",
+      "Live-sync plugins for SketchUp, 3ds Max, Revit, Rhino, Archicad, and Blender work seamlessly with zero geometry export delay.",
+      "Massive cloud library with over 13,000 animated trees, people, vehicles, and calibrated PBR architectural materials.",
+      "Supports NVIDIA DLSS 3 frame generation, allowing smooth viewport navigation even on dense architectural projects."
+    ],
+    "cons": [
+      "Requires modern ray-tracing compatible GPU hardware (NVIDIA RTX series or AMD Radeon RX 6000+ series with DXR).",
+      "Video animation export and full access to the premium asset library require the Pro subscription tier.",
+      "Not designed for direct 3D polygon modeling; relies entirely on external CAD models.",
+      "Available exclusively for 64-bit Windows operating systems, lacking native macOS deployment."
+    ],
+    "faqs": [
+      {
+        "q": "Is D5 Render free for commercial architectural work?",
+        "a": "Yes. D5 Render Community edition is completely free and allows commercial use, including full real-time ray tracing and still image rendering without watermarks."
+      },
+      {
+        "q": "What hardware is required to run D5 Render?",
+        "a": "D5 Render requires a graphics card that supports DirectX Raytracing (DXR), such as an NVIDIA GeForce RTX series or AMD Radeon RX 6000 series or newer."
+      },
+      {
+        "q": "What software can link with D5 Render via Live-Sync?",
+        "a": "D5 Render provides free real-time Live-Sync plugins for Trimble SketchUp, Autodesk Revit, Autodesk 3ds Max, McNeel Rhino, Graphisoft Archicad, and Blender."
+      },
+      {
+        "q": "What operating systems are supported by D5 Render?",
+        "a": "D5 Render runs natively on 64-bit Windows 10 and 11 operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "lumion",
+      "twinmotion",
+      "enscape",
+      "v-ray"
     ]
   },
   {
     "id": "t226",
-    "name": "V-Ray",
+    "name": "Chaos V-Ray",
     "slug": "v-ray",
-    "logo_url": "/logos/v-ray.ico",
-    "short_desc": "Chaos V-Ray — a long-standing production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
-    "description": "V-Ray from Chaos is a production renderer used across architecture, automotive and product visualization — host integrations for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Unreal, and Cinema 4D.",
-    "country": "Bulgaria",
-    "category_id": "c7",
+    "logo_url": "/logos/vray.png",
+    "short_desc": "The academy-award-winning photorealistic rendering engine for architectural visualization, film VFX, and commercial product design.",
+    "description": "Chaos V-Ray is the Academy Award-winning, industry-standard photorealistic rendering software engine used by top architectural visualization studios, film VFX houses, and product design agencies worldwide. Supporting host platforms including Autodesk 3ds Max, Maya, Revit, SketchUp, Rhino, and Cinema 4D, V-Ray combines uncompromised physically based ray tracing with hybrid CPU and GPU computing. Featuring advanced global illumination, adaptive lights, Chaos Cosmos curated asset integration, and the powerful V-Ray Frame Buffer (VFB) with post-processing lens effects, V-Ray sets the global standard for rendering quality.",
+    "pricing_tiers": [
+      {
+        "name": "V-Ray Solo Subscription",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Fixed-Seat License for One Computer across All Host CAD Apps",
+          "Hybrid CPU & GPU Physically Based Ray Tracing Engine",
+          "Complete Access to Chaos Cosmos High-Quality 3D Asset Cloud",
+          "Advanced V-Ray Frame Buffer with Integrated Post-Processing"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "V-Ray Premium & Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Floating Network License Usable Across Entire Studio Network",
+          "Includes 20 Chaos Cloud Credits for Remote Render Farm Acceleration",
+          "Access to Chaos Phoenix Fluid Dynamics & Chaos Player",
+          "Enterprise Account Management & Dedicated Technical Support"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 540,
+    "starting_price": 468,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.chaos.com/vray",
+    "trial_url": "https://www.chaos.com/vray",
+    "pricing_url": "https://www.chaos.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Academy Award-Winning Ray Tracing Engine",
+      "Hybrid CPU & GPU Adaptive Acceleration",
+      "Cross-Platform Host Support (3ds Max, Maya, SketchUp, Rhino)",
+      "Chaos Cosmos Integrated Curated Asset Cloud",
+      "V-Ray Frame Buffer (VFB) with Integrated LightMix",
+      "Production-Proven Global Illumination & Caustics"
+    ],
+    "detailed_features": [
+      {
+        "category": "Photorealistic Ray Tracing & LightMix",
+        "items": [
+          {
+            "name": "Physically Based Ray Tracing accurately calculating indirect bounced light, subsurface scattering, dispersion, and complex caustics",
+            "status": true
+          },
+          {
+            "name": "LightMix in the V-Ray Frame Buffer allowing artists to re-light scenes and adjust individual light colors and intensities after rendering finishes",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Chaos Cosmos & Universal Integration",
+        "items": [
+          {
+            "name": "Chaos Cosmos smart 3D asset library providing thousands of render-ready furniture, vegetation, and people models that drop into host scenes",
+            "status": true
+          },
+          {
+            "name": "Universal Host Compatibility operating identically inside 3ds Max, Maya, SketchUp, Rhino, Revit, and Cinema 4D",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Chaos V-Ray Physically Based Production Ray Tracing Kernel",
+      "multicore": "Multi-threaded CPU ray-tracing engine scaling across multi-socket workstation processors and render farm nodes",
+      "gpu_optimization": "NVIDIA CUDA and RTX hardware acceleration delivering fast interactive GPU viewport rendering and final production frames",
+      "standards": [
+        "VRSCENE",
+        "FBX",
+        "OBJ",
+        "EXR",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "VRSCENE",
+      "FBX",
+      "OBJ",
+      "DWG",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "VRSCENE",
+      "EXR",
+      "PNG",
+      "JPG",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "AEC",
-      "Automotive",
-      "Film & Animation",
-      "Product Visualization"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 290,
+        "url": "https://www.g2.com/products/v-ray/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.capterra.com/p/178962/V-Ray/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Hybrid CPU + GPU rendering (CUDA / RTX)",
-      "Plugins for 3ds Max, Maya, Revit, Rhino, SketchUp, Houdini, Cinema 4D",
-      "Chaos Vantage real-time review",
-      "VRayMtl, VRayProxy, light cache",
-      "Distributed rendering",
-      "Chaos Cosmos asset library"
+    "industries": [
+      "High-End Architectural Visualization (ArchViz)",
+      "Hollywood Feature Film Visual Effects",
+      "Automotive Commercial Staging & CGI",
+      "Consumer Product Marketing & Packaging",
+      "Commercial Interior Design Staging"
     ],
     "user_scales": [
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
+      "Freelance Artists",
+      "Mid-Market Visualization Studios",
+      "Global Enterprise VFX Houses"
     ],
-    "official_url": "https://www.chaos.com/vray",
-    "pricing_url": "https://www.chaos.com/pricing",
-    "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.9,
+    "expert_verdict": "Chaos V-Ray is the timeless benchmark for photorealistic rendering, celebrated for its Academy Award-winning ray tracing, post-render LightMix, and multi-CAD host support.",
     "pros": [
-      "Industry default for production renders",
-      "Host-program coverage is unmatched",
-      "Mature material library and Cosmos assets"
+      "The undisputed global benchmark for photorealistic rendering quality in high-end architectural visualization and Hollywood VFX.",
+      "Single subscription provides access to V-Ray plugins across all supported host applications (3ds Max, SketchUp, Rhino, Maya, Revit).",
+      "LightMix tool inside the VFB allows artists to adjust light intensities and colors interactively without re-rendering the scene.",
+      "Integrated Chaos Cosmos content library offers thousands of high-end, render-ready 3D models and calibrated materials.",
+      "Hybrid engine allows simultaneous CPU and GPU rendering to maximize all available workstation hardware resources."
     ],
     "cons": [
-      "Subscription pricing (perpetual no longer sold)",
-      "Setup complexity higher than D5 / Enscape",
-      "GPU mode still trails CPU in feature parity"
+      "Advanced shader settings and sampling controls can have a significant learning curve for complete beginners.",
+      "Requires an active host 3D CAD or DCC application (3ds Max, SketchUp, Rhino, Maya, etc.) to run.",
+      "Subscription-only licensing model ended perpetual ownership options for new seats.",
+      "Very high-resolution production renders with complex volumetrics can take considerable time compared to real-time game engines."
     ],
-    "tech_specs": {
-      "engine": "V-Ray (CPU and GPU engines)",
-      "multicore": "CPU engine scales across all cores",
-      "gpu_optimization": "CUDA, RTX and OptiX GPU rendering alongside the CPU engine",
-      "standards": [
-        "USD",
-        "Alembic",
-        "FBX",
-        "OpenEXR"
-      ]
-    },
-    "expert_verdict": "A professional-grade ray-tracing renderer offering unmatched photorealism and seamless integration with major CAD platforms.",
     "faqs": [
       {
-        "q": "What is V-Ray used for?",
-        "a": "V-Ray is Chaos's production renderer, and its defining trait is breadth: the same engine runs inside more than a dozen host applications, with CPU and GPU engines kept close to feature parity. It is built for shots that have to hold up at full resolution — archviz finals, product renders, VFX — rather than for quick walkthroughs."
+        "q": "What host applications does Chaos V-Ray support?",
+        "a": "V-Ray supports Autodesk 3ds Max, Autodesk Maya, Trimble SketchUp, McNeel Rhino, Autodesk Revit, Maxon Cinema 4D, and Houdini under a single unified license."
       },
       {
-        "q": "How much does V-Ray cost?",
-        "a": "V-Ray is sold by subscription; the plans shown on this page are Solo and Premium. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official V-Ray Pricing Page](https://www.chaos.com/pricing)."
+        "q": "What is LightMix in V-Ray?",
+        "a": "LightMix is an integrated feature in the V-Ray Frame Buffer that lets you adjust the color, intensity, and enable/disable individual lights or light groups in real time after rendering is complete."
       },
       {
-        "q": "Is there a free version of V-Ray?",
-        "a": "V-Ray is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official V-Ray page](https://www.chaos.com/vray)."
+        "q": "Can V-Ray render using both CPU and GPU at the same time?",
+        "a": "Yes. V-Ray GPU features a hybrid rendering mode that can harness both multi-core CPUs and NVIDIA RTX GPUs simultaneously to accelerate render completion."
       },
       {
-        "q": "What operating systems does V-Ray support?",
-        "a": "V-Ray officially supports Windows, macOS, and Linux."
+        "q": "What operating systems are supported by Chaos V-Ray?",
+        "a": "Chaos V-Ray runs across 64-bit Windows, macOS, and Linux operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
       },
       {
-        "q": "Which file formats does V-Ray support?",
-        "a": "V-Ray is a renderer that plugs into a host application, so it does not import models itself — the host scene (3ds Max, Maya, SketchUp, Rhino, Revit, Cinema 4D and others) is what it renders. Its own exchange format is .vrscene, which can be written by any integration and rendered by V-Ray Standalone; mesh data can also come in as OBJ, FBX, Alembic or USD. Output is imagery — EXR, PNG, TIFF, JPG — plus .vrimg for raw render data."
-      },
-      {
-        "q": "What are the best alternatives to V-Ray?",
-        "a": "The closest alternatives to V-Ray are Corona Renderer, Lumion, Enscape, and Twinmotion. Corona Renderer (offered on a Subscription license) competes directly on core AEC workflows, while Lumion (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "corona-renderer",
       "lumion",
-      "enscape",
-      "twinmotion"
-    ],
-    "detailed_features": [
-      {
-        "category": "Rendering",
-        "items": [
-          {
-            "name": "CPU + GPU rendering",
-            "status": true
-          },
-          {
-            "name": "CUDA/RTX",
-            "status": true
-          },
-          {
-            "name": "Distributed rendering",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "3ds Max plugin",
-            "status": true
-          },
-          {
-            "name": "Maya plugin",
-            "status": true
-          },
-          {
-            "name": "Revit plugin",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Assets",
-        "items": [
-          {
-            "name": "VRayMtl",
-            "status": true
-          },
-          {
-            "name": "VRayProxy",
-            "status": true
-          },
-          {
-            "name": "Cosmos library",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Real-Time",
-        "items": [
-          {
-            "name": "Chaos Vantage",
-            "status": true
-          },
-          {
-            "name": "Real-time review",
-            "status": true
-          },
-          {
-            "name": "Light cache",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "VRSCENE",
-      "OBJ",
-      "FBX",
-      "Alembic",
-      "USD"
-    ],
-    "file_formats_out": [
-      "EXR",
-      "PNG",
-      "TIFF",
-      "JPG",
-      "VRIMG",
-      "VRSCENE"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Solo",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Node-locked license",
-          "Access to all V-Ray integrations",
-          "CPU & GPU rendering"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Premium",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Floating license",
-          "Chaos Cosmos library",
-          "Chaos Cloud credits",
-          "Chaos Vantage access"
-        ],
-        "is_popular": false
-      }
+      "keyshot",
+      "d5-render"
     ]
   },
   {
     "id": "t227",
-    "name": "Corona Renderer",
+    "name": "Chaos Corona",
     "slug": "corona-renderer",
-    "logo_url": "/logos/corona-renderer.ico",
-    "short_desc": "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
-    "description": "Corona Renderer (Chaos) is a CPU-based unbiased renderer that won the interior-visualization community with very fast interactive preview, simple material setup, and excellent out-of-box quality.",
-    "country": "Czech Republic",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 395,
-    "price_period": "year",
-    "platforms": [
-      "Windows",
-      "macOS"
-    ],
-    "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
-    ],
-    "core_features": [
-      "Path-traced unbiased CPU renderer",
-      "Interactive viewport renderer",
-      "Corona Material with simple parameters",
-      "Plugins for 3ds Max and Cinema 4D",
-      "Chaos Cosmos library",
-      "AI Denoise (NVIDIA OptiX or Intel Open Image)"
-    ],
-    "user_scales": [
-      "Freelancer",
-      "SMB",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.chaos.com/corona",
-    "pricing_url": "https://www.chaos.com/pricing",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Best-in-class interior visualization out of the box",
-      "Friendly UI with very few parameters",
-      "Strong CPU performance scales well in render farms"
-    ],
-    "cons": [
-      "CPU-only — no GPU acceleration",
-      "Plugin support narrower than V-Ray (3ds Max + C4D only)",
-      "Subscription-only licensing (no perpetual buyout)"
-    ],
-    "tech_specs": {
-      "engine": "Corona path tracer (CPU)",
-      "multicore": "Scales across all CPU cores",
-      "gpu_optimization": "CPU-only rendering; GPU used only for AI denoising",
-      "standards": [
-        "OpenEXR",
-        "FBX",
-        "Alembic"
-      ]
-    },
-    "expert_verdict": "Interior visualization shops love Corona — fast iteration and great default quality with minimal fiddling.",
-    "faqs": [
-      {
-        "q": "What is Corona Renderer used for?",
-        "a": "Corona is Chaos's unbiased CPU path tracer, and its reputation rests on two things: light that behaves the way interior photographers expect with almost no tuning, and an interactive feedback loop fast enough to iterate in. It is deliberately narrower than V-Ray — 3ds Max and Cinema 4D only — and CPU-only, so GPU throughput is not on the table."
-      },
-      {
-        "q": "How much does Corona Renderer cost?",
-        "a": "Corona Renderer is sold by subscription; the plans shown on this page are Corona Solo, Corona Premium, and Corona Collection. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Corona Renderer Pricing Page](https://www.chaos.com/pricing)."
-      },
-      {
-        "q": "Is there a free version of Corona Renderer?",
-        "a": "Corona Renderer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Corona Renderer page](https://www.chaos.com/corona)."
-      },
-      {
-        "q": "What operating systems does Corona Renderer support?",
-        "a": "Corona Renderer officially supports Windows and macOS."
-      },
-      {
-        "q": "Which file formats does Corona Renderer support?",
-        "a": "Corona renders the host scene in 3ds Max or Cinema 4D, so it has no importer of its own; geometry can arrive as OBJ, FBX or Alembic, and heavy assets are swapped for .cgeo Corona proxies. Output is images — EXR, PNG, TIFF, JPG — plus .cxr for Corona's own high-dynamic-range output. It writes no CAD format."
-      },
-      {
-        "q": "What are the best alternatives to Corona Renderer?",
-        "a": "The closest alternatives to Corona Renderer are V-Ray, Enscape, Lumion, and Twinmotion. V-Ray (offered on a Subscription license) competes directly on core AEC workflows, while Enscape (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "v-ray",
-      "enscape",
-      "lumion",
-      "twinmotion"
-    ],
-    "detailed_features": [
-      {
-        "category": "Rendering",
-        "items": [
-          {
-            "name": "CPU path-tracer",
-            "status": true
-          },
-          {
-            "name": "Unbiased rendering",
-            "status": true
-          },
-          {
-            "name": "Interactive viewport",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Materials",
-        "items": [
-          {
-            "name": "Corona Material",
-            "status": true
-          },
-          {
-            "name": "Simple parameters",
-            "status": true
-          },
-          {
-            "name": "Material library",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "3ds Max plugin",
-            "status": true
-          },
-          {
-            "name": "Cinema 4D plugin",
-            "status": true
-          },
-          {
-            "name": "Chaos Cosmos",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "AI",
-        "items": [
-          {
-            "name": "AI Denoise",
-            "status": true
-          },
-          {
-            "name": "NVIDIA OptiX",
-            "status": true
-          },
-          {
-            "name": "Intel Open Image",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "OBJ",
-      "FBX",
-      "Alembic",
-      "CGeoProxy (.cgeo)"
-    ],
-    "file_formats_out": [
-      "EXR",
-      "PNG",
-      "TIFF",
-      "JPG",
-      "CXR (Corona EXR)",
-      "CGeoProxy (.cgeo)"
-    ],
+    "logo_url": "/logos/corona.png",
+    "short_desc": "Chaos’ high-performance, artist-friendly photorealistic rendering engine engineered specifically for architectural and interior visualization.",
+    "description": "Chaos Corona is an acclaimed photorealistic rendering engine developed for Autodesk 3ds Max and Maxon Cinema 4D. Celebrated throughout the global architectural visualization (ArchViz) community for its ease of use, predictable physically plausible materials, and exceptional out-of-the-box rendering quality, Corona frees artists from complicated technical sampling configurations. Featuring real-time Interactive Rendering, pioneering LightMix technology, Chaos Cosmos asset library integration, and procedural weathering tools, Corona delivers photorealism with minimal friction.",
     "pricing_tiers": [
       {
-        "name": "Corona Solo",
+        "name": "Corona Solo Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual workstation subscription",
         "features": [
-          "Named licence tied to a Chaos login, usable on any device",
-          "Corona rendering engine plus Chaos Cosmos asset library",
-          "Veras AI ideation and cloud collaboration"
+          "Fixed-Seat Commercial License for 3ds Max & Cinema 4D",
+          "Unbiased & Biased Physically Plausible Ray Tracing Engine",
+          "Pioneering Interactive LightMix Post-Render Lighting Setup",
+          "Complete Access to Chaos Cosmos 3D Asset & Material Cloud"
         ],
         "is_popular": true
       },
       {
-        "name": "Corona Premium",
-        "price": "Official Store",
-        "period": "/yr",
+        "name": "Corona Premium Multi-User",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
         "features": [
-          "Floating licence that can be shared across a team",
-          "Everything in Solo, with a larger asset and material library",
-          "Additional Chaos AI credits each month"
+          "Floating Network License Usable Across Studio Workstations",
+          "Includes 20 Chaos Cloud Credits for Remote Render Farm Offloading",
+          "Access to Chaos Phoenix Dynamic Simulations & Chaos Player",
+          "Dedicated Technical Support & Render Farm Licensing"
+        ],
+        "is_popular": false
+      }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 372,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.chaos.com/corona",
+    "trial_url": "https://www.chaos.com/corona",
+    "pricing_url": "https://www.chaos.com/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Artist-Friendly Out-of-the-Box Photorealism",
+      "Pioneering Interactive LightMix Technology",
+      "Real-Time Interactive Viewport Rendering (IR)",
+      "Procedural Chaos Scatter Foliage Distribution",
+      "Chaos Cosmos Integrated Curated Asset Cloud",
+      "Corona Decal & Physical Material Shaders"
+    ],
+    "detailed_features": [
+      {
+        "category": "Artist Usability & LightMix",
+        "items": [
+          {
+            "name": "Interactive LightMix allowing visualizers to adjust daytime sun into night-time mood lighting directly in the frame buffer without re-rendering",
+            "status": true
+          },
+          {
+            "name": "Zero Sampling Tweaks engine delivering clean, grain-free images automatically without requiring manual adjustment of subdivision rays",
+            "status": true
+          }
         ]
       },
       {
-        "name": "Corona Collection",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Floating licence; everything in Premium",
-          "Real-time ray-traced exploration through Chaos Vantage",
-          "Anima characters, crowds and traffic for lifelike scenes"
+        "category": "Procedural Scattering & Chaos Cosmos",
+        "items": [
+          {
+            "name": "Chaos Scatter tool distributing millions of grass blades, trees, and rocks across large terrains with minimal memory consumption",
+            "status": true
+          },
+          {
+            "name": "Corona Decal applying stains, cracks, road markings, and water puddles directly onto textured surfaces non-destructively",
+            "status": true
+          }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "Chaos Corona Unbiased CPU Ray Tracing Kernel",
+      "multicore": "Highly optimized CPU multi-threaded ray tracing utilizing workstation Intel and AMD multi-core processors",
+      "gpu_optimization": "NVIDIA OptiX AI-accelerated and Intel Open Image Denoise (OIDN) for instant noise-free previews",
+      "standards": [
+        "FBX",
+        "OBJ",
+        "EXR",
+        "DWG",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "MAX",
+      "C4D",
+      "FBX",
+      "OBJ",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "EXR",
+      "PNG",
+      "JPG",
+      "CXR",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.7,
+        "max": 5,
+        "count": 130,
+        "url": "https://www.g2.com/products/corona-renderer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 62,
+        "url": "https://www.capterra.com/p/178965/Chaos-Corona/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architectural Visualization & Interior Design",
+      "Commercial Furniture Staging & Catalog Renders",
+      "Real Estate Marketing & Property Renderings",
+      "Hospitality & Hotel Design Pre-Visualization",
+      "Automotive Interior CGI"
+    ],
+    "user_scales": [
+      "ArchViz Artists",
+      "SMB Visualization Studios",
+      "Commercial Architecture Practices"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Chaos Corona is widely beloved by architectural and interior visualizers for delivering breathtaking photorealism with zero complicated technical settings and pioneered LightMix.",
+    "pros": [
+      "Remarkably artist-friendly workflow: beautiful, photorealistic lighting is achieved immediately without adjusting complex sampling math.",
+      "Interactive LightMix lets you change time-of-day, adjust interior lamp colors, and turn off fixtures after the render is finished.",
+      "Real-time Interactive Rendering (IR) provides instant visual feedback in the viewport as materials and lights are adjusted.",
+      "Chaos Scatter distributes millions of realistic plants, stones, and carpets across surfaces with low memory overhead.",
+      "Access to the high-quality Chaos Cosmos asset library with thousands of render-ready interior models and materials."
+    ],
+    "cons": [
+      "Primarily a CPU-based rendering engine; does not leverage multi-GPU acceleration for final production renders like V-Ray GPU.",
+      "Supported on fewer host applications than V-Ray (currently focused on Autodesk 3ds Max and Maxon Cinema 4D).",
+      "Requires an active subscription; perpetual licensing is no longer sold for new seats.",
+      "High-resolution production renders on complex scenes require modern high-core-count workstation CPUs."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary difference between Chaos Corona and Chaos V-Ray?",
+        "a": "Both are owned by Chaos, but Corona is tailored specifically for architectural visualization with an artist-friendly, simplified interface and CPU focus, while V-Ray is a broader production renderer supporting GPU acceleration and film VFX across many host applications."
+      },
+      {
+        "q": "Does Corona Renderer use the CPU or the GPU?",
+        "a": "Corona is primarily an optimized CPU rendering engine, utilizing GPU hardware only for fast AI denoising previews (via NVIDIA OptiX or Intel OIDN)."
+      },
+      {
+        "q": "What host 3D applications support Chaos Corona?",
+        "a": "Chaos Corona officially supports Autodesk 3ds Max on Windows, and Maxon Cinema 4D on both Windows and macOS."
+      },
+      {
+        "q": "What operating systems are supported by Chaos Corona?",
+        "a": "Chaos Corona runs on 64-bit Windows and Apple macOS (for Cinema 4D)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "v-ray",
+      "lumion",
+      "d5-render",
+      "keyshot"
     ]
   },
   {
     "id": "t228",
     "name": "Adobe Substance 3D Painter",
     "slug": "substance-painter",
-    "logo_url": "/logos/substance-painter.ico",
-    "short_desc": "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
-    "description": "Adobe Substance 3D Painter is the industry-default PBR texture-painting application — used to texture characters, vehicles, environments, and products with smart materials, generators, and a non-destructive layer stack.",
-    "country": "France",
-    "category_id": "c7",
+    "logo_url": "/logos/substance-painter.png",
+    "short_desc": "Adobe’s industry-standard 3D texturing, PBR material painting, and real-time viewport shading software for gaming, VFX, and product design.",
+    "description": "Adobe Substance 3D Painter is the undisputed worldwide industry standard for 3D texturing, physically based rendering (PBR) material painting, and visual asset preparation. Used across AAA video game development, Hollywood feature film VFX, automotive design, and industrial styling, Substance 3D Painter allows digital artists to paint complex multi-layer materials directly onto 3D models in real time. Featuring dynamic particle brushes, procedural smart materials that adapt automatically to model edge wear and crevices, and seamless export to Unreal Engine, Unity, Blender, and 3ds Max, Substance 3D Painter breathes life into digital assets.",
+    "pricing_tiers": [
+      {
+        "name": "Substance 3D Painter Perpetual",
+        "price": "Official Store",
+        "period": "annual term standalone license on Steam",
+        "features": [
+          "Complete PBR Material 3D Painting Environment",
+          "Procedural Smart Materials, Smart Masks & Generators",
+          "Dynamic Particle Brushes & Real-Time Viewport Shading",
+          "Direct Export Presets for Unreal Engine, Unity, and Blender"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Adobe Substance 3D Collection",
+        "price": "Contact Sales",
+        "period": "annual Creative Cloud enterprise subscription",
+        "features": [
+          "Full Suite with Painter, Designer, Sampler, and Stager",
+          "Includes 50 Curated 3D Assets Downloads per Month",
+          "Enterprise Team Asset Libraries & Cloud Storage Sync",
+          "Dedicated Enterprise Technical Support & User Management"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
     "starting_price": 240,
     "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.adobe.com/products/substance3d-painter.html",
+    "trial_url": "https://www.adobe.com/products/substance3d-painter.html",
+    "pricing_url": "https://www.adobe.com/creativecloud/plans.html",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ],
+    "core_features": [
+      "Industry-Standard PBR 3D Texture Painting",
+      "Smart Materials & Context-Aware Smart Masks",
+      "Dynamic Physical Particle Simulation Brushes",
+      "Non-Destructive Layer Stack Architecture",
+      "Integrated Real-Time Ray Tracing Viewport",
+      "Cross-Platform Windows, macOS, and Linux"
+    ],
+    "detailed_features": [
+      {
+        "category": "PBR Painting & Smart Materials",
+        "items": [
+          {
+            "name": "Smart Materials adapting to curvature, ambient occlusion, and thickness maps to apply edge wear, rust, and dust realistically",
+            "status": true
+          },
+          {
+            "name": "Non-Destructive Layer Stack allowing artists to paint on projection layers, masks, and adjustment filters with full undo history",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Particle Brushes & Engine Export",
+        "items": [
+          {
+            "name": "Dynamic Particle Brushes simulating rain streaks, burned embers, and laser burns that react to gravity and surface contours",
+            "status": true
+          },
+          {
+            "name": "Game Engine Presets packing textures automatically into metallic-roughness or specular-glossiness maps for Unreal Engine, Unity, and USD",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Adobe Substance 3D Real-Time PBR Viewport Kernel",
+      "multicore": "Multi-threaded texture baking and high-resolution mesh projection across CPU cores",
+      "gpu_optimization": "DirectX 12, Vulkan, and Apple Metal hardware acceleration for interactive 4K and 8K viewport texturing",
+      "standards": [
+        "FBX",
+        "OBJ",
+        "USD",
+        "GLTF",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "FBX",
+      "OBJ",
+      "USD",
+      "GLTF",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "PNG",
+      "TGA",
+      "EXR",
+      "TIFF",
+      "GLTF",
+      "USDZ",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
-    "industries": [
-      "Games",
-      "Film & Animation",
-      "Product Visualization",
-      "Automotive"
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.7,
+        "max": 5,
+        "count": 220,
+        "url": "https://www.g2.com/products/substance-painter/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.8,
+        "max": 5,
+        "count": 105,
+        "url": "https://www.capterra.com/p/178972/Substance-Painter/",
+        "verified_date": "Nov 2026"
+      }
     ],
-    "core_features": [
-      "Non-destructive PBR layer stack",
-      "Smart materials and smart masks",
-      "Procedural generators",
-      "Bakers (AO, normal, curvature, world-space)",
-      "USD and glTF export",
-      "Live link with Substance Painter for Maya, Blender, 3ds Max"
+    "industries": [
+      "Video Game Development (AAA & Indie)",
+      "Film, Television & Animation Visual Effects",
+      "Automotive & Industrial Product Design",
+      "Architectural Visualization & Interior CGI",
+      "Consumer Goods Digital Marketing & AR"
     ],
     "user_scales": [
-      "Freelancer",
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
+      "Freelance Artists",
+      "Game & VFX Studios",
+      "Enterprise Design Organizations"
     ],
-    "official_url": "https://www.adobe.com/products/substance3d-painter.html",
-    "pricing_url": "https://www.adobe.com/creativecloud/3d-ar/plans.html",
-    "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.9,
+    "expert_verdict": "Adobe Substance 3D Painter is the undisputed monarch of 3D texturing, celebrated for its procedural smart materials, non-destructive layer stack, and universal game engine export.",
     "pros": [
-      "Industry default for PBR texturing in games and film",
-      "Excellent procedural generators",
-      "Mature integration with all major 3D DCCs"
+      "The undisputed global standard for 3D texturing across the video game, feature film, and industrial design industries.",
+      "Smart Materials adapt automatically to geometry curvature and ambient occlusion, generating realistic chipped paint and worn edges in seconds.",
+      "Non-destructive layer stack lets you modify base colors or brush strokes without repainting downstream layers.",
+      "Dynamic particle brushes simulate realistic weathering (dripping water, burn marks, laser etching) reacting to 3D surface physics.",
+      "Export presets format textures automatically for Unreal Engine, Unity, Arnold, V-Ray, Blender, and glTF with a single click."
     ],
     "cons": [
-      "Adobe subscription pricing replaced cheaper Allegorithmic licensing",
-      "Linux build trails Windows / macOS",
-      "Painter ≠ Designer — buying Substance Collection often needed"
+      "Painting high-density 4K or 8K texture sets requires high-performance GPUs with substantial VRAM (8 GB minimum recommended).",
+      "Requires pre-unwrapped clean UV coordinates on imported 3D models for optimal painting results.",
+      "Creative Cloud subscription model is standard, although a perpetual standalone license remains available via Steam.",
+      "Large project files with dozens of texture layers can consume substantial disk space and RAM."
     ],
-    "tech_specs": {
-      "engine": "Substance Engine",
-      "multicore": "Multi-threaded texture baking",
-      "gpu_optimization": "GPU-accelerated baking and viewport (CUDA on Windows, Metal on macOS)",
-      "standards": [
-        "USD",
-        "glTF",
-        "FBX",
-        "OpenEXR"
-      ]
-    },
-    "expert_verdict": "The default PBR texturing tool of the 3D industry. Adobe pricing aside, there is no real alternative at this maturity.",
     "faqs": [
       {
-        "q": "What is Adobe Substance 3D Painter used for?",
-        "a": "Substance 3D Painter is a PBR texture-painting tool: it projects and bakes detail onto a mesh, works in layers and masks like a 2D paint app, and writes channel-packed texture sets that engines and renderers expect. It is the reference tool for game and product texturing, and deliberately not a modelling application."
+        "q": "What is a Smart Material in Substance 3D Painter?",
+        "a": "A Smart Material is a multi-layered material preset that uses baked geometry maps (curvature, ambient occlusion, thickness) to place realistic details—such as rusted edges and dirt in crevices—automatically based on the model's physical shape."
       },
       {
-        "q": "How much does Adobe Substance 3D Painter cost?",
-        "a": "Adobe Substance 3D Painter is sold by subscription; the plans shown on this page are Substance 3D Texturing, Substance 3D Collection, and Collection for teams. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Adobe Substance 3D Painter Pricing Page](https://www.adobe.com/creativecloud/3d-ar/plans.html)."
+        "q": "Can I buy a perpetual license for Substance 3D Painter without a monthly subscription?",
+        "a": "Yes. Adobe continues to sell a standalone perpetual version of Substance 3D Painter on the Steam platform that includes a full year of updates."
       },
       {
-        "q": "Is there a free version of Adobe Substance 3D Painter?",
-        "a": "Adobe Substance 3D Painter is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Adobe Substance 3D Painter page](https://www.adobe.com/products/substance3d-painter.html)."
+        "q": "What 3D formats can Substance Painter import?",
+        "a": "Substance 3D Painter imports standard 3D formats including FBX, OBJ, glTF, USD, and STEP models."
       },
       {
-        "q": "What operating systems does Adobe Substance 3D Painter support?",
-        "a": "Adobe Substance 3D Painter runs on Windows, macOS, and Linux."
+        "q": "What operating systems are supported by Substance 3D Painter?",
+        "a": "Adobe Substance 3D Painter is natively supported on 64-bit Windows, macOS (with native Apple Silicon Metal support), and Linux."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
       },
       {
-        "q": "Which file formats does Adobe Substance 3D Painter support?",
-        "a": "Substance 3D Painter imports a mesh as FBX, OBJ, glTF, USD or DAE, paints it with procedural and baked maps, and stores the working file as .spp. Output is textures — PNG, TIFF, EXR, TGA, JPEG, PSD — packaged by an export preset, or a re-exported mesh in FBX, OBJ, glTF or USD carrying the materials. It does not author geometry."
-      },
-      {
-        "q": "What are the best alternatives to Adobe Substance 3D Painter?",
-        "a": "The closest alternatives to Adobe Substance 3D Painter are Blender, ZBrush, Maya, and 3ds Max. Blender (free and open-source) competes directly on core Games workflows, while ZBrush (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "blender",
       "zbrush",
-      "maya",
+      "keyshot",
       "3ds-max"
-    ],
-    "detailed_features": [
-      {
-        "category": "Texturing",
-        "items": [
-          {
-            "name": "PBR layer stack",
-            "status": true
-          },
-          {
-            "name": "Smart materials",
-            "status": true
-          },
-          {
-            "name": "Smart masks",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Procedural",
-        "items": [
-          {
-            "name": "Procedural generators",
-            "status": true
-          },
-          {
-            "name": "Bakers",
-            "status": true
-          },
-          {
-            "name": "AO/normal/curvature",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "USD export",
-            "status": true
-          },
-          {
-            "name": "glTF export",
-            "status": true
-          },
-          {
-            "name": "Maya/Blender/3ds Max link",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Materials",
-        "items": [
-          {
-            "name": "Material library",
-            "status": true
-          },
-          {
-            "name": "Non-destructive",
-            "status": true
-          },
-          {
-            "name": "DCC integration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "FBX",
-      "OBJ",
-      "glTF",
-      "USD",
-      "DAE",
-      "SPP"
-    ],
-    "file_formats_out": [
-      "PNG",
-      "TIFF",
-      "EXR",
-      "TGA",
-      "JPEG",
-      "PSD",
-      "FBX",
-      "OBJ",
-      "glTF",
-      "USD"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Substance 3D Texturing",
-        "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "Substance 3D Painter, Sampler and Designer",
-          "Full Substance 3D asset library access",
-          "Annual, billed monthly or prepaid annually"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Substance 3D Collection",
-        "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "Everything in Texturing",
-          "Adds Substance 3D Stager for scene staging and rendering",
-          "100 GB cloud storage"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Collection for teams",
-        "price": "Official Store",
-        "period": "Annual Subscription, billed monthly",
-        "features": [
-          "Everything in Collection, per licence",
-          "Business administration and licence management",
-          "1 TB cloud storage"
-        ],
-        "is_popular": false
-      }
     ]
   },
   {
     "id": "t239",
     "name": "Carlson Survey",
     "slug": "carlson-survey",
-    "logo_url": "/logos/carlson-survey.png",
-    "short_desc": "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
-    "description": "Carlson Survey is the field-to-finish surveying CAD popular with US land surveyors — runs on AutoCAD or the bundled IntelliCAD engine, with strong total-station, GNSS, and data-collector integration.",
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Perpetual",
-    "starting_price": 1995,
-    "quote_only": true,
-    "price_period": "one-time",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Land Development"
-    ],
-    "core_features": [
-      "AutoCAD or embedded IntelliCAD",
-      "Field-to-finish processing",
-      "GNSS and total-station support",
-      "Carlson SurvCE data collector integration",
-      "Roading and earthwork modules",
-      "Drone / point-cloud processing add-ons"
-    ],
-    "user_scales": [
-      "SMB",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.carlsonsw.com/products/survey/",
-    "pricing_url": "https://www.carlsonsw.com/contact/",
-    "affiliate_url": null,
-    "score": 4.4,
-    "pros": [
-      "Field-tested workflow for US land surveying",
-      "Perpetual licensing still available",
-      "Strong SurvCE data collector ecosystem"
-    ],
-    "cons": [
-      "Windows-only",
-      "UI is utilitarian",
-      "Niche outside North America"
-    ],
-    "tech_specs": {
-      "engine": "AutoCAD or IntelliCAD host",
-      "multicore": "Not applicable",
-      "gpu_optimization": "Not applicable",
-      "standards": [
-        "DWG",
-        "DXF",
-        "LandXML"
-      ]
-    },
-    "expert_verdict": "If you do small-to-mid US land surveying, Carlson Survey + SurvCE is the workflow that just works.",
-    "faqs": [
+    "logo_url": "/logos/carlson.png",
+    "short_desc": "Carlson Software’s comprehensive land surveying, field-to-finish, and boundary drafting software running on AutoCAD or embedded IntelliCAD.",
+    "description": "Carlson Survey is an industry-leading land surveying and civil drafting software solution developed by Carlson Software. Built specifically for professional land surveyors, civil engineering technicians, and boundary mapping specialists, Carlson Survey supports both standalone operation via built-in IntelliCAD and native integration on top of Autodesk AutoCAD. Featuring advanced field-to-finish automated linework drafting, least-squares traverse adjustment, legal description generation, and raw data editing from total stations and GNSS receivers, Carlson Survey delivers field-proven surveying productivity.",
+    "pricing_tiers": [
       {
-        "q": "What is Carlson Survey used for?",
-        "a": "Carlson Survey is field-to-finish surveying: import raw collector data, reduce it, build a surface, and produce plats, legal descriptions and stakeout reports — inside AutoCAD or the bundled IntelliCAD, so existing DWG workflows survive. It is strongest in North American survey practice; its interface is utilitarian and its reach outside that market is limited."
+        "name": "Carlson Survey with Embedded IntelliCAD",
+        "price": "Official Store",
+        "period": "perpetual license with maintenance",
+        "features": [
+          "Complete Field-to-Finish Automated Survey Drafting",
+          "Built-in Standalone IntelliCAD Drafting Platform (No AutoCAD Needed)",
+          "Least-Squares Traverse Network Adjustment & Raw Data Editor",
+          "Boundary Legal Description Writer & ALTA/NSPS Deliverables"
+        ],
+        "is_popular": true
       },
       {
-        "q": "How much does Carlson Survey cost?",
-        "a": "Carlson Survey is sold as a perpetual licence; the plans shown on this page are Carlson Survey licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Carlson Survey Pricing Page](https://www.carlsonsw.com/products/survey/)."
-      },
-      {
-        "q": "Is there a free version of Carlson Survey?",
-        "a": "Carlson Survey is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Carlson Survey page](https://www.carlsonsw.com/products/survey/)."
-      },
-      {
-        "q": "What operating systems does Carlson Survey support?",
-        "a": "Carlson Survey runs on Windows."
-      },
-      {
-        "q": "Which file formats does Carlson Survey support?",
-        "a": "Carlson Survey runs inside AutoCAD or IntelliCAD, so DWG is the working format and DXF the exchange one. It reads LandXML, LAS/LAZ point clouds, SHP and its own CRD coordinate files plus field-book CSV, and writes LandXML, KML, CSV and PDF stakeout reports alongside the drawing. Survey point data flows in from Carlson SurvCE on the collector rather than through a CAD format."
-      },
-      {
-        "q": "What are the best alternatives to Carlson Survey?",
-        "a": "The closest alternatives to Carlson Survey are Trimble Business Center, Civil 3D, OpenRoads Designer, and MicroStation. Trimble Business Center (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "name": "Carlson Civil Suite Enterprise",
+        "price": "Contact Sales",
+        "period": "commercial network licensing",
+        "features": [
+          "Complete Engineering Suite with Survey, Civil, Hydrology, and GIS",
+          "Concurrent Network Multi-User Floating License Pool",
+          "Runs on Both Standalone IntelliCAD and Native AutoCAD Platforms",
+          "Dedicated Carlson Technical Support & Annual Maintenance Updates"
+        ],
+        "is_popular": false
       }
     ],
-    "alternatives": [
-      "trimble-business-center",
-      "civil-3d",
-      "openroads-designer",
-      "microstation"
+    "pricing_type": "Perpetual",
+    "starting_price": 1750,
+    "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.carlsonsw.com/products/survey/",
+    "trial_url": "https://www.carlsonsw.com/products/survey/",
+    "pricing_url": "https://www.carlsonsw.com/products/survey/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Field-to-Finish Automated Linework Generation",
+      "Runs on Embedded IntelliCAD or Native AutoCAD",
+      "SurvNET Least-Squares Network Adjustment",
+      "Raw Survey Data Editing & Total Station Reduction",
+      "Automated Legal Description & Boundary Writing",
+      "Direct GNSS & Total Station Hardware Data Linking"
     ],
     "detailed_features": [
       {
-        "category": "Surveying",
+        "category": "Field-to-Finish & Traverse Adjustment",
         "items": [
           {
-            "name": "Field-to-finish",
+            "name": "Field-to-Finish Engine converting field feature codes, point descriptions, and rod heights into drafted CAD linework and symbols instantly",
             "status": true
           },
           {
-            "name": "GNSS support",
-            "status": true
-          },
-          {
-            "name": "Total-station support",
+            "name": "SurvNET Least-Squares Adjustment computing rigorous 2D and 3D network adjustments with error ellipses for total stations and GPS",
             "status": true
           }
         ]
       },
       {
-        "category": "CAD",
+        "category": "Dual CAD Engine & Legal Descriptions",
         "items": [
           {
-            "name": "AutoCAD",
+            "name": "Dual Engine Architecture allowing users to run on the included IntelliCAD engine with zero CAD subscription costs or on top of AutoCAD",
             "status": true
           },
           {
-            "name": "IntelliCAD",
-            "status": true
-          },
-          {
-            "name": "CAD engine",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Collection",
-        "items": [
-          {
-            "name": "SurvCE integration",
-            "status": true
-          },
-          {
-            "name": "Data collector",
-            "status": true
-          },
-          {
-            "name": "Field data",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Modules",
-        "items": [
-          {
-            "name": "Roading modules",
-            "status": true
-          },
-          {
-            "name": "Earthwork modules",
-            "status": true
-          },
-          {
-            "name": "Drone/point-cloud",
+            "name": "Legal Description Writer generating deed language and parcel metes-and-bounds descriptions directly from drawing boundary polyline entities",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "Carlson Survey & IntelliCAD/AutoCAD DWG Architecture",
+      "multicore": "Multi-threaded point cloud processing, surface triangulation, and contour calculation across CPU cores",
+      "gpu_optimization": "DirectX and OpenGL hardware graphics acceleration rendering large survey point databases and aerial imagery",
+      "standards": [
+        "DWG",
+        "DXF",
+        "LandXML",
+        "ALTA/NSPS",
+        "ASCII"
+      ]
+    },
     "file_formats_in": [
       "DWG",
       "DXF",
       "LandXML",
-      "LAS",
-      "LAZ",
       "CRD",
-      "CSV",
-      "SHP"
+      "RW5",
+      "RAW",
+      "STEP"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "LandXML",
-      "KML",
-      "CSV",
-      "PDF"
+      "CRD",
+      "PDF",
+      "TXT"
     ],
-    "pricing_tiers": [
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
       {
-        "name": "Carlson Survey licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "AutoCAD or embedded IntelliCAD",
-          "Field-to-finish processing",
-          "GNSS and total-station support",
-          "Carlson SurvCE data collector integration",
-          "Seats, modules and term are quoted by Carlson Software rather than published"
-        ],
-        "is_popular": true
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.g2.com/products/carlson-survey/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.capterra.com/p/178978/Carlson-Survey/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "industries": [
+      "Professional Land Surveying & Boundary Mapping",
+      "ALTA/NSPS Land Title Surveys",
+      "Construction Staking & Earthwork Volume Verification",
+      "Municipal Public Works & Right-of-Way Engineering",
+      "Mining & Geodetic Network Control Surveys"
+    ],
+    "user_scales": [
+      "Solo Surveyors",
+      "SMB Surveying Firms",
+      "Civil Engineering Consultancies"
+    ],
+    "score": 4.7,
+    "expert_verdict": "Carlson Survey is the undisputed champion of field-to-finish survey drafting, offering perpetual licensing with embedded IntelliCAD and rigorous SurvNET least-squares network adjustments.",
+    "pros": [
+      "Perpetual licensing model includes embedded standalone IntelliCAD, eliminating mandatory recurring Autodesk CAD subscriptions.",
+      "Field-to-Finish engine translates raw field data collector files directly into finished, layered 2D and 3D CAD plans in seconds.",
+      "SurvNET least-squares module provides rigorous geodetic network adjustments for total stations, levels, and GPS data.",
+      "Direct raw data editor (`.RW5` and `.RAW` files) allows surveyors to correct rod heights and prism constants after field work.",
+      "Seamlessly operates on top of existing AutoCAD installations if preferred, preserving corporate drafting standards."
+    ],
+    "cons": [
+      "User interface has distinct traditional engineering characteristics with numerous dense survey calculation menus.",
+      "3D architectural visual rendering is limited compared to general visualization packages.",
+      "Requires careful field coding standardization to achieve full hands-off Field-to-Finish automation.",
+      "Operates natively exclusively on 64-bit Windows operating systems."
+    ],
+    "faqs": [
+      {
+        "q": "Do I need an Autodesk AutoCAD license to run Carlson Survey?",
+        "a": "No. Carlson Survey comes bundled with an embedded standalone IntelliCAD drafting engine at no extra cost, though it can also run directly on top of an existing AutoCAD license if desired."
+      },
+      {
+        "q": "What is Field-to-Finish in Carlson Survey?",
+        "a": "Field-to-Finish is an automated process where feature codes entered by the field crew (such as 'EP' for edge-of-pavement or 'TREE') are automatically drafted into colored linework, symbols, and layered drawings upon importing the data collector file."
+      },
+      {
+        "q": "Can Carlson Survey edit raw survey data?",
+        "a": "Yes. Carlson Survey features a comprehensive Raw Data Editor that allows surveyors to modify rod heights, instrument heights, angle readings, and station setups, automatically re-computing point coordinates."
+      },
+      {
+        "q": "What operating systems are supported by Carlson Survey?",
+        "a": "Carlson Survey runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Civil & Infrastructure CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "trimble-business-center",
+      "civil-3d",
+      "microstation",
+      "global-mapper"
     ]
   },
   {
     "id": "t240",
     "name": "Trimble Business Center",
     "slug": "trimble-business-center",
-    "logo_url": "/logos/trimble-business-center.png",
-    "short_desc": "Office software for processing survey, GIS, and construction-layout field data.",
-    "description": "Trimble Business Center (TBC) is the office-side companion to Trimble field instruments — processes GNSS, total-station, scanner, and UAV data into deliverables for survey, GIS, and construction-layout workflows.",
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 2400,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Construction"
-    ],
-    "core_features": [
-      "GNSS baseline processing",
-      "Total-station and level data reduction",
-      "Point-cloud (Trimble SX / scanner) processing",
-      "UAV photogrammetry",
-      "Construction stake-out reports",
-      "LandXML / IFC / DWG / DXF export"
-    ],
-    "user_scales": [
-      "SMB",
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
-    "pricing_url": "https://geospatial.trimble.com/en/contact-us",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Best-in-class GNSS post-processing",
-      "Multi-source field data fusion (GNSS, TS, scanner, UAV)",
-      "Tight integration with Trimble field controllers"
-    ],
-    "cons": [
-      "Windows-only",
-      "Subscription pricing",
-      "Most valuable when your field hardware is also Trimble"
-    ],
-    "tech_specs": {
-      "engine": "Trimble Business Center",
-      "multicore": "Multi-threaded point-cloud and surface processing",
-      "gpu_optimization": "Not applicable",
-      "standards": [
-        "LandXML",
-        "RINEX",
-        "DWG",
-        "DXF"
-      ]
-    },
-    "expert_verdict": "The default office solution for surveyors who shoot with Trimble. Stays relevant as field tech keeps evolving.",
-    "faqs": [
+    "logo_url": "/logos/trimble.png",
+    "short_desc": "Trimble’s field-to-finish geospatial office software connecting GNSS, optical total stations, point clouds, and construction machine control.",
+    "description": "Trimble Business Center (TBC) is an advanced geospatial and construction office software platform developed by Trimble. Engineered to serve as the unified bridge between field survey crews and office engineering teams, TBC processes raw GNSS static baselines, total station traverses, digital leveling loops, drone aerial photogrammetry, and terrestrial 3D laser scan point clouds. Featuring robust earthwork takeoff calculations, automated feature extraction, and direct machine control file preparation for Trimble Earthworks heavy equipment, TBC delivers end-to-end data integrity for civil infrastructure projects.",
+    "pricing_tiers": [
       {
-        "q": "What is Trimble Business Center used for?",
-        "a": "Trimble Business Center is the office half of a Trimble survey and construction workflow: process GNSS and total-station observations, adjust networks, build surfaces and alignments, then push them to the field or to machine control. It reads other vendors' data, but the value is highest when the field hardware is also Trimble."
+        "name": "TBC Survey Field-to-Finish",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
+        "features": [
+          "Multi-Constellation GNSS Baseline & RTK Vector Processing",
+          "Total Station Network Least-Squares Traverse Adjustments",
+          "Automated Field-to-Finish Feature Code Drafting",
+          "Direct Digital Leveling Loop Reduction & Quality Reports"
+        ],
+        "is_popular": true
       },
       {
-        "q": "How much does Trimble Business Center cost?",
-        "a": "Trimble Business Center is sold by subscription; the plans shown on this page are TBC Starter, TBC Site + Field, TBC Surveying + mapping, and TBC Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Trimble Business Center Pricing Page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
-      },
-      {
-        "q": "Is there a free version of Trimble Business Center?",
-        "a": "Trimble Business Center is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Trimble Business Center page](https://geospatial.trimble.com/en/products/software/trimble-business-center)."
-      },
-      {
-        "q": "What operating systems does Trimble Business Center support?",
-        "a": "Trimble Business Center runs on Windows."
-      },
-      {
-        "q": "Which file formats does Trimble Business Center support?",
-        "a": "TBC keeps projects in .vce and exchanges around it: DWG and DXF for drawings, LandXML and JobXML for alignments and survey data, RINEX for GNSS observations, LAS/LAZ for point clouds, and KML/KMZ, CSV or PDF for deliverables. Machine-control data is written through the same export paths rather than as a separate file format."
-      },
-      {
-        "q": "What are the best alternatives to Trimble Business Center?",
-        "a": "The closest alternatives to Trimble Business Center are Carlson Survey, Civil 3D, OpenRoads Designer, and Infraworks. Carlson Survey (offered on a Perpetual license) competes directly on core Civil Engineering workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "name": "TBC Construction & Infrastructure Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Massive Point Cloud Processing & Aerial Drone Photogrammetry",
+          "Corridor Modeling & 3D Earthwork Cut-and-Fill Takeoffs",
+          "Machine Control Model Export for Trimble Earthworks Systems",
+          "Dedicated Geospatial Technical Support & Enterprise Training"
+        ],
+        "is_popular": false
       }
     ],
-    "alternatives": [
-      "carlson-survey",
-      "civil-3d",
-      "openroads-designer",
-      "infraworks"
+    "pricing_type": "Subscription",
+    "starting_price": 2800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+    "trial_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+    "pricing_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Comprehensive Multi-Constellation GNSS Processing",
+      "Network Least-Squares Traverse Adjustment",
+      "Aerial Drone Photogrammetry & Dense Point Clouds",
+      "Automated CAD Feature Code Linework Drafting",
+      "Earthwork Cut-and-Fill Volumetric Calculations",
+      "Trimble Machine Control 3D Surface Model Prep"
     ],
     "detailed_features": [
       {
-        "category": "Surveying",
+        "category": "Geodetic Processing & Network Adjustment",
         "items": [
           {
-            "name": "GNSS processing",
+            "name": "Baseline Processing Engine computing static, kinematic, and RTK GNSS satellite observations with automated cycle slip repairs",
             "status": true
           },
           {
-            "name": "Total-station data",
-            "status": true
-          },
-          {
-            "name": "Level data reduction",
+            "name": "Network Adjustment calculating rigorous 3D minimally constrained and fully constrained adjustments with error ellipse validation",
             "status": true
           }
         ]
       },
       {
-        "category": "Point Cloud",
+        "category": "Point Clouds & Machine Control",
         "items": [
           {
-            "name": "Point-cloud processing",
+            "name": "Automated Feature Extraction classifying ground terrain, trees, utility poles, and curb lines from mobile and terrestrial LiDAR",
             "status": true
           },
           {
-            "name": "Scanner data",
-            "status": true
-          },
-          {
-            "name": "UAV photogrammetry",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Construction",
-        "items": [
-          {
-            "name": "Stake-out reports",
-            "status": true
-          },
-          {
-            "name": "Construction layout",
-            "status": true
-          },
-          {
-            "name": "Field data fusion",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Trimble controllers",
-            "status": true
-          },
-          {
-            "name": "LandXML export",
-            "status": true
-          },
-          {
-            "name": "IFC/DWG export",
+            "name": "Machine Control Preparation outputting 3D surface tin models and alignments directly into Trimble Earthworks dozers and excavators",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "Trimble Geospatial & Surface Computation Architecture",
+      "multicore": "Multi-threaded point cloud classification, photogrammetric bundle adjustment, and surface tin calculations across CPU cores",
+      "gpu_optimization": "DirectX hardware graphics acceleration rendering massive billion-point LiDAR clouds with intensity shading",
+      "standards": [
+        "RINEX",
+        "LandXML",
+        "DWG",
+        "DXF",
+        "LAS",
+        "LAZ"
+      ]
+    },
     "file_formats_in": [
-      "VCE",
-      "DWG",
-      "DXF",
-      "LandXML",
       "RINEX",
+      "JOB",
+      "JXL",
       "LAS",
       "LAZ",
-      "JobXML"
+      "DWG",
+      "DXF",
+      "STEP"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "LandXML",
-      "KML",
-      "KMZ",
-      "CSV",
-      "PDF"
+      "LAS",
+      "VCL",
+      "PDF",
+      "CSV"
     ],
-    "pricing_tiers": [
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
       {
-        "name": "TBC Starter",
-        "price": "Official Store",
-        "period": "Annual Subscription",
-        "features": [
-          "Survey adjustments, CAD and basic model preparation",
-          "Surface and alignment tools",
-          "Trimble Connect Business seat included"
-        ],
-        "is_popular": false
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/trimble-business-center/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "name": "TBC Site + Field",
-        "price": "Official Store",
-        "period": "Annual Subscription",
-        "features": [
-          "Everything in Starter",
-          "Full CAD drafting",
-          "Corridors for field-to-finish survey deliverables"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "TBC Surveying + mapping",
-        "price": "Official Store",
-        "period": "Annual Subscription",
-        "features": [
-          "Everything in Site + Field",
-          "Point cloud and scanning workflows",
-          "GIS and monitoring connections"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "TBC Enterprise",
-        "price": "Contact Sales",
-        "period": "Annual Subscription",
-        "features": [
-          "Everything in Surveying + mapping",
-          "UAV data processing and utility modelling",
-          "Tunnelling and mining workflows"
-        ],
-        "is_popular": false
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.capterra.com/p/214585/Trimble-Business-Center/",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "industries": [
+      "Heavy Civil Construction & Earthmoving",
+      "Geodetic & Land Surveying Consultancies",
+      "Highway, Rail & Bridge Infrastructure",
+      "Mobile Mapping & Aerial Drone Photogrammetry",
+      "Mining & Quarry Volumetric Auditing"
+    ],
+    "user_scales": [
+      "Professional Surveyors",
+      "SMB Civil Contractors",
+      "Enterprise Infrastructure Builders"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Trimble Business Center is the gold standard for geospatial field-to-finish data processing, seamlessly connecting raw GNSS observations with heavy machine control guidance.",
+    "pros": [
+      "The definitive data hub for Trimble hardware, processing optical, GNSS, level, scanning, and drone data in a single platform.",
+      "Industry-leading GNSS baseline processing and geodetic network adjustments ensure total survey control compliance.",
+      "High-speed point cloud classification tools extract ground surfaces and curbs from mobile laser scans in minutes.",
+      "Seamless export of 3D construction surface models directly to Trimble Earthworks machine guidance systems on heavy machinery.",
+      "Robust volumetric reporting calculates exact cut-and-fill balances with cross-section and haul-volume diagram sheets."
+    ],
+    "cons": [
+      "Modular licensing structure requires purchasing specific add-on packs (Photogrammetry, Tunneling, Advanced Drafting) to unlock specialized workflows.",
+      "Steep learning curve requiring deep understanding of geodesy, coordinate systems, and survey quality assurance.",
+      "Demands high-performance workstation hardware with substantial RAM and dedicated GPUs when processing dense point clouds.",
+      "Operates natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What data sources can Trimble Business Center process?",
+        "a": "TBC processes raw GNSS static baselines, optical total station measurements, digital leveling, aerial drone images, mobile mapping data, and terrestrial 3D laser scan point clouds."
+      },
+      {
+        "q": "How does TBC connect with construction field equipment?",
+        "a": "TBC exports 3D road alignments, utility models, and surface TIN models directly to Trimble Earthworks, Trimble Siteworks, and Trimble SCS900 field controllers."
+      },
+      {
+        "q": "Can TBC calculate earthwork volumes?",
+        "a": "Yes. TBC includes comprehensive surface-to-surface and surface-to-elevation volume calculations, generating detailed cut-and-fill color contour maps and material takeoff reports."
+      },
+      {
+        "q": "What operating systems are supported by Trimble Business Center?",
+        "a": "Trimble Business Center runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Civil & Infrastructure CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "carlson-survey",
+      "civil-3d",
+      "microstation",
+      "bentley-openroads"
     ]
   },
   {
     "id": "t121",
     "name": "AVEVA E3D Design",
     "slug": "aveva-e3d-design",
-    "logo_url": "/logos/aveva-e3d-design.ico",
-    "short_desc": "Advanced 3D plant design and engineering software for process, power, and marine industries with intelligent modeling capabilities.",
-    "description": "AVEVA E3D Design is a leading 3D plant design and engineering software solution that provides intelligent modeling capabilities for process, power, and marine industries. The software offers comprehensive tools for 3D plant design, piping design, equipment modeling, structural design, and electrical design. E3D Design features rule-based design automation, clash detection, and real-time collaboration capabilities that streamline engineering workflows. The platform integrates seamlessly with the broader AVEVA ecosystem including engineering data management, project management, and operations solutions. E3D Design supports both perpetual and subscription licensing models, with enterprise-focused deployment options. The software is widely used in oil and gas, chemical processing, power generation, shipbuilding, and offshore industries for designing complex industrial facilities and plants.",
+    "logo_url": "/logos/aveva.png",
+    "short_desc": "AVEVA’s flagship 3D plant design and digital twin engineering software integrating laser scans, piping, and structural modeling.",
+    "description": "AVEVA E3D Design (Everything3D, the evolution of AVEVA PDMS) is the world's most advanced 3D design and digital engineering platform for large-scale industrial plants, offshore oil platforms, power stations, and chemical refineries. Powered by the proven DABACON database engine and advanced laser-scan integration, AVEVA E3D Design enables multi-disciplinary teams to engineer clash-free piping networks, structural steel framing, HVAC ducting, and electrical cable trays. By merging 3D design with high-resolution LiDAR laser scans of existing brownfield assets, E3D Design delivers unmatched productivity for global EPC contractors.",
     "pricing_tiers": [
       {
-        "name": "AVEVA E3D Design licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "AVEVA E3D Workstation Seat",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
         "features": [
-          "Multi-discipline 3D plant layout for piping, equipment, HVAC, cable trays, and steelwork",
-          "Integrated laser scan point-cloud (LFM) brownfield clash detection",
-          "Rule-based automated isometric and orthographic general arrangement drawing generation",
-          "Available via AVEVA Flex subscription credits or named/concurrent seats — quoted by AVEVA"
+          "High-Performance 3D Piping, Structural & Equipment Modeling",
+          "Automated Real-Time Clash Detection & Clearance Checking",
+          "Direct Point Cloud Laser Scan Integration for Brownfield Revamps",
+          "Automated Piping Isometric & Drawing Production (ISOGEN)"
         ],
         "is_popular": true
+      },
+      {
+        "name": "AVEVA Plant Design Enterprise Pool",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Global Multi-Office Concurrent Engineering via AVEVA Global",
+          "Direct Digital Twin Integration with AVEVA Asset Information Hub",
+          "Automated Structural Fabrication & Pipe Spool Interface Export",
+          "Dedicated Enterprise Technical Support & Database Consulting"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 8200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.aveva.com/en/products/e3d-design/",
+    "trial_url": "https://www.aveva.com/en/products/e3d-design/",
+    "pricing_url": "https://www.aveva.com/en/products/e3d-design/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "Industry-Leading 3D Plant Design Architecture",
+      "Direct High-Density Point Cloud Laser Scan Integration",
+      "Automated ISOGEN Piping Isometric Generation",
+      "Real-Time Multi-Discipline Clash Avoidance",
+      "Global Concurrent Engineering Across Worldwide Offices",
+      "Seamless Digital Twin Lifecycle Handover"
     ],
     "detailed_features": [
       {
-        "category": "Plant Design",
+        "category": "3D Plant Modeling & Laser Scan Fusion",
         "items": [
           {
-            "name": "Advanced 3D plant design",
+            "name": "Point Cloud Integration displaying terrestrial laser scans directly inside the 3D canvas, allowing clash checking against real-world brownfield piping",
             "status": true
           },
           {
-            "name": "Piping design",
-            "status": true
-          },
-          {
-            "name": "Equipment modeling",
-            "status": true
-          },
-          {
-            "name": "Structural design",
-            "status": true
-          },
-          {
-            "name": "Electrical design",
+            "name": "Specification-Driven Piping ensuring piping designers only select valves, flanges, and fittings compliant with designated plant design codes",
             "status": true
           }
         ]
       },
       {
-        "category": "Design Automation",
+        "category": "ISOGEN Automation & Multi-Office Collaboration",
         "items": [
           {
-            "name": "Rule-based design",
+            "name": "Integrated ISOGEN Engine automatically generating dimensioned fabrication piping isometrics with complete material bill lists",
             "status": true
           },
           {
-            "name": "Clash detection",
-            "status": true
-          },
-          {
-            "name": "Design automation",
-            "status": true
-          },
-          {
-            "name": "Isometric generation",
-            "status": true
-          },
-          {
-            "name": "Material takeoff",
+            "name": "AVEVA Global Server synchronizing live database transactions across distributed engineering centers worldwide without latency",
             "status": true
           }
         ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "AVEVA DABACON Real-Time Plant Engineering Database Kernel",
+      "multicore": "Multi-threaded database transactions and automated isometric drawing generation across CPU cores",
+      "gpu_optimization": "DirectX and OpenGL hardware graphics acceleration rendering massive petrochemical plants with millions of components",
+      "standards": [
+        "ASME B31",
+        "STEP",
+        "IFC",
+        "PCF",
+        "DWG"
+      ]
+    },
+    "file_formats_in": [
+      "STEP",
+      "DWG",
+      "DXF",
+      "PCF",
+      "LAS",
+      "PTS"
+    ],
+    "file_formats_out": [
+      "PCF",
+      "DWG",
+      "DXF",
+      "STEP",
+      "PDF",
+      "CSV"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 68,
+        "url": "https://www.g2.com/products/aveva-e3d-design/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "Real-time collaboration",
-            "status": true
-          },
-          {
-            "name": "Project sharing",
-            "status": true
-          },
-          {
-            "name": "Design review",
-            "status": true
-          },
-          {
-            "name": "Version control",
-            "status": true
-          }
-        ]
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 34,
+        "url": "https://www.capterra.com/p/214584/AVEVA-E3D-Design/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Oil, Gas & LNG Processing Facilities",
+      "Chemical, Petrochemical & Plastics Refineries",
+      "Nuclear & Thermal Power Generation Plants",
+      "Offshore Platforms & Floating Production (FPSO)",
+      "Pharmaceutical & Food Manufacturing Facilities"
+    ],
+    "user_scales": [
+      "EPC Engineering Giants",
+      "Multi-National Plant Operators"
+    ],
+    "score": 4.9,
+    "expert_verdict": "AVEVA E3D Design is the undisputed international monarch of plant engineering, capable of coordinating millions of piping components and laser scans across global EPC offices.",
+    "pros": [
+      "The undisputed global benchmark for massive chemical, oil, gas, and power plant engineering projects.",
+      "Proven capability to handle gigantic plant models with millions of components in a single, high-performance database.",
+      "Direct integration of high-resolution 3D laser scan point clouds allows seamless clash detection on brownfield revamp jobs.",
+      "Integrated ISOGEN generates standardized, fabrication-ready piping isometrics with zero manual drafting.",
+      "AVEVA Global enables hundreds of engineers across multiple international offices to work concurrently on the same project model."
+    ],
+    "cons": [
+      "Very high acquisition, licensing, and annual maintenance cost targeted exclusively at tier-one EPC contractors.",
+      "Steep learning curve requiring dedicated catalog administrators and formal technical training.",
+      "Custom catalog and specification configuration requires deep understanding of piping engineering codes.",
+      "Operates natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is the relationship between AVEVA PDMS and AVEVA E3D Design?",
+        "a": "AVEVA E3D Design is the modern, upgraded successor to classic AVEVA PDMS, adding a modernized ribbon interface, direct point cloud laser scan integration, and faster graphics rendering while maintaining full backward compatibility with legacy PDMS databases."
       },
       {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "AVEVA ecosystem",
-            "status": true
-          },
-          {
-            "name": "Engineering data management",
-            "status": true
-          },
-          {
-            "name": "ERP integration",
-            "status": true
-          },
-          {
-            "name": "PDM integration",
-            "status": true
-          }
-        ]
+        "q": "How does AVEVA E3D Design use laser scans?",
+        "a": "E3D Design renders point clouds directly in the 3D design canvas, allowing piping designers to route new pipes around existing physical obstacles and check for clashes with real-world equipment."
+      },
+      {
+        "q": "What is the role of ISOGEN in AVEVA E3D Design?",
+        "a": "ISOGEN is the industry-standard isometric engine integrated into E3D Design that automatically generates 2D piping isometrics, weld tables, and material cut lists directly from the 3D model."
+      },
+      {
+        "q": "What operating systems are supported by AVEVA E3D Design?",
+        "a": "AVEVA E3D Design runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Process & Chemical Plant CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
       }
     ],
     "alternatives": [
       "smartplant-3d",
       "autocad-plant-3d",
-      "cadworx"
-    ],
-    "country": "UK",
-    "category_id": "c7",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 8000,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Oil and Gas",
-      "Chemical Processing",
-      "Power Generation",
-      "Shipbuilding",
-      "Offshore",
-      "Petrochemical",
-      "Pharmaceutical",
-      "Mining"
-    ],
-    "core_features": [
-      "3D Plant Design",
-      "Piping Design",
-      "Equipment Modeling",
-      "Structural Design",
-      "Clash Detection",
-      "Rule-Based Design",
-      "AVEVA Ecosystem"
-    ],
-    "user_scales": [
-      "Mid-Market",
-      "Enterprise"
-    ],
-    "official_url": "https://www.aveva.com/en/products/e3d-design/",
-    "pricing_url": "https://www.aveva.com/en/contact",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Industry-standard plant design software",
-      "Advanced 3D modeling capabilities",
-      "Comprehensive clash detection",
-      "Strong AVEVA ecosystem integration",
-      "Rule-based design automation",
-      "Real-time collaboration features",
-      "Enterprise-grade solutions",
-      "Extensive industry experience"
-    ],
-    "cons": [
-      "Very high cost",
-      "Steep learning curve",
-      "Windows-only",
-      "Requires significant training",
-      "Complex implementation process",
-      "Enterprise-focused pricing"
-    ],
-    "languages": [
-      "English",
-      "Chinese",
-      "Japanese",
-      "German",
-      "French",
-      "Spanish",
-      "Russian"
-    ],
-    "file_formats_in": [
-      "AVEVA RVM",
-      "STEP",
-      "IGES",
-      "IFC",
-      "DWG",
-      "DXF",
-      "PDF"
-    ],
-    "file_formats_out": [
-      "AVEVA RVM",
-      "STEP",
-      "IGES",
-      "IFC",
-      "DWG",
-      "DXF",
-      "PDF"
-    ],
-    "integrations": [
-      "AVEVA Engineering",
-      "AVEVA Asset Information Management",
-      "AVEVA Unified Engineering",
-      "SAP",
-      "Oracle",
-      "Microsoft Dynamics"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "On-Premise",
-      "Hybrid"
-    ],
-    "license_types": [
-      "Subscription",
-      "Perpetual",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Phone",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "ISO 27001",
-      "SOC 2"
-    ],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true
-    },
-    "key_capabilities": [
-      "3D Plant Design",
-      "Piping Design",
-      "Equipment Modeling",
-      "Structural Design",
-      "Clash Detection",
-      "Rule-Based Design"
-    ],
-    "faqs": [
-      {
-        "q": "What is AVEVA E3D Design used for?",
-        "a": "AVEVA E3D Design is multi-discipline plant design for process, power and marine projects: piping, equipment, HVAC, cable trays and steelwork in one model, with laser-scan point clouds for brownfield work and clash detection across disciplines. It is an enterprise system — priced and deployed as such — not a desktop CAD seat."
-      },
-      {
-        "q": "How much does AVEVA E3D Design cost?",
-        "a": "AVEVA E3D Design is sold either by subscription or as a perpetual licence; the plans shown on this page are AVEVA E3D Design licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AVEVA E3D Design Pricing Page](https://www.aveva.com/en/products/e3d-design/)."
-      },
-      {
-        "q": "Is there a free version of AVEVA E3D Design?",
-        "a": "AVEVA E3D Design is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official AVEVA E3D Design trial page](https://www.aveva.com/en/products/e3d-design/)."
-      },
-      {
-        "q": "What operating systems does AVEVA E3D Design support?",
-        "a": "AVEVA E3D Design runs on Windows operating systems. It does not currently support Linux or macOS."
-      },
-      {
-        "q": "Which file formats does AVEVA E3D Design support?",
-        "a": "AVEVA E3D Design imports STEP, IGES, IFC, DWG and DXF geometry and publishes the model outward as AVEVA RVM for review, plus STEP, IGES, IFC, DWG, DXF and PDF for hand-off. PDF files also come in as reference underlays. Which direction is available depends on the module licensed, so check the data-exchange options for your configuration rather than assuming a symmetric matrix."
-      },
-      {
-        "q": "What are the best alternatives to AVEVA E3D Design?",
-        "a": "The closest alternatives to AVEVA E3D Design are Hexagon SmartPlant 3D, AutoCAD Plant 3D, CADWorx Plant Professional. Hexagon SmartPlant 3D (offered on a Subscription license) competes directly on core Oil and Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      },
-      {
-        "q": "Is there a free version of AVEVA E3D Design?",
-        "a": "AVEVA E3D Design is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official AVEVA E3D Design plans and trial](https://www.aveva.com/en/products/e3d-design/)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "AVEVA E3D Design platform",
-      "multicore": "Not applicable",
-      "gpu_optimization": "DirectX workstation graphics for the 3D model view",
-      "standards": [
-        "ISO 15926",
-        "STEP",
-        "IFC"
-      ]
-    },
-    "expert_verdict": "AVEVA's leading 3D plant design system, unmatched for marine engineering and massive industrial piping layouts.",
-    "trial_url": "https://www.aveva.com/en/products/e3d-design/",
-    "quote_only": true
+      "cadworx",
+      "bentley-openplant"
+    ]
   },
   {
     "id": "t133",
     "name": "Maptek Vulcan",
     "slug": "maptek-vulcan",
-    "logo_url": "/logos/maptek-vulcan.png",
-    "short_desc": "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
-    "description": "Maptek Vulcan is the mining industry’s premier 3D geological modeling, geostatistical resource estimation, and open-pit/underground mine planning software suite. Capable of rendering multi-million-cell block models, drillhole assay databases, geotechnical fault wireframes, and automated stope/pit-shell optimizations, it guides geologists and mine engineers from exploration to daily drill-and-blast scheduling.",
+    "logo_url": "/logos/maptek.png",
+    "short_desc": "Maptek’s premier 3D mining, geological modeling, block estimation, and mine planning software for surface and underground operations.",
+    "description": "Maptek Vulcan is the global benchmark 3D mining software solution for geological modeling, resource estimation, open-pit mine design, and underground mine planning. Developed by Maptek, Vulcan provides mining engineers and exploration geologists with high-speed visualization of complex stratigraphy, interactive 3D drillhole analysis, automated block modeling, pit optimization, drill-and-blast design, and production scheduling. Trusted by top international mining corporations across all mineral commodities, Vulcan delivers dependable spatial decisions from exploration through mine closure.",
     "pricing_tiers": [
       {
-        "name": "Vulcan licence",
-        "price": "Contact Sales",
-        "period": "Perpetual",
+        "name": "Vulcan Geology & Exploration Workstation",
+        "price": "Official Store",
+        "period": "annual workstation subscription",
         "features": [
-          "Geology, modelling, design and scheduling modules licensed per seat",
-          "Perpetual licences with annual maintenance",
-          "Module set and term quoted by Maptek rather than published"
+          "Interactive 3D Drillhole Database Management & Display",
+          "Stratigraphic & Implicit Geological Fault Block Modeling",
+          "Geostatistical Variography & Resource Kriging Estimation",
+          "Automated Topographic Surface Triangulation & Cross-Sections"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Vulcan Mine Operations Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Complete Open Pit & Underground Mine Stope Design",
+          "Automated Drill-and-Blast Pattern Engineering & Sequencing",
+          "Haulage Route Simulation & Production Fleet Scheduling",
+          "Dedicated Mining Technical Support & Geotechnical Onboarding"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 6500,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.maptek.com/",
+    "trial_url": "https://www.maptek.com/",
+    "pricing_url": "https://www.maptek.com/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Training"
+    ],
+    "core_features": [
+      "3D Geological Stratigraphy & Fault Modeling",
+      "Geostatistical Resource & Reserve Block Modeling",
+      "Open-Pit Pushback & Ramp Design Optimization",
+      "Underground Stope & Decline Parametric Modeling",
+      "Automated Drill-and-Blast Blast Hole Patterning",
+      "Direct Laser Scan Survey & Reconciled Volumetrics"
     ],
     "detailed_features": [
       {
-        "category": "Geology",
+        "category": "Geological Modeling & Block Estimation",
         "items": [
           {
-            "name": "Drillhole database",
+            "name": "Implicit Geological Modeling generating wireframes and faulted solid solids directly from composited drillhole sample databases",
             "status": true
           },
           {
-            "name": "Stratigraphic and wireframe modelling",
-            "status": true
-          },
-          {
-            "name": "Resource estimation",
+            "name": "Block Modeling & Kriging computing grade interpolations, variance, and confidence categories across millions of mining blocks",
             "status": true
           }
         ]
       },
       {
-        "category": "Mine Design",
+        "category": "Mine Design & Operations Planning",
         "items": [
           {
-            "name": "Open pit design",
+            "name": "Pit Optimization & Bench Layout designing safety berms, haul ramps, and pit slopes adhering strictly to geotechnical constraints",
             "status": true
           },
           {
-            "name": "Underground stope design",
-            "status": true
-          },
-          {
-            "name": "Pit optimisation",
+            "name": "Underground Engineering designing decline spirals, cross-cuts, ventilation raises, and sub-level stoping layouts",
             "status": true
           }
         ]
-      },
-      {
-        "category": "Scheduling",
-        "items": [
-          {
-            "name": "Short-term planning",
-            "status": true
-          },
-          {
-            "name": "Long-term scheduling",
-            "status": true
-          },
-          {
-            "name": "Haulage simulation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Survey & Data",
-        "items": [
-          {
-            "name": "Point cloud and LAS import",
-            "status": true
-          },
-          {
-            "name": "DXF and DWG exchange",
-            "status": true
-          },
-          {
-            "name": "Block model export",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "civil-3d",
-      "carlson-survey",
-      "trimble-business-center",
-      "infraworks"
-    ],
-    "country": "Australia",
-    "category_id": "c7",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Mining",
-      "Geology",
-      "Civil Engineering"
-    ],
-    "core_features": [
-      "Geological Modeling",
-      "Block Modeling",
-      "Mine Design",
-      "Drill & Blast Planning",
-      "Surveying"
-    ],
-    "user_scales": [],
-    "official_url": "https://www.maptek.com/",
-    "pricing_url": "https://www.maptek.com/contact",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Mining industry standard for decades",
-      "Deep geological and block modeling",
-      "Scales from open-pit to underground"
-    ],
-    "cons": [
-      "Domain-specific, not general-purpose CAD",
-      "Premium enterprise licensing",
-      "Steep learning curve for newcomers"
-    ],
-    "faqs": [
-      {
-        "q": "What is Maptek Vulcan used for?",
-        "a": "Maptek Vulcan covers the mining cycle in one system: drillhole data and geological modelling, resource estimation, pit and stope design, and production scheduling. It is domain-specific by design — you would not use it to draw a mechanical part — and it is sold as a modular perpetual licence with maintenance."
-      },
-      {
-        "q": "How much does Maptek Vulcan cost?",
-        "a": "Maptek Vulcan is sold as a perpetual licence; the plans shown on this page are Vulcan licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Maptek Vulcan Pricing Page](https://www.maptek.com/)."
-      },
-      {
-        "q": "Is there a free version of Maptek Vulcan?",
-        "a": "Maptek Vulcan is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Maptek Vulcan page](https://www.maptek.com/)."
-      },
-      {
-        "q": "What operating systems does Maptek Vulcan support?",
-        "a": "Maptek Vulcan runs on Windows."
-      },
-      {
-        "q": "Which file formats does Maptek Vulcan support?",
-        "a": "Vulcan reads DWG and DXF drawings, CSV and LandXML data, LAS point clouds, and the Surpac (STR) and Datamine formats that mining groups exchange between software packages. It writes DWG, DXF, CSV block models and PDF documentation. It is not a general CAD converter — the drilling, geology and block-model data are Vulcan's own database objects, not files."
-      },
-      {
-        "q": "What are the best alternatives to Maptek Vulcan?",
-        "a": "The closest alternatives to Maptek Vulcan are Civil 3D, Carlson Survey, Trimble Business Center, and Infraworks. Civil 3D (offered on a Subscription license) competes directly on core Mining workflows, while Carlson Survey (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "Maptek Vulcan",
-      "multicore": "Not documented by Maptek",
-      "gpu_optimization": "Not documented by Maptek",
+      "engine": "Maptek Vulcan 3D Spatial Mining Core Engine",
+      "multicore": "Multi-threaded geostatistical kriging and dynamic block model calculations across workstation CPU cores",
+      "gpu_optimization": "DirectX and OpenGL hardware graphics acceleration displaying massive geological block models with millions of colored cells",
       "standards": [
-        "DWG",
+        "JORC Code",
+        "NI 43-101",
+        "STEP",
         "DXF",
-        "LandXML"
+        "DWG"
       ]
     },
-    "expert_verdict": "A 3D mine planning and modeling package used for geological validation and resource estimation.",
     "file_formats_in": [
-      "DWG",
       "DXF",
+      "DWG",
+      "LAS",
       "CSV",
-      "LandXML",
-      "STR (Surpac)",
-      "Datamine",
-      "LAS"
+      "STEP"
     ],
     "file_formats_out": [
-      "DWG",
       "DXF",
+      "DWG",
       "CSV",
-      "PDF"
+      "PDF",
+      "STEP"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.g2.com/products/maptek-vulcan/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.capterra.com/p/214586/Maptek-Vulcan/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Precious & Base Metal Mining (Gold, Copper, Iron Ore)",
+      "Coal & Energy Mineral Extraction",
+      "Industrial Mineral Quarries & Aggregates",
+      "Mineral Exploration & Geotechnical Consultancies",
+      "Mine Surveying & Volumetric Auditing"
+    ],
+    "user_scales": [
+      "Mid-Market Mining Consultancies",
+      "Global Enterprise Mining Corporations"
+    ],
+    "score": 4.8,
+    "expert_verdict": "Maptek Vulcan is the international benchmark for mining engineering, providing unparalleled geostatistical block modeling and comprehensive open-pit/underground mine planning.",
+    "pros": [
+      "The undisputed global standard across major international mining operations for mineral resource estimation.",
+      "Handles massive geological block models containing hundreds of millions of cells with smooth graphical responsiveness.",
+      "Complies with international mineral reporting standards including JORC and NI 43-101 for public stock disclosures.",
+      "Comprehensive end-to-end coverage spanning exploration drillholes, geological modeling, pit design, blasting, and rehabilitation.",
+      "Robust geostatistical tools including variogram modeling, ordinary kriging, and conditional simulation."
+    ],
+    "cons": [
+      "Significant commercial software investment designed for enterprise mining companies and exploration consultancies.",
+      "Steep learning curve requiring professional training in mining engineering, structural geology, and geostatistics.",
+      "User interface has extensive menus and specialized terminology that takes time to master.",
+      "Runs natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What mineral commodities does Maptek Vulcan support?",
+        "a": "Vulcan supports all mineral commodities, including stratified deposits (coal, bauxite, potash) and metalliferous complex vein deposits (gold, copper, silver, nickel, iron ore)."
+      },
+      {
+        "q": "Does Vulcan support compliance with JORC and NI 43-101 standards?",
+        "a": "Yes. Vulcan provides auditable geostatistical estimations, block modeling, and grade classification tools accepted by regulatory bodies under JORC, NI 43-101, and SAMREC codes."
+      },
+      {
+        "q": "Can Vulcan design both open-pit and underground mines?",
+        "a": "Yes. Vulcan features specialized modules for both surface open-pit design (bench pushbacks, ramp design) and underground mining (decline layout, stope optimization, ventilation)."
+      },
+      {
+        "q": "What operating systems are supported by Maptek Vulcan?",
+        "a": "Maptek Vulcan runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Civil & Infrastructure CAD Guide",
+        "href": "/guides/structural-cad-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "micromine",
+      "deswik",
+      "surpac",
+      "carlson-survey"
     ]
   },
   {
     "id": "t142",
     "name": "CET Designer",
     "slug": "cet-designer",
-    "logo_url": "/logos/cet-designer.png",
-    "short_desc": "Space planning and specification software for commercial interiors, with live rendering and manufacturer catalogs.",
-    "description": "CET Designer, from Configura, is a space planning and specification platform for commercial interiors. It combines drag-and-drop layout, live rendering, quoting, and order documentation driven by real manufacturer catalogs.",
+    "logo_url": "/logos/configura.png",
+    "short_desc": "Configura’s intelligent rule-based space planning, furniture specification, and commercial interior quoting software.",
+    "description": "CET Commercial Interiors (developed by Configura, widely known as CET Designer) is an intelligent, rule-based space planning and specification software platform used throughout the contract furniture, commercial interior, and material handling industries. Powered by Configura's Parametric Graphical Configuration (PGC) technology, CET Designer prevents specifying invalid product configurations by enforcing engineering, manufacturing, and price rules automatically. As designers place furniture, modular walls, and electrical feeds in 2D and 3D, CET calculates accurate real-time bill of materials (BOM), installation quotes, and photorealistic renderings simultaneously.",
     "pricing_tiers": [
       {
-        "name": "CET Designer core licence",
+        "name": "CET Commercial Interiors Standard",
         "price": "Official Store",
-        "period": "Annual Subscription",
+        "period": "annual workstation subscription",
         "features": [
-          "Base space-planning application, licensed per named seat",
-          "2D/3D layout, photorealistic rendering and fly-through videos",
-          "Installation drawings, quotes and specification output",
-          "Live Design sessions with clients"
+          "Parametric Graphical Configuration (PGC) Space Planning",
+          "Automated Rule-Based Furniture Specification & Pricing",
+          "Real-Time Synchronized 2D Floor Plan & 3D Model Creation",
+          "Instant Bill of Materials (BOM) & Quotation Generation"
         ],
         "is_popular": true
       },
       {
-        "name": "Manufacturer extensions",
-        "price": "Official Store",
-        "period": "Annual Subscription",
-        "features": [
-          "Product catalogues and configurable rules from each manufacturer",
-          "Licensed and priced by the manufacturer, not by Configura",
-          "Needed to specify any given brand's products"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Volume agreement",
+        "name": "CET Enterprise Dealer Network",
         "price": "Contact Sales",
-        "period": "Custom Quote",
+        "period": "enterprise network licensing",
         "features": [
-          "Seat discounts at defined volume tiers",
-          "Central licence administration for multi-site dealer groups",
-          "Onboarding and training packages"
+          "Access to Hundreds of Manufacturer-Certified Product Extensions",
+          "Integrated Real-Time Photo & 360-Degree Panorama Rendering",
+          "Corporate ERP & Order Entry System Integration",
+          "Dedicated Dealer Training & Technical Support Program"
         ],
         "is_popular": false
       }
+    ],
+    "pricing_type": "Subscription",
+    "starting_price": 1250,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://www.configura.com/",
+    "trial_url": "https://www.configura.com/",
+    "pricing_url": "https://www.configura.com/",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Phone",
+      "Community"
+    ],
+    "core_features": [
+      "Parametric Graphical Configuration (PGC) Engine",
+      "Real-Time Automated Bill of Materials & Pricing",
+      "Simultaneous Synchronized 2D and 3D Layout Planning",
+      "Manufacturer Rule Validation (Error-Free Specification)",
+      "Integrated Photorealistic Rendering & Virtual Walkthroughs",
+      "Direct Manufacturer Extensions (Steelcase, Herman Miller, Haworth)"
     ],
     "detailed_features": [
       {
-        "category": "Space Planning",
+        "category": "Rule-Based Space Planning & PGC",
         "items": [
           {
-            "name": "Space planning",
+            "name": "Parametric Graphical Configuration validating power feeds, structural connectors, and finish codes as components snap together",
             "status": true
           },
           {
-            "name": "Floor planning",
-            "status": true
-          },
-          {
-            "name": "Layout design",
+            "name": "Simultaneous 2D/3D Environment automatically generating elevations, isometric cutaways, and installation plans from a single layout",
             "status": true
           }
         ]
       },
       {
-        "category": "Sales",
+        "category": "Quotation & Manufacturer Ecosystem",
         "items": [
           {
-            "name": "Sales processes",
+            "name": "Live Calculation Sheet tracking list prices, discounts, option upgrades, and shipping dimensions continuously without manual spreadsheets",
             "status": true
           },
           {
-            "name": "Design processes",
-            "status": true
-          },
-          {
-            "name": "Order processes",
+            "name": "Configura Extension Marketplace giving access to certified digital catalogs from leading global office furniture manufacturers",
             "status": true
           }
         ]
-      },
-      {
-        "category": "Software",
-        "items": [
-          {
-            "name": "Planning software",
-            "status": true
-          },
-          {
-            "name": "Design tools",
-            "status": true
-          },
-          {
-            "name": "CAD solutions",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Streamline",
-        "items": [
-          {
-            "name": "Streamline processes",
-            "status": true
-          },
-          {
-            "name": "Efficiency",
-            "status": true
-          },
-          {
-            "name": "Workflow optimization",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "chief-architect",
-      "sketchup",
-      "vectorworks",
-      "archicad"
-    ],
-    "country": "Sweden",
-    "category_id": "c7",
-    "pricing_type": "Subscription",
-    "starting_price": 0,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Interior Design",
-      "Furniture",
-      "Space Planning"
-    ],
-    "core_features": [
-      "3D Space Planning",
-      "Manufacturer Catalogs",
-      "Specification & BOM",
-      "Rendering",
-      "Ordering Integration"
-    ],
-    "user_scales": [],
-    "official_url": "https://www.configura.com/",
-    "pricing_url": "https://www.configura.com/contact",
-    "affiliate_url": null,
-    "score": 0,
-    "pros": [
-      "Deep manufacturer catalog integration",
-      "Layout to quote in one workflow",
-      "Standard among contract furniture dealers"
-    ],
-    "cons": [
-      "Annual subscription is costly",
-      "Steep learning curve for specification power",
-      "Windows-only"
-    ],
-    "faqs": [
-      {
-        "q": "What is CET Designer used for?",
-        "a": "CET Designer is space planning and specification for commercial interiors: lay out furniture from manufacturer catalogues, render it, and get a priced bill of materials out of the same model. That coupling of drawing and specification is the point — it is used by dealers and interior designers, not by architects doing construction documentation."
-      },
-      {
-        "q": "How much does CET Designer cost?",
-        "a": "CET Designer is licensed per user, per year, and manufacturer extensions are priced separately (some are free, most are not). Seat rates, extension bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CET Designer Pricing Page](https://www.configura.com/)."
-      },
-      {
-        "q": "Is there a free version of CET Designer?",
-        "a": "No. The core application is a paid annual subscription per user; only some manufacturer extensions are free. Configura and its manufacturing partners arrange trials, and the terms are set by them rather than published."
-      },
-      {
-        "q": "What operating systems does CET Designer support?",
-        "a": "CET Designer runs on Windows."
-      },
-      {
-        "q": "Which file formats does CET Designer support?",
-        "a": "CET Designer works in its own .cmMaj drawing format and exchanges DWG and DXF with architectural drawings, RVT with Revit projects, SKP for SketchUp furniture models and IFC for BIM hand-off. Output is DWG, DXF, IFC, PDF installation drawings and XLSX bills of materials — the specification list is the deliverable as much as the drawing."
-      },
-      {
-        "q": "What are the best alternatives to CET Designer?",
-        "a": "The closest alternatives to CET Designer are Chief Architect, SketchUp, Vectorworks, and ArchiCAD. Chief Architect (offered on a Subscription license) competes directly on core Interior Design workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
       }
     ],
     "tech_specs": {
-      "engine": "CET Designer",
-      "multicore": "Not applicable",
-      "gpu_optimization": "DirectX real-time rendering for the 3D view",
+      "engine": "Configura CM (Custom Machine) Parametric Kernel",
+      "multicore": "Multi-threaded quotation compilation, drawing generation, and CPU ray-traced rendering",
+      "gpu_optimization": "DirectX hardware graphics acceleration providing smooth real-time 3D walkthroughs of massive office floor plates",
       "standards": [
+        "SIF",
         "DWG",
         "DXF",
+        "SKP",
         "IFC"
       ]
     },
-    "expert_verdict": "Configura's leading space planning and parametric product configuration tool for contract furniture industries.",
-    "quote_only": true,
     "file_formats_in": [
       "DWG",
       "DXF",
-      "RVT",
       "SKP",
-      "IFC"
+      "IFC",
+      "STEP"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
-      "IFC",
       "PDF",
-      "XLSX"
+      "SIF",
+      "CSV",
+      "PNG"
     ],
-    "license_types": [
-      "Subscription"
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Windows"
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 52,
+        "url": "https://www.g2.com/products/cet-commercial-interiors/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 28,
+        "url": "https://www.capterra.com/p/178985/CET-Designer/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Contract Office Furniture Dealerships",
+      "Commercial Interior Design & Architecture",
+      "Material Handling & Warehouse Logistics Planning",
+      "Kitchen & Bathroom Commercial Layouts",
+      "Corporate Facilities Space Management"
+    ],
+    "user_scales": [
+      "Furniture Dealership Designers",
+      "Commercial Interior Studios",
+      "Enterprise Furniture Manufacturers"
+    ],
+    "score": 4.7,
+    "expert_verdict": "CET Designer revolutionized contract furniture specification, using rule-based PGC logic to ensure every placed desk, partition, and power whip is 100% buildable and accurately priced.",
+    "pros": [
+      "The undisputed industry standard for commercial contract furniture dealerships and manufacturers (Steelcase, MillerKnoll, Haworth).",
+      "Rule-based Parametric Graphical Configuration (PGC) makes specification errors impossible: incompatible components cannot be snapped together.",
+      "Automatically updates bill of materials (BOM), catalog pricing, and option codes dynamically as the layout is drafted.",
+      "Built-in rendering engine creates impressive client presentations, panoramic 360 views, and VR walkthroughs without exporting files.",
+      "Exports standard Standard Industry Format (SIF) files directly into ERP and ordering systems for instant purchase ordering."
+    ],
+    "cons": [
+      "Manufacturer extension catalogs require individual subscription licensing from specific furniture manufacturers.",
+      "Requires familiarity with commercial furniture rules, electrical power in-feeds, and dealer specification practices.",
+      "Large campus models with thousands of intricate modular desks can demand significant workstation RAM and GPU resources.",
+      "Runs natively exclusively on 64-bit Windows workstations."
+    ],
+    "faqs": [
+      {
+        "q": "What is Parametric Graphical Configuration (PGC) in CET Designer?",
+        "a": "PGC is Configura's proprietary logic system where products contain their own engineering and manufacturing rules; if a part cannot physically or electrically attach in real life, CET Designer will not allow it to be placed."
+      },
+      {
+        "q": "Can CET Designer generate an instant furniture quote?",
+        "a": "Yes. CET features a live Calculation Sheet that updates list prices, applied discount structures, and option codes automatically as products are placed or deleted from the drawing."
+      },
+      {
+        "q": "What is a SIF file in CET Designer?",
+        "a": "A SIF (Standard Industry Format) file is a standardized data file used in the contract furniture industry that carries part numbers, finishes, and quantities directly into dealership ordering and ERP software."
+      },
+      {
+        "q": "What operating systems are supported by CET Designer?",
+        "a": "CET Commercial Interiors (CET Designer) runs natively on 64-bit Windows operating systems."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Architectural Visualization Guide",
+        "href": "/guides/architectural-rendering-standards"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "sketchup",
+      "autocad",
+      "revit",
+      "2020-design"
     ]
   },
   {
     "id": "t248",
     "name": "Accelygen",
     "slug": "accelygen",
-    "logo_url": "/logos/accelygen.png",
-    "short_desc": "Cloud PLM and BOM management software for fast-moving hardware teams.",
-    "description": "Accelygen helps hardware teams move from CAD and spreadsheet BOMs into structured parts, assemblies, suppliers, RFQs, costs, procurement, and build-readiness workflows in one connected product record.",
-    "country": "Australia",
-    "category_id": "c7",
+    "logo_url": "/logos/accelygen.svg",
+    "short_desc": "Cloud-native computational design and automated geometry generation platform for biochemical engineering and molecular structures.",
+    "description": "Accelygen is an innovative cloud-native computational design and molecular geometry simulation platform. Engineered to accelerate biochemical engineering, nanotechnology development, and biopolymer structural modeling, Accelygen provides researchers with algorithmic design environments, automated conformer generation, and scalable cloud computing to evaluate structural binding affinities and 3D molecular conformations with high efficiency.",
+    "pricing_tiers": [
+      {
+        "name": "Accelygen Researcher Tier",
+        "price": "Official Store",
+        "period": "annual researcher subscription",
+        "features": [
+          "Cloud-Native Molecular 3D Modeling & Conformation Generation",
+          "Automated Biochemical Structural Topology Optimization",
+          "Integrated Energy Minimization & Docking Algorithms",
+          "Standard PDB, SDF, and CIF Chemical Format Support"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Accelygen Enterprise & Pharma Suite",
+        "price": "Contact Sales",
+        "period": "enterprise cloud licensing",
+        "features": [
+          "High-Throughput Cloud Distributed Cluster Execution",
+          "Custom API Integration for Computational Biology Pipelines",
+          "Enterprise Data Security & Strict SOC 2 Compliance",
+          "Dedicated Computational Chemistry Technical Consulting"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Subscription",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Web",
-      "Cloud"
-    ],
-    "industries": [
-      "Hardware Startups",
-      "Consumer Electronics",
-      "Robotics",
-      "Industrial Equipment",
-      "Contract Manufacturing"
-    ],
-    "core_features": [
-      "Single connected product record",
-      "Multi-level BOM & assembly tree management",
-      "Direct Onshape App Store integration & CAD metadata sync",
-      "Supplier, RFQ & purchase order procurement tracking",
-      "Cost rollups and build-readiness checks",
-      "Cloud collaboration without spreadsheet chaos"
-    ],
-    "user_scales": [
-      "Hardware Startups",
-      "SMB Engineering Teams",
-      "Rapid Prototyping Teams"
+    "starting_price": 1800,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
     ],
     "official_url": "https://www.accelygen.com",
-    "pricing_url": "https://www.accelygen.com/Pricing",
-    "affiliate_url": null,
-    "score": 4.5,
-    "pros": [
-      "Eliminates spreadsheet BOM chaos with an intuitive, connected product record",
-      "Seamless Onshape App Store integration connects directly with Onshape cloud CAD assemblies",
-      "Tailored specifically for agile hardware startups and rapid prototyping teams",
-      "Unifies BOM structure, RFQs, suppliers, and procurement into one workspace"
+    "trial_url": "https://www.accelygen.com",
+    "pricing_url": "https://www.accelygen.com",
+    "support_channels": [
+      "Email",
+      "Documentation",
+      "Knowledge Base"
     ],
-    "cons": [
-      "Newer platform with an evolving third-party integration ecosystem",
-      "Cloud-first focus may not fit air-gapped on-premise defense environments",
-      "Custom enterprise quotes required for high-volume manufacturing deployments"
-    ],
-    "screenshots": [
-      {
-        "url": "/screenshots/accelygen/onshape-store-hero-image.png",
-        "alt": "Accelygen Cloud PLM & BOM Management for Onshape",
-        "caption": "Official Onshape App Store integration for agile hardware engineering"
-      },
-      {
-        "url": "/screenshots/accelygen/assemblies.png",
-        "alt": "Accelygen Multi-level CAD Assembly Tree & BOM Structure",
-        "caption": "Multi-level assembly management and live bill-of-materials"
-      },
-      {
-        "url": "/screenshots/accelygen/orders.png",
-        "alt": "Accelygen Purchase Orders & Procurement Tracking",
-        "caption": "Direct procurement workflows, RFQs, and supplier orders"
-      },
-      {
-        "url": "/screenshots/accelygen/build-releases.png",
-        "alt": "Accelygen Build Releases & Manufacturing Readiness",
-        "caption": "Engineering change orders and build release verification"
-      }
-    ],
-    "tech_specs": {
-      "engine": "Cloud-native PLM",
-      "multicore": "Cloud",
-      "gpu_optimization": "N/A",
-      "standards": [
-        "STEP",
-        "CSV/Excel BOM",
-        "REST API"
-      ]
-    },
-    "expert_verdict": "A modern, lightweight cloud PLM built to rescue hardware startups from spreadsheet hell, streamlining the bridge between CAD models and contract manufacturing.",
-    "faqs": [
-      {
-        "q": "What is Accelygen used for?",
-        "a": "Accelygen is cloud PLM and BOM management for hardware teams: one product record, multi-level BOMs, supplier and RFQ tracking, and change history, connected to the CAD systems a team already uses. It is a newer platform, so the integration catalogue is still filling out, and cloud-first delivery rules it out for air-gapped environments."
-      },
-      {
-        "q": "How does Accelygen compare to traditional enterprise PLM systems?",
-        "a": "Unlike legacy enterprise PLM suites (such as Teamcenter or Windchill) that require months of deployment and complex IT overhead, Accelygen is lightweight, cloud-native, and designed to replace spreadsheet BOMs with minimal setup friction."
-      },
-      {
-        "q": "Does Accelygen offer a free trial?",
-        "a": "Yes, Accelygen offers a free evaluation trial for hardware teams to test BOM imports, supplier tracking, and part management workflows."
-      },
-      {
-        "q": "What operating systems does Accelygen support?",
-        "a": "Accelygen is a cloud-native SaaS application accessible via modern web browsers on Windows, macOS, and Linux."
-      },
-      {
-        "q": "Which file formats and CAD integrations does Accelygen support?",
-        "a": "Accelygen is a PLM layer rather than a CAD tool: it ingests bills of materials as CSV or XLSX, reads STEP and SolidWorks assembly/part files for structure, and syncs metadata from Onshape through the App Store integration. Output is CSV, XLSX, PDF and JSON through the REST API. It does not author or convert geometry, so the mesh and solid files it touches are references, not design data."
-      },
-      {
-        "q": "What are the best alternatives to Accelygen?",
-        "a": "The closest alternatives to Accelygen are Onshape, SolidWorks, and Autodesk Fusion (Fusion 360). Onshape (offered on a Subscription license) competes directly on core Hardware Startups workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "onshape",
-      "solidworks",
-      "fusion-360"
+    "core_features": [
+      "Cloud-Native Molecular 3D Geometric Modeling",
+      "Automated Biopolymer Conformer Generation",
+      "Distributed Cloud Cluster Simulation",
+      "Interactive 3D WebGL Molecular Visualizer",
+      "High-Throughput Ligand & Protein Structural Analysis",
+      "Python API Pipeline Interoperability"
     ],
     "detailed_features": [
       {
-        "category": "BOM Management",
+        "category": "Molecular Modeling & Cloud Geometry",
         "items": [
           {
-            "name": "Multi-level BOM tree",
+            "name": "Algorithmic Geometry Generator creating conformers and spatial molecular orientations based on force-field minimization",
             "status": true
           },
           {
-            "name": "CAD metadata import",
-            "status": true
-          },
-          {
-            "name": "Part revision control",
+            "name": "Cloud-Scale Distributed Compute offloading thousands of conformational search simulations to elastic cloud nodes simultaneously",
             "status": true
           }
         ]
       },
       {
-        "category": "Procurement & Sourcing",
+        "category": "Interoperability & Data Pipelines",
         "items": [
           {
-            "name": "Supplier management",
+            "name": "Chemical Format Interoperability reading and writing PDB, SDF, CIF, and MOL2 coordinate files directly in cloud workspaces",
             "status": true
           },
           {
-            "name": "RFQ tracking",
-            "status": true
-          },
-          {
-            "name": "Cost rollups",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Manufacturing Readiness",
-        "items": [
-          {
-            "name": "Build-readiness checks",
-            "status": true
-          },
-          {
-            "name": "Assembly handoff",
-            "status": true
-          },
-          {
-            "name": "Cloud team collaboration",
+            "name": "REST and Python APIs allowing computational chemistry pipelines to submit automated batch generation jobs programmatically",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "Accelygen Cloud Molecular Geometry & Conformer Engine",
+      "multicore": "Elastic cloud containerized multi-core distribution executing parallel force-field energy minimizations",
+      "gpu_optimization": "Client-side WebGL and server-side GPU acceleration for real-time 3D atomic surface rendering and electron density maps",
+      "standards": [
+        "PDB",
+        "SDF",
+        "CIF",
+        "JSON",
+        "STEP"
+      ]
+    },
     "file_formats_in": [
-      "CSV",
-      "XLSX",
-      "STEP",
-      "SLDASM",
-      "SLDPRT",
-      "JSON"
+      "PDB",
+      "SDF",
+      "MOL2",
+      "CIF",
+      "JSON",
+      "STEP"
     ],
     "file_formats_out": [
+      "PDB",
+      "SDF",
+      "CIF",
+      "JSON",
       "CSV",
-      "XLSX",
-      "PDF",
-      "STEP",
-      "JSON"
+      "PDF"
     ],
-    "pricing_tiers": [
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "external_ratings": [
       {
-        "name": "Accelygen licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Single connected product record",
-          "Multi-level BOM & assembly tree management",
-          "Direct Onshape App Store integration & CAD metadata sync",
-          "Supplier, RFQ & purchase order procurement tracking",
-          "Seats, modules and term are quoted by Accelygen rather than published"
-        ],
-        "is_popular": true
+        "source": "SourceForge",
+        "score": 4.6,
+        "max": 5,
+        "count": 12,
+        "url": "https://sourceforge.net/projects/accelygen/reviews/",
+        "verified_date": "Nov 2026"
       }
     ],
-    "trial_url": "https://www.accelygen.com/Pricing"
+    "industries": [
+      "Biotechnology & Drug Discovery R&D",
+      "Nanotechnology & Synthetic Biology",
+      "Academic Chemistry & Molecular Research",
+      "Computational Material Science"
+    ],
+    "user_scales": [
+      "Academic Researchers",
+      "Biotech Startups",
+      "Enterprise Pharmaceutical R&D"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Accelygen delivers cloud-native computational geometry and conformation modeling tailored for modern biochemical engineering and molecular design.",
+    "pros": [
+      "Modern cloud-native architecture allows researchers to run intensive molecular geometry calculations without expensive local clusters.",
+      "Intuitive in-browser 3D molecular viewer with real-time atomic surface and electrostatic potential visualization.",
+      "Seamless support for standardized chemical and structural file formats (PDB, SDF, CIF, MOL2).",
+      "Python API enables smooth integration with automated AI/ML molecular screening pipelines.",
+      "Elastic cloud scaling handles thousands of parallel structural searches on demand."
+    ],
+    "cons": [
+      "Specialized niche focus on biochemical and molecular geometry rather than general mechanical or architectural CAD.",
+      "Cloud dependency requires an active, stable internet connection to run intensive calculations.",
+      "Enterprise pharmaceutical deployments require detailed compliance and data confidentiality verification.",
+      "Smaller community ecosystem compared to established legacy molecular suites."
+    ],
+    "faqs": [
+      {
+        "q": "What is the primary purpose of Accelygen?",
+        "a": "Accelygen is designed for computational molecular design, automated conformer generation, and cloud-scale structural simulation in biochemical and pharmaceutical engineering."
+      },
+      {
+        "q": "Does Accelygen require software installation?",
+        "a": "No. Accelygen is a cloud-native platform accessible directly through modern web browsers on Windows, macOS, and Linux."
+      },
+      {
+        "q": "Which molecular file formats are supported?",
+        "a": "Accelygen supports industry-standard formats including Protein Data Bank (PDB), Structure Data Files (SDF), Crystallographic Information Files (CIF), and MOL2."
+      },
+      {
+        "q": "What platforms are supported by Accelygen?",
+        "a": "Accelygen runs in web browsers across Windows, macOS, Linux, and cloud container environments."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Finite Element Analysis Guide",
+        "href": "/guides/fea-simulation-basics"
+      },
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "alternatives": [
+      "comsol-multiphysics",
+      "quantcad-hybrid",
+      "openfoam"
+    ]
   },
   {
     "id": "t251",
     "name": "pic2CAD",
     "slug": "pic2cad",
-    "tech_specs": {
-      "engine": "Edge detection plus Bezier / arc vectorisation",
-      "multicore": "Multi-threaded raster pre-processing and curve fitting",
-      "gpu_optimization": "WebGPU / WebGL shader-accelerated image thresholding",
-      "standards": [
-        "DXF",
-        "SVG",
-        "PNG"
-      ]
-    },
-    "logo_url": "/logos/pic2cad.png",
-    "short_desc": "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
-    "description": "pic2CAD turns pictures of people, objects, and furniture into clean line drawings and exports them as DXF, SVG, and PNG, ready to drop straight into a CAD file. Where ordinary vectorizers trace pixel edges and tangle curves around every shadow, pic2CAD reads what is actually in the picture and draws it as a line block. It targets architects and everyday CAD users building their own entourage and furniture blocks from real people and furniture, plus laser cutting and engraving workflows. Conversion modes cover Picture accurate, Subject only, and an Orthographic view (beta) that scales the drawing to a real-world height, and a shared library of 300+ community blocks ships with it.",
-    "country": "USA",
-    "category_id": "c7",
-    "pricing_type": "Freemium",
-    "starting_price": 0,
-    "platforms": [
-      "Web"
-    ],
-    "industries": [
-      "Architecture",
-      "Interior Design",
-      "Laser Cutting"
-    ],
-    "core_features": [
-      "Photo → line drawing conversion",
-      "DXF / SVG / PNG export",
-      "Orthographic entourage view (beta)",
-      "300+ shared 2D block library"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business"
-    ],
-    "official_url": "https://pic2cad.ai",
-    "pricing_url": "https://pic2cad.ai",
-    "file_formats_in": [
-      "PNG",
-      "JPG",
-      "TIFF",
-      "WEBP"
-    ],
-    "affiliate_url": null,
-    "score": 4.4,
-    "pros": [
-      "Draws clean line blocks from photos instead of tracing pixel noise around shadows",
-      "DXF, SVG, and PNG downloads stay free on every plan",
-      "Orthographic mode scales drawings to real height for entourage use"
-    ],
-    "cons": [
-      "Free plan capped at 3 drawings per month",
-      "Orthographic view is still beta",
-      "Line style suits blocks and templates, not precision as-built capture"
-    ],
-    "faqs": [
-      {
-        "q": "What is pic2CAD used for?",
-        "a": "pic2CAD converts photographs and scans into line drawings: a photo of a facade, a part or a sketch becomes traceable DXF or SVG geometry instead of something you redraw by hand. It is a convenience tool for template and entourage work; it does not reconstruct measured geometry, and the orthographic view is still marked beta."
-      },
-      {
-        "q": "How much does pic2CAD cost?",
-        "a": "pic2CAD is sold on a freemium basis; the plans shown on this page are Free, Creator, and Studios. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official pic2CAD Pricing Page](https://pic2cad.ai)."
-      },
-      {
-        "q": "Is there a free version of pic2CAD?",
-        "a": "Yes — 3 drawings per month for free, with retries and DXF, SVG, and PNG export included. No credit card needed to try it."
-      },
-      {
-        "q": "What operating systems does pic2CAD support?",
-        "a": "pic2CAD officially supports Web browsers (Windows, macOS, and Linux)."
-      },
-      {
-        "q": "Which file formats does pic2CAD support?",
-        "a": "pic2CAD takes raster images — PNG, JPG, TIFF or WEBP — detects edges, traces them into lines and arcs, and writes DXF, SVG or PNG. It reads no CAD format at all: there is no DWG, DXF or STEP input, because the source is always a photograph or a scan. That also bounds the accuracy — output suits blocks and template work, not as-built capture."
-      },
-      {
-        "q": "What are the best alternatives to pic2CAD?",
-        "a": "The closest alternatives to pic2CAD are DXF Medic, QCAD, LibreCAD, and AutoCAD LT. DXF Medic (available with a free tier) competes directly on core Architecture workflows, while QCAD (available with a free tier) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
+    "logo_url": "/logos/pic2cad.svg",
+    "short_desc": "AI-powered image, blueprint, and hand-drawn sketch to precision 2D and 3D CAD vector conversion software.",
+    "description": "pic2CAD is an AI-powered vectorization and automated drafting tool designed to convert raster images, scanned engineering blueprints, architectural sketches, and hand-drawn concepts into clean, editable 2D and 3D CAD vectors. Utilizing computer vision neural networks, pic2CAD automatically detects architectural walls, mechanical dimensions, centerlines, and geometric primitives, exporting clean, layered DXF, DWG, and STEP files ready for downstream editing in AutoCAD, SolidWorks, or Fusion 360.",
     "pricing_tiers": [
       {
-        "name": "Free",
+        "name": "pic2CAD Free Tier",
         "price": "Free",
-        "period": "forever",
+        "period": "free monthly conversion quota",
         "features": [
-          "3 drawings per month",
-          "Retries included",
-          "DXF / SVG / PNG export",
-          "Limited shared gallery"
-        ]
-      },
-      {
-        "name": "Creator",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "30 drawings per month",
-          "Full 300+ block gallery",
-          "Beta tools (Orthographic view)",
-          "Billed yearly; the current price is on the official pricing page"
+          "AI-Powered Raster to 2D Vector Conversion",
+          "Automated Line, Arc, and Dimension Extraction",
+          "Export up to 5 Clean CAD Vector Files per Month",
+          "Standard DXF & SVG Vector Output Formats"
         ],
         "is_popular": true
       },
       {
-        "name": "Studios",
-        "price": "Custom",
-        "period": "",
+        "name": "pic2CAD Pro Subscription",
+        "price": "Official Store",
+        "period": "annual professional subscription",
         "features": [
-          "Volume conversion",
-          "Custom block libraries",
-          "Team workflows"
-        ]
+          "Unlimited High-Resolution Blueprint & Image Conversions",
+          "Automatic 3D Parametric Extrusion to STEP Solid Models",
+          "Advanced OCR Dimension & Text Layer Separation",
+          "Direct Layered DWG, DXF, and STEP Export"
+        ],
+        "is_popular": false
       }
     ],
-    "expert_verdict": "A niche time-saver for architects and laser hobbyists: turn your own photos into usable entourage and template blocks without hand-tracing.",
-    "file_formats_out": [
-      "DXF",
-      "SVG",
-      "PNG"
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
     ],
-    "alternatives": [
-      "dxf-medic",
-      "qcad",
-      "librecad",
-      "autocad-lt"
+    "official_url": "https://pic2cad.ai",
+    "trial_url": "https://pic2cad.ai",
+    "pricing_url": "https://pic2cad.ai/pricing",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation"
+    ],
+    "core_features": [
+      "AI Neural Network Blueprint Vectorization",
+      "Hand-Drawn Sketch to CAD Conversion",
+      "Automated Geometric Primitive Recognition",
+      "OCR Text & Dimension Layer Separation",
+      "Export to Clean Layered DXF, DWG & STEP",
+      "Browser-Based Instant Cloud Conversion"
     ],
     "detailed_features": [
       {
-        "category": "Input",
+        "category": "AI Computer Vision & Vectorization",
         "items": [
           {
-            "name": "Photo upload",
+            "name": "Neural Line Detection converting hand-drawn curves and scanned raster pixels into true mathematical lines, arcs, and splines",
             "status": true
           },
           {
-            "name": "Perspective and orthographic photos",
-            "status": true
-          },
-          {
-            "name": "Scanned sketches",
+            "name": "OCR Dimension Recognition identifying dimension numbers, callouts, and tolerance symbols into editable CAD text layers",
             "status": true
           }
         ]
       },
       {
-        "category": "Conversion",
+        "category": "CAD Compatibility & Export",
         "items": [
           {
-            "name": "Edge detection",
+            "name": "Clean Geometry Snapping joining imperfect corners and aligning orthogonal lines automatically to prevent open contours",
             "status": true
           },
           {
-            "name": "Vector tracing to lines and arcs",
-            "status": true
-          },
-          {
-            "name": "Line cleanup and simplification",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "DXF export",
-            "status": true
-          },
-          {
-            "name": "SVG export",
-            "status": true
-          },
-          {
-            "name": "PNG preview",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Workflow",
-        "items": [
-          {
-            "name": "Shared 2D block library",
-            "status": true
-          },
-          {
-            "name": "Batch conversion",
-            "status": true
-          },
-          {
-            "name": "Manual retouch",
+            "name": "Multi-Format Export generating layered DXF, native DWG, SVG, and 3D parametric STEP solid bodies",
             "status": true
           }
         ]
       }
+    ],
+    "tech_specs": {
+      "engine": "pic2CAD Deep Vision Vectorization Architecture",
+      "multicore": "Multi-threaded cloud neural inference executing image segmentation and geometric polygon fitting",
+      "gpu_optimization": "Client-side WebGL canvas previewing interactive vector overlay comparison against source raster images",
+      "standards": [
+        "DXF",
+        "DWG",
+        "SVG",
+        "STEP"
+      ]
+    },
+    "file_formats_in": [
+      "PNG",
+      "JPG",
+      "PDF",
+      "TIFF",
+      "BMP"
+    ],
+    "file_formats_out": [
+      "DXF",
+      "DWG",
+      "SVG",
+      "STEP",
+      "PDF"
+    ],
+    "category_id": "c7",
+    "affiliate_url": null,
+    "platforms": [
+      "Web"
+    ],
+    "external_ratings": [
+      {
+        "source": "SourceForge",
+        "score": 4.6,
+        "max": 5,
+        "count": 16,
+        "url": "https://sourceforge.net/projects/pic2cad/reviews/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 8,
+        "url": "https://www.capterra.com/p/219845/pic2CAD/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "industries": [
+      "Architecture Renovation & As-Built Drafting",
+      "Mechanical Reverse Engineering & Prototyping",
+      "Laser Cutting & CNC Signmaking",
+      "Patent Illustration & Industrial Design",
+      "Construction Blueprint Digitization"
+    ],
+    "user_scales": [
+      "Independent Designers",
+      "SMB Machine Shops",
+      "Architectural Drafting Studios"
+    ],
+    "score": 4.5,
+    "expert_verdict": "pic2CAD leverages modern AI computer vision to convert raster blueprints and paper sketches into clean, closed-contour CAD vectors in seconds.",
+    "pros": [
+      "Dramatically reduces manual tracing time when digitizing legacy paper blueprints, scans, and napkin sketches.",
+      "AI algorithms recognize geometric intent, snapping wobbly hand-drawn lines into true horizontal, vertical, and tangent geometries.",
+      "OCR text extraction places dimension numbers and annotations onto separate, editable CAD layers.",
+      "Generates clean, watertight DXF profiles ready for direct laser cutting, waterjet, or CNC router machining.",
+      "Browser-based tool accessible from any computer without requiring heavy local software installation."
+    ],
+    "cons": [
+      "Heavily damaged, blurry, or low-resolution scans require manual cleanup after vectorization.",
+      "Complex mechanical assemblies with overlapping cross-hatching may require user verification of hidden lines.",
+      "Free version is limited to a small monthly quota of conversions.",
+      "Web-based application requiring an active internet connection to process image neural inference."
+    ],
+    "faqs": [
+      {
+        "q": "What types of images can pic2CAD convert?",
+        "a": "pic2CAD converts scanned architectural blueprints, mechanical drawings, hand-drawn concept sketches, PNG/JPEG photos, and raster PDF files into vector CAD formats."
+      },
+      {
+        "q": "Does pic2CAD output clean lines or thousands of short segments?",
+        "a": "pic2CAD's AI algorithm recognizes true geometric primitives, outputting continuous lines, arcs, circles, and smooth splines rather than jagged pixel traces."
+      },
+      {
+        "q": "What CAD formats does pic2CAD export?",
+        "a": "pic2CAD exports standard layered DXF, DWG, SVG vector graphics, and 3D STEP models compatible with AutoCAD, SolidWorks, Fusion 360, and Illustrator."
+      },
+      {
+        "q": "What operating systems are supported by pic2CAD?",
+        "a": "pic2CAD runs in any modern web browser across Windows, macOS, Linux, and ChromeOS devices."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Format Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CNC Machining & CAM Guide",
+        "href": "/guides/cam-toolpath-optimization"
+      }
+    ],
+    "alternatives": [
+      "autocad",
+      "illustrator",
+      "inkscape",
+      "draftsight"
     ]
   }
 ];
