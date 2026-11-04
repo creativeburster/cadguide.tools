@@ -193,17 +193,19 @@
     "id": "t8",
     "name": "Siemens NX",
     "slug": "siemens-nx",
-    "short_desc": "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing.",
-    "score": 4.8,
+    "short_desc": "Siemens’ premier enterprise CAD, CAM, and CAE solution for advanced product engineering, complex surfaces, and digital twin manufacturing.",
+    "score": 4.6,
     "logo_url": "/logos/siemens-nx.png",
     "official_url": "https://plm.sw.siemens.com/en-US/nx/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
+      "Aerospace & Defense",
+      "Automotive & Transportation",
+      "Industrial Heavy Machinery",
       "Consumer Electronics",
-      "Energy"
+      "Medical Device Engineering"
     ],
     "features": [
       "parametric-modeling",
@@ -214,7 +216,7 @@
       "piping-routing",
       "surface-modeling"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t9",
@@ -732,22 +734,24 @@
     "id": "t28",
     "name": "Mastercam",
     "slug": "mastercam",
-    "short_desc": "The global leader in CAM software for manufacturing.",
-    "score": 4.9,
+    "short_desc": "Sandvik’s industry-leading CAM software for multi-axis CNC milling, turning, mill-turn, wire EDM, and routing.",
+    "score": 4.6,
     "logo_url": "/logos/mastercam.png",
     "official_url": "https://www.mastercam.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Machining",
-      "Die & Mold"
+      "Precision CNC Machining",
+      "Aerospace Component Manufacturing",
+      "Automotive Tool & Die",
+      "Medical Device Prototyping",
+      "Job Shop Subcontracting"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t29",
@@ -819,22 +823,24 @@
     "id": "t31",
     "name": "nTop",
     "slug": "ntop",
-    "short_desc": "Engineering design software for additive manufacturing.",
-    "score": 4.9,
+    "short_desc": "Computational engineering software using implicit modeling for generative design, complex TPMS lattices, and additive manufacturing.",
+    "score": 4.6,
     "logo_url": "/logos/ntop.png",
     "official_url": "https://www.ntop.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Medical",
-      "Automotive"
+      "Aerospace & Defense Lightweighting",
+      "Metal Additive Manufacturing",
+      "Medical Implants & Orthopedics",
+      "Advanced Heat Exchangers",
+      "Automotive Performance Engineering"
     ],
     "features": [
       "generative-design"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t32",
@@ -865,22 +871,24 @@
     "id": "t32",
     "name": "SolidCAM",
     "slug": "solidcam",
-    "short_desc": "Integrated CAM inside SolidWorks, from 2.5-axis milling up to 5-axis simultaneous.",
-    "score": 4.8,
-    "logo_url": "/logos/solidcam.jpg",
+    "short_desc": "Leader in integrated CAM for SolidWorks and Inventor featuring patented iMachining high-speed milling technology.",
+    "score": 4.5,
+    "logo_url": "/logos/solidcam.png",
     "official_url": "https://www.solidcam.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Medical",
-      "Aerospace"
+      "Precision Production Machining",
+      "Medical Implants & Miniature Swiss Turning",
+      "Aerospace Machined Components",
+      "Automotive Parts Manufacturing",
+      "Tool, Die & Mold Making"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "Israel"
+    "country": ""
   },
   {
     "id": "t33",
@@ -1104,20 +1112,22 @@
     "id": "t38",
     "name": "Magics",
     "slug": "magics",
-    "short_desc": "Data and build preparation for 3D printing.",
-    "score": 4.9,
-    "logo_url": "/logos/magics.ico",
+    "short_desc": "Materialise’s industry-standard data preparation and STL editing software for industrial 3D printing and additive manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/magics.png",
     "official_url": "https://www.materialise.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Additive Manufacturing",
-      "Medical",
-      "Aerospace"
+      "Industrial 3D Printing Bureaus",
+      "Aerospace Additive Manufacturing",
+      "Medical Implants & Dental Devices",
+      "Automotive Prototyping",
+      "Tooling & Rapid Prototyping"
     ],
     "features": [],
-    "country": "Belgium"
+    "country": ""
   },
   {
     "id": "t39",
@@ -1777,81 +1787,89 @@
     "id": "t81",
     "name": "Cimatron",
     "slug": "cimatron",
-    "short_desc": "Integrated CAD/CAM for mold and die makers.",
-    "score": 4.8,
+    "short_desc": "Sandvik’s integrated CAD/CAM software dedicated to mold making, progressive die design, and precision electrode manufacturing.",
+    "score": 4.5,
     "logo_url": "/logos/cimatron.png",
     "official_url": "https://www.cimatron.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mold Design",
-      "Die Design"
+      "Plastic Injection Mold Making",
+      "Progressive Stamping Tool & Die",
+      "Electrode Manufacturing & EDM",
+      "Automotive Tooling",
+      "Consumer Electronics Enclosures"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "Israel"
+    "country": ""
   },
   {
     "id": "t84",
     "name": "ANSYS Mechanical",
     "slug": "ansys-mechanical",
-    "short_desc": "The gold standard for structural FEA simulation.",
-    "score": 4.9,
+    "short_desc": "Ansys’ comprehensive finite element analysis (FEA) software for structural, thermal, dynamic, and multi-physics simulation.",
+    "score": 4.7,
     "logo_url": "/logos/ansys-mechanical.png",
     "official_url": "https://www.ansys.com/products/structures/ansys-mechanical",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Manufacturing"
+      "Aerospace & Spacecraft",
+      "Automotive & e-Mobility",
+      "Heavy Machinery & Turbomachinery",
+      "Consumer Electronics",
+      "Energy & Power Generation"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t85",
     "name": "MSC Nastran",
     "slug": "msc-nastran",
-    "short_desc": "NASA-born structural analysis solver, now part of Cadence.",
-    "score": 4.9,
+    "short_desc": "Hexagon’s premier multidisciplinary structural finite element analysis solver for aerospace, automotive, and defense certification.",
+    "score": 4.6,
     "logo_url": "/logos/msc-nastran.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
+    "official_url": "https://hexagon.com/products/msc-nastran",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Defense"
+      "Commercial Aerospace & Defense",
+      "Automotive Vehicle Architecture",
+      "Shipbuilding & Marine Structures",
+      "Rail Transportation",
+      "Space Launch Vehicles"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t86",
     "name": "Altair HyperWorks",
     "slug": "altair-hyperworks",
-    "short_desc": "Altair's open-architecture simulation suite — HyperMesh, OptiStruct, Radioss and AcuSolve on one unit-based licence.",
-    "score": 4.8,
+    "short_desc": "Altair’s comprehensive multidisciplinary CAE platform for FEA pre/post processing, structural topology optimization, and crash simulation.",
+    "score": 4.6,
     "logo_url": "/logos/altair-hyperworks.png",
-    "official_url": "https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/",
+    "official_url": "https://altair.com/hyperworks",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Manufacturing"
+      "Automotive Crash & BIW Engineering",
+      "Aerospace Airframe Optimization",
+      "Heavy Machinery & Off-Highway",
+      "Rail & Transportation Systems",
+      "Consumer Goods Packaging"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t93",
@@ -1878,21 +1896,22 @@
     "id": "t101",
     "name": "TopSolid",
     "slug": "topsolid",
-    "short_desc": "Integrated CAD/CAM/ERP suite for mechanical machining, sheet metal and tooling, built on the Parasolid kernel.",
-    "score": 0,
-    "logo_url": "/logos/topsolid.ico",
+    "short_desc": "TOPSOLID’s integrated CAD/CAM/ERP ecosystem dedicated to mechanical manufacturing, sheet metal, tooling, and woodworking.",
+    "score": 4.5,
+    "logo_url": "/logos/topsolid.png",
     "official_url": "https://www.topsolid.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Woodworking",
-      "Machinery",
-      "Tooling"
+      "Precision Mechanical Machining",
+      "Architectural Woodworking & Cabinetry",
+      "Sheet Metal & Stamping Die Fabrication",
+      "Mold & Tooling Manufacturing",
+      "Industrial Automation Equipment"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t103",
@@ -1947,40 +1966,43 @@
     "id": "t124",
     "name": "VISI",
     "slug": "visi",
-    "short_desc": "Hexagon's integrated CAD/CAE/CAM suite for injection molds, progressive dies, electrodes and 5-axis toolpaths.",
-    "score": 3.7,
+    "short_desc": "Hexagon’s dedicated CAD/CAM software for mold and die design, progressive stamping tools, and high-speed CNC milling.",
+    "score": 4.5,
     "logo_url": "/logos/visi.png",
     "official_url": "https://hexagon.com/products/visi",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mold Making",
-      "Die Design",
-      "Tooling"
+      "Plastic Injection Mold Tooling",
+      "Progressive Sheet Metal Die Making",
+      "Wire EDM Precision Fabrication",
+      "Automotive Stamping & Tooling",
+      "Medical Device Tooling"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t125",
     "name": "Edgecam",
     "slug": "edgecam",
-    "short_desc": "CAM software by Hexagon for CNC milling, turning, and multi-axis machining.",
-    "score": 3.8,
+    "short_desc": "Hexagon’s market-leading production CAM software for intelligent milling, turning, mill-turn, and wire EDM programming.",
+    "score": 4.5,
     "logo_url": "/logos/edgecam.png",
     "official_url": "https://hexagon.com/products/edgecam",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Production CNC Machining",
+      "Aerospace Component Manufacturing",
+      "Automotive Powertrain & Transmission",
+      "Oil & Gas Downhole Tooling",
+      "General Precision Subcontracting"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t126",
@@ -2071,20 +2093,22 @@
     "id": "t138",
     "name": "KISSsoft",
     "slug": "kisssoft",
-    "short_desc": "Swiss gear calculation and design software for mechanical engineering.",
-    "score": 3.6,
+    "short_desc": "Gleason’s specialized engineering calculation software for sizing, optimizing, and calculating gears, shafts, bearings, and complete gearboxes.",
+    "score": 4.6,
     "logo_url": "/logos/kisssoft.png",
     "official_url": "https://www.kisssoft.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Machinery",
-      "Mechanical Engineering"
+      "Automotive Gearbox & e-Drive Transmissions",
+      "Wind Turbine Power Generation",
+      "Aerospace Actuators & Turboprops",
+      "Industrial Reducers & Heavy Machinery",
+      "Precision Robotics & Harmonic Drives"
     ],
     "features": [],
-    "country": "Switzerland"
+    "country": ""
   },
   {
     "id": "t141",
@@ -2171,41 +2195,43 @@
     "id": "t149",
     "name": "FeatureCAM",
     "slug": "featurecam",
-    "short_desc": "Automated CAM software for CNC milling, turning, and Swiss machining — offered as Autodesk Fusion with FeatureCAM.",
-    "score": 3.8,
-    "logo_url": "/logos/featurecam.svg",
+    "short_desc": "Autodesk’s feature-based automated CAM software for CNC milling machines, turning, turn-mill centers, and wire EDM.",
+    "score": 4.4,
+    "logo_url": "/logos/featurecam.png",
     "official_url": "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Production Job Shops",
+      "High-Volume Precision Turning",
+      "Swiss Medical Device Machining",
+      "Automotive Prototype Manufacturing",
+      "General Precision Subcontracting"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t150",
     "name": "GibbsCAM",
     "slug": "gibbscam",
-    "short_desc": "CAM software for programming CNC machine tools, covering milling, turning and mill-turn.",
-    "score": 3.9,
+    "short_desc": "Sandvik’s intuitive CAM software for multi-task machining (MTM), 5-axis milling, Swiss turning, and wire EDM.",
+    "score": 4.5,
     "logo_url": "/logos/gibbscam.png",
     "official_url": "https://www.gibbscam.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Multi-Task Production Machining",
+      "Medical Implants & Swiss Screw Machining",
+      "Aerospace Machined Components",
+      "Automotive Powertrain",
+      "Precision Production Job Shops"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t151",
@@ -2230,42 +2256,45 @@
     "id": "t152",
     "name": "hyperMILL",
     "slug": "hypermill",
-    "short_desc": "German CAD/CAM software for optimized NC milling and turning programs for machine tools.",
-    "score": 4,
+    "short_desc": "OPEN MIND’s high-performance 5-axis CAM solution for complex molds, aerospace impellers, blisks, and multi-blade turbine components.",
+    "score": 4.8,
     "logo_url": "/logos/hypermill.png",
     "official_url": "https://www.openmind-tech.com/en/cam/product-overview/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Aerospace Turbomachinery & Blisks",
+      "Precision Mold & Die Making",
+      "Medical Implants & Orthopedic Joints",
+      "High-Performance Automotive & Motorsport",
+      "Energy & Power Generation Turbines"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t153",
     "name": "Tebis",
     "slug": "tebis",
-    "short_desc": "German CAD/CAM/CAQ/MES software for die, model, and machine manufacturing.",
-    "score": 3.9,
+    "short_desc": "Tebis AG’s high-end CAD/CAM process solution for automotive die, mold, model making, and industrial robotic machining.",
+    "score": 4.7,
     "logo_url": "/logos/tebis.png",
     "official_url": "https://www.tebis.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Die Making",
-      "Model Making",
-      "Machine Manufacturing"
+      "Automotive Body-in-White Tool & Die",
+      "High-End Injection Mold Manufacturing",
+      "Aerospace Tooling & Fixtures",
+      "Industrial Design Clay Modeling",
+      "Robotic Trimming & Laser Cutting"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t154",
@@ -3561,22 +3590,24 @@
     "id": "t247",
     "name": "CAMWorks",
     "slug": "camworks",
-    "short_desc": "Knowledge-based CAM solution by HCL Technologies.",
-    "score": 4.6,
+    "short_desc": "HCL’s feature-based CAM system integrated with SolidWorks and Solid Edge, utilizing Automatic Feature Recognition and TechDB knowledge bases.",
+    "score": 4.5,
     "logo_url": "/logos/camworks.png",
     "official_url": "https://camworks.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Mold Design",
-      "Precision Machining"
+      "Production CNC Job Shops",
+      "Industrial Equipment Manufacturing",
+      "Automotive Parts Subcontracting",
+      "Aerospace Precision Components",
+      "Medical Device Manufacturing"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "India"
+    "country": ""
   },
   {
     "id": "t248",
@@ -3703,20 +3734,19 @@
     "id": "t255",
     "name": "3Dstudio.co Web Tools",
     "slug": "3dstudio-web-tools",
-    "short_desc": "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
-    "score": 4.6,
-    "logo_url": "/logos/3dstudio.svg",
-    "official_url": "https://3dstudio.co/tools/?utm_source=cadguide",
+    "short_desc": "Free in-browser 3D, CAD, and BIM utilities for viewing, inspecting, measuring, and converting 18 file formats locally.",
+    "score": 4.5,
+    "logo_url": "/logos/3dstudio-web-tools.svg",
+    "official_url": "https://3dstudio.co/tools/",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "BIM",
+      "Architecture & BIM",
       "Mechanical Engineering",
-      "3D Printing",
-      "Construction",
-      "Product Design"
+      "3D Printing & Additive Manufacturing",
+      "Industrial Design",
+      "Construction Management"
     ],
     "features": [],
     "country": "Estonia"

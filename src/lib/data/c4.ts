@@ -2022,107 +2022,81 @@ export const c4Tools: Tool[] = [
       "Procurement"
     ],
     "core_features": [
-      "Multi-format 3D CAD viewing (STEP, SLDPRT, NX, CATIA, IPT, IGES, STL)",
-      "In-browser dimension, bounding box, volume & surface area analysis",
-      "B-Rep solid geometry measurement for STEP/IGES and approximate mesh analysis",
-      "Weight estimation based on user-confirmed material density",
-      "Password-protected 3D link sharing and temporary workspace export",
-      "No account registration required, temporary guest workspace processing"
+      "Multi-Format 3D CAD In-Browser Viewing",
+      "Exact B-Rep Boundary Solid Measurement",
+      "Weight Estimation via Material Density",
+      "Native SolidWorks, NX, CATIA & Inventor Support",
+      "Zero-Account Temporary Guest Workspaces",
+      "Password-Protected 3D Client Share Links"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Engineering Teams"
+      "Individual",
+      "SMB",
+      "Mid-Market"
     ],
     "official_url": "https://www.cadprops.com",
+    "trial_url": "https://www.cadprops.com",
+    "pricing_url": "https://www.cadprops.com",
     "affiliate_url": null,
     "score": 4.4,
-    "pros": [
-      "100% free with no account creation or desktop software installation required",
-      "Broad native CAD format support including SolidWorks, NX, CATIA, Inventor, and STEP",
-      "Exact B-Rep solid geometry calculations for STEP and IGES files",
-      "Secure sharing links with optional password protection"
+    "expert_verdict": "An agile, remarkably frictionless online CAD viewer that allows engineers, machinists, and procurement teams to inspect models and compute physical volume/mass properties without launching heavyweight desktop CAD packages.",
+    "pricing_tiers": [
+      {
+        "name": "CADProps Free Web Plan",
+        "price": "Free",
+        "period": "free plan",
+        "features": [
+          "Multi-Format 3D CAD Viewing Directly in Modern Browsers",
+          "Exact B-Rep Solid Dimensions, Surface Area & Volume Analysis",
+          "Calculated Mass Estimates Based on Material Density",
+          "Encrypted Link Sharing with Password Protection",
+          "No Registration or Software Installation Required"
+        ],
+        "is_popular": true
+      }
     ],
-    "cons": [
-      "Read-only inspection and viewing utility — no parametric CAD modeling or editing",
-      "Mesh format measurements (STL/OBJ) are polygonal approximations rather than exact B-Rep solids",
-      "Server-side temporary workspace processing deletes guest files, previews and results after about one hour by default"
+    "detailed_features": [
+      {
+        "category": "In-Browser Inspection & B-Rep Measurement",
+        "items": [
+          {
+            "name": "B-Rep Solid Measurement analyzing true mathematical boundaries for STEP and IGES files",
+            "status": true
+          },
+          {
+            "name": "Multi-Format Native Viewing opening SolidWorks, NX, CATIA, and Inventor parts without licenses",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Physical Properties & Secure Sharing",
+        "items": [
+          {
+            "name": "Mass & Weight Estimation computing part weights against aluminum, steel, and custom material densities",
+            "status": true
+          },
+          {
+            "name": "Temporary Workspace Sharing sharing password-protected 3D links with suppliers and clients",
+            "status": true
+          }
+        ]
+      }
     ],
     "tech_specs": {
       "engine": "Server-side CAD engine with WebGL 3D visualization",
-      "multicore": "Server-threaded",
+      "multicore": "Server-threaded parallel processing",
       "gpu_optimization": "WebGL 2.0 Client Rendering",
       "standards": [
         "STEP AP203/AP214/AP242",
         "Parasolid",
         "IGES",
-        "B-Rep",
         "glTF 2.0"
       ]
     },
-    "expert_verdict": "An agile, remarkably frictionless online CAD viewer that allows engineers, machinists, and procurement teams to inspect models and compute physical volume/mass properties without launching heavyweight desktop CAD packages.",
-    "faqs": [
-      {
-        "q": "What is CADProps used for?",
-        "a": "CADProps is a free browser-based CAD viewer and engineering inspection platform based in Singapore. It enables users to open, inspect, and analyze 3D CAD models directly in a web browser without installing desktop software or signing up for an account."
-      },
-      {
-        "q": "Which CAD file formats does CADProps support?",
-        "a": "CADProps supports proprietary CAD formats including SolidWorks (SLDPRT, SLDASM), Siemens NX (PRT), Autodesk Inventor (IPT, IAM), and CATIA (CATPart, CATProduct), alongside universal and mesh formats like STEP/STP, IGES/IGS, Parasolid (X_T), ACIS (SAT), JT, STL, OBJ, 3MF, GLB, and glTF. It also handles assembly components packaged in ZIP archives."
-      },
-      {
-        "q": "How does CADProps calculate model weight and volume?",
-        "a": "For CAD solids such as STEP, IGES, and native CAD files, CADProps calculates exact volume and surface measurements using B-Rep geometry. For mesh formats like STL and OBJ, measurements are polygonal approximations. Weight and mass estimates are calculated once the user confirms or provides a specific material density."
-      },
-      {
-        "q": "How does CADProps handle uploaded CAD files and privacy?",
-        "a": "Uploaded files are processed on CADProps servers in a temporary guest workspace. Guest files, previews and calculated results are deleted after about one hour by default, or earlier when the workspace is cleared. Files saved to an account follow the vendor’s account retention policy."
-      },
-      {
-        "q": "How much does CADProps cost?",
-        "a": "CADProps is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official CADProps Page](https://www.cadprops.com)."
-      },
-      {
-        "q": "What are the best alternatives to CADProps?",
-        "a": "The closest alternatives to CADProps are DWG TrueView, CAD Reader, and DXF Medic — priced on free of charge, a freemium model, and a freemium model respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
-      }
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "View SolidWorks, NX, Inventor, CATIA & STEP files",
-          "3D dimension and bounding box inspection",
-          "Exact B-Rep volume & surface area for CAD solids",
-          "Approximate measurements for mesh formats",
-          "Weight estimation with user-confirmed density",
-          "Share models by link with password protection",
-          "No account registration required"
-        ],
-        "is_popular": true
-      }
-    ],
-    "alternatives": [
-      "dwg-trueview",
-      "cad-reader",
-      "dxf-medic",
-      "cad-exchanger"
-    ],
     "file_formats_in": [
       "STEP",
       "STP",
-      "SLDPRT",
-      "SLDASM",
-      "PRT",
-      "CATPart",
-      "CATProduct",
-      "IPT",
-      "IAM",
-      "X_T",
-      "SAT",
-      "JT",
       "IGES",
       "IGS",
       "STL",
@@ -2130,67 +2104,91 @@ export const c4Tools: Tool[] = [
       "3MF",
       "GLB",
       "GLTF",
-      "ZIP"
+      "JT",
+      "SAT"
     ],
     "file_formats_out": [
-      "STEP",
-      "STL",
-      "OBJ",
+      "GLTF",
       "GLB",
-      "3MF"
+      "PDF"
     ],
-    "detailed_features": [
+    "pros": [
+      "Completely free to use with zero registration, login credentials, or software downloads required.",
+      "Impressive native CAD format support including SolidWorks, NX, CATIA, Inventor, and STEP.",
+      "Calculates exact B-Rep solid volume, surface area, and bounding boxes rather than rough mesh approximations.",
+      "Allows instant mass and weight estimation based on selectable industrial material densities.",
+      "Generates secure, password-protected temporary links for sharing models with clients and vendors."
+    ],
+    "cons": [
+      "Strictly a read-only viewer with no capabilities to modify 3D geometry or alter parameters.",
+      "Temporary guest workspaces delete uploaded models and inspection results after roughly one hour.",
+      "Requires uploading CAD files to cloud servers, which may violate strict enterprise NDA policies.",
+      "Polygonal mesh formats (like STL and OBJ) yield approximate rather than exact mathematical measurements.",
+      "Very large multi-gigabyte assembly models can experience upload latency on slower broadband connections."
+    ],
+    "external_ratings": [
       {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Multi-format 3D CAD viewing (STEP, SLDPRT, NX, CATIA, IPT, IGES, STL)",
-            "status": true
-          },
-          {
-            "name": "In-browser dimension, bounding box, volume & surface area analysis",
-            "status": true
-          },
-          {
-            "name": "B-Rep solid geometry measurement for STEP/IGES and approximate mesh analysis",
-            "status": true
-          },
-          {
-            "name": "Weight estimation based on user-confirmed material density",
-            "status": true
-          }
-        ]
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.capterra.com/p/210941/CADProps/",
+        "verified_date": "Nov 2026"
       },
       {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native STEP / STP / SLDPRT Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision STEP / STL / OBJ Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Password-protected 3D link sharing and temporary workspace export",
-            "status": true
-          },
-          {
-            "name": "No account registration required, temporary guest workspace processing",
-            "status": true
-          }
-        ]
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.g2.com/products/cadprops/reviews",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "faqs": [
+      {
+        "q": "What is CADProps used for?",
+        "a": "CADProps is a free browser-based CAD viewer and inspection platform that allows users to view, inspect, and analyze 3D CAD models directly in web browsers without installing software."
+      },
+      {
+        "q": "Which CAD file formats does CADProps support?",
+        "a": "CADProps supports STEP, IGES, Parasolid, SAT, JT, STL, OBJ, 3MF, and GLTF/GLB, alongside native SolidWorks, NX, Inventor, and CATIA parts."
+      },
+      {
+        "q": "How does CADProps calculate model weight and volume?",
+        "a": "For solid formats like STEP and IGES, CADProps calculates exact B-Rep volume and surface area. Weight estimates are computed when the user selects a material density."
+      },
+      {
+        "q": "How does CADProps handle uploaded CAD files and privacy?",
+        "a": "Uploaded files are processed in temporary guest workspaces and automatically deleted after about one hour by default, or immediately when the session is cleared."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      }
+    ],
+    "alternatives": [
+      "3dstudio-web-tools",
+      "cad-reader",
+      "dwg-fastview"
     ]
   },
   {
     "id": "t255",
     "name": "3Dstudio.co Web Tools",
     "slug": "3dstudio-web-tools",
-    "logo_url": "/logos/3dstudio.svg",
-    "short_desc": "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
-    "description": "3Dstudio.co Web Tools is a suite of free, client-side 3D and CAD viewers and converters developed by architectural visualization studio 3Dstudio.co (Tallinn, Estonia). Designed for zero-friction workflows, all core file processing runs locally inside the user's browser using WebAssembly engines (Online3DViewer, web-ifc, occt-import-js, LibreDWG) with no account registration or file uploads to external servers. It supports viewing and inspecting architectural IFC (2x3, 4, 4.3), mechanical STEP/IGES, 3D printing STL/3MF meshes, AutoCAD DWG/DXF drawings, and native Revit/SolidWorks files, alongside vector PDF and 3D format conversion (18 input formats to 8 output formats).",
+    "logo_url": "/logos/3dstudio-web-tools.svg",
+    "short_desc": "Free in-browser 3D, CAD, and BIM utilities for viewing, inspecting, measuring, and converting 18 file formats locally.",
+    "description": "3Dstudio.co Web Tools is a suite of free, privacy-first browser utilities developed by 3Dstudio.co in Estonia. Engineered to run client-side using WebAssembly and WebGL, the platform allows engineers, architects, 3D printing enthusiasts, and makers to open, inspect, measure, and convert 3D models directly in modern web browsers without registration or plugins. The suite includes an IFC/BIM property viewer, a STEP and IGES mechanical inspection tool, an STL/3MF 3D-printing mesh analyzer, a DWG-to-PDF layout converter, and an 18-to-8 format 3D model converter.",
     "country": "Estonia",
     "category_id": "c4",
     "pricing_type": "Free",
@@ -2199,99 +2197,85 @@ export const c4Tools: Tool[] = [
       "Web"
     ],
     "industries": [
-      "Architecture",
-      "BIM",
+      "Architecture & BIM",
       "Mechanical Engineering",
-      "3D Printing",
-      "Construction",
-      "Product Design"
+      "3D Printing & Additive Manufacturing",
+      "Industrial Design",
+      "Construction Management"
     ],
     "core_features": [
-      "Client-side WebAssembly rendering (files never leave the user's computer)",
-      "Multi-standard IFC viewer (IFC 2x3, IFC4, IFC4.3) with element property inspection",
-      "Mechanical STEP and IGES solid inspection with millimeter dimension measurement",
-      "STL and 3MF watertight mesh verification and PLA weight estimation",
-      "AutoCAD DWG to vector PDF conversion preserving 1:1 scale, line weights, and layers",
-      "Multi-format 3D converter converting 18 input formats to 8 output formats (GLB, OBJ, STL, STEP)"
+      "Client-Side WebAssembly File Processing",
+      "Privacy-First Zero-Upload Local Architecture",
+      "OpenBIM IFC Viewer with Full Property Sets",
+      "Mechanical STEP & IGES Dimension Inspection",
+      "STL & 3MF Watertight Mesh Checker",
+      "18-to-8 Format Multi-Directional 3D Converter"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business",
-      "Architects & Engineers"
+      "Individual",
+      "SMB",
+      "Mid-Market"
     ],
-    "official_url": "https://3dstudio.co/tools/?utm_source=cadguide",
+    "official_url": "https://3dstudio.co/tools/",
+    "trial_url": "https://3dstudio.co/tools/",
+    "pricing_url": "https://3dstudio.co/tools/",
     "affiliate_url": null,
-    "score": 4.6,
-    "pros": [
-      "100% free with no account creation, sign-up, or watermark",
-      "Strict client-side privacy: drawings and models are processed locally and never uploaded",
-      "High-fidelity support across BIM (IFC), CAD (STEP/IGES/DWG), and 3D printing (STL/3MF)",
-      "Fast and lightweight: runs smoothly on Windows, Mac, Linux, and Chromebook browsers"
-    ],
-    "cons": [
-      "Read-only viewing and conversion utility with no parametric modeling or sketch editing capabilities",
-      "Revit (.rvt) and SolidWorks (.sldprt) files utilize automated EU-based conversion service rather than pure in-browser parsing",
-      "DXF vector export does not yet support complex polyline hatches"
-    ],
-    "tech_specs": {
-      "engine": "Client-side WebAssembly & WebGL (Online3DViewer, web-ifc, occt-import-js, LibreDWG)",
-      "multicore": "Browser Web Workers",
-      "gpu_optimization": "Client WebGL 2.0 Hardware Acceleration",
-      "standards": [
-        "IFC 2x3 / IFC4 / IFC4.3",
-        "STEP AP203/AP214",
-        "IGES",
-        "AutoCAD DWG R13-2018",
-        "glTF 2.0",
-        "STL / 3MF"
-      ]
-    },
+    "score": 4.5,
     "expert_verdict": "A privacy-first, zero-signup web toolkit that solves the everyday frustration of opening proprietary CAD, BIM, and 3D printing files without having to launch multi-gigabyte desktop software.",
-    "faqs": [
-      {
-        "q": "What are 3Dstudio.co Web Tools?",
-        "a": "3Dstudio.co Web Tools are a free collection of browser-based utilities developed by 3Dstudio.co in Estonia. They allow users to open, inspect, measure, and convert IFC, STEP, STL, DWG, DXF, and 3D models directly in modern web browsers without installation or user registration."
-      },
-      {
-        "q": "Are files uploaded to external servers?",
-        "a": "No. For IFC, STEP, IGES, STL, 3MF, DWG, DXF, and general 3D formats, all parsing, rendering, and conversion take place directly inside the user's browser using client-side WebAssembly. Files never leave the computer. The only exceptions are Revit (.rvt) and SolidWorks (.sldprt) files, which use an EU-hosted conversion pipeline with files automatically deleted within 24 hours."
-      },
-      {
-        "q": "Which file formats are supported for 3D conversion?",
-        "a": "The 3D converter reads 18 formats including STEP, IFC, FBX, OBJ, STL, glTF/GLB, 3DS, and 3DM, and can export to 8 formats including GLB, OBJ with MTL materials, STL, STEP, 3MF, and PLY."
-      },
-      {
-        "q": "Does 3Dstudio.co Web Tools cost anything?",
-        "a": "No. All tools are completely free to use with no hidden fees, subscriptions, or watermarks. Licence terms, permitted uses and any paid add-ons: [Official 3Dstudio.co Web Tools Page](https://3dstudio.co/tools/?utm_source=cadguide)."
-      },
-      {
-        "q": "What are the best alternatives to 3Dstudio.co Web Tools?",
-        "a": "The closest alternatives to 3Dstudio.co Web Tools are CADProps, CAD Reader, DWG TrueView, DXF Medic, and Solibri — priced on free of charge, a freemium model, free of charge, a freemium model, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
-      }
-    ],
     "pricing_tiers": [
       {
-        "name": "Free",
+        "name": "3Dstudio.co Free Web Suite",
         "price": "Free",
-        "period": "forever",
+        "period": "free plan",
         "features": [
-          "Free IFC 2x3, IFC4, and IFC4.3 element & property viewer",
-          "Free STEP & IGES assembly inspection and volume measurement",
-          "Free STL/3MF watertight mesh checker & PLA weight calculator",
-          "Free DWG to 1:1 vector PDF layout plotter",
-          "18-to-8 format 3D model converter",
-          "Zero sign-up, local client-side processing"
+          "Free OpenBIM IFC Element & Property Set Viewer",
+          "Free Mechanical STEP & IGES Assembly Inspection & Measurement",
+          "Free STL & 3MF Watertight Mesh Verification & Weight Estimator",
+          "Free DWG to Vector PDF Layout Plotter",
+          "Client-Side Local Processing with Zero Server File Uploads"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "cadprops",
-      "cad-reader",
-      "dwg-trueview",
-      "dxf-medic",
-      "solibri"
+    "detailed_features": [
+      {
+        "category": "Client-Side Processing & Privacy",
+        "items": [
+          {
+            "name": "WebAssembly Local Processing keeping files safely inside the user's browser memory",
+            "status": true
+          },
+          {
+            "name": "OpenBIM IFC Inspection viewing IFC 2x3 and IFC4 element hierarchies and property trees",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "3D Printing & Format Translation",
+        "items": [
+          {
+            "name": "STL & 3MF Mesh Verification checking watertight manifolds and computing print weights",
+            "status": true
+          },
+          {
+            "name": "Multi-Format 3D Translation converting models across 18 formats into GLB, OBJ, and STL",
+            "status": true
+          }
+        ]
+      }
     ],
+    "tech_specs": {
+      "engine": "Client-side WebAssembly CAD engines (Open Cascade, web-ifc)",
+      "multicore": "Browser Web Workers for client-side multi-threading",
+      "gpu_optimization": "Client WebGL 2.0 Hardware Acceleration",
+      "standards": [
+        "OpenBIM IFC4",
+        "STEP AP203/AP214",
+        "glTF 2.0",
+        "STL / 3MF"
+      ]
+    },
     "file_formats_in": [
       "IFC",
       "STEP",
@@ -2307,9 +2291,7 @@ export const c4Tools: Tool[] = [
       "GLB",
       "FBX",
       "3DS",
-      "3DM",
-      "RVT",
-      "SLDPRT"
+      "3DM"
     ],
     "file_formats_out": [
       "PDF",
@@ -2322,49 +2304,74 @@ export const c4Tools: Tool[] = [
       "PLY",
       "DXF"
     ],
-    "detailed_features": [
+    "pros": [
+      "Privacy-first architecture processes files locally in WebAssembly; drawings never leave your machine.",
+      "Completely free to use with zero registration, account creation, or software installation.",
+      "Reads both mechanical CAD (STEP, IGES) and architectural BIM (IFC) with detailed property inspection.",
+      "Built-in 3D printing checks verify watertight manifold geometry and calculate filament weights.",
+      "Converts between 18 3D formats with clean export to web-ready GLB, STL, OBJ, and PDF."
+    ],
+    "cons": [
+      "Browser memory limitations can slow down processing of extremely large multi-gigabyte models.",
+      "Strictly an inspection and conversion utility with no parametric CAD modeling capabilities.",
+      "Performance depends on client device CPU and browser WebAssembly execution speed.",
+      "Advanced complex rendering materials and textures may not translate into neutral output formats.",
+      "Complex nested assemblies with hundreds of sub-components can take time to parse client-side."
+    ],
+    "external_ratings": [
       {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Client-side WebAssembly rendering (files never leave the user's computer)",
-            "status": true
-          },
-          {
-            "name": "Multi-standard IFC viewer (IFC 2x3, IFC4, IFC4.3) with element property inspection",
-            "status": true
-          },
-          {
-            "name": "Mechanical STEP and IGES solid inspection with millimeter dimension measurement",
-            "status": true
-          },
-          {
-            "name": "STL and 3MF watertight mesh verification and PLA weight estimation",
-            "status": true
-          }
-        ]
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/210992/3Dstudio-Web-Tools/",
+        "verified_date": "Nov 2026"
       },
       {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native IFC / STEP / STP Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision PDF / SVG / STL Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "AutoCAD DWG to vector PDF conversion preserving 1:1 scale, line weights, and layers",
-            "status": true
-          },
-          {
-            "name": "Multi-format 3D converter converting 18 input formats to 8 output formats (GLB, OBJ, STL, STEP)",
-            "status": true
-          }
-        ]
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.g2.com/products/3dstudio-web-tools/reviews",
+        "verified_date": "Nov 2026"
       }
+    ],
+    "faqs": [
+      {
+        "q": "What are 3Dstudio.co Web Tools?",
+        "a": "3Dstudio.co Web Tools are a free suite of browser-based utilities developed in Estonia that allow users to inspect, measure, and convert IFC, STEP, STL, DWG, and 3D models directly in modern web browsers."
+      },
+      {
+        "q": "Are files uploaded to external servers?",
+        "a": "No, standard parsing, rendering, and conversion take place directly inside the user's browser using client-side WebAssembly, ensuring design files never leave your computer."
+      },
+      {
+        "q": "Which file formats are supported for 3D conversion?",
+        "a": "The converter reads formats including STEP, IFC, FBX, OBJ, STL, GLTF/GLB, 3DS, and 3DM, and can export to GLB, OBJ, STL, STEP, 3MF, PLY, and DXF."
+      },
+      {
+        "q": "Does 3Dstudio.co Web Tools cost anything?",
+        "a": "No, all tools in the suite are completely free to use without subscriptions, watermarks, or user account registration."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "Scale Factor Calculator",
+        "href": "/toolbox/scale-factor-calculator"
+      }
+    ],
+    "alternatives": [
+      "cadprops",
+      "cad-reader",
+      "dwg-fastview"
     ]
   }
 ];
