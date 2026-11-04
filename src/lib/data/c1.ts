@@ -159,7 +159,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Which file formats does AutoCAD support?",
-        "a": "AutoCAD natively reads and writes DWG, DXF, DWT, and DWF, and imports/exports DGN, STEP, IGES, IFC, PDF, STL, FBX, 3DM, and IPT."
+        "a": "AutoCAD natively reads and writes DWG, DXF, DWT, and DWF. Through the standard IMPORT command, it brings in 3D formats including DGN, STEP, IGES, ACIS SAT, Rhino 3DM, and 3DS. Vanilla AutoCAD does not natively import IFC files; IFC import requires the included AutoCAD Architecture or MEP toolsets (using the IFCIMPORT command). For exports, native AutoCAD outputs DWG, DXF, DWT, DWF, PDF, STL, IGES, and DGN (using DGNEXPORT), while STEP file export requires the included AutoCAD Mechanical toolset (STEPOUT command). Starting with AutoCAD 2019, support for the import and export of the FBX file format has been removed."
       },
       {
         "q": "Does AutoCAD have an API for automation and customization?",
@@ -205,13 +205,11 @@ export const c1Tools: Tool[] = [
       "DGN",
       "STEP",
       "IGES",
-      "IFC",
+      "SAT",
       "PDF",
       "STL",
-      "3DS",
-      "FBX",
       "3DM",
-      "IPT"
+      "3DS"
     ],
     "file_formats_out": [
       "DWG",
@@ -221,12 +219,10 @@ export const c1Tools: Tool[] = [
       "PDF",
       "STL",
       "IGES",
-      "STEP",
-      "FBX",
-      "3MF",
-      "JPG",
-      "PNG",
+      "DGN",
       "BMP",
+      "PNG",
+      "JPG",
       "TIF"
     ],
     "integrations": [
@@ -289,36 +285,47 @@ export const c1Tools: Tool[] = [
     "pricing_tiers": [
       {
         "name": "Standard",
-        "price": "Official Store",
+        "price": "Contact Sales",
         "period": "perpetual",
         "features": [
-          "Complete 2D Drafting & Detailing",
-          "LISP, VBA & .NET API Support",
-          "Smart Mouse, Smart Voice & Flexiblock",
-          "Native DWG / DXF / DWT Compatibility"
-        ]
-      },
-      {
-        "name": "Professional",
-        "price": "Official Store",
-        "period": "perpetual",
-        "features": [
-          "Everything in Standard",
-          "3D ACIS Solid Modeling & Section View",
-          "Full ZRX / ARX C++ API Support",
-          "Point Cloud, GIS & RVT Import"
+          "DWG, DXF, DWT, DGN, PDF Import & Export",
+          "Classic & Ribbon Interfaces, CUI & Tool Palettes",
+          "2D Drafting Tools & Sheet Set Manager",
+          "Smart Mouse, Voice, Select & Smart Plot",
+          "Flexiblock, File Compare & Area Table",
+          "LISP Routines Automation"
         ],
         "is_popular": true
       },
       {
-        "name": "MFG & Network",
-        "price": "Official Store",
-        "period": "perpetual / floating",
+        "name": "Professional",
+        "price": "Contact Sales",
+        "period": "perpetual",
         "features": [
-          "Mechanical Toolsets & Standard Part Libraries",
-          "Automatic BOM & Power Dimensioning",
-          "Multi-user Floating Network Licensing (NLM)"
-        ]
+          "Includes All Standard Features",
+          "Solid, Mesh & Surface 3D Modeling",
+          "Photorealistic Rendering, 3D Gizmo & Orbit",
+          "Point Cloud & GIS Data Support",
+          "Raster to Vector Conversion",
+          "IFC Import, Edit & Export, STEP Import",
+          "Full APIs: VBA, ZRX (ARX) & .NET"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "MFG (Mechanical)",
+        "price": "Contact Sales",
+        "period": "perpetual",
+        "features": [
+          "Includes All Professional Features",
+          "Mechanical Drawing & Construction Tools",
+          "Standard Frame & Part Library",
+          "Shaft & Gear, Pulley & Sprocket Generators",
+          "Automatic BOM Generation & Associative Balloons",
+          "Moment of Inertia & Deflection Calculation",
+          "AutoCAD Mechanical Compatibility"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
@@ -356,11 +363,10 @@ export const c1Tools: Tool[] = [
     "country": "China",
     "category_id": "c1",
     "pricing_type": "Perpetual",
-    "starting_price": 899,
+    "starting_price": 0,
     "price_period": "one-time",
     "platforms": [
-      "Windows",
-      "Linux"
+      "Windows"
     ],
     "file_formats_in": [
       "DWG",
@@ -401,7 +407,7 @@ export const c1Tools: Tool[] = [
       "Enterprise"
     ],
     "official_url": "https://www.zwsoft.com/product/zwcad",
-    "pricing_url": "https://www.zwsoft.com/store/index/index",
+    "pricing_url": "https://www.zwsoft.com/inquiry?product=ZWCAD",
     "trial_url": "https://www.zwsoft.com/product/zwcad/download",
     "affiliate_url": null,
     "score": 4.6,
@@ -422,7 +428,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does ZWCAD cost?",
-        "a": "ZWCAD is available in Standard, Professional, and MFG editions under a Perpetual licensing model, with optional network (floating) seats. Because official pricing, local currencies, taxes, and reseller quotes vary by country and change over time, please check the [Official ZWSOFT Store & Pricing Page](https://www.zwsoft.com/store/index/index) for live regional rates."
+        "a": "ZWCAD is available in Standard, Professional, and MFG editions under a Perpetual licensing model. The official international website utilizes a quote-based inquiry system rather than an online retail storefront, with final pricing provided by ZWSOFT sales or local authorized resellers. Check the [Official ZWCAD Inquiry Page](https://www.zwsoft.com/inquiry?product=ZWCAD) for regional pricing. Note: According to ZWSOFT's official site notice, ZWCAD is currently not available in the USA."
       },
       {
         "q": "Does ZWCAD offer a free trial?",
@@ -430,17 +436,16 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What operating systems does ZWCAD support?",
-        "a": "The ZWCAD desktop platform runs natively on Windows and Linux. ZWSOFT also offers a separate mobile companion app (ZWCAD Mobile / CAD Pockets) for iOS and Android."
+        "a": "The international release of ZWCAD is officially supported on 64-bit Windows. While ZWSOFT provides a dedicated Linux edition for specific domestic distributions within the Chinese market, global versions do not natively support Linux. ZWSOFT also offers a separate mobile companion app (ZWCAD Mobile / CAD Pockets) for iOS and Android."
       },
       {
         "q": "Which file formats does ZWCAD support?",
-        "a": "ZWCAD natively reads and writes DWG, DXF, and DWT, and supports importing/exporting DGN, SAT, STEP, RVT, IFC, PDF, DWF, and STL. Check the [Official ZWCAD Product Page](https://www.zwsoft.com/product/zwcad) for the complete compatibility matrix."
+        "a": "ZWCAD natively reads and writes DWG, DXF, DWT, and DWF. In the Professional edition, it supports importing Revit RVT models (from Revit 2015 through Revit 2025 via the RVTIMPORT command) for underlay viewing and layer management, as well as importing and exporting IFC and importing STEP files."
       },
       {
         "q": "What are the best alternatives to ZWCAD?",
         "a": "The closest alternatives to ZWCAD are AutoCAD, BricsCAD, and GstarCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of ZWCAD?",
         "a": "ZWCAD is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ZWCAD plans and trial](https://www.zwsoft.com/product/zwcad/download)."
@@ -465,8 +470,9 @@ export const c1Tools: Tool[] = [
       "Familiar AutoCAD-like UI/UX",
       "LISP/VBA/.NET/ZRX API Support",
       "Smart Plotting & Annotations",
-      "Windows & Linux Native Builds"
-    ]
+      "Windows Platform"
+    ],
+    "quote_only": true
   },
   {
     "id": "t13",
@@ -481,10 +487,10 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "High-performance 2D Drafting & Detailing",
-          "Full AutoLISP / VLIDE Support",
-          "Native DWG & Parametric Blocks",
-          "Single-seat, Volume & Network options"
+          "2D drafting tools & 2D blocks",
+          "Sheet sets manager",
+          "Annotations & printing",
+          "LISP routines"
         ]
       },
       {
@@ -492,10 +498,10 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "Everything in Lite",
-          "3D Direct & Parametric Modeling",
-          "BRX / .NET / VBA Third-Party APIs",
-          "Civil / Survey & Point Cloud Toolsets"
+          "3D modeling tools",
+          "3rd party applications",
+          "Land surveying toolset",
+          "Point Cloud tools"
         ],
         "is_popular": true
       },
@@ -504,9 +510,9 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "BricsCAD BIM (IFC4, RVT/RFA, Scan-to-BIM)",
-          "BricsCAD Mechanical (Assemblies, Sheet Metal, BOM)",
-          "BricsCAD Ultimate (All-in-One Suite)"
+          "BIM: Native IFC, RVT/RFA import & project database",
+          "Mechanical: Assembly instruction and inspection tools, BOM & sheet metal",
+          "Ultimate: All Pro, BIM and Mechanical toolsets"
         ]
       }
     ],
@@ -595,7 +601,7 @@ export const c1Tools: Tool[] = [
     ],
     "official_url": "https://bricscad.octave.com/bricscad",
     "pricing_url": "https://bricscad.octave.com/store/bricscad",
-    "trial_url": "https://bricscad.octave.com/cad-software/cad-download",
+    "trial_url": "https://bricscad.octave.com/bricscad-download",
     "affiliate_url": null,
     "score": 4.7,
     "pros": [
@@ -669,21 +675,20 @@ export const c1Tools: Tool[] = [
         "period": "/yr",
         "features": [
           "12-Month Practitioner Subscription",
-          "Full 2D/3D Infrastructure CAD & BIM",
-          "Includes Expert Training & Service Keys",
-          "Geospatial & Point Cloud Integration"
+          "Includes 1 License & 2 Training/Service Keys",
+          "Immersive 3D & 2D Geospatial Context",
+          "Interoperability for Cross-Format Data Conversion",
+          "Automation & AI Learning Assistance"
         ],
         "is_popular": true
       },
       {
         "name": "Enterprise",
-        "price": "Contact Sales",
-        "period": "quote",
+        "price": "Custom Quote",
+        "period": "annual",
         "features": [
-          "Massive dataset handling",
-          "ProjectWise integration",
-          "Priority support",
-          "Global licensing"
+          "Scalable Enterprise Licensing Options",
+          "Dedicated Bentley Technical Support"
         ],
         "is_popular": false
       }
@@ -786,9 +791,9 @@ export const c1Tools: Tool[] = [
       "Enterprise",
       "Government"
     ],
-    "official_url": "https://www.bentley.com/software/microstation/",
-    "pricing_url": "https://www.virtuosity.com/software/microstation/",
-    "trial_url": "https://www.bentley.com/software/microstation/",
+    "official_url": "https://www.bentley.com/products/microstation/",
+    "pricing_url": "https://www.bentley.com/products/microstation/#pricing-options",
+    "trial_url": "https://www.bentley.com/products/microstation/microstation-free-trial/",
     "affiliate_url": null,
     "score": 4.8,
     "pros": [
@@ -808,11 +813,11 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "How much does MicroStation cost?",
-        "a": "MicroStation is licensed via an annual Virtuoso Subscription (which bundles a 12-month practitioner license with expert training Keys) as well as Enterprise Select/ELS agreements. Because regional pricing, currencies, and taxes vary by country, please check the [Official Bentley Virtuosity Store](https://www.virtuosity.com/software/microstation/) or [Bentley MicroStation Portal](https://www.bentley.com/software/microstation/) for live regional pricing."
+        "a": "MicroStation is licensed via an annual Virtuoso Subscription (which bundles a 12-month practitioner license with expert training Keys) as well as Enterprise Select/ELS agreements. Because regional pricing, currencies, and taxes vary by country, please check the [Official Bentley MicroStation Pricing](https://www.bentley.com/products/microstation/#pricing-options) for live regional pricing."
       },
       {
         "q": "Does MicroStation offer a free trial?",
-        "a": "Yes — Bentley provides an official MicroStation evaluation program as well as free academic access through Bentley Education. Because trial duration and eligibility rules vary by region, visit the [Official MicroStation Page](https://www.bentley.com/software/microstation/) for current trial details."
+        "a": "Yes — Bentley provides an official evaluation program through the [Official MicroStation Free Trial Page](https://www.bentley.com/products/microstation/microstation-free-trial/), as well as academic licensing through Bentley Education."
       },
       {
         "q": "What operating systems does MicroStation support?",
@@ -847,7 +852,7 @@ export const c1Tools: Tool[] = [
     "slug": "draftsight",
     "logo_url": "/logos/draftsight.png",
     "short_desc": "Professional-grade 2D CAD solution from Dassault Systèmes.",
-    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic block editing, G-code generation, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
+    "description": "DraftSight by Dassault Systèmes is an industrial-grade 2D drafting and 3D DWG CAD solution tailored for manufacturing and AEC enterprises. Offering a familiar ribbon and classic command-line interface, it supports AutoLISP/Visual LISP routines, dynamic blocks, Draw Compare, PDF import, and seamless PDM/3DEXPERIENCE integration alongside SolidWorks.",
     "pricing_tiers": [
       {
         "name": "Professional (2D)",
@@ -856,8 +861,11 @@ export const c1Tools: Tool[] = [
         "features": [
           "Essential 2D CAD Drafting & Detailing",
           "DWG, DXF & DGN File Support",
-          "AutoLISP & API Customization",
-          "Toolbox Hardware Library & G-Code Generator"
+          "PDF Import (Convert to DWG)",
+          "Draw Compare",
+          "Dynamic Block Support & Tool Palettes",
+          "AutoLISP & Visual LISP Support",
+          "API Support"
         ],
         "is_popular": true
       },
@@ -867,9 +875,10 @@ export const c1Tools: Tool[] = [
         "period": "subscription / perpetual",
         "features": [
           "Everything in Professional",
-          "3D Solid Modeling & 2D Constraints",
-          "Custom Blocks, Batch Printing & PDF Import",
-          "Sheet Set Manager, STEP Import & IFC BIM Module"
+          "3D Solid Modeling & Parametric Constraints",
+          "BIM Module (IFC & Revit RVT Import)",
+          "Custom Blocks & Sheet Set Manager",
+          "STEP Import & DGN Export (ExportDGN)"
         ],
         "is_popular": false
       },
@@ -878,9 +887,9 @@ export const c1Tools: Tool[] = [
         "price": "Official Store",
         "period": "subscription / perpetual",
         "features": [
-          "Concurrent Network Licensing (SNL)",
-          "Enterprise Deployment Wizard",
-          "Full SOLIDWORKS Partner Technical Support"
+          "Network licensing for multi-user access",
+          "Deployment",
+          "Full technical support"
         ],
         "is_popular": false
       }
@@ -894,15 +903,15 @@ export const c1Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Standard Hardware Toolbox Library",
+            "name": "Dynamic Blocks & Tool Palettes",
             "status": true
           },
           {
-            "name": "Batch Printing & PDF Import (Premium+)",
+            "name": "PDF Import into editable DWG entities",
             "status": true
           },
           {
-            "name": "G-Code Generator",
+            "name": "Draw Compare visual revision comparison",
             "status": true
           }
         ]
@@ -919,7 +928,7 @@ export const c1Tools: Tool[] = [
             "status": true
           },
           {
-            "name": "Custom / Dynamic Blocks & IFC BIM (Premium+)",
+            "name": "Custom Blocks & IFC / Revit BIM (Premium+)",
             "status": true
           },
           {
@@ -950,14 +959,15 @@ export const c1Tools: Tool[] = [
       "DGN",
       "STEP",
       "IFC",
+      "RVT",
       "PDF"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "DWT",
-      "DGN",
       "PDF",
+      "DGN",
       "SAT",
       "STL",
       "SVG",
@@ -973,7 +983,7 @@ export const c1Tools: Tool[] = [
       "2D/3D Drafting",
       "LISP Support",
       "Custom Blocks",
-      "Toolbox Utilities",
+      "Draw Compare",
       "DGN & IFC Support"
     ],
     "user_scales": [
@@ -993,7 +1003,7 @@ export const c1Tools: Tool[] = [
     ],
     "cons": [
       "Free version discontinued",
-      "3D, Batch Print & Constraints require Premium tier",
+      "3D modeling & Constraints require Premium tier",
       "Smaller standalone plugin ecosystem"
     ],
     "faqs": [
@@ -1015,7 +1025,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "Which file formats does DraftSight support?",
-        "a": "DraftSight natively supports DWG, DXF, DWT, and DGN, with PDF import/export, STEP import, and IFC BIM support available in higher tiers. Check the [Official DraftSight Website](https://www.draftsight.com) for the full format matrix."
+        "a": "DraftSight Professional supports opening, editing, and saving DWG, DXF, and DWT files, attaching DGN underlays, and importing PDF drawings into DWG entities. DraftSight Premium adds direct 3D modeling, STEP import, a BIM Module (importing IFC, RVT, and RVA files), and DGN export via the ExportDGN command, alongside SAT (ExportSAT), STL, SVG, and raster image exports."
       },
       {
         "q": "What are the best alternatives to DraftSight?",
@@ -1166,8 +1176,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to GstarCAD?",
         "a": "The closest alternatives to GstarCAD are ZWCAD, AutoCAD, BricsCAD, and progeCAD Professional. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of GstarCAD?",
         "a": "GstarCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official GstarCAD plans and trial](https://www.gstarcad.net/download/)."
@@ -1996,8 +2005,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to progeCAD Professional?",
         "a": "The closest alternatives to progeCAD Professional are GstarCAD, ZWCAD, BricsCAD, and DraftSight. GstarCAD (offered on a Perpetual license) competes directly on core Architecture workflows, while ZWCAD (offered on a Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of progeCAD Professional?",
         "a": "progeCAD Professional is licensed as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official progeCAD Professional plans and trial](https://www.progesoft.com/products/progecad-professional/download)."
@@ -2776,8 +2784,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to CorelCAD?",
         "a": "The closest actively maintained alternatives to CorelCAD are ARES Commander (built by Graebert on the exact same CAD engine), DraftSight, BricsCAD, and TurboCAD Platinum. Compare their full technical specifications and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of CorelCAD?",
         "a": "CorelCAD is no longer sold: the vendor lists it as end of sale, so no new licence can be bought. Existing perpetual licences keep working, and any trial or upgrade path the vendor still publishes is on its own page: [Official CorelCAD page](https://www.graebert.com/corelcad/)."
@@ -3068,8 +3075,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to CAXA CAD?",
         "a": "The closest alternatives to CAXA CAD are ZWCAD, GstarCAD, AutoCAD, and BricsCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of CAXA CAD?",
         "a": "CAXA CAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CAXA CAD plans and trial](https://cad.caxa.com/pc/revisions)."
@@ -3216,7 +3222,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "q": "What operating systems does ARES Commander support?",
-        "a": "ARES Commander runs natively on Windows, macOS, and Linux desktops, while ARES Kudo runs in modern web browsers and ARES Touch runs on Android and iOS/iPadOS."
+        "a": "ARES Commander runs natively on Windows, macOS, and Linux desktops, while separate companion apps ARES Kudo run in modern web browsers and ARES Touch runs on Android and iOS/iPadOS."
       },
       {
         "q": "Which file formats does ARES Commander support?",
@@ -3225,8 +3231,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to ARES Commander?",
         "a": "The closest alternatives to ARES Commander are DraftSight, ZWCAD, BricsCAD, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of ARES Commander?",
         "a": "ARES Commander is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ARES Commander plans and trial](https://www.graebert.com/cad-software/ares-commander/)."
@@ -3420,8 +3425,7 @@ export const c1Tools: Tool[] = [
       {
         "q": "What are the best alternatives to AutoCAD LT?",
         "a": "The closest alternatives to AutoCAD LT are BricsCAD Lite, DraftSight Professional, ZWCAD Standard, and AutoCAD. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
+      },
       {
         "q": "Which file formats does AutoCAD LT support?",
         "a": "AutoCAD LT works natively in DWG and reads DXF drawings plus DWT templates, and it can attach PDF and DWF/DWFx files as underlays. It saves back to DWG, DXF and DWT templates, and publishes to PDF or to raster PNG/JPG images. It does not read or write STEP, IGES or any other 3D solid exchange format — that is full AutoCAD with its 3D toolsets, not LT."
@@ -3612,13 +3616,11 @@ export const c1Tools: Tool[] = [
       {
         "q": "How much does MCAD cost?",
         "a": "MCAD is offered as a one-time Desktop Perpetual license as well as monthly or annual subscriptions for MCAD Web. Because official pricing, currencies, and local taxes are updated on the vendor portal, please check the [Official MET MCAD Pricing Page](https://www.mechdesigned.com/en/software/mcad/pricing/) for live rates."
-      }
-    ,
+      },
       {
         "q": "Which file formats does MCAD support?",
         "a": "MCAD opens, edits and saves DWG and DXF natively, without needing a converter, and the browser edition opens DWG as well. Drawings leave in the same two formats. On top of that it exports G-code straight from the drawing for CNC, laser and plasma cutting, with cut simulation, holes-before-outline ordering and lead-ins — the built-in nesting and G-code path is the main thing general 2D drafting software does not have."
-      }
-    ,
+      },
       {
         "q": "Is there a free version of MCAD?",
         "a": "MCAD is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official MCAD plans and trial](https://www.mechdesigned.com/en/software/mcad/)."
