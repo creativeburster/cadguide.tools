@@ -1,4 +1,4 @@
-import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import Online3dCadViewerCollaboratorClient from './calculator-client';
@@ -30,7 +30,7 @@ export default function Online3dCadViewerCollaboratorPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Cloud Referral & Evaluation Hub
+              Interactive Client-Side CAD Workbench
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
               Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal

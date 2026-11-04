@@ -6894,7 +6894,7 @@ export const c5Tools: Tool[] = [
     "description": "OpenFOAM is a GPL-licensed C++ CFD library and solver suite providing dozens of pre-built solvers for incompressible, compressible, multi-phase, combustion, and DNS/LES simulations and one of the most widely used open-source CFD toolchains.",
     "country": "UK",
     "category_id": "c5",
-    "pricing_type": "Free",
+    "pricing_type": "Open Source",
     "starting_price": 0,
     "platforms": [
       "Linux",

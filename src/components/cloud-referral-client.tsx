@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { UploadCloud, FileCheck2, CheckCircle2, FileCode, Sliders } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
+import OpenSourceCadWorkbench from '@/components/open-source-cad-workbench';
 
 export interface RecommendedTool {
   name: string;
@@ -142,16 +143,19 @@ export default function CloudReferralClient({
 
   return (
     <div className="space-y-12">
-      {/* 0. Interactive Client-Side File Header Preflight & Conversion Sandbox */}
+      {/* 0A. Real Open-Source Client-Side CAD / BIM / CAM Interactive Workbench */}
+      <OpenSourceCadWorkbench title={title} />
+
+      {/* 0B. Interactive Client-Side File Header Preflight & Conversion Sandbox */}
       <section className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6 print:hidden">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
           <div>
             <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
               <FileCode className="w-5 h-5 text-blue-600" />
-              <span>Local CAD / BIM Header Preflight & Format Inspector</span>
+              <span>Local Binary Magic-Byte & Header Signature Inspector</span>
             </h2>
             <p className="text-xs text-slate-500 font-semibold mt-0.5">
-              Verify binary file signatures (OLE2, AC10xx, ISO-10303-21, IFC, STL) 100% locally in your browser before dispatching to cloud translation engines.
+              Verify binary file signatures (OLE2, AC10xx, ISO-10303-21, IFC, STL) 100% locally in your browser.
             </p>
           </div>
           <span className="text-xs font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full self-start sm:self-auto">
@@ -282,7 +286,6 @@ export default function CloudReferralClient({
             </div>
           </div>
 
-          {/* Dynamic Pre-Flight Parameter Profile computed from selected dropdowns */}
           {(() => {
             const isLegacy = targetSchema.includes('Legacy');
             const isMesh = targetSchema.includes('Mesh');
@@ -334,7 +337,7 @@ export default function CloudReferralClient({
       <div className="grid md:grid-cols-3 gap-8 items-start">
         <div className="md:col-span-2 space-y-4">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-            Why Do You Need Professional Evaluation? 
+            Why Do You Need Professional Evaluation?
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed font-semibold">
             {painPointDesc}
@@ -374,14 +377,14 @@ export default function CloudReferralClient({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-black text-slate-900 tracking-tight">
-              Recommended Cloud Tools & Services Matrix
+              Recommended Desktop & Cloud Tools Matrix
             </h2>
             <p className="text-xs text-slate-500 font-bold mt-1">
-              Evaluated by CAD experts based on rendering fidelity, speed, and privacy controls.
+              Evaluated by CAD engineers based on geometric fidelity, speed, and privacy controls.
             </p>
           </div>
           <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-100 print:hidden">
-            No Installation Required
+            Local + Desktop Alternatives
           </span>
         </div>
 
@@ -391,7 +394,6 @@ export default function CloudReferralClient({
               key={idx}
               className="bg-white rounded-3xl border border-slate-100 p-6 flex flex-col justify-between shadow-sm hover:shadow-md hover:scale-[1.005] transition-all duration-300 print:border-slate-300 print:shadow-none print:scale-100"
             >
-              {/* Card Top */}
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-black text-slate-800 tracking-tight">
@@ -402,7 +404,6 @@ export default function CloudReferralClient({
                   </span>
                 </div>
 
-                {/* Metrics */}
                 <div className="space-y-2">
                   {tool.metrics.map((m, mIdx) => (
                     <div
@@ -414,12 +415,10 @@ export default function CloudReferralClient({
                         {'★'.repeat(m.score)}{'☆'.repeat(5 - m.score)}
                       </span>
                     </div>
-))}
+                  ))}
                 </div>
 
-                {/* Pros and Cons */}
                 <div className="space-y-3 pt-3 border-t border-slate-50">
-                  {/* Pros */}
                   <div className="space-y-1">
                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
                       Pros
@@ -429,10 +428,9 @@ export default function CloudReferralClient({
                         <span className="text-emerald-500 font-black">✓</span>
                         <span>{pro}</span>
                       </div>
-))}
+                    ))}
                   </div>
 
-                  {/* Cons */}
                   <div className="space-y-1 pt-2">
                     <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
                       Cons
@@ -442,11 +440,10 @@ export default function CloudReferralClient({
                         <span className="text-rose-500 font-black">×</span>
                         <span>{con}</span>
                       </div>
-))}
+                    ))}
                   </div>
                 </div>
 
-                {/* Verdict */}
                 <div className="pt-3 border-t border-slate-50 space-y-1">
                   <h5 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                     Verdict
@@ -457,7 +454,6 @@ export default function CloudReferralClient({
                 </div>
               </div>
 
-              {/* Actions */}
               <div className="mt-8 space-y-2 print:hidden">
                 <a
                   href={tool.officialUrl}
@@ -475,7 +471,7 @@ export default function CloudReferralClient({
                 </button>
               </div>
             </div>
-))}
+          ))}
         </div>
       </div>
 
@@ -497,7 +493,7 @@ export default function CloudReferralClient({
                 {bp.desc}
               </p>
             </div>
-))}
+          ))}
         </div>
       </div>
 
@@ -530,12 +526,11 @@ export default function CloudReferralClient({
                 {faq.answer}
               </p>
             </details>
-))}
+          ))}
         </div>
       </div>
 
-      {/* 6. Newsletter Hook (Hidden during printing) */}
       <RelatedTools />
     </div>
-);
+  );
 }

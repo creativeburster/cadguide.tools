@@ -239,7 +239,7 @@ export default function OpenSourceCadPage() {
             </h1>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
               Open-source CAD has matured well beyond the &quot;research project&quot; stigma
-              of the 2010s. FreeCAD, KiCad, Blender, LibreCAD, and SolveSpace are all
+              of the 2010s. FreeCAD, KiCad, Blender, Bonsai (BlenderBIM), LibreCAD, OpenSCAD, Dune 3D, Mayo, F3D, LibrePCB, MeshLab, OpenFOAM, and SolveSpace are all
               production-grade tools running real commercial work in 2026. Below are
               every open-source CAD, BIM, and EDA tool in our catalog (all under
               OSI-approved licences), ranked by expert score.
