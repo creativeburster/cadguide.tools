@@ -192,27 +192,6 @@
     "country": "Switzerland"
   },
   {
-    "id": "t7",
-    "name": "CATIA",
-    "slug": "catia",
-    "short_desc": "The high-end PLM standard for Aerospace and Automotive engineering.",
-    "score": 4.7,
-    "logo_url": "/logos/catia.png",
-    "official_url": "https://www.3ds.com/products/catia",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Shipbuilding"
-    ],
-    "features": [
-      "surface-modeling"
-    ],
-    "country": "France"
-  },
-  {
     "id": "t8",
     "name": "nanoCAD",
     "slug": "nanocad",
@@ -368,27 +347,6 @@
     "country": "USA"
   },
   {
-    "id": "t11",
-    "name": "FreeCAD",
-    "slug": "freecad",
-    "short_desc": "The premier open-source 3D parametric modeler.",
-    "score": 4.2,
-    "logo_url": "/logos/freecad.ico",
-    "official_url": "https://www.freecad.org",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Hobbyist",
-      "Education",
-      "Engineering"
-    ],
-    "features": [
-      "parametric-modeling"
-    ],
-    "country": "Community/International"
-  },
-  {
     "id": "t12",
     "name": "CorelCAD",
     "slug": "corelcad",
@@ -451,28 +409,6 @@
     "country": "Germany"
   },
   {
-    "id": "t14",
-    "name": "Onshape",
-    "slug": "onshape",
-    "short_desc": "The professional CAD system built for agile cloud development.",
-    "score": 4.9,
-    "logo_url": "/logos/onshape.png",
-    "official_url": "https://www.onshape.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Startups",
-      "Consumer Products",
-      "Robotics"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "parametric-modeling"
-    ],
-    "country": "USA"
-  },
-  {
     "id": "t15",
     "name": "AutoCAD LT",
     "slug": "autocad-lt",
@@ -533,29 +469,6 @@
     "features": [
       "drafting-detailing",
       "sheet-metal"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t16",
-    "name": "Solid Edge",
-    "slug": "solid-edge",
-    "short_desc": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach.",
-    "score": 4.7,
-    "logo_url": "/logos/solid-edge.ico",
-    "official_url": "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical",
-      "Industrial Design"
-    ],
-    "features": [
-      "sheet-metal",
-      "simulation-fea",
-      "direct-modeling",
-      "piping-routing"
     ],
     "country": "USA"
   },
@@ -703,18 +616,118 @@
     "country": "USA"
   },
   {
-    "id": "t20",
+    "id": "t21",
+    "name": "CATIA",
+    "slug": "catia",
+    "short_desc": "Dassault Systèmes’ premier 3D computer-aided design and engineering software suite for complex class-A surfacing, aerospace, and automotive systems.",
+    "score": 4.4,
+    "logo_url": "/logos/catia.svg",
+    "official_url": "https://www.3ds.com/products-services/catia/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Aerospace",
+      "Automotive",
+      "Shipbuilding",
+      "Industrial Equipment",
+      "Defense"
+    ],
+    "features": [
+      "surface-modeling"
+    ],
+    "country": "France"
+  },
+  {
+    "id": "t22",
+    "name": "FreeCAD",
+    "slug": "freecad",
+    "short_desc": "An open-source, highly extensible parametric 3D computer-aided design (CAD) modeler built on the OpenCASCADE geometric kernel.",
+    "score": 4.2,
+    "logo_url": "/logos/freecad.svg",
+    "official_url": "https://www.freecad.org/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Maker Community",
+      "Mechanical Engineering",
+      "Education",
+      "Architecture",
+      "Rapid Prototyping"
+    ],
+    "features": [
+      "parametric-modeling"
+    ],
+    "country": "International (Open Source)"
+  },
+  {
+    "id": "t23",
+    "name": "Onshape",
+    "slug": "onshape",
+    "short_desc": "PTC’s cloud-native product development platform combining parametric 3D CAD, built-in PDM, real-time collaboration, and analytics.",
+    "score": 4.6,
+    "logo_url": "/logos/onshape.svg",
+    "official_url": "https://www.onshape.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Consumer Hardware",
+      "Medical Devices",
+      "Industrial Machinery",
+      "Automotive Components",
+      "Robotics"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "parametric-modeling"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t24",
+    "name": "Solid Edge",
+    "slug": "solid-edge",
+    "short_desc": "Siemens’ powerful 3D CAD suite featuring pioneering Synchronous Technology, sheet metal design, and integrated simulation.",
+    "score": 4.4,
+    "logo_url": "/logos/solid-edge.svg",
+    "official_url": "https://solidedge.siemens.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Industrial Equipment",
+      "Consumer Machinery",
+      "Automotive Aftermarket",
+      "Medical Devices",
+      "Agricultural Machinery"
+    ],
+    "features": [
+      "sheet-metal",
+      "simulation-fea",
+      "direct-modeling",
+      "piping-routing"
+    ],
+    "country": "Germany"
+  },
+  {
+    "id": "t25",
     "name": "Autodesk Inventor",
     "slug": "autodesk-inventor",
-    "short_desc": "Professional-grade 3D mechanical design and simulation.",
-    "score": 4.7,
+    "short_desc": "Autodesk’s professional 3D mechanical CAD software for product design, automated engineering drawing generation, and advanced simulation.",
+    "score": 4.5,
     "logo_url": "/logos/autodesk-inventor.svg",
     "official_url": "https://www.autodesk.com/products/inventor/overview",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Manufacturing"
+      "Industrial Machinery",
+      "Manufacturing Equipment",
+      "Building Products & Fabrication",
+      "Automotive Systems",
+      "Consumer Hardware"
     ],
     "features": [
       "parametric-modeling",
@@ -722,23 +735,25 @@
       "simulation-fea",
       "piping-routing"
     ],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t23",
+    "id": "t26",
     "name": "PTC Creo",
     "slug": "ptc-creo",
-    "short_desc": "The original parametric 3D CAD powerhouse.",
-    "score": 4.8,
-    "logo_url": "/logos/ptc-creo.ico",
+    "short_desc": "PTC’s scalable 3D CAD solution for parametric modeling, generative design, additive manufacturing, and complex mechanical engineering.",
+    "score": 4.4,
+    "logo_url": "/logos/ptc-creo.svg",
     "official_url": "https://www.ptc.com/en/products/creo",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "High-Tech",
-      "Medical"
+      "Industrial Equipment",
+      "Aerospace & Defense",
+      "Automotive",
+      "Electronics & High Tech",
+      "Medical Devices"
     ],
     "features": [
       "parametric-modeling",
@@ -748,51 +763,7 @@
       "piping-routing",
       "surface-modeling"
     ],
-    "country": "USA"
-  },
-  {
-    "id": "t24",
-    "name": "OpenSCAD",
-    "slug": "openscad",
-    "short_desc": "The programmer's solid 3D CAD modeler.",
-    "score": 4.4,
-    "logo_url": "/logos/openscad.ico",
-    "official_url": "https://openscad.org",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Hobbyist",
-      "Maker",
-      "Research"
-    ],
-    "features": [],
-    "country": "Community/International"
-  },
-  {
-    "id": "t25",
-    "name": "Shapr3D",
-    "slug": "shapr3d",
-    "short_desc": "Professional CAD for mobile and desktop mobility.",
-    "score": 4.7,
-    "logo_url": "/logos/shapr3d.png",
-    "official_url": "https://www.shapr3d.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Industrial Design",
-      "Prototyping",
-      "AEC"
-    ],
-    "features": [
-      "ai-assisted",
-      "parametric-modeling",
-      "reverse-engineering",
-      "subdivision-modeling",
-      "direct-modeling"
-    ],
-    "country": "Hungary"
+    "country": "United States"
   },
   {
     "id": "t26",
@@ -815,6 +786,27 @@
   },
   {
     "id": "t27",
+    "name": "OpenSCAD",
+    "slug": "openscad",
+    "short_desc": "The programmer’s solid 3D CAD modeler that compiles textual script files into exact 3D models using constructive solid geometry (CSG).",
+    "score": 4.3,
+    "logo_url": "/logos/openscad.svg",
+    "official_url": "https://openscad.org/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "3D Printing & Additive Manufacturing",
+      "Maker Movement",
+      "Open Source Hardware",
+      "Education",
+      "Algorithmic Product Design"
+    ],
+    "features": [],
+    "country": "International (Open Source)"
+  },
+  {
+    "id": "t27",
     "name": "Chief Architect",
     "slug": "chief-architect",
     "short_desc": "Professional home design software for builders.",
@@ -830,6 +822,33 @@
     ],
     "features": [],
     "country": "USA"
+  },
+  {
+    "id": "t28",
+    "name": "Shapr3D",
+    "slug": "shapr3d",
+    "short_desc": "Multi-device 3D CAD modeling software running on iPad, Mac, and Windows, powered by the Siemens Parasolid engine and direct touch/pen input.",
+    "score": 4.6,
+    "logo_url": "/logos/shapr3d.svg",
+    "official_url": "https://www.shapr3d.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Industrial Design",
+      "Mechanical Prototyping",
+      "Architecture & Interior",
+      "Jewelry & Craft",
+      "Woodworking"
+    ],
+    "features": [
+      "ai-assisted",
+      "parametric-modeling",
+      "reverse-engineering",
+      "subdivision-modeling",
+      "direct-modeling"
+    ],
+    "country": "Hungary"
   },
   {
     "id": "t28",
@@ -856,39 +875,43 @@
     "id": "t29",
     "name": "SolveSpace",
     "slug": "solvespace",
-    "short_desc": "A minimalist, open-source 2D/3D parametric CAD tool.",
-    "score": 4.1,
-    "logo_url": "/logos/solvespace.png",
-    "official_url": "https://solvespace.com",
+    "short_desc": "A lightweight, open-source parametric 2D and 3D CAD program with a built-in geometric constraint solver and mechanism kinematics.",
+    "score": 4.3,
+    "logo_url": "/logos/solvespace.svg",
+    "official_url": "https://solvespace.com/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Hobbyist",
-      "Light Engineering",
-      "Education"
+      "Maker Community",
+      "Laser Cutting & Rapid Prototyping",
+      "3D Printing",
+      "Education",
+      "Mechanical Mechanism Design"
     ],
     "features": [],
-    "country": "Community/International"
+    "country": "International (Open Source)"
   },
   {
     "id": "t30",
     "name": "Alibre Design",
     "slug": "alibre-design",
-    "short_desc": "Professional 3D CAD without the enterprise price tag.",
+    "short_desc": "Cost-effective professional 3D parametric mechanical CAD featuring perpetual buyout licensing, advanced sheet metal, and ACIS modeling.",
     "score": 4.5,
-    "logo_url": "/logos/alibre-design.png",
-    "official_url": "https://www.alibre.com",
+    "logo_url": "/logos/alibre-design.svg",
+    "official_url": "https://www.alibre.com/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Mechanical",
-      "Manufacturing",
-      "Prototyping"
+      "Machinery Manufacturing",
+      "Fabrication & Sheet Metal",
+      "Consumer Products",
+      "Woodworking",
+      "Precision Tooling"
     ],
     "features": [],
-    "country": "USA"
+    "country": "United States"
   },
   {
     "id": "t31",

@@ -1378,89 +1378,120 @@ export const c2Tools: Tool[] = [
     ]
   },
   {
-    "id": "t7",
+    "id": "t21",
     "name": "CATIA",
     "slug": "catia",
-    "logo_url": "/logos/catia.png",
-    "short_desc": "The high-end PLM standard for Aerospace and Automotive engineering.",
-    "description": "CATIA by Dassault Systèmes is the flagship PLM and Class-A surface/solid engineering platform trusted by global aerospace, defense, automotive, and shipbuilders. Capable of managing digital mockups exceeding a million parts on the 3DEXPERIENCE platform, it unifies systems engineering, composites, aerodynamic surfacing, and kinematic multi-body assembly design.",
+    "logo_url": "/logos/catia.svg",
+    "short_desc": "Dassault Systèmes’ premier 3D computer-aided design and engineering software suite for complex class-A surfacing, aerospace, and automotive systems.",
+    "description": "CATIA (Computer Aided Three-dimensional Interactive Application) is the flagship multi-platform CAD/CAM/CAE software suite developed by Dassault Systèmes for aerospace, automotive, shipbuilding, and industrial equipment engineering. Renowned for its unparalleled Class-A freeform surface styling, generative shape design, and multi-disciplinary systems engineering, CATIA allows global engineering teams to design complex aerospace structures, vehicle bodies, and composites. Available both as desktop workstations (CATIA V5) and cloud-connected collaborative roles on the 3DEXPERIENCE platform, CATIA defines the engineering standard across major automotive OEMs and aerospace programs worldwide.",
     "pricing_tiers": [
       {
-        "name": "3DEXPERIENCE Cloud (Role-Based)",
+        "name": "3DEXPERIENCE CATIA Cloud Roles",
         "price": "Official Store",
-        "period": "Annual / Quarterly Subscription",
+        "period": "subscription / quarterly / annual",
         "features": [
-          "Social Collaboration & 3D Dashboard",
-          "Base Part/Assembly Design",
-          "Version Control & Cloud Data Management",
-          "Modular role pricing varies by country and reseller"
+          "Cloud-Hosted High-Precision 3D Mechanical Part & Assembly Modeler",
+          "Advanced Freeform & Class-A Parametric Surface Styling Tools",
+          "Integrated 3DEXPERIENCE Product Lifecycle Data Management",
+          "Collaborative Web Markup, Review, and Model Version Branching",
+          "Direct Digital Continuity into Multi-Axis CAM & Finite Element Meshing"
         ],
         "is_popular": true
       },
       {
-        "name": "Mechanical Engineer / Industry Roles",
+        "name": "CATIA V5 PLM Express",
         "price": "Official Store",
-        "period": "Annual Subscription",
+        "period": "workstation license / maintenance",
         "features": [
-          "Advanced Surfacing (GSD)",
-          "Sheet Metal Design",
-          "Mechanism Simulation",
-          "Standard Catalogs"
+          "Dedicated On-Premise Workstation License for Aerospace & Automotive Tier Suppliers",
+          "Generative Shape Design (GSD) & Part Design Workbenches",
+          "Associative 2D Drafting with Full Geometric Dimensioning and Tolerancing (GD&T)",
+          "Large Multi-Level Mechanical Assembly Clearance & Interference Analysis",
+          "Local File System Interoperability with Native CATPart and CATProduct Trees"
         ],
         "is_popular": false
       },
       {
-        "name": "Systems Engineer / Enterprise",
-        "price": "Official Store",
-        "period": "Quote via Reseller",
+        "name": "Enterprise Systems Engineering Bundle",
+        "price": "Custom Quote",
+        "period": "concurrent floating / enterprise agreement",
         "features": [
-          "Model-based Systems (MBSE)",
-          "Electric/Electronic Systems",
-          "Lifecycle Analysis",
-          "On-premise & GovCloud deployment options"
+          "Systems Architecture Modeling with SysML and Model-Based Systems Engineering (MBSE)",
+          "Composites Fiber Placement & Structural Layup Simulation",
+          "Dynamic Fluid, Thermal, and Multi-Physics Kinematic Simulation Integration",
+          "Dedicated Value-Added Reseller (VAR) Deployment & Global Account Engineering Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "High-end Engineering",
+        "category": "Class-A Surfacing & Generative Shape Design",
         "items": [
           {
-            "name": "Generative Shape Design (GSD)",
+            "name": "Class-A Freeform Bezier and B-Spline Automotive Exterior Surface Modeling",
             "status": true
           },
           {
-            "name": "Complex Assembly Management",
+            "name": "Generative Shape Design (GSD) with Associative Wireframe and Surface Features",
             "status": true
           },
           {
-            "name": "Composite Part Design",
+            "name": "Curvature and Tangency Continuity Diagnostic Tools (Porcupine, Zebra Striping)",
             "status": true
           },
           {
-            "name": "Additive Manufacturing optimization",
+            "name": "Real-Time Dynamic Deformation and Sculpting for Aesthetic Industrial Styling",
+            "status": true
+          },
+          {
+            "name": "ICEM Surf Algorithmic Class-A Surfacing and Reverse Engineering Geometry Tools",
             "status": true
           }
         ]
       },
       {
-        "category": "Industry Verticals",
+        "category": "Systems Engineering & Structural Assemblies",
         "items": [
           {
-            "name": "Aerospace Structures design",
+            "name": "Multi-Disciplinary Model-Based Systems Engineering (MBSE) via SysML & Cyber-Physical Pipelines",
             "status": true
           },
           {
-            "name": "Automotive Class-A Surfacing",
+            "name": "Extreme Large Assembly Management with Selective Level-of-Detail (LOD) Visualization",
             "status": true
           },
           {
-            "name": "Systems Engineering (SysML)",
+            "name": "Automated Composite Fiber Direction, Ply Stacking, and Manufacturing Flat Patterns",
             "status": true
           },
           {
-            "name": "Digital Mock-up (DMU)",
+            "name": "Sheet Metal Aerospace Airframe Structural Stamping, Flanges, and Joggles",
+            "status": true
+          },
+          {
+            "name": "3D Electrical Wire Harness Routing and Fluid/Pneumatic Piping Networks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "CAM, Simulation & PLM Continuity",
+        "items": [
+          {
+            "name": "2.5-Axis to 5-Axis Multi-Spindle High-Speed Milling Toolpath Generation",
+            "status": true
+          },
+          {
+            "name": "Integrated Structural FEA Stress and Modal Frequency Analysis Workbenches",
+            "status": true
+          },
+          {
+            "name": "3DEXPERIENCE Collaborative Lifecycle Branching, Check-In, and Bill of Materials Sync",
+            "status": true
+          },
+          {
+            "name": "Comprehensive CAA (Component Application Architecture) C++ and Visual Basic Automation",
             "status": true
           }
         ]
@@ -1473,8 +1504,8 @@ export const c2Tools: Tool[] = [
     ],
     "country": "France",
     "category_id": "c2",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 2700,
+    "pricing_type": "Subscription",
+    "starting_price": 4500,
     "price_period": "year",
     "platforms": [
       "Windows"
@@ -1482,483 +1513,603 @@ export const c2Tools: Tool[] = [
     "industries": [
       "Aerospace",
       "Automotive",
-      "Shipbuilding"
+      "Shipbuilding",
+      "Industrial Equipment",
+      "Defense"
     ],
     "core_features": [
-      "High-end Surfacing",
-      "Aero & Auto Design",
-      "Systems Engineering",
-      "Digital Twin",
-      "Cloud PLM"
+      "Class-A Bezier Freeform Surface Modeling (ICEM)",
+      "Generative Shape Design & Complex Aerospace Lofting",
+      "Large-Scale Multi-Level Aircraft & Vehicle Assemblies",
+      "Model-Based Systems Engineering (MBSE) & SysML",
+      "Composite Material Layup & Flat Pattern Fabrication",
+      "Integrated Multi-Axis NC Machining Workbenches",
+      "Collaborative 3DEXPERIENCE Cloud Lifecycle Management"
     ],
     "user_scales": [
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.3ds.com/products/catia",
-    "pricing_url": "https://www.3ds.com/products/catia",
-    "trial_url": "https://www.3ds.com/products/catia",
+    "official_url": "https://www.3ds.com/products-services/catia/",
+    "pricing_url": "https://www.3ds.com/how-to-buy/",
+    "trial_url": "https://www.3ds.com/products/catia/cloud",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 380,
+        "url": "https://www.g2.com/products/catia/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 210,
+        "url": "https://www.capterra.com/p/132478/CATIA/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 120,
+        "url": "https://www.trustradius.com/products/catia/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.4,
+        "max": 5,
+        "count": 165,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/dassault-systemes/product/catia",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 210,
+        "url": "https://www.getapp.com/engineering-software/a/catia/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CATIA Shortcuts Sheet",
+        "href": "/toolbox/catia-shortcuts-sheet"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "Complex assembly handling",
-      "Superior surfacing",
-      "Deep PLM integration"
+      "Industry benchmark for complex Class-A surface geometry, vehicle body styling, and aerodynamic aerospace skins.",
+      "Handles monumental multi-gigabyte assemblies containing hundreds of thousands of components without software crashes.",
+      "Deeply embedded supplier ecosystem required by Boeing, Airbus, Renault, Volkswagen, and global aerospace primes.",
+      "Integrated composites, electrical harness, sheet metal, and NC machining modules maintain a single unbroken digital thread.",
+      "Robust parametric associativity automatically cascades upstream revisions into linked production tooling and downstream drawings.",
+      "Enterprise security compliance and role-based data governance via the Dassault 3DEXPERIENCE platform."
     ],
     "cons": [
-      "Prohibitively expensive",
-      "Steep learning curve",
-      "Extreme hardware reqs"
+      "High acquisition and licensing cost structure designed primarily for well-capitalized enterprise organizations.",
+      "Steep learning curve requiring months of specialized professional workbench training to master effectively.",
+      "Demands high-end ISV-certified workstation graphics cards, multi-channel ECC RAM, and high-frequency CPUs.",
+      "User interface complexity spanning dozens of specialized workbenches can feel daunting to generalist mechanical designers.",
+      "Legacy CATIA V5 file management requires disciplined external PDM or ENOVIA servers to prevent broken internal links.",
+      "Purchases and licenses require formal quotes and deployment consulting through authorized Dassault value-added resellers."
     ],
     "faqs": [
       {
-        "q": "What is CATIA used for?",
-        "a": "The high-end PLM standard for Aerospace and Automotive engineering. CATIA is a 3D modeling solution widely adopted in Aerospace, Automotive, Shipbuilding."
+        "q": "What is CATIA primarily used for?",
+        "a": "According to Dassault Systèmes official documentation, CATIA is an enterprise 3D CAD/CAM/CAE software suite used extensively in aerospace, automotive, shipbuilding, and industrial equipment design to create complex Class-A surfaces, massive assemblies, and multi-disciplinary systems architectures. Explore product details on the [Official CATIA Overview](https://www.3ds.com/products-services/catia/)."
       },
       {
-        "q": "How much does CATIA cost?",
-        "a": "CATIA is sold either by subscription or as a perpetual licence; the plans shown on this page are 3DEXPERIENCE Cloud (Role-Based), Mechanical Engineer / Industry Roles, and Systems Engineer / Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CATIA Pricing Page](https://www.3ds.com/products/catia)."
+        "q": "What is the difference between CATIA V5 and 3DEXPERIENCE CATIA?",
+        "a": "CATIA V5 operates primarily as an on-premise, file-based desktop workstation application utilizing local .CATPart and .CATProduct structures. 3DEXPERIENCE CATIA connects the modeling environment to a unified cloud or on-premise collaborative database, providing centralized product lifecycle management (PLM), real-time team collaboration, and digital continuity without local file exchange. Compare configurations on the [Official 3DEXPERIENCE CATIA Page](https://www.3ds.com/products/catia/cloud)."
       },
       {
-        "q": "Does CATIA offer a free trial?",
-        "a": "Public trial access is limited and varies by program period — Dassault Systèmes periodically runs official trial programs (for example the CATIA for AEC trial) and student license programs, while standard evaluations are typically arranged through reseller partners. Check the [Official CATIA Portal](https://www.3ds.com/products/catia) for current trial availability."
+        "q": "How much does a CATIA license cost?",
+        "a": "CATIA pricing is structured around specific engineering roles (such as Mechanical Engineer, Surface Stylist, or NC Programmer) through annual subscriptions, quarterly licenses, or perpetual licenses with maintenance. Because deployment requirements and enterprise roles vary widely, prospective customers must request a commercial quotation through the [Official Dassault Systèmes How to Buy Portal](https://www.3ds.com/how-to-buy/)."
       },
       {
-        "q": "What operating systems does CATIA support?",
-        "a": "CATIA runs on Windows. Deployment options include desktop, cloud, on-premise."
+        "q": "Can I try CATIA before purchasing?",
+        "a": "Yes. Dassault Systèmes provides cloud-based evaluation programs and online trials for qualifying engineering enterprises, startups, and academic institutions to experience 3DEXPERIENCE CATIA in a browser and rich-client environment. Request access via the [Official CATIA Cloud Trial](https://www.3ds.com/products/catia/cloud)."
       },
       {
-        "q": "Which file formats does CATIA support?",
-        "a": "CATIA imports CATPart, CATProduct, CATDrawing, STEP, IGES, 3DXML and more. Export covers CATPart, CATProduct, STEP, IGES, 3DXML, STL and more."
+        "q": "What operating systems support CATIA?",
+        "a": "CATIA V5 and 3DEXPERIENCE desktop clients are certified exclusively for 64-bit Microsoft Windows 11 and Windows 10 Pro/Enterprise. A certified workstation-grade GPU (such as NVIDIA RTX or AMD Radeon Pro) and at least 32 GB of RAM are recommended for production assemblies. Detailed hardware matrices are available on the [Dassault Systèmes Hardware Certification](https://www.3ds.com/support/hardware-and-software/hardware-and-software-configurations/)."
       },
       {
-        "q": "Does CATIA have an API for automation and customization?",
-        "a": "Yes. CATIA exposes CAA / 3DEXPERIENCE API with SDK bindings for C++, C#, Java, VBScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      },
-      {
-        "q": "Is there a free version of CATIA?",
-        "a": "CATIA is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official CATIA plans and trial](https://www.3ds.com/products/catia)."
+        "q": "Which file formats can CATIA import and export?",
+        "a": "CATIA natively creates and edits .CATPart, .CATProduct, .CATDrawing, and .model files. It provides bidirectional translation for neutral industry formats including STEP (AP203, AP214, AP242), IGES, DXF/DWG, 3D XML, STL, and direct interoperability with SolidWorks and Siemens Parasolid geometry."
       }
     ],
     "tech_specs": {
-      "engine": "CGM (Convergence Geometric Modeler)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Dassault Convergence Geometric Modeler (CGM)",
+      "multicore": "Multi-threaded mesh generation, rendering & drawing views / Single-threaded surface evaluation",
+      "gpu_optimization": "Hardware-accelerated Dassault CGM Graphics Pipeline with OpenGL & DirectX workstation certified drivers",
       "standards": [
-        "CATPart",
-        "STEP",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "VDA-FS"
+        "3D XML",
+        "CATPart",
+        "CATProduct",
+        "DWG",
+        "DXF",
+        "SysML",
+        "PDF"
       ]
     },
-    "expert_verdict": "CATIA isn't just software; it's an industrial ecosystem.",
+    "expert_verdict": "CATIA remains the definitive gold standard for aerospace structures and automotive Class-A surface aesthetics. For enterprises engineering complex vehicle bodies, airframes, or composite assemblies where millimeter-level aerodynamic continuity and strict OEM supply-chain compliance are non-negotiable, CATIA's CGM kernel and 3DEXPERIENCE ecosystem deliver unrivaled geometric precision.",
+    "file_formats_in": [
+      "CATPART",
+      "CATPRODUCT",
+      "CATDRAWING",
+      "STEP",
+      "IGES",
+      "3DXML",
+      "DWG",
+      "DXF",
+      "STL"
+    ],
+    "file_formats_out": [
+      "CATPART",
+      "CATPRODUCT",
+      "CATDRAWING",
+      "STEP",
+      "IGES",
+      "3DXML",
+      "DWG",
+      "DXF",
+      "STL",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Floating",
+      "Perpetual",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "ITAR Compliant Environments",
+      "GDPR"
+    ],
     "languages": [
       "English",
       "French",
       "German",
-      "Italian",
       "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Russian"
-    ],
-    "file_formats_in": [
-      "CATPart",
-      "CATProduct",
-      "CATDrawing",
-      "STEP",
-      "IGES",
-      "3DXML",
-      "STL",
-      "NX",
-      "JT",
-      "SLDPRT",
-      "DWG",
-      "DXF"
-    ],
-    "file_formats_out": [
-      "CATPart",
-      "CATProduct",
-      "STEP",
-      "IGES",
-      "3DXML",
-      "STL",
-      "JT",
-      "PDF",
-      "DWG",
-      "DXF",
-      "CGR"
-    ],
-    "integrations": [
-      "3DEXPERIENCE",
-      "ENOVIA",
-      "DELMIA",
-      "SIMULIA",
-      "NETVIBES",
-      "EXALEAD",
-      "Microsoft 365"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid",
-      "On-Premise"
-    ],
-    "license_types": [
-      "Subscription",
-      "Perpetual",
-      "Network"
-    ],
-    "support_channels": [
-      "Phone",
-      "Email",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
-    ],
-    "security_compliance": [
-      "SOC 2 Type II",
-      "ISO 27001",
-      "GDPR Privacy Framework",
-      "ITAR / EAR Ready (Dedicated GovCloud / On-Premise Deployment)"
+      "Simplified Chinese"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "CAA / 3DEXPERIENCE API",
-      "sdk_languages": [
-        "C++",
-        "C#",
-        "Java",
-        "VBScript"
-      ],
-      "docs_url": "https://www.3ds.com/products/catia/developer"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ]
   },
   {
-    "id": "t11",
+    "id": "t22",
     "name": "FreeCAD",
     "slug": "freecad",
-    "logo_url": "/logos/freecad.ico",
-    "short_desc": "The premier open-source 3D parametric modeler.",
-    "description": "FreeCAD is an open-source (LGPL-2.0-or-later) parametric 3D CAD modeler powered by the Open CASCADE Technology (OCCT) geometric kernel. Built around a modular workbench architecture with full Python API automation, it supports sketch-constrained part design, integrated Assembly (Ondsel solver in v1.0+), BIM/IFC architectural modeling, CalculiX/Gmsh FEA, and 2.5D/3D/3+2 CAM toolpaths.",
+    "logo_url": "/logos/freecad.svg",
+    "short_desc": "An open-source, highly extensible parametric 3D computer-aided design (CAD) modeler built on the OpenCASCADE geometric kernel.",
+    "description": "FreeCAD is a completely free, open-source parametric 3D CAD modeling application licensed under LGPLv2+. Developed by a global community of engineers, architects, and open-source software developers, FreeCAD allows users to create history-based 3D solid models, sheet metal fabrications, architectural BIM structures, and multi-axis CNC toolpaths. Powered by the industrial-grade OpenCASCADE geometric kernel and featuring a deeply modular Python API, FreeCAD runs natively across Windows, macOS, and Linux without licensing keys, activation servers, or recurring subscription fees.",
     "pricing_tiers": [
       {
-        "name": "Community",
+        "name": "FreeCAD Open Source Edition",
         "price": "Free",
-        "period": "forever",
+        "period": "free forever (lgplv2+)",
         "features": [
-          "Full feature set",
-          "Community support",
-          "Open source"
+          "Complete Parametric 3D Solid Modeling with PartDesign Workbench",
+          "OpenCASCADE Geometric Kernel with STEP, IGES, and BREP Fidelity",
+          "Architectural BIM & Drafting Workbenches with IFC Export",
+          "Path/CAM Workbench for 2.5D & 3D CNC G-Code Generation",
+          "Native Cross-Platform Support for Windows, macOS, and Linux",
+          "Full Python 3 Scripting Console and Addon Manager Ecosystem"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Features",
+        "category": "Parametric 3D Solid & Surface Modeling",
         "items": [
           {
-            "name": "Extensible via Python API",
+            "name": "Feature-Tree History-Based 3D Parametric Sketching and Solid Modeling (PartDesign)",
             "status": true
           },
           {
-            "name": "Modular Workbench-based UI",
+            "name": "OpenCASCADE Technology (OCCT) Boundary Representation (B-Rep) Modeling Engine",
             "status": true
           },
           {
-            "name": "Support for STEP, IGES, STL, DXF (DWG via ODA converter)",
+            "name": "Assembly Workbenches with Constraint Solving (Assembly3 / Assembly4 / Integrated Assembly)",
             "status": true
           },
           {
-            "name": "Sketcher with constraint solver",
+            "name": "Parametric Sheet Metal Unfolding and Flat Pattern Development via Addon Workbenches",
             "status": true
           },
           {
-            "name": "CAM (formerly Path) workbench for CNC",
+            "name": "Direct Surface Modeling and Solid Boolean Operations (Union, Difference, Intersection)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "BIM, Technical Drawings & CAM",
+        "items": [
+          {
+            "name": "Architectural BIM Workbench with Industry Foundation Classes (IFC) Interoperability",
+            "status": true
+          },
+          {
+            "name": "TechDraw Workbench for Dimensioned Associative 2D Technical Documentation and SVG/DXF Export",
+            "status": true
+          },
+          {
+            "name": "CAM/Path Workbench Generating Reliable G-Code for Milling, Lathes, and Waterjets",
+            "status": true
+          },
+          {
+            "name": "Finite Element Analysis (FEA) Simulation Workbench Utilizing CalculiX Solver",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Extensibility & Open Community",
+        "items": [
+          {
+            "name": "Deep Python 3 Architecture Allowing Every GUI Command to be Scripted via Console",
+            "status": true
+          },
+          {
+            "name": "Built-In Addon Manager for Installing Community Workbenches, Macros, and Themes",
+            "status": true
+          },
+          {
+            "name": "Completely Free and Open Source (LGPLv2+) with Zero Vendor Lock-in or Telemetry",
+            "status": true
+          },
+          {
+            "name": "High Portability with Zero Node-Locked Keys or Required Online License Verification",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "solidworks",
       "fusion-360",
+      "onshape",
       "solvespace"
     ],
-    "country": "Community/International",
+    "country": "International (Open Source)",
     "category_id": "c2",
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
     "industries": [
-      "Hobbyist",
+      "Maker Community",
+      "Mechanical Engineering",
       "Education",
-      "Engineering"
+      "Architecture",
+      "Rapid Prototyping"
     ],
     "core_features": [
-      "Parametric Modeling",
-      "Modular Architecture",
-      "Python Scripting"
+      "OpenCASCADE (OCCT) Parametric Solid Modeling Engine",
+      "PartDesign Feature-Tree & Geometric Constraint Solver",
+      "Architectural BIM Workbench & Native IFC Support",
+      "TechDraw Associative 2D Engineering Drawings",
+      "Integrated CAM/Path G-Code Machining Toolpaths",
+      "CalculiX FEA Stress & Structural Simulation",
+      "Modular Python 3 API & Community Addon Manager"
     ],
     "user_scales": [
-      "Individuals & Makers",
-      "Small Engineering Studios",
-      "Education & Research"
+      "Individual",
+      "SMB",
+      "Education"
     ],
-    "official_url": "https://www.freecad.org",
-    "donate_url": "https://www.freecad.org/sponsor.php",
+    "official_url": "https://www.freecad.org/",
+    "pricing_url": "https://www.freecad.org/",
     "trial_url": "https://www.freecad.org/downloads.php",
     "affiliate_url": null,
     "score": 4.2,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.1,
+        "max": 5,
+        "count": 165,
+        "url": "https://www.g2.com/products/freecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.capterra.com/p/162817/FreeCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 7.9,
+        "max": 10,
+        "count": 55,
+        "url": "https://www.trustradius.com/products/freecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.3,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.getapp.com/engineering-software/a/freecad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "FreeCAD Shortcuts Sheet",
+        "href": "/toolbox/freecad-shortcuts-sheet"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
     "pros": [
-      "Completely free & open source",
-      "Python scriptable",
-      "Excellent cross-platform"
+      "100% free and open-source under LGPLv2+, eliminating software licensing fees, renewal audits, and vendor lock-in.",
+      "True cross-platform performance running natively on 64-bit Windows, macOS (Intel and Apple Silicon), and Linux distributions.",
+      "Comprehensive OpenCASCADE geometric kernel provides high-precision solid modeling and industry-standard STEP/IGES exchange.",
+      "Every tool, button, and geometry operation can be fully automated or extended using standard Python 3 scripts.",
+      "Broad functional breadth spanning mechanical part design, architectural BIM, finite element analysis (CalculiX), and CAM G-code.",
+      "Active international open-source community providing frequent updates, custom workbenches, and troubleshooting forums."
     ],
     "cons": [
-      "UI workflow differs from mainstream commercial MCAD",
-      "CAM workbench focuses on 2.5D, 3D surface & 3+2 indexed milling (not full simultaneous 5-axis)",
-      "DWG import/export is limited to 2D geometry and requires external LibreDWG or ODA converter"
+      "Topological Naming Issue (TNI) can cause downstream feature errors when intermediate sketch geometry is modified (mitigated in recent versions).",
+      "Assembly workflows traditionally relied on multiple competing community addons (Assembly3, Assembly4) before core standardization.",
+      "User interface and workbench organization can feel inconsistent compared to polished proprietary commercial CAD suites.",
+      "TechDraw drawing generation can slow down when projecting complex assemblies with thousands of curved edges.",
+      "No centralized corporate telephone or enterprise SLA technical support; relies on community forum documentation.",
+      "Lacks built-in cloud collaborative multi-user simultaneous editing found in platforms like Onshape."
     ],
     "faqs": [
       {
-        "q": "What is FreeCAD used for?",
-        "a": "FreeCAD is the leading open-source parametric 3D CAD modeler for mechanical engineering, product design, and 3D printing across Windows, macOS, and Linux."
+        "q": "What is FreeCAD and who is it designed for?",
+        "a": "According to the official FreeCAD project documentation, FreeCAD is a free, open-source parametric 3D modeler designed primarily to model real-world objects of any size. It is geared toward hobbyists, makers, students, independent mechanical engineers, and architectural designers seeking full geometric control without proprietary subscription licenses. Read more on the [Official FreeCAD About Page](https://www.freecad.org/)."
       },
       {
-        "q": "How much does FreeCAD cost?",
-        "a": "FreeCAD is 100% free and open-source software with no subscription fees, seat limits, or commercial licensing charges. Licence terms, permitted uses and any paid add-ons: [Official FreeCAD Page](https://www.freecad.org)."
+        "q": "Is FreeCAD really free for commercial business use?",
+        "a": "Yes. FreeCAD is licensed under the GNU Lesser General Public License (LGPLv2+). You can freely use FreeCAD for commercial, educational, and personal design projects without paying royalties, seat fees, or license renewals. Details are published on the [FreeCAD License Information](https://www.freecad.org/)."
       },
       {
-        "q": "Is FreeCAD really free?",
-        "a": "Yes — FreeCAD is free and open-source software. You can download and deploy it anywhere with zero licensing costs, supported by donations and community sponsors."
+        "q": "What geometric modeling kernel does FreeCAD use?",
+        "a": "FreeCAD is built on top of OpenCASCADE Technology (OCCT), a powerful industrial-grade boundary representation (B-Rep) geometric modeling kernel that supports complex solid modeling, NURBS curves and surfaces, and high-fidelity STEP and IGES CAD translation."
       },
       {
-        "q": "What operating systems does FreeCAD support?",
-        "a": "FreeCAD runs natively on Windows, macOS, and Linux as a desktop application."
+        "q": "Can FreeCAD export files for 3D printing and CNC machining?",
+        "a": "Yes. FreeCAD exports mesh formats like STL, OBJ, and 3MF directly for 3D printing slicers. It also features a dedicated Path/CAM Workbench that computes 2.5D and 3D toolpaths and post-processes standard G-code for CNC routers, mills, and laser cutters."
       },
       {
-        "q": "Which file formats does FreeCAD support?",
-        "a": "FreeCAD natively saves in FCStd and imports/exports STEP, IGES, BREP, STL, OBJ, 3MF, PLY, DXF, SVG, and IFC (via IfcOpenShell). For DWG files, FreeCAD supports 2D geometry import/export only, requiring either the open-source LibreDWG library or the external freeware ODA File Converter (no native 3D DWG support)."
+        "q": "What operating systems are supported by FreeCAD?",
+        "a": "FreeCAD runs natively on 64-bit Microsoft Windows 11/10, macOS (both Apple Silicon and Intel x86_64), and modern Linux distributions (via AppImage, Flatpak, and distribution package managers). Download releases from the [Official FreeCAD Downloads Page](https://www.freecad.org/downloads.php)."
       },
       {
-        "q": "Does FreeCAD have an API for automation and customization?",
-        "a": "Yes. FreeCAD exposes a deep Python API and C++ modular architecture. You can script geometry creation, build custom workbenches, and automate exports entirely via Python."
-      },
-      {
-        "q": "What are the best alternatives to FreeCAD?",
-        "a": "The closest alternatives to FreeCAD are SolidWorks, Autodesk Fusion (Fusion 360), and SolveSpace — priced on a subscription or a perpetual licence, a subscription, and free of charge respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "q": "Which file formats does FreeCAD support for import and export?",
+        "a": "FreeCAD supports an extensive range of neutral and open CAD formats, including STEP, IGES, BREP, DXF, SVG, IFC (BIM), STL, OBJ, DAE, PLY, and FCStd (native project archive format)."
       }
     ],
     "tech_specs": {
-      "engine": "Open CASCADE Technology (OCCT)",
-      "multicore": "Parallel Booleans, Tessellation, Sketcher (Eigen3), Gmsh & CalculiX FEM / Single-Threaded Interactive Feature Tree",
-      "gpu_optimization": "OpenGL / Coin3D Scenegraph Viewport",
+      "engine": "OpenCASCADE Technology (OCCT) Kernel",
+      "multicore": "Multi-threaded tessellation and rendering / Single-threaded OCCT feature regeneration",
+      "gpu_optimization": "Hardware-accelerated OpenGL 3.3+ Viewport Pipeline (Coin3D / Qt5/Qt6)",
       "standards": [
-        "FCStd",
-        "STEP",
+        "STEP (AP203/AP214)",
         "IGES",
-        "IFC"
+        "BREP",
+        "IFC (BIM)",
+        "DXF",
+        "SVG",
+        "STL",
+        "OBJ",
+        "FCStd"
       ]
     },
-    "expert_verdict": "A free, fully open-source alternative to commercial parametric CAD like SolidWorks, with the widest add-on ecosystem of the free options.",
-    "key_capabilities": [
-      "Open-source Parametric 3D Modeling",
-      "BIM/AEC Workbenches",
-      "Finite Element Analysis (FEA)",
-      "Assembly & PartDesign Workbenches",
-      "2D Technical Drawing (TechDraw)"
-    ],
-    "languages": [
-      "English",
-      "Afrikaans",
-      "Arabic",
-      "Basque",
-      "Catalan",
-      "Chinese (Simplified)",
-      "Chinese (Traditional)",
-      "Croatian",
-      "Czech",
-      "Dutch",
-      "Filipino",
-      "Finnish",
-      "French",
-      "Galician",
-      "German",
-      "Hungarian",
-      "Indonesian",
-      "Italian",
-      "Japanese",
-      "Kabyle",
-      "Korean",
-      "Lithuanian",
-      "Norwegian",
-      "Polish",
-      "Portuguese",
-      "Portuguese (Brazil)",
-      "Romanian",
-      "Russian",
-      "Slovak",
-      "Slovenian",
-      "Spanish",
-      "Swedish",
-      "Turkish",
-      "Ukrainian",
-      "Valencian",
-      "Vietnamese"
-    ],
+    "expert_verdict": "FreeCAD is the most capable open-source parametric 3D CAD suite available today. Backed by the robust OpenCASCADE engine and a completely customizable Python ecosystem, it offers incredible value for makers, independent engineers, and cost-conscious organizations seeking professional-grade solid modeling, 3D printing preparation, and CAM toolpaths with zero subscription overhead.",
     "file_formats_in": [
-      "FCStd",
+      "FCSTD",
       "STEP",
+      "STP",
       "IGES",
+      "IGS",
       "BREP",
-      "STL",
-      "OBJ",
-      "3MF",
-      "PLY",
-      "DXF (2D)",
+      "DXF",
       "SVG",
       "IFC",
-      "DAE (Collada)",
-      "2D DWG (via LibreDWG / ODA)"
+      "STL",
+      "OBJ"
     ],
     "file_formats_out": [
-      "FCStd",
+      "FCSTD",
       "STEP",
+      "STP",
       "IGES",
       "BREP",
+      "DXF",
+      "SVG",
+      "IFC",
       "STL",
       "OBJ",
       "3MF",
-      "PLY",
-      "DXF (2D)",
-      "SVG",
-      "IFC",
-      "AMF",
-      "PDF",
-      "WebGL / glTF",
-      "2D DWG (via LibreDWG / ODA)"
-    ],
-    "integrations": [
-      "CalculiX & Gmsh (Built-in FEM Workbench)",
-      "OpenSCAD (Built-in Workbench Interop)",
-      "IfcOpenShell (Built-in BIM/IFC Engine)",
-      "OpenFOAM (via CfdOF Add-on Workbench)",
-      "KiCad (via KiCadStepUp Add-on)",
-      "Blender (via STEP/glTF/sverchok Workflow)"
-    ],
-    "deployment_options": [
-      "Desktop"
+      "PDF"
     ],
     "license_types": [
       "Open-Source",
       "Free"
     ],
+    "security_compliance": [
+      "Zero Telemetry",
+      "Air-Gapped Installation Supported",
+      "Open-Source Code Auditability"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Simplified Chinese",
+      "Japanese",
+      "Portuguese",
+      "Russian"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
     "support_channels": [
       "Community",
       "Documentation"
-    ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "Python API",
-      "sdk_languages": [
-        "Python",
-        "C++"
-      ],
-      "docs_url": "https://wiki.freecad.org/Python_scripting_tutorial"
-    }
+    ]
   },
   {
-    "id": "t14",
+    "id": "t23",
     "name": "Onshape",
     "slug": "onshape",
-    "logo_url": "/logos/onshape.png",
-    "short_desc": "The professional CAD system built for agile cloud development.",
-    "description": "Onshape by PTC is a cloud-native SaaS product development platform that combines parametric 3D CAD, built-in PDM/version control, real-time team collaboration, FEA simulation, and rendering. Accessible via modern web browsers on any desktop OS or through native iOS/iPadOS and Android apps, it requires zero desktop CAD installation or local PDM server maintenance.",
+    "logo_url": "/logos/onshape.svg",
+    "short_desc": "PTC’s cloud-native product development platform combining parametric 3D CAD, built-in PDM, real-time collaboration, and analytics.",
+    "description": "Onshape is a pioneer in cloud-native 3D computer-aided design (CAD) and integrated product data management (PDM), developed by PTC. Operating entirely within modern web browsers on Windows, macOS, Linux, Chromebooks, and mobile tablets, Onshape eliminates local software installations, file checkouts, and missing reference errors. Engineering teams benefit from real-time simultaneous multi-user modeling, built-in release management, automated version branching and merging, finite element simulation, and custom parametric features built with FeatureScript.",
     "pricing_tiers": [
       {
-        "name": "Free (Public Documents)",
-        "price": "Free",
-        "period": "forever",
+        "name": "Onshape Standard",
+        "price": "Official Store",
+        "period": "annual subscription",
         "features": [
-          "Core 3D Parametric CAD & Assembly Modeling",
-          "Unlimited storage in public workspace (non-commercial use only)",
-          "Desktop browser access + native iOS/iPadOS & Android apps",
-          "Free Education & Startup programs also available"
+          "Full Cloud 3D Parametric Part & Assembly Modeling in Web Browsers",
+          "Built-In Document History, Rollback, and Version Branching",
+          "Associative 2D Drawing Creation with Automated BOM Generation",
+          "Standard Neutral CAD Import and Export (STEP, Parasolid, DXF)",
+          "Cross-Platform Access on PC, Mac, Chromebook, and Mobile Devices"
         ],
         "is_popular": false
       },
       {
-        "name": "Standard & Professional",
+        "name": "Onshape Professional",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual subscription",
         "features": [
-          "Standard: Commercial use, unlimited private storage & direct support",
-          "Professional: Built-in PDM, release management & company-wide libraries",
-          "Professional: Integrated Linear Static FEA Simulation & photorealistic Render Studio",
-          "Professional: ECAD-MCAD PCB Studio exchange & advanced admin controls"
+          "Includes All Standard Cloud CAD Modeling Capabilities",
+          "Integrated Formal Release Management and Engineering Approval Workflows",
+          "Company-Wide Standard Fastener and Hardware Libraries",
+          "Cloud Structural Simulation & CAM Integration via App Store",
+          "Custom Metadata and Revision Tracking for Production Teams"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise & Onshape Government",
+        "name": "Onshape Enterprise",
         "price": "Custom Quote",
-        "period": "Custom Quote",
+        "period": "annual enterprise contract",
         "features": [
-          "Arena PLM Connection for automated BOM & ECO synchronization",
-          "SSO / SAML 2.0, role-based access control, guest licenses & activity analytics",
-          "Custom company domain & dedicated customer success onboarding",
-          "Onshape Government option (AWS GovCloud) for ITAR / EAR compliance"
+          "Granular Role-Based Access Control and IP Protection Governance",
+          "Real-Time Analytics Dashboards and Comprehensive User Audit Logs",
+          "Single Sign-On (SSO) Integration via SAML / Okta / Azure AD",
+          "Dedicated Enterprise Customer Success Manager and Priority SLAs"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Cloud Platform",
+        "category": "Cloud-Native Modeling & Part Studios",
         "items": [
           {
-            "name": "Full Version History",
+            "name": "Zero-Install Full-Cloud 3D Parametric CAD Rendering in Standard Web Browsers",
             "status": true
           },
           {
-            "name": "Zero-install hardware",
+            "name": "Multi-Part Studios Designing Interdependent Components within a Single Spatial Context",
             "status": true
           },
           {
-            "name": "Simultaneous Editing",
+            "name": "Siemens Parasolid Geometric Modeling Engine Running on Distributed Cloud Clusters",
             "status": true
           },
           {
-            "name": "Built-in Release Mgmt",
+            "name": "High-Level Assembly Mates Based on Kinematic Relationships Rather than Low-Level Constraints",
+            "status": true
+          },
+          {
+            "name": "Custom Parametric Feature Generation using FeatureScript Programming Language",
             "status": true
           }
         ]
       },
       {
-        "category": "Design Tools",
+        "category": "Integrated PDM & Real-Time Collaboration",
         "items": [
           {
-            "name": "Parametric Part Studios",
+            "name": "Simultaneous Multi-User Co-Modeling (Google Docs-Style Real-Time Editing)",
             "status": true
           },
           {
-            "name": "FeatureScript Customization",
+            "name": "Git-Style Branching and Merging for Design Iteration Exploration",
             "status": true
           },
           {
-            "name": "Integrated Simulation",
+            "name": "Continuous Automated Cloud Saving with Instant Undo History and Zero Data Loss",
             "status": true
           },
           {
-            "name": "Multi-device support",
+            "name": "Formal Engineering Release Management, Revision Control, and Sign-Off Workflows",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Simulation, Analytics & Enterprise Governance",
+        "items": [
+          {
+            "name": "Cloud-Based Finite Element Structural Simulation Directly inside Assemblies",
+            "status": true
+          },
+          {
+            "name": "Real-Time Company Activity Dashboards and Access Log Monitoring",
+            "status": true
+          },
+          {
+            "name": "Complete REST API Automation for ERP, PLM, and Custom Pipeline Integrations",
+            "status": true
+          },
+          {
+            "name": "Cross-Platform Native Apps for iOS and Android with Full 3D Editing",
             "status": true
           }
         ]
@@ -1967,264 +2118,329 @@ export const c2Tools: Tool[] = [
     "alternatives": [
       "fusion-360",
       "solidworks",
-      "shapr3d"
+      "autodesk-inventor"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c2",
-    "pricing_type": "Freemium",
+    "pricing_type": "Subscription",
     "starting_price": 1500,
     "price_period": "year",
     "platforms": [
       "Web",
+      "Windows",
+      "macOS",
+      "Linux",
       "iOS",
       "Android"
     ],
     "industries": [
-      "Startups",
-      "Consumer Products",
+      "Consumer Hardware",
+      "Medical Devices",
+      "Industrial Machinery",
+      "Automotive Components",
       "Robotics"
     ],
     "core_features": [
-      "Cloud-Native CAD",
-      "Version Control",
-      "Agile Product Design",
-      "Part Studios",
-      "Integrated Analysis"
+      "100% Cloud-Native CAD in Web Browsers (No Install)",
+      "Siemens Parasolid Distributed Cloud Geometry Engine",
+      "Simultaneous Multi-User Real-Time Co-Modeling",
+      "Built-In PDM with Branching & Automated Version History",
+      "Multi-Part Modeling within Unified Part Studios",
+      "Custom Feature Automation via FeatureScript",
+      "Formal Engineering Release Management & Sign-Offs"
     ],
     "user_scales": [
-      "Startups & SMBs",
-      "Mid-Market",
-      "Enterprise Teams"
+      "Startup",
+      "SMB",
+      "Enterprise"
     ],
-    "official_url": "https://www.onshape.com",
+    "official_url": "https://www.onshape.com/",
     "pricing_url": "https://www.onshape.com/en/pricing",
-    "trial_url": "https://www.onshape.com/en/sign-up",
+    "trial_url": "https://www.onshape.com/en/try-onshape-free",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.7,
+        "max": 5,
+        "count": 680,
+        "url": "https://www.g2.com/products/ptc-onshape/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 320,
+        "url": "https://www.capterra.com/p/148425/Onshape/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 115,
+        "url": "https://www.trustradius.com/products/onshape/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 85,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/ptc/product/onshape",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 320,
+        "url": "https://www.getapp.com/engineering-software/a/onshape/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Onshape Shortcuts Sheet",
+        "href": "/toolbox/onshape-shortcuts-sheet"
+      },
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "No desktop CAD installation or local PDM server required",
-      "Real-time multi-user collaboration & branch/merge version control",
-      "Full-featured native CAD apps on iOS/iPadOS and Android"
+      "Zero local installation, driver maintenance, or IT server overhead; runs smoothly in modern web browsers.",
+      "Built-in cloud PDM completely eliminates file checkout conflicts, lost references, and accidental file overwrites.",
+      "True simultaneous multi-user co-design allows dispersed engineering teams to work together on the same model in real time.",
+      "Full parametric mechanical design capabilities driven by the proven Siemens Parasolid modeling engine.",
+      "FeatureScript language enables teams to build custom, domain-specific parametric tools directly into the UI.",
+      "Universal hardware compatibility functioning on Mac, Windows, Linux, Chromebooks, iPads, and mobile phones."
     ],
     "cons": [
-      "Requires continuous internet connectivity",
-      "Free tier stores all documents publicly (non-commercial only)",
-      "Arena PLM Connection & SSO require Enterprise tier"
+      "Requires an active, stable internet connection; cannot operate in fully air-gapped or offline environments.",
+      "Free tier requires all created CAD documents to remain publicly searchable, unsuitable for proprietary commercial IP.",
+      "Rendering extremely dense assemblies with thousands of complex NURBS surfaces depends on browser WebGL performance.",
+      "Subscription-only pricing structure with no permanent perpetual buyout license options.",
+      "Rendering capabilities for photorealistic product marketing visuals are less integrated than desktop alternatives.",
+      "Advanced specialized workbenches (such as Class-A automotive surfacing or Mold tooling) are less extensive than CATIA or NX."
     ],
     "faqs": [
       {
-        "q": "What is Onshape used for?",
-        "a": "The professional CAD system built for agile cloud development. Onshape is a 3D modeling solution widely adopted in Startups, Consumer Products, Robotics."
+        "q": "What makes Onshape different from traditional CAD software?",
+        "a": "According to PTC official documentation, Onshape is the first 100% cloud-native product development platform. Unlike traditional desktop CAD that requires local file saving and separate PDM servers, Onshape stores all geometric data in a secure cloud database, enabling real-time simultaneous collaboration, automated version history, and zero-install browser access. Explore features on the [Official Onshape Overview](https://www.onshape.com/)."
       },
       {
-        "q": "How much does Onshape cost?",
-        "a": "Onshape offers a Free plan (for non-commercial users with public document storage) alongside commercial annual subscriptions: Standard (private commercial storage and direct support), Professional (adding built-in PDM, release management, Simulation, Render Studio, and PCB Studio), and Enterprise (adding SSO, analytics, and Arena PLM Connection). Official seat rates, multi-currency pricing and taxes vary by country, so the PTC pricing page is the only current source for regional pricing: [Official Onshape Pricing Page](https://www.onshape.com/en/pricing)."
+        "q": "Does Onshape work offline?",
+        "a": "No. Onshape runs entirely on cloud server clusters that compute geometric operations and stream WebGL graphics to your browser. An active internet connection is required to open, edit, and export CAD documents."
       },
       {
-        "q": "Does Onshape offer a free trial?",
-        "a": "Onshape is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Onshape trial page](https://www.onshape.com/en/sign-up)."
+        "q": "What is the difference between Onshape Standard and Professional?",
+        "a": "Onshape Standard provides core 3D CAD modeling, assemblies, drawings, and built-in version control for individual designers. Onshape Professional adds company-wide formal release management, revision control, custom approval workflows, company hardware libraries, and cloud simulation. Compare editions on the [Official Onshape Pricing Page](https://www.onshape.com/en/pricing)."
       },
       {
-        "q": "What operating systems does Onshape support?",
-        "a": "Onshape runs natively in any modern desktop web browser (Chrome, Safari, Edge, Firefox) across Windows, macOS, Linux, and ChromeOS with zero local installation, and provides full-featured native mobile CAD apps for iOS/iPadOS and Android."
+        "q": "Can I try Onshape for free?",
+        "a": "Yes. Onshape offers a free trial for commercial teams, as well as a permanently free Onshape Free plan for non-commercial hobbyists and makers (where all documents are publicly accessible) and a dedicated free plan for qualifying students and educators. Request access on the [Official Onshape Trial Portal](https://www.onshape.com/en/try-onshape-free)."
       },
       {
-        "q": "Which file formats does Onshape support?",
-        "a": "Onshape imports STEP, IGES, Parasolid (.x_t/.x_b), ACIS (.sat), STL, OBJ, 3MF, Rhino (.3dm), JT, DWG, DXF, Inventor (.ipt/.iam), Creo, CATIA, and SOLIDWORKS parts (.sldprt) or assemblies (via SOLIDWORKS Pack and Go .zip). Export covers Parasolid (.x_t/.x_b), ACIS (.sat), STEP, IGES, STL, 3MF, OBJ, GLTF, JT, Rhino (.3dm), PVZ, DWG, DXF, PDF, and SVG."
+        "q": "What computer hardware do I need to run Onshape?",
+        "a": "Because geometric computations are processed on PTC cloud servers, Onshape does not require expensive certified workstation GPUs. It runs in Google Chrome, Mozilla Firefox, Apple Safari, or Microsoft Edge on Windows, macOS, Linux, ChromeOS, iPadOS, and Android."
       },
       {
-        "q": "Does Onshape have an API for automation and customization?",
-        "a": "Yes. Onshape provides two customization layers: FeatureScript (a built-in language for authoring custom parametric CAD features that run directly inside Part Studios) and a comprehensive REST API with OAuth/API keys and SDK bindings for Python, JavaScript/TypeScript, Java, and C#."
+        "q": "Which CAD formats can Onshape import and export?",
+        "a": "Onshape imports and exports all standard CAD formats, including STEP (AP203/AP214/AP242), Parasolid (.x_t, .x_b), IGES, ACIS (.sat), DWG, DXF, STL, OBJ, Rhino (.3dm), SolidWorks (.sldprt/.sldasm), and Autodesk Inventor files."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Cloud Server Cluster Regeneration / Parallel Cloud Simulation & Rendering",
-      "gpu_optimization": "WebGL 2.0 Browser Viewport & Server-Side GPU Raytracing",
+      "engine": "Siemens Parasolid Cloud Architecture",
+      "multicore": "Distributed cloud server-side multi-threading for modeling, meshing & rendering",
+      "gpu_optimization": "Client-side WebGL / WebGPU accelerated browser viewport rendering",
       "standards": [
-        "STEP",
+        "Parasolid (Native Cloud)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "X_T / X_B",
-        "DWG / DXF"
+        "DWG",
+        "DXF",
+        "FeatureScript",
+        "PDF"
       ]
     },
-    "expert_verdict": "A cloud-native parametric CAD and built-in PDM platform engineered for distributed hardware teams.",
-    "languages": [
-      "English",
-      "German",
-      "Spanish",
-      "French",
-      "Italian",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese"
-    ],
+    "expert_verdict": "Onshape represents the modern paradigm of CAD engineering. By eliminating file-based desktop friction, hardware dependencies, and fragile PDM servers, it delivers unprecedented speed for collaborative hardware startups, agile development teams, and distributed engineering organizations worldwide.",
     "file_formats_in": [
       "STEP",
-      "IGES",
+      "STP",
       "X_T",
       "X_B",
+      "IGES",
       "SAT",
-      "STL",
-      "OBJ",
-      "3MF",
+      "DWG",
+      "DXF",
       "SLDPRT",
-      "SLDASM (Pack & Go ZIP)",
+      "SLDASM",
       "IPT",
       "IAM",
-      "PRT",
-      "CATPart",
-      "JT",
-      "3DM",
-      "DWG",
-      "DXF"
+      "3DM"
     ],
     "file_formats_out": [
       "STEP",
-      "IGES",
+      "STP",
       "X_T",
       "X_B",
+      "IGES",
       "SAT",
-      "STL",
-      "OBJ",
-      "3MF",
-      "GLTF",
-      "JT",
-      "3DM",
-      "PVZ",
       "DWG",
       "DXF",
-      "PDF",
-      "SVG"
-    ],
-    "integrations": [
-      "Onshape Built-in PDM (Pro+)",
-      "Onshape Simulation & Render Studio (Pro+)",
-      "PCB Studio ECAD-MCAD (Pro+)",
-      "Arena PLM Connection (Enterprise)",
-      "Onshape App Store Ecosystem"
-    ],
-    "deployment_options": [
-      "Cloud",
-      "Web",
-      "Mobile"
+      "STL",
+      "OBJ",
+      "GLTF",
+      "PDF"
     ],
     "license_types": [
       "Subscription",
-      "Free",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training"
+      "Commercial",
+      "Free"
     ],
     "security_compliance": [
       "SOC 2 Type II",
       "ISO 27001",
-      "GDPR Privacy Framework",
-      "CCPA Privacy Framework",
-      "ITAR / EAR (via Onshape Government on AWS GovCloud)"
+      "GDPR",
+      "AWS Enterprise Cloud Security"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Japanese"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "Onshape REST API & FeatureScript",
-      "sdk_languages": [
-        "FeatureScript",
-        "Python",
-        "JavaScript",
-        "Java",
-        "C#"
-      ],
-      "docs_url": "https://onshape-public.github.io/docs/"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Knowledge Base",
+      "Documentation"
+    ]
   },
   {
-    "id": "t16",
+    "id": "t24",
     "name": "Solid Edge",
     "slug": "solid-edge",
-    "logo_url": "/logos/solid-edge.ico",
-    "short_desc": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach.",
-    "description": "Solid Edge by Siemens Digital Industries Software is a comprehensive 3D mechanical CAD portfolio featuring patented Synchronous Technology, which merges the speed of direct modeling with the control of parametric history-based design. Powered by the Parasolid kernel, it excels in sheet metal fabrication, large machinery assemblies, piping, and native Teamcenter PLM integration. Siemens now sells it under the Designcenter umbrella as Designcenter Solid Edge, alongside a SaaS edition (Designcenter X Solid Edge) that runs on cloud-hosted named-user licences; perpetual licences are still available through Siemens solution partners even though Siemens' own online store sells subscription terms only.",
+    "logo_url": "/logos/solid-edge.svg",
+    "short_desc": "Siemens’ powerful 3D CAD suite featuring pioneering Synchronous Technology, sheet metal design, and integrated simulation.",
+    "description": "Solid Edge is an industry-leading 3D computer-aided design (CAD) software portfolio developed by Siemens Digital Industries Software. Celebrated for its groundbreaking Synchronous Technology—which blends the speed of direct modeling with the control of parametric feature design—Solid Edge enables mechanical engineers to modify imported non-native CAD geometry rapidly without broken history trees. From generative design, reverse engineering, and best-in-class sheet metal fabrication to integrated electrical routing and structural FEA simulation, Solid Edge powers agile product development across global manufacturing equipment manufacturers.",
     "pricing_tiers": [
       {
-        "name": "Design & Drafting (Entry)",
+        "name": "Solid Edge Design and Drafting",
         "price": "Official Store",
-        "period": "Monthly / Annual Subscription",
+        "period": "monthly / annual subscription",
         "features": [
-          "Part & Assembly Modeling",
-          "Synchronous Technology",
-          "Automated 2D Drawings",
-          "Cloud collaboration (Solid Edge X)"
+          "Professional 2D Drafting & Basic 3D Part and Assembly Modeling",
+          "Automated Associative Engineering Drawings & Bill of Materials",
+          "Standard Neutral CAD Translation (STEP, IGES, DXF, DWG)",
+          "Cloud-Enabled Collaboration via Siemens Teamcenter Share"
         ],
         "is_popular": false
       },
       {
-        "name": "Solid Edge X Standard / Advanced",
+        "name": "Solid Edge Classic & Foundation",
         "price": "Official Store",
-        "period": "Monthly / Annual Subscription",
+        "period": "annual term / commercial license",
         "features": [
-          "Advanced sheet metal, frame generation & weldments",
-          "Standard parts library & generative design",
-          "Subdivision modeling, reverse engineering & rendering"
+          "Full Synchronous Technology Direct & Parametric 3D Modeling",
+          "Industry-Leading Sheet Metal Design, Forming & Flat Pattern Tables",
+          "Weldment Design, Structural Frames, and Mold Tooling Features",
+          "Standard Machine Fastener Libraries & KeyShot Photorealistic Rendering",
+          "Basic Static Structural Linear FEA Stress Simulation"
         ],
         "is_popular": true
       },
       {
-        "name": "Solid Edge X Premium / Free 2D Drafting",
+        "name": "Solid Edge Premium",
         "price": "Official Store",
-        "period": "Subscription / Free Tier",
+        "period": "annual term / enterprise floating",
         "features": [
-          "Advanced motion & stress simulation, electrical routing, point clouds",
-          "Free Solid Edge 2D Drafting & Community Edition (non-commercial)",
-          "Free Student Edition & Startup program (eligibility-based)"
+          "Includes All Classic 3D CAD Modeling & Sheet Metal Capabilities",
+          "Full Linear Static Structural & Modal Vibration FEA Simulation",
+          "3D Electrical Wire Harness Routing and Rigid/Flexible Tubing Design",
+          "Generative Design Topology Optimization for Lightweight Additive Manufacturing"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Core Modeling",
+        "category": "Synchronous Technology & Solid Modeling",
         "items": [
           {
-            "name": "Synchronous Tech (Direct)",
+            "name": "Patented Synchronous Technology Combining History-Free Direct Editing with Parametric Rules",
             "status": true
           },
           {
-            "name": "Convergent Modeling",
+            "name": "Rapid Modification of Foreign STEP, IGES, and Parasolid Geometry without Feature Regeneration Errors",
             "status": true
           },
           {
-            "name": "Frame & Structure Design",
+            "name": "Massive Assembly Modeling Supporting Multi-Thousand-Component Performance Mode",
             "status": true
           },
           {
-            "name": "Advanced Rendering",
+            "name": "Comprehensive Frame, Weldment, and Structural Profile Generation with Auto Cut Lists",
+            "status": true
+          },
+          {
+            "name": "Advanced Convergent Modeling Combining Mesh/Scan Data with Precision B-Rep Solids",
             "status": true
           }
         ]
       },
       {
-        "category": "Engineering",
+        "category": "Industry-Benchmark Sheet Metal & Simulation",
         "items": [
           {
-            "name": "Integrated FEA Analysis",
+            "name": "Market-Leading Sheet Metal Design with Accurate Bend Allowances and Automated Flat Patterns",
             "status": true
           },
           {
-            "name": "Standard Parts Library",
+            "name": "Finite Element Analysis (FEA) Simulation Powered by Siemens Simcenter Nastran Solver",
             "status": true
           },
           {
-            "name": "Wiring & Pipe Design",
+            "name": "Generative Design Topology Optimization for Weight Reduction and Additive Manufacturing",
             "status": true
           },
           {
-            "name": "Teamcenter Integration",
+            "name": "Integrated 3D Electrical Wire Routing and Piping/Tubing Layout Generation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Documentation, Data Management & Rendering",
+        "items": [
+          {
+            "name": "Built-In Data Management with Zero IT Infrastructure Requirements",
+            "status": true
+          },
+          {
+            "name": "Full Scalability to Enterprise Siemens Teamcenter PLM Ecosystem",
+            "status": true
+          },
+          {
+            "name": "Integrated KeyShot Photorealistic Real-Time Ray-Traced Rendering Engine",
+            "status": true
+          },
+          {
+            "name": "Open C++, C#, and Visual Basic .NET API for Custom Process Automation",
             "status": true
           }
         ]
@@ -2233,170 +2449,328 @@ export const c2Tools: Tool[] = [
     "alternatives": [
       "solidworks",
       "autodesk-inventor",
-      "fusion-360"
+      "ptc-creo"
     ],
-    "country": "USA",
+    "country": "Germany",
     "category_id": "c2",
-    "pricing_type": "Subscription / Perpetual",
-    "starting_price": 95,
-    "price_period": "month",
+    "pricing_type": "Subscription",
+    "starting_price": 2400,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
+    "industries": [
+      "Industrial Equipment",
+      "Consumer Machinery",
+      "Automotive Aftermarket",
+      "Medical Devices",
+      "Agricultural Machinery"
+    ],
+    "core_features": [
+      "Patented Synchronous Technology Direct & Parametric Modeling",
+      "Industry-Leading Sheet Metal Design & Accurate Unfolding",
+      "Siemens Parasolid Geometric Modeling & D-Cubed Solvers",
+      "Siemens Simcenter Nastran Integrated FEA Simulation",
+      "Generative Design & Convergent Mesh/Solid Modeling",
+      "3D Electrical Wire Harness Routing & Piping Layouts",
+      "Seamless Scalability to Siemens Teamcenter PLM"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://solidedge.siemens.com/",
+    "pricing_url": "https://solidedge.siemens.com/en/pricing/",
+    "trial_url": "https://solidedge.siemens.com/en/free-software/free-trial/",
+    "affiliate_url": null,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 410,
+        "url": "https://www.g2.com/products/solid-edge/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.capterra.com/p/132474/Solid-Edge/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 95,
+        "url": "https://www.trustradius.com/products/solid-edge/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.3,
+        "max": 5,
+        "count": 60,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/siemens/product/solid-edge",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.getapp.com/engineering-software/a/solid-edge/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Solid Edge Shortcuts Sheet",
+        "href": "/toolbox/solid-edge-shortcuts-sheet"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
+    "pros": [
+      "Synchronous Technology provides unparalleled flexibility when modifying imported CAD files without feature tree failures.",
+      "Recognized across mechanical engineering as having the finest native sheet metal design and flat pattern development tools in the CAD industry.",
+      "Built on Siemens' proprietary Parasolid geometric kernel and D-Cubed constraint solvers, ensuring world-class mathematical accuracy.",
+      "Integrated Simcenter Nastran FEA engine delivers dependable structural validation without exporting to third-party simulation tools.",
+      "Flexible licensing portfolio offering monthly terms, annual subscriptions, perpetual licenses, and node-locked or floating seats.",
+      "Built-in data management functions immediately out of the box with optional zero-friction upgrade to enterprise Siemens Teamcenter."
+    ],
+    "cons": [
+      "Smaller third-party add-on partner and plugin ecosystem compared to market-dominant competitors like SolidWorks.",
+      "Fewer specialized training institutes and academic university programs globally, requiring on-the-job training for new hires.",
+      "High-end CAD configuration costs require capital budget planning, especially when bundling advanced simulation and generative design.",
+      "Runs exclusively on 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Transitioning from traditional strict ordered feature trees to Synchronous workflows requires a conceptual shift for designers.",
+      "Online community forums are smaller than Autodesk or Dassault communities, though well-moderated by Siemens experts."
+    ],
+    "faqs": [
+      {
+        "q": "What is Synchronous Technology in Solid Edge?",
+        "a": "Synchronous Technology is Siemens' patented modeling methodology that allows engineers to edit 3D geometry directly by pushing and pulling faces or applying dynamic dimensions, while simultaneously recognizing and preserving geometric intent (like symmetry, tangency, and alignment). This allows rapid modifications to both native and imported CAD files without waiting for linear feature tree recalculations. Read more on the [Official Solid Edge Synchronous Technology Guide](https://solidedge.siemens.com/)."
+      },
+      {
+        "q": "How is Solid Edge licensed and priced?",
+        "a": "Siemens offers Solid Edge under flexible licensing models, including monthly subscriptions, annual subscriptions, and traditional perpetual buyout licenses with software maintenance. Available tiers range from Design and Drafting to Foundation, Classic, and Premium. Discover detailed tier descriptions on the [Official Solid Edge Pricing Portal](https://solidedge.siemens.com/en/pricing/)."
+      },
+      {
+        "q": "Is there a free trial of Solid Edge available?",
+        "a": "Yes. Siemens provides a fully functional 30-day free trial of Solid Edge Premium that includes synchronous modeling, sheet metal, simulation, and rendering. Request a download on the [Official Solid Edge Free Trial Page](https://solidedge.siemens.com/en/free-software/free-trial/)."
+      },
+      {
+        "q": "Can Solid Edge open files from other CAD systems?",
+        "a": "Yes. Solid Edge natively reads SolidWorks, Autodesk Inventor, PTC Creo, and AutoCAD files, as well as neutral industry formats like STEP, IGES, Parasolid (.x_t, .x_b), ACIS (.sat), and STL. Using Synchronous Technology, imported parts can be edited directly as if they were native files."
+      },
+      {
+        "q": "What operating systems are supported by Solid Edge?",
+        "a": "Solid Edge is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10 Pro/Enterprise. A certified professional workstation GPU (such as NVIDIA RTX or AMD Radeon Pro) with at least 8 GB VRAM and 16 GB to 32 GB RAM is recommended for assembly design."
+      },
+      {
+        "q": "What is the difference between Solid Edge and Siemens NX?",
+        "a": "Both products are built by Siemens on the Parasolid kernel. Solid Edge is tailored as an agile, mainstream 3D CAD suite for mid-sized manufacturers, emphasizing rapid mechanical design and sheet metal. Siemens NX is an enterprise-scale PLM platform engineered for immense automotive and aerospace programs requiring advanced Class-A surfaces and high-end CAE."
+      }
+    ],
+    "tech_specs": {
+      "engine": "Siemens Parasolid Kernel & D-Cubed Components",
+      "multicore": "Multi-threaded drawing generation, file loading & Nastran FEA meshing",
+      "gpu_optimization": "Siemens Synchronous Graphics Pipeline optimized for ISV-certified DirectX 11 & OpenGL drivers",
+      "standards": [
+        "Parasolid (Native)",
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "DWG",
+        "DXF",
+        "JT (ISO 14306)",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "Solid Edge is an engineering powerhouse that combines the industry's premier sheet metal tools with the unmatched flexibility of Synchronous Technology. For manufacturers dealing with frequent engineering change orders, multi-CAD supplier data, and tight fabrication deadlines, Solid Edge provides superior mechanical agility without feature-tree rebuild headaches.",
     "file_formats_in": [
       "PAR",
       "ASM",
       "DFT",
-      "PWD",
+      "PSM",
       "STEP",
       "IGES",
-      "Parasolid",
-      "JT",
-      "STL",
-      "3MF",
+      "X_T",
+      "X_B",
+      "SAT",
       "DWG",
       "DXF",
-      "CATPart",
+      "JT",
       "SLDPRT",
-      "IPT",
-      "PRT"
+      "IPT"
     ],
     "file_formats_out": [
       "PAR",
       "ASM",
       "DFT",
+      "PSM",
       "STEP",
       "IGES",
-      "Parasolid",
-      "JT",
-      "STL",
-      "3MF",
+      "X_T",
+      "X_B",
+      "SAT",
       "DWG",
       "DXF",
+      "JT",
+      "STL",
       "PDF"
     ],
-    "industries": [
-      "Mechanical",
-      "Industrial Design"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Floating",
+      "Commercial"
     ],
-    "core_features": [
-      "Synchronous Technology",
-      "Large Assembly Mgmt",
-      "Sheet Metal Design",
-      "Generative Design",
-      "CAD/CAM/CAE"
+    "security_compliance": [
+      "ISO 9001",
+      "ITAR Ready",
+      "Siemens Enterprise IT Standards"
     ],
-    "user_scales": [
-      "Mid-Market",
-      "Small Business"
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Simplified Chinese",
+      "Japanese"
     ],
-    "official_url": "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
-    "pricing_url": "https://www.dex.siemens.com",
-    "trial_url": "https://solidedge.siemens.com/en/solutions/users/free-trials/",
-    "affiliate_url": null,
-    "score": 4.7,
-    "pros": [
-      "Hybrid modeling power",
-      "Excellent sheet metal",
-      "Flexible pricing"
-    ],
-    "cons": [
-      "Smaller marketing presence",
-      "Legacy UI areas",
-      "Smaller community"
-    ],
-    "faqs": [
-      {
-        "q": "What is Solid Edge used for?",
-        "a": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach. Solid Edge is a 3D modeling solution widely adopted in Mechanical, Industrial Design."
-      },
-      {
-        "q": "How much does Solid Edge cost?",
-        "a": "Solid Edge is sold on a hybrid subscription model: Design & Drafting (entry-level) through Solid Edge X Standard, Advanced, and Premium tiers, plus value-based licensing and add-ons. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official Siemens Solid Edge Store](https://dex.siemens.com/plm/solid-edge) for live regional pricing."
-      },
-      {
-        "q": "Is there a free version of Solid Edge?",
-        "a": "Yes — Siemens offers a free standalone Solid Edge 2D Drafting product, a free non-commercial Community Edition, a free 1-year renewable Student Edition, and a Solid Edge for Startups program (up to three years free for eligible early-stage companies). A full-product trial is also available; check the [Official Solid Edge Trial Page](https://solidedge.siemens.com/en/solutions/users/free-trials/) for current terms."
-      },
-      {
-        "q": "What operating systems does Solid Edge support?",
-        "a": "Solid Edge runs on Windows."
-      },
-      {
-        "q": "Which file formats does Solid Edge support?",
-        "a": "Solid Edge stores parts, assemblies and drawings as .par, .asm and .dft, and reads and writes STEP, IGES, Parasolid (.x_t/.x_b), JT, STL, 3MF and DXF/DWG. Third-party native CAD formats — NX, SolidWorks, Inventor, Creo and CATIA V5 — are reached through Siemens CAD translation add-ons rather than being built into the base seat, so confirm which translators a licence actually includes before promising a direct read of a customer file. Output covers the native three plus STEP, IGES, Parasolid, JT, STL, 3MF, DXF/DWG and PDF."
-      },
-      {
-        "q": "What are the best alternatives to Solid Edge?",
-        "a": "The closest alternatives to Solid Edge are SolidWorks, Autodesk Inventor, and Autodesk Fusion (Fusion 360). SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while Autodesk Inventor (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "OpenGL",
-      "standards": [
-        "PAR",
-        "STEP",
-        "IGES",
-        "JT"
-      ]
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
     },
-    "expert_verdict": "Solid Edge is the 'thinking man's' SolidWorks."
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ]
   },
   {
-    "id": "t20",
+    "id": "t25",
     "name": "Autodesk Inventor",
     "slug": "autodesk-inventor",
     "logo_url": "/logos/autodesk-inventor.svg",
-    "short_desc": "Professional-grade 3D mechanical design and simulation.",
-    "description": "Autodesk Inventor Professional is an industrial 3D mechanical CAD platform engineered for automated machine design, heavy equipment, and custom fabrication. Built on the Autodesk ShapeManager kernel, it features rules-based iLogic design automation, Frame Generator structural analysis, routed tube/pipe/cable harnesses, and seamless Vault PDM and AutoCAD DWG associativity.",
+    "short_desc": "Autodesk’s professional 3D mechanical CAD software for product design, automated engineering drawing generation, and advanced simulation.",
+    "description": "Autodesk Inventor is a professional-grade 3D mechanical computer-aided design (CAD) software platform developed by Autodesk for product design, tooling creation, and engineering simulation. Built on the Autodesk ShapeManager (ASM) geometric modeling engine, Inventor provides powerful parametric modeling, large assembly design with dynamic collision detection, automated associative 2D production drawings, sheet metal design, frame generators, and rules-based design automation using iLogic. Seamlessly integrated into the Autodesk ecosystem alongside Vault PDM, AutoCAD, and Fusion, Inventor serves as a core mechanical design engine worldwide.",
     "pricing_tiers": [
       {
-        "name": "Monthly",
+        "name": "Autodesk Inventor Professional Annual",
         "price": "Official Store",
-        "period": "Monthly Subscription",
+        "period": "annual subscription",
         "features": [
-          "Full 3D modeling",
-          "Simulation",
-          "Rendering",
-          "No long-term commitment"
-        ]
-      },
-      {
-        "name": "Annual / 3-Year",
-        "price": "Official Store",
-        "period": "1-Year / 3-Year Term",
-        "features": [
-          "Save vs monthly billing",
-          "Fixed price for the term (3-year locks in pricing)",
-          "Priority Support",
-          "Workflows Link"
+          "Full 3D Parametric Part, Assembly, and Sheet Metal Design",
+          "Automated Associative 2D Engineering Drawings with Dynamic BOMs",
+          "Rules-Based Design Automation Powered by Embedded iLogic",
+          "Linear Static Structural FEA & Modal Frequency Analysis",
+          "Automated Frame Generator, Tube & Pipe, and Cable Harness Routing"
         ],
         "is_popular": true
       },
       {
-        "name": "Flex (Token-Based) / Collection",
+        "name": "Autodesk Inventor Multi-Year",
         "price": "Official Store",
-        "period": "Pay-As-You-Go / Bundle",
+        "period": "3-year term subscription",
         "features": [
-          "Flex: buy tokens and pay per day of use (Inventor consumes a fixed daily token rate)",
-          "Product Design & Manufacturing Collection: Inventor plus AutoCAD, Fusion, Nastran and more",
-          "Free educational access for eligible students and educators"
+          "Includes All Inventor Professional 3D CAD & Simulation Capabilities",
+          "Guaranteed Price Lock for 36 Months of Continuous Access",
+          "Autodesk Cloud Storage and Web Review Markups via Shared Views",
+          "Comprehensive Dedicated Technical Support and Administrative Portal"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Product Design & Manufacturing Collection",
+        "price": "Official Store",
+        "period": "annual subscription bundle",
+        "features": [
+          "Includes Autodesk Inventor Professional & Inventor CAM (5-Axis Milling)",
+          "Inventor Tolerance Analysis & Advanced Non-Linear Nastran FEA",
+          "Includes AutoCAD, AutoCAD Mechanical, and Navisworks Manage",
+          "Inventor Nesting for Optimized Sheet Metal and CNC Cutting Layouts"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "3D Parametric & Assembly Design",
         "items": [
           {
-            "name": "Parametric Design",
+            "name": "Feature-Based Parametric Solid and Freeform SubD Surface Modeling",
             "status": true
           },
           {
-            "name": "Direct Edit",
+            "name": "Massive Assembly Management with Express Mode Level-of-Detail Visualization",
+            "status": true
+          },
+          {
+            "name": "Parametric Sheet Metal Design, Bend Tables, and Unfolded Flat Pattern Export",
+            "status": true
+          },
+          {
+            "name": "Automated Structural Frame Generator with Standard Beam Profiles and End Treatments",
+            "status": true
+          },
+          {
+            "name": "Dynamic Mechanism Simulation, Contact Detection, and Joint Kinematics",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "iLogic Automation & Specialized Modules",
+        "items": [
+          {
+            "name": "Rules-Based Design Automation via iLogic for Rapid Product Configuration",
+            "status": true
+          },
+          {
+            "name": "3D Routing for Rigid Pipe, Bent Tube, and Flexible High-Pressure Hose Runs",
+            "status": true
+          },
+          {
+            "name": "Electrical 3D Wire Harness Routing and Interoperability with AutoCAD Electrical",
+            "status": true
+          },
+          {
+            "name": "Plastic Injection Mold Tooling Design (Runner Layouts, Cooling Lines, Ejectors)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Simulation, Interoperability & Ecosystem",
+        "items": [
+          {
+            "name": "Built-In Finite Element Analysis (FEA) for Static Stress and Modal Frequencies",
+            "status": true
+          },
+          {
+            "name": "AnyCAD Associative Data Exchange Linking Native SolidWorks, STEP, and Creo Models",
+            "status": true
+          },
+          {
+            "name": "Direct Integration with Autodesk Vault PDM for Strict Revision Control",
+            "status": true
+          },
+          {
+            "name": "Comprehensive .NET, C++, and VBA Automation API Architecture",
             "status": true
           }
         ]
@@ -2404,471 +2778,645 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "solidworks",
-      "solid-edge",
-      "ptc-creo",
-      "fusion-360"
+      "fusion-360",
+      "ptc-creo"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Subscription",
-    "starting_price": 315,
-    "price_period": "month",
+    "starting_price": 2475,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Manufacturing"
+      "Industrial Machinery",
+      "Manufacturing Equipment",
+      "Building Products & Fabrication",
+      "Automotive Systems",
+      "Consumer Hardware"
     ],
     "core_features": [
-      "iLogic Automation",
-      "Shared Views"
+      "Autodesk ShapeManager (ASM) Parametric 3D Solid Engine",
+      "iLogic Embedded Rules-Based Design Configuration Automation",
+      "Large Mechanical Assembly Design & Express Performance Mode",
+      "Parametric Sheet Metal, Weldments & Structural Frame Generator",
+      "AnyCAD Associative Interoperability with Multi-CAD Files",
+      "Built-In Static Stress & Modal Frequency FEA Simulation",
+      "Deep Integration with Autodesk Vault PDM & AutoCAD Ecosystem"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/inventor/overview",
-    "pricing_url": "https://www.autodesk.com/products/inventor/subscribe",
+    "pricing_url": "https://www.autodesk.com/products/inventor/pricing",
     "trial_url": "https://www.autodesk.com/products/inventor/free-trial",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 1920,
+        "url": "https://www.g2.com/products/autodesk-inventor/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 2150,
+        "url": "https://www.capterra.com/p/132475/Autodesk-Inventor/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 520,
+        "url": "https://www.trustradius.com/products/autodesk-inventor/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.4,
+        "max": 5,
+        "count": 260,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/autodesk/product/inventor",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 2150,
+        "url": "https://www.getapp.com/engineering-software/a/autodesk-inventor/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Inventor Shortcuts Sheet",
+        "href": "/toolbox/inventor-shortcuts-sheet"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      }
+    ],
     "pros": [
-      "iLogic design automation",
-      "Eco-system integration"
+      "iLogic design automation engine allows engineers to configure complex parametric product variations with simple rule scripts.",
+      "AnyCAD technology enables seamless associative references to non-native SolidWorks, Creo, and STEP files without breaking links.",
+      "Flawless native interoperability with AutoCAD DWG files, allowing direct reuse of legacy 2D drawing blocks in 3D sketches.",
+      "Comprehensive Product Design & Manufacturing Collection provides exceptional value by bundling Nastran, CAM, and Nesting.",
+      "Intuitive, modern ribbon interface with mature assembly joint tools that speed up mechanism mating and motion studies.",
+      "Vast global Autodesk user community, extensive authorized training centers (ATC), and thousands of downloadable add-ins."
     ],
     "cons": [
-      "Windows-only",
-      "Expensive"
+      "Annual subscription licensing model requires recurring renewals; Autodesk no longer offers perpetual buyout options.",
+      "Extreme multi-thousand-part industrial assemblies require substantial workstation RAM and high single-core CPU speeds.",
+      "Designed strictly for 64-bit Microsoft Windows; no native client installation exists for macOS or Linux systems.",
+      "Freeform surfacing tools are capable but less specialized for complex Class-A automotive styling than Alias or CATIA.",
+      "Autodesk Vault PDM server setup and administration can require dedicated IT database expertise for enterprise teams.",
+      "Occasional file migration hurdles when opening models created in significantly older Inventor major versions."
     ],
     "faqs": [
       {
         "q": "What is Autodesk Inventor used for?",
-        "a": "Professional-grade 3D mechanical design and simulation. Autodesk Inventor is a 3D modeling solution widely adopted in Manufacturing."
+        "a": "According to Autodesk official documentation, Autodesk Inventor is a 3D mechanical CAD software application used by engineers, fabricators, and machinery manufacturers to design 3D parts and assemblies, automate drawing creation, simulate structural stresses, and configure custom machinery. Read more on the [Official Inventor Overview](https://www.autodesk.com/products/inventor/overview)."
+      },
+      {
+        "q": "What is iLogic in Autodesk Inventor?",
+        "a": "iLogic is Inventor's built-in rules-based design automation technology. It allows engineers and non-programmers to embed conditional logic (if-then statements) and parameter rules directly into 3D models to automatically generate custom design configurations, drawing updates, and bill-of-materials changes."
       },
       {
         "q": "How much does Autodesk Inventor cost?",
-        "a": "Autodesk Inventor is licensed on a Subscription model (Monthly, Annual, and 3-Year terms), on Autodesk Flex pay-as-you-go tokens, or as part of the Product Design & Manufacturing Collection. Because official seat rates, multi-currency pricing, educational exemptions, and authorized reseller quotes vary by region, please visit the [Official Inventor Subscribe Page](https://www.autodesk.com/products/inventor/subscribe) for live regional pricing."
+        "a": "Autodesk Inventor Professional is available via monthly, annual, or 3-year subscriptions, as well as part of the Product Design & Manufacturing Collection bundle. Because regional taxes and corporate licensing terms vary, review verified options on the [Official Autodesk Inventor Pricing Page](https://www.autodesk.com/products/inventor/pricing)."
       },
       {
-        "q": "Does Autodesk Inventor offer a free trial?",
-        "a": "Yes — Autodesk provides an official free trial of Inventor, plus free educational access for verified students and educators. Because trial terms are updated periodically by the vendor, visit the [Official Inventor Free Trial Page](https://www.autodesk.com/products/inventor/free-trial) for current details."
+        "q": "Can I get a free trial of Autodesk Inventor?",
+        "a": "Yes. Autodesk offers a full-featured 30-day free trial of Inventor Professional for commercial teams and businesses. Free renewable educational licenses are also provided to qualifying students and educators. Request access on the [Official Autodesk Inventor Trial Page](https://www.autodesk.com/products/inventor/free-trial)."
       },
       {
-        "q": "What operating systems does Autodesk Inventor support?",
-        "a": "Autodesk Inventor runs on Windows. Deployment options include desktop."
+        "q": "What operating systems are supported by Autodesk Inventor?",
+        "a": "Autodesk Inventor is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10 (version 1809 or higher). Minimum requirements include 16 GB RAM (32 GB+ recommended) and a dedicated 4 GB+ GPU with DirectX 11 or higher. Hardware guidance is available on the [Autodesk System Requirements](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Inventor.html)."
       },
       {
         "q": "Which file formats does Autodesk Inventor support?",
-        "a": "Autodesk Inventor imports IPT, IAM, IDW, IDX, STEP, IGES and more. Export covers IPT, IAM, STEP, IGES, SAT, STL and more."
-      },
-      {
-        "q": "Does Autodesk Inventor have an API for automation and customization?",
-        "a": "Yes. Autodesk Inventor exposes .NET / COM API with SDK bindings for C#, VB.NET, C++, VBA. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      },
-      {
-        "q": "What are the best alternatives to Autodesk Inventor?",
-        "a": "The closest alternatives to Autodesk Inventor are SolidWorks, Solid Edge, PTC Creo, and Autodesk Fusion (Fusion 360) — priced on a subscription or a perpetual licence, a subscription or a perpetual licence, a subscription, and a subscription respectively. Compare their technical specifications, file-format compatibility and licensing side by side on CADGuide."
+        "a": "Inventor natively reads and writes .IPT (parts), .IAM (assemblies), .IDW/.DWG (drawings), and .IPN (presentations). Through AnyCAD, it imports and associates with SolidWorks, PTC Creo, Siemens NX, CATIA, STEP, IGES, SAT, JT, and OBJ formats."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Direct3D",
+      "engine": "Autodesk ShapeManager (ASM) Kernel",
+      "multicore": "Multi-threaded graphics tessellation, drawing generation & FEA meshing / Single-threaded feature rebuilds",
+      "gpu_optimization": "DirectX 11 & DirectX 12 hardware acceleration with Autodesk Certified Graphics Drivers",
       "standards": [
-        "IPT",
-        "IAM"
+        "ShapeManager (Native)",
+        "STEP (AP203/AP214/AP242)",
+        "IGES",
+        "DWG",
+        "DXF",
+        "SAT",
+        "JT",
+        "PDF"
       ]
     },
-    "expert_verdict": "The superior choice for mechanical design within the Autodesk ecosystem.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Czech",
-      "Polish",
-      "Brazilian Portuguese"
-    ],
+    "expert_verdict": "Autodesk Inventor is a powerhouse for machinery manufacturers and equipment engineering teams. By combining the unmatched configuration power of iLogic automation with seamless AnyCAD multi-CAD interoperability and direct AutoCAD DWG heritage, Inventor remains one of the most reliable and productive mechanical CAD suites on the global market.",
     "file_formats_in": [
       "IPT",
       "IAM",
       "IDW",
-      "IDX",
+      "DWG",
+      "IPN",
       "STEP",
       "IGES",
       "SAT",
-      "STL",
-      "DWG",
-      "DXF",
+      "JT",
       "SLDPRT",
-      "CATPart",
-      "NX",
-      "Parasolid",
-      "JT"
+      "SLDASM",
+      "PRT",
+      "ASM"
     ],
     "file_formats_out": [
       "IPT",
       "IAM",
+      "IDW",
+      "DWG",
+      "IPN",
       "STEP",
       "IGES",
       "SAT",
-      "STL",
-      "DWG",
-      "DXF",
       "JT",
+      "STL",
       "OBJ",
-      "FBX",
-      "3MF",
+      "DWF",
       "PDF"
-    ],
-    "integrations": [
-      "Vault",
-      "AutoCAD",
-      "Fusion 360",
-      "BIM 360",
-      "Autodesk Drive",
-      "Nastran In-CAD",
-      "Inventor CAM"
-    ],
-    "deployment_options": [
-      "Desktop"
     ],
     "license_types": [
       "Subscription",
-      "Network",
-      "Educational"
-    ],
-    "support_channels": [
-      "Phone",
-      "Email",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
+      "Educational",
+      "Commercial"
     ],
     "security_compliance": [
-      "SOC 2 Type II",
       "ISO 27001",
-      "GDPR Privacy Framework"
+      "SOC 2",
+      "Autodesk Trust Center Standards"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Japanese",
+      "Korean",
+      "Russian"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": ".NET / COM API",
-      "sdk_languages": [
-        "C#",
-        "VB.NET",
-        "C++",
-        "VBA"
-      ],
-      "docs_url": "https://www.autodesk.com/developer-network/platform-technologies/inventor"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Community"
+    ]
   },
   {
-    "id": "t23",
+    "id": "t26",
     "name": "PTC Creo",
     "slug": "ptc-creo",
-    "logo_url": "/logos/ptc-creo.ico",
-    "short_desc": "The original parametric 3D CAD powerhouse.",
-    "description": "PTC Creo (formerly Pro/ENGINEER) is the original enterprise parametric 3D CAD suite engineered for discrete manufacturing, defense, and industrial equipment. Driven by its proprietary Granite kernel, it delivers rock-solid top-down large-assembly stability, Model-Based Definition (MBD/GD&T), Ansys-powered real-time simulation, freestyle subdivision surfacing, and native Windchill PLM integration.",
+    "logo_url": "/logos/ptc-creo.svg",
+    "short_desc": "PTC’s scalable 3D CAD solution for parametric modeling, generative design, additive manufacturing, and complex mechanical engineering.",
+    "description": "PTC Creo (formerly Pro/ENGINEER) is a high-performance 3D computer-aided design (CAD) software platform engineered by PTC for discrete manufacturing, aerospace, automotive, and complex consumer electronics design. Powered by the industrial-grade PTC Granite modeling engine, Creo unites parametric precision, direct modeling flexibility, generative design, real-time simulation via Ansys, additive manufacturing prep, and model-based definition (MBD). From multi-thousand-component power machinery to tight electronic packaging, Creo delivers the robust engineering foundation demanded by leading global product innovators.",
     "pricing_tiers": [
       {
-        "name": "Creo Design Essentials",
+        "name": "Creo Design Essentials (Tier 1)",
         "price": "Official Store",
-        "period": "Annual Subscription (Required Base)",
+        "period": "annual subscription",
         "features": [
-          "Parametric Modeling",
-          "Sheet Metal",
-          "Rendering",
-          "Every Creo user must hold Design Essentials (or higher) as the base package"
-        ]
-      },
-      {
-        "name": "Creo Design Advanced / Advanced Professional",
-        "price": "Official Store",
-        "period": "Annual Subscription",
-        "features": [
-          "Mechanism Dynamics",
-          "Tolerance Analysis",
-          "Simulation",
-          "Add-on Extensions sold separately (AAX, ISDX, REX, etc.)"
+          "Core 3D Parametric Part and Complex Assembly Modeling",
+          "Parametric Sheet Metal Design, Weldments, and Structural Frameworks",
+          "Associative 2D Production Drawings and Model-Based Definition (MBD)",
+          "Unite Technology Direct Multi-CAD Interoperability (SolidWorks, CATIA, NX)",
+          "Augmented Reality (AR) Design Sharing and Cloud Portal Access"
         ],
         "is_popular": true
       },
       {
-        "name": "Creo+ (SaaS) / Enterprise Premium",
+        "name": "Creo Design Advanced & Plus (Tiers 2 & 3)",
         "price": "Official Store",
-        "period": "Subscription / Floating Quote",
+        "period": "annual subscription",
         "features": [
-          "Creo+ SaaS delivery with real-time collaboration & cloud data",
-          "Multi-CAD collaboration, advanced surfacing, additive manufacturing",
-          "Floating license tiers for enterprise deployments via PTC sales"
+          "Includes All Design Essentials 3D CAD Modeling Tools",
+          "Advanced Assembly Extension (Top-Down Skeleton Modeling & Data Sharing)",
+          "Prismatic and Multi-Axis Machining Toolpath Generation",
+          "Advanced Surfacing Extension (ISDX) for Freeform Aesthetic Styling",
+          "Mechanism Dynamics Simulation and Tolerance Analysis Extension"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Creo Design Premium & Enterprise (Tiers 4 & 5)",
+        "price": "Custom Quote",
+        "period": "annual enterprise contract",
+        "features": [
+          "Generative Topology Optimization Powered by Artificial Intelligence",
+          "Creo Simulation Live Instantaneous FEA Analysis Powered by Ansys",
+          "Additive Manufacturing Lattice Structuring and 3D Metal Printer Slicing",
+          "Full Concurrent Engineering and Windchill PLM Enterprise Integration"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "Parametric & Advanced Surface Modeling",
         "items": [
           {
-            "name": "Parametric Modeling",
+            "name": "PTC Granite Kernel High-Precision 3D Parametric Solid and Assembly Modeling",
             "status": true
           },
           {
-            "name": "Direct Modeling",
+            "name": "Interactive Surface Design Extension (ISDX) for Freeform NURBS Aesthetic Curvature",
             "status": true
           },
           {
-            "name": "Sheet Metal",
+            "name": "Advanced Assembly Top-Down Skeleton Modeling for Structured Large Team Design",
+            "status": true
+          },
+          {
+            "name": "Model-Based Definition (MBD) Embedding 3D GD&T Directly on CAD Geometry",
+            "status": true
+          },
+          {
+            "name": "Generative Design Topology Optimization for Lightweight Structural Optimization",
             "status": true
           }
         ]
       },
       {
-        "category": "Analysis",
+        "category": "Real-Time Simulation & Manufacturing",
         "items": [
           {
-            "name": "FEA Simulation",
+            "name": "Creo Simulation Live Powered by Ansys for Instantaneous Real-Time Structural FEA",
             "status": true
           },
           {
-            "name": "Model-Based Definition",
+            "name": "Unite Technology Opening and Modifying Foreign SolidWorks, CATIA, and NX Files",
             "status": true
           },
           {
-            "name": "Generative Design",
+            "name": "Subtractive Multi-Axis CNC Milling, Lathe Turning, and Wire EDM Toolpaths",
+            "status": true
+          },
+          {
+            "name": "Additive Manufacturing Stochastic and Gyroid Lattice Generation for 3D Printing",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Ecosystem, PDM & Automation",
+        "items": [
+          {
+            "name": "Seamless Digital Continuity with PTC Windchill Enterprise PLM Platform",
+            "status": true
+          },
+          {
+            "name": "Augmented Reality (AR) Publishing for Stakeholder Immersive Design Reviews",
+            "status": true
+          },
+          {
+            "name": "Extensive Pro/TOOLKIT C/C++, VB API, and Java Automation Interfaces",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Piping, Tubing, and 3D Electrical Wire Harness Routing",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "catia",
+      "solidworks",
       "siemens-nx",
-      "solidworks"
+      "catia"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Subscription",
-    "starting_price": 2430,
+    "starting_price": 2780,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Manufacturing",
-      "High-Tech",
-      "Medical"
+      "Industrial Equipment",
+      "Aerospace & Defense",
+      "Automotive",
+      "Electronics & High Tech",
+      "Medical Devices"
     ],
     "core_features": [
-      "Model-Based Definition",
-      "Generative Design",
-      "Real-time Simulation"
+      "PTC Granite Industrial-Grade 3D Parametric Engine",
+      "Advanced Top-Down Skeleton Assembly Architecture",
+      "Unite Technology Native Non-Parametric Multi-CAD Editing",
+      "Creo Simulation Live Powered by Ansys Real-Time FEA",
+      "Generative Topology Optimization for Additive Parts",
+      "Model-Based Definition (MBD) 3D GD&T Documentation",
+      "Enterprise PLM Integration with PTC Windchill"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "Mid-Market",
+      "Enterprise"
     ],
     "official_url": "https://www.ptc.com/en/products/creo",
-    "pricing_url": "https://www.ptc.com/en/store",
+    "pricing_url": "https://www.ptc.com/en/products/creo/pricing",
     "trial_url": "https://www.ptc.com/en/products/creo/trial",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 780,
+        "url": "https://www.g2.com/products/creo/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 380,
+        "url": "https://www.capterra.com/p/132479/Creo/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 190,
+        "url": "https://www.trustradius.com/products/ptc-creo/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.3,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/ptc/product/creo",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 380,
+        "url": "https://www.getapp.com/engineering-software/a/creo/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Creo Shortcuts Sheet",
+        "href": "/toolbox/creo-shortcuts-sheet"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "Assembly management king",
-      "World-class simulation",
-      "Deep manufacturing tools"
+      "Rigorous parametric modeling engine excels at managing large, highly complex machinery assemblies without geometric corruption.",
+      "Pioneering top-down design methodology utilizing skeleton models ensures systematic change propagation across engineering teams.",
+      "Unite Technology provides exceptional multi-CAD interoperability, allowing non-native SolidWorks, NX, and CATIA data to be used without manual conversion.",
+      "Creo Simulation Live gives designers instantaneous, real-time stress and thermal feedback directly while sculpting geometry.",
+      "Comprehensive Model-Based Definition (MBD) capabilities eliminate cumbersome 2D drawing overhead by attaching 3D annotations directly.",
+      "Deep, industrial-strength enterprise lifecycle integration with PTC Windchill PLM environments."
     ],
     "cons": [
-      "Steep learning curve",
-      "Overwhelming UI",
-      "Hardware workstation req"
+      "Steep initial learning curve; the interface and menu hierarchy can feel less intuitive to designers coming from simpler CAD tools.",
+      "High software investment and ongoing subscription costs structured around specialized modular tiered packages.",
+      "Requires high-specification workstation hardware (certified GPU and fast clock-speed CPU) for peak performance.",
+      "Runs strictly on 64-bit Microsoft Windows; no native installation options for macOS or Linux workstations.",
+      "Configuring company-wide administrative standards, drawing format templates, and Windchill connections requires experienced CAD administrators.",
+      "Smaller general public community and fewer consumer maker tutorials compared to entry-level CAD software."
     ],
     "faqs": [
       {
-        "q": "What is PTC Creo used for?",
-        "a": "The original parametric 3D CAD powerhouse. PTC Creo is a 3D modeling solution widely adopted in Manufacturing, High-Tech, Medical."
+        "q": "What is PTC Creo and what was its original name?",
+        "a": "According to PTC official documentation, PTC Creo is a professional 3D CAD solution for product design and development. Originally launched as Pro/ENGINEER in 1987—the world's first commercially successful parametric 3D CAD program—it was later rebranded to Creo. Learn more on the [Official PTC Creo Overview](https://www.ptc.com/en/products/creo)."
       },
       {
-        "q": "How much does PTC Creo cost?",
-        "a": "PTC Creo is licensed on a Subscription model: every user starts with the Creo Design Essentials base package, then steps up through Design Advanced, Design Advanced Professional, and Design Premium tiers, with individual extensions and Creo+ (SaaS) sold separately. Published prices cover only a subset of packages — most configurations require a sales quote. Because official seat rates, multi-currency pricing, and reseller quotes vary by region, please visit the [Official PTC Creo Page](https://www.ptc.com/en/products/creo) for live regional pricing."
+        "q": "What are the Creo Design Packages (Tiers 1 to 5)?",
+        "a": "PTC packages Creo into five progressive subscription tiers. Tier 1 (Design Essentials) provides core parametric 3D CAD, sheet metal, and Unite multi-CAD tools. Higher tiers (Advanced, Advanced Plus, Premium, and Enterprise) unlock top-down assembly skeletons, Ansys real-time simulation, generative AI design, and multi-axis CAM. Review full tiers on the [Official PTC Creo Pricing Page](https://www.ptc.com/en/products/creo/pricing)."
       },
       {
-        "q": "Does PTC Creo offer a free trial?",
-        "a": "Yes — PTC provides an official Try-and-Buy program with fully functional Creo and Creo+ trials. Because trial terms are updated periodically by the vendor, visit the [Official PTC Creo Trial Page](https://www.ptc.com/en/products/creo/trial) for current details."
+        "q": "How does Creo Unite Technology work?",
+        "a": "Unite Technology enables Creo users to open native files from competing CAD platforms (including SolidWorks, Siemens NX, and CATIA) directly within Creo assemblies without requiring third-party translation software. If the original supplier CAD file changes, Creo automatically updates the geometry."
       },
       {
-        "q": "What operating systems does PTC Creo support?",
-        "a": "PTC Creo runs on Windows. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
+        "q": "Does PTC offer a free trial of Creo?",
+        "a": "Yes. PTC provides a 30-day free trial of Creo Parametric for commercial engineering organizations to evaluate its modeling and simulation capabilities. Request trial access on the [Official PTC Creo Trial Page](https://www.ptc.com/en/products/creo/trial)."
+      },
+      {
+        "q": "What operating systems are supported by PTC Creo?",
+        "a": "Creo is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10. A certified professional workstation graphics card (such as NVIDIA RTX or AMD Radeon Pro) with at least 4 GB VRAM and 16 GB to 32 GB RAM is required."
       },
       {
         "q": "Which file formats does PTC Creo support?",
-        "a": "PTC Creo imports PRT, ASM, DRW, STEP, IGES, STL and more. Export covers PRT, ASM, STEP, IGES, STL, DWG and more."
-      },
-      {
-        "q": "Does PTC Creo have an API for automation and customization?",
-        "a": "Yes. PTC Creo exposes Pro/TOOLKIT / J-Link / Web.Link with SDK bindings for C, C++, Java, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      },
-      {
-        "q": "Is there a free version of PTC Creo?",
-        "a": "PTC Creo is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official PTC Creo plans and trial](https://www.ptc.com/en/products/creo/trial)."
+        "a": "Creo natively works with .PRT (parts), .ASM (assemblies), and .DRW (drawings). Through Unite Technology and built-in translators, it reads and writes STEP (AP203/AP214/AP242), IGES, Parasolid (.x_t, .x_b), ACIS (.sat), DWG, DXF, JT, STL, and native SolidWorks, CATIA, and NX files."
       }
     ],
     "tech_specs": {
-      "engine": "Granite",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "PTC Granite Geometric Modeling Kernel",
+      "multicore": "Multi-threaded graphics tessellation, mass property calculation & drawing view projection",
+      "gpu_optimization": "ISV-certified OpenGL and DirectX hardware acceleration optimized for professional workstation GPUs",
       "standards": [
-        "PRT",
-        "STEP",
+        "Granite (Native)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "STL"
+        "JT (ISO 14306)",
+        "DWG",
+        "DXF",
+        "PDF",
+        "ASME Y14.41 (MBD)"
       ]
     },
-    "expert_verdict": "Creo is for serious engineering at massive scales.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Brazilian Portuguese"
-    ],
+    "expert_verdict": "PTC Creo is a heavy-duty CAD workhorse built for rigorous mechanical engineering. With its pioneering skeleton-based top-down assembly framework, seamless Unite multi-CAD interoperability, and Ansys-powered real-time simulation, Creo delivers an exceptionally dependable digital foundation for global machinery and aerospace manufacturing.",
     "file_formats_in": [
       "PRT",
       "ASM",
       "DRW",
       "STEP",
       "IGES",
-      "STL",
+      "X_T",
+      "X_B",
+      "SAT",
+      "JT",
       "DWG",
       "DXF",
-      "CATPart",
       "SLDPRT",
-      "JT",
-      "Parasolid"
+      "SLDASM",
+      "CATPART",
+      "CATPRODUCT"
     ],
     "file_formats_out": [
       "PRT",
       "ASM",
+      "DRW",
       "STEP",
       "IGES",
-      "STL",
+      "X_T",
+      "X_B",
+      "SAT",
+      "JT",
       "DWG",
       "DXF",
-      "JT",
+      "STL",
       "OBJ",
-      "VRML",
-      "PDF",
-      "3D PDF"
-    ],
-    "integrations": [
-      "Windchill",
-      "ThingWorx",
-      "Vuforia",
-      "Creo Simulate",
-      "Creo Generative Design",
-      "Mathcad"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid"
+      "3MF",
+      "PDF"
     ],
     "license_types": [
       "Subscription",
-      "Network",
-      "Floating"
-    ],
-    "support_channels": [
-      "Phone",
-      "Email",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
+      "Floating",
+      "Educational",
+      "Commercial"
     ],
     "security_compliance": [
-      "SOC 2 Type II",
+      "ITAR Compliant",
       "ISO 27001",
-      "GDPR Privacy Framework",
-      "ITAR / EAR Ready (Dedicated GovCloud / On-Premise Deployment)"
+      "PTC Enterprise Security Guidelines"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Japanese",
+      "Korean",
+      "Russian"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "Pro/TOOLKIT / J-Link / Web.Link",
-      "sdk_languages": [
-        "C",
-        "C++",
-        "Java",
-        "JavaScript"
-      ],
-      "docs_url": "https://support.ptc.com/help/creo/creo_pma/r11.0/"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Community",
+      "Documentation"
+    ]
   },
   {
-    "id": "t24",
+    "id": "t27",
     "name": "OpenSCAD",
     "slug": "openscad",
-    "logo_url": "/logos/openscad.ico",
-    "short_desc": "The programmer's solid 3D CAD modeler.",
-    "description": "OpenSCAD is a free, open-source programmatic 3D solid CAD compiler designed for engineers and makers who prefer deterministic code over interactive mouse-driven modeling. Using Constructive Solid Geometry (CSG) and CGAL/Manifold boolean evaluation, it compiles script-defined variables and modules into watertight STL, OFF, AMF, 3MF, and DXF files ideal for customizable 3D-printed hardware.",
+    "logo_url": "/logos/openscad.svg",
+    "short_desc": "The programmer’s solid 3D CAD modeler that compiles textual script files into exact 3D models using constructive solid geometry (CSG).",
+    "description": "OpenSCAD is a free, open-source 3D CAD modeler licensed under GPLv2, designed specifically for programmers, algorithmic designers, and 3D printing enthusiasts. Unlike traditional interactive GUI-based CAD tools that rely on mouse clicks and sketching planes, OpenSCAD functions as a 3D compiler: users write declarative, code-based scripts that describe geometric primitives and boolean transformations. Powered by the Computational Geometry Algorithms Library (CGAL) and OpenCSG, OpenSCAD provides mathematically exact, 100% reproducible parametric models that run cross-platform on Windows, macOS, and Linux without commercial licensing costs.",
     "pricing_tiers": [
       {
-        "name": "Open Source",
+        "name": "OpenSCAD Open Source Edition",
         "price": "Free",
-        "period": "/yr",
+        "period": "free forever (gplv2)",
         "features": [
-          "Full feature set",
-          "Community support",
-          "Free forever"
+          "Code-Based Declarative 3D CAD Modeling Compiler",
+          "Constructive Solid Geometry (CSG) Boolean Primitives",
+          "OpenCSG Fast OpenGL Preview & CGAL Precision Mesh Rendering",
+          "Parametric Variable Customization & Mathematical Formula Generation",
+          "Direct Export to STL, 3MF, OBJ, OFF, DXF, and SVG",
+          "Completely Free and Open Source for Linux, macOS, and Windows"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Programming",
+        "category": "Code-Driven Geometric Modeling",
         "items": [
           {
-            "name": "Script-based CAD",
+            "name": "Text-Based 3D Modeling Compiler Reading Pure Code Script Files (.scad)",
             "status": true
           },
           {
-            "name": "Variables/Loops",
+            "name": "Constructive Solid Geometry (CSG) Primitives (Cubes, Spheres, Cylinders, Polyhedra)",
             "status": true
           },
           {
-            "name": "Module System",
+            "name": "Boolean Geometry Operations (Union, Difference, Intersection, Minkowski Sum)",
+            "status": true
+          },
+          {
+            "name": "Procedural Loops, Mathematical Functions, Arrays, and Conditional Logic",
+            "status": true
+          },
+          {
+            "name": "Extrusion of 2D Vector Curves into 3D Solids (Linear Extrude & Rotate Extrude)",
             "status": true
           }
         ]
       },
       {
-        "category": "Geometry",
+        "category": "Rendering, Preview & Customization",
         "items": [
           {
-            "name": "CSG Modeling",
+            "name": "Instant OpenGL Viewport Preview Utilizing OpenCSG Library",
             "status": true
           },
           {
-            "name": "STL Export",
+            "name": "Full Exact Mesh and Boundary Evaluation via CGAL Geometry Engine",
             "status": true
           },
           {
-            "name": "SVG Import",
+            "name": "Built-In Customizer GUI Generating Interactive Sliders for Script Variables",
+            "status": true
+          },
+          {
+            "name": "Command-Line Interface (CLI) for Headless Batch Model Compilation and Automated Rendering",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Open Community",
+        "items": [
+          {
+            "name": "Direct Export of High-Fidelity 3D Printing Meshes (STL, 3MF, OBJ, AMF)",
+            "status": true
+          },
+          {
+            "name": "2D Vector Profile Export (DXF, SVG) for Laser Cutting and CNC Routing",
+            "status": true
+          },
+          {
+            "name": "Version-Control Friendly Code Compatible with Git, GitHub, and CI/CD Pipelines",
+            "status": true
+          },
+          {
+            "name": "Zero Licensing Keys, Dongles, or Online Activation Requirements",
             "status": true
           }
         ]
@@ -2879,175 +3427,302 @@ export const c2Tools: Tool[] = [
       "solvespace",
       "blender"
     ],
-    "country": "Community/International",
+    "country": "International (Open Source)",
     "category_id": "c2",
-    "pricing_type": "Free",
+    "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
     "industries": [
-      "Hobbyist",
-      "Maker",
-      "Research"
+      "3D Printing & Additive Manufacturing",
+      "Maker Movement",
+      "Open Source Hardware",
+      "Education",
+      "Algorithmic Product Design"
     ],
     "core_features": [
-      "Script-based Modeling",
-      "CSG Geometry Engine",
-      "Parametric Variables"
+      "Pure Code-Driven Textual 3D CAD Modeling (.scad)",
+      "Constructive Solid Geometry (CSG) Boolean Engine",
+      "CGAL High-Precision Geometric Algorithms Library",
+      "OpenCSG Fast Real-Time OpenGL Viewport Previews",
+      "Interactive Customizer GUI with Dynamic Parameter Sliders",
+      "Headless Command-Line Interface (CLI) for Batch Scripts",
+      "Git-Friendly Text Source Code Version Control"
     ],
     "user_scales": [
-      "Individuals"
+      "Individual",
+      "Education",
+      "Maker"
     ],
-    "official_url": "https://openscad.org",
+    "official_url": "https://openscad.org/",
+    "pricing_url": "https://openscad.org/",
+    "trial_url": "https://openscad.org/downloads.html",
     "affiliate_url": null,
-    "score": 4.4,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/openscad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.capterra.com/p/162822/OpenSCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 15,
+        "url": "https://www.trustradius.com/products/openscad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.getapp.com/engineering-software/a/openscad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      },
+      {
+        "label": "3D Print Cost & Time Estimator",
+        "href": "/toolbox/3d-print-cost-time-estimator"
+      }
+    ],
     "pros": [
-      "Total code control",
-      "Perfect for 3D printing",
-      "Extremely lightweight"
+      "100% free and open-source under GPLv2, offering complete transparency with zero licensing fees or corporate telemetry.",
+      "Text-based CAD code allows complete version control with Git, automated diffs, code reviews, and reproducible builds.",
+      "Ideal for algorithmic, parametric models where dimensions depend strictly on formulas, equations, or programmatic iterations.",
+      "Headless command-line mode allows automated batch generation of 3D models on Linux servers or CI/CD pipelines.",
+      "Extremely lightweight installation package with instant startup and fast cross-platform execution on Windows, Mac, and Linux.",
+      "Massive open-source ecosystem of libraries (like BOSL2, MCAD) providing ready-made mechanical gears, threads, and hardware."
     ],
     "cons": [
-      "No interactive GUI",
-      "Cody learning curve",
-      "Poor organic shapes"
+      "No interactive visual direct editing; you cannot click and drag geometry or use mouse sketching to sculpt shapes.",
+      "CGAL final geometry rendering (F6) can be computationally slow on models with intricate curved surfaces or high facet counts.",
+      "Limited native STEP/B-Rep boundary representation export; output focuses primarily on faceted polygonal meshes (STL, 3MF).",
+      "Steep initial learning curve for designers without programming or scripting experience.",
+      "Lacks native technical drawing creation (TechDraw/GD&T) tools found in traditional commercial CAD packages.",
+      "No official telephone or corporate enterprise customer support; assistance is community and forum-driven."
     ],
     "faqs": [
       {
-        "q": "What is OpenSCAD used for?",
-        "a": "The programmer's solid 3D CAD modeler. OpenSCAD is a 3D modeling solution widely adopted in Hobbyist, Maker, Research."
+        "q": "What is OpenSCAD and how does it work?",
+        "a": "According to the official OpenSCAD project documentation, OpenSCAD is software for creating solid 3D CAD objects. Unlike most 3D CAD programs that focus on visual interactive sketching, OpenSCAD works like a 3D compiler: you edit a plain-text script that describes shapes and boolean operations, and OpenSCAD compiles the code into an exact 3D render. Learn more on the [Official OpenSCAD Website](https://openscad.org/)."
       },
       {
-        "q": "How much does OpenSCAD cost?",
-        "a": "OpenSCAD is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official OpenSCAD Page](https://openscad.org)."
+        "q": "Is OpenSCAD completely free for commercial projects?",
+        "a": "Yes. OpenSCAD is open-source software licensed under the GNU General Public License v2 (GPLv2). You can use OpenSCAD to design, manufacture, and sell commercial physical products without paying software license fees."
       },
       {
-        "q": "Is OpenSCAD really free?",
-        "a": "Yes — OpenSCAD is free and open-source software (GPLv2+). You can download, use, modify, and redistribute it without any payment. Donations and community sponsors support ongoing development."
+        "q": "Can OpenSCAD export files for 3D printing?",
+        "a": "Yes. OpenSCAD is one of the most widely used tools in the 3D printing community. It exports clean, manifold triangle meshes in STL, 3MF, OBJ, and AMF formats that can be opened directly by slicing software (like PrusaSlicer, Bambu Studio, and Cura)."
       },
       {
         "q": "What operating systems does OpenSCAD support?",
-        "a": "OpenSCAD runs on Windows, macOS, and Linux. A WebAssembly build also lets you run OpenSCAD directly in the browser (used by Thingiverse Customizer and OpenSCAD Playground)."
+        "a": "OpenSCAD is cross-platform, running on 64-bit Microsoft Windows 11/10, macOS (Apple Silicon and Intel x86_64), Linux distributions, and BSD systems. It also provides lightweight AppImage and command-line headless packages. Download files from the [Official OpenSCAD Downloads](https://openscad.org/downloads.html)."
       },
       {
-        "q": "Which file formats does OpenSCAD support?",
-        "a": "OpenSCAD imports .scad, DXF, SVG, STL, OFF, AMF, and 3MF files, and exports STL, OFF, AMF, 3MF, DXF, SVG, CSG, PNG, and PDF. It cannot import STEP or IGES directly (that requires an OpenCASCADE-based tool like FreeCAD) — convert via STL first. Check the official documentation for the complete list."
+        "q": "Can OpenSCAD export STEP or IGES files?",
+        "a": "OpenSCAD historically focuses on Constructive Solid Geometry (CSG) polygon meshes and 2D vector profiles (DXF/SVG). While experimental STEP export exists in recent development snapshots, production workflows typically export STL/3MF for printing or DXF for CNC routing."
       },
       {
-        "q": "What are the best alternatives to OpenSCAD?",
-        "a": "The closest alternatives to OpenSCAD are FreeCAD, SolveSpace, Blender. FreeCAD (free and open-source) competes directly on core Hobbyist workflows, while SolveSpace (free and open-source) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "q": "What is the Customizer in OpenSCAD?",
+        "a": "The Customizer is an integrated GUI feature in OpenSCAD that automatically scans script parameters and generates an interactive graphical panel with sliders, drop-down menus, and text fields, enabling non-programmers to customize model dimensions visually."
       }
     ],
     "tech_specs": {
-      "engine": "CGAL / Manifold (default since 2025 nightlies) / OpenCSG Preview",
-      "multicore": "Single-Threaded Script Evaluation / GPU-Accelerated Preview & Fast Manifold Rendering",
-      "gpu_optimization": "OpenGL (OpenCSG preview pipeline)",
+      "engine": "CGAL & OpenCSG Computational Engines",
+      "multicore": "Multi-threaded OpenGL previewing / Single-threaded CGAL geometric boolean evaluation",
+      "gpu_optimization": "Fast hardware-accelerated OpenGL CSG Viewport Rendering Pipeline",
       "standards": [
+        "SCAD (Native Code)",
+        "CSG",
         "STL",
-        "OFF",
-        "AMF",
-        "CSG"
+        "3MF",
+        "OBJ",
+        "DXF",
+        "SVG",
+        "OFF"
       ]
     },
-    "expert_verdict": "OpenSCAD is the ultimate tool for engineers who think in code.",
+    "expert_verdict": "OpenSCAD is the ultimate tool for engineers who think in code. By treating 3D geometry as programmatic source files rather than opaque binary blobs, it unlocks unprecedented version control with Git, automated parameterization, and 100% reproducible precision for additive manufacturing and algorithmic hardware design.",
     "file_formats_in": [
       "SCAD",
+      "CSG",
       "DXF",
       "SVG",
       "STL",
-      "OFF",
-      "AMF",
-      "3MF"
+      "PNG"
     ],
     "file_formats_out": [
       "STL",
+      "3MF",
+      "OBJ",
       "OFF",
       "AMF",
-      "3MF",
       "DXF",
       "SVG",
       "CSG",
-      "PNG",
-      "PDF"
+      "PNG"
+    ],
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "security_compliance": [
+      "Air-Gapped Operation",
+      "Zero Telemetry",
+      "Auditable Open-Source Codebase"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Russian",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Community",
+      "Documentation"
     ]
   },
   {
-    "id": "t25",
+    "id": "t28",
     "name": "Shapr3D",
     "slug": "shapr3d",
-    "logo_url": "/logos/shapr3d.png",
-    "short_desc": "Professional CAD for mobile and desktop mobility.",
-    "description": "Shapr3D is a modern, cross-platform direct and history-based 3D CAD application engineered natively for Apple Silicon Macs, iPads (with Apple Pencil), and Windows tablets. Powered locally by the industrial Siemens Parasolid kernel and D-Cubed constraint solver, it combines tactile direct push/pull editing with parametric feature trees, real-time visualization, and native STEP/IGES/SLDPRT interoperability.",
+    "logo_url": "/logos/shapr3d.svg",
+    "short_desc": "Multi-device 3D CAD modeling software running on iPad, Mac, and Windows, powered by the Siemens Parasolid engine and direct touch/pen input.",
+    "description": "Shapr3D is a modern, intuitive 3D computer-aided design (CAD) software application engineered for mechanical engineers, industrial designers, and prototype fabricators. Built directly on the industrial-standard Siemens Parasolid geometric modeling kernel and D-Cubed constraint solver, Shapr3D blends the precision of desktop parametric solid modeling with a touch-and-pencil-first direct modeling workflow. With real-time cross-device cloud synchronization across iPadOS, macOS, and 64-bit Windows, Shapr3D empowers designers to sketch concepts on the go and seamlessly export production-ready STEP and 2D manufacturing drawings.",
     "pricing_tiers": [
       {
-        "name": "Basic",
+        "name": "Shapr3D Basic Free",
         "price": "Free",
-        "period": "Free Tier",
+        "period": "free starter plan",
         "features": [
-          "Up to 2 projects on macOS, iPadOS, Windows & visionOS",
-          "Import XT, STEP, IGES, DWG, STL",
-          "Basic-resolution 3MF/STL export",
-          "Basic technical support"
-        ]
+          "Core 3D Direct Modeling on iPad, Mac, and Windows",
+          "Up to 2 Active Editable Design Spaces",
+          "Low-Resolution STL and 3MF Export for 3D Printing",
+          "Standard Community Support and Tutorial Library"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Pro",
+        "name": "Shapr3D Pro",
         "price": "Official Store",
-        "period": "Monthly / Annual Subscription (per Editor seat)",
+        "period": "monthly / annual subscription",
         "features": [
-          "Unlimited projects, technical drawings & real-time renders",
-          "High-resolution export & SLDPRT/SLDASM import",
-          "Integrated AR on iPad & secure sharing links",
-          "Priority technical support"
+          "Unlimited Active Workspaces and Cloud Auto-Sync Across All Devices",
+          "Full Industrial STEP, IGES, Parasolid (X_T), and DWG/DXF Export",
+          "Associative 2D Production Drawing Generation with Dimensions & Tolerances",
+          "Photorealistic Real-Time Visualization Rendering Engine",
+          "History-Based Parametric Timeline Editing Mode"
         ],
         "is_popular": true
       },
       {
-        "name": "Enterprise",
-        "price": "Official Store",
-        "period": "Custom Quote",
+        "name": "Shapr3D Team & Enterprise",
+        "price": "Custom Quote",
+        "period": "annual subscription contract",
         "features": [
-          "Unlimited teams, teamspaces & granular access control",
-          "Enterprise importers (NX, CATIA V5, Creo, Solid Edge, Rhino) & exporters",
-          "SSO, single-tenant/private-cloud/on-prem data options & PLM integration",
-          "Dedicated account manager & customized training"
+          "Centralized Cloud Team Workspace Sharing and Role Governance",
+          "Single Sign-On (SSO) Security Authentication (SAML / Okta)",
+          "Consolidated Billing and Dedicated Priority Customer Success Support"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "Multi-Device Direct & Parametric Modeling",
         "items": [
           {
-            "name": "Direct Modeling",
+            "name": "Siemens Parasolid Industrial Geometric Kernel & D-Cubed Constraint Engine",
             "status": true
           },
           {
-            "name": "Parasolid Core",
+            "name": "Intuitive Direct Push/Pull Modeling Optimized for Apple Pencil and Touch Interaction",
             "status": true
           },
           {
-            "name": "Apple Pencil Support",
+            "name": "History-Based Parametric Feature Timeline for Non-Destructive Dimension Modifications",
+            "status": true
+          },
+          {
+            "name": "Real-Time Cloud Synchronization across iPadOS, macOS, and Windows Workstations",
+            "status": true
+          },
+          {
+            "name": "Precision Sheet Metal, Shell, Fillet, and Chamfer Mechanical Engineering Operations",
             "status": true
           }
         ]
       },
       {
-        "category": "Workflow",
+        "category": "Drawings & Photorealistic Visualization",
         "items": [
           {
-            "name": "Desktop/iPad Sync",
+            "name": "Associative 2D Technical Drawing Generation with Standard Views and Section Cuts",
             "status": true
           },
           {
-            "name": "Visualization Mode",
+            "name": "Integrated Real-Time Physically Based Rendering (PBR) Materials and Environments",
             "status": true
           },
           {
-            "name": "AR Preview",
+            "name": "Augmented Reality (AR) Model Placement on iPad and iPhone Devices",
+            "status": true
+          },
+          {
+            "name": "Instant Measurement and Dynamic Section Plane Inspection Tools",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Manufacturing Export",
+        "items": [
+          {
+            "name": "High-Fidelity STEP, IGES, Parasolid (.x_t), and SAT CAD Translation",
+            "status": true
+          },
+          {
+            "name": "Direct Export of Fine-Tuned Meshes (STL, 3MF, OBJ) for 3D Printing Slicers",
+            "status": true
+          },
+          {
+            "name": "2D Vector Profile Export (DXF, DWG) for Laser and Waterjet CNC Cutting",
+            "status": true
+          },
+          {
+            "name": "Offline Local Modeling Mode when Disconnected from Internet Networks",
             "status": true
           }
         ]
@@ -3055,154 +3730,297 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "fusion-360",
-      "solidworks",
-      "onshape"
+      "rhino-3d",
+      "solidworks"
     ],
     "country": "Hungary",
     "category_id": "c2",
     "pricing_type": "Freemium",
-    "starting_price": 0,
+    "starting_price": 499,
+    "price_period": "year",
     "platforms": [
-      "Windows",
+      "iPadOS",
       "macOS",
-      "iOS"
+      "Windows"
     ],
     "industries": [
       "Industrial Design",
-      "Prototyping",
-      "AEC"
+      "Mechanical Prototyping",
+      "Architecture & Interior",
+      "Jewelry & Craft",
+      "Woodworking"
     ],
     "core_features": [
-      "Direct Modeling with Apple Pencil",
-      "Parasolid Precision",
-      "Multi-Device Sync"
+      "Siemens Parasolid Industrial B-Rep Modeling Engine",
+      "Apple Pencil & Multi-Touch Direct Modeling Interface",
+      "History-Based Parametric Feature Tree Timeline",
+      "Real-Time Cross-Device Cloud Sync (iPad, Mac, Windows)",
+      "Associative 2D Manufacturing Drawing Generation",
+      "Integrated Physically Based Rendering (PBR) Visualizer",
+      "High-Fidelity STEP, IGES & Parasolid Interoperability"
     ],
     "user_scales": [
-      "Individuals",
-      "Small Business"
+      "Individual",
+      "SMB",
+      "Prototyping Teams"
     ],
-    "official_url": "https://www.shapr3d.com",
+    "official_url": "https://www.shapr3d.com/",
+    "pricing_url": "https://www.shapr3d.com/pricing",
+    "trial_url": "https://www.shapr3d.com/download",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 185,
+        "url": "https://www.g2.com/products/shapr3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 98,
+        "url": "https://www.capterra.com/p/186591/Shapr3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.9,
+        "max": 10,
+        "count": 35,
+        "url": "https://www.trustradius.com/products/shapr3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 98,
+        "url": "https://www.getapp.com/engineering-software/a/shapr3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to OBJ & glTF",
+        "href": "/toolbox/online-step-to-obj-gltf-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      }
+    ],
     "pros": [
-      "Most intuitive UI",
-      "Industrial Parasolid kernel",
-      "Offline mobility"
+      "Unmatched pen-and-touch modeling fluidity on iPad Pro with Apple Pencil, making 3D sketching feel completely natural.",
+      "Powered by the same Siemens Parasolid kernel found in SolidWorks and NX, ensuring mathematical precision for manufacturing.",
+      "Flawless multi-device continuity allowing designers to start a concept on iPad, refine it on Mac, and export on Windows.",
+      "Parametric History feature allows designers to edit past dimensions without sacrificing the intuitive direct modeling speed.",
+      "Integrated real-time physically based rendering (PBR) visualizer generates quick, professional concept presentation images.",
+      "Works completely offline locally; internet connection is only needed when syncing projects across devices."
     ],
     "cons": [
-      "Commercial tiers are subscription-only (no perpetual buyout)",
-      "Assembly maturing",
-      "Pencil req for iPad"
+      "Subscription pricing can be considered steep for individual hobbyists compared to FreeCAD or permanent buyout options.",
+      "Free tier is restricted to 2 active editable models and restricts STEP export, functioning primarily as an evaluation trial.",
+      "Lacks advanced engineering simulation workbenches (like non-linear FEA, CFD, or kinematic mechanism dynamic solvers).",
+      "Does not include native CAM multi-axis toolpath generation; requires export to Fusion or third-party CAM packages.",
+      "Massive multi-thousand-part industrial plant assemblies can push iPad hardware memory limits.",
+      "2D technical drawing generation is clean but has fewer specialized GD&T callout tools than SolidWorks or Inventor."
     ],
     "faqs": [
       {
-        "q": "What is Shapr3D used for?",
-        "a": "Professional CAD for mobile and desktop mobility. Shapr3D is a 3D modeling solution widely adopted in Industrial Design, Prototyping, AEC."
+        "q": "What is Shapr3D and what devices does it run on?",
+        "a": "According to Shapr3D official documentation, Shapr3D is a cross-platform 3D CAD application built on the Siemens Parasolid engine. It runs natively on iPadOS (optimized for Apple Pencil), macOS (both Apple Silicon and Intel), and 64-bit Microsoft Windows 11/10 (with touch, pen, or keyboard/mouse input). Learn more on the [Official Shapr3D Overview](https://www.shapr3d.com/)."
       },
       {
-        "q": "How much does Shapr3D cost?",
-        "a": "Shapr3D is a freemium app offering a free Basic tier plus paid subscriptions: Pro (per-Editor-seat annual or monthly billing) and Enterprise (custom quote), with a free Educational license for students and educators. Because seat rates, regional taxes, and billing options vary by country, please visit the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for live regional pricing."
+        "q": "What geometric modeling kernel does Shapr3D use?",
+        "a": "Shapr3D uses the industry-standard Siemens Parasolid geometric modeling kernel and the Siemens D-Cubed 2D/3D geometric constraint solver, ensuring full mathematical compatibility with top-tier industrial CAD software."
       },
       {
-        "q": "Is there a free version of Shapr3D?",
-        "a": "Yes — Shapr3D Basic is a permanent free tier that includes all modeling tools on macOS, iPadOS, Windows, and visionOS with limited projects and basic-quality exports. A free Pro trial (with credit card) is also available, and the license terms are updated periodically — check the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing) for current details."
+        "q": "Can I use Shapr3D for free?",
+        "a": "Yes. Shapr3D offers a Basic Free tier that allows you to create up to two active designs and export low-resolution STL/3MF files for 3D printing. Professional manufacturing exports (STEP, IGES, Parasolid) and technical drawings require a Shapr3D Pro subscription. Compare plans on the [Official Shapr3D Pricing Page](https://www.shapr3d.com/pricing)."
       },
       {
-        "q": "What operating systems does Shapr3D support?",
-        "a": "Shapr3D runs natively on Windows (10 v2004+), macOS (Sonoma 14.0+), iPadOS (17+ with Apple Pencil recommended), and visionOS."
+        "q": "Does Shapr3D require an active internet connection?",
+        "a": "No. Shapr3D stores and computes all 3D CAD geometry locally on your device's processor and GPU. You can design, model, and export files completely offline. Internet access is only needed for cloud syncing across devices and license verification."
       },
       {
-        "q": "Which file formats does Shapr3D support?",
-        "a": "Shapr3D imports X_T/X_B (Parasolid), STEP, IGES, the native SHAPR format and SOLIDWORKS parts and assemblies (.sldprt/.sldasm), plus DWG, DXF and SVG sketches and reference images; STL comes in for reference only. Export covers X_T/X_B, STEP, IGES, SHAPR, 3MF, OBJ, STL, GLB, USDZ and JT, with DWG, DXF, PDF, SVG, JPEG and PNG for 2D drawings. Native NX, CATIA, Creo, Solid Edge and JT import is an Enterprise feature, and the free Basic tier is capped at two projects with low-resolution 3MF/STL export."
+        "q": "Is Shapr3D purely direct modeling, or does it have a parametric history?",
+        "a": "Shapr3D combines direct modeling with a Parametric History Mode. You can directly pull, push, and chamfer geometry while a non-destructive feature timeline tracks your design operations, allowing you to edit previous dimensions and sketch constraints retroactively."
       },
       {
-        "q": "What are the best alternatives to Shapr3D?",
-        "a": "The closest alternatives to Shapr3D are SolidWorks, Onshape, and Autodesk Fusion (Fusion 360). Fusion 360 (offered on a Subscription license) competes directly on core Industrial Design workflows, while SolidWorks (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which file formats can Shapr3D export?",
+        "a": "Shapr3D Pro exports high-precision CAD formats including STEP, IGES, Parasolid (.x_t, .x_b), DXF, DWG, and mesh formats including STL, 3MF, OBJ, and vector PDF drawings."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Metal / DirectX",
+      "engine": "Siemens Parasolid Kernel & D-Cubed Constraint Solver",
+      "multicore": "Multi-threaded graphics tessellation, PBR rendering & export pipelines",
+      "gpu_optimization": "Metal 3 GPU hardware acceleration on Apple devices / DirectX 12 on Windows",
       "standards": [
-        "STEP",
+        "Parasolid (Native)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "XT",
-        "STL"
+        "DWG",
+        "DXF",
+        "STL",
+        "3MF",
+        "PDF"
       ]
     },
-    "expert_verdict": "Shapr3D has done the impossible: made professional CAD fun.",
+    "expert_verdict": "Shapr3D has revolutionized concept-to-prototype CAD. By pairing the mathematical muscle of the Siemens Parasolid engine with an incredibly fluid pen-and-touch UI across iPad, Mac, and Windows, it provides the most enjoyable, rapid direct modeling experience available for industrial designers and agile engineers today.",
     "file_formats_in": [
       "SHAPR",
+      "STEP",
+      "STP",
+      "IGES",
+      "IGS",
       "X_T",
       "X_B",
-      "STEP",
-      "IGES",
       "SLDPRT",
       "SLDASM",
-      "STL",
-      "OBJ",
       "DWG",
       "DXF",
-      "SVG",
-      "JT"
+      "STL"
     ],
     "file_formats_out": [
       "SHAPR",
+      "STEP",
+      "STP",
+      "IGES",
       "X_T",
       "X_B",
-      "STEP",
-      "IGES",
-      "3MF",
-      "OBJ",
-      "STL",
-      "GLB",
-      "USDZ",
-      "JT",
       "DWG",
       "DXF",
-      "SVG",
-      "PDF",
-      "PNG",
-      "JPG"
+      "STL",
+      "3MF",
+      "OBJ",
+      "PDF"
     ],
-    "pricing_url": "https://www.shapr3d.com/pricing"
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "SOC 2 Type II",
+      "GDPR Compliant",
+      "Local On-Device Encryption"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Korean",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ]
   },
   {
     "id": "t29",
     "name": "SolveSpace",
     "slug": "solvespace",
-    "logo_url": "/logos/solvespace.png",
-    "short_desc": "A minimalist, open-source 2D/3D parametric CAD tool.",
-    "description": "SolveSpace is an ultra-lightweight, free open-source (GPLv3) 2D and 3D parametric CAD program built around an advanced geometric constraint solver. Distributed as a standalone executable under 10 MB, it supports sketch-based extrusions, revolves, boolean operations, mechanical linkage kinematics, STL mesh export, and 2D DXF/PDF/G-code output for laser and CNC cutting.",
+    "logo_url": "/logos/solvespace.svg",
+    "short_desc": "A lightweight, open-source parametric 2D and 3D CAD program with a built-in geometric constraint solver and mechanism kinematics.",
+    "description": "SolveSpace is an ultra-lightweight, free and open-source parametric 2D and 3D CAD program licensed under GPLv3. Weighing in at under 10 megabytes, SolveSpace features its own standalone geometric constraint solver, allowing mechanical hobbyists, makers, and students to model 3D parts, simulate mechanism linkages, export 3D printing meshes, and generate clean 2D vector drawing profiles for laser cutting without dependencies on heavy external CAD kernels. It runs portably on Windows, macOS, and Linux without installation.",
     "pricing_tiers": [
       {
-        "name": "Open Source",
+        "name": "SolveSpace Open Source Edition",
         "price": "Free",
-        "period": "/forever",
+        "period": "free forever (gplv3)",
         "features": [
-          "Parametric 2D/3D modeling",
-          "Geometric constraint solver",
-          "Assembly mechanisms",
-          "G-code export"
+          "Lightweight Parametric 2D & 3D Solid Modeler (Under 10MB Executable)",
+          "Integrated Real-Time Geometric Constraint Engine",
+          "Kinematic Mechanism Simulation and Linkage Motion Studies",
+          "Direct Export of Triangle Meshes (STL, OBJ) for 3D Printing",
+          "Clean 2D Vector Projection (DXF, EPS, PDF, SVG) for Laser Cutters",
+          "Portable Cross-Platform Support for Windows, macOS, and Linux"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "Parametric Modeling & Geometric Solver",
         "items": [
           {
-            "name": "Constraint Solver",
+            "name": "Lightweight History-Based Parametric Sketcher with Real-Time Degree-of-Freedom Counter",
             "status": true
           },
           {
-            "name": "Sketching",
+            "name": "Proprietary Autonomous Geometric Constraint Solver for Distances, Angles, and Tangency",
             "status": true
           },
           {
-            "name": "STEP Export",
+            "name": "3D Extrusions, Revolved Solids, and Boolean Operations (Union, Difference, Intersection)",
+            "status": true
+          },
+          {
+            "name": "Assembly Mechanism Linkage Simulation with Drag-and-Simulate Real-Time Motion",
+            "status": true
+          },
+          {
+            "name": "Step-and-Repeat Parametric Repeating Pattern Arrays (Linear and Rotational)",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Export & Laser/CAM Preparation",
+        "items": [
+          {
+            "name": "High-Precision 2D Vector Path Export (DXF, EPS, SVG, PDF) for CNC Laser and Vinyl Cutters",
+            "status": true
+          },
+          {
+            "name": "Configurable Chordal Tolerance Mesh Export (STL, OBJ) for 3D Printing Slicers",
+            "status": true
+          },
+          {
+            "name": "Direct STEP and Neutral Geometry Wireframe Translation",
+            "status": true
+          },
+          {
+            "name": "Portable Single Executable Operation Requiring Zero Administrative Installation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Open-Source Extensibility",
+        "items": [
+          {
+            "name": "100% Free and Open-Source Software Governed by GNU General Public License v3",
+            "status": true
+          },
+          {
+            "name": "Zero Network Communication, Tracking, Telemetry, or Cloud Account Dependencies",
+            "status": true
+          },
+          {
+            "name": "Lightweight Text-Based Native File Format (.slvs) Compatible with Git Version Control",
+            "status": true
+          },
+          {
+            "name": "Clean C++ Codebase Easily Compiled on Minimal Hardware Systems",
             "status": true
           }
         ]
@@ -3213,156 +4031,296 @@ export const c2Tools: Tool[] = [
       "openscad",
       "librecad"
     ],
-    "country": "Community/International",
+    "country": "International (Open Source)",
     "category_id": "c2",
-    "pricing_type": "Free",
+    "pricing_type": "Open Source",
     "starting_price": 0,
+    "price_period": "one-time",
     "platforms": [
       "Windows",
       "macOS",
       "Linux"
     ],
     "industries": [
-      "Hobbyist",
-      "Light Engineering",
-      "Education"
+      "Maker Community",
+      "Laser Cutting & Rapid Prototyping",
+      "3D Printing",
+      "Education",
+      "Mechanical Mechanism Design"
     ],
     "core_features": [
-      "Constraint Solver",
-      "Minimalist Footprint",
-      "STEP Export"
+      "Ultra-Lightweight Standalone Binary (Under 10MB)",
+      "Autonomous Geometric Constraint & DOF Solver",
+      "Parametric 3D Extrusions & Revolved Solid Geometry",
+      "Mechanism Kinematics & Linkage Motion Simulation",
+      "Laser Cutter Ready Vector Projections (DXF, EPS, SVG)",
+      "High-Fidelity 3D Slicer Mesh Output (STL, OBJ)",
+      "Completely Free & Open Source (GPLv3) Cross-Platform"
     ],
     "user_scales": [
-      "Individuals"
+      "Individual",
+      "Education",
+      "Maker"
     ],
-    "official_url": "https://solvespace.com",
+    "official_url": "https://solvespace.com/",
+    "pricing_url": "https://solvespace.com/",
+    "trial_url": "https://solvespace.com/download.pl",
     "affiliate_url": null,
-    "score": 4.1,
+    "score": 4.3,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 22,
+        "url": "https://www.g2.com/products/solvespace/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.capterra.com/p/162828/SolveSpace/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8,
+        "max": 10,
+        "count": 8,
+        "url": "https://www.trustradius.com/products/solvespace/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.getapp.com/engineering-software/a/solvespace/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STL Mesh Diagnostic Checker",
+        "href": "/toolbox/stl-mesh-checker"
+      },
+      {
+        "label": "3D Print Chordal Deviation",
+        "href": "/toolbox/3d-printing-chordal-deviation"
+      }
+    ],
     "pros": [
-      "Tiny file size",
-      "Fast for simple parts",
-      "Pure logic"
+      "Incredibly fast and lightweight; the entire application is under 10MB, launches instantaneously, and requires no installer.",
+      "100% free and open source under GPLv3, with zero licensing overhead, advertisements, or telemetry tracking.",
+      "The built-in geometric constraint solver is fast, responsive, and features an intuitive degree-of-freedom indicator.",
+      "Superb linkage mechanism simulation allowing engineers to drag parts and test planar kinematics in real time.",
+      "Produces exceptionally clean, mathematically accurate 2D vector toolpaths (DXF, SVG, EPS) ideal for laser and waterjet cutters.",
+      "Native text-based file format (.slvs) makes models easy to track with Git and lightweight to distribute."
     ],
     "cons": [
-      "No assembly management",
-      "Basic UI",
-      "Limited rendering"
+      "Boolean operations on complex curved NURBS solids can occasionally fail due to the minimalist boundary evaluator.",
+      "Lacks advanced modern parametric features like variable-radius fillets, complex lofting, and advanced sheet metal unfolding.",
+      "User interface utilizes a unique floating text panel and monochrome viewport that feels retro compared to commercial CAD suites.",
+      "Exporting to professional neutral CAD formats (STEP/IGES) is more limited compared to full-blown B-Rep modelers.",
+      "Small developer team and community compared to major open-source projects like FreeCAD or Blender.",
+      "No corporate customer service or dedicated enterprise SLA; support is handled via community forums."
     ],
     "faqs": [
       {
-        "q": "What is SolveSpace used for?",
-        "a": "A minimalist, open-source 2D/3D parametric CAD tool. SolveSpace is a 3D modeling solution widely adopted in Hobbyist, Light Engineering, Education."
+        "q": "What is SolveSpace and what makes it unique?",
+        "a": "According to the official SolveSpace documentation, SolveSpace is a free, parametric 2D and 3D CAD program developed by Jonathan Westhues and open-source contributors. Its defining trait is extreme lightness (under 10 MB total size) paired with a fast, self-contained geometric constraint solver and planar mechanism simulator. Explore details on the [Official SolveSpace Website](https://solvespace.com/)."
       },
       {
-        "q": "How much does SolveSpace cost?",
-        "a": "SolveSpace is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official SolveSpace Page](https://solvespace.com)."
+        "q": "Is SolveSpace free for commercial use?",
+        "a": "Yes. SolveSpace is licensed under the GNU General Public License v3 (GPLv3). You can freely use SolveSpace to design commercial products, prototypes, and production machine components without licensing fees."
       },
       {
-        "q": "Is SolveSpace really free?",
-        "a": "Yes — SolveSpace is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can SolveSpace simulate mechanism motion?",
+        "a": "Yes. One of SolveSpace's most powerful capabilities is kinematic mechanism simulation. You can sketch linkages, ball joints, and pin hinges, and directly drag components with the mouse to visualize planar or spatial movement and check for binding."
       },
       {
         "q": "What operating systems does SolveSpace support?",
-        "a": "SolveSpace runs on Windows, macOS, and Linux."
+        "a": "SolveSpace is cross-platform, running on 64-bit Microsoft Windows 11/10, macOS (Intel and Apple Silicon), and Linux systems. It is distributed as a standalone portable binary. Download builds from the [Official SolveSpace Download Page](https://solvespace.com/download.pl)."
       },
       {
-        "q": "Which file formats does SolveSpace support?",
-        "a": "SolveSpace reads its native .slvs files, DXF drawings (as an import group) and IDF (.emn) PCB outlines, and exports STEP (always in millimetres), STL, OBJ, DXF, SVG, EPS, PDF, HPGL, PNG and simple G-code for 2D parts. It has no IGES or Parasolid support, and no native STEP import — a STEP file has to be converted before it can come back in."
+        "q": "What file formats does SolveSpace export?",
+        "a": "SolveSpace exports 3D mesh formats including STL and OBJ for 3D printing slicers, STEP files for basic CAD interchange, and 2D vector formats including DXF, EPS, PDF, and SVG for laser cutters and technical illustration."
       },
       {
-        "q": "What are the best alternatives to SolveSpace?",
-        "a": "The closest alternatives to SolveSpace are FreeCAD, OpenSCAD, LibreCAD. FreeCAD is the leading free/open-source alternative, while OpenSCAD is favored for script-based modeling. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "q": "How does SolveSpace handle 2D sketching constraints?",
+        "a": "SolveSpace uses a real-time solver that continuously displays the remaining degrees of freedom (DOF). You can constrain lines, circles, and points with exact dimensions, parallel/perpendicular alignments, and tangent constraints until the sketch is fully defined."
       }
     ],
     "tech_specs": {
-      "engine": "SolveSpace Custom Solver",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "None",
+      "engine": "SolveSpace Autonomous Geometric Constraint Solver",
+      "multicore": "Multi-threaded mesh tessellation / Single-threaded constraint solving",
+      "gpu_optimization": "Ultra-lightweight direct OpenGL 2.1 Viewport Pipeline",
       "standards": [
+        "SLVS (Native)",
         "STEP",
+        "DXF",
+        "SVG",
+        "EPS",
+        "PDF",
         "STL",
-        "DXF"
+        "OBJ"
       ]
     },
-    "expert_verdict": "A masterclass in minimalist parametric design.",
+    "expert_verdict": "SolveSpace is an engineering gem. Packing a complete parametric solid modeler, real-time geometric constraint solver, and mechanism motion simulator into a single 10MB executable, it is the purest and fastest way to design laser-cut profiles, simple 3D prints, and planar mechanical linkages with zero software bloat.",
     "file_formats_in": [
+      "SLVS",
+      "STEP",
       "DXF",
-      "IDF (EMN)"
+      "DWG"
     ],
     "file_formats_out": [
+      "SLVS",
       "STEP",
-      "STL",
-      "OBJ",
       "DXF",
-      "SVG",
-      "PDF",
       "EPS",
-      "HPGL",
-      "PNG",
-      "GCODE"
+      "PDF",
+      "SVG",
+      "STL",
+      "OBJ"
+    ],
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "security_compliance": [
+      "Air-Gapped Operation",
+      "Zero Telemetry",
+      "Fully Portable Single Executable"
+    ],
+    "languages": [
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Community",
+      "Documentation"
     ]
   },
   {
     "id": "t30",
     "name": "Alibre Design",
     "slug": "alibre-design",
-    "logo_url": "/logos/alibre-design.png",
-    "short_desc": "Professional 3D CAD without the enterprise price tag.",
-    "description": "Alibre Design is a commercial history-based 3D parametric CAD suite built on the Spatial ACIS solid modeling kernel and D-Cubed constraint engines, celebrated for its transparent perpetual licensing. Available in Atom3D, Professional, and Expert editions, it delivers part and assembly modeling, associative 2D drafting, sheet metal lofting, global parameter spreadsheets, and KeyShot rendering.",
+    "logo_url": "/logos/alibre-design.svg",
+    "short_desc": "Cost-effective professional 3D parametric mechanical CAD featuring perpetual buyout licensing, advanced sheet metal, and ACIS modeling.",
+    "description": "Alibre Design is a professional 3D parametric mechanical computer-aided design (CAD) software platform developed by Alibre, LLC. Built on the industrial Dassault Spatial 3D ACIS geometric modeling kernel, Alibre Design provides comprehensive mechanical part modeling, large assembly design, dedicated sheet metal unfolding, associative 2D manufacturing drawings, and embedded Python scripting. Offering perpetual buyout licenses with optional software maintenance alongside flexible subscriptions, Alibre Design is a favored high-value CAD alternative for small and medium manufacturing enterprises, machine builders, and fabrication shops.",
     "pricing_tiers": [
       {
-        "name": "Professional",
+        "name": "Alibre Atom3D",
         "price": "Official Store",
-        "period": "Perpetual",
+        "period": "perpetual buyout license",
         "features": [
-          "3D Parametric",
-          "2D Drafting",
-          "Keyshot bundle"
-        ]
+          "Core 3D Parametric Part and Assembly Modeling for Makers & 3D Printing",
+          "Automated Associative 2D Technical Drawing Creation",
+          "Standard Neutral CAD Import and Export (STEP, IGES, SAT, DWG, DXF)",
+          "Perpetual Buyout License with Zero Required Recurring Fees"
+        ],
+        "is_popular": false
       },
       {
-        "name": "Expert",
+        "name": "Alibre Design Professional",
         "price": "Official Store",
-        "period": "Perpetual",
+        "period": "perpetual buyout / maintenance",
         "features": [
-          "Sheet Metal",
-          "Motion Analysis",
-          "Full Library"
+          "Complete Industrial 3D Parametric Solid & Mechanical Assembly Modeler",
+          "Advanced Associative 2D Production Drawings with Full GD&T Callouts",
+          "Integrated Standard Fastener and Hardware Catalog Parts",
+          "Dynamic Motion Simulation and Assembly Interference Checking",
+          "Includes 1 Year of Software Maintenance Updates & Technical Support"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Alibre Design Expert",
+        "price": "Official Store",
+        "period": "perpetual buyout / maintenance",
+        "features": [
+          "Includes All Professional 3D CAD Modeling Capabilities",
+          "Dedicated Parametric Sheet Metal Design with Automatic Flat Patterns",
+          "Alibre Script Python API Automation for Parametric Geometry Generation",
+          "Photorealistic Real-Time Rendering Powered by KeyShot Engine",
+          "Direct Import Translators for Native SolidWorks, Inventor, and Creo Files"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modeling",
+        "category": "3D Parametric Modeling & Assemblies",
         "items": [
           {
-            "name": "Parametric Design",
+            "name": "Dassault Spatial 3D ACIS Industrial Geometric Modeling Kernel",
             "status": true
           },
           {
-            "name": "Global Variables",
+            "name": "Feature-Tree History-Based 3D Parametric Part Modeling and Extrusions",
             "status": true
           },
           {
-            "name": "Sheet Metal",
+            "name": "Large Mechanical Assembly Management with Motion Kinematic Constraints",
+            "status": true
+          },
+          {
+            "name": "Associative 2D Production Drawings with Automated Bill of Materials (BOM)",
+            "status": true
+          },
+          {
+            "name": "Direct Surface Modeling and Precision Solid Boolean Operations",
             "status": true
           }
         ]
       },
       {
-        "category": "Presentation",
+        "category": "Sheet Metal & Python Automation (Expert)",
         "items": [
           {
-            "name": "Keyshot Render",
+            "name": "Dedicated Sheet Metal Workbench with Flanges, Bends, and Unfolded Flat Patterns",
             "status": true
           },
           {
-            "name": "2D Detailing",
+            "name": "Alibre Script Python Environment for Automated Parametric Model Creation",
             "status": true
           },
           {
-            "name": "Exploded Views",
+            "name": "Integrated Photorealistic Ray-Traced Rendering Powered by KeyShot",
+            "status": true
+          },
+          {
+            "name": "Assembly Clearance, Contact Interference, and Mass Properties Calculation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Licensing Freedom",
+        "items": [
+          {
+            "name": "Permanent Buyout Perpetual Licensing Model with Zero Mandatory Renewals",
+            "status": true
+          },
+          {
+            "name": "High-Fidelity STEP (AP203/AP214/AP242), IGES, and ACIS (.SAT) Translation",
+            "status": true
+          },
+          {
+            "name": "Direct Native SolidWorks (.sldprt/.sldasm) and Inventor Import Translators",
+            "status": true
+          },
+          {
+            "name": "Open C++ and .NET API Architecture for Custom Plugin Development",
             "status": true
           }
         ]
@@ -3370,120 +4328,208 @@ export const c2Tools: Tool[] = [
     ],
     "alternatives": [
       "solidworks",
-      "zw3d",
-      "solid-edge",
-      "freecad"
+      "autodesk-inventor",
+      "solid-edge"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c2",
     "pricing_type": "Perpetual",
-    "starting_price": 950,
+    "starting_price": 1499,
     "price_period": "one-time",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Mechanical",
-      "Manufacturing",
-      "Prototyping"
+      "Machinery Manufacturing",
+      "Fabrication & Sheet Metal",
+      "Consumer Products",
+      "Woodworking",
+      "Precision Tooling"
     ],
     "core_features": [
-      "Parametric Modeling",
-      "Global Variables",
-      "Sheet Metal"
+      "Dassault Spatial 3D ACIS Geometric Modeling Kernel",
+      "Affordable Perpetual Buyout Licensing (You Own the Software)",
+      "Parametric Mechanical Part & Large Assembly Modeling",
+      "Dedicated Industrial Sheet Metal Design & Flat Patterns (Expert)",
+      "Associative 2D Production Drawings & Dynamic BOMs",
+      "Alibre Script Python Automation for Custom Features",
+      "Direct Multi-CAD Translators (SolidWorks, Inventor, STEP)"
     ],
     "user_scales": [
-      "Small Business",
-      "Individuals"
+      "Individual",
+      "SMB",
+      "Fabrication Shops"
     ],
-    "official_url": "https://www.alibre.com",
+    "official_url": "https://www.alibre.com/",
+    "pricing_url": "https://www.alibre.com/store/",
+    "trial_url": "https://www.alibre.com/free-trial/",
     "affiliate_url": null,
     "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 75,
+        "url": "https://www.g2.com/products/alibre-design/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.capterra.com/p/162835/Alibre-Design/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 22,
+        "url": "https://www.trustradius.com/products/alibre-design/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.getapp.com/engineering-software/a/alibre-design/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "Online STEP to STL Slicer",
+        "href": "/toolbox/online-step-to-stl-slicer-helper"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "Fair perpetual model",
-      "SolidWorks-like workflow",
-      "Solid mid-range perf"
+      "Outstanding cost-to-performance value, offering permanent perpetual buyout licenses that you own forever without mandatory recurring fees.",
+      "Built on the proven Dassault Spatial 3D ACIS geometric engine, delivering robust mathematical modeling precision.",
+      "Dedicated sheet metal design workbench in the Expert tier provides excellent bend allowances and accurate flat pattern unfolding.",
+      "Alibre Script enables Python automation, allowing users to rapidly generate complex parametric geometries programmatically.",
+      "Lightweight system overhead compared to heavyweight enterprise CAD packages, running smoothly on mainstream workstation hardware.",
+      "Responsive customer support team and a dedicated, highly knowledgeable community user forum."
     ],
     "cons": [
-      "Windows-only",
-      "Smaller add-on ecosystem",
-      "Tiered simulation"
+      "Smaller global ecosystem and third-party plugin network compared to SolidWorks or Autodesk Inventor.",
+      "Runs exclusively on 64-bit Microsoft Windows; no native installation for macOS or Linux workstations.",
+      "Built-in simulation is basic; advanced non-linear structural FEA or computational fluid dynamics (CFD) requires third-party tools.",
+      "Freeform aesthetic Class-A surface sculpting is less extensive than specialized surfacing suites like Rhino or Alias.",
+      "Fewer college-level mechanical engineering courses teach Alibre compared to dominant academic platforms.",
+      "Multi-user collaborative data management (PDM) relies on external tools or file-sharing solutions rather than an embedded cloud PDM."
     ],
     "faqs": [
       {
-        "q": "What is Alibre Design used for?",
-        "a": "Professional 3D CAD without the enterprise price tag. Alibre Design is a 3D modeling solution widely adopted in Mechanical, Manufacturing, Prototyping."
+        "q": "What is Alibre Design and what makes it attractive to businesses?",
+        "a": "According to Alibre official documentation, Alibre Design is a professional 3D parametric CAD software package built on the Dassault Spatial 3D ACIS engine. It is renowned for offering perpetual buyout licenses where customers own their software permanently, avoiding mandatory ongoing subscription lock-in while enjoying commercial-grade 3D mechanical and sheet metal tools. Read details on the [Official Alibre Website](https://www.alibre.com/)."
       },
       {
-        "q": "How much does Alibre Design cost?",
-        "a": "Alibre Design is sold as a perpetual licence; the plans shown on this page are Professional and Expert. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Alibre Design Pricing Page](https://www.alibre.com/pricing/)."
+        "q": "Does Alibre Design offer perpetual buyout licenses?",
+        "a": "Yes. Alibre provides true perpetual licenses for Alibre Atom3D, Alibre Design Professional, and Alibre Design Expert. Once purchased, your license will never expire. Optional annual software maintenance can be renewed for software updates and support. Explore pricing on the [Official Alibre Store](https://www.alibre.com/store/)."
       },
       {
-        "q": "Is there a free version of Alibre Design?",
-        "a": "Alibre Design is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Alibre Design page](https://www.alibre.com)."
+        "q": "What is the difference between Alibre Design Professional and Expert?",
+        "a": "Alibre Design Professional includes full 3D parametric part and assembly modeling, associative 2D drawings, standard fasteners, and interference analysis. Alibre Design Expert adds dedicated parametric sheet metal design, Alibre Script (Python scripting), real-time rendering via KeyShot, and direct native SolidWorks/Inventor file import translators."
       },
       {
-        "q": "What operating systems does Alibre Design support?",
-        "a": "Alibre Design runs on Windows."
+        "q": "Can I try Alibre Design for free?",
+        "a": "Yes. Alibre provides a fully functional 30-day free trial of Alibre Design Expert, including sheet metal and rendering features, without requiring credit card registration. Request access on the [Official Alibre Trial Page](https://www.alibre.com/free-trial/)."
       },
       {
-        "q": "Which file formats does Alibre Design support?",
-        "a": "Alibre Design reads its own .AD_PRT/.AD_ASM/.AD_DRW files and imports SolidWorks, Inventor, Creo, CATIA, Solid Edge and NX parts and assemblies alongside Rhino, STEP, SAT, IGES, Parasolid, DWG, DXF and SVG. Export is STEP, SAT, IGES, STL, OBJ, Parasolid, ZPR, JT, 2D DWG/DXF, SVG and PDF in both 2D and 3D flavours. Which importers are enabled depends on the edition and release, so check file compatibility against the exact build before exchanging production data."
+        "q": "What operating systems are supported by Alibre Design?",
+        "a": "Alibre Design is certified for 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes an Intel Core i7 or AMD Ryzen 7 CPU, 16 GB to 32 GB RAM, and a dedicated GPU supporting DirectX 11 or higher."
       },
       {
-        "q": "What are the best alternatives to Alibre Design?",
-        "a": "The closest alternatives to Alibre Design are SolidWorks, ZW3D, Solid Edge, and FreeCAD. SolidWorks (offered on a Subscription / Perpetual license) competes directly on core Mechanical workflows, while ZW3D (offered on a Subscription / Perpetual license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD formats can Alibre Design import and export?",
+        "a": "Alibre Design natively creates .AD_PRT (parts), .AD_ASM (assemblies), and .AD_DRW (drawings). It imports and exports STEP (AP203/AP214/AP242), IGES, SAT (ACIS), DXF, DWG, and STL. The Expert edition can also directly import native SolidWorks (.sldprt/.sldasm), Autodesk Inventor, and PTC Creo files."
       }
     ],
     "tech_specs": {
-      "engine": "ACIS",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX",
+      "engine": "Dassault Spatial 3D ACIS Modeler",
+      "multicore": "Multi-threaded drawing generation, file opening & KeyShot ray-trace rendering",
+      "gpu_optimization": "DirectX 11 hardware-accelerated 3D graphics rendering pipeline",
       "standards": [
-        "STEP",
+        "ACIS (SAT)",
+        "STEP (AP203/AP214/AP242)",
         "IGES",
-        "SAT",
-        "STL"
+        "DWG",
+        "DXF",
+        "STL",
+        "PDF"
       ]
     },
-    "expert_verdict": "No mandatory subscriptions, just solid parametric tools.",
+    "expert_verdict": "Alibre Design is the undisputed champion of value in commercial 3D CAD. Built upon the proven Dassault Spatial ACIS solid engine and offering full-featured sheet metal modeling alongside rare perpetual buyout ownership, it provides small-to-medium machine builders and fabrication shops with genuine engineering independence.",
     "file_formats_in": [
       "AD_PRT",
       "AD_ASM",
       "AD_DRW",
+      "AD_SMP",
       "STEP",
-      "SAT",
+      "STP",
       "IGES",
-      "Parasolid",
-      "SLDPRT",
-      "IPT",
-      "PRT",
-      "CATPart",
-      "PAR",
-      "3DM",
+      "IGS",
+      "SAT",
       "DWG",
       "DXF",
-      "SVG"
+      "SLDPRT",
+      "SLDASM",
+      "IPT",
+      "IAM"
     ],
     "file_formats_out": [
       "AD_PRT",
       "AD_ASM",
       "AD_DRW",
+      "AD_SMP",
       "STEP",
-      "SAT",
+      "STP",
       "IGES",
-      "STL",
-      "OBJ",
-      "Parasolid",
-      "ZPR",
-      "JT",
+      "SAT",
       "DWG",
       "DXF",
-      "SVG",
-      "PDF",
-      "3D PDF"
+      "STL",
+      "PDF"
     ],
-    "pricing_url": "https://www.alibre.com/pricing/"
+    "license_types": [
+      "Perpetual",
+      "Subscription",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Workstation Data Storage",
+      "Zero Mandatory Cloud Account Linkage",
+      "Air-Gapped Licensing Compatible"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Czech"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ]
   },
   {
     "id": "t50",
