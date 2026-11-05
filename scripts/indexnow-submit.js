@@ -190,6 +190,15 @@ async function main() {
   console.log(`Key location: ${INDEXNOW_KEY_LOCATION}`);
   console.log('');
 
+  // Protect search engine quotas: only submit automatically on production Vercel builds or when explicitly forced
+  const isVercel = process.env.VERCEL === '1';
+  const forceSubmit = process.argv.includes('--force') || process.argv.includes('--submit') || process.env.SUBMIT_INDEXNOW === '1';
+  if (!isVercel && !forceSubmit && !isDryRun) {
+    console.log('[IndexNow Shield] Local build detected. Skipping submission to protect search engine quotas.');
+    console.log('To force submission locally, run: node scripts/indexnow-submit.js --force');
+    return;
+  }
+
   const urls = collectUrls();
   console.log(`Collected ${urls.length} URLs to submit`);
 
