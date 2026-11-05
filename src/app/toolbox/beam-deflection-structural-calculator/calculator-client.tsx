@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
 import {
-  HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Activity, Sliders, Shield, Download
+  HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Activity, Sliders, Shield, Download, XCircle
 } from 'lucide-react';
 
 // Materials configuration
@@ -50,26 +50,28 @@ export default function BeamDeflectionClient() {
   const [dimTwStr, setDimTwStr] = useState('6');  // Web thickness
   const [dimTfStr, setDimTfStr] = useState('8');  // Flange thickness
   const [dimTStr, setDimTStr] = useState('5');    // Box/Pipe wall thickness
-  const [copied, setCopied] = useState(false);
 
-  // Numerical conversions with fallback for calculation
-  const length = parseFloat(lengthStr) || 0;
-  const loadValue = parseFloat(loadValueStr) || 0;
-  const dimH = parseFloat(dimHStr) || 0;
-  const dimB = parseFloat(dimBStr) || 0;
-  const dimTw = parseFloat(dimTwStr) || 0;
-  const dimTf = parseFloat(dimTfStr) || 0;
-  const dimT = parseFloat(dimTStr) || 0;
+  // Copy status: 'idle' | 'success' | 'error'
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Numerical conversions (strict parse without silent zero masking)
+  const length = parseFloat(lengthStr);
+  const loadValue = parseFloat(loadValueStr);
+  const dimH = parseFloat(dimHStr);
+  const dimB = parseFloat(dimBStr);
+  const dimTw = parseFloat(dimTwStr);
+  const dimTf = parseFloat(dimTfStr);
+  const dimT = parseFloat(dimTStr);
 
   // Active Material properties
   const material = useMemo(() => {
     const isCustom = materialIdx === 3;
-    const cE = parseFloat(customE) || 200;
-    const cY = parseFloat(customYield) || 250;
+    const cE = parseFloat(customE);
+    const cY = parseFloat(customYield);
     return {
       name: MATERIALS[materialIdx].name,
-      E: isCustom ? cE : MATERIALS[materialIdx].E,
-      yield: isCustom ? cY : MATERIALS[materialIdx].yield,
+      E: isCustom ? (isNaN(cE) ? 0 : cE) : MATERIALS[materialIdx].E,
+      yield: isCustom ? (isNaN(cY) ? 0 : cY) : MATERIALS[materialIdx].yield,
     };
   }, [materialIdx, customE, customYield]);
 
@@ -80,52 +82,74 @@ export default function BeamDeflectionClient() {
 
   // Geometric Calculations (Ix: mm^4, Wx: mm^3)
   const geoProperties = useMemo(() => {
+    // Validate geometry bounds
+    const isBasicValid = !isNaN(dimH) && !isNaN(dimB) && dimH > 0 && dimB > 0;
+    if (!isBasicValid) {
+      return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+    }
+
     let Ix = 0;
     let Wx = 0;
     let area = 0;
 
-    const H = Math.max(1, dimH);
-    const B = Math.max(1, dimB);
-    const tw = Math.min(B - 1, Math.max(1, dimTw));
-    const tf = Math.min(H / 2 - 1, Math.max(1, dimTf));
-    const t = Math.min(Math.min(B / 2 - 1, H / 2 - 1), Math.max(1, dimT));
-
     if (profileType === 'i-beam') {
-      const innerH = H - 2 * tf;
-      Ix = (B * Math.pow(H, 3) - (B - tw) * Math.pow(innerH, 3)) / 12;
-      Wx = Ix / (H / 2);
-      area = 2 * B * tf + innerH * tw;
+      if (isNaN(dimTw) || isNaN(dimTf) || dimTw <= 0 || dimTf <= 0 || dimTw >= dimB || 2 * dimTf >= dimH) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const innerH = dimH - 2 * dimTf;
+      Ix = (dimB * Math.pow(dimH, 3) - (dimB - dimTw) * Math.pow(innerH, 3)) / 12;
+      Wx = Ix / (dimH / 2);
+      area = 2 * dimB * dimTf + innerH * dimTw;
     } else if (profileType === 'box') {
-      const innerB = B - 2 * t;
-      const innerH = H - 2 * t;
-      Ix = (B * Math.pow(H, 3) - innerB * Math.pow(innerH, 3)) / 12;
-      Wx = Ix / (H / 2);
-      area = B * H - innerB * innerH;
+      if (isNaN(dimT) || dimT <= 0 || 2 * dimT >= dimB || 2 * dimT >= dimH) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const innerB = dimB - 2 * dimT;
+      const innerH = dimH - 2 * dimT;
+      Ix = (dimB * Math.pow(dimH, 3) - innerB * Math.pow(innerH, 3)) / 12;
+      Wx = Ix / (dimH / 2);
+      area = dimB * dimH - innerB * innerH;
     } else if (profileType === 'solid-rect') {
-      Ix = (B * Math.pow(H, 3)) / 12;
-      Wx = (B * Math.pow(H, 2)) / 6;
-      area = B * H;
+      Ix = (dimB * Math.pow(dimH, 3)) / 12;
+      Wx = (dimB * Math.pow(dimH, 2)) / 6;
+      area = dimB * dimH;
     } else if (profileType === 'pipe') {
-      const D = B;
-      const innerD = Math.max(1, D - 2 * t);
+      if (isNaN(dimT) || dimT <= 0 || 2 * dimT >= dimB) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const D = dimB;
+      const innerD = D - 2 * dimT;
       Ix = (Math.PI * (Math.pow(D, 4) - Math.pow(innerD, 4))) / 64;
       Wx = Ix / (D / 2);
       area = (Math.PI * (Math.pow(D, 2) - Math.pow(innerD, 2))) / 4;
     }
 
-    return { Ix, Wx, area, effectiveH: profileType === 'pipe' ? B : H };
+    return { isValid: true, Ix, Wx, area, effectiveH: profileType === 'pipe' ? dimB : dimH };
   }, [profileType, dimH, dimB, dimTw, dimTf, dimT]);
 
   // Load and stress math calculations
   const structuralOutputs = useMemo(() => {
-    const L = Math.max(0.1, length);
-    const L_mm = L * 1000;
-    const P_N = loadValue * 1000; // if point load
+    if (!geoProperties.isValid || isNaN(length) || isNaN(loadValue) || length <= 0 || loadValue <= 0 || material.E <= 0 || material.yield <= 0) {
+      return {
+        isValid: false,
+        L_mm: 0,
+        maxMoment: NaN,
+        maxDeflection: NaN,
+        maxStress: NaN,
+        safetyFactor: NaN,
+        targetLimit: NaN,
+        isDeflectionSafe: false,
+        isStressSafe: false
+      };
+    }
+
+    const L_mm = length * 1000;
+    const P_N = loadValue * 1000; // point load
     const w_Nmm = loadValue;      // 1 kN/m = 1 N/mm
 
     const E_Nmm2 = material.E * 1000; // GPa to MPa (N/mm2)
-    const I = Math.max(1, geoProperties.Ix);
-    const W = Math.max(1, geoProperties.Wx);
+    const I = geoProperties.Ix;
+    const W = geoProperties.Wx;
 
     let maxMoment = 0; // N*mm
     let maxDeflection = 0; // mm
@@ -162,40 +186,45 @@ export default function BeamDeflectionClient() {
     const maxStress = maxMoment / W;
     const safetyFactor = maxStress > 0 ? material.yield / maxStress : 999;
 
-    const limitL360 = L_mm / 360;
-    const limitL240 = L_mm / 240;
-    const limitL180 = L_mm / 180;
-
-    let targetLimit = limitL240;
+    let targetLimit = L_mm / 240;
     if (support === 'cantilever') {
-      targetLimit = limitL180;
+      targetLimit = L_mm / 180;
     } else if (materialIdx === 2) {
-      targetLimit = limitL360;
+      targetLimit = L_mm / 360;
     }
 
     const isDeflectionSafe = maxDeflection <= targetLimit;
     const isStressSafe = maxStress <= material.yield;
 
     return {
+      isValid: true,
       L_mm,
       maxMoment,
       maxDeflection,
       maxStress,
       safetyFactor,
-      limitL360,
-      limitL240,
-      limitL180,
       targetLimit,
       isDeflectionSafe,
       isStressSafe,
     };
   }, [length, loadValue, material, loadSetup, geoProperties, materialIdx]);
 
+  const formatNum = (n: number, decimals: number = 2) => {
+    if (!structuralOutputs.isValid || isNaN(n) || !isFinite(n)) return '—';
+    return n.toFixed(decimals);
+  };
+
+  const formatExponential = (n: number, decimals: number = 4) => {
+    if (!geoProperties.isValid || isNaN(n) || !isFinite(n)) return '—';
+    return n.toExponential(decimals);
+  };
+
   // Bending curve coordinates for SVG
   const curvePath = useMemo(() => {
+    if (!structuralOutputs.isValid) return '';
     const pointsCount = 40;
     const pts: string[] = [];
-    const L = (length || 4.0) * 1000;
+    const L = length * 1000;
     const maxDef = structuralOutputs.maxDeflection;
 
     const support = loadSetup.support;
@@ -245,9 +274,12 @@ export default function BeamDeflectionClient() {
     }
 
     return pts.join(' ');
-  }, [length, loadValue, material, loadSetup, geoProperties, structuralOutputs.maxDeflection]);
+  }, [length, loadValue, material, loadSetup, geoProperties, structuralOutputs]);
 
-  const handleCopySummary = () => {
+  // Robust handleCopySummary: Never claim success when clipboard write fails!
+  const handleCopySummary = async () => {
+    if (!structuralOutputs.isValid) return;
+
     const summary = [
       `Steel Beam Deflection & Stress Report — CADGuide.tools`,
       `Support Type: ${loadSetup.name}`,
@@ -267,22 +299,16 @@ export default function BeamDeflectionClient() {
 
     try {
       if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(summary)
-          .then(() => {
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-          })
-          .catch(() => {
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-          });
+        await navigator.clipboard.writeText(summary);
+        setCopyStatus('success');
+        setTimeout(() => setCopyStatus('idle'), 2000);
       } else {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setCopyStatus('error');
+        setTimeout(() => setCopyStatus('idle'), 3000);
       }
     } catch {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setCopyStatus('error');
+      setTimeout(() => setCopyStatus('idle'), 3000);
     }
   };
 
@@ -298,13 +324,13 @@ export default function BeamDeflectionClient() {
       ['Material', `"${material.name}"`, '—'],
       ['Elastic Modulus (E)', material.E.toString(), 'GPa'],
       ['Yield Strength', material.yield.toString(), 'MPa'],
-      ['Moment of Inertia (Ix)', geoProperties.Ix.toExponential(4), 'mm⁴'],
-      ['Section Modulus (Wx)', geoProperties.Wx.toExponential(4), 'mm³'],
-      ['Max Bending Moment', (structuralOutputs.maxMoment / 1e6).toFixed(3), 'kN·m'],
-      ['Max Deflection', structuralOutputs.maxDeflection.toFixed(2), 'mm'],
-      ['Max Bending Stress', structuralOutputs.maxStress.toFixed(1), 'MPa'],
-      ['Safety Factor', structuralOutputs.safetyFactor.toFixed(2), '—'],
-      ['Structural Status', structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE' : 'LIMIT EXCEEDED', '—']
+      ['Moment of Inertia (Ix)', formatExponential(geoProperties.Ix), 'mm⁴'],
+      ['Section Modulus (Wx)', formatExponential(geoProperties.Wx), 'mm³'],
+      ['Max Bending Moment', formatNum(structuralOutputs.maxMoment / 1e6, 3), 'kN·m'],
+      ['Max Deflection', formatNum(structuralOutputs.maxDeflection, 2), 'mm'],
+      ['Max Bending Stress', formatNum(structuralOutputs.maxStress, 1), 'MPa'],
+      ['Safety Factor', formatNum(structuralOutputs.safetyFactor, 2), '—'],
+      ['Structural Status', structuralOutputs.isValid ? (structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE' : 'LIMIT EXCEEDED') : 'INVALID INPUT', '—']
     ];
 
     const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
@@ -346,7 +372,7 @@ export default function BeamDeflectionClient() {
               <Activity className="w-6 h-6 text-blue-600" /> Beam Bending & Load Curve
             </h2>
             <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
-              Exaggerated deflection line based on Euler-Bernoulli beam theory
+              Euler-Bernoulli elastic bending line diagram
             </p>
           </div>
 
@@ -409,7 +435,7 @@ export default function BeamDeflectionClient() {
                       <line x1="360" y1="20" x2="360" y2="52" stroke="#3b82f6" strokeWidth="3" />
                       <polygon points="356,48 364,48 360,56" fill="#3b82f6" />
                       <text x="360" y="14" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                        P = {loadValue} kN
+                        P = {loadValueStr} kN
                       </text>
                     </>
                   ) : (
@@ -417,7 +443,7 @@ export default function BeamDeflectionClient() {
                       <line x1="200" y1="20" x2="200" y2="52" stroke="#3b82f6" strokeWidth="3" />
                       <polygon points="196,48 204,48 200,56" fill="#3b82f6" />
                       <text x="200" y="14" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                        P = {loadValue} kN
+                        P = {loadValueStr} kN
                       </text>
                     </>
                   )}
@@ -435,30 +461,48 @@ export default function BeamDeflectionClient() {
                   })}
                   <line x1="40" y1="35" x2="360" y2="35" stroke="#3b82f6" strokeWidth="1.5" />
                   <text x="200" y="26" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                    w = {loadValue} kN/m
+                    w = {loadValueStr} kN/m
                   </text>
                 </>
               )}
 
-              <polyline
-                points={curvePath}
-                fill="none"
-                stroke="#ef4444"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-              />
+              {structuralOutputs.isValid && (
+                <polyline
+                  points={curvePath}
+                  fill="none"
+                  stroke="#ef4444"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                />
+              )}
 
               <line x1="40" y1="125" x2="360" y2="125" stroke="#64748b" strokeWidth="1" />
               <line x1="40" y1="120" x2="40" y2="130" stroke="#64748b" strokeWidth="1" />
               <line x1="360" y1="120" x2="360" y2="130" stroke="#64748b" strokeWidth="1" />
               <text x="200" y="140" fill="#475569" fontSize="10" fontWeight="black" textAnchor="middle">
-                L = {length} m
+                L = {lengthStr} m
               </text>
             </svg>
           </div>
 
           {/* Verification / Alert card */}
           {(() => {
+            if (!structuralOutputs.isValid) {
+              return (
+                <div data-testid="res-status-assessment" className="border rounded-2xl p-5 flex items-center gap-4 bg-slate-50 border-slate-200 text-slate-600">
+                  <Info className="w-6 h-6 text-slate-400 shrink-0" />
+                  <div>
+                    <div className="font-black text-base uppercase tracking-wide">
+                      Awaiting Valid Dimensions
+                    </div>
+                    <p className="text-sm text-slate-500 font-medium mt-0.5">
+                      Please enter valid positive beam dimensions, span length, and applied load.
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+
             const isDefSafe = structuralOutputs.isDeflectionSafe;
             const isStrSafe = structuralOutputs.isStressSafe;
             const status = isDefSafe && isStrSafe ? 'safe' : (!isDefSafe && !isStrSafe ? 'danger' : 'warning');
@@ -489,7 +533,7 @@ export default function BeamDeflectionClient() {
                     {status === 'safe' && `Bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) are well within AISC design limits for ${material.name}.`}
                     {status === 'danger' && `Both bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection exceed code serviceability limits. Upsize beam profile or shorten span.`}
                     {status === 'warning' && (!isDefSafe
-                      ? `Bending stress is safe, but deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) exceeds the L/${materialIdx === 2 ? 360 : 240} serviceability limit of ${structuralOutputs.targetLimit.toFixed(2)} mm.`
+                      ? `Bending stress is safe, but deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) exceeds the serviceability threshold of ${structuralOutputs.targetLimit.toFixed(2)} mm.`
                       : `Deflection is within limit, but bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) exceeds the yield strength limit of ${material.yield} MPa.`)}
                   </p>
                 </div>
@@ -609,7 +653,7 @@ export default function BeamDeflectionClient() {
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2} y1={sectionDrawParams.cy + sectionDrawParams.h / 2 + 8} x2={sectionDrawParams.cx - sectionDrawParams.w / 2} y2={sectionDrawParams.cy + sectionDrawParams.h / 2 + 16} stroke="#475569" strokeWidth="1" />
               <line x1={sectionDrawParams.cx + sectionDrawParams.w / 2} y1={sectionDrawParams.cy + sectionDrawParams.h / 2 + 8} x2={sectionDrawParams.cx + sectionDrawParams.w / 2} y2={sectionDrawParams.cy + sectionDrawParams.h / 2 + 16} stroke="#475569" strokeWidth="1" />
               <text x={sectionDrawParams.cx} y={sectionDrawParams.cy + sectionDrawParams.h / 2 + 25} fill="#475569" fontSize="8" fontWeight="bold" textAnchor="middle">
-                B = {dimB} mm
+                B = {dimBStr} mm
               </text>
 
               <line
@@ -623,7 +667,7 @@ export default function BeamDeflectionClient() {
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2 - 16} y1={sectionDrawParams.cy - sectionDrawParams.h / 2} x2={sectionDrawParams.cx - sectionDrawParams.w / 2 - 8} y2={sectionDrawParams.cy - sectionDrawParams.h / 2} stroke="#475569" strokeWidth="1" />
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2 - 16} y1={sectionDrawParams.cy + sectionDrawParams.h / 2} x2={sectionDrawParams.cx - sectionDrawParams.w / 2 - 8} y2={sectionDrawParams.cy + sectionDrawParams.h / 2} stroke="#475569" strokeWidth="1" />
               <text x={sectionDrawParams.cx - sectionDrawParams.w / 2 - 22} y={sectionDrawParams.cy + 3} fill="#475569" fontSize="8" fontWeight="bold" textAnchor="end">
-                H = {profileType === 'pipe' ? dimB : dimH} mm
+                H = {profileType === 'pipe' ? dimBStr : dimHStr} mm
               </text>
             </svg>
           </div>
@@ -634,15 +678,15 @@ export default function BeamDeflectionClient() {
             </div>
             <div className="flex justify-between font-mono">
               <span>Section Area (A):</span>
-              <span className="text-slate-800 font-bold" data-testid="res-section-area">{geoProperties.area.toFixed(1)} mm²</span>
+              <span className="text-slate-800 font-bold" data-testid="res-section-area">{formatNum(geoProperties.area, 1)} mm²</span>
             </div>
             <div className="flex justify-between font-mono">
               <span>Moment of Inertia (Ix):</span>
-              <span className="text-slate-800 font-bold" data-testid="res-ix">{geoProperties.Ix.toExponential(4)} mm⁴</span>
+              <span className="text-slate-800 font-bold" data-testid="res-ix">{formatExponential(geoProperties.Ix)} mm⁴</span>
             </div>
             <div className="flex justify-between font-mono">
               <span>Section Modulus (Wx):</span>
-              <span className="text-slate-800 font-bold" data-testid="res-wx">{geoProperties.Wx.toExponential(4)} mm³</span>
+              <span className="text-slate-800 font-bold" data-testid="res-wx">{formatExponential(geoProperties.Wx)} mm³</span>
             </div>
           </div>
         </div>
@@ -898,7 +942,7 @@ export default function BeamDeflectionClient() {
                 min="0.5"
                 max="20"
                 step="0.1"
-                value={length || 0.5}
+                value={isNaN(length) || length <= 0 ? 0.5 : length}
                 onChange={(e) => setLengthStr(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
@@ -928,7 +972,7 @@ export default function BeamDeflectionClient() {
                 min="0.5"
                 max="200"
                 step="0.5"
-                value={loadValue || 0.5}
+                value={isNaN(loadValue) || loadValue <= 0 ? 0.5 : loadValue}
                 onChange={(e) => setLoadValueStr(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
@@ -1003,7 +1047,7 @@ export default function BeamDeflectionClient() {
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Max Moment</div>
                 <div className="text-white font-black text-xl font-mono" data-testid="res-max-moment">
-                  {(structuralOutputs.maxMoment / 1e6).toFixed(3)}
+                  {formatNum(structuralOutputs.maxMoment / 1e6, 3)}
                   <span className="text-sm text-slate-400 ml-1">kN·m</span>
                 </div>
               </div>
@@ -1012,10 +1056,12 @@ export default function BeamDeflectionClient() {
                 <div
                   data-testid="res-max-deflection"
                   className={`font-black text-xl font-mono ${
-                    structuralOutputs.isDeflectionSafe ? 'text-emerald-400' : 'text-red-400'
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isDeflectionSafe ? 'text-emerald-400' : 'text-red-400'
+                      : 'text-slate-400'
                   }`}
                 >
-                  {structuralOutputs.maxDeflection.toFixed(2)}
+                  {formatNum(structuralOutputs.maxDeflection, 2)}
                   <span className="text-sm text-slate-400 ml-1">mm</span>
                 </div>
               </div>
@@ -1024,10 +1070,12 @@ export default function BeamDeflectionClient() {
                 <div
                   data-testid="res-max-stress"
                   className={`font-black text-xl font-mono ${
-                    structuralOutputs.isStressSafe ? 'text-white' : 'text-red-400'
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isStressSafe ? 'text-white' : 'text-red-400'
+                      : 'text-slate-400'
                   }`}
                 >
-                  {structuralOutputs.maxStress.toFixed(1)}
+                  {formatNum(structuralOutputs.maxStress, 1)}
                   <span className="text-sm text-slate-400 ml-1">MPa</span>
                 </div>
               </div>
@@ -1036,17 +1084,21 @@ export default function BeamDeflectionClient() {
                 <div
                   data-testid="res-safety-factor"
                   className={`font-black text-xl font-mono ${
-                    structuralOutputs.isStressSafe ? 'text-blue-400' : 'text-red-400'
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isStressSafe ? 'text-blue-400' : 'text-red-400'
+                      : 'text-slate-400'
                   }`}
                 >
-                  {structuralOutputs.safetyFactor > 100 ? '99+' : structuralOutputs.safetyFactor.toFixed(2)}
+                  {structuralOutputs.isValid
+                    ? structuralOutputs.safetyFactor > 100 ? '99+' : structuralOutputs.safetyFactor.toFixed(2)
+                    : '—'}
                 </div>
               </div>
             </div>
 
             {/* Recommendation limit note */}
             <div className="bg-blue-950/20 rounded-xl p-3 border border-blue-900/30 text-[11px] font-semibold text-blue-200 leading-relaxed">
-              Standard building code deflection limit for this configuration is <strong className="text-white">L/{loadSetup.support === 'cantilever' ? 180 : (materialIdx === 2 ? 360 : 240)} = {structuralOutputs.targetLimit.toFixed(2)} mm</strong>.
+              Standard building code deflection limit for this configuration is <strong className="text-white">L/{loadSetup.support === 'cantilever' ? 180 : (materialIdx === 2 ? 360 : 240)} = {formatNum(structuralOutputs.targetLimit, 2)} mm</strong>.
             </div>
           </div>
 
@@ -1055,11 +1107,19 @@ export default function BeamDeflectionClient() {
             <button
               data-testid="btn-copy-report"
               onClick={handleCopySummary}
-              className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-black text-sm py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer"
+              className={`flex-1 font-black text-sm py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer ${
+                copyStatus === 'error'
+                  ? 'bg-rose-50 text-rose-700 border border-rose-200'
+                  : 'bg-white hover:bg-slate-100 text-slate-900'
+              }`}
             >
-              {copied ? (
+              {copyStatus === 'success' && (
                 <><Check className="w-4 h-4 text-green-600" /> Report Copied!</>
-              ) : (
+              )}
+              {copyStatus === 'error' && (
+                <><XCircle className="w-4 h-4 text-rose-600" /> Copy Failed (Check Permissions)</>
+              )}
+              {copyStatus === 'idle' && (
                 <><Copy className="w-4 h-4" /> Copy Report</>
               )}
             </button>
@@ -1078,7 +1138,7 @@ export default function BeamDeflectionClient() {
       {/* Structural Reference Guide */}
       <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
         <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
-          <HelpCircle className="w-5 h-5 text-blue-600" /> Beam Deflection Engineering Guidelines (AISC 360 & Eurocode 3)
+          <HelpCircle className="w-5 h-5 text-blue-600" /> Beam Deflection Engineering Guidelines (AISC 360 & IBC 1604.3)
         </h3>
 
         <div className="grid md:grid-cols-2 gap-8 text-lg">
@@ -1104,15 +1164,15 @@ export default function BeamDeflectionClient() {
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Standard Deflection Serviceability Limits</h4>
             <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
-                In structural engineering, beam deflection is governed by <em>serviceability limits</em> to prevent unsightly sagging, cracking of plaster, or vibration. Deflection limits are defined as a fraction of the span length L:
+                In structural engineering, beam deflection is governed by <em>serviceability limits</em> (such as IBC Table 1604.3) to prevent unsightly sagging, cracking of plaster ceilings, or excessive vibration. Deflection limits are defined as a fraction of span length L:
               </p>
               <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-sm font-mono leading-relaxed">
-                <li><strong className="text-slate-800">L/360</strong>: Strictest limit. Commonly used for floor joists supporting plaster ceilings to prevent cracking under live loads.</li>
-                <li><strong className="text-slate-800">L/240</strong>: Standard limit for roof beams, rafters, and members supporting non-plaster ceilings under combined loads.</li>
-                <li><strong className="text-slate-800">L/180</strong>: Frequently applied to cantilever beams or steel roof purlins where sagging has fewer cosmetic impacts.</li>
+                <li><strong className="text-slate-800">L/360</strong>: Strictest limit. Standard for floor joists supporting plaster or brittle finishes under live loads to prevent ceiling cracking.</li>
+                <li><strong className="text-slate-800">L/240</strong>: Standard limit for roof beams, purlins, and members supporting non-plaster ceilings under combined loads.</li>
+                <li><strong className="text-slate-800">L/180</strong>: Applied to cantilever beam tips or industrial roof members where visual sag has negligible cosmetic impact.</li>
               </ul>
               <p>
-                If your beam deflection exceeds these thresholds, the structure may be safe from structural failure but will violate building codes or trigger serviceability issues.
+                If your beam deflection exceeds these thresholds, the structure may resist collapse but will fail serviceability criteria.
               </p>
             </div>
           </div>

@@ -8,63 +8,58 @@ interface SoilPreset {
   name: string;
   c: number;
   gamma: number;
-  phi: number;
   Nc: number;
   Nq: number;
   Ng: number;
   desc: string;
 }
 
+// Strictly aligned with Terzaghi (1943) "Theoretical Soil Mechanics" General Shear Tables
 const SOIL_PRESETS: Record<string, SoilPreset> = {
   default_sample: {
-    name: 'Standard Engineering Soil Sample',
+    name: 'Textbook Engineering Benchmark',
     c: 20,
     gamma: 18,
-    phi: 25,
     Nc: 30,
     Nq: 18,
     Ng: 15,
-    desc: 'Cohesive-frictional C-Phi soil with classical Terzaghi bearing factors.'
+    desc: 'Classical foundation textbook sample parameters with custom verified bearing capacity factors.'
   },
   soft_clay: {
-    name: 'Soft Saturated Clay (Undrained)',
+    name: 'Soft Undrained Saturated Clay (Terzaghi φ=0°)',
     c: 25,
     gamma: 17,
-    phi: 0,
-    Nc: 5.14,
+    Nc: 5.7, // Strictly Terzaghi 1943 (not 5.14 Prandtl)
     Nq: 1.0,
-    Ng: 0,
-    desc: 'Pure cohesive soil (Phi=0 condition). Bearing capacity governed by undrained shear strength.'
+    Ng: 0.0,
+    desc: 'Pure cohesive soil under undrained conditions. Terzaghi general shear Nc = 5.7, Nq = 1.0, Nγ = 0.'
   },
   stiff_clay: {
-    name: 'Stiff Overconsolidated Clay',
-    c: 60,
-    gamma: 19.5,
-    phi: 15,
-    Nc: 12.9,
-    Nq: 4.4,
-    Ng: 2.5,
-    desc: 'Firm to stiff cohesive clay stratum with moderate overburden resistance.'
+    name: 'Stiff Silty Clay (Terzaghi φ=20°)',
+    c: 30,
+    gamma: 18.5,
+    Nc: 17.7,
+    Nq: 7.4,
+    Ng: 5.0,
+    desc: 'Stiff cohesive-frictional clay stratum. Terzaghi general shear Nc = 17.7, Nq = 7.4, Nγ = 5.0.'
   },
   loose_sand: {
-    name: 'Loose to Medium Dense Sand',
+    name: 'Medium / Loose Sand (Terzaghi φ=30°)',
     c: 0,
     gamma: 18,
-    phi: 30,
-    Nc: 30.1,
-    Nq: 18.4,
-    Ng: 22.4,
-    desc: 'Cohesionless granular soil (c=0). Surcharge and footing width dominate bearing.'
+    Nc: 37.2,
+    Nq: 22.5,
+    Ng: 19.7,
+    desc: 'Cohesionless sand stratum. Terzaghi general shear Nc = 37.2, Nq = 22.5, Nγ = 19.7.'
   },
   dense_sand: {
-    name: 'Dense Gravelly Sand',
+    name: 'Dense Gravelly Sand (Terzaghi φ=35°)',
     c: 0,
     gamma: 20,
-    phi: 38,
-    Nc: 61.4,
-    Nq: 48.9,
-    Ng: 78.0,
-    desc: 'Dense compacted cohesionless aggregate with high internal friction angle.'
+    Nc: 57.8,
+    Nq: 41.4,
+    Ng: 42.4,
+    desc: 'Compacted granular aggregate. Terzaghi general shear Nc = 57.8, Nq = 41.4, Nγ = 42.4.'
   }
 };
 
@@ -81,10 +76,8 @@ export default function BearingCapacityCalculatorClient() {
   const [factorNg, setFactorNg] = useState('15');
   const [safetyFactor, setSafetyFactor] = useState('3.0');
   const [footingShape, setFootingShape] = useState<FootingShape>('strip');
-  const [presetKey, setPresetKey] = useState('default_sample');
 
   const handleApplyPreset = (key: string) => {
-    setPresetKey(key);
     const p = SOIL_PRESETS[key];
     if (p) {
       setCohesion(p.c.toString());
@@ -105,7 +98,6 @@ export default function BearingCapacityCalculatorClient() {
     setFactorNg('15');
     setSafetyFactor('3.0');
     setFootingShape('strip');
-    setPresetKey('default_sample');
   };
 
   // Calculations
@@ -126,14 +118,14 @@ export default function BearingCapacityCalculatorClient() {
     ) {
       return {
         isValid: false,
-        qu: 0,
-        qa: 0,
-        qNet: 0,
-        cohesionTerm: 0,
-        surchargeTerm: 0,
-        widthTerm: 0,
-        totalAllowableLoad: 0,
-        area: 0
+        qu: NaN,
+        qa: NaN,
+        qNet: NaN,
+        cohesionTerm: NaN,
+        surchargeTerm: NaN,
+        widthTerm: NaN,
+        totalAllowableLoad: NaN,
+        area: NaN
       };
     }
 
@@ -145,11 +137,11 @@ export default function BearingCapacityCalculatorClient() {
     if (footingShape === 'square') {
       sc = 1.3;
       sq = 1.0;
-      sg = 0.8; // Terzaghi 0.4*gamma*B*Ng = 0.5 * 0.8 * gamma * B * Ng
+      sg = 0.8; // Terzaghi: 0.4*gamma*B*Ng = 0.5 * 0.8 * gamma * B * Ng
     } else if (footingShape === 'circular') {
       sc = 1.3;
       sq = 1.0;
-      sg = 0.6; // Terzaghi 0.3*gamma*B*Ng = 0.5 * 0.6 * gamma * B * Ng
+      sg = 0.6; // Terzaghi: 0.3*gamma*B*Ng = 0.5 * 0.6 * gamma * B * Ng
     }
 
     const cohesionTerm = sc * c * Nc;
@@ -196,18 +188,18 @@ export default function BearingCapacityCalculatorClient() {
   const handleExportCsv = () => {
     const headers = ['Parameter', 'Value', 'Unit'];
     const rows = [
-      ['Footing Geometry', footingShape.toUpperCase(), '—'],
+      ['Foundation Geometry', footingShape.toUpperCase(), '—'],
       ['Cohesion (c)', cohesion, 'kPa'],
       ['Soil Density (γ)', soilDensity, 'kN/m³'],
       ['Foundation Depth (Df)', depthDf, 'm'],
       ['Foundation Width (B)', widthB, 'm'],
-      ['Bearing Factor Nc', factorNc, '—'],
-      ['Bearing Factor Nq', factorNq, '—'],
-      ['Bearing Factor Nγ', factorNg, '—'],
+      ['Terzaghi Factor Nc', factorNc, '—'],
+      ['Terzaghi Factor Nq', factorNq, '—'],
+      ['Terzaghi Factor Nγ', factorNg, '—'],
       ['Factor of Safety (FS)', safetyFactor, '—'],
-      ['Cohesion Term (c·Nc)', formatNum(result.cohesionTerm, 2), 'kPa'],
-      ['Surcharge Term (γ·Df·Nq)', formatNum(result.surchargeTerm, 2), 'kPa'],
-      ['Footing Width Term (0.5·γ·B·Nγ)', formatNum(result.widthTerm, 2), 'kPa'],
+      ['Cohesion Term (sc·c·Nc)', formatNum(result.cohesionTerm, 2), 'kPa'],
+      ['Surcharge Term (sq·γ·Df·Nq)', formatNum(result.surchargeTerm, 2), 'kPa'],
+      ['Footing Width Term (0.5·sγ·γ·B·Nγ)', formatNum(result.widthTerm, 2), 'kPa'],
       ['Ultimate Bearing Capacity (qu)', formatNum(result.qu, 2), 'kPa'],
       ['Allowable Bearing Capacity (qa)', formatNum(result.qa, 2), 'kPa'],
       ['Net Allowable Capacity (qnet)', formatNum(result.qNet, 2), 'kPa'],
@@ -243,7 +235,7 @@ export default function BearingCapacityCalculatorClient() {
               data-testid="btn-reset"
               onClick={handleReset}
               className="p-2 text-slate-400 hover:text-slate-600 rounded-xl hover:bg-slate-50 transition-colors"
-              title="Reset to default engineering sample"
+              title="Reset to default textbook benchmark"
             >
               <RotateCcw className="w-4 h-4" />
             </button>
@@ -294,10 +286,10 @@ export default function BearingCapacityCalculatorClient() {
             </div>
           </div>
 
-          {/* Soil Presets */}
+          {/* Terzaghi Soil Presets */}
           <div>
             <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">
-              Stratum Presets
+              Terzaghi 1943 Stratum Presets
             </label>
             <div className="grid grid-cols-2 gap-2">
               <button
@@ -306,7 +298,7 @@ export default function BearingCapacityCalculatorClient() {
                 onClick={() => handleApplyPreset('soft_clay')}
                 className="py-1.5 px-2 text-[11px] font-bold rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-left truncate"
               >
-                Soft Clay (φ=0)
+                Soft Clay (Nc=5.7)
               </button>
               <button
                 type="button"
@@ -314,7 +306,7 @@ export default function BearingCapacityCalculatorClient() {
                 onClick={() => handleApplyPreset('stiff_clay')}
                 className="py-1.5 px-2 text-[11px] font-bold rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-left truncate"
               >
-                Stiff Clay
+                Stiff Clay (φ=20°)
               </button>
               <button
                 type="button"
@@ -322,7 +314,7 @@ export default function BearingCapacityCalculatorClient() {
                 onClick={() => handleApplyPreset('loose_sand')}
                 className="py-1.5 px-2 text-[11px] font-bold rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-left truncate"
               >
-                Loose Sand
+                Loose Sand (φ=30°)
               </button>
               <button
                 type="button"
@@ -330,7 +322,7 @@ export default function BearingCapacityCalculatorClient() {
                 onClick={() => handleApplyPreset('dense_sand')}
                 className="py-1.5 px-2 text-[11px] font-bold rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-left truncate"
               >
-                Dense Sand
+                Dense Sand (φ=35°)
               </button>
             </div>
           </div>
@@ -398,7 +390,7 @@ export default function BearingCapacityCalculatorClient() {
           {/* Bearing Factors Nc, Nq, Ng */}
           <div className="border-t border-slate-100 pt-4 space-y-3">
             <div className="text-xs font-black text-slate-400 uppercase tracking-wider">
-              Terzaghi Bearing Capacity Factors
+              Terzaghi Bearing Factors (General Shear)
             </div>
             <div className="grid grid-cols-3 gap-2">
               <div>
@@ -451,7 +443,7 @@ export default function BearingCapacityCalculatorClient() {
               className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-900 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
             />
             <span className="text-[11px] text-slate-400 mt-1 block">
-              Standard civil foundation codes (Eurocode 7, IBC) recommend FS = 3.0 for general shear.
+              Standard civil foundation practice recommends FS = 3.0 for general shear.
             </span>
           </div>
 
@@ -486,7 +478,7 @@ export default function BearingCapacityCalculatorClient() {
               </div>
               <span className="inline-flex items-center gap-1 text-xs font-black text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
                 <Layers className="w-3.5 h-3.5" />
-                Terzaghi 1943 / Eurocode 7
+                Terzaghi 1943 Method
               </span>
             </div>
 
@@ -503,7 +495,7 @@ export default function BearingCapacityCalculatorClient() {
                   </div>
                 </div>
                 <p className="text-xs text-blue-600/80 font-semibold mt-3 pt-3 border-t border-blue-200/50">
-                  Gross shear failure threshold at foundation base level
+                  {result.isValid ? 'Gross shear failure threshold at foundation base' : '—'}
                 </p>
               </div>
 
@@ -518,7 +510,7 @@ export default function BearingCapacityCalculatorClient() {
                   </div>
                 </div>
                 <p className="text-xs text-emerald-700/80 font-semibold mt-3 pt-3 border-t border-emerald-200/50">
-                  Design pressure permitted for structural foundation sizing
+                  {result.isValid ? 'Permissible structural design pressure' : '—'}
                 </p>
               </div>
 
@@ -531,7 +523,7 @@ export default function BearingCapacityCalculatorClient() {
                   <span className="text-sm text-slate-500 ml-1">kPa</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-1 font-semibold">
-                  (qu - γ·Df) / FS — excludes overburden soil weight
+                  {result.isValid ? '(qu - γ·Df) / FS — excludes overburden soil pressure' : '—'}
                 </p>
               </div>
 
@@ -546,7 +538,7 @@ export default function BearingCapacityCalculatorClient() {
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-1 font-semibold">
-                  qa &times; Contact Area ({formatNum(result.area, 2)} m²)
+                  {result.isValid ? `qa × Contact Area (${formatNum(result.area, 2)} m²)` : '—'}
                 </p>
               </div>
             </div>
@@ -595,16 +587,16 @@ export default function BearingCapacityCalculatorClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-4">
             <h3 className="text-base font-black text-slate-900 tracking-tight flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-emerald-600" />
-              Geotechnical Standards & Safety Factor Criteria (Eurocode 7 / ASTM D1586)
+              Terzaghi Bearing Capacity Criteria & Soil Mechanics
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 leading-relaxed font-medium">
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <strong className="text-slate-800 font-bold block mb-1">General Shear vs. Local Shear:</strong>
-                Terzaghi formulas assume general shear failure for dense sands and stiff clays. For soft clays and loose sands, reduce parameters to c&apos; = 2/3 c and tan(φ&apos;) = 2/3 tan(φ) to model punching / local shear.
+                Terzaghi formulas assume general shear failure for dense sands and stiff clays. For soft clays and loose sands, reduce parameters to c&apos; = 2/3 c and tan(φ&apos;) = 2/3 tan(φ) to model punching or local shear.
               </div>
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                <strong className="text-slate-800 font-bold block mb-1">Water Table Correction:</strong>
-                If the ground water table rises within depth (Df + B) of the foundation, buoyant soil unit weight (γ&apos; = γsat - 9.81 kN/m³) must be substituted into the surcharge or width term.
+                <strong className="text-slate-800 font-bold block mb-1">Shape Factor Corrections:</strong>
+                For strip footings, sc = 1.0 and sγ = 1.0. For square spread footings, sc = 1.3 and sγ = 0.8 (yielding the classic 0.4·γ·B·Nγ third term).
               </div>
             </div>
           </div>

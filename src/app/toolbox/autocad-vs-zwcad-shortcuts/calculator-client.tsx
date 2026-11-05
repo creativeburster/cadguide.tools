@@ -3,14 +3,14 @@
 import ShortcutDiffClient, { DiffItem } from '@/components/shortcut-diff-client';
 
 const DIFF_DATA: DiffItem[] = [
-  // 1. Core Identical 2D Drawing & Editing (100% PGP Aligned)
+  // 1. Core Identical 2D Drawing & Editing Aliases (100% Verified in acad.pgp & zwcad.pgp)
   {
     shortcut: "L",
     primaryCmd: "LINE",
     secondaryCmd: "LINE",
     isSame: true,
     diffNote: "",
-    useCase: "Draw straight two-dimensional vector line segments between coordinate points."
+    useCase: "Draw straight 2D vector line segments between coordinate points."
   },
   {
     shortcut: "C",
@@ -106,7 +106,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "SPLINE",
     isSame: true,
     diffNote: "",
-    useCase: "Create smooth non-uniform rational B-spline (NURBS) interpolation curves."
+    useCase: "Create smooth non-uniform rational B-spline (NURBS) curves."
   },
   {
     shortcut: "DI",
@@ -138,7 +138,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "HATCH",
     isSame: true,
     diffNote: "",
-    useCase: "Fill enclosed boundary with standard ANSI/ISO vector hatch patterns or gradients."
+    useCase: "Fill enclosed boundary with standard ANSI/ISO vector hatch patterns."
   },
   {
     shortcut: "MA",
@@ -146,32 +146,32 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "MATCHPROP",
     isSame: true,
     diffNote: "",
-    useCase: "Paint and copy layer, color, linetype, and lineweight properties to other objects."
+    useCase: "Copy layer, color, linetype, and lineweight properties to other objects."
   },
 
-  // 2. Real ZWCAD Proprietary Innovations & Differences (Documented in ZWCAD Official User Guide)
+  // 2. Real ZWCAD Official Innovations & Command Differences (Verified in ZWCAD User Manual)
   {
-    shortcut: "SS",
+    shortcut: "SMARTSEL",
     primaryCmd: "QSELECT",
     secondaryCmd: "SMARTSELECT",
     isSame: false,
-    diffNote: "ZWCAD SmartSelect runs in a real-time side palette to multi-filter objects by color, layer, or geometry dynamically without modal dialog interruptions.",
+    diffNote: "ZWCAD official SmartSelect command (alias SMARTSEL). Dynamic multi-criteria property filtering. AutoCAD equivalent is modal QSELECT.",
     useCase: "High-speed multi-criteria entity filtering and batch attribute selection."
   },
   {
-    shortcut: "FC",
+    shortcut: "FCMP",
     primaryCmd: "COMPARE",
-    secondaryCmd: "FILECOMPARE",
+    secondaryCmd: "FCMP",
     isSame: false,
-    diffNote: "ZWCAD native File Compare overlays two DWG drawings and color-codes differences (Yellow/Red/Cyan) with an integrated difference navigation toolbar.",
-    useCase: "Fast revision diffing between contract and shop drawing versions."
+    diffNote: "ZWCAD official File Compare command (FCMP / FCMPSTATE). Overlays two DWG revisions and highlights differences with a diff navigation bar.",
+    useCase: "Revision diffing between contract and shop drawing versions."
   },
   {
     shortcut: "SMARTVOICE",
     primaryCmd: "N/A",
     secondaryCmd: "SMARTVOICE",
     isSame: false,
-    diffNote: "ZWCAD proprietary voice annotation engine. Records audio notes and attaches sound icons directly onto drawing entities for site coordination.",
+    diffNote: "ZWCAD official voice annotation command (managed via VOICEMAN). Records audio notes and attaches sound icons directly to drawing entities.",
     useCase: "Collaborative audio review annotations without typing lengthy text notes."
   },
   {
@@ -179,8 +179,8 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "PUBLISH",
     secondaryCmd: "SMARTPLOT",
     isSame: false,
-    diffNote: "ZWCAD SmartPlot automatically recognizes title block frames and layer bounds across model space to batch export multiple PDF/DWF sheets in one click.",
-    useCase: "Batch automatic plotting of complete drawing sets without layout tabs."
+    diffNote: "ZWCAD official smart batch plot tool (also aliased as ZWPLOT). Automatically identifies title block frames across model space for one-click multi-sheet PDF output.",
+    useCase: "Automatic batch plotting of complete drawing sets without configuring layout tabs."
   },
   {
     shortcut: "BARCODE",
@@ -195,16 +195,8 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "N/A",
     secondaryCmd: "QRCODE",
     isSame: false,
-    diffNote: "ZWCAD built-in 2D matrix QR code generator. Allows scanning with mobile devices on construction sites to access online specification docs.",
+    diffNote: "ZWCAD built-in 2D matrix QR code generator. Allows site engineers to scan drawings with mobile devices to access online specification docs.",
     useCase: "Embedding URL links and cloud inspection documents into drawing title blocks."
-  },
-  {
-    shortcut: "DATASMART",
-    primaryCmd: "DATAEXTRACTION",
-    secondaryCmd: "DATASMART",
-    isSame: false,
-    diffNote: "ZWCAD streamlined data extraction wizard for exporting block attributes and geometric parameters into bidirectional Microsoft Excel tables.",
-    useCase: "Door, window, and structural steel schedule data extraction to Excel."
   }
 ];
 

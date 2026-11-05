@@ -3,7 +3,7 @@
 import ShortcutDiffClient, { DiffItem } from '@/components/shortcut-diff-client';
 
 const DIFF_DATA: DiffItem[] = [
-  // 1. Core Identical 2D Drawing & Editing (100% PGP Aligned)
+  // 1. Core Identical 2D Drawing & Editing Aliases (100% Verified in acad.pgp & gcad.pgp)
   {
     shortcut: "L",
     primaryCmd: "LINE",
@@ -18,7 +18,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "CIRCLE",
     isSame: true,
     diffNote: "",
-    useCase: "Draw circles with specified center point and radius/diameter."
+    useCase: "Draw circles with specified center point and radius or diameter."
   },
   {
     shortcut: "REC",
@@ -26,7 +26,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "RECTANG",
     isSame: true,
     diffNote: "",
-    useCase: "Draw rectangular closed polyline boundaries with chamfer/fillet options."
+    useCase: "Draw rectangular closed polyline boundaries."
   },
   {
     shortcut: "PL",
@@ -34,7 +34,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "PLINE",
     isSame: true,
     diffNote: "",
-    useCase: "Draw connected 2D polyline segments with combined straight and arc vertices."
+    useCase: "Draw continuous 2D polyline segments combining straight and arc segments."
   },
   {
     shortcut: "M",
@@ -42,7 +42,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "MOVE",
     isSame: true,
     diffNote: "",
-    useCase: "Translate selected drawing entities by a 2D/3D displacement vector."
+    useCase: "Translate selected drawing entities by a displacement vector."
   },
   {
     shortcut: "CO",
@@ -66,7 +66,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "TRIM",
     isSame: true,
     diffNote: "",
-    useCase: "Trim entities at cutting edges formed by other intersecting geometry."
+    useCase: "Trim entities at cutting edges formed by intersecting geometry."
   },
   {
     shortcut: "EX",
@@ -106,7 +106,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "SPLINE",
     isSame: true,
     diffNote: "",
-    useCase: "Create smooth non-uniform rational B-spline (NURBS) interpolation curves."
+    useCase: "Create smooth non-uniform rational B-spline (NURBS) curves."
   },
   {
     shortcut: "DI",
@@ -138,7 +138,7 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "HATCH",
     isSame: true,
     diffNote: "",
-    useCase: "Fill enclosed boundary with standard ANSI/ISO vector hatch patterns or gradients."
+    useCase: "Fill enclosed boundary with standard ANSI/ISO vector hatch patterns."
   },
   {
     shortcut: "MA",
@@ -146,65 +146,41 @@ const DIFF_DATA: DiffItem[] = [
     secondaryCmd: "MATCHPROP",
     isSame: true,
     diffNote: "",
-    useCase: "Paint and copy layer, color, linetype, and lineweight properties to other objects."
+    useCase: "Copy layer, color, linetype, and lineweight properties to other objects."
   },
 
-  // 2. Real GstarCAD Proprietary Innovations & Differences (Documented in GstarCAD Official Guide)
+  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Guide)
   {
-    shortcut: "FCMP",
+    shortcut: "CMP",
     primaryCmd: "COMPARE",
-    secondaryCmd: "FCMP",
+    secondaryCmd: "CMP",
     isSame: false,
-    diffNote: "GstarCAD native File Compare engine. Overlays two DWG revisions to instantly highlight modified, added, and deleted entities with color codes.",
-    useCase: "High-speed drawing revision diff verification between version releases."
+    diffNote: "GstarCAD dedicated Drawing Compare dialog tool (CMP / -CMP). Overlays two DWG revisions to highlight differences. AutoCAD modern equivalent is COMPARE.",
+    useCase: "Drawing revision difference comparison between version releases."
   },
   {
     shortcut: "AREASUM",
     primaryCmd: "AREA",
     secondaryCmd: "AREASUM",
     isSame: false,
-    diffNote: "AutoCAD AREA requires tedious manual picking and boundary addition/subtraction. GstarCAD AREASUM automatically sums multiple closed regions in one click.",
-    useCase: "Batch floor plan area and room schedule square meter calculations."
-  },
-  {
-    shortcut: "AUTOSORT",
-    primaryCmd: "N/A",
-    secondaryCmd: "AUTOSORT",
-    isSame: false,
-    diffNote: "GstarCAD built-in tool that automatically scans and numbers drawing title blocks and layout sheet sequences without custom AutoLISP scripts.",
-    useCase: "Automated drawing sheet renumbering and title block batch sequencing."
+    diffNote: "GstarCAD official AREASUM inquiry command automatically sums areas of multiple closed regions. AutoCAD AREA requires manual multi-picking addition/subtraction mode.",
+    useCase: "Batch floor plan area and room schedule square-meter accumulation."
   },
   {
     shortcut: "MAGNIFIER",
     primaryCmd: "N/A",
     secondaryCmd: "MAGNIFIER",
     isSame: false,
-    diffNote: "Interactive floating viewport lens. Allows real-time inspection, snapping, and editing of dense detail drawings without losing global viewport context.",
-    useCase: "Precision micro-geometry inspection in complex architectural floor plans."
-  },
-  {
-    shortcut: "DWGCONVERT",
-    primaryCmd: "DWGCONVERT",
-    secondaryCmd: "DWGCONVERT",
-    isSame: true,
-    diffNote: "",
-    useCase: "Batch convert DWG file formats across AutoCAD R14 through 2024 versions."
+    diffNote: "GstarCAD official interactive floating viewport lens. Allows real-time inspection, snapping, and editing of detail geometry without changing main viewport zoom.",
+    useCase: "Micro-detail drawing inspection and object snapping in complex plans."
   },
   {
     shortcut: "BCOUNT",
     primaryCmd: "BCOUNT (Express)",
     secondaryCmd: "BCOUNT",
     isSame: false,
-    diffNote: "In AutoCAD, BCOUNT requires Express Tools loaded. GstarCAD includes BCOUNT natively in the core kernel to generate block count tables.",
-    useCase: "Bill of materials (BOM) counting of valve, door, and equipment blocks."
-  },
-  {
-    shortcut: "FREEPOLY",
-    primaryCmd: "SKETCH",
-    secondaryCmd: "FREEPOLY",
-    isSame: false,
-    diffNote: "GstarCAD dedicated freehand polyline sketching command with automatic vertex optimization. AutoCAD relies on the legacy SKETCH command.",
-    useCase: "Freehand geological contour tracing, revision clouds, and organic path drafting."
+    diffNote: "GstarCAD integrates BCOUNT directly into core commands. In AutoCAD, BCOUNT requires the Express Tools extension to be loaded.",
+    useCase: "BOM block counting and valve/equipment schedule generation."
   }
 ];
 

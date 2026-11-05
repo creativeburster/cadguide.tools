@@ -54,7 +54,7 @@ export default function ShortcutDiffClient({
   };
 
   const handleExportCsv = () => {
-    const headers = ['Shortcut', `${primaryApp} Command`, `${secondaryApp} Command`, 'Status', 'Use Case', 'Difference Note'];
+    const headers = ['Command / Alias', `${primaryApp} Command`, `${secondaryApp} Command`, 'Status', 'Use Case', 'Difference Note'];
     const rows = filteredData.map(item => [
       `"${item.shortcut}"`,
       `"${item.primaryCmd}"`,
@@ -272,7 +272,7 @@ export default function ShortcutDiffClient({
           <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
               <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
-                <th className="py-3 px-4 w-[110px]">Alias</th>
+                <th className="py-3 px-4 w-[130px]">Command / Alias</th>
                 <th className="py-3 px-4 w-[160px]">{primaryApp} Cmd</th>
                 <th className="py-3 px-4 w-[160px]">{secondaryApp} Cmd</th>
                 <th className="py-3 px-4 w-[100px] text-center">Status</th>

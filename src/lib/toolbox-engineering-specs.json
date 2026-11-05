@@ -686,12 +686,12 @@
     "description": "Side-by-side command mapping and PGP alias diff table between AutoCAD and GstarCAD Lite/Pro. Fast migration reference.",
     "discipline": "CAD Interoperability & Drafting Systems",
     "standards": "Autodesk AutoCAD acad.pgp Reference Guide, GstarCAD Command Specification (gcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
-    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (FCMP, AREASUM, AUTOSORT).",
+    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (CMP, AREASUM, MAGNIFIER, BCOUNT).",
     "formula": "Alias mapping: Command_Alt = Map(Alias) vs. Command_ACAD = Map(Alias)",
     "inputs": [
       {
         "label": "Command Query / Filter",
-        "val": "All 25 Verified PGP Aliases"
+        "val": "All 22 Verified PGP Aliases & Commands"
       },
       {
         "label": "CAD Engine Pair",
@@ -705,7 +705,7 @@
       },
       {
         "label": "Proprietary Enhancements",
-        "val": "7 GstarCAD Commands (FCMP, AREASUM, AUTOSORT, MAGNIFIER, DWGCONVERT, BCOUNT, FREEPOLY)"
+        "val": "4 Official GstarCAD Commands (CMP, AREASUM, MAGNIFIER, BCOUNT)"
       }
     ]
   },
@@ -714,12 +714,12 @@
     "description": "Compare command alias mappings between AutoCAD and ZWCAD. Verify smart command exceptions for seamless transitions.",
     "discipline": "CAD Interoperability & Drafting Systems",
     "standards": "Autodesk AutoCAD acad.pgp Reference Guide, ZWCAD Official Command & PGP System Specification (zwcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
-    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect, FileCompare, SmartVoice, SmartPlot, Barcode/QRCode).",
+    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect/SMARTSEL, FileCompare/FCMP, SmartVoice, SmartPlot, Barcode, QRCode).",
     "formula": "Alias mapping: Command_ZWCAD = Map(Alias) vs. Command_ACAD = Map(Alias)",
     "inputs": [
       {
         "label": "Command Query / Filter",
-        "val": "All 25 Verified PGP Aliases"
+        "val": "All 24 Verified PGP Aliases & Commands"
       },
       {
         "label": "CAD Engine Pair",
@@ -733,7 +733,7 @@
       },
       {
         "label": "Proprietary Enhancements",
-        "val": "7 ZWCAD Smart Commands (SS->SMARTSELECT, FC->FILECOMPARE, SMARTVOICE, SMARTPLOT, BARCODE, QRCODE, DATASMART)"
+        "val": "6 Official ZWCAD Smart Commands (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT, BARCODE, QRCODE)"
       }
     ]
   },
@@ -809,7 +809,7 @@
     "title": "Battery Capacity & Energy Storage Calculator",
     "description": "Calculate battery Ah capacity, gross energy storage, and continuous DC discharge current from load power, backup autonomy time, and system DC voltage.",
     "discipline": "Electrical Power Systems, NEC Compliance & Energy Storage",
-    "standards": "IEEE Std 485 (Sizing Lead-Acid Batteries for Stationary Applications), IEEE Std 1115, IEC 60896 / IEC 62619, NFPA 70 (NEC Article 480 & Article 706)",
+    "standards": "IEEE Std 485 (Sizing Lead-Acid Batteries for Stationary Applications), IEC 60896 / IEC 62619, NFPA 70 (NEC Article 480 & Article 706)",
     "cadContext": "Sizes stationary battery banks and uninterruptible power supply (UPS) systems in electrical schematic drawings and panel schedules, accounting for depth of discharge and inverter conversion efficiency.",
     "formula": "E_load = P · t • C_Ah = E_load / (V_sys · DoD · η) • E_stored = C_Ah · V_sys • I_dc = P / (V_sys · η)",
     "inputs": [
@@ -834,7 +834,7 @@
         "val": "0.90"
       },
       {
-        "label": "Design Margin (IEEE 485)",
+        "label": "Design Margin",
         "val": "1.10"
       }
     ],
@@ -865,7 +865,7 @@
     "title": "Steel Beam Deflection & Stress Calculator",
     "description": "Calculate structural beam deflection, maximum bending moment, bending stress, moment of inertia (Ix), and section modulus (Wx) under concentrated and distributed loads.",
     "discipline": "Structural Engineering, Solid Mechanics & AISC Design",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1), ASTM A36 / A992, ASCE 7-22 Chapter L Serviceability Deflection Criteria (L/240 & L/360)",
+    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1), ASTM A36 / A992, IBC 2024 Table 1604.3 (Deflection Limits L/240 & L/360)",
     "cadContext": "Analyzes structural beam profiles in mechanical frame models and structural BIM layouts, comparing analytical closed-form Euler-Bernoulli deflections against building code serviceability thresholds.",
     "formula": "M_max = (P · L) / 4 • δ_max = (P · L³) / (48 · E · I_x) • σ_max = M_max / W_x • SF = F_y / σ_max",
     "inputs": [
@@ -925,7 +925,7 @@
     "title": "Soil Bearing Capacity Calculator (Terzaghi Method)",
     "description": "Calculate ultimate and allowable bearing capacity of shallow strip, square, and circular foundations using the classical Terzaghi trilinear equation.",
     "discipline": "Geotechnical Engineering & Foundation Design",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), ASTM D1586, Terzaghi (1943) Theoretical Soil Mechanics, Meyerhof (1963) Foundation Capacity Principles",
+    "standards": "Terzaghi (1943) Theoretical Soil Mechanics, Eurocode 7 (EN 1997-1 Geotechnical Design), ASTM D1586 Standard Penetration Test Correlation",
     "cadContext": "Determines safe contact pressures for shallow spread and strip footings in civil site grading plans, foundation layouts, and structural CAD packages before sizing foundation dimensions.",
     "formula": "q_u = s_c · c · N_c + s_q · γ · D_f · N_q + 0.5 · s_γ · γ · B · N_γ • q_a = q_u / FS",
     "inputs": [
@@ -950,7 +950,7 @@
         "val": "2.0 m"
       },
       {
-        "label": "Bearing Capacity Factors",
+        "label": "Terzaghi Bearing Factors",
         "val": "Nc=30, Nq=18, Nγ=15"
       },
       {

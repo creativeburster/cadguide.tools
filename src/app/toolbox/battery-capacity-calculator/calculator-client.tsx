@@ -52,7 +52,7 @@ export default function BatteryCapacityCalculatorClient() {
   const [systemVoltage, setSystemVoltage] = useState('48'); // Volts DC
   const [dod, setDod] = useState('0.8');              // Depth of Discharge (0.1 - 1.0)
   const [inverterEff, setInverterEff] = useState('0.9'); // Efficiency (0.7 - 0.99)
-  const [designMargin, setDesignMargin] = useState('1.10'); // Safety / Aging margin (IEEE 485)
+  const [designMargin, setDesignMargin] = useState('1.10'); // Safety / Aging margin
   const [selectedChemistry, setSelectedChemistry] = useState('custom');
 
   const handleChemistryChange = (key: string) => {
@@ -104,7 +104,7 @@ export default function BatteryCapacityCalculatorClient() {
     // Base Ampere-Hour capacity at battery terminal
     const baseAh = energyNeededWh / (V * d * eff);
 
-    // Recommended Ah capacity with IEEE 485 aging & design margin
+    // Recommended Ah capacity with design margin (if margin is invalid, fallback to baseAh)
     const m = isNaN(margin) || margin <= 0 ? 1.0 : margin;
     const recommendedAh = baseAh * m;
 
@@ -124,6 +124,13 @@ export default function BatteryCapacityCalculatorClient() {
     };
   }, [loadPower, backupTime, systemVoltage, dod, inverterEff, designMargin]);
 
+  // Safe percentage computation to prevent NaN% in UI
+  const marginPercent = useMemo(() => {
+    const m = parseFloat(designMargin);
+    if (isNaN(m) || m <= 0) return null;
+    return Math.round((m - 1) * 100);
+  }, [designMargin]);
+
   const formatNum = (n: number, decimals: number = 2) => {
     if (!result.isValid || isNaN(n) || !isFinite(n)) return '—';
     return n.toFixed(decimals);
@@ -137,7 +144,7 @@ export default function BatteryCapacityCalculatorClient() {
       ['System DC Voltage (V)', systemVoltage, 'V'],
       ['Depth of Discharge (DoD)', dod, 'ratio'],
       ['Inverter / System Efficiency', inverterEff, 'ratio'],
-      ['Design Margin (IEEE 485)', designMargin, 'multiplier'],
+      ['Design Margin', designMargin, 'multiplier'],
       ['Energy Needed (Load)', formatNum(result.energyNeededWh, 1), 'Wh'],
       ['Base Battery Capacity', formatNum(result.baseAh, 2), 'Ah'],
       ['Recommended Sized Capacity', formatNum(result.recommendedAh, 2), 'Ah'],
@@ -299,7 +306,7 @@ export default function BatteryCapacityCalculatorClient() {
           {/* Design Margin */}
           <div>
             <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1.5">
-              Design & Aging Margin (IEEE 485)
+              Design & Aging Margin
             </label>
             <input
               type="text"
@@ -343,9 +350,9 @@ export default function BatteryCapacityCalculatorClient() {
                 </div>
                 <h2 className="text-lg font-black text-slate-900 tracking-tight">Sizing Results</h2>
               </div>
-              <span className="inline-flex items-center gap-1 text-xs font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+              <span className="inline-flex items-center gap-1 text-xs font-black text-slate-600 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
                 <BatteryCharging className="w-3.5 h-3.5" />
-                IEEE 485 / NEC 480 Aligned
+                Stationary ESS Sizing Reference
               </span>
             </div>
 
@@ -362,10 +369,21 @@ export default function BatteryCapacityCalculatorClient() {
                   </div>
                 </div>
                 <div className="text-xs text-blue-600/80 font-semibold mt-3 pt-3 border-t border-blue-200/50">
-                  Recommended with {((parseFloat(designMargin) - 1) * 100).toFixed(0)}% margin:{' '}
-                  <strong className="text-blue-900" data-testid="res-recommended-capacity">
-                    {formatNum(result.recommendedAh, 2)} Ah
-                  </strong>
+                  {marginPercent !== null && result.isValid ? (
+                    <span>
+                      Recommended with {marginPercent}% margin:{' '}
+                      <strong className="text-blue-900" data-testid="res-recommended-capacity">
+                        {formatNum(result.recommendedAh, 2)} Ah
+                      </strong>
+                    </span>
+                  ) : (
+                    <span>
+                      Recommended with margin:{' '}
+                      <strong className="text-blue-900" data-testid="res-recommended-capacity">
+                        {formatNum(result.recommendedAh, 2)} Ah
+                      </strong>
+                    </span>
+                  )}
                 </div>
               </div>
 
@@ -380,7 +398,7 @@ export default function BatteryCapacityCalculatorClient() {
                   </div>
                 </div>
                 <div className="text-xs text-emerald-700/80 font-semibold mt-3 pt-3 border-t border-emerald-200/50">
-                  Equivalent to {(result.energyNeededWh / 1000).toFixed(2)} kWh AC/DC consumption
+                  {result.isValid ? `Equivalent to ${(result.energyNeededWh / 1000).toFixed(2)} kWh AC/DC consumption` : '—'}
                 </div>
               </div>
 
@@ -393,7 +411,7 @@ export default function BatteryCapacityCalculatorClient() {
                   <span className="text-sm text-slate-500 ml-1">Wh</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-1 font-semibold">
-                  Nominal capacity energy: Ah &times; V ({formatNum(result.totalStoredWh / 1000, 2)} kWh)
+                  {result.isValid ? `Nominal pack energy: Ah × V (${formatNum(result.totalStoredWh / 1000, 2)} kWh)` : '—'}
                 </p>
               </div>
 
@@ -406,7 +424,7 @@ export default function BatteryCapacityCalculatorClient() {
                   <span className="text-sm text-slate-500 ml-1">A</span>
                 </div>
                 <p className="text-[11px] text-slate-500 mt-1 font-semibold">
-                  Bus discharge current at {systemVoltage}V nominal (P / (V &times; η))
+                  {result.isValid ? `Bus discharge current at ${systemVoltage}V nominal (P / (V × η))` : '—'}
                 </p>
               </div>
             </div>
@@ -425,16 +443,16 @@ export default function BatteryCapacityCalculatorClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-4">
             <h3 className="text-base font-black text-slate-900 tracking-tight flex items-center gap-2">
               <ShieldAlert className="w-4 h-4 text-blue-600" />
-              Battery Sizing & Chemistry Reference (IEEE 485 / NEC Article 480)
+              Battery Sizing & Chemistry Reference
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 leading-relaxed font-medium">
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                 <strong className="text-slate-800 font-bold block mb-1">Depth of Discharge (DoD) Limits:</strong>
-                Deep-cycle lead-acid batteries (AGM/Gel/FLA) should generally not exceed 50% DoD for reliable cycle longevity. Lithium-based batteries (LiFePO4/NMC) comfortably handle 80% to 90% DoD.
+                Deep-cycle lead-acid batteries (AGM/Gel/FLA) should generally not exceed 50% DoD for reliable cycle longevity. Lithium-based batteries (LiFePO4/NMC) comfortably handle 80% to 90% DoD before BMS low-voltage cut-off.
               </div>
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                <strong className="text-slate-800 font-bold block mb-1">Temperature Derating:</strong>
-                Batteries operated in sub-ambient temperatures (below 25&deg;C / 77&deg;F) lose effective capacity. Under freezing conditions (0&deg;C), lead-acid capacity drops by ~20%, requiring a 1.25 derating multiplier.
+                <strong className="text-slate-800 font-bold block mb-1">Design Margin & Aging Factor:</strong>
+                Design margins (typically 1.10~1.15) adapt stationary practices (such as IEEE Std 485 for lead-acid banks) to account for capacity fade towards the end of warranty life.
               </div>
             </div>
           </div>

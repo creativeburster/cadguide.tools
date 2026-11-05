@@ -14,7 +14,8 @@
 4. **报告写的每一条都要附证据**。“已完成”必须附 `git show --stat` 或“文件路径 + 行号”。没改就说没改。
 5. **范围透明**。跳过任何工具都要在报告里写明原因，不能悄悄漏掉。
 6. **不扩大改动面**。只改本批工具；发现全站问题要如实记录为“已知问题，另行处理”，不能说成“已修复”。
-7. **严禁擅自 `git push`**（见 `AGENTS.md`）。本地 commit 后呈报，等用户明确说“push”。
+8. **严禁在业务逻辑中为迎合测试“弄虚作假”**。测试报错必须追查测试环境或根本原因，绝不允许在 `catch` 块中谎报成功（例如：剪贴板写入失败时强行设为 `Copied!`），绝不允许清空输入时用 `|| 0` 加 `Math.max(1, ...)` 算出虚假应力掩盖空值。
+9. **测试脚本必须纳入版本控制**。所有 E2E 测试脚本统一存放在 `tests/e2e/` 目录并提交进 Git，严禁存放在被 `.gitignore` 忽略的临时目录中。
 
 ---
 
@@ -22,11 +23,11 @@
 
 | 类型 | 例子 | 核心检查点 |
 | :--- | :--- | :--- |
-| 数值计算器 | ball-screw、ada-ramp、3d-print-cost | 公式与量纲、默认值手算、边界输入、导出 CSV |
+| 数值计算器 | ball-screw、ada-ramp、beam-deflection、bearing-capacity | 理论体系纯正不混用、公式与量纲严谨、默认值与算例手算闭环、空值优雅展示 `—`（绝无 NaN/NaN%）、导出 CSV |
 | 单位换算器 | area-unit、angle-unit | 下拉选项与换算表 **一一对应**、使用精确定义系数、互换按钮 |
 | 脚本/文件生成器 | registry-clean (.bat)、pgp-alias (.pgp) | 生成内容能真实运行、版本参数随选择变化、编码与特殊字符 |
 | 诊断向导 | autocad-fatal-error-wizard | 每条原因有官方 KB 链接、数量描述与数据一致 |
-| 速查/对照表 | autocad-vs-gstarcad-shortcuts、autolisp-reference | 每条数据来自官方文档（如官方 `acad.pgp` / `gcad.pgp`），不得混入编造条目 |
+| 速查/对照表 | autocad-vs-gstarcad-shortcuts、autocad-vs-zwcad-shortcuts | 字段概念清晰（Alias 列仅填纯快捷键，Command 列填完整命令）、每条数据有官方文档出处证据、彻底清除杜撰条目 |
 
 ---
 
@@ -77,7 +78,7 @@
 
 ## 3. 验收标准（全部满足才算完成）
 
-### 3.1 E2E 测试（Playwright，脚本放在 `scratch/e2e_*.js`）
+### 3.1 E2E 测试（Playwright，脚本放在 `tests/e2e/e2e_*.js`，严禁放在 gitignore 的 scratch 中）
 每个工具至少包含：
 1. **默认值手算断言**：在脚本注释里写出完整手算过程，相对误差 ≤ 1%（精确换算 ≤ 0.1%）。
 2. **至少一组修改参数后的手算断言**，最好覆盖分支（如坡道高度超过 30 in 后出现中间平台）。
