@@ -13,7 +13,7 @@ interface MaterialRoughness {
 const DUCT_MATERIALS: MaterialRoughness[] = [
   { name: 'Galvanized Sheet Steel', roughnessMm: 0.09, desc: 'Standard rigid commercial HVAC ductwork' },
   { name: 'Smooth Plastic / Spiral Metal', roughnessMm: 0.03, desc: 'High-grade spiral or seamless PVC' },
-  { name: 'Flexible Ducting (Extended)', roughnessMm: 0.90, desc: 'Corrugated flex duct without sag' },
+  { name: 'Flexible Ducting (Fully Extended)', roughnessMm: 3.00, desc: 'Corrugated flex duct per ASHRAE Fundamentals' },
   { name: 'Fibrous Glass Liner', roughnessMm: 1.50, desc: 'Internally lined duct for acoustic attenuation' },
 ];
 
@@ -45,7 +45,7 @@ export default function AirDuctPressureCalculatorClient() {
 
     // Darcy-Weisbach Friction Factor f:
     // For laminar flow (Re <= 2300): f = 64 / Re
-    // For turbulent flow (Re > 2300): Swamee-Jain explicit equation (ASHRAE standard approximation to Colebrook-White)
+    // For turbulent flow (Re > 2300): Swamee-Jain explicit Colebrook-White approximation
     let f = 0.02;
     if (reynolds <= 2300) {
       f = reynolds > 0 ? 64 / reynolds : 0.064;
@@ -265,7 +265,9 @@ export default function AirDuctPressureCalculatorClient() {
                   <Gauge className="w-4 h-4" />
                   <span>Total Loss (Metric SI)</span>
                 </div>
-                <div className="text-4xl font-black">{results.totalLossPa.toFixed(1)} <span className="text-xl font-bold">Pa</span></div>
+                <div className="text-4xl font-black">
+                  <span data-testid="duct-total-loss-pa">{results.totalLossPa.toFixed(1)}</span> <span className="text-xl font-bold">Pa</span>
+                </div>
                 <div className="text-xs text-green-100/90 mt-2 font-medium">
                   {results.frictionLossPa.toFixed(1)} Pa friction + {results.dynamicLossPa.toFixed(1)} Pa dynamic
                 </div>
@@ -276,7 +278,9 @@ export default function AirDuctPressureCalculatorClient() {
                   <Wind className="w-4 h-4 text-emerald-400" />
                   <span>Total Loss (Imperial HVAC)</span>
                 </div>
-                <div className="text-4xl font-black">{results.totalInWg.toFixed(3)} <span className="text-xl font-bold">in. w.g.</span></div>
+                <div className="text-4xl font-black">
+                  <span data-testid="duct-total-loss-inwg">{results.totalInWg.toFixed(3)}</span> <span className="text-xl font-bold">in. w.g.</span>
+                </div>
                 <div className="text-xs text-slate-300 mt-2 font-medium">
                   {results.frictionInWg.toFixed(3)} in. w.g. friction + {results.dynamicInWg.toFixed(3)} in. w.g. dynamic
                 </div>
@@ -287,20 +291,24 @@ export default function AirDuctPressureCalculatorClient() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Friction Loss (ΔPf)</div>
-                <div className="text-2xl font-black text-slate-900">{results.frictionLossPa.toFixed(1)} <span className="text-xs text-slate-500 font-bold">Pa</span></div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="duct-friction-pa">{results.frictionLossPa.toFixed(1)}</span> <span className="text-xs text-slate-500 font-bold">Pa</span>
+                </div>
                 <div className="text-[11px] text-slate-400 mt-1">{results.frictionInWg.toFixed(3)} in. w.g. ({((results.frictionLossPa / Math.max(0.1, results.totalLossPa)) * 100).toFixed(0)}%)</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Dynamic Loss (ΔPd)</div>
-                <div className="text-2xl font-black text-slate-900">{results.dynamicLossPa.toFixed(1)} <span className="text-xs text-slate-500 font-bold">Pa</span></div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="duct-dynamic-pa">{results.dynamicLossPa.toFixed(1)}</span> <span className="text-xs text-slate-500 font-bold">Pa</span>
+                </div>
                 <div className="text-[11px] text-slate-400 mt-1">{results.dynamicInWg.toFixed(3)} in. w.g. (ΣK = {fittingK})</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Velocity Pressure (Pv)</div>
                 <div className="text-2xl font-black text-slate-900">{results.velocityPressurePa.toFixed(1)} <span className="text-xs text-slate-500 font-bold">Pa</span></div>
-                <div className="text-[11px] text-slate-400 mt-1">Re = {Math.round(results.reynolds).toLocaleString()} ({results.isLaminar ? 'Laminar' : 'Turbulent'})</div>
+                <div className="text-[11px] text-slate-400 mt-1">Re = <span data-testid="duct-reynolds">{Math.round(results.reynolds).toLocaleString()}</span> ({results.isLaminar ? 'Laminar' : 'Turbulent'})</div>
               </div>
             </div>
 

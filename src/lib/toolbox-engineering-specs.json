@@ -68,16 +68,16 @@
     ]
   },
   "3d-print-layer-time-calculator": {
-    "title": "3D Print Layer Time Calculator",
-    "description": "Calculate time per layer and total print time from layer parameters.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "t_layer = perimeter/v + infill_area/(v*nozzle)",
+    "title": "3D Print Layer Time & Filament Sizing Calculator",
+    "description": "Calculate layer toolpath duration, total print time, and 1.75mm filament mass using perimeter shells and solid/sparse infill kinematics.",
+    "discipline": "CAD Interoperability, Additive Manufacturing & Rapid Prototyping",
+    "standards": "ISO/ASTM 52900 (Additive manufacturing — General principles), ISO/ASTM 52920, RepRap Standard Toolpath Slicing Kinematics",
+    "cadContext": "Validate model surface watertightness and manifold geometry before slicing. Export STL with chordal sagitta < 0.05mm to prevent polygon facet artifacts on cylindrical bearing seats.",
+    "formula": "t_layer = (perimeter · wallCount)/v + (infillArea · density)/(v · nozzle) • t_total = (t_solid · n_solid + t_sparse · n_sparse) · (1 + overhead)",
     "inputs": [
       {
         "label": "Layer Height (mm)",
-        "val": "0.2"
+        "val": "0.20"
       },
       {
         "label": "Print Speed (mm/s)",
@@ -88,7 +88,11 @@
         "val": "500"
       },
       {
-        "label": "Infill Area (mm2)",
+        "label": "Perimeter Wall Count",
+        "val": "2"
+      },
+      {
+        "label": "Infill Area (mm²)",
         "val": "10000"
       },
       {
@@ -96,22 +100,34 @@
         "val": "20"
       },
       {
+        "label": "Solid Layers (Top/Bottom)",
+        "val": "4"
+      },
+      {
         "label": "Total Layers",
         "val": "200"
+      },
+      {
+        "label": "Travel & Accel Overhead (%)",
+        "val": "25"
       }
     ],
     "outputs": [
       {
-        "label": "Time per Layer",
-        "val": "110.00 s"
+        "label": "Total Estimated Print Time",
+        "val": "8h 53m"
       },
       {
-        "label": "Total Time",
-        "val": "366.67 min"
+        "label": "Filament Length (1.75mm)",
+        "val": "42.6 m"
       },
       {
-        "label": "Filament Used",
-        "val": "88.000 m"
+        "label": "Estimated PLA Mass",
+        "val": "127.0 g"
+      },
+      {
+        "label": "Average Time per Layer",
+        "val": "128.0 s"
       }
     ]
   },
@@ -160,42 +176,50 @@
     "outputs": []
   },
   "acoustic-decibel-calculator": {
-    "title": "Acoustic Decibel Calculator",
-    "description": "Calculate sound pressure level, decibel addition, and distance attenuation.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "SPL = 20*log10(p/p0), attenuation = 6dB per doubling distance",
+    "title": "Acoustic Decibel & Multi-Source Calculator",
+    "description": "Calculate sound pressure level distance attenuation, NIOSH exposure limits, and logarithmic decibel addition across multiple sources.",
+    "discipline": "Engineering Metrology, Applied Acoustics & Environmental Physics",
+    "standards": "ISO 9613-2 (Acoustics — Attenuation of sound during propagation outdoors), ISO 1999 (Determination of occupational noise exposure), NIOSH Criteria for a Recommended Standard (Publication No. 98-126)",
+    "cadContext": "Incorporate outdoor sound propagation contours and acoustic enclosure insertion loss directly into architectural site plans and mechanical room layouts to verify OSHA/NIOSH boundary compliance.",
+    "formula": "SPL₂ = SPL₁ - 20·log₁₀(d₂/d₁) • L_total = 10·log₁₀(Σ 10^(Lᵢ/10)) • T_max = 8 / 2^((SPL-85)/3) hrs (NIOSH REL 3dB exchange rate)",
     "inputs": [
       {
-        "label": "Sound Pressure (Pa)",
-        "val": "0.5"
+        "label": "Source SPL at d1 (dB)",
+        "val": "85"
       },
       {
-        "label": "Reference p0 (uPa)",
-        "val": "20"
-      },
-      {
-        "label": "Distance 1 (m)",
+        "label": "Reference Distance d1 (m)",
         "val": "1"
       },
       {
-        "label": "Distance 2 (m)",
+        "label": "Target Distance d2 (m)",
         "val": "10"
+      },
+      {
+        "label": "Sound Source 1 (dB)",
+        "val": "85"
+      },
+      {
+        "label": "Sound Source 2 (dB)",
+        "val": "85"
       }
     ],
     "outputs": [
       {
-        "label": "SPL at d1",
-        "val": "87.959 dB"
+        "label": "SPL at Target Distance (10m)",
+        "val": "65.0 dB"
       },
       {
-        "label": "SPL at d2",
-        "val": "67.959 dB"
+        "label": "Distance Attenuation",
+        "val": "20.00 dB"
       },
       {
-        "label": "Attenuation",
-        "val": "20.000 dB"
+        "label": "NIOSH Recommended Exposure",
+        "val": "> 24 hrs"
+      },
+      {
+        "label": "Combined Level (85 + 85 dB)",
+        "val": "88.0 dB"
       }
     ]
   },
@@ -241,14 +265,14 @@
   },
   "aeration-tank-calculator": {
     "title": "Aeration Tank Oxygen Requirement Calculator",
-    "description": "Calculate oxygen requirement, air flow rate, and blower sizing for activated sludge.",
+    "description": "Calculate biological basin volume, actual oxygen demand, field air flow rate, and blower sizing for activated sludge.",
     "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "V = (Q · ΔBOD · SRT) / (0.6 · MLSS) • HRT = (V / Q) × 24h (Metcalf & Eddy Wastewater Engineering)",
+    "standards": "Metcalf & Eddy Wastewater Engineering (5th Edition), WEF Manual of Practice No. 8 (MOP 8), Recommended Standards for Wastewater Facilities (Ten States Standards)",
+    "cadContext": "Check hydraulic grade line (HGL), basin invert elevations, diffuser submergence depth, and blower discharge manifold layout in Civil 3D and Revit MEP models.",
+    "formula": "V = (P_x,VSS · SRT · 1000) / (0.75 · MLSS) • HRT = (V / Q) × 24h • AOR = 1.2 · ΔBOD_kg • Airflow = AOR / (0.2793 · Field_OTE)",
     "inputs": [
       {
-        "label": "Design Inflow Q (m³/d)",
+        "label": "Design Daily Inflow Q (m³/d)",
         "val": "5000"
       },
       {
@@ -260,74 +284,98 @@
         "val": "15"
       },
       {
-        "label": "MLSS Concentration (mg/L)",
+        "label": "Aeration Tank MLSS (mg/L)",
         "val": "3000"
       },
       {
         "label": "Sludge Age SRT (days)",
+        "val": "10"
+      },
+      {
+        "label": "Basin Liquid Depth (m)",
+        "val": "4.5"
+      },
+      {
+        "label": "Field OTE α·F·SOTE (%)",
         "val": "10"
       }
     ],
     "outputs": [
       {
         "label": "Aeration Basin Volume",
-        "val": "5694 m³"
+        "val": "1708 m³"
       },
       {
         "label": "Hydraulic Retention Time (HRT)",
-        "val": "27.3 hours"
+        "val": "8.2 hours"
       },
       {
         "label": "Food-to-Microorganism (F/M)",
-        "val": "0.064 kg BOD/kg MLSS·d"
+        "val": "0.215 kg BOD/kg MLSS·d"
       },
       {
-        "label": "Daily Oxygen Demand",
+        "label": "Daily Oxygen Demand (AOR)",
         "val": "1230.0 kg O₂/d"
+      },
+      {
+        "label": "Required Air Flow Rate",
+        "val": "30.6 Nm³/min"
+      },
+      {
+        "label": "Estimated Blower Motor Power",
+        "val": "35.7 kW"
       }
     ]
   },
   "air-duct-pressure-calculator": {
     "title": "Air Duct Pressure Drop Calculator",
-    "description": "Calculate pressure drop in HVAC ducts from friction and dynamic losses.",
+    "description": "Calculate pressure drop in HVAC ducts from Darcy-Weisbach friction and dynamic fitting losses.",
     "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "dP = f*L/D*0.5*rho*v^2 + sum(C*0.5*rho*v^2)",
+    "standards": "ASHRAE Handbook — Fundamentals (Chapter 21 Duct Design), SMACNA HVAC Duct Construction Standards (Metal and Flexible), ISO 6946",
+    "cadContext": "Coordinate ductwork aspect ratios, turning vane radii, and branch takeoff pressure drops within Revit MEP federated models to balance static fan requirements.",
+    "formula": "ΔPf = f · (L / D) · 0.5·ρ·v² (Swamee-Jain explicit Colebrook-White friction) + ΣK · 0.5·ρ·v²",
     "inputs": [
       {
         "label": "Duct Length (m)",
         "val": "20"
       },
       {
-        "label": "Duct Dia (mm)",
+        "label": "Duct Internal Diameter (mm)",
         "val": "300"
       },
       {
         "label": "Air Velocity (m/s)",
-        "val": "5"
+        "val": "5.0"
       },
       {
-        "label": "Friction f",
-        "val": "0.02"
+        "label": "Duct Material",
+        "val": "Galvanized Sheet Steel (0.09 mm)"
       },
       {
-        "label": "Fitting Losses K",
-        "val": "2"
+        "label": "Fitting Loss Coefficient ΣK",
+        "val": "2.0"
       }
     ],
     "outputs": [
       {
-        "label": "Friction Loss",
-        "val": "20.000 Pa"
+        "label": "Total Pressure Loss (SI)",
+        "val": "49.7 Pa"
       },
       {
-        "label": "Dynamic Loss",
-        "val": "30.000 Pa"
+        "label": "Total Pressure Loss (Imperial)",
+        "val": "0.200 in. w.g."
       },
       {
-        "label": "Total Loss",
-        "val": "50.000 Pa"
+        "label": "Friction Pressure Loss ΔPf",
+        "val": "19.6 Pa"
+      },
+      {
+        "label": "Dynamic Fitting Loss ΔPd",
+        "val": "30.1 Pa"
+      },
+      {
+        "label": "Reynolds Number (Re)",
+        "val": "98945"
       }
     ]
   },
@@ -342,70 +390,90 @@
     "outputs": []
   },
   "anchor-bolt-calculator": {
-    "title": "Anchor Bolt Pull-out Strength Calculator",
-    "description": "Calculate anchor bolt pull-out and shear capacity in concrete per ACI 318.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Nn = 0.5*sqrt(fc)*hef^1.5*pi",
+    "title": "Anchor Bolt Conceptual Capacity Estimator",
+    "description": "Preliminary sizing of single cast-in anchor bolt concrete breakout and steel tensile/shear capacity for conceptual planning.",
+    "discipline": "Structural Fastener Mechanics & Concrete Anchor Engineering",
+    "standards": "Concrete Capacity Design (CCD) Method, ISO 898-1 (Mechanical Properties of Carbon Steel Fasteners), AISC Design Guide 1 (Base Plate and Anchor Rod Design)",
+    "cadContext": "Verify minimum concrete edge distances (c1, c2 ≥ 1.5 hef) and anchor bolt center-to-center spacing (s ≥ 3.0 hef) in structural column base plate details.",
+    "formula": "N_b = k_c · √(f'c) · h_ef^1.5 (k_c = 10.0 for cast-in in SI) • N_sa = A_se · f_uta • V_sa = 0.6 · A_se · f_uta (unfactored nominal capacity)",
     "inputs": [
       {
-        "label": "Concrete fc (MPa)",
+        "label": "Concrete f'c (MPa)",
         "val": "25"
       },
       {
-        "label": "Embedment hef (mm)",
+        "label": "Effective Embedment Depth h_ef (mm)",
         "val": "100"
       },
       {
-        "label": "Bolt Dia (mm)",
+        "label": "Bolt Nominal Diameter d (mm)",
         "val": "16"
       },
       {
-        "label": "Steel fy (MPa)",
-        "val": "400"
+        "label": "Steel Yield Strength fy (MPa)",
+        "val": "640"
+      },
+      {
+        "label": "Steel Ultimate Strength fu (MPa)",
+        "val": "800"
       }
     ],
     "outputs": [
       {
-        "label": "Pull-out Nn",
-        "val": "248.36 kN"
+        "label": "Governing Nominal Tension",
+        "val": "50.00 kN"
       },
       {
-        "label": "Steel Capacity",
-        "val": "72.382 kN"
+        "label": "Concrete Cone Breakout (Nb)",
+        "val": "50.00 kN"
       },
       {
-        "label": "Shear Vn",
-        "val": "48.255 kN"
+        "label": "Steel Tensile Rupture (Nsa)",
+        "val": "125.4 kN"
+      },
+      {
+        "label": "Steel Shear Capacity (Vsa)",
+        "val": "75.27 kN"
       }
     ]
   },
   "angle-unit-converter": {
     "title": "Angle Unit Converter",
-    "description": "Convert between degrees, radians, gradians, arc minutes, and arc seconds.",
+    "description": "Convert between degrees, radians, milliradians, gradians, arcminutes, arcseconds, revolutions, and NATO mils.",
     "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 rad = 57.296 deg = 63.662 grad",
+    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-3 (Space and Time), BIPM SI Brochure (9th Edition)",
+    "cadContext": "Maintain full double-precision floating-point accuracy during angular transformations (DXF 50-group angular codes, Euler angles, STEP Cartesian transformation matrices).",
+    "formula": "1 rad = 180/π deg ≈ 57.29578° • 1 gon = 0.9° • 1 mil = 360/6400° = 0.05625° • 1 MOA = 1/60°",
     "inputs": [
       {
-        "label": "Value",
+        "label": "Value to Convert",
         "val": "90"
       },
       {
-        "label": "From",
-        "val": "deg"
+        "label": "From Unit",
+        "val": "Degree (°)"
       },
       {
-        "label": "To",
-        "val": "rad"
+        "label": "To Unit",
+        "val": "Radian (rad)"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "1.571"
+        "label": "Converted Result",
+        "val": "1.570796 rad"
+      },
+      {
+        "label": "Base Degrees",
+        "val": "90°"
+      },
+      {
+        "label": "Quadrant",
+        "val": "Positive Y-Axis (90°)"
+      },
+      {
+        "label": "Revolutions (Turns)",
+        "val": "0.2500 rev"
       }
     ]
   },
@@ -420,46 +488,54 @@
     "outputs": []
   },
   "arc-flash-calculator": {
-    "title": "Arc Flash Incident Energy Calculator (NFPA 70E)",
-    "description": "Calculate arc flash incident energy, PPE category, and flash protection boundary per NFPA 70E.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "E = 4.184 · Cf · Ibf^x · (t/0.2) · (610/D)^y • AFB = 610 · (E/1.2)^(1/y) (IEEE 1584-2018 / NFPA 70E)",
+    "title": "Arc Flash Incident Energy Calculator",
+    "description": "Preliminary screening of arc flash incident energy, arcing current, and flash boundary distance using IEEE 1584-2002 empirical equations.",
+    "discipline": "Electrical Power Systems, Industrial Safety & Substation Engineering",
+    "standards": "IEEE Std 1584-2002 (IEEE Guide for Performing Arc-Flash Hazard Calculations), NFPA 70E Annex D (Incident Energy Calculation Methods)",
+    "cadContext": "Record calculated incident energy, protective clearing times, and arc flash boundary distances on electrical single-line CAD schematics and panelboard warning label schedules.",
+    "formula": "lg(Ia) = f(V, Ibf, G) • lg(En) = K1 + K2 + 1.081·lg(Ia) + 0.0011·G • E = 4.184·Cf·En·(t/0.2)·(610^x / D^x) • AFB = 610·(E_cal / 1.2)^(1/x)",
     "inputs": [
       {
-        "label": "System Voltage (kV)",
-        "val": "480V (Low Voltage Switchgear)"
+        "label": "System Voltage V (kV)",
+        "val": "0.48"
       },
       {
-        "label": "Bolted Fault Current (kA)",
+        "label": "Equipment Class",
+        "val": "MCCs & Panelboards (≤ 1 kV)"
+      },
+      {
+        "label": "Grounding Type",
+        "val": "Solidly Grounded"
+      },
+      {
+        "label": "Bolted Fault Current Ibf (kA)",
         "val": "25"
       },
       {
-        "label": "Arc Clearing Time (seconds)",
+        "label": "Arc Clearing Time t (s)",
         "val": "0.12"
       },
       {
-        "label": "Working Distance (mm)",
+        "label": "Working Distance D (mm)",
         "val": "455"
       }
     ],
     "outputs": [
       {
-        "label": "Incident Energy at Working Dist",
-        "val": "124.41 cal/cm²"
+        "label": "Predicted Arcing Current Ia",
+        "val": "14.34 kA"
+      },
+      {
+        "label": "Incident Energy (E)",
+        "val": "5.94 cal/cm²"
+      },
+      {
+        "label": "Incident Energy (SI)",
+        "val": "24.8 J/cm²"
       },
       {
         "label": "Arc Flash Boundary (AFB)",
-        "val": "13462 mm"
-      },
-      {
-        "label": "NFPA 70E PPE Category",
-        "val": "Extreme Risk (>40 cal)"
-      },
-      {
-        "label": "Normalized Working Distance",
-        "val": "455 mm"
+        "val": "1615 mm"
       }
     ]
   },

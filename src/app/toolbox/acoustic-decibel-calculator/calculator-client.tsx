@@ -256,7 +256,9 @@ export default function AcousticDecibelCalculatorClient() {
                   <Volume2 className="w-4 h-4" />
                   <span>Resulting SPL at {d2}m (d₂)</span>
                 </div>
-                <div className="text-4xl font-black">{results.spl2.toFixed(1)} <span className="text-xl font-bold">dB</span></div>
+                <div className="text-4xl font-black">
+                  <span data-testid="acoustic-distance-spl">{results.spl2.toFixed(1)}</span> <span className="text-xl font-bold">dB</span>
+                </div>
                 <div className="text-xs text-green-100/90 mt-2 font-medium">
                   Attenuated by {results.attenuation.toFixed(1)} dB over {results.distanceRatio.toFixed(1)}× distance increase
                 </div>
@@ -265,9 +267,11 @@ export default function AcousticDecibelCalculatorClient() {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 text-white shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-300 mb-1">
                   <ShieldAlert className="w-4 h-4 text-amber-400" />
-                  <span>NIOSH Permissible Exposure</span>
+                  <span>NIOSH Recommended Exposure (REL)</span>
                 </div>
-                <div className="text-3xl font-black">{results.oshaHours}</div>
+                <div className="text-3xl font-black">
+                  <span data-testid="acoustic-niosh-hours">{results.oshaHours}</span>
+                </div>
                 <div className="text-xs text-slate-300 mt-2 font-medium">
                   {results.exposureStatus} (3 dB exchange rate standard)
                 </div>
@@ -278,7 +282,9 @@ export default function AcousticDecibelCalculatorClient() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Total Attenuation</div>
-                <div className="text-2xl font-black text-slate-900">{results.attenuation.toFixed(2)} <span className="text-xs text-slate-500 font-bold">dB</span></div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="acoustic-attenuation">{results.attenuation.toFixed(2)}</span> <span className="text-xs text-slate-500 font-bold">dB</span>
+                </div>
                 <div className="text-[11px] text-slate-400 mt-1">~6.02 dB drop per doubling of distance</div>
               </div>
 
@@ -339,6 +345,7 @@ export default function AcousticDecibelCalculatorClient() {
                       type="number"
                       step="0.5"
                       value={s}
+                      data-testid={`acoustic-source-${idx}`}
                       onChange={e => updateSourceVal(idx, e.target.value)}
                       className="flex-1 h-10 px-3 rounded-xl bg-slate-50 border border-slate-100 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
                     />
@@ -362,7 +369,7 @@ export default function AcousticDecibelCalculatorClient() {
                   Combined Total Sound Level
                 </div>
                 <div className="text-4xl font-black">
-                  {combinedSpl.toFixed(1)} <span className="text-xl font-bold">dB</span>
+                  <span data-testid="acoustic-combined-spl">{combinedSpl.toFixed(1)}</span> <span className="text-xl font-bold">dB</span>
                 </div>
                 <p className="text-xs text-blue-200/90 font-medium leading-relaxed pt-2 border-t border-blue-500/30">
                   Calculated from {sources.length} uncorrelated acoustic sources via <code className="bg-blue-800/60 px-1 py-0.5 rounded">L_total = 10 × log₁₀(Σ 10^(Lᵢ/10))</code>.

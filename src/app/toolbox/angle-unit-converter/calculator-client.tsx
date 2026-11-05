@@ -13,7 +13,7 @@ interface AngleUnit {
 }
 
 const UNITS: AngleUnit[] = [
-  { id: 'deg', name: 'Degree', symbol: '°', toDegrees: 1, description: '1/360 of a full circle circle turn' },
+  { id: 'deg', name: 'Degree', symbol: '°', toDegrees: 1, description: '1/360 of a full circle turn' },
   { id: 'rad', name: 'Radian', symbol: 'rad', toDegrees: 180 / Math.PI, description: 'SI unit where arc length equals circle radius' },
   { id: 'mrad', name: 'Milliradian', symbol: 'mrad', toDegrees: (180 / Math.PI) / 1000, description: '1/1000 of a radian (~0.0573°)' },
   { id: 'grad', name: 'Gradian / Gon', symbol: 'gon', toDegrees: 0.9, description: 'Metric surveying unit (400 gon = 360°)' },
@@ -28,8 +28,8 @@ const PRESETS = [
   { label: '45°', value: '45', unit: 'deg' },
   { label: '90°', value: '90', unit: 'deg' },
   { label: '180°', value: '180', unit: 'deg' },
-  { label: 'π rad', value: Math.PI.toFixed(6), unit: 'rad' },
-  { label: '2π rad', value: (2 * Math.PI).toFixed(6), unit: 'rad' },
+  { label: 'π rad', value: Math.PI.toString(), unit: 'rad' },
+  { label: '2π rad', value: (2 * Math.PI).toString(), unit: 'rad' },
   { label: '100 gon', value: '100', unit: 'grad' },
   { label: '1 MOA', value: '1', unit: 'arcmin' },
 ];
@@ -66,20 +66,22 @@ export default function AngleUnitConverterClient() {
     // Convert base degrees to target unit
     const result = degValue / toObj.toDegrees;
 
-    // Normalize angle to [0, 360) for quadrant calculation
+    // Normalize angle to [0, 360) for quadrant calculation with tolerance
     const normDeg = ((degValue % 360) + 360) % 360;
+    const isClose = (a: number, b: number) => Math.abs(a - b) < 1e-4;
+
     let quadrant = 'Quadrant I (0°–90°)';
-    if (normDeg === 0 || normDeg === 360) quadrant = 'Positive X-Axis (0°)';
-    else if (normDeg === 90) quadrant = 'Positive Y-Axis (90°)';
-    else if (normDeg === 180) quadrant = 'Negative X-Axis (180°)';
-    else if (normDeg === 270) quadrant = 'Negative Y-Axis (270°)';
-    else if (normDeg > 0 && normDeg < 90) quadrant = 'Quadrant I';
-    else if (normDeg > 90 && normDeg < 180) quadrant = 'Quadrant II';
-    else if (normDeg > 180 && normDeg < 270) quadrant = 'Quadrant III';
-    else quadrant = 'Quadrant IV';
+    if (isClose(normDeg, 0) || isClose(normDeg, 360)) quadrant = 'Positive X-Axis (0°)';
+    else if (isClose(normDeg, 90)) quadrant = 'Positive Y-Axis (90°)';
+    else if (isClose(normDeg, 180)) quadrant = 'Negative X-Axis (180°)';
+    else if (isClose(normDeg, 270)) quadrant = 'Negative Y-Axis (270°)';
+    else if (normDeg > 0 && normDeg < 90) quadrant = 'Quadrant I (0°–90°)';
+    else if (normDeg > 90 && normDeg < 180) quadrant = 'Quadrant II (90°–180°)';
+    else if (normDeg > 180 && normDeg < 270) quadrant = 'Quadrant III (180°–270°)';
+    else quadrant = 'Quadrant IV (270°–360°)';
 
     // Trigonometric functions
-    const radForTrig = (normDeg * Math.PI) / 180;
+    const radForTrig = (degValue * Math.PI) / 180;
     const sinVal = Math.sin(radForTrig);
     const cosVal = Math.cos(radForTrig);
     const isTanUndef = Math.abs(cosVal) < 1e-12;
@@ -124,9 +126,13 @@ export default function AngleUnitConverterClient() {
     const fromObj = UNITS.find(u => u.id === fromUnit);
     const toObj = UNITS.find(u => u.id === toUnit);
     const text = `${valInput} ${fromObj?.symbol || fromUnit} = ${formatSmart(conversion.result)} ${toObj?.symbol || toUnit}`;
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback
+    }
   };
 
   const exportCSV = () => {
@@ -139,10 +145,11 @@ export default function AngleUnitConverterClient() {
       ['Input Value', valInput, fromObj?.name || fromUnit],
       ['Converted Value', conversion.result.toString(), toObj?.name || toUnit],
       ['Base Degrees', conversion.degValue.toString(), 'deg (°)'],
+      ['Revolutions (Turns)', conversion.trig.turns.toFixed(6), 'rev'],
+      ['Quadrant Position', conversion.trig.quadrant, ''],
       ['Sine', isNaN(conversion.trig.sin) ? '—' : conversion.trig.sin.toFixed(6), ''],
       ['Cosine', isNaN(conversion.trig.cos) ? '—' : conversion.trig.cos.toFixed(6), ''],
       ['Tangent', isNaN(conversion.trig.tan) ? 'Undefined (±∞)' : conversion.trig.tan.toFixed(6), ''],
-      ['Quadrant', conversion.trig.quadrant, ''],
       [],
       ['All Unit Equivalents'],
       ['Unit Name', 'Symbol', 'Equivalent Value'],
@@ -173,7 +180,7 @@ export default function AngleUnitConverterClient() {
             </div>
             <div>
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Angle Input</h2>
-              <p className="text-xs text-slate-500 font-medium">Select source & target units</p>
+              <p className="text-xs text-slate-500 font-medium">Select source &amp; target units</p>
             </div>
           </div>
 
@@ -212,7 +219,7 @@ export default function AngleUnitConverterClient() {
             <button
               type="button"
               onClick={swapUnits}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-black transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-black transition-colors cursor-pointer"
             >
               <ArrowLeftRight className="w-3.5 h-3.5" />
               Swap Direction
@@ -250,7 +257,7 @@ export default function AngleUnitConverterClient() {
                     setValInput(p.value);
                     setFromUnit(p.unit);
                   }}
-                  className="py-2 px-2 text-xs font-bold rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-100 transition-colors"
+                  className="py-2 px-2 text-xs font-bold rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-100 transition-colors cursor-pointer"
                 >
                   {p.label}
                 </button>
@@ -289,7 +296,7 @@ export default function AngleUnitConverterClient() {
                   type="button"
                   onClick={handleCopy}
                   disabled={!isValid}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-colors disabled:opacity-40"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-colors disabled:opacity-40 cursor-pointer"
                   title="Copy result"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
@@ -299,7 +306,7 @@ export default function AngleUnitConverterClient() {
                   type="button"
                   onClick={exportCSV}
                   disabled={!isValid}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-colors disabled:opacity-40"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-colors disabled:opacity-40 cursor-pointer"
                   title="Export CSV report"
                 >
                   <Download className="w-3.5 h-3.5" />
@@ -314,7 +321,10 @@ export default function AngleUnitConverterClient() {
                 {valInput || '0'} {currentFrom.name} ({currentFrom.symbol}) =
               </div>
               <div className="flex items-baseline gap-3 flex-wrap">
-                <span className="text-4xl sm:text-5xl font-black text-purple-900 tracking-tight">
+                <span
+                  data-testid="angle-converted-result"
+                  className="text-4xl sm:text-5xl font-black text-purple-900 tracking-tight"
+                >
                   {formatSmart(conversion.result)}
                 </span>
                 <span className="text-xl font-bold text-purple-700">
@@ -331,25 +341,25 @@ export default function AngleUnitConverterClient() {
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Base Degrees</div>
                 <div className="text-xl font-black text-slate-900">
-                  {formatSmart(conversion.degValue)}°
+                  <span data-testid="angle-base-degrees">{formatSmart(conversion.degValue)}</span>°
                 </div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Sin (θ)</div>
-                <div className="text-xl font-black text-slate-900">
-                  {isNaN(conversion.trig.sin) ? '—' : conversion.trig.sin.toFixed(4)}
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Quadrant</div>
+                <div data-testid="angle-quadrant" className="text-sm font-black text-slate-900 line-clamp-1 mt-1">
+                  {conversion.trig.quadrant}
                 </div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Cos (θ)</div>
-                <div className="text-xl font-black text-slate-900">
-                  {isNaN(conversion.trig.cos) ? '—' : conversion.trig.cos.toFixed(4)}
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Revolutions (Turns)</div>
+                <div data-testid="angle-turns" className="text-xl font-black text-slate-900">
+                  {isNaN(conversion.trig.turns) ? '—' : conversion.trig.turns.toFixed(4)} <span className="text-xs font-bold text-slate-500">rev</span>
                 </div>
               </div>
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Tan (θ)</div>
-                <div className="text-xl font-black text-slate-900">
-                  {isNaN(conversion.trig.tan) ? '±∞ (Undef)' : conversion.trig.tan.toFixed(4)}
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Sin (θ) / Cos (θ)</div>
+                <div className="text-sm font-black text-slate-900 mt-1">
+                  {isNaN(conversion.trig.sin) ? '—' : conversion.trig.sin.toFixed(3)} / {isNaN(conversion.trig.cos) ? '—' : conversion.trig.cos.toFixed(3)}
                 </div>
               </div>
             </div>
@@ -390,7 +400,7 @@ export default function AngleUnitConverterClient() {
               <Info className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
               <div className="text-xs text-slate-600 leading-relaxed">
                 <span className="font-bold text-slate-800">Precision Standard: </span>
-                Radians utilize high-precision <code className="font-mono bg-white px-1 py-0.5 rounded border border-slate-200">180 / π ≈ 57.295779513°</code>. NATO military mil standard defines 6,400 mils per 360° (approx. 1 mrad per mil for artillery/optical targeting).
+                Radians utilize high-precision <code className="font-mono bg-white px-1 py-0.5 rounded border border-slate-200">180 / π ≈ 57.295779513°</code>. NATO military mil standard defines 6,400 mils per 360° (approx. 0.05625° per mil for artillery/optical targeting).
               </div>
             </div>
           </div>
