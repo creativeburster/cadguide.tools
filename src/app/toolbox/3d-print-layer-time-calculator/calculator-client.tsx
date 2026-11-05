@@ -18,7 +18,7 @@ const PRESETS: Preset[] = [
   { name: 'Ultra Fine', layerHeight: '0.08', speed: '30', desc: 'Highest resolution, longest print time' },
 ];
 
-export default function _3dPrintLayerTimeCalculatorClient() {
+export default function PrintLayerTimeCalculatorClient() {
   const [inputs, setInputs] = useState(['0.20', '50', '500', '10000', '20', '200']);
   const [activePreset, setActivePreset] = useState<number | null>(1); // Standard default
 
@@ -55,8 +55,9 @@ export default function _3dPrintLayerTimeCalculatorClient() {
     // Total time with 25% acceleration & retraction overhead
     const totalTimeSec = tL * layers * 1.25;
     const tTMin = totalTimeSec / 60;
-    const hours = Math.floor(tTMin / 60);
-    const mins = Math.round(tTMin % 60);
+    const roundedMin = Math.round(tTMin);
+    const hours = Math.floor(roundedMin / 60);
+    const mins = roundedMin % 60;
 
     // Total extruded volume in mm³
     const vPerim = perim * nozzle * h * layers;

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, Volume2, ShieldAlert, Download, CheckCircle2 } from 'lucide-react';
+import { Settings, Zap, Info, Volume2, ShieldAlert, Download } from 'lucide-react';
 
 interface SoundPreset {
   name: string;
@@ -52,24 +52,15 @@ export default function AcousticDecibelCalculatorClient() {
     // OSHA / NIOSH Permissible Daily Noise Exposure limit:
     // NIOSH criterion: 85 dBA for 8 hours; every 3 dB increase cuts permissible time in half.
     // T_max = 8 / (2^((SPL - 85) / 3)) hours
-    let oshaHours = 8;
-    let exposureStatus = 'Safe';
-    let statusColor = 'text-emerald-600 bg-emerald-50 border-emerald-200';
-
-    if (spl2 >= 85) {
-      const exponent = (spl2 - 85) / 3;
-      oshaHours = 8 / Math.pow(2, exponent);
-      if (spl2 >= 100) {
-        exposureStatus = 'Hearing Protection Mandatory';
-        statusColor = 'text-rose-700 bg-rose-50 border-rose-200';
-      } else {
-        exposureStatus = 'Caution: Prolonged Exposure Risk';
-        statusColor = 'text-amber-700 bg-amber-50 border-amber-200';
-      }
+    // NIOSH REL formula applies on both sides of 85 dBA (e.g. 82 dBA → 16 h, 88 dBA → 4 h)
+    const oshaHours = 8 / Math.pow(2, (spl2 - 85) / 3);
+    let exposureStatus: string;
+    if (spl2 >= 100) {
+      exposureStatus = 'Above REL: allowed exposure under 15 min/day, hearing protection advised';
+    } else if (spl2 >= 85) {
+      exposureStatus = 'At/above NIOSH REL: limit daily exposure, hearing protection advised';
     } else {
-      oshaHours = 24;
-      exposureStatus = 'Safe Occupational Level';
-      statusColor = 'text-emerald-700 bg-emerald-50 border-emerald-200';
+      exposureStatus = 'Below NIOSH REL for an 8-hour day';
     }
 
     return {
@@ -80,7 +71,6 @@ export default function AcousticDecibelCalculatorClient() {
       p2,
       oshaHours: oshaHours >= 24 ? '> 24 hrs' : oshaHours < 0.05 ? '< 3 mins' : `${oshaHours.toFixed(1)} hrs`,
       exposureStatus,
-      statusColor,
       distanceRatio: dist2 / dist1,
     };
   }, [sourceSpl, d1, d2]);
@@ -272,7 +262,7 @@ export default function AcousticDecibelCalculatorClient() {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-start gap-3">
               <Info className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
               <div className="text-xs text-slate-600 leading-relaxed font-medium">
-                <strong className="text-slate-800">Acoustic Inverse-Square Formula:</strong> Sound pressure level drops according to <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">SPL₂ = SPL₁ - 20 × log₁₀(d₂ / d₁)</code> in an open, free-field environment without boundary reflections.
+                <strong className="text-slate-800">Acoustic Inverse-Square Formula:</strong> Sound pressure level drops according to <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">SPL₂ = SPL₁ - 20 × log₁₀(d₂ / d₁)</code> in an open, free-field environment without boundary reflections. Indoors, beyond the room&apos;s critical distance the reverberant field dominates and the level drops much less than 6 dB per doubling. The NIOSH exposure estimate assumes the entered level is A-weighted (dBA) and constant over the day.
               </div>
             </div>
           </div>

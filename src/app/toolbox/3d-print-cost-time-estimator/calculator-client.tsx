@@ -121,6 +121,8 @@ export default function PrintCostClient() {
     const h = parseFloat(hours);
     const hh = Math.floor(h);
     const mm = Math.round((h - hh) * 60);
+    if (!isFinite(h)) return '—';
+    if (mm === 60) return `${hh + 1}h 0m`;
     return `${hh}h ${mm}m`;
   };
 
@@ -249,7 +251,7 @@ export default function PrintCostClient() {
               <div className="flex items-center gap-4">
                 <span className="text-base font-bold text-slate-600 w-32">Material</span>
                 <div className="flex-1 h-6 bg-slate-100 rounded-lg overflow-hidden">
-                  <div className="h-full bg-blue-500 flex items-center justify-end px-2 text-sm font-black text-white" style={{ width: `${(parseFloat(results.materialCost) / parseFloat(results.totalCost)) * 100}%` }}>
+                  <div className="h-full bg-blue-500 flex items-center justify-end px-2 text-sm font-black text-white" style={{ width: `${parseFloat(results.totalCost) > 0 ? (parseFloat(results.materialCost) / parseFloat(results.totalCost)) * 100 : 0}%` }}>
                     ${results.materialCost}
                   </div>
                 </div>
@@ -257,13 +259,13 @@ export default function PrintCostClient() {
               <div className="flex items-center gap-4">
                 <span className="text-base font-bold text-slate-600 w-32">Electricity</span>
                 <div className="flex-1 h-6 bg-slate-100 rounded-lg overflow-hidden">
-                  <div className="h-full bg-amber-500 flex items-center justify-end px-2 text-sm font-black text-white" style={{ width: `${Math.max(2, (parseFloat(results.elecCost) / parseFloat(results.totalCost)) * 100)}%` }}>
+                  <div className="h-full bg-amber-500 flex items-center justify-end px-2 text-sm font-black text-white" style={{ width: `${parseFloat(results.totalCost) > 0 ? Math.max(2, (parseFloat(results.elecCost) / parseFloat(results.totalCost)) * 100) : 0}%` }}>
                     ${results.elecCost}
                   </div>
                 </div>
               </div>
             </div>
-            <p className="text-sm text-slate-400 mt-3 font-medium">Estimates are approximate. Actual print time depends on travel moves, retraction, cooling pauses, and slicer-specific path optimization. Always verify with your slicer's time estimate.</p>
+            <p className="text-sm text-slate-400 mt-3 font-medium">Estimates are approximate. Actual print time depends on travel moves, retraction, cooling pauses, and slicer-specific path optimization. Always verify with your slicer&apos;s time estimate.</p>
           </div>
         </div>
       </div>

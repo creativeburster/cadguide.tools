@@ -42,21 +42,24 @@ export default function AdaRampSlopeCalculatorClient() {
     const slopeAngleDeg = (Math.atan(1 / slopeX) * 180) / Math.PI;
     const slopePercent = (1 / slopeX) * 100;
 
-    // ADA Section 405.6: Ramps with a rise greater than 6 inches require handrails.
-    // ADA Section 405.2: Ramp runs shall have a rise of 30 inches maximum per run.
+    // ADA 405.2: max running slope 1:12. ADA 405.6: max rise per ramp run 30 inches.
     const requiredRuns = Math.max(1, Math.ceil(riseIn / maxRunRise));
     const intermediateLandings = Math.max(0, requiredRuns - 1);
 
-    // ADA Section 405.7: Landings shall be at least 60 inches (5 ft) in length clear.
+    // ADA 405.7.3: landing clear length 60 inches (5 ft) min.
+    // Top and bottom landings (also 60" long) are excluded from this run footprint.
     const landingLengthFt = intermediateLandings * 5;
     const totalFootprintFt = runFt + landingLengthFt;
 
-    // Handrail requirements: Dual-sided continuous handrails (left + right)
-    // ADA Section 505: Handrails shall extend 12 inches (1 ft) minimum beyond top & bottom
-    const handrailExtensionPerRun = 2; // 1 ft top + 1 ft bottom per side = 2 ft per side = 4 ft per run
-    const totalHandrailFt = (runFt * 2) + (requiredRuns * 4);
+    // ADA 405.8: handrails required on both sides when rise > 6 inches.
+    // ADA 505.3 / 505.10.1: handrails continuous across intermediate landings,
+    // with 12" horizontal extensions at the top and bottom only.
+    const handrailsRequired = riseIn > 6;
+    const totalHandrailFt = handrailsRequired ? 2 * (totalFootprintFt + 2) : 0;
 
-    const isCompliant = slopeX >= 12;
+    const slopeOk = slopeX >= 12;
+    const riseOk = maxRunRise <= 30;
+    const isCompliant = slopeOk && riseOk;
 
     return {
       riseIn,
@@ -68,6 +71,9 @@ export default function AdaRampSlopeCalculatorClient() {
       intermediateLandings,
       totalFootprintFt,
       totalHandrailFt,
+      handrailsRequired,
+      slopeOk,
+      riseOk,
       isCompliant,
     };
   }, [totalRise, slopeRatio, maxRisePerRun]);
@@ -91,7 +97,7 @@ export default function AdaRampSlopeCalculatorClient() {
       ['Intermediate 60"x60" Landings', results.intermediateLandings],
       ['Total Footprint with Landings (feet)', results.totalFootprintFt.toFixed(2)],
       ['Minimum Dual Handrail Length (feet)', results.totalHandrailFt.toFixed(2)],
-      ['ADA Status', results.isCompliant ? 'COMPLIANT (1:12 or gentler)' : 'NON-COMPLIANT (Exceeds 1:12 max)'],
+      ['ADA Status', results.isCompliant ? 'COMPLIANT (slope 1:12 or gentler, rise per run 30 in max)' : `NON-COMPLIANT (${!results.slopeOk ? 'slope steeper than 1:12' : 'rise per run over 30 in'})`],
     ].map(r => r.join(',')).join('\n');
 
     const blob = new Blob([rows], { type: 'text/csv;charset=utf-8;' });
@@ -179,7 +185,7 @@ export default function AdaRampSlopeCalculatorClient() {
                 onChange={e => setMaxRisePerRun(e.target.value)}
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
               />
-              <span className="text-[11px] text-slate-400 mt-1 block">ADA Section 405.2 limits rise to 30&quot; max per single run</span>
+              <span className="text-[11px] text-slate-400 mt-1 block">ADA Section 405.6 limits rise to 30&quot; max per single run</span>
             </div>
           </div>
 
@@ -222,7 +228,7 @@ export default function AdaRampSlopeCalculatorClient() {
                   ) : (
                     <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
                   )}
-                  <span>{results.isCompliant ? 'ADA COMPLIANT' : 'EXCEEDS MAX SLOPE'}</span>
+                  <span>{results.isCompliant ? 'ADA COMPLIANT' : !results.slopeOk ? 'EXCEEDS MAX SLOPE' : 'RUN RISE OVER 30"'}</span>
                 </div>
               </div>
             </div>
@@ -246,7 +252,7 @@ export default function AdaRampSlopeCalculatorClient() {
                 </div>
                 <div className="text-4xl font-black">{results.totalFootprintFt.toFixed(1)} <span className="text-xl font-bold">ft</span></div>
                 <div className="text-xs text-slate-300 mt-2 font-medium">
-                  Includes {results.intermediateLandings} intermediate 60&quot;×60&quot; landing(s)
+                  Includes {results.intermediateLandings} intermediate 60&quot;-long landing(s); top &amp; bottom landings not included
                 </div>
               </div>
             </div>
@@ -261,8 +267,8 @@ export default function AdaRampSlopeCalculatorClient() {
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Min Dual Handrails</div>
-                <div className="text-2xl font-black text-slate-900">{results.totalHandrailFt.toFixed(1)} <span className="text-xs text-slate-500 font-bold">linear ft</span></div>
-                <div className="text-[11px] text-slate-400 mt-1">Both sides + 12&quot; extensions</div>
+                <div className="text-2xl font-black text-slate-900">{results.handrailsRequired ? results.totalHandrailFt.toFixed(1) : '0'} <span className="text-xs text-slate-500 font-bold">linear ft</span></div>
+                <div className="text-[11px] text-slate-400 mt-1">{results.handrailsRequired ? 'Both sides, continuous over landings, 12" extensions top & bottom' : 'Not required: rise is 6" or less (Sec 405.8)'}</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
@@ -280,7 +286,7 @@ export default function AdaRampSlopeCalculatorClient() {
               </div>
               <ul className="text-xs text-slate-600 leading-relaxed font-medium space-y-1 list-disc pl-5">
                 <li><strong>Clear Width (Sec 405.5):</strong> The clear width of a ramp run and landings shall be 36 inches (915 mm) minimum between handrails.</li>
-                <li><strong>Landings (Sec 405.7):</strong> Level landings (slope &lt; 1:48) must be provided at the top, bottom, and changes of direction, with minimum 60&quot; × 60&quot; clear area.</li>
+                <li><strong>Landings (Sec 405.7):</strong> Level landings (slope &lt; 1:48) are required at the top and bottom of each ramp run, at least as wide as the ramp and 60&quot; long; where a ramp changes direction the landing must be at least 60&quot; × 60&quot;.</li>
                 <li><strong>Handrails (Sec 405.8):</strong> Required on both sides for any ramp with a rise greater than 6 inches (150 mm), mounted between 34&quot; and 38&quot; above walking surface.</li>
               </ul>
             </div>
