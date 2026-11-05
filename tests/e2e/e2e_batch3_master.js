@@ -93,8 +93,10 @@ async function runTests() {
       // Intermediate Landings = 2 - 1 = 1 landing
       // Footprint = 42.0 + 1 * 5 = 47.0 ft
       // Handrails = 2 * (47.0 + 2) = 98.0 ft
-      await p.fill('[data-testid="input-rise"]', '42');
-      await p.waitForTimeout(200);
+      const riseInput = p.locator('[data-testid="input-rise"]');
+      await riseInput.click();
+      await riseInput.fill('42');
+      await p.waitForTimeout(300);
 
       const modRun = parseFloat(await p.locator('[data-testid="result-run-ft"]').innerText());
       assertClose(modRun, 42.0, 0.005, 'Modified 42 in Run (ft)');

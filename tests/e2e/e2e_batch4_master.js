@@ -78,12 +78,12 @@ async function runMasterSuite() {
         throw new Error('Failed to find identical LINE shortcut');
       }
 
-      // 3. Verify genuine GstarCAD official tools (CMP, AREASUM, MAGNIFIER, BCOUNT)
-      await searchInput.fill('CMP');
+      // 3. Verify genuine GstarCAD official tools (COMPARE, AREASUM, MAGNIFIER, BCOUNT)
+      await searchInput.fill('COMPARE');
       await p.waitForTimeout(150);
       cardText = await p.innerText('body');
-      if (!cardText.includes('Drawing Compare') || !cardText.includes('Different')) {
-        throw new Error('GstarCAD native CMP (Drawing Compare) missing from comparison table');
+      if (!cardText.includes('COMPARE') || !cardText.includes('Identical')) {
+        throw new Error('GstarCAD native COMPARE (DWG Compare) missing from comparison table');
       }
 
       await searchInput.fill('AREASUM');
@@ -136,7 +136,7 @@ async function runMasterSuite() {
       ]);
       const dlPath = await download.path();
       const csvContent = fs.readFileSync(dlPath, 'utf8');
-      if (!csvContent.includes('Command / Alias') || !csvContent.includes('CMP') || !csvContent.includes('AREASUM')) {
+      if (!csvContent.includes('Command / Alias') || !csvContent.includes('COMPARE') || !csvContent.includes('AREASUM')) {
         throw new Error('Exported CSV missing required shortcut comparison headers or rows');
       }
     });

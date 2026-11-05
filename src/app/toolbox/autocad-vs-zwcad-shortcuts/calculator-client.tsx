@@ -187,7 +187,7 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "N/A",
     secondaryCmd: "BARCODE",
     isSame: false,
-    diffNote: "ZWCAD built-in barcode generator. Directly encodes part numbers, drawing numbers, or project codes into Code 39/128 symbologies on the drawing.",
+    diffNote: "ZWCAD built-in barcode generator (native in 2026+). Directly encodes part numbers, drawing numbers, or project codes into Code 39/128 symbologies on the drawing.",
     useCase: "Manufacturing shop-floor tracking and ERP asset tag drawing embedding."
   },
   {
@@ -195,7 +195,7 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "N/A",
     secondaryCmd: "QRCODE",
     isSame: false,
-    diffNote: "ZWCAD built-in 2D matrix QR code generator. Allows site engineers to scan drawings with mobile devices to access online specification docs.",
+    diffNote: "ZWCAD built-in 2D matrix QR code generator (native in 2026+). Allows site engineers to scan drawings with mobile devices to access online specification docs.",
     useCase: "Embedding URL links and cloud inspection documents into drawing title blocks."
   }
 ];

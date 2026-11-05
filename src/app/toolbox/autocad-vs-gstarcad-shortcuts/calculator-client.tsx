@@ -149,13 +149,13 @@ const DIFF_DATA: DiffItem[] = [
     useCase: "Copy layer, color, linetype, and lineweight properties to other objects."
   },
 
-  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Guide)
+  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Support & Guide)
   {
-    shortcut: "CMP",
+    shortcut: "COMPARE",
     primaryCmd: "COMPARE",
-    secondaryCmd: "CMP",
-    isSame: false,
-    diffNote: "GstarCAD dedicated Drawing Compare dialog tool (CMP / -CMP). Overlays two DWG revisions to highlight differences. AutoCAD modern equivalent is COMPARE.",
+    secondaryCmd: "COMPARE",
+    isSame: true,
+    diffNote: "DWG Compare feature in GstarCAD (native in 2026+). Overlays two DWG revisions to highlight differences using revision clouds, matching AutoCAD COMPARE.",
     useCase: "Drawing revision difference comparison between version releases."
   },
   {
