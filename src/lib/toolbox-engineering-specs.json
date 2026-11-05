@@ -279,15 +279,15 @@
   },
   "ada-ramp-slope-calculator": {
     "title": "ADA Ramp Slope & Landing Calculator",
-    "description": "Calculate ADA-compliant ramp slope, run length, landing dimensions, and handrail requirements.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "L_run = Rise × SlopeRatio (max 1:12 per ADA §405.2) • N_landings = ceil(Rise / 30 in) - 1",
+    "description": "Calculate ADA-compliant ramp slope, run length, landing dimensions, and continuous handrail requirements per Section 405.",
+    "discipline": "Architectural Accessibility, Civil Site Planning & Building Code Compliance",
+    "standards": "2010 ADA Standards for Accessible Design (Section 405 & 505), ICC A117.1-2017, IBC 2024 (Section 1012)",
+    "cadContext": "Verify ramp slope callouts, 36-inch minimum clear width between handrails, 60x60-inch landing turn dimensions, and 12-inch handrail extensions on architectural site and section sheets.",
+    "formula": "L_run = Rise * SlopeRatio / 12 (max 1:12 per ADA Section 405.2); N_landings = max(0, ceil(Rise / 30 in) - 1); L_handrail = 2 * (Footprint + 2 ft)",
     "inputs": [
       {
         "label": "Total Rise (inches)",
-        "val": "24"
+        "val": "28"
       },
       {
         "label": "Ramp Slope Ratio (1:X)",
@@ -301,7 +301,7 @@
     "outputs": [
       {
         "label": "Total Ramp Horizontal Run",
-        "val": "24.0 ft"
+        "val": "28.0 ft"
       },
       {
         "label": "Intermediate Landings (60\"x60\")",
@@ -309,11 +309,11 @@
       },
       {
         "label": "Total Footprint with Landings",
-        "val": "24.0 ft"
+        "val": "28.0 ft"
       },
       {
         "label": "Min Continuous Handrail Length",
-        "val": "48.0 ft"
+        "val": "60.0 ft"
       }
     ]
   },
@@ -605,11 +605,11 @@
   },
   "area-unit-converter": {
     "title": "Area Unit Converter",
-    "description": "Convert between m2, cm2, mm2, ft2, in2, acre, hectare, and km2.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 m2 = 10.764 ft2, 1 acre = 4047 m2",
+    "description": "Convert between m2, cm2, mm2, ft2, in2, yd2, acre, hectare, and km2 with exact NIST SP 811 metrology conversion factors.",
+    "discipline": "Engineering Metrology, Geodesy & Architecture",
+    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-3 (Quantities and Units - Space and Time), BIPM SI Brochure (9th Edition)",
+    "cadContext": "Maintain double-precision floating-point accuracy during geometric area calculations in CAD/GIS, applying rounding only to final drawing schedule callouts.",
+    "formula": "Exact factors: 1 ft2 = 0.09290304 m2, 1 in2 = 0.00064516 m2, 1 yd2 = 0.83612736 m2, 1 acre = 4046.8564224 m2, 1 ha = 10000 m2",
     "inputs": [
       {
         "label": "Value",
@@ -627,34 +627,49 @@
     "outputs": [
       {
         "label": "Result",
-        "val": "10.764"
+        "val": "10.764 ft²"
       }
     ]
   },
   "autocad-fatal-error-wizard": {
     "title": "AutoCAD Fatal Error Diagnostic Wizard",
-    "description": "Interactive decision tree for AutoCAD",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "AutoCAD Exception 0xC0000005 / 0xE06D7363 Stack Trace & Graphics Hardware Acceleration (3DCONFIG) Triage",
-    "inputs": [],
-    "outputs": []
+    "description": "Interactive decision tree for troubleshooting AutoCAD \"FATAL ERROR: Unhandled Access Violation\" crashes across drawing corruption, startup, and plotting.",
+    "discipline": "AutoCAD System Administration & Technical Troubleshooting",
+    "standards": "Autodesk Knowledge Base (AKB) Technical Documentation, Microsoft Windows Error Handling & Event Viewer Diagnostics",
+    "cadContext": "When AutoCAD crashes with fatal access violations (0xC0000005), run AUDIT, RECOVERALL, and PURGE on problematic DWGs, and verify 3D graphics hardware acceleration (3DCONFIG) before editing production drawings.",
+    "formula": "Autodesk KB Diagnostic Decision Tree for Exception 0xC0000005 / Drawing Corruption / Graphics Conflicts",
+    "inputs": [
+      {
+        "label": "Diagnostic Scenarios",
+        "val": "5 Scenarios"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Documented Causes & Verified Fixes",
+        "val": "14 Documented Paths"
+      }
+    ]
   },
   "autocad-registry-clean-generator": {
     "title": "AutoCAD Clean Registry Reset Generator",
     "description": "Generate a safe Windows cmd batch script (.bat) to reset AutoCAD settings, clean orphaned registry paths, and flush local licensing cache files for clean reinstallation.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Standardized parametric evaluation for AutoCAD Clean Registry Reset Generator",
+    "discipline": "AutoCAD IT Administration & Deployment Engineering",
+    "standards": "Microsoft Windows Registry Guidelines, Autodesk Deployment & Clean Uninstall Standard Practice",
+    "cadContext": "Before running registry reset scripts, always export a full registry backup (.reg) to restore custom CUI menus, tool palettes, and PGP aliases if needed.",
+    "formula": "Windows Batch Automation: reg export (backup) -> reg delete (HKCU/HKLM) -> rmdir AppData cache folders",
     "inputs": [
       {
         "label": "Target CAD software version",
-        "val": "AutoCAD 2024"
+        "val": "AutoCAD 2024 (R24.3)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Generated Script",
+        "val": "reset_autocad_AutoCAD_2024.bat"
+      }
+    ]
   },
   "autocad-shortcuts-sheet": {
     "title": "AutoCAD Shortcut Keys & Command Aliases Cheat Sheet",
@@ -708,41 +723,49 @@
   },
   "ball-screw-calculator": {
     "title": "Ball Screw Torque & Efficiency Calculator",
-    "description": "Calculate ball screw drive torque, efficiency, and backdriving torque.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "T = F*lead/(2*pi*eta), eta up to 90%+",
+    "description": "Calculate ball screw direct drive torque, motor power demand, holding backdriving torque, and linear travel velocity per ISO 3408.",
+    "discipline": "Mechanical Power Transmission & Precision Kinematics",
+    "standards": "ISO 3408-1 (Ball screws - Part 1: Vocabulary and designations), ISO 3408-5 (Part 5: Static and dynamic axial load ratings), DIN 69051",
+    "cadContext": "Verify ball screw lead angle, critical rotational speed (whipping frequency), and end-support bearing fixity (Fixed-Supported vs Fixed-Fixed) in your 3D CAD machine layout.",
+    "formula": "T_drive = F * l / (2 * pi * eta1); P_drive = T_drive * 2 * pi * n / 60; T_backdrive = F * l * eta2 / (2 * pi); v = n * l / 60 mm/s",
     "inputs": [
       {
-        "label": "Axial Load (N)",
+        "label": "Axial Thrust Load (N)",
         "val": "5000"
       },
       {
-        "label": "Lead (mm)",
+        "label": "Screw Lead (mm)",
         "val": "10"
       },
       {
-        "label": "Efficiency",
-        "val": "0.9"
+        "label": "Forward Efficiency (eta1)",
+        "val": "0.90"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Backdrive Efficiency (eta2)",
+        "val": "0.80"
+      },
+      {
+        "label": "Rotational Speed (RPM)",
         "val": "1000"
       }
     ],
     "outputs": [
       {
-        "label": "Drive Torque",
+        "label": "Direct Drive Torque",
         "val": "8.842 Nm"
       },
       {
-        "label": "Drive Power",
+        "label": "Drive Mechanical Power",
         "val": "925.93 W"
       },
       {
-        "label": "Backdrive Torque",
-        "val": "7.162 Nm"
+        "label": "Backdrive Holding Torque",
+        "val": "6.366 Nm"
+      },
+      {
+        "label": "Linear Travel Speed",
+        "val": "166.7 mm/s (10.0 m/min)"
       }
     ]
   },

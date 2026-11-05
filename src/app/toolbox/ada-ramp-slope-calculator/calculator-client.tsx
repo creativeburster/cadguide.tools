@@ -131,6 +131,7 @@ export default function AdaRampSlopeCalculatorClient() {
               {RISE_PRESETS.map((p, idx) => (
                 <button
                   key={p.name}
+                  data-testid={`preset-btn-${idx}`}
                   onClick={() => applyPreset(idx)}
                   className={`w-full text-left px-3 py-2 rounded-xl border text-xs font-bold transition-all flex items-center justify-between ${
                     activePreset === idx
@@ -153,6 +154,7 @@ export default function AdaRampSlopeCalculatorClient() {
               <input
                 type="number"
                 step="0.5"
+                data-testid="input-rise"
                 value={totalRise}
                 onChange={e => { setTotalRise(e.target.value); setActivePreset(null); }}
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
@@ -164,6 +166,7 @@ export default function AdaRampSlopeCalculatorClient() {
                 Slope Ratio (1:X)
               </label>
               <select
+                data-testid="select-slope"
                 value={slopeRatio}
                 onChange={e => setSlopeRatio(e.target.value)}
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all cursor-pointer"
@@ -181,6 +184,7 @@ export default function AdaRampSlopeCalculatorClient() {
               <input
                 type="number"
                 step="1"
+                data-testid="input-max-rise"
                 value={maxRisePerRun}
                 onChange={e => setMaxRisePerRun(e.target.value)}
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
@@ -190,6 +194,7 @@ export default function AdaRampSlopeCalculatorClient() {
           </div>
 
           <button
+            data-testid="btn-reset"
             onClick={() => { setTotalRise('28'); setSlopeRatio('12'); setMaxRisePerRun('30'); setActivePreset(2); }}
             className="w-full py-2.5 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
           >
@@ -212,13 +217,14 @@ export default function AdaRampSlopeCalculatorClient() {
               </div>
               <div className="flex items-center gap-2">
                 <button
+                  data-testid="btn-export-csv"
                   onClick={downloadCsv}
                   className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-black bg-blue-50 text-blue-700 border border-blue-100 hover:bg-blue-100 transition-all cursor-pointer"
                 >
                   <Download className="w-3.5 h-3.5" />
                   Export CSV
                 </button>
-                <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
+                <div data-testid="badge-compliance" className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
                   results.isCompliant
                     ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
                     : 'bg-rose-50 text-rose-700 border-rose-200'
@@ -240,7 +246,7 @@ export default function AdaRampSlopeCalculatorClient() {
                   <Ruler className="w-4 h-4" />
                   <span>Total Ramp Horizontal Run</span>
                 </div>
-                <div className="text-4xl font-black">{results.runFt.toFixed(1)} <span className="text-xl font-bold">ft</span></div>
+                <div className="text-4xl font-black"><span data-testid="result-run-ft">{results.runFt.toFixed(1)}</span> <span className="text-xl font-bold">ft</span></div>
                 <div className="text-xs text-blue-200/90 mt-2 font-medium">
                   {results.slopePercent.toFixed(2)}% gradient ({results.slopeAngleDeg.toFixed(2)}°) • 1:{results.slopeX} slope ratio
                 </div>
@@ -250,7 +256,7 @@ export default function AdaRampSlopeCalculatorClient() {
                 <div className="text-xs font-black uppercase tracking-wider text-slate-300 mb-1">
                   Total Footprint with Landings
                 </div>
-                <div className="text-4xl font-black">{results.totalFootprintFt.toFixed(1)} <span className="text-xl font-bold">ft</span></div>
+                <div className="text-4xl font-black"><span data-testid="result-footprint-ft">{results.totalFootprintFt.toFixed(1)}</span> <span className="text-xl font-bold">ft</span></div>
                 <div className="text-xs text-slate-300 mt-2 font-medium">
                   Includes {results.intermediateLandings} intermediate 60&quot;-long landing(s); top &amp; bottom landings not included
                 </div>
@@ -261,19 +267,19 @@ export default function AdaRampSlopeCalculatorClient() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Intermediate Landings</div>
-                <div className="text-2xl font-black text-slate-900">{results.intermediateLandings} <span className="text-xs text-slate-500 font-bold">platform(s)</span></div>
+                <div className="text-2xl font-black text-slate-900"><span data-testid="result-landings">{results.intermediateLandings}</span> <span className="text-xs text-slate-500 font-bold">platform(s)</span></div>
                 <div className="text-[11px] text-slate-400 mt-1">Required when rise exceeds 30&quot;</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Min Dual Handrails</div>
-                <div className="text-2xl font-black text-slate-900">{results.handrailsRequired ? results.totalHandrailFt.toFixed(1) : '0'} <span className="text-xs text-slate-500 font-bold">linear ft</span></div>
+                <div className="text-2xl font-black text-slate-900"><span data-testid="result-handrails">{results.handrailsRequired ? results.totalHandrailFt.toFixed(1) : '0'}</span> <span className="text-xs text-slate-500 font-bold">linear ft</span></div>
                 <div className="text-[11px] text-slate-400 mt-1">{results.handrailsRequired ? 'Both sides, continuous over landings, 12" extensions top & bottom' : 'Not required: rise is 6" or less (Sec 405.8)'}</div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Required Runs</div>
-                <div className="text-2xl font-black text-slate-900">{results.requiredRuns} <span className="text-xs text-slate-500 font-bold">ramp run(s)</span></div>
+                <div className="text-2xl font-black text-slate-900"><span data-testid="result-required-runs">{results.requiredRuns}</span> <span className="text-xs text-slate-500 font-bold">ramp run(s)</span></div>
                 <div className="text-[11px] text-slate-400 mt-1">Maximum 30&quot; rise per run</div>
               </div>
             </div>
