@@ -380,6 +380,7 @@ export default function ShortcutCheatsheetClient({
             </span>
             <input
               type="text"
+              data-testid="shortcut-search-input"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={placeholderText}

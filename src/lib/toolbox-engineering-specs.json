@@ -739,23 +739,59 @@
   },
   "autolisp-function-reference": {
     "title": "AutoLISP Function Quick Reference",
-    "description": "Complete AutoLISP function reference: math, geometry, entity access, selection sets, list manipulation, and command execution for AutoCAD scripting.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoLISP Function Quick Reference",
-    "inputs": [],
-    "outputs": []
+    "description": "Comprehensive cheat sheet and syntax reference for 90+ AutoLISP and Visual LISP functions across math, geometry, entity manipulation (entget/entmake), selection sets, and system variables.",
+    "discipline": "CAD Customization & AutoLISP Automation",
+    "standards": "Autodesk AutoLISP Reference Guide, AutoCAD Customization Standards, Visual LISP (VLISP) Developer Reference",
+    "cadContext": "Enables CAD engineers and developers to automate drafting routines, manipulate DXF entity association lists, manage OSNAP/coordinate conversions, and extend DWG drawing commands.",
+    "formula": "(defun c:cmd () (setq ent (entget (car (entsel)))) ...) • S-expression evaluation in AutoLISP/Visual LISP engine",
+    "inputs": [
+      {
+        "label": "Standard Function Library",
+        "val": "90+ Built-in AutoLISP & Visual LISP Functions"
+      },
+      {
+        "label": "Category Coverage",
+        "val": "Math, Geometry, Selection Sets, DXF Entity Lists, System Vars"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Code Template & Syntax",
+        "val": "Verified S-expression Syntax & Return Types"
+      },
+      {
+        "label": "Interactive Search & Filter",
+        "val": "Real-time Fuzzy Search across Names and Categories"
+      }
+    ]
   },
   "aws-welding-symbol-reference": {
     "title": "Welding Symbol Reference Guide",
-    "description": "Complete AWS A2.4 welding symbol reference: groove, fillet, plug, surfacing welds with supplementary symbols and tail notes.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "Standardized parametric evaluation for Welding Symbol Reference Guide",
-    "inputs": [],
-    "outputs": []
+    "description": "Standardized welding symbol reference mapping fillet, groove (square, V, bevel, U, J), supplementary symbols, finish methods, and welding processes (SMAW, GMAW, GTAW, FCAW, SAW).",
+    "discipline": "Welding Engineering & Structural Joint Detailing",
+    "standards": "AWS A2.4:2020 (Standard Symbols for Welding, Brazing, and Nondestructive Examination), ISO 2553 (Welded joints - Symbolic representation on drawings)",
+    "cadContext": "Used by structural detailers and mechanical drafters to decode and annotate blueprint welding reference lines, arrow side/other side conventions, and tail specifications.",
+    "formula": "Reference Line + Arrow + Basic Weld Symbol + Dimensions (Size S, Length L, Pitch P) + Tail Process Specification (AWS A2.4 / ISO 2553)",
+    "inputs": [
+      {
+        "label": "Joint & Symbol Taxonomy",
+        "val": "Fillet, Groove (Square, V, Bevel, U, J), Plug/Slot, Stud"
+      },
+      {
+        "label": "Welding Process Library",
+        "val": "SMAW, GMAW, GTAW, FCAW, SAW, OAW, PAW"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Symbol & Cross-Section",
+        "val": "Standardized Blueprint Visual Representation"
+      },
+      {
+        "label": "Tail Specification Data",
+        "val": "Process Code, Reference Standard & NDT Examination"
+      }
+    ]
   },
   "ball-screw-calculator": {
     "title": "Ball Screw Torque & Efficiency Calculator",
@@ -983,108 +1019,170 @@
   },
   "bearing-life-calculator": {
     "title": "Bearing Life L10 Calculator",
-    "description": "Calculate bearing L10 life from dynamic load rating, equivalent load, and speed.",
+    "description": "Calculates basic rating life L10 (millions of revolutions) and operating life L10h (hours) for ball and roller bearings based on dynamic load rating C, equivalent dynamic load P, and rotational speed.",
     "discipline": "Mechanical Power Transmission & Tribology",
-    "standards": "ISO 281:2007 (Dynamic Load Ratings & Rating Life), ISO 76 (Static Load Ratings), ANSI/ABMA Std 9 & Std 11",
-    "cadContext": "Verify shaft and housing cylindrical tolerance fits (typically ISO k5/m5 shaft with H7 housing bore per ISO 286) in your 3D MCAD assembly before finalizing bearing selection.",
-    "formula": "L10 = (C/P)^p, p=3 for ball, 10/3 for roller",
+    "standards": "ISO 281:2007 (Rolling bearings — Dynamic load ratings and rating life), ANSI/ABMA Std 9 & Std 11",
+    "cadContext": "Essential for machinery spindle design, gearbox shaft sizing, and electric motor reliability engineering to predict bearing fatigue life under radial/axial loading.",
+    "formula": "L10 = (C / P)^p • L10h = (10^6 / (60 · n)) · L10 • (p = 3 for ball bearings, p = 10/3 for roller bearings)",
     "inputs": [
       {
-        "label": "Dynamic Load C (kN)",
+        "label": "Dynamic Load Rating C (kN)",
         "val": "50"
       },
       {
-        "label": "Equivalent Load P (kN)",
+        "label": "Equivalent Dynamic Load P (kN)",
         "val": "5"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Rotational Speed n (RPM)",
         "val": "1500"
       },
       {
-        "label": "Type",
+        "label": "Bearing Type",
         "val": "Ball Bearing (p = 3)"
       }
     ],
     "outputs": [
       {
-        "label": "L10",
-        "val": "1000.00 Mr"
+        "label": "Basic Rating Life L10",
+        "val": "1000.00 Mr (million revolutions)"
       },
       {
-        "label": "L10h",
+        "label": "Operating Life L10h",
         "val": "11111 hours"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Standard Deep Groove Ball Bearing (Default)",
+        "inputs": {
+          "c": "50",
+          "p": "5",
+          "speed": "1500",
+          "type": "ball"
+        },
+        "expectedOutputs": {
+          "l10": "1000.00",
+          "l10h": "11111"
+        }
+      },
+      {
+        "name": "Heavy Duty Cylindrical Roller Bearing (Preset)",
+        "inputs": {
+          "c": "120",
+          "p": "25",
+          "speed": "900",
+          "type": "roller"
+        },
+        "expectedOutputs": {
+          "l10": "186.55",
+          "l10h": "3455"
+        }
       }
     ]
   },
   "bearing-static-load-calculator": {
     "title": "Bearing Static Load Capacity Calculator",
-    "description": "Calculate bearing static load rating and equivalent static load.",
+    "description": "Calculates equivalent static load P0 and required basic static load rating C0 for rolling bearings subjected to combined radial and axial static loads under ISO 76 guidelines.",
     "discipline": "Mechanical Power Transmission & Tribology",
-    "standards": "ISO 281:2007 (Dynamic Load Ratings & Rating Life), ISO 76 (Static Load Ratings), ANSI/ABMA Std 9 & Std 11",
-    "cadContext": "Verify shaft and housing cylindrical tolerance fits (typically ISO k5/m5 shaft with H7 housing bore per ISO 286) in your 3D MCAD assembly before finalizing bearing selection.",
-    "formula": "P0 = X0*Fr + Y0*Fa",
+    "standards": "ISO 76:2006 (Rolling bearings — Static load ratings), ANSI/ABMA Std 9",
+    "cadContext": "Determines static safety against permanent rolling element indentation (Brinelling) in slow-turning, oscillating, or stationary machinery subject to heavy shock loads.",
+    "formula": "P0 = max(X0 · Fr + Y0 · Fa, Fr) • C0 = s0 · P0 (ISO 76:2006)",
     "inputs": [
       {
-        "label": "Radial Load (kN)",
+        "label": "Radial Load Fr (kN)",
         "val": "10"
       },
       {
-        "label": "Axial Load (kN)",
+        "label": "Axial Load Fa (kN)",
         "val": "2"
       },
       {
-        "label": "X0",
+        "label": "Static Radial Factor X0",
         "val": "0.6"
       },
       {
-        "label": "Y0",
+        "label": "Static Axial Factor Y0",
         "val": "0.5"
+      },
+      {
+        "label": "Static Safety Factor s0",
+        "val": "1.5"
       }
     ],
     "outputs": [
       {
-        "label": "Equivalent P0",
+        "label": "Equivalent Static Load P0",
         "val": "10.000 kN"
       },
       {
-        "label": "Required C0",
+        "label": "Required Static Rating C0",
         "val": "15.000 kN"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Combined Radial & Axial Static Load (Default)",
+        "inputs": {
+          "fr": "10",
+          "fa": "2",
+          "x0": "0.6",
+          "y0": "0.5",
+          "s0": "1.5"
+        },
+        "expectedOutputs": {
+          "p0": "10.000",
+          "c0": "15.000"
+        }
+      },
+      {
+        "name": "High Axial Static Load",
+        "inputs": {
+          "fr": "10",
+          "fa": "15",
+          "x0": "0.6",
+          "y0": "0.5",
+          "s0": "1.5"
+        },
+        "expectedOutputs": {
+          "p0": "13.500",
+          "c0": "20.250"
+        }
       }
     ]
   },
   "belt-drive-length-calculator": {
     "title": "Belt Drive Calculator",
-    "description": "Calculate belt length, center distance, speed ratio, and output RPM for V-belt and timing belt drive systems.",
+    "description": "Computes pitch/datum belt length L, center distance C, speed ratio, driven RPM, and driver/driven pulley wrap angles for two-pulley open belt drives.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "L ≈ 2C + (π/2)(D₁ + D₂) + (D₂ - D₁)² / (4C) • i = D₂ / D₁ = RPM₁ / RPM₂",
+    "standards": "ISO 4183 (Classical and narrow V-belts — Grooved pulleys), RMA IP-20, ISO 5296 (Synchronous belt drives)",
+    "cadContext": "Used by mechanical engineers and machine designers to size V-belt, micro-V, and timing belt transmissions while verifying minimum arc of contact (wrap angle ≥ 120°).",
+    "formula": "L = 2C + (π/2)(D1 + D2) + (D2 - D1)² / (4C) • θ = 180° ∓ 2·arcsin((D2 - D1)/(2C))",
     "inputs": [
       {
-        "label": "Solve For Belt Length Center Dist Driver Pulley D₁ (mm)",
+        "label": "Driver Pulley D1 (mm)",
         "val": "100"
       },
       {
-        "label": "Driven Pulley D₂ (mm)",
+        "label": "Driven Pulley D2 (mm)",
         "val": "300"
-      },
-      {
-        "label": "Input RPM",
-        "val": "1450"
       },
       {
         "label": "Center Distance C (mm)",
         "val": "500"
+      },
+      {
+        "label": "Input Speed (RPM)",
+        "val": "1450"
       }
     ],
     "outputs": [
       {
-        "label": "Belt Length",
+        "label": "Pitch Belt Length L",
         "val": "1648.3 mm"
       },
       {
-        "label": "Output RPM",
+        "label": "Output Speed",
         "val": "483 RPM"
       },
       {
@@ -1092,12 +1190,30 @@
         "val": "3.00:1"
       },
       {
-        "label": "Driver Wrap",
-        "val": "156.9 °"
+        "label": "Driver Wrap Angle θ1",
+        "val": "156.9°"
       },
       {
-        "label": "Driven Wrap",
-        "val": "203.1 °"
+        "label": "Driven Wrap Angle θ2",
+        "val": "203.1°"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Standard Reduction Drive 1:3 (Default)",
+        "inputs": {
+          "d1": "100",
+          "d2": "300",
+          "centerDist": "500",
+          "inputRPM": "1450"
+        },
+        "expectedOutputs": {
+          "beltLength": "1648.3",
+          "outputRPM": "483",
+          "speedRatio": "3.00",
+          "driverWrap": "156.9",
+          "drivenWrap": "203.1"
+        }
       }
     ]
   },

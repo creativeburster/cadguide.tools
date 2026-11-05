@@ -9,6 +9,7 @@ import os
 import re
 import sys
 import tempfile
+import urllib.parse
 import urllib.request
 
 CTX = 150
@@ -18,8 +19,9 @@ def page_text(src):
     if src.lower().endswith('.pdf'):
         path = src
         if src.startswith('http'):
-            path = os.path.join(tempfile.gettempdir(), os.path.basename(src.split('?')[0]))
-            if not os.path.exists(path):
+            filename = urllib.parse.unquote(os.path.basename(src.split('?')[0]))
+            path = os.path.join(tempfile.gettempdir(), filename)
+            if not os.path.exists(path) or os.path.getsize(path) == 0:
                 req = urllib.request.Request(src, headers={'User-Agent': 'Mozilla/5.0'})
                 with urllib.request.urlopen(req, timeout=120) as r, open(path, 'wb') as f:
                     f.write(r.read())

@@ -11,18 +11,18 @@ const CATEGORIES = [
 
 const SHORTCUTS = [
   // Groove welds
-  { keys: '△', command: 'Square Groove', category: 'groove', description: 'Square-edged butt joint with no bevel. Used on thin material (≤5mm) where full penetration is achievable without bevel preparation.' },
+  { keys: '||', command: 'Square Groove', category: 'groove', description: 'Square-edged butt joint with no bevel (symbol: two parallel vertical lines). Used on thin material (≤5mm) where full penetration is achievable without bevel preparation.' },
   { keys: 'V', command: 'V-Groove', category: 'groove', description: 'Single-V groove. Both edges beveled at 30° (60° included angle). Most common groove weld for plates 6-25mm thick. Requires back-gouging for full penetration.' },
   { keys: 'V (double)', command: 'Double-V Groove', category: 'groove', description: 'V-groove on both sides. Used for thick plates (>25mm). Less distortion and less weld metal than single-V. Requires welding from both sides.' },
-  { keys: '⌐', command: 'Bevel Groove', category: 'groove', description: 'Single-bevel groove. One edge beveled (45°), other square. Used when only one member can be prepared. Common in T-joints and corner joints.' },
-  { keys: '⌐ (double)', command: 'Double-Bevel Groove', category: 'groove', description: 'Bevel on both sides. Used for thick plates where access from both sides is available. Less weld metal than double-V.' },
+  { keys: '|/', command: 'Bevel Groove', category: 'groove', description: 'Single-bevel groove. One edge beveled (45°), other square (symbol: vertical line on left, angled line on right). Common in T-joints and corner joints.' },
+  { keys: '|/ (double)', command: 'Double-Bevel Groove', category: 'groove', description: 'Bevel on both sides. Used for thick plates where access from both sides is available. Less weld metal than double-V.' },
   { keys: 'U', command: 'U-Groove', category: 'groove', description: 'Single-U groove. Curved bevel with parallel sides. Used for thick sections (>25mm). Less weld metal than V-groove but more expensive to prepare.' },
   { keys: 'J', command: 'J-Groove', category: 'groove', description: 'Single-J groove. One edge curved (J-shape), other square. Used for thick T-joints and corner joints where only one member can be prepared.' },
   { keys: '▽', command: 'Flare-V Groove', category: 'groove', description: 'Groove formed by two curved surfaces (e.g. two round bars or formed plates). No bevel preparation needed — the joint geometry creates the groove.' },
   { keys: '⌒', command: 'Flare-Bevel Groove', category: 'groove', description: 'Groove between a curved surface and a flat surface. Common in sheet metal and structural tube-to-plate connections.' },
 
   // Basic weld types
-  { keys: '△', command: 'Fillet Weld', category: 'basic', description: 'Triangular cross-section weld joining two surfaces at right angles. Most common weld type. Size = leg length. Equal leg fillet is standard; unequal legs used for non-symmetric loading.' },
+  { keys: '⊿', command: 'Fillet Weld', category: 'basic', description: 'Triangular cross-section weld joining two surfaces at right angles (symbol: right-triangle with vertical leg on left). Most common weld type. Size = leg length. Equal leg fillet is standard; unequal legs used for non-symmetric loading.' },
   { keys: '○', command: 'Plug Weld', category: 'basic', description: 'Weld deposited in a circular hole in one member, fusing it to the other. Used for lap joints and repairing castings. Hole diameter and depth specified on symbol.' },
   { keys: '□', command: 'Slot Weld', category: 'basic', description: 'Weld deposited in an elongated slot. Similar to plug weld but elongated. Used for higher strength than plug welds. Slot length, width, and spacing specified.' },
   { keys: '⌒', command: 'Surfacing Weld', category: 'basic', description: 'Weld deposited on a surface to build up dimensions, provide wear resistance, or restore worn parts. Also called hardfacing or build-up weld. No joint required.' },
@@ -74,6 +74,9 @@ export default function WeldingSymbolClient() {
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}
+      mode="reference"
+      columnHeaders={['Symbol / Notation', 'Weld / Process Type', 'Standard Application & Notes']}
+      searchPlaceholder="Search welding symbols (e.g. Fillet, V-Groove, SMAW, Field Weld)..."
     />
   );
 }
