@@ -149,4 +149,21 @@ flowchart LR
 | :--- | :--- | :--- |
 | 1–2 | 3d-print-cost-time-estimator、3d-printing-chordal-deviation、3d-print-layer-time-calculator、acad-pgp-alias-editor、acoustic-decibel-calculator、aeration-tank-calculator、air-duct-pressure-calculator、anchor-bolt-calculator、angle-unit-converter、arc-flash-calculator | c894ad60、622b8ba9 |
 | 3 | ada-ramp-slope-calculator（前两批漏掉，本批补上）、area-unit-converter、autocad-fatal-error-wizard、autocad-registry-clean-generator、ball-screw-calculator | ed01bfdd、e392fce1 |
-| 待查（查询类） | autocad-vs-gstarcad-shortcuts、autocad-vs-zwcad-shortcuts、autolisp-function-reference、aws-welding-symbol-reference | 第四批优先处理前两个 |
+| 4 | autocad-vs-gstarcad-shortcuts、autocad-vs-zwcad-shortcuts、battery-capacity-calculator、beam-deflection-structural-calculator、bearing-capacity-calculator | bb9fb435～51496117（已 push，2026-11-05） |
+| 5（待做） | autolisp-function-reference、aws-welding-symbol-reference、bearing-life-calculator、bearing-static-load-calculator、belt-drive-length-calculator | — |
+| 6（待做） | belt-tension-calculator、bend-allowance-calculator、bending-allowance-table-calculator、bending-force-calculator、bernoulli-equation-calculator | — |
+
+---
+
+## 7. 前 20 个工具的返工教训（第四批起强制执行）
+
+第四批前后返工十余轮，原因集中在以下几点，对应规则如下：
+
+1. **功能名不等于命令名**：官网写 "DWG Compare"、"QRcode and Barcode" 不能推出存在 `COMPARE`、`BARCODE` 命令。CAD 命令、别名、快捷键必须在官方页面/手册中**原样出现**才能收录，否则删除。
+2. **证据只能是脚本原文**：每个收录的命令、标准号、版本号，都要有一次脚本抓取输出作为出处（URL 或 PDF 页码 + 逐字原文）。乱码照贴并另行注明。禁止按 `Command: XXX` 格式自拼引文。可用 `.agents/skills/toolbox-batch-audit/scripts/fetch_quote.py`。
+3. **删数据要三处同步**：从页面删除某项时，同时检查 `calculator-client.tsx`、`toolbox-engineering-specs.json`、E2E 断言，三处用 `Select-String` 搜一遍确认已无残留，并在 E2E 中加否定断言。
+4. **偶发失败先复现，再定根因**：测试出现一次异常结果，必须写复现脚本循环 ≥20 次统计；复现不出来写"未复现，原因暂不清楚"，测试端的规避改动不得称为"修复"。
+5. **"稳定"的口径**：本批及历史批次 E2E 各连续运行 5 次全部通过，才可写"稳定通过"；只跑 1 次写"运行 1 次通过"。可用 `scripts/run5.ps1`。
+6. **顺序固定：build 结束后才 commit**：汇报中附 `npm run build` 开始/结束时间与 commit 时间，commit 时间必须晚于 build 结束时间。
+7. **汇报格式**：遵守全局规则"汇报真实性铁律"，末尾必须有"未验证 / 推断项"和"本轮失败与重试记录"两节，没有写"无"。
+8. **不得 push**：push 只由用户在复核通过后下达。
