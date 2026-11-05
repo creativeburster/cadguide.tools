@@ -86,18 +86,17 @@ export default function AcadPgpEditorClient() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [wallpaperTheme, setWallpaperTheme] = useState<'minimalist' | 'blueprint' | 'cyberpunk'>('blueprint');
   const [wallpaperResolution, setWallpaperResolution] = useState<'4k' | '1080p' | 'phone'>('4k');
-  const [selectedAliases, setSelectedAliases] = useState<string[]>(DEFAULT_AUTOCAD_ALIASES.slice(0, 16).map(a => a.alias));
+  const [customSelectedAliases, setCustomSelectedAliases] = useState<string[] | null>(null);
 
-  // Sync selected aliases when aliases list changes
-  useEffect(() => {
-    const allExisting = aliases.map(a => a.alias);
-    const validSelected = selectedAliases.filter(alias => allExisting.includes(alias));
-    if (validSelected.length === 0) {
-      setSelectedAliases(aliases.slice(0, 16).map(a => a.alias));
-    } else {
-      setSelectedAliases(validSelected);
+  // Derived active selected aliases without cascading render effects
+  const activeSelectedAliases = useMemo(() => {
+    const allExisting = new Set(aliases.map(a => a.alias));
+    if (customSelectedAliases === null) {
+      return aliases.slice(0, 16).map(a => a.alias);
     }
-  }, [aliases]);
+    const valid = customSelectedAliases.filter(alias => allExisting.has(alias));
+    return valid.length === 0 ? aliases.slice(0, 16).map(a => a.alias) : valid;
+  }, [aliases, customSelectedAliases]);
 
   // Canvas Drawing logic
   const drawWallpaperToCanvas = () => {
@@ -213,7 +212,7 @@ export default function AcadPgpEditorClient() {
     ctx.fillStyle = wallpaperTheme === 'minimalist' ? '#64748b' : (wallpaperTheme === 'blueprint' ? '#f59e0b' : '#10b981');
     ctx.fillText(`LAYOUT MODE: ${wallpaperResolution.toUpperCase()} | ENGINE: ONLINE PGP COMPILER | DATE: ${new Date().toLocaleDateString()}`, halfWidth, titleY + titleFontSize + 15);
 
-    const renderList = aliases.filter(item => selectedAliases.includes(item.alias));
+    const renderList = aliases.filter(item => activeSelectedAliases.includes(item.alias));
     
     if (renderList.length > 0) {
       let cols = 3;
@@ -311,7 +310,7 @@ export default function AcadPgpEditorClient() {
   // Re-draw on configuration updates
   useEffect(() => {
     drawWallpaperToCanvas();
-  }, [aliases, wallpaperTheme, wallpaperResolution, selectedAliases]);
+  }, [aliases, wallpaperTheme, wallpaperResolution, activeSelectedAliases]);
 
   // Handle wallpaper download
   const handleDownloadWallpaper = () => {
@@ -562,7 +561,7 @@ export default function AcadPgpEditorClient() {
             </div>
 
             <button
-              onClick={handleDownload}
+              data-testid="btn-download-pgp" onClick={handleDownload}
               className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
             >
               <Download className="w-4 h-4" />
@@ -633,7 +632,7 @@ export default function AcadPgpEditorClient() {
             <span className="text-emerald-500 font-mono font-bold text-base flex items-center">CAD&gt;</span>
             <input
               type="text"
-              value={terminalInput}
+              data-testid="terminal-input" value={terminalInput}
               onChange={(e) => setTerminalInput(e.target.value)}
               placeholder="For example: C, L, REINIT, PL..."
               className="flex-1 bg-transparent text-white font-mono text-base focus:outline-none border-none p-0"
@@ -696,7 +695,7 @@ export default function AcadPgpEditorClient() {
                   ].map(theme => (
                     <button
                       key={theme.id}
-                      onClick={() => setWallpaperTheme(theme.id as any)}
+                      onClick={() => setWallpaperTheme(theme.id as 'minimalist' | 'blueprint' | 'cyberpunk')}
                       className={`p-3 rounded-xl border text-left flex flex-col justify-between h-20 transition-all active:scale-95 cursor-pointer ${theme.bg} ${
                         wallpaperTheme === theme.id ? 'ring-2 ring-blue-500 ring-offset-2 scale-[1.02] shadow-sm' : 'opacity-75 hover:opacity-100'
                       }`}
@@ -719,7 +718,7 @@ export default function AcadPgpEditorClient() {
                   ].map(res => (
                     <button
                       key={res.id}
-                      onClick={() => setWallpaperResolution(res.id as any)}
+                      onClick={() => setWallpaperResolution(res.id as '4k' | '1080p' | 'phone')}
                       className={`px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
                         wallpaperResolution === res.id ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-900'
                       }`}
@@ -733,22 +732,22 @@ export default function AcadPgpEditorClient() {
               {/* 3. Aliases Selector list */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block">3. Select Shortcuts to Render ({selectedAliases.length} selected)</label>
+                  <label className="text-sm font-bold text-slate-400 uppercase tracking-widest block">3. Select Shortcuts to Render ({activeSelectedAliases.length} selected)</label>
                   <div className="flex gap-2">
                     <button
-                      onClick={() => setSelectedAliases(aliases.slice(0, 16).map(a => a.alias))}
+                      onClick={() => setCustomSelectedAliases(aliases.slice(0, 16).map(a => a.alias))}
                       className="text-[9px] font-bold text-blue-600 hover:underline cursor-pointer"
                     >
                       Default Top 16
                     </button>
                     <button
-                      onClick={() => setSelectedAliases(aliases.map(a => a.alias))}
+                      onClick={() => setCustomSelectedAliases(aliases.map(a => a.alias))}
                       className="text-[9px] font-bold text-blue-600 hover:underline cursor-pointer"
                     >
                       Select All
                     </button>
                     <button
-                      onClick={() => setSelectedAliases([])}
+                      onClick={() => setCustomSelectedAliases([])}
                       className="text-[9px] font-bold text-slate-500 hover:underline cursor-pointer"
                     >
                       Clear
@@ -758,7 +757,7 @@ export default function AcadPgpEditorClient() {
                 {/* Scrollable list of aliases checkable */}
                 <div className="border border-slate-100 rounded-xl p-3 bg-slate-50 max-h-[120px] overflow-y-auto grid grid-cols-2 sm:grid-cols-4 gap-2 scrollbar-thin">
                   {aliases.map(item => {
-                    const isChecked = selectedAliases.includes(item.alias);
+                    const isChecked = activeSelectedAliases.includes(item.alias);
                     return (
                       <label
                         key={item.alias}
@@ -771,9 +770,9 @@ export default function AcadPgpEditorClient() {
                           checked={isChecked}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setSelectedAliases(prev => [...prev, item.alias]);
+                              setCustomSelectedAliases([...activeSelectedAliases, item.alias]);
                             } else {
-                              setSelectedAliases(prev => prev.filter(a => a !== item.alias));
+                              setCustomSelectedAliases(activeSelectedAliases.filter(a => a !== item.alias));
                             }
                           }}
                           className="rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-3 h-3 cursor-pointer"
@@ -790,7 +789,7 @@ export default function AcadPgpEditorClient() {
             {/* Download wallpaper button */}
             <button
               onClick={handleDownloadWallpaper}
-              disabled={selectedAliases.length === 0}
+              disabled={activeSelectedAliases.length === 0}
               className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-400 disabled:to-slate-400 text-white font-black text-lg shadow-md hover:shadow-lg transition-all active:scale-95 cursor-pointer w-full text-center"
             >
               <Download className="w-4 h-4" />
@@ -889,7 +888,8 @@ export default function AcadPgpEditorClient() {
                 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Quick aliases (such as: C)</label>
                 <input
                   type="text"
-                  value={newAlias}
+                  data-testid="input-new-alias"
+                    value={newAlias}
                   onChange={(e) => setNewAlias(e.target.value)}
                   placeholder="C"
                   className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-base font-mono font-bold text-slate-800 uppercase"
@@ -900,7 +900,8 @@ export default function AcadPgpEditorClient() {
                 <label className="text-sm font-bold text-slate-500 uppercase tracking-wider">Point to CAD command (Such as: CIRCLE)</label>
                 <input
                   type="text"
-                  value={newCommand}
+                  data-testid="input-new-command"
+                    value={newCommand}
                   onChange={(e) => setNewCommand(e.target.value)}
                   placeholder="CIRCLE"
                   className="px-3 py-2 rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 text-base font-mono font-bold text-slate-800 uppercase"
@@ -908,6 +909,7 @@ export default function AcadPgpEditorClient() {
               </div>
 
               <button
+                data-testid="btn-add-alias"
                 type="submit"
                 className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-base flex items-center justify-center gap-1.5 cursor-pointer w-full md:w-auto h-[38px] flex-shrink-0"
               >

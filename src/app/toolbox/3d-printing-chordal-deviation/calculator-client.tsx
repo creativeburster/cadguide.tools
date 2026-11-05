@@ -279,7 +279,7 @@ export default function ChordalDeviationClient() {
           <div className={`${vc.bg} ${vc.border} border rounded-2xl p-5 flex items-center gap-4`}>
             <VerdictIcon className={`w-6 h-6 ${vc.color} shrink-0`} />
             <div>
-              <div className={`font-black text-lg ${vc.color}`}>{vc.label}</div>
+              <div data-testid="verdict-label" className={`font-black text-lg ${vc.color}`}>{vc.label}</div>
               <p className="text-base text-slate-500 font-semibold mt-0.5 leading-relaxed">
                 {calculations.verdict === 'excellent' && 'Your chordal deviation is well below the printer resolution threshold. Exported mesh geometry will be visually indistinguishable from original BREP curves.'}
                 {calculations.verdict === 'good' && 'The deviation is within your printer\'s achievable tolerance. Circular holes should print without noticeable polygon stepping.'}
@@ -323,6 +323,7 @@ export default function ChordalDeviationClient() {
                   min="0.1"
                   max="1000"
                   step="0.1"
+                  data-testid="input-radius"
                   value={radius}
                   onChange={(e) => setRadius(parseFloat(e.target.value) || 0.1)}
                   className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
@@ -356,6 +357,7 @@ export default function ChordalDeviationClient() {
                 min="1"
                 max="45"
                 step="1"
+                data-testid="input-angular-step"
                 value={angularStep}
                 onChange={(e) => setAngularStep(parseInt(e.target.value))}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
@@ -415,11 +417,11 @@ export default function ChordalDeviationClient() {
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Segments (N)</div>
-                <div className="text-white font-black text-lg font-mono">{calculations.N}</div>
+                <div data-testid="result-segments" className="text-white font-black text-lg font-mono">{calculations.N}</div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Sagitta (S)</div>
-                <div className="text-amber-400 font-black text-lg font-mono">{calculations.sagitta.toFixed(4)}<span className="text-sm text-slate-400 ml-1">mm</span></div>
+                <div data-testid="result-sagitta" className="text-amber-400 font-black text-lg font-mono">{calculations.sagitta.toFixed(4)}<span className="text-sm text-slate-400 ml-1">mm</span></div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-700/50">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Chord Length</div>
@@ -444,7 +446,7 @@ export default function ChordalDeviationClient() {
 
           {/* Copy Summary button */}
           <button
-            onClick={handleCopySummary}
+            data-testid="btn-copy-summary" onClick={handleCopySummary}
             className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
           >
             {copied ? (

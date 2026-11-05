@@ -176,6 +176,7 @@ export default function AirDuctPressureCalculatorClient() {
                 <input
                   type="number"
                   step="1"
+                  data-testid="duct-input-length"
                   value={lengthM}
                   onChange={e => setLengthM(e.target.value)}
                   className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-green-600/5 focus:bg-white transition-all"
@@ -199,6 +200,7 @@ export default function AirDuctPressureCalculatorClient() {
                 <input
                   type="number"
                   step="0.5"
+                  data-testid="duct-input-velocity"
                   value={velocityMs}
                   onChange={e => setVelocityMs(e.target.value)}
                   className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-green-600/5 focus:bg-white transition-all"

@@ -140,7 +140,7 @@ export default function PrintCostClient() {
 
           <div>
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <select value={materialIdx} onChange={e => setMaterialIdx(parseInt(e.target.value))} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
+            <select data-testid="select-material" value={materialIdx} onChange={e => setMaterialIdx(parseInt(e.target.value))} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all">
               {MATERIALS.map((m, i) => <option key={m.name} value={i}>{m.name} — ${m.pricePerKg}/kg</option>)}
             </select>
           </div>
@@ -160,12 +160,12 @@ export default function PrintCostClient() {
 
           <div>
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Model Volume (cm³)</label>
-            <input type="number" step="1" value={modelVolume} onChange={e => setModelVolume(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+            <input type="number" step="1" data-testid="input-volume" value={modelVolume} onChange={e => setModelVolume(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
           </div>
 
           <div>
             <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Infill Density: {infill}%</label>
-            <input type="range" min="0" max="100" value={infill} onChange={e => setInfill(parseInt(e.target.value))} className="w-full accent-blue-600" />
+            <input type="range" min="0" max="100" data-testid="input-infill" value={infill} onChange={e => setInfill(parseInt(e.target.value))} className="w-full accent-blue-600" />
             <div className="flex justify-between text-sm font-bold text-slate-400 mt-1">
               <span>0%</span><span>20%</span><span>50%</span><span>100%</span>
             </div>
@@ -210,7 +210,7 @@ export default function PrintCostClient() {
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Estimate Results</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
+              <button data-testid="btn-export-csv" onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
                 <Download className="w-4 h-4" />
                 Export CSV
               </button>
@@ -219,12 +219,12 @@ export default function PrintCostClient() {
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white">
                 <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Estimated Print Time</p>
-                <p className="text-3xl font-black">{formatTime(results.printTimeHr)}</p>
+                <p data-testid="result-print-time" className="text-3xl font-black">{formatTime(results.printTimeHr)}</p>
                 <p className="text-sm mt-2 opacity-70">{results.printTimeMin} minutes total (incl. 30% overhead)</p>
               </div>
               <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-6 text-white">
                 <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Total Cost</p>
-                <p className="text-3xl font-black">${results.totalCost}</p>
+                <p data-testid="result-total-cost" className="text-3xl font-black">${results.totalCost}</p>
                 <p className="text-sm mt-2 opacity-70">${results.materialCost} material + ${results.elecCost} electricity</p>
               </div>
             </div>

@@ -135,20 +135,45 @@
     "title": "Chordal Deviation STL Mesh Quality Calculator",
     "description": "Calculate chordal sagitta deviation to optimize STEP/IGES to STL export quality. Predict faceted stepping on circular holes and cylinders before 3D printing.",
     "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Chordal Deviation STL Mesh Quality Calculator",
+    "standards": "ISO/ASTM 52900 (Additive Manufacturing), ISO 10303-21 (STEP AP242 BREP Tessellation), ASME Y14.5M",
+    "cadContext": "When exporting parametric NURBS/BREP surfaces from SolidWorks, Inventor, or Fusion 360 to faceted STL/OBJ meshes, chordal sagitta controls the maximum radial deviation between the ideal curved surface and the tessellated flat facet.",
+    "formula": "Sagitta S = R · (1 - cos(θ / 2)) = R · (1 - cos(π / N)) • Chord C = 2R · sin(θ / 2) • Min Segments N_min = ⌈π / acos(1 - Tol / R)⌉",
     "inputs": [
       {
-        "label": "1. Feature Radius (mm) 5 mm",
-        "val": "5"
+        "label": "Feature Radius R (mm)",
+        "val": "5.0 mm"
       },
       {
-        "label": "2. Angular Step (°) 10 °",
-        "val": "10"
+        "label": "Angular Step θ (°)",
+        "val": "10°"
+      },
+      {
+        "label": "Printer Tolerance Limit",
+        "val": "0.30 mm (FDM Standard)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Sagitta (Chordal Deviation)",
+        "val": "0.0190 mm"
+      },
+      {
+        "label": "Polygon Segments (N)",
+        "val": "36 segments"
+      },
+      {
+        "label": "Chord Length (C)",
+        "val": "0.8716 mm"
+      },
+      {
+        "label": "Arc-to-Chord Error",
+        "val": "0.127 %"
+      },
+      {
+        "label": "Quality Verdict",
+        "val": "Excellent (Sagitta ≤ 0.3 × Tol)"
+      }
+    ]
   },
   "3dsmax-shortcuts-sheet": {
     "title": "3ds Max Hotkeys Complete Reference",
@@ -164,16 +189,37 @@
     "title": "AutoCAD PGP Shortcut Key Alias Editor",
     "description": "Edit, validate, and compile AutoCAD acad.pgp or GstarCAD/ZWCAD command alias files online. Instant duplicate shortcut conflict detection and one-click PGP export — 100% client-side in your browser.",
     "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD PGP Shortcut Key Alias Editor",
+    "standards": "AutoCAD PGP Syntax Specification, ISO 128 (Technical Drawings), GstarCAD / ZWCAD Configuration Protocols",
+    "cadContext": "AutoCAD acad.pgp and GstarCAD gcad.pgp define keyboard command aliases. Custom alias definitions appended to the bottom override standard definitions upon reinitialization (REINIT command or restart).",
+    "formula": "Syntax: <Alias>, *<Command> • Conflict Evaluation: Distinct(Alias) vs Count(Alias) • Compiler: ASCII/UTF-8 PGP Output",
     "inputs": [
       {
-        "label": "Point to CAD command (Such as: CIRCLE)",
-        "val": "Standard"
+        "label": "Active Alias Set",
+        "val": "AutoCAD 2024 / GstarCAD Default Preset"
+      },
+      {
+        "label": "Configured Hotkeys",
+        "val": "28 Standard Alias Items"
+      },
+      {
+        "label": "Target Editor Mode",
+        "val": "Visual Keymap + Terminal Simulator"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Hotkey Conflict Status",
+        "val": "0 Duplicate Collisions Detected"
+      },
+      {
+        "label": "PGP Compilation Output",
+        "val": "Ready for 1-Click acad.pgp Export"
+      },
+      {
+        "label": "Wallpaper Reference Engine",
+        "val": "Rendered for 4K / 1080p / Mobile"
+      }
+    ]
   },
   "acoustic-decibel-calculator": {
     "title": "Acoustic Decibel & Multi-Source Calculator",

@@ -123,7 +123,7 @@ export default function AnchorBoltCalculatorClient() {
   return (
     <div className="space-y-8">
       {/* Safety Critical Disclaimer Banner */}
-      <div className="bg-amber-50 border-2 border-amber-300 rounded-3xl p-6 flex items-start gap-4">
+      <div data-testid="disclaimer-banner" className="bg-amber-50 border-2 border-amber-300 rounded-3xl p-6 flex items-start gap-4">
         <ShieldAlert className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
         <div className="text-xs text-amber-900 leading-relaxed font-medium">
           <strong className="font-black text-amber-950 block text-sm mb-1 uppercase tracking-wide">
@@ -152,6 +152,7 @@ export default function AnchorBoltCalculatorClient() {
             <div className="space-y-1.5">
               {BOLT_PRESETS.map((p, idx) => (
                 <button
+                  data-testid={`preset-bolt-${idx}`}
                   key={p.name}
                   onClick={() => applyPreset(idx)}
                   className={`w-full text-left px-3 py-2 rounded-xl border text-xs font-bold transition-all flex items-center justify-between ${
