@@ -40,13 +40,19 @@ export default function AreaUnitConverterClient() {
   };
 
   const results = useMemo(() => {
-    const val = parseFloat(valStr);
-    if (isNaN(val) || !isFinite(val)) {
-      return { outputVal: NaN, m2Val: NaN, table: [] };
-    }
-
     const fromDef = UNIT_MAP[fromUnit.toLowerCase()] || UNIT_MAP['m2'];
     const toDef = UNIT_MAP[toUnit.toLowerCase()] || UNIT_MAP['ft2'];
+    const val = parseFloat(valStr);
+
+    if (isNaN(val) || !isFinite(val)) {
+      const emptyTable = AREA_UNITS.map(u => ({
+        key: u.key,
+        name: u.name,
+        symbol: u.symbol,
+        converted: NaN,
+      }));
+      return { outputVal: NaN, m2Val: NaN, table: emptyTable, fromDef, toDef };
+    }
 
     // Convert to base unit: square meters (m²)
     const m2Val = val * fromDef.factorToM2;
@@ -79,7 +85,7 @@ export default function AreaUnitConverterClient() {
     if (isNaN(results.outputVal)) return;
     const rows = [
       ['Area Unit Conversion Matrix Report', ''],
-      ['Standards', 'NIST SP 811 / ISO 80000-1 / BIPM SI Brochure (9th Edition)'],
+      ['Standards', 'NIST SP 811 / ISO 80000-3 / BIPM SI Brochure (9th Edition)'],
       ['Date', new Date().toLocaleDateString()],
       ['', ''],
       ['Input Parameter', ''],
@@ -234,7 +240,9 @@ export default function AreaUnitConverterClient() {
                 </span>
               </div>
               <div className="text-xs text-purple-200/90 mt-2 font-medium">
-                {valStr} {results.fromDef?.symbol} = {results.m2Val.toLocaleString('en-US', { maximumFractionDigits: 6 })} m²
+                {isNaN(results.m2Val)
+                  ? `Enter a valid area in ${results.fromDef.symbol}`
+                  : `${valStr} ${results.fromDef.symbol} = ${results.m2Val.toLocaleString('en-US', { maximumFractionDigits: 6 })} m²`}
               </div>
             </div>
 

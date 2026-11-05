@@ -89,11 +89,12 @@ echo.
 
     // FLEXlm / Licensing activation local files
     if (cleanFlexlm) {
+      const verYear = activeVer.label.replace(/[^0-9]/g, '');
       script += `:: 4. Reset licensing authorization local cache
 echo Checking Autodesk licensing architecture...
 echo [NOTE] For AutoCAD 2020-2026 (AdskLicensing architecture):
 echo To reset single product licensing without affecting other Autodesk apps, run:
-echo "%CommonProgramFiles(x86)%\\Autodesk Shared\\AdskLicensing\\Current\\helper\\AdskLicensingInstHelper.exe" change -pk <ProductKey> -pv 2024.0.0.F -lm ""
+echo "%CommonProgramFiles(x86)%\\Autodesk Shared\\AdskLicensing\\Current\\helper\\AdskLicensingInstHelper.exe" change -pk PRODUCT_KEY -pv ${verYear}.0.0.F -lm ""
 echo.
 set "FLEX_DIR=%ProgramData%\\FLEXnet"
 if exist "%FLEX_DIR%" (
