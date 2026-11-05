@@ -62,7 +62,7 @@ async function runMasterSuite() {
       const bodyText = await p.innerText('body');
 
       // 1. Verify complete elimination of fabricated or unverified commands
-      const fabricatedWords = ['GSTARWORKSPACES', 'SPLAT', 'EXPRINT', 'FREEPOLY', 'AUTOSORT'];
+      const fabricatedWords = ['GSTARWORKSPACES', 'SPLAT', 'EXPRINT', 'FREEPOLY', 'AUTOSORT', 'COMPARE'];
       for (const w of fabricatedWords) {
         if (bodyText.includes(w)) {
           throw new Error(`Found fabricated or unverified command (${w}) on page!`);
@@ -78,14 +78,7 @@ async function runMasterSuite() {
         throw new Error('Failed to find identical LINE shortcut');
       }
 
-      // 3. Verify genuine GstarCAD official tools (COMPARE, AREASUM, MAGNIFIER, BCOUNT)
-      await searchInput.fill('COMPARE');
-      await p.waitForTimeout(150);
-      cardText = await p.innerText('body');
-      if (!cardText.includes('COMPARE') || !cardText.includes('Identical')) {
-        throw new Error('GstarCAD native COMPARE (DWG Compare) missing from comparison table');
-      }
-
+      // 3. Verify genuine GstarCAD official tools (AREASUM, MAGNIFIER, BCOUNT)
       await searchInput.fill('AREASUM');
       await p.waitForTimeout(150);
       cardText = await p.innerText('body');
@@ -98,6 +91,13 @@ async function runMasterSuite() {
       cardText = await p.innerText('body');
       if (!cardText.includes('MAGNIFIER') || !cardText.includes('floating viewport lens')) {
         throw new Error('GstarCAD official MAGNIFIER missing from comparison table');
+      }
+
+      await searchInput.fill('BCOUNT');
+      await p.waitForTimeout(150);
+      cardText = await p.innerText('body');
+      if (!cardText.includes('BCOUNT') || !cardText.includes('Different')) {
+        throw new Error('GstarCAD official BCOUNT missing from comparison table');
       }
 
       // 4. Test View Filter Toggle (Differences only)
@@ -136,7 +136,7 @@ async function runMasterSuite() {
       ]);
       const dlPath = await download.path();
       const csvContent = fs.readFileSync(dlPath, 'utf8');
-      if (!csvContent.includes('Command / Alias') || !csvContent.includes('COMPARE') || !csvContent.includes('AREASUM')) {
+      if (!csvContent.includes('Command / Alias') || !csvContent.includes('AREASUM') || !csvContent.includes('MAGNIFIER')) {
         throw new Error('Exported CSV missing required shortcut comparison headers or rows');
       }
     });
@@ -150,12 +150,15 @@ async function runMasterSuite() {
 
       const bodyText = await p.innerText('body');
 
-      // 1. Verify complete elimination of fabricated instant messenger alias & unverified datasmart
-      if (bodyText.includes('MESSENGER') || bodyText.includes('MX') || bodyText.includes('DATASMART')) {
-        throw new Error('Found fabricated legacy shortcut (MX / MESSENGER / DATASMART) on ZWCAD comparison page!');
+      // 1. Verify complete elimination of fabricated or unverified command names (MX, MESSENGER, DATASMART, BARCODE, QRCODE)
+      const unverifiedZwcadWords = ['MESSENGER', 'MX', 'DATASMART', 'BARCODE', 'QRCODE'];
+      for (const w of unverifiedZwcadWords) {
+        if (bodyText.includes(w)) {
+          throw new Error(`Found unverified or legacy shortcut (${w}) on ZWCAD comparison page!`);
+        }
       }
 
-      // 2. Verify authentic ZWCAD official innovations (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT, BARCODE, QRCODE)
+      // 2. Verify authentic ZWCAD official innovations with verified command names (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT)
       const searchInput = p.locator('[data-testid="shortcut-search-input"]');
       
       await searchInput.fill('SMARTSEL');
@@ -179,11 +182,11 @@ async function runMasterSuite() {
         throw new Error('ZWCAD SmartVoice innovation missing');
       }
 
-      await searchInput.fill('BARCODE');
+      await searchInput.fill('SMARTPLOT');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
-      if (!pageText.includes('BARCODE') || !pageText.includes('Code 39/128')) {
-        throw new Error('ZWCAD Barcode generator feature missing');
+      if (!pageText.includes('SMARTPLOT') || !pageText.includes('batch plot')) {
+        throw new Error('ZWCAD SmartPlot feature missing');
       }
 
       // 3. Test Filter Identical
@@ -204,7 +207,7 @@ async function runMasterSuite() {
       ]);
       const dlPath = await download.path();
       const csvContent = fs.readFileSync(dlPath, 'utf8');
-      if (!csvContent.includes('SMARTSEL') || !csvContent.includes('FCMP')) {
+      if (!csvContent.includes('SMARTSEL') || !csvContent.includes('FCMP') || !csvContent.includes('SMARTPLOT')) {
         throw new Error('ZWCAD CSV export missing authentic smart commands');
       }
     });

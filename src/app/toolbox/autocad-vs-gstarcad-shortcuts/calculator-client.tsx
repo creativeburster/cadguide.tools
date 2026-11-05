@@ -149,15 +149,7 @@ const DIFF_DATA: DiffItem[] = [
     useCase: "Copy layer, color, linetype, and lineweight properties to other objects."
   },
 
-  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Support & Guide)
-  {
-    shortcut: "COMPARE",
-    primaryCmd: "COMPARE",
-    secondaryCmd: "COMPARE",
-    isSame: true,
-    diffNote: "DWG Compare feature in GstarCAD (native in 2026+). Overlays two DWG revisions to highlight differences using revision clouds, matching AutoCAD COMPARE.",
-    useCase: "Drawing revision difference comparison between version releases."
-  },
+  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Manual & Guide)
   {
     shortcut: "AREASUM",
     primaryCmd: "AREA",
@@ -171,7 +163,7 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "N/A",
     secondaryCmd: "MAGNIFIER",
     isSame: false,
-    diffNote: "GstarCAD official interactive floating viewport lens. Allows real-time inspection, snapping, and editing of detail geometry without changing main viewport zoom.",
+    diffNote: "GstarCAD official interactive floating viewport lens (MAGNIFIER command, Ctrl+E). Allows real-time inspection, snapping, and editing of detail geometry without changing main viewport zoom.",
     useCase: "Micro-detail drawing inspection and object snapping in complex plans."
   },
   {

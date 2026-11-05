@@ -686,12 +686,12 @@
     "description": "Side-by-side command mapping and PGP alias diff table between AutoCAD and GstarCAD Lite/Pro. Fast migration reference.",
     "discipline": "CAD Interoperability & Drafting Systems",
     "standards": "Autodesk AutoCAD acad.pgp Reference Guide, GstarCAD Command Specification (gcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
-    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (CMP, AREASUM, MAGNIFIER, BCOUNT).",
+    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (AREASUM, MAGNIFIER, BCOUNT).",
     "formula": "Alias mapping: Command_Alt = Map(Alias) vs. Command_ACAD = Map(Alias)",
     "inputs": [
       {
         "label": "Command Query / Filter",
-        "val": "All 22 Verified PGP Aliases & Commands"
+        "val": "All 21 Verified PGP Aliases & Commands"
       },
       {
         "label": "CAD Engine Pair",
@@ -705,7 +705,7 @@
       },
       {
         "label": "Proprietary Enhancements",
-        "val": "4 Official GstarCAD Commands (CMP, AREASUM, MAGNIFIER, BCOUNT)"
+        "val": "3 Official GstarCAD Commands (AREASUM, MAGNIFIER, BCOUNT)"
       }
     ]
   },
@@ -714,12 +714,12 @@
     "description": "Compare command alias mappings between AutoCAD and ZWCAD. Verify smart command exceptions for seamless transitions.",
     "discipline": "CAD Interoperability & Drafting Systems",
     "standards": "Autodesk AutoCAD acad.pgp Reference Guide, ZWCAD Official Command & PGP System Specification (zwcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
-    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect/SMARTSEL, FileCompare/FCMP, SmartVoice, SmartPlot, Barcode, QRCode).",
+    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect/SMARTSEL, FileCompare/FCMP, SmartVoice, SmartPlot).",
     "formula": "Alias mapping: Command_ZWCAD = Map(Alias) vs. Command_ACAD = Map(Alias)",
     "inputs": [
       {
         "label": "Command Query / Filter",
-        "val": "All 24 Verified PGP Aliases & Commands"
+        "val": "All 22 Verified PGP Aliases & Commands"
       },
       {
         "label": "CAD Engine Pair",
@@ -733,7 +733,7 @@
       },
       {
         "label": "Proprietary Enhancements",
-        "val": "6 Official ZWCAD Smart Commands (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT, BARCODE, QRCODE)"
+        "val": "4 Official ZWCAD Smart Commands (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT)"
       }
     ]
   },

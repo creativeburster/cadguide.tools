@@ -179,24 +179,8 @@ const DIFF_DATA: DiffItem[] = [
     primaryCmd: "PUBLISH",
     secondaryCmd: "SMARTPLOT",
     isSame: false,
-    diffNote: "ZWCAD official smart batch plot tool (also aliased as ZWPLOT). Automatically identifies title block frames across model space for one-click multi-sheet PDF output.",
+    diffNote: "ZWCAD official smart batch plot tool (SMARTPLOT command). Automatically identifies title block frames across model space for one-click multi-sheet PDF output.",
     useCase: "Automatic batch plotting of complete drawing sets without configuring layout tabs."
-  },
-  {
-    shortcut: "BARCODE",
-    primaryCmd: "N/A",
-    secondaryCmd: "BARCODE",
-    isSame: false,
-    diffNote: "ZWCAD built-in barcode generator (native in 2026+). Directly encodes part numbers, drawing numbers, or project codes into Code 39/128 symbologies on the drawing.",
-    useCase: "Manufacturing shop-floor tracking and ERP asset tag drawing embedding."
-  },
-  {
-    shortcut: "QRCODE",
-    primaryCmd: "N/A",
-    secondaryCmd: "QRCODE",
-    isSame: false,
-    diffNote: "ZWCAD built-in 2D matrix QR code generator (native in 2026+). Allows site engineers to scan drawings with mobile devices to access online specification docs.",
-    useCase: "Embedding URL links and cloud inspection documents into drawing title blocks."
   }
 ];
 
