@@ -139,7 +139,7 @@ flowchart LR
 | :--- | :--- | :--- |
 | `page.tsx` 内再嵌套一层 `<main>`（layout 已有一层） | `src/app/toolbox` 下约 422 个页面 | 仅修了 `autocad-fatal-error-wizard`，其余待批量处理 |
 | `npm run lint` 全项目存在历史错误（约 87 errors） | 非 toolbox 本批文件为主 | 待单独清理 |
-| 本地构建时 `postbuild` 会提交 IndexNow | `scripts/indexnow-submit.js` | 已处理：仅在 `VERCEL=1` 或 `--force` 时提交 |
+| 本地构建时 `postbuild` 会提交 IndexNow | `scripts/indexnow-submit.js` | 已处理：仅在 Cloudflare Pages 生产构建（`CF_PAGES=1` 且 `CF_PAGES_BRANCH=main`）、`VERCEL=1` 或 `--force` 时提交（2026-11-05 补充 Cloudflare 判断；此前线上是否提交过未验证） |
 
 ---
 

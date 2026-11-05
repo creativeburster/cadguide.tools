@@ -65,10 +65,10 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ---
 
-## 🚫 5. 严格的 Git 推送禁令与 Vercel 额度守护 (Strict Git Push Ban & Vercel Shield)
+## 🚫 5. 严格的 Git 推送禁令与 Cloudflare 构建额度守护 (Strict Git Push Ban & Cloudflare Build Shield)
 
 *   **绝对禁止擅自 Git Push**：在任何情况下，AI 智能体**绝对不允许自主执行 `git push` 命令**。
-*   **额度风控与成本控制**：由于 Vercel 部署存在构建配额与服务成本限制，且 6,160+ 个静态页面的项目全量渲染极为耗时，严禁以任何理由“抢跑推送”。
+*   **额度风控与成本控制**：由于站点部署在 Cloudflare，每次 push 都会触发全量构建，存在构建配额与服务成本限制，且 6,160+ 个静态页面的项目全量渲染极为耗时，严禁以任何理由“抢跑推送”。
 *   **标准工作流**：
     1. 智能体仅在本地 Workspace 修改代码，并通过 `npx tsc --noEmit` 和 `npm run build` 进行类型与构建校验。
     2. 校验成功后，只在本地完成 `git commit`，并在对话框中将构建输出呈报给用户。
