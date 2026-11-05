@@ -148,3 +148,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 5. **价格与套餐 (`pricing_tiers`)**：每个套餐显示官方真实套餐名称与包含的大概内容（权益列表），具体价格一律不写死金额数字，全部直链官方网站定价页 (`pricing_url`)。
 6. **核心功能、规格与优缺点 (`detailed_features`, `tech_specs`, `pros`, `cons`)**：功能与技术参数严格核对官方文档力求准确完善；`pros` 与 `cons` 结合主流评测平台与 AI 综合调研写出 5~6 条具体、客观的完整说明，禁止只写两三个词的短语。
 7. **常见问题 (`faqs`)**：优先直接采用目标软件官方网站上的官方 FAQ 问答，并附带官网对应链接，禁止凭空自造问答套话。
+
+---
+
+## 🧮 8. Toolbox 工具页 (`/toolbox/[slug]`) 优化与验收标准
+
+修改任何 `/toolbox/*` 计算器、换算器、脚本生成器、诊断向导或速查表之前，**必须先读 [`TOOLBOX_STANDARD.md`](file:///F:/cadguide.tools/TOOLBOX_STANDARD.md)**。核心要求：
+
+1. **能复算**：默认值、`toolbox-engineering-specs.json` 算例、E2E 断言三者为同一组数，且可手算验证。
+2. **不编造**：标准号、CAD 别名、软件版本号、注册表键只写能查到官方出处的，查不到就删。
+3. **E2E 必须断言真实数据**：默认值与修改值手算断言、空值不出现 NaN、下载文件内容、数据列表内容，并回归历史批次。
+4. **报告附证据**：每项“已完成”附文件行号或 `git show --stat`；跳过的工具写明原因；全站遗留问题如实标注“另行处理”。
