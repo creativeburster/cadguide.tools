@@ -431,12 +431,44 @@ async function runMasterSuite() {
       assertClose(qaSquare, 440.00, 0.001, 'Square Footing Allowable Capacity qa');
 
       // 3. Test Terzaghi Soil Preset: Soft Clay (Phi = 0 condition, strictly Nc=5.7 per Terzaghi 1943)
+      await p.click('[data-testid="btn-shape-strip"]');
+      await p.waitForTimeout(100);
       await p.click('[data-testid="btn-preset-soft-clay"]');
       await p.waitForTimeout(150);
       const clayNc = await p.locator('[data-testid="input-nc"]').inputValue();
       if (clayNc !== '5.7') {
         throw new Error(`Expected Soft Clay preset to populate Terzaghi 1943 Nc=5.7, got ${clayNc}`);
       }
+
+      // Hand-calculated verification for Soft Clay (Phi = 0, Strip B=2m, Df=1m, FS=3.0):
+      // c = 25 kPa, gamma = 17 kN/m3, Nc = 5.7, Nq = 1.0, Ng = 0.0
+      // Cohesion Term = 1.0 * 25 * 5.7 = 142.50 kPa
+      // Surcharge Term = 1.0 * 17 * 1 * 1.0 = 17.00 kPa
+      // Width Term = 0.5 * 1.0 * 17 * 2 * 0 = 0.00 kPa
+      // qu = 142.50 + 17.00 + 0 = 159.50 kPa
+      // qa = 159.50 / 3.0 = 53.17 kPa
+      // qnet = (159.50 - 17) / 3.0 = 47.50 kPa
+      // Qa = 53.1666... * 2.0 = 106.3 kN/m
+      const clayCohTerm = parseFloat((await p.locator('[data-testid="res-cohesion-term"]').innerText()).replace(/,/g, ''));
+      assertClose(clayCohTerm, 142.5, 0.005, 'Soft Clay Cohesion Term kPa (Nc=5.7)');
+
+      const claySurTerm = parseFloat((await p.locator('[data-testid="res-surcharge-term"]').innerText()).replace(/,/g, ''));
+      assertClose(claySurTerm, 17.0, 0.005, 'Soft Clay Surcharge Term kPa (Nq=1.0)');
+
+      const clayWidthTerm = parseFloat((await p.locator('[data-testid="res-width-term"]').innerText()).replace(/,/g, ''));
+      assertClose(clayWidthTerm, 0.0, 0.005, 'Soft Clay Width Term kPa (Ng=0.0)');
+
+      const clayQu = parseFloat((await p.locator('[data-testid="res-qu"]').innerText()).replace(/,/g, ''));
+      assertClose(clayQu, 159.50, 0.001, 'Soft Clay Ultimate Capacity qu kPa');
+
+      const clayQa = parseFloat((await p.locator('[data-testid="res-qa"]').innerText()).replace(/,/g, ''));
+      assertClose(clayQa, 53.17, 0.01, 'Soft Clay Allowable Capacity qa kPa');
+
+      const clayQnet = parseFloat((await p.locator('[data-testid="res-qnet"]').innerText()).replace(/,/g, ''));
+      assertClose(clayQnet, 47.50, 0.01, 'Soft Clay Net Allowable Capacity qnet kPa');
+
+      const clayTotalLoad = parseFloat((await p.locator('[data-testid="res-total-load"]').innerText()).replace(/,/g, ''));
+      assertClose(clayTotalLoad, 106.3, 0.1, 'Soft Clay Total Allowable Vertical Load Qa kN/m');
 
       // 4. Empty Input Robustness (No NaN)
       await p.fill('[data-testid="input-cohesion-c"]', '');

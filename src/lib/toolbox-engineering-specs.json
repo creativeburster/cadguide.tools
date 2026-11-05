@@ -974,6 +974,10 @@
       {
         "label": "Total Allowable Line Force (Qa)",
         "val": "796.00 kN/m"
+      },
+      {
+        "label": "Soft Clay Benchmark (phi=0, Nc=5.7)",
+        "val": "qu=159.50 kPa, qa=53.17 kPa, qnet=47.50 kPa, Qa=106.30 kN/m"
       }
     ]
   },
