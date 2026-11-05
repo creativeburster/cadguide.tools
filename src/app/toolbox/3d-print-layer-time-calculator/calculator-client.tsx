@@ -19,50 +19,68 @@ const PRESETS: Preset[] = [
 ];
 
 export default function PrintLayerTimeCalculatorClient() {
-  const [inputs, setInputs] = useState(['0.20', '50', '500', '10000', '20', '200']);
-  const [activePreset, setActivePreset] = useState<number | null>(1); // Standard default
+  const [layerHeight, setLayerHeight] = useState('0.20');
+  const [speed, setSpeed] = useState('50');
+  const [perimeter, setPerimeter] = useState('500');
+  const [wallCount, setWallCount] = useState('2');
+  const [infillArea, setInfillArea] = useState('10000');
+  const [infillDensity, setInfillDensity] = useState('20');
+  const [solidLayers, setSolidLayers] = useState('4');
+  const [totalLayers, setTotalLayers] = useState('200');
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
-    setActivePreset(null);
-  };
+  const [activePreset, setActivePreset] = useState<number | null>(1); // Standard default
 
   const applyPreset = (idx: number) => {
     const p = PRESETS[idx];
-    const next = [...inputs];
-    next[0] = p.layerHeight;
-    next[1] = p.speed;
-    setInputs(next);
+    setLayerHeight(p.layerHeight);
+    setSpeed(p.speed);
     setActivePreset(idx);
   };
 
   const result = useMemo(() => {
-    const h = Math.max(0.01, parseFloat(inputs[0]) || 0.2); // mm
-    const v = Math.max(1, parseFloat(inputs[1]) || 50); // mm/s
-    const perim = Math.max(0, parseFloat(inputs[2]) || 0); // mm
-    const area = Math.max(0, parseFloat(inputs[3]) || 0); // mm²
-    const dens = Math.max(0, Math.min(100, parseFloat(inputs[4]) || 0)) / 100; // ratio
-    const layers = Math.max(1, parseInt(inputs[5]) || 1); // count
+    const h = Math.max(0.01, parseFloat(layerHeight) || 0.2); // mm
+    const v = Math.max(1, parseFloat(speed) || 50); // mm/s
+    const perim = Math.max(0, parseFloat(perimeter) || 0); // mm
+    const walls = Math.max(1, parseInt(wallCount) || 1); // count of perimeter shells
+    const area = Math.max(0, parseFloat(infillArea) || 0); // mm²
+    const dens = Math.max(0, Math.min(100, parseFloat(infillDensity) || 0)) / 100; // ratio
+    const layers = Math.max(1, parseInt(totalLayers) || 1); // count
+    const solidL = Math.max(0, Math.min(layers, parseInt(solidLayers) || 0)); // top & bottom solid layers
+    const sparseL = Math.max(0, layers - solidL);
     const nozzle = 0.4; // standard 0.4mm nozzle
 
-    // Time per layer: perimeter outline path + infill raster path (s)
-    const tPerim = v > 0 ? perim / v : 0;
-    const tInfill = v > 0 ? (area * dens) / (v * nozzle) : 0;
-    const tL = tPerim + tInfill; // seconds
+    // Single-layer toolpath duration:
+    // Outer/inner wall perimeters: perimeter * wallCount / v (s)
+    const tPerim = v > 0 ? (perim * walls) / v : 0;
+
+    // Sparse infill duration: area * density / (v * nozzle)
+    const tInfillSparse = v > 0 ? (area * dens) / (v * nozzle) : 0;
+
+    // Solid layer fill duration (100% density): area * 1.0 / (v * nozzle)
+    const tInfillSolid = v > 0 ? (area * 1.0) / (v * nozzle) : 0;
+
+    const tLayerSparse = tPerim + tInfillSparse;
+    const tLayerSolid = tPerim + tInfillSolid;
+
+    // Weighted average cycle per layer
+    const totalCycleRawSec = (tLayerSolid * solidL) + (tLayerSparse * sparseL);
+    const tL = layers > 0 ? totalCycleRawSec / layers : 0;
 
     // Total time with 25% acceleration & retraction overhead
-    const totalTimeSec = tL * layers * 1.25;
+    const totalTimeSec = totalCycleRawSec * 1.25;
     const tTMin = totalTimeSec / 60;
     const roundedMin = Math.round(tTMin);
     const hours = Math.floor(roundedMin / 60);
     const mins = roundedMin % 60;
 
-    // Total extruded volume in mm³
-    const vPerim = perim * nozzle * h * layers;
-    const vInfill = area * dens * h * layers;
-    const totalExtrusionMm3 = vPerim + vInfill;
+    // Extruded polymer volume in mm³:
+    // Walls volume across all layers
+    const vWalls = perim * walls * nozzle * h * layers;
+    // Solid top/bottom fill volume
+    const vSolidFill = area * 1.0 * h * solidL;
+    // Sparse infill volume
+    const vSparseFill = area * dens * h * sparseL;
+    const totalExtrusionMm3 = vWalls + vSolidFill + vSparseFill;
 
     // Converted to length of standard 1.75mm filament (cross-section = π * (1.75/2)² ≈ 2.405 mm²)
     const filamentLengthMeters = (totalExtrusionMm3 / 2.405) / 1000;
@@ -80,27 +98,33 @@ export default function PrintLayerTimeCalculatorClient() {
       filamentWeightGrams,
       volumeCm3,
       modelHeightMm: h * layers,
+      solidL,
+      sparseL,
     };
-  }, [inputs]);
+  }, [layerHeight, speed, perimeter, wallCount, infillArea, infillDensity, solidLayers, totalLayers]);
 
   const downloadCsv = () => {
     const rows = [
-      ['3D Print Layer Time & Filament Report', ''],
+      ['3D Print Layer Time & Kinematics Report', ''],
       ['Date', new Date().toLocaleDateString()],
       ['', ''],
       ['Input Parameters', ''],
-      ['Layer Height (mm)', inputs[0]],
-      ['Print Speed (mm/s)', inputs[1]],
-      ['Layer Perimeter (mm)', inputs[2]],
-      ['Infill Area (mm²)', inputs[3]],
-      ['Infill Density (%)', inputs[4]],
-      ['Total Layers', inputs[5]],
+      ['Layer Height (mm)', layerHeight],
+      ['Print Speed (mm/s)', speed],
+      ['Layer Perimeter (mm)', perimeter],
+      ['Wall Count (Shells)', wallCount],
+      ['Infill Area (mm²)', infillArea],
+      ['Infill Density (%)', infillDensity],
+      ['Solid Top/Bottom Layers', solidLayers],
+      ['Total Layers', totalLayers],
       ['', ''],
       ['Calculated Outputs', ''],
-      ['Time per Layer (seconds)', result.tL.toFixed(1)],
+      ['Average Cycle per Layer (seconds)', result.tL.toFixed(1)],
       ['Total Print Time (minutes)', result.tTMin.toFixed(1)],
       ['Formatted Time', `${result.hours}h ${result.mins}m`],
       ['Total Model Height (mm)', result.modelHeightMm.toFixed(1)],
+      ['Solid 100% Fill Layers', result.solidL],
+      ['Sparse Infill Layers', result.sparseL],
       ['1.75mm Filament Length (meters)', result.filamentLengthMeters.toFixed(2)],
       ['Approx PLA Weight (grams)', result.filamentWeightGrams.toFixed(1)],
       ['Extruded Material Volume (cm³)', result.volumeCm3.toFixed(2)],
@@ -126,7 +150,7 @@ export default function PrintLayerTimeCalculatorClient() {
             </div>
             <div>
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Slicer Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Layer & extrusion kinematics</p>
+              <p className="text-xs text-slate-500 font-medium">Wall count & solid cap kinematics</p>
             </div>
           </div>
 
@@ -152,71 +176,114 @@ export default function PrintLayerTimeCalculatorClient() {
           </div>
 
           <div className="space-y-4">
-            <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Layer Height (mm)</label>
-              <input
-                type="number"
-                step="0.02"
-                value={inputs[0]}
-                onChange={e => updateInput(0, e.target.value)}
-                className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-              />
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Layer Height (mm)</label>
+                <input
+                  type="number"
+                  step="0.02"
+                  value={layerHeight}
+                  onChange={e => { setLayerHeight(e.target.value); setActivePreset(null); }}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Print Speed (mm/s)</label>
+                <input
+                  type="number"
+                  step="5"
+                  value={speed}
+                  onChange={e => { setSpeed(e.target.value); setActivePreset(null); }}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
             </div>
-            <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Print Speed (mm/s)</label>
-              <input
-                type="number"
-                step="5"
-                value={inputs[1]}
-                onChange={e => updateInput(1, e.target.value)}
-                className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-              />
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Perimeter (mm)</label>
+                <input
+                  type="number"
+                  step="10"
+                  value={perimeter}
+                  onChange={e => setPerimeter(e.target.value)}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Wall Count</label>
+                <input
+                  type="number"
+                  step="1"
+                  min="1"
+                  value={wallCount}
+                  onChange={e => setWallCount(e.target.value)}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
             </div>
-            <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Layer Perimeter (mm)</label>
-              <input
-                type="number"
-                step="10"
-                value={inputs[2]}
-                onChange={e => updateInput(2, e.target.value)}
-                className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-              />
-            </div>
+
             <div>
               <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Infill Area (mm²)</label>
               <input
                 type="number"
                 step="500"
-                value={inputs[3]}
-                onChange={e => updateInput(3, e.target.value)}
+                value={infillArea}
+                onChange={e => setInfillArea(e.target.value)}
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
               />
             </div>
+
             <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Infill Density: {inputs[4]}%</label>
+              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Sparse Infill: {infillDensity}%</label>
               <input
                 type="range"
                 min="0"
                 max="100"
-                value={inputs[4]}
-                onChange={e => updateInput(4, e.target.value)}
+                value={infillDensity}
+                onChange={e => setInfillDensity(e.target.value)}
                 className="w-full accent-purple-600 cursor-pointer"
               />
             </div>
-            <div>
-              <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Total Layers</label>
-              <input
-                type="number"
-                step="10"
-                value={inputs[5]}
-                onChange={e => updateInput(5, e.target.value)}
-                className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-              />
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Solid Cap Layers</label>
+                <input
+                  type="number"
+                  step="1"
+                  min="0"
+                  value={solidLayers}
+                  onChange={e => setSolidLayers(e.target.value)}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-1">Total Layers</label>
+                <input
+                  type="number"
+                  step="10"
+                  min="1"
+                  value={totalLayers}
+                  onChange={e => setTotalLayers(e.target.value)}
+                  className="w-full h-11 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+                />
+              </div>
             </div>
           </div>
 
           <button
-            onClick={() => { setInputs(['0.20', '50', '500', '10000', '20', '200']); setActivePreset(1); }}
+            onClick={() => {
+              setLayerHeight('0.20');
+              setSpeed('50');
+              setPerimeter('500');
+              setWallCount('2');
+              setInfillArea('10000');
+              setInfillDensity('20');
+              setSolidLayers('4');
+              setTotalLayers('200');
+              setActivePreset(1);
+            }}
             className="w-full py-2.5 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
           >
             Reset Defaults
@@ -261,11 +328,11 @@ export default function PrintLayerTimeCalculatorClient() {
               <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-6 text-white shadow-xs">
                 <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-emerald-100 mb-1">
                   <Layers className="w-4 h-4" />
-                  <span>Cycle per Layer</span>
+                  <span>Average Cycle per Layer</span>
                 </div>
                 <div className="text-4xl font-black">{result.tL.toFixed(1)}<span className="text-xl ml-1 font-bold">s</span></div>
                 <div className="text-xs text-emerald-100/90 mt-2 font-medium">
-                  Part Height: {result.modelHeightMm.toFixed(1)} mm ({inputs[5]} layers @ {inputs[0]} mm)
+                  Part Height: {result.modelHeightMm.toFixed(1)} mm ({totalLayers} layers @ {layerHeight} mm)
                 </div>
               </div>
             </div>
@@ -287,7 +354,7 @@ export default function PrintLayerTimeCalculatorClient() {
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
                 <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Solid Extruded Volume</div>
                 <div className="text-2xl font-black text-slate-900">{result.volumeCm3.toFixed(2)} <span className="text-xs text-slate-500 font-bold">cm³</span></div>
-                <div className="text-[11px] text-slate-400 mt-1">Total polymer plastic deposited</div>
+                <div className="text-[11px] text-slate-400 mt-1">{result.solidL} solid + {result.sparseL} sparse infill layers</div>
               </div>
             </div>
 
@@ -295,7 +362,7 @@ export default function PrintLayerTimeCalculatorClient() {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-start gap-3">
               <Info className="w-4 h-4 text-purple-600 mt-0.5 shrink-0" />
               <div className="text-xs text-slate-600 leading-relaxed font-medium">
-                <strong className="text-slate-800">Governing Slicer Kinematics:</strong> Layer duration is derived from toolpath perimeter trajectory <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">t_perim = P / v</code> plus raster infill vector sweep <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">t_infill = (A × density) / (v × nozzle)</code>.
+                <strong className="text-slate-800">Governing Slicer Kinematics:</strong> Outer perimeter duration is derived from <code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">t_walls = (P × wallCount) / v</code>. Internal infill is segmented into solid cap layers (100% density) and sparse layers (<code className="bg-white px-1.5 py-0.5 rounded border border-slate-200">t_infill = (A × density) / (v × nozzle)</code>), matching modern slicer toolpath kinematics.
               </div>
             </div>
           </div>

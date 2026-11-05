@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import AnchorBoltCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Anchor Bolt Pull-out Strength Calculator",
-  description: "Calculate anchor bolt pull-out and shear capacity in concrete per ACI 318.",
+  title: "Anchor Bolt Pull-out & Shear Estimator",
+  description: "Preliminary estimation of single post-installed anchor bolt tensile breakout and steel shear capacity for conceptual sizing.",
   path: '/toolbox/anchor-bolt-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function AnchorBoltCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Anchor Bolt Pull-out Strength Calculator", path: '/toolbox/anchor-bolt-calculator' },
+    { name: "Anchor Bolt Pull-out & Shear Estimator", path: '/toolbox/anchor-bolt-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function AnchorBoltCalculatorPage() {
               Structural
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Anchor Bolt Pull-out Strength <span className="text-orange-400">Calculator</span>
+              Anchor Bolt Pull-out &amp; Shear <span className="text-orange-400">Estimator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate anchor bolt pull-out and shear capacity in concrete per ACI 318.
+              Preliminary estimation of single cast-in or post-installed anchor bolt breakout and steel shear capacity. Conceptual sizing only.
             </p>
           </div>
         </section>

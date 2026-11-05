@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import AngleUnitConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Angle Unit Converter",
-  description: "Convert between degrees, radians, gradians, arc minutes, and arc seconds.",
+  title: 'Angle Unit Converter (Degrees, Radians, MOA, Mils, Grads)',
+  description: 'High-precision angle unit conversion tool between degrees, radians, gradians, arcminutes, arcseconds, revolutions, and NATO mils with full trigonometric preview.',
   path: '/toolbox/angle-unit-converter',
 });
 
@@ -13,7 +13,7 @@ export default function AngleUnitConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Angle Unit Converter", path: '/toolbox/angle-unit-converter' },
+    { name: 'Angle Unit Converter', path: '/toolbox/angle-unit-converter' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function AngleUnitConverterPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Converter
+              Precision Converter
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Angle Unit <span className="text-purple-400">Converter</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Convert between degrees, radians, gradians, arc minutes, and arc seconds.
+              Convert between degrees, radians, milliradians, gradians, arcminutes, arcseconds, and NATO mils with full precision.
             </p>
           </div>
         </section>
