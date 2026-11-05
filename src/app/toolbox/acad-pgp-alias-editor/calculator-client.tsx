@@ -64,8 +64,10 @@ const DEFAULT_GSTARCAD_ALIASES: AliasItem[] = [
   { alias: 'TR', command: 'TRIM' },
   { alias: 'X', command: 'EXPLODE' },
   { alias: 'Z', command: 'ZOOM' },
-  { alias: 'GWS', command: 'GSTARWORKSPACES' },
-  { alias: 'SPLAT', command: 'SPLINE' }
+  { alias: 'SPL', command: 'SPLINE' },
+  { alias: 'REC', command: 'RECTANG' },
+  { alias: 'MI', command: 'MIRROR' },
+  { alias: 'MA', command: 'MATCHPROP' }
 ];
 
 export default function AcadPgpEditorClient() {

@@ -79,7 +79,7 @@
     "title": "3D Print Layer Time & Filament Sizing Calculator",
     "description": "Calculate layer toolpath duration, total print time, and 1.75mm filament mass using perimeter shells and solid/sparse infill kinematics.",
     "discipline": "CAD Interoperability, Additive Manufacturing & Rapid Prototyping",
-    "standards": "ISO/ASTM 52900 (Additive manufacturing — General principles), ISO/ASTM 52920, RepRap Standard Toolpath Slicing Kinematics",
+    "standards": "ISO/ASTM 52900 (Additive manufacturing — General principles), ISO/ASTM 52920",
     "cadContext": "Validate model surface watertightness and manifold geometry before slicing. Export STL with chordal sagitta < 0.05mm to prevent polygon facet artifacts on cylindrical bearing seats.",
     "formula": "t_layer = (perimeter · wallCount)/v + (infillArea · density)/(v · nozzle) • t_total = (t_solid · n_solid + t_sparse · n_sparse) · (1 + overhead)",
     "inputs": [
