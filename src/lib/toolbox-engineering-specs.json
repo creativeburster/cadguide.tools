@@ -683,23 +683,59 @@
   },
   "autocad-vs-gstarcad-shortcuts": {
     "title": "AutoCAD vs. GstarCAD Command Alias Diff Table",
-    "description": "Detailed command mapping and alias comparison diff table between AutoCAD and GstarCAD Lite/Pro versions. Fast migration search.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD vs. GstarCAD Command Alias Diff Table",
-    "inputs": [],
-    "outputs": []
+    "description": "Side-by-side command mapping and PGP alias diff table between AutoCAD and GstarCAD Lite/Pro. Fast migration reference.",
+    "discipline": "CAD Interoperability & Drafting Systems",
+    "standards": "Autodesk AutoCAD acad.pgp Reference Guide, GstarCAD Command Specification (gcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
+    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (FCMP, AREASUM, AUTOSORT).",
+    "formula": "Alias mapping: Command_Alt = Map(Alias) vs. Command_ACAD = Map(Alias)",
+    "inputs": [
+      {
+        "label": "Command Query / Filter",
+        "val": "All 25 Verified PGP Aliases"
+      },
+      {
+        "label": "CAD Engine Pair",
+        "val": "AutoCAD 2024 vs. GstarCAD 2024 Pro"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Identical PGP Commands",
+        "val": "18 Core Drawing Aliases (L, C, REC, PL, M, CO, RO, TR, EX, F, MI, O, SPL, DI, E, Z, H, MA)"
+      },
+      {
+        "label": "Proprietary Enhancements",
+        "val": "7 GstarCAD Commands (FCMP, AREASUM, AUTOSORT, MAGNIFIER, DWGCONVERT, BCOUNT, FREEPOLY)"
+      }
+    ]
   },
   "autocad-vs-zwcad-shortcuts": {
-    "title": "AutoCAD vs. ZWCAD Command alias difference table",
+    "title": "AutoCAD vs. ZWCAD Command Alias Difference Table",
     "description": "Compare command alias mappings between AutoCAD and ZWCAD. Verify smart command exceptions for seamless transitions.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD vs. ZWCAD Command alias difference table",
-    "inputs": [],
-    "outputs": []
+    "discipline": "CAD Interoperability & Drafting Systems",
+    "standards": "Autodesk AutoCAD acad.pgp Reference Guide, ZWCAD Official Command & PGP System Specification (zwcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
+    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect, FileCompare, SmartVoice, SmartPlot, Barcode/QRCode).",
+    "formula": "Alias mapping: Command_ZWCAD = Map(Alias) vs. Command_ACAD = Map(Alias)",
+    "inputs": [
+      {
+        "label": "Command Query / Filter",
+        "val": "All 25 Verified PGP Aliases"
+      },
+      {
+        "label": "CAD Engine Pair",
+        "val": "AutoCAD 2024 vs. ZWCAD 2025 Pro"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Identical PGP Commands",
+        "val": "18 Core Drawing Aliases (L, C, REC, PL, M, CO, RO, TR, EX, F, MI, O, SPL, DI, E, Z, H, MA)"
+      },
+      {
+        "label": "Proprietary Enhancements",
+        "val": "7 ZWCAD Smart Commands (SS->SMARTSELECT, FC->FILECOMPARE, SMARTVOICE, SMARTPLOT, BARCODE, QRCODE, DATASMART)"
+      }
+    ]
   },
   "autolisp-function-reference": {
     "title": "AutoLISP Function Quick Reference",
@@ -770,125 +806,174 @@
     ]
   },
   "battery-capacity-calculator": {
-    "title": "Battery Capacity Calculator",
-    "description": "Calculate battery Ah capacity from load power, backup time, and system voltage.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Ah = P*t/(V*DoD*eff)",
+    "title": "Battery Capacity & Energy Storage Calculator",
+    "description": "Calculate battery Ah capacity, gross energy storage, and continuous DC discharge current from load power, backup autonomy time, and system DC voltage.",
+    "discipline": "Electrical Power Systems, NEC Compliance & Energy Storage",
+    "standards": "IEEE Std 485 (Sizing Lead-Acid Batteries for Stationary Applications), IEEE Std 1115, IEC 60896 / IEC 62619, NFPA 70 (NEC Article 480 & Article 706)",
+    "cadContext": "Sizes stationary battery banks and uninterruptible power supply (UPS) systems in electrical schematic drawings and panel schedules, accounting for depth of discharge and inverter conversion efficiency.",
+    "formula": "E_load = P · t • C_Ah = E_load / (V_sys · DoD · η) • E_stored = C_Ah · V_sys • I_dc = P / (V_sys · η)",
     "inputs": [
       {
-        "label": "Load Power (W)",
-        "val": "500"
+        "label": "Load Power (P)",
+        "val": "500 W"
       },
       {
-        "label": "Backup Time (h)",
-        "val": "4"
+        "label": "Backup Autonomy Time (t)",
+        "val": "4 h"
       },
       {
-        "label": "System Voltage (V)",
-        "val": "48"
+        "label": "System DC Voltage (V)",
+        "val": "48 V"
       },
       {
-        "label": "DoD",
-        "val": "0.8"
+        "label": "Depth of Discharge (DoD)",
+        "val": "0.80"
       },
       {
-        "label": "Inverter Eff",
-        "val": "0.9"
+        "label": "Inverter / System Efficiency (η)",
+        "val": "0.90"
+      },
+      {
+        "label": "Design Margin (IEEE 485)",
+        "val": "1.10"
       }
     ],
     "outputs": [
       {
-        "label": "Battery Capacity",
-        "val": "57.870 Ah"
+        "label": "Rated Battery Capacity",
+        "val": "57.87 Ah"
       },
       {
-        "label": "Energy Needed",
-        "val": "2000.00 Wh"
+        "label": "Load Energy Needed",
+        "val": "2000 Wh (2.00 kWh)"
+      },
+      {
+        "label": "Recommended Capacity (with Margin)",
+        "val": "63.66 Ah"
+      },
+      {
+        "label": "Total Gross Battery Energy",
+        "val": "2777.8 Wh (2.78 kWh)"
+      },
+      {
+        "label": "Continuous DC Discharge Current",
+        "val": "11.57 A"
       }
     ]
   },
   "beam-deflection-structural-calculator": {
     "title": "Steel Beam Deflection & Stress Calculator",
-    "description": "Calculate structural H-beam deflection, bending stress, moment of inertia, and section modulus under point and distributed loads for AISC standard structural design.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "Standardized parametric evaluation for Steel Beam Deflection & Stress Calculator",
+    "description": "Calculate structural beam deflection, maximum bending moment, bending stress, moment of inertia (Ix), and section modulus (Wx) under concentrated and distributed loads.",
+    "discipline": "Structural Engineering, Solid Mechanics & AISC Design",
+    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1), ASTM A36 / A992, ASCE 7-22 Chapter L Serviceability Deflection Criteria (L/240 & L/360)",
+    "cadContext": "Analyzes structural beam profiles in mechanical frame models and structural BIM layouts, comparing analytical closed-form Euler-Bernoulli deflections against building code serviceability thresholds.",
+    "formula": "M_max = (P · L) / 4 • δ_max = (P · L³) / (48 · E · I_x) • σ_max = M_max / W_x • SF = F_y / σ_max",
     "inputs": [
       {
-        "label": "1. Support & Load Arrangement",
-        "val": "Simply Supported + Center Point Load (Simply supported beam + central concentrated force)"
+        "label": "Support & Load Setup",
+        "val": "Simply Supported + Center Point Load (P)"
       },
       {
-        "label": "Flange Width (B) 100 mm",
-        "val": "100"
+        "label": "Profile Geometry",
+        "val": "I-Beam (H=200mm, B=100mm, tf=8mm, tw=6mm)"
       },
       {
-        "label": "Flange Thickness (tf) 8 mm",
-        "val": "8"
+        "label": "Beam Span Length (L)",
+        "val": "4.0 m"
       },
       {
-        "label": "Web Thickness (tw) 6 mm",
-        "val": "6"
+        "label": "Applied Force (P)",
+        "val": "10.0 kN"
       },
       {
-        "label": "Beam Span Length (L) 4 m",
-        "val": "4"
-      },
-      {
-        "label": "Applied Point Force (P) 10 kN",
-        "val": "10"
-      }
-    ],
-    "outputs": []
-  },
-  "bearing-capacity-calculator": {
-    "title": "Soil Bearing Capacity Calculator Terzaghi",
-    "description": "Calculate ultimate bearing capacity of shallow foundations.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "qu=c*Nc+g*Df*Nq+0.5*g*B*Ng",
-    "inputs": [
-      {
-        "label": "Cohesion c (kPa)",
-        "val": "20"
-      },
-      {
-        "label": "Soil Density (kN/m3)",
-        "val": "18"
-      },
-      {
-        "label": "Depth Df (m)",
-        "val": "1"
-      },
-      {
-        "label": "Width B (m)",
-        "val": "2"
-      },
-      {
-        "label": "Nc",
-        "val": "30"
-      },
-      {
-        "label": "Nq",
-        "val": "18"
-      },
-      {
-        "label": "Ng",
-        "val": "15"
+        "label": "Material Grade",
+        "val": "Structural Steel A36 (E=200 GPa, Fy=250 MPa)"
       }
     ],
     "outputs": [
       {
-        "label": "Ultimate Capacity",
+        "label": "Moment of Inertia (Ix)",
+        "val": "1.7869×10⁷ mm⁴"
+      },
+      {
+        "label": "Section Modulus (Wx)",
+        "val": "1.7869×10⁵ mm³"
+      },
+      {
+        "label": "Max Bending Moment",
+        "val": "10.000 kN·m"
+      },
+      {
+        "label": "Max Deflection (δmax)",
+        "val": "3.73 mm"
+      },
+      {
+        "label": "Max Bending Stress (σmax)",
+        "val": "56.0 MPa"
+      },
+      {
+        "label": "Safety Factor (SF)",
+        "val": "4.47"
+      },
+      {
+        "label": "Serviceability Limit (L/240)",
+        "val": "16.67 mm (SAFE)"
+      }
+    ]
+  },
+  "bearing-capacity-calculator": {
+    "title": "Soil Bearing Capacity Calculator (Terzaghi Method)",
+    "description": "Calculate ultimate and allowable bearing capacity of shallow strip, square, and circular foundations using the classical Terzaghi trilinear equation.",
+    "discipline": "Geotechnical Engineering & Foundation Design",
+    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), ASTM D1586, Terzaghi (1943) Theoretical Soil Mechanics, Meyerhof (1963) Foundation Capacity Principles",
+    "cadContext": "Determines safe contact pressures for shallow spread and strip footings in civil site grading plans, foundation layouts, and structural CAD packages before sizing foundation dimensions.",
+    "formula": "q_u = s_c · c · N_c + s_q · γ · D_f · N_q + 0.5 · s_γ · γ · B · N_γ • q_a = q_u / FS",
+    "inputs": [
+      {
+        "label": "Foundation Shape",
+        "val": "Strip Footing (sc=1.0, sq=1.0, sg=1.0)"
+      },
+      {
+        "label": "Soil Cohesion (c)",
+        "val": "20 kPa"
+      },
+      {
+        "label": "Soil Unit Weight (γ)",
+        "val": "18 kN/m³"
+      },
+      {
+        "label": "Foundation Depth (Df)",
+        "val": "1.0 m"
+      },
+      {
+        "label": "Foundation Width (B)",
+        "val": "2.0 m"
+      },
+      {
+        "label": "Bearing Capacity Factors",
+        "val": "Nc=30, Nq=18, Nγ=15"
+      },
+      {
+        "label": "Factor of Safety (FS)",
+        "val": "3.0"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Ultimate Bearing Capacity (qu)",
         "val": "1194.00 kPa"
       },
       {
-        "label": "Allowable (FS=3)",
+        "label": "Allowable Bearing Capacity (qa)",
         "val": "398.00 kPa"
+      },
+      {
+        "label": "Net Allowable Capacity (qnet)",
+        "val": "392.00 kPa"
+      },
+      {
+        "label": "Total Allowable Line Force (Qa)",
+        "val": "796.00 kN/m"
       }
     ]
   },
