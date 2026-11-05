@@ -1,43 +1,47 @@
 {
   "3d-print-cost-time-estimator": {
     "title": "3D Print Cost & Time Estimator",
-    "description": "Estimate 3D printing time and filament cost from model volume, infill percentage, layer height, print speed, and material price.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "V_filament = V_model × (Infill% + ShellFactor) • Mass = V_filament × ρ • Cost = Mass × ($/kg) + Power × Time × ($/kWh)",
+    "description": "Estimate 3D printing time, bead path length, 1.75mm spool consumption, and filament cost from model volume, infill percentage, layer height, and print speed.",
+    "discipline": "Additive Manufacturing & Rapid Prototyping",
+    "standards": "ISO/ASTM 52900 (Additive Manufacturing - General Principles), ISO/ASTM 52920 (Additive Manufacturing - Requirements for Industrial Sites)",
+    "cadContext": "Estimates fused deposition modeling (FDM/FFF) filament material consumption and manufacturing run times from CAD solid volumes before G-code compilation.",
+    "formula": "V_print = V_model × [f_shell + (1 - f_shell) × Infill%] • L_fil = V_print / [π × (d_fil / 2)²] • L_bead = V_print / (h_layer × w_nozzle) • Cost = M_fil × Price/kg + P_printer × t × $/kWh",
     "inputs": [
       {
         "label": "Material",
-        "val": "PLA"
+        "val": "PLA (1.24 g/cm³, $20/kg)"
       },
       {
-        "label": "Model Volume (cm³)",
-        "val": "20"
+        "label": "Model Volume",
+        "val": "20 cm³"
       },
       {
-        "label": "Infill Density: 20 %",
-        "val": "20"
+        "label": "Infill Density",
+        "val": "20 %"
       },
       {
         "label": "Shell Layers",
         "val": "3"
       },
       {
-        "label": "Layer Height (mm)",
-        "val": "0.2"
+        "label": "Layer Height",
+        "val": "0.2 mm"
       },
       {
-        "label": "Print Speed (mm/s)",
-        "val": "60"
+        "label": "Print Speed",
+        "val": "60 mm/s"
       },
       {
-        "label": "Nozzle (mm)",
-        "val": "0.4"
+        "label": "Nozzle Width",
+        "val": "0.4 mm"
       },
       {
-        "label": "Printer Power (W)",
-        "val": "120"
+        "label": "Printer Power",
+        "val": "120 W"
+      },
+      {
+        "label": "Electricity Cost",
+        "val": "$0.15 / kWh"
       }
     ],
     "outputs": [
@@ -47,14 +51,18 @@
       },
       {
         "label": "Total Cost",
-        "val": "$ 0.23"
+        "val": "$0.23"
       },
       {
         "label": "Filament Weight",
         "val": "10.9 g"
       },
       {
-        "label": "Extrusion Length",
+        "label": "1.75mm Spool Length",
+        "val": "3.66 m"
+      },
+      {
+        "label": "Bead Path Length",
         "val": "110.0 m"
       },
       {
@@ -62,7 +70,7 @@
         "val": "$0.22"
       },
       {
-        "label": "Electricity",
+        "label": "Electricity Cost",
         "val": "$0.01"
       }
     ]

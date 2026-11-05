@@ -25,16 +25,17 @@ const PRINTER_PRESETS = [
 ];
 
 export default function ChordalDeviationClient() {
-  const [radius, setRadius] = useState(5.0); // mm
-  const [angularStep, setAngularStep] = useState(10); // degrees
+  const [radius, setRadius] = useState('5.0'); // mm
+  const [angularStep, setAngularStep] = useState('10'); // degrees
   const [selectedPreset, setSelectedPreset] = useState(0);
-  const [printerTolerance, setPrinterTolerance] = useState(0.3); // mm
+  const [printerTolerance, setPrinterTolerance] = useState('0.3'); // mm
   const [copied, setCopied] = useState(false);
 
   // Derived calculations
   const calculations = useMemo(() => {
-    const R = Math.max(0.1, radius);
-    const theta = Math.max(1, Math.min(90, angularStep));
+    const R = Math.max(0.1, parseFloat(radius) || 5.0);
+    const parsedTheta = parseFloat(angularStep) || 10;
+    const theta = Math.max(1, Math.min(90, parsedTheta));
     const thetaRad = theta * DEG_TO_RAD;
 
     // Number of polygon segments
@@ -57,7 +58,7 @@ export default function ChordalDeviationClient() {
     // cos(π/N_min) ≥ 1 - tolerance/R
     // π/N_min ≤ acos(1 - tolerance/R)
     // N_min ≥ π / acos(1 - tolerance/R)
-    const tol = printerTolerance;
+    const tol = Math.max(0.001, parseFloat(printerTolerance) || 0.3);
     let minSegments = N;
     if (tol > 0 && tol < R) {
       minSegments = Math.ceil(Math.PI / Math.acos(1 - tol / R));
@@ -84,7 +85,7 @@ export default function ChordalDeviationClient() {
 
   const handlePresetChange = (index: number) => {
     setSelectedPreset(index);
-    setPrinterTolerance(PRINTER_PRESETS[index].tolerance);
+    setPrinterTolerance(PRINTER_PRESETS[index].tolerance.toString());
   };
 
   const handleCopySummary = () => {
@@ -314,7 +315,7 @@ export default function ChordalDeviationClient() {
                 max="100"
                 step="0.5"
                 value={radius}
-                onChange={(e) => setRadius(parseFloat(e.target.value))}
+                onChange={(e) => setRadius(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
               <div className="flex gap-2">
@@ -325,16 +326,16 @@ export default function ChordalDeviationClient() {
                   step="0.1"
                   data-testid="input-radius"
                   value={radius}
-                  onChange={(e) => setRadius(parseFloat(e.target.value) || 0.1)}
+                  onChange={(e) => setRadius(e.target.value)}
                   className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
                 <div className="flex gap-1">
                   {[2, 5, 10, 25, 50].map((v) => (
                     <button
                       key={v}
-                      onClick={() => setRadius(v)}
+                      onClick={() => setRadius(v.toString())}
                       className={`px-2.5 py-2 rounded-lg text-[9px] font-black border transition-all ${
-                        radius === v
+                        parseFloat(radius) === v
                           ? 'bg-blue-600 text-white border-blue-600'
                           : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
                       }`}
@@ -359,7 +360,7 @@ export default function ChordalDeviationClient() {
                 step="1"
                 data-testid="input-angular-step"
                 value={angularStep}
-                onChange={(e) => setAngularStep(parseInt(e.target.value))}
+                onChange={(e) => setAngularStep(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
               <div className="flex justify-between text-[8px] text-slate-500 font-bold">
@@ -403,7 +404,7 @@ export default function ChordalDeviationClient() {
                 max="1.0"
                 step="0.01"
                 value={printerTolerance}
-                onChange={(e) => { setPrinterTolerance(parseFloat(e.target.value)); setSelectedPreset(5); }}
+                onChange={(e) => { setPrinterTolerance(e.target.value); setSelectedPreset(5); }}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
             </div>

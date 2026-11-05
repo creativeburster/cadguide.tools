@@ -591,7 +591,7 @@ export default function AcadPgpEditorClient() {
           </div>
 
           {/* Terminal log output area */}
-          <div className="flex-1 overflow-y-auto max-h-[140px] font-mono text-sm text-emerald-400/90 py-3 flex flex-col gap-1.5 scrollbar-thin">
+          <div data-testid="terminal-output" className="flex-1 overflow-y-auto max-h-[140px] font-mono text-sm text-emerald-400/90 py-3 flex flex-col gap-1.5 scrollbar-thin">
             {terminalHistory.map((log, index) => (
               <div key={index} className="leading-relaxed whitespace-pre-wrap">
                 {log}
