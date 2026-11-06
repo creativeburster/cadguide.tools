@@ -150,8 +150,8 @@ flowchart LR
 | 1–2 | 3d-print-cost-time-estimator、3d-printing-chordal-deviation、3d-print-layer-time-calculator、acad-pgp-alias-editor、acoustic-decibel-calculator、aeration-tank-calculator、air-duct-pressure-calculator、anchor-bolt-calculator、angle-unit-converter、arc-flash-calculator | c894ad60、622b8ba9 |
 | 3 | ada-ramp-slope-calculator（前两批漏掉，本批补上）、area-unit-converter、autocad-fatal-error-wizard、autocad-registry-clean-generator、ball-screw-calculator | ed01bfdd、e392fce1 |
 | 4 | autocad-vs-gstarcad-shortcuts、autocad-vs-zwcad-shortcuts、battery-capacity-calculator、beam-deflection-structural-calculator、bearing-capacity-calculator | bb9fb435～51496117（已 push，2026-11-05） |
-| 5 | autolisp-function-reference、aws-welding-symbol-reference、bearing-life-calculator、bearing-static-load-calculator、belt-drive-length-calculator | 33f2685a～b91fdc35（已通过复核，2026-11-06） |
-| 6 | belt-tension-calculator、bend-allowance-calculator、bending-allowance-table-calculator、bending-force-calculator、bernoulli-equation-calculator | 5372b783～8999bcbc（待复核，2026-11-06） |
+| 5 | autolisp-function-reference、aws-welding-symbol-reference、bearing-life-calculator、bearing-static-load-calculator、belt-drive-length-calculator | 33f2685a～b91fdc35（已通过复核，已 push，2026-11-06） |
+| 6 | belt-tension-calculator、bend-allowance-calculator、bending-allowance-table-calculator、bending-force-calculator、bernoulli-equation-calculator | 5372b783～8999bcbc（已通过复核，已 push，2026-11-06） |
 
 ---
 
