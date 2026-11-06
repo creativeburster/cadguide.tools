@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * CADGuide.tools Toolbox - Master E2E Verification Suite for Batch 5 (Tools 21 to 25)
  *
@@ -72,7 +73,7 @@ async function runMasterSuite() {
 
       // defun
       await searchInput.fill('defun');
-      await p.waitForTimeout(150);
+      await p.locator('text=Define Function').first().waitFor({ state: 'visible', timeout: 3000 });
       let pageText = await p.innerText('body');
       if (!pageText.includes('defun') || !pageText.includes('Define Function')) {
         throw new Error('defun function missing or not found in search');
@@ -80,7 +81,7 @@ async function runMasterSuite() {
 
       // entget
       await searchInput.fill('entget');
-      await p.waitForTimeout(150);
+      await p.locator('text=DXF group codes').first().waitFor({ state: 'visible', timeout: 3000 });
       pageText = await p.innerText('body');
       if (!pageText.includes('(entget ename)') || !pageText.includes('DXF group codes')) {
         throw new Error('entget function missing or not found in search');
@@ -88,7 +89,7 @@ async function runMasterSuite() {
 
       // ssget
       await searchInput.fill('ssget');
-      await p.waitForTimeout(150);
+      await p.locator('text=Selection Set').first().waitFor({ state: 'visible', timeout: 3000 });
       pageText = await p.innerText('body');
       if (!pageText.includes('(ssget mode pt1 pt2)') || !pageText.includes('Selection Set')) {
         throw new Error('ssget function missing or not found in search');
@@ -96,7 +97,7 @@ async function runMasterSuite() {
 
       // polar
       await searchInput.fill('polar');
-      await p.waitForTimeout(150);
+      await p.locator('text=Polar Point').first().waitFor({ state: 'visible', timeout: 3000 });
       pageText = await p.innerText('body');
       if (!pageText.includes('(polar pt ang dist)') || !pageText.includes('Polar Point')) {
         throw new Error('polar function missing or not found in search');
@@ -107,7 +108,8 @@ async function runMasterSuite() {
       const mathBtn = p.locator('button:has-text("Math & Logic")').first();
       await mathBtn.waitFor({ state: 'visible', timeout: 5000 });
       await mathBtn.click();
-      await p.waitForTimeout(200);
+      await p.locator('text=Addition').first().waitFor({ state: 'visible', timeout: 3000 });
+      await p.locator('text=Increment').first().waitFor({ state: 'visible', timeout: 3000 });
       const mathText = await p.innerText('body');
       if (!mathText.includes('Addition') || !mathText.includes('Increment')) {
         throw new Error('Math category filter failed to show math functions');
@@ -121,67 +123,118 @@ async function runMasterSuite() {
       await p.goto(`${BASE_URL}/toolbox/aws-welding-symbol-reference`, { waitUntil: 'domcontentloaded' });
       await p.waitForSelector('[data-testid="shortcut-search-input"]');
 
+      // 1. Strict Negative Assertions: unverified / duplicate / non-AWS entries must NOT appear on page
+      const bodyText = await p.innerText('body');
+      if (bodyText.includes('Spot Weld')) {
+        throw new Error('Unverified "Spot Weld" still found on page');
+      }
+      if (bodyText.includes('Edge Weld')) {
+        throw new Error('Unverified "Edge Weld" still found on page');
+      }
+      if (bodyText.includes('Unspecified Finish')) {
+        throw new Error('Unverified "Unspecified Finish" still found on page');
+      }
+
+      // Switch to Table view for strict row-scoped assertions
+      await p.click('button:has-text("Table")');
+      await p.waitForSelector('tbody tr');
+
       const searchInput = p.locator('[data-testid="shortcut-search-input"]');
 
-      // 1. Search authentic AWS A2.4 symbols: Fillet Weld
+      // 2. Search authentic AWS A2.4 symbols: Fillet Weld
       await searchInput.fill('Fillet Weld');
-      await p.waitForTimeout(150);
-      let pageText = await p.innerText('body');
-      if (!pageText.includes('Fillet Weld') || !pageText.includes('Triangular cross-section')) {
-        throw new Error('Fillet Weld missing from welding symbol reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Fillet Weld') && r.textContent.includes('⊿'));
+      }, { timeout: 3000 });
+      const filletRow = await p.locator('tbody tr').first().innerText();
+      if (!filletRow.includes('Fillet Weld') || !filletRow.includes('⊿')) {
+        throw new Error('Fillet Weld missing from search result rows');
       }
 
-      // 2. Search Groove types including corrected Flare-V Groove
+      // 3. Search Groove types including corrected Flare-V Groove
       await searchInput.fill('Flare-V');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Flare-V Groove') || !pageText.includes(')(')) {
-        throw new Error('Corrected Flare-V Groove with ) ( symbol missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Flare-V Groove') && r.textContent.includes(')('));
+      }, { timeout: 3000 });
+      const flareRow = await p.locator('tbody tr').first().innerText();
+      if (!flareRow.includes('Flare-V Groove') || !flareRow.includes(')(')) {
+        throw new Error('Flare-V Groove missing from search result rows');
       }
 
-      // 3. Search Basic weld types: Seam Weld, Plug / Slot, Stud Weld
+      // 4. Search Basic weld types: Seam Weld, Plug / Slot, Stud Weld
       await searchInput.fill('Seam Weld');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Seam Weld') || !pageText.includes('◯ with =')) {
-        throw new Error('Corrected Seam Weld with circle and parallel lines missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Seam Weld') && r.textContent.includes('◯ with ='));
+      }, { timeout: 3000 });
+      const seamRow = await p.locator('tbody tr').first().innerText();
+      if (!seamRow.includes('Seam Weld') || !seamRow.includes('◯ with =')) {
+        throw new Error('Seam Weld missing from search result rows');
       }
 
       await searchInput.fill('Plug / Slot');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Plug / Slot Weld') || !pageText.includes('[ ]')) {
-        throw new Error('Plug / Slot Weld with [ ] symbol missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Plug / Slot Weld') && r.textContent.includes('[ ]'));
+      }, { timeout: 3000 });
+      const plugRow = await p.locator('tbody tr').first().innerText();
+      if (!plugRow.includes('Plug / Slot Weld') || !plugRow.includes('[ ]')) {
+        throw new Error('Plug / Slot Weld missing from search result rows');
       }
 
       await searchInput.fill('Stud Weld');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Stud Weld') || !pageText.includes('⨂')) {
-        throw new Error('Stud Weld with circle-X symbol missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Stud Weld') && r.textContent.includes('⨂'));
+      }, { timeout: 3000 });
+      const studRow = await p.locator('tbody tr').first().innerText();
+      if (!studRow.includes('Stud Weld') || !studRow.includes('⨂')) {
+        throw new Error('Stud Weld missing from search result rows');
       }
 
-      // 4. Search Supplementary symbols: Melt-Through (●), Field Weld (⚑), Weld All Around (○)
+      // 5. Search Supplementary symbols: Melt-Through (●), Field Weld (⚑), Weld All Around (○)
+      // Assertions scoped strictly to the table row, not body
       await searchInput.fill('Melt-Through');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Melt-Through') || !pageText.includes('●')) {
-        throw new Error('Melt-Through with solid semicircle ● symbol missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Melt-Through') && r.textContent.includes('●'));
+      }, { timeout: 3000 });
+      const meltRow = await p.locator('tbody tr').first().innerText();
+      if (!meltRow.includes('Melt-Through') || !meltRow.includes('●')) {
+        throw new Error('Melt-Through row missing ● symbol');
       }
 
       await searchInput.fill('Field Weld');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Field Weld') || !pageText.includes('⚑')) {
-        throw new Error('Field Weld with triangular flag ⚑ symbol missing from reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Field Weld') && r.textContent.includes('⚑'));
+      }, { timeout: 3000 });
+      const fieldRow = await p.locator('tbody tr').first().innerText();
+      if (!fieldRow.includes('Field Weld') || !fieldRow.includes('⚑')) {
+        throw new Error('Field Weld row missing ⚑ symbol');
       }
 
-      // 5. Search Process & Tail: SMAW
+      await searchInput.fill('Weld All Around');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Weld All Around') && r.textContent.includes('○'));
+      }, { timeout: 3000 });
+      const allAroundRow = await p.locator('tbody tr').first().innerText();
+      if (!allAroundRow.includes('Weld All Around') || !allAroundRow.includes('○')) {
+        throw new Error('Weld All Around row missing ○ symbol');
+      }
+
+      // 6. Search Process & Tail: SMAW
       await searchInput.fill('SMAW');
-      await p.waitForTimeout(150);
-      pageText = await p.innerText('body');
-      if (!pageText.includes('Shielded Metal Arc Welding') || !pageText.includes('Stick welding')) {
-        throw new Error('SMAW missing from welding process reference');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('Shielded Metal Arc Welding') && r.textContent.includes('Stick welding'));
+      }, { timeout: 3000 });
+      const smawRow = await p.locator('tbody tr').first().innerText();
+      if (!smawRow.includes('Shielded Metal Arc Welding') || !smawRow.includes('Stick welding')) {
+        throw new Error('SMAW missing from search result rows');
       }
     });
 
