@@ -60,7 +60,7 @@ export default function BeltTensionCalculatorClient() {
 
   const handleExportCsv = () => {
     const csvContent = [
-      '# Belt Tension Calculation (Euler-Eytelwein & ISO 4183 / Bando V-Belt Design Standard)',
+      '# Belt Tension Calculation (Euler-Eytelwein & Bando / Gates V-Belt Design Standard)',
       '# Verified by CADGuide.tools Toolbox',
       'Parameter,Value,Unit',
       `Transmitted Power,${powerStr},kW`,
@@ -86,7 +86,7 @@ export default function BeltTensionCalculatorClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       {/* Engineering Presets */}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Drive Presets:</span>
@@ -116,9 +116,9 @@ export default function BeltTensionCalculatorClient() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div data-testid="calculator-panel" className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Input Panel */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div data-testid="calculator-inputs" className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
@@ -203,7 +203,7 @@ export default function BeltTensionCalculatorClient() {
 
         {/* Results Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+          <div data-testid="calculator-results" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
                 <Zap className="w-5 h-5" />
@@ -266,14 +266,14 @@ export default function BeltTensionCalculatorClient() {
                   </span>
                   <span className="text-sm font-semibold text-slate-400 ml-1">N</span>
                 </div>
-                <div className="text-xs text-slate-500 mt-0.5">Fb ≈ 2·T0·sin(θ/2)</div>
+                <div className="text-xs text-slate-500 mt-0.5">Fb ≈ 2·T0·sin(θ/2) (Symmetric static approximation; vector sum difference &lt;0.25%)</div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-1">
               <div className="flex items-center gap-2 text-sm text-slate-600 font-bold">
                 <Info className="w-4 h-4 text-blue-500 shrink-0" />
-                Euler-Eytelwein Belt Friction Law (ISO 4183 / Bando V-Belt Design Manual)
+                Euler-Eytelwein Belt Friction Law (Bando / Gates V-Belt Design Manual)
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-6">
                 Transmitted force ratio: T1 / T2 = e^(u·θ). Minimum installation tension prevents slip while avoiding excessive bearing reaction forces on drive shafts.

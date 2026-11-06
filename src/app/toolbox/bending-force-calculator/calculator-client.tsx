@@ -55,7 +55,7 @@ export default function BendingForceCalculatorClient() {
 
   const handleExportCsv = () => {
     const csvContent = [
-      '# Press Brake Air Bending Force & Tonnage (Amada / Trumpf Standard)',
+      '# Press Brake Air Bending Force & Tonnage (Amada / Trumpf Industry Practice)',
       '# Verified by CADGuide.tools Toolbox',
       'Parameter,Value,Unit',
       `Material Strength (sigma),${strengthStr},MPa`,
@@ -79,7 +79,7 @@ export default function BendingForceCalculatorClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       {/* Tooling Presets */}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Press Presets:</span>
@@ -109,9 +109,9 @@ export default function BendingForceCalculatorClient() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div data-testid="calculator-panel" className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Input Parameters Panel */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div data-testid="calculator-inputs" className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
@@ -198,7 +198,7 @@ export default function BendingForceCalculatorClient() {
 
         {/* Results Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+          <div data-testid="calculator-results" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
                 <Zap className="w-5 h-5" />
@@ -244,7 +244,7 @@ export default function BendingForceCalculatorClient() {
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-1">
               <div className="flex items-center gap-2 text-sm text-slate-700 font-bold">
                 <Info className="w-4 h-4 text-purple-500 shrink-0" />
-                Air Bending Mechanics (DIN 6935 / Amada Tooling Standards)
+                Air Bending Mechanics (Amada / Trumpf Industry Practice)
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-6">
                 The factor 1.42 represents the standard air-bending coefficient for 90° V-dies where V = 6t–10t. For bottoming or coining operations, required tonnage may increase 3× to 5×.

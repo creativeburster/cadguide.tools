@@ -142,11 +142,17 @@ async function runBatch6Tests() {
       ]);
       const csvPath = await download.path();
       const csvText = fs.readFileSync(csvPath, 'utf8');
-      if (!csvText.includes('Euler-Eytelwein') || !csvText.includes('ISO 4183')) {
+      if (!csvText.includes('Euler-Eytelwein') || !csvText.includes('Bando / Gates')) {
         throw new Error('Belt Tension CSV missing standard header');
       }
       if (!csvText.includes('500.00') || !csvText.includes('879.83')) {
         throw new Error('Belt Tension CSV missing expected numerical values');
+      }
+
+      // 6. Negative Assertion: Outdated or fabricated standards must NOT appear in calculator client core
+      const clientText = (await p.innerText('[data-testid="calculator-inputs"]')) + ' ' + (await p.innerText('[data-testid="calculator-results"]'));
+      if (clientText.includes('ISO 4183 / RMA IP-20') || clientText.includes('DIN 2211')) {
+        throw new Error('Belt Tension client contains outdated pulley dimension standard numbers');
       }
     });
 
@@ -191,6 +197,25 @@ async function runBatch6Tests() {
       assertClose(steelBd, 2.916, 0.001, 'Mild Steel Preset BD');
       assertClose(steelFlat, 77.084, 0.001, 'Mild Steel Preset Flat');
 
+      // 2b. Preset Branch: Soft Aluminum (2.0 mm, R=3.0 mm, 90 deg, K=0.33, L1=50, L2=50)
+      // Hand calc:
+      //   A_rad = 90 * pi / 180 = 1.5707963
+      //   BA = 1.5707963 * (3.0 + 0.33 * 2.0) = 1.5707963 * 3.66 = 5.7491145 mm -> 5.749 mm
+      //   OSSB = (3.0 + 2.0) * tan(45) = 5.000 mm
+      //   BD = 2 * 5.000 - 5.7491145 = 4.2508855 mm -> 4.251 mm
+      //   Lflat = 50 + 50 - 4.2508855 = 95.7491145 mm -> 95.749 mm
+      await p.click('[data-testid="preset-soft-aluminum"]');
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-ba"]');
+        return el && el.textContent.trim() === '5.749';
+      });
+      const alumBd = parseFloat(await p.innerText('[data-testid="result-bd"]'));
+      const alumOssb = parseFloat(await p.innerText('[data-testid="result-ossb"]'));
+      const alumFlat = parseFloat(await p.innerText('[data-testid="result-flat-length"]'));
+      assertClose(alumBd, 4.251, 0.001, 'Aluminum Preset BD');
+      assertClose(alumOssb, 5.000, 0.001, 'Aluminum Preset OSSB');
+      assertClose(alumFlat, 95.749, 0.001, 'Aluminum Preset Flat');
+
       // 3. Reset Button Verification
       await p.click('[data-testid="btn-reset"]');
       await p.waitForFunction(() => {
@@ -226,11 +251,17 @@ async function runBatch6Tests() {
       ]);
       const csvPath = await download.path();
       const csvText = fs.readFileSync(csvPath, 'utf8');
-      if (!csvText.includes('DIN 6935') || !csvText.includes('SolidWorks')) {
+      if (!csvText.includes('SolidWorks') || !csvText.includes('DB Sheetmetals')) {
         throw new Error('Bend Allowance CSV missing standard header');
       }
       if (!csvText.includes('5.749') || !csvText.includes('95.749')) {
         throw new Error('Bend Allowance CSV missing expected numerical values');
+      }
+
+      // 6. Negative Assertion: Outdated or fabricated standards must NOT appear in calculator client core
+      const clientText = (await p.innerText('[data-testid="calculator-inputs"]')) + ' ' + (await p.innerText('[data-testid="calculator-results"]'));
+      if (clientText.includes('DIN 6935') || clientText.includes('ISO 7438')) {
+        throw new Error('Bend Allowance client contains unsupported standard numbers');
       }
     });
 
@@ -265,14 +296,21 @@ async function runBatch6Tests() {
 
       // 3. Preset Branch: Aluminum 5052 (3 mm, 60 deg, R=3 mm, K=0.33)
       // Hand calc:
-      //   BA = (60 * pi / 180) * (3.0 + 0.33 * 3.0) = 1.04719755 * 3.99 = 4.178318 mm -> 4.178 mm
+      //   A_rad = 60 * pi / 180 = 1.04719755 rad
+      //   BA = 1.04719755 * (3.0 + 0.33 * 3.0) = 1.04719755 * 3.99 = 4.178318 mm -> 4.178 mm
+      //   OSSB = (3.0 + 3.0) * tan(30) = 6.0 * 0.57735027 = 3.4641016 mm -> 3.464 mm
+      //   BD = 2 * 3.4641016 - 4.178318 = 6.928203 - 4.178318 = 2.749885 mm -> 2.750 mm
       await p.click('[data-testid="preset-aluminum-3mm"]');
       await p.waitForFunction(() => {
         const el = document.querySelector('[data-testid="result-ba"]');
         return el && el.textContent.trim() === '4.178';
       });
       const alumK = parseFloat(await p.innerText('[data-testid="result-k"]'));
+      const alumBa = parseFloat(await p.innerText('[data-testid="result-ba"]'));
+      const alumBd = parseFloat(await p.innerText('[data-testid="result-bd"]'));
       assertClose(alumK, 0.33, 0.001, 'Aluminum Preset K-Factor');
+      assertClose(alumBa, 4.178, 0.001, 'Aluminum Preset BA');
+      assertClose(alumBd, 2.750, 0.001, 'Aluminum Preset BD');
 
       // 4. Reset Button Verification
       await p.click('[data-testid="btn-reset"]');
@@ -284,6 +322,7 @@ async function runBatch6Tests() {
       // 5. Input Robustness: Empty, 'abc', '12abc'
       const thickInput = p.locator('[data-testid="input-thickness"]');
       const radiusInput = p.locator('[data-testid="input-radius"]');
+      const kInput = p.locator('[data-testid="input-k-factor"]');
 
       await thickInput.fill('');
       await p.waitForFunction(() => document.querySelector('[data-testid="result-ba"]').textContent.trim() === '—');
@@ -294,11 +333,19 @@ async function runBatch6Tests() {
       await verifyNoNaNOrInfinity(p, 'Bend Table abc thickness');
 
       await thickInput.fill('2');
+      await kInput.fill('12abc');
+      await p.waitForFunction(() => document.querySelector('[data-testid="result-ba"]').textContent.trim() === '—');
+      await verifyNoNaNOrInfinity(p, 'Bend Table 12abc k-factor');
+
+      // Restore K
+      await kInput.fill('0.44');
+      await p.waitForFunction(() => document.querySelector('[data-testid="result-ba"]').textContent.trim() === '6.095');
+
       await radiusInput.fill('12abc');
       await p.waitForFunction(() => document.querySelector('[data-testid="result-ba"]').textContent.trim() === '—');
       await verifyNoNaNOrInfinity(p, 'Bend Table 12abc radius');
 
-      // Restore
+      // Restore radius
       await radiusInput.fill('3');
       await p.waitForFunction(() => document.querySelector('[data-testid="result-ba"]').textContent.trim() === '6.095');
 
@@ -309,11 +356,17 @@ async function runBatch6Tests() {
       ]);
       const csvPath = await download.path();
       const csvText = fs.readFileSync(csvPath, 'utf8');
-      if (!csvText.includes('DIN 6935') || !csvText.includes('Full Bend Allowance Matrix')) {
+      if (!csvText.includes('SolidWorks') || !csvText.includes('Full Bend Allowance Matrix')) {
         throw new Error('Bend Table CSV missing standard or matrix header');
       }
       if (!csvText.includes('6.095') || !csvText.includes('3.905')) {
         throw new Error('Bend Table CSV missing expected numerical values');
+      }
+
+      // 7. Negative Assertion: Outdated or fabricated standards must NOT appear in calculator client core
+      const clientText = (await p.innerText('[data-testid="calculator-inputs"]')) + ' ' + (await p.innerText('[data-testid="calculator-results"]'));
+      if (clientText.includes('DIN 6935') || clientText.includes('ISO 7438')) {
+        throw new Error('Bend Allowance Table client contains unsupported standard numbers');
       }
     });
 
@@ -338,17 +391,18 @@ async function runBatch6Tests() {
       assertClose(ft, 24.435, 0.001, 'Default Press Tonnage (ton)');
       assertClose(fPerMeter, 239.625, 0.001, 'Default Force Per Meter');
 
-      // 2. Preset Branch: Stainless 304 (600 MPa, 1000 mm, 2 mm, V=16 mm)
+      // 2. Preset Branch: Stainless 304 (sigma=600 MPa, L=1000 mm, t=2 mm, V=16 mm)
       // Hand calc:
-      //   F = (1.42 * 600 * 1000 * 4) / (16 * 1000) = 3408 / 16 = 213.000 kN
-      //   Ft = 213.000 / 9.80665 = 21.71995 ton -> 21.720 ton
+      //   Inputs: Material Strength sigma = 600 MPa, Bend Length L = 1000 mm, Sheet Thickness t = 2 mm, V-Die Opening V = 16 mm
+      //   F = (1.42 * sigma * L * t^2) / (V * 1000) = (1.42 * 600 * 1000 * 4) / 16000 = 3408000 / 16000 = 213.000 kN
+      //   Ft = F / 9.80665 kN/t = 213.000 / 9.80665 = 21.719955 ton -> 21.720 ton
       await p.click('[data-testid="preset-stainless-304"]');
       await p.waitForFunction(() => {
         const el = document.querySelector('[data-testid="result-force"]');
         return el && el.textContent.trim() === '213.000';
       });
       const stainlessFt = parseFloat(await p.innerText('[data-testid="result-tonnage"]'));
-      assertClose(stainlessFt, 21.720, 0.001, 'Stainless Preset Tonnage');
+      assertClose(stainlessFt, 21.720, 0.001, 'Stainless Preset Tonnage (600 MPa, 2mm, V=16mm -> 21.720 ton)');
 
       // 3. Reset Button Verification
       await p.click('[data-testid="btn-reset"]');
@@ -390,6 +444,12 @@ async function runBatch6Tests() {
       }
       if (!csvText.includes('239.625') || !csvText.includes('24.435')) {
         throw new Error('Bending Force CSV missing expected numerical values');
+      }
+
+      // 6. Negative Assertion: Outdated or fabricated standards must NOT appear in calculator client core
+      const clientText = (await p.innerText('[data-testid="calculator-inputs"]')) + ' ' + (await p.innerText('[data-testid="calculator-results"]'));
+      if (clientText.includes('DIN 6935') || clientText.includes('ISO 7438')) {
+        throw new Error('Bending Force client contains unsupported standard numbers');
       }
     });
 

@@ -64,7 +64,7 @@ export default function BendAllowanceClient() {
 
   const handleExportCsv = () => {
     const csvContent = [
-      '# Sheet Metal Bend Allowance & Deduction (DIN 6935 / SolidWorks Standard)',
+      '# Sheet Metal Bend Allowance & Deduction (SolidWorks / DB Sheetmetals Standard)',
       '# Verified by CADGuide.tools Toolbox',
       'Parameter,Value,Unit',
       `Material Thickness (T),${thicknessStr},mm`,
@@ -91,7 +91,7 @@ export default function BendAllowanceClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       {/* Material Presets */}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Sheet Presets:</span>
@@ -121,9 +121,9 @@ export default function BendAllowanceClient() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div data-testid="calculator-panel" className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Input Parameters Panel */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
+        <div data-testid="calculator-inputs" className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
@@ -250,7 +250,7 @@ export default function BendAllowanceClient() {
 
         {/* Results Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+          <div data-testid="calculator-results" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
                 <Zap className="w-5 h-5" />
@@ -309,7 +309,7 @@ export default function BendAllowanceClient() {
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-1">
               <div className="flex items-center gap-2 text-sm text-slate-700 font-bold">
                 <Info className="w-4 h-4 text-orange-500 shrink-0" />
-                SolidWorks & DIN 6935 Sheet Metal K-Factor Standard
+                SolidWorks & Industry Sheet Metal K-Factor Standard
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-6">
                 The K-Factor (t/T) locates the neutral sheet that undergoes zero tension or compression during forming. Typical values range from 0.33 for soft aluminum air-bending to 0.40–0.44 for mild steel and 0.45 for bottoming.

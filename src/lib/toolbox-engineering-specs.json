@@ -1221,9 +1221,9 @@
     "title": "Belt Tension Calculator",
     "description": "Calculate belt tight-side, slack-side, and installation tensions from transmitted power and wrap angle using the Euler-Eytelwein friction model.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 4183 / RMA IP-20 (Belt Drives), DIN 2211 (Grooved Pulleys for V-Belts)",
+    "standards": "Bando / Gates Engineering Design Manual (Euler-Eytelwein Belt Friction Model)",
     "cadContext": "Maintain exact center distance, wrap angle clearance, and shaft parallelism in parametric CAD layouts to prevent belt slip and premature bearing wear.",
-    "formula": "Te = 1000*P/v; T1/T2 = exp(u*theta); T1 = Te*exp(u*theta)/(exp(u*theta)-1); T2 = Te/(exp(u*theta)-1); T0 = (T1+T2)/2",
+    "formula": "Te = 1000*P/v; T1/T2 = exp(u*theta); T1 = Te*exp(u*theta)/(exp(u*theta)-1); T2 = Te/(exp(u*theta)-1); T0 = (T1+T2)/2; Fb ≈ 2*T0*sin(theta/2) (symmetric static approximation)",
     "inputs": [
       {
         "label": "Power (kW)",
@@ -1269,7 +1269,7 @@
     "title": "Bend Allowance Calculator",
     "description": "Calculate sheet metal bend allowance, outside setback, bend deduction, and flat pattern length using neutral axis K-factor geometry.",
     "discipline": "Sheet Metal Fabrication & Mechanical Forming",
-    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "standards": "Sheet Metal Neutral Axis Bending Model (DB Sheetmetals / SolidWorks Engineering Practice)",
     "cadContext": "Define accurate K-factor and bend deduction tables in SolidWorks, Inventor, or Creo sheet metal parameters to avoid blank size deviations during CNC press brake forming.",
     "formula": "BA = (pi/180)*A*(R + K*T); OSSB = (R + T)*tan(A/2); BD = 2*OSSB - BA; Lflat = Flange1 + Flange2 - BD",
     "inputs": [
@@ -1321,7 +1321,7 @@
     "title": "Bending Allowance Table Calculator",
     "description": "Generate comprehensive sheet metal bend allowance and deduction lookup matrices for carbon steel, stainless steel, and aluminum across standard angles and radii.",
     "discipline": "Sheet Metal Fabrication & Mechanical Forming",
-    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "standards": "Sheet Metal Neutral Axis Bending Model (DB Sheetmetals / SolidWorks Engineering Practice)",
     "cadContext": "Populate unfolding and bend allowance tables in CAD sheet metal styles to ensure uniform bend deduction across shop floor CNC press brake tooling.",
     "formula": "BA = (pi/180)*angle*(R + K*T); OSSB = (R + T)*tan(angle/2); BD = 2*OSSB - BA",
     "inputs": [
@@ -1340,6 +1340,10 @@
       {
         "label": "Inside Radius (mm)",
         "val": "3"
+      },
+      {
+        "label": "K-Factor",
+        "val": "0.44"
       }
     ],
     "outputs": [
@@ -1361,7 +1365,7 @@
     "title": "Bending Force Calculator",
     "description": "Calculate press brake bending force and press tonnage for standard sheet metal V-die air bending operations.",
     "discipline": "Sheet Metal Fabrication & Mechanical Forming",
-    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "standards": "CNC Press Brake Air Bending Empirical Formula (Amada / Trumpf Tooling Practice)",
     "cadContext": "Verify press brake tonnage limits and tooling capacity during sheet metal CAD feature validation to prevent machine overload during shop fabrication.",
     "formula": "F = (1.42 * sigma * L * t^2) / (V * 1000) [kN]; Ft = F / 9.80665 [ton]",
     "inputs": [
@@ -1401,7 +1405,7 @@
     "title": "Bernoulli Equation Calculator",
     "description": "Calculate downstream static pressure, total hydraulic head, and dynamic pressure along a streamline using Bernoulli principle for incompressible fluid flow.",
     "discipline": "Fluid Dynamics & Hydraulics",
-    "standards": "ISO 80000-4 (Mechanics — Fluids), NASA Glenn Research Center Fluid Dynamics Reference",
+    "standards": "NASA Glenn Research Center Fluid Dynamics Reference (Incompressible Bernoulli Principle); ISO 80000-4 (Quantities and units — Mechanics, units definition only)",
     "cadContext": "Verify pipe cross-section sizing, pressure head allowances, and Venturi constriction geometry in fluid system CAD assemblies.",
     "formula": "P1 + 0.5*rho*v1^2 + rho*g*z1 = P2 + 0.5*rho*v2^2 + rho*g*z2 = const; H = P/(rho*g) + v^2/(2*g) + z",
     "inputs": [

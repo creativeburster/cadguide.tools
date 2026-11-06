@@ -86,7 +86,7 @@ const TOOL_POOL: WorkflowToolItem[] = [
   // --- MCAD & Mechanical Engineering Tools ---
   {
     name: 'K-Factor & Bend Allowance Calc',
-    desc: 'Calculate sheet metal neutral axis shift, bend deductions, and flat pattern blank sizes per DIN 6935.',
+    desc: 'Calculate sheet metal neutral axis shift, bend deductions, and flat pattern blank sizes per standard practice.',
     link: '/toolbox/k-factor-calculator',
     icon: Ruler,
     tag: 'Calculators',

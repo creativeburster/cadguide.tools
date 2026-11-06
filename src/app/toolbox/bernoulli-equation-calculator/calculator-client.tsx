@@ -71,7 +71,7 @@ export default function BernoulliEquationCalculatorClient() {
 
   const handleExportCsv = () => {
     const csvContent = [
-      '# Incompressible Bernoulli Fluid Dynamics Calculation (ISO 80000-4 / NASA Glenn Standard)',
+      '# Incompressible Bernoulli Fluid Dynamics Calculation (NASA Glenn Standard; ISO 80000-4 Units)',
       '# Verified by CADGuide.tools Toolbox',
       'Parameter,Value,Unit',
       `Station 1 Static Pressure (P1),${p1Str},kPa`,
@@ -100,7 +100,7 @@ export default function BernoulliEquationCalculatorClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       {/* Flow Presets */}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Fluid Presets:</span>
@@ -130,9 +130,9 @@ export default function BernoulliEquationCalculatorClient() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div data-testid="calculator-panel" className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Input Controls */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
+        <div data-testid="calculator-inputs" className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600">
@@ -240,7 +240,7 @@ export default function BernoulliEquationCalculatorClient() {
 
         {/* Results Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+          <div data-testid="calculator-results" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
                 <Zap className="w-5 h-5" />
@@ -303,7 +303,7 @@ export default function BernoulliEquationCalculatorClient() {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-1">
               <div className="flex items-center gap-2 text-sm text-slate-700 font-bold">
                 <Info className="w-4 h-4 text-teal-500 shrink-0" />
-                Incompressible Flow Principles (ISO 80000-4 / NASA Glenn Research Center)
+                Incompressible Flow Principles (NASA Glenn Research Center; ISO 80000-4 Units Definition)
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-6">
                 Total energy along a streamline remains constant: P + ½ρv² + ρgz = const. When velocity increases (e.g. through a Venturi throat), static pressure decreases proportionally.

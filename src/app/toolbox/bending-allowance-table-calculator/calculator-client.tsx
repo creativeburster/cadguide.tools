@@ -12,9 +12,9 @@ function parseNum(val: string): number | null {
 }
 
 const MATERIAL_K_FACTORS: Record<string, { label: string; k: number }> = {
-  steel: { label: 'Carbon Steel (K=0.44)', k: 0.44 },
-  stainless: { label: 'Stainless Steel (K=0.40)', k: 0.40 },
-  aluminum: { label: 'Aluminum (K=0.33)', k: 0.33 },
+  steel: { label: 'Carbon Steel (Typical K=0.44)', k: 0.44 },
+  stainless: { label: 'Stainless Steel (Typical K=0.40)', k: 0.40 },
+  aluminum: { label: 'Aluminum (Typical K=0.33)', k: 0.33 },
 };
 
 const TABLE_ANGLES = [30, 45, 60, 90, 120, 135];
@@ -22,23 +22,22 @@ const TABLE_RADII = [1.0, 2.0, 3.0, 4.0, 5.0];
 
 export default function BendingAllowanceTableCalculatorClient() {
   const [material, setMaterial] = useState('steel');
+  const [kFactorStr, setKFactorStr] = useState('0.44');
   const [thicknessStr, setThicknessStr] = useState('2');
   const [angleStr, setAngleStr] = useState('90');
   const [radiusStr, setRadiusStr] = useState('3');
-
-  const activeK = MATERIAL_K_FACTORS[material]?.k ?? 0.44;
 
   const result = useMemo(() => {
     const T = parseNum(thicknessStr);
     const angleDeg = parseNum(angleStr);
     const R = parseNum(radiusStr);
-    const K = activeK;
+    const K = parseNum(kFactorStr);
 
     if (
-      T === null || angleDeg === null || R === null ||
-      T <= 0 || angleDeg <= 0 || angleDeg >= 180 || R < 0
+      T === null || angleDeg === null || R === null || K === null ||
+      T <= 0 || angleDeg <= 0 || angleDeg >= 180 || R < 0 || K <= 0 || K >= 1
     ) {
-      return { K, BA: null, BD: null, OSSB: null };
+      return { K: null, BA: null, BD: null, OSSB: null };
     }
 
     const aRad = (angleDeg * Math.PI) / 180;
@@ -47,14 +46,14 @@ export default function BendingAllowanceTableCalculatorClient() {
     const BD = 2 * OSSB - BA;
 
     return { K, BA, BD, OSSB };
-  }, [thicknessStr, angleStr, radiusStr, activeK]);
+  }, [thicknessStr, angleStr, radiusStr, kFactorStr]);
 
   // Generate lookup table matrix
   const tableMatrix = useMemo(() => {
     const T = parseNum(thicknessStr);
-    if (T === null || T <= 0) return null;
+    const K = parseNum(kFactorStr);
+    if (T === null || T <= 0 || K === null || K <= 0 || K >= 1) return null;
 
-    const K = activeK;
     return TABLE_ANGLES.map((ang) => {
       const aRad = (ang * Math.PI) / 180;
       const rowRadii = TABLE_RADII.map((r) => {
@@ -63,17 +62,26 @@ export default function BendingAllowanceTableCalculatorClient() {
       });
       return { angle: ang, values: rowRadii };
     });
-  }, [thicknessStr, activeK]);
+  }, [thicknessStr, kFactorStr]);
+
+  const handleMaterialChange = (mat: string) => {
+    setMaterial(mat);
+    const defaultK = MATERIAL_K_FACTORS[mat]?.k ?? 0.44;
+    setKFactorStr(defaultK.toString());
+  };
 
   const handleReset = () => {
     setMaterial('steel');
+    setKFactorStr('0.44');
     setThicknessStr('2');
     setAngleStr('90');
     setRadiusStr('3');
   };
 
-  const applyPreset = (mat: string, t: string, a: string, r: string) => {
+  const applyPreset = (mat: string, t: string, a: string, r: string, k?: string) => {
     setMaterial(mat);
+    const presetK = k ?? (MATERIAL_K_FACTORS[mat]?.k ?? 0.44).toString();
+    setKFactorStr(presetK);
     setThicknessStr(t);
     setAngleStr(a);
     setRadiusStr(r);
@@ -81,12 +89,13 @@ export default function BendingAllowanceTableCalculatorClient() {
 
   const handleExportCsv = () => {
     const T = parseNum(thicknessStr);
+    const K = parseNum(kFactorStr);
     const rows = [
-      '# Sheet Metal Bend Allowance Reference Table (DIN 6935 / SolidWorks Standard)',
+      '# Sheet Metal Bend Allowance Reference Table (SolidWorks / DB Sheetmetals Standard)',
       '# Verified by CADGuide.tools Toolbox',
       'Parameter,Value,Unit',
       `Material,${MATERIAL_K_FACTORS[material]?.label || material},—`,
-      `Neutral Axis K-Factor,${activeK.toFixed(2)},—`,
+      `Neutral Axis K-Factor,${K !== null ? K.toFixed(2) : '—'},—`,
       `Material Thickness (T),${thicknessStr},mm`,
       `Target Bend Angle,${angleStr},deg`,
       `Target Inside Radius,${radiusStr},mm`,
@@ -94,7 +103,7 @@ export default function BendingAllowanceTableCalculatorClient() {
       `Bend Deduction (BD),${result.BD !== null ? result.BD.toFixed(3) : '—'},mm`,
       `Outside Setback (OSSB),${result.OSSB !== null ? result.OSSB.toFixed(3) : '—'},mm`,
       '',
-      '# Full Bend Allowance Matrix (BA in mm for T = ' + (T !== null ? T.toFixed(2) : '—') + ' mm, K = ' + activeK.toFixed(2) + ')',
+      '# Full Bend Allowance Matrix (BA in mm for T = ' + (T !== null ? T.toFixed(2) : '—') + ' mm, K = ' + (K !== null ? K.toFixed(2) : '—') + ')',
       ['Angle (deg)', ...TABLE_RADII.map((r) => `R=${r.toFixed(1)}mm`)].join(','),
     ];
 
@@ -116,7 +125,7 @@ export default function BendingAllowanceTableCalculatorClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       {/* Material & Sheet Presets */}
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Fabrication Presets:</span>
@@ -146,9 +155,9 @@ export default function BendingAllowanceTableCalculatorClient() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div data-testid="calculator-panel" className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Input Controls */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div data-testid="calculator-inputs" className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
@@ -172,13 +181,26 @@ export default function BendingAllowanceTableCalculatorClient() {
             <select
               data-testid="select-material"
               value={material}
-              onChange={(e) => setMaterial(e.target.value)}
+              onChange={(e) => handleMaterialChange(e.target.value)}
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
             >
-              <option value="steel">Carbon Steel (K=0.44)</option>
-              <option value="stainless">Stainless Steel (K=0.40)</option>
-              <option value="aluminum">Aluminum (K=0.33)</option>
+              <option value="steel">Carbon Steel (Typical K=0.44)</option>
+              <option value="stainless">Stainless Steel (Typical K=0.40)</option>
+              <option value="aluminum">Aluminum (Typical K=0.33)</option>
             </select>
+          </div>
+
+          <div>
+            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-1">K-Factor (Neutral Axis)</label>
+            <input
+              type="text"
+              data-testid="input-k-factor"
+              value={kFactorStr}
+              onChange={(e) => setKFactorStr(e.target.value)}
+              placeholder="0.44"
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
+            />
+            <span className="text-xs text-slate-400 mt-1 block">Typical values: Steel 0.44, Stainless 0.40, Al 0.33. User editable; verify with tooling/material test certs.</span>
           </div>
 
           <div>
@@ -232,7 +254,7 @@ export default function BendingAllowanceTableCalculatorClient() {
 
         {/* Results & Lookup Table Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+          <div data-testid="calculator-results" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
                 <Zap className="w-5 h-5" />
@@ -244,7 +266,9 @@ export default function BendingAllowanceTableCalculatorClient() {
               <div className="bg-blue-50/70 rounded-2xl p-6 border border-blue-100">
                 <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">K-Factor</div>
                 <div className="text-3xl font-black text-blue-700">
-                  <span data-testid="result-k">{result.K.toFixed(2)}</span>
+                  <span data-testid="result-k">
+                    {result.K !== null ? result.K.toFixed(2) : '—'}
+                  </span>
                 </div>
                 <div className="text-xs text-blue-500 font-semibold mt-1">Neutral axis position</div>
               </div>
@@ -334,7 +358,7 @@ export default function BendingAllowanceTableCalculatorClient() {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-1">
               <div className="flex items-center gap-2 text-sm text-slate-700 font-bold">
                 <Info className="w-4 h-4 text-purple-500 shrink-0" />
-                DIN 6935 Sheet Metal Forming Standards
+                Sheet Metal Neutral Axis Bending Standards
               </div>
               <p className="text-xs text-slate-500 leading-relaxed pl-6">
                 OSSB = (R + T)·tan(Angle/2). Use this standardized bend allowance matrix to calibrate CNC press brake backgauge offsets and parametric sheet metal unfolding rules.
