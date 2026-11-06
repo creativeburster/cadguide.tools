@@ -271,6 +271,48 @@ export default function OpenSourceCadPage() {
                 </p>
               </Link>
             </div>
+
+            {/* Pure Rust + WebAssembly Browser CAD Trilogy Suite */}
+            <div className="mt-6 p-5 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-lg">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  Zero-Install Rust + WebAssembly CAD Trilogy
+                </span>
+                <span className="text-xs text-slate-400">100% Client-Side Sandbox · STEP AP214 / STL / DXF / G-Code</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <Link
+                  href="/toolbox/web-cad-parametric"
+                  className="p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition"
+                >
+                  <div className="text-xs font-extrabold text-blue-400">Software 1 · 3D B-Rep CAD</div>
+                  <div className="text-sm font-bold text-white mt-1">Web 3D Parametric Mechanical CAD →</div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    2D sketch constraints, 3D feature tree (extrude, revolve, hole, fillet, shell), and STEP AP214 export.
+                  </p>
+                </Link>
+                <Link
+                  href="/toolbox/web-cad-sheetmetal-nesting"
+                  className="p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition"
+                >
+                  <div className="text-xs font-extrabold text-emerald-400">Software 2 · Sheet Metal &amp; CAM</div>
+                  <div className="text-sm font-bold text-white mt-1">2D Sheet Metal Unfolding &amp; NFP Nesting →</div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    DIN 6935 K-Factor unfolding, true-shape &amp; hole-in-hole nesting, and laser G-code backplotter.
+                  </p>
+                </Link>
+                <Link
+                  href="/toolbox/web-cad-code-studio"
+                  className="p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition"
+                >
+                  <div className="text-xs font-extrabold text-purple-400">Software 3 · Procedural Code-CAD</div>
+                  <div className="text-sm font-bold text-white mt-1">Algorithmic Code-CAD Studio →</div>
+                  <p className="text-[11px] text-slate-300 mt-1">
+                    Declarative CAD script compiler with auto-extracted @param sliders and instant STEP/STL output.
+                  </p>
+                </Link>
+              </div>
+            </div>
           </header>
 
           <FoldingList

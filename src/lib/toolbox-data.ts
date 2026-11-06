@@ -7836,5 +7836,56 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
       "rs-274x cam viewer browser",
       "kicad gerber inspector"
     ]
+  },
+  {
+    "slug": "web-cad-parametric",
+    "title": "Web 3D Parametric Mechanical CAD (Sketch Constraints & B-Rep STEP Exporter)",
+    "description": "Browser-local 3D parametric mechanical CAD modeler powered by Rust & WebAssembly. Solve 2D sketch constraints, build 3D feature trees (extrude, revolve, hole, fillet, chamfer, shell, boolean), and export STEP AP214, Binary STL, OBJ, and 2D DXF.",
+    "detailDesc": "A zero-server-load 3D parametric B-Rep mechanical CAD studio compiled to WebAssembly. Features an interactive 2D Gauss-Newton geometric constraint solver, an ordered 3D feature tree, analytical mass properties (volume, surface area, center of gravity), and industrial ISO 10303-21 STEP AP214, watertight Binary STL, Wavefront OBJ, and 2D section DXF export.",
+    "category": "generator",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-06",
+    "keywords": [
+      "online 3d parametric cad",
+      "browser step file modeler",
+      "webassembly brep cad",
+      "free online mechanical cad step export",
+      "2d sketch constraint solver online"
+    ]
+  },
+  {
+    "slug": "web-cad-sheetmetal-nesting",
+    "title": "Web 2D Sheet Metal Unfolding, True-Shape NFP Nesting & Laser G-Code CAM Studio",
+    "description": "Compute DIN 6935 sheet metal flat patterns (K-Factor, BA, BD), optimize true-shape polygon & hole-in-hole nesting at 80%+ utilization, and generate laser/plasma G-code with live toolpath backplotting.",
+    "detailDesc": "An integrated client-side 2D sheet metal unfolding, irregular polygon nesting, and CNC laser/plasma CAM workbench powered by Rust & WebAssembly. Automatically heals DXF contour gaps, computes K-Factor bend allowance and bend deduction, nests parts including inside large inner bores, and outputs ISO 6983 G-code (G00/G01/G02/G03/M03/M05) with lead-in/lead-out and interactive simulation.",
+    "category": "generator",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-06",
+    "keywords": [
+      "sheet metal unfolding nesting online",
+      "true shape nfp nesting tool",
+      "laser cutting gcode generator browser",
+      "din 6935 bend deduction calculator dxf",
+      "hole in hole nesting cam"
+    ]
+  },
+  {
+    "slug": "web-cad-code-studio",
+    "title": "Web Procedural Code-CAD & Algorithmic Parametric Modeling Studio",
+    "description": "Write declarative Code-CAD scripts with @param annotations to auto-generate interactive UI sliders, compile 3D B-Rep solids in milliseconds via Rust/WASM, and export STEP AP214, STL, OBJ, and DXF.",
+    "detailDesc": "A browser-native algorithmic Code-CAD workbench combining declarative script modeling with bidirectional UI parameter sliders. Includes built-in parametric templates for ISO 21771 involute spur gears, ASME/DIN bolted pipe flanges, extruded heatsink arrays, and PCB enclosures, with instant STEP AP214, Binary STL, OBJ, and 2D DXF export.",
+    "category": "generator",
+    "status": "released",
+    "origin": "native",
+    "releasedDate": "2026-11-06",
+    "keywords": [
+      "online code cad studio",
+      "browser openscad step exporter",
+      "parametric script 3d cad",
+      "algorithmic cad modeler wasm",
+      "declarative brep cad"
+    ]
   }
 ];

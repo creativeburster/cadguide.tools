@@ -20558,5 +20558,70 @@
         "val": "Production-Ready"
       }
     ]
+  },
+  "web-cad-parametric": {
+    "title": "Web Interactive 3D Parametric Mechanical CAD",
+    "description": "Evaluate 2D geometric sketch constraints and ordered 3D B-Rep feature operations (extrude, revolve, hole, fillet, chamfer, shell, boolean) with exact mass properties and STEP AP214 export.",
+    "discipline": "Mechanical Engineering, Solid B-Rep Modeling & CNC/Additive Manufacturing",
+    "standards": "ISO 10303-21 (STEP AP214 Automotive & Mechanical Design), ASME Y14.5 (Dimensioning & Tolerancing), ISO 2768-mK (General Geometrical Tolerances)",
+    "cadContext": "Exported ISO 10303-21 STEP AP214 solids and watertight Binary STL meshes can be imported directly into FreeCAD, SolidWorks, AutoCAD, Fusion, or 3D print slicers without server round-trips.",
+    "formula": "V = π × (Ro² - Ri²) × H • A_total = 2π(Ro² - Ri²) + 2π(Ro + Ri)H • Mass = (V / 1000) × ρ",
+    "inputs": [
+      { "label": "Outer Boss Diameter Do (mm)", "val": "80" },
+      { "label": "Center Bore Hole Di (mm)", "val": "30" },
+      { "label": "Extrusion Height H (mm)", "val": "25" },
+      { "label": "Engineering Material (6061-T6 Al)", "val": "2.70 g/cm³" }
+    ],
+    "outputs": [
+      { "label": "Net Solid Volume", "val": "107992.25 mm³ (107.99 cm³)" },
+      { "label": "Total Surface Area", "val": "17278.76 mm² (172.79 cm²)" },
+      { "label": "Estimated Part Mass", "val": "291.58 g" },
+      { "label": "Center of Gravity (Xc, Yc, Zc)", "val": "(0.00, 0.00, 12.50) mm" }
+    ]
+  },
+  "web-cad-sheetmetal-nesting": {
+    "title": "Web 2D Sheet Metal Unfolding, True-Shape Nesting & Laser CAM",
+    "description": "Compute DIN 6935 sheet metal bend allowance, outside setback, and bend deduction, optimize multi-part true-shape & hole-in-hole nesting, and compile ISO 6983 laser G-code.",
+    "discipline": "Sheet Metal Fabrication, Nesting Optimization & CNC Laser/Plasma CAM",
+    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 6983-1 / RS-274D (CNC G-Code Programming), Machinery's Handbook (Neutral Axis K-Factor Formulation)",
+    "cadContext": "Unfolded flat patterns and nested multi-part sheets export cleanly to AC1027 DXF for press-brake tooling verification and ISO 6983 G-code (G00/G01/G03/M03/M05) with inside-first hole cutting and lead-in/lead-out vectors.",
+    "formula": "BA = (π/180) × θ × (R + K×T) • OSSB = tan(θ/2) × (R + T) • BD = 2×OSSB - BA • L_flat = L1 + L2 - BD",
+    "inputs": [
+      { "label": "Sheet Thickness T (mm)", "val": "2.0" },
+      { "label": "Inside Bend Radius R (mm)", "val": "2.0" },
+      { "label": "Bend Angle θ (°)", "val": "90" },
+      { "label": "K-Factor (K)", "val": "0.44" },
+      { "label": "Flange Legs L1 / L2 (mm)", "val": "60 / 40" },
+      { "label": "Raw Sheet Dimensions (mm)", "val": "1000 × 500" }
+    ],
+    "outputs": [
+      { "label": "Bend Allowance (BA)", "val": "4.52 mm" },
+      { "label": "Outside Setback (OSSB)", "val": "4.00 mm" },
+      { "label": "Bend Deduction (BD)", "val": "3.48 mm" },
+      { "label": "Unfolded Flat Length (Lflat)", "val": "96.52 mm" },
+      { "label": "Nested Sheet Utilization (22 Parts)", "val": "96.22%" }
+    ]
+  },
+  "web-cad-code-studio": {
+    "title": "Web Procedural Code-CAD & Algorithmic Modeling Studio",
+    "description": "Compile declarative Code-CAD scripts with bidirectional @param slider annotations into 3D B-Rep geometry and ISO 10303-21 STEP AP214 / STL / DXF engineering files.",
+    "discipline": "Algorithmic Parametric CAD, Gear Kinematics & Generative Mechanical Design",
+    "standards": "ISO 21771 (Cylindrical Involute Gears & Geometry), ASME B16.5 (Pipe Flanges & Bolted Fittings), ISO 10303-21 (STEP AP214 Solid Exchange)",
+    "cadContext": "Code-driven parametric models eliminate manual sketch rebuilding across part families; @param annotations synchronize UI sliders directly with let-bindings in the script AST.",
+    "formula": "d = m × Z • db = d × cos(α) • da = d + 2m • df = d - 2.5m • p = π × m",
+    "inputs": [
+      { "label": "Gear Module m (mm)", "val": "2.5" },
+      { "label": "Teeth Count Z", "val": "24" },
+      { "label": "Pressure Angle α (°)", "val": "20" },
+      { "label": "Face Width b (mm)", "val": "15" },
+      { "label": "Shaft Bore Diameter (mm)", "val": "16" }
+    ],
+    "outputs": [
+      { "label": "Pitch Diameter (d = m·Z)", "val": "60.00 mm" },
+      { "label": "Base Circle Diameter (db)", "val": "56.38 mm" },
+      { "label": "Tip (da) / Root (df) Diameter", "val": "65.00 / 53.75 mm" },
+      { "label": "Circular Pitch (p = π·m)", "val": "7.85 mm" },
+      { "label": "Net Solid Volume", "val": "39395.57 mm³ (39.40 cm³)" }
+    ]
   }
 }

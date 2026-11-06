@@ -1,0 +1,10 @@
+[package]
+name = "cad-dsl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+cad-math = { path = "../cad-math" }
+cad-brep = { path = "../cad-brep" }
+serde.workspace = true

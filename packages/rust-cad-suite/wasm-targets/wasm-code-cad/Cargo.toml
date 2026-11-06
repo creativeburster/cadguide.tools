@@ -1,0 +1,16 @@
+[package]
+name = "wasm-code-cad"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cad-math = { path = "../../crates/cad-math" }
+cad-brep = { path = "../../crates/cad-brep" }
+cad-dsl = { path = "../../crates/cad-dsl" }
+serde.workspace = true
+serde_json.workspace = true
+wasm-bindgen.workspace = true
